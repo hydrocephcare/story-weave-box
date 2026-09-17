@@ -1,0 +1,602 @@
+[
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q01.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q01-88b04357.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q02.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q02-56b123af.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q03.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q03-8ad56e2c.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q04.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q04-ed946b8a.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q05.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q05-31014400.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q06.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q06-0a1646f1.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q07.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q07-1d5ccfa7.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q08.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q08-c2fb7668.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q09.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q09-30bd59cd.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q10.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q10-e91c74d3.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q11.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q11-d763c4ff.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q12.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q12-7010638f.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q13.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q13-53842c96.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q14.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q14-9cfbe777.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q15.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q15-a659dd4b.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q16.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q16-c9f9e97c.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q17.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q17-5d5bccac.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q18.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q18-3d0ac088.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q19.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q19-f1ce7ac3.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q20.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q20-06ed5994.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q21.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q21-6ecfa162.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q22.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q22-3eea8537.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q23.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q23-2e7d4981.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q24.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q24-c43f73b7.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q25.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q25-5fc28a1e.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q26.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q26-7129a8b3.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q27.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q27-3fef12b9.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q28.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q28-f1293c3b.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q29.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q29-ce128871.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q30.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q30-c4fc2e6a.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q31.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q31-b36aeca4.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q32.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q32-2b16d828.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q33.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q33-1042ada0.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q34.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q34-68a52e61.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q35.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q35-4a2d2ab8.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q36.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q36-588b8fd7.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q37.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q37-35507f94.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q38.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q38-d006ffa8.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q39.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q39-7ff4c6d2.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q40.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q40-4270f03d.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q41.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q41-2ee98213.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q42.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q42-3a731e0b.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q43.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q43-e20a3955.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q44.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q44-bb177b7f.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q45.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q45-7eb4fcc7.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q46.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q46-79c8962d.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q47.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q47-45d285c7.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q48.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q48-40d984c6.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q49.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q49-cd59b7a4.jpg",
+    "ok": true
+  },
+  {
+    "dir": "sdl-mock-marathon",
+    "file": "q50.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-sdl-mock-marathon-q50-ab5e3a3b.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q01.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q01-d9580f8c.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q02.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q02-394292c3.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q03.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q03-ca042ce5.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q04.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q04-77b7426c.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q05.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q05-0908090f.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q06.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q06-6980d6c3.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q07.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q07-81f99162.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q08.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q08-b87598bf.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q09.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q09-aa456bee.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q10.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q10-66f6c599.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q11.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q11-e961ff80.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q12.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q12-c6412fee.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q13.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q13-f56f3218.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q14.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q14-022b41d4.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q15.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q15-18c24fbe.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q16.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q16-4e0f32ca.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q17.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q17-3385bb5a.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q18.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q18-ac5c4284.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q19.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q19-a0e6b469.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q20.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q20-7707bd73.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q21.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q21-83b88df3.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q22.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q22-d2e4167a.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q23.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q23-96bdf16d.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q24.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q24-1a707cb9.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q25.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q25-de439715.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q26.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q26-c02fdd92.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q27.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q27-645c5f9d.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q28.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q28-442d1642.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q29.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q29-e9e22496.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q30.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q30-01ed0694.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q31.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q31-94d56522.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q32.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q32-9f0dc6e8.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q33.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q33-9168ca26.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q34.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q34-6a5d973f.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q35.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q35-d0ecfe59.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q36.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q36-72a8c49b.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q37.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q37-2c216f1c.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q38.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q38-36a823d0.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q39.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q39-fb37382a.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q40.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q40-1a1f4442.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q41.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q41-5c3eafb7.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q42.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q42-9889c9a1.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q43.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q43-080ec811.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q44.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q44-8f243611.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q45.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q45-9958d1b6.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q46.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q46-2fdbcd15.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q47.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q47-9dadeb21.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q48.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q48-b7d911ea.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q49.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q49-c8d6b904.jpg",
+    "ok": true
+  },
+  {
+    "dir": "pat3-2019",
+    "file": "q50.jpg",
+    "url": "https://cdn.ompathstudy.com/uploads/2026/08/y1-anatomy-cropped-pat3-2019-q50-d620ee81.jpg",
+    "ok": true
+  }
+]

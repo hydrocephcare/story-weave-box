@@ -1,0 +1,1 @@
+UPDATE app_settings SET value = 'https://www.ompathstudy.com' WHERE key = 'site_url';

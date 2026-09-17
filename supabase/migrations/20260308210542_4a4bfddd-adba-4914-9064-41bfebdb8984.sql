@@ -1,0 +1,1 @@
+CREATE POLICY "Anyone can read story covers" ON storage.objects FOR SELECT USING (bucket_id = 'story-covers');

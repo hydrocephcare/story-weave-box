@@ -1,0 +1,1 @@
+ALTER TABLE public.mcq_sets ADD COLUMN IF NOT EXISTS og_image_url text DEFAULT '';

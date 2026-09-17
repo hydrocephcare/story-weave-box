@@ -1,0 +1,1 @@
+ALTER TABLE public.mcq_sets ADD COLUMN IF NOT EXISTS meta_title text DEFAULT '', ADD COLUMN IF NOT EXISTS meta_description text DEFAULT '';

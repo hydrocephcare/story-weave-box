@@ -1,0 +1,3 @@
+# Exclude large source PDFs and non-site assets from Pages deploys
+Aponeurosis 01(Limb SPOT).pdf
+*.pdf

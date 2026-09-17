@@ -1,0 +1,2 @@
+ALTER TABLE public.article_comments ADD COLUMN IF NOT EXISTS parent_id uuid REFERENCES public.article_comments(id) ON DELETE CASCADE;
+CREATE INDEX IF NOT EXISTS idx_article_comments_parent ON public.article_comments(parent_id);

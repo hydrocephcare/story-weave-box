@@ -1,0 +1,2 @@
+Pipeline check — 2026-08-05.
+This file exists to verify the git commit/push flow.

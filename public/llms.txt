@@ -1,0 +1,24 @@
+# OmpathStudy
+
+> International medical study notes, image spot banks, MCQs, flashcards, essays and timed exams, with dedicated resources for MBChB and health students in Kenya and East Africa.
+
+OmpathStudy is an open medical learning repository organised by academic year, unit and assessment format. It covers anatomy, physiology, biochemistry, pathology, haematology, pharmacology, bacteriology, parasitology, mycology, virology, clinical notes, image spot questions, flashcards, essays, MCQ practice and timed revision. University names identify legitimate source material; the learning library is intended for an international medical audience.
+
+## Pages
+
+- [Home](/): Main study hub for notes, MCQs, flashcards and exams.
+- [Study Notes](/blog): Medical articles and structured unit notes.
+- [Revision Index](/revision-index): Searchable notes, MCQs, essays and examination resources by unit.
+- [Flashcards](/flashcards): Active-recall flashcard sets by topic.
+- [Timed Exams](/exams): Timed MCQ exam practice.
+- [Stories](/stories): Medical school stories and reflective student experiences.
+- [Year 1](/year/1): Year 1 study materials.
+- [Year 2](/year/2): Year 2 study materials.
+- [Year 3](/year/3): Year 3 study materials.
+- [Year 4](/year/4): Year 4 study materials.
+- [Year 5](/year/5): Year 5 study materials.
+- [Year 6](/year/6): Year 6 study materials.
+
+## Optional
+
+- [About](/about): Background and contact information.

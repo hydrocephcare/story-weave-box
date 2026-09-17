@@ -1,0 +1,18 @@
+{
+  "name": "OmpathStudy",
+  "short_name": "OmpathStudy",
+  "description": "Free medical study platform for Kenyan health students – articles, flashcards, MCQ quizzes & timed exams.",
+  "start_url": "/",
+  "id": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#1a3c34",
+  "theme_color": "#1a3c34",
+  "categories": ["education", "medical"],
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "64x64", "type": "image/x-icon" },
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

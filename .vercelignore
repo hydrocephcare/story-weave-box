@@ -1,0 +1,13 @@
+.git
+.vercel
+.wrangler
+.env*
+node_modules
+dist
+dist-ssr
+.tmp*
+tmp
+scratch
+content-drafts
+*.log
+*.tsbuildinfo
