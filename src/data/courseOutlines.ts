@@ -275,3 +275,26 @@ const pharmacology: CourseOutline = {
 };
 
 export const COURSE_OUTLINES: CourseOutline[] = [psychiatry, internalMedicine, pharmacology, ...MORE_OUTLINES];
+
+const norm = (value: string) => value.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, " ").trim();
+
+/** Resolve a curated outline to the canonical academic unit shown on UnitPage.
+ * librarySlugs are the strongest key; title/department matching keeps older unit rows compatible.
+ */
+export function getCourseOutlineForUnit(year: number, unit: { name: string; slug: string; short_name?: string | null }): CourseOutline | null {
+  const slug = norm(unit.slug);
+  const names = [unit.name, unit.short_name || ""].map(norm).filter(Boolean);
+  const aliases: Record<string, string[]> = {
+    "internal-medicine": ["internal medicine", "medicine"],
+    "obstetrics-gynaecology": ["obstetrics and gynaecology", "obstetrics gynaecology", "obgyn"],
+    "paediatrics": ["paediatrics", "paediatrics and child health", "pediatrics"],
+    "psychiatry": ["psychiatry", "mental health"],
+    "clinical-pharmacology": ["clinical pharmacology", "pharmacology"],
+  };
+  return COURSE_OUTLINES.find((outline) => {
+    if (outline.year !== year) return false;
+    if ((outline.librarySlugs || []).some((s) => norm(s) === slug)) return true;
+    const candidates = [outline.id, outline.department, outline.title, ...(aliases[outline.id] || [])].map(norm);
+    return names.some((name) => candidates.some((c) => c === name || c.includes(name) || name.includes(c)));
+  }) || null;
+}
