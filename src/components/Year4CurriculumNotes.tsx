@@ -3,6 +3,7 @@ import type { CourseOutline, OutlineItem } from "@/data/courseOutlines";
 import { IMED_DISEASE_THEORY } from "@/data/imedDiseaseTheory";
 import { YEAR4_ROTATION_THEORY, type RotationTheory } from "@/data/year4RotationTheory";
 import { IMED_FOUNDATION_NOTES, type ImedFoundationNote } from "@/data/imedFoundationNotes";
+import { ROTATION_FOUNDATION_NOTES, type RotationFoundationNote } from "@/data/year4FoundationNotes";
 
 type DiseaseTheory = RotationTheory | {
   id:string; system:string; name:string; definition:string; causes:string[]; mechanism:string;
@@ -35,9 +36,14 @@ function score(topic:string,name:string){
   return n>=2?n:0;
 }
 
-function findFoundation(item:OutlineItem): ImedFoundationNote|null {
+type Foundation = ImedFoundationNote | RotationFoundationNote;
+
+function findFoundation(item:OutlineItem, outline?:CourseOutline): Foundation|null {
   const wanted=norm(item.title);
-  return IMED_FOUNDATION_NOTES.find(n=>norm(n.topic)===wanted) || null;
+  const imed=IMED_FOUNDATION_NOTES.find(n=>norm(n.topic)===wanted);
+  if(imed) return imed;
+  const rotation=outline ? rotationFor(outline) : null;
+  return ROTATION_FOUNDATION_NOTES.find(n=>n.rotation===rotation && norm(n.topic)===wanted) || null;
 }
 
 function findTheory(outline:CourseOutline,item:OutlineItem): DiseaseTheory|null {
@@ -75,7 +81,7 @@ function TheoryBody({theory}:{theory:DiseaseTheory}){
   </div>;
 }
 
-function FoundationBody({note}:{note:ImedFoundationNote}){
+function FoundationBody({note}:{note:Foundation}){
   return <div className="mt-4 grid gap-4 border-t border-border pt-4 sm:grid-cols-2">
     <div className="sm:col-span-2"><h5 className="text-xs font-bold uppercase tracking-wide text-primary">Start here</h5><p className="mt-1 text-sm leading-relaxed text-muted-foreground">{note.definition}</p><p className="mt-2 rounded-lg bg-primary/5 p-3 text-sm text-foreground"><strong>Why this matters:</strong> {note.why}</p></div>
     <List title="Foundations / physiology" items={note.foundations}/>
@@ -89,7 +95,7 @@ function FoundationBody({note}:{note:ImedFoundationNote}){
 
 export default function Year4CurriculumNotes({outline}:{outline:CourseOutline}){
   const total=outline.sections.reduce((n,s)=>n+s.items.length,0);
-  const connected=outline.sections.reduce((n,s)=>n+s.items.filter(i=>findFoundation(i)||findTheory(outline,i)).length,0);
+  const connected=outline.sections.reduce((n,s)=>n+s.items.filter(i=>findFoundation(i,outline)||findTheory(outline,i)).length,0);
   return <div className="space-y-4">
     <section className="rounded-2xl border border-primary/30 bg-primary/5 p-5">
       <p className="text-xs font-bold uppercase tracking-wide text-primary">Course-outline learning path</p>
@@ -110,7 +116,7 @@ export default function Year4CurriculumNotes({outline}:{outline:CourseOutline}){
         {section.note&&<p className="mt-1 text-xs text-muted-foreground">{section.note}</p>}
       </div>
       <div className="divide-y divide-border">
-        {section.items.map((item,ii)=>{const foundation=findFoundation(item); const theory=findTheory(outline,item); const hasNote=!!foundation||!!theory; return <details key={item.id} className="group px-4 py-1 sm:px-5">
+        {section.items.map((item,ii)=>{const foundation=findFoundation(item,outline); const theory=findTheory(outline,item); const hasNote=!!foundation||!!theory; return <details key={item.id} className="group px-4 py-1 sm:px-5">
           <summary className="flex cursor-pointer list-none items-center gap-3 py-3">
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[11px] font-bold text-primary">{ii+1}</span>
             <span className="min-w-0 flex-1"><span className="block text-sm font-semibold text-foreground">{item.title}</span>
