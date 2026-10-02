@@ -71,14 +71,14 @@ export default function Navbar() {
       { to: "/blog", label: "Notes", icon: BookOpen },
       { to: "/exams", label: "Exams", icon: Trophy },
       { to: "/flashcards", label: "Flashcards", icon: GraduationCap },
-      { to: "/my-revision", label: "Revision", icon: Target },
+      { to: "/my-revision", label: "Revision", icon: Target, more: true },
       { to: "/dashboard", label: "My Day", icon: LayoutDashboard, more: true },
       { to: "/study-map", label: "Study Map", icon: Network, more: true },
       { to: "/clinical", label: "Clinical Sim", icon: Stethoscope, more: true },
       { to: "/pharmacology", label: "Pharmacology", icon: Pill, more: true },
       { to: "/must-knows", label: "Must-Knows", icon: ListChecks, more: true },
       { to: "/daily", label: "Daily Dose", icon: Flame, more: true },
-      { to: "/books", label: "Books", icon: BookMarked, more: true },
+      { to: "/books", label: "Books", icon: BookMarked },
       { to: "/revision-index", label: "Exam Revision", icon: ListChecks, more: true },
       { to: "/contests", label: "Mega Contest", icon: Trophy, more: true },
       { to: "/account", label: "Account", icon: UserRound, more: true },
@@ -199,7 +199,7 @@ fetchpriority="high" />
 
             <HeaderSearch variant="desktop" />
 
-            {links.filter((l) => !l.more).map((l) => (
+            {links.filter((l) => !l.more && l.to !== "/").map((l) => (
               <Link
                 key={l.to}
                 to={l.to}
@@ -321,31 +321,6 @@ fetchpriority="high" />
           </div>
         </div>
 
-        {activeYear && (
-          <div className="hidden md:block overflow-hidden border-t border-white/10 bg-[hsl(174,62%,18%)]">
-            <div className="no-scrollbar mx-auto flex max-w-6xl items-center gap-1 overflow-x-auto px-4 py-1.5 sm:px-6" style={{ scrollbarWidth: "none" }}>
-              <span className="mr-2 shrink-0 text-xs font-bold text-white/50">Year {activeYear}</span>
-              {YEAR_SECTIONS.map((s) => {
-                const to = `/${s.path}?year=${encodeURIComponent(`Year ${activeYear}`)}`;
-                const active = activeSection === s.path;
-                return (
-                  <Link
-                    key={s.path}
-                    to={to}
-                    className={`flex shrink-0 items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium transition-colors ${
-                      active
-                        ? "bg-white/20 text-white"
-                        : "text-white/60 hover:text-white hover:bg-white/10"
-                    }`}
-                  >
-                    <s.icon className="h-3.5 w-3.5" />
-                    {s.label}
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        )}
       </nav>
     </>
   );

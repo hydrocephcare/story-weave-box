@@ -215,34 +215,16 @@ export default function YearHub() {
 
       <YearLibrarySection year={parsedYear} />
 
-      <Link to={`/timetable/year-${parsedYear}`} className="group mt-4 flex items-center gap-4 rounded-2xl border border-border bg-card p-4 transition-colors hover:border-primary/40 hover:bg-primary/5">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary"><CalendarDays className="h-5 w-5" /></span>
-        <span className="min-w-0 flex-1">
-          <span className="block font-serif text-lg font-bold text-foreground">{yearLabel} timetable · Sept–Dec 2026</span>
-          <span className="block text-xs text-muted-foreground">Weekly schedule, units, venues and lecturers — with a share button.</span>
-        </span>
-        <ArrowRight className="h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-0.5" />
-      </Link>
-
-      <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        {sections.map((section) => (
-          <Link
-            key={section.title}
-            to={section.to}
-            className="group rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/40 hover:bg-primary/5"
-          >
-            <div className="mb-3 flex items-center gap-2">
-              <section.icon className="h-4 w-4 text-primary" />
-              <h2 className="font-serif text-lg font-bold text-foreground">{section.title}</h2>
-            </div>
-            <p className="text-sm text-muted-foreground">{section.description}</p>
-            <p className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary">
-              Open {section.title}
-              <ArrowRight className="h-3 w-3" />
-            </p>
+      <nav aria-label="Year shortcuts" className="mt-5 flex flex-wrap gap-2">
+        {sections.filter((x) => ["Blog", "Flashcards", "Exams", "Pharmacology", "Must-knows by unit", "Clinical simulator"].includes(x.title)).map((section) => (
+          <Link key={section.title} to={section.to} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary">
+            <section.icon className="h-4 w-4 text-primary" />
+            {section.title.replace("Blog", "Notes").replace("Must-knows by unit", "Must-knows")}
           </Link>
         ))}
-      </div>
+        <Link to={`/books/year-${parsedYear}`} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary"><BookMarked className="h-4 w-4 text-primary" />Books</Link>
+        {parsedYear <= 4 && <Link to={`/course-outlines/year-${parsedYear}`} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary"><ClipboardCheck className="h-4 w-4 text-primary" />Course outlines</Link>}
+      </nav>
 
       {parsedYear === 3 && (
         <section className="mt-6 rounded-2xl border-2 border-primary/30 bg-primary/5 p-5 sm:p-6">
@@ -268,18 +250,6 @@ export default function YearHub() {
           </article>)}
           <Link to="/exams?year=Year%203" className="flex items-center justify-between gap-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-5"><div><p className="text-xs font-bold uppercase tracking-wider text-primary">After the semesters</p><h3 className="mt-1 font-serif text-xl font-bold">Year 3 Exam Centre</h3><p className="mt-1 text-sm text-muted-foreground">Timed MCQs and complete examination practice.</p></div><Trophy className="h-7 w-7 text-primary" /></Link>
         </section>
-      )}
-
-      {parsedYear <= 4 && (
-        <Link to={`/course-outlines/year-${parsedYear}`} className="group mt-6 flex items-center gap-4 rounded-2xl border-2 border-primary/30 bg-primary/5 p-5 transition-colors hover:border-primary/50 hover:bg-primary/10">
-          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground"><ClipboardCheck className="h-6 w-6" /></span>
-          <span className="min-w-0 flex-1">
-            <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-primary">New · Revision tracker</span>
-            <span className="mt-0.5 block font-serif text-lg font-bold text-foreground sm:text-xl">Course outlines &amp; progress tracker</span>
-            <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground sm:text-sm">Every {yearLabel} unit, topic by topic and linked to the notes — tick each one off once you have covered it, and flag the hard ones.</span>
-          </span>
-          <ArrowRight className="h-5 w-5 shrink-0 text-primary transition-transform group-hover:translate-x-1" />
-        </Link>
       )}
 
       {hasAponeurosis && (

@@ -13,10 +13,7 @@ import { startDownload } from "@/lib/driveDownload";
 import { shelfToFile, toggleSaved, useFileShelf, type ShelfItem } from "@/lib/fileShelf";
 import DriveFileViewer, { cleanName, downloadUrl } from "@/components/DriveFileViewer";
 import FileThumb from "@/components/FileThumb";
-import LatestFeed from "@/components/LatestFeed";
-import WeeklyGoal from "@/components/WeeklyGoal";
-import { useBookShelf } from "@/lib/bookShelf";
-import { AnnouncementCard, ContestsCard, YearBooksCard, YearExamsCard } from "@/components/YearHubPanel";
+import { AnnouncementCard } from "@/components/YearHubPanel";
 
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const MY_YEAR_KEY = "ompath_my_year";
@@ -84,7 +81,7 @@ export function TodayClasses({ year, wide = false }: { year: number; wide?: bool
         <div>
           <p className="mb-1.5 text-[11px] font-bold text-foreground">{notStarted ? "First week · " : ""}{label}{found.offset > 1 ? "" : ` · ${found.day}`}</p>
           <ul className={`space-y-1.5 ${wide ? "sm:grid sm:grid-cols-2 sm:gap-2 sm:space-y-0" : ""}`}>
-            {found.rows.flatMap((r, i) => r.entries.map((e, k) => ({ r, i, e, k }))).slice(0, wide ? (showAll ? 60 : 6) : 5).map(({ r, i, e, k }) => {
+            {found.rows.flatMap((r, i) => r.entries.map((e, k) => ({ r, i, e, k }))).slice(0, wide ? (showAll ? 60 : 6) : 3).map(({ r, i, e, k }) => {
               const { title, sub } = formatUnitEntry(e, names);
               return (
                 <li key={`${i}-${k}`} className="flex items-start gap-2 rounded-lg border border-border bg-background px-2.5 py-1.5">
@@ -95,7 +92,7 @@ export function TodayClasses({ year, wide = false }: { year: number; wide?: bool
             })}
           </ul>
           {wide && !showAll && found.rows.reduce((n, r) => n + r.entries.length, 0) > 6 && <button type="button" onClick={() => setShowAll(true)} className="mt-2 text-[11px] font-bold text-primary hover:underline">Show all {found.rows.reduce((n, r) => n + r.entries.length, 0)} sessions</button>}
-          {!wide && found.rows.reduce((n, r) => n + r.entries.length, 0) > 5 && <p className="mt-1 text-[10px] text-muted-foreground">+{found.rows.reduce((n, r) => n + r.entries.length, 0) - 5} more — open the full timetable.</p>}
+          {!wide && found.rows.reduce((n, r) => n + r.entries.length, 0) > 3 && <p className="mt-1 text-[10px] text-muted-foreground">+{found.rows.reduce((n, r) => n + r.entries.length, 0) - 3} more — open the full timetable.</p>}
         </div>
       )}
       <Link to={`/timetable/year-${year}`} className="mt-2 inline-flex items-center gap-1 text-[11px] font-bold text-primary hover:underline"><CalendarDays className="h-3 w-3" /> Full Year {year} timetable</Link>
@@ -124,21 +121,6 @@ function ShelfRow({ item, onOpen }: { item: ShelfItem; onOpen: () => void }) {
   );
 }
 
-/** Books you saved or opened lately, with a way into the Books page. */
-function MyBooksCard() {
-  const { saved, recent } = useBookShelf();
-  const list = (saved.length ? saved : recent).slice(0, 4);
-  return (
-    <Card title={saved.length ? `Saved books (${saved.length})` : "Books"} icon={BookOpen}>
-      {list.length === 0 ? (
-        <p className="text-[11px] leading-relaxed text-muted-foreground">Star a book to keep it here. <Link to="/books" className="font-bold text-primary hover:underline">Browse the shelves →</Link></p>
-      ) : (
-        <ul className="space-y-1">{list.map((b) => <li key={b.id}><Link to={`/books?q=${encodeURIComponent(b.name)}`} className="block truncate rounded-md px-1.5 py-1 text-xs font-medium text-foreground hover:bg-muted hover:text-primary">{b.name}</Link></li>)}</ul>
-      )}
-    </Card>
-  );
-}
-
 /** Right-hand dashboard: countdown, timetable, shortcuts, continue reading and the learner's saved files. */
 export default function StudyPanel({ year: preferredYear }: { year?: number | null }) {
   const { user } = useAuth();
@@ -159,18 +141,11 @@ export default function StudyPanel({ year: preferredYear }: { year?: number | nu
 
   const links = [
     { to: `/timetable/year-${year}`, label: "Timetable", icon: CalendarDays },
-    ...(lib ? [{ to: libraryPath(lib), label: "Drive library", icon: FolderOpen }] : []),
+    { to: `/books/year-${year}`, label: "Books", icon: BookOpen },
     { to: `/exams?year=${encodeURIComponent(`Year ${year}`)}`, label: "Exams", icon: FileQuestion },
-    { to: "/contests", label: "Contests", icon: Trophy },
     { to: `/flashcards?year=${encodeURIComponent(`Year ${year}`)}`, label: "Flashcards", icon: GraduationCap },
-    { to: "/essays", label: "Essays", icon: PenLine },
-    ...(year <= 4 ? [{ to: `/course-outlines/year-${year}`, label: "Outlines", icon: ClipboardList }] : []),
-    { to: "/dashboard", label: "My day", icon: Target },
-    { to: "/study-map", label: "Study map", icon: Network },
-    ...(year >= 4 ? [{ to: "/clinical", label: "Clinical sim", icon: Stethoscope }, { to: "/pharmacology", label: "Pharmacology", icon: Pill }, { to: "/must-knows", label: "Must-knows", icon: ListChecks }] : []),
     { to: "/daily", label: "Daily dose", icon: Flame },
-    { to: "/revise", label: "Smart revision", icon: Timer },
-    { to: "/revision-planner", label: "Planner", icon: Hourglass },
+    year >= 4 ? { to: "/clinical", label: "Clinical sim", icon: Stethoscope } : { to: "/study-map", label: "Study map", icon: Network },
   ];
 
   return (
@@ -192,13 +167,7 @@ export default function StudyPanel({ year: preferredYear }: { year?: number | nu
         {!user && <Link to="/login" className="mt-2 inline-block text-[11px] font-bold text-primary hover:underline">Sign in to keep your progress →</Link>}
       </section>
 
-      <WeeklyGoal />
-
       <Card title={`Year ${year} classes`} icon={CalendarDays}><TodayClasses year={year} /></Card>
-
-      <YearExamsCard year={year} />
-      <YearBooksCard year={year} limit={6} />
-      <ContestsCard />
 
       <Card title="Shortcuts" icon={Star}>
         <div className="grid grid-cols-2 gap-1.5">
@@ -222,21 +191,9 @@ export default function StudyPanel({ year: preferredYear }: { year?: number | nu
         </Card>
       )}
 
-      <LatestFeed />
-
-      <MyBooksCard />
-
-      <Card title={`Saved files${saved.length ? ` (${saved.length})` : ""}`} icon={Star}>
-        {saved.length === 0 ? (
-          <p className="text-[11px] leading-relaxed text-muted-foreground">Tap the ☆ on any library file to keep it here for quick access.</p>
-        ) : (
-          <ul className="space-y-2">{saved.slice(0, 6).map((i, k) => <ShelfRow key={i.id} item={i} onOpen={() => setViewer({ items: saved, index: k })} />)}</ul>
-        )}
-      </Card>
-
-      {recent.length > 0 && (
-        <Card title="Recently opened" icon={FolderOpen}>
-          <ul className="space-y-2">{recent.slice(0, 4).map((i, k) => <ShelfRow key={i.id} item={i} onOpen={() => setViewer({ items: recent, index: k })} />)}</ul>
+      {saved.length > 0 && (
+        <Card title={`Saved files (${saved.length})`} icon={Star}>
+          <ul className="space-y-2">{saved.slice(0, 4).map((i, k) => <ShelfRow key={i.id} item={i} onOpen={() => setViewer({ items: saved, index: k })} />)}</ul>
         </Card>
       )}
 
@@ -246,7 +203,6 @@ export default function StudyPanel({ year: preferredYear }: { year?: number | nu
         onIndexChange={(n) => setViewer((v) => (v && n !== null ? { ...v, index: n } : null))}
         onDownload={(f) => startDownload(f[0], f[1])}
       />
-      <p className="px-1 text-center text-[10px] text-muted-foreground">{registry.credit}</p>
     </div>
   );
 }

@@ -40,6 +40,7 @@ export default function Exams() {
   const [searchParams] = useSearchParams();
   const selectedYear = searchParams.get("year") || "All";
   const [examSets, setExamSets] = useState<ExamSet[]>([]);
+  const [visible, setVisible] = useState(12);
   const [loading, setLoading] = useState(true);
   const [examPrice, setExamPrice] = useState(5);
   const [phoneByExamId, setPhoneByExamId] = useState<Record<string, string>>({});
@@ -209,7 +210,7 @@ export default function Exams() {
           <p className="py-16 text-center text-muted-foreground">No exams available yet.</p>
         ) : (
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {allExams.map((exam) => {
+          {allExams.slice(0, visible).map((exam) => {
             const isSample = exam.id === "sample-exam";
             const unitName = inferUnit(exam);
             const yearTag = getYearFromCategory(exam.category);
@@ -222,10 +223,6 @@ export default function Exams() {
                     <span className="ml-auto rounded-full border border-border px-2 py-0.5 text-[10px] font-bold text-foreground">FREE</span>
                   </div>
                   <h2 className="font-serif text-base font-bold leading-snug text-foreground">{exam.title}</h2>
-                  <p className="mt-2 flex items-center gap-3 text-xs text-muted-foreground">
-                    <span className="flex items-center gap-1"><Clock className="h-3.5 w-3.5 text-primary" /> Timed</span>
-                    <span className="flex items-center gap-1"><Shield className="h-3.5 w-3.5 text-primary" /> Proctored · MCQs</span>
-                  </p>
                 </div>
                 <div className="mt-4 flex items-center justify-end border-t border-border/60 pt-3">
                   <Button size="sm" onClick={() => navigate(isSample ? `/exams/${exam.id}/start` : buildExamPath(exam))} className="gap-1.5">
@@ -237,24 +234,12 @@ export default function Exams() {
           })}
           </div>
         )}
+        {!loading && allExams.length > visible && (
+          <div className="flex justify-center pt-2">
+            <Button variant="outline" onClick={() => setVisible((v) => v + 12)}>Show more exams ({allExams.length - visible} left)</Button>
+          </div>
+        )}
 
-        {/* Bottom support note */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="rounded-2xl border border-border bg-card p-5 sm:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-2"
-        >
-          <div className="rounded-full bg-rose-500/10 p-3 shrink-0">
-            <Heart className="h-5 w-5 text-rose-500" />
-          </div>
-          <div>
-            <p className="text-sm font-bold text-foreground mb-1">Every exam supports this platform</p>
-            <p className="text-xs text-muted-foreground leading-relaxed">
-              Ompath Study is built by and for health students in Kenya. The small fee helps cover question generation, platform hosting, and new study tools — so we can keep growing and keep everything else free.
-            </p>
-          </div>
-        </motion.div>
       </section>
 
     </div>

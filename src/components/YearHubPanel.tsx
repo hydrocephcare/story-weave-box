@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { BookMarked, CalendarDays, FileQuestion, Flame, GraduationCap, ListChecks, Megaphone, Pill, Stethoscope, Trophy } from "lucide-react";
+import { BookMarked, FileQuestion, Megaphone, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { getYearFromCategory } from "@/lib/store";
 import { loadContestPlatform } from "@/lib/contest-store";
 import { useSiteConfig } from "@/lib/siteConfig";
-import { TodayClasses, useMyYear } from "@/components/StudyPanel";
-import LatestFeed from "@/components/LatestFeed";
+import { useMyYear } from "@/components/StudyPanel";
 
 const slug = (s: string) => s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
@@ -116,30 +115,12 @@ export function AnnouncementCard() {
   );
 }
 
-/**
- * Everything for one year in one place. Shown wherever a page would otherwise be empty,
- * so a filter with no results still leaves the learner somewhere useful to go.
- */
+/** What to try instead when a page has nothing to show: this year's exams and books. */
 export default function YearHubPanel({ year }: { year: number }) {
-  const tools = [
-    { to: `/flashcards?year=${encodeURIComponent(`Year ${year}`)}`, label: "Flashcards", icon: GraduationCap },
-    { to: "/daily", label: "Daily dose", icon: Flame },
-    ...(year >= 4 ? [{ to: "/clinical", label: "Clinical simulator", icon: Stethoscope }, { to: "/pharmacology", label: "Pharmacology", icon: Pill }, { to: "/must-knows", label: "Must-knows", icon: ListChecks }] : []),
-    { to: `/timetable/year-${year}`, label: "Full timetable", icon: CalendarDays },
-  ];
   return (
-    <div className="space-y-3">
-      <AnnouncementCard />
-      <div className="grid gap-3 lg:grid-cols-2">
-        <YearExamsCard year={year} limit={6} />
-        <YearBooksCard year={year} limit={10} />
-        <Panel title={`Year ${year} classes`} icon={CalendarDays}><TodayClasses year={year} /></Panel>
-        <ContestsCard />
-      </div>
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-5">
-        {tools.map((t) => <Link key={t.label} to={t.to} className="flex items-center gap-2 rounded-xl border border-border bg-card px-3 py-2.5 text-xs font-bold text-foreground transition-colors hover:border-primary/50 hover:text-primary"><t.icon className="h-4 w-4 text-primary" /> {t.label}</Link>)}
-      </div>
-      <div className="grid gap-3 lg:grid-cols-3"><LatestFeed /></div>
+    <div className="grid gap-3 lg:grid-cols-2">
+      <YearExamsCard year={year} limit={4} />
+      <YearBooksCard year={year} limit={8} />
     </div>
   );
 }
@@ -149,7 +130,7 @@ export function EmptyStateHub({ year }: { year?: number | null }) {
   const [mine] = useMyYear(year);
   return (
     <div className="mt-8 text-left">
-      <p className="mb-3 text-center text-xs font-bold uppercase tracking-widest text-muted-foreground">Meanwhile in Year {mine}</p>
+      <p className="mb-3 text-center text-xs font-bold uppercase tracking-widest text-muted-foreground">Try these for Year {mine}</p>
       <YearHubPanel year={mine} />
     </div>
   );

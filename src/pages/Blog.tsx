@@ -514,7 +514,6 @@ export default function Blog() {
         <aside className="hidden lg:block">
           <StickyRail>
           <div className="space-y-3 pr-1">
-            <StudyPanel year={yearNum} />
             <div className="rounded-2xl border border-border bg-card p-4 shadow-sm">
             <p className="mb-2 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">Browse</p>
             <button
