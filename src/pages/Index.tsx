@@ -227,7 +227,7 @@ export default function Index() {
             initial={{ opacity: 0, scale: 0.96, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.5, ease: REVEAL_EASE }}
-            className="rounded-2xl border border-white/15 bg-white/[0.06] p-6 backdrop-blur-sm"
+            className="hidden rounded-2xl border border-white/15 bg-white/[0.06] p-6 backdrop-blur-sm md:block"
           >
             <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-white/60">Why students use it</p>
             <ul className="mt-4 space-y-3">

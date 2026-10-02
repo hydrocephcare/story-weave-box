@@ -120,7 +120,7 @@ function MyBooks({ local }: { local: Set<string> }) {
       {lists.map((l) => (
         <section key={l.title}>
           <h2 className="mb-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground"><l.icon className="h-3.5 w-3.5 text-primary" /> {l.title} ({l.list.length})</h2>
-          <ul className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-1 sm:mx-0 sm:px-0">
+          <ul className="-mx-4 flex gap-3 no-scrollbar overflow-x-auto px-4 pb-1 sm:mx-0 sm:px-0">
             {l.list.slice(0, 12).map((b, k) => (
               <li key={b.id} className="w-[4.6rem] shrink-0">
                 <button type="button" onClick={() => setView({ list: l.list, index: k })} className="block w-full text-left" aria-label={`Open ${b.name}`}>
@@ -224,15 +224,15 @@ export default function BooksPage() {
     const groups = data.types.map((t, ti) => ({ t, ti, ids: subject.b.filter((i) => data.books[i][2] === ti) })).filter((g) => g.ids.length);
     return (
       <div className="min-h-[65vh] bg-background">
-        <Header title={subject.name} blurb={`${subject.b.length} books for ${shelf.label}.${subject.units.length ? ` Timetable units: ${subject.units.join(", ")}.` : ""}`} trail={[{ to: "/books", label: "Books" }, { to: `/books/${shelf.key}`, label: shelf.label }, { label: subject.name }]}>
+        <Header title={subject.name} blurb={`${subject.b.length} books for ${shelf.label}.${subject.units.length ? ` Units: ${subject.units.slice(0, 3).join(", ")}${subject.units.length > 3 ? ` +${subject.units.length - 3}` : ""}.` : ""}`} trail={[{ to: "/books", label: "Books" }, { to: `/books/${shelf.key}`, label: shelf.label }, { label: subject.name }]}>
           {subject.also.length > 0 && (
             <p className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">Also studied in {subject.also.map((y) => <Link key={y} to={`/books/${YEAR_KEY(y)}/${subjectKey}`} className="rounded-full border border-border px-2.5 py-0.5 font-bold text-primary hover:border-primary/50">Year {y}</Link>)}</p>
           )}
-          <nav aria-label="Jump to type" className="-mx-4 flex gap-2 overflow-x-auto px-4 pt-1 sm:mx-0 sm:flex-wrap sm:px-0">
+          <nav aria-label="Jump to type" className="-mx-4 flex gap-2 no-scrollbar overflow-x-auto px-4 pt-1 sm:mx-0 sm:flex-wrap sm:px-0">
             {groups.map((g) => <a key={g.ti} href={`#type-${g.ti}`} className="shrink-0 rounded-full border border-border bg-card px-3.5 py-1.5 text-[13px] font-bold text-muted-foreground hover:border-primary/50 hover:text-primary">{g.t} <span className="opacity-60">{g.ids.length}</span></a>)}
           </nav>
           <div className="flex flex-wrap items-center gap-2">
-            <button type="button" onClick={async () => { const url = window.location.href; const text = `${subject.name} books for ${shelf.label} on Ompath Study`; try { if (navigator.share) await navigator.share({ title: text, url }); else { await navigator.clipboard.writeText(`${text}: ${url}`); setShared(true); setTimeout(() => setShared(false), 1800); } } catch { /* share cancelled */ } }} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-[13px] font-bold text-muted-foreground hover:border-primary/50 hover:text-primary"><Share2 className="h-3.5 w-3.5" /> {shared ? "Link copied" : "Share this shelf"}</button>
+            <button type="button" onClick={async () => { const url = window.location.href; const text = `${subject.name} books for ${shelf.label} on Ompath Study`; try { if (navigator.share) await navigator.share({ title: text, url }); else { await navigator.clipboard.writeText(`${text}: ${url}`); setShared(true); setTimeout(() => setShared(false), 1800); } } catch { /* share cancelled */ } }} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-[13px] font-bold text-muted-foreground hover:border-primary/50 hover:text-primary"><Share2 className="h-3.5 w-3.5" /> <span className="hidden sm:inline">{shared ? "Link copied" : "Share this shelf"}</span>{shared && <span className="sm:hidden">Copied</span>}</button>
           </div>
           {searchBox}
         </Header>
@@ -257,7 +257,7 @@ export default function BooksPage() {
       <div className="min-h-[65vh] bg-background">
         <Header title={shelf.label} blurb={shelf.blurb} trail={[{ to: "/books", label: "Books" }, { label: shelf.label }]}>{searchBox}</Header>
         <div className="mx-auto max-w-5xl space-y-4 px-4 py-6 sm:px-5">
-          <nav aria-label="Years" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
+          <nav aria-label="Years" className="-mx-4 flex gap-2 no-scrollbar overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
             {data.shelves.map((s) => <button key={s.key} type="button" onClick={() => navigate(`/books/${s.key}`)} className={`shrink-0 rounded-full border px-3.5 py-1.5 text-[13px] font-bold transition-colors ${s.key === shelf.key ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/50 hover:text-primary"}`}>{s.label}</button>)}
           </nav>
           <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

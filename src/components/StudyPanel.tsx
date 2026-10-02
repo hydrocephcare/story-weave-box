@@ -81,10 +81,10 @@ export function TodayClasses({ year, wide = false }: { year: number; wide?: bool
         <div>
           <p className="mb-1.5 text-[11px] font-bold text-foreground">{notStarted ? "First week · " : ""}{label}{found.offset > 1 ? "" : ` · ${found.day}`}</p>
           <ul className={`space-y-1.5 ${wide ? "sm:grid sm:grid-cols-2 sm:gap-2 sm:space-y-0" : ""}`}>
-            {found.rows.flatMap((r, i) => r.entries.map((e, k) => ({ r, i, e, k }))).slice(0, wide ? (showAll ? 60 : 6) : 3).map(({ r, i, e, k }) => {
+            {found.rows.flatMap((r, i) => r.entries.map((e, k) => ({ r, i, e, k }))).filter(({ e }) => !/change ?over|lunch/i.test(e)).slice(0, wide ? (showAll ? 60 : 6) : 3).map(({ r, i, e, k }, n) => {
               const { title, sub } = formatUnitEntry(e, names);
               return (
-                <li key={`${i}-${k}`} className="flex items-start gap-2 rounded-lg border border-border bg-background px-2.5 py-1.5">
+                <li key={`${i}-${k}`} className={`items-start gap-2 rounded-lg border border-border bg-background px-2.5 py-1.5 ${wide && !showAll && n >= 3 ? "hidden sm:flex" : "flex"}`}>
                   <Timer className="mt-0.5 h-3 w-3 shrink-0 text-primary" />
                   <span className="min-w-0 text-[11px] leading-snug"><span className="font-bold text-foreground">{title}</span>{sub && <span className="flex items-center gap-1 text-muted-foreground"><MapPin className="h-2.5 w-2.5 shrink-0" />{sub}</span>}{r.group ? <span className="text-primary"> · group {r.group}</span> : null}</span>
                 </li>

@@ -635,7 +635,7 @@ export default function Blog() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.3 }}
-            className="flex shrink-0 gap-5 border-l border-border pl-5 text-right"
+            className="hidden shrink-0 gap-5 border-l border-border pl-5 text-right sm:flex"
           >
             <div>
               <p className="font-serif text-xl font-bold text-foreground">{selectedYear === "All" ? catalogueStats.notes : filtered.length}</p>

@@ -67,36 +67,38 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
       <DialogContent className="fixed inset-0 left-0 top-0 flex h-[100dvh] w-screen max-w-none translate-x-0 translate-y-0 flex-col gap-0 overflow-hidden rounded-none border-0 p-0 sm:rounded-none">
         {file && (
           <>
-            <div className="flex items-center gap-2 border-b border-border px-3 py-2 pr-12">
-              <button type="button" onClick={() => onIndexChange(null)} aria-label="Close reader" className="inline-flex h-10 items-center gap-1 rounded-md border border-border px-2 text-xs font-bold"><ChevronLeft className="h-4 w-4" /> Back</button>
-              <div className="min-w-0 flex-1">
-                <DialogTitle className="line-clamp-2 text-sm font-bold">{cleanName(file[1])}</DialogTitle>
+            <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 border-b border-border px-3 py-2 pr-12 sm:flex-nowrap">
+              <button type="button" onClick={() => onIndexChange(null)} aria-label="Close reader" className="inline-flex h-9 items-center gap-1 rounded-md border border-border px-2 text-xs font-bold"><ChevronLeft className="h-4 w-4" /> Back</button>
+              <div className="min-w-[55%] flex-1 sm:min-w-0">
+                <DialogTitle className="line-clamp-2 text-sm font-bold leading-snug">{cleanName(file[1])}</DialogTitle>
                 <DialogDescription className="text-[11px]">
                   {(index as number) + 1} of {items.length}{where ? ` · ${where}` : ""}
                 </DialogDescription>
               </div>
-              <button
-                type="button"
-                onClick={() => onIndexChange((index as number) - 1)}
-                disabled={(index as number) <= 0}
-                aria-label="Previous file"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border disabled:opacity-40"
-              ><ChevronLeft className="h-4 w-4" /></button>
-              <button
-                type="button"
-                onClick={() => onIndexChange((index as number) + 1)}
-                disabled={(index as number) >= items.length - 1}
-                aria-label="Next file"
-                className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border disabled:opacity-40"
-              ><ChevronRight className="h-4 w-4" /></button>
-              <button type="button" onClick={() => setShowRel((v) => !v)} aria-pressed={showRel} aria-label="Show connected notes and files" className={`inline-flex h-9 items-center gap-1.5 rounded-md border px-3 text-xs font-bold ${showRel ? "border-primary bg-primary/10 text-primary" : "border-border"}`}><Network className="h-3.5 w-3.5" /><span className="hidden sm:inline">Connected</span></button>
-              {!isBroken && (
+              <div className="flex w-full items-center justify-end gap-2 sm:w-auto">
                 <button
                   type="button"
-                  onClick={() => onDownload(file)}
-                  className="inline-flex h-9 items-center gap-1.5 rounded-md bg-primary px-3 text-xs font-bold text-primary-foreground hover:bg-primary/90"
-                ><Download className="h-3.5 w-3.5" /> Download</button>
-              )}
+                  onClick={() => onIndexChange((index as number) - 1)}
+                  disabled={(index as number) <= 0}
+                  aria-label="Previous file"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border disabled:opacity-40"
+                ><ChevronLeft className="h-4 w-4" /></button>
+                <button
+                  type="button"
+                  onClick={() => onIndexChange((index as number) + 1)}
+                  disabled={(index as number) >= items.length - 1}
+                  aria-label="Next file"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border disabled:opacity-40"
+                ><ChevronRight className="h-4 w-4" /></button>
+                <button type="button" onClick={() => setShowRel((v) => !v)} aria-pressed={showRel} aria-label="Show connected notes and files" className={`inline-flex h-9 items-center gap-1.5 rounded-md border px-3 text-xs font-bold ${showRel ? "border-primary bg-primary/10 text-primary" : "border-border"}`}><Network className="h-3.5 w-3.5" /><span className="hidden sm:inline">Connected</span></button>
+                {!isBroken && (
+                  <button
+                    type="button"
+                    onClick={() => onDownload(file)}
+                    className="inline-flex h-9 items-center gap-1.5 rounded-md bg-primary px-3 text-xs font-bold text-primary-foreground hover:bg-primary/90"
+                  ><Download className="h-3.5 w-3.5" /> Download</button>
+                )}
+              </div>
             </div>
 
             <div className="relative min-h-0 flex-1 bg-muted/30">
