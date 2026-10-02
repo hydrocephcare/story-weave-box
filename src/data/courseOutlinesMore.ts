@@ -243,7 +243,7 @@ const paediatrics: CourseOutline = {
       ["Week 14", "Assessment test"]]) },
     { id: "pd-t2", title: "Trimester 2", items: weeks("pd-t2", [
       ["Weeks 1–2", "Gastrointestinal system", "GORD, gastritis and peptic ulcer disease, hepatitis, acute liver failure, acute gastroenteritis."], ["Weeks 1–2", "Acute gastroenteritis and dehydration"],
-      ["Week 3", "Neurology", "Meningitis and other CNS infections, convulsive disorders, movement disorders, encephalopathies, neurocutaneous syndromes."], ["Week 3", "Paediatric meningitis"],
+      ["Week 3", "Neurology", "Meningitis and other CNS infections, convulsive disorders, movement disorders, encephalopathies, neurocutaneous syndromes."], ["Week 3", "Paediatric meningitis"], ["Week 3", "Cerebral palsy"], ["Week 3", "Hydrocephalus"],
       ["Weeks 4–6", "Cardiovascular", "Acute rheumatic fever, rheumatic heart disease, infective endocarditis, congenital heart disease, arrhythmias, ECG."], ["Weeks 4–6", "Acute rheumatic fever and rheumatic heart disease"], ["Weeks 4–6", "Congenital heart disease"],
       ["Weeks 7–8", "Blood disorders", "Anaemia, haemophilias, sickle cell disease, blood components and transfusion, other bleeding and thrombotic disorders."], ["Weeks 7–8", "Iron-deficiency anaemia in children"], ["Weeks 7–8", "Haemophilia"], ["Weeks 7–8", "Sickle cell disease in children"],
       ["Weeks 9–10", "Fluids, electrolytes and acid–base", "Hyponatraemia, hypernatraemia, hypokalaemia, hyperkalaemia, blood gas analysis."],
@@ -251,7 +251,7 @@ const paediatrics: CourseOutline = {
       ["Week 13", "Assessment"]]) },
     { id: "pd-t3", title: "Trimester 3", items: weeks("pd-t3", [
       ["Weeks 1–10", "Shock"], ["Weeks 1–10", "Immunisation practices"], ["Weeks 1–10", "Fever and fever of unknown origin"], ["Weeks 1–10", "Bacterial infections"],
-      ["Weeks 1–10", "Viral infections"], ["Weeks 1–10", "Human immunodeficiency virus"], ["Weeks 1–10", "Paediatric HIV"], ["Weeks 1–10", "Fungal infections"], ["Weeks 1–10", "Protozoal infections"], ["Weeks 1–10", "Malaria"], ["Weeks 1–10", "Parasites and helminths"],
+      ["Weeks 1–10", "Viral infections"], ["Weeks 1–10", "Measles"], ["Weeks 1–10", "Human immunodeficiency virus"], ["Weeks 1–10", "Paediatric HIV"], ["Weeks 1–10", "Fungal infections"], ["Weeks 1–10", "Protozoal infections"], ["Weeks 1–10", "Malaria"], ["Weeks 1–10", "Parasites and helminths"],
       ["Week 11", "Poisoning", "Paraffin, organophosphate, paracetamol, other household products."],
       ["Week 12", "Assessment"], ["Week 13", "Revision"], ["Week 14", "End-of-year examinations"]]) },
   ],
