@@ -3,6 +3,7 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowRight, Check, Eye, EyeOff, FileText, Printer, RotateCcw, Search, Stethoscope } from "lucide-react";
 import { ALL_CASES } from "@/clinical";
 import { MUST_KNOWS, unitById, type MkUnit } from "@/data/mustKnows";
+import { IMED_DISEASE_THEORY } from "@/data/imedDiseaseTheory";
 import { hashId, resetKnown, setKnown, toggleKnown, useKnown } from "@/lib/mustKnowStore";
 import { updateMetaTags } from "@/lib/seo";
 
@@ -124,6 +125,33 @@ function Unit({ unit }: { unit: MkUnit }) {
             </section>
           );
         })}
+        {unit.rotation === "medicine" && filter === "all" && !q && (
+          <section className="space-y-2">
+            <div className="mb-2">
+              <h2 className="font-serif text-lg font-bold text-foreground">Disease theory · condition by condition</h2>
+              <p className="text-xs text-muted-foreground">Definition → causes → pathophysiology → clinical features → investigations → management → complications → viva pearl.</p>
+            </div>
+            {IMED_DISEASE_THEORY.map((d) => (
+              <details key={d.id} className="overflow-hidden rounded-xl border border-border bg-card">
+                <summary className="cursor-pointer list-none px-4 py-3">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-primary">{d.system}</span>
+                  <span className="block font-serif text-base font-bold text-foreground">{d.name}</span>
+                </summary>
+                <div className="space-y-3 border-t border-border bg-muted/20 px-4 py-4 text-xs leading-relaxed text-foreground">
+                  <p><b>Definition:</b> {d.definition}</p>
+                  <div><b>Causes / risk factors</b><ul className="mt-1 list-disc space-y-1 pl-5">{d.causes.map((x) => <li key={x}>{x}</li>)}</ul></div>
+                  <p><b>Pathophysiology:</b> {d.mechanism}</p>
+                  <div><b>Clinical features</b><ul className="mt-1 list-disc space-y-1 pl-5">{d.presentation.map((x) => <li key={x}>{x}</li>)}</ul></div>
+                  <div><b>Investigations</b><ul className="mt-1 list-disc space-y-1 pl-5">{d.investigations.map((x) => <li key={x}>{x}</li>)}</ul></div>
+                  <div><b>Management principles</b><ul className="mt-1 list-disc space-y-1 pl-5">{d.management.map((x) => <li key={x}>{x}</li>)}</ul></div>
+                  <div><b>Complications</b><ul className="mt-1 list-disc space-y-1 pl-5">{d.complications.map((x) => <li key={x}>{x}</li>)}</ul></div>
+                  <p className="rounded-lg border border-primary/20 bg-primary/5 p-2.5"><b className="text-primary">Viva pearl:</b> {d.viva}</p>
+                </div>
+              </details>
+            ))}
+          </section>
+        )}
+
         {secs.every((s) => s.items.filter(visible).length === 0) && <p className="rounded-xl border border-border bg-card p-4 text-sm text-muted-foreground">{filter === "done" ? "Nothing ticked yet." : filter === "todo" ? "Everything here is ticked — well done!" : "Nothing matches that search."}</p>}
         <div className="no-print flex flex-wrap items-center justify-between gap-2 pt-2">
           <button type="button" onClick={() => { if (window.confirm(`Clear all ticks for ${unit.name}?`)) resetKnown(`${unit.id}:`); }} className="inline-flex items-center gap-1 text-[11px] font-semibold text-muted-foreground hover:text-foreground"><RotateCcw className="h-3 w-3" /> Clear ticks for this unit</button>
