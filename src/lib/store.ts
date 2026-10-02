@@ -539,7 +539,7 @@ export function buildFlashcardPath(set: { id: string; title: string; slug?: stri
 
 export function buildExamPath(exam: { id: string; title: string; slug?: string | null }): string {
   const rawSlug = typeof exam.slug === "string" ? exam.slug.trim() : "";
-  const slug = rawSlug || `${slugifyTitle(exam.title) || "exam"}-${(exam.id || "").slice(0, 6)}`;
+  const slug = rawSlug || `${exam.id}-${slugifyTitle(exam.title) || "exam"}`;
   return `/exams/${slug}/start`;
 }
 

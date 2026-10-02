@@ -14,6 +14,7 @@ interface ExamSet {
   title: string;
   category: string;
   created_at: string;
+  slug?: string | null;
 }
 
 const UNLOCKED_KEY = "unlocked_exams";
@@ -66,7 +67,7 @@ export default function Exams() {
   const loadExams = async () => {
     const { data } = await supabase
       .from("mcq_sets")
-      .select("id,title,category,created_at,updated_at")
+      .select("id,title,slug,category,created_at,updated_at")
       .eq("published", true)
       .or("title.ilike.%exam%,category.ilike.Weekly Exam%")
       .order("updated_at", { ascending: false });

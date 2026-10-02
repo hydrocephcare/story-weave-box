@@ -230,8 +230,6 @@ export default function ExamStart() {
         data = r.data;
         resolvedId = data?.id || null;
       }
-      const unlockedRaw = localStorage.getItem(UNLOCKED_KEY);
-      const unlocked = new Set<string>(unlockedRaw ? JSON.parse(unlockedRaw) : []);
       if (!resolvedId || !data || !isPublicMcqSet(data)) { navigate("/exams", { replace: true }); return; }
       const questions = cleanExamQuestions(data.questions);
       if (!questions.length) { navigate("/exams", { replace: true }); return; }
