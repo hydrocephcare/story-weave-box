@@ -11,6 +11,31 @@ export const MUST_KNOWS: MkUnit[] = [
   {
     id: "internal-medicine", name: "Internal Medicine", emoji: "🩺", rotation: "medicine", blurb: "Emergencies you must recognise, the classic presentations, how to read the tests, and the management every Year 4 should know.",
     sections: [
+      { title: "Theory foundations you must explain", items: [
+        "Inflammation: know the cardinal signs, acute versus chronic inflammation, and why fever and raised CRP occur.",
+        "Oxygen delivery depends on haemoglobin, saturation and cardiac output; a normal SpO₂ does not exclude severe anaemia.",
+        "Starling forces explain oedema: increased hydrostatic pressure, reduced oncotic pressure, increased permeability or lymphatic obstruction.",
+        "Acid-base: know respiratory versus metabolic acidosis/alkalosis and whether compensation is appropriate.",
+        "Renin-angiotensin-aldosterone system explains much of hypertension, heart failure, oedema and the action of ACE inhibitors/ARBs.",
+        "Anaemia is classified first by MCV, then reticulocyte response and the clinical context.",
+        "Jaundice is pre-hepatic, hepatic or post-hepatic; bilirubin fraction, urine and stool help localise it.",
+        "AKI is pre-renal, intrinsic or post-renal; CKD is persistent structural or functional kidney abnormality.",
+        "Shock is inadequate tissue perfusion: hypovolaemic, distributive, cardiogenic or obstructive.",
+        "A differential diagnosis should contain the likely diagnosis, dangerous alternatives and plausible mimics — with evidence for and against each.",
+      ] },
+      { title: "Consultant rapid-fire questions", items: [
+        "Know causes of clubbing, cyanosis, pallor, jaundice, lymphadenopathy and bilateral oedema.",
+        "Know causes of seizures: metabolic, infectious, structural, toxic/drug-related and epilepsy.",
+        "Know causes of altered consciousness using glucose, oxygenation, infection, electrolytes, drugs/toxins, stroke, seizures, uraemia and liver failure.",
+        "Know common pneumonia organisms and how age, aspiration, hospital exposure and immune status change the likely pathogen.",
+        "Know CURB-65 components and what severity scoring is trying to decide.",
+        "Know GCS components and be able to report E, V and M separately.",
+        "Know indications for dialysis using refractory acidosis, electrolyte problems, selected intoxications, overload and uraemic complications.",
+        "Know nephrotic versus nephritic syndrome, transudate versus exudate, and obstructive versus restrictive lung disease.",
+        "Know murmurs by timing, site, radiation and manoeuvres rather than memorising only names.",
+        "Know when a patient is unstable: hypotension/shock, hypoxia, altered consciousness, ongoing chest pain, severe respiratory distress or dangerous arrhythmia.",
+      ] },
+
       { title: "Emergencies: the first move", items: [
         ["ABCDE first, history second: treat life threats as you find them.", "ABCDE approach"],
         ["Sepsis: take cultures, give antibiotics within the first hour, and give 30 mL/kg fluid if hypotensive or lactate is high.", "sepsis"],
@@ -65,6 +90,27 @@ export const MUST_KNOWS: MkUnit[] = [
   {
     id: "surgery", name: "Surgery", emoji: "🔪", rotation: "surgery", blurb: "Trauma and the acute abdomen, the pre- and post-operative checklist, and the lumps you must not miss.", outline: "surgery",
     sections: [
+      { title: "Theory and viva foundations", items: [
+        "Wound healing phases: haemostasis/inflammation, proliferation and remodelling; know factors that delay healing.",
+        "Surgical infection: contamination versus colonisation versus infection; source control is as important as antibiotics.",
+        "Fluid therapy: distinguish resuscitation, maintenance and replacement; reassess pulse, BP, perfusion, lungs and urine output.",
+        "Shock: recognise compensated shock before hypotension appears; tachycardia and cool peripheries may be early signs.",
+        "A lump is described by site, size, shape, surface, edge, consistency, tenderness, mobility, skin, pulsatility and regional nodes.",
+        "An ulcer is described by site, size, edge, floor, base, discharge, surrounding skin, tenderness and pulses/sensation.",
+        "Fracture assessment includes skin, deformity and neurovascular status before and after splinting.",
+        "Know clean, clean-contaminated, contaminated and dirty operations and how this affects infection risk.",
+      ] },
+      { title: "Clinical questions you should answer on rounds", items: [
+        "Acute abdomen: where is the pain, how did it start, where did it move, vomiting, bowel function, urinary and gynaecological symptoms?",
+        "Obstruction: distinguish simple from strangulated obstruction; pain becoming constant, fever, tachycardia, peritonism and lactate are danger signs.",
+        "Diabetic foot: assess infection, perfusion, neuropathy, depth and possible osteomyelitis.",
+        "Post-op deterioration: think bleeding, sepsis, respiratory complication, PE, myocardial event, fluid/electrolyte problem and drug effect.",
+        "Breast lump: know triple assessment and the clinical features concerning for malignancy.",
+        "Urinary retention: ask about LUTS, drugs and neurological symptoms; examine bladder and prostate where appropriate.",
+        "Painless visible haematuria requires malignancy evaluation until an alternative cause is established.",
+        "Every trauma presentation ends with a secondary survey after immediate life threats are controlled.",
+      ] },
+
       { title: "Emergencies: the first move", items: [
         ["Trauma: ABCDE with C-spine protection; treat life threats as you find them (ATLS).", "trauma ATLS"],
         ["Tension pneumothorax is a clinical diagnosis: needle decompression at once, then a chest drain.", "tension pneumothorax"],
@@ -111,6 +157,26 @@ export const MUST_KNOWS: MkUnit[] = [
   {
     id: "obstetrics-gynaecology", name: "Obstetrics & Gynaecology", emoji: "🤰", rotation: "obgyn", blurb: "The antenatal check, the haemorrhage and hypertension emergencies, and the gynaecology you must not miss.", outline: "obstetrics-gynaecology",
     sections: [
+      { title: "Theory foundations", items: [
+        "Gestational age is counted from the first day of the LNMP; know how to calculate EDD and interpret weeks plus days.",
+        "Know gravidity, parity, abortion/miscarriage and living children terminology and report them consistently.",
+        "Understand fetal lie, presentation, position, attitude and station before trying to memorise labour findings.",
+        "Placental function includes gas/nutrient exchange and endocrine production; placental failure contributes to fetal growth restriction.",
+        "Normal pregnancy changes affect cardiovascular, respiratory, renal and haematological physiology and influence interpretation of results.",
+        "The menstrual cycle is coordinated by GnRH, FSH, LH, oestrogen and progesterone; use this to understand ovulation and contraception.",
+        "Primary versus secondary amenorrhoea and primary versus secondary infertility require different differential frameworks.",
+      ] },
+      { title: "Clinical and viva must-knows", items: [
+        "For every pregnant patient know gestational age, parity, fetal movement, bleeding, leaking liquor, contractions, headache/visual symptoms and previous obstetric complications.",
+        "Pre-eclampsia is not just high BP: ask about headache, visual symptoms, RUQ/epigastric pain, reduced urine and fetal movement.",
+        "PPH: call for help, resuscitate and identify Tone, Trauma, Tissue or Thrombin simultaneously.",
+        "Antepartum bleeding: stabilise first and avoid digital vaginal examination until placenta praevia is excluded.",
+        "Labour progress is not cervical dilatation alone: assess contractions, descent, maternal state and fetal wellbeing.",
+        "Ectopic pregnancy belongs in the differential of reproductive-age patients with abdominal pain, bleeding, syncope or shock.",
+        "Pelvic pain differentials include ectopic pregnancy, PID, torsion, ruptured cyst, endometriosis and non-gynaecological causes.",
+        "Postcoital bleeding and postmenopausal bleeding are red flags requiring appropriate cervical/endometrial evaluation.",
+      ] },
+
       { title: "Obstetric emergencies", items: [
         ["Eclampsia: magnesium sulphate, control blood pressure, then deliver; monitor reflexes, respiratory rate and urine output.", "pre-eclampsia"],
         ["Postpartum haemorrhage: the four Ts (tone, trauma, tissue, thrombin); massage, oxytocin, tranexamic acid, resuscitate.", "postpartum haemorrhage"],
@@ -151,6 +217,29 @@ export const MUST_KNOWS: MkUnit[] = [
   {
     id: "paediatrics", name: "Paediatrics & Child Health", emoji: "🧒", rotation: "paeds", blurb: "Danger signs, fluids and doses by weight, growth and development, and the common killers of children.", outline: "paediatrics",
     sections: [
+      { title: "Theory foundations", items: [
+        "Children are not small adults: normal heart rate, respiratory rate and BP change with age.",
+        "Drug doses are commonly weight-based; always know the child's current weight and maximum allowed dose.",
+        "Growth is assessed over time using weight, length/height, head circumference where appropriate and growth charts.",
+        "Development is assessed in gross motor, fine motor/vision, language/hearing and social domains.",
+        "Dehydration is a clinical classification that determines the rehydration plan.",
+        "A child's physiological reserve can hide shock; hypotension is often a late sign.",
+        "Neonatal transition depends primarily on establishing ventilation; persistent apnoea/gasping requires effective positive-pressure ventilation.",
+        "Malnutrition alters immunity, fluid handling and presentation of infection; manage severe acute malnutrition cautiously.",
+      ] },
+      { title: "Clinical and viva must-knows", items: [
+        "Always ask feeding, urine/stool, activity, immunisation, growth/development, birth history and exposure to sick contacts.",
+        "A sick child assessment starts with appearance, airway/breathing, circulation, neurological state and glucose.",
+        "Know IMCI general danger signs and recognise the child who needs urgent referral/admission.",
+        "Pneumonia severity depends on respiratory distress, hypoxaemia and danger signs, not cough alone.",
+        "A convulsing child needs ABC, glucose and termination of a prolonged seizure while the cause is investigated.",
+        "Neonatal jaundice in the first 24 hours is pathological until evaluated.",
+        "Bilateral nutritional pitting oedema indicates severe acute malnutrition regardless of weight-for-height.",
+        "Poor feeding with sweating and tachypnoea can be the infant presentation of heart failure.",
+        "Periorbital oedema plus dark urine and hypertension suggests a nephritic process; generalised oedema with heavy proteinuria suggests nephrotic syndrome.",
+        "Always give the parent/caregiver clear danger signs and follow-up instructions.",
+      ] },
+
       { title: "Emergencies: the first move", items: [
         ["IMCI general danger signs: unable to drink or breastfeed, vomits everything, convulsions, lethargic or unconscious.", "IMCI"],
         ["Check glucose in every sick child, and every child who fits or is drowsy.", "hypoglycaemia"],
@@ -193,6 +282,27 @@ export const MUST_KNOWS: MkUnit[] = [
   {
     id: "psychiatry", name: "Psychiatry", emoji: "🧠", rotation: "psychiatry", blurb: "The mental state examination, risk, how to tell organic from functional illness, and the drugs and their side effects.", outline: "psychiatry",
     sections: [
+      { title: "Theory foundations", items: [
+        "The biopsychosocial model integrates biological, psychological and social contributors rather than choosing only one cause.",
+        "The 4 Ps formulation is predisposing, precipitating, perpetuating and protective factors.",
+        "Psychosis is a syndrome, not automatically schizophrenia; exclude substances, delirium and medical/neurological causes.",
+        "Mood is the sustained internal emotional state; affect is the observed emotional expression.",
+        "A delusion is a fixed false belief held despite contrary evidence within the person's cultural context; a hallucination is perception without an external stimulus.",
+        "Delirium is acute and fluctuating with impaired attention; dementia is usually chronic and progressive.",
+        "Capacity is decision-specific and time-specific; diagnosis alone does not determine capacity.",
+        "Risk formulation includes suicide/self-harm, harm to others, vulnerability/neglect and risks related to substances or medical illness.",
+      ] },
+      { title: "Clinical interview and viva must-knows", items: [
+        "MSE order: appearance/behaviour, speech, mood/affect, thought, perception, cognition, insight and risk.",
+        "Suicide assessment asks directly about thoughts, intent, plan, means, timing, previous attempts, substance use and protective factors.",
+        "In first-episode psychosis obtain collateral history, substance/medication history and appropriate physical/neurological assessment.",
+        "Before calling depression unipolar, ask about previous mania or hypomania.",
+        "Acute agitation: protect safety, use calm verbal de-escalation, assess causes and use medication/restraint only when clinically necessary and according to protocol.",
+        "Alcohol withdrawal can cause seizures and delirium tremens; identify autonomic hyperactivity and nutritional deficiency.",
+        "Antipsychotic adverse effects include acute dystonia, akathisia, parkinsonism, tardive dyskinesia, metabolic effects, prolactin effects and NMS.",
+        "Child psychiatry history requires development, school performance, family context, behaviour across settings and safeguarding assessment.",
+      ] },
+
       { title: "Examination and risk", items: [
         ["MSE order: appearance and behaviour, speech, mood and affect, thought form, thought content, perception, cognition, insight and judgment.", "mental state examination"],
         ["Always ask directly about suicide: thoughts, plan, intent, means, previous attempts and protective factors — asking does not plant the idea.", "suicide risk"],
