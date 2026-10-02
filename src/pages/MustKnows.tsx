@@ -4,6 +4,7 @@ import { ArrowRight, Check, Eye, EyeOff, FileText, Printer, RotateCcw, Search, S
 import { ALL_CASES } from "@/clinical";
 import { MUST_KNOWS, unitById, type MkUnit } from "@/data/mustKnows";
 import { IMED_DISEASE_THEORY } from "@/data/imedDiseaseTheory";
+import { YEAR4_ROTATION_THEORY } from "@/data/year4RotationTheory";
 import { hashId, resetKnown, setKnown, toggleKnown, useKnown } from "@/lib/mustKnowStore";
 import { updateMetaTags } from "@/lib/seo";
 
@@ -125,6 +126,32 @@ function Unit({ unit }: { unit: MkUnit }) {
             </section>
           );
         })}
+        {unit.rotation && unit.rotation !== "medicine" && filter === "all" && !q && YEAR4_ROTATION_THEORY.some((d) => d.rotation === unit.rotation) && (
+          <section className="space-y-2">
+            <div className="mb-2">
+              <h2 className="font-serif text-lg font-bold text-foreground">Disease theory · condition by condition</h2>
+              <p className="text-xs text-muted-foreground">Core theory → clinical features → investigations → management → complications → viva pearl.</p>
+            </div>
+            {YEAR4_ROTATION_THEORY.filter((d) => d.rotation === unit.rotation).map((d) => (
+              <details key={d.id} className="overflow-hidden rounded-xl border border-border bg-card">
+                <summary className="cursor-pointer list-none px-4 py-3">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-primary">{d.system}</span>
+                  <span className="block font-serif text-base font-bold text-foreground">{d.name}</span>
+                </summary>
+                <div className="space-y-3 border-t border-border bg-muted/20 px-4 py-4 text-xs leading-relaxed text-foreground">
+                  <p><b>Definition:</b> {d.definition}</p>
+                  <div><b>Core theory / pathophysiology</b><ul className="mt-1 list-disc space-y-1 pl-5">{d.core.map((x) => <li key={x}>{x}</li>)}</ul></div>
+                  <div><b>Clinical features</b><ul className="mt-1 list-disc space-y-1 pl-5">{d.clinical.map((x) => <li key={x}>{x}</li>)}</ul></div>
+                  <div><b>Investigations</b><ul className="mt-1 list-disc space-y-1 pl-5">{d.investigations.map((x) => <li key={x}>{x}</li>)}</ul></div>
+                  <div><b>Management principles</b><ul className="mt-1 list-disc space-y-1 pl-5">{d.management.map((x) => <li key={x}>{x}</li>)}</ul></div>
+                  <div><b>Complications</b><ul className="mt-1 list-disc space-y-1 pl-5">{d.complications.map((x) => <li key={x}>{x}</li>)}</ul></div>
+                  <p className="rounded-lg border border-primary/20 bg-primary/5 p-2.5"><b className="text-primary">Viva pearl:</b> {d.viva}</p>
+                </div>
+              </details>
+            ))}
+          </section>
+        )}
+
         {unit.rotation === "medicine" && filter === "all" && !q && (
           <section className="space-y-2">
             <div className="mb-2">
