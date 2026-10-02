@@ -8,7 +8,7 @@ import { updateMetaTags } from "@/lib/seo";
 type Book = [id: string, name: string, type: number];
 interface Subject { name: string; b: number[]; units: string[]; also: number[] }
 interface Shelf { key: string; label: string; blurb: string; subjects: Subject[] }
-interface Data { types: string[]; books: Book[]; shelves: Shelf[] }
+interface Data { types: string[]; books: Book[]; shelves: Shelf[]; /** Book ids with a cover rendered into public/covers. */ local?: string[] }
 
 const slug = (s: string) => s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const YEAR_KEY = (y: number) => `year-${y}`;
@@ -25,14 +25,19 @@ function useBooks() {
   return { data, error };
 }
 
-/** The book's first page from Drive, shown before you open it. Falls back to a plain book tile if Drive has no preview. */
-function Cover({ id, title }: { id: string; title: string }) {
+// A title cover for books Drive cannot preview: one colour per book type so a shelf still reads at a glance.
+const TILE = ["from-teal-700 to-teal-900", "from-sky-600 to-indigo-800", "from-amber-600 to-orange-800", "from-rose-600 to-red-900", "from-violet-600 to-purple-900", "from-emerald-600 to-green-900"];
+
+/** The book's cover before you open it: our own rendered cover if we have one, else Drive's preview, else a title tile. */
+function Cover({ id, title, type, local }: { id: string; title: string; type: number; local: boolean }) {
   const [failed, setFailed] = useState(false);
+  const src = local ? `${import.meta.env.BASE_URL}covers/${encodeURIComponent(id)}.jpg` : thumbUrl(id, 200);
   return (
-    <span className="relative flex h-24 w-[4.2rem] shrink-0 items-center justify-center overflow-hidden rounded-md border border-border bg-muted shadow-sm">
-      <BookOpen className="h-5 w-5 text-muted-foreground/60" aria-hidden />
+    <span className={`relative flex h-24 w-[4.2rem] shrink-0 flex-col justify-between overflow-hidden rounded-md border border-border bg-gradient-to-br p-1.5 shadow-sm ${TILE[type % TILE.length]}`}>
+      <BookOpen className="h-3.5 w-3.5 text-white/70" aria-hidden />
+      <span className="line-clamp-5 text-[9px] font-bold leading-tight text-white">{title}</span>
       {!failed && (
-        <img src={thumbUrl(id, 200)} alt={`Cover of ${title}`} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={() => setFailed(true)} className="absolute inset-0 h-full w-full object-cover object-top" />
+        <img src={src} alt={`Cover of ${title}`} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={() => setFailed(true)} className="absolute inset-0 h-full w-full object-cover object-top" />
       )}
     </span>
   );
@@ -80,6 +85,8 @@ export default function BooksPage() {
   const shelf = data?.shelves.find((s) => s.key === shelfKey);
   const subject = shelf?.subjects.find((s) => slug(s.name) === subjectKey);
 
+  const localCovers = useMemo(() => new Set(data?.local ?? []), [data]);
+
   const hits = useMemo(() => {
     if (!data || q.trim().length < 2) return null;
     const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
@@ -117,7 +124,7 @@ export default function BooksPage() {
   const bookRow = (r: { book: Book; where?: string }, i: number) => (
     <li key={r.book[0]}>
       <button type="button" onClick={() => setViewing(i)} className="flex h-full w-full items-start gap-3 rounded-xl border border-border bg-card p-3 text-left transition-colors hover:border-primary/50">
-        <Cover id={r.book[0]} title={r.book[1]} />
+        <Cover id={r.book[0]} title={r.book[1]} type={r.book[2]} local={localCovers.has(r.book[0])} />
         <span className="flex min-w-0 flex-1 flex-col gap-1">
           <span className="text-[14.5px] font-semibold leading-snug text-foreground">{r.book[1]}</span>
           <span className="text-[11.5px] text-muted-foreground">{data.types[r.book[2]]}{r.where ? ` · ${r.where}` : ""}</span>
