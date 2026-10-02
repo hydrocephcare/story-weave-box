@@ -669,6 +669,16 @@ export default async function handler(req: Request): Promise<Response> {
   const url = new URL(req.url);
   const originalPath = url.searchParams.get("path") || "/";
   if (isNoindexPath(originalPath)) {
+    // Real visitors must get the SPA shell (the stub below has no app bundle),
+    // still marked noindex. Only crawlers receive the stub.
+    if (!isCrawler(ua)) {
+      try {
+        const shell = await fetch(new URL("/index.html", url.origin).toString());
+        if (shell.ok) {
+          return new Response(await shell.text(), { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=0, must-revalidate" } });
+        }
+      } catch { /* fall through to the stub */ }
+    }
     const noindexHtml = buildHtml({ title: "OmpathStudy", description: "OmpathStudy medical education resource.", url: `https://www.ompathstudy.com${originalPath.split("?")[0]}`, ogImage: OG_FALLBACK_IMAGE });
     return new Response(noindexHtml, { status: 200, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=300, stale-while-revalidate=60" } });
   }
