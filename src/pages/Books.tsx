@@ -1,117 +1,206 @@
 import { useEffect, useMemo, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import { BookOpen, Search } from "lucide-react";
+import { Link, Navigate, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { BookOpen, ChevronRight, Search } from "lucide-react";
 import DriveFileViewer, { type DriveFile } from "@/components/DriveFileViewer";
 import { startDownload } from "@/lib/driveDownload";
 import { updateMetaTags } from "@/lib/seo";
 
-type BookFile = [id: string, name: string, kind: "pdf", type: number];
-interface Subject { name: string; files: BookFile[] }
+type Book = [id: string, name: string, type: number];
+interface Subject { name: string; b: number[]; units: string[]; also: number[] }
 interface Shelf { key: string; label: string; blurb: string; subjects: Subject[] }
-interface Books { updated: string; types: string[]; shelves: Shelf[] }
+interface Data { types: string[]; books: Book[]; shelves: Shelf[] }
 
-const chip = (on: boolean) => `shrink-0 rounded-full border px-3.5 py-1.5 text-[13px] font-bold transition-colors ${on ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/50 hover:text-primary"}`;
+const slug = (s: string) => s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const YEAR_KEY = (y: number) => `year-${y}`;
+const TYPE_HINT = ["Core reading and deep reference", "Short, exam-focused summaries", "Pocket guides for the wards", "Worked patient cases", "Practice questions and OSCE prep", "Images, atlases and flashcards"];
 
-/** Every book from the shared Drive, shelved by year, subject and type. */
-export default function BooksPage() {
-  const [params, setParams] = useSearchParams();
-  const [data, setData] = useState<Books | null>(null);
+function useBooks() {
+  const [data, setData] = useState<Data | null>(null);
   const [error, setError] = useState(false);
-  const [viewing, setViewing] = useState<number | null>(null);
-  const q = params.get("q") ?? "";
-  const shelfKey = params.get("shelf") ?? "year-1";
-  const subject = params.get("subject") ?? "";
-  const type = params.get("type") ?? "";
-
   useEffect(() => {
-    updateMetaTags({ title: "Medical books by year and subject | Ompath Study", description: "Textbooks, handbooks, atlases and question banks shelved by MBChB year, subject and type." });
     let on = true;
-    fetch(`${import.meta.env.BASE_URL}data/books.json`).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }).then((d: Books) => { if (on) setData(d); }).catch(() => { if (on) setError(true); });
+    fetch(`${import.meta.env.BASE_URL}data/books.json`).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }).then((d: Data) => { if (on) setData(d); }).catch(() => { if (on) setError(true); });
     return () => { on = false; };
   }, []);
+  return { data, error };
+}
 
-  const set = (next: Record<string, string>) => {
-    const p = new URLSearchParams(params);
-    for (const [k, v] of Object.entries(next)) { if (v) p.set(k, v); else p.delete(k); }
-    setParams(p, { replace: true });
-    setViewing(null);
-  };
+function Crumbs({ trail }: { trail: { to?: string; label: string }[] }) {
+  return (
+    <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1 text-xs font-semibold text-muted-foreground">
+      {trail.map((t, i) => (
+        <span key={t.label} className="inline-flex items-center gap-1">
+          {i > 0 && <ChevronRight className="h-3 w-3" />}
+          {t.to ? <Link to={t.to} className="hover:text-primary">{t.label}</Link> : <span className="text-foreground">{t.label}</span>}
+        </span>
+      ))}
+    </nav>
+  );
+}
 
-  const searching = q.trim().length > 1;
-  const shelf = data?.shelves.find((s) => s.key === shelfKey) ?? data?.shelves[0];
+function Header({ title, blurb, trail, children }: { title: string; blurb?: string; trail: { to?: string; label: string }[]; children?: React.ReactNode }) {
+  return (
+    <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">
+      <div className="mx-auto max-w-5xl space-y-2 px-4 py-6 sm:px-5 sm:py-9">
+        <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-primary"><BookOpen className="h-4 w-4" /> Reference books</p>
+        <Crumbs trail={trail} />
+        <h1 className="font-serif text-2xl font-bold text-foreground sm:text-4xl">{title}</h1>
+        {blurb && <p className="max-w-2xl text-sm text-muted-foreground">{blurb}</p>}
+        {children}
+      </div>
+    </section>
+  );
+}
 
-  const rows = useMemo(() => {
-    if (!data) return [];
+/** Books shelved by year, then subject, then type. The year and subject follow the MKU timetable unit codes. */
+export default function BooksPage() {
+  const { shelf: shelfKey, subject: subjectKey } = useParams();
+  const { data, error } = useBooks();
+  const [params] = useSearchParams();
+  const navigate = useNavigate();
+  const [viewing, setViewing] = useState<number | null>(null);
+  const [q, setQ] = useState(params.get("q") ?? "");
+
+  useEffect(() => { updateMetaTags({ title: "Medical books by year and subject | Ompath Study", description: "Textbooks, handbooks, atlases and question banks shelved by MBChB year, subject and type." }); }, []);
+  useEffect(() => { setViewing(null); window.scrollTo({ top: 0 }); }, [shelfKey, subjectKey]);
+
+  const shelf = data?.shelves.find((s) => s.key === shelfKey);
+  const subject = shelf?.subjects.find((s) => slug(s.name) === subjectKey);
+
+  const hits = useMemo(() => {
+    if (!data || q.trim().length < 2) return null;
     const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
-    const out: { file: BookFile; shelf: string; subject: string }[] = [];
-    for (const sh of searching ? data.shelves : shelf ? [shelf] : []) {
-      for (const sub of sh.subjects) {
-        if (!searching && subject && sub.name !== subject) continue;
-        for (const f of sub.files) {
-          if (type !== "" && String(f[3]) !== type) continue;
-          if (searching && !needles.every((w) => `${f[1]} ${sub.name}`.toLowerCase().includes(w))) continue;
-          out.push({ file: f, shelf: sh.label, subject: sub.name });
-        }
-      }
+    const out: { book: Book; where: string }[] = [];
+    const seen = new Set<string>();
+    for (const sh of data.shelves) for (const sub of sh.subjects) for (const i of sub.b) {
+      const b = data.books[i];
+      if (seen.has(b[0])) continue;
+      if (needles.every((w) => `${b[1]} ${sub.name}`.toLowerCase().includes(w))) { seen.add(b[0]); out.push({ book: b, where: `${sh.label} · ${sub.name}` }); }
     }
     return out;
-  }, [data, shelf, subject, type, q, searching]);
+  }, [data, q]);
 
-  const items: DriveFile[] = rows.map((r) => [r.file[0], r.file[1], "pdf"]);
-  const total = data?.shelves.reduce((n, s) => n + s.subjects.reduce((m, x) => m + x.files.length, 0), 0) ?? 0;
+  const bookList: { book: Book; where?: string }[] = useMemo(() => {
+    if (!data) return [];
+    if (hits) return hits;
+    if (subject) return subject.b.map((i) => ({ book: data.books[i] }));
+    return [];
+  }, [data, hits, subject]);
+  const items: DriveFile[] = bookList.map((r) => [r.book[0], r.book[1], "pdf"]);
 
+  if (error) return <div className="mx-auto max-w-3xl p-6 text-sm text-muted-foreground">The book list could not load. Check your connection and refresh.</div>;
+  if (!data) return <div className="mx-auto max-w-3xl p-6 text-sm text-muted-foreground">Loading the shelves…</div>;
+  if (shelfKey && !shelf) return <Navigate to="/books" replace />;
+  if (subjectKey && shelf && !subject) return <Navigate to={`/books/${shelf.key}`} replace />;
+
+  const searchBox = (
+    <div className="relative mt-3 max-w-xl">
+      <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+      <input value={q} onChange={(e) => { setQ(e.target.value); setViewing(null); }} placeholder="Search every book, e.g. Kumar, atlas, ECG" aria-label="Search books" className="w-full rounded-lg border border-border bg-card py-2.5 pl-10 pr-3 text-[14.5px] text-foreground outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/25" />
+    </div>
+  );
+
+  const viewer = <DriveFileViewer items={items} index={viewing} onIndexChange={setViewing} onDownload={(f) => startDownload(f[0], f[1])} where="Books" />;
+  const bookRow = (r: { book: Book; where?: string }, i: number) => (
+    <li key={r.book[0]}>
+      <button type="button" onClick={() => setViewing(i)} className="flex h-full w-full flex-col items-start gap-1 rounded-xl border border-border bg-card p-3.5 text-left transition-colors hover:border-primary/50">
+        <span className="text-[14.5px] font-semibold leading-snug text-foreground">{r.book[1]}</span>
+        <span className="text-[11.5px] text-muted-foreground">{data.types[r.book[2]]}{r.where ? ` · ${r.where}` : ""}</span>
+      </button>
+    </li>
+  );
+
+  // Search takes over whichever level you are on.
+  if (hits) {
+    return (
+      <div className="min-h-[65vh] bg-background">
+        <Header title="Search results" trail={[{ to: "/books", label: "Books" }, { label: "Search" }]}>{searchBox}</Header>
+        <div className="mx-auto max-w-5xl space-y-3 px-4 py-6 sm:px-5">
+          <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{hits.length} {hits.length === 1 ? "book" : "books"} found</p>
+          {hits.length === 0 && <p className="rounded-lg border border-dashed border-border p-6 text-center text-sm text-muted-foreground">No books match. Try a shorter search.</p>}
+          <ul className="grid gap-2 sm:grid-cols-2">{bookList.map(bookRow)}</ul>
+        </div>
+        {viewer}
+      </div>
+    );
+  }
+
+  // Level 3: one subject, books grouped by type.
+  if (shelf && subject) {
+    const groups = data.types.map((t, ti) => ({ t, ti, ids: subject.b.filter((i) => data.books[i][2] === ti) })).filter((g) => g.ids.length);
+    return (
+      <div className="min-h-[65vh] bg-background">
+        <Header title={subject.name} blurb={`${subject.b.length} books for ${shelf.label}.${subject.units.length ? ` Timetable units: ${subject.units.join(", ")}.` : ""}`} trail={[{ to: "/books", label: "Books" }, { to: `/books/${shelf.key}`, label: shelf.label }, { label: subject.name }]}>
+          {subject.also.length > 0 && (
+            <p className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">Also studied in {subject.also.map((y) => <Link key={y} to={`/books/${YEAR_KEY(y)}/${subjectKey}`} className="rounded-full border border-border px-2.5 py-0.5 font-bold text-primary hover:border-primary/50">Year {y}</Link>)}</p>
+          )}
+          <nav aria-label="Jump to type" className="-mx-4 flex gap-2 overflow-x-auto px-4 pt-1 sm:mx-0 sm:flex-wrap sm:px-0">
+            {groups.map((g) => <a key={g.ti} href={`#type-${g.ti}`} className="shrink-0 rounded-full border border-border bg-card px-3.5 py-1.5 text-[13px] font-bold text-muted-foreground hover:border-primary/50 hover:text-primary">{g.t} <span className="opacity-60">{g.ids.length}</span></a>)}
+          </nav>
+          {searchBox}
+        </Header>
+        <div className="mx-auto max-w-5xl space-y-7 px-4 py-6 sm:px-5">
+          {groups.map((g) => (
+            <section key={g.ti} id={`type-${g.ti}`} className="scroll-mt-20">
+              <h2 className="font-serif text-lg font-bold text-foreground">{g.t} <span className="text-sm font-semibold text-muted-foreground">({g.ids.length})</span></h2>
+              <p className="mb-2 text-xs text-muted-foreground">{TYPE_HINT[g.ti]}</p>
+              <ul className="grid gap-2 sm:grid-cols-2">{g.ids.map((i) => bookRow({ book: data.books[i] }, subject.b.indexOf(i)))}</ul>
+            </section>
+          ))}
+        </div>
+        {viewer}
+      </div>
+    );
+  }
+
+  // Level 2: one year, subjects as cards.
+  if (shelf) {
+    return (
+      <div className="min-h-[65vh] bg-background">
+        <Header title={shelf.label} blurb={shelf.blurb} trail={[{ to: "/books", label: "Books" }, { label: shelf.label }]}>{searchBox}</Header>
+        <div className="mx-auto max-w-5xl space-y-4 px-4 py-6 sm:px-5">
+          <nav aria-label="Years" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
+            {data.shelves.map((s) => <button key={s.key} type="button" onClick={() => navigate(`/books/${s.key}`)} className={`shrink-0 rounded-full border px-3.5 py-1.5 text-[13px] font-bold transition-colors ${s.key === shelf.key ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/50 hover:text-primary"}`}>{s.label}</button>)}
+          </nav>
+          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {shelf.subjects.map((s) => {
+              const byType = data.types.map((t, ti) => ({ t, n: s.b.filter((i) => data.books[i][2] === ti).length })).filter((x) => x.n);
+              return (
+                <li key={s.name}>
+                  <Link to={`/books/${shelf.key}/${slug(s.name)}`} className="flex h-full flex-col gap-2 rounded-2xl border border-border bg-card p-4 transition-colors hover:border-primary/50">
+                    <span className="flex items-baseline justify-between gap-2"><span className="font-serif text-lg font-bold leading-snug text-foreground">{s.name}</span><span className="shrink-0 text-sm font-bold text-primary">{s.b.length}</span></span>
+                    {s.units.length > 0 && <span className="text-[11.5px] font-semibold text-muted-foreground">{s.units.join(" · ")}</span>}
+                    <span className="mt-auto flex flex-wrap gap-1.5 pt-1">{byType.map((x) => <span key={x.t} className="rounded-full bg-muted px-2 py-0.5 text-[11px] font-semibold text-muted-foreground">{x.t.split(" ")[0]} {x.n}</span>)}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    );
+  }
+
+  // Level 1: choose a year.
   return (
     <div className="min-h-[65vh] bg-background">
-      <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">
-        <div className="mx-auto max-w-5xl px-4 py-7 sm:px-5 sm:py-10">
-          <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-primary"><BookOpen className="h-4 w-4" /> Reference books</p>
-          <h1 className="mt-1 font-serif text-2xl font-bold text-foreground sm:text-4xl">Books by year and subject</h1>
-          <p className="mt-2 max-w-2xl text-sm text-muted-foreground">{total ? `${total} books` : "Textbooks"} shelved to follow the MKU timetable: pick your year, then a subject, then the kind of book you need.</p>
-          <div className="relative mt-4 max-w-xl">
-            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-            <input value={q} onChange={(e) => set({ q: e.target.value })} placeholder="Search every book, e.g. Kumar, atlas, ECG" aria-label="Search books" className="w-full rounded-lg border border-border bg-card py-2.5 pl-10 pr-3 text-[14.5px] text-foreground outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/25" />
-          </div>
-        </div>
-      </section>
-
-      <div className="mx-auto max-w-5xl space-y-4 px-4 py-6 sm:px-5">
-        {error && <p className="rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">The book list could not load. Check your connection and refresh.</p>}
-        {!data && !error && <p className="text-sm text-muted-foreground">Loading the shelves…</p>}
-        {data && shelf && (
-          <>
-            {!searching && (
-              <>
-                <nav aria-label="Years" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
-                  {data.shelves.map((s) => <button key={s.key} type="button" onClick={() => set({ shelf: s.key, subject: "" })} className={chip(s.key === shelf.key)}>{s.label}</button>)}
-                </nav>
-                <p className="text-sm text-muted-foreground">{shelf.blurb}</p>
-                <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0" aria-label="Subjects">
-                  <button type="button" onClick={() => set({ subject: "" })} className={chip(!subject)}>All subjects</button>
-                  {shelf.subjects.map((s) => <button key={s.name} type="button" onClick={() => set({ subject: s.name })} className={chip(s.name === subject)}>{s.name} <span className="opacity-60">{s.files.length}</span></button>)}
-                </div>
-              </>
-            )}
-            <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0" aria-label="Book type">
-              <button type="button" onClick={() => set({ type: "" })} className={chip(type === "")}>Every type</button>
-              {data.types.map((t, i) => <button key={t} type="button" onClick={() => set({ type: String(i) })} className={chip(type === String(i))}>{t}</button>)}
-            </div>
-
-            <p className="text-xs font-bold uppercase tracking-wide text-muted-foreground">{rows.length} {rows.length === 1 ? "book" : "books"}{searching ? " across all shelves" : ""}</p>
-            {rows.length === 0 && <p className="rounded-lg border border-dashed border-border p-6 text-center text-sm text-muted-foreground">No books match. Try a shorter search or clear the type filter.</p>}
-            <ul className="grid gap-2 sm:grid-cols-2">
-              {rows.map((r, i) => (
-                <li key={r.file[0]}>
-                  <button type="button" onClick={() => setViewing(i)} className="flex h-full w-full flex-col items-start gap-1 rounded-xl border border-border bg-card p-3.5 text-left transition-colors hover:border-primary/50">
-                    <span className="text-[14.5px] font-semibold leading-snug text-foreground">{r.file[1]}</span>
-                    <span className="text-[11.5px] text-muted-foreground">{data.types[r.file[3]]} · {searching ? `${r.shelf} · ` : ""}{r.subject}</span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </>
-        )}
+      <Header title="Books by year and subject" blurb="Pick your year, then a subject, then the kind of book you need. Shelved to follow the MKU timetable." trail={[{ label: "Books" }]}>{searchBox}</Header>
+      <div className="mx-auto max-w-5xl px-4 py-6 sm:px-5">
+        <ul className="grid gap-3 sm:grid-cols-2">
+          {data.shelves.map((s) => {
+            const unique = new Set(s.subjects.flatMap((x) => x.b)).size;
+            return (
+              <li key={s.key}>
+                <Link to={`/books/${s.key}`} className="flex h-full flex-col gap-1.5 rounded-2xl border border-border bg-card p-4 transition-colors hover:border-primary/50">
+                  <span className="flex items-baseline justify-between"><span className="font-serif text-xl font-bold text-foreground">{s.label}</span><span className="text-sm font-bold text-primary">{unique} books</span></span>
+                  <span className="text-[13px] text-muted-foreground">{s.blurb}</span>
+                  <span className="mt-1 text-[11.5px] font-semibold text-muted-foreground">{s.subjects.slice(0, 6).map((x) => x.name.split(" (")[0]).join(" · ")}{s.subjects.length > 6 ? ` · +${s.subjects.length - 6} more` : ""}</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </div>
-      <DriveFileViewer items={items} index={viewing} onIndexChange={setViewing} onDownload={(f) => startDownload(f[0], f[1])} where="Books" />
     </div>
   );
 }
