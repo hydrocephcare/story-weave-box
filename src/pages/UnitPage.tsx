@@ -15,6 +15,8 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "@/hooks/use-toast";
+import { getCourseOutlineForUnit } from "@/data/courseOutlines";
+import Year4CurriculumNotes from "@/components/Year4CurriculumNotes";
 
 const TABS = ["Overview", "Syllabus", "Notes", "Questions", "CATs", "Past Papers", "Flashcards", "Exams"] as const;
 
@@ -92,6 +94,7 @@ export default function UnitPage() {
 
   const notes = [...(byType["Notes"] || []), ...(byType["Revision Guide"] || []), ...(byType["Course Outline"] || [])];
   const featured = notes[0];
+  const curriculumOutline = year === 4 && unit ? getCourseOutlineForUnit(year, unit) : null;
   const recent = useMemo(
     () => [...resources].sort((a, b) =>
       new Date(b.updated_at || b.created_at).getTime() - new Date(a.updated_at || a.created_at).getTime(),
@@ -336,8 +339,21 @@ export default function UnitPage() {
           )}
         </TabsContent>
 
+        {curriculumOutline && (
+          <TabsContent value="Notes" className="mt-4 space-y-6">
+            <Year4CurriculumNotes outline={curriculumOutline} />
+            <section className="rounded-2xl border border-border bg-card p-5">
+              <h2 className="font-serif text-lg font-bold text-foreground">Uploaded notes & revision files</h2>
+              <p className="mt-1 text-xs text-muted-foreground">Existing lecturer notes, revision guides and course documents remain available here.</p>
+              <div className="mt-3 space-y-2">
+                {notes.length ? notes.map((r) => <ResourceRow key={`${r.kind}-${r.id}`} r={r} />) : <EmptyState label={`Uploaded notes for ${unit.name} are being prepared.`} />}
+              </div>
+            </section>
+          </TabsContent>
+        )}
+
         {([
-          ["Notes", notes],
+          ...(!curriculumOutline ? [["Notes", notes] as [string, UnitResource[]]] : []),
           ["Questions", [...(byType["MCQ Bank"] || []), ...(byType["Timed Exam"] || [])]],
           ["CATs", byType["CAT"] || []],
           ["Past Papers", byType["Past Paper"] || []],
