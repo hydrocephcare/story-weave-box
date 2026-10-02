@@ -229,6 +229,25 @@ export default function ExamStart() {
           .maybeSingle();
         data = r.data;
         resolvedId = data?.id || null;
+        // Legacy links are "<title-slug>-<first 6 chars of id>"; match on the id prefix.
+        const shortId = !data ? rawParam.match(/-([0-9a-f]{6})$/i)?.[1]?.toLowerCase() : undefined;
+        if (shortId) {
+          const { data: candidates } = await supabase
+            .from("mcq_sets")
+            .select("id")
+            .eq("published", true)
+            .ilike("title", "%exam%");
+          const match = candidates?.find((c) => c.id.toLowerCase().startsWith(shortId));
+          if (match) {
+            const full = await supabase
+              .from("mcq_sets")
+              .select("id, title, category, questions")
+              .eq("id", match.id)
+              .maybeSingle();
+            data = full.data;
+            resolvedId = data?.id || null;
+          }
+        }
       }
       const unlockedRaw = localStorage.getItem(UNLOCKED_KEY);
       const unlocked = new Set<string>(unlockedRaw ? JSON.parse(unlockedRaw) : []);
