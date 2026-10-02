@@ -204,7 +204,7 @@ const obgyn: CourseOutline = {
     { id: "og-o2", title: "Obstetrics II — Labour", items: weeks("og-o2", [
       ["Week 1", "Normal labour", "Review of anatomy: foetal skull and maternal pelvis."], ["Week 2", "Theories on onset of labour"], ["Week 3", "Physiology of labour"], ["Week 4", "Diagnosis and management of labour"],
       ["Week 5", "Abnormal labour: malpositions"], ["Week 6", "Abnormal labour: malpresentations"], ["Week 7", "Prolonged and obstructed labour"], ["Week 8", "Induction of labour"],
-      ["Week 9", "Operative vaginal deliveries", "Vacuum and forceps delivery."], ["Week 10", "Caesarean section"], ["Week 11", "Perioperative care"], ["Week 12", "End-of-trimester CAT"]]) },
+      ["Week 9", "Operative vaginal deliveries", "Vacuum and forceps delivery."], ["Week 9", "Shoulder dystocia"], ["Week 9", "Umbilical cord prolapse"], ["Week 10", "Caesarean section"], ["Week 11", "Perioperative care"], ["Week 12", "End-of-trimester CAT"]]) },
     { id: "og-o3", title: "Obstetrics III — Abnormal pregnancy", items: weeks("og-o3", [
       ["Week 1", "Medical disorders in pregnancy: hypertensive disorders"], ["Week 2", "Malaria and anaemia in pregnancy"], ["Week 3", "Diabetes in pregnancy"], ["Week 4", "HIV in pregnancy"], ["Week 5", "UTI in pregnancy"],
       ["Week 6", "Antepartum haemorrhage", "Placenta praevia and placental abruption."], ["Week 7", "Preterm labour"], ["Week 8", "Premature rupture of membranes and post-term pregnancy"], ["Week 9", "Rhesus isoimmunisation"],
@@ -237,9 +237,9 @@ const paediatrics: CourseOutline = {
       ["Week 1", "Paediatric history taking and examination"],
       ["Week 2", "Growth and development", "Developmental milestones, adolescent growth, growth assessment."],
       ["Weeks 3–4", "Nutrition", "Breastfeeding, protein-energy malnutrition, rickets, micronutrient deficiencies."], ["Weeks 3–4", "Severe acute malnutrition"], ["Weeks 3–4", "Rickets"],
-      ["Weeks 5–8", "Neonatology", "Birth asphyxia, neonatal jaundice, respiratory distress syndrome, neonatal sepsis, prematurity and low birth weight, meconium aspiration, kangaroo mother care, neonatal history and examination."], ["Weeks 5–8", "Neonatal resuscitation"], ["Weeks 5–8", "Hypoxic-ischaemic encephalopathy"], ["Weeks 5–8", "Neonatal jaundice"], ["Weeks 5–8", "Neonatal sepsis"],
+      ["Weeks 5–8", "Neonatology", "Birth asphyxia, neonatal jaundice, respiratory distress syndrome, neonatal sepsis, prematurity and low birth weight, meconium aspiration, kangaroo mother care, neonatal history and examination."], ["Weeks 5–8", "Prematurity and low birth weight"], ["Weeks 5–8", "Neonatal resuscitation"], ["Weeks 5–8", "Hypoxic-ischaemic encephalopathy"], ["Weeks 5–8", "Neonatal jaundice"], ["Weeks 5–8", "Neonatal sepsis"],
       ["Weeks 9–11", "Respiratory", "Pneumonia, asthma, reporting a chest X-ray, pulmonary TB, aspiration syndromes, croup, bronchiolitis."], ["Weeks 9–11", "Childhood pneumonia"], ["Weeks 9–11", "Childhood asthma"], ["Weeks 9–11", "Croup"], ["Weeks 9–11", "Bronchiolitis"],
-      ["Weeks 12–13", "Nephrology", "Acute kidney injury, acute glomerulonephritis, nephrotic syndrome, urinary tract infections, chronic kidney disease."], ["Weeks 12–13", "Paediatric acute kidney injury"], ["Weeks 12–13", "Childhood nephrotic syndrome"],
+      ["Weeks 12–13", "Nephrology", "Acute kidney injury, acute glomerulonephritis, nephrotic syndrome, urinary tract infections, chronic kidney disease."], ["Weeks 12–13", "Paediatric acute kidney injury"], ["Weeks 12–13", "Acute glomerulonephritis"], ["Weeks 12–13", "Childhood nephrotic syndrome"], ["Weeks 12–13", "Paediatric urinary tract infection"],
       ["Week 14", "Assessment test"]]) },
     { id: "pd-t2", title: "Trimester 2", items: weeks("pd-t2", [
       ["Weeks 1–2", "Gastrointestinal system", "GORD, gastritis and peptic ulcer disease, hepatitis, acute liver failure, acute gastroenteritis."],
@@ -247,7 +247,7 @@ const paediatrics: CourseOutline = {
       ["Weeks 4–6", "Cardiovascular", "Acute rheumatic fever, rheumatic heart disease, infective endocarditis, congenital heart disease, arrhythmias, ECG."], ["Weeks 4–6", "Acute rheumatic fever and rheumatic heart disease"], ["Weeks 4–6", "Congenital heart disease"],
       ["Weeks 7–8", "Blood disorders", "Anaemia, haemophilias, sickle cell disease, blood components and transfusion, other bleeding and thrombotic disorders."], ["Weeks 7–8", "Sickle cell disease in children"],
       ["Weeks 9–10", "Fluids, electrolytes and acid–base", "Hyponatraemia, hypernatraemia, hypokalaemia, hyperkalaemia, blood gas analysis."],
-      ["Weeks 11–12", "Endocrinology", "Hypothyroidism, hyperthyroidism, diabetes and DKA, congenital adrenal hyperplasia, Addison disease, precocious puberty."],
+      ["Weeks 11–12", "Endocrinology", "Hypothyroidism, hyperthyroidism, diabetes and DKA, congenital adrenal hyperplasia, Addison disease, precocious puberty."], ["Weeks 11–12", "Type 1 diabetes and diabetic ketoacidosis"],
       ["Week 13", "Assessment"]]) },
     { id: "pd-t3", title: "Trimester 3", items: weeks("pd-t3", [
       ["Weeks 1–10", "Shock"], ["Weeks 1–10", "Immunisation practices and the KEPI schedule"], ["Weeks 1–10", "Fever and fever of unknown origin"], ["Weeks 1–10", "Bacterial infections"],
