@@ -2,8 +2,9 @@ import { BookOpen, ChevronRight, Stethoscope } from "lucide-react";
 import type { CourseOutline, OutlineItem } from "@/data/courseOutlines";
 import { IMED_DISEASE_THEORY } from "@/data/imedDiseaseTheory";
 import { YEAR4_ROTATION_THEORY, type RotationTheory } from "@/data/year4RotationTheory";
+import { IMED_FOUNDATION_NOTES, type ImedFoundationNote } from "@/data/imedFoundationNotes";
 
-type Theory = RotationTheory | {
+type DiseaseTheory = RotationTheory | {
   id:string; system:string; name:string; definition:string; causes:string[]; mechanism:string;
   presentation:string[]; investigations:string[]; management:string[]; complications:string[]; viva:string;
 };
@@ -34,12 +35,17 @@ function score(topic:string,name:string){
   return n>=2?n:0;
 }
 
-function findTheory(outline:CourseOutline,item:OutlineItem): Theory|null {
+function findFoundation(item:OutlineItem): ImedFoundationNote|null {
+  const wanted=norm(item.title);
+  return IMED_FOUNDATION_NOTES.find(n=>norm(n.topic)===wanted) || null;
+}
+
+function findTheory(outline:CourseOutline,item:OutlineItem): DiseaseTheory|null {
   const rotation=rotationFor(outline);
-  const pool:Theory[] = rotation==="medicine"
+  const pool:DiseaseTheory[] = rotation==="medicine"
     ? [...IMED_DISEASE_THEORY, ...YEAR4_ROTATION_THEORY.filter(x=>x.rotation==="medicine")]
     : YEAR4_ROTATION_THEORY.filter(x=>x.rotation===rotation);
-  let best:Theory|null=null, bestScore=0;
+  let best:DiseaseTheory|null=null, bestScore=0;
   for(const t of pool){const s=score(item.title,t.name); if(s>bestScore){best=t;bestScore=s;}}
   return bestScore>=2?best:null;
 }
@@ -50,7 +56,7 @@ function List({title,items}:{title:string;items:string[]}){
     <ul className="mt-1.5 space-y-1 text-sm text-muted-foreground">{items.map((x,i)=><li key={i} className="flex gap-2"><span className="text-primary">•</span><span>{x}</span></li>)}</ul></div>;
 }
 
-function TheoryBody({theory}:{theory:Theory}){
+function TheoryBody({theory}:{theory:DiseaseTheory}){
   const imed="causes" in theory;
   return <div className="mt-4 grid gap-4 border-t border-border pt-4 sm:grid-cols-2">
     <div className="sm:col-span-2"><h5 className="text-xs font-bold uppercase tracking-wide text-primary">Definition</h5><p className="mt-1 text-sm leading-relaxed text-muted-foreground">{theory.definition}</p></div>
@@ -69,9 +75,21 @@ function TheoryBody({theory}:{theory:Theory}){
   </div>;
 }
 
+function FoundationBody({note}:{note:ImedFoundationNote}){
+  return <div className="mt-4 grid gap-4 border-t border-border pt-4 sm:grid-cols-2">
+    <div className="sm:col-span-2"><h5 className="text-xs font-bold uppercase tracking-wide text-primary">Start here</h5><p className="mt-1 text-sm leading-relaxed text-muted-foreground">{note.definition}</p><p className="mt-2 rounded-lg bg-primary/5 p-3 text-sm text-foreground"><strong>Why this matters:</strong> {note.why}</p></div>
+    <List title="Foundations / physiology" items={note.foundations}/>
+    <List title="History & clinical clues" items={note.clinical}/>
+    <List title="Examination / bedside connection" items={note.examination}/>
+    <List title="Investigations" items={note.investigations}/>
+    <List title="Clinical reasoning" items={note.reasoning}/>
+    <List title="Ward-round questions" items={note.viva}/>
+  </div>;
+}
+
 export default function Year4CurriculumNotes({outline}:{outline:CourseOutline}){
   const total=outline.sections.reduce((n,s)=>n+s.items.length,0);
-  const connected=outline.sections.reduce((n,s)=>n+s.items.filter(i=>findTheory(outline,i)).length,0);
+  const connected=outline.sections.reduce((n,s)=>n+s.items.filter(i=>findFoundation(i)||findTheory(outline,i)).length,0);
   return <div className="space-y-4">
     <section className="rounded-2xl border border-primary/30 bg-primary/5 p-5">
       <p className="text-xs font-bold uppercase tracking-wide text-primary">Course-outline learning path</p>
@@ -92,17 +110,17 @@ export default function Year4CurriculumNotes({outline}:{outline:CourseOutline}){
         {section.note&&<p className="mt-1 text-xs text-muted-foreground">{section.note}</p>}
       </div>
       <div className="divide-y divide-border">
-        {section.items.map((item,ii)=>{const theory=findTheory(outline,item); return <details key={item.id} className="group px-4 py-1 sm:px-5">
+        {section.items.map((item,ii)=>{const foundation=findFoundation(item); const theory=findTheory(outline,item); const hasNote=!!foundation||!!theory; return <details key={item.id} className="group px-4 py-1 sm:px-5">
           <summary className="flex cursor-pointer list-none items-center gap-3 py-3">
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[11px] font-bold text-primary">{ii+1}</span>
             <span className="min-w-0 flex-1"><span className="block text-sm font-semibold text-foreground">{item.title}</span>
-              <span className="mt-0.5 block text-[11px] text-muted-foreground">{item.week||"Course topic"}{theory?" · Connected note":" · Outline topic — full note being built"}</span></span>
-            {theory?<Stethoscope className="h-4 w-4 shrink-0 text-primary"/>:<BookOpen className="h-4 w-4 shrink-0 text-muted-foreground"/>}
+              <span className="mt-0.5 block text-[11px] text-muted-foreground">{item.week||"Course topic"}{hasNote?" · Connected note":" · Outline topic — full note being built"}</span></span>
+            {hasNote?<Stethoscope className="h-4 w-4 shrink-0 text-primary"/>:<BookOpen className="h-4 w-4 shrink-0 text-muted-foreground"/>}
             <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-90"/>
           </summary>
           <div className="pb-4 pl-10">
             {item.detail&&<p className="text-sm leading-relaxed text-muted-foreground">{item.detail}</p>}
-            {theory?<TheoryBody theory={theory}/>:<p className="rounded-lg border border-dashed border-border p-3 text-xs text-muted-foreground">This topic is in the official course sequence. Its full interconnected note has not been written yet; keeping it visible prevents gaps in the curriculum.</p>}
+            {foundation?<FoundationBody note={foundation}/>:theory?<TheoryBody theory={theory}/>:<p className="rounded-lg border border-dashed border-border p-3 text-xs text-muted-foreground">This topic is in the official course sequence. Its full interconnected note has not been written yet; keeping it visible prevents gaps in the curriculum.</p>}
           </div>
         </details>})}
       </div>
