@@ -288,7 +288,7 @@ const surgery: CourseOutline = {
     { id:"surg-abd", title:"Acute abdomen & gastrointestinal surgery", items: topics("surg-abd","Core",["Appendicitis","Intestinal obstruction","Peritonitis","Perforated viscus","Cholecystitis and cholangitis","Pancreatitis","Hernias and strangulation","GI bleeding","Colorectal cancer","Mesenteric ischaemia red flags"]) },
     { id:"surg-trauma", title:"Trauma & surgical emergencies", items: topics("surg-trauma","Core",["ABCDE trauma assessment","Haemorrhagic shock","Chest trauma","Head injury","Spinal injury","Abdominal trauma","Fractures and neurovascular examination","Compartment syndrome","Burns","Acute limb ischaemia"]) },
     { id:"surg-spec", title:"Common surgical specialties", items: topics("surg-spec","Core",["Breast lump and triple assessment","Breast cancer","Thyroid swelling","Diabetic foot","Peripheral arterial disease","Urinary retention","Haematuria","Renal colic","BPH","Testicular torsion","Scrotal swelling"]) },
-    { id:"surg-post", title:"Peri-operative care & complications", items: topics("surg-post","Core",["Surgical site infection","Post-operative bleeding","Atelectasis and pneumonia","DVT and PE","Ileus","Anastomotic leak","Wound dehiscence","Sepsis","VTE prophylaxis","Antibiotic prophylaxis"]) },
+    { id:"surg-post", title:"Peri-operative care & complications", items: topics("surg-post","Core",["Surgical fluids and electrolytes","Surgical site infection","Necrotising soft-tissue infection","Post-operative bleeding","Atelectasis and pneumonia","Deep-vein thrombosis and surgical VTE","Ileus","Anastomotic leak","Wound dehiscence","Sepsis","VTE prophylaxis","Antibiotic prophylaxis"]) },
   ],
 };
 
