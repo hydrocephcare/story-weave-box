@@ -539,8 +539,8 @@ export function buildFlashcardPath(set: { id: string; title: string; slug?: stri
 
 export function buildExamPath(exam: { id: string; title: string; slug?: string | null }): string {
   const rawSlug = typeof exam.slug === "string" ? exam.slug.trim() : "";
-  const slug = rawSlug || `${exam.id}-${slugifyTitle(exam.title) || "exam"}`;
-  return `/exams/${slug}/start`;
+  // Without a stored slug, link by full id: ExamStart can't resolve a partial-id suffix.
+  return `/exams/${rawSlug || exam.id}/start`;
 }
 
 export function extractIdFromParam(value: string | undefined | null): string | null {

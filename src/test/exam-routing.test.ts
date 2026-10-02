@@ -8,7 +8,7 @@ describe("exam start links", () => {
     const path = buildExamPath({ id, title: "Weekly Pathology Exam", slug: null });
     const param = path.split("/")[2];
     expect(extractIdFromParam(param)).toBe(id);
-    expect(path).toBe(`/exams/${id}-weekly-pathology-exam/start`);
+    expect(path).toBe(`/exams/${id}/start`);
   });
 
   it("preserves stored slugs for lookup by slug", () => {
