@@ -22,6 +22,7 @@ import SiteManagerAdmin from "@/components/SiteManagerAdmin";
 import GoogleDriveImportAdmin from "@/components/GoogleDriveImportAdmin";
 import { autoIndexUrls, SITE_URL, slugifyText } from "@/lib/seo";
 import { Helmet } from "react-helmet-async";
+import AdminWorkspace from "@/components/admin/AdminWorkspace";
 import { useAuth } from "@/hooks/useAuth";
 import { ARTICLE_COLUMNS } from "@/lib/article-columns";
 
@@ -448,8 +449,15 @@ export default function Admin() {
     { label: "System", items: tabs.filter(t => ["institutions","payments","notifications","google-drive","site-manager","settings"].includes(t.id)) },
   ];
 
+  const openAdminTab = (t: Tab) => {
+    if (t === "unedited") { navigate("/source-library"); return; }
+    if (t === "editor") { navigate("/admin/editor"); return; }
+    if (t === "categories") { navigate("/admin/categories"); return; }
+    setTabAndHash(t);
+  };
+
   return (
-    <div className="mx-auto max-w-5xl px-3 sm:px-6 py-4 sm:py-8">
+    <>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -459,61 +467,14 @@ export default function Admin() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={ogUrl} />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
       </Helmet>
-      <h1 className="mb-4 sm:mb-6 font-serif text-2xl sm:text-3xl font-bold text-foreground">Dashboard</h1>
-
-      {/* Mobile: Dropdown + grid */}
-      <div className="mb-6 sm:hidden">
-        <button
-          onClick={() => {
-            const el = document.getElementById("admin-nav-panel");
-            if (el) el.classList.toggle("hidden");
-          }}
-          className="flex w-full items-center justify-between rounded-xl border border-border bg-card px-4 py-3 text-sm font-medium text-foreground shadow-sm"
-        >
-          <span className="flex items-center gap-2">
-            {activeTab && <activeTab.icon className="h-4 w-4 text-primary" />}
-            {activeTab?.label || "Navigate"}
-          </span>
-          <ChevronDown className="h-4 w-4 text-muted-foreground" />
-        </button>
-        <div id="admin-nav-panel" className="hidden mt-2 rounded-xl border border-border bg-card p-3 shadow-lg space-y-3">
-          {tabGroups.map(group => (
-            <div key={group.label}>
-              <p className="mb-1.5 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{group.label}</p>
-              <div className="grid grid-cols-3 gap-1.5">
-                {group.items.map(t => (
-                  <button key={t.id} onClick={() => { if (t.id === "unedited") { navigate("/source-library"); return; } if (t.id === "editor") { navigate("/admin/editor"); return; } if (t.id === "categories") { navigate("/admin/categories"); return; } setTabAndHash(t.id); document.getElementById("admin-nav-panel")?.classList.add("hidden"); }}
-                    className={`flex flex-col items-center gap-1 rounded-lg px-2 py-2.5 text-[11px] font-medium transition-colors ${tab === t.id ? "bg-primary/10 text-primary ring-1 ring-primary/30" : "text-muted-foreground hover:bg-secondary hover:text-foreground"}`}>
-                    <t.icon className="h-4 w-4" />
-                    <span className="text-center leading-tight">{t.label}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Desktop: Grouped admin navigation */}
-      <div className="mb-8 hidden sm:grid gap-3 rounded-xl border border-border bg-secondary/30 p-3 md:grid-cols-2 xl:grid-cols-4">
-        {tabGroups.map(group => (
-          <div key={group.label} className="rounded-lg border border-border/70 bg-card p-2">
-            <p className="px-2 pb-1.5 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{group.label}</p>
-            <div className="flex flex-wrap gap-1">
-              {group.items.map(t => (
-                <button key={t.id} onClick={() => { if (t.id === "unedited") { navigate("/source-library"); return; } if (t.id === "editor") { navigate("/admin/editor"); return; } if (t.id === "categories") { navigate("/admin/categories"); return; } setTabAndHash(t.id); }}
-                  className={`flex items-center gap-1.5 rounded-lg px-2.5 py-2 text-xs font-medium transition-colors ${tab === t.id ? "bg-primary/10 text-primary ring-1 ring-primary/30" : "text-muted-foreground hover:bg-secondary hover:text-foreground"}`}>
-                  <t.icon className="h-3.5 w-3.5" /><span>{t.label}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-
+      <AdminWorkspace
+        activeId={tab}
+        activeLabel={activeTab?.label || "Dashboard"}
+        groups={tabGroups}
+        onSelect={openAdminTab}
+        onViewSite={() => navigate("/")}
+      >
       {tab === "payments" && <PaymentSettingsAdmin />}
       {tab === "notifications" && <NotificationAdmin />}
       {tab === "site-manager" && <SiteManagerAdmin />}
@@ -786,7 +747,8 @@ export default function Admin() {
       {tab === "seo" && <SeoIndexingTab />}
       {tab === "import" && <ImportTab />}
       {tab === "settings" && <SettingsPanel setGeminiKey={setGeminiKey} />}
-    </div>
+      </AdminWorkspace>
+    </>
   );
 }
 
