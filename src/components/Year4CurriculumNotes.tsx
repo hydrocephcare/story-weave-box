@@ -40,10 +40,18 @@ type Foundation = ImedFoundationNote | RotationFoundationNote;
 
 function findFoundation(item:OutlineItem, outline?:CourseOutline): Foundation|null {
   const wanted=norm(item.title);
-  const imed=IMED_FOUNDATION_NOTES.find(n=>norm(n.topic)===wanted);
-  if(imed) return imed;
   const rotation=outline ? rotationFor(outline) : null;
-  return ROTATION_FOUNDATION_NOTES.find(n=>n.rotation===rotation && norm(n.topic)===wanted) || null;
+  // IMED foundations must never leak into another rotation merely because a title is similar.
+  if(rotation==="medicine"){
+    const imed=IMED_FOUNDATION_NOTES.find(n=>norm(n.topic)===wanted);
+    if(imed) return imed;
+  }
+  const aliases:Record<string,Record<string,string>>={
+    paeds:{"shock":"paediatric shock"},
+    psychiatry:{"mental state examination":"mental state examination mse","mental status examination":"mental state examination mse","biopsychosocial formulation":"introduction to psychopathology ii and biopsychosocial formulation"},
+  };
+  const target=aliases[rotation || ""]?.[wanted] || wanted;
+  return ROTATION_FOUNDATION_NOTES.find(n=>n.rotation===rotation && norm(n.topic)===target) || null;
 }
 
 function findTheory(outline:CourseOutline,item:OutlineItem): DiseaseTheory|null {
