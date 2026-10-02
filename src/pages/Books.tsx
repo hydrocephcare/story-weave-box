@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { BookOpen, ChevronRight, Search } from "lucide-react";
+import { BookOpen, Check, ChevronRight, Search, Share2, Star } from "lucide-react";
 import DriveFileViewer, { thumbUrl, type DriveFile } from "@/components/DriveFileViewer";
 import { startDownload } from "@/lib/driveDownload";
 import { updateMetaTags } from "@/lib/seo";
+import { addRecentBook, toggleBookRead, toggleSavedBook, useBookShelf, type ShelfBook } from "@/lib/bookShelf";
 
 type Book = [id: string, name: string, type: number];
 interface Subject { name: string; b: number[]; units: string[]; also: number[] }
@@ -70,6 +71,72 @@ function Header({ title, blurb, trail, children }: { title: string; blurb?: stri
   );
 }
 
+const PATH_STEPS = [
+  { type: 1, title: "1 · Get the overview", hint: "A short book to see the whole subject first" },
+  { type: 0, title: "2 · Go deep", hint: "The main textbook, read alongside your lectures" },
+  { type: 3, title: "3 · See it in patients", hint: "Worked cases to join theory to practice" },
+  { type: 4, title: "4 · Test yourself", hint: "Questions to find what you do not know yet" },
+];
+
+/** Three or four books in a sensible order for one subject, with a tick for each one you have finished. */
+function ReadingPath({ data, subject, onOpen, local }: { data: Data; subject: Subject; onOpen: (bookIndex: number) => void; local: Set<string> }) {
+  const { read } = useBookShelf();
+  const steps = PATH_STEPS.map((st) => ({ st, i: subject.b.find((i) => data.books[i][2] === st.type) })).filter((x): x is { st: typeof PATH_STEPS[number]; i: number } => x.i !== undefined);
+  if (steps.length < 2) return null;
+  const done = steps.filter((x) => read.has(data.books[x.i][0])).length;
+  return (
+    <section className="rounded-2xl border border-primary/25 bg-gradient-to-br from-primary/10 to-card p-4">
+      <div className="flex items-baseline justify-between gap-2">
+        <h2 className="font-serif text-lg font-bold text-foreground">Reading path</h2>
+        <span className="text-xs font-bold text-primary">{done} of {steps.length} done</span>
+      </div>
+      <p className="mb-3 text-xs text-muted-foreground">If you do not know where to start, read these in order.</p>
+      <ol className="grid gap-2 sm:grid-cols-2">
+        {steps.map(({ st, i }) => {
+          const b = data.books[i]; const isDone = read.has(b[0]);
+          return (
+            <li key={st.type} className={`flex items-start gap-3 rounded-xl border p-2.5 ${isDone ? "border-emerald-500/40 bg-emerald-500/5" : "border-border bg-card"}`}>
+              <button type="button" onClick={() => onOpen(subject.b.indexOf(i))} className="flex min-w-0 flex-1 items-start gap-3 text-left" aria-label={`Open ${b[1]}`}>
+                <Cover id={b[0]} title={b[1]} type={b[2]} local={local.has(b[0])} />
+                <span className="min-w-0"><span className="block text-[11px] font-bold uppercase tracking-wide text-primary">{st.title}</span><span className="block text-[13.5px] font-semibold leading-snug text-foreground">{b[1]}</span><span className="block text-[11px] text-muted-foreground">{st.hint}</span></span>
+              </button>
+              <button type="button" onClick={() => toggleBookRead(b[0])} aria-pressed={isDone} aria-label={isDone ? "Mark as not finished" : "Mark as finished"} className={`mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border ${isDone ? "border-emerald-600 bg-emerald-600 text-white" : "border-border text-transparent hover:border-primary"}`}><Check className="h-4 w-4" /></button>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+  );
+}
+
+/** Saved and recently opened books, shown at the top of the Books page. */
+function MyBooks({ local }: { local: Set<string> }) {
+  const { saved, recent } = useBookShelf();
+  const [view, setView] = useState<{ list: ShelfBook[]; index: number } | null>(null);
+  const lists = [{ title: "Saved books", icon: Star, list: saved }, { title: "Recently opened", icon: BookOpen, list: recent }].filter((l) => l.list.length);
+  if (!lists.length) return null;
+  return (
+    <div className="mb-6 space-y-4">
+      {lists.map((l) => (
+        <section key={l.title}>
+          <h2 className="mb-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground"><l.icon className="h-3.5 w-3.5 text-primary" /> {l.title} ({l.list.length})</h2>
+          <ul className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-1 sm:mx-0 sm:px-0">
+            {l.list.slice(0, 12).map((b, k) => (
+              <li key={b.id} className="w-[4.6rem] shrink-0">
+                <button type="button" onClick={() => setView({ list: l.list, index: k })} className="block w-full text-left" aria-label={`Open ${b.name}`}>
+                  <Cover id={b.id} title={b.name} type={b.type} local={local.has(b.id)} />
+                  <span className="mt-1 line-clamp-2 block text-[10.5px] font-semibold leading-tight text-foreground">{b.name}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+      <DriveFileViewer items={(view?.list ?? []).map((b): DriveFile => [b.id, b.name, "pdf"])} index={view ? view.index : null} onIndexChange={(n) => setView((v) => (v && n !== null ? { ...v, index: n } : null))} onDownload={(f) => startDownload(f[0], f[1])} where="Books" />
+    </div>
+  );
+}
+
 /** Books shelved by year, then subject, then type. The year and subject follow the MKU timetable unit codes. */
 export default function BooksPage() {
   const { shelf: shelfKey, subject: subjectKey } = useParams();
@@ -78,6 +145,8 @@ export default function BooksPage() {
   const navigate = useNavigate();
   const [viewing, setViewing] = useState<number | null>(null);
   const [q, setQ] = useState(params.get("q") ?? "");
+  const { saved } = useBookShelf();
+  const [shared, setShared] = useState(false);
 
   useEffect(() => { updateMetaTags({ title: "Medical books by year and subject | Ompath Study", description: "Textbooks, handbooks, atlases and question banks shelved by MBChB year, subject and type." }); }, []);
   useEffect(() => { setViewing(null); window.scrollTo({ top: 0 }); }, [shelfKey, subjectKey]);
@@ -121,9 +190,11 @@ export default function BooksPage() {
   );
 
   const viewer = <DriveFileViewer items={items} index={viewing} onIndexChange={setViewing} onDownload={(f) => startDownload(f[0], f[1])} where="Books" />;
+  const open = (i: number) => { setViewing(i); const b = bookList[i]?.book; if (b) addRecentBook({ id: b[0], name: b[1], type: b[2] }); };
   const bookRow = (r: { book: Book; where?: string }, i: number) => (
-    <li key={r.book[0]}>
-      <button type="button" onClick={() => setViewing(i)} className="flex h-full w-full items-start gap-3 rounded-xl border border-border bg-card p-3 text-left transition-colors hover:border-primary/50">
+    <li key={r.book[0]} className="relative">
+      <button type="button" onClick={() => toggleSavedBook({ id: r.book[0], name: r.book[1], type: r.book[2] })} aria-pressed={saved.some((x) => x.id === r.book[0])} aria-label={saved.some((x) => x.id === r.book[0]) ? "Remove from saved books" : "Save this book"} className="absolute right-2 top-2 z-10 rounded-full p-1.5 text-muted-foreground hover:bg-muted hover:text-amber-500"><Star className={`h-4 w-4 ${saved.some((x) => x.id === r.book[0]) ? "fill-amber-400 text-amber-500" : ""}`} /></button>
+      <button type="button" onClick={() => open(i)} className="flex h-full w-full items-start gap-3 rounded-xl border border-border bg-card p-3 pr-10 text-left transition-colors hover:border-primary/50">
         <Cover id={r.book[0]} title={r.book[1]} type={r.book[2]} local={localCovers.has(r.book[0])} />
         <span className="flex min-w-0 flex-1 flex-col gap-1">
           <span className="text-[14.5px] font-semibold leading-snug text-foreground">{r.book[1]}</span>
@@ -160,9 +231,13 @@ export default function BooksPage() {
           <nav aria-label="Jump to type" className="-mx-4 flex gap-2 overflow-x-auto px-4 pt-1 sm:mx-0 sm:flex-wrap sm:px-0">
             {groups.map((g) => <a key={g.ti} href={`#type-${g.ti}`} className="shrink-0 rounded-full border border-border bg-card px-3.5 py-1.5 text-[13px] font-bold text-muted-foreground hover:border-primary/50 hover:text-primary">{g.t} <span className="opacity-60">{g.ids.length}</span></a>)}
           </nav>
+          <div className="flex flex-wrap items-center gap-2">
+            <button type="button" onClick={async () => { const url = window.location.href; const text = `${subject.name} books for ${shelf.label} on Ompath Study`; try { if (navigator.share) await navigator.share({ title: text, url }); else { await navigator.clipboard.writeText(`${text}: ${url}`); setShared(true); setTimeout(() => setShared(false), 1800); } } catch { /* share cancelled */ } }} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-[13px] font-bold text-muted-foreground hover:border-primary/50 hover:text-primary"><Share2 className="h-3.5 w-3.5" /> {shared ? "Link copied" : "Share this shelf"}</button>
+          </div>
           {searchBox}
         </Header>
         <div className="mx-auto max-w-5xl space-y-7 px-4 py-6 sm:px-5">
+          <ReadingPath data={data} subject={subject} onOpen={open} local={localCovers} />
           {groups.map((g) => (
             <section key={g.ti} id={`type-${g.ti}`} className="scroll-mt-20">
               <h2 className="font-serif text-lg font-bold text-foreground">{g.t} <span className="text-sm font-semibold text-muted-foreground">({g.ids.length})</span></h2>
@@ -209,6 +284,7 @@ export default function BooksPage() {
     <div className="min-h-[65vh] bg-background">
       <Header title="Books by year and subject" blurb="Pick your year, then a subject, then the kind of book you need. Shelved to follow the MKU timetable." trail={[{ label: "Books" }]}>{searchBox}</Header>
       <div className="mx-auto max-w-5xl px-4 py-6 sm:px-5">
+        <MyBooks local={localCovers} />
         <ul className="grid gap-3 sm:grid-cols-2">
           {data.shelves.map((s) => {
             const unique = new Set(s.subjects.flatMap((x) => x.b)).size;

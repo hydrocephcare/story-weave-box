@@ -3,6 +3,7 @@ import { BookOpen, GraduationCap, Home, LayoutDashboard, Network, Stethoscope, M
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "./ThemeToggle";
+import NotificationsBell from "./NotificationsBell";
 import HeaderSearch from "./HeaderSearch";
 import ompathLogo from "@/assets/ompath-logo.webp";
 import { useAuth } from "@/hooks/useAuth";
@@ -210,11 +211,13 @@ fetchpriority="high" />
               </Link>
             ))}
             <MoreMenu links={links.filter((l) => l.more)} isActive={isActive} />
+            <NotificationsBell />
             <ThemeToggle />
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
             <HeaderSearch variant="desktop" />
+            <NotificationsBell />
             <ThemeToggle />
             <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
               <SheetTrigger asChild>

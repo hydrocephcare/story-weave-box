@@ -14,6 +14,8 @@ import { shelfToFile, toggleSaved, useFileShelf, type ShelfItem } from "@/lib/fi
 import DriveFileViewer, { cleanName, downloadUrl } from "@/components/DriveFileViewer";
 import FileThumb from "@/components/FileThumb";
 import LatestFeed from "@/components/LatestFeed";
+import WeeklyGoal from "@/components/WeeklyGoal";
+import { useBookShelf } from "@/lib/bookShelf";
 import { AnnouncementCard, ContestsCard, YearBooksCard, YearExamsCard } from "@/components/YearHubPanel";
 
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -122,6 +124,21 @@ function ShelfRow({ item, onOpen }: { item: ShelfItem; onOpen: () => void }) {
   );
 }
 
+/** Books you saved or opened lately, with a way into the Books page. */
+function MyBooksCard() {
+  const { saved, recent } = useBookShelf();
+  const list = (saved.length ? saved : recent).slice(0, 4);
+  return (
+    <Card title={saved.length ? `Saved books (${saved.length})` : "Books"} icon={BookOpen}>
+      {list.length === 0 ? (
+        <p className="text-[11px] leading-relaxed text-muted-foreground">Star a book to keep it here. <Link to="/books" className="font-bold text-primary hover:underline">Browse the shelves →</Link></p>
+      ) : (
+        <ul className="space-y-1">{list.map((b) => <li key={b.id}><Link to={`/books?q=${encodeURIComponent(b.name)}`} className="block truncate rounded-md px-1.5 py-1 text-xs font-medium text-foreground hover:bg-muted hover:text-primary">{b.name}</Link></li>)}</ul>
+      )}
+    </Card>
+  );
+}
+
 /** Right-hand dashboard: countdown, timetable, shortcuts, continue reading and the learner's saved files. */
 export default function StudyPanel({ year: preferredYear }: { year?: number | null }) {
   const { user } = useAuth();
@@ -175,6 +192,8 @@ export default function StudyPanel({ year: preferredYear }: { year?: number | nu
         {!user && <Link to="/login" className="mt-2 inline-block text-[11px] font-bold text-primary hover:underline">Sign in to keep your progress →</Link>}
       </section>
 
+      <WeeklyGoal />
+
       <Card title={`Year ${year} classes`} icon={CalendarDays}><TodayClasses year={year} /></Card>
 
       <YearExamsCard year={year} />
@@ -204,6 +223,8 @@ export default function StudyPanel({ year: preferredYear }: { year?: number | nu
       )}
 
       <LatestFeed />
+
+      <MyBooksCard />
 
       <Card title={`Saved files${saved.length ? ` (${saved.length})` : ""}`} icon={Star}>
         {saved.length === 0 ? (
