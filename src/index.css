@@ -159,8 +159,13 @@
       scroll-behavior: auto;
     }
   }
-  html, body {
+  /* html clips sideways overflow; body uses clip (not hidden) so it does not become its own scroll container, which would break position: sticky sidebars. */
+  html {
     overflow-x: hidden;
+    max-width: 100vw;
+  }
+  body {
+    overflow-x: clip;
     max-width: 100vw;
   }
   body {

@@ -1,4 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from "react";
+import StickyRail from "@/components/StickyRail";
+import { EmptyStateHub } from "@/components/YearHubPanel";
 import { useSearchParams, Link, useNavigate, useLocation } from "react-router-dom";
 import { Search, X, BookOpen, Clock, ArrowLeft, ChevronDown, LayoutGrid, List, ArrowRight, SlidersHorizontal, Sparkles, TrendingUp, Star, Zap, CalendarDays, FolderOpen, LayoutDashboard } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -510,6 +512,7 @@ export default function Blog() {
       <div className="grid gap-8 lg:grid-cols-[240px_minmax(0,1fr)] xl:grid-cols-[260px_minmax(0,1fr)]">
         {/* Desktop-only sidebar */}
         <aside className="hidden lg:block">
+          <StickyRail>
           <div className="space-y-3 pr-1">
             <StudyPanel year={yearNum} />
             <div className="rounded-2xl border border-border bg-card p-4 shadow-sm">
@@ -580,6 +583,7 @@ export default function Blog() {
             })}
             </div>
           </div>
+          </StickyRail>
         </aside>
 
         <div className="min-w-0">
@@ -984,7 +988,7 @@ export default function Blog() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3 }}
-          className="py-16 text-center"
+          className="py-8 text-center"
         >
           <SlidersHorizontal className="mx-auto mb-3 h-5 w-5 text-muted-foreground" />
           <p className="font-medium text-foreground">No notes found</p>
@@ -997,6 +1001,7 @@ export default function Blog() {
               Reset filters <ArrowRight className="h-3.5 w-3.5" />
             </button>
           )}
+          <EmptyStateHub year={yearNum} />
         </motion.div>
       ) : groupedArticles && !search.trim() ? (
         <motion.div

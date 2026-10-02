@@ -182,7 +182,7 @@ export default function YearHub() {
   });
 
   return (
-    <div className="mx-auto max-w-5xl px-5 py-10 sm:py-12">
+    <div className="mx-auto max-w-6xl px-5 py-10 sm:py-12">
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -224,7 +224,7 @@ export default function YearHub() {
         <ArrowRight className="h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-0.5" />
       </Link>
 
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {sections.map((section) => (
           <Link
             key={section.title}

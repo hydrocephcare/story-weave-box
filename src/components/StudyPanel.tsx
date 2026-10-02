@@ -14,6 +14,7 @@ import { shelfToFile, toggleSaved, useFileShelf, type ShelfItem } from "@/lib/fi
 import DriveFileViewer, { cleanName, downloadUrl } from "@/components/DriveFileViewer";
 import FileThumb from "@/components/FileThumb";
 import LatestFeed from "@/components/LatestFeed";
+import { AnnouncementCard, ContestsCard, YearBooksCard, YearExamsCard } from "@/components/YearHubPanel";
 
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const MY_YEAR_KEY = "ompath_my_year";
@@ -157,6 +158,7 @@ export default function StudyPanel({ year: preferredYear }: { year?: number | nu
 
   return (
     <div className="space-y-3">
+      <AnnouncementCard />
       <section className="rounded-xl border border-primary/25 bg-gradient-to-br from-primary/10 to-card p-3">
         <div className="flex items-center justify-between gap-2">
           <p className="min-w-0 truncate text-sm font-bold text-foreground">{name ? `Hi ${name} 👋` : "Your study desk"}</p>
@@ -174,6 +176,10 @@ export default function StudyPanel({ year: preferredYear }: { year?: number | nu
       </section>
 
       <Card title={`Year ${year} classes`} icon={CalendarDays}><TodayClasses year={year} /></Card>
+
+      <YearExamsCard year={year} />
+      <YearBooksCard year={year} limit={6} />
+      <ContestsCard />
 
       <Card title="Shortcuts" icon={Star}>
         <div className="grid grid-cols-2 gap-1.5">
