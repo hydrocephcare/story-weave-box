@@ -245,7 +245,7 @@ const paediatrics: CourseOutline = {
       ["Weeks 1–2", "Gastrointestinal system", "GORD, gastritis and peptic ulcer disease, hepatitis, acute liver failure, acute gastroenteritis."], ["Weeks 1–2", "Acute gastroenteritis and dehydration"],
       ["Week 3", "Neurology", "Meningitis and other CNS infections, convulsive disorders, movement disorders, encephalopathies, neurocutaneous syndromes."], ["Week 3", "Paediatric meningitis"],
       ["Weeks 4–6", "Cardiovascular", "Acute rheumatic fever, rheumatic heart disease, infective endocarditis, congenital heart disease, arrhythmias, ECG."], ["Weeks 4–6", "Acute rheumatic fever and rheumatic heart disease"], ["Weeks 4–6", "Congenital heart disease"],
-      ["Weeks 7–8", "Blood disorders", "Anaemia, haemophilias, sickle cell disease, blood components and transfusion, other bleeding and thrombotic disorders."], ["Weeks 7–8", "Iron-deficiency anaemia in children"], ["Weeks 7–8", "Sickle cell disease in children"],
+      ["Weeks 7–8", "Blood disorders", "Anaemia, haemophilias, sickle cell disease, blood components and transfusion, other bleeding and thrombotic disorders."], ["Weeks 7–8", "Iron-deficiency anaemia in children"], ["Weeks 7–8", "Haemophilia"], ["Weeks 7–8", "Sickle cell disease in children"],
       ["Weeks 9–10", "Fluids, electrolytes and acid–base", "Hyponatraemia, hypernatraemia, hypokalaemia, hyperkalaemia, blood gas analysis."],
       ["Weeks 11–12", "Endocrinology", "Hypothyroidism, hyperthyroidism, diabetes and DKA, congenital adrenal hyperplasia, Addison disease, precocious puberty."], ["Weeks 11–12", "Type 1 diabetes and diabetic ketoacidosis"],
       ["Week 13", "Assessment"]]) },
