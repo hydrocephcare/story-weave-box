@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import { BookOpen, ChevronRight, Search } from "lucide-react";
-import DriveFileViewer, { type DriveFile } from "@/components/DriveFileViewer";
+import DriveFileViewer, { thumbUrl, type DriveFile } from "@/components/DriveFileViewer";
 import { startDownload } from "@/lib/driveDownload";
 import { updateMetaTags } from "@/lib/seo";
 
@@ -23,6 +23,19 @@ function useBooks() {
     return () => { on = false; };
   }, []);
   return { data, error };
+}
+
+/** The book's first page from Drive, shown before you open it. Falls back to a plain book tile if Drive has no preview. */
+function Cover({ id, title }: { id: string; title: string }) {
+  const [failed, setFailed] = useState(false);
+  return (
+    <span className="relative flex h-24 w-[4.2rem] shrink-0 items-center justify-center overflow-hidden rounded-md border border-border bg-muted shadow-sm">
+      <BookOpen className="h-5 w-5 text-muted-foreground/60" aria-hidden />
+      {!failed && (
+        <img src={thumbUrl(id, 200)} alt={`Cover of ${title}`} loading="lazy" decoding="async" referrerPolicy="no-referrer" onError={() => setFailed(true)} className="absolute inset-0 h-full w-full object-cover object-top" />
+      )}
+    </span>
+  );
 }
 
 function Crumbs({ trail }: { trail: { to?: string; label: string }[] }) {
@@ -103,9 +116,12 @@ export default function BooksPage() {
   const viewer = <DriveFileViewer items={items} index={viewing} onIndexChange={setViewing} onDownload={(f) => startDownload(f[0], f[1])} where="Books" />;
   const bookRow = (r: { book: Book; where?: string }, i: number) => (
     <li key={r.book[0]}>
-      <button type="button" onClick={() => setViewing(i)} className="flex h-full w-full flex-col items-start gap-1 rounded-xl border border-border bg-card p-3.5 text-left transition-colors hover:border-primary/50">
-        <span className="text-[14.5px] font-semibold leading-snug text-foreground">{r.book[1]}</span>
-        <span className="text-[11.5px] text-muted-foreground">{data.types[r.book[2]]}{r.where ? ` · ${r.where}` : ""}</span>
+      <button type="button" onClick={() => setViewing(i)} className="flex h-full w-full items-start gap-3 rounded-xl border border-border bg-card p-3 text-left transition-colors hover:border-primary/50">
+        <Cover id={r.book[0]} title={r.book[1]} />
+        <span className="flex min-w-0 flex-1 flex-col gap-1">
+          <span className="text-[14.5px] font-semibold leading-snug text-foreground">{r.book[1]}</span>
+          <span className="text-[11.5px] text-muted-foreground">{data.types[r.book[2]]}{r.where ? ` · ${r.where}` : ""}</span>
+        </span>
       </button>
     </li>
   );
