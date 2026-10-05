@@ -13,6 +13,10 @@ const counts = (p: PaperNote["paper"]) => [p.mcq ? `${p.mcq} MCQ` : "", p.saq ? 
 const bySitting = (a: PaperNote, b: PaperNote) => (b.paper.sat ?? "").localeCompare(a.paper.sat ?? "");
 
 const outlineName = (id: string) => COURSE_OUTLINES.find((o) => o.id === id)?.department ?? id;
+/** Which outline each topic id belongs to, so a mixed paper counts towards every unit it touches. */
+const OWNER = new Map<string, string>();
+for (const o of COURSE_OUTLINES) for (const s of o.sections) for (const i of s.items) OWNER.set(i.id, o.id);
+const papersTouching = (outlineId: string) => PAPER_NOTES.filter((p) => p.paper.topics.some((t) => OWNER.get(t) === outlineId));
 
 function PaperCard({ p }: { p: PaperNote }) {
   const m = monthOf(p);
@@ -49,6 +53,7 @@ export default function PastPapers() {
   }, []);
 
   const units = useMemo(() => [...new Set(PAPER_NOTES.map((p) => p.paper.outline))], []);
+  const coverageUnits = useMemo(() => [...new Set(PAPER_NOTES.flatMap((p) => p.paper.topics.map((t) => OWNER.get(t)).filter((o): o is string => Boolean(o))))], []);
   const months = useMemo(() => [...new Set(PAPER_NOTES.map(monthOf).filter((m): m is number => m !== null))].sort((a, b) => a - b), []);
   const filtered = useMemo(() => PAPER_NOTES.filter((p) => (!trim || p.paper.trimester === trim) && (!unit || p.paper.outline === unit) && (!month || monthOf(p) === month)).sort(bySitting), [trim, unit, month]);
   const order = [now, ...[1, 2, 3].filter((t) => t !== now)];
@@ -112,7 +117,7 @@ export default function PastPapers() {
           )}
         </>
       ) : (
-        <Coverage unit={unit || units[0]} units={units} setUnit={(u) => set({ unit: u })} chip={chip} />
+        <Coverage unit={unit || coverageUnits[0]} units={coverageUnits} setUnit={(u) => set({ unit: u })} chip={chip} />
       )}
     </div>
   );
@@ -120,7 +125,7 @@ export default function PastPapers() {
 
 function Coverage({ unit, units, setUnit, chip }: { unit: string; units: string[]; setUnit: (u: string) => void; chip: (a: boolean) => string }) {
   const outline = COURSE_OUTLINES.find((o) => o.id === unit);
-  const papers = PAPER_NOTES.filter((p) => p.paper.outline === unit).sort(bySitting);
+  const papers = papersTouching(unit).sort(bySitting);
   const asked = useMemo(() => {
     const map = new Map<string, PaperNote[]>();
     for (const p of papers) for (const id of p.paper.topics) map.set(id, [...(map.get(id) ?? []), p]);
@@ -137,7 +142,7 @@ function Coverage({ unit, units, setUnit, chip }: { unit: string; units: string[
       {units.length > 1 && <div className="flex flex-wrap gap-2">{units.map((u) => <button key={u} className={chip(u === unit)} onClick={() => setUnit(u)}>{outlineName(u)}</button>)}</div>}
       <h2 className="mt-5 font-serif text-2xl font-bold text-foreground">{outline.department}: what the papers have asked</h2>
       <p className="mt-1 max-w-2xl text-sm text-muted-foreground">
-        {papers.length} papers on the site cover <strong className="text-foreground">{hit} of {all.length}</strong> topics in the course outline. Read the topics that have never been asked as well, because the exam can come from anywhere in the outline.
+        {papers.length} paper{papers.length === 1 ? "" : "s"} on the site cover <strong className="text-foreground">{hit} of {all.length}</strong> topics in the course outline. Read the topics that have never been asked as well, because the exam can come from anywhere in the outline.
       </p>
       <div className="mt-2 h-2 max-w-md overflow-hidden rounded-full bg-muted"><div className="h-full rounded-full bg-primary" style={{ width: `${Math.round((hit / Math.max(1, all.length)) * 100)}%` }} /></div>
 
