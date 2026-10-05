@@ -12,6 +12,11 @@ import { getRecentArticles, type RecentArticle } from "@/lib/progress-store";
 import { getSubjectKey, subjectColor } from "@/components/subjectTheme";
 import { useAuth } from "@/hooks/useAuth";
 import SemesterDashboard from "@/components/SemesterDashboard";
+import RecentNotes from "@/components/RecentNotes";
+import { notesForYear } from "@/data/staticNotes";
+
+/** Units that have notes shipped with the site, so a year is never shown as empty when it has notes. */
+const staticUnitsFor = (yearLabel: string) => [...new Set(notesForYear(Number(yearLabel.replace(/\D/g, ""))).map((n) => n.unit))];
 
 /* Resource tiles — the Geeky Medics "Explore our resources" block: a small number
    of large, colour-blocked entry points instead of a wall of small links. */
@@ -256,6 +261,8 @@ export default function Index() {
 
       <SemesterDashboard />
 
+      <RecentNotes />
+
       {/* ── Resource tiles ── */}
       <section className="mx-auto max-w-6xl px-5 py-10 sm:py-14">
         <motion.div
@@ -397,10 +404,11 @@ export default function Index() {
                   <div className="flex items-baseline justify-between border-b border-border px-5 py-4">
                     <span className="font-serif text-xl font-bold text-foreground">{group.year}</span>
                     <span className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
-                      {group.categories.length} units
+                      {group.categories.length + staticUnitsFor(group.year).length} units
                     </span>
                   </div>
                   <div className="flex flex-wrap gap-1.5 p-4">
+                    {staticUnitsFor(group.year).map((u) => <span key={u} className="max-w-full truncate rounded-md bg-primary/10 px-2 py-1 text-[11px] font-semibold text-primary">{u}</span>)}
                     {group.categories.slice(0, 6).map(cat => {
                       return (
                         <span
