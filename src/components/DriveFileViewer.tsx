@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { AlertTriangle, Check, ChevronLeft, ChevronRight, Download, ExternalLink, Flag, Loader2, Maximize, Maximize2, Minimize, Minimize2, MoreVertical, Moon, Network, RefreshCw, StickyNote, Sun, X } from "lucide-react";
+import { AlertTriangle, Check, ChevronLeft, ChevronRight, Download, Flag, Loader2, Maximize, Maximize2, Minimize, Minimize2, MoreVertical, Moon, Network, RefreshCw, StickyNote, Sun, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import registry from "@/data/libraries.json";
 import { prettyTitle } from "@/lib/libraryMeta";
@@ -296,7 +296,7 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
                     <div className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center gap-2 bg-muted/60 text-xs font-semibold text-muted-foreground">
                       <Loader2 className="h-6 w-6 animate-spin text-primary" /> Opening file…
                       {bookSizeMB(file[0]) !== undefined && <span className="font-normal">{formatMB(bookSizeMB(file[0]) as number)}{(bookSizeMB(file[0]) as number) >= 20 ? ", a big book, so it can take a minute" : ""}</span>}
-                      {slow && <span className="pointer-events-auto mt-1 max-w-xs px-4 font-normal">Still loading. You can wait, or <a href={`https://drive.google.com/file/d/${encodeURIComponent(file[0])}/view`} target="_blank" rel="noopener noreferrer" className="font-bold text-primary underline">open it in Drive</a>.</span>}
+                      {slow && <span className="pointer-events-auto mt-1 max-w-xs px-4 font-normal">Still loading. You can wait, or tap Reload below.</span>}
                     </div>
                   )}
                   {file[2] === "img" ? (
@@ -313,6 +313,8 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
                       />
                     </div>
                   ) : canPreview(file[2]) ? (
+                    <>
+                    <div aria-hidden className="absolute right-0 top-0 z-10 h-14 w-16" />
                     <iframe
                       key={`${file[0]}-${reloadKey}`}
                       src={previewUrl(file[0])}
@@ -324,6 +326,7 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
                       allowFullScreen
                       onLoad={() => setLoaded(true)}
                     />
+                    </>
                   ) : (
                     <div className="flex h-full flex-col items-center justify-center gap-3 p-6 text-center text-sm text-muted-foreground">
                       This file type cannot be previewed.
@@ -339,7 +342,6 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
             {!immersive && !isBroken && canPreview(file[2]) && (
               <p className="flex items-center justify-center gap-x-4 border-t border-border px-3 py-1 text-[11px] text-muted-foreground">
                 <button type="button" onClick={() => setReloadKey((k) => k + 1)} className="inline-flex items-center gap-1 font-bold text-primary hover:underline"><RefreshCw className="h-3 w-3" /> Reload</button>
-                <a href={`https://drive.google.com/file/d/${encodeURIComponent(file[0])}/view`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-bold text-primary hover:underline"><ExternalLink className="h-3 w-3" /> Open in Drive</a>
                 <a href={reportUrl(file, where)} target="_blank" rel="noopener noreferrer" className="hidden items-center gap-1 font-bold text-primary hover:underline min-[420px]:inline-flex"><Flag className="h-3 w-3" /> Report</a>
                 <span className="hidden sm:inline">Keys: ← → files · N night · I focus · F full screen</span>
               </p>
