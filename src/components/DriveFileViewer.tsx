@@ -98,7 +98,25 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
     const t = window.setTimeout(() => setSlow(true), 7000);
     return () => window.clearTimeout(t);
   }, [open, loaded, file?.[0], reloadKey]);
-  useEffect(() => { if (!open) { setPanel("none"); setImmersive(false); } }, [open]);
+  useEffect(() => { if (!open) { setPanel("none"); setImmersive(false); setBarShown(false); setToolsOpen(false); } }, [open]);
+
+  // Opening the reader adds one history step, so Back closes the reader and lands on the page you were reading.
+  const pushedStep = useRef(false);
+  useEffect(() => {
+    if (!open) return;
+    try { window.history.pushState({ ...(window.history.state ?? {}), reader: true }, ""); pushedStep.current = true; } catch { pushedStep.current = false; }
+    const onPop = () => { pushedStep.current = false; setImmersive(false); onIndexChange(null); };
+    window.addEventListener("popstate", onPop);
+    return () => {
+      window.removeEventListener("popstate", onPop);
+      // Closed from the screen (not with Back): remove the step we added, unless the page has moved on since.
+      if (pushedStep.current) {
+        pushedStep.current = false;
+        try { if (window.history.state?.reader) window.history.back(); } catch { /* ignore */ }
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
 
   // Notes for the file you are reading, saved as you type.
   useEffect(() => { setNote(file ? safeGet(NOTE_KEY(file[0])) ?? "" : ""); }, [file?.[0]]);
@@ -272,12 +290,15 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
                   </div>
                 )}
             </div>
+            {immersive && (
+              <button type="button" onClick={() => { setBarShown(false); setImmersive(false); }} aria-label="Leave focus mode" className="absolute bottom-3 left-3 z-30 inline-flex h-10 items-center gap-1.5 rounded-full bg-foreground/80 px-4 text-xs font-bold text-background shadow-lg backdrop-blur"><Minimize2 className="h-4 w-4" /> Exit focus</button>
+            )}
             {immersive && !barShown && (
               <>
                 {/* A thin strip at the top edge: hover it, tap it or swipe down on it to bring the toolbar back. */}
                 <div
                   aria-hidden
-                  className="absolute inset-x-0 top-0 z-20 h-5"
+                  className="absolute left-0 right-16 top-0 z-20 h-10"
                   onMouseEnter={() => setBarShown(true)}
                   onTouchStart={(e) => { lastY.current = e.touches[0]?.clientY ?? 0; }}
                   onTouchMove={(e) => { if ((e.touches[0]?.clientY ?? 0) - lastY.current > 10) setBarShown(true); }}
