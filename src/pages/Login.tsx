@@ -12,6 +12,9 @@ import { supabase } from "@/integrations/supabase/client";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [readerPassword, setReaderPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [admission, setAdmission] = useState("");
+  const [sent, setSent] = useState(false);
   const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [busy, setBusy] = useState(false);
   const { user, isAdmin, signIn, signUp, loading: authLoading } = useAuth();
@@ -21,11 +24,12 @@ export default function Login() {
 
   useEffect(() => {
     if (!authLoading && user) {
-      const redirect = sessionStorage.getItem("post_login_redirect") || (isAdmin ? "/admin" : "/account");
+      const asked = new URLSearchParams(location.search).get("redirect");
+      const redirect = (asked && asked.startsWith("/") && !asked.startsWith("//") ? asked : null) || sessionStorage.getItem("post_login_redirect") || (isAdmin ? "/admin" : "/account");
       sessionStorage.removeItem("post_login_redirect");
       navigate(redirect);
     }
-  }, [user, isAdmin, authLoading, navigate]);
+  }, [user, isAdmin, authLoading, navigate, location.search]);
 
   const ogUrl =
     typeof window !== "undefined"
@@ -39,7 +43,8 @@ export default function Login() {
 
   const google = async () => {
     setBusy(true);
-    sessionStorage.setItem("post_login_redirect", safePostLoginPath((location.state as { from?: string } | null)?.from));
+    const asked = new URLSearchParams(location.search).get("redirect");
+    sessionStorage.setItem("post_login_redirect", safePostLoginPath(asked ?? (location.state as { from?: string } | null)?.from));
     const res = await signInWithGoogle();
     setBusy(false);
     if (res.redirected) return;
@@ -54,8 +59,12 @@ export default function Login() {
     setBusy(true);
     try {
       if (mode === "signup") {
-        await signUp(email.trim(), readerPassword);
-        toast({ title: "Account created", description: "Check your inbox if confirmation is required." });
+        if (readerPassword !== confirmPassword) {
+          toast({ title: "Passwords do not match", description: "Type the same password twice.", variant: "destructive" });
+          return;
+        }
+        await signUp(email.trim(), readerPassword, admission.trim());
+        setSent(true);
       } else {
         await signIn(email.trim(), readerPassword);
         toast({ title: "Signed in" });
@@ -127,12 +136,20 @@ export default function Login() {
             <ShieldCheck className="h-7 w-7" />
           </div>
           <h1 className="mb-2 text-center font-serif text-2xl font-bold text-foreground">
-            {mode === "signup" ? "Create your account" : "Welcome back"}
+            {sent ? "Check your email" : mode === "signup" ? "Create your student account" : "Welcome back"}
           </h1>
           <p className="mb-6 text-center text-sm text-muted-foreground">
-            Sign in so your subscription and pass code follow your email everywhere.
+            {sent
+              ? "We sent a link to confirm your email. Open it, then sign in here. If your admission number could not be matched, the admin will review your request."
+              : new URLSearchParams(location.search).get("mku")
+                ? "Books, timetables, course outlines and past papers are for Mount Kenya University students. Sign in with your student account."
+                : "Sign in so your subscription and pass code follow your email everywhere."}
           </p>
+          {sent && (
+            <Button type="button" className="w-full" onClick={() => { setSent(false); setMode("signin"); setReaderPassword(""); setConfirmPassword(""); }}>Go to sign in</Button>
+          )}
 
+          {!sent && <>
           <Button type="button" onClick={google} disabled={busy} variant="outline" className="mb-4 w-full gap-2">
             {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Mail className="h-4 w-4" />}
             Continue with Google
@@ -145,8 +162,21 @@ export default function Login() {
           <form onSubmit={emailAuth}>
             <label htmlFor="login-email" className="mb-1 block text-xs font-medium text-foreground">Email</label>
             <Input id="login-email" type="email" placeholder="you@example.com" value={email} onChange={(e) => setEmail(e.target.value)} className="mb-3" required />
+            {mode === "signup" && (
+              <>
+                <label htmlFor="login-admission" className="mb-1 block text-xs font-medium text-foreground">MKU admission number</label>
+                <Input id="login-admission" type="text" autoComplete="off" placeholder="Your admission number" value={admission} onChange={(e) => setAdmission(e.target.value)} className="mb-3" required />
+              </>
+            )}
             <label htmlFor="login-password" className="mb-1 block text-xs font-medium text-foreground">Password</label>
-            <Input id="login-password" type="password" placeholder="Password" value={readerPassword} onChange={(e) => setReaderPassword(e.target.value)} className="mb-4" required />
+            <Input id="login-password" type="password" placeholder="Password" value={readerPassword} onChange={(e) => setReaderPassword(e.target.value)} className="mb-3" minLength={mode === "signup" ? 8 : undefined} required />
+            {mode === "signup" && (
+              <>
+                <label htmlFor="login-confirm" className="mb-1 block text-xs font-medium text-foreground">Confirm password</label>
+                <Input id="login-confirm" type="password" placeholder="Type the password again" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className="mb-4" minLength={8} required />
+              </>
+            )}
+            {mode === "signin" && <div className="mb-1" />}
             <Button type="submit" className="w-full gap-2" disabled={busy}>
               {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <LogIn className="h-4 w-4" />}
               {mode === "signup" ? "Create account" : "Sign in"}
@@ -165,6 +195,8 @@ export default function Login() {
           >
             {mode === "signup" ? "I already have an account" : "New here? Create an account"}
           </button>
+          {mode === "signup" && <p className="mt-3 text-center text-[11px] text-muted-foreground">Signing up with Google instead? You will be asked for your admission number once.</p>}
+          </>}
           <div className="mt-4 text-center">
             <Link to="/" className="text-xs text-muted-foreground hover:underline">← Continue as guest</Link>
           </div>

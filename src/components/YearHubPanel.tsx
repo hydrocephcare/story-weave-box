@@ -7,6 +7,7 @@ import { loadContestPlatform } from "@/lib/contest-store";
 import { useSiteConfig } from "@/lib/siteConfig";
 import { useMyYear } from "@/components/StudyPanel";
 import { notesForYear } from "@/data/staticNotes";
+import { fetchProtected } from "@/lib/protectedData";
 
 const slug = (s: string) => s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
@@ -23,7 +24,7 @@ function loadExams(): Promise<Exam[]> {
 type BookShelf = { key: string; label: string; subjects: { name: string; b: number[] }[] };
 let booksMemo: Promise<BookShelf[]> | null = null;
 function loadShelves(): Promise<BookShelf[]> {
-  booksMemo ??= fetch(`${import.meta.env.BASE_URL}data/books.json`).then((r) => r.json()).then((d) => d.shelves as BookShelf[]).catch(() => [] as BookShelf[]);
+  booksMemo ??= fetchProtected<{ shelves: BookShelf[] }>("books.json").then((d) => d.shelves).catch(() => { booksMemo = null; return [] as BookShelf[]; });
   return booksMemo;
 }
 

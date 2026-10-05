@@ -4,6 +4,7 @@ import { BookOpen, Check, ChevronRight, Search, Share2, Star } from "lucide-reac
 import DriveFileViewer, { thumbUrl, type DriveFile } from "@/components/DriveFileViewer";
 import { startDownload } from "@/lib/driveDownload";
 import { updateMetaTags } from "@/lib/seo";
+import { fetchProtected } from "@/lib/protectedData";
 import { addRecentBook, toggleBookRead, toggleSavedBook, useBookShelf, type ShelfBook } from "@/lib/bookShelf";
 
 type Book = [id: string, name: string, type: number];
@@ -20,7 +21,7 @@ function useBooks() {
   const [error, setError] = useState(false);
   useEffect(() => {
     let on = true;
-    fetch(`${import.meta.env.BASE_URL}data/books.json`).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json(); }).then((d: Data) => { if (on) setData(d); }).catch(() => { if (on) setError(true); });
+    fetchProtected<Data>("books.json").then((d) => { if (on) setData(d); }).catch(() => { if (on) setError(true); });
     return () => { on = false; };
   }, []);
   return { data, error };

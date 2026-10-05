@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/library/build-note-links.mjs && vite build && node scripts/library/prerender.mjs",
+    "build": "node scripts/library/build-note-links.mjs && vite build && node scripts/library/prerender.mjs && node scripts/library/strip-private-data.mjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",

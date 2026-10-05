@@ -56,7 +56,11 @@ try {
   const credit = `<p style="margin-top:28px;font-size:14px"><strong>${esc((registry.seoCredit ?? registry.credit))}</strong> · ${esc(registry.brand)} · shared for ${esc(registry.audience)}.</p>`;
 
   const written = [];
+  // Books, the library, timetables, course outlines and past papers are for verified MKU students only.
+  // They are not written out as public pages (and so are not in the sitemap); the app shows them after sign-in.
+  const MKU_ONLY = /^\/(library|books|papers|timetable|course-outlines)(\/|$)/;
   const write = (urlPath, html, lastmod) => {
+    if (MKU_ONLY.test(urlPath)) return;
     const dir = path.join(dist, urlPath.replace(/^\//, ""));
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, "index.html"), html);
@@ -134,7 +138,8 @@ try {
 
   // ---------------- notes that ship with the site ----------------
   try {
-    const notes = JSON.parse(fs.readFileSync(path.join(root, "src/data/staticNotes.json"), "utf8"));
+    // Past papers are for verified MKU students: they get no public page, so there is nothing to crawl.
+    const notes = JSON.parse(fs.readFileSync(path.join(root, "src/data/staticNotes.json"), "utf8")).filter((n) => !n.paper);
     const drugs = JSON.parse(fs.readFileSync(path.join(root, "src/data/drugIndex.json"), "utf8"));
     for (const n of notes) {
       const md = fs.readFileSync(path.join(root, n.file), "utf8");

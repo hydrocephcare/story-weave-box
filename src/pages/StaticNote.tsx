@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate, useNavigationType, useParams } from "react-router-dom";
 import { Printer } from "lucide-react";
+import PaperBody from "@/components/PaperBody";
+import { StudentRoute } from "@/components/AccessRoute";
 import PharmacologyConnections from "@/components/PharmacologyConnections";
 import { STATIC_NOTES, TRIMESTER_LABEL, driveViewUrl, findStaticNote, loadStaticNoteText } from "@/data/staticNotes";
 import drugIndex from "@/data/drugIndex.json";
@@ -13,8 +15,15 @@ import { logStudy } from "@/lib/studyLog";
 interface DrugEntry { id: string; name: string; terms: string[] }
 const DRUGS = drugIndex as DrugEntry[];
 
-/** A note that ships with the site: /notes/<slug>. */
+/** A note that ships with the site: /notes/<slug>. Past papers are for verified MKU students only. */
 export default function StaticNotePage() {
+  const { slug = "" } = useParams();
+  const note = findStaticNote(slug);
+  if (note?.paper) return <StudentRoute what="Past papers"><StaticNoteView key={slug} /></StudentRoute>;
+  return <StaticNoteView key={slug} />;
+}
+
+function StaticNoteView() {
   const { slug = "" } = useParams();
   const note = findStaticNote(slug);
   const location = useLocation();
@@ -66,6 +75,14 @@ export default function StaticNotePage() {
     navigate(to);
   };
 
+  const onBodyClick = (e: React.MouseEvent) => {
+    const a = (e.target as HTMLElement).closest("a.note-link") as HTMLAnchorElement | null;
+    const href = a?.getAttribute("href");
+    if (!a || !href || !href.startsWith("/") || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+    e.preventDefault();
+    leave(href);
+  };
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-10">
       <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1 text-xs font-semibold text-muted-foreground print:hidden">
@@ -105,19 +122,11 @@ export default function StaticNotePage() {
             </nav>
           )}
 
-          <PharmacologyConnections ids={linked.ids} conditionIds={note.condition ? [note.condition] : []} leave={leave} className="mt-4" />
+          {!note.paper && <PharmacologyConnections ids={linked.ids} conditionIds={note.condition ? [note.condition] : []} leave={leave} className="mt-4" />}
 
-          <article
-            className="note-body mt-6"
-            onClick={(e) => {
-              const a = (e.target as HTMLElement).closest("a.note-link") as HTMLAnchorElement | null;
-              const href = a?.getAttribute("href");
-              if (!a || !href || !href.startsWith("/") || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
-              e.preventDefault();
-              leave(href);
-            }}
-            dangerouslySetInnerHTML={{ __html: linked.html }}
-          />
+          {note.paper && text ? <PaperBody text={text} onClick={onBodyClick} /> : (
+            <article className="note-body mt-6" onClick={onBodyClick} dangerouslySetInnerHTML={{ __html: linked.html }} />
+          )}
 
           {siblings.length > 0 && (
             <nav aria-label="More notes" className="mt-10 rounded-xl border border-border bg-card p-4 print:hidden">

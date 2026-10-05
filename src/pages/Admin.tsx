@@ -18,6 +18,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { SlideCorrectionsAdmin } from "@/components/SlideCorrectionsAdmin";
 import PaymentSettingsAdmin from "@/components/PaymentSettingsAdmin";
 import NotificationAdmin from "@/components/NotificationAdmin";
+import StudentAccessAdmin from "@/components/StudentAccessAdmin";
 import SiteManagerAdmin from "@/components/SiteManagerAdmin";
 import GoogleDriveImportAdmin from "@/components/GoogleDriveImportAdmin";
 import { autoIndexUrls, SITE_URL, slugifyText } from "@/lib/seo";
@@ -26,7 +27,7 @@ import AdminWorkspace from "@/components/admin/AdminWorkspace";
 import { useAuth } from "@/hooks/useAuth";
 import { ARTICLE_COLUMNS } from "@/lib/article-columns";
 
-type Tab = "create" | "unedited" | "articles" | "flashcards" | "mcqs" | "stories" | "raw" | "exams" | "settings" | "institutions" | "upgrade" | "import" | "cleanup" | "seo" | "categories" | "editor" | "meta-manager" | "corrections" | "payments" | "notifications" | "google-drive" | "site-manager";
+type Tab = "create" | "unedited" | "articles" | "flashcards" | "mcqs" | "stories" | "raw" | "exams" | "settings" | "institutions" | "upgrade" | "import" | "cleanup" | "seo" | "categories" | "editor" | "meta-manager" | "corrections" | "payments" | "notifications" | "students" | "google-drive" | "site-manager";
 type DirectType = "article" | "mcqs" | "flashcards";
 
 export default function Admin() {
@@ -62,7 +63,7 @@ export default function Admin() {
 
   // Persist tab in URL hash for refresh resilience
   const hashTab = location.hash.replace("#", "") as Tab;
-  const [tab, setTab] = useState<Tab>(hashTab && ["create","articles","flashcards","mcqs","stories","raw","exams","recycle","settings","institutions","upgrade","import","cleanup","seo","categories","editor","meta-manager","corrections","payments","notifications","google-drive","site-manager"].includes(hashTab) ? hashTab : "create");
+  const [tab, setTab] = useState<Tab>(hashTab && ["create","articles","flashcards","mcqs","stories","raw","exams","recycle","settings","institutions","upgrade","import","cleanup","seo","categories","editor","meta-manager","corrections","payments","notifications","students","google-drive","site-manager"].includes(hashTab) ? hashTab : "create");
   
   const setTabAndHash = (t: Tab) => {
     setTab(t);
@@ -435,6 +436,7 @@ export default function Admin() {
     { id: "import", label: "Import", icon: Upload },
     { id: "payments", label: "Payments", icon: Settings },
     { id: "notifications", label: "Notifications", icon: Bell },
+    { id: "students", label: "MKU students", icon: Check },
     { id: "google-drive", label: "Google Drive", icon: HardDrive },
     { id: "site-manager", label: "Site manager", icon: Settings },
     { id: "settings", label: "Settings", icon: Settings },
@@ -446,7 +448,7 @@ export default function Admin() {
     { label: "Content", items: tabs.filter(t => ["create","unedited","editor","articles","categories","flashcards","mcqs","stories","exams","corrections"].includes(t.id)) },
     { label: "Tools", items: tabs.filter(t => ["meta-manager","upgrade","cleanup","seo"].includes(t.id)) },
     { label: "Data", items: tabs.filter(t => ["raw","import"].includes(t.id)) },
-    { label: "System", items: tabs.filter(t => ["institutions","payments","notifications","google-drive","site-manager","settings"].includes(t.id)) },
+    { label: "System", items: tabs.filter(t => ["institutions","payments","notifications","students","google-drive","site-manager","settings"].includes(t.id)) },
   ];
 
   const openAdminTab = (t: Tab) => {
@@ -477,6 +479,7 @@ export default function Admin() {
       >
       {tab === "payments" && <PaymentSettingsAdmin />}
       {tab === "notifications" && <NotificationAdmin />}
+      {tab === "students" && <StudentAccessAdmin />}
       {tab === "site-manager" && <SiteManagerAdmin />}
       {tab === "google-drive" && <GoogleDriveImportAdmin />}
 
