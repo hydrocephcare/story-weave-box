@@ -148,13 +148,20 @@ export default function BooksPage() {
   const { saved } = useBookShelf();
   const [shared, setShared] = useState(false);
 
-  useEffect(() => { updateMetaTags({ title: "Medical books by year and subject | Ompath Study", description: "Textbooks, handbooks, atlases and question banks shelved by MBChB year, subject and type." }); }, []);
   useEffect(() => { setViewing(null); window.scrollTo({ top: 0 }); }, [shelfKey, subjectKey]);
 
   const shelf = data?.shelves.find((s) => s.key === shelfKey);
   const subject = shelf?.subjects.find((s) => slug(s.name) === subjectKey);
 
   const localCovers = useMemo(() => new Set(data?.local ?? []), [data]);
+
+  // Each level of the shelf has its own title and description, for browser tabs, shares and search results.
+  useEffect(() => {
+    const label = shelf?.label;
+    const title = subject && label ? `${subject.name} Books for ${label} MBChB | Ompath Study` : label ? `${label} Medical Books: Textbooks, Handbooks & Atlases | Ompath Study` : "Medical Books by Year and Subject, MBChB Years 1–6 | Ompath Study";
+    const description = subject && label ? `${subject.name} books for ${label}: ${subject.b.length} textbooks, handbooks, question banks and atlases, matched to the MKU timetable.` : label ? `${label} medical books shelved by subject.` : "Textbooks, handbooks, atlases and question banks shelved by MBChB year, subject and type, following the MKU timetable.";
+    updateMetaTags({ title, description });
+  }, [shelf, subject]);
 
   const hits = useMemo(() => {
     if (!data || q.trim().length < 2) return null;

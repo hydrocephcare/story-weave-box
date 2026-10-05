@@ -18,6 +18,8 @@ export interface OutlineSection {
   note?: string;
   items: OutlineItem[];
 }
+/** Course information from the department document: unit codes, learning outcomes, requirements, books. */
+export interface OutlineInfo { heading: string; lines: string[] }
 export interface OutlineDocument { label: string; fileId: string; name: string }
 export interface CourseOutline {
   id: string;
@@ -33,6 +35,8 @@ export interface CourseOutline {
   /** Slugs of the matching folder in that year's library, e.g. ["psychiatry"]. */
   librarySlugs?: string[];
   documents?: OutlineDocument[];
+  /** Shown under the summary as a collapsible course-information panel. */
+  info?: OutlineInfo[];
   sections: OutlineSection[];
 }
 

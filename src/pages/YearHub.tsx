@@ -223,7 +223,7 @@ export default function YearHub() {
           </Link>
         ))}
         <Link to={`/books/year-${parsedYear}`} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary"><BookMarked className="h-4 w-4 text-primary" />Books</Link>
-        {parsedYear <= 4 && <Link to={`/course-outlines/year-${parsedYear}`} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary"><ClipboardCheck className="h-4 w-4 text-primary" />Course outlines</Link>}
+        {(parsedYear <= 4 || parsedYear === 6) && <Link to={`/course-outlines/year-${parsedYear}`} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary"><ClipboardCheck className="h-4 w-4 text-primary" />Course outlines</Link>}
       </nav>
 
       {parsedYear === 3 && (

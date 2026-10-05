@@ -121,10 +121,55 @@ try {
     const outline = outlines.find((o) => o.id === reg.slug);
     if (!outline) continue;
     const sections = outline.sections.map((s) => `<h2>${esc(s.title)}</h2>${s.note ? `<p>${esc(s.note)}</p>` : ""}<ul>${s.items.map((i) => `<li>${i.week ? `<strong>${esc(i.week)}</strong> ` : ""}${esc(i.title)}${i.detail ? ` — ${esc(i.detail)}` : ""}</li>`).join("")}</ul>`).join("");
-    const body = shell(crumbs([["Home", "/"], [`Year ${reg.year}`, `/year/${reg.year}`], ["Course outlines", "/course-outlines"], [reg.department, null]]) + `<h1>${esc(outline.title)}</h1><p>${esc(outline.summary)}</p>${sections}${credit}`);
+    const info = (outline.info ?? []).map((b) => `<h2>${esc(b.heading)}</h2><ul>${b.lines.map((l) => `<li>${esc(l)}</li>`).join("")}</ul>`).join("");
+    const assess = outline.assessment ? `<p><strong>Assessment:</strong> ${esc(outline.assessment)}</p>` : "";
+    const body = shell(crumbs([["Home", "/"], [`Year ${reg.year}`, `/year/${reg.year}`], ["Course outlines", "/course-outlines"], [reg.department, null]]) + `<h1>${esc(outline.title)}</h1><p>${esc(outline.summary)}</p>${assess}${info}${sections}${credit}`);
     write(meta.path, render({ title: meta.title, description: meta.description, path: meta.path, image: meta.ogImage, keywords: [`${reg.department} course outline`, `Year ${reg.year} MBChB`, "MKU course outline"], body, jsonLd: { "@context": "https://schema.org", "@type": "Course", name: outline.title, description: meta.description, provider: { "@type": "CollegeOrUniversity", name: "Mount Kenya University" }, author: { "@type": "Person", name: "Abongo Davis" }, url: `${site}${meta.path}` } }), undefined);
   }
 
+
+
+  // ---------------- books ----------------
+  try {
+    const books = JSON.parse(fs.readFileSync(path.join(root, "public/data/books.json"), "utf8"));
+    const slugOf = (t) => t.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    const image = "/og-default.jpg";
+    const unique = (ids) => new Set(ids).size;
+    const topDesc = `${books.books.length} medical textbooks, handbooks, atlases and question banks shelved by MBChB year, subject and book type, following the Mount Kenya University timetable.`;
+    const shelfList = books.shelves.map((sh) => `<li><a href="/books/${sh.key}">${esc(sh.label)}</a> — ${esc(sh.blurb)} (${unique(sh.subjects.flatMap((x) => x.b))} books)</li>`).join("");
+    write("/books", render({
+      title: `Medical Books by Year and Subject, MBChB Years 1–6 | ${registry.brand}`, description: topDesc, path: "/books", image,
+      keywords: ["medical books", "MBChB textbooks", "medical student books Kenya", "anatomy atlas", "Kumar and Clark", "Nelson paediatrics", "MKU reference books"],
+      body: shell(crumbs([["Home", "/"], ["Books", null]]) + `<h1>Medical books by year and subject</h1><p>${esc(topDesc)}</p><ul>${shelfList}</ul>` + credit),
+      jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: "Medical books by year and subject", description: topDesc, url: `${site}/books`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
+    }), books.updated);
+
+    for (const sh of books.shelves) {
+      const shDesc = `${sh.label} medical books: ${sh.blurb}. ${unique(sh.subjects.flatMap((x) => x.b))} titles shelved by subject.`;
+      const subjectList = sh.subjects.map((sub) => `<li><a href="/books/${sh.key}/${slugOf(sub.name)}">${esc(sub.name)}</a> — ${sub.b.length} books${sub.units.length ? ` · timetable units ${esc(sub.units.join(", "))}` : ""}</li>`).join("");
+      write(`/books/${sh.key}`, render({
+        title: `${sh.label} Medical Books: Textbooks, Handbooks & Atlases | ${registry.brand}`, description: shDesc, path: `/books/${sh.key}`, image,
+        keywords: [`${sh.label} MBChB books`, "medical textbooks", ...sh.subjects.slice(0, 6).map((x) => `${x.name} books`)],
+        body: shell(crumbs([["Home", "/"], ["Books", "/books"], [sh.label, null]]) + `<h1>${esc(sh.label)} books</h1><p>${esc(shDesc)}</p><ul>${subjectList}</ul>` + credit),
+        jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: `${sh.label} medical books`, description: shDesc, url: `${site}/books/${sh.key}`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
+      }), books.updated);
+
+      for (const sub of sh.subjects) {
+        const subPath = `/books/${sh.key}/${slugOf(sub.name)}`;
+        const subDesc = `${sub.name} books for ${sh.label}: ${sub.b.length} textbooks, handbooks, question banks and atlases${sub.units.length ? `, matched to timetable units ${sub.units.slice(0, 4).join(", ")}` : ""}.`;
+        const groups = books.types.map((t, ti) => ({ t, rows: sub.b.filter((i) => books.books[i][2] === ti) })).filter((g) => g.rows.length);
+        const groupHtml = groups.map((g) => `<h2>${esc(g.t)}</h2><ul>${g.rows.map((i) => `<li>${esc(books.books[i][1])}</li>`).join("")}</ul>`).join("");
+        write(subPath, render({
+          title: `${sub.name} Books for ${sh.label} MBChB | ${registry.brand}`, description: subDesc, path: subPath, image,
+          keywords: [`${sub.name} books`, `${sub.name} textbook`, `${sh.label} MBChB`, ...sub.b.slice(0, 5).map((i) => books.books[i][1])],
+          body: shell(crumbs([["Home", "/"], ["Books", "/books"], [sh.label, `/books/${sh.key}`], [sub.name, null]]) + `<h1>${esc(sub.name)} books for ${esc(sh.label)}</h1><p>${esc(subDesc)}</p>${groupHtml}` + credit),
+          jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: `${sub.name} books for ${sh.label}`, description: subDesc, url: `${site}${subPath}`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site }, mainEntity: { "@type": "ItemList", numberOfItems: sub.b.length, itemListElement: sub.b.slice(0, 100).map((i, k) => ({ "@type": "ListItem", position: k + 1, item: { "@type": "Book", name: books.books[i][1] } })) } },
+        }), books.updated);
+      }
+    }
+  } catch (err) {
+    console.warn("[prerender-library] books skipped:", err instanceof Error ? err.message : err);
+  }
 
   // ---------------- timetables ----------------
   const ttData = JSON.parse(fs.readFileSync(path.join(root, "src/data/timetable2026.json"), "utf8"));

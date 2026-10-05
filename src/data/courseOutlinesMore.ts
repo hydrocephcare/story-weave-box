@@ -2,7 +2,7 @@
 // Pharmacology, Obstetrics & Gynaecology). Same rule as courseOutlines.ts: item ids are permanent because they key
 // each student's saved progress, so never reuse or renumber them. Weeks are left out where the source document's
 // week numbering was ambiguous; topics are listed in teaching order.
-import type { CourseOutline, OutlineItem } from "./courseOutlines.ts";
+import type { CourseOutline, OutlineInfo, OutlineItem } from "./courseOutlines.ts";
 
 const list = (prefix: string, titles: string[], week?: string): OutlineItem[] =>
   titles.map((title, i) => ({ id: `${prefix}-${String(i + 1).padStart(2, "0")}`, title, week }));
@@ -225,12 +225,78 @@ const obgyn: CourseOutline = {
 };
 
 
+const PAEDS_COMMON: OutlineInfo[] = [
+  { heading: "Vision, mission and values", lines: [
+    "Vision: to produce competent students who can take care of children of all age groups, from preterm babies to adolescents, all over the world.",
+    "Mission: to provide high quality education and research, in line with the university quality policy and medical ethics.",
+    "Core values: integrity, professionalism, respect.",
+    "Course purpose: to enable the student to acquire knowledge and skills in the management of paediatric conditions.",
+  ] },
+  { heading: "How it is taught", lines: [
+    "Students are divided into groups and rotate through the departments.",
+    "Common lectures are delivered in the lecture theatre and all students attend.",
+    "Students rotating in paediatrics and child health then clerk patients in the wards or clinics and present to a tutor attached to them.",
+  ] },
+  { heading: "Course requirements", lines: [
+    "Attend lectures and tutorials.",
+    "Clerkship in the wards and clinics: take histories, examine, and perform procedures under supervision.",
+    "Fill in the logbook given to each student.",
+    "Sit all examinations at the end of each trimester and at the end of the year.",
+  ] },
+  { heading: "What is expected of students", lines: [
+    "Dress decently, with respect for authority and different cultures; closed shoes.",
+    "A clean white coat in the wards and clinics.",
+    "Name tag worn in all clinical areas at all times.",
+    "Clerkship kit: stethoscope, torch, tape measure, patella hammer, otoscope and any other tools needed to examine the different systems.",
+  ] },
+  { heading: "Textbooks and resources", lines: [
+    "Hutchison's Clinical Methods: An Integrated Approach to Clinical Practice (Swash & Glynn).",
+    "Nelson Textbook of Paediatrics (Kliegman).",
+    "Lange Current Diagnosis and Treatment: Pediatrics (Hay, Levin, Deterding, Sondheimer).",
+    "Paediatrics and Child Health (Rudolf & Levene), Wiley-Blackwell.",
+    "Republic of Kenya, Ministry of Health: Basic Paediatric Protocols (2022); Kenya guidelines for malaria, tuberculosis and leprosy, asthma and HIV.",
+    "Online: WHO.int, eMedicine, UpToDate, Google Scholar.",
+  ] },
+  { heading: "Department", lines: [
+    "Head of department: Dr Everlyne Agisa Kegode. Lecturers: Dr Ruth Kihara and Dr Rose Munge. Ask the department office for contact details.",
+  ] },
+];
+
+const PAEDS_INFO_Y4: OutlineInfo[] = [
+  { heading: "Unit codes", lines: [
+    "Junior clerkship in paediatrics and child health: MBPE 4300 (6 units).",
+    "MBPE 4337 Lecture I · MBPE 4338 Lecture II.",
+    "MBPE 4313 Clinical rotation I · MBPE 4326 Clinical rotation II · MBPE 4339 Clinical rotation III · MBPE 4340 Clinical rotation IV.",
+  ] },
+  { heading: "Expected learning outcomes (end of junior clerkship, 4th year)", lines: [
+    "Take a history, examine, list differential diagnoses, order relevant investigations and list the proper management for the patient.",
+    "Know the clinical conditions covered in the course content.",
+  ] },
+  ...PAEDS_COMMON,
+];
+
+const PAEDS_INFO_Y6: OutlineInfo[] = [
+  { heading: "Unit codes", lines: [
+    "Senior clerkship in paediatrics and child health: MBPE 6300 (6 units).",
+    "MBPE 6637 Lecture I · MBPE 6638 Lecture II.",
+    "MBPE 6626 Clinical rotation I · MBPE 6613 Clinical rotation II · MBPE 6638 Clinical rotation III · MBPE 6639 Clinical rotation IV. The department document lists MBPE 6638 twice, so check the code of the third rotation with the department.",
+  ] },
+  { heading: "Expected learning outcomes (after senior clerkship, 6th year)", lines: [
+    "Manage all cases in paediatrics and child health.",
+    "Perform procedures competently and present on ward rounds.",
+    "Work alongside other health care providers.",
+    "Take part in health promotion and disease prevention.",
+  ] },
+  ...PAEDS_COMMON,
+];
+
 const paediatrics: CourseOutline = {
   id: "paediatrics", year: 4, department: "Paediatrics & Child Health",
   title: "Year 4 Paediatrics & Child Health — Junior Clerkship",
-  summary: "Mount Kenya University Department of Paediatrics. Six units across three trimesters: lectures plus clerking patients on the wards and in clinic, with a logbook, a written CAT each trimester and a long case + OSCE at the end of the year.",
+  summary: "Mount Kenya University Department of Paediatrics, junior clerkship (unit code MBPE 4300, six units). Common lectures for the whole class, then clerking patients on the wards and in clinic and presenting to an attached tutor, across three trimesters.",
+  info: PAEDS_INFO_Y4,
   team: "Department of Paediatrics and Child Health, MKU School of Medicine.",
-  assessment: "CATs 40% · End-of-year examination 60% (MCQ, essay, and clinical exam: one long case and OSCE). Logbook handed in at the end of 6th year.",
+  assessment: "Continuous assessment tests 40% (a written CAT at the end of each trimester) · End-of-year examination 60% (written MCQ, essay and spot, plus a clinical exam: OSCE / mini clinical). The logbook is handed in at the end of 6th year.",
   librarySlugs: ["paediatrics-and-child-health"],
   sections: [
     { id: "pd-t1", title: "Trimester 1", items: weeks("pd-t1", [
@@ -257,4 +323,35 @@ const paediatrics: CourseOutline = {
   ],
 };
 
-export const MORE_OUTLINES: CourseOutline[] = [chemicalPathology, generalPathology, haematology, immunopathology, virology, basicPharmacology, obgyn, paediatrics];
+const paediatrics6: CourseOutline = {
+  id: "paediatrics-y6", year: 6, department: "Paediatrics & Child Health",
+  title: "Year 6 Paediatrics & Child Health — Senior Clerkship",
+  summary: "Mount Kenya University Department of Paediatrics, senior clerkship (unit code MBPE 6300, six units). By the end of it a student should manage all paediatric cases, perform procedures competently, present on ward rounds and work with other health care providers.",
+  team: "Department of Paediatrics and Child Health, MKU School of Medicine.",
+  assessment: "Continuous assessment tests 40% (a written CAT at the end of each trimester) · End-of-year examination 60% (written MCQ, essay and spot, plus a clinical exam: OSCE / mini clinical). The logbook is handed in at the end of 6th year.",
+  info: PAEDS_INFO_Y6,
+  sections: [
+    { id: "pd6-t1", title: "Trimester 1", items: weeks("pd6-t1", [
+      ["Week 1", "ETAT: emergency triage, assessment and treatment", "Triage of sick children, basic life support, oxygen therapy, use of intraosseous lines, essential newborn care, newborn resuscitation. Outcome: perform resuscitation, identify very sick children and manage them."],
+      ["Weeks 2–3", "Children with special needs and those living in difficult circumstances", "Child abuse and other children with special needs. Outcome: identify these children and know how to support them."],
+      ["Weeks 4–5", "Genetics", "Introduction to genetics, Down syndrome, Turner syndrome, Klinefelter syndrome and other syndromes. Outcome: understand the basics of genetics and common genetic disorders and how to manage them."],
+      ["Weeks 6–7", "Neuromuscular disorders", "Myopathies and dystrophies, Duchenne and Becker muscular dystrophy. Outcome: recognise children with muscular disorders and manage them."],
+      ["Weeks 8–11", "Rheumatology", "Juvenile rheumatoid arthritis and systemic lupus erythematosus. Outcome: understand the common rheumatological conditions affecting children."],
+      ["Weeks 8–11", "Vasculitides", "Kawasaki disease, Takayasu arteritis, Henoch–Schönlein purpura and others. Outcome: understand the vasculitides that affect children."],
+      ["Week 12", "Assessment"]]) },
+    { id: "pd6-t2", title: "Trimester 2", items: weeks("pd6-t2", [
+      ["Weeks 1–3", "Childhood psychiatric disorders", "Autism, ADHD and others. Outcome: recognise common childhood psychiatric conditions and know when to refer."],
+      ["Weeks 4–7", "Cancers and benign tumours", "Leukaemia, lymphomas, brain tumours, neoplasms of the kidney, soft tissue tumours, retinoblastoma. Outcome: recognise childhood malignancies."],
+      ["Week 8", "Gynaecological disorders", "Breast conditions, vulvovaginitis, vaginal bleeding. Outcome: be aware of childhood gynaecological conditions."],
+      ["Weeks 9–11", "Immunological and allergic diseases", "Outcome: recognise possible immunological deficiencies and allergies."],
+      ["Week 12", "Assessment test"]]) },
+    { id: "pd6-t3", title: "Trimester 3", items: weeks("pd6-t3", [
+      ["Weeks 1–3", "Dermatology", "Newborn skin disorders, eczema and other disorders. Outcome: basic knowledge of dermatological conditions affecting children and how to manage them."],
+      ["Weeks 4–6", "Metabolic, glycogen and lipid storage disorders", "Gaucher disease, mucopolysaccharidoses, galactosaemia. Outcome: basic knowledge of disorders due to metabolic dysfunction."],
+      ["Weeks 7–8", "Ear, nose and throat disorders", "Laryngomalacia, rhinitis, tonsillitis and pharyngitis, otitis. Outcome: recognise common ENT conditions and manage them."],
+      ["Week 9", "Ophthalmology", "Conjunctivitis, stye and other disorders. Outcome: recognise common eye disorders and manage or refer."],
+      ["Week 10", "Assessment"], ["Weeks 11–12", "Revision"], ["End of year", "End-of-year examinations"]]) },
+  ],
+};
+
+export const MORE_OUTLINES: CourseOutline[] = [chemicalPathology, generalPathology, haematology, immunopathology, virology, basicPharmacology, obgyn, paediatrics, paediatrics6];

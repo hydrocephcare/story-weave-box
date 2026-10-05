@@ -270,6 +270,19 @@ function CourseOutlineView({ outline }: { outline: CourseOutline }) {
           <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{outline.summary}</p>
           {outline.team && <p className="mt-2 text-xs leading-relaxed text-muted-foreground"><span className="font-bold text-foreground">Teaching team:</span> {outline.team}</p>}
           {outline.assessment && <p className="mt-1 text-xs leading-relaxed text-muted-foreground"><span className="font-bold text-foreground">Assessment:</span> {outline.assessment}</p>}
+          {outline.info && outline.info.length > 0 && (
+            <details className="group mt-3 rounded-xl border border-border bg-background p-3">
+              <summary className="cursor-pointer list-none text-sm font-bold text-foreground">Course information <span className="text-xs font-semibold text-muted-foreground">· units, outcomes, requirements, books</span></summary>
+              <div className="mt-3 space-y-4">
+                {outline.info.map((block) => (
+                  <section key={block.heading}>
+                    <h3 className="text-[11px] font-bold uppercase tracking-wider text-primary">{block.heading}</h3>
+                    <ul className="mt-1 list-disc space-y-1 pl-5 text-xs leading-relaxed text-muted-foreground">{block.lines.map((l) => <li key={l}>{l}</li>)}</ul>
+                  </section>
+                ))}
+              </div>
+            </details>
+          )}
 
           <div className="mt-4">
             <div className="mb-1.5 flex items-center justify-between text-xs font-bold">

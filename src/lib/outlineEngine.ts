@@ -6,7 +6,7 @@ import { loadLibrary, type LibraryNode } from "@/lib/libraryData";
 import { prettyTitle } from "@/lib/libraryMeta";
 import type { DriveFile } from "@/components/DriveFileViewer";
 
-export const OUTLINE_YEARS = [1, 2, 3, 4] as const;
+export const OUTLINE_YEARS = [1, 2, 3, 4, 6] as const;
 const SKIP_SUBJECT = /other|unsorted|unnamed|bds|oral biology/i;
 const OUTLINE_DOC = /outline|syllabus/i;
 const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
