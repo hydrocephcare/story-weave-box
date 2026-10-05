@@ -98,7 +98,7 @@ export default function Index() {
   const [lastRead, setLastRead] = useState<RecentArticle[]>([]);
   const [activeTab, setActiveTab] = useState<"all" | "articles" | "flashcards" | "stories" | "papers">("all");
   const [query, setQuery] = useState("");
-  const [recentShown, setRecentShown] = useState(10);
+  const [recentShown, setRecentShown] = useState(Math.max(10, PAPER_NOTES.length + 4));
   const [studyYear, setStudyYear] = useState<number | null>(null);
 
   useEffect(() => {
@@ -160,9 +160,7 @@ export default function Index() {
   // Past papers ship with the site, so they join the feed here (newest first) rather than coming from the database.
   const paperItems: RecentItem[] = PAPER_NOTES.map((p) => ({ id: p.slug, title: p.title, category: p.unit, created_at: `${p.updated}T09:00:00+03:00`, slug: p.slug, type: "paper" as const }));
   const feed = [...recentlyUploaded, ...paperItems].sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at));
-  // In "all" only a few papers show, so 16 papers added together do not push everything else off the list.
-  const feedAll = (() => { let papers = 0; return feed.filter((i) => i.type !== "paper" || ++papers <= 3); })();
-  const filteredRecent = (activeTab === "all" ? feedAll : feed).filter(item => activeTab === "all" || (activeTab === "articles" && item.type === "article") || (activeTab === "flashcards" && item.type === "flashcard") || (activeTab === "stories" && item.type === "story") || (activeTab === "papers" && item.type === "paper"));
+  const filteredRecent = feed.filter(item => activeTab === "all" || (activeTab === "articles" && item.type === "article") || (activeTab === "flashcards" && item.type === "flashcard") || (activeTab === "stories" && item.type === "story") || (activeTab === "papers" && item.type === "paper"));
 
   function getItemLink(item: RecentItem) {
     switch (item.type) {
