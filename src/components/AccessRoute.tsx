@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useAuth } from "@/hooks/useAuth";
 import { useStudentAccess } from "@/lib/student";
-import registry from "@/data/libraries.json";
+
+/** Where students reach the admin to ask for access (international format, no plus sign). */
+const ADMIN_WHATSAPP = "254794871984";
 
 function AccessLoader() {
   return (
@@ -57,7 +59,7 @@ export function StudentGateNotice({ what = "This page" }: { what?: string }) {
     else if (next === "pending") setMessage("We could not match that number. Your request has gone to the admin, who will review it.");
   };
 
-  const wa = `https://wa.me/${registry.contactWhatsApp}?text=${encodeURIComponent(`Hello, I am an MKU student and need access to Ompath Study. My account email is ${user?.email ?? ""}.`)}`;
+  const wa = `https://wa.me/${ADMIN_WHATSAPP}?text=${encodeURIComponent(`Hello, I am an MKU student and need access to Ompath Study. My account email is ${user?.email ?? ""}.`)}`;
 
   return (
     <div className="mx-auto flex min-h-[60vh] max-w-md flex-col items-center justify-center px-5 py-10 text-center">
@@ -92,6 +94,7 @@ export function StudentGateNotice({ what = "This page" }: { what?: string }) {
       {(status === "none" || status === "pending") && (
         <form onSubmit={send} className="mt-6 w-full text-left">
           <label htmlFor="admission" className="mb-1 block text-xs font-medium text-foreground">{status === "pending" ? "Try your admission number again" : "Your MKU admission number"}</label>
+          <p className="mb-2 text-[11px] text-muted-foreground">Use the admission number on your MKU student ID or in the student portal. If you are not sure, message the admin.</p>
           <Input id="admission" value={admission} onChange={(e) => setAdmission(e.target.value)} autoComplete="off" placeholder="Admission number" className="mb-3" required />
           <Button type="submit" className="w-full gap-2" disabled={busy}>
             {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <ShieldCheck className="h-4 w-4" />} Continue
