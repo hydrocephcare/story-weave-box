@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { getSetting, getCategoryDisplayName, getYearFromCategory, buildExamPath } from "@/lib/store";
 import { updateMetaTags } from "@/lib/seo";
 import { dedupeResourceSummaries, isPublicMcqSet } from "@/lib/content-policy";
+import ContentCredit from "@/components/ContentCredit";
 
 interface ExamSet {
   id: string;
@@ -198,6 +199,7 @@ export default function Exams() {
               </div>
             </div>
           </motion.div>
+          <ContentCredit />
         </div>
       </section>
 
