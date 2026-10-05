@@ -6,7 +6,6 @@ import { startDownload } from "@/lib/driveDownload";
 import { updateMetaTags } from "@/lib/seo";
 import { fetchProtected } from "@/lib/protectedData";
 import { bookSizeMB, formatMB, setBookSizes } from "@/lib/bookSizes";
-import ContentCredit from "@/components/ContentCredit";
 import { addRecentBook, toggleBookRead, toggleSavedBook, useBookShelf, type ShelfBook } from "@/lib/bookShelf";
 
 type Book = [id: string, name: string, type: number];
@@ -62,14 +61,17 @@ function Crumbs({ trail }: { trail: { to?: string; label: string }[] }) {
 
 function Header({ title, blurb, trail, children }: { title: string; blurb?: string; trail: { to?: string; label: string }[]; children?: React.ReactNode }) {
   return (
-    <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-background">
-      <div className="mx-auto max-w-5xl space-y-2 px-4 py-6 sm:px-5 sm:py-9">
-        <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.16em] text-primary"><BookOpen className="h-4 w-4" /> Reference books</p>
-        <Crumbs trail={trail} />
-        <h1 className="font-serif text-2xl font-bold text-foreground sm:text-4xl">{title}</h1>
-        {blurb && <p className="max-w-2xl text-sm text-muted-foreground">{blurb}</p>}
-        <ContentCredit />
-        {children}
+    <section className="border-b border-border bg-gradient-to-br from-primary/8 via-background to-background">
+      <div className="mx-auto max-w-6xl px-4 py-5 sm:px-5 sm:py-7">
+        <div className="space-y-2">
+          <p className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-primary">
+            <BookOpen className="h-3.5 w-3.5" /> Reference books
+          </p>
+          <Crumbs trail={trail} />
+          <h1 className="font-serif text-[1.85rem] font-bold leading-tight text-foreground sm:text-3xl">{title}</h1>
+          {blurb && <p className="max-w-2xl text-[13px] leading-relaxed text-muted-foreground sm:text-sm">{blurb}</p>}
+        </div>
+        {children && <div className="mt-4 space-y-3">{children}</div>}
       </div>
     </section>
   );
@@ -194,9 +196,9 @@ export default function BooksPage() {
   if (subjectKey && shelf && !subject) return <Navigate to={`/books/${shelf.key}`} replace />;
 
   const searchBox = (
-    <div className="relative mt-3 max-w-xl">
+    <div className="relative w-full max-w-2xl">
       <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-      <input value={q} onChange={(e) => { setQ(e.target.value); setViewing(null); }} placeholder="Search every book, e.g. Kumar, atlas, ECG" aria-label="Search books" className="w-full rounded-lg border border-border bg-card py-2.5 pl-10 pr-3 text-[14.5px] text-foreground outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/25" />
+      <input value={q} onChange={(e) => { setQ(e.target.value); setViewing(null); }} placeholder="Search every book, e.g. Kumar, atlas, ECG" aria-label="Search books" className="h-11 w-full rounded-xl border border-border bg-card py-2.5 pl-10 pr-3 text-[14px] text-foreground outline-none placeholder:text-muted-foreground shadow-sm transition focus:border-primary focus:ring-2 focus:ring-primary/20" />
     </div>
   );
 
@@ -240,7 +242,7 @@ export default function BooksPage() {
           {subject.also.length > 0 && (
             <p className="flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">Also studied in {subject.also.map((y) => <Link key={y} to={`/books/${YEAR_KEY(y)}/${subjectKey}`} className="rounded-full border border-border px-2.5 py-0.5 font-bold text-primary hover:border-primary/50">Year {y}</Link>)}</p>
           )}
-          <nav aria-label="Jump to type" className="-mx-4 flex gap-2 no-scrollbar overflow-x-auto px-4 pt-1 sm:mx-0 sm:flex-wrap sm:px-0">
+          <nav aria-label="Jump to type" className="-mx-4 flex gap-2 no-scrollbar overflow-x-auto px-4 pt-1 pb-0.5 sm:mx-0 sm:flex-wrap sm:px-0">
             {groups.map((g) => <a key={g.ti} href={`#type-${g.ti}`} className="shrink-0 rounded-full border border-border bg-card px-3.5 py-1.5 text-[13px] font-bold text-muted-foreground hover:border-primary/50 hover:text-primary">{g.t} <span className="opacity-60">{g.ids.length}</span></a>)}
           </nav>
           <div className="flex flex-wrap items-center gap-2">
@@ -248,7 +250,7 @@ export default function BooksPage() {
           </div>
           {searchBox}
         </Header>
-        <div className="mx-auto max-w-5xl space-y-7 px-4 py-6 sm:px-5">
+        <div className="mx-auto max-w-6xl space-y-7 px-4 py-6 sm:px-5 sm:py-8">
           <ReadingPath data={data} subject={subject} onOpen={open} local={localCovers} />
           {groups.map((g) => (
             <section key={g.ti} id={`type-${g.ti}`} className="scroll-mt-20">
@@ -268,7 +270,7 @@ export default function BooksPage() {
     return (
       <div className="min-h-[65vh] bg-background">
         <Header title={shelf.label} blurb={shelf.blurb} trail={[{ to: "/books", label: "Books" }, { label: shelf.label }]}>{searchBox}</Header>
-        <div className="mx-auto max-w-5xl space-y-4 px-4 py-6 sm:px-5">
+        <div className="mx-auto max-w-6xl space-y-4 px-4 py-6 sm:px-5 sm:py-8">
           <nav aria-label="Years" className="-mx-4 flex gap-2 no-scrollbar overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0">
             {data.shelves.map((s) => <button key={s.key} type="button" onClick={() => navigate(`/books/${s.key}`)} className={`shrink-0 rounded-full border px-3.5 py-1.5 text-[13px] font-bold transition-colors ${s.key === shelf.key ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/50 hover:text-primary"}`}>{s.label}</button>)}
           </nav>
@@ -295,7 +297,7 @@ export default function BooksPage() {
   return (
     <div className="min-h-[65vh] bg-background">
       <Header title="Books by year and subject" blurb="Pick your year, then a subject, then the kind of book you need. Shelved to follow the MKU timetable." trail={[{ label: "Books" }]}>{searchBox}</Header>
-      <div className="mx-auto max-w-5xl px-4 py-6 sm:px-5">
+      <div className="mx-auto max-w-6xl px-4 py-6 sm:px-5 sm:py-8">
         <MyBooks local={localCovers} />
         <ul className="grid gap-3 sm:grid-cols-2">
           {data.shelves.map((s) => {
