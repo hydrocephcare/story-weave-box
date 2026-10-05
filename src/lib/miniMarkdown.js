@@ -72,6 +72,11 @@ export function mdToHtml(source, { skipTitle = false } = {}) {
       i++; continue;
     }
     if (/^-{3,}\s*$/.test(line)) { out.push("<hr />"); i++; continue; }
+    if (/^>\s?/.test(line)) {
+      const quoted = [];
+      while (i < lines.length && /^>\s?/.test(lines[i])) quoted.push(lines[i++].replace(/^>\s?/, ""));
+      out.push(`<blockquote><p>${inline(quoted.join(" "))}</p></blockquote>`); continue;
+    }
     if (/^\s*\|/.test(line) && /^\s*\|[\s:|-]+\|\s*$/.test(lines[i + 1] ?? "")) {
       const rows = [];
       while (i < lines.length && /^\s*\|/.test(lines[i])) rows.push(lines[i++]);
@@ -82,7 +87,7 @@ export function mdToHtml(source, { skipTitle = false } = {}) {
       out.push(html); i = next; continue;
     }
     const para = [];
-    while (i < lines.length && lines[i].trim() && !/^(#{1,4}\s|-{3,}\s*$|\s*\|)/.test(lines[i]) && !LIST.test(lines[i])) para.push(lines[i++]);
+    while (i < lines.length && lines[i].trim() && !/^(#{1,4}\s|-{3,}\s*$|\s*\||>)/.test(lines[i]) && !LIST.test(lines[i])) para.push(lines[i++]);
     out.push(`<p>${inline(para.join(" "))}</p>`);
   }
   return { html: out.join("\n"), headings };

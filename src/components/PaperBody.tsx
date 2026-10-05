@@ -16,21 +16,19 @@ function AnswerReveal({ html, onClick }: { html: string; onClick: React.MouseEve
   const access = useAccess();
   const locked = !access.canReveal;
   return (
-    <div className="not-prose my-4 overflow-hidden rounded-xl border border-primary/25 bg-primary/5 print:hidden">
+    <div className="not-prose my-1.5 print:hidden">
       <button
         type="button"
         onClick={() => (locked ? openSubscribePrompt("Subscribe or restore your pass to reveal this answer.") : setOpen((v) => !v))}
         aria-expanded={!locked && open}
-        className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-primary"
+        className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-bold text-primary hover:bg-primary/10"
       >
-        <span className="inline-flex items-center gap-2">
-          {locked ? <Lock className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-          {locked ? "Reveal answer (subscribers)" : open ? "Hide answer" : "Reveal answer"}
-        </span>
-        {!locked && <ChevronDown className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`} />}
+        {locked ? <Lock className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
+        {locked ? "Reveal (subscribers)" : open ? "Hide answer" : "Reveal answer"}
+        {!locked && <ChevronDown className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`} />}
       </button>
       {/* The answer is only put on the page once a subscriber opens it. */}
-      {open && !locked && <div className="note-body border-t border-primary/20 px-4 py-3" onClick={onClick} dangerouslySetInnerHTML={{ __html: html }} />}
+      {open && !locked && <div className="note-body paper-body mt-2 rounded-lg border border-primary/20 bg-primary/5 px-4 py-3" onClick={onClick} dangerouslySetInnerHTML={{ __html: html }} />}
     </div>
   );
 }
@@ -48,7 +46,7 @@ export default function PaperBody({ text, onClick }: { text: string; onClick: Re
     <>
       {parts.map((p, i) => p.hidden
         ? <AnswerReveal key={i} html={p.html} onClick={onClick} />
-        : <article key={i} className="note-body mt-4" onClick={onClick} dangerouslySetInnerHTML={{ __html: p.html }} />)}
+        : <article key={i} className="note-body paper-body mt-2" onClick={onClick} dangerouslySetInnerHTML={{ __html: p.html }} />)}
     </>
   );
 }

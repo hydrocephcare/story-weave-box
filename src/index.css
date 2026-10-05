@@ -452,6 +452,15 @@ body.no-copy img {
 .note-body li:has(> input[type="checkbox"]) { list-style: none; margin-left: -1.2rem; }
 .note-body input[type="checkbox"] { margin-right: 0.5rem; accent-color: hsl(var(--primary)); }
 .note-body hr { margin: 2.2rem 0; border: 0; border-top: 1px solid hsl(var(--border)); }
+.note-body blockquote { margin-top: 0.8rem; padding-left: 0.9rem; border-left: 3px solid hsl(var(--primary) / 0.5); font-weight: 600; }
+.note-body blockquote p { margin-top: 0; }
+/* Past papers: questions sit close together, one short line each, with the answer behind a small Reveal button. */
+.paper-body.note-body { line-height: 1.6; }
+.paper-body.note-body > * + * { margin-top: 0.5rem; }
+.paper-body.note-body h2 { font-size: 1.12rem; margin-top: 1.3rem; padding-bottom: 0.25rem; }
+.paper-body.note-body h3 { font-size: 1rem; margin-top: 0.9rem; }
+.paper-body.note-body hr { margin: 0.9rem 0; }
+.paper-body.note-body blockquote { margin-top: 0.4rem; font-size: 0.97rem; }
 .note-body code { padding: 0.1rem 0.35rem; border-radius: 0.3rem; background: hsl(var(--muted)); font-size: 0.9em; }
 .note-body .note-table { overflow-x: auto; margin-top: 1rem; border: 1px solid hsl(var(--border)); border-radius: 0.75rem; }
 .note-body .note-table table { width: 100%; min-width: 30rem; border-collapse: collapse; font-size: 0.92rem; line-height: 1.5; }
