@@ -5,6 +5,7 @@ import { getPublishedFlashcardSets, getCategoryDisplayName, getYearFromCategory,
 import { getVisitedFlashcardIds } from "@/lib/progress-store";
 import { updateMetaTags } from "@/lib/seo";
 import CategoryTabs from "@/components/CategoryTabs";
+import ContentCredit from "@/components/ContentCredit";
 
 const INITIAL_VISIBLE = 12;
 const LOAD_MORE_STEP = 12;
@@ -95,6 +96,7 @@ export default function Flashcards() {
         </p>
       </div>
 
+      <ContentCredit />
       <div ref={resultsAnchorRef}>
         <CategoryTabs
           categories={categories}
