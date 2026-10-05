@@ -6,6 +6,7 @@ import { startDownload } from "@/lib/driveDownload";
 import { COURSE_OUTLINES } from "@/data/courseOutlines";
 import { PAPER_NOTES, TRIMESTER_LABEL, trimesterOf, type PaperNote } from "@/data/staticNotes";
 import { updateMetaTags } from "@/lib/seo";
+import ContentCredit from "@/components/ContentCredit";
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const monthOf = (p: PaperNote) => (p.paper.sat ? Number(p.paper.sat.split("-")[1]) : null);
@@ -95,6 +96,7 @@ export default function PastPapers() {
         {PAPER_NOTES.length} Mount Kenya University papers, sorted by the trimester they were sat in (Trimester 1 is September to December, 2 is January to April, 3 is May to August). Every question has an answer written for revision, not copied from the scan. It is now <strong className="text-foreground">Trimester {now}</strong>.
       </p>
 
+      <ContentCredit />
       <ScanLibrary />
 
       <div role="tablist" className="mt-5 flex gap-2">
