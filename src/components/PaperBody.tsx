@@ -21,14 +21,14 @@ function AnswerReveal({ html, onClick }: { html: string; onClick: React.MouseEve
         type="button"
         onClick={() => (locked ? openSubscribePrompt("Subscribe or restore your pass to reveal this answer.") : setOpen((v) => !v))}
         aria-expanded={!locked && open}
-        className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-bold text-primary hover:bg-primary/10"
+        className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/5 px-3 py-1 text-xs font-bold text-emerald-700 hover:bg-emerald-500/10 dark:text-emerald-400"
       >
         {locked ? <Lock className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
         {locked ? "Reveal (subscribers)" : open ? "Hide answer" : "Reveal answer"}
         {!locked && <ChevronDown className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`} />}
       </button>
       {/* The answer is only put on the page once a subscriber opens it. */}
-      {open && !locked && <div className="note-body paper-body mt-2 rounded-lg border border-primary/20 bg-primary/5 px-4 py-3" onClick={onClick} dangerouslySetInnerHTML={{ __html: html }} />}
+      {open && !locked && <div className="note-body paper-body mt-2 rounded-xl border border-emerald-500/30 bg-emerald-500/5 px-4 py-3" onClick={onClick} dangerouslySetInnerHTML={{ __html: html }} />}
     </div>
   );
 }

@@ -9,7 +9,6 @@ import {
   type Article,
 } from "@/lib/store";
 import { groupNotes, notesForYear } from "@/data/staticNotes";
-import PapersStrip from "@/components/PapersStrip";
 import { Helmet } from "react-helmet-async";
 import { getUnitsForYear, unitPath, type Unit } from "@/lib/academic";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -214,8 +213,6 @@ export default function YearHub() {
           {!user && <p className="mt-2 text-[11px] text-muted-foreground"><Link to="/login" className="font-bold text-primary hover:underline">Sign in</Link> and your group is remembered on every visit.</p>}
         </div>
       </div>
-
-      <div className="-mx-5"><PapersStrip year={parsedYear} limit={6} /></div>
 
       {notesForYear(parsedYear).length > 0 && (
         <section className="mt-4 rounded-2xl border border-border bg-card p-5">

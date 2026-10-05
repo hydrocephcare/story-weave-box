@@ -160,12 +160,13 @@ try {
       }), n.updated);
     }
 
-    const byYear = [...new Set(notes.map((n) => n.year))].sort();
+    const indexed = notes.filter((n) => !n.paper);
+    const byYear = [...new Set(indexed.map((n) => n.year))].sort();
     const idxBody = byYear.map((y) => {
-      const units = [...new Set(notes.filter((n) => n.year === y).map((n) => n.unit))];
-      return `<h2>Year ${y}</h2>` + units.map((u) => `<h3>${esc(u)}</h3><ul>${notes.filter((n) => n.year === y && n.unit === u).map((n) => `<li><a href="/notes/${n.slug}">${esc(n.title)}</a>${n.group ? ` — ${esc(n.group)}` : ""}</li>`).join("")}</ul>`).join("");
+      const units = [...new Set(indexed.filter((n) => n.year === y).map((n) => n.unit))];
+      return `<h2>Year ${y}</h2>` + units.map((u) => `<h3>${esc(u)}</h3><ul>${indexed.filter((n) => n.year === y && n.unit === u).map((n) => `<li><a href="/notes/${n.slug}">${esc(n.title)}</a>${n.group ? ` — ${esc(n.group)}` : ""}</li>`).join("")}</ul>`).join("");
     }).join("");
-    const idxDesc = `${notes.length} study notes by year and unit: psychiatry (classification, psychopathology, formulation, bipolar disorder) and respiratory medicine (pneumonia, asthma, COPD, lung cancer and more), each with practice questions.`;
+    const idxDesc = `${indexed.length} study notes by year and unit: psychiatry (classification, psychopathology, formulation, bipolar disorder) and respiratory medicine (pneumonia, asthma, COPD, lung cancer and more), each with practice questions.`;
     write("/notes", render({
       title: `Study Notes by Year and Unit: Psychiatry and Respiratory Medicine | ${registry.brand}`, description: idxDesc, path: "/notes", image: "/og-default.jpg",
       keywords: ["Year 4 notes", "psychiatry notes", "respiratory medicine notes", "MBChB study notes", "MKU notes"],

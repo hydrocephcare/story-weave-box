@@ -22,6 +22,10 @@ describe("past papers: questions show, answers hide", () => {
       // MCQ answers ("**Answer: C.**") and "### Answer" sections must never sit in the open part.
       expect(visible).not.toMatch(/^\*\*Answer[:.]/m);
       expect(visible).not.toMatch(/^#{2,4}\s+Answer\b/m);
+      // The options of a multiple choice question are part of the question: they must stay in the open part.
+      const optionLine = /^\s*-\s+\(?[A-Ea-e][.)]\s+\S/gm;
+      const optionLines = (md.match(optionLine) ?? []).length;
+      if (optionLines > 0) expect((visible.match(optionLine) ?? []).length).toBe(optionLines);
       // Nothing is lost: question text plus answer text is the whole note.
       const squash = (t: string) => t.replace(/\s+/g, "");
       const kept = squash(parts.map((p) => p.text).join(""));

@@ -33,7 +33,7 @@ export default function RecentNotes() {
   useEffect(() => { let on = true; loadRecentArticles().then((l) => { if (on) setFromDb(l); }); return () => { on = false; }; }, []);
 
   const { cards, years } = useMemo(() => {
-    const own: Item[] = STATIC_NOTES.map((n, i) => ({ key: `s:${n.slug}`, title: n.title, to: `/notes/${n.slug}`, year: n.year, unit: n.unit, at: Date.parse(n.updated) - i }));
+    const own: Item[] = STATIC_NOTES.filter((n) => !n.paper).map((n, i) => ({ key: `s:${n.slug}`, title: n.title, to: `/notes/${n.slug}`, year: n.year, unit: n.unit, at: Date.parse(n.updated) - i }));
     const byUnit = new Map<string, Card>();
     for (const it of [...own, ...fromDb]) {
       const id = `${it.year}|${it.unit}`;

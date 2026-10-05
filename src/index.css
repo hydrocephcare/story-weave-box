@@ -458,7 +458,10 @@ body.no-copy img {
 .paper-body.note-body { line-height: 1.6; }
 .paper-body.note-body > * + * { margin-top: 0.5rem; }
 .paper-body.note-body h2 { font-size: 1.12rem; margin-top: 1.3rem; padding-bottom: 0.25rem; }
-.paper-body.note-body h3 { font-size: 1rem; margin-top: 0.9rem; }
+.paper-body.note-body h3 { font-family: inherit; font-size: 0.97rem; font-weight: 600; line-height: 1.55; margin-top: 1.15rem; }
+.paper-body.note-body h3 + ul { list-style: none; padding: 0; margin-top: 0.4rem; }
+.paper-body.note-body h3 + ul > li { margin-top: 0.35rem; padding: 0.5rem 0.75rem; border: 1px solid hsl(var(--border)); border-radius: 0.6rem; background: hsl(var(--card)); font-size: 0.93rem; line-height: 1.5; }
+.paper-body.note-body h3 + ul > li::marker { content: ""; }
 .paper-body.note-body hr { margin: 0.9rem 0; }
 .paper-body.note-body blockquote { margin-top: 0.4rem; font-size: 0.97rem; }
 .note-body code { padding: 0.1rem 0.35rem; border-radius: 0.3rem; background: hsl(var(--muted)); font-size: 0.9em; }

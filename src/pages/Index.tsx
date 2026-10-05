@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   BookOpen, GraduationCap, Loader2,
-  ArrowRight, Trophy, BookMarked, Phone, MessageCircle, Clock, Check, Search, FolderOpen, FileQuestion,
+  ArrowRight, Trophy, BookMarked, Phone, MessageCircle, Clock, Check, Search, FolderOpen,
 } from "lucide-react";
 import { getAllCategories, getCategoryDisplayName, getYearFromCategory, YEAR_CATEGORIES, buildBlogPath, buildFlashcardPath } from "@/lib/store";
 import { buildStoryPath, updateMetaTags } from "@/lib/seo";
@@ -13,8 +13,7 @@ import { getSubjectKey, subjectColor } from "@/components/subjectTheme";
 import { useAuth } from "@/hooks/useAuth";
 import SemesterDashboard from "@/components/SemesterDashboard";
 import RecentNotes from "@/components/RecentNotes";
-import PapersStrip from "@/components/PapersStrip";
-import { notesForYear, PAPER_NOTES } from "@/data/staticNotes";
+import { notesForYear } from "@/data/staticNotes";
 
 /** Units that have notes shipped with the site, so a year is never shown as empty when it has notes. */
 const staticUnitsFor = (yearLabel: string) => [...new Set(notesForYear(Number(yearLabel.replace(/\D/g, ""))).map((n) => n.unit))];
@@ -44,7 +43,7 @@ const PROOF = [
   "Written for Kenyan medical schools — MKU, UoN, KU, JKUAT",
 ];
 
-type RecentItem = { id: string; title: string; type: "article" | "flashcard" | "story" | "paper"; category: string; created_at: string; slug?: string | null };
+type RecentItem = { id: string; title: string; type: "article" | "flashcard" | "story"; category: string; created_at: string; slug?: string | null };
 
 function timeAgo(dateStr: string): string {
   const diff = Date.now() - new Date(dateStr).getTime();
@@ -97,9 +96,9 @@ export default function Index() {
   const [loading, setLoading] = useState(true);
   const [recentlyUploaded, setRecentlyUploaded] = useState<RecentItem[]>([]);
   const [lastRead, setLastRead] = useState<RecentArticle[]>([]);
-  const [activeTab, setActiveTab] = useState<"all" | "articles" | "flashcards" | "stories" | "papers">("all");
+  const [activeTab, setActiveTab] = useState<"all" | "articles" | "flashcards" | "stories">("all");
   const [query, setQuery] = useState("");
-  const [recentShown, setRecentShown] = useState(Math.max(10, PAPER_NOTES.length + 4));
+  const [recentShown, setRecentShown] = useState(10);
   const [studyYear, setStudyYear] = useState<number | null>(null);
 
   useEffect(() => {
@@ -158,17 +157,13 @@ export default function Index() {
     { notes: 0, mcqs: 0, units: 0 },
   );
 
-  // Past papers ship with the site, so they join the feed here (newest first) rather than coming from the database.
-  const paperItems: RecentItem[] = PAPER_NOTES.map((p) => ({ id: p.slug, title: p.title, category: p.unit, created_at: `${p.updated}T09:00:00+03:00`, slug: p.slug, type: "paper" as const }));
-  const feed = [...recentlyUploaded, ...paperItems].sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at));
-  const filteredRecent = feed.filter(item => activeTab === "all" || (activeTab === "articles" && item.type === "article") || (activeTab === "flashcards" && item.type === "flashcard") || (activeTab === "stories" && item.type === "story") || (activeTab === "papers" && item.type === "paper"));
+  const filteredRecent = recentlyUploaded.filter(item => activeTab === "all" || (activeTab === "articles" && item.type === "article") || (activeTab === "flashcards" && item.type === "flashcard") || (activeTab === "stories" && item.type === "story"));
 
   function getItemLink(item: RecentItem) {
     switch (item.type) {
       case "article": return buildBlogPath(item);
       case "flashcard": return buildFlashcardPath(item);
       case "story": return buildStoryPath(item);
-      case "paper": return `/notes/${item.id}`;
     }
   }
 
@@ -176,7 +171,6 @@ export default function Index() {
     article: { label: "Article", short: "ART", icon: BookOpen, badge: "bg-purple-500/10 text-purple-700 dark:text-purple-300" },
     flashcard:{ label: "Flashcards", short: "FC", icon: GraduationCap, badge: "bg-blue-500/10 text-blue-700 dark:text-blue-300" },
     story:   { label: "Story",   short: "STY", icon: BookMarked, badge: "bg-amber-500/10 text-amber-700 dark:text-amber-300" },
-    paper:   { label: "Past paper", short: "PP", icon: FileQuestion, badge: "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300" },
   } as const;
 
   return (
@@ -267,7 +261,6 @@ export default function Index() {
 
       <SemesterDashboard />
 
-      <PapersStrip limit={6} />
       <RecentNotes />
 
       {/* ── Resource tiles ── */}
@@ -451,10 +444,10 @@ export default function Index() {
         >
           <div className="mb-5">
             <h2 className="font-serif text-xl font-bold text-foreground sm:text-2xl">Recently added</h2>
-            <p className="mt-0.5 text-xs text-muted-foreground sm:text-sm">Fresh notes, MCQs, flashcards, clinical stories &amp; past papers</p>
+            <p className="mt-0.5 text-xs text-muted-foreground sm:text-sm">Fresh notes, MCQs, flashcards &amp; clinical stories</p>
           </div>
           <div className="flex gap-2 mb-5 overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }}>
-            {(["all", "articles", "flashcards", "stories", "papers"] as const).map(tab => (
+            {(["all", "articles", "flashcards", "stories"] as const).map(tab => (
               <button key={tab} onClick={() => setActiveTab(tab)}
                 className={`shrink-0 rounded-full px-4 py-1.5 text-xs font-semibold transition-all capitalize ${activeTab === tab ? "bg-foreground text-background" : "border border-border bg-card text-muted-foreground hover:text-foreground"}`}>
                 {tab}

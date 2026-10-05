@@ -48,7 +48,8 @@ export const driveViewUrl = (id: string) => `https://drive.google.com/file/d/${i
 // Every markdown file under src/content/notes, as a lazy loader keyed by its path.
 const files = import.meta.glob("../content/notes/*.md", { query: "?raw", import: "default" }) as Record<string, () => Promise<string>>;
 
-export const notesForYear = (year: number) => STATIC_NOTES.filter((n) => n.year === year);
+/** Study notes for a year. Past papers are not notes: they have their own page, /papers. */
+export const notesForYear = (year: number) => STATIC_NOTES.filter((n) => n.year === year && !n.paper);
 export const findStaticNote = (slug: string) => STATIC_NOTES.find((n) => n.slug === slug) ?? null;
 
 export function loadStaticNoteText(slug: string): Promise<string> {
