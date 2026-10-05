@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { AlertTriangle, Check, ChevronLeft, ChevronRight, Download, ExternalLink, Flag, Loader2, Maximize, Maximize2, Minimize, Minimize2, Moon, Network, RefreshCw, StickyNote, Sun, X } from "lucide-react";
+import { AlertTriangle, Check, ChevronLeft, ChevronRight, Download, ExternalLink, Flag, Loader2, Maximize, Maximize2, Minimize, Minimize2, MoreVertical, Moon, Network, RefreshCw, StickyNote, Sun, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import registry from "@/data/libraries.json";
 import { prettyTitle } from "@/lib/libraryMeta";
@@ -65,6 +65,7 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
 
   const [loaded, setLoaded] = useState(false);
   const [reloadKey, setReloadKey] = useState(0);
+  const [toolsOpen, setToolsOpen] = useState(false);
   const [slow, setSlow] = useState(false);
   const [failed, setFailed] = useState(false);
   const [panel, setPanel] = useState<"none" | "related" | "notes">("none");
@@ -187,9 +188,20 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
   const finished = file ? read.has(file[0]) : false;
   const nightFilter = night ? { filter: "invert(1) hue-rotate(180deg)" } : undefined;
 
+  const toolList = file ? [
+    { k: "prev", label: "Previous", icon: ChevronLeft, run: () => flip(-1), disabled: pos <= 0, pressed: false },
+    { k: "next", label: "Next", icon: ChevronRight, run: () => flip(1), disabled: pos < 0 || pos >= items.length - 1, pressed: false },
+    { k: "night", label: night ? "Day" : "Night", icon: night ? Sun : Moon, run: toggleNight, disabled: false, pressed: night },
+    { k: "focus", label: "Focus", icon: Maximize2, run: () => { setToolsOpen(false); setImmersive(true); }, disabled: false, pressed: false },
+    ...(canFullscreen ? [{ k: "fs", label: fullscreen ? "Exit full" : "Full screen", icon: fullscreen ? Minimize : Maximize, run: toggleFullscreen, disabled: false, pressed: fullscreen }] : []),
+    { k: "notes", label: "Notes", icon: StickyNote, run: () => setPanel((x) => (x === "notes" ? "none" : "notes")), disabled: false, pressed: panel === "notes" },
+    { k: "done", label: finished ? "Finished" : "Mark done", icon: Check, run: () => toggleBookRead(file[0]), disabled: false, pressed: finished },
+    { k: "links", label: "Connected", icon: Network, run: () => setPanel((x) => (x === "related" ? "none" : "related")), disabled: false, pressed: panel === "related" },
+  ] : [];
+
   return (
     <Dialog open={open} onOpenChange={(o) => { if (!o) onIndexChange(null); }}>
-      <DialogContent className="fixed inset-0 left-0 top-0 flex h-[100dvh] w-screen max-w-none translate-x-0 translate-y-0 flex-col gap-0 overflow-hidden rounded-none border-0 p-0 sm:rounded-none">
+      <DialogContent className="fixed inset-0 left-0 top-0 flex h-[100dvh] w-screen max-w-none translate-x-0 translate-y-0 flex-col gap-0 overflow-hidden rounded-none border-0 p-0 sm:rounded-none max-sm:[&>button.absolute]:hidden">
         {file && (
           <>
             {immersive ? (
@@ -201,7 +213,7 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
             ) : (
               <>
                 {tabs.length > 1 && (
-                  <div role="tablist" aria-label="Open files" className="no-scrollbar mr-11 flex items-end gap-1 overflow-x-auto border-b border-border bg-muted/50 px-2 pt-1.5">
+                  <div role="tablist" aria-label="Open files" className="no-scrollbar mr-11 hidden items-end gap-1 overflow-x-auto border-b border-border bg-muted/50 px-2 pt-1.5 sm:flex">
                     {tabs.map((t) => {
                       const on = t[0] === file[0];
                       return (
@@ -214,28 +226,44 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
                   </div>
                 )}
 
-                <div className="flex flex-wrap items-center gap-x-2 gap-y-1.5 border-b border-border px-3 py-2 pr-12 sm:flex-nowrap">
-                  <button type="button" onClick={() => onIndexChange(null)} aria-label="Close reader" className="inline-flex h-9 items-center gap-1 rounded-md border border-border px-2 text-xs font-bold"><ChevronLeft className="h-4 w-4" /> Back</button>
-                  <div className="min-w-[55%] flex-1 sm:min-w-0">
-                    <DialogTitle className="line-clamp-2 text-sm font-bold leading-snug">{cleanName(file[1])}</DialogTitle>
-                    <DialogDescription className="text-[11px]">
-                      {pos >= 0 ? `${pos + 1} of ${items.length}` : "Open tab"}{where ? ` · ${where}` : ""}{bookSizeMB(file[0]) !== undefined ? ` · ${formatMB(bookSizeMB(file[0]) as number)}` : ""}{minutes > 0 ? ` · ${minutes} min reading` : ""}
+                <div className="flex items-center gap-1.5 border-b border-border px-2 py-1.5 sm:gap-2 sm:px-3 sm:py-2 sm:pr-12">
+                  <button type="button" onClick={() => onIndexChange(null)} aria-label="Close reader" className="inline-flex h-9 w-9 shrink-0 items-center justify-center gap-1 rounded-md border border-border text-xs font-bold sm:w-auto sm:px-2"><ChevronLeft className="h-4 w-4" /><span className="hidden sm:inline">Back</span></button>
+                  <div className="min-w-0 flex-1">
+                    <DialogTitle className="truncate text-[13px] font-bold leading-tight sm:line-clamp-2 sm:whitespace-normal sm:text-sm sm:leading-snug">{cleanName(file[1])}</DialogTitle>
+                    <DialogDescription className="truncate text-[11px]">
+                      {pos >= 0 ? `${pos + 1} of ${items.length}` : "Open tab"}{bookSizeMB(file[0]) !== undefined ? ` · ${formatMB(bookSizeMB(file[0]) as number)}` : ""}{where ? ` · ${where}` : ""}{minutes > 0 ? ` · ${minutes} min` : ""}
                     </DialogDescription>
                   </div>
-                  <div className="no-scrollbar flex w-full items-center justify-start gap-1.5 overflow-x-auto sm:w-auto sm:justify-end">
-                    <Tool label="Previous file" onClick={() => flip(-1)} disabled={pos <= 0}><ChevronLeft className="h-4 w-4" /></Tool>
-                    <Tool label="Next file" onClick={() => flip(1)} disabled={pos < 0 || pos >= items.length - 1}><ChevronRight className="h-4 w-4" /></Tool>
-                    <Tool label={night ? "Day reading" : "Night reading"} onClick={toggleNight} pressed={night}>{night ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}</Tool>
-                    <Tool label="Distraction-free reading" onClick={() => setImmersive(true)}><Maximize2 className="h-4 w-4" /></Tool>
-                    {canFullscreen && <Tool label={fullscreen ? "Leave full screen" : "Full screen"} onClick={toggleFullscreen} pressed={fullscreen}>{fullscreen ? <Minimize className="h-4 w-4" /> : <Maximize className="h-4 w-4" />}</Tool>}
-                    <Tool label="My notes on this file" onClick={() => setPanel((p) => (p === "notes" ? "none" : "notes"))} pressed={panel === "notes"}><StickyNote className="h-4 w-4" /></Tool>
-                    <Tool label={finished ? "Marked as finished" : "Mark as finished"} onClick={() => toggleBookRead(file[0])} pressed={finished}><Check className="h-4 w-4" /></Tool>
-                    <Tool label="Connected notes and files" onClick={() => setPanel((p) => (p === "related" ? "none" : "related"))} pressed={panel === "related"}><Network className="h-4 w-4" /></Tool>
-                    {!isBroken && (
-                      <button type="button" onClick={() => onDownload(file)} className="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-md bg-primary px-3 text-xs font-bold text-primary-foreground hover:bg-primary/90"><Download className="h-3.5 w-3.5" /> <span className="hidden min-[420px]:inline">Download</span></button>
+                  <div className="hidden items-center gap-1.5 sm:flex">
+                    {toolList.map((t) => <Tool key={t.k} label={t.label} onClick={t.run} pressed={t.pressed} disabled={t.disabled}><t.icon className="h-4 w-4" /></Tool>)}
+                  </div>
+                  {!isBroken && (
+                    <button type="button" onClick={() => onDownload(file)} aria-label="Download this file" className="inline-flex h-9 shrink-0 items-center gap-1.5 rounded-md bg-primary px-2.5 text-xs font-bold text-primary-foreground hover:bg-primary/90 sm:px-3"><Download className="h-4 w-4" /> <span className="hidden min-[360px]:inline">Download</span></button>
+                  )}
+                  <button type="button" onClick={() => setToolsOpen((v) => !v)} aria-expanded={toolsOpen} aria-label="More reading tools" className={`inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-md border sm:hidden ${toolsOpen ? "border-primary bg-primary/10 text-primary" : "border-border"}`}><MoreVertical className="h-4 w-4" /></button>
+                </div>
+
+                {toolsOpen && (
+                  <div className="border-b border-border bg-muted/40 p-2 sm:hidden">
+                    <div className="grid grid-cols-4 gap-1.5">
+                      {toolList.map((t) => (
+                        <button key={t.k} type="button" onClick={t.run} disabled={t.disabled} aria-pressed={t.pressed} className={`flex flex-col items-center gap-1 rounded-lg border px-1 py-2 text-[10.5px] font-semibold leading-none disabled:opacity-40 ${t.pressed ? "border-primary bg-primary/10 text-primary" : "border-border bg-background text-foreground"}`}>
+                          <t.icon className="h-4 w-4" />{t.label}
+                        </button>
+                      ))}
+                    </div>
+                    {tabs.length > 1 && (
+                      <div className="no-scrollbar mt-2 flex gap-1.5 overflow-x-auto">
+                        {tabs.map((t) => (
+                          <span key={t[0]} className={`inline-flex max-w-[11rem] shrink-0 items-center gap-1 rounded-full border py-1 pl-2.5 pr-1 text-[11px] font-semibold ${t[0] === file[0] ? "border-primary bg-primary/10 text-primary" : "border-border bg-background text-muted-foreground"}`}>
+                            <button type="button" onClick={() => switchTab(t)} className="min-w-0 truncate">{cleanName(t[1])}</button>
+                            <button type="button" onClick={() => closeOne(t[0])} aria-label={`Close ${cleanName(t[1])}`} className="rounded-full p-0.5"><X className="h-3 w-3" /></button>
+                          </span>
+                        ))}
+                      </div>
                     )}
                   </div>
-                </div>
+                )}
               </>
             )}
 
@@ -309,11 +337,10 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
             </div>
 
             {!immersive && !isBroken && canPreview(file[2]) && (
-              <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 border-t border-border px-4 py-1.5 text-[11px] text-muted-foreground">
-                Blank or very slow?
+              <p className="flex items-center justify-center gap-x-4 border-t border-border px-3 py-1 text-[11px] text-muted-foreground">
                 <button type="button" onClick={() => setReloadKey((k) => k + 1)} className="inline-flex items-center gap-1 font-bold text-primary hover:underline"><RefreshCw className="h-3 w-3" /> Reload</button>
                 <a href={`https://drive.google.com/file/d/${encodeURIComponent(file[0])}/view`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-bold text-primary hover:underline"><ExternalLink className="h-3 w-3" /> Open in Drive</a>
-                <a href={reportUrl(file, where)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-bold text-primary hover:underline"><Flag className="h-3 w-3" /> Report this file</a>
+                <a href={reportUrl(file, where)} target="_blank" rel="noopener noreferrer" className="hidden items-center gap-1 font-bold text-primary hover:underline min-[420px]:inline-flex"><Flag className="h-3 w-3" /> Report</a>
                 <span className="hidden sm:inline">Keys: ← → files · N night · I focus · F full screen</span>
               </p>
             )}

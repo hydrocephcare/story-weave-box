@@ -5,6 +5,7 @@ import DriveFileViewer, { thumbUrl, type DriveFile } from "@/components/DriveFil
 import { startDownload } from "@/lib/driveDownload";
 import { updateMetaTags } from "@/lib/seo";
 import { fetchProtected } from "@/lib/protectedData";
+import ContentCredit from "@/components/ContentCredit";
 import { bookSizeMB, formatMB, setBookSizes } from "@/lib/bookSizes";
 import { addRecentBook, toggleBookRead, toggleSavedBook, useBookShelf, type ShelfBook } from "@/lib/bookShelf";
 
@@ -71,6 +72,7 @@ function Header({ title, blurb, trail, children }: { title: string; blurb?: stri
           <h1 className="font-serif text-[1.85rem] font-bold leading-tight text-foreground sm:text-3xl">{title}</h1>
           {blurb && <p className="max-w-2xl text-[13px] leading-relaxed text-muted-foreground sm:text-sm">{blurb}</p>}
         </div>
+        <ContentCredit />
         {children && <div className="mt-4 space-y-3">{children}</div>}
       </div>
     </section>
