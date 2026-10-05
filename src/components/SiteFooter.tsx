@@ -34,10 +34,6 @@ export default function SiteFooter() {
           <a href="mailto:hello@ompathstudy.com" aria-label="Email" className={icon}><Mail className="h-4 w-4" /></a>
         </div>
       </div>
-      <div className="mx-auto max-w-6xl border-t border-border/60 px-6 py-4 text-center">
-        <p className="text-[12px] font-semibold text-foreground">Compiled by Abongo</p>
-        <p className="mt-0.5 text-[11px] text-muted-foreground">Study resources organised and prepared for medical students.</p>
-      </div>
       <p className="pb-5 text-center text-xs text-muted-foreground">© {new Date().getFullYear()} Ompath Study</p>
     </footer>
   );
