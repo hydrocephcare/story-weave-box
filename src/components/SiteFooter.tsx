@@ -34,7 +34,8 @@ export default function SiteFooter() {
           <a href="mailto:hello@ompathstudy.com" aria-label="Email" className={icon}><Mail className="h-4 w-4" /></a>
         </div>
       </div>
-      <p className="pb-5 text-center text-xs text-muted-foreground">© {new Date().getFullYear()} Ompath Study</p>
+      <p className="text-center text-[11px] text-muted-foreground">Built by <span className="font-medium text-foreground">Abongo</span> · © {new Date().getFullYear()} Ompath Study</p>
+      <p className="pb-5 pt-1 text-center text-[10px] text-muted-foreground/70">Made for medical students.</p>
     </footer>
   );
 }
