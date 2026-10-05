@@ -8,6 +8,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { countFiles, fileBlurb, folderMeta, libraryPath, outlineMeta, prettyTitle, timetableMeta } from "../../src/lib/libraryMeta.js";
+import { mdToHtml } from "../../src/lib/miniMarkdown.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const dist = path.join(root, "dist");
@@ -128,6 +129,26 @@ try {
   }
 
 
+
+
+  // ---------------- notes that ship with the site ----------------
+  try {
+    const notes = JSON.parse(fs.readFileSync(path.join(root, "src/data/staticNotes.json"), "utf8"));
+    for (const n of notes) {
+      const md = fs.readFileSync(path.join(root, n.file), "utf8");
+      const { html: noteHtml } = mdToHtml(md, { skipTitle: true });
+      const notePath = `/notes/${n.slug}`;
+      const title = `${n.title} — Year ${n.year} ${n.unit} Notes | ${registry.brand}`;
+      write(notePath, render({
+        title, description: n.description, path: notePath, image: "/og-default.jpg",
+        keywords: [n.title, `${n.unit} notes`, `Year ${n.year} MBChB`, "MKU psychiatry notes", "medical student notes Kenya"],
+        body: shell(crumbs([["Home", "/"], [`Year ${n.year}`, `/year/${n.year}`], [n.unit, null]]) + `<h1>${esc(n.title)}</h1><p>${esc(n.description)}</p><article>${noteHtml}</article>` + credit),
+        jsonLd: { "@context": "https://schema.org", "@type": "LearningResource", name: n.title, description: n.description, url: `${site}${notePath}`, dateModified: n.updated, inLanguage: "en", educationalLevel: `Year ${n.year} MBChB`, teaches: n.unit, author: { "@type": "Person", name: "Abongo Davis" }, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
+      }), n.updated);
+    }
+  } catch (err) {
+    console.warn("[prerender-library] notes skipped:", err instanceof Error ? err.message : err);
+  }
 
   // ---------------- books ----------------
   try {

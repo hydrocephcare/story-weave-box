@@ -433,3 +433,33 @@ body.no-copy img {
 /* Words a learner searched for, painted inside the opened note (CSS Custom Highlight API). */
 ::highlight(search-hit) { background-color: #fde047; color: #000; }
 ::highlight(search-hit-current) { background-color: #fb923c; color: #000; }
+
+/* Notes that ship with the site (/notes/<slug>). Own styles: the typography plugin is not enabled in this project. */
+.note-body { font-size: 1rem; line-height: 1.75; color: hsl(var(--foreground)); }
+.note-body > * + * { margin-top: 0.9rem; }
+.note-body h1, .note-body h2, .note-body h3, .note-body h4 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; line-height: 1.25; scroll-margin-top: 6rem; }
+.note-body h2 { font-size: 1.5rem; margin-top: 2.5rem; padding-bottom: 0.45rem; border-bottom: 1px solid hsl(var(--border)); }
+.note-body h3 { font-size: 1.15rem; margin-top: 1.6rem; }
+.note-body p { margin-top: 0.8rem; }
+.note-body strong { font-weight: 700; }
+.note-body em { font-style: italic; }
+.note-body ul, .note-body ol { margin-top: 0.7rem; padding-left: 1.4rem; }
+.note-body ul { list-style: disc; }
+.note-body ol { list-style: decimal; }
+.note-body li { margin-top: 0.3rem; padding-left: 0.2rem; }
+.note-body li::marker { color: hsl(var(--primary)); }
+.note-body li > ul, .note-body li > ol { margin-top: 0.3rem; }
+.note-body li:has(> input[type="checkbox"]) { list-style: none; margin-left: -1.2rem; }
+.note-body input[type="checkbox"] { margin-right: 0.5rem; accent-color: hsl(var(--primary)); }
+.note-body hr { margin: 2.2rem 0; border: 0; border-top: 1px solid hsl(var(--border)); }
+.note-body code { padding: 0.1rem 0.35rem; border-radius: 0.3rem; background: hsl(var(--muted)); font-size: 0.9em; }
+.note-body .note-table { overflow-x: auto; margin-top: 1rem; border: 1px solid hsl(var(--border)); border-radius: 0.75rem; }
+.note-body .note-table table { width: 100%; min-width: 30rem; border-collapse: collapse; font-size: 0.92rem; line-height: 1.5; }
+.note-body .note-table th { background: hsl(var(--muted)); text-align: left; font-weight: 700; }
+.note-body .note-table th, .note-body .note-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid hsl(var(--border)); vertical-align: top; }
+.note-body .note-table tr:last-child td { border-bottom: 0; }
+@media print {
+  .note-body { font-size: 11pt; }
+  .note-body h2 { break-after: avoid; }
+  .note-body li, .note-body .note-table tr { break-inside: avoid; }
+}

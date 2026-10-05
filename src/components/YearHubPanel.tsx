@@ -6,6 +6,7 @@ import { getYearFromCategory } from "@/lib/store";
 import { loadContestPlatform } from "@/lib/contest-store";
 import { useSiteConfig } from "@/lib/siteConfig";
 import { useMyYear } from "@/components/StudyPanel";
+import { notesForYear } from "@/data/staticNotes";
 
 const slug = (s: string) => s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
@@ -117,8 +118,15 @@ export function AnnouncementCard() {
 
 /** What to try instead when a page has nothing to show: this year's exams and books. */
 export default function YearHubPanel({ year }: { year: number }) {
+  const notes = notesForYear(year);
   return (
     <div className="grid gap-3 lg:grid-cols-2">
+      {notes.length > 0 && (
+        <section className="rounded-xl border border-primary/30 bg-primary/5 p-3.5 lg:col-span-2">
+          <h3 className="mb-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground"><BookMarked className="h-3.5 w-3.5 text-primary" /> Study notes for Year {year}</h3>
+          <ul className="grid gap-2 sm:grid-cols-2">{notes.map((n) => <li key={n.slug}><Link to={`/notes/${n.slug}`} className="block rounded-lg border border-border bg-card p-3 hover:border-primary/50"><span className="text-[10px] font-bold uppercase tracking-wide text-primary">{n.unit}</span><span className="block text-sm font-bold text-foreground">{n.title}</span></Link></li>)}</ul>
+        </section>
+      )}
       <YearExamsCard year={year} limit={4} />
       <YearBooksCard year={year} limit={8} />
     </div>
