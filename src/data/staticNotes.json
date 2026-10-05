@@ -187,5 +187,15 @@
     "updated": "2026-10-06",
     "file": "src/content/notes/respiratory-lung-cancer.md",
     "condition": "lungca"
+  },
+  {
+    "slug": "obstetrics-rh2-junior-clerkship-cat-october-2022",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Past CATs",
+    "title": "Junior Clerkship in Reproductive Health II CAT — October 2022",
+    "description": "Mount Kenya University Medical School Obstetrics and Gynaecology Junior Clerkship in Reproductive Health II CAT: 9 short-answer questions with an exam-oriented answer key.",
+    "updated": "2026-10-05",
+    "file": "src/content/notes/obstetrics-rh2-junior-clerkship-cat-october-2022.md"
   }
 ]
