@@ -13,6 +13,7 @@ import { getSubjectKey, subjectColor } from "@/components/subjectTheme";
 import { useAuth } from "@/hooks/useAuth";
 import SemesterDashboard from "@/components/SemesterDashboard";
 import RecentNotes from "@/components/RecentNotes";
+import PapersStrip from "@/components/PapersStrip";
 import { notesForYear, PAPER_NOTES } from "@/data/staticNotes";
 
 /** Units that have notes shipped with the site, so a year is never shown as empty when it has notes. */
@@ -266,6 +267,7 @@ export default function Index() {
 
       <SemesterDashboard />
 
+      <PapersStrip limit={6} />
       <RecentNotes />
 
       {/* ── Resource tiles ── */}

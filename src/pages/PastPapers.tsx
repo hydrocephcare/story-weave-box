@@ -7,6 +7,7 @@ import { COURSE_OUTLINES } from "@/data/courseOutlines";
 import { PAPER_NOTES, TRIMESTER_LABEL, trimesterOf, type PaperNote } from "@/data/staticNotes";
 import { updateMetaTags } from "@/lib/seo";
 import ContentCredit from "@/components/ContentCredit";
+import PaperScanButton from "@/components/PaperScanButton";
 
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const monthOf = (p: PaperNote) => (p.paper.sat ? Number(p.paper.sat.split("-")[1]) : null);
@@ -33,6 +34,7 @@ function PaperCard({ p }: { p: PaperNote }) {
         <h3 className="mt-1 text-[15px] font-bold leading-snug text-foreground">{p.title}</h3>
         <p className="mt-1 text-xs text-muted-foreground">{counts(p.paper)}{m ? ` · ${MONTHS[m - 1]}` : ""}{p.paper.printed ? ` · printed as "${p.paper.printed}"` : ""}</p>
       </Link>
+      <PaperScanButton driveId={p.paper.driveId} name={p.paper.source} className="mt-2" />
     </li>
   );
 }
