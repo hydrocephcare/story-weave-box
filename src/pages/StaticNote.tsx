@@ -1,7 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate, useNavigationType, useParams } from "react-router-dom";
-import { Printer } from "lucide-react";
+import { Printer, ScanLine } from "lucide-react";
+import DriveFileViewer, { type DriveFile } from "@/components/DriveFileViewer";
+import { startDownload } from "@/lib/driveDownload";
 import PaperBody from "@/components/PaperBody";
+import ContentCredit from "@/components/ContentCredit";
 import PharmacologyConnections from "@/components/PharmacologyConnections";
 import { STATIC_NOTES, TRIMESTER_LABEL, driveViewUrl, findStaticNote, loadStaticNoteText } from "@/data/staticNotes";
 import drugIndex from "@/data/drugIndex.json";
@@ -29,6 +32,7 @@ function StaticNoteView() {
   const navType = useNavigationType();
   const [text, setText] = useState<string | null>(null);
   const [error, setError] = useState(false);
+  const [scanOpen, setScanOpen] = useState<number | null>(null);
   const returning = Boolean((navType === "POP" || (location.state as { restore?: boolean } | null)?.restore) && getNoteReturn()?.path === location.pathname);
 
   useEffect(() => {
@@ -102,9 +106,19 @@ function StaticNoteView() {
           <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5 text-xs font-bold">
             <Link to={`/papers${note.paper.trimester ? `?trim=${note.paper.trimester}` : ""}`} className="text-primary hover:underline">All past papers{note.paper.trimester ? ` for trimester ${note.paper.trimester}` : ""}</Link>
             <Link to={`/papers?view=coverage&unit=${note.paper.outline}`} className="text-primary hover:underline">Topics asked and not yet asked</Link>
-            {note.paper.driveId && <a href={driveViewUrl(note.paper.driveId)} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Original scan on Drive</a>}
+            {note.paper.driveId && <button type="button" onClick={() => setScanOpen(0)} className="inline-flex items-center gap-1 text-primary hover:underline"><ScanLine className="h-3.5 w-3.5" /> View the original scan (PDF)</button>}
           </p>
         </aside>
+      )}
+
+      {note.paper?.driveId && (
+        <DriveFileViewer
+          items={[[note.paper.driveId, note.paper.source || "Original scan", "pdf"] as DriveFile]}
+          index={scanOpen}
+          onIndexChange={setScanOpen}
+          onDownload={(f) => startDownload(f[0], f[1])}
+          where="Past papers"
+        />
       )}
 
       {error && <p className="mt-6 rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">This note could not load. Check your connection and refresh.</p>}
@@ -125,6 +139,8 @@ function StaticNoteView() {
           {note.paper && text ? <PaperBody text={text} onClick={onBodyClick} /> : (
             <article className="note-body mt-6" onClick={onBodyClick} dangerouslySetInnerHTML={{ __html: linked.html }} />
           )}
+
+          <div className="print:hidden"><ContentCredit /></div>
 
           {siblings.length > 0 && (
             <nav aria-label="More notes" className="mt-10 rounded-xl border border-border bg-card p-4 print:hidden">
