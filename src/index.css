@@ -452,8 +452,6 @@ body.no-copy img {
 .note-body li:has(> input[type="checkbox"]) { list-style: none; margin-left: -1.2rem; }
 .note-body input[type="checkbox"] { margin-right: 0.5rem; accent-color: hsl(var(--primary)); }
 .note-body hr { margin: 2.2rem 0; border: 0; border-top: 1px solid hsl(var(--border)); }
-@keyframes shelf-rise { 0%, 100% { transform: translateY(0); opacity: 0.85; } 50% { transform: translateY(-14px); opacity: 1; } }
-@media (prefers-reduced-motion: reduce) { [style*="shelf-rise"] { animation: none !important; } }
 .note-body blockquote { margin-top: 0.8rem; padding-left: 0.9rem; border-left: 3px solid hsl(var(--primary) / 0.5); font-weight: 600; }
 .note-body blockquote p { margin-top: 0; }
 /* Past papers: questions sit close together, one short line each, with the answer behind a small Reveal button. */
@@ -483,3 +481,6 @@ body.no-copy img {
 /* Drug names in notes link to their pharmacology card */
 .note-body a.note-link { color: hsl(var(--primary)); text-decoration: underline dotted; text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: inherit; cursor: pointer; }
 .note-body a.note-link:hover { text-decoration-style: solid; }
+
+@keyframes shelf-rise { 0%, 100% { transform: translateY(0); opacity: 0.85; } 50% { transform: translateY(-14px); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { [style*="shelf-rise"] { animation: none !important; } }
