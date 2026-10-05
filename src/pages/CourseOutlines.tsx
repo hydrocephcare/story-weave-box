@@ -16,6 +16,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import ConnectedLearning from "@/components/ConnectedLearning";
 import { ROTATIONS } from "@/clinical/types";
 import { Link2 } from "lucide-react";
+import ContentCredit from "@/components/ContentCredit";
 
 // Turn an outline title into a library search: first clause, no roman numerals/brackets, first three real words.
 const STOP = new Set(["and","the","of","in","for","to","a","an","i","ii","iii","iv","vs","thread","introduction","overview","principles","disorders","drugs","agents","used"]);
@@ -114,6 +115,7 @@ function OutlineIndex({ year }: { year: number }) {
           <h1 className="mt-2 font-serif text-2xl font-bold leading-tight text-foreground sm:text-4xl">Course outlines &amp; study checklists</h1>
           <p className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-bold text-primary"><BadgeCheck className="h-3.5 w-3.5" /> {registry.credit}</p>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">Every unit, topic by topic, with the matching notes one tap away. Tick topics as you cover them and flag the hard ones for Smart revision.</p>
+          <ContentCredit />
           <YearTabs year={year} />
         </div>
       </section>
