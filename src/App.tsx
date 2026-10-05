@@ -111,17 +111,17 @@ const AnimatedRoutes = () => {
           <Routes location={location}>
             <Route path="/" element={<Index />} />
             <Route path="/timetable-2026" element={<StudentRoute what="The timetable"><Timetable2026 /></StudentRoute>} />
-            <Route path="/library/:year/*" element={<StudentRoute what="The library"><RailLayout><Library /></RailLayout></StudentRoute>} />
+            <Route path="/library/:year/*" element={<RailLayout><Library /></RailLayout>} />
             <Route path="/year-1-library" element={<LegacyLibraryRedirect slug="year-1" />} />
             <Route path="/year-2-library" element={<LegacyLibraryRedirect slug="year-2" />} />
             <Route path="/year-3-library" element={<LegacyLibraryRedirect slug="year-3" />} />
             <Route path="/year-4-library" element={<LegacyLibraryRedirect slug="year-4" />} />
-            <Route path="/course-outlines" element={<StudentRoute what="Course outlines"><RailLayout><CourseOutlines /></RailLayout></StudentRoute>} />
+            <Route path="/course-outlines" element={<RailLayout><CourseOutlines /></RailLayout>} />
             <Route path="/timetable/:year" element={<StudentRoute what="The timetable"><RailLayout><YearTimetable /></RailLayout></StudentRoute>} />
             <Route path="/timetable" element={<Navigate to="/timetable/year-1" replace />} />
-            <Route path="/course-outlines/:dept" element={<StudentRoute what="Course outlines"><RailLayout><CourseOutlines /></RailLayout></StudentRoute>} />
+            <Route path="/course-outlines/:dept" element={<RailLayout><CourseOutlines /></RailLayout>} />
             <Route path="/year/:yearNumber" element={<RailLayout><YearHub /></RailLayout>} />
-            <Route path="/year/:yearNumber/unit/:unitSlug" element={<StudentRoute what="Unit pages"><UnitPage /></StudentRoute>} />
+            <Route path="/year/:yearNumber/unit/:unitSlug" element={<UnitPage />} />
             <Route path="/my-revision" element={<SignedInRoute><MyRevision /></SignedInRoute>} />
             <Route path="/revision-planner" element={<SignedInRoute><RevisionPlanner /></SignedInRoute>} />
             <Route path="/supplementary-revision" element={<Navigate to="/revision-index" replace />} />
@@ -153,7 +153,7 @@ const AnimatedRoutes = () => {
             <Route path="/must-knows" element={<MustKnows />} />
             <Route path="/must-knows/:unit" element={<MustKnows />} />
             <Route path="/daily" element={<DailyDose />} />
-            <Route path="/papers" element={<StudentRoute what="Past papers"><PastPapers /></StudentRoute>} />
+            <Route path="/papers" element={<PastPapers />} />
             <Route path="/notes" element={<StaticNotesIndex />} />
             <Route path="/notes/:slug" element={<StaticNote />} />
             <Route path="/books" element={<StudentRoute what="Books"><Books /></StudentRoute>} />

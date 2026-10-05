@@ -1,7 +1,6 @@
 // One shared, cached loader for the library data files, so moving between a year page, a folder and a
 // search never downloads the same JSON twice.
 import type { DriveFile } from "@/components/DriveFileViewer";
-import { fetchProtected } from "@/lib/protectedData";
 
 export interface LibraryNode { n: string; s: string; d?: LibraryNode[]; f?: DriveFile[] }
 export interface LibraryData { updated: string; d: LibraryNode[] }
@@ -11,7 +10,7 @@ const cache = new Map<string, Promise<unknown>>();
 function load<T>(file: string): Promise<T> {
   let p = cache.get(file) as Promise<T> | undefined;
   if (!p) {
-    p = fetchProtected<T>(file);
+    p = fetch(`${import.meta.env.BASE_URL}data/${file}`).then((r) => { if (!r.ok) throw new Error(String(r.status)); return r.json() as Promise<T>; });
     p.catch(() => cache.delete(file)); // allow a retry after a failed load
     cache.set(file, p);
   }

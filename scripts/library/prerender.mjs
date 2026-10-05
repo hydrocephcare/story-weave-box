@@ -9,6 +9,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { countFiles, fileBlurb, folderMeta, libraryPath, outlineMeta, prettyTitle, timetableMeta } from "../../src/lib/libraryMeta.js";
 import { mdToHtml } from "../../src/lib/miniMarkdown.js";
+import { splitPaper } from "../../src/lib/paperAnswers.js";
 import { linkDrugs } from "../../src/lib/noteLinks.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -56,9 +57,9 @@ try {
   const credit = `<p style="margin-top:28px;font-size:14px"><strong>${esc((registry.seoCredit ?? registry.credit))}</strong> · ${esc(registry.brand)} · shared for ${esc(registry.audience)}.</p>`;
 
   const written = [];
-  // Books, the library, timetables, course outlines and past papers are for verified MKU students only.
-  // They are not written out as public pages (and so are not in the sitemap); the app shows them after sign-in.
-  const MKU_ONLY = /^\/(library|books|papers|timetable|course-outlines)(\/|$)/;
+  // Only the books are for verified MKU students: they are not written out as public pages and are not in the sitemap.
+  // Timetables are listed for Google, but the app asks for the student sign-in before showing them.
+  const MKU_ONLY = /^\/books(\/|$)/;
   const write = (urlPath, html, lastmod) => {
     if (MKU_ONLY.test(urlPath)) return;
     const dir = path.join(dist, urlPath.replace(/^\//, ""));
@@ -138,12 +139,13 @@ try {
 
   // ---------------- notes that ship with the site ----------------
   try {
-    // Past papers are for verified MKU students: they get no public page, so there is nothing to crawl.
-    const notes = JSON.parse(fs.readFileSync(path.join(root, "src/data/staticNotes.json"), "utf8")).filter((n) => !n.paper);
+    const notes = JSON.parse(fs.readFileSync(path.join(root, "src/data/staticNotes.json"), "utf8"));
     const drugs = JSON.parse(fs.readFileSync(path.join(root, "src/data/drugIndex.json"), "utf8"));
     for (const n of notes) {
       const md = fs.readFileSync(path.join(root, n.file), "utf8");
-      const { html: rawHtml } = mdToHtml(md, { skipTitle: true });
+      // A past paper is published as questions only: the answers are for subscribers, so they stay out of the crawlable page too.
+      const shown = n.paper ? splitPaper(md).filter((p) => !p.hidden).map((p) => p.text).join("\n\n") : md;
+      const { html: rawHtml } = mdToHtml(shown, { skipTitle: true });
       const noteHtml = linkDrugs(rawHtml, drugs).html;
       const pharmHtml = n.condition ? `<p><a href="/pharmacology?tab=conditions&amp;c=${esc(n.condition)}">Drug guide for this condition in Pharmacology</a></p>` : "";
       const notePath = `/notes/${n.slug}`;
@@ -153,7 +155,7 @@ try {
       write(notePath, render({
         title, description: n.description, path: notePath, image: "/og-default.jpg",
         keywords: [n.title, `${n.unit} notes`, `Year ${n.year} MBChB`, "MKU psychiatry notes", "medical student notes Kenya"],
-        body: shell(crumbs([["Home", "/"], [`Year ${n.year}`, `/year/${n.year}`], [n.unit, null]]) + `<h1>${esc(n.title)}</h1><p>${esc(n.description)}</p>${pharmHtml}<article>${noteHtml}</article>${sibHtml}` + credit),
+        body: shell(crumbs([["Home", "/"], [`Year ${n.year}`, `/year/${n.year}`], [n.unit, null]]) + `<h1>${esc(n.title)}</h1><p>${esc(n.description)}</p>${pharmHtml}<article>${noteHtml}</article>${n.paper ? "<p><em>Model answers are on the page for subscribers.</em></p>" : ""}${sibHtml}` + credit),
         jsonLd: { "@context": "https://schema.org", "@type": "LearningResource", name: n.title, description: n.description, url: `${site}${notePath}`, dateModified: n.updated, inLanguage: "en", educationalLevel: `Year ${n.year} MBChB`, teaches: n.unit, author: { "@type": "Person", name: "Abongo Davis" }, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
       }), n.updated);
     }
@@ -180,7 +182,7 @@ try {
         const list = papers.filter((n) => n.paper.trimester === t).sort(bySit);
         return list.length ? `<h2>${TRIM[t]}</h2><ul>${list.map((n) => `<li><a href="/notes/${n.slug}">${esc(n.title)}</a> — ${esc(n.paper.satLabel)}, ${esc(n.unit)}</li>`).join("")}</ul>` : "";
       }).join("") + (papers.some((n) => !n.paper.trimester) ? `<h2>Undated papers</h2><ul>${papers.filter((n) => !n.paper.trimester).map((n) => `<li><a href="/notes/${n.slug}">${esc(n.title)}</a></li>`).join("")}</ul>` : "");
-      const pDesc = `${papers.length} Mount Kenya University MBChB past papers (CATs and end-of-year exams) sorted by trimester and month, each with answers, plus the topics each unit's papers have asked from the course outline.`;
+      const pDesc = `${papers.length} Mount Kenya University MBChB past papers (CATs and end-of-year exams) sorted by trimester and month, each with model answers for subscribers, plus the topics each unit's papers have asked from the course outline.`;
       write("/papers", render({
         title: `MKU MBChB Past Papers by Trimester with Answers | ${registry.brand}`, description: pDesc, path: "/papers", image: "/og-default.jpg",
         keywords: ["MKU past papers", "MBChB past papers", "Obstetrics and Gynaecology CAT", "Year 4 CAT with answers", "Mount Kenya University exams"],

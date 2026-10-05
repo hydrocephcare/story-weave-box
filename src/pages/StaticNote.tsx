@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate, useNavigationType, useParams } from "react-router-dom";
 import { Printer } from "lucide-react";
 import PaperBody from "@/components/PaperBody";
-import { StudentRoute } from "@/components/AccessRoute";
 import PharmacologyConnections from "@/components/PharmacologyConnections";
 import { STATIC_NOTES, TRIMESTER_LABEL, driveViewUrl, findStaticNote, loadStaticNoteText } from "@/data/staticNotes";
 import drugIndex from "@/data/drugIndex.json";
@@ -15,11 +14,10 @@ import { logStudy } from "@/lib/studyLog";
 interface DrugEntry { id: string; name: string; terms: string[] }
 const DRUGS = drugIndex as DrugEntry[];
 
-/** A note that ships with the site: /notes/<slug>. Past papers are for verified MKU students only. */
+/** A note that ships with the site: /notes/<slug>. */
 export default function StaticNotePage() {
   const { slug = "" } = useParams();
   const note = findStaticNote(slug);
-  if (note?.paper) return <StudentRoute what="Past papers"><StaticNoteView key={slug} /></StudentRoute>;
   return <StaticNoteView key={slug} />;
 }
 
