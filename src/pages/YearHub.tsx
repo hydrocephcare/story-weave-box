@@ -8,7 +8,7 @@ import {
   buildBlogPath,
   type Article,
 } from "@/lib/store";
-import { notesForYear } from "@/data/staticNotes";
+import { groupNotes, notesForYear } from "@/data/staticNotes";
 import { Helmet } from "react-helmet-async";
 import { getUnitsForYear, unitPath, type Unit } from "@/lib/academic";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -214,6 +214,28 @@ export default function YearHub() {
         </div>
       </div>
 
+      {notesForYear(parsedYear).length > 0 && (
+        <section className="mt-4 rounded-2xl border border-border bg-card p-5">
+          <div className="mb-3 flex items-center justify-between gap-2">
+            <h2 className="flex items-center gap-2 font-serif text-lg font-bold text-foreground"><BookOpen className="h-4 w-4 text-primary" /> Study notes for {yearLabel}</h2>
+            <Link to="/notes" className="text-xs font-bold text-primary hover:underline">All notes →</Link>
+          </div>
+          {groupNotes(notesForYear(parsedYear)).map((u) => (
+            <div key={u.unit} className="mt-3 first:mt-0">
+              <p className="text-[11px] font-bold uppercase tracking-wide text-primary">{u.unit}</p>
+              {u.groups.map((g) => (
+                <div key={g.group} className="mt-1.5">
+                  <p className="text-xs font-semibold text-muted-foreground">{g.group}</p>
+                  <div className="mt-1 flex flex-wrap gap-1.5">
+                    {g.notes.map((n) => <Link key={n.slug} to={`/notes/${n.slug}`} className="rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary">{n.title.replace(/ \(.*\)$/, "")}</Link>)}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </section>
+      )}
+
       <YearLibrarySection year={parsedYear} />
 
       <nav aria-label="Year shortcuts" className="mt-5 flex flex-wrap gap-2">
@@ -268,23 +290,6 @@ export default function YearHub() {
             </div>
           </div>
         </Link>
-      )}
-
-      {notesForYear(parsedYear).length > 0 && (
-        <section className="mt-6 rounded-2xl border border-border bg-card p-5">
-          <div className="mb-3 flex items-center gap-2"><BookOpen className="h-4 w-4 text-primary" /><h2 className="font-serif text-lg font-bold text-foreground">Study notes for {yearLabel}</h2></div>
-          <ul className="grid gap-2 sm:grid-cols-2">
-            {notesForYear(parsedYear).map((n) => (
-              <li key={n.slug}>
-                <Link to={`/notes/${n.slug}`} className="block rounded-xl border border-border bg-background p-3.5 transition-colors hover:border-primary/50">
-                  <span className="text-[11px] font-bold uppercase tracking-wide text-primary">{n.unit}</span>
-                  <span className="mt-0.5 block font-serif text-base font-bold text-foreground">{n.title}</span>
-                  <span className="mt-1 line-clamp-2 block text-xs text-muted-foreground">{n.description}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
       )}
 
       {parsedYear !== 3 && <div className="mt-6 rounded-2xl border border-border bg-card p-5">

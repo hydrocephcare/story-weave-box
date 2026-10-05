@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { Printer } from "lucide-react";
-import { findStaticNote, loadStaticNoteText } from "@/data/staticNotes";
+import { STATIC_NOTES, findStaticNote, loadStaticNoteText } from "@/data/staticNotes";
 import { mdToHtml } from "@/lib/miniMarkdown";
 import { updateMetaTags } from "@/lib/seo";
 import { logStudy } from "@/lib/studyLog";
@@ -26,6 +26,7 @@ export default function StaticNotePage() {
   // Reading a note counts toward today's study streak (once per visit, after the text has loaded).
   useEffect(() => { if (text) logStudy(5); }, [text]);
 
+  const siblings = useMemo(() => (note ? STATIC_NOTES.filter((n) => n.unit === note.unit && n.group === note.group && n.slug !== note.slug) : []), [note]);
   const parsed = useMemo(() => (text ? mdToHtml(text, { skipTitle: true }) : null), [text]);
   if (!note) return <Navigate to="/blog" replace />;
 
@@ -56,6 +57,13 @@ export default function StaticNotePage() {
             </nav>
           )}
           <article className="note-body mt-6" dangerouslySetInnerHTML={{ __html: parsed.html }} />
+          {siblings.length > 0 && (
+            <nav aria-label="More notes" className="mt-10 rounded-xl border border-border bg-card p-4 print:hidden">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">More in {note.group ?? note.unit}</p>
+              <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">{siblings.map((n) => <li key={n.slug}><Link to={`/notes/${n.slug}`} className="block rounded-lg px-2 py-1.5 text-sm font-semibold text-foreground hover:bg-muted hover:text-primary">{n.title}</Link></li>)}</ul>
+              <Link to="/notes" className="mt-2 inline-block text-xs font-bold text-primary hover:underline">All study notes →</Link>
+            </nav>
+          )}
         </>
       )}
     </div>

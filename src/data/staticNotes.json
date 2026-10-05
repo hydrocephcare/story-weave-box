@@ -1,11 +1,182 @@
 [
   {
+    "slug": "classification-of-mental-disorders",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Introduction to psychiatry",
+    "title": "Classification of Mental Disorders",
+    "description": "Year 4 psychiatry presentation notes: what classification means, ICD-11 versus DSM-5-TR, the major categories, symptom versus syndrome versus disorder, limitations, and what a diagnosis does and does not tell us.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/psychiatry-classification-of-mental-disorders.md"
+  },
+  {
+    "slug": "introduction-to-psychopathology",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Introduction to psychiatry",
+    "title": "Introduction to Psychopathology",
+    "description": "Year 4 psychiatry presentation notes: the language of abnormal mental experience: the mental state domains, form versus content of thought, delusion versus hallucination versus illusion, mood versus affect, insight.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/psychiatry-introduction-to-psychopathology.md"
+  },
+  {
+    "slug": "biopsychosocial-formulation",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Introduction to psychiatry",
+    "title": "Biopsychosocial Formulation",
+    "description": "Year 4 psychiatry presentation notes: what a formulation is, formulation versus diagnosis, the biological, psychological and social domains, the 4Ps grid, and a worked case.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/psychiatry-biopsychosocial-formulation.md"
+  },
+  {
+    "slug": "psychiatry-sociology-anthropology-psychology",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Introduction to psychiatry",
+    "title": "Psychiatry, Sociology, Anthropology and Psychology",
+    "description": "How psychiatry draws on psychology, sociology and anthropology, and how mental, physical and social aspects of health interact.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/psychiatry-and-the-social-sciences.md"
+  },
+  {
+    "slug": "thinkers-or-emotional-thinkers",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Introduction to psychiatry",
+    "title": "Are Human Beings Thinkers with Emotions, or Emotional Thinkers?",
+    "description": "A balanced discussion from philosophy, neuroscience (Damasio, dual-process theory) and psychiatry on the relationship between thought and emotion.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/psychiatry-thinkers-or-feelers.md"
+  },
+  {
     "slug": "bipolar-and-related-disorders",
     "year": 4,
     "unit": "Mental Health/Psychiatry",
     "title": "Bipolar and Related Disorders",
     "description": "Year 4 psychiatry notes in 14 parts: mood versus affect, classification, mania, hypomania, major depression, bipolar I versus II, cyclothymia, differential diagnosis, investigations, acute and maintenance treatment, and the cost of untreated illness, with practice questions.",
     "updated": "2026-10-05",
-    "file": "src/content/notes/psychiatry-bipolar-disorder.md"
+    "file": "src/content/notes/psychiatry-bipolar-disorder.md",
+    "group": "Mood disorders"
+  },
+  {
+    "slug": "pneumonia",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Pneumonia",
+    "description": "Pneumonia: classification, causes, clinical features, CURB-65 severity, investigations, antibiotic management, complications and prevention, with practice questions.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/respiratory-pneumonia.md"
+  },
+  {
+    "slug": "pleural-effusion",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Pleural Effusion",
+    "description": "Pleural effusion: transudate versus exudate and Light's criteria, causes, clinical features, investigations including pleural fluid analysis, and management.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/respiratory-pleural-effusion.md"
+  },
+  {
+    "slug": "pneumothorax",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Pneumothorax",
+    "description": "Pneumothorax: primary, secondary, traumatic and tension types, clinical features, X-ray size, and BTS management including needle decompression and chest drain.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/respiratory-pneumothorax.md"
+  },
+  {
+    "slug": "asthma",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Asthma",
+    "description": "Asthma: pathophysiology, diagnosis, severity of acute attacks, emergency treatment and the long-term stepwise management.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/respiratory-asthma.md"
+  },
+  {
+    "slug": "bronchitis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Bronchitis (Acute and Chronic)",
+    "description": "Acute and chronic bronchitis: causes, features, how to tell it from pneumonia, when antibiotics are and are not needed.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/respiratory-bronchitis.md"
+  },
+  {
+    "slug": "copd",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Chronic Obstructive Pulmonary Disease (COPD)",
+    "description": "COPD: causes including biomass smoke, GOLD spirometry grades, stable-disease treatment, long-term oxygen, and managing an acute exacerbation.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/respiratory-copd.md"
+  },
+  {
+    "slug": "bronchiectasis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Bronchiectasis",
+    "description": "Bronchiectasis: causes, the vicious cycle, HRCT findings, airway clearance and antibiotic management, and complications.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/respiratory-bronchiectasis.md"
+  },
+  {
+    "slug": "lung-abscess",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Lung Abscess",
+    "description": "Lung abscess: aspiration and other causes, anaerobic organisms, features, imaging, prolonged antibiotics and drainage.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/respiratory-lung-abscess.md"
+  },
+  {
+    "slug": "interstitial-lung-disease",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Interstitial Lung Diseases",
+    "description": "Interstitial lung disease: classification, idiopathic pulmonary fibrosis, sarcoidosis, hypersensitivity pneumonitis, HRCT patterns, restrictive lung function and treatment.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/respiratory-interstitial-lung-disease.md"
+  },
+  {
+    "slug": "occupational-lung-disease",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Occupational Lung Disease",
+    "description": "Occupational lung disease: silicosis, asbestosis, coal and organic dust diseases, occupational asthma, taking an occupational history, prevention and compensation.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/respiratory-occupational-lung-disease.md"
+  },
+  {
+    "slug": "dvt-vte-pulmonary-embolism",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "DVT and Venous Thromboembolism (with Pulmonary Embolism)",
+    "description": "DVT, VTE and pulmonary embolism: Virchow's triad, Wells scores, D-dimer and imaging, anticoagulation, massive PE and prophylaxis.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/respiratory-dvt-vte-pulmonary-embolism.md"
+  },
+  {
+    "slug": "lung-cancer",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Lung Cancer",
+    "description": "Lung cancer: risk factors, small cell versus non-small cell types, clinical and paraneoplastic features, investigations, staging and treatment.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/respiratory-lung-cancer.md"
   }
 ]

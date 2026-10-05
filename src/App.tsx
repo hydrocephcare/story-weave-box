@@ -60,6 +60,7 @@ const MustKnows = lazy(() => import("./pages/MustKnows"));
 const DailyDose = lazy(() => import("./pages/DailyDose"));
 const Books = lazy(() => import("./pages/Books"));
 const StaticNote = lazy(() => import("./pages/StaticNote"));
+const StaticNotesIndex = lazy(() => import("./pages/StaticNotesIndex"));
 const GlobalSearch = lazy(() => import("./pages/GlobalSearch"));
 const StudySystemAdmin = lazy(() => import("./pages/StudySystemAdmin"));
 const CategoryManager = lazy(() => import("./pages/CategoryManager"));
@@ -150,6 +151,7 @@ const AnimatedRoutes = () => {
             <Route path="/must-knows" element={<MustKnows />} />
             <Route path="/must-knows/:unit" element={<MustKnows />} />
             <Route path="/daily" element={<DailyDose />} />
+            <Route path="/notes" element={<StaticNotesIndex />} />
             <Route path="/notes/:slug" element={<StaticNote />} />
             <Route path="/books" element={<Books />} />
             <Route path="/books/:shelf" element={<Books />} />

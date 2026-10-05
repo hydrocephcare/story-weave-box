@@ -138,14 +138,29 @@ try {
       const md = fs.readFileSync(path.join(root, n.file), "utf8");
       const { html: noteHtml } = mdToHtml(md, { skipTitle: true });
       const notePath = `/notes/${n.slug}`;
+      const sibs = notes.filter((o) => o.unit === n.unit && o.group === n.group && o.slug !== n.slug);
+      const sibHtml = sibs.length ? `<h2>More in ${esc(n.group ?? n.unit)}</h2><ul>${sibs.map((o) => `<li><a href="/notes/${o.slug}">${esc(o.title)}</a></li>`).join("")}</ul><p><a href="/notes">All study notes</a></p>` : "";
       const title = `${n.title} — Year ${n.year} ${n.unit} Notes | ${registry.brand}`;
       write(notePath, render({
         title, description: n.description, path: notePath, image: "/og-default.jpg",
         keywords: [n.title, `${n.unit} notes`, `Year ${n.year} MBChB`, "MKU psychiatry notes", "medical student notes Kenya"],
-        body: shell(crumbs([["Home", "/"], [`Year ${n.year}`, `/year/${n.year}`], [n.unit, null]]) + `<h1>${esc(n.title)}</h1><p>${esc(n.description)}</p><article>${noteHtml}</article>` + credit),
+        body: shell(crumbs([["Home", "/"], [`Year ${n.year}`, `/year/${n.year}`], [n.unit, null]]) + `<h1>${esc(n.title)}</h1><p>${esc(n.description)}</p><article>${noteHtml}</article>${sibHtml}` + credit),
         jsonLd: { "@context": "https://schema.org", "@type": "LearningResource", name: n.title, description: n.description, url: `${site}${notePath}`, dateModified: n.updated, inLanguage: "en", educationalLevel: `Year ${n.year} MBChB`, teaches: n.unit, author: { "@type": "Person", name: "Abongo Davis" }, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
       }), n.updated);
     }
+
+    const byYear = [...new Set(notes.map((n) => n.year))].sort();
+    const idxBody = byYear.map((y) => {
+      const units = [...new Set(notes.filter((n) => n.year === y).map((n) => n.unit))];
+      return `<h2>Year ${y}</h2>` + units.map((u) => `<h3>${esc(u)}</h3><ul>${notes.filter((n) => n.year === y && n.unit === u).map((n) => `<li><a href="/notes/${n.slug}">${esc(n.title)}</a>${n.group ? ` — ${esc(n.group)}` : ""}</li>`).join("")}</ul>`).join("");
+    }).join("");
+    const idxDesc = `${notes.length} study notes by year and unit: psychiatry (classification, psychopathology, formulation, bipolar disorder) and respiratory medicine (pneumonia, asthma, COPD, lung cancer and more), each with practice questions.`;
+    write("/notes", render({
+      title: `Study Notes by Year and Unit: Psychiatry and Respiratory Medicine | ${registry.brand}`, description: idxDesc, path: "/notes", image: "/og-default.jpg",
+      keywords: ["Year 4 notes", "psychiatry notes", "respiratory medicine notes", "MBChB study notes", "MKU notes"],
+      body: shell(crumbs([["Home", "/"], ["Notes", null]]) + `<h1>Study notes</h1><p>${esc(idxDesc)}</p>${idxBody}` + credit),
+      jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: "Study notes", description: idxDesc, url: `${site}/notes`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
+    }), notes[0]?.updated);
   } catch (err) {
     console.warn("[prerender-library] notes skipped:", err instanceof Error ? err.message : err);
   }

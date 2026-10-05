@@ -124,7 +124,8 @@ export default function YearHubPanel({ year }: { year: number }) {
       {notes.length > 0 && (
         <section className="rounded-xl border border-primary/30 bg-primary/5 p-3.5 lg:col-span-2">
           <h3 className="mb-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground"><BookMarked className="h-3.5 w-3.5 text-primary" /> Study notes for Year {year}</h3>
-          <ul className="grid gap-2 sm:grid-cols-2">{notes.map((n) => <li key={n.slug}><Link to={`/notes/${n.slug}`} className="block rounded-lg border border-border bg-card p-3 hover:border-primary/50"><span className="text-[10px] font-bold uppercase tracking-wide text-primary">{n.unit}</span><span className="block text-sm font-bold text-foreground">{n.title}</span></Link></li>)}</ul>
+          <ul className="grid gap-2 sm:grid-cols-2">{notes.slice(0, 6).map((n) => <li key={n.slug}><Link to={`/notes/${n.slug}`} className="block rounded-lg border border-border bg-card p-3 hover:border-primary/50"><span className="text-[10px] font-bold uppercase tracking-wide text-primary">{n.unit}{n.group ? ` · ${n.group}` : ""}</span><span className="block text-sm font-bold text-foreground">{n.title}</span></Link></li>)}</ul>
+          {notes.length > 6 && <Link to="/notes" className="mt-2 inline-block text-xs font-bold text-primary hover:underline">All {notes.length} notes →</Link>}
         </section>
       )}
       <YearExamsCard year={year} limit={4} />
