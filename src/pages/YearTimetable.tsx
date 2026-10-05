@@ -8,6 +8,7 @@ import { timetableMeta } from "@/lib/libraryMeta";
 import { updateMetaTags, SITE_URL } from "@/lib/seo";
 import { YEAR_TEACHING_STAFF } from "@/lib/timetable2026";
 import { useTimetable } from "@/lib/siteConfig";
+import { PAPER_NOTES, TRIMESTER_LABEL, trimesterOf } from "@/data/staticNotes";
 
 const pageUrl = (n: number) => `${import.meta.env.BASE_URL}timetable/p-${String(n).padStart(2, "0")}.jpg`;
 
@@ -18,6 +19,8 @@ export default function YearTimetable() {
   const [zoom, setZoom] = useState<number | null>(null);
   const schedules = useTimetable(tt?.year ?? 1);
   const meta = useMemo(() => (tt ? timetableMeta(registry, tt) : null), [tt]);
+  const nowTrimester = trimesterOf(new Date());
+  const yearPapers = useMemo(() => PAPER_NOTES.filter((p) => p.year === tt?.year && p.paper.trimester === nowTrimester).sort((a, b) => (b.paper.sat ?? "").localeCompare(a.paper.sat ?? "")), [tt, nowTrimester]);
 
   useEffect(() => {
     if (!meta) return;
@@ -75,6 +78,17 @@ export default function YearTimetable() {
           </div>
           <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground">Source: {t.source}. Lecturers’ personal phone numbers are left out. Timetables can change, so confirm with your department or the notice board.</p>
         </section>
+
+        {yearPapers.length > 0 && (
+          <section aria-labelledby="papers-for-trimester" className="rounded-2xl border border-primary/30 bg-primary/5 p-4">
+            <h2 id="papers-for-trimester" className="font-serif text-xl font-bold text-foreground">Past papers for this trimester</h2>
+            <p className="mt-1 text-sm text-muted-foreground">{TRIMESTER_LABEL[nowTrimester]}. {yearPapers.length} Year {tt.year} past paper{yearPapers.length === 1 ? "" : "s"} from this part of the year, with answers, so you can practise what this trimester's units have asked.</p>
+            <ul className="mt-3 grid gap-1.5 sm:grid-cols-2">
+              {yearPapers.map((p) => <li key={p.slug}><Link to={`/notes/${p.slug}`} className="block rounded-lg border border-border bg-card px-3 py-2 text-sm font-semibold text-foreground hover:border-primary/50 hover:text-primary">{p.title}<span className="block text-[11px] font-medium text-muted-foreground">{p.paper.satLabel} · {p.unit}</span></Link></li>)}
+            </ul>
+            <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs font-bold"><Link to={`/papers?trim=${nowTrimester}`} className="text-primary hover:underline">All trimester {nowTrimester} papers</Link><Link to="/papers?view=coverage" className="text-primary hover:underline">Topics asked and not yet asked</Link></p>
+          </section>
+        )}
 
         {schedules.length > 0 && (
           <section aria-labelledby="text-timetable">

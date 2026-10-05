@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate, useNavigationType, useParams } from "react-router-dom";
 import { Printer } from "lucide-react";
 import PharmacologyConnections from "@/components/PharmacologyConnections";
-import { STATIC_NOTES, findStaticNote, loadStaticNoteText } from "@/data/staticNotes";
+import { STATIC_NOTES, TRIMESTER_LABEL, driveViewUrl, findStaticNote, loadStaticNoteText } from "@/data/staticNotes";
 import drugIndex from "@/data/drugIndex.json";
 import { mdToHtml } from "@/lib/miniMarkdown";
 import { linkDrugs } from "@/lib/noteLinks";
@@ -79,6 +79,18 @@ export default function StaticNotePage() {
         <p className="mt-2 text-sm text-muted-foreground">Updated {new Date(note.updated).toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" })}</p>
         <button type="button" onClick={() => window.print()} className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-1.5 text-xs font-bold text-muted-foreground hover:border-primary/50 hover:text-primary print:hidden"><Printer className="h-3.5 w-3.5" /> Print or save as PDF</button>
       </header>
+
+      {note.paper && (
+        <aside aria-label="Past paper" className="mt-4 rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm print:hidden">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-primary">Past paper · {note.paper.satLabel} · {note.paper.trimester ? TRIMESTER_LABEL[note.paper.trimester] : "Undated"}</p>
+          {!note.paper.complete && note.paper.missing && <p className="mt-1.5 text-xs font-semibold text-amber-700 dark:text-amber-300">Not the whole paper: {note.paper.missing}</p>}
+          <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5 text-xs font-bold">
+            <Link to={`/papers${note.paper.trimester ? `?trim=${note.paper.trimester}` : ""}`} className="text-primary hover:underline">All past papers{note.paper.trimester ? ` for trimester ${note.paper.trimester}` : ""}</Link>
+            <Link to={`/papers?view=coverage&unit=${note.paper.outline}`} className="text-primary hover:underline">Topics asked and not yet asked</Link>
+            {note.paper.driveId && <a href={driveViewUrl(note.paper.driveId)} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Original scan on Drive</a>}
+          </p>
+        </aside>
+      )}
 
       {error && <p className="mt-6 rounded-lg border border-border bg-card p-4 text-sm text-muted-foreground">This note could not load. Check your connection and refresh.</p>}
       {!parsed && !error && <p className="mt-6 text-sm text-muted-foreground">Loading the note…</p>}

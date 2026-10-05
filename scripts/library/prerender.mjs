@@ -165,6 +165,24 @@ try {
       body: shell(crumbs([["Home", "/"], ["Notes", null]]) + `<h1>Study notes</h1><p>${esc(idxDesc)}</p>${idxBody}` + credit),
       jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: "Study notes", description: idxDesc, url: `${site}/notes`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
     }), notes[0]?.updated);
+
+    // past papers: one crawlable page listing every paper by trimester, newest sitting first
+    const papers = notes.filter((n) => n.paper);
+    if (papers.length) {
+      const TRIM = { 1: "Trimester 1 (September to December)", 2: "Trimester 2 (January to April)", 3: "Trimester 3 (May to August)" };
+      const bySit = (a, b) => (b.paper.sat ?? "").localeCompare(a.paper.sat ?? "");
+      const pBody = [1, 2, 3].map((t) => {
+        const list = papers.filter((n) => n.paper.trimester === t).sort(bySit);
+        return list.length ? `<h2>${TRIM[t]}</h2><ul>${list.map((n) => `<li><a href="/notes/${n.slug}">${esc(n.title)}</a> — ${esc(n.paper.satLabel)}, ${esc(n.unit)}</li>`).join("")}</ul>` : "";
+      }).join("") + (papers.some((n) => !n.paper.trimester) ? `<h2>Undated papers</h2><ul>${papers.filter((n) => !n.paper.trimester).map((n) => `<li><a href="/notes/${n.slug}">${esc(n.title)}</a></li>`).join("")}</ul>` : "");
+      const pDesc = `${papers.length} Mount Kenya University MBChB past papers (CATs and end-of-year exams) sorted by trimester and month, each with answers, plus the topics each unit's papers have asked from the course outline.`;
+      write("/papers", render({
+        title: `MKU MBChB Past Papers by Trimester with Answers | ${registry.brand}`, description: pDesc, path: "/papers", image: "/og-default.jpg",
+        keywords: ["MKU past papers", "MBChB past papers", "Obstetrics and Gynaecology CAT", "Year 4 CAT with answers", "Mount Kenya University exams"],
+        body: shell(crumbs([["Home", "/"], ["Past papers", null]]) + `<h1>Past papers</h1><p>${esc(pDesc)}</p>${pBody}` + credit),
+        jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: "Past papers", description: pDesc, url: `${site}/papers`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
+      }), papers.map((n) => n.updated).sort().pop());
+    }
   } catch (err) {
     console.warn("[prerender-library] notes skipped:", err instanceof Error ? err.message : err);
   }
