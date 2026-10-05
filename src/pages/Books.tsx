@@ -6,6 +6,7 @@ import { startDownload } from "@/lib/driveDownload";
 import { updateMetaTags } from "@/lib/seo";
 import { fetchProtected } from "@/lib/protectedData";
 import ContentCredit from "@/components/ContentCredit";
+import ShelvesLoading from "@/components/ShelvesLoading";
 import { bookSizeMB, formatMB, setBookSizes } from "@/lib/bookSizes";
 import { addRecentBook, toggleBookRead, toggleSavedBook, useBookShelf, type ShelfBook } from "@/lib/bookShelf";
 
@@ -193,7 +194,7 @@ export default function BooksPage() {
   const items: DriveFile[] = bookList.map((r) => [r.book[0], r.book[1], "pdf"]);
 
   if (error) return <div className="mx-auto max-w-3xl p-6 text-sm text-muted-foreground">The book list could not load. Check your connection and refresh.</div>;
-  if (!data) return <div className="mx-auto max-w-3xl p-6 text-sm text-muted-foreground">Loading the shelves…</div>;
+  if (!data) return <ShelvesLoading />;
   if (shelfKey && !shelf) return <Navigate to="/books" replace />;
   if (subjectKey && shelf && !subject) return <Navigate to={`/books/${shelf.key}`} replace />;
 
