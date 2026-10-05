@@ -11,7 +11,7 @@
 // Plain JavaScript so a build script and the browser can share it.
 
 const HEADING = /^(#{1,4})\s+(.*)$/;
-const QUESTION_HEADING = /^(Question\s*\d+|Q\s*\d+\b|Case\s*\d+|\d+[.)]\s|\([a-z]{1,4}\)|\((?:i{1,3}|iv|v|vi{1,3}|ix|x)\))/i;
+const QUESTION_HEADING = /^(Question\s*\d+|Q\s*\d+\b|Case\s*\d+|\d+[.)]\s|\d+\([a-z]{1,4}\)[.)]?\s|\([a-z]{1,4}\)|\((?:i{1,3}|iv|v|vi{1,3}|ix|x)\))/i;
 const MARKS = /\(\d+\s*marks?\)/i;
 const SUMMARY = /answers? at a glance|answer key|rapid revision/i;
 const OPTION = /^\s*(?:[-*]\s+)?\(?[A-E][.)]\s+\S/;

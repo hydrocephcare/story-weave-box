@@ -738,5 +738,206 @@
         "surg-abd-05"
       ]
     }
+  },
+  {
+    "slug": "papers-internal-medicine-rheumatology-cat",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Past papers",
+    "title": "Internal Medicine Rheumatology CAT: 30 MCQs and 5 short answer questions",
+    "description": "MKU Internal Medicine Rheumatology CAT: 30 MCQs on rheumatoid arthritis, lupus, gout, osteoporosis and vasculitis, plus short questions on CREST, myositis and fibromyalgia, with answers.",
+    "updated": "2026-10-05",
+    "file": "src/content/notes/papers-internal-medicine-rheumatology-cat.md",
+    "paper": {
+      "outline": "internal-medicine",
+      "code": "Rheumatology CAT",
+      "kind": "CAT",
+      "sat": null,
+      "satLabel": "Undated",
+      "trimester": null,
+      "mcq": 30,
+      "saq": 5,
+      "complete": true,
+      "topics": [
+        "im-t2-rheum-01",
+        "im-t2-rheum-02",
+        "im-t2-rheum-03",
+        "im-t2-rheum-07",
+        "im-t2-rheum-08",
+        "im-t2-rheum-09"
+      ],
+      "source": "i med cat.pdf",
+      "driveId": "1VLTy8jlg11sWruFThlt321DbW2aogxIh"
+    }
+  },
+  {
+    "slug": "papers-internal-medicine-haematology-and-renal-cat",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Past papers",
+    "title": "Internal Medicine End of Semester CAT (MBChB 4): haematology and renal, 30 MCQs and 3 short answers",
+    "description": "MKU Internal Medicine end of semester CAT: 30 MCQs on anaemias, haemolysis, bleeding disorders, kidney injury, glomerular disease, stones and dialysis, plus 3 short answer questions, with answers.",
+    "updated": "2026-10-05",
+    "file": "src/content/notes/papers-internal-medicine-haematology-and-renal-cat.md",
+    "paper": {
+      "outline": "internal-medicine",
+      "code": "MBChB 4 End of Semester CAT",
+      "kind": "End-of-semester CAT",
+      "sat": null,
+      "satLabel": "Undated",
+      "trimester": null,
+      "mcq": 30,
+      "saq": 3,
+      "complete": true,
+      "topics": [
+        "im-t1-haem-01",
+        "im-t1-haem-02",
+        "im-t1-haem-03",
+        "im-t1-haem-04",
+        "im-t1-haem-06",
+        "im-t1-haem-07",
+        "im-t1-haem-08",
+        "im-t2-renal-01",
+        "im-t2-renal-03",
+        "im-t2-renal-04",
+        "im-t2-renal-06",
+        "im-t2-renal-07",
+        "im-t2-renal-08",
+        "im-t2-renal-09",
+        "im-t2-endo-01",
+        "im-t2-endo-05"
+      ],
+      "source": "HEMAT IMED PAPER.pdf",
+      "driveId": "17-4spi9XIcpTZGin6wjhYRBwfBPOkrDE"
+    }
+  },
+  {
+    "slug": "papers-internal-medicine-respiratory-cat-1",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Past papers",
+    "title": "Internal Medicine Respiratory CAT 1: 30 MCQs and 5 short answer questions",
+    "description": "MKU Internal Medicine Respiratory CAT 1: 30 MCQs on pneumonia, pleural effusion, COPD, asthma, occupational lung disease and sarcoidosis, plus 5 case-based short questions, with answers.",
+    "updated": "2026-10-05",
+    "file": "src/content/notes/papers-internal-medicine-respiratory-cat-1.md",
+    "paper": {
+      "outline": "internal-medicine",
+      "code": "RESP CAT 1",
+      "kind": "CAT 1",
+      "sat": null,
+      "satLabel": "Undated",
+      "trimester": null,
+      "mcq": 30,
+      "saq": 5,
+      "complete": true,
+      "topics": [
+        "im-t1-resp-04",
+        "im-t1-resp-06",
+        "im-t1-resp-07",
+        "im-t1-resp-08",
+        "im-t1-resp-10",
+        "im-t1-resp-11",
+        "im-t1-resp-12",
+        "im-t1-resp-13"
+      ],
+      "source": "INTERNAL MED PAST PAPER.pdf",
+      "driveId": "1JmJ6p3GjxePXIKtIQsW1xyGxszllfF1T"
+    }
+  },
+  {
+    "slug": "papers-internal-medicine-cat-1-mbim-6112-2019-2020",
+    "year": 6,
+    "unit": "Internal Medicine",
+    "group": "Past papers",
+    "title": "Internal Medicine CAT 1 (MBIM 6112), 2019/2020: gastroenterology and hepatology, 30 MCQs and 4 short answers",
+    "description": "MKU Level VI Internal Medicine CAT 1 (MBIM 6112, 2019/2020): 30 MCQs on HIV and the gut, diarrhoea, alcoholic liver disease, hepatitis, cholera and shigella, plus short questions on cirrhosis, CMV colitis, Reiter's syndrome and pancreatitis, with answers.",
+    "updated": "2026-10-05",
+    "file": "src/content/notes/papers-internal-medicine-cat-1-mbim-6112-2019-2020.md",
+    "paper": {
+      "outline": "internal-medicine",
+      "code": "MBIM 6112",
+      "kind": "CAT 1",
+      "sat": null,
+      "satLabel": "2019/2020 academic year",
+      "trimester": null,
+      "printed": "University examination 2019/2020",
+      "mcq": 30,
+      "saq": 4,
+      "complete": true,
+      "topics": [
+        "im-t1-git-05",
+        "im-t1-git-06",
+        "im-t1-git-07",
+        "im-t1-git-08",
+        "im-t1-git-11",
+        "im-t1-git-12",
+        "im-t1-git-14",
+        "im-t1-git-17",
+        "im-t1-git-18"
+      ],
+      "source": "INTERNAL MED PAST PAPER.pdf",
+      "driveId": "1JmJ6p3GjxePXIKtIQsW1xyGxszllfF1T"
+    }
+  },
+  {
+    "slug": "papers-internal-medicine-cat-1-mbchb-4-2022-gastroenterology",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Past papers",
+    "title": "Internal Medicine CAT 1 (MBChB 4), 2022: hepatology and gastroenterology, MCQs 1 to 12",
+    "description": "MKU Internal Medicine CAT 1 for MBChB 4 (2022): MCQs 1 to 12 on jaundice, alcoholic hepatitis, hepatitis B, Child-Pugh score, GI bleeding and pancreatitis, with answers. The rest of the paper is missing from the scan.",
+    "updated": "2026-10-05",
+    "file": "src/content/notes/papers-internal-medicine-cat-1-mbchb-4-2022-gastroenterology.md",
+    "paper": {
+      "outline": "internal-medicine",
+      "code": "CAT 1 MBChB 4",
+      "kind": "CAT 1",
+      "sat": null,
+      "satLabel": "2022 (date not printed)",
+      "trimester": null,
+      "mcq": 12,
+      "saq": 0,
+      "complete": false,
+      "missing": "Only MCQs 1 to 12 are in the scanned file. Question 13 is cut off and later questions are missing.",
+      "topics": [
+        "im-t1-git-04",
+        "im-t1-git-07",
+        "im-t1-git-11",
+        "im-t1-git-12",
+        "im-t1-git-18"
+      ],
+      "source": "INTERNAL MED PAST PAPER.pdf",
+      "driveId": "1JmJ6p3GjxePXIKtIQsW1xyGxszllfF1T"
+    }
+  },
+  {
+    "slug": "papers-paediatrics-mcqs-cystic-fibrosis-ecg-and-gastroenterology-partial",
+    "year": 4,
+    "unit": "Paediatrics & Child Health",
+    "group": "Past papers",
+    "title": "Paediatrics and cardiology MCQs 10 to 28: cystic fibrosis, ECG and paediatric gastroenterology (partial)",
+    "description": "Part of an MKU paediatrics and medicine MCQ set: questions 10 to 28 on cystic fibrosis, the normal ECG and rhythms, Hirschsprung disease, dehydration, GERD, hepatitis A and B and childhood diarrhoea, with answers.",
+    "updated": "2026-10-05",
+    "file": "src/content/notes/papers-paediatrics-mcqs-cystic-fibrosis-ecg-and-gastroenterology-partial.md",
+    "paper": {
+      "outline": "paediatrics",
+      "code": "Paediatrics MCQs",
+      "kind": "MCQ set",
+      "sat": null,
+      "satLabel": "Undated",
+      "trimester": null,
+      "mcq": 19,
+      "saq": 0,
+      "complete": false,
+      "missing": "Only MCQs 10 to 28 are in the scanned file. Questions 1 to 9 and later questions are missing, and the ECG pictures in Q15 and Q16 are described, not shown.",
+      "topics": [
+        "pd-t2-01",
+        "pd-t2-02",
+        "pd-t2-07",
+        "im-t1-git-11"
+      ],
+      "source": "INTERNAL MED PAST PAPER.pdf",
+      "driveId": "1JmJ6p3GjxePXIKtIQsW1xyGxszllfF1T"
+    }
   }
 ]
