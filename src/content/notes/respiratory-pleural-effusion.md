@@ -73,6 +73,20 @@ A **pleural effusion** is an **abnormal collection of fluid in the pleural space
 - **Lymphocytic, high ADA** effusion in Kenya: **think TB**.
 - Always aspirate under **ultrasound guidance**.
 
+## Pharmacology at a glance
+
+Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot.
+
+| Drug | Class | Role here | Watch for |
+|---|---|---|---|
+| Furosemide | Loop diuretic | Effusion from heart failure | Low potassium and sodium, dehydration |
+| Rifampicin | Anti-TB drug | Tuberculous pleural effusion, as part of the standard regimen | Hepatitis, orange urine, many interactions |
+| Ceftriaxone | Third-generation cephalosporin | Parapneumonic effusion and empyema | Biliary sludge, allergy |
+| Metronidazole | Nitroimidazole | Anaerobic cover in empyema | Metallic taste; no alcohol |
+| Paracetamol | Analgesic | Pleuritic pain | Liver injury in overdose |
+
+**Drain, do not just drug:** a pleural pH below 7.2, pus or a positive culture needs a chest drain as well as antibiotics.
+
 ## Practice questions
 
 **1.** A 45-year-old woman with HIV has fever, weight loss and a unilateral effusion: protein 52 g/L, lymphocytes predominant, glucose low, ADA high. The most likely diagnosis is:

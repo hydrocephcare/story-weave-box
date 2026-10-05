@@ -82,6 +82,26 @@ Also consider oxygen saturation (below 92%), multilobar involvement, comorbidity
 - **CURB-65** decides where to treat.
 - Failure to improve: always think **TB, empyema, cancer**.
 
+## Pharmacology at a glance
+
+Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [pneumonia drugs](/pharmacology?tab=conditions&c=cap).
+
+| Drug | Class | Role here | Watch for |
+|---|---|---|---|
+| Amoxicillin | Penicillin | First-line for low-severity community-acquired pneumonia | Rash, diarrhoea; allergy |
+| Clarithromycin | Macrolide | Atypical cover added in moderate disease | QT prolongation, many interactions |
+| Azithromycin | Macrolide | Atypical cover, or if clarithromycin interacts | QT prolongation |
+| Doxycycline | Tetracycline | Alternative to a macrolide | Photosensitivity, oesophagitis |
+| Co-amoxiclav | Penicillin plus β-lactamase inhibitor | Moderate to severe disease | Diarrhoea, liver injury |
+| Ceftriaxone | Third-generation cephalosporin | Severe pneumonia (IV) | Biliary sludge, allergy |
+| Benzylpenicillin | Penicillin | IV for severe pneumococcal pneumonia | Allergy |
+| Metronidazole | Nitroimidazole | Added for aspiration pneumonia | Metallic taste; no alcohol |
+| Cotrimoxazole | Sulphonamide combination | High-dose for Pneumocystis pneumonia in HIV | Rash, high potassium, low blood count |
+| Paracetamol | Analgesic and antipyretic | Pleuritic pain and fever | Liver injury in overdose |
+| Heparin | Low-molecular-weight heparin | Prevents clots in admitted patients | Bleeding, low platelets |
+
+**Timing matters:** in severe pneumonia give the first antibiotic dose within 4 hours (sooner in sepsis), and take blood cultures first if this does not delay treatment.
+
 ## Practice questions
 
 **1.** A 70-year-old man is confused with RR 32, BP 88/50, urea 10 mmol/L and a right lower lobe consolidation. His CURB-65 score is:

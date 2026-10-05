@@ -262,6 +262,25 @@ Bipolar disorder is a **clinical diagnosis**. Investigations are there to exclud
 
 ---
 
+## Pharmacology at a glance
+
+Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [bipolar disorder drugs](/pharmacology?tab=conditions&c=bipolar).
+
+| Drug | Class | Role here | Watch for |
+|---|---|---|---|
+| Lithium | Mood stabiliser | Gold standard for mania, prevention and reducing suicide | Narrow safety margin: tremor, thirst, kidney and thyroid effects; toxicity with NSAIDs and dehydration |
+| Valproate | Anticonvulsant mood stabiliser | Acute mania and prevention | Avoid in women who could become pregnant; liver, platelets, weight gain |
+| Lamotrigine | Anticonvulsant mood stabiliser | Prevents depressive relapse | Stevens–Johnson rash: titrate slowly |
+| Carbamazepine | Anticonvulsant mood stabiliser | Alternative for mania and prevention | Interactions (antiretrovirals, the pill), low sodium, rash |
+| Quetiapine | Atypical antipsychotic | Mania and bipolar depression | Sedation, weight gain, metabolic effects |
+| Olanzapine | Atypical antipsychotic | Acute mania and maintenance | Weight gain, high glucose and lipids |
+| Risperidone | Atypical antipsychotic | Acute mania; long-acting injection for adherence | Raised prolactin, stiffness |
+| Haloperidol | Typical antipsychotic | Rapid tranquillisation in severe agitation | Stiffness, restlessness (akathisia), QT prolongation |
+| Diazepam | Benzodiazepine | Short-term for agitation and insomnia | Sedation, dependence |
+| Fluoxetine | SSRI antidepressant | Only with an antimanic drug, never alone in bipolar depression | Can trigger a switch to mania |
+
+**Never treat bipolar depression with an antidepressant alone:** the switch risk is real.
+
 ## Revision checklist
 
 - [ ] Mood vs affect: climate vs weather; subjective vs objective

@@ -88,6 +88,24 @@
 - In Kenya, **think TB and cancer** in a chronic cough or haemoptysis.
 - **Stage decides treatment.**
 
+## Pharmacology at a glance
+
+Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [lung cancer drugs](/pharmacology?tab=conditions&c=lungca).
+
+| Drug | Class | Role here | Watch for |
+|---|---|---|---|
+| Cisplatin | Platinum chemotherapy | Backbone of non-small cell and small cell regimens | Kidney damage, hearing loss, severe vomiting, low magnesium |
+| Carboplatin | Platinum chemotherapy | Used when kidney function is poor or cisplatin is not tolerated | Low platelets and white cells |
+| Etoposide | Topoisomerase II inhibitor | With a platinum drug in small cell lung cancer | Low blood counts, hair loss |
+| Osimertinib | EGFR tyrosine kinase inhibitor | EGFR-mutant adenocarcinoma | Rash, diarrhoea, interstitial lung disease |
+| Pembrolizumab | PD-1 checkpoint inhibitor | High PD-L1 non-small cell lung cancer | Immune-related colitis, pneumonitis, thyroid disease |
+| Dexamethasone | Corticosteroid | Brain metastases, cord compression, SVC obstruction | High glucose, mood change, infection |
+| Morphine | Opioid analgesic | Cancer pain and breathlessness | Constipation, drowsiness; give a laxative |
+| Zoledronic acid | Bisphosphonate | Bone metastases and hypercalcaemia | Jaw osteonecrosis, kidney function |
+| Ondansetron | 5-HT₃ antagonist | Chemotherapy-induced vomiting | Constipation, QT prolongation |
+
+**Test before you treat:** the tissue type and the EGFR, ALK and PD-L1 results decide which drug is used.
+
 ## Practice questions
 
 **1.** A 60-year-old smoker has hyponatraemia (Na 118) with low serum osmolality and concentrated urine, with a central lung mass. The most likely tumour is:

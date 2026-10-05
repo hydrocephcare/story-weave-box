@@ -67,6 +67,23 @@
 - **Sarcoid:** bilateral hilar lymphadenopathy; non-caseating granulomas.
 - **IPF treatment: antifibrotics, not steroids.**
 
+## Pharmacology at a glance
+
+Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [idiopathic pulmonary fibrosis drugs](/pharmacology?tab=conditions&c=ipf).
+
+| Drug | Class | Role here | Watch for |
+|---|---|---|---|
+| Nintedanib | Tyrosine kinase inhibitor (antifibrotic) | IPF and other progressive fibrosing ILD | Diarrhoea, liver tests, bleeding |
+| Pirfenidone | Antifibrotic | IPF | Nausea, photosensitivity rash |
+| Prednisolone | Systemic corticosteroid | Inflammatory ILD (sarcoid, organising pneumonia, hypersensitivity pneumonitis); not for IPF | High glucose, infection, bone loss |
+| Methotrexate | Antimetabolite | Steroid-sparing agent in CTD-ILD, but can itself cause pneumonitis | Lung toxicity, liver, blood count |
+| Rituximab | Anti-CD20 antibody | Refractory connective-tissue-disease ILD | Infusion reactions, infection |
+| Amiodarone | Antiarrhythmic | A common drug cause of pulmonary fibrosis | Thyroid, liver, lung and eye toxicity |
+| Nitrofurantoin | Urinary antibiotic | Drug cause of acute and chronic lung disease | Pulmonary reactions with long use |
+| Bleomycin | Cytotoxic antibiotic | Chemotherapy cause of pulmonary fibrosis | Dose-related lung toxicity |
+
+**Always ask about drugs:** stopping the cause is the first treatment in drug-induced lung disease.
+
 ## Practice questions
 
 **1.** A 65-year-old man has 18 months of dry cough and breathlessness, clubbing and bibasal fine end-inspiratory crackles. HRCT shows subpleural basal honeycombing. The treatment that slows progression is:

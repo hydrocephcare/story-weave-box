@@ -60,6 +60,22 @@ A **lung abscess** is a **localised area of necrosis of lung parenchyma with a c
 - **Antibiotics for weeks, not days.**
 - **Drain** if it fails medical treatment.
 
+## Pharmacology at a glance
+
+Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [lung abscess drugs](/pharmacology?tab=conditions&c=lungabscess).
+
+| Drug | Class | Role here | Watch for |
+|---|---|---|---|
+| Co-amoxiclav | Penicillin plus β-lactamase inhibitor | First-line for 4–6 weeks (anaerobes and mixed flora) | Diarrhoea, liver injury |
+| Clindamycin | Lincosamide | Alternative first-line, good abscess penetration | C. difficile colitis |
+| Benzylpenicillin | Penicillin | IV with metronidazole in the traditional regimen | Allergy |
+| Metronidazole | Nitroimidazole | Anaerobic cover | Metallic taste, neuropathy with long courses; no alcohol |
+| Flucloxacillin | Anti-staphylococcal penicillin | Staphylococcus aureus (septic emboli, post-influenza) | Cholestatic jaundice |
+| Vancomycin | Glycopeptide | MRSA | Kidney injury, infusion reaction; level monitoring |
+| Ceftriaxone | Third-generation cephalosporin | Gram-negative cover in hospital | Biliary sludge, allergy |
+
+**Weeks, not days:** treat until the cavity has resolved or is small and stable, and always exclude TB and cancer.
+
 ## Practice questions
 
 **1.** A 52-year-old alcoholic man has 3 weeks of fever, weight loss and large amounts of foul-smelling sputum. Chest X-ray: a cavity with an air-fluid level in the right upper lobe. The most likely organisms are:

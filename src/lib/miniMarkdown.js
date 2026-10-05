@@ -9,6 +9,11 @@ export const slugify = (s) => String(s).toLowerCase().replace(/&/g, "and").repla
 
 function inline(text) {
   let t = esc(text);
+  // [text](/path) is an in-site link (class note-link, so the note page can remember where you were);
+  // [text](https://...) opens in a new tab. Only those two forms are allowed.
+  t = t.replace(/\[([^\]]+)\]\((\/[^)\s]*|https?:\/\/[^)\s]+)\)/g, (_, label, href) => (href.startsWith("/")
+    ? `<a class="note-link" href="${href}">${label}</a>`
+    : `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`));
   t = t.replace(/`([^`]+)`/g, "<code>$1</code>");
   t = t.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
   t = t.replace(/(^|[^*])\*([^*\s][^*]*)\*(?!\*)/g, "$1<em>$2</em>");

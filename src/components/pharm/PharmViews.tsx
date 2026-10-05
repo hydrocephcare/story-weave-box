@@ -1,4 +1,7 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { STATIC_NOTES, findStaticNote } from "@/data/staticNotes";
+import noteDrugLinks from "@/data/noteDrugLinks.json";
 import { Link } from "react-router-dom";
 import { AlertTriangle, ArrowRight, CalendarDays, ChevronDown, FlaskConical, Search, ShieldAlert, Sparkles } from "lucide-react";
 import { ALL_PDRUGS, DRUG_GROUPS, isCancer } from "@/pharm";
@@ -23,6 +26,19 @@ const Section = ({ title, blurb, children }: { title: string; blurb?: string; ch
 const Disclaimer = () => <p className="flex items-start gap-2 text-[11px] text-muted-foreground"><AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0" /> Teaching summaries for revision. Doses and regimens differ between hospitals and change over time: always follow your national guideline, the hospital formulary and your consultant or pharmacist.</p>;
 
 // ------------------------------------------------------------------ one drug
+/** The notes that mention this drug, so you can go from the drug back to the disease. */
+function NotesMentioning({ drugId }: { drugId: string }) {
+  const slugs = (noteDrugLinks.byDrug as Record<string, string[]>)[drugId] ?? [];
+  const notes = slugs.map((s) => findStaticNote(s)).filter((n): n is NonNullable<ReturnType<typeof findStaticNote>> => Boolean(n));
+  if (!notes.length) return null;
+  return (
+    <div>
+      <p className="font-bold text-foreground">In your notes</p>
+      <div className="mt-1 flex flex-wrap gap-1.5">{notes.map((n) => <Link key={n.slug} to={`/notes/${n.slug}`} className="rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-foreground hover:border-primary/50 hover:text-primary">{n.title.replace(/ \(.*\)$/, "")}</Link>)}</div>
+    </div>
+  );
+}
+
 export function DrugCard({ d, defaultOpen = false }: { d: PDrug; defaultOpen?: boolean }) {
   return (
     <details open={defaultOpen} className="group rounded-2xl border border-border bg-card">
@@ -41,6 +57,7 @@ export function DrugCard({ d, defaultOpen = false }: { d: PDrug; defaultOpen?: b
           <div className="rounded-lg bg-muted/50 p-2.5"><p className="font-bold text-foreground">Dose (teaching)</p><p className="text-muted-foreground">{d.dose}</p></div>
           <div className="rounded-lg bg-muted/50 p-2.5"><p className="font-bold text-foreground">Kidney, liver, pregnancy, children</p><p className="text-muted-foreground">{d.special}</p></div>
         </div>
+        <NotesMentioning drugId={d.id} />
         <Link to={`/pharmacology/drug/${d.id}`} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-bold text-primary-foreground">Test me on {d.name.split(" ")[0]} <ArrowRight className="h-3.5 w-3.5" /></Link>
       </div>
     </details>
@@ -120,6 +137,18 @@ export function CancerView() {
 
 // ------------------------------------------------------------------ conditions
 export function ConditionsView() {
+  const [sp] = useSearchParams();
+  const focus = sp.get("c");
+  useEffect(() => {
+    if (!focus) return;
+    const t = setTimeout(() => {
+      const li = document.getElementById(`cond-${focus}`);
+      if (!li) return;
+      li.querySelector("details")?.setAttribute("open", "");
+      li.scrollIntoView({ block: "start", behavior: "smooth" });
+    }, 150);
+    return () => clearTimeout(t);
+  }, [focus]);
   const [q, setQ] = useState("");
   const [group, setGroup] = useState<string>("all");
   const list = CONDITIONS.filter((c) => (group === "all" || c.group === group) && (!q || `${c.name} ${c.first.join(" ")} ${c.alt.join(" ")} ${c.pearl}`.toLowerCase().includes(q.toLowerCase())));
@@ -133,7 +162,7 @@ export function ConditionsView() {
       </div>
       <ul className="space-y-2">
         {list.map((c) => (
-          <li key={c.id}>
+          <li key={c.id} id={`cond-${c.id}`} className="scroll-mt-24">
             <details className="group rounded-2xl border border-border bg-card">
               <summary className="flex cursor-pointer list-none items-start justify-between gap-3 p-3.5"><span className="min-w-0"><span className="block text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{c.group}</span><span className="block font-serif text-base font-bold text-foreground">{c.name}</span><span className="mt-0.5 block text-xs text-primary">{c.first[0]}</span></span><ChevronDown className="mt-1 h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" /></summary>
               <div className="space-y-2.5 border-t border-border px-3.5 pb-4 pt-3 text-xs leading-relaxed sm:text-sm">
@@ -142,6 +171,7 @@ export function ConditionsView() {
                 <div className="rounded-lg bg-rose-500/10 p-2.5"><p className="font-bold text-rose-800">Avoid</p><ul className="list-disc space-y-0.5 pl-4 text-foreground">{c.avoid.map((x) => <li key={x}>{x}</li>)}</ul></div>
                 <p><b className="text-foreground">Monitor:</b> <span className="text-muted-foreground">{c.monitor}</span></p>
                 <p className="rounded-lg bg-primary/5 p-2.5 text-foreground"><b className="text-primary">Pearl:</b> {c.pearl}</p>
+                {STATIC_NOTES.filter((n) => n.condition === c.id).map((n) => <Link key={n.slug} to={`/notes/${n.slug}`} className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/5 px-3.5 py-1.5 text-xs font-bold text-primary hover:bg-primary/10">Read the note: {n.title} →</Link>)}
               </div>
             </details>
           </li>

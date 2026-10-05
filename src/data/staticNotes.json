@@ -57,7 +57,8 @@
     "description": "Year 4 psychiatry notes in 14 parts: mood versus affect, classification, mania, hypomania, major depression, bipolar I versus II, cyclothymia, differential diagnosis, investigations, acute and maintenance treatment, and the cost of untreated illness, with practice questions.",
     "updated": "2026-10-05",
     "file": "src/content/notes/psychiatry-bipolar-disorder.md",
-    "group": "Mood disorders"
+    "group": "Mood disorders",
+    "condition": "bipolar"
   },
   {
     "slug": "pneumonia",
@@ -67,7 +68,8 @@
     "title": "Pneumonia",
     "description": "Pneumonia: classification, causes, clinical features, CURB-65 severity, investigations, antibiotic management, complications and prevention, with practice questions.",
     "updated": "2026-10-06",
-    "file": "src/content/notes/respiratory-pneumonia.md"
+    "file": "src/content/notes/respiratory-pneumonia.md",
+    "condition": "cap"
   },
   {
     "slug": "pleural-effusion",
@@ -97,7 +99,8 @@
     "title": "Asthma",
     "description": "Asthma: pathophysiology, diagnosis, severity of acute attacks, emergency treatment and the long-term stepwise management.",
     "updated": "2026-10-06",
-    "file": "src/content/notes/respiratory-asthma.md"
+    "file": "src/content/notes/respiratory-asthma.md",
+    "condition": "asthma"
   },
   {
     "slug": "bronchitis",
@@ -117,7 +120,8 @@
     "title": "Chronic Obstructive Pulmonary Disease (COPD)",
     "description": "COPD: causes including biomass smoke, GOLD spirometry grades, stable-disease treatment, long-term oxygen, and managing an acute exacerbation.",
     "updated": "2026-10-06",
-    "file": "src/content/notes/respiratory-copd.md"
+    "file": "src/content/notes/respiratory-copd.md",
+    "condition": "copd"
   },
   {
     "slug": "bronchiectasis",
@@ -127,7 +131,8 @@
     "title": "Bronchiectasis",
     "description": "Bronchiectasis: causes, the vicious cycle, HRCT findings, airway clearance and antibiotic management, and complications.",
     "updated": "2026-10-06",
-    "file": "src/content/notes/respiratory-bronchiectasis.md"
+    "file": "src/content/notes/respiratory-bronchiectasis.md",
+    "condition": "bronchiectasis"
   },
   {
     "slug": "lung-abscess",
@@ -137,7 +142,8 @@
     "title": "Lung Abscess",
     "description": "Lung abscess: aspiration and other causes, anaerobic organisms, features, imaging, prolonged antibiotics and drainage.",
     "updated": "2026-10-06",
-    "file": "src/content/notes/respiratory-lung-abscess.md"
+    "file": "src/content/notes/respiratory-lung-abscess.md",
+    "condition": "lungabscess"
   },
   {
     "slug": "interstitial-lung-disease",
@@ -147,7 +153,8 @@
     "title": "Interstitial Lung Diseases",
     "description": "Interstitial lung disease: classification, idiopathic pulmonary fibrosis, sarcoidosis, hypersensitivity pneumonitis, HRCT patterns, restrictive lung function and treatment.",
     "updated": "2026-10-06",
-    "file": "src/content/notes/respiratory-interstitial-lung-disease.md"
+    "file": "src/content/notes/respiratory-interstitial-lung-disease.md",
+    "condition": "ipf"
   },
   {
     "slug": "occupational-lung-disease",
@@ -167,7 +174,8 @@
     "title": "DVT and Venous Thromboembolism (with Pulmonary Embolism)",
     "description": "DVT, VTE and pulmonary embolism: Virchow's triad, Wells scores, D-dimer and imaging, anticoagulation, massive PE and prophylaxis.",
     "updated": "2026-10-06",
-    "file": "src/content/notes/respiratory-dvt-vte-pulmonary-embolism.md"
+    "file": "src/content/notes/respiratory-dvt-vte-pulmonary-embolism.md",
+    "condition": "vte"
   },
   {
     "slug": "lung-cancer",
@@ -177,6 +185,7 @@
     "title": "Lung Cancer",
     "description": "Lung cancer: risk factors, small cell versus non-small cell types, clinical and paraneoplastic features, investigations, staging and treatment.",
     "updated": "2026-10-06",
-    "file": "src/content/notes/respiratory-lung-cancer.md"
+    "file": "src/content/notes/respiratory-lung-cancer.md",
+    "condition": "lungca"
   }
 ]

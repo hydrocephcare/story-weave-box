@@ -60,6 +60,18 @@ A **pneumothorax** is **air in the pleural space**, which allows the lung to **c
 - **COPD, TB and PCP** cause secondary pneumothorax: **a pneumothorax is more dangerous in lung disease.**
 - Advice about **flying and diving**.
 
+## Pharmacology at a glance
+
+Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot.
+
+| Drug | Class | Role here | Watch for |
+|---|---|---|---|
+| Paracetamol | Analgesic | First-line for pleuritic pain | Liver injury in overdose |
+| Ibuprofen | NSAID | Added for pain if no contraindication | Stomach irritation, kidney injury |
+| Morphine | Opioid analgesic | Severe pain, for example with a chest drain | Drowsiness, respiratory depression, constipation |
+
+**Oxygen** speeds reabsorption of air in a small pneumothorax. Local anaesthetic is used for the chest drain site, and the key treatment is mechanical: aspiration or a drain.
+
 ## Practice questions
 
 **1.** A 22-year-old tall, thin smoker has sudden pleuritic chest pain and mild breathlessness. Chest X-ray: 1 cm rim of air; he is comfortable. Best management:

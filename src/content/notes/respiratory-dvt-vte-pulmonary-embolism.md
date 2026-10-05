@@ -76,6 +76,21 @@
 - **Massive PE with shock → thrombolysis.**
 - **Pregnancy → LMWH only.**
 
+## Pharmacology at a glance
+
+Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [VTE drugs](/pharmacology?tab=conditions&c=vte).
+
+| Drug | Class | Role here | Watch for |
+|---|---|---|---|
+| Rivaroxaban | Direct oral anticoagulant (factor Xa inhibitor) | First-line treatment: 15 mg twice daily for 21 days, then 20 mg daily | Bleeding; avoid in severe kidney disease and pregnancy |
+| Apixaban | Direct oral anticoagulant (factor Xa inhibitor) | First-line: 10 mg twice daily for 7 days, then 5 mg twice daily | Bleeding; interactions with rifampicin |
+| Heparin | Low-molecular-weight heparin (enoxaparin) | Start at once; pregnancy and cancer; prophylaxis in hospital | Bleeding, low platelets |
+| Warfarin | Vitamin K antagonist | When DOACs are unavailable: INR 2–3 | Bleeding; many interactions; teratogenic |
+| Alteplase | Thrombolytic | Massive PE with shock | Major bleeding including intracranial |
+| Vitamin K | Reversal agent | Reverses warfarin if bleeding or INR very high | Slow onset (hours) |
+
+**Anticoagulate first when suspicion is high:** do not wait for the scan.
+
 ## Practice questions
 
 **1.** A 30-year-old woman on the combined pill has a swollen, painful left calf for 3 days. Wells score is 3. The next investigation is:

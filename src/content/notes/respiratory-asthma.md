@@ -72,6 +72,24 @@
 - Treat acute severe asthma with **oxygen, salbutamol, ipratropium, steroids, magnesium**.
 - **ICS is the cornerstone of long-term control**; **LABA never used alone**.
 
+## Pharmacology at a glance
+
+Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [asthma drugs, first-line to add-ons](/pharmacology?tab=conditions&c=asthma).
+
+| Drug | Class | Role here | Watch for |
+|---|---|---|---|
+| Salbutamol | Short-acting β₂-agonist | Rescue relief; nebulised in an acute attack | Tremor, palpitations, low potassium |
+| Ipratropium | Antimuscarinic | Added to salbutamol in acute severe asthma | Dry mouth, urinary retention |
+| Beclometasone | Inhaled corticosteroid | Preventer: the cornerstone of control | Oral thrush and hoarse voice (rinse the mouth) |
+| Budesonide–formoterol | Inhaled steroid plus long-acting β₂-agonist | Preventer and, in MART, the reliever too | Never use a long-acting β₂-agonist alone |
+| Montelukast | Leukotriene antagonist | Add-on, especially with allergic rhinitis | Sleep and mood change |
+| Tiotropium | Long-acting antimuscarinic | Add-on in severe asthma | Dry mouth |
+| Prednisolone | Systemic corticosteroid | Acute attacks, 5–7 days | High glucose, mood change, stomach irritation |
+| Magnesium sulfate | Smooth-muscle relaxant | IV in severe or life-threatening attacks | Flushing, low blood pressure; check reflexes |
+| Aminophylline | Methylxanthine | Specialist use in a refractory attack | Arrhythmia, seizures; check the level |
+
+**Avoid or take care:** beta-blockers (even eye drops) can trigger severe bronchospasm, and aspirin and other NSAIDs worsen asthma in aspirin-sensitive patients.
+
 ## Practice questions
 
 **1.** A 19-year-old with asthma cannot complete sentences, RR 28, HR 118, PEF 40% of best. This is:

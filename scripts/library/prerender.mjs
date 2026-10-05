@@ -9,6 +9,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { countFiles, fileBlurb, folderMeta, libraryPath, outlineMeta, prettyTitle, timetableMeta } from "../../src/lib/libraryMeta.js";
 import { mdToHtml } from "../../src/lib/miniMarkdown.js";
+import { linkDrugs } from "../../src/lib/noteLinks.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const dist = path.join(root, "dist");
@@ -134,9 +135,12 @@ try {
   // ---------------- notes that ship with the site ----------------
   try {
     const notes = JSON.parse(fs.readFileSync(path.join(root, "src/data/staticNotes.json"), "utf8"));
+    const drugs = JSON.parse(fs.readFileSync(path.join(root, "src/data/drugIndex.json"), "utf8"));
     for (const n of notes) {
       const md = fs.readFileSync(path.join(root, n.file), "utf8");
-      const { html: noteHtml } = mdToHtml(md, { skipTitle: true });
+      const { html: rawHtml } = mdToHtml(md, { skipTitle: true });
+      const noteHtml = linkDrugs(rawHtml, drugs).html;
+      const pharmHtml = n.condition ? `<p><a href="/pharmacology?tab=conditions&amp;c=${esc(n.condition)}">Drug guide for this condition in Pharmacology</a></p>` : "";
       const notePath = `/notes/${n.slug}`;
       const sibs = notes.filter((o) => o.unit === n.unit && o.group === n.group && o.slug !== n.slug);
       const sibHtml = sibs.length ? `<h2>More in ${esc(n.group ?? n.unit)}</h2><ul>${sibs.map((o) => `<li><a href="/notes/${o.slug}">${esc(o.title)}</a></li>`).join("")}</ul><p><a href="/notes">All study notes</a></p>` : "";
@@ -144,7 +148,7 @@ try {
       write(notePath, render({
         title, description: n.description, path: notePath, image: "/og-default.jpg",
         keywords: [n.title, `${n.unit} notes`, `Year ${n.year} MBChB`, "MKU psychiatry notes", "medical student notes Kenya"],
-        body: shell(crumbs([["Home", "/"], [`Year ${n.year}`, `/year/${n.year}`], [n.unit, null]]) + `<h1>${esc(n.title)}</h1><p>${esc(n.description)}</p><article>${noteHtml}</article>${sibHtml}` + credit),
+        body: shell(crumbs([["Home", "/"], [`Year ${n.year}`, `/year/${n.year}`], [n.unit, null]]) + `<h1>${esc(n.title)}</h1><p>${esc(n.description)}</p>${pharmHtml}<article>${noteHtml}</article>${sibHtml}` + credit),
         jsonLd: { "@context": "https://schema.org", "@type": "LearningResource", name: n.title, description: n.description, url: `${site}${notePath}`, dateModified: n.updated, inLanguage: "en", educationalLevel: `Year ${n.year} MBChB`, teaches: n.unit, author: { "@type": "Person", name: "Abongo Davis" }, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
       }), n.updated);
     }

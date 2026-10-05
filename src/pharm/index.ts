@@ -1,6 +1,7 @@
 import { DRUGS } from "@/clinical/extras/drugs";
 import { COMMON_DRUGS, CV, BLOOD, ENDO, RESP, INF, VIRAL, CNS, PAIN, GI, WOMEN, EMERG } from "./drugsCommon";
 import { CYTO, ONC_DRUGS, SUPPORT, TARGET } from "./drugsOnc";
+import { MORE_DRUGS } from "./drugsMore";
 import type { PDrug } from "./types";
 
 const GROUP_OF: Record<string, string> = {
@@ -22,6 +23,7 @@ export const DRUG_GROUPS = [CYTO, TARGET, SUPPORT, CV, BLOOD, ENDO, RESP, INF, V
 export const ALL_PDRUGS: PDrug[] = [
   ...ONC_DRUGS,
   ...COMMON_DRUGS,
+  ...MORE_DRUGS,
   ...DRUGS.map((d) => ({ ...d, group: GROUP_OF[d.id] ?? EMERG })),
 ];
 

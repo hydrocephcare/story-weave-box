@@ -12,6 +12,7 @@ import { AuthProvider } from "@/hooks/useAuth";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import ScrollToTop from "@/components/ScrollToTop";
+import ReturnToNote from "@/components/ReturnToNote";
 import { ScrollProgressBar, BackToTopButton } from "@/components/ScrollFX";
 import ContentProtection from "@/components/ContentProtection";
 import PurchaseResume from "@/components/PurchaseResume";
@@ -216,6 +217,7 @@ const App = () => (
           <Sonner />
           <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
             <ScrollToTop />
+            <ReturnToNote />
             <ScrollProgressBar />
             <BackToTopButton />
             <ContentProtection />

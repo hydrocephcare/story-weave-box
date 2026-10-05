@@ -24,12 +24,26 @@ type TabId = (typeof TABS)[number]["id"];
 
 function DrugDrill() {
   const { id } = useParams();
+  const [sp] = useSearchParams();
   const d = id ? pdrugById(id) : undefined;
   const [res, setRes] = useState<SeriesResult | null>(null);
   const [round, setRound] = useState(0);
   const qs = useMemo(() => (d ? drugQuestions(d) : []), [d, round]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => { if (d) updateMetaTags({ title: `${d.name} — pharmacology | Ompath Study`, description: d.why }); }, [d]);
   if (!d) return <Navigate to="/pharmacology" replace />;
+  if (sp.get("card") === "1") {
+    return (
+      <div className="mx-auto max-w-3xl space-y-4 px-4 py-6 sm:px-5">
+        <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary"><Link to="/pharmacology" className="hover:underline">Pharmacology</Link> › {d.group}</p>
+        <h1 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">{d.name}</h1>
+        <DrugCard d={d} defaultOpen />
+        <div className="flex flex-wrap gap-2">
+          <Link to={`/pharmacology/drug/${d.id}`} className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">Test me on {d.name.split(" ")[0]}</Link>
+          <Link to={`/pharmacology?tab=browse`} className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-bold">All drugs</Link>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="mx-auto max-w-3xl space-y-4 px-4 py-6 sm:px-5" key={`${d.id}-${round}`}>
       <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary"><Link to="/pharmacology" className="hover:underline">Pharmacology</Link> › {d.group}</p>

@@ -6,7 +6,7 @@
 // as a plain HTML page and adds it to the sitemap, so Google can read the full text.
 import meta from "./staticNotes.json";
 
-export interface StaticNote { slug: string; year: number; unit: string; group?: string; title: string; description: string; updated: string; file: string }
+export interface StaticNote { slug: string; year: number; unit: string; group?: string; /** id of the matching condition in the pharmacology guide */ condition?: string; title: string; description: string; updated: string; file: string }
 
 export const STATIC_NOTES: StaticNote[] = meta;
 

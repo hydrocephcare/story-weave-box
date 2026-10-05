@@ -78,6 +78,25 @@
 - **Oxygen target 88–92%** in an exacerbation.
 - **Kenya:** **biomass smoke** and **post-TB lung disease** are important causes.
 
+## Pharmacology at a glance
+
+Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [COPD drugs](/pharmacology?tab=conditions&c=copd).
+
+| Drug | Class | Role here | Watch for |
+|---|---|---|---|
+| Salbutamol | Short-acting β₂-agonist | Relief of breathlessness; nebulised in exacerbations | Tremor, palpitations, low potassium |
+| Ipratropium | Short-acting antimuscarinic | Nebulised with salbutamol in exacerbations | Dry mouth, urinary retention |
+| Tiotropium | Long-acting antimuscarinic (LAMA) | Maintenance bronchodilator | Dry mouth, urinary retention in older men |
+| Budesonide–formoterol | Inhaled steroid plus long-acting β₂-agonist | Add the steroid if frequent exacerbations and eosinophils 300/µL or more | Pneumonia risk with inhaled steroids, thrush |
+| Prednisolone | Systemic corticosteroid | Exacerbation: 30–40 mg for 5 days | High glucose, mood change |
+| Doxycycline | Tetracycline | Exacerbation with purulent sputum | Photosensitivity, oesophagitis (take upright with water) |
+| Amoxicillin | Penicillin | Alternative for a purulent exacerbation | Rash, diarrhoea, allergy |
+| Co-amoxiclav | Penicillin plus β-lactamase inhibitor | Resistant organisms or pneumonia | Diarrhoea, liver injury |
+| Azithromycin | Macrolide | Prevents exacerbations in former smokers with frequent attacks | QT prolongation, hearing loss |
+| Roflumilast | Phosphodiesterase-4 inhibitor | Severe COPD with chronic bronchitis and exacerbations | Weight loss, diarrhoea, low mood |
+
+**Oxygen is a drug too:** aim for 88–92% in an exacerbation; too much oxygen can worsen carbon dioxide retention.
+
 ## Practice questions
 
 **1.** A 62-year-old smoker has breathlessness. Post-bronchodilator FEV1/FVC 0.55 and FEV1 40% predicted. The GOLD grade is:

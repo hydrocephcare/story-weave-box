@@ -59,6 +59,22 @@
 - **Daily airway clearance** is the foundation of management.
 - **Kartagener syndrome:** bronchiectasis + sinusitis + situs inversus.
 
+## Pharmacology at a glance
+
+Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [bronchiectasis drugs](/pharmacology?tab=conditions&c=bronchiectasis).
+
+| Drug | Class | Role here | Watch for |
+|---|---|---|---|
+| Amoxicillin | Penicillin | Exacerbation with Haemophilus or pneumococcus (14 days) | Rash, diarrhoea |
+| Doxycycline | Tetracycline | Alternative for exacerbations | Photosensitivity, oesophagitis |
+| Ciprofloxacin | Fluoroquinolone | Pseudomonas exacerbations | Tendon injury, QT prolongation |
+| Azithromycin | Macrolide | Long-term prophylaxis if 3 or more exacerbations a year | QT prolongation, hearing loss; exclude non-tuberculous mycobacteria first |
+| Gentamicin | Aminoglycoside | Nebulised or IV for resistant Pseudomonas | Kidney and hearing damage; level monitoring |
+| Salbutamol | Short-acting β₂-agonist | Bronchodilator before airway clearance | Tremor, palpitations |
+| Prednisolone | Systemic corticosteroid | Allergic bronchopulmonary aspergillosis | High glucose, infection risk |
+
+**Culture first, then treat:** short courses relapse, so a full 14 days is the usual duration.
+
 ## Practice questions
 
 **1.** A 35-year-old man with daily large volumes of purulent sputum, clubbing and recurrent haemoptysis. The best diagnostic test is:

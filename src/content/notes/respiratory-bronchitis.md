@@ -48,6 +48,21 @@
 - **Exacerbations:** bronchodilators, **oral steroids**, and **antibiotics if sputum is purulent** (for example amoxicillin or doxycycline).
 - See the **COPD** note for complete management.
 
+## Pharmacology at a glance
+
+Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot.
+
+| Drug | Class | Role here | Watch for |
+|---|---|---|---|
+| Paracetamol | Analgesic and antipyretic | Fever and chest discomfort in acute bronchitis | Liver injury in overdose |
+| Ibuprofen | NSAID | Alternative for fever and aches | Stomach irritation; avoid in asthma if aspirin-sensitive |
+| Salbutamol | Short-acting β₂-agonist | Wheeze or chest tightness | Tremor, palpitations |
+| Amoxicillin | Penicillin | Only if systemically unwell, frail or in a purulent chronic bronchitis exacerbation | Rash, diarrhoea |
+| Doxycycline | Tetracycline | Alternative antibiotic for a purulent exacerbation | Photosensitivity, oesophagitis |
+| Azithromycin | Macrolide | Suspected pertussis (whooping cough) | QT prolongation |
+
+**Most acute bronchitis is viral:** antibiotics do not shorten it and are not routinely needed.
+
 ## Comparison
 
 | | **Acute bronchitis** | **Chronic bronchitis** |

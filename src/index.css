@@ -463,3 +463,7 @@ body.no-copy img {
   .note-body h2 { break-after: avoid; }
   .note-body li, .note-body .note-table tr { break-inside: avoid; }
 }
+
+/* Drug names in notes link to their pharmacology card */
+.note-body a.note-link { color: hsl(var(--primary)); text-decoration: underline dotted; text-decoration-thickness: 2px; text-underline-offset: 3px; font-weight: inherit; cursor: pointer; }
+.note-body a.note-link:hover { text-decoration-style: solid; }
