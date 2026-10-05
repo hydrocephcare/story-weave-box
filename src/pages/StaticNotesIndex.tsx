@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { Search } from "lucide-react";
 import { STATIC_NOTES, groupNotes } from "@/data/staticNotes";
 import { updateMetaTags } from "@/lib/seo";
+import ContentCredit from "@/components/ContentCredit";
 
 /** /notes: every note that ships with the site, by year, unit and topic. */
 export default function StaticNotesIndex() {
@@ -23,6 +24,7 @@ export default function StaticNotesIndex() {
       <nav aria-label="Breadcrumb" className="text-xs font-semibold text-muted-foreground"><Link to="/" className="hover:text-primary">Home</Link> › <span className="text-foreground">Notes</span></nav>
       <h1 className="mt-3 font-serif text-3xl font-bold text-foreground sm:text-4xl">Study notes</h1>
       <p className="mt-2 text-sm text-muted-foreground">{STATIC_NOTES.length} notes, each with a contents list and practice questions.{yearFilter ? <> Showing Year {yearFilter}. <Link to="/notes" className="font-bold text-primary hover:underline">Show all years</Link></> : null}</p>
+      <ContentCredit />
       <div className="relative mt-4 max-w-md">
         <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
         <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search notes, e.g. asthma, formulation" aria-label="Search notes" className="w-full rounded-lg border border-border bg-card py-2.5 pl-10 pr-3 text-[14.5px] text-foreground outline-none placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/25" />
