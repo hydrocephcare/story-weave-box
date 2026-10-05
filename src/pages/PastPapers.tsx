@@ -41,12 +41,12 @@ function PaperCard({ p }: { p: PaperNote }) {
 
 /** /papers: past papers by trimester, month and unit, and what each unit's papers have (and have not) asked from the course outline. */
 /** The scanned PDFs the papers were typed up from, so a student can check any question against the original page. */
-function ScanLibrary() {
+function ScanLibrary({ year }: { year: number }) {
   const scans = useMemo<DriveFile[]>(() => {
     const ids = new Map<string, string>();
-    for (const p of PAPER_NOTES) if (p.paper.driveId && !ids.has(p.paper.driveId)) ids.set(p.paper.driveId, p.paper.source || "Scanned papers");
+    for (const p of PAPER_NOTES) if (p.year === year && p.paper.driveId && !ids.has(p.paper.driveId)) ids.set(p.paper.driveId, p.paper.source || "Scanned papers");
     return [...ids].map(([id, name]) => [id, name, "pdf"] as DriveFile);
-  }, []);
+  }, [year]);
   const [open, setOpen] = useState<number | null>(null);
   if (!scans.length) return null;
   return (
@@ -68,6 +68,8 @@ function ScanLibrary() {
 export default function PastPapers() {
   const [params, setParams] = useSearchParams();
   const view = params.get("view") === "coverage" ? "coverage" : "papers";
+  const yr = [1, 2, 3, 4, 5, 6].includes(Number(params.get("year"))) ? Number(params.get("year")) : 4;
+  const here = useMemo(() => PAPER_NOTES.filter((p) => p.year === yr), [yr]);
   const now = trimesterOf(new Date());
   const trimParam = params.get("trim");
   const trim = trimParam === "all" || trimParam === null ? 0 : Number(trimParam);
@@ -82,10 +84,10 @@ export default function PastPapers() {
     });
   }, []);
 
-  const units = useMemo(() => [...new Set(PAPER_NOTES.map((p) => p.paper.outline))], []);
+  const units = useMemo(() => [...new Set(here.map((p) => p.paper.outline))], [here]);
   const coverageUnits = useMemo(() => [...new Set(PAPER_NOTES.flatMap((p) => p.paper.topics.map((t) => OWNER.get(t)).filter((o): o is string => Boolean(o))))], []);
-  const months = useMemo(() => [...new Set(PAPER_NOTES.map(monthOf).filter((m): m is number => m !== null))].sort((a, b) => a - b), []);
-  const filtered = useMemo(() => PAPER_NOTES.filter((p) => (!trim || p.paper.trimester === trim) && (!unit || p.paper.outline === unit) && (!month || monthOf(p) === month)).sort(bySitting), [trim, unit, month]);
+  const months = useMemo(() => [...new Set(here.map(monthOf).filter((m): m is number => m !== null))].sort((a, b) => a - b), [here]);
+  const filtered = useMemo(() => here.filter((p) => (!trim || p.paper.trimester === trim) && (!unit || p.paper.outline === unit) && (!month || monthOf(p) === month)).sort(bySitting), [here, trim, unit, month]);
   const order = [now, ...[1, 2, 3].filter((t) => t !== now)];
 
   const chip = (active: boolean) => `rounded-full border px-3 py-1 text-xs font-bold transition-colors ${active ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-muted-foreground hover:border-primary/50 hover:text-primary"}`;
@@ -95,11 +97,26 @@ export default function PastPapers() {
       <nav aria-label="Breadcrumb" className="text-xs font-semibold text-muted-foreground"><Link to="/" className="hover:text-primary">Home</Link> › <span className="text-foreground">Past papers</span></nav>
       <h1 className="mt-3 font-serif text-3xl font-bold text-foreground sm:text-4xl">Past papers</h1>
       <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-        {PAPER_NOTES.length} Mount Kenya University papers, sorted by the trimester they were sat in (Trimester 1 is September to December, 2 is January to April, 3 is May to August). Every question has an answer written for revision, not copied from the scan. It is now <strong className="text-foreground">Trimester {now}</strong>.
+        {PAPER_NOTES.length} typed-up Mount Kenya University papers (Years 4 and 6), plus the Year 1, 2 and 3 papers and CATs in the blog. Pick your year. Typed-up papers are sorted by the trimester they were sat in (Trimester 1 is September to December, 2 is January to April, 3 is May to August). Every question has an answer written for revision, not copied from the scan. It is now <strong className="text-foreground">Trimester {now}</strong>.
       </p>
 
       <ContentCredit />
-      <ScanLibrary />
+
+      <nav aria-label="Choose your year" className="no-scrollbar -mx-1 mt-4 flex gap-2 overflow-x-auto px-1 pb-1">
+        {[1, 2, 3, 4, 5, 6].map((y) => {
+          const n = PAPER_NOTES.filter((p) => p.year === y).length;
+          return (
+            <button key={y} type="button" onClick={() => set({ year: y === 4 ? null : String(y), trim: null, unit: null, month: null, view: null })} aria-pressed={yr === y} className={`shrink-0 ${chip(yr === y)}`}>
+              Year {y}{n > 0 && <span className="ml-1 opacity-70">{n}</span>}
+            </button>
+          );
+        })}
+      </nav>
+
+      {yr <= 3 ? <BlogPapers year={yr} /> : here.length === 0 ? (
+        <p className="mt-6 rounded-lg border border-dashed border-border p-6 text-center text-sm text-muted-foreground">Year {yr} papers are not on the site yet. They are being added year by year.</p>
+      ) : (<>
+      <ScanLibrary year={yr} />
 
       <div role="tablist" className="mt-5 flex gap-2">
         <button role="tab" aria-selected={view === "papers"} onClick={() => set({ view: null })} className={chip(view === "papers")}>Papers</button>
@@ -152,7 +169,39 @@ export default function PastPapers() {
       ) : (
         <Coverage unit={unit || coverageUnits[0]} units={coverageUnits} setUnit={(u) => set({ unit: u })} chip={chip} />
       )}
+      </>)}
     </div>
+  );
+}
+
+/** Years 1 to 3: the papers and CATs are blog articles, so this sends you straight to them. */
+function BlogPapers({ year }: { year: number }) {
+  const y = encodeURIComponent(`Year ${year}`);
+  const tile = "rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary/50";
+  return (
+    <section className="mt-6">
+      <h2 className="font-serif text-xl font-bold text-foreground">Year {year} past papers and CATs</h2>
+      <p className="mt-1 max-w-2xl text-sm text-muted-foreground">These are in the Year {year} blog, with the questions and answers set out as articles.</p>
+      {year === 3 ? (
+        <div className="mt-4 grid gap-3 sm:grid-cols-3">
+          {[1, 2, 3].map((sem) => (
+            <div key={sem} className={tile}>
+              <p className="text-[11px] font-bold uppercase tracking-wider text-primary">Semester {sem}</p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                <Link to={`/blog?year=${y}&sem=${sem}&resource=exam`} className="rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground hover:bg-primary/90">Past papers</Link>
+                <Link to={`/blog?year=${y}&sem=${sem}&resource=cat`} className="rounded-full border border-primary/40 bg-primary/5 px-3 py-1 text-xs font-bold text-primary hover:bg-primary/10">CATs</Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <Link to={`/blog?year=${y}&q=past%20paper`} className={tile}><p className="text-sm font-bold text-foreground">Year {year} past papers</p><p className="mt-0.5 text-xs text-muted-foreground">End-of-year and supplementary papers</p></Link>
+          <Link to={`/blog?year=${y}&q=CAT`} className={tile}><p className="text-sm font-bold text-foreground">Year {year} CATs</p><p className="mt-0.5 text-xs text-muted-foreground">Continuous assessment tests</p></Link>
+        </div>
+      )}
+      <p className="mt-4 text-xs text-muted-foreground">Looking for something else for Year {year}? <Link to={`/blog?year=${y}`} className="font-bold text-primary hover:underline">Open the whole Year {year} blog</Link>.</p>
+    </section>
   );
 }
 
