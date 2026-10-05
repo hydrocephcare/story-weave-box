@@ -1,6 +1,8 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { CheckCircle2, CircleDashed, FileText } from "lucide-react";
+import { CheckCircle2, CircleDashed, FileText, ScanLine } from "lucide-react";
+import DriveFileViewer, { type DriveFile } from "@/components/DriveFileViewer";
+import { startDownload } from "@/lib/driveDownload";
 import { COURSE_OUTLINES } from "@/data/courseOutlines";
 import { PAPER_NOTES, TRIMESTER_LABEL, trimesterOf, type PaperNote } from "@/data/staticNotes";
 import { updateMetaTags } from "@/lib/seo";
@@ -35,6 +37,31 @@ function PaperCard({ p }: { p: PaperNote }) {
 }
 
 /** /papers: past papers by trimester, month and unit, and what each unit's papers have (and have not) asked from the course outline. */
+/** The scanned PDFs the papers were typed up from, so a student can check any question against the original page. */
+function ScanLibrary() {
+  const scans = useMemo<DriveFile[]>(() => {
+    const ids = new Map<string, string>();
+    for (const p of PAPER_NOTES) if (p.paper.driveId && !ids.has(p.paper.driveId)) ids.set(p.paper.driveId, p.paper.source || "Scanned papers");
+    return [...ids].map(([id, name]) => [id, name, "pdf"] as DriveFile);
+  }, []);
+  const [open, setOpen] = useState<number | null>(null);
+  if (!scans.length) return null;
+  return (
+    <section className="mt-5 rounded-xl border border-border bg-card p-4">
+      <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-muted-foreground"><ScanLine className="h-4 w-4 text-primary" /> Scanned papers (PDF)</p>
+      <p className="mt-1 text-xs text-muted-foreground">The original scanned pages each paper was typed up from. Read them here, or download.</p>
+      <ul className="mt-2 grid gap-1.5">
+        {scans.map((s, i) => (
+          <li key={s[0]}>
+            <button type="button" onClick={() => setOpen(i)} className="flex w-full items-center gap-2 rounded-lg border border-border px-3 py-2 text-left text-sm font-semibold text-foreground hover:border-primary/50 hover:text-primary"><FileText className="h-4 w-4 shrink-0 text-primary" /> <span className="min-w-0 flex-1 truncate">{s[1].replace(/\.pdf$/i, "")}</span><span className="shrink-0 text-xs font-bold text-primary">Read</span></button>
+          </li>
+        ))}
+      </ul>
+      <DriveFileViewer items={scans} index={open} onIndexChange={setOpen} onDownload={(f) => startDownload(f[0], f[1])} where="Past papers" />
+    </section>
+  );
+}
+
 export default function PastPapers() {
   const [params, setParams] = useSearchParams();
   const view = params.get("view") === "coverage" ? "coverage" : "papers";
@@ -67,6 +94,8 @@ export default function PastPapers() {
       <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
         {PAPER_NOTES.length} Mount Kenya University papers, sorted by the trimester they were sat in (Trimester 1 is September to December, 2 is January to April, 3 is May to August). Every question has an answer written for revision, not copied from the scan. It is now <strong className="text-foreground">Trimester {now}</strong>.
       </p>
+
+      <ScanLibrary />
 
       <div role="tablist" className="mt-5 flex gap-2">
         <button role="tab" aria-selected={view === "papers"} onClick={() => set({ view: null })} className={chip(view === "papers")}>Papers</button>

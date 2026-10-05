@@ -66,7 +66,7 @@ export default function Navbar() {
   const [hidden, setHidden] = useState(false);
 
   const links = useMemo(() => {
-    const base: { to: string; label: string; icon: typeof Home; more?: boolean }[] = [
+    const base: { to: string; label: string; icon: typeof Home; more?: boolean; /** also shown in the phone menu's main list */ pin?: boolean }[] = [
       { to: "/", label: "Home", icon: Home },
       { to: "/blog", label: "Notes", icon: BookOpen },
       { to: "/exams", label: "Exams", icon: Trophy },
@@ -79,6 +79,7 @@ export default function Navbar() {
       { to: "/must-knows", label: "Must-Knows", icon: ListChecks, more: true },
       { to: "/daily", label: "Daily Dose", icon: Flame, more: true },
       { to: "/books", label: "Books", icon: BookMarked },
+      { to: "/papers", label: "Past papers", icon: ListChecks, more: true, pin: true },
       { to: "/revision-index", label: "Exam Revision", icon: ListChecks, more: true },
       { to: "/contests", label: "Mega Contest", icon: Trophy, more: true },
       { to: "/account", label: "Account", icon: UserRound, more: true },
@@ -239,16 +240,12 @@ fetchpriority="high" />
                   </div>
 
                   <div className="border-b border-white/10 px-3 py-3">
-                    {links.map((l) => (
+                    {links.filter((l) => !l.more || l.pin).map((l) => (
                       <Link
                         key={l.to}
                         to={l.to}
                         onClick={() => setSidebarOpen(false)}
-                        className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
-                          isActive(l.to)
-                            ? "bg-white/15 text-white"
-                            : "text-white/70 hover:text-white hover:bg-white/10"
-                        }`}
+                        className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${isActive(l.to) ? "bg-white/15 text-white" : "text-white/70 hover:text-white hover:bg-white/10"}`}
                       >
                         <l.icon className="h-4 w-4" />
                         {l.label}
@@ -256,65 +253,42 @@ fetchpriority="high" />
                     ))}
                   </div>
 
-                  <div className="px-3 py-3">
-                    <p className="mb-2 px-3 text-[10px] font-bold uppercase tracking-wider text-white/40">Academic Years</p>
-                    {YEAR_OPTIONS.map((yr) => {
-                      const isExpanded = expandedYear === yr;
-                      const isYearActive = activeYear === yr;
-                      return (
-                        <div key={yr} className="mb-1">
-                          <button
-                            onClick={() => {
-                              if (isExpanded) {
-                                setExpandedYear(null);
-                              } else {
-                                setExpandedYear(yr);
-                                selectYear(yr);
-                              }
-                            }}
-                            className={`flex w-full items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors ${
-                              isYearActive
-                                ? "bg-white/15 text-white"
-                                : "text-white/70 hover:text-white hover:bg-white/10"
-                            }`}
-                          >
-                            <span>Year {yr}</span>
-                            <ChevronRight
-                              className={`h-4 w-4 transition-transform duration-200 ${
-                                isExpanded ? "rotate-90" : ""
-                              }`}
-                            />
-                          </button>
-
-                          {isExpanded && (
-                            <div className="overflow-hidden">
-                              <div className="ml-3 border-l border-white/10 pl-3 py-1">
-                                {YEAR_SECTIONS.map((s) => {
-                                  const to = `/${s.path}?year=${encodeURIComponent(`Year ${yr}`)}`;
-                                  const active = activeSection === s.path && activeYear === yr;
-                                  return (
-                                    <Link
-                                      key={s.path}
-                                      to={to}
-                                      onClick={() => setSidebarOpen(false)}
-                                      className={`flex items-center gap-2.5 rounded-md px-3 py-2 text-[13px] font-medium transition-colors ${
-                                        active
-                                          ? "bg-white/15 text-white"
-                                          : "text-white/60 hover:text-white hover:bg-white/10"
-                                      }`}
-                                    >
-                                      <s.icon className="h-3.5 w-3.5" />
-                                      {s.label}
-                                    </Link>
-                                  );
-                                })}
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
+                  <div className="border-b border-white/10 px-3 py-3">
+                    <p className="mb-2 px-1 text-[10px] font-bold uppercase tracking-wider text-white/40">Academic years</p>
+                    <div className="grid grid-cols-6 gap-1.5">
+                      {YEAR_OPTIONS.map((yr) => (
+                        <Link
+                          key={yr}
+                          to={`/year/${yr}`}
+                          onClick={() => setSidebarOpen(false)}
+                          aria-label={`Year ${yr}`}
+                          className={`rounded-lg py-2 text-center text-sm font-bold transition-colors ${activeYear === yr ? "bg-white/20 text-white" : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"}`}
+                        >
+                          {yr}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
+
+                  <details className="group px-3 py-3" open={links.some((l) => l.more && !l.pin && isActive(l.to))}>
+                    <summary className="flex cursor-pointer list-none items-center justify-between rounded-lg px-1 py-1 text-[10px] font-bold uppercase tracking-wider text-white/40 [&::-webkit-details-marker]:hidden">
+                      More tools
+                      <ChevronDown className="h-3.5 w-3.5 transition-transform group-open:rotate-180" />
+                    </summary>
+                    <div className="mt-2">
+                      {links.filter((l) => l.more && !l.pin).map((l) => (
+                      <Link
+                        key={l.to}
+                        to={l.to}
+                        onClick={() => setSidebarOpen(false)}
+                        className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${isActive(l.to) ? "bg-white/15 text-white" : "text-white/70 hover:text-white hover:bg-white/10"}`}
+                      >
+                        <l.icon className="h-4 w-4" />
+                        {l.label}
+                      </Link>
+                      ))}
+                    </div>
+                  </details>
                 </div>
               </SheetContent>
             </Sheet>

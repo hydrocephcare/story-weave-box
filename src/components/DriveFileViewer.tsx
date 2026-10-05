@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { AlertTriangle, Check, ChevronLeft, ChevronRight, Download, Flag, Loader2, Maximize, Maximize2, Minimize, Minimize2, Moon, Network, StickyNote, Sun, X } from "lucide-react";
+import { AlertTriangle, Check, ChevronLeft, ChevronRight, Download, ExternalLink, Flag, Loader2, Maximize, Maximize2, Minimize, Minimize2, Moon, Network, RefreshCw, StickyNote, Sun, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import registry from "@/data/libraries.json";
 import { prettyTitle } from "@/lib/libraryMeta";
@@ -7,6 +7,7 @@ import ConnectedLearning from "@/components/ConnectedLearning";
 import { closeTab, openTab, useReaderTabs } from "@/lib/readerTabs";
 import { toggleBookRead, useBookShelf } from "@/lib/bookShelf";
 import { logStudy } from "@/lib/studyLog";
+import { bookSizeMB, formatMB } from "@/lib/bookSizes";
 
 export type DriveKind = "pdf" | "ppt" | "doc" | "video" | "img" | "zip" | "file";
 export type DriveFile = [id: string, name: string, kind: DriveKind];
@@ -63,6 +64,8 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
   const pos = file ? items.findIndex((x) => x[0] === file[0]) : -1;
 
   const [loaded, setLoaded] = useState(false);
+  const [reloadKey, setReloadKey] = useState(0);
+  const [slow, setSlow] = useState(false);
   const [failed, setFailed] = useState(false);
   const [panel, setPanel] = useState<"none" | "related" | "notes">("none");
   const [immersive, setImmersive] = useState(false);
@@ -83,7 +86,13 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, listId]);
 
-  useEffect(() => { setLoaded(false); setFailed(false); }, [file?.[0]]);
+  useEffect(() => { setLoaded(false); setFailed(false); setSlow(false); }, [file?.[0], reloadKey]);
+  // A big book can take a while to open on Drive; say so after a few seconds instead of leaving a blank page.
+  useEffect(() => {
+    if (!open || loaded) return;
+    const t = window.setTimeout(() => setSlow(true), 7000);
+    return () => window.clearTimeout(t);
+  }, [open, loaded, file?.[0], reloadKey]);
   useEffect(() => { if (!open) { setPanel("none"); setImmersive(false); } }, [open]);
 
   // Notes for the file you are reading, saved as you type.
@@ -210,7 +219,7 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
                   <div className="min-w-[55%] flex-1 sm:min-w-0">
                     <DialogTitle className="line-clamp-2 text-sm font-bold leading-snug">{cleanName(file[1])}</DialogTitle>
                     <DialogDescription className="text-[11px]">
-                      {pos >= 0 ? `${pos + 1} of ${items.length}` : "Open tab"}{where ? ` · ${where}` : ""}{minutes > 0 ? ` · ${minutes} min reading` : ""}
+                      {pos >= 0 ? `${pos + 1} of ${items.length}` : "Open tab"}{where ? ` · ${where}` : ""}{bookSizeMB(file[0]) !== undefined ? ` · ${formatMB(bookSizeMB(file[0]) as number)}` : ""}{minutes > 0 ? ` · ${minutes} min reading` : ""}
                     </DialogDescription>
                   </div>
                   <div className="no-scrollbar flex w-full items-center justify-start gap-1.5 overflow-x-auto sm:w-auto sm:justify-end">
@@ -258,6 +267,8 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
                   {!loaded && canPreview(file[2]) && (
                     <div className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center gap-2 bg-muted/60 text-xs font-semibold text-muted-foreground">
                       <Loader2 className="h-6 w-6 animate-spin text-primary" /> Opening file…
+                      {bookSizeMB(file[0]) !== undefined && <span className="font-normal">{formatMB(bookSizeMB(file[0]) as number)}{(bookSizeMB(file[0]) as number) >= 20 ? ", a big book, so it can take a minute" : ""}</span>}
+                      {slow && <span className="pointer-events-auto mt-1 max-w-xs px-4 font-normal">Still loading. You can wait, or <a href={`https://drive.google.com/file/d/${encodeURIComponent(file[0])}/view`} target="_blank" rel="noopener noreferrer" className="font-bold text-primary underline">open it in Drive</a>.</span>}
                     </div>
                   )}
                   {file[2] === "img" ? (
@@ -275,7 +286,7 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
                     </div>
                   ) : canPreview(file[2]) ? (
                     <iframe
-                      key={file[0]}
+                      key={`${file[0]}-${reloadKey}`}
                       src={previewUrl(file[0])}
                       title={cleanName(file[1])}
                       className="h-full w-full border-0"
@@ -299,7 +310,9 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
 
             {!immersive && !isBroken && canPreview(file[2]) && (
               <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 border-t border-border px-4 py-1.5 text-[11px] text-muted-foreground">
-                Blank or very slow? Google Drive may be busy.
+                Blank or very slow?
+                <button type="button" onClick={() => setReloadKey((k) => k + 1)} className="inline-flex items-center gap-1 font-bold text-primary hover:underline"><RefreshCw className="h-3 w-3" /> Reload</button>
+                <a href={`https://drive.google.com/file/d/${encodeURIComponent(file[0])}/view`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-bold text-primary hover:underline"><ExternalLink className="h-3 w-3" /> Open in Drive</a>
                 <a href={reportUrl(file, where)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-bold text-primary hover:underline"><Flag className="h-3 w-3" /> Report this file</a>
                 <span className="hidden sm:inline">Keys: ← → files · N night · I focus · F full screen</span>
               </p>

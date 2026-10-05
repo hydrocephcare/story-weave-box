@@ -5,12 +5,13 @@ import DriveFileViewer, { thumbUrl, type DriveFile } from "@/components/DriveFil
 import { startDownload } from "@/lib/driveDownload";
 import { updateMetaTags } from "@/lib/seo";
 import { fetchProtected } from "@/lib/protectedData";
+import { bookSizeMB, formatMB, setBookSizes } from "@/lib/bookSizes";
 import { addRecentBook, toggleBookRead, toggleSavedBook, useBookShelf, type ShelfBook } from "@/lib/bookShelf";
 
 type Book = [id: string, name: string, type: number];
 interface Subject { name: string; b: number[]; units: string[]; also: number[] }
 interface Shelf { key: string; label: string; blurb: string; subjects: Subject[] }
-interface Data { types: string[]; books: Book[]; shelves: Shelf[]; /** Book ids with a cover rendered into public/covers. */ local?: string[] }
+interface Data { types: string[]; books: Book[]; shelves: Shelf[]; /** Book ids with a cover rendered into public/covers. */ local?: string[]; /** Size of each book in MB, by Drive id. */ sizes?: Record<string, number> }
 
 const slug = (s: string) => s.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const YEAR_KEY = (y: number) => `year-${y}`;
@@ -21,7 +22,7 @@ function useBooks() {
   const [error, setError] = useState(false);
   useEffect(() => {
     let on = true;
-    fetchProtected<Data>("books.json").then((d) => { if (on) setData(d); }).catch(() => { if (on) setError(true); });
+    fetchProtected<Data>("books.json").then((d) => { setBookSizes(d.sizes); if (on) setData(d); }).catch(() => { if (on) setError(true); });
     return () => { on = false; };
   }, []);
   return { data, error };
@@ -207,6 +208,7 @@ export default function BooksPage() {
         <span className="flex min-w-0 flex-1 flex-col gap-1">
           <span className="text-[14.5px] font-semibold leading-snug text-foreground">{r.book[1]}</span>
           <span className="text-[11.5px] text-muted-foreground">{data.types[r.book[2]]}{r.where ? ` · ${r.where}` : ""}</span>
+          {bookSizeMB(r.book[0]) !== undefined && <span className="text-[11px] font-semibold text-muted-foreground/80">{formatMB(bookSizeMB(r.book[0]) as number)}</span>}
         </span>
       </button>
     </li>
