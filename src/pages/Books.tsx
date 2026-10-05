@@ -6,6 +6,7 @@ import { startDownload } from "@/lib/driveDownload";
 import { updateMetaTags } from "@/lib/seo";
 import { fetchProtected } from "@/lib/protectedData";
 import { bookSizeMB, formatMB, setBookSizes } from "@/lib/bookSizes";
+import ContentCredit from "@/components/ContentCredit";
 import { addRecentBook, toggleBookRead, toggleSavedBook, useBookShelf, type ShelfBook } from "@/lib/bookShelf";
 
 type Book = [id: string, name: string, type: number];
@@ -67,16 +68,7 @@ function Header({ title, blurb, trail, children }: { title: string; blurb?: stri
         <Crumbs trail={trail} />
         <h1 className="font-serif text-2xl font-bold text-foreground sm:text-4xl">{title}</h1>
         {blurb && <p className="max-w-2xl text-sm text-muted-foreground">{blurb}</p>}
-        <div className="mt-3 flex items-center gap-3 rounded-xl border border-primary/20 bg-primary/5 px-3.5 py-2.5">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary" aria-hidden>
-            <BookOpen className="h-4 w-4" />
-          </div>
-          <div className="min-w-0">
-            <p className="text-[11px] font-bold uppercase tracking-wider text-primary">OmpathStudy Books</p>
-            <p className="text-[13px] font-semibold text-foreground">Compiled by Abongo</p>
-            <p className="text-[11px] text-muted-foreground">Organised and prepared for medical students.</p>
-          </div>
-        </div>
+        <ContentCredit />
         {children}
       </div>
     </section>
