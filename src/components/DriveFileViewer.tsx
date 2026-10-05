@@ -220,10 +220,36 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
     { k: "done", label: finished ? "Finished" : "Mark done", icon: Check, run: () => toggleBookRead(file[0]), disabled: false, pressed: finished },
   ] : [];
 
-  // Focus: after a few seconds with nothing touched, the toolbar tucks away again.
+  // Focus controls: reveal the toolbar when the user moves/touches near the top or scrolls upward.
+  // The Drive preview itself is a cross-origin iframe, so its internal taps/scrolls cannot be
+  // observed by the parent page. The persistent Controls button below provides a reliable exit
+  // from focus even when the document is being viewed inside that iframe.
   useEffect(() => {
-    if (!immersive || !barShown || toolsOpen) return;
-    const t = window.setTimeout(() => { if (!hovering.current) setBarShown(false); }, 4000);
+    if (!immersive) return;
+    const reveal = (e: Event) => {
+      const point = (e as MouseEvent).clientY ?? (e as TouchEvent).touches?.[0]?.clientY ?? 999;
+      if (point <= 88) setBarShown(true);
+    };
+    const onWheel = (e: WheelEvent) => {
+      if (e.deltaY < -4) setBarShown(true);
+    };
+    const onKey = () => setBarShown(true);
+    window.addEventListener("pointermove", reveal);
+    window.addEventListener("touchstart", reveal, { passive: true });
+    window.addEventListener("wheel", onWheel, { passive: true });
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("pointermove", reveal);
+      window.removeEventListener("touchstart", reveal);
+      window.removeEventListener("wheel", onWheel);
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [immersive]);
+
+  // Keep the focus toolbar visible briefly after it is revealed, then tuck it away again.
+  useEffect(() => {
+    if (!immersive || !barShown || toolsOpen || hovering.current) return;
+    const t = window.setTimeout(() => setBarShown(false), 5000);
     return () => window.clearTimeout(t);
   }, [immersive, barShown, toolsOpen]);
 
@@ -291,20 +317,31 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
                 )}
             </div>
             {immersive && (
-              <button type="button" onClick={() => { setBarShown(false); setImmersive(false); }} aria-label="Leave focus mode" className="absolute bottom-3 left-3 z-30 inline-flex h-10 items-center gap-1.5 rounded-full bg-foreground/80 px-4 text-xs font-bold text-background shadow-lg backdrop-blur"><Minimize2 className="h-4 w-4" /> Exit focus</button>
+              <div className="absolute bottom-3 left-3 z-30 flex items-center gap-2">
+                <button type="button" onClick={() => { setBarShown(false); setImmersive(false); }} aria-label="Leave focus mode" className="inline-flex h-10 items-center gap-1.5 rounded-full bg-foreground/80 px-4 text-xs font-bold text-background shadow-lg backdrop-blur">
+                  <Minimize2 className="h-4 w-4" /> Exit focus
+                </button>
+                {!barShown && (
+                  <button type="button" onClick={() => { setToolsOpen(false); setBarShown(true); }} aria-label="Show reading controls" className="inline-flex h-10 items-center gap-1.5 rounded-full border border-border bg-background/90 px-4 text-xs font-bold text-foreground shadow-lg backdrop-blur">
+                    <MoreVertical className="h-4 w-4" /> Controls
+                  </button>
+                )}
+              </div>
             )}
             {immersive && !barShown && (
               <>
-                {/* A thin strip at the top edge: hover it, tap it or swipe down on it to bring the toolbar back. */}
+                {/* Top-edge reveal area for mouse/touch users. The Controls button remains available
+                    when the file preview is an iframe and therefore captures its own pointer events. */}
                 <div
-                  aria-hidden
-                  className="absolute left-0 right-16 top-0 z-20 h-10"
+                  className="absolute left-0 right-16 top-0 z-20 h-12"
                   onMouseEnter={() => setBarShown(true)}
                   onTouchStart={(e) => { lastY.current = e.touches[0]?.clientY ?? 0; }}
                   onTouchMove={(e) => { if ((e.touches[0]?.clientY ?? 0) - lastY.current > 10) setBarShown(true); }}
                   onClick={() => setBarShown(true)}
                 />
-                <button type="button" onClick={() => setBarShown(true)} aria-label="Show the toolbar" className="absolute left-1/2 top-0 z-20 -translate-x-1/2 rounded-b-full bg-foreground/75 px-4 pb-0.5 pt-0 text-background shadow backdrop-blur"><ChevronDown className="h-4 w-4" /></button>
+                <button type="button" onClick={() => setBarShown(true)} aria-label="Show the toolbar" className="absolute left-1/2 top-0 z-20 -translate-x-1/2 rounded-b-full bg-foreground/75 px-4 pb-0.5 pt-0 text-background shadow backdrop-blur">
+                  <ChevronDown className="h-4 w-4" />
+                </button>
               </>
             )}
 
