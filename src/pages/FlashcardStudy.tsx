@@ -143,7 +143,7 @@ function FlashcardStudyInner({ set }: { set: FlashcardSet }) {
         </div>
       </header>
 
-      <KeywordLinkProvider currentPath={buildFlashcardPath(set)}>
+      <KeywordLinkProvider currentPath={buildFlashcardPath(set)} currentTitle={set.title}>
         <FlashcardViewer cards={set.cards} title={set.title} setId={set.id} />
       </KeywordLinkProvider>
 

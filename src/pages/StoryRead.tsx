@@ -329,7 +329,7 @@ export default function StoryRead() {
 
         {/* Article body */}
         <article className="prose-custom">
-          <KeywordLinkProvider currentPath={buildStoryPath({ id: story.id, title: story.title })}>
+          <KeywordLinkProvider currentPath={buildStoryPath({ id: story.id, title: story.title })} currentTitle={story.title}>
             <StoryContentBody storyContent={storyContent} isHtml={isHtml} renderMarkdown={renderMarkdown} />
           </KeywordLinkProvider>
         </article>

@@ -5,9 +5,12 @@ import { isPublicStudyTitle } from "@/lib/content-policy";
 import { buildBlogPath, buildFlashcardPath } from "@/lib/store";
 import { slugify } from "@/lib/deep-link";
 import { buildStoryPath, stripRichText } from "@/lib/seo";
+import drugIndex from "@/data/drugIndex.json";
+import { drugHref } from "@/lib/noteLinks";
+import { setNoteReturn } from "@/lib/noteReturn";
 
 export type LinkEntry = { term: string; path: string; lower: string; target: string; category?: string | null; quality: number };
-interface Ctx { entries: LinkEntry[]; used: Set<string>; usedTargets: Set<string>; currentPath: string | null; currentCategory: string | null }
+interface Ctx { entries: LinkEntry[]; used: Set<string>; usedTargets: Set<string>; currentPath: string | null; currentCategory: string | null; currentTitle: string | null }
 const KeywordLinkContext = createContext<Ctx | null>(null);
 let cache: LinkEntry[] | null = null;
 let cachePromise: Promise<LinkEntry[]> | null = null;
@@ -115,16 +118,24 @@ async function loadEntries(): Promise<LinkEntry[]> {
         f.meta_description, [], f.category, 8,
       ));
       (stories || []).filter((s) => isPublicStudyTitle(s.title)).forEach(s => aliases(s.meta_title || s.title, buildStoryPath(s), s.meta_description, [], null, 6));
+      for (const d of drugIndex as { id: string; name: string; terms: string[] }[]) {
+        for (const term of d.terms) {
+          const key = `${drugHref(d.id)}|${term}`;
+          if (term.length < 5 || seen.has(key)) continue;
+          seen.add(key);
+          entries.push({ term, lower: term, path: drugHref(d.id), target: "", category: null, quality: 26 });
+        }
+      }
       entries.sort((a,b) => b.term.length-a.term.length || b.quality-a.quality); cache=entries; return entries;
     } catch { return []; }
   })();
   return cachePromise;
 }
 
-export function KeywordLinkProvider({ currentPath, currentCategory, children }: { currentPath?: string; currentCategory?: string; children: ReactNode }) {
+export function KeywordLinkProvider({ currentPath, currentCategory, currentTitle, children }: { currentPath?: string; currentCategory?: string; currentTitle?: string; children: ReactNode }) {
   const [entries,setEntries]=useState<LinkEntry[]>(cache||[]);
   useEffect(()=>{ loadEntries().then(setEntries); },[]);
-  const ctx=useMemo<Ctx>(()=>({entries,used:new Set(),usedTargets:new Set(),currentPath:currentPath||null,currentCategory:currentCategory||null}),[entries,currentPath,currentCategory]);
+  const ctx=useMemo<Ctx>(()=>({entries,used:new Set(),usedTargets:new Set(),currentPath:currentPath||null,currentCategory:currentCategory||null,currentTitle:currentTitle||null}),[entries,currentPath,currentCategory,currentTitle]);
   return <KeywordLinkContext.Provider value={ctx}>{children}</KeywordLinkContext.Provider>;
 }
 
@@ -151,7 +162,7 @@ export function linkifyText(text: string, ctx: Ctx | null, keyPrefix = "k"): Rea
     used.add(entry.lower);
     usedTargets.add(entry.path);
     if (before) out.push(<span key={`${keyPrefix}-b-${i}`}>{before}</span>);
-    out.push(<DeepLinkSpan key={`${keyPrefix}-l-${i}`} path={`${entry.path}#${entry.target || slugify(matched)}`} title={entry.term} label={matched} />);
+    out.push(<DeepLinkSpan key={`${keyPrefix}-l-${i}`} path={entry.path.startsWith("/pharmacology") ? entry.path : `${entry.path}#${entry.target || slugify(matched)}`} title={entry.term} label={matched} returnTitle={ctx.currentTitle} />);
     rest = rest.slice(index + matched.length);
     if (++i > 28) {
       out.push(rest);
@@ -161,8 +172,10 @@ export function linkifyText(text: string, ctx: Ctx | null, keyPrefix = "k"): Rea
   return <>{out}</>;
 }
 
-function DeepLinkSpan({ path, title, label }: { path: string; title: string; label: string }) {
+function DeepLinkSpan({ path, title, label, returnTitle }: { path: string; title: string; label: string; returnTitle?: string | null }) {
   const navigate = useNavigate();
+  /** Remember this spot so the Back button on the next page returns here, to the same scroll position. */
+  const remember = () => setNoteReturn({ path: `${window.location.pathname}${window.location.search}`, title: returnTitle || document.title.split(" | ")[0] || "the note", y: window.scrollY });
   return (
     <span
       role="link"
@@ -174,12 +187,14 @@ function DeepLinkSpan({ path, title, label }: { path: string; title: string; lab
         try {
           sessionStorage.setItem("deep_link_return", `${window.location.pathname}${window.location.search}${window.location.hash}|${window.scrollY}`);
         } catch { /* private-browsing / quota — the deep-link still navigates, just without a scroll-back position */ }
+        remember();
         navigate(path);
       }}
       onKeyDown={(e) => {
         if (e.key !== "Enter" && e.key !== " ") return;
         e.preventDefault();
         e.stopPropagation();
+        remember();
         navigate(path);
       }}
       aria-label={`${label}: open the detailed ${title} study page`}

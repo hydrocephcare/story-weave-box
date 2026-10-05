@@ -67,3 +67,39 @@ export function linkDrugs(html, drugs) {
   }).join("");
   return { html: out, ids };
 }
+
+/** Drug ids mentioned in plain text, in order of first appearance. Used for notes that are not written in markdown. */
+export function findDrugIds(text, drugs, limit = 14) {
+  if (!text || !drugs?.length) return [];
+  const lower = String(text).toLowerCase();
+  const hits = [];
+  for (const d of drugs) {
+    let at = -1;
+    for (const t of d.terms) {
+      const re = new RegExp(`(^|[^a-z0-9-])${escRe(t)}(?![a-z0-9-])`, "i");
+      const m = lower.match(re);
+      if (m && (at < 0 || m.index < at)) at = m.index;
+    }
+    if (at >= 0) hits.push({ id: d.id, at });
+  }
+  return hits.sort((a, b) => a.at - b.at).slice(0, limit).map((h) => h.id);
+}
+
+// Words in a note's title that point at a condition in the pharmacology guide.
+const CONDITION_WORDS = {
+  htn: ["hypertension"], t2dm: ["type 2 diabetes", "diabetes mellitus"], hfref: ["heart failure"], acs: ["acute coronary", "myocardial infarction"],
+  af: ["atrial fibrillation"], asthma: ["asthma"], copd: ["copd", "chronic obstructive"], cap: ["pneumonia"], uti: ["urinary tract infection"],
+  tb: ["tuberculosis"], hiv: ["hiv infection", "hiv/aids"], malaria: ["malaria"], epilepsy: ["epilepsy"], depression: ["depression", "depressive"],
+  schizophrenia: ["schizophrenia"], bipolar: ["bipolar"], hypothyroid: ["hypothyroid"], hyperthyroid: ["hyperthyroid", "thyrotoxicosis", "graves"],
+  pud: ["peptic ulcer", "pylori"], gout: ["gout"], ra: ["rheumatoid"], ida: ["iron deficiency", "iron-deficiency"], scd: ["sickle cell"],
+  htnpreg: ["pre-eclampsia", "preeclampsia"], pph: ["postpartum haemorrhage", "postpartum hemorrhage"], sepsis: ["sepsis", "septic shock"],
+  anaphylaxis: ["anaphylaxis"], status: ["status epilepticus"], hyperk: ["hyperkalaemia", "hyperkalemia"], vte: ["thromboembolism", "pulmonary embolism", "deep vein thrombosis", "dvt"],
+  ipf: ["pulmonary fibrosis", "interstitial lung"], bronchiectasis: ["bronchiectasis"], lungabscess: ["lung abscess"], lungca: ["lung cancer", "bronchogenic"],
+  breast: ["breast cancer"], hodgkin: ["hodgkin"], cml: ["chronic myeloid"], cervix: ["cervical cancer"], kaposi: ["kaposi"], colon: ["colorectal", "colon cancer"], prostate: ["prostate cancer"],
+};
+
+/** Ids of the pharmacology conditions whose name appears in a title (or category). */
+export function matchConditions(text) {
+  const t = String(text || "").toLowerCase();
+  return Object.entries(CONDITION_WORDS).filter(([, words]) => words.some((w) => t.includes(w))).map(([id]) => id);
+}

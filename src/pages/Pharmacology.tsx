@@ -36,7 +36,7 @@ function DrugDrill() {
       <div className="mx-auto max-w-3xl space-y-4 px-4 py-6 sm:px-5">
         <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary"><Link to="/pharmacology" className="hover:underline">Pharmacology</Link> › {d.group}</p>
         <h1 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">{d.name}</h1>
-        <DrugCard d={d} defaultOpen />
+        <DrugCard d={d} defaultOpen lookupNotes />
         <div className="flex flex-wrap gap-2">
           <Link to={`/pharmacology/drug/${d.id}`} className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">Test me on {d.name.split(" ")[0]}</Link>
           <Link to={`/pharmacology?tab=browse`} className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-bold">All drugs</Link>
@@ -56,7 +56,7 @@ function DrugDrill() {
       ) : (
         <>
           <ResultCard title="Drug drill complete" pct={res.pct} />
-          <DrugCard d={d} defaultOpen />
+          <DrugCard d={d} defaultOpen lookupNotes />
           <div className="flex flex-wrap gap-2">
             <button type="button" onClick={() => { setRes(null); setRound((r) => r + 1); }} className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-bold hover:border-primary/50"><RotateCcw className="h-4 w-4" /> Again</button>
             <Link to={`/pharmacology/drug/${ALL_PDRUGS[Math.floor(Math.random() * ALL_PDRUGS.length)].id}`} className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">Random drug</Link>

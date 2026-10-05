@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { STATIC_NOTES, findStaticNote } from "@/data/staticNotes";
 import noteDrugLinks from "@/data/noteDrugLinks.json";
+import { supabase } from "@/integrations/supabase/client";
+import { buildBlogPath } from "@/lib/store";
 import { Link } from "react-router-dom";
 import { AlertTriangle, ArrowRight, CalendarDays, ChevronDown, FlaskConical, Search, ShieldAlert, Sparkles } from "lucide-react";
 import { ALL_PDRUGS, DRUG_GROUPS, isCancer } from "@/pharm";
@@ -27,19 +29,33 @@ const Disclaimer = () => <p className="flex items-start gap-2 text-[11px] text-m
 
 // ------------------------------------------------------------------ one drug
 /** The notes that mention this drug, so you can go from the drug back to the disease. */
-function NotesMentioning({ drugId }: { drugId: string }) {
+function NotesMentioning({ drugId, term }: { drugId: string; term?: string }) {
   const slugs = (noteDrugLinks.byDrug as Record<string, string[]>)[drugId] ?? [];
-  const notes = slugs.map((s) => findStaticNote(s)).filter((n): n is NonNullable<ReturnType<typeof findStaticNote>> => Boolean(n));
-  if (!notes.length) return null;
+  const own = slugs.map((s) => findStaticNote(s)).filter((n): n is NonNullable<ReturnType<typeof findStaticNote>> => Boolean(n));
+  // Notes from the database that mention the drug: looked up only when asked for, so a long list of cards stays quick.
+  const [db, setDb] = useState<{ id: string; title: string; slug: string | null }[]>([]);
+  useEffect(() => {
+    if (!term) return;
+    let on = true;
+    Promise.resolve(supabase.from("articles").select("id,title,slug").eq("published", true).is("deleted_at", null).ilike("content", `%${term}%`).limit(6))
+      .then((r) => { if (on) setDb((r.data ?? []) as { id: string; title: string; slug: string | null }[]); })
+      .catch(() => { /* offline: the notes written for the site still show */ });
+    return () => { on = false; };
+  }, [term]);
+  if (!own.length && !db.length) return null;
+  const chip = "rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-foreground hover:border-primary/50 hover:text-primary";
   return (
     <div>
       <p className="font-bold text-foreground">In your notes</p>
-      <div className="mt-1 flex flex-wrap gap-1.5">{notes.map((n) => <Link key={n.slug} to={`/notes/${n.slug}`} className="rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-foreground hover:border-primary/50 hover:text-primary">{n.title.replace(/ \(.*\)$/, "")}</Link>)}</div>
+      <div className="mt-1 flex flex-wrap gap-1.5">
+        {own.map((n) => <Link key={n.slug} to={`/notes/${n.slug}`} className={chip}>{n.title.replace(/ \(.*\)$/, "")}</Link>)}
+        {db.map((a) => <Link key={a.id} to={buildBlogPath({ id: a.id, title: a.title, slug: a.slug ?? undefined })} className={chip}>{a.title.length > 60 ? `${a.title.slice(0, 58)}…` : a.title}</Link>)}
+      </div>
     </div>
   );
 }
 
-export function DrugCard({ d, defaultOpen = false }: { d: PDrug; defaultOpen?: boolean }) {
+export function DrugCard({ d, defaultOpen = false, lookupNotes = false }: { d: PDrug; defaultOpen?: boolean; lookupNotes?: boolean }) {
   return (
     <details open={defaultOpen} className="group rounded-2xl border border-border bg-card">
       <summary className="flex cursor-pointer list-none items-start gap-3 p-3.5 sm:p-4">
@@ -57,7 +73,7 @@ export function DrugCard({ d, defaultOpen = false }: { d: PDrug; defaultOpen?: b
           <div className="rounded-lg bg-muted/50 p-2.5"><p className="font-bold text-foreground">Dose (teaching)</p><p className="text-muted-foreground">{d.dose}</p></div>
           <div className="rounded-lg bg-muted/50 p-2.5"><p className="font-bold text-foreground">Kidney, liver, pregnancy, children</p><p className="text-muted-foreground">{d.special}</p></div>
         </div>
-        <NotesMentioning drugId={d.id} />
+        <NotesMentioning drugId={d.id} term={lookupNotes ? d.name.split(/[\/( ]/)[0].toLowerCase() : undefined} />
         <Link to={`/pharmacology/drug/${d.id}`} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-bold text-primary-foreground">Test me on {d.name.split(" ")[0]} <ArrowRight className="h-3.5 w-3.5" /></Link>
       </div>
     </details>

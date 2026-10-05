@@ -1,5 +1,9 @@
 import { useState, useEffect, useMemo, useLayoutEffect, forwardRef, memo } from "react";
 import ConnectedLearning from "@/components/ConnectedLearning";
+import PharmacologyConnections from "@/components/PharmacologyConnections";
+import drugIndex from "@/data/drugIndex.json";
+import { findDrugIds, matchConditions } from "@/lib/noteLinks";
+import { setNoteReturn } from "@/lib/noteReturn";
 import SearchHighlightBar from "@/components/SearchHighlightBar";
 import StudyPanel from "@/components/StudyPanel";
 import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
@@ -1602,6 +1606,16 @@ export default function BlogPost() {
 
   const toc = useMemo(() => article ? extractToc(article.content) : [], [article]);
   const slideDeck = useMemo(() => (article ? parseSlideDeck(article.content || "") : null), [article]);
+  // Drugs the note mentions and the drug guides that match its title, for the Pharmacology connections card.
+  const pharm = useMemo(() => (article ? {
+    ids: findDrugIds(article.content || "", drugIndex as { id: string; name: string; terms: string[] }[]),
+    conds: matchConditions(`${article.title || ""} ${article.category || ""}`),
+  } : null), [article]);
+  const leaveToPharm = (to: string) => {
+    if (!article) return;
+    setNoteReturn({ path: `${location.pathname}${location.search}`, title: article.title || "the note", y: window.scrollY });
+    navigate(to);
+  };
 
   useEffect(() => {
     if (!toc.length) return;
@@ -1890,8 +1904,12 @@ export default function BlogPost() {
 
             {(article as any).toc_enabled && <ContentToc content={article.content} />}
 
+            {!slideDeck && pharm && (pharm.conds.length > 0 || pharm.ids.length >= 2) && (
+              <PharmacologyConnections ids={pharm.ids} conditionIds={pharm.conds} leave={leaveToPharm} className="mb-5" />
+            )}
+
             <div className="prose-custom article-reader">
-              <KeywordLinkProvider currentPath={buildBlogPath(article)} currentCategory={article.category}>
+              <KeywordLinkProvider currentPath={buildBlogPath(article)} currentCategory={article.category} currentTitle={article.title}>
                 {slideDeck
                   ? <SlideDeckView
                       deck={slideDeck}

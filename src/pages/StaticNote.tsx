@@ -1,18 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate, useNavigationType, useParams } from "react-router-dom";
-import { Pill, Printer } from "lucide-react";
+import { Printer } from "lucide-react";
+import PharmacologyConnections from "@/components/PharmacologyConnections";
 import { STATIC_NOTES, findStaticNote, loadStaticNoteText } from "@/data/staticNotes";
 import drugIndex from "@/data/drugIndex.json";
-import { CONDITIONS } from "@/pharm/conditions";
 import { mdToHtml } from "@/lib/miniMarkdown";
-import { drugHref, linkDrugs } from "@/lib/noteLinks";
+import { linkDrugs } from "@/lib/noteLinks";
 import { clearNoteReturn, getNoteReturn, setNoteReturn } from "@/lib/noteReturn";
 import { updateMetaTags } from "@/lib/seo";
 import { logStudy } from "@/lib/studyLog";
 
 interface DrugEntry { id: string; name: string; terms: string[] }
 const DRUGS = drugIndex as DrugEntry[];
-const nameOf = (id: string) => (DRUGS.find((d) => d.id === id)?.name ?? id).replace(/\s*\(.*\)/, "").split(" / ")[0];
 
 /** A note that ships with the site: /notes/<slug>. */
 export default function StaticNotePage() {
@@ -59,7 +58,6 @@ export default function StaticNotePage() {
   }, [linked]);
 
   const siblings = useMemo(() => (note ? STATIC_NOTES.filter((n) => n.unit === note.unit && n.group === note.group && n.slug !== note.slug) : []), [note]);
-  const condition = note?.condition ? CONDITIONS.find((c) => c.id === note.condition) : undefined;
   if (!note) return <Navigate to="/notes" replace />;
 
   /** Remember this exact spot, so the "Back to this note" button and the browser Back button both return here. */
@@ -95,25 +93,7 @@ export default function StaticNotePage() {
             </nav>
           )}
 
-          {(condition || linked.ids.length > 0) && (
-            <aside aria-label="Pharmacology connections" className="mt-4 rounded-xl border border-primary/30 bg-primary/5 p-4 print:hidden">
-              <p className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-primary"><Pill className="h-3.5 w-3.5" /> Pharmacology connections</p>
-              {condition && (
-                <button type="button" onClick={() => leave(`/pharmacology?tab=conditions&c=${condition.id}`)} className="mt-2 flex w-full items-center justify-between gap-2 rounded-lg border border-border bg-card px-3 py-2.5 text-left text-sm font-bold text-foreground transition-colors hover:border-primary/50 hover:text-primary">
-                  <span>Drug guide for {condition.name}<span className="block text-xs font-medium text-muted-foreground">First-line, add-ons, what to avoid, what to monitor</span></span>
-                  <span aria-hidden="true">→</span>
-                </button>
-              )}
-              {linked.ids.length > 0 && (
-                <>
-                  <p className="mt-3 text-xs font-semibold text-muted-foreground">Drugs in this note. Tap one for its card, then use the Back button to return to this spot.</p>
-                  <div className="mt-1.5 flex flex-wrap gap-1.5">
-                    {linked.ids.slice(0, 14).map((id) => <button key={id} type="button" onClick={() => leave(drugHref(id))} className="rounded-full border border-border bg-card px-3 py-1 text-xs font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary">{nameOf(id)}</button>)}
-                  </div>
-                </>
-              )}
-            </aside>
-          )}
+          <PharmacologyConnections ids={linked.ids} conditionIds={note.condition ? [note.condition] : []} leave={leave} className="mt-4" />
 
           <article
             className="note-body mt-6"

@@ -5,9 +5,9 @@ import { clearNoteReturn, useNoteReturn } from "@/lib/noteReturn";
 /** After following a link out of a note, a button that takes you back to the note, to the spot you were reading. */
 export default function ReturnToNote() {
   const ret = useNoteReturn();
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   const navigate = useNavigate();
-  if (!ret || pathname === ret.path) return null;
+  if (!ret || `${pathname}${search}` === ret.path || pathname === ret.path) return null;
 
   return (
     <div className="fixed bottom-4 left-3 z-40 flex max-w-[calc(100vw-5.5rem)] items-center overflow-hidden rounded-full border border-border bg-foreground text-background shadow-lg print:hidden">
