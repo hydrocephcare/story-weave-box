@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { AlertTriangle, Check, ChevronLeft, ChevronRight, Download, Flag, Loader2, Maximize, Maximize2, Minimize, Minimize2, MoreVertical, Moon, Network, RefreshCw, StickyNote, Sun, X } from "lucide-react";
+import { AlertTriangle, Check, ChevronDown, ChevronLeft, ChevronRight, Download, Flag, Loader2, Maximize, Maximize2, Minimize, Minimize2, MoreVertical, Moon, Network, RefreshCw, StickyNote, Sun, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import registry from "@/data/libraries.json";
 import { prettyTitle } from "@/lib/libraryMeta";
@@ -66,6 +66,10 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
   const [loaded, setLoaded] = useState(false);
   const [reloadKey, setReloadKey] = useState(0);
   const [toolsOpen, setToolsOpen] = useState(false);
+  /** In Focus the toolbar slides away and comes back when asked for (tap the top edge, hover it, or scroll up on images). */
+  const [barShown, setBarShown] = useState(false);
+  const hovering = useRef(false);
+  const lastY = useRef(0);
   const [slow, setSlow] = useState(false);
   const [failed, setFailed] = useState(false);
   const [panel, setPanel] = useState<"none" | "related" | "notes">("none");
@@ -167,8 +171,7 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
       if (e.key === "ArrowLeft") flip(-1);
       else if (e.key === "ArrowRight") flip(1);
       else if (e.key === "n" || e.key === "N") toggleNight();
-      else if (e.key === "f" || e.key === "F") { if (canFullscreen) toggleFullscreen(); }
-      else if (e.key === "i" || e.key === "I") setImmersive((v) => !v);
+      else if (e.key === "i" || e.key === "I") { setBarShown(false); setImmersive((v) => !v); }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -189,29 +192,33 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
   const nightFilter = night ? { filter: "invert(1) hue-rotate(180deg)" } : undefined;
 
   const toolList = file ? [
-    { k: "prev", label: "Previous", icon: ChevronLeft, run: () => flip(-1), disabled: pos <= 0, pressed: false },
-    { k: "next", label: "Next", icon: ChevronRight, run: () => flip(1), disabled: pos < 0 || pos >= items.length - 1, pressed: false },
+    ...(items.length > 1 ? [
+      { k: "prev", label: "Previous", icon: ChevronLeft, run: () => flip(-1), disabled: pos <= 0, pressed: false },
+      { k: "next", label: "Next", icon: ChevronRight, run: () => flip(1), disabled: pos < 0 || pos >= items.length - 1, pressed: false },
+    ] : []),
     { k: "night", label: night ? "Day" : "Night", icon: night ? Sun : Moon, run: toggleNight, disabled: false, pressed: night },
-    { k: "focus", label: "Focus", icon: Maximize2, run: () => { setToolsOpen(false); setImmersive(true); }, disabled: false, pressed: false },
-    ...(canFullscreen ? [{ k: "fs", label: fullscreen ? "Exit full" : "Full screen", icon: fullscreen ? Minimize : Maximize, run: toggleFullscreen, disabled: false, pressed: fullscreen }] : []),
+    { k: "focus", label: "Focus", icon: Maximize2, run: () => { setToolsOpen(false); setBarShown(false); setImmersive((v) => !v); }, disabled: false, pressed: immersive },
     { k: "notes", label: "Notes", icon: StickyNote, run: () => setPanel((x) => (x === "notes" ? "none" : "notes")), disabled: false, pressed: panel === "notes" },
     { k: "done", label: finished ? "Finished" : "Mark done", icon: Check, run: () => toggleBookRead(file[0]), disabled: false, pressed: finished },
-    { k: "links", label: "Connected", icon: Network, run: () => setPanel((x) => (x === "related" ? "none" : "related")), disabled: false, pressed: panel === "related" },
   ] : [];
+
+  // Focus: after a few seconds with nothing touched, the toolbar tucks away again.
+  useEffect(() => {
+    if (!immersive || !barShown || toolsOpen) return;
+    const t = window.setTimeout(() => { if (!hovering.current) setBarShown(false); }, 4000);
+    return () => window.clearTimeout(t);
+  }, [immersive, barShown, toolsOpen]);
 
   return (
     <Dialog open={open} onOpenChange={(o) => { if (!o) onIndexChange(null); }}>
       <DialogContent className="fixed inset-0 left-0 top-0 flex h-[100dvh] w-screen max-w-none translate-x-0 translate-y-0 flex-col gap-0 overflow-hidden rounded-none border-0 p-0 sm:rounded-none max-sm:[&>button.absolute]:hidden">
         {file && (
           <>
-            {immersive ? (
-              <>
-                <DialogTitle className="sr-only">{cleanName(file[1])}</DialogTitle>
-                <DialogDescription className="sr-only">Distraction-free reading mode</DialogDescription>
-                <button type="button" onClick={() => setImmersive(false)} aria-label="Show the toolbar" className="absolute bottom-4 left-4 z-30 inline-flex h-10 items-center gap-1.5 rounded-full bg-foreground/85 px-4 text-xs font-bold text-background shadow-lg backdrop-blur"><Minimize2 className="h-4 w-4" /> Toolbar</button>
-              </>
-            ) : (
-              <>
+            <div
+              onMouseEnter={() => { hovering.current = true; }}
+              onMouseLeave={() => { hovering.current = false; }}
+              className={immersive ? `absolute inset-x-0 top-0 z-30 bg-background shadow-lg transition-transform duration-200 ${barShown ? "translate-y-0" : "-translate-y-full"}` : "shrink-0"}
+            >
                 {tabs.length > 1 && (
                   <div role="tablist" aria-label="Open files" className="no-scrollbar mr-11 hidden items-end gap-1 overflow-x-auto border-b border-border bg-muted/50 px-2 pt-1.5 sm:flex">
                     {tabs.map((t) => {
@@ -264,6 +271,19 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
                     )}
                   </div>
                 )}
+            </div>
+            {immersive && !barShown && (
+              <>
+                {/* A thin strip at the top edge: hover it, tap it or swipe down on it to bring the toolbar back. */}
+                <div
+                  aria-hidden
+                  className="absolute inset-x-0 top-0 z-20 h-5"
+                  onMouseEnter={() => setBarShown(true)}
+                  onTouchStart={(e) => { lastY.current = e.touches[0]?.clientY ?? 0; }}
+                  onTouchMove={(e) => { if ((e.touches[0]?.clientY ?? 0) - lastY.current > 10) setBarShown(true); }}
+                  onClick={() => setBarShown(true)}
+                />
+                <button type="button" onClick={() => setBarShown(true)} aria-label="Show the toolbar" className="absolute left-1/2 top-0 z-20 -translate-x-1/2 rounded-b-full bg-foreground/75 px-4 pb-0.5 pt-0 text-background shadow backdrop-blur"><ChevronDown className="h-4 w-4" /></button>
               </>
             )}
 
@@ -300,7 +320,14 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
                     </div>
                   )}
                   {file[2] === "img" ? (
-                    <div className="flex h-full items-center justify-center overflow-auto p-2">
+                    <div
+                      className="flex h-full items-center justify-center overflow-auto p-2"
+                      onScroll={(e) => {
+                        const y = e.currentTarget.scrollTop;
+                        if (immersive) { if (y > lastY.current + 6) setBarShown(false); else if (y < lastY.current - 6) setBarShown(true); }
+                        lastY.current = y;
+                      }}
+                    >
                       <img
                         key={file[0]}
                         src={thumbUrl(file[0], 1600)}
@@ -343,7 +370,7 @@ export default function DriveFileViewer({ items, index, onIndexChange, onDownloa
               <p className="flex items-center justify-center gap-x-4 border-t border-border px-3 py-1 text-[11px] text-muted-foreground">
                 <button type="button" onClick={() => setReloadKey((k) => k + 1)} className="inline-flex items-center gap-1 font-bold text-primary hover:underline"><RefreshCw className="h-3 w-3" /> Reload</button>
                 <a href={reportUrl(file, where)} target="_blank" rel="noopener noreferrer" className="hidden items-center gap-1 font-bold text-primary hover:underline min-[420px]:inline-flex"><Flag className="h-3 w-3" /> Report</a>
-                <span className="hidden sm:inline">Keys: ← → files · N night · I focus · F full screen</span>
+                <span className="hidden sm:inline">Keys: ← → files · N night · I focus</span>
               </p>
             )}
           </>
