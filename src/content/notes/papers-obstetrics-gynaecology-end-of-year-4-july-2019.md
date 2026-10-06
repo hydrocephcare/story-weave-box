@@ -8,9 +8,9 @@
 - **Sitting:** End-of-year main examination, 4 July 2019, 8:00 AM, University Examination 2018/2019, Trimester 3 (May to August)
 - **Time allowed:** 3 hours. Paper One.
 - **Section A:** multiple choice questions, best answer, 70 marks
-- **What this page has:** MCQs 1 to 66. **MCQs 67 to 70 and Section B (written questions) were not in the scanned file,** so they are not published here.
+- **What this page has:** the complete paper: all 70 MCQs of Section A (the last four were added from a second, full scan) and the 4 modified long answer questions of Section B (100 marks).
 - **Answers:** written by OmpathStudy for revision. They are not the official MKU marking scheme. A few questions are badly worded, and those are marked so you know to expect discussion.
-- **Topics tested:** physiology of pregnancy, fetal circulation, labour and mechanisms, pelvis, fetal heart rate, pre-eclampsia, antepartum haemorrhage, ectopic pregnancy, puerperium, caesarean section, gynaecological oncology, infertility, contraception, prolapse and urogynaecology.
+- **Topics tested:** physiology of pregnancy, fetal circulation, labour and mechanisms, pelvis, fetal heart rate, pre-eclampsia, antepartum haemorrhage, ectopic pregnancy, puerperium, caesarean section, gynaecological oncology, infertility, contraception, colposcopy, prolapse and urogynaecology, endometrial cancer, genital fistula, shoulder dystocia and malaria in pregnancy.
 
 ---
 
@@ -598,3 +598,189 @@
 - D. GnRH analogues are the treatment of choice
 
 **Answer: C.** Danazol has androgenic side effects, and GnRH analogues are limited to 6 months by bone loss. First-line options are the levonorgestrel IUS, tranexamic acid, NSAIDs and combined pills.
+
+### 67. Absolute contraindications of the combined oral contraceptive pill include:
+- A. Carcinoma in situ of the cervix
+- B. Hypertension
+- C. Smoking at 30 years
+- D. Polycystic ovarian syndrome
+
+**Answer: B.** Hypertension (severe, or with vascular disease) is a contraindication because oestrogen raises the risk of stroke and heart attack. Smoking is an absolute contraindication only from age 35, cervical carcinoma in situ is not one, and the pill is used to treat PCOS.
+
+### 68. Contraindications to the intrauterine contraceptive device (IUD) include:
+- A. A history of ectopic pregnancy
+- B. A history of deep vein thrombosis
+- C. A history of pelvic surgery
+- D. A history of unexplained vaginal bleeding
+
+**Answer: D.** Unexplained vaginal bleeding must be investigated first, since it may hide cancer or infection. A past ectopic pregnancy, a clot, and pelvic surgery are not contraindications to a copper IUD.
+
+### 69. In colposcopy:
+- A. Lugol's iodine is applied prior to acetic acid
+- B. Acetic acid stains cells pink if abnormal cells are present
+- C. Lugol's iodine stains darker in abnormal cells
+- D. A punch biopsy can be taken of suspicious lesions
+
+**Answer: D.** Colposcopy-directed punch biopsies are taken from suspicious areas. Acetic acid is applied first and turns abnormal epithelium white. Iodine is applied after, and abnormal (glycogen-poor) epithelium does not take up the stain.
+
+### 70. Which of the following is NOT a cause of recurrent miscarriage?
+- A. Septate uterus
+- B. Transverse vaginal septum
+- C. Balanced translocation of chromosomes
+- D. Syphilis
+
+**Answer: B.** A transverse vaginal septum can obstruct menstrual flow but does not cause pregnancy loss. A septate uterus, a parental balanced translocation and syphilis do.
+
+---
+
+## Section B: modified long answer questions (100 marks)
+
+### 1. Discuss endometrial cancer under the following: (a) history and examination (6 marks), (b) investigations (5 marks), (c) staging (4 marks), (d) management (5 marks)
+
+**(a) History and examination**
+
+*History*
+1. **Symptoms:** **postmenopausal bleeding** (in about 90%) is the cardinal sign. In premenopausal women, heavy, prolonged or intermenstrual bleeding. Also watery or blood-stained discharge, pyometra, and in late disease pelvic pain, weight loss and pressure symptoms.
+2. **Risk factors (unopposed oestrogen):** age 55 to 65, obesity, nulliparity, early menarche and late menopause, anovulation and PCOS, oestrogen-only HRT, tamoxifen, oestrogen-secreting ovarian tumours, diabetes, hypertension, and a family history (Lynch syndrome). The combined pill, pregnancy and smoking lower the risk.
+
+*Examination*
+1. **General:** body mass index, pallor, blood pressure, enlarged supraclavicular and inguinal nodes, and signs of spread (ascites, hepatomegaly).
+2. **Abdominal:** a pelvic mass or ascites.
+3. **Speculum:** to look at the cervix and vagina and to find the source of the bleeding. A Pap smear may be taken.
+4. **Bimanual and rectal:** an enlarged or bulky uterus, adnexal masses, and fixity or parametrial spread. The examination may be normal in early disease.
+
+**(b) Investigations**
+
+1. **Transvaginal ultrasound:** an endometrial thickness above 4 to 5 mm in a postmenopausal woman needs a biopsy.
+2. **Endometrial sampling (the diagnosis):** Pipelle biopsy, or hysteroscopy with dilatation and curettage. Histology: endometrioid adenocarcinoma (type 1) is the commonest. Serous and clear cell (type 2) are aggressive.
+3. **MRI of the pelvis:** depth of myometrial invasion and cervical involvement.
+4. **CT of the chest, abdomen and pelvis** (or chest X-ray) for metastases in high-grade disease.
+5. **Blood tests:** full blood count, urea and electrolytes, liver function, blood glucose, and CA-125 (raised in advanced disease). Fitness assessment for surgery (ECG, comorbidities).
+
+**(c) Staging (FIGO, surgical)**
+
+| Stage | Extent |
+| --- | --- |
+| I | Confined to the uterus (IA: less than half the myometrium. IB: half or more) |
+| II | Invades the cervical stroma |
+| III | Local and regional spread: IIIA serosa or adnexa, IIIB vagina or parametrium, IIIC pelvic or para-aortic lymph nodes |
+| IV | IVA: bladder or bowel mucosa. IVB: distant metastases (including abdominal and inguinal nodes) |
+
+**(d) Management**
+
+1. **Surgery is the mainstay:** total hysterectomy with bilateral salpingo-oophorectomy (usually laparoscopic or abdominal), peritoneal washings, and a lymph node assessment (sentinel node or lymphadenectomy) in high-risk disease.
+2. **Adjuvant treatment:** vaginal brachytherapy or pelvic external beam radiotherapy for intermediate- and high-risk disease (deep invasion, high grade).
+3. **Chemotherapy** (carboplatin and paclitaxel) for stage III and IV disease and for serous or clear cell types.
+4. **Hormonal therapy:** high-dose progestogens (megestrol or medroxyprogesterone) or a levonorgestrel IUS for advanced or recurrent hormone-sensitive disease, or for a young woman with early well-differentiated disease who wishes to keep her fertility (with close follow-up and later hysterectomy).
+5. **Palliative care** for advanced disease, and **follow-up** every 3 to 6 months for 2 to 3 years, then yearly. Counsel on weight loss and control of diabetes and hypertension.
+6. The five-year survival is about 90% for stage I and falls to under 20% for stage IV.
+
+### 2. Discuss gynaecological fistula under the following: (a) causes (3 marks), (b) classification (3 marks), (c) history and examination, (d) management
+
+**(a) Causes**
+
+1. **Obstetric (the commonest cause in developing countries):** prolonged obstructed labour with pressure necrosis of the bladder and vagina, uterine rupture, and injury during instrumental delivery, caesarean section or symphysiotomy.
+2. **Surgical injury:** hysterectomy, anterior vaginal repair, and urological or bowel surgery.
+3. **Radiotherapy** for pelvic cancer.
+4. **Malignancy:** cervical or bladder cancer invading the tissue.
+5. **Infection and inflammation:** tuberculosis, schistosomiasis, lymphogranuloma venereum, and Crohn disease.
+6. **Others:** female genital mutilation and sexual violence, foreign bodies (neglected pessary), and congenital.
+
+**(b) Classification**
+
+1. **By the organs involved:** vesicovaginal (bladder to vagina), urethrovaginal, vesicouterine, ureterovaginal, and rectovaginal or enterovaginal fistulas.
+2. **By complexity:** *simple* (small, below 2 to 3 cm, no scarring, away from the urethra) and *complex* (large, scarred, involving the urethra, the ureter or the bladder neck, or after radiotherapy).
+3. **By site and size:** (Goh and Waaldijk classifications) according to the distance from the urethral opening and the diameter.
+4. **By timing:** fresh (acute) or old.
+
+**(c) History and examination**
+
+*History*
+- Continuous leakage of urine (or faeces and flatus) through the vagina, starting a few days after a long labour, a difficult delivery or surgery. A stillbirth. Foul smell, sore skin, recurrent infections, amenorrhoea, and social effects (stigma, abandonment, depression).
+
+*Examination*
+1. **General:** anaemia, nutrition, foot drop (nerve injury), and excoriated skin.
+2. **Abdominal and pelvic:** scars, and a bladder or rectal mass.
+3. **Speculum (Sims position):** the fistula opening, its size and position, scarring, and vaginal narrowing.
+4. **Dye test:** methylene blue instilled into the bladder, with a tampon in the vagina to look for staining (a double dye test with oral phenazopyridine separates a ureteric fistula).
+5. **Further tests:** urine culture, cystoscopy, intravenous urogram or CT urogram for ureteric injury, and examination under anaesthesia.
+
+**(d) Management**
+
+1. **Prevention:** good antenatal care, skilled attendants, using the partograph, early caesarean for obstructed labour, and ending female genital mutilation.
+2. **Conservative treatment of a fresh, small fistula:** continuous bladder catheterisation for 2 to 4 weeks (and sometimes it heals).
+3. **Preoperative care:** treat infection, build up nutrition and anaemia, protect the skin, and counsel the woman and her family.
+4. **Surgery:** timing is early (within days) for a clean surgical injury, or after about 3 months once the inflammation and oedema have settled. A vaginal route (Latzko or flap repair) for low fistulas. An abdominal route for high fistulas, the ureter and vesicouterine fistulas. Principles: good exposure, careful mobilisation, repair without tension, in layers, and water-tight, with a flap if tissue is poor.
+5. **Postoperative care:** bladder drainage with a catheter for 10 to 14 days, a high fluid intake, antibiotics, and abstinence from sex and exertion for about 3 months.
+6. **Complex fistulas:** urinary diversion (for example ureterosigmoidostomy or an ileal conduit) when repair is not possible.
+7. **Follow-up:** family planning, and **caesarean delivery** in any next pregnancy.
+8. **Rehabilitation:** counselling, reintegration into the family and community, and skills training.
+
+### 3. A diabetic primigravida is in the second stage of labour. She has the urge to bear down. The head of the baby becomes visible and then retracts back into the vagina (the turtle sign). (a) What is the most likely diagnosis (1 mark)? (b) List 5 risk factors for this condition (5 marks). (c) List 5 complications that can result from this condition (5 marks). (d) Briefly outline the management of this condition (9 marks).
+
+**(a) Diagnosis:** **Shoulder dystocia.** After the head is born, the anterior shoulder is stuck behind the pubic symphysis, and the head pulls back against the perineum (the turtle sign).
+
+**(b) Risk factors**
+
+1. **Fetal macrosomia** (birth weight over 4 kg).
+2. **Maternal diabetes mellitus** (the baby has larger shoulders and trunk).
+3. **Previous shoulder dystocia.**
+4. **Maternal obesity** and excessive weight gain in pregnancy.
+5. **Post-term pregnancy,** a prolonged second stage of labour, and **instrumental (vacuum or forceps) delivery.**
+6. Others: a short mother, a flat or android pelvis, and a male fetus.
+
+**(c) Complications**
+
+*Fetal:* 1. **Brachial plexus injury** (Erb palsy). 2. **Fracture of the clavicle or humerus.** 3. **Hypoxic ischaemic brain injury** (cerebral palsy). 4. **Perinatal death.**
+
+*Maternal:* 5. **Postpartum haemorrhage** (uterine atony). 6. **Third and fourth degree perineal tears,** vaginal and cervical lacerations. 7. Uterine rupture, bladder injury, and psychological trauma.
+
+**(d) Management** (call for help and use the HELPERR steps)
+
+1. **H: Call for Help:** the obstetrician, an extra midwife, an anaesthetist and a neonatal resuscitation team. Note the time. Tell the mother to stop pushing.
+2. **E: Evaluate for an Episiotomy** (it does not release the bony obstruction, but it gives room for internal manoeuvres).
+3. **L: Legs:** the **McRoberts manoeuvre** (hyperflex the mother's thighs on to the abdomen), which straightens the sacrum and rotates the symphysis.
+4. **P: Suprapubic Pressure** (Rubin 1) by an assistant, to push the anterior shoulder down and adduct it. **Never apply fundal pressure.**
+5. **E: Enter** the vagina for **internal rotational manoeuvres** (Rubin 2 or Woods screw).
+6. **R: Remove the posterior arm** (deliver the posterior arm by sweeping it across the chest).
+7. **R: Roll** the mother on to **all fours** (the Gaskin manoeuvre).
+8. **Last resort options:** deliberate fracture of the clavicle, cephalic replacement (Zavanelli manoeuvre) followed by caesarean section, or symphysiotomy.
+9. **Avoid** downward traction on the head.
+10. **After delivery:** resuscitate the baby and check for injury (clavicle and arm), prevent postpartum haemorrhage by active management of the third stage, repair tears, document clearly, and counsel and debrief the parents. In the next pregnancy, plan an elective caesarean if the estimated weight is above 4.5 kg in a diabetic woman (4 kg is a reasonable threshold) and control the diabetes tightly.
+
+### 4. Patient W has a history of hotness of the body, chills and rigors, convulsions, nausea and vomiting one week after a visit to Kisumu. She reports she is pregnant, and her last menstrual period was on 10/12/2018. (a) What is the most likely diagnosis (1 mark)? (b) List 3 differential diagnoses (3 marks). (c) List 3 maternal and 3 fetal effects this condition would have on the pregnancy (10 marks). (d) Briefly outline how you would investigate and manage this patient (6 marks).
+
+**(a) Most likely diagnosis:** **Severe (cerebral) malaria in pregnancy.** Fever, chills, rigors and vomiting after a visit to a malaria-endemic area, with convulsions. She is about 30 weeks pregnant.
+
+**(b) Differential diagnoses**
+
+1. **Eclampsia** (convulsions in late pregnancy, so blood pressure and urine protein must be checked).
+2. **Bacterial meningitis or encephalitis.**
+3. **Typhoid fever, pyelonephritis or other sepsis,** viral hepatitis, and HIV-related infections.
+
+**(c) Effects**
+
+*Maternal:*
+1. **Anaemia** (haemolysis, and the commonest effect).
+2. **Hypoglycaemia** (worsened by quinine, and by pregnancy).
+3. **Cerebral malaria** with convulsions and coma, **pulmonary oedema and acute respiratory distress,** **acute kidney injury,** jaundice, and **maternal death.** Pregnant women have more severe disease, especially in the first pregnancy and the third trimester.
+
+*Fetal and neonatal:*
+1. **Miscarriage** and **preterm labour.**
+2. **Intrauterine growth restriction** and **low birth weight** (from placental malaria).
+3. **Intrauterine fetal death and stillbirth,** **congenital malaria,** and neonatal death.
+
+**(d) Investigation and management**
+
+*Investigations*
+- **Blood slide (thick and thin film) and a rapid diagnostic test** for malaria, and the parasite count.
+- **Haemoglobin and full blood count, random blood glucose, urea, electrolytes and creatinine, liver function,** blood group and cross-match, and a **HIV test.**
+- **Blood pressure and urine protein** (to exclude pre-eclampsia), urinalysis and culture, and a **lumbar puncture** if meningitis is suspected.
+- **Obstetric ultrasound** and fetal monitoring.
+
+*Management* (admit to a high-dependency area)
+1. **Airway, breathing and circulation,** oxygen, and a left lateral position.
+2. **Antimalarial treatment:** **IV artesunate** 2.4 mg/kg at 0, 12 and 24 hours and then once daily, until she can take oral drugs. Then a full course of an artemisinin combination (artemether-lumefantrine). Artesunate is safe in all trimesters. IV quinine with a loading dose is the alternative if artesunate is not available.
+3. **Treat complications:** hypoglycaemia (IV 10% dextrose), anaemia (blood transfusion if the haemoglobin is below 7 g/dL), convulsions (magnesium sulphate if eclampsia cannot be ruled out, or diazepam), and fever (paracetamol and tepid sponging). Careful fluid balance, to avoid pulmonary oedema.
+4. **Monitor the mother and fetus** (vital signs, glucose, urine output, and fetal heart rate). Manage labour and delivery in a unit with newborn care, as the baby may be preterm.
+5. **Prevention for the future:** insecticide-treated nets, **intermittent preventive treatment with sulfadoxine-pyrimethamine** from the second trimester, early antenatal care, and counselling on the early signs of malaria.
