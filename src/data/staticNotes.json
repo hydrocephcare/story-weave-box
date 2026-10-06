@@ -1336,5 +1336,31 @@
       "source": "paed CAT.pdf",
       "driveId": "1_8elt2if-6IVmpbOoeBjA3C1lRNJPxl3"
     }
+  },
+  {
+    "slug": "papers-paediatrics-main-exam-1-july-2019-paper-one",
+    "year": 4,
+    "unit": "Paediatrics & Child Health",
+    "group": "Past papers",
+    "title": "Paediatrics end of fourth year main exam: 1 July 2019, Paper One, 99 of 100 MCQs and essays",
+    "description": "MKU Paediatrics end of fourth year main exam (MBPE 4300), 1 July 2019, Paper One: 99 of the 100 MCQs on infections, genetics, growth and development, nutrition, cardiology, oncology, neonatology and vaccination, plus essays on vitamin D, HIV, acute kidney injury and child mortality, with answers.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/papers-paediatrics-main-exam-1-july-2019-paper-one.md",
+    "paper": {
+      "outline": "paediatrics",
+      "code": "MBPE 4300",
+      "kind": "Main exam",
+      "sat": "2019-07-01",
+      "satLabel": "1 July 2019",
+      "trimester": 3,
+      "printed": "Main exam, end of fourth year",
+      "mcq": 99,
+      "saq": 4,
+      "complete": false,
+      "missing": "MCQ 71 is left out because its answer could not be settled from the options as printed.",
+      "topics": [],
+      "source": "PAEDS END YEAR 2019 + END SEM 2023.pdf",
+      "driveId": "184aIPmCNVSSPzKUAbxV8BQ7tCRWf5nmo"
+    }
   }
 ]
