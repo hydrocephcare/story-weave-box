@@ -884,8 +884,8 @@
     "year": 4,
     "unit": "Internal Medicine",
     "group": "Past papers",
-    "title": "Internal Medicine CAT 1 (MBChB 4), 2022: hepatology and gastroenterology, MCQs 1 to 12",
-    "description": "MKU Internal Medicine CAT 1 for MBChB 4 (2022): MCQs 1 to 12 on jaundice, alcoholic hepatitis, hepatitis B, Child-Pugh score, GI bleeding and pancreatitis, with answers. The rest of the paper is missing from the scan.",
+    "title": "Internal Medicine CAT 1 (MBChB 4), 2022: liver, pancreas and bone marrow, 30 MCQs and 2 short answers",
+    "description": "MKU Internal Medicine CAT 1 for MBChB 4 (2022): 30 MCQs on jaundice, alcoholic hepatitis, hepatitis B and C, primary biliary cirrhosis, NASH, pancreatitis, bone marrow failure and haemophilia, plus 2 short answer questions, with answers.",
     "updated": "2026-10-05",
     "file": "src/content/notes/papers-internal-medicine-cat-1-mbchb-4-2022-gastroenterology.md",
     "paper": {
@@ -895,19 +895,22 @@
       "sat": null,
       "satLabel": "2022 (date not printed)",
       "trimester": null,
-      "mcq": 12,
-      "saq": 0,
-      "complete": false,
-      "missing": "Only MCQs 1 to 12 are in the scanned file. Question 13 is cut off and later questions are missing.",
+      "mcq": 30,
+      "saq": 2,
+      "complete": true,
       "topics": [
         "im-t1-git-04",
         "im-t1-git-07",
         "im-t1-git-11",
         "im-t1-git-12",
-        "im-t1-git-18"
+        "im-t1-git-17",
+        "im-t1-git-18",
+        "im-t1-haem-05",
+        "im-t1-haem-06",
+        "im-t1-haem-09"
       ],
-      "source": "INTERNAL MED PAST PAPER.pdf",
-      "driveId": "1JmJ6p3GjxePXIKtIQsW1xyGxszllfF1T"
+      "source": "mogere mcqs.pdf",
+      "driveId": "1NsCgNaQ_AQs2yreAQLWx7OrVT18j7-lE"
     }
   },
   {
@@ -1130,6 +1133,41 @@
       ],
       "source": "INTERNAL MEDICINE.pdf",
       "driveId": "1WZi_iYxqdqsQRXEhRxdzGYCRlCnuX7bs"
+    }
+  },
+  {
+    "slug": "papers-internal-medicine-cat-4th-year-first-semester-gi-hepatology",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Past papers",
+    "title": "Internal Medicine 4th Year 1st Semester CAT: HIV and the gut, liver disease and pancreatitis, 30 MCQs and 2 short answers",
+    "description": "MKU 4th Year 1st Semester Internal Medicine CAT: 30 MCQs on HIV-related gut disease, hepatitis B and C, NASH, portal hypertension and varices, liver tests, pancreatitis, cholera and peptic ulcer, plus 2 short answer questions, with answers.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/papers-internal-medicine-cat-4th-year-first-semester-gi-hepatology.md",
+    "paper": {
+      "outline": "internal-medicine",
+      "code": "4th Year 1st Semester CAT",
+      "kind": "CAT",
+      "sat": null,
+      "satLabel": "Undated",
+      "trimester": null,
+      "mcq": 30,
+      "saq": 2,
+      "complete": true,
+      "topics": [
+        "im-t1-git-03",
+        "im-t1-git-04",
+        "im-t1-git-05",
+        "im-t1-git-06",
+        "im-t1-git-07",
+        "im-t1-git-09",
+        "im-t1-git-11",
+        "im-t1-git-12",
+        "im-t1-git-17",
+        "im-t1-git-18"
+      ],
+      "source": "mogere mcqs.pdf",
+      "driveId": "1NsCgNaQ_AQs2yreAQLWx7OrVT18j7-lE"
     }
   }
 ]
