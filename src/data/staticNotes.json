@@ -1511,5 +1511,30 @@
       "source": "PSYCHIATRY PAPPERS-DR.ARAKA.pdf",
       "driveId": "1sXIP6W2jeZMKw0qVocOobcx-yS65JYJy"
     }
+  },
+  {
+    "slug": "papers-gynaecology-year-4-cat-30-november-2018-ovarian-cysts-pid-and-menstruation",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Past papers",
+    "title": "Gynaecology Year 4 CAT (MBOG 4212): 30 November 2018, ovarian cysts, abnormal menstruation, congenital abnormalities and PID",
+    "description": "MKU MBChB Year 4 Gynaecology CAT, 30 November 2018: four short answer questions (ovarian cysts, abnormal menstruation, congenital abnormalities and Klinefelter syndrome, PID) and 10 MCQs, with answers.",
+    "updated": "2026-10-06",
+    "file": "src/content/notes/papers-gynaecology-year-4-cat-30-november-2018-ovarian-cysts-pid-and-menstruation.md",
+    "paper": {
+      "outline": "obstetrics-gynaecology",
+      "code": "MBOG 4212",
+      "kind": "Gynaecology CAT",
+      "sat": "2018-11-30",
+      "satLabel": "30 November 2018",
+      "trimester": 1,
+      "printed": "MBChB year 4 Gynaecology CAT, 30/11/18",
+      "mcq": 10,
+      "saq": 4,
+      "complete": true,
+      "topics": [],
+      "source": "gyne Cat yr4 21.pdf",
+      "driveId": "1QY9WUbkdSrHgEBw_X33LEaLo1tHspNJy"
+    }
   }
 ]
