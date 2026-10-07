@@ -247,11 +247,11 @@ function EssayQuestion({ number, question, answer }: { number: string; question:
       </div>
       {answer && (
         <div className="mt-3">
-          <button type="button" onClick={() => locked ? openSubscribePrompt("Subscribe or restore your pass to reveal this model answer.") : setOpen((value) => !value)} className="flex w-full items-center justify-between rounded-lg border border-primary/25 bg-primary/5 px-3 py-2 text-left text-sm font-semibold text-primary">
-            <span className="inline-flex items-center gap-2">{locked ? <Lock className="h-4 w-4" /> : <Eye className="h-4 w-4" />}{locked ? "Model answer — subscribers" : open ? "Hide model answer" : "Reveal model answer"}</span>
-            {!locked && <ChevronDown className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`} />}
+          <button type="button" onClick={() => locked ? openSubscribePrompt("Subscribe or restore your pass to reveal this model answer.") : setOpen((value) => !value)} aria-expanded={!locked && open} className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/5 px-3 py-1 text-xs font-bold text-emerald-700 hover:bg-emerald-500/10 dark:text-emerald-400">
+            {locked ? <Lock className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}{locked ? "Reveal (subscribers)" : open ? "Hide answer" : "Reveal answer"}
+            {!locked && <ChevronDown className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`} />}
           </button>
-          {open && !locked && <div className="mt-3 border-l-2 border-primary/50 pl-4">
+          {open && !locked && <div className="mt-2 rounded-xl border border-emerald-500/30 bg-emerald-500/5 px-4 py-3">
             <p className="text-sm sm:text-[15px] text-foreground/90 leading-[1.75] whitespace-pre-line"><Inline text={answer} /></p>
           </div>}
         </div>
@@ -307,22 +307,21 @@ function McqAnswerBlock({ raw, articleId, questionKey }: { raw: string; articleI
   const explanation = formatSequence(cleanDisplayText(explanationRaw));
   if (!answerLine && !explanation) return null;
   return (
-    <div id={articleId && questionKey ? `answer-${articleId}-${questionKey}` : undefined} className="not-prose my-4 rounded-xl border border-emerald-500/30 bg-emerald-500/5 overflow-hidden">
+    <div id={articleId && questionKey ? `answer-${articleId}-${questionKey}` : undefined} className="not-prose my-2">
       <button
         type="button"
         onClick={() => locked ? openSubscribePrompt("Subscribe or restore your pass to reveal this verified answer.") : setOpen((o) => !o)}
-        className="w-full flex items-center justify-between gap-3 px-4 py-3 text-left transition-colors hover:bg-emerald-500/10"
+        aria-expanded={!locked && open}
+        className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/5 px-3 py-1 text-xs font-bold text-emerald-700 hover:bg-emerald-500/10 dark:text-emerald-400"
       >
-        <span className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600 dark:text-emerald-400">
-          {locked ? <Lock className="h-4 w-4" /> : open ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-          {locked ? "Reveal — subscribers" : open ? "Hide" : "Reveal"}
-        </span>
-        <ChevronDown className={`h-4 w-4 text-emerald-600 transition-transform ${open ? "rotate-180" : ""}`} />
+        {locked ? <Lock className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
+        {locked ? "Reveal (subscribers)" : open ? "Hide answer" : "Reveal answer"}
+        {!locked && <ChevronDown className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`} />}
       </button>
       <AnimatePresence initial={false}>
         {open && !locked && (
           <motion.div key="ans" initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.18 }} className="overflow-hidden">
-            <div className="border-t border-emerald-500/20 px-4 py-3 space-y-2">
+            <div className="mt-2 space-y-2 rounded-xl border border-emerald-500/30 bg-emerald-500/5 px-4 py-3">
               <p className="text-[15px] font-semibold text-foreground">
                 <span className="text-emerald-600 dark:text-emerald-400">Answer:</span>{" "}
                 <Inline text={answerLine} />
@@ -350,12 +349,12 @@ function InlineAnswerBlock({ raw }: { raw: string }) {
     .filter(Boolean);
   if (!cleaned.length) return null;
   return (
-    <div className="not-prose my-4 overflow-hidden rounded-xl border border-primary/25 bg-primary/5">
-      <button type="button" onClick={() => locked ? openSubscribePrompt("Subscribe or restore your pass to reveal this answer.") : setOpen((value) => !value)} className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-primary">
-        <span className="inline-flex items-center gap-2">{locked ? <Lock className="h-4 w-4" /> : <Eye className="h-4 w-4" />}{locked ? "Reveal — subscribers" : open ? "Hide answer" : "Reveal answer"}</span>
-        {!locked && <ChevronDown className={`h-4 w-4 transition-transform ${open ? "rotate-180" : ""}`} />}
+    <div className="not-prose my-2">
+      <button type="button" onClick={() => locked ? openSubscribePrompt("Subscribe or restore your pass to reveal this answer.") : setOpen((value) => !value)} aria-expanded={!locked && open} className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/5 px-3 py-1 text-xs font-bold text-emerald-700 hover:bg-emerald-500/10 dark:text-emerald-400">
+        {locked ? <Lock className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}{locked ? "Reveal (subscribers)" : open ? "Hide answer" : "Reveal answer"}
+        {!locked && <ChevronDown className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`} />}
       </button>
-      {open && !locked && <div className="space-y-2 border-t border-primary/20 px-4 py-3">
+      {open && !locked && <div className="mt-2 space-y-2 rounded-xl border border-emerald-500/30 bg-emerald-500/5 px-4 py-3">
         {cleaned.map((line, i) => (
           <p key={i} className="text-[1.03rem] leading-8 text-foreground/90"><Inline text={line} /></p>
         ))}

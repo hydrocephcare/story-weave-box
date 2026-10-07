@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { ChevronDown, Eye, Lock } from "lucide-react";
 import { useAccess } from "@/lib/access";
 import { openSubscribePrompt } from "@/lib/subscribe-prompt";
+import { SubscribeModal } from "@/components/SubscribeModal";
 import { mdToHtml } from "@/lib/miniMarkdown";
 import { splitPaper } from "@/lib/paperAnswers";
 import { linkDrugs } from "@/lib/noteLinks";
@@ -42,8 +43,11 @@ export default function PaperBody({ text, onClick }: { text: string; onClick: Re
     }),
     [text],
   );
+  const access = useAccess();
   return (
     <>
+      {/* Reveal asks for the subscribe prompt through a global event; something must be mounted to show it. */}
+      <SubscribeModal settings={access.settings} loading={access.loading} onUnlocked={access.applyPass} />
       {parts.map((p, i) => p.hidden
         ? <AnswerReveal key={i} html={p.html} onClick={onClick} />
         : <article key={i} className="note-body paper-body mt-2" onClick={onClick} dangerouslySetInnerHTML={{ __html: p.html }} />)}
