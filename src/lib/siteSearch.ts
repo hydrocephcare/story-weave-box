@@ -4,6 +4,7 @@ import registry from "@/data/libraries.json";
 import { COURSE_OUTLINES } from "@/data/courseOutlines";
 import { supabase } from "@/integrations/supabase/client";
 import { flattenDrive, loadDriveNotes } from "@/lib/driveNotes";
+import { queryTerms } from "@/lib/queryTerms";
 import { buildBlogPath } from "@/lib/store";
 import { globalSearch, type SearchFilters } from "@/lib/search";
 import { loadLibrary, type LibraryNode } from "@/lib/libraryData";
@@ -24,7 +25,7 @@ export interface SiteHit {
 export const GROUP_ORDER: HitGroup[] = ["Notes", "Library files", "Outline topics", "Units", "MCQs & flashcards", "Pages", "Stories"];
 
 /** Words to match and highlight: lower-cased, 2+ characters. */
-export const queryTerms = (q: string) => q.toLowerCase().split(/[^a-z0-9]+/i).filter((t) => t.length >= 2);
+export { queryTerms };
 
 const matchesAll = (haystack: string, terms: string[]) => terms.every((t) => haystack.includes(t));
 const rank = (title: string, q: string, terms: string[]) => {

@@ -182,7 +182,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
             </div>
             <div className="flex w-full max-w-sm flex-col gap-2">
               <Link to={done.path} onClick={onClose} className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground"><ExternalLink className="h-4 w-4" /> View my story</Link>
-              <a href={whatsappLink(`Read my story on Ompath Study: ${done.title}\n${done.url}`)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 py-3 text-sm font-bold text-[#073b1d]"><MessageCircle className="h-4 w-4" /> Share on WhatsApp</a>
+              <a href={whatsappLink(`I just shared my story on Ompath Study: “${done.title}”. Read it, and add yours 👇\n${done.url}`)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-5 py-3 text-sm font-bold text-[#073b1d]"><MessageCircle className="h-4 w-4" /> Share on WhatsApp</a>
               <button type="button" onClick={() => void copy(done.url)} className="inline-flex items-center justify-center gap-2 rounded-xl border border-border px-5 py-3 text-sm font-bold hover:border-primary">{copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />} {copied ? "Link copied" : "Copy link"}</button>
             </div>
           </div>

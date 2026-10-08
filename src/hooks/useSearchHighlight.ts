@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { queryTerms } from "@/lib/siteSearch";
+import { queryTerms } from "@/lib/queryTerms";
 
 type HighlightRegistry = { set: (name: string, h: unknown) => void; delete: (name: string) => void };
 const registry = (): HighlightRegistry | null => (typeof CSS !== "undefined" && (CSS as unknown as { highlights?: HighlightRegistry }).highlights) || null;

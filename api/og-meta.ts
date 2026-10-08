@@ -41,9 +41,9 @@ const STATIC_PAGE_META: Record<string, { title: string; description: string; lin
     links: ["/", "/blog", "/mcqs", "/flashcards", "/exams", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
   "/stories": {
-    title: "Share your medical school story | Ompath Study",
-    description: "Read and share student stories from medical school. First years to final years can publish in two minutes. Tap to write yours.",
-    image: "https://www.ompathstudy.com/og/stories.png",
+    title: "Your story could help a first-year tonight | Ompath Study",
+    description: "Real experiences from medical students. Add yours in two minutes, with or without your name. Someone will be glad you did.",
+    image: "https://www.ompathstudy.com/og/stories.png?v=2",
     links: ["/", "/blog", "/mcqs", "/flashcards", "/exams"],
   },
 };

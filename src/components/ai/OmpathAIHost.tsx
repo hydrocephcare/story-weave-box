@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ArrowUp, Bookmark, BookOpen, Check, Copy, ExternalLink, History, Loader2, MessageSquarePlus, Search, Square, Mic, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
-import { HitIcon } from "@/components/SearchPalette";
+import { HitIcon } from "@/components/HitIcon";
 import DriveFileViewer, { type DriveFile, type DriveKind } from "@/components/DriveFileViewer";
 import { SubscribeModal } from "@/components/SubscribeModal";
 import NotePreview from "@/components/ai/NotePreview";
@@ -428,8 +428,8 @@ export default function OmpathAIHost() {
                   ))}
                 </div>
               )}
-              <form onSubmit={(e) => { e.preventDefault(); void ask(q); }} className="flex items-end gap-2 rounded-2xl border border-border bg-card p-2 focus-within:ring-2 focus-within:ring-ring">
-                <textarea ref={inputRef} value={q} onChange={(e) => { setQ(e.target.value); e.target.style.height = "auto"; e.target.style.height = `${Math.min(e.target.scrollHeight, 144)}px`; }} onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void ask(q); } }} rows={1} placeholder="e.g. I need notes on psychiatry" aria-label="Ask Ompath AI" className="max-h-36 min-h-[44px] flex-1 resize-none bg-transparent px-2 py-2.5 text-base outline-none placeholder:text-muted-foreground" />
+              <form onSubmit={(e) => { e.preventDefault(); void ask(q); }} className="flex items-end gap-1.5 rounded-2xl border border-border bg-card p-1.5 transition-shadow focus-within:border-primary/60 focus-within:shadow-[0_0_0_3px_hsl(var(--primary)/0.18)]">
+                <textarea ref={inputRef} value={q} onChange={(e) => { setQ(e.target.value); e.target.style.height = "auto"; e.target.style.height = `${Math.min(e.target.scrollHeight, 144)}px`; }} onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void ask(q); } }} rows={1} placeholder="Ask Ompath AI…" aria-label="Ask Ompath AI" enterKeyHint="send" autoComplete="off" autoCorrect="on" className="block max-h-36 min-h-[44px] min-w-0 flex-1 resize-none overflow-y-auto bg-transparent px-2 py-[10px] text-base leading-6 outline-none placeholder:text-muted-foreground" />
                 {SpeechRec && !busy && <button type="button" onClick={listen} aria-label={listening ? "Listening" : "Speak your question"} className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${listening ? "animate-pulse bg-destructive/15 text-destructive" : "text-muted-foreground hover:bg-muted"}`}><Mic className="h-5 w-5" /></button>}
                 {busy ? <button type="button" onClick={() => abort.current?.abort()} aria-label="Stop" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-muted"><Square className="h-4 w-4" /></button>
                   : <button type="submit" disabled={q.trim().length < 2} aria-label="Ask" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground disabled:opacity-40"><ArrowUp className="h-5 w-5" /></button>}

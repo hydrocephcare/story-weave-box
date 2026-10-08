@@ -9,7 +9,7 @@ import { groupSiteHits } from "@/lib/siteSearch";
 import { CONTENT_TYPES } from "@/lib/academic";
 import { Skeleton } from "@/components/ui/skeleton";
 import Highlight from "@/components/Highlight";
-import { HitIcon } from "@/components/SearchPalette";
+import { HitIcon } from "@/components/HitIcon";
 
 const YEARS = [1, 2, 3, 4, 5, 6];
 

@@ -6,9 +6,9 @@ import { useSiteSearch } from "@/hooks/useSiteSearch";
 import { groupSiteHits, type SiteHit } from "@/lib/siteSearch";
 import { logSearch } from "@/lib/search";
 import Highlight from "@/components/Highlight";
+import { HitIcon } from "@/components/HitIcon";
+import { OPEN_SEARCH_EVENT } from "@/lib/searchEvents";
 
-export const OPEN_SEARCH_EVENT = "ompath:open-search";
-export const openSearch = (initial = "") => window.dispatchEvent(new CustomEvent(OPEN_SEARCH_EVENT, { detail: initial }));
 
 const RECENT_KEY = "ompath_recent_searches";
 const readRecent = (): string[] => { try { const v = JSON.parse(localStorage.getItem(RECENT_KEY) ?? "[]"); return Array.isArray(v) ? v.slice(0, 6) : []; } catch { return []; } };
@@ -18,12 +18,6 @@ const SUGGESTED = [
   { label: "Course outlines", href: "/course-outlines", icon: ClipboardList },
   { label: "Year 1 library", href: "/library/year-1", icon: FolderOpen },
 ];
-
-export function HitIcon({ hit, className = "h-4 w-4" }: { hit: SiteHit; className?: string }) {
-  const Icon = hit.group === "Notes" ? BookOpen : hit.group === "Outline topics" ? ClipboardList : hit.group === "Pages" ? Layers : hit.group === "Stories" ? Newspaper : hit.group === "MCQs & flashcards" ? GraduationCap
-    : hit.kind === "ppt" ? Presentation : hit.kind === "video" ? Film : hit.kind === "img" ? ImageIcon : hit.kind === "pdf" || hit.kind === "doc" ? FileText : hit.group === "Units" ? FolderOpen : File;
-  return <Icon className={`${className} text-primary`} aria-hidden="true" />;
-}
 
 /** Ctrl/⌘ + K anywhere: live search over notes, library files, outline topics and pages. */
 export default function SearchPalette() {
@@ -44,6 +38,8 @@ export default function SearchPalette() {
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); setRecent(readRecent()); setOpen((o) => !o); }
     };
     const onOpen = (e: Event) => { setRecent(readRecent()); setQ(String((e as CustomEvent).detail ?? "")); setOpen(true); };
+    const w = window as unknown as { __ompathSearchPending?: string };
+    if (w.__ompathSearchPending !== undefined) { setRecent(readRecent()); setQ(w.__ompathSearchPending); setOpen(true); delete w.__ompathSearchPending; }
     window.addEventListener("keydown", onKey);
     window.addEventListener(OPEN_SEARCH_EVENT, onOpen);
     return () => { window.removeEventListener("keydown", onKey); window.removeEventListener(OPEN_SEARCH_EVENT, onOpen); };

@@ -138,10 +138,10 @@ export default function Stories() {
         <div className="pointer-events-none absolute -bottom-16 left-1/3 h-48 w-48 rounded-full bg-[#f2b632]/25 blur-2xl" aria-hidden="true" />
         <p className="relative text-xs font-bold uppercase tracking-[0.2em] text-white/80">Ompath Study</p>
         <h1 className="relative mt-1 font-serif text-4xl font-bold sm:text-5xl">Student Stories</h1>
-        <p className="relative mt-2 max-w-xl text-sm text-white/90 sm:text-base">Experiences, advice and honest reflections from medical school. First year to final year, everyone has something worth sharing.</p>
+        <p className="relative mt-2 max-w-xl text-sm text-white/90 sm:text-base">The late nights, the wards, the wins and the wobbles. Read what medical school is really like, then share your own. Someone out there needs your story, and your name can stay private.</p>
         <div className="relative mt-5 flex flex-wrap items-center gap-3">
           <button type="button" onClick={openWriter} className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-[#0b2545] shadow transition-transform hover:scale-[1.02] active:scale-95"><PenLine className="h-4 w-4" /> Share your story</button>
-          <button type="button" onClick={() => void shareOut(INVITE_TEXT.split("\n")[0], INVITE_URL, "Share your medical school story")} className="inline-flex items-center gap-2 rounded-xl border border-white/40 bg-white/10 px-4 py-3 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white/20"><MessageCircle className="h-4 w-4" /> Invite classmates</button>
+          <button type="button" onClick={() => void shareOut(INVITE_TEXT.split("\n")[0], INVITE_URL, "Your story could help a first-year tonight")} className="inline-flex items-center gap-2 rounded-xl border border-white/40 bg-white/10 px-4 py-3 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white/20"><MessageCircle className="h-4 w-4" /> Invite classmates</button>
           {stories.length > 0 && <span className="rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold backdrop-blur">{stories.length} stor{stories.length === 1 ? "y" : "ies"} shared</span>}
         </div>
       </section>

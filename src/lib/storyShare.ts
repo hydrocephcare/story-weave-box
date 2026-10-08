@@ -10,7 +10,7 @@ export function storyThumb(category: string): string {
 export const isGeneratedThumb = (url?: string | null) => Boolean(url && url.startsWith(`${SITE_URL}/og/stories/`));
 
 export const INVITE_URL = `${SITE_URL}/stories?write=1`;
-export const INVITE_TEXT = `Share your medical school story on Ompath Study. First years to final years can publish, it takes two minutes.\n${INVITE_URL}`;
+export const INVITE_TEXT = `Your medical school story could be the one a first-year needs to read tonight. Share it on Ompath Study: it takes two minutes, and your name can stay private.\n${INVITE_URL}`;
 
 export const whatsappLink = (text: string) => `https://wa.me/?text=${encodeURIComponent(text)}`;
 

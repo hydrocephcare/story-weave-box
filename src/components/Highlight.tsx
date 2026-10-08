@@ -1,5 +1,5 @@
 import { Fragment, useMemo } from "react";
-import { queryTerms } from "@/lib/siteSearch";
+import { queryTerms } from "@/lib/queryTerms";
 
 const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 

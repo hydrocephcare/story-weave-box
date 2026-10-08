@@ -1,5 +1,5 @@
 import { Search } from "lucide-react";
-import { openSearch } from "@/components/SearchPalette";
+import { openSearch } from "@/lib/searchEvents";
 
 interface HeaderSearchProps {
   variant?: "desktop" | "mobile";
