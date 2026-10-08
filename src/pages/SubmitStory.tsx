@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { STORY_CRITERIA, STORY_MIN_CHARACTERS, STORY_PROCESS } from "@/lib/storyCriteria";
 import { useLocation } from "react-router-dom";
-import { Loader2, Send, BookOpen, CheckCircle, ImagePlus, X } from "lucide-react";
+import { Loader2, Send, BookOpen, CheckCircle, CheckCircle2, ImagePlus, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
@@ -38,8 +39,8 @@ export default function SubmitStory() {
       toast({ title: "Please fill in both the title and story content", variant: "destructive" });
       return;
     }
-    if (plainText.length < 200) {
-      toast({ title: "Your story is too short", description: "Please write at least 200 characters", variant: "destructive" });
+    if (plainText.length < STORY_MIN_CHARACTERS) {
+      toast({ title: "Your story is too short", description: `Please write at least ${STORY_MIN_CHARACTERS} characters`, variant: "destructive" });
       return;
     }
 
@@ -160,6 +161,19 @@ export default function SubmitStory() {
           </p>
         </div>
 
+        <section className="mb-5 rounded-2xl border border-primary/20 bg-primary/5 p-5" aria-labelledby="story-criteria">
+          <h2 id="story-criteria" className="font-serif text-lg font-bold text-foreground">Before you submit</h2>
+          <ul className="mt-3 space-y-2">
+            {STORY_CRITERIA.map((c) => (
+              <li key={c.title} className="flex gap-2.5 text-sm">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                <span><strong className="text-foreground">{c.title}.</strong> <span className="text-muted-foreground">{c.detail}</span></span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-3 text-xs text-muted-foreground">{STORY_PROCESS}</p>
+        </section>
+
         <div className="space-y-4 rounded-2xl border border-border bg-card p-6 sm:p-8">
           <div>
             <label className="mb-1.5 block text-sm font-medium text-foreground">Story Title *</label>
@@ -236,7 +250,7 @@ export default function SubmitStory() {
               placeholder="Write your story here..."
             />
             <p className="mt-1.5 text-xs text-muted-foreground">
-              {plainText.length} characters · Minimum 200 required · You can paste or upload images directly in the editor.
+              {plainText.length} characters · Minimum {STORY_MIN_CHARACTERS} required · You can paste or upload images directly in the editor.
             </p>
           </div>
 

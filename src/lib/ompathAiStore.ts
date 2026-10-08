@@ -16,6 +16,10 @@ export interface AiTurn {
   followUps?: string[];
   /** Answered without the AI: "quick" for small talk, "saved" for a question asked before. */
   instant?: "quick" | "saved";
+  /** Buttons that take the student somewhere (their timetable, the story form). */
+  links?: { label: string; href: string }[];
+  /** Starred by the student, so it shows under Saved. */
+  starred?: boolean;
 }
 export interface AiSession { id: string; title: string; turns: AiTurn[]; updated: number }
 
@@ -67,7 +71,7 @@ export const aiStore = {
     sessions = sessions.map((s) => s.id === sessionId ? { ...s, turns: s.turns.map((t) => t.id === turnId ? { ...t, ...patch } : t) } : s);
     // streaming updates are frequent: update memory and listeners, write to storage only when the turn is complete
     snap = snapshot(); emit();
-    if (patch.error !== undefined || patch.followUps || patch.vote) persist();
+    if (patch.error !== undefined || patch.followUps || patch.vote || patch.starred !== undefined) persist();
   },
   flush() { persist(); },
 };

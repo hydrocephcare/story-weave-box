@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { ChevronLeft, Sparkles, X } from "lucide-react";
+import { ChevronLeft, X } from "lucide-react";
+import OmpathMark from "@/components/ai/OmpathMark";
 import { AI_STATE_EVENT, openAI } from "@/lib/aiEvents";
 
 // A see-through bubble for Ompath AI that floats over every page.
@@ -69,11 +70,11 @@ export default function AIPill() {
 
   return (
     <div style={{ bottom: state.y, touchAction: "none" }} className={`fixed right-3 z-40 print:hidden ${dragging ? "" : "transition-[opacity,transform] duration-200"}`}>
-      <div className={`flex items-center overflow-hidden rounded-full border shadow-lg backdrop-blur-md ${awake ? "border-primary/40 bg-primary text-primary-foreground opacity-100" : "border-white/30 bg-primary/35 text-primary-foreground opacity-60 hover:opacity-90"}`}>
+      <div className={`flex items-center overflow-hidden rounded-full border shadow-lg backdrop-blur-md ${awake ? "border-indigo-400/50 bg-gradient-to-r from-teal-600 via-indigo-600 to-purple-600 text-white opacity-100 shadow-indigo-500/30" : "border-white/40 bg-background/30 text-foreground opacity-60 hover:opacity-95"}`}>
         <button type="button" onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={() => { window.clearTimeout(drag.current.timer); drag.current.id = -1; setDragging(false); }}
-          aria-label={awake ? "Open Ompath AI" : "Ompath AI"} className="flex h-12 select-none items-center gap-2 pl-3.5 pr-3.5 text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-          <Sparkles className="h-5 w-5 shrink-0" aria-hidden="true" />
-          {awake && <span className="whitespace-nowrap pr-1">Ask Ompath AI</span>}
+          aria-label={awake ? "Open Ompath AI" : "Ompath AI"} className="flex h-12 select-none items-center gap-2 pl-1.5 pr-1.5 text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+          <OmpathMark className="h-9 w-9 shrink-0 drop-shadow" />
+          {awake && <span className="whitespace-nowrap pr-2">Ask Ompath AI</span>}
         </button>
         {awake && <button type="button" onClick={dock} aria-label="Hide the Ompath AI bubble" className="flex h-12 w-9 items-center justify-center border-l border-white/25 hover:bg-white/15"><X className="h-4 w-4" /></button>}
       </div>

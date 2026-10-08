@@ -13,6 +13,7 @@ create table if not exists public.ai_answer_cache (
 );
 
 alter table public.ai_answer_cache enable row level security;
+grant select, insert on public.ai_answer_cache to anon, authenticated;
 
 -- anyone can read answers that have not been reported twice
 drop policy if exists "ai cache read" on public.ai_answer_cache;

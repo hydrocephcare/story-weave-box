@@ -1,11 +1,17 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ArrowUp, BookOpen, Brain, Check, Copy, ExternalLink, History, Loader2, MessageSquarePlus, Search, Sparkles, Square, Mic, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
+import { ArrowUp, Bookmark, BookOpen, Check, Copy, ExternalLink, History, Loader2, MessageSquarePlus, Search, Square, Mic, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
 import { HitIcon } from "@/components/SearchPalette";
 import DriveFileViewer, { type DriveFile, type DriveKind } from "@/components/DriveFileViewer";
 import { SubscribeModal } from "@/components/SubscribeModal";
 import NotePreview from "@/components/ai/NotePreview";
+import OmpathMark from "@/components/ai/OmpathMark";
+import { supabase } from "@/integrations/supabase/client";
+import { useStudentAccess } from "@/lib/student";
+import { unitNameMap, useSiteConfig, useTimetable } from "@/lib/siteConfig";
+import { OFFICIAL_2026_SCHEDULES } from "@/lib/timetable2026";
+import { personalReply } from "@/lib/ompathAiPersonal";
 import { useAuth } from "@/hooks/useAuth";
 import { useSiteSearch } from "@/hooks/useSiteSearch";
 import { useAccess } from "@/lib/access";
@@ -78,7 +84,7 @@ export default function OmpathAIHost() {
   const access = useAccess();
   const { sessions, activeId } = useAiStore();
   const [open, setOpen] = useState(false);
-  const [view, setView] = useState<"chat" | "history">("chat");
+  const [view, setView] = useState<"chat" | "history" | "saved">("chat");
   const [q, setQ] = useState("");
   const [busy, setBusy] = useState(false);
   const [preview, setPreview] = useState<SiteHit | null>(null);
@@ -93,6 +99,20 @@ export default function OmpathAIHost() {
   const session = useMemo(() => sessions.find((s) => s.id === activeId) ?? null, [sessions, activeId]);
   const turns = session?.turns ?? [];
   const unlimited = isAdmin || access.canReveal;
+
+  // Who is asking: the year comes from their profile, or from what they told Ompath AI before.
+  const student = useStudentAccess();
+  const siteCfg = useSiteConfig();
+  const [profileYear, setProfileYear] = useState<number | null>(null);
+  const [toldYear, setToldYear] = useState<number | null>(() => { try { const n = Number(localStorage.getItem("ompath_my_year")); return n >= 1 && n <= 6 ? n : null; } catch { return null; } });
+  const { user } = useAuth();
+  useEffect(() => {
+    if (!user) { setProfileYear(null); return; }
+    (supabase as unknown as { from: (t: string) => any }).from("profiles").select("study_year").eq("user_id", user.id).maybeSingle() // eslint-disable-line @typescript-eslint/no-explicit-any
+      .then(({ data }: { data: { study_year?: number | string } | null }) => setProfileYear(data?.study_year ? Number(data.study_year) : null), () => undefined);
+  }, [user]);
+  const myYear = profileYear ?? toldYear;
+  const myTimetable = useTimetable(myYear ?? 1);
   const used = questionsUsedToday();
   const limitHit = !unlimited && used >= FREE_DAILY_QUESTIONS;
 
@@ -154,6 +174,21 @@ export default function OmpathAIHost() {
     const quick = opts.fresh ? null : quickReply(text);
     if (quick) {
       aiStore.addTurn(sessionId, { id, q: text, answer: quick.answer, hits: [], grounded: true, followUps: quick.followUps, instant: "quick", at: Date.now() });
+      aiStore.flush();
+      return;
+    }
+    const mine = opts.fresh ? null : personalReply(text, {
+      year: myYear, signedIn: Boolean(user), status: user ? (student.status ?? null) : "none",
+      group: (() => { try { return localStorage.getItem(`ompath_group_y${myYear ?? 0}`) ?? ""; } catch { return ""; } })(),
+      name: (user?.user_metadata?.full_name as string | undefined)?.split(" ")[0], unitNames: unitNameMap(siteCfg), keyDates: siteCfg.keyDates, now: new Date(),
+      tables: { ...OFFICIAL_2026_SCHEDULES, ...siteCfg.timetable, ...(myYear ? { [myYear]: myTimetable } : {}) },
+    });
+    if (mine) {
+      try {
+        if (mine.setYear) { localStorage.setItem("ompath_my_year", String(mine.setYear)); setToldYear(mine.setYear); }
+        if (mine.setGroup && myYear) localStorage.setItem(`ompath_group_y${myYear}`, mine.setGroup);
+      } catch { /* storage blocked */ }
+      aiStore.addTurn(sessionId, { id, q: text, answer: mine.answer, hits: [], grounded: true, followUps: mine.followUps, links: mine.links, instant: "quick", at: Date.now() });
       aiStore.flush();
       return;
     }
@@ -232,6 +267,8 @@ export default function OmpathAIHost() {
     try { await navigator.clipboard.writeText(t.answer); setCopied(t.id); window.setTimeout(() => setCopied(null), 1500); } catch { /* clipboard blocked */ }
   };
 
+  const savedTurns = useMemo(() => sessions.flatMap((s) => s.turns.filter((t) => t.starred && t.answer).map((t) => ({ sid: s.id, t }))), [sessions]);
+
   const filteredSessions = useMemo(() => {
     const f = historyQ.trim().toLowerCase();
     return sessions.filter((s) => s.turns.length && (!f || s.title.toLowerCase().includes(f) || s.turns.some((t) => t.q.toLowerCase().includes(f))));
@@ -255,17 +292,35 @@ export default function OmpathAIHost() {
           <SheetDescription className="sr-only">Ask a question and get answers and notes from Ompath Study.</SheetDescription>
 
           <header className="flex items-center gap-2 border-b border-border px-3 py-2.5">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground"><Brain className="h-5 w-5" /></span>
+            <OmpathMark className="h-9 w-9 shrink-0" />
             <div className="min-w-0 flex-1">
               <p className="font-serif text-base font-bold leading-tight">Ompath AI</p>
-              <p className="truncate text-[11px] text-muted-foreground">{view === "history" ? "Your past chats" : "Answers from your notes, files and papers"}</p>
+              <p className="truncate text-[11px] text-muted-foreground">{view === "history" ? "Your past chats" : view === "saved" ? "Answers you saved" : "Answers from your notes, files and papers"}</p>
             </div>
             <button type="button" onClick={() => { aiStore.newSession(); setView("chat"); setQ(""); window.setTimeout(() => inputRef.current?.focus(), 50); }} aria-label="New chat" title="New chat" className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><MessageSquarePlus className="h-5 w-5" /></button>
+            <button type="button" onClick={() => setView(view === "saved" ? "chat" : "saved")} aria-label="Saved answers" title="Saved answers" aria-pressed={view === "saved"} className={`flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted ${view === "saved" ? "bg-muted" : ""}`}><Bookmark className="h-5 w-5" /></button>
             <button type="button" onClick={() => setView(view === "history" ? "chat" : "history")} aria-label="History" title="History" aria-pressed={view === "history"} className={`flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted ${view === "history" ? "bg-muted" : ""}`}><History className="h-5 w-5" /></button>
             <button type="button" onClick={() => setOpen(false)} aria-label="Close Ompath AI" className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><X className="h-5 w-5" /></button>
           </header>
 
-          {view === "history" ? (
+          {view === "saved" ? (
+            <div className="min-h-0 flex-1 overflow-y-auto px-3 py-3">
+              {savedTurns.length === 0 ? <p className="py-10 text-center text-sm text-muted-foreground">Nothing saved yet. Tap the bookmark under an answer to keep it here.</p> : (
+                <ul className="space-y-2">
+                  {savedTurns.map(({ sid, t }) => (
+                    <li key={t.id} className="rounded-xl border border-border bg-card p-3">
+                      <p className="text-sm font-semibold">{t.q}</p>
+                      <p className="mt-1 line-clamp-3 text-sm text-muted-foreground">{t.answer.replace(/[*#]/g, "")}</p>
+                      <div className="mt-2 flex items-center gap-3 text-xs font-bold">
+                        <button type="button" onClick={() => { aiStore.open(sid); setView("chat"); }} className="text-primary hover:underline">Open chat</button>
+                        <button type="button" onClick={() => aiStore.patchTurn(sid, t.id, { starred: false })} className="text-muted-foreground hover:text-destructive">Remove</button>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ) : view === "history" ? (
             <div className="min-h-0 flex-1 overflow-y-auto px-3 py-3">
               <div className="mb-3 flex items-center gap-2 rounded-lg border border-border px-3">
                 <Search className="h-4 w-4 text-muted-foreground" />
@@ -290,7 +345,7 @@ export default function OmpathAIHost() {
             <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-4">
               {turns.length === 0 && (
                 <section className="rounded-2xl border border-border bg-card p-4">
-                  <p className="flex items-center gap-2 font-serif text-lg font-bold"><Sparkles className="h-5 w-5 text-primary" /> What do you need?</p>
+                  <p className="flex items-center gap-2 font-serif text-lg font-bold"><OmpathMark className="h-7 w-7" plain /> What do you need?</p>
                   {trending.length > 0 && <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-primary">Trending with students</p>}
                   <p className="mt-1 text-sm text-muted-foreground">Ask for notes, a past paper, a library file, or just ask a question. I search every note, paper and file on Ompath Study first.</p>
                   <div className="mt-3 flex flex-wrap gap-2">{[...trending.slice(0, 3), ...STARTERS].filter((v, i, a) => a.indexOf(v) === i).slice(0, 7).map((s) => <button key={s} type="button" onClick={() => void ask(s)} className="rounded-full border border-border px-3 py-1.5 text-left text-sm hover:border-primary hover:text-primary">{s}</button>)}</div>
@@ -317,12 +372,14 @@ export default function OmpathAIHost() {
                             {t.instant === "saved" && <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 font-semibold text-primary"><Zap className="h-3 w-3" /> Instant · saved</span>}
                             {t.instant !== "quick" && last && !busy && <button type="button" onClick={() => { dropCached(t.q); void ask(t.q, { fresh: true }); }} className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 hover:bg-muted" aria-label="Answer again" title="Answer again"><RefreshCw className="h-3.5 w-3.5" /></button>}
                             {typeof navigator !== "undefined" && "share" in navigator && t.instant !== "quick" && <button type="button" onClick={() => { void navigator.share({ title: t.q, text: `${t.answer.slice(0, 600)}\n\nOmpath Study`, url: window.location.origin }).catch(() => undefined); }} className="rounded-md p-1 hover:bg-muted" aria-label="Share answer"><Share2 className="h-3.5 w-3.5" /></button>}
+                            <button type="button" onClick={() => aiStore.patchTurn(session!.id, t.id, { starred: !t.starred })} aria-pressed={Boolean(t.starred)} aria-label={t.starred ? "Remove from saved" : "Save this answer"} className={`rounded-md p-1 hover:bg-muted ${t.starred ? "text-primary" : ""}`}><Bookmark className={`h-3.5 w-3.5 ${t.starred ? "fill-current" : ""}`} /></button>
                             <button type="button" onClick={() => void copy(t)} className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 hover:bg-muted" aria-label="Copy answer">{copied === t.id ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}</button>
                             <button type="button" onClick={() => aiStore.patchTurn(session!.id, t.id, { vote: t.vote === "up" ? undefined : "up" })} aria-pressed={t.vote === "up"} aria-label="Good answer" className={`rounded-md p-1 hover:bg-muted ${t.vote === "up" ? "text-primary" : ""}`}><ThumbsUp className="h-3.5 w-3.5" /></button>
                             <button type="button" onClick={() => { if (t.vote !== "down") { dropCached(t.q); if (t.instant === "saved") void reportShared(t.q); } aiStore.patchTurn(session!.id, t.id, { vote: t.vote === "down" ? undefined : "down" }); }} aria-pressed={t.vote === "down"} aria-label="Bad answer" className={`rounded-md p-1 hover:bg-muted ${t.vote === "down" ? "text-destructive" : ""}`}><ThumbsDown className="h-3.5 w-3.5" /></button>
                           </div>
                         )}
                       </div>
+                      {t.links && t.links.length > 0 && <div className="flex flex-wrap gap-2">{t.links.map((l) => <button key={l.href} type="button" onClick={() => goFull({ href: l.href } as SiteHit)} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-2 text-sm font-bold text-primary-foreground"><ExternalLink className="h-4 w-4" /> {l.label}</button>)}</div>}
                       {t.hits.length > 0 && (
                         <div className="space-y-3">
                           <Group title="Notes" rows={notes} all={t.hits} />
@@ -379,7 +436,7 @@ export default function OmpathAIHost() {
 
       {resume && !open && (
         <div className="fixed bottom-16 left-3 z-40 flex items-center overflow-hidden rounded-full border border-border bg-foreground text-background shadow-lg print:hidden">
-          <button type="button" onClick={() => mount()} className="flex items-center gap-1.5 py-2.5 pl-3.5 pr-2 text-xs font-bold"><Brain className="h-4 w-4" /> Back to Ompath AI</button>
+          <button type="button" onClick={() => mount()} className="flex items-center gap-1.5 py-2.5 pl-3.5 pr-2 text-xs font-bold"><OmpathMark className="h-5 w-5" /> Back to Ompath AI</button>
           <button type="button" onClick={() => { try { sessionStorage.removeItem(RESUME_KEY); } catch { /* ignore */ } setResume(false); }} aria-label="Dismiss" className="py-2.5 pl-1 pr-3 opacity-70 hover:opacity-100"><X className="h-3.5 w-3.5" /></button>
         </div>
       )}
