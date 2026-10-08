@@ -7,6 +7,21 @@ import { useEffect, useRef } from "react";
 const EVENT = "ompath:subscribe";
 const SNOOZE_KEY = "ompath_subscribe_snooze";
 
+/** Asked of anything that is open on top of the page (the Ompath AI panel, a note pop-up) to get out of the way. */
+export const CLOSE_OVERLAYS_EVENT = "ompath:close-overlays";
+
+/**
+ * A pop-up from the page (Radix) locks the rest of the screen: clicks and scrolling outside it are ignored. The subscription prompt is outside
+ * every such pop-up, so opening it on top of one froze it. Close what is open first, then let the lock release.
+ */
+export function clearOverlays() {
+  window.dispatchEvent(new Event(CLOSE_OVERLAYS_EVENT));
+  if (document.body.style.pointerEvents === "none") {
+    // some other pop-up is still locking the screen: press Escape for the student
+    (document.activeElement ?? document.body).dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", bubbles: true }));
+  }
+}
+
 export function openSubscribePrompt(reason?: string) {
   window.dispatchEvent(new CustomEvent(EVENT, { detail: { reason } }));
 }

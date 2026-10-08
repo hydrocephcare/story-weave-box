@@ -49,6 +49,7 @@ import { dropCached, getCached, getShared, getTrending, quickReply, reportShared
 import { logSearch } from "@/lib/search";
 import type { SiteHit } from "@/lib/siteSearch";
 
+import { CLOSE_OVERLAYS_EVENT } from "@/lib/subscribe-prompt";
 import { AI_RESUME_KEY as RESUME_KEY, AI_STATE_EVENT, OPEN_AI_EVENT } from "@/lib/aiEvents";
 
 const STARTERS = [
@@ -187,6 +188,16 @@ export default function OmpathAIHost() {
     setListening(true);
     try { rec.start(); } catch { setListening(false); }
   };
+
+  // the subscription prompt needs the whole screen: step aside, and leave the "Back to Ompath AI" button so nothing is lost
+  useEffect(() => {
+    const away = () => {
+      setPreview(null); setFiles({ items: [], index: null });
+      setOpen((o) => { if (o) { try { sessionStorage.setItem(RESUME_KEY, "1"); } catch { /* ignore */ } setResume(true); } return false; });
+    };
+    window.addEventListener(CLOSE_OVERLAYS_EVENT, away);
+    return () => window.removeEventListener(CLOSE_OVERLAYS_EVENT, away);
+  }, []);
 
   useEffect(() => { if (open) { try { sessionStorage.removeItem(RESUME_KEY); } catch { /* ignore */ } setResume(false); } }, [open]);
 

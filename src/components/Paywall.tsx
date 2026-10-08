@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Lock, Loader2, ShieldCheck, KeyRound, Smartphone, Check, Pencil, Eye, Download, Mail } from "lucide-react";
+import { Lock, Loader2, ShieldCheck, KeyRound, Smartphone, Check, Pencil, Eye, Download, Mail, Sparkles, ListChecks, BellRing, LineChart } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Link } from "react-router-dom";
 import { AccessPass, AccessPlan, PaymentSettings, issuePassForPayment, normalizePassCode, renamePassCode, verifyCode } from "@/lib/access";
@@ -228,7 +228,7 @@ export function Paywall({
         </div>
 
         <ul className="mt-4 grid grid-cols-1 gap-x-4 gap-y-1.5 text-[13px] sm:grid-cols-2">
-          {[[Eye, "Every answer revealed"], [Check, "Explanations and study details"], [Download, "Watermarked PDF handouts"], [Mail, "Follows your email, any device"]].map(([Icon, text]) => {
+          {[[Eye, "Every answer revealed"], [Check, "Explanations and study details"], [Sparkles, "Unlimited Ompath AI questions"], [ListChecks, "Quizzes of up to 50 MCQs"], [LineChart, "Review of your weak topics"], [BellRing, "Study plans and reminders"], [Download, "Watermarked PDF handouts"], [Mail, "Follows your email, any device"]].map(([Icon, text]) => {
             const I = Icon as typeof Eye;
             return <li key={text as string} className="flex items-center gap-2 text-foreground/85"><I className="h-4 w-4 shrink-0 text-primary" />{text as string}</li>;
           })}
