@@ -20,6 +20,8 @@ export interface AiTurn {
   links?: { label: string; href: string }[];
   /** Starred by the student, so it shows under Saved. */
   starred?: boolean;
+  /** Shows the "free limit reached, subscribe" card under this turn. */
+  upgrade?: "questions" | "pictures";
   /** A set of spot questions (with pictures) to drill, from the anatomy banks. */
   drill?: { subject: "gross" | "histology" | "embryology"; topic: string };
 }

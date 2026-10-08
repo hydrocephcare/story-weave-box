@@ -9,6 +9,7 @@ import NotePreview from "@/components/ai/NotePreview";
 import OmpathMark from "@/components/ai/OmpathMark";
 import { Answer } from "@/components/ai/AnswerText";
 import QuestionDrill from "@/components/ai/QuestionDrill";
+import UpgradeCard from "@/components/ai/UpgradeCard";
 import { SUBJECT_LABEL, drillIntent } from "@/lib/questionBank";
 import { supabase } from "@/integrations/supabase/client";
 import { useStudentAccess } from "@/lib/student";
@@ -146,7 +147,7 @@ export default function OmpathAIHost() {
 
   useEffect(() => { if (open) { try { sessionStorage.removeItem(RESUME_KEY); } catch { /* ignore */ } setResume(false); } }, [open]);
 
-  async function ask(question: string, opts: { fresh?: boolean } = {}) {
+  async function ask(question: string, opts: { fresh?: boolean; context?: string } = {}) {
     const text = question.trim();
     if (text.length < 2 || busy) return;
     let sid = aiStore.get().activeId;
@@ -212,7 +213,7 @@ export default function OmpathAIHost() {
       setBusy(false);
     }
     if (limitHit) {
-      aiStore.addTurn(sessionId, { id, q: text, answer: "", hits: [], grounded: true, error: `You have used today's ${FREE_DAILY_QUESTIONS} free questions. Subscribe for unlimited, or come back tomorrow. Greetings and questions you have asked before are still instant.`, at: Date.now() });
+      aiStore.addTurn(sessionId, { id, q: text, answer: "", hits: [], grounded: true, error: "You have reached today's free AI limit.", upgrade: "questions", at: Date.now() });
       aiStore.flush();
       return;
     }
@@ -234,7 +235,7 @@ export default function OmpathAIHost() {
         return;
       }
       countQuestion();
-      const answer = await streamAnswer({ question: text, history: prior, retrieval }, { onText: (full) => aiStore.patchTurn(sessionId, id, { answer: full }), signal: abort.current.signal });
+      const answer = await streamAnswer({ question: opts.context ? `${text}\n\nThe official answer key for this question, from the Ompath bank:\n${opts.context}` : text, history: prior, retrieval }, { onText: (full) => aiStore.patchTurn(sessionId, id, { answer: full }), signal: abort.current.signal });
       aiStore.patchTurn(sessionId, id, { answer });
       aiStore.flush();
       if (answer.trim().length > 40) { saveCached(text, { answer, grounded: retrieval.grounded, hits: retrieval.hits, followUps: followUps(retrieval.parsed) }); void saveShared(text, answer, retrieval.grounded); }
@@ -379,7 +380,8 @@ export default function OmpathAIHost() {
                           </div>
                         )}
                       </div>
-                      {t.drill && <QuestionDrill key={t.id} subject={t.drill.subject} topic={t.drill.topic} canReveal={unlimited} onNeedSubscribe={() => openSubscribePrompt("Subscribe to reveal answers.")} onOpen={(href) => goFull({ href } as SiteHit)} />}
+                      {t.drill && <QuestionDrill key={t.id} subject={t.drill.subject} topic={t.drill.topic} canReveal={unlimited} onNeedSubscribe={() => openSubscribePrompt("Subscribe to reveal answers.")} onOpen={(href) => goFull({ href } as SiteHit)} onExplain={(q) => void ask(`Explain: ${q.question}`, { context: q.answer })} />}
+                      {t.upgrade && <UpgradeCard kind={t.upgrade} />}
                       {t.links && t.links.length > 0 && <div className="flex flex-wrap gap-2">{t.links.map((l) => <button key={l.href} type="button" onClick={() => goFull({ href: l.href } as SiteHit)} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-2 text-sm font-bold text-primary-foreground"><ExternalLink className="h-4 w-4" /> {l.label}</button>)}</div>}
                       {t.hits.length > 0 && (
                         <div className="space-y-3">

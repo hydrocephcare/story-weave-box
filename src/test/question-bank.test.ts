@@ -77,3 +77,14 @@ describe("drillIntent", () => {
     expect(sectionFor([{ name: "Pelvis & Hip" }], "")).toBe("");
   });
 });
+
+import { FREE_DAILY_PICTURES, countPictures, picturesUsedToday } from "@/lib/ompathAi";
+describe("free picture allowance", () => {
+  it("counts picture questions for the day", () => {
+    localStorage.clear();
+    expect(picturesUsedToday()).toBe(0);
+    countPictures(5); countPictures(4);
+    expect(picturesUsedToday()).toBe(9);
+    expect(FREE_DAILY_PICTURES).toBeGreaterThan(9);
+  });
+});

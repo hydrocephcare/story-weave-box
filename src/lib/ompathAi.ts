@@ -289,3 +289,13 @@ export function questionsUsedToday(): number {
 export function countQuestion() {
   try { localStorage.setItem(USAGE_KEY, JSON.stringify({ day: today(), n: questionsUsedToday() + 1 })); } catch { /* storage blocked */ }
 }
+
+// ---------- picture questions (images cost bandwidth, so free accounts get a daily number) ----------
+const PIC_KEY = "ompath_ai_pictures";
+export const FREE_DAILY_PICTURES = 15;
+export function picturesUsedToday(): number {
+  try { const v = JSON.parse(localStorage.getItem(PIC_KEY) ?? "null"); return v?.day === today() ? Number(v.n) || 0 : 0; } catch { return 0; }
+}
+export function countPictures(n: number) {
+  try { localStorage.setItem(PIC_KEY, JSON.stringify({ day: today(), n: picturesUsedToday() + n })); } catch { /* storage blocked */ }
+}
