@@ -4,7 +4,9 @@ import { BookOpen, ChevronRight, Clock, Loader2, PenLine, Search, X } from "luci
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import { buildStoryPath, updateMetaTags, SITE_URL } from "@/lib/seo";
-import StoryComposer, { STORY_CATEGORIES } from "@/components/StoryComposer";
+import StoryComposer, { STORY_CATEGORIES, type EditableStory } from "@/components/StoryComposer";
+import { useOwnerTag } from "@/lib/storyOwner";
+import { Pencil } from "lucide-react";
 
 interface Story {
   id: string;
@@ -86,6 +88,9 @@ export default function Stories() {
   const [category, setCategory] = useState("All");
   const [year, setYear] = useState(0);
   const [writing, setWriting] = useState(params.get("write") === "1");
+  const [editing, setEditing] = useState<EditableStory | null>(null);
+  const [mine, setMine] = useState<EditableStory[]>([]);
+  const ownerTag = useOwnerTag();
 
   useEffect(() => {
     updateMetaTags({ title: "Student Stories | Ompath Study", description: "Experiences, advice and reflections from MKU and Kenyan medical students, first year to final year.", url: `${SITE_URL}/stories`, type: "website" });
@@ -98,6 +103,14 @@ export default function Stories() {
       .then(({ data }) => { setStories((data ?? []) as unknown as Story[]); setLoading(false); });
   }, []);
   useEffect(load, [load]);
+
+  const loadMine = useCallback(() => {
+    if (!ownerTag) { setMine([]); return; }
+    supabase.from("stories").select("id,title,content,category,tags").contains("tags", [ownerTag]).is("deleted_at", null).order("created_at", { ascending: false }).limit(20)
+      .then(({ data }) => setMine((data ?? []) as unknown as EditableStory[]), () => undefined);
+  }, [ownerTag]);
+  useEffect(loadMine, [loadMine]);
+  const refresh = () => { load(); loadMine(); };
 
   const openWriter = () => setWriting(true);
   const closeWriter = () => { setWriting(false); if (params.get("write")) { params.delete("write"); setParams(params, { replace: true }); } };
@@ -129,6 +142,20 @@ export default function Stories() {
           {stories.length > 0 && <span className="rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold backdrop-blur">{stories.length} stor{stories.length === 1 ? "y" : "ies"} shared</span>}
         </div>
       </section>
+
+      {mine.length > 0 && (
+        <section className="mt-6 rounded-2xl border border-primary/25 bg-primary/5 p-4" aria-label="Your stories">
+          <h2 className="font-serif text-lg font-bold">Your stories</h2>
+          <ul className="mt-2 divide-y divide-border/70">
+            {mine.map((m) => (
+              <li key={m.id} className="flex items-center gap-3 py-2.5">
+                <Link to={buildStoryPath(m)} className="min-w-0 flex-1 truncate text-sm font-semibold hover:text-primary">{m.title}</Link>
+                <button type="button" onClick={() => setEditing(m)} className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-border bg-background px-3 py-1.5 text-xs font-bold hover:border-primary hover:text-primary"><Pencil className="h-3.5 w-3.5" /> Edit</button>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {/* Filters */}
       <section className="mt-6 space-y-3" aria-label="Find a story">
@@ -172,7 +199,7 @@ export default function Stories() {
       {/* Always one tap away on a phone (left side, so it never sits on the Ompath AI bubble) */}
       <button type="button" onClick={openWriter} aria-label="Share your story" className="fixed bottom-20 left-4 z-30 inline-flex h-14 items-center gap-2 rounded-full bg-gradient-to-r from-teal-600 to-indigo-600 pl-4 pr-5 text-sm font-bold text-white shadow-xl transition-transform active:scale-95 sm:hidden print:hidden"><PenLine className="h-5 w-5" /> Write</button>
 
-      <StoryComposer open={writing} onClose={closeWriter} onPublished={load} />
+      <StoryComposer open={writing || Boolean(editing)} editing={editing} onClose={() => { setEditing(null); closeWriter(); }} onPublished={refresh} />
     </div>
   );
 }

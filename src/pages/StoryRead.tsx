@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 import { buildStoryPath, extractStoryIdFromParam, SITE_URL, stripRichText, updateMetaTags } from "@/lib/seo";
 import ShareButtons from "@/components/ShareButtons";
 import DOMPurify from "dompurify";
+import { Pencil, Trash2 } from "lucide-react";
+import StoryComposer from "@/components/StoryComposer";
+import { useOwnerTag } from "@/lib/storyOwner";
 import { Helmet } from "react-helmet-async";
 import { KeywordLinkProvider, linkifyText, useKeywordLinks } from "@/lib/keyword-link";
 import { slugify, useHashFlash } from "@/lib/deep-link";
@@ -18,6 +21,10 @@ export default function StoryRead() {
   const [story, setStory] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [reloadKey, setReloadKey] = useState(0);
+  const [editing, setEditing] = useState(false);
+  const ownerTag = useOwnerTag();
+  const isOwner = Boolean(ownerTag && story?.tags?.includes(ownerTag));
 
   const ogUrl =
     typeof window !== "undefined"
@@ -55,7 +62,7 @@ export default function StoryRead() {
 
     supabase
       .from("stories")
-      .select("id,title,content,category,published,created_at,cover_image_url,meta_title,meta_description,og_image_url,slug")
+      .select("id,title,content,category,published,created_at,cover_image_url,meta_title,meta_description,og_image_url,slug,tags")
       .eq("id", storyId)
       .maybeSingle()
       .then(({ data }) => {
@@ -74,7 +81,7 @@ export default function StoryRead() {
           updateMetaTags({ title: metaTitle, description: metaDesc, image, url, type: "article" });
         }
       });
-  }, [id, location.pathname, navigate]);
+  }, [id, location.pathname, navigate, reloadKey]);
 
   const storyUrl = story ? `${SITE_URL}${buildStoryPath({ id: story.id, title: story.title })}` : "";
 
@@ -261,6 +268,18 @@ export default function StoryRead() {
         </Link>
 
         {/* Header */}
+        {isOwner && (
+          <div className="mb-6 flex flex-wrap items-center gap-2 rounded-xl border border-primary/30 bg-primary/5 px-4 py-3">
+            <p className="min-w-0 flex-1 text-sm"><strong>This is your story.</strong> <span className="text-muted-foreground">Only you see these buttons.</span></p>
+            <button type="button" onClick={() => setEditing(true)} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-2 text-sm font-bold text-primary-foreground"><Pencil className="h-4 w-4" /> Edit</button>
+            <button type="button" onClick={async () => {
+              if (!window.confirm("Delete this story? It will disappear from Stories.")) return;
+              const { error } = await supabase.from("stories").update({ deleted_at: new Date().toISOString() }).eq("id", story.id).contains("tags", [ownerTag as string]);
+              if (!error) navigate("/stories", { replace: true });
+            }} className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3.5 py-2 text-sm font-bold text-muted-foreground hover:border-destructive hover:text-destructive"><Trash2 className="h-4 w-4" /> Delete</button>
+          </div>
+        )}
+        {isOwner && <StoryComposer open={editing} editing={story} onClose={() => setEditing(false)} onPublished={() => setReloadKey((k) => k + 1)} />}
         <header className="mb-8">
           {story.category && story.category !== "Uncategorized" && (
             <span className="mb-4 inline-block rounded-full bg-primary/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-widest text-primary">

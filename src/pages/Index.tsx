@@ -13,6 +13,7 @@ import { getSubjectKey, subjectColor } from "@/components/subjectTheme";
 import { useAuth } from "@/hooks/useAuth";
 import SemesterDashboard from "@/components/SemesterDashboard";
 import RecentNotes from "@/components/RecentNotes";
+import HomeStories from "@/components/HomeStories";
 import { notesForYear } from "@/data/staticNotes";
 
 /** Units that have notes shipped with the site, so a year is never shown as empty when it has notes. */
@@ -497,6 +498,8 @@ export default function Index() {
         </motion.div>
       </div>
       </section>
+
+      <HomeStories />
 
       {/* Footer */}
       <footer className="border-t border-border bg-background">
