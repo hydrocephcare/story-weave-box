@@ -3,6 +3,7 @@
 import registry from "@/data/libraries.json";
 import { COURSE_OUTLINES } from "@/data/courseOutlines";
 import { supabase } from "@/integrations/supabase/client";
+import { flattenDrive, loadDriveNotes } from "@/lib/driveNotes";
 import { buildBlogPath } from "@/lib/store";
 import { globalSearch, type SearchFilters } from "@/lib/search";
 import { loadLibrary, type LibraryNode } from "@/lib/libraryData";
@@ -120,8 +121,18 @@ function loadFileIndex(): Promise<FileRow[]> {
   return fileIndex;
 }
 
+/** The live notes folder on Drive (see api/drive-notes.js), so new notes can be found the moment they are added. */
+async function liveRows(): Promise<FileRow[]> {
+  try {
+    const d = await loadDriveNotes();
+    if (!d.ok) return [];
+    return flattenDrive(d.tree).map((r) => ({ id: r.file[0], name: r.file[1], lower: `${prettyTitle(r.file[1])} ${r.file[1]}`.toLowerCase(), kind: r.file[2], where: `Latest notes${r.where.length ? ` › ${r.where.join(" › ")}` : ""}`, href: `/new-notes?file=${encodeURIComponent(r.file[0])}`, year: 0 }));
+  } catch { return []; }
+}
+
 async function fileHits(q: string, terms: string[], year?: number | null): Promise<SiteHit[]> {
-  const [rows, cfg] = await Promise.all([loadFileIndex(), loadSiteConfig()]);
+  const [rows0, cfg, live] = await Promise.all([loadFileIndex(), loadSiteConfig(), year ? Promise.resolve([] as FileRow[]) : liveRows()]);
+  const rows = [...rows0, ...live];
   const hidden = new Set(cfg.hiddenFiles);
   const out: SiteHit[] = [];
   for (const r of rows) {

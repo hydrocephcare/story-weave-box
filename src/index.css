@@ -498,3 +498,6 @@ body.no-copy img {
 .story-prose hr { border: 0; border-top: 1px solid hsl(var(--border)); margin: 1.75rem 0; }
 .story-prose a { color: hsl(var(--primary)); text-decoration: underline; text-underline-offset: 3px; }
 .story-prose p.is-editor-empty:first-child::before { content: none; }
+
+.story-prose img { max-width: 100%; height: auto; border-radius: 0.75rem; margin: 1.5rem auto; display: block; }
+.story-prose img.ProseMirror-selectednode { outline: 3px solid hsl(var(--primary)); }

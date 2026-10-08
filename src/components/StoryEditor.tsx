@@ -1,8 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import Image from "@tiptap/extension-image";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import { Bold, Heading2, Heading3, Italic, Link2, List, ListOrdered, Minus, Quote, Redo2, Strikethrough, Underline as UnderlineIcon, Undo2 } from "lucide-react";
+import { Bold, Heading2, Heading3, ImagePlus, Italic, Link2, List, ListOrdered, Minus, Quote, Redo2, Strikethrough, Underline as UnderlineIcon, Undo2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { toast } from "@/hooks/use-toast";
+import { uploadStoryImage } from "@/lib/storyImage";
 
 interface Props {
   /** HTML to start from. Change `resetKey` to load a different document. */
@@ -26,8 +29,10 @@ const Sep = () => <span className="mx-0.5 h-6 w-px shrink-0 bg-border" aria-hidd
  * on a phone the same toolbar scrolls sideways with bigger buttons. Headings, bold, italic, underline, lists, quotes, links and dividers.
  */
 export default function StoryEditor({ html, resetKey, onChange }: Props) {
+  const fileRef = useRef<HTMLInputElement>(null);
+  const [uploading, setUploading] = useState(false);
   const editor = useEditor({
-    extensions: [StarterKit.configure({ heading: { levels: [2, 3] }, link: { openOnClick: false, autolink: true, HTMLAttributes: { rel: "nofollow ugc noopener", target: "_blank" } } })],
+    extensions: [Image.configure({ inline: false, allowBase64: false, HTMLAttributes: { loading: "lazy" } }), StarterKit.configure({ heading: { levels: [2, 3] }, link: { openOnClick: false, autolink: true, HTMLAttributes: { rel: "nofollow ugc noopener", target: "_blank" } } })],
     content: html,
     editorProps: {
       attributes: {
@@ -49,6 +54,12 @@ export default function StoryEditor({ html, resetKey, onChange }: Props) {
 
   if (!editor) return <div className="h-72 animate-pulse rounded-xl bg-muted" />;
   const c = () => editor.chain().focus();
+  const addImage = async (file: File) => {
+    setUploading(true);
+    try { const src = await uploadStoryImage(file); c().setImage({ src, alt: "" }).run(); }
+    catch (e) { toast({ title: "Picture not added", description: (e as Error).message, variant: "destructive" }); }
+    finally { setUploading(false); }
+  };
   const setLink = () => {
     const prev = editor.getAttributes("link").href as string | undefined;
     const url = window.prompt("Link address (https://…). Leave empty to remove the link.", prev ?? "https://");
@@ -73,6 +84,8 @@ export default function StoryEditor({ html, resetKey, onChange }: Props) {
         <Btn title="Numbered list" active={editor.isActive("orderedList")} onClick={() => c().toggleOrderedList().run()}><ListOrdered className="h-4 w-4" /></Btn>
         <Btn title="Quote" active={editor.isActive("blockquote")} onClick={() => c().toggleBlockquote().run()}><Quote className="h-4 w-4" /></Btn>
         <Btn title="Divider line" onClick={() => c().setHorizontalRule().run()}><Minus className="h-4 w-4" /></Btn>
+        <Btn title={uploading ? "Uploading…" : "Add a picture"} onClick={() => fileRef.current?.click()}><ImagePlus className={cn("h-4 w-4", uploading && "animate-pulse text-primary")} /></Btn>
+        <input ref={fileRef} type="file" accept="image/*" className="hidden" onChange={(e) => { const f = e.target.files?.[0]; if (f) void addImage(f); e.target.value = ""; }} />
         <Btn title="Add a link" active={editor.isActive("link")} onClick={setLink}><Link2 className="h-4 w-4" /></Btn>
         <Sep />
         <Btn title="Undo (Ctrl+Z)" onClick={() => c().undo().run()}><Undo2 className="h-4 w-4" /></Btn>

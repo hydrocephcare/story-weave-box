@@ -89,6 +89,7 @@ const GENERAL_ADVICE = ["Study in short focused blocks (25 to 40 minutes) with a
 
 const PLACES: [RegExp, string, string][] = [
   [/\b(past papers?|exams? papers?|cats?)\b/, "Past papers and CATs", "/papers"],
+  [/\b(latest|new|newest|recent|added)\b.*\b(notes?|files?|uploads?)\b|\b(notes?|files?|uploads?)\b.*\b(latest|new|newest|recent|added)\b/, "Latest notes", "/new-notes"],
   [/\b(flash ?cards?)\b/, "Flashcards", "/flashcards"],
   [/\b(mcqs?|quiz)\b/, "MCQ sets", "/mcqs"],
   [/\b(stories|story)\b/, "Stories", "/stories"],

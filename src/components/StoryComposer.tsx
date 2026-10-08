@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import DOMPurify from "dompurify";
-import { Check, CheckCircle2, ChevronDown, Copy, Eye, ExternalLink, Loader2, MessageCircle, PenLine, Send } from "lucide-react";
+import { ImagePlus, X, Check, CheckCircle2, ChevronDown, Copy, Eye, ExternalLink, Loader2, MessageCircle, PenLine, Send } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import StoryEditor from "@/components/StoryEditor";
 import { supabase } from "@/integrations/supabase/client";
@@ -11,6 +11,7 @@ import { SITE_URL, buildStoryPath } from "@/lib/seo";
 import { STORY_CRITERIA, STORY_MIN_CHARACTERS } from "@/lib/storyCriteria";
 import { ownerTagFor, storyToEditable } from "@/lib/storyOwner";
 import { isGeneratedThumb, storyThumb, whatsappLink } from "@/lib/storyShare";
+import { uploadStoryImage } from "@/lib/storyImage";
 
 export const STORY_CATEGORIES = ["Experience", "Advice", "First-year life", "Clinical rotations", "Exams & study", "Reflection", "Campus & fun", "Other"];
 const DRAFT = "ompath_story_draft_v2";
@@ -30,8 +31,12 @@ export function textToHtml(text: string): string {
 
 /** Only formatting survives: no scripts, no styles, no images or embeds, links always open safely. */
 export function cleanStoryHtml(html: string): string {
-  const safe = DOMPurify.sanitize(html, { ALLOWED_TAGS: ["p", "br", "h2", "h3", "strong", "b", "em", "i", "u", "s", "ul", "ol", "li", "blockquote", "hr", "a"], ALLOWED_ATTR: ["href"] });
+  const safe = DOMPurify.sanitize(html, { ALLOWED_TAGS: ["p", "br", "h2", "h3", "strong", "b", "em", "i", "u", "s", "ul", "ol", "li", "blockquote", "hr", "a", "img"], ALLOWED_ATTR: ["href", "src", "alt"] });
   const doc = new DOMParser().parseFromString(`<body>${safe}</body>`, "text/html");
+  doc.querySelectorAll("img").forEach((img) => {
+    if (!/^https:\/\//i.test(img.getAttribute("src") ?? "")) { img.remove(); return; }
+    img.setAttribute("loading", "lazy"); if (!img.getAttribute("alt")) img.setAttribute("alt", "");
+  });
   doc.querySelectorAll("a").forEach((a) => {
     if (!/^https?:\/\//i.test(a.getAttribute("href") ?? "")) { a.replaceWith(...Array.from(a.childNodes)); return; }
     a.setAttribute("rel", "nofollow ugc noopener"); a.setAttribute("target", "_blank");
@@ -55,6 +60,8 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
   const [showRules, setShowRules] = useState(false);
   const [tab, setTab] = useState<"write" | "preview">("write");
   const [busy, setBusy] = useState(false);
+  const [cover, setCover] = useState("");
+  const [coverBusy, setCoverBusy] = useState(false);
   const [done, setDone] = useState<{ url: string; path: string; title: string; edited: boolean } | null>(null);
   const [copied, setCopied] = useState(false);
   const isEdit = Boolean(editing);
@@ -65,6 +72,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
     const key = `${editing?.id ?? "new"}-${Date.now()}`;
     if (editing) {
       const e = storyToEditable(editing.content);
+      setCover(isGeneratedThumb(editing.cover_image_url) ? "" : editing.cover_image_url ?? "");
       setTitle(editing.title); setInitialHtml(e.html); setHtml(e.html); setCategory(editing.category || "Experience");
       setYear(Number(editing.tags?.find((t) => /^year-[1-6]$/.test(t))?.slice(5)) || 0);
       setName(e.name || ((user?.user_metadata?.full_name as string | undefined) ?? "").trim()); setAnonymous(e.anonymous);
@@ -72,6 +80,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
       return;
     }
     const d = readDraft();
+    setCover("");
     setTitle(d.title ?? ""); setInitialHtml(d.html ?? ""); setHtml(d.html ?? ""); setCategory(d.category ?? "Experience");
     let y = d.year ?? 0;
     if (!y) { try { y = Number(localStorage.getItem("ompath_my_year")) || 0; } catch { /* ignore */ } }
@@ -114,7 +123,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
       if (editing) {
         if (!editing.tags?.includes(owner)) throw new Error("You can only edit your own stories.");
         const keep = (editing.tags ?? []).filter((t) => !/^year-\d$/.test(t));
-        const thumb = isGeneratedThumb(editing.cover_image_url) || !editing.cover_image_url ? { cover_image_url: storyThumb(category), og_image_url: storyThumb(category) } : {};
+        const thumb = { cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) };
         const { error } = await supabase.from("stories").update({ ...fields, ...thumb, tags: [...keep, `year-${year}`] }).eq("id", editing.id).contains("tags", [owner]);
         if (error) throw error;
         const path = buildStoryPath({ id: editing.id, title: fields.title });
@@ -122,17 +131,24 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
         onPublished();
         return;
       }
-      const { data, error } = await supabase.from("stories").insert({ ...fields, published: true, tags: [`year-${year}`, "student", owner], cover_image_url: storyThumb(category), og_image_url: storyThumb(category) }).select("id,title").single();
+      const { data, error } = await supabase.from("stories").insert({ ...fields, published: true, tags: [`year-${year}`, "student", owner], cover_image_url: cover || storyThumb(category), og_image_url: cover || storyThumb(category) }).select("id,title").single();
       if (error) throw error;
       try { localStorage.removeItem(DRAFT); localStorage.setItem(LAST, String(Date.now())); } catch { /* ignore */ }
       const path = buildStoryPath({ id: data.id, title: data.title });
       setDone({ url: `${SITE_URL}${path}`, path, title: data.title, edited: false });
-      setTitle(""); setHtml(""); setInitialHtml(""); setPlain("");
+      setTitle(""); setHtml(""); setInitialHtml(""); setPlain(""); setCover("");
       onPublished();
     } catch (e) {
       toast({ title: isEdit ? "Could not save" : "Could not publish", description: (e as Error).message || "Please try again.", variant: "destructive" });
     } finally { setBusy(false); }
   }
+
+  const pickCover = async (file: File) => {
+    setCoverBusy(true);
+    try { setCover(await uploadStoryImage(file)); }
+    catch (e) { toast({ title: "Picture not added", description: (e as Error).message, variant: "destructive" }); }
+    finally { setCoverBusy(false); }
+  };
 
   const copy = async (url: string) => { try { await navigator.clipboard.writeText(url); setCopied(true); window.setTimeout(() => setCopied(false), 1800); } catch { /* clipboard blocked */ } };
 
@@ -175,7 +191,7 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
             <div className={tab === "preview" ? "min-h-0 flex-1 overflow-y-auto bg-muted/30 px-4 py-5" : "hidden"}>
               <article className="mx-auto max-w-2xl rounded-2xl border border-border bg-background p-5 shadow-sm sm:p-8">
                 <p className="mb-3 text-[11px] font-bold uppercase tracking-widest text-primary">Preview: this is how it will look</p>
-                <img src={storyThumb(category)} alt="" className="mb-5 w-full rounded-xl border border-border" />
+                <img src={cover || storyThumb(category)} alt="" className="mb-5 w-full rounded-xl border border-border" />
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold text-primary">{category}</span>
                   {year > 0 && <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-[11px] font-semibold text-foreground/70">Year {year}</span>}
@@ -207,6 +223,19 @@ export default function StoryComposer({ open, onClose, onPublished, editing }: {
               </div>
 
               <div>
+                <p className="mb-1 text-xs font-bold uppercase tracking-wide text-muted-foreground">Cover picture <span className="font-medium normal-case tracking-normal">(optional, shown on the story and when shared)</span></p>
+                {cover ? (
+                  <div className="relative mb-4 overflow-hidden rounded-xl border border-border">
+                    <img src={cover} alt="Your cover" className="max-h-64 w-full object-cover" />
+                    <button type="button" onClick={() => setCover("")} className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-lg bg-black/70 px-2.5 py-1.5 text-xs font-bold text-white hover:bg-black/85"><X className="h-3.5 w-3.5" /> Remove</button>
+                  </div>
+                ) : (
+                  <label className={`mb-4 flex cursor-pointer items-center gap-3 rounded-xl border border-dashed border-border bg-muted/30 px-4 py-3.5 text-sm text-muted-foreground hover:border-primary hover:text-primary ${coverBusy ? "opacity-60" : ""}`}>
+                    {coverBusy ? <Loader2 className="h-5 w-5 animate-spin" /> : <ImagePlus className="h-5 w-5" />}
+                    <span><strong className="block text-foreground">{coverBusy ? "Uploading…" : "Add a cover picture"}</strong>Without one, your story gets a picture for its topic.</span>
+                    <input type="file" accept="image/*" className="hidden" disabled={coverBusy} onChange={(e) => { const f = e.target.files?.[0]; if (f) void pickCover(f); e.target.value = ""; }} />
+                  </label>
+                )}
                 <p className="mb-1 text-xs font-bold uppercase tracking-wide text-muted-foreground">Your story</p>
                 <StoryEditor html={initialHtml} resetKey={docKey} onChange={(h, t) => { setHtml(h); setPlain(t); }} />
                 <p className={`mt-1 text-xs ${chars >= STORY_MIN_CHARACTERS ? "text-primary" : "text-muted-foreground"}`}>{words} words · {chars} characters{chars < STORY_MIN_CHARACTERS ? ` · at least ${STORY_MIN_CHARACTERS}` : " · good length"}{isEdit ? "" : " · draft saved on this device"}</p>

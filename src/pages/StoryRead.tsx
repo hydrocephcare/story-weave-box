@@ -9,6 +9,7 @@ import DOMPurify from "dompurify";
 import { Pencil, Trash2 } from "lucide-react";
 import StoryComposer from "@/components/StoryComposer";
 import { useOwnerTag } from "@/lib/storyOwner";
+import { isGeneratedThumb } from "@/lib/storyShare";
 import { Helmet } from "react-helmet-async";
 import { KeywordLinkProvider, linkifyText, useKeywordLinks } from "@/lib/keyword-link";
 import { slugify, useHashFlash } from "@/lib/deep-link";
@@ -336,7 +337,7 @@ export default function StoryRead() {
         </header>
 
         {/* Cover image */}
-        {story.cover_image_url && (
+        {story.cover_image_url && !isGeneratedThumb(story.cover_image_url) && (
           <figure className="mb-8 overflow-hidden rounded-2xl border border-border shadow-sm">
             <img
               src={story.cover_image_url}
@@ -375,7 +376,7 @@ function StoryContentBody({ storyContent, isHtml, renderMarkdown }: { storyConte
   if (isHtml) {
     return (
       <div
-        className="prose prose-sm max-w-none prose-headings:font-serif prose-p:leading-[1.85] prose-p:text-foreground/85 prose-strong:text-foreground prose-blockquote:border-primary/40 prose-blockquote:bg-primary/5 dark:prose-invert"
+        className="story-prose max-w-none text-[17px] leading-8 sm:text-[18px] sm:leading-9"
         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(storyContent, { ADD_ATTR: ["target", "rel"] }) }}
       />
     );
