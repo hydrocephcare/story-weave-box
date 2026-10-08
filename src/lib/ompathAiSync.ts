@@ -31,6 +31,7 @@ export function useAiAccountSync(userId: string | null) {
     if (!userId || ready.current !== userId) return;
     const t = window.setTimeout(() => {
       const payload = aiStore.exportForSync();
+      if (!payload.sessions.length && !payload.deleted.length) return; // nothing to save: never overwrite the account copy with an empty one
       void db.from("ai_user_history").upsert({ user_id: userId, data: payload, updated_at: new Date().toISOString() }).then(() => undefined, () => undefined);
     }, 4000);
     return () => window.clearTimeout(t);

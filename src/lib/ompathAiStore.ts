@@ -86,6 +86,8 @@ export const aiStore = {
   },
   open(id: string) { if (sessions.some((s) => s.id === id)) { activeId = id; refresh(); } },
   remove(id: string) { deleted = [...deleted, id]; saveDeleted(); sessions = sessions.filter((s) => s.id !== id); if (activeId === id) activeId = sessions[0]?.id ?? null; refresh(); },
+  /** Signing out: forget everything on this device without marking the chats as deleted (they stay on the student's account). */
+  reset() { sessions = []; activeId = null; deleted = []; try { localStorage.removeItem(KEY); localStorage.removeItem(ACTIVE); localStorage.removeItem(DELETED); } catch { /* ignore */ } snap = snapshot(); emit(); },
   clearAll() { deleted = [...deleted, ...sessions.map((s) => s.id)]; saveDeleted(); sessions = []; activeId = null; refresh(); },
   /** Chats from the student's account: the newer copy of each chat wins, and deleted chats stay deleted. */
   mergeRemote(remote: AiSession[], remoteDeleted: string[]) {

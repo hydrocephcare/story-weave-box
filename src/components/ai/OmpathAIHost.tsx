@@ -125,6 +125,16 @@ export default function OmpathAIHost() {
       .then(({ data }: { data: { study_year?: number | string } | null }) => setProfileYear(data?.study_year ? Number(data.study_year) : null), () => undefined);
   }, [user]);
   useAiAccountSync(user?.id ?? null);
+  // signing out closes the assistant and forgets the student: the next person on this device starts clean
+  const wasSignedIn = useRef(false);
+  useEffect(() => {
+    if (authLoading) return;
+    if (user) { wasSignedIn.current = true; return; }
+    if (!wasSignedIn.current) return;
+    wasSignedIn.current = false;
+    abort.current?.abort();
+    setOpen(false); setView("chat"); setQ(""); setBusy(false); setPreview(null); setToldYear(null); setProfileYear(null); setResume(false);
+  }, [user, authLoading]);
   const myYear = profileYear ?? toldYear;
   const myTimetable = useTimetable(myYear ?? 1);
   const used = questionsUsedToday();

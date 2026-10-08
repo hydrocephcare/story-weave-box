@@ -2,6 +2,7 @@ import { useState, useEffect, createContext, useContext, useCallback } from "rea
 import { supabase } from "@/integrations/supabase/client";
 import type { User, Session } from "@supabase/supabase-js";
 import { syncLocalProgress } from "@/lib/study";
+import { wipePersonalData } from "@/lib/signOutCleanup";
 
 interface AuthContextType {
   user: User | null;
@@ -36,8 +37,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     let active = true;
+    let hadUser = false;
     const applySession = async (nextSession: Session | null) => {
       if (!active) return;
+      const hadBefore = hadUser;
+      hadUser = Boolean(nextSession?.user);
       setSession(nextSession);
       setUser(nextSession?.user ?? null);
       if (nextSession?.user) {
@@ -46,7 +50,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         await checkAdmin(nextSession.user.id);
         void syncLocalProgress(nextSession.user.id).catch(() => undefined);
       }
-      else setIsAdmin(false);
+      else {
+        setIsAdmin(false);
+        if (hadBefore) wipePersonalData(); // signed out (here, in another tab, or the session ended): leave nothing of the student behind
+      }
       if (active) setLoading(false);
     };
 
