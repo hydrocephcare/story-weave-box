@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import RailLayout from "@/components/RailLayout";
 import SearchPalette from "@/components/SearchPalette";
 import AIGate from "@/components/ai/AIGate";
+import AIPill from "@/components/ai/AIPill";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -232,6 +233,7 @@ const App = () => (
             <AnnouncementBar />
             <SearchPalette />
             <AIGate />
+            <AIPill />
             <Navbar />
             <AnimatedRoutes />
             <SiteFooter />

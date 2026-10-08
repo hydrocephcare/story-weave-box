@@ -74,6 +74,41 @@ const WANT_WORDS: Record<Exclude<Wanted, "answer" | "notes">, Set<string>> = {
   files: new Set("file files pdf pdfs slides slide ppt textbook textbooks book books library handout handouts".split(" ")),
 };
 
+/** Words students misspell most; a typo within a couple of letters of one of these is read as that word ("phyciaty" -> "psychiatry"). */
+const VOCAB = ("psychiatry paediatrics obstetrics gynaecology pharmacology pathology physiology anatomy biochemistry microbiology immunology histology haematology cardiology nephrology neurology dermatology " +
+  "ophthalmology orthopaedics radiology surgery medicine tuberculosis hypertension diabetes pneumonia asthma anaemia schizophrenia depression epilepsy stroke malaria hepatitis cirrhosis leukaemia lymphoma " +
+  "appendicitis pancreatitis meningitis tonsillitis bronchitis arthritis osteoporosis thyroid cholera typhoid pregnancy eclampsia contraception embryology parasitology bacteriology virology mycology entomology " +
+  "epidemiology biostatistics genetics pharmacokinetics antibiotics inflammation neoplasia atherosclerosis myocardial infarction angina arrhythmia embolism thrombosis oedema shock sepsis dehydration " +
+  "cardiovascular respiratory gastrointestinal endocrinology rheumatology urology neurosurgery anaesthesia emergency toxicology forensic ethics communication histopathology cytopathology " +
+  "dementia delirium anxiety bipolar psychosis addiction nephrotic nephritic glomerulonephritis hydrocephalus pleural effusion pneumothorax emphysema cirrhosis jaundice").split(" ");
+const VOCAB_SET = new Set(VOCAB);
+
+function distance(a: string, b: string): number {
+  const prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    let diag = prev[0]; prev[0] = i;
+    for (let j = 1; j <= b.length; j++) {
+      const tmp = prev[j];
+      prev[j] = Math.min(prev[j] + 1, prev[j - 1] + 1, diag + (a[i - 1] === b[j - 1] ? 0 : 1));
+      diag = tmp;
+    }
+  }
+  return prev[b.length];
+}
+
+/** The one vocabulary word a misspelt word is clearly meant to be, or the word itself. */
+export function fixTypo(w: string): string {
+  if (w.length < 6 || VOCAB_SET.has(w) || ABBREVIATIONS[w] || /\d/.test(w)) return w;
+  const limit = w.length >= 8 ? 3 : 2;
+  let best = "", bestD = 99, tie = false;
+  for (const v of VOCAB) {
+    if (Math.abs(v.length - w.length) > limit) continue;
+    const d = distance(w, v);
+    if (d < bestD) { best = v; bestD = d; tie = false; } else if (d === bestD) tie = true;
+  }
+  return bestD <= limit && !tie ? best : w;
+}
+
 const QUESTION_RE = /^(what|why|how|when|where|which|who|explain|define|describe|differentiate|compare|list|outline|discuss|is|are|does|do|can|should|tell me|give me the)\b|\?\s*$/i;
 
 export function parseQuery(input: string): ParsedQuery {
@@ -98,7 +133,7 @@ export function parseQuery(input: string): ParsedQuery {
   for (const w of words) {
     if (FILLER.has(w)) continue;
     if (wants !== "answer" && wants !== "notes" && WANT_WORDS[wants].has(w)) continue;
-    kept.push(ABBREVIATIONS[w] ?? w);
+    kept.push(ABBREVIATIONS[w] ?? fixTypo(w));
   }
   const topic = kept.join(" ").replace(/\s+/g, " ").trim() || s.trim();
 

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ArrowUp, BookOpen, Brain, Check, Copy, ExternalLink, History, Loader2, MessageSquarePlus, Search, Sparkles, Square, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
+import { ArrowUp, BookOpen, Brain, Check, Copy, ExternalLink, History, Loader2, MessageSquarePlus, Search, Sparkles, Square, Mic, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
 import { HitIcon } from "@/components/SearchPalette";
 import DriveFileViewer, { type DriveFile, type DriveKind } from "@/components/DriveFileViewer";
@@ -13,11 +13,11 @@ import { openSubscribePrompt } from "@/lib/subscribe-prompt";
 import { aiStore, useAiStore, type AiTurn } from "@/lib/ompathAiStore";
 import { FREE_DAILY_QUESTIONS, countQuestion, extractiveAnswer, followUps, parseQuery, questionsUsedToday, retrieve, streamAnswer, type Retrieval } from "@/lib/ompathAi";
 import { scoringTerms } from "@/lib/ompathAiQuery";
-import { dropCached, getCached, quickReply, saveCached } from "@/lib/ompathAiQuick";
+import { dropCached, getCached, getShared, getTrending, quickReply, reportShared, saveCached, saveShared } from "@/lib/ompathAiQuick";
 import { logSearch } from "@/lib/search";
 import type { SiteHit } from "@/lib/siteSearch";
 
-import { AI_RESUME_KEY as RESUME_KEY, OPEN_AI_EVENT } from "@/lib/aiEvents";
+import { AI_RESUME_KEY as RESUME_KEY, AI_STATE_EVENT, OPEN_AI_EVENT } from "@/lib/aiEvents";
 
 const STARTERS = [
   "I need notes on psychiatry",
@@ -120,6 +120,24 @@ export default function OmpathAIHost() {
   }, [mount]);
 
   useEffect(() => { if (open) endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [turns.length, open, view]);
+  useEffect(() => { window.dispatchEvent(new CustomEvent(AI_STATE_EVENT, { detail: open })); }, [open]);
+  const [trending, setTrending] = useState<string[]>([]);
+  useEffect(() => { if (open && !trending.length) void getTrending().then(setTrending); }, [open, trending.length]);
+
+  // Speak instead of typing (Chrome, Edge and Safari; the button is hidden where it is not supported).
+  const [listening, setListening] = useState(false);
+  const SpeechRec = typeof window !== "undefined" ? ((window as unknown as { SpeechRecognition?: new () => any; webkitSpeechRecognition?: new () => any }).SpeechRecognition ?? (window as unknown as { webkitSpeechRecognition?: new () => any }).webkitSpeechRecognition) : undefined; // eslint-disable-line @typescript-eslint/no-explicit-any
+  const listen = () => {
+    if (!SpeechRec || listening) return;
+    const rec = new SpeechRec();
+    rec.lang = "en-KE"; rec.interimResults = true; rec.maxAlternatives = 1;
+    rec.onresult = (e: any) => { setQ(Array.from(e.results as ArrayLike<any>).map((r) => r[0].transcript).join(" ")); }; // eslint-disable-line @typescript-eslint/no-explicit-any
+    rec.onend = () => setListening(false);
+    rec.onerror = () => setListening(false);
+    setListening(true);
+    try { rec.start(); } catch { setListening(false); }
+  };
+
   useEffect(() => { if (open) { try { sessionStorage.removeItem(RESUME_KEY); } catch { /* ignore */ } setResume(false); } }, [open]);
 
   async function ask(question: string, opts: { fresh?: boolean } = {}) {
@@ -144,6 +162,20 @@ export default function OmpathAIHost() {
       aiStore.addTurn(sessionId, { id, q: text, answer: saved.answer, hits: saved.hits, grounded: saved.grounded, followUps: saved.followUps, instant: "saved", at: Date.now() });
       aiStore.flush();
       return;
+    }
+    // Someone else already asked this: their answer is shown at once, and finding the matching notes costs nothing.
+    if (!opts.fresh) {
+      setBusy(true);
+      const shared = await getShared(text);
+      if (shared) {
+        const r = await retrieve(text).catch(() => null);
+        aiStore.addTurn(sessionId, { id, q: text, answer: shared.answer, hits: r?.hits ?? [], grounded: shared.grounded, followUps: r ? followUps(r.parsed) : undefined, instant: "saved", at: Date.now() });
+        aiStore.flush();
+        saveCached(text, { answer: shared.answer, grounded: shared.grounded, hits: r?.hits ?? [], followUps: r ? followUps(r.parsed) : undefined });
+        setBusy(false);
+        return;
+      }
+      setBusy(false);
     }
     if (limitHit) {
       aiStore.addTurn(sessionId, { id, q: text, answer: "", hits: [], grounded: true, error: `You have used today's ${FREE_DAILY_QUESTIONS} free questions. Subscribe for unlimited, or come back tomorrow. Greetings and questions you have asked before are still instant.`, at: Date.now() });
@@ -171,7 +203,7 @@ export default function OmpathAIHost() {
       const answer = await streamAnswer({ question: text, history: prior, retrieval }, { onText: (full) => aiStore.patchTurn(sessionId, id, { answer: full }), signal: abort.current.signal });
       aiStore.patchTurn(sessionId, id, { answer });
       aiStore.flush();
-      if (answer.trim().length > 40) saveCached(text, { answer, grounded: retrieval.grounded, hits: retrieval.hits, followUps: followUps(retrieval.parsed) });
+      if (answer.trim().length > 40) { saveCached(text, { answer, grounded: retrieval.grounded, hits: retrieval.hits, followUps: followUps(retrieval.parsed) }); void saveShared(text, answer, retrieval.grounded); }
     } catch (e) {
       if ((e as Error).name === "AbortError") { aiStore.flush(); return; }
       const fallback = retrieval ? extractiveAnswer(retrieval) : "";
@@ -259,8 +291,9 @@ export default function OmpathAIHost() {
               {turns.length === 0 && (
                 <section className="rounded-2xl border border-border bg-card p-4">
                   <p className="flex items-center gap-2 font-serif text-lg font-bold"><Sparkles className="h-5 w-5 text-primary" /> What do you need?</p>
+                  {trending.length > 0 && <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-primary">Trending with students</p>}
                   <p className="mt-1 text-sm text-muted-foreground">Ask for notes, a past paper, a library file, or just ask a question. I search every note, paper and file on Ompath Study first.</p>
-                  <div className="mt-3 flex flex-wrap gap-2">{STARTERS.map((s) => <button key={s} type="button" onClick={() => void ask(s)} className="rounded-full border border-border px-3 py-1.5 text-left text-sm hover:border-primary hover:text-primary">{s}</button>)}</div>
+                  <div className="mt-3 flex flex-wrap gap-2">{[...trending.slice(0, 3), ...STARTERS].filter((v, i, a) => a.indexOf(v) === i).slice(0, 7).map((s) => <button key={s} type="button" onClick={() => void ask(s)} className="rounded-full border border-border px-3 py-1.5 text-left text-sm hover:border-primary hover:text-primary">{s}</button>)}</div>
                 </section>
               )}
               <div className="space-y-7">
@@ -286,7 +319,7 @@ export default function OmpathAIHost() {
                             {typeof navigator !== "undefined" && "share" in navigator && t.instant !== "quick" && <button type="button" onClick={() => { void navigator.share({ title: t.q, text: `${t.answer.slice(0, 600)}\n\nOmpath Study`, url: window.location.origin }).catch(() => undefined); }} className="rounded-md p-1 hover:bg-muted" aria-label="Share answer"><Share2 className="h-3.5 w-3.5" /></button>}
                             <button type="button" onClick={() => void copy(t)} className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 hover:bg-muted" aria-label="Copy answer">{copied === t.id ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}</button>
                             <button type="button" onClick={() => aiStore.patchTurn(session!.id, t.id, { vote: t.vote === "up" ? undefined : "up" })} aria-pressed={t.vote === "up"} aria-label="Good answer" className={`rounded-md p-1 hover:bg-muted ${t.vote === "up" ? "text-primary" : ""}`}><ThumbsUp className="h-3.5 w-3.5" /></button>
-                            <button type="button" onClick={() => aiStore.patchTurn(session!.id, t.id, { vote: t.vote === "down" ? undefined : "down" })} aria-pressed={t.vote === "down"} aria-label="Bad answer" className={`rounded-md p-1 hover:bg-muted ${t.vote === "down" ? "text-destructive" : ""}`}><ThumbsDown className="h-3.5 w-3.5" /></button>
+                            <button type="button" onClick={() => { if (t.vote !== "down") { dropCached(t.q); if (t.instant === "saved") void reportShared(t.q); } aiStore.patchTurn(session!.id, t.id, { vote: t.vote === "down" ? undefined : "down" }); }} aria-pressed={t.vote === "down"} aria-label="Bad answer" className={`rounded-md p-1 hover:bg-muted ${t.vote === "down" ? "text-destructive" : ""}`}><ThumbsDown className="h-3.5 w-3.5" /></button>
                           </div>
                         )}
                       </div>
@@ -330,6 +363,7 @@ export default function OmpathAIHost() {
               )}
               <form onSubmit={(e) => { e.preventDefault(); void ask(q); }} className="flex items-end gap-2 rounded-2xl border border-border bg-card p-2 focus-within:ring-2 focus-within:ring-ring">
                 <textarea ref={inputRef} value={q} onChange={(e) => { setQ(e.target.value); e.target.style.height = "auto"; e.target.style.height = `${Math.min(e.target.scrollHeight, 144)}px`; }} onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void ask(q); } }} rows={1} placeholder="e.g. I need notes on psychiatry" aria-label="Ask Ompath AI" className="max-h-36 min-h-[44px] flex-1 resize-none bg-transparent px-2 py-2.5 text-base outline-none placeholder:text-muted-foreground" />
+                {SpeechRec && !busy && <button type="button" onClick={listen} aria-label={listening ? "Listening" : "Speak your question"} className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${listening ? "animate-pulse bg-destructive/15 text-destructive" : "text-muted-foreground hover:bg-muted"}`}><Mic className="h-5 w-5" /></button>}
                 {busy ? <button type="button" onClick={() => abort.current?.abort()} aria-label="Stop" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-muted"><Square className="h-4 w-4" /></button>
                   : <button type="submit" disabled={q.trim().length < 2} aria-label="Ask" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground disabled:opacity-40"><ArrowUp className="h-5 w-5" /></button>}
               </form>

@@ -18,3 +18,10 @@ describe("cacheKey", () => {
     expect(cacheKey("notes on asthma")).not.toBe(cacheKey("notes on copd"));
   });
 });
+
+describe("typos", () => {
+  it("reads a misspelt topic as the real one", () => {
+    expect(cacheKey("phyciaty")).toBe(cacheKey("psychiatry"));
+    expect(cacheKey("pharmcology notes")).toBe(cacheKey("pharmacology notes"));
+  });
+});

@@ -75,3 +75,40 @@ export function saveCached(input: string, value: Omit<CachedAnswer, "at">) {
 export function dropCached(input: string) {
   try { const all = readAll(); delete all[cacheKey(input)]; localStorage.setItem(KEY, JSON.stringify(all)); } catch { /* ignore */ }
 }
+
+// ---- Answers shared by every student ------------------------------------------------------------------------------
+// Needs the table in supabase/migrations/20261008120000_ompath_ai_answer_cache.sql. Without it every call below quietly does nothing.
+import { supabase } from "@/integrations/supabase/client";
+
+// The table is new, so it is not in the generated types yet.
+const db = supabase as unknown as { from: (t: string) => any; rpc: (f: string, a?: Record<string, unknown>) => Promise<{ data: unknown; error: unknown }> }; // eslint-disable-line @typescript-eslint/no-explicit-any
+
+const withTimeout = <T,>(p: PromiseLike<T>, ms: number): Promise<T | null> => Promise.race<T | null>([Promise.resolve(p), new Promise<null>((r) => window.setTimeout(() => r(null), ms))]);
+
+export async function getShared(input: string): Promise<{ answer: string; grounded: boolean } | null> {
+  try {
+    const key = cacheKey(input);
+    const res = (await withTimeout(db.from("ai_answer_cache").select("answer,grounded").eq("cache_key", key).lt("reports", 2).maybeSingle(), 2500)) as { data?: { answer?: string; grounded?: boolean }; error?: unknown } | null;
+    if (!res || res.error || !res.data?.answer) return null;
+    void db.rpc("ai_cache_touch", { k: key });
+    return { answer: String(res.data.answer), grounded: res.data.grounded !== false };
+  } catch { return null; }
+}
+
+export async function saveShared(input: string, answer: string, grounded: boolean) {
+  try {
+    await db.from("ai_answer_cache").insert({ cache_key: cacheKey(input), question: input.trim().slice(0, 400), answer: answer.slice(0, 8000), grounded });
+  } catch { /* already saved by someone else, or the table is not set up */ }
+}
+
+export async function reportShared(input: string) {
+  try { await db.rpc("ai_cache_report", { k: cacheKey(input) }); } catch { /* ignore */ }
+}
+
+export async function getTrending(): Promise<string[]> {
+  try {
+    const res = (await withTimeout(db.rpc("ai_cache_trending", { n: 6 }), 2500)) as { data: unknown; error: unknown } | null;
+    const rows = (res && !res.error && Array.isArray(res.data) ? res.data : []) as { question: string }[];
+    return rows.map((r) => r.question).filter(Boolean);
+  } catch { return []; }
+}
