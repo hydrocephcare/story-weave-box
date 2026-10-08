@@ -5,9 +5,11 @@ import { ChevronDown, Download, FolderOpen, Loader2, RefreshCw, Search } from "l
 import DriveFileViewer, { cleanName, downloadUrl, type DriveFile } from "@/components/DriveFileViewer";
 import FileThumb, { KIND_LABEL } from "@/components/FileThumb";
 import { useAuth } from "@/hooks/useAuth";
+import { useMyYear, yearOfCategory } from "@/hooks/useMyYear";
 import { startDownload } from "@/lib/driveDownload";
 import { countFiles, flattenDrive, loadDriveIndex, loadDriveNotes, type DriveIndex, type DriveNotes, type DriveRow } from "@/lib/driveNotes";
 
+const yearOf = (r: DriveRow) => (r.cat?.sorted ? yearOfCategory(r.where.join(" ")) : null);
 const isNew = (r: DriveRow) => !r.cat || Date.now() - new Date(r.cat.firstSeen).getTime() < 7 * 86400000;
 
 /** /new-notes: the notes folder on Google Drive, live. Add a file to the folder and it shows up here by itself. */
@@ -17,6 +19,10 @@ export default function NewNotes() {
   const [data, setData] = useState<DriveNotes | null>(null);
   const [index, setIndex] = useState<DriveIndex>({});
   const [q, setQ] = useState("");
+  const { year: myYear } = useMyYear();
+  /** Which year to show: the student's own by default, so a Year 1 does not wade through Year 4 notes. */
+  const [pick, setPick] = useState<number | "all" | null>(null);
+  const yearShown = pick ?? myYear ?? "all";
   const [shut, setShut] = useState<Set<string>>(new Set());
   const [viewer, setViewer] = useState<{ items: DriveFile[]; index: number | null }>({ items: [], index: null });
 
@@ -25,7 +31,8 @@ export default function NewNotes() {
 
   const rows = useMemo(() => (data?.ok ? flattenDrive(data.tree, [], index) : []), [data, index]);
   const term = q.trim().toLowerCase();
-  const shown = useMemo(() => rows.filter((r) => !term || `${r.file[1]} ${r.where.join(" ")}`.toLowerCase().includes(term)), [rows, term]);
+  const years = useMemo(() => [...new Set(rows.map(yearOf).filter((y): y is number => y !== null))].sort(), [rows]);
+  const shown = useMemo(() => rows.filter((r) => (yearShown === "all" || term || yearOf(r) === null || yearOf(r) === yearShown) && (!term || `${r.file[1]} ${r.where.join(" ")}`.toLowerCase().includes(term))), [rows, term, yearShown]);
   const groups = useMemo(() => {
     const m = new Map<string, DriveRow[]>();
     for (const r of shown) { const k = r.cat?.sorted ? r.where.join(" · ") : r.where[0] ?? "Just added"; (m.get(k) ?? m.set(k, []).get(k)!).push(r); }
@@ -68,6 +75,12 @@ export default function NewNotes() {
             <Search className="ml-3.5 h-4 w-4 shrink-0 text-muted-foreground" />
             <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={`Search ${countFiles(data.tree)} notes…`} aria-label="Search the latest notes" className="w-full bg-transparent px-3 py-3 text-base outline-none placeholder:text-muted-foreground sm:text-sm" />
           </div>
+          {years.length > 1 && (
+            <div className="mt-3 flex flex-wrap gap-1.5" role="group" aria-label="Show notes for">
+              {years.map((y) => <button key={y} type="button" onClick={() => setPick(y)} aria-pressed={yearShown === y} className={`rounded-full border px-3 py-1 text-xs font-bold ${yearShown === y ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary"}`}>Year {y}{y === myYear ? " · yours" : ""}</button>)}
+              <button type="button" onClick={() => setPick("all")} aria-pressed={yearShown === "all"} className={`rounded-full border px-3 py-1 text-xs font-bold ${yearShown === "all" ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary"}`}>All years</button>
+            </div>
+          )}
           {data.partial && <p className="mt-3 text-xs text-muted-foreground">The folder is large, so the newest part is shown. Use search to find an older note.</p>}
 
           <div className="mt-6 space-y-4">
