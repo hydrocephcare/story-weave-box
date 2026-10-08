@@ -7,6 +7,9 @@ import DriveFileViewer, { type DriveFile, type DriveKind } from "@/components/Dr
 import { SubscribeModal } from "@/components/SubscribeModal";
 import NotePreview from "@/components/ai/NotePreview";
 import OmpathMark from "@/components/ai/OmpathMark";
+import { Answer } from "@/components/ai/AnswerText";
+import QuestionDrill from "@/components/ai/QuestionDrill";
+import { SUBJECT_LABEL, drillIntent } from "@/lib/questionBank";
 import { supabase } from "@/integrations/supabase/client";
 import { useStudentAccess } from "@/lib/student";
 import { unitNameMap, useSiteConfig, useTimetable } from "@/lib/siteConfig";
@@ -31,30 +34,10 @@ const STARTERS = [
   "I need notes on psychiatry",
   "Paediatrics notes on dehydration",
   "Explain Light's criteria",
-  "Year 1 anatomy past papers",
+  "Give me anatomy questions",
   "First-line drugs for hypertension",
   "Quiz me on heart failure",
 ];
-
-/** Small, safe markdown: headings, bullets, numbered lists, bold. Nothing the model writes is ever run as HTML. */
-function Answer({ text }: { text: string }) {
-  const inline = (s: string) => s.split(/(\*\*[^*]+\*\*)/g).map((p, i) => (p.startsWith("**") && p.endsWith("**") ? <strong key={i}>{p.slice(2, -2)}</strong> : <span key={i}>{p}</span>));
-  return (
-    <div className="space-y-1.5 text-[15px] leading-7 text-foreground">
-      {text.split("\n").map((raw, i) => {
-        const l = raw.trimEnd();
-        if (!l.trim()) return null;
-        const h = l.match(/^#{1,4}\s+(.*)/);
-        if (h) return <h3 key={i} className="pt-2 font-serif text-base font-semibold">{inline(h[1])}</h3>;
-        const b = l.match(/^\s*[-*•]\s+(.*)/);
-        if (b) return <div key={i} className="flex gap-2 pl-1"><span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" /><p>{inline(b[1])}</p></div>;
-        const n = l.match(/^\s*(\d+)[.)]\s+(.*)/);
-        if (n) return <div key={i} className="flex gap-2 pl-1"><span className="font-semibold text-primary">{n[1]}.</span><p>{inline(n[2])}</p></div>;
-        return <p key={i}>{inline(l)}</p>;
-      })}
-    </div>
-  );
-}
 
 const ago = (t: number) => {
   const m = Math.floor((Date.now() - t) / 60000);
@@ -177,6 +160,13 @@ export default function OmpathAIHost() {
     const quick = opts.fresh ? null : quickReply(text);
     if (quick) {
       aiStore.addTurn(sessionId, { id, q: text, answer: quick.answer, hits: [], grounded: true, followUps: quick.followUps, instant: "quick", at: Date.now() });
+      aiStore.flush();
+      return;
+    }
+    const drill = opts.fresh ? null : drillIntent(text);
+    if (drill) {
+      const label = SUBJECT_LABEL[drill.subject].toLowerCase();
+      aiStore.addTurn(sessionId, { id, q: text, answer: `Here are some **${label}** spot questions from the Ompath anatomy banks, picture first. Change the subject or section below, tap a picture to enlarge it, and reveal an answer when you are ready.`, hits: [], grounded: true, drill, followUps: ["Histology questions", "Embryology questions", "Upper limb anatomy questions"], instant: "quick", at: Date.now() });
       aiStore.flush();
       return;
     }
@@ -389,6 +379,7 @@ export default function OmpathAIHost() {
                           </div>
                         )}
                       </div>
+                      {t.drill && <QuestionDrill key={t.id} subject={t.drill.subject} topic={t.drill.topic} canReveal={unlimited} onNeedSubscribe={() => openSubscribePrompt("Subscribe to reveal answers.")} onOpen={(href) => goFull({ href } as SiteHit)} />}
                       {t.links && t.links.length > 0 && <div className="flex flex-wrap gap-2">{t.links.map((l) => <button key={l.href} type="button" onClick={() => goFull({ href: l.href } as SiteHit)} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-2 text-sm font-bold text-primary-foreground"><ExternalLink className="h-4 w-4" /> {l.label}</button>)}</div>}
                       {t.hits.length > 0 && (
                         <div className="space-y-3">

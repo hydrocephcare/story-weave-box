@@ -20,6 +20,8 @@ export interface AiTurn {
   links?: { label: string; href: string }[];
   /** Starred by the student, so it shows under Saved. */
   starred?: boolean;
+  /** A set of spot questions (with pictures) to drill, from the anatomy banks. */
+  drill?: { subject: "gross" | "histology" | "embryology"; topic: string };
 }
 export interface AiSession { id: string; title: string; turns: AiTurn[]; updated: number }
 
