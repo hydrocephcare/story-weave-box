@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ArrowUp, Bookmark, BookOpen, Check, Copy, ExternalLink, History, Loader2, MessageSquarePlus, Search, Square, Mic, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
+import { ArrowUp, Bookmark, BookOpen, Check, Copy, ExternalLink, History, Loader2, MessageSquarePlus, Search, Square, Mic, LineChart, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
 import { HitIcon } from "@/components/HitIcon";
 import DriveFileViewer, { type DriveFile, type DriveKind } from "@/components/DriveFileViewer";
@@ -11,6 +11,19 @@ import { Answer } from "@/components/ai/AnswerText";
 import QuestionDrill from "@/components/ai/QuestionDrill";
 import UpgradeCard from "@/components/ai/UpgradeCard";
 import LoginCard from "@/components/ai/LoginCard";
+import ClarifyCard from "@/components/ai/ClarifyCard";
+import McqQuiz from "@/components/ai/McqQuiz";
+import ReminderCard from "@/components/ai/ReminderCard";
+import PlanCard from "@/components/ai/PlanCard";
+import ReviewPanel from "@/components/ai/ReviewPanel";
+import { flowReply } from "@/lib/ompathAiFlows";
+import { unitsThisWeek } from "@/lib/ompathAiSuggest";
+import { weakTopics, readBookmarks, toggleBookmark } from "@/lib/review";
+import EssayPractice from "@/components/ai/EssayPractice";
+import PaperCard from "@/components/ai/PaperCard";
+import { essayIntent, paperIntent, quizIntent } from "@/lib/ompathAiTools";
+import { useFeatures } from "@/lib/features";
+import { UNIVERSITIES, benefitsFor, shortName, useUniversity } from "@/lib/university";
 import { AI_SHARE_TEXT, AI_TITLE, AI_URL } from "@/lib/aiShare";
 import { shareOut } from "@/lib/storyShare";
 import { SUBJECT_LABEL, drillIntent } from "@/lib/questionBank";
@@ -54,16 +67,20 @@ const ago = (t: number) => {
   return d === 1 ? "yesterday" : d < 30 ? `${d} days ago` : new Date(t).toLocaleDateString();
 };
 
-function SourceRow({ h, onOpen }: { h: SiteHit; onOpen: (h: SiteHit) => void }) {
+function SourceRow({ h, onOpen, canMark, onLocked }: { h: SiteHit; onOpen: (h: SiteHit) => void; canMark: boolean; onLocked: () => void }) {
+  const [marked, setMarked] = useState(() => readBookmarks().some((b) => b.key === h.key));
   return (
-    <button type="button" onClick={() => onOpen(h)} className="flex w-full items-start gap-3 rounded-lg border border-border bg-card px-3 py-2.5 text-left transition-colors hover:border-primary/50 hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-      <HitIcon hit={h} className="mt-0.5 h-4 w-4 shrink-0" />
-      <span className="min-w-0 flex-1">
-        <span className="block text-sm font-semibold leading-snug text-foreground">{h.title}</span>
-        <span className="block truncate text-xs text-muted-foreground">{h.subtitle}</span>
-        {h.snippet && <span className="mt-1 line-clamp-2 block text-xs text-muted-foreground">{h.snippet}</span>}
-      </span>
-    </button>
+    <div className="relative">
+      <button type="button" onClick={() => onOpen(h)} className="flex w-full items-start gap-3 rounded-lg border border-border bg-card py-2.5 pl-3 pr-11 text-left transition-colors hover:border-primary/50 hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+        <HitIcon hit={h} className="mt-0.5 h-4 w-4 shrink-0" />
+        <span className="min-w-0 flex-1">
+          <span className="block text-sm font-semibold leading-snug text-foreground">{h.title}</span>
+          <span className="block truncate text-xs text-muted-foreground">{h.subtitle}</span>
+          {h.snippet && <span className="mt-1 line-clamp-2 block text-xs text-muted-foreground">{h.snippet}</span>}
+        </span>
+      </button>
+      <button type="button" onClick={() => { if (!canMark) { onLocked(); return; } setMarked(toggleBookmark({ key: h.key, title: h.title, subtitle: h.subtitle, href: h.href })); }} aria-label={marked ? "Remove bookmark" : "Bookmark this"} aria-pressed={marked} className="absolute right-1 top-1 flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><Bookmark className={`h-4 w-4 ${marked ? "fill-current text-primary" : "text-muted-foreground"}`} /></button>
+    </div>
   );
 }
 
@@ -74,7 +91,7 @@ export default function OmpathAIHost() {
   const access = useAccess();
   const { sessions, activeId } = useAiStore();
   const [open, setOpen] = useState(false);
-  const [view, setView] = useState<"chat" | "history" | "saved">("chat");
+  const [view, setView] = useState<"chat" | "history" | "saved" | "review">("chat");
   const [q, setQ] = useState("");
   const [busy, setBusy] = useState(false);
   const [preview, setPreview] = useState<SiteHit | null>(null);
@@ -89,6 +106,9 @@ export default function OmpathAIHost() {
   const session = useMemo(() => sessions.find((s) => s.id === activeId) ?? null, [sessions, activeId]);
   const turns = session?.turns ?? [];
   const unlimited = isAdmin || access.canReveal;
+  const features = useFeatures(unlimited);
+  const [uni, setUni] = useUniversity();
+  const [changingUni, setChangingUni] = useState(false);
 
   // Who is asking: the year comes from their profile, or from what they told Ompath AI before.
   const student = useStudentAccess();
@@ -105,7 +125,7 @@ export default function OmpathAIHost() {
   const myYear = profileYear ?? toldYear;
   const myTimetable = useTimetable(myYear ?? 1);
   const used = questionsUsedToday();
-  const limitHit = !unlimited && used >= FREE_DAILY_QUESTIONS;
+  const limitHit = !features.can("unlimitedAi") && used >= FREE_DAILY_QUESTIONS;
 
   // Live suggestions while typing, so a student can jump straight to a note without waiting for an answer.
   const live = useSiteSearch(q.trim().length >= 3 && !quickReply(q) ? parseQuery(q).topic : "", {}, open && !busy);
@@ -133,6 +153,11 @@ export default function OmpathAIHost() {
   useEffect(() => { if (open) endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [turns.length, open, view]);
   useEffect(() => { window.dispatchEvent(new CustomEvent(AI_STATE_EVENT, { detail: open })); }, [open]);
   const [trending, setTrending] = useState<string[]>([]);
+  const quickLinks = useMemo<[string, string][]>(() => [
+    ["Timetable", `/timetable/year-${myYear ?? 1}`], ["Latest notes", "/new-notes"], ["Past papers", "/papers"],
+    ...((myYear ?? 0) >= 3 ? ([["Clinical cases", "/clinical"], ["OSCE", "/clinical/osce"], ["Pharmacology", "/pharmacology"], ["Must-knows", "/must-knows"]] as [string, string][]) : []),
+    ["Flashcards", "/flashcards"], ["MCQs", "/mcqs"], ["Library", "/books"], ["Stories", "/stories"],
+  ], [myYear]);
   const suggestions = useMemo(() => suggestionsFor(myYear, myYear ? myTimetable : [], unitNameMap(siteCfg), new Date(), trending), [myYear, myTimetable, siteCfg, trending]);
   useEffect(() => { if (open && !trending.length) void getTrending().then(setTrending); }, [open, trending.length]);
 
@@ -175,10 +200,28 @@ export default function OmpathAIHost() {
       aiStore.flush();
       return;
     }
+    const weak = features.can("review") ? weakTopics(4).map((w) => w.topic) : [];
+    const flow = opts.fresh ? null : flowReply(text, { year: myYear, units: unitsThisWeek(myYear ? myTimetable : [], unitNameMap(siteCfg), new Date()).slice(0, 6), weak, keyDates: siteCfg.keyDates, now: new Date(), canReminders: features.can("reminders") });
+    if (flow) {
+      if (flow.setYear) { try { localStorage.setItem("ompath_my_year", String(flow.setYear)); } catch { /* storage blocked */ } setToldYear(flow.setYear); }
+      aiStore.addTurn(sessionId, { id, q: text, answer: flow.answer, hits: [], grounded: true, followUps: flow.followUps, clarify: flow.clarify, reminder: flow.reminder, plan: flow.plan, locked: flow.locked, instant: "quick", at: Date.now() });
+      aiStore.flush();
+      return;
+    }
     const drill = opts.fresh ? null : drillIntent(text);
     if (drill) {
       const label = SUBJECT_LABEL[drill.subject].toLowerCase();
       aiStore.addTurn(sessionId, { id, q: text, answer: `Here are some **${label}** spot questions from the Ompath anatomy banks, picture first. Change the subject or section below, tap a picture to enlarge it, and reveal an answer when you are ready.`, hits: [], grounded: true, drill, followUps: ["Histology questions", "Embryology questions", "Upper limb anatomy questions"], instant: "quick", at: Date.now() });
+      aiStore.flush();
+      return;
+    }
+    const tool = opts.fresh ? null : (essayIntent(text) ?? paperIntent(text) ?? quizIntent(text));
+    if (tool) {
+      const about = tool.topic ? ` on **${tool.topic}**` : "";
+      const answer = tool.kind === "quiz" ? `Here is a quiz${about}, made from the MCQs on Ompath Study. Pick an answer for each question, then submit to see your score and the reasons.`
+        : tool.kind === "essay" ? `Essay and short-answer questions${about}. Tap to reveal the model answer when you have tried it.`
+        : `Here is the paper${about}. Tap it to read the whole thing.`;
+      aiStore.addTurn(sessionId, { id, q: text, answer, hits: [], grounded: true, tool, followUps: tool.kind === "quiz" ? [`Essay questions on ${tool.topic}`, `Past paper on ${tool.topic}`, `Notes on ${tool.topic}`] : [`${tool.topic ? tool.topic + " " : ""}mcqs`.replace(/^ /, "") && `10 mcqs on ${tool.topic || "my unit"}`], instant: "quick", at: Date.now() });
       aiStore.flush();
       return;
     }
@@ -193,7 +236,7 @@ export default function OmpathAIHost() {
         if (mine.setYear) { localStorage.setItem("ompath_my_year", String(mine.setYear)); setToldYear(mine.setYear); }
         if (mine.setGroup && myYear) localStorage.setItem(`ompath_group_y${myYear}`, mine.setGroup);
       } catch { /* storage blocked */ }
-      aiStore.addTurn(sessionId, { id, q: text, answer: mine.answer, hits: [], grounded: true, followUps: mine.followUps, links: mine.links, instant: "quick", at: Date.now() });
+      aiStore.addTurn(sessionId, { id, q: text, answer: mine.answer, hits: [], grounded: true, followUps: mine.followUps, links: mine.links, clarify: mine.clarify, instant: "quick", at: Date.now() });
       aiStore.flush();
       return;
     }
@@ -291,7 +334,7 @@ export default function OmpathAIHost() {
   const Group = ({ title, rows, all }: { title: string; rows: SiteHit[]; all: SiteHit[] }) => rows.length ? (
     <div>
       <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-muted-foreground">{title} ({rows.length})</p>
-      <div className="grid gap-1.5">{rows.slice(0, 6).map((h) => <SourceRow key={h.key} h={h} onOpen={(x) => openHit(x, all)} />)}</div>
+      <div className="grid gap-1.5">{rows.slice(0, 6).map((h) => <SourceRow key={h.key} h={h} onOpen={(x) => openHit(x, all)} canMark={features.can("review")} onLocked={() => openSubscribePrompt("Subscribe to bookmark notes and use your Review.")} />)}</div>
     </div>
   ) : null;
 
@@ -306,16 +349,20 @@ export default function OmpathAIHost() {
             <OmpathMark className="h-9 w-9 shrink-0" />
             <div className="min-w-0 flex-1">
               <p className="font-serif text-base font-bold leading-tight">Ompath AI</p>
-              <p className="truncate text-[11px] text-muted-foreground">{view === "history" ? "Your past chats" : view === "saved" ? "Answers you saved" : "Answers from your notes, files and papers"}</p>
+              <p className="truncate text-[11px] text-muted-foreground">{view === "history" ? "Your past chats" : view === "review" ? "Your review, reminders and plans" : view === "saved" ? "Answers you saved" : "Answers from your notes, files and papers"}</p>
             </div>
             <button type="button" onClick={() => { aiStore.newSession(); setView("chat"); setQ(""); window.setTimeout(() => inputRef.current?.focus(), 50); }} aria-label="New chat" title="New chat" className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><MessageSquarePlus className="h-5 w-5" /></button>
-            <button type="button" onClick={() => void shareOut(AI_SHARE_TEXT, AI_URL, AI_TITLE)} aria-label="Share Ompath AI" title="Share Ompath AI with your group" className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><Share2 className="h-5 w-5" /></button>
+            <button type="button" onClick={() => setView(view === "review" ? "chat" : "review")} aria-label="My review" title="My review" aria-pressed={view === "review"} className={`flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted ${view === "review" ? "bg-muted" : ""}`}><LineChart className="h-5 w-5" /></button>
             <button type="button" onClick={() => setView(view === "saved" ? "chat" : "saved")} aria-label="Saved answers" title="Saved answers" aria-pressed={view === "saved"} className={`flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted ${view === "saved" ? "bg-muted" : ""}`}><Bookmark className="h-5 w-5" /></button>
             <button type="button" onClick={() => setView(view === "history" ? "chat" : "history")} aria-label="History" title="History" aria-pressed={view === "history"} className={`flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted ${view === "history" ? "bg-muted" : ""}`}><History className="h-5 w-5" /></button>
             <button type="button" onClick={() => setOpen(false)} aria-label="Close Ompath AI" className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><X className="h-5 w-5" /></button>
           </header>
 
-          {view === "saved" ? (
+          {view === "review" ? (
+            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-3">
+              <ReviewPanel allowed={features.can("review")} onAsk={(x) => { setView("chat"); void ask(x); }} onOpen={(href) => goFull({ href } as SiteHit)} />
+            </div>
+          ) : view === "saved" ? (
             <div className="min-h-0 flex-1 overflow-y-auto px-3 py-3">
               {savedTurns.length === 0 ? <p className="py-10 text-center text-sm text-muted-foreground">Nothing saved yet. Tap the bookmark under an answer to keep it here.</p> : (
                 <ul className="space-y-2">
@@ -356,11 +403,23 @@ export default function OmpathAIHost() {
           ) : (
             <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-4">
               {turns.length === 0 && !user && !authLoading && <div className="mb-3"><LoginCard onNavigate={() => setOpen(false)} /></div>}
+              {turns.length === 0 && user && (!uni || changingUni) && (
+                <div className="mb-3"><ClarifyCard question="Which university are you at? I tailor what I show you." options={["MKU", "UoN", "KU", "JKUAT", "Moi", "Maseno", "Egerton", "Kabarak"]} other="Not listed? Type yours and add it" onPick={(a) => { const full = UNIVERSITIES.find((u) => shortName(u).toLowerCase() === a.toLowerCase()); void setUni(full ?? a, !full); setChangingUni(false); }} /></div>
+              )}
+              {turns.length === 0 && user && uni && !changingUni && (
+                <details className="mb-3 rounded-2xl border border-border bg-card px-3.5 py-2.5 text-sm">
+                  <summary className="cursor-pointer font-semibold">{benefitsFor(uni).title}</summary>
+                  <ul className="mt-2 space-y-1 text-muted-foreground">{benefitsFor(uni).points.map((p) => <li key={p} className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />{p}</li>)}</ul>
+                  {benefitsFor(uni).note && <p className="mt-2 text-xs text-muted-foreground">{benefitsFor(uni).note}</p>}
+                  <button type="button" onClick={() => setChangingUni(true)} className="mt-2 text-xs font-bold text-primary hover:underline">Change university</button>
+                </details>
+              )}
               {turns.length === 0 && (
                 <section className="rounded-2xl border border-border bg-card p-4">
                   <p className="flex items-center gap-2 font-serif text-lg font-bold"><OmpathMark className="h-7 w-7" plain /> What do you need?</p>
-                  <p className="mt-1 text-sm text-muted-foreground">Ask for notes, a past paper, a library file, or just ask a question. I search every note, paper and file on Ompath Study first.</p>
-                  <div className="mt-3 flex flex-wrap gap-1.5" aria-label="Quick links">{[["Timetable", `/timetable/year-${myYear ?? 1}`], ["Latest notes", "/new-notes"], ["Past papers", "/papers"], ["Flashcards", "/flashcards"], ["MCQs", "/mcqs"], ["Library", "/books"], ["Stories", "/stories"]].map(([label, href]) => <button key={href} type="button" onClick={() => goFull({ href } as SiteHit)} className="inline-flex items-center gap-1 rounded-lg bg-primary/10 px-2.5 py-1.5 text-xs font-bold text-primary hover:bg-primary/15"><ExternalLink className="h-3 w-3" /> {label}</button>)}</div>
+                  <p className="mt-1 text-sm text-muted-foreground">Ask for notes, a past paper, a quiz, a study plan or a reminder, or just ask a question. I search every note, paper and file on Ompath Study first.</p>
+                  <button type="button" onClick={() => void shareOut(AI_SHARE_TEXT, AI_URL, AI_TITLE)} className="mt-2 inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline"><Share2 className="h-3.5 w-3.5" /> Share Ompath AI with your group</button>
+                  <div className="mt-3 flex flex-wrap gap-1.5" aria-label="Quick links">{quickLinks.map(([label, href]) => <button key={href} type="button" onClick={() => goFull({ href } as SiteHit)} className="inline-flex items-center gap-1 rounded-lg bg-primary/10 px-2.5 py-1.5 text-xs font-bold text-primary hover:bg-primary/15"><ExternalLink className="h-3 w-3" /> {label}</button>)}</div>
                   <p className="mt-4 text-[11px] font-bold uppercase tracking-wide text-primary">{suggestions.caption}</p>
                   <div className="mt-2 flex flex-wrap gap-2">{suggestions.chips.map((s) => <button key={s} type="button" onClick={() => void ask(s)} className="rounded-full border border-border px-3 py-1.5 text-left text-sm hover:border-primary hover:text-primary">{s}</button>)}</div>
                 </section>
@@ -393,7 +452,14 @@ export default function OmpathAIHost() {
                           </div>
                         )}
                       </div>
-                      {t.drill && <QuestionDrill key={t.id} subject={t.drill.subject} topic={t.drill.topic} canReveal={unlimited} onNeedSubscribe={() => openSubscribePrompt("Subscribe to reveal answers.")} onOpen={(href) => goFull({ href } as SiteHit)} onExplain={(q, how) => void ask(how === "mnemonic" ? `Give me a short, memorable mnemonic for: ${q.question}` : `Explain: ${q.question}`, { context: q.answer })} />}
+                      {t.tool?.kind === "quiz" && <McqQuiz key={t.id} topic={t.tool.topic} n={t.tool.n} year={t.tool.year} canLong={features.can("longQuiz")} onAgain={(tp) => void ask(`${(t.tool as { n: number }).n} mcqs on ${tp}`)} />}
+                      {t.tool?.kind === "essay" && <EssayPractice key={t.id} topic={t.tool.topic} year={t.tool.year} canReveal={unlimited} />}
+                      {t.tool?.kind === "paper" && <PaperCard key={t.id} topic={t.tool.topic} year={t.tool.year} latest={t.tool.latest} onOpen={(h) => setPreview(h)} />}
+                      {t.clarify && <ClarifyCard question={t.clarify.question} options={t.clarify.options} other={t.clarify.other} disabled={!last || busy} onPick={(a) => void ask(t.clarify?.send?.[a] ?? a)} />}
+                      {t.reminder && <ReminderCard reminder={t.reminder} />}
+                      {t.plan && <PlanCard plan={t.plan} canSave={features.can("studyPlanSave")} canRemind={features.can("reminders")} />}
+                      {t.locked && <UpgradeCard kind="feature" title="Reminders are for Pro" why="Pro students can say “remind me to revise cardiology tomorrow at 6 pm” and get an alert on the site and an entry in their phone calendar." />}
+                      {t.drill && <QuestionDrill key={t.id} subject={t.drill.subject} topic={t.drill.topic} canReveal={unlimited} noPictureLimit={features.can("unlimitedPictures")} onNeedSubscribe={() => openSubscribePrompt("Subscribe to reveal answers.")} onOpen={(href) => goFull({ href } as SiteHit)} onExplain={(q, how) => void ask(how === "mnemonic" ? `Give me a short, memorable mnemonic for: ${q.question}` : `Explain: ${q.question}`, { context: q.answer })} />}
                       {t.login && <LoginCard question={t.q} onNavigate={() => setOpen(false)} />}
                       {t.upgrade && <UpgradeCard kind={t.upgrade} />}
                       {t.links && t.links.length > 0 && <div className="flex flex-wrap gap-2">{t.links.map((l) => <button key={l.href} type="button" onClick={() => goFull({ href: l.href } as SiteHit)} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-2 text-sm font-bold text-primary-foreground"><ExternalLink className="h-4 w-4" /> {l.label}</button>)}</div>}

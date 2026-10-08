@@ -17,7 +17,7 @@ export interface PersonalCtx {
   keyDates: KeyDate[];
   now: Date;
 }
-export interface PersonalReply { answer: string; followUps: string[]; links?: { label: string; href: string }[]; setYear?: number; setGroup?: string }
+export interface PersonalReply { answer: string; followUps: string[]; clarify?: { question: string; options: string[]; other?: string; send?: Record<string, string> }; links?: { label: string; href: string }[]; setYear?: number; setGroup?: string }
 
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9?' ]/g, " ").replace(/\s+/g, " ").trim();
@@ -31,6 +31,7 @@ function yearFromText(s: string): number | null {
   return w ? ORDINALS.indexOf(w[1]) + 1 : null;
 }
 
+export const YEAR_ASK = { question: "Which year are you in?", options: ["Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6"], send: Object.fromEntries([1, 2, 3, 4, 5, 6].map((y) => [`Year ${y}`, `I am in year ${y}`])) };
 const LOGIN = { label: "Log in", href: "/login?redirect=%2F&mku=1" };
 
 /** Which day the student means: "today", "tomorrow", "friday", "this week". */
@@ -142,7 +143,7 @@ export function personalReply(input: string, c: PersonalCtx): PersonalReply | nu
     const y = yearFromText(s) ?? c.year;
     if (!c.signedIn) return { answer: "Log in with your MKU student account first and I will show your year's lecturers.", followUps: [], links: [LOGIN] };
     if (c.status !== null && c.status !== "verified") return { answer: "The lecturers list is for verified MKU students. Open your account to finish verifying.", followUps: [], links: [{ label: "My account", href: "/account" }] };
-    if (!y) return { answer: "Which year are you in? Say \"I am in year 4\" and I will remember it.", followUps: ["I am in year 1", "I am in year 3", "I am in year 4"] };
+    if (!y) return { answer: "Which year are you in? I will remember it.", followUps: [], clarify: YEAR_ASK };
     const staff = YEAR_TEACHING_STAFF[y] ?? [];
     return {
       answer: `**Year ${y} lecturers on the official 2026 timetable**\n${staff.map((n) => `- ${n}`).join("\n")}\n\nThe timetable lists the teaching team for the year but does not say who takes each session, so I will not guess a name for a particular class.`,
@@ -169,7 +170,7 @@ export function personalReply(input: string, c: PersonalCtx): PersonalReply | nu
     if (!c.signedIn) return { answer: "I need to know who you are first. Log in with your MKU student account and I will show your own timetable.", followUps: [], links: [LOGIN] };
     if (c.status !== null && c.status !== "verified") return { answer: "The timetable is for verified MKU students. Open your account to finish verifying, then ask me again.", followUps: [], links: [{ label: "My account", href: "/account" }] };
     const y = yearFromText(s) ?? c.year;
-    if (!y) return { answer: "Which year are you in? Tell me once (\"I am in year 4\") and I will remember it on this device.", followUps: ["I am in year 1", "I am in year 2", "I am in year 3", "I am in year 4"] };
+    if (!y) return { answer: "Which year are you in? Tell me once and I will remember it on this device.", followUps: [], clarify: YEAR_ASK };
     const tables = c.tables[y] ?? OFFICIAL_2026_SCHEDULES[y] ?? [];
     if (!tables.length) return { answer: `There is no timetable published for Year ${y} yet.`, followUps: [] };
     const when = dayFromText(s, c.now) ?? { dates: [new Date(c.now.getFullYear(), c.now.getMonth(), c.now.getDate() + 1)], label: "tomorrow" };

@@ -3,6 +3,12 @@ import { FREE_DAILY_PICTURES, FREE_DAILY_QUESTIONS, FREE_REVEALS_PER_SUBJECT } f
 import { openSubscribePrompt } from "@/lib/subscribe-prompt";
 
 const COPY = {
+  feature: { title: "This is a Pro feature", why: "Subscribers get this, along with unlimited AI answers, picture questions and the full review of your weak topics.", reason: "Subscribe to unlock this feature and the rest of Pro." },
+  quiz: {
+    title: "Longer quizzes are for Pro",
+    why: "Free accounts can build a quiz of up to 10 questions. Pro builds 11 to 50, mixed from every MCQ on the site. Here are 10 to start.",
+    reason: "Subscribe for longer practice quizzes and the full review of your weak topics.",
+  },
   answers: {
     title: "You have used today's free answers",
     why: `Each day the first ${FREE_REVEALS_PER_SUBJECT} answers in gross anatomy, histology and embryology are free. Subscribe to reveal every answer.`,
@@ -21,8 +27,9 @@ const COPY = {
 } as const;
 
 /** The in-chat "you have reached the free limit" card: it says what is free, what a subscription adds, and opens the existing payment window. */
-export default function UpgradeCard({ kind }: { kind: "questions" | "pictures" | "answers" }) {
-  const c = COPY[kind];
+export default function UpgradeCard({ kind, title, why }: { kind: "questions" | "pictures" | "answers" | "quiz" | "feature"; title?: string; why?: string }) {
+  const base = COPY[kind];
+  const c = { ...base, title: title ?? base.title, why: why ?? base.why };
   return (
     <section className="overflow-hidden rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-card p-4" aria-label="Upgrade">
       <p className="flex items-center gap-2 font-serif text-base font-bold"><Lock className="h-4 w-4 text-primary" /> {c.title}</p>

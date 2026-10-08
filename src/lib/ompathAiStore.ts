@@ -2,6 +2,9 @@
 // Each conversation has a title (its first question), its turns and when it was last used.
 import { useSyncExternalStore } from "react";
 import type { SiteHit } from "@/lib/siteSearch";
+import type { ToolSpec } from "@/lib/ompathAiTools";
+import type { Reminder } from "@/lib/reminders";
+import type { Plan } from "@/lib/studyPlan";
 
 export interface AiTurn {
   id: string;
@@ -24,6 +27,16 @@ export interface AiTurn {
   upgrade?: "questions" | "pictures";
   /** Shows the "log in to use Ompath AI" card (a guest asked something). */
   login?: boolean;
+  /** A quick question with tappable answers (which year? which university? when?). */
+  clarify?: { question: string; options: string[]; other?: string; /** what to send when an option is tapped, if it differs from its label */ send?: Record<string, string> };
+  /** A study tool opened by the request: a quiz, essay practice or a past paper. */
+  tool?: ToolSpec;
+  /** A reminder that was just set. */
+  reminder?: Reminder;
+  /** A study plan that was just built. */
+  plan?: Plan;
+  /** Asked for a Pro feature this person does not have. */
+  locked?: "reminders";
   /** A set of spot questions (with pictures) to drill, from the anatomy banks. */
   drill?: { subject: "gross" | "histology" | "embryology"; topic: string };
 }

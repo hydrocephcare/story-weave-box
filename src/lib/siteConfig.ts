@@ -18,6 +18,8 @@ export interface SiteConfig {
   hiddenFiles: string[];
   /** Library file id → display title. */
   renames: Record<string, string>;
+  /** Feature key -> "free" or "pro" (see src/lib/features.ts). A feature not listed uses its built-in default. */
+  proFeatures?: Record<string, "free" | "pro">;
 }
 
 export const DEFAULT_UNIT_NAMES: Record<string, string> = {
@@ -64,6 +66,7 @@ function merge(raw: unknown): SiteConfig {
     unitNames: r.unitNames && typeof r.unitNames === "object" ? r.unitNames : {},
     hiddenFiles: Array.isArray(r.hiddenFiles) ? r.hiddenFiles : [],
     renames: r.renames && typeof r.renames === "object" ? r.renames : {},
+    proFeatures: r.proFeatures && typeof r.proFeatures === "object" ? r.proFeatures : {},
   };
 }
 

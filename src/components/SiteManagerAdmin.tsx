@@ -7,6 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import { OFFICIAL_2026_SCHEDULES, type OfficialScheduleTable } from "@/lib/timetable2026";
 import { DEFAULT_UNIT_NAMES, loadSiteConfig, saveSiteConfig, type SiteConfig } from "@/lib/siteConfig";
 import { WEEKDAYS } from "@/lib/revisionPlan";
+import { FEATURES, tierOf } from "@/lib/features";
 
 const clone = <T,>(v: T): T => JSON.parse(JSON.stringify(v));
 
@@ -48,6 +49,23 @@ export default function SiteManagerAdmin() {
         <p className="text-sm text-muted-foreground">Everything below is saved in one place and applies to every visitor immediately.</p>
         <Button onClick={save} disabled={saving}>{saving ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Save className="mr-2 h-4 w-4" />} Save all changes</Button>
       </div>
+
+      <Section title="Free or Pro features" hint="Switch any feature between everyone (Free) and subscribers only (Pro). Press Save all changes and it applies to every visitor straight away.">
+        {FEATURES.map((feat) => {
+          const tier = tierOf(feat.key, cfg);
+          return (
+            <div key={feat.key} className="flex items-start justify-between gap-3 rounded-xl border border-border p-3">
+              <div className="min-w-0"><p className="text-sm font-semibold text-foreground">{feat.label}</p><p className="text-xs text-muted-foreground">{feat.blurb}</p></div>
+              <div className="inline-flex shrink-0 overflow-hidden rounded-lg border border-border text-xs font-bold" role="group" aria-label={`${feat.label}: free or pro`}>
+                {(["free", "pro"] as const).map((t) => (
+                  <button key={t} type="button" aria-pressed={tier === t} onClick={() => patch((c) => { c.proFeatures = { ...(c.proFeatures ?? {}), [feat.key]: t }; })}
+                    className={`px-3.5 py-2 ${tier === t ? (t === "pro" ? "bg-amber-500 text-white" : "bg-primary text-primary-foreground") : "text-muted-foreground hover:bg-muted"}`}>{t === "free" ? "Free" : "Pro"}</button>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+      </Section>
 
       <Section title="Announcement banner" hint="Shows at the very top of every page. Learners can dismiss it; changing the text shows it to everyone again.">
         <label className="flex items-center gap-2 text-sm font-semibold"><input type="checkbox" checked={cfg.announcement.enabled} onChange={(e) => patch((c) => { c.announcement.enabled = e.target.checked; })} /> Show the banner</label>

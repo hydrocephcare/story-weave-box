@@ -3,6 +3,7 @@ import { Brain, Check, ExternalLink, Eye, EyeOff, Loader2, Shuffle, Sparkles, X 
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { Answer } from "@/components/ai/AnswerText";
 import UpgradeCard from "@/components/ai/UpgradeCard";
+import { logEvents } from "@/lib/review";
 import { FREE_DAILY_PICTURES, countPictures, freeRevealsLeft, picturesUsedToday, spendFreeReveal } from "@/lib/ompathAi";
 import { SUBJECT_LABEL, loadBanks, pickQuestions, sectionFor, sectionsOf, type Bank, type BankQuestion, type Subject } from "@/lib/questionBank";
 
@@ -19,7 +20,7 @@ const writeMissed = (list: BankQuestion[]) => { try { localStorage.setItem(MISSE
  * "Explain" asks the AI to teach it, and questions marked "Missed" are kept so they can be revised later.
  * Free accounts get a daily number of picture questions; the first set is always free.
  */
-export default function QuestionDrill({ subject: initialSubject, topic, canReveal, onNeedSubscribe, onOpen, onExplain }: { subject: Subject; topic: string; canReveal: boolean; onNeedSubscribe: () => void; onOpen: (href: string) => void; onExplain: (q: BankQuestion, how: "explain" | "mnemonic") => void }) {
+export default function QuestionDrill({ subject: initialSubject, topic, canReveal, noPictureLimit = false, onNeedSubscribe, onOpen, onExplain }: { subject: Subject; topic: string; canReveal: boolean; noPictureLimit?: boolean; onNeedSubscribe: () => void; onOpen: (href: string) => void; onExplain: (q: BankQuestion, how: "explain" | "mnemonic") => void }) {
   const [subject, setSubject] = useState<Subject>(initialSubject);
   const [banks, setBanks] = useState<Bank[] | null>(null);
   const [section, setSection] = useState("");
@@ -34,17 +35,18 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
   const seen = useRef<Set<string>>(new Set());
   const first = useRef(true);
 
+  const limited = !canReveal && !noPictureLimit;
   const myMissed = useMemo(() => missed.filter((q) => banks?.some((b) => b.id === q.bankId)), [missed, banks]);
 
   const draw = useCallback((b: Bank[], sec: string, counted: boolean, mine: BankQuestion[]) => {
-    if (counted && !canReveal && picturesUsedToday() >= FREE_DAILY_PICTURES) { setBlocked(true); return; }
+    if (counted && limited && picturesUsedToday() >= FREE_DAILY_PICTURES) { setBlocked(true); return; }
     setBlocked(false);
     const source = sec === MISSED ? [{ id: "missed", title: "Missed", href: "", subject: "gross" as Subject, questions: mine }] : b;
     const next = pickQuestions(source, sec === MISSED ? "" : sec, 5, seen.current);
     next.forEach((q) => seen.current.add(q.id));
-    if (counted && !canReveal) countPictures(next.filter((q) => q.image).length);
+    if (counted && limited) countPictures(next.filter((q) => q.image).length);
     setPicked(next); setShown(new Set()); setMarked({}); bump((n) => n + 1);
-  }, [canReveal]);
+  }, [limited]);
 
   useEffect(() => {
     let on = true;
@@ -56,10 +58,10 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
       first.current = false;
       setSection(sec);
       // opening the drill is always free; only asking for more is counted
-      if (!canReveal && picturesUsedToday() >= FREE_DAILY_PICTURES) setBlocked(true); else draw(b, sec, false, []);
+      if (limited && picturesUsedToday() >= FREE_DAILY_PICTURES) setBlocked(true); else draw(b, sec, false, []);
     });
     return () => { on = false; };
-  }, [subject, topic, draw, canReveal]);
+  }, [subject, topic, draw, limited]);
 
   const sections = useMemo(() => (banks ? sectionsOf(banks) : []), [banks]);
   const total = useMemo(() => (banks ?? []).reduce((n, b) => n + b.questions.length, 0), [banks]);
@@ -75,6 +77,7 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
   };
   const mark = (q: BankQuestion, how: "got" | "missed") => {
     setMarked((m) => ({ ...m, [q.id]: how }));
+    logEvents([{ kind: "spot", topic: `${SUBJECT_LABEL[subject]}: ${q.section}`, ok: how === "got" }]);
     const rest = missed.filter((x) => x.question !== q.question || x.bankId !== q.bankId);
     const next = how === "missed" ? [...rest, q] : rest;
     setMissed(next); writeMissed(next);
