@@ -10,8 +10,8 @@ describe("quizIntent", () => {
     expect(quizIntent("give me 20 questions on year 2 git physiology")).toMatchObject({ n: 20, year: 2 });
   });
   it("keeps the size sensible", () => {
-    expect(quizIntent("500 mcqs on anatomy of the heart")?.n).toBe(50);
-    expect(quizIntent("2 mcqs on shock")?.n).toBe(5);
+    expect((quizIntent("500 mcqs on anatomy of the heart") as { n: number } | null)?.n).toBe(50);
+    expect((quizIntent("2 mcqs on shock") as { n: number } | null)?.n).toBe(5);
   });
   it("leaves other requests to the other tools", () => {
     for (const q of ["essay questions on shock", "past papers on pharmacology", "notes on psychiatry", "what is a question", "hi"]) expect(quizIntent(q), q).toBeNull();
@@ -29,7 +29,7 @@ describe("essayIntent and paperIntent", () => {
   });
   it("recognises papers", () => {
     expect(paperIntent("I need the full paper for paediatrics")).toMatchObject({ kind: "paper", topic: "paediatrics" });
-    expect(paperIntent("last year's pharmacology cat")?.latest).toBe(true);
+    expect((paperIntent("last year's pharmacology cat") as { latest: boolean } | null)?.latest).toBe(true);
     expect(paperIntent("30 mcqs on physiology")).toBeNull();
   });
 });

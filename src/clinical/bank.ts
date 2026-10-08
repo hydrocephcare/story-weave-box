@@ -5,8 +5,8 @@ import { seeded } from "./whyLadders";
 
 export interface BankQ extends MCQ { rotation: Rotation; topic: string }
 
-const Q = (id: string, rotation: Rotation, topic: string, skill: Skill, stem: string, right: string, wrong: [string, string, string], why: string, hint?: string): BankQ => ({
-  ...mcq(`bk-${id}`, skill, stem, seeded([o(right, true, why), ...wrong.map((w) => o(w, false, "Not the best answer here."))], id), [hint ?? `Which diagnosis or action fits all the features, not just one?`, `The answer begins “${right.slice(0, 14)}…”.`], why),
+const Q = (id: string, rotation: Rotation, topic: string, skillIn: Skill | "theory" | "exam", stem: string, right: string, wrong: [string, string, string], why: string, hint?: string): BankQ => ({
+  ...mcq(`bk-${id}`, (skillIn === "theory" ? "pathophysiology" : skillIn === "exam" ? "examination" : skillIn), stem, seeded([o(right, true, why), ...wrong.map((w) => o(w, false, "Not the best answer here."))], id), [hint ?? `Which diagnosis or action fits all the features, not just one?`, `The answer begins “${right.slice(0, 14)}…”.`], why),
   rotation, topic,
 });
 

@@ -1,6 +1,10 @@
 import type { Rotation } from "@/clinical/types";
 export type RotationTheory = {id:string;rotation:Rotation;system:string;name:string;definition:string;core:string[];clinical:string[];investigations:string[];management:string[];complications:string[];viva:string};
-const R=(id: string,rotation: Rotation,system:string,name:string,definition:string,core:string[],clinical:string[],investigations:string[],management:string[],complications:string[],viva:string):RotationTheory=>({id,rotation,system,name,definition,core,clinical,investigations,management,complications,viva});
+// Most entries end "..., management, complications, viva". Some carry a second list of management points first; those are merged into management.
+const R=(id: string,rotation: Rotation,system:string,name:string,definition:string,core:string[],clinical:string[],investigations:string[],management:string[],...rest:[string[],string]|[string[],string[],string]):RotationTheory=>{
+  const [more, complications, viva] = rest.length === 3 ? rest : [[] as string[], rest[0], rest[1]];
+  return {id,rotation,system,name,definition,core,clinical,investigations,management:[...management,...more],complications,viva};
+};
 
 export const YEAR4_ROTATION_THEORY: RotationTheory[] = [
 R("appendicitis","surgery","Acute abdomen","Acute appendicitis","Acute inflammation of the vermiform appendix, commonly from luminal obstruction.",["Progresses from visceral periumbilical pain to parietal right-iliac-fossa pain when local peritoneum becomes inflamed.","Untreated obstruction/inflammation may cause gangrene and perforation."],["Migratory pain","Anorexia/nausea","RIF tenderness and peritonism","Fever may occur"],["Clinical assessment","FBC/CRP as supportive tests","Pregnancy test when relevant","Ultrasound or CT when diagnosis is uncertain/context appropriate"],["ABC if unwell","Analgesia and fluids as needed","Antibiotics and appendicectomy according to surgical assessment"],["Perforation","Abscess","Peritonitis","Sepsis"],"Atypical appendix positions and pregnancy can change the pain location."),

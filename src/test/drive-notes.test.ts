@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-// @ts-expect-error plain JS serverless file
 import { kindOf, parseFolder } from "../../api/drive-notes.js";
 import { flattenDrive } from "@/lib/driveNotes";
 
