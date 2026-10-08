@@ -14,6 +14,8 @@ export interface AiTurn {
   /** "up" / "down" the student gave the answer. */
   vote?: "up" | "down";
   followUps?: string[];
+  /** Answered without the AI: "quick" for small talk, "saved" for a question asked before. */
+  instant?: "quick" | "saved";
 }
 export interface AiSession { id: string; title: string; turns: AiTurn[]; updated: number }
 

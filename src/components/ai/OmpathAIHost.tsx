@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ArrowUp, BookOpen, Brain, Check, Copy, ExternalLink, History, Loader2, MessageSquarePlus, Search, Sparkles, Square, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
+import { ArrowUp, BookOpen, Brain, Check, Copy, ExternalLink, History, Loader2, MessageSquarePlus, Search, Sparkles, Square, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
 import { HitIcon } from "@/components/SearchPalette";
 import DriveFileViewer, { type DriveFile, type DriveKind } from "@/components/DriveFileViewer";
@@ -13,6 +13,7 @@ import { openSubscribePrompt } from "@/lib/subscribe-prompt";
 import { aiStore, useAiStore, type AiTurn } from "@/lib/ompathAiStore";
 import { FREE_DAILY_QUESTIONS, countQuestion, extractiveAnswer, followUps, parseQuery, questionsUsedToday, retrieve, streamAnswer, type Retrieval } from "@/lib/ompathAi";
 import { scoringTerms } from "@/lib/ompathAiQuery";
+import { dropCached, getCached, quickReply, saveCached } from "@/lib/ompathAiQuick";
 import { logSearch } from "@/lib/search";
 import type { SiteHit } from "@/lib/siteSearch";
 
@@ -96,7 +97,7 @@ export default function OmpathAIHost() {
   const limitHit = !unlimited && used >= FREE_DAILY_QUESTIONS;
 
   // Live suggestions while typing, so a student can jump straight to a note without waiting for an answer.
-  const live = useSiteSearch(q.trim().length >= 3 ? parseQuery(q).topic : "", {}, open && !busy);
+  const live = useSiteSearch(q.trim().length >= 3 && !quickReply(q) ? parseQuery(q).topic : "", {}, open && !busy);
   const liveHits = useMemo(() => live.hits.filter((h) => h.group !== "Pages").slice(0, 4), [live.hits]);
 
   const askRef = useRef<(q: string) => Promise<void>>(async () => undefined);
@@ -121,15 +122,35 @@ export default function OmpathAIHost() {
   useEffect(() => { if (open) endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [turns.length, open, view]);
   useEffect(() => { if (open) { try { sessionStorage.removeItem(RESUME_KEY); } catch { /* ignore */ } setResume(false); } }, [open]);
 
-  async function ask(question: string) {
+  async function ask(question: string, opts: { fresh?: boolean } = {}) {
     const text = question.trim();
     if (text.length < 2 || busy) return;
-    if (limitHit) return;
     let sid = aiStore.get().activeId;
     if (!sid || !aiStore.get().sessions.some((s) => s.id === sid)) sid = aiStore.newSession();
     const sessionId = sid;
-    setQ(""); setBusy(true); setView("chat");
+    setQ(""); setView("chat");
+    if (inputRef.current) inputRef.current.style.height = "auto";
     const id = `t${Date.now()}`;
+
+    // Free and instant: small talk, and anything this device has already been answered.
+    const quick = opts.fresh ? null : quickReply(text);
+    if (quick) {
+      aiStore.addTurn(sessionId, { id, q: text, answer: quick.answer, hits: [], grounded: true, followUps: quick.followUps, instant: "quick", at: Date.now() });
+      aiStore.flush();
+      return;
+    }
+    const saved = opts.fresh ? null : getCached(text);
+    if (saved) {
+      aiStore.addTurn(sessionId, { id, q: text, answer: saved.answer, hits: saved.hits, grounded: saved.grounded, followUps: saved.followUps, instant: "saved", at: Date.now() });
+      aiStore.flush();
+      return;
+    }
+    if (limitHit) {
+      aiStore.addTurn(sessionId, { id, q: text, answer: "", hits: [], grounded: true, error: `You have used today's ${FREE_DAILY_QUESTIONS} free questions. Subscribe for unlimited, or come back tomorrow. Greetings and questions you have asked before are still instant.`, at: Date.now() });
+      aiStore.flush();
+      return;
+    }
+    setBusy(true);
     const prior = (aiStore.get().sessions.find((s) => s.id === sessionId)?.turns ?? []).slice(-3).flatMap((t) => [{ role: "user" as const, content: t.q }, { role: "assistant" as const, content: t.answer }]).filter((m) => m.content);
     aiStore.addTurn(sessionId, { id, q: text, answer: "", hits: [], grounded: true, at: Date.now() });
     abort.current = new AbortController();
@@ -150,6 +171,7 @@ export default function OmpathAIHost() {
       const answer = await streamAnswer({ question: text, history: prior, retrieval }, { onText: (full) => aiStore.patchTurn(sessionId, id, { answer: full }), signal: abort.current.signal });
       aiStore.patchTurn(sessionId, id, { answer });
       aiStore.flush();
+      if (answer.trim().length > 40) saveCached(text, { answer, grounded: retrieval.grounded, hits: retrieval.hits, followUps: followUps(retrieval.parsed) });
     } catch (e) {
       if ((e as Error).name === "AbortError") { aiStore.flush(); return; }
       const fallback = retrieval ? extractiveAnswer(retrieval) : "";
@@ -196,7 +218,7 @@ export default function OmpathAIHost() {
   return (
     <>
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent side="right" className="flex w-full flex-col gap-0 p-0 sm:max-w-xl [&>button]:hidden">
+        <SheetContent side="right" className="flex h-[100dvh] w-full flex-col gap-0 p-0 sm:max-w-xl [&>button]:hidden">
           <SheetTitle className="sr-only">Ompath AI</SheetTitle>
           <SheetDescription className="sr-only">Ask a question and get answers and notes from Ompath Study.</SheetDescription>
 
@@ -257,7 +279,11 @@ export default function OmpathAIHost() {
                           : <p className="flex items-center gap-2 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" /> {t.hits.length ? "Writing your answer…" : "Searching your notes…"}</p>}
                         {t.answer && !t.error && (
                           <div className="mt-2 flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
-                            <span className={`rounded-full px-2 py-0.5 font-semibold ${t.grounded ? "bg-primary/10 text-primary" : "bg-amber-500/15 text-amber-700 dark:text-amber-400"}`}>{t.grounded ? "From your Ompath notes" : "General guidance, not from the notes"}</span>
+                            {t.instant === "quick" ? <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 font-semibold text-primary"><Zap className="h-3 w-3" /> Instant</span>
+                              : <span className={`rounded-full px-2 py-0.5 font-semibold ${t.grounded ? "bg-primary/10 text-primary" : "bg-amber-500/15 text-amber-700 dark:text-amber-400"}`}>{t.grounded ? "From your Ompath notes" : "General guidance, not from the notes"}</span>}
+                            {t.instant === "saved" && <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 font-semibold text-primary"><Zap className="h-3 w-3" /> Instant · saved</span>}
+                            {t.instant !== "quick" && last && !busy && <button type="button" onClick={() => { dropCached(t.q); void ask(t.q, { fresh: true }); }} className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 hover:bg-muted" aria-label="Answer again" title="Answer again"><RefreshCw className="h-3.5 w-3.5" /></button>}
+                            {typeof navigator !== "undefined" && "share" in navigator && t.instant !== "quick" && <button type="button" onClick={() => { void navigator.share({ title: t.q, text: `${t.answer.slice(0, 600)}\n\nOmpath Study`, url: window.location.origin }).catch(() => undefined); }} className="rounded-md p-1 hover:bg-muted" aria-label="Share answer"><Share2 className="h-3.5 w-3.5" /></button>}
                             <button type="button" onClick={() => void copy(t)} className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 hover:bg-muted" aria-label="Copy answer">{copied === t.id ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}</button>
                             <button type="button" onClick={() => aiStore.patchTurn(session!.id, t.id, { vote: t.vote === "up" ? undefined : "up" })} aria-pressed={t.vote === "up"} aria-label="Good answer" className={`rounded-md p-1 hover:bg-muted ${t.vote === "up" ? "text-primary" : ""}`}><ThumbsUp className="h-3.5 w-3.5" /></button>
                             <button type="button" onClick={() => aiStore.patchTurn(session!.id, t.id, { vote: t.vote === "down" ? undefined : "down" })} aria-pressed={t.vote === "down"} aria-label="Bad answer" className={`rounded-md p-1 hover:bg-muted ${t.vote === "down" ? "text-destructive" : ""}`}><ThumbsDown className="h-3.5 w-3.5" /></button>
@@ -286,7 +312,7 @@ export default function OmpathAIHost() {
           )}
 
           {view === "chat" && (
-            <div className="border-t border-border bg-background px-3 pb-3 pt-2">
+            <div className="border-t border-border bg-background px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2">
               {limitHit && (
                 <div className="mb-2 rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2 text-xs text-amber-800 dark:text-amber-300">
                   You have used today's {FREE_DAILY_QUESTIONS} free questions. Notes search still works. <button type="button" onClick={() => openSubscribePrompt("Subscribe for unlimited Ompath AI questions.")} className="font-bold underline">Subscribe for unlimited</button>
@@ -303,9 +329,9 @@ export default function OmpathAIHost() {
                 </div>
               )}
               <form onSubmit={(e) => { e.preventDefault(); void ask(q); }} className="flex items-end gap-2 rounded-2xl border border-border bg-card p-2 focus-within:ring-2 focus-within:ring-ring">
-                <textarea ref={inputRef} value={q} onChange={(e) => setQ(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void ask(q); } }} rows={1} placeholder="e.g. I need notes on psychiatry" aria-label="Ask Ompath AI" className="max-h-36 min-h-[44px] flex-1 resize-none bg-transparent px-2 py-2.5 text-base outline-none placeholder:text-muted-foreground" />
+                <textarea ref={inputRef} value={q} onChange={(e) => { setQ(e.target.value); e.target.style.height = "auto"; e.target.style.height = `${Math.min(e.target.scrollHeight, 144)}px`; }} onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void ask(q); } }} rows={1} placeholder="e.g. I need notes on psychiatry" aria-label="Ask Ompath AI" className="max-h-36 min-h-[44px] flex-1 resize-none bg-transparent px-2 py-2.5 text-base outline-none placeholder:text-muted-foreground" />
                 {busy ? <button type="button" onClick={() => abort.current?.abort()} aria-label="Stop" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-muted"><Square className="h-4 w-4" /></button>
-                  : <button type="submit" disabled={q.trim().length < 2 || limitHit} aria-label="Ask" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground disabled:opacity-40"><ArrowUp className="h-5 w-5" /></button>}
+                  : <button type="submit" disabled={q.trim().length < 2} aria-label="Ask" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground disabled:opacity-40"><ArrowUp className="h-5 w-5" /></button>}
               </form>
               <p className="mt-1.5 text-center text-[10px] text-muted-foreground">For study only, not for treating patients. Check important facts in your notes{!unlimited ? ` · ${Math.max(0, FREE_DAILY_QUESTIONS - used)} free questions left today` : ""}.</p>
             </div>
