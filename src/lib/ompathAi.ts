@@ -231,12 +231,16 @@ export async function streamAnswer(t: AiTurnInput, h: StreamHandlers): Promise<s
   const question = t.retrieval.grounded
     ? t.question
     : `${t.question}\n\n(Nothing on Ompath Study matched this. Answer from sound general medical knowledge and begin by saying it is general guidance, not from the site's notes.)`;
-  const res = await fetch(`${SUPABASE_URL}/functions/v1/ompath-ai`, {
+  const send = () => fetch(`${SUPABASE_URL}/functions/v1/ompath-ai`, {
     method: "POST",
     headers: { "Content-Type": "application/json", apikey: SUPABASE_PUBLISHABLE_KEY, Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}` },
     body: JSON.stringify({ question, history: t.history.slice(-6), sources: buildSources(t.retrieval) }),
     signal: h.signal,
   });
+  // a dropped connection or a busy server (5xx, 429) is tried once more before we fall back to the notes
+  let res = await send().catch((e) => { if ((e as Error).name === "AbortError") throw e; return null; });
+  if (!res || res.status >= 500 || res.status === 429) { await new Promise((r) => setTimeout(r, 900)); res = await send().catch((e) => { if ((e as Error).name === "AbortError") throw e; return res; }); }
+  if (!res) throw new Error("Could not reach Ompath AI. Check your connection.");
   if (!res.ok || !res.body) {
     const err = await res.json().catch(() => ({}));
     throw new Error(err?.error || "Ompath AI could not answer right now.");

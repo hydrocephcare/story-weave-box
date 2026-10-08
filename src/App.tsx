@@ -3,6 +3,7 @@ import RailLayout from "@/components/RailLayout";
 import SearchGate from "@/components/SearchGate";
 import UpdateNotifier from "@/components/UpdateNotifier";
 import ReminderWatcher from "@/components/ReminderWatcher";
+import AiFailureWatcher from "@/components/AiFailureWatcher";
 import AIGate from "@/components/ai/AIGate";
 import AIPill from "@/components/ai/AIPill";
 import AnnouncementBar from "@/components/AnnouncementBar";
@@ -239,6 +240,7 @@ const App = () => (
             <SearchGate />
             <UpdateNotifier />
             <ReminderWatcher />
+            <AiFailureWatcher />
             <AIGate />
             <AIPill />
             <Navbar />

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Brain, Check, ExternalLink, Eye, EyeOff, Loader2, Shuffle, Sparkles, X } from "lucide-react";
+import { Check, ExternalLink, Eye, EyeOff, Loader2, Shuffle, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { Answer } from "@/components/ai/AnswerText";
 import UpgradeCard from "@/components/ai/UpgradeCard";
@@ -17,10 +17,10 @@ const writeMissed = (list: BankQuestion[]) => { try { localStorage.setItem(MISSE
 /**
  * Spot questions from the anatomy banks, inside Ompath AI: choose Gross anatomy, Histology or Embryology, narrow to a region or tissue,
  * and get five good questions at a time (ones with pictures first). The picture is shown right here, the answer opens on tap,
- * "Explain" asks the AI to teach it, and questions marked "Missed" are kept so they can be revised later.
+ * and questions marked "Missed" are kept so they can be revised later.
  * Free accounts get a daily number of picture questions; the first set is always free.
  */
-export default function QuestionDrill({ subject: initialSubject, topic, canReveal, noPictureLimit = false, onNeedSubscribe, onOpen, onExplain }: { subject: Subject; topic: string; canReveal: boolean; noPictureLimit?: boolean; onNeedSubscribe: () => void; onOpen: (href: string) => void; onExplain: (q: BankQuestion, how: "explain" | "mnemonic") => void }) {
+export default function QuestionDrill({ subject: initialSubject, topic, canReveal, noPictureLimit = false, onNeedSubscribe, onOpen }: { subject: Subject; topic: string; canReveal: boolean; noPictureLimit?: boolean; onNeedSubscribe: () => void; onOpen: (href: string) => void }) {
   const [subject, setSubject] = useState<Subject>(initialSubject);
   const [banks, setBanks] = useState<Bank[] | null>(null);
   const [section, setSection] = useState("");
@@ -123,8 +123,6 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
                   <div className="flex flex-wrap items-center gap-1.5">
                     <button type="button" onClick={() => mark(q, "got")} aria-pressed={marked[q.id] === "got"} className={`inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-bold ${marked[q.id] === "got" ? "border-emerald-500 bg-emerald-500 text-white" : "border-border hover:border-emerald-500"}`}><Check className="h-3.5 w-3.5" /> Got it</button>
                     <button type="button" onClick={() => mark(q, "missed")} aria-pressed={marked[q.id] === "missed"} className={`inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-bold ${marked[q.id] === "missed" ? "border-destructive bg-destructive text-white" : "border-border hover:border-destructive"}`}><X className="h-3.5 w-3.5" /> Missed it</button>
-                    <button type="button" onClick={() => onExplain(q, "explain")} className="inline-flex items-center gap-1 rounded-full border border-primary/40 bg-primary/5 px-3 py-1 text-xs font-bold text-primary hover:bg-primary/10"><Sparkles className="h-3.5 w-3.5" /> Explain</button>
-                    <button type="button" onClick={() => onExplain(q, "mnemonic")} className="inline-flex items-center gap-1 rounded-full border border-border px-3 py-1 text-xs font-bold hover:border-primary hover:text-primary"><Brain className="h-3.5 w-3.5" /> Mnemonic</button>
                   </div>
                 </div>
               )}

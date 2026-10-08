@@ -4,6 +4,7 @@ import { Answer } from "@/components/ai/AnswerText";
 import UpgradeCard from "@/components/ai/UpgradeCard";
 import { spendFreeReveal } from "@/lib/ompathAi";
 import { findEssays, type EssayQuestion } from "@/lib/ompathAiTools";
+import { reportAiFailure } from "@/lib/aiHealth";
 
 /** Essay and short-answer questions from the site, five at a time. The model answer stays hidden until you tap; the first few a day are free. */
 export default function EssayPractice({ topic, year, canReveal }: { topic: string; year: number | null; canReveal: boolean }) {
@@ -14,7 +15,7 @@ export default function EssayPractice({ topic, year, canReveal }: { topic: strin
   const at = useRef(0);
 
   const next = (list: EssayQuestion[]) => { const from = at.current >= list.length ? 0 : at.current; setShown(list.slice(from, from + 5)); at.current = from + 5; setOpen(new Set()); setNeedPay(null); };
-  useEffect(() => { let on = true; void findEssays(topic, year).then((l) => { if (!on) return; setAll(l); at.current = 0; next(l); }, () => { if (on) setAll([]); }); return () => { on = false; }; /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [topic, year]);
+  useEffect(() => { let on = true; void findEssays(topic, year).then((l) => { if (!on) return; setAll(l); at.current = 0; next(l); }, (e) => { void reportAiFailure("essay", topic, e, "Empty essay message"); if (on) setAll([]); }); return () => { on = false; }; /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [topic, year]);
 
   if (all === null) return <p className="flex items-center gap-2 rounded-2xl border border-border bg-card p-4 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" /> Finding essay questions…</p>;
   if (!all.length) return <p className="rounded-2xl border border-border bg-card p-4 text-sm text-muted-foreground">I could not find essay questions on “{topic}” yet. Try the unit name, for example “GIT physiology”.</p>;

@@ -22,6 +22,9 @@ import { weakTopics, readBookmarks, toggleBookmark } from "@/lib/review";
 import EssayPractice from "@/components/ai/EssayPractice";
 import PaperCard from "@/components/ai/PaperCard";
 import { essayIntent, paperIntent, quizIntent } from "@/lib/ompathAiTools";
+import { pharmReply } from "@/lib/ompathAiPharm";
+import { relatedFor } from "@/lib/ompathAiRelated";
+import { reportAiFailure } from "@/lib/aiHealth";
 import { useFeatures } from "@/lib/features";
 import { UNIVERSITIES, benefitsFor, shortName, useUniversity } from "@/lib/university";
 import { AI_SHARE_TEXT, AI_TITLE, AI_URL } from "@/lib/aiShare";
@@ -177,6 +180,12 @@ export default function OmpathAIHost() {
 
   useEffect(() => { if (open) { try { sessionStorage.removeItem(RESUME_KEY); } catch { /* ignore */ } setResume(false); } }, [open]);
 
+  /** Adds the notes, files and pages that go with an answer that did not come from a search (quizzes, drugs, drills). Free. */
+  function attachRelated(sessionId: string, turnId: string, topic: string, year?: number | null) {
+    void relatedFor(topic, year).then((hits) => { if (hits.length) aiStore.patchTurn(sessionId, turnId, { hits }); });
+  }
+  const openSearch = (topic: string) => { setOpen(false); try { sessionStorage.setItem(RESUME_KEY, "1"); } catch { /* ignore */ } setResume(true); navigate(`/search?q=${encodeURIComponent(topic)}`); };
+
   async function ask(question: string, opts: { fresh?: boolean; context?: string } = {}) {
     const text = question.trim();
     if (text.length < 2 || busy || authLoading) return;
@@ -213,9 +222,12 @@ export default function OmpathAIHost() {
       const label = SUBJECT_LABEL[drill.subject].toLowerCase();
       aiStore.addTurn(sessionId, { id, q: text, answer: `Here are some **${label}** spot questions from the Ompath anatomy banks, picture first. Change the subject or section below, tap a picture to enlarge it, and reveal an answer when you are ready.`, hits: [], grounded: true, drill, followUps: ["Histology questions", "Embryology questions", "Upper limb anatomy questions"], instant: "quick", at: Date.now() });
       aiStore.flush();
+      attachRelated(sessionId, id, drill.topic || `${label} anatomy`);
       return;
     }
-    const tool = opts.fresh ? null : (essayIntent(text) ?? paperIntent(text) ?? quizIntent(text));
+    let tool = opts.fresh ? null : (essayIntent(text) ?? paperIntent(text) ?? quizIntent(text));
+    // "quiz me on my weakest topic" uses the Review figures when there are some
+    if (!tool && !opts.fresh && /\b(weak(est)?|struggl\w*|missed)\b/i.test(text) && /\b(quiz|mcqs?|test|practi[sc]e)\b/i.test(text) && weak[0]) tool = { kind: "quiz", topic: weak[0].replace(/^[^:]+:\s*/, ""), n: 10, year: null };
     if (tool) {
       const about = tool.topic ? ` on **${tool.topic}**` : "";
       const answer = tool.kind === "quiz" ? `Here is a quiz${about}, made from the MCQs on Ompath Study. Pick an answer for each question, then submit to see your score and the reasons.`
@@ -223,6 +235,15 @@ export default function OmpathAIHost() {
         : `Here is the paper${about}. Tap it to read the whole thing.`;
       aiStore.addTurn(sessionId, { id, q: text, answer, hits: [], grounded: true, tool, followUps: tool.kind === "quiz" ? [`Essay questions on ${tool.topic}`, `Past paper on ${tool.topic}`, `Notes on ${tool.topic}`] : [`${tool.topic ? tool.topic + " " : ""}mcqs`.replace(/^ /, "") && `10 mcqs on ${tool.topic || "my unit"}`], instant: "quick", at: Date.now() });
       aiStore.flush();
+      if (tool.topic && tool.kind !== "paper") attachRelated(sessionId, id, tool.topic, tool.year);
+      return;
+    }
+    // Pharmacology from the site's own drug library: no AI, no credit. A drug that is not on the site falls through to the normal search and AI.
+    const pharm = opts.fresh ? null : pharmReply(text);
+    if (pharm) {
+      aiStore.addTurn(sessionId, { id, q: text, answer: pharm.answer, hits: [], grounded: true, followUps: pharm.followUps, links: pharm.links, instant: "quick", at: Date.now() });
+      aiStore.flush();
+      attachRelated(sessionId, id, pharm.topic);
       return;
     }
     const mine = opts.fresh ? null : personalReply(text, {
@@ -288,15 +309,19 @@ export default function OmpathAIHost() {
         aiStore.flush();
         return;
       }
-      countQuestion();
       const answer = await streamAnswer({ question: opts.context ? `${text}\n\nThe official answer key for this question, from the Ompath bank:\n${opts.context}` : text, history: prior, retrieval }, { onText: (full) => aiStore.patchTurn(sessionId, id, { answer: full }), signal: abort.current.signal });
+      countQuestion();
       aiStore.patchTurn(sessionId, id, { answer });
       aiStore.flush();
       if (answer.trim().length > 40) { saveCached(text, { answer, grounded: retrieval.grounded, hits: retrieval.hits, followUps: followUps(retrieval.parsed) }); void saveShared(text, answer, retrieval.grounded); }
     } catch (e) {
       if ((e as Error).name === "AbortError") { aiStore.flush(); return; }
-      const fallback = retrieval ? extractiveAnswer(retrieval) : "";
-      aiStore.patchTurn(sessionId, id, { answer: fallback, error: fallback ? undefined : (e as Error).message || "Ompath AI could not answer right now." });
+      // never a dead end: the matching notes if we have them, otherwise links that still work, and the admin is told
+      const local = retrieval ? null : await guideReply(text, myYear).catch(() => null);
+      const fallback = retrieval ? extractiveAnswer(retrieval) : local?.answer ?? "Ompath AI could not reach the notes just now, so here is where to look. Try again in a minute.";
+      const searchLink = { label: "Search the site", href: `/search?q=${encodeURIComponent(parseQuery(text).topic || text)}` };
+      void reportAiFailure(retrieval ? "answer" : "search", text, e, retrieval ? (retrieval.passages.length ? "Matching passages shown" : retrieval.hits.length ? "Matching notes shown" : "Search link shown") : local ? "Site guide shown" : "Quick links shown");
+      aiStore.patchTurn(sessionId, id, { answer: fallback, links: local?.links ?? [searchLink, { label: "Latest notes", href: "/new-notes" }, { label: "Past papers", href: "/papers" }], followUps: local?.followUps });
       aiStore.flush();
     } finally { setBusy(false); abort.current = null; }
   }
@@ -452,14 +477,14 @@ export default function OmpathAIHost() {
                           </div>
                         )}
                       </div>
-                      {t.tool?.kind === "quiz" && <McqQuiz key={t.id} topic={t.tool.topic} n={t.tool.n} year={t.tool.year} canLong={features.can("longQuiz")} onAgain={(tp) => void ask(`${(t.tool as { n: number }).n} mcqs on ${tp}`)} />}
+                      {t.tool?.kind === "quiz" && <McqQuiz key={t.id} topic={t.tool.topic} n={t.tool.n} year={t.tool.year} canLong={features.can("longQuiz")} onAgain={(tp) => void ask(`${(t.tool as { n: number }).n} mcqs on ${tp}`)} onRead={openSearch} />}
                       {t.tool?.kind === "essay" && <EssayPractice key={t.id} topic={t.tool.topic} year={t.tool.year} canReveal={unlimited} />}
                       {t.tool?.kind === "paper" && <PaperCard key={t.id} topic={t.tool.topic} year={t.tool.year} latest={t.tool.latest} onOpen={(h) => setPreview(h)} />}
                       {t.clarify && <ClarifyCard question={t.clarify.question} options={t.clarify.options} other={t.clarify.other} disabled={!last || busy} onPick={(a) => void ask(t.clarify?.send?.[a] ?? a)} />}
                       {t.reminder && <ReminderCard reminder={t.reminder} />}
                       {t.plan && <PlanCard plan={t.plan} canSave={features.can("studyPlanSave")} canRemind={features.can("reminders")} />}
                       {t.locked && <UpgradeCard kind="feature" title="Reminders are for Pro" why="Pro students can say “remind me to revise cardiology tomorrow at 6 pm” and get an alert on the site and an entry in their phone calendar." />}
-                      {t.drill && <QuestionDrill key={t.id} subject={t.drill.subject} topic={t.drill.topic} canReveal={unlimited} noPictureLimit={features.can("unlimitedPictures")} onNeedSubscribe={() => openSubscribePrompt("Subscribe to reveal answers.")} onOpen={(href) => goFull({ href } as SiteHit)} onExplain={(q, how) => void ask(how === "mnemonic" ? `Give me a short, memorable mnemonic for: ${q.question}` : `Explain: ${q.question}`, { context: q.answer })} />}
+                      {t.drill && <QuestionDrill key={t.id} subject={t.drill.subject} topic={t.drill.topic} canReveal={unlimited} noPictureLimit={features.can("unlimitedPictures")} onNeedSubscribe={() => openSubscribePrompt("Subscribe to reveal answers.")} onOpen={(href) => goFull({ href } as SiteHit)} />}
                       {t.login && <LoginCard question={t.q} onNavigate={() => setOpen(false)} />}
                       {t.upgrade && <UpgradeCard kind={t.upgrade} />}
                       {t.links && t.links.length > 0 && <div className="flex flex-wrap gap-2">{t.links.map((l) => <button key={l.href} type="button" onClick={() => goFull({ href: l.href } as SiteHit)} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-2 text-sm font-bold text-primary-foreground"><ExternalLink className="h-4 w-4" /> {l.label}</button>)}</div>}
