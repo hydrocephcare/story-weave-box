@@ -12,6 +12,7 @@ import { useStudentAccess } from "@/lib/student";
 import { unitNameMap, useSiteConfig, useTimetable } from "@/lib/siteConfig";
 import { OFFICIAL_2026_SCHEDULES } from "@/lib/timetable2026";
 import { personalReply } from "@/lib/ompathAiPersonal";
+import { useAiAccountSync } from "@/lib/ompathAiSync";
 import { useAuth } from "@/hooks/useAuth";
 import { useSiteSearch } from "@/hooks/useSiteSearch";
 import { useAccess } from "@/lib/access";
@@ -111,6 +112,7 @@ export default function OmpathAIHost() {
     (supabase as unknown as { from: (t: string) => any }).from("profiles").select("study_year").eq("user_id", user.id).maybeSingle() // eslint-disable-line @typescript-eslint/no-explicit-any
       .then(({ data }: { data: { study_year?: number | string } | null }) => setProfileYear(data?.study_year ? Number(data.study_year) : null), () => undefined);
   }, [user]);
+  useAiAccountSync(user?.id ?? null);
   const myYear = profileYear ?? toldYear;
   const myTimetable = useTimetable(myYear ?? 1);
   const used = questionsUsedToday();

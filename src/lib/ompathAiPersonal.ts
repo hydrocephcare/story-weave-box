@@ -120,7 +120,7 @@ export function personalReply(input: string, c: PersonalCtx): PersonalReply | nu
     return {
       answer: `${who} Stories are open to every year, and anyone can submit.\n\n**What a story needs**\n${STORY_CRITERIA.map((x) => `- **${x.title}.** ${x.detail}`).join("\n")}\n\n${STORY_PROCESS}`,
       followUps: ["Study tips for my year", "Where are the stories?"],
-      links: [{ label: "Submit a story", href: "/submit-story" }, { label: "Read stories", href: "/stories" }],
+      links: [{ label: "Submit a story", href: "/stories?write=1" }, { label: "Read stories", href: "/stories" }],
     };
   }
 

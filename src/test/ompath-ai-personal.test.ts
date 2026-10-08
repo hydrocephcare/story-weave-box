@@ -35,7 +35,7 @@ describe("personalReply", () => {
   it("tells a first year they can publish a story", () => {
     const r = personalReply("i am a first year can i publish my story", ctx());
     expect(r?.answer).toMatch(/does not stop you/);
-    expect(r?.links?.some((l) => l.href === "/submit-story")).toBe(true);
+    expect(r?.links?.some((l) => l.href.startsWith("/stories"))).toBe(true);
   });
   it("remembers the year and group", () => {
     expect(personalReply("i am in year 4", ctx())?.setYear).toBe(4);

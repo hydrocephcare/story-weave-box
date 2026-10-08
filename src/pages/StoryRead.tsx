@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { motion } from "framer-motion";
 import { buildStoryPath, extractStoryIdFromParam, SITE_URL, stripRichText, updateMetaTags } from "@/lib/seo";
 import ShareButtons from "@/components/ShareButtons";
+import DOMPurify from "dompurify";
 import { Helmet } from "react-helmet-async";
 import { KeywordLinkProvider, linkifyText, useKeywordLinks } from "@/lib/keyword-link";
 import { slugify, useHashFlash } from "@/lib/deep-link";
@@ -356,7 +357,7 @@ function StoryContentBody({ storyContent, isHtml, renderMarkdown }: { storyConte
     return (
       <div
         className="prose prose-sm max-w-none prose-headings:font-serif prose-p:leading-[1.85] prose-p:text-foreground/85 prose-strong:text-foreground prose-blockquote:border-primary/40 prose-blockquote:bg-primary/5 dark:prose-invert"
-        dangerouslySetInnerHTML={{ __html: storyContent }}
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(storyContent, { ADD_ATTR: ["target", "rel"] }) }}
       />
     );
   }

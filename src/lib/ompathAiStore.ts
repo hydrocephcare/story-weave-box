@@ -27,6 +27,12 @@ const KEY = "ompath_ai_sessions_v2";
 const ACTIVE = "ompath_ai_active";
 const MAX_SESSIONS = 40;
 const MAX_TURNS = 30;
+const DELETED = "ompath_ai_deleted";
+
+/** Chats the student deleted, so a copy on another device does not bring them back. */
+function readDeleted(): string[] { try { const v = JSON.parse(localStorage.getItem(DELETED) ?? "[]"); return Array.isArray(v) ? v.slice(-200) : []; } catch { return []; } }
+let deleted: string[] = typeof window === "undefined" ? [] : readDeleted();
+const saveDeleted = () => { try { localStorage.setItem(DELETED, JSON.stringify(deleted.slice(-200))); } catch { /* ignore */ } };
 
 function read(): AiSession[] {
   try { const v = JSON.parse(localStorage.getItem(KEY) ?? "[]"); return Array.isArray(v) ? v : []; } catch { return []; }
@@ -60,8 +66,26 @@ export const aiStore = {
     return id;
   },
   open(id: string) { if (sessions.some((s) => s.id === id)) { activeId = id; refresh(); } },
-  remove(id: string) { sessions = sessions.filter((s) => s.id !== id); if (activeId === id) activeId = sessions[0]?.id ?? null; refresh(); },
-  clearAll() { sessions = []; activeId = null; refresh(); },
+  remove(id: string) { deleted = [...deleted, id]; saveDeleted(); sessions = sessions.filter((s) => s.id !== id); if (activeId === id) activeId = sessions[0]?.id ?? null; refresh(); },
+  clearAll() { deleted = [...deleted, ...sessions.map((s) => s.id)]; saveDeleted(); sessions = []; activeId = null; refresh(); },
+  /** Chats from the student's account: the newer copy of each chat wins, and deleted chats stay deleted. */
+  mergeRemote(remote: AiSession[], remoteDeleted: string[]) {
+    deleted = [...new Set([...deleted, ...remoteDeleted])]; saveDeleted();
+    const byId = new Map<string, AiSession>();
+    for (const s of [...sessions, ...remote]) {
+      if (!s || typeof s.id !== "string" || deleted.includes(s.id) || !Array.isArray(s.turns)) continue;
+      const have = byId.get(s.id);
+      if (!have || (s.updated ?? 0) > (have.updated ?? 0)) byId.set(s.id, s);
+    }
+    sessions = [...byId.values()].filter((s) => s.turns.length || s.id === activeId).sort((a, b) => b.updated - a.updated).slice(0, MAX_SESSIONS);
+    if (activeId && !sessions.some((s) => s.id === activeId)) activeId = sessions[0]?.id ?? null;
+    refresh();
+  },
+  /** What is saved to the account: lighter than the device copy so it stays small. */
+  exportForSync() {
+    const slim = sessions.filter((s) => s.turns.length).slice(0, 25).map((s) => ({ ...s, turns: s.turns.slice(-15).map((t) => ({ ...t, hits: t.hits.slice(0, 5).map((h) => ({ ...h, snippet: undefined })) })) }));
+    return { sessions: slim, deleted: deleted.slice(-100) };
+  },
   addTurn(sessionId: string, turn: AiTurn) {
     sessions = sessions.map((s) => s.id === sessionId ? { ...s, title: s.turns.length ? s.title : turn.q.slice(0, 60), turns: [...s.turns, turn], updated: Date.now() } : s);
     sessions.sort((a, b) => b.updated - a.updated);
