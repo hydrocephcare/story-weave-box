@@ -6,6 +6,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { buildStoryPath, updateMetaTags, SITE_URL } from "@/lib/seo";
 import StoryComposer, { STORY_CATEGORIES, type EditableStory } from "@/components/StoryComposer";
 import { useOwnerTag } from "@/lib/storyOwner";
+import { INVITE_TEXT, INVITE_URL, shareOut } from "@/lib/storyShare";
+import { MessageCircle } from "lucide-react";
 import { Pencil } from "lucide-react";
 
 interface Story {
@@ -106,7 +108,7 @@ export default function Stories() {
 
   const loadMine = useCallback(() => {
     if (!ownerTag) { setMine([]); return; }
-    supabase.from("stories").select("id,title,content,category,tags").contains("tags", [ownerTag]).is("deleted_at", null).order("created_at", { ascending: false }).limit(20)
+    supabase.from("stories").select("id,title,content,category,tags,cover_image_url").contains("tags", [ownerTag]).is("deleted_at", null).order("created_at", { ascending: false }).limit(20)
       .then(({ data }) => setMine((data ?? []) as unknown as EditableStory[]), () => undefined);
   }, [ownerTag]);
   useEffect(loadMine, [loadMine]);
@@ -131,14 +133,15 @@ export default function Stories() {
   return (
     <div className="mx-auto max-w-5xl px-4 pb-24 pt-6 sm:px-6 sm:pt-10">
       {/* Hero */}
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-teal-600 via-indigo-600 to-purple-700 px-5 py-8 text-white shadow-lg sm:px-10 sm:py-12">
+      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f766e] via-[#0e5a62] to-[#0b2545] px-5 py-8 text-white shadow-lg sm:px-10 sm:py-12">
         <div className="pointer-events-none absolute -right-10 -top-10 h-56 w-56 rounded-full bg-white/10 blur-2xl" aria-hidden="true" />
-        <div className="pointer-events-none absolute -bottom-16 left-1/3 h-48 w-48 rounded-full bg-amber-300/20 blur-2xl" aria-hidden="true" />
+        <div className="pointer-events-none absolute -bottom-16 left-1/3 h-48 w-48 rounded-full bg-[#f2b632]/25 blur-2xl" aria-hidden="true" />
         <p className="relative text-xs font-bold uppercase tracking-[0.2em] text-white/80">Ompath Study</p>
         <h1 className="relative mt-1 font-serif text-4xl font-bold sm:text-5xl">Student Stories</h1>
         <p className="relative mt-2 max-w-xl text-sm text-white/90 sm:text-base">Experiences, advice and honest reflections from medical school. First year to final year, everyone has something worth sharing.</p>
         <div className="relative mt-5 flex flex-wrap items-center gap-3">
-          <button type="button" onClick={openWriter} className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-indigo-700 shadow transition-transform hover:scale-[1.02] active:scale-95"><PenLine className="h-4 w-4" /> Share your story</button>
+          <button type="button" onClick={openWriter} className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-[#0b2545] shadow transition-transform hover:scale-[1.02] active:scale-95"><PenLine className="h-4 w-4" /> Share your story</button>
+          <button type="button" onClick={() => void shareOut(INVITE_TEXT.split("\n")[0], INVITE_URL, "Share your medical school story")} className="inline-flex items-center gap-2 rounded-xl border border-white/40 bg-white/10 px-4 py-3 text-sm font-bold text-white backdrop-blur transition-colors hover:bg-white/20"><MessageCircle className="h-4 w-4" /> Invite classmates</button>
           {stories.length > 0 && <span className="rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold backdrop-blur">{stories.length} stor{stories.length === 1 ? "y" : "ies"} shared</span>}
         </div>
       </section>
@@ -164,12 +167,12 @@ export default function Stories() {
           <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search stories…" aria-label="Search stories" className="w-full bg-transparent px-3 py-3 text-base placeholder:text-muted-foreground focus:outline-none sm:text-sm" />
           {search && <button type="button" onClick={() => setSearch("")} aria-label="Clear search" className="mr-3 rounded-full p-0.5 text-muted-foreground hover:text-foreground"><X className="h-4 w-4" /></button>}
         </div>
-        <div className="-mx-4 flex gap-1.5 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0" role="group" aria-label="Topic">
-          {categories.map((c) => <button key={c} type="button" onClick={() => setCategory(c)} aria-pressed={category === c} className={`shrink-0 rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors ${category === c ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/50"}`}>{c}</button>)}
+        <div className="flex flex-wrap gap-1.5" role="group" aria-label="Topic">
+          {categories.map((c) => <button key={c} type="button" onClick={() => setCategory(c)} aria-pressed={category === c} className={`rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors ${category === c ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/50"}`}>{c}</button>)}
         </div>
-        <div className="-mx-4 flex items-center gap-1.5 overflow-x-auto px-4 pb-1 sm:mx-0 sm:px-0" role="group" aria-label="Year">
-          <span className="shrink-0 text-xs font-bold uppercase tracking-wide text-muted-foreground">Year</span>
-          {[0, 1, 2, 3, 4, 5, 6].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-8 shrink-0 rounded-full border px-3 text-xs font-bold transition-colors ${year === y ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground/40"}`}>{y === 0 ? "All" : `Y${y}`}</button>)}
+        <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label="Year">
+          <span className="mr-1 text-xs font-bold uppercase tracking-wide text-muted-foreground">Year</span>
+          {[0, 1, 2, 3, 4, 5, 6].map((y) => <button key={y} type="button" onClick={() => setYear(y)} aria-pressed={year === y} className={`h-9 min-w-[2.75rem] rounded-full border px-3 text-xs font-bold transition-colors ${year === y ? "border-foreground bg-foreground text-background" : "border-border hover:border-foreground/40"}`}>{y === 0 ? "All" : `Y${y}`}</button>)}
         </div>
       </section>
 
@@ -195,9 +198,6 @@ export default function Stories() {
           </div>
         )}
       </section>
-
-      {/* Always one tap away on a phone (left side, so it never sits on the Ompath AI bubble) */}
-      <button type="button" onClick={openWriter} aria-label="Share your story" className="fixed bottom-20 left-4 z-30 inline-flex h-14 items-center gap-2 rounded-full bg-gradient-to-r from-teal-600 to-indigo-600 pl-4 pr-5 text-sm font-bold text-white shadow-xl transition-transform active:scale-95 sm:hidden print:hidden"><PenLine className="h-5 w-5" /> Write</button>
 
       <StoryComposer open={writing || Boolean(editing)} editing={editing} onClose={() => { setEditing(null); closeWriter(); }} onPublished={refresh} />
     </div>

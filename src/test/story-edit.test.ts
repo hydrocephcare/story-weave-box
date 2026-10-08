@@ -21,3 +21,22 @@ describe("editing a published story", () => {
     expect(textToHtml("<script>alert(1)</script>")).not.toContain("<script>");
   });
 });
+
+import { cleanStoryHtml } from "@/components/StoryComposer";
+import { storyThumb } from "@/lib/storyShare";
+
+describe("story html and thumbnails", () => {
+  it("keeps formatting and drops anything dangerous", () => {
+    const out = cleanStoryHtml('<h2>Hi</h2><p onclick="x()">a <strong>b</strong><script>alert(1)</script><img src=x onerror=alert(1)></p><a href="javascript:alert(1)">bad</a><a href="https://example.com">ok</a>');
+    expect(out).toContain("<h2>Hi</h2>");
+    expect(out).toContain("<strong>b</strong>");
+    expect(out).not.toMatch(/script|onclick|onerror|<img|javascript:/i);
+    expect(out).toContain('href="https://example.com"');
+    expect(out).toContain('rel="nofollow ugc noopener"');
+  });
+  it("picks a share picture for each topic", () => {
+    expect(storyThumb("Exams & study")).toMatch(/exams-study\.png$/);
+    expect(storyThumb("First-year life")).toMatch(/first-year-life\.png$/);
+    expect(storyThumb("Something custom")).toMatch(/other\.png$/);
+  });
+});

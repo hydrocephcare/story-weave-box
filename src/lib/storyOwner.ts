@@ -30,12 +30,12 @@ export function useOwnerTag(): string | null {
 const unescapeHtml = (s: string) => s.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, "&");
 
 /** Turns a story the writer produced back into the plain text they typed, so it can be edited. */
-export function storyToEditable(html: string): { body: string; name: string; anonymous: boolean } {
+export function storyToEditable(html: string): { body: string; html: string; name: string; anonymous: boolean } {
   const by = html.match(/^\s*<p><em>By (.*?)(?: · Year \d)?<\/em><\/p>/i);
   const rest = by ? html.slice(by[0].length) : html;
   const name = by ? unescapeHtml(by[1]).trim() : "";
   const body = unescapeHtml(
     rest.replace(/<h[1-6][^>]*>(.*?)<\/h[1-6]>/gi, "## $1\n\n").replace(/<br\s*\/?>/gi, "\n").replace(/<\/p>/gi, "\n\n").replace(/<[^>]+>/g, "").replace(/\n{3,}/g, "\n\n"),
   ).trim();
-  return { body, name: name === "A medical student" ? "" : name, anonymous: name === "A medical student" };
+  return { body, html: rest.trim(), name: name === "A medical student" ? "" : name, anonymous: name === "A medical student" };
 }

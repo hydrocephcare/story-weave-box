@@ -4,7 +4,7 @@ export const config = {
 
 const OG_FALLBACK_IMAGE = "https://www.ompathstudy.com/og-default.png";
 const GEO_KEYWORDS = "Kenya, Africa, global medical students, MBChB, clinical medicine, nursing, University of Nairobi, Kenyatta University, Moi University, Kabarak University, Aga Khan University";
-const STATIC_PAGE_META: Record<string, { title: string; description: string; links: string[] }> = {
+const STATIC_PAGE_META: Record<string, { title: string; description: string; links: string[]; image?: string }> = {
   "/": {
     title: "OmpathStudy | Free Medical Notes, MCQs & Exams",
     description: "Free medical notes, MCQs, flashcards and timed exams for MBChB, clinical medicine and health students in Kenya, Africa and worldwide.",
@@ -41,8 +41,9 @@ const STATIC_PAGE_META: Record<string, { title: string; description: string; lin
     links: ["/", "/blog", "/mcqs", "/flashcards", "/exams", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
   "/stories": {
-    title: "Medical School Stories | OmpathStudy Kenya",
-    description: "Read reflective medical school stories and student experiences from Kenya and East Africa.",
+    title: "Share your medical school story | Ompath Study",
+    description: "Read and share student stories from medical school. First years to final years can publish in two minutes. Tap to write yours.",
+    image: "https://www.ompathstudy.com/og/stories.png",
     links: ["/", "/blog", "/mcqs", "/flashcards", "/exams"],
   },
 };
@@ -735,6 +736,7 @@ export default async function handler(req: Request): Promise<Response> {
       const page = STATIC_PAGE_META[originalPath.split("?")[0]];
       title = page.title;
       description = page.description;
+      if (page.image) ogImage = page.image;
       keywords = `OmpathStudy, medical notes Kenya, MCQs, flashcards, exams, MBChB revision`;
       type = "website";
       bodyExtra = `<section><h2>Study resources</h2><p>OmpathStudy provides structured medical learning resources for MBChB and health students across Kenya and East Africa. The public study library includes concise clinical notes, pathology guides, pharmacology revision, anatomy summaries, physiology explanations, microbiology material, active-recall flashcards, practice MCQs and timed exam-style revision. Content is organised by academic year and unit so students can move directly from a year hub to the relevant articles, question banks, flashcards and exam practice.</p><p>Use these links to navigate to live indexable pages without redirects.</p><nav aria-label="Core pages">${page.links.map((path) => `<a href="${path}">${path === "/" ? "Home" : path.replace(/^\//, "")}</a>`).join(" ")}</nav></section>`;
