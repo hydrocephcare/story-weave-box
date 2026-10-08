@@ -1,9 +1,10 @@
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Search } from "lucide-react";
+import { ArrowRight, Search, Sparkles } from "lucide-react";
+import { openAI } from "@/lib/aiEvents";
 import { logSearch } from "@/lib/search";
-import { useSiteSearch } from "@/hooks/useSiteSearch";
+import { useSmartSearch } from "@/hooks/useSmartSearch";
 import { groupSiteHits } from "@/lib/siteSearch";
 import { CONTENT_TYPES } from "@/lib/academic";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -19,8 +20,8 @@ export default function GlobalSearch() {
   const [year, setYear] = useState(params.get("year") || "");
   const [contentType, setContentType] = useState(params.get("type") || "");
 
-  const opts = useMemo(() => ({ year: year || undefined, contentType: contentType || undefined, deep: true }), [year, contentType]);
-  const { hits, related, loading, searched } = useSiteSearch(q, opts);
+  const opts = useMemo(() => ({ year: year || undefined, contentType: contentType || undefined }), [year, contentType]);
+  const { hits, related, loading, deepLoading, searched, parsed } = useSmartSearch(q, opts);
   const groups = useMemo(() => groupSiteHits(hits), [hits]);
 
   // Keep the URL in sync (without spamming browser history) so a search is shareable, but don't drive the search off it.
@@ -76,6 +77,17 @@ export default function GlobalSearch() {
         </div>
       </form>
 
+      {parsed && searched && (parsed.topic && parsed.topic.toLowerCase() !== q.trim().toLowerCase() || parsed.year) && (
+        <p className="mt-4 text-sm text-muted-foreground">Showing results for <strong className="text-foreground">{parsed.topic}</strong>{parsed.year && !year ? <> in <strong className="text-foreground">Year {parsed.year}</strong></> : null}</p>
+      )}
+      {q.trim().length >= 2 && (
+        <button type="button" onClick={() => openAI(q.trim())} className="mt-4 flex w-full items-center gap-3 rounded-xl border border-primary/30 bg-primary/5 px-4 py-3 text-left transition-colors hover:bg-primary/10">
+          <Sparkles className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+          <span className="min-w-0 flex-1 text-sm"><strong className="block text-foreground">Ask Ompath AI about “{q.trim().slice(0, 60)}”</strong><span className="text-xs text-muted-foreground">Timetable, lecturers, explanations and notes in one answer</span></span>
+          <ArrowRight className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+        </button>
+      )}
+
       {related.length > 0 && (
         <div className="mt-4 flex flex-wrap gap-2">
           <span className="text-xs text-muted-foreground">Related terms:</span>
@@ -92,7 +104,7 @@ export default function GlobalSearch() {
         </div>
       ) : searched ? (
         <div className="mt-8 space-y-8">
-          <p className="text-xs font-semibold text-muted-foreground">{hits.length} result{hits.length === 1 ? "" : "s"}{loading ? " · still searching inside notes…" : ""}</p>
+          <p className="text-xs font-semibold text-muted-foreground">{hits.length} result{hits.length === 1 ? "" : "s"}{deepLoading ? " · still searching inside notes…" : ""}</p>
           {groups.map(({ group, rows }) => (
             <section key={group}>
               <h2 className="mb-3 font-serif text-xl font-bold text-foreground">{group} <span className="text-sm font-semibold text-muted-foreground">{rows.length}</span></h2>

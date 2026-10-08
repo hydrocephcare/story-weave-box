@@ -70,7 +70,7 @@ export default function AIPill() {
 
   return (
     <div style={{ bottom: state.y, touchAction: "none" }} className={`fixed right-3 z-40 print:hidden ${dragging ? "" : "transition-[opacity,transform] duration-200"}`}>
-      <div className={`flex items-center overflow-hidden rounded-full border shadow-lg backdrop-blur-md ${awake ? "border-indigo-400/50 bg-gradient-to-r from-teal-600 via-indigo-600 to-purple-600 text-white opacity-100 shadow-indigo-500/30" : "border-white/40 bg-background/30 text-foreground opacity-60 hover:opacity-95"}`}>
+      <div className={`flex items-center overflow-hidden rounded-full border shadow-lg backdrop-blur-md ${awake ? "border-indigo-400/50 bg-[#0b2545] text-white opacity-100 shadow-indigo-500/30" : "border-white/40 bg-background/30 text-foreground opacity-60 hover:opacity-95"}`}>
         <button type="button" onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={() => { window.clearTimeout(drag.current.timer); drag.current.id = -1; setDragging(false); }}
           aria-label={awake ? "Open Ompath AI" : "Ompath AI"} className="flex h-12 select-none items-center gap-2 pl-1.5 pr-1.5 text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
           <OmpathMark className="h-9 w-9 shrink-0 drop-shadow" />

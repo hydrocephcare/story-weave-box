@@ -13,6 +13,7 @@ import { unitNameMap, useSiteConfig, useTimetable } from "@/lib/siteConfig";
 import { OFFICIAL_2026_SCHEDULES } from "@/lib/timetable2026";
 import { personalReply } from "@/lib/ompathAiPersonal";
 import { useAiAccountSync } from "@/lib/ompathAiSync";
+import { guideReply } from "@/lib/ompathAiGuide";
 import { useAuth } from "@/hooks/useAuth";
 import { useSiteSearch } from "@/hooks/useSiteSearch";
 import { useAccess } from "@/lib/access";
@@ -194,6 +195,12 @@ export default function OmpathAIHost() {
       aiStore.flush();
       return;
     }
+    const guide = opts.fresh || !text.length ? null : await guideReply(text, myYear);
+    if (guide) {
+      aiStore.addTurn(sessionId, { id, q: text, answer: guide.answer, hits: [], grounded: true, followUps: guide.followUps, links: guide.links, instant: "quick", at: Date.now() });
+      aiStore.flush();
+      return;
+    }
     const saved = opts.fresh ? null : getCached(text);
     if (saved) {
       aiStore.addTurn(sessionId, { id, q: text, answer: saved.answer, hits: saved.hits, grounded: saved.grounded, followUps: saved.followUps, instant: "saved", at: Date.now() });
@@ -350,6 +357,7 @@ export default function OmpathAIHost() {
                   <p className="flex items-center gap-2 font-serif text-lg font-bold"><OmpathMark className="h-7 w-7" plain /> What do you need?</p>
                   {trending.length > 0 && <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-primary">Trending with students</p>}
                   <p className="mt-1 text-sm text-muted-foreground">Ask for notes, a past paper, a library file, or just ask a question. I search every note, paper and file on Ompath Study first.</p>
+                  <div className="mt-3 flex flex-wrap gap-1.5" aria-label="Quick links">{[["Timetable", `/timetable/year-${myYear ?? 1}`], ["Past papers", "/papers"], ["Flashcards", "/flashcards"], ["MCQs", "/mcqs"], ["Library", "/books"], ["Stories", "/stories"]].map(([label, href]) => <button key={href} type="button" onClick={() => goFull({ href } as SiteHit)} className="inline-flex items-center gap-1 rounded-lg bg-primary/10 px-2.5 py-1.5 text-xs font-bold text-primary hover:bg-primary/15"><ExternalLink className="h-3 w-3" /> {label}</button>)}</div>
                   <div className="mt-3 flex flex-wrap gap-2">{[...trending.slice(0, 3), ...STARTERS].filter((v, i, a) => a.indexOf(v) === i).slice(0, 7).map((s) => <button key={s} type="button" onClick={() => void ask(s)} className="rounded-full border border-border px-3 py-1.5 text-left text-sm hover:border-primary hover:text-primary">{s}</button>)}</div>
                 </section>
               )}

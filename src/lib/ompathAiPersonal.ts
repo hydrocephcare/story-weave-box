@@ -74,7 +74,8 @@ const isTimetableQuestion = (s: string) =>
   !/\b(notes?|papers?|mcqs?|essays?|flashcards?|slides?|pdf|books?|past|drug|drugs|class of)\b/.test(s) &&
   (/\b(timetable|time table|schedule|classes|what do we have|what have we got|what are we having|what is on|whats on|what s on|any lectures?|venue)\b/.test(s) ||
     /\blectures? (today|tomorrow|tommorow|this week|on)\b/.test(s) || /\bwhere (is|are) (the |our )?(class|lecture|session)\b/.test(s) ||
-    /\bwhat (do|are) we (have|having|doing)\b/.test(s) || /\b(do|will) we have (class|classes|lectures?|anything)\b/.test(s));
+    /\bwhat (do|are|did|will|shall) (we|i|you) (have|having|doing|got)\b/.test(s) || /\b(do|will|shall) (we|i) have (a |any )?(class|classes|lectures?|anything|sessions?)\b/.test(s) ||
+    /\b(tomorrow|today|tommorow|tomorow|monday|tuesday|wednesday|thursday|friday)\b.*\b(class|classes|lectures?|sessions?|timetable)\b/.test(s) || /\b(class|classes|lectures?|sessions?)\b.*\b(tomorrow|today|tommorow|tomorow|tonight)\b/.test(s));
 
 const ADVICE: Record<number, string[]> = {
   1: ["Learn anatomy by drawing and labelling, not only reading. Ten minutes of drawing beats an hour of re-reading.", "Do a few past-paper questions every week from the start, so the exam style is never new.", "Biochemistry and physiology reward understanding the pathways. Explain each one out loud as if teaching a friend."],

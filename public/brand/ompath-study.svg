@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512" role="img" aria-label="Ompath Study">
+  <rect width="64" height="64" rx="15" fill="#0f766e"/>
+  <g transform="translate(0 4)">
+    <path d="M31 21C25.5 17 18.5 16.5 12 18.5v26c6.5-2 13.5-1.500 19 2.500z" fill="#ffffff"/>
+    <path d="M33 21c5.500-4 12.500-4.500 19-2.500v26c-6.500-2-13.500-1.500-19 2.500z" fill="#ffffff" fill-opacity="0.88"/>
+  </g>
+  <path d="M32 6.500v10M27 11.500h10" stroke="#f2b632" stroke-width="3.400" stroke-linecap="round"/>
+</svg>

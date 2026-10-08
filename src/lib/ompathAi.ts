@@ -163,24 +163,45 @@ async function gatherPassages(hits: SiteHit[], p: ParsedQuery): Promise<Passage[
 }
 
 // ---------- retrieval ----------
-export async function retrieve(input: string): Promise<Retrieval> {
+export interface FindOptions { /** Also look inside the text of notes. Slower, so the search page asks for it second. */ deep?: boolean; year?: string; contentType?: string }
+const findCache = new Map<string, { parsed: ParsedQuery; hits: SiteHit[]; related: string[] }>();
+
+/**
+ * Everything on the site that matches what a student typed, understood the way Ompath AI understands it
+ * (filler words dropped, typos and abbreviations fixed, the year read). Used by the AI and by the search page.
+ */
+export async function findHits(input: string, o: FindOptions = {}): Promise<{ parsed: ParsedQuery; hits: SiteHit[]; related: string[] }> {
+  const ck = JSON.stringify([input.trim().toLowerCase(), o.deep ?? true, o.year ?? "", o.contentType ?? ""]);
+  const cached = findCache.get(ck);
+  if (cached) return cached;
   const parsed = parseQuery(input);
+  const yearNum = Number(String(o.year ?? "").match(/\d+/)?.[0]) || parsed.year;
+  const deepOn = o.deep ?? true;
   const longest = parsed.topic.split(" ").filter((w) => w.length >= 6).sort((x, y) => y.length - x.length)[0];
   const queries = [...new Set([parsed.topic, ...(longest && longest !== parsed.topic ? [longest] : []), ...parsed.expansions.slice(0, 3), parsed.raw].filter((q) => q.length >= 2))];
-  const opts = { year: parsed.year ? `Year ${parsed.year}` : undefined };
-  const runs = await Promise.all(queries.map((q, i) => siteSearch(q, { ...opts, deep: i === 0 || q === longest }).catch(() => ({ hits: [] as SiteHit[], related: [] as string[] }))));
+  const opts = { year: yearNum ? `Year ${yearNum}` : undefined, contentType: o.contentType || undefined };
+  const runs = await Promise.all(queries.map((q, i) => siteSearch(q, { ...opts, deep: deepOn && (i === 0 || q === longest) }).catch(() => ({ hits: [] as SiteHit[], related: [] as string[] }))));
   // students often forget the year: if a year was given and nothing came back, drop the filter
   let all = runs.flatMap((r) => r.hits);
-  if (parsed.year && all.length < 3) {
-    const loose = await siteSearch(parsed.topic, { deep: true }).catch(() => ({ hits: [] as SiteHit[], related: [] as string[] }));
+  if (yearNum && !o.year && all.length < 3) {
+    const loose = await siteSearch(parsed.topic, { deep: deepOn, contentType: o.contentType || undefined }).catch(() => ({ hits: [] as SiteHit[], related: [] as string[] }));
     all = [...all, ...loose.hits];
   }
   const merged = new Map<string, SiteHit>();
-  for (const h of [...all, ...staticHits(parsed)]) {
+  for (const h of [...all, ...(o.contentType ? [] : staticHits({ ...parsed, year: yearNum ?? parsed.year }))]) {
     const prev = merged.get(h.key);
     merged.set(h.key, prev ? { ...prev, score: Math.max(prev.score, h.score) + 4 } : h); // found by several variants: more likely right
   }
-  const hits = rerank([...merged.values()], parsed).slice(0, 30);
+  const hits = rerank([...merged.values()], { ...parsed, year: yearNum ?? parsed.year }).slice(0, 40);
+  const out = { parsed, hits, related: [...new Set(runs.flatMap((r) => r.related))].slice(0, 8) };
+  findCache.set(ck, out);
+  if (findCache.size > 40) findCache.delete(findCache.keys().next().value as string);
+  return out;
+}
+
+export async function retrieve(input: string): Promise<Retrieval> {
+  const { parsed, hits: found } = await findHits(input);
+  const hits = found.slice(0, 30);
   const passages = parsed.wants === "timetable" || parsed.wants === "files" ? [] : await gatherPassages(hits, parsed);
   const topicWords = [...new Set(parsed.topic.split(/[^a-z0-9]+/).filter((w) => w.length >= 3))];
   const needed = Math.max(1, Math.ceil(topicWords.length * 0.6));

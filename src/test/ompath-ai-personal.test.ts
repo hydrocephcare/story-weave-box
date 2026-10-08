@@ -12,6 +12,9 @@ describe("personalReply", () => {
     expect(r?.answer).toMatch(/Friday/);
     expect(r?.answer).toMatch(/Year 1/);
   });
+  it("understands loose phrasing", () => {
+    for (const q of ["what do i have tomorrow class", "have tomorrow class", "timetable yr 4", "any class tomorrow"]) expect(personalReply(q, ctx())?.answer, q).toMatch(/Year/);
+  });
   it("makes a signed-out student log in first", () => {
     const r = personalReply("what do we have tomorrow", ctx({ signedIn: false }));
     expect(r?.links?.[0].href).toMatch(/login/);

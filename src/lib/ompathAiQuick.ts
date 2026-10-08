@@ -89,13 +89,14 @@ export async function getShared(input: string): Promise<{ answer: string; ground
   try {
     const key = cacheKey(input);
     const res = (await withTimeout(db.from("ai_answer_cache").select("answer,grounded").eq("cache_key", key).lt("reports", 2).maybeSingle(), 2500)) as { data?: { answer?: string; grounded?: boolean }; error?: unknown } | null;
-    if (!res || res.error || !res.data?.answer) return null;
+    if (!res || res.error || !res.data?.answer || res.data.grounded === false) return null; // answers from general knowledge are never shared
     void db.rpc("ai_cache_touch", { k: key });
-    return { answer: String(res.data.answer), grounded: res.data.grounded !== false };
+    return { answer: String(res.data.answer), grounded: true };
   } catch { return null; }
 }
 
 export async function saveShared(input: string, answer: string, grounded: boolean) {
+  if (!grounded) return; // only answers built from the site's own notes are worth sharing
   try {
     await db.from("ai_answer_cache").insert({ cache_key: cacheKey(input), question: input.trim().slice(0, 400), answer: answer.slice(0, 8000), grounded });
   } catch { /* already saved by someone else, or the table is not set up */ }

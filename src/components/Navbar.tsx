@@ -5,7 +5,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "./ThemeToggle";
 import NotificationsBell from "./NotificationsBell";
 import HeaderSearch from "./HeaderSearch";
-import ompathLogo from "@/assets/ompath-logo.webp";
 import { useAuth } from "@/hooks/useAuth";
 
 const YEAR_OPTIONS = [1, 2, 3, 4, 5, 6] as const;
@@ -174,9 +173,8 @@ export default function Navbar() {
       <nav className={`sticky top-0 z-40 border-b border-border bg-[hsl(174,62%,22%)] text-white transition-[transform,opacity] duration-300 ease-out will-change-transform ${hidden ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100 pointer-events-auto"}`}>
         <div className="mx-auto flex max-w-[1680px] items-center justify-between gap-3 px-4 py-2 sm:px-6">
           <Link to="/" className="flex shrink-0 items-center gap-2 text-lg font-bold text-white">
-            <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-md bg-white/10 p-1">
-              <img src={ompathLogo} alt="Ompath Study logo" width="32" height="32" className="h-full w-full object-contain" decoding="async" // @ts-expect-error fetchpriority is valid HTML
-fetchpriority="high" />
+            <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg">
+              <img src="/brand/ompath-study.svg" alt="Ompath Study logo" width="32" height="32" className="h-full w-full object-contain" decoding="async" />
             </div>
             <span className="font-serif">Ompath Study</span>
           </Link>
@@ -228,8 +226,8 @@ fetchpriority="high" />
               </SheetTrigger>
               <SheetContent side="left" className="w-72 bg-[hsl(174,62%,16%)] border-r-0 p-0 text-white [&>button]:text-white">
                 <div className="flex items-center gap-2 border-b border-white/10 px-4 py-4">
-                  <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-md bg-white/10 p-1">
-                    <img src={ompathLogo} alt="Ompath Study logo" width="32" height="32" className="h-full w-full object-contain" decoding="async" />
+                  <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg">
+                    <img src="/brand/ompath-study.svg" alt="Ompath Study logo" width="32" height="32" className="h-full w-full object-contain" decoding="async" />
                   </div>
                   <span className="font-serif text-lg font-bold">Ompath Study</span>
                 </div>
