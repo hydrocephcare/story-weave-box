@@ -3,7 +3,7 @@
 import registry from "@/data/libraries.json";
 import { COURSE_OUTLINES } from "@/data/courseOutlines";
 import { supabase } from "@/integrations/supabase/client";
-import { flattenDrive, loadDriveNotes } from "@/lib/driveNotes";
+import { flattenDrive, loadDriveIndex, loadDriveNotes } from "@/lib/driveNotes";
 import { queryTerms } from "@/lib/queryTerms";
 import { buildBlogPath } from "@/lib/store";
 import { globalSearch, type SearchFilters } from "@/lib/search";
@@ -125,9 +125,14 @@ function loadFileIndex(): Promise<FileRow[]> {
 /** The live notes folder on Drive (see api/drive-notes.js), so new notes can be found the moment they are added. */
 async function liveRows(): Promise<FileRow[]> {
   try {
-    const d = await loadDriveNotes();
+    const [d, idx] = await Promise.all([loadDriveNotes(), loadDriveIndex()]);
     if (!d.ok) return [];
-    return flattenDrive(d.tree).map((r) => ({ id: r.file[0], name: r.file[1], lower: `${prettyTitle(r.file[1])} ${r.file[1]}`.toLowerCase(), kind: r.file[2], where: `Latest notes${r.where.length ? ` › ${r.where.join(" › ")}` : ""}`, href: `/new-notes?file=${encodeURIComponent(r.file[0])}`, year: 0 }));
+    return flattenDrive(d.tree, [], idx).map((r) => ({
+      id: r.file[0], name: r.file[1], kind: r.file[2], year: 0,
+      lower: `${prettyTitle(r.file[1])} ${r.file[1]} ${r.cat?.title ?? ""} ${r.cat?.summary ?? ""} ${r.cat?.unit ?? ""}`.toLowerCase(),
+      where: `Latest notes${r.where.length ? ` › ${r.where.join(" › ")}` : ""}`,
+      href: `/new-notes?file=${encodeURIComponent(r.file[0])}`,
+    }));
   } catch { return []; }
 }
 

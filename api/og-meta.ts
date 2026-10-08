@@ -40,6 +40,12 @@ const STATIC_PAGE_META: Record<string, { title: string; description: string; lin
     description: "OmpathStudy medical knowledge contests for students across Kenya, with published briefings and competition information.",
     links: ["/", "/blog", "/mcqs", "/flashcards", "/exams", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
+  "/ai": {
+    title: "Ompath Study AI: notes, past papers and anatomy pictures for MBChB students",
+    description: "Ask Ompath Study AI for notes, past papers, your timetable and anatomy spot questions with pictures. Made for Kenyan medical students. Log in free and ask.",
+    image: "https://www.ompathstudy.com/og/ai.png",
+    links: ["/", "/blog", "/papers", "/stories"],
+  },
   "/stories": {
     title: "Every medical student has a story. Share yours | Ompath Study",
     description: "Read real stories from medical school, from first year to final year, and add yours in two minutes. Your name can stay private.",
@@ -125,7 +131,12 @@ function toMetaTitle(input: string, fallback = "Medical Study Resource"): string
     .replace(/\s*[|–-]\s*OmpathStudy\s*(Kenya)?\s*$/i, "")
     .replace(/\s+/g, " ")
     .trim() || fallback;
-  return clean.length <= 60 ? clean : clean.slice(0, 57).trimEnd() + "...";
+  // a stored title that begins mid-sentence ("TO NEOPLASIA MCQs") or is far shorter than the real title is a leftover from an old clean-up: use the real one
+  const mangled = /^(to|of|and|the|in|for|on|with|a|an)\s/i.test(clean) || (fallback.length > clean.length + 12 && clean.length < 14);
+  const base = mangled ? cleanForMetaSnippet(fallback).replace(/\s+/g, " ").trim() || clean : clean;
+  if (base.length <= 62) return base;
+  const cut = base.slice(0, 62);
+  return cut.slice(0, Math.max(30, cut.lastIndexOf(" "))).replace(/[\s,:;&–-]+$/, ""); // end on a whole word, no dangling "..."
 }
 
 function toMetaDescription(input: string, fallback: string): string {
@@ -195,7 +206,7 @@ function tokenScore(target: string, candidate: string): number {
   return overlap / (new Set([...a, ...b]).size || 1);
 }
 
-async function closestLivePath(table: string, param: string, prefix: "/blog" | "/mcqs" | "/flashcards" | "/essays" | "/contests", fallback: string): Promise<string> {
+async function closestLivePath(table: string, param: string, prefix: "/blog" | "/mcqs" | "/flashcards" | "/essays" | "/contests", fallback: string): Promise<string | null> {
   const rows = await sbFetch(table, "select=id,title,slug&published=eq.true&deleted_at=is.null&limit=1000");
   let best: Record<string, string> | null = null;
   let score = 0;
@@ -207,7 +218,16 @@ async function closestLivePath(table: string, param: string, prefix: "/blog" | "
       score = nextScore;
     }
   }
-  return best && score >= 0.28 ? `${prefix}/${cleanPublicSlug(best.slug, best.title, fallback)}` : prefix;
+  return best && score >= 0.28 ? `${prefix}/${cleanPublicSlug(best.slug, best.title, fallback)}` : null;
+}
+
+/** A close live page to send an old address to, or a clear "gone" answer when there is none. */
+function redirectOrGone(path: string | null, hub: string): Response {
+  if (path) return permanentRedirect(path);
+  return new Response(
+    `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,follow"><title>Page removed | OmpathStudy</title></head><body><h1>This page has been removed</h1><p>It was replaced or merged into other study material. Browse the latest on <a href="https://www.ompathstudy.com${hub}">OmpathStudy</a>.</p></body></html>`,
+    { status: 410, headers: { "content-type": "text/html; charset=utf-8", "x-robots-tag": "noindex, follow", "cache-control": "public, max-age=3600" } },
+  );
 }
 
 function extractUuidFromParam(value?: string | null): string | null {
@@ -795,7 +815,7 @@ export default async function handler(req: Request): Promise<Response> {
     } else if (section === "blog" && param) {
       const article = await fetchArticleBySlug(param);
       if (!article) {
-        return permanentRedirect(await closestLivePath("articles", param, "/blog", "article"));
+        return redirectOrGone(await closestLivePath("articles", param, "/blog", "article"), "/blog");
       }
       // The requested param may be a stale/UUID/near-match variant of this
       // article's slug. Always 301 to the article's own true canonical path
@@ -834,7 +854,7 @@ export default async function handler(req: Request): Promise<Response> {
     } else if (section === "mcqs" && param) {
       const mcq = await fetchMcqSetBySlugOrId(param);
       if (!mcq) {
-        return permanentRedirect(await closestLivePath("mcq_sets", param, "/mcqs", "quiz"));
+        return redirectOrGone(await closestLivePath("mcq_sets", param, "/mcqs", "quiz"), "/mcqs");
       }
       const canonicalMcqPath = `/mcqs/${cleanPublicSlug(mcq.slug, mcq.title, "quiz")}`;
       if (canonicalMcqPath !== `/mcqs/${param}`) {
@@ -902,7 +922,7 @@ ${explanationLine}
     } else if (section === "flashcards" && param) {
       const set = await fetchFlashcardSetBySlugOrId(param);
       if (!set) {
-        return permanentRedirect(await closestLivePath("flashcard_sets", param, "/flashcards", "flashcards"));
+        return redirectOrGone(await closestLivePath("flashcard_sets", param, "/flashcards", "flashcards"), "/flashcards");
       }
       const canonicalFlashcardPath = `/flashcards/${cleanPublicSlug(set.slug, set.title, "flashcards")}`;
       if (canonicalFlashcardPath !== `/flashcards/${param}`) {
@@ -952,7 +972,7 @@ ${explanationLine}
 
     } else if (section === "essays" && param) {
       const essay = await fetchEssayBySlugOrId(param);
-      if (!essay) return permanentRedirect(await closestLivePath("essays", param, "/essays", "essay"));
+      if (!essay) return redirectOrGone(await closestLivePath("essays", param, "/essays", "essay"), "/essays");
       const canonicalEssayPath = `/essays/${cleanPublicSlug(essay.slug, essay.title, "essay")}`;
       if (canonicalEssayPath !== `/essays/${param}`) return permanentRedirect(canonicalEssayPath);
       const saq = Array.isArray(essay.short_answer_questions) ? essay.short_answer_questions : [];

@@ -27,3 +27,16 @@ describe("drive notes", () => {
     expect(rows.map((r) => [r.file[1], r.where.join("/")])).toEqual([["a.pdf", ""], ["b.pdf", "Year 4"]]);
   });
 });
+
+describe("sorted notes", () => {
+  const tree = { id: "r", name: "Root", folders: [], files: [{ id: "a", name: "Hair.docx", kind: "doc" as const, modified: "" }, { id: "b", name: "New.pdf", kind: "pdf" as const, modified: "" }] };
+  it("files a note under its year and unit once the AI has sorted it", () => {
+    const rows = flattenDrive(tree, [], { a: { year: 3, unit: "Medical Mycology", type: "Notes", title: "Hair practical", summary: "", firstSeen: "2026-10-08", sorted: true } });
+    expect(rows[0].where).toEqual(["Year 3", "Medical Mycology"]);
+    expect(rows[1].where).toEqual([]); // added since the last weekly sort: no entry yet
+  });
+  it("leaves a note the AI could not place in its folder", () => {
+    const rows = flattenDrive({ ...tree, files: [tree.files[0]] }, ["Misc"], { a: { year: null, unit: null, type: "Notes", title: "Hair", summary: "", firstSeen: "2026-10-08", sorted: false } });
+    expect(rows[0].where).toEqual(["Misc"]);
+  });
+});

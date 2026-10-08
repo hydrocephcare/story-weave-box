@@ -1,0 +1,54 @@
+name: Sort new Drive notes with AI
+
+# Every Monday at 06:00 Nairobi time (03:00 UTC) the new files in the Google Drive notes folder are filed into Year > Unit by the AI,
+# and the result (public/data/drive-notes-index.json) is committed, which redeploys the site.
+# Run it yourself any time: GitHub > Actions > "Sort new Drive notes with AI" > Run workflow (tick "all" to re-sort everything).
+on:
+  schedule:
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+    inputs:
+      all:
+        description: "Re-sort every file, not just new ones"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: categorize-notes
+  cancel-in-progress: false
+
+jobs:
+  sort:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Sort the notes
+        run: node scripts/categorize-drive-notes.mjs ${{ inputs.all && '--all' || '' }}
+
+      - name: Save the result
+        run: |
+          if git diff --quiet -- public/data/drive-notes-index.json; then
+            echo "Nothing new to sort."
+          else
+            git config user.name "ompath-bot"
+            git config user.email "ompath-bot@users.noreply.github.com"
+            git add public/data/drive-notes-index.json
+            git commit -m "Sort new Drive notes (weekly)"
+            git pull --rebase origin main
+            git push origin main
+          fi

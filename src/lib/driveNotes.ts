@@ -26,12 +26,31 @@ export function loadDriveNotes(force = false): Promise<DriveNotes> {
   return inflight;
 }
 
-export interface DriveRow { file: DriveFile; where: string[]; modified: string }
-/** Every file with the folders it sits in (the notes folder itself is not part of the path). */
-export function flattenDrive(node: DriveNode, path: string[] = []): DriveRow[] {
+/** How the weekly AI sort filed a note (public/data/drive-notes-index.json, made by scripts/categorize-drive-notes.mjs). */
+export interface DriveCat { year: number | null; unit: string | null; type: string; title: string; summary: string; firstSeen: string; sorted: boolean }
+export type DriveIndex = Record<string, DriveCat>;
+
+let indexPromise: Promise<DriveIndex> | null = null;
+export function loadDriveIndex(): Promise<DriveIndex> {
+  indexPromise ??= fetch(`${import.meta.env.BASE_URL}data/drive-notes-index.json`)
+    .then((r) => (r.ok ? r.json() : { files: {} }))
+    .then((j) => (j?.files ?? {}) as DriveIndex)
+    .catch(() => ({} as DriveIndex));
+  return indexPromise;
+}
+
+export interface DriveRow { file: DriveFile; where: string[]; modified: string; cat?: DriveCat }
+/**
+ * Every file with where it belongs. A file the AI has sorted sits under its Year and Unit; one added since the last weekly sort has no entry yet
+ * and keeps its Drive folder path; one the AI could not place stays in its folder too.
+ */
+export function flattenDrive(node: DriveNode, path: string[] = [], index: DriveIndex = {}): DriveRow[] {
   return [
-    ...node.files.map((f) => ({ file: [f.id, f.name, f.kind] as DriveFile, where: path, modified: f.modified })),
-    ...node.folders.flatMap((c) => flattenDrive(c, [...path, c.name])),
+    ...node.files.map((f) => {
+      const cat = index[f.id];
+      return { file: [f.id, f.name, f.kind] as DriveFile, where: cat?.sorted && cat.year && cat.unit ? [`Year ${cat.year}`, cat.unit] : path, modified: f.modified, cat };
+    }),
+    ...node.folders.flatMap((c) => flattenDrive(c, [...path, c.name], index)),
   ];
 }
 export const countFiles = (n: DriveNode): number => n.files.length + n.folders.reduce((s, f) => s + countFiles(f), 0);

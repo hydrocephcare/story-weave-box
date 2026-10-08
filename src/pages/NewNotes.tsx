@@ -6,27 +6,30 @@ import DriveFileViewer, { cleanName, downloadUrl, type DriveFile } from "@/compo
 import FileThumb, { KIND_LABEL } from "@/components/FileThumb";
 import { useAuth } from "@/hooks/useAuth";
 import { startDownload } from "@/lib/driveDownload";
-import { countFiles, flattenDrive, loadDriveNotes, type DriveNotes, type DriveRow } from "@/lib/driveNotes";
+import { countFiles, flattenDrive, loadDriveIndex, loadDriveNotes, type DriveIndex, type DriveNotes, type DriveRow } from "@/lib/driveNotes";
+
+const isNew = (r: DriveRow) => !r.cat || Date.now() - new Date(r.cat.firstSeen).getTime() < 7 * 86400000;
 
 /** /new-notes: the notes folder on Google Drive, live. Add a file to the folder and it shows up here by itself. */
 export default function NewNotes() {
   const { isAdmin } = useAuth();
   const [params] = useSearchParams();
   const [data, setData] = useState<DriveNotes | null>(null);
+  const [index, setIndex] = useState<DriveIndex>({});
   const [q, setQ] = useState("");
   const [shut, setShut] = useState<Set<string>>(new Set());
   const [viewer, setViewer] = useState<{ items: DriveFile[]; index: number | null }>({ items: [], index: null });
 
-  const load = (force = false) => { setData(null); void loadDriveNotes(force).then(setData); };
+  const load = (force = false) => { setData(null); void Promise.all([loadDriveNotes(force), loadDriveIndex()]).then(([d, i]) => { setIndex(i); setData(d); }); };
   useEffect(() => { load(); }, []);
 
-  const rows = useMemo(() => (data?.ok ? flattenDrive(data.tree) : []), [data]);
+  const rows = useMemo(() => (data?.ok ? flattenDrive(data.tree, [], index) : []), [data, index]);
   const term = q.trim().toLowerCase();
   const shown = useMemo(() => rows.filter((r) => !term || `${r.file[1]} ${r.where.join(" ")}`.toLowerCase().includes(term)), [rows, term]);
   const groups = useMemo(() => {
     const m = new Map<string, DriveRow[]>();
-    for (const r of shown) { const k = r.where[0] ?? "Latest"; (m.get(k) ?? m.set(k, []).get(k)!).push(r); }
-    return [...m.entries()].sort((a, b) => (a[0] === "Latest" ? -1 : b[0] === "Latest" ? 1 : a[0].localeCompare(b[0], undefined, { numeric: true })));
+    for (const r of shown) { const k = r.cat?.sorted ? r.where.join(" · ") : r.where[0] ?? "Just added"; (m.get(k) ?? m.set(k, []).get(k)!).push(r); }
+    return [...m.entries()].sort((a, b) => (a[0] === "Just added" ? -1 : b[0] === "Just added" ? 1 : a[0].localeCompare(b[0], undefined, { numeric: true })));
   }, [shown]);
 
   // a link like /new-notes?file=ID (from search or Ompath AI) opens that file straight away
@@ -74,7 +77,7 @@ export default function NewNotes() {
               return (
                 <section key={name} className="overflow-hidden rounded-2xl border border-border bg-card">
                   <button type="button" onClick={() => setShut((s) => { const n = new Set(s); n.has(name) ? n.delete(name) : n.add(name); return n; })} aria-expanded={!closed} className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left hover:bg-muted/50">
-                    <span className="flex min-w-0 items-center gap-2"><FolderOpen className="h-5 w-5 shrink-0 text-primary" /><span className="truncate font-serif text-lg font-bold">{name === "Latest" ? "Notes" : name}</span></span>
+                    <span className="flex min-w-0 items-center gap-2"><FolderOpen className="h-5 w-5 shrink-0 text-primary" /><span className="truncate font-serif text-lg font-bold">{name}</span></span>
                     <span className="flex shrink-0 items-center gap-2 text-xs font-semibold text-muted-foreground">{list.length}<ChevronDown className={`h-4 w-4 transition-transform ${closed ? "" : "rotate-180"}`} /></span>
                   </button>
                   {!closed && (
@@ -84,8 +87,9 @@ export default function NewNotes() {
                           <button type="button" onClick={() => open(r)} className="flex min-w-0 flex-1 items-center gap-3 text-left">
                             <FileThumb id={r.file[0]} kind={r.file[2]} className="h-12 w-10" />
                             <span className="min-w-0 flex-1">
-                              <span className="line-clamp-2 block text-sm font-semibold hover:text-primary">{cleanName(r.file[1])}</span>
-                              <span className="block truncate text-xs text-muted-foreground">{KIND_LABEL[r.file[2]]}{r.where.length > 1 ? ` · ${r.where.slice(1).join(" › ")}` : ""}{r.modified ? ` · ${r.modified}` : ""}</span>
+                              <span className="line-clamp-2 block text-sm font-semibold hover:text-primary">{r.cat?.title || cleanName(r.file[1])}</span>
+                              <span className="block truncate text-xs text-muted-foreground">{KIND_LABEL[r.file[2]]}{r.cat?.sorted ? ` · ${r.cat.type}` : r.where.length > 1 ? ` · ${r.where.slice(1).join(" › ")}` : ""}{isNew(r) ? " · New" : ""}</span>
+                              {r.cat?.summary && <span className="line-clamp-2 block text-xs text-muted-foreground/90">{r.cat.summary}</span>}
                             </span>
                           </button>
                           <a href={downloadUrl(r.file[0])} onClick={(e) => { e.preventDefault(); startDownload(r.file[0], r.file[1]); }} aria-label={`Download ${cleanName(r.file[1])}`} className="shrink-0 rounded-lg p-2 text-muted-foreground hover:bg-primary/10 hover:text-primary"><Download className="h-4 w-4" /></a>

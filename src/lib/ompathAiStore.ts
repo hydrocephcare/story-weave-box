@@ -22,6 +22,8 @@ export interface AiTurn {
   starred?: boolean;
   /** Shows the "free limit reached, subscribe" card under this turn. */
   upgrade?: "questions" | "pictures";
+  /** Shows the "log in to use Ompath AI" card (a guest asked something). */
+  login?: boolean;
   /** A set of spot questions (with pictures) to drill, from the anatomy banks. */
   drill?: { subject: "gross" | "histology" | "embryology"; topic: string };
 }

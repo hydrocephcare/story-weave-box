@@ -10,6 +10,9 @@ import OmpathMark from "@/components/ai/OmpathMark";
 import { Answer } from "@/components/ai/AnswerText";
 import QuestionDrill from "@/components/ai/QuestionDrill";
 import UpgradeCard from "@/components/ai/UpgradeCard";
+import LoginCard from "@/components/ai/LoginCard";
+import { AI_SHARE_TEXT, AI_TITLE, AI_URL } from "@/lib/aiShare";
+import { shareOut } from "@/lib/storyShare";
 import { SUBJECT_LABEL, drillIntent } from "@/lib/questionBank";
 import { supabase } from "@/integrations/supabase/client";
 import { useStudentAccess } from "@/lib/student";
@@ -92,7 +95,7 @@ export default function OmpathAIHost() {
   const siteCfg = useSiteConfig();
   const [profileYear, setProfileYear] = useState<number | null>(null);
   const [toldYear, setToldYear] = useState<number | null>(() => { try { const n = Number(localStorage.getItem("ompath_my_year")); return n >= 1 && n <= 6 ? n : null; } catch { return null; } });
-  const { user } = useAuth();
+  const { user, loading: authLoading } = useAuth();
   useEffect(() => {
     if (!user) { setProfileYear(null); return; }
     (supabase as unknown as { from: (t: string) => any }).from("profiles").select("study_year").eq("user_id", user.id).maybeSingle() // eslint-disable-line @typescript-eslint/no-explicit-any
@@ -151,13 +154,19 @@ export default function OmpathAIHost() {
 
   async function ask(question: string, opts: { fresh?: boolean; context?: string } = {}) {
     const text = question.trim();
-    if (text.length < 2 || busy) return;
+    if (text.length < 2 || busy || authLoading) return;
     let sid = aiStore.get().activeId;
     if (!sid || !aiStore.get().sessions.some((s) => s.id === sid)) sid = aiStore.newSession();
     const sessionId = sid;
     setQ(""); setView("chat");
     if (inputRef.current) inputRef.current.style.height = "auto";
     const id = `t${Date.now()}`;
+    // Ompath AI needs an account: the question is kept, and a log-in card brings the student straight back to it
+    if (!user) {
+      aiStore.addTurn(sessionId, { id, q: text, answer: "", hits: [], grounded: true, error: "Please log in to use Ompath AI.", login: true, at: Date.now() });
+      aiStore.flush();
+      return;
+    }
 
     // Free and instant: small talk, and anything this device has already been answered.
     const quick = opts.fresh ? null : quickReply(text);
@@ -300,6 +309,7 @@ export default function OmpathAIHost() {
               <p className="truncate text-[11px] text-muted-foreground">{view === "history" ? "Your past chats" : view === "saved" ? "Answers you saved" : "Answers from your notes, files and papers"}</p>
             </div>
             <button type="button" onClick={() => { aiStore.newSession(); setView("chat"); setQ(""); window.setTimeout(() => inputRef.current?.focus(), 50); }} aria-label="New chat" title="New chat" className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><MessageSquarePlus className="h-5 w-5" /></button>
+            <button type="button" onClick={() => void shareOut(AI_SHARE_TEXT, AI_URL, AI_TITLE)} aria-label="Share Ompath AI" title="Share Ompath AI with your group" className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><Share2 className="h-5 w-5" /></button>
             <button type="button" onClick={() => setView(view === "saved" ? "chat" : "saved")} aria-label="Saved answers" title="Saved answers" aria-pressed={view === "saved"} className={`flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted ${view === "saved" ? "bg-muted" : ""}`}><Bookmark className="h-5 w-5" /></button>
             <button type="button" onClick={() => setView(view === "history" ? "chat" : "history")} aria-label="History" title="History" aria-pressed={view === "history"} className={`flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted ${view === "history" ? "bg-muted" : ""}`}><History className="h-5 w-5" /></button>
             <button type="button" onClick={() => setOpen(false)} aria-label="Close Ompath AI" className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><X className="h-5 w-5" /></button>
@@ -345,6 +355,7 @@ export default function OmpathAIHost() {
             </div>
           ) : (
             <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-4">
+              {turns.length === 0 && !user && !authLoading && <div className="mb-3"><LoginCard onNavigate={() => setOpen(false)} /></div>}
               {turns.length === 0 && (
                 <section className="rounded-2xl border border-border bg-card p-4">
                   <p className="flex items-center gap-2 font-serif text-lg font-bold"><OmpathMark className="h-7 w-7" plain /> What do you need?</p>
@@ -383,6 +394,7 @@ export default function OmpathAIHost() {
                         )}
                       </div>
                       {t.drill && <QuestionDrill key={t.id} subject={t.drill.subject} topic={t.drill.topic} canReveal={unlimited} onNeedSubscribe={() => openSubscribePrompt("Subscribe to reveal answers.")} onOpen={(href) => goFull({ href } as SiteHit)} onExplain={(q, how) => void ask(how === "mnemonic" ? `Give me a short, memorable mnemonic for: ${q.question}` : `Explain: ${q.question}`, { context: q.answer })} />}
+                      {t.login && <LoginCard question={t.q} onNavigate={() => setOpen(false)} />}
                       {t.upgrade && <UpgradeCard kind={t.upgrade} />}
                       {t.links && t.links.length > 0 && <div className="flex flex-wrap gap-2">{t.links.map((l) => <button key={l.href} type="button" onClick={() => goFull({ href: l.href } as SiteHit)} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-2 text-sm font-bold text-primary-foreground"><ExternalLink className="h-4 w-4" /> {l.label}</button>)}</div>}
                       {t.hits.length > 0 && (

@@ -261,6 +261,17 @@
       "destination": "/api/og-meta?path=/stories"
     },
     {
+      "source": "/ai",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*([Bb]ot|[Cc]rawl|[Ss]pider|[Aa]hrefs|[Ss]emrush|facebookexternalhit|[Ww]hats[Aa]pp|[Tt]witter[Bb]ot|[Ss]lack[Bb]ot|[Tt]elegram[Bb]ot|[Dd]iscord[Bb]ot|[Ll]inked[Ii]n[Bb]ot|GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|Claude-Web|anthropic-ai|PerplexityBot|Google-Extended|Applebot|Bytespider|Amazonbot|YouBot|cohere-ai|MistralAI|Google-InspectionTool|GoogleOther|Storebot-Google|AdsBot-Google|Mediapartners-Google|Google-Safety).*"
+        }
+      ],
+      "destination": "/api/og-meta?path=/ai"
+    },
+    {
       "source": "/",
       "has": [
         {
