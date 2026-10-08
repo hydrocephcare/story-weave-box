@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import LoadMoreButton from "@/components/LoadMoreButton";
 import { Link, useSearchParams } from "react-router-dom";
 import { Loader2, FileText, ChevronRight, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
@@ -112,13 +113,10 @@ export default function Essays() {
               ))}
             </div>
             {filtered.length > visibleCount && (
-              <button
-                onClick={() => setVisibleCount(prev => prev + LOAD_MORE_STEP)}
-                className="mx-auto mt-6 flex items-center gap-2 rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
-              >
+              <LoadMoreButton onMore={() => setVisibleCount(prev => prev + LOAD_MORE_STEP)} className="mx-auto mt-6 flex items-center gap-2 rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted">
                 Load more ({filtered.length - visibleCount} remaining)
                 <ChevronDown className="h-4 w-4" />
-              </button>
+              </LoadMoreButton>
             )}
           </>
         )}

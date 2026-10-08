@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import LoadMoreButton from "@/components/LoadMoreButton";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
@@ -487,12 +488,9 @@ export default function Index() {
           )}
           {filteredRecent.length > recentShown && (
             <div className="mt-5 flex justify-center">
-              <button
-                onClick={() => setRecentShown((n) => n + 10)}
-                className="rounded-lg border border-border bg-card px-6 py-2.5 text-sm font-bold text-foreground transition-colors hover:border-primary/40 hover:text-primary"
-              >
+              <LoadMoreButton onMore={() => setRecentShown((n) => n + 10)} className="rounded-lg border border-border bg-card px-6 py-2.5 text-sm font-bold text-foreground transition-colors hover:border-primary/40 hover:text-primary">
                 Show more
-              </button>
+              </LoadMoreButton>
             </div>
           )}
         </motion.div>

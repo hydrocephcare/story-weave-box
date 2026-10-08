@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import LoadMoreButton from "@/components/LoadMoreButton";
 import { Link, useSearchParams } from "react-router-dom";
 import { AlertTriangle, BadgeCheck, ChevronRight, Download, File, FileText, Film, FolderOpen, Image as ImageIcon, Loader2, Presentation, Search, Archive, Eye, EyeOff, Pencil, Star } from "lucide-react";
 import registry from "@/data/libraries.json";
@@ -361,11 +362,7 @@ function FileList({ rows: allRows, broken, trail }: { rows: Row[]; broken: Set<s
             ))}
           </ul>
           {images.length > imageLimit && (
-            <button
-              type="button"
-              onClick={() => setImageLimit((n) => n + IMAGE_PAGE)}
-              className="mt-4 rounded-full border border-primary/40 px-5 py-2 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground"
-            >Show more images ({images.length - imageLimit} left)</button>
+            <LoadMoreButton onMore={() => setImageLimit((n) => n + IMAGE_PAGE)} className="mt-4 rounded-full border border-primary/40 px-5 py-2 text-xs font-bold text-primary hover:bg-primary hover:text-primary-foreground">Show more images ({images.length - imageLimit} left)</LoadMoreButton>
           )}
         </section>
       )}

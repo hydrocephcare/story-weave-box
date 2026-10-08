@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from "react";
+import LoadMoreButton from "@/components/LoadMoreButton";
 import { Link, useSearchParams } from "react-router-dom";
 import { GraduationCap, Calendar, Layers, ChevronDown, RotateCcw } from "lucide-react";
 import { getPublishedFlashcardSets, getCategoryDisplayName, getYearFromCategory, buildFlashcardPath, type FlashcardSet } from "@/lib/store";
@@ -150,13 +151,10 @@ export default function Flashcards() {
             ))}
           </div>
           {filtered.length > visibleCount && (
-            <button
-              onClick={() => setVisibleCount(prev => prev + LOAD_MORE_STEP)}
-              className="mx-auto mt-6 flex items-center gap-2 rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted"
-            >
+            <LoadMoreButton onMore={() => setVisibleCount(prev => prev + LOAD_MORE_STEP)} className="mx-auto mt-6 flex items-center gap-2 rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted">
               Load more ({filtered.length - visibleCount} remaining)
               <ChevronDown className="h-4 w-4" />
-            </button>
+            </LoadMoreButton>
           )}
         </>
       )}

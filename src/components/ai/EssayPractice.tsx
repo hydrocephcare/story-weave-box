@@ -13,8 +13,11 @@ export default function EssayPractice({ topic, year, canReveal }: { topic: strin
   const [open, setOpen] = useState<Set<string>>(new Set());
   const [needPay, setNeedPay] = useState<string | null>(null);
   const at = useRef(0);
+  const [base, setBase] = useState(0); // position of the first question shown, so the numbers keep counting
+  const [busy, setBusy] = useState(false);
+  const listRef = useRef<HTMLOListElement>(null);
 
-  const next = (list: EssayQuestion[]) => { const from = at.current >= list.length ? 0 : at.current; setShown(list.slice(from, from + 5)); at.current = from + 5; setOpen(new Set()); setNeedPay(null); };
+  const next = (list: EssayQuestion[]) => { const from = at.current >= list.length ? 0 : at.current; setShown(list.slice(from, from + 5)); setBase(from); at.current = from + 5; setOpen(new Set()); setNeedPay(null); };
   useEffect(() => { let on = true; void findEssays(topic, year).then((l) => { if (!on) return; setAll(l); at.current = 0; next(l); }, (e) => { void reportAiFailure("essay", topic, e, "Empty essay message"); if (on) setAll([]); }); return () => { on = false; }; /* eslint-disable-next-line react-hooks/exhaustive-deps */ }, [topic, year]);
 
   if (all === null) return <p className="flex items-center gap-2 rounded-2xl border border-border bg-card p-4 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" /> Finding essay questions…</p>;
@@ -23,12 +26,12 @@ export default function EssayPractice({ topic, year, canReveal }: { topic: strin
   const toggle = (q: EssayQuestion) => {
     if (!open.has(q.id) && !canReveal && !spendFreeReveal("essay", q.id)) { setNeedPay(q.id); return; }
     setNeedPay(null);
-    setOpen((s) => { const n = new Set(s); n.has(q.id) ? n.delete(q.id) : n.add(q.id); return n; });
+    setOpen((s) => { const n = new Set(s); if (n.has(q.id)) n.delete(q.id); else n.add(q.id); return n; });
   };
 
   return (
     <section className="space-y-3" aria-label="Essay practice">
-      <ol className="space-y-3">
+      <ol ref={listRef} className="space-y-3" style={{ scrollMarginTop: 8 }}>
         {shown.map((q, i) => (
           <li key={q.id} className="rounded-2xl border border-border bg-card p-3">
             <div className="mb-1.5 flex flex-wrap items-center gap-1.5 text-[11px] font-bold">
@@ -36,7 +39,7 @@ export default function EssayPractice({ topic, year, canReveal }: { topic: strin
               {q.marks && <span className="rounded-full bg-foreground/5 px-2 py-0.5 text-foreground/70">{q.marks} marks</span>}
               <span className="truncate font-medium text-muted-foreground">{q.category.replace(/^Weekly Exam:\s*/i, "")}</span>
             </div>
-            <p className="text-sm font-semibold leading-snug"><span className="mr-1.5 text-primary">{i + 1}.</span>{q.question}</p>
+            <p className="text-sm font-semibold leading-snug"><span className="mr-1.5 text-primary">{base + i + 1}.</span>{q.question}</p>
             <button type="button" onClick={() => toggle(q)} aria-expanded={open.has(q.id)} className="mt-2.5 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/5 px-3 py-1 text-xs font-bold text-emerald-700 hover:bg-emerald-500/10 dark:text-emerald-400">
               {open.has(q.id) ? <EyeOff className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}{open.has(q.id) ? "Hide model answer" : "Reveal model answer"}
             </button>
@@ -45,7 +48,7 @@ export default function EssayPractice({ topic, year, canReveal }: { topic: strin
           </li>
         ))}
       </ol>
-      {all.length > 5 && <button type="button" onClick={() => next(all)} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-2 text-sm font-bold text-primary-foreground"><Shuffle className="h-4 w-4" /> 5 more</button>}
+      {all.length > 5 && <button type="button" disabled={busy} aria-busy={busy} onClick={() => { if (busy) return; setBusy(true); window.setTimeout(() => { next(all); setBusy(false); window.setTimeout(() => listRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 80); }, 450); }} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-2 text-sm font-bold text-primary-foreground disabled:cursor-wait disabled:opacity-80">{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Shuffle className="h-4 w-4" />} {busy ? "Loading…" : "5 more"}</button>}
     </section>
   );
 }

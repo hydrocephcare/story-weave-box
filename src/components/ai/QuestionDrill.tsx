@@ -32,6 +32,10 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
   const [needPay, setNeedPay] = useState<string | null>(null);
   const [zoom, setZoom] = useState<{ src: string; alt: string } | null>(null);
   const [, bump] = useState(0);
+  const [moreBusy, setMoreBusy] = useState(false);
+  /** how many questions came before this set, so the numbers keep counting (6, 7, 8…) instead of starting again */
+  const [offset, setOffset] = useState(0);
+  const listRef = useRef<HTMLOListElement>(null);
   const seen = useRef<Set<string>>(new Set());
   const first = useRef(true);
 
@@ -50,7 +54,7 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
 
   useEffect(() => {
     let on = true;
-    setBanks(null); setPicked([]); seen.current = new Set();
+    setBanks(null); setPicked([]); seen.current = new Set(); setOffset(0);
     void loadBanks(subject).then((b) => {
       if (!on) return;
       setBanks(b);
@@ -73,7 +77,7 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
     // the first batch of answers in each subject is free every day; after that a subscription is needed
     if (!shown.has(q.id) && !canReveal && !spendFreeReveal(subject, q.id)) { setNeedPay(q.id); return; }
     setNeedPay(null);
-    setShown((s) => { const n = new Set(s); n.has(q.id) ? n.delete(q.id) : n.add(q.id); return n; });
+    setShown((s) => { const n = new Set(s); if (n.has(q.id)) n.delete(q.id); else n.add(q.id); return n; });
   };
   const mark = (q: BankQuestion, how: "got" | "missed") => {
     setMarked((m) => ({ ...m, [q.id]: how }));
@@ -89,7 +93,7 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
         <select value={subject} onChange={(e) => { setSubject(e.target.value as Subject); setBlocked(false); }} aria-label="Subject" className={SELECT}>
           {(Object.keys(SUBJECT_LABEL) as Subject[]).map((s) => <option key={s} value={s}>{SUBJECT_LABEL[s]}</option>)}
         </select>
-        <select value={section} onChange={(e) => { setSection(e.target.value); if (banks) { seen.current = new Set(); draw(banks, e.target.value, true, myMissed); } }} aria-label="Section" disabled={!banks} className={SELECT}>
+        <select value={section} onChange={(e) => { setSection(e.target.value); setOffset(0); if (banks) { seen.current = new Set(); draw(banks, e.target.value, true, myMissed); } }} aria-label="Section" disabled={!banks} className={SELECT}>
           <option value="">All sections ({total})</option>
           {myMissed.length > 0 && <option value={MISSED}>My missed questions ({myMissed.length})</option>}
           {sections.map((s) => <option key={s.name} value={s.name}>{s.name} ({s.count})</option>)}
@@ -103,10 +107,10 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
       ) : picked.length === 0 ? (
         <p className="px-1 py-6 text-sm text-muted-foreground">{section === MISSED ? "Nothing missed here. Well done." : `No ${SUBJECT_LABEL[subject].toLowerCase()} questions are on the site yet.`}</p>
       ) : (
-        <ol className="mt-3 space-y-3">
+        <ol ref={listRef} className="mt-3 space-y-3" style={{ scrollMarginTop: 8 }}>
           {picked.map((q, i) => (
             <li key={q.id} className="rounded-xl border border-border bg-background p-3">
-              <p className="text-sm font-semibold leading-snug"><span className="mr-1.5 text-primary">{i + 1}.</span>{q.question}</p>
+              <p className="text-sm font-semibold leading-snug"><span className="mr-1.5 text-primary">{offset + i + 1}.</span>{q.question}</p>
               {q.image && (
                 <button type="button" onClick={() => setZoom({ src: q.image!, alt: q.imageAlt ?? q.question })} className="mt-2 block w-full overflow-hidden rounded-lg border border-border bg-muted" aria-label="Enlarge the picture">
                   <img src={q.image} alt={q.imageAlt ?? ""} loading="lazy" decoding="async" className="mx-auto max-h-40 w-auto max-w-full object-contain sm:max-h-56 lg:max-h-64" />
@@ -133,7 +137,17 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
 
       {banks && !blocked && picked.length > 0 && (
         <div className="mt-3 flex flex-wrap items-center gap-2">
-          <button type="button" onClick={() => draw(banks, section, true, myMissed)} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-2 text-sm font-bold text-primary-foreground"><Shuffle className="h-4 w-4" /> 5 more</button>
+          <button type="button" disabled={moreBusy} aria-busy={moreBusy} onClick={() => {
+            if (moreBusy) return;
+            setMoreBusy(true);
+            // a short wait so it is clear something is loading, then the new set appears and the view goes to its first question
+            window.setTimeout(() => {
+              setOffset((o) => o + picked.length);
+              draw(banks, section, true, myMissed);
+              setMoreBusy(false);
+              window.setTimeout(() => listRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
+            }, 450);
+          }} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-2 text-sm font-bold text-primary-foreground disabled:cursor-wait disabled:opacity-80">{moreBusy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Shuffle className="h-4 w-4" />} {moreBusy ? "Loading…" : "5 more"}</button>
           {main && section !== MISSED && <button type="button" onClick={() => onOpen(main.href)} className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3.5 py-2 text-sm font-bold hover:border-primary hover:text-primary"><ExternalLink className="h-4 w-4" /> Open the full bank</button>}
           <span className="text-xs text-muted-foreground">{inSection} questions here{!canReveal ? ` · ${freeRevealsLeft(subject)} free answers left in ${SUBJECT_LABEL[subject].toLowerCase()} today · ${left} picture questions` : ""}</span>
         </div>

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import LoadMoreButton from "@/components/LoadMoreButton";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Clock, Loader2, Phone, Shield, Sparkles, Trophy, Heart } from "lucide-react";
@@ -239,7 +240,7 @@ export default function Exams() {
         )}
         {!loading && allExams.length > visible && (
           <div className="flex justify-center pt-2">
-            <Button variant="outline" onClick={() => setVisible((v) => v + 12)}>Show more exams ({allExams.length - visible} left)</Button>
+            <LoadMoreButton onMore={() => setVisible((v) => v + 12)} className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-input bg-background px-4 text-sm font-medium hover:bg-accent">Show more exams ({allExams.length - visible} left)</LoadMoreButton>
           </div>
         )}
 

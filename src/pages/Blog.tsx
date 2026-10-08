@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from "react";
+import LoadMoreButton from "@/components/LoadMoreButton";
 import StickyRail from "@/components/StickyRail";
 import { EmptyStateHub } from "@/components/YearHubPanel";
 import { useSearchParams, Link, useNavigate, useLocation } from "react-router-dom";
@@ -1073,13 +1074,10 @@ export default function Blog() {
           </div>
         )}
         {filtered.length > visibleCount && (
-            <button
-              onClick={() => setVisibleCount(prev => prev + LOAD_MORE_STEP)}
-              className="mx-auto mt-4 flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-2.5 text-sm font-semibold text-foreground transition-all duration-200 hover:bg-muted hover:shadow-sm"
-            >
+            <LoadMoreButton onMore={() => setVisibleCount(prev => prev + LOAD_MORE_STEP)} className="mx-auto mt-4 flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-2.5 text-sm font-semibold text-foreground transition-all duration-200 hover:bg-muted hover:shadow-sm">
               Load more ({filtered.length - visibleCount} remaining)
               <ChevronDown className="h-4 w-4" />
-            </button>
+            </LoadMoreButton>
           )}
         </motion.div>
       )}

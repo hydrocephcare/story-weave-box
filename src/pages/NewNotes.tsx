@@ -89,7 +89,7 @@ export default function NewNotes() {
               const closed = shut.has(name) && !term;
               return (
                 <section key={name} className="overflow-hidden rounded-2xl border border-border bg-card">
-                  <button type="button" onClick={() => setShut((s) => { const n = new Set(s); n.has(name) ? n.delete(name) : n.add(name); return n; })} aria-expanded={!closed} className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left hover:bg-muted/50">
+                  <button type="button" onClick={() => setShut((s) => { const n = new Set(s); if (n.has(name)) n.delete(name); else n.add(name); return n; })} aria-expanded={!closed} className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left hover:bg-muted/50">
                     <span className="flex min-w-0 items-center gap-2"><FolderOpen className="h-5 w-5 shrink-0 text-primary" /><span className="truncate font-serif text-lg font-bold">{name}</span></span>
                     <span className="flex shrink-0 items-center gap-2 text-xs font-semibold text-muted-foreground">{list.length}<ChevronDown className={`h-4 w-4 transition-transform ${closed ? "" : "rotate-180"}`} /></span>
                   </button>
