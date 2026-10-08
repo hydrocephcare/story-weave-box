@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "./ThemeToggle";
 import NotificationsBell from "./NotificationsBell";
-import HeaderSearch from "./HeaderSearch";
+import HeaderAI from "./HeaderAI";
 import ompathLogo from "@/assets/ompath-logo.webp";
 import { useAuth } from "@/hooks/useAuth";
 
@@ -198,7 +198,7 @@ fetchpriority="high" />
               ))}
             </div>
 
-            <HeaderSearch variant="desktop" />
+            <HeaderAI variant="desktop" />
 
             {links.filter((l) => !l.more && l.to !== "/").map((l) => (
               <Link
@@ -217,7 +217,7 @@ fetchpriority="high" />
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <HeaderSearch variant="desktop" />
+            <HeaderAI variant="desktop" />
             <NotificationsBell />
             <ThemeToggle />
             <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
@@ -236,7 +236,7 @@ fetchpriority="high" />
 
                 <div className="flex flex-col overflow-y-auto h-[calc(100%-65px)]">
                   <div className="border-b border-white/10 px-3 py-3">
-                    <HeaderSearch variant="mobile" onNavigate={() => setSidebarOpen(false)} />
+                    <HeaderAI variant="mobile" onNavigate={() => setSidebarOpen(false)} />
                   </div>
 
                   <div className="border-b border-white/10 px-3 py-3">

@@ -1,0 +1,328 @@
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { ArrowUp, BookOpen, Brain, Check, Copy, ExternalLink, History, Loader2, MessageSquarePlus, Search, Sparkles, Square, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
+import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
+import { HitIcon } from "@/components/SearchPalette";
+import DriveFileViewer, { type DriveFile, type DriveKind } from "@/components/DriveFileViewer";
+import { SubscribeModal } from "@/components/SubscribeModal";
+import NotePreview from "@/components/ai/NotePreview";
+import { useAuth } from "@/hooks/useAuth";
+import { useSiteSearch } from "@/hooks/useSiteSearch";
+import { useAccess } from "@/lib/access";
+import { openSubscribePrompt } from "@/lib/subscribe-prompt";
+import { aiStore, useAiStore, type AiTurn } from "@/lib/ompathAiStore";
+import { FREE_DAILY_QUESTIONS, countQuestion, extractiveAnswer, followUps, parseQuery, questionsUsedToday, retrieve, streamAnswer, type Retrieval } from "@/lib/ompathAi";
+import { scoringTerms } from "@/lib/ompathAiQuery";
+import { logSearch } from "@/lib/search";
+import type { SiteHit } from "@/lib/siteSearch";
+
+import { AI_RESUME_KEY as RESUME_KEY, OPEN_AI_EVENT } from "@/lib/aiEvents";
+
+const STARTERS = [
+  "I need notes on psychiatry",
+  "Paediatrics notes on dehydration",
+  "Explain Light's criteria",
+  "Year 1 anatomy past papers",
+  "First-line drugs for hypertension",
+  "Quiz me on heart failure",
+];
+
+/** Small, safe markdown: headings, bullets, numbered lists, bold. Nothing the model writes is ever run as HTML. */
+function Answer({ text }: { text: string }) {
+  const inline = (s: string) => s.split(/(\*\*[^*]+\*\*)/g).map((p, i) => (p.startsWith("**") && p.endsWith("**") ? <strong key={i}>{p.slice(2, -2)}</strong> : <span key={i}>{p}</span>));
+  return (
+    <div className="space-y-1.5 text-[15px] leading-7 text-foreground">
+      {text.split("\n").map((raw, i) => {
+        const l = raw.trimEnd();
+        if (!l.trim()) return null;
+        const h = l.match(/^#{1,4}\s+(.*)/);
+        if (h) return <h3 key={i} className="pt-2 font-serif text-base font-semibold">{inline(h[1])}</h3>;
+        const b = l.match(/^\s*[-*•]\s+(.*)/);
+        if (b) return <div key={i} className="flex gap-2 pl-1"><span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" /><p>{inline(b[1])}</p></div>;
+        const n = l.match(/^\s*(\d+)[.)]\s+(.*)/);
+        if (n) return <div key={i} className="flex gap-2 pl-1"><span className="font-semibold text-primary">{n[1]}.</span><p>{inline(n[2])}</p></div>;
+        return <p key={i}>{inline(l)}</p>;
+      })}
+    </div>
+  );
+}
+
+const ago = (t: number) => {
+  const m = Math.floor((Date.now() - t) / 60000);
+  if (m < 1) return "just now";
+  if (m < 60) return `${m}m ago`;
+  const h = Math.floor(m / 60);
+  if (h < 24) return `${h}h ago`;
+  const d = Math.floor(h / 24);
+  return d === 1 ? "yesterday" : d < 30 ? `${d} days ago` : new Date(t).toLocaleDateString();
+};
+
+function SourceRow({ h, onOpen }: { h: SiteHit; onOpen: (h: SiteHit) => void }) {
+  return (
+    <button type="button" onClick={() => onOpen(h)} className="flex w-full items-start gap-3 rounded-lg border border-border bg-card px-3 py-2.5 text-left transition-colors hover:border-primary/50 hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+      <HitIcon hit={h} className="mt-0.5 h-4 w-4 shrink-0" />
+      <span className="min-w-0 flex-1">
+        <span className="block text-sm font-semibold leading-snug text-foreground">{h.title}</span>
+        <span className="block truncate text-xs text-muted-foreground">{h.subtitle}</span>
+        {h.snippet && <span className="mt-1 line-clamp-2 block text-xs text-muted-foreground">{h.snippet}</span>}
+      </span>
+    </button>
+  );
+}
+
+export default function OmpathAIHost() {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const { isAdmin } = useAuth();
+  const access = useAccess();
+  const { sessions, activeId } = useAiStore();
+  const [open, setOpen] = useState(false);
+  const [view, setView] = useState<"chat" | "history">("chat");
+  const [q, setQ] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [preview, setPreview] = useState<SiteHit | null>(null);
+  const [files, setFiles] = useState<{ items: DriveFile[]; index: number | null }>({ items: [], index: null });
+  const [copied, setCopied] = useState<string | null>(null);
+  const [historyQ, setHistoryQ] = useState("");
+  const [resume, setResume] = useState(() => { try { return sessionStorage.getItem(RESUME_KEY) === "1"; } catch { return false; } });
+  const abort = useRef<AbortController | null>(null);
+  const endRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  const session = useMemo(() => sessions.find((s) => s.id === activeId) ?? null, [sessions, activeId]);
+  const turns = session?.turns ?? [];
+  const unlimited = isAdmin || access.canReveal;
+  const used = questionsUsedToday();
+  const limitHit = !unlimited && used >= FREE_DAILY_QUESTIONS;
+
+  // Live suggestions while typing, so a student can jump straight to a note without waiting for an answer.
+  const live = useSiteSearch(q.trim().length >= 3 ? parseQuery(q).topic : "", {}, open && !busy);
+  const liveHits = useMemo(() => live.hits.filter((h) => h.group !== "Pages").slice(0, 4), [live.hits]);
+
+  const askRef = useRef<(q: string) => Promise<void>>(async () => undefined);
+  const mount = useCallback((question?: string) => {
+    setOpen(true); setView("chat");
+    if (!aiStore.get().activeId || !aiStore.get().sessions.length) aiStore.newSession();
+    if (question && question.trim().length >= 2) window.setTimeout(() => void askRef.current(question), 60);
+    else window.setTimeout(() => inputRef.current?.focus(), 150);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    const onOpen = (e: Event) => mount(String((e as CustomEvent).detail ?? ""));
+    const onKey = (e: KeyboardEvent) => { if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "j") { e.preventDefault(); setOpen((o) => { if (!o) mount(); return !o; }); } };
+    const w = window as unknown as { __ompathAiPending?: string };
+    if (w.__ompathAiPending !== undefined) { const pending = w.__ompathAiPending; delete w.__ompathAiPending; mount(pending); }
+    window.addEventListener(OPEN_AI_EVENT, onOpen);
+    window.addEventListener("keydown", onKey);
+    return () => { window.removeEventListener(OPEN_AI_EVENT, onOpen); window.removeEventListener("keydown", onKey); };
+  }, [mount]);
+
+  useEffect(() => { if (open) endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [turns.length, open, view]);
+  useEffect(() => { if (open) { try { sessionStorage.removeItem(RESUME_KEY); } catch { /* ignore */ } setResume(false); } }, [open]);
+
+  async function ask(question: string) {
+    const text = question.trim();
+    if (text.length < 2 || busy) return;
+    if (limitHit) return;
+    let sid = aiStore.get().activeId;
+    if (!sid || !aiStore.get().sessions.some((s) => s.id === sid)) sid = aiStore.newSession();
+    const sessionId = sid;
+    setQ(""); setBusy(true); setView("chat");
+    const id = `t${Date.now()}`;
+    const prior = (aiStore.get().sessions.find((s) => s.id === sessionId)?.turns ?? []).slice(-3).flatMap((t) => [{ role: "user" as const, content: t.q }, { role: "assistant" as const, content: t.answer }]).filter((m) => m.content);
+    aiStore.addTurn(sessionId, { id, q: text, answer: "", hits: [], grounded: true, at: Date.now() });
+    abort.current = new AbortController();
+    let retrieval: Retrieval | null = null;
+    try {
+      retrieval = await retrieve(text);
+      aiStore.patchTurn(sessionId, id, { hits: retrieval.hits, grounded: retrieval.grounded, followUps: followUps(retrieval.parsed) });
+      void logSearch(retrieval.parsed.topic || text, retrieval.hits.length);
+      // Pure look-ups ("psychiatry notes") are answered by the list itself; the model only writes when there is something to explain.
+      const lookupOnly = retrieval.parsed.isLookup && !retrieval.parsed.isQuestion && retrieval.hits.length > 0 && (retrieval.parsed.wants === "papers" || retrieval.parsed.wants === "files" || retrieval.parsed.wants === "timetable");
+      if (lookupOnly) {
+        const n = retrieval.hits.length;
+        aiStore.patchTurn(sessionId, id, { answer: `I found ${n} match${n === 1 ? "" : "es"} for **${retrieval.parsed.topic || text}**${retrieval.parsed.year ? ` in Year ${retrieval.parsed.year}` : ""}. Tap one to read it here.` });
+        aiStore.flush();
+        return;
+      }
+      countQuestion();
+      const answer = await streamAnswer({ question: text, history: prior, retrieval }, { onText: (full) => aiStore.patchTurn(sessionId, id, { answer: full }), signal: abort.current.signal });
+      aiStore.patchTurn(sessionId, id, { answer });
+      aiStore.flush();
+    } catch (e) {
+      if ((e as Error).name === "AbortError") { aiStore.flush(); return; }
+      const fallback = retrieval ? extractiveAnswer(retrieval) : "";
+      aiStore.patchTurn(sessionId, id, { answer: fallback, error: fallback ? undefined : (e as Error).message || "Ompath AI could not answer right now." });
+      aiStore.flush();
+    } finally { setBusy(false); abort.current = null; }
+  }
+
+  askRef.current = ask;
+
+  const openHit = (hit: SiteHit, all: SiteHit[]) => {
+    if (hit.group === "Library files") {
+      const list = all.filter((h) => h.group === "Library files").map((h) => [h.key.replace(/^file-/, ""), h.title, ((h.kind as DriveKind) || "file")] as DriveFile);
+      setFiles({ items: list, index: Math.max(0, list.findIndex((f) => f[0] === hit.key.replace(/^file-/, ""))) });
+    } else if (hit.key.startsWith("article-") || hit.key.startsWith("static-")) setPreview(hit);
+    else goFull(hit);
+  };
+
+  const goFull = (hit: SiteHit) => {
+    try { sessionStorage.setItem(RESUME_KEY, "1"); } catch { /* ignore */ }
+    setResume(true); setPreview(null); setOpen(false);
+    navigate(hit.href);
+  };
+
+  const copy = async (t: AiTurn) => {
+    try { await navigator.clipboard.writeText(t.answer); setCopied(t.id); window.setTimeout(() => setCopied(null), 1500); } catch { /* clipboard blocked */ }
+  };
+
+  const filteredSessions = useMemo(() => {
+    const f = historyQ.trim().toLowerCase();
+    return sessions.filter((s) => s.turns.length && (!f || s.title.toLowerCase().includes(f) || s.turns.some((t) => t.q.toLowerCase().includes(f))));
+  }, [sessions, historyQ]);
+
+  const previewTerms = useMemo(() => (preview && turns.length ? scoringTerms(parseQuery(turns[turns.length - 1].q)) : []), [preview, turns]);
+  const modalMounted = /^\/(blog|notes)\//.test(pathname); // those pages already carry the subscribe prompt
+
+  const Group = ({ title, rows, all }: { title: string; rows: SiteHit[]; all: SiteHit[] }) => rows.length ? (
+    <div>
+      <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-muted-foreground">{title} ({rows.length})</p>
+      <div className="grid gap-1.5">{rows.slice(0, 6).map((h) => <SourceRow key={h.key} h={h} onOpen={(x) => openHit(x, all)} />)}</div>
+    </div>
+  ) : null;
+
+  return (
+    <>
+      <Sheet open={open} onOpenChange={setOpen}>
+        <SheetContent side="right" className="flex w-full flex-col gap-0 p-0 sm:max-w-xl [&>button]:hidden">
+          <SheetTitle className="sr-only">Ompath AI</SheetTitle>
+          <SheetDescription className="sr-only">Ask a question and get answers and notes from Ompath Study.</SheetDescription>
+
+          <header className="flex items-center gap-2 border-b border-border px-3 py-2.5">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground"><Brain className="h-5 w-5" /></span>
+            <div className="min-w-0 flex-1">
+              <p className="font-serif text-base font-bold leading-tight">Ompath AI</p>
+              <p className="truncate text-[11px] text-muted-foreground">{view === "history" ? "Your past chats" : "Answers from your notes, files and papers"}</p>
+            </div>
+            <button type="button" onClick={() => { aiStore.newSession(); setView("chat"); setQ(""); window.setTimeout(() => inputRef.current?.focus(), 50); }} aria-label="New chat" title="New chat" className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><MessageSquarePlus className="h-5 w-5" /></button>
+            <button type="button" onClick={() => setView(view === "history" ? "chat" : "history")} aria-label="History" title="History" aria-pressed={view === "history"} className={`flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted ${view === "history" ? "bg-muted" : ""}`}><History className="h-5 w-5" /></button>
+            <button type="button" onClick={() => setOpen(false)} aria-label="Close Ompath AI" className="flex h-9 w-9 items-center justify-center rounded-lg hover:bg-muted"><X className="h-5 w-5" /></button>
+          </header>
+
+          {view === "history" ? (
+            <div className="min-h-0 flex-1 overflow-y-auto px-3 py-3">
+              <div className="mb-3 flex items-center gap-2 rounded-lg border border-border px-3">
+                <Search className="h-4 w-4 text-muted-foreground" />
+                <input value={historyQ} onChange={(e) => setHistoryQ(e.target.value)} placeholder="Search your chats" aria-label="Search your chats" className="h-10 min-w-0 flex-1 bg-transparent text-sm outline-none" />
+              </div>
+              {filteredSessions.length === 0 ? <p className="py-8 text-center text-sm text-muted-foreground">{sessions.some((s) => s.turns.length) ? "No chat matches that." : "No chats yet. Ask your first question."}</p> : (
+                <ul className="space-y-1.5">
+                  {filteredSessions.map((s) => (
+                    <li key={s.id} className="flex items-center gap-1 rounded-lg border border-border bg-card">
+                      <button type="button" onClick={() => { aiStore.open(s.id); setView("chat"); }} className="min-w-0 flex-1 px-3 py-2.5 text-left">
+                        <span className="block truncate text-sm font-semibold">{s.title}</span>
+                        <span className="block text-[11px] text-muted-foreground">{s.turns.length} question{s.turns.length === 1 ? "" : "s"} · {ago(s.updated)}</span>
+                      </button>
+                      <button type="button" onClick={() => aiStore.remove(s.id)} aria-label={`Delete ${s.title}`} className="mr-1 flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground hover:bg-muted hover:text-destructive"><Trash2 className="h-4 w-4" /></button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {sessions.some((s) => s.turns.length) && <button type="button" onClick={() => { if (window.confirm("Delete all your Ompath AI chats on this device?")) aiStore.clearAll(); }} className="mt-4 text-xs font-semibold text-destructive hover:underline">Clear all chats</button>}
+            </div>
+          ) : (
+            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-4">
+              {turns.length === 0 && (
+                <section className="rounded-2xl border border-border bg-card p-4">
+                  <p className="flex items-center gap-2 font-serif text-lg font-bold"><Sparkles className="h-5 w-5 text-primary" /> What do you need?</p>
+                  <p className="mt-1 text-sm text-muted-foreground">Ask for notes, a past paper, a library file, or just ask a question. I search every note, paper and file on Ompath Study first.</p>
+                  <div className="mt-3 flex flex-wrap gap-2">{STARTERS.map((s) => <button key={s} type="button" onClick={() => void ask(s)} className="rounded-full border border-border px-3 py-1.5 text-left text-sm hover:border-primary hover:text-primary">{s}</button>)}</div>
+                </section>
+              )}
+              <div className="space-y-7">
+                {turns.map((t, ti) => {
+                  const notes = t.hits.filter((h) => h.group === "Notes" && h.kind !== "paper" && h.kind !== "mcq");
+                  const papers = t.hits.filter((h) => h.kind === "paper");
+                  const mcqs = t.hits.filter((h) => h.group === "MCQs & flashcards");
+                  const filesH = t.hits.filter((h) => h.group === "Library files");
+                  const more = t.hits.filter((h) => h.group === "Pages" || h.group === "Outline topics" || h.group === "Units").slice(0, 6);
+                  const last = ti === turns.length - 1;
+                  return (
+                    <article key={t.id} className="space-y-3">
+                      <div className="ml-auto w-fit max-w-[88%] rounded-2xl rounded-br-sm bg-primary px-3.5 py-2 text-sm text-primary-foreground">{t.q}</div>
+                      <div>
+                        {t.answer ? <Answer text={t.answer} /> : t.error ? <p className="rounded-lg border border-border bg-muted px-3 py-2 text-sm text-muted-foreground">{t.error}</p>
+                          : <p className="flex items-center gap-2 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" /> {t.hits.length ? "Writing your answer…" : "Searching your notes…"}</p>}
+                        {t.answer && !t.error && (
+                          <div className="mt-2 flex flex-wrap items-center gap-1.5 text-xs text-muted-foreground">
+                            <span className={`rounded-full px-2 py-0.5 font-semibold ${t.grounded ? "bg-primary/10 text-primary" : "bg-amber-500/15 text-amber-700 dark:text-amber-400"}`}>{t.grounded ? "From your Ompath notes" : "General guidance, not from the notes"}</span>
+                            <button type="button" onClick={() => void copy(t)} className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 hover:bg-muted" aria-label="Copy answer">{copied === t.id ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}</button>
+                            <button type="button" onClick={() => aiStore.patchTurn(session!.id, t.id, { vote: t.vote === "up" ? undefined : "up" })} aria-pressed={t.vote === "up"} aria-label="Good answer" className={`rounded-md p-1 hover:bg-muted ${t.vote === "up" ? "text-primary" : ""}`}><ThumbsUp className="h-3.5 w-3.5" /></button>
+                            <button type="button" onClick={() => aiStore.patchTurn(session!.id, t.id, { vote: t.vote === "down" ? undefined : "down" })} aria-pressed={t.vote === "down"} aria-label="Bad answer" className={`rounded-md p-1 hover:bg-muted ${t.vote === "down" ? "text-destructive" : ""}`}><ThumbsDown className="h-3.5 w-3.5" /></button>
+                          </div>
+                        )}
+                      </div>
+                      {t.hits.length > 0 && (
+                        <div className="space-y-3">
+                          <Group title="Notes" rows={notes} all={t.hits} />
+                          <Group title="Past papers" rows={papers} all={t.hits} />
+                          <Group title="MCQs & flashcards" rows={mcqs} all={t.hits} />
+                          <Group title="Library files" rows={filesH} all={t.hits} />
+                          {more.length > 0 && <div><p className="mb-1.5 text-[11px] font-bold uppercase tracking-wide text-muted-foreground">Also on the site</p><div className="flex flex-wrap gap-1.5">{more.map((h) => <button key={h.key} type="button" onClick={() => goFull(h)} className="rounded-full border border-border px-3 py-1 text-xs hover:border-primary hover:text-primary">{h.title.slice(0, 48)}</button>)}</div></div>}
+                          <button type="button" onClick={() => { const topic = parseQuery(t.q).topic || t.q; setOpen(false); try { sessionStorage.setItem(RESUME_KEY, "1"); } catch { /* ignore */ } setResume(true); navigate(`/search?q=${encodeURIComponent(topic)}`); }} className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline"><BookOpen className="h-3.5 w-3.5" /> See every result <ExternalLink className="h-3 w-3" /></button>
+                        </div>
+                      )}
+                      {last && !busy && t.answer && (t.followUps?.length ?? 0) > 0 && (
+                        <div className="flex flex-wrap gap-1.5">{t.followUps!.map((f) => <button key={f} type="button" onClick={() => void ask(f)} className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary hover:bg-primary/10">{f}</button>)}</div>
+                      )}
+                    </article>
+                  );
+                })}
+                <div ref={endRef} />
+              </div>
+            </div>
+          )}
+
+          {view === "chat" && (
+            <div className="border-t border-border bg-background px-3 pb-3 pt-2">
+              {limitHit && (
+                <div className="mb-2 rounded-lg border border-amber-500/40 bg-amber-500/10 px-3 py-2 text-xs text-amber-800 dark:text-amber-300">
+                  You have used today's {FREE_DAILY_QUESTIONS} free questions. Notes search still works. <button type="button" onClick={() => openSubscribePrompt("Subscribe for unlimited Ompath AI questions.")} className="font-bold underline">Subscribe for unlimited</button>
+                </div>
+              )}
+              {liveHits.length > 0 && q.trim().length >= 3 && (
+                <div className="mb-2 overflow-hidden rounded-xl border border-border bg-card">
+                  {liveHits.map((h) => (
+                    <button key={h.key} type="button" onClick={() => openHit(h, live.hits)} className="flex w-full items-center gap-2.5 px-3 py-2 text-left hover:bg-primary/5">
+                      <HitIcon hit={h} className="h-4 w-4 shrink-0" />
+                      <span className="min-w-0 flex-1"><span className="block truncate text-sm font-semibold">{h.title}</span><span className="block truncate text-[11px] text-muted-foreground">{h.subtitle}</span></span>
+                    </button>
+                  ))}
+                </div>
+              )}
+              <form onSubmit={(e) => { e.preventDefault(); void ask(q); }} className="flex items-end gap-2 rounded-2xl border border-border bg-card p-2 focus-within:ring-2 focus-within:ring-ring">
+                <textarea ref={inputRef} value={q} onChange={(e) => setQ(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void ask(q); } }} rows={1} placeholder="e.g. I need notes on psychiatry" aria-label="Ask Ompath AI" className="max-h-36 min-h-[44px] flex-1 resize-none bg-transparent px-2 py-2.5 text-base outline-none placeholder:text-muted-foreground" />
+                {busy ? <button type="button" onClick={() => abort.current?.abort()} aria-label="Stop" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-muted"><Square className="h-4 w-4" /></button>
+                  : <button type="submit" disabled={q.trim().length < 2 || limitHit} aria-label="Ask" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground disabled:opacity-40"><ArrowUp className="h-5 w-5" /></button>}
+              </form>
+              <p className="mt-1.5 text-center text-[10px] text-muted-foreground">For study only, not for treating patients. Check important facts in your notes{!unlimited ? ` · ${Math.max(0, FREE_DAILY_QUESTIONS - used)} free questions left today` : ""}.</p>
+            </div>
+          )}
+        </SheetContent>
+      </Sheet>
+
+      <NotePreview hit={preview} terms={previewTerms} onClose={() => setPreview(null)} onOpenFull={goFull} />
+      <DriveFileViewer items={files.items} index={files.index} onIndexChange={(i) => setFiles((f) => ({ ...f, index: i }))} onDownload={() => undefined} where="Ompath AI" />
+      {!modalMounted && <SubscribeModal settings={access.settings} loading={access.loading} onUnlocked={access.applyPass} />}
+
+      {resume && !open && (
+        <div className="fixed bottom-16 left-3 z-40 flex items-center overflow-hidden rounded-full border border-border bg-foreground text-background shadow-lg print:hidden">
+          <button type="button" onClick={() => mount()} className="flex items-center gap-1.5 py-2.5 pl-3.5 pr-2 text-xs font-bold"><Brain className="h-4 w-4" /> Back to Ompath AI</button>
+          <button type="button" onClick={() => { try { sessionStorage.removeItem(RESUME_KEY); } catch { /* ignore */ } setResume(false); }} aria-label="Dismiss" className="py-2.5 pl-1 pr-3 opacity-70 hover:opacity-100"><X className="h-3.5 w-3.5" /></button>
+        </div>
+      )}
+    </>
+  );
+}

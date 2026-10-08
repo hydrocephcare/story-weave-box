@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import RailLayout from "@/components/RailLayout";
 import SearchPalette from "@/components/SearchPalette";
+import AIGate from "@/components/ai/AIGate";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -154,6 +155,7 @@ const AnimatedRoutes = () => {
             <Route path="/must-knows/:unit" element={<MustKnows />} />
             <Route path="/daily" element={<DailyDose />} />
             <Route path="/papers" element={<PastPapers />} />
+            <Route path="/ai" element={<AIPage />} />
             <Route path="/notes" element={<StaticNotesIndex />} />
             <Route path="/notes/:slug" element={<StaticNote />} />
             <Route path="/books" element={<StudentRoute what="Books"><Books /></StudentRoute>} />
@@ -210,6 +212,8 @@ const AnimatedRoutes = () => {
   );
 };
 
+const AIPage = lazy(() => import("@/pages/OmpathAIPage"));
+
 const App = () => (
   <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
     <QueryClientProvider client={queryClient}>
@@ -227,6 +231,7 @@ const App = () => (
             <LearnerProfileGate />
             <AnnouncementBar />
             <SearchPalette />
+            <AIGate />
             <Navbar />
             <AnimatedRoutes />
             <SiteFooter />
