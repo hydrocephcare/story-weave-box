@@ -4,7 +4,7 @@
 //    and a returning student gets the whole app from their phone instead of downloading it again.
 //  - Database reads: network-first, but if the network is slow (over 3 seconds) and there is a saved copy, the saved copy is shown at once.
 //    An empty answer is never saved, so a database migration cannot blank the site.
-const CACHE_NAME = "ompath-v9";
+const CACHE_NAME = "ompath-v10";
 const API_CACHE = "ompath-api-v5";
 const SLOW_MS = 3000;
 const STATIC_ASSETS = ["/", "/index.html", "/manifest.json"];
@@ -21,11 +21,12 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-const keep = (cacheName, request, response) => { if (response && response.ok) { const copy = response.clone(); caches.open(cacheName).then((c) => c.put(request, copy)); } return response; };
+const keep = (cacheName, request, response) => { if (response && response.ok) { const copy = response.clone(); caches.open(cacheName).then((c) => c.put(request, copy)).catch(() => undefined); } return response; };
 
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
   if (event.request.method !== "GET") return;
+  if (url.protocol !== "http:" && url.protocol !== "https:") return; // extensions and devtools: not ours to cache
   if (url.pathname.startsWith("/~oauth")) return;
 
   // Database reads

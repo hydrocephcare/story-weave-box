@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Check, ExternalLink, Eye, EyeOff, Loader2, Shuffle, Sparkles, X } from "lucide-react";
+import { Brain, Check, ExternalLink, Eye, EyeOff, Loader2, Shuffle, Sparkles, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { Answer } from "@/components/ai/AnswerText";
 import UpgradeCard from "@/components/ai/UpgradeCard";
-import { FREE_DAILY_PICTURES, countPictures, picturesUsedToday } from "@/lib/ompathAi";
+import { FREE_DAILY_PICTURES, countPictures, freeRevealsLeft, picturesUsedToday, spendFreeReveal } from "@/lib/ompathAi";
 import { SUBJECT_LABEL, loadBanks, pickQuestions, sectionFor, sectionsOf, type Bank, type BankQuestion, type Subject } from "@/lib/questionBank";
 
 const SELECT = "h-10 min-w-0 flex-1 rounded-lg border border-border bg-background px-2.5 text-sm font-semibold outline-none focus:border-primary";
@@ -19,7 +19,7 @@ const writeMissed = (list: BankQuestion[]) => { try { localStorage.setItem(MISSE
  * "Explain" asks the AI to teach it, and questions marked "Missed" are kept so they can be revised later.
  * Free accounts get a daily number of picture questions; the first set is always free.
  */
-export default function QuestionDrill({ subject: initialSubject, topic, canReveal, onNeedSubscribe, onOpen, onExplain }: { subject: Subject; topic: string; canReveal: boolean; onNeedSubscribe: () => void; onOpen: (href: string) => void; onExplain: (q: BankQuestion) => void }) {
+export default function QuestionDrill({ subject: initialSubject, topic, canReveal, onNeedSubscribe, onOpen, onExplain }: { subject: Subject; topic: string; canReveal: boolean; onNeedSubscribe: () => void; onOpen: (href: string) => void; onExplain: (q: BankQuestion, how: "explain" | "mnemonic") => void }) {
   const [subject, setSubject] = useState<Subject>(initialSubject);
   const [banks, setBanks] = useState<Bank[] | null>(null);
   const [section, setSection] = useState("");
@@ -28,6 +28,7 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
   const [missed, setMissed] = useState<BankQuestion[]>(readMissed);
   const [marked, setMarked] = useState<Record<string, "got" | "missed">>({});
   const [blocked, setBlocked] = useState(false);
+  const [needPay, setNeedPay] = useState<string | null>(null);
   const [zoom, setZoom] = useState<{ src: string; alt: string } | null>(null);
   const [, bump] = useState(0);
   const seen = useRef<Set<string>>(new Set());
@@ -67,7 +68,9 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
   const left = Math.max(0, FREE_DAILY_PICTURES - picturesUsedToday());
 
   const reveal = (q: BankQuestion) => {
-    if (!canReveal) { onNeedSubscribe(); return; }
+    // the first batch of answers in each subject is free every day; after that a subscription is needed
+    if (!shown.has(q.id) && !canReveal && !spendFreeReveal(subject, q.id)) { setNeedPay(q.id); return; }
+    setNeedPay(null);
     setShown((s) => { const n = new Set(s); n.has(q.id) ? n.delete(q.id) : n.add(q.id); return n; });
   };
   const mark = (q: BankQuestion, how: "got" | "missed") => {
@@ -103,20 +106,22 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
               <p className="text-sm font-semibold leading-snug"><span className="mr-1.5 text-primary">{i + 1}.</span>{q.question}</p>
               {q.image && (
                 <button type="button" onClick={() => setZoom({ src: q.image!, alt: q.imageAlt ?? q.question })} className="mt-2 block w-full overflow-hidden rounded-lg border border-border bg-muted" aria-label="Enlarge the picture">
-                  <img src={q.image} alt={q.imageAlt ?? ""} loading="lazy" decoding="async" className="mx-auto max-h-72 w-full object-contain" />
+                  <img src={q.image} alt={q.imageAlt ?? ""} loading="lazy" decoding="async" className="mx-auto max-h-40 w-auto max-w-full object-contain sm:max-h-56 lg:max-h-64" />
                 </button>
               )}
               <button type="button" onClick={() => reveal(q)} aria-expanded={shown.has(q.id)} className="mt-2.5 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/5 px-3 py-1 text-xs font-bold text-emerald-700 hover:bg-emerald-500/10 dark:text-emerald-400">
                 {shown.has(q.id) ? <EyeOff className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
-                {shown.has(q.id) ? "Hide answer" : canReveal ? "Reveal answer" : "Reveal (subscribers)"}
+                {shown.has(q.id) ? "Hide answer" : "Reveal answer"}
               </button>
+              {needPay === q.id && <div className="mt-2.5"><UpgradeCard kind="answers" /></div>}
               {shown.has(q.id) && (
                 <div className="mt-2 space-y-2.5">
                   <div className="rounded-lg border border-emerald-500/30 bg-emerald-500/5 p-3"><Answer text={q.answer} compact /></div>
                   <div className="flex flex-wrap items-center gap-1.5">
                     <button type="button" onClick={() => mark(q, "got")} aria-pressed={marked[q.id] === "got"} className={`inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-bold ${marked[q.id] === "got" ? "border-emerald-500 bg-emerald-500 text-white" : "border-border hover:border-emerald-500"}`}><Check className="h-3.5 w-3.5" /> Got it</button>
                     <button type="button" onClick={() => mark(q, "missed")} aria-pressed={marked[q.id] === "missed"} className={`inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-bold ${marked[q.id] === "missed" ? "border-destructive bg-destructive text-white" : "border-border hover:border-destructive"}`}><X className="h-3.5 w-3.5" /> Missed it</button>
-                    <button type="button" onClick={() => onExplain(q)} className="inline-flex items-center gap-1 rounded-full border border-primary/40 bg-primary/5 px-3 py-1 text-xs font-bold text-primary hover:bg-primary/10"><Sparkles className="h-3.5 w-3.5" /> Explain</button>
+                    <button type="button" onClick={() => onExplain(q, "explain")} className="inline-flex items-center gap-1 rounded-full border border-primary/40 bg-primary/5 px-3 py-1 text-xs font-bold text-primary hover:bg-primary/10"><Sparkles className="h-3.5 w-3.5" /> Explain</button>
+                    <button type="button" onClick={() => onExplain(q, "mnemonic")} className="inline-flex items-center gap-1 rounded-full border border-border px-3 py-1 text-xs font-bold hover:border-primary hover:text-primary"><Brain className="h-3.5 w-3.5" /> Mnemonic</button>
                   </div>
                 </div>
               )}
@@ -129,7 +134,7 @@ export default function QuestionDrill({ subject: initialSubject, topic, canRevea
         <div className="mt-3 flex flex-wrap items-center gap-2">
           <button type="button" onClick={() => draw(banks, section, true, myMissed)} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-2 text-sm font-bold text-primary-foreground"><Shuffle className="h-4 w-4" /> 5 more</button>
           {main && section !== MISSED && <button type="button" onClick={() => onOpen(main.href)} className="inline-flex items-center gap-1.5 rounded-lg border border-border px-3.5 py-2 text-sm font-bold hover:border-primary hover:text-primary"><ExternalLink className="h-4 w-4" /> Open the full bank</button>}
-          <span className="text-xs text-muted-foreground">{inSection} questions here{!canReveal ? ` · ${left} free picture questions left today` : ""}</span>
+          <span className="text-xs text-muted-foreground">{inSection} questions here{!canReveal ? ` · ${freeRevealsLeft(subject)} free answers left in ${SUBJECT_LABEL[subject].toLowerCase()} today · ${left} picture questions` : ""}</span>
         </div>
       )}
 

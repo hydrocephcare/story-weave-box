@@ -20,7 +20,7 @@ export interface ContestRecord extends ContestPreview {
   maxParticipantsPerUniversity: number;
 }
 
-export async function loadContestPlatform(): Promise<{ contests: ContestRecord[]; universities: ContestUniversity[] }> {
+async function fetchContestPlatform(): Promise<{ contests: ContestRecord[]; universities: ContestUniversity[] }> {
   const [{ data: contestRows, error: contestError }, { data: universityRows, error: universityError }] = await Promise.all([
     (supabase as any).from("contests").select("id,slug,title,subtitle,status,subjects,eligible_years,competition_format,registration_opens_at,registration_closes_at,starts_at,share_image_url,published,max_participants_per_university").eq("published", true).order("created_at"),
     (supabase as any).from("contest_universities").select("id,name,slug,abbreviation,verified").eq("active", true).order("name"),
@@ -406,4 +406,20 @@ export async function loadAllContestUniversities(): Promise<(ContestUniversity &
     .select("id,name,slug,abbreviation,verified,active").order("name");
   if (error) throw error;
   return data || [];
+}
+
+const CONTESTS_OFF = "ompath_contests_off";
+let contestOnce: ReturnType<typeof fetchContestPlatform> | null = null;
+/**
+ * The contest tables are only on some databases. On every page the bell and the year hub ask for them, so a missing table meant two
+ * failed requests (and console errors) per page. After one failure the answer is "no contests" for 30 minutes, with no request at all.
+ */
+export function loadContestPlatform(): ReturnType<typeof fetchContestPlatform> {
+  try { if (Date.now() - Number(sessionStorage.getItem(CONTESTS_OFF) ?? 0) < 30 * 60 * 1000) return Promise.resolve({ contests: [], universities: [] }); } catch { /* storage blocked */ }
+  contestOnce ??= fetchContestPlatform().catch((e) => {
+    contestOnce = null;
+    try { sessionStorage.setItem(CONTESTS_OFF, String(Date.now())); } catch { /* storage blocked */ }
+    throw e;
+  });
+  return contestOnce;
 }

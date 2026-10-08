@@ -299,3 +299,23 @@ export function picturesUsedToday(): number {
 export function countPictures(n: number) {
   try { localStorage.setItem(PIC_KEY, JSON.stringify({ day: today(), n: picturesUsedToday() + n })); } catch { /* storage blocked */ }
 }
+
+// ---------- free answers (the first batch of each subject is free every day) ----------
+const REVEAL_KEY = "ompath_ai_reveals";
+export const FREE_REVEALS_PER_SUBJECT = 5;
+type RevealLog = { day: string; ids: Record<string, string[]> };
+function readReveals(): RevealLog {
+  try { const v = JSON.parse(localStorage.getItem(REVEAL_KEY) ?? "null") as RevealLog | null; if (v?.day === today() && v.ids) return v; } catch { /* none */ }
+  return { day: today(), ids: {} };
+}
+export const freeRevealsLeft = (subject: string) => Math.max(0, FREE_REVEALS_PER_SUBJECT - (readReveals().ids[subject]?.length ?? 0));
+/** True if this answer may be shown: already opened today, or there is still free allowance (which it then uses). */
+export function spendFreeReveal(subject: string, id: string): boolean {
+  const log = readReveals();
+  const used = log.ids[subject] ?? [];
+  if (used.includes(id)) return true;
+  if (used.length >= FREE_REVEALS_PER_SUBJECT) return false;
+  log.ids[subject] = [...used, id];
+  try { localStorage.setItem(REVEAL_KEY, JSON.stringify(log)); } catch { /* storage blocked */ }
+  return true;
+}

@@ -18,6 +18,7 @@ import { OFFICIAL_2026_SCHEDULES } from "@/lib/timetable2026";
 import { personalReply } from "@/lib/ompathAiPersonal";
 import { useAiAccountSync } from "@/lib/ompathAiSync";
 import { guideReply } from "@/lib/ompathAiGuide";
+import { suggestionsFor } from "@/lib/ompathAiSuggest";
 import { useAuth } from "@/hooks/useAuth";
 import { useSiteSearch } from "@/hooks/useSiteSearch";
 import { useAccess } from "@/lib/access";
@@ -129,6 +130,7 @@ export default function OmpathAIHost() {
   useEffect(() => { if (open) endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [turns.length, open, view]);
   useEffect(() => { window.dispatchEvent(new CustomEvent(AI_STATE_EVENT, { detail: open })); }, [open]);
   const [trending, setTrending] = useState<string[]>([]);
+  const suggestions = useMemo(() => suggestionsFor(myYear, myYear ? myTimetable : [], unitNameMap(siteCfg), new Date(), trending), [myYear, myTimetable, siteCfg, trending]);
   useEffect(() => { if (open && !trending.length) void getTrending().then(setTrending); }, [open, trending.length]);
 
   // Speak instead of typing (Chrome, Edge and Safari; the button is hidden where it is not supported).
@@ -346,10 +348,10 @@ export default function OmpathAIHost() {
               {turns.length === 0 && (
                 <section className="rounded-2xl border border-border bg-card p-4">
                   <p className="flex items-center gap-2 font-serif text-lg font-bold"><OmpathMark className="h-7 w-7" plain /> What do you need?</p>
-                  {trending.length > 0 && <p className="mt-1 text-[11px] font-bold uppercase tracking-wide text-primary">Trending with students</p>}
                   <p className="mt-1 text-sm text-muted-foreground">Ask for notes, a past paper, a library file, or just ask a question. I search every note, paper and file on Ompath Study first.</p>
                   <div className="mt-3 flex flex-wrap gap-1.5" aria-label="Quick links">{[["Timetable", `/timetable/year-${myYear ?? 1}`], ["Latest notes", "/new-notes"], ["Past papers", "/papers"], ["Flashcards", "/flashcards"], ["MCQs", "/mcqs"], ["Library", "/books"], ["Stories", "/stories"]].map(([label, href]) => <button key={href} type="button" onClick={() => goFull({ href } as SiteHit)} className="inline-flex items-center gap-1 rounded-lg bg-primary/10 px-2.5 py-1.5 text-xs font-bold text-primary hover:bg-primary/15"><ExternalLink className="h-3 w-3" /> {label}</button>)}</div>
-                  <div className="mt-3 flex flex-wrap gap-2">{[...trending.slice(0, 3), ...STARTERS].filter((v, i, a) => a.indexOf(v) === i).slice(0, 7).map((s) => <button key={s} type="button" onClick={() => void ask(s)} className="rounded-full border border-border px-3 py-1.5 text-left text-sm hover:border-primary hover:text-primary">{s}</button>)}</div>
+                  <p className="mt-4 text-[11px] font-bold uppercase tracking-wide text-primary">{suggestions.caption}</p>
+                  <div className="mt-2 flex flex-wrap gap-2">{suggestions.chips.map((s) => <button key={s} type="button" onClick={() => void ask(s)} className="rounded-full border border-border px-3 py-1.5 text-left text-sm hover:border-primary hover:text-primary">{s}</button>)}</div>
                 </section>
               )}
               <div className="space-y-7">
@@ -380,7 +382,7 @@ export default function OmpathAIHost() {
                           </div>
                         )}
                       </div>
-                      {t.drill && <QuestionDrill key={t.id} subject={t.drill.subject} topic={t.drill.topic} canReveal={unlimited} onNeedSubscribe={() => openSubscribePrompt("Subscribe to reveal answers.")} onOpen={(href) => goFull({ href } as SiteHit)} onExplain={(q) => void ask(`Explain: ${q.question}`, { context: q.answer })} />}
+                      {t.drill && <QuestionDrill key={t.id} subject={t.drill.subject} topic={t.drill.topic} canReveal={unlimited} onNeedSubscribe={() => openSubscribePrompt("Subscribe to reveal answers.")} onOpen={(href) => goFull({ href } as SiteHit)} onExplain={(q, how) => void ask(how === "mnemonic" ? `Give me a short, memorable mnemonic for: ${q.question}` : `Explain: ${q.question}`, { context: q.answer })} />}
                       {t.upgrade && <UpgradeCard kind={t.upgrade} />}
                       {t.links && t.links.length > 0 && <div className="flex flex-wrap gap-2">{t.links.map((l) => <button key={l.href} type="button" onClick={() => goFull({ href: l.href } as SiteHit)} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-2 text-sm font-bold text-primary-foreground"><ExternalLink className="h-4 w-4" /> {l.label}</button>)}</div>}
                       {t.hits.length > 0 && (
