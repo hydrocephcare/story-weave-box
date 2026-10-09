@@ -49,7 +49,7 @@ function StaticNoteView() {
   // Reading a note counts toward today's study streak (once per visit, after the text has loaded).
   useEffect(() => { if (text) logStudy(5); }, [text]);
 
-  const parsed = useMemo(() => (text ? mdToHtml(text, { skipTitle: true }) : null), [text]);
+  const parsed = useMemo(() => (text ? mdToHtml(text, { skipTitle: true, questions: !note?.paper }) : null), [text, note]);
   const linked = useMemo(() => (parsed ? linkDrugs(parsed.html, DRUGS) : null), [parsed]);
 
   // Coming back from a drug page: put the reader exactly where they were once the text is on screen.
@@ -77,7 +77,20 @@ function StaticNoteView() {
     navigate(to);
   };
 
+  /** Tapping an option in a practice MCQ marks it, shows the right one, and opens the reasoning. */
+  const pickOption = (target: HTMLElement) => {
+    const opt = target.closest(".qa-opt") as HTMLElement | null;
+    const card = opt?.closest(".qa-mcq") as HTMLElement | null;
+    if (!opt || !card || card.classList.contains("done")) return false;
+    const right = card.dataset.correct;
+    card.classList.add("done");
+    opt.classList.add(right && opt.dataset.l === right ? "is-right" : right ? "is-wrong" : "is-picked");
+    if (right) { card.querySelector(`.qa-opt[data-l="${right}"]`)?.classList.add("is-right"); card.querySelector("details")?.setAttribute("open", ""); }
+    return true;
+  };
+
   const onBodyClick = (e: React.MouseEvent) => {
+    if (pickOption(e.target as HTMLElement)) return;
     const a = (e.target as HTMLElement).closest("a.note-link") as HTMLAnchorElement | null;
     const href = a?.getAttribute("href");
     if (!a || !href || !href.startsWith("/") || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
@@ -138,7 +151,7 @@ function StaticNoteView() {
           {!note.paper && <PharmacologyConnections ids={linked.ids} conditionIds={note.condition ? [note.condition] : []} leave={leave} className="mt-4" />}
 
           {note.paper && text ? <PaperBody text={text} onClick={onBodyClick} /> : (
-            <article className="note-body mt-6" onClick={onBodyClick} dangerouslySetInnerHTML={{ __html: linked.html }} />
+            <article className="note-body mt-6" onClick={onBodyClick} onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && pickOption(e.target as HTMLElement)) e.preventDefault(); }} dangerouslySetInnerHTML={{ __html: linked.html }} />
           )}
 
           <div className="print:hidden"><ContentCredit /></div>

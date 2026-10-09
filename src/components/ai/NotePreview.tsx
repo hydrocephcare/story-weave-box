@@ -46,7 +46,7 @@ export default function NotePreview({ hit, terms, onClose, onOpenFull }: { hit: 
   const html = useMemo(() => {
     if (text === null || isPaper) return "";
     const body = text.length > 60000 ? `${text.slice(0, 60000)}\n\n…` : text;
-    return markTerms(mdToHtml(body, { skipTitle: true }).html, terms);
+    return markTerms(mdToHtml(body, { skipTitle: true, questions: true }).html, terms);
   }, [text, terms, isPaper]);
 
   return (

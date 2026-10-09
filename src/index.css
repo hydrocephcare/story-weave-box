@@ -501,3 +501,40 @@ body.no-copy img {
 
 .story-prose img { max-width: 100%; height: auto; border-radius: 0.75rem; margin: 1.5rem auto; display: block; }
 .story-prose img.ProseMirror-selectednode { outline: 3px solid hsl(var(--primary)); }
+
+/* Practice questions inside notes (src/lib/miniMarkdown.js): MCQ cards with tappable options, tap-to-open answers, key-point cards and call-outs. */
+.note-body .qa { margin-top: 1.1rem; padding: 1rem; border: 1px solid hsl(var(--border)); border-radius: 1rem; background: hsl(var(--card)); }
+.note-body .qa-q { display: flex; gap: 0.65rem; align-items: flex-start; margin: 0; font-weight: 600; line-height: 1.5; }
+.note-body .qa-n { flex: none; display: inline-flex; align-items: center; justify-content: center; min-width: 1.8rem; height: 1.8rem; padding: 0 0.3rem; border-radius: 999px; background: hsl(var(--primary) / 0.12); color: hsl(var(--primary)); font-size: 0.8rem; font-weight: 700; }
+.note-body .qa-opts { list-style: none; padding: 0; margin: 0.8rem 0 0; display: grid; gap: 0.45rem; }
+.note-body .qa-opt { display: flex; gap: 0.7rem; align-items: flex-start; margin: 0; padding: 0.65rem 0.8rem; min-height: 2.75rem; border: 1px solid hsl(var(--border)); border-radius: 0.75rem; cursor: pointer; line-height: 1.45; transition: border-color .15s, background-color .15s; }
+.note-body .qa-opt:hover, .note-body .qa-opt:focus-visible { border-color: hsl(var(--primary) / 0.6); outline: none; }
+.note-body .qa-l { flex: none; display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; border: 1px solid hsl(var(--border)); border-radius: 999px; font-size: 0.75rem; font-weight: 700; color: hsl(var(--muted-foreground)); }
+.note-body .qa-opt.is-picked { border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.08); }
+.note-body .qa-opt.is-right { border-color: #10b981; background: rgba(16, 185, 129, 0.1); }
+.note-body .qa-opt.is-right .qa-l { background: #10b981; border-color: #10b981; color: #fff; }
+.note-body .qa-opt.is-wrong { border-color: #ef4444; background: rgba(239, 68, 68, 0.08); }
+.note-body .qa-opt.is-wrong .qa-l { background: #ef4444; border-color: #ef4444; color: #fff; }
+.note-body .qa.done .qa-opt { cursor: default; }
+.note-body .qa-ans { margin-top: 0.9rem; }
+.note-body summary { cursor: pointer; list-style: none; }
+.note-body summary::-webkit-details-marker { display: none; }
+.note-body .qa-ans > summary { display: inline-flex; align-items: center; padding: 0.4rem 0.95rem; border: 1px solid rgba(16, 185, 129, 0.5); border-radius: 999px; background: rgba(16, 185, 129, 0.06); color: #047857; font-size: 0.85rem; font-weight: 700; }
+.dark .note-body .qa-ans > summary { color: #34d399; }
+.note-body .qa-ans[open] > summary { font-size: 0; padding: 0.4rem 0.95rem; }
+.note-body .qa-ans[open] > summary::before { content: "Hide answer"; font-size: 0.85rem; }
+.note-body .qa-a { margin-top: 0.7rem; padding: 0.75rem 1rem; border-left: 3px solid #10b981; border-radius: 0.5rem; background: rgba(16, 185, 129, 0.07); }
+.note-body .qa-a p { margin: 0; }
+.note-body .qa-a p + p { margin-top: 0.5rem; }
+.note-body .qa-a ul, .note-body .qa-a ol { margin-top: 0.4rem; }
+.note-body .qa-recall { padding: 0; }
+.note-body .qa-recall > summary { display: flex; gap: 0.65rem; align-items: flex-start; padding: 0.9rem 1rem; font-weight: 600; line-height: 1.5; }
+.note-body .qa-recall > summary .qa-q { flex: 1; }
+.note-body .qa-show { flex: none; margin-left: auto; align-self: center; padding: 0.2rem 0.7rem; border: 1px solid rgba(16, 185, 129, 0.5); border-radius: 999px; color: #047857; font-size: 0.75rem; font-weight: 700; white-space: nowrap; }
+.dark .note-body .qa-show { color: #34d399; }
+.note-body .qa-recall[open] > summary .qa-show { display: none; }
+.note-body .qa-recall > .qa-a { margin: 0 1rem 1rem; }
+.note-body .note-card { margin-top: 0.9rem; padding: 0.9rem 1.1rem 1rem; border: 1px solid hsl(var(--primary) / 0.28); border-radius: 1rem; background: hsl(var(--primary) / 0.05); }
+.note-body .note-card > :first-child { margin-top: 0; }
+.note-body .callout { padding: 0.8rem 1rem; border-left: 4px solid hsl(var(--primary)); border-radius: 0.6rem; background: hsl(var(--primary) / 0.07); }
+@media print { .note-body .qa-ans > .qa-a, .note-body .qa-recall > .qa-a { display: block; } }
