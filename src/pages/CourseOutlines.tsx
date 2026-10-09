@@ -436,6 +436,7 @@ function SectionCard({ outline, section, done, flagged, signedIn, names, open, r
                           <span className={`break-words text-sm font-semibold ${isDone ? "text-muted-foreground line-through decoration-primary/50" : "text-foreground"}`}>{item.title}</span>
                         </span>
                         {item.detail && <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground">{item.detail}</span>}
+                        {item.noteSlug && <Link to={`/notes/${item.noteSlug}`} onClick={(e) => e.stopPropagation()} className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-primary hover:underline"><BookOpen className="h-3 w-3" /> Read Pead Series · Week 1 notes</Link>}
                         {item.lecturer && <span className="mt-0.5 block text-[11px] font-semibold text-muted-foreground">{item.lecturer}</span>}
                         {hit && (
                           <Link to={`/library/year-${outline.year}?q=${encodeURIComponent(hit.q)}`} onClick={(e) => e.stopPropagation()} className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-primary hover:underline"><Search className="h-3 w-3" /> Find notes ({hit.n})</Link>
