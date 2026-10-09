@@ -161,7 +161,8 @@ export function scoringTerms(p: ParsedQuery): string[] {
 export function followUps(p: ParsedQuery): string[] {
   const t = p.topic;
   if (!t) return [];
-  const out = [`Quiz me on ${t}`, `Past papers on ${t}`, `High-yield points for ${t}`];
+  // the practice tools are free (no AI credit), so they come first
+  const out = [`10 mcqs on ${t}`, `Essay questions on ${t}`, `Past papers on ${t}`, `High-yield points for ${t}`];
   if (p.wants === "notes") out.unshift(`Explain ${t} simply`);
   return out.slice(0, 4);
 }

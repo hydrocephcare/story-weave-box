@@ -18,7 +18,7 @@ import PlanCard from "@/components/ai/PlanCard";
 import ReviewPanel from "@/components/ai/ReviewPanel";
 import { flowReply } from "@/lib/ompathAiFlows";
 import { unitsThisWeek } from "@/lib/ompathAiSuggest";
-import { weakTopics, readBookmarks, toggleBookmark } from "@/lib/review";
+import { activity, weakTopics, readBookmarks, toggleBookmark } from "@/lib/review";
 import EssayPractice from "@/components/ai/EssayPractice";
 import PaperCard from "@/components/ai/PaperCard";
 import { essayIntent, paperIntent, quizIntent } from "@/lib/ompathAiTools";
@@ -27,6 +27,7 @@ import { relatedFor } from "@/lib/ompathAiRelated";
 import { reportAiFailure } from "@/lib/aiHealth";
 import { saveAnswerAsDraft } from "@/lib/answerToNote";
 import { toast } from "@/hooks/use-toast";
+import { answerStyle } from "@/lib/ompathAiStyle";
 import { useFeatures } from "@/lib/features";
 import { UNIVERSITIES, benefitsFor, shortName, useUniversity } from "@/lib/university";
 import { AI_SHARE_TEXT, AI_TITLE, AI_URL } from "@/lib/aiShare";
@@ -174,6 +175,15 @@ export default function OmpathAIHost() {
     ...((myYear ?? 0) >= 3 ? ([["Clinical cases", "/clinical"], ["OSCE", "/clinical/osce"], ["Pharmacology", "/pharmacology"], ["Must-knows", "/must-knows"]] as [string, string][]) : []),
     ["Flashcards", "/flashcards"], ["MCQs", "/mcqs"], ["Library", "/books"], ["Stories", "/stories"],
   ], [myYear]);
+  // "Today's 5": five questions on the topic you miss most, or on this week's unit, with your streak. Free, no AI credit.
+  const daily = useMemo(() => {
+    if (!user) return null;
+    const weakest = features.can("review") ? weakTopics(1)[0]?.topic.replace(/^[^:]+:\s*/, "") : "";
+    const unit = unitsThisWeek(myYear ? myTimetable : [], unitNameMap(siteCfg), new Date())[0];
+    const topic = weakest || unit;
+    return topic ? { topic, why: weakest ? "a topic you have been missing" : "from this week's timetable", streak: activity().streak } : null;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user, myYear, myTimetable, siteCfg, turns.length]);
   const suggestions = useMemo(() => suggestionsFor(myYear, myYear ? myTimetable : [], unitNameMap(siteCfg), new Date(), trending), [myYear, myTimetable, siteCfg, trending]);
   useEffect(() => { if (open && !trending.length) void getTrending().then(setTrending); }, [open, trending.length]);
 
@@ -301,7 +311,7 @@ export default function OmpathAIHost() {
       setBusy(true);
       const shared = await getShared(text);
       if (shared) {
-        const r = await retrieve(text).catch(() => null);
+        const r = await retrieve(text, myYear).catch(() => null);
         aiStore.addTurn(sessionId, { id, q: text, answer: shared.answer, hits: r?.hits ?? [], grounded: shared.grounded, followUps: r ? followUps(r.parsed) : undefined, instant: "saved", at: Date.now() });
         aiStore.flush();
         saveCached(text, { answer: shared.answer, grounded: shared.grounded, hits: r?.hits ?? [], followUps: r ? followUps(r.parsed) : undefined });
@@ -321,7 +331,7 @@ export default function OmpathAIHost() {
     abort.current = new AbortController();
     let retrieval: Retrieval | null = null;
     try {
-      retrieval = await retrieve(text);
+      retrieval = await retrieve(text, myYear);
       aiStore.patchTurn(sessionId, id, { hits: retrieval.hits, grounded: retrieval.grounded, followUps: followUps(retrieval.parsed) });
       void logSearch(retrieval.parsed.topic || text, retrieval.hits.length);
       // Pure look-ups ("psychiatry notes") are answered by the list itself; the model only writes when there is something to explain.
@@ -332,7 +342,7 @@ export default function OmpathAIHost() {
         aiStore.flush();
         return;
       }
-      const answer = await streamAnswer({ question: opts.context ? `${text}\n\nThe official answer key for this question, from the Ompath bank:\n${opts.context}` : text, history: prior, retrieval }, { onText: (full) => aiStore.patchTurn(sessionId, id, { answer: full }), signal: abort.current.signal });
+      const answer = await streamAnswer({ question: opts.context ? `${text}\n\nThe official answer key for this question, from the Ompath bank:\n${opts.context}` : answerStyle(text, myYear), history: prior, retrieval }, { onText: (full) => aiStore.patchTurn(sessionId, id, { answer: full }), signal: abort.current.signal });
       countQuestion();
       aiStore.patchTurn(sessionId, id, { answer });
       aiStore.flush();
@@ -476,6 +486,12 @@ export default function OmpathAIHost() {
                   <p className="mt-1 text-sm text-muted-foreground">Ask for notes, a past paper, a quiz, a study plan or a reminder, or just ask a question. I search every note, paper and file on Ompath Study first.</p>
                   <button type="button" onClick={() => void shareOut(AI_SHARE_TEXT, AI_URL, AI_TITLE)} className="mt-2 inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:underline"><Share2 className="h-3.5 w-3.5" /> Share Ompath AI with your group</button>
                   <div className="mt-3 flex flex-wrap gap-1.5" aria-label="Quick links">{quickLinks.map(([label, href]) => <button key={href} type="button" onClick={() => goFull({ href } as SiteHit)} className="inline-flex items-center gap-1 rounded-lg bg-primary/10 px-2.5 py-1.5 text-xs font-bold text-primary hover:bg-primary/15"><ExternalLink className="h-3 w-3" /> {label}</button>)}</div>
+                  {daily && (
+                    <button type="button" onClick={() => void ask(`5 mcqs on ${daily.topic}`)} className="mt-4 flex w-full items-center gap-3 rounded-xl border border-amber-500/40 bg-amber-400/10 px-3.5 py-3 text-left hover:bg-amber-400/15">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-400 text-sm font-extrabold text-black">5</span>
+                      <span className="min-w-0 flex-1"><span className="block text-sm font-bold">Today's 5 questions: {daily.topic}</span><span className="block text-xs text-muted-foreground">{daily.why}{daily.streak > 0 ? ` · ${daily.streak}-day streak` : ""}</span></span>
+                    </button>
+                  )}
                   <p className="mt-4 text-[11px] font-bold uppercase tracking-wide text-primary">{suggestions.caption}</p>
                   <div className="mt-2 flex flex-wrap gap-2">{suggestions.chips.map((s) => <button key={s} type="button" onClick={() => void ask(s)} className="rounded-full border border-border px-3 py-1.5 text-left text-sm hover:border-primary hover:text-primary">{s}</button>)}</div>
                 </section>

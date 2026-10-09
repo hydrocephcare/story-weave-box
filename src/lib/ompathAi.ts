@@ -163,7 +163,7 @@ async function gatherPassages(hits: SiteHit[], p: ParsedQuery): Promise<Passage[
 }
 
 // ---------- retrieval ----------
-export interface FindOptions { /** Also look inside the text of notes. Slower, so the search page asks for it second. */ deep?: boolean; year?: string; contentType?: string }
+export interface FindOptions { /** Also look inside the text of notes. Slower, so the search page asks for it second. */ deep?: boolean; year?: string; contentType?: string; /** The student's own year: its notes come first. */ prefer?: number | null }
 const findCache = new Map<string, { parsed: ParsedQuery; hits: SiteHit[]; related: string[] }>();
 
 /**
@@ -171,7 +171,7 @@ const findCache = new Map<string, { parsed: ParsedQuery; hits: SiteHit[]; relate
  * (filler words dropped, typos and abbreviations fixed, the year read). Used by the AI and by the search page.
  */
 export async function findHits(input: string, o: FindOptions = {}): Promise<{ parsed: ParsedQuery; hits: SiteHit[]; related: string[] }> {
-  const ck = JSON.stringify([input.trim().toLowerCase(), o.deep ?? true, o.year ?? "", o.contentType ?? ""]);
+  const ck = JSON.stringify([input.trim().toLowerCase(), o.deep ?? true, o.year ?? "", o.contentType ?? "", o.prefer ?? 0]);
   const cached = findCache.get(ck);
   if (cached) return cached;
   const parsed = parseQuery(input);
@@ -179,7 +179,7 @@ export async function findHits(input: string, o: FindOptions = {}): Promise<{ pa
   const deepOn = o.deep ?? true;
   const longest = parsed.topic.split(" ").filter((w) => w.length >= 6).sort((x, y) => y.length - x.length)[0];
   const queries = [...new Set([parsed.topic, ...(longest && longest !== parsed.topic ? [longest] : []), ...parsed.expansions.slice(0, 3), parsed.raw].filter((q) => q.length >= 2))];
-  const opts = { year: yearNum ? `Year ${yearNum}` : undefined, contentType: o.contentType || undefined };
+  const opts = { year: yearNum ? `Year ${yearNum}` : undefined, contentType: o.contentType || undefined, prefer: o.prefer ?? null };
   const runs = await Promise.all(queries.map((q, i) => siteSearch(q, { ...opts, deep: deepOn && (i === 0 || q === longest) }).catch(() => ({ hits: [] as SiteHit[], related: [] as string[] }))));
   // students often forget the year: if a year was given and nothing came back, drop the filter
   let all = runs.flatMap((r) => r.hits);
@@ -199,8 +199,8 @@ export async function findHits(input: string, o: FindOptions = {}): Promise<{ pa
   return out;
 }
 
-export async function retrieve(input: string): Promise<Retrieval> {
-  const { parsed, hits: found } = await findHits(input);
+export async function retrieve(input: string, prefer: number | null = null): Promise<Retrieval> {
+  const { parsed, hits: found } = await findHits(input, { prefer });
   const hits = found.slice(0, 30);
   const passages = parsed.wants === "timetable" || parsed.wants === "files" ? [] : await gatherPassages(hits, parsed);
   const topicWords = [...new Set(parsed.topic.split(/[^a-z0-9]+/).filter((w) => w.length >= 3))];
