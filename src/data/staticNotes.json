@@ -1548,5 +1548,17 @@
     "file": "src/content/notes/paediatrics-history-taking-and-examination.md",
     "series": "Pead Series",
     "week": "Week 1"
+  },
+  {
+    "slug": "paediatrics-growth-and-development",
+    "year": 4,
+    "unit": "Paediatrics & Child Health",
+    "group": "Growth and development",
+    "title": "Growth and Development in Children",
+    "description": "Pead Series · Week 2: Year 4 MBChB notes on anthropometry, WHO growth charts, faltering growth, wasting and stunting, developmental domains and milestones, corrected age for prematurity, developmental red flags, adolescent growth, OSCE checklist and 20 exam-style MCQs with explained answers.",
+    "updated": "2026-10-09",
+    "file": "src/content/notes/paediatrics-growth-and-development.md",
+    "series": "Pead Series",
+    "week": "Week 2"
   }
 ]
