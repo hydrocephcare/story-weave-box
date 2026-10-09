@@ -168,7 +168,7 @@ export default function OmpathAIHost() {
   useEffect(() => { window.dispatchEvent(new CustomEvent(AI_STATE_EVENT, { detail: open })); }, [open]);
   const [trending, setTrending] = useState<string[]>([]);
   const quickLinks = useMemo<[string, string][]>(() => [
-    ["Timetable", `/timetable/year-${myYear ?? 1}`], ["Latest notes", "/new-notes"], ["Past papers", "/papers"],
+    ["Timetable", `/timetable/year-${myYear ?? 1}`], ["Recently added", "/recent"], ["Latest notes", "/new-notes"], ["Past papers", "/papers"],
     ...((myYear ?? 0) >= 3 ? ([["Clinical cases", "/clinical"], ["OSCE", "/clinical/osce"], ["Pharmacology", "/pharmacology"], ["Must-knows", "/must-knows"]] as [string, string][]) : []),
     ["Flashcards", "/flashcards"], ["MCQs", "/mcqs"], ["Library", "/books"], ["Stories", "/stories"],
   ], [myYear]);

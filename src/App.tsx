@@ -29,6 +29,7 @@ import { AdminRoute, SignedInRoute, StudentRoute } from "@/components/AccessRout
 const Index = lazy(() => import("./pages/Index"));
 const Brand = lazy(() => import("./pages/Brand"));
 const NewNotes = lazy(() => import("./pages/NewNotes"));
+const RecentlyAdded = lazy(() => import("./pages/RecentlyAdded"));
 const Timetable2026 = lazy(() => import("./pages/Timetable2026"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
@@ -162,6 +163,7 @@ const AnimatedRoutes = () => {
             <Route path="/papers" element={<PastPapers />} />
             <Route path="/brand" element={<Brand />} />
             <Route path="/new-notes" element={<RailLayout><NewNotes /></RailLayout>} />
+            <Route path="/recent" element={<RailLayout><RecentlyAdded /></RailLayout>} />
             <Route path="/ai" element={<AIPage />} />
             <Route path="/notes" element={<StaticNotesIndex />} />
             <Route path="/notes/:slug" element={<StaticNote />} />

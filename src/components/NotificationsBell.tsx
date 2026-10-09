@@ -145,7 +145,7 @@ export default function NotificationsBell() {
               })}
             </ul>
           )}
-          <div className="mt-1 flex justify-between border-t border-border px-2 pt-2 text-[11px] font-bold text-primary"><Link to="/exams" onClick={() => setOpen(false)} className="hover:underline">All exams</Link><Link to="/blog" onClick={() => setOpen(false)} className="hover:underline">All notes</Link><Link to="/contests" onClick={() => setOpen(false)} className="hover:underline">Contests</Link></div>
+          <div className="mt-1 flex justify-between border-t border-border px-2 pt-2 text-[11px] font-bold text-primary"><Link to="/recent" onClick={() => setOpen(false)} className="hover:underline">Recently added</Link><Link to="/exams" onClick={() => setOpen(false)} className="hover:underline">All exams</Link><Link to="/blog" onClick={() => setOpen(false)} className="hover:underline">All notes</Link><Link to="/contests" onClick={() => setOpen(false)} className="hover:underline">Contests</Link></div>
         </div>
       )}
     </div>

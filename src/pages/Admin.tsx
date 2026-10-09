@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Loader2, FileText, Layers, Settings, Trash2, Pencil, ListChecks, Save, Key, Zap, RefreshCw, Bolt, AlertTriangle, Building2, Check, X, Sparkles, Eye, Upload, Wrench, Globe, Search, Copy, ExternalLink, BookOpen, ChevronDown, Edit3, Bell, HardDrive } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -21,6 +21,9 @@ import NotificationAdmin from "@/components/NotificationAdmin";
 import StudentAccessAdmin from "@/components/StudentAccessAdmin";
 import SiteManagerAdmin from "@/components/SiteManagerAdmin";
 import AiHealthAdmin from "@/components/AiHealthAdmin";
+import NoteQualityAdmin from "@/components/NoteQualityAdmin";
+import { lintNote, matchOutline, tidyNote } from "@/lib/noteStandard";
+import { parseMcqText } from "@/lib/mcqParse";
 import GoogleDriveImportAdmin from "@/components/GoogleDriveImportAdmin";
 import { autoIndexUrls, SITE_URL, slugifyText } from "@/lib/seo";
 import { Helmet } from "react-helmet-async";
@@ -28,7 +31,7 @@ import AdminWorkspace from "@/components/admin/AdminWorkspace";
 import { useAuth } from "@/hooks/useAuth";
 import { ARTICLE_COLUMNS } from "@/lib/article-columns";
 
-type Tab = "create" | "unedited" | "articles" | "flashcards" | "mcqs" | "stories" | "raw" | "exams" | "settings" | "institutions" | "upgrade" | "import" | "cleanup" | "seo" | "categories" | "editor" | "meta-manager" | "corrections" | "payments" | "notifications" | "students" | "google-drive" | "site-manager" | "ai-health";
+type Tab = "create" | "unedited" | "articles" | "flashcards" | "mcqs" | "stories" | "raw" | "exams" | "settings" | "institutions" | "upgrade" | "import" | "cleanup" | "seo" | "categories" | "editor" | "meta-manager" | "corrections" | "payments" | "notifications" | "students" | "google-drive" | "site-manager" | "ai-health" | "note-quality";
 type DirectType = "article" | "mcqs" | "flashcards";
 
 export default function Admin() {
@@ -158,6 +161,7 @@ export default function Admin() {
     return `${prefix}: ${cat}`;
   };
 
+  const mcqSkipped = useRef<{ n: string; why: string }[]>([]);
   const parseDirectMcqs = (raw: string) => {
     const trimmed = raw.trim();
     const normalizeQuestion = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
@@ -185,31 +189,10 @@ export default function Admin() {
         return Array.from(uniq.values());
       }
     } catch {}
-    const blocks = trimmed.split(/\n\s*\n(?=\s*(?:Q?\d+[\).:-]|Question\s*\d*[:.)-]?))/i).map((b) => b.trim()).filter(Boolean);
-    const parsed = blocks.map((block) => {
-      const lines = block.split("\n").map((l) => l.trim()).filter(Boolean);
-      if (!lines.length) return null;
-      const questionLine = lines.find((l) => !/^[A-D][\).:\-]?\s+/i.test(l) && !/^(Answer|Correct|Explanation|Rationale)\s*[:\-]/i.test(l));
-      if (!questionLine) return null;
-      const question = questionLine.replace(/^(Q\d+[:.)-]?|\d+[.)-]?|Question\s*\d*[:.)-]?)\s*/i, "").trim();
-      const options = lines.filter((l) => /^[A-D][\).:\-]?\s+/i.test(l)).map((l) => l.replace(/^[A-D][\).:\-]?\s+/i, "").trim()).slice(0, 4);
-      if (!question || options.length < 4) return null;
-      const answerLine = lines.find((l) => /^(Answer|Correct)\s*[:\-]/i.test(l));
-      let correct_answer = 0;
-      if (answerLine) {
-        const answer = answerLine.replace(/^(Answer|Correct)\s*[:\-]\s*/i, "").trim();
-        const upper = answer.toUpperCase();
-        if (/^[A-D]$/.test(upper)) correct_answer = upper.charCodeAt(0) - 65;
-        else if (/^[1-4]$/.test(answer)) correct_answer = Number(answer) - 1;
-        else { const optIndex = options.findIndex((opt) => opt.toLowerCase() === answer.toLowerCase()); if (optIndex >= 0) correct_answer = optIndex; }
-      }
-      const explanationStart = lines.findIndex((l) => /^(Explanation|Rationale)\s*[:\-]/i.test(l));
-      const explanation = explanationStart >= 0 ? lines.slice(explanationStart).join(" ").replace(/^(Explanation|Rationale)\s*[:\-]\s*/i, "").trim() : undefined;
-      return { question, options, correct_answer, explanation };
-    }).filter(Boolean) as any[];
-    const uniq = new Map<string, any>();
-    parsed.forEach((q) => { const key = normalizeQuestion(q.question); if (!uniq.has(key)) uniq.set(key, q); });
-    return Array.from(uniq.values());
+    // text from ChatGPT: understood by src/lib/mcqParse.ts. A question with no answer is skipped and reported, never guessed.
+    const res = parseMcqText(trimmed);
+    mcqSkipped.current = res.skipped;
+    return res.questions;
   };
 
   const parseDirectFlashcards = (raw: string) => {
@@ -250,11 +233,23 @@ export default function Admin() {
       if (directType === "article") {
         const lines = directContent.trim().split("\n");
         const title = directTitle.trim() || lines[0]?.replace(/^#+\s*/, "").trim() || "Untitled";
-        await saveArticle({ title, content: directContent, created_at: new Date().toISOString(), published: true, original_notes: directContent, category: finalCategory, is_raw: true } as any);
+        // Every note is checked against the Ompath note standard: the layout is repaired automatically (the wording is never changed), and
+        // anything that would break the page or hide the note from its unit is shown first.
+        const tidy = tidyNote(directContent, title);
+        const report = lintNote({ title, category: finalCategory, content: tidy, known: UNIT_CATEGORIES });
+        const errors = report.issues.filter((i) => i.level === "error");
+        if (errors.length && !window.confirm(`Fix these first?\n\n- ${errors.map((e) => e.message).join("\n- ")}\n\nOK = publish anyway.   Cancel = go back and fix.`)) {
+          toast({ title: "Not published", description: errors[0].message, variant: "destructive" });
+          return;
+        }
+        const outline = matchOutline(finalCategory, title);
+        await saveArticle({ title, content: tidy, created_at: new Date().toISOString(), published: true, original_notes: directContent, category: finalCategory, is_raw: false } as any); // not "raw": it follows the standard, so it shows in its unit's notes and lists straight away
+        toast({ title: "Published", description: `${report.mcqs} MCQs · ${report.essays} essay questions · ${outline.week ? `outline ${outline.week}` : "no outline week found"} · share card ready.` });
       } else if (directType === "mcqs") {
         const parsed = parseDirectMcqs(directContent);
         const limited = parsed.slice(0, clampRequestedCount(directTargetCount));
-        if (!limited.length) throw new Error("Could not parse MCQs. Check format.");
+        if (!limited.length) throw new Error(`Could not read any MCQ with an answer. ${mcqSkipped.current.slice(0, 3).map((x) => `Q${x.n}: ${x.why}`).join("; ")}`);
+        if (mcqSkipped.current.length && !window.confirm(`${mcqSkipped.current.length} question(s) were left out:\n\n${mcqSkipped.current.slice(0, 8).map((x) => `Q${x.n}: ${x.why}`).join("\n")}\n\nPublish the other ${limited.length}?`)) { toast({ title: "Not published", description: "Fix the questions that were left out and paste again." }); return; }
         await saveMcqSet({ title: directTitle.trim() || `MCQ Set – ${new Date().toLocaleDateString()}`, questions: limited, created_at: new Date().toISOString(), published: true, original_notes: directContent, category: finalCategory, access_password: "", is_raw: true } as any);
       } else {
         const parsed = parseDirectFlashcards(directContent);
@@ -439,6 +434,7 @@ export default function Admin() {
     { id: "notifications", label: "Notifications", icon: Bell },
     { id: "students", label: "MKU students", icon: Check },
     { id: "google-drive", label: "Google Drive", icon: HardDrive },
+    { id: "note-quality", label: "Note quality", icon: Sparkles },
     { id: "ai-health", label: "AI health", icon: AlertTriangle },
     { id: "site-manager", label: "Site manager", icon: Settings },
     { id: "settings", label: "Settings", icon: Settings },
@@ -448,7 +444,7 @@ export default function Admin() {
 
   const tabGroups = [
     { label: "Content", items: tabs.filter(t => ["create","unedited","editor","articles","categories","flashcards","mcqs","stories","exams","corrections"].includes(t.id)) },
-    { label: "Tools", items: tabs.filter(t => ["meta-manager","upgrade","cleanup","seo"].includes(t.id)) },
+    { label: "Tools", items: tabs.filter(t => ["meta-manager","upgrade","cleanup","seo","note-quality"].includes(t.id)) },
     { label: "Data", items: tabs.filter(t => ["raw","import"].includes(t.id)) },
     { label: "System", items: tabs.filter(t => ["institutions","payments","notifications","students","google-drive","ai-health","site-manager","settings"].includes(t.id)) },
   ];
@@ -484,6 +480,7 @@ export default function Admin() {
       {tab === "students" && <StudentAccessAdmin />}
       {tab === "site-manager" && <SiteManagerAdmin />}
       {tab === "ai-health" && <AiHealthAdmin />}
+      {tab === "note-quality" && <NoteQualityAdmin />}
       {tab === "google-drive" && <GoogleDriveImportAdmin />}
 
       {tab === "corrections" && (

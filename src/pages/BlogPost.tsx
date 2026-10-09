@@ -750,10 +750,12 @@ const ArticleContent = memo(function ArticleContent({ content, articleId, catego
   let currentQuestionText = "";
   let currentTopic = "";
   let displayQuestionNumber = 0;
+  let keyCard = false;
 
   const flushList = () => {
     if (!listBuf) return;
-    els.push(<ul key={`list-${els.length}`} className="mb-5 space-y-2 pl-1">{listBuf.items}</ul>);
+    // the "Key points" list at the top of a note is shown as a highlighted card, so a student on a phone sees the essentials first
+    els.push(<ul key={`list-${els.length}`} className={keyCard ? "mb-6 space-y-2 rounded-2xl border border-primary/25 bg-primary/[0.05] p-4 sm:p-5" : "mb-5 space-y-2 pl-1"}>{listBuf.items}</ul>);
     listBuf = null;
   };
   const flushTable = () => {
@@ -1125,6 +1127,7 @@ const ArticleContent = memo(function ArticleContent({ content, articleId, catego
       if (/\b(section\s+b|section\s+c|essay|short\s+answer|long\s+answer|answer\s+any)\b/i.test(heading)) examMode = "essay";
       if (heading.toLowerCase().includes("practice")) { inPractice = true; continue; }
       flushPractice(); inPractice = false;
+      keyCard = /^(key\s+points?|at\s+a\s+glance|summary|learning\s+objectives?|high[- ]yield)\b/i.test(heading);
       _sec++;
       els.push(
         <h2 key={`h2-${i}`} id={slugify(heading) || `section-${_sec}`} data-section={`section-${_sec}`} className="mt-9 mb-4 scroll-mt-20 border-b border-border pb-3 font-serif text-2xl font-bold leading-tight text-foreground sm:text-3xl">

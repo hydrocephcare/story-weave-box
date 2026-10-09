@@ -3,6 +3,13 @@ export const config = {
 };
 
 const OG_FALLBACK_IMAGE = "https://www.ompathstudy.com/og-default.png";
+/** A share picture drawn from the note's own title, year and unit (api/note-card.ts), for notes that have no picture of their own. */
+function cardUrl(title: unknown, category: unknown, kind: string): string {
+  const p = new URLSearchParams({ title: String(title || "Study notes").slice(0, 140), kind });
+  const m = String(category || "").match(/^Years*(d)s*:s*(.*)$/i);
+  if (m) { p.set("year", m[1]); p.set("unit", m[2].slice(0, 40)); } else if (category) p.set("unit", String(category).slice(0, 40));
+  return `https://www.ompathstudy.com/api/note-card?${p.toString()}`;
+}
 const GEO_KEYWORDS = "Kenya, Africa, global medical students, MBChB, clinical medicine, nursing, University of Nairobi, Kenyatta University, Moi University, Kabarak University, Aga Khan University";
 const STATIC_PAGE_META: Record<string, { title: string; description: string; links: string[]; image?: string }> = {
   "/": {
@@ -832,7 +839,7 @@ export default async function handler(req: Request): Promise<Response> {
 
       title = toMetaTitle(rawTitle, article.title);
       description = cleanDesc;
-      ogImage = article.og_image_url || OG_FALLBACK_IMAGE;
+      ogImage = article.og_image_url || cardUrl(article.title, article.category, "Notes");
       keywords = `OmpathStudy, study notes Kenya, medical notes, ${article.title || ""}, ${article.category || ""}, clinical revision, exam prep, ${GEO_KEYWORDS}`;
       type = "article";
       schemaJson = JSON.stringify({
@@ -869,7 +876,7 @@ export default async function handler(req: Request): Promise<Response> {
         mcq.meta_description || `Practice ${qCount > 0 ? qCount + " " : ""}MCQs on ${mcq.title}. Review answers, explanations and exam-focused clinical concepts.`,
         `Practice ${qCount > 0 ? qCount + " " : ""}MCQs on ${mcq.title}. Review answers, explanations and exam-focused clinical concepts.`
       );
-      ogImage = OG_FALLBACK_IMAGE;
+      ogImage = mcq.og_image_url || cardUrl(mcq.title, mcq.category, "MCQs");
       keywords = `OmpathStudy, MCQs Kenya, ${mcq.title || ""}, ${mcq.category || ""}, oncology MCQs, pathology MCQs, medical quizzes, exam practice, ${GEO_KEYWORDS}`;
       type = "article";
 
@@ -935,7 +942,7 @@ ${explanationLine}
       description = to160(
         `Study ${cardCount > 0 ? cardCount + " " : ""}flashcards on ${set.title} with OmpathStudy. Quick, focused revision for Kenyan medical and health students by unit and year.`
       );
-      ogImage = OG_FALLBACK_IMAGE;
+      ogImage = cardUrl(set.title, set.category, "Flashcards");
       keywords = `OmpathStudy, flashcards Kenya, ${set.category || ""}, medical revision, nursing revision, exam prep, medical education Kenya`;
       type = "article";
 
