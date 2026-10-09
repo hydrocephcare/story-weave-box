@@ -1543,8 +1543,10 @@
     "unit": "Paediatrics & Child Health",
     "group": "Paediatric assessment",
     "title": "Paediatric History Taking and Physical Examination",
-    "description": "Year 4 MBChB notes on paediatric history, birth and feeding history, growth and development, age-appropriate examination, vital signs, danger signs, OSCE checklist, practice questions and 20 exam-style MCQs with explained answers.",
+    "description": "Pead Series · Week 1: Year 4 MBChB notes on paediatric history, birth and feeding history, growth and development, age-appropriate examination, vital signs, danger signs, OSCE checklist, practice questions and 20 exam-style MCQs with explained answers.",
     "updated": "2026-10-09",
-    "file": "src/content/notes/paediatrics-history-taking-and-examination.md"
+    "file": "src/content/notes/paediatrics-history-taking-and-examination.md",
+    "series": "Pead Series",
+    "week": "Week 1"
   }
 ]
