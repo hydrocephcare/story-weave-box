@@ -416,6 +416,9 @@
   "functions": {
     "api/student-data.js": {
       "includeFiles": "public/data/**"
+    },
+    "api/note-card.js": {
+      "includeFiles": "api/_assets/**"
     }
   }
 }

@@ -8,6 +8,10 @@ import { logSearch } from "@/lib/search";
 import Highlight from "@/components/Highlight";
 import { HitIcon } from "@/components/HitIcon";
 import { OPEN_SEARCH_EVENT } from "@/lib/searchEvents";
+import { openAI } from "@/lib/aiEvents";
+import { useMyYear } from "@/hooks/useMyYear";
+import { parseQuery } from "@/lib/ompathAiQuery";
+import OmpathMark from "@/components/ai/OmpathMark";
 
 
 const RECENT_KEY = "ompath_recent_searches";
@@ -27,7 +31,10 @@ export default function SearchPalette() {
   const [active, setActive] = useState(0);
   const [recent, setRecent] = useState<string[]>([]);
   const listRef = useRef<HTMLDivElement>(null);
-  const { hits, loading, searched } = useSiteSearch(q, {}, open);
+  const { year: myYear } = useMyYear();
+  const { hits, loading, searched } = useSiteSearch(q, { prefer: myYear }, open);
+  const topic = useMemo(() => parseQuery(q).topic || q.trim(), [q]);
+  const askAi = useCallback((question: string) => { setOpen(false); setQ(""); window.setTimeout(() => openAI(question), 60); }, []);
 
   const shown = useMemo(() => hits.slice(0, 24), [hits]);
   const groups = useMemo(() => groupSiteHits(shown), [shown]);
@@ -63,6 +70,7 @@ export default function SearchPalette() {
     else if (e.key === "ArrowUp") { e.preventDefault(); setActive((i) => Math.max(i - 1, 0)); }
     else if (e.key === "Enter") {
       e.preventDefault();
+      if (e.shiftKey && q.trim().length >= 3) { askAi(q.trim()); return; }
       if (flat[active]) go(flat[active]);
       else if (q.trim().length >= 2) { setOpen(false); navigate(`/search?q=${encodeURIComponent(q.trim())}`); }
     }
@@ -106,7 +114,20 @@ export default function SearchPalette() {
               </div>
               <p className="text-xs text-muted-foreground">Type at least two letters — try “pharmacology”, “MBMM 3333” or “anaemia”.</p>
             </div>
-          ) : searched && flat.length === 0 ? (
+          ) : null}
+          {q.trim().length >= 3 && (
+            <div className="mx-3 mb-2 mt-1 rounded-xl border border-primary/25 bg-primary/5 p-2.5">
+              <button type="button" onClick={() => askAi(q.trim())} className="flex w-full items-center gap-3 rounded-lg px-1.5 py-1 text-left hover:bg-primary/10">
+                <OmpathMark className="h-8 w-8 shrink-0" />
+                <span className="min-w-0 flex-1"><span className="block truncate text-sm font-bold text-foreground">Ask Ompath AI: “{q.trim()}”</span><span className="block truncate text-[11px] text-muted-foreground">An answer from the site's own notes. Free if it has been asked before.</span></span>
+                <ArrowRight className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+              </button>
+              <div className="mt-1.5 flex flex-wrap gap-1.5 px-1">
+                {[`10 mcqs on ${topic}`, `Essay questions on ${topic}`, `Explain ${topic}`].map((c) => <button key={c} type="button" onClick={() => askAi(c)} className="rounded-full border border-primary/30 bg-background px-2.5 py-1 text-[11px] font-bold text-primary hover:bg-primary/10">{c.length > 44 ? `${c.slice(0, 43)}…` : c}</button>)}
+              </div>
+            </div>
+          )}
+          {q.trim().length < 2 ? null : searched && flat.length === 0 ? (
             <div className="px-4 py-10 text-center">
               <p className="text-sm font-semibold text-foreground">Nothing found for “{q}”</p>
               <p className="mt-1 text-xs text-muted-foreground">Check the spelling, or try a broader word.</p>
@@ -143,7 +164,7 @@ export default function SearchPalette() {
         </div>
 
         <div className="flex items-center justify-between gap-3 border-t border-border bg-muted/30 px-4 py-2 text-[10px] text-muted-foreground">
-          <span className="flex items-center gap-3"><span><kbd className="font-bold">↑↓</kbd> move</span><span className="flex items-center gap-1"><CornerDownLeft className="h-3 w-3" /> open</span></span>
+          <span className="flex items-center gap-3"><span><kbd className="font-bold">↑↓</kbd> move</span><span className="flex items-center gap-1"><CornerDownLeft className="h-3 w-3" /> open</span><span className="hidden sm:inline"><kbd className="font-bold">⇧↵</kbd> ask AI</span></span>
           {q.trim().length >= 2 && <button type="button" onClick={() => { setOpen(false); navigate(`/search?q=${encodeURIComponent(q.trim())}`); }} className="font-bold text-primary hover:underline">All results &amp; inside notes →</button>}
         </div>
       </DialogContent>

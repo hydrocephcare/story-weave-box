@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ArrowUp, Bookmark, BookOpen, Check, Copy, ExternalLink, History, Loader2, MessageSquarePlus, Search, Square, Mic, LineChart, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
+import { ArrowUp, Bookmark, BookOpen, Check, Copy, ExternalLink, History, FilePlus2, Loader2, MessageSquarePlus, Search, Square, Mic, LineChart, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
 import { HitIcon } from "@/components/HitIcon";
 import DriveFileViewer, { type DriveFile, type DriveKind } from "@/components/DriveFileViewer";
@@ -25,6 +25,8 @@ import { essayIntent, paperIntent, quizIntent } from "@/lib/ompathAiTools";
 import { pharmReply } from "@/lib/ompathAiPharm";
 import { relatedFor } from "@/lib/ompathAiRelated";
 import { reportAiFailure } from "@/lib/aiHealth";
+import { saveAnswerAsDraft } from "@/lib/answerToNote";
+import { toast } from "@/hooks/use-toast";
 import { useFeatures } from "@/lib/features";
 import { UNIVERSITIES, benefitsFor, shortName, useUniversity } from "@/lib/university";
 import { AI_SHARE_TEXT, AI_TITLE, AI_URL } from "@/lib/aiShare";
@@ -363,6 +365,14 @@ export default function OmpathAIHost() {
     navigate(hit.href);
   };
 
+  /** Admin only: the answer becomes a draft note on the site (private until the admin publishes it). */
+  const publishAsNote = async (t: AiTurn) => {
+    try {
+      const { draft } = await saveAnswerAsDraft(t.q, t.answer, t.hits);
+      toast({ title: "Saved as a draft note", description: `“${draft.title}”${draft.category ? ` in ${draft.category}` : ""}. Open Admin → Articles to read it and publish.` });
+    } catch (e) { toast({ title: "Could not save the draft", description: (e as Error).message, variant: "destructive" }); }
+  };
+
   const copy = async (t: AiTurn) => {
     try { await navigator.clipboard.writeText(t.answer); setCopied(t.id); window.setTimeout(() => setCopied(null), 1500); } catch { /* clipboard blocked */ }
   };
@@ -492,6 +502,7 @@ export default function OmpathAIHost() {
                             {t.instant !== "quick" && last && !busy && <button type="button" onClick={() => { dropCached(t.q); void ask(t.q, { fresh: true }); }} className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 hover:bg-muted" aria-label="Answer again" title="Answer again"><RefreshCw className="h-3.5 w-3.5" /></button>}
                             {typeof navigator !== "undefined" && "share" in navigator && t.instant !== "quick" && <button type="button" onClick={() => { void navigator.share({ title: t.q, text: `${t.answer.slice(0, 600)}\n\nOmpath Study`, url: window.location.origin }).catch(() => undefined); }} className="rounded-md p-1 hover:bg-muted" aria-label="Share answer"><Share2 className="h-3.5 w-3.5" /></button>}
                             <button type="button" onClick={() => aiStore.patchTurn(session!.id, t.id, { starred: !t.starred })} aria-pressed={Boolean(t.starred)} aria-label={t.starred ? "Remove from saved" : "Save this answer"} className={`rounded-md p-1 hover:bg-muted ${t.starred ? "text-primary" : ""}`}><Bookmark className={`h-3.5 w-3.5 ${t.starred ? "fill-current" : ""}`} /></button>
+                            {isAdmin && t.grounded && t.answer.length > 200 && <button type="button" onClick={() => void publishAsNote(t)} className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 font-semibold text-primary hover:bg-primary/10" aria-label="Publish as a note on the site" title="Publish as a note on the site (saved as a draft)"><FilePlus2 className="h-3.5 w-3.5" /> Publish as a note</button>}
                             <button type="button" onClick={() => void copy(t)} className="inline-flex items-center gap-1 rounded-md px-1.5 py-1 hover:bg-muted" aria-label="Copy answer">{copied === t.id ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}</button>
                             <button type="button" onClick={() => aiStore.patchTurn(session!.id, t.id, { vote: t.vote === "up" ? undefined : "up" })} aria-pressed={t.vote === "up"} aria-label="Good answer" className={`rounded-md p-1 hover:bg-muted ${t.vote === "up" ? "text-primary" : ""}`}><ThumbsUp className="h-3.5 w-3.5" /></button>
                             <button type="button" onClick={() => { if (t.vote !== "down") { dropCached(t.q); if (t.instant === "saved") void reportShared(t.q); } aiStore.patchTurn(session!.id, t.id, { vote: t.vote === "down" ? undefined : "down" }); }} aria-pressed={t.vote === "down"} aria-label="Bad answer" className={`rounded-md p-1 hover:bg-muted ${t.vote === "down" ? "text-destructive" : ""}`}><ThumbsDown className="h-3.5 w-3.5" /></button>

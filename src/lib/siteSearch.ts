@@ -35,6 +35,9 @@ const rank = (title: string, q: string, terms: string[]) => {
   else if (t.startsWith(q)) s += 40;
   else if (t.includes(q)) s += 25;
   if (terms.every((w) => new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`).test(t))) s += 10;
+  // one-letter words in the query ("hepatitis B", "vitamin D", "type 2") matter: a title that has them as whole words is better, one that lacks them is not
+  const singles = q.split(/[^a-z0-9]+/).filter((w) => w.length === 1);
+  if (singles.length) { const words = new Set(t.split(/[^a-z0-9]+/)); s += singles.every((w) => words.has(w)) ? 12 : -6; }
   return s - Math.min(title.length, 120) / 120;
 };
 
@@ -188,7 +191,9 @@ async function contentHits(query: string, terms: string[], skip: Set<string>, ye
   } catch { return []; }
 }
 
-export interface SiteSearchOptions { year?: string; contentType?: string; deep?: boolean }
+export interface SiteSearchOptions { year?: string; contentType?: string; deep?: boolean;
+  /** The student's own year: results for it are ranked first (others are still shown). */
+  prefer?: number | null }
 
 export async function siteSearch(query: string, opts: SiteSearchOptions = {}): Promise<{ hits: SiteHit[]; related: string[] }> {
   const q = query.trim().toLowerCase();
@@ -203,7 +208,9 @@ export async function siteSearch(query: string, opts: SiteSearchOptions = {}): P
   if (opts.deep) deep = await contentHits(query, terms, new Set(db.hits.map((h) => h.key)), yearNum);
 
   const seen = new Set<string>();
-  const hits = [...db.hits, ...deep, ...files, ...local].filter((h) => (seen.has(h.key) ? false : (seen.add(h.key), true))).sort((a, b) => b.score - a.score);
+  const prefer = opts.prefer && opts.prefer >= 1 && opts.prefer <= 6 ? opts.prefer : null;
+  const boost = (h: SiteHit) => (prefer && new RegExp(`Year ${prefer}\\b`).test(h.subtitle) ? 14 : 0);
+  const hits = [...db.hits, ...deep, ...files, ...local].filter((h) => (seen.has(h.key) ? false : (seen.add(h.key), true))).map((h) => ({ ...h, score: h.score + boost(h) })).sort((a, b) => b.score - a.score);
   return { hits, related: db.related };
 }
 
