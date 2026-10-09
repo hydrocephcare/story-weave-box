@@ -1536,5 +1536,15 @@
       "source": "gyne Cat yr4 21.pdf",
       "driveId": "1QY9WUbkdSrHgEBw_X33LEaLo1tHspNJy"
     }
+  },
+  {
+    "slug": "paediatrics-history-taking-and-examination",
+    "year": 4,
+    "unit": "Paediatrics & Child Health",
+    "group": "Paediatric assessment",
+    "title": "Paediatric History Taking and Physical Examination",
+    "description": "Year 4 MBChB notes on structured paediatric history, birth and feeding history, growth and development, age-appropriate examination, vital signs, danger signs, OSCE checklist and practice questions.",
+    "updated": "2026-10-09",
+    "file": "src/content/notes/paediatrics-history-taking-and-examination.md"
   }
 ]
