@@ -839,7 +839,7 @@ export default async function handler(req: Request): Promise<Response> {
 
       title = toMetaTitle(rawTitle, article.title);
       description = cleanDesc;
-      ogImage = article.og_image_url || cardUrl(article.title, article.category, "Notes");
+      ogImage = article.og_image_url || OG_FALLBACK_IMAGE;
       keywords = `OmpathStudy, study notes Kenya, medical notes, ${article.title || ""}, ${article.category || ""}, clinical revision, exam prep, ${GEO_KEYWORDS}`;
       type = "article";
       schemaJson = JSON.stringify({
@@ -876,7 +876,7 @@ export default async function handler(req: Request): Promise<Response> {
         mcq.meta_description || `Practice ${qCount > 0 ? qCount + " " : ""}MCQs on ${mcq.title}. Review answers, explanations and exam-focused clinical concepts.`,
         `Practice ${qCount > 0 ? qCount + " " : ""}MCQs on ${mcq.title}. Review answers, explanations and exam-focused clinical concepts.`
       );
-      ogImage = mcq.og_image_url || cardUrl(mcq.title, mcq.category, "MCQs");
+      ogImage = OG_FALLBACK_IMAGE;
       keywords = `OmpathStudy, MCQs Kenya, ${mcq.title || ""}, ${mcq.category || ""}, oncology MCQs, pathology MCQs, medical quizzes, exam practice, ${GEO_KEYWORDS}`;
       type = "article";
 
@@ -942,7 +942,7 @@ ${explanationLine}
       description = to160(
         `Study ${cardCount > 0 ? cardCount + " " : ""}flashcards on ${set.title} with OmpathStudy. Quick, focused revision for Kenyan medical and health students by unit and year.`
       );
-      ogImage = cardUrl(set.title, set.category, "Flashcards");
+      ogImage = OG_FALLBACK_IMAGE;
       keywords = `OmpathStudy, flashcards Kenya, ${set.category || ""}, medical revision, nursing revision, exam prep, medical education Kenya`;
       type = "article";
 
