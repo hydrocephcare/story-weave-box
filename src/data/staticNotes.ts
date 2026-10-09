@@ -34,7 +34,7 @@ export interface PaperMeta {
   driveId: string | null;
 }
 
-export interface StaticNote { slug: string; year: number; unit: string; group?: string; /** id of the matching condition in the pharmacology guide */ condition?: string; title: string; description: string; updated: string; file: string; paper?: PaperMeta }
+export interface StaticNote { slug: string; year: number; unit: string; group?: string; /** Series label shown above the note title. */ series?: string; /** Week within a teaching series. */ week?: string; /** id of the matching condition in the pharmacology guide */ condition?: string; title: string; description: string; updated: string; file: string; paper?: PaperMeta }
 
 export const STATIC_NOTES = meta as StaticNote[];
 
