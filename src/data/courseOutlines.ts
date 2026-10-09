@@ -9,6 +9,8 @@ export interface OutlineItem {
   week?: string;
   detail?: string;
   lecturer?: string;
+  /** Direct link to a published study note for this outline topic. */
+  noteSlug?: string;
   /** Set on checklist items built from a library file: opens that file in the viewer. */
   file?: [id: string, name: string, kind: "pdf" | "ppt" | "doc" | "video" | "img" | "zip" | "file"];
 }
