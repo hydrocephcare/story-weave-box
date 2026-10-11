@@ -20,6 +20,16 @@
     "file": "src/content/notes/psychiatry-introduction-to-psychopathology.md"
   },
   {
+    "slug": "dictionary-of-psychopathology",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Introduction to psychiatry",
+    "title": "Dictionary of Psychopathology",
+    "description": "Year 4 psychiatry reference: 80+ psychopathology terms defined in plain words and grouped by mood and affect, form and content of thought, perception, movement and behaviour, and memory and insight, with practice questions and MCQs.",
+    "updated": "2026-10-11",
+    "file": "src/content/notes/psychiatry-dictionary-of-psychopathology.md"
+  },
+  {
     "slug": "biopsychosocial-formulation",
     "year": 4,
     "unit": "Mental Health/Psychiatry",
