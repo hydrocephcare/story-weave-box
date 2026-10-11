@@ -298,7 +298,18 @@ const surgery: CourseOutline = {
   ],
 };
 
-export const COURSE_OUTLINES: CourseOutline[] = [psychiatry, internalMedicine, surgery, pharmacology, ...MORE_OUTLINES];
+/** Study notes on the site for Year 4 Psychiatry topics (outline item id to note slug), so each topic opens its note. */
+const PSYCHIATRY_NOTES: Record<string, string> = {
+  "psy-s1-02": "classification-of-mental-disorders",
+  "psy-s1-05": "fundamentals-of-psychopathology",
+  "psy-s1-06": "biopsychosocial-formulation",
+  "psy-s2-18": "psychological-therapies-and-non-pharmacological-interventions",
+  "psy-s2-19": "psychological-therapies-and-non-pharmacological-interventions",
+  "psy-s2-20": "psychological-therapies-and-non-pharmacological-interventions",
+};
+const withPsychiatryNotes = (o: CourseOutline): CourseOutline => (o.id !== "psychiatry" ? o : { ...o, sections: o.sections.map((sec) => ({ ...sec, items: sec.items.map((it) => (PSYCHIATRY_NOTES[it.id] && !it.noteSlug ? { ...it, noteSlug: PSYCHIATRY_NOTES[it.id] } : it)) })) });
+
+export const COURSE_OUTLINES: CourseOutline[] = [psychiatry, internalMedicine, surgery, pharmacology, ...MORE_OUTLINES].map(withPsychiatryNotes);
 
 const norm = (value: string) => value.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, " ").trim();
 

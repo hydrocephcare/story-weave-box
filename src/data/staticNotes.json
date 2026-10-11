@@ -30,6 +30,36 @@
     "file": "src/content/notes/psychiatry-dictionary-of-psychopathology.md"
   },
   {
+    "slug": "fundamentals-of-psychopathology",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Introduction to psychiatry",
+    "title": "Fundamentals of Psychopathology",
+    "description": "Year 4 psychiatry lecture notes (Dr Linet Kendi, MKU): phenomenology, classification, signs symptoms and syndromes, disorders of thought, perception, mood, psychomotor behaviour, speech, memory and cognition, DSM-5-TR and ICD-11, with practice questions and MCQs.",
+    "updated": "2026-10-11",
+    "file": "src/content/notes/psychiatry-fundamentals-of-psychopathology.md"
+  },
+  {
+    "slug": "psychological-therapies-and-non-pharmacological-interventions",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Treatment",
+    "title": "Psychological Therapies and Non-Pharmacological Interventions",
+    "description": "Year 4 psychiatry notes on CBT, behaviour therapy, IPT, psychodynamic, family and group therapy, motivational interviewing, mindfulness, relaxation, occupational and community approaches, with what each targets, plus practice questions and MCQs.",
+    "updated": "2026-10-11",
+    "file": "src/content/notes/psychiatry-psychological-therapies.md"
+  },
+  {
+    "slug": "psychiatry-mku-curriculum-year-4",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Course information",
+    "title": "Psychiatry and Mental Health Curriculum: Year 4 (MKU)",
+    "description": "The MKU Year 4 Junior Clerkship in Psychiatry and Mental Health: unit codes MBPS 4537 and 4539, learning outcomes, course outline, clinical processes, assessment (30/10/60) and reading list.",
+    "updated": "2026-10-11",
+    "file": "src/content/notes/psychiatry-mku-curriculum-year-4.md"
+  },
+  {
     "slug": "biopsychosocial-formulation",
     "year": 4,
     "unit": "Mental Health/Psychiatry",
