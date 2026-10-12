@@ -3,7 +3,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Search } from "lucide-react";
 import LoadMoreButton from "@/components/LoadMoreButton";
-import { DOMAIN_STYLE, topicPath, useTopicIndex } from "@/lib/topics";
+import { DOMAIN_STYLE, slugFromName, topicPath, useTopicIndex } from "@/lib/topics";
 import { cn } from "@/lib/utils";
 
 /** /topics: every subject the library covers, one page each. Search, filter by subject, or browse A to Z. */
@@ -53,7 +53,16 @@ export default function TopicsIndex() {
       </div>
 
       {items === null && <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{Array.from({ length: 9 }).map((_, i) => <div key={i} className="h-24 animate-pulse rounded-2xl bg-muted" />)}</div>}
-      {items && list.length === 0 && <p className="mt-8 rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted-foreground">No topic matches “{q}”. <Link to={`/search?q=${encodeURIComponent(q)}`} className="font-bold text-primary hover:underline">Search the whole site</Link>.</p>}
+      {items && list.length === 0 && (
+        <div className="mt-8 rounded-2xl border border-dashed border-primary/40 bg-primary/5 p-6 text-center">
+          <p className="font-serif text-lg font-bold">No page on “{q}” yet</p>
+          <p className="mt-1 text-sm text-muted-foreground">If it is a medical topic, we can write the page now. It takes under a minute, and everyone gets it after that.</p>
+          <div className="mt-4 flex flex-wrap justify-center gap-2">
+            {slugFromName(q).length >= 3 && <Link to={topicPath(slugFromName(q))} className="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">Write the page on {q}</Link>}
+            <Link to={`/search?q=${encodeURIComponent(q)}`} className="rounded-lg border border-border px-4 py-2 text-sm font-bold">Search the whole site</Link>
+          </div>
+        </div>
+      )}
       <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {list.slice(0, shown).map((t) => {
           const st = DOMAIN_STYLE[t.c] ?? DOMAIN_STYLE.Medicine;

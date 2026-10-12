@@ -13,14 +13,14 @@ export function prerenderTopics({ fs, path, root, esc, shell, crumbs, write, ren
     if (!fs.existsSync(file)) continue;
     const t = JSON.parse(fs.readFileSync(file, "utf8"));
     const title = `${t.n}: notes, images and practice questions | Ompath Study`;
-    const description = (t.ai?.overview || t.lead?.t || `Everything on ${t.n} from Ompath Study: notes, images, practice questions and related topics.`).slice(0, 155);
+    const description = (t.ai?.summary || t.lead?.t || `Everything on ${t.n} from Ompath Study: notes, images, practice questions and related topics.`).slice(0, 155);
     const path1 = `/topic/${t.s}`;
     const parts = [
       crumbs([["Home", "/"], ["Topics", "/topics"], [t.n, null]]),
       `<h1>${esc(t.n)}</h1>`,
       t.a?.length ? `<p>Also written as ${t.a.map(esc).join(", ")}.</p>` : "",
       t.lead ? `<p>${esc(t.lead.t)}</p>` : "",
-      t.ai ? `<h2>Overview</h2><p>${esc(t.ai.overview)}</p>${t.ai.key?.length ? li(t.ai.key.map(esc)) : ""}` : "",
+      t.ai ? `<p>${esc(t.ai.summary)}</p>${(t.ai.sections ?? []).map((x) => `<h2>${esc(x.h)}</h2>${x.p ? `<p>${esc(x.p)}</p>` : ""}${x.b?.length ? li(x.b.map(esc)) : ""}`).join("")}${t.ai.whenToSeekHelp?.length ? `<h2>When to seek help</h2>${li(t.ai.whenToSeekHelp.map(esc))}` : ""}${t.ai.faq?.length ? `<h2>Quick questions</h2>${t.ai.faq.map((q) => `<h3>${esc(q.q)}</h3><p>${esc(q.a)}</p>`).join("")}` : ""}` : "",
       t.rx ? `<h2>Treatment at a glance</h2>${li(t.rx.first.map(esc))}` : "",
       ...(t.sec ?? []).map((s) => `<h2>${esc(s.h)}</h2>${li(s.b.map(esc))}<p>${link(s.u, `Read this in ${s.s}`)}</p>`),
       t.snip?.length ? `<h2>What our notes say</h2>${li(t.snip.slice(0, 6).map((s) => `${esc(s.t)} (${link(s.u, s.s)})`))}` : "",
@@ -29,7 +29,10 @@ export function prerenderTopics({ fs, path, root, esc, shell, crumbs, write, ren
       t.qs?.length ? `<h2>Practice questions on ${esc(t.n)}</h2>${t.qs.slice(0, 6).map((q) => `<h3>${esc(q.q)}</h3>${li(q.o.map(esc))}<p><strong>Answer: ${"ABCDE"[q.a]}.</strong> ${esc(q.e || "")}</p>`).join("")}` : "",
       t.rel?.length ? `<h2>Related topics</h2>${li(t.rel.map((r) => link(`/topic/${r.s}`, r.n)))}` : "",
     ].filter(Boolean);
-    const faq = (t.qs ?? []).filter((q) => q.e).slice(0, 5).map((q) => ({ "@type": "Question", name: q.q, acceptedAnswer: { "@type": "Answer", text: `${q.o[q.a]}. ${q.e}` } }));
+    const faq = [
+      ...(t.ai?.faq ?? []).map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+      ...(t.qs ?? []).filter((q) => q.e).slice(0, 3).map((q) => ({ "@type": "Question", name: q.q, acceptedAnswer: { "@type": "Answer", text: `${q.o[q.a]}. ${q.e}` } })),
+    ].slice(0, 6);
     const jsonLd = [
       { "@context": "https://schema.org", "@type": "WebPage", name: title, url: `https://www.ompathstudy.com${path1}`, about: { "@type": "MedicalEntity", name: t.n }, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: "https://www.ompathstudy.com" } },
       ...(faq.length ? [{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq }] : []),

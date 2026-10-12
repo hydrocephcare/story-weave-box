@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { BookOpen as TopicIcon } from "lucide-react";
-import { topicPath, useTopicIndex } from "@/lib/topics";
+import { slugFromName, topicPath, useTopicIndex } from "@/lib/topics";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Search, Sparkles } from "lucide-react";
 import { openAI } from "@/lib/aiEvents";
@@ -98,6 +98,12 @@ export default function GlobalSearch() {
             </Link>
           ))}
         </div>
+      )}
+      {topicIndex && topicHits.length === 0 && q.trim().length >= 4 && /^[A-Za-z][A-Za-z0-9 '’()\-,./&]{3,70}$/.test(q.trim()) && (
+        <Link to={topicPath(slugFromName(q.trim()))} className="mt-4 flex items-center gap-3 rounded-xl border border-dashed border-emerald-500/50 px-4 py-3 transition-colors hover:bg-emerald-500/5">
+          <TopicIcon className="h-5 w-5 shrink-0 text-emerald-600" aria-hidden="true" />
+          <span className="min-w-0 flex-1 text-sm"><strong className="block text-foreground">Write a page on “{q.trim().slice(0, 50)}”</strong><span className="text-xs text-muted-foreground">If it is a medical topic, a full page is built in under a minute and kept for everyone.</span></span>
+        </Link>
       )}
       {q.trim().length >= 2 && (
         <button type="button" onClick={() => openAI(q.trim())} className="mt-4 flex w-full items-center gap-3 rounded-xl border border-primary/30 bg-primary/5 px-4 py-3 text-left transition-colors hover:bg-primary/10">

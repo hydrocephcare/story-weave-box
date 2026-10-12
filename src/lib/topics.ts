@@ -1,6 +1,7 @@
 // Topic pages: /topic/<slug> gathers everything the site teaches about one subject (a disease, a bone, a process) onto one page.
 // The files are built from the notes, MCQs and essays by scripts/topics/build-topics.mjs and served from /topics/.
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 export interface TopicIndexItem { s: string; n: string; c: string; y: number[]; d: number; q: number; i: number; a: string[]; ai: number }
 export interface TopicSource { t: string; u: string; k: "note" | "article"; y: number | null; n: string; m: number }
@@ -9,12 +10,25 @@ export interface TopicSnippet { t: string; u: string; s: string }
 export interface TopicImage { u: string; a: string; p: string; s: string }
 export interface TopicQuestion { q: string; o: string[]; a: number; e: string; u: string; s: string }
 export interface TopicEssay { q: string; m: string; k: number | null; u: string; s: string }
+/** A full write-up of a topic: written by AI from the site's own notes plus standard medical knowledge, saved once, shown to everyone. */
+export interface AiPage {
+  summary: string;
+  aka?: string[];
+  sections: { h: string; p?: string; b?: string[] }[];
+  whenToSeekHelp?: string[];
+  faq?: { q: string; a: string }[];
+  related?: string[];
+  kind?: string;
+  model?: string;
+  generatedAt?: string;
+  reviewed?: boolean;
+}
 export interface Topic {
   s: string; n: string; c: string; y: number[]; a: string[]; docs: number;
   lead: TopicSnippet | null; sec?: { h: string; b: string[]; u: string; s: string }[]; src: TopicSource[]; sets: TopicSet[]; snip: TopicSnippet[]; imgs: TopicImage[]; qs: TopicQuestion[]; es: TopicEssay[];
   rel: { s: string; n: string }[];
   rx: { id: string; name: string; first: string[] } | null;
-  ai: { overview: string; key?: string[]; pearls?: string[]; traps?: string[]; on?: string; reviewed: boolean } | null;
+  ai: AiPage | null;
 }
 
 export const topicPath = (slug: string) => `/topic/${slug}`;
@@ -75,3 +89,92 @@ export const DOMAIN_STYLE: Record<string, { hue: string; label: string }> = {
   "Public health": { hue: "from-teal-600 to-green-500", label: "Public health" },
   Medicine: { hue: "from-blue-600 to-indigo-500", label: "Medicine" },
 };
+
+// ------------------------------------------------------------------------------------------------------------------------------------
+// The full page: what the site has (built at deploy time), what AI has already written and saved, and, when neither is enough, asking
+// the server to write it now. The reader never waits on a blank screen: the site's own material is shown at once and the rest slots in.
+
+export type TopicPhase = "loading" | "ready" | "writing" | "unavailable" | "failed" | "rejected" | "missing";
+const deslug = (slug: string) => decodeURIComponent(slug).replace(/-/g, " ").replace(/\b([a-z])/g, (m) => m.toUpperCase());
+export const slugFromName = (name: string) => name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+
+async function loadStoredPage(slug: string): Promise<AiPage | null> {
+  try {
+    const { data } = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").select("content,reviewed").eq("slug", slug).eq("status", "published").maybeSingle();
+    return data?.content ? { ...(data.content as AiPage), reviewed: Boolean(data.reviewed) } : null;
+  } catch { return null; }
+}
+
+type Ask = { status: "published"; page: AiPage } | { status: "generating" | "unavailable" | "busy" | "failed" | "rejected" };
+async function askServer(name: string, category: string, context: string): Promise<Ask> {
+  try {
+    const r = await fetch("/api/topic-ai", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ name, category, context }) });
+    const j = (await r.json().catch(() => ({}))) as { status?: string; page?: AiPage };
+    if (j.status === "published" && j.page) return { status: "published", page: j.page };
+    if (j.status === "generating" || j.status === "busy" || j.status === "rejected" || j.status === "unavailable") return { status: j.status };
+    return { status: "failed" };
+  } catch { return { status: "failed" }; }
+}
+
+const TRIED = "ompath_topic_tried";
+const recentlyTried = (slug: string) => { try { const m = JSON.parse(sessionStorage.getItem(TRIED) ?? "{}") as Record<string, number>; return Date.now() - (m[slug] ?? 0) < 4 * 60_000; } catch { return false; } };
+const markTried = (slug: string) => { try { const m = JSON.parse(sessionStorage.getItem(TRIED) ?? "{}") as Record<string, number>; m[slug] = Date.now(); sessionStorage.setItem(TRIED, JSON.stringify(m)); } catch { /* storage blocked */ } };
+
+/** Everything a topic page needs. `fresh` turns true when the full write-up arrives while the reader is already looking at the page. */
+export function useTopicPage(slug: string) {
+  const [topic, setTopic] = useState<Topic | null>(null);
+  const [page, setPage] = useState<AiPage | null>(null);
+  const [phase, setPhase] = useState<TopicPhase>("loading");
+  const [fresh, setFresh] = useState(false);
+  const [redirectTo, setRedirectTo] = useState<string | null>(null);
+  const [attempt, setAttempt] = useState(0);
+  const [asking, setAsking] = useState(false);
+  const alive = useRef(true);
+  useEffect(() => { alive.current = true; return () => { alive.current = false; }; }, []);
+
+  useEffect(() => {
+    let on = true;
+    setTopic(null); setPage(null); setPhase("loading"); setFresh(false); setRedirectTo(null);
+    void (async () => {
+      let t = await loadTopic(slug);
+      if (!on) return;
+      if (!t) {
+        const target = await resolveTopicSlug(slug);
+        if (!on) return;
+        if (target && target !== slug) { setRedirectTo(target); return; }
+      }
+      setTopic(t);
+      const stored = await loadStoredPage(slug);
+      if (!on) return;
+      const have = stored ?? t?.ai ?? null;
+      if (have) { setPage(have); setPhase("ready"); return; }
+
+      // nothing written yet: show what the site has straight away, and write the rest in the background
+      setPhase(t ? "ready" : "writing");
+      if (attempt === 0 && recentlyTried(slug)) { setPhase(t ? "ready" : "failed"); return; }
+      markTried(slug);
+      const name = t?.n ?? deslug(slug);
+      const category = t?.c ?? "";
+      const context = t ? [t.lead?.t, ...(t.sec ?? []).flatMap((s) => [s.h, ...s.b]), ...t.snip.map((s) => s.t)].filter(Boolean).join("\n") : "";
+      setAsking(true);
+      try {
+      for (let i = 0; i < 16 && on; i++) {
+        const res = await askServer(name, category, context);
+        if (!on) return;
+        if (res.status === "published") { setPage(res.page); setPhase("ready"); setFresh(Boolean(t)); return; }
+        if (res.status === "generating") { await new Promise((r) => setTimeout(r, 4000)); continue; }
+        if (res.status === "rejected") { setPhase(t ? "ready" : "rejected"); return; }
+        setPhase(t ? "ready" : res.status === "unavailable" ? "unavailable" : "failed");
+        if (t) setFresh(false);
+        return;
+      }
+      setPhase(t ? "ready" : "failed");
+      } finally { if (on) setAsking(false); }
+    })();
+    return () => { on = false; };
+  }, [slug, attempt]);
+
+  const retry = useCallback(() => { try { const m = JSON.parse(sessionStorage.getItem(TRIED) ?? "{}") as Record<string, number>; delete m[slug]; sessionStorage.setItem(TRIED, JSON.stringify(m)); } catch { /* ignore */ } setAttempt((a) => a + 1); }, [slug]);
+  const writing = asking;
+  return { topic, page, phase, fresh, redirectTo, retry, writing, name: topic?.n ?? deslug(slug) };
+}

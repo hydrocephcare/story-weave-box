@@ -38,3 +38,19 @@ doctor has checked one, set `"reviewed": true` in its file and the warning disap
 
 `src/components/AccessibilityTools.tsx` is the faint tab on the left edge of every page: text size, line spacing, an easy-read font, high
 contrast, underlined links, stop motion, read aloud (this page or the selected text) and a translate menu. Choices are remembered on the device.
+
+## Pages written on demand (the "AI fills the gaps" part)
+
+When someone opens a topic the library has little on (or one with no page at all, for example `/topic/lupus-nephritis`), the page shows what the
+site has straight away and asks `api/topic-ai.js` to write the rest. The answer is saved in the `topic_pages` table, so the model is asked **once per
+topic**: the next reader gets the saved page instantly. While it is being written, the page says so, and updates itself when the write-up arrives.
+
+If anything fails (no keys, the model is down, the daily limit is reached) the reader still sees the site's own material plus a "try again" button.
+A topic the model says is not medical is remembered as rejected and never asked again.
+
+Switch it on (once):
+1. Run `supabase/migrations/20261012180000_topic_pages.sql` in Lovable (creates the table).
+2. In Vercel > Settings > Environment Variables add `ANTHROPIC_API_KEY` and `SUPABASE_SERVICE_ROLE_KEY` (the database address is already there). Redeploy.
+3. Optional: `TOPIC_AI_DAILY_CAP` (default 150 new pages a day) and `ANTHROPIC_MODEL`.
+
+To correct or approve a page, edit its row in `topic_pages` (set `reviewed` to true when a doctor has checked it) or delete the row to have it rewritten.

@@ -307,7 +307,7 @@ topics.forEach((t, i) => {
     sec: sections.get(t.slug).sort((a, b) => a.rank - b.rank || b.len - a.len).slice(0, 4).map((x) => ({ h: x.h, b: x.b, u: x.u, s: x.s })),
     src: sources, sets, snip, imgs, qs, es, rel,
     rx: cond ? { id: cond.id, name: cond.name, first: cond.first.slice(0, 3) } : null,
-    ai: ai ? { overview: ai.overview, key: ai.keyPoints, pearls: ai.pearls, traps: ai.examTraps, on: ai.generatedAt, reviewed: Boolean(ai.reviewed) } : null,
+    ai: ai ? { ...ai, reviewed: Boolean(ai.reviewed) } : null,
   };
   fs.writeFileSync(path.join(OUT, `${t.slug}.json`), JSON.stringify(body));
   index.push({ s: t.slug, n: t.name, c: domain, y: years, d: t.nd, q: qs.length + es.length, i: imgs.length, a: acr, ai: ai ? 1 : 0 });

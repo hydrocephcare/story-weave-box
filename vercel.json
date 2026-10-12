@@ -419,6 +419,9 @@
     },
     "api/note-card.js": {
       "includeFiles": "api/_assets/**"
+    },
+    "api/topic-ai.js": {
+      "maxDuration": 60
     }
   }
 }
