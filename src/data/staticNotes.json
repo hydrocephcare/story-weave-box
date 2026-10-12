@@ -1,5 +1,15 @@
 [
   {
+    "slug": "introduction-to-psychiatry",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Introduction to psychiatry",
+    "title": "Introduction to Psychiatry",
+    "description": "Concise Year 4 foundation notes: what psychiatry and mental health mean, the role of psychiatric assessment, and core clinical principles. Links to existing psychopathology and biopsychosocial notes to avoid duplication.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/psychiatry-introduction-to-psychiatry.md"
+  },
+  {
     "slug": "classification-of-mental-disorders",
     "year": 4,
     "unit": "Mental Health/Psychiatry",
