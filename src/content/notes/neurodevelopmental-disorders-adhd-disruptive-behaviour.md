@@ -1,3 +1,60 @@
+## Start here: ADHD explained from zero
+
+Before memorising the medical words, understand the everyday examples.
+
+### What is ADHD?
+
+Imagine a teacher asks a child to sit down, listen and finish classwork. The child repeatedly gets distracted, keeps moving, interrupts and leaves work unfinished. Similar problems happen at home and affect daily life.
+
+**ADHD** means *Attention-Deficit/Hyperactivity Disorder*. It describes a persistent pattern of difficulty with attention and/or excessive activity and acting without pausing to think. It is not proof that a child is lazy, unintelligent or deliberately naughty.
+
+### The three words you must understand
+
+**1. Inattention = difficulty focusing**
+
+Example: the child starts homework, notices something else, forgets the instruction and leaves the work unfinished.
+
+Think: **“I find it hard to keep my mind on this task.”**
+
+**2. Hyperactivity = excessive movement or activity**
+
+Example: the child fidgets, keeps getting out of their seat or struggles to play quietly when expected.
+
+Think: **“My body keeps moving.”**
+
+**3. Impulsivity = acting before pausing to think**
+
+Example: the child shouts an answer before the teacher finishes the question or repeatedly interrupts others.
+
+Think: **“I act before I stop to think.”**
+
+Not every child with ADHD has all three kinds of difficulty. Some mainly struggle with attention; others mainly show hyperactivity and impulsivity; some have both groups.
+
+### Does every active or distracted child have ADHD?
+
+**No.** Children can be active, tired, worried or distracted sometimes. Clinicians look for a persistent pattern that is not expected for the child's developmental level and that causes real problems in daily life.
+
+For a child, remember these checks:
+- Symptoms generally persist for **at least 6 months**.
+- Several symptoms were present **before age 12**.
+- Symptoms occur in **at least two settings**, such as home and school.
+- Symptoms clearly affect learning, relationships or daily functioning.
+- The clinician considers other explanations, including poor sleep, anxiety, learning difficulties, hearing problems or stressful experiences.
+
+A teacher's report or checklist can help, but neither alone confirms ADHD.
+
+### Quick understanding check
+
+A 9-year-old repeatedly answers before the teacher finishes asking a question. Which word describes this behaviour?
+
+- **Inattention:** difficulty keeping focus.
+- **Hyperactivity:** excessive movement or activity.
+- **Impulsivity:** acting or speaking before pausing to think.
+
+**Answer: Impulsivity.** The child is answering before stopping to think.
+
+---
+
 # Neurodevelopmental Disorders II: ADHD and Disruptive Behaviour — Year 4 Psychiatry
 
 *MKU MBChB Year 4 · Junior Clerkship · Week 7 · Clinical revision notes*
