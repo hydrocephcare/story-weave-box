@@ -13,7 +13,7 @@ export default function StaticNotesIndex() {
   const [params] = useSearchParams();
   const yearFilter = Number(params.get("year")) || null;
   const [q, setQ] = useState("");
-  useEffect(() => { updateMetaTags({ title: "Year 4 Study Notes: Psychiatry and Respiratory Medicine | Ompath Study", description: "Study notes by year and unit: psychiatry (classification, psychopathology, formulation, bipolar disorder) and respiratory medicine (pneumonia, asthma, COPD, lung cancer and more), each with practice questions." }); }, []);
+  useEffect(() => { updateMetaTags({ title: "Medical Study Notes and Question Banks by Year and Unit | Ompath Study", description: "Study notes by year and unit: psychiatry (classification, psychopathology, formulation, bipolar disorder) and respiratory medicine (pneumonia, asthma, COPD, lung cancer and more), each with practice questions." }); }, []);
 
   const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
   const years = useMemo(() => {

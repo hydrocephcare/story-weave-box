@@ -1650,5 +1650,45 @@
     "description": "MKU MBChB Year 4 Psychiatry Week 6 notes: ASD diagnostic domains, intellectual disability, developmental red flags, focused developmental history, assessment, differentials, multidisciplinary management, a clinical case and MCQs.",
     "updated": "2026-10-12",
     "file": "src/content/notes/neurodevelopmental-disorders-autism-intellectual-disability.md"
+  },
+  {
+    "slug": "question-bank-paediatrics",
+    "year": 4,
+    "unit": "Paediatrics & Child Health",
+    "group": "Question bank",
+    "title": "Paediatrics Question Bank: 12 Clinical MCQs",
+    "description": "12 single-best-answer paediatrics MCQs with explanations: neonatal jaundice, dehydration, pneumonia, malnutrition, febrile seizures, congenital heart disease, nephrotic syndrome, immunisation, measles and sickle cell disease.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/question-bank-paediatrics.md"
+  },
+  {
+    "slug": "question-bank-obstetrics-gynaecology",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Question bank",
+    "title": "Obstetrics and Gynaecology Question Bank: 12 Clinical MCQs",
+    "description": "12 single-best-answer obstetrics and gynaecology MCQs with explanations: pre-eclampsia, postpartum haemorrhage, ectopic pregnancy, gestational diabetes, labour, pelvic inflammatory disease, contraception and cervical screening.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/question-bank-obstetrics-gynaecology.md"
+  },
+  {
+    "slug": "question-bank-surgery",
+    "year": 4,
+    "unit": "Surgery",
+    "group": "Question bank",
+    "title": "Surgery Question Bank: 12 Clinical MCQs",
+    "description": "12 single-best-answer surgery MCQs with explanations: appendicitis, trauma priorities, tamponade, bowel obstruction, breast lumps, thyroglossal cyst, burns, hernia, perforated ulcer and wound infection.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/question-bank-surgery.md"
+  },
+  {
+    "slug": "question-bank-endocrine-gi",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Question bank",
+    "title": "Endocrinology and Gastroenterology Question Bank: 12 Clinical MCQs",
+    "description": "12 single-best-answer MCQs with explanations: diabetic ketoacidosis, Graves disease, hypothyroidism, adrenal crisis, variceal bleeding, hepatitis, ulcerative colitis, coeliac disease and spontaneous bacterial peritonitis.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/question-bank-endocrine-gi.md"
   }
 ]

@@ -168,7 +168,7 @@ try {
     }).join("");
     const idxDesc = `${indexed.length} study notes by year and unit: psychiatry (classification, psychopathology, formulation, bipolar disorder) and respiratory medicine (pneumonia, asthma, COPD, lung cancer and more), each with practice questions.`;
     write("/notes", render({
-      title: `Study Notes by Year and Unit: Psychiatry and Respiratory Medicine | ${registry.brand}`, description: idxDesc, path: "/notes", image: "/og-default.jpg",
+      title: `Medical Study Notes and Question Banks by Year and Unit | ${registry.brand}`, description: idxDesc, path: "/notes", image: "/og-default.jpg",
       keywords: ["Year 4 notes", "psychiatry notes", "respiratory medicine notes", "MBChB study notes", "MBBS study notes"],
       body: shell(crumbs([["Home", "/"], ["Notes", null]]) + `<h1>Study notes</h1><p>${esc(idxDesc)}</p>${idxBody}` + credit),
       jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: "Study notes", description: idxDesc, url: `${site}/notes`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
