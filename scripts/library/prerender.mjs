@@ -154,7 +154,7 @@ try {
       const title = `${n.title} — Year ${n.year} ${n.unit} Notes | ${registry.brand}`;
       write(notePath, render({
         title, description: n.description, path: notePath, image: "/og-default.jpg",
-        keywords: [n.title, `${n.unit} notes`, `Year ${n.year} MBChB`, "MKU psychiatry notes", "medical student notes Kenya"],
+        keywords: [n.title, `${n.unit} notes`, `Year ${n.year} MBChB`, "MKU psychiatry notes", "medical student notes"],
         body: shell(crumbs([["Home", "/"], [`Year ${n.year}`, `/year/${n.year}`], [n.unit, null]]) + `<h1>${esc(n.title)}</h1><p>${esc(n.description)}</p>${pharmHtml}<article>${noteHtml}</article>${n.paper ? "<p><em>Model answers are on the page for subscribers.</em></p>" : ""}${sibHtml}` + credit),
         jsonLd: { "@context": "https://schema.org", "@type": "LearningResource", name: n.title, description: n.description, url: `${site}${notePath}`, dateModified: n.updated, inLanguage: "en", educationalLevel: `Year ${n.year} MBChB`, teaches: n.unit, author: { "@type": "Person", name: "Abongo Davis" }, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
       }), n.updated);
@@ -169,7 +169,7 @@ try {
     const idxDesc = `${indexed.length} study notes by year and unit: psychiatry (classification, psychopathology, formulation, bipolar disorder) and respiratory medicine (pneumonia, asthma, COPD, lung cancer and more), each with practice questions.`;
     write("/notes", render({
       title: `Study Notes by Year and Unit: Psychiatry and Respiratory Medicine | ${registry.brand}`, description: idxDesc, path: "/notes", image: "/og-default.jpg",
-      keywords: ["Year 4 notes", "psychiatry notes", "respiratory medicine notes", "MBChB study notes", "MKU notes"],
+      keywords: ["Year 4 notes", "psychiatry notes", "respiratory medicine notes", "MBChB study notes", "MBBS study notes"],
       body: shell(crumbs([["Home", "/"], ["Notes", null]]) + `<h1>Study notes</h1><p>${esc(idxDesc)}</p>${idxBody}` + credit),
       jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: "Study notes", description: idxDesc, url: `${site}/notes`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
     }), notes[0]?.updated);
@@ -185,8 +185,8 @@ try {
       }).join("") + (papers.some((n) => !n.paper.trimester) ? `<h2>Undated papers</h2><ul>${papers.filter((n) => !n.paper.trimester).map((n) => `<li><a href="/notes/${n.slug}">${esc(n.title)}</a></li>`).join("")}</ul>` : "");
       const pDesc = `${papers.length} Mount Kenya University MBChB past papers (CATs and end-of-year exams) sorted by trimester and month, each with model answers for subscribers, plus the topics each unit's papers have asked from the course outline.`;
       write("/papers", render({
-        title: `MKU MBChB Past Papers by Trimester with Answers | ${registry.brand}`, description: pDesc, path: "/papers", image: "/og-default.jpg",
-        keywords: ["MKU past papers", "MBChB past papers", "Obstetrics and Gynaecology CAT", "Year 4 CAT with answers", "Mount Kenya University exams"],
+        title: `Medical Past Papers and CATs with Answers | ${registry.brand}`, description: pDesc, path: "/papers", image: "/og-default.jpg",
+        keywords: ["medical past papers", "MBBS past papers", "MBChB past papers", "MKU past papers", "Obstetrics and Gynaecology CAT", "Year 4 CAT with answers", "Mount Kenya University exams"],
         body: shell(crumbs([["Home", "/"], ["Past papers", null]]) + `<h1>Past papers</h1><p>${esc(pDesc)}</p>${pBody}` + credit),
         jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: "Past papers", description: pDesc, url: `${site}/papers`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
       }), papers.map((n) => n.updated).sort().pop());
@@ -205,7 +205,7 @@ try {
     const shelfList = books.shelves.map((sh) => `<li><a href="/books/${sh.key}">${esc(sh.label)}</a> — ${esc(sh.blurb)} (${unique(sh.subjects.flatMap((x) => x.b))} books)</li>`).join("");
     write("/books", render({
       title: `Medical Books by Year and Subject, MBChB Years 1–6 | ${registry.brand}`, description: topDesc, path: "/books", image,
-      keywords: ["medical books", "MBChB textbooks", "medical student books Kenya", "anatomy atlas", "Kumar and Clark", "Nelson paediatrics", "MKU reference books"],
+      keywords: ["medical books", "MBChB textbooks", "medical student books", "anatomy atlas", "Kumar and Clark", "Nelson paediatrics", "MKU reference books"],
       body: shell(crumbs([["Home", "/"], ["Books", null]]) + `<h1>Medical books by year and subject</h1><p>${esc(topDesc)}</p><ul>${shelfList}</ul>` + credit),
       jsonLd: { "@context": "https://schema.org", "@type": "CollectionPage", name: "Medical books by year and subject", description: topDesc, url: `${site}/books`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
     }), books.updated);

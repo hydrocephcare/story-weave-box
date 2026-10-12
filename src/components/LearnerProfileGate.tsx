@@ -6,10 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import { celebrate } from "@/lib/celebration";
+import { setUniversity as rememberUniversity } from "@/lib/university";
 
-export const UNIVERSITIES = ["Mount Kenya University", "University of Nairobi", "Kenyatta University", "Moi University", "JKUAT", "Other"];
+export const UNIVERSITIES = ["Mount Kenya University", "University of Nairobi", "Kenyatta University", "Moi University", "JKUAT", "Makerere University", "University of Dar es Salaam", "University of Ghana", "University of Lagos", "University of Cape Town", "Other"];
+export const COUNTRIES = ["Kenya", "Uganda", "Tanzania", "Rwanda", "Nigeria", "Ghana", "South Africa", "Ethiopia", "India", "Pakistan", "Nepal", "United Kingdom", "United States", "Other"];
 export const COURSES = [
-  "MBChB — Medicine & Surgery",
+  "MBChB / MBBS / MD — Medicine & Surgery",
   "BDS — Dental Surgery",
   "BSc Nursing",
   "BSc Clinical Medicine",
@@ -29,8 +31,10 @@ export default function LearnerProfileGate() {
   const [celebrating, setCelebrating] = useState(false);
   const [name, setName] = useState("");
   const [university, setUniversity] = useState("");
-  const [course, setCourse] = useState("MBChB — Medicine & Surgery");
+  const [course, setCourse] = useState("MBChB / MBBS / MD — Medicine & Surgery");
   const [year, setYear] = useState("");
+  const [otherUni, setOtherUni] = useState("");
+  const [country, setCountry] = useState("");
 
   useEffect(() => {
     if (authLoading || !user || isAdmin) { setOpen(false); return; }
@@ -41,7 +45,7 @@ export default function LearnerProfileGate() {
         if (!alive) return;
         setName(data?.display_name || String(user.user_metadata?.full_name || ""));
         setUniversity((data as any)?.university || "");
-        setCourse((data as any)?.course || "MBChB — Medicine & Surgery");
+        setCourse((data as any)?.course || "MBChB / MBBS / MD — Medicine & Surgery");
         setYear((data as any)?.study_year ? String((data as any).study_year) : "");
         const snoozed = Date.now() - Number(localStorage.getItem("ompath_profile_gate_snoozed_at") || 0) < 86400000;
         setOpen(!(data as any)?.onboarding_completed && !snoozed);
@@ -54,18 +58,20 @@ export default function LearnerProfileGate() {
 
   const save = async (event: React.FormEvent) => {
     event.preventDefault();
-    if (!name.trim() || !university || !course || !year) return;
+    const uniName = university === "Other" ? otherUni.trim() : university;
+    if (!name.trim() || !uniName || !course || !year) return;
     setSaving(true);
     const { error } = await (supabase as any).from("profiles").upsert({
       user_id: user.id,
       display_name: name.trim(),
-      university,
+      university: uniName,
       course,
       study_year: Number(year),
       onboarding_completed: true,
       updated_at: new Date().toISOString(),
     } as any, { onConflict: "user_id" });
     setSaving(false);
+    if (!error) { void rememberUniversity(uniName, !UNIVERSITIES.includes(uniName)); if (country) void supabase.auth.updateUser({ data: { country } }).catch(() => undefined); }
     if (error) { toast({ title: "Profile was not saved", description: error.message, variant: "destructive" }); return; }
     celebrate();
     setCelebrating(true);
@@ -94,6 +100,7 @@ export default function LearnerProfileGate() {
       <select id="profile-university" value={university} onChange={e => setUniversity(e.target.value)} required className="mt-1 min-h-11 w-full rounded-lg border border-border bg-background px-3">
         <option value="">Select university</option>{UNIVERSITIES.map(x => <option key={x}>{x}</option>)}
       </select>
+{university === "Other" && <Input value={otherUni} onChange={e => setOtherUni(e.target.value)} placeholder="Type your university" aria-label="Your university" required className="mt-2" />}      <label className="mt-4 block text-sm font-semibold" htmlFor="profile-country">Country</label>      <select id="profile-country" value={country} onChange={e => setCountry(e.target.value)} className="mt-1 min-h-11 w-full rounded-lg border border-border bg-background px-3">        <option value="">Select country (optional)</option>{COUNTRIES.map(x => <option key={x}>{x}</option>)}      </select>
       <label className="mt-4 block text-sm font-semibold" htmlFor="profile-course">Course</label>
       <select id="profile-course" value={course} onChange={e => setCourse(e.target.value)} required className="mt-1 min-h-11 w-full rounded-lg border border-border bg-background px-3">
         <option value="">Select course</option>{COURSES.map(x => <option key={x}>{x}</option>)}

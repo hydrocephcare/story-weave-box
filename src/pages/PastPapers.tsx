@@ -79,7 +79,7 @@ export default function PastPapers() {
 
   useEffect(() => {
     updateMetaTags({
-      title: "MKU MBChB Past Papers by Trimester with Answers | Ompath Study",
+      title: "Medical Past Papers and CATs with Answers | Ompath Study",
       description: `${PAPER_NOTES.length} Mount Kenya University MBChB past papers (CATs and end-of-year exams) sorted by trimester and month, each with answers, plus the topics each unit's papers have asked from the course outline.`,
     });
   }, []);
