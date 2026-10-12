@@ -1,9 +1,9 @@
 import { useMemo, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Search } from "lucide-react";
+import { Search, Shuffle, Sparkles, History } from "lucide-react";
 import LoadMoreButton from "@/components/LoadMoreButton";
-import { DOMAIN_STYLE, slugFromName, topicPath, useTopicIndex } from "@/lib/topics";
+import { DOMAIN_STYLE, recentTopics, slugFromName, topicPath, useTopicIndex } from "@/lib/topics";
 import { cn } from "@/lib/utils";
 
 /** /topics: every subject the library covers, one page each. Search, filter by subject, or browse A to Z. */
@@ -13,6 +13,16 @@ export default function TopicsIndex() {
   const q = params.get("q") ?? "";
   const subject = params.get("subject") ?? "";
   const [shown, setShown] = useState(48);
+  const navigate = useNavigate();
+  const recent = useMemo(() => recentTopics(), []);
+  // the same topic for everyone all day, picked from the ones with the most to read
+  const daily = useMemo(() => {
+    const pool = (items ?? []).filter((t) => t.d >= 4).sort((a, b) => a.s.localeCompare(b.s));
+    if (!pool.length) return null;
+    const day = Math.floor(Date.now() / 86_400_000);
+    return pool[(day * 7919) % pool.length];
+  }, [items]);
+  const surprise = () => { const pool = items ?? []; if (pool.length) navigate(topicPath(pool[Math.floor(Math.random() * pool.length)].s)); };
 
   const subjects = useMemo(() => {
     const m = new Map<string, number>();
@@ -46,6 +56,23 @@ export default function TopicsIndex() {
         <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
         <input value={q} onChange={(e) => set("q", e.target.value)} placeholder="Try humerus, ODD, nephrotic syndrome…" className="w-full rounded-xl border border-border bg-background py-3 pl-10 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40" />
       </label>
+
+      {!q && !subject && (daily || recent.length > 0) && (
+        <div className="mt-5 grid gap-3 md:grid-cols-[minmax(0,1fr)_auto]">
+          {daily && (
+            <Link to={topicPath(daily.s)} className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-primary/10 via-card to-card p-4 transition hover:border-primary/50">
+              <span className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-primary"><Sparkles className="h-3.5 w-3.5" aria-hidden /> Topic of the day</span>
+              <span className="mt-1 block font-serif text-xl font-bold leading-snug group-hover:text-primary">{daily.n}</span>
+              <span className="block text-xs text-muted-foreground">{daily.c}{daily.q ? ` · ${daily.q} practice questions` : ""}</span>
+            </Link>
+          )}
+          <button type="button" onClick={surprise} className="inline-flex items-center justify-center gap-2 rounded-2xl border border-border bg-card px-5 py-4 text-sm font-bold hover:border-primary/50"><Shuffle className="h-4 w-4 text-primary" aria-hidden /> Surprise me</button>
+          {recent.length > 0 && (
+            <div className="md:col-span-2"><p className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground"><History className="h-3.5 w-3.5" aria-hidden /> Pick up where you left off</p>
+              <ul className="mt-2 flex flex-wrap gap-2">{recent.map((r) => <li key={r.s}><Link to={topicPath(r.s)} className="inline-flex rounded-full border border-border bg-background px-3 py-1 text-xs font-bold hover:border-primary/50 hover:text-primary">{r.n}</Link></li>)}</ul></div>
+          )}
+        </div>
+      )}
 
       <div className="mt-4 flex gap-1.5 overflow-x-auto pb-1" role="group" aria-label="Subject">
         <button type="button" className={chip(!subject)} aria-pressed={!subject} onClick={() => set("subject", "")}>All subjects</button>

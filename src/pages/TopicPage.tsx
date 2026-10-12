@@ -3,7 +3,8 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { AlertTriangle, BookOpen, Check, ChevronDown, ChevronRight, FileQuestion, FlaskConical, HeartPulse, Image as ImageIcon, Info, Layers, Lightbulb, Loader2, Microscope, Pill, RefreshCw, Search, ShieldCheck, Sparkles, Stethoscope, Target, X, Activity, type LucideIcon } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
-import { DOMAIN_STYLE, imageCaption, slugFromName, topicPath, useTopicPage, type TopicQuestion } from "@/lib/topics";
+import { DOMAIN_STYLE, imageCaption, rememberTopic, slugFromName, topicPath, useTopicPage, type TopicQuestion } from "@/lib/topics";
+import { useWebMedia } from "@/lib/webMedia";
 import { cn } from "@/lib/utils";
 
 const SITE = "https://www.ompathstudy.com";
@@ -134,6 +135,9 @@ export default function TopicPage() {
   const { slug = "" } = useParams();
   const { topic, page, phase, fresh, redirectTo, retry, writing, name } = useTopicPage(slug);
   const [zoom, setZoom] = useState<number | null>(null);
+  const [webZoom, setWebZoom] = useState<number | null>(null);
+  useEffect(() => { if (topic || page) rememberTopic(slug, topic?.n ?? name); }, [slug, topic, page]); // eslint-disable-line react-hooks/exhaustive-deps
+  const media = useWebMedia(name, [...(topic?.a ?? []), ...(page?.aka ?? [])], phase !== "loading");
   const [showFresh, setShowFresh] = useState(false);
   useEffect(() => { if (!fresh) return; setShowFresh(true); const t = setTimeout(() => setShowFresh(false), 9000); return () => clearTimeout(t); }, [fresh]);
 
@@ -144,8 +148,9 @@ export default function TopicPage() {
     if (page?.summary) return page.summary;
     const own = topic?.sec?.[0]?.b?.[0];
     if (own && own.length >= 60) return own;
-    return topic?.lead?.t ?? "";
-  }, [page, topic]);
+    // a clean definition beats a line lifted from an exam question, so the web summary comes before the site's own snippet
+    return media?.extract || topic?.lead?.t || "";
+  }, [page, topic, media]);
 
   const related = useMemo(() => {
     const seen = new Set<string>(); const out: { s: string; n: string }[] = [];
@@ -193,7 +198,8 @@ export default function TopicPage() {
     ...aiSections.map((s) => ({ id: anchor(s.h), t: s.h })),
     ...(page?.whenToSeekHelp?.length ? [{ id: "seek-help", t: "When to seek help" }] : []),
     ...(topic?.sec?.length ? [{ id: "notes-say", t: "In our notes" }] : []),
-    ...(topic?.imgs.length ? [{ id: "images", t: "Images" }] : []),
+    ...(media?.more.length ? [{ id: "web-images", t: "Pictures" }] : []),
+    ...(topic?.imgs.length ? [{ id: "images", t: "From past papers" }] : []),
     ...(topic && (topic.qs.length || topic.es.length) ? [{ id: "practice", t: "Test yourself" }] : []),
     ...(page?.faq?.length ? [{ id: "faq", t: "Questions" }] : []),
     ...(related.length ? [{ id: "related", t: "Related" }] : []),
@@ -216,7 +222,7 @@ export default function TopicPage() {
         <link rel="canonical" href={`${SITE}${topicPath(slug)}`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
-        {topic?.imgs[0] && <meta property="og:image" content={topic.imgs[0].u} />}
+        {(topic?.imgs[0] || media?.hero) && <meta property="og:image" content={topic?.imgs[0]?.u ?? media?.hero?.u} />}
         {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
       </Helmet>
 
@@ -224,7 +230,8 @@ export default function TopicPage() {
         <div className="absolute inset-0 -z-10 opacity-60 [background-image:radial-gradient(rgba(255,255,255,0.22)_1px,transparent_1px)] [background-size:20px_20px]" aria-hidden />
         <div className="absolute -right-24 -top-28 -z-10 h-80 w-80 rounded-full bg-white/20 blur-3xl" aria-hidden />
         <div className="absolute -bottom-32 -left-10 -z-10 h-72 w-72 rounded-full bg-black/25 blur-3xl" aria-hidden />
-        <div className="mx-auto max-w-5xl px-5 pb-9 pt-7 sm:pb-14 sm:pt-10">
+        <div className="mx-auto grid max-w-5xl items-center gap-8 px-5 pb-9 pt-7 sm:pb-14 sm:pt-10 md:grid-cols-[minmax(0,1fr)_19rem]">
+          <div className="min-w-0">
           <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-xs font-semibold text-white/80"><Link to="/topics" className="hover:underline">Topics</Link><ChevronRight className="h-3 w-3" /><span>{style.label}</span></nav>
           <div className="mt-4 flex flex-wrap items-center gap-2">
             <span className="rounded-full bg-black/25 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em]">{style.label}</span>
@@ -234,12 +241,22 @@ export default function TopicPage() {
           <h1 className="mt-3 max-w-3xl font-serif text-[2.4rem] font-bold leading-[1.04] tracking-tight sm:text-6xl">{name}</h1>
           {aka.length > 0 && <p className="mt-3 flex flex-wrap items-center gap-2 text-sm text-white/90">Also called {aka.map((a) => <span key={a} className="rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-bold">{a}</span>)}</p>}
           {summary && <p className="mt-5 max-w-2xl text-[17px] leading-relaxed text-white/95 sm:text-xl sm:leading-relaxed">{summary}</p>}
+            {summary && !page?.summary && media?.extract === summary && <p className="mt-1.5 text-[11px] text-white/75">Summary from <a className="underline" href={media.url} target="_blank" rel="noopener noreferrer">Wikipedia</a>.</p>}
           <div className="mt-6 flex flex-wrap gap-2.5">
             {manage && <a href={`#${anchor(manage.h)}`} className="inline-flex items-center gap-1.5 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-slate-900 shadow-lg hover:bg-white/90"><Pill className="h-4 w-4" /> Jump to management</a>}
             {firstNote && <Link to={firstNote.u} className="inline-flex items-center gap-1.5 rounded-xl bg-white/95 px-4 py-2.5 text-sm font-bold text-slate-900 shadow-lg hover:bg-white"><BookOpen className="h-4 w-4" /> Read the full note</Link>}
             {topic && topic.qs.length > 0 && <a href="#practice" className="inline-flex items-center gap-1.5 rounded-xl bg-black/30 px-4 py-2.5 text-sm font-bold text-white hover:bg-black/40"><Target className="h-4 w-4" /> Test yourself</a>}
           </div>
           {stats.length > 0 && <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/90">{stats.map(({ n, l, I }) => <li key={l} className="flex items-center gap-1.5"><I className="h-4 w-4" /> <strong className="text-white">{n}</strong> {l}</li>)}</ul>}
+          </div>
+          {media?.hero && (
+            <figure className="md:justify-self-end">
+              <a href={media.hero.page} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-3xl bg-white p-1.5 shadow-2xl ring-1 ring-white/40 md:rotate-1">
+                <img src={media.hero.u} alt={`${name}: ${media.description || media.hero.title}`} loading="eager" decoding="async" className="aspect-[4/3] w-full rounded-[1.25rem] bg-white object-contain md:max-h-72" />
+              </a>
+              <figcaption className="mt-2 text-[11px] leading-snug text-white/80">{media.description ? <span className="font-semibold text-white">{media.description}. </span> : null}Image: Wikimedia Commons, {media.hero.licence}</figcaption>
+            </figure>
+          )}
         </div>
       </header>
 
@@ -296,8 +313,29 @@ export default function TopicPage() {
             </Block>
           )}
 
+          {media && media.more.length > 0 && (
+            <Block id="web-images" title={`Pictures of ${name}`} Icon={ImageIcon} tone="violet">
+              <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                {media.more.map((im, i) => (
+                  <li key={im.full}><button type="button" onClick={() => setWebZoom(i)} className="group block w-full overflow-hidden rounded-xl border border-border bg-white text-left">
+                    <img src={im.u} alt={im.title} loading="lazy" decoding="async" className="aspect-square w-full object-contain transition duration-300 group-hover:scale-105" />
+                    <span className="line-clamp-2 block bg-background p-2 text-[11px] font-semibold leading-snug text-muted-foreground">{im.title}</span>
+                  </button></li>
+                ))}
+              </ul>
+              <p className="text-[11px] text-muted-foreground">Pictures from <a className="font-bold text-primary hover:underline" href={media.url} target="_blank" rel="noopener noreferrer">Wikipedia</a> and Wikimedia Commons. Tap one for its author and licence.</p>
+              <Dialog open={webZoom !== null} onOpenChange={(o) => !o && setWebZoom(null)}>
+                <DialogContent className="max-h-[92dvh] overflow-y-auto sm:max-w-3xl">
+                  <DialogTitle className="text-base">{webZoom !== null ? media.more[webZoom].title : ""}</DialogTitle>
+                  <DialogDescription className="sr-only">Enlarged picture with its author and licence</DialogDescription>
+                  {webZoom !== null && <><img src={media.more[webZoom].full.includes("/thumb/") ? media.more[webZoom].full : media.more[webZoom].u} alt={media.more[webZoom].title} className="mx-auto max-h-[65dvh] w-auto rounded-lg bg-white" /><p className="text-xs text-muted-foreground">By {media.more[webZoom].credit}. Licence: {media.more[webZoom].licence}. <a className="font-bold text-primary hover:underline" href={media.more[webZoom].page} target="_blank" rel="noopener noreferrer">File page</a></p></>}
+                </DialogContent>
+              </Dialog>
+            </Block>
+          )}
+
           {topic && topic.imgs.length > 0 && (
-            <Block id="images" title="Images" Icon={ImageIcon} tone="violet">
+            <Block id="images" title="From past papers" Icon={ImageIcon} tone="violet">
               <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 {topic.imgs.map((im, i) => (
                   <li key={im.u}><button type="button" onClick={() => setZoom(i)} className="group block w-full overflow-hidden rounded-xl border border-border bg-background text-left">

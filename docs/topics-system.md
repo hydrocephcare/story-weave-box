@@ -41,16 +41,21 @@ contrast, underlined links, stop motion, read aloud (this page or the selected t
 
 ## Pages written on demand (the "AI fills the gaps" part)
 
-When someone opens a topic the library has little on (or one with no page at all, for example `/topic/lupus-nephritis`), the page shows what the
-site has straight away and asks `api/topic-ai.js` to write the rest. The answer is saved in the `topic_pages` table, so the model is asked **once per
-topic**: the next reader gets the saved page instantly. While it is being written, the page says so, and updates itself when the write-up arrives.
+When someone opens a topic the library has little on (or one with no page at all, for example /topic/lupus-nephritis), the page shows what the
+site has straight away and asks the **topic-ai** Supabase edge function (supabase/functions/topic-ai) to write the rest with **Gemini**, through the
+same Lovable gateway Ompath AI uses (secret LOVABLE_API_KEY, already set). The answer is saved in the topic_pages table, so the model is asked **once per
+topic**: the next reader gets the saved copy free. Credit savers: short prompt, one call per topic ever, a daily cap (default 60 new pages, TOPIC_AI_DAILY_CAP),
+nothing is generated for topics the site already covers well, and non-medical names are remembered as rejected.
 
-If anything fails (no keys, the model is down, the daily limit is reached) the reader still sees the site's own material plus a "try again" button.
-A topic the model says is not medical is remembered as rejected and never asked again.
+If anything fails (no key, model down, cap reached) the reader still sees the site's own material plus a "try again" button.
 
-Switch it on (once):
-1. Run `supabase/migrations/20261012180000_topic_pages.sql` in Lovable (creates the table).
-2. In Vercel > Settings > Environment Variables add `ANTHROPIC_API_KEY` and `SUPABASE_SERVICE_ROLE_KEY` (the database address is already there). Redeploy.
-3. Optional: `TOPIC_AI_DAILY_CAP` (default 150 new pages a day) and `ANTHROPIC_MODEL`.
+Switch it on (once): run supabase/migrations/20261012180000_topic_pages.sql, and make sure the topic-ai function is deployed (Lovable does it on sync).
+No Vercel keys are needed. The model falls back to OmniRoute, then to GEMINI_API_KEY, if the gateway fails.
+The daily GitHub job (a few overviews a day) uses the GEMINI_API_KEY secret.
 
-To correct or approve a page, edit its row in `topic_pages` (set `reviewed` to true when a doctor has checked it) or delete the row to have it rewritten.
+## Pictures from the web
+
+src/lib/webMedia.ts asks Wikipedia and Wikimedia Commons (free, no key, no AI) for the lead picture, a short definition and a few figures, shows the
+author and licence, and remembers the answer on the device for 30 days. If nothing is found the page simply has no picture.
+
+To correct or approve a page, edit its row in topic_pages (set reviewed to true when a doctor has checked it) or delete the row to have it rewritten.

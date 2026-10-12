@@ -1,21 +1,20 @@
 // Writes a full page for topics that do not have one yet, a few each day (the same writer the site uses when a reader opens a thin topic).
 // Run by .github/workflows/topics-daily.yml. Pages are saved in src/data/topicAi/<slug>.json and shown on the topic page.
 //
-//   ANTHROPIC_API_KEY=... node scripts/topics/ai-fill.mjs [--dry]      --dry prints the first prompt and calls nothing
+//   GEMINI_API_KEY=... node scripts/topics/ai-fill.mjs [--dry]      --dry prints the first prompt and calls nothing
 //
 // Safety: the model is given only what the site already says and told to leave out anything it is not sure of; anything that looks like a
-// drug dose is removed (api/_lib/topicAi.js); every page is saved with reviewed: false and the page says so. Set "reviewed": true in the
+// drug dose is removed (supabase/functions/_shared/topicAi.js); every page is saved with reviewed: false and the page says so. Set "reviewed": true in the
 // file once a doctor has checked it.
 import fs from "fs";
 import path from "path";
-import { buildPrompt, generateTopicPage } from "../../api/_lib/topicAi.js";
+import { buildPrompt, generateTopicPage } from "../../supabase/functions/_shared/topicAi.js";
 
 const DIR = "src/data/topicAi";
 const PER_RUN = Number(process.env.AI_TOPICS_PER_RUN || 5);
-const MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-5-5";
 const dry = process.argv.includes("--dry");
-const key = process.env.ANTHROPIC_API_KEY;
-if (!dry && !key) { console.log("No ANTHROPIC_API_KEY set: nothing to do."); process.exit(0); }
+const env = { GEMINI_API_KEY: process.env.GEMINI_API_KEY, LOVABLE_API_KEY: process.env.LOVABLE_API_KEY, OMNIROUTE_BASE_URL: process.env.OMNIROUTE_BASE_URL, OMNIROUTE_API_KEY: process.env.OMNIROUTE_API_KEY };
+if (!dry && !env.GEMINI_API_KEY && !env.LOVABLE_API_KEY && !env.OMNIROUTE_API_KEY) { console.log("No GEMINI_API_KEY set: nothing to do."); process.exit(0); }
 if (!fs.existsSync("public/topics/index.json")) { console.error("Run scripts/topics/build-topics.mjs first."); process.exit(1); }
 fs.mkdirSync(DIR, { recursive: true });
 
@@ -31,7 +30,7 @@ for (const it of todo) {
   const t = JSON.parse(fs.readFileSync(path.join("public/topics", `${it.s}.json`), "utf8"));
   if (dry) { console.log(`--- ${t.n}\n${buildPrompt({ name: t.n, category: t.c, context: contextOf(t) })}\n`); break; }
   try {
-    const page = await generateTopicPage({ name: t.n, category: t.c, context: contextOf(t), apiKey: key, model: MODEL });
+    const page = await generateTopicPage({ name: t.n, category: t.c, context: contextOf(t), env });
     if (!page.medical) { console.log(`skip ${t.n}: the model says it is not a medical topic`); continue; }
     fs.writeFileSync(path.join(DIR, `${t.s}.json`), JSON.stringify({ ...page, reviewed: false }, null, 2) + "\n");
     written++;

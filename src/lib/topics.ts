@@ -33,6 +33,16 @@ export interface Topic {
 
 export const topicPath = (slug: string) => `/topic/${slug}`;
 
+const RECENT = "ompath_recent_topics";
+export interface RecentTopic { s: string; n: string }
+/** The last few topics this reader opened, kept on the device only (no account needed). */
+export function recentTopics(): RecentTopic[] {
+  try { const v = JSON.parse(localStorage.getItem(RECENT) ?? "[]"); return Array.isArray(v) ? v.filter((x) => x?.s && x?.n).slice(0, 8) : []; } catch { return []; }
+}
+export function rememberTopic(s: string, n: string) {
+  try { localStorage.setItem(RECENT, JSON.stringify([{ s, n }, ...recentTopics().filter((x) => x.s !== s)].slice(0, 8))); } catch { /* storage blocked */ }
+}
+
 let indexPromise: Promise<TopicIndexItem[]> | null = null;
 let aliasPromise: Promise<Record<string, string>> | null = null;
 
@@ -108,8 +118,11 @@ async function loadStoredPage(slug: string): Promise<AiPage | null> {
 type Ask = { status: "published"; page: AiPage } | { status: "generating" | "unavailable" | "busy" | "failed" | "rejected" };
 async function askServer(name: string, category: string, context: string): Promise<Ask> {
   try {
-    const r = await fetch("/api/topic-ai", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ name, category, context }) });
-    const j = (await r.json().catch(() => ({}))) as { status?: string; page?: AiPage };
+    // the topic-ai edge function: Gemini writes it once, it is saved, and everyone gets the saved copy after that
+    const { data, error } = await supabase.functions.invoke("topic-ai", { body: { name, category, context: context.slice(0, 3000) } });
+    let j = (data ?? {}) as { status?: string; page?: AiPage };
+    const ctx = (error as { context?: Response } | null)?.context;
+    if (error && ctx && typeof ctx.json === "function") j = (await ctx.json().catch(() => ({}))) as typeof j;
     if (j.status === "published" && j.page) return { status: "published", page: j.page };
     if (j.status === "generating" || j.status === "busy" || j.status === "rejected" || j.status === "unavailable") return { status: j.status };
     return { status: "failed" };

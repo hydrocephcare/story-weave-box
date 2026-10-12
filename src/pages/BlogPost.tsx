@@ -19,6 +19,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { getArticleBySlugOrId, getPublishedArticleSummaries, getRelatedContent, getCategoryDisplayName, getYearFromCategory, buildBlogPath, buildMcqPath, buildFlashcardPath, type Article } from "@/lib/store";
 import { extractFirstImageFromContent, SITE_URL, stripRichText, readableSummary, updateMetaTags } from "@/lib/seo";
 import { isGenericThumbnail, useTopicThumbnailInfo } from "@/lib/topicThumbnail";
+import NoteTopics from "@/components/NoteTopics";
 import { KeywordLinkProvider, useKeywordLinks, linkifyText } from "@/lib/keyword-link";
 import { slugify, useHashFlash } from "@/lib/deep-link";
 import { Button } from "@/components/ui/button";
@@ -2029,6 +2030,8 @@ export default function BlogPost() {
                 )}
               </section>
             )}
+
+            <NoteTopics text={article.content || ""} title={article.title} className="mt-10" />
 
             {hasRelated && (
               <div className="mt-12 rounded-lg border border-border p-5">

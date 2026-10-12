@@ -6,6 +6,7 @@ import { startDownload } from "@/lib/driveDownload";
 import PaperBody from "@/components/PaperBody";
 import NoteOutlineBox from "@/components/NoteOutlineBox";
 import QuickSummaryDialog from "@/components/QuickSummaryDialog";
+import NoteTopics from "@/components/NoteTopics";
 import { QUICK_SUMMARIES } from "@/data/quickSummaries";
 import ContentCredit from "@/components/ContentCredit";
 import PharmacologyConnections from "@/components/PharmacologyConnections";
@@ -173,6 +174,8 @@ function StaticNoteView() {
           )}
 
           <div className="print:hidden"><ContentCredit /></div>
+
+          {text && <NoteTopics text={text} title={`${note.title} ${note.group ?? ""}`} className="mt-8" />}
 
           {siblings.length > 0 && (
             <nav aria-label="More notes" className="mt-10 rounded-xl border border-border bg-card p-4 print:hidden">

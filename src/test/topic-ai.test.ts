@@ -1,6 +1,5 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import handler from "../../api/topic-ai.js";
-import { generateTopicPage, kindOf, sanitizePage, slugOf, validName } from "../../api/_lib/topicAi.js";
+import { beforeEach, describe, expect, it, vi } from "vitest";
+import { generateTopicPage, kindOf, sanitizePage, slugOf, topicAiCore, validName } from "../../supabase/functions/_shared/topicAi.js";
 
 const goodPage = {
   medical: true,
@@ -52,56 +51,64 @@ describe("topic page writer", () => {
     expect(validName("a")).toBe(false);
   });
 
-  it("calls the model and returns a checked page", async () => {
-    const fetchImpl = vi.fn(async () => ({ ok: true, json: async () => ({ content: [{ text: "Here you go: " + JSON.stringify(goodPage) }] }) }));
-    const page = await generateTopicPage({ name: "Oppositional defiant disorder", category: "Psychiatry", apiKey: "k", fetchImpl });
+  it("calls Gemini through the gateway and returns a checked page", async () => {
+    const fetchImpl = vi.fn(async () => ({ ok: true, json: async () => ({ choices: [{ message: { content: "Here you go: " + JSON.stringify(goodPage) } }] }) }));
+    const page = await generateTopicPage({ name: "Oppositional defiant disorder", category: "Psychiatry", env: { LOVABLE_API_KEY: "k" }, fetchImpl });
     expect(page.medical).toBe(true);
     expect(page.kind).toBe("disease");
     expect(fetchImpl).toHaveBeenCalledTimes(1);
+    expect(String((fetchImpl.mock.calls as unknown as string[][])[0][0])).toContain("ai.gateway.lovable.dev");
+  });
+
+  it("falls back to a direct Gemini key when the gateway fails", async () => {
+    const fetchImpl = vi.fn(async (url: string) => String(url).includes("lovable") ? { ok: false, status: 500, json: async () => ({}) } : { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify(goodPage) }] } }] }) });
+    const page = await generateTopicPage({ name: "Oppositional defiant disorder", category: "Psychiatry", env: { LOVABLE_API_KEY: "k", GEMINI_API_KEY: "g" }, fetchImpl });
+    expect(page.medical).toBe(true);
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
   });
 });
 
-describe("POST /api/topic-ai", () => {
-  const env = { ...process.env };
-  const res = () => { const r: any = { headers: {} }; r.setHeader = (k: string, v: string) => { r.headers[k] = v; }; r.status = (c: number) => { r.code = c; return r; }; r.json = (b: unknown) => { r.body = b; return r; }; return r; };
-  const call = (body: unknown) => { const r = res(); return handler({ method: "POST", body }, r).then(() => r); };
+describe("topic-ai flow", () => {
+  const baseEnv = { LOVABLE_API_KEY: "k", SUPABASE_URL: "https://db.test", SUPABASE_SERVICE_ROLE_KEY: "s" };
   let rows: Record<string, any>;
   let modelReply: any;
+  let modelCalls: number;
+  const fetchImpl: any = async (url: string, init: any = {}) => {
+    if (String(url).includes("ai.gateway")) { modelCalls++; return modelReply; }
+    const u = new URL(url);
+    if (init.method === "POST") { const b = JSON.parse(init.body); rows[b.slug] = { ...(rows[b.slug] ?? {}), ...b }; return { ok: true, headers: new Headers(), json: async () => [] }; }
+    if (u.searchParams.has("created_at")) return { ok: true, headers: new Headers({ "content-range": `0-0/${Object.keys(rows).length}` }), json: async () => [] };
+    const slug = (u.searchParams.get("slug") ?? "").replace("eq.", "");
+    return { ok: true, headers: new Headers(), json: async () => (rows[slug] ? [rows[slug]] : []) };
+  };
+  const call = (input: unknown, env: Record<string, string> = baseEnv) => topicAiCore(input, { env, fetchImpl });
+  beforeEach(() => { rows = {}; modelCalls = 0; modelReply = { ok: true, json: async () => ({ choices: [{ message: { content: JSON.stringify(goodPage) } }] }) }; });
 
-  beforeEach(() => {
-    process.env.ANTHROPIC_API_KEY = "k"; process.env.SUPABASE_URL = "https://db.test"; process.env.SUPABASE_SERVICE_ROLE_KEY = "s";
-    rows = {}; modelReply = { ok: true, json: async () => ({ content: [{ text: JSON.stringify(goodPage) }] }) };
-    vi.stubGlobal("fetch", vi.fn(async (url: string, init: any = {}) => {
-      if (String(url).startsWith("https://api.anthropic.com")) return modelReply;
-      const u = new URL(url);
-      if (init.method === "POST") { const b = JSON.parse(init.body); rows[b.slug] = { ...(rows[b.slug] ?? {}), ...b }; return { ok: true, headers: new Headers(), json: async () => [] }; }
-      if (u.searchParams.has("created_at")) return { ok: true, headers: new Headers({ "content-range": `0-0/${Object.keys(rows).length}` }), json: async () => [] };
-      const slug = (u.searchParams.get("slug") ?? "").replace("eq.", "");
-      return { ok: true, headers: new Headers(), json: async () => (rows[slug] ? [rows[slug]] : []) };
-    }));
-  });
-  afterEach(() => { vi.unstubAllGlobals(); process.env = { ...env }; });
-
-  it("says 'unavailable' when the keys are not set up", async () => {
-    delete process.env.ANTHROPIC_API_KEY;
-    const r = await call({ name: "Oppositional defiant disorder" });
+  it("says 'unavailable' when no AI key is set up", async () => {
+    const r = await call({ name: "Oppositional defiant disorder" }, { SUPABASE_URL: "https://db.test", SUPABASE_SERVICE_ROLE_KEY: "s" });
     expect(r.code).toBe(503);
     expect(r.body.status).toBe("unavailable");
   });
 
-  it("writes a page, saves it, and gives the saved copy to the next reader without calling the model again", async () => {
+  it("writes a page once, saves it, and gives the saved copy to the next reader without spending credits", async () => {
     const first = await call({ name: "Oppositional defiant disorder", category: "Psychiatry" });
     expect(first.code).toBe(200);
-    expect(first.body.page.sections).toHaveLength(3);
+    expect((first.body as any).page.sections).toHaveLength(3);
     expect(rows["oppositional-defiant-disorder"].status).toBe("published");
-    const calls = (fetch as any).mock.calls.filter((c: any[]) => String(c[0]).startsWith("https://api.anthropic.com")).length;
+    expect(modelCalls).toBe(1);
     const second = await call({ name: "Oppositional defiant disorder" });
     expect(second.code).toBe(200);
-    expect((fetch as any).mock.calls.filter((c: any[]) => String(c[0]).startsWith("https://api.anthropic.com")).length).toBe(calls);
+    expect(modelCalls).toBe(1);
+  });
+
+  it("stops at the daily cap", async () => {
+    const r = await call({ name: "Nephrotic syndrome" }, { ...baseEnv, TOPIC_AI_DAILY_CAP: "0" });
+    expect(r.code).toBe(429);
+    expect(modelCalls).toBe(0);
   });
 
   it("turns away a topic that is not medical, and remembers it", async () => {
-    modelReply = { ok: true, json: async () => ({ content: [{ text: '{"medical": false}' }] }) };
+    modelReply = { ok: true, json: async () => ({ choices: [{ message: { content: '{"medical": false}' } }] }) };
     const r = await call({ name: "Taylor Swift" });
     expect(r.code).toBe(404);
     expect(rows["taylor-swift"].status).toBe("rejected");
@@ -114,8 +121,7 @@ describe("POST /api/topic-ai", () => {
     expect(rows["nephrotic-syndrome"].status).toBe("failed");
   });
 
-  it("rejects bad names and wrong methods", async () => {
+  it("rejects bad names", async () => {
     expect((await call({ name: "<b>x</b>" })).code).toBe(400);
-    const r = res(); await handler({ method: "GET" }, r); expect(r.code).toBe(405);
   });
 });

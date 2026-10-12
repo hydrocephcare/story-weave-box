@@ -27,3 +27,6 @@ otp_expiry = 3600
 # uses its server-side service role for database reads and exposes no mutations.
 [functions.generate-sitemap]
 verify_jwt = false
+
+[functions.topic-ai]
+verify_jwt = false
