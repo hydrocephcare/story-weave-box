@@ -2,6 +2,7 @@
 // and never needs the AI.
 import { getUnitsForYear } from "@/lib/academic";
 import type { PersonalReply } from "@/lib/ompathAiPersonal";
+import { COURSE_OUTLINES } from "@/data/courseOutlines";
 
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9?' ]/g, " ").replace(/\s+/g, " ").trim();
 const ORDINALS = ["first", "second", "third", "fourth", "fifth", "sixth"];
@@ -26,6 +27,27 @@ export async function guideReply(input: string, myYear: number | null): Promise<
   const s = norm(input);
   if (!s || s.length > 160) return null;
   const hasStudy = /\b(notes? on|papers? on|explain|define|what is (a|an|the)? ?[a-z]+ (of|in)|mcqs? on)\b/.test(s);
+
+  // "course outline for psychiatry", "syllabus year 4": straight to the outline and its official text, never the AI
+  if (/\b(course ?outlines?|syllabus|curriculum|unit outline|course content)\b/.test(s)) {
+    const year = yearIn(s) ?? null;
+    const pool = COURSE_OUTLINES.filter((o) => !year || o.year === year);
+    const words = (o: { department: string; id: string }) => `${o.department} ${o.id}`.toLowerCase().split(/[^a-z]+/).filter((w) => w.length > 3);
+    const hits = pool.filter((o) => words(o).some((w) => s.includes(w))).slice(0, 3);
+    if (hits.length) {
+      return {
+        answer: hits.map((o) => `**${o.title}** (Year ${o.year})\n${o.summary}${o.assessment ? `\nAssessment: ${o.assessment}` : ""}`).join("\n\n") + "\n\nEach topic lists its week and lecturer, and the topics that have a study note open it.",
+        followUps: [`Notes on ${hits[0].department}`, `Past papers on ${hits[0].department}`, `10 mcqs on ${hits[0].department}`],
+        links: hits.flatMap((o) => [{ label: `${o.department}: course outline`, href: `/course-outlines/${o.id}` }, ...(o.info?.length ? [{ label: `${o.department}: official outline text`, href: `/course-outlines/${o.id}#course-outline` }] : [])]).slice(0, 4),
+      };
+    }
+    const y = year ?? myYear;
+    return {
+      answer: y ? `Course outlines for Year ${y} are on the site: every unit lists its topics by week, with the lecturer, and you can tick topics off as you finish them.` : "Course outlines are on the site for Years 1 to 4 and Year 6. Pick your year.",
+      followUps: y ? [] : [1, 2, 3, 4].map((n) => `Course outline year ${n}`),
+      links: y ? [{ label: `Year ${y} course outlines`, href: `/course-outlines/year-${y}` }, { label: "All course outlines", href: "/course-outlines" }] : [{ label: "All course outlines", href: "/course-outlines" }],
+    };
+  }
 
   // everything the site offers
   if (/\b(what (is|do you have|can i find|s) (on|in) (the |this |your |ompath )?(site|website|platform|ompath)|what does (this|the|ompath) (site|website|platform|study) (have|offer|do)|what is ompath( study)?|what can ompath|what do you offer|everything (on|in) (the )?site)\b/.test(s)) {

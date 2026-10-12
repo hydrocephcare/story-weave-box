@@ -40,6 +40,16 @@
     "file": "src/content/notes/psychiatry-fundamentals-of-psychopathology.md"
   },
   {
+    "slug": "introduction-to-psychopharmacology",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Psychopharmacology",
+    "title": "Introduction to Psychopharmacology",
+    "description": "Year 4 psychiatry notes following the MKU course outline: pharmacokinetics and pharmacodynamics, neurotransmitters, the four dopamine pathways, antidepressants, antipsychotics, anxiolytics and hypnotics, mood stabilisers, ADHD drugs, special populations, adherence, polypharmacy and stigma, with practice questions and MCQs.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/psychiatry-introduction-to-psychopharmacology.md"
+  },
+  {
     "slug": "psychological-therapies-and-non-pharmacological-interventions",
     "year": 4,
     "unit": "Mental Health/Psychiatry",

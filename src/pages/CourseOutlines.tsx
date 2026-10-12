@@ -215,6 +215,7 @@ function CourseOutlineView({ outline }: { outline: CourseOutline }) {
   // Open the section named in the link (#item-id) or the first one that still has work left.
   useEffect(() => {
     const hash = decodeURIComponent(window.location.hash.slice(1));
+    if (hash === "course-outline") window.setTimeout(() => document.getElementById("course-outline")?.scrollIntoView({ behavior: "smooth", block: "start" }), 350);
     const target = hash ? outline.sections.find((s) => s.items.some((i) => i.id === hash)) : undefined;
     const first = target ?? outline.sections.find((s) => s.items.some((i) => !done.has(i.id))) ?? outline.sections[0];
     setOpen(new Set(first ? [first.id] : []));
@@ -273,8 +274,8 @@ function CourseOutlineView({ outline }: { outline: CourseOutline }) {
           {outline.team && <p className="mt-2 text-xs leading-relaxed text-muted-foreground"><span className="font-bold text-foreground">Teaching team:</span> {outline.team}</p>}
           {outline.assessment && <p className="mt-1 text-xs leading-relaxed text-muted-foreground"><span className="font-bold text-foreground">Assessment:</span> {outline.assessment}</p>}
           {outline.info && outline.info.length > 0 && (
-            <details className="group mt-3 rounded-xl border border-border bg-background p-3">
-              <summary className="cursor-pointer list-none text-sm font-bold text-foreground">Course information <span className="text-xs font-semibold text-muted-foreground">· units, outcomes, requirements, books</span></summary>
+            <details id="course-outline" key={`info-${outline.id}-${typeof window !== "undefined" ? window.location.hash : ""}`} open={typeof window !== "undefined" && window.location.hash === "#course-outline"} className="group mt-3 scroll-mt-24 rounded-xl border border-border bg-background p-3">
+              <summary className="cursor-pointer list-none text-sm font-bold text-foreground">Course information and official outline text <span className="text-xs font-semibold text-muted-foreground">· units, outcomes, topics, assessment, books</span></summary>
               <div className="mt-3 space-y-4">
                 {outline.info.map((block) => (
                   <section key={block.heading}>

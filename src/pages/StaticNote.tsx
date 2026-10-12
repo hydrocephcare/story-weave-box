@@ -4,6 +4,7 @@ import { Printer, ScanLine } from "lucide-react";
 import DriveFileViewer, { type DriveFile } from "@/components/DriveFileViewer";
 import { startDownload } from "@/lib/driveDownload";
 import PaperBody from "@/components/PaperBody";
+import NoteOutlineBox from "@/components/NoteOutlineBox";
 import ContentCredit from "@/components/ContentCredit";
 import PharmacologyConnections from "@/components/PharmacologyConnections";
 import { STATIC_NOTES, TRIMESTER_LABEL, driveViewUrl, findStaticNote, loadStaticNoteText } from "@/data/staticNotes";
@@ -112,6 +113,8 @@ function StaticNoteView() {
         <p className="mt-2 text-sm text-muted-foreground">Updated {new Date(note.updated).toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" })}</p>
         <button type="button" onClick={() => window.print()} className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-1.5 text-xs font-bold text-muted-foreground hover:border-primary/50 hover:text-primary print:hidden"><Printer className="h-3.5 w-3.5" /> Print or save as PDF</button>
       </header>
+
+      {!note.paper && <NoteOutlineBox note={note} />}
 
       {note.paper && (
         <aside aria-label="Past paper" className="mt-4 rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm print:hidden">

@@ -1,4 +1,5 @@
 import { MORE_OUTLINES } from "./courseOutlinesMore.ts";
+import { PSYCHIATRY_OUTLINE_INFO } from "./psychiatryOutlineText.ts";
 
 // MBChB course outlines (Years 3 and 4 curated here; Years 1–4 also get checklists built from the library) (Mount Kenya University), turned into tick-able checklists.
 // Item ids are permanent: they key each student's saved progress, so never reuse or renumber them.
@@ -61,6 +62,7 @@ const psychiatry: CourseOutline = {
   team: "Dr. Kendi (HOD & Senior Lecturer), Dr. Neema Araka (Lecturer), Dr. Nganga & Dr. Arthur (rotation supervisors). Clinical rotations: Thika Level 5 Hospital and Mathari National Hospital.",
   assessment: "CATs 30% · Logbook & presentations 10% · End-of-clerkship examination 60% (MCQ/SAQ + OSCE/viva).",
   librarySlugs: ["psychiatry"],
+  info: PSYCHIATRY_OUTLINE_INFO,
   sections: [
     {
       id: "psy-s1", title: "Semester 1 — Foundations of Assessment & Major Disorders",
@@ -303,6 +305,15 @@ const PSYCHIATRY_NOTES: Record<string, string> = {
   "psy-s1-02": "classification-of-mental-disorders",
   "psy-s1-05": "fundamentals-of-psychopathology",
   "psy-s1-06": "biopsychosocial-formulation",
+  "psy-s2-01": "introduction-to-psychopharmacology",
+  "psy-s2-02": "introduction-to-psychopharmacology",
+  "psy-s2-03": "introduction-to-psychopharmacology",
+  "psy-s2-04": "introduction-to-psychopharmacology",
+  "psy-s2-05": "introduction-to-psychopharmacology",
+  "psy-s2-06": "introduction-to-psychopharmacology",
+  "psy-s2-07": "introduction-to-psychopharmacology",
+  "psy-s2-08": "introduction-to-psychopharmacology",
+  "psy-s2-09": "introduction-to-psychopharmacology",
   "psy-s2-18": "psychological-therapies-and-non-pharmacological-interventions",
   "psy-s2-19": "psychological-therapies-and-non-pharmacological-interventions",
   "psy-s2-20": "psychological-therapies-and-non-pharmacological-interventions",
