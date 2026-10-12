@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { buildBlogPath, buildMcqPath, getCategoryDisplayName, getPublishedArticleSummaries } from "@/lib/store";
 import { useMyYear, yearOfCategory } from "@/hooks/useMyYear";
 import LoadMoreButton from "@/components/LoadMoreButton";
+import { STATIC_NOTES } from "@/data/staticNotes";
 
 interface Item { key: string; kind: "note" | "mcq"; title: string; category: string; at: number; to: string }
 
@@ -33,6 +34,7 @@ export default function RecentlyAdded() {
       const list: Item[] = [
         ...notes.map((a) => ({ key: `n${a.id}`, kind: "note" as const, title: a.title, category: a.category, at: Date.parse(a.created_at ?? "") || 0, to: buildBlogPath(a) })),
         ...(sets as { id: string; title: string; slug: string | null; category: string; created_at: string }[]).map((s) => ({ key: `m${s.id}`, kind: "mcq" as const, title: s.title, category: s.category, at: Date.parse(s.created_at) || 0, to: buildMcqPath({ id: s.id, title: s.title, slug: s.slug }) })),
+        ...STATIC_NOTES.filter((n) => !n.paper).map((n) => ({ key: `s${n.slug}`, kind: "note" as const, title: n.title, category: `Year ${n.year}: ${n.unit}`, at: Date.parse(n.updated) || 0, to: `/notes/${n.slug}` })),
       ].filter((i) => i.at > 0).sort((a, b) => b.at - a.at);
       setItems(list);
     })();

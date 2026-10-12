@@ -1,4 +1,5 @@
 import { MORE_OUTLINES } from "./courseOutlinesMore.ts";
+import { STATIC_NOTES } from "./staticNotes";
 import { PSYCHIATRY_OUTLINE_INFO } from "./psychiatryOutlineText.ts";
 
 // MBChB course outlines (Years 3 and 4 curated here; Years 1–4 also get checklists built from the library) (Mount Kenya University), turned into tick-able checklists.
@@ -320,7 +321,49 @@ const PSYCHIATRY_NOTES: Record<string, string> = {
 };
 const withPsychiatryNotes = (o: CourseOutline): CourseOutline => (o.id !== "psychiatry" ? o : { ...o, sections: o.sections.map((sec) => ({ ...sec, items: sec.items.map((it) => (PSYCHIATRY_NOTES[it.id] && !it.noteSlug ? { ...it, noteSlug: PSYCHIATRY_NOTES[it.id] } : it)) })) });
 
-export const COURSE_OUTLINES: CourseOutline[] = [psychiatry, internalMedicine, surgery, pharmacology, ...MORE_OUTLINES].map(withPsychiatryNotes);
+const CURATED_OUTLINES: CourseOutline[] = [psychiatry, internalMedicine, surgery, pharmacology, ...MORE_OUTLINES].map(withPsychiatryNotes);
+
+/* A new study note is matched to its course outline topic automatically, so nobody has to link it by hand: a note belongs to the outline of
+   its unit, and it opens from the topic whose title shares most of its words (a matching week label counts too). A hand-made link always wins. */
+const STOP = new Set(["and", "the", "of", "in", "for", "to", "a", "an", "with", "on", "year", "notes", "note", "clinical", "revision", "overview", "introduction", "acute", "chronic", "disease", "disorder", "syndrome", "infection", "management", "diagnosis", "treatment"]);
+const words = (t: string): Set<string> => new Set(t.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").split(" ").filter((w) => w && !STOP.has(w)).map((w) => (w.length > 3 ? w.replace(/(ies|es|s)$/, "") : w)));
+const unitWords = (t: string): string => t.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, " ").trim();
+
+function autoLinkNotes(outlines: CourseOutline[]): CourseOutline[] {
+  const notes = STATIC_NOTES.filter((n) => !n.paper && n.group !== "Question bank");
+  const linked = new Map<string, string>(); // outline item id -> note slug
+  for (const outline of outlines) {
+    if (outline.auto) continue;
+    const dept = unitWords(outline.department);
+    const mine = notes.filter((n) => n.year === outline.year && (unitWords(n.unit).includes(dept) || dept.includes(unitWords(n.unit))));
+    for (const note of mine) {
+      const nw = words(`${note.title} ${note.group ?? ""}`);
+      const tw = words(note.title);
+      let best: { id: string; score: number } | null = null;
+      for (const sec of outline.sections) for (const item of sec.items) {
+        if (item.noteSlug || linked.has(item.id)) continue;
+        const iw = words(item.title);
+        let score = 0;
+        if (iw.size === 1) {
+          // a one-word topic ("Asthma", "COPD") links only to a note that is about exactly that: same word as its title, or as the acronym in brackets
+          const [w] = [...iw];
+          const acronym = note.title.match(/\(([A-Za-z]{2,8})\)/)?.[1]?.toLowerCase();
+          score = (tw.size <= 2 && tw.has(w)) || acronym === w ? 1 : 0;
+        } else if (iw.size >= 2) {
+          let hit = 0;
+          for (const w of iw) if (nw.has(w)) hit++;
+          score = hit / iw.size + (note.week && item.week && note.week === item.week ? 0.2 : 0);
+        }
+        if (score >= 0.7 && (!best || score > best.score)) best = { id: item.id, score };
+      }
+      if (best) linked.set(best.id, note.slug);
+    }
+  }
+  if (!linked.size) return outlines;
+  return outlines.map((o) => ({ ...o, sections: o.sections.map((sec) => ({ ...sec, items: sec.items.map((it) => (linked.has(it.id) && !it.noteSlug ? { ...it, noteSlug: linked.get(it.id) } : it)) })) }));
+}
+
+export const COURSE_OUTLINES: CourseOutline[] = autoLinkNotes(CURATED_OUTLINES);
 
 const norm = (value: string) => value.toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, " ").trim();
 
