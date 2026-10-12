@@ -1640,5 +1640,15 @@
     "description": "15 single-best-answer pharmacology MCQs with explanations: enzyme induction, antidotes, adverse effects, drug interactions, anticoagulants, diabetes drugs, analgesics and prescribing in pregnancy.",
     "updated": "2026-10-12",
     "file": "src/content/notes/question-bank-pharmacology.md"
+  },
+  {
+    "slug": "neurodevelopmental-disorders-autism-intellectual-disability",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Neurodevelopmental disorders",
+    "title": "Neurodevelopmental Disorders I: Autism Spectrum Disorder and Intellectual Disability",
+    "description": "MKU MBChB Year 4 Psychiatry Week 6 notes: ASD diagnostic domains, intellectual disability, developmental red flags, focused developmental history, assessment, differentials, multidisciplinary management, a clinical case and MCQs.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/neurodevelopmental-disorders-autism-intellectual-disability.md"
   }
 ]
