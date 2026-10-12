@@ -1,3 +1,7 @@
+# Neurodevelopmental Disorders II: ADHD and Disruptive Behaviour — Year 4 Psychiatry
+
+*MKU MBChB Year 4 · Junior Clerkship · Week 7 · Clinical revision notes*
+
 ## Start here: ADHD explained from zero
 
 Before memorising the medical words, understand the everyday examples.
@@ -54,10 +58,6 @@ A 9-year-old repeatedly answers before the teacher finishes asking a question. W
 **Answer: Impulsivity.** The child is answering before stopping to think.
 
 ---
-
-# Neurodevelopmental Disorders II: ADHD and Disruptive Behaviour — Year 4 Psychiatry
-
-*MKU MBChB Year 4 · Junior Clerkship · Week 7 · Clinical revision notes*
 
 ## Start here: the big picture
 
