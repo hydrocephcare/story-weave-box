@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useLayoutEffect, forwardRef, memo } from "react";
+import { mdToHtml } from "@/lib/miniMarkdown";
 import ConnectedLearning from "@/components/ConnectedLearning";
 import PharmacologyConnections from "@/components/PharmacologyConnections";
 import drugIndex from "@/data/drugIndex.json";
@@ -234,6 +235,49 @@ function PracticeQuestion({ number, question, answer }: { number: string; questi
 }
 
 /* ─── MCQ answer + explanation collapsible (used inside articles) ─── */
+/* Short-answer posts in the standard layout: "**N. question**" followed by "**Model answer:** …". Each question is a card and its answer sits
+   behind the same reveal button as everywhere else, so a long paper reads as a clean list instead of one wall of text. */
+type SaqItem = { n: string; stem: string; answer: string };
+function parseSaq(content: string): { intro: string; items: SaqItem[] } | null {
+  const items: SaqItem[] = [];
+  const intro: string[] = [];
+  let cur: SaqItem | null = null;
+  for (const line of content.replace(/\r\n/g, "\n").split("\n")) {
+    const m = line.match(/^\*\*(\d+)\.\s+(.+?)\*\*\s*$/);
+    if (m) { cur = { n: m[1], stem: m[2].trim(), answer: "" }; items.push(cur); continue; }
+    if (cur) cur.answer += `${line}\n`; else intro.push(line);
+  }
+  const label = /^\s*\*\*Model answer:\*\*\s*/i;
+  const answered = items.filter((i) => label.test(i.answer.trim())).length;
+  if (items.length < 3 || answered < 3) return null;
+  for (const i of items) i.answer = i.answer.trim().replace(label, "").trim();
+  return { intro: intro.join("\n").trim(), items };
+}
+
+function SaqCard({ item }: { item: SaqItem }) {
+  const [open, setOpen] = useState(false);
+  const access = useAccess();
+  const locked = !access.canReveal;
+  const html = useMemo(() => mdToHtml(item.answer, { skipTitle: true }), [item.answer]);
+  return (
+    <article className="rounded-xl border border-border bg-card p-4 sm:p-5">
+      <div className="flex items-start gap-3">
+        <span className="mt-0.5 flex h-7 min-w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 px-1 text-xs font-bold text-primary">{item.n}</span>
+        <h3 className="flex-1 font-serif text-base font-bold leading-snug text-foreground sm:text-lg"><Inline text={item.stem} /></h3>
+      </div>
+      {item.answer && (
+        <div className="mt-3">
+          <button type="button" onClick={() => locked ? openSubscribePrompt("Subscribe or restore your pass to reveal this model answer.") : setOpen((v) => !v)} aria-expanded={!locked && open} className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/5 px-3 py-1 text-xs font-bold text-emerald-700 hover:bg-emerald-500/10 dark:text-emerald-400">
+            {locked ? <Lock className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}{locked ? "Reveal (subscribers)" : open ? "Hide answer" : "Reveal answer"}
+            {!locked && <ChevronDown className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`} />}
+          </button>
+          {open && !locked && <div className="note-body mt-2 rounded-xl border border-emerald-500/30 bg-emerald-500/5 px-4 py-3 text-[15px] leading-7" dangerouslySetInnerHTML={{ __html: html }} />}
+        </div>
+      )}
+    </article>
+  );
+}
+
 /* Essay question — answers are always visible (never hidden behind a button) */
 function EssayQuestion({ number, question, answer }: { number: string; question: string; answer: string }) {
   const [open, setOpen] = useState(false);
@@ -727,7 +771,19 @@ function LockedSection({ lines }: { lines: string[] }) {
   );
 }
 
-const ArticleContent = memo(function ArticleContent({ content, articleId, category, title = "", contentKind = "" }: { content: string; articleId: string; category: string; title?: string; contentKind?: string }) {
+type ArticleContentProps = { content: string; articleId: string; category: string; title?: string; contentKind?: string };
+/** Short-answer papers in the standard layout get question cards; everything else goes through the line-by-line renderer below. */
+const ArticleContent = memo(function ArticleContent(props: ArticleContentProps) {
+  const saq = useMemo(() => parseSaq(props.content), [props.content]);
+  if (!saq) return <ArticleLines {...props} />;
+  return (
+    <>
+      {saq.intro && <ArticleLines {...props} content={saq.intro} />}
+      <div className="mt-6 space-y-4">{saq.items.map((item, k) => <SaqCard key={`${item.n}-${k}`} item={item} />)}</div>
+    </>
+  );
+});
+const ArticleLines = memo(function ArticleLines({ content, articleId, category, title = "", contentKind = "" }: { content: string; articleId: string; category: string; title?: string; contentKind?: string }) {
   _sec = 0;
   const lines = preprocessContent(content).split("\n");
   // Explicit "Answer:" lines and bold-marked options win; a consolidated
