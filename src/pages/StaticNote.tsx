@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate, useNavigationType, useParams } from "react-router-dom";
-import { Printer, ScanLine } from "lucide-react";
+import { Printer, ScanLine, BookOpen, X } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import DriveFileViewer, { type DriveFile } from "@/components/DriveFileViewer";
 import { startDownload } from "@/lib/driveDownload";
 import PaperBody from "@/components/PaperBody";
@@ -34,6 +35,8 @@ function StaticNoteView() {
   const [text, setText] = useState<string | null>(null);
   const [error, setError] = useState(false);
   const [scanOpen, setScanOpen] = useState<number | null>(null);
+  const [quickSummaryOpen, setQuickSummaryOpen] = useState(false);
+  const hasNeurodevelopmentSummary = slug === "neurodevelopmental-disorders-autism-intellectual-disability";
   const returning = Boolean((navType === "POP" || (location.state as { restore?: boolean } | null)?.restore) && getNoteReturn()?.path === location.pathname);
 
   useEffect(() => {
@@ -114,7 +117,49 @@ function StaticNoteView() {
         <button type="button" onClick={() => window.print()} className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-1.5 text-xs font-bold text-muted-foreground hover:border-primary/50 hover:text-primary print:hidden"><Printer className="h-3.5 w-3.5" /> Print or save as PDF</button>
       </header>
 
-      {!note.paper && <NoteOutlineBox note={note} />}
+      {hasNeurodevelopmentSummary && (
+        <section className="mt-5 print:hidden" aria-label="Beginner quick summary">
+          <Dialog open={quickSummaryOpen} onOpenChange={setQuickSummaryOpen}>
+            <DialogTrigger asChild>
+              <button type="button" className="flex w-full items-center justify-between gap-3 rounded-xl border border-primary/30 bg-primary/5 p-4 text-left transition hover:border-primary/60 hover:bg-primary/10">
+                <span className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"><BookOpen className="h-5 w-5" /></span>
+                  <span><span className="block text-sm font-extrabold text-foreground">Quick Summary — Start Here</span><span className="mt-0.5 block text-xs text-muted-foreground">A simple explanation before the full Year 4 notes</span></span>
+                </span>
+                <span className="shrink-0 text-xs font-bold text-primary">Open ↗</span>
+              </button>
+            </DialogTrigger>
+            <DialogContent className="max-h-[85dvh] overflow-y-auto sm:max-w-lg">
+              <DialogHeader>
+                <DialogTitle className="text-xl">Start with the basics</DialogTitle>
+                <DialogDescription>Neurodevelopmental disorders · Year 4 Psychiatry</DialogDescription>
+              </DialogHeader>
+              <div className="space-y-4 text-sm leading-relaxed text-foreground">
+                <p><strong>Neurodevelopmental</strong> means a condition that affects how skills develop as a child grows — for example, learning, communication, play or independence.</p>
+                <div className="rounded-xl border border-border p-3">
+                  <h3 className="font-extrabold">Intellectual Disability (ID)</h3>
+                  <p className="mt-1">Think: <strong>learning and everyday independence.</strong></p>
+                  <p className="mt-1 text-muted-foreground">The child has significant difficulties with thinking and learning (such as understanding, reasoning or solving problems) and with adaptive skills (such as dressing, communicating needs or managing daily routines).</p>
+                </div>
+                <div className="rounded-xl border border-border p-3">
+                  <h3 className="font-extrabold">Autism Spectrum Disorder (ASD)</h3>
+                  <p className="mt-1">Think: <strong>social communication + repetitive patterns.</strong></p>
+                  <p className="mt-1 text-muted-foreground">The child has persistent difficulties with social communication or interaction, together with restricted or repetitive behaviours, interests or routines. A child may become very distressed when a familiar routine changes.</p>
+                </div>
+                <div className="rounded-xl bg-muted p-3">
+                  <p className="font-extrabold">Exam memory aid</p>
+                  <p className="mt-1"><strong>ID = learning + adaptive functioning.</strong></p>
+                  <p><strong>ASD = social communication + restricted/repetitive behaviour.</strong></p>
+                </div>
+                <p className="text-muted-foreground">Important: these are clues, not diagnoses. Children develop at different rates, and a clinician considers the child's developmental history, functioning, examination and other possible explanations. ASD and ID can occur together.</p>
+                <button type="button" onClick={() => setQuickSummaryOpen(false)} className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 font-bold text-primary-foreground hover:opacity-90"><X className="h-4 w-4" /> Close summary and start reading</button>
+              </div>
+            </DialogContent>
+          </Dialog>
+        </section>
+      )}
+
+      {!note.paper && <NoteOutlineBox note={note} />
 
       {note.paper && (
         <aside aria-label="Past paper" className="mt-4 rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm print:hidden">
