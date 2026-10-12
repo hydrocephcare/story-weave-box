@@ -4,10 +4,10 @@
 import { useEffect, useState } from "react";
 
 export interface WebImage { u: string; full: string; title: string; credit: string; licence: string; page: string }
-export interface WebMedia { title: string; description: string; extract: string; intro: string; url: string; hero: WebImage | null; more: WebImage[] }
+export interface WebMedia { title: string; description: string; extract: string; intro: string; sections: { h: string; p: string[] }[]; url: string; hero: WebImage | null; more: WebImage[] }
 
 const API = "https://en.wikipedia.org/w/api.php";
-const CACHE = "ompath_webmedia_v1";
+const CACHE = "ompath_webmedia_v2";
 const DAY = 86_400_000;
 const SKIP_FILE = /icon|logo|symbol|ambox|flag|commons-|wikidata|wikiquote|wiktionary|edit-|stub|portal|question|disambig|padlock|folder|nuvola|crystal|office-book|speaker|loudspeaker|button|arrow|red_pencil|merge|increase|decrease|steady|pictogram|map_of|\.ogg|\.ogv|\.webm|\.tif|\.pdf/i;
 const OK_LICENCE = /^(cc[- ]|public domain|pd|attribution|gfdl)/i;
@@ -37,6 +37,23 @@ function introText(t: string): string {
   let out = "";
   for (const p of paras) { if (out && (out + p).length > 1700) break; out += (out ? "\n" : "") + p; }
   return out;
+}
+
+const DROP_HEADING = /^(references?|see also|external links?|further reading|notes?|bibliography|citations?|sources?|gallery|additional images|history|etymology|in popular culture)$/i;
+
+/** Splits a plain-text Wikipedia article ("== Heading ==") into readable sections, skipping the back matter. */
+function articleSections(full: string): { h: string; p: string[] }[] {
+  const out: { h: string; p: string[] }[] = [];
+  const parts = full.split(/^={2,}\s*(.+?)\s*={2,}\s*$/m);
+  for (let i = 1; i < parts.length; i += 2) {
+    const h = parts[i].trim();
+    if (DROP_HEADING.test(h)) continue;
+    const paras = parts[i + 1].split(/\n+/).map((p) => p.replace(/\s*\([^)]*\)/g, "").replace(/\s+/g, " ").trim()).filter((p) => p.length > 50);
+    let used = 0; const keep: string[] = [];
+    for (const p of paras) { if (keep.length && used + p.length > 1500) break; keep.push(p); used += p.length; }
+    if (keep.length) out.push({ h, p: keep });
+  }
+  return out.slice(0, 7);
 }
 
 async function findArticle(names: string[]): Promise<Page | null> {
@@ -81,6 +98,10 @@ export async function loadWebMedia(names: string[]): Promise<WebMedia | null> {
     const article = await findArticle(names);
     if (article) {
       const q = new URLSearchParams({ action: "query", format: "json", origin: "*", titles: article.title, prop: "images", imlimit: "40" });
+      const q0 = new URLSearchParams({ action: "query", format: "json", origin: "*", titles: article.title, prop: "extracts", explaintext: "1", exsectionformat: "wiki" });
+      const fullArticle = await json<{ query?: { pages?: Record<string, { extract?: string }> } }>(`${API}?${q0}`).catch(() => null);
+      const fullPage = Object.values(fullArticle?.query?.pages ?? {})[0] as { extract?: string } | undefined;
+      const sections = articleSections(fullPage?.extract ?? "");
       const imgs = await json<{ query?: { pages?: Record<string, { images?: { title: string }[] }> } }>(`${API}?${q}`).catch(() => null);
       const first = Object.values(imgs?.query?.pages ?? {})[0] as { images?: { title: string }[] } | undefined;
       const words = article.title.toLowerCase().split(/\W+/).filter((w) => w.length > 3);
@@ -96,6 +117,7 @@ export async function loadWebMedia(names: string[]): Promise<WebMedia | null> {
         description: article.description ?? "",
         extract: shortExtract(article.extract ?? ""),
         intro: introText(article.extract ?? ""),
+        sections,
         url: article.fullurl ?? `https://en.wikipedia.org/wiki/${encodeURIComponent(article.title)}`,
         hero,
         more: gallery.filter((g) => g.full !== hero?.full).slice(0, 6),

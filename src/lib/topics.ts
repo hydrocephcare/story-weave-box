@@ -14,7 +14,8 @@ export interface TopicEssay { q: string; m: string; k: number | null; u: string;
 export interface AiPage {
   summary: string;
   aka?: string[];
-  sections: { h: string; p?: string; b?: string[] }[];
+  sections: { h: string; p?: string; b?: string[]; t?: { a: string; b: string }[] }[];
+  exam?: string[];
   whenToSeekHelp?: string[];
   faq?: { q: string; a: string }[];
   related?: string[];

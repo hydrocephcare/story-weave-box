@@ -3,7 +3,7 @@
 // Nothing here is clinical advice: the page says so, and every page is saved as "not reviewed" until a person marks it reviewed.
 
 export const KINDS = {
-  disease: ["Overview", "Causes and risk factors", "How it presents", "Tests and diagnosis", "Management", "Complications and outlook", "Prevention", "Exam pearls", "Common mistakes"],
+  disease: ["Definition and diagnosis", "Severity and staging", "Causes, most likely first", "How it presents", "Investigations", "Red flags and complications", "Management", "Follow-up and prevention", "Often confused with", "Where results can mislead"],
   anatomy: ["Overview", "Location and structure", "Relations", "Blood supply", "Nerve supply", "Function", "Clinical relevance and injuries", "Exam pearls"],
   physiology: ["Overview", "How it works", "Regulation", "What goes wrong", "Clinical relevance", "Exam pearls"],
   microbe: ["Overview", "Features of the organism", "Transmission and life cycle", "Disease it causes", "Diagnosis", "Treatment and control", "Exam pearls"],
@@ -20,21 +20,27 @@ export function kindOf(category = "", name = "") {
   return "general";
 }
 
-const DOSE = /\b\d+(\.\d+)?\s?(mg|mcg|µg|ug|g|ml|mL|iu|IU|units?|mmol|mEq)\b|\bmg\/kg\b/;
+// a drug dose (500 mg, 5 mL, 2 units) is dropped, but a lab value or threshold (26.5 µmol/L, 0.3 mg/dL, 20,000 IU/mL, 6.5 mmol/L) is kept
+const DOSE = /\b\d+(\.\d+)?\s?(?:mg|mcg|µg|ug|g|ml|mL|iu|IU|units?|mmol|mEq)(?![A-Za-z\/])|\bmg\/kg\b|\b\d+(\.\d+)?\s?mg\/(?!d)/;
 const clip = (s, n) => String(s ?? "").replace(/\s+/g, " ").trim().slice(0, n);
 
 export function buildPrompt({ name, category, context = "" }) {
   const kind = kindOf(category, name);
-  return `Write an accurate study page about "${name}" (area: ${category || "medicine"}) for medical students and the general public.
+  return `You are a clinical reasoning tutor. Write an accurate study page about "${name}" (area: ${category || "medicine"}) that teaches a student to think like a clinician, not to recite a list. It is read by medical and clinical students worldwide, including in low-resource hospitals.
 
 If "${name}" is not a real medical, anatomical, physiological, biochemical, microbiological, pharmacological or health topic (a person, brand, joke, non-medical word), reply exactly {"medical": false}.
 
 Otherwise reply with ONLY one JSON object:
-{"medical": true, "summary": "2-3 plain sentences, under 60 words", "aka": ["other names/abbreviations"], "sections": [{"h": "heading", "p": "short paragraph", "b": ["short bullet"]}], "whenToSeekHelp": ["warning signs needing urgent medical care (diseases only, else [])"], "faq": [{"q": "question", "a": "short answer"}], "related": ["4-8 related topic names"]}
+{"medical": true, "summary": "2-3 plain sentences, under 60 words", "aka": ["other names/abbreviations"], "sections": [{"h": "heading", "p": "short paragraph", "b": ["short bullet"], "t": [{"a": "test or item", "b": "the question it answers and what the result means"}]}], "whenToSeekHelp": ["warning signs needing urgent medical care (diseases only, else [])"], "faq": [{"q": "question", "a": "short answer"}], "exam": ["2-3 examiner questions a student should be able to answer"], "related": ["4-8 related topic names"]}
 
 Section headings, in order (skip one only if it truly does not apply): ${KINDS[kind].map((h) => `"${h}"`).join(", ")}.
-For diseases, "Management" covers non-drug care, drug classes and usual medicine names (never doses), referral and follow-up. Each section needs "p" or "b". 3 faq items.
-Rules: standard accepted medical knowledge only; leave out anything you are unsure of; no doses, no brand names, no invented statistics or references. Be concise: every bullet under 25 words. Plain words a first-year student can follow.
+Reasoning to build in (for diseases): do not stop at the label. Give the diagnostic criteria; stage the severity with the recognised system; categorise where the problem is; list causes by category, most likely first, including infections and conditions common in the tropics and low-resource settings (for example HIV, TB, malaria, hepatitis B, rheumatic heart disease, sickle cell, schistosomiasis, herbal remedies) where relevant; then what could kill the patient soon.
+"Investigations" uses the "t" table: every row is Test -> the question it answers -> what a result means. Never list a test without its reason. Mention what to do when a test is unavailable.
+"Management": treat the cause, then supportive care and monitoring; give drug classes and usual medicine names and say WHY each is chosen and why alternatives are avoided (toxicity, bleeding, interactions). Never give doses.
+"Often confused with" separates look-alike conditions. "Where results can mislead" flags lab values or signs that can be falsely normal or abnormal.
+For anatomy, physiology and other topics, still explain how it works and why it matters clinically, then what goes wrong.
+Each section needs "p", "b" or "t". 3 faq items.
+Rules: standard accepted medical knowledge only; leave out anything you are unsure of; no doses, no brand names, no invented statistics or references. Lab thresholds and diagnostic criteria are welcome. Every bullet under 28 words. Plain words a first-year student can follow.
 ${context ? `\nThe Ompath Study library says (use as main source, keep to it where specific):\n${clip(context, 3000)}\n` : ""}`;
 }
 
@@ -49,12 +55,13 @@ export function sanitizePage(raw) {
     const h = clip(s?.h, 60);
     const p = okText(s?.p, 1100);
     const b = (Array.isArray(s?.b) ? s.b : []).map((x) => okText(x, 280)).filter((x) => x.length >= 6).slice(0, 12);
-    return h && (p || b.length) ? { h, ...(p ? { p } : {}), ...(b.length ? { b } : {}) } : null;
+    const t = (Array.isArray(s?.t) ? s.t : []).map((r) => ({ a: okText(r?.a, 120), b: okText(r?.b, 320) })).filter((r) => r.a.length >= 2 && r.b.length >= 6).slice(0, 14);
+    return h && (p || b.length || t.length) ? { h, ...(p ? { p } : {}), ...(b.length ? { b } : {}), ...(t.length ? { t } : {}) } : null;
   }).filter(Boolean);
   if (sections.length < 3) throw new Error("too few sections");
   const list = (a, n, max) => (Array.isArray(a) ? a : []).map((x) => okText(x, max)).filter((x) => x.length >= 4).slice(0, n);
   const faq = (Array.isArray(raw.faq) ? raw.faq : []).map((f) => ({ q: clip(f?.q, 200), a: okText(f?.a, 500) })).filter((f) => f.q.length >= 8 && f.a.length >= 8).slice(0, 5);
-  return { medical: true, summary, aka: list(raw.aka, 6, 60), sections, whenToSeekHelp: list(raw.whenToSeekHelp, 7, 240), faq, related: list(raw.related, 8, 60) };
+  return { medical: true, summary, aka: list(raw.aka, 6, 60), sections, whenToSeekHelp: list(raw.whenToSeekHelp, 7, 240), faq, exam: list(raw.exam, 4, 240), related: list(raw.related, 8, 60) };
 }
 
 /**
@@ -74,7 +81,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
   for (const [url, key, model] of gateways) {
     try {
       const text = await timed(async (signal) => {
-        const r = await fetchImpl(url, { method: "POST", signal, headers: { "content-type": "application/json", Authorization: `Bearer ${key}` }, body: JSON.stringify({ model, stream: false, temperature: 0.3, max_tokens: 2400, messages: [{ role: "user", content: prompt }] }) });
+        const r = await fetchImpl(url, { method: "POST", signal, headers: { "content-type": "application/json", Authorization: `Bearer ${key}` }, body: JSON.stringify({ model, stream: false, temperature: 0.3, max_tokens: 3600, messages: [{ role: "user", content: prompt }] }) });
         if (!r.ok) throw new Error(`model API ${r.status}`);
         return (await r.json())?.choices?.[0]?.message?.content;
       });
@@ -86,7 +93,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
     for (const model of ["gemini-2.5-flash", "gemini-2.5-flash-lite"]) {
       try {
         const text = await timed(async (signal) => {
-          const r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`, { method: "POST", signal, headers: { "content-type": "application/json" }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.3, maxOutputTokens: 2400, responseMimeType: "application/json" } }) });
+          const r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`, { method: "POST", signal, headers: { "content-type": "application/json" }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.3, maxOutputTokens: 3600, responseMimeType: "application/json" } }) });
           if (!r.ok) throw new Error(`gemini ${r.status}`);
           return (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("");
         });

@@ -14,8 +14,9 @@ const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replac
 function Section({ id, title, children, first }: { id: string; title: string; children: ReactNode; first?: boolean }) {
   return (
     <section id={id} className={cn("scroll-mt-28", first ? "pt-2" : "mt-14 border-t border-border pt-10")}>
-      <h2 className="font-serif text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-[2.15rem]">{title}</h2>
-      <div className="mt-5 space-y-5 text-[18px] leading-[1.85] text-foreground/90 sm:text-[19px]">{children}</div>
+      <span className="block h-1 w-12 rounded-full bg-primary" aria-hidden />
+      <h2 className="mt-4 font-serif text-[1.9rem] font-bold leading-tight tracking-tight text-foreground sm:text-4xl">{title}</h2>
+      <div className="mt-5 max-w-[68ch] space-y-5 text-[18px] leading-[1.8] text-foreground/80 sm:text-[19px] [&_strong]:font-semibold [&_strong]:text-foreground">{children}</div>
     </section>
   );
 }
@@ -27,6 +28,19 @@ function Bullets({ items }: { items: string[] }) {
         <li key={i} className="flex gap-3.5"><span className="mt-[0.8rem] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden /><span className="min-w-0 flex-1">{b}</span></li>
       ))}
     </ul>
+  );
+}
+
+function TestTable({ rows }: { rows: { a: string; b: string }[] }) {
+  return (
+    <div className="max-w-none overflow-hidden rounded-2xl border border-border bg-card">
+      <div className="hidden grid-cols-[minmax(0,14rem)_1fr] gap-4 border-b border-border bg-muted/60 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-muted-foreground sm:grid"><span>Test</span><span>What it tells you</span></div>
+      <ul className="divide-y divide-border">
+        {rows.map((r, i) => (
+          <li key={i} className="grid gap-1 px-5 py-4 text-[16.5px] leading-relaxed sm:grid-cols-[minmax(0,14rem)_1fr] sm:gap-4"><span className="font-bold text-foreground">{r.a}</span><span className="text-foreground/80">{r.b}</span></li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
@@ -169,9 +183,12 @@ export default function TopicPage() {
   // with no written article yet, the web introduction is the overview
   const intro = (!aiSections.length && media?.intro ? media.intro.split(/\n+/).filter(Boolean) : []).map((p, i) => (i === 0 && summary && p.startsWith(summary) ? p.slice(summary.length).trim() : p)).filter(Boolean);
   const hasStudy = Boolean(topic && (topic.sec?.length || topic.src.length || topic.sets.length || topic.imgs.length || topic.qs.length || topic.es.length));
+  const wikiSections = !aiSections.length ? (media?.sections ?? []) : [];
   const toc = [
     ...(intro.length ? [{ id: "overview", t: "Overview" }] : []),
     ...aiSections.map((s) => ({ id: anchor(s.h), t: s.h })),
+    ...wikiSections.map((w) => ({ id: anchor(w.h), t: w.h })),
+    ...(page?.exam?.length ? [{ id: "examiner", t: "Examiner questions" }] : []),
     ...(page?.whenToSeekHelp?.length ? [{ id: "seek-help", t: "When to seek help" }] : []),
     ...(media?.more.length ? [{ id: "web-images", t: "Pictures" }] : []),
     ...(topic?.sec?.length ? [{ id: "notes-say", t: "In our notes" }] : []),
@@ -197,7 +214,9 @@ export default function TopicPage() {
         {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
       </Helmet>
 
-      <header className="border-b border-border bg-gradient-to-b from-muted/60 to-background">
+      <header className="relative isolate overflow-hidden border-b border-border bg-gradient-to-br from-primary/[0.14] via-background to-background">
+        <div className="absolute -right-24 -top-32 -z-10 h-96 w-96 rounded-full bg-primary/15 blur-3xl" aria-hidden />
+        <div className="absolute -bottom-40 left-1/3 -z-10 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" aria-hidden />
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-12 pt-8 sm:pb-16 sm:pt-12 md:grid-cols-[minmax(0,1fr)_21rem]">
           <div className="min-w-0">
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-muted-foreground"><Link to="/topics" className="hover:text-primary hover:underline">Topics</Link><ChevronRight className="h-3.5 w-3.5" /><span>{style.label}</span></nav>
@@ -252,6 +271,7 @@ export default function TopicPage() {
               <div key={`${s.h}-${i}`}>
                 <Section id={anchor(s.h)} title={s.h} first={i === 0 && !intro.length}>
                   {s.p && <p>{s.p}</p>}
+                  {s.t && s.t.length > 0 && <TestTable rows={s.t} />}
                   {s.b && s.b.length > 0 && <Bullets items={s.b} />}
                 </Section>
                 {/* the warning signs come right after the treatment, where a worried reader needs them */}
@@ -264,6 +284,20 @@ export default function TopicPage() {
                 )}
               </div>
             ))}
+
+            {page?.exam && page.exam.length > 0 && (
+              <Section id="examiner" title="Questions an examiner may ask">
+                <ol className="space-y-4">{page.exam.map((q, i) => <li key={q} className="flex gap-4"><span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{i + 1}</span><span className="min-w-0 flex-1 pt-0.5 font-medium text-foreground">{q}</span></li>)}</ol>
+                <p className="text-sm text-muted-foreground">Try answering aloud before you scroll back up.</p>
+              </Section>
+            )}
+
+            {wikiSections.map((w) => (
+              <Section key={w.h} id={anchor(w.h)} title={w.h}>
+                {w.p.map((p, i) => <p key={i}>{p}</p>)}
+              </Section>
+            ))}
+            {wikiSections.length > 0 && media && <p className="mt-6 text-xs text-muted-foreground">Sections above adapted from <a className="font-semibold text-primary hover:underline" href={media.url} target="_blank" rel="noopener noreferrer">Wikipedia</a> (CC BY-SA 4.0).</p>}
 
             {media && media.more.length > 0 && (
               <Section id="web-images" title={`Pictures of ${name}`}>

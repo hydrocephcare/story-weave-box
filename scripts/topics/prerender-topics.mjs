@@ -20,7 +20,7 @@ export function prerenderTopics({ fs, path, root, esc, shell, crumbs, write, ren
       `<h1>${esc(t.n)}</h1>`,
       t.a?.length ? `<p>Also written as ${t.a.map(esc).join(", ")}.</p>` : "",
       t.lead ? `<p>${esc(t.lead.t)}</p>` : "",
-      t.ai ? `<p>${esc(t.ai.summary)}</p>${(t.ai.sections ?? []).map((x) => `<h2>${esc(x.h)}</h2>${x.p ? `<p>${esc(x.p)}</p>` : ""}${x.b?.length ? li(x.b.map(esc)) : ""}`).join("")}${t.ai.whenToSeekHelp?.length ? `<h2>When to seek help</h2>${li(t.ai.whenToSeekHelp.map(esc))}` : ""}${t.ai.faq?.length ? `<h2>Quick questions</h2>${t.ai.faq.map((q) => `<h3>${esc(q.q)}</h3><p>${esc(q.a)}</p>`).join("")}` : ""}` : "",
+      t.ai ? `<p>${esc(t.ai.summary)}</p>${(t.ai.sections ?? []).map((x) => `<h2>${esc(x.h)}</h2>${x.p ? `<p>${esc(x.p)}</p>` : ""}${x.t?.length ? li(x.t.map((r) => `<strong>${esc(r.a)}</strong>: ${esc(r.b)}`)) : ""}${x.b?.length ? li(x.b.map(esc)) : ""}`).join("")}${t.ai.exam?.length ? `<h2>Questions an examiner may ask</h2>${li(t.ai.exam.map(esc))}` : ""}${t.ai.whenToSeekHelp?.length ? `<h2>When to seek help</h2>${li(t.ai.whenToSeekHelp.map(esc))}` : ""}${t.ai.faq?.length ? `<h2>Quick questions</h2>${t.ai.faq.map((q) => `<h3>${esc(q.q)}</h3><p>${esc(q.a)}</p>`).join("")}` : ""}` : "",
       t.rx ? `<h2>Treatment at a glance</h2>${li(t.rx.first.map(esc))}` : "",
       ...(t.sec ?? []).map((s) => `<h2>${esc(s.h)}</h2>${li(s.b.map(esc))}<p>${link(s.u, `Read this in ${s.s}`)}</p>`),
       t.snip?.length ? `<h2>What our notes say</h2>${li(t.snip.slice(0, 6).map((s) => `${esc(s.t)} (${link(s.u, s.s)})`))}` : "",

@@ -31,6 +31,13 @@ describe("topic page writer", () => {
     expect(() => sanitizePage({ ...goodPage, summary: "Give 10 mg of the drug every day to every child with this condition, always." })).toThrow();
   });
 
+  it("keeps lab thresholds and test tables, and the examiner questions", () => {
+    const p = sanitizePage({ ...goodPage, exam: ["What is the KDIGO creatinine criterion?"], sections: [...goodPage.sections, { h: "Investigations", t: [{ a: "Creatinine", b: "How severe is it? A rise of 26.5 µmol/L (0.3 mg/dL) in 48 h fits AKI; K+ above 6.5 mmol/L is dangerous" }, { a: "HBV DNA", b: "Treat above 20,000 IU/mL with raised ALT" }] }] });
+    const inv = p.sections.find((s: { h: string }) => s.h === "Investigations");
+    expect(inv.t).toHaveLength(2);
+    expect(p.exam).toHaveLength(1);
+  });
+
   it("refuses a page with too little in it, and passes on a non-medical verdict", () => {
     expect(() => sanitizePage({ ...goodPage, sections: [goodPage.sections[0]] })).toThrow();
     expect(sanitizePage({ medical: false })).toEqual({ medical: false });
