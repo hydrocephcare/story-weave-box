@@ -17,7 +17,7 @@ import ArticleComments from "@/components/ArticleComments";
 import { Countdown, HtmlEmbed, VimeoEmbed, PasswordGate, ContentToc, ReadingTimeBadge } from "@/components/ContentExtras";
 import { motion, AnimatePresence } from "framer-motion";
 import { getArticleBySlugOrId, getPublishedArticleSummaries, getRelatedContent, getCategoryDisplayName, getYearFromCategory, buildBlogPath, buildMcqPath, buildFlashcardPath, type Article } from "@/lib/store";
-import { extractFirstImageFromContent, SITE_URL, stripRichText, updateMetaTags } from "@/lib/seo";
+import { extractFirstImageFromContent, SITE_URL, stripRichText, readableSummary, updateMetaTags } from "@/lib/seo";
 import { isGenericThumbnail, useTopicThumbnailInfo } from "@/lib/topicThumbnail";
 import { KeywordLinkProvider, useKeywordLinks, linkifyText } from "@/lib/keyword-link";
 import { slugify, useHashFlash } from "@/lib/deep-link";
@@ -409,7 +409,7 @@ function InlineAnswerBlock({ raw }: { raw: string }) {
 
 function RelatedArticleCard({ article, compact = false }: { article: any; compact?: boolean }) {
   const image = article.og_image_url || extractFirstImageFromContent(article.content || "");
-  const summary = stripRichText(article.meta_description || article.content || "", compact ? 95 : 135);
+  const summary = readableSummary(article.meta_description, article.content, compact ? 95 : 135);
   return (
     <Link
       to={buildBlogPath(article)}

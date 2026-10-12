@@ -1,5 +1,5 @@
 import { getCategoryDisplayName, type Article } from "@/lib/store";
-import { stripRichText } from "@/lib/seo";
+import { readableSummary, stripRichText } from "@/lib/seo";
 import { slugify } from "@/lib/deep-link";
 
 /**
@@ -25,25 +25,14 @@ export function cleanMetaTitle(article: Article): string {
 
 export function cleanMetaDescription(article: Article): string {
   const title = decodeEntities(stripRichText(article.title || "")).replace(/\s+/g, " ").trim();
-  let provided = decodeEntities(stripRichText(article.meta_description || "", 170)).replace(/\s*[-–—]{2,}\s*/g, " — ").trim();
-  if (title && provided.toLowerCase().startsWith(title.toLowerCase())) {
-    provided = provided.slice(title.length).replace(/^\s*[|:;,.–—-]+\s*/, "").trim();
-  }
   const cat = article.category ? article.category.replace(/^Year\s*\d+:\s*/i, "").trim() : "";
-  // Strip markdown scaffolding so a hero blurb never shows "### SECTION A: …"
-  const body = (article.content || "")
-    .replace(/^\s*#{1,6}\s*/gm, "")
-    .replace(/^\s*[-*+]\s+/gm, "")
-    .replace(/^\s*>\s?/gm, "")
-    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
-    .replace(/\*\*?/g, "")
-    .replace(/^\s*(?:SECTION\s+[A-C]\b.*|MULTIPLE\s+CHOICE.*)$/gim, " ");
-  const fallback = stripRichText(body, 155)
-    || `${article.title} study notes${cat ? ` on ${cat}` : ""} with clinical points and exam-focused revision for medical students.`;
-  const desc = provided.length >= 50 ? provided : fallback;
-  const enriched = /\b(Kenya|Africa|MBChB|medical students)\b/i.test(desc)
-    ? desc
-    : `${desc.replace(/[.\s]+$/, "")}. For MBChB and health students in Kenya and beyond.`;
+  // the stored description if it is clean prose, otherwise the first real sentences of the note (never "### SECTION A", page numbers or table rows)
+  let desc = decodeEntities(readableSummary(article.meta_description, article.content, 170)).replace(/\s*[-–—]{2,}\s*/g, " — ").trim();
+  if (title && desc.toLowerCase().startsWith(title.toLowerCase())) {
+    desc = desc.slice(title.length).replace(/^\s*[|:;,.–—-]+\s*/, "").trim();
+  }
+  if (desc.length < 50) desc = `${article.title} study notes${cat ? ` on ${cat}` : ""} with key points and exam-focused revision for medical students.`;
+  const enriched = desc.length <= 110 && !/\bmedical students\b/i.test(desc) ? `${desc.replace(/[.\s]+$/, "")}. Free study material for medical students.` : desc;
   return enriched.length <= 155 ? enriched : `${enriched.slice(0, 152).trimEnd()}...`;
 }
 

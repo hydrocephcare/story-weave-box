@@ -43,7 +43,7 @@ let changed = 0;
 for (const x of rows) {
   const text = x.content || "";
   const before = score(text).total;
-  const residue = /Visual or intentionally blank|transcription of (all|the) \d+ source pages|source pages were processed|[ﬁﬂﬀﬃﬄ▪]/i.test(text);
+  const residue = /\*\*\*\*|[?:.)]\s*A\.\s+\S.*[a-z0-9)]B\.\s+[A-Z0-9]|[^\s*\n]\*\*(Answer|Explanation)\b|Visual or intentionally blank|transcription of (all|the) \d+ source pages|source pages were processed|[ﬁﬂﬀﬃﬄ▪]/i.test(text);
   if (before < 12 && !residue) continue;
   if (HAND.has(x.id.slice(0, 8))) { console.log(x.id.slice(0, 8), "needs hand work:", x.title); continue; }
   const next = clean(text);

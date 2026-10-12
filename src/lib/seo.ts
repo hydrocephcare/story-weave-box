@@ -33,6 +33,38 @@ export function stripRichText(input: string, maxLength?: number): string {
   return normalized;
 }
 
+/** For question papers with no prose: how many multiple-choice questions there are, and whether answers are given. */
+export function examSummary(content: string | undefined | null): string {
+  const c = content || "";
+  const n = (c.match(/^\s*(?:[-*]\s*)?\(?A[.)]\s/gm) || []).length;
+  if (n < 5) return "";
+  const answers = (c.match(/^\W*(?:\*\*)?\s*(?:correct )?answer\b/gim) || []).length >= n / 2;
+  return `${n} multiple-choice questions${answers ? " with answers" : ""} for exam practice.`;
+}
+
+/** A short, readable summary for a note's header card: the stored description if it is clean prose, otherwise the first real sentences of the note (never headings, page numbers, "Section A" or table rows). */
+export function readableSummary(description: string | undefined | null, content: string | undefined | null, maxLength = 140): string {
+  const messy = (t: string) => /#{2,}|\s[-–—]\s[-–—]\s|^\d+[.)]\s|\*\*|\|/.test(t);
+  const d = stripRichText(description || "");
+  if (d.length >= 40 && !messy(description || "")) return d.slice(0, maxLength);
+  const exam = examSummary(content);
+  if (exam) return exam; // a question paper: say what it is, not whichever line comes first
+  // the first complete sentence of real prose (a list item counts, a heading, table row, label ending in a colon or printed header does not)
+  const lines = (content || "").replace(/\r\n/g, "\n").split("\n");
+  for (let i = 0; i < lines.length; i++) {
+    const t = lines[i].trim().replace(/^([-*•]|\d+[.)])\s+/, "");
+    if (!t || /^(#|!\[|\||-{3,}|>|```)/.test(t)) continue;
+    let plain = stripRichText(t);
+    if (plain.length < 50 || !/[.!?]$/.test(plain)) continue;
+    if (/^(school of|department of|university of|section [a-d]\b|instructions|answer all|time:|date:|note:|explanation|rationale|remember|clinical significance|answer|correct answer|question|q\d+|\d+[.)]|attempt all)/i.test(plain)) continue;
+    if (/\?$/.test(plain) || /source pages?|transcription|original paper|scanned|scan\b/i.test(plain)) continue; // a question, or scan boilerplate
+    if (plain === plain.toUpperCase()) continue; // a printed heading
+    if (plain.length < 90) { const nxt = stripRichText((lines[i + 1] || "").trim().replace(/^([-*•]|\d+[.)])\s+/, "")); if (nxt && /^[A-Z]/.test(nxt) && !/^#/.test((lines[i + 1] || "").trim())) plain = `${plain} ${nxt}`; }
+    return plain.slice(0, maxLength);
+  }
+  return d && !messy(description || "") ? d.slice(0, maxLength) : examSummary(content);
+}
+
 export function extractFirstImageFromContent(content: string): string | null {
   if (!content) return null;
 
