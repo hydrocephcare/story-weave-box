@@ -496,7 +496,7 @@ function ClassicHeroInner({
   const specificImage = image && !isGenericThumbnail(image) ? image : "";
   const topicImage = useTopicThumbnailInfo(title, category, !specificImage);
   const heroImage = specificImage || topicImage?.url || "";
-  const reviewer = pickReviewer(title);
+  const reviewer = "";
 
   /* Cinematic hero restored: slow-panning background photograph with the title
      and description overlaid, as the site originally had. Falls back to a clean
@@ -560,28 +560,6 @@ function ClassicHeroInner({
 }
 
 /* ─── Medically Reviewed badge (Cleveland-style) ─── */
-const REVIEWERS = [
-  "Dr. Achieng Okello, MBChB",
-  "Dr. Brian Mwangi, MBChB, MMed",
-  "Dr. Cynthia Wanjiru, MBChB",
-  "Dr. David Kiprono, MBChB, MMed Path",
-  "Dr. Elizabeth Njeri, MBChB",
-  "Dr. Felix Otieno, MBChB",
-  "Dr. Grace Mutindi, MBChB, MMed Med",
-  "Dr. Henry Kamau, MBChB",
-  "Dr. Irene Adhiambo, MBChB, MMed Paeds",
-  "Dr. James Mutiso, MBChB",
-  "Dr. Kevin Maina, MBChB, MMed Surg",
-  "Dr. Linda Akinyi, MBChB",
-  "Dr. Mark Kibet, MBChB",
-  "Dr. Naomi Wairimu, MBChB, MMed Obs/Gyn",
-  "Dr. Oscar Njoroge, MBChB",
-];
-function pickReviewer(seed: string): string {
-  let h = 0;
-  for (let i = 0; i < seed.length; i++) h = ((h << 5) - h + seed.charCodeAt(i)) | 0;
-  return REVIEWERS[Math.abs(h) % REVIEWERS.length];
-}
 
 
 function ReviewedBadge({ reviewer, date, onDark }: { reviewer: string; date: string; onDark?: boolean }) {
@@ -593,8 +571,7 @@ function ReviewedBadge({ reviewer, date, onDark }: { reviewer: string; date: str
         <svg viewBox="0 0 20 20" className="h-3 w-3" fill="currentColor"><path d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4l3.8 3.8 6.8-6.8a1 1 0 011.4 0z"/></svg>
       </span>
       <div className="leading-tight">
-        <p className="font-semibold">Medically Reviewed by {reviewer}</p>
-        <p className={`text-xs ${sub}`}>Last updated on {date}</p>
+        <p className="font-semibold">Last updated {date}</p>
       </div>
     </div>
   );

@@ -13,21 +13,6 @@ import { markFlashcardVisited } from "@/lib/progress-store";
 import { SITE_URL, stripRichText, updateMetaTags } from "@/lib/seo";
 import { useTopicThumbnail } from "@/lib/topicThumbnail";
 
-const REVIEWERS = [
-  "Dr. Achieng Okello, MBChB", "Dr. Brian Mwangi, MBChB, MMed",
-  "Dr. Cynthia Wanjiru, MBChB", "Dr. David Kiprono, MBChB, MMed Path",
-  "Dr. Elizabeth Njeri, MBChB", "Dr. Felix Otieno, MBChB",
-  "Dr. Grace Mutindi, MBChB, MMed Med", "Dr. Henry Kamau, MBChB",
-  "Dr. Irene Adhiambo, MBChB, MMed Paeds", "Dr. James Mutiso, MBChB",
-  "Dr. Kevin Maina, MBChB, MMed Surg", "Dr. Linda Akinyi, MBChB",
-  "Dr. Mark Kibet, MBChB", "Dr. Naomi Wairimu, MBChB, MMed Obs/Gyn",
-  "Dr. Oscar Njoroge, MBChB",
-];
-function pickReviewer(seed: string): string {
-  let h = 0;
-  for (let i = 0; i < seed.length; i++) h = ((h << 5) - h + seed.charCodeAt(i)) | 0;
-  return REVIEWERS[Math.abs(h) % REVIEWERS.length];
-}
 
 export default function FlashcardStudy() {
   const { id: param } = useParams();
@@ -94,7 +79,7 @@ function FlashcardStudyInner({ set }: { set: FlashcardSet }) {
   const heroTitle = set.meta_title?.trim() || set.title;
   const heroDesc = set.meta_description?.trim() || `Study ${set.cards.length} interactive flashcards for ${set.title}.`;
   const date = new Date(set.updated_at || set.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-  const reviewer = pickReviewer(set.title);
+  const reviewer = "";
   const topicThumb = useTopicThumbnail(set.title, set.category, !set.og_image_url);
   const heroImage = set.og_image_url || topicThumb || "";
   const shareUrl = `${SITE_URL}${buildFlashcardPath(set)}`;
@@ -163,8 +148,8 @@ function ReviewedBadge({ reviewer, date, onDark, count }: { reviewer: string; da
         <svg viewBox="0 0 20 20" className="h-3 w-3" fill="currentColor"><path d="M16.7 5.3a1 1 0 010 1.4l-7.5 7.5a1 1 0 01-1.4 0L3.3 9.7a1 1 0 011.4-1.4l3.8 3.8 6.8-6.8a1 1 0 011.4 0z"/></svg>
       </span>
       <div className="leading-tight">
-        <p className="font-semibold">Medically Reviewed by {reviewer}</p>
-        <p className={`text-xs ${sub}`}>Last updated on {date} · {count} cards</p>
+        <p className="font-semibold">Last updated {date}</p>
+        <p className={`text-xs ${sub}`}>{count} cards</p>
       </div>
     </div>
   );
