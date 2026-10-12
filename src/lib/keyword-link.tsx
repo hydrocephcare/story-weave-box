@@ -126,6 +126,16 @@ async function loadEntries(): Promise<LinkEntry[]> {
           entries.push({ term, lower: term, path: drugHref(d.id), target: "", category: null, quality: 26 });
         }
       }
+      // every subject that has its own topic page is linked to it, so a reader who meets "oppositional defiant disorder" in any note can open the whole picture
+      try {
+        const topics: { s: string; n: string; d: number }[] = await fetch("/topics/index.json").then((r) => (r.ok ? r.json() : []));
+        for (const t of topics) {
+          const key = `/topic/${t.s}|${t.n.toLowerCase()}`;
+          if (t.d < 3 || !isUsefulTerm(t.n) || seen.has(key)) continue;
+          seen.add(key);
+          entries.push({ term: t.n, lower: t.n.toLowerCase(), path: `/topic/${t.s}`, target: "", category: null, quality: 20 });
+        }
+      } catch { /* topic pages are optional */ }
       entries.sort((a,b) => b.term.length-a.term.length || b.quality-a.quality); cache=entries; return entries;
     } catch { return []; }
   })();
@@ -162,7 +172,7 @@ export function linkifyText(text: string, ctx: Ctx | null, keyPrefix = "k"): Rea
     used.add(entry.lower);
     usedTargets.add(entry.path);
     if (before) out.push(<span key={`${keyPrefix}-b-${i}`}>{before}</span>);
-    out.push(<DeepLinkSpan key={`${keyPrefix}-l-${i}`} path={entry.path.startsWith("/pharmacology") ? entry.path : `${entry.path}#${entry.target || slugify(matched)}`} title={entry.term} label={matched} returnTitle={ctx.currentTitle} />);
+    out.push(<DeepLinkSpan key={`${keyPrefix}-l-${i}`} path={entry.path.startsWith("/pharmacology") || entry.path.startsWith("/topic/") ? entry.path : `${entry.path}#${entry.target || slugify(matched)}`} title={entry.term} label={matched} returnTitle={ctx.currentTitle} />);
     rest = rest.slice(index + matched.length);
     if (++i > 28) {
       out.push(rest);

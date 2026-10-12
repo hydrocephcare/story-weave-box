@@ -37,3 +37,5 @@ scratch/
 .env*
 articles-backup-*.json
 preview-*.md
+.cache/
+public/topics/

@@ -68,6 +68,53 @@ export function linkDrugs(html, drugs) {
   return { html: out, ids };
 }
 
+/**
+ * Turns the first mention of each topic ("oppositional defiant disorder", "humerus") in a note into a link to its topic page, so a reader can
+ * open everything the library has on it. Headings, existing links, tables and the practice questions are left alone, and a note never links
+ * to the topic it is about. At most `limit` links per note. topics: [{ s: slug, n: name }].
+ */
+export function linkTopics(html, topics, { limit = 10, skip = [] } = {}) {
+  if (!topics?.length) return html;
+  const skipSlugs = new Set(skip);
+  const entries = topics.filter((t) => !skipSlugs.has(t.s) && t.n.length >= 5).map((t) => ({ s: t.s, term: t.n, re: new RegExp(`(^|[^A-Za-z0-9-])(${escRe(t.n)})(?![A-Za-z0-9-])`, "i") }));
+  entries.sort((a, b) => b.term.length - a.term.length);
+  const used = new Set();
+  let n = 0, skipSection = false, anchorDepth = 0, headDepth = 0, thDepth = 0, codeDepth = 0, summaryDepth = 0;
+  return html.split(/(<[^>]+>)/).map((seg) => {
+    if (seg.startsWith("<")) {
+      const m = seg.match(/^<(\/?)([a-z0-9]+)/i);
+      if (!m) return seg;
+      const close = m[1] === "/";
+      const tag = m[2].toLowerCase();
+      if (tag === "a") anchorDepth += close ? -1 : 1;
+      else if (/^h[1-6]$/.test(tag)) headDepth += close ? -1 : 1;
+      else if (tag === "th") thDepth += close ? -1 : 1;
+      else if (tag === "code") codeDepth += close ? -1 : 1;
+      else if (tag === "summary") summaryDepth += close ? -1 : 1;
+      return seg;
+    }
+    if (headDepth > 0) { if (/practice questions|exam-style|recall questions/i.test(seg)) skipSection = true; return seg; }
+    if (n >= limit || anchorDepth > 0 || thDepth > 0 || codeDepth > 0 || summaryDepth > 0 || skipSection || !seg.trim()) return seg;
+    const chosen = [];
+    for (const e of entries) {
+      if (n + chosen.length >= limit) break;
+      if (used.has(e.s)) continue;
+      const m = seg.match(e.re);
+      if (!m) continue;
+      const at = m.index + m[1].length, end = at + m[2].length;
+      if (chosen.some((c) => at < c.end && end > c.at)) continue;
+      chosen.push({ s: e.s, at, end });
+      used.add(e.s);
+    }
+    if (!chosen.length) return seg;
+    n += chosen.length;
+    chosen.sort((x, y) => x.at - y.at);
+    let res = "", pos = 0;
+    for (const c of chosen) { res += seg.slice(pos, c.at) + `<a class="note-link topic-link" href="/topic/${c.s}">${seg.slice(c.at, c.end)}</a>`; pos = c.end; }
+    return res + seg.slice(pos);
+  }).join("");
+}
+
 /** Drug ids mentioned in plain text, in order of first appearance. Used for notes that are not written in markdown. */
 export function findDrugIds(text, drugs, limit = 14) {
   if (!text || !drugs?.length) return [];

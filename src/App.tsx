@@ -24,6 +24,7 @@ import PurchaseResume from "@/components/PurchaseResume";
 import { Loader2 } from "lucide-react";
 import RouteErrorBoundary from "@/components/RouteErrorBoundary";
 import LearnerProfileGate from "@/components/LearnerProfileGate";
+import AccessibilityTools from "@/components/AccessibilityTools";
 import { AdminRoute, SignedInRoute, StudentRoute } from "@/components/AccessRoute";
 
 const Index = lazy(() => import("./pages/Index"));
@@ -75,6 +76,8 @@ const StudySystemAdmin = lazy(() => import("./pages/StudySystemAdmin"));
 const CategoryManager = lazy(() => import("./pages/CategoryManager"));
 const About = lazy(() => import("./pages/About"));
 const Partners = lazy(() => import("./pages/Partners"));
+const TopicPage = lazy(() => import("./pages/TopicPage"));
+const TopicsIndex = lazy(() => import("./pages/TopicsIndex"));
 const Contests = lazy(() => import("./pages/Contests"));
 const ContestBriefing = lazy(() => import("./pages/ContestBriefing"));
 const ContestRegistration = lazy(() => import("./pages/ContestRegistration"));
@@ -214,6 +217,8 @@ const AnimatedRoutes = () => {
             <Route path="/source-library/:slug" element={<AdminRoute><SourceLibrary /></AdminRoute>} />
             <Route path="/about" element={<About />} />
             <Route path="/partners" element={<Partners />} />
+            <Route path="/topics" element={<TopicsIndex />} />
+            <Route path="/topic/:slug" element={<TopicPage />} />
             <Route path="/download-app" element={<AppDownload />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
@@ -240,6 +245,7 @@ const App = () => (
             <ContentProtection />
             <PurchaseResume />
             <LearnerProfileGate />
+            <AccessibilityTools />
             <AnnouncementBar />
             <SearchGate />
             <UpdateNotifier />

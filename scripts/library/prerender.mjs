@@ -11,6 +11,7 @@ import { countFiles, fileBlurb, folderMeta, libraryPath, outlineMeta, prettyTitl
 import { mdToHtml } from "../../src/lib/miniMarkdown.js";
 import { splitPaper } from "../../src/lib/paperAnswers.js";
 import { linkDrugs } from "../../src/lib/noteLinks.js";
+import { prerenderTopics } from "../topics/prerender-topics.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const dist = path.join(root, "dist");
@@ -253,6 +254,10 @@ try {
     );
     write(meta.path, render({ title: meta.title, description: meta.description, path: meta.path, image: meta.ogImage, keywords: meta.keywords, body, jsonLd: { "@context": "https://schema.org", "@type": "Event", name: meta.title, description: meta.description, url: `${site}${meta.path}`, startDate: "2026-09-07", endDate: "2026-12-04", location: { "@type": "Place", name: "Mount Kenya University School of Medicine" }, organizer: { "@type": "Organization", name: "Mount Kenya University" } } }), undefined);
   }
+
+  // ---------------- topic pages (one per subject, built by scripts/topics/build-topics.mjs) ----------------
+  const topicPages = prerenderTopics({ fs, path, root, esc, shell, crumbs, write, render });
+  console.log(`topic pages: ${topicPages}`);
 
   // ---------------- sitemap ----------------
   const today = new Date().toISOString().slice(0, 10);

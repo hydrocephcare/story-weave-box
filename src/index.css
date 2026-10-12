@@ -538,3 +538,15 @@ body.no-copy img {
 .note-body .note-card > :first-child { margin-top: 0; }
 .note-body .callout { padding: 0.8rem 1rem; border-left: 4px solid hsl(var(--primary)); border-radius: 0.6rem; background: hsl(var(--primary) / 0.07); }
 @media print { .note-body .qa-ans > .qa-a, .note-body .qa-recall > .qa-a { display: block; } }
+
+/* Reading tools (AccessibilityTools.tsx): classes are set on <html> and remembered on the device. */
+html.a11y-lh1 :is(p, li, dd, td, blockquote) { line-height: 1.9 !important; }
+html.a11y-lh2 :is(p, li, dd, td, blockquote) { line-height: 2.3 !important; letter-spacing: 0.012em; word-spacing: 0.1em; }
+html.a11y-font body, html.a11y-font body * { font-family: Verdana, "Trebuchet MS", Tahoma, sans-serif !important; letter-spacing: 0.02em; }
+html.a11y-contrast:not(.dark) { --foreground: 0 0% 0%; --muted-foreground: 0 0% 18%; --border: 0 0% 30%; }
+html.a11y-contrast.dark { --foreground: 0 0% 100%; --muted-foreground: 0 0% 86%; --border: 0 0% 72%; }
+html.a11y-contrast a { text-decoration: underline; text-underline-offset: 3px; }
+html.a11y-links a { text-decoration: underline !important; text-underline-offset: 3px; }
+html.a11y-calm *, html.a11y-calm *::before, html.a11y-calm *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+.note-body a.topic-link { text-decoration: none; border-bottom: 1.5px solid hsl(var(--primary) / 0.45); color: inherit; }
+.note-body a.topic-link:hover { background: hsl(var(--primary) / 0.1); border-bottom-color: hsl(var(--primary)); }

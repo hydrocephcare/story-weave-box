@@ -1,5 +1,7 @@
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import { BookOpen as TopicIcon } from "lucide-react";
+import { topicPath, useTopicIndex } from "@/lib/topics";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Search, Sparkles } from "lucide-react";
 import { openAI } from "@/lib/aiEvents";
@@ -23,6 +25,13 @@ export default function GlobalSearch() {
   const opts = useMemo(() => ({ year: year || undefined, contentType: contentType || undefined }), [year, contentType]);
   const { hits, related, loading, deepLoading, searched, parsed } = useSmartSearch(q, opts);
   const groups = useMemo(() => groupSiteHits(hits), [hits]);
+  const topicIndex = useTopicIndex();
+  // a topic page that matches what was typed (the name, an abbreviation such as ODD, or the start of the name) is offered first
+  const topicHits = useMemo(() => {
+    const needle = q.trim().toLowerCase();
+    if (needle.length < 3 || !topicIndex) return [];
+    return topicIndex.filter((t) => t.n.toLowerCase() === needle || t.a.some((a) => a.toLowerCase() === needle) || t.n.toLowerCase().startsWith(needle)).sort((a, b) => Number(b.n.toLowerCase() === needle) - Number(a.n.toLowerCase() === needle) || b.d - a.d).slice(0, 3);
+  }, [q, topicIndex]);
 
   // Keep the URL in sync (without spamming browser history) so a search is shareable, but don't drive the search off it.
   useEffect(() => {
@@ -79,6 +88,16 @@ export default function GlobalSearch() {
 
       {parsed && searched && (parsed.topic && parsed.topic.toLowerCase() !== q.trim().toLowerCase() || parsed.year) && (
         <p className="mt-4 text-sm text-muted-foreground">Showing results for <strong className="text-foreground">{parsed.topic}</strong>{parsed.year && !year ? <> in <strong className="text-foreground">Year {parsed.year}</strong></> : null}</p>
+      )}
+      {topicHits.length > 0 && (
+        <div className="mt-4 grid gap-2 sm:grid-cols-2">
+          {topicHits.map((t) => (
+            <Link key={t.s} to={topicPath(t.s)} className="flex items-center gap-3 rounded-xl border border-emerald-500/40 bg-emerald-500/5 px-4 py-3 transition-colors hover:bg-emerald-500/10">
+              <TopicIcon className="h-5 w-5 shrink-0 text-emerald-600" aria-hidden="true" />
+              <span className="min-w-0 flex-1 text-sm"><strong className="block text-foreground">{t.n}: everything in one page</strong><span className="text-xs text-muted-foreground">{t.d} pages{t.q ? ` · ${t.q} questions` : ""}{t.i ? ` · ${t.i} images` : ""}</span></span>
+            </Link>
+          ))}
+        </div>
       )}
       {q.trim().length >= 2 && (
         <button type="button" onClick={() => openAI(q.trim())} className="mt-4 flex w-full items-center gap-3 rounded-xl border border-primary/30 bg-primary/5 px-4 py-3 text-left transition-colors hover:bg-primary/10">

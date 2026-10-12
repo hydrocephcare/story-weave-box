@@ -1,0 +1,69 @@
+name: Daily topic pages and AI overviews
+
+# Every day at 05:00 Nairobi time (02:00 UTC):
+#   1. the topic pages are rebuilt from the notes, MCQs and essays (so new notes show up on their topic pages),
+#   2. a few topics that have no overview yet get an AI-written one (needs the ANTHROPIC_API_KEY secret; without it this step is skipped),
+#   3. the new overviews are committed, which redeploys the site and refreshes the sitemap.
+# Run it yourself any time: GitHub > Actions > "Daily topic pages and AI overviews" > Run workflow.
+# AI overviews are saved as "not reviewed" and say so on the page. To mark one as checked by a doctor, set "reviewed": true in src/data/topicAi/<topic>.json.
+on:
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many AI overviews to write this run"
+        required: false
+        default: "5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: topics-daily
+  cancel-in-progress: false
+
+jobs:
+  topics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Rebuild the topic pages
+        run: node scripts/topics/build-topics.mjs --fresh
+
+      - name: Write today's AI overviews
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          AI_TOPICS_PER_RUN: ${{ inputs.count || '5' }}
+        run: node scripts/topics/ai-fill.mjs
+
+      - name: Save the new overviews
+        run: |
+          if [ -z "$(git status --porcelain src/data/topicAi)" ]; then
+            echo "No new overviews today."
+          else
+            git config user.name "ompath-bot"
+            git config user.email "ompath-bot@users.noreply.github.com"
+            git add src/data/topicAi
+            git commit -m "Daily AI topic overviews"
+            git pull --rebase origin main
+            git push origin main
+          fi
+
+      - name: Redeploy the site (so the sitemap and topic pages pick up new notes)
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -n "$HOOK" ]; then curl -fsS -X POST "$HOOK" && echo "Redeploy requested."; else echo "No VERCEL_DEPLOY_HOOK secret: skipping redeploy."; fi

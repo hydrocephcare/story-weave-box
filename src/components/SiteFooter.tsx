@@ -9,6 +9,7 @@ const links = [
   { to: "/year/5", label: "Y5" },
   { to: "/year/6", label: "Y6" },
   { to: "/about", label: "About" },
+  { to: "/topics", label: "Topics A–Z" },
   { to: "/partners", label: "Partners" },
   { to: "/download-app", label: "Get the app" },
 ];

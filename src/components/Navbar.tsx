@@ -81,6 +81,7 @@ export default function Navbar() {
       { to: "/books", label: "Books", icon: BookMarked },
       { to: "/papers", label: "Past papers", icon: ListChecks, more: true, pin: true },
       { to: "/new-notes", label: "Latest notes", icon: BookMarked, more: true, pin: true },
+      { to: "/topics", label: "Topics A–Z", icon: Network, more: true, pin: true },
       { to: "/revision-index", label: "Exam Revision", icon: ListChecks, more: true },
       { to: "/contests", label: "Mega Contest", icon: Trophy, more: true },
       { to: "/account", label: "Account", icon: UserRound, more: true },

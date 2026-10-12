@@ -12,7 +12,8 @@ import PharmacologyConnections from "@/components/PharmacologyConnections";
 import { STATIC_NOTES, TRIMESTER_LABEL, driveViewUrl, findStaticNote, loadStaticNoteText } from "@/data/staticNotes";
 import drugIndex from "@/data/drugIndex.json";
 import { mdToHtml } from "@/lib/miniMarkdown";
-import { linkDrugs } from "@/lib/noteLinks";
+import { linkDrugs, linkTopics } from "@/lib/noteLinks";
+import { useTopicIndex } from "@/lib/topics";
 import { clearNoteReturn, getNoteReturn, setNoteReturn } from "@/lib/noteReturn";
 import { updateMetaTags } from "@/lib/seo";
 import { logStudy } from "@/lib/studyLog";
@@ -54,7 +55,16 @@ function StaticNoteView() {
   useEffect(() => { if (text) logStudy(5); }, [text]);
 
   const parsed = useMemo(() => (text ? mdToHtml(text, { skipTitle: true, questions: !note?.paper }) : null), [text, note]);
-  const linked = useMemo(() => (parsed ? linkDrugs(parsed.html, DRUGS) : null), [parsed]);
+  const topicIndex = useTopicIndex();
+  const linked = useMemo(() => {
+    if (!parsed) return null;
+    const withDrugs = linkDrugs(parsed.html, DRUGS);
+    if (!topicIndex?.length || !note) return withDrugs;
+    // a note does not link to the subject it is itself about
+    const own = (note.title + " " + (note.group ?? "")).toLowerCase();
+    const topics = topicIndex.filter((t) => t.d >= 3 && !own.includes(t.n.toLowerCase())).map((t) => ({ s: t.s, n: t.n }));
+    return { ...withDrugs, html: linkTopics(withDrugs.html, topics) };
+  }, [parsed, topicIndex, note]);
 
   // Coming back from a drug page: put the reader exactly where they were once the text is on screen.
   useEffect(() => {
