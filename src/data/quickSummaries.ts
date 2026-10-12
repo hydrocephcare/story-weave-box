@@ -9,6 +9,18 @@ export interface QuickSummary {
 }
 
 export const QUICK_SUMMARIES: Record<string, QuickSummary> = {
+  "introduction-to-psychiatry": {
+    title: "Start with the basics",
+    subtitle: "Introduction to Psychiatry · Year 4",
+    intro: "Psychiatry is a medical specialty that assesses and treats mental, emotional and behavioural disorders. Mental health is more than simply not having a diagnosis.",
+    cards: [
+      { heading: "Mental health", think: "well-being and everyday functioning.", body: "Consider how a person copes with stress, maintains relationships and manages daily life. Mental health exists on a continuum." },
+      { heading: "Mental disorder", think: "clinically significant symptoms or dysfunction.", body: "A diagnosis requires assessment of the symptom pattern, duration, context and impact. One symptom or unusual behaviour alone is not enough." },
+      { heading: "Clinical approach", think: "describe first, interpret second.", body: "Take a history, perform the MSE, assess risk when indicated, and consider medical, medication and substance-related causes." },
+    ],
+    memory: ["Psychiatry = a medical specialty.", "Assess the person, their symptoms, context and functioning.", "Describe → interpret → formulate → plan."],
+    caution: "Do not label behaviour as a disorder without considering culture, context, duration, impairment and possible physical causes.",
+  },
   "neurodevelopmental-disorders-autism-intellectual-disability": {
     title: "Start with the basics",
     subtitle: "Neurodevelopmental disorders · Year 4 Psychiatry",
