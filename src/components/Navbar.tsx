@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { BookOpen, GraduationCap, Home, LayoutDashboard, Network, Stethoscope, Menu, Trophy, ChevronRight, UserRound, Target, Database, Smartphone, ListChecks, Pill, Flame, ChevronDown, BookMarked, PenLine } from "lucide-react";
+import { BookOpen, GraduationCap, Home, LayoutDashboard, Network, Stethoscope, Menu, Trophy, ChevronRight, UserRound, Target, Database, Smartphone, ListChecks, Pill, Flame, ChevronDown, ChevronLeft, BookMarked, PenLine } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "./ThemeToggle";
@@ -32,10 +32,56 @@ function getActiveYear(pathname: string, search: string): number | null {
   return null;
 }
 
-/** Secondary links live in a dropdown so the bar never overflows on laptop screens. */
-function MoreMenu({ links, isActive }: { links: { to: string; label: string; icon: typeof Home }[]; isActive: (to: string) => boolean }) {
+type Leaf = { to: string; label: string; icon: typeof Home; children?: { to: string; label: string }[] };
+type Group = { label: string; items: Leaf[] };
+
+/** The whole menu as a tree: hover a heading for its list, hover an item with an arrow for its own list. On phones the same tree folds open in the side menu. */
+function buildMenu(isAdmin: boolean): Group[] {
+  const groups: Group[] = [
+    { label: "Study", items: [
+      { to: "/blog", label: "Notes", icon: BookOpen, children: [{ to: "/blog", label: "All notes" }, ...YEAR_OPTIONS.map((y) => ({ to: `/year/${y}`, label: `Year ${y}` }))] },
+      { to: "/topics", label: "Topics A–Z", icon: Network },
+      { to: "/pharmacology", label: "Pharmacology", icon: Pill },
+      { to: "/papers", label: "Past papers", icon: ListChecks },
+      { to: "/new-notes", label: "Latest notes", icon: BookMarked },
+      { to: "/books", label: "Books", icon: BookMarked },
+    ] },
+    { label: "Practice", items: [
+      { to: "/exams", label: "Exams", icon: Trophy },
+      { to: "/flashcards", label: "Flashcards", icon: GraduationCap },
+      { to: "/must-knows", label: "Must-Knows", icon: ListChecks },
+      { to: "/revision-index", label: "Exam Revision", icon: ListChecks },
+      { to: "/clinical", label: "Clinical Sim", icon: Stethoscope },
+      { to: "/daily", label: "Daily Dose", icon: Flame },
+    ] },
+    { label: "My study", items: [
+      { to: "/my-revision", label: "Revision", icon: Target },
+      { to: "/dashboard", label: "My Day", icon: LayoutDashboard },
+      { to: "/study-map", label: "Study Map", icon: Network },
+    ] },
+    { label: "Community", items: [
+      { to: "/stories", label: "Stories", icon: PenLine },
+      { to: "/contests", label: "Mega Contest", icon: Trophy },
+    ] },
+  ];
+  const more: Leaf[] = [
+    { to: "/account", label: "Account", icon: UserRound },
+    { to: "/download-app", label: "Download APK", icon: Smartphone },
+  ];
+  if (isAdmin) more.push({ to: "/admin", label: "Admin", icon: Database, children: [{ to: "/admin", label: "Dashboard" }, { to: "/admin/study-system", label: "Study System" }, { to: "/admin/contests", label: "Contest Admin" }] });
+  groups.push({ label: "More", items: more });
+  return groups;
+}
+
+const panel = "rounded-xl border border-white/10 bg-[hsl(174,62%,18%)] p-1.5 shadow-xl";
+const row = (on: boolean) => `flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium ${on ? "bg-white/20" : "text-white/80 hover:bg-white/10 hover:text-white"}`;
+
+function HoverMenu({ group, isActive, last }: { group: Group; isActive: (to: string) => boolean; last?: boolean }) {
   const [open, setOpen] = useState(false);
+  const timer = useRef<number>();
   const ref = useRef<HTMLDivElement>(null);
+  const enter = () => { window.clearTimeout(timer.current); setOpen(true); };
+  const leave = () => { timer.current = window.setTimeout(() => setOpen(false), 140); };
   useEffect(() => {
     if (!open) return;
     const close = (e: MouseEvent) => { if (!ref.current?.contains(e.target as Node)) setOpen(false); };
@@ -43,13 +89,24 @@ function MoreMenu({ links, isActive }: { links: { to: string; label: string; ico
     document.addEventListener("mousedown", close); document.addEventListener("keydown", esc);
     return () => { document.removeEventListener("mousedown", close); document.removeEventListener("keydown", esc); };
   }, [open]);
-  const anyActive = links.some((l) => isActive(l.to));
+  const anyActive = group.items.some((i) => isActive(i.to) || i.children?.some((c) => c.to !== i.to && isActive(c.to)));
   return (
-    <div className="relative" ref={ref}>
-      <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-haspopup="menu" className={`inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${anyActive || open ? "bg-white/20" : "text-white/70 hover:bg-white/10 hover:text-white"}`}>More <ChevronDown className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`} /></button>
+    <div className="relative" ref={ref} onMouseEnter={enter} onMouseLeave={leave}>
+      <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-haspopup="menu" className={`inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${anyActive || open ? "bg-white/20" : "text-white/70 hover:bg-white/10 hover:text-white"}`}>{group.label} <ChevronDown className={`h-3.5 w-3.5 transition-transform ${open ? "rotate-180" : ""}`} /></button>
       {open && (
-        <div role="menu" className="absolute right-0 top-full z-50 mt-1.5 w-52 rounded-xl border border-white/10 bg-[hsl(174,62%,18%)] p-1.5 shadow-xl">
-          {links.map((l) => <Link key={l.to} to={l.to} role="menuitem" onClick={() => setOpen(false)} className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium ${isActive(l.to) ? "bg-white/20" : "text-white/80 hover:bg-white/10 hover:text-white"}`}><l.icon className="h-4 w-4 shrink-0 opacity-80" /> {l.label}</Link>)}
+        <div className={`absolute top-full z-50 pt-1.5 ${last ? "right-0" : "left-0"}`}>
+          <ul role="menu" className={`w-56 ${panel}`}>
+            {group.items.map((i) => i.children ? (
+              <li key={i.to} className="group/sub relative">
+                <Link to={i.to} role="menuitem" onClick={() => setOpen(false)} className={row(isActive(i.to))}><i.icon className="h-4 w-4 shrink-0 opacity-80" /> {i.label} {last ? <ChevronLeft className="ml-auto h-3.5 w-3.5 opacity-60" /> : <ChevronRight className="ml-auto h-3.5 w-3.5 opacity-60" />}</Link>
+                <div className={`invisible absolute top-0 opacity-0 group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:visible group-focus-within/sub:opacity-100 ${last ? "right-full pr-1.5" : "left-full pl-1.5"}`}>
+                  <ul role="menu" className={`w-44 ${panel}`}>{i.children.map((c) => <li key={c.label}><Link to={c.to} role="menuitem" onClick={() => setOpen(false)} className={row(false)}>{c.label}</Link></li>)}</ul>
+                </div>
+              </li>
+            ) : (
+              <li key={i.to}><Link to={i.to} role="menuitem" onClick={() => setOpen(false)} className={row(isActive(i.to))}><i.icon className="h-4 w-4 shrink-0 opacity-80" /> {i.label}</Link></li>
+            ))}
+          </ul>
         </div>
       )}
     </div>
@@ -64,36 +121,7 @@ export default function Navbar() {
   const [expandedYear, setExpandedYear] = useState<number | null>(null);
   const [hidden, setHidden] = useState(false);
 
-  const links = useMemo(() => {
-    const base: { to: string; label: string; icon: typeof Home; more?: boolean; /** also shown in the phone menu's main list */ pin?: boolean }[] = [
-      { to: "/", label: "Home", icon: Home },
-      { to: "/blog", label: "Notes", icon: BookOpen },
-      { to: "/exams", label: "Exams", icon: Trophy },
-      { to: "/flashcards", label: "Flashcards", icon: GraduationCap },
-      { to: "/stories", label: "Stories", icon: PenLine, pin: true },
-      { to: "/my-revision", label: "Revision", icon: Target, more: true },
-      { to: "/dashboard", label: "My Day", icon: LayoutDashboard, more: true },
-      { to: "/study-map", label: "Study Map", icon: Network, more: true },
-      { to: "/clinical", label: "Clinical Sim", icon: Stethoscope, more: true },
-      { to: "/pharmacology", label: "Pharmacology", icon: Pill, more: true },
-      { to: "/must-knows", label: "Must-Knows", icon: ListChecks, more: true },
-      { to: "/daily", label: "Daily Dose", icon: Flame, more: true },
-      { to: "/books", label: "Books", icon: BookMarked },
-      { to: "/papers", label: "Past papers", icon: ListChecks, more: true, pin: true },
-      { to: "/new-notes", label: "Latest notes", icon: BookMarked, more: true, pin: true },
-      { to: "/topics", label: "Topics A–Z", icon: Network, more: true, pin: true },
-      { to: "/revision-index", label: "Exam Revision", icon: ListChecks, more: true },
-      { to: "/contests", label: "Mega Contest", icon: Trophy, more: true },
-      { to: "/account", label: "Account", icon: UserRound, more: true },
-      { to: "/download-app", label: "Download APK", icon: Smartphone, more: true },
-    ];
-    if (isAdmin) {
-      base.push({ to: "/admin", label: "Dashboard", icon: LayoutDashboard, more: true });
-      base.push({ to: "/admin/study-system", label: "Study System", icon: Database, more: true });
-      base.push({ to: "/admin/contests", label: "Contest Admin", icon: Trophy, more: true });
-    }
-    return base;
-  }, [isAdmin]);
+  const menu = useMemo(() => buildMenu(isAdmin), [isAdmin]);
 
   const isExamPage = /^\/exams\/[^/]+\/start/.test(location.pathname);
 
@@ -201,18 +229,7 @@ export default function Navbar() {
 
             <HeaderSearch variant="desktop" />
 
-            {links.filter((l) => !l.more && l.to !== "/").map((l) => (
-              <Link
-                key={l.to}
-                to={l.to}
-                className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-                  isActive(l.to) ? "bg-white/20" : "text-white/70 hover:text-white hover:bg-white/10"
-                }`}
-              >
-                {l.label}
-              </Link>
-            ))}
-            <MoreMenu links={links.filter((l) => l.more)} isActive={isActive} />
+            {menu.map((g, i) => <HoverMenu key={g.label} group={g} isActive={isActive} last={i === menu.length - 1} />)}
             <NotificationsBell />
             <ThemeToggle />
           </div>
@@ -241,16 +258,16 @@ export default function Navbar() {
                   </div>
 
                   <div className="border-b border-white/10 px-3 py-3">
-                    {links.filter((l) => !l.more || l.pin).map((l) => (
-                      <Link
-                        key={l.to}
-                        to={l.to}
-                        onClick={() => setSidebarOpen(false)}
-                        className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${isActive(l.to) ? "bg-white/15 text-white" : "text-white/70 hover:text-white hover:bg-white/10"}`}
-                      >
-                        <l.icon className="h-4 w-4" />
-                        {l.label}
-                      </Link>
+                    <Link to="/" onClick={() => setSidebarOpen(false)} className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium ${location.pathname === "/" ? "bg-white/15 text-white" : "text-white/70 hover:bg-white/10 hover:text-white"}`}><Home className="h-4 w-4" /> Home</Link>
+                    {menu.map((g) => (
+                      <details key={g.label} className="group" open={g.items.some((i) => isActive(i.to))}>
+                        <summary className="flex cursor-pointer list-none items-center justify-between rounded-lg px-3 py-2.5 text-sm font-semibold text-white/90 hover:bg-white/10 [&::-webkit-details-marker]:hidden">{g.label}<ChevronDown className="h-3.5 w-3.5 transition-transform group-open:rotate-180" /></summary>
+                        <div className="ml-3 border-l border-white/10 pl-2">
+                          {g.items.map((l) => (
+                            <Link key={l.to} to={l.to} onClick={() => setSidebarOpen(false)} className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium ${isActive(l.to) ? "bg-white/15 text-white" : "text-white/70 hover:bg-white/10 hover:text-white"}`}><l.icon className="h-4 w-4" /> {l.label}</Link>
+                          ))}
+                        </div>
+                      </details>
                     ))}
                   </div>
 
@@ -271,25 +288,6 @@ export default function Navbar() {
                     </div>
                   </div>
 
-                  <details className="group px-3 py-3" open={links.some((l) => l.more && !l.pin && isActive(l.to))}>
-                    <summary className="flex cursor-pointer list-none items-center justify-between rounded-lg px-1 py-1 text-[10px] font-bold uppercase tracking-wider text-white/40 [&::-webkit-details-marker]:hidden">
-                      More tools
-                      <ChevronDown className="h-3.5 w-3.5 transition-transform group-open:rotate-180" />
-                    </summary>
-                    <div className="mt-2">
-                      {links.filter((l) => l.more && !l.pin).map((l) => (
-                      <Link
-                        key={l.to}
-                        to={l.to}
-                        onClick={() => setSidebarOpen(false)}
-                        className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${isActive(l.to) ? "bg-white/15 text-white" : "text-white/70 hover:text-white hover:bg-white/10"}`}
-                      >
-                        <l.icon className="h-4 w-4" />
-                        {l.label}
-                      </Link>
-                      ))}
-                    </div>
-                  </details>
                 </div>
               </SheetContent>
             </Sheet>

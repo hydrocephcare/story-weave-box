@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 
 export interface WebImage { u: string; full: string; title: string; credit: string; licence: string; page: string }
-export interface WebMedia { title: string; description: string; extract: string; url: string; hero: WebImage | null; more: WebImage[] }
+export interface WebMedia { title: string; description: string; extract: string; intro: string; url: string; hero: WebImage | null; more: WebImage[] }
 
 const API = "https://en.wikipedia.org/w/api.php";
 const CACHE = "ompath_webmedia_v1";
@@ -31,10 +31,18 @@ function shortExtract(t: string): string {
   return (out || clean).trim().slice(0, 420);
 }
 
+/** The whole opening of the article as short paragraphs (blank-line separated), without pronunciation brackets. */
+function introText(t: string): string {
+  const paras = t.split(/\n+/).map((p) => p.replace(/\s*\([^)]*\)/g, "").replace(/\s+/g, " ").trim()).filter((p) => p.length > 40);
+  let out = "";
+  for (const p of paras) { if (out && (out + p).length > 1700) break; out += (out ? "\n" : "") + p; }
+  return out;
+}
+
 async function findArticle(names: string[]): Promise<Page | null> {
   for (const name of names) {
     try {
-      const q = new URLSearchParams({ action: "query", format: "json", origin: "*", redirects: "1", titles: name, prop: "pageimages|extracts|info|description|pageprops", piprop: "thumbnail|original", pithumbsize: "900", exintro: "1", explaintext: "1", exsentences: "3", inprop: "url" });
+      const q = new URLSearchParams({ action: "query", format: "json", origin: "*", redirects: "1", titles: name, prop: "pageimages|extracts|info|description|pageprops", piprop: "thumbnail|original", pithumbsize: "900", exintro: "1", explaintext: "1", inprop: "url" });
       const j = await json<{ query?: { pages?: Record<string, Page & { missing?: string }> } }>(`${API}?${q}`);
       const p = Object.values(j.query?.pages ?? {})[0];
       if (p && !("missing" in p) && !p.pageprops?.disambiguation && p.extract) return p;
@@ -87,6 +95,7 @@ export async function loadWebMedia(names: string[]): Promise<WebMedia | null> {
         title: article.title,
         description: article.description ?? "",
         extract: shortExtract(article.extract ?? ""),
+        intro: introText(article.extract ?? ""),
         url: article.fullurl ?? `https://en.wikipedia.org/wiki/${encodeURIComponent(article.title)}`,
         hero,
         more: gallery.filter((g) => g.full !== hero?.full).slice(0, 6),
