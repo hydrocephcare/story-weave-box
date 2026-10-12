@@ -6,12 +6,10 @@
 //   node scripts/maintenance/clean-articles.mjs --apply        writes the cleaned text
 //   node scripts/maintenance/clean-articles.mjs --restore FILE puts the saved text back from a backup file
 import fs from "fs";
-import { createClient } from "@supabase/supabase-js";
+import { sb } from "./db.mjs";
 import { clean } from "./clean.mjs";
 import { score } from "./ocr-scan.mjs";
 
-const env = Object.fromEntries(fs.readFileSync(".env", "utf8").split(/\r?\n/).filter((l) => l.includes("=")).map((l) => [l.split("=")[0], l.slice(l.indexOf("=") + 1).replace(/^"|"$/g, "")]));
-const sb = createClient(env.VITE_SUPABASE_URL, env.VITE_SUPABASE_PUBLISHABLE_KEY);
 const apply = process.argv.includes("--apply");
 const restore = process.argv.indexOf("--restore");
 
