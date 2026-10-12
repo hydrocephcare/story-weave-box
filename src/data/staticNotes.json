@@ -1690,5 +1690,15 @@
     "description": "12 single-best-answer MCQs with explanations: diabetic ketoacidosis, Graves disease, hypothyroidism, adrenal crisis, variceal bleeding, hepatitis, ulcerative colitis, coeliac disease and spontaneous bacterial peritonitis.",
     "updated": "2026-10-12",
     "file": "src/content/notes/question-bank-endocrine-gi.md"
+  },
+  {
+    "slug": "neurodevelopmental-disorders-adhd-disruptive-behaviour",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Neurodevelopmental disorders",
+    "title": "Neurodevelopmental Disorders II: ADHD and Disruptive Behaviour",
+    "description": "MKU MBChB Year 4 Psychiatry Week 7 notes: ADHD symptoms and diagnostic criteria, assessment and differentials, management, oppositional defiant disorder, conduct disorder, clinical case and exam questions.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/neurodevelopmental-disorders-adhd-disruptive-behaviour.md"
   }
 ]
