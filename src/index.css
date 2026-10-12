@@ -554,3 +554,7 @@ html.a11y-calm *, html.a11y-calm *::before, html.a11y-calm *::after { animation:
 .note-body a.topic-link { text-decoration: none; color: inherit; border-bottom: 0; background: linear-gradient(transparent 58%, hsl(var(--primary) / 0.22) 58%); border-radius: 2px; padding: 0 0.12em; transition: background 0.15s; }
 .note-body a.topic-link::after { content: "↗"; font-size: 0.68em; margin-left: 0.15em; opacity: 0.55; vertical-align: super; }
 .note-body a.topic-link:hover, .note-body a.topic-link:focus-visible { background: linear-gradient(transparent 0%, hsl(var(--primary) / 0.22) 0%); }
+
+.note-body .note-figure { margin: 1.4rem 0; overflow: hidden; border: 1px solid hsl(var(--border)); border-radius: 1rem; background: #fff; }
+.note-body .note-figure img { display: block; width: 100%; max-height: 26rem; object-fit: contain; background: #fff; }
+.note-body .note-figure figcaption { padding: 0.6rem 0.9rem; border-top: 1px solid hsl(var(--border)); background: hsl(var(--muted) / 0.5); font-size: 0.78rem; line-height: 1.4; color: hsl(var(--muted-foreground)); }

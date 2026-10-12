@@ -1700,5 +1700,55 @@
     "description": "MKU MBChB Year 4 Psychiatry Week 7 notes: ADHD symptoms and diagnostic criteria, assessment and differentials, management, oppositional defiant disorder, conduct disorder, clinical case and exam questions.",
     "updated": "2026-10-12",
     "file": "src/content/notes/neurodevelopmental-disorders-adhd-disruptive-behaviour.md"
+  },
+  {
+    "slug": "acute-kidney-injury",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Renal",
+    "title": "Acute kidney injury",
+    "description": "Acute kidney injury: KDIGO criteria, pre-renal, renal and post-renal causes, investigations with the question each answers, dialysis red flags, management, nephritic presentations and practice questions.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/renal-acute-kidney-injury.md"
+  },
+  {
+    "slug": "hepatitis-b-and-the-jaundiced-patient",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Gastroenterology and hepatology",
+    "title": "Hepatitis B and the approach to hepatitis",
+    "description": "Hepatitis B and the jaundiced patient: liver function patterns, causes, hepatitis B serology, who to treat, drug choices and why, supportive care, liver cancer surveillance and practice questions.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/gastro-hepatitis-b-and-the-jaundiced-patient.md"
+  },
+  {
+    "slug": "heart-murmurs",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Cardiovascular",
+    "title": "Heart murmurs",
+    "description": "Heart murmurs: how to describe and grade them, manoeuvres, each valve lesion, peripheral signs of aortic regurgitation, causes including rheumatic heart disease, and practice questions.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/cardio-heart-murmurs.md"
+  },
+  {
+    "slug": "heart-failure-which-tests",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Cardiovascular",
+    "title": "Heart failure: which tests and why",
+    "description": "Heart failure investigations: BNP, echocardiogram, ECG, chest X-ray and blood tests, each tied to the question it answers, causes, precipitants, management outline and practice questions.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/cardio-heart-failure-which-tests.md"
+  },
+  {
+    "slug": "rheumatic-fever-and-jones-criteria",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Cardiovascular",
+    "title": "Acute rheumatic fever and rheumatic heart disease",
+    "description": "Acute rheumatic fever: the 2015 Jones criteria, investigations, treatment, long-term penicillin prophylaxis, complications and practice questions.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/cardio-rheumatic-fever-and-jones-criteria.md"
   }
 ]

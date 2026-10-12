@@ -163,6 +163,9 @@ export function mdToHtml(source, { skipTitle = false, questions = false } = {}) 
       if (questions && level <= 3 && CARD_HEADING.test(h[2].replace(/\*+/g, "").replace(/^\d+\.\s*/, "").trim())) { out.push('<div class="note-card">'); card = true; }
       i++; continue;
     }
+    // a picture on its own line: ![caption and credit](https://upload.wikimedia.org/...). Only Wikimedia hosts are allowed.
+    const pic = line.match(/^!\[([^\]]*)\]\((https:\/\/upload\.wikimedia\.org\/[^)\s]+)\)\s*$/);
+    if (pic) { out.push(`<figure class="note-figure"><img src="${esc(pic[2])}" alt="${esc(pic[1])}" loading="lazy" decoding="async" /><figcaption>${esc(pic[1])}</figcaption></figure>`); i++; continue; }
     if (/^-{3,}\s*$/.test(line)) { out.push("<hr />"); i++; continue; }
     if (/^>\s?/.test(line)) {
       const quoted = [];
