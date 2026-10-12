@@ -35,3 +35,4 @@ scratch/
 
 # Never commit local credentials or deployment tokens.
 .env*
+articles-backup-*.json

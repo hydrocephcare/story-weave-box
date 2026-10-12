@@ -1610,5 +1610,35 @@
     "file": "src/content/notes/paediatrics-growth-and-development.md",
     "series": "Pead Series",
     "week": "Week 2"
+  },
+  {
+    "slug": "question-bank-cardiology",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Question bank",
+    "title": "Cardiology Question Bank: 15 Clinical MCQs",
+    "description": "15 single-best-answer cardiology MCQs with explanations: acute coronary syndromes, heart failure, arrhythmias, valve disease, hypertension, pericarditis, endocarditis and aortic dissection.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/question-bank-cardiology.md"
+  },
+  {
+    "slug": "question-bank-respiratory",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Question bank",
+    "title": "Respiratory Medicine Question Bank: 15 Clinical MCQs",
+    "description": "15 single-best-answer respiratory MCQs with explanations: asthma, COPD, pneumonia, pulmonary embolism, pneumothorax, pleural effusion, tuberculosis, lung cancer and blood gases.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/question-bank-respiratory.md"
+  },
+  {
+    "slug": "question-bank-pharmacology",
+    "year": 4,
+    "unit": "Clinical Pharmacology",
+    "group": "Question bank",
+    "title": "Pharmacology Question Bank: 15 Clinical MCQs",
+    "description": "15 single-best-answer pharmacology MCQs with explanations: enzyme induction, antidotes, adverse effects, drug interactions, anticoagulants, diabetes drugs, analgesics and prescribing in pregnancy.",
+    "updated": "2026-10-12",
+    "file": "src/content/notes/question-bank-pharmacology.md"
   }
 ]
