@@ -54,3 +54,12 @@ export function benefitsFor(uni: string | null): { title: string; points: string
     note: "The timetable and lecturers are MKU-only for now. If your university would like the same, tell us and we will set it up.",
   };
 }
+
+/** MKU-only detail (lecturer names, MKU labels) is shown only to students who picked MKU. Everyone else sees the same outline without it. */
+export function useIsMku(): boolean {
+  const [uni] = useUniversity();
+  return isMku(uni);
+}
+
+/** Wording for readers outside MKU: "MKU" and "Mount Kenya University" become "the university". */
+export const neutral = (text: string, mku: boolean): string => (mku ? text : text.replace(/\bMount Kenya University( \(MKU\))?/g, "the university").replace(/\bMKU\b/g, "the university"));

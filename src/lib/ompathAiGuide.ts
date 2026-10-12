@@ -52,7 +52,7 @@ export async function guideReply(input: string, myYear: number | null): Promise<
   // everything the site offers
   if (/\b(what (is|do you have|can i find|s) (on|in) (the |this |your |ompath )?(site|website|platform|ompath)|what does (this|the|ompath) (site|website|platform|study) (have|offer|do)|what is ompath( study)?|what can ompath|what do you offer|everything (on|in) (the )?site)\b/.test(s)) {
     return {
-      answer: `**Ompath Study** is a free MBChB study site for Kenyan medical students, organised by year, semester and unit.\n\n${SECTIONS.map((x) => `- ${x.label}`).join("\n")}\n- Timetable and lecturers for MKU students (log in)\n- Revision planner and contests\n\nTell me a year ("what is in year 3?") or a topic ("notes on psychiatry") and I will take you straight there.`,
+      answer: `**Ompath Study** is a free medical study site for students worldwide, organised by year, semester and unit.\n\n${SECTIONS.map((x) => `- ${x.label}`).join("\n")}\n- Timetable and lecturers for MKU students (log in)\n- Revision planner and contests\n\nTell me a year ("what is in year 3?") or a topic ("notes on psychiatry") and I will take you straight there.`,
       followUps: ["What is in year 1?", "What is in year 4?", "Notes on psychiatry"],
       links: [{ label: "Past papers", href: "/papers" }, { label: "Stories", href: "/stories" }],
     };

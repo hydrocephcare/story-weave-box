@@ -35,11 +35,11 @@ export default function Login() {
     typeof window !== "undefined"
       ? `${window.location.origin}${location.pathname}${location.search}`
       : location.pathname;
-  const title = "Sign In | OmpathStudy Kenya";
+  const title = "Sign In | OmpathStudy";
   const description =
     "Sign in to OmpathStudy to access your medical education content, subscriptions, and study materials.";
   const keywords =
-    "OmpathStudy, login, medical education Kenya, student portal, study notes";
+    "OmpathStudy, login, medical education, student portal, study notes";
 
   const google = async () => {
     setBusy(true);

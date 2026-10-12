@@ -9,6 +9,7 @@ const links = [
   { to: "/year/5", label: "Y5" },
   { to: "/year/6", label: "Y6" },
   { to: "/about", label: "About" },
+  { to: "/partners", label: "Partners" },
   { to: "/download-app", label: "Get the app" },
 ];
 
@@ -31,7 +32,7 @@ export default function SiteFooter() {
         <div className="flex items-center gap-2">
           <a href="tel:+254115475543" aria-label="Call" className={icon}><Phone className="h-4 w-4" /></a>
           <a href="https://wa.me/254115475543" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className={icon}><MessageCircle className="h-4 w-4" /></a>
-          <a href="mailto:hello@ompathstudy.com" aria-label="Email" className={icon}><Mail className="h-4 w-4" /></a>
+          <a href="mailto:ompathstudy@gmail.com" aria-label="Email" className={icon}><Mail className="h-4 w-4" /></a>
         </div>
       </div>
       <p className="text-center text-[11px] text-muted-foreground">Built by <span className="font-medium text-foreground">Abongo</span> · © {new Date().getFullYear()} Ompath Study</p>

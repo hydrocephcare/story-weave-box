@@ -17,6 +17,7 @@ import ConnectedLearning from "@/components/ConnectedLearning";
 import { ROTATIONS } from "@/clinical/types";
 import { Link2 } from "lucide-react";
 import ContentCredit from "@/components/ContentCredit";
+import { useIsMku, neutral } from "@/lib/university";
 
 // Turn an outline title into a library search: first clause, no roman numerals/brackets, first three real words.
 const STOP = new Set(["and","the","of","in","for","to","a","an","i","ii","iii","iv","vs","thread","introduction","overview","principles","disorders","drugs","agents","used"]);
@@ -172,6 +173,7 @@ function OutlineLoader({ id }: { id: string }) {
 }
 
 function CourseOutlineView({ outline }: { outline: CourseOutline }) {
+  const mkuView = useIsMku();
   const { user, loading } = useAuth();
   const reg = registry.outlines.find((o) => o.slug === outline.id);
   const { done, toggle, setMany } = useOutlineProgress(user?.id ?? null);
@@ -270,7 +272,7 @@ function CourseOutlineView({ outline }: { outline: CourseOutline }) {
 
         <article className="rounded-2xl border border-border bg-card p-5 sm:p-6">
           <h2 className="font-serif text-xl font-bold text-foreground">{outline.title}</h2>
-          <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{outline.summary}</p>
+          <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{neutral(outline.summary, mkuView)}</p>
           {outline.team && <p className="mt-2 text-xs leading-relaxed text-muted-foreground"><span className="font-bold text-foreground">Teaching team:</span> {outline.team}</p>}
           {outline.assessment && <p className="mt-1 text-xs leading-relaxed text-muted-foreground"><span className="font-bold text-foreground">Assessment:</span> {outline.assessment}</p>}
           {outline.info && outline.info.length > 0 && (
@@ -279,8 +281,8 @@ function CourseOutlineView({ outline }: { outline: CourseOutline }) {
               <div className="mt-3 space-y-4">
                 {outline.info.map((block) => (
                   <section key={block.heading}>
-                    <h3 className="text-[11px] font-bold uppercase tracking-wider text-primary">{block.heading}</h3>
-                    <ul className="mt-1 list-disc space-y-1 pl-5 text-xs leading-relaxed text-muted-foreground">{block.lines.map((l) => <li key={l}>{l}</li>)}</ul>
+                    <h3 className="text-[11px] font-bold uppercase tracking-wider text-primary">{neutral(block.heading, mkuView)}</h3>
+                    <ul className="mt-1 list-disc space-y-1 pl-5 text-xs leading-relaxed text-muted-foreground">{block.lines.map((l) => <li key={l}>{neutral(l, mkuView)}</li>)}</ul>
                   </section>
                 ))}
               </div>
@@ -384,6 +386,7 @@ interface CardProps {
 }
 
 function SectionCard({ outline, section, done, flagged, signedIn, names, open, remainingOnly, flaggedOnly, onOpen, onToggle, onMany, onView }: CardProps) {
+  const mku = useIsMku();
   const ids = section.items.map((i) => i.id);
   const doneN = ids.filter((id) => done.has(id)).length;
   const complete = signedIn && doneN === ids.length && ids.length > 0;
@@ -438,7 +441,7 @@ function SectionCard({ outline, section, done, flagged, signedIn, names, open, r
                         </span>
                         {item.detail && <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground">{item.detail}</span>}
                         {item.noteSlug && <Link to={`/notes/${item.noteSlug}`} onClick={(e) => e.stopPropagation()} className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-primary hover:underline"><BookOpen className="h-3 w-3" /> Read Pead Series · {item.week ?? "notes"} notes</Link>}
-                        {item.lecturer && <span className="mt-0.5 block text-[11px] font-semibold text-muted-foreground">{item.lecturer}</span>}
+                        {item.lecturer && mku && <span className="mt-0.5 block text-[11px] font-semibold text-muted-foreground">{item.lecturer}</span>}
                         {hit && (
                           <Link to={`/library/year-${outline.year}?q=${encodeURIComponent(hit.q)}`} onClick={(e) => e.stopPropagation()} className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-primary hover:underline"><Search className="h-3 w-3" /> Find notes ({hit.n})</Link>
                         )}

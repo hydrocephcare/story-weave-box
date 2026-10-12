@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ClipboardList, ChevronRight } from "lucide-react";
+import { useIsMku } from "@/lib/university";
 import { COURSE_OUTLINES, getCourseOutlineForUnit, type CourseOutline, type OutlineItem } from "@/data/courseOutlines";
 
 interface Ref { outline: CourseOutline; items: { item: OutlineItem; section: string }[] }
@@ -22,6 +23,7 @@ export function outlineRefFor(note: { slug: string; year: number; unit: string }
 
 /** "Course outline" card at the top of a note: the topic, week and lecturer, and one tap to the full outline and its official text. */
 export default function NoteOutlineBox({ note }: { note: { slug: string; year: number; unit: string } }) {
+  const mku = useIsMku();
   const ref = useMemo(() => outlineRefFor(note), [note]);
   if (!ref) return null;
   const { outline, items } = ref;
@@ -36,7 +38,7 @@ export default function NoteOutlineBox({ note }: { note: { slug: string; year: n
               <Link to={`/course-outlines/${outline.id}#${encodeURIComponent(item.id)}`} className="group flex items-start gap-2 rounded-lg bg-background/70 px-2.5 py-2 hover:bg-background">
                 <span className="min-w-0 flex-1">
                   <span className="block text-sm font-semibold leading-snug text-foreground">{item.title}</span>
-                  <span className="block text-xs text-muted-foreground">{[item.week, item.lecturer, section].filter(Boolean).join(" · ")}</span>
+                  <span className="block text-xs text-muted-foreground">{[item.week, mku ? item.lecturer : "", section].filter(Boolean).join(" · ")}</span>
                 </span>
                 <ChevronRight className="mt-1 h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </Link>

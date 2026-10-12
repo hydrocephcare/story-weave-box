@@ -74,6 +74,7 @@ const GlobalSearch = lazy(() => import("./pages/GlobalSearch"));
 const StudySystemAdmin = lazy(() => import("./pages/StudySystemAdmin"));
 const CategoryManager = lazy(() => import("./pages/CategoryManager"));
 const About = lazy(() => import("./pages/About"));
+const Partners = lazy(() => import("./pages/Partners"));
 const Contests = lazy(() => import("./pages/Contests"));
 const ContestBriefing = lazy(() => import("./pages/ContestBriefing"));
 const ContestRegistration = lazy(() => import("./pages/ContestRegistration"));
@@ -212,6 +213,7 @@ const AnimatedRoutes = () => {
             <Route path="/source-library" element={<AdminRoute><SourceLibrary /></AdminRoute>} />
             <Route path="/source-library/:slug" element={<AdminRoute><SourceLibrary /></AdminRoute>} />
             <Route path="/about" element={<About />} />
+            <Route path="/partners" element={<Partners />} />
             <Route path="/download-app" element={<AppDownload />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

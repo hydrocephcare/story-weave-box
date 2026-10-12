@@ -77,17 +77,14 @@ interface MetaConfig {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const KENYA_BASE_KEYWORDS = [
-  "MKU", "UON", "KU", "Moi", "Aga Khan", "Kabarak",
-  "MKU pathology", "UON pathology", "Mount Kenya University medicine",
-  "clinical pathology Kenya", "past papers Kenya", "MCQs Kenya medical",
-  "pathology notes Africa", "medical school notes Kenya",
+const BASE_KEYWORDS = [
+  "medical school notes", "free MCQs with answers", "past papers", "flashcards", "MBBS", "MBChB", "medical students worldwide",
 ];
 
 export function buildKeywords(topic: string, extra: string[] = []): string {
   const set = new Set<string>();
   if (topic) set.add(topic.toLowerCase());
-  [...KENYA_BASE_KEYWORDS, ...extra].forEach(k => k && set.add(k));
+  [...BASE_KEYWORDS, ...extra].forEach(k => k && set.add(k));
   return Array.from(set).slice(0, 25).join(", ");
 }
 

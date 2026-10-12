@@ -39,10 +39,10 @@ const YEAR3_PRIORITY = [
 /* Proof points — TeachMeAnatomy / Lecturio hero pattern: the value of the library
    is stated as checkable facts right beside the headline. */
 const PROOF = [
-  "Notes mapped to the MBChB curriculum, Year 1 → Year 6",
+  "Notes organised by year, system and unit, Year 1 → Year 6",
   "Compiled from real past papers and CATs",
   "Every MCQ set, exam and paper is completely free",
-  "Written for Kenyan medical schools — MKU, UoN, KU, JKUAT",
+  "Built for medical students worldwide, with local course outlines where we have them",
 ];
 
 type RecentItem = { id: string; title: string; type: "article" | "flashcard" | "story"; category: string; created_at: string; slug?: string | null };
@@ -112,7 +112,7 @@ export default function Index() {
   useEffect(() => {
     updateMetaTags({
       title: "Medical Notes, MCQs & Exams | OmpathStudy",
-      description: "Free medical study notes, MCQs, flashcards and timed exams for MBChB and health students across Kenya and East Africa.",
+      description: "Free medical study notes, MCQs, flashcards and timed exams for medical, MBChB/MBBS and health-science students worldwide.",
     });
 
     // Load categories
@@ -187,7 +187,7 @@ export default function Index() {
         >
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-white/80">
-              Free medical library · Kenya
+              Free medical library · Worldwide
             </span>
             <h1 className="mt-5 font-serif text-[2.15rem] font-bold leading-[1.06] tracking-tight sm:text-5xl lg:text-[3.4rem]">
               Every note, paper and MCQ<br className="hidden sm:block" />
