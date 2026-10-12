@@ -159,7 +159,7 @@ function StaticNoteView() {
         </section>
       )}
 
-      {!note.paper && <NoteOutlineBox note={note} />
+      {!note.paper && <NoteOutlineBox note={note} />}
 
       {note.paper && (
         <aside aria-label="Past paper" className="mt-4 rounded-xl border border-primary/30 bg-primary/5 p-4 text-sm print:hidden">
