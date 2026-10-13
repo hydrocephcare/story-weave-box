@@ -102,7 +102,7 @@ export default function GlobalSearch() {
       {topicIndex && topicHits.length === 0 && q.trim().length >= 4 && /^[A-Za-z][A-Za-z0-9 '’()\-,./&]{3,70}$/.test(q.trim()) && (
         <Link to={topicPath(slugFromName(q.trim()))} className="mt-4 flex items-center gap-3 rounded-xl border border-dashed border-emerald-500/50 px-4 py-3 transition-colors hover:bg-emerald-500/5">
           <TopicIcon className="h-5 w-5 shrink-0 text-emerald-600" aria-hidden="true" />
-          <span className="min-w-0 flex-1 text-sm"><strong className="block text-foreground">Write a page on “{q.trim().slice(0, 50)}”</strong><span className="text-xs text-muted-foreground">If it is a medical topic, a full page is built in under a minute and kept for everyone.</span></span>
+          <span className="min-w-0 flex-1 text-sm"><strong className="block text-foreground">Read about “{q.trim().slice(0, 50)}”</strong><span className="text-xs text-muted-foreground">Open the full page on this topic: overview, causes, tests, management and questions.</span></span>
         </Link>
       )}
       {q.trim().length >= 2 && (

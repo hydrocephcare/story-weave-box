@@ -548,12 +548,11 @@ html.a11y-contrast.dark { --foreground: 0 0% 100%; --muted-foreground: 0 0% 86%;
 html.a11y-contrast a { text-decoration: underline; text-underline-offset: 3px; }
 html.a11y-links a { text-decoration: underline !important; text-underline-offset: 3px; }
 html.a11y-calm *, html.a11y-calm *::before, html.a11y-calm *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-.note-body a.topic-link { text-decoration: none; border-bottom: 1.5px solid hsl(var(--primary) / 0.45); color: inherit; }
-.note-body a.topic-link:hover { background: hsl(var(--primary) / 0.1); border-bottom-color: hsl(var(--primary)); }
+a.topic-link { text-decoration: none; border-bottom: 1.5px solid hsl(var(--primary) / 0.45); color: inherit; }
+a.topic-link:hover { background: hsl(var(--primary) / 0.1); border-bottom-color: hsl(var(--primary)); }
 /* a topic mentioned inside a note: a highlighter stripe that opens the topic's own page */
-.note-body a.topic-link { text-decoration: none; color: inherit; border-bottom: 0; background: linear-gradient(transparent 58%, hsl(var(--primary) / 0.22) 58%); border-radius: 2px; padding: 0 0.12em; transition: background 0.15s; }
-.note-body a.topic-link::after { content: "↗"; font-size: 0.68em; margin-left: 0.15em; opacity: 0.55; vertical-align: super; }
-.note-body a.topic-link:hover, .note-body a.topic-link:focus-visible { background: linear-gradient(transparent 0%, hsl(var(--primary) / 0.22) 0%); }
+a.topic-link { text-decoration: none; color: inherit; border-bottom: 0; background: linear-gradient(transparent 58%, hsl(var(--primary) / 0.22) 58%); border-radius: 2px; padding: 0 0.12em; transition: background 0.15s; }
+a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(transparent 0%, hsl(var(--primary) / 0.22) 0%); }
 
 .note-body .note-figure { margin: 1.4rem 0; overflow: hidden; border: 1px solid hsl(var(--border)); border-radius: 1rem; background: #fff; }
 .note-body .note-figure img { display: block; width: 100%; max-height: 26rem; object-fit: contain; background: #fff; }

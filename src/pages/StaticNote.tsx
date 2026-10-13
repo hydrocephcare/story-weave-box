@@ -63,7 +63,7 @@ function StaticNoteView() {
     if (!topicIndex?.length || !note) return withDrugs;
     // a note does not link to the subject it is itself about
     const own = (note.title + " " + (note.group ?? "")).toLowerCase();
-    const topics = topicIndex.filter((t) => t.d >= 3 && !own.includes(t.n.toLowerCase())).map((t) => ({ s: t.s, n: t.n }));
+    const topics = topicIndex.filter((t) => (t.d >= 3 || t.ai) && !own.includes(t.n.toLowerCase())).map((t) => ({ s: t.s, n: t.n }));
     return { ...withDrugs, html: linkTopics(withDrugs.html, topics) };
   }, [parsed, topicIndex, note]);
 

@@ -7,7 +7,7 @@ export interface WebImage { u: string; full: string; title: string; credit: stri
 export interface WebMedia { title: string; description: string; extract: string; intro: string; sections: { h: string; p: string[] }[]; url: string; hero: WebImage | null; more: WebImage[] }
 
 const API = "https://en.wikipedia.org/w/api.php";
-const CACHE = "ompath_webmedia_v2";
+const CACHE = "ompath_webmedia_v3";
 const DAY = 86_400_000;
 const SKIP_FILE = /icon|logo|symbol|ambox|flag|commons-|wikidata|wikiquote|wiktionary|edit-|stub|portal|question|disambig|padlock|folder|nuvola|crystal|office-book|speaker|loudspeaker|button|arrow|red_pencil|merge|increase|decrease|steady|pictogram|map_of|\.ogg|\.ogv|\.webm|\.tif|\.pdf/i;
 const OK_LICENCE = /^(cc[- ]|public domain|pd|attribution|gfdl)/i;
@@ -62,7 +62,7 @@ async function findArticle(names: string[]): Promise<Page | null> {
       const q = new URLSearchParams({ action: "query", format: "json", origin: "*", redirects: "1", titles: name, prop: "pageimages|extracts|info|description|pageprops", piprop: "thumbnail|original", pithumbsize: "900", exintro: "1", explaintext: "1", inprop: "url" });
       const j = await json<{ query?: { pages?: Record<string, Page & { missing?: string }> } }>(`${API}?${q}`);
       const p = Object.values(j.query?.pages ?? {})[0];
-      if (p && !("missing" in p) && !p.pageprops?.disambiguation && p.extract) return p;
+      if (p && !("missing" in p) && !p.pageprops?.disambiguation && p.extract && !/may refer to/i.test(p.extract.slice(0, 160))) return p;
     } catch { /* try the next name */ }
   }
   return null;

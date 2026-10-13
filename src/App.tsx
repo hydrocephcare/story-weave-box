@@ -25,6 +25,7 @@ import { Loader2 } from "lucide-react";
 import RouteErrorBoundary from "@/components/RouteErrorBoundary";
 import LearnerProfileGate from "@/components/LearnerProfileGate";
 import AccessibilityTools from "@/components/AccessibilityTools";
+import TopicPeekHost from "@/components/TopicPeek";
 import { AdminRoute, SignedInRoute, StudentRoute } from "@/components/AccessRoute";
 
 const Index = lazy(() => import("./pages/Index"));
@@ -246,6 +247,7 @@ const App = () => (
             <PurchaseResume />
             <LearnerProfileGate />
             <AccessibilityTools />
+            <TopicPeekHost />
             <AnnouncementBar />
             <SearchGate />
             <UpdateNotifier />

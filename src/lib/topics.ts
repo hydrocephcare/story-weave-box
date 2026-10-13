@@ -54,9 +54,28 @@ async function getJson<T>(url: string): Promise<T> {
   return r.json() as Promise<T>;
 }
 
+/**
+ * Every topic page: the ones built with the site, plus the ones written since (read live from the database), so a page that was just
+ * published shows up in search, in the A-Z list and as a highlighted word in notes without waiting for the next deploy.
+ */
 export function loadTopicIndex(): Promise<TopicIndexItem[]> {
-  indexPromise ??= getJson<TopicIndexItem[]>("/topics/index.json").catch(() => { indexPromise = null; return []; });
+  indexPromise ??= (async () => {
+    const built = await getJson<TopicIndexItem[]>("/topics/index.json").catch(() => [] as TopicIndexItem[]);
+    try {
+      const { data } = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").select("slug,name,category,updated_at").eq("status", "published").order("updated_at", { ascending: false }).limit(1500);
+      const have = new Set(built.map((t) => t.s));
+      const fresh = ((data ?? []) as { slug: string; name: string; category: string | null }[])
+        .filter((r) => r.slug && r.name && !have.has(r.slug))
+        .map((r): TopicIndexItem => ({ s: r.slug, n: r.name, c: r.category && DOMAIN_STYLE[r.category] ? r.category : "Medicine", y: [], d: 0, q: 0, i: 0, a: [], ai: 1 }));
+      return [...built, ...fresh];
+    } catch { return built; }
+  })().then((list) => { if (!list.length) indexPromise = null; return list; });
   return indexPromise;
+}
+
+/** A page that has just been written is added to the list at once, for this reader, without waiting for the database round trip. */
+export function addToTopicIndex(item: { s: string; n: string; c?: string }) {
+  void loadTopicIndex().then((list) => { if (!list.some((t) => t.s === item.s)) list.push({ s: item.s, n: item.n, c: item.c && DOMAIN_STYLE[item.c] ? item.c : "Medicine", y: [], d: 0, q: 0, i: 0, a: [], ai: 1 }); });
 }
 export function loadTopicAliases(): Promise<Record<string, string>> {
   aliasPromise ??= getJson<Record<string, string>>("/topics/aliases.json").catch(() => { aliasPromise = null; return {}; });
@@ -110,7 +129,7 @@ export type TopicPhase = "loading" | "ready" | "writing" | "unavailable" | "fail
 const deslug = (slug: string) => decodeURIComponent(slug).replace(/-/g, " ").replace(/\b([a-z])/g, (m) => m.toUpperCase());
 export const slugFromName = (name: string) => name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
-async function loadStoredPage(slug: string): Promise<AiPage | null> {
+export async function loadStoredPage(slug: string): Promise<AiPage | null> {
   try {
     const { data } = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").select("content,reviewed").eq("slug", slug).eq("status", "published").maybeSingle();
     return data?.content ? { ...(data.content as AiPage), reviewed: Boolean(data.reviewed) } : null;
@@ -127,7 +146,7 @@ async function askServer(slug: string, name: string, category: string, context: 
   const local = readLocal(slug);
   if (local) return { status: "published", page: local };
   const r = await writeTopicPage({ name, category, context });
-  if (r.status === "published") { if (!r.saved) writeLocal(slug, r.page); return { status: "published", page: r.page }; }
+  if (r.status === "published") { if (!r.saved) writeLocal(slug, r.page); addToTopicIndex({ s: slug, n: name, c: category }); return { status: "published", page: r.page }; }
   if (r.status === "rejected") return { status: "rejected" };
   if (r.status === "busy" || r.status === "limit") return { status: "busy" };
   return { status: r.status === "bot" ? "unavailable" : "failed" };

@@ -3,8 +3,10 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Check, ChevronDown, ChevronRight, ExternalLink, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
-import { DOMAIN_STYLE, imageCaption, rememberTopic, slugFromName, topicPath, useTopicPage, type TopicQuestion } from "@/lib/topics";
+import { DOMAIN_STYLE, imageCaption, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
 import { useWebMedia } from "@/lib/webMedia";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 
 const SITE = "https://www.ompathstudy.com";
@@ -21,11 +23,40 @@ function Section({ id, title, children, first }: { id: string; title: string; ch
   );
 }
 
-function Bullets({ items }: { items: string[] }) {
+const escRe = (x: string) => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+let termCache: { key: number; re: RegExp; map: Map<string, string> } | null = null;
+function termMatcher(index: TopicIndexItem[], skip: string) {
+  if (termCache && termCache.key === index.length) return termCache;
+  const items = index.filter((t) => t.n.length >= 5 && (t.d >= 3 || t.ai)).sort((a, b) => b.n.length - a.n.length);
+  const map = new Map(items.map((t) => [t.n.toLowerCase(), t.s] as const));
+  const re = new RegExp("(?<![A-Za-z0-9-])(" + items.map((t) => escRe(t.n)).join("|") + ")(?![A-Za-z0-9-])", "gi");
+  termCache = { key: index.length, re, map };
+  void skip;
+  return termCache;
+}
+/** Plain text in which every subject that has its own page is tappable (it opens the quick-read panel). */
+function Linked({ text, self }: { text: string; self: string }) {
+  const index = useTopicIndex();
+  if (!index?.length || text.length < 12) return <>{text}</>;
+  const { re, map } = termMatcher(index, self);
+  const out: ReactNode[] = []; const used = new Set<string>();
+  let last = 0; let n = 0;
+  for (const m of text.matchAll(re)) {
+    const slug = map.get(m[0].toLowerCase());
+    if (!slug || slug === self || used.has(slug) || n >= 4) continue;
+    used.add(slug); n++;
+    out.push(text.slice(last, m.index), <a key={m.index} href={`/topic/${slug}`} className="note-link topic-link">{m[0]}</a>);
+    last = (m.index ?? 0) + m[0].length;
+  }
+  out.push(text.slice(last));
+  return <>{out}</>;
+}
+
+function Bullets({ items, self = "" }: { items: string[]; self?: string }) {
   return (
     <ul className="space-y-3">
       {items.map((b, i) => (
-        <li key={i} className="flex gap-3.5"><span className="mt-[0.8rem] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden /><span className="min-w-0 flex-1">{b}</span></li>
+        <li key={i} className="flex gap-3.5"><span className="mt-[0.8rem] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden /><span className="min-w-0 flex-1"><Linked text={b} self={self} /></span></li>
       ))}
     </ul>
   );
@@ -103,17 +134,17 @@ function Disclaimer({ disease }: { disease: boolean }) {
   );
 }
 
-const STEPS = ["Collecting what the library says", "Checking standard references", "Writing the page", "Publishing it for everyone"];
+const STEPS = ["Looking through the notes", "Reading the standard references", "Preparing the page", "Almost ready"];
 function Writing({ name }: { name: string }) {
   const [i, setI] = useState(0);
   useEffect(() => { const t = setInterval(() => setI((x) => Math.min(x + 1, STEPS.length - 1)), 6000); return () => clearInterval(t); }, []);
   return (
     <div className="rounded-2xl border border-border bg-card p-5" role="status" aria-live="polite">
-      <p className="flex items-center gap-2 font-serif text-lg font-bold"><Loader2 className="h-5 w-5 animate-spin text-primary" aria-hidden /> Writing the full page on {name}</p>
+      <p className="flex items-center gap-2 font-serif text-lg font-bold"><Loader2 className="h-5 w-5 animate-spin text-primary" aria-hidden /> Preparing {name}</p>
       <ol className="mt-3 space-y-1.5 text-sm">
         {STEPS.map((s, n) => <li key={s} className={cn("flex items-center gap-2", n > i && "opacity-40")}><span className={cn("flex h-5 w-5 items-center justify-center rounded-full text-[11px] font-bold", n < i ? "bg-primary text-primary-foreground" : n === i ? "bg-primary/20 text-primary" : "bg-muted")}>{n < i ? "✓" : n + 1}</span>{s}</li>)}
       </ol>
-      <p className="mt-3 text-xs text-muted-foreground">It usually takes under a minute. This page updates by itself, so you can keep reading.</p>
+      <p className="mt-3 text-xs text-muted-foreground">This page fills in by itself, so you can keep reading.</p>
     </div>
   );
 }
@@ -124,6 +155,9 @@ export default function TopicPage() {
   const { topic, page, phase, fresh, redirectTo, retry, writing, name } = useTopicPage(slug);
   const [zoom, setZoom] = useState<number | null>(null);
   const [webZoom, setWebZoom] = useState<number | null>(null);
+  const [heroZoom, setHeroZoom] = useState(false);
+  const { isAdmin } = useAuth();
+  const [adminMsg, setAdminMsg] = useState("");
   const [showFresh, setShowFresh] = useState(false);
   useEffect(() => { if (!fresh) return; setShowFresh(true); const t = setTimeout(() => setShowFresh(false), 9000); return () => clearTimeout(t); }, [fresh]);
   useEffect(() => { if (topic || page) rememberTopic(slug, topic?.n ?? name); }, [slug, topic, page]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -229,14 +263,21 @@ export default function TopicPage() {
               {firstNote && <Link to={firstNote.u} className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-base font-bold hover:border-primary/60">Read the full note</Link>}
               {manage && <a href={`#${anchor(manage.h)}`} className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-base font-bold hover:border-primary/60">Management</a>}
             </div>
-            {page && !page.reviewed && <p className="mt-5 inline-flex items-center gap-1.5 text-xs text-muted-foreground"><Sparkles className="h-3.5 w-3.5" aria-hidden /> Written with AI from standard references and not yet checked by a doctor.</p>}
           </div>
           {media?.hero && (
-            <figure className="md:justify-self-end">
-              <a href={media.hero.page} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-3xl border border-border bg-white p-3 shadow-sm">
-                <img src={media.hero.u} alt={`${name}: ${media.description || media.hero.title}`} loading="eager" decoding="async" className="aspect-[4/3] w-full rounded-2xl bg-white object-contain" />
-              </a>
-              <figcaption className="mt-2 text-xs leading-snug text-muted-foreground">{media.description ? <span className="font-semibold text-foreground/80">{media.description}. </span> : null}Image: Wikimedia Commons, {media.hero.licence}</figcaption>
+            <figure className="-mt-2 md:mt-0 md:justify-self-end">
+              <button type="button" onClick={() => setHeroZoom(true)} aria-label={`Enlarge the picture of ${name}`} className="block w-full overflow-hidden rounded-2xl border border-border bg-white p-2 shadow-sm md:rounded-3xl md:p-3">
+                <img src={media.hero.u} alt={`${name}: ${media.description || media.hero.title}`} loading="eager" decoding="async" className="mx-auto h-44 w-full rounded-xl bg-white object-contain sm:h-52 md:aspect-[4/3] md:h-auto" />
+              </button>
+              {media.description && <figcaption className="mt-2 text-xs font-semibold leading-snug text-foreground/70">{media.description}</figcaption>}
+              <Dialog open={heroZoom} onOpenChange={setHeroZoom}>
+                <DialogContent className="max-h-[92dvh] overflow-y-auto sm:max-w-3xl">
+                  <DialogTitle className="text-base">{name}</DialogTitle>
+                  <DialogDescription className="sr-only">Enlarged picture with its author and licence</DialogDescription>
+                  <img src={media.hero.full.includes("/thumb/") ? media.hero.u : media.hero.u} alt={name} className="mx-auto max-h-[68dvh] w-auto rounded-lg bg-white" />
+                  <p className="text-xs text-muted-foreground">Picture: {media.hero.credit}, {media.hero.licence}, Wikimedia Commons.</p>
+                </DialogContent>
+              </Dialog>
             </figure>
           )}
         </div>
@@ -251,12 +292,19 @@ export default function TopicPage() {
         </aside>
 
         <div className="min-w-0">
+          {isAdmin && page && (
+            <div className="mb-4 flex flex-wrap items-center gap-2 rounded-xl border border-dashed border-primary/50 bg-primary/5 px-3 py-2 text-xs font-semibold">
+              <span className="text-primary">Admin</span>
+              <button type="button" className="rounded-lg border border-border bg-background px-3 py-1.5 hover:border-primary/60" onClick={async () => { const r = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").update({ reviewed: !page.reviewed }).eq("slug", slug); setAdminMsg(r.error ? r.error.message : page.reviewed ? "Marked as not reviewed" : "Marked as reviewed"); }}>{page.reviewed ? "Mark not reviewed" : "Mark reviewed"}</button>
+              <button type="button" className="rounded-lg border border-border bg-background px-3 py-1.5 hover:border-primary/60" onClick={async () => { if (!window.confirm("Remove this page? It will be written again the next time someone opens it.")) return; const r = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").delete().eq("slug", slug); setAdminMsg(r.error ? r.error.message : "Removed. It will be rewritten on the next visit."); }}>Remove and rewrite</button>
+              {adminMsg && <span className="text-muted-foreground">{adminMsg}</span>}
+            </div>
+          )}
           <Disclaimer disease={isDisease} />
 
           <div className="mt-8 space-y-4">
             {writing && <Writing name={name} />}
-            {showFresh && <div className="flex items-center gap-2 rounded-xl border border-primary/30 bg-primary/5 p-3.5 text-sm font-semibold" role="status"><Sparkles className="h-4 w-4 text-primary" /> The full write-up has just been added to this page.</div>}
-            {!writing && !page && phase === "ready" && <div className="flex flex-wrap items-center gap-3 rounded-xl border border-border bg-muted/50 p-3.5 text-sm"><Info className="h-4 w-4 shrink-0 text-muted-foreground" /><span className="min-w-0 flex-1 text-muted-foreground">The full write-up is not available right now. This page shows an introduction and what the Ompath Study notes say about {name}.</span><button type="button" onClick={retry} className="inline-flex items-center gap-1 rounded-lg border border-border px-3 py-1.5 text-xs font-bold hover:border-primary/60"><RefreshCw className="h-3.5 w-3.5" /> Try again</button></div>}
+            {!writing && !page && phase === "ready" && <div className="flex flex-wrap items-center gap-3 rounded-xl border border-border bg-muted/50 p-3.5 text-sm"><Info className="h-4 w-4 shrink-0 text-muted-foreground" /><span className="min-w-0 flex-1 text-muted-foreground">More on {name} is on its way. Meanwhile, here is the introduction and what the Ompath Study notes say.</span><button type="button" onClick={retry} className="inline-flex items-center gap-1 rounded-lg border border-border px-3 py-1.5 text-xs font-bold hover:border-primary/60"><RefreshCw className="h-3.5 w-3.5" /> Check again</button></div>}
           </div>
 
           <div className="mt-6">
@@ -270,9 +318,9 @@ export default function TopicPage() {
             {aiSections.map((s, i) => (
               <div key={`${s.h}-${i}`}>
                 <Section id={anchor(s.h)} title={s.h} first={i === 0 && !intro.length}>
-                  {s.p && <p>{s.p}</p>}
+                  {s.p && <p><Linked text={s.p} self={slug} /></p>}
                   {s.t && s.t.length > 0 && <TestTable rows={s.t} />}
-                  {s.b && s.b.length > 0 && <Bullets items={s.b} />}
+                  {s.b && s.b.length > 0 && <Bullets items={s.b} self={slug} />}
                 </Section>
                 {/* the warning signs come right after the treatment, where a worried reader needs them */}
                 {i === seekAfter && page?.whenToSeekHelp && page.whenToSeekHelp.length > 0 && (
@@ -294,7 +342,7 @@ export default function TopicPage() {
 
             {wikiSections.map((w) => (
               <Section key={w.h} id={anchor(w.h)} title={w.h}>
-                {w.p.map((p, i) => <p key={i}>{p}</p>)}
+                {w.p.map((p, i) => <p key={i}><Linked text={p} self={slug} /></p>)}
               </Section>
             ))}
             {wikiSections.length > 0 && media && <p className="mt-6 text-xs text-muted-foreground">Sections above adapted from <a className="font-semibold text-primary hover:underline" href={media.url} target="_blank" rel="noopener noreferrer">Wikipedia</a> (CC BY-SA 4.0).</p>}
@@ -392,8 +440,8 @@ export default function TopicPage() {
             )}
 
             <footer className="mt-14 border-t border-border pt-6 text-sm leading-relaxed text-muted-foreground">
-              <p className="font-bold text-foreground">How this page is made</p>
-              <p className="mt-1.5">It combines an introduction and pictures from Wikipedia and Wikimedia Commons, what Ompath Study's own notes say{topic ? ` (${topic.docs} ${topic.docs === 1 ? "page" : "pages"} mention ${name})` : ""}, and a write-up produced by AI from standard medical knowledge. {page && !page.reviewed ? "The AI part has not yet been reviewed by a doctor, so check it against your textbook." : page ? "A reviewer has checked the write-up." : ""} Found a mistake? <a className="font-bold text-primary hover:underline" href={`mailto:ompathstudy@gmail.com?subject=${encodeURIComponent(`Correction: ${name}`)}`}>Tell us</a>. <Link to="/topics" className="font-bold text-primary hover:underline">Browse all topics</Link>.</p>
+              <p className="font-bold text-foreground">Sources</p>
+              <p className="mt-1.5">Ompath Study notes{topic ? ` (${topic.docs} ${topic.docs === 1 ? "page" : "pages"} mention ${name})` : ""}, standard medical references, and pictures from Wikipedia and Wikimedia Commons. Found a mistake? <a className="font-bold text-primary hover:underline" href={`mailto:ompathstudy@gmail.com?subject=${encodeURIComponent(`Correction: ${name}`)}`}>Tell us</a>. <Link to="/topics" className="font-bold text-primary hover:underline">Browse all topics</Link>.</p>
             </footer>
           </div>
         </div>

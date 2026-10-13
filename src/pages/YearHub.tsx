@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import RecentlyPublished from "@/components/RecentlyPublished";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { ArrowRight, BookMarked, CalendarDays, BookOpen, ClipboardCheck, Clock, FileQuestion, FolderOpen, GraduationCap, Images, ListChecks, Pill, Flame, Stethoscope, Trophy } from "lucide-react";
 import {
@@ -214,6 +215,8 @@ export default function YearHub() {
           {!user && <p className="mt-2 text-[11px] text-muted-foreground"><Link to="/login" className="font-bold text-primary hover:underline">Sign in</Link> and your group is remembered on every visit.</p>}
         </div>
       </div>
+
+      <RecentlyPublished year={parsedYear} limit={10} className="mt-6 !px-0" />
 
       {notesForYear(parsedYear).length > 0 && (
         <section className="mt-4 rounded-2xl border border-border bg-card p-5">

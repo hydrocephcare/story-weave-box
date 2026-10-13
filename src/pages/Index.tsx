@@ -14,7 +14,7 @@ import { getSubjectKey, subjectColor } from "@/components/subjectTheme";
 import { useAuth } from "@/hooks/useAuth";
 import SemesterDashboard from "@/components/SemesterDashboard";
 import RecentNotes from "@/components/RecentNotes";
-import LatestTopics from "@/components/LatestTopics";
+import RecentlyPublished from "@/components/RecentlyPublished";
 import HomeStories from "@/components/HomeStories";
 import { notesForYear } from "@/data/staticNotes";
 
@@ -264,9 +264,9 @@ export default function Index() {
 
       <SemesterDashboard />
 
-      <RecentNotes />
+      <RecentlyPublished className="pt-10" limit={8} />
 
-      <LatestTopics />
+      <RecentNotes />
 
       {/* ── Resource tiles ── */}
       <section className="mx-auto max-w-6xl px-5 py-10 sm:py-14">

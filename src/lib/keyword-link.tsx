@@ -1,4 +1,6 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { loadTopicIndex } from "@/lib/topics";
+import { topicPeek } from "@/lib/topicPeek";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { isPublicStudyTitle } from "@/lib/content-policy";
@@ -128,10 +130,10 @@ async function loadEntries(): Promise<LinkEntry[]> {
       }
       // every subject that has its own topic page is linked to it, so a reader who meets "oppositional defiant disorder" in any note can open the whole picture
       try {
-        const topics: { s: string; n: string; d: number }[] = await fetch("/topics/index.json").then((r) => (r.ok ? r.json() : []));
+        const topics: { s: string; n: string; d: number; ai?: number }[] = await loadTopicIndex();
         for (const t of topics) {
           const key = `/topic/${t.s}|${t.n.toLowerCase()}`;
-          if (t.d < 3 || !isUsefulTerm(t.n) || seen.has(key)) continue;
+          if ((t.d < 3 && !t.ai) || !isUsefulTerm(t.n) || seen.has(key)) continue;
           seen.add(key);
           entries.push({ term: t.n, lower: t.n.toLowerCase(), path: `/topic/${t.s}`, target: "", category: null, quality: 20 });
         }
@@ -197,6 +199,7 @@ function DeepLinkSpan({ path, title, label, returnTitle }: { path: string; title
         try {
           sessionStorage.setItem("deep_link_return", `${window.location.pathname}${window.location.search}${window.location.hash}|${window.scrollY}`);
         } catch { /* private-browsing / quota — the deep-link still navigates, just without a scroll-back position */ }
+        if (path.startsWith("/topic/")) { topicPeek.open(path.slice(7)); return; }
         remember();
         navigate(path);
       }}
@@ -204,11 +207,12 @@ function DeepLinkSpan({ path, title, label, returnTitle }: { path: string; title
         if (e.key !== "Enter" && e.key !== " ") return;
         e.preventDefault();
         e.stopPropagation();
+        if (path.startsWith("/topic/")) { topicPeek.open(path.slice(7)); return; }
         remember();
         navigate(path);
       }}
-      aria-label={`${label}: open the detailed ${title} study page`}
-      title={`Study ${title} in detail`}
+      aria-label={`${label}: quick read`}
+      title={`Quick read: ${title}`}
     >
       {label}
     </span>

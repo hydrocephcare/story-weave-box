@@ -97,10 +97,10 @@ export default function TopicsIndex() {
 
         {items && list.length === 0 && (
           <div className="mt-10 max-w-xl">
-            <p className="font-serif text-2xl font-bold">No page on “{q}” yet</p>
-            <p className="mt-2 text-base text-muted-foreground">If it is a medical topic, we can write the page now. It takes under a minute, and everyone gets it after that.</p>
+            <p className="font-serif text-2xl font-bold">Looking for “{q}”?</p>
+            <p className="mt-2 text-base text-muted-foreground">Open its page to read the overview, causes, tests and management, or search the notes for it.</p>
             <div className="mt-5 flex flex-wrap gap-3">
-              {slugFromName(q).length >= 3 && <Link to={topicPath(slugFromName(q))} className="rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground">Write the page on {q}</Link>}
+              {slugFromName(q).length >= 3 && <Link to={topicPath(slugFromName(q))} className="rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground">Open the page on {q}</Link>}
               <Link to={`/search?q=${encodeURIComponent(q)}`} className="rounded-full border border-border px-6 py-3 text-base font-bold hover:border-primary/60">Search the whole site</Link>
             </div>
           </div>
