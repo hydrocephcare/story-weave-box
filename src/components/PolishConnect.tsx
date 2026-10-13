@@ -12,6 +12,7 @@ export default function PolishConnect() {
   const [server, setServer] = useState<"checking" | "yes" | "no">("checking");
   const [msg, setMsg] = useState("");
   const [copied, setCopied] = useState(false);
+  const [show, setShow] = useState(false);
 
   const checkServer = useCallback(async () => {
     setServer("checking");
@@ -48,6 +49,19 @@ export default function PolishConnect() {
       <p className="mt-2 flex items-center gap-2 text-[16px] text-foreground/85">
         {server === "checking" ? <><Loader2 className="h-4 w-4 animate-spin" /> Checking the server…</> : server === "yes" ? <><Check className="h-4 w-4 text-emerald-500" /> The server is connected: blogs are polished when someone opens them.</> : "The server is not connected yet, so nothing is being polished."}
       </p>
+      {server === "yes" && key && (
+        <div className="mt-3 text-[16px] text-foreground/85">
+          {!show ? (
+            <button type="button" onClick={() => setShow(true)} className="text-sm font-bold text-primary hover:underline">Show the key (for the computer or GitHub batch)</button>
+          ) : (
+            <>
+              <p className="break-all rounded-xl bg-muted/60 px-4 py-3 font-mono text-[14px]">{key}</p>
+              <button type="button" onClick={copy} className="mt-2 inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:underline"><Copy className="h-4 w-4" aria-hidden /> {copied ? "Copied" : "Copy the key"}</button>
+              <button type="button" onClick={() => setShow(false)} className="ml-4 text-sm font-semibold text-muted-foreground hover:text-foreground">Hide</button>
+            </>
+          )}
+        </div>
+      )}
       {server === "no" && (
         <div className="mt-4 text-[16px] leading-relaxed text-foreground/85">
           {key === undefined ? null : key === null ? (
