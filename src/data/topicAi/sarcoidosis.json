@@ -1,0 +1,180 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Sarcoidosis is a multisystem inflammatory disease of unknown cause, characterized by noncaseating granulomas in various organs. It commonly affects the lungs and lymph nodes, presenting often in young adults. Diagnosis is made by exclusion after ruling out other granulomatous conditions.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Sarcoidosis is a multisystem inflammatory disorder of unknown etiology, defined by the presence of noncaseating granulomas in affected tissues. Diagnosis is one of exclusion, meaning other causes of granulomatous inflammation must be ruled out.",
+   "b": [
+    "Noncaseating granulomas are hallmark histological findings.",
+    "Commonly affects adults younger than 40 years.",
+    "Higher incidence in African Americans in the USA, and in Danish and Swedish populations."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Sarcoidosis severity varies widely, from asymptomatic to severe, life-threatening organ dysfunction. Lung involvement is often staged radiographically.",
+   "b": [
+    "Stage 0: Normal chest X-ray.",
+    "Stage I: Bilateral hilar lymphadenopathy only.",
+    "Stage II: Bilateral hilar lymphadenopathy with pulmonary infiltrates.",
+    "Stage III: Pulmonary infiltrates without hilar lymphadenopathy.",
+    "Stage IV: Pulmonary fibrosis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The exact cause of sarcoidosis is unknown, but it is thought to involve a combination of genetic predisposition and environmental triggers, leading to an exaggerated immune response.",
+   "b": [
+    "No specific infectious agent has been consistently identified.",
+    "Genetic factors play a role, as evidenced by ethnic and familial clustering.",
+    "Environmental exposures are suspected but not definitively proven."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Sarcoidosis can present with a wide array of symptoms depending on the organs involved. Respiratory symptoms and skin changes are common, but many patients are asymptomatic.",
+   "b": [
+    "Bilateral hilar lymphadenopathy is a major finding, often with a normal physical examination.",
+    "Pulmonary symptoms include cough, dyspnea, and chest pain.",
+    "Skin manifestations like erythema nodosum are common, especially in acute sarcoidosis.",
+    "Ocular involvement (uveitis) and joint pain (arthralgia) can occur.",
+    "Löfgren syndrome is an acute presentation with bilateral hilar nodes, erythema nodosum, and arthralgia, typically with a good prognosis.",
+    "Hypercalcemia can occur due to increased vitamin D activation by granulomas.",
+    "Hepatic involvement can lead to presinusoidal portal hypertension."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the presence of granulomas, assess organ involvement, and exclude other causes of granulomatous disease.",
+   "t": [
+    {
+     "a": "Chest X-ray (CXR)",
+     "b": "To assess for hilar lymphadenopathy and pulmonary infiltrates. Bilateral hilar lymphadenopathy is typical."
+    },
+    {
+     "a": "Computed Tomography (CT) scan of the chest",
+     "b": "Provides more detailed imaging of lung parenchyma and lymph nodes. Helps stage lung involvement and identify subtle changes."
+    },
+    {
+     "a": "Biopsy of affected tissue (e.g., lung, lymph node, skin)",
+     "b": "To confirm the presence of noncaseating granulomas. Essential for definitive diagnosis and exclusion of other conditions."
+    },
+    {
+     "a": "Angiotensin-converting enzyme (ACE) level",
+     "b": "Often elevated in sarcoidosis, reflecting granuloma burden. Not specific enough for diagnosis but can be used for monitoring disease activity."
+    },
+    {
+     "a": "Serum calcium and 24-hour urine calcium",
+     "b": "To detect hypercalcemia and hypercalciuria, which can occur due to granuloma-mediated vitamin D activation."
+    },
+    {
+     "a": "Pulmonary function tests (PFTs)",
+     "b": "To assess the extent of lung involvement and monitor disease progression. Often shows restrictive pattern or reduced diffusion capacity."
+    },
+    {
+     "a": "Tuberculin skin test (TST) or Interferon-gamma release assay (IGRA)",
+     "b": "To rule out tuberculosis, a common cause of granulomatous disease, especially in low-resource settings. A positive result necessitates further investigation for TB."
+    },
+    {
+     "a": "Fungal cultures and serology",
+     "b": "To exclude fungal infections, another cause of granulomatous inflammation, particularly relevant in endemic areas."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While many cases are mild, sarcoidosis can lead to severe organ damage and life-threatening complications if not managed appropriately.",
+   "b": [
+    "Progressive pulmonary fibrosis can lead to respiratory failure.",
+    "Cardiac sarcoidosis can cause arrhythmias, heart block, and sudden cardiac death.",
+    "Neurosarcoidosis can manifest with cranial nerve palsies, seizures, or meningitis.",
+    "Severe hypercalcemia can lead to renal stones and kidney damage.",
+    "Ocular sarcoidosis (uveitis) can cause vision loss if untreated."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management depends on the severity and extent of organ involvement. Many patients with asymptomatic disease or Löfgren syndrome may not require treatment.",
+   "b": [
+    "Corticosteroids (e.g., prednisone) are the mainstay of treatment for symptomatic or progressive disease, reducing inflammation.",
+    "Immunosuppressants (e.g., methotrexate, azathioprine) are used as steroid-sparing agents or for refractory disease.",
+    "Anti-TNF agents (e.g., infliximab) may be considered for severe or refractory cases.",
+    "Calcium and vitamin D intake may need to be restricted in patients with hypercalcemia.",
+    "Regular monitoring of organ function is crucial to detect progression or complications."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long-term follow-up is essential to monitor disease activity, detect complications, and adjust treatment. There is no known way to prevent sarcoidosis.",
+   "b": [
+    "Regular clinical assessments, imaging, and laboratory tests are needed.",
+    "Patients with cardiac or neurological involvement require specialized follow-up.",
+    "Education about symptoms and potential complications empowers patients in their care."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Due to its varied presentation and the need for exclusion, sarcoidosis can be mistaken for several other conditions that cause granulomatous inflammation or similar symptoms.",
+   "b": [
+    "Tuberculosis: Both cause granulomas, but TB granulomas are typically caseating.",
+    "Fungal infections (e.g., histoplasmosis, coccidioidomycosis): Can cause granulomas and lung involvement.",
+    "Berylliosis: An occupational lung disease causing granulomas, requiring exposure history.",
+    "Lymphoma: Can present with lymphadenopathy, mimicking sarcoidosis.",
+    "Crohn's disease: Also a granulomatous disease, but primarily affects the gastrointestinal tract."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain test results or clinical findings can be misleading, requiring careful interpretation in the context of the overall clinical picture.",
+   "b": [
+    "Normal ACE levels do not rule out sarcoidosis, as it is not elevated in all patients.",
+    "A negative biopsy does not definitively exclude sarcoidosis, especially if the biopsied tissue is not representative.",
+    "Bilateral hilar lymphadenopathy can be seen in other conditions, so it's not pathognomonic for sarcoidosis alone.",
+    "Hypercalcemia can also be caused by other conditions like malignancy or primary hyperparathyroidism."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of breathing difficulties or chest pain",
+  "New onset of severe headaches, seizures, or weakness",
+  "Vision changes or eye pain",
+  "Irregular heartbeat or fainting spells",
+  "Signs of severe hypercalcemia like confusion, excessive thirst, or frequent urination"
+ ],
+ "faq": [
+  {
+   "q": "Is sarcoidosis contagious?",
+   "a": "No, sarcoidosis is not contagious. It is an inflammatory disease and cannot be spread from person to person."
+  },
+  {
+   "q": "Can sarcoidosis be cured?",
+   "a": "Some people experience spontaneous remission, especially with acute forms like Löfgren syndrome. For others, it can be a chronic condition requiring long-term management, but it is often controllable."
+  },
+  {
+   "q": "Does sarcoidosis always affect the lungs?",
+   "a": "While lung involvement is very common (over 90% of cases), sarcoidosis can affect almost any organ in the body, and some patients may have disease primarily in other organs."
+  }
+ ],
+ "exam": [
+  "A 30-year-old African American woman presents with erythema nodosum, arthralgia, and a cough. Her chest X-ray shows bilateral hilar lymphadenopathy. What is the most likely diagnosis, and what initial investigations would you order to confi",
+  "Describe the key diagnostic criteria for sarcoidosis and explain why it is considered a diagnosis of exclusion. List three conditions that must be ruled out and how you would differentiate them.",
+  "Outline the management principles for a patient with symptomatic pulmonary sarcoidosis, including the rationale for your chosen treatments and how you would monitor their response."
+ ],
+ "related": [
+  "Granulomatous inflammation",
+  "Tuberculosis",
+  "Interstitial lung disease",
+  "Erythema nodosum",
+  "Uveitis",
+  "Hypercalcemia",
+  "Löfgren syndrome",
+  "Crohn's disease"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -53,12 +53,42 @@ async function askOmpathAi(question: string, snippet: string, name: string, cate
   return text;
 }
 
+
+async function publish(page: AiPage & { subject?: string }, slug: string, name: string, category: string): Promise<{ saved: boolean }> {
+  try {
+    const { data } = await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<{ data: { ok?: boolean; reason?: string } | null }> })
+      .rpc("publish_topic_page", { p_slug: slug, p_name: name, p_category: category || page.subject || "", p_content: page, p_model: "gemini" });
+    return { saved: Boolean(data?.ok) };
+  } catch { return { saved: false }; }
+}
+
+const API_DOWN = "ompath_topic_api_down";
+const apiKnownDown = () => { try { return Date.now() - Number(localStorage.getItem(API_DOWN) ?? 0) < 3 * 3600_000; } catch { return false; } };
+
+/** Route 0: the site's own server, which holds the Gemini keys and takes turns between them. */
+async function viaServer(name: string, category: string, context: string, signal?: AbortSignal): Promise<{ status: "published"; page: AiPage & { subject?: string } } | { status: "rejected" | "busy" } | null> {
+  if (apiKnownDown()) return null;
+  try {
+    const r = await fetch("/api/topic-write", { method: "POST", signal, headers: { "content-type": "application/json" }, body: JSON.stringify({ name, category, context: context.slice(0, 3000) }) });
+    if (r.status === 503 || r.status === 404 || r.status === 405) { try { localStorage.setItem(API_DOWN, String(Date.now())); } catch { /* ignore */ } return null; }
+    const j = (await r.json().catch(() => null)) as { status?: string; page?: AiPage & { subject?: string } } | null;
+    if (j?.status === "published" && j.page) return { status: "published", page: j.page };
+    if (j?.status === "rejected") return { status: "rejected" };
+    if (j?.status === "busy") return null; // another route may still have room
+    return null;
+  } catch { return null; }
+}
+
 export async function writeTopicPage({ name, category, context, signal }: { name: string; category: string; context: string; signal?: AbortSignal }): Promise<WriteResult> {
   if (!validName(name)) return { status: "failed" };
   if (looksLikeBot()) return { status: "bot" };
-  if (aiPaused()) return { status: "paused" };
   if (writesToday() >= PER_VISITOR_PER_DAY) return { status: "limit" };
   const slug = slugOf(name);
+
+  // Route 0: our own server with the Gemini keys
+  const viaApi = await viaServer(name, category, context, signal);
+  if (viaApi?.status === "rejected") return { status: "rejected" };
+  if (viaApi?.status === "published") { countWrite(); const { saved } = await publish(viaApi.page, slug, name, category); return { status: "published", page: viaApi.page, saved }; }
 
   // Route 1: the server function, when it has been deployed
   if (!fnKnownDown()) {
@@ -73,6 +103,7 @@ export async function writeTopicPage({ name, category, context, signal }: { name
     } catch { markFnDown(); }
   }
 
+  if (aiPaused()) return { status: "paused" };
   // Route 2: Ompath AI in short parts, then publish with the database function
   try {
     const prompts = buildPartPrompts({ name, category });

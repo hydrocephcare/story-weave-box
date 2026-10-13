@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Acidosis is a pathological state characterized by an increase in the acidity of the blood and other body tissues, specifically an arterial pH below 7.35. It results from an accumulation of acid or a loss of bicarbonate. Clinically, it can be life-threatening and requires prompt diagnosis and management.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acidosis is defined as an arterial blood pH below 7.35. It reflects an imbalance in the body's acid-base regulation, where there is an excess of hydrogen ions or a deficit of bicarbonate. It is categorized into metabolic acidosis or respiratory acidosis based on the primary physiological disturbance.",
+   "b": [
+    "Metabolic acidosis: Primary decrease in bicarbonate (HCO3-) concentration.",
+    "Respiratory acidosis: Primary increase in partial pressure of carbon dioxide (PaCO2)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of acidosis is primarily determined by the degree of pH reduction and the patient's clinical stability. There isn't a formal staging system, but the urgency of intervention increases with lower pH values and the presence of organ dysfunction.",
+   "b": [
+    "Mild acidosis: pH 7.30-7.34, often compensated.",
+    "Moderate acidosis: pH 7.20-7.29, usually symptomatic.",
+    "Severe acidosis: pH < 7.20, associated with significant morbidity and mortality."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes of acidosis are diverse and can be broadly categorized into metabolic or respiratory origins. Identifying the underlying cause is crucial for effective treatment.",
+   "b": [
+    "Metabolic acidosis: Lactic acidosis (sepsis, shock, hypoperfusion), diabetic ketoacidosis, renal failure (uraemia), toxin ingestion (methanol, ethylene glycol, salicylates), severe diarrhea (bicarbonate loss), some antiretroviral therapies (e.g., nucleoside reverse transcriptase ",
+    "Respiratory acidosis: Hypoventilation due to chronic obstructive pulmonary disease (COPD) exacerbation, opioid overdose, neuromuscular disorders, severe pneumonia, acute respiratory distress syndrome (ARDS), chest wall trauma."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The clinical presentation of acidosis varies depending on the underlying cause and severity. Symptoms are often non-specific but can progress to life-threatening complications.",
+   "b": [
+    "Kussmaul respirations (deep, rapid breathing) in severe metabolic acidosis.",
+    "Dyspnea, tachypnea, and use of accessory muscles in respiratory acidosis.",
+    "Altered mental status, confusion, lethargy, or coma.",
+    "Nausea, vomiting, and abdominal pain.",
+    "Weakness, fatigue, and muscle cramps.",
+    "Hypotension and arrhythmias in severe cases."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Diagnostic investigations aim to confirm acidosis, determine its type, and identify the underlying cause. Arterial blood gas analysis is the cornerstone of diagnosis.",
+   "t": [
+    {
+     "a": "Arterial Blood Gas (ABG)",
+     "b": "To measure pH, PaCO2, and bicarbonate (HCO3-). A pH < 7.35 confirms acidosis. Low HCO3- indicates metabolic acidosis; high PaCO2 indicates respiratory acidosis."
+    },
+    {
+     "a": "Serum Electrolytes (Na, K, Cl, HCO3)",
+     "b": "To calculate anion gap and assess for electrolyte imbalances. An elevated anion gap suggests specific metabolic acidosis causes (e.g., lactic acidosis, ketoacidosis, toxins). Measured potassium may be high due to acidosis shifting potassium out of cells, even if total body potassium is low."
+    },
+    {
+     "a": "Serum Lactate",
+     "b": "To identify lactic acidosis, a common cause of metabolic acidosis in shock or sepsis. Elevated lactate indicates tissue hypoperfusion or impaired oxygen utilization."
+    },
+    {
+     "a": "Urine Ketones and Glucose",
+     "b": "To screen for diabetic ketoacidosis. Positive ketones and glucose suggest uncontrolled diabetes."
+    },
+    {
+     "a": "Renal Function Tests (Urea, Creatinine)",
+     "b": "To assess for renal failure as a cause of metabolic acidosis (uraemia). Elevated levels indicate impaired kidney function. If unavailable, clinical signs like oliguria or edema may suggest renal impairment."
+    },
+    {
+     "a": "Toxicology Screen",
+     "b": "If toxin ingestion is suspected. Helps identify specific poisons like methanol or ethylene glycol."
+    },
+    {
+     "a": "Chest X-ray",
+     "b": "To evaluate for pulmonary causes of respiratory acidosis (e.g., pneumonia, COPD exacerbation)."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe acidosis is a medical emergency that can lead to life-threatening complications if not promptly managed. Clinicians must recognize these red flags.",
+   "b": [
+    "pH < 7.20, indicating severe acidosis.",
+    "Altered mental status (confusion, stupor, coma).",
+    "Hypotension and cardiac arrhythmias.",
+    "Respiratory failure requiring ventilatory support.",
+    "Electrolyte abnormalities, especially hyperkalemia.",
+    "Growth failure and delayed puberty in chronic acidosis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of acidosis focuses on treating the underlying cause, correcting the acid-base imbalance, and providing supportive care. The approach differs for metabolic and respiratory acidosis.",
+   "b": [
+    "Treat the underlying cause: For example, antibiotics for sepsis, insulin for diabetic ketoacidosis, fluids for hypovolemia, dialysis for renal failure, or antidote for toxins.",
+    "Respiratory acidosis: Improve ventilation. Non-invasive ventilation (NIV) if pH < 7.35 with PaCO2 > 6.5 kPa despite treatment. Intubation and mechanical ventilation if NIV fails or in severe respiratory distress.",
+    "Metabolic acidosis: Administer sodium bicarbonate for severe metabolic acidosis, especially if associated with respiratory failure or hemodynamic instability. This helps buffer excess acid.",
+    "Electrolyte management: Correct hyperkalemia, which is common in acidosis, even if total body potassium is low. Monitor and replace other electrolytes as needed.",
+    "Supportive care: Maintain airway, breathing, and circulation. Administer oxygen, intravenous fluids, and vasopressors as indicated.",
+    "Review medications: Hold or change offending antiretroviral drugs if lactic acidosis is the cause, after discussion with an HIV specialist."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up involves monitoring acid-base status and addressing the root cause to prevent recurrence. Prevention strategies are tailored to the specific etiology.",
+   "b": [
+    "Regular monitoring of ABGs and electrolytes until stable.",
+    "Education on managing chronic conditions like diabetes or COPD to prevent exacerbations.",
+    "Adherence to prescribed medications and avoidance of nephrotoxic or acid-inducing substances.",
+    "For chronic renal disease, dietary modifications and bicarbonate supplementation may be needed.",
+    "Regular review of medications, especially in patients on antiretroviral therapy."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Acidosis can be confused with other conditions presenting with similar symptoms or electrolyte disturbances. Distinguishing features are key.",
+   "b": [
+    "Alkalosis: The opposite condition, characterized by high pH, which also causes electrolyte imbalances and altered mental status.",
+    "Compensated acid-base disorders: Where pH is near normal, but PaCO2 and HCO3- are abnormal, indicating a primary disturbance with a compensatory response.",
+    "Electrolyte imbalances without acidosis: For example, hyperkalemia can occur from other causes, not just acidosis."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical situations or laboratory errors can lead to misleading results, making accurate diagnosis challenging.",
+   "b": [
+    "Measured potassium can be high in acidosis even with total body potassium depletion due to intracellular-extracellular shifts.",
+    "Venous blood gas (VBG) values are not always interchangeable with arterial blood gas (ABG) for pH and PaCO2, especially in critical illness.",
+    "Inaccurate sample collection or delayed processing can alter ABG results.",
+    "Mixed acid-base disorders can obscure the primary problem, requiring careful interpretation of all parameters."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe shortness of breath or difficulty breathing",
+  "Confusion, lethargy, or loss of consciousness",
+  "Rapid, deep breathing (Kussmaul respirations)",
+  "Persistent vomiting or inability to keep fluids down",
+  "Signs of shock (e.g., very low blood pressure, rapid heart rate)"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between metabolic and respiratory acidosis?",
+   "a": "Metabolic acidosis is primarily due to a decrease in bicarbonate or an increase in non-carbonic acids, while respiratory acidosis is caused by an accumulation of carbon dioxide due to hypoventilation."
+  },
+  {
+   "q": "Why is potassium often high in acidosis?",
+   "a": "Acidosis causes hydrogen ions to move into cells, and in exchange, potassium ions move out of cells into the bloodstream, leading to an elevated serum potassium level, even if the total body potassium is low."
+  },
+  {
+   "q": "Can certain medications cause acidosis?",
+   "a": "Yes, some medications, particularly certain antiretroviral drugs used in HIV treatment, can cause lactic acidosis as a side effect. Other drugs like metformin can also contribute."
+  }
+ ],
+ "exam": [
+  "A 65-year-old patient with a history of COPD presents with confusion and increased shortness of breath. Their ABG shows pH 7.28, PaCO2 70 mmHg, HCO3- 28 mEq/L. Interpret these results and outline your initial management plan.",
+  "Discuss the common causes of high anion gap metabolic acidosis and explain the physiological mechanisms behind two of them.",
+  "Explain why sodium bicarbonate is indicated in severe metabolic acidosis and what potential risks or complications are associated with its use."
+ ],
+ "related": [
+  "Alkalosis",
+  "Diabetic Ketoacidosis",
+  "Lactic Acidosis",
+  "Renal Failure",
+  "Sepsis",
+  "Electrolyte Imbalances",
+  "Arterial Blood Gas Interpretation",
+  "Respiratory Failure"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

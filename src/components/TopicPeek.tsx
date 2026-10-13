@@ -26,7 +26,7 @@ export default function TopicPeekHost() {
     origin.current = { path: `${window.location.pathname}${window.location.search}`, title: document.title.split(" | ")[0].split(" — ")[0] || "where you were", y: window.scrollY };
     let on = true;
     setPeek(null); setFilling(false);
-    const blank: Peek = { slug, name: slug.replace(/-/g, " ").replace(/([a-z])/g, (m) => m.toUpperCase()), category: "", summary: "", points: [], image: null };
+    const blank: Peek = { slug, name: slug.replace(/-/g, " ").replace(/\b([a-z])/g, (m) => m.toUpperCase()), category: "", summary: "", points: [], image: null };
     void loadPeek(slug).catch(() => blank).then(async (p) => {
       if (!on) return;
       setPeek(p);

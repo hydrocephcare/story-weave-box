@@ -1,0 +1,87 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "The cell wall is a crucial structural component found in bacteria, fungi, and plants, providing shape and protection. Its composition varies significantly between these organisms, making it a key target for antimicrobial therapies. Understanding cell wall differences is vital for effective treatment.",
+ "aka": [
+  "Bacterial cell wall",
+  "Fungal cell wall"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The cell wall is an outer layer that surrounds the plasma membrane of certain cells, including bacteria and fungi. It plays a critical role in maintaining cell shape, providing structural integrity, and protecting the cell from osmotic lysis and external stresses. The specific composition of the cell wall is a major distinguishing feature between different types of microorganisms and is often exploited in antimicrobial drug development.",
+   "b": [
+    "Provides structural support and maintains cell shape.",
+    "Protects the cell from osmotic pressure and mechanical stress.",
+    "Acts as a barrier against certain toxins and environmental factors.",
+    "Composition varies significantly between bacteria and fungi."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The composition of the cell wall is a defining characteristic for classifying microorganisms and understanding their vulnerabilities. Bacterial cell walls are primarily composed of peptidoglycan, a unique polymer. Fungal cell walls, in contrast, are distinct, lacking peptidoglycan and instead featuring chitin and glucans. These differences are fundamental to how various antimicrobial agents exert their effects.",
+   "b": [
+    "Bacterial cell walls are characterized by peptidoglycan.",
+    "Peptidoglycan is partly synthesized inside the cell and transported out by a lipid carrier protein.",
+    "Full peptidoglycan synthesis occurs outside the bacterial cell.",
+    "Fungal cell walls are made of chitin and glucans, not peptidoglycan.",
+    "Mycobacterium species have a unique cell wall with high mycolic acid content, making it impermeable to many antibiotics like penicillin.",
+    "Galactomannan is a polysaccharide component found in the cell wall of Aspergillus.",
+    "Lancefield grouping of streptococci is based on the C-carbohydrate in their cell wall."
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Targeting the cell wall is a highly effective strategy for antimicrobial therapy because human cells lack a cell wall, ensuring selective toxicity. Antibiotics like penicillin interfere with peptidoglycan synthesis in bacteria, while antifungals like echinocandins target fungal cell wall components. Understanding these mechanisms is crucial for selecting appropriate treatments and managing resistance.",
+   "b": [
+    "Penicillin inhibits bacterial cell wall synthesis by interfering with peptidoglycan cross-linking.",
+    "Penicillin is ineffective against Mycobacterium due to their mycolic acid-rich cell wall.",
+    "Echinocandins target (1,3)-beta-D-glucan synthase, an enzyme critical for fungal cell wall synthesis.",
+    "The selectivity of cell wall-targeting drugs arises because human cells do not possess a cell wall."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Clinicians must appreciate the distinct cell wall compositions across microorganisms to understand drug mechanisms and predict treatment efficacy. For instance, knowing that fungal cell walls contain chitin and glucans, not peptidoglycan, explains why antibacterial drugs are ineffective against fungal infections. Similarly, the unique mycobacterial cell wall explains their intrinsic resistance to many common antibiotics.",
+   "b": [
+    "Always consider the specific cell wall structure when choosing antimicrobial agents.",
+    "The absence of a cell wall in human cells makes it an excellent selective target for drugs.",
+    "Remember that different organisms have fundamentally different cell wall compositions."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Why is the cell wall a good drug target?",
+   "a": "The cell wall is an excellent drug target because it is essential for microbial survival but absent in human cells, allowing for selective toxicity without harming the patient."
+  },
+  {
+   "q": "What is the main difference between bacterial and fungal cell walls?",
+   "a": "Bacterial cell walls are primarily made of peptidoglycan, while fungal cell walls are composed of chitin and glucans. This difference is key to their susceptibility to different antimicrobial drugs."
+  },
+  {
+   "q": "Why doesn't penicillin work against Mycobacterium?",
+   "a": "Penicillin targets peptidoglycan synthesis, but Mycobacterium species have a unique cell wall with a high mycolic acid content that makes it largely impermeable to penicillin and other similar antibiotics."
+  }
+ ],
+ "exam": [
+  "A patient presents with a severe fungal infection. Explain why penicillin would not be an effective treatment, referencing the cell wall structure.",
+  "Describe the key differences in cell wall composition between Gram-positive bacteria, Gram-negative bacteria, and fungi, and how these differences impact antimicrobial therapy.",
+  "Discuss the clinical significance of the bacterial cell wall in terms of diagnostic methods and antibiotic mechanisms of action."
+ ],
+ "related": [
+  "Peptidoglycan",
+  "Chitin",
+  "Glucans",
+  "Mycolic acid",
+  "Antibiotics",
+  "Antifungals",
+  "Gram stain",
+  "Osmotic lysis"
+ ],
+ "kind": "microbe",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

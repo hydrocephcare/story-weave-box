@@ -1,0 +1,187 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "An embolism is the lodging of an embolus, a detached intravascular solid, liquid, or gaseous mass, in a blood vessel, causing obstruction. This obstruction can lead to ischemia and infarction in the affected tissue. The clinical presentation varies greatly depending on the location and size of the embolus.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "An embolus is a mobile intravascular mass that is carried by the blood to a site distant from its origin, where it lodges and obstructs blood flow. The most common type is a thromboembolism, originating from a thrombus. Diagnosis involves identifying the embolus and its impact on organ function.",
+   "b": [
+    "Thromboembolism: Most common, usually from a DVT or cardiac mural thrombus.",
+    "Fat embolism: Associated with bone fractures or trauma, leading to fat globules in circulation.",
+    "Air embolism: Can occur during surgery, central line insertion, or decompression sickness.",
+    "Amniotic fluid embolism: Rare but severe complication of labor and delivery.",
+    "Tumor embolism: Fragments of malignant tumors entering the bloodstream."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of an embolism depends on the size of the embolus, the vessel it obstructs, and the collateral circulation available. For pulmonary embolism (PE), severity is often assessed by hemodynamic stability and right ventricular strain.",
+   "b": [
+    "Massive PE: Hemodynamic instability (hypotension, shock).",
+    "Submassive PE: Right ventricular dysfunction or myocardial necrosis without systemic hypotension.",
+    "Low-risk PE: No markers of right ventricular dysfunction or myocardial injury."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most frequent cause of embolism is a thrombus, leading to a thromboembolism. These often originate in the deep veins of the legs (causing pulmonary embolism) or in the heart (causing systemic emboli).",
+   "b": [
+    "Deep vein thrombosis (DVT): Primary source for pulmonary emboli.",
+    "Atrial fibrillation: Leads to stasis and clot formation in the left atrium, causing systemic emboli.",
+    "Myocardial infarction: Mural thrombi can form over infarcted ventricular walls.",
+    "Valvular heart disease: Rheumatic heart disease can cause thrombi on damaged valves.",
+    "Atherosclerotic plaques: Fragments can dislodge and embolize (atheroembolism).",
+    "Trauma/fractures: Release of fat globules into circulation (fat embolism).",
+    "Surgery/procedures: Introduction of air (air embolism)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical presentation varies widely based on the site of embolization. Pulmonary embolism often presents with sudden onset dyspnea and chest pain, while cerebral embolism can cause stroke symptoms.",
+   "b": [
+    "Pulmonary embolism: Dyspnea, pleuritic chest pain, cough, hemoptysis, syncope, tachycardia.",
+    "Cerebral embolism: Sudden neurological deficits (e.g., hemiparesis, aphasia), often affecting the middle cerebral artery.",
+    "Mesenteric embolism: Severe abdominal pain, often out of proportion to physical findings, nausea, vomiting.",
+    "Renal embolism: Flank pain, hematuria, acute kidney injury.",
+    "Peripheral arterial embolism: Sudden pain, pallor, pulselessness, paresthesia, paralysis (the 5 Ps)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the presence of an embolus, identify its source, and assess organ damage. The choice of investigation depends on the suspected location.",
+   "t": [
+    {
+     "a": "D-dimer test",
+     "b": "Answers: Is there recent clot formation and breakdown? A negative result in a low-probability patient makes PE or DVT unlikely. A positive result is non-specific and requires further investigation."
+    },
+    {
+     "a": "CT Pulmonary Angiography (CTPA)",
+     "b": "Answers: Is there a pulmonary embolus in the pulmonary arteries? A positive result shows filling defects in the pulmonary arteries. If unavailable, a V/Q scan may be used."
+    },
+    {
+     "a": "Lower limb ultrasound (Doppler)",
+     "b": "Answers: Is there a deep vein thrombosis (DVT) in the legs, a common source for PE? A positive result shows non-compressibility of a vein, indicating a DVT."
+    },
+    {
+     "a": "Electrocardiogram (ECG)",
+     "b": "Answers: Are there signs of right heart strain or other cardiac issues? May show sinus tachycardia, S1Q3T3 pattern, or right bundle branch block in PE. Not diagnostic for embolism itself."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Answers: Is there right ventricular dysfunction or a cardiac source for emboli? Can show right ventricular dilation or thrombi in the heart chambers."
+    },
+    {
+     "a": "Brain MRI/CT",
+     "b": "Answers: Is there evidence of cerebral infarction due to embolism? Shows ischemic changes in the brain. Useful for diagnosing cerebral embolism."
+    },
+    {
+     "a": "Arterial Blood Gases (ABG)",
+     "b": "Answers: Is there hypoxemia or respiratory acidosis? May show hypoxemia and respiratory alkalosis in PE, but not specific."
+    },
+    {
+     "a": "BNP (Brain Natriuretic Peptide)",
+     "b": "Answers: Is there cardiac strain, particularly right ventricular strain in PE? Elevated levels suggest cardiac stress, but can also be raised in kidney failure, atrial fibrillation, and older age, and lower in obesity."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags indicate severe or life-threatening embolism, requiring immediate intervention. Complications can include organ damage, chronic conditions, and death.",
+   "b": [
+    "Sudden onset dyspnea, chest pain, or syncope (suggests massive PE).",
+    "Acute neurological deficit (suggests cerebral embolism/stroke).",
+    "Severe, unexplained abdominal pain (suggests mesenteric ischemia).",
+    "Hypotension and shock (indicates hemodynamic instability).",
+    "Development of gangrene in peripheral embolism.",
+    "Chronic thromboembolic pulmonary hypertension (CTEPH) after PE.",
+    "Infarction and permanent organ damage."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on stabilizing the patient, preventing further embolization, and treating the underlying cause. Anticoagulation is central to managing thromboembolism.",
+   "b": [
+    "Anticoagulation: Heparin (unfractionated or low molecular weight) or direct oral anticoagulants (DOACs) to prevent clot growth and new clot formation.",
+    "Thrombolysis: Fibrinolytic drugs (e.g., alteplase) for massive PE or severe systemic emboli to dissolve the clot.",
+    "Embolectomy: Surgical or catheter-based removal of the embolus in severe cases.",
+    "IVC filter: Placement in the inferior vena cava for patients with contraindications to anticoagulation or recurrent PE despite anticoagulation.",
+    "Supportive care: Oxygen therapy, pain management, and hemodynamic support.",
+    "Target INR for provoked pulmonary embolism is 2 to 3 (aim 2.5) for at least 3 months."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up involves monitoring for complications and adherence to treatment. Prevention focuses on addressing risk factors for embolus formation.",
+   "b": [
+    "Long-term anticoagulation for unprovoked emboli or recurrent events.",
+    "Regular monitoring for post-thrombotic syndrome after DVT.",
+    "Early mobilization after surgery or prolonged bed rest.",
+    "Compression stockings for DVT prevention.",
+    "Management of underlying conditions like atrial fibrillation or heart failure.",
+    "Smoking cessation and blood pressure control to reduce atherosclerosis risk."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Embolism can mimic other conditions, making accurate diagnosis crucial. Distinguishing features are key to appropriate management.",
+   "b": [
+    "Myocardial infarction: Can present with chest pain, but ECG and cardiac biomarkers differ from PE.",
+    "Pneumonia/Pleurisy: Can cause chest pain and dyspnea, but imaging and infectious markers help differentiate from PE.",
+    "Panic attack: Symptoms like dyspnea and tachycardia can overlap with PE, but lack objective signs of embolism.",
+    "Asthma/COPD exacerbation: Wheezing and history of lung disease are more prominent, but PE can worsen these conditions."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain test results can be misleading, requiring careful clinical correlation and consideration of patient factors.",
+   "b": [
+    "Negative D-dimer: Can be falsely negative in small, old clots or if testing is delayed.",
+    "Normal chest X-ray in PE: A significant PE can occur with a normal chest X-ray; it is not sensitive enough to rule out PE.",
+    "BNP elevation: While elevated in PE, it's also raised in kidney failure, atrial fibrillation, and older age, and lower in obesity, so it's not specific for PE.",
+    "Pleural effusion in PE: Can be either transudate or exudate, and often blood-stained, which can complicate interpretation of effusion analysis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden shortness of breath or difficulty breathing",
+  "Sudden, severe chest pain, especially if worse with breathing",
+  "Sudden weakness or numbness on one side of the body, or difficulty speaking",
+  "Sudden, severe pain, pallor, coldness, or loss of movement in a limb",
+  "Fainting or sudden collapse"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between a thrombus and an embolus?",
+   "a": "A thrombus is a blood clot that forms and remains attached to a vessel wall. An embolus is a detached intravascular mass (often a piece of a thrombus) that travels through the bloodstream and lodges elsewhere."
+  },
+  {
+   "q": "Can an embolism happen in any part of the body?",
+   "a": "Yes, an embolism can occur in any blood vessel in the body, depending on the origin of the embolus and the circulatory pathway it takes. Common sites include the lungs, brain, heart, kidneys, and limbs."
+  },
+  {
+   "q": "Is embolism always life-threatening?",
+   "a": "The severity of an embolism varies. While some can be life-threatening (e.g., massive pulmonary embolism, cerebral embolism causing stroke), others may cause less severe, but still significant, damage to organs."
+  }
+ ],
+ "exam": [
+  "A 65-year-old patient presents with sudden onset dyspnea and pleuritic chest pain. Outline your initial diagnostic approach to rule out pulmonary embolism, including relevant investigations and their expected findings.",
+  "Discuss the common sources of systemic arterial emboli and explain the clinical consequences of embolization to different arterial territories.",
+  "Describe the management principles for a patient diagnosed with a large deep vein thrombosis (DVT) who is at high risk of pulmonary embolism, including both acute and long-term strategies."
+ ],
+ "related": [
+  "Deep Vein Thrombosis (DVT)",
+  "Pulmonary Embolism (PE)",
+  "Stroke (Ischemic)",
+  "Atherosclerosis",
+  "Atrial Fibrillation",
+  "Thrombosis",
+  "Infarction",
+  "Anticoagulation"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

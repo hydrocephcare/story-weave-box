@@ -1,0 +1,208 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Pancreatitis is inflammation of the pancreas, an organ crucial for digestion and blood sugar regulation. It can be acute, with sudden onset and potential for severe complications, or chronic, leading to progressive damage. Diagnosis relies on clinical presentation, elevated pancreatic enzymes, and imaging.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pancreatitis is an inflammatory condition of the pancreas. Acute pancreatitis is characterized by sudden onset of abdominal pain and elevated pancreatic enzymes, often resolving without permanent damage. Chronic pancreatitis involves persistent inflammation leading to irreversible structural changes and loss of function.",
+   "b": [
+    "Diagnosis of acute pancreatitis requires at least two of the following three criteria:",
+    "1. Acute onset of persistent, severe epigastric pain radiating to the back.",
+    "2. Serum amylase or lipase activity at least three times the upper limit of normal.",
+    "3. Characteristic findings of acute pancreatitis on cross-sectional imaging (CT, MRI, or ultrasound)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Assessing severity is crucial for guiding management and predicting outcomes. Mild acute pancreatitis has no organ failure or local complications. Moderately severe involves transient organ failure or local complications. Severe acute pancreatitis is defined by persistent organ failure (lasting >48 hours).",
+   "b": [
+    "Common scoring systems for severity include:",
+    "- Ranson's criteria (at admission and 48 hours)",
+    "- APACHE II score (within 24 hours of admission)",
+    "- BISAP score (Bedside Index of Severity in Acute Pancreatitis, within 24 hours)",
+    "- Modified Glasgow (Imrie) score (within 48 hours)",
+    "- CT Severity Index (CTSI) based on imaging findings."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The majority of acute pancreatitis cases are caused by gallstones or alcohol. Identifying the underlying cause is essential for preventing recurrence.",
+   "b": [
+    "Gallstones: Obstruction of the common bile duct or pancreatic duct.",
+    "Alcohol: Direct toxic effect on pancreatic acinar cells and premature activation of enzymes.",
+    "Hypertriglyceridemia: Triglyceride levels >1000 mg/dL can cause direct lipotoxicity.",
+    "Post-ERCP (Endoscopic Retrograde Cholangiopancreatography): Mechanical trauma or contrast-induced injury.",
+    "Trauma: Blunt abdominal injury.",
+    "Drugs: Thiazide diuretics, azathioprine, valproic acid, certain antibiotics (e.g., tetracyclines).",
+    "Infections: Mumps, coxsackievirus, HIV, cytomegalovirus.",
+    "Autoimmune: IgG4-related disease, systemic lupus erythematosus.",
+    "Genetic: Mutations in PRSS1, SPINK1, CFTR genes.",
+    "Structural abnormalities: Pancreas divisum, annular pancreas.",
+    "Ischemia: Hypoperfusion of the pancreas.",
+    "Scorpion venom: Certain species can induce pancreatitis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients typically present with severe abdominal pain, often accompanied by systemic symptoms. The clinical picture can range from mild discomfort to life-threatening shock.",
+   "b": [
+    "Severe, constant epigastric pain, often radiating to the back.",
+    "Nausea and vomiting, often intractable.",
+    "Abdominal tenderness and guarding.",
+    "Fever and tachycardia.",
+    "Jaundice (if biliary obstruction is present).",
+    "Hypotension and shock (in severe cases).",
+    "Grey-Turner's sign (flank ecchymosis) or Cullen's sign (periumbilical ecchymosis) indicate severe necrotizing pancreatitis with retroperitoneal bleeding, but are rare."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the diagnosis, assess severity, identify the cause, and detect complications. Availability of advanced imaging may vary in low-resource settings, necessitating reliance on clinical and biochemical markers.",
+   "t": [
+    {
+     "a": "Serum Amylase and Lipase",
+     "b": "To confirm pancreatic inflammation. Levels >3x upper limit of normal are diagnostic. Lipase is more specific and remains elevated longer than amylase. If unavailable, clinical suspicion and imaging are paramount."
+    },
+    {
+     "a": "Complete Blood Count (CBC)",
+     "b": "To assess for leukocytosis (inflammation/infection) and hemoconcentration (dehydration/severity). Elevated hematocrit on admission suggests severity."
+    },
+    {
+     "a": "Liver Function Tests (LFTs)",
+     "b": "To check for biliary obstruction (elevated bilirubin, ALP, GGT) or liver involvement. Elevated ALT >3x normal suggests gallstone etiology."
+    },
+    {
+     "a": "Serum Calcium",
+     "b": "To check for hypocalcemia, a marker of severity due to saponification of fat in necrotic tissue."
+    },
+    {
+     "a": "Serum Triglycerides",
+     "b": "To identify hypertriglyceridemia as a cause, especially if levels are >1000 mg/dL."
+    },
+    {
+     "a": "Abdominal Ultrasound",
+     "b": "To identify gallstones, common bile duct dilation, or fluid collections. It is often the initial imaging in low-resource settings due to availability."
+    },
+    {
+     "a": "Contrast-enhanced CT scan (CECT)",
+     "b": "To assess the extent of pancreatic inflammation, necrosis, fluid collections, and complications. Typically performed 48-72 hours after symptom onset if severity is moderate to severe, or if diagnosis is unclear. Not always available in low-resource settings."
+    },
+    {
+     "a": "MRI/MRCP (Magnetic Resonance Cholangiopancreatography)",
+     "b": "To visualize the pancreatic and biliary ducts without radiation, useful for detecting ductal abnormalities or stones, especially if CT is inconclusive or unavailable."
+    },
+    {
+     "a": "Chest X-ray",
+     "b": "To check for pleural effusions (especially left-sided), atelectasis, or elevated hemidiaphragm, which can be complications of pancreatitis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of red flags and potential complications is vital for improving patient outcomes. These indicate a more severe course and require intensive management.",
+   "b": [
+    "Persistent organ failure (respiratory, renal, cardiovascular).",
+    "Pancreatic necrosis (sterile or infected).",
+    "Pseudocyst formation (fluid collection walled off by granulation tissue).",
+    "Abscess formation (infected collection of pus).",
+    "Acute peripancreatic fluid collection (APFC).",
+    "Walled-off necrosis (WON).",
+    "Systemic inflammatory response syndrome (SIRS).",
+    "Sepsis and multi-organ failure.",
+    "Acute respiratory distress syndrome (ARDS).",
+    "Renal failure.",
+    "Gastrointestinal bleeding.",
+    "Pleural effusion (often exudative, especially left-sided)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on supportive care, pain control, fluid resuscitation, and treating the underlying cause. Early and aggressive fluid resuscitation is critical.",
+   "b": [
+    "Aggressive intravenous fluid resuscitation: Lactated Ringer's solution is preferred, especially in the first 12-24 hours, to prevent hemoconcentration and organ failure.",
+    "Pain management: Intravenous opioids (e.g., fentanyl, hydromorphone) are used to control severe pain. Avoid meperidine due to metabolite toxicity.",
+    "Nutritional support: Oral feeding is initiated early if tolerated. If not, enteral nutrition (nasojejunal tube) is preferred over parenteral nutrition to maintain gut integrity.",
+    "Treatment of underlying cause: ERCP with sphincterotomy and stone extraction for gallstone pancreatitis, typically within 24-72 hours if cholangitis is present.",
+    "Antibiotics: Not routinely used for sterile pancreatitis. Reserved for infected necrosis or cholangitis. Carbapenems or quinolones are often chosen due to good pancreatic penetration.",
+    "Monitoring: Close monitoring of vital signs, urine output, and laboratory parameters (CBC, electrolytes, renal function) for signs of deterioration or complications.",
+    "Surgical intervention: Reserved for complications like infected necrosis (necrosectomy), persistent pseudocysts, or severe biliary obstruction."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is crucial to prevent recurrence and manage long-term complications, especially in chronic pancreatitis.",
+   "b": [
+    "Gallstone pancreatitis: Cholecystectomy is recommended after recovery to prevent recurrence.",
+    "Alcohol-induced pancreatitis: Strict alcohol abstinence is paramount.",
+    "Hypertriglyceridemia: Lipid-lowering therapy and dietary modifications.",
+    "Chronic pancreatitis: Enzyme replacement therapy for malabsorption, pain management, and diabetes control.",
+    "Regular monitoring for pancreatic cancer in chronic pancreatitis patients."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "The severe abdominal pain of pancreatitis can mimic other acute abdominal conditions, requiring careful differentiation.",
+   "b": [
+    "Perforated peptic ulcer: Similar pain, but often with pneumoperitoneum on imaging.",
+    "Acute cholecystitis: Right upper quadrant pain, often with Murphy's sign.",
+    "Biliary colic: Episodic pain, usually less severe and without enzyme elevation.",
+    "Acute appendicitis: Right lower quadrant pain.",
+    "Myocardial infarction: Can present with epigastric pain, especially inferior MI.",
+    "Mesenteric ischemia: Severe abdominal pain out of proportion to physical exam findings."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical or lab findings can be misleading, potentially delaying diagnosis or misguiding management.",
+   "b": [
+    "Normal amylase/lipase: Can occur in chronic pancreatitis (due to extensive pancreatic destruction) or hypertriglyceridemia (interferes with assay).",
+    "Elevated amylase/lipase from non-pancreatic sources: Conditions like mumps, bowel obstruction, or renal failure can elevate these enzymes.",
+    "Lack of imaging findings early on: CT scans may appear normal in the first 24-48 hours of mild acute pancreatitis.",
+    "Absence of classic pain radiation: Pain may be localized or atypical, especially in elderly or immunocompromised patients.",
+    "Pleural effusion: Can be mistaken for primary lung pathology if pancreatitis is not considered."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe, persistent abdominal pain that does not improve",
+  "Persistent nausea and vomiting, inability to keep fluids down",
+  "Fever, chills, or signs of infection",
+  "Yellowing of the skin or eyes (jaundice)",
+  "Shortness of breath or difficulty breathing"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between acute and chronic pancreatitis?",
+   "a": "Acute pancreatitis is a sudden inflammation that usually resolves, while chronic pancreatitis is ongoing inflammation leading to permanent damage and loss of pancreatic function."
+  },
+  {
+   "q": "Can pancreatitis be prevented?",
+   "a": "Yes, by addressing underlying causes like gallstones (cholecystectomy), avoiding alcohol, and managing high triglyceride levels."
+  },
+  {
+   "q": "Is pancreatitis always severe?",
+   "a": "No, most cases are mild and resolve with supportive care, but a significant minority can develop severe complications including organ failure and necrosis."
+  }
+ ],
+ "exam": [
+  "A 45-year-old male presents with sudden onset severe epigastric pain radiating to the back after a heavy meal. He has a history of alcohol abuse. What are your immediate diagnostic steps and initial management priorities?",
+  "Discuss the various scoring systems used to assess the severity of acute pancreatitis and explain their clinical utility in guiding patient management.",
+  "Outline the common complications of acute pancreatitis and describe how you would investigate and manage a patient suspected of having infected pancreatic necrosis."
+ ],
+ "related": [
+  "Gallstones",
+  "Cholecystitis",
+  "Alcoholic liver disease",
+  "ERCP (Endoscopic Retrograde Cholangiopancreatography)",
+  "Diabetes mellitus",
+  "Peritonitis",
+  "Sepsis",
+  "Pleural effusion"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

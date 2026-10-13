@@ -1,0 +1,138 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The prostate is a walnut-sized male accessory gland located directly inferior to the bladder. It surrounds the prostatic urethra and produces proteolytic fluid that activates sperm. Anatomical zones dictate specific disease patterns, including benign enlargement and carcinoma.",
+ "aka": [
+  "Prostate gland"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The prostate is an inverted cone-shaped fibromuscular and glandular organ of the male reproductive system that secretes alkaline fluid to nourish and liquefy semen.",
+   "b": [
+    "Inverted cone: base faces superiorly; apex points inferiorly toward the perineal membrane.",
+    "Composed of tubuloalveolar glands embedded in dense fibromuscular stroma.",
+    "Histology frequently displays laminated calcified concretions known as corpora amylacea.",
+    "Pierced through its center by the prostatic urethra and posterior ejaculatory ducts."
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Situated in the lesser pelvis, the prostate is traditionally divided into anatomical lobes and clinically essential histological zones described by McNeal.",
+   "b": [
+    "Transitional zone: surrounds proximal urethra; classic site for benign prostatic hyperplasia (BPH).",
+    "Peripheral zone: occupies posterior and apical gland; site of 70% of prostate cancers; easily palpated via digital rectal examination.",
+    "Central zone: surrounds ejaculatory ducts between transitional and peripheral zones.",
+    "Fibromuscular stroma: forms the anterior surface; lacks glandular tissue."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anatomical borders explain clinical symptoms of mass effect and surgical risks during resection.",
+   "b": [
+    "Superior: neck of the urinary bladder.",
+    "Inferior: external urethral sphincter and perineal membrane.",
+    "Anterior: pubic symphysis, separated by retropubic fat (space of Retzius) and puboprostatic ligaments.",
+    "Posterior: rectum, separated by the rectovesical fascia of Denonvilliers, allowing digital rectal palpation.",
+    "Lateral: levator ani muscles forming the pelvic floor."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial supply arises from internal iliac branches; venous drainage links pelvic and vertebral systems, facilitating distant metastasis.",
+   "b": [
+    "Arterial supply: inferior vesical artery, middle rectal artery, and internal pudendal branches.",
+    "Prostatic venous plexus: surrounds base; drains into internal iliac veins.",
+    "Batson plexus: valveless communications between prostatic and vertebral venous plexuses explain osteoblastic spinal metastases."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Innervated by the prostatic nerve plexus arising from the inferior hypogastric plexus.",
+   "b": [
+    "Parasympathetic fibers (S2-S4 pelvic splanchnic nerves) stimulate glandular secretion.",
+    "Sympathetic fibers (T10-L2) trigger smooth muscle contraction during ejaculation.",
+    "Cavernous nerves run along posterolateral capsule; surgical injury causes post-prostatectomy erectile dysfunction."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Contributes roughly 20 to 30 percent of total seminal fluid volume, promoting sperm motility and survival.",
+   "b": [
+    "Produces alkaline secretions to buffer acidic vaginal environments.",
+    "Secretes Prostate-Specific Antigen (PSA), a serine protease that liquefies semen coagulum.",
+    "Supplies citric acid, zinc, and acid phosphatases essential for optimal sperm function."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "The location of pathology within zones dictates clinical presentation, diagnostic approach, and long-term consequences.",
+   "b": [
+    "BPH: dihydrotestosterone-driven transitional zone growth; compresses urethra causing hesitancy, weak stream, urgency, and post-renal obstructive azotemia.",
+    "Prostate carcinoma: peripheral zone origin; presents as hard nodular asymmetric gland on rectal examination; graded by Gleason system.",
+    "Prostatitis: predominantly chronic pelvic pain syndrome (90-95%), with acute bacterial forms presenting as tender, boggy gland.",
+    "Schistosomiasis or pelvic tuberculosis can mimic malignancy or cause post-renal urinary tract obstruction in low-resource settings."
+   ],
+   "t": [
+    {
+     "a": "Digital Rectal Examination (DRE)",
+     "b": "Assesses size, consistency, and nodules of posterior peripheral zone; hard nodularity suggests cancer, tenderness suggests acute prostatitis."
+    },
+    {
+     "a": "Serum PSA",
+     "b": "Detects disruption of glandular basement membrane; elevated in cancer, BPH, prostatitis, urinary retention, and post-catheterization."
+    },
+    {
+     "a": "Prostatic Acid Phosphatase (PAP)",
+     "b": "Assesses metastatic tumor burden; historically elevated in advanced prostate carcinoma with bony metastases."
+    },
+    {
+     "a": "Renal Ultrasound",
+     "b": "Evaluates hydronephrosis; identifies post-renal urinary obstruction secondary to severe prostatic enlargement."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key anatomical facts tested frequently on clinical board exams.",
+   "b": [
+    "BPH affects the inner transitional zone; prostate cancer predominantly affects the outer peripheral zone.",
+    "Valveless Batson plexus allows direct hematogenous spread of prostate adenocarcinoma to the lumbar spine.",
+    "Prostate adenocarcinoma uniquely generates osteoblastic (sclerotic) bone metastases on skeletal radiographs.",
+    "Cavernous nerves pass immediately posterolateral to the capsule; damage during prostatectomy impairs erection."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Why does BPH cause urinary obstruction earlier than prostate carcinoma?",
+   "a": "BPH arises in the central transitional zone immediately surrounding the urethra, compressing it early. Carcinoma develops in the outer peripheral zone, causing late urinary symptoms."
+  },
+  {
+   "q": "What anatomical structure prevents prostate cancer from directly invading the rectum?",
+   "a": "Denonvilliers fascia (rectovesical fascia) forms a tough fibrous barrier between the posterior surface of the prostate and the anterior wall of the rectum."
+  },
+  {
+   "q": "Why does prostate cancer characteristically metastasize to lumbar vertebrae?",
+   "a": "The prostatic venous plexus connects directly with the valveless vertebral venous plexus of Batson, allowing retrograde flow of tumor emboli during increases in intra-abdominal pressure."
+  }
+ ],
+ "exam": [
+  "Differentiate the anatomical zones involved in benign prostatic hyperplasia versus prostate adenocarcinoma.",
+  "Explain the anatomical pathway responsible for osteoblastic spinal metastasis in advanced prostate cancer.",
+  "Which autonomic nerves are at risk during radical prostatectomy, and what functional deficits result from injury?"
+ ],
+ "related": [
+  "Benign prostatic hyperplasia",
+  "Prostate cancer",
+  "Prostatic urethra",
+  "Urinary bladder",
+  "Internal iliac artery",
+  "Batson venous plexus"
+ ],
+ "kind": "anatomy",
+ "model": "gemini-3.8-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

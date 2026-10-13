@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Cortisol is a vital steroid hormone produced by the adrenal glands, primarily known for its role in the body's stress response. It regulates metabolism, inflammation, and blood pressure, helping the body adapt to various physiological challenges.",
+ "aka": [
+  "Hydrocortisone",
+  "Stress hormone"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Cortisol is a glucocorticoid hormone synthesized from cholesterol in the zona fasciculata of the adrenal cortex. It is essential for life, playing a crucial role in maintaining homeostasis, especially during periods of stress. Its effects are widespread, influencing nearly every organ system.",
+   "b": [
+    "It is released in a diurnal rhythm, with highest levels in the morning and lowest at night.",
+    "Cortisol is critical for the body's adaptive responses to stress and tissue repair, such as wound healing."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Cortisol exerts its effects by binding to intracellular glucocorticoid receptors, which then translocate to the nucleus to modify gene expression. This leads to a wide range of metabolic, anti-inflammatory, and immunosuppressive actions.",
+   "b": [
+    "Glucose Production: Promotes gluconeogenesis in the liver, converting amino acids into glucose to maintain blood glucose levels during fasting or stress.",
+    "Protein Catabolism: Enhances the breakdown of proteins, releasing amino acids for glucose production, critical for energy.",
+    "Fat Metabolism: Influences fat redistribution, contributing to central obesity in states of excess.",
+    "Anti-inflammatory Effects: Suppresses the immune system by inhibiting inflammatory mediators and reducing leukocyte migration.",
+    "Mineralocorticoid Activity: Exhibits some mineralocorticoid activity, contributing to sodium retention and fluid balance."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Cortisol secretion is tightly regulated by the hypothalamic-pituitary-adrenal (HPA) axis through a negative feedback loop. Stressors, both physical and psychological, can override this feedback and stimulate increased cortisol release.",
+   "b": [
+    "Hypothalamus releases corticotropin-releasing hormone (CRH).",
+    "CRH stimulates the anterior pituitary to release adrenocorticotropic hormone (ACTH).",
+    "ACTH stimulates the adrenal cortex to synthesize and release cortisol.",
+    "High cortisol levels inhibit CRH and ACTH release, completing the negative feedback loop."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Dysregulation of cortisol can lead to significant health problems, primarily due to either chronic excess or deficiency. These conditions can arise from problems in the adrenal glands themselves, the pituitary gland, or the hypothalamus.",
+   "b": [
+    "Cushing Syndrome: Caused by prolonged exposure to high cortisol levels.",
+    "Adrenal Insufficiency (Addison's Disease): Results from insufficient cortisol production."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding cortisol's physiology is crucial for diagnosing and managing various endocrine disorders. Clinicians frequently assess cortisol levels to evaluate adrenal function and guide treatment strategies.",
+   "t": [
+    {
+     "a": "24-hour urinary free cortisol",
+     "b": "Answers: Is there excess cortisol production? A consistently elevated level suggests Cushing syndrome. This is a good screening test as it reflects unbound, biologically active cortisol over a day."
+    },
+    {
+     "a": "Late-night salivary cortisol",
+     "b": "Answers: Is the diurnal rhythm of cortisol disrupted? Elevated levels in the evening, when cortisol should be low, are highly suggestive of Cushing syndrome. This is a convenient, non-invasive screening test."
+    },
+    {
+     "a": "Low-dose dexamethasone suppression test",
+     "b": "Answers: Can cortisol secretion be suppressed? In healthy individuals, dexamethasone (a synthetic glucocorticoid) suppresses ACTH and thus cortisol. Failure of cortisol suppression (e.g., cortisol >50 nmol/L or 1.8 mcg/dL) indicates Cushing syndrome. This is a key diagnostic test."
+    },
+    {
+     "a": "ACTH stimulation test (Synacthen test)",
+     "b": "Answers: Can the adrenal glands produce cortisol in response to stimulation? A blunted or absent rise in cortisol after synthetic ACTH administration indicates primary adrenal insufficiency. This test helps differentiate primary from secondary adrenal insufficiency."
+    },
+    {
+     "a": "Serum cortisol (morning)",
+     "b": "Answers: Is there severe adrenal insufficiency? A very low morning cortisol level (e.g., <80 nmol/L or <3 mcg/dL) strongly suggests adrenal insufficiency, especially in a symptomatic patient. However, a single normal value does not rule out insufficiency."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Cortisol is a frequently tested topic due to its broad physiological impact and association with common endocrine disorders. Focus on the HPA axis, its metabolic effects, and the diagnostic approach to cortisol excess and deficiency.",
+   "b": [
+    "Cushing syndrome presents with central obesity, purple striae, proximal weakness, hypertension, and hyperglycemia.",
+    "In Cushing syndrome, cortisol is not suppressed by dexamethasone, a key diagnostic feature.",
+    "Severe adrenal insufficiency can lead to dangerously low serum cortisol levels, requiring urgent treatment.",
+    "Stress, such as surgery or infection, significantly increases the body's demand for cortisol."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the main function of cortisol?",
+   "a": "Cortisol's main function is to help the body respond to stress, regulate metabolism (especially glucose), reduce inflammation, and maintain blood pressure."
+  },
+  {
+   "q": "Why is cortisol often called the 'stress hormone'?",
+   "a": "It's called the 'stress hormone' because its levels significantly rise during physical or psychological stress, helping the body mobilize energy and adapt to the challenge."
+  },
+  {
+   "q": "Can cortisol levels be too low?",
+   "a": "Yes, very low cortisol levels can lead to adrenal insufficiency (Addison's disease), causing symptoms like fatigue, weakness, weight loss, and low blood pressure, which can be life-threatening."
+  }
+ ],
+ "exam": [
+  "Describe the physiological roles of cortisol in maintaining homeostasis and its adaptive response to stress. How do these roles manifest clinically in conditions of cortisol excess or deficiency?",
+  "Outline the regulation of cortisol secretion by the HPA axis, including the key hormones involved and the negative feedback mechanisms. What are the implications of a disrupted HPA axis?",
+  "A patient presents with central obesity, purple striae, and hypertension. Discuss the diagnostic approach to confirm or exclude Cushing syndrome, including specific tests and their expected results."
+ ],
+ "related": [
+  "Adrenal gland",
+  "ACTH",
+  "Cushing syndrome",
+  "Addison's disease",
+  "Gluconeogenesis",
+  "HPA axis",
+  "Steroid hormones",
+  "Dexamethasone suppression test"
+ ],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -31,7 +31,7 @@ export function buildPrompt({ name, category, context = "" }) {
 If "${name}" is not a real medical, anatomical, physiological, biochemical, microbiological, pharmacological or health topic (a person, brand, joke, non-medical word), reply exactly {"medical": false}.
 
 Otherwise reply with ONLY one JSON object:
-{"medical": true, "summary": "2-3 plain sentences, under 60 words", "aka": ["other names/abbreviations"], "sections": [{"h": "heading", "p": "short paragraph", "b": ["short bullet"], "t": [{"a": "test or item", "b": "the question it answers and what the result means"}]}], "whenToSeekHelp": ["warning signs needing urgent medical care (diseases only, else [])"], "faq": [{"q": "question", "a": "short answer"}], "exam": ["2-3 examiner questions a student should be able to answer"], "related": ["4-8 related topic names"]}
+{"medical": true, "subject": "ONE of: Anatomy, Physiology, Biochemistry & genetics, Pharmacology, Microbiology & immunology, Pathology, Psychiatry, Paediatrics, Obstetrics & gynaecology, Surgery, Public health, Medicine", "summary": "2-3 plain sentences, under 60 words", "aka": ["other names/abbreviations"], "sections": [{"h": "heading", "p": "short paragraph", "b": ["short bullet"], "t": [{"a": "test or item", "b": "the question it answers and what the result means"}]}], "whenToSeekHelp": ["warning signs needing urgent medical care (diseases only, else [])"], "faq": [{"q": "question", "a": "short answer"}], "exam": ["2-3 examiner questions a student should be able to answer"], "related": ["4-8 related topic names"]}
 
 Section headings, in order (skip one only if it truly does not apply): ${KINDS[kind].map((h) => `"${h}"`).join(", ")}.
 Reasoning to build in (for diseases): do not stop at the label. Give the diagnostic criteria; stage the severity with the recognised system; categorise where the problem is; list causes by category, most likely first, including infections and conditions common in the tropics and low-resource settings (for example HIV, TB, malaria, hepatitis B, rheumatic heart disease, sickle cell, schistosomiasis, herbal remedies) where relevant; then what could kill the patient soon.
@@ -61,7 +61,7 @@ export function sanitizePage(raw) {
   if (sections.length < 3) throw new Error("too few sections");
   const list = (a, n, max) => (Array.isArray(a) ? a : []).map((x) => okText(x, max)).filter((x) => x.length >= 4).slice(0, n);
   const faq = (Array.isArray(raw.faq) ? raw.faq : []).map((f) => ({ q: clip(f?.q, 200), a: okText(f?.a, 500) })).filter((f) => f.q.length >= 8 && f.a.length >= 8).slice(0, 5);
-  return { medical: true, summary, aka: list(raw.aka, 6, 60), sections, whenToSeekHelp: list(raw.whenToSeekHelp, 7, 240), faq, exam: list(raw.exam, 4, 240), related: list(raw.related, 8, 60) };
+  return { medical: true, subject: clip(raw.subject, 40), summary, aka: list(raw.aka, 6, 60), sections, whenToSeekHelp: list(raw.whenToSeekHelp, 7, 240), faq, exam: list(raw.exam, 4, 240), related: list(raw.related, 8, 60) };
 }
 
 /**
@@ -94,7 +94,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
   }
   // Google keys: any number, comma separated in GEMINI_API_KEYS (or GEMINI_API_KEY, _2, _3). They take turns, so no single key is worn out,
   // and a key that is over its limit or refused is skipped for the rest of this run.
-  const keys = [...new Set([...String(env.GEMINI_API_KEYS ?? "").split(/[s,]+/), env.GEMINI_API_KEY, env.GEMINI_API_KEY_2, env.GEMINI_API_KEY_3].map((k) => String(k ?? "").trim()).filter(Boolean))];
+  const keys = [...new Set([...String(env.GEMINI_API_KEYS ?? "").split(/[\s,]+/), env.GEMINI_API_KEY, env.GEMINI_API_KEY_2, env.GEMINI_API_KEY_3].map((k) => String(k ?? "").trim()).filter(Boolean))];
   const models = String(env.GEMINI_MODELS ?? "gemini-2.5-flash,gemini-3.8-flash,gemini-2.5-flash-lite").split(",").map((m) => m.trim()).filter(Boolean);
   const start = keys.length ? turn++ % keys.length : 0;
   for (let i = 0; i < keys.length; i++) {
@@ -104,9 +104,9 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
       if (deadModels.has(key + model)) continue;
       try {
         const text = await timed(async (signal) => {
-          const r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal, headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.3, maxOutputTokens: 7000, responseMimeType: "application/json" } }) });
+          const r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal, headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.3, maxOutputTokens: 7000, responseMimeType: "application/json", ...(model.includes("2.5-flash") && !model.includes("lite") ? { thinkingConfig: { thinkingBudget: 0 } } : model.startsWith("gemini-3") ? { thinkingConfig: { thinkingLevel: "low" } } : {}) } }) });
           if (r.status === 404) deadModels.add(key + model);
-          if (r.status === 429) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
+          if (r.status === 429 || r.status === 503) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
           if (r.status === 403 || r.status === 401) deadKeys.add(key);
           if (!r.ok) throw new Error(`gemini ${r.status}`);
           return (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("");

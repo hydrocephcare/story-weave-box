@@ -1,0 +1,138 @@
+{
+ "medical": true,
+ "summary": "The uterus is a muscular, pear-shaped organ in the female pelvis, crucial for reproduction. It provides a nurturing environment for fetal development, sheds its lining during menstruation, and contracts powerfully during childbirth. Understanding its anatomy and function is vital for diagnosing various gynecological conditions.",
+ "aka": [
+  "Womb",
+  "Hyster- (prefix)"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The uterus is a hollow, thick-walled, muscular organ located in the lesser pelvis of females. Its primary roles are menstruation, pregnancy, and labor. It undergoes significant physiological changes throughout a woman's life, particularly during the menstrual cycle and pregnancy, making it a dynamic and clinically important structure."
+  },
+  {
+   "h": "Location and structure",
+   "p": "The uterus is typically anteverted (tilted forward relative to the vagina) and anteflexed (flexed forward relative to the cervix). It is situated between the urinary bladder anteriorly and the rectum posteriorly. Its main parts include:",
+   "b": [
+    "Fundus: The rounded, superior part, above the entrance of the fallopian tubes.",
+    "Body (Corpus): The main, tapering part, extending from the fundus to the isthmus.",
+    "Isthmus: A constricted region between the body and the cervix.",
+    "Cervix: The cylindrical, inferior part that projects into the vagina, with an internal os (opening to the uterine cavity) and an external os (opening to the vagina).",
+    "Uterine wall layers: Perimetrium (outer serous layer), Myometrium (thick middle muscular layer), Endometrium (inner mucous membrane, which sheds during menstruation)."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The uterus maintains specific anatomical relationships with surrounding structures, which are important for understanding disease spread and surgical approaches.",
+   "b": [
+    "Anteriorly: Vesicouterine pouch and the superior surface of the urinary bladder.",
+    "Posteriorly: Rectouterine pouch (Pouch of Douglas) and the rectum.",
+    "Laterally: Broad ligaments, uterine arteries and veins, ureters, and ovarian ligaments.",
+    "Inferiorly: Vagina, into which the cervix projects."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The uterus has a rich blood supply to support its metabolic demands, especially during pregnancy.",
+   "b": [
+    "Arterial supply: Primarily from the uterine arteries, which are branches of the internal iliac arteries. These arteries are tortuous and anastomose with ovarian and vaginal arteries.",
+    "Venous drainage: Uterine veins drain into the internal iliac veins. The uterine venous plexus also communicates with the vaginal and ovarian plexuses."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The uterus receives both sympathetic and parasympathetic innervation, which regulate its muscular activity and sensation.",
+   "b": [
+    "Sympathetic innervation: From the inferior hypogastric plexus (T10-L2 spinal segments), responsible for vasoconstriction and uterine relaxation (except during labor).",
+    "Parasympathetic innervation: From the pelvic splanchnic nerves (S2-S4), promoting vasodilation and uterine contraction, especially during labor.",
+    "Sensory innervation: Pain fibers from the fundus and body ascend with sympathetic nerves, while cervical pain fibers travel with parasympathetic nerves."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The uterus is central to female reproductive health, performing several critical functions.",
+   "b": [
+    "Menstruation: The endometrium thickens in preparation for pregnancy and, if conception does not occur, sheds monthly.",
+    "Implantation and gestation: Provides a site for implantation of a fertilized ovum and supports fetal growth throughout pregnancy.",
+    "Labor and delivery: The myometrium contracts powerfully to expel the fetus during childbirth.",
+    "Normal pregnancy: Abdominal enlargement from the growing uterus, fatigue, and urinary frequency are common physiological changes."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "The uterus is susceptible to various conditions, from congenital anomalies to acquired diseases and injuries, each with distinct clinical presentations.",
+   "b": [
+    "Adenomyosis: A condition where endometrial tissue grows into the myometrium. It causes a diffusely enlarged, tender uterus, heavy painful periods (menorrhagia and dysmenorrhea), and is common in multiparous women over 35.",
+    "Uterine fibroids (Leiomyomas): Benign smooth muscle tumors of the uterus, often causing heavy bleeding, pelvic pain, or pressure symptoms.",
+    "Uterine prolapse: Weakening of pelvic floor muscles and ligaments can cause the uterus to descend into or out of the vagina.",
+    "Congenital uterine anomalies: Variations in uterine development, such as a bicornuate uterus (heart-shaped uterus with two horns). A bicornuate uterus can cause complications like miscarriage, preterm labor, malpresentation (e.g., breech), and retained placenta.",
+    "Ectopic pregnancy: While the uterus is empty, an ectopic pregnancy (e.g., in the fallopian tube) is a critical differential for pelvic pain and vaginal bleeding, often diagnosed by ultrasound showing an empty uterus, adnexal mass, and free fluid in the pouch of Douglas.",
+    "Uterine rupture: A rare but life-threatening complication, often associated with previous C-section scars or prolonged labor, leading to severe abdominal pain and fetal distress.",
+    "Retained products of conception: After miscarriage or delivery, uterine evacuation (manual vacuum aspiration or misoprostol for stable women) may be needed to prevent hemorrhage or infection."
+   ],
+   "t": [
+    {
+     "a": "Transvaginal or abdominal ultrasound",
+     "b": "Is the uterus normal in size, shape, and position? Are there any masses or fluid collections? What does a result mean: Identifies uterine size, endometrial thickness, presence of fibroids, adenomyosis, or an empty uterus with an adnexal mass and free fluid in the pouch of Douglas (suggestive of ectopic pregnancy). If u"
+    },
+    {
+     "a": "Magnetic Resonance Imaging (MRI)",
+     "b": "Provides detailed soft tissue imaging for complex uterine pathologies. What does a result mean: Better delineates fibroids, adenomyosis, or congenital anomalies like a bicornuate uterus, especially when ultrasound is inconclusive."
+    },
+    {
+     "a": "Hysteroscopy",
+     "b": "Allows direct visualization of the uterine cavity. What does a result mean: Diagnoses and treats intrauterine pathologies like polyps, submucosal fibroids, or adhesions (Asherman's syndrome)."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "To think like a clinician, consider the uterus's role in the context of a patient's symptoms and history.",
+   "b": [
+    "Fetal presentation: The part of the fetus that occupies the lower segment of the uterus or pelvis is called the fetal presentation (e.g., cephalic, breech).",
+    "Uterine supports: Key supports include the broad ligament, round ligament, uterosacral ligaments, and cardinal (Mackenrodt's) ligaments. The bladder is not a primary support.",
+    "Bicornuate uterus complications: Pregnancy complications include miscarriage, preterm labor, malpresentation, and retained placenta. An uncomplicated term vaginal delivery would be an exception to these complications.",
+    "Clinical assessment: Always correlate imaging findings with patient symptoms, menstrual history, and reproductive status."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe, sudden onset abdominal or pelvic pain, especially with vaginal bleeding.",
+  "Heavy vaginal bleeding (soaking more than one pad per hour for several hours).",
+  "Signs of shock (dizziness, fainting, rapid heart rate, cold clammy skin).",
+  "Fever with pelvic pain or unusual vaginal discharge."
+ ],
+ "faq": [
+  {
+   "q": "What is the normal position of the uterus?",
+   "a": "The uterus is typically anteverted (tilted forward relative to the vagina) and anteflexed (flexed forward relative to the cervix)."
+  },
+  {
+   "q": "What are the main layers of the uterine wall?",
+   "a": "The uterine wall has three layers: the outer perimetrium, the thick muscular myometrium, and the inner glandular endometrium."
+  },
+  {
+   "q": "How does the uterus change during pregnancy?",
+   "a": "During pregnancy, the uterus significantly enlarges, its muscular walls thicken, and its blood supply increases to accommodate and nourish the growing fetus."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical supports of the uterus and explain their clinical significance in conditions like uterine prolapse.",
+  "A 38-year-old multiparous woman presents with heavy, painful periods and a diffusely enlarged, tender uterus on examination. What is the most likely diagnosis, and what are the key features supporting it?",
+  "Discuss the potential pregnancy complications associated with a bicornuate uterus and how these might impact obstetric management."
+ ],
+ "related": [
+  "Fallopian Tubes",
+  "Ovaries",
+  "Vagina",
+  "Pelvic Floor",
+  "Menstrual Cycle",
+  "Pregnancy",
+  "Ectopic Pregnancy",
+  "Uterine Fibroids"
+ ],
+ "kind": "anatomy",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

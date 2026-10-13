@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Hodgkin lymphoma is a type of cancer originating from lymphocytes, characterized by the presence of Reed-Sternberg cells. It typically arises in a single lymph node and spreads predictably to adjacent nodes. This distinguishes it from non-Hodgkin lymphoma.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hodgkin lymphoma is defined by the presence of Reed-Sternberg (RS) cells, which are large, often bilobed or multilobed cells with prominent nucleoli, giving an \"owl-eye\" appearance. These neoplastic cells are typically outnumbered by a surrounding inflammatory infiltrate.",
+   "b": [
+    "RS cells originate from germinal center B cells, carrying identical immunoglobulin gene rearrangements.",
+    "Variants like lacunar cells are also seen in some forms of Hodgkin lymphoma.",
+    "Diagnosis requires histological examination of affected lymph node tissue."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging of Hodgkin lymphoma primarily uses the Ann Arbor staging system, which assesses the extent of disease spread. This system helps guide treatment decisions and predict prognosis.",
+   "b": [
+    "Stage I: Involvement of a single lymph node region or localized involvement of a single extralymphatic organ or site.",
+    "Stage II: Involvement of two or more lymph node regions on the same side of the diaphragm, or localized involvement of a single extralymphatic organ or site and its regional lymph nodes, with or without involvement of other lymph node regions on the same side of the diaphragm.",
+    "Stage III: Involvement of lymph node regions on both sides of the diaphragm, or localized involvement of a single extralymphatic organ or site and its regional lymph nodes, with or without involvement of other lymph node regions on the same side of the diaphragm.",
+    "Stage IV: Diffuse or disseminated involvement of one or more extralymphatic organs, with or without associated lymph node involvement, or isolated extralymphatic organ involvement with distant (non-regional) lymph node involvement."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The exact cause of Hodgkin lymphoma is unknown, but several risk factors and associations have been identified. These include viral infections and certain immune system dysfunctions.",
+   "b": [
+    "Epstein-Barr Virus (EBV): Present in RS cells in up to 70% of mixed-cellularity cases and a smaller fraction of other classical subtypes, suggesting a role in pathogenesis.",
+    "Immunodeficiency: Individuals with compromised immune systems, such as those with HIV or organ transplant recipients, have an increased risk.",
+    "Genetic predisposition: A family history of Hodgkin lymphoma slightly increases risk."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Hodgkin lymphoma often presents with painless lymphadenopathy, typically in the cervical or supraclavicular regions. Systemic symptoms, known as 'B symptoms,' can also occur and are important for staging.",
+   "b": [
+    "Painless lymph node enlargement: Most common presentation, often in the neck, armpit, or groin.",
+    "B symptoms: Unexplained fever (>38°C), drenching night sweats, and unexplained weight loss (>10% in 6 months).",
+    "Pruritus: Generalized itching, often without a rash.",
+    "Alcohol-induced pain: Pain in affected lymph nodes after alcohol consumption (less common but highly specific)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Diagnosis and staging involve a combination of tissue biopsy, imaging, and blood tests to assess the extent of the disease and overall health.",
+   "t": [
+    {
+     "a": "Excisional Lymph Node Biopsy",
+     "b": "Confirms the diagnosis and subtype of Hodgkin lymphoma. The presence of Reed-Sternberg cells is diagnostic."
+    },
+    {
+     "a": "Bone Marrow Biopsy",
+     "b": "Checks for bone marrow involvement, which indicates advanced disease. Absence of RS cells means no involvement."
+    },
+    {
+     "a": "PET-CT Scan",
+     "b": "Determines the extent of disease spread throughout the body and identifies metabolically active lesions. High uptake indicates disease activity."
+    },
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Assesses for anemia, leukocytosis, or eosinophilia, which can be associated with Hodgkin lymphoma. Abnormal counts may suggest disease activity or bone marrow involvement."
+    },
+    {
+     "a": "Erythrocyte Sedimentation Rate (ESR) / C-reactive protein (CRP)",
+     "b": "Measures inflammation, which can be elevated in Hodgkin lymphoma and correlate with disease activity. High levels suggest more active disease."
+    },
+    {
+     "a": "Liver and Renal Function Tests",
+     "b": "Evaluates organ function before chemotherapy and detects potential organ involvement. Abnormalities may require treatment modification."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While often treatable, Hodgkin lymphoma can lead to serious complications if not managed promptly. Recognizing these can prevent significant morbidity and mortality.",
+   "b": [
+    "Superior Vena Cava (SVC) syndrome: Caused by compression of the SVC by enlarged lymph nodes, leading to facial swelling, dyspnea, and dilated neck veins.",
+    "Spinal cord compression: Enlarged lymph nodes or masses pressing on the spinal cord can cause neurological deficits, weakness, and sensory changes.",
+    "Infections: Immunosuppression from the disease or treatment increases susceptibility to opportunistic infections.",
+    "Secondary malignancies: Increased risk of developing other cancers later in life due to treatment (e.g., acute myeloid leukemia, solid tumors)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment for Hodgkin lymphoma is highly effective, especially in early stages, and typically involves chemotherapy, radiation therapy, or a combination of both. The specific regimen depends on the stage and subtype of the disease.",
+   "b": [
+    "Chemotherapy: Multi-agent regimens like ABVD (Adriamycin, Bleomycin, Vinblastine, Dacarbazine) are standard, aiming to kill cancer cells throughout the body.",
+    "Radiation therapy: Often used for localized disease or as consolidation after chemotherapy, targeting specific affected areas.",
+    "High-dose chemotherapy with autologous stem cell transplant: Considered for relapsed or refractory disease, allowing for more intensive treatment.",
+    "Targeted therapy: Brentuximab vedotin, an antibody-drug conjugate, is used for relapsed or refractory Hodgkin lymphoma, targeting CD30 on RS cells."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After treatment, regular follow-up is crucial to monitor for recurrence and manage long-term side effects. There are no specific preventative measures for Hodgkin lymphoma.",
+   "b": [
+    "Regular imaging (PET-CT, CT scans): To detect any signs of disease recurrence.",
+    "Blood tests: To monitor for late complications and overall health.",
+    "Screening for secondary malignancies: Due to increased risk from prior treatment.",
+    "Vaccinations: To prevent infections, especially in immunocompromised patients."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguishing Hodgkin lymphoma from other conditions, particularly non-Hodgkin lymphoma, is critical due to differences in prognosis and treatment strategies.",
+   "b": [
+    "Non-Hodgkin Lymphoma (NHL): Lacks Reed-Sternberg cells, often spreads non-contiguously, and has a different array of subtypes and treatment approaches.",
+    "Infectious mononucleosis: Can cause lymphadenopathy and B symptoms, but is a self-limiting viral infection and lacks RS cells on biopsy.",
+    "Tuberculosis lymphadenitis: Presents with enlarged lymph nodes, especially in low-resource settings, but biopsy shows granulomas and acid-fast bacilli, not RS cells."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical findings or test results can be ambiguous or misleading, requiring careful interpretation in the context of the full clinical picture.",
+   "b": [
+    "Reactive lymphadenopathy: Inflamed lymph nodes due to infection can mimic lymphoma, making biopsy essential for definitive diagnosis.",
+    "False-negative biopsies: If the biopsy sample is too small or not representative, RS cells might be missed, leading to an incorrect diagnosis.",
+    "PET scan false positives: Inflammation or other benign conditions can show FDG uptake, mimicking lymphoma activity. Correlation with other findings is crucial."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "New, persistent, or growing painless lumps in the neck, armpit, or groin.",
+  "Unexplained fevers, drenching night sweats, or significant unintended weight loss.",
+  "Difficulty breathing, chest pain, or swelling in the face or neck.",
+  "New weakness, numbness, or difficulty walking."
+ ],
+ "faq": [
+  {
+   "q": "What is the key difference between Hodgkin and non-Hodgkin lymphoma?",
+   "a": "The presence of Reed-Sternberg cells is diagnostic for Hodgkin lymphoma, while non-Hodgkin lymphoma lacks these specific cells. Hodgkin lymphoma also typically spreads contiguously, unlike NHL."
+  },
+  {
+   "q": "Is Hodgkin lymphoma curable?",
+   "a": "Yes, Hodgkin lymphoma is one of the most curable cancers, especially when diagnosed and treated in its early stages. Cure rates are high with modern treatment regimens."
+  },
+  {
+   "q": "What are 'B symptoms'?",
+   "a": "B symptoms are systemic symptoms including unexplained fever, drenching night sweats, and unexplained weight loss. Their presence is important for staging and prognosis in Hodgkin lymphoma."
+  }
+ ],
+ "exam": [
+  "A 25-year-old male presents with painless cervical lymphadenopathy and drenching night sweats. Describe the key pathological features you would expect to find on lymph node biopsy to diagnose Hodgkin lymphoma.",
+  "Outline the Ann Arbor staging system for Hodgkin lymphoma and explain its clinical significance in guiding management.",
+  "Discuss the role of Epstein-Barr Virus (EBV) in the pathogenesis of Hodgkin lymphoma and its implications for diagnosis and treatment."
+ ],
+ "related": [
+  "Non-Hodgkin Lymphoma",
+  "Lymphadenopathy",
+  "Epstein-Barr Virus (EBV)",
+  "Chemotherapy",
+  "Radiation Therapy",
+  "Immunodeficiency",
+  "Pathology of Lymph Nodes",
+  "Cancer Staging"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

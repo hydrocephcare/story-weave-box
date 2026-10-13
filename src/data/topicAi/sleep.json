@@ -1,0 +1,132 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Sleep is a vital, complex physiological state characterized by reduced consciousness and sensory activity. It's crucial for physical restoration, cognitive function, and emotional regulation, impacting overall health and well-being.",
+ "aka": [
+  "Somnolence"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Sleep is a naturally recurring state of mind and body, characterized by altered consciousness, relatively inhibited sensory activity, reduced muscle activity, and inhibition of nearly all voluntary muscles during rapid eye movement (REM) sleep. It is essential for survival, allowing the body and brain to repair, consolidate memories, and regulate mood.",
+   "b": [
+    "Sleep is a dynamic process, not just a passive state.",
+    "It cycles through distinct stages, each with unique brain activity and physiological functions.",
+    "Adequate sleep is fundamental for physical health, cognitive performance, and emotional stability."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Sleep architecture consists of cycles of Non-Rapid Eye Movement (NREM) sleep and Rapid Eye Movement (REM) sleep. NREM sleep progresses through stages 1-3, with stage 3 (slow-wave sleep) being the deepest, crucial for physical restoration. REM sleep is characterized by vivid dreaming and brain activity similar to wakefulness, vital for cognitive functions like memory consolidation and emotional processing.",
+   "b": [
+    "NREM Stage 1: Lightest sleep, transition from wakefulness.",
+    "NREM Stage 2: Deeper sleep, heart rate and body temperature decrease.",
+    "NREM Stage 3: Deepest sleep, crucial for physical repair and growth.",
+    "REM Sleep: Brain is highly active, dreaming occurs, important for learning and memory."
+   ],
+   "t": [
+    {
+     "a": "Electroencephalogram (EEG)",
+     "b": "Measures brain wave activity to identify sleep stages. Different patterns (e.g., delta waves in NREM 3, sawtooth waves in REM) characterize each stage."
+    },
+    {
+     "a": "Electrooculogram (EOG)",
+     "b": "Records eye movements. Rapid eye movements are characteristic of REM sleep."
+    },
+    {
+     "a": "Electromyogram (EMG)",
+     "b": "Measures muscle activity. Muscle atonia (relaxation) during REM sleep is a key indicator."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Sleep is primarily regulated by two processes: the circadian rhythm and the homeostatic sleep drive. The circadian rhythm is the body's internal 24-hour clock, influenced by light exposure, which dictates the timing of sleep and wakefulness. The homeostatic sleep drive, or sleep pressure, builds up the longer one stays awake, promoting sleep.",
+   "b": [
+    "Circadian rhythm: Controlled by the suprachiasmatic nucleus (SCN) in the hypothalamus, synchronized by light.",
+    "Homeostatic sleep drive: Adenosine accumulation during wakefulness increases sleep pressure.",
+    "Melatonin: Hormone released in darkness, signaling the body to prepare for sleep."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Sleep disturbances can arise from primary sleep disorders (e.g., insomnia, sleep apnea) or be secondary to other medical conditions, psychiatric disorders, medications, or lifestyle factors. Chronic sleep deprivation impairs cognitive function, mood, and immune response, increasing the risk of accidents and chronic diseases.",
+   "b": [
+    "Insomnia: Difficulty falling or staying asleep.",
+    "Sleep Apnea: Repeated pauses in breathing during sleep.",
+    "Narcolepsy: Excessive daytime sleepiness and sudden sleep attacks.",
+    "Restless Legs Syndrome: Urge to move legs, often worse at night."
+   ],
+   "t": [
+    {
+     "a": "Polysomnography (PSG)",
+     "b": "The gold standard for diagnosing sleep disorders like sleep apnea and narcolepsy. It monitors brain waves, eye movements, muscle activity, heart rate, and breathing during sleep."
+    },
+    {
+     "a": "Epworth Sleepiness Scale (ESS)",
+     "b": "Assesses daytime sleepiness. A high score suggests excessive sleepiness, prompting further investigation."
+    },
+    {
+     "a": "Sleep Diary",
+     "b": "Records sleep patterns, duration, and quality. Helps identify trends and potential causes of sleep problems, especially useful when PSG is unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Assessing sleep is crucial in clinical practice as poor sleep is a common symptom and a significant contributor to many health problems. Understanding sleep physiology helps diagnose and manage conditions ranging from fatigue and mood disorders to cardiovascular disease and metabolic syndrome.",
+   "b": [
+    "Sleep deprivation impairs judgment and reaction time, increasing accident risk.",
+    "Chronic insomnia is linked to depression, anxiety, and cardiovascular disease.",
+    "Sleep apnea is associated with hypertension, stroke, and diabetes."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "When evaluating a patient, always inquire about sleep quality and quantity. Ask about specific symptoms like snoring, leg movements, or excessive daytime sleepiness. Recognizing the impact of sleep on overall health is key to comprehensive patient care.",
+   "b": [
+    "Ask: 'How many hours do you sleep per night?' and 'Do you feel rested upon waking?'",
+    "Consider sleep disorders in patients with unexplained fatigue, mood changes, or concentration difficulties.",
+    "Be aware that many medications and substances can disrupt sleep patterns."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden, severe difficulty breathing or choking during sleep.",
+  "Unexplained excessive daytime sleepiness that interferes with daily activities.",
+  "Persistent insomnia causing significant distress or functional impairment."
+ ],
+ "faq": [
+  {
+   "q": "How much sleep do adults need?",
+   "a": "Most adults need 7-9 hours of quality sleep per night for optimal health and function."
+  },
+  {
+   "q": "What is the difference between NREM and REM sleep?",
+   "a": "NREM sleep is deeper and restorative, while REM sleep is associated with dreaming and cognitive processing."
+  },
+  {
+   "q": "Can sleep problems be cured?",
+   "a": "Many sleep problems can be effectively managed with lifestyle changes, behavioral therapies, or medical treatment, depending on the underlying cause."
+  }
+ ],
+ "exam": [
+  "Describe the two main regulatory systems of sleep and how they interact.",
+  "What are the key physiological differences between NREM and REM sleep, and why are they clinically important?",
+  "How would you approach a patient complaining of poor sleep, and what initial investigations might you consider?"
+ ],
+ "related": [
+  "Circadian Rhythms",
+  "Insomnia",
+  "Sleep Apnea",
+  "Narcolepsy",
+  "Melatonin",
+  "Hypothalamus",
+  "Neurotransmitters and Sleep",
+  "Cognitive Function and Sleep"
+ ],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

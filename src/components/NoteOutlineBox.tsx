@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ClipboardList, ChevronRight } from "lucide-react";
-import { useIsMku } from "@/lib/university";
 import { COURSE_OUTLINES, getCourseOutlineForUnit, type CourseOutline, type OutlineItem } from "@/data/courseOutlines";
 
 interface Ref { outline: CourseOutline; items: { item: OutlineItem; section: string }[] }
@@ -21,36 +20,22 @@ export function outlineRefFor(note: { slug: string; year: number; unit: string }
   return outline ? { outline, items: [] } : null;
 }
 
-/** "Course outline" card at the top of a note: the topic, week and lecturer, and one tap to the full outline and its official text. */
+const weekOf = (w?: string) => { const m = String(w ?? "").match(/\d+(\s*[-–]\s*\d+)?/); return m ? `Wk ${m[0].replace(/\s+/g, "")}` : ""; };
+
+/** One short line at the top of a note: the week it is taught this semester, with an arrow to the outline, or "No outline" when there is none. */
 export default function NoteOutlineBox({ note }: { note: { slug: string; year: number; unit: string } }) {
-  const mku = useIsMku();
   const ref = useMemo(() => outlineRefFor(note), [note]);
-  if (!ref) return null;
+  const row = "mt-4 flex items-center gap-2 rounded-xl border px-3.5 py-2.5 text-sm print:hidden";
+  if (!ref) return <p className={`${row} border-border bg-muted/40 text-muted-foreground`}><ClipboardList className="h-4 w-4 shrink-0" aria-hidden /> No outline for this note</p>;
   const { outline, items } = ref;
-  const hasText = Boolean(outline.info?.length);
+  const wk = items.map((x) => weekOf(x.item.week)).filter(Boolean);
+  const label = wk.length ? `${[...new Set(wk)].slice(0, 2).join(", ")} this semester` : "In this semester's outline";
+  const to = items[0] ? `/course-outlines/${outline.id}#${encodeURIComponent(items[0].item.id)}` : `/course-outlines/${outline.id}`;
   return (
-    <aside aria-label="Course outline" className="mt-4 rounded-xl border border-primary/25 bg-primary/5 p-3.5 print:hidden">
-      <p className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-primary"><ClipboardList className="h-3.5 w-3.5" /> Course outline · {outline.title}</p>
-      {items.length > 0 && (
-        <ul className="mt-2 space-y-1.5">
-          {items.slice(0, 4).map(({ item, section }) => (
-            <li key={item.id}>
-              <Link to={`/course-outlines/${outline.id}#${encodeURIComponent(item.id)}`} className="group flex items-start gap-2 rounded-lg bg-background/70 px-2.5 py-2 hover:bg-background">
-                <span className="min-w-0 flex-1">
-                  <span className="block text-sm font-semibold leading-snug text-foreground">{item.title}</span>
-                  <span className="block text-xs text-muted-foreground">{[item.week, mku ? item.lecturer : "", section].filter(Boolean).join(" · ")}</span>
-                </span>
-                <ChevronRight className="mt-1 h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-      <p className="mt-2.5 flex flex-wrap gap-x-4 gap-y-1 text-xs font-bold">
-        <Link to={`/course-outlines/${outline.id}`} className="text-primary hover:underline">Open the course outline</Link>
-        {hasText && <Link to={`/course-outlines/${outline.id}#course-outline`} className="text-primary hover:underline">Read the official outline text</Link>}
-        <Link to={`/course-outlines/year-${note.year}`} className="text-primary hover:underline">All Year {note.year} outlines</Link>
-      </p>
-    </aside>
+    <Link to={to} aria-label={`${label}. Open the course outline`} className={`${row} group border-primary/25 bg-primary/5 hover:bg-primary/10`}>
+      <ClipboardList className="h-4 w-4 shrink-0 text-primary" aria-hidden />
+      <span className="min-w-0 flex-1 font-bold text-foreground">{label}<span className="ml-2 font-medium text-muted-foreground">{outline.title}</span></span>
+      <ChevronRight className="h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-0.5" aria-hidden />
+    </Link>
   );
 }
