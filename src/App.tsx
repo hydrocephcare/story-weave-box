@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import RouteAurora from "@/components/RouteAurora";
 import RailLayout from "@/components/RailLayout";
 import SearchGate from "@/components/SearchGate";
 import UpdateNotifier from "@/components/UpdateNotifier";
@@ -127,7 +128,8 @@ const AnimatedRoutes = () => {
   const location = useLocation();
   return (
     <RouteErrorBoundary key={location.pathname}>
-      <main className="min-h-[65vh]">
+      <main className="relative isolate min-h-[65vh]">
+        <RouteAurora />
         <Suspense fallback={<RouteLoader />}>
           <Routes location={location}>
             <Route path="/" element={<Index />} />

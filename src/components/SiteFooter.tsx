@@ -14,6 +14,7 @@ const STUDY = [
 ];
 const COMPANY = [
   { to: "/about-us", label: "About Ompath Study" },
+  { to: "/about", label: "About me" },
   { to: "/partners", label: "Partners" },
   { to: "/contact", label: "Contact us" },
   { to: "/download-app", label: "Get the app" },

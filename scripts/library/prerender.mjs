@@ -263,9 +263,9 @@ try {
 
   // ---------------- information pages (so a shared link shows its own title and description) ----------------
   const info = [
-    { p: "/about-us", t: "About Ompath Study | Free medical notes, past papers and MCQs", d: "Ompath Study is a free library of medical study notes, past papers, MCQs and topic pages for students worldwide, organised by year, system and unit.", h: "About Ompath Study" },
+    { p: "/about-us", t: "About Ompath Study | Free medical notes, past papers and MCQs", d: "Ompath Study is a free place to study medicine: notes, past papers, MCQs, flashcards and a page on every topic, organised by year and unit.", h: "About Ompath Study" },
     { p: "/partners", t: "Partner with Ompath Study | Universities, societies, publishers and sponsors", d: "Work with Ompath Study: share a free revision library with your students, publish your notes, or sponsor a series. Universities, societies, publishers and health programmes welcome.", h: "Partner with Ompath Study" },
-    { p: "/contact", t: "Contact Ompath Study", d: "Contact Ompath Study: send feedback, report a mistake, share notes, or ask about partnerships.", h: "Contact Ompath Study" },
+    { p: "/contact", t: "Contact Ompath Study", d: "Send feedback, report a mistake, or share notes with Ompath Study.", h: "Contact Ompath Study" },
     { p: "/privacy", t: "Privacy, terms and medical disclaimer | Ompath Study", d: "How Ompath Study handles your data, the terms of use and the medical disclaimer.", h: "Privacy, terms and disclaimer" },
   ];
   for (const i of info) {

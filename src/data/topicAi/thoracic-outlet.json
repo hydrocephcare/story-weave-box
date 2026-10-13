@@ -1,0 +1,123 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The thoracic outlet is the space between the neck and axilla through which neurovascular structures pass to the upper limb. Compression here causes neurogenic, venous or arterial symptoms. Understanding its borders helps diagnose thoracic outlet syndrome.",
+ "aka": [
+  "Thoracic outlet",
+  "Thoracic inlet"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The thoracic outlet (inlet) is the anatomical corridor linking the cervical region to the axilla. It contains the subclavian vessels and the brachial plexus trunks.",
+   "b": [
+    "Key for upper‑limb blood flow and nerve function",
+    "Site of compression syndromes"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Boundaries: anterior – posterior border of the sternum to the xiphisternal joint; posterior – anterior surface of T1‑T12 vertebral bodies; lateral – first rib and its costal cartilage; inferior – the diaphragm.",
+   "b": [
+    "First rib forms the floor",
+    "Scalene muscles form the roof",
+    "Clavicle overlies the superior aspect"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The subclavian artery and vein run over the first rib, while the brachial plexus trunks pass between the anterior and middle scalene muscles.",
+   "b": [
+    "Cervical rib (if present) narrows the space",
+    "Fibrous bands or hypertrophic scalene muscles further reduce clearance"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Subclavian artery (continuation of the aortic arch on the left, brachiocephalic trunk on the right) supplies the upper limb; the subclavian vein returns blood.",
+   "b": [
+    "Arterial compression can cause ischemic hand symptoms",
+    "Venous compression leads to swelling and collateral veins"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The brachial plexus trunks (C5‑T1) traverse the outlet, providing motor and sensory innervation to the arm.",
+   "b": [
+    "Compression produces numbness, tingling, or weakness in the hand",
+    "Often worse with arm elevation"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Provides a protected passage for neurovascular bundles while allowing shoulder and neck movement. Proper spacing prevents traction or compression during arm elevation.",
+   "b": [
+    "Maintains perfusion and sensation of the upper limb",
+    "Allows full range of motion of the shoulder girdle"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Thoracic outlet syndrome (TOS) results from compression of neurovascular structures. It may be neurogenic (most common), venous, or arterial. Causes include congenital cervical rib, trauma, repetitive overhead activity, and hypertrophic scalene muscles. In low‑resource settings, infections (TB lymphadenitis) or scar tissue from herbal poultices can also narrow the outlet.",
+   "b": [
+    "Neurogenic TOS: paresthesia, weakness, aggravated by arm elevation",
+    "Venous TOS: arm swelling, superficial collateral veins",
+    "Arterial TOS: coldness, pallor, possible embolic events"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Provocative maneuvers (Adson, Roos, Wright) reproduce symptoms by narrowing the outlet. Look for cervical rib on X‑ray, and assess for vascular compromise with pulse changes.",
+   "t": [
+    {
+     "a": "Adson test",
+     "b": "Does the patient develop dizziness or loss of radial pulse on neck extension and head rotation? Positive suggests neurovascular compression."
+    },
+    {
+     "a": "Duplex ultrasound",
+     "b": "Is there flow reduction in the subclavian artery/vein with arm abduction? Confirms functional compression."
+    },
+    {
+     "a": "Chest X‑ray (AP)",
+     "b": "Is a cervical rib or abnormal first rib present? Identifies an anatomic cause."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of hand pulse or color suggesting arterial embolism",
+  "Rapid arm swelling with venous distension indicating thrombosis",
+  "Severe neurological deficit (weakness, loss of sensation) after trauma"
+ ],
+ "faq": [
+  {
+   "q": "Why does raising the arm worsen symptoms?",
+   "a": "Arm elevation narrows the space between the scalene muscles and first rib, increasing compression on nerves or vessels."
+  },
+  {
+   "q": "Can TOS be caused by infection?",
+   "a": "Yes, tuberculous lymphadenitis or chronic abscesses in the neck can compress the outlet, especially in low‑resource settings."
+  },
+  {
+   "q": "Is a cervical rib always symptomatic?",
+   "a": "No, many people have an asymptomatic cervical rib; symptoms appear only when additional factors further reduce the outlet size."
+  }
+ ],
+ "exam": [
+  "Describe the bony and muscular boundaries of the thoracic outlet.",
+  "Explain how the Adson test is performed and what a positive result indicates.",
+  "List the three types of thoracic outlet syndrome and their key clinical features."
+ ],
+ "related": [
+  "Scalene muscle anatomy",
+  "Brachial plexus",
+  "Subclavian vessels",
+  "Cervical rib",
+  "Upper limb peripheral neuropathy",
+  "Deep vein thrombosis of the upper extremity"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}
