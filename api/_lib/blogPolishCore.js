@@ -191,3 +191,8 @@ export function ocrDamaged(content) {
   }
   return runs >= 1;
 }
+
+/** The AI sometimes leaves a label with nothing after it ("**In short:**"). Such empty lines are removed. */
+export function dropEmptyLabels(text) {
+  return String(text ?? "").replace(/^[ \t]*\*{0,2}\s*In short\s*:?\s*\*{0,2}\s*:?[ \t]*\n/gim, "").replace(/\n{3,}/g, "\n\n");
+}

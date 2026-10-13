@@ -1,7 +1,7 @@
 // The polish itself, shared by the page-open endpoint (api/_lib/blogPolish.js) and the batch job (scripts/blogs/polish-batch.mjs).
 // `ask(prompt, timeoutMs, maxTokens)` returns the model's text. Nothing here talks to the database.
 import { CHUNK_PROMPT, META_PROMPT, NOTE_PROMPT, QUESTIONS_PROMPT, REPAIR_PROMPT } from "./blogPolishPrompts.js";
-import { chunksOf, cleanMeta, kindOf, missingSentences, hasLocked, parseJson, plain, restorePictures, scanPages, soundPolish, VERDICTS, withScans } from "./blogPolishCore.js";
+import { chunksOf, cleanMeta, kindOf, missingSentences, hasLocked, parseJson, plain, dropEmptyLabels, restorePictures, scanPages, soundPolish, VERDICTS, withScans } from "./blogPolishCore.js";
 
 const unfence = (s) => String(s ?? "").replace(/^```(?:markdown|md)?\s*/i, "").replace(/```\s*$/, "").trim();
 
@@ -64,7 +64,7 @@ export async function polishArticle(a, ask, { chunk = false } = {}) {
       out = done.join("\n\n");
       bad = soundPolish(text, out, { ...(kind === "note" ? RULES.note : RULES.questions), ...(scanned ? SCANNED : {}) });
     }
-    if (bad) { note(`polish rejected: ${bad}`); result.rejected = out; } else result.content = kind === "note" ? out : withScans(out, a.original_notes);
+    if (bad) { note(`polish rejected: ${bad}`); result.rejected = out; } else result.content = dropEmptyLabels(kind === "note" ? out : withScans(out, a.original_notes));
   } catch (e) {
     result.status = "partial";
     note(`text will be tried again (${String(e?.message ?? "").slice(0, 70)})`);
@@ -140,6 +140,6 @@ export async function polishStep(a, ask, state, { budgetMs = 36000 } = {}) {
   // if most pieces could not be polished safely there is nothing worth showing
   if (raw > parts.length * 0.4) return { content: null, parts_done: done, raw, total: parts.length, finished: true, reason: `${raw} of ${parts.length} parts could not be polished safely` };
   const bad = soundPolish(a.content, acc, { ...(kind === "note" ? RULES.note : RULES.questions), ...(scanned ? SCANNED : {}) });
-  const finalText = kind === "note" ? acc : withScans(acc, a.original_notes);
+  const finalText = dropEmptyLabels(kind === "note" ? acc : withScans(acc, a.original_notes));
   return bad ? { content: null, parts_done: done, raw, total: parts.length, finished: true, reason: `polish rejected: ${bad}` } : { content: finalText, parts_done: done, raw, total: parts.length, finished: true, reason: "" };
 }

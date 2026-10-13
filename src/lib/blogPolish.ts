@@ -77,6 +77,10 @@ export function applyPolish<T extends { id: string; title?: string | null; conte
   if (p.description) out.meta_description = p.description;
   if (p.image_query) (out as { image_query?: string }).image_query = p.image_query;
   // the text only replaces the page when the whole page is done (a long page is polished a few pieces at a time)
-  if (p.status === "done" && p.content && p.content.trim().length > 200) { out.content = p.content; polishedIds.add(a.id); }
+  if (p.status === "done" && p.content && p.content.trim().length > 200) {
+    // a label the AI left empty ("**In short:**" with nothing after it) is not shown
+    out.content = p.content.replace(/^[ \t]*\*{0,2}\s*In short\s*:?\s*\*{0,2}\s*:?[ \t]*\n/gim, "").replace(/\n{3,}/g, "\n\n");
+    polishedIds.add(a.id);
+  }
   return out;
 }

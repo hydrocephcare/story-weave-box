@@ -15,3 +15,19 @@ describe("restorePictures", () => {
     expect(restorePictures(original, original)).toBe(original);
   });
 });
+
+import { dropEmptyLabels } from "../../api/_lib/blogPolishCore.js";
+import { applyPolish } from "@/lib/blogPolish";
+
+describe("an empty label", () => {
+  it("is removed, and a filled one is kept", () => {
+    expect(dropEmptyLabels("*Intro.*\n**In short:**\n\n## 1. Heart\n\nText.")).not.toContain("In short");
+    expect(dropEmptyLabels("**In short:** the heart pumps blood.\n\n## 1. Heart")).toContain("the heart pumps blood");
+  });
+  it("is not shown on the page even when it was saved before", () => {
+    const body = `*Intro.*\n**In short:**\n\n## 1. Heart\n\n${"The heart pumps blood. ".repeat(20)}`;
+    const out = applyPolish({ id: "z1", title: "t", content: "old" }, { title: null, description: null, content: body, verdict: "keep", status: "done" });
+    expect(out.content).not.toContain("In short");
+    expect(out.content).toContain("The heart pumps blood");
+  });
+});
