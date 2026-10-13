@@ -65,7 +65,7 @@ export function AboutUs() {
 
       <div className="mt-12 flex flex-wrap gap-3">
         <Link to="/topics" className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-[15px] font-bold text-primary-foreground">Browse topics <ArrowRight className="h-4 w-4" aria-hidden /></Link>
-        <Link to="/about" className="inline-flex h-12 items-center rounded-full border border-border px-6 text-[15px] font-bold hover:border-primary/60">About me</Link>
+        <Link to="/about" className="inline-flex h-12 items-center rounded-full border border-border px-6 text-[15px] font-bold hover:border-primary/60">Behind the site</Link>
         <Link to="/contact" className="inline-flex h-12 items-center rounded-full border border-border px-6 text-[15px] font-bold hover:border-primary/60">Contact</Link>
       </div>
     </Shell>

@@ -24,7 +24,7 @@ Medical school is expensive enough. Every note, MCQ set, flashcard deck and past
 
 ## Who's behind it
 
-Ompath Study was built by **Abongo Davis**, a medical student and self-taught web developer, out of the same frustration every student has felt at 1 a.m. before an exam: *why is nothing organised in one place?* You can read more about the story behind it on the [About page](/about).
+Ompath Study was built by a medical student, out of the same frustration every student has felt at 1 a.m. before an exam: *why is nothing organised in one place?* You can read more about the story behind it on the [About page](/about).
 
 ## Get started
 

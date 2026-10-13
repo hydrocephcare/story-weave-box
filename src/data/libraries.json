@@ -1,7 +1,7 @@
 {
   "siteUrl": "https://www.ompathstudy.com",
   "brand": "Ompath Study",
-  "credit": "Compiled by Abongo",
+  "credit": "Compiled by Ompath Study",
   "audience": "MBChB students at Mount Kenya University and other universities",
   "libraries": [
     {
@@ -238,5 +238,5 @@
       }
     ]
   },
-  "seoCredit": "Compiled by Abongo Davis"
+  "seoCredit": "Compiled by Ompath Study"
 }

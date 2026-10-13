@@ -1,18 +1,17 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Mail, MessageCircle } from "lucide-react";
-import portrait from "@/assets/abongo-davis-portrait.jpg";
 import HeroAurora from "@/components/HeroAurora";
 
 const SITE = "https://www.ompathstudy.com";
 const EMAIL = "ompathstudy@gmail.com";
 const WHATSAPP = "254115475543";
-const TITLE = "About me | Ompath Study";
-const DESC = "I am Abongo Davis, a medical student. I started Ompath Study because my own notes were scattered, and I wanted one place for them.";
+const TITLE = "Behind Ompath Study";
+const DESC = "Ompath Study was started by a medical student whose own notes were scattered, and who wanted one place for them.";
 
 /** /about: the student behind the site. Short, plain, and only about this site. */
 export default function About() {
-  const person = { "@context": "https://schema.org", "@type": "Person", name: "Abongo Davis", jobTitle: "Medical student", url: `${SITE}/about`, worksFor: { "@type": "Organization", name: "Ompath Study", url: SITE } };
+  const person = { "@context": "https://schema.org", "@type": "AboutPage", name: "Behind Ompath Study", url: `${SITE}/about`, about: { "@type": "Organization", name: "Ompath Study", url: SITE } };
   return (
     <main className="pb-20">
       <Helmet>
@@ -28,13 +27,12 @@ export default function About() {
 
       <header className="relative isolate overflow-hidden">
         <HeroAurora about="Psychiatry" />
-        <div className="mx-auto grid max-w-4xl items-center gap-8 px-5 pb-12 pt-10 sm:grid-cols-[minmax(0,1fr)_14rem] sm:pb-16 sm:pt-16">
+        <div className="mx-auto max-w-4xl px-5 pb-12 pt-10 sm:pb-16 sm:pt-16">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">About me</p>
-            <h1 className="mt-2 font-serif text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl">Hi, I'm Abongo.</h1>
-            <p className="mt-5 max-w-xl text-xl leading-relaxed text-foreground/80">I'm a medical student. I made Ompath Study for myself first, and then for anyone else who studies the way I do.</p>
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Behind the site</p>
+            <h1 className="mt-2 font-serif text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl">A student made this.</h1>
+            <p className="mt-5 max-w-xl text-xl leading-relaxed text-foreground/80">Ompath Study was made by a medical student, for themselves first, and then for anyone else who studies the same way.</p>
           </div>
-          <img src={portrait} alt="Abongo Davis" width={224} height={224} loading="eager" className="h-44 w-44 rounded-full object-cover shadow-lg ring-4 ring-background sm:h-56 sm:w-56 sm:justify-self-end" />
         </div>
       </header>
 
@@ -62,7 +60,7 @@ export default function About() {
           ))}
         </ul>
 
-        <h2 className="mt-14 font-serif text-3xl font-bold text-foreground">Write to me</h2>
+        <h2 className="mt-14 font-serif text-3xl font-bold text-foreground">Write to us</h2>
         <div className="mt-5 flex flex-wrap gap-3">
           <a href={`mailto:${EMAIL}`} className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 text-[15px] font-bold text-primary-foreground"><Mail className="h-4 w-4" aria-hidden /> {EMAIL}</a>
           <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full border border-border px-6 text-[15px] font-bold hover:border-primary/60"><MessageCircle className="h-4 w-4" aria-hidden /> WhatsApp</a>

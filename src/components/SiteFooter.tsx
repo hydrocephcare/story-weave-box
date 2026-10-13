@@ -14,7 +14,7 @@ const STUDY = [
 ];
 const COMPANY = [
   { to: "/about-us", label: "About Ompath Study" },
-  { to: "/about", label: "About me" },
+  { to: "/about", label: "Behind the site" },
   { to: "/partners", label: "Partners" },
   { to: "/contact", label: "Contact us" },
   { to: "/download-app", label: "Get the app" },
@@ -81,7 +81,7 @@ export default function SiteFooter() {
 
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col gap-1.5 px-5 py-5 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Ompath Study. Built by <Link to="/about" className="font-semibold text-foreground hover:text-primary">Abongo</Link>.</p>
+          <p>© {new Date().getFullYear()} Ompath Study.</p>
           <p>For learning only. Not a substitute for medical advice, diagnosis or treatment.</p>
         </div>
       </div>

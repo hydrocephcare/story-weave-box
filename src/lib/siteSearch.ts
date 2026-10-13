@@ -75,7 +75,7 @@ const PAGES: PageDef[] = [
   { title: "Essays", href: "/essays", words: "essays saq laq long answer" },
   { title: "Study notes (all years)", href: "/blog", words: "notes blog articles study" },
   { title: "Download the app", href: "/download-app", words: "app apk android download install" },
-  { title: "About", href: "/about", words: "about founder contact abongo" },
+  { title: "About", href: "/about", words: "about contact" },
   ...[1, 2, 3, 4, 5, 6].map((y) => ({ title: `Year ${y} — all study resources`, href: `/year/${y}`, words: `year ${y} home hub` })),
   ...[1, 2, 3, 4, 5, 6].map((y) => ({ title: `Year ${y} timetable`, href: `/timetable/year-${y}`, words: `timetable schedule classes lectures venue lecturer year ${y}` })),
   ...[1, 2, 3, 4].map((y) => ({ title: `Year ${y} course outlines & checklists`, href: `/course-outlines/year-${y}`, words: `course outline syllabus checklist tracker progress year ${y}` })),

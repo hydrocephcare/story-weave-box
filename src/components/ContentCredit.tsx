@@ -1,7 +1,7 @@
 import { BadgeCheck } from "lucide-react";
 import registry from "@/data/libraries.json";
 
-/** "Compiled by Abongo": the badge used on the library pages, reused on books, notes, papers and outlines. */
+/** "Compiled by Ompath Study": the badge used on the library pages, reused on books, notes, papers and outlines. */
 export default function ContentCredit() {
   return (
     <div className="my-3">

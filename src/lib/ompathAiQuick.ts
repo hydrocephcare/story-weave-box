@@ -31,7 +31,7 @@ export function quickReply(input: string): QuickReply | null {
   if (has(s, ["how are you", "how are you doing", "how r u", "how are u", "u good", "you good", "whats up", "what s up", "wassup", "how is it going", "how are things"]))
     return { answer: "I'm well, thanks. Ready when you are. What do you need?", followUps: HELP_STARTS };
   if (has(s, ["who are you", "what are you", "who r u", "your name", "what is your name", "whats your name", "what s your name", "who made you", "who built you", "who created you", "are you ai", "are you a bot", "are you real"]))
-    return { answer: "I'm **Ompath AI**, the study assistant on Ompath Study, built by Abongo for MBChB students. I search every note, past paper, MCQ and library file on the site, and explain things in plain words.", followUps: HELP_STARTS };
+    return { answer: "I'm **Ompath AI**, the study assistant on Ompath Study, built for MBChB students. I search every note, past paper, MCQ and library file on the site, and explain things in plain words.", followUps: HELP_STARTS };
   if (has(s, ["help", "help me", "what can you do", "what do you do", "how do i use you", "how does this work", "how to use", "features", "commands", "what can i ask", "what can i ask you", "guide", "menu"]))
     return { answer: "Here is what I can do:\n- **Find notes.** Try \"notes on psychiatry\" or \"year 4 internal medicine\".\n- **Find past papers, CATs and library files.** Try \"year 3 pharmacology past papers\".\n- **Explain a topic.** Try \"explain Light's criteria\".\n- **Quiz you.** Try \"quiz me on heart failure\".\n\nTap any note to read it here. Close it and you are back in the chat. Your chats are saved under the clock icon.", followUps: HELP_STARTS };
   if (has(s, ["sorry", "my bad", "pole", "oops"]))
