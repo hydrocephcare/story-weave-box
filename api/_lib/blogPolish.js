@@ -59,7 +59,7 @@ export default async function handler(req, res) {
   const saved = (existing?.content ?? "").replace(marker, "");
   // a long page that is part-way carries on a few seconds after the last piece; a long page marked done before its text could be done starts now;
   // anything else waits (a slow page an hour, a failure twelve hours)
-  const carryOn = existing?.status === "partial" && long && ageS > 12;
+  const carryOn = existing?.status === "partial" && long; // no wait: the claim below is atomic, so two visitors can never work on the same page at once
   const lateStart = existing?.status === "done" && !existing.content && long && /left for later|too long|rejected in part/i.test(existing.reason ?? "");
   const retry = (existing?.status === "failed" && ageS > 12 * 3600) || (existing?.status === "partial" && !long && ageS > 3600) || (existing?.status === "working" && ageS > 720);
   if (existing && !(carryOn || lateStart || retry)) return res.status(200).json({ status: existing.status, more: false });
