@@ -1910,7 +1910,7 @@ export default function BlogPost() {
             </aside>
           )}
 
-          <article id="section-top" className={slideDeck ? "min-w-0" : "min-w-0 rounded-2xl border border-border/70 bg-card px-4 py-5 shadow-sm sm:px-8 sm:py-8 lg:max-w-[72ch] lg:px-10"}>
+          <article id="section-top" className={slideDeck ? "min-w-0" : "min-w-0 rounded-2xl border border-border/70 bg-card px-4 py-5 shadow-sm sm:px-8 sm:py-8 lg:max-w-[94ch] lg:px-10"}>
             <Countdown data={(article as any).countdown} />
             <PasswordGate
               enabled={(article as any).password_protected}

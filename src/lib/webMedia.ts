@@ -122,6 +122,22 @@ export async function loadWebMedia(names: string[]): Promise<WebMedia | null> {
         hero,
         more: gallery.filter((g) => g.full !== hero?.full).slice(0, 6),
       };
+    } else {
+      // no Wikipedia article: search Wikimedia Commons directly so the page is never without pictures
+      const q = new URLSearchParams({ action: "query", format: "json", origin: "*", list: "search", srnamespace: "6", srsearch: `${names[0]} medical`, srlimit: "12" });
+      const found = await json<{ query?: { search?: { title: string }[] } }>(`https://commons.wikimedia.org/w/api.php?${q}`).catch(() => null);
+      const titles = (found?.query?.search ?? []).map((x) => x.title).filter((t) => !SKIP_FILE.test(t)).slice(0, 10);
+      const q2 = new URLSearchParams({ action: "query", format: "json", origin: "*", titles: titles.join("|"), prop: "imageinfo", iiprop: "url|extmetadata|size|mime", iiurlwidth: "700", iiextmetadatafilter: "LicenseShortName|Artist|ImageDescription" });
+      const info = titles.length ? await json<{ query?: { pages?: Record<string, { title: string; imageinfo?: { thumburl?: string; url: string; descriptionurl: string; width: number; height: number; mime?: string; extmetadata?: Record<string, { value: string }> }[] }> } }>(`https://commons.wikimedia.org/w/api.php?${q2}`).catch(() => null) : null;
+      const pics: WebImage[] = [];
+      type FilePage = { title: string; imageinfo?: { thumburl?: string; url: string; descriptionurl: string; width: number; height: number; mime?: string; extmetadata?: Record<string, { value: string }> }[] };
+      for (const p of Object.values(info?.query?.pages ?? {}) as FilePage[]) {
+        const i = p.imageinfo?.[0];
+        const licence = strip(i?.extmetadata?.LicenseShortName?.value ?? "");
+        if (!i || !/^image\/(jpeg|png)/.test(i.mime ?? "") || i.width < 300 || !OK_LICENCE.test(licence)) continue;
+        pics.push({ u: i.thumburl ?? i.url, full: i.url, title: (strip(i.extmetadata?.ImageDescription?.value ?? "") || p.title.replace(/^File:/, "").replace(/\.[a-z]+$/i, "").replace(/_/g, " ")).slice(0, 140), credit: strip(i.extmetadata?.Artist?.value ?? "Wikimedia Commons").slice(0, 80), licence, page: i.descriptionurl });
+      }
+      if (pics.length) result = { title: names[0], description: "", extract: "", intro: "", sections: [], url: "https://commons.wikimedia.org", hero: pics[0], more: pics.slice(1, 7) };
     }
   } catch { result = null; }
 

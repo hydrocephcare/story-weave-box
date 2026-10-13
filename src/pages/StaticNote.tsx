@@ -114,7 +114,7 @@ function StaticNoteView() {
   };
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-6 sm:px-6 sm:py-10">
+    <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-10">
       <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1 text-xs font-semibold text-muted-foreground print:hidden">
         <Link to="/" className="hover:text-primary">Home</Link> ›
         <Link to={`/year/${note.year}`} className="hover:text-primary">Year {note.year}</Link> ›

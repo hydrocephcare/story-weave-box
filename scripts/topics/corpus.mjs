@@ -24,6 +24,15 @@ async function all(table, cols, filter) {
   return out;
 }
 
+/** Topic pages already written and published on the site (by the AI or an editor), so every deploy includes them in the static pages and the sitemap. */
+export async function loadPublishedTopicPages() {
+  try {
+    const { data, error } = await sb.from("topic_pages").select("slug,name,category,content,reviewed,updated_at").eq("status", "published").order("updated_at", { ascending: false }).limit(2000);
+    if (error) { console.error("topic_pages", error.message); return []; }
+    return data ?? [];
+  } catch (e) { console.error("topic_pages", String(e)); return []; }
+}
+
 export async function loadCorpus() {
   const live = (q) => q.eq("published", true).is("deleted_at", null);
   const [articles, mcqs, essays] = await Promise.all([

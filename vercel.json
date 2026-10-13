@@ -117,6 +117,10 @@
   ],
   "rewrites": [
     {
+      "source": "/topics-sitemap.xml",
+      "destination": "/api/topics-sitemap"
+    },
+    {
       "source": "/sitemap.xml",
       "destination": "/api/sitemap-index"
     },

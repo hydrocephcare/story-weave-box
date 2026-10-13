@@ -29,6 +29,9 @@ ${sections.map((file) => `  <sitemap>\n    <loc>https://www.ompathstudy.com/site
   <sitemap>
     <loc>https://www.ompathstudy.com/library-sitemap.xml</loc>
   </sitemap>
+  <sitemap>
+    <loc>https://www.ompathstudy.com/topics-sitemap.xml</loc>
+  </sitemap>
 </sitemapindex>`;
 
   res.setHeader("Content-Type", "application/xml; charset=utf-8");

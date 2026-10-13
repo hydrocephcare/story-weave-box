@@ -9,7 +9,7 @@
 //   4. It writes public/topics/<slug>.json (one per topic), public/topics/index.json and public/topics/aliases.json.
 import fs from "fs";
 import path from "path";
-import { loadCorpus } from "./corpus.mjs";
+import { loadCorpus, loadPublishedTopicPages } from "./corpus.mjs";
 import { SEED_LIST, SEED_TOPICS, GENERIC_TOKENS, DOMAINS, SEED_DOMAIN_OF } from "./seeds.mjs";
 
 const OUT = "public/topics";
@@ -282,6 +282,8 @@ function related(i) {
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 const aiDir = "src/data/topicAi";
+const publishedPages = new Map((await loadPublishedTopicPages()).map((r) => [r.slug, r]));
+console.log("published topic pages from the database:", publishedPages.size);
 const index = [];
 const aliasMap = {};
 const SCORE_NOTE = (e) => (e.inTitle ? 100 : 0) + e.n;
@@ -299,7 +301,8 @@ topics.forEach((t, i) => {
   const rel = related(i).map((r) => ({ s: r.slug, n: r.name }));
   const cond = conditions.find((c) => key(c.name.replace(/\([^)]*\)/g, "")) === t.k || key(c.name).startsWith(t.k + " ") || t.k.startsWith(key(c.name) + " "));
   const aiFile = path.join(aiDir, `${t.slug}.json`);
-  const ai = fs.existsSync(aiFile) ? JSON.parse(fs.readFileSync(aiFile, "utf8")) : null;
+  const fromDb = publishedPages.get(t.slug);
+  const ai = fromDb?.content ? { ...fromDb.content, reviewed: Boolean(fromDb.reviewed) } : fs.existsSync(aiFile) ? JSON.parse(fs.readFileSync(aiFile, "utf8")) : null;
   const acr = [...t.c.acronyms];
   const body = {
     s: t.slug, n: t.name, c: domain, y: years, a: acr, docs: t.nd,
@@ -314,6 +317,18 @@ topics.forEach((t, i) => {
   for (const a of acr) aliasMap[a.toLowerCase()] = t.slug;
   aliasMap[slugify(t.name)] = t.slug;
 });
+// pages written on the site for names that have no notes behind them yet: they still get a static page, a sitemap entry and an A-Z entry
+const have = new Set(topics.map((t) => t.slug));
+for (const [slug, r] of publishedPages) {
+  if (have.has(slug) || !r.content) continue;
+  const ai = { ...r.content, reviewed: Boolean(r.reviewed) };
+  const aka = Array.isArray(ai.aka) ? ai.aka.slice(0, 4) : [];
+  const body = { s: slug, n: r.name, c: r.category && r.category.length > 2 ? r.category : "Medicine", y: [], a: aka, docs: 0, lead: null, sec: [], src: [], sets: [], snip: [], imgs: [], qs: [], es: [], rel: [], rx: null, ai };
+  fs.writeFileSync(path.join(OUT, `${slug}.json`), JSON.stringify(body));
+  index.push({ s: slug, n: r.name, c: body.c, y: [], d: 0, q: 0, i: 0, a: aka, ai: 1 });
+  aliasMap[slugify(r.name)] = slug;
+  for (const a of aka) aliasMap[String(a).toLowerCase()] = slug;
+}
 index.sort((a, b) => b.d - a.d);
 fs.writeFileSync(path.join(OUT, "index.json"), JSON.stringify(index));
 fs.writeFileSync(path.join(OUT, "aliases.json"), JSON.stringify(aliasMap));

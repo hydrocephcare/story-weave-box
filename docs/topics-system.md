@@ -59,3 +59,11 @@ src/lib/webMedia.ts asks Wikipedia and Wikimedia Commons (free, no key, no AI) f
 author and licence, and remembers the answer on the device for 30 days. If nothing is found the page simply has no picture.
 
 To correct or approve a page, edit its row in topic_pages (set reviewed to true when a doctor has checked it) or delete the row to have it rewritten.
+
+## How the AI writes and publishes now (2026-10-13)
+
+When the `topic-ai` edge function is not deployed, the topic page asks Ompath AI (already deployed) for the page in 2 to 3 short parts
+(`supabase/functions/_shared/topicParts.js`, run from `src/lib/topicWriter.ts`), joins and checks them, then saves the page with the database function
+`publish_topic_page` (migration `20261013100000_publish_topic_page_rpc.sql`, run it once). The function only adds pages that do not exist, refuses links and scripts,
+and stops after 150 new pages a day. Visitors who look like crawlers never trigger a write, and each visitor can trigger 5 a day.
+Published pages appear in: the A-Z list and static pages at the next deploy (the build reads `topic_pages`), `/topics-sitemap.xml` straight away, and "New topic pages" on the home page.

@@ -16,7 +16,7 @@ function Section({ id, title, children, first }: { id: string; title: string; ch
     <section id={id} className={cn("scroll-mt-28", first ? "pt-2" : "mt-14 border-t border-border pt-10")}>
       <span className="block h-1 w-12 rounded-full bg-primary" aria-hidden />
       <h2 className="mt-4 font-serif text-[1.9rem] font-bold leading-tight tracking-tight text-foreground sm:text-4xl">{title}</h2>
-      <div className="mt-5 max-w-[68ch] space-y-5 text-[18px] leading-[1.8] text-foreground/80 sm:text-[19px] [&_strong]:font-semibold [&_strong]:text-foreground">{children}</div>
+      <div className="mt-5 max-w-[78ch] space-y-5 text-[18px] leading-[1.8] text-foreground/80 sm:text-[19px] [&_strong]:font-semibold [&_strong]:text-foreground">{children}</div>
     </section>
   );
 }
@@ -242,7 +242,7 @@ export default function TopicPage() {
         </div>
       </header>
 
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 pt-10 lg:grid-cols-[13.5rem_minmax(0,44rem)]">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 pt-10 lg:grid-cols-[13.5rem_minmax(0,52rem)]">
         <aside className="hidden lg:block">
           <nav aria-label="On this page" className="sticky top-24 max-h-[calc(100dvh-7rem)] overflow-y-auto border-l border-border text-[15px]">
             <p className="pl-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">On this page</p>

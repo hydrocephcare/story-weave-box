@@ -2,6 +2,7 @@
 // The files are built from the notes, MCQs and essays by scripts/topics/build-topics.mjs and served from /topics/.
 import { useCallback, useEffect, useRef, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { writeTopicPage } from "@/lib/topicWriter";
 
 export interface TopicIndexItem { s: string; n: string; c: string; y: number[]; d: number; q: number; i: number; a: string[]; ai: number }
 export interface TopicSource { t: string; u: string; k: "note" | "article"; y: number | null; n: string; m: number }
@@ -117,17 +118,19 @@ async function loadStoredPage(slug: string): Promise<AiPage | null> {
 }
 
 type Ask = { status: "published"; page: AiPage } | { status: "generating" | "unavailable" | "busy" | "failed" | "rejected" };
-async function askServer(name: string, category: string, context: string): Promise<Ask> {
-  try {
-    // the topic-ai edge function: Gemini writes it once, it is saved, and everyone gets the saved copy after that
-    const { data, error } = await supabase.functions.invoke("topic-ai", { body: { name, category, context: context.slice(0, 3000) } });
-    let j = (data ?? {}) as { status?: string; page?: AiPage };
-    const ctx = (error as { context?: Response } | null)?.context;
-    if (error && ctx && typeof ctx.json === "function") j = (await ctx.json().catch(() => ({}))) as typeof j;
-    if (j.status === "published" && j.page) return { status: "published", page: j.page };
-    if (j.status === "generating" || j.status === "busy" || j.status === "rejected" || j.status === "unavailable") return { status: j.status };
-    return { status: "failed" };
-  } catch { return { status: "failed" }; }
+// pages written but not saved (the publish step was not available) are kept on this device for a day, so the reader is not charged twice
+const LOCAL = "ompath_topic_local";
+const readLocal = (slug: string): AiPage | null => { try { const m = JSON.parse(localStorage.getItem(LOCAL) ?? "{}") as Record<string, { at: number; page: AiPage }>; const v = m[slug]; return v && Date.now() - v.at < 86_400_000 ? v.page : null; } catch { return null; } };
+const writeLocal = (slug: string, page: AiPage) => { try { const m = JSON.parse(localStorage.getItem(LOCAL) ?? "{}") as Record<string, { at: number; page: AiPage }>; const keys = Object.keys(m); if (keys.length > 20) delete m[keys[0]]; m[slug] = { at: Date.now(), page }; localStorage.setItem(LOCAL, JSON.stringify(m)); } catch { /* storage full or blocked */ } };
+
+async function askServer(slug: string, name: string, category: string, context: string): Promise<Ask> {
+  const local = readLocal(slug);
+  if (local) return { status: "published", page: local };
+  const r = await writeTopicPage({ name, category, context });
+  if (r.status === "published") { if (!r.saved) writeLocal(slug, r.page); return { status: "published", page: r.page }; }
+  if (r.status === "rejected") return { status: "rejected" };
+  if (r.status === "busy" || r.status === "limit") return { status: "busy" };
+  return { status: r.status === "bot" ? "unavailable" : "failed" };
 }
 
 const TRIED = "ompath_topic_tried";
@@ -173,7 +176,7 @@ export function useTopicPage(slug: string) {
       setAsking(true);
       try {
       for (let i = 0; i < 16 && on; i++) {
-        const res = await askServer(name, category, context);
+        const res = await askServer(slug, name, category, context);
         if (!on) return;
         if (res.status === "published") { setPage(res.page); setPhase("ready"); setFresh(Boolean(t)); return; }
         if (res.status === "generating") { await new Promise((r) => setTimeout(r, 4000)); continue; }
