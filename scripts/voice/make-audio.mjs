@@ -99,11 +99,13 @@ async function pageOf(kind, slug) {
 // ---- go ----------------------------------------------------------------------------------------------------------------------------------
 const profile = arg("profile");
 if (!profile) { console.log('Say which voice profile to use, e.g. --profile "Abongo".'); process.exit(1); }
-const email = process.env.ADMIN_EMAIL, password = process.env.ADMIN_PASSWORD;
-if (!email || !password) { console.log("Set ADMIN_EMAIL and ADMIN_PASSWORD first (the login you use on the site)."); process.exit(1); }
-const sb = createClient(SB, ANON);
-const { error: authError } = await sb.auth.signInWithPassword({ email, password });
-if (authError) { console.log(`Could not sign in: ${authError.message}`); process.exit(1); }
+const email = process.env.ADMIN_EMAIL, password = process.env.ADMIN_PASSWORD, token = process.env.ADMIN_TOKEN;
+if (!token && (!email || !password)) { console.log("Set ADMIN_TOKEN (copied from the signed-in site), or ADMIN_EMAIL and ADMIN_PASSWORD."); process.exit(1); }
+const sb = createClient(SB, ANON, token ? { global: { headers: { Authorization: `Bearer ${token}` } } } : undefined);
+if (!token) {
+  const { error: authError } = await sb.auth.signInWithPassword({ email, password });
+  if (authError) { console.log(`Could not sign in: ${authError.message}`); process.exit(1); }
+}
 
 const id = await profileId(profile);
 const todo = [];
