@@ -15,7 +15,13 @@ const index = fs.existsSync(indexFile) ? JSON.parse(fs.readFileSync(indexFile, "
 const skipped = fs.existsSync(skippedFile) ? JSON.parse(fs.readFileSync(skippedFile, "utf8")) : {};
 const yearOf = (c) => Number(String(c || "").match(/^Year\s*(\d)/i)?.[1] ?? 0);
 const text = (c) => c.replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-const isBank = (a) => (a.content.match(/^(?:#{1,4}\s*)?\**Question\s+\d+/gim) ?? []).length >= 5 || /past paper|questions? (&|and) answers?|\bmcqs?\b|\bsaqs?\b|\bcat\b|\bexam\b|\bquiz\b/i.test(a.title);
+// a question bank or paper is judged by what is inside it, not by its title (a lecture guide titled "Past Paper" is still a set of notes)
+const isBank = (a) => {
+  const qs = (a.content.match(/^(?:#{1,4}\s*)?\**(?:Question|Q)\s*\d+/gim) ?? []).length;
+  const answers = (a.content.match(/^\**Answers?\**\s*[:.]/gim) ?? []).length;
+  const options = (a.content.match(/^\s*[-*]?\s*\(?[A-E][.)]\s+\S/gm) ?? []).length;
+  return qs >= 5 || answers >= 8 || options >= 24;
+};
 // reasons that only the AI job had, or that the old rule check gave, are tried again by the rule cleaner
 const retry = (why) => /^(rule tidy rejected|too long|tidy rejected)/.test(why ?? "");
 const yi = process.argv.indexOf("--year"), year = yi >= 0 ? Number(process.argv[yi + 1]) : 0;
