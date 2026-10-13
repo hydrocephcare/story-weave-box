@@ -1,0 +1,109 @@
+{
+  "medical": true,
+  "subject": "Anatomy",
+  "summary": "An aponeurosis is a flat, sheet-like tendon made of dense collagen fibres. It anchors a flat muscle to bone or to another muscle, and spreads its pull over a wide area. The main ones to know are the external oblique aponeurosis, the palmar and plantar aponeuroses, the bicipital aponeurosis and the epicranial aponeurosis (galea).",
+  "aka": ["Flat tendon", "Tendinous sheet"],
+  "sections": [
+    {
+      "h": "Definition",
+      "p": "An aponeurosis is a broad, flat, glistening sheet of dense regular connective tissue. It does the job of a tendon, but is spread out like a sheet instead of being a rounded cord.",
+      "b": [
+        "Made mostly of parallel type I collagen fibres, with few cells and little blood supply, so it looks white and shiny.",
+        "It joins muscle to bone, or muscle to muscle (as in the linea alba)."
+      ]
+    },
+    {
+      "h": "Aponeurosis, tendon and fascia compared",
+      "p": "These three are often confused in exams. They are all dense connective tissue, but they differ in shape and job.",
+      "b": [
+        "Tendon: a rounded cord that attaches a muscle to bone.",
+        "Aponeurosis: a flat sheet that attaches a flat muscle, and often forms the anchor of a muscle layer.",
+        "Fascia: a wrapping layer that covers or separates muscles and organs. It does not usually transmit a muscle's pull."
+      ]
+    },
+    {
+      "h": "Important aponeuroses",
+      "p": "Learn them by region.",
+      "b": [
+        "Abdominal wall: the aponeuroses of external oblique, internal oblique and transversus abdominis form the rectus sheath and meet at the linea alba. The lower border of the external oblique aponeurosis is the inguinal ligament.",
+        "Hand: the palmar aponeurosis lies under the skin of the palm and is continuous with the tendon of palmaris longus.",
+        "Foot: the plantar aponeurosis runs from the calcaneus to the toes and supports the longitudinal arch.",
+        "Arm: the bicipital aponeurosis (lacertus fibrosus) spreads from the biceps tendon over the cubital fossa to the forearm fascia.",
+        "Scalp: the epicranial aponeurosis (galea aponeurotica) joins the frontal and occipital bellies of occipitofrontalis.",
+        "Back: the thoracolumbar fascia and the aponeurosis of latissimus dorsi."
+      ]
+    },
+    {
+      "h": "Function",
+      "p": "An aponeurosis spreads the force of a muscle over a wide attachment, so a flat muscle can pull evenly. It also forms a strong, flexible layer that holds structures in.",
+      "b": [
+        "In the abdominal wall it keeps the viscera in and takes the strain when pressure rises (coughing, lifting, labour).",
+        "In the palm and the sole it protects the deeper nerves, vessels and tendons and helps grip and walking.",
+        "In the scalp it gives the soft tissues a firm layer to slide on."
+      ]
+    },
+    {
+      "h": "Blood and nerve supply",
+      "p": "An aponeurosis has few blood vessels and few nerve endings, which is why it is pale and heals slowly. The vessels and nerves of the structure it belongs to supply it.",
+      "b": [
+        "Because the blood supply is poor, a torn or cut aponeurosis is slow to heal and may need a strong repair."
+      ]
+    },
+    {
+      "h": "Clinical relevance",
+      "p": "Many common problems come from an aponeurosis that is thickened, torn or weak.",
+      "b": [
+        "Dupuytren's contracture: the palmar aponeurosis thickens and shortens, so the ring and little fingers curl into the palm and cannot straighten.",
+        "Plantar fasciitis: inflammation of the plantar aponeurosis at its attachment to the calcaneus causes heel pain, worst with the first steps in the morning.",
+        "Incisional hernia: bowel pushes through a weak scar in the rectus sheath or the linea alba after abdominal surgery.",
+        "Inguinal hernia: bowel passes through the inguinal canal, whose anterior wall is the external oblique aponeurosis.",
+        "Bicipital aponeurosis: lying over the brachial artery in the cubital fossa, it partly protects the artery during venepuncture of the median cubital vein.",
+        "Scalp injury: a deep wound that cuts the galea makes the wound gape, because the frontalis and occipitalis pull the edges apart. Scalp bleeds heavily."
+      ]
+    },
+    {
+      "h": "Exam pearls",
+      "p": "Examiners like the abdominal wall and the hand and foot.",
+      "b": [
+        "Name the three layers whose aponeuroses form the rectus sheath, and say how the sheath differs above and below the arcuate line.",
+        "The external oblique aponeurosis forms the anterior wall of the inguinal canal, and its lower edge is the inguinal ligament.",
+        "The linea alba is a fibrous line in the midline, formed by the fusion of the abdominal aponeuroses. It is poorly supplied with blood, which is why it is the usual midline incision."
+      ]
+    }
+  ],
+  "whenToSeekHelp": [
+    "A lump in the groin or the abdominal wall that gets bigger on coughing, or one that becomes tender, hard or cannot be pushed back",
+    "Fingers that cannot be straightened fully",
+    "Heel pain that does not settle with rest and stretching"
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between a tendon and an aponeurosis?",
+      "a": "A tendon is a rounded cord, an aponeurosis is a flat sheet. Both attach muscle and both are made of dense collagen."
+    },
+    {
+      "q": "Which aponeurosis forms the anterior wall of the inguinal canal?",
+      "a": "The external oblique aponeurosis, reinforced laterally by the internal oblique."
+    },
+    {
+      "q": "What is the linea alba?",
+      "a": "A fibrous line in the midline of the abdomen, formed by the fusion of the aponeuroses of the three flat abdominal muscles. It runs from the xiphoid process to the pubic symphysis."
+    },
+    {
+      "q": "Why does a scalp laceration bleed heavily and gape?",
+      "a": "The scalp has a rich blood supply whose vessels are held open by connective tissue. If the galea aponeurotica is cut, the muscles pull the edges apart."
+    }
+  ],
+  "exam": [
+    "Define an aponeurosis and give four examples.",
+    "Describe the formation of the rectus sheath above and below the arcuate line.",
+    "State the layers and boundaries of the inguinal canal, and name the aponeurosis that forms its anterior wall.",
+    "Describe the palmar aponeurosis and explain the cause and presentation of Dupuytren's contracture.",
+    "What is the bicipital aponeurosis, and why is it important at the cubital fossa?"
+  ],
+  "related": ["Inguinal canal", "Rectus sheath", "Linea alba", "Palmar aponeurosis", "Plantar fascia", "Cubital fossa", "Biceps brachii", "Scalp"],
+  "kind": "anatomy",
+  "model": "claude",
+  "generatedAt": "2026-10-13",
+  "reviewed": false
+}
