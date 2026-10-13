@@ -1627,8 +1627,18 @@ export default function BlogPost() {
         if (wantsPolish(a as { category?: string | null; password_protected?: boolean | null })) {
           void (async () => {
             let p = await getPolish(a.id);
-            if (!p) { const st = await requestPolish(a.id); if (st === "done" || st === "partial") p = await getPolish(a.id, true); }
-            if (p) setArticle((cur) => (cur && cur.id === a.id ? applyPolish(cur, p as Polish) : cur));
+            const show = (q: Polish | null) => { if (q) setArticle((cur) => (cur && cur.id === a.id ? applyPolish(cur, q) : cur)); };
+            show(p);
+            // nothing yet, or a long page part-way: ask the server, and keep asking for the next piece while this page is open
+            if (!p || p.status === "partial") {
+              const here = window.location.pathname;
+              for (let n = 0; n < 16; n++) {
+                const r = await requestPolish(a.id, n > 0);
+                if (r.status === "done" || r.status === "partial") { p = (await getPolish(a.id, true)) ?? p; show(p); }
+                if (!r.more || window.location.pathname !== here) break;
+                await new Promise((res) => setTimeout(res, 700));
+              }
+            }
           })();
         }
         const canonicalPath = buildBlogPath(a);

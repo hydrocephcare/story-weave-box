@@ -1,14 +1,9 @@
 name: Polish the blogs
 
-# Twice a day (06:00 and 18:00 Nairobi time) the next batch of Year 1 to 6 blogs gets a clear title, a search description and a tidier text in the
-# style of the Year 4 notes. Results are saved in the blog_polish table, so nothing is committed and the site does not need to redeploy.
-# Needs three secrets: POLISH_WRITE_KEY (made on /admin/polish), GROQ_API_KEYS and GEMINI_API_KEYS (the morning pool, not the one visitors use).
-# Pages that failed (the AI keys ran out) are tried again automatically on a later run. Nothing runs without POLISH_WRITE_KEY.
-# Run it yourself any time: GitHub > Actions > "Polish the blogs" > Run workflow (you can pick how many and which year).
+# Blogs are normally polished by the site itself, the first time someone opens each one (and only while the AI has room), so nothing is polished
+# for nobody and nothing is polished twice. This job is only for doing a batch by hand when you want to: GitHub > Actions > "Polish the blogs" >
+# Run workflow (pick how many and which year). Needs POLISH_WRITE_KEY (made on /admin/polish), GROQ_API_KEYS and GEMINI_API_KEYS.
 on:
-  schedule:
-    - cron: "0 3 * * *"
-    - cron: "0 15 * * *"
   workflow_dispatch:
     inputs:
       count:

@@ -54,16 +54,20 @@ export async function getPolish(id: string, fresh = false): Promise<Polish | nul
   } catch { return null; }
 }
 
-/** Ask the server to polish this blog (it does it once for everyone). Returns the server's status, or "" when nothing was asked. */
-export async function requestPolish(id: string): Promise<string> {
-  if (typeof navigator === "undefined" || navigator.webdriver || /bot|crawl|spider|slurp|headless|lighthouse/i.test(navigator.userAgent)) return "";
-  try { if (sessionStorage.getItem(`ompath_polish_asked_${id}`)) return ""; sessionStorage.setItem(`ompath_polish_asked_${id}`, "1"); } catch { /* ignore */ }
+/**
+ * Ask the server to polish this blog (it does it once for everyone, only when someone opens it). A long page is done a couple of pieces per
+ * request, so `more` tells the page to ask again. `again` is for those follow-up asks. Returns { status: "" } when nothing was asked.
+ */
+export async function requestPolish(id: string, again = false): Promise<{ status: string; more: boolean }> {
+  const none = { status: "", more: false };
+  if (typeof navigator === "undefined" || navigator.webdriver || /bot|crawl|spider|slurp|headless|lighthouse/i.test(navigator.userAgent)) return none;
+  if (!again) { try { if (sessionStorage.getItem(`ompath_polish_asked_${id}`)) return none; sessionStorage.setItem(`ompath_polish_asked_${id}`, "1"); } catch { /* ignore */ } }
   try {
     const r = await fetch("/api/ai-polish", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ id }) });
-    if (!r.ok) return "";
-    const j = (await r.json().catch(() => ({}))) as { status?: string };
-    return j.status ?? "";
-  } catch { return ""; }
+    if (!r.ok) return none;
+    const j = (await r.json().catch(() => ({}))) as { status?: string; more?: boolean };
+    return { status: j.status ?? "", more: Boolean(j.more) };
+  } catch { return none; }
 }
 
 /** The article with its polished title, description and text laid over it. */
@@ -72,6 +76,7 @@ export function applyPolish<T extends { id: string; title?: string | null; conte
   if (p.title) { out.title = p.title; out.meta_title = p.title; }
   if (p.description) out.meta_description = p.description;
   if (p.image_query) (out as { image_query?: string }).image_query = p.image_query;
-  if (p.content && p.content.trim().length > 200) { out.content = p.content; polishedIds.add(a.id); }
+  // the text only replaces the page when the whole page is done (a long page is polished a few pieces at a time)
+  if (p.status === "done" && p.content && p.content.trim().length > 200) { out.content = p.content; polishedIds.add(a.id); }
   return out;
 }
