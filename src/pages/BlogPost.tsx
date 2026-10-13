@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useLayoutEffect, forwardRef, memo } from "react";
+import { tidiedText } from "@/lib/blogFix";
 import AdSlot from "@/components/AdSlot";
 import BooksForPage from "@/components/BooksForPage";
 import SponsorLine from "@/components/SponsorLine";
@@ -1598,6 +1599,8 @@ export default function BlogPost() {
 
         setNotFound(false);
         setArticle(a);
+        // a blog that has been tidied (headings, short paragraphs, lists) shows the tidied text; the stored one is never changed
+        void tidiedText(a.id).then((fixed) => { if (fixed) setArticle((cur) => (cur && cur.id === a.id ? { ...cur, content: fixed } : cur)); });
         const canonicalPath = buildBlogPath(a);
         if (location.pathname !== canonicalPath) navigate(`${canonicalPath}${location.hash || ""}`, { replace: true });
         markArticleVisited({ id: a.id, title: a.title, category: a.category, visitedAt: Date.now() });

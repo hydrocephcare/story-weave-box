@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "subject": "Public health",
+ "summary": "Study designs are systematic plans for collecting and analyzing data to answer health questions. They help clinicians choose the right evidence and avoid bias. Understanding design strengths and limits is key to applying research in practice.",
+ "aka": [
+  "Research design",
+  "Epidemiologic design"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Study design refers to the blueprint that guides how data are gathered, analyzed, and interpreted in health research. It defines the population, exposure, outcome, and methods of measurement.",
+   "b": [
+    "Design type determines validity and applicability of findings"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "In public health, study designs are not staged like diseases, but they are ranked by methodological rigor: experimental > quasi-experimental > observational (cohort, case-control, cross‑sectional).",
+   "b": [
+    "Higher rigor reduces bias and confounding"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The choice of design is driven by the research question, feasibility, ethics, and resources. In low‑resource settings, observational studies are common due to cost and logistical constraints.",
+   "b": [
+    "Ethical feasibility often dictates observational designs"
+   ],
+   "t": [
+    {
+     "a": "Randomized controlled trial",
+     "b": "Shows causality if randomization balances confounders"
+    },
+    {
+     "a": "Cohort study",
+     "b": "Provides incidence and temporal sequence"
+    },
+    {
+     "a": "Case‑control study",
+     "b": "Efficient for rare diseases, but prone to recall bias"
+    },
+    {
+     "a": "Cross‑sectional study",
+     "b": "Snapshot, cannot infer causality"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "When reading a study, look for clear description of population, exposure, outcome, follow‑up, and statistical analysis. In low‑resource contexts, missing data and loss to follow‑up are common issues.",
+   "b": [
+    "Check for selection bias and attrition"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In study design, investigations refer to data collection methods. They must be valid, reliable, and feasible. When a test is unavailable, surrogate measures or community‑based assessments can be used.",
+   "b": [
+    "Use validated tools adapted to local context"
+   ],
+   "t": [
+    {
+     "a": "Standardized questionnaire",
+     "b": "Ensures comparability across sites"
+    },
+    {
+     "a": "Rapid diagnostic tests",
+     "b": "Useful where lab infrastructure is limited"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Design flaws such as selection bias, confounding, and measurement error can mislead conclusions. In low‑resource settings, over‑reliance on self‑report can inflate prevalence estimates.",
+   "b": [
+    "High loss to follow‑up weakens causal inference"
+   ],
+   "t": [
+    {
+     "a": "Loss to follow‑up >20%",
+     "b": "Yes, may bias results"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Applying study findings involves translating evidence into practice. Clinicians should assess external validity: does the study population match their patients?",
+   "b": [
+    "Adapt interventions to local resources"
+   ],
+   "t": [
+    {
+     "a": "Intervention fidelity assessment",
+     "b": "Ensures true effect is measured"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Longitudinal studies provide data on disease progression and prevention effectiveness. In low‑resource settings, community health workers can conduct follow‑up using mobile tools.",
+   "b": [
+    "Use simple mobile apps for data capture"
+   ],
+   "t": [
+    {
+     "a": "Mobile health reminders",
+     "b": "Evidence shows increased compliance"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Observational studies are often mistaken for experimental ones. Cohort and case‑control studies differ in exposure assessment timing.",
+   "b": [
+    "Cross‑sectional studies cannot establish temporality"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Small sample sizes, non‑representative samples, and unmeasured confounders can produce misleading associations. Publication bias may over‑represent positive findings.",
+   "b": [
+    "Check for funnel plot asymmetry"
+   ],
+   "t": [
+    {
+     "a": "P‑value <0.05",
+     "b": "No, it only indicates statistical significance"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the gold standard for proving causality?",
+   "a": "Randomized controlled trials, because randomization balances known and unknown confounders."
+  },
+  {
+   "q": "How can I judge if a study is applicable to my setting?",
+   "a": "Compare the study population, resources, and disease burden to your own context."
+  },
+  {
+   "q": "What if a key diagnostic test is unavailable?",
+   "a": "Use validated surrogate markers or community‑based screening tools, and note the limitation in interpretation."
+  }
+ ],
+ "exam": [
+  "Explain why a randomized controlled trial is preferred over a cohort study for testing a new vaccine.",
+  "Describe the main threat to validity in a case‑control study and how to mitigate it.",
+  "Outline the steps you would take to adapt a proven intervention to a low‑resource setting."
+ ],
+ "related": [
+  "Epidemiology",
+  "Biostatistics",
+  "Health systems research",
+  "Implementation science",
+  "Global health"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

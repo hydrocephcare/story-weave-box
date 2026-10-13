@@ -1,0 +1,117 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Integrated tissue metabolism describes how organs coordinate fuel use, storage, and waste removal to keep the body in balance. Clinicians must recognize patterns of metabolic failure that present as common acute or chronic illnesses.",
+ "aka": [
+  "systemic metabolic integration"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "All tissues exchange substrates (glucose, fatty acids, amino acids) and hormones to meet energy demands while preserving homeostasis. Disruption can manifest as hypoglycaemia, lactic acidosis, or cachexia.",
+   "b": [
+    "Key organs: liver, muscle, adipose, brain, kidney",
+    "Primary fuels: glucose, fatty acids, ketone bodies"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Glucose from the gut is stored as glycogen in liver and muscle; excess is converted to fat. During fasting, liver releases glucose (glycogenolysis) and makes ketones (β‑oxidation). Hormones (insulin, glucagon, catecholamines) fine‑tune these pathways.",
+   "b": [
+    "Insulin promotes uptake and storage; glucagon triggers release",
+    "AMPK senses low energy and activates catabolism"
+   ],
+   "t": [
+    {
+     "a": "Serum glucose",
+     "b": "Is the patient hypoglycaemic? Low values indicate failure of hepatic glucose output or excess insulin."
+    },
+    {
+     "a": "Serum ketones",
+     "b": "Is ketosis present? Elevated ketones suggest prolonged fasting or uncontrolled diabetes."
+    },
+    {
+     "a": "Lactate",
+     "b": "Is there anaerobic metabolism? High lactate points to tissue hypoxia or mitochondrial dysfunction."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Endocrine signals (insulin, glucagon, cortisol, growth hormone) and cellular sensors (AMPK, mTOR) integrate nutrient status with gene expression to adjust enzyme activity.",
+   "b": [
+    "Insulin activates phosphofructokinase‑2, increasing glycolysis",
+    "Glucagon stimulates phosphoenolpyruvate carboxykinase for gluconeogenesis"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Failure of integration appears as metabolic crises: diabetic ketoacidosis, hepatic failure, severe malnutrition, or inborn errors of metabolism.",
+   "b": [
+    "Diabetic ketoacidosis – insulin deficiency, high glucagon, unchecked lipolysis",
+    "Acute liver failure – loss of glycogenolysis and gluconeogenesis",
+    "Severe malaria or sepsis – mitochondrial inhibition, lactic acidosis"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Recognising patterns of fuel imbalance guides urgent therapy (glucose, insulin, bicarbonate) and prevents organ failure. In low‑resource settings, malaria, TB, HIV, and sickle‑cell disease frequently disturb metabolism.",
+   "b": [
+    "Hypoglycaemia in malaria → give rapid glucose",
+    "Lactic acidosis in severe sepsis → treat source, consider bicarbonate",
+    "Ketosis in untreated type 1 diabetes → insulin infusion"
+   ],
+   "t": [
+    {
+     "a": "Blood gas with lactate",
+     "b": "If unavailable, use bedside capillary lactate strips or clinical signs of poor perfusion."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on how hormone defects alter substrate flow and the resulting laboratory picture.",
+   "b": [
+    "Insulin excess → hypoglycaemia, low free fatty acids",
+    "Glucagon excess → hyperglycaemia, high ketones",
+    "Mitochondrial toxin → high lactate, low ATP"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained severe hypoglycaemia",
+  "Persistent metabolic acidosis with lactate >4 mmol/L",
+  "Rapidly worsening ketoacidosis"
+ ],
+ "faq": [
+  {
+   "q": "Why does fasting increase ketone bodies?",
+   "a": "Low insulin and high glucagon stimulate fatty‑acid oxidation; excess acetyl‑CoA is converted to ketones for brain use."
+  },
+  {
+   "q": "Can normal glucose hide a metabolic problem?",
+   "a": "Yes; early sepsis may keep glucose normal while lactate rises, indicating hidden mitochondrial failure."
+  },
+  {
+   "q": "What is the first step in treating diabetic ketoacidosis?",
+   "a": "Restore circulating glucose with IV dextrose after insulin infusion to stop ketogenesis."
+  }
+ ],
+ "exam": [
+  "Explain how insulin and glucagon coordinate hepatic glucose output during a 12‑hour fast.",
+  "List three laboratory abnormalities in septic shock that reflect disrupted tissue metabolism.",
+  "Describe the metabolic changes that occur in a patient with severe malaria and how they guide treatment."
+ ],
+ "related": [
+  "Glycogen metabolism",
+  "Ketogenesis",
+  "Lactic acidosis",
+  "Diabetes mellitus",
+  "Sepsis metabolism",
+  "Malaria pathophysiology"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

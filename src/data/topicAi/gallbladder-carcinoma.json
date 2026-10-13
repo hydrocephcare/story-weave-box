@@ -1,0 +1,113 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Gallbladder carcinoma is a malignant tumor of the gallbladder, often linked to chronic inflammation from gallstones or porcelain gallbladder. Genetic mutations (e.g., KRAS, TP53) drive malignant transformation, and early detection is difficult.",
+ "aka": [
+  "Gallbladder cancer"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Gallbladder carcinoma (GBC) is the most common cancer of the extra‑hepatic biliary tree, typically presenting in the seventh decade and slightly more often in women.",
+   "b": [
+    "Incidence rises with chronic gallstone disease.",
+    "Porcelain gallbladder confers a high risk.",
+    "Often silent until late stage."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Repeated mechanical irritation and inflammation from stones or parasites cause DNA damage in gallbladder epithelium, leading to dysplasia and carcinoma.",
+   "b": [
+    "Oxidative stress from bile stasis generates mutagenic ROS.",
+    "Chronic infection (e.g., Salmonella, Clonorchis) adds carcinogenic nitrosamines."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Key pathways altered in GBC include KRAS‑MAPK, TP53‑p21, and EGFR signaling, which control cell proliferation, apoptosis, and DNA repair.",
+   "b": [
+    "KRAS mutations drive uncontrolled growth.",
+    "TP53 loss disables apoptosis.",
+    "EGFR over‑expression promotes invasion."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Genetic hits accumulate on a background of chronic inflammation, producing an infiltrating or fungating tumor that invades the liver, liver hilum, and regional nodes.",
+   "b": [
+    "Infiltrating growth spreads to liver segments IVb/V.",
+    "Fungating masses may cause biliary obstruction.",
+    "Metastasis often to peritoneum and lungs."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Patients present with vague right‑upper‑quadrant pain, weight loss, or jaundice from biliary obstruction; early disease is often missed, leading to poor prognosis.",
+   "b": [
+    "Late presentation limits curative surgery.",
+    "Molecular profiling guides targeted therapy (e.g., EGFR inhibitors).",
+    "Low‑resource settings rely on clinical suspicion and basic imaging."
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Detects gallbladder wall thickening or mass; a hyperechoic mass suggests carcinoma."
+    },
+    {
+     "a": "CT scan",
+     "b": "Staging – assesses local invasion and distant spread."
+    },
+    {
+     "a": "Serum CA 19‑9",
+     "b": "Supports diagnosis; markedly elevated levels raise suspicion."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on risk factors, typical genetic alterations, and the staging system (TNM). Remember that gallstones are a modifiable risk.",
+   "b": [
+    "TNM stage I: tumor confined to gallbladder wall.",
+    "Stage II: invasion into liver or perimuscular tissue.",
+    "Stage III/IV: nodal or distant metastasis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset jaundice",
+  "Severe right‑upper‑quadrant pain with fever",
+  "Unexplained weight loss and palpable gallbladder"
+ ],
+ "faq": [
+  {
+   "q": "Why are gallstones a risk for cancer?",
+   "a": "They cause chronic irritation and inflammation, leading to DNA damage and dysplasia."
+  },
+  {
+   "q": "Can gallbladder cancer be prevented?",
+   "a": "Early cholecystectomy for large or long‑standing stones reduces risk."
+  },
+  {
+   "q": "Is CA 19‑9 reliable for screening?",
+   "a": "No; it is supportive but not specific enough for screening."
+  }
+ ],
+ "exam": [
+  "List the major genetic mutations associated with gallbladder carcinoma and their pathogenic role.",
+  "Describe the TNM staging criteria for gallbladder cancer.",
+  "Explain why chronic gallstone disease predisposes to carcinoma and how this influences management."
+ ],
+ "related": [
+  "Gallstones",
+  "Porcelain gallbladder",
+  "Cholangiocarcinoma",
+  "Biliary tract infections",
+  "Hepatocellular carcinoma",
+  "Pancreatic adenocarcinoma"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

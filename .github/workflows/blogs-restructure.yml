@@ -1,0 +1,57 @@
+name: Tidy the blogs
+
+# From 1 November 2026, every morning, a few blogs are given a clear structure (headings, short paragraphs, lists) without changing any fact:
+# Year 3 first, then Year 2, then Year 1. The stored blog is never touched: the tidied text is saved in public/blog-fixes and shown in its place,
+# so deleting one file puts that blog back as it was. Pictures, question banks and past papers are left alone.
+# Uses only the morning-job keys (the GROQ_API_KEYS and GEMINI_API_KEYS secrets), never the keys visitors use.
+# Run it yourself any time: Actions > Tidy the blogs > Run workflow (tick "force" to run before 1 November).
+on:
+  schedule:
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many blogs to tidy this run"
+        required: false
+        default: "12"
+      force:
+        description: "Run even before the start date"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: blogs-restructure
+  cancel-in-progress: false
+
+jobs:
+  tidy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tidy today's blogs
+        env:
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
+          BLOG_FIX_START: "2026-11-01"
+        run: node scripts/blogs/restructure.mjs ${{ inputs.count || '12' }} ${{ inputs.force == 'true' && '--force' || '' }}
+      - name: Save the tidied blogs
+        run: |
+          if [ -z "$(git status --porcelain public/blog-fixes)" ]; then
+            echo "Nothing new today."
+          else
+            git config user.name "ompath-bot"
+            git config user.email "ompath-bot@users.noreply.github.com"
+            git add public/blog-fixes
+            git commit -m "Tidied blogs"
+            git pull --rebase origin main
+            git push origin main
+          fi

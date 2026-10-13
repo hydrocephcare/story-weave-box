@@ -1,0 +1,145 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Cancer pharmacology studies drugs that treat malignant disease, focusing on mechanisms, indications, and safe use. Clinicians must match therapy to tumour type, stage, and patient factors while monitoring toxicity.",
+ "aka": [
+  "Onco‑pharmacology",
+  "Chemotherapy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cancer pharmacology involves agents that kill or inhibit growth of cancer cells, identified by histology, molecular markers, and imaging. Diagnosis guides drug selection and combination.",
+   "b": [
+    "Identify tumour type and molecular targets",
+    "Determine disease stage for therapy intensity"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging (TNM or disease‑specific systems) predicts prognosis and informs regimen intensity; early stage may use surgery plus adjuvant therapy, advanced disease often needs systemic treatment.",
+   "b": [
+    "Stage determines curative vs palliative intent",
+    "Higher stage often requires combination regimens"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Drug choice is driven by tumour biology (e.g., HER2‑positive breast cancer) and patient factors (renal function, comorbidities, HIV, hepatitis B).",
+   "b": [
+    "Targeted agents for specific mutations",
+    "Avoid nephrotoxic drugs in renal impairment"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with tumour‑related symptoms; treatment‑related effects appear as fatigue, nausea, cytopenias, or organ‑specific toxicities, which guide dose adjustments.",
+   "b": [
+    "Recognize early signs of myelosuppression",
+    "Monitor for neuropathy with taxanes"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline and ongoing tests assess eligibility, response, and safety.",
+   "t": [
+    {
+     "a": "CBC with differential",
+     "b": "Is bone marrow suppressed? Low neutrophils indicate risk of infection, prompting dose delay or growth‑factor support"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Is hepatic metabolism intact? Elevated transaminases may require dose reduction or drug change"
+    },
+    {
+     "a": "Renal function (eGFR)",
+     "b": "Is clearance adequate? Reduced eGFR limits use of cisplatin, favouring carboplatin"
+    },
+    {
+     "a": "Tumour markers (e.g., PSA, CA‑125)",
+     "b": "Do levels reflect disease activity? Rising levels suggest progression, prompting imaging"
+    },
+    {
+     "a": "Imaging (CT/MRI)",
+     "b": "What is tumour burden? Baseline size guides response assessment; if imaging unavailable, rely on clinical exam and markers"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Life‑threatening toxicities require urgent action: neutropenic fever, tumor lysis syndrome, severe mucositis, cardiomyopathy from anthracyclines, and pulmonary toxicity from bleomycin.",
+   "b": [
+    "Neutropenic fever >38.5°C",
+    "Acute kidney injury from tumor lysis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Select agents based on tumour type, stage, and patient factors; combine with supportive care to prevent and treat toxicities.",
+   "b": [
+    "Use anthracyclines for aggressive lymphomas, avoid in pre‑existing heart disease",
+    "Prefer taxanes over vinca alkaloids when neuropathy risk is high",
+    "Give anti‑emetics prophylactically to all moderate‑high emetogenic regimens",
+    "Avoid concurrent nephrotoxic drugs with cisplatin"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring detects response and toxicity; secondary cancer prevention includes dose limits and surveillance for late effects.",
+   "b": [
+    "CBC every 1–2 weeks during high‑risk cycles",
+    "Echocardiogram before and after anthracycline therapy"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Non‑cancer cytotoxic drugs (e.g., immunosuppressants) can cause similar marrow suppression, but lack tumor‑targeted intent.",
+   "b": [
+    "Distinguish chemotherapy from high‑dose steroids used for inflammatory diseases"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Transient tumor marker drops may not reflect true response; normal CBC can mask early marrow injury in patients on growth factors.",
+   "b": [
+    "Rely on imaging, not just markers, for response assessment"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Uncontrolled neutropenic fever",
+  "Sudden cardiac arrhythmia or chest pain during anthracycline infusion",
+  "Severe dyspnea suggesting bleomycin‑induced pulmonary toxicity"
+ ],
+ "faq": [
+  {
+   "q": "Why are targeted therapies preferred over traditional chemotherapy when a mutation is present?",
+   "a": "They block the specific driver pathway, often with higher efficacy and fewer systemic side effects."
+  },
+  {
+   "q": "What is the main reason to avoid anthracyclines in a patient with prior heart failure?",
+   "a": "Anthracyclines can cause cumulative dose‑related cardiomyopathy, worsening heart failure."
+  },
+  {
+   "q": "How does tumor lysis syndrome develop and how is it prevented?",
+   "a": "Rapid tumor cell death releases intracellular ions and uric acid; prophylaxis includes hydration and allopurinol or rasburicase."
+  }
+ ],
+ "exam": [
+  "Explain how staging influences choice of systemic therapy in solid tumours.",
+  "List three common toxicities of platinum‑based chemotherapy and their management strategies.",
+  "Describe the rationale for using growth‑factor support in patients with high‑risk neutropenia."
+ ],
+ "related": [
+  "Oncologic surgery",
+  "Radiation oncology",
+  "Molecular genetics of cancer",
+  "Supportive care in oncology",
+  "Pharmacokinetics",
+  "Immunotherapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

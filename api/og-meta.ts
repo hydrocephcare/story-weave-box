@@ -4,11 +4,11 @@ export const config = {
 
 const OG_FALLBACK_IMAGE = "https://www.ompathstudy.com/og-default.png";
 /** A share picture drawn from the note's own title, year and unit (api/note-card.js), for notes that have no picture of their own. */
-function cardUrl(title: unknown, category: unknown, kind: string): string {
+function cardUrl(title: unknown, category: unknown, kind: string, blurb = ""): string {
   const p = new URLSearchParams({ title: String(title || "Study notes").slice(0, 140), kind });
   const m = String(category || "").match(/^Year\s*(\d)\s*:\s*(.*)$/i);
   if (m) { p.set("year", m[1]); p.set("unit", m[2].slice(0, 40)); } else if (category) p.set("unit", String(category).slice(0, 40));
-  if (kind === "Topic") p.set("pic", "wiki");
+  if (kind === "Topic") { p.set("pic", "wiki"); if (blurb) p.set("blurb", String(blurb).replace(/\s+/g, " ").slice(0, 150)); }
   return `https://www.ompathstudy.com/api/note-card?${p.toString()}`;
 }
 const GEO_KEYWORDS = "Kenya, Africa, global medical students, MBChB, clinical medicine, nursing, University of Nairobi, Kenyatta University, Moi University, Kabarak University, Aga Khan University";
@@ -828,7 +828,7 @@ export default async function handler(req: Request): Promise<Response> {
         const c = row.content || {};
         title = `${row.name}: overview, causes, management and practice questions | Ompath Study`;
         description = toMetaDescription(c.summary || `Everything on ${row.name} from Ompath Study.`, `Notes, images and practice questions on ${row.name}.`);
-        ogImage = cardUrl(row.name, row.category, "Topic");
+        ogImage = cardUrl(row.name, row.category, "Topic", c.summary || "");
         keywords = `${row.name}, ${row.category || "medicine"}, medical students, Ompath Study, study notes, MCQs`;
         type = "article";
         schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "MedicalWebPage", name: title, url: absoluteUrl, description, image: ogImage, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: origin } });
@@ -871,7 +871,10 @@ export default async function handler(req: Request): Promise<Response> {
         publisher: { "@type": "Organization", name: "OmpathStudy", logo: { "@type": "ImageObject", url: OG_FALLBACK_IMAGE } },
       });
       if (article.content) {
-        bodyExtra = `<div>${htmlEscape(cleanForMetaSnippet(article.content).slice(0, 5000))}</div>`;
+        // the tidied text, when there is one, is what readers see: crawlers should see the same
+        let shown = article.content;
+        try { const r = await fetch(`${origin}/blog-fixes/${article.id}.md`); if (r.ok && !(r.headers.get("content-type") || "").includes("html")) { const t = await r.text(); if (t.length > 300) shown = t; } } catch { /* the stored text is used */ }
+        bodyExtra = `<div>${htmlEscape(cleanForMetaSnippet(shown).slice(0, 5000))}</div>`;
       }
 
     } else if (section === "mcqs" && param) {

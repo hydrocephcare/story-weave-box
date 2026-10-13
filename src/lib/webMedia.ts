@@ -126,7 +126,7 @@ export async function loadWebMedia(names: string[]): Promise<WebMedia | null> {
       // no Wikipedia article: search Wikimedia Commons directly so the page is never without pictures
       const q = new URLSearchParams({ action: "query", format: "json", origin: "*", list: "search", srnamespace: "6", srsearch: `${names[0]} medical`, srlimit: "12" });
       const found = await json<{ query?: { search?: { title: string }[] } }>(`https://commons.wikimedia.org/w/api.php?${q}`).catch(() => null);
-      const subjectWords = names[0].toLowerCase().split(/W+/).filter((w) => w.length >= 4);
+      const subjectWords = names[0].toLowerCase().split(/\W+/).filter((w) => w.length >= 4);
       // only files whose name is about the subject: a wrong picture is worse than none
       const titles = (found?.query?.search ?? []).map((x) => x.title).filter((t) => !SKIP_FILE.test(t) && !/journal|contents|bulletin|navy|proceedings|vol|cover|poster|logo|map/i.test(t) && (!subjectWords.length || subjectWords.filter((w) => t.toLowerCase().includes(w.slice(0, Math.max(4, w.length - 2)))).length >= Math.ceil(subjectWords.length / 2))).slice(0, 10);
       const q2 = new URLSearchParams({ action: "query", format: "json", origin: "*", titles: titles.join("|"), prop: "imageinfo", iiprop: "url|extmetadata|size|mime", iiurlwidth: "700", iiextmetadatafilter: "LicenseShortName|Artist|ImageDescription" });

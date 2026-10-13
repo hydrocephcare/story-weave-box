@@ -16,6 +16,15 @@ PAGE:
 """
 ${text}
 """`,
+  essays: (title, text) => `Write 5 essay questions an examiner could set from this study page: "${title}", each with a model answer.
+${RULES}
+Mix the command words (describe, explain, discuss, outline, compare). Give each a mark value (5, 8 or 10), 4 to 6 marking points, and a model answer of 90 to 150 words in clear paragraphs.
+Return ONLY JSON: {"essays":[{"q":"...","marks":10,"points":["..."],"answer":"..."}]}
+
+PAGE:
+"""
+${text}
+"""`,
   quiz: (title, text) => `Write 5 multiple-choice questions from this study page: "${title}".
 ${RULES}
 Four options each (A to D), exactly one correct, all options of similar length, no "all of the above". Spread the correct answer across different positions.
@@ -27,9 +36,9 @@ ${text}
 """`,
 };
 
-async function ask(prompt, env) {
-  if (env.GROQ_API_KEYS.trim()) { try { return await askModel(prompt, { env: { GROQ_API_KEYS: env.GROQ_API_KEYS }, timeoutMs: 35000, maxTokens: 1800 }); } catch { /* try Gemini */ } }
-  return askModel(prompt, { env, timeoutMs: 35000, maxTokens: 1800 });
+async function ask(prompt, env, maxTokens = 1800) {
+  if (env.GROQ_API_KEYS.trim()) { try { return await askModel(prompt, { env: { GROQ_API_KEYS: env.GROQ_API_KEYS }, timeoutMs: 35000, maxTokens }); } catch { /* try Gemini */ } }
+  return askModel(prompt, { env, timeoutMs: 35000, maxTokens });
 }
 
 export default async function handler(req, res) {
@@ -44,17 +53,23 @@ export default async function handler(req, res) {
   hits.set(ip, [...mine, now]); if (hits.size > 5000) hits.clear();
 
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
-  const mode = body.mode === "quiz" ? "quiz" : "cards";
+  const mode = body.mode === "quiz" ? "quiz" : body.mode === "essays" ? "essays" : "cards";
   const title = String(body.title ?? "").slice(0, 140);
   const text = String(body.text ?? "").replace(/\s+/g, " ").trim().slice(0, 5500);
   if (text.length < 200) return res.status(400).json({ error: "There is not enough text on this page yet." });
   try {
-    const { text: out } = await ask(PROMPTS[mode](title, text), env);
+    const { text: out } = await ask(PROMPTS[mode](title, text), env, mode === "essays" ? 3400 : 1800);
     const j = JSON.parse(out.match(/\{[\s\S]*\}/)[0]);
     if (mode === "cards") {
       const cards = (Array.isArray(j.cards) ? j.cards : []).map((c) => ({ q: String(c?.q ?? "").trim().slice(0, 220), a: String(c?.a ?? "").trim().slice(0, 320) })).filter((c) => c.q.length > 8 && c.a.length > 4).slice(0, 10);
       if (cards.length < 3) throw new Error("few");
       return res.status(200).json({ cards });
+    }
+    if (mode === "essays") {
+      const essays = (Array.isArray(j.essays) ? j.essays : []).map((e) => ({ q: String(e?.q ?? "").trim().slice(0, 300), marks: [5, 8, 10, 12, 15, 20].includes(Number(e?.marks)) ? Number(e.marks) : 10, points: (Array.isArray(e?.points) ? e.points : []).map((p) => String(p).trim().slice(0, 200)).filter(Boolean).slice(0, 7), answer: String(e?.answer ?? "").trim().slice(0, 1300) }))
+        .filter((e) => e.q.length > 12 && e.answer.length > 80).slice(0, 5);
+      if (essays.length < 3) throw new Error("few");
+      return res.status(200).json({ essays });
     }
     const questions = (Array.isArray(j.questions) ? j.questions : []).map((x) => ({ q: String(x?.q ?? "").trim().slice(0, 300), options: (Array.isArray(x?.options) ? x.options : []).map((o) => String(o).trim().slice(0, 200)), answer: Number(x?.answer), why: String(x?.why ?? "").trim().slice(0, 300) }))
       .filter((x) => x.q.length > 10 && x.options.length === 4 && x.options.every(Boolean) && Number.isInteger(x.answer) && x.answer >= 0 && x.answer <= 3).slice(0, 6);

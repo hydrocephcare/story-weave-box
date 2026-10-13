@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Check, ClipboardCheck, Layers, Loader2, Square, Volume2, X } from "lucide-react";
+import { Check, ClipboardCheck, FileText, Layers, Loader2, Square, Volume2, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { srs } from "@/lib/srs";
+import { useAccess } from "@/lib/access";
+import { useAuth } from "@/hooks/useAuth";
+import { openSubscribePrompt } from "@/lib/subscribe-prompt";
 import { cn } from "@/lib/utils";
 
 interface Q { q: string; options: string[]; answer: number; why: string }
@@ -20,7 +23,15 @@ function spread(qs: Q[]): Q[] {
   });
 }
 
-async function call(mode: "cards" | "quiz", title: string, text: string) {
+interface Essay { q: string; marks: number; points: string[]; answer: string }
+
+// free limits per device per day (subscribers and the admin have none): the AI behind these costs real money
+const FREE_PER_DAY: Record<"cards" | "quiz" | "essays", number> = { cards: 6, quiz: 8, essays: 4 };
+const usedKey = (m: string) => `ompath_study_${m}_${new Date().toISOString().slice(0, 10)}`;
+const used = (m: string) => { try { return Number(localStorage.getItem(usedKey(m)) ?? 0); } catch { return 0; } };
+const spendOne = (m: string) => { try { localStorage.setItem(usedKey(m), String(used(m) + 1)); } catch { /* ignore */ } };
+
+async function call(mode: "cards" | "quiz" | "essays", title: string, text: string) {
   const r = await fetch("/api/page-study", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ mode, title, text }) });
   const j = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(j.error || "Ompath AI could not do this just now. Please try again.");
@@ -29,7 +40,18 @@ async function call(mode: "cards" | "quiz", title: string, text: string) {
 
 /** Three things to do with the page you are reading: turn it into flashcards for daily review, quiz yourself on it, or listen to it. */
 export default function StudyTools({ title, path, text, className = "" }: { title: string; path: string; text: string; className?: string }) {
-  const [busy, setBusy] = useState<"" | "cards" | "quiz">("");
+  const [busy, setBusy] = useState<"" | "cards" | "quiz" | "essays">("");
+  const { hasPass } = useAccess();
+  const { isAdmin } = useAuth();
+  const unlimited = hasPass || isAdmin;
+  const [essays, setEssays] = useState<Essay[] | null>(null);
+  const [openEssay, setOpenEssay] = useState<number | null>(null);
+  const allowed = (m: "cards" | "quiz" | "essays") => {
+    if (unlimited || used(m) < FREE_PER_DAY[m]) return true;
+    setNote({ ok: false, text: `You have used today's ${FREE_PER_DAY[m]} free ones.` });
+    openSubscribePrompt("Subscribe for unlimited flashcards, quizzes and essay practice.");
+    return false;
+  };
   const [note, setNote] = useState<{ ok: boolean; text: string } | null>(null);
   const [quiz, setQuiz] = useState<Q[] | null>(null);
   const [picked, setPicked] = useState<Record<number, number>>({});
@@ -41,16 +63,25 @@ export default function StudyTools({ title, path, text, className = "" }: { titl
   const btn = "inline-flex h-11 items-center gap-2 rounded-full border border-border bg-background px-5 text-sm font-bold transition hover:border-primary/60 hover:bg-primary/5 active:scale-[.97] disabled:opacity-60";
 
   const makeCards = async () => {
+    if (!allowed("cards")) return;
     setBusy("cards"); setNote(null);
     try {
       const { cards } = await call("cards", title, text);
+      spendOne("cards");
       const n = srs.add(cards, { title, path });
       if (alive.current) setNote({ ok: true, text: n ? `${n} flashcards added to your daily review.` : "These cards are already in your review." });
     } catch (e) { if (alive.current) setNote({ ok: false, text: (e as Error).message }); } finally { if (alive.current) setBusy(""); }
   };
+  const makeEssays = async () => {
+    if (!allowed("essays")) return;
+    setBusy("essays"); setNote(null);
+    try { const { essays: e } = await call("essays", title, text); spendOne("essays"); if (alive.current) { setOpenEssay(null); setEssays(e); } }
+    catch (e) { if (alive.current) setNote({ ok: false, text: (e as Error).message }); } finally { if (alive.current) setBusy(""); }
+  };
   const makeQuiz = async () => {
+    if (!allowed("quiz")) return;
     setBusy("quiz"); setNote(null);
-    try { const { questions } = await call("quiz", title, text); if (alive.current) { setPicked({}); setQuiz(spread(questions)); } }
+    try { const { questions } = await call("quiz", title, text); spendOne("quiz"); if (alive.current) { setPicked({}); setQuiz(spread(questions)); } }
     catch (e) { if (alive.current) setNote({ ok: false, text: (e as Error).message }); } finally { if (alive.current) setBusy(""); }
   };
   const listen = () => {
@@ -69,9 +100,33 @@ export default function StudyTools({ title, path, text, className = "" }: { titl
       <div className="flex flex-wrap gap-2">
         <button type="button" className={btn} onClick={makeCards} disabled={Boolean(busy)}>{busy === "cards" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Layers className="h-4 w-4 text-primary" aria-hidden />} Make flashcards</button>
         <button type="button" className={btn} onClick={makeQuiz} disabled={Boolean(busy)}>{busy === "quiz" ? <Loader2 className="h-4 w-4 animate-spin" /> : <ClipboardCheck className="h-4 w-4 text-primary" aria-hidden />} Test me on this page</button>
+        <button type="button" className={btn} onClick={makeEssays} disabled={Boolean(busy)}>{busy === "essays" ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileText className="h-4 w-4 text-primary" aria-hidden />} Essay questions</button>
         {canSpeak && <button type="button" className={btn} onClick={listen}>{speaking ? <Square className="h-4 w-4 text-primary" aria-hidden /> : <Volume2 className="h-4 w-4 text-primary" aria-hidden />} {speaking ? "Stop" : "Listen"}</button>}
       </div>
       {note && <p className={cn("mt-3 text-sm font-semibold", note.ok ? "text-primary" : "text-destructive")} role="status">{note.text} {note.ok && <Link to="/review" className="underline">Review now</Link>}</p>}
+
+      <Dialog open={Boolean(essays)} onOpenChange={(o) => !o && setEssays(null)}>
+        <DialogContent className="max-h-[90dvh] overflow-y-auto sm:max-w-2xl">
+          <DialogTitle className="font-serif text-2xl">Essay questions: {title}</DialogTitle>
+          <DialogDescription className="sr-only">Five essay questions with marking points and model answers</DialogDescription>
+          <ol className="space-y-8">
+            {(essays ?? []).map((e, i) => (
+              <li key={i}>
+                <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Essay {i + 1} · {e.marks} marks</p>
+                <p className="mt-1 font-serif text-xl font-bold leading-snug">{e.q}</p>
+                <button type="button" onClick={() => setOpenEssay(openEssay === i ? null : i)} aria-expanded={openEssay === i} className="mt-3 inline-flex h-10 items-center rounded-full border border-border px-5 text-sm font-bold hover:border-primary/60">{openEssay === i ? "Hide the model answer" : "Show the model answer"}</button>
+                {openEssay === i && (
+                  <div className="mt-4 space-y-3 text-[16px] leading-relaxed text-foreground/85">
+                    {e.points.length > 0 && (<><p className="font-semibold text-foreground">Marking points</p><ul className="space-y-1.5">{e.points.map((p, k) => <li key={k} className="flex gap-3"><span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden />{p}</li>)}</ul></>)}
+                    <p className="font-semibold text-foreground">Model answer</p>
+                    {e.answer.split(/\n+/).map((p, k) => <p key={k}>{p}</p>)}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ol>
+        </DialogContent>
+      </Dialog>
 
       <Dialog open={Boolean(quiz)} onOpenChange={(o) => !o && setQuiz(null)}>
         <DialogContent className="max-h-[90dvh] overflow-y-auto sm:max-w-xl">
