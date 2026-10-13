@@ -116,21 +116,21 @@ A functioning referral system is **key**: **a telephone and/or vehicle with emer
 ## Practice questions
 
 **1.** The commonest direct cause of maternal death in Kenya is:
-A. Sepsis · B. Hypertensive disorders · **C. Haemorrhage** · D. Obstructed labour · E. Abortion
-*Answer: C. About 45%.*
+A. Sepsis · **B. Haemorrhage** · C. Hypertensive disorders · D. Obstructed labour · E. Abortion
+*Answer: B. About 45%.*
 
 **2.** A woman dies after a 6-hour delay on a bad road before reaching the hospital. This is the:
-A. First delay · **B. Second delay** · C. Third delay · D. Fourth delay · E. Not a delay
-*Answer: B. Delay in reaching a facility.*
+A. First delay · B. Third delay · C. Fourth delay · D. Not a delay · **E. Second delay**
+*Answer: E. Delay in reaching a facility.*
 
 **3.** Which of the following is NOT a signal function of basic emergency obstetric care?
-A. Parenteral antibiotics · B. Oxytocin · C. Magnesium sulphate · D. Manual removal of the placenta · **E. Caesarean section**
-*Answer: E. Caesarean section and blood transfusion are comprehensive EmOC.*
+A. Parenteral antibiotics · B. Oxytocin · C. Magnesium sulphate · **D. Caesarean section** · E. Manual removal of the placenta
+*Answer: D. Caesarean section and blood transfusion are comprehensive EmOC.*
 
 **4.** The WHO definition of a maternal death uses a time limit of:
-A. 7 days · B. 14 days · C. 28 days · **D. 42 days** · E. 1 year
-*Answer: D.*
+A. 7 days · B. 14 days · **C. 42 days** · D. 28 days · E. 1 year
+*Answer: C.*
 
 **5.** The leading causes of neonatal death in Africa are:
-A. Malaria, TB, measles · **B. Prematurity, severe infection and birth asphyxia** · C. Congenital anomalies only · D. Tetanus and diarrhoea · E. Injuries
-*Answer: B.*
+**A. Prematurity, severe infection and birth asphyxia** · B. Malaria, TB, measles · C. Congenital anomalies only · D. Tetanus and diarrhoea · E. Injuries
+*Answer: A.*

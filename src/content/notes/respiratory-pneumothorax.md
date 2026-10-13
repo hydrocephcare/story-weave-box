@@ -79,9 +79,9 @@ A. Chest drain · B. **Observation with outpatient review** · C. Pleurodesis ·
 *Answer: B.*
 
 **2.** A man after a road traffic crash has severe dyspnoea, BP 80/50, distended neck veins, absent breath sounds on the right and tracheal deviation to the left. Immediate management:
-A. Chest X-ray · B. CT chest · C. **Needle decompression** · D. Intubation first · E. IV antibiotics
-*Answer: C.*
+A. Chest X-ray · B. CT chest · C. Intubation first · **D. Needle decompression** · E. IV antibiotics
+*Answer: D.*
 
 **3.** A man with COPD has a 3 cm pneumothorax and is breathless. Best management:
-A. Observation · B. **Chest drain** · C. Discharge · D. Needle decompression only · E. Steroids
-*Answer: B. Secondary pneumothorax with breathlessness.*
+**A. Chest drain** · B. Observation · C. Discharge · D. Needle decompression only · E. Steroids
+*Answer: A. Secondary pneumothorax with breathlessness.*

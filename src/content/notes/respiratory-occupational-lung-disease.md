@@ -71,13 +71,13 @@
 ## Practice questions
 
 **1.** A 55-year-old retired stone-quarry worker has upper-zone nodules and eggshell calcification of hilar nodes on chest X-ray. The disease with the highest associated risk of infection is:
-A. Pneumococcal pneumonia · B. **Tuberculosis** · C. Candida · D. PCP · E. Histoplasmosis
-*Answer: B.*
+**A. Tuberculosis** · B. Pneumococcal pneumonia · C. Candida · D. PCP · E. Histoplasmosis
+*Answer: A.*
 
 **2.** A bakery worker wheezes at work, improving on holidays. The most likely cause is:
 A. COPD · B. **Occupational asthma (flour dust)** · C. Silicosis · D. Asbestosis · E. Heart failure
 *Answer: B.*
 
 **3.** Calcified pleural plaques on the chest X-ray of a retired roofer suggest exposure to:
-A. Silica · B. Coal · C. **Asbestos** · D. Cotton · E. Beryllium
-*Answer: C.*
+A. Silica · B. Coal · C. Cotton · D. Beryllium · **E. Asbestos**
+*Answer: E.*

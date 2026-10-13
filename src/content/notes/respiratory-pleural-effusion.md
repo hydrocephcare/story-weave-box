@@ -90,13 +90,13 @@ Tap a drug name for its full card (how it works, adverse effects, cautions, dose
 ## Practice questions
 
 **1.** A 45-year-old woman with HIV has fever, weight loss and a unilateral effusion: protein 52 g/L, lymphocytes predominant, glucose low, ADA high. The most likely diagnosis is:
-A. Heart failure · B. **Tuberculous pleural effusion** · C. Nephrotic syndrome · D. Cirrhosis · E. Pulmonary embolism
-*Answer: B.*
+**A. Tuberculous pleural effusion** · B. Heart failure · C. Nephrotic syndrome · D. Cirrhosis · E. Pulmonary embolism
+*Answer: A.*
 
 **2.** A pleural fluid pH of 6.9 with a positive Gram stain in a patient with pneumonia should be treated with:
-A. Diuretics · B. **Antibiotics and an urgent chest drain** · C. Observation · D. Steroids · E. Talc pleurodesis
-*Answer: B. Empyema.*
+A. Diuretics · B. Observation · C. Steroids · D. Talc pleurodesis · **E. Antibiotics and an urgent chest drain**
+*Answer: E. Empyema.*
 
 **3.** Which finding classifies a pleural effusion as an exudate?
-A. Pleural LDH/serum LDH 0.4 · B. **Pleural protein/serum protein 0.7** · C. Pleural protein 20 g/L only · D. Clear fluid · E. Bilateral effusions
-*Answer: B.*
+A. Pleural LDH/serum LDH 0.4 · B. Pleural protein 20 g/L only · C. Clear fluid · **D. Pleural protein/serum protein 0.7** · E. Bilateral effusions
+*Answer: D.*

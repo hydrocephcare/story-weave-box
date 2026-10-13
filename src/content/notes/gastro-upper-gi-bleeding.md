@@ -74,12 +74,12 @@
 ## Practice questions
 
 **1.** A 55-year-old with cirrhosis has a large haematemesis and BP 80/50. Which drug should be started at once?
-A. Oral omeprazole · **B. Terlipressin or octreotide, with antibiotic prophylaxis** · C. Ibuprofen · D. Warfarin · E. Propranolol only
-*Answer: B.*
+**A. Terlipressin or octreotide, with antibiotic prophylaxis** · B. Oral omeprazole · C. Ibuprofen · D. Warfarin · E. Propranolol only
+*Answer: A.*
 
 **2.** The best timing of endoscopy in a stable upper GI bleed is:
-A. After a week · B. Only if bleeding recurs · **C. Within 24 hours** · D. Never · E. After a barium swallow
-*Answer: C.*
+A. After a week · B. Only if bleeding recurs · C. Never · **D. Within 24 hours** · E. After a barium swallow
+*Answer: D.*
 
 **3.** A raised urea with a normal creatinine in a patient with melaena suggests:
 A. Kidney failure · **B. An upper gastrointestinal bleed** · C. Dehydration only · D. Liver failure · E. A lower GI bleed

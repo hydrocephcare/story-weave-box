@@ -26,7 +26,7 @@ The whole process takes about **64–74 days** in the seminiferous tubules, supp
 - **Meiosis II is completed only if a sperm penetrates**, producing the **mature ovum** and the **second polar body**.
 - **One primary oocyte gives one ovum** (and three polar bodies). **Advancing maternal age** raises the chance of **non-disjunction** (for example **trisomy 21**), because the oocyte has been arrested for decades.
 
-![Oogenesis: the primary oocyte, the first polar body and the secondary oocyte. Studentreader, CC BY-SA 3.0, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/4/44/Oogenesis-polar-body-diagram.png)
+![Oogenesis: the primary oocyte, the first polar body and the secondary oocyte. Studentreader, CC BY-SA 3.0](https://upload.wikimedia.org/wikipedia/commons/4/44/Oogenesis-polar-body-diagram.png)
 
 | | **Spermatogenesis** | **Oogenesis** |
 |---|---|---|
@@ -93,21 +93,21 @@ The whole process takes about **64–74 days** in the seminiferous tubules, supp
 ## Practice questions
 
 **1.** In a woman, primary oocytes are arrested in:
-A. Prophase of meiosis II · **B. Prophase (diplotene) of meiosis I** · C. Metaphase of meiosis I · D. Anaphase of mitosis · E. Interphase
-*Answer: B. They stay arrested from fetal life until the LH surge.*
+A. Prophase of meiosis II · B. Metaphase of meiosis I · **C. Prophase (diplotene) of meiosis I** · D. Anaphase of mitosis · E. Interphase
+*Answer: C. They stay arrested from fetal life until the LH surge.*
 
 **2.** Meiosis II of the oocyte is completed:
-A. At birth · B. At puberty · C. At ovulation · **D. When a sperm penetrates the secondary oocyte** · E. At implantation
-*Answer: D.*
+A. At birth · **B. When a sperm penetrates the secondary oocyte** · C. At puberty · D. At ovulation · E. At implantation
+*Answer: B.*
 
 **3.** The usual site of fertilisation is:
-A. The uterine cavity · B. The cervix · **C. The ampulla of the uterine tube** · D. The ovary · E. The fimbriae
-*Answer: C.*
+A. The uterine cavity · B. The cervix · C. The ovary · **D. The ampulla of the uterine tube** · E. The fimbriae
+*Answer: D.*
 
 **4.** The cortical reaction:
-A. Starts the acrosome reaction · B. Forms the morula · **C. Blocks polyspermy by altering the zona pellucida** · D. Produces hCG · E. Forms the amniotic cavity
-*Answer: C.*
+A. Starts the acrosome reaction · B. Forms the morula · C. Produces hCG · D. Forms the amniotic cavity · **E. Blocks polyspermy by altering the zona pellucida**
+*Answer: E.*
 
 **5.** The cells of the trophoblast that make hCG are the:
-A. Cytotrophoblast · **B. Syncytiotrophoblast** · C. Epiblast · D. Hypoblast · E. Decidual cells
-*Answer: B.*
+**A. Syncytiotrophoblast** · B. Cytotrophoblast · C. Epiblast · D. Hypoblast · E. Decidual cells
+*Answer: A.*

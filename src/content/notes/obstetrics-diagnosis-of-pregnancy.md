@@ -49,7 +49,7 @@ Increased **size and vascularity**, increased **pigmentation of the nipple and p
 | **Serum β-hCG (quantitative)** | More sensitive and can follow the **rise** (doubling about every 48 hours early in a normal pregnancy). Essential for **ectopic pregnancy, molar pregnancy and threatened miscarriage** |
 | **ELISA and radio-immunoassay** | Laboratory methods |
 
-![The rise and fall of pregnancy hormones (hCG, progesterone and others) over pregnancy. Osmosis, CC BY-SA 4.0, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pregnancy_hormone_graph.png/960px-Pregnancy_hormone_graph.png)
+![The rise and fall of pregnancy hormones (hCG, progesterone and others) over pregnancy. Osmosis, CC BY-SA 4.0](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pregnancy_hormone_graph.png/960px-Pregnancy_hormone_graph.png)
 
 ### Ultrasound: what you see and when
 
@@ -102,21 +102,21 @@ The fundus rises to the **xiphisternum at term (36 weeks)** and may **drop (ligh
 ## Practice questions
 
 **1.** Bluish discolouration of the vestibule and anterior vaginal wall in early pregnancy is:
-A. Hegar's sign · B. Goodell's sign · **C. Jacquemier's (Chadwick's) sign** · D. Osiander's sign · E. Palmer's sign
-*Answer: C.*
+A. Hegar's sign · B. Goodell's sign · C. Osiander's sign · D. Palmer's sign · **E. Jacquemier's (Chadwick's) sign**
+*Answer: E.*
 
 **2.** Softening of the cervix from about 6 weeks is:
 A. Chadwick's sign · **B. Goodell's sign** · C. Hegar's sign · D. Piskacek's sign · E. Ladin's sign
 *Answer: B.*
 
 **3.** Which of the following is a POSITIVE (certain) sign of pregnancy?
-A. Amenorrhoea · B. Positive urine test · C. Breast tenderness · **D. Fetal heart seen on ultrasound** · E. Enlarged uterus
-*Answer: D.*
-
-**4.** Quickening in a woman in her first pregnancy occurs at about:
-A. 8–10 weeks · B. 12–14 weeks · **C. 18–20 weeks** · D. 24–26 weeks · E. 30 weeks
+A. Amenorrhoea · B. Positive urine test · **C. Fetal heart seen on ultrasound** · D. Breast tenderness · E. Enlarged uterus
 *Answer: C.*
 
+**4.** Quickening in a woman in her first pregnancy occurs at about:
+A. 8–10 weeks · B. 12–14 weeks · C. 24–26 weeks · **D. 18–20 weeks** · E. 30 weeks
+*Answer: D.*
+
 **5.** A woman has amenorrhoea, a large uterus for dates and a very high hCG with no fetus on ultrasound. The diagnosis is:
-A. Twin pregnancy · **B. Hydatidiform mole** · C. Ectopic pregnancy · D. Pseudocyesis · E. Missed abortion
-*Answer: B.*
+**A. Hydatidiform mole** · B. Twin pregnancy · C. Ectopic pregnancy · D. Pseudocyesis · E. Missed abortion
+*Answer: A.*

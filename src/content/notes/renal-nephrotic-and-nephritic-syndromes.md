@@ -73,17 +73,17 @@
 ## Practice questions
 
 **1.** A 6-year-old has facial puffiness, 4+ protein, albumin 18 g/L and normal blood pressure. The first treatment is:
-A. Renal biopsy · **B. Corticosteroids** · C. Plasma exchange · D. Antibiotics only · E. Dialysis
-*Answer: B. Minimal change disease is the most likely cause.*
+A. Renal biopsy · B. Plasma exchange · C. Antibiotics only · **D. Corticosteroids** · E. Dialysis
+*Answer: D. Minimal change disease is the most likely cause.*
 
 **2.** A child with haematuria, hypertension and low C3 two weeks after a skin infection most likely has:
-A. IgA nephropathy · B. Minimal change disease · **C. Post-streptococcal glomerulonephritis** · D. Anti-GBM disease · E. FSGS
-*Answer: C.*
+**A. Post-streptococcal glomerulonephritis** · B. IgA nephropathy · C. Minimal change disease · D. Anti-GBM disease · E. FSGS
+*Answer: A.*
 
 **3.** Which feature points to nephrotic rather than nephritic syndrome?
-A. Hypertension · B. Red cell casts · C. Oliguria · **D. Heavy proteinuria with hypoalbuminaemia and hypercholesterolaemia** · E. Low C3
-*Answer: D.*
+A. Hypertension · B. Red cell casts · **C. Heavy proteinuria with hypoalbuminaemia and hypercholesterolaemia** · D. Oliguria · E. Low C3
+*Answer: C.*
 
 **4.** Crescents on renal biopsy are the hallmark of:
-A. Minimal change disease · B. Membranous nephropathy · **C. Rapidly progressive glomerulonephritis** · D. Diabetic nephropathy · E. Amyloidosis
-*Answer: C.*
+A. Minimal change disease · **B. Rapidly progressive glomerulonephritis** · C. Membranous nephropathy · D. Diabetic nephropathy · E. Amyloidosis
+*Answer: B.*

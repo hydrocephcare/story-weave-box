@@ -159,6 +159,23 @@ async function askServer(slug: string, name: string, category: string, context: 
   return { status: r.status === "bot" ? "unavailable" : "failed" };
 }
 
+/**
+ * Quietly makes sure a topic has its page: used when Ompath AI has just answered a question about it, so the page is there (and kept for
+ * everyone) by the time anyone looks. Does nothing if the page exists, the name is not medical, or the daily limits are used up.
+ */
+export async function ensureTopicPage(rawName: string): Promise<void> {
+  try {
+    const name = rawName.trim().replace(/\s+/g, " ");
+    if (name.length < 4 || name.length > 60 || name.split(" ").length > 6 || !/^[A-Za-z][A-Za-z0-9 '’()\-,./&]+$/.test(name)) return;
+    const slug = slugFromName(name);
+    if (slug.length < 4 || (await resolveTopicSlug(slug))) return;
+    const index = await loadTopicIndex();
+    if (index.some((t) => t.s === slug)) return;
+    if (await loadStoredPage(slug)) return;
+    await askServer(slug, name, "", "");
+  } catch { /* background work must never show an error */ }
+}
+
 const TRIED = "ompath_topic_tried";
 const recentlyTried = (slug: string) => { try { const m = JSON.parse(sessionStorage.getItem(TRIED) ?? "{}") as Record<string, number>; return Date.now() - (m[slug] ?? 0) < 4 * 60_000; } catch { return false; } };
 const markTried = (slug: string) => { try { const m = JSON.parse(sessionStorage.getItem(TRIED) ?? "{}") as Record<string, number>; m[slug] = Date.now(); sessionStorage.setItem(TRIED, JSON.stringify(m)); } catch { /* storage blocked */ } };

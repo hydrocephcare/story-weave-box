@@ -79,13 +79,13 @@ Tap a drug name for its full card (how it works, adverse effects, cautions, dose
 ## Practice questions
 
 **1.** A 52-year-old alcoholic man has 3 weeks of fever, weight loss and large amounts of foul-smelling sputum. Chest X-ray: a cavity with an air-fluid level in the right upper lobe. The most likely organisms are:
-A. *Mycoplasma* · B. **Anaerobes (mixed oral flora)** · C. Respiratory syncytial virus · D. *Haemophilus* alone · E. *Legionella*
-*Answer: B.*
+A. *Mycoplasma* · B. Respiratory syncytial virus · C. *Haemophilus* alone · **D. Anaerobes (mixed oral flora)** · E. *Legionella*
+*Answer: D.*
 
 **2.** A man with a lung abscess has no improvement after 2 weeks of antibiotics and the cavity has enlarged. The next step is:
-A. Stop antibiotics · B. **CT-guided drainage and bronchoscopy to exclude obstruction or cancer** · C. Steroids · D. Reassurance · E. Increase oxygen
-*Answer: B.*
+A. Stop antibiotics · B. Steroids · C. Reassurance · D. Increase oxygen · **E. CT-guided drainage and bronchoscopy to exclude obstruction or cancer**
+*Answer: E.*
 
 **3.** The usual duration of antibiotic treatment for lung abscess is:
-A. 3 days · B. 7 days · C. 10 days · D. **4–6 weeks (until radiological resolution)** · E. 6 months
-*Answer: D.*
+A. 3 days · B. 7 days · **C. 4–6 weeks (until radiological resolution)** · D. 10 days · E. 6 months
+*Answer: C.*

@@ -304,17 +304,17 @@ A. Bipolar II disorder · B. **Bipolar I disorder, current manic episode** · C.
 *Answer: B. Mania (impairment, grandiosity, reduced sleep, risk) with prior depression.*
 
 **2.** A woman with bipolar I is planning a pregnancy. Which drug should be avoided?
-A. Lithium · B. Quetiapine · C. **Sodium valproate** · D. Olanzapine · E. Lamotrigine
-*Answer: C. Valproate has the highest teratogenic and neurodevelopmental risk.*
+**A. Sodium valproate** · B. Lithium · C. Quetiapine · D. Olanzapine · E. Lamotrigine
+*Answer: A. Valproate has the highest teratogenic and neurodevelopmental risk.*
 
 **3.** A patient on lithium presents with coarse tremor, vomiting, diarrhoea and ataxia after starting ibuprofen for back pain. The most likely cause is:
-A. Lithium withdrawal · B. **Lithium toxicity from NSAID interaction** · C. Serotonin syndrome · D. Neuroleptic malignant syndrome · E. Thyrotoxicosis
-*Answer: B. NSAIDs reduce lithium clearance.*
+A. Lithium withdrawal · B. Serotonin syndrome · **C. Lithium toxicity from NSAID interaction** · D. Neuroleptic malignant syndrome · E. Thyrotoxicosis
+*Answer: C. NSAIDs reduce lithium clearance.*
 
 **4.** A patient with bipolar disorder is severely depressed. Which approach is **inappropriate**?
 A. Optimise the mood stabiliser · B. Quetiapine · C. Lamotrigine for prevention · D. **Fluoxetine as the only treatment** · E. ECT if suicidal
 *Answer: D. Antidepressant monotherapy risks a switch to mania and rapid cycling.*
 
 **5.** Which finding best separates hypomania from mania?
-A. Elevated mood · B. Decreased need for sleep · C. Increased energy · D. **No marked impairment, no psychosis and no need for hospitalisation** · E. Pressured speech
-*Answer: D.*
+A. Elevated mood · B. Decreased need for sleep · C. Increased energy · D. Pressured speech · **E. No marked impairment, no psychosis and no need for hospitalisation**
+*Answer: E.*

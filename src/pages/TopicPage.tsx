@@ -1,10 +1,11 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Check, ChevronDown, ChevronRight, ExternalLink, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
+import { ArrowLeft, Check, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { DOMAIN_STYLE, imageCaption, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
 import { useWebMedia } from "@/lib/webMedia";
+import { rebalanceMcqAnswerLetters } from "@/lib/store";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
@@ -134,17 +135,13 @@ function Disclaimer({ disease }: { disease: boolean }) {
   );
 }
 
-const STEPS = ["Looking through the notes", "Reading the standard references", "Preparing the page", "Almost ready"];
+/** A quiet placeholder while a page is being prepared: no words about how it is made. */
 function Writing({ name }: { name: string }) {
-  const [i, setI] = useState(0);
-  useEffect(() => { const t = setInterval(() => setI((x) => Math.min(x + 1, STEPS.length - 1)), 6000); return () => clearInterval(t); }, []);
   return (
-    <div className="rounded-2xl border border-border bg-card p-5" role="status" aria-live="polite">
-      <p className="flex items-center gap-2 font-serif text-lg font-bold"><Loader2 className="h-5 w-5 animate-spin text-primary" aria-hidden /> Preparing {name}</p>
-      <ol className="mt-3 space-y-1.5 text-sm">
-        {STEPS.map((s, n) => <li key={s} className={cn("flex items-center gap-2", n > i && "opacity-40")}><span className={cn("flex h-5 w-5 items-center justify-center rounded-full text-[11px] font-bold", n < i ? "bg-primary text-primary-foreground" : n === i ? "bg-primary/20 text-primary" : "bg-muted")}>{n < i ? "✓" : n + 1}</span>{s}</li>)}
-      </ol>
-      <p className="mt-3 text-xs text-muted-foreground">This page fills in by itself, so you can keep reading.</p>
+    <div role="status" aria-live="polite" aria-label={`Loading ${name}`} className="space-y-8">
+      {[0, 1, 2].map((i) => (
+        <div key={i} aria-hidden><div className="h-1 w-12 rounded-full bg-primary/40" /><div className="mt-4 h-8 w-2/5 animate-pulse rounded bg-foreground/10" /><div className="mt-5 space-y-3"><div className="h-4 w-full animate-pulse rounded bg-foreground/10" /><div className="h-4 w-11/12 animate-pulse rounded bg-foreground/10" /><div className="h-4 w-4/5 animate-pulse rounded bg-foreground/10" /></div></div>
+      ))}
     </div>
   );
 }
@@ -152,6 +149,7 @@ function Writing({ name }: { name: string }) {
 /** /topic/<slug>: a plain, readable article about one subject (definition first), with the library's notes and questions underneath. */
 export default function TopicPage() {
   const { slug = "" } = useParams();
+  const navigate = useNavigate();
   const { topic, page, phase, fresh, redirectTo, retry, writing, name } = useTopicPage(slug);
   const [zoom, setZoom] = useState<number | null>(null);
   const [webZoom, setWebZoom] = useState<number | null>(null);
@@ -161,6 +159,12 @@ export default function TopicPage() {
   const [showFresh, setShowFresh] = useState(false);
   useEffect(() => { if (!fresh) return; setShowFresh(true); const t = setTimeout(() => setShowFresh(false), 9000); return () => clearTimeout(t); }, [fresh]);
   useEffect(() => { if (topic || page) rememberTopic(slug, topic?.n ?? name); }, [slug, topic, page]); // eslint-disable-line react-hooks/exhaustive-deps
+  // practice questions: stray "Answer: B" tails removed from options, and the correct letters spread so the key never repeats
+  const qs = useMemo<TopicQuestion[]>(() => {
+    const tail = /\s*[✅✔☑✓]?\s*(?:correct\s*)?answers?\s*[:\-]?\s*\(?[A-F]\)?\b.*$/i;
+    const base = (topic?.qs ?? []).map((q) => ({ ...q, q: q.q.replace(/\s*[-–—]{2,}\s*$/, ""), question: q.q, options: q.o.map((o) => o.replace(tail, "").trim()), correct_answer: q.a, explanation: q.e }));
+    return rebalanceMcqAnswerLetters(base).map((b) => ({ q: b.q, o: b.options as string[], a: b.correct_answer as number, e: b.e, u: b.u, s: b.s }));
+  }, [topic]);
   const media = useWebMedia(name, [...(topic?.a ?? []), ...(page?.aka ?? [])], phase !== "loading");
 
   const subject = topic?.c ?? (page as { subject?: string } | null)?.subject ?? "";
@@ -170,8 +174,9 @@ export default function TopicPage() {
   const summary = useMemo(() => {
     if (page?.summary) return page.summary;
     // a clean definition beats a line lifted from an exam question, so the web summary comes before the site's own snippet
-    return media?.extract || topic?.sec?.[0]?.b?.[0] || topic?.lead?.t || "";
-  }, [page, topic, media]);
+    const own = topic?.sec?.[0]?.b?.[0];
+    return own && own.length >= 60 ? own : "";
+  }, [page, topic]);
 
   const related = useMemo(() => {
     const seen = new Set<string>(); const out: { s: string; n: string }[] = [];
@@ -215,14 +220,9 @@ export default function TopicPage() {
   const aiSections = page?.sections ?? [];
   const manage = aiSections.find((s) => /manage|treat/i.test(s.h));
   const seekAfter = aiSections.length ? Math.max(0, manage ? aiSections.indexOf(manage) : aiSections.length - 1) : -1;
-  // with no written article yet, the web introduction is the overview
-  const intro = (!aiSections.length && media?.intro ? media.intro.split(/\n+/).filter(Boolean) : []).map((p, i) => (i === 0 && summary && p.startsWith(summary) ? p.slice(summary.length).trim() : p)).filter(Boolean);
   const hasStudy = Boolean(topic && (topic.sec?.length || topic.src.length || topic.sets.length || topic.imgs.length || topic.qs.length || topic.es.length));
-  const wikiSections = !aiSections.length ? (media?.sections ?? []) : [];
   const toc = [
-    ...(intro.length ? [{ id: "overview", t: "Overview" }] : []),
     ...aiSections.map((s) => ({ id: anchor(s.h), t: s.h })),
-    ...wikiSections.map((w) => ({ id: anchor(w.h), t: w.h })),
     ...(page?.exam?.length ? [{ id: "examiner", t: "Examiner questions" }] : []),
     ...(page?.whenToSeekHelp?.length ? [{ id: "seek-help", t: "When to seek help" }] : []),
     ...(media?.more.length ? [{ id: "web-images", t: "Pictures" }] : []),
@@ -254,29 +254,26 @@ export default function TopicPage() {
         <div className="absolute -bottom-40 left-1/3 -z-10 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" aria-hidden />
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-12 pt-8 sm:pb-16 sm:pt-12 md:grid-cols-[minmax(0,1fr)_21rem]">
           <div className="min-w-0">
-            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-muted-foreground"><Link to="/topics" className="hover:text-primary hover:underline">Topics</Link><ChevronRight className="h-3.5 w-3.5" /><span>{style.label}</span></nav>
+            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-muted-foreground"><button type="button" onClick={() => (window.history.length > 1 ? navigate(-1) : navigate("/topics"))} className="mr-2 inline-flex items-center gap-1 rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-foreground/80 hover:border-primary/60"><ArrowLeft className="h-3.5 w-3.5" aria-hidden /> Back</button><Link to="/topics" className="hover:text-primary hover:underline">Topics</Link><ChevronRight className="h-3.5 w-3.5" /><span>{style.label}</span></nav>
             <h1 className="mt-5 font-serif text-5xl font-bold leading-[1.02] tracking-tight text-foreground sm:text-6xl lg:text-7xl">{name}</h1>
             {aka.length > 0 && <p className="mt-3 text-lg text-muted-foreground">Also called {aka.join(", ")}</p>}
-            {summary && <p className="mt-6 max-w-2xl text-xl leading-[1.65] text-foreground/85 sm:text-[1.4rem] sm:leading-[1.65]">{summary}</p>}
-            {summary && !page?.summary && media?.extract === summary && <p className="mt-2 text-xs text-muted-foreground">Definition from <a className="underline" href={media.url} target="_blank" rel="noopener noreferrer">Wikipedia</a>.</p>}
+            {summary ? <p className="mt-6 max-w-2xl text-xl leading-[1.65] text-foreground/85 sm:text-[1.4rem] sm:leading-[1.65]">{summary}</p> : writing ? <div className="mt-6 max-w-2xl space-y-3" aria-hidden><div className="h-5 w-full animate-pulse rounded bg-foreground/10" /><div className="h-5 w-11/12 animate-pulse rounded bg-foreground/10" /><div className="h-5 w-2/3 animate-pulse rounded bg-foreground/10" /></div> : null}
             <div className="mt-7 flex flex-wrap gap-3">
               {topic && topic.qs.length > 0 && <a href="#practice" className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-90">Test yourself</a>}
-              {firstNote && <Link to={firstNote.u} className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-base font-bold hover:border-primary/60">Read the full note</Link>}
               {manage && <a href={`#${anchor(manage.h)}`} className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-base font-bold hover:border-primary/60">Management</a>}
             </div>
           </div>
           {media?.hero && (
             <figure className="-mt-2 md:mt-0 md:justify-self-end">
               <button type="button" onClick={() => setHeroZoom(true)} aria-label={`Enlarge the picture of ${name}`} className="block w-full overflow-hidden rounded-2xl border border-border bg-white p-2 shadow-sm md:rounded-3xl md:p-3">
-                <img src={media.hero.u} alt={`${name}: ${media.description || media.hero.title}`} loading="eager" decoding="async" className="mx-auto h-44 w-full rounded-xl bg-white object-contain sm:h-52 md:aspect-[4/3] md:h-auto" />
+                <img src={media.hero.u} alt={name} loading="eager" decoding="async" className="mx-auto h-44 w-full rounded-xl bg-white object-contain sm:h-52 md:aspect-[4/3] md:h-auto" />
               </button>
-              {media.description && <figcaption className="mt-2 text-xs font-semibold leading-snug text-foreground/70">{media.description}</figcaption>}
               <Dialog open={heroZoom} onOpenChange={setHeroZoom}>
                 <DialogContent className="max-h-[92dvh] overflow-y-auto sm:max-w-3xl">
                   <DialogTitle className="text-base">{name}</DialogTitle>
                   <DialogDescription className="sr-only">Enlarged picture with its author and licence</DialogDescription>
                   <img src={media.hero.full.includes("/thumb/") ? media.hero.u : media.hero.u} alt={name} className="mx-auto max-h-[68dvh] w-auto rounded-lg bg-white" />
-                  <p className="text-xs text-muted-foreground">Picture: {media.hero.credit}, {media.hero.licence}, Wikimedia Commons.</p>
+                  <p className="text-xs text-muted-foreground">Picture credit: {[media.hero.credit, media.hero.licence].filter(Boolean).join(", ")}.</p>
                 </DialogContent>
               </Dialog>
             </figure>
@@ -301,28 +298,21 @@ export default function TopicPage() {
               {adminMsg && <span className="text-muted-foreground">{adminMsg}</span>}
             </div>
           )}
-          <Disclaimer disease={isDisease} />
 
           <div className="mt-8 space-y-4">
             {writing && <Writing name={name} />}
-            {!writing && !page && phase === "ready" && <div className="flex flex-wrap items-center gap-3 rounded-xl border border-border bg-muted/50 p-3.5 text-sm"><Info className="h-4 w-4 shrink-0 text-muted-foreground" /><span className="min-w-0 flex-1 text-muted-foreground">More on {name} is on its way. Meanwhile, here is the introduction and what the Ompath Study notes say.</span><button type="button" onClick={retry} className="inline-flex items-center gap-1 rounded-lg border border-border px-3 py-1.5 text-xs font-bold hover:border-primary/60"><RefreshCw className="h-3.5 w-3.5" /> Check again</button></div>}
           </div>
 
           <div className="mt-6">
-            {intro.length > 0 && (
-              <Section id="overview" title={`What is ${name}?`} first>
-                {intro.map((p, i) => <p key={i}>{p}</p>)}
-                {media && <p className="text-sm text-muted-foreground">Introduction from <a className="font-semibold text-primary hover:underline" href={media.url} target="_blank" rel="noopener noreferrer">Wikipedia</a> (CC BY-SA).</p>}
-              </Section>
-            )}
 
             {aiSections.map((s, i) => (
               <div key={`${s.h}-${i}`}>
-                <Section id={anchor(s.h)} title={s.h} first={i === 0 && !intro.length}>
+                <Section id={anchor(s.h)} title={s.h} first={i === 0}>
                   {s.p && <p><Linked text={s.p} self={slug} /></p>}
                   {s.t && s.t.length > 0 && <TestTable rows={s.t} />}
                   {s.b && s.b.length > 0 && <Bullets items={s.b} self={slug} />}
                 </Section>
+                {i === Math.floor((aiSections.length - 1) / 2) && <div className="mt-12"><Disclaimer disease={isDisease} /></div>}
                 {/* the warning signs come right after the treatment, where a worried reader needs them */}
                 {i === seekAfter && page?.whenToSeekHelp && page.whenToSeekHelp.length > 0 && (
                   <section id="seek-help" className="mt-14 scroll-mt-28 rounded-2xl border border-amber-500/40 bg-amber-500/[0.07] p-6 sm:p-7">
@@ -341,12 +331,6 @@ export default function TopicPage() {
               </Section>
             )}
 
-            {wikiSections.map((w) => (
-              <Section key={w.h} id={anchor(w.h)} title={w.h}>
-                {w.p.map((p, i) => <p key={i}><Linked text={p} self={slug} /></p>)}
-              </Section>
-            ))}
-            {wikiSections.length > 0 && media && <p className="mt-6 text-xs text-muted-foreground">Sections above adapted from <a className="font-semibold text-primary hover:underline" href={media.url} target="_blank" rel="noopener noreferrer">Wikipedia</a> (CC BY-SA 4.0).</p>}
 
             {media && media.more.length > 0 && (
               <Section id="web-images" title={`Pictures of ${name}`}>
@@ -358,12 +342,12 @@ export default function TopicPage() {
                     </button></li>
                   ))}
                 </ul>
-                <p className="text-xs text-muted-foreground">Pictures from <a className="font-bold text-primary hover:underline" href={media.url} target="_blank" rel="noopener noreferrer">Wikipedia</a> and Wikimedia Commons. Tap one for its author and licence.</p>
+                <p className="text-xs text-muted-foreground">Tap a picture to enlarge it.</p>
                 <Dialog open={webZoom !== null} onOpenChange={(o) => !o && setWebZoom(null)}>
                   <DialogContent className="max-h-[92dvh] overflow-y-auto sm:max-w-3xl">
                     <DialogTitle className="text-base">{webZoom !== null ? media.more[webZoom].title : ""}</DialogTitle>
                     <DialogDescription className="sr-only">Enlarged picture with its author and licence</DialogDescription>
-                    {webZoom !== null && <><img src={media.more[webZoom].u} alt={media.more[webZoom].title} className="mx-auto max-h-[65dvh] w-auto rounded-lg bg-white" /><p className="text-xs text-muted-foreground">By {media.more[webZoom].credit}. Licence: {media.more[webZoom].licence}. <a className="inline-flex items-center gap-1 font-bold text-primary hover:underline" href={media.more[webZoom].page} target="_blank" rel="noopener noreferrer">File page <ExternalLink className="h-3 w-3" /></a></p></>}
+                    {webZoom !== null && <><img src={media.more[webZoom].u} alt={media.more[webZoom].title} className="mx-auto max-h-[65dvh] w-auto rounded-lg bg-white" /><p className="text-xs text-muted-foreground">Picture credit: {[media.more[webZoom].credit, media.more[webZoom].licence].filter(Boolean).join(", ")}.</p></>}
                   </DialogContent>
                 </Dialog>
               </Section>
@@ -375,6 +359,8 @@ export default function TopicPage() {
                 <Link to="/pharmacology?tab=conditions" className="inline-flex items-center gap-1 text-base font-bold text-primary hover:underline">Open the pharmacology guide <ChevronRight className="h-4 w-4" /></Link>
               </Section>
             )}
+
+            {!aiSections.length && <div className="mb-2"><Disclaimer disease={isDisease} /></div>}
 
             {topic?.sec && topic.sec.length > 0 && (
               <Section id="notes-say" title="In the Ompath Study notes">
@@ -391,7 +377,7 @@ export default function TopicPage() {
             {topic && (topic.qs.length > 0 || topic.es.length > 0) && (
               <Section id="practice" title={`Test yourself on ${name}`}>
                 <p className="text-base text-muted-foreground">Questions from past papers and MCQ sets on this site. Pick an answer to see why.</p>
-                <div className="space-y-4">{topic.qs.map((q, i) => <Mcq key={q.q} q={q} n={i + 1} />)}{topic.es.map((e) => <Written key={e.q} {...e} />)}</div>
+                <div className="space-y-4">{qs.map((q, i) => <Mcq key={q.q} q={q} n={i + 1} />)}{topic.es.map((e) => <Written key={e.q} {...e} />)}</div>
               </Section>
             )}
 
@@ -442,7 +428,7 @@ export default function TopicPage() {
 
             <footer className="mt-14 border-t border-border pt-6 text-sm leading-relaxed text-muted-foreground">
               <p className="font-bold text-foreground">Sources</p>
-              <p className="mt-1.5">Ompath Study notes{topic ? ` (${topic.docs} ${topic.docs === 1 ? "page" : "pages"} mention ${name})` : ""}, standard medical references, and pictures from Wikipedia and Wikimedia Commons. Found a mistake? <a className="font-bold text-primary hover:underline" href={`mailto:ompathstudy@gmail.com?subject=${encodeURIComponent(`Correction: ${name}`)}`}>Tell us</a>. <Link to="/topics" className="font-bold text-primary hover:underline">Browse all topics</Link>.</p>
+              <p className="mt-1.5">Ompath Study notes{topic ? ` (${topic.docs} ${topic.docs === 1 ? "page" : "pages"} mention ${name})` : ""} and standard medical references. Picture credits are shown when you enlarge a picture. Found a mistake? <a className="font-bold text-primary hover:underline" href={`mailto:ompathstudy@gmail.com?subject=${encodeURIComponent(`Correction: ${name}`)}`}>Tell us</a>. <Link to="/topics" className="font-bold text-primary hover:underline">Browse all topics</Link>.</p>
             </footer>
           </div>
         </div>

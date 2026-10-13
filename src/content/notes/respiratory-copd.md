@@ -100,13 +100,13 @@ Tap a drug name for its full card (how it works, adverse effects, cautions, dose
 ## Practice questions
 
 **1.** A 62-year-old smoker has breathlessness. Post-bronchodilator FEV1/FVC 0.55 and FEV1 40% predicted. The GOLD grade is:
-A. 1 · B. 2 · C. **3** · D. 4 · E. Cannot be graded
-*Answer: C (30–49%).*
+**A. 3** · B. 1 · C. 2 · D. 4 · E. Cannot be graded
+*Answer: A (30–49%).*
 
 **2.** A patient with COPD exacerbation has pH 7.28 and PaCO2 8 kPa on controlled oxygen with nebulisers and steroids. Next step:
 A. Increase oxygen · B. **Non-invasive ventilation** · C. Discharge · D. Stop steroids · E. Sedation
 *Answer: B.*
 
 **3.** The oxygen saturation target in a COPD exacerbation is:
-A. 100% · B. 94–98% · C. **88–92%** · D. 80–85% · E. Above 98%
-*Answer: C.*
+A. 100% · B. 94–98% · C. 80–85% · **D. 88–92%** · E. Above 98%
+*Answer: D.*

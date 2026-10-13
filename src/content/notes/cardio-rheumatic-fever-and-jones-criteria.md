@@ -72,9 +72,9 @@ A. Raised ESR · **B. Carditis** · C. Arthralgia · D. Fever · E. Prolonged PR
 *Answer: B. ESR, arthralgia, fever and a long PR interval are minor criteria.*
 
 **2.** The valve most often damaged in rheumatic heart disease is:
-A. Tricuspid · B. Pulmonary · **C. Mitral** · D. Aortic · E. Eustachian
-*Answer: C.*
+A. Tricuspid · B. Pulmonary · C. Aortic · D. Eustachian · **E. Mitral**
+*Answer: E.*
 
 **3.** The aim of long-term penicillin prophylaxis after rheumatic fever is to:
-A. Treat chorea · **B. Prevent recurrent attacks and further valve damage** · C. Reduce fever · D. Treat arthritis · E. Cure existing valve disease
-*Answer: B.*
+A. Treat chorea · B. Reduce fever · C. Treat arthritis · **D. Prevent recurrent attacks and further valve damage** · E. Cure existing valve disease
+*Answer: D.*

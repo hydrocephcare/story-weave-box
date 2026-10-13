@@ -68,17 +68,17 @@ Anaemia **with fever, bleeding, bruising or abnormal white cells or platelets** 
 ## Practice questions
 
 **1.** A woman has MCV 65 fL, low ferritin and heavy periods. The most likely diagnosis is:
-A. Thalassaemia trait · **B. Iron deficiency anaemia** · C. Anaemia of chronic disease · D. B12 deficiency · E. Aplastic anaemia
-*Answer: B.*
+**A. Iron deficiency anaemia** · B. Thalassaemia trait · C. Anaemia of chronic disease · D. B12 deficiency · E. Aplastic anaemia
+*Answer: A.*
 
 **2.** Raised reticulocytes, raised indirect bilirubin and low haptoglobin indicate:
-A. Iron deficiency · B. Marrow failure · **C. Haemolysis** · D. B12 deficiency · E. Chronic kidney disease
-*Answer: C.*
+A. Iron deficiency · **B. Haemolysis** · C. Marrow failure · D. B12 deficiency · E. Chronic kidney disease
+*Answer: B.*
 
 **3.** A man of 62 has a haemoglobin of 8 g/dL and iron deficiency. The most important next step is:
-A. Iron tablets only · B. Folate · C. Blood transfusion · **D. Look for a source of gastrointestinal blood loss** · E. Reassure
-*Answer: D.*
+A. Iron tablets only · B. Folate · **C. Look for a source of gastrointestinal blood loss** · D. Blood transfusion · E. Reassure
+*Answer: C.*
 
 **4.** Which drug can cause haemolysis in G6PD deficiency?
-A. Amoxicillin · **B. Primaquine** · C. Paracetamol · D. Amlodipine · E. Omeprazole
-*Answer: B.*
+A. Amoxicillin · B. Paracetamol · C. Amlodipine · **D. Primaquine** · E. Omeprazole
+*Answer: D.*

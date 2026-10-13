@@ -82,16 +82,16 @@ Stroke, ischaemic heart disease, **heart failure**, **chronic kidney disease**, 
 ## Practice questions
 
 **1.** A 24-year-old woman has BP 190/110 and a low potassium. The most useful screening test is:
-A. Urine metanephrines · **B. Aldosterone-to-renin ratio** · C. Dexamethasone suppression · D. ASO titre · E. Chest X-ray
-*Answer: B. Hypertension with hypokalaemia suggests primary hyperaldosteronism.*
+A. Urine metanephrines · B. Dexamethasone suppression · C. ASO titre · **D. Aldosterone-to-renin ratio** · E. Chest X-ray
+*Answer: D. Hypertension with hypokalaemia suggests primary hyperaldosteronism.*
 
 **2.** Which drug is contraindicated in a hypertensive pregnant woman?
 A. Labetalol · B. Nifedipine · **C. Enalapril** · D. Methyldopa · E. Hydralazine
 *Answer: C.*
 
 **3.** A young patient has hypertension with weak femoral pulses and delayed radio-femoral pulses. The diagnosis is:
-A. Phaeochromocytoma · B. Cushing syndrome · **C. Coarctation of the aorta** · D. Renal artery stenosis · E. Conn syndrome
-*Answer: C.*
+**A. Coarctation of the aorta** · B. Phaeochromocytoma · C. Cushing syndrome · D. Renal artery stenosis · E. Conn syndrome
+*Answer: A.*
 
 **4.** In a hypertensive emergency with encephalopathy, the blood pressure should be:
 A. Lowered to normal within minutes · **B. Lowered gradually, about 25% in the first hour** · C. Ignored · D. Treated with oral drugs only · E. Raised

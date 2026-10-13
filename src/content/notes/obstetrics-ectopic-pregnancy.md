@@ -19,7 +19,7 @@ An **ectopic pregnancy** is one in which the fertilised ovum **implants and deve
 | **Cornual / interstitial** | rare but bleeds torrentially |
 | Caesarean scar | increasing with caesarean rates |
 
-![An ectopic pregnancy in the fallopian tube seen at laparoscopy. Mikael Häggström, CC BY-SA 3.0, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ectopic_pregnancy_on_laparoscopy.png/960px-Ectopic_pregnancy_on_laparoscopy.png)
+![An ectopic pregnancy in the fallopian tube seen at laparoscopy. Mikael Häggström, CC BY-SA 3.0](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ectopic_pregnancy_on_laparoscopy.png/960px-Ectopic_pregnancy_on_laparoscopy.png)
 
 ## 3. Risk factors: ask about each one
 
@@ -82,7 +82,7 @@ The pregnancy ends in one of three ways: **tubal rupture** (heavy bleeding into 
 
 **The discriminatory zone:** when the hCG is above about **1,500 to 2,000 IU/L**, a normal uterine pregnancy should be visible on transvaginal ultrasound. If nothing is seen in the uterus at that level, **ectopic pregnancy is likely**. Below that level, repeat the hCG in 48 hours.
 
-![The "blob sign" of an ectopic pregnancy on transvaginal ultrasound. Mikael Häggström, CC0, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Blob_sign_of_ectopic_pregnancy_%28hy%29.png/960px-Blob_sign_of_ectopic_pregnancy_%28hy%29.png)
+![The "blob sign" of an ectopic pregnancy on transvaginal ultrasound. Mikael Häggström, CC0](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Blob_sign_of_ectopic_pregnancy_%28hy%29.png/960px-Blob_sign_of_ectopic_pregnancy_%28hy%29.png)
 
 **Where results can mislead:** a **negative urine test does not exclude a very early ectopic pregnancy** (rare but possible); a **"pseudosac"** in the uterus can fool you into thinking the pregnancy is intrauterine; hCG can be **lower than expected in an ectopic pregnancy and still rupture**. When in doubt, **keep the woman under review and do not discharge her without clear return advice.**
 
@@ -136,21 +136,21 @@ Choose between **expectant, medical or surgical** care:
 ## Practice questions
 
 **1.** The commonest site of ectopic pregnancy is:
-A. Ovary · B. Cervix · **C. Fallopian tube (ampulla)** · D. Abdominal cavity · E. Caesarean scar
-*Answer: C. About 98% are tubal.*
+A. Ovary · **B. Fallopian tube (ampulla)** · C. Cervix · D. Abdominal cavity · E. Caesarean scar
+*Answer: B. About 98% are tubal.*
 
 **2.** A woman has a missed period, a positive pregnancy test, pelvic pain and no intrauterine pregnancy on ultrasound with hCG 4,000 IU/L. She is stable. Which treatment suits her best if she meets the other criteria?
-A. Observation only · **B. Methotrexate** · C. Misoprostol · D. Laparotomy · E. Reassurance
-*Answer: B.*
+A. Observation only · B. Misoprostol · C. Laparotomy · D. Reassurance · **E. Methotrexate**
+*Answer: E.*
 
 **3.** A woman with an ectopic pregnancy is rhesus negative. She needs:
-A. Nothing · B. Iron · **C. Anti-D immunoglobulin** · D. Folic acid · E. Antibiotics
-*Answer: C.*
+A. Nothing · B. Iron · C. Folic acid · **D. Anti-D immunoglobulin** · E. Antibiotics
+*Answer: D.*
 
 **4.** Which finding is the most reliable sign of a ruptured ectopic pregnancy?
-A. Scanty dark vaginal bleeding · **B. Shock with a tense tender lower abdomen and free fluid** · C. Positive pregnancy test · D. Breast tenderness · E. Nausea
-*Answer: B.*
+A. Scanty dark vaginal bleeding · B. Positive pregnancy test · **C. Shock with a tense tender lower abdomen and free fluid** · D. Breast tenderness · E. Nausea
+*Answer: C.*
 
 **5.** Which woman is at the HIGHEST risk of an ectopic pregnancy?
-A. A woman on combined pills · **B. A woman with a previous ectopic pregnancy and a history of pelvic inflammatory disease** · C. A woman who has had three vaginal deliveries · D. A woman using condoms · E. A nulliparous woman
-*Answer: B.*
+**A. A woman with a previous ectopic pregnancy and a history of pelvic inflammatory disease** · B. A woman on combined pills · C. A woman who has had three vaginal deliveries · D. A woman using condoms · E. A nulliparous woman
+*Answer: A.*

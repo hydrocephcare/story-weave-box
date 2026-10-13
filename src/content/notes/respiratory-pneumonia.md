@@ -105,13 +105,13 @@ Tap a drug name for its full card (how it works, adverse effects, cautions, dose
 ## Practice questions
 
 **1.** A 70-year-old man is confused with RR 32, BP 88/50, urea 10 mmol/L and a right lower lobe consolidation. His CURB-65 score is:
-A. 2 · B. 3 · C. 4 · **D. 5** · E. 1
-*Answer: D. Confusion, urea, RR, BP and age all score.*
+A. 2 · B. 3 · **C. 5** · D. 4 · E. 1
+*Answer: C. Confusion, urea, RR, BP and age all score.*
 
 **2.** A man with HIV has weeks of dry cough and breathlessness on exertion with saturation 85% and bilateral ground-glass opacities. The most likely cause is:
-A. *Streptococcus pneumoniae* · B. **Pneumocystis jirovecii** · C. *Klebsiella* · D. *Legionella* · E. *Mycoplasma*
-*Answer: B.*
+A. *Streptococcus pneumoniae* · B. *Klebsiella* · C. *Legionella* · **D. Pneumocystis jirovecii** · E. *Mycoplasma*
+*Answer: D.*
 
 **3.** Pneumonia failing to improve after 5 days of antibiotics with a persistent fever. The next best step is:
-A. Stop antibiotics · B. **Repeat imaging for empyema or abscess and look for TB or malignancy** · C. Reassure · D. Add steroids alone · E. Discharge
-*Answer: B.*
+**A. Repeat imaging for empyema or abscess and look for TB or malignancy** · B. Stop antibiotics · C. Reassure · D. Add steroids alone · E. Discharge
+*Answer: A.*

@@ -111,7 +111,7 @@ export async function loadWebMedia(names: string[]): Promise<WebMedia | null> {
       const gallery = await describeFiles(files.slice(0, 14)).catch(() => []);
       const heroSrc = article.thumbnail?.source ?? null;
       const heroFile = gallery.find((g) => lead && decodeURIComponent(g.full).includes(decodeURIComponent(lead)));
-      const hero: WebImage | null = heroFile ?? (heroSrc ? { u: heroSrc, full: article.original?.source ?? heroSrc, title: article.title, credit: "Wikimedia Commons", licence: "see file page", page: article.fullurl ?? "https://commons.wikimedia.org" } : null);
+      const hero: WebImage | null = heroFile ?? (heroSrc ? { u: heroSrc, full: article.original?.source ?? heroSrc, title: article.title, credit: "", licence: "free licence", page: article.fullurl ?? "https://commons.wikimedia.org" } : null);
       result = {
         title: article.title,
         description: article.description ?? "",

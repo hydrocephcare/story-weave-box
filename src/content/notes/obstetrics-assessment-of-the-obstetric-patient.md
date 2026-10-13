@@ -73,9 +73,9 @@ Look at the **conjunctiva, sclera, teeth and buccal mucosa** for pallor, jaundic
 - **Striae gravidarum:** stretch marks that are purplish when new and white when old, caused by stretching.
 - The **umbilicus** may be inverted, flat or everted. Look for **scars**, distended veins, flank fullness and visible fetal movement.
 
-![Linea nigra, the dark midline line of pregnancy. Jeremy Kemp, public domain, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/6/69/Linea_nigra.jpg)
+![Linea nigra, the dark midline line of pregnancy. Jeremy Kemp, public domain](https://upload.wikimedia.org/wikipedia/commons/6/69/Linea_nigra.jpg)
 
-![Striae gravidarum (stretch marks). Taleb247, CC0, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/d/dc/Stretch_marks_744.jpg)
+![Striae gravidarum (stretch marks). Taleb247, CC0](https://upload.wikimedia.org/wikipedia/commons/d/dc/Stretch_marks_744.jpg)
 
 ### Palpation
 
@@ -86,7 +86,7 @@ Look at the **conjunctiva, sclera, teeth and buccal mucosa** for pallor, jaundic
 - **Finger method:** one finger above the umbilicus is 2 weeks, one finger below is 1 week. The uterus is felt at the **symphysis at 12 weeks**, at the **umbilicus at 20 weeks** and at the **xiphisternum at term**.
 - **Tape measure:** symphysis to fundus in centimetres. Between **18 and 34 weeks** it is accurate to within 2 weeks of the real gestational age.
 
-![Fundal height by gestational age. Mikael Häggström (derivative), CC BY-SA 3.0, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/1/11/Fundal_height_by_gestational_age.jpg)
+![Fundal height by gestational age. Mikael Häggström (derivative), CC BY-SA 3.0](https://upload.wikimedia.org/wikipedia/commons/1/11/Fundal_height_by_gestational_age.jpg)
 
 ### The four Leopold manoeuvres
 
@@ -97,7 +97,7 @@ Look at the **conjunctiva, sclera, teeth and buccal mucosa** for pallor, jaundic
 | **3rd: pelvic** | Finds the **presentation**: head (cephalic), breech or shoulder. In a cephalic presentation, descent is judged by the **rule of fifths**: **5/5 floating, 4/5 fixed, 2/5 engaged**. Together with the 2nd manoeuvre it shows the **attitude**: extended (the head prominence is on the same side as the back), flexed (the opposite side), or military (both sides at the same level) |
 | **4th: Pawlik grip** | The **only manoeuvre done with one hand**; it checks the presenting part |
 
-![Leopold's manoeuvres, from the original figures by Christian Gerhard Leopold. Public domain, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/e/eb/Handgriffe.JPG)
+![Leopold's manoeuvres, from the original figures by Christian Gerhard Leopold. Public domain](https://upload.wikimedia.org/wikipedia/commons/e/eb/Handgriffe.JPG)
 
 **Percussion:** shifting dullness and flank dullness, fluid thrill (ascites).
 
@@ -132,21 +132,21 @@ End with a one-line summary (age, gravida and para, gestational age, the main pr
 ## Practice questions
 
 **1.** The expected date of delivery by Naegele's rule is:
-A. LNMP + 9 months − 7 days · **B. LNMP − 3 months + 7 days** · C. LNMP + 280 days − 7 days · D. LNMP + 40 weeks + 7 days · E. Conception + 9 months
-*Answer: B.*
+**A. LNMP − 3 months + 7 days** · B. LNMP + 9 months − 7 days · C. LNMP + 280 days − 7 days · D. LNMP + 40 weeks + 7 days · E. Conception + 9 months
+*Answer: A.*
 
 **2.** A woman had one term delivery, one set of twins at 32 weeks and two abortions. She is:
 A. Gravida 4 para 2 · **B. Gravida 5 para 2+2** · C. Gravida 5 para 3 · D. Gravida 3 para 2 · E. Gravida 6 para 2
 *Answer: B. Twins count as one pregnancy; abortions count towards gravidity and are shown after the plus sign.*
 
 **3.** On palpation the head is 2/5 palpable above the symphysis. The head is:
-A. Floating · B. Fixed · **C. Engaged** · D. Not descended · E. Crowning
-*Answer: C.*
-
-**4.** Which manoeuvre is performed with one hand?
-A. First · B. Second · C. Third · **D. Fourth (Pawlik grip)** · E. All of them
+A. Floating · B. Fixed · C. Not descended · **D. Engaged** · E. Crowning
 *Answer: D.*
 
+**4.** Which manoeuvre is performed with one hand?
+A. First · B. Second · **C. Fourth (Pawlik grip)** · D. Third · E. All of them
+*Answer: C.*
+
 **5.** The fetal heart is best heard over:
-A. The fetal limbs · **B. The fetal back** · C. The fundus always · D. The symphysis always · E. The flank in all presentations
-*Answer: B.*
+A. The fetal limbs · B. The fundus always · C. The symphysis always · D. The flank in all presentations · **E. The fetal back**
+*Answer: E.*

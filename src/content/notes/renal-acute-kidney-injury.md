@@ -46,11 +46,11 @@ Every test must answer a question.
 | **Kidney, ureter and bladder ultrasound** | Obstruction? Kidney size: small kidneys mean chronic disease |
 | **Autoimmune tests: ANCA, anti-GBM, ANA, C3/C4, ASO** | Is this a glomerulonephritis? |
 
-![Epithelial cell cast in urine, the muddy brown cast of acute tubular necrosis. Ajay Kumar Chaurasiya, CC BY-SA 4.0, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Epithelial_cell_cast.jpg/960px-Epithelial_cell_cast.jpg)
+![Epithelial cell cast in urine, the muddy brown cast of acute tubular necrosis. Ajay Kumar Chaurasiya, CC BY-SA 4.0](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Epithelial_cell_cast.jpg/960px-Epithelial_cell_cast.jpg)
 
-![White cell cast in urine, seen in interstitial nephritis and pyelonephritis. Ajay Kumar Chaurasiya, CC BY-SA 4.0, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/WBC_cast_in_urine.jpg/960px-WBC_cast_in_urine.jpg)
+![White cell cast in urine, seen in interstitial nephritis and pyelonephritis. Ajay Kumar Chaurasiya, CC BY-SA 4.0](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/WBC_cast_in_urine.jpg/960px-WBC_cast_in_urine.jpg)
 
-![Ultrasound of a hydronephrotic kidney with a dilated pelvis and calyces: look for this in post-renal AKI. Hansen, Nielsen and Ewertsen, CC BY 4.0, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ultrasonography_of_hydronephrosis_with_dilated_anechoic_pelvis_and_calyces%2C_along_with_cortical_atrophy.jpg/960px-Ultrasonography_of_hydronephrosis_with_dilated_anechoic_pelvis_and_calyces%2C_along_with_cortical_atrophy.jpg)
+![Ultrasound of a hydronephrotic kidney with a dilated pelvis and calyces: look for this in post-renal AKI. Hansen, Nielsen and Ewertsen, CC BY 4.0](https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ultrasonography_of_hydronephrosis_with_dilated_anechoic_pelvis_and_calyces%2C_along_with_cortical_atrophy.jpg/960px-Ultrasonography_of_hydronephrosis_with_dilated_anechoic_pelvis_and_calyces%2C_along_with_cortical_atrophy.jpg)
 
 **Where results can mislead:** the creatinine can still be **normal early in kidney damage**; FeNa is unreliable in a patient on diuretics; a patient who is oliguric may still have a "normal" urea if they are young and well-nourished.
 
@@ -95,17 +95,17 @@ Check the creatinine after discharge: AKI raises the risk of **chronic kidney di
 ## Practice questions
 
 **1.** A 45-year-old man has vomited for 3 days and is on ibuprofen. His creatinine is double its baseline, urine is concentrated and FeNa is 0.5%. The level of the problem is:
-A. Post-renal · **B. Pre-renal** · C. Glomerular · D. Interstitial · E. Tubular necrosis
-*Answer: B. Low FeNa and concentrated urine mean the kidney is still working hard to hold on to sodium and water.*
+A. Post-renal · B. Glomerular · **C. Pre-renal** · D. Interstitial · E. Tubular necrosis
+*Answer: C. Low FeNa and concentrated urine mean the kidney is still working hard to hold on to sodium and water.*
 
 **2.** Urine microscopy shows red cell casts. The most likely diagnosis is:
-A. Acute tubular necrosis · B. Interstitial nephritis · **C. Glomerulonephritis** · D. Pre-renal AKI · E. Urinary tract infection
-*Answer: C.*
+A. Acute tubular necrosis · **B. Glomerulonephritis** · C. Interstitial nephritis · D. Pre-renal AKI · E. Urinary tract infection
+*Answer: B.*
 
 **3.** Which finding is an indication for urgent dialysis?
-A. Creatinine of 200 µmol/L · B. Urine output of 0.4 mL/kg/h for 3 hours · **C. Potassium of 7.0 mmol/L with peaked T waves not responding to treatment** · D. Mild ankle swelling · E. FeNa above 2%
-*Answer: C.*
+A. Creatinine of 200 µmol/L · B. Urine output of 0.4 mL/kg/h for 3 hours · C. Mild ankle swelling · **D. Potassium of 7.0 mmol/L with peaked T waves not responding to treatment** · E. FeNa above 2%
+*Answer: D.*
 
 **4.** A child has haematuria and hypertension two weeks after a skin infection. Complement C3 is low. The most likely diagnosis is:
-A. IgA nephropathy · B. Minimal change disease · **C. Post-streptococcal glomerulonephritis** · D. Anti-GBM disease · E. Lupus nephritis
-*Answer: C.*
+A. IgA nephropathy · B. Minimal change disease · C. Anti-GBM disease · D. Lupus nephritis · **E. Post-streptococcal glomerulonephritis**
+*Answer: E.*

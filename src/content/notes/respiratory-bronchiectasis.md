@@ -78,12 +78,12 @@ Tap a drug name for its full card (how it works, adverse effects, cautions, dose
 ## Practice questions
 
 **1.** A 35-year-old man with daily large volumes of purulent sputum, clubbing and recurrent haemoptysis. The best diagnostic test is:
-A. Chest X-ray · B. Spirometry · C. **High-resolution CT chest** · D. Bronchoscopy · E. Sputum cytology
-*Answer: C.*
+A. Chest X-ray · B. Spirometry · C. Bronchoscopy · D. Sputum cytology · **E. High-resolution CT chest**
+*Answer: E.*
 
 **2.** HRCT sign of bronchiectasis:
-A. Ground glass · B. **Signet-ring sign (bronchus wider than its artery)** · C. Honeycombing · D. Eggshell calcification · E. Cavity with air-fluid level
-*Answer: B.*
+A. Ground glass · B. Honeycombing · C. Eggshell calcification · **D. Signet-ring sign (bronchus wider than its artery)** · E. Cavity with air-fluid level
+*Answer: D.*
 
 **3.** A man with bronchiectasis, chronic sinusitis and dextrocardia most likely has:
 A. Cystic fibrosis · B. **Primary ciliary dyskinesia (Kartagener)** · C. Sarcoidosis · D. Alpha-1 antitrypsin deficiency · E. ABPA

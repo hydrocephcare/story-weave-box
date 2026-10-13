@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import RecentlyPublished from "@/components/RecentlyPublished";
 import { Link, useLocation, useParams } from "react-router-dom";
-import { ArrowRight, BookMarked, CalendarDays, BookOpen, ClipboardCheck, Clock, FileQuestion, FolderOpen, GraduationCap, Images, ListChecks, Pill, Flame, Stethoscope, Trophy } from "lucide-react";
+import { ArrowRight, BookMarked, ChevronDown, ChevronRight, CalendarDays, BookOpen, ClipboardCheck, Clock, FileQuestion, FolderOpen, GraduationCap, Images, ListChecks, Pill, Flame, Stethoscope, Trophy } from "lucide-react";
 import {
   YEAR_CATEGORIES,
   getPublishedArticleSummaries,
@@ -61,6 +61,7 @@ const YEAR3_PRIORITY = [
 
 export default function YearHub() {
   const { yearNumber } = useParams();
+  const [ttOpen, setTtOpen] = useState(() => typeof window !== "undefined" && window.innerWidth >= 768);
   const location = useLocation();
   const parsedYear = Number(yearNumber);
   const { user } = useAuth();
@@ -205,55 +206,70 @@ export default function YearHub() {
         <span className="text-foreground">{yearLabel}</span>
       </nav>
 
-      <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
-        <p className="text-xs font-semibold uppercase tracking-wide text-primary">Study navigation</p>
-        <h1 className="mt-1 font-serif text-3xl font-bold text-foreground">{yearLabel}</h1>
-        <p className="mt-2 text-sm text-muted-foreground">Choose a section below to continue with {yearLabel} content only.</p>
-        <div className="mt-5 rounded-xl border border-primary/20 bg-primary/5 p-4">
-          <p className="mb-2 flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-primary"><CalendarDays className="h-4 w-4" /> {user ? "Your timetable" : "Timetable"} · {yearLabel}</p>
+      <header className="rounded-3xl border border-border bg-gradient-to-br from-primary/[0.12] via-card to-card p-5 sm:p-8">
+        <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Your year</p>
+        <h1 className="mt-1 font-serif text-4xl font-bold text-foreground sm:text-5xl">{yearLabel}</h1>
+        <p className="mt-2 text-[15px] text-muted-foreground">Notes, past papers, questions and files for {yearLabel}, all in one place.</p>
+        <nav aria-label="Year shortcuts" className="mt-5 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+          {sections.filter((x) => ["Blog", "Flashcards", "Exams", "Pharmacology", "Must-knows by unit", "Clinical simulator"].includes(x.title)).map((section) => (
+            <Link key={section.title} to={section.to} className="flex items-center gap-2.5 rounded-2xl border border-border bg-background px-3.5 py-3 text-[15px] font-bold text-foreground transition-colors hover:border-primary/60 hover:text-primary">
+              <section.icon className="h-5 w-5 shrink-0 text-primary" />
+              {section.title.replace("Blog", "Notes").replace("Must-knows by unit", "Must-knows")}
+            </Link>
+          ))}
+          <Link to={`/books/year-${parsedYear}`} className="flex items-center gap-2.5 rounded-2xl border border-border bg-background px-3.5 py-3 text-[15px] font-bold text-foreground transition-colors hover:border-primary/60 hover:text-primary"><BookMarked className="h-5 w-5 shrink-0 text-primary" />Books</Link>
+          {(parsedYear <= 4 || parsedYear === 6) && <Link to={`/course-outlines/year-${parsedYear}`} className="flex items-center gap-2.5 rounded-2xl border border-border bg-background px-3.5 py-3 text-[15px] font-bold text-foreground transition-colors hover:border-primary/60 hover:text-primary"><ClipboardCheck className="h-5 w-5 shrink-0 text-primary" />Course outlines</Link>}
+        </nav>
+      </header>
+
+      <details open={ttOpen} onToggle={(e) => setTtOpen((e.currentTarget as HTMLDetailsElement).open)} className="group mt-4 rounded-2xl border border-border bg-card">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden">
+          <span className="flex items-center gap-2 text-[15px] font-bold text-foreground"><CalendarDays className="h-5 w-5 text-primary" aria-hidden /> {user ? "Your timetable" : "Timetable"}: today's classes</span>
+          <span className="text-xs font-semibold text-muted-foreground group-open:hidden">Show</span><span className="hidden text-xs font-semibold text-muted-foreground group-open:inline">Hide</span>
+        </summary>
+        <div className="border-t border-border px-5 pb-5 pt-4">
           <TodayClasses year={parsedYear} wide />
-          {!user && <p className="mt-2 text-[11px] text-muted-foreground"><Link to="/login" className="font-bold text-primary hover:underline">Sign in</Link> and your group is remembered on every visit.</p>}
+          {!user && <p className="mt-3 text-[12px] text-muted-foreground"><Link to="/login" className="font-bold text-primary hover:underline">Sign in</Link> and your group is remembered on every visit.</p>}
         </div>
-      </div>
+      </details>
 
       <RecentlyPublished year={parsedYear} limit={10} className="mt-6 !px-0" />
 
       {notesForYear(parsedYear).length > 0 && (
-        <section className="mt-4 rounded-2xl border border-border bg-card p-5">
-          <div className="mb-3 flex items-center justify-between gap-2">
-            <h2 className="flex items-center gap-2 font-serif text-lg font-bold text-foreground"><BookOpen className="h-4 w-4 text-primary" /> Study notes for {yearLabel}</h2>
-            <Link to="/notes" className="text-xs font-bold text-primary hover:underline">All notes →</Link>
+        <section className="mt-6" aria-label={`Study notes for ${yearLabel}`}>
+          <div className="mb-3 flex items-end justify-between gap-2">
+            <h2 className="flex items-center gap-2 font-serif text-2xl font-bold text-foreground"><BookOpen className="h-5 w-5 text-primary" /> Study notes</h2>
+            <Link to="/notes" className="text-sm font-bold text-primary hover:underline">All notes →</Link>
           </div>
-          {groupNotes(notesForYear(parsedYear)).map((u) => (
-            <div key={u.unit} className="mt-3 first:mt-0">
-              <p className="text-[11px] font-bold uppercase tracking-wide text-primary">{u.unit}</p>
-              {u.groups.map((g) => (
-                <div key={g.group} className="mt-1.5">
-                  <p className="text-xs font-semibold text-muted-foreground">{g.group}</p>
-                  <div className="mt-1 flex flex-wrap gap-1.5">
-                    {g.notes.map((n) => <Link key={n.slug} to={`/notes/${n.slug}`} className="rounded-full border border-border bg-background px-3 py-1 text-xs font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary">{n.title.replace(/ \(.*\)$/, "")}</Link>)}
+          <div className="space-y-2.5">
+            {groupNotes(notesForYear(parsedYear)).map((u, idx) => {
+              const count = u.groups.reduce((n, g) => n + g.notes.length, 0);
+              return (
+                <details key={u.unit} open={idx === 0} className="group rounded-2xl border border-border bg-card">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden">
+                    <span className="min-w-0 truncate text-[16px] font-bold text-foreground">{u.unit}</span>
+                    <span className="flex shrink-0 items-center gap-2 text-xs font-semibold text-muted-foreground">{count} {count === 1 ? "note" : "notes"}<ChevronDown className="h-4 w-4 transition-transform group-open:rotate-180" aria-hidden /></span>
+                  </summary>
+                  <div className="border-t border-border px-5 pb-4 pt-2">
+                    {u.groups.map((g) => (
+                      <div key={g.group} className="mt-3">
+                        <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{g.group}</p>
+                        <ul className="mt-1 divide-y divide-border">
+                          {g.notes.map((n) => <li key={n.slug}><Link to={`/notes/${n.slug}`} className="flex items-center justify-between gap-3 py-2.5 text-[15px] font-semibold text-foreground transition-colors hover:text-primary"><span className="min-w-0">{n.title}</span><ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden /></Link></li>)}
+                        </ul>
+                      </div>
+                    ))}
                   </div>
-                </div>
-              ))}
-            </div>
-          ))}
+                </details>
+              );
+            })}
+          </div>
         </section>
       )}
 
       {(parsedYear === 2 || parsedYear === 3) && !recentLoading && <YearUnitNotes year={parsedYear} articles={yearArticles} />}
 
       <YearLibrarySection year={parsedYear} />
-
-      <nav aria-label="Year shortcuts" className="mt-5 flex flex-wrap gap-2">
-        {sections.filter((x) => ["Blog", "Flashcards", "Exams", "Pharmacology", "Must-knows by unit", "Clinical simulator"].includes(x.title)).map((section) => (
-          <Link key={section.title} to={section.to} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary">
-            <section.icon className="h-4 w-4 text-primary" />
-            {section.title.replace("Blog", "Notes").replace("Must-knows by unit", "Must-knows")}
-          </Link>
-        ))}
-        <Link to={`/books/year-${parsedYear}`} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary"><BookMarked className="h-4 w-4 text-primary" />Books</Link>
-        {(parsedYear <= 4 || parsedYear === 6) && <Link to={`/course-outlines/year-${parsedYear}`} className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:border-primary/50 hover:text-primary"><ClipboardCheck className="h-4 w-4 text-primary" />Course outlines</Link>}
-      </nav>
 
       {parsedYear === 3 && (
         <section className="mt-6 rounded-2xl border-2 border-primary/30 bg-primary/5 p-5 sm:p-6">

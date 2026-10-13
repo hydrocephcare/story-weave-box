@@ -98,9 +98,9 @@ A. D-dimer · B. **Compression duplex ultrasound** · C. Venography only · D. C
 *Answer: B. A likely probability goes straight to imaging.*
 
 **2.** A man 5 days after hip surgery has sudden dyspnoea, pleuritic pain, HR 120, SpO2 88%. BP 130/80. The best diagnostic test is:
-A. **CT pulmonary angiogram** · B. Chest X-ray · C. Spirometry · D. Echocardiogram only · E. Peak flow
-*Answer: A.*
+A. Chest X-ray · B. Spirometry · C. Echocardiogram only · D. Peak flow · **E. CT pulmonary angiogram**
+*Answer: E.*
 
 **3.** A pregnant woman with a proximal DVT should receive:
-A. Warfarin · B. Rivaroxaban · C. **Low-molecular-weight heparin** · D. Aspirin only · E. No treatment
-*Answer: C.*
+**A. Low-molecular-weight heparin** · B. Warfarin · C. Rivaroxaban · D. Aspirin only · E. No treatment
+*Answer: A.*

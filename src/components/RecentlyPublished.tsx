@@ -64,12 +64,12 @@ export default function RecentlyPublished({ year, limit = 8, className }: { year
         </div>
         <Link to="/new-notes" className="inline-flex shrink-0 items-center gap-1 text-sm font-bold text-primary hover:underline">See all new <ArrowRight className="h-4 w-4" aria-hidden /></Link>
       </div>
-      <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
+      <ul className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
         {rows.map((r) => {
           const Icon = ICON[r.kind];
           return (
-            <li key={r.key}>
-              <Link to={r.to} className="group flex items-center gap-3 rounded-xl border border-border bg-card p-3.5 transition hover:border-primary/60">
+            <li key={r.key} className="min-w-0">
+              <Link to={r.to} className="group flex min-w-0 items-center gap-3 rounded-xl border border-border bg-card p-3.5 transition hover:border-primary/60">
                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-4 w-4" aria-hidden /></span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-[15px] font-bold leading-snug group-hover:text-primary">{r.title}</span>

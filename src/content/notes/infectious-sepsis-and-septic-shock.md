@@ -76,17 +76,17 @@ Acute kidney injury, ARDS, DIC, liver dysfunction, hypoglycaemia, adrenal insuff
 ## Practice questions
 
 **1.** A patient has suspected pneumonia, RR 28, BP 85/50 and is confused. The most important next step is:
-A. CT chest · **B. IV antibiotics and fluids within the hour, with blood cultures taken first if quick** · C. Wait for culture results · D. Oral antibiotics · E. Discharge
-*Answer: B.*
-
-**2.** Septic shock is defined by sepsis plus:
-A. Fever above 39 °C · B. A raised white cell count · **C. Vasopressors needed to keep MAP at 65 mmHg or above, with lactate above 2 mmol/L despite fluids** · D. Positive blood culture · E. Two organ failures
+A. CT chest · B. Wait for culture results · **C. IV antibiotics and fluids within the hour, with blood cultures taken first if quick** · D. Oral antibiotics · E. Discharge
 *Answer: C.*
 
+**2.** Septic shock is defined by sepsis plus:
+A. Fever above 39 °C · B. A raised white cell count · C. Positive blood culture · **D. Vasopressors needed to keep MAP at 65 mmHg or above, with lactate above 2 mmol/L despite fluids** · E. Two organ failures
+*Answer: D.*
+
 **3.** After fluids, an infected obstructed kidney is still septic. What will make the biggest difference?
-A. A third antibiotic · **B. Urgent drainage (stent or nephrostomy)** · C. Steroids · D. More saline · E. Oral fluids
-*Answer: B. Source control.*
+A. A third antibiotic · B. Steroids · C. More saline · D. Oral fluids · **E. Urgent drainage (stent or nephrostomy)**
+*Answer: E. Source control.*
 
 **4.** In sub-Saharan Africa, a febrile, hypotensive patient with a normal-looking chest and urine should also be tested for:
-A. Gout · **B. Malaria** · C. Hypothyroidism · D. Osteoporosis · E. Migraine
-*Answer: B.*
+**A. Malaria** · B. Gout · C. Hypothyroidism · D. Osteoporosis · E. Migraine
+*Answer: A.*

@@ -136,21 +136,21 @@ Three or more consecutive losses. **No cause is found in about 50%.** Work it up
 ## Practice questions
 
 **1.** A 24-year-old at 9 weeks has a small painless bleed. The cervical os is closed and ultrasound shows a fetal heartbeat. The diagnosis is:
-A. Missed abortion · B. Inevitable abortion · **C. Threatened abortion** · D. Incomplete abortion · E. Ectopic pregnancy
-*Answer: C.*
+A. Missed abortion · B. Inevitable abortion · C. Incomplete abortion · D. Ectopic pregnancy · **E. Threatened abortion**
+*Answer: E.*
 
 **2.** The commonest cause of early (first-trimester) miscarriage is:
-A. Cervical incompetence · B. Infection · **C. Chromosomal abnormality of the fetus** · D. Diabetes · E. Uterine septum
-*Answer: C.*
+**A. Chromosomal abnormality of the fetus** · B. Cervical incompetence · C. Infection · D. Diabetes · E. Uterine septum
+*Answer: A.*
 
 **3.** Painless dilatation of the cervix at 20 weeks with expulsion of a live-looking fetus suggests:
-A. Threatened abortion · B. Missed abortion · **C. Cervical insufficiency** · D. Placenta praevia · E. Molar pregnancy
-*Answer: C. Treat the next pregnancy with a cervical cerclage at 12–14 weeks.*
+A. Threatened abortion · B. Missed abortion · C. Placenta praevia · **D. Cervical insufficiency** · E. Molar pregnancy
+*Answer: D. Treat the next pregnancy with a cervical cerclage at 12–14 weeks.*
 
 **4.** After an unsafe abortion a woman has fever, tender uterus, a pulse of 120 and a foul vaginal discharge. The most important management is:
-A. Reassurance · B. Oral antibiotics only · **C. Resuscitation, IV broad-spectrum antibiotics and evacuation of the uterus** · D. Hysterectomy at once · E. Bed rest
-*Answer: C.*
+A. Reassurance · **B. Resuscitation, IV broad-spectrum antibiotics and evacuation of the uterus** · C. Oral antibiotics only · D. Hysterectomy at once · E. Bed rest
+*Answer: B.*
 
 **5.** Which test is most useful in a woman with three consecutive first-trimester miscarriages and a history of a deep vein thrombosis?
-A. Pap smear · **B. Antiphospholipid antibodies (lupus anticoagulant, anticardiolipin)** · C. HIV test only · D. Ultrasound of the kidneys · E. Serum ferritin
-*Answer: B.*
+A. Pap smear · B. HIV test only · **C. Antiphospholipid antibodies (lupus anticoagulant, anticardiolipin)** · D. Ultrasound of the kidneys · E. Serum ferritin
+*Answer: C.*

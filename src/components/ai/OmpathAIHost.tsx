@@ -47,6 +47,7 @@ import { useAccess } from "@/lib/access";
 import { openSubscribePrompt } from "@/lib/subscribe-prompt";
 import { aiStore, useAiStore, type AiTurn } from "@/lib/ompathAiStore";
 import { FREE_DAILY_QUESTIONS, countQuestion, extractiveAnswer, followUps, parseQuery, questionsUsedToday, retrieve, streamAnswer, type Retrieval } from "@/lib/ompathAi";
+import { ensureTopicPage } from "@/lib/topics";
 import { scoringTerms } from "@/lib/ompathAiQuery";
 import { dropCached, getCached, getShared, getTrending, quickReply, reportShared, saveCached, saveShared } from "@/lib/ompathAiQuick";
 import { logSearch } from "@/lib/search";
@@ -346,6 +347,7 @@ export default function OmpathAIHost() {
       countQuestion();
       aiStore.patchTurn(sessionId, id, { answer });
       aiStore.flush();
+      if (answer.length > 140 && retrieval.parsed.topic) void ensureTopicPage(retrieval.parsed.topic);
       if (answer.trim().length > 40) { saveCached(text, { answer, grounded: retrieval.grounded, hits: retrieval.hits, followUps: followUps(retrieval.parsed) }); void saveShared(text, answer, retrieval.grounded); }
     } catch (e) {
       if ((e as Error).name === "AbortError") { aiStore.flush(); return; }
@@ -551,7 +553,7 @@ export default function OmpathAIHost() {
                         const topic = (parseQuery(t.q).topic || "").trim();
                         const slug = topic.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
                         if (topic.length < 4 || topic.length > 60 || topic.split(/\s+/).length > 6 || !/^[A-Za-z]/.test(topic) || slug.length < 4) return null;
-                        return <button type="button" onClick={() => { setOpen(false); navigate(`/topic/${slug}`); }} className="inline-flex items-center gap-1.5 rounded-xl border border-primary/40 bg-primary/10 px-3 py-2 text-left text-xs font-bold text-primary hover:bg-primary/15"><BookOpen className="h-3.5 w-3.5 shrink-0" aria-hidden /> Read and save the full page on “{topic}”</button>;
+                        return <button type="button" onClick={() => { setOpen(false); navigate(`/topic/${slug}`); }} className="inline-flex items-center gap-1.5 rounded-xl border border-primary/40 bg-primary/10 px-3 py-2 text-left text-xs font-bold text-primary hover:bg-primary/15"><BookOpen className="h-3.5 w-3.5 shrink-0" aria-hidden /> Open the full page on “{topic}”</button>;
                       })()}
                       {last && !busy && t.answer && (t.followUps?.length ?? 0) > 0 && (
                         <div className="flex flex-wrap gap-1.5">{t.followUps!.map((f) => <button key={f} type="button" onClick={() => void ask(f)} className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary hover:bg-primary/10">{f}</button>)}</div>

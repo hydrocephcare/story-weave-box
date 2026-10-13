@@ -51,7 +51,7 @@ export function AboutUs() {
       <H2>What is on the site</H2>
       <p>Today the library holds <strong>{notes}+ study notes</strong>, <strong>{papers}+ past papers and question banks</strong>, MCQ sets, essays, flashcards and more than a thousand topic pages, across Years 1 to 6. New material is added every week, and the newest items are always listed under <Link to="/new-notes" className="font-semibold text-primary hover:underline">Recently added</Link>.</p>
       <H2>How the notes are made</H2>
-      <p>Notes are compiled from lectures, standard textbooks and past papers, then rewritten into clear, exam-ready pages with tables, worked examples and practice questions. Topic pages combine our notes with standard references and pictures from Wikipedia and Wikimedia Commons, which are credited. Every page is a study aid and is refined as students and lecturers send corrections.</p>
+      <p>Notes are compiled from lectures, standard textbooks and past papers, then rewritten into clear, exam-ready pages with tables, worked examples and practice questions. Topic pages combine our notes with standard references, and every picture is credited to its author. Every page is a study aid and is refined as students and lecturers send corrections.</p>
       <H2>Who it is for</H2>
       <p>Medical students and anyone learning health sciences, in any country. The library began with one university's syllabus and now serves learners worldwide. Course outlines are available for several programmes and more are added on request.</p>
       <H2>An honest note</H2>
@@ -93,7 +93,7 @@ export function Privacy() {
       <H2>Your choices</H2>
       <p>You can ask us to delete your account and data at any time by emailing <a className="font-semibold text-primary hover:underline" href={`mailto:${EMAIL}`}>{EMAIL}</a>. You can also clear the site's saved data from your browser settings.</p>
       <H2>Using the site</H2>
-      <p>The material is provided free for personal study. Please do not copy and resell it, or upload content you do not have the right to share. Notes and past papers are compiled from teaching material and standard references; if you own something here and want it credited or removed, write to us and we will act promptly. Pictures from Wikipedia and Wikimedia Commons are used under their free licences and credited. We work hard to be accurate, but errors can occur: always check important facts against your textbook and lecturers, and tell us when you spot a mistake.</p>
+      <p>The material is provided free for personal study. Please do not copy and resell it, or upload content you do not have the right to share. Notes and past papers are compiled from teaching material and standard references; if you own something here and want it credited or removed, write to us and we will act promptly. Pictures are used under their free licences and credited to their authors. We work hard to be accurate, but errors can occur: always check important facts against your textbook and lecturers, and tell us when you spot a mistake.</p>
       <H2>Contact</H2>
       <p>Questions about any of this: <a className="font-semibold text-primary hover:underline" href={`mailto:${EMAIL}`}>{EMAIL}</a>, or use the <Link to="/contact" className="font-semibold text-primary hover:underline">contact page</Link>.</p>
     </Shell>

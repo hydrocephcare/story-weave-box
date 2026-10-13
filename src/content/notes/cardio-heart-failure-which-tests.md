@@ -18,7 +18,7 @@
 | **Troponin** | Is an acute coronary syndrome the trigger? |
 | **HIV test** | **HIV cardiomyopathy** |
 
-![Chest radiograph with signs of congestive heart failure: an enlarged heart, upper-lobe blood diversion, Kerley B lines and pleural effusions. Mikael Häggström, CC0, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Chest_radiograph_with_signs_of_congestive_heart_failure_-_annotated.jpg/960px-Chest_radiograph_with_signs_of_congestive_heart_failure_-_annotated.jpg)
+![Chest radiograph with signs of congestive heart failure: an enlarged heart, upper-lobe blood diversion, Kerley B lines and pleural effusions. Mikael Häggström, CC0](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Chest_radiograph_with_signs_of_congestive_heart_failure_-_annotated.jpg/960px-Chest_radiograph_with_signs_of_congestive_heart_failure_-_annotated.jpg)
 
 ## 2. Then ask the two questions that matter
 
@@ -55,13 +55,13 @@
 ## Practice questions
 
 **1.** The investigation that best separates reduced from preserved ejection fraction is:
-A. Chest X-ray · B. ECG · C. BNP · **D. Echocardiogram** · E. Troponin
-*Answer: D.*
+A. Chest X-ray · B. ECG · **C. Echocardiogram** · D. BNP · E. Troponin
+*Answer: C.*
 
 **2.** Which investigation gives a clue that a patient with new heart failure may have a treatable cause such as HIV?
-A. Troponin · **B. HIV test** · C. Lipid profile · D. Urinalysis · E. Peak flow
-*Answer: B.*
+A. Troponin · B. Lipid profile · C. Urinalysis · D. Peak flow · **E. HIV test**
+*Answer: E.*
 
 **3.** Which drug should be avoided in heart failure because it causes fluid retention?
-A. Furosemide · B. Bisoprolol · C. Enalapril · **D. Ibuprofen** · E. Spironolactone
-*Answer: D.*
+A. Furosemide · **B. Ibuprofen** · C. Bisoprolol · D. Enalapril · E. Spironolactone
+*Answer: B.*

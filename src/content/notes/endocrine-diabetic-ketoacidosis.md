@@ -74,17 +74,17 @@ Restart **subcutaneous insulin** and overlap it with the infusion for at least 3
 ## Practice questions
 
 **1.** A 19-year-old is drowsy with deep rapid breathing, glucose 28 mmol/L, ketones 5 mmol/L and pH 7.1. The first priority is:
-A. Insulin bolus · **B. Rapid IV isotonic saline** · C. Sodium bicarbonate · D. Oral fluids · E. Subcutaneous insulin
-*Answer: B. Fluids come first, then insulin once the potassium is known.*
+**A. Rapid IV isotonic saline** · B. Insulin bolus · C. Sodium bicarbonate · D. Oral fluids · E. Subcutaneous insulin
+*Answer: A. Fluids come first, then insulin once the potassium is known.*
 
 **2.** The potassium is 2.9 mmol/L before treatment. The correct step is:
-A. Start insulin at once · **B. Replace potassium and delay insulin** · C. Give bicarbonate · D. Stop fluids · E. Give no potassium
-*Answer: B. Insulin would drive the potassium lower and risk arrhythmia.*
+A. Start insulin at once · B. Give bicarbonate · **C. Replace potassium and delay insulin** · D. Stop fluids · E. Give no potassium
+*Answer: C. Insulin would drive the potassium lower and risk arrhythmia.*
 
 **3.** Which feature best separates HHS from DKA?
 A. Dehydration · **B. Very high glucose with little or no ketosis** · C. Infection as a trigger · D. Altered consciousness · E. Hypokalaemia
 *Answer: B.*
 
 **4.** The most feared complication of DKA treatment in children is:
-A. Hyperkalaemia · B. Hypernatraemia · **C. Cerebral oedema** · D. Pancreatitis · E. Optic neuritis
-*Answer: C.*
+A. Hyperkalaemia · B. Hypernatraemia · C. Pancreatitis · D. Optic neuritis · **E. Cerebral oedema**
+*Answer: E.*

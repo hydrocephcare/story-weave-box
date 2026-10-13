@@ -8,7 +8,7 @@
 
 Jaundice, fatigue, right upper quadrant pain, nausea and vomiting, fever, dark urine and pale stools. Many patients, especially with chronic hepatitis B, have **no symptoms** until the liver is badly scarred.
 
-![Scleral icterus (yellow eyes), the commonest sign of jaundice. Sheila J. Toro, CC BY 4.0, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Scleral_Icterus.jpg/960px-Scleral_Icterus.jpg)
+![Scleral icterus (yellow eyes), the commonest sign of jaundice. Sheila J. Toro, CC BY 4.0](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Scleral_Icterus.jpg/960px-Scleral_Icterus.jpg)
 
 ## 2. Start with the pattern: liver function tests
 
@@ -39,7 +39,7 @@ Jaundice, fatigue, right upper quadrant pain, nausea and vomiting, fever, dark u
 | **HBeAg** | The virus is actively replicating: high infectivity |
 | **HBV DNA (viral load)** | How much virus there is: the key number for the decision to treat |
 
-![Hepatitis B virus particles under the electron microscope. Public domain, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Hepatitis_B_virus_01.jpg/960px-Hepatitis_B_virus_01.jpg)
+![Hepatitis B virus particles under the electron microscope. Public domain](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Hepatitis_B_virus_01.jpg/960px-Hepatitis_B_virus_01.jpg)
 
 ## 5. Chronic hepatitis B: who needs treatment?
 
@@ -86,17 +86,17 @@ Newer WHO guidance has widened who is eligible for treatment, so check what is c
 ## Practice questions
 
 **1.** HBsAg negative, anti-HBs positive, anti-HBc negative. The patient is:
-A. Acutely infected · B. Chronically infected · **C. Immune through vaccination** · D. A carrier · E. Immune after natural infection
-*Answer: C. Anti-HBs alone means vaccine immunity.*
+A. Acutely infected · B. Chronically infected · C. A carrier · **D. Immune through vaccination** · E. Immune after natural infection
+*Answer: D. Anti-HBs alone means vaccine immunity.*
 
 **2.** The mutation that makes hepatitis B resistant to lamivudine is:
-A. T790M · **B. YMDD** · C. V600E · D. BRCA1 · E. K103N
-*Answer: B.*
-
-**3.** Which drug is used for hepatitis C but not hepatitis B?
-A. Tenofovir · B. Entecavir · **C. Ribavirin** · D. Lamivudine · E. Pegylated interferon-α is used for neither
+A. T790M · B. V600E · **C. YMDD** · D. BRCA1 · E. K103N
 *Answer: C.*
 
-**4.** The best way to screen a patient with cirrhosis for hepatocellular carcinoma is:
-A. A liver biopsy every year · **B. Ultrasound with or without AFP every 6 months** · C. Chest X-ray · D. ALT every month · E. No screening is needed
+**3.** Which drug is used for hepatitis C but not hepatitis B?
+A. Tenofovir · **B. Ribavirin** · C. Entecavir · D. Lamivudine · E. Pegylated interferon-α is used for neither
 *Answer: B.*
+
+**4.** The best way to screen a patient with cirrhosis for hepatocellular carcinoma is:
+**A. Ultrasound with or without AFP every 6 months** · B. A liver biopsy every year · C. Chest X-ray · D. ALT every month · E. No screening is needed
+*Answer: A.*

@@ -87,17 +87,17 @@ Pre-conception services must **not stand alone**. Integrate them into **comprehe
 ## Practice questions
 
 **1.** The fetus is most vulnerable to structural malformations during:
-A. Weeks 1–3 · **B. Weeks 4–10** · C. Weeks 12–16 · D. Weeks 20–24 · E. The third trimester
-*Answer: B. Many women do not know they are pregnant yet.*
+**A. Weeks 4–10** · B. Weeks 1–3 · C. Weeks 12–16 · D. Weeks 20–24 · E. The third trimester
+*Answer: A. Many women do not know they are pregnant yet.*
 
 **2.** Which supplement reduces the risk of neural tube defects?
 A. Vitamin C · B. Iron · **C. Folic acid** · D. Vitamin A in high dose · E. Calcium
 *Answer: C.*
 
 **3.** Which statement about pre-conception care is TRUE?
-A. It only concerns women · B. It starts at the first antenatal visit · **C. It includes the male partner and can be integrated into existing clinics** · D. It only needs blood group testing · E. It is not needed if the woman is healthy
-*Answer: C.*
+A. It only concerns women · B. It starts at the first antenatal visit · C. It only needs blood group testing · **D. It includes the male partner and can be integrated into existing clinics** · E. It is not needed if the woman is healthy
+*Answer: D.*
 
 **4.** A woman with epilepsy on valproate wants to conceive. The best advice is:
-A. Stop all drugs · **B. Review the drug with a specialist before conception and take high-dose folic acid** · C. Continue valproate unchanged · D. Wait until the second trimester to review · E. Start vitamin A
-*Answer: B.*
+A. Stop all drugs · B. Continue valproate unchanged · C. Wait until the second trimester to review · D. Start vitamin A · **E. Review the drug with a specialist before conception and take high-dose folic acid**
+*Answer: E.*

@@ -93,13 +93,13 @@ Tap a drug name for its full card (how it works, adverse effects, cautions, dose
 ## Practice questions
 
 **1.** A 19-year-old with asthma cannot complete sentences, RR 28, HR 118, PEF 40% of best. This is:
-A. Mild · B. Moderate · C. **Acute severe** · D. Life-threatening · E. Near-fatal
-*Answer: C.*
+**A. Acute severe** · B. Mild · C. Moderate · D. Life-threatening · E. Near-fatal
+*Answer: A.*
 
 **2.** In a severe asthma attack the patient becomes drowsy with a silent chest and PaCO2 6.5 kPa. This indicates:
 A. Improvement · B. **Impending respiratory failure (life-threatening)** · C. Anxiety · D. Pneumonia · E. Pulmonary embolism
 *Answer: B.*
 
 **3.** The most important drug for long-term control of persistent asthma is:
-A. Oral salbutamol · B. **Inhaled corticosteroid** · C. Oral antihistamine · D. Theophylline alone · E. Ipratropium alone
-*Answer: B.*
+A. Oral salbutamol · B. Oral antihistamine · **C. Inhaled corticosteroid** · D. Theophylline alone · E. Ipratropium alone
+*Answer: C.*

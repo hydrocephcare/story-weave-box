@@ -31,7 +31,7 @@ A **murmur** is the extra sound made by turbulent blood flow across a valve or d
 | **Tricuspid stenosis / regurgitation** | Diastolic / pansystolic | **Louder on inspiration**; raised JVP |
 | **Pulmonary stenosis / regurgitation** | Ejection systolic / early diastolic | Left 2nd intercostal space |
 
-![Mitral stenosis in a heart specimen: the valve is thickened and fused, producing a "fish-mouth" opening. Public domain, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/2/2f/Mitral_stenosis%2C_gross_pathology_20G0015_lores.jpg)
+![Mitral stenosis in a heart specimen: the valve is thickened and fused, producing a "fish-mouth" opening. Public domain](https://upload.wikimedia.org/wikipedia/commons/2/2f/Mitral_stenosis%2C_gross_pathology_20G0015_lores.jpg)
 
 ## 5. Peripheral signs of aortic regurgitation
 
@@ -66,8 +66,8 @@ In many low- and middle-income countries, including Kenya, **rheumatic heart dis
 ## Practice questions
 
 **1.** A mid-diastolic rumble at the apex with an opening snap is characteristic of:
-A. Mitral regurgitation · **B. Mitral stenosis** · C. Aortic stenosis · D. Aortic regurgitation · E. Tricuspid regurgitation
-*Answer: B.*
+A. Mitral regurgitation · B. Aortic stenosis · C. Aortic regurgitation · **D. Mitral stenosis** · E. Tricuspid regurgitation
+*Answer: D.*
 
 **2.** A pansystolic murmur at the apex radiating to the axilla indicates:
 A. Aortic stenosis · B. Pulmonary stenosis · **C. Mitral regurgitation** · D. Mitral stenosis · E. Aortic regurgitation
@@ -78,5 +78,5 @@ A. Slow-rising pulse · **B. Head bobbing synchronous with the pulse (de Musset'
 *Answer: B. A slow-rising pulse belongs to aortic stenosis.*
 
 **4.** Which murmur becomes louder on inspiration?
-A. Mitral regurgitation · B. Aortic stenosis · **C. Tricuspid regurgitation** · D. Mitral stenosis · E. Aortic regurgitation
-*Answer: C. Right-sided murmurs are louder on inspiration.*
+**A. Tricuspid regurgitation** · B. Mitral regurgitation · C. Aortic stenosis · D. Mitral stenosis · E. Aortic regurgitation
+*Answer: A. Right-sided murmurs are louder on inspiration.*

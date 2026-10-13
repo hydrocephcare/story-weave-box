@@ -134,21 +134,21 @@ Inadequate infrastructure and supplies, **poor quality of care and poor treatmen
 ## Practice questions
 
 **1.** The WHO focused antenatal care model recommends at least:
-A. Two visits · B. Three visits · **C. Four visits** · D. Six visits · E. Weekly visits
-*Answer: C.*
+A. Two visits · **B. Four visits** · C. Three visits · D. Six visits · E. Weekly visits
+*Answer: B.*
 
 **2.** The "risk approach" to antenatal care failed mainly because:
-A. It was too cheap · **B. Most women who had obstetric emergencies were assessed as low risk** · C. It needed no staff · D. It detected too many problems · E. Women disliked it
-*Answer: B.*
+**A. Most women who had obstetric emergencies were assessed as low risk** · B. It was too cheap · C. It needed no staff · D. It detected too many problems · E. Women disliked it
+*Answer: A.*
 
 **3.** Which action belongs to the FIRST ANC visit?
-A. Repeat HIV test at 38 weeks · **B. Confirm pregnancy and EDD, screen for anaemia, syphilis, malaria and HIV, and start iron and folic acid** · C. Plan induction · D. Assess for malpresentation only · E. Give anti-D
-*Answer: B.*
+A. Repeat HIV test at 38 weeks · B. Plan induction · C. Assess for malpresentation only · D. Give anti-D · **E. Confirm pregnancy and EDD, screen for anaemia, syphilis, malaria and HIV, and start iron and folic acid**
+*Answer: E.*
 
 **4.** Which is a danger sign of pregnancy that demands immediate attention?
 A. Mild nausea · B. Backache · **C. Severe headache with blurred vision** · D. Frequency of micturition · E. Mild ankle swelling in the evening
 *Answer: C.*
 
 **5.** Which intervention is used for malaria prevention in pregnancy?
-A. Chloroquine only · B. Quinine daily · **C. Intermittent preventive treatment and insecticide-treated nets** · D. Doxycycline · E. Primaquine
-*Answer: C.*
+A. Chloroquine only · B. Quinine daily · C. Doxycycline · **D. Intermittent preventive treatment and insecticide-treated nets** · E. Primaquine
+*Answer: D.*

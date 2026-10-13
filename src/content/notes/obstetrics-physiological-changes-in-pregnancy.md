@@ -82,7 +82,7 @@ The **kidneys enlarge slightly**; the **renal pelvis and ureters dilate** (more 
 
 ### Placental hormones
 
-![The rise of hCG, progesterone and other pregnancy hormones through pregnancy. Osmosis, CC BY-SA 4.0, Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pregnancy_hormone_graph.png/960px-Pregnancy_hormone_graph.png)
+![The rise of hCG, progesterone and other pregnancy hormones through pregnancy. Osmosis, CC BY-SA 4.0](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pregnancy_hormone_graph.png/960px-Pregnancy_hormone_graph.png)
 
 - **hCG:** made by the trophoblast; **peaks at 8–12 weeks**; keeps the **corpus luteum** producing progesterone until the placenta takes over (about 8–10 weeks).
 - **Progesterone:** first from the corpus luteum, then the **placenta** (output about 250 mg/day at term). It **relaxes smooth muscle** (less gut, bladder and ureteric tone: constipation, reflux, urinary stasis), **dilates veins**, **lowers diastolic pressure**, **raises body temperature** and drives **nausea**; it **maintains the pregnancy** and prevents uterine contractions.
@@ -127,20 +127,20 @@ The **kidneys enlarge slightly**; the **renal pelvis and ureters dilate** (more 
 ## Practice questions
 
 **1.** By term, plasma volume has risen by about:
-A. 10% · B. 20% · C. 30% · **D. 50%** · E. 100%
-*Answer: D. The red cell mass rises only about 30%, so the haemoglobin concentration falls.*
+A. 10% · B. 20% · **C. 50%** · D. 30% · E. 100%
+*Answer: C. The red cell mass rises only about 30%, so the haemoglobin concentration falls.*
 
 **2.** Which murmur is NOT normal in pregnancy?
-A. A soft systolic ejection murmur · B. A mammary soufflé · C. A third heart sound · **D. An early diastolic murmur** · E. A venous hum
-*Answer: D.*
+A. A soft systolic ejection murmur · **B. An early diastolic murmur** · C. A mammary soufflé · D. A third heart sound · E. A venous hum
+*Answer: B.*
 
 **3.** Which change in pregnancy explains the tendency to heartburn?
-A. Increased gastric acid · **B. Relaxation of the lower oesophageal sphincter by progesterone** · C. Reduced saliva · D. Increased gastric emptying · E. Reduced intra-abdominal pressure
-*Answer: B.*
+**A. Relaxation of the lower oesophageal sphincter by progesterone** · B. Increased gastric acid · C. Reduced saliva · D. Increased gastric emptying · E. Reduced intra-abdominal pressure
+*Answer: A.*
 
 **4.** Which statement about thyroid hormones in pregnancy is TRUE?
-A. Free T4 doubles · **B. Total T4 rises because thyroid-binding globulin doubles, while free T4 is unchanged** · C. TSH is always high · D. Most women are hypothyroid · E. Total T4 falls
-*Answer: B.*
+A. Free T4 doubles · B. TSH is always high · C. Most women are hypothyroid · D. Total T4 falls · **E. Total T4 rises because thyroid-binding globulin doubles, while free T4 is unchanged**
+*Answer: E.*
 
 **5.** At term the uterus weighs about:
 A. 100 g · B. 300 g · C. 500 g · **D. 1,000 g** · E. 2,500 g

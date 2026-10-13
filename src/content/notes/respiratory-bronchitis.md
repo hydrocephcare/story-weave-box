@@ -83,9 +83,9 @@ Tap a drug name for its full card (how it works, adverse effects, cautions, dose
 ## Practice questions
 
 **1.** A healthy 25-year-old has a 5-day dry then productive cough, low-grade fever and scattered rhonchi, with a normal chest X-ray. Best management:
-A. Ceftriaxone · B. **Reassurance and symptomatic treatment** · C. Steroids · D. Isolate for TB · E. Admit
-*Answer: B.*
+A. Ceftriaxone · B. Steroids · C. Isolate for TB · D. Admit · **E. Reassurance and symptomatic treatment**
+*Answer: E.*
 
 **2.** The definition of chronic bronchitis includes cough with sputum for:
-A. 2 weeks · B. 1 month · C. **3 months in each of 2 consecutive years** · D. 1 year only · E. 6 weeks
-*Answer: C.*
+A. 2 weeks · B. 1 month · C. 1 year only · **D. 3 months in each of 2 consecutive years** · E. 6 weeks
+*Answer: D.*

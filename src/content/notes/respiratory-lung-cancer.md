@@ -109,13 +109,13 @@ Tap a drug name for its full card (how it works, adverse effects, cautions, dose
 ## Practice questions
 
 **1.** A 60-year-old smoker has hyponatraemia (Na 118) with low serum osmolality and concentrated urine, with a central lung mass. The most likely tumour is:
-A. Adenocarcinoma · B. Squamous cell carcinoma · C. **Small cell carcinoma (SIADH)** · D. Large cell carcinoma · E. Mesothelioma
-*Answer: C.*
+**A. Small cell carcinoma (SIADH)** · B. Adenocarcinoma · C. Squamous cell carcinoma · D. Large cell carcinoma · E. Mesothelioma
+*Answer: A.*
 
 **2.** A man has right shoulder pain radiating down the arm, miosis, ptosis and anhidrosis. The likely lesion is:
-A. Cervical rib · B. **Pancoast tumour at the lung apex** · C. Brachial neuritis · D. Mediastinal mass · E. Rotator cuff tear
-*Answer: B.*
+A. Cervical rib · B. Brachial neuritis · C. Mediastinal mass · D. Rotator cuff tear · **E. Pancoast tumour at the lung apex**
+*Answer: E.*
 
 **3.** A smoker has hypercalcaemia, a central cavitating hilar mass, with low PTH and raised PTHrP. The most likely histology is:
-A. Small cell · B. Adenocarcinoma · C. **Squamous cell carcinoma** · D. Carcinoid · E. Large cell
-*Answer: C.*
+A. Small cell · B. Adenocarcinoma · C. Carcinoid · **D. Squamous cell carcinoma** · E. Large cell
+*Answer: D.*

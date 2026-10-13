@@ -91,8 +91,8 @@ A. Prednisolone · B. **Nintedanib or pirfenidone** · C. Antibiotics · D. Salb
 *Answer: B.*
 
 **2.** The pattern of lung function in ILD is:
-A. Obstructive with high TLC · B. **Restrictive with reduced DLCO** · C. Normal · D. Isolated high FEV1/FVC with high TLC · E. Obstructive with raised DLCO
-*Answer: B.*
+**A. Restrictive with reduced DLCO** · B. Obstructive with high TLC · C. Normal · D. Isolated high FEV1/FVC with high TLC · E. Obstructive with raised DLCO
+*Answer: A.*
 
 **3.** A young woman has erythema nodosum, arthralgia and bilateral hilar lymphadenopathy. The most likely diagnosis is:
 A. Tuberculosis · B. Lymphoma · C. **Sarcoidosis (Löfgren syndrome)** · D. IPF · E. Silicosis

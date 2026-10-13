@@ -250,7 +250,7 @@ docs.forEach((d, idx) => {
       for (const slug of found) {
         const list = questions.get(slug);
         if (list.length >= 40) continue;
-        list.push({ q: q.question.slice(0, 400), o: q.options.map((o) => String(o).slice(0, 160)), a: q.correct_answer, e: (q.explanation || "").slice(0, 420), d: idx, h: q.explanation ? 1 : 0 });
+        list.push({ q: q.question.slice(0, 400), o: q.options.map((o) => String(o).replace(/\s*[✅✔☑✓]?\s*(?:correct\s*)?answers?\s*[:\-]?\s*\(?[A-F]\)?\b.*$/i, "").slice(0, 160)), a: q.correct_answer, e: (q.explanation || "").slice(0, 420), d: idx, h: q.explanation ? 1 : 0 });
       }
     }
   } else if (d.kind === "essay") {
