@@ -3,20 +3,23 @@
 //   - notes in the style of the Year 4 notes (intro, numbered sections, practice questions); question banks and papers only laid out properly
 //   - a verdict (keep / review / irrelevant) that the admin can act on; nothing is ever deleted here
 // Very long pages are left to the batch job (scripts/blogs/polish-batch.mjs). The stored article is never changed: the result is saved in
-// blog_polish (needs SUPABASE_SERVICE_ROLE_KEY in Vercel), which the page reads.
+// blog_polish, which the page reads. Writing needs POLISH_WRITE_KEY in Vercel (made on /admin/polish): the database checks it, so the Supabase service key is not needed.
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 import { yearOf } from "./blogPolishCore.js";
 import { polishArticle } from "./blogPolishRun.js";
 
 const SB = process.env.SUPABASE_URL || "https://lkgfzjwhmfjvntzphbsh.supabase.co";
+const ANON = process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrZ2Z6andobWZqdm50enBoYnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3Nzk5MjIsImV4cCI6MjA4NzM1NTkyMn0.a2QY6TxzKNM2AhuuoDkgdKifI3XhSGhYRlhpqZpvAwo"; // the public key every visitor's browser already has
+const WRITE_KEY = () => process.env.POLISH_WRITE_KEY || "";
 const DAILY_CAP = Number(process.env.POLISH_DAILY_CAP || 40);
 const hits = new Map(); // per visitor, per hour (best effort)
 const LIMIT = 20;
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 async function sb(path, { method = "GET", body, headers = {} } = {}) {
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  const r = await fetch(`${SB}/rest/v1/${path}`, { method, headers: { apikey: key, Authorization: `Bearer ${key}`, "content-type": "application/json", ...headers }, body: body ? JSON.stringify(body) : undefined });
+  const service = process.env.SUPABASE_SERVICE_ROLE_KEY; // used only if it is set; otherwise the write key does the job
+  const key = service || ANON;
+  const r = await fetch(`${SB}/rest/v1/${path}`, { method, headers: { apikey: key, Authorization: `Bearer ${key}`, ...(service ? {} : { "x-polish-key": WRITE_KEY() }), "content-type": "application/json", ...headers }, body: body ? JSON.stringify(body) : undefined });
   const text = await r.text();
   let json = null; try { json = text ? JSON.parse(text) : null; } catch { /* not json */ }
   return { ok: r.ok, status: r.status, json, headers: r.headers };
@@ -27,7 +30,7 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ status: "invalid" });
   const groq = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
   const gem = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
-  if (!process.env.SUPABASE_SERVICE_ROLE_KEY || (!groq.trim() && !gem.trim())) return res.status(503).json({ status: "unavailable" });
+  if (!(process.env.SUPABASE_SERVICE_ROLE_KEY || WRITE_KEY()) || (!groq.trim() && !gem.trim())) return res.status(503).json({ status: "unavailable" });
 
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();

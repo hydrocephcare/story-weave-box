@@ -2,7 +2,7 @@ name: Polish the Year 1 to 3 blogs
 
 # Every morning (06:00 Nairobi time) the next batch of Year 1 to 3 blogs gets a clear title, a search description and a tidier text in the
 # style of the Year 4 notes. Results are saved in the blog_polish table, so nothing is committed and the site does not need to redeploy.
-# Needs three secrets: SUPABASE_SERVICE_ROLE_KEY, GROQ_API_KEYS and GEMINI_API_KEYS (the morning pool, not the one visitors use).
+# Needs three secrets: POLISH_WRITE_KEY (made on /admin/polish), GROQ_API_KEYS and GEMINI_API_KEYS (the morning pool, not the one visitors use).
 # Run it yourself any time: GitHub > Actions > "Polish the Year 1 to 3 blogs" > Run workflow (you can pick how many and which year).
 on:
   schedule:
@@ -40,7 +40,7 @@ jobs:
 
       - name: Polish the next blogs
         env:
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          POLISH_WRITE_KEY: ${{ secrets.POLISH_WRITE_KEY }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           COUNT: ${{ github.event.inputs.count || '20' }}

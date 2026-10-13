@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import PolishConnect from "@/components/PolishConnect";
 
 interface Row { article_id: string; status: string; verdict: string | null; reason: string | null; title: string | null; updated_at: string; articles: { title: string; category: string; slug: string | null } | null }
 type Db = { from: (t: string) => any };
@@ -48,12 +49,10 @@ export default function AdminPolish() {
       <h1 className="mt-1 font-serif text-4xl font-bold">Polished blogs</h1>
       <p className="mt-3 text-[16px] leading-relaxed text-muted-foreground">The first time someone opens a Year 1 to 3 blog, it gets a clear title, a search description and a tidier text. That copy is kept for everyone. Pages the polish thinks are weak or not study material are listed here for you to decide.</p>
 
+      <PolishConnect />
+
       {msg === "setup" ? (
-        <div className="mt-8 max-w-2xl text-[16px] leading-relaxed text-foreground/85">
-          <p className="font-serif text-2xl font-bold">Two steps to switch this on</p>
-          <p className="mt-3">1. Open the Supabase SQL editor, paste the contents of <strong>supabase/migrations/20261014090000_blog_polish.sql</strong> and run it once.</p>
-          <p className="mt-2">2. In Vercel, add the setting <strong>SUPABASE_SERVICE_ROLE_KEY</strong> (from Supabase, Project settings, API) as a Secret, then redeploy.</p>
-        </div>
+        <p className="mt-8 max-w-2xl text-[16px] leading-relaxed text-muted-foreground">The database tables for this are being set up. Try again in a few minutes.</p>
       ) : (
         <>
           {busy && <p className="mt-8 flex items-center gap-2 text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" /> Loading…</p>}

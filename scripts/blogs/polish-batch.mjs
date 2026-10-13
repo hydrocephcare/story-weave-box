@@ -1,15 +1,17 @@
 // Polishes Year 1 to 3 blogs in bulk (the page-open endpoint does one at a time). Long pages are done piece by piece.
 //   node scripts/blogs/polish-batch.mjs [count] [--year N] [--minutes M]
-// Needs SUPABASE_SERVICE_ROLE_KEY plus GROQ_API_KEYS and/or GEMINI_API_KEYS in the environment. Results go to the blog_polish table, never into the articles.
+// Needs POLISH_WRITE_KEY (made on /admin/polish) plus GROQ_API_KEYS and/or GEMINI_API_KEYS in the environment. Results go to the blog_polish table, never into the articles.
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 import { yearOf } from "../../api/_lib/blogPolishCore.js";
 import { polishArticle } from "../../api/_lib/blogPolishRun.js";
 
 const SB = process.env.SUPABASE_URL || "https://lkgfzjwhmfjvntzphbsh.supabase.co";
-const KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const SERVICE = process.env.SUPABASE_SERVICE_ROLE_KEY; // optional: the write key does the job without it
+const WRITE = process.env.POLISH_WRITE_KEY || "";
+const KEY = SERVICE || process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrZ2Z6andobWZqdm50enBoYnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3Nzk5MjIsImV4cCI6MjA4NzM1NTkyMn0.a2QY6TxzKNM2AhuuoDkgdKifI3XhSGhYRlhpqZpvAwo";
 const groq = process.env.GROQ_API_KEYS || "";
 const gem = process.env.GEMINI_API_KEYS || "";
-if (!KEY) { console.log("SUPABASE_SERVICE_ROLE_KEY is not set: nothing to do."); process.exit(0); }
+if (!SERVICE && !WRITE) { console.log("POLISH_WRITE_KEY is not set: nothing to do."); process.exit(0); }
 if (!groq.trim() && !gem.trim()) { console.log("No AI keys: nothing to do."); process.exit(0); }
 
 const yi = process.argv.indexOf("--year"), mi = process.argv.indexOf("--minutes");
@@ -19,7 +21,7 @@ const COUNT = Number(process.argv.find((a, i) => /^\d+$/.test(a) && i !== yi + 1
 const started = Date.now();
 
 const sb = async (path, { method = "GET", body, headers = {} } = {}) => {
-  const r = await fetch(`${SB}/rest/v1/${path}`, { method, headers: { apikey: KEY, Authorization: `Bearer ${KEY}`, "content-type": "application/json", ...headers }, body: body ? JSON.stringify(body) : undefined });
+  const r = await fetch(`${SB}/rest/v1/${path}`, { method, headers: { apikey: KEY, Authorization: `Bearer ${KEY}`, ...(SERVICE ? {} : { "x-polish-key": WRITE }), "content-type": "application/json", ...headers }, body: body ? JSON.stringify(body) : undefined });
   const t = await r.text(); let json = null; try { json = t ? JSON.parse(t) : null; } catch { /* not json */ }
   return { ok: r.ok, status: r.status, json, text: t };
 };
