@@ -85,11 +85,34 @@ export default function TopicPeekHost() {
     if (e.deltaY < 0 && e.currentTarget.scrollTop <= 1) { pull.current.wheel += -e.deltaY; if (pull.current.wheel > 260) { pull.current.wheel = 0; topicPeek.close(); } } else pull.current.wheel = 0;
   };
 
+  // The panel gets its own history entry, so the phone's Back button closes it (and nothing moves behind it).
+  const pushed = useRef(false);
+  const afterBack = useRef<(() => void) | null>(null);
+  useEffect(() => {
+    if (raw && !pushed.current) { try { window.history.pushState({ ompathPeek: true }, ""); pushed.current = true; } catch { /* ignore */ } }
+    if (!raw && pushed.current) { pushed.current = false; if ((window.history.state as { ompathPeek?: boolean } | null)?.ompathPeek) window.history.back(); }
+  }, [raw]);
+  useEffect(() => {
+    const onPop = () => {
+      pushed.current = false;
+      if (afterBack.current) { const f = afterBack.current; afterBack.current = null; f(); return; }
+      if (current()) topicPeek.close();
+    };
+    const current = () => document.querySelector("[data-peek-scroll]") !== null;
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
   const go = () => {
     if (!slug && !drugId) return;
     if (origin.current) setNoteReturn(origin.current);
+    const target = drugId ? `/pharmacology/drug/${drugId}?card=1` : `/topic/${slug}`;
+    const had = pushed.current && (window.history.state as { ompathPeek?: boolean } | null)?.ompathPeek;
+    pushed.current = false;
     topicPeek.close();
-    navigate(drugId ? `/pharmacology/drug/${drugId}?card=1` : `/topic/${slug}`);
+    // step back over the panel's own history entry first, so Back from the full page returns to where you were
+    if (had) { afterBack.current = () => navigate(target); window.history.back(); setTimeout(() => { if (afterBack.current) { afterBack.current = null; navigate(target); } }, 400); }
+    else navigate(target);
   };
 
   return (

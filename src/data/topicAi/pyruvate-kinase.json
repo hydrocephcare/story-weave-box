@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Pyruvate kinase deficiency is an inherited enzyme defect causing chronic hemolytic anemia. Red cells lack ATP, leading to membrane rigidity, premature destruction, and compensatory 2,3‑DPG rise.",
+ "aka": [
+  "PK deficiency",
+  "Pyruvate kinase deficiency anemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A hereditary loss‑of‑function mutation in the PKLR gene reduces red‑cell pyruvate kinase activity, impairing glycolysis and ATP generation.",
+   "b": [
+    "Diagnosis requires low PK enzyme activity in RBCs (<10% of normal) plus genetic confirmation.",
+    "Exclude other hemolytic causes with Coombs test, G6PD assay, and osmotic fragility."
+   ],
+   "t": [
+    {
+     "a": "PK enzyme assay",
+     "b": "Does the patient have reduced PK activity? Low activity confirms the defect."
+    },
+    {
+     "a": "PKLR gene sequencing",
+     "b": "Is a pathogenic mutation present? Identifies carrier status and guides counseling."
+    },
+    {
+     "a": "CBC with reticulocyte count",
+     "b": "Is there anemia with reticulocytosis? Shows chronic hemolysis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by transfusion dependence and hemoglobin level.",
+   "b": [
+    "Mild: Hb ≥ 10 g/dL, no regular transfusions.",
+    "Moderate: Hb 8‑10 g/dL, occasional transfusions.",
+    "Severe: Hb < 8 g/dL, chronic transfusion requirement."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "PK deficiency is autosomal recessive; other hemolytic disorders can coexist.",
+   "b": [
+    "PKLR gene mutation (most common cause).",
+    "Co‑existing hereditary spherocytosis or thalassemia (common in low‑resource settings).",
+    "Infections that increase hemolysis (malaria, sepsis)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop lifelong anemia, jaundice, splenomegaly, and gallstones; neonates may have severe hyperbilirubinemia.",
+   "b": [
+    "Fatigue, pallor, and exertional dyspnea.",
+    "Pigmented gallstones from chronic bilirubin overload.",
+    "Growth retardation in severe cases."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Laboratory work‑up confirms hemolysis and identifies the enzyme defect.",
+   "b": [
+    "Peripheral smear shows echinocytes and occasional spherocytes.",
+    "Elevated LDH, indirect bilirubin, low haptoglobin."
+   ],
+   "t": [
+    {
+     "a": "Peripheral blood smear",
+     "b": "What cell morphology is present? Echinocytes suggest PK deficiency."
+    },
+    {
+     "a": "Serum bilirubin, LDH, haptoglobin",
+     "b": "Is hemolysis ongoing? High indirect bilirubin/LDH, low haptoglobin confirm."
+    },
+    {
+     "a": "Ultrasound abdomen",
+     "b": "Are gallstones present? Detects pigment stones common in chronic hemolysis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from severe anemia and chronic hemolysis.",
+   "b": [
+    "Acute aplastic crisis (often triggered by parvovirus B19).",
+    "Severe hyperbilirubinemia leading to kernicterus in neonates.",
+    "Iron overload from repeated transfusions."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the hemolysis, prevent complications, and support quality of life.",
+   "b": [
+    "Folic acid supplementation to support erythropoiesis.",
+    "Transfusion for severe anemia; avoid over‑transfusion to limit iron overload.",
+    "Splenectomy in transfusion‑dependent patients improves hemoglobin.",
+    "Consider experimental gene therapy where available."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring prevents long‑term sequelae.",
+   "b": [
+    "Quarterly CBC and reticulocyte count.",
+    "Annual liver iron assessment (MRI or ferritin) if transfused.",
+    "Vaccinate against encapsulated organisms before splenectomy."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other chronic hemolytic anemias share similar signs.",
+   "b": [
+    "Hereditary spherocytosis – membrane protein defect, positive osmotic fragility test.",
+    "G6PD deficiency – episodic hemolysis after oxidative stress.",
+    "Autoimmune hemolytic anemia – positive Coombs test."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may appear normal despite disease.",
+   "b": [
+    "PK activity can be falsely normal if sample is hemolyzed; repeat assay.",
+    "Reticulocyte count may be low during aplastic crisis, masking chronic hemolysis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening anemia with fatigue, tachycardia, or chest pain.",
+  "Acute jaundice with dark urine in a newborn.",
+  "Fever and rapid drop in hemoglobin suggesting aplastic crisis."
+ ],
+ "faq": [
+  {
+   "q": "Why does PK deficiency cause increased 2,3‑DPG?",
+   "a": "Low ATP forces red cells to shift glycolysis, accumulating 2,3‑DPG which lowers oxygen affinity and partially compensates for anemia."
+  },
+  {
+   "q": "Is splenectomy curative?",
+   "a": "It improves hemoglobin by reducing destruction but does not correct the enzyme defect; lifelong monitoring remains essential."
+  },
+  {
+   "q": "Can carriers be symptomatic?",
+   "a": "Heterozygotes usually have normal PK activity and are asymptomatic, though mild anemia can occur under stress."
+  }
+ ],
+ "exam": [
+  "Describe the pathophysiology of hemolysis in pyruvate kinase deficiency.",
+  "List the laboratory criteria needed to confirm PK deficiency and differentiate it from other hemolytic anemias.",
+  "Explain the indications, benefits, and risks of splenectomy in PK deficiency."
+ ],
+ "related": [
+  "Hereditary spherocytosis",
+  "G6PD deficiency",
+  "Autoimmune hemolytic anemia",
+  "Thalassemia",
+  "Sickle cell disease",
+  "Hemolytic jaundice",
+  "Gene therapy for red cell disorders"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

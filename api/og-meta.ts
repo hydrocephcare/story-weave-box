@@ -6,7 +6,7 @@ const OG_FALLBACK_IMAGE = "https://www.ompathstudy.com/og-default.png";
 /** A share picture drawn from the note's own title, year and unit (api/note-card.js), for notes that have no picture of their own. */
 function cardUrl(title: unknown, category: unknown, kind: string): string {
   const p = new URLSearchParams({ title: String(title || "Study notes").slice(0, 140), kind });
-  const m = String(category || "").match(/^Years*(d)s*:s*(.*)$/i);
+  const m = String(category || "").match(/^Year\s*(\d)\s*:\s*(.*)$/i);
   if (m) { p.set("year", m[1]); p.set("unit", m[2].slice(0, 40)); } else if (category) p.set("unit", String(category).slice(0, 40));
   return `https://www.ompathstudy.com/api/note-card?${p.toString()}`;
 }
@@ -819,6 +819,21 @@ export default async function handler(req: Request): Promise<Response> {
       ogImage = contest.share_image_url || OG_FALLBACK_IMAGE;
       keywords = `OmpathStudy, medical contest Kenya, ${contest.title}, live exam competition`;
       type = "website";
+    } else if (section === "topic" && param) {
+      // a topic page written on the site since the last deploy has no prepared page yet: its share card comes straight from the database
+      const rows = await sbFetch("topic_pages", `select=slug,name,category,content&slug=eq.${encodeURIComponent(decodeURIComponent(param).toLowerCase())}&status=eq.published&limit=1`).catch(() => []);
+      const row = rows?.[0];
+      if (row) {
+        const c = row.content || {};
+        title = `${row.name}: overview, causes, management and practice questions | Ompath Study`;
+        description = toMetaDescription(c.summary || `Everything on ${row.name} from Ompath Study.`, `Notes, images and practice questions on ${row.name}.`);
+        ogImage = cardUrl(row.name, row.category, "Topic");
+        keywords = `${row.name}, ${row.category || "medicine"}, medical students, Ompath Study, study notes, MCQs`;
+        type = "article";
+        schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "MedicalWebPage", name: title, url: absoluteUrl, description, image: ogImage, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: origin } });
+        const secs = Array.isArray(c.sections) ? c.sections : [];
+        bodyExtra = `<article><h1>${htmlEscape(row.name)}</h1><p>${htmlEscape(c.summary || "")}</p>${secs.map((x: { h?: string; p?: string; b?: string[] }) => `<h2>${htmlEscape(x.h || "")}</h2>${x.p ? `<p>${htmlEscape(x.p)}</p>` : ""}${Array.isArray(x.b) ? `<ul>${x.b.map((t) => `<li>${htmlEscape(t)}</li>`).join("")}</ul>` : ""}`).join("")}</article>`;
+      }
     } else if (section === "blog" && param) {
       const article = await fetchArticleBySlug(param);
       if (!article) {

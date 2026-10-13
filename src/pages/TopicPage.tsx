@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, Check, Link2, Share2, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
+import { ArrowLeft, Check, ClipboardCheck, Link2, Share2, Stethoscope, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { aiPaused, looksLikeBot } from "@/lib/topicWriter";
 import { DOMAIN_STYLE, imageCaption, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
@@ -10,6 +10,7 @@ import { rebalanceMcqAnswerLetters } from "@/lib/store";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
+import { openAI } from "@/lib/aiEvents";
 
 const SITE = "https://www.ompathstudy.com";
 const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -269,24 +270,24 @@ export default function TopicPage() {
         {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
       </Helmet>
 
-      <header className="relative isolate overflow-hidden border-b border-border bg-gradient-to-br from-primary/[0.14] via-background to-background">
-        <div className="absolute -right-24 -top-32 -z-10 h-96 w-96 rounded-full bg-primary/15 blur-3xl" aria-hidden />
-        <div className="absolute -bottom-40 left-1/3 -z-10 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" aria-hidden />
+      <header className="relative isolate overflow-hidden border-b border-border/60">
+        <div className="hero-aurora" aria-hidden><span /><span /><span /></div>
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-12 pt-8 sm:pb-16 sm:pt-12 md:grid-cols-[minmax(0,1fr)_21rem]">
           <div className="min-w-0">
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-muted-foreground"><button type="button" onClick={() => (window.history.length > 1 ? navigate(-1) : navigate("/topics"))} className="mr-2 inline-flex items-center gap-1 rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-foreground/80 hover:border-primary/60"><ArrowLeft className="h-3.5 w-3.5" aria-hidden /> Back</button><Link to="/topics" className="hover:text-primary hover:underline">Topics</Link><ChevronRight className="h-3.5 w-3.5" /><span>{style.label}</span></nav>
             <h1 className={cn("mt-5 font-serif font-bold leading-[1.05] tracking-tight text-foreground [overflow-wrap:anywhere]", Math.max(...name.split(/\s+/).map((w) => w.length)) > 12 ? "text-[2.15rem] sm:text-6xl lg:text-7xl" : "text-5xl sm:text-6xl lg:text-7xl")}>{name}</h1>
             {aka.length > 0 && <p className="mt-3 text-lg text-muted-foreground">Also called {aka.join(", ")}</p>}
             {summary ? <p className="mt-6 max-w-2xl text-xl leading-[1.65] text-foreground/85 sm:text-[1.4rem] sm:leading-[1.65]">{summary}</p> : writing ? <div className="mt-6 max-w-2xl space-y-3" aria-hidden><div className="h-5 w-full animate-pulse rounded bg-foreground/10" /><div className="h-5 w-11/12 animate-pulse rounded bg-foreground/10" /><div className="h-5 w-2/3 animate-pulse rounded bg-foreground/10" /></div> : null}
-            <div className="mt-7 flex flex-wrap gap-3">
-              {topic && topic.qs.length > 0 && <a href="#practice" className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-90">Test yourself</a>}
+            <div className="mt-7 flex flex-wrap gap-2.5 sm:gap-3">
+              {topic && topic.qs.length > 0 && <a href="#practice" className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] bg-primary text-primary-foreground shadow-md shadow-primary/25 hover:brightness-110"><ClipboardCheck className="h-4 w-4" aria-hidden /> Test yourself</a>}
+              <button type="button" onClick={() => openAI(`Explain ${name} simply, then give me the five points an examiner expects.`)} className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/15"><Sparkles className="h-4 w-4 text-primary" aria-hidden /> Ask Ompath AI</button>
+              {manage && <a href={`#${anchor(manage.h)}`} className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] border border-border/70 bg-background/70 backdrop-blur hover:border-primary/60 hover:bg-background"><Stethoscope className="h-4 w-4" aria-hidden /> Management</a>}
               <button type="button" onClick={async () => {
                 const url = `${SITE}${topicPath(slug)}`;
-                try { if (navigator.share) { await navigator.share({ title: `${name} | Ompath Study`, text: summary || name, url }); return; } } catch { return; }
+                try { if (navigator.share) { await navigator.share({ title: `${name} | Ompath Study`, url }); return; } } catch { return; }
                 try { await navigator.clipboard.writeText(url); setShared("Link copied"); } catch { setShared(url); }
                 setTimeout(() => setShared(""), 2500);
-              }} className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-base font-bold hover:border-primary/60">{shared ? <Link2 className="h-4 w-4" aria-hidden /> : <Share2 className="h-4 w-4" aria-hidden />}{shared || "Share"}</button>
-              {manage && <a href={`#${anchor(manage.h)}`} className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-base font-bold hover:border-primary/60">Management</a>}
+              }} className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] border border-border/70 bg-background/70 backdrop-blur hover:border-primary/60 hover:bg-background">{shared ? <Link2 className="h-4 w-4" aria-hidden /> : <Share2 className="h-4 w-4" aria-hidden />}{shared || "Share"}</button>
             </div>
           </div>
           {media?.hero && (
@@ -474,6 +475,19 @@ export default function TopicPage() {
                 </ul>
               </Section>
             )}
+
+            <div className="mt-5 overflow-hidden rounded-2xl border border-primary/25 bg-gradient-to-br from-primary/10 via-card to-card p-5 sm:mt-6 sm:rounded-3xl sm:p-8">
+              <p className="flex items-center gap-2 font-serif text-[1.35rem] font-bold sm:text-2xl"><Sparkles className="h-5 w-5 text-primary" aria-hidden /> Study {name} with Ompath AI</p>
+              <p className="mt-1.5 text-[15px] text-muted-foreground">Ask anything, or start with one of these. Answers use the site's notes first.</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {[
+                  ["Explain it simply", `Explain ${name} simply, as if I am a first-year student.`],
+                  ["Quiz me", `Ask me 5 exam-style MCQs on ${name}, one at a time, and mark my answers.`],
+                  ["Exam questions", `What are the most likely exam questions on ${name}, with model answers?`],
+                  ["Ward round", `I am presenting a patient with ${name} on a ward round. How do I present and what will the consultant ask me?`],
+                ].map(([label, q]) => <button key={label} type="button" onClick={() => openAI(q)} className="rounded-full border border-border bg-background px-4 py-2.5 text-sm font-bold transition hover:border-primary/60 hover:bg-primary/5 active:scale-[.97]">{label}</button>)}
+              </div>
+            </div>
 
             {related.length > 0 && (
               <Section id="related" title="Related topics">
