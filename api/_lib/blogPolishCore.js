@@ -33,7 +33,7 @@ export function needsMcqFormat(content) {
 }
 
 /** The polished text must still say what the original said: numbers and long words kept, pictures kept, a sensible length, real headings. */
-export function soundPolish(original, out, { headings = true } = {}) {
+export function soundPolish(original, out, { headings = true, maxRatio = 1.4 } = {}) {
   const nums = [...new Set((plain(original).match(/\d+(?:[.,]\d+)?/g) ?? []).filter((n) => n.length >= 2))];
   const keptNums = nums.filter((n) => out.includes(n)).length;
   if (nums.length >= 5 && keptNums / nums.length < 0.9) return `numbers lost (${keptNums}/${nums.length})`;
@@ -42,7 +42,7 @@ export function soundPolish(original, out, { headings = true } = {}) {
   const kept = words.filter((w) => o.includes(w)).length;
   if (words.length >= 20 && kept / words.length < 0.8) return `words lost (${kept}/${words.length})`;
   const ratio = plain(out).length / Math.max(1, plain(original).length);
-  if (ratio < 0.6 || ratio > 1.4) return `length changed (${ratio.toFixed(2)})`;
+  if (ratio < 0.6 || ratio > maxRatio) return `length changed (${ratio.toFixed(2)})`;
   if (headings && (out.match(/^##\s/gm) ?? []).length < 2) return "no headings";
   const pics = picturesIn(original);
   if (pics && picturesIn(out) < pics) return "pictures lost";
@@ -64,3 +64,39 @@ export function parseJson(text) {
 }
 
 export const VERDICTS = ["keep", "review", "irrelevant"];
+
+/** A written-question paper (essays, short answers) that is not yet laid out one question per heading. */
+export function needsPaperFormat(content) {
+  const c = String(content ?? "");
+  const qs = (c.match(/^(?:#{1,4}\s*)?\**Question\s*\d+/gim) ?? []).length;
+  if (qs < 3) return false;
+  const options = (c.match(/^\s*[-*]?\s*\(?[A-E][.)]\s+\S/gm) ?? []).length;
+  if (options >= qs * 2) return false; // a multiple-choice bank
+  const headed = (c.match(/^###\s+Question\s*\d+/gim) ?? []).length;
+  return headed < qs * 0.8;
+}
+
+/** What kind of page this is, which decides how it is polished: scan | bank | paper | note. */
+export function kindOf(content) {
+  if (isScanOnly(content)) return "scan";
+  if (isBank(content)) return needsMcqFormat(content) ? "bank" : needsPaperFormat(content) ? "paper" : "formatted";
+  // a short written paper (three or four questions) is not a bank, but it is not a note either: few sections, mostly questions
+  if (needsPaperFormat(content) && (String(content).match(/^##s/gm) ?? []).length < 3) return "paper";
+  return "note";
+}
+
+/** Splits long text into pieces of about `max` characters, only at a heading or a question, or (if there is none) at a blank line. */
+export function chunksOf(text, max = 8500) {
+  const out = [];
+  let cur = [];
+  let len = 0;
+  const starts = (l) => /^#{1,3}\s|^(?:#{1,4}\s*)?\**Question\s*\d+/i.test(l);
+  for (const line of String(text ?? "").split("\n")) {
+    const boundary = starts(line) && len > max * 0.55;
+    const forced = line.trim() === "" && len > max * 1.25;
+    if ((boundary || forced) && cur.length) { out.push(cur.join("\n")); cur = []; len = 0; }
+    cur.push(line); len += line.length + 1;
+  }
+  if (cur.length) out.push(cur.join("\n"));
+  return out.filter((c) => c.trim());
+}

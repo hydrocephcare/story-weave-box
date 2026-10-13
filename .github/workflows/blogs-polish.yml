@@ -1,0 +1,49 @@
+name: Polish the Year 1 to 3 blogs
+
+# Every morning (06:00 Nairobi time) the next batch of Year 1 to 3 blogs gets a clear title, a search description and a tidier text in the
+# style of the Year 4 notes. Results are saved in the blog_polish table, so nothing is committed and the site does not need to redeploy.
+# Needs three secrets: SUPABASE_SERVICE_ROLE_KEY, GROQ_API_KEYS and GEMINI_API_KEYS (the morning pool, not the one visitors use).
+# Run it yourself any time: GitHub > Actions > "Polish the Year 1 to 3 blogs" > Run workflow (you can pick how many and which year).
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many blogs to polish this run"
+        required: false
+        default: "20"
+      year:
+        description: "Only this year (1, 2 or 3); leave empty for all"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: blogs-polish
+  cancel-in-progress: false
+
+jobs:
+  polish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Polish the next blogs
+        env:
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          COUNT: ${{ github.event.inputs.count || '20' }}
+          YEAR: ${{ github.event.inputs.year }}
+        run: |
+          if [ -n "$YEAR" ]; then node scripts/blogs/polish-batch.mjs "$COUNT" --year "$YEAR" --minutes 50; else node scripts/blogs/polish-batch.mjs "$COUNT" --minutes 50; fi
