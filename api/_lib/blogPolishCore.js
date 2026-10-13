@@ -88,6 +88,8 @@ export function kindOf(content) {
   const c = String(content ?? "");
   const qs = (c.match(/^(?:#{1,4}\s*)?\**(?:Question|Q)\s*\d+/gim) ?? []).length;
   const sections = (c.match(/^##\s/gm) ?? []).length;
+  // an exam typed from a scan whose typing is broken is not rewritten by the AI (it loses real content); the page shows the scanned pages instead
+  if (isExamLike(c) && ocrDamaged(c)) return "scan";
   const questionPage = isBank(c) || (qs >= 3 && sections < 3) || isExamLike(c);
   if (questionPage) {
     if (needsMcqFormat(c) || needsPaperFormat(c)) return "questions";
@@ -176,4 +178,16 @@ export function withScans(content, originalNotes) {
   const pages = scanPages(originalNotes).filter((p) => !content.includes(p));
   if (pages.length < 2) return content;
   return `${content.trim()}\n\n## Original pages\n\nThe pages as they were printed, for the diagrams and anything the typing above could not keep.\n\n${pages.join("\n\n")}\n`;
+}
+
+/** The typing of a scanned paper is broken: page markers inside the text, or diagrams shredded into runs of one-to-four-character lines. */
+export function ocrDamaged(content) {
+  const c = String(content ?? "");
+  if (/^.{0,12}Page\s+\d+\s+of\s+\d+/im.test(c)) return true;
+  let run = 0, runs = 0;
+  for (const line of c.split("\n")) {
+    const t = line.trim();
+    if (t && t.length <= 9 && !/[A-Za-z]{4,}/.test(t) && !/^(\d+[.)]?|[A-E][.)]?|[-*|>#]+|\(?[ivx]+\)?)$/i.test(t) && (t.length <= 4 || /[—–=|]/.test(t))) { run++; if (run === 3) runs++; } else if (t) run = 0;
+  }
+  return runs >= 1;
 }
