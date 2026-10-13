@@ -163,7 +163,8 @@ export default function TopicPage() {
   useEffect(() => { if (topic || page) rememberTopic(slug, topic?.n ?? name); }, [slug, topic, page]); // eslint-disable-line react-hooks/exhaustive-deps
   const media = useWebMedia(name, [...(topic?.a ?? []), ...(page?.aka ?? [])], phase !== "loading");
 
-  const style = DOMAIN_STYLE[topic?.c ?? ""] ?? DOMAIN_STYLE.Medicine;
+  const subject = topic?.c ?? (page as { subject?: string } | null)?.subject ?? "";
+  const style = DOMAIN_STYLE[subject] ?? DOMAIN_STYLE.Medicine;
   const isDisease = ["Pathology", "Medicine", "Psychiatry", "Paediatrics", "Obstetrics & gynaecology", "Surgery", "Pharmacology"].includes(topic?.c ?? "") || page?.kind === "disease";
 
   const summary = useMemo(() => {
@@ -198,7 +199,7 @@ export default function TopicPage() {
       <main className="mx-auto max-w-xl px-5 py-16">
         <Helmet><title>{name} | Ompath Study</title><meta name="robots" content="noindex" /></Helmet>
         {phase === "writing" && <Writing name={name} />}
-        {phase === "rejected" && <div className="text-center"><h1 className="font-serif text-2xl font-bold">“{name}” does not look like a medical topic</h1><p className="mt-2 text-sm text-muted-foreground">We only build pages for medicine, anatomy, physiology, pathology, microbiology and pharmacology.</p></div>}
+        {phase === "rejected" && <div className="text-center"><h1 className="font-serif text-2xl font-bold">“{name}” is not on Ompath Study</h1><p className="mt-2 text-sm text-muted-foreground">We only cover medicine and health: diseases, anatomy, physiology, pathology, microbiology, pharmacology, and reproductive and public health.</p></div>}
         {(phase === "failed" || phase === "unavailable" || phase === "missing") && (
           <div className="text-center">
             <h1 className="font-serif text-2xl font-bold">We could not build the page on “{name}” just now</h1>

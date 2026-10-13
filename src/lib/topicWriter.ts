@@ -8,7 +8,7 @@ import { buildPartPrompts, mergeParts, parseJsonReply } from "../../supabase/fun
 import { slugOf, validName } from "../../supabase/functions/_shared/topicAi.js";
 import type { AiPage } from "@/lib/topics";
 
-export type WriteResult = { status: "published"; page: AiPage; saved: boolean } | { status: "rejected" | "failed" | "busy" | "limit" | "bot" };
+export type WriteResult = { status: "published"; page: AiPage & { subject?: string }; saved: boolean } | { status: "rejected" | "failed" | "busy" | "limit" | "bot" };
 
 const DAY_KEY = "ompath_topic_writes";
 const PER_VISITOR_PER_DAY = 5;
@@ -70,10 +70,11 @@ export async function writeTopicPage({ name, category, context, signal }: { name
   // Route 2: Ompath AI in short parts, then publish with the database function
   try {
     const prompts = buildPartPrompts({ name, category });
-    const results = await Promise.all(prompts.map((p, i) => askOmpathAi(p, i === 0 ? context : "", name, category, signal).then(parseJsonReply, () => null)));
-    const parts = results as (Record<string, unknown> | null)[];
-    if (!parts[0]) return { status: "failed" };
-    if (parts[0].medical === false) return { status: "rejected" };
+    const first = await askOmpathAi(prompts[0], context, name, category, signal).then(parseJsonReply, () => null);
+    if (!first) return { status: "failed" };
+    if (first.medical === false) return { status: "rejected" };
+    const later = await Promise.all(prompts.slice(1).map((p) => askOmpathAi(p, "", name, category, signal).then(parseJsonReply, () => null)));
+    const parts = [first, ...later] as (Record<string, unknown> | null)[];
     let page: AiPage & { medical?: boolean };
     try { page = mergeParts(parts, { name, category, model: "gemini" }) as AiPage & { medical?: boolean }; } catch { return { status: "failed" }; }
     if (page.medical === false) return { status: "rejected" };
@@ -81,7 +82,7 @@ export async function writeTopicPage({ name, category, context, signal }: { name
     let saved = false;
     try {
       const { data } = await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<{ data: { ok?: boolean; existing?: boolean; reason?: string } | null }> })
-        .rpc("publish_topic_page", { p_slug: slug, p_name: name, p_category: category, p_content: page, p_model: "gemini" });
+        .rpc("publish_topic_page", { p_slug: slug, p_name: name, p_category: category || (page as { subject?: string }).subject || "", p_content: page, p_model: "gemini" });
       saved = Boolean(data?.ok);
       if (data?.reason === "busy") return { status: "published", page, saved: false };
     } catch { saved = false; }

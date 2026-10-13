@@ -3,6 +3,19 @@
 // Used by the browser (src/lib/topicWriter.ts) when the topic-ai edge function is not available. Plain JS so tests and the browser share it.
 import { kindOf, sanitizePage } from "./topicAi.js";
 
+/** The subjects a topic can be filed under in the A-Z list. */
+/** Maps whatever the model wrote ("Reproductive Health & OBGYN") onto one of the subjects the A-Z list uses. */
+export function pickSubject(raw, fallbackText = "") {
+  const t = String(raw ?? "").trim().toLowerCase();
+  const exact = SUBJECTS.find((x) => x.toLowerCase() === t);
+  if (exact) return exact;
+  const rules = [[/obstet|gynae|gyne|reproduct|pregnan|contracept|maternal/, "Obstetrics & gynaecology"], [/paed|pediat|child|neonat/, "Paediatrics"], [/psych|mental|behavio/, "Psychiatry"], [/surg|trauma|orthop/, "Surgery"], [/public|epidem|communit|preventive/, "Public health"], [/pharm|drug|therap/, "Pharmacology"], [/microb|immun|infect|parasit|virolog|bacteri/, "Microbiology & immunology"], [/patho|oncolog|cancer|haemat|hemat/, "Pathology"], [/anat|embryo|histolog/, "Anatomy"], [/physio/, "Physiology"], [/bioch|genet|molecul|nutrition/, "Biochemistry & genetics"]];
+  for (const [re, name] of rules) if (re.test(t)) return name;
+  void fallbackText;
+  return t ? "Medicine" : undefined;
+}
+export const SUBJECTS = ["Anatomy", "Physiology", "Biochemistry & genetics", "Pharmacology", "Microbiology & immunology", "Pathology", "Psychiatry", "Paediatrics", "Obstetrics & gynaecology", "Surgery", "Public health", "Medicine"];
+
 const OVERRIDE = "FORMAT OVERRIDE: this is a page-writing job for a public medical website, not a chat answer. Reply with ONLY one JSON object, no other text. Follow the shape exactly. Standard accepted medical knowledge only; leave out anything you are not sure of; never give drug doses or brand names; no web links.";
 
 export function buildPartPrompts({ name, category }) {
@@ -11,9 +24,9 @@ export function buildPartPrompts({ name, category }) {
   const p1 = `${OVERRIDE}
 
 Topic: "${name}" (area: ${category || "medicine"}).
-If it is not a real medical, anatomical, physiological, biochemical, microbiological, pharmacological or health topic, reply exactly {"medical": false}.
+MEDICAL RELEVANCE IS REQUIRED. Only write about a real topic in human medicine or health: a disease or condition, symptom, sign, test, drug or drug class, procedure, anatomical structure, physiological or biochemical process, microorganism, or a public-health or reproductive-health topic (family planning, antenatal care, vaccination and similar are medical). For anything else (a person, brand, place, sport, entertainment, politics, technology, a joke, or a word with no clinical meaning) reply exactly {"medical": false} and nothing else.
 
-Shape: {"medical": true, "summary": "2-3 plain sentences, under 60 words", "aka": ["other names or abbreviations"], "sections": [{"h": "heading", "p": "short paragraph", "b": ["short bullet"], "t": [{"a": "test or item", "b": "the question it answers and what the result means"}]}]}
+Shape: {"medical": true, "subject": "ONE of: Anatomy, Physiology, Biochemistry & genetics, Pharmacology, Microbiology & immunology, Pathology, Psychiatry, Paediatrics, Obstetrics & gynaecology, Surgery, Public health, Medicine", "summary": "2-3 plain sentences, under 60 words", "aka": ["other names or abbreviations"], "sections": [{"h": "heading", "p": "short paragraph", "b": ["short bullet"], "t": [{"a": "test or item", "b": "the question it answers and what the result means"}]}]}
 
 Write 4 to 6 sections that teach the clinical reasoning for ${name}: ${disease
     ? "definition and how it is diagnosed; severity or staging; causes by category, most likely first, including infections and conditions common in the tropics and low-resource settings; how it presents; investigations as a table in \"t\" (test, the question it answers, what the result means). Do NOT cover management or complications here: they are written separately"
@@ -59,5 +72,6 @@ export function mergeParts(parts, { name, category, model }) {
     exam: second.exam,
     related: second.related,
   });
-  return page.medical ? { ...page, kind: kindOf(category, name), model, generatedAt: new Date().toISOString().slice(0, 10) } : page;
+  const subject = pickSubject(a?.subject, `${name} ${category}`);
+  return page.medical ? { ...page, ...(subject ? { subject } : {}), kind: kindOf(category, name), model, generatedAt: new Date().toISOString().slice(0, 10) } : page;
 }

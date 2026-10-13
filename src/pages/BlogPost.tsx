@@ -499,62 +499,22 @@ function ClassicHeroInner({
   const heroImage = specificImage || topicImage?.url || "";
   const reviewer = "";
 
-  /* Cinematic hero restored: slow-panning background photograph with the title
-     and description overlaid, as the site originally had. Falls back to a clean
-     text masthead when no image is available. */
-  if (!heroImage) {
-    return (
-      <header className="mb-8">
-        <div className="border-b border-border pb-6">
-          {unit && <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{unit}</p>}
-          <h1
-            id={slugify(title)}
-            className="mt-2 scroll-mt-20 font-serif text-[1.85rem] font-bold leading-[1.15] text-foreground sm:text-[2.6rem] lg:text-[3rem]"
-          >
-            {title}
-          </h1>
-          {description && (
-            <p className="mt-3 max-w-[62ch] text-[15px] leading-relaxed text-muted-foreground sm:text-base">{description}</p>
-          )}
-          <ReviewedBadge reviewer={reviewer} date={date} />
-        </div>
-        <ShareButtons url={shareUrl} title={title} description={description} variant="full" className="mt-5" />
-      </header>
-    );
-  }
-
   return (
     <header className="mb-8">
-      <div className="relative overflow-hidden rounded-xl border border-border bg-muted">
-        <img
-          src={heroImage}
-          alt={title}
-          loading="eager"
-          // @ts-expect-error fetchpriority is valid HTML
-          fetchpriority="high"
-          decoding="async"
-          className="absolute inset-0 h-full w-full animate-hero-pan object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/20" />
-        {!specificImage && topicImage?.pageUrl && (
-          <a href={topicImage.pageUrl} target="_blank" rel="noreferrer" className="absolute right-2 top-2 z-10 rounded bg-black/60 px-2 py-1 text-[9px] text-white/90" title={`${topicImage.credit} · ${topicImage.license}`}>Image: Commons</a>
-        )}
-        <div className="relative flex min-h-[260px] flex-col justify-end p-5 sm:min-h-[340px] sm:p-8">
-          {unit && (
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary-foreground/80">{unit}</p>
-          )}
-          <h1
-            id={slugify(title)}
-            className="mt-2 scroll-mt-20 font-serif text-[1.7rem] font-bold leading-[1.15] text-white drop-shadow sm:text-[2.4rem] lg:text-[2.8rem]"
-          >
-            {title}
-          </h1>
-          {description && (
-            <p className="mt-3 max-w-[62ch] text-[14px] leading-relaxed text-white/85 sm:text-base">{description}</p>
-          )}
-        </div>
+      <div className={heroImage ? "" : "border-b border-border pb-6"}>
+        {unit && <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{unit}</p>}
+        <h1 id={slugify(title)} className="mt-2 scroll-mt-20 font-serif text-[2rem] font-bold leading-[1.1] tracking-tight text-foreground sm:text-[2.8rem] lg:text-[3.3rem]">{title}</h1>
+        {description && <p className="mt-4 max-w-[68ch] text-[17px] leading-relaxed text-foreground/75 sm:text-xl sm:leading-relaxed">{description}</p>}
+        <ReviewedBadge reviewer={reviewer} date={date} />
       </div>
-      <ReviewedBadge reviewer={reviewer} date={date} />
+      {heroImage && (
+        <figure className="mt-6">
+          <div className="overflow-hidden rounded-2xl border border-border bg-muted">
+            <img src={heroImage} alt={title} loading="eager" decoding="async" className="h-44 w-full object-cover object-center sm:h-64 lg:h-72" />
+          </div>
+          {!specificImage && topicImage?.pageUrl && <figcaption className="mt-1.5 text-[11px] text-muted-foreground">Picture: {topicImage.credit}, {topicImage.license}</figcaption>}
+        </figure>
+      )}
       <ShareButtons url={shareUrl} title={title} description={description} variant="full" className="mt-5" />
     </header>
   );
@@ -592,11 +552,8 @@ function SourceAttribution({ article }: { article: any }) {
   const hay = `${article?.title || ""}\n${article?.content || ""}\n${article?.meta_description || ""}`;
   const looksExamLike = /\b(MKU|Mount\s+Kenya\s+University|past\s*paper|CAT|MCQ|essay|question|exam|paper\s*\d)\b/i.test(hay);
   if (chips.length === 0 && tags.length === 0 && !looksExamLike) return null;
-  const sourceLine = "Prepared as an international medical revision resource. Original paper provenance is preserved within the document where available.";
   return (
-    <div className="mb-5 rounded-lg border border-border/70 bg-muted/30 p-3.5">
-      <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">Source & Attribution</p>
-      <p className="mt-1 text-xs text-foreground/80">{sourceLine}</p>
+    <div className="mb-5">
       {chips.length > 0 && (
         <div className="mt-2.5 flex flex-wrap gap-1.5">
           {chips.map((c, i) => (
@@ -1918,7 +1875,7 @@ export default function BlogPost() {
               storageKey={article.slug || article.id}
             >
             <ClassicHero
-              title={cleanMetaTitle(article)}
+              title={decodeEntities(article.title || "").replace(/^#+s*/, "").replace(/s+/g, " ").trim() || cleanMetaTitle(article)}
               image={article.og_image_url || extractFirstImageFromContent(article.content || "") || ""}
               date={date}
               unit={unitName && unitName !== "Uncategorized" ? unitName : ""}

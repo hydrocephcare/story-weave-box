@@ -21,7 +21,7 @@ function loadDb(): Promise<Row[]> {
       const y = getYearFromCategory(r.category);
       rows.push({ key: `a:${r.id}`, title: r.title, to: buildBlogPath(r), kind: /past paper|cat\b|exam/i.test(r.title) ? "Past paper" : "Blog", year: y ? Number(y.slice(5)) : null, unit: getCategoryDisplayName(r.category), at: Date.parse(r.created_at) });
     }
-    for (const r of (t.data ?? []) as { slug: string; name: string; category: string | null; updated_at: string }[]) rows.push({ key: `t:${r.slug}`, title: r.name, to: topicPath(r.slug), kind: "Topic", year: null, unit: r.category || "Topic page", at: Date.parse(r.updated_at) });
+    for (const r of (t.data ?? []) as { slug: string; name: string; category: string | null; updated_at: string }[]) rows.push({ key: `t:${r.slug}`, title: r.name, to: topicPath(r.slug), kind: "Topic", year: null, unit: r.category || "Medicine", at: Date.parse(r.updated_at) });
     return rows.filter((r) => Number.isFinite(r.at));
   })();
   return dbMemo;

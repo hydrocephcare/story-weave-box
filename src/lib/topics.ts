@@ -21,6 +21,7 @@ export interface AiPage {
   faq?: { q: string; a: string }[];
   related?: string[];
   kind?: string;
+  subject?: string;
   model?: string;
   generatedAt?: string;
   reviewed?: boolean;
@@ -142,12 +143,18 @@ const LOCAL = "ompath_topic_local";
 const readLocal = (slug: string): AiPage | null => { try { const m = JSON.parse(localStorage.getItem(LOCAL) ?? "{}") as Record<string, { at: number; page: AiPage }>; const v = m[slug]; return v && Date.now() - v.at < 86_400_000 ? v.page : null; } catch { return null; } };
 const writeLocal = (slug: string, page: AiPage) => { try { const m = JSON.parse(localStorage.getItem(LOCAL) ?? "{}") as Record<string, { at: number; page: AiPage }>; const keys = Object.keys(m); if (keys.length > 20) delete m[keys[0]]; m[slug] = { at: Date.now(), page }; localStorage.setItem(LOCAL, JSON.stringify(m)); } catch { /* storage full or blocked */ } };
 
+// a name that turned out not to be medical is remembered on this device for a week, so it is not tried again
+const REJ = "ompath_topic_rejected";
+const wasRejected = (slug: string) => { try { const m = JSON.parse(localStorage.getItem(REJ) ?? "{}") as Record<string, number>; return Date.now() - (m[slug] ?? 0) < 7 * 86_400_000; } catch { return false; } };
+const markRejected = (slug: string) => { try { const m = JSON.parse(localStorage.getItem(REJ) ?? "{}") as Record<string, number>; m[slug] = Date.now(); localStorage.setItem(REJ, JSON.stringify(m)); } catch { /* ignore */ } };
+
 async function askServer(slug: string, name: string, category: string, context: string): Promise<Ask> {
+  if (wasRejected(slug)) return { status: "rejected" };
   const local = readLocal(slug);
   if (local) return { status: "published", page: local };
   const r = await writeTopicPage({ name, category, context });
-  if (r.status === "published") { if (!r.saved) writeLocal(slug, r.page); addToTopicIndex({ s: slug, n: name, c: category }); return { status: "published", page: r.page }; }
-  if (r.status === "rejected") return { status: "rejected" };
+  if (r.status === "published") { if (!r.saved) writeLocal(slug, r.page); addToTopicIndex({ s: slug, n: name, c: category || (r.page as { subject?: string }).subject }); return { status: "published", page: r.page }; }
+  if (r.status === "rejected") { markRejected(slug); return { status: "rejected" }; }
   if (r.status === "busy" || r.status === "limit") return { status: "busy" };
   return { status: r.status === "bot" ? "unavailable" : "failed" };
 }

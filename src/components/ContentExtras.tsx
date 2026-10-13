@@ -166,15 +166,17 @@ export function ContentToc({ content }: { content: string }) {
   }, [content]);
   if (!items.length) return null;
   return (
-    <nav aria-label="Table of contents" className="my-6 rounded-lg border border-border bg-muted/40 p-4">
-      <p className="mb-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">On this page</p>
-      <ul className="space-y-1 text-sm">
-        {items.map((it, i) => (
-          <li key={i} className={it.level === 3 ? "pl-4" : ""}>
-            <a href={`#${it.id}`} className="text-primary hover:underline">{it.text}</a>
-          </li>
-        ))}
-      </ul>
+    <nav aria-label="Table of contents" className="my-5 lg:hidden">
+      <details className="group rounded-xl border border-border bg-muted/40">
+        <summary className="flex cursor-pointer list-none items-center justify-between px-4 py-3 text-sm font-bold [&::-webkit-details-marker]:hidden">On this page <span className="text-xs font-semibold text-muted-foreground group-open:hidden">{items.length} sections ▾</span><span className="hidden text-xs font-semibold text-muted-foreground group-open:inline">Hide ▴</span></summary>
+        <ul className="space-y-1 px-4 pb-4 text-sm">
+          {items.map((it, i) => (
+            <li key={i} className={it.level === 3 ? "pl-4" : ""}>
+              <a href={`#${it.id}`} className="text-primary hover:underline">{it.text}</a>
+            </li>
+          ))}
+        </ul>
+      </details>
     </nav>
   );
 }
