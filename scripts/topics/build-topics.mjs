@@ -51,12 +51,16 @@ if (corpus.articles.length < 100 && !process.env.ALLOW_SMALL) {
   console.error("corpus too small (" + corpus.articles.length + " articles): keeping the existing topic files");
   process.exit(1);
 }
+// same rule as cleanPublicSlug in src/lib/store.ts: links must use the clean public slug, or every one of them is a redirect
+const slugifyTitle = (t) => String(t ?? "").toLowerCase().trim().replace(/&/g, " and ").replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
+const cleanSlug = (raw, title, fallback) => ((String(raw || "").trim() || slugifyTitle(title) || fallback).toLowerCase()
+  .replace(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}-/i, "").replace(/-[0-9a-f]{6,12}$/i, "").replace(/-+/g, "-").replace(/^-|-$/g, "")) || fallback;
 const docs = [];
 const LF = (s) => String(s || "").replace(/\r\n?/g, "\n");
 for (const n of corpus.notes) docs.push({ id: `n:${n.slug}`, kind: "note", title: n.title, url: `/notes/${n.slug}`, year: n.year, unit: n.unit, text: LF(n.text), updated: n.updated });
-for (const a of corpus.articles) { const u = unitOf(a.category); docs.push({ id: `a:${a.id}`, kind: "article", title: a.title, url: `/blog/${a.slug || a.id}`, year: u.year, unit: u.unit, text: LF(a.content), updated: (a.updated_at || a.created_at || "").slice(0, 10) }); }
-for (const m of corpus.mcqs) { const u = unitOf(m.category); docs.push({ id: `m:${m.id}`, kind: "mcq", title: m.title, url: `/mcqs/${m.slug || m.id}`, year: u.year, unit: u.unit, text: (m.questions || []).map((q) => q.question).join("\n"), questions: m.questions || [] }); }
-for (const e of corpus.essays) { const u = unitOf(e.category); const qs = [...(e.short_answer_questions || []), ...(e.long_answer_questions || [])]; docs.push({ id: `e:${e.id}`, kind: "essay", title: e.title, url: `/essays/${e.slug || e.id}`, year: u.year, unit: u.unit, text: qs.map((q) => q.question).join("\n"), essayQs: qs }); }
+for (const a of corpus.articles) { const u = unitOf(a.category); docs.push({ id: `a:${a.id}`, kind: "article", title: a.title, url: `/blog/${cleanSlug(a.slug, a.title, "article")}`, year: u.year, unit: u.unit, text: LF(a.content), updated: (a.updated_at || a.created_at || "").slice(0, 10) }); }
+for (const m of corpus.mcqs) { const u = unitOf(m.category); docs.push({ id: `m:${m.id}`, kind: "mcq", title: m.title, url: `/mcqs/${cleanSlug(m.slug, m.title, "quiz")}`, year: u.year, unit: u.unit, text: (m.questions || []).map((q) => q.question).join("\n"), questions: m.questions || [] }); }
+for (const e of corpus.essays) { const u = unitOf(e.category); const qs = [...(e.short_answer_questions || []), ...(e.long_answer_questions || [])]; docs.push({ id: `e:${e.id}`, kind: "essay", title: e.title, url: `/essays/${cleanSlug(e.slug, e.title, "essay")}`, year: u.year, unit: u.unit, text: qs.map((q) => q.question).join("\n"), essayQs: qs }); }
 console.log("documents:", docs.length);
 
 // ------------------------------------------------------------------ candidates

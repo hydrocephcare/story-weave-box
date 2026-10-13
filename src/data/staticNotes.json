@@ -1820,5 +1820,96 @@
     "description": "Nephrotic versus nephritic syndrome: how to tell them apart, causes including local ones, investigations, treatment and complications, with practice questions.",
     "updated": "2026-10-13",
     "file": "src/content/notes/renal-nephrotic-and-nephritic-syndromes.md"
+  },
+  {
+    "slug": "assessment-of-the-obstetric-patient",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Obstetric assessment",
+    "week": "Week 1",
+    "title": "Assessment of the obstetric patient",
+    "description": "Assessment of the obstetric patient: obstetric history (gravidity, parity, EDD), examination, Leopold's manoeuvres, fundal height, pelvic examination, with pictures and practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/obstetrics-assessment-of-the-obstetric-patient.md"
+  },
+  {
+    "slug": "gametogenesis-fertilisation-and-early-development",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Embryology and early pregnancy",
+    "title": "Gametogenesis, fertilisation and the first two weeks of development",
+    "description": "Spermatogenesis and oogenesis, fertilisation, cleavage, implantation and week 2 of development (bilaminar disc, trophoblast, uteroplacental circulation) with clinical points and practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/obstetrics-gametogenesis-fertilisation-and-early-development.md"
+  },
+  {
+    "slug": "preconception-care",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Preconception and antenatal care",
+    "title": "Pre-conception care",
+    "description": "Pre-conception care: who is at risk, history, tests, folic acid, optimising medical conditions and delivery of services, with practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/obstetrics-preconception-care.md"
+  },
+  {
+    "slug": "diagnosis-of-pregnancy",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Early pregnancy",
+    "title": "Diagnosis of pregnancy",
+    "description": "Diagnosis of pregnancy: symptoms and signs by trimester (Hegar, Goodell, Chadwick), hCG tests, ultrasound milestones, differentials and practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/obstetrics-diagnosis-of-pregnancy.md"
+  },
+  {
+    "slug": "physiological-changes-in-pregnancy",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Physiology of pregnancy",
+    "title": "Physiological changes in pregnancy",
+    "description": "Physiological changes of pregnancy by system: cardiovascular, blood, respiratory, kidney, endocrine, placental hormones and reproductive organs, with clinical meaning and practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/obstetrics-physiological-changes-in-pregnancy.md"
+  },
+  {
+    "slug": "antenatal-care",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Preconception and antenatal care",
+    "title": "Antenatal care",
+    "description": "Antenatal care: routine versus focused models, WHO visit schedules, what to do at each visit, screening tests, prevention, birth plan and danger signs, with practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/obstetrics-antenatal-care.md"
+  },
+  {
+    "slug": "safe-motherhood-and-maternal-newborn-health",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Public health in obstetrics",
+    "title": "Safe motherhood, maternal and newborn health",
+    "description": "Maternal and newborn mortality in Kenya, the three delays, the six pillars of the Kenya MNH model, skilled attendance, emergency obstetric care, referral and practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/obstetrics-safe-motherhood.md"
+  },
+  {
+    "slug": "abortion-and-miscarriage",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Early pregnancy loss",
+    "title": "Abortion and miscarriage",
+    "description": "Abortion and miscarriage: definitions, causes, threatened, inevitable, incomplete, complete, missed and septic abortion, recurrent miscarriage, cervical insufficiency and practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/obstetrics-abortion-and-miscarriage.md"
+  },
+  {
+    "slug": "ectopic-pregnancy",
+    "year": 4,
+    "unit": "Obstetrics & Gynaecology",
+    "group": "Early pregnancy loss",
+    "title": "Ectopic pregnancy",
+    "description": "Ectopic pregnancy: sites, risk factors, presentation, ultrasound and hCG, differential diagnosis, methotrexate criteria, surgery and follow-up, with practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/obstetrics-ectopic-pregnancy.md"
   }
 ]

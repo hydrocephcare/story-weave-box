@@ -16,11 +16,12 @@ export default async function handler(req, res) {
     const rows = rowsRes.ok ? await rowsRes.json() : [];
     const indexed = new Set(indexRes.ok && (indexRes.headers.get("content-type") || "").includes("json") ? (await indexRes.json()).map((t) => t.s) : []);
     const fresh = rows.filter((r) => r.slug && !indexed.has(r.slug));
-    const urls = fresh.map((r) => `  <url>\n    <loc>${SITE}/topic/${r.slug}</loc>\n    <lastmod>${String(r.updated_at).slice(0, 10)}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`).join("\n");
+    const top = `  <url>\n    <loc>${SITE}/topics</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.7</priority>\n  </url>`;
+    const urls = [top, ...fresh.map((r) => `  <url>\n    <loc>${SITE}/topic/${r.slug}</loc>\n    <lastmod>${String(r.updated_at).slice(0, 10)}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`)].join("\n");
     res.setHeader("Cache-Control", "public, s-maxage=900, stale-while-revalidate=86400");
     return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>`);
   } catch {
     res.setHeader("Cache-Control", "no-store");
-    return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n</urlset>`);
+    return res.status(200).send(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${SITE}/topics</loc>\n  </url>\n</urlset>`);
   }
 }

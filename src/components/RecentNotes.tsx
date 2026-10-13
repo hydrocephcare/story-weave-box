@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, FileText } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { getCategoryDisplayName, getYearFromCategory } from "@/lib/store";
+import { getCategoryDisplayName, getYearFromCategory, buildBlogPath } from "@/lib/store";
 import { STATIC_NOTES } from "@/data/staticNotes";
 
 interface Item { key: string; title: string; to: string; year: number; unit: string; at: number }
@@ -18,7 +18,7 @@ function loadRecentArticles(): Promise<Item[]> {
   ).then((r) => ((r.data ?? []) as { id: string; title: string; slug: string | null; category: string; created_at: string }[])
     .map((a) => {
       const y = getYearFromCategory(a.category);
-      return y ? { key: `a:${a.id}`, title: a.title, to: `/blog/${a.slug || a.id}`, year: Number(y.slice(5)), unit: getCategoryDisplayName(a.category), at: Date.parse(a.created_at) } : null;
+      return y ? { key: `a:${a.id}`, title: a.title, to: buildBlogPath(a), year: Number(y.slice(5)), unit: getCategoryDisplayName(a.category), at: Date.parse(a.created_at) } : null;
     })
     .filter((x): x is Item => Boolean(x) && Number.isFinite((x as Item).at)))
     .catch(() => [] as Item[]);

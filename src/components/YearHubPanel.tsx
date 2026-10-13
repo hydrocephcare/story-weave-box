@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BookMarked, FileQuestion, Megaphone, Trophy } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { getYearFromCategory } from "@/lib/store";
+import { getYearFromCategory, buildMcqPath } from "@/lib/store";
 import { loadContestPlatform } from "@/lib/contest-store";
 import { useSiteConfig } from "@/lib/siteConfig";
 import { useMyYear } from "@/components/StudyPanel";
@@ -64,7 +64,7 @@ export function YearExamsCard({ year, limit = 5 }: { year: number; limit?: numbe
       <ul className="space-y-0.5">
         {shown.slice(0, limit).map((e) => {
           const y = getYearFromCategory(e.category);
-          return <li key={e.id}><Link to={`/mcqs/${e.slug || e.id}`} className="block rounded-md px-1.5 py-1 text-xs font-medium text-foreground hover:bg-muted hover:text-primary"><span className="line-clamp-2">{e.title}</span>{!list.length && y && <span className="text-[10px] uppercase tracking-wide text-muted-foreground">{y}</span>}</Link></li>;
+          return <li key={e.id}><Link to={buildMcqPath(e)} className="block rounded-md px-1.5 py-1 text-xs font-medium text-foreground hover:bg-muted hover:text-primary"><span className="line-clamp-2">{e.title}</span>{!list.length && y && <span className="text-[10px] uppercase tracking-wide text-muted-foreground">{y}</span>}</Link></li>;
         })}
       </ul>
     </Panel>

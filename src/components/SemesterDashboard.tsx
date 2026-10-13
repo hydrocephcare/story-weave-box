@@ -13,6 +13,7 @@ import {
 } from "@/lib/academic";
 import { getProgress, type ResourceProgress } from "@/lib/study";
 import { supabase } from "@/integrations/supabase/client";
+import { buildMcqPath, buildBlogPath, buildFlashcardPath } from "@/lib/store";
 import {
   MBCHB_2026_TRIMESTER_1,
   YEAR_TEACHING_STAFF,
@@ -258,7 +259,7 @@ export default function SemesterDashboard() {
                   {recentRead.length ? (
                     <div className="mt-5 space-y-2">
                       {recentRead.map(({ resource, progress: p }) => (
-                        <Link key={`${resource.kind}-${resource.id}`} to={resource.kind === "article" ? `/blog/${resource.slug || resource.id}` : resource.kind === "flashcard" ? `/flashcards/${resource.slug || resource.id}` : `/mcqs/${resource.slug || resource.id}`} className="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-primary/40">
+                        <Link key={`${resource.kind}-${resource.id}`} to={resource.kind === "article" ? buildBlogPath(resource) : resource.kind === "flashcard" ? buildFlashcardPath(resource) : buildMcqPath(resource)} className="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-primary/40">
                           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                             {p.status === "completed" ? <CheckCircle2 className="h-4 w-4" /> : <BookOpen className="h-4 w-4" />}
                           </span>

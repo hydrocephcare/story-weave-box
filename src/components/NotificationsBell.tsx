@@ -7,6 +7,7 @@ import { loadContestPlatform } from "@/lib/contest-store";
 import { useSiteConfig } from "@/lib/siteConfig";
 import { useMyYear, yearOfCategory } from "@/hooks/useMyYear";
 import { STATIC_NOTES } from "@/data/staticNotes";
+import { buildMcqPath, buildBlogPath } from "@/lib/store";
 
 interface Notice { id: string; kind: "exam" | "note" | "contest" | "notice" | "request" | "message"; /** the year this is for; empty = everyone */ year?: number | null; title: string; to: string; at: number; /** an admin request that has not been looked at yet */ unseen?: boolean }
 interface AccessRequest { user_id: string; email: string | null; entered_text: string | null; created_at: string; admin_seen: boolean }
@@ -30,8 +31,8 @@ async function load(): Promise<Notice[]> {
     loadContestPlatform().catch(() => ({ contests: [] })),
   ]);
   const items: Notice[] = [
-    ...((exams.data ?? []) as { id: string; title: string; slug: string | null; category: string | null; created_at: string }[]).map((r) => ({ id: `exam:${r.id}`, kind: "exam" as const, year: yearOfCategory(r.category), title: r.title, to: `/mcqs/${r.slug || r.id}`, at: Date.parse(r.created_at) })),
-    ...((notes.data ?? []) as { id: string; title: string; slug: string | null; category: string | null; created_at: string }[]).map((r) => ({ id: `note:${r.id}`, kind: "note" as const, year: yearOfCategory(r.category), title: r.title, to: `/blog/${r.slug || r.id}`, at: Date.parse(r.created_at) })),
+    ...((exams.data ?? []) as { id: string; title: string; slug: string | null; category: string | null; created_at: string }[]).map((r) => ({ id: `exam:${r.id}`, kind: "exam" as const, year: yearOfCategory(r.category), title: r.title, to: buildMcqPath(r), at: Date.parse(r.created_at) })),
+    ...((notes.data ?? []) as { id: string; title: string; slug: string | null; category: string | null; created_at: string }[]).map((r) => ({ id: `note:${r.id}`, kind: "note" as const, year: yearOfCategory(r.category), title: r.title, to: buildBlogPath(r), at: Date.parse(r.created_at) })),
     ...STATIC_NOTES.filter((n) => !n.paper).map((n) => ({ id: `static:${n.slug}`, kind: "note" as const, year: n.year, title: n.title, to: `/notes/${n.slug}`, at: Date.parse(n.updated) })),
     ...contests.contests.filter((c) => !/closed|archived|complete|cancel/i.test(String(c.stage))).slice(0, 3).map((c) => ({ id: `contest:${c.id}`, kind: "contest" as const, title: c.title, to: `/contests/${c.slug}`, at: Date.parse(c.startsAt ?? "") || Date.now() - 86_400_000 })),
   ].filter((n) => Number.isFinite(n.at) && Date.now() - n.at < WEEKS).sort((a, b) => b.at - a.at);
