@@ -926,7 +926,7 @@ export async function deleteArticle(id: string) {
 }
 
 // Flashcard Sets
-const FLASHCARD_LIST_COLUMNS = "id,title,created_at,updated_at,published,category,slug,meta_title,meta_description,og_image_url";
+const FLASHCARD_LIST_COLUMNS = "id,title,created_at,updated_at,published,category,slug"; // flashcard_sets has no meta_title, meta_description or og_image_url columns: asking for them failed the whole query
 
 export async function getFlashcardSets(): Promise<FlashcardSet[]> {
   const { data, error } = await supabase
@@ -939,7 +939,7 @@ export async function getFlashcardSets(): Promise<FlashcardSet[]> {
   return (data || []) as unknown as FlashcardSet[];
 }
 
-const FLASHCARD_DETAIL_COLUMNS = "id,title,cards,created_at,updated_at,published,original_notes,category,is_raw,meta_title,meta_description,og_image_url,slug";
+const FLASHCARD_DETAIL_COLUMNS = "id,title,cards,created_at,updated_at,published,original_notes,category,is_raw,slug";
 
 export async function getPublishedFlashcardSets(): Promise<FlashcardSet[]> {
   const { data, error } = await supabase

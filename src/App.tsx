@@ -26,6 +26,7 @@ import RouteErrorBoundary from "@/components/RouteErrorBoundary";
 import LearnerProfileGate from "@/components/LearnerProfileGate";
 import AccessibilityTools from "@/components/AccessibilityTools";
 import TopicPeekHost from "@/components/TopicPeek";
+import PageHelpers from "@/components/PageHelpers";
 import { AdminRoute, SignedInRoute, StudentRoute } from "@/components/AccessRoute";
 
 const Index = lazy(() => import("./pages/Index"));
@@ -77,6 +78,9 @@ const StudySystemAdmin = lazy(() => import("./pages/StudySystemAdmin"));
 const CategoryManager = lazy(() => import("./pages/CategoryManager"));
 const About = lazy(() => import("./pages/About"));
 const Partners = lazy(() => import("./pages/Partners"));
+const AboutUs = lazy(() => import("./pages/InfoPages").then((m) => ({ default: m.AboutUs })));
+const Contact = lazy(() => import("./pages/InfoPages").then((m) => ({ default: m.Contact })));
+const Privacy = lazy(() => import("./pages/InfoPages").then((m) => ({ default: m.Privacy })));
 const TopicPage = lazy(() => import("./pages/TopicPage"));
 const TopicsIndex = lazy(() => import("./pages/TopicsIndex"));
 const Contests = lazy(() => import("./pages/Contests"));
@@ -218,6 +222,9 @@ const AnimatedRoutes = () => {
             <Route path="/source-library/:slug" element={<AdminRoute><SourceLibrary /></AdminRoute>} />
             <Route path="/about" element={<About />} />
             <Route path="/partners" element={<Partners />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="/topics" element={<TopicsIndex />} />
             <Route path="/topic/:slug" element={<TopicPage />} />
             <Route path="/download-app" element={<AppDownload />} />
@@ -248,6 +255,7 @@ const App = () => (
             <LearnerProfileGate />
             <AccessibilityTools />
             <TopicPeekHost />
+            <PageHelpers />
             <AnnouncementBar />
             <SearchGate />
             <UpdateNotifier />

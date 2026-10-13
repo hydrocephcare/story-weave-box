@@ -117,9 +117,9 @@ export default function YearHub() {
     );
   }
 
-  const title = `${yearLabel} Study Materials | OmpathStudy Kenya`;
+  const title = `${yearLabel} Study Materials | Ompath Study`;
   const description =
-    `Browse ${yearLabel} medical study notes, flashcards, MCQs, and exams on OmpathStudy for Kenyan health students.`;
+    `Browse ${yearLabel} medical study notes, flashcards, MCQs, and exams on Ompath Study.`;
   const keywords =
     `OmpathStudy, ${yearLabel}, medical students Kenya, nursing students Kenya, study notes, MCQs, flashcards, exams, medical education Kenya`;
 

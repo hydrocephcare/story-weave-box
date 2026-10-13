@@ -154,8 +154,10 @@ try {
       const sibHtml = sibs.length ? `<h2>More in ${esc(n.group ?? n.unit)}</h2><ul>${sibs.map((o) => `<li><a href="/notes/${o.slug}">${esc(o.title)}</a></li>`).join("")}</ul><p><a href="/notes">All study notes</a></p>` : "";
       const title = `${n.title} — Year ${n.year} ${n.unit} Notes | ${registry.brand}`;
       write(notePath, render({
-        title, description: n.description, path: notePath, image: "/og-default.jpg",
-        keywords: [n.title, `${n.unit} notes`, `Year ${n.year} MBChB`, "MKU psychiatry notes", "medical student notes"],
+        title, description: n.description, path: notePath,
+        // a card with the note's own title, so a link shared on WhatsApp or X shows what it is
+        image: `/api/note-card?title=${encodeURIComponent(n.title)}&year=${n.year}&unit=${encodeURIComponent(n.group ?? n.unit)}&kind=${encodeURIComponent(n.paper ? "Past paper" : "Notes")}`,
+        keywords: [n.title, `${n.group ?? n.unit} notes`, `Year ${n.year} medical students`, `${n.unit}`, "medical student notes"],
         body: shell(crumbs([["Home", "/"], [`Year ${n.year}`, `/year/${n.year}`], [n.unit, null]]) + `<h1>${esc(n.title)}</h1><p>${esc(n.description)}</p>${pharmHtml}<article>${noteHtml}</article>${n.paper ? "<p><em>Model answers are on the page for subscribers.</em></p>" : ""}${sibHtml}` + credit),
         jsonLd: { "@context": "https://schema.org", "@type": "LearningResource", name: n.title, description: n.description, url: `${site}${notePath}`, dateModified: n.updated, inLanguage: "en", educationalLevel: `Year ${n.year} MBChB`, teaches: n.unit, author: { "@type": "Person", name: "Abongo Davis" }, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } },
       }), n.updated);
@@ -258,6 +260,17 @@ try {
   // ---------------- topic pages (one per subject, built by scripts/topics/build-topics.mjs) ----------------
   const topicPages = prerenderTopics({ fs, path, root, esc, shell, crumbs, write, render });
   console.log(`topic pages: ${topicPages}`);
+
+  // ---------------- information pages (so a shared link shows its own title and description) ----------------
+  const info = [
+    { p: "/about-us", t: "About Ompath Study | Free medical notes, past papers and MCQs", d: "Ompath Study is a free library of medical study notes, past papers, MCQs and topic pages for students worldwide, organised by year, system and unit.", h: "About Ompath Study" },
+    { p: "/partners", t: "Partner with Ompath Study | Universities, societies, publishers and sponsors", d: "Work with Ompath Study: share a free revision library with your students, publish your notes, or sponsor a series. Universities, societies, publishers and health programmes welcome.", h: "Partner with Ompath Study" },
+    { p: "/contact", t: "Contact Ompath Study", d: "Contact Ompath Study: send feedback, report a mistake, share notes, or ask about partnerships.", h: "Contact Ompath Study" },
+    { p: "/privacy", t: "Privacy, terms and medical disclaimer | Ompath Study", d: "How Ompath Study handles your data, the terms of use and the medical disclaimer.", h: "Privacy, terms and disclaimer" },
+  ];
+  for (const i of info) {
+    write(i.p, render({ title: i.t, description: i.d, path: i.p, image: `/api/note-card?title=${encodeURIComponent(i.h)}&kind=Ompath+Study`, keywords: [i.h, "Ompath Study", "medical students"], body: shell(crumbs([["Home", "/"], [i.h, null]]) + `<h1>${esc(i.h)}</h1><p>${esc(i.d)}</p><p><a href="/topics">Browse topics</a> · <a href="/new-notes">Recently added</a> · <a href="/contact">Contact</a></p>`), jsonLd: { "@context": "https://schema.org", "@type": "WebPage", name: i.t, url: `${site}${i.p}`, isPartOf: { "@type": "WebSite", name: registry.brand, url: site } } }), new Date().toISOString().slice(0, 10));
+  }
 
   // ---------------- sitemap ----------------
   const today = new Date().toISOString().slice(0, 10);

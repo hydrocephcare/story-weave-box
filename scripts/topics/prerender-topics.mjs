@@ -12,8 +12,9 @@ export function prerenderTopics({ fs, path, root, esc, shell, crumbs, write, ren
     const file = path.join(dir, `${it.s}.json`);
     if (!fs.existsSync(file)) continue;
     const t = JSON.parse(fs.readFileSync(file, "utf8"));
-    const title = `${t.n}: notes, images and practice questions | Ompath Study`;
-    const description = (t.ai?.summary || t.lead?.t || `Everything on ${t.n} from Ompath Study: notes, images, practice questions and related topics.`).slice(0, 155);
+    const title = `${t.n}: overview, causes, management and practice questions | Ompath Study`;
+    // the page's own definition when there is one; otherwise a clear line (a sentence lifted from an exam question makes a poor preview)
+    const description = (t.ai?.summary || `${t.n}: a clear overview with causes, tests, management, pictures and practice questions. Free from Ompath Study.`).slice(0, 158);
     const path1 = `/topic/${t.s}`;
     const parts = [
       crumbs([["Home", "/"], ["Topics", "/topics"], [t.n, null]]),
@@ -37,7 +38,7 @@ export function prerenderTopics({ fs, path, root, esc, shell, crumbs, write, ren
       { "@context": "https://schema.org", "@type": "WebPage", name: title, url: `https://www.ompathstudy.com${path1}`, about: { "@type": "MedicalEntity", name: t.n }, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: "https://www.ompathstudy.com" } },
       ...(faq.length ? [{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq }] : []),
     ];
-    write(path1, render({ title, description, path: path1, image: "/og-default.jpg", keywords: [t.n, ...(t.a ?? []), `${t.n} notes`, `${t.n} MCQs`, `${t.n} medical students`], body: shell(parts.join("")), jsonLd }), today);
+    write(path1, render({ title, description, path: path1, image: `/api/note-card?title=${encodeURIComponent(t.n)}&unit=${encodeURIComponent(t.c || "Medicine")}&kind=Topic`, keywords: [t.n, ...(t.a ?? []), `${t.n} notes`, `${t.n} MCQs`, `${t.n} medical students`], body: shell(parts.join("")), jsonLd }), today);
     n++;
   }
   // the A to Z page

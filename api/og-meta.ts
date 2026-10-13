@@ -14,42 +14,42 @@ const GEO_KEYWORDS = "Kenya, Africa, global medical students, MBChB, clinical me
 const STATIC_PAGE_META: Record<string, { title: string; description: string; links: string[]; image?: string }> = {
   "/": {
     title: "OmpathStudy | Free Medical Notes, MCQs & Exams",
-    description: "Free medical notes, MCQs, flashcards and timed exams for MBChB, clinical medicine and health students in Kenya, Africa and worldwide.",
+    description: "Free medical notes, MCQs, flashcards and timed exams for medical, clinical medicine, nursing and health students worldwide.",
     links: ["/blog", "/mcqs", "/flashcards", "/exams", "/stories", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
   "/blog": {
-    title: "Medical Study Notes | OmpathStudy Kenya",
+    title: "Medical Study Notes | Ompath Study",
     description: "Browse free medical study notes in pathology, pharmacology, anatomy, physiology, microbiology and biochemistry.",
     links: ["/", "/mcqs", "/flashcards", "/exams", "/stories", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
   "/mcqs": {
-    title: "Medical MCQs with Answers | OmpathStudy Kenya",
+    title: "Medical MCQs with Answers | Ompath Study",
     description: "Practice medical MCQs with answers and explanations by year and unit for exam-focused revision.",
     links: ["/", "/blog", "/flashcards", "/exams", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
   "/flashcards": {
-    title: "Medical Flashcards | OmpathStudy Kenya",
+    title: "Medical Flashcards | Ompath Study",
     description: "Study active-recall medical flashcards by year and unit for fast revision across core medical subjects.",
     links: ["/", "/blog", "/mcqs", "/exams", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
   "/essays": {
-    title: "Medical Essay Questions & Answers | OmpathStudy Kenya",
+    title: "Medical Essay Questions & Answers | Ompath Study",
     description: "Practice structured short- and long-answer medical questions with model answers for exam revision.",
     links: ["/", "/blog", "/mcqs", "/flashcards", "/exams", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
   "/exams": {
-    title: "Timed Medical Exams | OmpathStudy Kenya",
+    title: "Timed Medical Exams | Ompath Study",
     description: "Take timed medical exams and past-paper style MCQ practice for MBChB revision by year and unit.",
     links: ["/", "/blog", "/mcqs", "/flashcards", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
   "/contests": {
-    title: "Medical Knowledge Contests | OmpathStudy Kenya",
-    description: "OmpathStudy medical knowledge contests for students across Kenya, with published briefings and competition information.",
+    title: "Medical Knowledge Contests | Ompath Study",
+    description: "OmpathStudy medical knowledge contests for students worldwide, with published briefings and competition information.",
     links: ["/", "/blog", "/mcqs", "/flashcards", "/exams", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
   "/ai": {
     title: "Ompath Study AI: notes, past papers and anatomy pictures for MBChB students",
-    description: "Ask Ompath Study AI for notes, past papers, your timetable and anatomy spot questions with pictures. Made for Kenyan medical students. Log in free and ask.",
+    description: "Ask Ompath Study AI for notes, past papers, your timetable and anatomy spot questions with pictures. Made for medical students worldwide. Log in free and ask.",
     image: "https://www.ompathstudy.com/og/ai.png",
     links: ["/", "/blog", "/papers", "/stories"],
   },
@@ -152,7 +152,7 @@ function toMetaDescription(input: string, fallback: string): string {
     .replace(/\s+/g, " ")
     .trim();
   const value = clean.length >= 50 ? clean : fallback;
-  const enriched = /\b(Kenya|Africa|MBChB|medical students)\b/i.test(value) ? value : `${value.replace(/[.\s]+$/, "")}. Kenya, Africa and global revision.`;
+  const enriched = /\b(Kenya|Africa|MBChB|medical students)\b/i.test(value) ? value : `${value.replace(/[.\s]+$/, "")}. Free notes for medical students worldwide.`;
   return enriched.length <= 155 ? enriched : enriched.slice(0, 152).trimEnd() + "...";
 }
 
@@ -766,31 +766,31 @@ export default async function handler(req: Request): Promise<Response> {
       if (page.image) ogImage = page.image;
       keywords = `OmpathStudy, medical notes Kenya, MCQs, flashcards, exams, MBChB revision`;
       type = "website";
-      bodyExtra = `<section><h2>Study resources</h2><p>OmpathStudy provides structured medical learning resources for MBChB and health students across Kenya and East Africa. The public study library includes concise clinical notes, pathology guides, pharmacology revision, anatomy summaries, physiology explanations, microbiology material, active-recall flashcards, practice MCQs and timed exam-style revision. Content is organised by academic year and unit so students can move directly from a year hub to the relevant articles, question banks, flashcards and exam practice.</p><p>Use these links to navigate to live indexable pages without redirects.</p><nav aria-label="Core pages">${page.links.map((path) => `<a href="${path}">${path === "/" ? "Home" : path.replace(/^\//, "")}</a>`).join(" ")}</nav></section>`;
+      bodyExtra = `<section><h2>Study resources</h2><p>OmpathStudy provides structured medical learning resources for MBChB and health students worldwide. The public study library includes concise clinical notes, pathology guides, pharmacology revision, anatomy summaries, physiology explanations, microbiology material, active-recall flashcards, practice MCQs and timed exam-style revision. Content is organised by academic year and unit so students can move directly from a year hub to the relevant articles, question banks, flashcards and exam practice.</p><p>Use these links to navigate to live indexable pages without redirects.</p><nav aria-label="Core pages">${page.links.map((path) => `<a href="${path}">${path === "/" ? "Home" : path.replace(/^\//, "")}</a>`).join(" ")}</nav></section>`;
     } else if (!param && ["blog", "mcqs", "flashcards", "stories", "exams"].includes(section)) {
       const pages: Record<string, { title: string; description: string; keywords: string }> = {
         blog: {
-          title: "Medical Study Notes | OmpathStudy Kenya",
-          description: "Browse free medical study notes in pathology, pharmacology, anatomy, physiology, microbiology and biochemistry for Kenyan and East African students.",
+          title: "Medical Study Notes | Ompath Study",
+          description: "Browse free medical study notes in pathology, pharmacology, anatomy, physiology, microbiology and biochemistry for students worldwide.",
           keywords: "OmpathStudy, medical notes Kenya, MBChB notes, pathology notes, pharmacology notes, anatomy notes",
         },
         mcqs: {
-          title: "Medical MCQs with Answers | OmpathStudy Kenya",
-          description: "Practice medical MCQs with answers and explanations by year and unit. Built for Kenyan and East African medical students.",
+          title: "Medical MCQs with Answers | Ompath Study",
+          description: "Practice medical MCQs with answers and explanations by year and unit. Built for medical students worldwide.",
           keywords: "OmpathStudy, MCQs Kenya, medical quizzes, MBChB questions, exam practice",
         },
         flashcards: {
-          title: "Medical Flashcards | OmpathStudy Kenya",
+          title: "Medical Flashcards | Ompath Study",
           description: "Study active-recall medical flashcards by year and unit for fast exam revision across pathology, pharmacology, anatomy and more.",
           keywords: "OmpathStudy, flashcards Kenya, medical flashcards, active recall, exam revision",
         },
         stories: {
-          title: "Medical School Stories | OmpathStudy Kenya",
-          description: "Read reflective medical school stories and student experiences from Kenya and East Africa.",
+          title: "Medical School Stories | Ompath Study",
+          description: "Read reflective medical school stories and student experiences from around the world.",
           keywords: "OmpathStudy, medical stories, medical students Kenya, reflective practice",
         },
         exams: {
-          title: "Timed Medical Exams | OmpathStudy Kenya",
+          title: "Timed Medical Exams | Ompath Study",
           description: "Take timed medical exams and past-paper style MCQ practice for MBChB revision by year and unit.",
           keywords: "OmpathStudy, medical exams Kenya, timed exams, MBChB past papers, exam practice",
         },
@@ -804,7 +804,7 @@ export default async function handler(req: Request): Promise<Response> {
       const contest = rows?.[0];
       if (!contest) return permanentRedirect("/contests");
       title = `${contest.title} | Contest Briefing | OmpathStudy`;
-      description = toMetaDescription(contest.subtitle || "Read the published OmpathStudy medical knowledge contest briefing.", "Read the published OmpathStudy medical knowledge contest briefing for medical students in Kenya.");
+      description = toMetaDescription(contest.subtitle || "Read the published OmpathStudy medical knowledge contest briefing.", "Read the published OmpathStudy medical knowledge contest briefing for medical students worldwide.");
       ogImage = contest.share_image_url || OG_FALLBACK_IMAGE;
       keywords = `OmpathStudy, medical contest Kenya, ${contest.title}, contest briefing, medical students Kenya`;
       type = "article";
@@ -938,9 +938,9 @@ ${explanationLine}
       const cards: unknown[] = Array.isArray(set.cards) ? set.cards : [];
       const cardCount = cards.length;
 
-      title = `${set.title} | Flashcards | OmpathStudy Kenya`;
+      title = `${set.title} | Flashcards | Ompath Study`;
       description = to160(
-        `Study ${cardCount > 0 ? cardCount + " " : ""}flashcards on ${set.title} with OmpathStudy. Quick, focused revision for Kenyan medical and health students by unit and year.`
+        `Study ${cardCount > 0 ? cardCount + " " : ""}flashcards on ${set.title} with OmpathStudy. Quick, focused revision for medical and health students, by unit and year.`
       );
       ogImage = cardUrl(set.title, set.category, "Flashcards");
       keywords = `OmpathStudy, flashcards Kenya, ${set.category || ""}, medical revision, nursing revision, exam prep, medical education Kenya`;
@@ -963,8 +963,8 @@ ${explanationLine}
       const exam = await fetchMcqSetBySlugOrId(examId);
       if (exam) {
         const qCount = Array.isArray(exam.questions) ? exam.questions.length : 0;
-        title = `${exam.title} | Timed Exam | OmpathStudy Kenya`;
-        description = `Take a timed ${qCount}-question MCQ exam on ${exam.title} with OmpathStudy. Built for Kenyan medical and health students.`;
+        title = `${exam.title} | Timed Exam | Ompath Study`;
+        description = `Take a timed ${qCount}-question MCQ exam on ${exam.title} with OmpathStudy. Built for medical and health students worldwide.`;
         keywords = `OmpathStudy, timed exam Kenya, MCQ exam, ${exam.category || ""}, medical exams Kenya, exam preparation`;
         schemaJson = JSON.stringify({
           "@context": "https://schema.org",
@@ -974,7 +974,7 @@ ${explanationLine}
           url: absoluteUrl,
           provider: { "@type": "Organization", name: "OmpathStudy" },
         });
-        bodyExtra = `<p>Timed exam with ${qCount} MCQs. Unit: ${exam.category || "General"}. Available to Kenyan health students on OmpathStudy.</p>`;
+        bodyExtra = `<p>Timed exam with ${qCount} MCQs. Unit: ${exam.category || "General"}. Free to take on Ompath Study.</p>`;
       }
 
     } else if (section === "essays" && param) {
@@ -984,7 +984,7 @@ ${explanationLine}
       if (canonicalEssayPath !== `/essays/${param}`) return permanentRedirect(canonicalEssayPath);
       const saq = Array.isArray(essay.short_answer_questions) ? essay.short_answer_questions : [];
       const laq = Array.isArray(essay.long_answer_questions) ? essay.long_answer_questions : [];
-      title = `${essay.title} | Essay Questions | OmpathStudy Kenya`;
+      title = `${essay.title} | Essay Questions | Ompath Study`;
       description = to160(`Practice ${saq.length + laq.length} structured short- and long-answer medical questions on ${essay.title}. Review model answers for exam revision.`);
       keywords = `OmpathStudy, essay questions Kenya, SAQ, LAQ, ${essay.category || ""}, medical exams Kenya`;
       type = "article";
@@ -1009,18 +1009,18 @@ ${explanationLine}
       if (canonicalStoryPath !== `/stories/${param}`) {
         return permanentRedirect(canonicalStoryPath);
       }
-      title = `${story.title} | Story | OmpathStudy Kenya`;
+      title = `${story.title} | Story | Ompath Study`;
       description =
         to160(story.content || "") ||
-        "Read a medical story on OmpathStudy — built for Kenyan medical and health students to learn, reflect, and grow.";
+        "Read a medical story on OmpathStudy — built for medical and health students to learn, reflect, and grow.";
       ogImage = story.cover_image_url || OG_FALLBACK_IMAGE;
       keywords = `OmpathStudy, medical stories, reflective practice, ${story.category || ""}, medical students Kenya`;
       type = "article";
 
     } else if (section === "year" && param) {
       const yr = param.replace(/[^0-9]/g, "");
-      title = `Year ${yr} Study Materials | OmpathStudy Kenya`;
-      description = `Browse Year ${yr} medical study notes, flashcards, MCQs, and exams on OmpathStudy for Kenyan health students.`;
+      title = `Year ${yr} Study Materials | Ompath Study`;
+      description = `Browse Year ${yr} medical study notes, flashcards, MCQs, and exams on Ompath Study.`;
       keywords = `OmpathStudy, Year ${yr} medical, Kenya medical students, clinical notes Year ${yr}`;
       bodyExtra = `<section><h2>Year ${yr} resources</h2><p>Year ${yr} on OmpathStudy brings together medical notes, MCQs, flashcards and timed exam practice for students revising by academic year and unit. The page links directly to study notes, practice questions, active-recall cards and exams so crawlers and students can discover the relevant live sections without passing through redirects.</p><nav aria-label="Year ${yr} sections"><a href="/blog?year=Year%20${yr}">Year ${yr} notes</a> <a href="/mcqs?year=Year%20${yr}">Year ${yr} MCQs</a> <a href="/flashcards?year=Year%20${yr}">Year ${yr} flashcards</a> <a href="/exams?year=Year%20${yr}">Year ${yr} exams</a></nav></section>${await buildLiveIndexLinks("year", yr)}`;
     }

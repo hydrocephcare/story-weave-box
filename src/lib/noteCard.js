@@ -20,7 +20,7 @@ export function noteCardTree(input) {
     el("div", { fontSize: size, fontWeight: 700, lineHeight: 1.12, letterSpacing: -1 }, title),
     el("div", { flexDirection: "column" }, [
       el("div", { flexWrap: "wrap", marginBottom: 22 }, chips.map((c, i) => chip(c, i === 0 && Boolean(input.year)))),
-      el("div", { fontSize: 26, color: "#bfe3dd" }, "ompathstudy.com  ·  Notes, MCQs and essays for MBChB"),
+      el("div", { fontSize: 26, color: "#bfe3dd" }, "ompathstudy.com  ·  Notes, MCQs and topic pages for medical students"),
     ]),
   ]);
 }
