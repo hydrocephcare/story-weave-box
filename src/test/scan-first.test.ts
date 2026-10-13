@@ -21,3 +21,14 @@ describe("scanFirst", () => {
     expect(scanFirst(a)).toBe(a);
   });
 });
+
+describe("scanFirst stubs", () => {
+  it("shows the scans for a stub page", () => {
+    const a = { title: "Level 1 Physiology EOY MCQs — Past Paper Questions & Answers", content: "## Questions and answers\n\nThe original paper scans are available below.", original_notes: pages };
+    expect(scanFirst(a).content).toContain("![p2]");
+  });
+  it("leaves a stub with no scans alone", () => {
+    const a = { title: "x", content: "## Awaiting manual transcription\n\nThe original paper is being added.", original_notes: "" };
+    expect(scanFirst(a)).toBe(a);
+  });
+});

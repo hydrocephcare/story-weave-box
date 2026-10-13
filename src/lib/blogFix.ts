@@ -19,7 +19,10 @@ export async function tidiedText(id: string): Promise<string | null> {
  * pages are the real paper, so those are shown instead, in order, and the noise is left out of the page. The stored text is never changed.
  */
 export function scanFirst<T extends { title?: string | null; content: string; original_notes?: string | null }>(a: T): T {
-  const noisy = /Visual Scan Archive/i.test(a.content) || (a.content.match(/Scanned by Cam\s?Scanner/gi) ?? []).length >= 3;
+  const plain = a.content.replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+  // a stub ("The original paper scans are available…", "Awaiting manual transcription") has nothing to read, only the scans
+  const stub = plain.length < 260 && /original (paper )?scans|awaiting manual transcription|transcription is being generated/i.test(plain);
+  const noisy = stub || /Visual Scan Archive/i.test(a.content) || (a.content.match(/Scanned by Cam\s?Scanner/gi) ?? []).length >= 3;
   if (!noisy) return a;
   const pages = String(a.original_notes ?? "").split(/\r?\n/).map((l) => l.trim()).filter((l) => /^!\[[^\]]*\]\([^\s)]+\)$/.test(l));
   if (!pages.length) return a;
