@@ -1,0 +1,127 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The radius is the lateral forearm bone that articulates with the humerus and ulna, enabling forearm rotation and wrist movement. Understanding its anatomy guides diagnosis of common injuries and systemic diseases affecting bone health.",
+ "aka": [
+  "radial bone",
+  "bone of the forearm (lateral)"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The radius is a long bone on the thumb side of the forearm, extending from the elbow to the wrist, essential for pronation and supination.",
+   "b": [
+    "Key for forearm rotation",
+    "Forms part of the radiocarpal joint"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It has a head, neck, shaft, and distal end with the styloid process; the distal radius articulates with the scaphoid and lunate.",
+   "b": [
+    "Head articulates with humeral capitulum",
+    "Distal radius forms the major wrist joint surface"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly lies the brachioradialis and flexor carpi radialis; posteriorly the extensor carpi radialis longus and brevis; interosseous membrane connects it to the ulna.",
+   "b": [
+    "Interosseous membrane transmits forces",
+    "Muscles attach for wrist and elbow motion"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Supplied by the radial recurrent artery proximally and the dorsal and volar branches of the radial artery distally.",
+   "b": [
+    "Periosteal vessels dominate shaft blood flow",
+    "Nutrient artery enters mid‑shaft"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory innervation of periosteum from the radial nerve (posterior) and median nerve (anterior). Motor nerves to attached muscles arise from the radial and median nerves.",
+   "b": [
+    "Radial nerve supplies extensor compartment",
+    "Median nerve supplies flexor compartment"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Provides structural support, transmits axial load from hand to elbow, and enables pronation/supination via the proximal and distal radioulnar joints.",
+   "b": [
+    "Load‑bearing during gripping",
+    "Rotation essential for hand positioning"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Fractures (distal radius, radial neck) are common after falls; osteomyelitis, especially in sickle‑cell disease; systemic bone loss (osteoporosis, TB osteitis).",
+   "b": [
+    "Distal radius fracture: Colles' vs. Smith",
+    "Radial head fracture limits pronation",
+    "Infection risk higher in low‑resource settings"
+   ],
+   "t": [
+    {
+     "a": "X‑ray forearm AP & lateral",
+     "b": "Does it show fracture displacement? Displaced >2 mm needs reduction; normal alignment suggests a sprain"
+    },
+    {
+     "a": "MRI of wrist",
+     "b": "Is there occult fracture or soft‑tissue injury? Positive edema confirms fracture when X‑ray is equivocal"
+    },
+    {
+     "a": "CBC + ESR/CRP",
+     "b": "Is infection present? Elevated markers support osteomyelitis; if unavailable, rely on clinical signs and plain film"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Assess forearm rotation, palpate the radial styloid, test wrist flexion/extension, and check for distal neurovascular status.",
+   "b": [
+    "Pain on pronation suggests radial head involvement",
+    "Tender styloid indicates distal radius fracture"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Open fracture with bone exposure",
+  "Severe swelling compromising circulation",
+  "Signs of infection: fever, purulent discharge, rising CRP"
+ ],
+ "faq": [
+  {
+   "q": "Why does a distal radius fracture cause wrist deformity?",
+   "a": "The distal fragment tilts dorsally (Colles') or volarly (Smith), altering the normal wrist alignment."
+  },
+  {
+   "q": "Can a radial fracture affect the elbow?",
+   "a": "Yes, a radial head fracture impairs pronation and may cause elbow instability."
+  },
+  {
+   "q": "What makes bone healing slower in low‑resource settings?",
+   "a": "Nutritional deficiencies, delayed presentation, and limited access to imaging or surgical fixation."
+  }
+ ],
+ "exam": [
+  "Describe the articulations of the radius and their clinical significance.",
+  "Explain how to differentiate a Colles' fracture from a Smith fracture on X‑ray.",
+  "Outline the initial management steps for an open distal radius fracture."
+ ],
+ "related": [
+  "Ulna",
+  "Radiocarpal joint",
+  "Forearm pronation and supination",
+  "Distal radius fracture",
+  "Radial nerve injury",
+  "Osteomyelitis of long bones",
+  "Bone mineral density"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,131 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Adrenal hormones balance stress, metabolism and electrolytes. Cortisol mobilises glucose and protein, dampens immunity; aldosterone tightens sodium and blood pressure; catecholamines surge heart rate and glucose. Understanding their regulation guides diagnosis and treatment.",
+ "aka": [
+  "Adrenal cortex hormones",
+  "Adrenal medulla hormones",
+  "Cortisol, aldosterone, epinephrine, norepinephrine"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The adrenal glands sit atop the kidneys and secrete hormones that modulate stress, metabolism and fluid balance. The cortex releases corticosteroids; the medulla releases catecholamines.",
+   "b": [
+    "Cortex: cortisol, aldosterone, androgens",
+    "Medulla: epinephrine, norepinephrine"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Cortisol is produced from cholesterol via the HPA axis; aldosterone is stimulated by angiotensin II and potassium. Catecholamines are synthesized from tyrosine and released during sympathetic activation.",
+   "b": [
+    "Cortisol ↑ blood glucose via gluconeogenesis",
+    "Aldosterone ↑ Na⁺ reabsorption, ↓ K⁺",
+    "Epinephrine ↑ heart rate, vasoconstriction"
+   ],
+   "t": [
+    {
+     "a": "Serum cortisol",
+     "b": "Low → adrenal insufficiency; high → Cushing syndrome"
+    },
+    {
+     "a": "Plasma aldosterone/renin ratio",
+     "b": "High ratio → primary hyperaldosteronism"
+    },
+    {
+     "a": "Plasma catecholamines",
+     "b": "Elevated in pheochromocytoma"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The hypothalamus releases CRH, stimulating ACTH from the pituitary, which drives cortisol and aldosterone production. Angiotensin II and potassium directly stimulate aldosterone. Sympathetic nerves trigger catecholamine release.",
+   "b": [
+    "CRH→ACTH→cortisol/aldosterone",
+    "Ang II/K⁺→aldosterone",
+    "Sympathetic→epinephrine/norepinephrine"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Deficiencies or excesses cause life‑threatening syndromes. Adrenal insufficiency leads to hypoglycaemia, hypotension, and shock. Cushing syndrome causes hyperglycaemia, hypertension, and immune suppression. Hyperaldosteronism causes resistant hypertension and hypokalaemia.",
+   "b": [
+    "Addison disease: low cortisol/aldosterone",
+    "Cushing: high cortisol",
+    "Primary hyperaldosteronism: excess aldosterone"
+   ],
+   "t": [
+    {
+     "a": "ACTH stimulation test",
+     "b": "Blunted cortisol rise indicates insufficiency"
+    },
+    {
+     "a": "24‑hour urinary free cortisol",
+     "b": "Elevated levels support diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Adrenal hormones influence every organ. In low‑resource settings, infections (TB, HIV) can precipitate adrenal crisis. Recognising the triad of fatigue, hypotension, and hyperpigmentation is key.",
+   "b": [
+    "Adrenal crisis: sudden hypotension, vomiting, confusion"
+   ],
+   "t": [
+    {
+     "a": "Serum electrolytes",
+     "b": "Hyponatraemia + hyperkalaemia suggests adrenal insufficiency"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the HPA axis loop and the distinct triggers for cortex vs medulla. In Cushing, look for moon facies, purple striae, and proximal muscle weakness. In hyperaldosteronism, look for resistant hypertension and hypokalaemic cramps.",
+   "b": [
+    "Cushing: high cortisol, low ACTH if pituitary; high ACTH if ectopic"
+   ],
+   "t": [
+    {
+     "a": "ACTH level",
+     "b": "Low ACTH → pituitary; high ACTH → ectopic"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypotension with nausea and vomiting after infection or steroid withdrawal",
+  "Rapid weight gain, purple striae, hypertension, and glucose intolerance",
+  "Hypertension resistant to three drugs with hypokalaemia"
+ ],
+ "faq": [
+  {
+   "q": "What causes adrenal insufficiency in low‑resource settings?",
+   "a": "Infections like TB, HIV, or parasitic disease; malnutrition; or autoimmune adrenalitis."
+  },
+  {
+   "q": "Can stress increase cortisol?",
+   "a": "Yes, CRH/ACTH release during stress raises cortisol, which mobilises glucose and suppresses immunity."
+  },
+  {
+   "q": "Why is aldosterone important for blood pressure?",
+   "a": "It retains sodium and water, increasing blood volume and pressure; loss leads to low BP."
+  }
+ ],
+ "exam": [
+  "Explain how ACTH regulates cortisol production and why cortisol is essential during infection.",
+  "Describe the biochemical pathway of aldosterone synthesis and its effect on renal sodium handling.",
+  "Outline the clinical features and diagnostic workup for Cushing syndrome."
+ ],
+ "related": [
+  "Adrenal gland anatomy",
+  "Hypothalamic‑pituitary‑adrenal axis",
+  "Primary hyperaldosteronism",
+  "Pheochromocytoma"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

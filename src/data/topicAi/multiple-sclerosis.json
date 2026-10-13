@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Multiple sclerosis is a chronic immune‑mediated disease causing demyelination and axonal loss in the CNS. It presents with relapsing neurological deficits and progressive disability.",
+ "aka": [
+  "Multiple Sclerosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "MS is defined by dissemination of lesions in space and time on MRI or clinically, plus exclusion of mimics. The 2017 McDonald criteria are used.",
+   "b": [
+    "MRI brain/spine showing ≥2 T2 lesions in typical locations",
+    "CSF oligoclonal bands when MRI is equivocal"
+   ],
+   "t": [
+    {
+     "a": "MRI brain and spinal cord",
+     "b": "Does the patient have lesions in typical MS locations and at least two separate episodes? Positive lesions confirm dissemination in space and time."
+    },
+    {
+     "a": "CSF analysis",
+     "b": "Are oligoclonal IgG bands present? Their presence supports MS when MRI is nondiagnostic."
+    },
+    {
+     "a": "Evoked potentials",
+     "b": "Is there delayed conduction in visual or somatosensory pathways? Helps demonstrate subclinical dissemination."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Disability is measured with the Expanded Disability Status Scale (EDSS). Disease course is classified as relapsing‑remitting, secondary progressive, or primary progressive.",
+   "b": [
+    "EDSS 0–3.5: mild, ambulatory without aid",
+    "EDSS ≥6.0: requires unilateral walking aid"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "MS is autoimmune; genetic susceptibility (HLA‑DRB1*15:01) and environmental triggers (low vitamin D, EBV infection) are key.",
+   "b": [
+    "Autoimmune demyelination (most common)",
+    "EBV infection as a possible trigger",
+    "Vitamin D deficiency, especially in higher latitudes"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients have episodes of optic neuritis, sensory loss, limb weakness, ataxia, or bladder dysfunction that remit partially.",
+   "b": [
+    "Unilateral visual loss with pain on eye movement",
+    "Numbness or tingling spreading over hours",
+    "Limb weakness that improves over weeks"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "MRI is the cornerstone; CSF and evoked potentials aid when MRI is unavailable or unclear.",
+   "b": [
+    "MRI may be limited in low‑resource settings; consider referral or use of portable low‑field scanners."
+   ],
+   "t": [
+    {
+     "a": "MRI brain/spine",
+     "b": "Does imaging show typical periventricular, juxtacortical, infratentorial, or spinal lesions? Positive findings confirm dissemination."
+    },
+    {
+     "a": "CSF oligoclonal bands",
+     "b": "Are IgG bands present without serum counterparts? Supports diagnosis when MRI is equivocal."
+    },
+    {
+     "a": "Visual evoked potentials",
+     "b": "Is P100 latency prolonged? Indicates demyelination of optic pathways."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Acute severe relapse can cause optic neuritis with vision loss, spinal cord compression, or respiratory muscle weakness needing urgent care.",
+   "b": [
+    "Sudden worsening of vision or breathing",
+    "New severe weakness or sphincter loss"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First‑line disease‑modifying therapy (DMT) reduces relapse frequency; acute relapses are treated with high‑dose IV methylprednisolone. Symptomatic care includes spasticity and bladder management.",
+   "b": [
+    "Interferon‑β or glatiramer acetate: reduce immune activation, chosen for safety profile",
+    "Oral dimethyl fumarate: convenient, avoid if severe lymphopenia",
+    "Avoid natalizumab in JC‑virus positive patients due to PML risk"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular EDSS assessment every 6–12 months, MRI annually, and vitamin D supplementation. Counsel on smoking cessation and infection prevention.",
+   "b": [
+    "Vaccinate against influenza and pneumococcus; avoid live vaccines during high‑dose steroids"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic MS lesions or relapses.",
+   "b": [
+    "Neuromyelitis optica spectrum disorder (AQP4‑IgG positive)",
+    "Acute disseminated encephalomyelitis (post‑infectious)",
+    "Sarcoidosis with CNS involvement"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal MRI early in disease or transiently negative CSF oligoclonal bands can give false reassurance.",
+   "b": [
+    "Early MRI may miss spinal lesions; repeat imaging if clinical suspicion persists",
+    "Oligoclonal bands can be absent in up to 5 % of definite MS"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of vision in one eye",
+  "Rapidly worsening weakness or difficulty breathing",
+  "New severe urinary retention"
+ ],
+ "faq": [
+  {
+   "q": "Can MS be cured?",
+   "a": "No cure exists; treatment aims to reduce relapses and slow disability."
+  },
+  {
+   "q": "Why are women more affected?",
+   "a": "Hormonal and genetic factors increase susceptibility, especially during reproductive years."
+  },
+  {
+   "q": "Is MS contagious?",
+   "a": "No, it is an autoimmune disease, not an infection."
+  }
+ ],
+ "exam": [
+  "List the 2017 McDonald criteria for diagnosing MS.",
+  "Explain how the EDSS is used to stage disease severity.",
+  "Describe first‑line disease‑modifying therapies and why natalizumab may be avoided."
+ ],
+ "related": [
+  "Neuromyelitis optica",
+  "Acute disseminated encephalomyelitis",
+  "Multiple sclerosis relapse management",
+  "Vitamin D and autoimmune disease",
+  "JC virus and progressive multifocal leukoencephalopathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

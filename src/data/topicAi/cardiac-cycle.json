@@ -1,0 +1,120 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "The cardiac cycle is the repeating sequence of electrical and mechanical events that fill the heart and eject blood. Understanding timing, pressures and sounds links physiology to bedside assessment.",
+ "aka": [
+  "Heart cycle",
+  "Cardiac rhythm"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Each heartbeat consists of atrial contraction, ventricular contraction, ejection, and relaxation. These phases generate the four classic heart sounds and define systolic and diastolic periods.",
+   "b": [
+    "Four phases: atrial systole, isovolumic contraction, ventricular ejection, isovolumic relaxation.",
+    "Heart sounds: S1 (closure of AV valves), S2 (closure of semilunar valves), S3 and S4 (rare, indicate filling abnormalities)."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Electrical depolarization (P wave → QRS → T wave) triggers muscle contraction. Pressure rises in the ventricles before the semilunar valves open, then falls as blood is ejected.",
+   "b": [
+    "Atrial systole adds ~20% of ventricular end‑diastolic volume.",
+    "Isovolumic phases generate pressure without volume change, crucial for valve timing."
+   ],
+   "t": [
+    {
+     "a": "ECG",
+     "b": "What phase of the cycle is occurring? Shows timing of depolarization (P, QRS, T) and helps estimate QT interval."
+    },
+    {
+     "a": "Auscultation",
+     "b": "Which heart sound is present? Identifies valve closure and abnormal filling (e.g., S3 in heart failure)."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "How is ventricular filling/ejection fraction? Visualizes wall motion and valve function when ECG or stethoscope are inconclusive."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Autonomic input, baroreceptor reflexes, and circulating hormones adjust heart rate and contractility to match metabolic demand.",
+   "b": [
+    "Sympathetic ↑ HR, contractility, shorten diastole.",
+    "Parasympathetic ↑ vagal tone, lengthen diastole, lower HR."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Disruption of timing or pressure gradients leads to murmurs, heart failure, or arrhythmias. Common low‑resource causes include rheumatic valve disease, HIV‑related cardiomyopathy, and malaria‑induced anemia.",
+   "b": [
+    "Valve stenosis → prolonged ejection time, louder S1/S2.",
+    "Heart failure → reduced ejection fraction, presence of S3.",
+    "Tachyarrhythmia → shortened diastole, impaired filling."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Recognizing abnormal sounds, pulse pressure changes, and ECG patterns guides urgent management of shock, acute valve rupture, or decompensated heart failure.",
+   "b": [
+    "Narrow pulse pressure → aortic stenosis or hypovolemia.",
+    "Wide pulse pressure → aortic regurgitation or sepsis."
+   ],
+   "t": [
+    {
+     "a": "Blood pressure measurement",
+     "b": "What is pulse pressure? Helps infer stroke volume and valve competence."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "What cardiac silhouette size? Detects cardiomegaly from chronic volume overload."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the sequence of sounds, pressure changes, and ECG intervals. Relate each to the underlying mechanical phase.",
+   "b": [
+    "S1 occurs at end of isovolumic contraction; S2 at start of isovolumic relaxation.",
+    "QT interval shortens with tachycardia; ≈40% of cycle at normal HR."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute chest pain with new murmur (possible valve rupture)",
+  "Sudden severe dyspnea with S3 (acute decompensated heart failure)",
+  "Syncope with rapid tachyarrhythmia (risk of cardiac arrest)"
+ ],
+ "faq": [
+  {
+   "q": "Why does tachycardia reduce cardiac output?",
+   "a": "Faster rates shorten diastole, limiting ventricular filling and stroke volume."
+  },
+  {
+   "q": "What does an S4 sound indicate?",
+   "a": "A stiff ventricle that atria must forcefully contract against, seen in hypertrophy or ischemia."
+  },
+  {
+   "q": "How is the QT interval related to the cardiac cycle?",
+   "a": "It spans ventricular depolarization to repolarization; a shorter QT reflects a faster heart rate."
+  }
+ ],
+ "exam": [
+  "Explain how the four heart sounds correspond to phases of the cardiac cycle.",
+  "Interpret a shortened QT interval on ECG in a patient with tachycardia.",
+  "Describe the hemodynamic changes in aortic stenosis and how they affect pulse pressure."
+ ],
+ "related": [
+  "Cardiac electrophysiology",
+  "Heart failure",
+  "Valvular heart disease",
+  "Arrhythmias",
+  "Blood pressure regulation",
+  "Echocardiography"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

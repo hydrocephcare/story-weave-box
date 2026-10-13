@@ -1,0 +1,180 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Severe malaria, usually caused by Plasmodium falciparum, is a life‑threatening infection with organ dysfunction. Prompt recognition, rapid parasitic clearance and supportive care are essential to prevent death.",
+ "aka": [
+  "Severe falciparum malaria",
+  "Cerebral malaria (when CNS involved)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Severe malaria is P. falciparum infection with any WHO-defined severity criterion, confirmed by microscopy or rapid test.",
+   "b": [
+    "Parasitaemia >5% (or any level with organ dysfunction)",
+    "Positive thick/thin smear or HRP2‑RDT"
+   ],
+   "t": [
+    {
+     "a": "Microscopy",
+     "b": "Confirms species and parasite density; high density supports severe disease"
+    },
+    {
+     "a": "HRP2 rapid test",
+     "b": "Detects P. falciparum antigen when microscopy unavailable; positive test plus clinical criteria = severe malaria"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "WHO uses organ‑specific criteria; each counts as severe regardless of parasite count.",
+   "b": [
+    "Cerebral involvement (coma, seizures)",
+    "Severe anemia (Hb <5 g/dL)",
+    "Renal failure (creatinine >265 µmol/L)",
+    "Hypoglycaemia (<2.2 mmol/L)",
+    "Hyperparasitaemia, acidosis, hyperlactataemia, shock, hemoglobinuria"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In endemic regions, P. falciparum is the overwhelming cause; co‑infection or comorbidity can worsen severity.",
+   "b": [
+    "Plasmodium falciparum infection (most common)",
+    "Co‑infection with HIV or bacterial sepsis",
+    "Pregnancy (increased parasite sequestration)",
+    "Recent antimalarial misuse or resistance"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have fever, chills, and rapidly develop organ dysfunction.",
+   "b": [
+    "Fever, rigors, headache",
+    "Altered consciousness or seizures (cerebral malaria)",
+    "Dark urine (hemoglobinuria, blackwater fever)",
+    "Rapid breathing, metabolic acidosis",
+    "Jaundice, pallor, low urine output"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests identify parasite load, organ injury and guide supportive care.",
+   "b": [
+    "Full blood count, renal and liver panels, glucose, lactate, blood gases"
+   ],
+   "t": [
+    {
+     "a": "Blood glucose",
+     "b": "Detects hypoglycaemia or hyperglycaemia; treat low glucose immediately"
+    },
+    {
+     "a": "Serum creatinine & urine output",
+     "b": "Assesses renal failure; need for dialysis or fluid adjustment"
+    },
+    {
+     "a": "Arterial lactate",
+     "b": "Shows tissue hypoxia; >2 mmol/L indicates severe metabolic acidosis"
+    },
+    {
+     "a": "Hemoglobin",
+     "b": "Identifies severe anemia; transfuse if <5 g/dL or symptomatic"
+    },
+    {
+     "a": "Chest X‑ray (if available)",
+     "b": "Looks for pulmonary oedema or ARDS; guides fluid strategy"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications develop quickly and are often fatal without intensive care.",
+   "b": [
+    "Cerebral malaria – coma, seizures",
+    "Acute respiratory distress syndrome",
+    "Severe metabolic acidosis",
+    "Renal failure requiring dialysis",
+    "Severe anemia needing transfusion",
+    "Hemoglobinuria (blackwater fever)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Rapid parasite clearance with IV artesunate, plus organ‑supportive measures.",
+   "b": [
+    "Switch to oral ACT after able to tolerate oral meds",
+    "Correct hypoglycaemia with dextrose, monitor glucose every 1‑2 h",
+    "Fluid resuscitation cautiously; avoid overload in renal failure",
+    "Blood transfusion for Hb <5 g/dL or symptomatic anemia",
+    "Treat seizures with benzodiazepines; consider antiepileptics",
+    "Broad‑spectrum antibiotics if bacterial sepsis cannot be excluded"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After discharge, ensure full ACT course, monitor for recrudescence and educate on preventive measures.",
+   "b": [
+    "Repeat smear or RDT 48 h after treatment to confirm clearance",
+    "Educate on insecticide‑treated nets, indoor residual spraying, chemoprophylaxis for travelers",
+    "Vaccinate with RTS,S where available"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic severe malaria’s systemic picture.",
+   "b": [
+    "Septic shock from bacterial infection",
+    "Viral haemorrhagic fevers (e.g., Ebola)",
+    "Acute viral hepatitis with jaundice",
+    "Sickle cell crisis with hemolysis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory values may be falsely reassuring.",
+   "b": [
+    "Parasitaemia may be low in early severe disease; rely on clinical criteria",
+    "Glucose can normalize after dextrose bolus, masking recurrent hypoglycaemia",
+    "Creatinine may lag behind renal injury in dehydration"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Coma or unresponsive state",
+  "Repeated seizures",
+  "Severe breathlessness or chest pain",
+  "Dark urine with rapid decline in urine output",
+  "Persistent vomiting preventing oral medication"
+ ],
+ "faq": [
+  {
+   "q": "Why is IV artesunate preferred over quinine?",
+   "a": "Artesunate clears parasites faster, reduces mortality, and has fewer cardiac and hypoglycaemic side‑effects."
+  },
+  {
+   "q": "Can a patient with low parasite count still have severe malaria?",
+   "a": "Yes; any WHO severity criterion (e.g., cerebral involvement) makes it severe regardless of count."
+  },
+  {
+   "q": "What is the role of antibiotics in severe malaria?",
+   "a": "Give broad‑spectrum antibiotics until bacterial sepsis is ruled out, because co‑infection is common in low‑resource settings."
+  }
+ ],
+ "exam": [
+  "List the WHO criteria that define severe malaria and explain why each indicates organ dysfunction.",
+  "Describe the first‑line antimalarial regimen for severe P. falciparum infection and the rationale for switching to oral therapy.",
+  "Identify three red‑flag complications of severe malaria and the immediate management steps for each."
+ ],
+ "related": [
+  "Uncomplicated malaria",
+  "Cerebral malaria",
+  "Malaria prophylaxis",
+  "Antimalarial drug resistance",
+  "Acute kidney injury",
+  "Septic shock"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

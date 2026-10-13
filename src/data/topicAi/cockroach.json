@@ -1,0 +1,132 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Cockroaches, especially Blattella germanica, are common indoor pests that can trigger IgE-mediated allergic reactions and carry enteric pathogens. Their exoskeletons and feces are major allergen sources, especially in low-resource settings.",
+ "aka": [
+  "German cockroach",
+  "Blattella germanica"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Blattella germanica thrives in warm, humid indoor environments and is a frequent contaminant in hospitals and food facilities. Its presence is a marker of poor hygiene and can exacerbate respiratory allergies.",
+   "b": [
+    "Indoor pest",
+    "Allergen source",
+    "Pathogen carrier"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The German cockroach is small, light brown, with two dark stripes on its pronotum. It reproduces rapidly, with females producing egg cases (oothecae) that release dozens of nymphs.",
+   "b": [
+    "Rapid reproduction",
+    "Oothecae",
+    "Resistant to pesticides"
+   ],
+   "t": [
+    {
+     "a": "Microscopy",
+     "b": "Presence of two dark stripes on pronotum confirms species"
+    }
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Cockroaches spread allergens through shed skins and feces. They can mechanically transfer bacteria and viruses on their bodies and in their gut.",
+   "b": [
+    "Mechanical transmission",
+    "Allergen shedding"
+   ],
+   "t": [
+    {
+     "a": "Environmental sampling",
+     "b": "High counts indicate need for pest control"
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Primary clinical impact is allergic disease: allergic rhinitis, asthma, and skin dermatitis. They can also carry enteric pathogens (E. coli, Salmonella) that cause foodborne illness.",
+   "b": [
+    "Allergic rhinitis",
+    "Asthma exacerbation",
+    "Foodborne infections"
+   ],
+   "t": [
+    {
+     "a": "Skin prick test",
+     "b": "Positive wheal indicates IgE-mediated sensitivity"
+    }
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis is clinical, supported by allergen testing and environmental assessment. In low-resource settings, visual inspection and patient history are key.",
+   "b": [
+    "History of exposure",
+    "Symptom correlation"
+   ],
+   "t": [
+    {
+     "a": "Skin prick test",
+     "b": "Positive wheal >3mm indicates sensitization"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management focuses on allergen avoidance, environmental cleaning, and, if needed, pharmacotherapy. Treat underlying allergic disease with antihistamines or inhaled corticosteroids.",
+   "b": [
+    "Allergen avoidance",
+    "Antihistamines",
+    "Inhaled corticosteroids"
+   ],
+   "t": [
+    {
+     "a": "Allergen avoidance",
+     "b": "Improves symptom control"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "In low-resource settings, a history of frequent sneezing, wheezing, or skin rash after kitchen exposure should prompt consideration of cockroach allergy. Visual inspection of kitchens and patient homes can guide interventions.",
+   "b": [
+    "History of kitchen exposure",
+    "Visual inspection"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Can cockroaches cause infections in humans?",
+   "a": "Yes, they can mechanically transfer bacteria like Salmonella, but infections are uncommon compared to allergic reactions."
+  },
+  {
+   "q": "What is the best way to reduce cockroach allergens in a home?",
+   "a": "Regular cleaning, sealing food, removing clutter, and using traps or baits to reduce population."
+  },
+  {
+   "q": "Do all cockroaches trigger allergies?",
+   "a": "Not all species; Blattella germanica is the most common allergen source in indoor environments."
+  }
+ ],
+ "exam": [
+  "Describe how cockroach exposure can worsen asthma control in a patient with allergic rhinitis.",
+  "Explain the rationale for using antihistamines in a patient with cockroach-induced dermatitis.",
+  "Outline a low-cost pest control strategy for a community health clinic."
+ ],
+ "related": [
+  "Allergic rhinitis",
+  "Asthma",
+  "Foodborne illness",
+  "Pest control",
+  "Environmental health"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

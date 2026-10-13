@@ -1,0 +1,76 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The coronary arteries arise from the aortic sinuses and supply the heart muscle. Their course, branches, and relationships determine perfusion and vulnerability to disease.",
+ "aka": [
+  "Coronary vessels"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The coronary arteries are the main blood supply to the myocardium, branching from the ascending aorta just above the aortic valve. Their distribution ensures oxygenated blood reaches all cardiac layers.",
+   "b": [
+    "Right coronary artery (RCA) supplies right atrium, right ventricle, SA node, AV node; Left coronary artery (LCA) supplies left ventricle and left atrium."
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Both arteries originate from the aortic root: the RCA from the right coronary cusp and the LCA from the left coronary cusp. The LCA divides into the left anterior descending (LAD) and circumflex (LCx).",
+   "b": [
+    "RCA runs in the right atrioventricular groove; LCA in the left atrioventricular groove."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The coronary arteries lie in the atrioventricular grooves, adjacent to the great cardiac veins. The RCA is close to the right atrium and right ventricle, while the LCx runs near the left atrium.",
+   "b": [
+    "The LAD runs anteriorly over the interventricular septum; the LCx courses posteriorly along the left atrioventricular groove."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "They deliver oxygenated blood to the myocardium. Branches such as the marginal, septal, and obtuse marginal arteries supply specific myocardial regions.",
+   "b": [
+    "Coronary perfusion occurs mainly during diastole, when aortic pressure exceeds myocardial pressure."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Autonomic innervation modulates coronary tone. Sympathetic stimulation increases heart rate and vasoconstriction; parasympathetic activity promotes vasodilation.",
+   "b": [
+    "Vagal afferents from the heart influence coronary flow via baroreceptor reflexes."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Beyond oxygen delivery, coronary arteries regulate myocardial metabolism, support electrical conduction, and respond to ischemic stimuli by vasodilation.",
+   "b": [
+    "Coronary autoregulation maintains constant flow despite changes in perfusion pressure."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Atherosclerotic plaques, thrombosis, or emboli can occlude coronary arteries, leading to myocardial infarction. Coronary anomalies may cause sudden death.",
+   "b": [
+    "Coronary artery disease is the leading cause of death worldwide."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the mnemonic \"RCA supplies right, LCA supplies left\" and that the LAD is the \"widowmaker\" due to its critical territory.",
+   "b": [
+    "In acute MI, ST elevation in leads V1–V4 suggests LAD occlusion."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Chest pain with pressure or burning, especially if radiating to arm or jaw; shortness of breath, diaphoresis, nausea, or syncope."
+ ],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

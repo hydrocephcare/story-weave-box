@@ -1,0 +1,115 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Calcium homeostasis keeps blood calcium within a narrow range to support bone, muscle, nerve, and clotting functions. It is controlled by parathyroid hormone, vitamin D, and calcitonin, with kidneys, gut, and bone as effectors.",
+ "aka": [
+  "Ca2+ balance",
+  "Calcium regulation"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Calcium is the most abundant mineral in the body; 99% is stored in bone, 1% circulates as ionised Ca2+ that drives neuromuscular transmission, cardiac contractility and coagulation.",
+   "b": [
+    "Normal ionised Ca2+: 1.12–1.30 mmol/L (4.5–5.2 mg/dL)",
+    "Total serum Ca includes protein‑bound fraction"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "When ionised calcium falls, the parathyroid glands secrete PTH; when it rises, thyroid C‑cells release calcitonin. Vitamin D (calcitriol) amplifies intestinal calcium absorption.",
+   "b": [
+    "PTH → bone resorption, renal Ca reabsorption, 1‑α‑hydroxylase activation",
+    "Calcitonin → inhibits osteoclasts, promotes renal Ca excretion",
+    "Calcitriol → ↑ intestinal Ca & PO4 absorption"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The feedback loop integrates serum ionised Ca, PTH, calcitriol, and calcitonin. Kidneys fine‑tune Ca by reabsorbing 98% in the proximal tubule and adjusting distal reabsorption under PTH.",
+   "b": [
+    "Low Ca → ↑ PTH → ↑ calcitriol → ↑ gut Ca absorption",
+    "High Ca → ↑ calcitonin → ↓ bone resorption"
+   ],
+   "t": [
+    {
+     "a": "Serum ionised calcium",
+     "b": "Is the calcium level low, normal, or high? Guides whether to look for PTH excess or deficiency."
+    },
+    {
+     "a": "Intact PTH",
+     "b": "Is PTH appropriately high or low for the calcium level? Distinguishes primary hyperparathyroidism from hypoparathyroidism."
+    },
+    {
+     "a": "25‑OH vitamin D",
+     "b": "Is vitamin D deficiency contributing to hypocalcaemia? If unavailable, assess sunlight exposure and diet."
+    },
+    {
+     "a": "24‑hour urinary calcium",
+     "b": "Helps differentiate hypercalciuria (e.g., familial hypocalciuric hypercalcemia) from other causes of hypercalcaemia."
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Disorders are grouped by whether calcium is low (hypocalcaemia) or high (hypercalcaemia) and by the primary organ defect.",
+   "b": [
+    "Hypocalcaemia: PTH deficiency, vitamin D deficiency, renal failure, acute pancreatitis, sepsis.",
+    "Hypercalcaemia: Primary hyperparathyroidism, malignancy (PTH‑rP), granulomatous disease (TB, sarcoidosis), vitamin D intoxication."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Symptoms reflect the role of Ca2+ in excitability and coagulation; urgent signs demand rapid correction.",
+   "b": [
+    "Hypocalcaemia: tetany, seizures, prolonged QT, carpopedal spasm, hypotension.",
+    "Hypercalcaemia: polyuria, nephrolithiasis, constipation, confusion, cardiac arrhythmia."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on interpreting calcium panels, recognizing when PTH is inappropriately high or low, and linking common tropical conditions to calcium disorders.",
+   "b": [
+    "Low Ca + low PTH → hypoparathyroidism (post‑surgical, autoimmune).",
+    "Low Ca + high PTH → vitamin D deficiency or chronic kidney disease.",
+    "High Ca + high PTH → primary hyperparathyroidism; consider MEN1 in young patients."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe tetany or seizures (hypocalcaemia)",
+  "Cardiac arrhythmia or prolonged QT (hypocalcaemia)",
+  "Acute mental status change, renal failure, or pancreatitis with hypercalcaemia"
+ ],
+ "faq": [
+  {
+   "q": "Why does vitamin D deficiency cause low calcium?",
+   "a": "Without calcitriol the gut cannot absorb enough calcium, so serum Ca falls and PTH rises, but the response is limited if vitamin D remains low."
+  },
+  {
+   "q": "Can calcitonin be used to treat hypercalcaemia?",
+   "a": "Calcitonin lowers calcium quickly but its effect wanes; it is only a temporary bridge while definitive therapy is arranged."
+  },
+  {
+   "q": "What tropical disease can raise calcium levels?",
+   "a": "Granulomatous infections such as tuberculosis increase extra‑renal 1‑α‑hydroxylase, producing excess calcitriol and hypercalcaemia."
+  }
+ ],
+ "exam": [
+  "Explain the step‑wise hormonal response to a falling ionised calcium level.",
+  "Interpret a calcium panel: serum Ca 7.8 mg/dL, ionised Ca 1.00 mmol/L, PTH 150 pg/mL, 25‑OH D 12 ng/mL.",
+  "List three causes of hypercalcaemia in a patient from a low‑resource setting and indicate the key test to differentiate them."
+ ],
+ "related": [
+  "Parathyroid hormone physiology",
+  "Vitamin D metabolism",
+  "Renal calcium handling",
+  "Bone remodeling",
+  "Electrolyte disturbances",
+  "Acid‑base influence on ionised calcium"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

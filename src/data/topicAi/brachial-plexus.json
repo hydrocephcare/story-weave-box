@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The brachial plexus is a network of nerves (C5‑T1) that supplies motor and sensory function to the upper limb. Its complex arrangement makes it vulnerable to trauma, tumors, and infections, producing characteristic patterns of weakness and sensory loss.",
+ "aka": [
+  "plexus brachii"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A C5‑T1 nerve network that exits the neck, passes under the clavicle, and spreads into the arm. It forms roots, trunks, divisions, cords, and terminal branches.",
+   "b": [
+    "Roots → trunks → divisions → cords → branches",
+    "Mnemonic: 'Randy Travis Drives Cows Backwards'"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Roots lie between anterior and middle scalene muscles, trunks lie in the posterior triangle, cords surround the second part of the axillary artery, and branches run into the arm.",
+   "b": [
+    "Upper trunk (C5‑C6) → supraclavicular nerves",
+    "Lower trunk (C8‑T1) → ulnar nerve"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anterior to the scalenes, posterior to the subclavian artery, and deep to the clavicle. In the axilla it is intimately related to the axillary artery and vein.",
+   "b": [
+    "Injury often occurs where the plexus is fixed: between the first rib and clavicle"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Primarily from the subclavian artery branches (e.g., transverse cervical, suprascapular) and the thoracoacromial artery.",
+   "b": [
+    "Ischemia is rare but can follow severe trauma or arterial thrombosis"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Provides motor innervation to all shoulder, arm, forearm and hand muscles and sensory innervation to skin over the upper limb.",
+   "b": [
+    "Motor: musculocutaneous, median, ulnar, radial, axillary",
+    "Sensory: dermatomes C5‑T1"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Coordinates flexion, extension, abduction, and fine hand movements; conveys proprioceptive feedback from the limb to the CNS.",
+   "b": [
+    "Loss of function produces predictable patterns based on level of lesion"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Trauma (birth, motor‑vehicle, sports), tumors (Pancoast), infections (TB, HIV‑related neuropathy) and iatrogenic stretch can damage the plexus, causing motor weakness and sensory loss.",
+   "b": [
+    "Upper trunk lesion → Erb‑Duchenne palsy: shoulder abduction, elbow flexion loss",
+    "Lower trunk lesion → Klumpke palsy: hand intrinsic weakness, ulnar sensory loss",
+    "Pancoast tumour → pain radiating to the medial arm, Horner’s syndrome"
+   ],
+   "t": [
+    {
+     "a": "MRI of brachial plexus",
+     "b": "Identifies tumor, avulsion, or hematoma; if unavailable, use high‑resolution ultrasound"
+    },
+    {
+     "a": "Electromyography (EMG) / Nerve conduction study",
+     "b": "Distinguishes neuropraxia from axon loss; if unavailable, rely on clinical pattern and plain radiographs"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Detects apical mass (Pancoast) or rib fractures; if unavailable, clinical suspicion guides referral"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Assess shoulder abduction (deltoid), elbow flexion (biceps), wrist extension (radial), and hand grip. Sensory testing follows the dermatomal map C5‑T1.",
+   "b": [
+    "Weakness of shoulder abduction + elbow flexion → upper trunk lesion",
+    "Claw hand with intrinsic wasting → lower trunk lesion"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Progressive weakness or paralysis of the arm",
+  "Severe, unrelenting pain radiating from neck to hand",
+  "Signs of spinal cord compromise (numbness below the lesion, bladder dysfunction)"
+ ],
+ "faq": [
+  {
+   "q": "Why does a birth injury cause Erb’s palsy?",
+   "a": "Excessive traction on the infant’s neck stretches the upper trunk (C5‑C6) as the shoulder is pulled upward during delivery."
+  },
+  {
+   "q": "Can a Pancoast tumour be missed on exam?",
+   "a": "Yes; early pain may be mistaken for musculoskeletal strain, so imaging is essential when pain is persistent or accompanied by Horner’s signs."
+  },
+  {
+   "q": "Is EMG always needed for brachial plexus injury?",
+   "a": "Not if the clinical picture is classic and imaging is available; EMG helps when the level of injury is unclear or recovery is delayed."
+  }
+ ],
+ "exam": [
+  "Describe the order of components in the brachial plexus and give a clinical example for an upper‑trunk lesion.",
+  "Explain how a Pancoast tumour produces Horner’s syndrome and brachial plexus pain.",
+  "List three investigations for suspected brachial plexus injury and the specific question each answers."
+ ],
+ "related": [
+  "Cervical spinal nerves",
+  "Thoracic outlet syndrome",
+  "Peripheral neuropathy",
+  "Shoulder anatomy",
+  "Upper limb vascular anatomy",
+  "Neurogenic thoracic outlet syndrome"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

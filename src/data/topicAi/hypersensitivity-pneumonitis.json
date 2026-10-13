@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Hypersensitivity pneumonitis is an immune‑mediated lung injury that starts in the alveoli after inhalation of organic antigens. It presents as a restrictive pattern with impaired diffusion and can progress to fibrosis if exposure continues.",
+ "aka": [
+  "Allergic alveolitis",
+  "Farmer’s lung",
+  "Bird fancier’s lung"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "An immunologic reaction to inhaled organic antigens that injures alveolar walls, leading to inflammation and, if persistent, fibrosis. Diagnosis combines exposure history, clinical features, imaging, and BAL lymphocytosis.",
+   "b": [
+    "Exposure to moldy hay, bird feathers, or industrial dusts"
+   ],
+   "t": [
+    {
+     "a": "High‑resolution CT",
+     "b": "Shows ground‑glass opacities and centrilobular nodules; persistent findings suggest chronic disease."
+    },
+    {
+     "a": "BAL lymphocyte count",
+     "b": "Elevated CD4+ and CD8+ cells; a lymphocyte percentage >20% supports the diagnosis."
+    },
+    {
+     "a": "Serum precipitating antibodies",
+     "b": "Positive to specific antigens confirms sensitization but is not mandatory."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the 2015 ATS/ERS guidelines: acute, subacute, chronic. Chronic disease is further graded by extent of fibrosis on imaging and pulmonary function tests.",
+   "b": [
+    "Acute: flu‑like symptoms, reversible with removal of exposure.",
+    "Chronic: progressive dyspnea, restrictive pattern, reduced DLCO."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Organic inhalants are the main culprits; occupational exposures are common. In low‑resource settings, environmental molds and bird droppings are frequent.",
+   "b": [
+    "Moldy hay (farmer’s lung)",
+    "Bird feathers or droppings (bird fancier’s lung)",
+    "Industrial dusts (silica, coal)",
+    "Certain drugs (amiodarone, methotrexate)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop a flu‑like illness 4–8 hours after exposure, progressing to cough, dyspnea, and restrictive spirometry. Chronic cases show weight loss and clubbing.",
+   "b": [
+    "Acute: fever, chills, cough, dyspnea",
+    "Chronic: progressive shortness of breath, dry cough, weight loss"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A stepwise approach uses history, imaging, BAL, and serology. When tests are unavailable, clinical judgment and empirical exposure avoidance guide management.",
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Normal does not exclude HP."
+    },
+    {
+     "a": "Pulmonary function tests",
+     "b": "Low DLCO suggests alveolar damage."
+    },
+    {
+     "a": "Serum precipitating antibodies",
+     "b": "Negative result does not rule out HP."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid progression to respiratory failure, severe hypoxemia, or pulmonary hypertension warrants urgent care. Fibrosis can become irreversible.",
+   "b": [
+    "Sudden worsening of dyspnea",
+    "Hypoxemia unresponsive to oxygen",
+    "Signs of pulmonary hypertension"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Eliminate exposure, use corticosteroids for acute flare, and consider immunosuppressants for refractory chronic disease. Supportive care includes oxygen and pulmonary rehab.",
+   "b": [
+    "Avoid antigen exposure",
+    "Corticosteroids reduce inflammation",
+    "Azathioprine or mycophenolate for chronic cases"
+   ],
+   "t": [
+    {
+     "a": "Corticosteroids",
+     "b": "Avoid long‑term use if infection risk is high."
+    },
+    {
+     "a": "Azathioprine",
+     "b": "Monitor blood counts for myelosuppression."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular spirometry and imaging track progression. Patient education on avoiding known antigens is essential, especially in rural or occupational settings.",
+   "b": [
+    "Spirometry every 6–12 months",
+    "High‑resolution CT if symptoms worsen",
+    "Education on safe handling of birds or hay"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Asthma, sarcoidosis, and interstitial lung disease from other causes can mimic HP. Key differences are alveolar involvement and exposure history.",
+   "b": [
+    "Asthma – bronchial inflammation, reversible obstruction",
+    "Sarcoidosis – non‑caseating granulomas, systemic features"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "BAL lymphocytosis may be normal in early disease; chest X‑ray can be unremarkable. A negative antibody test does not exclude HP.",
+   "b": [
+    "Early disease may show normal imaging",
+    "Serology can be negative despite exposure"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of breathlessness",
+  "Hypoxemia not corrected by oxygen",
+  "Signs of pulmonary hypertension"
+ ],
+ "faq": [
+  {
+   "q": "Can hypersensitivity pneumonitis be cured?",
+   "a": "If exposure stops early, inflammation can resolve; chronic fibrosis is usually irreversible."
+  },
+  {
+   "q": "Do all birds cause the disease?",
+   "a": "Only certain species (e.g., pigeons, chickens) produce the antigens that trigger the reaction."
+  },
+  {
+   "q": "Is smoking a risk factor?",
+   "a": "Smoking does not cause HP but can worsen lung function and mask symptoms."
+  }
+ ],
+ "exam": [
+  "Explain why BAL lymphocytosis supports a diagnosis of hypersensitivity pneumonitis.",
+  "Describe the key differences in imaging between acute and chronic hypersensitivity pneumonitis.",
+  "Outline the first‑line treatment for a patient with acute hypersensitivity pneumonitis who cannot be exposed to the antigen."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

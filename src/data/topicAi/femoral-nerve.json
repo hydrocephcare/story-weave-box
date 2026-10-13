@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The femoral nerve supplies the anterior thigh muscles and gives sensation to the medial thigh and knee. It emerges from L2‑L4, travels under the inguinal ligament, and is vulnerable to injury in hip fractures and surgical procedures.",
+ "aka": [
+  "Femoral nerve"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The femoral nerve is the largest branch of the lumbar plexus, carrying motor and sensory fibers that control thigh flexion and knee extension, and provide cutaneous sensation to the medial thigh.",
+   "b": [
+    "Motor to quadriceps, sartorius, pectineus",
+    "Sensory to medial thigh, knee",
+    "Origin L2‑L4"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It exits the pelvis through the psoas major, runs anterior to the iliac vessels, and pierces the inguinal ligament into the thigh.",
+   "b": [
+    "Course: psoas major → iliac fossa → inguinal ligament → thigh"
+   ],
+   "t": [
+    {
+     "a": "Anatomical landmark identification",
+     "b": "At the level of the inguinal crease, just medial to the femoral artery."
+    }
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Adjacent structures include the femoral artery and vein, the iliopsoas muscle, and the femoral canal containing Cloquet's node.",
+   "b": [
+    "Femoral artery lateral",
+    "Femoral vein medial",
+    "Femoral canal posterior"
+   ],
+   "t": [
+    {
+     "a": "Imaging of femoral canal",
+     "b": "It may compress the femoral nerve, causing sensory loss."
+    }
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The femoral nerve receives arterial input from the femoral artery and its branches.",
+   "b": [
+    "Femoral artery",
+    "Deep femoral artery"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound Doppler",
+     "b": "Reduced flow suggests vascular compromise."
+    }
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Motor fibers innervate the quadriceps, sartorius, and pectineus; sensory fibers form the medial cutaneous nerve of the thigh.",
+   "b": [
+    "Motor: quadriceps, sartorius, pectineus",
+    "Sensory: medial thigh, knee"
+   ],
+   "t": [
+    {
+     "a": "EMG of quadriceps",
+     "b": "Possible femoral nerve injury."
+    }
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Motor: knee extension, hip flexion; Sensory: medial thigh and knee.",
+   "b": [
+    "Knee extension",
+    "Hip flexion",
+    "Medial thigh sensation"
+   ],
+   "t": [
+    {
+     "a": "Straight leg raise test",
+     "b": "Possible femoral nerve irritation."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Common injuries include compression in the femoral canal, trauma from hip fractures, and iatrogenic damage during hip surgery.",
+   "b": [
+    "Compression by hernia",
+    "Hip fracture",
+    "Surgical transection"
+   ],
+   "t": [
+    {
+     "a": "MRI of pelvis",
+     "b": "Shows high signal indicating injury."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that loss of knee jerk reflex indicates femoral nerve dysfunction; the femoral triangle is a key surgical landmark.",
+   "b": [
+    "Knee jerk absent → femoral nerve",
+    "Femoral triangle contains nerve, artery, vein"
+   ],
+   "t": [
+    {
+     "a": "Clinical exam",
+     "b": "Femoral nerve or quadriceps muscle problem."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe weakness of the quadriceps with inability to rise from a chair",
+  "Sudden loss of knee jerk reflex",
+  "Painful swelling in the femoral triangle with sensory loss"
+ ],
+ "faq": [
+  {
+   "q": "What causes femoral nerve palsy in childbirth?",
+   "a": "Pressure from the fetal head during prolonged labor can compress the nerve."
+  },
+  {
+   "q": "Can a femoral hernia affect the nerve?",
+   "a": "Yes, a femoral hernia can compress the nerve, leading to sensory loss in the medial thigh."
+  },
+  {
+   "q": "How is femoral nerve injury treated?",
+   "a": "Treat the underlying cause, provide physiotherapy, and avoid prolonged compression."
+  }
+ ],
+ "exam": [
+  "Explain the anatomical course of the femoral nerve and its relation to the femoral artery.",
+  "Describe the clinical presentation of femoral nerve injury and how you would confirm it.",
+  "Outline the management steps for a patient with a femoral nerve injury after a hip fracture."
+ ],
+ "related": [
+  "Lumbar plexus",
+  "Femoral triangle",
+  "Femoral artery",
+  "Femoral canal",
+  "Hip fracture",
+  "Femoral hernia"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

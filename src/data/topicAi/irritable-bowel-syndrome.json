@@ -1,0 +1,128 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Irritable Bowel Syndrome is a functional disorder of gut–brain interaction causing abdominal pain and altered bowel habits without organic disease. Diagnosis relies on Rome IV criteria and exclusion of red‑flag conditions. Management is tailored to symptom patterns and includes dietary, behavioral, and pharmacologic strategies.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "IBS is defined by recurrent abdominal pain at least one day per week in the last three months, associated with two or more of: pain related to defecation, change in stool frequency, or change in stool form. Diagnosis is clinical; no imaging or endoscopy is required unless red flags appear.",
+   "b": [
+    "Rome IV criteria are the gold standard"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom frequency and impact on daily life: mild (intermittent), moderate (daily), severe (constant). The IBS Severity Scoring System (IBS‑SSS) can be used to monitor progression."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The exact cause is unknown; the prevailing model is gut–brain dysregulation. Key contributors include psychological stress, altered gut microbiota, visceral hypersensitivity, and abnormal motility.",
+   "b": [
+    "Psychological stress and anxiety are common triggers"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report crampy abdominal pain, bloating, and either diarrhea (IBS‑D), constipation (IBS‑C), or mixed patterns (IBS‑M). Symptoms often improve after bowel movements and may fluctuate with meals.",
+   "b": [
+    "Pain is relieved by defecation in many cases"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are reserved for red‑flag exclusion and to rule out organic disease.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Anemia suggests inflammatory bowel disease or malignancy"
+    },
+    {
+     "a": "C-reactive protein/ESR",
+     "b": "Elevated values raise suspicion for IBD"
+    },
+    {
+     "a": "Stool calprotectin",
+     "b": "Elevated indicates IBD or infection"
+    },
+    {
+     "a": "Serum thyroid function",
+     "b": "Abnormal results direct to endocrine workup"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent evaluation is needed if there is unexplained weight loss, rectal bleeding, anemia, fever, or new onset of severe pain. These may indicate colorectal cancer, inflammatory bowel disease, or infection.",
+   "b": [
+    "Weight loss, bleeding, fever, anemia"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the dominant symptom pattern first. Dietary changes (low FODMAP), fiber for constipation, and antidiarrheals for diarrhea are first line. Psychological therapies and low‑dose antispasmodics address visceral hypersensitivity.",
+   "b": [
+    "Low FODMAP diet improves symptoms in 50–70% of patients"
+   ],
+   "t": [
+    {
+     "a": "Antispasmodics (e.g., hyoscine)",
+     "b": "Avoid in patients with glaucoma or urinary retention"
+    },
+    {
+     "a": "Low‑dose tricyclic antidepressants",
+     "b": "Avoid in patients with cardiac conduction issues"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review every 3–6 months to assess symptom control and adjust therapy. Encourage stress management, regular exercise, and avoidance of known triggers."
+  },
+  {
+   "h": "Often confused with",
+   "p": "Inflammatory bowel disease, celiac disease, colorectal cancer, microscopic colitis, and functional dyspepsia."
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal calprotectin does not exclude microscopic colitis; stool cultures may miss parasites common in low‑resource settings. A normal colonoscopy does not rule out small‑bowel disease."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained weight loss",
+  "Rectal bleeding",
+  "Fever",
+  "Anemia",
+  "New onset severe abdominal pain"
+ ],
+ "faq": [
+  {
+   "q": "Can IBS be cured?",
+   "a": "IBS is a chronic condition; treatment focuses on symptom control rather than cure."
+  },
+  {
+   "q": "Do antibiotics help IBS?",
+   "a": "They may help if small intestinal bacterial overgrowth is present, but routine use is not recommended."
+  },
+  {
+   "q": "Is IBS a mental illness?",
+   "a": "It is a functional disorder involving gut–brain interaction; psychological factors influence symptoms but it is not a psychiatric disease."
+  }
+ ],
+ "exam": [
+  "Explain how the Rome IV criteria differentiate IBS from inflammatory bowel disease.",
+  "Describe the rationale for a low FODMAP diet in IBS management.",
+  "Outline red‑flag symptoms that would prompt urgent investigation in a patient with suspected IBS."
+ ],
+ "related": [
+  "Functional gastrointestinal disorders",
+  "Celiac disease",
+  "Inflammatory bowel disease",
+  "Microscopic colitis",
+  "Small intestinal bacterial overgrowth"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,128 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Systemic fungal infections are invasive diseases caused by fungi that spread beyond the skin or mucosa, often affecting immunocompromised hosts. Prompt recognition, appropriate laboratory testing, and early antifungal therapy are essential to reduce mortality.",
+ "aka": [
+  "Invasive fungal disease"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Fungi that cause systemic disease enter the bloodstream or deep tissues, leading to organ dysfunction. Common agents include Candida, Cryptococcus, Histoplasma, Coccidioides, and Aspergillus.",
+   "b": [
+    "Most occur in patients with weakened immunity (HIV, chemotherapy, transplant).",
+    "Geography matters: Histoplasma in Ohio River Valley, Coccidioides in Southwest US, etc."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "These fungi are eukaryotic, have cell walls containing β‑glucan and chitin, and many produce a polysaccharide capsule (e.g., Cryptococcus) that evades host defenses.",
+   "b": [
+    "Thermal tolerance: grow at 37 °C.",
+    "Dimorphic species change form in tissue (yeast) vs environment (mold)."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Entry routes include inhalation of spores, translocation from mucosal surfaces, or direct inoculation via catheters. Some dimorphic fungi convert to yeast after inhalation, disseminating hematogenously.",
+   "b": [
+    "Inhaled conidia → lung → bloodstream.",
+    "Candida often originates from gut or skin colonisation."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Clinical syndromes range from candidemia to cryptococcal meningitis, disseminated histoplasmosis, coccidioidal pneumonia, and invasive aspergillosis. Severity is staged by organ involvement and host immune status.",
+   "b": [
+    "Candidemia: fever, sepsis, possible end‑organ emboli.",
+    "Cryptococcal meningitis: headache, neck stiffness, raised ICP.",
+    "Invasive aspergillosis: sinusitis, pulmonary nodules, hemoptysis."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Combine clinical suspicion with targeted laboratory tests. Culture, antigen detection, and molecular assays are key; imaging supports organ involvement.",
+   "b": [
+    "Blood cultures for Candida (sensitivity ~50%).",
+    "Cryptococcal antigen in serum/CSF is highly sensitive."
+   ],
+   "t": [
+    {
+     "a": "Blood culture",
+     "b": "Is a viable fungus present in the bloodstream? Positive growth confirms candidemia; negative does not rule out infection if prior antifungals."
+    },
+    {
+     "a": "Serum cryptococcal antigen",
+     "b": "Is Cryptococcus circulating? Positive indicates disseminated disease; titers guide severity."
+    },
+    {
+     "a": "Galactomannan (serum or BAL)",
+     "b": "Is Aspergillus invading? Positive supports invasive aspergillosis; false positives occur with certain antibiotics."
+    },
+    {
+     "a": "Histoplasma urine antigen",
+     "b": "Is disseminated histoplasmosis present? Positive in most severe cases; cross‑reactivity with Blastomyces."
+    },
+    {
+     "a": "Imaging (CT chest)",
+     "b": "What is the pattern of organ involvement? Nodules with halo sign suggest aspergillosis; miliary pattern suggests histoplasmosis."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "First‑line therapy uses agents that penetrate the infected site and have fungicidal activity. Amphotericin B (deoxycholate or lipid formulations) and azoles are mainstays; echinocandins are preferred for candidemia.",
+   "b": [
+    "Amphotericin B: broad spectrum, CNS penetration, but nephrotoxic.",
+    "Fluconazole: good for Candida and Cryptococcus, oral step‑down.",
+    "Voriconazole: drug of choice for invasive aspergillosis, excellent lung/brain levels.",
+    "Echinocandins (caspofungin, micafungin): safe for candidemia, no renal toxicity."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on host risk factors, typical organ involvement, key diagnostic tests, and first‑line antifungal choices.",
+   "b": [
+    "Remember cryptococcal antigen is the fastest way to diagnose meningitis.",
+    "In neutropenic patients with fever unresponsive to antibiotics, think invasive aspergillosis.",
+    "Echinocandins are preferred for candidemia when renal function is poor."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly worsening sepsis despite antibiotics",
+  "New neurological deficits or signs of meningitis",
+  "Severe respiratory distress with hemoptysis in immunocompromised patients"
+ ],
+ "faq": [
+  {
+   "q": "Why are fungal infections more common in HIV patients?",
+   "a": "HIV depletes CD4+ T cells, impairing the immune response needed to control intracellular fungi like Cryptococcus."
+  },
+  {
+   "q": "Can a negative culture rule out systemic fungal infection?",
+   "a": "No; prior antifungal therapy or low organism burden can give false‑negative cultures, so antigen or molecular tests are essential."
+  },
+  {
+   "q": "When is amphotericin B preferred over azoles?",
+   "a": "In severe, life‑threatening disease (e.g., cryptococcal meningitis, disseminated histoplasmosis) where rapid fungicidal activity and CNS penetration are needed."
+  }
+ ],
+ "exam": [
+  "List the major risk factors for invasive aspergillosis and the diagnostic test of choice.",
+  "Explain the rationale for using amphotericin B versus fluconazole in cryptococcal meningitis.",
+  "Describe how you would interpret a positive serum galactomannan in a neutropenic patient."
+ ],
+ "related": [
+  "Candida infections",
+  "Cryptococcosis",
+  "Histoplasmosis",
+  "Coccidioidomycosis",
+  "Aspergillosis",
+  "Antifungal pharmacology"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

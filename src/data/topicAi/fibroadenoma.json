@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Fibroadenoma is the most common benign breast tumor, occurring in young women. It is a biphasic lesion of stromal and epithelial proliferation that is hormone‑responsive and usually harmless.",
+ "aka": [
+  "breast mouse",
+  "fibro‑adenoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A fibroadenoma is a well‑circumscribed, mobile breast mass composed of proliferating intralobular stroma and ductal epithelium. Diagnosis relies on clinical exam, imaging, and core needle biopsy when needed.",
+   "b": [
+    "Benign, biphasic tumor",
+    "Most common in women 15‑35 years",
+    "MED12 mutation in ~2/3 of cases"
+   ],
+   "t": [
+    {
+     "a": "Physical examination",
+     "b": "Is the lump firm, rubbery, mobile, and painless? Confirms typical fibroadenoma feel."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Shows a well‑defined, hypoechoic, homogeneous mass with smooth borders. Helps differentiate from cysts or malignancy."
+    },
+    {
+     "a": "Mammography (if >30 y)",
+     "b": "May reveal a dense, well‑circumscribed mass; calcifications are uncommon. Absence of spiculated margins supports benign nature."
+    },
+    {
+     "a": "Core needle biopsy",
+     "b": "Confirms biphasic histology and excludes phyllodes tumor. If unavailable, refer for excisional biopsy if suspicion persists."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Benign fibroadenomas are not staged; however, size (>5 cm) and rapid growth raise concern for phyllodes tumor or atypia, prompting more aggressive work‑up.",
+   "b": [
+    "Small (<2 cm) – routine follow‑up",
+    "Large (>5 cm) or rapid growth – consider excision"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Fibroadenoma arises from hormonal stimulation of intralobular stroma, with genetic contribution from MED12 mutations. No infectious cause, but endocrine disorders can influence growth.",
+   "b": [
+    "Estrogen excess (puberty, pregnancy)",
+    "MED12 somatic mutation",
+    "Family history of benign breast disease"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Young women notice a painless, firm, mobile lump that may enlarge during menses, pregnancy, or hormone therapy and shrink after menopause.",
+   "b": [
+    "Usually solitary; can be multiple or bilateral",
+    "No skin changes, nipple discharge, or systemic symptoms"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging and tissue sampling guide management, especially when size or growth pattern is atypical.",
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Distinguishes solid from cystic; typical fibroadenoma appears well‑circumscribed. If unavailable, clinical exam guides decision."
+    },
+    {
+     "a": "Mammography",
+     "b": "Used in women >30 y to assess density; lack of spiculated margins supports benignity."
+    },
+    {
+     "a": "Core needle biopsy",
+     "b": "Provides definitive histology; required if imaging is indeterminate or lesion >3 cm."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Although benign, certain features suggest malignancy or a phyllodes tumor that can become aggressive.",
+   "b": [
+    "Rapid increase in size over weeks",
+    "Hard, fixed, or irregular borders",
+    "Skin dimpling, nipple retraction, or ulceration"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment is individualized: observation for small stable lesions, surgical excision for large, symptomatic, or atypical masses.",
+   "b": [
+    "Observation with 6‑month ultrasound if <2 cm and stable",
+    "Excisional biopsy or vacuum‑assisted removal for >3 cm or growing lesions",
+    "Avoid unnecessary wide excision to preserve breast tissue"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular breast self‑examination and periodic imaging keep track of any change. No proven preventive drugs; hormonal balance is key.",
+   "b": [
+    "Self‑exam every 3 months for young women",
+    "Ultrasound annually if multiple fibroadenomas",
+    "Counsel on avoiding unnecessary hormonal supplements"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several other breast lesions mimic fibroadenoma clinically and radiologically.",
+   "b": [
+    "Phyllodes tumor – larger, more cellular stroma, may recur",
+    "Breast cyst – fluid‑filled, transilluminates, changes with aspiration",
+    "Fibrocystic change – diffuse tenderness, multiple cysts"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Imaging and pathology can be deceptive if not interpreted in context.",
+   "b": [
+    "Ultrasound may miss small areas of stromal atypia, leading to under‑diagnosis of phyllodes tumor",
+    "Core biopsy sampling error can underestimate cellularity"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly enlarging breast mass",
+  "Fixed or hard lesion",
+  "Skin changes, nipple retraction, or discharge"
+ ],
+ "faq": [
+  {
+   "q": "Do fibroadenomas increase breast cancer risk?",
+   "a": "Simple fibroadenomas do not raise risk; complex fibroadenomas slightly increase risk (≈1.5‑2×)."
+  },
+  {
+   "q": "Can a fibroadenoma disappear on its own?",
+   "a": "Yes, especially after menopause; hormonal decline can cause involution."
+  },
+  {
+   "q": "Is surgery always required?",
+   "a": "No. Small, stable lesions are safely observed; surgery is reserved for symptomatic or atypical cases."
+  }
+ ],
+ "exam": [
+  "Describe the clinical features that distinguish a fibroadenoma from a phyllodes tumor.",
+  "Explain the role of MED12 mutations in fibroadenoma pathogenesis.",
+  "Outline the imaging findings that support a benign fibroadenoma and when a biopsy is indicated."
+ ],
+ "related": [
+  "Phyllodes tumor",
+  "Breast cyst",
+  "Fibrocystic breast disease",
+  "Mammographic density",
+  "Breast cancer risk factors",
+  "Hormone‑responsive breast lesions"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

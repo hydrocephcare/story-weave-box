@@ -1,0 +1,142 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Drug mechanisms explain how medicines alter body processes to treat disease. Understanding targets, pathways, and side‑effect profiles helps clinicians choose the right drug and anticipate complications.",
+ "aka": [
+  "Pharmacodynamics",
+  "Drug action"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Drug mechanisms describe the interaction between a drug and its biological target, such as a receptor, enzyme, ion channel, or transporter, leading to a therapeutic or adverse effect.",
+   "b": [
+    "Targets: receptors, enzymes, ion channels, transporters"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is not graded for mechanisms, but clinical impact ranges from mild side‑effects to life‑threatening toxicity depending on dose, patient factors, and drug properties."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Mechanistic causes arise from drug structure, pharmacokinetics, and patient genetics. Common issues include receptor over‑activation, enzyme inhibition, or off‑target binding.",
+   "b": [
+    "Receptor agonism/antagonism",
+    "Enzyme inhibition/induction",
+    "Transporter blockade"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may experience expected therapeutic effects, dose‑related side‑effects, or idiosyncratic reactions. Symptoms reflect the drug’s primary target and unintended pathways.",
+   "b": [
+    "Therapeutic response",
+    "Dose‑related adverse events",
+    "Idiosyncratic reactions"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab and imaging tests confirm drug action or toxicity and guide dose adjustments.",
+   "t": [
+    {
+     "a": "Serum drug level",
+     "b": "Low: consider dose increase; high: risk of toxicity, consider dose reduction"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Elevated transaminases suggest hepatic injury"
+    },
+    {
+     "a": "Renal function tests",
+     "b": "Reduced GFR may require dose adjustment"
+    },
+    {
+     "a": "Electrolytes",
+     "b": "Abnormal levels indicate risk of arrhythmia or muscle weakness"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe adverse reactions can mimic disease states or cause organ failure. Watch for signs of anaphylaxis, hepatotoxicity, nephrotoxicity, or QT prolongation.",
+   "b": [
+    "Anaphylaxis",
+    "Liver failure",
+    "Renal failure",
+    "QT prolongation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying mechanism: stop or reduce the drug, provide supportive care, and monitor organ function. Choose alternatives with safer profiles when possible.",
+   "b": [
+    "Discontinue offending drug",
+    "Administer antidote if available",
+    "Supportive care (fluids, electrolytes)",
+    "Monitor liver/renal function"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate drug necessity, adjust dose, and educate patients on signs of toxicity. Use therapeutic drug monitoring where available.",
+   "b": [
+    "Re‑assess indication",
+    "Dose titration",
+    "Patient education"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Drug mechanisms can be mistaken for disease pathophysiology. For example, NSAID-induced gastric ulcer vs. peptic ulcer disease from H. pylori.",
+   "b": [
+    "NSAID ulcer vs. H. pylori ulcer",
+    "Beta‑blocker bradycardia vs. intrinsic sinus node disease"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal lab values may mask toxicity (e.g., early renal injury). Conversely, chronic disease can alter drug metabolism, leading to misleading levels.",
+   "b": [
+    "Early renal dysfunction may show normal creatinine"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe allergic reaction",
+  "Unexplained organ failure",
+  "Sudden cardiac arrhythmia"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between a drug target and a side‑effect target?",
+   "a": "The drug target is the intended site of action; side‑effect targets are unintended sites where the drug also binds, causing adverse effects."
+  },
+  {
+   "q": "Why is therapeutic drug monitoring important?",
+   "a": "It ensures drug levels stay within the therapeutic window, maximizing efficacy while minimizing toxicity."
+  },
+  {
+   "q": "Can a drug’s mechanism change over time?",
+   "a": "Yes, due to metabolic induction, receptor desensitization, or disease progression, the drug’s effect may diminish or shift."
+  }
+ ],
+ "exam": [
+  "Explain how NSAIDs inhibit COX enzymes and why this leads to both analgesia and gastrointestinal toxicity.",
+  "Describe the mechanism of action of a selective beta‑1 blocker and its impact on heart rate and blood pressure.",
+  "Outline the steps to manage a patient with suspected drug-induced hepatotoxicity, including investigations and treatment choices."
+ ],
+ "related": [
+  "Cardiovascular pharmacology",
+  "Antibiotic mechanisms",
+  "Antifungal mechanisms",
+  "Antiviral mechanisms",
+  "Drug metabolism",
+  "Adverse drug reactions"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

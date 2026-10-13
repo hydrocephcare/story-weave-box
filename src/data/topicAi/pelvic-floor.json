@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The pelvic floor is a muscular diaphragm that supports pelvic organs, maintains continence, and contributes to core stability. Weakness or injury can cause prolapse, incontinence, and pain.",
+ "aka": [
+  "levator ani complex",
+  "pelvic diaphragm"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The pelvic floor forms the base of the pelvis, separating the abdominal cavity from the perineum. It consists of muscles, fascia, and ligaments that work together to support viscera and control sphincters.",
+   "b": [
+    "Key muscles: levator ani (pubococcygeus, puborectalis, iliococcygeus) and coccygeus",
+    "Functions: organ support, continence, sexual function, posture"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The levator ani originates from the pubic bone, ischial spine, and tendinous arch of the obturator internus, inserting into the coccyx and anococcygeal raphe.",
+   "b": [
+    "Divided into right and left halves, forming a sling around the anal canal",
+    "Coccygeus lies posterior to levator ani, anchoring to the sacrum"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly the pelvic floor lies behind the bladder and urethra; laterally it borders the obturator internus fascia; posteriorly it contacts the rectum and anal canal.",
+   "b": [
+    "Broad ligament, ureters, ovaries, fallopian tubes run lateral to the floor",
+    "Internal iliac vessels pass just above the floor"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial blood comes from the inferior gluteal artery, branches of the internal pudendal artery, and the middle rectal artery.",
+   "b": [
+    "Venous drainage follows the internal iliac veins",
+    "Rich anastomoses help maintain tissue health"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Motor innervation is primarily via the pudendal nerve (S2‑S4) and direct branches from the sacral plexus; sensory fibers travel with the same nerves.",
+   "b": [
+    "Pudendal nerve injury leads to incontinence and perineal pain",
+    "Pelvic splanchnic nerves contribute autonomic control"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The floor maintains organ position, provides continence by supporting the urethral and anal sphincters, and assists in intra‑abdominal pressure regulation during coughing, lifting, and defecation.",
+   "b": [
+    "Puborectalis creates the anorectal angle for continence",
+    "Levator ani contracts during Valsalva to prevent descent"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Weakness or denervation of the pelvic floor leads to prolapse, stress urinary incontinence, fecal incontinence, and chronic pelvic pain. Trauma, childbirth, chronic cough, and heavy lifting are common causes.",
+   "b": [
+    "Stress urinary incontinence: urethral hypermobility from levator laxity",
+    "Pelvic organ prolapse: descent of bladder, uterus, or rectum on bearing down",
+    "Denervation: pudendal neuropathy from prolonged lithotomy or obstetric injury"
+   ],
+   "t": [
+    {
+     "a": "Pelvic exam (Valsalva)",
+     "b": "Detects organ descent; a positive descent confirms pelvic floor weakness"
+    },
+    {
+     "a": "Urodynamics",
+     "b": "Distinguishes stress vs urge incontinence; abnormal leak pressure indicates sphincter deficiency"
+    },
+    {
+     "a": "MRI pelvis",
+     "b": "Visualizes muscle bulk and defects; unavailable → use bedside ultrasound or clinical staging"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "During a rectal or vaginal exam, ask the patient to bear down. Observe for perineal descent, rectocele, or cystocele. Palpate the levator ani for tone and defects.",
+   "b": [
+    "Positive perineal descent suggests levator ani denervation",
+    "A wide puborectalis angle indicates fecal incontinence risk"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute urinary retention",
+  "Severe rectal prolapse causing bleeding",
+  "Sudden onset of pelvic pain with fever (possible infection)"
+ ],
+ "faq": [
+  {
+   "q": "Why does bearing down reveal pelvic floor weakness?",
+   "a": "Increased intra‑abdominal pressure stresses the floor; a weak floor allows visible descent of perineal structures."
+  },
+  {
+   "q": "Can pelvic floor exercises improve prolapse?",
+   "a": "Yes, targeted levator ani strengthening can reduce mild prolapse and improve continence."
+  },
+  {
+   "q": "Is pelvic floor dysfunction more common after childbirth?",
+   "a": "Yes, vaginal delivery stretches and can injure the levator ani and pudendal nerve, increasing risk of incontinence and prolapse."
+  }
+ ],
+ "exam": [
+  "Explain how the levator ani contributes to continence and what a positive Valsalva exam indicates.",
+  "Describe the anatomical relationships of the pelvic floor to the bladder, uterus, and rectum.",
+  "List common causes of pelvic floor weakness and how they differ in low‑resource settings."
+ ],
+ "related": [
+  "Urethral sphincter anatomy",
+  "Stress urinary incontinence",
+  "Pelvic organ prolapse",
+  "Pudendal nerve injury",
+  "Obstetric pelvic floor trauma",
+  "Core stability and the transverse abdominis"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

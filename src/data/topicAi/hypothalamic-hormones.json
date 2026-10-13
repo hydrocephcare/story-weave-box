@@ -1,0 +1,131 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Hypothalamic hormones are key regulators of the anterior pituitary, controlling endocrine cascades that affect growth, reproduction, and metabolism. They act as releasing or inhibiting signals, and their dysregulation leads to common endocrine disorders.",
+ "aka": [
+  "Hypothalamic releasing hormones",
+  "Pituitary regulators"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The hypothalamus releases peptides that either stimulate or inhibit anterior pituitary hormones. This central control ensures coordinated endocrine responses to physiological needs.",
+   "b": [
+    "TRH stimulates TSH and prolactin",
+    "GnRH stimulates LH and FSH",
+    "Somatostatin inhibits GH and TSH",
+    "Dopamine inhibits prolactin"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Neurons in the hypothalamus synthesize hormones, store them in axon terminals, and release them into portal vessels that carry them to the pituitary.",
+   "b": [
+    "Releasing hormones bind pituitary receptors to trigger hormone secretion",
+    "Inhibitory hormones bind receptors to suppress secretion"
+   ],
+   "t": [
+    {
+     "a": "TRH",
+     "b": "High TRH → ↑TSH, ↑prolactin; low TRH → ↓TSH, ↓prolactin"
+    },
+    {
+     "a": "GnRH",
+     "b": "High GnRH → ↑LH/FSH; low GnRH → hypogonadism"
+    },
+    {
+     "a": "Somatostatin",
+     "b": "High somatostatin → ↓GH; low somatostatin → ↑GH"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Target organ hormones (e.g., thyroid hormone, cortisol) provide negative feedback to the hypothalamus, adjusting releasing hormone secretion.",
+   "b": [
+    "Thyroid hormone suppresses TRH",
+    "Cortisol suppresses CRH and GnRH"
+   ],
+   "t": [
+    {
+     "a": "TSH",
+     "b": "High TSH → hypothyroidism; low TSH → hyperthyroidism"
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Imbalance of releasing or inhibiting hormones causes endocrine disorders such as hyperprolactinemia, hypothyroidism, or growth hormone excess.",
+   "b": [
+    "Pituitary adenoma secreting prolactin",
+    "Hypothalamic dysfunction in anorexia"
+   ],
+   "t": [
+    {
+     "a": "Prolactin",
+     "b": "Elevated prolactin → pituitary adenoma or hypothyroidism"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Recognizing patterns of pituitary hormone excess or deficiency guides diagnosis of common endocrine diseases and informs treatment choices.",
+   "b": [
+    "Hyperprolactinemia causes infertility and galactorrhea",
+    "Hypothyroidism presents with fatigue, weight gain, cold intolerance"
+   ],
+   "t": [
+    {
+     "a": "TSH",
+     "b": "Elevated TSH with low free T4 → primary hypothyroidism"
+    },
+    {
+     "a": "LH/FSH",
+     "b": "Low LH/FSH with low estradiol → hypogonadotropic hypogonadism"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the four classic releasing hormones and their target pituitary hormones. In low-resource settings, clinical clues often outweigh laboratory confirmation.",
+   "b": [
+    "TRH → TSH & prolactin",
+    "GnRH → LH & FSH",
+    "Somatostatin → GH & TSH",
+    "Dopamine → prolactin"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hyperprolactinemia with visual field loss (possible pituitary macroadenoma)",
+  "Unexplained severe hypothyroidism with cardiac symptoms"
+ ],
+ "faq": [
+  {
+   "q": "What causes hyperprolactinemia?",
+   "a": "Pituitary prolactinoma, hypothyroidism, medications, or hypothalamic suppression of dopamine."
+  },
+  {
+   "q": "Why does hypothyroidism raise prolactin?",
+   "a": "Low thyroid hormone removes TRH suppression, increasing prolactin secretion."
+  },
+  {
+   "q": "Can infections affect hypothalamic hormones?",
+   "a": "Yes, TB or HIV can damage hypothalamic tissue, altering hormone release."
+  }
+ ],
+ "exam": [
+  "Explain how TRH regulates TSH and prolactin secretion and the clinical consequences of its excess.",
+  "Describe the feedback loop between cortisol and CRH, including the effect of adrenal insufficiency."
+ ],
+ "related": [
+  "Pituitary adenoma",
+  "Thyroid hormone regulation",
+  "Growth hormone axis",
+  "Reproductive endocrinology"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

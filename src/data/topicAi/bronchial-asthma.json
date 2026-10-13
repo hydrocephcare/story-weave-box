@@ -1,0 +1,152 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Bronchial asthma is a reversible airway disease marked by episodic bronchoconstriction, inflammation, and hyperresponsiveness. Symptoms flare with triggers and improve with bronchodilators. Management focuses on trigger avoidance, inhaled therapy, and monitoring.",
+ "aka": [
+  "Asthma",
+  "Bronchial asthma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Asthma is defined by variable airflow limitation that improves with bronchodilators or spontaneously. Diagnosis combines history, peak flow variability, and response to treatment.",
+   "b": [
+    "Variable wheeze, cough, dyspnea",
+    "Exacerbations triggered by allergens, exercise, cold air"
+   ],
+   "t": [
+    {
+     "a": "Spirometry",
+     "b": "Measures FEV1 and FVC; a reversible drop >12% after bronchodilator confirms asthma."
+    },
+    {
+     "a": "Peak expiratory flow variability",
+     "b": "Daily peak flow variation >20% indicates uncontrolled asthma."
+    },
+    {
+     "a": "Methacholine challenge",
+     "b": "Positive if FEV1 falls 20% at low concentration; used when spirometry is normal but suspicion remains."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by symptom frequency and lung function, guiding treatment intensity.",
+   "b": [
+    "Intermittent",
+    "Mild persistent",
+    "Moderate persistent",
+    "Severe persistent"
+   ],
+   "t": [
+    {
+     "a": "FEV1 % predicted",
+     "b": "<80% indicates persistent disease; <60% suggests severe."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Asthma is multifactorial; the most common triggers are allergens and irritants, followed by infections and occupational exposures.",
+   "b": [
+    "Allergic sensitization (dust mites, pollen, animal dander)",
+    "Respiratory viral infections",
+    "Air pollution, tobacco smoke",
+    "Occupational dusts, fumes"
+   ],
+   "t": [
+    {
+     "a": "Skin prick test",
+     "b": "Identifies IgE-mediated allergens; positive results guide avoidance."
+    },
+    {
+     "a": "Serum IgE",
+     "b": "Elevated IgE supports atopy but is not diagnostic alone."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report episodic wheeze, chest tightness, cough, and shortness of breath, often worse at night or early morning.",
+   "b": [
+    "Wheeze that improves with bronchodilator",
+    "Cough that worsens at night",
+    "Exercise-induced symptoms"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm airflow limitation, assess severity, and rule out mimics.",
+   "t": [
+    {
+     "a": "Spirometry",
+     "b": "Shows reversible obstruction; confirms diagnosis."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Excludes pneumonia, pneumothorax, or structural lung disease."
+    },
+    {
+     "a": "Blood eosinophil count",
+     "b": "Elevated eosinophils suggest allergic phenotype; guides biologic therapy."
+    },
+    {
+     "a": "Fractional exhaled nitric oxide (FeNO)",
+     "b": "High FeNO indicates eosinophilic airway inflammation."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe exacerbations can lead to respiratory failure; chronic disease may cause airway remodeling and fixed obstruction.",
+   "b": [
+    "Stridor, cyanosis, inability to speak",
+    "Persistent cough with sputum production",
+    "Fixed airflow limitation on spirometry"
+   ],
+   "t": [
+    {
+     "a": "Arterial blood gas",
+     "b": "Detects hypoxia or hypercapnia during severe attacks."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Stridor or severe wheeze not relieved by rescue inhaler",
+  "Inability to speak full sentences",
+  "Cyanosis or chest pain",
+  "Rapidly worsening shortness of breath"
+ ],
+ "faq": [
+  {
+   "q": "Can asthma be cured?",
+   "a": "Asthma is a chronic condition; control is achieved with long‑term therapy, not cure."
+  },
+  {
+   "q": "What are the main triggers?",
+   "a": "Allergens, viral infections, exercise, cold air, smoke, and occupational irritants."
+  },
+  {
+   "q": "Why use inhaled corticosteroids?",
+   "a": "They reduce airway inflammation, the underlying cause of asthma symptoms."
+  }
+ ],
+ "exam": [
+  "Explain how reversible airflow limitation is demonstrated on spirometry.",
+  "Describe the stepwise approach to asthma management and when to add a long‑acting β2‑agonist.",
+  "List common triggers and explain how they precipitate an asthma attack."
+ ],
+ "related": [
+  "Allergic rhinitis",
+  "COPD",
+  "Bronchiectasis",
+  "Pneumonia",
+  "Occupational asthma",
+  "Eosinophilic granulomatosis with polyangiitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

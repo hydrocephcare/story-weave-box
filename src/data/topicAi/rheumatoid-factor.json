@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Rheumatoid factor (RF) is an IgM (or IgA) autoantibody against the Fc portion of IgG, found in many autoimmune and infectious diseases. It helps diagnose rheumatoid arthritis but is not disease‑specific.",
+ "aka": [
+  "rheumatoid IgM",
+  "anti‑IgG Fc antibody"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "RF is an autoantibody that forms immune complexes, contributing to joint inflammation. It is measured by nephelometry or latex agglutination; a titre >20 IU/mL is usually considered positive.",
+   "b": [
+    "Positive RF supports rheumatoid arthritis (RA) but must be interpreted with clinical picture and other tests."
+   ],
+   "t": [
+    {
+     "a": "RF assay",
+     "b": "Does the patient have circulating anti‑IgG antibodies? Positive result suggests autoimmune disease; negative does not exclude RA."
+    },
+    {
+     "a": "Anti‑CCP (anti‑cyclic citrullinated peptide)",
+     "b": "Is there a more specific marker for RA? Positive anti‑CCP with RF increases likelihood of erosive disease."
+    },
+    {
+     "a": "ANA test",
+     "b": "Is there systemic lupus or other connective‑tissue disease? Negative ANA with positive RF leans toward RA."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "RA severity is staged by joint damage (radiographs) and functional status (DAS28, HAQ). High RF titres correlate with more aggressive disease and erosions.",
+   "b": [
+    "RF titre >3× upper limit predicts rapid radiographic progression."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "RF can arise from several conditions; the most common is rheumatoid arthritis, followed by chronic infections and other autoimmune disorders.",
+   "b": [
+    "Rheumatoid arthritis – primary autoimmune cause.",
+    "Chronic hepatitis C – immune complex formation.",
+    "HIV infection – polyclonal B‑cell activation.",
+    "Tuberculosis – chronic antigenic stimulation (relevant in low‑resource settings).",
+    "Other autoimmune diseases (Sjogren’s, systemic sclerosis)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with RF‑positive RA present with symmetric polyarthritis of small joints, morning stiffness >1 hour, and possible rheumatoid nodules.",
+   "b": [
+    "Swollen, tender metacarpophalangeal and proximal interphalangeal joints.",
+    "Morning stiffness improving with activity.",
+    "Systemic features: fatigue, low‑grade fever."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond RF, a combination of serology, imaging, and functional scores confirms diagnosis and guides treatment.",
+   "b": [
+    "X‑ray of hands/feet for erosions.",
+    "Ultrasound or MRI to detect early synovitis.",
+    "Baseline CBC, liver/kidney function before therapy."
+   ],
+   "t": [
+    {
+     "a": "Joint radiography",
+     "b": "Are there erosions or joint space narrowing? Positive findings confirm structural damage and stage disease."
+    },
+    {
+     "a": "Ultrasound Doppler",
+     "b": "Is there active synovitis? Detects inflammation when X‑ray is normal."
+    },
+    {
+     "a": "CBC, LFT, renal panel",
+     "b": "Are baseline organ functions safe for DMARDs? Abnormal results may limit drug choices."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled RF‑positive RA can lead to irreversible joint destruction, cardiovascular disease, and extra‑articular manifestations.",
+   "b": [
+    "Rapidly progressive erosive arthritis.",
+    "Seropositive RA increases risk of myocardial infarction.",
+    "Rheumatoid nodules, pulmonary fibrosis, vasculitis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; for RA, start disease‑modifying antirheumatic drugs (DMARDs) and consider biologics if response is inadequate.",
+   "b": [
+    "Methotrexate – first‑line DMARD; reduces immune activation.",
+    "Sulfasalazine or leflunomide – alternatives when methotrexate contraindicated.",
+    "TNF‑α inhibitors (e.g., etanercept) – for refractory disease; avoid in active infection.",
+    "Short‑course NSAIDs or low‑dose steroids for symptom control."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of disease activity, drug toxicity, and comorbidities is essential.",
+   "b": [
+    "Assess DAS28 every 3–6 months.",
+    "Screen for cardiovascular risk annually.",
+    "Vaccinate against influenza and pneumococcus."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that can also show positive RF or similar joint symptoms.",
+   "b": [
+    "Systemic lupus erythematosus – often ANA positive, low RF.",
+    "Psoriatic arthritis – asymmetric, skin lesions, usually RF negative.",
+    "Parvovirus B19 infection – acute symmetric arthritis, transient RF."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "RF may be falsely positive or negative, leading to diagnostic errors.",
+   "b": [
+    "Low‑titer RF in healthy older adults can be misinterpreted as disease.",
+    "Early RA may have negative RF; rely on clinical picture and anti‑CCP.",
+    "Chronic infections (HCV) can produce high RF without arthritis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe joint swelling, fever, or inability to move a limb – possible septic arthritis; new chest pain or shortness of breath in RA – risk of pulmonary involvement."
+ ],
+ "faq": [
+  {
+   "q": "Is a positive RF enough to diagnose rheumatoid arthritis?",
+   "a": "No; RF must be combined with clinical findings and preferably anti‑CCP positivity."
+  },
+  {
+   "q": "Why can hepatitis C cause a high RF?",
+   "a": "Chronic viral antigenemia stimulates B‑cells to produce IgM RF, forming cryoglobulin complexes."
+  },
+  {
+   "q": "Can RF be negative in established RA?",
+   "a": "Yes; up to 20 % of RA patients are seronegative, especially early disease."
+  }
+ ],
+ "exam": [
+  "Explain how RF contributes to joint damage in rheumatoid arthritis.",
+  "List three non‑RA conditions that can cause a positive RF and how you would differentiate them.",
+  "Interpret a patient with RF 150 IU/mL, anti‑CCP positive, and erosions on X‑ray."
+ ],
+ "related": [
+  "Anti‑CCP antibodies",
+  "Rheumatoid arthritis",
+  "Cryoglobulinemia",
+  "Hepatitis C infection",
+  "Systemic lupus erythematosus",
+  "Psoriatic arthritis",
+  "Joint imaging modalities",
+  "DMARD therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

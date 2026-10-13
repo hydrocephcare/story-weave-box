@@ -1,0 +1,134 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "The cell cycle regulates cell division, with distinct phases that drugs target to treat cancer. Understanding phase timing helps clinicians choose effective chemotherapy and anticipate side effects.",
+ "aka": [
+  "Cell Cycle, Cell Division"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The cell cycle is a series of phases—G0, G1, S, G2, M—that a cell passes through to divide. In cancer, many cells are arrested in G0/G1, making them less susceptible to drugs that target DNA synthesis.",
+   "b": [
+    "G0: quiescent; G1: growth; S: DNA synthesis; G2: preparation; M: mitosis"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Cancer staging reflects tumor burden, not cell cycle phase. However, the proportion of cells in active phases predicts chemotherapy response.",
+   "b": [
+    "High G0/G1 fraction = lower proliferation index; low S/G2/M = reduced chemosensitivity"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Malignant transformation leads to uncontrolled entry into G1 and S phases. Common causes include oncogene activation, tumor suppressor loss, and chronic inflammation.",
+   "b": [
+    "Oncogene activation (e.g., MYC), p53 loss, chronic infections (HBV, HPV)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with rapidly proliferating tumors often have aggressive symptoms: pain, weight loss, organ dysfunction. Slow‑growing tumors may be asymptomatic until late.",
+   "b": [
+    "Rapidly growing masses, systemic symptoms; slow growth, incidental findings"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab and imaging assess proliferation and phase distribution.",
+   "b": [
+    "If tests unavailable, use histology and clinical staging"
+   ],
+   "t": [
+    {
+     "a": "Ki‑67 immunostaining",
+     "b": "Measures proliferation index; high Ki‑67 indicates many cells in S/G2/M."
+    },
+    {
+     "a": "Flow cytometry (DNA content analysis)",
+     "b": "Differentiates G0/G1 vs S/G2/M populations."
+    },
+    {
+     "a": "PET‑CT",
+     "b": "Detects metabolically active tumor regions, correlating with proliferative activity."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid tumor growth can cause organ compression, bleeding, or metastasis. Chemotherapy targeting dividing cells can cause myelosuppression and mucositis.",
+   "b": [
+    "Tumor lysis syndrome, severe neutropenia, febrile neutropenia"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cancer with phase‑specific chemotherapy, supportive care, and monitoring. Drugs are chosen based on the dominant cell cycle phase of the tumor.",
+   "b": [
+    "If drug unavailable, use alternative class with similar phase target"
+   ],
+   "t": [
+    {
+     "a": "Growth factors (e.g., G-CSF)",
+     "b": "Stimulate neutrophil recovery; used when neutropenia is expected."
+    },
+    {
+     "a": "Antiemetics (e.g., ondansetron)",
+     "b": "Prevent chemotherapy‑induced nausea; improves adherence."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor tumor response with imaging and proliferation markers. Prevent complications with prophylactic antibiotics and infection control.",
+   "b": [
+    "Regular imaging every 2–3 months; monitor CBC; educate on infection signs"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Cell cycle arrest in normal tissues (e.g., bone marrow) can mimic tumor proliferation patterns. Distinguish by histology and Ki‑67 levels.",
+   "b": [
+    "Quiescent normal cells vs malignant proliferation"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low Ki‑67 may occur in tumors with high G0 fraction, leading to underestimation of aggressiveness. Flow cytometry may miss subpopulations if sample quality is poor.",
+   "b": [
+    "False low proliferation index; sampling error"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Why do some cancers respond poorly to chemotherapy?",
+   "a": "If most tumor cells are in G0/G1, drugs targeting S or M phases are less effective."
+  },
+  {
+   "q": "Can we force cancer cells into active phases?",
+   "a": "Certain agents (e.g., growth factors) can push cells into G1, but this may increase toxicity."
+  },
+  {
+   "q": "What is the role of Ki‑67?",
+   "a": "It is a nuclear protein expressed during active phases; high levels indicate rapid proliferation."
+  }
+ ],
+ "exam": [
+  "Explain how the phase of the cell cycle influences the choice of a chemotherapy agent.",
+  "Describe the clinical significance of a high Ki‑67 index in a tumor biopsy.",
+  "Outline the management steps for a patient with a rapidly proliferating tumor presenting with tumor lysis syndrome."
+ ],
+ "related": [
+  "Chemotherapy Mechanisms",
+  "Tumor Proliferation Index",
+  "Bone Marrow Suppression",
+  "Oncogene Activation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

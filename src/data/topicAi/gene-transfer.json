@@ -1,0 +1,117 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Gene transfer in bacteria is the movement of DNA between cells, enabling rapid spread of traits like antibiotic resistance. Clinicians must recognise its role in treatment failure and infection control.",
+ "aka": [
+  "Horizontal gene transfer"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Bacteria exchange genetic material by conjugation, transformation, and transduction. This non‑vertical inheritance can instantly give a pathogen new resistance or virulence factors, altering clinical outcomes.",
+   "b": [
+    "Conjugation: plasmid DNA moves via sex pili.",
+    "Transformation: uptake of free DNA from the environment.",
+    "Transduction: bacteriophages carry DNA between bacteria."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Any bacterial species capable of gene transfer can become more pathogenic. Plasmids often carry multiple resistance genes, making organisms multidrug‑resistant (MDR).",
+   "b": [
+    "Broad host range plasmids (e.g., IncA/C) spread β‑lactamase genes.",
+    "Integrons capture and express gene cassettes."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Gene transfer occurs within microbial communities—on skin, in the gut, or in hospital surfaces—where bacteria are in close contact or exposed to DNA fragments.",
+   "b": [
+    "Biofilms promote conjugation by keeping cells together.",
+    "Antibiotic pressure selects for transferred resistance."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Gene transfer itself does not cause disease, but it creates resistant infections that are harder to treat and can lead to sepsis, pneumonia, or urinary‑tract infections.",
+   "b": [
+    "MDR Gram‑negative sepsis (e.g., ESBL‑producing E. coli).",
+    "MRSA skin and soft‑tissue infection."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Identify resistant organisms and infer gene transfer by detecting plasmid‑mediated resistance patterns.",
+   "b": [
+    "Phenotypic resistance patterns suggest plasmid spread.",
+    "Molecular tests confirm specific resistance genes."
+   ],
+   "t": [
+    {
+     "a": "Culture with susceptibility testing",
+     "b": "Which antibiotics the isolate resists? → Guides therapy and alerts to possible HGT."
+    },
+    {
+     "a": "PCR for resistance genes (e.g., blaNDM, mecA)",
+     "b": "Is a known plasmid‑borne gene present? → Confirms HGT mechanism."
+    },
+    {
+     "a": "Plasmid profiling (replicon typing)",
+     "b": "What plasmid type is present? → Helps infection‑control tracing."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treat the infection first, then interrupt gene transfer to prevent spread.",
+   "b": [
+    "Use the narrowest effective antibiotic based on susceptibility.",
+    "Avoid agents that select for plasmid‑mediated resistance (e.g., unnecessary broad‑spectrum β‑lactams).",
+    "Implement strict hand hygiene, contact precautions, and environmental cleaning."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams.",
+   "b": [
+    "Conjugation is the most clinically important HGT method.",
+    "Plasmids often carry multiple resistance genes (multidrug resistance).",
+    "Infection‑control measures are essential to stop spread of HGT‑derived resistance."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Septic shock from a resistant infection",
+  "Rapid clinical deterioration despite appropriate antibiotics"
+ ],
+ "faq": [
+  {
+   "q": "Why does antibiotic resistance spread faster than mutation alone?",
+   "a": "Gene transfer can move whole resistance genes between species instantly, bypassing the slow process of random mutation."
+  },
+  {
+   "q": "Can viruses cause bacterial resistance?",
+   "a": "Yes, bacteriophages mediate transduction, transferring resistance genes between bacteria."
+  },
+  {
+   "q": "What is the role of biofilms in gene transfer?",
+   "a": "Biofilms keep bacteria close together, enhancing conjugation and protecting transferred DNA from degradation."
+  }
+ ],
+ "exam": [
+  "Explain the three mechanisms of bacterial gene transfer and give a clinical example for each.",
+  "A patient with a urinary‑tract infection fails therapy with ceftriaxone. How would you investigate whether plasmid‑mediated resistance is present?",
+  "List infection‑control steps to limit the spread of a multidrug‑resistant organism in a low‑resource hospital."
+ ],
+ "related": [
+  "Antibiotic resistance mechanisms",
+  "Plasmids and integrons",
+  "Nosocomial infections",
+  "Biofilm formation",
+  "Molecular diagnostics in microbiology"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

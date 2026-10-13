@@ -1,0 +1,208 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Oesophageal varices are dilated veins in the distal oesophagus caused by portal hypertension, most often from cirrhosis. They bleed massively and require urgent recognition and treatment. Management balances bleeding control, infection prevention and long‑term portal pressure reduction.",
+ "aka": [
+  "Esophageal varices",
+  "Oesophageal variceal disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Oesophageal varices are submucosal veins in the lower oesophagus that become enlarged when portal pressure rises. Diagnosis is confirmed by upper GI endoscopy, which visualises the varices and grades their size.",
+   "b": [
+    "Endoscopy is gold standard"
+   ],
+   "t": [
+    {
+     "a": "Upper GI endoscopy",
+     "b": "Shows variceal size and presence of red signs; determines need for band ligation"
+    },
+    {
+     "a": "Ultrasound with Doppler",
+     "b": "Assesses portal vein diameter and hepatic vein flow; indicates portal hypertension"
+    },
+    {
+     "a": "CT/MRI",
+     "b": "Visualises splenomegaly, collaterals and liver morphology when endoscopy is contraindicated"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by the Baveno criteria and the Child‑Pugh score. The Baveno IV stage (large varices or red signs) predicts high bleeding risk.",
+   "b": [
+    "Baveno IV: large varices or red signs"
+   ],
+   "t": [
+    {
+     "a": "Child‑Pugh",
+     "b": "Classifies liver function; higher class correlates with variceal bleeding risk"
+    },
+    {
+     "a": "Model for End‑Stage Liver Disease (MELD)",
+     "b": "Predicts mortality and prioritises transplant"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Portal hypertension from cirrhosis is the leading cause. Alcoholic liver disease is the most common etiology, followed by viral hepatitis and schistosomiasis in endemic areas.",
+   "b": [
+    "Alcoholic cirrhosis",
+    "Viral hepatitis B/C",
+    "Schistosomiasis"
+   ],
+   "t": [
+    {
+     "a": "Liver function tests",
+     "b": "Elevated bilirubin and transaminases suggest liver injury; hypoalbuminaemia indicates chronic disease"
+    },
+    {
+     "a": "Serology for hepatitis B/C",
+     "b": "Identifies viral etiology; guides antiviral therapy"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have no symptoms until bleeding. Acute haematemesis, coffee‑ground vomitus, or melena are classic. Chronic bleeding may present as iron‑deficiency anaemia.",
+   "b": [
+    "Haematemesis",
+    "Melena",
+    "Anaemia"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin",
+     "b": "Low levels indicate chronic blood loss"
+    },
+    {
+     "a": "Platelet count",
+     "b": "Thrombocytopenia reflects splenic sequestration; severe drop raises bleeding risk"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm portal hypertension, assess liver function and rule out other causes of upper GI bleeding.",
+   "t": [
+    {
+     "a": "Endoscopy",
+     "b": "Detects varices and red signs; guides band ligation"
+    },
+    {
+     "a": "Ultrasound with Doppler",
+     "b": "Measures portal vein diameter; detects splenomegaly"
+    },
+    {
+     "a": "Liver biopsy (if safe)",
+     "b": "Defines fibrosis stage; informs prognosis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include massive haematemesis, hypotension, tachycardia and altered mental status. Complications are rebleeding, hepatic encephalopathy and infection.",
+   "b": [
+    "Massive haematemesis",
+    "Hypotension"
+   ],
+   "t": [
+    {
+     "a": "Coagulation profile",
+     "b": "Prolonged PT/INR signals coagulopathy; high INR increases bleeding risk"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Initial resuscitation, vasoactive drugs, antibiotics, and endoscopic band ligation are mandatory. Long‑term therapy targets portal pressure with beta‑blockers or endoscopic therapy.",
+   "b": [
+    "Vasoactive drugs (terlipressin/octreotide)",
+    "Prophylactic antibiotics (ceftriaxone)",
+    "Endoscopic band ligation"
+   ],
+   "t": [
+    {
+     "a": "Beta‑blockers",
+     "b": "Reduce portal pressure; avoid in severe heart failure"
+    },
+    {
+     "a": "Terlipressin",
+     "b": "Vasoconstricts splanchnic vessels; monitor renal function"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular endoscopic surveillance every 6–12 months in high‑risk patients. Vaccination for hepatitis B, alcohol cessation, and treatment of underlying liver disease reduce recurrence.",
+   "b": [
+    "Endoscopic surveillance",
+    "Alcohol abstinence"
+   ],
+   "t": [
+    {
+     "a": "Vaccination for hepatitis B",
+     "b": "Prevents re‑infection and progression of liver disease"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Non‑variceal upper GI bleeding such as peptic ulcer disease, Mallory–Weiss tear, and gastritis.",
+   "b": [
+    "Peptic ulcer",
+    "Mallory–Weiss tear"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal platelet count can mask thrombocytopenia if splenomegaly is present. Mildly elevated liver enzymes may be normal in early cirrhosis.",
+   "b": [
+    "Platelet count may be normal despite splenic sequestration"
+   ],
+   "t": [
+    {
+     "a": "Platelet count",
+     "b": "A normal count does not exclude portal hypertension if splenomegaly is present"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Massive haematemesis",
+  "Hypotension or shock",
+  "Altered mental status"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of oesophageal varices?",
+   "a": "Alcoholic cirrhosis is the leading cause worldwide."
+  },
+  {
+   "q": "How are varices graded?",
+   "a": "By endoscopic size and presence of red signs; large varices or red signs are high risk."
+  },
+  {
+   "q": "Why give antibiotics early?",
+   "a": "To prevent spontaneous bacterial peritonitis, which worsens bleeding outcomes."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of portal hypertension leading to oesophageal varices.",
+  "Describe the Baveno criteria for bleeding risk stratification.",
+  "Outline the acute management steps for a patient with haematemesis due to oesophageal varices."
+ ],
+ "related": [
+  "Portal hypertension",
+  "Cirrhosis",
+  "Spontaneous bacterial peritonitis",
+  "Beta‑blocker therapy",
+  "Endoscopic band ligation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

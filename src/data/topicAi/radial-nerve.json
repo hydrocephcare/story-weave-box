@@ -1,0 +1,121 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The radial nerve supplies the posterior arm, forearm and hand, enabling elbow, wrist and finger extension. Injury at the spiral groove or axilla produces characteristic motor and sensory loss.",
+ "aka": [
+  "CN VII? No",
+  "Radial nerve",
+  "Nervus radialis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The radial nerve is the terminal branch of the posterior cord of the brachial plexus (C5‑T1). It travels from the axilla down the posterior arm, crossing the lateral humeral shaft in the spiral groove, then enters the forearm between the brachioradialis and brachialis.",
+   "b": [
+    "Mixed motor‑sensory nerve",
+    "Supplies extensors of elbow, wrist, digits"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "In the arm it lies deep to the brachialis, hugging the humerus in the radial (spiral) groove. Distally it pierces the lateral intermuscular septum to become superficial near the wrist.",
+   "b": [
+    "Axillary origin → posterior cord → radial nerve",
+    "Spiral groove: vulnerable to humeral fractures"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Close to the profunda brachii artery in the spiral groove; later runs with the radial artery in the forearm. Near the elbow it lies adjacent to the lateral epicondyle and the supinator.",
+   "b": [
+    "Profunda brachii artery accompanies it in the arm",
+    "Radial artery runs alongside in the forearm"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The nerve receives blood from branches of the profunda brachii artery proximally and the radial artery distally.",
+   "b": [
+    "Profunda brachii → radial nerve in spiral groove",
+    "Radial artery → nerve in forearm"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Motor: triceps brachii (long head), anconeus, brachioradialis, supinator, extensor carpi radialis longus/brevis, extensor digitorum, extensor indicis, extensor pollicis longus/brevis, abductor pollicis longus. Sensory: posterior arm, forearm, dorsal hand (lateral 3½ digits).",
+   "b": [
+    "Motor to all posterior compartment extensors",
+    "Sensory to dorsal radial hand"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Enables elbow extension (triceps), wrist and finger extension, thumb abduction, and provides sensation over the dorsal radial forearm and hand, crucial for grip release and object manipulation.",
+   "b": [
+    "Extension of elbow, wrist, digits",
+    "Sensation for hand positioning"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Radial nerve injury presents with wrist drop, loss of finger extension, and sensory loss over the dorsal hand. Common sites are the spiral groove (mid‑shaft humeral fracture) and the axilla (shoulder dislocation, compression).",
+   "b": [
+    "Spiral groove injury → wrist drop, preserved triceps",
+    "Axillary injury → loss of triceps extension"
+   ],
+   "t": [
+    {
+     "a": "Nerve conduction study",
+     "b": "Is the lesion demyelinating or axonal? Helps localise injury and prognosticate recovery."
+    },
+    {
+     "a": "Ultrasound of humerus",
+     "b": "Detects fracture fragments compressing the nerve when EMG unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Test triceps strength (elbow extension) to assess proximal radial nerve. Test wrist extension and finger extension for distal lesions. Sensory: light touch over the dorsal thumb and index.",
+   "b": [
+    "Wrist drop = inability to extend wrist/fingers",
+    "Sensory loss over radial half of dorsal hand"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Compartment syndrome of the forearm causing progressive loss of radial nerve function",
+  "Open humeral fracture with neurovascular compromise"
+ ],
+ "faq": [
+  {
+   "q": "Why is triceps strength preserved in a mid‑shaft humeral fracture?",
+   "a": "The radial nerve branches to triceps before it reaches the spiral groove, so a fracture there spares elbow extension."
+  },
+  {
+   "q": "What distinguishes radial nerve palsy from ulnar nerve palsy?",
+   "a": "Radial palsy causes wrist drop and dorsal hand sensory loss; ulnar palsy causes claw hand and medial hand sensory loss."
+  },
+  {
+   "q": "Can a radial nerve injury heal without surgery?",
+   "a": "Mild neuropraxia often recovers with physiotherapy; severe transection may need surgical repair."
+  }
+ ],
+ "exam": [
+  "Describe the two common sites of radial nerve injury and the clinical signs expected at each.",
+  "List the muscles innervated by the radial nerve and explain how loss of each affects limb function.",
+  "Interpret a nerve conduction study showing reduced amplitude in the radial nerve – what does it indicate about injury severity?"
+ ],
+ "related": [
+  "Ulnar nerve",
+  "Median nerve",
+  "Brachial plexus",
+  "Humeral shaft fracture",
+  "Compartment syndrome",
+  "Supinator syndrome"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,139 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Cell‑cycle‑specific (CCS) drugs target cancer cells only when they are actively dividing in a particular phase of the cell cycle. By contrast, non‑cell‑cycle‑specific agents affect cells in any phase, including resting (G0) cells.",
+ "aka": [
+  "cell‑cycle‑specific agents"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "CCS drugs are chemotherapeutic agents that exert cytotoxicity only during a defined phase of the cell‑cycle (e.g., S‑phase antimetabolites, M‑phase vinca alkaloids). Diagnosis is conceptual – recognizing which agents belong to this class guides regimen selection.",
+   "b": [
+    "Identify the drug’s target phase (S, G2, M).",
+    "Distinguish CCS from NCCS drugs."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is not staged for the drug class itself; instead, clinicians assess tumour burden, performance status, and organ function to decide if a CCS regimen is appropriate.",
+   "b": [
+    "Use ECOG or Karnofsky scores for patient fitness.",
+    "Consider tumour proliferation index (Ki‑67) to predict CCS efficacy."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The “cause” is the choice of chemotherapy based on tumour biology. Highly proliferative tumours (e.g., acute leukaemia, lymphoma, germ‑cell tumours) are most likely to respond to CCS agents.",
+   "b": [
+    "Rapidly dividing cancers → CCS drugs most effective.",
+    "Low‑proliferation tumours → NCCS agents preferred."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinically, the effect of CCS drugs appears as tumour shrinkage after several cell‑cycle passages, often accompanied by phase‑specific toxicities such as myelosuppression (S‑phase) or neurotoxicity (M‑phase).",
+   "b": [
+    "Delayed response – usually 2‑3 weeks after start.",
+    "Toxicities reflect the targeted phase."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Laboratory and imaging tests help confirm that the tumour is proliferating and monitor drug effect.",
+   "t": [
+    {
+     "a": "Ki‑67 immunostaining",
+     "b": "What is the tumour proliferation rate? High Ki‑67 (>20%) supports use of CCS drugs."
+    },
+    {
+     "a": "Complete blood count (CBC) with differential",
+     "b": "Is bone‑marrow suppression occurring? Falling neutrophils indicate S‑phase drug toxicity."
+    },
+    {
+     "a": "Serum creatinine & liver enzymes",
+     "b": "Are organ functions adequate for drug metabolism and excretion? Abnormalities may require dose adjustment or alternative agents."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Because CCS drugs act only on dividing cells, they spare resting tissues but can cause severe myelosuppression, mucositis, and neurotoxicity, which may become life‑threatening.",
+   "b": [
+    "Febrile neutropenia → urgent antibiotics.",
+    "Severe peripheral neuropathy → stop vinca alkaloids."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Select a CCS agent that matches the tumour’s growth phase, then provide supportive care to mitigate predictable toxicities.",
+   "b": [
+    "Antimetabolites (e.g., 5‑FU, cytarabine) for S‑phase tumours – inhibit DNA synthesis.",
+    "Vinca alkaloids (e.g., vincristine) for M‑phase – disrupt microtubules.",
+    "Avoid overlapping neurotoxic drugs with vinca alkaloids.",
+    "Use growth‑factor support (G‑CSF) for profound neutropenia.",
+    "Hydration and allopurinol for tumour‑lysis risk with rapid‑kill CCS agents."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular CBCs, renal/hepatic panels, and imaging assess response and toxicity. Prevent complications with prophylactic antibiotics, anti‑emetics, and dose‑adjustments based on organ function.",
+   "b": [
+    "CBC weekly during the first two cycles.",
+    "Renal function before each dose of high‑dose antimetabolites."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Non‑cell‑cycle‑specific (NCCS) drugs such as alkylating agents (cyclophosphamide) and anthracyclines (doxorubicin) which kill cells in any phase, including G0.",
+   "b": [
+    "NCCS agents cause broader toxicity (e.g., alopecia, cardiotoxicity).",
+    "CCS agents are more phase‑selective."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A low Ki‑67 may falsely suggest a tumour will not respond to CCS drugs, yet some tumours have heterogeneous proliferation that still benefits from CCS therapy.",
+   "b": [
+    "Do not rely on a single biopsy; consider repeat sampling if clinical response is poor."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Febrile neutropenia (temperature >38°C with neutrophils <500/µL)",
+  "Severe neuropathy limiting daily activities",
+  "Acute renal failure during chemotherapy"
+ ],
+ "faq": [
+  {
+   "q": "Why do CCS drugs spare normal tissues?",
+   "a": "Most normal adult cells are in G0; CCS agents only act on cells actively cycling, so resting tissues are relatively protected."
+  },
+  {
+   "q": "Can a tumour become resistant to CCS drugs?",
+   "a": "Yes, by slowing its proliferation rate or up‑regulating drug‑efflux pumps, making the cells less likely to be in the target phase."
+  },
+  {
+   "q": "When should I choose an NCCS drug over a CCS drug?",
+   "a": "When the tumour shows low proliferation, has a high proportion of G0 cells, or when the patient cannot tolerate phase‑specific toxicities."
+  }
+ ],
+ "exam": [
+  "Explain the pharmacologic rationale for using antimetabolites in S‑phase‑dependent tumours.",
+  "List two major toxicities of M‑phase vinca alkaloids and how you would monitor for them.",
+  "Differentiate cell‑cycle‑specific from non‑cell‑cycle‑specific chemotherapy in terms of mechanism and clinical implications."
+ ],
+ "related": [
+  "Antimetabolites",
+  "Vinca alkaloids",
+  "Alkylating agents",
+  "Anthracyclines",
+  "Tumour lysis syndrome",
+  "Myelosuppression",
+  "Ki‑67 proliferation index"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

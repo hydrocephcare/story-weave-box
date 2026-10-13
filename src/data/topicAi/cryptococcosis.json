@@ -1,0 +1,117 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Cryptococcosis is an opportunistic infection caused by the encapsulated yeast Cryptococcus neoformans, often acquired from pigeon droppings or soil. It primarily affects immunocompromised patients, especially those with AIDS, and can cause meningitis or disseminated disease.",
+ "aka": [
+  "Cryptococcal infection",
+  "Cryptococcal meningitis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Cryptococcus neoformans is a basidiomycetous yeast with a thick polysaccharide capsule that protects it from host defenses. Infection occurs after inhalation of aerosolised yeast, then spreads hematogenously, especially to the central nervous system.",
+   "b": [
+    "Encapsulated yeast, 4–6 µm, reproduces by budding",
+    "Found in pigeon droppings, decaying wood, soil"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The capsule is the key virulence factor, preventing phagocytosis and dampening the immune response. The organism grows at 30‑37 °C and forms mucoid colonies on Sabouraud agar.",
+   "b": [
+    "Polysaccharide capsule → positive India ink stain",
+    "Melanin production → protects against oxidative stress"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Inhalation of dried yeast cells or spores from contaminated environments initiates pulmonary infection. In immunocompetent hosts the disease is often subclinical; in immunocompromised hosts it disseminates.",
+   "b": [
+    "No human‑to‑human transmission",
+    "Environmental reservoir: pigeon droppings, nitrogen‑rich soil"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Pulmonary cryptococcosis may present with cough or be silent. The most feared manifestation is cryptococcal meningitis, presenting with headache, fever, neck stiffness, and altered mental status. Disseminated disease can involve skin, bone, and blood.",
+   "b": [
+    "Meningitis: most common in AIDS (CD4 < 100 cells/µL)",
+    "Pulmonary nodules or infiltrates",
+    "Skin lesions: papules, ulcers, cryptococcomas"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Laboratory confirmation relies on detecting the capsule or antigen, and culturing the organism. In low‑resource settings, India ink microscopy is often the first test.",
+   "t": [
+    {
+     "a": "India ink preparation of CSF",
+     "b": "Does the CSF show a clear halo around yeast? Positive indicates capsule presence; a negative result does not rule out disease."
+    },
+    {
+     "a": "Cryptococcal antigen (CrAg) latex agglutination or lateral flow assay",
+     "b": "Is antigen detected in serum/CSF? Highly sensitive; a positive result confirms infection even if microscopy is negative."
+    },
+    {
+     "a": "Culture on Sabouraud dextrose agar",
+     "b": "Does the sample grow mucoid, cream‑coloured colonies? Confirms species; if culture unavailable, rely on antigen and microscopy."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Induction therapy combines an azole (fluconazole) with flucytosine to rapidly reduce fungal burden, followed by consolidation and maintenance fluconazole. Management also includes managing intracranial pressure and immune reconstitution.",
+   "b": [
+    "Fluconazole: fungistatic, penetrates CSF, low toxicity",
+    "Flucytosine: synergistic, rapid fungicidal effect; avoid if renal dysfunction",
+    "Control intracranial pressure: serial lumbar punctures"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams: capsule detection, CrAg test, association with AIDS, and the three‑phase treatment regimen.",
+   "b": [
+    "India ink → capsule; CrAg → most sensitive test",
+    "Induction: fluconazole + flucytosine; then fluconazole alone",
+    "High mortality if meningitis untreated; monitor pressure"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute headache, fever, neck stiffness, or altered consciousness (possible meningitis)",
+  "Rapidly worsening respiratory distress",
+  "New skin lesions in an immunocompromised patient"
+ ],
+ "faq": [
+  {
+   "q": "Why is the capsule important?",
+   "a": "It blocks phagocytosis and interferes with complement, allowing the yeast to survive in the bloodstream."
+  },
+  {
+   "q": "Can cryptococcosis occur in people with normal immunity?",
+   "a": "Yes, but it is usually mild or asymptomatic; severe disease is rare without immune compromise."
+  },
+  {
+   "q": "What is the role of flucytosine in therapy?",
+   "a": "Flucytosine adds rapid fungicidal activity during induction; it is avoided if renal function is poor."
+  }
+ ],
+ "exam": [
+  "Describe the diagnostic algorithm for suspected cryptococcal meningitis.",
+  "Explain why cryptococcal antigen testing is preferred over culture in resource‑limited settings.",
+  "Outline the three phases of antifungal therapy for cryptococcosis and the rationale for each."
+ ],
+ "related": [
+  "HIV-associated opportunistic infections",
+  "Cryptococcal meningitis",
+  "Fungal meningitis",
+  "India ink staining",
+  "Lateral flow assay",
+  "Fluconazole",
+  "Flucytosine"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

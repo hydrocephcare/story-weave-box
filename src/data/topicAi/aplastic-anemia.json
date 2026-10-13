@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Aplastic anemia is a bone‑marrow failure where all cell lines drop, causing pancytopenia. It presents with fatigue, bruising, and frequent infections. Early recognition and supportive care are lifesaving.",
+ "aka": [
+  "Idiopathic aplastic anemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Aplastic anemia is a hypocellular marrow with fatty infiltration and reduced hematopoiesis. Diagnosis requires a peripheral smear showing pancytopenia, a bone‑marrow aspirate with <5% cellularity, and exclusion of other causes.",
+   "b": [
+    "Pancytopenia on CBC",
+    "Hypocellular marrow on biopsy"
+   ],
+   "t": [
+    {
+     "a": "Peripheral blood smear",
+     "b": "Shows low RBC, WBC, platelets; helps rule out hemolysis"
+    },
+    {
+     "a": "Bone marrow aspirate/biopsy",
+     "b": "Confirms hypocellularity, fat infiltration, no dysplasia"
+    },
+    {
+     "a": "Serum ferritin",
+     "b": "Excludes iron overload; high levels suggest transfusion history"
+    },
+    {
+     "a": "Viral serology (HIV, HBV, HCV, EBV, CMV)",
+     "b": "Rules out infectious marrow suppression"
+    },
+    {
+     "a": "Autoimmune markers (ANA, dsDNA)",
+     "b": "Detects autoimmune marrow failure"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by the WHO criteria, using absolute neutrophil count, platelet count, and hemoglobin. Stages range from mild (low platelets) to severe (ANC <500).",
+   "b": [
+    "WHO 2016: Grade 1–4 based on ANC, platelets, Hb"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Idiopathic is common; other causes include drug toxicity, viral infections, and environmental toxins. In low‑resource settings, infections and herbal remedies are frequent culprits.",
+   "b": [
+    "Idiopathic (autoimmune)",
+    "Drug toxicity (chloramphenicol, antimetabolites)",
+    "Viral infections (HIV, EBV, CMV)",
+    "Herbal toxins (e.g., Aristolochia)",
+    "Malaria, TB, schistosomiasis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients feel tired, bruise easily, and have frequent infections. Oral ulcers, petechiae, and bleeding gums are common. Fever may indicate infection.",
+   "b": [
+    "Fatigue, pallor",
+    "Easy bruising, petechiae",
+    "Recurrent infections",
+    "Mucosal bleeding"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests confirm pancytopenia, rule out other causes, and assess marrow status. When tests are unavailable, clinical judgment and basic CBC guide management.",
+   "t": [
+    {
+     "a": "CBC with differential",
+     "b": "Detects pancytopenia; low ANC signals infection risk"
+    },
+    {
+     "a": "Peripheral smear",
+     "b": "Differentiates aplastic from hemolytic anemia"
+    },
+    {
+     "a": "Bone marrow aspirate/biopsy",
+     "b": "Confirms hypocellularity; rules out dysplasia or leukemia"
+    },
+    {
+     "a": "Serology for HIV, HBV, HCV",
+     "b": "Identifies infectious causes"
+    },
+    {
+     "a": "Autoimmune panel (ANA, dsDNA)",
+     "b": "Suggests autoimmune marrow failure"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe bleeding, septic shock, and uncontrolled infections are life‑threatening. Rapid drop in platelets or neutrophils warrants urgent care.",
+   "b": [
+    "Platelets <20,000 → bleeding risk",
+    "ANC <500 → infection risk",
+    "Signs of sepsis: fever, tachycardia, hypotension"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. Supportive care includes transfusions, antibiotics, and growth factors. Immunosuppression (ATG + cyclosporine) is standard for severe cases.",
+   "b": [
+    "Identify and stop offending drug",
+    "Transfuse RBCs/platelets as needed",
+    "Administer broad‑spectrum antibiotics if infection suspected",
+    "Use ATG + cyclosporine for severe AA"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular CBCs monitor response. Vaccinations against pneumococcus and influenza reduce infection risk. Avoid known marrow‑toxic drugs and herbal remedies.",
+   "b": [
+    "Monthly CBC until stable",
+    "Vaccinate against pneumococcus, influenza"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hypoplastic myelodysplastic syndrome, leukemia, and nutritional deficiencies can mimic aplastic anemia.",
+   "b": [
+    "Myelodysplastic syndrome (dysplasia on marrow)",
+    "Leukemia (blast cells)",
+    "Iron deficiency anemia (low ferritin)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Early marrow changes may be subtle; a normal ferritin can mask iron overload from transfusions. Viral serology may be negative early.",
+   "b": [
+    "Marrow hypocellularity may appear normal in early disease"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Platelets <20,000 with bleeding",
+  "ANC <500 with fever",
+  "Sudden drop in blood counts",
+  "Signs of sepsis"
+ ],
+ "faq": [
+  {
+   "q": "Can aplastic anemia be inherited?",
+   "a": "Yes, Fanconi anemia is a hereditary form, but most cases are acquired."
+  },
+  {
+   "q": "Is chemotherapy always needed?",
+   "a": "Only if the patient has severe pancytopenia; mild cases may be monitored."
+  },
+  {
+   "q": "What is the prognosis?",
+   "a": "Depends on severity; with treatment, many patients achieve remission."
+  }
+ ],
+ "exam": [
+  "Explain the WHO grading of aplastic anemia and its clinical implications.",
+  "Describe the diagnostic workup for a patient with suspected aplastic anemia.",
+  "Outline the first‑line treatment for severe aplastic anemia and justify each component."
+ ],
+ "related": [
+  "Myelodysplastic syndrome",
+  "Fanconi anemia",
+  "Bone marrow failure syndromes",
+  "Immune thrombocytopenia",
+  "Severe combined immunodeficiency"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

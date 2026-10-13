@@ -1,0 +1,143 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Systemic pathology studies disease processes that affect whole organ systems, linking morphology to clinical signs. It guides diagnosis, staging, and management across specialties.",
+ "aka": [
+  "General Pathology",
+  "Systemic Disease Pathology"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Systemic pathology examines how disease alters the structure and function of entire organ systems, using clinical clues, imaging, and tissue analysis.",
+   "b": [
+    "Identify patterns of organ involvement",
+    "Correlate gross and microscopic findings with symptoms"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by extent of organ damage, functional loss, and systemic impact using accepted scales (e.g., TNM for cancers, NYHA for heart failure).",
+   "b": [
+    "Stage guides prognosis and treatment intensity",
+    "Higher stage = greater risk of organ failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped by infectious, inflammatory, metabolic, neoplastic, and toxic origins; in low‑resource settings, consider HIV, TB, malaria, hepatitis B, rheumatic fever, sickle cell, schistosomiasis, and herbal toxins.",
+   "b": [
+    "Infection → inflammation → organ dysfunction",
+    "Metabolic derangements (e.g., diabetes) cause microvascular disease"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with systemic signs (fever, weight loss, fatigue) plus organ‑specific symptoms such as dyspnea for lung disease or jaundice for hepatic involvement.",
+   "b": [
+    "Look for patterns of multi‑organ involvement",
+    "Identify red‑flag symptoms like sudden neurological change"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests answer specific clinical questions; when unavailable, use clinical scoring or bedside ultrasound.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Does the patient have anemia, leukocytosis, or thrombocytopenia? Abnormalities suggest infection, marrow infiltration, or chronic disease."
+    },
+    {
+     "a": "Serum electrolytes & renal panel",
+     "b": "Are kidneys functioning? Abnormal creatinine or electrolytes indicate renal involvement or systemic metabolic disturbance."
+    },
+    {
+     "a": "Imaging (X‑ray, ultrasound, CT)",
+     "b": "What organ structural changes are present? Findings help stage disease and guide biopsy."
+    },
+    {
+     "a": "Tissue biopsy with histology",
+     "b": "What is the microscopic pattern? Confirms inflammation type, neoplasm, or specific infection."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise when organ failure progresses unchecked, leading to shock, sepsis, or irreversible damage.",
+   "b": [
+    "Rapid organ dysfunction",
+    "Unexplained hypotension",
+    "Altered mental status"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide organ‑supportive care. Choose drugs based on mechanism and safety in systemic disease.",
+   "b": [
+    "Antimicrobials for infections (e.g., first‑line TB regimen) – avoid nephrotoxic agents if kidneys are involved",
+    "Anti‑inflammatories (corticosteroids) for immune‑mediated damage – monitor glucose and infection risk",
+    "Disease‑specific agents (e.g., antiretrovirals for HIV) – consider drug‑drug interactions"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of organ function, adherence to therapy, and vaccination or prophylaxis reduce recurrence and progression.",
+   "b": [
+    "Schedule periodic labs and imaging",
+    "Educate on lifestyle and medication adherence"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Systemic pathology can mimic isolated organ disease or multisystem syndromes.",
+   "b": [
+    "Autoimmune vasculitis vs. infection‑driven sepsis",
+    "Metabolic liver disease vs. infiltrative cancer"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may appear normal early or be altered by treatment, leading to false reassurance.",
+   "b": [
+    "Normal white count in early sepsis",
+    "Transiently normal liver enzymes after acute injury"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Severe shortness of breath with chest pain",
+  "Unexplained high fever with organ failure signs"
+ ],
+ "faq": [
+  {
+   "q": "Why is staging important in systemic disease?",
+   "a": "Staging quantifies organ involvement, predicts outcomes, and directs therapy intensity."
+  },
+  {
+   "q": "Can a single test diagnose systemic pathology?",
+   "a": "Rarely; diagnosis usually requires a combination of clinical, imaging, and histologic data."
+  },
+  {
+   "q": "What if a biopsy cannot be performed?",
+   "a": "Rely on imaging patterns, serology, and response to empirical therapy while arranging referral."
+  }
+ ],
+ "exam": [
+  "Explain how you would stage systemic lupus erythematosus and why staging matters for treatment.",
+  "List the most common infectious causes of systemic pathology in low‑resource settings and the key diagnostic tests for each.",
+  "Describe the management steps for a patient with systemic TB affecting the lungs and kidneys."
+ ],
+ "related": [
+  "Immunopathology",
+  "Infectious disease",
+  "Neoplasia",
+  "Metabolic disorders",
+  "Rheumatology",
+  "Clinical microbiology"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

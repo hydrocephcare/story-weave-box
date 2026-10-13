@@ -1,0 +1,136 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "The sinoatrial node is the heart’s natural pacemaker, generating impulses that set the rhythm. Clinicians assess its function by ECG and treat dysfunction with drugs that modify automaticity. Understanding its pharmacology helps manage arrhythmias and avoid drug‑induced conduction problems.",
+ "aka": [
+  "SA node"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The sinoatrial node (SAN) is a cluster of pacemaker cells in the right atrial wall. It initiates the cardiac action potential, producing the P wave on ECG. Diagnosis is by ECG showing a regular P wave and sinus rhythm, or by Holter monitoring if sinus node dysfunction is suspected.",
+   "b": [
+    "SAN located at the superior end of the right atrium",
+    "P wave represents atrial depolarisation"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Sinus node dysfunction is staged by symptom severity and ECG findings: 1) sinus bradycardia, 2) sinus pauses, 3) sinus arrest, 4) tachycardia‑bradycardia syndrome. Clinical staging guides urgency of intervention.",
+   "b": [
+    "Stage 1: asymptomatic bradycardia",
+    "Stage 4: symptomatic tachycardia‑bradycardia"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common causes include intrinsic aging, ischemia, electrolyte disturbances, and drug effects. In low‑resource settings, infections (HIV, TB, malaria) and herbal remedies can precipitate dysfunction.",
+   "b": [
+    "Age‑related degeneration",
+    "Ischemia",
+    "Electrolyte imbalance (hypokalemia, hyperkalemia)",
+    "Medications (beta‑blockers, calcium channel blockers)",
+    "Infections (HIV, TB)",
+    "Herbal toxins"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may feel fatigue, dizziness, syncope, or palpitations. Severe dysfunction can lead to heart failure or sudden death. Symptoms correlate with the type of rhythm disturbance.",
+   "b": [
+    "Dizziness or fainting during exertion",
+    "Palpitations or irregular heartbeat",
+    "Fatigue and exercise intolerance"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "ECG is the cornerstone. Holter or event monitor captures intermittent pauses. Blood tests assess electrolytes and thyroid function. Invasive studies are reserved for refractory cases.",
+   "t": [
+    {
+     "a": "12‑lead ECG",
+     "b": "Normal sinus rhythm: regular P waves, PR interval 120‑200 ms"
+    },
+    {
+     "a": "Holter monitor",
+     "b": "Pauses >3 s or symptomatic episodes warrant pacing"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Hypokalemia <3.5 mEq/L can worsen SAN automaticity"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Sudden loss of consciousness, syncope, or heart failure symptoms require urgent evaluation. Untreated severe bradycardia can lead to cardiogenic shock or sudden cardiac death.",
+   "b": [
+    "Syncope with exertion",
+    "Progressive heart failure symptoms",
+    "Sudden cardiac arrest"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat reversible causes first. Pharmacologic options include anticholinergics (e.g., atropine) for acute bradycardia and pacing for permanent dysfunction. Avoid drugs that depress automaticity in susceptible patients.",
+   "b": [
+    "Pacemaker implantation for symptomatic sinus node dysfunction"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular ECG monitoring in high‑risk patients. Maintain electrolyte balance, avoid excessive alcohol and herbal supplements. Educate patients on symptom recognition.",
+   "b": [
+    "Counseling on drug interactions"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Sinus tachycardia, atrial fibrillation, and junctional rhythm can mimic SAN dysfunction on ECG. Distinguish by P wave morphology and AV conduction patterns.",
+   "b": [
+    "Junctional rhythm: inverted P waves"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low‑grade sinus pauses may be missed on a single ECG. Electrolyte abnormalities can normalize after treatment, masking underlying SAN disease.",
+   "b": [
+    "Transient hyperkalemia can normalize, leaving SAN dysfunction undetected"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Progressive heart failure symptoms",
+  "Unexplained syncope"
+ ],
+ "faq": [
+  {
+   "q": "What causes sinus node dysfunction in HIV patients?",
+   "a": "HIV can lead to myocarditis and direct viral injury to the SAN, plus opportunistic infections and drug toxicity."
+  },
+  {
+   "q": "Can herbal medicines affect the SAN?",
+   "a": "Yes, some herbs contain alkaloids or catecholamines that can depress or stimulate SAN automaticity, causing bradycardia or tachycardia."
+  },
+  {
+   "q": "When is a pacemaker indicated?",
+   "a": "When symptomatic sinus node dysfunction persists despite medical therapy, or when pauses >3 seconds are documented on Holter monitoring."
+  }
+ ],
+ "exam": [
+  "Explain how beta‑blockers can precipitate sinus node dysfunction and describe the first‑line treatment for acute symptomatic bradycardia.",
+  "Describe the ECG changes that differentiate sinus tachycardia from sinus node dysfunction.",
+  "Outline the management steps for a patient with symptomatic sinus arrest who cannot receive a pacemaker due to resource constraints."
+ ],
+ "related": [
+  "Atrial fibrillation",
+  "Junctional rhythm",
+  "Heart failure",
+  "Electrolyte disturbances"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

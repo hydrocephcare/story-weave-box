@@ -1,0 +1,148 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "ADHD is a neurodevelopmental disorder marked by inattention, hyperactivity, and impulsivity that impair functioning. Diagnosis relies on DSM‑5 criteria, clinical history, and rule‑out of other causes. Management combines behavioral strategies and medication, tailored to severity and comorbidities.",
+ "aka": [
+  "Attention‑Deficit/Hyperactivity Disorder"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ADHD is defined by persistent patterns of inattention and/or hyperactivity‑impulsivity that interfere with functioning. DSM‑5 requires symptoms before age 12, present in two settings, and not better explained by another disorder.",
+   "b": [
+    "Symptoms must be present for >6 months",
+    "Impact on social, academic, or occupational domains"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded as mild, moderate, or severe based on number of symptoms, functional impairment, and comorbidities. The Vanderbilt or Conners scales help quantify severity.",
+   "b": [
+    "Mild: few symptoms, minimal impairment",
+    "Moderate: moderate symptoms, noticeable impairment",
+    "Severe: many symptoms, major impairment"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "ADHD is multifactorial: strong genetic component, neurobiological differences in dopamine pathways, prenatal exposures, and early childhood adversity. In low‑resource settings, infections (HIV, malaria) and nutritional deficiencies can exacerbate symptoms.",
+   "b": [
+    "Genetic heritability ~70%",
+    "Neurotransmitter dysregulation (dopamine, norepinephrine)",
+    "Perinatal complications, lead exposure"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children show distractibility, fidgeting, and difficulty following instructions. Adults may report restlessness, poor time management, and relationship problems. Symptoms vary by subtype: inattentive, hyperactive‑impulsive, or combined.",
+   "b": [
+    "Inattention: forgetful, disorganized",
+    "Hyperactivity: fidgety, excessive talking",
+    "Impulsivity: interrupting, acting without thinking"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to exclude other causes and assess comorbidities. No single test confirms ADHD.",
+   "t": [
+    {
+     "a": "Full‑scale IQ",
+     "b": "Low IQ suggests comorbid learning disorder"
+    },
+    {
+     "a": "Sleep study",
+     "b": "Abnormal results warrant treatment of sleep disorder"
+    },
+    {
+     "a": "Lead screening",
+     "b": "Elevated lead requires chelation"
+    },
+    {
+     "a": "Thyroid function tests",
+     "b": "Abnormal TSH indicates thyroid disease"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe impulsivity can lead to accidents, self‑harm, or substance misuse. Untreated ADHD increases risk of academic failure, unemployment, and psychiatric comorbidity.",
+   "b": [
+    "Suicidal ideation in adolescents",
+    "Risk of traffic accidents"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then use behavioral therapy and medication. Stimulants (methylphenidate, amphetamines) are first‑line; non‑stimulants (atomoxetine, guanfacine) are alternatives. Monitor for growth suppression, hypertension, and psychiatric side effects.",
+   "b": [
+    "Behavioral therapy: parent training, classroom interventions"
+   ],
+   "t": [
+    {
+     "a": "Methylphenidate",
+     "b": "Avoid in uncontrolled hypertension"
+    },
+    {
+     "a": "Atomoxetine",
+     "b": "Monitor for mood changes"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review of symptoms, growth, blood pressure, and medication tolerance is essential. Early intervention reduces long‑term disability.",
+   "b": [
+    "Annual growth monitoring",
+    "Quarterly blood pressure checks"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "ADHD can mimic learning disorders, anxiety, depression, sleep disorders, thyroid disease, and lead poisoning.",
+   "b": [
+    "Learning disability: poor academic performance but intact attention"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal IQ does not exclude ADHD; low blood pressure can mask stimulant side effects; normal thyroid tests may miss subclinical hypothyroidism.",
+   "b": [
+    "False‑negative lead levels in early exposure"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe self‑harm thoughts",
+  "Uncontrolled hypertension during stimulant use",
+  "Sudden worsening of symptoms after medication change"
+ ],
+ "faq": [
+  {
+   "q": "Can ADHD be cured?",
+   "a": "No, but symptoms can be managed effectively with therapy and medication."
+  },
+  {
+   "q": "Is ADHD common in adults?",
+   "a": "Yes, many adults are undiagnosed; symptoms may shift from hyperactivity to inattentiveness."
+  },
+  {
+   "q": "Do stimulants cause addiction?",
+   "a": "Short‑term risk is low; careful monitoring and prescription limits reduce abuse potential."
+  }
+ ],
+ "exam": [
+  "Explain the DSM‑5 criteria for ADHD and how you would differentiate it from a learning disorder.",
+  "Discuss the pharmacologic rationale for using methylphenidate in a child with ADHD and uncontrolled hypertension."
+ ],
+ "related": [
+  "Learning disorders",
+  "Anxiety disorders",
+  "Sleep disorders",
+  "Lead poisoning",
+  "Thyroid dysfunction"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Abdominal girth is a bedside measure of abdominal distension, reflecting fluid, mass, or organomegaly. It guides urgent assessment and monitoring of abdominal pathology. Clinicians use it to detect ascites, bowel obstruction, or abdominal tumors.",
+ "aka": [
+  "Abdominal circumference",
+  "Abdominal girth measurement"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Abdominal girth is the circumference of the abdomen measured at the level of the umbilicus or the widest point. It is recorded in centimeters and compared to age‑, sex‑, and height‑adjusted norms.",
+   "b": [
+    "Normal ranges vary by population; typical adult values 70–90 cm"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by deviation from normal: mild (≤10 cm above normal), moderate (10–20 cm), severe (>20 cm). Staging aligns with underlying pathology: ascites (grade I–III), bowel obstruction (partial/complete), or mass effect."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common causes in low‑resource settings include:",
+   "b": [
+    "Ascites from liver disease or TB peritonitis",
+    "Bowel obstruction from adhesions, volvulus, or intestinal parasites",
+    "Abdominal tumors (e.g., ovarian, colorectal)",
+    "Massive organomegaly (splenic, hepatic)",
+    "Pregnancy",
+    "Edema from heart failure"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may report fullness, early satiety, abdominal pain, or visible distension. Physical exam reveals a tense or fluid‑filled abdomen, shifting dullness, or palpable masses."
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm the cause and guide management.",
+   "t": [
+    {
+     "a": "Ultrasound abdomen",
+     "b": "Ascites, organomegaly, tumors"
+    },
+    {
+     "a": "Plain abdominal X‑ray",
+     "b": "Air fluid levels, dilated loops"
+    },
+    {
+     "a": "CBC & CRP",
+     "b": "Elevated WBC, CRP suggest infection"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Elevated bilirubin, transaminases"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent signs requiring immediate care include",
+   "b": [
+    "Rapid increase in girth, abdominal pain, vomiting, tachycardia, hypotension, altered mental status"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then supportive care.",
+   "b": [
+    "Ascites: diuretics (spironolactone, furosemide), paracentesis if tense",
+    "Bowel obstruction: nasogastric decompression, fluid resuscitation, surgical referral",
+    "Masses: oncologic workup, chemotherapy or surgery as indicated",
+    "Heart failure: diuretics, ACE inhibitors, beta‑blockers"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor girth daily, repeat imaging if changes, and manage risk factors.",
+   "b": [
+    "Control chronic liver disease, treat TB, prevent parasitic infections"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Abdominal girth can be mistaken for",
+   "b": [
+    "Generalized edema (e.g., peripheral edema),",
+    "Pregnancy,",
+    "Muscle mass or obesity"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain conditions may mask true girth changes.",
+   "b": [
+    "Severe dehydration can reduce girth despite ascites",
+    "Obesity may obscure mild ascites",
+    "Pregnancy can elevate baseline girth"
+   ]
+  },
+  {
+   "h": "FAQ",
+   "t": [
+    {
+     "a": "What is the normal abdominal girth for a 30‑year‑old woman?",
+     "b": "Approximately 70–80 cm, but varies with height and ethnicity."
+    },
+    {
+     "a": "Can abdominal girth be used to diagnose cancer?",
+     "b": "It suggests a mass but requires imaging for confirmation."
+    },
+    {
+     "a": "When should I refer for surgery?",
+     "b": "When imaging shows obstruction, perforation, or a suspicious mass."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute abdominal pain with rapid girth increase",
+  "Signs of shock (tachycardia, hypotension)",
+  "Peritonitis (rigidity, rebound tenderness)"
+ ],
+ "faq": [
+  {
+   "q": "What is the normal abdominal girth for a 30‑year‑old woman?",
+   "a": "Approximately 70–80 cm, but varies with height and ethnicity."
+  },
+  {
+   "q": "Can abdominal girth be used to diagnose cancer?",
+   "a": "It suggests a mass but requires imaging for confirmation."
+  },
+  {
+   "q": "When should I refer for surgery?",
+   "a": "When imaging shows obstruction, perforation, or a suspicious mass."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man presents with a 3‑day history of abdominal distension and vomiting. His abdominal girth is 110 cm. What is the most likely diagnosis and first step in management?",
+  "A patient with chronic liver disease has an abdominal girth of 95 cm. What investigation would you order to confirm the cause of the distension?",
+  "Explain why ascites can be present in both hepatic cirrhosis and tuberculous peritonitis and how you would differentiate them clinically."
+ ],
+ "related": [
+  "Ascites",
+  "Bowel obstruction",
+  "Abdominal tumors",
+  "Liver disease",
+  "Tuberculous peritonitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Giardiasis is a water‑borne protozoal infection causing acute or chronic watery diarrhoea, malabsorption and weight loss. Diagnosis relies on stool microscopy or antigen testing, and treatment is with nitroimidazoles.",
+ "aka": [
+  "Giardia lamblia",
+  "Giardia intestinalis",
+  "Giardia duodenalis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Giardiasis is infection of the upper small intestine by the flagellated protozoan Giardia. Diagnosis requires detection of the organism or its antigens in stool, or duodenal aspirate when stool is negative.",
+   "b": [
+    "Microscopic identification of cysts or trophozoites in ≥3 stool samples",
+    "Enzyme immunoassay (EIA) or rapid antigen test on stool",
+    "String test (Enterotest) or duodenal biopsy if stool studies are inconclusive"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom burden and impact on nutrition rather than a formal stage system. Mild disease: intermittent diarrhoea, no weight loss. Moderate: daily diarrhoea, abdominal cramping, weight loss <5 %. Severe: persistent watery diarrhoea >2 weeks, dehydration, >5 % weight loss, or malabsorption requiring parenteral nutrition.",
+   "b": [
+    "Assess dehydration, weight loss, and duration of symptoms",
+    "Consider immune status (HIV, malnutrition) for severity"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Giardia is acquired by ingesting cysts from contaminated water, food, or person‑to‑person spread. In low‑resource settings, outbreaks follow unsafe water supplies; in travelers, untreated mountain streams are common sources.",
+   "b": [
+    "Contaminated drinking water (most common)",
+    "Fruits/vegetables washed with unsafe water",
+    "Person‑to‑person transmission in childcare settings",
+    "Travel to endemic regions"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop watery, foul‑smelling diarrhoea, often with greasy stools, abdominal bloating, flatulence, and crampy pain. Chronic infection may cause weight loss, fatigue, and nutrient deficiencies (especially fat‑soluble vitamins).",
+   "b": [
+    "Diarrhoea 1–2 weeks after exposure",
+    "Steatorrhea and malabsorption",
+    "Possible low‑grade fever, nausea"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests confirm the parasite and assess complications such as dehydration or malabsorption.",
+   "t": [
+    {
+     "a": "Stool microscopy (cysts/trophozoites)",
+     "b": "Does the stool contain Giardia? Positive confirms infection."
+    },
+    {
+     "a": "Stool antigen test (EIA)",
+     "b": "Is Giardia antigen present? Higher sensitivity; a positive result confirms infection."
+    },
+    {
+     "a": "Stool ova‑and‑parasite (O&P) exam ×3 samples",
+     "b": "Can intermittent shedding be caught? Multiple samples increase detection."
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Is the patient dehydrated? Abnormal values guide rehydration."
+    },
+    {
+     "a": "Fecal fat quantification (if chronic)",
+     "b": "Is malabsorption significant? Elevated fat indicates need for nutritional support."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications are uncommon but can be life‑threatening in vulnerable patients.",
+   "b": [
+    "Severe dehydration or electrolyte imbalance",
+    "Persistent weight loss >10 % in children",
+    "Acute renal failure from volume loss",
+    "Secondary bacterial infection"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the parasite, replace fluids, and correct malabsorption. First‑line therapy is a nitroimidazole; alternatives are used when resistance or intolerance is suspected.",
+   "b": [
+    "Nitroimidazole (e.g., metronidazole) – kills trophozoites and cysts; chosen for proven efficacy",
+    "Tinidazole – similar action, shorter course; used if metronidazole not tolerated",
+    "Nitazoxanide – alternative for metronidazole‑resistant cases; less effective in severe disease",
+    "Rehydration with oral rehydration solution or IV fluids if dehydrated",
+    "Nutritional support: high‑calorie diet, fat‑soluble vitamin supplementation if malabsorption persists"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑test stool after treatment to confirm eradication, especially in immunocompromised patients. Prevent future infection by ensuring safe water and hygiene.",
+   "b": [
+    "Repeat stool antigen test 1–2 weeks post‑therapy",
+    "Educate on boiling or filtering water, hand hygiene",
+    "Avoid untreated surface water during travel",
+    "Screen close contacts in outbreaks"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several diarrhoeal conditions mimic giardiasis.",
+   "b": [
+    "Cryptosporidiosis – also water‑borne, but acid‑fast oocysts on microscopy",
+    "Lactose intolerance – improves with lactase, no parasites seen",
+    "Irritable bowel syndrome – chronic pain without pathogen"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Diagnostic tests have limitations that can produce false‑negative or false‑positive findings.",
+   "b": [
+    "Single stool microscopy may miss intermittent shedding – repeat samples needed",
+    "Antigen tests can be false‑positive after recent treatment – correlate clinically",
+    "String test may be unavailable in low‑resource labs – rely on stool antigen if possible"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dehydration (dry mucosa, tachycardia, hypotension)",
+  "Persistent vomiting preventing oral rehydration",
+  "Weight loss >10 % in a child or adult over weeks",
+  "Blood in stool or high fever"
+ ],
+ "faq": [
+  {
+   "q": "Why is Giardia more common in travelers?",
+   "a": "Travelers often drink untreated water from streams or tap sources where cysts survive."
+  },
+  {
+   "q": "Can giardiasis cause long‑term health problems?",
+   "a": "Chronic infection can lead to persistent malabsorption and vitamin deficiencies if untreated."
+  },
+  {
+   "q": "Is a single negative stool test enough to rule out giardiasis?",
+   "a": "No; because cyst shedding is intermittent, at least three samples or an antigen test are recommended."
+  }
+ ],
+ "exam": [
+  "Describe the diagnostic algorithm for suspected giardiasis in a resource‑limited setting.",
+  "Explain why nitroimidazoles are first‑line therapy and list two alternatives with their indications.",
+  "Identify three red‑flag features that require urgent referral in a patient with diarrhoea."
+ ],
+ "related": [
+  "Cryptosporidiosis",
+  "Travelers' diarrhoea",
+  "Water‑borne diseases",
+  "Enteric protozoa",
+  "Malabsorption syndromes",
+  "HIV‑associated opportunistic infections"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

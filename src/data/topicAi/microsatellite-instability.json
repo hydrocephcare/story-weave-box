@@ -1,0 +1,171 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Microsatellite instability (MSI) is a DNA mismatch repair defect that causes rapid mutation of short repeat sequences, driving colorectal and other cancers. It is diagnosed by PCR or IHC and guides therapy and surveillance.",
+ "aka": [
+  "Lynch syndrome",
+  "HNPCC"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "MSI is a hypermutator phenotype caused by loss of mismatch repair (MMR) genes (MLH1, MSH2, MSH6, PMS2). It is detected by PCR amplification of microsatellite loci or by immunohistochemistry for MMR proteins.",
+   "b": [
+    "PCR of 5 Bethesda markers",
+    "IHC for MLH1, MSH2, MSH6, PMS2"
+   ],
+   "t": [
+    {
+     "a": "PCR MSI test",
+     "b": "Is the tumor MSI‑high, MSI‑low or microsatellite stable? MSI‑high indicates MMR deficiency and suggests Lynch syndrome or sporadic MLH1 hypermethylation."
+    },
+    {
+     "a": "IHC for MMR proteins",
+     "b": "Loss of a specific protein suggests which gene is mutated; retained proteins rule out that gene."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "MSI status is not staged but classified as MSI‑high, MSI‑low, or MSS. MSI‑high tumors have a better prognosis in colorectal cancer and respond differently to immunotherapy.",
+   "b": [
+    "MSI‑high: >30% unstable markers",
+    "MSI‑low: 1–2 unstable markers",
+    "MSS: none"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is germline mutation of MMR genes (Lynch syndrome). Sporadic MSI arises from MLH1 promoter hypermethylation, often in older patients.",
+   "b": [
+    "Germline MMR mutation (Lynch)",
+    "MLH1 hypermethylation (sporadic)",
+    "Secondary somatic mutations"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often present with colorectal cancer at a younger age, right‑sided tumors, and a family history of Lynch‑associated cancers. Extracolonic cancers (endometrium, ovary, stomach) may also occur.",
+   "b": [
+    "Right‑sided colon cancer",
+    "Early onset (<50 years)",
+    "Family history of colorectal, endometrial, ovarian, gastric cancers"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Confirm MSI status, screen for germline mutations, and assess for other Lynch‑associated tumors.",
+   "t": [
+    {
+     "a": "Tumor MSI PCR",
+     "b": "Determines MSI status; MSI‑high suggests Lynch or sporadic MLH1 hypermethylation."
+    },
+    {
+     "a": "Tumor IHC",
+     "b": "Identifies which MMR protein is lost; guides germline testing."
+    },
+    {
+     "a": "BRAF V600E mutation test",
+     "b": "Presence excludes Lynch syndrome in MSI‑high tumors, indicating sporadic MLH1 hypermethylation."
+    },
+    {
+     "a": "Family history questionnaire",
+     "b": "Identifies patterns suggestive of Lynch syndrome."
+    },
+    {
+     "a": "Screening colonoscopy",
+     "b": "Guides surveillance intervals; earlier and more frequent colonoscopies are needed for MSI‑high patients."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "MSI‑high tumors may be aggressive but respond well to immunotherapy. Untreated Lynch syndrome leads to multiple primary cancers.",
+   "b": [
+    "Rapid tumor growth",
+    "Metastasis to liver or lungs",
+    "Potential for multiple primary cancers"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the primary tumor per standard oncologic protocols. MSI‑high colorectal cancers benefit from immune checkpoint inhibitors. Surveillance for secondary cancers is essential.",
+   "b": [
+    "Surgical resection of primary tumor",
+    "Adjuvant chemotherapy per stage",
+    "PD‑1 inhibitor therapy for MSI‑high metastatic disease"
+   ],
+   "t": [
+    {
+     "a": "PD‑1 inhibitor (e.g., pembrolizumab)",
+     "b": "Is the patient eligible for immunotherapy? MSI‑high status predicts response."
+    },
+    {
+     "a": "Chemotherapy regimen (FOLFOX/FOLFIRI)",
+     "b": "Is adjuvant chemotherapy indicated? MSI‑high patients may have less benefit from 5‑FU alone."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular colonoscopy every 1–2 years, endometrial surveillance for women, and consideration of prophylactic surgery in high‑risk families.",
+   "b": [
+    "Colonoscopy every 1–2 years",
+    "Transvaginal ultrasound for endometrial cancer",
+    "Risk‑reducing hysterectomy and oophorectomy in selected patients"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "MSI is distinct from chromosomal instability (CIN) seen in sporadic colorectal cancers and from polyposis syndromes like FAP.",
+   "b": [
+    "CIN (chromosomal instability)",
+    "Familial adenomatous polyposis (FAP)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal MSI test does not exclude a germline mutation if the tumor is MSS. BRAF mutation can be absent in sporadic MSI‑high tumors, leading to misclassification.",
+   "b": [
+    "MSS tumor with germline MMR mutation",
+    "BRAF V600E negative but MLH1 hypermethylated"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained weight loss",
+  "Persistent abdominal pain",
+  "Rectal bleeding",
+  "Family history of early‑onset colorectal or endometrial cancer"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between MSI‑high and MSI‑low?",
+   "a": "MSI‑high shows many unstable microsatellites and indicates MMR deficiency; MSI‑low shows few changes and is usually not clinically significant."
+  },
+  {
+   "q": "Can MSI be found in cancers other than colorectal?",
+   "a": "Yes, MSI occurs in endometrial, gastric, ovarian, and other cancers, often linked to Lynch syndrome."
+  },
+  {
+   "q": "Does MSI status change treatment?",
+   "a": "Yes, MSI‑high colorectal cancers respond better to PD‑1 inhibitors and may need less aggressive chemotherapy."
+  }
+ ],
+ "exam": [
+  "Explain how loss of MLH1 leads to microsatellite instability and why this increases cancer risk.",
+  "Describe the diagnostic algorithm for a patient with suspected Lynch syndrome, including MSI testing and germline mutation analysis.",
+  "Discuss why MSI‑high colorectal cancers respond to PD‑1 inhibitors and how this influences adjuvant therapy decisions."
+ ],
+ "related": [
+  "Lynch syndrome",
+  "Mismatch repair deficiency",
+  "PD‑1 inhibitors",
+  "Colorectal cancer surveillance",
+  "Endometrial cancer screening"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

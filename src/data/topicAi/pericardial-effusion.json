@@ -1,0 +1,148 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Pericardial effusion is excess fluid in the pericardial sac that can compress the heart, impairing filling. It often follows infection, malignancy, or systemic disease and may progress to tamponade.",
+ "aka": [
+  "Pericardial fluid accumulation",
+  "Cardiac tamponade when severe"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A pericardial effusion is fluid that accumulates in the pericardial space. Diagnosis is confirmed by imaging—echocardiography is first line, CT or MRI if echo is inconclusive. Clinical suspicion arises when a patient has chest pain, dyspnea, or a new distant heart sound.",
+   "b": [
+    "Echocardiography: detects echo-free space, diastolic collapse of right ventricle, respiratory variation in mitral/tricuspid flow"
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "A clear echo-free space >5 mm suggests effusion; right ventricular diastolic collapse indicates tamponade."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "A globular heart shape may hint at large effusion, but is non‑specific."
+    },
+    {
+     "a": "ECG",
+     "b": "Low voltage (<0.5 mV) or beat‑to‑beat variation suggests significant fluid."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by size and hemodynamic impact. Small effusions are asymptomatic; large effusions can cause tamponade. The classic Beck’s triad—hypotension, muffled heart sounds, jugular venous distension—signals tamponade."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, infections dominate. Tuberculosis is the leading cause, followed by HIV, malaria, and bacterial sepsis. Non‑infectious causes include malignancy, autoimmune disease, and post‑cardiac surgery.",
+   "b": [
+    "Tuberculosis (most common)",
+    "HIV-associated pericarditis",
+    "Malaria",
+    "Bacterial sepsis",
+    "Post‑operative",
+    "Malignancy",
+    "Autoimmune (SLE, RA)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have chest pain, dyspnea, cough, or fatigue. Classic signs include distant heart sounds, pulsus paradoxus, and jugular venous distension. In low‑resource settings, symptoms may be vague and overlap with other illnesses.",
+   "b": [
+    "Chest pain (often pleuritic)",
+    "Shortness of breath",
+    "Muffled heart sounds",
+    "Pulsus paradoxus >10 mmHg",
+    "Elevated JVP"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Echocardiography is the cornerstone. When unavailable, a focused cardiac exam and chest X‑ray can guide suspicion. Lab tests help identify etiology.",
+   "b": [
+    "Echocardiography",
+    "Chest X‑ray",
+    "CBC, ESR, CRP",
+    "TB skin test or GeneXpert",
+    "Serum electrolytes"
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Shows fluid size and right ventricular collapse."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Suggests large effusion but not specific."
+    },
+    {
+     "a": "CBC",
+     "b": "Leukocytosis or anemia may point to TB or malignancy."
+    },
+    {
+     "a": "ESR/CRP",
+     "b": "Elevated values support infectious or autoimmune causes."
+    },
+    {
+     "a": "GeneXpert",
+     "b": "Positive result confirms TB pericarditis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid accumulation or large volume can precipitate cardiac tamponade, leading to shock. Chronic effusions may cause constrictive physiology. Watch for arrhythmias, hypotension, and respiratory distress.",
+   "b": [
+    "Cardiac tamponade—hypotension, tachycardia, pulsus paradoxus",
+    "Constrictive pericarditis—restrictive filling",
+    "Arrhythmias—especially atrial fibrillation"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "Suggests tamponade or shock."
+    },
+    {
+     "a": "Heart rate",
+     "b": "Compensatory response to low output."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden chest pain with hypotension",
+  "Rapidly worsening dyspnea",
+  "New muffled heart sounds",
+  "Pulsus paradoxus >10 mmHg"
+ ],
+ "faq": [
+  {
+   "q": "Can pericardial effusion be asymptomatic?",
+   "a": "Yes, small effusions often have no symptoms and are found incidentally."
+  },
+  {
+   "q": "Is pericardiocentesis safe in low‑resource settings?",
+   "a": "It is safe if performed by trained staff with basic monitoring; ultrasound guidance improves accuracy."
+  },
+  {
+   "q": "What if echocardiography is unavailable?",
+   "a": "Use clinical exam, chest X‑ray, and basic ECG; if tamponade is suspected, proceed to pericardiocentesis based on clinical judgment."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of cardiac tamponade and how it alters cardiac output.",
+  "Describe the diagnostic work‑up for a patient with suspected pericardial effusion in a setting without advanced imaging.",
+  "Outline the management steps for a patient with TB pericarditis and large effusion."
+ ],
+ "related": [
+  "Tuberculous pericarditis",
+  "Cardiac tamponade",
+  "Constrictive pericarditis",
+  "Pericardiocentesis",
+  "Echocardiography"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

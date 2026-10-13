@@ -1,0 +1,111 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Gomori Methenamine Silver (GMS) is a special histochemical stain that colours fungal cell walls black, making fungi visible in tissue sections. It is especially sensitive for Pneumocystis jirovecii and other invasive fungi, aiding rapid diagnosis.",
+ "aka": [
+  "GMS stain",
+  "Gomori silver stain"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "GMS uses silver nitrate reduced by methenamine to deposit metallic silver on fungal polysaccharides. The result is black fungal elements on a pale background, allowing pathologists to spot organisms that are otherwise invisible on routine H&E.",
+   "b": [
+    "Highly sensitive for Pneumocystis jirovecii, Candida, Aspergillus, Histoplasma, Cryptococcus.",
+    "Works on formalin‑fixed, paraffin‑embedded tissue and cytology smears."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Fungi have cell walls rich in polysaccharides (glucans, chitin) that reduce silver ions. The stain does not differentiate species; morphology and clinical context are required.",
+   "b": [
+    "Yeasts appear as round to oval budding cells.",
+    "Molds show septate hyphae with acute‑angle branching."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "GMS is used to detect invasive fungal infections that can be life‑threatening, especially in immunocompromised patients.",
+   "b": [
+    "Pneumocystis pneumonia (PCP) in HIV/AIDS, transplant, steroids.",
+    "Invasive candidiasis, aspergillosis, histoplasmosis, cryptococcosis."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "When fungal infection is suspected, tissue or cytology specimens are stained with GMS to confirm presence of organisms.",
+   "b": [
+    "GMS is more sensitive than H&E for detecting fungi.",
+    "Combine with PAS or immunofluorescence for confirmation."
+   ],
+   "t": [
+    {
+     "a": "GMS stain on lung biopsy or BAL cytology",
+     "b": "Does the specimen contain fungal elements? Positive black organisms confirm infection; negative does not rule out if sample is poor."
+    },
+    {
+     "a": "PAS stain",
+     "b": "Is there additional confirmation of fungal polysaccharides? Positive supports GMS findings; useful when silver stain is unavailable."
+    },
+    {
+     "a": "Immunofluorescence for Pneumocystis",
+     "b": "Is the organism Pneumocystis jirovecii? Positive rapid test; if unavailable, rely on GMS morphology."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Identify the fungus first, then start targeted antifungal therapy while providing supportive care.",
+   "b": [
+    "PCP: high‑dose trimethoprim‑sulfamethoxazole; alternatives include pentamidine if sulfa‑allergic.",
+    "Invasive aspergillosis: voriconazole preferred; avoid amphotericin B if renal risk.",
+    "Candida bloodstream infection: echinocandin first line; fluconazole if susceptible."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and clinical reasoning.",
+   "b": [
+    "GMS stains fungal cell walls black – think of PCP in HIV patients.",
+    "A negative GMS does not exclude infection if specimen quality is poor.",
+    "Combine GMS with clinical picture and other stains for accurate diagnosis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid respiratory deterioration in HIV or transplant patients (possible PCP).",
+  "Fever, cough, and hemoptysis with neutropenia (suspect invasive aspergillosis).",
+  "Septic shock with unknown source in immunocompromised host (consider disseminated candidiasis)."
+ ],
+ "faq": [
+  {
+   "q": "Why is GMS preferred over H&E for fungal detection?",
+   "a": "GMS deposits black silver on fungal walls, making them visible even when few organisms are present, whereas H&E may miss them."
+  },
+  {
+   "q": "Can GMS stain bacteria or parasites?",
+   "a": "No, GMS is specific for fungal polysaccharides; bacteria and parasites remain unstained."
+  },
+  {
+   "q": "What if the laboratory cannot perform GMS?",
+   "a": "Use PAS stain or direct microscopy with potassium hydroxide (KOH) preparation; immunofluorescence assays are alternatives for Pneumocystis."
+  }
+ ],
+ "exam": [
+  "Explain how GMS works and why it is especially useful for diagnosing Pneumocystis jirovecii pneumonia.",
+  "List three invasive fungi that can be identified with GMS and describe their typical histologic appearance.",
+  "A HIV patient presents with progressive dyspnea; BAL shows black cysts on GMS. What is the most likely diagnosis and first‑line treatment?"
+ ],
+ "related": [
+  "Periodic Acid‑Schiff (PAS) stain",
+  "Immunofluorescence for Pneumocystis",
+  "Bronchoalveolar lavage (BAL)",
+  "Invasive fungal infections",
+  "HIV‑associated opportunistic infections",
+  "Antifungal pharmacology"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

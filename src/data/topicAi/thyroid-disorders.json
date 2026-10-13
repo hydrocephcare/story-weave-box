@@ -1,0 +1,108 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Thyroid disorders arise when hormone production or action is disrupted, leading to systemic metabolic changes. Clinicians must link symptoms to hormone levels, identify underlying causes, and tailor treatment to the specific disorder.",
+ "aka": [
+  "Thyroid disease",
+  "Thyroid dysfunction"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The thyroid gland produces T4 and T3, regulating basal metabolic rate, growth, and neurodevelopment. Disorders occur when hormone synthesis, release, or action is impaired.",
+   "b": [
+    "Goiter, hypo‑, hyper‑, and mixed states"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "T4 is secreted by follicular cells, converted to active T3 in peripheral tissues. TSH from the pituitary controls synthesis via a negative feedback loop.",
+   "b": [
+    "TSH rises when T4/T3 fall; falls when they rise"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Pituitary TSH secretion is modulated by TRH, thyroxine feedback, and circadian rhythms. Autoimmune antibodies can disrupt this loop.",
+   "b": [
+    "TRH from hypothalamus; TSH stimulates iodine uptake"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Common mechanisms: iodine deficiency, autoimmune destruction (Hashimoto), stimulating antibodies (Graves), infiltrative disease, or iodine excess. In low‑resource settings, infections (TB, HIV) and herbal remedies can precipitate thyroiditis.",
+   "b": [
+    "Hashimoto: anti‑TPO, anti‑Tg; Graves: TSH‑R antibodies; iodine excess: Jod-Basedow"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Thyroid dysfunction presents with systemic signs: fatigue, weight change, temperature intolerance, cardiac symptoms, and neurocognitive effects. Early recognition prevents complications like myxedema coma or thyrotoxic crisis.",
+   "b": [
+    "Hyperthyroid: heat intolerance, tachycardia, tremor"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the classic triad of Graves: exophthalmos, pretibial myxedema, and diffuse goiter. In low‑resource settings, consider iodine deficiency and infections as common triggers.",
+   "b": [
+    "TSH high, T4 low = hypothyroid"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause: iodine restriction in excess, antithyroid drugs for Graves, steroids for thyroiditis, and levothyroxine for hypothyroidism. Monitor TSH and free T4; adjust therapy to maintain euthyroidism.",
+   "b": [
+    "Beta‑blockers control adrenergic symptoms in hyperthyroidism"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hypothyroidism can mimic depression; hyperthyroidism can present as anxiety. Thyroid storm resembles sepsis; myxedema coma resembles severe sepsis or hypothermia.",
+   "b": [
+    "Sepsis vs. thyroid storm"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Euthyroid sick syndrome shows low T3/T4 with normal TSH in acute illness; TSH may be falsely low in pregnancy; anti‑TPO can be positive in euthyroid individuals.",
+   "b": [
+    "Transient anti‑TPO positivity"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe palpitations, chest pain, or shortness of breath in a hyperthyroid patient (thyroid storm).",
+  "Rapidly enlarging neck mass or compressive symptoms (possible thyroid cancer)."
+ ],
+ "faq": [
+  {
+   "q": "Can iodine deficiency cause hyperthyroidism?",
+   "a": "Yes, excess iodine intake in a previously iodine‑deficient person can trigger hyperthyroidism (Jod‑Basedow phenomenon)."
+  },
+  {
+   "q": "Is Hashimoto’s always symptomatic?",
+   "a": "No, many patients remain euthyroid for years; routine screening in high‑risk families is advised."
+  },
+  {
+   "q": "Do antithyroid drugs work in all hyperthyroid patients?",
+   "a": "They are first‑line for Graves and toxic nodular disease, but not for thyroid storm, which requires urgent definitive therapy."
+  }
+ ],
+ "exam": [
+  "Explain the feedback loop between TSH and thyroid hormones and how it is disrupted in Graves disease.",
+  "Describe the diagnostic workup for a patient with a diffuse goiter and tachycardia.",
+  "Outline the first‑line management of a patient presenting with signs of thyroid storm."
+ ],
+ "related": [
+  "Endocrine disorders",
+  "Autoimmune diseases",
+  "Iodine nutrition",
+  "Critical care endocrinology",
+  "Public health and iodine deficiency"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

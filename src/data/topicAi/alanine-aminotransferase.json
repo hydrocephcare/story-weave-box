@@ -1,0 +1,103 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "ALT is an intracellular enzyme that transfers an amino group from alanine to α‑ketoglutarate, producing pyruvate. It is released into the blood when hepatocytes are damaged, making it a sensitive marker of liver injury.",
+ "aka": [
+  "SGPT"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "ALT (alanine aminotransferase) is a cytosolic enzyme mainly in the liver. Its serum level rises when hepatocytes are injured, reflecting hepatocellular damage.",
+   "b": [
+    "High ALT = liver cell injury; normal ALT = no significant hepatocellular damage"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "ALT catalyses the reversible transamination of alanine and α‑ketoglutarate to pyruvate and glutamate. The reaction is part of gluconeogenesis and amino‑acid metabolism.",
+   "b": [
+    "Reaction: Alanine + α‑ketoglutarate ⇌ Pyruvate + Glutamate"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "ALT activity is regulated by substrate availability and cellular energy status. It is not tightly regulated by feedback; its serum level reflects cell membrane integrity."
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Any condition that injures hepatocytes releases ALT into the bloodstream. Causes are grouped by mechanism: toxic, viral, metabolic, ischemic, or autoimmune.",
+   "b": [
+    "Toxic: alcohol, drugs (acetaminophen, statins)",
+    "Viral: hepatitis B/C, EBV",
+    "Metabolic: NAFLD, Wilson, hemochromatosis",
+    "Ischemic: shock, heart failure",
+    "Autoimmune: AIH"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "ALT is the most specific serum marker for hepatocellular injury. It guides diagnosis, monitors disease activity, and assesses treatment response.",
+   "b": [
+    "ALT > 3× ULN suggests acute hepatitis",
+    "ALT 1–3× ULN may indicate chronic disease"
+   ],
+   "t": [
+    {
+     "a": "ALT level",
+     "b": "High ALT indicates acute injury; moderate elevation suggests chronic disease"
+    },
+    {
+     "a": "AST/ALT ratio",
+     "b": "AST/ALT >2 suggests alcoholic liver disease"
+    },
+    {
+     "a": "Liver ultrasound",
+     "b": "Ultrasound detects steatosis, cirrhosis, or tumors"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that ALT is more liver‑specific than AST. In low‑resource settings, a single ALT measurement can triage patients for further testing.",
+   "b": [
+    "ALT is the preferred test for hepatocellular injury",
+    "AST/ALT ratio helps distinguish alcohol from viral causes"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe jaundice, confusion, abdominal pain, or sudden rise in ALT >10× ULN",
+  "Signs of acute liver failure such as coagulopathy or encephalopathy"
+ ],
+ "faq": [
+  {
+   "q": "Why is ALT more specific to the liver than AST?",
+   "a": "AST is found in heart, muscle, kidney, and brain, so its elevation can reflect injury elsewhere. ALT is largely confined to hepatocytes."
+  },
+  {
+   "q": "Can ALT be normal in liver disease?",
+   "a": "Yes, especially in early chronic hepatitis or in patients with fatty liver; ALT can be normal while fibrosis progresses."
+  },
+  {
+   "q": "What does an AST/ALT ratio >2 indicate?",
+   "a": "It suggests alcoholic liver disease; in viral hepatitis the ratio is usually <1."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old woman with chronic hepatitis B has an ALT of 120 IU/L. What does this suggest about her disease activity?",
+  "A patient presents with jaundice and ALT 2000 IU/L. What is the most likely cause and immediate management?",
+  "Explain why a normal AST/ALT ratio is reassuring in a patient with suspected viral hepatitis."
+ ],
+ "related": [
+  "Hepatitis B",
+  "Non‑alcoholic fatty liver disease",
+  "Acetaminophen toxicity",
+  "Alcoholic liver disease",
+  "Liver fibrosis assessment"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

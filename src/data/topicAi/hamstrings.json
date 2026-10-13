@@ -1,0 +1,119 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The hamstrings are a group of three muscles at the back of the thigh that flex the knee and extend the hip. Their anatomy determines how they function in gait, sports, and injury. Understanding their relations helps diagnose and manage common strains and tears.",
+ "aka": [
+  "Biceps femoris",
+  "Semitendinosus",
+  "Semimembranosus",
+  "Hamstring group"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The hamstrings are the primary knee flexors and hip extensors, crucial for walking, running, and jumping. Their balanced action with the quadriceps stabilizes the knee.",
+   "b": [
+    "Three muscles: biceps femoris, semitendinosus, semimembranosus"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "They originate from the ischial tuberosity and the posterior femur, inserting on the tibia and fibula. The biceps femoris has a long and short head.",
+   "b": [
+    "Biceps femoris: long head from ischium, short head from femur; semitendinosus and semimembranosus from ischium"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Posterior to the knee joint, they lie deep to the biceps femoris. They are adjacent to the sciatic nerve and popliteal vessels.",
+   "b": [
+    "Sciatic nerve runs between semitendinosus and semimembranosus"
+   ],
+   "t": [
+    {
+     "a": "MRI",
+     "b": "High signal on T2 indicates acute injury; low signal suggests chronic scar"
+    }
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Supplied by the profunda femoris artery and the posterior tibial artery.",
+   "b": [
+    "Profunda femoris gives perforating branches to the hamstrings"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Innervated by the tibial division of the sciatic nerve.",
+   "b": [
+    "Tibial nerve roots L5-S2"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Flex the knee and extend the hip; stabilize the pelvis during gait; assist in deceleration of the leg.",
+   "b": [
+    "Knee flexion: 70% of force; Hip extension: 30% of force"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Hamstring strains are common in athletes and can cause acute pain, swelling, and loss of function. Chronic injuries may lead to gait abnormalities.",
+   "b": [
+    "Acute strain: sudden pain, bruising; Chronic strain: gradual pain, weakness"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Shows hypoechoic area for edema; can guide rehab"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Look for tenderness at the ischial tuberosity, weakness in knee flexion, and a positive straight‑leg raise. In low‑resource settings, palpation and observation of gait are key.",
+   "b": [
+    "Ask patient to flex knee against resistance; note any lag or pain"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pain with inability to bear weight",
+  "Visible deformity or swelling",
+  "Loss of sensation or motor function in the leg"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between a hamstring strain and a tear?",
+   "a": "A strain is a partial tear of muscle fibers; a tear is a complete rupture, often with a palpable gap and severe pain."
+  },
+  {
+   "q": "Can hamstring injuries heal without surgery?",
+   "a": "Most strains heal with rest, ice, compression, elevation, and gradual rehab; surgery is reserved for complete ruptures or retracted tears."
+  },
+  {
+   "q": "Why is the sciatic nerve at risk during hamstring injury?",
+   "a": "The nerve runs between the semitendinosus and semimembranosus; a severe strain or surgical repair can stretch or compress it."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical origin and insertion of the biceps femoris and explain its role in knee flexion.",
+  "Explain how a hamstring strain can alter gait mechanics and what compensatory movements may occur.",
+  "Outline the first‑line management steps for an acute hamstring strain in a low‑resource setting."
+ ],
+ "related": [
+  "Quadriceps",
+  "Sciatic nerve",
+  "Knee joint",
+  "Muscle strain",
+  "Rehabilitation",
+  "Sports injury",
+  "Gait analysis",
+  "Posterior thigh anatomy"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

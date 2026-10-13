@@ -1,0 +1,109 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Duchenne muscular dystrophy (DMD) is an X‑linked recessive disorder caused by loss‑of‑function mutations in the dystrophin gene, leading to absent dystrophin, membrane fragility and progressive muscle degeneration.",
+ "aka": [
+  "Duchenne disease"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "DMD presents in early childhood with delayed motor milestones, Gowers’ sign and rising CK levels. It is the most common pediatric muscular dystrophy.",
+   "b": [
+    "X‑linked recessive; almost all patients are male",
+    "Incidence ≈ 1 in 3,500–5,000 live male births",
+    "Progressive loss of ambulation by early teens"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Dystrophin links the intracellular actin cytoskeleton to the dystrophin‑glycoprotein complex (DGC) in the sarcolemma, stabilising muscle membranes during contraction.",
+   "b": [
+    "DGC also anchors nNOS, helping regulate blood flow",
+    "Absence makes sarcolemma leaky, causing calcium influx and fibre necrosis"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The DMD gene (chromosome Xp21) is the largest human gene (~2.4 Mb) with 79 exons. Normal transcription produces full‑length dystrophin; mutations disrupt reading frame.",
+   "b": [
+    "Frameshift or nonsense mutations → no functional protein",
+    "Large deletions (≈65 %) and duplications (≈10 %) are common"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Loss of dystrophin leads to repeated membrane tears, chronic inflammation, replacement of muscle by fibrotic and fatty tissue, and eventual cardiac and respiratory failure.",
+   "b": [
+    "Elevated CK (>10× normal) often the first clue",
+    "Progressive weakness follows a proximal‑to‑distal pattern"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Early diagnosis enables multidisciplinary care, steroid therapy, and enrolment in exon‑skipping or gene‑therapy trials, which can slow decline.",
+   "b": [
+    "Cardiac monitoring: echocardiography every 1–2 years",
+    "Pulmonary function tests from age 5; consider non‑invasive ventilation when FVC < 50 %"
+   ],
+   "t": [
+    {
+     "a": "Creatine kinase (CK)",
+     "b": "Is there muscle breakdown? Very high CK supports DMD; normal CK makes DMD unlikely"
+    },
+    {
+     "a": "Multiplex ligation‑dependent probe amplification (MLPA)",
+     "b": "What mutation type is present? Detects deletions/duplications; if unavailable, use targeted PCR or refer to a regional genetics lab"
+    },
+    {
+     "a": "Muscle biopsy with immunohistochemistry",
+     "b": "Is dystrophin absent? Confirms diagnosis when genetic testing not feasible"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on inheritance, pathophysiology, key investigations and management principles.",
+   "b": [
+    "Remember Gowers’ sign = proximal weakness",
+    "Steroids (prednisone, deflazacort) are first‑line to preserve ambulation"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid loss of breathing ability",
+  "New onset chest pain or palpitations suggesting cardiomyopathy",
+  "Sudden weakness after infection (risk of respiratory failure)"
+ ],
+ "faq": [
+  {
+   "q": "Why are females rarely affected?",
+   "a": "They have a second normal X chromosome that supplies functional dystrophin; only carriers show mild symptoms."
+  },
+  {
+   "q": "Can DMD be cured?",
+   "a": "No cure yet; therapies aim to restore some dystrophin (exon skipping, gene therapy) or slow progression (steroids, cardiac care)."
+  },
+  {
+   "q": "How does CK help diagnosis?",
+   "a": "CK rises dramatically after muscle damage; levels >10× normal are typical in early DMD."
+  }
+ ],
+ "exam": [
+  "Explain how loss of dystrophin leads to muscle fibre necrosis.",
+  "List the inheritance pattern and why carrier females are usually asymptomatic.",
+  "Describe the first‑line pharmacologic treatment and its rationale."
+ ],
+ "related": [
+  "Becker muscular dystrophy",
+  "Muscular dystrophy, limb‑girdle type",
+  "X‑linked myotubular myopathy",
+  "Cardiomyopathy in neuromuscular disease",
+  "Exon‑skipping therapy",
+  "Genetic counseling for X‑linked disorders"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

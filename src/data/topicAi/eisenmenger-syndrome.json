@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Eisenmenger syndrome is the irreversible reversal of a long‑standing left‑to‑right shunt to right‑to‑left due to pulmonary hypertension, producing cyanosis and right‑heart failure.",
+ "aka": [
+  "Eisenmenger complex"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A chronic left‑to‑right shunt (often VSD, ASD, PDA) that, after years of pulmonary overcirculation, leads to pulmonary hypertension and shunt reversal. Diagnosis requires evidence of cyanosis, right‑heart strain, and a reversed shunt on imaging.",
+   "b": [
+    "Cyanosis >5% SpO2",
+    "Right‑ventricular hypertrophy on echo",
+    "Reversed shunt on cardiac MRI or echo"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows WHO functional class and pulmonary pressure ranges, guiding prognosis and transplant candidacy.",
+   "b": [
+    "Class I: asymptomatic",
+    "Class II: mild exertional dyspnea",
+    "Class III: marked limitation",
+    "Class IV: symptoms at rest"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Congenital defects that create a large left‑to‑right shunt are the primary culprits. In low‑resource settings, infections and conditions that raise pulmonary pressures can accelerate progression.",
+   "b": [
+    "Ventricular septal defect (most common)",
+    "Atrial septal defect",
+    "Patent ductus arteriosus"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop progressive cyanosis, clubbing, exertional dyspnea, and right‑heart failure symptoms. Early signs may be subtle and mimic other conditions.",
+   "b": [
+    "Cyanosis of lips and fingers",
+    "Digital clubbing",
+    "Exercise intolerance"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests confirm shunt reversal, quantify pulmonary pressures, and assess right‑heart function. When resources are limited, clinical signs and basic imaging guide management."
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Acute right‑heart failure, arrhythmias, thromboembolism, and sudden death are life‑threatening complications.",
+   "b": [
+    "Acute right‑ventricular failure",
+    "Paroxysmal supraventricular tachycardia",
+    "Pulmonary embolism",
+    "Sudden cardiac death"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause if possible, provide supportive care, and prepare for lung transplantation when indicated. Pharmacologic choices aim to lower pulmonary pressures without worsening right‑heart failure.",
+   "b": [
+    "Treat infections (e.g., TB)",
+    "Anticoagulation for thromboembolism",
+    "Oxygen for hypoxaemia"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of oxygen saturation, right‑heart function, and pulmonary pressures is essential. Prevention focuses on early detection and repair of congenital shunts.",
+   "b": [
+    "Annual echo",
+    "Pulse oximetry every 6 months",
+    "Referral for surgical repair before pulmonary hypertension develops"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other cyanotic heart diseases and pulmonary hypertension causes can mimic Eisenmenger.",
+   "b": [
+    "Tetralogy of Fallot",
+    "Ebstein anomaly",
+    "Pulmonary arteriovenous malformations"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal chest X-ray or mild echo findings may mask severe pulmonary hypertension; low SpO2 can be misinterpreted as lung disease.",
+   "b": [
+    "Normal pulmonary artery size on X-ray despite high pressures"
+   ]
+  },
+  {
+   "h": "Definition and diagnosis",
+   "p": "Eisenmenger syndrome is the irreversible reversal of a long‑standing left‑to‑right shunt to right‑to‑left due to pulmonary hypertension, producing cyanosis and right‑heart failure.",
+   "b": [
+    "Cyanosis >5% SpO2",
+    "Right‑ventricular hypertrophy on echo",
+    "Reversed shunt on cardiac MRI or echo"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows WHO functional class and pulmonary pressure ranges, guiding prognosis and transplant candidacy.",
+   "b": [
+    "Class I: asymptomatic",
+    "Class II: mild exertional dyspnea",
+    "Class III: marked limitation",
+    "Class IV: symptoms at rest"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

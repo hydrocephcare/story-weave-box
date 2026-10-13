@@ -1,0 +1,123 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Low Molecular Weight Heparin (LMWH) is a subcutaneous anticoagulant that mainly inhibits factor Xa, providing predictable anticoagulation without routine lab monitoring. It is used for VTE prophylaxis and treatment, especially in hospitalised and high‑risk patients.",
+ "aka": [
+  "LMWH",
+  "enoxaparin",
+  "dalteparin",
+  "tinzaparin"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "LMWHs are derived from unfractionated heparin and have a shorter chain length, giving them a higher anti‑Xa to anti‑IIa activity ratio. They are given by subcutaneous injection and have a longer half‑life, allowing once‑ or twice‑daily dosing.",
+   "b": [
+    "Predictable pharmacokinetics → no routine coagulation monitoring",
+    "Lower risk of heparin‑induced thrombocytopenia (HIT) than UFH",
+    "Renally cleared – dose adjust in renal impairment"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "LMWH binds antithrombin III, accelerating its inhibition of factor Xa (and to a lesser extent thrombin). This blocks conversion of prothrombin to thrombin, preventing fibrin clot formation.",
+   "b": [
+    "Preferential anti‑Xa activity (≈4:1 ratio)",
+    "Rapid onset (within 30‑60 min)",
+    "Longer half‑life (4‑6 h) than UFH"
+   ],
+   "t": [
+    {
+     "a": "Anti‑Xa level",
+     "b": "Is therapeutic anticoagulation achieved? 0.5‑1.0 IU/mL (therapeutic) or 0.2‑0.5 IU/mL (prophylactic). Low result → under‑anticoagulated; high → bleeding risk."
+    },
+    {
+     "a": "Platelet count",
+     "b": "Detects HIT. Drop >50 % or <150 ×10⁹/L after 5‑10 days suggests HIT; stop LMWH."
+    },
+    {
+     "a": "Renal function (creatinine, eGFR)",
+     "b": "Guides dose adjustment. eGFR <30 mL/min → reduce dose or avoid LMWH."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "LMWH dosing follows weight‑based protocols and is adjusted for renal function, pregnancy, and bleeding risk. No routine INR monitoring is needed, unlike warfarin.",
+   "b": [
+    "Reduce dose if eGFR <30 mL/min",
+    "Avoid in severe hepatic disease with coagulopathy"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Bleeding is the main adverse effect; HIT is rare but serious. Accumulation in renal failure can cause supratherapeutic anti‑Xa levels and major hemorrhage.",
+   "b": [
+    "Major bleed → stop LMWH, give protamine (partial reversal)",
+    "HIT → discontinue LMWH, switch to a non‑heparin anticoagulant",
+    "Renal impairment → monitor anti‑Xa, adjust dose"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "LMWH is first‑line for VTE prophylaxis in medical and surgical patients, treatment of acute DVT/PE, and bridging to oral anticoagulants. It is safe in pregnancy and cancer‑associated thrombosis.",
+   "b": [
+    "Hospitalised medical/surgical patients → prophylaxis",
+    "Confirmed DVT/PE → therapeutic dosing",
+    "Pregnancy‑associated VTE → LMWH preferred",
+    "Cancer‑associated thrombosis → LMWH over warfarin"
+   ],
+   "t": [
+    {
+     "a": "Duplex ultrasound",
+     "b": "Confirms DVT presence; positive → start therapeutic LMWH."
+    },
+    {
+     "a": "CT pulmonary angiography",
+     "b": "Diagnoses PE; positive → therapeutic LMWH."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams: LMWH’s anti‑Xa focus, reduced HIT risk, dosing adjustments, and reversal strategy.",
+   "b": [
+    "LMWH > UFH for VTE prophylaxis in most patients",
+    "Anti‑Xa level used only in renal failure, obesity, or pregnancy",
+    "Protamine neutralises ~60‑70 % of LMWH activity"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe chest pain or dyspnoea (possible PE)",
+  "Unexplained drop in haemoglobin or overt bleeding",
+  "New onset thrombocytopenia with skin lesions"
+ ],
+ "faq": [
+  {
+   "q": "Why is routine INR monitoring not required with LMWH?",
+   "a": "LMWH has predictable pharmacokinetics and a fixed anti‑Xa:anti‑IIa ratio, so dose‑response is stable without INR checks."
+  },
+  {
+   "q": "Can LMWH be used in patients with severe kidney disease?",
+   "a": "Use with caution; dose‑adjust or switch to unfractionated heparin if eGFR <30 mL/min."
+  }
+ ],
+ "exam": [
+  "Explain the mechanism by which LMWH prevents clot formation and why it has a lower HIT risk than UFH.",
+  "A pregnant woman with a DVT is started on anticoagulation. Which drug is preferred and why?",
+  "Describe how you would adjust LMWH dosing in a patient with an eGFR of 25 mL/min."
+ ],
+ "related": [
+  "Unfractionated heparin",
+  "Direct oral anticoagulants",
+  "Heparin‑induced thrombocytopenia",
+  "Venous thromboembolism",
+  "Pregnancy‑associated thrombosis",
+  "Renal impairment and anticoagulation"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

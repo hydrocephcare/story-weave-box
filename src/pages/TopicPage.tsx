@@ -17,10 +17,9 @@ const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replac
 /** One section of the article: a big serif heading, a thin rule above it, and readable text. No boxes, no colours: the words are the design. */
 function Section({ id, title, children, first }: { id: string; title: string; children: ReactNode; first?: boolean }) {
   return (
-    <section id={id} className={cn("scroll-mt-28", first ? "pt-2" : "mt-14 border-t border-border pt-10")}>
-      <span className="block h-1 w-12 rounded-full bg-primary" aria-hidden />
-      <h2 className="mt-4 font-serif text-[1.9rem] font-bold leading-tight tracking-tight text-foreground sm:text-4xl">{title}</h2>
-      <div className="mt-5 max-w-[78ch] space-y-4 text-[17px] leading-[1.7] text-foreground/80 sm:space-y-5 sm:text-[19px] sm:leading-[1.8] [&_strong]:font-semibold [&_strong]:text-foreground">{children}</div>
+    <section id={id} className={cn("scroll-mt-28 rounded-2xl border border-border/60 bg-card px-5 py-6 shadow-sm sm:rounded-3xl sm:px-8 sm:py-8", first ? "mt-2" : "mt-5 sm:mt-6")}>
+      <h2 className="font-serif text-[1.6rem] font-bold leading-tight tracking-tight text-foreground sm:text-[2rem]">{title}</h2>
+      <div className="mt-4 max-w-[78ch] space-y-4 text-[17px] leading-[1.7] text-foreground/80 sm:space-y-5 sm:text-[19px] sm:leading-[1.8] [&_strong]:font-semibold [&_strong]:text-foreground">{children}</div>
     </section>
   );
 }

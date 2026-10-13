@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Prenatal diagnosis identifies fetal genetic or structural abnormalities before birth, guiding management and parental choices. Techniques include CVS, amniocentesis, and non‑invasive testing.",
+ "aka": [
+  "Prenatal testing",
+  "Fetal diagnosis",
+  "Prenatal screening"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Prenatal diagnosis refers to any test performed during pregnancy to detect fetal anomalies, ranging from chromosomal disorders to single‑gene mutations and structural defects.",
+   "b": [
+    "Invasive: chorionic villus sampling (CVS) at 10‑13 weeks, amniocentesis at 15‑20 weeks.",
+    "Non‑invasive: cell‑free fetal DNA (cffDNA) in maternal blood after 10 weeks."
+   ],
+   "t": [
+    {
+     "a": "CVS",
+     "b": "What chromosomal or single‑gene abnormality does it detect? → Direct karyotype, FISH, PCR for specific mutations."
+    },
+    {
+     "a": "Amniocentesis",
+     "b": "What structural or genetic information is obtained? → Karyotype, microarray, targeted gene panels."
+    },
+    {
+     "a": "cffDNA test",
+     "b": "What common trisomies can be screened? → Trisomy 21, 18, 13; high sensitivity but not diagnostic."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Abnormalities are graded by established systems (e.g., ISUOG for structural defects, ACMG for genetic variants) to guide counseling and intervention.",
+   "b": [
+    "Mild: isolated, treatable lesions (e.g., small ventricular septal defect).",
+    "Moderate: multisystem involvement, possible post‑natal surgery (e.g., spina bifida).",
+    "Severe: lethal or life‑limiting (e.g., anencephaly, trisomy 13)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most prenatal abnormalities arise from genetic errors, but maternal infections and environmental exposures also contribute, especially in low‑resource settings.",
+   "b": [
+    "Chromosomal nondisjunction (trisomy 21, 18, 13).",
+    "Single‑gene mutations (e.g., cystic fibrosis, sickle cell).",
+    "Maternal infections: TORCH (CMV, rubella, toxoplasmosis), malaria, HIV‑related placental insufficiency.",
+    "Environmental toxins: aflatoxin, herbal teratogens."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Fetal abnormalities are often silent to the mother; clues arise from abnormal ultrasound findings, abnormal serum markers, or positive cffDNA screens.",
+   "b": [
+    "Nuchal translucency >3.5 mm suggests chromosomal abnormality.",
+    "Elevated AFP indicates neural tube defect or abdominal wall defect.",
+    "Absent cardiac activity on Doppler signals fetal demise."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A stepwise approach uses screening first, then diagnostic testing if risk is high.",
+   "t": [
+    {
+     "a": "First‑trimester combined screen (NT + PAPP‑A + β‑hCG)",
+     "b": "What risk does it estimate? → Probability of trisomy 21/18; high risk prompts CVS."
+    },
+    {
+     "a": "Ultrasound anatomy scan (18‑22 weeks)",
+     "b": "What structural abnormality does it reveal? → Detects cardiac, CNS, skeletal defects; guides targeted testing."
+    },
+    {
+     "a": "Maternal serum AFP",
+     "b": "What condition does a markedly high level suggest? → Open neural tube defect; confirm with detailed ultrasound."
+    },
+    {
+     "a": "cffDNA",
+     "b": "What common trisomies are screened? → 21, 18, 13; a positive result requires invasive confirmation."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain findings demand urgent referral to a fetal medicine unit.",
+   "b": [
+    "Severe hydrocephalus with rapid head growth.",
+    "Persistent severe oligohydramnios.",
+    "Fetal anemia (elevated MCA Doppler) in maternal malaria or sickle cell disease."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management balances treating the underlying cause, preparing for delivery, and supporting parental decision‑making.",
+   "b": [
+    "Genetic counseling for confirmed chromosomal or single‑gene disorders.",
+    "Intra‑uterine therapy: fetal blood transfusion for anemia, laser ablation for twin‑twin transfusion.",
+    "Maternal treatment of infections (e.g., antimalarials, antiretrovirals) to reduce fetal harm.",
+    "Avoid teratogenic drugs; use folic acid supplementation to prevent neural‑tube defects."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After a diagnosis, schedule serial ultrasounds, consider fetal MRI, and plan delivery at a tertiary center if needed.",
+   "b": [
+    "Vaccination against rubella, screening for HIV/TB, and malaria prophylaxis in endemic areas.",
+    "Family planning and pre‑implantation genetic testing for recurrent disorders."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic prenatal findings can lead to misdiagnosis.",
+   "b": [
+    "Physiologic polyhydramnios vs. gastrointestinal obstruction.",
+    "Transient ventriculomegaly vs. true hydrocephalus.",
+    "Maternal obesity obscuring ultrasound detection of defects."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests have limitations that may produce false‑positive or false‑negative results.",
+   "b": [
+    "cffDNA cannot detect balanced translocations or single‑gene disorders.",
+    "Elevated AFP can be due to multiple gestation or fetal demise, not only neural‑tube defects.",
+    "Low PAPP‑A may be seen in maternal hypertension, not just chromosomal abnormality."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly increasing fetal head circumference suggesting hydrocephalus",
+  "Severe oligohydramnios with fetal growth restriction",
+  "Maternal fever with rash in the first trimester (possible TORCH infection)"
+ ],
+ "faq": [
+  {
+   "q": "Is a normal ultrasound enough to rule out genetic disease?",
+   "a": "No; structural scans miss many chromosomal or single‑gene disorders, which require genetic testing."
+  },
+  {
+   "q": "Can prenatal diagnosis be done without risk to the fetus?",
+   "a": "Non‑invasive tests (cffDNA) carry no fetal risk, but definitive diagnosis usually needs invasive sampling with a small miscarriage risk."
+  },
+  {
+   "q": "What if the required test is unavailable locally?",
+   "a": "Arrange referral to a regional center or use the nearest available screening method and counsel based on risk."
+  }
+ ],
+ "exam": [
+  "Explain the stepwise approach from screening to definitive prenatal diagnosis for a suspected chromosomal abnormality.",
+  "List three maternal infections that can cause fetal anomalies and the preventive measures in low‑resource settings.",
+  "Describe how you would counsel a couple after a positive cffDNA result for trisomy 21."
+ ],
+ "related": [
+  "Genetic counseling",
+  "Fetal ultrasound",
+  "Maternal-fetal medicine",
+  "Neural tube defects",
+  "TORCH infections",
+  "Intra‑uterine therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

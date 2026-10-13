@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Triple‑negative breast cancer (TNBC) lacks estrogen, progesterone and HER2 receptors, making it aggressive but treatable with chemotherapy. It often associates with BRCA1 mutations and basal‑like features.",
+ "aka": [
+  "ER‑, PR‑, HER2‑",
+  "Basal‑like breast cancer"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "TNBC is defined by immunohistochemistry showing negative estrogen receptor (ER), progesterone receptor (PR) and HER2/neu (IHC 0/1+ or 2+ with no amplification).",
+   "b": [
+    "Occurs in ~10–20% of breast cancers",
+    "Often high‑grade, young patients"
+   ],
+   "t": [
+    {
+     "a": "ER, PR, HER2 IHC",
+     "b": "Determines receptor status; negative results confirm TNBC"
+    },
+    {
+     "a": "HER2 FISH",
+     "b": "Rules out HER2 amplification when IHC 2+; negative confirms TNBC"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "TNBC follows the same TNM staging as other breast cancers. Prognosis depends on stage, grade and nodal involvement.",
+   "b": [
+    "Stage I–IV based on tumour size, nodal status, metastasis"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Genetic predisposition (BRCA1), high proliferation, basal‑like gene expression. Environmental factors are less defined.",
+   "b": [
+    "BRCA1 mutation",
+    "High Ki‑67 index",
+    "Basal cytokeratin expression"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with a palpable mass, often in younger women. Skin changes, nipple retraction or ulceration may occur.",
+   "b": [
+    "Rapid growth",
+    "High‑grade histology"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond receptor testing, imaging and staging work‑up are essential.",
+   "t": [
+    {
+     "a": "Mammography",
+     "b": "Detects mass and architectural distortion; negative in dense breasts"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Characterises solid vs cystic lesions; guides biopsy"
+    },
+    {
+     "a": "MRI",
+     "b": "Assesses extent in dense tissue or high‑risk patients"
+    },
+    {
+     "a": "Sentinel lymph node biopsy",
+     "b": "Determines nodal status; negative nodes reduce adjuvant therapy"
+    },
+    {
+     "a": "CT/PET",
+     "b": "Stages for distant metastasis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid progression, visceral metastases, and treatment‑related toxicities are concerns.",
+   "b": [
+    "Early metastasis to lungs, liver, brain"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Primary treatment is cytotoxic chemotherapy; surgery and radiotherapy are adjuncts based on stage.",
+   "b": [
+    "Taxane‑based regimens (e.g., paclitaxel)",
+    "Anthracyclines (e.g., doxorubicin)"
+   ],
+   "t": [
+    {
+     "a": "Chemotherapy",
+     "b": "Addresses systemic disease; chosen for high proliferation"
+    },
+    {
+     "a": "Surgery",
+     "b": "Lumpectomy or mastectomy based on tumour size and patient preference"
+    },
+    {
+     "a": "Radiotherapy",
+     "b": "Reduces local recurrence after breast‑conserving surgery"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular imaging and clinical exams; genetic counselling for BRCA1/2.",
+   "b": [
+    "Annual mammogram after treatment"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other high‑grade breast cancers like HER2‑positive or luminal B.",
+   "b": [
+    "HER2‑positive (ER‑, PR‑, HER2+)",
+    "Luminal B (ER+, PR+, HER2‑)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "False‑negative HER2 IHC can occur; low tumour cellularity may mask receptor expression.",
+   "b": [
+    "Low tumour burden leads to weak staining"
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care needed for sudden pain, rapid swelling, or neurological deficits indicating metastasis.",
+   "b": [
+    "Sudden severe pain",
+    "Rapidly enlarging mass",
+    "Neurological signs"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe breast pain",
+  "Rapidly enlarging mass",
+  "Neurological deficits"
+ ],
+ "faq": [
+  {
+   "q": "Can TNBC be cured?",
+   "a": "Early‑stage TNBC can be cured with surgery, radiation and chemotherapy; advanced disease has poorer outcomes."
+  },
+  {
+   "q": "Why no hormone therapy?",
+   "a": "TNBC lacks hormone receptors, so endocrine agents are ineffective."
+  },
+  {
+   "q": "Is BRCA1 the only genetic link?",
+   "a": "BRCA1 is common, but other genes (PALB2, ATM) can also predispose."
+  }
+ ],
+ "exam": [
+  "Explain why TNBC is more aggressive than hormone‑positive breast cancers.",
+  "Describe the diagnostic work‑up for a patient with a suspected TNBC.",
+  "Outline the first‑line chemotherapy regimen for stage II TNBC and justify drug choices."
+ ],
+ "related": [
+  "HER2‑positive breast cancer",
+  "Luminal B breast cancer",
+  "BRCA1 mutation",
+  "Basal‑like breast cancer",
+  "Chemotherapy for breast cancer"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

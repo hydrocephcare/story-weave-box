@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Pneumocystis jirovecii pneumonia (PJP) is an opportunistic infection of the lungs seen mainly in immunocompromised patients, especially those with HIV and CD4 counts below 200 cells/µL. Diagnosis relies on silver‑stained lung samples and clinical context, and treatment centers on TMP‑SMX with adjunctive steroids for severe disease.",
+ "aka": [
+  "Pneumocystis pneumonia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "PJP is caused by the fungus Pneumocystis jirovecii, which colonises alveoli in patients with impaired cell‑mediated immunity. Diagnosis requires a clinical picture of progressive dyspnoea and hypoxia plus demonstration of cyst‑like organisms on a silver stain of bronchoalveolar lavage or sputum.",
+   "b": [
+    "Occurs almost exclusively in immunocompromised hosts"
+   ],
+   "t": [
+    {
+     "a": "Bronchoalveolar lavage (BAL) with GMS stain",
+     "b": "Detects cysts of P. jirovecii in alveolar spaces; a positive result confirms PJP."
+    },
+    {
+     "a": "High‑resolution CT chest",
+     "b": "Shows bilateral ground‑glass opacities; supports diagnosis when BAL is unavailable."
+    },
+    {
+     "a": "Serum β‑D‑glucan",
+     "b": "Elevated levels suggest fungal infection, but not specific for PJP; useful when BAL cannot be performed."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by oxygenation and respiratory support needs. Mild: SpO₂ >90% on room air. Moderate: SpO₂ 85–90% or PaO₂ 55–70 mmHg. Severe: SpO₂ <85% or PaO₂ <55 mmHg, or need for mechanical ventilation.",
+   "b": [
+    "Severity guides steroid use and monitoring intensity"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary risk factor is profound T‑cell deficiency, most commonly HIV infection with CD4 <200 cells/µL. Other causes include organ transplantation, chemotherapy, and chronic steroid use.",
+   "b": [
+    "Chemotherapy for malignancy"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop insidious, progressive dyspnoea, non‑productive cough, and low‑grade fever. Hypoxia may be the first sign, often with normal chest auscultation.",
+   "b": [
+    "Hypoxia with normal lung sounds"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests confirm diagnosis and assess severity. When resources are limited, clinical judgment and basic imaging guide management.",
+   "b": [
+    "Complete blood count"
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid deterioration, pneumothorax, respiratory failure, and secondary bacterial infection are life‑threatening complications.",
+   "b": [
+    "Secondary bacterial pneumonia"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying immunosuppression, administer TMP‑SMX as first‑line therapy, and add steroids for moderate to severe disease. Monitor renal function and blood counts.",
+   "b": [
+    "Avoid fluoroquinolones alone; they lack activity against PJP"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After treatment, patients should receive prophylaxis with TMP‑SMX until CD4 counts recover above 200 cells/µL or immunosuppression is reduced. Regular monitoring of renal function and CBC is essential.",
+   "b": [
+    "Vaccinate against influenza and pneumococcus"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "PJP can mimic bacterial pneumonia, viral pneumonitis, and interstitial lung disease, but lacks lobar consolidation and responds poorly to antibiotics.",
+   "b": [
+    "Diffuse alveolar damage"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal chest X‑ray does not exclude PJP; HRCT is more sensitive. Low β‑D‑glucan may occur in early disease, delaying diagnosis.",
+   "b": [
+    "β‑D‑glucan can be low initially"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of breathing, SpO₂ <85% despite oxygen, or signs of respiratory failure"
+ ],
+ "faq": [
+  {
+   "q": "When should I start PCP prophylaxis in HIV patients?",
+   "a": "Begin when CD4 count falls below 200 cells/µL."
+  },
+  {
+   "q": "Can I treat PJP with a single antibiotic?",
+   "a": "TMP‑SMX is the only effective monotherapy; other antibiotics lack activity."
+  },
+  {
+   "q": "What if the patient is allergic to sulfa drugs?",
+   "a": "Use pentamidine or trimethoprim‑dapsone combination, monitoring for toxicity."
+  }
+ ],
+ "exam": [
+  "Explain why TMP‑SMX is preferred over other antibiotics for PJP.",
+  "Describe the role of steroids in moderate to severe PJP and the criteria for initiating them.",
+  "Outline the steps to take when a BAL sample is unavailable in a low‑resource setting."
+ ],
+ "related": [
+  "HIV/AIDS management",
+  "Antifungal pharmacology",
+  "Pulmonary infections in immunocompromised hosts",
+  "Respiratory failure management"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

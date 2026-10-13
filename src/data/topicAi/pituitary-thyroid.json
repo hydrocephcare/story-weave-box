@@ -1,0 +1,132 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "The pituitary releases TSH to stimulate thyroid hormone production, while thyroid hormones feedback to suppress TRH and TSH. Dysregulation leads to hypo‑ or hyperthyroidism with systemic effects.",
+ "aka": [
+  "HPT axis",
+  "thyrotropic axis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The hypothalamus, pituitary, and thyroid form a hormonal loop that controls metabolism, growth, and energy balance. The pituitary’s TSH is the key driver of thyroid hormone synthesis.",
+   "b": [
+    "Hypothalamus releases TRH",
+    "Pituitary releases TSH",
+    "Thyroid releases T3/T4"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "TRH binds pituitary receptors, stimulating TSH secretion. TSH binds thyroid cells, activating deiodinases and thyroglobulin synthesis. T3/T4 circulate, bind nuclear receptors, and exert metabolic effects.",
+   "b": [
+    "TRH→TSH→T3/T4"
+   ],
+   "t": [
+    {
+     "a": "TSH",
+     "b": "Elevated TSH suggests primary hypothyroidism; low TSH suggests hyperthyroidism or central suppression."
+    },
+    {
+     "a": "Free T4",
+     "b": "Low free T4 with high TSH indicates primary hypothyroidism; high free T4 with low TSH indicates hyperthyroidism."
+    },
+    {
+     "a": "TRH (rare)",
+     "b": "Low TRH with low TSH suggests central hypothyroidism."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Negative feedback: high T3/T4 suppress TRH and TSH. Deiodinase activity adjusts peripheral T3/T4 ratios. Stress, illness, and medications can blunt this loop.",
+   "b": [
+    "High T3/T4 ↓ TRH/TSH",
+    "Low T3/T4 ↑ TRH/TSH"
+   ],
+   "t": [
+    {
+     "a": "TSH suppression test",
+     "b": "Failure to suppress TSH after TRH indicates pituitary resistance."
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Pituitary disorders (adenomas, hypopituitarism) alter TSH release. Thyroid disorders (autoimmune, iodine deficiency, nodules) change hormone production. Central vs. primary causes differ in presentation.",
+   "b": [
+    "Pituitary adenoma → TSH excess → hyperthyroidism",
+    "Pituitary loss → TSH drop → hypothyroidism",
+    "Autoimmune thyroiditis → hypothyroidism"
+   ],
+   "t": [
+    {
+     "a": "TSH/Free T4 ratio",
+     "b": "Low TSH with low free T4 = central; high TSH with low free T4 = primary."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Thyroid dysfunction affects cardiovascular, neurocognitive, and metabolic health. In low‑resource settings, iodine deficiency and infections (TB, HIV) exacerbate disease burden.",
+   "b": [
+    "Iodine deficiency → cretinism, goitre"
+   ],
+   "t": [
+    {
+     "a": "Urinary iodine",
+     "b": "Low urinary iodine indicates deficiency."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the order of the axis, feedback logic, and that TSH is the best screen. Distinguish central from primary by TSH and free T4 patterns.",
+   "b": [
+    "TSH high + free T4 low = primary hypothyroidism",
+    "TSH low + free T4 high = hyperthyroidism"
+   ],
+   "t": [
+    {
+     "a": "TSH and free T4",
+     "b": "High TSH + low free T4 = primary hypothyroidism; low TSH + high free T4 = hyperthyroidism."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hyperthyroidism with atrial fibrillation",
+  "Unexplained weight loss with tachycardia",
+  "Sudden neurological deficits in pituitary apoplexy"
+ ],
+ "faq": [
+  {
+   "q": "Can stress change TSH levels?",
+   "a": "Yes, acute stress can transiently raise TSH, but chronic illness often lowers it."
+  },
+  {
+   "q": "Is iodine deficiency common in low‑resource areas?",
+   "a": "Yes, especially where iodized salt is unavailable; it leads to goitre and hypothyroidism."
+  },
+  {
+   "q": "Do medications affect thyroid tests?",
+   "a": "Yes, steroids, amiodarone, and antiepileptics can alter TSH and free T4 levels."
+  }
+ ],
+ "exam": [
+  "Explain how TSH regulates thyroid hormone synthesis and why TSH is the preferred screening test.",
+  "Differentiate primary hypothyroidism from central hypothyroidism using TSH and free T4 values.",
+  "Describe the impact of iodine deficiency on thyroid function and public health strategies to prevent it."
+ ],
+ "related": [
+  "Iodine metabolism",
+  "Autoimmune thyroid disease",
+  "Pituitary adenoma",
+  "Thyroid hormone transport",
+  "Deiodinase genetics"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Oesophageal adenocarcinoma is a cancer of the distal oesophagus that usually arises from Barrett oesophagus after chronic gastro‑oesophageal reflux. It is most common in white men and progresses through dysplasia to invasive disease.",
+ "aka": [
+  "Barrett‑related adenocarcinoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A malignant tumour of glandular (adenocarcinoma) cells arising in the distal third of the oesophagus, most often on a background of Barrett oesophagus.",
+   "b": [
+    "Diagnosis requires endoscopic visualisation + biopsy showing malignant columnar epithelium with gland formation",
+    "Barrett oesophagus is defined by intestinal metaplasia (goblet cells) in the oesophageal squamous mucosa"
+   ],
+   "t": [
+    {
+     "a": "Upper GI endoscopy with biopsies",
+     "b": "Does the lesion contain malignant glandular cells? Positive confirms cancer; negative with suspicious appearance prompts repeat or deeper biopsies"
+    },
+    {
+     "a": "Histopathology (H&E, immunohistochemistry)",
+     "b": "Identifies adenocarcinoma morphology and excludes squamous carcinoma; HER2 testing guides therapy if positive"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the AJCC TNM system, guiding prognosis and treatment choice.",
+   "b": [
+    "T1‑T4: depth of invasion from mucosa to adjacent structures",
+    "N0‑N3: number of regional lymph nodes involved",
+    "M0‑M1: distant metastasis"
+   ],
+   "t": [
+    {
+     "a": "CT chest/abdomen/pelvis",
+     "b": "If CT unavailable, use chest X‑ray and abdominal ultrasound as a limited alternative"
+    },
+    {
+     "a": "Endoscopic ultrasound (EUS)",
+     "b": "Accurately assesses T depth and regional N nodes. Positive nodes upstage disease and may alter surgical planning"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases arise from chronic gastro‑oesophageal reflux leading to Barrett metaplasia, with additional lifestyle and environmental contributors.",
+   "b": [
+    "Chronic GERD → Barrett oesophagus (primary cause)",
+    "Obesity (especially central adiposity)",
+    "Tobacco smoking",
+    "Radiation exposure (head/neck, prior therapy)",
+    "Low intake of fruits/vegetables (protective factor when high)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Early disease is often silent; later stages produce dysphagia and weight loss.",
+   "b": [
+    "Progressive dysphagia first to solids, then liquids",
+    "Unexplained weight loss",
+    "Odynophagia or chest pain mimicking heartburn",
+    "Occasional vomiting of blood (advanced disease)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A stepwise approach combines endoscopy, imaging, and pathology to confirm cancer and stage it.",
+   "b": [
+    "Endoscopy with systematic biopsies of any visible lesion and of Barrett segment",
+    "Cross‑sectional imaging (CT) for nodal and metastatic assessment",
+    "EUS for detailed T/N staging when available"
+   ],
+   "t": [
+    {
+     "a": "Barium swallow",
+     "b": "Screens for structural obstruction when endoscopy not immediately available; shows narrowing or irregularity but cannot confirm cancer"
+    },
+    {
+     "a": "PET‑CT (if accessible)",
+     "b": "Detects metabolically active distant disease; positive scan upstages to M1 and changes management"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from tumour growth and treatment.",
+   "b": [
+    "Obstructive dysphagia leading to malnutrition",
+    "Fistula formation to trachea or bronchi (rare)",
+    "Bleeding causing anemia",
+    "Metastatic spread to liver, lungs, bone"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Curative intent combines surgery, chemotherapy, and radiotherapy; palliative care focuses on symptom control.",
+   "b": [
+    "Neoadjuvant chemoradiotherapy (cisplatin‑based or fluoropyrimidine‑based) to downstage tumour before surgery",
+    "Surgical resection (transthoracic or transhiatal oesophagectomy) for resectable disease",
+    "Targeted HER2 therapy (trastuzumab) if tumour overexpresses HER2",
+    "Palliative stenting or radiotherapy for unresectable obstruction"
+   ],
+   "t": [
+    {
+     "a": "If chemotherapy unavailable",
+     "b": "Consider best supportive care, nutritional support, and referral for possible radiotherapy"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Survivors need surveillance for recurrence and for new Barrett‑related lesions.",
+   "b": [
+    "Endoscopic surveillance every 6–12 months for Barrett patients after treatment",
+    "Lifestyle modification: weight loss, smoking cessation, increase fruit/vegetable intake",
+    "Control reflux with proton‑pump inhibitors to reduce further metaplasia"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other oesophageal cancers and benign conditions can mimic OAC.",
+   "b": [
+    "Oesophageal squamous cell carcinoma (proximal, tobacco/alcohol risk)",
+    "Benign peptic stricture from GERD",
+    "Achalasia (dysphagia to both solids and liquids early)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may give false reassurance.",
+   "b": [
+    "Normal barium swallow does not exclude early mucosal cancer",
+    "Negative biopsy from a single site may miss focal carcinoma – repeat or deeper biopsies needed",
+    "CT may underestimate nodal disease compared with EUS"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden inability to swallow liquids",
+  "Vomiting blood or coffee‑ground material",
+  "Rapid, unintentional weight loss (>5 % in a month)"
+ ],
+ "faq": [
+  {
+   "q": "Why is Barrett oesophagus a precursor?",
+   "a": "Chronic acid injury replaces squamous cells with intestinal‑type columnar cells that are genetically unstable and can progress to dysplasia and adenocarcinoma."
+  },
+  {
+   "q": "Can OAC occur without Barrett oesophagus?",
+   "a": "Rarely; most cases arise from Barrett, but de novo adenocarcinoma can develop in the distal oesophagus."
+  },
+  {
+   "q": "Is screening useful in low‑resource settings?",
+   "a": "Targeted endoscopic screening of high‑risk groups (male, obese, chronic GERD) is cost‑effective where endoscopy is available."
+  }
+ ],
+ "exam": [
+  "Describe the stepwise progression from chronic GERD to oesophageal adenocarcinoma, including key histologic changes.",
+  "Explain how the AJCC TNM staging influences treatment choice for oesophageal adenocarcinoma.",
+  "List three modifiable risk factors and two protective factors for this cancer."
+ ],
+ "related": [
+  "Barrett oesophagus",
+  "Oesophageal squamous cell carcinoma",
+  "Gastro‑oesophageal reflux disease",
+  "Upper gastrointestinal endoscopy",
+  "Esophagectomy",
+  "HER2‑positive cancers"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

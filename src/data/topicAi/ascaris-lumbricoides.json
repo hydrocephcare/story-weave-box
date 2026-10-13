@@ -1,0 +1,128 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Ascaris lumbricoides is a large intestinal roundworm that spreads via contaminated food or soil. It can cause intestinal blockage, lung migration, and anemia. Diagnosis relies on stool eggs and clinical clues, and treatment is with albendazole or mebendazole.",
+ "aka": [
+  "Roundworm",
+  "Ascariasis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A soil‑transmitted helminth, Ascaris lumbricoides is the largest human roundworm, often found in tropical and subtropical regions. It thrives in warm, moist soils contaminated with human feces.",
+   "b": [
+    "Largest human intestinal nematode",
+    "Common in low‑resource settings"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The adult worm is up to 35 cm long, with a thick cuticle and a prominent buccal capsule. Eggs are oval, 50–70 µm, and contain a larval stage that can survive in soil for years.",
+   "b": [
+    "Eggs 50–70 µm, thick shell",
+    "Larvae develop in soil"
+   ],
+   "t": [
+    {
+     "a": "Microscopy",
+     "b": "Identify oval eggs with bipolar plugs; confirms infection"
+    }
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Infection occurs when eggs are ingested from contaminated food, water, or soil. Eggs hatch in the intestine, larvae penetrate the gut wall, migrate to the lungs, ascend the trachea, and are swallowed back to the gut to mature.",
+   "b": [
+    "Ingestion of eggs",
+    "Lung migration (Löffler’s syndrome)"
+   ],
+   "t": [
+    {
+     "a": "Stool microscopy",
+     "b": "Eggs may be intermittent, repeat testing improves yield"
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Ascariasis can be asymptomatic or cause abdominal pain, malnutrition, intestinal obstruction, and pulmonary symptoms during larval migration. Severe cases may lead to perforation or death.",
+   "b": [
+    "Intestinal obstruction",
+    "Lung migration (cough, wheeze)",
+    "Anemia from blood loss"
+   ],
+   "t": [
+    {
+     "a": "Clinical presentation",
+     "b": "Severity graded by symptom intensity and imaging"
+    }
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis is clinical plus laboratory confirmation. Stool microscopy is the gold standard; serology is not routinely used. Imaging (X‑ray, ultrasound) helps assess obstruction.",
+   "b": [
+    "Stool microscopy"
+   ],
+   "t": [
+    {
+     "a": "Stool microscopy",
+     "b": "Negative does not rule out; repeat 3 times"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "First‑line therapy is albendazole or mebendazole, chosen for efficacy and low toxicity. Supportive care includes hydration, pain control, and monitoring for complications. Mass deworming and sanitation reduce transmission.",
+   "b": [
+    "Albendazole or mebendazole"
+   ],
+   "t": [
+    {
+     "a": "Albendazole",
+     "b": "Avoid in pregnancy; monitor for hepatotoxicity"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the life cycle: ingestion → intestinal larva → lung migration → cough (Löffler’s syndrome) → re‑ingestion. Key diagnostic test is stool microscopy; repeat if initial negative. Treatment is albendazole; avoid praziquantel as it is ineffective.",
+   "b": [
+    "Life cycle: ingestion → lung migration → re‑ingestion"
+   ],
+   "t": [
+    {
+     "a": "Stool microscopy",
+     "b": "Positive eggs = definitive diagnosis"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with vomiting (possible obstruction), persistent cough with wheeze, signs of anemia or shock"
+ ],
+ "faq": [
+  {
+   "q": "Can Ascaris cause death?",
+   "a": "Yes, if intestinal obstruction or perforation occurs, or severe pulmonary involvement leads to respiratory failure."
+  },
+  {
+   "q": "Is it contagious?",
+   "a": "Only via ingestion of eggs; direct person‑to‑person spread is rare."
+  },
+  {
+   "q": "Do children need treatment?",
+   "a": "Yes, especially in endemic areas; mass deworming programs target school‑aged children."
+  }
+ ],
+ "exam": [
+  "Describe the life cycle of Ascaris lumbricoides and explain how it leads to pulmonary symptoms.",
+  "What is the first‑line drug for ascariasis and why is it preferred over praziquantel?",
+  "A 5‑year‑old presents with abdominal pain and cough. Stool microscopy is negative on the first test. What is your next step?"
+ ],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

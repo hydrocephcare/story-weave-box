@@ -10,6 +10,7 @@ let current: string | null = null;
 const emit = () => listeners.forEach((l) => l(current));
 
 export const topicPeek = {
+  openDrug(id: string) { current = "drug:" + id; emit(); },
   open(slug: string) { current = slug.replace(/^\/?topic\//, ""); emit(); },
   close() { current = null; emit(); },
   subscribe(l: Listener) { listeners.add(l); l(current); return () => { listeners.delete(l); }; },

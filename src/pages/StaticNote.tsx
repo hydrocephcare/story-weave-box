@@ -107,6 +107,7 @@ function StaticNoteView() {
   const onBodyClick = (e: React.MouseEvent) => {
     if (pickOption(e.target as HTMLElement)) return;
     const a = (e.target as HTMLElement).closest("a.note-link") as HTMLAnchorElement | null;
+    if (e.defaultPrevented || a?.classList.contains("topic-link") || a?.dataset.drug) return; // topics and drugs open the quick-read panel instead
     const href = a?.getAttribute("href");
     if (!a || !href || !href.startsWith("/") || e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
     e.preventDefault();

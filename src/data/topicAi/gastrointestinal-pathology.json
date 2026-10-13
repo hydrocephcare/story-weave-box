@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Gastrointestinal pathology encompasses diseases of the oral cavity, oesophagus, stomach, small and large intestines, and peritoneum. Understanding patterns of injury, inflammation, infection, and neoplasia guides diagnosis, staging, and management, especially in low‑resource settings.",
+ "aka": [
+  "GI pathology",
+  "Gastrointestinal disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Gastrointestinal pathology refers to any structural or functional abnormality of the GI tract identified by history, exam, imaging, endoscopy, and histology.",
+   "b": [
+    "Diagnosis integrates clinical picture with endoscopic visualisation and targeted biopsies."
+   ],
+   "t": [
+    {
+     "a": "Endoscopy with biopsy",
+     "b": "What lesion is present and does histology confirm inflammation, infection, or neoplasia? → Direct visual assessment and tissue diagnosis."
+    },
+    {
+     "a": "Abdominal ultrasound/CT",
+     "b": "Is there wall thickening, obstruction, or perforation? → Detects complications when endoscopy unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by endoscopic appearance (e.g., Los Angeles classification for reflux esophagitis) or histologic scoring (e.g., Marsh for celiac disease).",
+   "b": [
+    "Staging guides treatment intensity and prognosis."
+   ],
+   "t": [
+    {
+     "a": "Los Angeles classification",
+     "b": "How extensive are erosions? → Grades A‑D; higher grades need stronger acid suppression."
+    },
+    {
+     "a": "TNM for GI cancers",
+     "b": "What is tumor size, nodal involvement, metastasis? → Determines surgical vs. systemic therapy."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common etiologies differ by region; infections and chronic inflammation dominate in low‑resource areas.",
+   "b": [
+    "Infectious: H. pylori, Giardia, Schistosoma, TB, HIV‑related opportunists.",
+    "Inflammatory: Crohn’s, ulcerative colitis, reflux, NSAID injury.",
+    "Neoplastic: Adenocarcinoma, lymphoma, Kaposi sarcoma (HIV)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms reflect the affected segment: dysphagia (oesophagus), epigastric pain/nausea (stomach), diarrhoea/weight loss (small intestine), bleeding or altered stool (large intestine).",
+   "b": [
+    "Red flag: persistent vomiting, melena, weight loss >10%, or fever.",
+    "Low‑resource clue: chronic diarrhoea with malnutrition suggests parasitic infection."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer specific clinical questions; when unavailable, use alternatives.",
+   "t": [
+    {
+     "a": "Stool ova & parasite exam",
+     "b": "Is a parasitic infection present? → Positive exam confirms cause; if unavailable, empirical albendazole may be considered."
+    },
+    {
+     "a": "Serum anti‑tTG IgA",
+     "b": "Is celiac disease likely? → Elevated titres support diagnosis; if IgA deficient, use IgG‑based tests."
+    },
+    {
+     "a": "Rapid urease test (during endoscopy)",
+     "b": "Is H. pylori present? → Positive result guides eradication therapy; if endoscopy not possible, urea breath test or stool antigen can be used."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from perforation, massive bleeding, obstruction, or malignant transformation.",
+   "b": [
+    "Perforation → surgical emergency.",
+    "Obstruction → requires decompression or surgery.",
+    "Bleeding → may need endoscopic hemostasis or transfusion."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care and monitor for complications.",
+   "b": [
+    "H. pylori: triple therapy (clarithromycin, amoxicillin, PPI) – eradicates infection, reduces ulcer recurrence.",
+    "Inflammatory bowel disease: aminosalicylates for mild disease; steroids for flares; immunomodulators for maintenance.",
+    "Parasitic infection: metronidazole or albendazole – chosen for efficacy against common tropical parasites."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Schedule repeat endoscopy or imaging based on disease severity; educate on hygiene, safe water, and avoidance of NSAIDs where ulcer risk is high.",
+   "b": [
+    "Post‑ulcer: endoscopy after 8‑12 weeks to confirm healing.",
+    "IBD: colonoscopy every 1‑2 years to surveil dysplasia."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions with overlapping symptoms can mislead clinicians.",
+   "b": [
+    "Peptic ulcer vs. gastric cancer – both cause epigastric pain; endoscopy differentiates.",
+    "Crohn’s disease vs. intestinal tuberculosis – both cause ileocaecal mass; biopsy and TB testing are key."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal or abnormal in specific contexts.",
+   "b": [
+    "Serum albumin may be low from malnutrition, not just protein‑losing enteropathy.",
+    "Fecal occult blood can be negative in right‑sided colon cancer."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Uncontrolled GI bleeding",
+  "Perforation with acute abdomen",
+  "Severe dehydration from persistent diarrhoea"
+ ],
+ "faq": [
+  {
+   "q": "Why is endoscopy essential in GI pathology?",
+   "a": "It allows direct visual assessment and tissue sampling, which are needed for accurate diagnosis and staging."
+  },
+  {
+   "q": "Can H. pylori be diagnosed without endoscopy?",
+   "a": "Yes, via urea breath test, stool antigen, or serology, but endoscopy confirms ulcer status."
+  },
+  {
+   "q": "When should I suspect intestinal TB over Crohn’s?",
+   "a": "Consider TB if there is a history of exposure, positive Mantoux/IGRA, and caseating granulomas on biopsy."
+  }
+ ],
+ "exam": [
+  "Describe the Los Angeles classification and its clinical relevance.",
+  "List the first‑line treatment for H. pylori‑associated peptic ulcer disease and explain why each drug is used.",
+  "Explain how to differentiate Crohn’s disease from intestinal tuberculosis using investigations."
+ ],
+ "related": [
+  "Upper gastrointestinal bleeding",
+  "Inflammatory bowel disease",
+  "Helicobacter pylori infection",
+  "Colorectal cancer",
+  "Intestinal parasites",
+  "Gastroesophageal reflux disease",
+  "Abdominal imaging"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

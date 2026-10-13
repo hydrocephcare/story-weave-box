@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Heart murmurs are sounds from turbulent blood flow across valves or vessels. They guide clinicians to suspect structural, infectious, or functional cardiac disease. Evaluation integrates history, exam, and targeted tests.",
+ "aka": [
+  "cardiac murmur"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A heart murmur is an audible or palpable sound from abnormal blood flow. Diagnosis starts with a focused history, auscultation, and assessment of timing, quality, and radiation.",
+   "b": [
+    "Timing (systolic, diastolic, continuous)",
+    "Quality (harsh, blowing, soft)",
+    "Radiation (to neck, back, axilla)",
+    "Associated signs (e.g., thrill, displaced apex)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by intensity, impact on symptoms, and hemodynamic significance. Staging follows valve-specific guidelines (e.g., NYHA for heart failure, ACC/AHA for valve disease).",
+   "b": [
+    "Grade I–IV intensity",
+    "NYHA I–IV functional class",
+    "ACC/AHA stage A–D for valve disease"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes range from benign functional murmurs to serious structural lesions. In low‑resource settings, rheumatic heart disease, infective endocarditis, and congenital defects are common.",
+   "b": [
+    "Functional (flow, anemia, hyperthyroidism)",
+    "Congenital (ASD, VSD, PDA)",
+    "Acquired (rheumatic, infective endocarditis, ischemic, hypertensive)",
+    "Infections (HIV, TB, malaria, schistosomiasis)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic or present with dyspnea, chest pain, syncope, or heart failure. Murmur characteristics often hint at the underlying lesion.",
+   "b": [
+    "Systolic ejection murmur → aortic/mitral stenosis",
+    "Diastolic rumble → mitral/tricuspid regurgitation",
+    "Continuous machine‑like murmur → PDA",
+    "Holosystolic harsh murmur → VSD"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests are chosen to answer specific clinical questions. When resources are limited, prioritize bedside tools and simple imaging.",
+   "t": [
+    {
+     "a": "Doppler echocardiography",
+     "b": "Normal gradients, no regurgitation; abnormal gradients or regurgitant jets indicate valve disease"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Enlarged cardiac silhouette or pulmonary edema suggests heart failure"
+    },
+    {
+     "a": "Blood cultures",
+     "b": "Positive culture confirms infective endocarditis; negative does not rule it out"
+    },
+    {
+     "a": "CBC & ESR/CRP",
+     "b": "Elevated ESR/CRP supports infective or rheumatic processes"
+    },
+    {
+     "a": "Point‑of‑care ultrasound (POCUS)",
+     "b": "Normal wall motion and no effusion reduce urgency; abnormal findings need urgent care"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain features predict rapid deterioration or life‑threatening complications. Prompt recognition can save lives.",
+   "b": [
+    "Unexplained fever, new murmur, or embolic phenomena → endocarditis",
+    "Rapidly increasing murmur intensity or new heart failure signs → severe valve dysfunction",
+    "New conduction block or arrhythmia → potential for sudden death"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then support cardiac function. Drug choices consider efficacy, safety, and local availability.",
+   "b": [
+    "Antibiotics for endocarditis (e.g., vancomycin + ceftriaxone)",
+    "Diuretics for heart failure (e.g., loop diuretics)",
+    "Afterload reducers (ACE inhibitors) for regurgitant lesions",
+    "Beta‑blockers for tachycardia or arrhythmia"
+   ],
+   "t": [
+    {
+     "a": "Antibiotic selection",
+     "b": "Avoid nephrotoxic agents if renal function is impaired"
+    },
+    {
+     "a": "Diuretic therapy",
+     "b": "Monitor electrolytes and renal function"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring detects progression. Prevention focuses on treating risk factors and early disease.",
+   "b": [
+    "Annual echocardiography for rheumatic heart disease",
+    "Vaccination against pneumococcus and influenza",
+    "Early treatment of streptococcal pharyngitis"
+   ],
+   "t": [
+    {
+     "a": "Echocardiographic surveillance",
+     "b": "Stable parameters suggest no progression; worsening requires intervention"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Some non‑cardiac conditions mimic murmurs or produce similar symptoms.",
+   "b": [
+    "Hypertrophic cardiomyopathy vs. aortic stenosis",
+    "Pulmonary embolism vs. pulmonary hypertension",
+    "Anemia vs. high‑output murmur"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may give false normals or abnormalities, especially in resource‑limited settings.",
+   "b": [
+    "Low‑grade murmurs may be missed on auscultation",
+    "Echocardiography may underestimate regurgitation if image quality is poor",
+    "Blood cultures can be negative in early endocarditis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained fever with new murmur",
+  "Sudden worsening dyspnea or chest pain",
+  "Syncope or near‑syncope",
+  "New heart failure signs",
+  "Signs of embolism (e.g., limb pain, neurological deficits)"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of a systolic ejection murmur in adults?",
+   "a": "Aortic stenosis, often due to calcification or rheumatic disease."
+  },
+  {
+   "q": "Can a murmur be normal in a healthy child?",
+   "a": "Yes, functional murmurs from increased flow are common and usually benign."
+  },
+  {
+   "q": "When is surgery indicated for a murmur?",
+   "a": "When the murmur reflects severe valve dysfunction with symptoms or evidence of heart failure."
+  }
+ ],
+ "exam": [
+  "Describe the approach to a patient with a new systolic murmur and explain how you would differentiate aortic stenosis from hypertrophic cardiomyopathy.",
+  "Explain why blood cultures are essential in suspected infective endocarditis and how you would manage a patient with a negative culture but high clinical suspicion."
+ ],
+ "related": [
+  "Rheumatic heart disease",
+  "Infective endocarditis",
+  "Congenital heart defects",
+  "Heart failure",
+  "Hypertrophic cardiomyopathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

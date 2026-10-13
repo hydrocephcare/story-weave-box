@@ -1,0 +1,130 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Viral pathogenesis describes how viruses enter, replicate, spread, and cause disease. Understanding each step helps clinicians predict presentation, choose diagnostics, and target therapy.",
+ "aka": [
+  "viral pathogenesis",
+  "viral disease mechanisms"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Viruses are obligate intracellular parasites that rely on host cells for replication. Pathogenesis is shaped by viral tropism, host immunity, and viral evasion strategies.",
+   "b": [
+    "Entry → uncoating → replication → assembly → release",
+    "Host factors (receptors, immunity) determine disease severity"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Viruses vary in genome type (DNA, RNA, retrovirus) and envelope status, influencing stability, transmission, and drug targets.",
+   "b": [
+    "Enveloped viruses (e.g., influenza) are sensitive to detergents",
+    "Non‑enveloped viruses (e.g., adenovirus) resist lipid solvents"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission routes (respiratory, fecal‑oral, blood, vector) dictate initial site of infection and subsequent spread.",
+   "b": [
+    "Respiratory droplets → upper airway epithelium",
+    "Bloodborne → hepatocytes (HBV), CD4+ T cells (HIV)",
+    "Vector (mosquito) → skin → systemic spread"
+   ],
+   "t": [
+    {
+     "a": "PCR for viral RNA/DNA",
+     "b": "Is the virus present? Positive result confirms infection; negative does not exclude early infection."
+    },
+    {
+     "a": "Serology (IgM/IgG)",
+     "b": "Has the patient mounted an immune response? IgM = recent infection; IgG = past exposure or immunity."
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Clinical disease results from direct cytopathic effect, immune‑mediated injury, or chronic persistence.",
+   "b": [
+    "Acute: influenza – fever, cough, myalgia",
+    "Chronic: hepatitis B – liver inflammation, cirrhosis risk",
+    "Persistent: HIV – CD4 loss, opportunistic infections"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Combine clinical pattern with targeted laboratory tests; consider local prevalence of tropical infections.",
+   "b": [
+    "Use PCR when rapid, specific identification is needed",
+    "Serology useful for timing of infection",
+    "Culture rarely needed except for antiviral susceptibility"
+   ],
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Is there leukopenia or lymphocytosis? Lymphopenia may suggest viral infection; normal counts do not rule it out."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Is hepatic injury present? Elevated ALT/AST supports hepatitis viruses; normal values do not exclude early disease."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Therapy targets viral replication or modulates host response; prevention relies on vaccines and infection control.",
+   "b": [
+    "Nucleoside analogues (e.g., acyclovir) inhibit viral DNA polymerase – chosen for HSV, VZV",
+    "Protease inhibitors block HIV maturation – avoid in severe liver disease",
+    "Interferon boosts innate immunity – used for hepatitis C (now replaced by direct‑acting antivirals)",
+    "Supportive care: hydration, antipyretics, oxygen"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key concepts frequently tested in exams.",
+   "b": [
+    "Order of viral pathogenesis stages",
+    "Difference between enveloped vs non‑enveloped virus stability",
+    "Mechanism of action of reverse transcriptase inhibitors"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe respiratory distress in influenza",
+  "Acute liver failure with hepatitis B",
+  "Rapid CD4 decline in HIV infection"
+ ],
+ "faq": [
+  {
+   "q": "Why do some viruses cause only mild illness?",
+   "a": "Limited tropism or effective host immunity restricts damage."
+  },
+  {
+   "q": "What is the role of interferon in viral infections?",
+   "a": "It induces antiviral proteins that inhibit viral replication."
+  },
+  {
+   "q": "When is a viral PCR preferred over serology?",
+   "a": "In early infection when antibodies have not yet formed."
+  }
+ ],
+ "exam": [
+  "List the five stages of viral pathogenesis in order.",
+  "Explain why enveloped viruses are more susceptible to disinfectants.",
+  "Describe how reverse transcriptase inhibitors interfere with HIV replication."
+ ],
+ "related": [
+  "Viral replication",
+  "Viral receptors and entry",
+  "Interferon response",
+  "Vaccination",
+  "Antiviral drug mechanisms",
+  "HIV pathogenesis",
+  "Hepatitis viruses"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Follicle‑stimulating hormone (FSH) is a pituitary gonadotropin that drives gametogenesis and follicle development. It works with LH and feedback hormones to regulate fertility in both sexes.",
+ "aka": [
+  "Follicle‑stimulating hormone"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "FSH is a glycoprotein hormone secreted by anterior pituitary gonadotrophs. It circulates to the gonads where it binds specific receptors on Sertoli cells (male) and granulosa cells (female).",
+   "b": [
+    "Molecular weight ~30 kDa, two subunits (α shared, β unique).",
+    "Peak mid‑follicular phase in women; relatively constant low level in men."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "In males, FSH stimulates Sertoli cells to support spermatogenesis and produce inhibin. In females, it promotes granulosa cell proliferation and aromatase activity, converting androgens to estradiol.",
+   "b": [
+    "FSH → G‑protein → cAMP → gene transcription in target cells.",
+    "Aromatase up‑regulation is essential for estrogen synthesis."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "FSH secretion is controlled by GnRH pulses, negative feedback from inhibin (male) and estradiol (female), and to a lesser extent by activin and follistatin.",
+   "b": [
+    "High inhibin → ↓ FSH (feedback loop).",
+    "Mid‑cycle estradiol surge → transient ↑ FSH."
+   ],
+   "t": [
+    {
+     "a": "Serum FSH level",
+     "b": "Is the gonadotropin axis suppressed, normal, or hyperactive? Low suggests pituitary failure; high suggests primary gonadal failure."
+    },
+    {
+     "a": "Inhibin B assay",
+     "b": "Assesses Sertoli cell function; low in testicular failure."
+    },
+    {
+     "a": "Estradiol measurement (women)",
+     "b": "Helps interpret FSH in menstrual disorders; high estradiol suppresses FSH."
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Abnormal FSH leads to infertility, gonadal dysgenesis, or premature ovarian failure. Both excess and deficiency have distinct clinical patterns.",
+   "b": [
+    "FSH deficiency – pituitary adenoma, Sheehan syndrome, hypopituitarism.",
+    "FSH excess – primary gonadal failure, Turner syndrome, Klinefelter syndrome."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding FSH guides evaluation of infertility, delayed puberty, and menstrual irregularities, and informs use of assisted reproductive technologies.",
+   "b": [
+    "Low FSH with low LH → central hypogonadism; treat with pulsatile GnRH or gonadotropins.",
+    "High FSH with high LH → primary gonadal failure; focus on hormone replacement."
+   ],
+   "t": [
+    {
+     "a": "GnRH stimulation test",
+     "b": "Distinguishes pituitary from hypothalamic failure; rise in FSH/LH confirms pituitary reserve."
+    },
+    {
+     "a": "Karyotype analysis",
+     "b": "Identifies chromosomal causes (e.g., Turner, Klinefelter) when FSH is markedly elevated."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams: FSH’s target cells, feedback loops, and how patterns of FSH/LH differentiate central vs. primary gonadal disorders.",
+   "b": [
+    "FSH ↑ in primary ovarian failure; ↓ in hypopituitarism.",
+    "Inhibin B is a useful marker of Sertoli cell activity."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute pituitary apoplexy causing sudden loss of FSH/LH with severe headache and visual loss.",
+  "Rapid ovarian failure with high FSH and menopausal symptoms in a young woman."
+ ],
+ "faq": [
+  {
+   "q": "Why does FSH rise after menopause?",
+   "a": "Ovarian follicles are depleted, so inhibin and estradiol fall, removing negative feedback and causing FSH to increase."
+  },
+  {
+   "q": "Can low FSH cause infertility in men?",
+   "a": "Yes; insufficient stimulation of Sertoli cells reduces spermatogenesis, leading to oligospermia or azoospermia."
+  },
+  {
+   "q": "Is FSH measurement useful in polycystic ovary syndrome (PCOS)?",
+   "a": "FSH is usually normal or low; the LH:FSH ratio >2 is a classic but not diagnostic feature."
+  }
+ ],
+ "exam": [
+  "Explain how FSH and inhibin interact in the feedback regulation of the menstrual cycle.",
+  "Differentiate central from primary hypogonadism using FSH, LH, and inhibin levels.",
+  "Describe the role of FSH in spermatogenesis and the consequences of its deficiency."
+ ],
+ "related": [
+  "Luteinizing hormone (LH)",
+  "Gonadotropin‑releasing hormone (GnRH)",
+  "Inhibin",
+  "Aromatase",
+  "Hypogonadism",
+  "Menopause",
+  "Assisted reproductive technology"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,106 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Southern blotting detects specific DNA sequences in a sample by transferring digested DNA onto a membrane and probing it. It is used for gene mapping, mutation detection, and confirming transgene integration.",
+ "aka": [
+  "Southern hybridisation",
+  "Southern assay"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Southern blotting is a laboratory method that visualises a particular DNA fragment among many, helping clinicians understand genetic disorders or viral integration.",
+   "b": [
+    "Developed by Edwin Southern in 1975",
+    "Requires restriction digestion, gel electrophoresis, transfer, and hybridisation"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "DNA is cut with restriction enzymes, separated by size on an agarose gel, transferred to a nylon membrane, then hybridised with a labelled probe complementary to the target sequence.",
+   "b": [
+    "Probe can be radioactive, chemiluminescent, or fluorescent",
+    "Signal intensity reflects amount of target DNA"
+   ],
+   "t": [
+    {
+     "a": "Probe hybridisation",
+     "b": "Does the sample contain the DNA sequence of interest? Positive signal confirms presence; absence suggests deletion or different genotype"
+    },
+    {
+     "a": "Band size comparison",
+     "b": "Is the fragment size as expected? Larger or smaller bands indicate insertions, deletions, or rearrangements"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The technique itself is not regulated biologically, but laboratory quality standards (ISO 15189) ensure reliable results for clinical decision‑making.",
+   "b": [
+    "Use of validated probes and controls",
+    "Documentation of enzyme digestion efficiency"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Technical failures can mimic disease or hide pathology, leading to misdiagnosis.",
+   "b": [
+    "Incomplete digestion gives false‑large bands",
+    "Non‑specific probe binding creates background noise"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Southern blotting remains valuable for confirming large genomic alterations that PCR may miss, such as sickle‑cell gene rearrangements, viral integration in hepatitis B, or transgene copy number in gene therapy trials.",
+   "b": [
+    "Detects HIV proviral DNA integration in research settings",
+    "Identifies large deletions in thalassaemia genes common in low‑resource regions"
+   ],
+   "t": [
+    {
+     "a": "Diagnostic confirmation of a suspected gene deletion",
+     "b": "Does the patient have the expected deletion? Positive result confirms diagnosis; negative result prompts alternative testing"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the purpose of each step, interpretation of band patterns, and limitations compared with PCR‑based methods.",
+   "b": [
+    "Know why a probe is labelled and how signal is detected",
+    "Remember that Southern blot cannot detect single‑base changes efficiently"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Why use Southern blotting instead of PCR?",
+   "a": "Southern blotting can detect large insertions, deletions, or copy‑number changes that PCR primers may miss."
+  },
+  {
+   "q": "What are common sources of error?",
+   "a": "Incomplete restriction digestion and non‑specific probe binding are the most frequent technical errors."
+  },
+  {
+   "q": "Is Southern blotting still used clinically?",
+   "a": "Yes, mainly for confirming gene deletions, viral integration, and transgene copy number when other methods are insufficient."
+  }
+ ],
+ "exam": [
+  "Explain each step of Southern blotting and its clinical purpose.",
+  "Interpret a Southern blot image showing a normal band, a larger band, and no band.",
+  "Compare Southern blotting with PCR and FISH regarding detection of genomic rearrangements."
+ ],
+ "related": [
+  "Polymerase chain reaction (PCR)",
+  "Fluorescence in‑situ hybridisation (FISH)",
+  "DNA sequencing",
+  "Karyotyping",
+  "Gene therapy monitoring"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

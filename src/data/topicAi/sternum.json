@@ -1,0 +1,140 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The sternum is the central flat bone of the anterior thorax, anchoring ribs and protecting the heart. Its shape and relations guide clinical assessment of chest trauma and cardiac imaging.",
+ "aka": [
+  "Manubrium",
+  "Body",
+  "Xiphoid process"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The sternum is a flat, midline bone that forms the front of the thoracic cage. It provides attachment for ribs and protects vital organs such as the heart and great vessels.",
+   "b": [
+    "Central, flat bone",
+    "Divided into manubrium, body, xiphoid process"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lies anterior to the heart, extending from the jugular notch to the xiphoid process. The manubrium articulates with the clavicles and first ribs; the body with the second to seventh ribs; the xiphoid is cartilaginous in youth.",
+   "b": [
+    "Manubrium: jugular notch to sternal angle",
+    "Body: sternal angle to xiphoid",
+    "Xiphoid: cartilaginous, ossifies later"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Posteriorly the sternum lies against the sternocostal joints and the pericardium. It is adjacent to the heart’s apex and base, the great vessels, and the trachea.",
+   "b": [
+    "Heart apex at 5th intercostal space left",
+    "Sternal angle (Angle of Louis) marks T4–T5 junction"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The sternum receives arterial blood from the internal thoracic (mammary) arteries and the superior epigastric arteries.",
+   "b": [
+    "Internal thoracic artery (medial border)",
+    "Superior epigastric artery (distal)"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Innervation is via the intercostal nerves (T2–T6) and the phrenic nerve (C3–C5) for diaphragmatic reflexes.",
+   "b": [
+    "Intercostal nerves T2–T6",
+    "Phrenic nerve C3–C5"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "It protects the heart and great vessels, provides attachment for ribs and muscles, and contributes to the thoracic cage’s structural integrity.",
+   "b": [
+    "Protects heart and great vessels",
+    "Anchors ribs and muscles"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Fractures, especially of the manubrium or xiphoid, can indicate high-energy trauma and may compromise cardiac function. Osteomyelitis or metastatic disease can involve the sternum.",
+   "b": [
+    "Manubrial fractures suggest severe chest trauma",
+    "Xiphoid fractures common in forceful vomiting"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows fracture lines or displacement; abnormal if sternal edges are misaligned"
+    },
+    {
+     "a": "CT scan",
+     "b": "Defines fracture extent and adjacent organ injury; abnormal if bone fragments impinge on heart or vessels"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "When assessing chest pain, palpate the sternum for tenderness. A sternal angle at the 4th rib indicates normal anatomy; deviation may signal rib fractures or scoliosis.",
+   "b": [
+    "Sternal angle at 4th rib",
+    "Tenderness suggests fracture or infection"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause: fracture stabilization, infection control, or tumor resection. Supportive care includes pain control, respiratory support, and monitoring for cardiac compromise.",
+   "b": [
+    "Analgesia with NSAIDs or opioids"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Sternal fractures can mimic costochondritis or myocardial infarction pain.",
+   "b": [
+    "Costochondritis: inflammatory, no fracture lines"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑resource settings, a normal chest X‑ray may miss a subtle sternal fracture; clinical correlation is essential.",
+   "b": [
+    "Subtle fractures may be radiographically occult"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe chest pain with sternal tenderness, dyspnea, or signs of cardiac tamponade"
+ ],
+ "faq": [
+  {
+   "q": "What is the sternal angle used for?",
+   "a": "It marks the junction of the manubrium and body and aligns with the 4th rib, useful for locating heart structures."
+  },
+  {
+   "q": "Can the sternum fracture in a fall?",
+   "a": "Yes, especially the manubrium in high‑energy impacts; xiphoid fractures can occur with forceful vomiting."
+  },
+  {
+   "q": "Is the sternum a good site for bone marrow donation?",
+   "a": "In adults, the sternum contains active marrow and can be used for bone marrow harvest when other sites are unsuitable."
+  }
+ ],
+ "exam": [
+  "Explain the anatomical relationship between the sternum and the heart apex.",
+  "Describe the typical radiographic appearance of a manubrial fracture and its clinical implications.",
+  "Outline the management steps for a suspected sternal osteomyelitis in a resource‑limited setting."
+ ],
+ "related": [
+  "Heart anatomy",
+  "Rib cage",
+  "Chest trauma",
+  "Bone marrow physiology"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

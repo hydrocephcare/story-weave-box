@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Cardiac tamponade is fluid accumulation in the pericardial space that restricts heart filling, causing obstructive shock. Prompt recognition and drainage are lifesaving.",
+ "aka": [
+  "Tamponade",
+  "Pericardial tamponade"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A rapid or large pericardial effusion that raises intrapericardial pressure above ventricular diastolic pressure, preventing adequate filling.",
+   "b": [
+    "Beck's triad (hypotension, muffled heart sounds, JVD) is classic but not always present.",
+    "Pulsus paradoxus >10 mmHg strongly suggests tamponade."
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Does the effusion compress the chambers? → Shows right‑atrial/right‑ventricular diastolic collapse, plethoric IVC, and respiratory variation; confirms diagnosis."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Is there an enlarged cardiac silhouette? → May show “water‑bottle” heart; helpful when echo unavailable."
+    },
+    {
+     "a": "Electrocardiogram",
+     "b": "Are there low voltage or electrical alternans? → Suggests large effusion; not diagnostic alone."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Stage is based on hemodynamic impact rather than volume alone.",
+   "b": [
+    "Stage I: Small effusion, no symptoms.",
+    "Stage II: Moderate effusion, mild dyspnea, no hypotension.",
+    "Stage III: Large or rapidly accumulating effusion with Beck's triad or pulsus paradoxus → urgent drainage."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the underlying source to guide definitive therapy.",
+   "b": [
+    "Malignancy (lung, breast, lymphoma) – most common worldwide.",
+    "Infection: TB pericarditis in low‑resource settings; bacterial pericarditis after pneumonia or chest surgery.",
+    "Uremia – dialysis patients.",
+    "Post‑cardiac injury (trauma, cardiac surgery, pacemaker leads).",
+    "Autoimmune (systemic lupus, rheumatoid arthritis).",
+    "Post‑myocardial infarction (Dressler syndrome)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms reflect reduced preload and low cardiac output.",
+   "b": [
+    "Progressive dyspnea, chest discomfort, and fatigue.",
+    "Rapid, weak pulse with narrow pulse pressure.",
+    "Neck vein distension, hypotension, muffled heart sounds.",
+    "Pulsus paradoxus on blood pressure cuff."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use bedside tools first; supplement with imaging when possible.",
+   "t": [
+    {
+     "a": "Focused cardiac ultrasound (POCUS)",
+     "b": "Is there diastolic collapse of right chambers? → Positive finding confirms tamponade even without formal echo."
+    },
+    {
+     "a": "Pericardiocentesis fluid analysis",
+     "b": "What is the fluid type? → Determines cause (exudate, TB PCR, malignant cells, uremic)."
+    },
+    {
+     "a": "CBC, renal function, HIV test",
+     "b": "Are there systemic clues to cause? → Guides antimicrobial or oncologic therapy when echo unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid decompensation can be fatal.",
+   "b": [
+    "Progressive hypotension despite fluids.",
+    "Increasing pulsus paradoxus >15 mmHg.",
+    "Cardiac arrest from obstructive shock."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Immediate drainage plus treatment of the underlying etiology.",
+   "b": [
+    "Emergency pericardiocentesis (needle or subxiphoid) – restores filling.",
+    "If pericardiocentesis fails or recurs, surgical window or pericardiectomy.",
+    "Treat cause: anti‑TB therapy for tuberculous effusion; chemotherapy for malignancy; dialysis for uremic effusion.",
+    "Supportive: IV fluids to raise preload, vasopressors if hypotension persists after drainage."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor for re‑accumulation and address chronic causes.",
+   "b": [
+    "Repeat echo 24‑48 h after drainage.",
+    "Treat underlying disease aggressively (e.g., complete TB regimen).",
+    "Educate patients on signs of recurrence (dyspnea, neck vein swelling)."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause hypotension and JVD.",
+   "b": [
+    "Constrictive pericarditis – chronic, equalization of diastolic pressures without pulsus paradoxus.",
+    "Massive pulmonary embolism – acute right‑heart strain, but lung exam and CT differ.",
+    "Septic shock – warm extremities, no muffled heart sounds."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some findings may be absent early.",
+   "b": [
+    "Beck's triad is present in <30 % of cases; absence does not rule out tamponade.",
+    "Electrical alternans can be missed if effusion is not large enough.",
+    "Normal chest X‑ray does not exclude early tamponade."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening hypotension, loss of consciousness, or cardiac arrest signs."
+ ],
+ "faq": [
+  {
+   "q": "Why does pulsus paradoxus occur?",
+   "a": "Inspiration increases venous return to the right heart, further compressing the left ventricle in tamponade, dropping systolic pressure >10 mmHg."
+  },
+  {
+   "q": "Can a small effusion cause tamponade?",
+   "a": "Only if it accumulates rapidly; pressure depends on rate of accumulation, not just volume."
+  },
+  {
+   "q": "Is pericardiocentesis always safe?",
+   "a": "It is life‑saving but carries risks of cardiac injury, arrhythmia, and infection; performed under imaging guidance when possible."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology behind Beck's triad and pulsus paradoxus in cardiac tamponade.",
+  "List the most common causes of tamponade in low‑resource settings and the initial test to confirm the diagnosis.",
+  "Describe the emergency management steps for a patient with suspected cardiac tamponade."
+ ],
+ "related": [
+  "Pericardial effusion",
+  "Constrictive pericarditis",
+  "Tuberculous pericarditis",
+  "Malignant pericardial disease",
+  "Pericardiocentesis technique",
+  "Obstructive shock"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

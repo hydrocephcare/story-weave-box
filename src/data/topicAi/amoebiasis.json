@@ -1,0 +1,128 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Amoebiasis is an intestinal infection caused by Entamoeba histolytica, often progressing to liver abscesses. Diagnosis relies on stool microscopy, antigen tests, and imaging. Treatment combines a tissue‑acting drug with a luminal agent.",
+ "aka": [
+  "Entamoeba histolytica infection",
+  "intestinal amoebiasis",
+  "amoebic liver abscess"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Amoebiasis is caused by the protozoan Entamoeba histolytica, transmitted via fecal‑oral route. Diagnosis starts with stool microscopy for trophozoites or cysts, confirmed by antigen detection or PCR. Imaging (ultrasound or CT) identifies liver abscesses.",
+   "b": [
+    "Microscopy: detects trophozoites/cysts"
+   ],
+   "t": [
+    {
+     "a": "Stool antigen ELISA",
+     "b": "Detects E. histolytica antigens; positive means active infection, negative does not exclude if low parasite load."
+    },
+    {
+     "a": "PCR of stool",
+     "b": "Highly sensitive; confirms species, useful when microscopy is equivocal."
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Shows hypoechoic liver lesions; helps differentiate abscess from cysts."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom intensity and organ involvement. Mild disease is self‑limited dysentery; moderate involves liver abscess; severe includes septic shock or multi‑organ failure.",
+   "b": [
+    "Severe: septic shock, respiratory distress"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary cause is ingestion of contaminated food or water. Risk factors include poor sanitation, HIV, malnutrition, and concurrent intestinal infections.",
+   "b": [
+    "HIV infection"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report abdominal pain, bloody or mucoid stool, fever, and weight loss. Liver abscess presents with right upper quadrant pain, fever, and sometimes jaundice.",
+   "b": [
+    "Fever, anorexia"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab tests confirm infection and assess complications. Imaging guides management of abscesses.",
+   "b": [
+    "CRP/ESR: elevated in active disease"
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications include abscess rupture, septicemia, and intestinal perforation. Red flags are sudden severe pain, high fever, or signs of shock.",
+   "b": [
+    "Intestinal perforation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat with a tissue‑acting nitroimidazole (e.g., metronidazole) followed by a luminal agent (e.g., paromomycin) to eradicate cysts. Supportive care includes fluids and antibiotics for secondary infections.",
+   "b": [
+    "Antibiotics: cover secondary bacterial infection"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Repeat stool microscopy to confirm cure. Prevent by ensuring clean water, hand hygiene, and safe food handling. Vaccines are not available.",
+   "b": [
+    "Handwashing education"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Amoebic colitis can mimic bacterial dysentery, ulcerative colitis, or ischemic colitis. Liver abscess may resemble pyogenic abscess or cystic lesions.",
+   "b": [
+    "Pyogenic liver abscess"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Microscopy may miss cysts in low parasite load; antigen tests can cross‑react with non‑pathogenic Entamoeba species; imaging may misinterpret cysts as abscesses.",
+   "b": [
+    "Cysts mimicking abscess on ultrasound"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain, high fever, signs of shock, jaundice, or inability to tolerate oral intake"
+ ],
+ "faq": [
+  {
+   "q": "Can amoebiasis be asymptomatic?",
+   "a": "Yes, many carriers have no symptoms but can still spread the parasite."
+  },
+  {
+   "q": "Is there a vaccine for amoebiasis?",
+   "a": "No, there is currently no vaccine available."
+  },
+  {
+   "q": "Can amoebiasis recur after treatment?",
+   "a": "Recurrence is possible if cysts are not fully eradicated; repeat stool testing helps ensure cure."
+  }
+ ],
+ "exam": [
+  "Explain why a tissue‑acting drug is needed before a luminal agent in amoebiasis treatment.",
+  "Describe the clinical features that differentiate amoebic liver abscess from a pyogenic abscess.",
+  "Outline the key investigations to confirm amoebiasis in a patient with dysentery."
+ ],
+ "related": [
+  "Entamoeba histolytica biology",
+  "Intestinal parasitic infections",
+  "Liver abscess management",
+  "Public health sanitation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

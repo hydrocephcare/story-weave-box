@@ -1,0 +1,77 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The median nerve runs from the brachial plexus through the forearm, innervating most hand flexors and the thenar muscles, and provides sensation to the lateral hand. It is clinically important for carpal tunnel syndrome and wrist injuries.",
+ "aka": [
+  "median",
+  "median nerve"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The median nerve originates from the lateral and medial cords of the brachial plexus (C6‑T1). It travels down the arm, crosses the elbow, and enters the forearm between the pronator teres and flexor digitorum superficialis.",
+   "b": [
+    "Carries motor and sensory fibers; supplies most flexors and the lateral hand."
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "In the forearm, it lies anterior to the flexor digitorum superficialis and runs with the radial artery. At the wrist, it passes through the carpal tunnel.",
+   "b": [
+    "Crosses the cubital fossa; enters the hand via Guyon’s canal."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Medial to the brachial artery in the arm; lateral to the ulnar nerve in the forearm. At the wrist, it is adjacent to the flexor retinaculum.",
+   "b": [
+    "Shares the carpal tunnel with the ulnar nerve and radial artery."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The median nerve receives arterial input from the recurrent radial artery and the ulnar artery via the palmar arches.",
+   "b": [
+    "Adequate perfusion is essential for nerve health; ischemia can cause neuropathy."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Motor fibers innervate flexor carpi radialis, palmaris longus, flexor digitorum superficialis, flexor digitorum profundus (digits 2‑4), and most thenar muscles.",
+   "b": [
+    "Sensory fibers supply the lateral palm and thumb."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Controls wrist and finger flexion, thumb opposition, and provides sensation to the lateral hand.",
+   "b": [
+    "Critical for grasp, fine motor tasks, and hand sensation."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Common injuries include compression at the wrist (carpal tunnel syndrome), traumatic lacerations, and nerve stretch injuries.",
+   "b": [
+    "Symptoms: numbness, tingling, weakness of thumb and index finger."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "On examination, a positive Tinel sign at the wrist and a weak thumb opposition suggest median nerve involvement.",
+   "b": [
+    "Ask patients to oppose thumb and index finger; test sensation over the lateral palm."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe wrist pain with swelling, sudden loss of thumb function, or progressive weakness requiring urgent referral."
+ ],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

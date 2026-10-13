@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "subject": "Public health",
+ "summary": "Communicable diseases are infections spread between people, animals or the environment. Clinicians must identify the pathogen, assess severity, and apply public‑health measures to break transmission.",
+ "aka": [
+  "Infectious diseases",
+  "Transmissible diseases"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A communicable disease is any illness caused by a pathogen that can be transmitted directly or indirectly. Diagnosis combines clinical syndrome with laboratory confirmation when available.",
+   "b": [
+    "Identify syndrome (fever, cough, diarrhoea, rash)",
+    "Confirm pathogen by microscopy, culture, antigen or PCR",
+    "Use case definitions for outbreaks"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical impact (mild, moderate, severe) and organ dysfunction. For many infections, WHO severity scores (e.g., malaria, pneumonia) guide care.",
+   "b": [
+    "Mild: outpatient, no organ failure",
+    "Moderate: requires observation, possible IV fluids",
+    "Severe: ICU, shock, respiratory failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Pathogens are grouped by transmission route; in low‑resource settings, common agents include TB, malaria, HIV, hepatitis B, diarrhoeal bacteria, and emerging viruses.",
+   "b": [
+    "Airborne: Mycobacterium tuberculosis, measles, COVID‑19",
+    "Vector‑borne: Plasmodium spp., dengue, chikungunya",
+    "Blood‑borne: HIV, hepatitis B/C",
+    "Fecal‑oral: Vibrio cholerae, rotavirus, Shigella"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentations vary by organ system but often start with constitutional symptoms (fever, malaise) followed by system‑specific signs.",
+   "b": [
+    "Respiratory: cough, dyspnoea, chest infiltrates",
+    "Gastrointestinal: diarrhoea, vomiting, abdominal pain",
+    "Dermatologic: rash, vesicles",
+    "Neurologic: meningismus, altered mental status"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer a specific clinical question; when unavailable, use syndromic management.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Is there a leukocytosis or lymphopenia suggesting bacterial vs viral infection? High neutrophils → bacterial; low lymphocytes → viral or HIV."
+    },
+    {
+     "a": "Rapid antigen test (e.g., malaria, COVID‑19)",
+     "b": "Does the patient have the specific pathogen? Positive result confirms infection; negative with high suspicion → repeat or use PCR."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Is there pneumonia or TB cavitation? Infiltrates support bacterial pneumonia; upper‑lobe cavitation suggests TB."
+    },
+    {
+     "a": "Sputum GeneXpert MTB/RIF",
+     "b": "Is TB present and is it rifampicin‑resistant? Detects Mycobacterium tuberculosis DNA and resistance; if unavailable, use smear microscopy and clinical criteria."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that signal imminent deterioration or life‑threatening sequelae.",
+   "b": [
+    "Severe dehydration, shock, or altered consciousness",
+    "Respiratory failure, ARDS",
+    "Septic shock, multi‑organ failure",
+    "Neurological deficits (meningitis, encephalitis)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the identified pathogen, provide supportive care, and implement infection‑control measures.",
+   "b": [
+    "Antimicrobials: choose class based on likely pathogen and resistance patterns (e.g., first‑line WHO regimens for TB, ACT for malaria)",
+    "Supportive: fluids, oxygen, antipyretics",
+    "Isolation or cohorting to prevent spread",
+    "Vaccination of contacts where applicable"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor response, ensure completion of therapy, and address community‑level prevention.",
+   "b": [
+    "Repeat tests to confirm clearance (e.g., sputum smear at 2 months TB)",
+    "Educate on hand hygiene, safe water, vector control",
+    "Vaccinate eligible individuals (e.g., measles, hepatitis B)",
+    "Screen close contacts"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions with overlapping symptoms may mislead diagnosis.",
+   "b": [
+    "Viral influenza vs bacterial pneumonia",
+    "Giardiasis vs inflammatory bowel disease",
+    "COVID‑19 vs dengue in febrile patients"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal or abnormal in early disease or immunocompromised hosts.",
+   "b": [
+    "Negative rapid antigen test early in COVID‑19 infection",
+    "Normal white count in severe malaria due to splenic sequestration",
+    "False‑negative sputum smear in HIV‑associated TB"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "High fever with neck stiffness",
+  "Severe dehydration or inability to drink",
+  "Rapid breathing, chest pain, or cyanosis",
+  "Altered mental status or seizures"
+ ],
+ "faq": [
+  {
+   "q": "Why is isolation important for communicable diseases?",
+   "a": "It breaks the chain of transmission, protecting vulnerable patients and the community."
+  },
+  {
+   "q": "When can I treat without a confirmed lab test?",
+   "a": "In high‑risk settings with classic syndrome (e.g., severe malaria, meningitis) where delay increases mortality."
+  },
+  {
+   "q": "How does malnutrition affect infection risk?",
+   "a": "It impairs immune defenses, increasing susceptibility and severity of many communicable diseases."
+  }
+ ],
+ "exam": [
+  "Describe the WHO criteria for severe pneumonia in children and the first‑line antibiotic choice.",
+  "Explain how you would differentiate bacterial from viral meningitis using CSF analysis.",
+  "List three public‑health interventions that reduce transmission of airborne diseases in crowded settings."
+ ],
+ "related": [
+  "Infection control",
+  "Vaccinology",
+  "Epidemiology",
+  "Antimicrobial resistance",
+  "Global health",
+  "Travel medicine"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

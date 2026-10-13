@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Antenatal care is systematic health monitoring from conception to labour, aiming to optimise maternal and fetal outcomes, detect complications early, and prepare for safe delivery.",
+ "aka": [
+  "Prenatal care"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Antenatal care (ANC) is the scheduled series of clinical visits, investigations and education for a pregnant woman from conception until labour onset.",
+   "b": [
+    "First visit confirms pregnancy by urine hCG or serum β‑hCG and estimates gestational age by LMP or ultrasound."
+   ],
+   "t": [
+    {
+     "a": "Urine hCG test",
+     "b": "Confirms pregnancy; positive indicates gestational sac presence."
+    },
+    {
+     "a": "Transabdominal ultrasound",
+     "b": "Estimates gestational age, confirms viability, detects multiple gestation or early ectopic."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Risk is stratified into low, moderate or high based on maternal history, obstetric history and early findings.",
+   "b": [
+    "High‑risk factors: previous pre‑eclampsia, diabetes, HIV, TB, anemia, multiple gestation, maternal age <18 or >35."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Complications arise from maternal medical disease, obstetric conditions, infections and socio‑environmental factors.",
+   "b": [
+    "Maternal anemia (iron deficiency, malaria, hookworm).",
+    "Infections: HIV, syphilis, hepatitis B, urinary tract infection, malaria.",
+    "Chronic disease: hypertension, diabetes, sickle cell disease.",
+    "Obstetric: multiple pregnancy, placenta previa, cervical insufficiency."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Most women are asymptomatic; ANC uncovers subtle signs such as hypertension, proteinuria, anemia, or abnormal fetal growth.",
+   "b": [
+    "Elevated blood pressure ≥140/90 mmHg after 20 weeks suggests pre‑eclampsia.",
+    "Hemoglobin <11 g/dL indicates anemia.",
+    "Fundal height discordance >2 cm signals growth restriction or multiple gestation."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are chosen to screen for common maternal and fetal risks, especially in low‑resource settings.",
+   "t": [
+    {
+     "a": "Hemoglobin/hematocrit",
+     "b": "Detects anemia; low values require iron/antimalarial therapy."
+    },
+    {
+     "a": "Blood group and Rh typing",
+     "b": "Identifies Rh‑negative mothers; guides anti‑D immunoglobulin administration."
+    },
+    {
+     "a": "Syphilis serology (RPR/VDRL)",
+     "b": "Screens for congenital syphilis; positive requires penicillin treatment."
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Detects maternal HIV; positive leads to ART to reduce vertical transmission."
+    },
+    {
+     "a": "Urine dipstick for protein & glucose",
+     "b": "Screens for pre‑eclampsia and gestational diabetes; abnormal results trigger further testing."
+    },
+    {
+     "a": "Ultrasound (if available)",
+     "b": "Assesses fetal viability, number, position, and growth; if unavailable, use fundal height and LMP."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain findings demand urgent referral to prevent maternal or fetal loss.",
+   "b": [
+    "Severe hypertension (≥160/110 mmHg) or sudden rise in BP.",
+    "Heavy vaginal bleeding or abruptio placentae signs.",
+    "Persistent severe abdominal pain with guarding.",
+    "Fetal heart rate absent on Doppler."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management combines preventive measures, treatment of identified conditions, and regular monitoring.",
+   "b": [
+    "Iron‑folate supplementation to prevent anemia; folic acid reduces neural‑tube defects.",
+    "Intermittent preventive treatment of malaria (IPTp) with sulfadoxine‑pyrimethamine in endemic areas.",
+    "Tetanus toxoid immunisation (2 doses) to prevent neonatal tetanus.",
+    "Antiretroviral therapy for HIV‑positive mothers to lower transmission risk.",
+    "Low‑dose aspirin for high‑risk pre‑eclampsia (if indicated)."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Scheduled visits every 4 weeks until 28 weeks, every 2 weeks to 36 weeks, then weekly until delivery; each visit repeats key screens and reinforces education.",
+   "b": [
+    "Counselling on nutrition, danger signs, birth planning, and breastfeeding.",
+    "Screen for gestational diabetes at 24‑28 weeks with oral glucose tolerance test where feasible."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Antenatal care is sometimes mistaken for post‑natal care or routine obstetric check‑ups without risk assessment.",
+   "b": [
+    "Post‑natal care focuses on mother and newborn after delivery, not on fetal monitoring.",
+    "Routine obstetric visits without systematic screening miss early detection of complications."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal or abnormal, especially in low‑resource settings.",
+   "b": [
+    "Urine dipstick protein can be false‑negative in dilute urine; confirm with 24‑hour collection if suspicion persists.",
+    "Hemoglobin may appear normal in early iron deficiency; consider ferritin if anemia risk is high."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypertension (≥160/110 mmHg) or sudden rise in blood pressure.",
+  "Heavy vaginal bleeding or signs of placental abruption.",
+  "Severe abdominal pain with guarding or fever.",
+  "Absent fetal movements for >24 hours."
+ ],
+ "faq": [
+  {
+   "q": "Why is iron‑folate given to all pregnant women?",
+   "a": "Pregnancy increases iron demand and folate prevents neural‑tube defects; supplementation reduces anemia and related complications."
+  },
+  {
+   "q": "What is the purpose of IPTp in malaria‑endemic areas?",
+   "a": "Intermittent preventive treatment reduces maternal malaria episodes and prevents placental infection, improving birth weight and survival."
+  },
+  {
+   "q": "How often should antenatal visits occur?",
+   "a": "Every 4 weeks until 28 weeks, every 2 weeks to 36 weeks, then weekly until delivery."
+  }
+ ],
+ "exam": [
+  "List five core components of routine antenatal care and explain their clinical importance.",
+  "Describe how you would screen for and manage anemia in a pregnant woman in a low‑resource setting.",
+  "Explain the risk‑based schedule for antenatal visits and how it changes for a high‑risk pregnancy."
+ ],
+ "related": [
+  "Pre‑conception counseling",
+  "Gestational diabetes",
+  "Pre‑eclampsia",
+  "Maternal anemia",
+  "Malaria in pregnancy",
+  "HIV in pregnancy",
+  "Birth planning",
+  "Post‑natal care"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

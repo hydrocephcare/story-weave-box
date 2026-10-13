@@ -1,0 +1,134 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The carotid arteries supply the brain and face; they are key landmarks for vascular and neurological assessment. Understanding their course, branches, and relations helps diagnose stroke, carotid disease, and manage neck trauma.",
+ "aka": [
+  "Common carotid artery",
+  "Internal carotid artery",
+  "External carotid artery"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The carotid system consists of the common carotid arteries, which bifurcate into internal and external branches. They are the main suppliers of blood to the head and neck.",
+   "b": [
+    "Bifurcation at the level of the fourth cervical vertebra"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Each common carotid artery rises from the aortic arch (left) or brachiocephalic trunk (right), travels up the neck, and divides into internal and external carotid arteries.",
+   "b": [
+    "Internal carotid enters the skull via carotid canal; external gives off facial, lingual, occipital, etc. branches"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The carotid arteries lie in the carotid sheath, surrounded by the internal jugular vein and vagus nerve. The internal carotid is medial to the external carotid.",
+   "b": [
+    "Facial nerve (CN VII) runs in the sheath; carotid bifurcation is a landmark for carotid endarterectomy"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The internal carotid supplies the anterior circulation of the brain, while the external carotid supplies the face and scalp.",
+   "b": [
+    "Internal carotid gives ophthalmic, middle cerebral, anterior cerebral branches"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The carotid sinus is innervated by glossopharyngeal (CN IX) afferents, modulating heart rate and blood pressure.",
+   "b": [
+    "Baroreceptor reflex via carotid sinus"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "They deliver oxygenated blood to the brain and regulate cerebral perfusion. The carotid sinus monitors blood pressure.",
+   "b": [
+    "Maintains cerebral autoregulation"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Carotid disease (stenosis, plaque) leads to stroke; trauma can cause pseudoaneurysm or dissection. Palpation of the carotid pulse aids in assessing hemodynamics.",
+   "t": [
+    {
+     "a": "Carotid duplex ultrasound",
+     "b": "Assesses plaque burden and flow velocity; high peak systolic velocity suggests significant stenosis."
+    },
+    {
+     "a": "CT angiography",
+     "b": "Visualizes vessel lumen and plaque morphology; useful when surgery is considered."
+    },
+    {
+     "a": "Carotid sinus massage",
+     "b": "Tests baroreceptor sensitivity; a positive response indicates intact reflex."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the carotid bifurcation is a key surgical landmark. A carotid bruit is often heard in atherosclerotic disease. In trauma, look for Horner’s syndrome as a sign of sympathetic chain injury.",
+   "b": [
+    "Bifurcation at C4; external carotid gives facial nerve branches"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying atherosclerosis with antiplatelet therapy and statins; manage hypertension. In symptomatic stenosis, consider endarterectomy or stenting.",
+   "b": [
+    "Antiplatelet agents reduce embolic risk"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "The subclavian artery can be mistaken for the carotid in imaging; the vertebral artery supplies posterior circulation.",
+   "b": [
+    "Subclavian vs carotid: different origins and territories"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal carotid duplex in a patient with atherosclerosis may occur if plaque is non-flow limiting; clinical assessment remains essential.",
+   "b": [
+    "Low peak systolic velocity does not rule out significant plaque"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden unilateral weakness or speech difficulty (possible stroke), severe neck pain after trauma, sudden vision loss (carotid ophthalmic branch compromise)"
+ ],
+ "faq": [
+  {
+   "q": "What is a carotid bruit?",
+   "a": "A whooshing sound heard over the carotid artery, indicating turbulent flow due to plaque or stenosis."
+  },
+  {
+   "q": "Why is the carotid sinus important?",
+   "a": "It senses blood pressure changes and triggers reflexes that regulate heart rate and vascular tone."
+  },
+  {
+   "q": "Can carotid disease be asymptomatic?",
+   "a": "Yes, many patients have silent plaques; routine screening in high-risk groups helps prevent stroke."
+  }
+ ],
+ "exam": [
+  "Explain the clinical significance of a carotid bruit and its management.",
+  "Describe the anatomical course of the internal carotid artery and its relevance to neurosurgical procedures.",
+  "Outline the steps to evaluate a patient with suspected carotid dissection after neck trauma."
+ ],
+ "related": [
+  "Atherosclerosis",
+  "Stroke",
+  "Carotid Endarterectomy",
+  "Carotid Dissection",
+  "Baroreceptor Reflex",
+  "Horner’s Syndrome"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

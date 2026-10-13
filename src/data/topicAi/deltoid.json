@@ -1,0 +1,119 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The deltoid is a triangular muscle covering the shoulder, key for arm abduction beyond 70°. Its function depends on intact axillary nerve and thoracoacromial blood supply.",
+ "aka": [
+  "Deltoideus"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The deltoid is the primary mover for arm abduction beyond 70°, acting as a powerful shoulder stabilizer and a key landmark for shoulder surgeries.",
+   "b": [
+    "Triangular shape; three distinct fibers: anterior, middle, posterior"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Originates from the lateral third of clavicle, acromion, and spine of scapula. Inserts on the deltoid tuberosity of the humerus.",
+   "b": [
+    "Anterior fibers: flexion and medial rotation; middle: abduction; posterior: extension and lateral rotation"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Superficial to the axillary nerve and posterior cord of brachial plexus. Lies over the subacromial space and beneath the acromion.",
+   "b": [
+    "Deltoid is the most superficial muscle over the shoulder joint"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Primarily from the thoracoacromial artery (clavicular, acromial, deltoid branches) and the posterior humeral circumflex artery.",
+   "b": [
+    "Adequate perfusion essential for healing after injury or surgery"
+   ],
+   "t": [
+    {
+     "a": "Arteriography",
+     "b": "Shows patency of thoracoacromial branches; abnormal flow suggests vascular injury or compression"
+    }
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Axillary nerve (C5‑C6) innervates all fibers; injury leads to loss of abduction and sensory loss over the regimental badge area.",
+   "b": [
+    "Weakness in abduction beyond 70° is a red flag for axillary nerve damage"
+   ],
+   "t": [
+    {
+     "a": "Electromyography",
+     "b": "Detects denervation potentials in deltoid; confirms axillary nerve injury"
+    }
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Primary action is abduction beyond 70°. Secondary actions include flexion, extension, medial and lateral rotation depending on fiber group.",
+   "b": [
+    "Deltoid works with supraspinatus for initial abduction up to 30°"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Common injuries include rotator cuff tears, deltoid contusions, and axillary nerve palsy. In low-resource settings, infections like tetanus or septic arthritis can damage the muscle.",
+   "b": [
+    "Regimental badge sensory loss indicates axillary nerve injury"
+   ],
+   "t": [
+    {
+     "a": "MRI",
+     "b": "Identifies tendon tears or muscle edema; useful when CT is unavailable"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Ask patients to abduct arm to 90°; inability indicates axillary nerve or deltoid pathology. Palpate the acromion and clavicle to locate the muscle belly.",
+   "b": [
+    "Deltoid is the most superficial muscle over the shoulder; easy to palpate"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe shoulder pain with inability to abduct, sudden loss of sensation over the regimental badge, or swelling suggesting compartment syndrome"
+ ],
+ "faq": [
+  {
+   "q": "What causes deltoid paralysis?",
+   "a": "Axillary nerve injury, trauma, or compressive lesions like tumors."
+  },
+  {
+   "q": "How is a deltoid tear diagnosed?",
+   "a": "MRI shows tendon discontinuity; ultrasound can be used if MRI is unavailable."
+  },
+  {
+   "q": "Can the deltoid recover after axillary nerve damage?",
+   "a": "Recovery depends on nerve regeneration; early physiotherapy improves outcomes."
+  }
+ ],
+ "exam": [
+  "Describe the origin and insertion of the deltoid and explain its role in shoulder abduction.",
+  "Explain how axillary nerve injury presents clinically and how you would confirm the diagnosis."
+ ],
+ "related": [
+  "Rotator cuff",
+  "Axillary nerve",
+  "Thoracoacromial artery",
+  "Subacromial space",
+  "Brachial plexus",
+  "Compartment syndrome",
+  "Tetanus",
+  "Septic arthritis"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

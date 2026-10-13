@@ -1,0 +1,136 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Lab diagnosis turns clinical clues into definitive answers by selecting the right specimen, test, and interpretation. It guides treatment, monitors response, and rules out mimickers. In low‑resource settings, choose affordable, rapid, and reliable methods.",
+ "aka": [
+  "Lab diagnosis",
+  "Diagnostic microbiology"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Lab diagnosis is the systematic use of specimens and tests to confirm or exclude infectious diseases. Clinicians must match the clinical picture with the most appropriate test, considering availability and interpretation pitfalls.",
+   "b": [
+    "Choose specimen that reflects the site of infection",
+    "Use tests with known sensitivity and specificity",
+    "Interpret results in clinical context"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Microbes differ in size, shape, staining, growth requirements, and antigenic properties. These traits dictate which laboratory methods are suitable and how results should be read.",
+   "b": [
+    "Gram stain reveals cell wall type",
+    "Culture media selects for growth",
+    "Serology detects host antibodies"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Understanding how a pathogen spreads and replicates informs specimen choice and timing of testing. For example, blood is best for systemic infections, while sputum suits pulmonary disease.",
+   "b": [
+    "Vector‑borne need blood or skin scrapings",
+    "Respiratory pathogens require sputum or BAL",
+    "Fungal infections may need tissue or CSF"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Infections range from self‑limited viral illnesses to life‑threatening sepsis. Recognizing the spectrum helps prioritize urgent diagnostics and treatment.",
+   "b": [
+    "Viral: influenza, EBV, CMV",
+    "Bacterial: TB, meningitis, sepsis",
+    "Fungal: cryptococcosis, histoplasmosis"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Lab diagnosis follows a stepwise algorithm: specimen collection, primary screening, confirmatory testing, and interpretation. Each step answers a specific clinical question.",
+   "b": [
+    "Specimen collection: site, timing, transport"
+   ],
+   "t": [
+    {
+     "a": "Gram stain",
+     "b": "Detects bacterial presence and Gram type; a positive result suggests bacterial infection and guides empiric therapy"
+    },
+    {
+     "a": "Culture",
+     "b": "Grows organisms for identification and susceptibility; confirms diagnosis and informs targeted treatment"
+    },
+    {
+     "a": "PCR",
+     "b": "Detects pathogen DNA/RNA; high sensitivity for viruses and fastidious bacteria"
+    },
+    {
+     "a": "Serology (ELISA, agglutination)",
+     "b": "Identifies host antibodies; useful for pathogens that are hard to culture, like EBV, CMV, and fungal antigens"
+    },
+    {
+     "a": "India ink",
+     "b": "Visualizes encapsulated yeast in CSF; positive in cryptococcosis"
+    },
+    {
+     "a": "Latex agglutination",
+     "b": "Rapid detection of capsular antigen; confirms cryptococcal infection"
+    },
+    {
+     "a": "Ziehl‑Neelsen stain",
+     "b": "Detects acid‑fast bacilli in sputum; confirms TB"
+    },
+    {
+     "a": "Microscopy of sputum",
+     "b": "Identifies fungal hyphae or parasites; guides antifungal therapy"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management starts with treating the underlying cause, then supportive care. Drug choice depends on pathogen, resistance patterns, and patient factors.",
+   "b": [
+    "Vaccination and infection control measures"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that a negative test does not rule out disease if pre‑test probability is high. Always correlate lab results with clinical findings and consider repeat testing if suspicion remains.",
+   "b": [
+    "Interpret serology cautiously in immunocompromised patients"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sepsis or septic shock",
+  "Neurologic decline in suspected meningitis",
+  "Unexplained hemolysis with positive blood culture"
+ ],
+ "faq": [
+  {
+   "q": "Why is a negative culture not always reassuring?",
+   "a": "Some organisms are fastidious or suppressed by prior antibiotics; repeat culture or alternative tests may be needed."
+  },
+  {
+   "q": "When should I order PCR instead of culture?",
+   "a": "When the pathogen is slow‑growing, difficult to culture, or when rapid results are critical, such as in meningitis or viral outbreaks."
+  },
+  {
+   "q": "What if the lab lacks a specific test?",
+   "a": "Use the next best available method, such as microscopy or a related serologic test, and interpret results with caution."
+  }
+ ],
+ "exam": [
+  "Explain the rationale for choosing a blood culture over a sputum culture in a patient with suspected sepsis.",
+  "Describe how you would interpret a positive India ink test in CSF and the next steps in management.",
+  "Outline the algorithm for diagnosing a patient with suspected cryptococcal meningitis in a low‑resource setting."
+ ],
+ "related": [
+  "Infection control",
+  "Antimicrobial stewardship",
+  "Immunology of host response",
+  "Point‑of‑care testing"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

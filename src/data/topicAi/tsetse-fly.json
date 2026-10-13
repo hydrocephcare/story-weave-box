@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "The tsetse fly (Glossina) transmits African trypanosomiasis (sleeping sickness) by injecting metacyclic trypomastigotes during a bite. The disease progresses from a haemolymphatic stage to a meningo‑encephalitic stage, causing fever, neurological signs and death if untreated.",
+ "aka": [
+  "Glossina",
+  "tsetse fly"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Glossina species are hematophagous flies endemic to sub‑Saharan Africa. They are the sole biological vectors of Trypanosoma brucei subspecies that cause human African trypanosomiasis (HAT).",
+   "b": [
+    "Found in riverine and savanna habitats",
+    "Female flies live 1–3 months, feeding every 2–3 days",
+    "Control relies on traps, insecticide‑treated targets, and sterile‑male release"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Trypanosoma brucei is a flagellated protozoan that exists as bloodstream‑form trypomastigotes and tissue‑stage ‘stumpy’ forms. It evades immunity by antigenic variation of its variant surface glycoprotein (VSG).",
+   "b": [
+    "Two human‑infective subspecies: T. b. gambiense (chronic) and T. b. rhodesiense (acute)",
+    "VSG switching leads to waves of parasitaemia",
+    "Resistant to complement, survives in plasma"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "During a blood meal, an infected tsetse injects metacyclic trypomastigotes into the host. Parasites multiply in the blood, then cross the blood‑brain barrier in the second stage.",
+   "b": [
+    "Vector‑borne bite (primary)",
+    "Rarely via transfusion or congenital transmission"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Human African trypanosomiasis presents in two stages. Stage 1 (haemolymphatic) features fever, lymphadenopathy, and chancre. Stage 2 (meningo‑encephalitic) adds sleep disturbance, psychiatric changes, and coma.",
+   "b": [
+    "Stage 1: fever, headache, arthralgia, enlarged posterior cervical nodes",
+    "Stage 2: daytime somnolence, night‑time insomnia, personality change, gait disturbance",
+    "Untreated mortality >95 % within months"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Confirmatory diagnosis requires detection of parasites in blood, lymph, or CSF, and staging by CSF analysis.",
+   "b": [
+    "If microscopy unavailable, treat presumptively in high‑risk settings after serology",
+    "PCR is sensitive but rarely accessible in low‑resource areas"
+   ],
+   "t": [
+    {
+     "a": "Microscopy of blood/lymph (wet mount, concentration techniques)",
+     "b": "Detects active infection; a positive slide confirms HAT regardless of stage"
+    },
+    {
+     "a": "CSF examination (cell count, protein, trypanosomes)",
+     "b": "Determines stage: >5 WBC/µL or presence of parasites indicates stage 2"
+    },
+    {
+     "a": "Serologic rapid test (CATT) for T. b. gambiense",
+     "b": "Screening tool; positive result prompts parasitological confirmation"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Therapy is stage‑specific: drugs that cross the blood‑brain barrier are required for stage 2. Vector control reduces incidence.",
+   "b": [
+    "Stage 1: pentamidine (T. b. gambiense) or suramin (T. b. rhodesiense) – chosen for poor CNS penetration",
+    "Stage 2: eflornithine (T. b. gambiense) or nifurtimox‑eflornithine combination; melarsoprol for melarsoprol‑sensitive cases – selected for CNS activity",
+    "Avoid melarsoprol when possible due to severe encephalopathic toxicity"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams:",
+   "b": [
+    "Two subspecies differ in epidemiology: gambiense (West‑Central Africa, chronic) vs rhodesiense (East Africa, acute)",
+    "Stage 2 diagnosis hinges on CSF WBC >5/µL or parasites in CSF",
+    "Pentamidine treats stage 1 gambiense; melarsoprol is last‑line for stage 2 when other drugs unavailable"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "High fever with chancre after a tsetse bite",
+  "Progressive sleep disturbance, confusion, or gait instability",
+  "Any neurologic decline in a patient from endemic area"
+ ],
+ "faq": [
+  {
+   "q": "Can sleeping sickness be transmitted by other insects?",
+   "a": "No, only Glossina species are proven biological vectors; other flies may mechanically transmit but not sustain the parasite."
+  },
+  {
+   "q": "Why is melarsoprol rarely used today?",
+   "a": "It causes severe post‑treatment encephalopathy in up to 10 % of patients and has high mortality, so safer drugs are preferred."
+  },
+  {
+   "q": "Is there a vaccine for African trypanosomiasis?",
+   "a": "No, antigenic variation of VSG prevents effective vaccine development."
+  }
+ ],
+ "exam": [
+  "Describe the life cycle of Trypanosoma brucei and how it relates to the clinical stages of HAT.",
+  "List the diagnostic criteria that differentiate stage 1 from stage 2 disease.",
+  "Explain the rationale for using pentamidine versus eflornithine in treatment."
+ ],
+ "related": [
+  "Glossina control methods",
+  "Trypanosoma brucei gambiense",
+  "Trypanosoma brucei rhodesiense",
+  "African sleeping sickness epidemiology",
+  "Blood‑brain barrier in infectious diseases",
+  "Vector‑borne disease surveillance"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

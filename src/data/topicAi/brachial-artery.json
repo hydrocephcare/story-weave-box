@@ -1,0 +1,128 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The brachial artery is the main arterial conduit of the upper arm, supplying the arm and forearm. It is a key landmark for blood pressure measurement and for vascular access in emergencies.",
+ "aka": [
+  "Brachial trunk"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The brachial artery continues the axillary artery at the inferior border of the teres major and ends at the elbow where it bifurcates into the radial and ulnar arteries.",
+   "b": [
+    "Major conduit for upper‑limb arterial flow",
+    "Landmark for cuff blood pressure measurement"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It runs in the medial bicipital groove, initially lateral to the biceps tendon, then crosses medially at the mid‑arm. It is a thick, pulsatile vessel with a muscular wall.",
+   "b": [
+    "Length ≈ 25 cm in adults",
+    "Diameter 4–5 mm proximally, tapering distally"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "In the arm the brachial artery is accompanied laterally by the median nerve and deep by the profunda brachii artery; the radial nerve crosses it near the lateral epicondyle.",
+   "b": [
+    "Lateral: biceps tendon, median nerve",
+    "Deep: profunda brachii artery",
+    "Distal: radial nerve at cubital fossa"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "It receives blood from the axillary artery and gives off several branches that nourish the arm muscles and skin.",
+   "b": [
+    "Profunda brachii (deep brachial) artery",
+    "Superior and inferior ulnar collateral arteries",
+    "Nutrient artery to humerus"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The arterial wall is innervated by sympathetic fibers traveling with the adjacent nerves, influencing vasomotor tone.",
+   "b": [
+    "Sympathetic fibers via the brachial plexus"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Delivers oxygenated blood to the elbow, forearm, and hand; provides a palpable pulse for clinical assessment and a site for arterial cannulation.",
+   "b": [
+    "Pulse point for systolic pressure",
+    "Access for arterial line in critical care"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Trauma, thrombosis, or iatrogenic injury can compromise limb perfusion. The artery is also a common site for aneurysm formation in patients with connective‑tissue disease or infection.",
+   "b": [
+    "Brachial artery thrombosis → acute ischemia",
+    "Aneurysm → pulsatile mass, risk of rupture",
+    "Iatrogenic puncture → hematoma, pseudoaneurysm"
+   ],
+   "t": [
+    {
+     "a": "Duplex ultrasound",
+     "b": "Is there flow obstruction? → Absent or dampened flow confirms thrombosis or severe stenosis"
+    },
+    {
+     "a": "Ankle‑brachial index (modified for arm)",
+     "b": "Is perfusion adequate? → Ratio <0.9 suggests significant arterial disease"
+    },
+    {
+     "a": "CT angiography",
+     "b": "What is the anatomy of a suspected aneurysm? → Shows size, neck, and relation to nerves; if unavailable, use bedside Doppler"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Know the landmarks for palpation, the sequence of blood pressure measurement, and how to recognize vascular compromise in the arm.",
+   "b": [
+    "Pulse felt 1–2 cm medial to biceps tendon in the antecubital fossa",
+    "Cuff lower edge 2–3 cm above elbow crease for accurate BP"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of pulse or cold, pale hand → acute arterial occlusion",
+  "Rapidly expanding forearm swelling after trauma → possible pseudoaneurysm or compartment syndrome",
+  "Severe pain with absent distal pulses → limb‑threatening ischemia"
+ ],
+ "faq": [
+  {
+   "q": "Why is the brachial artery used for blood pressure measurement?",
+   "a": "Because it is superficial, has a strong pulse, and reflects central arterial pressure accurately."
+  },
+  {
+   "q": "What is the difference between a true aneurysm and a pseudoaneurysm of the brachial artery?",
+   "a": "A true aneurysm involves all vessel wall layers; a pseudoaneurysm is a contained rupture with blood outside the wall."
+  },
+  {
+   "q": "How can you differentiate brachial artery thrombosis from a nerve injury?",
+   "a": "Thrombosis causes loss of pulse and coldness; nerve injury causes motor/sensory loss without vascular signs."
+  }
+ ],
+ "exam": [
+  "Identify the brachial artery on a diagram of the arm and name its major branches.",
+  "Explain how cuff placement affects systolic and diastolic blood pressure readings.",
+  "Describe the clinical signs of acute brachial artery occlusion and immediate management steps."
+ ],
+ "related": [
+  "Axillary artery",
+  "Radial artery",
+  "Ulnar artery",
+  "Median nerve",
+  "Radial nerve",
+  "Upper‑limb arterial pressure measurement",
+  "Compartment syndrome of the forearm",
+  "Peripheral arterial disease"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

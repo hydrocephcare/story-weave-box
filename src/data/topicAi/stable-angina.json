@@ -1,0 +1,169 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Stable angina is predictable chest pain triggered by exertion or stress due to fixed coronary artery narrowing. It reflects myocardial oxygen demand exceeding supply. Management focuses on symptom control, risk factor modification, and preventing progression to acute events.",
+ "aka": [
+  "Stable Ischemic Heart Disease",
+  "Predictable Angina"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Stable angina presents as chest discomfort that is reproducible with exertion or emotional stress and relieved by rest or nitroglycerin. Diagnosis is clinical, supported by ECG changes during symptoms and evidence of coronary stenosis >70% on imaging.",
+   "b": [
+    "Chest pain reproducible with activity",
+    "Relief with rest or nitro",
+    "ECG ST‑segment depression during pain"
+   ],
+   "t": [
+    {
+     "a": "Exercise ECG",
+     "b": "Does exercise provoke ischemic ECG changes? A positive test confirms inducible ischemia."
+    },
+    {
+     "a": "Coronary angiography",
+     "b": "Shows fixed stenosis >70%? Confirms anatomical substrate."
+    },
+    {
+     "a": "CT coronary angiography",
+     "b": "Non‑invasive alternative when angiography unavailable; identifies stenosis and plaque burden."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by the Canadian Cardiovascular Society (CCS) grading: I (minimal exertion) to IV (pain at rest). Staging guides therapy intensity.",
+   "b": [
+    "CCS I: slight exertion",
+    "CCS II: moderate exertion",
+    "CCS III: severe exertion",
+    "CCS IV: rest pain"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is atherosclerotic plaque causing fixed coronary narrowing. Other causes include coronary spasm, microvascular disease, and, in low‑resource settings, infections like HIV or TB that accelerate atherosclerosis.",
+   "b": [
+    "Atherosclerosis >70% stenosis",
+    "Coronary spasm (Prinzmetal)",
+    "Microvascular dysfunction",
+    "HIV, TB, malaria, rheumatic heart disease"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients describe a pressure or tightness in the chest, often radiating to arm or jaw, triggered by exertion or stress and relieved by rest or nitroglycerin. Symptoms are predictable and reproducible.",
+   "b": [
+    "Chest pressure with exertion",
+    "Radiation to left arm/jaw",
+    "Relief with rest or nitro"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm ischemia and identify the coronary anatomy. When tests are unavailable, a detailed history and symptom reproducibility guide management.",
+   "t": [
+    {
+     "a": "Rest ECG",
+     "b": "Normal or non‑specific changes"
+    },
+    {
+     "a": "Exercise ECG",
+     "b": "ST‑depression >1mm or angina"
+    },
+    {
+     "a": "Coronary angiography",
+     "b": ">70% indicates need for revascularisation"
+    },
+    {
+     "a": "CT coronary angiography",
+     "b": "Useful where angiography not available"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed if pain occurs at rest, is prolonged, or is accompanied by dyspnea, diaphoresis, or syncope. Complications include myocardial infarction, heart failure, and arrhythmia.",
+   "b": [
+    "Pain at rest",
+    "Pain >15 min",
+    "Accompanying dyspnea or diaphoresis",
+    "Syncope"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying atherosclerosis, control symptoms with nitrates and beta‑blockers, and use antiplatelet therapy. Revascularisation is considered for CCS III–IV or refractory symptoms.",
+   "b": [
+    "Lifestyle modification",
+    "Antiplatelet (aspirin)",
+    "Beta‑blocker",
+    "Nitrate",
+    "Statin",
+    "Revascularisation (PCI/CABG)"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review of symptoms, medication adherence, and risk factor control. Encourage smoking cessation, diet, exercise, and blood pressure/lipid management.",
+   "b": [
+    "Annual risk assessment",
+    "Medication review",
+    "Lifestyle counselling"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Stable angina can mimic gastro‑esophageal reflux, musculoskeletal pain, and panic attacks. Distinguishing features are reproducibility with exertion and relief by rest.",
+   "b": [
+    "Musculoskeletal chest pain",
+    "Panic disorder"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal resting ECG does not exclude ischemia; exercise testing may be negative in microvascular disease. Low‑grade troponin rise can be missed if not measured serially.",
+   "b": [
+    "Resting ECG normal",
+    "Exercise test negative in microvascular disease",
+    "Serial troponin needed"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Pain at rest",
+  "Pain lasting >15 minutes",
+  "Accompanying dyspnea or diaphoresis",
+  "Syncope"
+ ],
+ "faq": [
+  {
+   "q": "Can stable angina be cured?",
+   "a": "The underlying atherosclerosis cannot be cured, but symptoms can be controlled and progression halted with treatment."
+  },
+  {
+   "q": "Why are beta‑blockers used?",
+   "a": "They reduce heart rate and contractility, lowering oxygen demand and preventing angina."
+  },
+  {
+   "q": "Is nitroglycerin safe in low‑resource settings?",
+   "a": "Yes, but monitor for hypotension; if unavailable, consider sublingual nitro or oral nitrate alternatives."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of fixed coronary stenosis and why it causes exertional chest pain.",
+  "Describe the Canadian Cardiovascular Society grading and its impact on treatment decisions.",
+  "Outline the first‑line pharmacologic therapy for stable angina and justify each drug class."
+ ],
+ "related": [
+  "Atherosclerosis",
+  "Coronary Artery Disease",
+  "Myocardial Infarction",
+  "Beta‑blocker Pharmacology",
+  "Risk Factor Modification"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

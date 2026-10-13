@@ -1,0 +1,139 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The femoral triangle is a superficial compartment in the upper thigh that contains the femoral nerve, artery, vein and lymphatics. It is bounded by the inguinal ligament, sartorius, and adductor longus, and is a key site for vascular access and for recognizing thigh pathology.",
+ "aka": [
+  "Scarpa's triangle"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A shallow, inverted triangular space in the anterior thigh that provides easy access to the femoral vessels and nerve, making it clinically important for procedures and trauma assessment.",
+   "b": [
+    "Boundaries: inguinal ligament (superior), sartorius (lateral), adductor longus (medial)",
+    "Floor: iliopsoas tendon, pectineus, and fascia lata",
+    "Roof: superficial fascia and skin"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Located just below the inguinal ligament, the triangle lies between the sartorius and adductor longus muscles. Its apex points toward the adductor hiatus.",
+   "b": [
+    "Apex at the adductor hiatus where the femoral vessels pass into the popliteal fossa",
+    "Base formed by the inguinal ligament"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "From lateral to medial the contents are remembered by the mnemonic NAVEL: Nerve, Artery, Vein, Empty (deep femoral vein), Lymphatics.",
+   "b": [
+    "Femoral nerve lies most lateral, then artery, then vein, then deep femoral vein, then lymphatics",
+    "Great saphenous vein joins the femoral vein just inferior to the inguinal ligament"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The femoral artery, a continuation of the external iliac artery, supplies the lower limb and gives off the profunda femoris (deep femoral) branch within the triangle.",
+   "b": [
+    "Femoral artery is palpable just below the inguinal ligament",
+    "Profunda femoris supplies thigh muscles and anastomoses with the popliteal artery"
+   ],
+   "t": [
+    {
+     "a": "Doppler ultrasound of femoral artery",
+     "b": "Is there arterial occlusion or aneurysm? A dampened signal suggests stenosis; a pulsatile mass suggests aneurysm"
+    },
+    {
+     "a": "Ankle‑brachial index (if leg is accessible)",
+     "b": "Is peripheral arterial disease present? <0.9 indicates disease; normal >0.9"
+    }
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The femoral nerve, derived from L2‑L4, lies lateral in the triangle and provides motor innervation to the anterior thigh muscles and sensory supply to the anterior thigh and medial leg.",
+   "b": [
+    "Branches: anterior cutaneous nerves, saphenous nerve (sensory)",
+    "Motor: iliopsoas, sartorius, quadriceps"
+   ],
+   "t": [
+    {
+     "a": "Nerve conduction study of femoral nerve",
+     "b": "Is there neuropathy? Reduced amplitude indicates axonal loss; prolonged latency suggests demyelination"
+    }
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Allows passage of neurovascular structures to the lower limb and provides a superficial window for clinical examination, catheterisation, and emergency control of bleeding.",
+   "b": [
+    "Site for femoral artery cannulation in shock",
+    "Compression point for controlling femoral hemorrhage"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Injury or disease affecting the triangle can compromise limb perfusion, cause nerve palsy, or lead to life‑threatening bleeding. Common problems include femoral hernia, vascular trauma, and deep vein thrombosis.",
+   "b": [
+    "Femoral hernia protrudes through the femoral canal, more common in women",
+    "Traumatic femoral artery injury → rapid exsanguination; requires immediate pressure",
+    "Deep femoral vein thrombosis may present with swelling and pain"
+   ],
+   "t": [
+    {
+     "a": "Duplex ultrasound of femoral vein",
+     "b": "If ultrasound unavailable, use clinical Wells score and treat empirically in high‑risk settings"
+    },
+    {
+     "a": "CT angiography (if available)",
+     "b": "Is there arterial injury or aneurysm? Contrast extravasation indicates active bleed"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Physical exam of the femoral triangle provides quick clues to vascular and neural integrity.",
+   "b": [
+    "Palpate femoral pulse just inferior to inguinal ligament; absent pulse suggests arterial occlusion",
+    "Test saphenous nerve sensation on medial leg; loss indicates nerve injury",
+    "Assess quadriceps strength (knee extension) for femoral nerve function"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of femoral pulse with leg pain (possible arterial occlusion)",
+  "Rapidly expanding groin mass with pain (possible femoral artery aneurysm or hemorrhage)",
+  "Severe groin pain after trauma with swelling (possible femoral vein injury)"
+ ],
+ "faq": [
+  {
+   "q": "Why is the femoral triangle important for emergency access?",
+   "a": "It provides a superficial, compressible site to insert catheters or apply pressure to control bleeding."
+  },
+  {
+   "q": "What is the most common hernia in the femoral triangle?",
+   "a": "Femoral hernia, especially in women, protrudes through the femoral canal below the inguinal ligament."
+  },
+  {
+   "q": "How can I differentiate femoral from inguinal hernia clinically?",
+   "a": "Femoral hernias lie below the inguinal ligament and are more lateral; inguinal hernias are above the ligament."
+  }
+ ],
+ "exam": [
+  "Describe the boundaries and contents of the femoral triangle using the NAVEL mnemonic.",
+  "Explain how you would control a femoral artery bleed in a low‑resource setting.",
+  "Identify the clinical signs of femoral nerve injury and their anatomical basis."
+ ],
+ "related": [
+  "Inguinal canal",
+  "Femoral hernia",
+  "Popliteal fossa",
+  "Deep femoral (profunda femoris) artery",
+  "Saphenous vein",
+  "Quadriceps femoris muscle"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

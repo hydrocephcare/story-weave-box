@@ -1,0 +1,200 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Intestinal obstruction is a blockage of the bowel that stops normal passage of contents. It can be mechanical or functional, and requires prompt assessment to prevent ischemia and perforation.",
+ "aka": [
+  "Bowel obstruction",
+  "Intestinal blockage"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Intestinal obstruction is a complete or partial blockage of the intestinal lumen, preventing passage of food, fluid, and gas. Diagnosis combines history, physical exam, and imaging, with plain abdominal X‑ray or ultrasound as first steps.",
+   "b": [
+    "Complete vs partial",
+    "Mechanical vs functional"
+   ],
+   "t": [
+    {
+     "a": "Plain abdominal X‑ray",
+     "b": "Shows dilated loops and air‑fluid levels; confirms mechanical obstruction."
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Detects obstruction in children or pregnant patients; shows dilated loops and fluid."
+    },
+    {
+     "a": "CT scan (if available)",
+     "b": "Provides detailed anatomy, identifies cause, and detects complications like strangulation."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by the presence of strangulation, perforation, or peritonitis. The Bell staging system (I–III) is commonly used: I—non‑complicated obstruction; II—complicated without peritonitis; III—peritonitis or perforation.",
+   "b": [
+    "Stage I: no ischemia",
+    "Stage II: ischemia without peritonitis",
+    "Stage III: peritonitis/perforation"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the top causes are adhesions, hernias, and intestinal parasites such as Ascaris lumbricoides and hookworm. Other common causes include volvulus, intussusception in children, and tumors.",
+   "b": [
+    "Adhesions (post‑surgery)",
+    "Hernias (inguinal, umbilical)",
+    "Intestinal parasites (Ascaris, hookworm)",
+    "Volvulus",
+    "Intussusception",
+    "Neoplasia"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with crampy abdominal pain, vomiting (often bilious), distension, and obstipation. Visible peristalsis is a classic sign of obstruction but not of peritonitis.",
+   "b": [
+    "Crampy pain, often colicky",
+    "Vomiting (may be bilious)",
+    "Abdominal distension",
+    "Obstipation"
+   ],
+   "t": [
+    {
+     "a": "Visible peristalsis",
+     "b": "Indicates obstruction; absence suggests peritonitis."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm obstruction, identify the level, and detect complications. When advanced imaging is unavailable, clinical judgment and basic imaging guide management.",
+   "t": [
+    {
+     "a": "Plain abdominal X‑ray",
+     "b": "Detects dilated loops and air‑fluid levels; confirms mechanical obstruction."
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Useful in children and pregnant patients; shows dilated loops and fluid."
+    },
+    {
+     "a": "Laboratory tests (CBC, electrolytes, lactate)",
+     "b": "Assess dehydration, electrolyte imbalance, and tissue hypoxia; high lactate suggests ischemia."
+    },
+    {
+     "a": "Clinical assessment of peritonitis",
+     "b": "Look for rebound tenderness, guarding, and rigidity; indicates perforation or strangulation."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include sudden severe pain, peritonitis signs, high lactate, or hemodynamic instability. Complications are ischemia, perforation, sepsis, and electrolyte disturbances.",
+   "b": [
+    "Peritonitis",
+    "Ischemia",
+    "Perforation",
+    "Sepsis",
+    "Electrolyte imbalance"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first (e.g., hernia repair, parasite eradication). Provide supportive care: nasogastric decompression, IV fluids, electrolyte correction, and broad‑spectrum antibiotics if perforation is suspected.",
+   "b": [
+    "Nasogastric suction",
+    "IV fluids and electrolytes",
+    "Broad‑spectrum antibiotics (e.g., ceftriaxone + metronidazole)",
+    "Surgical consultation"
+   ],
+   "t": [
+    {
+     "a": "Nasogastric tube",
+     "b": "Reduces gastric distension and aspiration risk; confirms obstruction by fluid output."
+    },
+    {
+     "a": "IV fluids",
+     "b": "Correct dehydration and hypotension; monitor urine output."
+    },
+    {
+     "a": "Antibiotics",
+     "b": "Cover gram‑negative and anaerobic gut flora; avoid monotherapy if perforation suspected."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After resolution, monitor for recurrence, nutritional status, and underlying risk factors. Prevention focuses on early hernia repair, anti‑helminthic treatment, and safe surgical practices.",
+   "b": [
+    "Early hernia repair",
+    "Regular deworming",
+    "Post‑operative adhesion prevention"
+   ],
+   "t": [
+    {
+     "a": "Follow‑up abdominal exam",
+     "b": "Detect early recurrence or complications."
+    },
+    {
+     "a": "Nutritional assessment",
+     "b": "Identify malnutrition that may delay healing."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Intestinal obstruction is often mistaken for gastroenteritis, functional constipation, or abdominal migraine. Distinguishing features include visible peristalsis, vomiting, and imaging findings.",
+   "b": [
+    "Gastroenteritis (vomiting but no distension)",
+    "Functional constipation (no vomiting)",
+    "Abdominal migraine (episodic pain, no obstruction signs)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Plain X‑ray may appear normal in early obstruction; normal lactate does not rule out ischemia if taken early. Clinical signs can be subtle in children or the elderly.",
+   "b": [
+    "Early X‑ray may miss obstruction",
+    "Normal lactate early in ischemia",
+    "Atypical presentation in children/elderly"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain",
+  "Signs of peritonitis (rigidity, rebound tenderness)",
+  "High lactate or metabolic acidosis",
+  "Hemodynamic instability"
+ ],
+ "faq": [
+  {
+   "q": "Can intestinal obstruction be caused by parasites?",
+   "a": "Yes, heavy Ascaris or hookworm infections can block the bowel, especially in children."
+  },
+  {
+   "q": "What is the most common cause in low‑resource settings?",
+   "a": "Hernias and intestinal parasites are the leading causes."
+  },
+  {
+   "q": "Do all obstructions need surgery?",
+   "a": "Only mechanical obstructions that do not resolve with conservative care or that are complicated require surgery."
+  }
+ ],
+ "exam": [
+  "Explain the clinical difference between a mechanical and functional intestinal obstruction.",
+  "Describe the key imaging findings that differentiate obstruction from simple constipation.",
+  "Outline the initial management steps for a patient with suspected strangulated bowel obstruction."
+ ],
+ "related": [
+  "Hernia repair",
+  "Intussusception",
+  "Adhesive bowel obstruction",
+  "Parasitic infections",
+  "Surgical emergency"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,96 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The dorsal root ganglion houses sensory neuron cell bodies that transmit pain, temperature, and proprioception to the spinal cord. It is key for dermatome‑based pain mapping and viral entry sites.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The dorsal root ganglion (DRG) is a cluster of sensory neuron cell bodies located just outside the spinal cord. It receives afferent signals from skin, muscle, and joint receptors and sends them into the spinal cord via the dorsal root. Clinically, the DRG is the anatomical basis for dermatome patterns and a portal for neurotropic viruses such as varicella zoster.",
+   "b": [
+    "Sensory neurons are pseudounipolar; axon splits into peripheral and central branches.",
+    "DRG sits in the intervertebral foramen, adjacent to the dorsal root.",
+    "It is the first relay for nociceptive, thermal, and proprioceptive input."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Not applicable – DRG is a human anatomical structure, not a microorganism."
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Not applicable – DRG is not a pathogen."
+  },
+  {
+   "h": "Disease it causes",
+   "p": "The DRG is involved in several clinical conditions: herpes zoster (shingles) when varicella zoster reactivates in a ganglion; dorsal root ganglionopathy in diabetes or HIV; and neuropathic pain syndromes after trauma.",
+   "b": [
+    "Herpes zoster rash follows a single dermatome.",
+    "Diabetic neuropathy can involve DRG degeneration.",
+    "HIV can cause sensory neuron loss."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis of DRG‑related disorders relies on clinical mapping of pain and rash, neurological examination, and imaging when needed.",
+   "b": [
+    "Dermatome‑specific pain or rash suggests DRG involvement."
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management targets the underlying cause and provides neuropathic pain control. Antiviral therapy for shingles, glycemic control for diabetes, and antiretroviral therapy for HIV are first line. Symptomatic pain relief uses anticonvulsants or tricyclic antidepressants.",
+   "b": [
+    "Antiviral drugs (e.g., acyclovir) halt viral replication in shingles."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that a rash confined to one dermatome indicates reactivation in the corresponding DRG. In diabetic patients, sensory loss without motor deficit points to peripheral neuropathy involving DRG.",
+   "b": [
+    "Dermatome mapping is essential for diagnosing shingles."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Peripheral neuropathy (distal symmetric) vs. DRG neuropathy (segmental).",
+   "b": [
+    "Peripheral neuropathy shows stocking‑glove pattern; DRG shows single dermatome."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Early shingles may have normal viral PCR if sampling is delayed; blood glucose may be normal despite early neuropathy.",
+   "b": [
+    "PCR sensitivity drops after 7 days of rash onset."
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Seek urgent care if sudden severe back pain with neurological deficits, or if rash spreads beyond a single dermatome.",
+   "b": [
+    "Rapidly progressing pain with motor weakness."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [
+  "Explain why a rash limited to a single dermatome suggests dorsal root ganglion involvement.",
+  "Describe the diagnostic steps for a patient with suspected herpes zoster.",
+  "Outline the first‑line treatment for diabetic peripheral neuropathy affecting the dorsal root ganglion."
+ ],
+ "related": [
+  "Peripheral neuropathy",
+  "Herpes zoster",
+  "Diabetic neuropathy",
+  "HIV‑associated sensory neuropathy",
+  "Spinal cord anatomy",
+  "Dermatome mapping",
+  "Antiviral therapy"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

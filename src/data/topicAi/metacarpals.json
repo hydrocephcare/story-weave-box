@@ -1,0 +1,128 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "Metacarpals are the five long bones of the hand that form the palm skeleton and transmit forces from the fingers to the wrist. Their shape, articulations and blood supply are crucial for grip, fine motor tasks and for recognizing trauma patterns.",
+ "aka": [
+  "metacarpal bones",
+  "metacarpus"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The metacarpals are numbered 1‑5 from thumb to little finger. Each has a shaft, a base that articulates with the carpal row, and a head that forms the metacarpophalangeal (MCP) joint.",
+   "b": [
+    "Thumb metacarpal is shorter and more mobile",
+    "Fourth metacarpal is the longest",
+    "Fifth metacarpal has a styloid process for muscle attachment"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "They lie in the palm between the carpal bones proximally and the proximal phalanges distally. The base is broad, the shaft is cylindrical, and the head is rounded for hinge‑like MCP joints.",
+   "b": [
+    "Base articulates with trapezium (1st) to hamate (5th)",
+    "Shaft contains a central medullary canal",
+    "Head forms a condylar surface for finger flexion/extension"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Deep to the metacarpals run the interosseous muscles, palmar arches, and digital nerves. Laterally, the extensor tendons cross over the dorsal surface.",
+   "b": [
+    "Palmar metacarpal arteries arise from deep palmar arch",
+    "Ulnar nerve supplies the medial three digits",
+    "Radial nerve supplies the thumb and index"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Each metacarpal receives blood from the palmar metacarpal arteries (branches of the deep palmar arch) and dorsal metacarpal arteries (branches of the dorsal carpal arch).",
+   "b": [
+    "Metacarpal shaft gets periosteal vessels",
+    "Head receives branches from digital arteries"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory innervation follows the digital nerves: radial nerve to the thumb and index, ulnar nerve to the ring and little fingers; the median nerve supplies the lateral three and a half digits on the palmar side.",
+   "b": [
+    "Motor supply to interossei and lumbricals via ulnar and median nerves"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Metacarpals act as levers for finger motion, transmit grip forces, and allow opposition of the thumb through the first metacarpal‑trapezium joint.",
+   "b": [
+    "Enable precision pinch",
+    "Distribute load during weight‑bearing activities"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Fractures, congenital shortening, and metabolic bone disease affect the metacarpals. Recognising patterns guides imaging, management and prognosis.",
+   "b": [
+    "Boxer’s fracture – transverse fracture of the 5th metacarpal neck",
+    "Metacarpal shortening in Albright hereditary osteodystrophy",
+    "Osteolytic lesions (e.g., tuberculous osteomyelitis) may mimic cysts"
+   ],
+   "t": [
+    {
+     "a": "Plain radiograph of hand",
+     "b": "Confirms fracture type, displacement and involvement of MCP joint; if unavailable, clinical alignment and neurovascular exam guide urgent referral"
+    },
+    {
+     "a": "Serum calcium, phosphate, PTH",
+     "b": "Evaluates metabolic bone disease such as Albright hereditary osteodystrophy; if labs unavailable, look for clinical triad (short stature, round face, short 4th metacarpal)"
+    },
+    {
+     "a": "MRI of hand",
+     "b": "Detects occult fractures, bone marrow edema, or infection when X‑ray is normal; if MRI not feasible, treat based on clinical suspicion and immobilisation"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Inspection for shortening, deformity, or swelling; palpate each metacarpal shaft and MCP joints; assess range of motion and neurovascular status.",
+   "b": [
+    "Loss of thumb opposition suggests first metacarpal‑trapezium pathology",
+    "Tenderness over the 5th metacarpal neck indicates a boxer’s fracture"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Open fracture with bone protrusion",
+  "Severe crush injury with loss of sensation distal to the wrist",
+  "Rapid swelling suggesting compartment syndrome"
+ ],
+ "faq": [
+  {
+   "q": "Why does a short 4th metacarpal suggest Albright hereditary osteodystrophy?",
+   "a": "It reflects abnormal bone remodeling due to PTH resistance, a hallmark of the disorder."
+  },
+  {
+   "q": "What is the typical management of a non‑displaced 5th metacarpal neck fracture?",
+   "a": "Buddy taping or a splint for 3‑4 weeks, with early finger motion to prevent stiffness."
+  },
+  {
+   "q": "Can a metacarpal infection occur without an obvious wound?",
+   "a": "Yes, hematogenous spread from TB or HIV‑related opportunistic infections can produce osteomyelitis."
+  }
+ ],
+ "exam": [
+  "Describe the articulations of the first metacarpal and their relevance to thumb opposition.",
+  "Explain how to differentiate a boxer’s fracture from a simple soft‑tissue injury on examination.",
+  "List the blood supply to the metacarpals and why it matters in fracture healing."
+ ],
+ "related": [
+  "Carpal bones",
+  "Metacarpophalangeal joint",
+  "Hand fractures",
+  "Albright hereditary osteodystrophy",
+  "Compartment syndrome of the hand",
+  "Bone infection (osteomyelitis)"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

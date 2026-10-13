@@ -1,0 +1,146 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "The androgen receptor (AR) is a nuclear hormone receptor that mediates the effects of testosterone and dihydrotestosterone. Mutations or dysregulation of AR cause disorders ranging from androgen insensitivity to prostate cancer progression.",
+ "aka": [
+  "Androgen receptor"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "AR is a ligand‑activated transcription factor located in the cytoplasm that moves to the nucleus when bound by testosterone or DHT. Diagnosis of AR‑related disease relies on clinical features, hormone levels, and genetic testing for AR mutations.",
+   "b": [
+    "Immunohistochemistry shows nuclear AR positivity in prostate tissue",
+    "PCR or sequencing detects CAG repeat expansions in spinal‑bulbar muscular atrophy"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "In prostate cancer, AR activity is staged by the TNM system and Gleason grade; in androgen insensitivity, severity is graded by external genital phenotype (complete, partial, mild).",
+   "b": [
+    "Complete AIS: phenotypic female with XY karyotype",
+    "Partial AIS: ambiguous genitalia, variable virilisation"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "AR dysfunction can be genetic (X‑linked AR mutations), acquired (over‑expression in prostate cancer), or pharmacologic (anti‑androgen therapy). In low‑resource settings, chronic infections (HIV, hepatitis B) can alter androgen metabolism and exacerbate AR‑driven cancers.",
+   "b": [
+    "X‑linked AR loss‑of‑function mutation",
+    "AR amplification in castration‑resistant prostate cancer",
+    "Chronic hepatitis B increasing hepatic androgen conversion"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with ambiguous genitalia at birth, infertility, reduced secondary sexual characteristics, or, in adults, progressive prostate cancer despite castration.",
+   "b": [
+    "Primary amenorrhea in AIS",
+    "Progressive PSA rise in castration‑resistant disease"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests clarify the role of AR in the presenting disorder.",
+   "b": [
+    "If hormone assays are unavailable, use clinical signs (virilisation, muscle mass) and imaging to infer androgen effect."
+   ],
+   "t": [
+    {
+     "a": "Serum testosterone & DHT",
+     "b": "Is androgen production adequate? Low levels suggest hypogonadism; high DHT with normal testosterone points to 5‑α‑reductase excess."
+    },
+    {
+     "a": "Immunohistochemistry for AR",
+     "b": "Is the tumour AR‑positive? Positive staining supports androgen‑driven prostate cancer; negative suggests neuroendocrine differentiation."
+    },
+    {
+     "a": "AR gene sequencing",
+     "b": "Is there a pathogenic mutation? Detects AIS or SBMA; a polyglutamine expansion confirms spinal‑bulbar muscular atrophy."
+    },
+    {
+     "a": "Prostate‑specific antigen (PSA)",
+     "b": "Is tumour activity rising? Rising PSA despite castration indicates AR‑mediated resistance."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unchecked AR signalling in prostate cancer leads to metastasis; severe AIS can cause gonadal tumours; SBMA may progress to respiratory failure.",
+   "b": [
+    "Rapid PSA doubling time",
+    "Testicular mass in AIS",
+    "Progressive dysphagia in SBMA"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then modulate AR activity. Surgical gonadectomy removes tumour risk in AIS; anti‑androgens block AR in prostate cancer; hormone replacement restores function in hypogonadism.",
+   "b": [
+    "Bicalutamide or enzalutamide: block AR ligand binding, preferred in castration‑resistant prostate cancer",
+    "Spironolactone: weak AR antagonist, used for acne and hirsutism, avoided in pregnancy",
+    "Avoid high‑dose steroids that up‑regulate AR expression"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of hormone levels, PSA, and imaging prevents progression. In AIS, annual testicular ultrasound screens for malignancy. Counsel patients on fertility options and genetic testing for family members.",
+   "b": [
+    "PSA every 3–6 months in treated prostate cancer",
+    "Ultrasound annually in AIS"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic AR dysfunction include 5‑α‑reductase deficiency, congenital adrenal hyperplasia, and estrogen‑dependent breast cancer.",
+   "b": [
+    "5‑α‑reductase deficiency: low DHT, normal AR",
+    "CAH: excess adrenal androgens, normal AR"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serum testosterone may be normal in AIS because the receptor is non‑functional; PSA can be low in neuroendocrine prostate cancer despite aggressive disease.",
+   "b": [
+    "Normal testosterone does not rule out AIS",
+    "Low PSA does not exclude AR‑driven cancer if neuroendocrine features present"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden rise in PSA, new bone pain, or neurological decline in SBMA",
+  "Rapidly enlarging testicular mass in AIS"
+ ],
+ "faq": [
+  {
+   "q": "Why does DHT bind AR more strongly than testosterone?",
+   "a": "DHT has a higher affinity for the ligand‑binding domain, making it about ten times more potent in activating AR transcription."
+  },
+  {
+   "q": "Can anti‑androgens cure prostate cancer?",
+   "a": "They control growth by blocking AR but do not eradicate disease; resistance often develops."
+  },
+  {
+   "q": "Is androgen insensitivity always fatal?",
+   "a": "No; complete AIS individuals live healthy lives as females, but need gonadectomy to prevent tumours."
+  }
+ ],
+ "exam": [
+  "Explain how AR signaling contributes to castration‑resistant prostate cancer and list two therapeutic strategies targeting this pathway.",
+  "Describe the clinical features that differentiate complete androgen insensitivity syndrome from 5‑α‑reductase deficiency.",
+  "Interpret a PSA rise in a patient on androgen deprivation therapy and outline the next investigative steps."
+ ],
+ "related": [
+  "Prostate cancer",
+  "Androgen insensitivity syndrome",
+  "Spinal‑bulbar muscular atrophy",
+  "5‑α‑reductase deficiency",
+  "Hormone‑dependent breast cancer",
+  "Testosterone replacement therapy",
+  "Castration‑resistant prostate cancer"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

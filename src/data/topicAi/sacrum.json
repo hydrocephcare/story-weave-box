@@ -1,0 +1,127 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The sacrum is a triangular bone formed by five fused vertebrae, linking the spine to the pelvis. It transmits weight to the hips and houses sacral nerves that control lower limb and pelvic functions.",
+ "aka": [
+  "Sacral bone",
+  "Os sacrum"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The sacrum sits at the base of the spine, forming the posterior wall of the pelvis and articulating with the ilia at the sacroiliac joints.",
+   "b": [
+    "Triangular, 12‑15 cm long, 5 fused vertebrae (S1‑S5)",
+    "Divides the pelvic cavity into true and false pelvis"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lies between L5 and the coccyx, with a broad superior surface and a narrow inferior apex.",
+   "b": [
+    "Anterior surface: sacral canal, sacral foramina",
+    "Posterior surface: sacral ala, median sacral crest"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly it contacts the rectum, uterus, and bladder; laterally the sacroiliac joints bind it to the pelvis; posteriorly the gluteal muscles attach.",
+   "b": [
+    "Piriformis and gluteus maximus insert on the sacral ala",
+    "Levator ani and coccygeus arise from the posterior surface"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial blood reaches the sacrum via the median sacral artery and branches of the internal iliac system.",
+   "b": [
+    "Median sacral artery (midline)",
+    "Lateral sacral arteries (from internal iliac)"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The sacral spinal nerves (S1‑S5) exit through the sacral foramina, forming the sacral plexus that innervates the lower limb and pelvic organs.",
+   "b": [
+    "Posterior sacral foramina → dorsal rami",
+    "Anterior sacral foramina → ventral rami (sacral plexus)"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "It provides a sturdy platform for weight transfer from the spine to the hips and protects the sacral nerve roots.",
+   "b": [
+    "Supports upright posture",
+    "Transmits axial load during walking and lifting"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Fractures, sacroiliac joint dysfunction, and sacral nerve compression can cause pain, gait disturbance, and bowel/bladder dysfunction.",
+   "b": [
+    "Traumatic fracture: often from falls or motor‑vehicle accidents",
+    "Sacroiliac joint sprain: common in pregnancy, heavy lifting",
+    "Cauda equina syndrome: compression of sacral roots, surgical emergency"
+   ],
+   "t": [
+    {
+     "a": "X‑ray pelvis",
+     "b": "Detects sacral fractures or dislocation; if unavailable, use clinical instability signs"
+    },
+    {
+     "a": "MRI lumbar spine",
+     "b": "Assesses nerve root compression or cauda equina; if unavailable, urgent CT can rule out bony injury"
+    },
+    {
+     "a": "CT scan",
+     "b": "Defines complex fracture patterns; if unavailable, treat based on exam and plain radiograph"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and bedside assessment.",
+   "b": [
+    "Palpate sacral hiatus for caudal epidural access",
+    "Assess sacroiliac tenderness with FABER test",
+    "Check for perineal sensation loss in sacral nerve injury"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe lower back pain with saddle anesthesia",
+  "Loss of bladder or bowel control after trauma",
+  "Progressive weakness of legs with numbness"
+ ],
+ "faq": [
+  {
+   "q": "Why does a sacral fracture cause urinary problems?",
+   "a": "The sacral nerves (S2‑S4) control bladder function; fracture can compress them, leading to retention or incontinence."
+  },
+  {
+   "q": "What is the difference between sacral and coccygeal pain?",
+   "a": "Sacral pain is higher, often linked to weight‑bearing or nerve injury; coccygeal pain is localized to the tailbone and worsens with sitting."
+  },
+  {
+   "q": "How can I differentiate sacroiliac joint sprain from lumbar strain?",
+   "a": "Sacroiliac pain radiates to the groin or posterior thigh and is provoked by FABER or Gaenslen tests; lumbar strain worsens with flexion/extension."
+  }
+ ],
+ "exam": [
+  "Describe the articulations of the sacrum and their clinical significance.",
+  "Explain how a sacral fracture can lead to cauda equina syndrome and what signs you would look for.",
+  "Identify the nerves that exit the sacral foramina and the muscles they supply."
+ ],
+ "related": [
+  "Lumbar vertebrae",
+  "Coccyx",
+  "Sacroiliac joint",
+  "Cauda equina syndrome",
+  "Pelvic floor anatomy",
+  "Hip joint"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

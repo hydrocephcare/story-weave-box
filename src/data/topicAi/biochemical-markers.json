@@ -1,0 +1,108 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Biochemical markers are measurable substances in blood or urine that reflect organ injury, metabolic disturbance, or disease activity. They guide diagnosis, severity assessment, and monitoring of treatment response.",
+ "aka": [
+  "biomarkers",
+  "lab markers"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Biochemical markers are molecules released by damaged cells or altered metabolic pathways that can be quantified in body fluids. Clinicians use them to confirm a suspected diagnosis, gauge severity, and track response to therapy.",
+   "b": [
+    "Not all abnormal values indicate disease – interpret in context.",
+    "Markers can be organ‑specific (e.g., troponin for heart) or systemic (e.g., CRP)."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Injury or stress triggers release or synthesis of specific proteins, enzymes, or metabolites that enter the circulation. Their concentration rises proportionally to the extent of damage or inflammation.",
+   "b": [
+    "Cell necrosis → intracellular enzymes leak (e.g., ALT, AST).",
+    "Inflammation → acute‑phase reactants rise (e.g., CRP, ferritin)."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Production, clearance, and renal/hepatic handling determine marker levels. For example, troponin is cleared slowly by the reticulo‑endothelial system, while creatinine is filtered by the kidneys.",
+   "b": [
+    "Renal impairment can falsely elevate markers cleared renally.",
+    "Liver disease can alter synthesis of clotting factors and enzymes."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Pathological processes disrupt normal homeostasis, causing excess release or reduced clearance of markers. Recognising patterns helps locate the organ and the underlying disease.",
+   "b": [
+    "Myocardial infarction – rapid rise of cardiac troponin I/T.",
+    "Acute kidney injury – rise in serum creatinine and urea.",
+    "Hepatocellular injury – ALT/AST > 3× upper limit."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Markers aid in early detection, risk stratification, and monitoring. In low‑resource settings, simple tests (creatinine, bilirubin) are invaluable for triage and guiding treatment.",
+   "b": [
+    "Elevated troponin confirms MI even when ECG is equivocal.",
+    "High CRP predicts poor outcome in severe infections like malaria or TB.",
+    "Serum creatinine guides dosing of renally cleared drugs."
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Is renal function impaired? – Rising level indicates acute kidney injury; if unavailable, use urine output and bedside ultrasound."
+    },
+    {
+     "a": "Cardiac troponin I/T",
+     "b": "Has myocardial injury occurred? – Detects MI from 3‑4 h after symptom onset; a rising/falling pattern confirms acute event."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the marker’s specificity, timing of rise, and what a normal result rules out. Remember common pitfalls in low‑resource environments.",
+   "b": [
+    "Troponin is the most sensitive and specific marker for MI; CK‑MB is less specific.",
+    "Serum bilirubin >2 mg/dL with conjugated predominance points to obstructive jaundice.",
+    "In malaria, lactate dehydrogenase may be elevated but is not diagnostic."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden rise in troponin with chest pain – possible myocardial infarction.",
+  "Rapid increase in serum creatinine >0.3 mg/dL in 48 h – acute kidney injury.",
+  "Marked hyperbilirubinemia with encephalopathy – acute liver failure."
+ ],
+ "faq": [
+  {
+   "q": "Why is troponin preferred over CK‑MB for MI?",
+   "a": "Troponin rises earlier, stays elevated longer, and is far more specific to cardiac muscle."
+  },
+  {
+   "q": "Can a normal CRP rule out serious infection?",
+   "a": "No; early infection or localized disease may have normal CRP, especially in immunocompromised patients."
+  },
+  {
+   "q": "What if I cannot measure creatinine?",
+   "a": "Assess urine output, check for peripheral edema, and use bedside ultrasound to estimate kidney size and obstruction."
+  }
+ ],
+ "exam": [
+  "Explain the kinetic profile of cardiac troponin after myocardial infarction and its diagnostic implications.",
+  "Describe how serum creatinine is used to stage acute kidney injury and guide drug dosing.",
+  "List three common causes of elevated alkaline phosphatase and how you would differentiate them."
+ ],
+ "related": [
+  "Cardiac enzymes",
+  "Acute kidney injury",
+  "Liver function tests",
+  "Inflammatory markers",
+  "Electrolyte disturbances",
+  "Coagulation profile"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

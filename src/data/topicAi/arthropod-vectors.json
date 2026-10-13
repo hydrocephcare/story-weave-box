@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Arthropod vectors are insects or arachnids that transmit viruses, bacteria, and parasites to humans. Clinicians must recognize exposure risk, early symptoms, and diagnostic clues to initiate timely treatment and prevent complications.",
+ "aka": [
+  "Arboviruses",
+  "Vector-borne diseases"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Arthropod vectors such as mosquitoes, ticks, sandflies, and fleas carry diverse pathogens that cause acute febrile illnesses, neurological disease, and chronic infections. Their life cycles and feeding habits determine transmission patterns.",
+   "b": [
+    "Mosquitoes: Aedes, Anopheles, Culex",
+    "Ticks: Ixodes, Dermacentor, Rhipicephalus",
+    "Sandflies: Phlebotomus, Lutzomyia",
+    "Fleas: Xenopsylla, Ctenocephalides"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Vectors are ectoparasites that feed on blood, acquiring pathogens from infected hosts and later inoculating them into new hosts. Their saliva contains anticoagulants and immunomodulators that facilitate pathogen entry.",
+   "b": [
+    "Blood-feeding arthropods",
+    "Salivary proteins aid infection",
+    "Life cycle includes larval and adult stages"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission occurs when a vector bites a human, depositing pathogens into the bloodstream. Vector breeding sites, seasonality, and human behavior influence exposure risk.",
+   "b": [
+    "Mosquitoes breed in stagnant water",
+    "Ticks require host contact for attachment",
+    "Sandflies active at dusk"
+   ],
+   "t": [
+    {
+     "a": "Rapid diagnostic test (RDT) for malaria",
+     "b": "Negative may miss low parasitemia"
+    },
+    {
+     "a": "Serology (IgM/IgG) for arboviruses",
+     "b": "Cross-reactivity can occur between flaviviruses"
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Vector-borne pathogens cause a spectrum from self-limited febrile illness to severe neurological disease. Common presentations include fever, rash, arthralgia, and in severe cases, hemorrhage or encephalitis.",
+   "b": [
+    "Dengue: fever, rash, thrombocytopenia",
+    "Yellow fever: jaundice, bleeding",
+    "Chikungunya: severe joint pain",
+    "Crimean-Congo hemorrhagic fever: hemorrhage"
+   ],
+   "t": [
+    {
+     "a": "Platelet count",
+     "b": "Normal platelets may still occur in early dengue"
+    },
+    {
+     "a": "Liver enzymes",
+     "b": "Mild elevation can be seen in many infections"
+    }
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion is guided by exposure history and symptom pattern. Laboratory confirmation relies on antigen detection, PCR, or serology, depending on the pathogen and timing.",
+   "b": [
+    "History of travel to endemic area",
+    "Recent mosquito or tick exposure",
+    "Onset of fever with rash or joint pain"
+   ],
+   "t": [
+    {
+     "a": "PCR for viral RNA",
+     "b": "Negative if sample taken late"
+    },
+    {
+     "a": "ELISA for IgM",
+     "b": "False positives possible with cross-reactivity"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management focuses on supportive care, specific antiviral or antimicrobial therapy when available, and vector control measures. Clinicians must weigh drug toxicity and local resistance patterns.",
+   "b": [
+    "Hydration and antipyretics for dengue",
+    "Corticosteroids for severe encephalitis",
+    "Antimalarials for malaria",
+    "Antiviral (ribavirin) for CCHF"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin level",
+     "b": "Low levels may require transfusion"
+    },
+    {
+     "a": "Coagulation profile",
+     "b": "Elevated PT/INR signals bleeding risk"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that vector-borne diseases often present with nonspecific fever; a detailed exposure history is key. Early recognition of warning signs such as bleeding, altered mental status, or shock mandates urgent care.",
+   "b": [
+    "Always ask about recent travel or outdoor activities",
+    "Use RDTs when available but confirm with PCR or serology",
+    "Treat severe dengue with fluid resuscitation and monitor platelet trend"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Bleeding or hemorrhage",
+  "Altered mental status",
+  "Severe shock or organ failure"
+ ],
+ "faq": [
+  {
+   "q": "Can a single mosquito bite cause disease?",
+   "a": "Yes, if the mosquito carries a pathogen, it can transmit it in one bite."
+  },
+  {
+   "q": "Do all mosquitoes transmit the same viruses?",
+   "a": "No, different species carry specific viruses; Aedes transmits dengue, Zika, chikungunya."
+  },
+  {
+   "q": "What is the best way to prevent tick bites?",
+   "a": "Use insect repellent, wear long sleeves, check for ticks after outdoor exposure, and remove promptly."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old man presents with fever, rash, and thrombocytopenia after a trip to Southeast Asia. What is the most likely diagnosis and initial management?",
+  "A child develops sudden severe headache and neck stiffness after a camping trip. Which vector-borne pathogen should be considered and what is the first diagnostic test?",
+  "Explain why a patient with suspected dengue should be monitored for fluid overload and how to recognize it clinically."
+ ],
+ "related": [
+  "Mosquito-borne viruses",
+  "Tick-borne encephalitis",
+  "Malaria",
+  "Chikungunya",
+  "Zika virus",
+  "Crimean‑Congo hemorrhagic fever",
+  "Sandfly leishmaniasis"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

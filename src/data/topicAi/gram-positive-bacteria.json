@@ -1,0 +1,128 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Gram‑positive bacteria have a thick peptidoglycan wall with teichoic acids, making them susceptible to lysozyme and β‑lysin. Their structure influences transmission, disease patterns, and choice of antibiotics.",
+ "aka": [
+  "G+ bacteria",
+  "Gram‑positive organisms"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Gram‑positive bacteria stain violet because of a multilayered peptidoglycan wall that retains crystal violet‑iodine complex. The wall contains wall teichoic acids (WTAs) and lipoteichoic acids (LTAs) that give a net negative surface charge and aid colonisation of mucosal surfaces.",
+   "b": [
+    "Thick peptidoglycan = rigidity, lysozyme target",
+    "WTAs extend partway; LTAs span membrane",
+    "Some form endospores (Bacillus, Clostridium)"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Key structural traits determine pathogenic potential and laboratory behaviour.",
+   "b": [
+    "Gram‑positive cocci (Staphylococcus, Streptococcus, Enterococcus)",
+    "Gram‑positive rods (Corynebacterium, Listeria, Bacillus, Clostridium)",
+    "Catalase and coagulase differentiate staphylococci"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Most are transmitted by direct contact, droplets, or contaminated surfaces; spores survive harsh environments.",
+   "b": [
+    "Skin colonisation → wound infection",
+    "Respiratory droplets → pneumonia, meningitis",
+    "Spore ingestion → food‑borne botulism, clostridial colitis"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Clinical presentations range from mild skin infections to life‑threatening sepsis, often modified by host factors such as HIV, malnutrition, or sickle‑cell disease.",
+   "b": [
+    "Skin/soft‑tissue infection – cellulitis, abscess (Staph aureus)",
+    "Invasive disease – necrotising fasciitis, toxic shock (Strep pyogenes)",
+    "Endocarditis – native valve (Enterococcus, Staph aureus)",
+    "Meningitis – Listeria monocytogenes in neonates, elderly, immunocompromised",
+    "Clostridial toxin diseases – botulism, gas gangrene"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Combine clinical suspicion with targeted microbiology; recognise when resources are limited.",
+   "b": [
+    "Gram stain: violet cocci or rods in clusters/chains",
+    "Catalase test separates staphylococci (positive) from streptococci (negative)",
+    "Blood agar hemolysis pattern guides species"
+   ],
+   "t": [
+    {
+     "a": "Gram stain of specimen",
+     "b": "Is the organism Gram‑positive? Guides empiric therapy toward β‑lactams or glycopeptides"
+    },
+    {
+     "a": "Catalase test",
+     "b": "Distinguishes Staphylococcus (positive) from Streptococcus/Enterococcus (negative); informs antibiotic choice"
+    },
+    {
+     "a": "Anaerobic culture for Clostridium",
+     "b": "Detects toxin‑producing spores when anaerobic facilities unavailable – consider clinical toxin syndromes instead"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "First treat the identified pathogen, then provide supportive care and monitor for complications.",
+   "b": [
+    "β‑lactams (penicillins, cephalosporins) for susceptible streptococci and many staphylococci",
+    "Glycopeptides (vancomycin) for MRSA or penicillin‑resistant Enterococcus",
+    "Clindamycin for toxin suppression in necrotising fasciitis or toxic shock",
+    "Metronidazole for anaerobic clostridial infections"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for clinical exams.",
+   "b": [
+    "Thick peptidoglycan → lysozyme sensitivity",
+    "LTAs trigger host inflammation",
+    "Endospore‑forming G+ rods survive harsh conditions",
+    "MRSA = methicillin‑resistant Staph aureus; treat with vancomycin"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly expanding cellulitis with systemic toxicity",
+  "Septic shock from Gram‑positive sepsis",
+  "Neurological decline in suspected meningitis"
+ ],
+ "faq": [
+  {
+   "q": "Why are Gram‑positive bacteria more susceptible to lysozyme?",
+   "a": "Lysozyme cleaves the β‑1,4 linkages in the thick peptidoglycan layer, which is exposed in Gram‑positive cells."
+  },
+  {
+   "q": "What clinical clue suggests a clostridial infection?",
+   "a": "Sudden muscle pain with gas‑producing swelling (crepitus) after trauma points to gas gangrene."
+  },
+  {
+   "q": "When should vancomycin be used empirically?",
+   "a": "In severe infections where MRSA is likely (e.g., hospital‑acquired pneumonia, catheter‑related sepsis)."
+  }
+ ],
+ "exam": [
+  "Explain how teichoic acids contribute to the pathogenicity of Gram‑positive bacteria.",
+  "List the first‑line antibiotic for streptococcal cellulitis and justify your choice.",
+  "Describe the laboratory steps to differentiate Staphylococcus aureus from coagulase‑negative staphylococci."
+ ],
+ "related": [
+  "Gram‑negative bacteria",
+  "Antibiotic resistance mechanisms",
+  "Sepsis",
+  "Skin and soft‑tissue infections",
+  "Bacterial meningitis",
+  "Anaerobic infections"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

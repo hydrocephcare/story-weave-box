@@ -1,0 +1,80 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Direct Fluorescent Antibody (DFA) is a rapid, specific test that uses fluorescent-labeled antibodies to detect viral or bacterial antigens in patient specimens. It is especially useful when quick diagnosis is needed, such as in suspected viral conjunctivitis or rabies exposure.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "DFA uses fluorescently labeled antibodies that bind directly to antigens in a specimen. The bound complex is visualized under a fluorescence microscope, allowing immediate confirmation of infection.",
+   "b": [
+    "Fast turnaround",
+    "High specificity",
+    "No need for culture"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The test targets viral or bacterial proteins expressed on the surface of infected cells or in secretions. Common targets include adenovirus in conjunctivitis or rabies virus in brain tissue."
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Not applicable to the test itself; DFA is used after specimen collection. For rabies, transmission is via bites; for adenovirus, via droplets or contact."
+  },
+  {
+   "h": "Disease it causes",
+   "p": "DFA is used to diagnose infections such as viral conjunctivitis, measles, rabies, and certain bacterial infections like pertussis. It is not a disease."
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Specimen types vary: conjunctival swab for adenovirus, skin biopsy for rabies, vesicle scraping for herpes. The sample is incubated with fluorescent-labeled antibodies, then examined.",
+   "t": [
+    {
+     "a": "DFA test",
+     "b": "Positive fluorescence indicates presence of antigen; negative suggests absence or low levels."
+    },
+    {
+     "a": "Culture",
+     "b": "Positive culture supports DFA; negative may be due to low viral load."
+    },
+    {
+     "a": "PCR",
+     "b": "Positive PCR confirms infection; useful when DFA unavailable or inconclusive."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe or worsening symptoms of suspected rabies exposure; rapidly progressing conjunctivitis with vision loss; high fever with rash and lymphadenopathy in children."
+ ],
+ "faq": [
+  {
+   "q": "What if the DFA result is negative but clinical suspicion is high?",
+   "a": "Repeat the test with a fresh specimen or use PCR; consider other etiologies."
+  },
+  {
+   "q": "Can DFA be used in low-resource settings?",
+   "a": "Yes, if a fluorescence microscope is available; otherwise, rely on clinical judgment and alternative tests."
+  },
+  {
+   "q": "Is DFA safe for the clinician?",
+   "a": "Standard biosafety precautions apply; the test uses fixed specimens, so risk is low."
+  }
+ ],
+ "exam": [
+  "Explain how DFA provides rapid diagnosis in viral conjunctivitis and why it is preferred over culture.",
+  "Describe the specimen collection and interpretation steps for a DFA test for rabies.",
+  "Discuss the limitations of DFA and when PCR should be used instead."
+ ],
+ "related": [
+  "Immunofluorescence microscopy",
+  "Viral culture",
+  "PCR diagnostics",
+  "Rabies diagnosis",
+  "Conjunctivitis management"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

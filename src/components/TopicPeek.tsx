@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Maximize2 } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
@@ -11,8 +11,12 @@ import { pageForPeek } from "@/lib/topics";
  * Tapping a highlighted word anywhere on the site opens it; "Open the full page" goes to the whole topic and leaves a
  * "Back to <where you were>" button at the same scroll position. The body scrolls on its own, with one close button (the X).
  */
+const DrugPeekBody = lazy(() => import("@/components/DrugPeekBody"));
+
 export default function TopicPeekHost() {
-  const slug = useTopicPeekSlug();
+  const raw = useTopicPeekSlug();
+  const drugId = raw?.startsWith("drug:") ? raw.slice(5) : null;
+  const slug = drugId ? null : raw;
   const navigate = useNavigate();
   const [peek, setPeek] = useState<Peek | null>(null);
   const [wide, setWide] = useState(typeof window !== "undefined" ? window.matchMedia("(min-width: 768px)").matches : false);
@@ -20,6 +24,9 @@ export default function TopicPeekHost() {
   const origin = useRef<{ path: string; title: string; y: number } | null>(null);
 
   useEffect(() => { const mq = window.matchMedia("(min-width: 768px)"); const on = () => setWide(mq.matches); mq.addEventListener("change", on); return () => mq.removeEventListener("change", on); }, []);
+  useEffect(() => {
+    if (drugId) origin.current = { path: `${window.location.pathname}${window.location.search}`, title: document.title.split(" | ")[0].split(" — ")[0] || "where you were", y: window.scrollY };
+  }, [drugId]);
   useEffect(() => {
     if (!slug) return;
     // remember exactly where the reader was, before anything on screen moves
@@ -49,47 +56,50 @@ export default function TopicPeekHost() {
   // a link to a topic anywhere in a note opens the panel instead of leaving the page
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
-      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
-      const a = (e.target as HTMLElement | null)?.closest?.("a.topic-link") as HTMLAnchorElement | null;
-      const m = a?.getAttribute("href")?.match(/^\/topic\/([a-z0-9-]+)$/);
-      if (!a || !m) return;
-      e.preventDefault();
-      topicPeek.open(m[1]);
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      const a = (e.target as HTMLElement | null)?.closest?.("a.topic-link, a[data-drug]") as HTMLAnchorElement | null;
+      if (!a) return;
+      const drug = a.dataset.drug;
+      const m = a.getAttribute("href")?.match(/^\/topic\/([a-z0-9-]+)$/);
+      if (!drug && !m) return;
+      // stop everything else from also following the link: the panel opens, the page does not
+      e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
+      if (drug) topicPeek.openDrug(drug); else topicPeek.open(m![1]);
     };
     document.addEventListener("click", onClick, true);
     return () => document.removeEventListener("click", onClick, true);
   }, []);
 
-  // Reached the end? Keep pulling (phone) or scrolling (computer) and the panel closes by itself, so there is no X to hunt for.
-  const [atEnd, setAtEnd] = useState(false);
-  const pull = useRef({ y: 0, dist: 0, wheel: 0 });
+  // Scrolled back up to the top? Keep pulling down (phone) or scrolling up (computer) and the panel closes itself, so there is no X to hunt for.
+  const [atTop, setAtTop] = useState(true);
+  const pull = useRef({ y: 0, wheel: 0 });
   const scroller = useRef<HTMLDivElement | null>(null);
-  const reachedEnd = (el: HTMLElement) => el.scrollHeight - el.scrollTop - el.clientHeight < 3;
-  useEffect(() => { setAtEnd(false); pull.current = { y: 0, dist: 0, wheel: 0 }; }, [slug, peek]);
-  const onScroll = (e: React.UIEvent<HTMLDivElement>) => { const end = reachedEnd(e.currentTarget); setAtEnd(end); if (!end) pull.current.wheel = 0; };
-  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => { pull.current.y = e.touches[0].clientY; pull.current.dist = 0; };
+  useEffect(() => { setAtTop(true); pull.current = { y: 0, wheel: 0 }; }, [raw, peek]);
+  const onScroll = (e: React.UIEvent<HTMLDivElement>) => { const top = e.currentTarget.scrollTop <= 1; setAtTop(top); if (!top) pull.current.wheel = 0; };
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => { pull.current.y = e.touches[0].clientY; };
   const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    const el = e.currentTarget;
-    if (!reachedEnd(el)) { pull.current.y = e.touches[0].clientY; return; }
-    pull.current.dist = Math.max(0, pull.current.y - e.touches[0].clientY);
-    if (pull.current.dist > 70) { pull.current.dist = 0; topicPeek.close(); }
+    if (e.currentTarget.scrollTop > 1) { pull.current.y = e.touches[0].clientY; return; }
+    if (e.touches[0].clientY - pull.current.y > 80) { pull.current.y = e.touches[0].clientY; topicPeek.close(); }
   };
   const onWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-    if (e.deltaY > 0 && reachedEnd(e.currentTarget)) { pull.current.wheel += e.deltaY; if (pull.current.wheel > 260) { pull.current.wheel = 0; topicPeek.close(); } } else pull.current.wheel = 0;
+    if (e.deltaY < 0 && e.currentTarget.scrollTop <= 1) { pull.current.wheel += -e.deltaY; if (pull.current.wheel > 260) { pull.current.wheel = 0; topicPeek.close(); } } else pull.current.wheel = 0;
   };
 
   const go = () => {
-    if (!slug) return;
+    if (!slug && !drugId) return;
     if (origin.current) setNoteReturn(origin.current);
     topicPeek.close();
-    navigate(`/topic/${slug}`);
+    navigate(drugId ? `/pharmacology/drug/${drugId}?card=1` : `/topic/${slug}`);
   };
 
   return (
-    <Sheet open={Boolean(slug)} onOpenChange={(o) => !o && topicPeek.close()}>
+    <Sheet open={Boolean(raw)} onOpenChange={(o) => !o && topicPeek.close()}>
       <SheetContent side={wide ? "right" : "bottom"} className={wide ? "flex h-full w-[28rem] max-w-full flex-col gap-0 p-0 sm:max-w-md" : "flex h-[82dvh] flex-col gap-0 rounded-t-3xl p-0"}>
         <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-5 pb-4 pt-6 [-webkit-overflow-scrolling:touch]" data-peek-scroll ref={scroller} onScroll={onScroll} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onWheel={onWheel}>
-          {peek ? (
+          <div className="pointer-events-none -mt-3 mb-3 flex flex-col items-center" aria-hidden><span className="h-1 w-10 rounded-full bg-foreground/20" /><span className={`mt-1 text-[11px] font-semibold transition-opacity ${atTop ? "text-muted-foreground opacity-100" : "opacity-0"}`}>Pull down to close</span></div>
+          {drugId ? (
+            <Suspense fallback={<div className="h-40 animate-pulse rounded-2xl bg-muted" />}><DrugPeekBody id={drugId} /></Suspense>
+          ) : peek ? (
             <>
               <p className="pr-8 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{peek.category || "Quick read"}</p>
               <SheetTitle className="mt-1 pr-8 font-serif text-3xl font-bold leading-tight text-foreground">{peek.name}</SheetTitle>
@@ -103,7 +113,6 @@ export default function TopicPeekHost() {
                   ))}
                 </ul>
               )}
-              {(peek.points.length > 2 || peek.summary.length > 200) && <p className={`mt-5 pb-1 text-center text-xs font-semibold transition-colors ${atEnd ? "text-primary" : "text-muted-foreground/70"}`}>{atEnd ? "Keep pulling up to close" : "Scroll to the end, then keep going to close"}</p>}
               {!peek.summary && !peek.points.length && (filling
                 ? <div className="mt-5 space-y-3" role="status" aria-label="Loading" aria-live="polite">{[0, 1, 2, 3].map((i) => <div key={i} className="h-4 animate-pulse rounded bg-foreground/10" style={{ width: `${96 - i * 9}%` }} />)}<div className="h-20 animate-pulse rounded-xl bg-foreground/10" /></div>
                 : <p className="mt-4 text-[15px] text-muted-foreground">Open the full page to read about {peek.name}.</p>)}
@@ -113,7 +122,7 @@ export default function TopicPeekHost() {
           )}
         </div>
         <div className="shrink-0 border-t border-border bg-background px-5 py-3">
-          <button type="button" onClick={go} disabled={!peek} className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-[15px] font-bold text-primary-foreground disabled:opacity-60"><Maximize2 className="h-4 w-4" aria-hidden /> Open the full page</button>
+          <button type="button" onClick={go} disabled={!peek && !drugId} className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-[15px] font-bold text-primary-foreground disabled:opacity-60"><Maximize2 className="h-4 w-4" aria-hidden /> Open the full page</button>
         </div>
       </SheetContent>
     </Sheet>

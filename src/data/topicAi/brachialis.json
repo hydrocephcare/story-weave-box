@@ -1,0 +1,131 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The brachialis is a deep elbow flexor lying beneath the biceps. It originates on the humerus and inserts on the ulna, flexing the elbow regardless of forearm position. Understanding its anatomy helps diagnose elbow injuries and guide surgical approaches.",
+ "aka": [
+  "Brachial muscle"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The brachialis is a powerful, deep muscle that flexes the elbow. It is the main flexor when the forearm is in a neutral position and works independently of the biceps brachii.",
+   "b": [
+    "Deep to biceps",
+    "Origin: anterior humerus",
+    "Insertion: ulna"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lies beneath the biceps brachii, running from the humeral shaft to the ulna. Its fibers are oriented to produce elbow flexion.",
+   "b": [
+    "Anterior surface of humerus",
+    "Posterior surface of ulna"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Posterior to the biceps brachii, anterior to the brachioradialis. It is surrounded by the brachial fascia.",
+   "b": [
+    "Biceps brachii (superficial)",
+    "Brachioradialis (lateral)"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Supplied by the brachial artery and its branches.",
+   "b": [
+    "Brachial artery"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Innervated by the musculocutaneous nerve.",
+   "b": [
+    "Musculocutaneous nerve"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Primary function is elbow flexion, independent of forearm position. It contributes to forearm flexion strength.",
+   "b": [
+    "Elbow flexion",
+    "Stabilizes elbow joint"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Injuries include contusions, strains, and tendon ruptures. It can be involved in compartment syndrome of the anterior forearm.",
+   "t": [
+    {
+     "a": "X‑ray",
+     "b": "Rule out fracture; shows bone alignment."
+    },
+    {
+     "a": "MRI",
+     "b": "Detects muscle tears; shows extent of injury."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Quick assessment of tendon integrity when MRI unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "On exam, the brachialis is not visible but can be tested by elbow flexion with forearm neutral. It is the only elbow flexor that works when the forearm is supinated.",
+   "b": [
+    "Elbow flexion with forearm supinated = brachialis activation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause: rest, ice, compression, elevation. For tendon rupture, surgical repair may be needed. Monitor for compartment syndrome.",
+   "b": [
+    "Rest and elevation",
+    "Compression"
+   ],
+   "t": [
+    {
+     "a": "Compartment pressure measurement",
+     "b": "Detects compartment syndrome; high pressure indicates urgent fasciotomy."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Compartment syndrome",
+  "Severe pain with swelling",
+  "Loss of elbow function"
+ ],
+ "faq": [
+  {
+   "q": "How does the brachialis differ from the biceps brachii?",
+   "a": "Brachialis flexes the elbow regardless of forearm position; biceps also supinates the forearm."
+  },
+  {
+   "q": "Can the brachialis be seen on a physical exam?",
+   "a": "No, it is deep; you assess its function by elbow flexion with forearm neutral."
+  },
+  {
+   "q": "What is the most common injury to the brachialis?",
+   "a": "Strain from heavy lifting or sudden forceful flexion."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical course of the brachialis and its relation to the biceps brachii.",
+  "Explain how you would differentiate a brachialis strain from a biceps strain on physical exam.",
+  "Outline the management steps for a suspected compartment syndrome involving the brachialis."
+ ],
+ "related": [
+  "Biceps brachii",
+  "Brachioradialis",
+  "Anterior compartment syndrome",
+  "Musculocutaneous nerve",
+  "Brachial artery"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

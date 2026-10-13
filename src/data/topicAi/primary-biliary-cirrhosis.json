@@ -1,0 +1,113 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Primary biliary cholangitis is an autoimmune attack on small intrahepatic bile ducts, leading to cholestasis, fibrosis and eventual cirrhosis. It mainly affects middle‑aged women and presents with pruritus before jaundice.",
+ "aka": [
+  "Primary biliary cirrhosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "PBC is a chronic, progressive cholestatic liver disease caused by lymphocyte‑mediated destruction of intrahepatic bile ducts. Diagnosis requires a combination of clinical features, laboratory evidence of cholestasis, and a positive anti‑mitochondrial antibody (AMA).",
+   "b": [
+    "Chronic pruritus, fatigue, xanthomas",
+    "Elevated alkaline phosphatase >2× upper limit",
+    "Positive AMA in 90% of cases"
+   ],
+   "t": [
+    {
+     "a": "Alkaline phosphatase",
+     "b": "Is cholestasis present? High levels indicate bile duct injury."
+    },
+    {
+     "a": "AMA test",
+     "b": "Is an autoimmune process likely? Positive result confirms PBC."
+    },
+    {
+     "a": "Liver biopsy",
+     "b": "Is the disease stage known? Histology shows portal inflammation and bile duct loss."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Disease progression is staged by the Mayo Risk Score and histologic staging (Bismuth). Early stages show cholestasis; advanced stages reveal cirrhosis and portal hypertension.",
+   "b": [
+    "Mayo Score: age, bilirubin, albumin, INR, alkaline phosphatase"
+   ],
+   "t": [
+    {
+     "a": "Mayo Risk Score",
+     "b": "Predicts 5‑year survival. Higher scores mean worse prognosis."
+    },
+    {
+     "a": "Liver biopsy staging",
+     "b": "Assesses fibrosis extent; stage 4 indicates cirrhosis."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The exact trigger is unknown, but genetic susceptibility and environmental factors (e.g., infections, toxins) initiate an autoimmune response against the pyruvate dehydrogenase complex.",
+   "b": [
+    "Genetic predisposition (HLA‑DR8)",
+    "Infections (e.g., EBV, hepatitis C)",
+    "Exposure to herbal remedies or chemicals"
+   ],
+   "t": [
+    {
+     "a": "HLA typing",
+     "b": "Is a genetic risk factor present? Certain alleles increase susceptibility."
+    },
+    {
+     "a": "Serology for infections",
+     "b": "Rule out infectious mimics of cholestasis."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients first notice intense itching and fatigue. As disease advances, jaundice, dark urine, pale stools, and signs of portal hypertension appear.",
+   "b": [
+    "Pruritus, fatigue, xanthomas",
+    "Jaundice, dark urine, pale stools",
+    "Ascites, splenomegaly, variceal bleeding"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of jaundice",
+  "New onset confusion or seizures",
+  "Unexplained bleeding or severe abdominal pain"
+ ],
+ "faq": [
+  {
+   "q": "What causes the itching in PBC?",
+   "a": "Accumulation of bile acids in the skin triggers pruritus."
+  },
+  {
+   "q": "Can PBC be cured?",
+   "a": "No, but UDCA can slow progression and improve quality of life."
+  },
+  {
+   "q": "Is liver transplant needed?",
+   "a": "Yes, when cirrhosis or liver failure develops, transplant is the definitive treatment."
+  }
+ ],
+ "exam": [
+  "Explain how AMA positivity supports the diagnosis of PBC.",
+  "Describe the Mayo Risk Score and its clinical relevance.",
+  "Outline the first‑line treatment for PBC and why UDCA is preferred."
+ ],
+ "related": [
+  "Cholestatic liver diseases",
+  "Autoimmune hepatitis",
+  "Primary sclerosing cholangitis",
+  "Hepatocellular carcinoma",
+  "Liver fibrosis and cirrhosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

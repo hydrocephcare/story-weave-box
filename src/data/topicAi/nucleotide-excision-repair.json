@@ -1,0 +1,112 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Nucleotide Excision Repair (NER) removes bulky DNA lesions, especially UV‑induced pyrimidine dimers, keeping genome integrity. Defects cause xeroderma pigmentosum and increased cancer risk. Clinicians use NER status to guide photoprotection and cancer surveillance.",
+ "aka": [
+  "Excision Repair"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "NER is a DNA repair pathway that excises damaged nucleotides caused by UV light, chemicals, or replication errors. It preserves genomic stability and prevents mutations that lead to cancer.",
+   "b": [
+    "Bulky lesions trigger NER",
+    "Repair restores normal DNA sequence"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "NER involves damage recognition, local unwinding, dual incision, removal of a short oligonucleotide, DNA synthesis, and ligation. Key proteins include XPA, XPC, TFIIH, XPF-ERCC1, and XPG.",
+   "b": [
+    "Recognition by XPC or transcription‑coupled complexes",
+    "Incision by XPF‑ERCC1 (5’ side) and XPG (3’ side)",
+    "Gap filled by DNA polymerase δ/ε and ligated by DNA ligase I"
+   ],
+   "t": [
+    {
+     "a": "XPA immunohistochemistry",
+     "b": "Assesses functional NER capacity; positive staining indicates intact repair"
+    },
+    {
+     "a": "UV‑induced pyrimidine dimer assay",
+     "b": "Measures repair kinetics; delayed removal suggests NER defect"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "NER activity is regulated by transcription factors, chromatin remodeling, and post‑translational modifications. Stress signals upregulate repair genes.",
+   "b": [
+    "TFIIH helicase activity modulates incision efficiency",
+    "SUMOylation of XPA enhances DNA binding"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Mutations in NER genes (XPA, XPB, XPC, XPD, XPG, ERCC1) lead to xeroderma pigmentosum (XP), characterized by extreme photosensitivity and high skin cancer risk.",
+   "b": [
+    "XP groups A–G based on gene defect",
+    "XP patients develop basal cell, squamous cell, and melanoma early"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Clinicians must counsel XP patients on strict sun avoidance, use of broad‑spectrum sunscreens, and regular skin exams. In low‑resource settings, education and affordable protective measures are key.",
+   "b": [
+    "Early detection of actinic keratoses reduces melanoma incidence",
+    "Photoprotection reduces DNA damage burden"
+   ],
+   "t": [
+    {
+     "a": "Skin biopsy with histology",
+     "b": "Confirms dysplasia or carcinoma; guides excision"
+    },
+    {
+     "a": "Dermatoscopy",
+     "b": "Detects subclinical lesions; useful when biopsy resources limited"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that NER repairs bulky lesions, not base‑pair mismatches (MMR) or double‑strand breaks (HR/ NHEJ). XP patients are photosensitive but may have normal vision.",
+   "b": [
+    "NER defects present with skin, not neurological symptoms"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sunburn unresponsive to topical therapy",
+  "Rapidly growing skin lesions or nodules",
+  "Unexplained photosensitivity in childhood"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between NER and other DNA repair pathways?",
+   "a": "NER removes bulky, helix‑distorting lesions; mismatch repair fixes replication errors; homologous recombination repairs double‑strand breaks."
+  },
+  {
+   "q": "Can NER deficiency cause internal cancers?",
+   "a": "Primarily skin cancers; some studies suggest increased risk of brain tumors, but evidence is limited."
+  },
+  {
+   "q": "How is NER tested in a low‑resource setting?",
+   "a": "Use clinical criteria (photosensitivity, early skin cancers) and simple skin biopsies; advanced molecular tests may be unavailable."
+  }
+ ],
+ "exam": [
+  "Explain how NER removes UV‑induced pyrimidine dimers and why this is critical for preventing skin cancer.",
+  "Describe the clinical features of xeroderma pigmentosum and outline a management plan for a patient in a low‑resource hospital.",
+  "Differentiate between NER and mismatch repair defects in terms of genetic causes and clinical presentations."
+ ],
+ "related": [
+  "DNA repair mechanisms",
+  "Xeroderma pigmentosum",
+  "Photoprotection strategies",
+  "Skin cancer surveillance"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

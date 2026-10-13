@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Thrombin time (TT) measures the final step of clot formation: conversion of fibrinogen to fibrin. It helps identify fibrinogen deficiencies or the presence of thrombin inhibitors such as heparin.",
+ "aka": [
+  "Thrombin Clotting Time"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Thrombin time is a laboratory assay that adds excess thrombin to plasma and records the time for a clot to appear. Normal range is roughly 10–14 seconds.",
+   "b": [
+    "Reflects fibrinogen quantity and function",
+    "Detects direct thrombin inhibition"
+   ],
+   "t": [
+    {
+     "a": "Thrombin Time",
+     "b": "Does the patient have adequate functional fibrinogen or a thrombin inhibitor? Prolonged TT suggests low fibrinogen, dysfibrinogenemia, or heparin effect; normal TT excludes these."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "There is no formal staging; severity is inferred from TT length and associated clinical bleeding.",
+   "b": [
+    "Mild: TT 15–20 s, minor bleeding",
+    "Moderate: TT 20–30 s, mucosal bleeding",
+    "Severe: TT >30 s, spontaneous hemorrhage"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify whether the problem lies in fibrinogen quantity, quality, or thrombin inhibition.",
+   "b": [
+    "Fibrinogen deficiency (congenital or consumptive, e.g., massive bleeding, DIC)",
+    "Dysfibrinogenemia (genetic or acquired, e.g., liver disease, snake venom)",
+    "Heparin therapy or heparin contamination",
+    "Direct thrombin inhibitors (e.g., dabigatran, argatroban)",
+    "Rare inhibitors (e.g., lupus anticoagulant interfering with assay)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have mucosal bleeding, easy bruising, or prolonged bleeding after surgery. In low‑resource settings, severe fibrinogen loss can follow trauma, obstetric hemorrhage, or severe malaria.",
+   "b": [
+    "Bleeding from gums, nose, or IV sites",
+    "Excessive surgical or postpartum hemorrhage"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Combine TT with other coagulation tests to locate the defect.",
+   "t": [
+    {
+     "a": "Prothrombin Time (PT)",
+     "b": "Is the extrinsic pathway abnormal? Normal PT with prolonged TT points to fibrinogen or thrombin inhibition."
+    },
+    {
+     "a": "Activated Partial Thromboplastin Time (aPTT)",
+     "b": "Is the intrinsic pathway abnormal? Prolonged aPTT with normal TT suggests factor deficiencies, not fibrinogen problems."
+    },
+    {
+     "a": "Fibrinogen assay (Clauss method)",
+     "b": "What is the quantitative fibrinogen level? Low level confirms deficiency; normal level with prolonged TT suggests dysfibrinogenemia or inhibitor."
+    },
+    {
+     "a": "Heparin‑neutralizing agents (e.g., protamine test)",
+     "b": "Is heparin causing the prolongation? Reversal normalizes TT, confirming heparin effect."
+    },
+    {
+     "a": "Mixing study (patient plasma + normal plasma)",
+     "b": "Does adding normal plasma correct TT? Correction indicates deficiency; lack of correction suggests inhibitor."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe fibrinogen deficiency can precipitate uncontrolled hemorrhage, especially in trauma, obstetrics, or surgery.",
+   "b": [
+    "Rapidly falling fibrinogen in DIC",
+    "Massive postpartum hemorrhage",
+    "Uncontrolled bleeding after major surgery"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then replace fibrinogen or neutralize inhibitors.",
+   "b": [
+    "Fibrinogen concentrate or cryoprecipitate for deficiency or dysfibrinogenemia",
+    "Stop heparin or direct thrombin inhibitor; give protamine (heparin) or idarucizumab (dabigatran) if needed",
+    "Supportive care: maintain blood pressure, replace lost blood, monitor labs"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑check TT and fibrinogen after therapy. In chronic conditions, monitor periodically and educate patients on bleeding risk.",
+   "b": [
+    "Repeat TT 6–12 h after replacement",
+    "Screen for liver disease or ongoing consumption in DIC"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other clotting assays that assess earlier steps of the cascade.",
+   "b": [
+    "Prothrombin Time (PT) – evaluates extrinsic pathway, not fibrinogen conversion",
+    "Activated Partial Thromboplastin Time (aPTT) – evaluates intrinsic pathway",
+    "Bleeding time – assesses platelet function, not coagulation"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain conditions may give a normal TT despite a problem, or a prolonged TT unrelated to fibrinogen.",
+   "b": [
+    "High heparin levels can be neutralized by excess thrombin, giving a falsely normal TT",
+    "Low plasma fibrinogen with high levels of fibrin degradation products may yield borderline TT",
+    "Laboratory error: improper sample handling can artificially prolong TT"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Uncontrolled bleeding after trauma or surgery",
+  "Sudden massive postpartum hemorrhage",
+  "Rapidly dropping fibrinogen in DIC"
+ ],
+ "faq": [
+  {
+   "q": "Why is TT normal when PT and aPTT are abnormal?",
+   "a": "Because TT tests only the final step; PT/aPTT abnormalities usually reflect factor deficiencies, not fibrinogen or thrombin inhibition."
+  },
+  {
+   "q": "Can TT detect heparin effect?",
+   "a": "Yes; heparin prolongs TT, and the effect disappears after protamine neutralization."
+  },
+  {
+   "q": "What is the difference between fibrinogen deficiency and dysfibrinogenemia?",
+   "a": "Deficiency means low quantity; dysfibrinogenemia means normal quantity but abnormal function, both can prolong TT."
+  }
+ ],
+ "exam": [
+  "Explain how thrombin time helps differentiate between a fibrinogen deficiency and a heparin effect.",
+  "Interpret a coagulation panel with normal PT, prolonged aPTT, and normal TT.",
+  "List the first‑line treatment for a patient with a markedly prolonged TT due to low fibrinogen."
+ ],
+ "related": [
+  "Prothrombin Time",
+  "Activated Partial Thromboplastin Time",
+  "Fibrinogen assay",
+  "Disseminated Intravascular Coagulation",
+  "Heparin therapy",
+  "Direct thrombin inhibitors",
+  "Dysfibrinogenemia",
+  "Bleeding disorders"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

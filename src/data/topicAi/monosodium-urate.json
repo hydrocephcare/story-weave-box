@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Monosodium urate (MSU) crystals precipitate in joints when serum urate exceeds solubility, causing acute inflammatory arthritis (gout). Diagnosis relies on crystal identification and serum urate levels.",
+ "aka": [
+  "uric acid crystals",
+  "gout crystals"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Gout is the clinical syndrome caused by deposition of monosodium urate crystals in joints and soft tissues. Diagnosis requires finding needle‑shaped, negatively birefringent crystals on polarized microscopy, supported by hyperuricemia.",
+   "b": [
+    "Crystal analysis is the gold standard; serum urate may be normal during an acute attack."
+   ],
+   "t": [
+    {
+     "a": "Joint aspiration with polarized light microscopy",
+     "b": "Does the joint contain MSU crystals? Positive confirms gout; negative does not exclude it if crystals are absent."
+    },
+    {
+     "a": "Serum urate measurement",
+     "b": "Is urate >6.8 mg/dL? Elevated supports gout but can be normal during attacks; repeat after attack if needed."
+    },
+    {
+     "a": "Imaging (ultrasound, DECT)",
+     "b": "Are there double‑contour sign or tophi? Helps when aspiration unavailable; may miss early disease."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Gout is staged by frequency and joint involvement: intermittent acute attacks, persistent polyarticular disease, and chronic tophaceous gout.",
+   "b": [
+    "Acute: ≤1 joint, <2 weeks.",
+    "Polyarticular: >1 joint, recurrent.",
+    "Tophaceous: visible or palpable tophi, joint damage."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Hyperuricemia results from overproduction or under‑excretion of uric acid. The most common cause is reduced renal clearance, especially in men with obesity, hypertension, or diuretic use.",
+   "b": [
+    "Renal under‑excretion (diuretics, CKD).",
+    "Increased production (high purine diet, cell turnover, leukemia).",
+    "Genetic defects (renal urate transporters).",
+    "Secondary causes in low‑resource settings: HIV therapy, tuberculosis treatment (pyrazinamide), malaria, herbal remedies containing purines."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop sudden, severe joint pain, swelling, erythema, and warmth, classically in the first metatarsophalangeal joint. Attacks often awaken patients at night.",
+   "b": [
+    "Pain peaks within 24 h, lasts 3–10 days.",
+    "Tophi may appear after years of attacks."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Confirm crystal presence, assess urate burden, and rule out mimics.",
+   "b": [
+    "Joint aspiration is essential when diagnosis is uncertain."
+   ],
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Is there leukocytosis? May suggest infection; normal or mild rise supports gout."
+    },
+    {
+     "a": "Renal function tests",
+     "b": "Are kidneys impaired? Guides urate‑lowering drug choice."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled gout can lead to joint destruction, chronic kidney disease, and cardiovascular events.",
+   "b": [
+    "Rapidly enlarging tophus with skin ulceration.",
+    "Septic arthritis superimposed on gout.",
+    "Acute kidney injury from uric acid nephrolithiasis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the acute flare, then start long‑term urate‑lowering therapy (ULT) to keep serum urate <6 mg/dL.",
+   "b": [
+    "Acute: NSAIDs, colchicine, or corticosteroids—choose based on renal function and contraindications.",
+    "ULT: Allopurinol or febuxostat—avoid in severe liver disease; start after flare resolves.",
+    "Lifestyle: weight loss, limit purine‑rich foods, reduce alcohol."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor serum urate every 2–4 weeks after starting ULT until target achieved, then every 6–12 months. Adjust therapy for renal function and adherence.",
+   "b": [
+    "Check for tophi regression.",
+    "Re‑educate on diet and medication adherence."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic gout’s acute monoarthritis.",
+   "b": [
+    "Calcium pyrophosphate deposition disease (pseudogout) – positively birefringent rhomboid crystals.",
+    "Septic arthritis – purulent fluid, positive Gram stain.",
+    "Reactive arthritis – follows infection, no crystals."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serum urate may be normal during an acute attack, and inflammation can mask crystal detection.",
+   "b": [
+    "Normal urate does not rule out gout; repeat after attack.",
+    "Low‑grade inflammation may yield few crystals; consider repeat aspiration."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly spreading joint swelling, fever, or inability to move the joint – possible septic arthritis.",
+  "Severe kidney pain or hematuria – possible uric acid nephrolithiasis."
+ ],
+ "faq": [
+  {
+   "q": "Why can serum urate be normal during an acute gout attack?",
+   "a": "Inflammation drives urate into tissues, temporarily lowering blood levels."
+  },
+  {
+   "q": "What is the significance of negatively birefringent crystals?",
+   "a": "They confirm monosodium urate; under polarized light they appear yellow when aligned with the slow axis."
+  },
+  {
+   "q": "When should urate‑lowering therapy be started?",
+   "a": "After the acute flare resolves and the patient has had ≥2 attacks or has tophi."
+  }
+ ],
+ "exam": [
+  "Describe the microscopic appearance of monosodium urate crystals and its diagnostic importance.",
+  "List the major causes of hyperuricemia and indicate which is most common in low‑resource settings.",
+  "Explain the stepwise management of an acute gout flare and the rationale for initiating urate‑lowering therapy."
+ ],
+ "related": [
+  "Calcium pyrophosphate deposition disease",
+  "Septic arthritis",
+  "Hyperuricemia",
+  "Tophi",
+  "Renal urate transporters",
+  "NSAIDs in arthritis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

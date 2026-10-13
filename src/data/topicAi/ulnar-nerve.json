@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The ulnar nerve supplies motor and sensory function to the medial forearm, hand and fingers. Injury patterns reflect its long course and superficial position at the elbow and wrist.",
+ "aka": [
+  "ulnar nerve",
+  "nervus ulnaris"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The ulnar nerve is a terminal branch of the medial cord of the brachial plexus (C8‑T1). It travels down the arm, crossing the elbow in the cubital tunnel and the wrist in Guyon's canal.",
+   "b": [
+    "Provides motor to intrinsic hand muscles",
+    "Supplies sensation to the medial one‑and‑a‑half digits"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "In the arm it runs medial to the brachial artery, then pierces the medial intermuscular septum. At the elbow it lies posterior to the medial epicondyle within the cubital tunnel.",
+   "b": [
+    "Course: arm → cubital tunnel → forearm → Guyon's canal → hand"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Close to the brachial artery proximally, the median nerve laterally, and the flexor carpi ulnaris (FCU) which it innervates. At the wrist it lies superficial to the flexor retinaculum.",
+   "b": [
+    "Vascular: ulnar artery runs alongside",
+    "Muscular: FCU and flexor digitorum profundus (ulnar half)"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The ulnar nerve receives blood from the ulnar recurrent artery proximally and branches of the ulnar artery distally.",
+   "b": [
+    "Ischemia rare but can occur with severe forearm trauma"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Motor: FCU, medial half of flexor digitorum profundus, most intrinsic hand muscles. Sensory: skin over the medial hand, little finger, and half of the ring finger.",
+   "b": [
+    "Dual innervation of flexor pollicis brevis (median + ulnar)"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Enables wrist adduction, flexion of the fourth and fifth digits, and fine motor tasks like pinching and typing. Sensory input guides grip force and hand positioning.",
+   "b": [
+    "Key for precision grip",
+    "Protects hand from injury via sensation"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Compression at the cubital tunnel (cubital tunnel syndrome) or Guyon's canal (ulnar tunnel syndrome) causes sensory loss and intrinsic hand weakness. Trauma can transect the nerve.",
+   "b": [
+    "Symptoms: numbness in little finger, claw hand, weakened grip",
+    "Common causes: prolonged elbow flexion, repetitive pressure, fractures, iatrogenic injury"
+   ],
+   "t": [
+    {
+     "a": "Nerve conduction study",
+     "b": "Confirms demyelination vs axonal loss; guides prognosis"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Visualizes nerve swelling or entrapment when EMG unavailable"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Test sensation with light touch over the little finger and ulnar half of the ring finger. Test motor strength by asking the patient to hold a paper between thumb and little finger (Froment sign).",
+   "b": [
+    "Positive Froment sign suggests ulnar weakness",
+    "Weakness of finger abduction points to ulnar neuropathy"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Progressive weakness leading to loss of hand function",
+  "Severe pain or swelling after trauma suggesting nerve transection",
+  "Signs of infection (redness, fever) over the elbow or wrist"
+ ],
+ "faq": [
+  {
+   "q": "Why does a patient develop a claw hand?",
+   "a": "Loss of ulnar intrinsic muscles unbalances finger extensors, causing hyperextension at MCP joints and flexion at IP joints."
+  },
+  {
+   "q": "Can the ulnar nerve recover after compression?",
+   "a": "Yes, if decompression occurs before irreversible axonal loss; early physiotherapy improves outcomes."
+  },
+  {
+   "q": "Is the ulnar nerve ever used for grafts?",
+   "a": "It can be harvested for nerve grafts, but donor site morbidity (hand weakness) must be considered."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical course of the ulnar nerve from the brachial plexus to the hand.",
+  "Explain the clinical signs of ulnar neuropathy at the elbow versus the wrist.",
+  "Interpret a nerve conduction study showing slowed conduction velocity across the cubital tunnel."
+ ],
+ "related": [
+  "Median nerve",
+  "Radial nerve",
+  "Cubital tunnel syndrome",
+  "Guyon's canal syndrome",
+  "Flexor carpi ulnaris",
+  "Hand intrinsic muscles"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

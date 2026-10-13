@@ -1,0 +1,146 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Antimicrobial resistance (AMR) is the ability of microbes to survive drugs that normally kill them, driven by genetic changes and spread via plasmids. Clinicians must recognise patterns, use diagnostics wisely, and choose agents that overcome resistance while preserving future options.",
+ "aka": [
+  "antibiotic resistance"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "AMR occurs when bacteria acquire mechanisms—enzymatic inactivation, target alteration, efflux pumps, or reduced permeability—that render standard antibiotics ineffective. Diagnosis relies on culture and susceptibility testing, comparing isolate MICs to breakpoints.",
+   "b": [
+    "Identify resistant organism by culture + susceptibility",
+    "Use local antibiogram to interpret results"
+   ],
+   "t": [
+    {
+     "a": "Culture & susceptibility",
+     "b": "Result shows susceptible, intermediate, or resistant; guides drug choice"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by infection site, host factors, and resistance level. The CDC’s 3‑tier classification (susceptible, multidrug‑resistant, pan‑resistant) helps triage urgency and infection control measures.",
+   "b": [
+    "Multidrug‑resistant: non‑susceptibility to ≥1 agent in ≥3 classes",
+    "Pan‑resistant: no agents left"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Resistance emerges from selective pressure of inappropriate or excessive antibiotic use, then spreads via plasmid conjugation. In low‑resource settings, common drivers include unregulated over‑the‑counter antibiotics, sub‑therapeutic dosing, and co‑infection with TB, HIV, malaria, or hepatitis B that prompts frequent courses.",
+   "b": [
+    "Inappropriate prescribing",
+    "Self‑medication without prescription",
+    "Sub‑optimal dosing",
+    "Plasmid‑mediated gene transfer"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with standard infection signs (fever, pain, purulence) but fail to improve despite appropriate‑dose therapy, suggesting a resistant pathogen. Look for recurrent infections, recent antibiotic exposure, or travel to high‑resistance regions.",
+   "b": [
+    "Persistent fever after 48‑72 h of therapy",
+    "Repeated culture‑positive infections"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted testing confirms resistance and guides therapy. When labs are unavailable, use clinical algorithms and local resistance data.",
+   "t": [
+    {
+     "a": "Rapid molecular PCR for resistance genes",
+     "b": "Positive → likely resistant to that class; negative does not rule out other mechanisms"
+    },
+    {
+     "a": "MIC determination (broth microdilution)",
+     "b": "MIC ≤ breakpoint = susceptible; > breakpoint = resistant"
+    },
+    {
+     "a": "Gram stain & morphology",
+     "b": "Guides empiric choice while awaiting susceptibility"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Untreated resistant infections can progress to sepsis, organ failure, or death, especially in immunocompromised hosts or neonates. Early escalation is critical.",
+   "b": [
+    "Septic shock despite antibiotics",
+    "Rapidly rising lactate",
+    "Uncontrolled source of infection"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the identified pathogen with an agent that overcomes the resistance mechanism, then provide supportive care. Choose drugs based on PK/PD principles—time‑dependent vs concentration‑dependent—and avoid agents with high toxicity or known drug‑drug interactions in the patient.",
+   "b": [
+    "Beta‑lactamase inhibitor combos for ESBL producers",
+    "Vancomycin or linezolid for MRSA (target‑site alteration)",
+    "Avoid aminoglycosides in renal failure",
+    "Use carbapenems sparingly to preserve efficacy"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑culture after 48‑72 h to confirm clearance, adjust therapy based on response, and monitor for adverse effects. Prevent future AMR by antimicrobial stewardship, infection control, and patient education.",
+   "b": [
+    "Stewardship: narrow spectrum once susceptibilities known",
+    "Hand hygiene, isolation for MDR organisms",
+    "Vaccination to reduce infection burden"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Treatment failure due to poor drug absorption, inadequate source control, or non‑infectious inflammation can mimic AMR.",
+   "b": [
+    "Non‑adherence",
+    "Abscess not drained"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "MICs near breakpoints may be misinterpreted; some resistance mechanisms (e.g., efflux) are not detected by standard susceptibility panels, leading to false susceptibility reports.",
+   "b": [
+    "Borderline MICs require clinical judgement",
+    "Consider synergy testing for inducible resistance"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Septic shock, organ dysfunction, or rapid clinical deterioration despite appropriate therapy"
+ ],
+ "faq": [
+  {
+   "q": "Why does a bacterium become resistant to a drug it was once susceptible to?",
+   "a": "Selective pressure from antibiotic exposure favors survival of mutants or acquired genes that neutralise, expel, or evade the drug."
+  },
+  {
+   "q": "Can resistance be reversed once it develops?",
+   "a": "Stopping selective pressure can reduce resistant strains, but genetic changes often persist; prudent use slows spread."
+  },
+  {
+   "q": "How do I choose an empiric antibiotic in a setting with high AMR?",
+   "a": "Use local antibiogram data, consider infection source, patient risk factors, and select agents with activity against likely resistant organisms."
+  }
+ ],
+ "exam": [
+  "Explain the four main mechanisms by which bacteria develop antimicrobial resistance and give a clinical example for each.",
+  "Interpret a susceptibility report that shows an ESBL‑producing E. coli and outline the appropriate antibiotic class and stewardship considerations.",
+  "Describe how you would manage a patient with suspected carbapenem‑resistant Enterobacteriaceae infection in a low‑resource hospital."
+ ],
+ "related": [
+  "Pharmacokinetics & pharmacodynamics",
+  "Infection control",
+  "Antibiotic stewardship",
+  "Sepsis management",
+  "Beta‑lactam antibiotics",
+  "Methicillin‑resistant Staphylococcus aureus (MRSA)"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,147 @@
+{
+ "medical": true,
+ "subject": "Public health",
+ "summary": "Community health focuses on population-level interventions to prevent disease and promote health. It integrates surveillance, education, and primary care to address social determinants and reduce health inequities.",
+ "aka": [
+  "Population health",
+  "Community medicine"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Community health is the science and practice of improving health outcomes for groups through organized interventions, surveillance, and policy. Diagnosis is the identification of health problems at the population level using epidemiologic data and community assessments.",
+   "b": [
+    "Population health assessment",
+    "Health needs analysis"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by burden of disease, morbidity, mortality, and inequity. Staging uses metrics like Disability-Adjusted Life Years (DALYs) and the Global Burden of Disease framework.",
+   "b": [
+    "High burden: >10% population affected",
+    "Moderate burden: 1-10%",
+    "Low burden: <1%"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Root causes are social determinants: poverty, education, environment, and access to care. Biological factors include infectious agents (TB, malaria), chronic diseases (diabetes), and emerging threats (antimicrobial resistance).",
+   "b": [
+    "Poverty and malnutrition",
+    "Inadequate water and sanitation",
+    "Limited health literacy"
+   ],
+   "t": [
+    {
+     "a": "Community health survey",
+     "b": "High prevalence of anemia indicates nutritional deficiencies"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Community health problems manifest as clusters of illness, reduced life expectancy, and inequitable service access. Indicators include high infant mortality, vaccine gaps, and disease outbreaks.",
+   "b": [
+    "Elevated infant mortality rate",
+    "Low vaccination coverage",
+    "Frequent disease outbreaks"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigation relies on surveillance data, demographic health surveys, and sentinel site monitoring. Key tools are morbidity/mortality registries, GIS mapping, and rapid diagnostic tests.",
+   "b": [
+    "Demographic and Health Survey (DHS)",
+    "Sentinel surveillance",
+    "GIS mapping"
+   ],
+   "t": [
+    {
+     "a": "Rapid diagnostic test for malaria",
+     "b": "Positive result triggers treatment and vector control"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include sudden increases in disease incidence, outbreaks of vaccine-preventable diseases, and deteriorating maternal health indicators.",
+   "b": [
+    "Unexplained spike in measles cases",
+    "Rising maternal mortality",
+    "Sudden rise in drug-resistant infections"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management integrates primary care, community health workers, and policy interventions. Strategies include health education, vaccination campaigns, vector control, and strengthening referral systems.",
+   "b": [
+    "Deploy community health workers for home visits",
+    "Implement mass vaccination drives",
+    "Improve water and sanitation infrastructure"
+   ],
+   "t": [
+    {
+     "a": "Antibiotic stewardship program",
+     "b": "Shows lower rates of resistant infections"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up involves monitoring health indicators, evaluating program impact, and adjusting interventions. Prevention focuses on health promotion, disease surveillance, and equitable access to care.",
+   "b": [
+    "Quarterly health indicator reviews",
+    "Community health education sessions",
+    "Policy advocacy for universal health coverage"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Community health is often mistaken for public health, which is broader, or for primary care, which is individual-focused. It is distinct in its population-level focus and preventive orientation.",
+   "b": [
+    "Public health (policy and population)",
+    "Primary care (individual)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Surveillance data may underreport due to limited testing, and self-reported surveys can be biased. Low-resource settings may lack laboratory confirmation, leading to misclassification.",
+   "b": [
+    "Underreporting of malaria due to limited testing",
+    "Self-reported vaccination status may overestimate coverage"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the main goal of community health?",
+   "a": "To improve health outcomes for populations through prevention, education, and equitable access to care."
+  },
+  {
+   "q": "How do community health workers contribute?",
+   "a": "They provide culturally appropriate health education, basic services, and link patients to higher-level care."
+  },
+  {
+   "q": "Why is surveillance important?",
+   "a": "It detects disease trends early, guiding timely interventions and resource allocation."
+  }
+ ],
+ "exam": [
+  "Explain how social determinants influence community health outcomes.",
+  "Describe the role of community health workers in a low-resource setting.",
+  "Outline a surveillance strategy for detecting an outbreak of a vaccine-preventable disease."
+ ],
+ "related": [
+  "Epidemiology",
+  "Health promotion",
+  "Health policy",
+  "Maternal and child health",
+  "Infectious disease control"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

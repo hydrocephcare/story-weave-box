@@ -1,0 +1,123 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Bronchoalveolar lavage (BAL) samples cells and fluid from the distal airways, allowing direct microbiologic and immunologic analysis of lung disease. It guides diagnosis of infections, interstitial lung disorders, and malignancy, especially when imaging is non‑specific.",
+ "aka": [
+  "Bronchoalveolar wash"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "BAL is performed during bronchoscopy by instilling sterile saline into a subsegmental bronchus and retrieving the fluid. The sample reflects the cellular and microbial environment of the alveoli.",
+   "b": [
+    "Provides quantitative cell counts (macrophages, neutrophils, lymphocytes, eosinophils).",
+    "Enables culture, PCR, antigen detection, and cytology."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "BAL does not describe a single organism; it is a diagnostic tool that can detect bacteria, fungi, viruses, and parasites directly from the lung.",
+   "b": [
+    "Cellular patterns (e.g., lymphocytosis) suggest specific interstitial diseases.",
+    "Microbial identification guides targeted therapy."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Not applicable – BAL is a sampling technique, not a pathogen."
+  },
+  {
+   "h": "Disease it causes",
+   "p": "BAL itself is safe; complications are rare and include transient hypoxia, bleeding, or bronchospasm.",
+   "b": [
+    "Risk higher in patients with severe hypoxemia or coagulopathy."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Interpretation of BAL combines cellular differential, microbiology, and cytology to narrow the differential diagnosis.",
+   "b": [
+    "Lymphocytosis (>20%) points to sarcoidosis or hypersensitivity pneumonitis.",
+    "Neutrophil predominance (>50%) suggests bacterial pneumonia or acute lung injury.",
+    "Eosinophilia (>5%) indicates eosinophilic pneumonia or parasitic infection."
+   ],
+   "t": [
+    {
+     "a": "Cell differential count",
+     "b": "What type of inflammatory pattern is present? Guides toward interstitial vs. infectious etiologies."
+    },
+    {
+     "a": "Gram stain & culture",
+     "b": "Is a bacterial pathogen present? Positive growth confirms infection; negative does not exclude atypical organisms."
+    },
+    {
+     "a": "Gomori methenamine silver (GMS) stain",
+     "b": "Are Pneumocystis jirovecii cysts seen? Positive result diagnoses PCP, especially in HIV or immunosuppressed patients."
+    },
+    {
+     "a": "PCR for viral DNA/RNA",
+     "b": "Is a viral pathogen (e.g., CMV, HSV) present? Positive PCR supports viral pneumonitis when other tests are negative."
+    },
+    {
+     "a": "Cytology",
+     "b": "Are malignant cells present? Detects primary lung cancer or metastases when imaging is inconclusive."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management follows the identified cause; BAL results direct antimicrobial choice, immunosuppression, or oncologic therapy.",
+   "b": [
+    "Bacterial infection → empiric β‑lactam ± macrolide, then narrow based on culture.",
+    "Pneumocystis jirovecii → high‑dose trimethoprim‑sulfamethoxazole; adjunct steroids if PaO2 <70 mmHg.",
+    "Sarcoidosis with lymphocytosis → systemic corticosteroids; consider steroid‑sparing agents if chronic.",
+    "Hypersensitivity pneumonitis → antigen avoidance, corticosteroids for severe disease."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and clinical reasoning.",
+   "b": [
+    "BAL lymphocytosis >20% = sarcoidosis or HP; differentiate by exposure history and CD4/CD8 ratio.",
+    "GMS‑positive cysts in BAL = Pneumocystis pneumonia, common in HIV, transplant, steroids.",
+    "Neutrophil‑rich BAL with positive culture = typical bacterial pneumonia; consider anaerobes in aspiration."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypoxemia (SpO2 <85% on room air) after BAL",
+  "Massive hemoptysis or uncontrolled bleeding",
+  "Rapid respiratory deterioration despite therapy"
+ ],
+ "faq": [
+  {
+   "q": "Can BAL replace a lung biopsy?",
+   "a": "BAL can provide a diagnosis in many infections and interstitial diseases, but tissue biopsy is needed when cellular patterns are non‑diagnostic or malignancy is suspected."
+  },
+  {
+   "q": "What if culture facilities are unavailable?",
+   "a": "Send the sample for PCR or antigen testing, which are less dependent on culture; if none are possible, treat empirically based on clinical picture."
+  },
+  {
+   "q": "Why is the CD4/CD8 ratio useful?",
+   "a": "A high ratio (>3.5) supports sarcoidosis, while a low ratio (<1) favors hypersensitivity pneumonitis."
+  }
+ ],
+ "exam": [
+  "Explain how BAL cell differentials help differentiate sarcoidosis from hypersensitivity pneumonitis.",
+  "List the microbiologic stains and tests performed on BAL fluid to diagnose Pneumocystis jirovecii pneumonia.",
+  "Describe the immediate complications of BAL and the steps to manage them."
+ ],
+ "related": [
+  "Bronchoscopy",
+  "Transbronchial lung biopsy",
+  "High‑resolution CT of the chest",
+  "Pulmonary alveolar proteinosis",
+  "Acute respiratory distress syndrome",
+  "HIV‑associated opportunistic infections"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

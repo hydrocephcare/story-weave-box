@@ -1,0 +1,142 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The clavicle is a curved bone that connects the arm to the trunk, stabilising the shoulder and acting as a strut. Its shape and attachments influence shoulder mechanics and are key in trauma assessment.",
+ "aka": [
+  "collarbone"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The clavicle is the longest and most lateral of the thoracic bones, forming the medial part of the shoulder girdle. It bridges the sternum and scapula, providing a rigid yet flexible link that allows a wide range of arm movements while protecting neurovascular structures.",
+   "b": [
+    "Longest thoracic bone",
+    "Curved S‑shaped",
+    "Acts as a strut"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lies superficially on the superior thoracic wall, extending from the sternoclavicular joint medially to the acromioclavicular joint laterally. The bone has a convex medial surface, a concave lateral surface, and a narrow, flat shaft.",
+   "b": [
+    "Sternoclavicular joint medially",
+    "Acromioclavicular joint laterally"
+   ],
+   "t": [
+    {
+     "a": "X‑ray",
+     "b": "A displaced fracture indicates need for reduction or surgery"
+    }
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Medially, the sternum and mediastinal vessels lie beneath; laterally, the acromion and deltoid muscle overlay. The subclavius muscle and brachial plexus run underneath the clavicle.",
+   "b": [
+    "Sternum medially",
+    "Acromion laterally"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Shows hematoma or muscle tear"
+    }
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The supraclavicular artery and the thoracoacromial artery give off branches that perfuse the clavicle and surrounding tissues.",
+   "b": [
+    "Supraclavicular artery",
+    "Thoracoacromial artery"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The brachial plexus roots pass beneath the clavicle; the supraclavicular nerves provide cutaneous sensation over the clavicle.",
+   "b": [
+    "Brachial plexus roots",
+    "Supraclavicular nerves"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "It stabilises the shoulder, allows arm elevation, and protects neurovascular structures by acting as a lever and a protective shield.",
+   "b": [
+    "Stabilises shoulder",
+    "Allows arm elevation",
+    "Protects neurovascular bundle"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Fractures are common in falls or traffic accidents. Complications include malunion, nonunion, neurovascular injury, and shoulder dysfunction. In low‑resource settings, delayed presentation can lead to chronic disability.",
+   "b": [
+    "Most common fracture in children and adults"
+   ],
+   "t": [
+    {
+     "a": "Plain radiograph",
+     "b": "Guides treatment plan"
+    },
+    {
+     "a": "CT scan",
+     "b": "Helps plan surgical approach"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that a midshaft fracture is the most frequent. A displaced fracture can compress the brachial plexus, causing numbness in the arm. In children, the fracture often remodels, whereas adults may need surgical fixation.",
+   "b": [
+    "Midshaft fractures are most common",
+    "Displacement can compress brachial plexus"
+   ],
+   "t": [
+    {
+     "a": "Clinical exam",
+     "b": "Loss of sensation or motor function indicates plexus involvement"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pain with inability to move arm",
+  "Visible deformity",
+  "Numbness or tingling in arm",
+  "Loss of shoulder function"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common type of clavicle fracture?",
+   "a": "The midshaft fracture is the most frequent, accounting for about 70% of all clavicle fractures."
+  },
+  {
+   "q": "Can a clavicle fracture heal on its own?",
+   "a": "Yes, especially in children and in non‑displaced fractures; the bone remodels well over time."
+  },
+  {
+   "q": "What are the risks of untreated clavicle fractures?",
+   "a": "Malunion, chronic pain, shoulder dysfunction, and potential neurovascular injury if the fracture is displaced."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical course of the clavicle and its relevance to shoulder stability.",
+  "Explain the clinical approach to a patient with a suspected midshaft clavicle fracture, including key investigations and management options.",
+  "Identify the neurovascular structures at risk in a displaced clavicle fracture and explain how to assess for injury."
+ ],
+ "related": [
+  "Scapula",
+  "Sternoclavicular joint",
+  "Acromioclavicular joint",
+  "Brachial plexus",
+  "Fracture management",
+  "Orthopaedic trauma",
+  "Shoulder girdle",
+  "Neurovascular injury"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

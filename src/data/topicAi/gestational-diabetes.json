@@ -1,0 +1,171 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Gestational diabetes is glucose intolerance first detected during pregnancy, driven by placental hormones and insulin resistance. It requires early screening, lifestyle modification, and pharmacologic control to prevent maternal and fetal complications.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Gestational diabetes mellitus (GDM) is glucose intolerance that begins or is first recognized during pregnancy. Diagnosis is based on an oral glucose tolerance test (OGTT) performed between 24–28 weeks gestation or earlier if risk factors are present.",
+   "b": [
+    "Screening at 24–28 weeks or earlier for high‑risk women"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The International Association of Diabetes and Pregnancy Study Groups (IADPSG) criteria stage GDM into mild, moderate, or severe based on fasting and post‑load glucose levels. Severity guides treatment intensity.",
+   "b": [
+    "Mild: fasting 5.1–5.5 mmol/L, 2‑h 7.8–8.5 mmol/L",
+    "Moderate: fasting 5.6–6.0 mmol/L, 2‑h 8.6–10.0 mmol/L",
+    "Severe: fasting >6.0 mmol/L or 2‑h >10.0 mmol/L"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary driver is pregnancy‑induced insulin resistance due to placental hormones (human placental lactogen, progesterone, cortisol). Secondary factors include obesity, family history of diabetes, and prior GDM.",
+   "b": [
+    "Insulin resistance from placental hormones",
+    "Obesity and metabolic syndrome",
+    "Family history of type 2 diabetes",
+    "Prior GDM"
+   ],
+   "t": [
+    {
+     "a": "HbA1c",
+     "b": "Assesses average glucose over 3 months; useful if OGTT unavailable. Elevated HbA1c (>6.5%) suggests pre‑existing diabetes."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Most women are asymptomatic. Mild hyperglycaemia may cause increased thirst or urination. Severe cases can present with polyuria, polydipsia, or signs of pre‑eclampsia.",
+   "b": [
+    "Often silent",
+    "Polyuria and polydipsia in severe cases"
+   ],
+   "t": [
+    {
+     "a": "Fasting glucose",
+     "b": "Elevated fasting glucose (>5.1 mmol/L) indicates impaired fasting glucose."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Random glucose",
+     "b": "A value >11.1 mmol/L in a symptomatic patient supports GDM diagnosis."
+    },
+    {
+     "a": "HbA1c",
+     "b": "A value >6.5% suggests pre‑existing diabetes; <6.5% supports GDM."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed for signs of pre‑eclampsia, severe hyperglycaemia, or fetal distress. Complications include macrosomia, shoulder dystocia, neonatal hypoglycaemia, and future type 2 diabetes.",
+   "b": [
+    "Pre‑eclampsia",
+    "Severe hyperglycaemia",
+    "Fetal distress"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "Hypertension >140/90 mmHg indicates pre‑eclampsia risk."
+    },
+    {
+     "a": "Fetal ultrasound",
+     "b": "Macrosomia or growth restriction suggests poor glycaemic control."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First line is dietary counseling and physical activity. If targets are not met, metformin or insulin is added. Metformin is preferred in low‑resource settings due to ease of use; insulin is reserved for severe or uncontrolled cases.",
+   "b": [
+    "Diet and exercise",
+    "Metformin if targets unmet",
+    "Insulin for severe or uncontrolled"
+   ],
+   "t": [
+    {
+     "a": "Metformin",
+     "b": "Improves insulin sensitivity; chosen for oral administration and low cost."
+    },
+    {
+     "a": "Insulin",
+     "b": "Used when glycaemic targets cannot be achieved with metformin or in severe cases."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Weekly glucose monitoring during treatment, with postpartum glucose testing at 6–12 weeks. Prevention focuses on healthy weight, balanced diet, and regular exercise before and during pregnancy.",
+   "b": [
+    "Weekly glucose checks",
+    "Post‑partum glucose test at 6–12 weeks"
+   ],
+   "t": [
+    {
+     "a": "Post‑partum OGTT",
+     "b": "Detects persistent diabetes; a positive result indicates need for long‑term management."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Type 1 diabetes, type 2 diabetes, and pre‑existing diabetes can mimic GDM. Distinguishing features include timing of onset and response to pregnancy‑related insulin resistance.",
+   "b": [
+    "Type 1 diabetes",
+    "Type 2 diabetes",
+    "Pre‑existing diabetes"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "HbA1c may be falsely low in early pregnancy due to increased red cell turnover. OGTT can be affected by recent meals or illness.",
+   "b": [
+    "HbA1c falsely low early pregnancy",
+    "OGTT affected by recent illness"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Hypertension >140/90 mmHg",
+  "Severe hyperglycaemia (fasting >10 mmol/L)",
+  "Fetal distress on ultrasound"
+ ],
+ "faq": [
+  {
+   "q": "Can GDM be prevented?",
+   "a": "Maintaining a healthy weight, balanced diet, and regular exercise before and during pregnancy reduces risk."
+  },
+  {
+   "q": "Is metformin safe in pregnancy?",
+   "a": "Yes, it is considered safe and is preferred in low‑resource settings when insulin is unavailable."
+  },
+  {
+   "q": "Will I develop type 2 diabetes after pregnancy?",
+   "a": "About 50% of women with GDM develop type 2 diabetes within 10 years; regular follow‑up is essential."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of insulin resistance in pregnancy and how it leads to GDM.",
+  "Outline the diagnostic criteria for GDM and describe the management steps if glucose targets are not met.",
+  "Discuss the potential complications of untreated GDM for both mother and fetus."
+ ],
+ "related": [
+  "Pre‑eclampsia",
+  "Macrosomia",
+  "Post‑partum diabetes",
+  "Insulin resistance",
+  "Metformin therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

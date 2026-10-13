@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Hyperosmolar Hyperglycaemic State (HHS) is a life‑threatening diabetic emergency with extreme hyperglycaemia, high plasma osmolality, severe dehydration and minimal ketosis, usually in older type‑2 diabetics.",
+ "aka": [
+  "Hyperosmolar non‑ketotic coma",
+  "HONK"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "HHS is defined by plasma glucose >30 mmol/L (≈540 mg/dL), serum osmolality >320 mOsm/kg, profound dehydration, and absent or mild ketosis. Diagnosis requires excluding diabetic ketoacidosis (DKA).",
+   "b": [
+    "Glucose >30 mmol/L",
+    "Osmolality >320 mOsm/kg",
+    "Ketones negative or <0.6 mmol/L",
+    "Effective serum bicarbonate usually >18 mmol/L"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the degree of dehydration, osmolality, and neurologic status. Mild (dehydration <5 %), moderate (5‑10 %), severe (>10 % or coma).",
+   "b": [
+    "Mild: osmolality 320‑350 mOsm/kg, alert",
+    "Moderate: osmolality 350‑400 mOsm/kg, confusion",
+    "Severe: osmolality >400 mOsm/kg, seizures/coma"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Any precipitant that raises glucose or worsens dehydration can trigger HHS. In low‑resource settings infections are common triggers.",
+   "b": [
+    "Infection (pneumonia, urinary tract, sepsis, TB, malaria)",
+    "Poor oral intake or vomiting",
+    "New or stopped glucose‑lowering drugs",
+    "Acute stroke or myocardial infarction",
+    "Use of corticosteroids or sympathomimetics"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop progressive polyuria, polydipsia, and weight loss over days, then present with lethargy, dehydration, and sometimes focal neurologic signs.",
+   "b": [
+    "Dry mucous membranes, poor skin turgor",
+    "Weak pulse, tachycardia",
+    "Altered mental status ranging from confusion to coma"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Laboratory and bedside tests confirm hyperglycaemia, osmolality, and rule out ketosis.",
+   "t": [
+    {
+     "a": "Plasma glucose",
+     "b": "Is hyperglycaemia severe enough for HHS? >30 mmol/L confirms diagnosis"
+    },
+    {
+     "a": "Serum osmolality (calculated)",
+     "b": "Is plasma osmolality >320 mOsm/kg? Indicates severe dehydration and risk of cerebral edema"
+    },
+    {
+     "a": "Serum ketones / β‑hydroxybutyrate",
+     "b": "Are ketones present? Minimal/absent supports HHS, high levels suggest DKA"
+    },
+    {
+     "a": "Electrolytes, BUN/creatinine",
+     "b": "What is the degree of dehydration and electrolyte disturbance? Guides fluid replacement"
+    },
+    {
+     "a": "Arterial blood gas",
+     "b": "Is there metabolic acidosis? Bicarbonate >18 mmol/L favours HHS"
+    },
+    {
+     "a": "CBC, blood cultures, urine culture",
+     "b": "Is an infection present? Identifies precipitating cause"
+    },
+    {
+     "a": "ECG",
+     "b": "Are there potassium or calcium abnormalities? Detects cardiac risk before fluid shifts"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Without rapid treatment, HHS can cause cerebral edema, thromboembolic events, and multi‑organ failure.",
+   "b": [
+    "Severe neurologic decline (seizures, coma)",
+    "Rapid rise in serum sodium (>160 mmol/L)",
+    "Signs of myocardial ischemia or arrhythmia",
+    "Acute kidney injury"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the precipitating cause, then replace fluids, correct electrolytes, and lower glucose gradually. Monitor vitals, glucose, and electrolytes closely.",
+   "b": [
+    "IV isotonic saline 0.9% to restore intravascular volume (first 1‑2 L unless cardiac failure)",
+    "Switch to 0.45% saline once corrected sodium approaches normal",
+    "Add IV insulin infusion after initial fluid resuscitation; low dose to avoid rapid osmolar shifts",
+    "Replace potassium once serum K⁺ >3.3 mmol/L; monitor hourly",
+    "Treat infection with appropriate antibiotics; consider antimalarial or anti‑TB therapy where relevant"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute recovery, optimise diabetes control, educate on sick‑day rules, and arrange regular monitoring.",
+   "b": [
+    "Review oral hypoglycaemic regimen or insulin dose",
+    "Teach patients to check glucose and hydrate during illness",
+    "Schedule early outpatient review within 1‑2 weeks"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that share hyperglycaemia or altered mental status can be mistaken for HHS.",
+   "b": [
+    "Diabetic ketoacidosis – prominent ketosis, lower glucose",
+    "Hyperglycaemic crisis due to medication overdose – may have similar labs but different trigger",
+    "Septic encephalopathy – infection without extreme hyperglycaemia"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain lab values may appear normal despite severe disease.",
+   "b": [
+    "Serum sodium may be falsely low (pseudohyponatraemia) due to hyperglycaemia; correct using glucose‑adjusted formula",
+    "Bicarbonate can be normal early, masking evolving acidosis",
+    "Ketone strips may miss low‑level ketonaemia; use β‑hydroxybutyrate assay if doubt"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly worsening confusion or coma",
+  "Seizures or focal neurologic deficits",
+  "Chest pain or shortness of breath suggesting cardiac ischemia"
+ ],
+ "faq": [
+  {
+   "q": "Why is ketosis minimal in HHS?",
+   "a": "Residual insulin suppresses lipolysis, so glucose rises without the massive fatty‑acid breakdown that produces ketones."
+  },
+  {
+   "q": "Can HHS occur in type 1 diabetes?",
+   "a": "Rarely, because type 1 patients usually lack enough insulin to prevent ketosis, leading to DKA instead."
+  },
+  {
+   "q": "What is the most important immediate therapy?",
+   "a": "Aggressive isotonic fluid replacement to restore perfusion and reduce plasma osmolality."
+  }
+ ],
+ "exam": [
+  "List the diagnostic criteria for HHS and explain how they differ from DKA.",
+  "Describe the step‑wise fluid management plan for a patient with severe HHS.",
+  "Identify three common precipitating factors for HHS in low‑resource settings and how they influence treatment."
+ ],
+ "related": [
+  "Diabetic ketoacidosis",
+  "Type 2 diabetes mellitus",
+  "Sepsis",
+  "Acute kidney injury",
+  "Electrolyte disturbances",
+  "Cerebral edema"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

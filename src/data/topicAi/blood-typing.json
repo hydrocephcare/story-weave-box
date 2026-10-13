@@ -1,0 +1,141 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Blood typing determines ABO and Rh antigens on red cells and corresponding plasma antibodies. It guides transfusion safety, pregnancy management, and organ transplantation.",
+ "aka": [
+  "Blood grouping",
+  "ABO/Rh typing"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Blood typing identifies the antigens (A, B, Rh(D)) on red blood cells and the naturally occurring antibodies in plasma using agglutination reactions.",
+   "b": [
+    "ABO system: A, B, AB, O based on A/B antigens.",
+    "Rh system: Positive if D antigen present, negative if absent."
+   ],
+   "t": [
+    {
+     "a": "Forward (cell) typing",
+     "b": "Which antigens are on the RBC surface? Positive reaction = antigen present."
+    },
+    {
+     "a": "Reverse (serum) typing",
+     "b": "Which antibodies are in the plasma? Agglutination = corresponding antibody present."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Blood type is genetically inherited; no disease causes a change, but antibodies can be altered by exposure to foreign blood, pregnancy, or transfusion.",
+   "b": [
+    "Inherited ABO and Rh genes (Mendelian inheritance).",
+    "Alloimmunisation after transfusion or pregnancy."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients are usually asymptomatic; the relevance appears when a transfusion, organ transplant, or pregnancy is planned.",
+   "b": [
+    "Unexpected hemolysis after transfusion suggests mistyped blood.",
+    "Hemolytic disease of the newborn (HDN) in Rh‑negative mother with Rh‑positive fetus."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Standard serologic testing is performed at the bedside or laboratory; in low‑resource settings, slide or tube methods are used.",
+   "b": [
+    "If reagents unavailable, use known‑type control cells to infer patient type."
+   ],
+   "t": [
+    {
+     "a": "ABO forward typing",
+     "b": "Does the patient's RBC agglutinate with anti‑A or anti‑B? Positive = antigen present."
+    },
+    {
+     "a": "ABO reverse typing",
+     "b": "Does the patient's serum agglutinate with A or B cells? Positive = corresponding antibody present."
+    },
+    {
+     "a": "Rh(D) typing",
+     "b": "Does the patient's RBC agglutinate with anti‑D? Positive = Rh‑positive."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Incorrect typing can cause acute hemolytic transfusion reactions, renal failure, or fatal outcomes.",
+   "b": [
+    "Sudden fever, chills, back pain after transfusion.",
+    "Dark urine and falling hemoglobin."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Ensure correct type matching before any blood product is given; treat reactions promptly and prevent alloimmunisation.",
+   "b": [
+    "Use O‑negative blood for emergency transfusion when type unknown.",
+    "Give IV fluids and diuretics for hemolysis; consider steroids for severe immune reactions.",
+    "Document antibodies and provide a patient blood management card."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Record the patient’s ABO/Rh type in all medical records and educate about the importance of informing healthcare workers.",
+   "b": [
+    "Screen pregnant Rh‑negative women and give anti‑D immunoglobulin at 28 weeks and postpartum if baby is Rh‑positive.",
+    "Encourage patients to carry a transfusion card."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Blood typing is distinct from blood cross‑matching, which tests compatibility between donor and recipient beyond ABO/Rh.",
+   "b": [
+    "Cross‑match checks for other antibodies; typing only identifies ABO/Rh."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Weak D variants or subgroups of A/B can give false‑negative or false‑positive results, especially with low‑quality reagents.",
+   "b": [
+    "Weak D may be reported as Rh‑negative; confirm with molecular testing if available.",
+    "A subgroup may not react strongly with anti‑A, leading to misclassification as O."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute hemolytic transfusion reaction after blood administration",
+  "Newborn jaundice with suspected Rh incompatibility"
+ ],
+ "faq": [
+  {
+   "q": "Why is reverse typing needed?",
+   "a": "It confirms the plasma antibodies, catching errors in forward typing and detecting weak subgroups."
+  },
+  {
+   "q": "Can a person change blood type?",
+   "a": "No, the genetic ABO/Rh type is fixed; only antibodies can change after exposure."
+  },
+  {
+   "q": "What is the safest emergency blood type?",
+   "a": "O‑negative, because it lacks A, B, and D antigens."
+  }
+ ],
+ "exam": [
+  "Explain how forward and reverse blood typing complement each other and what discordant results indicate.",
+  "List the steps to manage an acute hemolytic transfusion reaction.",
+  "Describe the protocol for preventing Rh‑negative maternal alloimmunisation."
+ ],
+ "related": [
+  "Blood transfusion compatibility",
+  "Hemolytic disease of the newborn",
+  "Cross‑matching",
+  "Transfusion reactions",
+  "Rh immunoglobulin prophylaxis",
+  "Blood group genetics"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

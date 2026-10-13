@@ -1,0 +1,153 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Varicose veins are dilated, tortuous superficial veins caused by chronic venous hypertension and valve incompetence. They are common, especially in women, and can progress to chronic venous insufficiency.",
+ "aka": [
+  "Superficial venous insufficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Varicose veins are visibly enlarged superficial veins, usually in the legs, diagnosed by clinical inspection and duplex ultrasound confirming reflux.",
+   "b": [
+    "Visible, palpable, >3 mm diameter",
+    "Duplex shows reverse flow >0.5 s"
+   ],
+   "t": [
+    {
+     "a": "Duplex ultrasound",
+     "b": "Does the vein have reflux? → Confirms venous insufficiency; normal flow rules out significant reflux."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The CEAP classification grades clinical severity from C0 (no signs) to C6 (active ulcer). Staging guides treatment intensity.",
+   "b": [
+    "C2: visible varices",
+    "C3: edema",
+    "C4: skin changes",
+    "C5‑C6: ulceration"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Chronic venous hypertension from valve failure is primary; secondary causes increase pressure or damage valves.",
+   "b": [
+    "Primary valvular incompetence (familial)",
+    "Obesity, prolonged standing, pregnancy",
+    "Post‑thrombotic syndrome",
+    "Pelvic congestion (e.g., from pregnancy or portal hypertension)",
+    "Infections (e.g., lymphatic filariasis) in low‑resource settings"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients notice bulging, blue‑purple veins, heaviness, aching, and sometimes swelling after prolonged standing.",
+   "b": [
+    "Pain worsens after day",
+    "Improvement with leg elevation",
+    "Possible itching or skin discoloration"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Focused imaging and labs identify reflux, rule out DVT, and detect contributing systemic disease.",
+   "t": [
+    {
+     "a": "Duplex ultrasound",
+     "b": "Is there reflux or obstruction? → Positive reflux confirms diagnosis; no reflux suggests other causes."
+    },
+    {
+     "a": "Ankle‑brachial index (ABI)",
+     "b": "Is arterial disease present? → Low ABI (<0.9) contraindicates compression therapy."
+    },
+    {
+     "a": "CBC, CRP",
+     "b": "Is there infection or inflammation? → Elevated markers may indicate cellulitis or thrombophlebitis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications include chronic venous insufficiency, ulceration, superficial thrombophlebitis, and rare bleeding.",
+   "b": [
+    "Skin ulcer (C6)",
+    "Sudden pain with warmth → thrombophlebitis",
+    "Rapid swelling → possible DVT"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, use compression, and consider procedural correction when symptoms are moderate‑severe.",
+   "b": [
+    "Compression stockings (30‑40 mmHg) to reduce venous pressure",
+    "Leg elevation and exercise",
+    "Sclerotherapy for small veins",
+    "Endovenous laser/ radiofrequency ablation for refluxing truncal veins",
+    "Surgical ligation/stripping if ablation unavailable"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review of symptoms, skin, and ulcer healing; reinforce lifestyle measures to prevent progression.",
+   "b": [
+    "Re‑assess CEAP stage every 6‑12 months",
+    "Encourage weight control, activity, and avoidance of prolonged standing"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic varicose veins may be mistaken for them.",
+   "b": [
+    "Spider telangiectasia (small, superficial)",
+    "Deep vein thrombosis (painful, swollen, not visible veins)",
+    "Lymphedema (non‑pitting swelling)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be falsely reassuring or alarming.",
+   "b": [
+    "Normal duplex does not exclude early reflux; repeat if symptoms persist",
+    "Compression may mask edema, hiding early skin changes"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden leg pain with warmth and swelling (possible DVT)",
+  "New ulcer or bleeding from a vein",
+  "Rapid increase in swelling or discoloration"
+ ],
+ "faq": [
+  {
+   "q": "Can varicose veins cause blood clots?",
+   "a": "They rarely cause embolic events, but superficial thrombophlebitis can occur and should be treated."
+  },
+  {
+   "q": "Is surgery always needed?",
+   "a": "No; many patients improve with compression and lifestyle changes; procedures are reserved for persistent symptoms or complications."
+  },
+  {
+   "q": "Do pregnancy‑related varicose veins resolve after delivery?",
+   "a": "Often they improve, but some women retain veins and may need later treatment."
+  }
+ ],
+ "exam": [
+  "Describe the CEAP classification and its clinical relevance.",
+  "Explain how duplex ultrasound differentiates varicose veins from deep vein thrombosis.",
+  "Outline the stepwise management of a patient with symptomatic C3 varicose veins."
+ ],
+ "related": [
+  "Chronic venous insufficiency",
+  "Deep vein thrombosis",
+  "Peripheral arterial disease",
+  "Lymphedema",
+  "Spider angioma",
+  "Post‑thrombotic syndrome"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

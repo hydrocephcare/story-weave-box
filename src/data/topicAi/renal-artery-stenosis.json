@@ -1,0 +1,184 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Renal artery stenosis (RAS) is a narrowing of the renal artery that reduces kidney perfusion, activates the renin‑angiotensin system, and drives resistant hypertension and kidney injury. It is most often caused by atherosclerosis in older men or fibromuscular dysplasia in younger women.",
+ "aka": [
+  "Renal artery narrowing"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "RAS is a focal or diffuse narrowing of the renal artery that limits blood flow to the kidney. Diagnosis relies on imaging and functional tests that demonstrate a significant pressure drop across the lesion.",
+   "b": [
+    "Atherosclerotic RAS: >70% luminal narrowing; FMD: string‑of‑beads appearance"
+   ],
+   "t": [
+    {
+     "a": "Doppler ultrasound",
+     "b": "Assesses peak systolic velocity; a velocity >200 cm/s suggests >70% stenosis."
+    },
+    {
+     "a": "CT or MR angiography",
+     "b": "Visualises the artery; a 70% or greater reduction confirms RAS."
+    },
+    {
+     "a": "Renal vein renin ratio (RVR)",
+     "b": "High renin in the affected kidney versus contralateral kidney supports functional significance."
+    },
+    {
+     "a": "Renin‑angiotensin‑aldosterone system (RAAS) profile",
+     "b": "Elevated plasma renin and aldosterone with normal potassium indicates secondary hyperaldosteronism due to RAS."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the degree of luminal narrowing and by kidney function. Staging guides treatment urgency.",
+   "b": [
+    "Stage 1: 50–69% stenosis, normal kidney function",
+    "Stage 2: ≥70% stenosis, mild‑moderate CKD",
+    "Stage 3: ≥70% stenosis, severe CKD or refractory hypertension"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The etiology depends on age, sex, and comorbidities. In low‑resource settings, infections and systemic diseases can also contribute.",
+   "b": [
+    "Atherosclerosis – age >55, male, smoking, diabetes, hyperlipidaemia",
+    "Fibromuscular dysplasia – young women, often unilateral",
+    "Hypertension secondary to chronic kidney disease",
+    "Infections: tuberculosis, schistosomiasis, HIV (rare)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have resistant hypertension, flash pulmonary oedema, or a new rise in creatinine after starting ACE inhibitors or ARBs.",
+   "b": [
+    "Refractory hypertension despite 3 antihypertensives",
+    "Sudden pulmonary oedema after ACEI/ARB",
+    "Unilateral flank pain if severe stenosis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Choose tests based on availability and clinical suspicion. When a test is unavailable, use clinical clues and basic labs.",
+   "t": [
+    {
+     "a": "Blood pressure measurement",
+     "b": "Detects resistant hypertension; a systolic >180 mmHg or diastolic >110 mmHg despite therapy."
+    },
+    {
+     "a": "Serum creatinine and eGFR",
+     "b": "Rising creatinine after ACEI/ARB suggests RAS."
+    },
+    {
+     "a": "Urinalysis",
+     "b": "Proteinuria may indicate kidney damage but is non‑specific."
+    },
+    {
+     "a": "Doppler ultrasound",
+     "b": "First‑line in low‑resource settings; high velocity suggests significant stenosis."
+    },
+    {
+     "a": "CT/MR angiography",
+     "b": "Gold standard when available; confirms anatomy."
+    },
+    {
+     "a": "Renal vein renin ratio",
+     "b": "Functional confirmation when imaging is equivocal."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "RAS can precipitate acute kidney injury, flash pulmonary oedema, and uncontrolled hypertension, which may be fatal if untreated.",
+   "b": [
+    "Acute rise in creatinine after ACEI/ARB",
+    "Sudden pulmonary oedema",
+    "Refractory hypertension"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, control blood pressure, and consider revascularisation in selected patients.",
+   "b": [
+    "Control BP with calcium channel blockers or diuretics first; avoid ACEI/ARB until RAS is ruled out",
+    "Use statins in atherosclerotic RAS",
+    "Consider percutaneous transluminal angioplasty with stenting if >70% stenosis and refractory hypertension or progressive renal failure",
+    "Surgical bypass is reserved for complex lesions"
+   ],
+   "t": [
+    {
+     "a": "Calcium channel blocker",
+     "b": "Reduces peripheral resistance; chosen because it does not worsen RAS."
+    },
+    {
+     "a": "Diuretics",
+     "b": "Lower volume load; useful in hypertension."
+    },
+    {
+     "a": "Statins",
+     "b": "Stabilise atherosclerotic plaques; reduce progression."
+    },
+    {
+     "a": "Angiotensin receptor blocker (ARB)",
+     "b": "Avoid until RAS excluded; if used, monitor creatinine closely."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular BP monitoring, kidney function tests, and lifestyle changes reduce progression.",
+   "b": [
+    "Annual BP check",
+    "Quarterly creatinine and eGFR",
+    "Smoking cessation",
+    "Control lipids and glucose"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of resistant hypertension and secondary hyperaldosteronism.",
+   "b": [
+    "Renovascular hypertension from other vascular lesions",
+    "Primary hyperaldosteronism (adrenal adenoma)",
+    "Coarctation of the aorta"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of kidney function after starting ACEI/ARB",
+  "Unexplained flash pulmonary oedema",
+  "Severe refractory hypertension despite multiple drugs"
+ ],
+ "faq": [
+  {
+   "q": "Why does ACEI/ARB worsen kidney function in RAS?",
+   "a": "They block angiotensin II, which normally constricts the efferent arteriole; without it, glomerular filtration drops when perfusion is already low."
+  },
+  {
+   "q": "Can RAS be asymptomatic?",
+   "a": "Yes, many patients have no symptoms until a precipitating event like ACEI initiation or severe hypertension."
+  },
+  {
+   "q": "Is surgery always needed?",
+   "a": "No, only patients with significant stenosis, refractory hypertension, or progressive renal decline benefit from revascularisation."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiological mechanism by which renal artery stenosis leads to resistant hypertension.",
+  "Describe the diagnostic algorithm for a patient with suspected RAS who has a new rise in creatinine after starting an ACE inhibitor.",
+  "Discuss the indications and contraindications for percutaneous transluminal angioplasty in renal artery stenosis."
+ ],
+ "related": [
+  "Hypertension",
+  "Secondary hyperaldosteronism",
+  "Fibromuscular dysplasia",
+  "Atherosclerosis",
+  "Renal vein thrombosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

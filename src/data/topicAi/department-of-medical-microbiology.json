@@ -1,0 +1,133 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "The Department of Medical Microbiology studies microorganisms that cause disease, their detection, and control. Clinicians use microbiology to diagnose infections, guide therapy, and prevent outbreaks. In low‑resource settings, rapid, affordable tests and infection control are key.",
+ "aka": [
+  "Medical Microbiology",
+  "Clinical Microbiology"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Microbiology examines bacteria, viruses, fungi, and parasites that infect humans. Clinicians rely on lab results to identify pathogens, determine resistance, and choose treatment. The department also develops infection control policies.",
+   "b": [
+    "Focus on identification, susceptibility, and prevention"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Microorganisms are classified by shape, Gram stain, oxygen requirement, and metabolic traits. These features guide initial lab tests and empirical therapy.",
+   "b": [
+    "Gram‑positive rods (e.g., Staphylococcus)",
+    "Gram‑negative cocci (e.g., Neisseria)",
+    "Spore‑forming bacilli (e.g., Bacillus)"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Infections spread via droplets, contact, vectors, or food. Understanding routes informs isolation, vaccination, and vector control.",
+   "b": [
+    "Foodborne: Salmonella, Shigella"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Microbes cause a spectrum from mild infections to sepsis. Severity depends on host immunity, pathogen virulence, and delay in treatment.",
+   "b": [
+    "Parasitic malaria: cerebral complications"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis combines clinical clues with targeted tests. In low‑resource settings, point‑of‑care tests and simple cultures are vital.",
+   "t": [
+    {
+     "a": "Blood culture",
+     "b": "Detects bloodstream pathogens; positive result confirms sepsis and guides antibiotics."
+    },
+    {
+     "a": "Malaria RDT",
+     "b": "Answers if fever is due to Plasmodium; positive means treat with antimalarials."
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Detects leukocytes or nitrites indicating urinary tract infection."
+    },
+    {
+     "a": "Rapid influenza test",
+     "b": "Positive suggests viral pneumonia; influences antiviral use."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treat the identified pathogen with appropriate antimicrobials, while providing supportive care. Infection control prevents spread.",
+   "t": [
+    {
+     "a": "Antibiotic choice",
+     "b": "Select based on organism and resistance pattern; avoid nephrotoxic drugs in renal failure."
+    },
+    {
+     "a": "Supportive care",
+     "b": "Maintain fluids, oxygen, and monitor organ function."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that culture growth time varies; Gram stain gives early clues. In low‑resource settings, use clinical scoring (e.g., qSOFA) to triage sepsis.",
+   "b": [
+    "Empirical antibiotics for sepsis should cover MRSA and gram‑negatives"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Some infections mimic each other; clinical context and simple tests help differentiate."
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low bacterial load may give false‑negative cultures; malaria RDTs may miss low parasitemia."
+  },
+  {
+   "h": "When to seek help",
+   "p": "Urgent care needed for severe sepsis, meningitis, or suspected drug allergy.",
+   "b": [
+    "Drug reaction: rash with fever"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sepsis",
+  "Meningitis",
+  "Drug reaction"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step in managing suspected sepsis?",
+   "a": "Obtain blood cultures, start broad‑spectrum antibiotics, and give fluids."
+  },
+  {
+   "q": "How do I differentiate bacterial from viral pneumonia?",
+   "a": "Look for high fever, productive cough, and positive Gram stain; viral often has dry cough and rapid onset."
+  },
+  {
+   "q": "When can I rely on a rapid malaria test?",
+   "a": "Use it when fever is present and microscopy is unavailable; confirm with microscopy if possible."
+  }
+ ],
+ "exam": [
+  "Explain how a Gram stain guides empirical antibiotic choice in a patient with suspected bacterial sepsis.",
+  "Describe the steps to diagnose and treat a patient with suspected malaria in a rural clinic.",
+  "Outline infection control measures to prevent MRSA spread in a low‑resource hospital."
+ ],
+ "related": [
+  "Infection control",
+  "Antimicrobial stewardship",
+  "Diagnostic microbiology",
+  "Immunology of infections"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

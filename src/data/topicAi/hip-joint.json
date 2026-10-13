@@ -1,0 +1,146 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The hip joint is a ball‑and‑socket synovial joint that allows a wide range of motion while bearing weight. Its stability depends on bony congruence, ligaments, capsule, and surrounding muscles. Clinically, injury or degeneration alters gait and pain patterns.",
+ "aka": [
+  "acetabulofemoral joint",
+  "hip socket"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The hip joint connects the femur to the pelvis, forming a stable yet mobile structure essential for locomotion. Its design balances strength and flexibility, making it vulnerable to mechanical overload and neurovascular injury.",
+   "b": [
+    "Ball‑and‑socket architecture",
+    "Weight‑bearing joint"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The femoral head fits into the acetabulum of the ilium, ischium, and pubis. The joint capsule is reinforced by the iliofemoral, pubofemoral, and ischiofemoral ligaments.",
+   "b": [
+    "Acetabulum depth ~30°",
+    "Capsule attaches to iliopectineal line"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly the femoral neurovascular bundle passes; posteriorly the sciatic nerve lies. The joint is surrounded by gluteus medius/minimus, iliopsoas, and adductors.",
+   "b": [
+    "Femoral artery/vein anterior",
+    "Sciatic nerve posterior"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The femoral head receives blood from the medial and lateral femoral circumflex arteries, with the medial branch being most critical.",
+   "b": [
+    "Medial femoral circumflex artery",
+    "Lateral femoral circumflex artery"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Innervation is via the femoral nerve (anterior), obturator nerve (medial), and superior gluteal nerve (posterior).",
+   "b": [
+    "Femoral nerve L2‑L4",
+    "Obturator nerve L2‑L4",
+    "Superior gluteal nerve L4‑S1"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Provides flexion, extension, abduction, adduction, and internal/external rotation. It supports upright posture and transfers weight to the lower limb.",
+   "b": [
+    "Gait initiation",
+    "Stability during stance"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Common problems include osteoarthritis, avascular necrosis, dislocation, and superior gluteal nerve injury. In low‑resource settings, infections like septic arthritis and trauma from falls or road traffic accidents are frequent.",
+   "b": [
+    "Osteoarthritis: pain, crepitus, limited ROM",
+    "Avascular necrosis: sudden pain, collapse of femoral head"
+   ],
+   "t": [
+    {
+     "a": "X‑ray",
+     "b": "Shows joint space narrowing, osteophytes, subchondral sclerosis – indicates osteoarthritis or fracture"
+    },
+    {
+     "a": "MRI",
+     "b": "Detects early cartilage loss, AVN, or soft tissue injury – useful when X‑ray is inconclusive"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Assesses bursitis or effusion when MRI unavailable"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Ask about gait pattern, pain location, and history of trauma. Look for Trendelenburg sign to assess gluteus medius function. In suspected dislocation, check for limb shortening and external rotation.",
+   "b": [
+    "Trendelenburg sign – positive if hip drops on contralateral side"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause: anti‑inflammatories for arthritis, antibiotics for septic arthritis, surgical reduction for dislocation. Supportive care includes pain control, physiotherapy, and weight management.",
+   "b": [
+    "NSAIDs – reduce inflammation and pain",
+    "Antibiotics – cover Staph aureus, Gram‑negative rods"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential includes lumbar radiculopathy, sacroiliitis, and hip osteochondritis dissecans. Clinical history and imaging help distinguish them.",
+   "b": [
+    "Lumbar radiculopathy – pain radiates to leg, improves with flexion"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Early osteoarthritis may show normal X‑ray; inflammatory markers can be normal in septic arthritis if infection is low‑grade.",
+   "b": [
+    "Normal CRP in early septic arthritis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sudden hip pain with inability to bear weight",
+  "Rapidly worsening pain or swelling",
+  "Signs of systemic infection (fever, tachycardia)"
+ ],
+ "faq": [
+  {
+   "q": "What causes a Trendelenburg sign?",
+   "a": "Weakness of gluteus medius/minimus due to superior gluteal nerve injury or muscle degeneration."
+  },
+  {
+   "q": "Why is the femoral head at risk of avascular necrosis?",
+   "a": "Its blood supply is precarious; trauma or prolonged steroid use can interrupt the medial femoral circumflex artery."
+  },
+  {
+   "q": "How does osteoarthritis present differently in the hip than the knee?",
+   "a": "Hip OA pain is deep, worsens with prolonged standing, and improves with rest; knee OA pain is more localized to joint line."
+  }
+ ],
+ "exam": [
+  "Explain how the acetabulum’s depth contributes to hip stability.",
+  "Describe the clinical steps to reduce a posterior hip dislocation.",
+  "Identify the key ligaments that prevent anterior dislocation of the hip."
+ ],
+ "related": [
+  "Femoral head osteonecrosis",
+  "Hip fracture",
+  "Sacroiliac joint dysfunction",
+  "Lumbar radiculopathy",
+  "Septic arthritis of the hip"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

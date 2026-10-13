@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Tranexamic acid blocks fibrinolysis, stabilising clots and reducing bleeding. It is used for heavy menstrual bleeding, trauma, and postpartum hemorrhage, especially where blood products are scarce.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Tranexamic acid is a synthetic lysine analogue that competitively inhibits plasminogen activation, preventing fibrin clot breakdown. Diagnosis of its use is clinical: indication for bleeding control, not a disease to diagnose."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common indications: heavy menstrual bleeding, trauma, postpartum hemorrhage, surgical bleeding. In low‑resource settings, trauma and obstetric hemorrhage dominate.",
+   "b": [
+    "Trauma",
+    "Post‑partum haemorrhage",
+    "Heavy menstrual bleeding",
+    "Surgery"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with excessive bleeding: menorrhagia, bruising, oozing from wounds, or postpartum bleeding. Symptoms are non‑specific; the key is the volume and rate of blood loss."
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab tests guide need for TXA and monitor safety.",
+   "t": [
+    {
+     "a": "Coagulation profile (PT, aPTT, INR)",
+     "b": "Normal values support safe TXA"
+    },
+    {
+     "a": "Plasminogen activity",
+     "b": "Normal or high activity still allows TXA if bleeding is severe"
+    },
+    {
+     "a": "Hemoglobin/hematocrit",
+     "b": "Low levels indicate significant loss"
+    },
+    {
+     "a": "Renal function (creatinine, eGFR)",
+     "b": "Severe renal failure may contraindicate use"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Watch for seizures, visual disturbances, and thromboembolic events. Red flags: history of thrombosis, severe renal impairment, or unexplained seizures.",
+   "b": [
+    "Seizures",
+    "Thromboembolism",
+    "Visual changes"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the source of bleeding first (compression, uterotonics, tamponade). Then give TXA early (within 3 h of injury or bleeding).",
+   "b": [
+    "Source control",
+    "Early TXA administration"
+   ],
+   "t": [
+    {
+     "a": "Tranexamic acid",
+     "b": "Chosen for rapid action and low toxicity; alternatives like fibrinogen concentrate are costly and less available"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor hemoglobin, signs of re‑bleeding, and renal function. Preventive use in heavy menstrual bleeding reduces anemia and hospital visits.",
+   "b": [
+    "Regular follow‑up visits",
+    "Renal function checks"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish from antifibrinolytics like aprotinin (rarely used) and from anticoagulants such as heparin, which do the opposite."
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal coagulation tests may mask hyperfibrinolysis; a normal D‑dimer does not exclude active bleeding."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe bleeding unresponsive to initial measures",
+  "Seizures after TXA",
+  "Sudden visual changes",
+  "Signs of thromboembolism"
+ ],
+ "faq": [
+  {
+   "q": "Can TXA be used in pregnancy?",
+   "a": "Yes, for postpartum hemorrhage and heavy menstrual bleeding; it is safe in pregnancy."
+  },
+  {
+   "q": "Does TXA increase clotting risk?",
+   "a": "It reduces fibrinolysis, so it can increase clot risk, especially in patients with thrombosis history."
+  },
+  {
+   "q": "Is TXA safe in renal failure?",
+   "a": "Use with caution; dose adjustment or avoidance is advised in severe renal impairment."
+  }
+ ],
+ "exam": [
+  "Explain why tranexamic acid is preferred over other antifibrinolytics in low‑resource trauma settings.",
+  "Describe the clinical scenario where TXA should be started within 3 h and justify the timing.",
+  "List the red flags that would contraindicate TXA use in a patient with heavy menstrual bleeding."
+ ],
+ "related": [
+  "Antifibrinolytics",
+  "Hemostasis",
+  "Trauma care",
+  "Post‑partum haemorrhage"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

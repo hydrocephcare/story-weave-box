@@ -1,0 +1,101 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Potassium iodide is a thyroid blocker used after radioactive iodine exposure. It prevents uptake by the gland and reduces radiation‑induced cancer risk. It is also used in fungal skin infections in low‑resource settings.",
+ "aka": [
+  "Lugol’s solution",
+  "SSKI"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Potassium iodide (KI) is a simple salt that blocks radioactive iodine uptake by the thyroid and is also used topically for cutaneous fungal infections.",
+   "b": [
+    "Used after nuclear exposure",
+    "Topical antifungal in skin lesions"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Not applicable – KI is a drug, not an organism."
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Not applicable – KI is a medication."
+  },
+  {
+   "h": "Disease it causes",
+   "p": "KI itself does not cause disease; it is used to prevent radiation‑induced thyroiditis and to treat cutaneous fungal infections."
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Identify exposure to radioactive iodine or cutaneous fungal infection.",
+   "t": [
+    {
+     "a": "History of nuclear exposure",
+     "b": "Was the patient exposed to 131I? A positive history triggers KI administration."
+    },
+    {
+     "a": "Skin lesion culture",
+     "b": "Does the lesion show fungal elements? A positive culture confirms cutaneous candidiasis."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "For radiation exposure, give saturated KI 24–48 h after exposure to block uptake. For cutaneous fungal infection, apply saturated KI solution to lesions.",
+   "t": [
+    {
+     "a": "Thyroid function tests",
+     "b": "Check TSH and free T4 to monitor for hypothyroidism after KI."
+    },
+    {
+     "a": "Skin culture",
+     "b": "Confirms fungal etiology; guides duration of topical KI."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember KI is only protective if started within 24–48 h of exposure. It is not a substitute for iodine‑deficient diets or for treating systemic fungal disease.",
+   "b": [
+    "KI must be started early after exposure",
+    "Do not use KI in patients with iodine allergy"
+   ],
+   "t": [
+    {
+     "a": "Timing of KI",
+     "b": "Why must KI be given within 48 h? Early administration blocks most radioactive iodine uptake."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Radiation exposure with delayed KI administration",
+  "Severe skin ulceration or systemic spread of fungal infection"
+ ],
+ "faq": [
+  {
+   "q": "Can KI be used for all radioactive iodine exposures?",
+   "a": "Only if exposure is to 131I and KI is started within 24–48 h."
+  },
+  {
+   "q": "Is KI safe for pregnant women?",
+   "a": "It is used in pregnancy for radiation protection, but avoid if iodine allergy exists."
+  },
+  {
+   "q": "What if KI is unavailable?",
+   "a": "Use other iodine‑based solutions or defer until a source is available; monitor thyroid function closely."
+  }
+ ],
+ "exam": [
+  "A 30‑year‑old worker is exposed to 131I after a reactor accident. What is the first step in preventing thyroid cancer?",
+  "A patient with a chronic cutaneous fungal lesion is treated with topical KI. What is the mechanism of action?",
+  "Why must KI be discontinued if the patient develops hypothyroidism?"
+ ],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

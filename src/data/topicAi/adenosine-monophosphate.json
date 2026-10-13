@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Adenosine monophosphate (AMP) is a nucleotide that serves as a building block for RNA, a substrate for energy metabolism, and a regulator of cellular signaling via its conversion to cAMP. Clinically, altered AMP levels reflect metabolic stress, mitochondrial disease, and can affect drug metabolism.",
+ "aka": [
+  "adenylic acid"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "AMP consists of adenine, ribose, and a single phosphate. It is produced when ATP loses two phosphates or when ADP is dephosphorylated. It can be phosphorylated back to ADP/ATP or cyclized to cAMP.",
+   "b": [
+    "Key component of RNA synthesis",
+    "Donor of phosphate in glycolysis (via adenylate kinase)",
+    "Precursor for cAMP, a second messenger"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Adenylate kinase interconverts 2 ADP ↔ ATP + AMP, maintaining cellular energy balance. AMP activates AMP‑activated protein kinase (AMPK), which switches on catabolic pathways and switches off anabolic ones.",
+   "b": [
+    "AMPK activation → ↑ glucose uptake, ↑ fatty‑acid oxidation",
+    "Inhibition of mTOR → ↓ protein synthesis"
+   ],
+   "t": [
+    {
+     "a": "Serum AMP level",
+     "b": "Is there metabolic stress or mitochondrial dysfunction? High AMP suggests low ATP stores."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Cellular AMP rises when ATP falls (e.g., hypoxia, exercise). AMPK senses the AMP/ATP ratio and phosphorylates downstream targets to restore energy balance.",
+   "b": [
+    "AMP ↑ → AMPK ↑ → catabolism ↑, anabolism ↓",
+    "cAMP generated from ATP by adenylate cyclase; degraded by phosphodiesterases"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Disrupted AMP metabolism appears in mitochondrial diseases, ischemia, and in drug toxicity (e.g., nucleoside analogs). Excessive AMP can lead to over‑activation of AMPK, causing hypoglycemia.",
+   "b": [
+    "Mitochondrial DNA depletion → low ATP, high AMP",
+    "Ischemic heart disease → AMP ↑, AMPK activation",
+    "Nucleoside‑reverse‑transcriptase inhibitors → AMP analog accumulation"
+   ],
+   "t": [
+    {
+     "a": "Lactate/pyruvate ratio",
+     "b": "Is there impaired oxidative phosphorylation? Elevated ratio supports mitochondrial dysfunction."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "AMP levels guide diagnosis of metabolic crises and inform use of AMPK‑targeting drugs (e.g., metformin). cAMP derived from AMP mediates hormone actions like glucagon and epinephrine.",
+   "b": [
+    "Low ATP/high AMP → consider mitochondrial disease, sepsis, severe hypoxia",
+    "AMPK activators improve insulin sensitivity in type 2 diabetes"
+   ],
+   "t": [
+    {
+     "a": "Blood glucose",
+     "b": "If unavailable, use bedside capillary glucose."
+    },
+    {
+     "a": "Serum lactate",
+     "b": "Is anaerobic metabolism dominant? High lactate with high AMP suggests tissue hypoxia."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the AMP↔ATP↔cAMP cycle, AMPK’s role in energy sensing, and clinical scenarios where AMP rises.",
+   "b": [
+    "AMPK activation = high AMP/low ATP",
+    "cAMP is produced from ATP, not AMP directly"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe lactic acidosis with altered mental status (possible mitochondrial crisis)",
+  "Unexplained persistent hypoglycemia in a critically ill patient",
+  "Sudden cardiac arrest in a patient with known metabolic disease"
+ ],
+ "faq": [
+  {
+   "q": "How does AMP differ from cAMP?",
+   "a": "AMP is a nucleotide; cAMP is a cyclic form created from ATP that acts as a second messenger."
+  },
+  {
+   "q": "Why is AMPK important in diabetes?",
+   "a": "AMPK activation improves glucose uptake and fatty‑acid oxidation, helping lower blood glucose."
+  },
+  {
+   "q": "Can AMP levels be measured directly?",
+   "a": "Yes, by high‑performance liquid chromatography or mass spectrometry, but clinicians often infer AMP from ATP/ADP ratios."
+  }
+ ],
+ "exam": [
+  "Explain how the AMP/ATP ratio regulates AMPK and the downstream metabolic effects.",
+  "Describe the pathway from glucagon binding to cAMP production and its physiological outcome.",
+  "List three clinical conditions where elevated AMP is a key diagnostic clue."
+ ],
+ "related": [
+  "Adenosine triphosphate (ATP)",
+  "Cyclic adenosine monophosphate (cAMP)",
+  "AMP‑activated protein kinase (AMPK)",
+  "Mitochondrial diseases",
+  "Glucagon signaling",
+  "Metformin pharmacology"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,232 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Hypertrophic cardiomyopathy is a genetic disorder of the heart muscle that causes abnormal thickening, especially of the interventricular septum, leading to impaired filling and dynamic obstruction. It is the leading cause of sudden death in young athletes and presents with exertional symptoms or a harsh systolic murmur.",
+ "aka": [
+  "HOCM"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "HCM is defined by unexplained left ventricular wall thickness >15 mm (or >13 mm in family members) with a small or normal cavity and no other cause for hypertrophy. Diagnosis relies on echocardiography, cardiac MRI, and genetic testing.",
+   "b": [
+    "Non‑ischemic thickening",
+    "Asymmetric septal pattern"
+   ],
+   "t": [
+    {
+     "a": "Echocardiogram",
+     "b": "Shows wall thickness, cavity size, LVOT gradient; confirms obstruction and diastolic dysfunction."
+    },
+    {
+     "a": "Cardiac MRI",
+     "b": "Quantifies hypertrophy, detects fibrosis, and assesses LVOT obstruction when echo is equivocal."
+    },
+    {
+     "a": "Genetic testing",
+     "b": "Identifies pathogenic sarcomere mutations; guides family screening."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The American Heart Association stages HCM from I (mild hypertrophy) to IV (advanced heart failure). Severity is graded by LVOT gradient, extent of fibrosis, and symptoms.",
+   "b": [
+    "Stage I: mild, no obstruction",
+    "Stage II: moderate, mild obstruction",
+    "Stage III: severe, significant obstruction",
+    "Stage IV: heart failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is autosomal dominant mutations in sarcomere proteins. Other contributors include hypertension, aortic stenosis, and metabolic disorders.",
+   "b": [
+    "β‑myosin heavy chain (MYH7)",
+    "Troponin T (TNNT2)",
+    "Troponin I (TNNI3)",
+    "Myosin binding protein C (MYBPC3)"
+   ],
+   "t": [
+    {
+     "a": "Family history",
+     "b": "Positive family history raises suspicion and prompts screening."
+    },
+    {
+     "a": "ECG",
+     "b": "Shows LV hypertrophy, repolarisation changes, or arrhythmias."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic or report exertional dyspnea, chest pain, palpitations, syncope, or sudden death. A harsh systolic murmur at the left sternal border that increases with Valsalva is classic.",
+   "b": [
+    "Exertional dyspnea",
+    "Chest pain",
+    "Palpitations",
+    "Syncope"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Detects harsh systolic murmur, often louder with Valsalva; carotid radiation is uncommon."
+    },
+    {
+     "a": "Holter monitor",
+     "b": "Identifies ventricular ectopy or sustained arrhythmias."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests assess anatomy, function, and arrhythmia risk. When resources are limited, a focused echo and ECG are essential.",
+   "t": [
+    {
+     "a": "Echocardiogram",
+     "b": "Measures wall thickness, LVOT gradient, and diastolic function; essential for diagnosis and risk stratification."
+    },
+    {
+     "a": "ECG",
+     "b": "Detects LV hypertrophy, repolarisation abnormalities, and arrhythmias; abnormal Q waves may suggest prior infarction."
+    },
+    {
+     "a": "Holter or event monitor",
+     "b": "Assesses arrhythmia burden; a high burden predicts sudden death."
+    },
+    {
+     "a": "Cardiac MRI (if available)",
+     "b": "Provides detailed fibrosis assessment; late gadolinium enhancement predicts arrhythmic risk."
+    },
+    {
+     "a": "Genetic testing",
+     "b": "Confirms mutation, informs family screening, and may influence therapy decisions."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Dynamic LVOT obstruction, arrhythmias, heart failure, and sudden cardiac death are the main threats. Watch for syncope, unexplained chest pain, or new murmurs.",
+   "b": [
+    "LVOT obstruction",
+    "Ventricular tachycardia",
+    "Heart failure"
+   ],
+   "t": [
+    {
+     "a": "Syncope during exertion",
+     "b": "Suggests significant obstruction or arrhythmia; requires urgent evaluation."
+    },
+    {
+     "a": "New or worsening murmur",
+     "b": "May indicate progression of obstruction or heart failure."
+    },
+    {
+     "a": "Palpitations with dizziness",
+     "b": "Could signal ventricular arrhythmia; needs ECG and Holter."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment targets obstruction, arrhythmia prevention, and symptom relief. Beta‑blockers or non‑dihydropyridine calcium channel blockers reduce heart rate and obstruction. ICDs are indicated for high‑risk patients.",
+   "b": [
+    "Beta‑blockers (e.g., propranolol)",
+    "Non‑dihydropyridine CCBs (e.g., verapamil)",
+    "Disopyramide (if available)",
+    "ICD implantation"
+   ],
+   "t": [
+    {
+     "a": "Beta‑blocker",
+     "b": "Reduces heart rate, improves diastolic filling, and lowers LVOT gradient."
+    },
+    {
+     "a": "Calcium channel blocker",
+     "b": "Decreases contractility and LVOT gradient; useful when beta‑blocker is contraindicated."
+    },
+    {
+     "a": "Disopyramide",
+     "b": "Negative inotrope that reduces obstruction; avoid in severe LVOT obstruction with low EF."
+    },
+    {
+     "a": "ICD",
+     "b": "Prevents sudden death in patients with prior arrhythmia, syncope, or high LVOT gradient."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular clinical review, ECG, and echo every 1–2 years. Family members should be screened. Lifestyle advice includes avoiding extreme exertion and dehydration.",
+   "b": [
+    "Annual ECG",
+    "Bi‑annual echo",
+    "Family screening"
+   ],
+   "t": [
+    {
+     "a": "Lifestyle modification",
+     "b": "Avoid competitive sports and dehydration; encourage moderate exercise."
+    },
+    {
+     "a": "Medication adherence",
+     "b": "Ensures symptom control and reduces obstruction."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hypertrophic cardiomyopathy can mimic aortic stenosis, hypertensive heart disease, and restrictive cardiomyopathy.",
+   "b": [
+    "Aortic stenosis – radiates to carotids",
+    "Hypertensive heart disease – concentric hypertrophy",
+    "Restrictive cardiomyopathy – normal wall thickness but impaired filling"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal ECG can occur in early disease; mild LVOT gradients may be missed on resting echo; diastolic dysfunction may be subtle.",
+   "b": [
+    "ECG may be normal in 20% of patients",
+    "Resting echo may underestimate gradient",
+    "MRI may be unavailable in low‑resource settings"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden syncope or collapse during exercise",
+  "Unexplained chest pain with exertion",
+  "New or worsening heart failure symptoms",
+  "Palpitations with dizziness"
+ ],
+ "faq": [
+  {
+   "q": "Can HCM be cured?",
+   "a": "There is no cure, but treatment can control symptoms and prevent sudden death."
+  },
+  {
+   "q": "Is exercise safe for HCM patients?",
+   "a": "Moderate, non‑competitive exercise is usually safe; high‑intensity or competitive sports are generally discouraged."
+  },
+  {
+   "q": "Do all family members need screening?",
+   "a": "Yes, first‑degree relatives should be screened because the disease is autosomal dominant."
+  }
+ ],
+ "exam": [
+  "Explain why a harsh systolic murmur that increases with Valsalva suggests dynamic LVOT obstruction in HCM.",
+  "Describe the key diagnostic criteria for HCM on echocardiography.",
+  "Outline the management steps for a patient with HCM who presents with exertional syncope."
+ ],
+ "related": [
+  "Cardiomyopathies",
+  "Sudden cardiac death",
+  "Aortic stenosis",
+  "Hypertensive heart disease",
+  "Restrictive cardiomyopathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

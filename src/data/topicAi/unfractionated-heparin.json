@@ -1,0 +1,140 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Unfractionated heparin (UFH) is an injectable anticoagulant that enhances antithrombin III, blocking thrombin and factor Xa. It is monitored by the activated partial thromboplastin time (aPTT) to keep clotting within a therapeutic window.",
+ "aka": [
+  "Heparin sodium"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "UFH is a heterogeneous mixture of glycosaminoglycans given intravenously or subcutaneously to prevent or treat thrombosis. Diagnosis of its effect relies on aPTT prolongation.",
+   "b": [
+    "Rapid onset (minutes)",
+    "Short half‑life (~1 h) allows quick reversal"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Bleeding risk is graded by the intensity of aPTT elevation and clinical signs, not by a formal stage system.",
+   "b": [
+    "Therapeutic aPTT: 1.5–2.5× control",
+    "Excessive: >3× control → high bleeding risk"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Excess anticoagulation can result from dosing errors, renal/hepatic dysfunction, drug interactions, or underlying coagulopathies.",
+   "b": [
+    "Over‑infusion",
+    "Concurrent antiplatelet agents",
+    "Severe liver disease",
+    "Heparin‑induced thrombocytopenia (HIT)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may develop bruising, hematuria, gastrointestinal bleeding, or intracranial hemorrhage if anticoagulation is excessive.",
+   "b": [
+    "New or worsening ecchymoses",
+    "Bleeding from IV sites",
+    "Drop in hemoglobin"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Laboratory monitoring guides dosing and detects complications.",
+   "t": [
+    {
+     "a": "aPTT",
+     "b": "Is the anticoagulant effect within therapeutic range? Therapeutic 1.5–2.5× control; higher suggests bleeding risk."
+    },
+    {
+     "a": "Platelet count",
+     "b": "Is HIT developing? A fall >50% or <150 ×10⁹/L after 5–10 days signals HIT."
+    },
+    {
+     "a": "Anti‑Xa level (if available)",
+     "b": "Provides a direct measure of heparin activity when aPTT is unreliable (e.g., lupus anticoagulant). Target 0.3–0.7 IU/mL."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Bleeding and heparin‑induced thrombocytopenia are the two life‑threatening complications.",
+   "b": [
+    "Unexplained drop in hemoglobin",
+    "Sudden severe thrombocytopenia",
+    "New thrombosis despite therapy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Adjust UFH infusion based on aPTT, stop if bleeding, and treat HIT if present.",
+   "b": [
+    "Reduce or pause infusion when aPTT >3× control",
+    "Switch to a direct thrombin inhibitor (e.g., argatroban) if HIT confirmed"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular aPTT checks (every 6 h after dose changes) and platelet monitoring (baseline, then every 2–3 days) prevent complications.",
+   "b": [
+    "Educate patients on signs of bleeding",
+    "Avoid concurrent high‑dose aspirin/NSAIDs unless necessary"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Low‑molecular‑weight heparins (LMWH) and direct oral anticoagulants (DOACs) have different monitoring and reversal strategies.",
+   "b": [
+    "LMWH: monitored by anti‑Xa, longer half‑life",
+    "DOACs: no routine lab monitoring needed"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "aPTT may be falsely normal in patients with lupus anticoagulant or high factor VIII levels, masking over‑anticoagulation.",
+   "b": [
+    "Consider anti‑Xa testing if aPTT unreliable",
+    "Interpret platelet drop in context of heparin exposure"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained massive bleeding",
+  "Sudden severe thrombocytopenia",
+  "Neurological change suggesting intracranial hemorrhage"
+ ],
+ "faq": [
+  {
+   "q": "Why is UFH monitored with aPTT and not PT/INR?",
+   "a": "UFH mainly prolongs the intrinsic pathway measured by aPTT; PT/INR reflects the extrinsic pathway and is not sensitive to UFH."
+  },
+  {
+   "q": "Can UFH be used in patients with renal failure?",
+   "a": "Yes, because UFH is cleared by the reticuloendothelial system, not the kidneys."
+  },
+  {
+   "q": "What is the antidote for UFH overdose?",
+   "a": "Protamine sulfate neutralizes UFH rapidly; dose is calculated from the amount of heparin given."
+  }
+ ],
+ "exam": [
+  "Explain how UFH exerts its anticoagulant effect and why aPTT is used for monitoring.",
+  "Describe the clinical and laboratory features that suggest heparin‑induced thrombocytopenia.",
+  "Outline the steps to manage a patient with supratherapeutic aPTT and active bleeding."
+ ],
+ "related": [
+  "Low‑molecular‑weight heparin",
+  "Heparin‑induced thrombocytopenia",
+  "Protamine sulfate",
+  "Anti‑Xa assay",
+  "Direct thrombin inhibitors",
+  "Venous thromboembolism"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

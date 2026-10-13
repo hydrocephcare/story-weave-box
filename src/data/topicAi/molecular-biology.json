@@ -1,0 +1,116 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Molecular biology studies DNA, RNA and proteins to explain how cells store, copy and use genetic information. Clinicians use this knowledge to interpret genetic tests, understand pathogen mechanisms and guide targeted therapies.",
+ "aka": [
+  "Molecular genetics",
+  "DNA‑RNA‑protein biology"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Molecular biology examines the flow of genetic information (DNA → RNA → protein) and how alterations cause disease.",
+   "b": [
+    "Central dogma: DNA transcribed to RNA, translated to protein",
+    "Key molecules: DNA, mRNA, tRNA, ribosomes, polymerases"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Transcription copies a gene into messenger RNA; translation reads mRNA codons to assemble a protein chain.",
+   "b": [
+    "RNA polymerase binds promoter → initiates transcription",
+    "Ribosome reads codons → tRNA delivers amino acids",
+    "Post‑translational modifications fine‑tune protein function"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Gene expression is controlled at multiple levels to match cellular needs and external signals.",
+   "b": [
+    "Promoter/enhancer binding by transcription factors",
+    "RNA splicing, stability, and microRNA silencing",
+    "Feedback inhibition of enzymes"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Mutations, epigenetic changes or viral integration disrupt normal protein production, leading to disease.",
+   "b": [
+    "Point mutations → sickle‑cell disease, thalassaemia",
+    "Gene deletions/duplications → Duchenne muscular dystrophy",
+    "Oncogenic viruses (HPV, EBV) insert oncogenes",
+    "Epigenetic silencing → tumor suppressor loss"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Molecular tests diagnose inherited disorders, identify infectious agents, and select targeted cancer therapies.",
+   "b": [
+    "PCR for TB, HIV, malaria parasites",
+    "BRCA1/2 sequencing for breast‑cancer risk",
+    "CFTR mutation panel for cystic fibrosis",
+    "NGS panels for rare metabolic diseases"
+   ],
+   "t": [
+    {
+     "a": "PCR for Mycobacterium tuberculosis",
+     "b": "Confirms active TB when sputum smear is negative; a positive result guides anti‑TB therapy"
+    },
+    {
+     "a": "Hemoglobin electrophoresis",
+     "b": "Distinguishes sickle‑cell disease from other hemoglobinopathies; informs transfusion and hydroxyurea decisions"
+    },
+    {
+     "a": "BRCA gene sequencing",
+     "b": "Identifies pathogenic variants; positive result triggers surveillance or prophylactic surgery"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the flow of genetic information, common mutation types, and the clinical use of molecular diagnostics.",
+   "b": [
+    "Remember the Hershey‑Chase experiment proved DNA is the genetic material",
+    "Differentiate between loss‑of‑function and gain‑of‑function mutations",
+    "Know which test answers which clinical question (e.g., PCR = presence of pathogen DNA)"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly progressive neurological decline with a known metabolic gene defect",
+  "Severe anemia in a child with suspected sickle‑cell disease",
+  "Unexplained fever in an immunocompromised patient with negative cultures – consider viral PCR"
+ ],
+ "faq": [
+  {
+   "q": "Why do we test for viral DNA instead of antibodies in acute infection?",
+   "a": "DNA appears earlier than antibodies, allowing earlier diagnosis and treatment."
+  },
+  {
+   "q": "What is the clinical impact of a silent mutation?",
+   "a": "Often no effect, but it can alter splicing or regulatory sites, causing disease."
+  },
+  {
+   "q": "How does epigenetic silencing contribute to cancer?",
+   "a": "Methylation of tumor‑suppressor promoters shuts down their expression, promoting uncontrolled growth."
+  }
+ ],
+ "exam": [
+  "Explain the steps of the central dogma and give one clinical example for each step.",
+  "Describe how PCR is used to diagnose tuberculosis and what a positive result means.",
+  "List three types of genetic mutations and the diseases most commonly associated with each."
+ ],
+ "related": [
+  "Genetics",
+  "Infectious disease diagnostics",
+  "Pharmacogenomics",
+  "Oncogenes and tumor suppressors",
+  "Epigenetics",
+  "Protein synthesis disorders"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

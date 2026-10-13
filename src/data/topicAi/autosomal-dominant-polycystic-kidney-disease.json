@@ -1,0 +1,216 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Autosomal Dominant Polycystic Kidney Disease is a hereditary disorder causing bilateral renal cysts that enlarge kidneys, impair function, and predispose to hypertension, pain, and aneurysms. It follows a classic diagnostic triad of family history, imaging, and cyst count. Management focuses on blood pressure control, pain relief, and monitoring for complications.",
+ "aka": [
+  "ADPKD",
+  "PKD1/PKD2 disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ADPKD is a genetic disorder with cystic dilatation of renal tubules, leading to enlarged kidneys and progressive renal failure. Diagnosis relies on imaging and family history.",
+   "b": [
+    "Cysts >4 on each kidney or >2 on one kidney in a first‑degree relative"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Detects cysts and kidney size; normal in early disease"
+    },
+    {
+     "a": "CT/MRI",
+     "b": "Quantifies cyst number and size; useful when ultrasound equivocal"
+    },
+    {
+     "a": "Genetic testing",
+     "b": "Confirms PKD1 or PKD2 mutation; guides counseling when imaging is inconclusive"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Kidney function is staged by eGFR and cyst burden. Early stages show normal eGFR; later stages have reduced filtration and increased cyst volume.",
+   "b": [
+    "Kidney Failure Risk Equation (KFRE) predicts progression"
+   ],
+   "t": [
+    {
+     "a": "eGFR",
+     "b": "Assesses renal function; decline indicates progression"
+    },
+    {
+     "a": "Cyst volume index",
+     "b": "Higher volume correlates with faster decline"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "ADPKD is autosomal dominant, caused by mutations in PKD1 (85%) or PKD2 (15%).",
+   "b": [
+    "PKD1: large gene, more severe disease",
+    "PKD2: milder, later onset"
+   ],
+   "t": [
+    {
+     "a": "Family history",
+     "b": "First‑degree relative with cystic kidneys or ESRD"
+    },
+    {
+     "a": "HIV, TB, malaria",
+     "b": "Can worsen renal function but not cause cysts"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have flank pain, hematuria, hypertension, or are asymptomatic until adulthood.",
+   "b": [
+    "Pain from cyst expansion or infection",
+    "Hypertension from renin release",
+    "Hematuria from cyst rupture"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "Elevated systolic/diastolic indicates hypertension"
+    },
+    {
+     "a": "Urinalysis",
+     "b": "Microscopic hematuria suggests cyst rupture or infection"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Work‑up focuses on imaging, renal function, and screening for extra‑renal complications.",
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Initial imaging to detect cysts and kidney size"
+    },
+    {
+     "a": "MRI/CT",
+     "b": "Detailed cyst mapping; detects aneurysms if brain MRI is added"
+    },
+    {
+     "a": "Serum creatinine/eGFR",
+     "b": "Monitors renal function decline"
+    },
+    {
+     "a": "Brain MRI",
+     "b": "Screen for berry aneurysms in patients >40 or with family history"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent signs include sudden severe headache (possible aneurysm), gross hematuria, or rapidly rising creatinine.",
+   "b": [
+    "Berry aneurysm rupture",
+    "Acute cyst infection",
+    "Acute kidney injury"
+   ],
+   "t": [
+    {
+     "a": "CT head",
+     "b": "Detects subarachnoid hemorrhage"
+    },
+    {
+     "a": "Urine culture",
+     "b": "Identifies cyst infection; treat with antibiotics"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat hypertension, pain, and complications while monitoring renal function. Avoid nephrotoxic drugs and manage blood pressure aggressively.",
+   "b": [
+    "ACE inhibitors/ARBs",
+    "Pain control with acetaminophen",
+    "Avoid NSAIDs"
+   ],
+   "t": [
+    {
+     "a": "ACEi/ARB",
+     "b": "Lower blood pressure and proteinuria; reduce progression"
+    },
+    {
+     "a": "Pain meds",
+     "b": "Use acetaminophen; avoid NSAIDs to protect kidneys"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of kidney size, function, and blood pressure. Counsel on lifestyle and avoid nephrotoxins.",
+   "b": [
+    "Annual eGFR and BP",
+    "Kidney ultrasound every 2–3 years",
+    "Vaccinate against hepatitis B"
+   ],
+   "t": [
+    {
+     "a": "eGFR",
+     "b": "Track decline; early intervention if >30% drop"
+    },
+    {
+     "a": "BP",
+     "b": "Maintain <130/80 to slow progression"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential includes autosomal recessive PKD, medullary cystic disease, and acquired cystic kidney disease.",
+   "b": [
+    "Autosomal recessive PKD: early onset, severe disease",
+    "Acquired cystic disease: seen in dialysis patients"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal creatinine can mask early dysfunction; cysts may be missed on ultrasound if small.",
+   "b": [
+    "Serum creatinine may be normal until late stages",
+    "Small cysts <1 cm may not appear on ultrasound"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe headache or neck pain",
+  "Gross hematuria",
+  "Rapid rise in serum creatinine",
+  "Uncontrolled hypertension"
+ ],
+ "faq": [
+  {
+   "q": "Can ADPKD be cured?",
+   "a": "No, but progression can be slowed with blood pressure control and supportive care."
+  },
+  {
+   "q": "Do children need screening?",
+   "a": "Yes, first‑degree relatives should have imaging before age 30 to detect early cysts."
+  },
+  {
+   "q": "Is there a risk of aneurysms?",
+   "a": "Yes, berry aneurysms occur in about 10–15% of patients; screening is advised after age 40."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic criteria for ADPKD and why imaging is preferred over genetic testing in resource‑limited settings.",
+  "Describe the pathophysiological mechanism by which hypertension develops in ADPKD.",
+  "Outline the management plan for a 45‑year‑old patient with ADPKD, stage 3 CKD, and uncontrolled hypertension."
+ ],
+ "related": [
+  "Renal cystic diseases",
+  "Hypertension in chronic kidney disease",
+  "Berry aneurysm",
+  "Kidney failure risk equation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

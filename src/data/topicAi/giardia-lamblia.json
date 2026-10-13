@@ -1,0 +1,134 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Giardia lamblia is a flagellated protozoan that colonises the small intestine, causing malabsorption and diarrhoea. It spreads via the fecal‑oral route, especially in low‑resource settings. Diagnosis relies on stool antigen testing and treatment with nitroimidazoles.",
+ "aka": [
+  "Giardia intestinalis",
+  "Giardia duodenalis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Giardia lamblia is a flagellated protozoan that colonises the proximal small intestine, impairing nutrient absorption and causing diarrhoea, steatorrhoea and weight loss.",
+   "b": [
+    "Flagellated, pear‑shaped trophozoite; cysts survive in water"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The parasite has two flagella, a ventral adhesive disc, and a cyst form that is resistant to chlorine and heat.",
+   "b": [
+    "Cysts contain 4 nuclei; trophozoites have 2 flagella"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Ingestion of cysts in contaminated water or food initiates infection. Cysts excyst in the duodenum, trophozoites attach to villi, multiply, and shed cysts in stool.",
+   "b": [
+    "Waterborne outbreaks common in camps and refugee settings"
+   ],
+   "t": [
+    {
+     "a": "Microscopy of stool",
+     "b": "Detects trophozoites or cysts; low sensitivity if intermittent shedding"
+    },
+    {
+     "a": "ELISA for Giardia antigen",
+     "b": "High sensitivity; positive indicates active infection"
+    },
+    {
+     "a": "PCR",
+     "b": "Detects parasite DNA; useful when antigen tests unavailable"
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Giardiasis presents with chronic watery diarrhoea, flatulence, abdominal cramps, steatorrhoea and weight loss. In children, it can delay growth.",
+   "b": [
+    "Acute: 1–2 weeks of diarrhoea; Chronic: >4 weeks"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis is confirmed by stool antigen ELISA or PCR. Microscopy is supportive but less sensitive.",
+   "b": [
+    "Repeat stool tests if initial negative and symptoms persist"
+   ],
+   "t": [
+    {
+     "a": "Stool antigen ELISA",
+     "b": "Positive means active infection; negative in low parasite load"
+    },
+    {
+     "a": "Microscopy",
+     "b": "Positive confirms trophozoite/cyst; negative does not rule out"
+    },
+    {
+     "a": "PCR",
+     "b": "Positive confirms presence of parasite DNA; useful in low‑resource labs"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "First‑line therapy is a nitroimidazole, chosen for its activity against trophozoites and safety profile. Supportive care includes hydration and electrolyte replacement.",
+   "b": [
+    "Metronidazole or tinidazole are preferred; avoid nitrofurantoin"
+   ],
+   "t": [
+    {
+     "a": "Metronidazole",
+     "b": "Treats trophozoites; chosen for oral availability and low cost"
+    },
+    {
+     "a": "Tinidazole",
+     "b": "Single‑dose alternative; similar efficacy"
+    },
+    {
+     "a": "Supportive hydration",
+     "b": "Prevents dehydration and electrolyte imbalance"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that Giardia causes malabsorption without mucosal inflammation; stool microscopy may be negative early. In low‑resource settings, a single stool antigen test is often sufficient.",
+   "b": [
+    "Giardia is the most common cause of chronic diarrhoea in travelers"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dehydration, persistent vomiting, blood in stool, or failure to improve after 48 hours of treatment"
+ ],
+ "faq": [
+  {
+   "q": "Can Giardia be transmitted sexually?",
+   "a": "Rarely; transmission is mainly fecal‑oral via contaminated water or food."
+  },
+  {
+   "q": "Does Giardia cause fever?",
+   "a": "No; fever is uncommon, unlike bacterial diarrhoea."
+  },
+  {
+   "q": "Is it contagious in hospitals?",
+   "a": "Yes, via contaminated surfaces or water; strict hygiene reduces spread."
+  }
+ ],
+ "exam": [
+  "Explain why stool antigen testing is preferred over microscopy for diagnosing giardiasis.",
+  "Describe the life cycle of Giardia and identify the stage targeted by nitroimidazole therapy.",
+  "Outline management steps for a child with chronic diarrhoea in a refugee camp suspected of giardiasis."
+ ],
+ "related": [
+  "Protozoal infections",
+  "Waterborne diseases",
+  "Malabsorption syndromes",
+  "Travelers’ diarrhoea"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

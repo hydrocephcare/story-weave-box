@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "subject": "Public health",
+ "summary": "Sensitivity and specificity measure how well a test identifies disease and non‑disease. High sensitivity rules out disease; high specificity rules in disease. They guide screening and diagnostic decisions worldwide.",
+ "aka": [
+  "True positive rate",
+  "True negative rate"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Sensitivity is the proportion of people with the disease who test positive; specificity is the proportion without the disease who test negative. They are intrinsic test properties, independent of disease prevalence.",
+   "b": [
+    "Sensitivity = TP / (TP + FN)",
+    "Specificity = TN / (TN + FP)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Sensitivity and specificity themselves are not staged, but they affect how we interpret test results across disease stages. Early disease often has lower sensitivity, later stages higher."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Poor sensitivity may stem from low pathogen load, early disease, or suboptimal specimen collection. Low specificity often results from cross‑reactivity, similar antigens, or technical errors.",
+   "b": [
+    "Early infection or low parasite density",
+    "Cross‑reactive antibodies (e.g., malaria vs. other febrile illnesses)",
+    "Improper sample handling"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinicians see discordant results: a positive test in a healthy person (false positive) or a negative test in a sick person (false negative). Recognising patterns helps avoid misdiagnosis."
+  },
+  {
+   "h": "Investigations",
+   "p": "Choose tests based on the clinical question and resource availability. When a gold‑standard test is unavailable, combine imperfect tests to improve overall accuracy.",
+   "t": [
+    {
+     "a": "Rapid antigen test for malaria",
+     "b": "Does the patient currently have malaria? High sensitivity needed for screening; if unavailable, use thick smear microscopy."
+    },
+    {
+     "a": "ELISA for HIV antibodies",
+     "b": "Has the patient been exposed to HIV? High specificity reduces false positives; confirm positives with Western blot or PCR if possible."
+    },
+    {
+     "a": "Troponin I assay",
+     "b": "Is there myocardial injury? Very high sensitivity for early MI; specificity helps differentiate from other causes of chest pain."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Relying on a test with low sensitivity in a high‑risk patient may miss life‑threatening disease; low specificity may lead to unnecessary treatment and toxicity.",
+   "b": [
+    "False‑negative sepsis screen in immunocompromised patients",
+    "False‑positive TB test leading to unnecessary therapy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat based on clinical suspicion, not solely on test results. Use high‑sensitivity tests to rule out disease, then confirm with high‑specificity tests before starting definitive therapy.",
+   "b": [
+    "If rapid malaria test negative but suspicion high, treat empirically and obtain thick smear.",
+    "Positive HIV ELISA → confirm before starting antiretrovirals."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Repeat testing when disease prevalence changes or after treatment to assess cure. Educate patients on test limitations to avoid false reassurance.",
+   "b": [
+    "Post‑treatment TB sputum culture to confirm clearance.",
+    "Annual HIV screening in high‑risk groups."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Sensitivity/specificity are sometimes mixed up with predictive values, which depend on disease prevalence.",
+   "b": [
+    "Positive predictive value = probability disease is present when test is positive.",
+    "Negative predictive value = probability disease is absent when test is negative."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In low‑prevalence settings, even a test with high specificity can yield many false positives; in high‑prevalence settings, a test with modest sensitivity can miss cases.",
+   "b": [
+    "Screening mammography in young women → many false positives.",
+    "Rapid COVID‑19 antigen test in asymptomatic carriers → false negatives."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Why can a test be highly specific but not very sensitive?",
+   "a": "It detects only true disease cases (few false positives) but may miss many because the marker is absent in early or mild disease."
+  },
+  {
+   "q": "How does disease prevalence affect predictive values?",
+   "a": "Higher prevalence raises the positive predictive value and lowers the negative predictive value, even if sensitivity and specificity stay constant."
+  },
+  {
+   "q": "What should I do if the best test is unavailable?",
+   "a": "Combine a high‑sensitivity screening test with clinical assessment, and if needed, use an alternative test with known performance characteristics."
+  }
+ ],
+ "exam": [
+  "Explain the difference between sensitivity and specificity and give a clinical scenario where each is most important.",
+  "A rapid malaria test has 95% sensitivity and 85% specificity. In a region with 10% prevalence, calculate the positive predictive value.",
+  "Describe how you would manage a patient with a negative HIV ELISA but high clinical suspicion of infection."
+ ],
+ "related": [
+  "Predictive values",
+  "Likelihood ratios",
+  "Screening programs",
+  "Diagnostic test evaluation",
+  "Receiver operating characteristic (ROC) curves",
+  "Bias in diagnostic studies"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

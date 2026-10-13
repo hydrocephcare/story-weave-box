@@ -1,0 +1,148 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Laboratory testing turns clinical clues into measurable data, guiding diagnosis, staging and monitoring. It relies on accurate, precise, and regulated methods, especially vital in low‑resource settings where alternatives must be considered.",
+ "aka": [
+  "Lab work",
+  "Clinical chemistry",
+  "Molecular diagnostics"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Lab tests translate patient history and exam into numbers or patterns that confirm or rule out disease. They are the bridge between bedside and evidence.",
+   "b": [
+    "Objective data",
+    "Standardised interpretation",
+    "Guides treatment"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Samples are collected, processed, and analysed by instruments or assays. Accuracy reflects closeness to true value; precision reflects reproducibility. Quality control ensures both.",
+   "b": [
+    "Sample integrity",
+    "Calibration",
+    "Control charts"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "National and international standards (ISO 15189, CLIA) mandate competence, accreditation, and traceability. In low‑resource settings, external quality assessment and simple SOPs are key.",
+   "b": [
+    "Accreditation",
+    "Proficiency testing",
+    "Documentation"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Pre‑analytical errors (wrong sample, hemolysis), analytical errors (instrument drift), post‑analytical errors (misinterpretation). In resource‑poor areas, supply chain and training gaps magnify these.",
+   "b": [
+    "Sample mishandling",
+    "Equipment failure",
+    "Result misreading"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Lab results inform diagnosis, staging, prognosis, and therapy. Clinicians must ask: What is the clinical question? Which test answers it? What does the result mean in context?",
+   "b": [
+    "Differential diagnosis",
+    "Therapeutic monitoring",
+    "Screening"
+   ],
+   "t": [
+    {
+     "a": "Serum calcium",
+     "b": "Is the patient hypocalcaemic? Low <8.5 mg/dL suggests hypoparathyroidism, vitamin D deficiency, or renal failure."
+    },
+    {
+     "a": "Serum phosphate",
+     "b": "High phosphate with low calcium indicates hypoparathyroidism; low phosphate may suggest malnutrition."
+    },
+    {
+     "a": "PTH assay",
+     "b": "Elevated PTH with low calcium confirms hypoparathyroidism; low PTH indicates hypocalcaemia of vitamin D deficiency."
+    },
+    {
+     "a": "25‑OH vitamin D",
+     "b": "Low <20 ng/mL indicates deficiency; normal/high with low calcium suggests resistance."
+    },
+    {
+     "a": "Creatinine & eGFR",
+     "b": "Renal impairment can cause hypocalcaemia; eGFR <60 mL/min/1.73m² flags chronic kidney disease."
+    },
+    {
+     "a": "CBC",
+     "b": "Anemia or leukocytosis may point to chronic disease or infection."
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Elevated in inflammatory states; helps differentiate infection from autoimmune."
+    },
+    {
+     "a": "ANA with nucleolar pattern",
+     "b": "Suggests systemic sclerosis or mixed connective tissue disease; guides immunosuppressive therapy."
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Positive indicates HIV infection; baseline CD4 and viral load needed for management."
+    },
+    {
+     "a": "Malaria rapid diagnostic test",
+     "b": "Detects Plasmodium antigens; positive requires antimalarial treatment."
+    },
+    {
+     "a": "TB sputum smear",
+     "b": "Positive acid-fast bacilli confirms pulmonary tuberculosis; culture needed for drug sensitivity."
+    },
+    {
+     "a": "Hepatitis B surface antigen",
+     "b": "Positive indicates chronic HBV; ALT/AST guide treatment urgency."
+    },
+    {
+     "a": "Sickle cell hemoglobin electrophoresis",
+     "b": "Identifies HbS/HbC; informs hydroxyurea therapy and transfusion policy."
+    },
+    {
+     "a": "Schistosoma antibody ELISA",
+     "b": "Positive indicates exposure; cysticercosis may need antiparasitic therapy."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypocalcaemia (seizures, cardiac arrhythmia), unexplained anemia with high reticulocyte count, sudden loss of vision or hearing, persistent fever >48h with abnormal labs."
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between accuracy and precision?",
+   "a": "Accuracy is closeness to the true value; precision is consistency of repeated measurements."
+  },
+  {
+   "q": "Why is a low serum calcium with high PTH not typical?",
+   "a": "It suggests a resistance to PTH or a lab error; usually PTH is low in hypocalcaemia."
+  },
+  {
+   "q": "When can a normal CBC be misleading?",
+   "a": "In early infection or bone marrow suppression, counts may still be normal; repeat testing or additional markers may be needed."
+  }
+ ],
+ "exam": [
+  "Explain how you would interpret a low serum calcium with a low PTH level.",
+  "Describe the steps you would take if a patient has a high CRP but normal white cell count.",
+  "Outline the management plan for a patient with confirmed hypocalcaemia due to vitamin D deficiency in a rural clinic."
+ ],
+ "related": [
+  "Endocrinology",
+  "Infectious diseases",
+  "Hematology",
+  "Immunology",
+  "Public health"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

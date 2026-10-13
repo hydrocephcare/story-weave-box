@@ -1,0 +1,92 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "The pyruvate dehydrogenase complex (PDC) links glycolysis to the TCA cycle by turning pyruvate into acetyl‑CoA. Deficiency impairs aerobic energy production, causing neurologic and metabolic crises, especially in infants. Prompt recognition guides life‑saving metabolic support.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "PDC is a multi‑enzyme mitochondrial complex that decarboxylates pyruvate, producing acetyl‑CoA, NADH and CO₂. It is essential for ATP generation from glucose.",
+   "b": [
+    "Three enzyme components: E1 (pyruvate dehydrogenase), E2 (dihydrolipoamide transacetylase), E3 (dihydrolipoamide dehydrogenase)",
+    "Requires thiamine (B1), lipoic acid, CoA, NAD⁺ as cofactors"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Pyruvate binds E1, which, after phosphorylation by thiamine pyrophosphate, releases CO₂. The resulting hydroxyethyl group is transferred to lipoamide on E2, then to CoA, forming acetyl‑CoA. E3 regenerates oxidized lipoamide using NAD⁺.",
+   "b": [
+    "Acetyl‑CoA enters the citric acid cycle",
+    "NADH feeds the electron transport chain"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "PDC activity is tightly controlled by reversible phosphorylation and by substrate availability. High ATP/acetyl‑CoA inhibits, while high ADP/pyruvate activates.",
+   "b": [
+    "PDH kinase (PDK) phosphorylates and inactivates E1",
+    "PDH phosphatase dephosphorylates and activates E1"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Genetic PDHA1 or PDHB mutations cause congenital PDH deficiency. Acquired inhibition occurs with thiamine deficiency, high NADH/NAD⁺ ratio, or toxic metabolites (e.g., arsenic). Autoimmune attack on mitochondrial PDH is rare but reported.",
+   "b": [
+    "Neonatal lactic acidosis, hypotonia, developmental delay",
+    "Episodes triggered by infections, fasting, or stress"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Patients present with chronic neurologic impairment or acute metabolic crises. Diagnosis relies on lactate elevation, low pyruvate‑to‑lactate ratio, and enzyme assay or genetic testing. Management includes thiamine, ketogenic diet, and supportive care.",
+   "t": [
+    {
+     "a": "Pyruvate‑to‑lactate ratio",
+     "b": "Distinguishes PDH deficiency (ratio <10) from other causes"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that PDH links glycolysis to the TCA cycle; deficiency mimics mitochondrial disease with lactic acidosis. Thiamine supplementation can improve enzyme activity in some cases.",
+   "b": [
+    "Ketogenic diet bypasses PDH by providing acetyl‑CoA from fats",
+    "Avoid high‑carb loads that increase pyruvate flux"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe unexplained lactic acidosis, rapid neurologic decline, or coma in an infant or child"
+ ],
+ "faq": [
+  {
+   "q": "Why does thiamine help some patients?",
+   "a": "Thiamine is a cofactor for E1; high doses can boost residual enzyme activity."
+  },
+  {
+   "q": "What is the role of the ketogenic diet?",
+   "a": "It supplies acetyl‑CoA from fatty acids, reducing reliance on PDH."
+  },
+  {
+   "q": "How is PDH deficiency distinguished from other mitochondrial disorders?",
+   "a": "A low pyruvate‑to‑lactate ratio and specific PDHA1/PDHB gene mutations point to PDH deficiency."
+  }
+ ],
+ "exam": [
+  "Explain how PDH connects glycolysis to the TCA cycle and why its deficiency causes lactic acidosis.",
+  "List the genetic and acquired causes of PDH deficiency and their clinical clues.",
+  "Describe the diagnostic work‑up, including key laboratory ratios and when to order enzyme or genetic testing."
+ ],
+ "related": [
+  "Citric acid cycle",
+  "Mitochondrial respiratory chain disorders",
+  "Thiamine deficiency",
+  "Ketogenic diet therapy",
+  "Lactic acidosis",
+  "Pyruvate carboxylase deficiency"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

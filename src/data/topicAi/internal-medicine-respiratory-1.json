@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Internal Medicine Respiratory 1 covers common acute and chronic lower respiratory diseases, their diagnosis, severity assessment, and evidence‑based management, with focus on low‑resource settings.",
+ "aka": [
+  "IM Respiratory I",
+  "Respiratory Medicine Basics"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Respiratory disease refers to any pathology affecting the airways or lung parenchyma that impairs gas exchange or causes symptoms such as cough, dyspnea, or sputum production.",
+   "b": [
+    "Use history, physical exam, and chest imaging to confirm disease presence.",
+    "Apply disease‑specific criteria (e.g., WHO pneumonia definition, GOLD COPD criteria)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity guides treatment intensity and predicts outcomes; staging systems differ by disease.",
+   "b": [
+    "Pneumonia: CURB‑65 score.",
+    "COPD: GOLD grades based on FEV1% predicted.",
+    "Asthma: Intermittent, mild‑persistent, moderate‑persistent, severe‑persistent."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the most common etiologies first, then consider less frequent or region‑specific agents.",
+   "b": [
+    "Bacterial pneumonia – Streptococcus pneumoniae.",
+    "Viral bronchiolitis – RSV in children, influenza in adults.",
+    "TB – especially in HIV‑positive or malnourished patients.",
+    "COPD exacerbation – bacterial infection, air pollutants, indoor smoke."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical presentations combine symptom patterns with physical signs that point to airway vs. parenchymal involvement.",
+   "b": [
+    "Cough with purulent sputum → bacterial bronchitis or pneumonia.",
+    "Dyspnea with wheeze → asthma or COPD.",
+    "Fever, pleuritic chest pain, and crackles → pneumonia or pleural effusion."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer a specific clinical question; adapt when resources are limited.",
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Does the patient have infiltrates, effusion, or pneumothorax? Positive infiltrates confirm pneumonia; normal film may need CT if suspicion remains."
+    },
+    {
+     "a": "Spirometry",
+     "b": "What is the airflow limitation? FEV1/FVC <0.70 confirms COPD; severity follows GOLD grades."
+    },
+    {
+     "a": "Sputum Gram stain & culture",
+     "b": "Which pathogen is present? Guides antibiotic choice; if unavailable, treat empirically based on local patterns."
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Is oxygen saturation adequate? <90% signals need for supplemental O2 or hospitalisation."
+    },
+    {
+     "a": "TB GeneXpert (if available)",
+     "b": "Is Mycobacterium tuberculosis present? Positive result confirms TB; if unavailable, use sputum smear microscopy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise signs that indicate imminent deterioration or life‑threatening sequelae.",
+   "b": [
+    "Rapid respiratory rate >30/min, altered mental status, or hypotension → sepsis.",
+    "Increasing pleuritic pain with tachycardia → possible empyema.",
+    "Progressive hypoxia despite O2 → respiratory failure."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care and monitor response.",
+   "b": [
+    "Antibiotics for bacterial pneumonia (e.g., amoxicillin, macrolide) – chosen for coverage of typical pathogens; avoid fluoroquinolones in children.",
+    "Bronchodilators for COPD/asthma – β2‑agonists relieve airway constriction; inhaled steroids reduce inflammation in persistent asthma.",
+    "Systemic steroids for severe exacerbations – dampen inflammatory surge; taper when stable.",
+    "Oxygen therapy to maintain SpO2 ≥ 92% – prevents hypoxic injury.",
+    "Chest physiotherapy for bronchiectasis – aids sputum clearance."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Arrange review to ensure resolution and prevent recurrence.",
+   "b": [
+    "Repeat chest X‑ray 2–4 weeks after pneumonia if symptoms persist.",
+    "Vaccinate against influenza and pneumococcus, especially in COPD.",
+    "Smoking cessation counseling and indoor air quality improvement."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnoses that share overlapping signs.",
+   "b": [
+    "Pneumonia vs. pulmonary TB – both cause cough and infiltrates; TB often chronic, weight loss, night sweats.",
+    "COPD exacerbation vs. acute heart failure – both cause dyspnea; heart failure shows peripheral edema and elevated JVP.",
+    "Bronchitis vs. early pneumonia – bronchitis lacks focal crackles and radiographic infiltrates."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpreting investigations.",
+   "b": [
+    "Normal chest X‑ray early in pneumonia – disease may be radiographically occult; rely on clinical judgment.",
+    "Sputum culture negative in prior antibiotic use – may miss pathogen; treat empirically.",
+    "Pulse oximetry overestimates O2 in severe anemia – consider arterial blood gas if doubt."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe shortness of breath or chest pain",
+  "Confusion, cyanosis, or inability to speak full sentences",
+  "Persistent fever >38.5°C with worsening cough"
+ ],
+ "faq": [
+  {
+   "q": "When should I admit a patient with pneumonia?",
+   "a": "Admit if CURB‑65 ≥2, SpO2 <90%, or any red‑flag signs such as hypotension or altered mental status."
+  },
+  {
+   "q": "Why are inhaled steroids avoided in acute COPD exacerbations?",
+   "a": "They have delayed onset; systemic steroids act faster to reduce airway inflammation."
+  },
+  {
+   "q": "Can a normal chest X‑ray rule out TB?",
+   "a": "No; early TB may be radiographically silent, especially in HIV patients, so clinical suspicion guides further testing."
+  }
+ ],
+ "exam": [
+  "Explain how to use the CURB‑65 score to decide inpatient versus outpatient management of community‑acquired pneumonia.",
+  "Describe the GOLD classification for COPD and its impact on treatment choices.",
+  "List three red‑flag features that mandate urgent referral for a patient with acute dyspnea."
+ ],
+ "related": [
+  "Pneumonia",
+  "Chronic Obstructive Pulmonary Disease",
+  "Asthma",
+  "Tuberculosis",
+  "Bronchiectasis",
+  "Pleural Effusion",
+  "Pulmonary Embolism"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

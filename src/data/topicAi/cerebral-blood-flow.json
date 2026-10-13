@@ -1,0 +1,175 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Cerebral blood flow (CBF) is the amount of blood reaching brain tissue each minute. Autoregulation keeps CBF stable despite blood pressure changes, but failure leads to ischemia or edema.",
+ "aka": [
+  "cerebral perfusion"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "b": [
+    "Autoregulation maintains flow between MAP 50‑150 mmHg"
+   ],
+   "t": [
+    {
+     "a": "Transcranial Doppler (TCD)",
+     "b": "Does the patient have reduced flow velocity? Low velocity suggests hypoperfusion; high velocity may indicate vasospasm."
+    },
+    {
+     "a": "CT perfusion",
+     "b": "Is there a region of low cerebral blood volume? Low CBV indicates ischemic core; preserved CBV with delayed Tmax suggests penumbra."
+    },
+    {
+     "a": "Near‑infrared spectroscopy (NIRS)",
+     "b": "Is cortical oxygenation low? Low rSO₂ supports global hypoperfusion; normal values may mask deep brain ischemia."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical impact and imaging: mild (symptomatic but reversible), moderate (persistent deficits), severe (coma or infarction).",
+   "b": [
+    "Mild: transient syncope, dizziness",
+    "Moderate: focal neurological deficit, altered consciousness >1 h",
+    "Severe: coma, irreversible infarction on imaging"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Reduced CBF can be arterial, venous, or systemic. In low‑resource settings, infectious and hematologic disorders are common contributors.",
+   "b": [
+    "Cardiac output failure (e.g., severe heart block, Stokes‑Adams attacks)",
+    "Severe hypotension (septic shock, hemorrhage)",
+    "Hypercapnia or hypocapnia‑induced vasoconstriction",
+    "Infectious vasculitis (TB meningitis, neurosyphilis)",
+    "Sickle cell vaso‑occlusion",
+    "Severe anemia or polycythemia",
+    "Intracranial hypertension (malaria cerebral edema, TB meningitis)",
+    "Herbal toxins causing vasospasm"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with sudden loss of consciousness, focal weakness, headache, or seizures, depending on the speed and region of flow loss.",
+   "b": [
+    "Syncope with rapid recovery (hypotension, arrhythmia)",
+    "Gradual confusion, headache (global hypoperfusion)",
+    "Focal motor deficit (territorial ischemia)",
+    "Seizures (cortical irritation from edema)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Choose tests that answer the physiologic question: is flow reduced, why, and where?",
+   "t": [
+    {
+     "a": "Blood pressure measurement",
+     "b": "Is systemic pressure adequate for autoregulation? MAP <50 mmHg suggests risk of CBF failure."
+    },
+    {
+     "a": "Arterial blood gas",
+     "b": "Is PaCO₂ low (hypocapnia) causing vasoconstriction? PaCO₂ <35 mmHg → reduced CBF."
+    },
+    {
+     "a": "ECG & cardiac monitoring",
+     "b": "Is there arrhythmia causing intermittent cerebral perfusion? Complete heart block → Stokes‑Adams attacks."
+    },
+    {
+     "a": "CT/MRI brain",
+     "b": "Is there infarction, edema, or mass effect compromising flow? Diffusion restriction = ischemic core."
+    },
+    {
+     "a": "Lumbar puncture (if infection suspected)",
+     "b": "Is CSF showing TB or bacterial meningitis that can cause vasculitis? Elevated protein, low glucose support diagnosis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unchecked CBF loss quickly leads to irreversible brain injury.",
+   "b": [
+    "Persistent coma >6 h",
+    "New focal deficit with worsening imaging",
+    "Seizure refractory to treatment",
+    "Signs of raised intracranial pressure (papilledema, Cushing triad)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then support perfusion and prevent secondary injury.",
+   "b": [
+    "Restore MAP 70‑90 mmHg (fluids, vasopressors) to stay within autoregulatory range",
+    "Correct hypocapnia: give controlled ventilation or CO₂ supplementation",
+    "Treat arrhythmias: temporary pacing for complete heart block",
+    "Antimicrobial therapy for TB, bacterial meningitis, or malaria",
+    "Transfusion for severe anemia or sickle cell crisis",
+    "Manage intracranial pressure: head elevation, osmotherapy, avoid hyperventilation"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor neurologic status, repeat imaging, and address chronic risk factors.",
+   "b": [
+    "Serial neurological exams every 4 h in acute phase",
+    "Repeat CT/MRI at 24‑48 h if deterioration",
+    "Control hypertension, treat cardiac disease, vaccinate against meningitis"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic CBF reduction but have different mechanisms.",
+   "b": [
+    "Syncope from neurocardiogenic reflex (normal CBF)",
+    "Seizure post‑ictal confusion (neuronal hyper‑activity, not hypoperfusion)",
+    "Migraine aura (cortical spreading depression, transient CBF change)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some measurements appear normal despite serious hypoperfusion.",
+   "b": [
+    "Normal MAP in severe anemia: oxygen delivery still low",
+    "Normal PaCO₂ with cerebral vasospasm (e.g., after subarachnoid hemorrhage)",
+    "CT may miss early ischemia; diffusion MRI is more sensitive"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness lasting >1 min",
+  "New focal neurological deficit",
+  "Severe headache with vomiting",
+  "Seizure not terminating within 5 min"
+ ],
+ "faq": [
+  {
+   "q": "Why does low CO₂ reduce cerebral blood flow?",
+   "a": "Hypocapnia causes cerebral arteriolar smooth‑muscle constriction, lowering vessel diameter and flow."
+  },
+  {
+   "q": "What is the autoregulatory range of MAP?",
+   "a": "Between roughly 50 and 150 mmHg; outside this range flow becomes pressure‑dependent."
+  },
+  {
+   "q": "Can a normal blood pressure guarantee adequate brain perfusion?",
+   "a": "No; anemia, hypoxia, or vasospasm can impair delivery even with normal pressure."
+  }
+ ],
+ "exam": [
+  "Explain how cerebral autoregulation protects the brain and list its limits.",
+  "A patient with complete heart block presents with fainting. Describe the pathophysiology linking the arrhythmia to cerebral blood flow loss.",
+  "Interpret a CT perfusion map showing reduced CBV but prolonged Tmax in a patient with malaria."
+ ],
+ "related": [
+  "Cerebral autoregulation",
+  "Intracranial pressure",
+  "Stroke",
+  "Septic shock",
+  "Sickle cell disease",
+  "Meningitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

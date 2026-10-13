@@ -1,0 +1,76 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The popliteal fossa is a shallow diamond-shaped space behind the knee, housing vital neurovascular structures. Clinicians must recognize its borders, contents, and common pathologies to diagnose and manage injuries or compressive syndromes.",
+ "aka": [
+  "Posterior knee fossa"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The popliteal fossa is a shallow, diamond‑shaped area behind the knee, bounded by muscles and fascia. It contains the popliteal artery, vein, tibial and common peroneal nerves, and lymphatics.",
+   "b": [
+    "Key for knee surgeries, vascular access, and trauma assessment."
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Posterior to the knee joint, the fossa is bounded medially by the semimembranosus, laterally by the biceps femoris, and inferiorly by the gastrocnemius. The roof is formed by the popliteus and semimembranosus.",
+   "b": [
+    "Its shape allows easy palpation of neurovascular structures."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly, the femoral triangle; posteriorly, the calf muscles; medially, the tibial nerve; laterally, the common peroneal nerve. The fossa is a conduit for structures traveling between the thigh and leg.",
+   "b": [
+    "Compression here can affect both lower limb perfusion and sensation."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The popliteal artery, a continuation of the femoral artery, runs centrally. The popliteal vein accompanies it, draining into the femoral vein.",
+   "b": [
+    "Occlusion leads to distal ischemia; aneurysms can compress nerves."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The tibial nerve and common peroneal nerve branch from the sciatic nerve within the fossa. They supply the posterior compartment muscles and provide sensory innervation to the lower leg.",
+   "b": [
+    "Neuropathy here causes foot drop or sensory loss."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The fossa allows passage of neurovascular bundles while protecting them during knee flexion and extension.",
+   "b": [
+    "Maintains limb perfusion and motor control."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Common issues include popliteal artery aneurysm, nerve compression, meniscal tears, and traumatic hematoma. In low‑resource settings, infections like osteomyelitis or septic arthritis may present here.",
+   "b": [
+    "Early recognition prevents limb loss."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "On exam, palpate the popliteal pulse; assess for sensory loss over the lateral foot and dorsum. A positive Tinel sign at the common peroneal nerve suggests compression.",
+   "b": [
+    "Use a simple tourniquet test to check distal perfusion."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of distal pulses, severe pain, or neurological deficits in the lower limb."
+ ],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

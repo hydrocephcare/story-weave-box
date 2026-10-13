@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Thrombotic Thrombocytopenic Purpura (TTP) is a life‑threatening microangiopathy caused by severe ADAMTS13 deficiency, leading to ultra‑large VWF multimers, platelet‑rich microthrombi, MAHA, and organ dysfunction.",
+ "aka": [
+  "Acquired ADAMTS13 deficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "TTP is a thrombotic microangiopathy defined by ADAMTS13 activity <10% with clinical pentad of MAHA, severe thrombocytopenia, neurologic change, renal impairment, and fever.",
+   "b": [
+    "Diagnose by peripheral smear (schistocytes) and ADADMT13 assay if available",
+    "Use PLASMIC score to estimate likelihood before ADAMTS13 result"
+   ],
+   "t": [
+    {
+     "a": "Peripheral blood smear",
+     "b": "Does the patient have fragmented red cells? → Presence of schistocytes confirms microangiopathic hemolysis."
+    },
+    {
+     "a": "ADAMTS13 activity assay",
+     "b": "Is activity <10%? → Strongly supports TTP; if unavailable, rely on PLASMIC score."
+    },
+    {
+     "a": "PLASMIC score",
+     "b": "What is the pre‑test probability? → Score ≥6 indicates high risk, prompting urgent plasma exchange."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by organ involvement and PLASMIC score; no formal stage, but high‑risk patients need immediate plasma exchange and ICU care.",
+   "b": [
+    "Neurologic deficits or rising creatinine signal severe disease",
+    "Platelet count <30 × 10⁹/L and LDH >2× upper limit suggest high burden"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most TTP is acquired, immune‑mediated anti‑ADAMTS13 antibodies; secondary causes include infections, drugs, pregnancy, and autoimmune diseases.",
+   "b": [
+    "Autoimmune anti‑ADAMTS13 antibodies (most common)",
+    "HIV, hepatitis B, malaria, TB – relevant in low‑resource settings",
+    "Drugs: quinine, ticlopidine, clopidogrel, cyclosporine",
+    "Pregnancy/post‑partum period"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop sudden fatigue, pallor, petechiae, bruising, confusion or seizures, and may have mild renal dysfunction or fever.",
+   "b": [
+    "Fatigue, dyspnea from anemia",
+    "Petechiae, mucosal bleeding from thrombocytopenia",
+    "Altered mental status, seizures, headache",
+    "Creatinine rise or oliguria (often mild)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab work focuses on hemolysis, platelet count, renal function, and ADAMTS13 activity; imaging only if neurologic signs demand.",
+   "b": [
+    "CBC, peripheral smear, LDH, bilirubin, haptoglobin",
+    "Renal panel, urinalysis for hematuria",
+    "ADAMTS13 activity, inhibitor assay"
+   ],
+   "t": [
+    {
+     "a": "CBC with smear",
+     "b": "Is there anemia with schistocytes and low platelets? → Confirms MAHA and thrombocytopenia."
+    },
+    {
+     "a": "LDH and indirect bilirubin",
+     "b": "Are they markedly elevated? → Indicates ongoing hemolysis."
+    },
+    {
+     "a": "Creatinine and urine output",
+     "b": "Is renal function impaired? → Guides severity and need for dialysis."
+    },
+    {
+     "a": "ADAMTS13 assay",
+     "b": "Is activity <10%? → Confirms TTP; if unavailable, treat based on clinical score."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid neurologic decline, refractory hypertension, or worsening renal failure signal imminent organ loss; untreated TTP can be fatal.",
+   "b": [
+    "Severe seizures or coma",
+    "Sudden rise in creatinine >2 mg/dL",
+    "Uncontrolled hypertension with end‑organ signs"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Urgent plasma exchange replaces deficient ADAMTS13 and removes antibodies; immunosuppression with steroids and rituximab curtails antibody production.",
+   "b": [
+    "Therapeutic plasma exchange (TPE) daily until platelet count >150 × 10⁹/L",
+    "High‑dose methylprednisolone → suppresses auto‑antibody formation",
+    "Rituximab (anti‑CD20) for refractory or relapsing disease",
+    "Avoid platelet transfusion unless life‑threatening bleeding"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor platelet count, LDH, and neurologic status daily; after remission, schedule ADAMTS13 activity checks and educate on trigger avoidance.",
+   "b": [
+    "Weekly labs until stable, then monthly for 6 months",
+    "Vaccinate against infections that may precipitate relapse (e.g., influenza)",
+    "Counsel on avoiding quinine‑containing drinks and certain herbal remedies"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions sharing MAHA and thrombocytopenia can mislead clinicians.",
+   "b": [
+    "Hemolytic Uremic Syndrome (HUS) – more renal, often diarrheal prodrome",
+    "Disseminated Intravascular Coagulation (DIC) – abnormal PT/aPTT, fibrinogen low",
+    "Severe sepsis with consumptive coagulopathy"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may appear normal early, delaying treatment.",
+   "b": [
+    "ADAMTS13 may be unavailable or delayed; rely on PLASMIC score",
+    "PT/aPTT often normal in TTP, so normal coagulation does not exclude disease",
+    "Creatinine may be only mildly raised despite severe microthrombi"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden neurological decline (seizure, coma)",
+  "Severe bleeding with platelet count <20 × 10⁹/L",
+  "Rapid rise in creatinine or oliguria"
+ ],
+ "faq": [
+  {
+   "q": "Why are platelet transfusions usually avoided in TTP?",
+   "a": "They add substrate for microthrombi, worsening organ ischemia."
+  },
+  {
+   "q": "What is the PLASMIC score used for?",
+   "a": "To estimate the probability of severe ADAMTS13 deficiency before lab confirmation."
+  },
+  {
+   "q": "Can TTP occur in pregnancy?",
+   "a": "Yes; pregnancy‑associated TTP is an immune form that requires plasma exchange and steroids."
+  }
+ ],
+ "exam": [
+  "Explain how ADAMTS13 deficiency leads to the clinical pentad of TTP.",
+  "Describe the steps you would take to diagnose TTP when ADAMTS13 testing is not immediately available.",
+  "List the first‑line therapies for TTP and the rationale for avoiding platelet transfusion."
+ ],
+ "related": [
+  "Hemolytic Uremic Syndrome",
+  "Disseminated Intravascular Coagulation",
+  "Autoimmune Hemolytic Anemia",
+  "Antiphospholipid Syndrome",
+  "Severe Malaria"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}
