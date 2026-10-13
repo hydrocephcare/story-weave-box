@@ -1,11 +1,12 @@
 // The polish itself, shared by the page-open endpoint (api/_lib/blogPolish.js) and the batch job (scripts/blogs/polish-batch.mjs).
 // `ask(prompt, timeoutMs, maxTokens)` returns the model's text. Nothing here talks to the database.
 import { CHUNK_PROMPT, META_PROMPT, NOTE_PROMPT, QUESTIONS_PROMPT, REPAIR_PROMPT } from "./blogPolishPrompts.js";
-import { chunksOf, cleanMeta, kindOf, missingSentences, hasLocked, parseJson, plain, restorePictures, soundPolish, VERDICTS } from "./blogPolishCore.js";
+import { chunksOf, cleanMeta, kindOf, missingSentences, hasLocked, parseJson, plain, restorePictures, scanPages, soundPolish, VERDICTS, withScans } from "./blogPolishCore.js";
 
 const unfence = (s) => String(s ?? "").replace(/^```(?:markdown|md)?\s*/i, "").replace(/```\s*$/, "").trim();
 
 // The polish may never strip more than about a fifth of what the author wrote. A note gains an intro and practice questions, so only its floor is lower.
+const SCANNED = { minWords: 0.7, minNums: 0.7 }; // a page typed from scans has debris the AI is right to drop
 const RULES = {
   note: { headings: true, maxRatio: 2.0, minWords: 0.8, minRatio: 0.7 },
   questions: { headings: false, maxRatio: 1.5, minWords: 0.8, minRatio: 0.8 },
@@ -32,6 +33,7 @@ export async function polishArticle(a, ask, { chunk = false } = {}) {
   if (kind === "scan") { note("scanned pages: shown as pictures"); return result; }
   if (kind === "formatted") { note("question layout already fine"); return result; }
 
+  const scanned = scanPages(a.original_notes).length >= 2; // typed from scans: the text has debris the AI is right to drop
   const long = text.length > 14000;
   if (long && !chunk) { note("too long to polish on open; the batch job does it"); return result; }
   const make = (part, first) => (kind === "note" ? (long ? CHUNK_PROMPT(a, part, first) : NOTE_PROMPT(a, part)) : QUESTIONS_PROMPT(a, part));
@@ -50,22 +52,22 @@ export async function polishArticle(a, ask, { chunk = false } = {}) {
   try {
     let out, bad;
     if (!long) {
-      ({ out, bad } = await once(text, kind === "note" ? RULES.note : RULES.questions, true));
+      ({ out, bad } = await once(text, { ...(kind === "note" ? RULES.note : RULES.questions), ...(scanned ? SCANNED : {}) }, true));
     } else {
       const parts = chunksOf(text, 8500);
       const done = [];
       for (let i = 0; i < parts.length; i++) {
-        const r = await once(parts[i], RULES.part, i === 0);
+        const r = await once(parts[i], { ...RULES.part, ...(scanned ? SCANNED : {}) }, i === 0);
         if (r.bad) { note(`polish rejected in part ${i + 1}: ${r.bad}`); return result; }
         done.push(r.out);
       }
       out = done.join("\n\n");
-      bad = soundPolish(text, out, kind === "note" ? RULES.note : RULES.questions);
+      bad = soundPolish(text, out, { ...(kind === "note" ? RULES.note : RULES.questions), ...(scanned ? SCANNED : {}) });
     }
-    if (bad) { note(`polish rejected: ${bad}`); result.rejected = out; } else result.content = out;
+    if (bad) { note(`polish rejected: ${bad}`); result.rejected = out; } else result.content = kind === "note" ? out : withScans(out, a.original_notes);
   } catch (e) {
     result.status = "partial";
-    note("text will be tried again");
+    note(`text will be tried again (${String(e?.message ?? "").slice(0, 70)})`);
   }
   return result;
 }
@@ -101,6 +103,7 @@ export async function polishStep(a, ask, state, { budgetMs = 36000 } = {}) {
   const plan = stepPlan(a);
   if (!plan) return { content: null, parts_done: 0, total: 0, finished: true, reason: "text left as it was" };
   const { kind, parts } = plan;
+  const scanned = scanPages(a.original_notes).length >= 2;
   const t0 = Date.now();
   let done = Math.min(state?.parts_done ?? 0, parts.length);
   let acc = done > 0 ? String(state?.content ?? "") : "";
@@ -113,16 +116,18 @@ export async function polishStep(a, ask, state, { budgetMs = 36000 } = {}) {
     const make = kind === "note" ? CHUNK_PROMPT(a, part, done === 0) : QUESTIONS_PROMPT(a, part);
     const timeout = Math.max(8000, Math.min(26000, left() - 4000));
     let out = restorePictures(part, unfence(await ask(make, timeout, 6000)));
-    let bad = soundPolish(part, out, RULES.part);
+    const partRules = { ...RULES.part, ...(scanned ? SCANNED : {}) };
+    let bad = soundPolish(part, out, partRules);
     if (bad && /^(words|numbers|length)/.test(bad) && left() > 20000) {
       out = restorePictures(part, unfence(await ask(REPAIR_PROMPT(a, out, missingSentences(part, out), bad), Math.max(8000, Math.min(26000, left() - 4000)), 6000)));
-      bad = soundPolish(part, out, RULES.part);
+      bad = soundPolish(part, out, partRules);
     }
     if (bad) return { content: null, parts_done: parts.length, total: parts.length, finished: true, reason: `polish rejected in part ${done + 1}: ${bad}` };
     acc = acc ? `${acc}\n\n${out}` : out;
     done++;
   }
   if (done < parts.length) return { content: acc, parts_done: done, total: parts.length, finished: false, reason: "" };
-  const bad = soundPolish(a.content, acc, kind === "note" ? RULES.note : RULES.questions);
-  return bad ? { content: null, parts_done: done, total: parts.length, finished: true, reason: `polish rejected: ${bad}` } : { content: acc, parts_done: done, total: parts.length, finished: true, reason: "" };
+  const bad = soundPolish(a.content, acc, { ...(kind === "note" ? RULES.note : RULES.questions), ...(scanned ? SCANNED : {}) });
+  const finalText = kind === "note" ? acc : withScans(acc, a.original_notes);
+  return bad ? { content: null, parts_done: done, total: parts.length, finished: true, reason: `polish rejected: ${bad}` } : { content: finalText, parts_done: done, total: parts.length, finished: true, reason: "" };
 }

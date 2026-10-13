@@ -33,10 +33,10 @@ export function needsMcqFormat(content) {
 }
 
 /** The polished text must still say what the original said: numbers and long words kept, pictures kept, a sensible length, real headings. */
-export function soundPolish(original, out, { headings = true, maxRatio = 1.4, minWords = 0.8, minRatio = 0.8 } = {}) {
+export function soundPolish(original, out, { headings = true, maxRatio = 1.4, minWords = 0.8, minRatio = 0.8, minNums = 0.9 } = {}) {
   const nums = [...new Set((plain(original).match(/\d+(?:[.,]\d+)?/g) ?? []).filter((n) => n.length >= 2))];
   const keptNums = nums.filter((n) => out.includes(n)).length;
-  if (nums.length >= 5 && keptNums / nums.length < 0.9) return `numbers lost (${keptNums}/${nums.length})`;
+  if (nums.length >= 5 && keptNums / nums.length < minNums) return `numbers lost (${keptNums}/${nums.length})`;
   const words = [...new Set(plain(original).toLowerCase().match(/[a-z]{7,}/g) ?? [])];
   const o = out.toLowerCase();
   const kept = words.filter((w) => o.includes(w)).length;
@@ -88,8 +88,14 @@ export function kindOf(content) {
   const c = String(content ?? "");
   const qs = (c.match(/^(?:#{1,4}\s*)?\**(?:Question|Q)\s*\d+/gim) ?? []).length;
   const sections = (c.match(/^##\s/gm) ?? []).length;
-  const questionPage = isBank(c) || (qs >= 3 && sections < 3);
-  if (questionPage) return needsMcqFormat(c) || needsPaperFormat(c) ? "questions" : "formatted";
+  const questionPage = isBank(c) || (qs >= 3 && sections < 3) || isExamLike(c);
+  if (questionPage) {
+    if (needsMcqFormat(c) || needsPaperFormat(c)) return "questions";
+    // an exam typed from a scan whose questions are not numbered "Question N": it still needs the site's layout
+    const standard = (c.match(/^\*\*\d+\.\s+.+\*\*\s*$/gm) ?? []).length + (c.match(/^###\s+Question\s*\d+/gim) ?? []).length;
+    if (isExamLike(c) && standard < 3) return "questions";
+    return "formatted";
+  }
   return "note";
 }
 
@@ -152,3 +158,22 @@ export function missingSentences(original, out, limit = 40) {
 
 /** Pages with the site's pay-gate markers must never be rewritten. */
 export const hasLocked = (content) => /\[locked\b/i.test(String(content ?? ""));
+
+/** An exam paper typed from a scan: marks, sections and instructions, even when its questions are not numbered "Question N". */
+export function isExamLike(content) {
+  const c = String(content ?? "");
+  const marks = (c.match(/\(\s*\d+\s*marks?\s*\)|\d+\s*marks?\b/gi) ?? []).length;
+  return marks >= 4 && /section\s+[a-d]\b|attempt\s+(any|all)|answer\s+(any|all)|time\s*[:\-]|date\s*[:\-]/i.test(c);
+}
+
+/** The page-picture lines stored with a scanned paper (original_notes). */
+export function scanPages(originalNotes) {
+  return String(originalNotes ?? "").split(/\r?\n/).map((l) => l.trim()).filter((l) => /^!\[[^\]]*\]\([^\s)]+\)$/.test(l));
+}
+
+/** A paper typed from scans keeps the scans under it, so diagrams and anything the typing lost are still there. */
+export function withScans(content, originalNotes) {
+  const pages = scanPages(originalNotes).filter((p) => !content.includes(p));
+  if (pages.length < 2) return content;
+  return `${content.trim()}\n\n## Original pages\n\nThe pages as they were printed, for the diagrams and anything the typing above could not keep.\n\n${pages.join("\n\n")}\n`;
+}

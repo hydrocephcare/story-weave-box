@@ -95,7 +95,9 @@ Rules:
 1. Every question, option, answer, explanation, mark and picture of the original must be in your output, word for word, in the original order within each group. Do not shorten anything.
 2. Never make an answer up. If a multiple-choice question has no answer, write "Answer: not given". If a written question has no answer, write only its bold question line and nothing after it.
 3. Keep other headings, section titles and instructions where they are: a section heading and its instructions stay directly above that section's own questions, and a page holding two papers keeps them apart. Number the questions of each section from 1. Each picture stays directly under the question it belongs to.
-4. Remove only stray symbols, page markers and chat leftovers. Output ONLY the finished markdown, no commentary, no code fences.
+4. Remove only stray symbols, page markers and chat leftovers.
+5. The page may have been typed from a scan, so its text can be damaged. Delete page markers ("Page 3 of 12 ..."), debris words that belong to nothing, and the pieces of a diagram that were typed as lines of one to four characters ("O", "C——", "HO—C— H", "— OH"); where such a diagram was, write the line *(diagram: see the original pages at the end)*. Correct a word or number only when the sentence itself makes the right one certain (for example "l." at the start of a question is "1."). If a fragment cannot be read, delete it. Never guess and never invent a question, an option or an answer. Each sub-part (a, b, c) and its marks stay with its question.
+6. Output ONLY the finished markdown, no commentary, no code fences.
 
 PAGE:
 """

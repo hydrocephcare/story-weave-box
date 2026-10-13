@@ -31,7 +31,7 @@ const sb = async (path, { method = "GET", body, headers = {} } = {}) => {
 
 const rows = [];
 for (let o = 0; o < 4000; o += 500) {
-  const r = await sb(`articles?select=id,title,category,content&published=eq.true&deleted_at=is.null&password_protected=eq.false&order=created_at.asc&offset=${o}&limit=500`);
+  const r = await sb(`articles?select=id,title,category,content,original_notes&published=eq.true&deleted_at=is.null&password_protected=eq.false&order=created_at.asc&offset=${o}&limit=500`);
   if (!r.ok || !Array.isArray(r.json)) { console.log("Could not read the articles:", r.status, r.text.slice(0, 120)); process.exit(0); }
   rows.push(...r.json); if (r.json.length < 500) break;
 }

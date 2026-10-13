@@ -44,7 +44,7 @@ export default async function handler(req, res) {
   if (!UUID.test(id)) return res.status(400).json({ status: "invalid" });
 
   // only public, published Year 1 to 3 blogs
-  const got = await sb(`articles?select=id,title,category,content,published,deleted_at,password_protected&id=eq.${id}`);
+  const got = await sb(`articles?select=id,title,category,content,original_notes,published,deleted_at,password_protected&id=eq.${id}`);
   const a = got.json?.[0];
   if (!a || !a.published || a.deleted_at || a.password_protected || ![1, 2, 3, 4, 5, 6].includes(yearOf(a.category))) return res.status(404).json({ status: "invalid" });
 
