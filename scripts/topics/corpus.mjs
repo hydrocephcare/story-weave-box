@@ -8,7 +8,8 @@ import { createClient } from "@supabase/supabase-js";
 const envFile = fs.existsSync(".env") ? fs.readFileSync(".env", "utf8") : "";
 // the committed .env names the real project, so it wins over any variable the host may have set for something else
 const env = { ...process.env, ...Object.fromEntries(envFile.split(/\r?\n/).filter((l) => l.includes("=")).map((l) => [l.split("=")[0], l.slice(l.indexOf("=") + 1).replace(/^"|"$/g, "")])) };
-const sb = createClient(env.VITE_SUPABASE_URL, env.VITE_SUPABASE_PUBLISHABLE_KEY, { auth: { persistSession: false } });
+// the host's build may not have .env or the variables, so fall back to the public address and key the website itself ships with
+const sb = createClient(env.VITE_SUPABASE_URL || "https://lkgfzjwhmfjvntzphbsh.supabase.co", env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrZ2Z6andobWZqdm50enBoYnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3Nzk5MjIsImV4cCI6MjA4NzM1NTkyMn0.a2QY6TxzKNM2AhuuoDkgdKifI3XhSGhYRlhpqZpvAwo", { auth: { persistSession: false } });
 
 async function all(table, cols, filter) {
   const out = [];
