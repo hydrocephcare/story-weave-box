@@ -6,7 +6,8 @@ import path from "path";
 import { createClient } from "@supabase/supabase-js";
 
 const envFile = fs.existsSync(".env") ? fs.readFileSync(".env", "utf8") : "";
-const env = { ...Object.fromEntries(envFile.split(/\r?\n/).filter((l) => l.includes("=")).map((l) => [l.split("=")[0], l.slice(l.indexOf("=") + 1).replace(/^"|"$/g, "")])), ...process.env };
+// the committed .env names the real project, so it wins over any variable the host may have set for something else
+const env = { ...process.env, ...Object.fromEntries(envFile.split(/\r?\n/).filter((l) => l.includes("=")).map((l) => [l.split("=")[0], l.slice(l.indexOf("=") + 1).replace(/^"|"$/g, "")])) };
 const sb = createClient(env.VITE_SUPABASE_URL, env.VITE_SUPABASE_PUBLISHABLE_KEY, { auth: { persistSession: false } });
 
 async function all(table, cols, filter) {
