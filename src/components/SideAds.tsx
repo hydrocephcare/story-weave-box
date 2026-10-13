@@ -150,9 +150,9 @@ export default function SideAds({ title, mode = "gutters" }: { title: string; mo
     return (
       <div className="sticky top-24 mt-6 hidden space-y-4 print:hidden xl:block" aria-label="Advertisements">
         <style>{MOTION}</style>
-        <Slot keys={SLOTS[0]} title={title} offset={0} fluid from={30} reserve={196} />
-        <Slot keys={SLOTS[1]} title={title} offset={1} fluid from={30} reserve={196} />
-        <Slot keys={SLOTS[2]} title={title} offset={2} fluid from={30} reserve={196} />
+        <Slot keys={SLOTS[0]} title={title} offset={0} fluid from={30} />
+        <Slot keys={SLOTS[1]} title={title} offset={1} fluid from={30} />
+        <Slot keys={SLOTS[2]} title={title} offset={2} fluid from={30} />
       </div>
     );
   }
