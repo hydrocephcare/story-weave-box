@@ -99,10 +99,13 @@ export async function loadWebMedia(names: string[]): Promise<WebMedia | null> {
     if (article) {
       const q = new URLSearchParams({ action: "query", format: "json", origin: "*", titles: article.title, prop: "images", imlimit: "40" });
       const q0 = new URLSearchParams({ action: "query", format: "json", origin: "*", titles: article.title, prop: "extracts", explaintext: "1", exsectionformat: "wiki" });
-      const fullArticle = await json<{ query?: { pages?: Record<string, { extract?: string }> } }>(`${API}?${q0}`).catch(() => null);
+      // the text and the list of pictures do not depend on each other: ask for both at once
+      const [fullArticle, imgs] = await Promise.all([
+        json<{ query?: { pages?: Record<string, { extract?: string }> } }>(`${API}?${q0}`).catch(() => null),
+        json<{ query?: { pages?: Record<string, { images?: { title: string }[] }> } }>(`${API}?${q}`).catch(() => null),
+      ]);
       const fullPage = Object.values(fullArticle?.query?.pages ?? {})[0] as { extract?: string } | undefined;
       const sections = articleSections(fullPage?.extract ?? "");
-      const imgs = await json<{ query?: { pages?: Record<string, { images?: { title: string }[] }> } }>(`${API}?${q}`).catch(() => null);
       const first = Object.values(imgs?.query?.pages ?? {})[0] as { images?: { title: string }[] } | undefined;
       const words = article.title.toLowerCase().split(/\W+/).filter((w) => w.length > 3);
       // Wikipedia reuses stock pictures of neighbouring conditions; keep those only when the file name mentions this topic
