@@ -1,0 +1,108 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Glycolysis is the primary pathway for glucose breakdown, producing ATP for energy. It occurs in the cytoplasm and can function aerobically or anaerobically. Its regulation is crucial for cellular energy balance and is linked to various metabolic disorders.",
+ "aka": [
+  "Embden-Meyerhof-Parnas pathway"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Glycolysis is the fundamental metabolic pathway that converts glucose into pyruvate, generating ATP, the cell's main energy currency. It occurs in the cytoplasm and is the first step in both aerobic and anaerobic respiration. This pathway is essential for all cells, especially those with high energy demands like red blood cells.",
+   "b": [
+    "Glucose is broken down into two molecules of pyruvate.",
+    "Net production of 2 ATP and 2 NADH per glucose molecule.",
+    "Occurs in the cytosol."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Glycolysis involves ten enzymatic steps. The initial phase requires ATP investment to prepare glucose for cleavage. The second phase extracts energy, producing ATP and NADH. Aerobic conditions allow pyruvate to enter the mitochondria for further ATP generation via the Krebs cycle and oxidative phosphorylation. Anaerobic conditions convert pyruvate to lactate, regenerating NAD+ to sustain glycolysis.",
+   "b": [
+    "Aerobic: Pyruvate enters mitochondria, yielding ~34 ATP via Krebs cycle and ETC.",
+    "Anaerobic: Pyruvate converted to lactate by LDH, regenerating NAD+ for glycolysis."
+   ],
+   "t": [
+    {
+     "a": "Aerobic vs. Anaerobic Glycolysis",
+     "b": "Distinguishes ATP yield and fate of pyruvate based on oxygen availability. Aerobic yields significantly more ATP; anaerobic allows ATP production in oxygen-deprived states."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Glycolysis is tightly regulated at key irreversible steps by enzymes like hexokinase, phosphofructokinase-1 (PFK-1), and pyruvate kinase. These enzymes are controlled by cellular energy status (ATP, ADP, AMP), substrate availability, and hormonal signals like insulin and glucagon, ensuring energy production matches cellular needs.",
+   "b": [
+    "Key regulatory enzymes: Hexokinase, PFK-1, Pyruvate Kinase.",
+    "Allosteric regulation by ATP, AMP, citrate.",
+    "Hormonal control (insulin, glucagon)."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Defects in glycolytic enzymes can lead to various conditions. For example, pyruvate kinase deficiency causes hemolytic anemia due to impaired ATP production in red blood cells. Impaired glycolysis in tissues due to hypoperfusion or hypoxia leads to lactic acidosis.",
+   "b": [
+    "Enzyme deficiencies (e.g., Pyruvate Kinase deficiency -> Hemolytic Anemia).",
+    "Impaired glycolysis in hypoxia/ischemia -> Lactic Acidosis."
+   ],
+   "t": [
+    {
+     "a": "Pyruvate Kinase Deficiency",
+     "b": "Identifies a genetic cause of hemolytic anemia. Results show decreased red blood cell ATP and accumulation of glycolytic intermediates."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Glycolysis is central to cellular energy. Hypoperfusion causes tissue hypoxia, forcing cells to rely on anaerobic glycolysis, leading to lactic acidosis. This is a marker of severe illness and shock. Certain parasites, like *Leishmania*, rely on host glycolysis and can be targeted by drugs inhibiting this pathway.",
+   "b": [
+    "Hypoperfusion/hypoxia shifts metabolism to anaerobic glycolysis, causing lactic acidosis.",
+    "Parasites (e.g., *Leishmania*) can exploit host glycolysis.",
+    "Cancer cells often upregulate glycolysis (Warburg effect)."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Understand the ATP and NADH balance in aerobic vs. anaerobic glycolysis. Recognize that lactic acidosis is a sign of cellular hypoperfusion and impaired aerobic metabolism. Know the key regulatory enzymes and their clinical significance in inherited disorders.",
+   "b": [
+    "Know the net yield of ATP and NADH in aerobic and anaerobic glycolysis.",
+    "Lactic acidosis indicates tissue hypoxia and reliance on anaerobic glycolysis.",
+    "Pyruvate kinase deficiency is a common cause of inherited hemolytic anemia."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the main purpose of glycolysis?",
+   "a": "To break down glucose to produce ATP, the cell's primary energy source."
+  },
+  {
+   "q": "What is the difference between aerobic and anaerobic glycolysis?",
+   "a": "Aerobic glycolysis occurs with oxygen and leads to more ATP via the mitochondria, while anaerobic glycolysis occurs without oxygen and produces lactate to sustain ATP production."
+  },
+  {
+   "q": "Why is lactic acidosis a serious condition?",
+   "a": "It indicates widespread tissue hypoxia and impaired energy production, often a sign of shock or severe illness."
+  }
+ ],
+ "exam": [
+  "Explain the biochemical differences between aerobic and anaerobic glycolysis, including the fate of pyruvate and NADH, and their implications for ATP yield.",
+  "Describe how glycolysis is regulated and why this regulation is clinically important, citing specific examples of enzyme deficiencies.",
+  "Discuss the clinical significance of lactic acidosis, linking it to cellular metabolism and conditions like shock or hypoperfusion."
+ ],
+ "related": [
+  "Gluconeogenesis",
+  "Krebs Cycle",
+  "Oxidative Phosphorylation",
+  "Lactic Acidosis",
+  "Hemolytic Anemia",
+  "Cellular Respiration",
+  "Warburg Effect",
+  "Hypoxia"
+ ],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

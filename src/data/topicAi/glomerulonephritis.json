@@ -1,0 +1,151 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Glomerulonephritis is inflammation of the glomeruli, the kidney's filtering units. It can cause blood and protein in urine, swelling, and high blood pressure. Causes range from infections to autoimmune diseases, requiring prompt diagnosis and management to prevent kidney failure.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Glomerulonephritis (GN) is inflammation of the glomeruli, the tiny filters in the kidneys. Diagnosis is suspected with findings like red blood cells (especially dysmorphic) and protein in the urine, often accompanied by swelling and hypertension. A kidney biopsy is the definitive diagnostic tool.",
+   "b": [
+    "Dysmorphic red blood cells in urine indicate glomerular damage.",
+    "Proteinuria suggests a problem with the kidney's filtration barrier."
+   ],
+   "t": [
+    {
+     "a": "Urinalysis",
+     "b": "Detects red blood cells, protein, and casts in urine. Indicates glomerular damage when dysmorphic RBCs or significant proteinuria are present."
+    },
+    {
+     "a": "Kidney Biopsy",
+     "b": "Identifies the specific type and cause of glomerulonephritis. Essential for definitive diagnosis and guiding treatment."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is often assessed by the degree of kidney function impairment (e.g., GFR), proteinuria level, and presence of systemic symptoms. Acute GN can rapidly lead to kidney failure, while chronic forms may progress slowly over years.",
+   "b": [
+    "Acute Kidney Injury (AKI) indicates rapid loss of kidney function.",
+    "Nephrotic syndrome (heavy proteinuria, hypoalbuminemia, edema, hyperlipidemia) signifies severe glomerular damage."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are diverse, including infections (post-streptococcal, hepatitis B/C, HIV), autoimmune diseases (lupus, vasculitis), and genetic factors. In low-resource settings, consider infections like malaria (blackwater fever), schistosomiasis, and reactions to herbal remedies.",
+   "b": [
+    "Post-infectious GN (e.g., post-streptococcal) is common after throat or skin infections.",
+    "Autoimmune GN includes lupus nephritis and anti-GBM disease (Goodpasture's syndrome).",
+    "HIV-associated nephropathy is a significant cause in affected populations.",
+    "Toxins like certain drugs or herbal remedies can cause interstitial nephritis or ATN."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with cola-colored urine (hematuria), foamy urine (proteinuria), swelling (edema), high blood pressure (hypertension), and fatigue. Some may have systemic symptoms related to the underlying cause, like joint pain or rash.",
+   "b": [
+    "Hematuria, especially macroscopic (cola-colored), is a hallmark.",
+    "Edema, particularly around the eyes and in the legs, suggests fluid retention.",
+    "Hypertension can be severe and lead to complications like hypertensive encephalopathy."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key investigations include urinalysis for blood and protein, blood tests for kidney function (creatinine, urea, eGFR), and serology for infections or autoimmune markers. A kidney biopsy is often required for definitive diagnosis.",
+   "t": [
+    {
+     "a": "Serum Creatinine and eGFR",
+     "b": "Assesses overall kidney function. Elevated creatinine and low eGFR indicate impaired filtration."
+    },
+    {
+     "a": "Urinary Protein-to-Creatinine Ratio (UPCR)",
+     "b": "Quantifies proteinuria. A high ratio indicates significant protein loss, suggesting glomerular damage."
+    },
+    {
+     "a": "Complement levels (C3, C4)",
+     "b": "Helps differentiate causes; low levels suggest immune complex deposition (e.g., post-infectious GN, lupus nephritis)."
+    },
+    {
+     "a": "ANCA, Anti-GBM antibodies",
+     "b": "Detects specific autoantibodies in vasculitis and anti-GBM disease. Positive results guide specific treatments."
+    },
+    {
+     "a": "Hepatitis B/C, HIV serology",
+     "b": "Identifies infections that can cause secondary GN. Positive tests prompt specific antiviral therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent medical attention is needed for rapidly declining kidney function (acute kidney injury), severe hypertension causing neurological symptoms (encephalopathy), or significant fluid overload leading to respiratory distress. Complications include chronic kidney disease and end-stage renal disease."
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause (e.g., antibiotics for infection, immunosuppressants for autoimmune disease) and supportive care. This includes blood pressure control, fluid management, and dietary modifications. Dialysis may be needed for severe kidney failure.",
+   "b": [
+    "Blood pressure control with ACE inhibitors or ARBs is crucial.",
+    "Immunosuppression (e.g., corticosteroids, cyclophosphamide) is used for autoimmune GN.",
+    "Supportive care includes managing edema and electrolyte imbalances."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of blood pressure, kidney function, and proteinuria is essential. Preventing GN involves managing underlying conditions like diabetes, hypertension, and infections. Prompt treatment of streptococcal infections can help prevent post-streptococcal GN.",
+   "b": [
+    "Adherence to prescribed medications and lifestyle changes is vital.",
+    "Early detection and management of risk factors reduce progression."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Glomerulonephritis can be confused with other causes of kidney dysfunction, such as acute tubular necrosis (ATN), interstitial nephritis, and urinary tract infections causing hematuria. Nephrotic syndrome can mimic other causes of edema.",
+   "b": [
+    "Acute Tubular Necrosis (ATN): Often due to ischemia or toxins, typically lacks dysmorphic RBCs.",
+    "Interstitial Nephritis: Usually drug-induced, may present with rash and eosinophilia.",
+    "Urinary Tract Infection (UTI): Typically causes dysuria and frequency, less likely to cause significant proteinuria or dysmorphic RBCs."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Urine dipstick tests can be falsely positive for protein due to contamination or certain medications. Kidney function tests may appear normal early in chronic disease. Hematuria can be present in conditions other than GN.",
+   "b": [
+    "A normal creatinine does not exclude significant underlying glomerular disease.",
+    "Urine dipstick for blood can be positive with myoglobinuria (rhabdomyolysis)."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the most common cause of glomerulonephritis?",
+   "a": "The most common causes vary by age and region, but post-infectious GN (especially post-streptococcal) and IgA nephropathy are frequent globally. Autoimmune diseases are also significant causes."
+  },
+  {
+   "q": "Can glomerulonephritis be cured?",
+   "a": "Many forms of glomerulonephritis can be treated effectively, especially if diagnosed early. Some causes are curable, while others require long-term management to control inflammation and preserve kidney function."
+  },
+  {
+   "q": "What is the role of a kidney biopsy?",
+   "a": "A kidney biopsy is crucial for identifying the specific type of glomerulonephritis, determining its severity, and guiding the most appropriate treatment strategy."
+  }
+ ],
+ "exam": [
+  "Describe the key clinical features and initial investigations for a patient presenting with cola-colored urine and edema.",
+  "How would you differentiate between post-streptococcal glomerulonephritis and rapidly progressive glomerulonephritis based on clinical presentation and initial tests?",
+  "What are the potential complications of severe hypertension in the context of glomerulonephritis, and how are they managed?"
+ ],
+ "related": [
+  "Nephrotic Syndrome",
+  "Acute Kidney Injury",
+  "Chronic Kidney Disease",
+  "Hypertension",
+  "Systemic Lupus Erythematosus",
+  "IgA Nephropathy",
+  "Post-Streptococcal Glomerulonephritis",
+  "Anti-GBM Disease"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

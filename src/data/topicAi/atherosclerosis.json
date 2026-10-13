@@ -1,0 +1,151 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Atherosclerosis is a chronic inflammatory disease affecting artery walls, characterized by plaque buildup. It leads to narrowed arteries, impairing blood flow and causing conditions like heart attack and stroke.",
+ "aka": [
+  "Hardening of the arteries"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Atherosclerosis is a disease where plaque, made of fat, cholesterol, and other substances, builds up inside arteries. This plaque hardens and narrows the arteries, limiting the flow of oxygen-rich blood to organs and other parts of the body. Diagnosis is often based on clinical presentation and risk factors, as direct visualization of early plaque is difficult.",
+   "b": [
+    "Characterized by intimal thickening and lipid accumulation.",
+    "Progresses from fatty streaks to fibrous plaques and complicated lesions."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is often described by the degree of luminal stenosis (narrowing) and the presence of complications. Early stages involve fatty streaks, progressing to raised fibrous plaques, and finally to complicated plaques with calcification, ulceration, or rupture. The clinical impact depends on the affected artery and the extent of blockage.",
+   "b": [
+    "Fatty streak: earliest lesion, reversible.",
+    "Fibrous plaque: accumulation of lipids and smooth muscle cells.",
+    "Complicated plaque: calcification, thrombosis, or hemorrhage."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Key risk factors include hyperlipidemia (high cholesterol), hypertension (high blood pressure), smoking, diabetes mellitus, advanced age, and male sex. Genetic predisposition also plays a role. Chronic inflammation and endothelial dysfunction are central to its development.",
+   "b": [
+    "Modifiable: Smoking, hypertension, diabetes, hyperlipidemia, obesity.",
+    "Non-modifiable: Age, male sex, family history.",
+    "Emerging: Chronic infections, air pollution."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms depend on the affected artery. Coronary atherosclerosis causes angina or myocardial infarction. Cerebral atherosclerosis leads to transient ischemic attacks or stroke. Peripheral atherosclerosis can cause claudication (leg pain with walking) or critical limb ischemia.",
+   "b": [
+    "Coronary artery disease: chest pain, shortness of breath.",
+    "Cerebrovascular disease: sudden weakness, speech difficulty, vision loss.",
+    "Peripheral artery disease: leg pain, non-healing ulcers."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Lipid profile",
+     "b": "Assesses cholesterol and triglyceride levels, key contributors to plaque formation."
+    },
+    {
+     "a": "Blood pressure measurement",
+     "b": "Identifies hypertension, a major driver of endothelial damage and atherosclerosis."
+    },
+    {
+     "a": "Blood glucose/HbA1c",
+     "b": "Detects diabetes mellitus, which accelerates atherosclerosis through various mechanisms."
+    },
+    {
+     "a": "Imaging (e.g., Ultrasound, Angiography)",
+     "b": "Visualizes arterial narrowing, plaque burden, and blood flow."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Sudden onset of severe chest pain, stroke symptoms (weakness, numbness, speech difficulty), or acute limb ischemia are critical emergencies. Complications include myocardial infarction, stroke, aortic aneurysm, and peripheral limb loss.",
+   "b": [
+    "Myocardial infarction (heart attack).",
+    "Cerebrovascular accident (stroke).",
+    "Critical limb ischemia requiring amputation."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on risk factor modification and preventing plaque rupture or progression. Lifestyle changes (diet, exercise, smoking cessation) are crucial. Medications target lipids (statins), blood pressure (ACE inhibitors, calcium channel blockers), and diabetes control (metformin). Antiplatelet agents (aspirin) reduce thrombosis risk.",
+   "b": [
+    "Lifestyle modification: smoking cessation, healthy diet, regular exercise.",
+    "Pharmacological: Statins for hyperlipidemia, antihypertensives, antidiabetics, antiplatelets.",
+    "Revascularization procedures (angioplasty, bypass surgery) for severe stenosis."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of risk factors (lipids, blood pressure, glucose) is essential. Adherence to lifestyle changes and medications is key. Prevention involves addressing modifiable risk factors early in life.",
+   "b": [
+    "Regular screening for risk factors.",
+    "Patient education on disease progression and management.",
+    "Emphasis on long-term adherence to treatment plans."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions causing similar symptoms include vasculitis (inflammation of blood vessels), thromboangiitis obliterans (Buerger's disease, often in smokers), and arterial dissection. Non-vascular causes of limb pain or chest pain can also be mistaken for atherosclerosis.",
+   "b": [
+    "Vasculitis.",
+    "Thromboangiitis obliterans.",
+    "Arterial dissection.",
+    "Deep vein thrombosis."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal lipid profile does not exclude atherosclerosis, especially in younger individuals or those with other strong risk factors. Blood pressure may be normal at rest but elevated during exertion. Imaging may underestimate the functional significance of moderate stenosis.",
+   "b": [
+    "Normal lipids in the presence of other risk factors.",
+    "Intermittent claudication without significant stenosis on imaging.",
+    "False negatives on non-invasive vascular studies."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden, severe chest pain or pressure.",
+  "Sudden weakness, numbness, or difficulty speaking.",
+  "Sudden loss of vision or severe headache.",
+  "Sudden, severe pain in a limb with coldness and paleness."
+ ],
+ "faq": [
+  {
+   "q": "What is the main difference between atherosclerosis and arteriosclerosis?",
+   "a": "Arteriosclerosis is a general term for hardening of arteries, while atherosclerosis specifically refers to plaque buildup within the artery wall."
+  },
+  {
+   "q": "Can atherosclerosis be reversed?",
+   "a": "Early stages (fatty streaks) may be reversible with aggressive risk factor modification. Advanced plaques are generally not reversible but their progression can be slowed or halted."
+  },
+  {
+   "q": "Is atherosclerosis genetic?",
+   "a": "While not a single-gene disorder, a family history of premature cardiovascular disease is a significant risk factor, indicating a genetic predisposition that interacts with environmental factors."
+  }
+ ],
+ "exam": [
+  "Describe the key stages in the pathogenesis of atherosclerosis, starting from endothelial injury.",
+  "Outline the major modifiable and non-modifiable risk factors for atherosclerosis and explain why they are important.",
+  "Discuss how atherosclerosis in different arterial beds (coronary, cerebral, peripheral) leads to distinct clinical manifestations."
+ ],
+ "related": [
+  "Coronary Artery Disease",
+  "Stroke",
+  "Peripheral Artery Disease",
+  "Hypertension",
+  "Diabetes Mellitus",
+  "Hyperlipidemia",
+  "Inflammation",
+  "Endothelial Dysfunction"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

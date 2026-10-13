@@ -1,0 +1,186 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Nephrotic syndrome is a kidney disorder characterized by significant proteinuria, low blood albumin, swelling, and high cholesterol. It results from increased permeability of the kidney's filtering units, leading to protein loss in the urine. This condition can affect both children and adults.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Nephrotic syndrome is a clinical syndrome defined by a specific set of criteria indicating severe glomerular damage and protein loss. It is crucial to distinguish it from nephritic syndrome, which involves inflammation and often hematuria.",
+   "b": [
+    "Proteinuria: Excretion of more than 2.5 grams of protein per day in the urine.",
+    "Hypoalbuminemia: Low levels of albumin in the blood, typically less than 30 g/L.",
+    "Edema: Swelling, often generalized, due to fluid retention.",
+    "Hyperlipidemia: Elevated levels of lipids, particularly cholesterol, in the blood."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of nephrotic syndrome is primarily assessed by the degree of proteinuria and the impact on systemic health. The selectivity index helps evaluate the type of glomerular damage.",
+   "b": [
+    "Selectivity Index: (Urine IgG/Plasma IgG) / (Urine Albumin/Plasma Albumin) × 100. A lower index suggests more selective protein loss, often indicating minimal change disease, while a higher index suggests non-selective loss and more severe glomerular damage.",
+    "Disease progression is monitored by tracking proteinuria, serum albumin, and renal function markers."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Nephrotic syndrome can be primary (idiopathic) or secondary to systemic diseases, infections, or medications. The underlying cause guides specific treatment.",
+   "b": [
+    "Minimal Change Disease: Most common cause in children, often idiopathic.",
+    "Focal Segmental Glomerulosclerosis (FSGS): Common in adults, can be primary or secondary.",
+    "Membranous Nephropathy: A common cause in adults, often associated with autoimmune diseases or malignancy.",
+    "Diabetic Nephropathy: A leading cause of secondary nephrotic syndrome worldwide.",
+    "Amyloidosis: Systemic deposition of abnormal proteins.",
+    "Systemic Lupus Erythematosus (SLE): An autoimmune disease affecting multiple organs.",
+    "Infections: HIV, Hepatitis B, Malaria, Tuberculosis (TB) can trigger nephrotic syndrome, especially in low-resource settings.",
+    "Malignancies: Lung, breast, lymphoma, mesothelioma, and other cancers can be associated.",
+    "Drugs: NSAIDs, gold, penicillamine."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The clinical presentation is dominated by the consequences of severe protein loss and fluid retention.",
+   "b": [
+    "Edema: Swelling around the eyes (periorbital), in the legs (pitting edema), and generalized (anasarca).",
+    "Foamy urine: Due to high protein content.",
+    "Weight gain: From fluid retention.",
+    "Fatigue and malaise: Due to underlying disease or complications.",
+    "Abdominal pain: Can occur with ascites or peritonitis."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A systematic approach to investigations helps confirm the diagnosis, assess severity, identify complications, and determine the underlying cause.",
+   "t": [
+    {
+     "a": "Serum Albumin",
+     "b": "To assess the degree of hypoalbuminemia. Levels <30 g/L are diagnostic criteria."
+    },
+    {
+     "a": "Serum Lipids (Cholesterol, Triglycerides)",
+     "b": "To check for hyperlipidemia, a diagnostic criterion. Elevated levels are expected."
+    },
+    {
+     "a": "Serum Creatinine and eGFR",
+     "b": "To assess kidney function. May be normal or elevated depending on the underlying cause and severity of kidney damage."
+    },
+    {
+     "a": "Electrolytes (Sodium, Potassium)",
+     "b": "To monitor for imbalances, especially with diuretic use or severe edema."
+    },
+    {
+     "a": "Liver Function Tests (LFTs)",
+     "b": "To assess liver synthetic function and rule out liver disease. The liver compensates by increasing alpha-2 globulins (e.g., alpha-2 macroglobulin)."
+    },
+    {
+     "a": "Renal Biopsy",
+     "b": "To determine the specific histological type of glomerular disease and guide treatment. An urgent biopsy is needed to confirm the diagnosis and identify the underlying pathology."
+    },
+    {
+     "a": "Autoimmune serologies (ANA, anti-dsDNA, C3, C4)",
+     "b": "To investigate for systemic autoimmune diseases like SLE as a secondary cause."
+    },
+    {
+     "a": "Viral serologies (HIV, Hepatitis B, Hepatitis C)",
+     "b": "To screen for infectious causes, particularly relevant in endemic areas or high-risk populations."
+    },
+    {
+     "a": "Blood Glucose/HbA1c",
+     "b": "To screen for diabetes as a common cause of secondary nephrotic syndrome."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Nephrotic syndrome carries a significant risk of severe complications that require prompt recognition and intervention.",
+   "b": [
+    "Thromboembolism: Due to hypercoagulability from loss of anticoagulant proteins (e.g., antithrombin III) in urine. This is a major cause of morbidity and mortality.",
+    "Infection: Increased susceptibility due to loss of immunoglobulins and impaired immune function. Peritonitis is a common infection.",
+    "Acute Kidney Injury (AKI): Can result from severe hypovolemia, thrombosis, or progression of the underlying kidney disease.",
+    "Intravascular depletion: Despite generalized edema, patients can be intravascularly depleted due to fluid shifting out of vessels.",
+    "Severe edema: Can lead to skin breakdown, cellulitis, and impaired mobility."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause, reducing proteinuria, managing edema, and preventing complications.",
+   "b": [
+    "Treat the underlying cause: Specific therapy depends on the biopsy findings (e.g., corticosteroids for minimal change disease, immunosuppressants for FSGS or membranous nephropathy).",
+    "Diuretics (e.g., Furosemide): To manage edema and fluid overload. Used cautiously to avoid intravascular depletion.",
+    "Albumin infusion (e.g., 20% albumin): For severe hypoalbuminemia and intravascular depletion, especially in children with poor perfusion. Often given with a diuretic to prevent fluid overload.",
+    "ACE inhibitors or ARBs: To reduce proteinuria and blood pressure. They decrease intraglomerular pressure.",
+    "Statins: To manage hyperlipidemia and reduce cardiovascular risk.",
+    "Anticoagulation (e.g., Warfarin, LMWH): Considered for patients at high risk of thrombosis, especially with very low albumin levels or a history of thromboembolism.",
+    "Dietary modifications: Salt restriction to help manage edema; adequate protein intake (but not excessive) to prevent malnutrition."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring is essential to assess treatment response, detect complications, and adjust therapy. Prevention focuses on managing underlying conditions.",
+   "b": [
+    "Regular monitoring: Blood pressure, urine protein, serum albumin, renal function, and lipid profile.",
+    "Vaccinations: Pneumococcal vaccine and annual influenza vaccine are recommended due to increased infection risk.",
+    "Management of underlying diseases: Strict control of diabetes, hypertension, and autoimmune conditions can prevent or slow progression.",
+    "Patient education: On diet, medication adherence, and recognizing signs of complications."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "It is important to differentiate nephrotic syndrome from conditions with similar symptoms or related kidney pathology.",
+   "b": [
+    "Nephritic Syndrome: Characterized by inflammation, hematuria, hypertension, and often mild proteinuria, contrasting with the massive proteinuria of nephrotic syndrome.",
+    "Congestive Heart Failure: Can cause generalized edema, but typically without massive proteinuria.",
+    "Liver Cirrhosis: Can cause ascites and edema, but usually with other signs of liver failure and less prominent proteinuria."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical scenarios or lab findings can be misinterpreted, leading to diagnostic or management errors.",
+   "b": [
+    "Normal blood pressure: Patients can still be severely intravascularly depleted despite appearing edematous, especially children.",
+    "Transient proteinuria: Can occur with fever, exercise, or orthostatic proteinuria and does not indicate nephrotic syndrome.",
+    "Alpha-2 globulins: Elevated levels are a compensatory response by the liver, not necessarily indicative of an inflammatory process.",
+    "Urine dipstick: Can be falsely negative for protein if the urine is very dilute, or falsely positive if highly concentrated or contaminated."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of edema or shortness of breath",
+  "Severe abdominal pain or fever (signs of infection)",
+  "Sudden onset of chest pain or leg swelling (signs of thrombosis)",
+  "Decreased urine output or confusion (signs of acute kidney injury)"
+ ],
+ "faq": [
+  {
+   "q": "What is the main difference between nephrotic and nephritic syndrome?",
+   "a": "Nephrotic syndrome is characterized by massive proteinuria, hypoalbuminemia, and edema, while nephritic syndrome involves inflammation, hematuria, and often hypertension with less severe proteinuria."
+  },
+  {
+   "q": "Why do patients with nephrotic syndrome get blood clots?",
+   "a": "The loss of anticoagulant proteins like antithrombin III in the urine, combined with increased synthesis of procoagulant factors by the liver, creates a hypercoagulable state, increasing the risk of blood clots."
+  },
+  {
+   "q": "Can nephrotic syndrome be cured?",
+   "a": "The curability depends on the underlying cause. Some forms, like minimal change disease in children, often respond well to treatment and can achieve remission. Others, especially secondary forms, may require ongoing management to control symptoms and prevent progression."
+  }
+ ],
+ "exam": [
+  "A 5-year-old child presents with periorbital edema and foamy urine. Outline your diagnostic approach, including key investigations and what you expect to find.",
+  "Discuss the pathophysiology behind the clinical presentation of nephrotic syndrome, explaining how proteinuria leads to the characteristic signs and symptoms.",
+  "A 65-year-old patient with newly diagnosed nephrotic syndrome has a serum albumin of 18 g/L. What are the immediate red flags and potential complications you would be concerned about, and how would you manage them?"
+ ],
+ "related": [
+  "Minimal Change Disease",
+  "Focal Segmental Glomerulosclerosis",
+  "Membranous Nephropathy",
+  "Diabetic Nephropathy",
+  "Acute Kidney Injury",
+  "Chronic Kidney Disease",
+  "Glomerulonephritis",
+  "Proteinuria"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

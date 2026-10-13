@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Hyperthyroidism is an overactive thyroid gland producing excess thyroid hormones, leading to a hypermetabolic state. It presents with weight loss, rapid heart rate, heat intolerance, and tremors. Management focuses on reducing hormone production and addressing the underlying cause.",
+ "aka": [
+  "Overactive thyroid"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hyperthyroidism is a condition where the thyroid gland produces too much thyroid hormone (T3 and T4), accelerating the body's metabolism. Diagnosis is suspected based on clinical signs and confirmed by thyroid function tests.",
+   "b": [
+    "Excessive production of thyroid hormones (T3 and T4).",
+    "Leads to an accelerated metabolic state.",
+    "Second most prevalent endocrine disorder."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is typically assessed by the degree of clinical signs and symptoms, and the level of thyroid hormone elevation. There isn't a formal staging system, but it can range from mild, subclinical disease to severe, life-threatening thyrotoxicosis.",
+   "b": [
+    "Mild: Subtle symptoms, minimal biochemical abnormalities.",
+    "Moderate: Noticeable symptoms, moderate biochemical abnormalities.",
+    "Severe: Overt symptoms, significant biochemical abnormalities, risk of complications."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common cause is autoimmune Graves' disease, where antibodies stimulate the thyroid. Other causes include toxic multinodular goiter, thyroid adenoma, and less commonly, TSH-secreting pituitary adenomas or ectopic thyroid tissue (e.g., struma ovarii).",
+   "b": [
+    "Graves' disease (autoimmune, TSH receptor-stimulating antibodies).",
+    "Toxic multinodular goiter (multiple nodules producing excess hormone).",
+    "Thyroid adenoma (benign tumor secreting excess hormone).",
+    "TSH-secreting pituitary adenoma (rare).",
+    "Struma ovarii (thyroid tissue in an ovarian teratoma)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often experience unintentional weight loss despite increased appetite, rapid or irregular heartbeat (palpitations), anxiety, tremors (especially in the hands), heat intolerance, increased sweating, and changes in bowel habits.",
+   "b": [
+    "Weight loss.",
+    "Tachycardia and palpitations.",
+    "Heat intolerance and increased sweating.",
+    "Tremors.",
+    "Anxiety and irritability.",
+    "Goiter (enlarged thyroid) may be present.",
+    "Eye signs (exophthalmos) in Graves' disease."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Thyroid Function Tests (TFTs): TSH, Free T4, Free T3",
+     "b": "To assess thyroid hormone levels and TSH suppression. Low TSH with elevated Free T4 and/or Free T3 confirms hyperthyroidism."
+    },
+    {
+     "a": "Thyroid antibodies (TRAb, TPOAb, TgAb)",
+     "b": "To help diagnose autoimmune causes like Graves' disease. Positive antibodies support an autoimmune etiology."
+    },
+    {
+     "a": "Thyroid Ultrasound",
+     "b": "To evaluate thyroid size, nodularity, and blood flow. Can help differentiate causes and assess for nodules."
+    },
+    {
+     "a": "Radioactive Iodine Uptake (RAIU) and Scan",
+     "b": "To assess thyroid gland activity and distribution of iodine uptake. High, diffuse uptake suggests Graves'; patchy uptake suggests multinodular goiter."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Thyroid storm is a life-threatening emergency characterized by severe hypermetabolism, fever, and altered mental status. Other complications include atrial fibrillation, heart failure, osteoporosis, and ophthalmopathy.",
+   "b": [
+    "Thyroid storm (fever, delirium, severe tachycardia, heart failure).",
+    "Atrial fibrillation.",
+    "Heart failure.",
+    "Osteoporosis.",
+    "Ophthalmopathy (eye changes, especially in Graves' disease)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment aims to reduce thyroid hormone production and alleviate symptoms. Options include antithyroid medications, radioactive iodine therapy, and surgery. Beta-blockers are used for symptomatic relief.",
+   "b": [
+    "Antithyroid drugs (e.g., carbimazole, propylthiouracil) reduce hormone synthesis.",
+    "Radioactive iodine therapy ablates thyroid tissue.",
+    "Surgery (thyroidectomy) removes the thyroid gland.",
+    "Beta-blockers (e.g., propranolol) control symptoms like tachycardia and tremor.",
+    "Treat the underlying cause (e.g., immunosuppression for Graves')."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of thyroid function tests is crucial to ensure treatment efficacy and prevent recurrence or complications. Long-term follow-up is necessary, especially after radioactive iodine therapy or surgery.",
+   "b": [
+    "Regular TFT monitoring to adjust treatment.",
+    "Monitor for signs of hypothyroidism post-treatment.",
+    "Annual checks for complications like osteoporosis and eye disease.",
+    "Patient education on adherence and recognizing relapse."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Symptoms can mimic other conditions like anxiety disorders, mania, and other causes of weight loss or tachycardia. Conditions causing goiter can also be confused.",
+   "b": [
+    "Anxiety disorders.",
+    "Mania (bipolar disorder).",
+    "Pheochromocytoma (causes episodic hypertension, tachycardia).",
+    "Other causes of weight loss (e.g., malignancy, malabsorption).",
+    "Hypercalcemia."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "TSH can be suppressed in non-thyroidal illness, making it appear as hyperthyroidism. Some medications can affect thyroid function tests. Transient hyperthyroidism can occur, especially in pregnancy or post-thyroiditis.",
+   "b": [
+    "Non-thyroidal illness can suppress TSH.",
+    "Certain medications (e.g., lithium, amiodarone) can affect thyroid function.",
+    "Subclinical hyperthyroidism may have minimal symptoms.",
+    "Pregnancy can cause transient hyperthyroidism.",
+    "Iodine load can transiently increase thyroid hormone production."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe symptoms: rapid heart rate, fever, confusion, vomiting (thyroid storm)."
+ ],
+ "faq": [
+  {
+   "q": "Can hyperthyroidism be cured?",
+   "a": "While hyperthyroidism can be effectively managed and put into remission, some causes like Graves' disease may require lifelong monitoring or treatment."
+  },
+  {
+   "q": "What is the difference between hyperthyroidism and thyrotoxicosis?",
+   "a": "Thyrotoxicosis is the clinical state of excess thyroid hormone, while hyperthyroidism specifically refers to overproduction of thyroid hormone by the thyroid gland itself."
+  },
+  {
+   "q": "Can hyperthyroidism affect pregnancy?",
+   "a": "Yes, hyperthyroidism in pregnancy requires careful management to prevent complications for both mother and fetus, such as preeclampsia and low birth weight."
+  }
+ ],
+ "exam": [
+  "How would you differentiate between Graves' disease and toxic multinodular goiter based on clinical presentation and investigations?",
+  "What are the immediate life-threatening complications of hyperthyroidism, and how would you manage them?",
+  "Discuss the role of antithyroid medications versus radioactive iodine therapy in managing hyperthyroidism."
+ ],
+ "related": [
+  "Graves' disease",
+  "Thyroid storm",
+  "Thyroid function tests",
+  "Goiter",
+  "Hypothyroidism",
+  "Thyroid nodules",
+  "Endocrine disorders"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

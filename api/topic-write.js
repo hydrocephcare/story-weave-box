@@ -10,7 +10,8 @@ export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST") return res.status(405).json({ status: "invalid" });
   const keys = process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "";
-  if (!keys.trim()) return res.status(503).json({ status: "unavailable" });
+  const groq = process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY || "";
+  if (!keys.trim() && !groq.trim()) return res.status(503).json({ status: "unavailable" });
   const ip = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim() || "unknown";
   const now = Date.now();
   const mine = (hits.get(ip) || []).filter((t) => now - t < 3_600_000);
@@ -22,7 +23,11 @@ export default async function handler(req, res) {
   const name = String(body.name ?? "").trim();
   if (!validName(name)) return res.status(400).json({ status: "invalid" });
   try {
-    const page = await generateTopicPage({ name, category: String(body.category ?? "").slice(0, 60), context: String(body.context ?? "").slice(0, 3000), env: { GEMINI_API_KEYS: keys }, timeoutMs: 45000 });
+    const input = { name, category: String(body.category ?? "").slice(0, 60), context: String(body.context ?? "").slice(0, 3000), timeoutMs: 45000 };
+    let page;
+    // Groq answers in a few seconds, so a reader waits less; Gemini (several keys in turn) is the fallback
+    if (groq.trim()) { try { page = await generateTopicPage({ ...input, env: { GROQ_API_KEYS: groq } }); } catch { page = null; } }
+    if (!page) page = await generateTopicPage({ ...input, env: { GEMINI_API_KEYS: keys, GROQ_API_KEYS: groq } });
     if (!page.medical) return res.status(200).json({ status: "rejected" });
     return res.status(200).json({ status: "published", page: { ...page, subject: pickSubject(page.subject, `${name} ${body.category ?? ""}`) } });
   } catch (e) {

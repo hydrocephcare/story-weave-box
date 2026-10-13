@@ -1,0 +1,136 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Heart rate is the number of times the heart beats per minute. It reflects the body's metabolic demand and is influenced by factors like age, activity, and health status. Deviations from the normal range can indicate underlying physiological or pathological processes.",
+ "aka": [
+  "Pulse"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Heart rate is the number of ventricular contractions per minute, commonly measured by palpating a peripheral pulse or using an electrocardiogram (ECG). A normal resting heart rate for adults is typically between 60-100 beats per minute (bpm).",
+   "b": [
+    "Palpate radial or carotid pulse.",
+    "Count beats for 60 seconds or 30 seconds x 2.",
+    "ECG provides a precise measurement."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Physiological increases occur with exercise, stress, and fever. Pathological causes include dehydration, anemia, hyperthyroidism, sepsis, and cardiac arrhythmias. In infants, heart failure can present with a high heart rate.",
+   "b": [
+    "Physiological: Exercise, fever, anxiety.",
+    "Pathological: Sepsis, dehydration, anemia, hyperthyroidism, heart failure, arrhythmias.",
+    "Medications: Stimulants, bronchodilators.",
+    "Electrolyte imbalances."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "An elevated heart rate (tachycardia) may be asymptomatic or cause palpitations, shortness of breath, chest pain, dizziness, or syncope. A low heart rate (bradycardia) can lead to fatigue, dizziness, lightheadedness, and syncope.",
+   "b": [
+    "Tachycardia: Palpitations, dyspnea, chest pain, syncope.",
+    "Bradycardia: Fatigue, dizziness, syncope.",
+    "Often detected incidentally."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Electrocardiogram (ECG)",
+     "b": "To assess rhythm, rate, and identify cardiac abnormalities. A regular sinus rhythm with a rate >100 bpm indicates sinus tachycardia. Irregular rhythms suggest other causes."
+    },
+    {
+     "a": "Complete Blood Count (CBC)",
+     "b": "To detect anemia or infection. Anemia can cause compensatory tachycardia. Elevated white blood cell count suggests infection/sepsis."
+    },
+    {
+     "a": "Thyroid Function Tests (TFTs)",
+     "b": "To rule out hyperthyroidism. Elevated T3/T4 levels can cause tachycardia."
+    },
+    {
+     "a": "Basic Metabolic Panel (BMP)",
+     "b": "To check electrolytes and hydration status. Electrolyte imbalances or dehydration can affect heart rate."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Sustained, very high heart rates can lead to reduced cardiac output, myocardial ischemia, heart failure, and syncope. In infants, a high heart rate with poor feeding and sweating suggests heart failure.",
+   "b": [
+    "Syncope or near-syncope.",
+    "Chest pain or signs of myocardial ischemia.",
+    "Hypotension.",
+    "Signs of heart failure (dyspnea, edema)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause. For tachycardia, this may involve fluid resuscitation for dehydration, antibiotics for sepsis, or anti-thyroid medication. For bradycardia, pacing or atropine may be considered.",
+   "b": [
+    "Treat underlying cause (e.g., fluids for dehydration, antibiotics for sepsis).",
+    "Address electrolyte abnormalities.",
+    "Rate control medications (e.g., beta-blockers) if indicated.",
+    "Consider pacing for symptomatic bradycardia."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Anxiety or panic attacks can mimic tachycardia. Fever can be mistaken for a primary cardiac issue. In infants, rapid breathing can be confused with a high heart rate.",
+   "b": [
+    "Anxiety/Panic attack.",
+    "Fever.",
+    "Respiratory distress."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal heart rate can be misleading in the presence of significant illness if the patient is on beta-blockers. Athletes may have a resting bradycardia that is physiological. Pain can increase heart rate, masking other signs.",
+   "b": [
+    "Beta-blocker use can mask tachycardia.",
+    "Athletic conditioning can cause physiological bradycardia.",
+    "Pain can elevate heart rate.",
+    "Fever can cause tachycardia."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of very fast or very slow heart rate.",
+  "Heart rate accompanied by chest pain, shortness of breath, or fainting.",
+  "Heart rate in an infant with poor feeding, sweating, or rapid breathing."
+ ],
+ "faq": [
+  {
+   "q": "What is a normal heart rate for an adult?",
+   "a": "A normal resting heart rate for adults is typically between 60 and 100 beats per minute."
+  },
+  {
+   "q": "What causes a fast heart rate (tachycardia)?",
+   "a": "Tachycardia can be caused by exercise, fever, stress, dehydration, anemia, hyperthyroidism, or certain medications."
+  },
+  {
+   "q": "What causes a slow heart rate (bradycardia)?",
+   "a": "Bradycardia can be caused by certain medications, heart conditions, electrolyte imbalances, or can be a normal finding in well-conditioned athletes."
+  }
+ ],
+ "exam": [
+  "How does the sympathetic nervous system influence heart rate?",
+  "What are the key differences in presentation between sinus tachycardia and atrial fibrillation?",
+  "Describe the physiological basis for a compensatory tachycardia in anemia."
+ ],
+ "related": [
+  "Cardiac Output",
+  "Blood Pressure",
+  "Electrocardiogram (ECG)",
+  "Heart Failure",
+  "Anemia",
+  "Sepsis",
+  "Thyroid Physiology",
+  "Arrhythmias"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

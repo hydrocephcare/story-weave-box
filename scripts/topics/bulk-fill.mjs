@@ -10,8 +10,9 @@ const DIR = "src/data/topicAi";
 const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 1000);
 const PAR = Number((process.argv.find((a) => a.startsWith("--parallel=")) || "--parallel=4").split("=")[1]);
 const local = fs.existsSync(".gemini-keys.local") ? fs.readFileSync(".gemini-keys.local", "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "";
-const env = { GEMINI_API_KEYS: [process.env.GEMINI_API_KEYS, local].filter(Boolean).join(",") };
-if (!env.GEMINI_API_KEYS) { console.log("No Gemini keys: set GEMINI_API_KEYS or fill .gemini-keys.local"); process.exit(0); }
+const groq = fs.existsSync(".groq-keys.local") ? fs.readFileSync(".groq-keys.local", "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "";
+const env = { GEMINI_API_KEYS: [process.env.GEMINI_API_KEYS, local].filter(Boolean).join(","), GROQ_API_KEYS: [process.env.GROQ_API_KEYS, groq].filter(Boolean).join(",") };
+if (!env.GEMINI_API_KEYS && !env.GROQ_API_KEYS) { console.log("No Gemini keys: set GEMINI_API_KEYS or fill .gemini-keys.local"); process.exit(0); }
 fs.mkdirSync(DIR, { recursive: true });
 
 const index = JSON.parse(fs.readFileSync("public/topics/index.json", "utf8"));

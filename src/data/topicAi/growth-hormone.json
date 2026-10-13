@@ -1,0 +1,98 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Growth Hormone (GH) is a protein hormone crucial for growth and development. It stimulates IGF-1 production, promoting protein synthesis and cell growth. GH also has metabolic effects, influencing glucose and fat metabolism.",
+ "aka": [
+  "Somatotropin"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Growth Hormone (GH), also known as somatotropin, is a protein hormone produced by the anterior pituitary gland. It plays a vital role in childhood growth and development, and also influences metabolism in adults.",
+   "b": [
+    "Essential for somatic growth.",
+    "Stimulates liver to produce IGF-1 and IGF-2.",
+    "Has direct metabolic effects."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "GH acts directly on some tissues and indirectly by stimulating the liver to produce Insulin-like Growth Factor 1 (IGF-1). IGF-1 mediates many of GH's growth-promoting effects, such as increasing amino acid uptake and protein synthesis in muscles and bones.",
+   "b": [
+    "Anabolic effects: promotes protein synthesis.",
+    "Catabolic effects: promotes gluconeogenesis and lipolysis during fasting.",
+    "Synergistic with insulin in fed state.",
+    "Antagonizes insulin in fasting state (glucose-sparing)."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "GH secretion is tightly controlled by the hypothalamus. Growth Hormone-Releasing Hormone (GHRH) stimulates GH release, while somatostatin inhibits it. High levels of GH and IGF-1 exert negative feedback on the hypothalamus and pituitary.",
+   "b": [
+    "Stimulated by GHRH.",
+    "Inhibited by somatostatin.",
+    "Negative feedback by GH and IGF-1."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "GH deficiency in children leads to growth failure and delayed puberty. In adults, GH excess causes acromegaly, characterized by growth of bones in hands, feet, and face, and metabolic disturbances like insulin resistance.",
+   "b": [
+    "GH deficiency: growth failure, delayed puberty.",
+    "GH excess (adult): acromegaly.",
+    "GH excess: peripheral insulin resistance."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding GH physiology is key to diagnosing and managing growth disorders in children and conditions like acromegaly in adults. GH resistance, poor nutrition, and acidosis can also impair growth.",
+   "b": [
+    "Growth disorders.",
+    "Acromegaly.",
+    "Impact on puberty and metabolism."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Be ready to discuss the dual action of GH (direct and indirect via IGF-1) and its metabolic effects, particularly the glucose-sparing action during fasting. Also, understand the consequences of GH excess and deficiency.",
+   "b": [
+    "Explain GH's anabolic and catabolic roles.",
+    "Describe regulation by GHRH and somatostatin.",
+    "Contrast GH deficiency in children with GH excess in adults."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the main function of Growth Hormone?",
+   "a": "GH is essential for growth and development in children and influences metabolism in adults, primarily by stimulating IGF-1 production."
+  },
+  {
+   "q": "How does GH affect metabolism?",
+   "a": "GH has a glucose-sparing effect during fasting by promoting gluconeogenesis and lipolysis, ensuring glucose is available for the brain."
+  },
+  {
+   "q": "What happens if there is too much GH in an adult?",
+   "a": "Excess GH in adults causes acromegaly, leading to enlarged extremities, facial changes, and metabolic issues like insulin resistance."
+  }
+ ],
+ "exam": [
+  "Describe the physiological actions of Growth Hormone, including its direct and indirect effects.",
+  "Explain the hypothalamic regulation of Growth Hormone secretion.",
+  "What are the clinical consequences of GH deficiency in childhood versus GH excess in adulthood?"
+ ],
+ "related": [
+  "Insulin-like Growth Factor 1 (IGF-1)",
+  "Anterior Pituitary Gland",
+  "Hypothalamus",
+  "Acromegaly",
+  "Growth Failure",
+  "Metabolic Syndrome",
+  "Endocrine Regulation"
+ ],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

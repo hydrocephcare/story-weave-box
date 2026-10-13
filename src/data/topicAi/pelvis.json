@@ -1,0 +1,81 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The pelvis is a bony ring at the base of the spine, connecting the trunk to the lower limbs. It protects pelvic organs, supports body weight, and is crucial for locomotion and childbirth.",
+ "aka": [
+  "Bony pelvis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The pelvis is a complex, ring-like bony structure formed by the sacrum, coccyx, and the two hip bones (ilium, ischium, and pubis). It serves as a vital connection between the axial skeleton and the lower limbs, providing support and facilitating movement."
+  },
+  {
+   "h": "Location and structure",
+   "p": "Located inferiorly to the abdomen and superiorly to the thighs, the pelvis is divided into the false pelvis (superior, wider part) and the true pelvis (inferior, narrower part). The true pelvis houses organs like the bladder, rectum, and reproductive organs. The bony pelvis is formed by the articulation of the sacrum and coccyx posteriorly with the ilium, ischium, and pubis of each hip bone anteriorly and laterally."
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly, the pelvis is related to the lower abdominal wall and inguinal regions. Posteriorly, it articulates with the vertebral column at the sacroiliac joints and is related to the sacrum and coccyx. Laterally, it articulates with the femurs at the hip joints. The pelvic cavity contains the terminal parts of the urinary, digestive, and reproductive systems, as well as blood vessels, nerves, and muscles."
+  },
+  {
+   "h": "Blood supply",
+   "p": "The pelvis receives its blood supply primarily from branches of the internal iliac artery, including the superior and inferior gluteal arteries, internal pudendal artery, and obturator artery. Venous drainage follows the arterial supply, forming a rich pelvic venous plexus that drains into the internal iliac veins."
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The nerve supply to the pelvic structures is complex, originating from the sacral and coccygeal plexuses (forming the sciatic and pudendal nerves) and the autonomic nervous system (sympathetic and parasympathetic fibers). These nerves control motor function, sensation, and autonomic functions of the pelvic organs."
+  },
+  {
+   "h": "Function",
+   "p": "The pelvis has several critical functions: it supports the weight of the upper body and transmits it to the lower limbs during standing and walking; it protects the vital pelvic organs from injury; and it serves as an attachment site for numerous muscles involved in posture, locomotion, and sexual function. In females, the pelvis is adapted for childbirth."
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Fractures of the pelvis can result from high-energy trauma and may be associated with significant bleeding and damage to pelvic organs. Pelvic pain can arise from various sources, including musculoskeletal issues, gynecological conditions (e.g., endometriosis, pelvic inflammatory disease), urological problems, and gastrointestinal disorders. In obstetrics, the size and shape of the female pelvis are crucial for determining the feasibility of vaginal delivery."
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Clinicians assess pelvic adequacy in pregnancy by palpating the fetal head's engagement and descent. Pelvic examination in females involves bimanual palpation to assess the size, shape, and tenderness of pelvic organs. Palpation of the bony pelvis can identify deformities or tenderness suggestive of fracture."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pelvic pain, especially after trauma",
+  "Inability to bear weight on legs",
+  "Numbness or tingling in the legs or perineum",
+  "Signs of shock (dizziness, rapid pulse, low blood pressure) after pelvic injury"
+ ],
+ "faq": [
+  {
+   "q": "What are the main bones that form the pelvis?",
+   "a": "The pelvis is formed by the sacrum, coccyx, and the two hip bones, each made up of the ilium, ischium, and pubis."
+  },
+  {
+   "q": "What is the difference between the false and true pelvis?",
+   "a": "The false pelvis is the superior, wider part that supports abdominal organs, while the true pelvis is the inferior, narrower part that contains the pelvic organs."
+  },
+  {
+   "q": "Why is the pelvis important in childbirth?",
+   "a": "The female pelvis must be adequately sized and shaped to allow the passage of the fetal head during vaginal delivery."
+  }
+ ],
+ "exam": [
+  "Describe the boundaries and contents of the true pelvis.",
+  "How does the bony pelvis differ between males and females, and why is this clinically significant?",
+  "What are the common causes of pelvic pain, and how would you approach a patient presenting with this symptom?"
+ ],
+ "related": [
+  "Hip Joint Anatomy",
+  "Lumbar Spine Anatomy",
+  "Female Reproductive System Anatomy",
+  "Male Reproductive System Anatomy",
+  "Urinary System Anatomy",
+  "Gastrointestinal System Anatomy",
+  "Biomechanics of Locomotion",
+  "Obstetrics: Pelvimetry"
+ ],
+ "kind": "anatomy",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

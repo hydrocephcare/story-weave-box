@@ -1,0 +1,121 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The placenta is a temporary organ that connects the developing fetus to the uterine wall. It facilitates nutrient uptake, waste elimination, and gas exchange via the mother's blood supply. It also produces hormones essential for pregnancy maintenance.",
+ "aka": [
+  "afterbirth"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The placenta is a vital, transient organ that develops during pregnancy. It serves as the interface between the mother and the fetus, enabling the exchange of gases, nutrients, and waste products. It also plays a crucial endocrine role.",
+   "b": [
+    "Forms early in pregnancy.",
+    "Expelled after the fetus is born.",
+    "Essential for fetal survival and growth."
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "b": [
+    "Implantation site is usually fundal or high lateral.",
+    "Fetal surface is smooth and shiny.",
+    "Maternal surface is rough and lobulated."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The placenta is intimately related to the decidua basalis of the uterine wall, forming the maternal side. The fetal side is covered by the amnion and chorion, which also form the umbilical cord. The amniotic fluid surrounds the fetus and the fetal surface of the placenta.",
+   "b": [
+    "Connected to fetus via umbilical cord.",
+    "Adheres to the uterine lining (decidua).",
+    "Surrounded by amniotic fluid."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The placenta receives maternal blood from the uterine arteries and returns it via the uterine veins. Fetal blood circulates within the placental villi, supplied by the umbilical arteries and drained by the umbilical vein. This dual circulation allows for efficient exchange.",
+   "b": [
+    "Maternal: Uterine arteries and veins.",
+    "Fetal: Umbilical arteries and vein.",
+    "Exchange occurs across villous membrane."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The placenta itself lacks intrinsic nerve supply. Its functions are regulated by maternal and fetal hormonal and vascular mechanisms. Autonomic nerves in the uterine wall influence blood flow to the placenta.",
+   "b": [
+    "No direct innervation.",
+    "Regulation is hormonal and vascular.",
+    "Uterine nerves affect placental blood flow."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The placenta performs several critical functions: gas exchange (oxygen and carbon dioxide), nutrient transfer (glucose, amino acids, fats, vitamins, minerals), waste removal (urea, bilirubin), antibody transfer (passive immunity), and hormone production (progesterone, estrogen, hCG) to maintain pregnancy.",
+   "b": [
+    "Respiration: O2 in, CO2 out.",
+    "Nutrition: Supplies nutrients to fetus.",
+    "Excretion: Removes fetal waste.",
+    "Endocrine: Produces pregnancy hormones.",
+    "Immunological: Transfers maternal antibodies."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Abnormalities in placental location or function can lead to significant complications. Placenta previa, where the placenta covers the cervix, necessitates Cesarean delivery. Placental abruption, the premature separation from the uterine wall, causes maternal hemorrhage and fetal distress. Poor placental function can result in fetal growth restriction.",
+   "b": [
+    "Placenta previa: covers cervix.",
+    "Placental abruption: premature separation.",
+    "Placental insufficiency: poor fetal growth."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "When examining the placenta after delivery, note its size, shape, and completeness. Ensure no fragments are retained in the uterus, which can cause postpartum hemorrhage or infection. The umbilical cord should have three vessels (two arteries, one vein).",
+   "b": [
+    "Check for completeness.",
+    "Inspect umbilical cord vessels.",
+    "Assess for abnormalities."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Heavy vaginal bleeding during pregnancy.",
+  "Severe abdominal pain during pregnancy.",
+  "Signs of fetal distress (decreased fetal movements)."
+ ],
+ "faq": [
+  {
+   "q": "What is the main role of the placenta?",
+   "a": "To provide oxygen and nutrients to the fetus and remove waste products."
+  },
+  {
+   "q": "What is placenta previa?",
+   "a": "A condition where the placenta partially or completely covers the cervix, often leading to bleeding."
+  },
+  {
+   "q": "Can the placenta cause problems after birth?",
+   "a": "Yes, retained placental fragments can cause bleeding or infection."
+  }
+ ],
+ "exam": [
+  "Describe the structure and key functions of the placenta.",
+  "What are the clinical implications of abnormal placental implantation?",
+  "How would you assess the placenta after delivery to ensure no complications?"
+ ],
+ "related": [
+  "Fetal Circulation",
+  "Pregnancy Physiology",
+  "Umbilical Cord",
+  "Placental Abruption",
+  "Placenta Previa",
+  "Ectopic Pregnancy",
+  "Postpartum Hemorrhage",
+  "Fetal Growth Restriction"
+ ],
+ "kind": "anatomy",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

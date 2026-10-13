@@ -1,0 +1,147 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Pleural effusion is excess fluid in the pleural space. It can be transudative or exudative, indicating underlying systemic disease or local inflammation, respectively. Diagnosis involves imaging and pleural fluid analysis, with management targeting the underlying cause.",
+ "aka": [
+  "Pleural fluid accumulation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pleural effusion is an abnormal accumulation of fluid in the pleural space, the area between the visceral and parietal pleura. Diagnosis is suspected with clinical signs and confirmed by imaging.",
+   "b": [
+    "Fluid can be transudate (low protein, due to systemic factors like heart failure) or exudate (high protein, due to local inflammation or malignancy)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is often described by the amount of fluid and its impact on breathing. Large effusions causing respiratory distress are considered severe.",
+   "b": [
+    "No formal staging system exists, but clinical assessment of dyspnea and radiographic extent is used."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes vary widely, often categorized as transudative or exudative. In low-resource settings, consider infections like tuberculosis and complications of heart disease.",
+   "b": [
+    "Transudates: Heart failure, cirrhosis, nephrotic syndrome.",
+    "Exudates: Pneumonia (parapneumonic effusion), tuberculosis, malignancy, pulmonary embolism, autoimmune diseases (e.g., SLE).",
+    "Other: Pancreatitis, Dressler's syndrome, trauma."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms depend on the size and cause. Small effusions may be asymptomatic, while large ones cause shortness of breath, chest pain, and cough.",
+   "b": [
+    "Dyspnea, pleuritic chest pain, dry cough.",
+    "Physical exam may reveal decreased breath sounds, dullness to percussion, and pleural rub."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Chest X-ray (CXR)",
+     "b": "Detects fluid and its approximate volume. Blunting of costophrenic angle suggests effusion. Lateral decubitus views can show mobile fluid."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "More sensitive than CXR for small effusions, helps guide thoracentesis. Can differentiate loculated from free-flowing fluid."
+    },
+    {
+     "a": "CT scan",
+     "b": "Provides detailed anatomy, identifies underlying lung pathology, and helps characterize pleural masses."
+    },
+    {
+     "a": "Thoracentesis (pleural fluid aspiration)",
+     "b": "Crucial for differentiating transudate from exudate and identifying the cause. Fluid is sent for cell count, protein, LDH, glucose, cytology, and microbiology."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent attention is needed for signs of respiratory failure or complications like empyema.",
+   "b": [
+    "Respiratory distress, hemodynamic instability.",
+    "Empyema (pus in pleural space), tension pneumothorax (if drained too rapidly).",
+    "Malignant effusion, leading to progressive dyspnea and cachexia."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause and relieving symptoms. Therapeutic thoracentesis may be needed for large or symptomatic effusions.",
+   "b": [
+    "Treat underlying cause (e.g., diuretics for heart failure, antibiotics for pneumonia, antitubercular therapy for TB).",
+    "Therapeutic thoracentesis to relieve dyspnea.",
+    "Chest tube drainage for complicated parapneumonic effusions or empyema.",
+    "Pleurodesis for recurrent malignant effusions."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up depends on the cause and resolution of the effusion. Prevention involves managing underlying conditions.",
+   "b": [
+    "Monitor for recurrence and resolution of symptoms.",
+    "Address risk factors for common causes like heart failure and infections."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other conditions can mimic pleural effusion symptoms or imaging findings.",
+   "b": [
+    "Pneumonia (consolidation can appear as opacity).",
+    "Atelectasis (lung collapse).",
+    "Pulmonary edema (fluid in lung tissue, not pleural space).",
+    "Ascites (fluid in the abdominal cavity)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings can be misleading, requiring careful clinical correlation.",
+   "b": [
+    "Normal chest X-ray does not exclude small effusions.",
+    "Transudative effusions can occur in malignancy if the tumor obstructs lymphatic or venous drainage.",
+    "Pleural fluid glucose can be low in conditions other than infection, such as rheumatoid arthritis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe shortness of breath",
+  "Chest pain with difficulty breathing",
+  "Rapid heart rate or low blood pressure",
+  "Fever with cough and shortness of breath"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between transudative and exudative pleural effusion?",
+   "a": "Transudative effusions are caused by systemic factors like heart failure, leading to low protein fluid. Exudative effusions result from local inflammation or disease, with higher protein and LDH levels."
+  },
+  {
+   "q": "Can pleural effusion be cured?",
+   "a": "Yes, if the underlying cause is treated effectively. Many effusions resolve completely with appropriate management of conditions like pneumonia or heart failure."
+  },
+  {
+   "q": "Is pleural effusion painful?",
+   "a": "It can be. Pleuritic chest pain, which worsens with breathing or coughing, is common, especially with inflammatory causes."
+  }
+ ],
+ "exam": [
+  "How would you differentiate between a transudative and an exudative pleural effusion using pleural fluid analysis?",
+  "What are the most common causes of pleural effusion in a patient with known heart failure?",
+  "Describe the clinical signs you would look for to suggest the presence of a significant pleural effusion."
+ ],
+ "related": [
+  "Pneumonia",
+  "Tuberculosis",
+  "Heart Failure",
+  "Pulmonary Embolism",
+  "Malignancy",
+  "Empyema",
+  "Thoracentesis",
+  "Chest X-ray interpretation"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

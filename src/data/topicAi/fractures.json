@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "subject": "Surgery",
+ "summary": "A fracture is a break in the continuity of bone. Diagnosis involves history, physical exam, and imaging. Management focuses on pain control, immobilisation, and restoring function, with surgery for complex cases.",
+ "aka": [
+  "Broken bone"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A fracture is a disruption in the continuity of a bone. Clinical diagnosis relies on a history of trauma, characteristic pain, swelling, deformity, and limited function. Imaging is crucial for confirmation and characterisation.",
+   "b": [
+    "Pain at the fracture site.",
+    "Swelling and bruising.",
+    "Deformity or abnormal angulation.",
+    "Loss of function.",
+    "Crepitus (a grating sensation)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Fracture severity is classified by displacement, comminution (number of fragments), and whether the skin is broken (open vs. closed). Open fractures are graded using the Gustilo-Anderson classification based on wound size and contamination.",
+   "b": [
+    "Closed fracture: skin intact.",
+    "Open (compound) fracture: bone communicates with the external environment.",
+    "Displaced fracture: bone fragments are out of alignment.",
+    "Comminuted fracture: bone is broken into multiple pieces."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Trauma is the most common cause, ranging from direct blows to falls. Pathological fractures occur through weakened bone due to conditions like osteoporosis, tumours, or infections. Stress fractures result from repetitive force.",
+   "b": [
+    "Trauma (falls, direct impact, sports injuries).",
+    "Osteoporosis (weakened bone).",
+    "Bone tumours (primary or metastatic).",
+    "Infection (osteomyelitis).",
+    "Stress (repetitive loading)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients typically present with acute pain at the site of injury, often exacerbated by movement. Swelling, bruising, and visible deformity may be present. In open fractures, the bone may be visible, and there is a risk of contamination.",
+   "b": [
+    "Sudden onset of severe pain.",
+    "Inability to bear weight or use the affected limb.",
+    "Visible deformity or shortening.",
+    "Tenderness over the fracture site.",
+    "Bleeding or exposed bone in open fractures."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "X-ray",
+     "b": "To confirm the presence, location, and type of fracture. Shows displacement, angulation, and comminution. Essential for diagnosis and initial management planning. If unavailable, clinical assessment guides initial management."
+    },
+    {
+     "a": "CT scan",
+     "b": "To better visualise complex fractures, joint involvement, or comminution, especially for surgical planning. Provides detailed cross-sectional anatomy. Useful when X-rays are inconclusive."
+    },
+    {
+     "a": "MRI scan",
+     "b": "To assess associated soft tissue injuries (ligaments, tendons, nerves, blood vessels) and occult fractures not visible on X-ray. Useful for suspected stress fractures or spinal injuries."
+    },
+    {
+     "a": "Blood tests (FBC, U&Es, Calcium, Phosphate)",
+     "b": "To assess for anaemia, electrolyte imbalances, and calcium levels, especially in elderly patients or those with suspected pathological fractures or significant blood loss. Helps identify underlying metabolic bone disease."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent attention is needed for open fractures, signs of neurovascular compromise, or suspected pelvic/femoral fractures due to high risk of bleeding. Complications include infection, non-union, malunion, compartment syndrome, and nerve/vessel damage.",
+   "b": [
+    "Open fracture (risk of infection).",
+    "Signs of neurovascular compromise (absent pulses, paraesthesia, paralysis).",
+    "Severe pain disproportionate to injury.",
+    "Suspected pelvic or femur fracture (risk of haemorrhage).",
+    "Compartment syndrome (swelling causing pressure on nerves/vessels)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Initial management involves pain relief and immobilisation. Definitive treatment depends on fracture type and location, ranging from casting to surgical fixation. Open fractures require urgent wound debridement and antibiotics.",
+   "b": [
+    "Analgesia (e.g., paracetamol, NSAIDs, opioids) for pain control.",
+    "Immobilisation (splinting, casting) to promote healing and reduce pain.",
+    "Reduction (manipulation) of displaced fractures to restore alignment.",
+    "Surgical fixation (plates, screws, rods) for unstable or complex fractures.",
+    "Antibiotics for open fractures to prevent infection."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up includes serial X-rays to monitor healing and ensure alignment is maintained. Prevention focuses on reducing fall risk, managing osteoporosis, and using appropriate protective equipment during sports.",
+   "b": [
+    "Regular clinical and radiological review.",
+    "Physiotherapy to regain strength and mobility.",
+    "Management of osteoporosis (calcium, vitamin D, bisphosphonates).",
+    "Fall prevention strategies.",
+    "Protective gear for high-risk activities."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Fractures can be mistaken for severe sprains, dislocations, or contusions, especially in the absence of obvious deformity or displacement on initial examination.",
+   "b": [
+    "Severe sprain or ligament tear.",
+    "Joint dislocation.",
+    "Soft tissue contusion (bruise)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal X-ray does not exclude a fracture, particularly stress fractures or occult fractures, where clinical suspicion should prompt further investigation or close follow-up. Soft tissue swelling can obscure fracture lines.",
+   "b": [
+    "Normal X-ray in the presence of significant pain and tenderness.",
+    "Early post-injury swelling obscuring fracture details.",
+    "Stress fractures may not be visible on initial imaging."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Open fracture with exposed bone.",
+  "Signs of nerve damage (numbness, tingling, paralysis).",
+  "Signs of poor circulation (pale, cold limb, absent pulse).",
+  "Severe, uncontrolled pain.",
+  "Deformity suggesting a displaced fracture."
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of fractures?",
+   "a": "Trauma, such as falls or direct blows, is the most common cause of fractures in most age groups."
+  },
+  {
+   "q": "How long does a fracture take to heal?",
+   "a": "Healing time varies greatly depending on the bone, fracture type, age, and overall health, but typically ranges from 6-8 weeks for simple fractures in young adults."
+  },
+  {
+   "q": "Can a fracture heal without a cast?",
+   "a": "Some stable, non-displaced fractures may heal with just immobilisation via splinting or functional bracing, but many require casting or surgical intervention."
+  }
+ ],
+ "exam": [
+  "How would you assess a patient with a suspected limb fracture?",
+  "What are the immediate management priorities for an open fracture?",
+  "Describe the potential complications of a tibial shaft fracture and how you would monitor for them."
+ ],
+ "related": [
+  "Osteoporosis",
+  "Compartment Syndrome",
+  "Dislocation",
+  "Sprain",
+  "Osteomyelitis",
+  "Pathological Fracture",
+  "Trauma Management",
+  "Orthopaedic Surgery"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

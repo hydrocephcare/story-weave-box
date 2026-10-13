@@ -1,0 +1,105 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Cytogenetics is the study of chromosomes, their structure, and inheritance. It identifies numerical and structural chromosomal abnormalities. These abnormalities are crucial for diagnosing genetic disorders and certain cancers.",
+ "aka": [
+  "Chromosomal analysis",
+  "Karyotyping"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Cytogenetics is a branch of genetics focused on the study of chromosomes. It involves analyzing the number and structure of chromosomes to detect abnormalities that can lead to genetic diseases, developmental disorders, and certain types of cancer. This field is fundamental in both diagnostic medicine and research.",
+   "b": [
+    "Chromosomes are organized structures of DNA and proteins.",
+    "Humans typically have 46 chromosomes (23 pairs): 22 pairs of autosomes and 1 pair of sex chromosomes (XX for female, XY for male).",
+    "Cytogenetic abnormalities can be numerical (too many or too few chromosomes) or structural (changes within chromosomes)."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Cytogenetic analysis typically involves culturing cells, arresting them in metaphase (when chromosomes are most condensed and visible), and then staining and examining them under a microscope. This process allows for the visualization and counting of chromosomes, as well as the detection of structural rearrangements.",
+   "b": [
+    "Cells are usually obtained from blood, bone marrow, amniotic fluid, or chorionic villus samples.",
+    "Karyotyping is the standard method, arranging photographed chromosomes by size and banding pattern.",
+    "Fluorescence In Situ Hybridization (FISH) uses fluorescent probes to detect specific DNA sequences or chromosomal regions.",
+    "Chromosomal Microarray (CMA) detects smaller gains or losses of chromosomal material not visible by standard karyotyping."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Chromosomal abnormalities are broadly categorized into numerical and structural types, affecting either autosomes or sex chromosomes. These errors can arise during meiosis (gamete formation) or mitosis (somatic cell division), leading to a wide range of clinical presentations from severe developmental delays to specific cancer types.",
+   "b": [
+    "Numerical abnormalities include aneuploidy (e.g., trisomy 21 in Down syndrome) and polyploidy (e.g., triploidy).",
+    "Structural abnormalities include translocations (e.g., t(9;22) in CML), deletions, duplications, inversions, and ring chromosomes.",
+    "Acquired cytogenetic abnormalities in stem cell lines are common in hematological malignancies."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Cytogenetics is indispensable for diagnosing and managing a wide array of conditions. It helps confirm diagnoses, guide treatment strategies, and provide prognostic information, especially in oncology and prenatal care. Understanding these abnormalities is key to clinical decision-making.",
+   "t": [
+    {
+     "a": "Karyotyping (from blood, bone marrow, amniotic fluid)",
+     "b": "Answers: Are there numerical or large structural chromosomal abnormalities? Result: Detects conditions like Down syndrome (Trisomy 21), Turner syndrome (45,X), or the Philadelphia chromosome t(9;22)."
+    },
+    {
+     "a": "FISH (Fluorescence In Situ Hybridization)",
+     "b": "Answers: Is a specific gene or chromosomal region present or absent? Result: Confirms microdeletions (e.g., DiGeorge syndrome) or specific translocations (e.g., BCR-ABL fusion gene)."
+    },
+    {
+     "a": "Chromosomal Microarray (CMA)",
+     "b": "Answers: Are there submicroscopic chromosomal gains or losses (copy number variants)? Result: Identifies smaller deletions/duplications not visible by karyotyping, often in unexplained developmental delay."
+    },
+    {
+     "a": "Bone marrow aspirate/biopsy with cytogenetic analysis",
+     "b": "Answers: What are the specific chromosomal abnormalities in a suspected hematological malignancy? Result: Identifies diagnostic and prognostic markers, such as t(8;14) in Burkitt lymphoma or hyperdiploidy in pediatric ALL."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Cytogenetics is a high-yield topic for understanding the genetic basis of disease. Focus on the common abnormalities and their associated clinical syndromes, as well as the specific tests used for diagnosis. Remember that cytogenetic findings often dictate prognosis and treatment.",
+   "b": [
+    "The Philadelphia chromosome, t(9;22), forms the BCR-ABL fusion gene, activating tyrosine kinase, characteristic of Chronic Myeloid Leukemia (CML).",
+    "Hyperdiploidy in pediatric B-cell ALL (CD19+, CD10+, TdT+) is a favorable prognostic indicator.",
+    "A D&C with only paternal chromosome pattern on cytogenetic analysis suggests a complete hydatidiform mole.",
+    "Monotonous small non-cleaved lymphocytes with t(8;14) are characteristic of Burkitt lymphoma."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the difference between cytogenetics and molecular genetics?",
+   "a": "Cytogenetics studies whole chromosomes or large chromosomal regions, visible under a microscope. Molecular genetics examines DNA at a much finer level, looking at specific genes or DNA sequences."
+  },
+  {
+   "q": "Can cytogenetic abnormalities be inherited?",
+   "a": "Yes, some structural abnormalities like balanced translocations can be inherited. While the carrier may be healthy, they have a higher risk of having children with unbalanced chromosomal abnormalities."
+  },
+  {
+   "q": "Why is cytogenetics important in cancer diagnosis?",
+   "a": "Many cancers, especially leukemias and lymphomas, are characterized by specific acquired cytogenetic abnormalities. These findings are crucial for diagnosis, classification, prognosis, and guiding targeted therapies."
+  }
+ ],
+ "exam": [
+  "A 5-year-old presents with developmental delay and dysmorphic features. What initial cytogenetic test would you order, and what common conditions might it identify?",
+  "Describe the clinical significance of the t(9;22) translocation in hematological malignancies, including its molecular consequence and therapeutic implications.",
+  "Explain the difference between numerical and structural chromosomal abnormalities, providing a clinical example for each."
+ ],
+ "related": [
+  "Medical Genetics",
+  "Molecular Biology",
+  "Oncology",
+  "Prenatal Diagnosis",
+  "Hematology",
+  "Developmental Biology",
+  "Karyotyping",
+  "FISH"
+ ],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

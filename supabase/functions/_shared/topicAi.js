@@ -117,6 +117,26 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
       if (deadKeys.has(key)) break;
     }
   }
+  // Groq: a free backup that takes over when every Gemini key is out of quota. Keys in GROQ_API_KEYS (comma separated), used in turn.
+  const groqKeys = [...new Set(String(env.GROQ_API_KEYS ?? env.GROQ_API_KEY ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
+  const groqModels = String(env.GROQ_MODELS ?? "openai/gpt-oss-120b,openai/gpt-oss-20b").split(",").map((m) => m.trim()).filter(Boolean);
+  const gStart = groqKeys.length ? turn++ % groqKeys.length : 0;
+  for (let i = 0; i < groqKeys.length; i++) {
+    const key = groqKeys[(gStart + i) % groqKeys.length];
+    for (const model of groqModels) {
+      if (deadModels.has(key + model)) continue;
+      try {
+        const text = await timed(async (signal) => {
+          const r = await fetchImpl("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal, headers: { "content-type": "application/json", Authorization: "Bearer " + key }, body: JSON.stringify({ model, temperature: 0.3, max_tokens: 7000, reasoning_effort: "low", response_format: { type: "json_object" }, messages: [{ role: "user", content: prompt }] }) });
+          if (r.status === 429 || r.status === 503 || r.status === 404) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
+          if (!r.ok) throw new Error("groq " + r.status);
+          return (await r.json())?.choices?.[0]?.message?.content;
+        });
+        if (text?.trim()) return { text, model };
+        lastErr = new Error("empty reply");
+      } catch (e) { lastErr = e; }
+    }
+  }
   throw lastErr;
 }
 

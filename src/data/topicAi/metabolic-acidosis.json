@@ -1,0 +1,153 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Metabolic acidosis is a condition where the body has too much acid or not enough bicarbonate, leading to a low blood pH. It can be caused by various factors including kidney disease, diabetes, or poisoning. Prompt diagnosis and treatment of the underlying cause are crucial.",
+ "aka": [
+  "Low bicarbonate acidosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Metabolic acidosis is defined by a low serum bicarbonate level (typically < 24 mEq/L) and a low blood pH (< 7.35). The body attempts to compensate by increasing respiration to blow off carbon dioxide, leading to a low PCO2.",
+   "b": [
+    "Primary problem is a low HCO3-.",
+    "Low PCO2 indicates respiratory compensation."
+   ],
+   "t": [
+    {
+     "a": "Arterial Blood Gas (ABG)",
+     "b": "Measures pH, PCO2, and HCO3- to diagnose and assess severity. A low pH (<7.35) and low HCO3- (<24 mEq/L) confirm metabolic acidosis. Low PCO2 indicates respiratory compensation."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is primarily determined by the degree of pH reduction and bicarbonate level. Mild acidosis may be asymptomatic, while severe acidosis can lead to life-threatening complications.",
+   "b": [
+    "Mild: pH 7.25-7.35, HCO3- 18-23 mEq/L",
+    "Moderate: pH 7.15-7.24, HCO3- 10-17 mEq/L",
+    "Severe: pH < 7.15, HCO3- < 10 mEq/L"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are broadly categorized by the anion gap (AG = Na - (Cl + HCO3)). High AG acidosis often involves accumulation of acids, while normal AG acidosis involves loss of bicarbonate or impaired renal excretion.",
+   "b": [
+    "High AG: Diabetic ketoacidosis (DKA), Lactic acidosis, Renal failure, Toxins (methanol, salicylates)",
+    "Normal AG: Diarrhea, Renal tubular acidosis, Addison's disease, Ureterostomy"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with nonspecific symptoms like nausea, vomiting, and fatigue. Severe acidosis can lead to Kussmaul's breathing (deep, rapid breaths) as the body tries to compensate.",
+   "b": [
+    "Kussmaul's breathing is a sign of metabolic acidosis.",
+    "Symptoms can include weakness, confusion, and abdominal pain."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond ABGs, investigations aim to identify the underlying cause.",
+   "t": [
+    {
+     "a": "Basic Metabolic Panel (BMP)",
+     "b": "Assesses electrolytes, kidney function (BUN, creatinine), and glucose. Low bicarbonate confirms acidosis; elevated BUN/creatinine suggests renal failure."
+    },
+    {
+     "a": "Anion Gap Calculation",
+     "b": "Helps differentiate causes of metabolic acidosis. A high AG suggests acid accumulation; a normal AG suggests bicarbonate loss or impaired excretion."
+    },
+    {
+     "a": "Serum Ketones / Urine Ketones",
+     "b": "Detects ketoacidosis, a common cause in diabetes. Positive results indicate the presence of ketone bodies."
+    },
+    {
+     "a": "Lactate Level",
+     "b": "Elevated lactate suggests lactic acidosis, often due to tissue hypoperfusion or certain toxins. High levels indicate significant metabolic distress."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe metabolic acidosis can lead to cardiovascular instability, altered mental status, and death. Hypocalcemia can be unmasked or worsened, leading to tetany.",
+   "b": [
+    "Arrhythmias and hypotension.",
+    "Altered mental status, coma.",
+    "Tetany due to hypocalcemia."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause and supportive care. Bicarbonate therapy is reserved for specific severe cases.",
+   "b": [
+    "Treat the underlying cause (e.g., insulin for DKA, fluids for dehydration).",
+    "Sodium bicarbonate may be used in severe acidosis with respiratory failure.",
+    "Monitor electrolytes, pH, and mental status closely."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up depends on the cause. Prevention involves managing chronic conditions like diabetes and kidney disease, and avoiding toxic ingestions.",
+   "b": [
+    "Regular monitoring of blood glucose in diabetics.",
+    "Adherence to treatment for chronic kidney disease.",
+    "Patient education on avoiding harmful substances."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Respiratory acidosis, which involves an elevated PCO2 due to impaired ventilation, can present with similar symptoms but has a different underlying mechanism.",
+   "b": [
+    "Respiratory acidosis (high PCO2)",
+    "Metabolic alkalosis (high HCO3-)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In DKA, hypokalemia can be masked by acidosis; correction of acidosis can unmask severe hypokalemia. In severe illness, a normal bicarbonate may not reflect the underlying metabolic derangement.",
+   "b": [
+    "Hypokalemia can be masked in DKA.",
+    "A normal bicarbonate doesn't rule out acidosis if pH is low."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Difficulty breathing or shortness of breath",
+  "Confusion, lethargy, or decreased consciousness",
+  "Severe vomiting or diarrhea leading to dehydration",
+  "Chest pain or palpitations"
+ ],
+ "faq": [
+  {
+   "q": "What is the anion gap?",
+   "a": "The anion gap is a calculation that helps determine the cause of metabolic acidosis by assessing the difference between measured cations and anions in the blood."
+  },
+  {
+   "q": "When should bicarbonate be given?",
+   "a": "Bicarbonate is typically reserved for severe metabolic acidosis (pH < 7.15) or in specific situations like metabolic acidosis associated with respiratory failure, to help raise blood pH."
+  },
+  {
+   "q": "Can metabolic acidosis be prevented?",
+   "a": "While not all cases are preventable, managing underlying conditions like diabetes and kidney disease, and avoiding toxic ingestions can significantly reduce the risk."
+  }
+ ],
+ "exam": [
+  "How do you differentiate between high anion gap and normal anion gap metabolic acidosis?",
+  "What are the immediate life-threatening complications of severe metabolic acidosis?",
+  "Describe the role of bicarbonate therapy in managing metabolic acidosis."
+ ],
+ "related": [
+  "Diabetic Ketoacidosis",
+  "Lactic Acidosis",
+  "Renal Tubular Acidosis",
+  "Respiratory Acidosis",
+  "Electrolyte Abnormalities",
+  "Acid-Base Balance",
+  "Acute Kidney Injury",
+  "Salicylate Poisoning"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

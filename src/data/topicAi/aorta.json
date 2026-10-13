@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The aorta is the largest artery in the body, originating from the left ventricle of the heart and extending down to the abdomen. It distributes oxygenated blood to all parts of the body through its branching network.",
+ "aka": [
+  "Aorta"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The aorta is the main artery carrying oxygenated blood from the heart to the rest of the body. Its structure is crucial for withstanding high pressure and distributing blood efficiently.",
+   "b": [
+    "It is the largest artery, originating from the left ventricle.",
+    "It carries oxygenated blood to systemic circulation.",
+    "Its elasticity helps maintain blood pressure."
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The aorta begins at the aortic valve of the left ventricle, ascends, arches over, and then descends through the thorax and abdomen. It has three layers: the tunica intima (endothelium), tunica media (elastic tissue and smooth muscle), and tunica adventitia (connective tissue).",
+   "b": [
+    "Ascending aorta: short, arises from left ventricle.",
+    "Aortic arch: curves posteriorly and leftward.",
+    "Descending aorta: thoracic and abdominal parts.",
+    "Elasticity of the tunica media is key."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The aorta has numerous anatomical relationships. In the thorax, it lies posterior to the pulmonary artery and left atrium, and anterior to the vertebral column. The abdominal aorta is related to the inferior vena cava, pancreas, and vertebral column.",
+   "b": [
+    "Ascending aorta: related to pulmonary trunk and right atrium.",
+    "Aortic arch: related to trachea, esophagus, and left recurrent laryngeal nerve.",
+    "Thoracic aorta: posterior to esophagus and lungs.",
+    "Abdominal aorta: lies to the left of the inferior vena cava."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The aorta itself is supplied by small vessels called vasa vasorum, which nourish its outer layers. The branches arising from the aorta supply all other organs and tissues with oxygenated blood.",
+   "b": [
+    "Vasa vasorum supply the aortic wall.",
+    "Branches of the aorta are the primary blood supply to the body.",
+    "Coronary arteries branch from the ascending aorta."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The aorta receives autonomic innervation from the sympathetic and parasympathetic nervous systems. Receptors sensitive to stretch (baroreceptors) and chemical changes (chemoreceptors) are present in its walls and nearby arteries.",
+   "b": [
+    "Sympathetic nerves influence vasoconstriction.",
+    "Parasympathetic nerves influence vasodilation.",
+    "Baroreceptors regulate blood pressure.",
+    "Chemoreceptors monitor blood gases and pH."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The aorta's primary function is to transport oxygenated blood from the left ventricle to the entire body. Its elastic recoil during diastole helps maintain diastolic blood pressure and ensures continuous blood flow.",
+   "b": [
+    "Propels oxygenated blood to systemic circulation.",
+    "Elastic recoil maintains blood pressure.",
+    "Distributes blood to all organs and tissues."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Atherosclerosis, aneurysms, and dissections are common pathologies affecting the aorta. Injuries can lead to catastrophic bleeding. Conditions like coarctation of the aorta present with differential blood pressures and pulse deficits.",
+   "b": [
+    "Aortic dissection is a life-threatening emergency.",
+    "Aortic aneurysms can rupture.",
+    "Coarctation of the aorta causes hypertension in upper limbs.",
+    "Takayasu arteritis causes stenosis and weak pulses."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Palpating pulses in the extremities is crucial. A difference in blood pressure between arms and legs suggests coarctation. Auscultation may reveal murmurs related to aortic stenosis or regurgitation.",
+   "b": [
+    "Check for symmetrical peripheral pulses.",
+    "Measure BP in both arms and legs.",
+    "Listen for aortic murmurs."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden, severe chest or back pain (suggests dissection or rupture)",
+  "Loss of consciousness",
+  "Severe shortness of breath",
+  "Absent or very weak pulses in limbs"
+ ],
+ "faq": [
+  {
+   "q": "What is the main role of the aorta?",
+   "a": "To carry oxygenated blood from the heart to the rest of the body."
+  },
+  {
+   "q": "What are the three main parts of the aorta?",
+   "a": "The ascending aorta, aortic arch, and descending aorta (thoracic and abdominal)."
+  },
+  {
+   "q": "What is a common disease affecting the aorta?",
+   "a": "Atherosclerosis, leading to aneurysms or dissections."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical course of the aorta from the heart to the abdomen.",
+  "Explain the functional significance of the aorta's elastic properties.",
+  "What are the key clinical implications of aortic dissection and coarctation of the aorta?"
+ ],
+ "related": [
+  "Aortic dissection",
+  "Aortic aneurysm",
+  "Coarctation of the aorta",
+  "Aortic valve",
+  "Vasa vasorum",
+  "Baroreceptors",
+  "Takayasu arteritis"
+ ],
+ "kind": "anatomy",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

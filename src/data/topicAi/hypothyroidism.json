@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Hypothyroidism is a condition where the thyroid gland does not produce enough thyroid hormones, leading to a general slowing of metabolic processes. It can result from various causes, including autoimmune disease and iodine deficiency, and is managed with hormone replacement.",
+ "aka": [
+  "Underactive thyroid"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hypothyroidism is defined by the insufficient production of thyroid hormones (thyroxine T4 and triiodothyronine T3) by the thyroid gland. This leads to a wide range of symptoms due to a generalized slowing of metabolic rate. Diagnosis typically involves blood tests measuring thyroid-stimulating hormone (TSH) and thyroid hormone levels.",
+   "b": [
+    "Primary hypothyroidism: Problem originates in the thyroid gland itself, leading to high TSH and low T4.",
+    "Secondary/tertiary hypothyroidism: Problem originates in the pituitary or hypothalamus, leading to low TSH and low T4."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of hypothyroidism is often classified based on TSH and free T4 levels, and the presence and impact of symptoms. Subclinical hypothyroidism involves elevated TSH with normal free T4, while overt hypothyroidism shows elevated TSH and low free T4.",
+   "b": [
+    "Subclinical hypothyroidism: TSH is elevated, but free T4 is within the normal range; symptoms may be mild or absent.",
+    "Overt hypothyroidism: TSH is elevated and free T4 is low, with clear clinical symptoms.",
+    "Myxedema coma: A severe, life-threatening form of hypothyroidism characterized by profound metabolic slowing, hypothermia, and altered mental status."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The causes of hypothyroidism can be broadly categorized based on whether the problem lies within the thyroid gland (primary) or in the pituitary/hypothalamus (secondary/tertiary). Primary causes are far more common.",
+   "b": [
+    "Hashimoto’s Disease: Autoimmune destruction of the thyroid gland (chronic thyroiditis), the most common cause in iodine-sufficient areas.",
+    "Iodine Deficiency: Leads to endemic goiter as the gland enlarges under constant TSH stimulation to capture trace iodine, common in low-resource settings.",
+    "Post-ablative: After radioactive iodine therapy or surgical removal of the thyroid gland.",
+    "Medication-induced: Drugs like lithium (linked to rapid cycling in bipolar disorder) and amiodarone can impair thyroid function.",
+    "Congenital Hypothyroidism: Present at birth, can lead to cretinism (stunted physical and mental development) if untreated.",
+    "Central hypothyroidism: Pituitary or hypothalamic dysfunction leading to insufficient TSH stimulation of the thyroid."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Hypothyroidism presents with a wide array of non-specific symptoms reflecting a generalized slowing of metabolic processes. The onset is often insidious, making early diagnosis challenging.",
+   "b": [
+    "Fatigue and lethargy: Common and often one of the earliest symptoms.",
+    "Weight gain: Despite reduced appetite, due to decreased metabolism.",
+    "Cold intolerance: Feeling cold even in warm environments.",
+    "Bradycardia: Slower than normal heart rate.",
+    "Constipation: Due to slowed gastrointestinal motility.",
+    "Dry skin and hair loss: Reflecting reduced cellular turnover.",
+    "Hoarseness and goiter: Due to thyroid gland enlargement or vocal cord changes.",
+    "Menstrual irregularities and infertility: Affecting reproductive health."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Laboratory tests are crucial for diagnosing hypothyroidism and differentiating between primary and central causes. Clinical assessment guides which tests are most appropriate.",
+   "t": [
+    {
+     "a": "Thyroid-stimulating hormone (TSH)",
+     "b": "Answers: Is the thyroid gland being adequately stimulated? Result: High TSH indicates primary hypothyroidism (thyroid failing despite pituitary effort); low TSH with low T4 suggests central hypothyroidism (pituitary/hypothalamus problem). If unavailable, clinical assessment of symptoms and signs is paramount, and a tri"
+    },
+    {
+     "a": "Free Thyroxine (Free T4)",
+     "b": "Answers: What is the level of active thyroid hormone? Result: Low Free T4 confirms overt hypothyroidism. Normal Free T4 with high TSH suggests subclinical hypothyroidism. If unavailable, TSH alone can guide initial diagnosis, but Free T4 helps confirm severity and type."
+    },
+    {
+     "a": "Thyroid peroxidase antibodies (TPO Ab)",
+     "b": "Answers: Is an autoimmune process causing the hypothyroidism? Result: Positive TPO antibodies support a diagnosis of Hashimoto's thyroiditis. This helps predict future progression to overt hypothyroidism in subclinical cases."
+    },
+    {
+     "a": "Thyroid ultrasound",
+     "b": "Answers: Are there structural abnormalities in the thyroid gland? Result: Can show goiter, nodules, or changes consistent with chronic thyroiditis. Useful for assessing gland size and morphology, especially if a goiter is palpable."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While often a chronic condition, hypothyroidism can lead to severe complications if left untreated, some of which are life-threatening and require urgent medical attention.",
+   "b": [
+    "Myxedema coma: A medical emergency characterized by severe hypothermia, bradycardia, hypoventilation, and altered mental status.",
+    "Cardiac complications: Pericardial effusion, bradycardia, and increased risk of atherosclerosis and coronary artery disease.",
+    "Neuropsychiatric issues: Depression, cognitive impairment, and in severe cases, psychosis.",
+    "Infertility and adverse pregnancy outcomes: Untreated hypothyroidism can affect fertility and lead to complications during pregnancy.",
+    "Cretinism: Severe mental and physical developmental delay in infants with congenital hypothyroidism if not treated early."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The primary goal of managing hypothyroidism is to restore normal thyroid hormone levels, thereby alleviating symptoms and preventing complications. Treatment is typically lifelong.",
+   "b": [
+    "Levothyroxine: Synthetic T4 is the mainstay of treatment for primary hypothyroidism, chosen for its long half-life and conversion to T3 in the body.",
+    "Dose adjustment: The dose is adjusted based on TSH levels, aiming to normalize them. Regular monitoring is essential.",
+    "Supportive care: Addressing specific symptoms like constipation or fatigue while awaiting hormone normalization.",
+    "Iodine supplementation: For cases of iodine deficiency, but must be carefully managed to avoid iodine-induced hyperthyroidism."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is crucial for patients with hypothyroidism to ensure optimal hormone replacement and to monitor for any complications or changes in their condition. Prevention strategies focus on addressing common causes.",
+   "b": [
+    "Regular TSH monitoring: Initially every 6-8 weeks until stable, then annually or as clinically indicated.",
+    "Clinical symptom assessment: To ensure symptom resolution and detect any new or worsening symptoms.",
+    "Iodine prophylaxis: Universal salt iodization is a key public health strategy to prevent iodine deficiency in endemic areas.",
+    "Screening: Neonatal screening for congenital hypothyroidism is vital for early detection and prevention of cretinism."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "The non-specific nature of hypothyroid symptoms means it can be mistaken for other conditions, especially those causing fatigue or weight changes.",
+   "b": [
+    "Depression: Shares symptoms like fatigue, low mood, and weight changes.",
+    "Chronic fatigue syndrome: Characterized by profound fatigue not relieved by rest.",
+    "Anemia: Can cause fatigue, weakness, and cold intolerance.",
+    "Obesity: Shares weight gain and sometimes fatigue, but without the specific hormonal imbalance."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Several factors can influence thyroid function test results, potentially leading to misinterpretation or inaccurate diagnosis. Clinicians must consider these when evaluating a patient.",
+   "b": [
+    "Sick euthyroid syndrome (non-thyroidal illness): Acute or chronic illness can alter TSH and thyroid hormone levels without true thyroid dysfunction.",
+    "Medications: Certain drugs (e.g., glucocorticoids, dopamine, high-dose biotin) can affect TSH or thyroid hormone levels.",
+    "Pregnancy: TSH reference ranges change during pregnancy, and increased thyroid hormone binding globulin can affect total T4 levels.",
+    "TSH resistance: Rare genetic conditions where target tissues do not respond normally to TSH, leading to elevated TSH with normal or high T4."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Profound fatigue or weakness that prevents daily activities",
+  "Severe cold intolerance with body temperature dropping below normal",
+  "Significant changes in mental status, confusion, or unresponsiveness",
+  "Swelling around the eyes or in the face, especially if rapidly worsening",
+  "Difficulty breathing or very slow heart rate"
+ ],
+ "faq": [
+  {
+   "q": "Can hypothyroidism be cured?",
+   "a": "For most causes, such as Hashimoto's disease or after thyroidectomy, hypothyroidism is a lifelong condition requiring continuous hormone replacement therapy. Some temporary forms, like postpartum thyroiditis, may resolve."
+  },
+  {
+   "q": "How long does it take for levothyroxine to work?",
+   "a": "While some patients may feel better within a few weeks, it typically takes several weeks to months for symptoms to fully improve as hormone levels stabilize and the body adjusts to the new metabolic state. TSH levels are usually rechecked after 6-8 weeks."
+  },
+  {
+   "q": "Does hypothyroidism affect fertility?",
+   "a": "Yes, untreated or poorly managed hypothyroidism can disrupt menstrual cycles, interfere with ovulation, and increase the risk of infertility and adverse pregnancy outcomes. Achieving euthyroid status is important for reproductive health."
+  }
+ ],
+ "exam": [
+  "A 45-year-old woman presents with fatigue, weight gain, and cold intolerance. Her TSH is high, and Free T4 is low. What is the most likely diagnosis, and what is the initial management plan?",
+  "Discuss the differential diagnosis for a patient presenting with symptoms suggestive of hypothyroidism, and explain how you would distinguish between primary and central hypothyroidism.",
+  "Outline the potential complications of untreated hypothyroidism and explain the importance of neonatal screening for congenital hypothyroidism, especially in low-resource settings."
+ ],
+ "related": [
+  "Hashimoto's Thyroiditis",
+  "Hyperthyroidism",
+  "Thyroid Function Tests",
+  "Iodine Deficiency",
+  "Goiter",
+  "Myxedema Coma",
+  "Levothyroxine",
+  "Congenital Hypothyroidism"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "COPD is a progressive lung disease causing airflow limitation. It's primarily linked to smoking and environmental irritants. Management focuses on symptom relief, reducing exacerbations, and slowing disease progression.",
+ "aka": [
+  "Chronic Obstructive Pulmonary Disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "COPD is a progressive, largely irreversible airflow limitation, often associated with chronic bronchitis and emphysema. Diagnosis is suspected in patients with chronic respiratory symptoms and a history of exposure to noxious particles, especially smoking. Spirometry showing a post-bronchodilator FEV1/FVC ratio below 0.7 confirms the diagnosis.",
+   "b": [
+    "Symptoms include chronic cough, sputum production, and dyspnoea.",
+    "A history of significant exposure to risk factors is crucial."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is assessed by symptom burden, exacerbation frequency, and spirometric findings. The GOLD system categorises COPD into stages based on FEV1 and symptom scores (CAT or mMRC).",
+   "b": [
+    "GOLD 1: Mild (FEV1 ≥ 80%)",
+    "GOLD 2: Moderate (50% ≤ FEV1 < 80%)",
+    "GOLD 3: Severe (30% ≤ FEV1 < 50%)",
+    "GOLD 4: Very Severe (FEV1 < 30%)"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common cause is long-term exposure to cigarette smoke. Other significant causes include biomass fuel exposure (indoor air pollution), occupational dusts and chemicals, and alpha-1 antitrypsin deficiency.",
+   "b": [
+    "Cigarette smoking (primary cause)",
+    "Occupational dust and chemical exposure",
+    "Indoor air pollution (biomass fuels)",
+    "Alpha-1 antitrypsin deficiency"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients typically present with chronic cough, often worse in the morning, sputum production, and progressive shortness of breath, especially on exertion. Exacerbations are acute worsening of symptoms.",
+   "b": [
+    "Chronic cough",
+    "Sputum production",
+    "Progressive dyspnoea",
+    "Wheezing",
+    "Recurrent chest infections"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Spirometry (post-bronchodilator)",
+     "b": "Confirms airflow limitation and aids diagnosis. A post-bronchodilator FEV1/FVC ratio < 0.7 indicates COPD."
+    },
+    {
+     "a": "Chest X-ray",
+     "b": "Excludes other causes of symptoms like pneumonia or lung cancer. May show hyperinflation or flattened diaphragms in COPD."
+    },
+    {
+     "a": "Arterial Blood Gas (ABG)",
+     "b": "Assesses oxygenation and ventilation, especially in moderate to severe COPD or during exacerbations. Hypoxia and hypercapnia may be present."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Acute exacerbations, pneumothorax, pneumonia, pulmonary hypertension, cor pulmonale, and respiratory failure are serious complications. A sudden increase in dyspnoea or chest pain warrants urgent assessment.",
+   "b": [
+    "Pneumothorax",
+    "Severe dyspnoea",
+    "Cyanosis",
+    "Altered mental status",
+    "Pulmonary hypertension",
+    "Cor pulmonale"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management aims to reduce symptoms, decrease exacerbation frequency, and improve exercise tolerance. Smoking cessation is the most effective intervention. Pharmacological treatment includes bronchodilators and inhaled corticosteroids. Pulmonary rehabilitation is vital.",
+   "b": [
+    "Smoking cessation",
+    "Bronchodilators (LABA, LAMA)",
+    "Inhaled corticosteroids (ICS)",
+    "Pulmonary rehabilitation",
+    "Oxygen therapy (if hypoxemic)"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor disease progression, adjust treatment, and manage exacerbations. Prevention focuses on smoking cessation and avoiding exposure to irritants.",
+   "b": [
+    "Annual influenza vaccination",
+    "Pneumococcal vaccination",
+    "Regular review of inhaler technique",
+    "Education on exacerbation management"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "COPD can be mistaken for asthma, heart failure, bronchiectasis, and interstitial lung disease due to overlapping symptoms like dyspnoea and cough.",
+   "b": [
+    "Asthma",
+    "Heart failure",
+    "Bronchiectasis",
+    "Interstitial Lung Disease",
+    "Gastroesophageal reflux disease (GORD)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Spirometry may be normal in very early disease. ABGs can appear normal at rest in patients with moderate COPD, only showing abnormalities with exertion or during exacerbations.",
+   "b": [
+    "Normal spirometry in early disease",
+    "Normal ABGs at rest in stable COPD",
+    "Pulse oximetry may not reflect severe hypoxemia in some cases."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of shortness of breath",
+  "Chest pain",
+  "Coughing up blood",
+  "Confusion or drowsiness",
+  "Bluish discoloration of lips or face"
+ ],
+ "faq": [
+  {
+   "q": "What is the main cause of COPD?",
+   "a": "The most common cause is long-term exposure to cigarette smoke."
+  },
+  {
+   "q": "Can COPD be cured?",
+   "a": "COPD cannot be cured, but its progression can be slowed and symptoms managed effectively."
+  },
+  {
+   "q": "What is an exacerbation of COPD?",
+   "a": "An exacerbation is a sudden worsening of COPD symptoms, often requiring increased medication or hospitalization."
+  }
+ ],
+ "exam": [
+  "Describe the diagnostic criteria for COPD using spirometry.",
+  "What are the key management strategies for a patient with moderate COPD?",
+  "How would you differentiate COPD from asthma in a patient presenting with dyspnoea?"
+ ],
+ "related": [
+  "Asthma",
+  "Bronchiectasis",
+  "Pulmonary Embolism",
+  "Pneumonia",
+  "Tuberculosis",
+  "Lung Cancer",
+  "Alpha-1 Antitrypsin Deficiency",
+  "Pulmonary Rehabilitation"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,180 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "A pneumothorax is the presence of air in the pleural space, leading to partial or complete lung collapse. This condition can range from asymptomatic to life-threatening, requiring prompt recognition and intervention. It often presents with sudden chest pain and shortness of breath.",
+ "aka": [
+  "Collapsed lung"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A pneumothorax is defined by the presence of air within the pleural space, the potential space between the visceral and parietal pleura. This air disrupts the negative pressure that normally keeps the lung expanded, causing the lung to collapse away from the chest wall. Diagnosis is primarily clinical, supported by imaging.",
+   "b": [
+    "Primary spontaneous pneumothorax (PSP): Occurs in individuals without underlying lung disease, often tall, thin young men.",
+    "Secondary spontaneous pneumothorax (SSP): Occurs in individuals with underlying lung disease (e.g., COPD, cystic fibrosis, tuberculosis).",
+    "Traumatic pneumothorax: Results from blunt or penetrating chest injury.",
+    "Iatrogenic pneumothorax: Caused by medical procedures (e.g., central line insertion, lung biopsy, mechanical ventilation)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of a pneumothorax is typically assessed by the size of the air collection and the presence of physiological compromise. Tension pneumothorax is a medical emergency, regardless of size, due to its haemodynamic impact.",
+   "b": [
+    "Small pneumothorax: Apex-to-cupola distance < 2 cm on chest X-ray.",
+    "Large pneumothorax: Apex-to-cupola distance ≥ 2 cm on chest X-ray.",
+    "Tension pneumothorax: Air enters the pleural space but cannot exit, leading to increasing pressure, mediastinal shift, and compromise of cardiac output and ventilation. This is a clinical diagnosis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The causes of pneumothorax vary widely, from spontaneous events in healthy individuals to complications of underlying lung disease or trauma. Understanding the etiology guides management.",
+   "b": [
+    "Rupture of subpleural blebs or bullae (most common cause of spontaneous pneumothorax).",
+    "Chronic obstructive pulmonary disease (COPD) with emphysema.",
+    "Asthma, especially during severe exacerbations (e.g., status asthmaticus).",
+    "Cystic fibrosis.",
+    "Tuberculosis (TB), particularly cavitary disease, common in low-resource settings.",
+    "Pneumocystis jirovecii pneumonia (PJP) in immunocompromised patients (e.g., HIV).",
+    "Lung cancer.",
+    "Connective tissue diseases (e.g., Marfan syndrome, Ehlers-Danlos syndrome).",
+    "Trauma: Rib fractures, penetrating chest wounds (e.g., stab or gunshot wounds).",
+    "Medical procedures: Central venous catheter insertion, thoracentesis, lung biopsy, positive pressure ventilation."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients typically present with acute onset symptoms related to lung collapse and irritation of the pleura. The clinical picture can range from mild discomfort to severe respiratory distress.",
+   "b": [
+    "Sudden onset pleuritic chest pain, often sharp and unilateral.",
+    "Shortness of breath (dyspnoea), varying with the size of the pneumothorax.",
+    "Cough.",
+    "Tachycardia (fast heart rate).",
+    "Tachypnoea (rapid breathing).",
+    "Reduced or absent breath sounds on the affected side.",
+    "Hyper-resonance to percussion on the affected side.",
+    "Tracheal deviation away from the affected side (in tension pneumothorax).",
+    "Hypotension and jugular venous distension (in tension pneumothorax)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm the diagnosis, assess size, and identify potential underlying causes. In resource-limited settings, clinical assessment and a basic chest X-ray are often the primary diagnostic tools.",
+   "t": [
+    {
+     "a": "Chest X-ray (CXR)",
+     "b": "Answers: Is there air in the pleural space and how large is it? What is the degree of lung collapse? What is the position of the mediastinum? Reveals: A visible visceral pleural line, absence of lung markings peripheral to this line. Hyperinflation and flattened diaphragms may be seen in underlying COPD. Tracheal devia"
+    },
+    {
+     "a": "Arterial Blood Gas (ABG)",
+     "b": "Answers: What is the patient's oxygenation and ventilation status? Reveals: Hypoxaemia (low oxygen levels) is common. May show respiratory alkalosis initially due to hyperventilation, or respiratory acidosis in severe cases with respiratory failure. Check early and repeat to monitor."
+    },
+    {
+     "a": "CT scan of the chest",
+     "b": "Answers: Provides a more detailed view of the pneumothorax, identifies small pneumothoraces, and characterizes underlying lung pathology (e.g., bullae, emphysema, interstitial lung disease). Reveals: Precise size and location of air, underlying lung disease, and can differentiate from other conditions. Often used for r"
+    },
+    {
+     "a": "Ultrasound (thoracic)",
+     "b": "Answers: Can rapidly identify the absence of lung sliding and the presence of a 'lung point' (where visceral and parietal pleura separate), indicating pneumothorax. Reveals: Dynamic real-time assessment, useful in emergency settings or when X-ray is delayed or unavailable. Highly sensitive for pneumothorax."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs indicate a rapidly worsening condition requiring immediate intervention. Complications can be severe and impact long-term respiratory health.",
+   "b": [
+    "Tracheal deviation with haemodynamic compromise (hypotension, tachycardia) indicates tension pneumothorax, a life-threatening emergency.",
+    "Sudden hypoxaemia (low blood oxygen levels) and increasing respiratory distress.",
+    "Re-expansion pulmonary oedema: Can occur after rapid re-expansion of a collapsed lung.",
+    "Respiratory failure: Inability to maintain adequate gas exchange.",
+    "Recurrence: Especially common in spontaneous pneumothorax.",
+    "Empyema: Infection in the pleural space, a complication of chest drain insertion or underlying infection.",
+    "Pleural thickening and fibrosis (trapped lung): Can lead to chronic restrictive lung disease.",
+    "Bleeding from aspiration: A risk during chest drain insertion."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management depends on the size of the pneumothorax, the patient's symptoms, and the presence of underlying lung disease. The primary goals are to remove air from the pleural space and prevent recurrence.",
+   "b": [
+    "Observation and supplemental oxygen: For small, asymptomatic primary spontaneous pneumothoraces. Monitor closely for worsening.",
+    "Simple aspiration: Using a small-bore catheter to remove air, often for larger PSPs or symptomatic small ones. Less invasive than a chest drain.",
+    "Chest drain insertion (thoracostomy): For larger or symptomatic pneumothoraces, secondary pneumothoraces, or tension pneumothorax after initial decompression. A tube is inserted into the pleural space to allow continuous air drainage.",
+    "Needle decompression: For tension pneumothorax, a large-bore needle is inserted into the second intercostal space in the midclavicular line to immediately relieve pressure. This is a temporizing measure before chest drain insertion.",
+    "Pleurodesis: Chemical (e.g., talc) or surgical procedure to create adhesion between the pleural layers, preventing recurrence. Considered for recurrent pneumothorax or persistent air leak.",
+    "Thoracotomy with pleurectomy or stapling of bullae: Surgical intervention for recurrent or complex cases, or when other methods fail."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Patients require follow-up to ensure resolution and to address underlying causes. Prevention strategies aim to reduce the risk of recurrence.",
+   "b": [
+    "Serial chest X-rays to monitor resolution of the pneumothorax.",
+    "Smoking cessation counseling, as smoking is a major risk factor for recurrence.",
+    "Avoidance of high-altitude travel or scuba diving until complete resolution.",
+    "Education on symptoms of recurrence and when to seek urgent medical care.",
+    "Management of underlying lung diseases (e.g., COPD, asthma, TB) to reduce risk of SSP."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "The acute presentation of chest pain and shortness of breath can mimic several other serious conditions, necessitating careful differentiation.",
+   "b": [
+    "Myocardial infarction (heart attack): Shares chest pain, but typically more exertional and radiating.",
+    "Pulmonary embolism (PE): Presents with sudden dyspnoea and pleuritic chest pain, but often with risk factors for thrombosis.",
+    "Acute asthma exacerbation or status asthmaticus: Wheezing is prominent, but severe cases can also lead to pneumothorax.",
+    "Pneumonia: Presents with cough, fever, and often productive sputum, with consolidation on imaging.",
+    "Pericarditis: Pleuritic chest pain, but often relieved by leaning forward."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical findings or investigation results can be misleading, requiring careful interpretation in the context of the overall clinical picture.",
+   "b": [
+    "Small pneumothoraces may be missed on a supine chest X-ray.",
+    "Breath sounds may be only subtly diminished in small pneumothoraces, especially in obese patients.",
+    "A tension pneumothorax is a clinical diagnosis; waiting for X-ray confirmation can be fatal.",
+    "Normal oxygen saturation does not exclude a small pneumothorax, especially in patients with good respiratory reserve."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset severe chest pain and shortness of breath",
+  "Rapidly worsening difficulty breathing",
+  "Bluish discoloration of lips or fingers (cyanosis)",
+  "Feeling faint or dizzy",
+  "Tracheal deviation (neck appears to be pulled to one side)"
+ ],
+ "faq": [
+  {
+   "q": "Can a pneumothorax heal on its own?",
+   "a": "Yes, small pneumothoraces, especially primary spontaneous ones, can often resolve spontaneously with rest and oxygen, as the air is gradually reabsorbed."
+  },
+  {
+   "q": "What activities should be avoided after a pneumothorax?",
+   "a": "Patients should avoid smoking, flying, scuba diving, and strenuous physical activity until the lung has fully re-expanded and cleared by a clinician, typically for several weeks to months."
+  },
+  {
+   "q": "Is a pneumothorax always painful?",
+   "a": "While chest pain is a common symptom, very small pneumothoraces might be asymptomatic or cause only mild discomfort. However, any new chest pain should be evaluated."
+  }
+ ],
+ "exam": [
+  "A 25-year-old tall, thin male presents with sudden onset right-sided pleuritic chest pain and shortness of breath. On examination, you note decreased breath sounds on the right. What is your most likely diagnosis, and what immediate steps w",
+  "Describe the pathophysiology of a tension pneumothorax and explain why it is considered a medical emergency. Outline the key clinical signs that differentiate it from a simple pneumothorax.",
+  "Discuss the management options for a large secondary spontaneous pneumothorax in a patient with severe COPD, including both acute intervention and long-term prevention strategies."
+ ],
+ "related": [
+  "Pleural effusion",
+  "Hemothorax",
+  "Acute respiratory distress syndrome (ARDS)",
+  "Chronic obstructive pulmonary disease (COPD)",
+  "Asthma",
+  "Tuberculosis",
+  "Chest trauma",
+  "Pulmonary embolism"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,139 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The duodenum is the first and shortest part of the small intestine, connecting the stomach to the jejunum. It plays a crucial role in digestion and absorption, receiving chyme from the stomach and secretions from the liver and pancreas. Its unique anatomical features facilitate these digestive processes.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The duodenum is a C-shaped tube, approximately 20-25 cm long, that forms the initial segment of the small intestine. It is largely retroperitoneal and is divided into four parts. Its primary functions include neutralizing acidic chyme, initiating chemical digestion, and absorbing nutrients, particularly iron."
+  },
+  {
+   "h": "Location and structure",
+   "p": "The duodenum begins at the pyloric sphincter of the stomach and ends at the duodenojejunal flexure, marked by the ligament of Treitz. It is divided into four parts, each with distinct anatomical relationships and features.",
+   "b": [
+    "First part (superior): Extends from the pylorus, ascending to the right of the L1 vertebra. It is mostly intraperitoneal.",
+    "Second part (descending): Descends along the right side of L1-L3 vertebrae. It receives the common bile duct and pancreatic duct at the major duodenal papilla.",
+    "Third part (horizontal): Crosses anterior to the inferior vena cava and aorta at the L3 vertebra.",
+    "Fourth part (ascending): Ascends on the left side of the aorta to the L2 vertebra, joining the jejunum at the duodenojejunal flexure.",
+    "Histologically, the duodenum features villi, crypts of Lieberkühn, and submucosal Brunner's glands, which secrete alkaline mucus."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Understanding the relations of the duodenum is vital for interpreting imaging and surgical approaches, as its proximity to other organs can lead to referred pain or complications.",
+   "b": [
+    "Superior part: Anteriorly related to the liver (quadrate lobe) and gallbladder; posteriorly to the common bile duct, portal vein, and gastroduodenal artery.",
+    "Descending part: Anteriorly related to the transverse colon and small intestine; posteriorly to the right kidney and ureter.",
+    "Horizontal part: Anteriorly related to the superior mesenteric artery and vein; posteriorly to the inferior vena cava and aorta.",
+    "Ascending part: Anteriorly related to the jejunum; posteriorly to the left psoas major muscle and left renal vessels."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The duodenum has a rich and dual blood supply, reflecting its critical role in digestion and making it resilient to ischemia, though specific areas can be vulnerable.",
+   "b": [
+    "Superior pancreaticoduodenal artery (from gastroduodenal artery, a branch of the common hepatic artery) supplies the superior and descending parts.",
+    "Inferior pancreaticoduodenal artery (from superior mesenteric artery) supplies the inferior and ascending parts.",
+    "Venous drainage mirrors the arterial supply, emptying into the superior mesenteric and splenic veins, which then form the portal vein."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Innervation of the duodenum ensures coordinated digestive processes, including motility, secretion, and feedback mechanisms.",
+   "b": [
+    "Parasympathetic innervation: Vagus nerve (CN X) stimulates motility and secretion.",
+    "Sympathetic innervation: Thoracic splanchnic nerves (T9-T10) inhibit motility and secretion, and carry pain sensation.",
+    "Enteric nervous system: Myenteric (Auerbach's) and submucosal (Meissner's) plexuses provide intrinsic control."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The duodenum is a critical site for the initial stages of chemical digestion and nutrient absorption, acting as a gateway for chyme from the stomach.",
+   "b": [
+    "Neutralization of acidic chyme: Brunner's glands secrete alkaline mucus and bicarbonate to protect the duodenal mucosa.",
+    "Digestion: Receives bile from the liver (for fat emulsification) and pancreatic enzymes (for carbohydrate, protein, and fat digestion).",
+    "Absorption: Primary site for iron absorption (ferrous iron is more soluble and efficiently absorbed).",
+    "Hormone production: I-cells release cholecystokinin (CCK) in response to fats and proteins, stimulating gallbladder contraction and pancreatic enzyme release.",
+    "Regulation of gastric emptying: Tightly regulated to ensure the duodenum receives chyme at a rate it can process."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "The duodenum's location and function make it susceptible to various clinical conditions, from common ulcers to severe trauma, which clinicians must recognize.",
+   "b": [
+    "Duodenal ulcers: Most common in the first part, often caused by H. pylori infection or NSAID use. Can lead to bleeding (upper GI bleed if above ligament of Treitz) or perforation.",
+    "Celiac disease: Immune reaction to gluten, causing damage to duodenal villi (absence of villi, increased intraepithelial lymphocytes, hyperplastic crypts).",
+    "Duodenal atresia: Congenital obstruction, often presenting as 'double bubble' sign on imaging in neonates.",
+    "Superior mesenteric artery (SMA) syndrome: Compression of the third part of the duodenum between the SMA and aorta, often due to rapid weight loss.",
+    "Trauma: Due to its retroperitoneal location, duodenal injuries from blunt abdominal trauma can be difficult to diagnose and carry high morbidity.",
+    "Crohn's disease: Can affect any part of the GI tract, including the duodenum, causing inflammation and strictures."
+   ],
+   "t": [
+    {
+     "a": "Upper GI endoscopy with biopsy",
+     "b": "Answers: Is there inflammation, ulceration, or villous atrophy in the duodenum? Result: Absence of villi, increased surface intraepithelial lymphocytes, and hyperplastic crypts suggest celiac disease."
+    },
+    {
+     "a": "Abdominal CT scan with oral contrast",
+     "b": "Answers: Is there evidence of duodenal perforation, obstruction, or inflammation? Result: Free air suggests perforation; dilated duodenum with a transition point suggests obstruction."
+    },
+    {
+     "a": "Stool antigen test for H. pylori",
+     "b": "Answers: Is H. pylori infection present, which could cause duodenal ulcers? Result: Positive test indicates infection, guiding treatment."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "To excel in exams, focus on the unique aspects of the duodenum and its clinical implications, thinking beyond simple anatomical recall.",
+   "b": [
+    "Remember the ligament of Treitz as the anatomical landmark separating upper from lower GI bleeds.",
+    "Associate Brunner's glands with the duodenum and its role in neutralizing gastric acid.",
+    "Understand the 'double bubble' sign in neonates as indicative of duodenal atresia.",
+    "Connect the dual blood supply to the duodenum's resilience but also the potential for specific vascular compromise.",
+    "Always consider celiac disease when presented with duodenal villous atrophy on biopsy."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain that is sudden or worsening",
+  "Vomiting blood or 'coffee ground' material",
+  "Black, tarry stools (melena)",
+  "Unexplained weight loss with digestive symptoms",
+  "Persistent nausea and vomiting"
+ ],
+ "faq": [
+  {
+   "q": "What is the ligament of Treitz?",
+   "a": "It is a suspensory muscle that marks the boundary between the duodenum and the jejunum, and is a key anatomical landmark for distinguishing upper from lower gastrointestinal bleeding."
+  },
+  {
+   "q": "Why is the duodenum important for iron absorption?",
+   "a": "The acidic environment of the stomach and the duodenum's specific transporters are crucial for converting ferric iron (Fe³⁺) to the more soluble and absorbable ferrous iron (Fe²⁺)."
+  },
+  {
+   "q": "What are Brunner's glands and what do they do?",
+   "a": "Brunner's glands are submucosal glands found only in the duodenum. They secrete an alkaline mucus that helps neutralize acidic chyme from the stomach, protecting the duodenal mucosa."
+  }
+ ],
+ "exam": [
+  "A patient presents with epigastric pain and melena. Describe the anatomical location of the duodenum and explain how its blood supply makes it a common site for upper GI bleeding.",
+  "Discuss the key histological features of the duodenum and relate them to its primary functions in digestion and absorption, particularly in the context of celiac disease.",
+  "Outline the four parts of the duodenum, detailing their anatomical relations and clinical significance, including potential sites of compression or injury."
+ ],
+ "related": [
+  "Stomach",
+  "Jejunum",
+  "Pancreas",
+  "Liver",
+  "Cholecystokinin (CCK)",
+  "Superior mesenteric artery",
+  "Celiac disease",
+  "Peptic ulcer disease"
+ ],
+ "kind": "anatomy",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}
