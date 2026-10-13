@@ -342,9 +342,9 @@ export default function TopicPage() {
           <div className="mt-8 space-y-4">
             {writing && <Writing name={name} />}
             {!writing && !page && phase !== "rejected" && !aiPaused() && !looksLikeBot() && !intro.length && (
-              <div className="rounded-2xl border border-border bg-muted/40 p-6 text-center">
-                <p className="font-serif text-xl font-bold">This page is taking a moment</p>
-                <p className="mt-1 text-[15px] text-muted-foreground">Tap below to load the full write-up on {name}.</p>
+              <div className="py-6">
+                <p className="font-serif text-2xl font-bold">This page is taking a moment</p>
+                <p className="mt-1 text-[16px] text-muted-foreground">Tap below to load the full write-up on {name}.</p>
                 <button type="button" onClick={retry} className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground"><RefreshCw className="h-4 w-4" aria-hidden /> Load it now</button>
               </div>
             )}

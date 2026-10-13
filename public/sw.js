@@ -54,7 +54,7 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       fetch(event.request)
         .then((response) => keep(CACHE_NAME, event.request, response))
-        .catch(() => caches.match(event.request).then((r) => r || caches.match("/")))
+        .catch(() => caches.match(event.request).then((r) => r || caches.match("/")).then((r) => r || new Response("Offline", { status: 503 })))
     );
     return;
   }
@@ -82,5 +82,5 @@ self.addEventListener("fetch", (event) => {
   }
 
   // Everything else: network-first
-  event.respondWith(fetch(event.request).then((response) => keep(CACHE_NAME, event.request, response)).catch(() => caches.match(event.request)));
+  event.respondWith(fetch(event.request).then((response) => keep(CACHE_NAME, event.request, response)).catch(() => caches.match(event.request).then((r) => r || new Response("", { status: 503 }))));
 });

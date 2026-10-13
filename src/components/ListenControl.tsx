@@ -12,10 +12,13 @@ const keyOf = (path: string) => path.replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$
 const publicUrl = (key: string, ext: string) => `${SUPABASE_URL}/storage/v1/object/public/${BUCKET}/${key}.${ext}`;
 
 /** The saved recording of this page, if the admin made one: its address, or null. */
+let noBucket = false; // the storage bucket is not set up yet: stop asking, so the console stays quiet
 async function findRecording(key: string): Promise<string | null> {
+  if (noBucket) return null;
   for (const ext of ["mp3", "wav", "webm", "mp4"]) {
     try {
       const r = await fetch(publicUrl(key, ext), { method: "HEAD", cache: "no-store" });
+      if (r.status === 400 && ext === "mp3") { noBucket = true; return null; }
       if (r.ok && /audio|video|octet/.test(r.headers.get("content-type") ?? "audio")) return `${publicUrl(key, ext)}?v=${encodeURIComponent(r.headers.get("etag") ?? r.headers.get("last-modified") ?? "")}`;
     } catch { /* none here */ }
   }
