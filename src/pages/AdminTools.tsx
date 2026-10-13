@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import { Mic, BarChart3, CalendarCheck, HeartPulse, Wallet, LayoutDashboard } from "lucide-react";
+import { BarChart3, CalendarCheck, HeartPulse, Wallet, LayoutDashboard } from "lucide-react";
 
 const TOOLS = [
   { to: "/admin/analytics", icon: BarChart3, title: "Visitors", text: "Who is on the site now, how many used it each day, each week and each year, and a picture of the numbers to share on WhatsApp." },
-  { to: "/admin/voice", icon: Mic, title: "My voice", text: "Read a short script once. A copy of your voice is made, and any page can then be read aloud in it." },
   { to: "/admin/outline-sync", icon: CalendarCheck, title: "Course outline sync", text: "Paste a course outline: every matching note, blog and topic shows its year, semester, week and lecturer." },
   { to: "/admin/content-health", icon: HeartPulse, title: "Content health", text: "Every blog checked for thin pages, scan noise, bad titles and weak question banks, with one-tap fixes." },
   { to: "/admin/monetise", icon: Wallet, title: "Monetise", text: "Ads, a sponsor line and book links. All off until you switch them on." },

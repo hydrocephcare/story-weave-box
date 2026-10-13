@@ -1,9 +1,9 @@
 // A calmer way to read a page aloud with the voices the device already has: the best voice first, a short pause after each sentence, a
 // longer one after a paragraph or a heading, and a steady, slightly slower pace. Nothing leaves the device.
 
-export interface VoicePrefs { gender: "auto" | "male" | "female"; uri: string; rate: number; own: boolean }
+export interface VoicePrefs { gender: "auto" | "male" | "female"; uri: string; rate: number }
 const KEY = "ompath_voice_prefs";
-export const DEFAULT_PREFS: VoicePrefs = { gender: "auto", uri: "", rate: 0.95, own: true };
+export const DEFAULT_PREFS: VoicePrefs = { gender: "auto", uri: "", rate: 0.95 };
 
 export const readPrefs = (): VoicePrefs => { try { return { ...DEFAULT_PREFS, ...JSON.parse(localStorage.getItem(KEY) ?? "{}") }; } catch { return DEFAULT_PREFS; } };
 export const savePrefs = (p: VoicePrefs) => { try { localStorage.setItem(KEY, JSON.stringify(p)); } catch { /* ignore */ } };
