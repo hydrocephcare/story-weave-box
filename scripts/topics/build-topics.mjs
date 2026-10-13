@@ -7,6 +7,7 @@
 //   2. It counts where each topic is mentioned across notes, MCQ sets and essays, and keeps the ones the site really covers.
 //   3. For each topic it collects: the notes about it, the sentences that define it, images, practice questions with answers, related topics.
 //   4. It writes public/topics/<slug>.json (one per topic), public/topics/index.json and public/topics/aliases.json.
+import { cleanExplanation, soundQuestion, stemKey } from "../../src/lib/mcqQuality.js";
 import fs from "fs";
 import path from "path";
 import { loadCorpus, loadPublishedTopicPages } from "./corpus.mjs";
@@ -241,16 +242,22 @@ docs.forEach((d, idx) => {
 });
 function stripMdKeepLines(s) { return s.replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/\[([^\]]+)\]\([^)]*\)/g, "$1").replace(/\*\*|__|`/g, "").replace(/^#+\s*/gm, "").replace(/^\s*[-*]\s+/gm, "").replace(/[ \t]+/g, " "); }
 
+const seenStems = new Set();
 docs.forEach((d, idx) => {
   if (d.kind === "mcq") {
     for (const q of d.questions) {
       if (!q.question || !Array.isArray(q.options) || q.options.length < 2 || typeof q.correct_answer !== "number") continue;
+      if (!soundQuestion(q)) continue; // damaged by importing: never shown on a topic page
+      const stem = stemKey(q);
       const found = new Set();
       gramsOf(tokens(q.question), (g) => { const t = topicByKey.get(g); if (t) found.add(t.slug); });
       for (const slug of found) {
         const list = questions.get(slug);
         if (list.length >= 40) continue;
-        list.push({ q: q.question.slice(0, 400), o: q.options.map((o) => String(o).replace(/\s*[✅✔☑✓]?\s*(?:correct\s*)?answers?\s*[:\-]?\s*\(?[A-F]\)?\b.*$/i, "").slice(0, 160)), a: q.correct_answer, e: (q.explanation || "").slice(0, 420), d: idx, h: q.explanation ? 1 : 0 });
+        const dupKey = `${slug}|${stem}`;
+        if (seenStems.has(dupKey)) continue; // the same question stored in many copies is shown once
+        seenStems.add(dupKey);
+        list.push({ q: q.question.slice(0, 400), o: q.options.map((o) => String(o).replace(/\s*[✅✔☑✓]?\s*(?:correct\s*)?answers?\s*[:\-]?\s*\(?[A-F]\)?\b.*$/i, "").slice(0, 160)), a: q.correct_answer, e: cleanExplanation(q.explanation).slice(0, 420), d: idx, h: q.explanation ? 1 : 0 });
       }
     }
   } else if (d.kind === "essay") {
