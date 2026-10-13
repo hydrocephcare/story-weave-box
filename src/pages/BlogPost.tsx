@@ -1379,7 +1379,7 @@ export default function BlogPost() {
   const reloadCurrentArticle = async (id: string) => {
     const refreshed = await getArticleBySlugOrId(id);
     if (refreshed) {
-      setArticle(refreshed);
+      setArticle(scanFirst(refreshed));
       if (refreshed.category) setRelated(await getRelatedContent(refreshed.category, refreshed.id));
     }
   };
