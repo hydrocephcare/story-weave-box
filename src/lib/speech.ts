@@ -46,8 +46,8 @@ export function pickVoice(all: SpeechSynthesisVoice[], p: VoicePrefs): SpeechSyn
 export function pieces(text: string): { t: string; pause: number }[] {
   const out: { t: string; pause: number }[] = [];
   for (const para of text.replace(/\r/g, "").split(/\n+/)) {
-    const p = para.replace(/\s+/g, " ").trim();
-    if (!p) continue;
+    const p = para.replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/^\s*#{1,6}\s*/, "").replace(/^\s*[-*>]\s+/, "").replace(/[*_`|]/g, "").replace(/\s+/g, " ").trim();
+    if (!p || /^[-: ]+$/.test(p)) continue;
     const heading = p.length < 70 && !/[.!?:]$/.test(p);
     if (heading) { out.push({ t: p, pause: 750 }); continue; }
     const sents = p.match(/[^.!?]+(?:[.!?]+["')\]]*|$)/g) ?? [p];

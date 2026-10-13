@@ -120,16 +120,16 @@ export default function ListenControl({ text, path, btnClass }: { text: string; 
   const removeRec = async () => { await supabase.storage.from(BUCKET).remove([`${key}.mp3`, `${key}.wav`, `${key}.webm`, `${key}.mp4`]); setOwn(null); setNote("The recording was removed."); };
 
   // the page's text, line by line, to read from while recording
-  const lines = text.split(/\n+/).map((l) => l.trim()).filter(Boolean).slice(0, 80);
+  const lines = text.split(/\n+/).map((l) => l.replace(/!\[[^\]]*\]\([^)]*\)/g, "").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/^\s*#{1,6}\s*/, "").replace(/^\s*[-*>]\s+/, "").replace(/[*_`|]/g, "").replace(/\s+/g, " ").trim()).filter((l) => l && !/^[-: ]+$/.test(l)).slice(0, 80);
   const english = all.filter((v) => /^en/i.test(v.lang));
   const label = prefs.own && own ? `Listen · ${OWNER}` : "Listen";
   return (
-    <div className="inline-flex flex-wrap items-center gap-2">
+    <div className="inline-flex max-w-full flex-wrap items-center gap-2">
       <button type="button" className={btnClass} onClick={toggle}>{playing ? <Square className="h-4 w-4 text-primary" aria-hidden /> : <Volume2 className="h-4 w-4 text-primary" aria-hidden />} {playing ? "Stop" : label}</button>
       <button type="button" aria-label="Voice settings" aria-expanded={panel} onClick={() => setPanel((v) => !v)} className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition hover:border-primary/60 hover:text-primary"><Settings2 className="h-4 w-4" aria-hidden /></button>
       {note && !panel && <p className="basis-full text-sm font-semibold text-primary" role="status">{note}</p>}
       {panel && (
-        <div className="basis-full space-y-4 rounded-2xl border border-border bg-background p-4 text-sm">
+        <div className="w-full min-w-0 max-w-full basis-full space-y-4 overflow-hidden rounded-2xl border border-border bg-background p-4 text-sm [overflow-wrap:anywhere]">
           <div>
             <p className="font-semibold">Voice</p>
             <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label="Voice">
