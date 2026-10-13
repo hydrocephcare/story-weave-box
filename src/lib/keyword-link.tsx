@@ -176,7 +176,7 @@ export function linkifyText(text: string, ctx: Ctx | null, keyPrefix = "k"): Rea
     if (before) out.push(<span key={`${keyPrefix}-b-${i}`}>{before}</span>);
     out.push(<DeepLinkSpan key={`${keyPrefix}-l-${i}`} path={entry.path.startsWith("/pharmacology") || entry.path.startsWith("/topic/") ? entry.path : `${entry.path}#${entry.target || slugify(matched)}`} title={entry.term} label={matched} returnTitle={ctx.currentTitle} />);
     rest = rest.slice(index + matched.length);
-    if (++i > 28) {
+    if (++i >= 2) { // two highlighted words in a paragraph at most
       out.push(rest);
       break;
     }

@@ -51,7 +51,7 @@ function Linked({ text, self }: { text: string; self: string }) {
   let last = 0; let n = 0;
   for (const m of text.matchAll(re)) {
     const slug = map.get(m[0].toLowerCase());
-    if (!slug || slug === self || used.has(slug) || n >= 4) continue;
+    if (!slug || slug === self || used.has(slug) || n >= 2) continue;
     used.add(slug); n++;
     out.push(text.slice(last, m.index), <a key={m.index} href={`/topic/${slug}`} className="note-link topic-link">{m[0]}</a>);
     last = (m.index ?? 0) + m[0].length;

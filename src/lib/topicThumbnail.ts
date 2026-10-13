@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const CACHE_KEY = "ompath_topic_thumb_cache_v2";
+const CACHE_KEY = "ompath_topic_thumb_cache_v3";
 const NEG_TTL = 1000 * 60 * 60 * 24 * 7;
 export type TopicThumbnail = { url: string; pageUrl: string; credit: string; license: string };
 type CacheEntry = { image: TopicThumbnail | null; ts: number };
@@ -50,9 +50,18 @@ async function fetchCommonsThumb(query: string, identity: string): Promise<Topic
       const url = info?.thumburl || info?.url;
       if (!url || /\.svg(?:\?|$)/i.test(url)) return [];
       const meta = info.extmetadata || {};
-      return [{ url, pageUrl: info.descriptionurl || `https://commons.wikimedia.org/wiki/${encodeURIComponent(page.title || "")}`, credit: stripMarkup(meta.Artist?.value || meta.Credit?.value || "Wikimedia Commons"), license: stripMarkup(meta.LicenseShortName?.value || meta.UsageTerms?.value || "Free licence") } satisfies TopicThumbnail];
+      return [{ url, pageUrl: info.descriptionurl || `https://commons.wikimedia.org/wiki/${encodeURIComponent(page.title || "")}`, credit: stripMarkup(meta.Artist?.value || meta.Credit?.value || "Wikimedia Commons"), license: stripMarkup(meta.LicenseShortName?.value || meta.UsageTerms?.value || "Free licence"), about: `${page.title || ""} ${stripMarkup(meta.ImageDescription?.value)} ${stripMarkup(meta.ObjectName?.value)}`.toLowerCase() }];
     });
-    return candidates.length ? candidates[hash(identity) % Math.min(candidates.length, 8)] : null;
+    // a picture is used only when it is about the subject: its name or description must contain the subject's words, and it must not be a scanned
+    // page, a journal, a logo or a map. No picture is better than the wrong one.
+    const words = query.toLowerCase().split(/\s+/).filter((w) => w.length >= 4);
+    const BAD = /table of contents|contents|journal|bulletin|\bvol\.|volume|\bpage \d|cover|logo|flag|poster|banner|portrait|\bmap\b|stamp|certificate|invoice|\.pdf|\.djvu|catalog|newsletter|advert|navy|army|proceedings|conference|newspaper/i;
+    const scored = candidates.map(({ about, ...c }) => {
+      const hit = words.filter((w) => about.includes(w.slice(0, Math.max(4, w.length - 2)))).length;
+      return { c: c as TopicThumbnail, score: words.length ? hit / words.length : 0, bad: BAD.test(about) };
+    }).filter((x) => !x.bad && x.score >= (words.length > 1 ? 0.5 : 1)).sort((a, b) => b.score - a.score);
+    const best = scored.filter((x) => x.score === scored[0]?.score);
+    return best.length ? best[hash(identity) % Math.min(best.length, 4)].c : null;
   } catch { return null; }
 }
 

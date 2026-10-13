@@ -49,6 +49,7 @@ export function linkDrugs(html, drugs) {
     // choose non-overlapping matches on the untouched text, longest names first, then build the result in order
     const chosen = [];
     for (const e of entries) {
+      if (chosen.length >= 2) break;
       if (used.has(e.id)) continue;
       const m = seg.match(e.re);
       if (!m) continue;
@@ -73,7 +74,7 @@ export function linkDrugs(html, drugs) {
  * open everything the library has on it. Headings, existing links, tables and the practice questions are left alone, and a note never links
  * to the topic it is about. At most `limit` links per note. topics: [{ s: slug, n: name }].
  */
-export function linkTopics(html, topics, { limit = 10, skip = [] } = {}) {
+export function linkTopics(html, topics, { limit = 8, skip = [] } = {}) {
   if (!topics?.length) return html;
   const skipSlugs = new Set(skip);
   const entries = topics.filter((t) => !skipSlugs.has(t.s) && t.n.length >= 5).map((t) => ({ s: t.s, term: t.n, re: new RegExp(`(^|[^A-Za-z0-9-])(${escRe(t.n)})(?![A-Za-z0-9-])`, "i") }));
@@ -97,7 +98,7 @@ export function linkTopics(html, topics, { limit = 10, skip = [] } = {}) {
     if (n >= limit || anchorDepth > 0 || thDepth > 0 || codeDepth > 0 || summaryDepth > 0 || skipSection || !seg.trim()) return seg;
     const chosen = [];
     for (const e of entries) {
-      if (n + chosen.length >= limit) break;
+      if (n + chosen.length >= limit || chosen.length >= 2) break;
       if (used.has(e.s)) continue;
       const m = seg.match(e.re);
       if (!m) continue;

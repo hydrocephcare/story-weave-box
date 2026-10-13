@@ -17,7 +17,7 @@ import SearchHighlightBar from "@/components/SearchHighlightBar";
 import StudyPanel from "@/components/StudyPanel";
 import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
 import {
-  ArrowLeft, Loader2, GraduationCap, ListChecks,
+  ArrowLeft, Check, Loader2, GraduationCap, ListChecks,
   ChevronDown, ChevronRight, FileText, HelpCircle, Sparkles, GitMerge, Settings2, ImagePlus, X, Eye, EyeOff, Lock,
 } from "lucide-react";
 import ShareButtons from "@/components/ShareButtons";
@@ -463,7 +463,7 @@ function InArticleRelated({ articles }: { articles: any[] }) {
 }
 
 /* ─── Classic magazine-style article hero ─── */
-function ClassicHero(props: { studyText?: string; studyPath?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
+function ClassicHero(props: { minutes?: number; studyText?: string; studyPath?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
   return <ClassicHeroInner {...props} />;
 }
 
@@ -500,12 +500,21 @@ async function findClosestArticle(slugOrParam: string): Promise<{ id: string; ti
 
 /* ─── Classic hero: cinematic image with title + description overlaid ─── */
 function ClassicHeroInner({
-  title, image, date, unit, shareUrl, description, category, summaryId, studyText, studyPath,
-}: { studyText?: string; studyPath?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
+  title, image, date, unit, shareUrl, description: rawDescription, category, summaryId, studyText, studyPath, minutes,
+}: { minutes?: number; studyText?: string; studyPath?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
   const specificImage = image && !isGenericThumbnail(image) ? image : "";
   const topicImage = useTopicThumbnailInfo(title, category, !specificImage);
   const heroImage = specificImage || topicImage?.url || "";
   const reviewer = "";
+  // a description that starts with "Summary" or stops in the middle of a word reads as unfinished: tidy it and end it at a sentence
+  const description = (() => {
+    const t = String(rawDescription || "").replace(/^\s*summary\s*[:\-–—]?\s*/i, "").replace(/\s+/g, " ").trim();
+    const cutAtSentence = (x: string) => { const e = Math.max(x.lastIndexOf(". "), x.lastIndexOf("; ")); return e > 60 ? x.slice(0, e + 1) : ""; };
+    if (t.length <= 240) return /[.!?…]$/.test(t) || t.length < 60 ? t : cutAtSentence(t) || `${t.replace(/\s+\S{0,3}$/, "")}…`;
+    const cut = t.slice(0, 240);
+    return cutAtSentence(cut) || `${cut.replace(/\s+\S*$/, "")}…`;
+  })();
+  const year = yearOfCategory(category);
 
   return (
     <header className="relative isolate -mx-4 mb-8 overflow-hidden px-4 pb-6 pt-5 sm:mx-0 sm:rounded-3xl sm:px-8 sm:pt-8">
@@ -517,7 +526,11 @@ function ClassicHeroInner({
         {summaryId && <PageSummary id={summaryId} className="mt-5" />}
         {studyText && studyText.length > 600 && studyPath && <StudyTools className="mt-5" title={title} path={studyPath} text={studyText} />}
         <OutlineLine title={title} year={yearOfCategory(category)} className="mt-4 max-w-[68ch]" />
-        <ReviewedBadge reviewer={reviewer} date={date} />
+        <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-medium text-foreground/75">
+          <span className="inline-flex items-center gap-1.5"><Check className="h-4 w-4 text-emerald-500" aria-hidden /> Updated {date}</span>
+          {minutes ? <span>· {minutes} min read</span> : null}
+          {year ? <span>· Year {year}</span> : null}
+        </p>
       </div>
       {heroImage && (
         <figure className="mt-6">
@@ -1887,6 +1900,7 @@ export default function BlogPost() {
               storageKey={article.slug || article.id}
             >
             <ClassicHero
+              minutes={Math.max(1, Math.round((article.content || "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").split(/\s+/).length / 210))}
               summaryId={article.slug ? `a:${article.slug}` : undefined}
               studyPath={buildBlogPath(article)}
               studyText={(article.content || "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/<[^>]+>/g, " ").slice(0, 6000)}

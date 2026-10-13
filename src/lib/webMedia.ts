@@ -7,7 +7,7 @@ export interface WebImage { u: string; full: string; title: string; credit: stri
 export interface WebMedia { title: string; description: string; extract: string; intro: string; sections: { h: string; p: string[] }[]; url: string; hero: WebImage | null; more: WebImage[] }
 
 const API = "https://en.wikipedia.org/w/api.php";
-const CACHE = "ompath_webmedia_v3";
+const CACHE = "ompath_webmedia_v4";
 const DAY = 86_400_000;
 const SKIP_FILE = /icon|logo|symbol|ambox|flag|commons-|wikidata|wikiquote|wiktionary|edit-|stub|portal|question|disambig|padlock|folder|nuvola|crystal|office-book|speaker|loudspeaker|button|arrow|red_pencil|merge|increase|decrease|steady|pictogram|map_of|\.ogg|\.ogv|\.webm|\.tif|\.pdf/i;
 const OK_LICENCE = /^(cc[- ]|public domain|pd|attribution|gfdl)/i;
@@ -126,7 +126,9 @@ export async function loadWebMedia(names: string[]): Promise<WebMedia | null> {
       // no Wikipedia article: search Wikimedia Commons directly so the page is never without pictures
       const q = new URLSearchParams({ action: "query", format: "json", origin: "*", list: "search", srnamespace: "6", srsearch: `${names[0]} medical`, srlimit: "12" });
       const found = await json<{ query?: { search?: { title: string }[] } }>(`https://commons.wikimedia.org/w/api.php?${q}`).catch(() => null);
-      const titles = (found?.query?.search ?? []).map((x) => x.title).filter((t) => !SKIP_FILE.test(t)).slice(0, 10);
+      const subjectWords = names[0].toLowerCase().split(/W+/).filter((w) => w.length >= 4);
+      // only files whose name is about the subject: a wrong picture is worse than none
+      const titles = (found?.query?.search ?? []).map((x) => x.title).filter((t) => !SKIP_FILE.test(t) && !/journal|contents|bulletin|navy|proceedings|vol|cover|poster|logo|map/i.test(t) && (!subjectWords.length || subjectWords.filter((w) => t.toLowerCase().includes(w.slice(0, Math.max(4, w.length - 2)))).length >= Math.ceil(subjectWords.length / 2))).slice(0, 10);
       const q2 = new URLSearchParams({ action: "query", format: "json", origin: "*", titles: titles.join("|"), prop: "imageinfo", iiprop: "url|extmetadata|size|mime", iiurlwidth: "700", iiextmetadatafilter: "LicenseShortName|Artist|ImageDescription" });
       const info = titles.length ? await json<{ query?: { pages?: Record<string, { title: string; imageinfo?: { thumburl?: string; url: string; descriptionurl: string; width: number; height: number; mime?: string; extmetadata?: Record<string, { value: string }> }[] }> } }>(`https://commons.wikimedia.org/w/api.php?${q2}`).catch(() => null) : null;
       const pics: WebImage[] = [];

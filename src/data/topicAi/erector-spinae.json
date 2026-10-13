@@ -1,0 +1,119 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The erector spinae is a group of back muscles that straighten and rotate the spine. They are key for posture, movement, and protecting the spinal column. Dysfunction can cause pain, limited mobility, and posture problems.",
+ "aka": [
+  "Erector spinae group"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The erector spinae consists of three parallel muscle columns that run from the pelvis to the skull. They are essential for maintaining upright posture and facilitating spinal movements.",
+   "b": [
+    "Three columns: iliocostalis, longissimus, spinalis"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The muscles originate from the sacrum, iliac crest, and thoracic vertebrae, inserting on the ribs, transverse processes, and skull. They are arranged from lateral to medial.",
+   "b": [
+    "Iliocostalis: lateral",
+    "Longissimus: intermediate",
+    "Spinalis: medial"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "They lie deep to the trapezius and latissimus dorsi, superficial to the vertebral column and intervertebral discs. They are adjacent to the sympathetic chain.",
+   "b": [
+    "Adjacent to sympathetic chain"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Supplied by branches of the lumbar, thoracic, and cervical arteries.",
+   "b": [
+    "Lumbar arteries",
+    "Thoracic arteries"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Innervated by the dorsal rami of spinal nerves from T1 to L5.",
+   "b": [
+    "Dorsal rami T1-L5"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Primary actions are extension, lateral flexion, and rotation of the spine. They also stabilize the vertebral column during movement.",
+   "b": [
+    "Extension",
+    "Lateral flexion",
+    "Rotation"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Common issues include muscle strain, myofascial pain, and lumbar spine disorders. In low-resource settings, infections like tuberculosis can involve the erector spinae.",
+   "b": [
+    "Strain from heavy lifting",
+    "Myofascial trigger points",
+    "Tuberculous involvement"
+   ],
+   "t": [
+    {
+     "a": "MRI",
+     "b": "Detects muscle edema, abscess, or spinal involvement; abnormal signal indicates inflammation or infection"
+    },
+    {
+     "a": "X‑ray",
+     "b": "Shows vertebral alignment; loss of lordosis suggests muscle dysfunction"
+    },
+    {
+     "a": "CBC",
+     "b": "Elevated WBC may indicate infection; normal CBC does not rule out local muscle infection"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Ask about pain during extension or rotation. Palpate for tenderness along the spinous processes. Inquire about recent heavy lifting or trauma.",
+   "b": [
+    "Pain worsens with extension"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe back pain with fever, weight loss, or neurological deficits (e.g., weakness, numbness)"
+ ],
+ "faq": [
+  {
+   "q": "What causes acute back pain in the erector spinae?",
+   "a": "Overuse, heavy lifting, sudden twisting, or poor posture can strain these muscles."
+  },
+  {
+   "q": "Can infections affect the erector spinae?",
+   "a": "Yes, spinal tuberculosis or abscesses can involve the muscles, especially in endemic areas."
+  },
+  {
+   "q": "How is a muscle strain diagnosed?",
+   "a": "Clinical exam plus imaging (MRI) if red flags present; otherwise, history and physical are sufficient."
+  }
+ ],
+ "exam": [
+  "Explain the anatomical course of the erector spinae and its clinical significance.",
+  "Describe how a lumbar strain presents and how you would differentiate it from a herniated disc."
+ ],
+ "related": [
+  "Lumbar spine",
+  "Muscle strain",
+  "Spinal tuberculosis",
+  "Myofascial pain syndrome",
+  "Back posture"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}
