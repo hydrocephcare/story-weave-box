@@ -500,7 +500,7 @@ export default function TopicPage() {
                   ["Ward round", `I am presenting a patient with ${name} on a ward round. How do I present and what will the consultant ask me?`],
                 ].map(([label, q]) => <button key={label} type="button" onClick={() => openAI(q)} className="rounded-full border border-border bg-background px-4 py-2.5 text-sm font-bold transition hover:border-primary/60 hover:bg-primary/5 active:scale-[.97]">{label}</button>)}
               </div>
-              <StudyTools className="mt-5" title={name} path={topicPath(slug)} text={[summary, ...aiSections.map((s) => [s.h, s.p, ...(s.b ?? [])].filter(Boolean).join(". "))].filter(Boolean).join("\n")} />
+              <StudyTools className="mt-5" title={name} path={topicPath(slug)} pictures={subject === "Anatomy" || /anatom|embryo|histolog/i.test(subject)} text={[name, summary, ...aiSections.map((s) => [s.h, s.p, ...(s.b ?? [])].filter(Boolean).join("\n"))].filter(Boolean).join("\n")} />
             </div>
 
             {related.length > 0 && (

@@ -54,7 +54,7 @@ export function pieces(text: string): { t: string; pause: number }[] {
     sents.forEach((s, i) => {
       const t = s.trim(); if (!t) return;
       // a long sentence is broken at its commas and semicolons, with a breath between the parts
-      const parts = t.length > 170 ? t.split(/(?<=[,;:])\s+/) : [t];
+      const parts = t.length > 110 ? t.split(/(?<=[,;:])\s+/) : [t];
       parts.forEach((part, k) => out.push({ t: part, pause: k < parts.length - 1 ? 170 : i === sents.length - 1 ? 620 : 300 }));
     });
   }

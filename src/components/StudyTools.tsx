@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import ListenControl from "@/components/ListenControl";
 import { Link } from "react-router-dom";
-import { Check, ClipboardCheck, FileText, Layers, Loader2, X } from "lucide-react";
+import { Check, ClipboardCheck, FileText, Image as ImageIcon, Layers, Loader2, X } from "lucide-react";
+import { openAI } from "@/lib/aiEvents";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { srs } from "@/lib/srs";
 import { useAccess } from "@/lib/access";
@@ -40,7 +41,7 @@ async function call(mode: "cards" | "quiz" | "essays", title: string, text: stri
 }
 
 /** Three things to do with the page you are reading: turn it into flashcards for daily review, quiz yourself on it, or listen to it. */
-export default function StudyTools({ title, path, text, className = "" }: { title: string; path: string; text: string; className?: string }) {
+export default function StudyTools({ title, path, text, className = "", pictures = false }: { title: string; path: string; text: string; className?: string; pictures?: boolean }) {
   const [busy, setBusy] = useState<"" | "cards" | "quiz" | "essays">("");
   const { hasPass } = useAccess();
   const { isAdmin } = useAuth();
@@ -90,6 +91,7 @@ export default function StudyTools({ title, path, text, className = "" }: { titl
         <button type="button" className={btn} onClick={makeCards} disabled={Boolean(busy)}>{busy === "cards" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Layers className="h-4 w-4 text-primary" aria-hidden />} Make flashcards</button>
         <button type="button" className={btn} onClick={makeQuiz} disabled={Boolean(busy)}>{busy === "quiz" ? <Loader2 className="h-4 w-4 animate-spin" /> : <ClipboardCheck className="h-4 w-4 text-primary" aria-hidden />} Test me on this page</button>
         <button type="button" className={btn} onClick={makeEssays} disabled={Boolean(busy)}>{busy === "essays" ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileText className="h-4 w-4 text-primary" aria-hidden />} Essay questions</button>
+        {pictures && <button type="button" className={btn} onClick={() => openAI(`Give me anatomy spot questions on ${title}`)}><ImageIcon className="h-4 w-4 text-primary" aria-hidden /> Picture questions</button>}
         <ListenControl text={text} path={path} btnClass={btn} />
       </div>
       {note && <p className={cn("mt-3 text-sm font-semibold", note.ok ? "text-primary" : "text-destructive")} role="status">{note.text} {note.ok && <Link to="/review" className="underline">Review now</Link>}</p>}
