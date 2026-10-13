@@ -1,7 +1,7 @@
 // POST /api/topic-write { name, category, context }: writes a topic page with Gemini and returns it. The browser then saves it with the
 // publish_topic_page database function. Keys live only here, in the GEMINI_API_KEYS setting (comma separated); they take turns.
-import { generateWithFallback, validName } from "../supabase/functions/_shared/topicAi.js";
-import { pickSubject } from "../supabase/functions/_shared/topicParts.js";
+import { generateWithFallback, validName } from "../../supabase/functions/_shared/topicAi.js";
+import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
 
 const hits = new Map(); // per visitor, per hour (best effort: a cold start forgets it)
 const LIMIT = 30;

@@ -1,6 +1,6 @@
 // POST /api/outline-parse { text, year, semester, unit } (admin only): reads a course outline's text with AI and returns its rows as
 // { items: [{ week, topic, lecturer, detail }] }. Groq first, Gemini as the backup (keys in turn), the same as the rest of the site's AI.
-import { askModel } from "../supabase/functions/_shared/topicAi.js";
+import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 
 const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || "https://lkgfzjwhmfjvntzphbsh.supabase.co";
 const ANON = process.env.SUPABASE_PUBLISHABLE_KEY || process.env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrZ2Z6andobWZqdm50enBoYnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3Nzk5MjIsImV4cCI6MjA4NzM1NTkyMn0.a2QY6TxzKNM2AhuuoDkgdKifI3XhSGhYRlhpqZpvAwo";

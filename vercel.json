@@ -116,6 +116,10 @@
     }
   ],
   "rewrites": [
+    { "source": "/api/ai-chat", "destination": "/api/ai?task=chat" },
+    { "source": "/api/topic-write", "destination": "/api/ai?task=topic" },
+    { "source": "/api/outline-parse", "destination": "/api/ai?task=outline" },
+    { "source": "/api/page-study", "destination": "/api/ai?task=study" },
     {
       "source": "/topics-sitemap.xml",
       "destination": "/api/topics-sitemap"
@@ -429,10 +433,7 @@
     "deploymentEnabled": true
   },
   "functions": {
-    "api/topic-write.js": { "maxDuration": 60 },
-    "api/ai-chat.js": { "maxDuration": 60 },
-    "api/page-study.js": { "maxDuration": 40 },
-    "api/outline-parse.js": { "maxDuration": 60 },
+    "api/ai.js": { "maxDuration": 60 },
     "api/student-data.js": {
       "includeFiles": "public/data/**"
     },

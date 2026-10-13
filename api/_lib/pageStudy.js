@@ -1,6 +1,6 @@
 // POST /api/page-study { mode: "cards" | "quiz", title, text }: flashcards or a short quiz made from the page the reader is on.
 // Groq first, Gemini as the backup (keys take turns), the same as the rest of the site's AI.
-import { askModel } from "../supabase/functions/_shared/topicAi.js";
+import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 
 const hits = new Map();
 const LIMIT = 40; // per visitor per hour (best effort)
