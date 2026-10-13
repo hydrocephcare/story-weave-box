@@ -106,6 +106,7 @@ export async function polishStep(a, ask, state, { budgetMs = 36000 } = {}) {
   const scanned = scanPages(a.original_notes).length >= 2;
   const t0 = Date.now();
   let done = Math.min(state?.parts_done ?? 0, parts.length);
+  const startDone = done;
   let raw = state?.raw ?? 0; // pieces kept as the author wrote them because the polish of that piece did not pass the check
   let acc = done > 0 ? String(state?.content ?? "") : "";
   if (done > 0 && !acc.trim()) done = 0;
@@ -116,12 +117,19 @@ export async function polishStep(a, ask, state, { budgetMs = 36000 } = {}) {
     const part = parts[done];
     const make = kind === "note" ? CHUNK_PROMPT(a, part, done === 0) : QUESTIONS_PROMPT(a, part);
     const timeout = Math.max(8000, Math.min(26000, left() - 4000));
-    let out = restorePictures(part, unfence(await ask(make, timeout, 6000)));
-    const partRules = { ...RULES.part, ...(scanned ? SCANNED : {}) };
-    let bad = soundPolish(part, out, partRules);
-    if (bad && /^(words|numbers|length)/.test(bad) && left() > 20000) {
-      out = restorePictures(part, unfence(await ask(REPAIR_PROMPT(a, out, missingSentences(part, out), bad), Math.max(8000, Math.min(26000, left() - 4000)), 6000)));
+    let out, bad;
+    try {
+      out = restorePictures(part, unfence(await ask(make, timeout, 6000)));
+      const partRules = { ...RULES.part, ...(scanned ? SCANNED : {}) };
       bad = soundPolish(part, out, partRules);
+      if (bad && /^(words|numbers|length)/.test(bad) && left() > 20000) {
+        out = restorePictures(part, unfence(await ask(REPAIR_PROMPT(a, out, missingSentences(part, out), bad), Math.max(8000, Math.min(26000, left() - 4000)), 6000)));
+        bad = soundPolish(part, out, partRules);
+      }
+    } catch (e) {
+      // the AI hiccuped (a rate limit, a slow answer): keep what this visit already did and carry on at the next one
+      if (done === startDone) throw e;
+      return { content: acc, parts_done: done, raw, total: parts.length, finished: false, hiccup: true, reason: "" };
     }
     // a piece that did not pass stays as the author wrote it, and the rest of the page is still polished
     if (bad) { out = part; raw++; }

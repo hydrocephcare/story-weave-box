@@ -61,7 +61,9 @@ export default async function handler(req, res) {
   // anything else waits (a slow page an hour, a failure twelve hours)
   const carryOn = existing?.status === "partial" && long; // no wait: the claim below is atomic, so two visitors can never work on the same page at once
   const lateStart = existing?.status === "done" && !existing.content && long && /left for later|too long|rejected in part/i.test(existing.reason ?? "");
-  const retry = (existing?.status === "failed" && ageS > 12 * 3600) || (existing?.status === "partial" && !long && ageS > 3600) || (existing?.status === "working" && ageS > 720);
+  // a long page that had saved progress when the AI hiccuped carries on after a minute; any other failure waits twelve hours
+  const resumeFailed = existing?.status === "failed" && long && doneParts > 0 && ageS > 60;
+  const retry = resumeFailed || (existing?.status === "failed" && ageS > 12 * 3600) || (existing?.status === "partial" && !long && ageS > 3600) || (existing?.status === "working" && ageS > 720);
   if (existing && !(carryOn || lateStart || retry)) return res.status(200).json({ status: existing.status, more: false });
 
   // only when the AI has room: if several pages failed in the last half hour the keys have run out, so nobody is made to wait for nothing
@@ -101,9 +103,11 @@ export default async function handler(req, res) {
     const step = await polishStep(a, ask, { parts_done: doneParts, raw: rawParts, content: saved }, { budgetMs: existing?.title ? 36000 : 22000 });
     const why = step.reason ? [step.reason].filter(Boolean).join(" | ") : (existing?.reason ?? null);
     await save({ ...row, content: step.finished ? step.content : `<!--parts:${step.parts_done}:${step.raw ?? 0}-->\n${step.content ?? ""}`, status: step.finished ? "done" : "partial", reason: (why ?? "").slice(0, 400) || null });
-    return res.status(200).json({ status: step.finished ? "done" : "partial", more: !step.finished, progress: `${step.parts_done}/${step.total}` });
+    return res.status(200).json({ status: step.finished ? "done" : "partial", more: !step.finished, hiccup: Boolean(step.hiccup), progress: `${step.parts_done}/${step.total}` });
   } catch (e) {
     // what is already done stays saved; the page is tried again later
+    // a long page keeps its progress and carries on; any other page waits before it is tried again
+    if (long && doneParts > 0) { await save({ status: "partial", reason: "the AI was busy; carrying on" }); return res.status(200).json({ status: "partial", more: false, hiccup: true }); }
     await save({ status: "failed", reason: String(e?.message ?? "failed").slice(0, 200) });
     return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: "failed", more: false });
   }

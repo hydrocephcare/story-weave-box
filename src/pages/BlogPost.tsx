@@ -1636,12 +1636,14 @@ export default function BlogPost() {
               const here = window.location.pathname;
               setPolishNote("Making this page cleaner…");
               try {
-                for (let n = 0; n < 24; n++) {
+                let hiccups = 0;
+                for (let n = 0; n < 30; n++) {
                   const r = await requestPolish(a.id, n > 0);
+                  if (r.hiccup && ++hiccups > 4) break; // the AI is busy: the next visit carries on
                   if (r.status === "done" || r.status === "partial") { p = (await getPolish(a.id, true)) ?? p; show(p); }
                   if (r.progress && r.more) setPolishNote(`Making this page cleaner… part ${r.progress.replace("/", " of ")}`);
-                  if (!r.more || window.location.pathname !== here) break;
-                  await new Promise((res) => setTimeout(res, 500));
+                  if ((!r.more && !r.hiccup) || window.location.pathname !== here) break;
+                  await new Promise((res) => setTimeout(res, r.hiccup ? 6000 : 500));
                 }
               } finally { setPolishNote(""); }
             }

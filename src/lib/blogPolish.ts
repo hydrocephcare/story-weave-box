@@ -58,15 +58,15 @@ export async function getPolish(id: string, fresh = false): Promise<Polish | nul
  * Ask the server to polish this blog (it does it once for everyone, only when someone opens it). A long page is done a couple of pieces per
  * request, so `more` tells the page to ask again. `again` is for those follow-up asks. Returns { status: "" } when nothing was asked.
  */
-export async function requestPolish(id: string, again = false): Promise<{ status: string; more: boolean; progress: string }> {
-  const none = { status: "", more: false, progress: "" };
+export async function requestPolish(id: string, again = false): Promise<{ status: string; more: boolean; progress: string; hiccup: boolean }> {
+  const none = { status: "", more: false, progress: "", hiccup: false };
   if (typeof navigator === "undefined" || navigator.webdriver || /bot|crawl|spider|slurp|headless|lighthouse/i.test(navigator.userAgent)) return none;
   if (!again) { try { if (sessionStorage.getItem(`ompath_polish_asked_${id}`)) return none; sessionStorage.setItem(`ompath_polish_asked_${id}`, "1"); } catch { /* ignore */ } }
   try {
     const r = await fetch("/api/ai-polish", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ id }) });
     if (!r.ok) return none;
-    const j = (await r.json().catch(() => ({}))) as { status?: string; more?: boolean; progress?: string };
-    return { status: j.status ?? "", more: Boolean(j.more), progress: j.progress ?? "" };
+    const j = (await r.json().catch(() => ({}))) as { status?: string; more?: boolean; progress?: string; hiccup?: boolean };
+    return { status: j.status ?? "", more: Boolean(j.more), progress: j.progress ?? "", hiccup: Boolean(j.hiccup) };
   } catch { return none; }
 }
 
