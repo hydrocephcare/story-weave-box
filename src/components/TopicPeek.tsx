@@ -76,13 +76,27 @@ export default function TopicPeekHost() {
   const scroller = useRef<HTMLDivElement | null>(null);
   useEffect(() => { setAtTop(true); pull.current = { y: 0, wheel: 0 }; }, [raw, peek]);
   const onScroll = (e: React.UIEvent<HTMLDivElement>) => { const top = e.currentTarget.scrollTop <= 1; setAtTop(top); if (!top) pull.current.wheel = 0; };
-  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => { pull.current.y = e.touches[0].clientY; };
+  // Closing the panel must never move the page behind it: a fast pull leaves momentum that would carry the page to the top,
+  // so the page is held at the spot it was at for a moment after the panel goes.
+  const placeY = useRef(0);
+  const closeHere = () => {
+    const y = origin.current?.y ?? placeY.current;
+    topicPeek.close();
+    let n = 0;
+    const id = window.setInterval(() => { if (Math.abs(window.scrollY - y) > 2) window.scrollTo(0, y); if (++n > 35) window.clearInterval(id); }, 20);
+    const stop = () => window.clearInterval(id);
+    window.addEventListener("touchstart", stop, { once: true, passive: true });
+    window.addEventListener("wheel", stop, { once: true, passive: true });
+  };
+  const startedTop = useRef(false);
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => { pull.current.y = e.touches[0].clientY; startedTop.current = e.currentTarget.scrollTop <= 1; };
   const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    if (e.currentTarget.scrollTop > 1) { pull.current.y = e.touches[0].clientY; return; }
-    if (e.touches[0].clientY - pull.current.y > 80) { pull.current.y = e.touches[0].clientY; topicPeek.close(); }
+    if (e.currentTarget.scrollTop > 1) { pull.current.y = e.touches[0].clientY; startedTop.current = false; return; }
+    // only a deliberate pull that began at the top closes it, not a fling that happened to reach the top
+    if (startedTop.current && e.touches[0].clientY - pull.current.y > 90) { pull.current.y = e.touches[0].clientY; closeHere(); }
   };
   const onWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-    if (e.deltaY < 0 && e.currentTarget.scrollTop <= 1) { pull.current.wheel += -e.deltaY; if (pull.current.wheel > 260) { pull.current.wheel = 0; topicPeek.close(); } } else pull.current.wheel = 0;
+    if (e.deltaY < 0 && e.currentTarget.scrollTop <= 1) { pull.current.wheel += -e.deltaY; if (pull.current.wheel > 320) { pull.current.wheel = 0; closeHere(); } } else pull.current.wheel = 0;
   };
 
   // The panel gets its own history entry, so the phone's Back button closes it (and nothing moves behind it).
@@ -96,7 +110,7 @@ export default function TopicPeekHost() {
     const onPop = () => {
       pushed.current = false;
       if (afterBack.current) { const f = afterBack.current; afterBack.current = null; f(); return; }
-      if (current()) topicPeek.close();
+      if (current()) closeHere();
     };
     const current = () => document.querySelector("[data-peek-scroll]") !== null;
     window.addEventListener("popstate", onPop);
@@ -116,7 +130,7 @@ export default function TopicPeekHost() {
   };
 
   return (
-    <Sheet open={Boolean(raw)} onOpenChange={(o) => !o && topicPeek.close()}>
+    <Sheet open={Boolean(raw)} onOpenChange={(o) => !o && closeHere()}>
       <SheetContent side={wide ? "right" : "bottom"} className={wide ? "flex h-full w-[28rem] max-w-full flex-col gap-0 p-0 sm:max-w-md" : "flex h-[82dvh] flex-col gap-0 rounded-t-3xl p-0"}>
         <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-5 pb-4 pt-6 [-webkit-overflow-scrolling:touch]" data-peek-scroll ref={scroller} onScroll={onScroll} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onWheel={onWheel}>
           <div className="pointer-events-none -mt-3 mb-3 flex flex-col items-center" aria-hidden><span className="h-1 w-10 rounded-full bg-foreground/20" /><span className={`mt-1 text-[11px] font-semibold transition-opacity ${atTop ? "text-muted-foreground opacity-100" : "opacity-0"}`}>Pull down to close</span></div>

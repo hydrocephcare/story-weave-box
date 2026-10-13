@@ -8,6 +8,7 @@ function cardUrl(title: unknown, category: unknown, kind: string): string {
   const p = new URLSearchParams({ title: String(title || "Study notes").slice(0, 140), kind });
   const m = String(category || "").match(/^Year\s*(\d)\s*:\s*(.*)$/i);
   if (m) { p.set("year", m[1]); p.set("unit", m[2].slice(0, 40)); } else if (category) p.set("unit", String(category).slice(0, 40));
+  if (kind === "Topic") p.set("pic", "wiki");
   return `https://www.ompathstudy.com/api/note-card?${p.toString()}`;
 }
 const GEO_KEYWORDS = "Kenya, Africa, global medical students, MBChB, clinical medicine, nursing, University of Nairobi, Kenyatta University, Moi University, Kabarak University, Aga Khan University";

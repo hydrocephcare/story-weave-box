@@ -38,7 +38,7 @@ export function prerenderTopics({ fs, path, root, esc, shell, crumbs, write, ren
       { "@context": "https://schema.org", "@type": "WebPage", name: title, url: `https://www.ompathstudy.com${path1}`, about: { "@type": "MedicalEntity", name: t.n }, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: "https://www.ompathstudy.com" } },
       ...(faq.length ? [{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq }] : []),
     ];
-    write(path1, render({ title, description, path: path1, image: `/api/note-card?title=${encodeURIComponent(t.n)}&unit=${encodeURIComponent(t.c || "Medicine")}&kind=Topic`, keywords: [t.n, ...(t.a ?? []), `${t.n} notes`, `${t.n} MCQs`, `${t.n} medical students`], body: shell(parts.join("")), jsonLd }), today);
+    write(path1, render({ title, description, path: path1, image: `/api/note-card?title=${encodeURIComponent(t.n)}&unit=${encodeURIComponent(t.c || "Medicine")}&kind=Topic&pic=wiki`, keywords: [t.n, ...(t.a ?? []), `${t.n} notes`, `${t.n} MCQs`, `${t.n} medical students`], body: shell(parts.join("")), jsonLd }), today);
     n++;
   }
   // the A to Z page
