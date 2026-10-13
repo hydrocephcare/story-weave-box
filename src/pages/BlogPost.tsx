@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useLayoutEffect, forwardRef, memo } from 
 import { looksScanned, scanFirst, tidiedText } from "@/lib/blogFix";
 import { applyPolish, getPolish, polishedIds, requestPolish, wantsPolish, type Polish } from "@/lib/blogPolish";
 import AdSlot from "@/components/AdSlot";
+import SideAds from "@/components/SideAds";
 import BooksForPage from "@/components/BooksForPage";
 import SponsorLine from "@/components/SponsorLine";
 import StudyTools from "@/components/StudyTools";
@@ -2044,6 +2045,7 @@ export default function BlogPost() {
 
             <BooksForPage text={`${article.title} ${(article.content || "").slice(0, 4000)}`} className="mt-12" />
             <AdSlot />
+            <SideAds title={article.title} />
             <NoteTopics text={article.content || ""} title={article.title} className="mt-10" />
             <SponsorLine className="mt-8" />
 
