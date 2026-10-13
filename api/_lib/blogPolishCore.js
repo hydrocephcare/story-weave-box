@@ -33,14 +33,14 @@ export function needsMcqFormat(content) {
 }
 
 /** The polished text must still say what the original said: numbers and long words kept, pictures kept, a sensible length, real headings. */
-export function soundPolish(original, out, { headings = true, maxRatio = 1.4 } = {}) {
+export function soundPolish(original, out, { headings = true, maxRatio = 1.4, minWords = 0.8 } = {}) {
   const nums = [...new Set((plain(original).match(/\d+(?:[.,]\d+)?/g) ?? []).filter((n) => n.length >= 2))];
   const keptNums = nums.filter((n) => out.includes(n)).length;
   if (nums.length >= 5 && keptNums / nums.length < 0.9) return `numbers lost (${keptNums}/${nums.length})`;
   const words = [...new Set(plain(original).toLowerCase().match(/[a-z]{7,}/g) ?? [])];
   const o = out.toLowerCase();
   const kept = words.filter((w) => o.includes(w)).length;
-  if (words.length >= 20 && kept / words.length < 0.8) return `words lost (${kept}/${words.length})`;
+  if (words.length >= 20 && kept / words.length < minWords) return `words lost (${kept}/${words.length})`;
   const ratio = plain(out).length / Math.max(1, plain(original).length);
   if (ratio < 0.6 || ratio > maxRatio) return `length changed (${ratio.toFixed(2)})`;
   if (headings && (out.match(/^##\s/gm) ?? []).length < 2) return "no headings";
@@ -99,4 +99,21 @@ export function chunksOf(text, max = 8500) {
   }
   if (cur.length) out.push(cur.join("\n"));
   return out.filter((c) => c.trim());
+}
+
+/** The AI sometimes drops a picture line. Put each missing one back, near where it was (the same share of the way through the text). */
+export function restorePictures(original, out) {
+  const pics = String(original ?? "").match(/^!\[[^\]]*\]\([^)]*\)\s*$/gm) ?? [];
+  const missing = pics.filter((p) => !out.includes(p.trim()));
+  if (!missing.length) return out;
+  let text = out;
+  const total = original.length || 1;
+  for (const p of missing) {
+    const frac = original.indexOf(p) / total;
+    const breaks = [...text.matchAll(/\n\s*\n/g)].map((m) => m.index + m[0].length);
+    const target = Math.round(frac * text.length);
+    const at = breaks.length ? breaks.reduce((best, b) => (Math.abs(b - target) < Math.abs(best - target) ? b : best), breaks[0]) : text.length;
+    text = `${text.slice(0, at)}${p.trim()}\n\n${text.slice(at)}`;
+  }
+  return text;
 }

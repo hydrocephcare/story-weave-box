@@ -18,13 +18,13 @@ Rules:
 - title: clear and specific, under 65 characters, in title case, no quotation marks. Keep a paper's unit, year or semester when it is a past paper (for example "Biochemistry End of Year Exam 2015"). Never invent facts. Drop file codes, repeated "Questions and Answers" and "Awaiting Edit".
 - description: 130 to 155 characters, plain sentences saying what a student will learn or practise. No hype, no "Free study material".`;
 
-const COMMON = `Never change the medicine. Keep every fact, number, unit, drug name, abbreviation and every picture line (a line starting with ![ ) exactly.`;
+const COMMON = `Never change the medicine. COPY THE AUTHOR'S SENTENCES NEARLY WORD FOR WORD: you may split a long sentence, join two short ones, move a sentence into the right section, turn a run of items into a list or table, and fix typing mistakes, but you must NOT summarise, shorten, paraphrase or leave anything out. Every fact, number, unit, drug name, abbreviation and every picture line (a line starting with ![ ) must stay exactly.`;
 
 export const NOTE_PROMPT = (a, content) => `You are rewriting a medical study note into the house style of the best notes on the website (the Year 4 notes). ${COMMON}
 Title: "${a.title}" (${a.category}).
 
 Write the page in this order:
-1. One italic sentence saying what the note covers and why it matters to a student (use only what the note says). Example: *This note covers ... and why ...*
+1. One italic sentence, specific to this note, saying what it covers and what the student will be able to do afterwards (use only what the note says). For example: *The kidney filters blood and balances water, salts and acid; this note follows the nephron from the hilum to the collecting duct.* Never write generic words such as "why it matters to a student".
 2. A line starting **In short:** with the whole idea in one or two sentences, or a **The reasoning chain:** line for clinical topics.
 3. The body in numbered "## 1. Heading", "## 2. Heading" sections (3 to 9 of them, plain headings). Use "### " only for real sub-sections. Paragraphs of at most three sentences. Bullet lists for lists and sequences. A table only where the note compares things (keep the table's facts).
 4. Bold ("**") only the few terms a student must remember, never more than two in a paragraph.
@@ -42,7 +42,7 @@ Answer: B. the correct option text
 Explanation: one sentence from the note.
 
 Other rules:
-- Fix typing and grammar mistakes, remove chat leftovers ("Got it, here are the notes"), page markers, duplicated lines and stray symbols, and make unclear sentences clearer. Keep the author's meaning. Do not add new medical facts.
+- Fix typing and grammar mistakes and remove chat leftovers ("Got it, here are the notes"), page markers and stray symbols. Keep the author's words. Do not add new medical facts.
 - If the note already ends with practice questions, keep them (in the form above) and do not add more.
 - Do not add a title line. Output ONLY the finished markdown, no commentary, no code fences.
 

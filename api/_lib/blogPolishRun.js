@@ -1,7 +1,7 @@
 // The polish itself, shared by the page-open endpoint (api/_lib/blogPolish.js) and the batch job (scripts/blogs/polish-batch.mjs).
 // `ask(prompt, timeoutMs, maxTokens)` returns the model's text. Nothing here talks to the database.
 import { BANK_PROMPT, CHUNK_PROMPT, META_PROMPT, NOTE_PROMPT, PAPER_PROMPT } from "./blogPolishPrompts.js";
-import { chunksOf, cleanMeta, kindOf, parseJson, plain, soundPolish, VERDICTS } from "./blogPolishCore.js";
+import { chunksOf, cleanMeta, kindOf, parseJson, plain, restorePictures, soundPolish, VERDICTS } from "./blogPolishCore.js";
 
 const unfence = (s) => String(s ?? "").replace(/^```(?:markdown|md)?\s*/i, "").replace(/```\s*$/, "").trim();
 
@@ -44,8 +44,9 @@ export async function polishArticle(a, ask, { chunk = false } = {}) {
       out = done.join("\n\n");
     }
     // a note gains an intro and practice questions, so it may be longer; banks and papers only change shape
-    const bad = soundPolish(text, out, { headings: kind === "note", maxRatio: kind === "note" ? 2.0 : 1.4 });
-    if (bad) note(`polish rejected: ${bad}`); else result.content = out;
+    out = restorePictures(text, out);
+    const bad = soundPolish(text, out, { headings: kind === "note", maxRatio: kind === "note" ? 2.0 : 1.4, minWords: kind === "note" ? 0.68 : 0.8 });
+    if (bad) { note(`polish rejected: ${bad}`); result.rejected = out; } else result.content = out;
   } catch (e) {
     result.status = "partial";
     note("text will be tried again");
