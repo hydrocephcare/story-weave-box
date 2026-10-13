@@ -431,6 +431,8 @@
   "functions": {
     "api/topic-write.js": { "maxDuration": 60 },
     "api/ai-chat.js": { "maxDuration": 60 },
+    "api/page-study.js": { "maxDuration": 40 },
+    "api/outline-parse.js": { "maxDuration": 60 },
     "api/student-data.js": {
       "includeFiles": "public/data/**"
     },

@@ -8,6 +8,7 @@ const STUDY = [
   { to: "/papers", label: "Past papers" },
   { to: "/exams", label: "Timed exams" },
   { to: "/flashcards", label: "Flashcards" },
+  { to: "/review", label: "Daily review" },
   { to: "/pharmacology", label: "Pharmacology guide" },
   { to: "/books", label: "Books" },
 ];

@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Upper gastrointestinal bleeding (UGIB) is bleeding proximal to the ligament of Treitz, presenting with hematemesis or melena. Prompt assessment, risk stratification, and targeted therapy reduce mortality.",
+ "aka": [
+  "UGIB",
+  "Upper GI bleed"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "UGIB is any hemorrhage originating above the ligament of Treitz, identified by vomiting blood, coffee‑ground material, or melena, and confirmed with endoscopy.",
+   "b": [
+    "Endoscopy within 24 h is the gold‑standard for diagnosis and source localisation."
+   ],
+   "t": [
+    {
+     "a": "Nasogastric aspirate",
+     "b": "Does the patient have active upper GI blood? Presence of fresh blood suggests active bleed; clear aspirate does not rule out bleed."
+    },
+    {
+     "a": "Upper endoscopy",
+     "b": "What is the bleeding source? Visualises lesion, allows classification (e.g., Forrest) and therapeutic intervention."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Risk is stratified with the Glasgow–Blatchford Score (GBS) and the Rockall score; high scores predict need for intervention and mortality.",
+   "b": [
+    "GBS ≥ 12 or Rockall ≥ 8 = high‑risk, urgent endoscopy and possible ICU care."
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin level",
+     "b": "Is the bleed severe? Hb < 8 g/dL (or a drop > 2 g/dL) indicates significant blood loss."
+    },
+    {
+     "a": "Blood pressure & pulse",
+     "b": "Is the patient unstable? Systolic BP < 90 mmHg or tachycardia > 100 bpm signals shock."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common causes are grouped by lesion type; peptic ulcer disease remains the leading cause worldwide, followed by varices and erosive disease.",
+   "b": [
+    "Peptic ulcer (NSAID use, H. pylori) – most frequent.",
+    "Portal hypertension varices – high mortality, common in hepatitis B/C endemic areas.",
+    "Gastric erosions from severe stress or infection (e.g., malaria, TB).",
+    "Mallory‑Weiss tear after retching – often in alcohol users.",
+    "Dieulafoy lesion – rare but can cause massive bleed."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have hematemesis, coffee‑ground vomitus, melena, or occult blood with anemia; symptoms can be subtle in chronic liver disease.",
+   "b": [
+    "Sudden vomiting of bright red blood – active arterial bleed.",
+    "Coffee‑ground material – slower bleed, partially digested blood."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Initial labs guide resuscitation; endoscopy defines source; imaging is reserved for unstable patients when endoscopy is unavailable.",
+   "b": [
+    "CBC, coagulation profile, type & crossmatch – assess blood loss and need for transfusion.",
+    "Serum urea/creatinine – high urea suggests upper GI bleed."
+   ],
+   "t": [
+    {
+     "a": "CT angiography",
+     "b": "Can we localise bleeding when endoscopy is not possible? Shows active contrast extravasation; guides embolisation."
+    },
+    {
+     "a": "Liver function tests & viral serology",
+     "b": "Is portal hypertension likely? Abnormal LFTs or positive hepatitis markers raise suspicion for variceal bleed."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled hemorrhage can lead to hypovolemic shock, acute kidney injury, and death; re‑bleeding is common within 72 h.",
+   "b": [
+    "Persistent hypotension despite fluids.",
+    "Drop in hemoglobin > 2 g/dL after initial resuscitation.",
+    "Signs of organ failure (altered mental status, oliguria)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Stabilise the patient, correct coagulopathy, then treat the underlying lesion with endoscopic or pharmacologic therapy.",
+   "b": [
+    "IV crystalloid bolus, then blood transfusion to maintain Hb > 8 g/dL (or > 7 g/dL in cirrhosis).",
+    "IV proton‑pump inhibitor (PPI) before endoscopy to reduce clot lysis.",
+    "Endoscopic therapy: injection, thermal coagulation, or clips for ulcers; band ligation for varices.",
+    "Octreotide infusion for variceal bleed – reduces portal pressure.",
+    "Avoid NSAIDs and correct H. pylori infection."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After haemostasis, eradicate H. pylori, optimise acid suppression, and manage portal hypertension to prevent recurrence.",
+   "b": [
+    "Repeat endoscopy in 4–8 weeks for high‑risk ulcer lesions.",
+    "Beta‑blockers for variceal prophylaxis.",
+    "Educate on avoiding NSAIDs and alcohol."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic UGIB can lead to misdiagnosis.",
+   "b": [
+    "Lower GI bleed (e.g., colonic diverticulosis) – usually presents with bright red rectal bleeding, not melena.",
+    "Hematemesis from swallowed blood (epistaxis) – history of nosebleed helps differentiate."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may appear normal despite serious bleed.",
+   "b": [
+    "Serum urea may be normal early in massive bleed, delaying suspicion.",
+    "Coagulation tests can be falsely normal in early liver disease; clinical judgement is essential."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent vomiting of blood or coffee‑ground material",
+  "Systolic blood pressure < 90 mmHg or heart rate > 120 bpm",
+  "Rapid drop in hemoglobin > 2 g/dL"
+ ],
+ "faq": [
+  {
+   "q": "Why give a PPI before endoscopy?",
+   "a": "It stabilises clots and reduces active bleeding, improving visualisation and outcomes."
+  },
+  {
+   "q": "When is octreotide indicated?",
+   "a": "For suspected or confirmed variceal bleeding to lower portal pressure."
+  },
+  {
+   "q": "Can a negative nasogastric aspirate rule out UGIB?",
+   "a": "No; a clear aspirate does not exclude bleeding, especially if the bleed is intermittent."
+  }
+ ],
+ "exam": [
+  "Explain how the Glasgow–Blatchford Score guides urgent endoscopy in UGIB.",
+  "Describe the endoscopic treatment options for a Forrest Ia ulcer.",
+  "List the first‑line pharmacologic therapy for variceal bleeding and its mechanism."
+ ],
+ "related": [
+  "Peptic ulcer disease",
+  "Portal hypertension",
+  "Hepatitis B",
+  "H. pylori infection",
+  "Coagulopathy in liver disease",
+  "Acute kidney injury"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

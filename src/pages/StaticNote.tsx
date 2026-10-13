@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import StudyTools from "@/components/StudyTools";
 import PageSummary from "@/components/PageSummary";
 import OutlineLine from "@/components/OutlineLine";
 import HeroAurora from "@/components/HeroAurora";
@@ -136,6 +137,7 @@ function StaticNoteView() {
       {quick && <QuickSummaryDialog summary={quick} />}
 
       {!note.paper && <PageSummary id={`n:${note.slug}`} className="mt-5" />}
+      {!note.paper && text && text.length > 400 && <StudyTools className="mt-5" title={note.title} path={`/notes/${note.slug}`} text={text} />}
       {!note.paper && <OutlineLine title={note.title} year={note.year} unit={note.unit} className="mt-4" />}
       {!note.paper && <NoteOutlineBox note={note} />}
 
