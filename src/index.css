@@ -558,19 +558,18 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
 .note-body .note-figure img { display: block; width: 100%; max-height: 26rem; object-fit: contain; background: #fff; }
 .note-body .note-figure figcaption { padding: 0.6rem 0.9rem; border-top: 1px solid hsl(var(--border)); background: hsl(var(--muted) / 0.5); font-size: 0.78rem; line-height: 1.4; color: hsl(var(--muted-foreground)); }
 
-/* A slowly moving colour wash behind a page's opening block. Calm on purpose, and still for anyone who prefers less motion. */
-.hero-aurora { position: absolute; inset: 0; z-index: -10; overflow: hidden; pointer-events: none;
-  background: linear-gradient(120deg, hsl(var(--primary) / .16), hsl(var(--background)) 48%, hsl(205 90% 62% / .12) 78%, hsl(var(--primary) / .10));
-  background-size: 220% 220%; animation: aurora-shift 18s ease-in-out infinite; }
-.hero-aurora span { position: absolute; border-radius: 9999px; filter: blur(64px); will-change: transform; }
-.hero-aurora span:nth-child(1) { width: 26rem; height: 26rem; left: -7rem; top: -9rem; background: hsl(var(--primary) / .34); animation: aurora-a 15s ease-in-out infinite; }
-.hero-aurora span:nth-child(2) { width: 22rem; height: 22rem; right: -6rem; top: 2rem; background: hsl(205 92% 60% / .26); animation: aurora-b 19s ease-in-out infinite; }
-.hero-aurora span:nth-child(3) { width: 20rem; height: 20rem; left: 32%; bottom: -11rem; background: hsl(268 80% 66% / .18); animation: aurora-c 23s ease-in-out infinite; }
-@keyframes aurora-shift { 0%, 100% { background-position: 0% 40%; } 50% { background-position: 100% 60%; } }
-@keyframes aurora-a { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(7rem, 5rem) scale(1.18); } }
-@keyframes aurora-b { 0%, 100% { transform: translate(0, 0) scale(1.1); } 50% { transform: translate(-6rem, 6rem) scale(.9); } }
-@keyframes aurora-c { 0%, 100% { transform: translate(0, 0) scale(.95); } 50% { transform: translate(-5rem, -6rem) scale(1.2); } }
-@media (prefers-reduced-motion: reduce) { .hero-aurora, .hero-aurora span { animation: none; } }
+/* A moving colour wash behind a page's opening block. Its colours come from the subject (--a, --b, --c are hues).
+   Only transforms move and nothing is blurred while it plays, so scrolling stays smooth on a phone. Still for anyone who prefers less motion. */
+.hero-aurora { --a: 174; --b: 205; --c: 268; position: absolute; inset: 0; z-index: -10; overflow: hidden; pointer-events: none; contain: paint;
+  background: linear-gradient(125deg, hsl(var(--a) 70% 50% / .12), hsl(var(--background)) 52%, hsl(var(--b) 85% 60% / .12)); }
+.hero-aurora span { position: absolute; border-radius: 9999px; will-change: transform; backface-visibility: hidden; }
+.hero-aurora span:nth-child(1) { width: 36rem; height: 36rem; left: -13rem; top: -15rem; background: radial-gradient(closest-side, hsl(var(--a) 82% 55% / .46), transparent 72%); animation: aurora-a 12s ease-in-out infinite; }
+.hero-aurora span:nth-child(2) { width: 32rem; height: 32rem; right: -13rem; top: -5rem; background: radial-gradient(closest-side, hsl(var(--b) 90% 60% / .40), transparent 72%); animation: aurora-b 15s ease-in-out infinite; }
+.hero-aurora span:nth-child(3) { width: 30rem; height: 30rem; left: 18%; bottom: -16rem; background: radial-gradient(closest-side, hsl(var(--c) 80% 66% / .32), transparent 72%); animation: aurora-c 18s ease-in-out infinite; }
+@keyframes aurora-a { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(12rem, 7rem, 0) scale(1.22); } }
+@keyframes aurora-b { 0%, 100% { transform: translate3d(0, 0, 0) scale(1.1); } 50% { transform: translate3d(-11rem, 8rem, 0) scale(.88); } }
+@keyframes aurora-c { 0%, 100% { transform: translate3d(0, 0, 0) scale(.95); } 50% { transform: translate3d(-9rem, -8rem, 0) scale(1.25); } }
+@media (prefers-reduced-motion: reduce) { .hero-aurora span { animation: none; } }
 
 /* Article flow: the opening paragraph of a section reads as a lead. */
 .flow > p:first-child { font-size: 1.07em; color: hsl(var(--foreground) / .9); }

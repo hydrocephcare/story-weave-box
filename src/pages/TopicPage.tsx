@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Check, ClipboardCheck, Link2, Share2, Stethoscope, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
@@ -13,6 +13,12 @@ import { cn } from "@/lib/utils";
 import { openAI } from "@/lib/aiEvents";
 
 const SITE = "https://www.ompathstudy.com";
+/** Three hues per subject for the moving colour behind the opening block. */
+const HUES: Record<string, [number, number, number]> = {
+  Anatomy: [8, 32, 330], Physiology: [212, 190, 262], "Biochemistry & genetics": [188, 262, 150], Pharmacology: [32, 12, 48],
+  "Microbiology & immunology": [142, 84, 190], Pathology: [268, 330, 212], Psychiatry: [238, 280, 180], Paediatrics: [198, 48, 130],
+  "Obstetrics & gynaecology": [330, 12, 280], Surgery: [352, 214, 28], "Public health": [166, 120, 200], Medicine: [174, 205, 268],
+};
 const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
 /** One section of the article: a large serif heading and text that flows. No boxes, no rules, no colour bars: space and type do the work. */
@@ -170,6 +176,7 @@ export default function TopicPage() {
   const [adminMsg, setAdminMsg] = useState("");
   const [showFresh, setShowFresh] = useState(false);
   useEffect(() => { if (!fresh) return; setShowFresh(true); const t = setTimeout(() => setShowFresh(false), 9000); return () => clearTimeout(t); }, [fresh]);
+  useEffect(() => { document.body.classList.add("has-toc-bar"); return () => document.body.classList.remove("has-toc-bar"); }, []);
   useEffect(() => { if (topic || page) rememberTopic(slug, topic?.n ?? name); }, [slug, topic, page]); // eslint-disable-line react-hooks/exhaustive-deps
   // practice questions: stray "Answer: B" tails removed from options, and the correct letters spread so the key never repeats
   const qs = useMemo<TopicQuestion[]>(() => {
@@ -268,7 +275,7 @@ export default function TopicPage() {
       </Helmet>
 
       <header className="relative isolate overflow-hidden border-b border-border/60">
-        <div className="hero-aurora" aria-hidden><span /><span /><span /></div>
+        <div className="hero-aurora" aria-hidden style={{ "--a": (HUES[subject] ?? HUES.Medicine)[0], "--b": (HUES[subject] ?? HUES.Medicine)[1], "--c": (HUES[subject] ?? HUES.Medicine)[2] } as CSSProperties}><span /><span /><span /></div>
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-12 pt-8 sm:pb-16 sm:pt-12 md:grid-cols-[minmax(0,1fr)_21rem]">
           <div className="min-w-0">
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-muted-foreground"><button type="button" onClick={() => (window.history.length > 1 ? navigate(-1) : navigate("/topics"))} className="mr-2 inline-flex items-center gap-1 rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-foreground/80 hover:border-primary/60"><ArrowLeft className="h-3.5 w-3.5" aria-hidden /> Back</button><Link to="/topics" className="hover:text-primary hover:underline">Topics</Link><ChevronRight className="h-3.5 w-3.5" /><span>{style.label}</span></nav>
@@ -278,13 +285,13 @@ export default function TopicPage() {
             <div className="mt-7 flex flex-wrap gap-2.5 sm:gap-3">
               {topic && topic.qs.length > 0 && <a href="#practice" className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] bg-primary text-primary-foreground shadow-md shadow-primary/25 hover:brightness-110"><ClipboardCheck className="h-4 w-4" aria-hidden /> Test yourself</a>}
               <button type="button" onClick={() => openAI(`Explain ${name} simply, then give me the five points an examiner expects.`)} className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/15"><Sparkles className="h-4 w-4 text-primary" aria-hidden /> Ask Ompath AI</button>
-              {manage && <a href={`#${anchor(manage.h)}`} className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] border border-border/70 bg-background/70 backdrop-blur hover:border-primary/60 hover:bg-background"><Stethoscope className="h-4 w-4" aria-hidden /> Management</a>}
+              {manage && <a href={`#${anchor(manage.h)}`} className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] border border-border/70 bg-background/85 hover:border-primary/60 hover:bg-background"><Stethoscope className="h-4 w-4" aria-hidden /> Management</a>}
               <button type="button" onClick={async () => {
                 const url = `${SITE}${topicPath(slug)}`;
                 try { if (navigator.share) { await navigator.share({ title: `${name} | Ompath Study`, url }); return; } } catch { return; }
                 try { await navigator.clipboard.writeText(url); setShared("Link copied"); } catch { setShared(url); }
                 setTimeout(() => setShared(""), 2500);
-              }} className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] border border-border/70 bg-background/70 backdrop-blur hover:border-primary/60 hover:bg-background">{shared ? <Link2 className="h-4 w-4" aria-hidden /> : <Share2 className="h-4 w-4" aria-hidden />}{shared || "Share"}</button>
+              }} className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] border border-border/70 bg-background/85 hover:border-primary/60 hover:bg-background">{shared ? <Link2 className="h-4 w-4" aria-hidden /> : <Share2 className="h-4 w-4" aria-hidden />}{shared || "Share"}</button>
             </div>
           </div>
           {media?.hero && (
@@ -377,9 +384,9 @@ export default function TopicPage() {
 
             {media && media.more.length > 0 && (
               <Section id="web-images" title={`Pictures of ${name}`}>
-                <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+                <ul className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden">
                   {media.more.map((im, i) => (
-                    <li key={im.full}><button type="button" onClick={() => setWebZoom(i)} className="group block w-full overflow-hidden rounded-2xl border border-border bg-white text-left">
+                    <li key={im.full} className="w-[74%] shrink-0 snap-start sm:w-60"><button type="button" onClick={() => setWebZoom(i)} className="group block w-full overflow-hidden rounded-2xl border border-border bg-white text-left">
                       <img src={im.u} alt={im.title} loading="lazy" decoding="async" className="aspect-square w-full object-contain p-1 transition duration-300 group-hover:scale-105" />
                       <span className="line-clamp-2 block border-t border-border bg-background p-2.5 text-xs font-medium leading-snug text-muted-foreground">{im.title}</span>
                     </button></li>
@@ -436,9 +443,9 @@ export default function TopicPage() {
 
             {topic && topic.imgs.length > 0 && (
               <Section id="exam-images" title="Images from past papers">
-                <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+                <ul className="-mx-5 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden">
                   {topic.imgs.map((im, i) => (
-                    <li key={im.u}><button type="button" onClick={() => setZoom(i)} className="group block w-full overflow-hidden rounded-2xl border border-border bg-background text-left">
+                    <li key={im.u} className="w-[74%] shrink-0 snap-start sm:w-60"><button type="button" onClick={() => setZoom(i)} className="group block w-full overflow-hidden rounded-2xl border border-border bg-background text-left">
                       <img src={im.u} alt={imageCaption(im.a)} loading="lazy" decoding="async" className="aspect-square w-full object-cover transition duration-300 group-hover:scale-105" />
                       <span className="line-clamp-2 block p-2.5 text-xs font-medium leading-snug text-muted-foreground">{imageCaption(im.a)}</span>
                     </button></li>
