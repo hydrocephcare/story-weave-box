@@ -32,16 +32,20 @@ async function speak(text, id) {
   const r = await fetch(`${BASE}/generate`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text, profile_id: id, language: "en" }) });
   if (!r.ok) throw new Error(`Voicebox said ${r.status}: ${(await r.text()).slice(0, 200)}`);
   if (isAudio(r)) return Buffer.from(await r.arrayBuffer());
-  // some versions answer with a job: find the audio file it points to
+  // Voicebox answers with a job and makes the audio in the background: wait until it is done, then download it
   const j = await r.json();
-  const ref = j.audio_url ?? j.url ?? j.audio_path ?? j.path ?? j.file ?? null;
-  const gid = j.id ?? j.generation_id ?? null;
-  const tries = [ref && (String(ref).startsWith("http") ? ref : `${BASE}${String(ref).startsWith("/") ? "" : "/"}${ref}`), gid && `${BASE}/audio/${gid}`, gid && `${BASE}/generations/${gid}/audio`, gid && `${BASE}/history/${gid}/audio`].filter(Boolean);
-  for (let attempt = 0; attempt < 40; attempt++) {
-    for (const u of tries) { const a = await fetch(u).catch(() => null); if (a?.ok && isAudio(a)) return Buffer.from(await a.arrayBuffer()); }
+  const gid = j.id ?? j.generation_id;
+  if (!gid) throw new Error(`Voicebox gave no job id: ${JSON.stringify(j).slice(0, 300)}`);
+  for (let attempt = 0; attempt < 400; attempt++) {
     await sleep(1500);
+    const st = await fetch(`${BASE}/generate/${gid}/status`).then((x) => (x.ok ? x.text() : "")).catch(() => "");
+    if (/"status"s*:s*"(failed|error|cancelled)"/i.test(st)) throw new Error(`Voicebox could not make this part: ${st.slice(0, 200)}`);
+    if (/"status"s*:s*"(completed|complete|done|ready)"/i.test(st) || attempt % 5 === 4) {
+      const a = await fetch(`${BASE}/audio/${gid}`).catch(() => null);
+      if (a?.ok && isAudio(a)) return Buffer.from(await a.arrayBuffer());
+    }
   }
-  throw new Error(`Voicebox started the audio but I could not find the file. Its answer was: ${JSON.stringify(j).slice(0, 300)}. Open http://127.0.0.1:17493/docs and tell me the download route.`);
+  throw new Error("Voicebox took too long on one part.");
 }
 
 // ---- joining audio: WAV pieces get real silence between them; MP3 pieces are simply joined ---------------------------------------------
