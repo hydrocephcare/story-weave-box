@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Lynch syndrome is an inherited mismatch‑repair defect that predisposes to early colorectal and other cancers, especially on the right side. Diagnosis relies on family history, tumor testing and germline genetics.",
+ "aka": [
+  "Hereditary non‑polyposis colorectal cancer",
+  "HNPCC"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Lynch syndrome is an autosomal dominant disorder caused by pathogenic variants in DNA mismatch‑repair (MMR) genes (MLH1, MSH2, MSH6, PMS2, EPCAM). It is diagnosed by clinical criteria (Amsterdam II, revised Bethesda) plus tumor microsatellite instability (MSI) or loss of MMR protein staining, confirmed by germline testing.",
+   "b": [
+    "MMR gene mutation → MSI‑high tumors",
+    "Amsterdam II: ≥3 relatives with LS‑associated cancer, spanning ≥2 generations, one diagnosed before 50"
+   ],
+   "t": [
+    {
+     "a": "Tumor MSI testing",
+     "b": "Does the tumor show microsatellite instability? MSI‑high supports LS and prompts germline testing."
+    },
+    {
+     "a": "Immunohistochemistry for MMR proteins",
+     "b": "Which MMR proteins are absent? Loss points to the specific gene to test."
+    },
+    {
+     "a": "Germline sequencing",
+     "b": "Is a pathogenic variant present? Confirms LS and guides family testing."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Cancer severity follows standard TNM staging for each organ. LS itself is staged by cancer burden rather than a separate scale; however, the risk of metachronous tumors is high, so surveillance intensity reflects cumulative risk.",
+   "b": [
+    "Stage I–IV per organ‑specific TNM",
+    "High lifetime risk of second primary cancers"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is a germline pathogenic variant in an MMR gene. Secondary contributors include family history of LS‑related cancers and environmental modifiers (diet, smoking).",
+   "b": [
+    "MLH1 or MSH2 mutation – most common",
+    "MSH6, PMS2, EPCAM deletions – less frequent"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often present with colorectal cancer before age 50, typically right‑sided, with a personal or family history of endometrial, ovarian, gastric, small‑bowel, urinary tract, or skin cancers.",
+   "b": [
+    "Early‑onset right‑colon cancer",
+    "Synchronous or metachronous extra‑colonic tumors"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond the diagnostic tests above, surveillance includes colonoscopy, endometrial sampling, and imaging for extra‑colonic sites.",
+   "b": [
+    "Colonoscopy every 1–2 years from age 20–25",
+    "Annual transvaginal ultrasound ± endometrial biopsy in women"
+   ],
+   "t": [
+    {
+     "a": "Colonoscopy",
+     "b": "Is there an adenoma or carcinoma? Detects early lesions; if unavailable, use flexible sigmoidoscopy plus stool FIT as interim."
+    },
+    {
+     "a": "Upper GI endoscopy",
+     "b": "Are gastric or duodenal lesions present? Screens for upper tract cancers common in LS."
+    },
+    {
+     "a": "Urine cytology",
+     "b": "Any urothelial abnormality? Helps catch urinary tract cancers."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly growing colorectal mass, obstruction, bleeding, or perforation require urgent care. Extra‑colonic cancers may present with abnormal bleeding, weight loss, or organ‑specific symptoms.",
+   "b": [
+    "Obstructive colon cancer",
+    "Massive GI bleeding",
+    "Advanced endometrial cancer symptoms"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat each cancer according to standard oncologic guidelines. For LS carriers without cancer, focus on risk‑reducing surgery (e.g., hysterectomy) and chemoprevention with aspirin. Offer cascade genetic testing to relatives.",
+   "b": [
+    "Surgical resection for localized tumors",
+    "Prophylactic hysterectomy + bilateral salpingo‑oophorectomy in women after childbearing"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Lifelong surveillance is essential. Colonoscopy every 1–2 years, annual gynecologic review, and periodic imaging for stomach, pancreas, and urinary tract. Encourage healthy diet, smoking cessation, and regular physical activity.",
+   "b": [
+    "Annual dermatologic exam for sebaceous skin tumors",
+    "Consider immunotherapy for MSI‑high metastatic disease"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Familial adenomatous polyposis (FAP) – many polyps, APC mutation; versus LS – few or no polyps, MMR defect. Also confused with sporadic MSI‑high colorectal cancer, which lacks germline mutation.",
+   "b": [
+    "FAP: APC gene, hundreds of adenomas",
+    "Sporadic MSI‑high: somatic MLH1 hypermethylation"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "MSI testing can be false‑negative if tumor tissue is inadequate. Immunohistochemistry may show retained proteins despite a pathogenic variant (e.g., missense mutations). Negative family history does not exclude LS due to small families or early deaths.",
+   "b": [
+    "Poor fixation → false‑negative MSI",
+    "Missense MMR variants → normal IHC but pathogenic"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden abdominal pain with distension (possible perforation)",
+  "Profuse rectal bleeding",
+  "Unexplained weight loss with anemia"
+ ],
+ "faq": [
+  {
+   "q": "Can someone with Lynch syndrome have a normal colonoscopy?",
+   "a": "Yes, early lesions may be missed; regular repeat scopes are needed because risk persists."
+  },
+  {
+   "q": "Is aspirin safe for everyone with LS?",
+   "a": "Aspirin reduces cancer risk but should be avoided in patients with active ulcers or bleeding disorders."
+  },
+  {
+   "q": "Do all family members need genetic testing?",
+   "a": "First‑degree relatives should be offered testing; if negative, their risk returns to population level."
+  }
+ ],
+ "exam": [
+  "Explain the Amsterdam II criteria and how they differ from the revised Bethesda guidelines.",
+  "Interpret an immunohistochemistry panel showing loss of MLH1 and PMS2 in a colorectal tumor.",
+  "Outline the surveillance schedule for a 30‑year‑old individual with a confirmed pathogenic MSH2 variant."
+ ],
+ "related": [
+  "Familial adenomatous polyposis",
+  "Microsatellite instability",
+  "Colorectal cancer staging",
+  "Endometrial cancer",
+  "Genetic counseling",
+  "Immunotherapy in MSI‑high tumors"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

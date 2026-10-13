@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Deep vein thrombosis (DVT) is a clot in a deep leg vein that can embolise to the lungs. Prompt diagnosis, risk‑stratified treatment and prevention of recurrence are essential.",
+ "aka": [
+  "Deep venous thrombosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A thrombus forming in a deep vein of the lower limb (calf, popliteal, femoral, iliac). Diagnosis combines clinical probability (Wells), D‑dimer, and imaging.",
+   "b": [
+    "Wells DVT score ≥2 = moderate/high probability",
+    "Negative high‑sensitivity D‑dimer rules out DVT in low‑risk patients",
+    "Compression ultrasonography is first‑line imaging"
+   ],
+   "t": [
+    {
+     "a": "Wells score",
+     "b": "What is the pre‑test probability? A score ≥2 suggests further imaging; ≤0 suggests D‑dimer testing"
+    },
+    {
+     "a": "D‑dimer",
+     "b": "Is there active fibrin degradation? A normal result (<500 ng/mL) rules out DVT in low‑risk patients"
+    },
+    {
+     "a": "Compression ultrasonography",
+     "b": "Is there a non‑compressible vein? Positive test confirms DVT; if unavailable, consider serial clinical exam and referral"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by clot location and risk of embolisation. Proximal (popliteal‑femoral‑iliac) DVT carries higher PE risk than distal (calf) DVT.",
+   "b": [
+    "Proximal DVT → treat full anticoagulation",
+    "Distal DVT → consider anticoagulation if risk factors present"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Virchow's triad (stasis, endothelial injury, hypercoagulability) underlies most cases. In low‑resource settings, add infections and endemic conditions.",
+   "b": [
+    "Recent immobility or surgery (especially orthopaedic)",
+    "Active cancer or chemotherapy",
+    "Pregnancy, postpartum, hormonal therapy",
+    "Inherited thrombophilia (e.g., factor V Leiden)",
+    "Infections: HIV, TB, malaria, schistosomiasis",
+    "Chronic heart failure or severe anemia (sickle cell)",
+    "Herbal remedies causing platelet dysfunction"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical leg symptoms develop over days, but many patients are asymptomatic and diagnosed incidentally.",
+   "b": [
+    "Unilateral swelling, tightness, or heaviness",
+    "Pain on calf muscle stretch (Homan's sign, low specificity)",
+    "Warmth, erythema, or visible superficial veins"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use a stepwise approach: clinical probability → D‑dimer → imaging. Additional labs assess underlying causes.",
+   "b": [
+    "CBC, renal & liver function before anticoagulation",
+    "Thrombophilia screen if unprovoked or recurrent"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Is there anemia or thrombocytopenia? Guides choice of anticoagulant and detects infection"
+    },
+    {
+     "a": "Renal function (creatinine)",
+     "b": "Is kidney function adequate for LMWH or DOACs? Adjust drug selection if impaired"
+    },
+    {
+     "a": "Thrombophilia panel",
+     "b": "Is there an inherited hypercoagulable state? Influences duration of anticoagulation"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening; early recognition saves lives.",
+   "b": [
+    "Sudden dyspnoea, chest pain, tachycardia → possible pulmonary embolism",
+    "Severe leg pain, swelling, cyanosis → phlegmasia cerulea dolens",
+    "Post‑thrombotic syndrome: chronic pain, ulceration"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start anticoagulation promptly, treat reversible causes, and monitor for bleeding.",
+   "b": [
+    "Initial parenteral anticoagulant (unfractionated heparin or low‑molecular‑weight heparin) for rapid effect",
+    "Transition to oral anticoagulant (warfarin or a direct oral anticoagulant) for 3‑6 months or longer if unprovoked",
+    "Avoid aspirin alone; it does not prevent clot extension",
+    "If contraindicated to anticoagulation, consider inferior vena cava filter"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑assess risk, ensure therapeutic anticoagulation, and address modifiable factors.",
+   "b": [
+    "Repeat ultrasound if symptoms persist or worsen",
+    "Educate on early ambulation, compression stockings, and hydration",
+    "Long‑term prophylaxis for high‑risk patients (e.g., cancer, recurrent thrombophilia)"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic DVT can lead to misdiagnosis.",
+   "b": [
+    "Cellulitis – usually more diffuse erythema, fever, and no calf tenderness on stretch",
+    "Muscle strain – pain worsens with movement, not with passive stretch",
+    "Baker’s cyst rupture – posterior knee pain, may mimic calf swelling"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal or abnormal.",
+   "b": [
+    "D‑dimer can be normal in isolated distal DVT; do not rely solely on it in high‑risk patients",
+    "Compression ultrasound may miss early thrombus; repeat if clinical suspicion persists",
+    "Pregnancy raises baseline D‑dimer; interpret with caution"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden shortness of breath or chest pain",
+  "Rapidly worsening leg swelling or pain",
+  "Cyanosis or cold, pale limb"
+ ],
+ "faq": [
+  {
+   "q": "Can DVT occur without leg pain?",
+   "a": "Yes; up to 30 % are asymptomatic and discovered incidentally on imaging."
+  },
+  {
+   "q": "Is a positive Homan's sign diagnostic?",
+   "a": "No; it is neither sensitive nor specific and should not replace imaging."
+  },
+  {
+   "q": "When is lifelong anticoagulation needed?",
+   "a": "In patients with persistent high‑risk thrombophilia, active cancer, or recurrent unprovoked DVT."
+  }
+ ],
+ "exam": [
+  "Explain how the Wells score guides the diagnostic pathway for DVT.",
+  "Describe the management steps for a patient with proximal DVT and a contraindication to anticoagulation.",
+  "List three reversible risk factors for DVT that are common in low‑resource settings."
+ ],
+ "related": [
+  "Pulmonary embolism",
+  "Post‑thrombotic syndrome",
+  "Venous insufficiency",
+  "Anticoagulation therapy",
+  "Thrombophilia",
+  "Immobilisation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

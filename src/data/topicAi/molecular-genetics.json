@@ -1,0 +1,113 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Molecular genetics studies how DNA sequence changes affect cell function and disease. Clinicians use it to diagnose inherited disorders, select targeted therapies, and predict prognosis.",
+ "aka": [
+  "Molecular genetics",
+  "Genomic medicine",
+  "DNA diagnostics"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Molecular genetics examines the structure, function, and variation of genes at the DNA level. It links genotype to phenotype, allowing clinicians to explain disease mechanisms and personalize care.",
+   "b": [
+    "DNA = genetic blueprint; mutations alter protein function.",
+    "Techniques: PCR, sequencing, microarrays, and CRISPR."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Genes are transcribed to RNA then translated into proteins. Variants can be single‑nucleotide changes, insertions, deletions, or copy‑number alterations that disrupt this flow.",
+   "b": [
+    "Missense → altered amino acid; nonsense → truncated protein.",
+    "Frameshift → downstream nonsense; splice‑site → abnormal mRNA."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Gene expression is controlled by promoters, enhancers, epigenetic marks, and non‑coding RNAs. Dysregulation can mimic genetic defects even without DNA changes.",
+   "b": [
+    "Methylation silences tumor‑suppressor genes.",
+    "MicroRNAs can down‑regulate oncogenes."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Pathogenic variants cause inherited diseases, predispose to cancer, or affect drug metabolism. In low‑resource settings, infections (HIV, TB, hepatitis B) can introduce viral integration or trigger mutagenesis.",
+   "b": [
+    "Autosomal recessive: sickle‑cell, thalassaemia.",
+    "Dominant: Huntington, Marfan.",
+    "Somatic: KRAS, EGFR mutations in lung cancer."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Molecular tests guide diagnosis, prognosis, and therapy. They are essential for targeted cancer drugs, pharmacogenomics, and carrier screening.",
+   "b": [
+    "EGFR mutation → EGFR‑TKI therapy in NSCLC.",
+    "BRCA1/2 mutation → PARP inhibitor eligibility.",
+    "TPMT genotype → dose adjustment for azathioprine."
+   ],
+   "t": [
+    {
+     "a": "PCR for Mycobacterium tuberculosis resistance (rpoB)",
+     "b": "Does the patient have rifampicin‑resistant TB? Positive result directs second‑line therapy."
+    },
+    {
+     "a": "Next‑generation sequencing panel for solid tumours",
+     "b": "Which actionable mutations are present? Guides selection of targeted agents; if unavailable, use immunohistochemistry as surrogate."
+    },
+    {
+     "a": "HLA‑B*57:01 testing",
+     "b": "Is the patient at risk of abacavir hypersensitivity? Positive result → avoid abacavir."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on test selection, interpretation, and therapeutic impact. Remember common tropical infections that cause secondary genetic alterations.",
+   "b": [
+    "Differentiate germline vs somatic mutations.",
+    "Know the main panels for leukaemia, breast, lung, and colorectal cancer.",
+    "Recall when a test is not feasible and alternative clinical criteria are used."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly progressive neurological decline with a suspected metabolic disorder.",
+  "Unexplained severe cytopenias suggesting a marrow failure syndrome.",
+  "Acute leukemia with high‑risk cytogenetics requiring urgent targeted therapy."
+ ],
+ "faq": [
+  {
+   "q": "Why order a genetic test if the clinical picture is clear?",
+   "a": "It confirms the diagnosis, informs prognosis, and may change treatment (e.g., targeted therapy)."
+  },
+  {
+   "q": "What if the required molecular test is unavailable?",
+   "a": "Use surrogate markers (immunohistochemistry, clinical criteria) and refer to a centre with the capability."
+  },
+  {
+   "q": "Can infections cause false‑positive genetic results?",
+   "a": "Yes, viral DNA integration (e.g., HBV) can mimic somatic mutations; correlate with clinical context."
+  }
+ ],
+ "exam": [
+  "Explain how EGFR mutation status influences therapy in non‑small cell lung cancer.",
+  "List three inherited metabolic disorders diagnosed by plasma amino‑acid analysis and their genetic basis.",
+  "Describe the steps and rationale for pharmacogenomic testing before starting azathioprine."
+ ],
+ "related": [
+  "Pharmacogenomics",
+  "Oncogenic signaling pathways",
+  "Inherited metabolic diseases",
+  "Viral oncology",
+  "Epigenetics",
+  "Diagnostic microbiology"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,117 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "The pituitary gland releases hormones that control growth, metabolism, stress, reproduction and lactation. Clinicians must link hormone patterns to hypothalamic signals and disease states.",
+ "aka": [
+  "hypophysis",
+  "pituitary gland hormones"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The pituitary sits at the brain base and has an anterior (adenohypophysis) and posterior (neurohypophysis) lobe. The anterior lobe releases GH, TSH, ACTH, LH, FSH and prolactin; the posterior releases ADH and oxytocin.",
+   "b": [
+    "Anterior hormones act on peripheral endocrine organs",
+    "Feedback loops involve hypothalamic releasing/inhibiting factors"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Hypothalamic neurons secrete releasing (e.g., GHRH, TRH, CRH, GnRH) or inhibiting (e.g., somatostatin, dopamine) peptides into the portal circulation. These peptides stimulate or suppress pituitary hormone release.",
+   "b": [
+    "GH → liver IGF‑1, bone growth",
+    "TSH → thyroid T3/T4 synthesis",
+    "ACTH → adrenal cortisol",
+    "LH/FSH → gonadal sex steroids & gametes",
+    "Prolactin → milk production"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Each hormone is controlled by a specific hypothalamic factor and negative feedback from its target hormone. Disruption can be primary (target organ) or secondary (pituitary/hypothalamus).",
+   "b": [
+    "High cortisol suppresses CRH and ACTH",
+    "High T3/T4 suppresses TRH and TSH",
+    "High sex steroids suppress GnRH, LH, FSH"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Pituitary disease may cause excess (hyperpituitarism) or deficiency (hypopituitarism). Deficiency often presents with multiple hormone lows; excess usually reflects an adenoma secreting one hormone.",
+   "b": [
+    "Pituitary adenoma → prolactinoma, GH excess, ACTH excess",
+    "Sheehan syndrome → postpartum ischemic necrosis → pan‑hypopituitarism",
+    "Infiltrative disease (TB, sarcoidosis, HIV) → hormone loss"
+   ],
+   "t": [
+    {
+     "a": "Serum hormone panel (GH, IGF‑1, TSH, free T4, ACTH, cortisol, LH, FSH, prolactin)",
+     "b": "Identifies which axes are deficient or excess; guides imaging"
+    },
+    {
+     "a": "Dynamic stimulation tests (e.g., insulin tolerance, ACTH stimulation)",
+     "b": "Distinguish pituitary vs peripheral failure; unavailable → rely on basal levels and clinical picture"
+    },
+    {
+     "a": "MRI of sellar region",
+     "b": "Detects adenoma, infarction, infiltrative lesions; if MRI unavailable, CT can identify mass effect"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Recognising hormone patterns directs urgent treatment (e.g., adrenal crisis) and long‑term hormone replacement. Pituitary disorders can mimic common endocrine problems, so a high index of suspicion avoids misdiagnosis.",
+   "b": [
+    "Low cortisol with hypotension → give IV hydrocortisone",
+    "Severe GH deficiency in children → growth hormone therapy",
+    "Prolactinoma causing infertility → dopamine agonist therapy"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on feedback loops, typical presentations of hormone excess/deficiency, and the stepwise work‑up when a central cause is suspected.",
+   "b": [
+    "Central hypothyroidism: low TSH + low free T4 → evaluate pituitary hormones and MRI",
+    "Hyperprolactinemia: check medication, then MRI if >200 ng/mL",
+    "ACTH‑dependent Cushing: loss of diurnal cortisol rhythm, high ACTH"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute adrenal crisis (severe hypotension, vomiting, abdominal pain)",
+  "Sudden visual loss from pituitary mass compression",
+  "Severe hyponatremia from ADH excess"
+ ],
+ "faq": [
+  {
+   "q": "Why is prolactin high in many patients on antipsychotics?",
+   "a": "Dopamine antagonists remove inhibition of prolactin release from the pituitary."
+  },
+  {
+   "q": "Can a pituitary adenoma cause hypothyroidism?",
+   "a": "Yes, if it compresses normal pituitary tissue, TSH production falls leading to secondary hypothyroidism."
+  },
+  {
+   "q": "What is the first test for suspected central adrenal insufficiency?",
+   "a": "Measure morning cortisol and ACTH; if low, confirm with a stimulation test."
+  }
+ ],
+ "exam": [
+  "Explain how negative feedback regulates TSH secretion and what lab pattern suggests central hypothyroidism.",
+  "Describe the step‑wise diagnostic approach to a patient with suspected hypopituitarism.",
+  "Differentiate clinical features of a prolactinoma versus a non‑functioning pituitary macroadenoma."
+ ],
+ "related": [
+  "Hypothalamic releasing hormones",
+  "Adrenal insufficiency",
+  "Thyroid disorders",
+  "Cushing disease",
+  "Acromegaly",
+  "Sheehan syndrome",
+  "Pituitary apoplexy"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Thyroid disease encompasses disorders of hormone production, ranging from hypo- to hyperthyroidism. Clinical reasoning focuses on symptom patterns, laboratory clues, and context such as infections or medications. Management balances treating the underlying cause with hormone replacement or suppression.",
+ "aka": [
+  "Thyroiditis",
+  "Thyrotoxicosis",
+  "Hypothyroidism"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Thyroid disease refers to any dysfunction of the thyroid gland, affecting hormone synthesis or release. Diagnosis integrates clinical features, serum TSH, free T4/T3, and antibodies when indicated.",
+   "b": [
+    "TSH is the primary screening test; abnormal values trigger further testing."
+   ],
+   "t": [
+    {
+     "a": "TSH",
+     "b": "High TSH suggests hypothyroidism; low TSH indicates hyperthyroidism."
+    },
+    {
+     "a": "Free T4",
+     "b": "Low in hypothyroidism; high in hyperthyroidism."
+    },
+    {
+     "a": "Anti‑TPO/TSI antibodies",
+     "b": "Positive in Hashimoto or Graves disease."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom burden and biochemical extremes. Myxoedema coma and thyrotoxic crisis are life‑threatening stages requiring urgent care.",
+   "b": [
+    "Hypothyroid: mild (TSH 4–10), moderate (10–20), severe (>20).",
+    "Hyperthyroid: mild (TSH <0.1, T4 normal), moderate (TSH <0.1, T4 high), severe (thyroid storm)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Autoimmune disease dominates. In low‑resource settings, iodine deficiency, infections, and herbal remedies also play major roles.",
+   "b": [
+    "Hashimoto thyroiditis (autoimmune, female, middle age).",
+    "Graves disease (autoimmune, hyperthyroid).",
+    "Iodine deficiency (goitre, hypothyroidism).",
+    "Infections: TB, HIV, malaria can trigger thyroiditis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms reflect hormone excess or deficiency, often subtle. Contextual clues (e.g., recent infection, medication) guide differential.",
+   "b": [
+    "Hypothyroid: fatigue, weight gain, cold intolerance, constipation.",
+    "Hyperthyroid: palpitations, heat intolerance, tremor, weight loss."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab tests answer specific questions; imaging is reserved for nodules or structural disease.",
+   "t": [
+    {
+     "a": "TSH",
+     "b": "High → hypothyroid; low → hyperthyroid."
+    },
+    {
+     "a": "Free T4",
+     "b": "Low in hypothyroid; high in hyperthyroid."
+    },
+    {
+     "a": "Anti‑TPO",
+     "b": "Positive supports autoimmune hypothyroidism."
+    },
+    {
+     "a": "TSI (TRAb)",
+     "b": "Positive indicates hyperthyroid autoimmunity."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Guides fine‑needle aspiration if suspicious."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain presentations signal imminent danger and require immediate intervention.",
+   "b": [
+    "Thyroid storm: fever, tachycardia, delirium.",
+    "Myxoedema coma: hypothermia, hypotension, altered consciousness."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then adjust hormone levels. Drug choice reflects safety, availability, and interaction profile.",
+   "b": [
+    "Antithyroid drugs (propylthiouracil, methimazole) for Graves; avoid in pregnancy.",
+    "Beta‑blockers for symptom control.",
+    "Levothyroxine for hypothyroidism; start low, titrate."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of hormone levels and symptom review prevent overtreatment or relapse. Public health iodine supplementation reduces deficiency.",
+   "b": [
+    "TSH every 6–12 months after stabilization."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Many conditions mimic thyroid dysfunction; distinguishing features are key.",
+   "b": [
+    "Anemia (fatigue).",
+    "Depression (low energy).",
+    "Pheochromocytoma (tachycardia)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain lab values may be falsely normal or abnormal due to interference or disease state.",
+   "b": [
+    "TSH can be suppressed in non‑thyroidal illness; interpret with clinical context."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Thyroid storm",
+  "Myxoedema coma",
+  "Severe hyperthyroid crisis"
+ ],
+ "faq": [
+  {
+   "q": "Can thyroid disease be asymptomatic?",
+   "a": "Yes, especially early hypothyroidism; subtle signs may be missed without screening."
+  },
+  {
+   "q": "Is iodine deficiency still common?",
+   "a": "In many low‑resource areas, yes; it causes goitre and hypothyroidism."
+  },
+  {
+   "q": "Do infections trigger thyroiditis?",
+   "a": "Infections like TB, HIV, or malaria can precipitate subacute or chronic thyroiditis."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic algorithm for a patient with weight loss, tremor, and low TSH.",
+  "Describe the management steps for a patient presenting with myxoedema coma.",
+  "Differentiate Graves disease from subacute thyroiditis based on clinical and laboratory findings."
+ ],
+ "related": [
+  "Iodine deficiency",
+  "Autoimmune thyroiditis",
+  "Thyroid storm",
+  "Myxoedema coma",
+  "Thyroid nodules"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Peptic ulcer disease (PUD) is a breach of the gastric or duodenal mucosa caused mainly by H. pylori infection or NSAID use. It presents with epigastric pain and can lead to bleeding or perforation if untreated.",
+ "aka": [
+  "gastric ulcer",
+  "duodenal ulcer"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A peptic ulcer is a mucosal defect ≥5 mm that extends through the muscularis mucosa into the submucosa, confirmed by endoscopy or radiography.",
+   "b": [
+    "Endoscopy is gold‑standard; shows ulcer size, location, stigmata of recent hemorrhage.",
+    "Rapid urease test or stool antigen confirms H. pylori."
+   ],
+   "t": [
+    {
+     "a": "Upper endoscopy",
+     "b": "Does the patient have an ulcer and what are its high‑risk features? Positive finding confirms diagnosis and guides therapy."
+    },
+    {
+     "a": "H. pylori test (urease, stool antigen, breath test)",
+     "b": "Is H. pylori present? Positive result directs eradication therapy; negative suggests NSAID or other cause."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by ulcer size, depth, and presence of complications (bleeding, perforation, obstruction). The Forrest classification grades bleeding risk.",
+   "b": [
+    "Forrest Ia–IIb = high risk, need urgent endoscopic therapy.",
+    "Forrest III = low risk, can be managed medically."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the primary driver to target treatment.",
+   "b": [
+    "H. pylori infection – most common worldwide.",
+    "Regular NSAID or aspirin use – especially in elderly.",
+    "Smoking, alcohol, stress – aggravating factors."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical pain is epigastric, described as burning, often relieved by food (duodenal) or worsened by food (gastric).",
+   "b": [
+    "Nighttime pain waking the patient.",
+    "Occult or overt GI bleeding (melena, hematemesis).",
+    "Weight loss if chronic obstruction develops."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer specific clinical questions.",
+   "b": [
+    "Endoscopy for diagnosis and risk stratification.",
+    "H. pylori testing to decide eradication."
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Is there anemia from chronic bleeding? Low hemoglobin suggests occult bleed, prompting endoscopic evaluation."
+    },
+    {
+     "a": "Serum gastrin (if refractory ulcer)",
+     "b": "Is there hypergastrinemia suggesting Zollinger‑Ellison? Markedly elevated levels warrant further imaging."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognize features that need urgent care.",
+   "b": [
+    "Sudden severe abdominal pain → perforation.",
+    "Hematemesis, melena, or drop in hemoglobin → bleeding.",
+    "Persistent vomiting, weight loss → obstruction."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the cause, protect the mucosa, and monitor healing.",
+   "b": [
+    "Eradicate H. pylori with a proton‑pump inhibitor (PPI) plus clarithromycin and amoxicillin/metronidazole.",
+    "Stop NSAIDs; switch to acetaminophen or COX‑2 selective agents if needed.",
+    "PPI therapy (high‑dose) promotes ulcer healing and reduces re‑bleed risk.",
+    "Avoid bismuth in patients with renal failure; avoid steroids without gastro‑protection."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Confirm healing and prevent recurrence.",
+   "b": [
+    "Repeat endoscopy 6–8 weeks after therapy if high‑risk ulcer or persistent symptoms.",
+    "Test for H. pylori eradication (urease or stool antigen).",
+    "Educate on avoiding NSAIDs, smoking cessation, and moderate alcohol."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic ulcer pain.",
+   "b": [
+    "Gastritis – inflammation without a true mucosal breach.",
+    "Gastro‑esophageal reflux disease – heartburn predominates.",
+    "Functional dyspepsia – pain without endoscopic lesion."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Negative H. pylori test after recent antibiotics or PPIs may be false; repeat after washout.",
+    "Mild anemia may be missed if only hemoglobin is checked; consider iron studies."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain (possible perforation)",
+  "Vomiting blood or black tarry stools (bleeding)",
+  "Rapid drop in blood pressure or fainting"
+ ],
+ "faq": [
+  {
+   "q": "Why are NSAIDs a major risk for peptic ulcers?",
+   "a": "They inhibit prostaglandin synthesis, reducing mucus and bicarbonate protection of the gastric lining."
+  },
+  {
+   "q": "Can a peptic ulcer heal without medication?",
+   "a": "Small, uncomplicated ulcers may heal, but untreated H. pylori or ongoing NSAID use leads to recurrence or complications."
+  },
+  {
+   "q": "Is stress alone enough to cause an ulcer?",
+   "a": "Stress can worsen symptoms but is not a primary cause without H. pylori or NSAID exposure."
+  }
+ ],
+ "exam": [
+  "Describe the diagnostic steps for a patient with suspected duodenal ulcer and explain the role of H. pylori testing.",
+  "List the first‑line treatment regimen for H. pylori‑positive peptic ulcer disease and justify each drug class.",
+  "Identify three red‑flag symptoms that require urgent endoscopic evaluation."
+ ],
+ "related": [
+  "Gastric cancer",
+  "Zollinger‑Ellison syndrome",
+  "Gastritis",
+  "Gastro‑esophageal reflux disease",
+  "NSAID‑induced gastropathy",
+  "Helicobacter pylori infection"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

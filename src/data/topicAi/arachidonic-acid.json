@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Arachidonic acid is a key fatty acid that fuels eicosanoid production, driving inflammation, pain, fever, and vascular tone. Its dysregulation underlies many acute and chronic inflammatory conditions.",
+ "aka": [
+  "20:4",
+  "Eicosanoid precursor"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Arachidonic acid (20:4) is a polyunsaturated fatty acid stored in membrane phospholipids. Release by phospholipase A2 during inflammation leads to prostaglandins, leukotrienes, and thromboxanes.",
+   "b": [
+    "Non‑essential but abundant in cell membranes",
+    "Central to eicosanoid synthesis"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by the extent of eicosanoid‑mediated inflammation: mild (localized pain), moderate (systemic fever), severe (sepsis, anaphylaxis).",
+   "b": [
+    "Mild: localized swelling",
+    "Moderate: fever, tachycardia",
+    "Severe: shock, organ dysfunction"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common triggers include infection, trauma, NSAID use, and allergic reactions. In low‑resource settings, malaria, TB, HIV, and herbal remedies can precipitate excessive AA release.",
+   "b": [
+    "Infection (bacterial, viral, parasitic)",
+    "Trauma or surgery",
+    "NSAID overuse",
+    "Allergic triggers"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have pain, redness, warmth, fever, bronchoconstriction, or platelet aggregation. Systemic signs include tachycardia, hypotension, and respiratory distress.",
+   "b": [
+    "Localized inflammation: pain, erythema, edema",
+    "Systemic: fever, tachycardia, hypotension",
+    "Respiratory: wheeze, dyspnea"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab tests assess downstream eicosanoids and inflammatory status.",
+   "b": [
+    "If tests unavailable, assess clinical signs and response to NSAIDs or steroids"
+   ],
+   "t": [
+    {
+     "a": "Serum prostaglandin E2",
+     "b": "Elevated indicates increased COX activity"
+    },
+    {
+     "a": "Leukotriene B4 (LTB4)",
+     "b": "High levels suggest lipoxygenase activation"
+    },
+    {
+     "a": "Platelet aggregation assay",
+     "b": "Increased aggregation points to thromboxane overproduction"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid progression to shock, severe bronchospasm, or uncontrolled bleeding signals life‑threatening complications.",
+   "b": [
+    "Hypotension with tachycardia",
+    "Severe wheeze unresponsive to bronchodilators",
+    "Uncontrolled bleeding"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the inciting cause, then modulate AA pathways. NSAIDs block COX, steroids inhibit PLA2, leukotriene antagonists block LTB4/LTC4 pathways, and antiplatelets reduce thromboxane effects.",
+   "b": [
+    "NSAIDs – reduce COX‑derived prostaglandins",
+    "Corticosteroids – inhibit PLA2, lowering all eicosanoids",
+    "Leukotriene antagonists – block bronchoconstriction",
+    "Antiplatelets – limit thromboxane‑mediated aggregation"
+   ],
+   "t": [
+    {
+     "a": "NSAID administration",
+     "b": "Improvement suggests COX‑mediated prostaglandins were key"
+    },
+    {
+     "a": "Steroid therapy",
+     "b": "Rapid response indicates PLA2‑driven AA release"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor inflammatory markers, repeat imaging if needed, and counsel on avoiding NSAID overuse and managing underlying infections.",
+   "b": [
+    "Regular CBC and CRP",
+    "Educate on safe NSAID use",
+    "Treat infections promptly"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other inflammatory mediators such as cytokines (IL‑6, TNF‑α) or prostaglandin‑independent pain pathways.",
+   "b": [
+    "Cytokine‑driven inflammation",
+    "Non‑AA pain pathways"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low prostaglandin levels may occur in chronic steroid use; leukotriene assays can be falsely low if sample is delayed.",
+   "b": [
+    "Steroid therapy suppresses prostaglandins",
+    "Delayed sample handling reduces leukotriene detection"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypotension",
+  "Uncontrolled bronchospasm",
+  "Uncontrolled bleeding"
+ ],
+ "faq": [
+  {
+   "q": "Why does aspirin cause bronchospasm in some patients?",
+   "a": "Aspirin blocks COX, shunting AA to the lipoxygenase pathway, increasing leukotrienes that cause bronchoconstriction."
+  },
+  {
+   "q": "Can diet influence arachidonic acid levels?",
+   "a": "Yes, diets high in omega‑6 fatty acids increase AA availability, while omega‑3 intake can compete and reduce AA‑derived eicosanoids."
+  },
+  {
+   "q": "What is the main difference between prostaglandins and leukotrienes?",
+   "a": "Prostaglandins are COX products causing vasodilation and pain; leukotrienes are lipoxygenase products that attract neutrophils and cause bronchoconstriction."
+  }
+ ],
+ "exam": [
+  "Explain how NSAID use can worsen asthma in susceptible patients.",
+  "Describe the diagnostic approach to a patient with suspected AA‑mediated sepsis.",
+  "Outline the stepwise management of a patient with severe AA‑driven bronchospasm."
+ ],
+ "related": [
+  "Eicosanoids",
+  "Cyclo‑oxygenase inhibitors",
+  "Leukotriene antagonists",
+  "Platelet aggregation",
+  "Inflammatory pathways"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

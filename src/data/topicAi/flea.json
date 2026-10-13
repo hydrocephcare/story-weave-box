@@ -1,0 +1,123 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Fleas are blood‑feeding ectoparasites that transmit serious bacterial infections such as plague and murine typhus. Understanding their life cycle helps break transmission in low‑resource settings.",
+ "aka": [
+  "Siphonaptera",
+  "flea vector"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Fleas are small, wingless insects that live on mammals and birds. They bite to obtain blood and can move quickly between hosts, making them efficient disease vectors.",
+   "b": [
+    "Order: Siphonaptera",
+    "Key genera: Xenopsylla, Ctenocephalides, Pulex, Tunga"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Adult fleas have laterally compressed bodies, strong hind legs for jumping, and piercing‑sucking mouthparts. Larvae lack legs and feed on organic debris, not blood.",
+   "b": [
+    "Eggs ~0.5 mm, laid on host or in host environment",
+    "Larvae develop in dark, humid debris",
+    "Pupae in silken cocoons; emergence triggered by temperature, CO₂, vibrations"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Females lay eggs in the host’s environment; eggs hatch into larvae that consume organic matter and flea feces containing partially digested blood. Pupation occurs in a cocoon; adults emerge and seek a host for a blood meal.",
+   "b": [
+    "Egg → larva (5‑10 days, temperature dependent)",
+    "Larva → pupa (4‑12 days)",
+    "Pupa → adult (1‑2 days after stimulus)",
+    "Adults live 2‑3 weeks, longer in cool climates"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Fleas act as mechanical or biological vectors for several zoonoses. The most clinically important are plague (Yersinia pestis) and murine typhus (Rickettsia typhi). They also transmit Bartonella henselae, Dipylidium caninum, and cause allergic dermatitis.",
+   "b": [
+    "Plague: flea bite → inoculation of Y. pestis; presents as bubonic, septicemic, or pneumonic forms",
+    "Murine typhus: R. typhi transmitted via flea feces; fever, rash, headache",
+    "Bartonella henselae: cat‑scratch disease; flea serves as reservoir in cats"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion is guided by exposure history, vector presence, and compatible syndrome. Laboratory confirmation varies by pathogen.",
+   "b": [
+    "Plague: Gram stain of bubo aspirate, culture, rapid antigen test, PCR",
+    "Murine typhus: Serology (IgM/IgG rise), PCR on blood",
+    "Bartonella: Serology or PCR from lymph node tissue"
+   ],
+   "t": [
+    {
+     "a": "Bubo aspirate Gram stain",
+     "b": "Does the sample show bipolar‑staining gram‑negative rods? Positive suggests Y. pestis; start plague therapy."
+    },
+    {
+     "a": "Rickettsial serology (IgM/IgG)",
+     "b": "Is there a four‑fold rise in titer? Confirms murine typhus; initiate doxycycline."
+    },
+    {
+     "a": "PCR for Bartonella from lymph node",
+     "b": "Is Bartonella DNA detected? Supports cat‑scratch disease; treat with azithromycin."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management targets the pathogen first, then the flea infestation. Antibiotics are chosen for efficacy, oral availability, and safety in pregnancy and children.",
+   "b": [
+    "Plague: streptomycin or gentamicin; alternatives ciprofloxacin or doxycycline if aminoglycosides unavailable",
+    "Bartonella henselae: azithromycin; doxycycline if severe"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and clinical practice.",
+   "b": [
+    "Oriental rat flea (Xenopsylla cheopis) = classic plague vector",
+    "Flea feces, not bite, often transmit Rickettsia typhi",
+    "Control: environmental cleaning, insecticide‑treated bedding, host treatment with topical flea products"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "High fever with painful swollen lymph nodes after flea exposure (possible plague)",
+  "Sudden onset fever, rash, and headache in a patient with rodent/flea contact (murine typhus)",
+  "Severe abdominal pain and vomiting in a child with flea‑infested pets (possible intestinal tapeworm complications)"
+ ],
+ "faq": [
+  {
+   "q": "Can a flea bite directly transmit plague?",
+   "a": "Yes; Y. pestis multiplies in the flea’s foregut and is regurgitated into the bite wound."
+  },
+  {
+   "q": "Why is doxycycline preferred for murine typhus?",
+   "a": "It is highly effective, inexpensive, and works in both adults and children."
+  },
+  {
+   "q": "What environmental measures reduce flea‑borne disease?",
+   "a": "Regular vacuuming, washing bedding at high temperature, and treating pets with approved flea control products."
+  }
+ ],
+ "exam": [
+  "Explain the flea life cycle and why interrupting the larval stage is crucial for control.",
+  "Describe the clinical presentation and diagnostic steps for bubonic plague transmitted by Xenopsylla cheopis.",
+  "List the first‑line antibiotic regimens for plague and murine typhus and justify their selection."
+ ],
+ "related": [
+  "Rodent control",
+  "Rickettsial diseases",
+  "Yersinia pestis",
+  "Bubonic plague",
+  "Vector‑borne disease surveillance",
+  "Insecticide resistance"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

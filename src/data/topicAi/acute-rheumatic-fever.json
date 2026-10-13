@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Acute rheumatic fever is an autoimmune reaction occurring 2–4 weeks after a Group A streptococcal infection, causing pancarditis and migratory arthritis. It can progress to chronic rheumatic heart disease, especially mitral valve damage.",
+ "aka": [
+  "Rheumatic fever"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ARF is a post‑streptococcal immune-mediated disease that meets the Jones criteria (major and minor) plus evidence of a recent streptococcal infection.",
+   "b": [
+    "Major: migratory polyarthritis, carditis, Sydenham chorea, erythema marginatum, subcutaneous nodules.",
+    "Minor: fever, arthralgia, elevated ESR/CRP, prolonged PR interval."
+   ],
+   "t": [
+    {
+     "a": "ASO/anti‑DNAse B titers",
+     "b": "Does the patient have recent streptococcal exposure? A high titre supports recent infection; normal does not exclude if test unavailable – rely on throat culture history."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Is there carditis? Detects valve regurgitation or myocarditis; if unavailable, auscultation for murmurs and ECG for PR prolongation are used."
+    },
+    {
+     "a": "ESR/CRP",
+     "b": "Are inflammatory markers elevated? Helps count minor criteria; normal values do not rule out ARF in early disease."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the extent of carditis (mild, moderate, severe) and presence of heart failure. The modified Jones criteria (low‑risk vs. moderate‑high‑risk) guide diagnosis in different settings.",
+   "b": [
+    "Mild: isolated arthritis or mild mitral regurgitation.",
+    "Moderate: polyarthritis plus moderate mitral regurgitation, no heart failure.",
+    "Severe: pancarditis with heart failure, large valve regurgitation, or conduction block."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "ARF follows infection with Group A Streptococcus (Streptococcus pyogenes), usually pharyngitis; skin infections can also trigger in tropical regions.",
+   "b": [
+    "Group A streptococcal pharyngitis – most common trigger.",
+    "Streptococcal impetigo – important in low‑resource, warm climates.",
+    "Concurrent infections (e.g., HIV, TB) may impair immunity and increase risk."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients, typically 5‑15 years old, develop fever, migratory polyarthritis, and cardiac murmurs within weeks of a sore throat.",
+   "b": [
+    "Joint pain moves from one large joint to another, lasting days.",
+    "New systolic murmur (mitral regurgitation) or diastolic murmur (aortic).",
+    "Skin: erythema marginatum, subcutaneous nodules; neurologic: chorea."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Combine clinical criteria with targeted tests to confirm recent streptococcal infection and assess organ involvement.",
+   "b": [
+    "Throat culture or rapid antigen test if still symptomatic.",
+    "ECG for PR‑interval prolongation.",
+    "Chest X‑ray if heart failure suspected."
+   ],
+   "t": [
+    {
+     "a": "Rapid strep test",
+     "b": "Is there active GAS infection? Positive test confirms current infection; negative does not rule out prior infection."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Is there leukocytosis? Supports inflammation but is non‑specific."
+    },
+    {
+     "a": "Echocardiography (if available)",
+     "b": "What is the degree of valve involvement? Detects regurgitation, pericardial effusion; if unavailable, rely on careful auscultation."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition prevents irreversible valve damage and heart failure.",
+   "b": [
+    "Severe carditis with pulmonary edema.",
+    "Rapidly worsening murmur indicating valve rupture.",
+    "Neurologic deterioration from chorea or seizures."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying infection, control inflammation, and protect the heart.",
+   "b": [
+    "Penicillin (IV or IM) to eradicate GAS – first‑line because of narrow spectrum and safety.",
+    "Anti‑inflammatory therapy: aspirin for arthritis and fever; corticosteroids if severe carditis.",
+    "Heart failure treatment: diuretics, ACE‑inhibitors, as per standard HF protocols."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term secondary prophylaxis prevents recurrence and progression to rheumatic heart disease.",
+   "b": [
+    "Monthly benzathine penicillin G for 5–10 years or until age 21, whichever is longer.",
+    "Regular echo every 1–2 years to monitor valve function.",
+    "Educate families about early treatment of sore throats."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic ARF’s joint or cardiac findings.",
+   "b": [
+    "Septic arthritis – usually mono‑articular, high fever, positive joint fluid culture.",
+    "Systemic lupus erythematosus – ANA positive, multi‑system involvement, no recent strep.",
+    "Kawasaki disease – fever, mucocutaneous changes, coronary aneurysms, occurs in younger infants."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal, leading to missed diagnosis.",
+   "b": [
+    "ASO may be normal after skin infection; rely on anti‑DNAse B.",
+    "ECG PR prolongation can be absent in early carditis; auscultation remains essential.",
+    "Echocardiography may miss mild regurgitation if performed by inexperienced operator."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of shortness of breath or chest pain",
+  "Rapidly worsening heart murmur or signs of heart failure",
+  "Severe joint swelling limiting movement"
+ ],
+ "faq": [
+  {
+   "q": "Why does a throat infection cause heart disease?",
+   "a": "Molecular mimicry makes antibodies against streptococcal antigens cross‑react with cardiac tissue, causing inflammation."
+  },
+  {
+   "q": "Is skin infection a valid trigger for ARF?",
+   "a": "Yes, especially in tropical, low‑resource settings where impetigo is common."
+  },
+  {
+   "q": "Can ARF recur after treatment?",
+   "a": "Recurrence is prevented by regular secondary penicillin prophylaxis; without it, each new strep infection can trigger ARF again."
+  }
+ ],
+ "exam": [
+  "List the major Jones criteria and explain how they are applied in a low‑resource setting.",
+  "Describe the pathophysiologic mechanism linking Group A streptococcus to cardiac inflammation.",
+  "Outline the acute management steps for a child with severe carditis due to ARF."
+ ],
+ "related": [
+  "Rheumatic heart disease",
+  "Group A streptococcal pharyngitis",
+  "Sydenham chorea",
+  "Post‑streptococcal glomerulonephritis",
+  "Kawasaki disease",
+  "Infective endocarditis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,130 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Lice are blood‑sucking arthropods that infest humans, transmitting serious infections when hygiene is poor. Recognizing their life cycle and associated diseases guides prompt treatment and prevention.",
+ "aka": [
+  "Pediculus humanus corporis",
+  "Pediculus humanus capitis",
+  "Pthirus pubis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Lice are tiny, wingless insects that feed on human blood. Three species infest humans: body, head, and pubic lice, each preferring a specific niche but all capable of transmitting pathogens when conditions allow.",
+   "b": [
+    "Small, 2–4 mm, no wings",
+    "Monophagous: human host only",
+    "Live in hair, clothing, or pubic area"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Body lice live in clothing seams and only leave the host to feed. Head lice cling to hair shafts, while pubic lice inhabit coarse hair. All lay eggs (nits) that attach firmly to hair or fabric.",
+   "b": [
+    "Eggs glued to hair or fabric",
+    "Larvae hatch after 7–10 days",
+    "Adults live 30–40 days"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission occurs when a louse moves from contaminated clothing or bedding to a new host. The life cycle—egg, nymph, adult—takes 2–3 weeks, allowing rapid spread in crowded settings.",
+   "b": [
+    "Eggs hatch in 7–10 days",
+    "Adults feed 3–4 times/day",
+    "Transmission via direct contact or fomites"
+   ],
+   "t": [
+    {
+     "a": "Wet or dry skin",
+     "b": "Dry skin reduces attachment; moist skin increases it."
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Body lice are vectors of epidemic typhus, trench fever, and relapsing fever. Head and pubic lice can cause intense itching, secondary bacterial infection, and in rare cases, bacillary angiomatosis in immunocompromised patients.",
+   "b": [
+    "Epidemic typhus (Rickettsia prowazekii)",
+    "Trench fever (Bartonella quintana)",
+    "Relapsing fever (Borrelia recurrentis)",
+    "Secondary cellulitis"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical identification of lice and nits is usually sufficient. Laboratory confirmation of transmitted pathogens is done via serology or PCR when available.",
+   "b": [
+    "Visual inspection of hair or clothing"
+   ],
+   "t": [
+    {
+     "a": "Serology for Rickettsia prowazekii",
+     "b": "Positive IgM suggests recent infection."
+    },
+    {
+     "a": "PCR for Bartonella quintana",
+     "b": "Detection of bacterial DNA in blood or tissue."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treat the underlying infection with appropriate antibiotics; eradicate lice with topical pediculicides or mechanical removal. In low‑resource settings, washing clothing in hot water and drying on a flame is effective.",
+   "b": [
+    "Permethrin 1% cream for head lice"
+   ],
+   "t": [
+    {
+     "a": "Hot water wash",
+     "b": "Washing at ≥50 °C removes lice and eggs."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that body lice are the only human louse that transmits serious systemic infections. In outbreak settings, focus on hygiene and clothing management.",
+   "b": [
+    "Body lice = vector for typhus, trench fever, relapsing fever"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe fever with rash after exposure to crowded conditions",
+  "Rapidly worsening skin infection after louse infestation",
+  "Signs of systemic infection (e.g., confusion, hypotension)"
+ ],
+ "faq": [
+  {
+   "q": "Can lice cause serious disease?",
+   "a": "Yes, body lice can transmit epidemic typhus, trench fever, and relapsing fever."
+  },
+  {
+   "q": "How do I tell head lice from pubic lice?",
+   "a": "Head lice live in scalp hair; pubic lice live in coarse pubic hair and are smaller."
+  },
+  {
+   "q": "What is the best way to kill lice in low‑resource settings?",
+   "a": "Wash clothing and bedding in hot water (≥50 °C) and dry on a flame."
+  }
+ ],
+ "exam": [
+  "Describe the life cycle of body lice and explain why they are efficient disease vectors.",
+  "Explain why hot water washing is effective against lice and their eggs.",
+  "List the three diseases transmitted by body lice and the causative organisms."
+ ],
+ "related": [
+  "Epidemic typhus",
+  "Trench fever",
+  "Relapsing fever",
+  "Pediculosis",
+  "Bartonella quintana",
+  "Rickettsia prowazekii",
+  "Bacillary angiomatosis",
+  "Public health hygiene"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

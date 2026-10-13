@@ -1,0 +1,206 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Renal stones are crystalline deposits in the kidney that can cause sudden, severe pain and urinary symptoms. Diagnosis relies on imaging and urine analysis, while management balances pain control, hydration, and addressing underlying metabolic causes.",
+ "aka": [
+  "Nephrolithiasis",
+  "Kidney stones"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Renal stones are mineral aggregates that form within the renal collecting system. Diagnosis is confirmed by non‑contrast CT, ultrasound, or plain X‑ray, and urine microscopy shows crystals.",
+   "b": [
+    "Stone size, location, composition"
+   ],
+   "t": [
+    {
+     "a": "Non‑contrast CT",
+     "b": "Detects stones >1 mm; shows size, location, obstruction; high sensitivity"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "First‑line in pregnancy or radiation avoidance; detects hydronephrosis and large stones"
+    },
+    {
+     "a": "Urine microscopy",
+     "b": "Identifies crystal type (e.g., calcium oxalate, uric acid) and guides metabolic workup"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by pain intensity, obstruction, infection, and renal function. The R.E.N.A.L. nephrolithiasis score helps predict treatment success.",
+   "b": [
+    "Size >10 mm, obstruction, infection = high risk"
+   ],
+   "t": [
+    {
+     "a": "R.E.N.A.L. score",
+     "b": "Predicts likelihood of spontaneous passage; higher scores suggest surgical intervention"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Metabolic disorders dominate; dietary factors and infections also contribute, especially in low‑resource settings.",
+   "b": [
+    "Hypercalciuria (primary hyperparathyroidism, thiazide use)",
+    "Hyperoxaluria (celiac disease, enteric hyperabsorption)",
+    "Uric acid stones (hyperuricosuria, low urine pH)",
+    "Infections (struvite, cysteine)"
+   ],
+   "t": [
+    {
+     "a": "Serum calcium",
+     "b": "Elevated in primary hyperparathyroidism; indicates hypercalciuria risk"
+    },
+    {
+     "a": "Urine pH",
+     "b": "Low pH favors uric acid stones; high pH favors struvite"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often report sudden, colicky flank pain radiating to groin, hematuria, nausea, and sometimes fever if infection is present.",
+   "b": [
+    "Pain starts abruptly, worsens with movement"
+   ],
+   "t": [
+    {
+     "a": "Hematuria",
+     "b": "Confirms urinary tract involvement; microscopic or gross"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond imaging, metabolic panels guide prevention. In low‑resource settings, basic tests suffice.",
+   "b": [
+    "Serum electrolytes, calcium, uric acid"
+   ],
+   "t": [
+    {
+     "a": "Serum calcium",
+     "b": "Detects hypercalcemia; high values suggest hypercalciuria"
+    },
+    {
+     "a": "Serum uric acid",
+     "b": "High levels raise risk of uric acid stones"
+    },
+    {
+     "a": "Urine pH",
+     "b": "Low pH indicates uric acid stone risk; high pH indicates struvite"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed for obstruction, infection, or impaired renal function. Complications include sepsis, renal failure, and chronic pain.",
+   "b": [
+    "Severe pain unrelieved by analgesia",
+    "Fever or chills",
+    "Reduced urine output"
+   ],
+   "t": [
+    {
+     "a": "Urine culture",
+     "b": "Detects infection; guides antibiotic choice"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat pain, ensure hydration, and correct the underlying metabolic cause. Surgical options are reserved for large or obstructing stones.",
+   "b": [
+    "Analgesia with NSAIDs or opioids"
+   ],
+   "t": [
+    {
+     "a": "NSAIDs",
+     "b": "Reduce pain and inflammation; avoid in renal impairment"
+    },
+    {
+     "a": "Alpha‑blockers",
+     "b": "Facilitate passage of stones 5–10 mm; avoid in severe renal failure"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of urine chemistry, dietary counseling, and adequate fluid intake reduce recurrence.",
+   "b": [
+    "Maintain 2–3 L/day water intake"
+   ],
+   "t": [
+    {
+     "a": "24‑hour urine collection",
+     "b": "Measures volume, calcium, oxalate, citrate; guides therapy"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Renal colic can mimic musculoskeletal pain, appendicitis, or ectopic pregnancy.",
+   "b": [
+    "Flank pain from muscle strain",
+    "Acute appendicitis"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for costovertebral angle tenderness vs. peritoneal signs"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low urine volume can mask hypercalciuria; normal serum calcium may coexist with high urinary calcium.",
+   "b": [
+    "Serum calcium normal, urine calcium high"
+   ],
+   "t": [
+    {
+     "a": "Urine calcium/creatinine ratio",
+     "b": "Detects hypercalciuria even when serum calcium is normal"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pain not relieved by analgesia",
+  "Fever or chills",
+  "Reduced urine output",
+  "Signs of sepsis"
+ ],
+ "faq": [
+  {
+   "q": "Can a kidney stone be asymptomatic?",
+   "a": "Yes, many stones are small and pass without pain, or are discovered incidentally on imaging."
+  },
+  {
+   "q": "What dietary changes help prevent stones?",
+   "a": "Increase fluid intake, limit sodium and animal protein, moderate oxalate foods, and avoid excessive vitamin C."
+  },
+  {
+   "q": "When is surgery indicated?",
+   "a": "Stones >10 mm, persistent obstruction, infection, or failure of conservative measures."
+  }
+ ],
+ "exam": [
+  "Explain how hypercalciuria leads to calcium oxalate stone formation and how you would investigate it.",
+  "Describe the management steps for a patient with a 7 mm ureteric stone presenting with colicky pain and hematuria.",
+  "Outline the R.E.N.A.L. nephrolithiasis score and its clinical implications."
+ ],
+ "related": [
+  "Urinary tract infections",
+  "Metabolic bone disease",
+  "Hypertension",
+  "Diabetes mellitus"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

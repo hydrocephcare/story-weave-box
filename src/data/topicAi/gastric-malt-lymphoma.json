@@ -1,0 +1,228 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Gastric MALT lymphoma is a low‑grade B‑cell lymphoma that arises in the stomach after chronic *H. pylori* gastritis. It often regresses with antibiotic eradication, but advanced disease needs chemo‑immunotherapy.",
+ "aka": [
+  "Gastric mucosa‑associated lymphoid tissue lymphoma",
+  "Gastric MALT",
+  "Gastric extranodal marginal zone lymphoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A localized, low‑grade B‑cell lymphoma of the stomach’s mucosa‑associated lymphoid tissue. Diagnosis requires endoscopic biopsy with immunohistochemistry (CD20+, BCL2+, CD5‑, cyclin D1‑).",
+   "b": [
+    "Endoscopic biopsy is mandatory"
+   ],
+   "t": [
+    {
+     "a": "Histology",
+     "b": "Shows small lymphoid cells with marginal zone pattern; indicates lymphoma."
+    },
+    {
+     "a": "Immunophenotype",
+     "b": "CD20+, BCL2+, CD5‑, cyclin D1‑; confirms MALT type."
+    },
+    {
+     "a": "Helicobacter pylori test",
+     "b": "Urea breath or stool antigen; positive supports etiology and guides therapy."
+    },
+    {
+     "a": "EBV PCR",
+     "b": "Negative in most gastric MALT; positive suggests alternative lymphoma."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staged by Ann Arbor with gastric involvement as stage I. Advanced stages (II–IV) involve nodal or extranodal sites.",
+   "b": [
+    "Stage I: localized to stomach"
+   ],
+   "t": [
+    {
+     "a": "Imaging (CT/PET)",
+     "b": "Detects nodal or distant disease; informs stage."
+    },
+    {
+     "a": "Bone marrow biopsy",
+     "b": "Rule out marrow involvement; negative in early disease."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Chronic *H. pylori* gastritis induces ectopic lymphoid tissue, leading to lymphoma. Other triggers include autoimmune gastritis, EBV, and rarely HIV.",
+   "b": [
+    "*H. pylori* infection"
+   ],
+   "t": [
+    {
+     "a": "H. pylori eradication",
+     "b": "Eradication leads to regression in early disease; failure suggests progression."
+    },
+    {
+     "a": "Autoimmune gastritis",
+     "b": "May coexist; consider in H. pylori‑negative cases."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have vague dyspepsia, epigastric pain, nausea, or weight loss. Rarely, bleeding or perforation occurs.",
+   "b": [
+    "Epigastric discomfort"
+   ],
+   "t": [
+    {
+     "a": "Upper GI endoscopy",
+     "b": "Shows ulcer or mass; guides biopsy."
+    },
+    {
+     "a": "CBC",
+     "b": "Anemia may indicate bleeding."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Combine endoscopy, histology, microbiology, imaging, and staging studies.",
+   "t": [
+    {
+     "a": "Endoscopy with biopsy",
+     "b": "Obtains tissue for diagnosis."
+    },
+    {
+     "a": "Helicobacter pylori testing",
+     "b": "Guides initial therapy."
+    },
+    {
+     "a": "CT abdomen/pelvis",
+     "b": "Assesses local invasion and nodal disease."
+    },
+    {
+     "a": "PET‑CT",
+     "b": "Detects systemic spread."
+    },
+    {
+     "a": "Bone marrow biopsy",
+     "b": "Rules out marrow involvement."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Bleeding, perforation, rapid growth, or systemic symptoms (fever, night sweats) warrant urgent care.",
+   "b": [
+    "Gastric bleeding"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin",
+     "b": "Drop indicates bleeding."
+    },
+    {
+     "a": "Peritoneal signs",
+     "b": "Suggest perforation."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First treat the underlying *H. pylori*; if regression occurs, no further therapy. Persistent disease needs chemo‑immunotherapy.",
+   "b": [
+    "H. pylori eradication (clarithromycin‑based triple therapy)"
+   ],
+   "t": [
+    {
+     "a": "Rituximab plus CHOP",
+     "b": "Used for refractory or advanced disease; targets CD20."
+    },
+    {
+     "a": "Radiotherapy",
+     "b": "Consider for localized, refractory cases."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Endoscopy at 6–12 months post‑eradication to confirm remission. Repeat testing if relapse signs.",
+   "b": [
+    "Repeat endoscopy"
+   ],
+   "t": [
+    {
+     "a": "H. pylori test",
+     "b": "Confirm eradication; repeat if symptoms recur."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Peptic ulcer disease, gastric carcinoma, and autoimmune gastritis.",
+   "b": [
+    "Peptic ulcer"
+   ],
+   "t": [
+    {
+     "a": "Biopsy",
+     "b": "Differentiates ulcer from lymphoma."
+    },
+    {
+     "a": "Immunohistochemistry",
+     "b": "Identifies lymphoma cells."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "H. pylori tests may be falsely negative if recent antibiotics used; endoscopic biopsies may miss patchy disease.",
+   "b": [
+    "False‑negative H. pylori"
+   ],
+   "t": [
+    {
+     "a": "Antibiotic use",
+     "b": "Reduces test sensitivity."
+    },
+    {
+     "a": "Sampling error",
+     "b": "Multiple biopsies improve yield."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain, vomiting blood, or signs of peritonitis"
+ ],
+ "faq": [
+  {
+   "q": "Can gastric MALT lymphoma be cured by antibiotics alone?",
+   "a": "Yes, if diagnosed early and H. pylori is eradicated, the lymphoma often regresses."
+  },
+  {
+   "q": "What if H. pylori is negative?",
+   "a": "Consider other causes like autoimmune gastritis or EBV; treat accordingly and consider chemo‑immunotherapy."
+  },
+  {
+   "q": "Is surgery needed?",
+   "a": "Only for complications such as bleeding or perforation; not for routine treatment."
+  }
+ ],
+ "exam": [
+  "Explain why H. pylori eradication is the first step in treating gastric MALT lymphoma.",
+  "Describe the immunophenotype that distinguishes gastric MALT lymphoma from other gastric lymphomas.",
+  "Outline the management plan for a patient with stage II gastric MALT lymphoma that has not responded to H. pylori eradication."
+ ],
+ "related": [
+  "Helicobacter pylori infection",
+  "Extranodal marginal zone lymphoma",
+  "Peptic ulcer disease",
+  "Gastric carcinoma",
+  "Autoimmune gastritis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

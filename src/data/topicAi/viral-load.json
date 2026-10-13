@@ -1,0 +1,120 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Viral load quantifies the amount of virus in blood or other fluids, guiding diagnosis, prognosis, and treatment decisions. It is essential for managing chronic infections like HIV and hepatitis B and for assessing response to therapy.",
+ "aka": [
+  "viral quantity",
+  "viral copy number",
+  "HBV DNA level",
+  "HIV RNA load"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Viral load measures how many viral particles are present per millilitre of specimen, usually by PCR. It reflects active replication and informs disease activity.",
+   "b": [
+    "High load = active disease, higher transmission risk",
+    "Low/undetectable load = good treatment response"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Viruses lack cellular structure; they replicate only inside host cells, producing progeny that can be quantified. Load varies by virus type and host immunity.",
+   "b": [
+    "RNA viruses (e.g., HIV) use reverse transcription",
+    "DNA viruses (e.g., HBV) replicate via reverse transcription of an RNA intermediate"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Viral replication cycles generate circulating virions that can be transmitted via blood, sexual contact, perinatal routes, or vectors, depending on the virus.",
+   "b": [
+    "High load in blood → greater risk of needle‑stick or transfusion transmission",
+    "High genital load → higher sexual transmission probability"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Viral load correlates with disease severity in chronic infections. In HIV, it predicts progression to AIDS; in hepatitis B, it predicts liver inflammation and risk of cirrhosis.",
+   "b": [
+    "HIV: >100,000 copies/mL = rapid CD4 decline",
+    "HBV: >20,000 IU/mL with HBeAg = high transmission risk"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Quantitative PCR (real‑time PCR) is the gold standard for measuring viral load. Results guide treatment initiation and monitoring.",
+   "b": [
+    "Requires calibrated standards for each virus",
+    "Result expressed as copies/mL (HIV) or IU/mL (HBV)"
+   ],
+   "t": [
+    {
+     "a": "Quantitative PCR for HIV RNA",
+     "b": "Is the virus actively replicating? → Detectable >20 copies/mL means active infection; undetectable suggests effective therapy."
+    },
+    {
+     "a": "HBV DNA PCR",
+     "b": "How high is the viral burden? → >20,000 IU/mL with HBeAg indicates need for antiviral therapy."
+    },
+    {
+     "a": "If PCR unavailable",
+     "b": "What alternative informs viral activity? → Use surrogate markers (ALT, HBeAg, clinical picture) while arranging referral."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Therapy aims to suppress viral replication, lower load to undetectable, and prevent complications. Choice of drugs depends on resistance, toxicity, and pregnancy status.",
+   "b": [
+    "HIV: First‑line NNRTI‑based or INSTI‑based regimens suppress load rapidly.",
+    "HBV: Tenofovir or entecavir are preferred for high potency and low resistance."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on interpreting viral load thresholds, linking them to treatment decisions, and recognizing when surrogate markers are needed.",
+   "b": [
+    "U=U concept applies to HIV: undetectable load = no sexual transmission.",
+    "Positive HBeAg = high HBV load → treat and consider maternal prophylaxis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute HIV seroconversion with flu‑like illness and rapidly rising load",
+  "HBV flare with ALT >10× ULN and viral load >10⁶ IU/mL",
+  "Severe immunosuppression (CD4 <200) despite ART"
+ ],
+ "faq": [
+  {
+   "q": "Why is viral load more useful than antibody tests?",
+   "a": "It measures current replication, not past exposure, guiding treatment and infection control."
+  },
+  {
+   "q": "Can a patient have a high viral load but no symptoms?",
+   "a": "Yes; many chronic infections are asymptomatic until organ damage accumulates."
+  },
+  {
+   "q": "What does an ‘undetectable’ result mean?",
+   "a": "The assay cannot detect virus above its limit; clinically it indicates effective suppression."
+  }
+ ],
+ "exam": [
+  "Explain how viral load guides initiation of antiretroviral therapy in HIV.",
+  "Interpret an HBV DNA result of 50,000 IU/mL with positive HBeAg in a pregnant woman.",
+  "List two alternative strategies when quantitative PCR is unavailable."
+ ],
+ "related": [
+  "HIV infection",
+  "Hepatitis B virus",
+  "Antiretroviral therapy",
+  "Liver fibrosis assessment",
+  "CD4 count",
+  "PCR technology",
+  "Maternal‑fetal transmission"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

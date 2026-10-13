@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Varicella‑zoster virus (VZV) is a DNA poxvirus that causes primary varicella (chickenpox) and re‑activation zoster (shingles). It spreads via respiratory droplets and skin lesions, and latency resides in dorsal‑root ganglia.",
+ "aka": [
+  "Human herpesvirus 3",
+  "Chickenpox virus"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "VZV is a large, enveloped double‑stranded DNA virus in the Herpesviridae family. After primary infection it establishes lifelong latency in sensory ganglia, reactivating when cell‑mediated immunity wanes.",
+   "b": [
+    "DNA virus, 125 kb genome",
+    "Enveloped, icosahedral capsid",
+    "Latency in dorsal‑root and cranial ganglia"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The virion contains a core with linear DNA, surrounded by a proteinaceous tegument and a lipid envelope studded with glycoproteins that mediate entry into respiratory epithelium.",
+   "b": [
+    "Glycoprotein E (gE) essential for cell‑to‑cell spread",
+    "Tegument proteins inhibit interferon response"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Inhalation of aerosolised droplets or contact with vesicular fluid spreads VZV. After replication in the nasopharynx, it disseminates via bloodstream to skin. Latency follows neuronal transport to ganglia.",
+   "b": [
+    "Contagious 1–2 days before rash",
+    "Incubation 10‑21 days"
+   ],
+   "t": [
+    {
+     "a": "PCR of lesion fluid",
+     "b": "Is the rash caused by VZV? Positive PCR confirms VZV DNA, especially when clinical picture is atypical."
+    },
+    {
+     "a": "Serology (IgM/IgG)",
+     "b": "Has the patient had prior exposure? IgM indicates recent infection; IgG shows past infection or vaccination."
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Primary infection produces varicella (diffuse vesicular rash, fever). Reactivation yields herpes zoster, a painful, dermatomal vesicular eruption that can lead to post‑herpetic neuralgia.",
+   "b": [
+    "Varicella: mild in children, severe in immunocompromised or adults",
+    "Zoster: risk ↑ with age >50, HIV, malignancy, steroids"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical picture is usually sufficient, but laboratory confirmation is needed for atypical presentations, immunocompromised hosts, or when differentiating from HSV or drug eruptions.",
+   "b": [
+    "Typical vesicular rash in successive crops",
+    "Dermatomal distribution for zoster"
+   ],
+   "t": [
+    {
+     "a": "Tzanck smear",
+     "b": "If unavailable, rely on clinical pattern and PCR when possible."
+    },
+    {
+     "a": "Direct fluorescent antibody (DFA) of lesion",
+     "b": "Does the sample contain VZV antigen? Positive DFA confirms VZV quickly."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Antiviral therapy targets viral DNA polymerase. Early treatment (<72 h) reduces complications. Vaccination provides primary and booster immunity, crucial in low‑resource settings.",
+   "b": [
+    "Acyclovir, valacyclovir, famciclovir – inhibit viral DNA synthesis",
+    "Avoid steroids alone; they worsen viral replication",
+    "Varicella vaccine (live‑attenuated) for children; Shingles vaccine (recombinant) for adults >50"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the clinical timeline, latency, and risk factors for reactivation. Know how to differentiate varicella from measles, rubella, and HSV, and the indications for antiviral therapy.",
+   "b": [
+    "Contagious period precedes rash",
+    "Post‑herpetic neuralgia risk factors: age >60, severe acute pain",
+    "Immunocompromised patients need IV acyclovir"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly spreading rash with fever in an immunocompromised adult",
+  "Zoster involving the eye (herpes zoster ophthalmicus)",
+  "Neurologic signs (meningitis, encephalitis) after rash"
+ ],
+ "faq": [
+  {
+   "q": "Can adults get chickenpox?",
+   "a": "Yes; adults often have more severe disease and higher complication rates."
+  },
+  {
+   "q": "Why does shingles cause pain before the rash appears?",
+   "a": "Viral replication in the sensory ganglion irritates nerves, producing prodromal neuropathic pain."
+  },
+  {
+   "q": "Is the varicella vaccine safe in pregnancy?",
+   "a": "No; it is a live vaccine and is contraindicated during pregnancy."
+  }
+ ],
+ "exam": [
+  "Describe the pathogenesis of VZV latency and reactivation.",
+  "List the clinical features that differentiate varicella from herpes simplex infection.",
+  "Explain the indications for antiviral therapy in herpes zoster."
+ ],
+ "related": [
+  "Herpes simplex virus",
+  "Measles virus",
+  "Rubella virus",
+  "Human immunodeficiency virus (HIV)",
+  "Post‑herpetic neuralgia",
+  "Live‑attenuated vaccines"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

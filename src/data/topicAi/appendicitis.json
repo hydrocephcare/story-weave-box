@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Acute appendicitis is inflammation of the vermiform appendix, usually due to obstruction. It presents with periumbilical pain shifting to the right iliac fossa, anorexia, and low‑grade fever. Prompt diagnosis and surgery prevent perforation and sepsis.",
+ "aka": [
+  "Acute appendicitis",
+  "Appendiceal inflammation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Inflammation of the appendix caused by luminal obstruction or infection. Diagnosis combines history, physical exam, and selective imaging.",
+   "b": [
+    "Classic migration of pain from periumbilical to RLQ",
+    "Rovsing's sign, psoas sign, or obturator sign supports diagnosis",
+    "Adult Appendicitis Score (AAS) ≥ 7 or Paediatric Appendicitis Score (PAS) ≥ 7 suggests surgery"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound (or CT if available)",
+     "b": "Does the appendix appear enlarged (>6 mm) or non‑compressible? Positive imaging confirms appendicitis; a normal scan does not fully exclude early disease."
+    },
+    {
+     "a": "White blood cell count",
+     "b": "Is leukocytosis present (>10 ×10⁹/L) with neutrophilia? Supports inflammation but can be normal early; rely on clinical picture if unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by intra‑operative findings or imaging: uncomplicated, gangrenous, perforated, or with abscess.",
+   "b": [
+    "Uncomplicated: inflamed but intact wall",
+    "Gangrenous: necrotic wall, high risk of perforation",
+    "Perforated: free air or fluid, requires broader antibiotics"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Obstruction is the primary trigger; infection may follow.",
+   "b": [
+    "Fecalith or stool impaction (most common)",
+    "Lymphoid hyperplasia (children, viral infections)",
+    "Parasites (e.g., Enterobius) in low‑resource settings",
+    "Tuberculous involvement of the appendix (rare, TB endemic areas)",
+    "Neoplasms (carcinoid, mucinous) – uncommon"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Pain evolution, systemic signs, and physical findings guide suspicion.",
+   "b": [
+    "Early: vague periumbilical pain, nausea, anorexia",
+    "Later: RLQ tenderness, guarding, rebound, low‑grade fever",
+    "Children/elderly may have atypical pain or absent fever"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer specific clinical questions; adapt when resources are limited.",
+   "t": [
+    {
+     "a": "Focused abdominal exam",
+     "b": "Is there localized RLQ tenderness or peritoneal signs? Positive exam raises pre‑test probability."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Is the appendix visualised and enlarged? Confirms diagnosis; if unavailable, proceed to surgery based on clinical score."
+    },
+    {
+     "a": "CT abdomen with contrast (if available)",
+     "b": "Does CT show an inflamed appendix, perforation, or abscess? Provides definitive staging."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients at risk of rapid deterioration.",
+   "b": [
+    "Perforation → peritonitis, sepsis",
+    "Appendiceal abscess or phlegmon",
+    "Pediatric or immunocompromised patients may develop rapid sepsis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Definitive treatment is surgical removal; antibiotics cover typical flora.",
+   "b": [
+    "Appendectomy (open or laparoscopic) – removes source of infection",
+    "Broad‑spectrum IV antibiotics (e.g., a third‑generation cephalosporin plus metronidazole) for uncomplicated cases",
+    "Add anaerobic coverage (metronidazole) and consider extended coverage (piperacillin‑tazobactam) if perforated or abscess present",
+    "Avoid monotherapy with aminoglycosides alone due to poor intra‑abdominal penetration"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑operative care focuses on wound healing and monitoring for infection.",
+   "b": [
+    "Review wound daily; educate on signs of infection",
+    "In low‑resource settings, ensure adequate hydration and early oral intake when tolerated",
+    "No specific primary prevention; prompt treatment of fecaliths or parasites may reduce risk"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic right lower quadrant pain.",
+   "b": [
+    "Mesenteric adenitis",
+    "Right‑sided colic (ureteric stone)",
+    "Crohn’s disease of the terminal ileum",
+    "Gynecologic pathology (ovarian torsion, ectopic pregnancy)",
+    "Acute cholecystitis (especially in atypical presentations)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Beware of false‑negative or misleading findings.",
+   "b": [
+    "Normal WBC or CRP early in disease – do not rule out appendicitis",
+    "Ultrasound may miss a retrocecal appendix; consider CT if suspicion remains high",
+    "Pregnancy can shift appendix location, altering exam findings"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening abdominal pain, fever >38 °C, vomiting, or signs of peritonitis",
+  "Rapid heart rate, low blood pressure, or altered mental status – possible sepsis"
+ ],
+ "faq": [
+  {
+   "q": "Why does pain start around the umbilicus?",
+   "a": "Visceral afferents from the appendix travel with the mid‑gut to T10, producing periumbilical pain before the parietal peritoneum is inflamed."
+  },
+  {
+   "q": "When is non‑operative management appropriate?",
+   "a": "In selected uncomplicated cases where surgery is unavailable, antibiotics alone may be used, but recurrence risk remains."
+  },
+  {
+   "q": "What is the role of a fecalith?",
+   "a": "A fecalith blocks the lumen, leading to bacterial overgrowth, increased intraluminal pressure, and inflammation."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiological steps from luminal obstruction to perforation in acute appendicitis.",
+  "Interpret an Adult Appendicitis Score of 8 and outline the next management steps.",
+  "List three red‑flag signs that indicate a perforated appendix and the immediate treatment required."
+ ],
+ "related": [
+  "Acute abdomen",
+  "Peritonitis",
+  "Intestinal obstruction",
+  "Crohn’s disease",
+  "Gynecologic emergencies",
+  "Sepsis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,134 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The gluteus maximus is the largest buttock muscle, responsible for hip extension and external rotation. It is key for standing, walking, and climbing stairs.",
+ "aka": [
+  "Glute Max",
+  "Gluteus maximus muscle"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A thick, superficial muscle covering the posterior hip, forming the bulk of the buttock.",
+   "b": [
+    "Largest skeletal muscle in the body",
+    "Provides power for hip extension"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Originates from the ilium, sacrum, coccyx, and thoracolumbar fascia; inserts into the iliotibial tract and gluteal tuberosity of the femur.",
+   "b": [
+    "Broad origin for strong leverage",
+    "Insertion via IT band transmits force to the knee"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Superficial to the gluteus medius and minimus; deep to the subcutaneous fat and skin; overlies the sciatic nerve in the gluteal region.",
+   "b": [
+    "Sciatic nerve runs beneath the muscle",
+    "Important landmark for intramuscular injections"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Primarily from the inferior gluteal artery, with contributions from the superior gluteal artery.",
+   "b": [
+    "Inferior gluteal artery supplies lower fibers",
+    "Superior gluteal artery supplies upper fibers"
+   ],
+   "t": [
+    {
+     "a": "Doppler ultrasound of gluteal vessels",
+     "b": "Assess arterial patency when ischemic buttock pain suspected; absent flow suggests vascular injury"
+    }
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Innervated by the inferior gluteal nerve (L5‑S2).",
+   "b": [
+    "Motor only; no sensory component",
+    "Lesion causes weak hip extension"
+   ],
+   "t": [
+    {
+     "a": "Electromyography (EMG)",
+     "b": "Detects inferior gluteal nerve injury; reduced motor unit potentials indicate neuropathy"
+    }
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Extends and laterally rotates the hip; stabilises the pelvis during gait; assists in rising from a seated position.",
+   "b": [
+    "Key for climbing stairs",
+    "Helps maintain upright posture"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Weakness or injury can cause gait disturbances, lower back pain, and difficulty rising. Overuse may lead to gluteal tendinopathy; trauma can cause avulsion fractures.",
+   "b": [
+    "Inferior gluteal nerve palsy → hip extension weakness",
+    "Gluteal tendinopathy common in runners",
+    "Avulsion fracture in adolescents after forceful hip extension"
+   ],
+   "t": [
+    {
+     "a": "MRI of pelvis",
+     "b": "If MRI unavailable, use bedside ultrasound to detect large tears"
+    },
+    {
+     "a": "Straight‑leg raise test",
+     "b": "Assesses hip extension strength; inability suggests gluteus maximus weakness"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "During physical exam, ask the patient to rise from a seated position and extend the hip against resistance to test strength.",
+   "b": [
+    "Hip extension against resistance evaluates gluteus maximus",
+    "Observe for asymmetry of buttock bulk"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of hip extension after trauma (possible nerve injury or fracture)",
+  "Severe buttock pain with fever (possible deep infection or abscess)",
+  "Rapidly expanding gluteal swelling causing neurovascular compromise"
+ ],
+ "faq": [
+  {
+   "q": "Why is the inferior gluteal nerve more important than the superior gluteal nerve for this muscle?",
+   "a": "The inferior gluteal nerve provides the motor supply to gluteus maximus; the superior gluteal nerve supplies the more superficial gluteal muscles."
+  },
+  {
+   "q": "Can a gluteal injection damage the gluteus maximus?",
+   "a": "If injected too low, it can injure the sciatic nerve; proper upper‑outer quadrant avoids muscle damage and nerve injury."
+  },
+  {
+   "q": "What posture problem can result from chronic gluteus maximus weakness?",
+   "a": "Weakness leads to anterior pelvic tilt and low back pain due to loss of posterior pelvic support."
+  }
+ ],
+ "exam": [
+  "Describe the origin, insertion, nerve and primary action of the gluteus maximus.",
+  "Explain how to test gluteus maximus strength in a clinical exam.",
+  "Discuss the management steps for a patient with inferior gluteal nerve palsy."
+ ],
+ "related": [
+  "Gluteus medius",
+  "Inferior gluteal nerve",
+  "Sciatic nerve",
+  "Hip extension biomechanics",
+  "Gluteal tendinopathy",
+  "Pelvic floor muscles"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

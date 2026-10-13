@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Primary sclerosing cholangitis is a chronic, immune‑mediated disease of the intra‑ and extra‑hepatic bile ducts that leads to progressive fibrosis and beading on imaging. It is strongly linked to ulcerative colitis and presents with cholestatic liver enzyme elevation and pruritus.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "PSC is defined by chronic inflammation, obliterative fibrosis, and segmental dilation of bile ducts, producing a characteristic beaded appearance on cholangiography. Diagnosis requires a cholestatic pattern of liver enzymes, imaging evidence of ductal irregularity, and exclusion of other cholestatic diseases.",
+   "b": [
+    "Cholestatic liver enzymes (↑ALP, ↑γ‑GT)",
+    "Beaded ducts on MRCP or ERCP"
+   ],
+   "t": [
+    {
+     "a": "Serum alkaline phosphatase",
+     "b": "Is the patient cholestatic? ↑ALP suggests cholestasis."
+    },
+    {
+     "a": "Serum γ‑GT",
+     "b": "Confirms cholestasis; ↑γ‑GT supports bile duct injury."
+    },
+    {
+     "a": "MRCP",
+     "b": "Shows beaded ducts; confirms PSC when combined with labs."
+    },
+    {
+     "a": "Autoimmune serology (ANA, ASMA)",
+     "b": "Rules out autoimmune hepatitis; negative in most PSC."
+    },
+    {
+     "a": "Hepatitis serology (HBV, HCV)",
+     "b": "Excludes viral hepatitis as cause of cholestasis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Mayo Risk Score and the Mayo Clinic staging system stratify prognosis based on bilirubin, albumin, INR, and variceal bleeding history. Early stages have normal bilirubin; advanced stages show cirrhosis and portal hypertension.",
+   "b": [
+    "Mayo Risk Score (bilirubin, albumin, INR, varices)"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "PSC’s exact cause is unknown, but it is considered an autoimmune process often triggered by gut‑liver axis dysregulation. The strongest association is with ulcerative colitis.",
+   "b": [
+    "Ulcerative colitis (70% of PSC)",
+    "Autoimmune dysregulation",
+    "Possible bacterial translocation from gut"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report fatigue, pruritus, and jaundice. Physical exam may reveal scleral icterus, hepatomegaly, and signs of portal hypertension. Extra‑intestinal manifestations include uveitis and inflammatory arthritis.",
+   "b": [
+    "Chronic fatigue",
+    "Pruritus",
+    "Jaundice"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A stepwise work‑up confirms cholestasis, excludes mimics, and assesses liver damage. In low‑resource settings, basic biochemistry and ultrasound can guide further testing.",
+   "t": [
+    {
+     "a": "Serum bilirubin",
+     "b": "Is the patient jaundiced? ↑Total bilirubin indicates cholestasis."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Detects biliary dilation and liver parenchyma; useful when MRCP unavailable."
+    },
+    {
+     "a": "Serum albumin",
+     "b": "Assesses synthetic function; low albumin predicts cirrhosis."
+    },
+    {
+     "a": "INR",
+     "b": "Evaluates clotting; prolonged INR suggests advanced liver disease."
+    },
+    {
+     "a": "Endoscopic retrograde cholangiopancreatography (ERCP)",
+     "b": "Provides definitive ductal imaging and allows therapeutic intervention if needed."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "PSC can progress to cirrhosis, portal hypertension, cholangiocarcinoma, and liver failure. Sudden worsening of jaundice, ascites, or encephalopathy warrants urgent care.",
+   "b": [
+    "Rapid rise in bilirubin",
+    "New ascites",
+    "Encephalopathy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "No disease‑modifying therapy exists; management focuses on treating associated ulcerative colitis, preventing complications, and monitoring for cholangiocarcinoma. Ursodeoxycholic acid may improve liver enzymes but does not alter prognosis.",
+   "b": [
+    "Ursodeoxycholic acid (improves ALP)",
+    "Infliximab or azathioprine for active UC",
+    "Endoscopic dilation for symptomatic strictures",
+    "Regular surveillance colonoscopy for UC"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Patients require yearly liver function tests, imaging, and colonoscopy. Lifestyle measures include avoiding hepatotoxic drugs and maintaining a healthy diet.",
+   "b": [
+    "Annual LFTs",
+    "MRCP every 1–2 years",
+    "Colonoscopy every 1–2 years"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other cholestatic liver diseases such as primary biliary cholangitis, drug‑induced cholestasis, and viral hepatitis can mimic PSC.",
+   "b": [
+    "Primary biliary cholangitis (anti‑M2 antibodies)",
+    "Drug‑induced cholestasis (e.g., amoxicillin‑clavulanate)",
+    "Hepatitis B/C"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serum ALP can be elevated in bone disease; γ‑GT may be normal in early PSC. Imaging may miss early ductal changes if low‑resolution modalities are used.",
+   "b": [
+    "Bone disease ↑ALP",
+    "Early PSC may have normal γ‑GT"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden increase in jaundice",
+  "New ascites",
+  "Altered mental status",
+  "Unexplained weight loss"
+ ],
+ "faq": [
+  {
+   "q": "Is PSC inherited?",
+   "a": "Most cases are sporadic; a small percentage may have a family history, but no clear inheritance pattern."
+  },
+  {
+   "q": "Can PSC be cured?",
+   "a": "There is no cure; treatment focuses on managing complications and monitoring for cancer."
+  },
+  {
+   "q": "Does PSC always cause liver failure?",
+   "a": "Many patients remain asymptomatic for years; only a subset progress to cirrhosis or liver failure."
+  }
+ ],
+ "exam": [
+  "Explain why ulcerative colitis is the most common associated disease with PSC.",
+  "Describe the imaging findings that differentiate PSC from primary biliary cholangitis.",
+  "Outline the surveillance strategy for cholangiocarcinoma in a patient with PSC."
+ ],
+ "related": [
+  "Ulcerative colitis",
+  "Primary biliary cholangitis",
+  "Cholangiocarcinoma",
+  "Autoimmune hepatitis",
+  "Portal hypertension"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,147 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Bleeding disorders are conditions where normal hemostasis fails, leading to excessive or prolonged bleeding. They arise from platelet defects, coagulation factor deficiencies, or vascular abnormalities. Clinicians must identify the underlying cause to guide targeted therapy.",
+ "aka": [
+  "Hemorrhagic disorders",
+  "Bleeding diatheses"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Bleeding disorders are characterized by spontaneous or trauma‑induced bleeding that is disproportionate to the injury. Diagnosis requires a clinical history, physical exam, and a focused laboratory workup to locate the defect.",
+   "b": [
+    "History of mucosal bleeding, easy bruising, prolonged bleeding after procedures"
+   ],
+   "t": [
+    {
+     "a": "Bleeding time",
+     "b": "Assesses platelet adhesion; prolonged time suggests platelet function defect or vWF deficiency."
+    },
+    {
+     "a": "Prothrombin time (PT)",
+     "b": "Evaluates extrinsic pathway; prolonged PT indicates factor VII, X, or common pathway defects."
+    },
+    {
+     "a": "Activated partial thromboplastin time (aPTT)",
+     "b": "Assesses intrinsic pathway; prolonged aPTT points to factors VIII, IX, XI, XII or lupus anticoagulant."
+    },
+    {
+     "a": "Platelet count",
+     "b": "Detects thrombocytopenia; low count explains bleeding but does not explain qualitative defects."
+    },
+    {
+     "a": "Von Willebrand factor antigen and activity",
+     "b": "Low levels or activity confirm von Willebrand disease; distinguishes type 1 from type 2."
+    },
+    {
+     "a": "Factor assays (VIII, IX, XI, etc.)",
+     "b": "Quantify specific factor levels; <5% is severe, 5‑40% moderate, >40% mild."
+    },
+    {
+     "a": "Mixing study",
+     "b": "Determines if prolonged aPTT corrects with normal plasma (factor deficiency) or not (inhibitor)."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by factor level and clinical bleeding frequency. The ISTH scale classifies von Willebrand disease into types 1, 2 (subtypes), and 3 based on antigen and activity.",
+   "b": [
+    "Mild: >40% or vWF >40%; usually asymptomatic or minor bleeding"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Inherited defects predominate, but acquired causes are common in low‑resource settings. Prioritize the most frequent etiologies first.",
+   "b": [
+    "Disseminated intravascular coagulation (sepsis, TB)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Bleeding patterns vary with the underlying defect. Recognizing the pattern guides the diagnostic pathway.",
+   "b": [
+    "Intracranial hemorrhage (severe factor deficiency)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use a stepwise approach, starting with basic tests and moving to specific assays. Adjust the plan if resources are limited.",
+   "b": [
+    "If liver disease suspected, check albumin, bilirubin, INR, and imaging"
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain findings signal imminent danger and require urgent intervention.",
+   "b": [
+    "Infections from repeated blood product exposure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care and monitor for complications. Drug choices depend on the defect and resource availability.",
+   "b": [
+    "Monitor for inhibitor development in hemophilia patients"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring, patient education, and prophylaxis reduce morbidity. Prevention focuses on avoiding triggers and ensuring safe procedures.",
+   "b": [
+    "Education on recognizing early bleeding signs"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic bleeding disorders; distinguishing them prevents mismanagement.",
+   "b": [
+    "Acquired von Willebrand disease vs. type 2 von Willebrand disease"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some laboratory values may appear normal despite significant bleeding risk, especially in resource‑limited settings.",
+   "b": [
+    "Factor assays may be unavailable, leading to reliance on clinical scoring"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Uncontrolled bleeding, especially intracranial or intra‑abdominal; severe anemia with active bleeding; sudden swelling of a joint; signs of DIC such as petechiae and low fibrinogen"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common inherited bleeding disorder?",
+   "a": "Von Willebrand disease, caused by deficient or defective vWF leading to impaired platelet adhesion and low factor VIII."
+  },
+  {
+   "q": "How do I differentiate hemophilia from von Willebrand disease?",
+   "a": "Hemophilia shows isolated prolonged aPTT with normal vWF; von Willebrand disease shows prolonged bleeding time, prolonged aPTT, and low vWF antigen/activity."
+  },
+  {
+   "q": "Can malaria cause bleeding?",
+   "a": "Yes, malaria can cause thrombocytopenia and consumptive coagulopathy, leading to spontaneous bleeding."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic workup for a patient with prolonged bleeding after dental extraction.",
+  "Describe the management plan for a child with hemophilia A presenting with a hemarthrosis.",
+  "Compare the clinical features that help distinguish von Willebrand disease from platelet function disorders."
+ ],
+ "related": [
+  "Hemostasis",
+  "Coagulation cascade",
+  "Platelet disorders",
+  "Liver disease and coagulopathy",
+  "Disseminated intravascular coagulation",
+  "Antifibrinolytic therapy",
+  "Hemophilia prophylaxis",
+  "Low‑resource diagnostics"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

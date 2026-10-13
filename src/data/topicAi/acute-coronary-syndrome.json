@@ -1,0 +1,213 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Acute coronary syndrome (ACS) is a spectrum of urgent heart conditions caused by sudden plaque rupture and clot formation in coronary arteries, leading to reduced blood flow and myocardial injury. Prompt recognition, risk stratification, and treatment are essential to prevent death and long‑term damage.",
+ "aka": [
+  "unstable angina",
+  "STEMI",
+  "NSTEMI"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ACS includes unstable angina, NSTEMI, and STEMI, diagnosed by chest pain, ECG changes, and cardiac biomarkers indicating myocardial injury.",
+   "b": [
+    "Chest pain typical of myocardial ischaemia",
+    "ECG shows ST changes or T‑wave inversion",
+    "Troponin rise confirms infarction"
+   ],
+   "t": [
+    {
+     "a": "12‑lead ECG",
+     "b": "ST‑elevation → STEMI; depression/T‑inversion → NSTEMI/unstable angina"
+    },
+    {
+     "a": "Cardiac troponin I/T",
+     "b": "Elevated with rise/fall → myocardial infarction; normal → unstable angina"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Normal or nonspecific; look for pneumothorax, pneumonia, aortic dissection"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Risk is stratified using TIMI, GRACE, and ECG findings; STEMI is highest urgency, followed by NSTEMI with high GRACE score, then unstable angina.",
+   "b": [
+    "STEMI → immediate reperfusion",
+    "High GRACE score → early invasive strategy",
+    "Low risk → consider early discharge"
+   ],
+   "t": [
+    {
+     "a": "GRACE score",
+     "b": "Higher score → aggressive monitoring, possible ICU"
+    },
+    {
+     "a": "TIMI score",
+     "b": "≥3 points → consider early angiography"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Plaque rupture with thrombosis is the primary cause; secondary triggers include severe anemia, tachyarrhythmia, cocaine, and in low‑resource settings, infections like HIV or TB that accelerate atherosclerosis.",
+   "b": [
+    "Plaque rupture → thrombus formation",
+    "Coronary spasm (cocaine)",
+    "Anemia or tachycardia increasing demand"
+   ],
+   "t": [
+    {
+     "a": "Coronary angiography",
+     "b": "Identifies culprit vessel for PCI; if unavailable, treat medically based on ECG and biomarkers"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical presentation is central chest pressure lasting >5 min, radiating to arm/jaw, with sweating, nausea, and dyspnoea; atypical pain more common in women, diabetics, and the elderly.",
+   "b": [
+    "Chest pressure or tightness",
+    "Radiation to left arm, neck, jaw",
+    "Associated diaphoresis, nausea, dyspnoea"
+   ],
+   "t": [
+    {
+     "a": "Symptom checklist",
+     "b": "Typical → high suspicion; atypical still warrants ECG if risk factors present"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "ECG, troponin, full blood count, renal function, lipid profile, and bedside echocardiography guide diagnosis and management.",
+   "b": [
+    "ECG within 10 min of arrival",
+    "Serial troponins 0, 3‑6 h"
+   ],
+   "t": [
+    {
+     "a": "Bedside echo",
+     "b": "Presence supports infarction; if echo unavailable, rely on ECG and biomarkers"
+    },
+    {
+     "a": "Lipid panel",
+     "b": "High LDL → start statin; if lab unavailable, treat empirically"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Cardiogenic shock, ventricular arrhythmias, heart failure, and mechanical complications (ventricular rupture, papillary muscle rupture) are life‑threatening.",
+   "b": [
+    "Hypotension with cool extremities → shock",
+    "New LBBB or persistent ST‑elevation → possible rupture"
+   ],
+   "t": [
+    {
+     "a": "Hemodynamic monitoring",
+     "b": "Systolic <90 mmHg or MAP <65 mmHg → ICU, inotropes"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Reperfusion (PCI or thrombolysis) for STEMI, early invasive strategy for high‑risk NSTEMI, plus antiplatelet, anticoagulation, beta‑blocker, ACE‑I, and statin therapy. Avoid fibrinolysis if contraindicated (recent bleed, stroke).",
+   "b": [
+    "Aspirin + P2Y12 inhibitor",
+    "Heparin or low‑molecular‑weight heparin",
+    "Beta‑blocker unless bradycardic or severe asthma"
+   ],
+   "t": [
+    {
+     "a": "Primary PCI",
+     "b": "Yes → immediate PCI; if not, give thrombolysis if no contraindications"
+    },
+    {
+     "a": "Thrombolysis (e.g., alteplase)",
+     "b": "Give if PCI delayed and no bleed risk; monitor for reperfusion signs"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After discharge, patients need cardiac rehab, risk‑factor control, and lifelong antiplatelet plus high‑intensity statin. Monitor for recurrent ischemia and heart‑failure signs.",
+   "b": [
+    "Lifestyle modification: smoking cessation, diet, exercise",
+    "Regular lipid and blood pressure checks",
+    "Scheduled stress test if symptoms recur"
+   ],
+   "t": [
+    {
+     "a": "Outpatient stress test",
+     "b": "Positive → consider repeat angiography"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pulmonary embolism, aortic dissection, pericarditis, and gastro‑oesophageal reflux can mimic chest pain but have distinct ECG or imaging findings.",
+   "b": [
+    "PE → tachycardia, pleuritic pain, CT pulmonary angiography"
+   ],
+   "t": [
+    {
+     "a": "D‑dimer",
+     "b": "Elevated supports PE; normal does not rule out ACS"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Early troponin may be normal in very early MI; ECG can be normal in posterior infarction; anemia can mask typical pain.",
+   "b": [
+    "Normal troponin <3 h after onset",
+    "Posterior MI may show only reciprocal changes"
+   ],
+   "t": [
+    {
+     "a": "Serial troponins",
+     "b": "Yes – repeat at 3‑6 h if initial normal but suspicion high"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden chest pressure with sweating or shortness of breath",
+  "Unrelenting pain >20 min despite rest",
+  "Loss of consciousness or severe hypotension"
+ ],
+ "faq": [
+  {
+   "q": "Why is plaque rupture more dangerous than gradual narrowing?",
+   "a": "Rupture exposes thrombogenic material, causing rapid clot formation that can completely block flow."
+  },
+  {
+   "q": "Can a patient with normal ECG still have an MI?",
+   "a": "Yes; early or posterior infarctions may have normal ECG, so troponin trends are crucial."
+  },
+  {
+   "q": "What is the first medication given in suspected ACS?",
+   "a": "A chewable aspirin to inhibit platelet aggregation immediately."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic criteria that differentiate unstable angina, NSTEMI, and STEMI.",
+  "Interpret a sample ECG and troponin trend to assign the correct ACS category.",
+  "Outline the immediate management steps for a STEMI when PCI is unavailable."
+ ],
+ "related": [
+  "Stable angina",
+  "Heart failure",
+  "Arrhythmias",
+  "Cardiogenic shock",
+  "Coronary artery disease",
+  "Cardiac rehabilitation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,131 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The humerus is the long bone of the upper arm, connecting shoulder to elbow and serving as attachment for many muscles. Its anatomy determines patterns of fracture, neurovascular injury, and joint disease.",
+ "aka": [
+  "Upper arm bone",
+  "Humeral shaft"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The humerus spans from the glenoid fossa of the scapula to the trochlea and capitulum of the ulna and radius, forming the shoulder and elbow joints.",
+   "b": [
+    "Proximal end: head, anatomical neck, greater/lesser tubercles",
+    "Shaft: deltoid tuberosity, radial groove",
+    "Distal end: capitulum, trochlea, medial/lateral epicondyles"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It is a cylindrical bone with a proximal epiphysis, a diaphysis, and a distal epiphysis; the medullary cavity contains red marrow in children and yellow marrow in adults.",
+   "b": [
+    "Head articulates with glenoid cavity",
+    "Intertubercular groove holds the long head of biceps",
+    "Olecranon fossa allows elbow extension"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly the brachial artery and median nerve lie in the bicipital groove; posteriorly the radial nerve runs in the spiral groove; laterally the deltoid muscle covers the proximal shaft.",
+   "b": [
+    "Radial nerve vulnerable at mid‑shaft",
+    "Axillary nerve near surgical neck",
+    "Muscle attachments influence fracture displacement"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The humeral head receives the anterior and posterior humeral circumflex arteries; the shaft is supplied by the profunda brachii and nutrient artery; distal epiphysis gets branches from the radial recurrent artery.",
+   "b": [
+    "Compromise of circumflex arteries can cause avascular necrosis",
+    "Nutrient artery injury may impair healing"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory and motor innervation to the bone itself is via periosteal branches of the radial, axillary, and musculocutaneous nerves.",
+   "b": [
+    "Radial nerve injury → wrist drop",
+    "Axillary nerve injury → deltoid weakness"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Provides lever arm for shoulder abduction, flexion, and rotation; transmits forces from the hand to the trunk; houses marrow for hematopoiesis.",
+   "b": [
+    "Muscle attachments generate arm movements",
+    "Marrow supports blood cell production"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Fractures are common at the surgical neck, mid‑shaft, and distal metaphysis; they may be complicated by neurovascular injury, infection, or avascular necrosis.",
+   "b": [
+    "Surgical‑neck fracture → axillary nerve risk",
+    "Mid‑shaft fracture → radial nerve palsy",
+    "Distal fracture → growth plate injury in children"
+   ],
+   "t": [
+    {
+     "a": "X‑ray (AP & lateral)",
+     "b": "Confirms fracture location, displacement, and joint involvement; if unavailable, use clinical alignment and neuro exam."
+    },
+    {
+     "a": "CT scan",
+     "b": "Defines complex intra‑articular patterns; essential for surgical planning when X‑ray unclear."
+    },
+    {
+     "a": "MRI",
+     "b": "Detects occult fractures, marrow edema, and early avascular necrosis; useful if X‑ray normal but pain persists."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams: anatomy of the proximal humerus, common nerve injury sites, and the concept of avascular necrosis after dislocation.",
+   "b": [
+    "Remember radial groove runs posteriorly on the shaft",
+    "Axillary nerve lies inferior to the glenoid rim",
+    "Blood supply to head is tenuous after fracture"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Open fracture with bone exposure",
+  "Absent radial pulse after humeral injury",
+  "Progressive neurological deficit (e.g., worsening wrist drop)"
+ ],
+ "faq": [
+  {
+   "q": "Why is the humeral head prone to avascular necrosis?",
+   "a": "Its blood supply comes mainly from the circumflex arteries, which can be torn in dislocation or surgical‑neck fractures."
+  },
+  {
+   "q": "What is the most common nerve injured with a mid‑shaft humeral fracture?",
+   "a": "The radial nerve, leading to wrist and finger extension weakness."
+  },
+  {
+   "q": "How does a humeral fracture affect blood cell production?",
+   "a": "The proximal humerus contains red marrow; severe injury can transiently reduce marrow activity but usually recovers."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical landmarks of the proximal humerus and their clinical significance.",
+  "Explain how a mid‑shaft fracture can produce a radial nerve palsy and how you would assess it.",
+  "Outline the steps to evaluate a patient with a suspected humeral head fracture, including imaging and urgent management."
+ ],
+ "related": [
+  "Scapula",
+  "Clavicle",
+  "Elbow joint",
+  "Shoulder joint",
+  "Radial nerve",
+  "Axillary nerve",
+  "Bone marrow"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

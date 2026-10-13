@@ -1,0 +1,119 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Spermatogenesis is the 74‑day production of sperm in seminiferous tubules, driven by Sertoli‑cell support and Leydig‑cell testosterone. Clinicians assess it when evaluating infertility, endocrine disorders, or testicular toxicity.",
+ "aka": [
+  "Sperm production"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Spermatogenesis occurs in the seminiferous tubules of the testes. It is a continuous, 74‑day cycle that transforms spermatogonia into mature spermatozoa, requiring tight coordination between germ cells, Sertoli cells, and Leydig cells.",
+   "b": [
+    "Spermatogonia (stem cells) → primary spermatocytes → secondary spermatocytes → spermatids → spermatozoa"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "The process has two main phases: spermatocytogenesis (proliferation and meiosis) and spermiogenesis (maturation). Sertoli cells provide nutrients, physical support, and a blood‑testis barrier, while Leydig cells secrete testosterone that fuels the entire cycle.",
+   "b": [
+    "Sertoli cells form the blood‑testis barrier, secrete lactate and androgen‑binding protein"
+   ],
+   "t": [
+    {
+     "a": "Testicular ultrasound",
+     "b": "Detects structural lesions or tumors that may impair spermatogenesis; abnormal echotexture suggests damage"
+    },
+    {
+     "a": "Serum FSH",
+     "b": "High FSH indicates Sertoli cell dysfunction or germ cell loss; low FSH with normal testosterone suggests primary testicular failure"
+    },
+    {
+     "a": "Serum LH",
+     "b": "Low LH with low testosterone points to central hypogonadism; normal LH with low testosterone suggests Leydig cell failure"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Hypothalamic GnRH pulses stimulate pituitary LH and FSH. LH acts on Leydig cells to produce testosterone; FSH acts on Sertoli cells to support germ cell development. Testosterone feeds back negatively on GnRH and LH.",
+   "b": [
+    "GnRH pulse frequency: high pulses favor FSH, low pulses favor LH"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Disruptions can arise from genetic defects, infections, toxins, or endocrine disorders. Common causes in low‑resource settings include HIV, TB, malaria, schistosomiasis, and herbal remedies containing gonadotoxins.",
+   "b": [
+    "Genetic: Klinefelter, Y‑chromosome microdeletions, CFTR mutations"
+   ],
+   "t": [
+    {
+     "a": "Seminal analysis",
+     "b": "Assesses sperm count, motility, morphology; abnormal results guide further endocrine or genetic testing"
+    },
+    {
+     "a": "Serum testosterone",
+     "b": "Low testosterone with normal FSH suggests Leydig cell failure; high testosterone with low sperm count may indicate endocrine resistance"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Clinicians evaluate spermatogenesis in infertility workups, endocrine disorders, and when assessing testicular toxicity from drugs or environmental exposures.",
+   "b": [
+    "Infertility: primary vs secondary"
+   ],
+   "t": [
+    {
+     "a": "Hormone panel (FSH, LH, testosterone)",
+     "b": "Differentiates primary testicular failure from secondary hypogonadism"
+    },
+    {
+     "a": "Genetic testing (Y‑chromosome microdeletion panel)",
+     "b": "Identifies causes of non‑obstructive azoospermia"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the 74‑day cycle and the two phases. High FSH with normal testosterone indicates primary testicular failure. Low testosterone with normal FSH suggests central hypogonadism.",
+   "b": [
+    "74‑day cycle"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe testicular pain, swelling, or signs of infection (e.g., epididymitis)",
+  "Rapid decline in semen quality with unexplained endocrine changes"
+ ],
+ "faq": [
+  {
+   "q": "What is the normal sperm count?",
+   "a": "At least 15 million sperm per milliliter with 40% motility and 4% normal morphology."
+  },
+  {
+   "q": "Can herbal medicines affect spermatogenesis?",
+   "a": "Yes, many herbs contain compounds that inhibit Leydig cells or damage germ cells, leading to reduced sperm production."
+  },
+  {
+   "q": "How long does it take for testosterone therapy to restore sperm?",
+   "a": "Sperm production may resume after 3–4 months of adequate testosterone levels, but recovery depends on underlying cause."
+  }
+ ],
+ "exam": [
+  "Explain the hormonal regulation of spermatogenesis and the roles of FSH and LH.",
+  "Describe the diagnostic workup for a man with non‑obstructive azoospermia.",
+  "Outline the management of testicular toxicity caused by a commonly used antimalarial drug."
+ ],
+ "related": [
+  "Testicular endocrine disorders",
+  "Infertility assessment",
+  "Leydig cell function",
+  "Spermatogenic toxicology"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

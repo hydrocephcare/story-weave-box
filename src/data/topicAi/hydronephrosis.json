@@ -1,0 +1,136 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Hydronephrosis is the dilation of the renal pelvis and calyces caused by urine back‑pressure from an obstruction, leading to progressive kidney damage if untreated.",
+ "aka": [
+  "Urinary tract obstruction"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hydronephrosis is the swelling of the kidney’s collecting system due to impaired urine flow. Diagnosis is clinical plus imaging, usually ultrasound, which shows calyceal dilatation and loss of cortical thickness.",
+   "b": [
+    "Ultrasound: key first test"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Shows dilated pelvis/calyces and cortical thinning – confirms obstruction and estimates severity"
+    },
+    {
+     "a": "CT urography",
+     "b": "Provides detailed anatomy of obstruction site and any stones or masses – used when ultrasound is inconclusive"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the Society of Urologic Surgeons system: Stage I (mild dilatation, preserved function) to Stage IV (severe dilatation, loss of function).",
+   "b": [
+    "Stage IV: >3 cm dilatation, GFR <30 ml/min"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Obstruction can be intrinsic or extrinsic. In low‑resource settings, common causes include stones, infections, and pregnancy‑related changes.",
+   "b": [
+    "Infections such as schistosomiasis – can cause bladder wall thickening"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms vary with severity and side. Mild cases may be asymptomatic; severe cases cause flank pain, hematuria, fever, or oliguria.",
+   "b": [
+    "Reduced urine output – in bilateral obstruction"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Work‑up focuses on confirming obstruction, identifying cause, and assessing kidney function.",
+   "b": [
+    "Cystoscopy – if bladder outlet obstruction suspected"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Elevated creatinine indicates impaired filtration – higher values suggest more severe obstruction"
+    },
+    {
+     "a": "eGFR",
+     "b": "Declining eGFR signals progressive loss of renal function – guides urgency of intervention"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed if there is infection, loss of kidney function, or impending renal failure.",
+   "b": [
+    "Severe bilateral hydronephrosis – can cause oligohydramnios in pregnancy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, relieve obstruction, and protect remaining renal function. Supportive care includes hydration and infection control.",
+   "b": [
+    "Avoid nephrotoxic drugs – to preserve remaining function"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular imaging and renal function tests are essential. Prevention focuses on early stone treatment and infection control.",
+   "b": [
+    "Treat UTIs promptly to avoid obstruction"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic hydronephrosis include renal cysts, pyelonephritis, and abdominal masses.",
+   "b": [
+    "Abdominal mass – may compress ureter but not dilate pelvis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal ultrasound can miss early obstruction; creatinine may remain normal until significant loss of function.",
+   "b": [
+    "Creatinine – can stay within normal limits until >50% loss of function"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe flank pain with fever",
+  "Rapid rise in creatinine",
+  "Loss of urine output",
+  "Bilateral hydronephrosis in pregnancy"
+ ],
+ "faq": [
+  {
+   "q": "Can hydronephrosis be asymptomatic?",
+   "a": "Yes, mild cases often have no symptoms and are found incidentally on imaging."
+  },
+  {
+   "q": "What is the most common cause worldwide?",
+   "a": "Kidney stones are the leading cause of urinary obstruction leading to hydronephrosis."
+  },
+  {
+   "q": "Does hydration help?",
+   "a": "Adequate fluid intake can help flush small stones but does not relieve established obstruction."
+  }
+ ],
+ "exam": [
+  "Explain how a ureteral stone causes hydronephrosis and the clinical consequences.",
+  "Describe the imaging steps you would take to diagnose hydronephrosis in a pregnant woman.",
+  "Outline the management plan for a patient with bilateral hydronephrosis due to bladder outlet obstruction."
+ ],
+ "related": [
+  "Urinary tract obstruction",
+  "Kidney stones",
+  "Pyelonephritis",
+  "Renal failure",
+  "Ureteropelvic junction obstruction"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

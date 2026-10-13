@@ -1,0 +1,99 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Adenylate cyclase (AC) converts ATP to cyclic AMP, a key second messenger that regulates metabolism, hormone signaling, and ion transport. Clinicians must recognize how altered AC activity underlies diseases like cholera, heart failure, and certain endocrine tumors.",
+ "aka": [
+  "adenylyl cyclase"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A membrane‑bound enzyme that synthesizes cAMP from ATP when activated by G‑protein α‑subunits or forskolin. cAMP activates protein kinase A, altering cellular functions.",
+   "b": [
+    "cAMP = intracellular messenger",
+    "AC is activated by G‑s and inhibited by G‑i"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Binding of an activated G‑s α‑subunit to AC changes its conformation, allowing ATP to be cyclized to cAMP. cAMP then binds PKA regulatory subunits, releasing catalytic activity.",
+   "b": [
+    "ATP → cAMP via AC",
+    "PKA phosphorylates target proteins"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "AC activity is increased by G‑s‑coupled receptors (β‑adrenergic, glucagon) and decreased by G‑i‑coupled receptors (α2‑adrenergic, muscarinic). Phosphodiesterases degrade cAMP, providing feedback.",
+   "b": [
+    "G‑s ↑ AC, G‑i ↓ AC",
+    "PDEs terminate cAMP signal"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Excessive AC activation (e.g., cholera toxin, β‑agonist overdose) causes high cAMP → secretory diarrhea or tachyarrhythmia. Loss of AC function can blunt hormonal responses, seen in some endocrine tumors.",
+   "b": [
+    "Cholera toxin ADP‑ribosylates G‑s → constitutive AC"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding AC helps manage conditions where cAMP is central: cholera diarrhea, heart failure (β‑blockers reduce AC drive), and certain endocrine neoplasms (e.g., McCune‑Albright syndrome).",
+   "b": [
+    "β‑blockers ↓ AC activity in heart failure",
+    "cAMP‑driven tumors may respond to PKA inhibitors"
+   ],
+   "t": [
+    {
+     "a": "Echocardiogram",
+     "b": "Is ventricular function reduced due to chronic β‑adrenergic stimulation? Low EF supports AC‑mediated cardiomyopathy"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the link between G‑protein signaling, AC, cAMP, and downstream effects. Remember cholera toxin mechanism and why β‑blockers are used in heart failure.",
+   "b": [
+    "cAMP ↑ → PKA activation → metabolic effects",
+    "G‑s → AC → cAMP; G‑i → inhibition"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe watery diarrhea with dehydration (cholera)",
+  "Acute decompensated heart failure with pulmonary edema",
+  "Sudden tachyarrhythmia unresponsive to standard therapy"
+ ],
+ "faq": [
+  {
+   "q": "How does cholera cause diarrhea?",
+   "a": "Cholera toxin ADP‑ribosylates G‑s, locking it active, so AC continuously makes cAMP, driving chloride and water secretion."
+  },
+  {
+   "q": "Why are β‑blockers used in heart failure?",
+   "a": "They block β‑adrenergic receptors, reducing G‑s activation of AC, lowering cAMP and myocardial oxygen demand."
+  },
+  {
+   "q": "What test confirms excess cAMP activity?",
+   "a": "Direct cAMP measurement is rarely available; clinical clues (e.g., cholera stool studies, hormone assays) are used instead."
+  }
+ ],
+ "exam": [
+  "Explain the mechanism by which cholera toxin increases intestinal secretion.",
+  "Describe how β‑adrenergic antagonists improve outcomes in chronic heart failure.",
+  "Differentiate G‑s and G‑i effects on adenylate cyclase and downstream cAMP levels."
+ ],
+ "related": [
+  "G‑protein coupled receptors",
+  "cAMP‑dependent protein kinase A",
+  "Phosphodiesterases",
+  "Beta‑adrenergic signaling",
+  "Cholera toxin pathophysiology",
+  "Heart failure pharmacology"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

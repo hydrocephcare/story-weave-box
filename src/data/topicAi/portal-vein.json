@@ -1,0 +1,113 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The portal vein is the main vessel delivering nutrient‑rich blood from the gastrointestinal tract to the liver. It forms by merging the splenic, superior mesenteric, and inferior mesenteric veins, and its anatomy dictates many clinical syndromes.",
+ "aka": [
+  "Portal venous system"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The portal vein is a large, non‑arterial vessel that carries blood from the gut to the liver for detoxification and metabolism. Its unique position makes it vulnerable to thrombosis and portal hypertension.",
+   "b": [
+    "Carries 70–80% of cardiac output",
+    "Provides nutrients and toxins to hepatocytes"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lies posterior to the stomach, runs between the pancreas and the duodenum, and enters the liver at the porta hepatis. The vein is formed by the union of the splenic and superior mesenteric veins, with the inferior mesenteric vein joining the splenic tributary.",
+   "b": [
+    "Right and left portal veins branch within the liver"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Posterior to the portal vein are the pancreas and the inferior vena cava. Anteriorly it is adjacent to the stomach and duodenum. The hepatic artery runs alongside it within the hepatoduodenal ligament.",
+   "b": [
+    "Portal vein lies behind the stomach"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The portal vein receives blood from the splenic, superior mesenteric, and inferior mesenteric veins. It delivers this blood to the liver sinusoids, where filtration and metabolism occur.",
+   "b": [
+    "Splenic vein drains spleen"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Autonomic innervation is minimal; the portal vein is mainly regulated by hepatic stellate cells and local cytokines rather than direct neural input."
+  },
+  {
+   "h": "Function",
+   "p": "It transports absorbed nutrients, bile acids, and gut microbiota products to the liver, enabling detoxification, glucose regulation, and synthesis of plasma proteins.",
+   "b": [
+    "Provides glucose to bloodstream"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Portal vein thrombosis (PVT) is a pre‑hepatic cause of portal hypertension, leading to splenomegaly, varices, and ascites. Causes include hypercoagulable states, infections, and malignancy.",
+   "b": [
+    "PVT causes portal hypertension"
+   ],
+   "t": [
+    {
+     "a": "Doppler ultrasound",
+     "b": "Shows reversed or slow flow, confirming PVT"
+    },
+    {
+     "a": "CT angiography",
+     "b": "Visualises thrombus and collateral vessels"
+    },
+    {
+     "a": "Coagulation profile",
+     "b": "Identifies underlying thrombophilia"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that portal hypertension can arise from pre‑hepatic (PVT), intra‑hepatic (cirrhosis), or post‑hepatic (Budd‑Chiari). In low‑resource settings, a palpable splenomegaly and a positive caput medusae are key signs.",
+   "b": [
+    "PVT presents with splenomegaly and varices"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Portal hypertension with variceal bleeding",
+  "Rapidly enlarging splenomegaly",
+  "Signs of hepatic failure"
+ ],
+ "faq": [
+  {
+   "q": "What causes portal vein thrombosis in low‑resource settings?",
+   "a": "Infections like malaria and HIV, chronic liver disease, and herbal remedies that alter coagulation."
+  },
+  {
+   "q": "How is portal hypertension diagnosed without Doppler?",
+   "a": "Clinical signs such as splenomegaly, caput medusae, and ascites, plus imaging if available."
+  },
+  {
+   "q": "Why is the portal vein called a ‘pre‑hepatic’ vessel?",
+   "a": "Because it delivers blood to the liver before it enters the hepatic circulation."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of portal hypertension caused by portal vein thrombosis.",
+  "Describe the clinical features that differentiate pre‑hepatic from intra‑hepatic portal hypertension.",
+  "Outline the first‑line investigations for suspected portal vein thrombosis in a resource‑limited setting."
+ ],
+ "related": [
+  "Portal hypertension",
+  "Splenic vein thrombosis",
+  "Budd‑Chiari syndrome",
+  "Hepatic cirrhosis",
+  "Coagulation disorders"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

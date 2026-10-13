@@ -1,0 +1,112 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Bilirubin is the breakdown product of heme from senescent red cells. The liver takes up unconjugated bilirubin, conjugates it with glucuronic acid, and excretes it in bile. Disruption at any step causes jaundice.",
+ "aka": [
+  "bilirubin metabolism",
+  "heme catabolism",
+  "bilirubin clearance"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Bilirubin results from heme degradation: heme → biliverdin → unconjugated bilirubin (UCB). UCB is insoluble, bound to albumin, and travels to the liver for conjugation.",
+   "b": [
+    "UCB is water‑insoluble; conjugated bilirubin (CB) is water‑soluble.",
+    "Normal total bilirubin: ≤1.2 mg/dL; direct (conjugated) ≤0.3 mg/dL."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Hepatocytes take up albumin‑bound UCB via OATP transporters, conjugate it with glucuronic acid using UDP‑glucuronosyltransferase (UGT1A1), and secrete CB into bile canaliculi via MRP2.",
+   "b": [
+    "UGT1A1 activity determines rate of conjugation.",
+    "Bile flows to intestine; gut bacteria convert CB to urobilinogen and stercobilin (stool color)."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Expression of OATP, UGT1A1, and MRP2 is up‑regulated by nuclear receptors (CAR, PXR) in response to bilirubin load and drugs. Neonates have low UGT1A1, causing physiologic jaundice.",
+   "b": [
+    "Inducers (e.g., phenobarbital) increase UGT1A1 activity.",
+    "Inhibition (e.g., bilirubin‑binding drugs) raises UCB levels."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Failure at any step leads to accumulation of UCB (pre‑hepatic) or CB (hepatic/post‑hepatic). Common patterns: hemolysis → ↑UCB; hepatocellular injury → mixed; biliary obstruction → ↑CB.",
+   "b": [
+    "Pre‑hepatic: hemolysis, G6PD deficiency, sickle cell.",
+    "Hepatic: viral hepatitis, malaria, TB drugs, alcoholic liver disease, Crigler‑Najjar, Gilbert.",
+    "Post‑hepatic: gallstones, cholangiocarcinoma, parasitic biliary obstruction (schistosomiasis)."
+   ],
+   "t": [
+    {
+     "a": "Serum bilirubin fractionation",
+     "b": "Distinguishes unconjugated vs conjugated rise; guides location of defect."
+    },
+    {
+     "a": "Liver function tests (ALT, AST, ALP, GGT)",
+     "b": "Identify hepatocellular vs cholestatic pattern; high ALP suggests biliary obstruction."
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Detects biliary dilatation or gallstones when CB is high; if unavailable, rely on clinical signs of obstruction."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Jaundice signals underlying disease. In neonates, high UCB risks kernicterus; in adults, persistent elevation may indicate liver failure or obstructive disease. Prompt recognition directs urgent care.",
+   "b": [
+    "Kernicterus: UCB >20 mg/dL in newborns → neurotoxicity.",
+    "Acute cholestasis: pruritus, dark urine, pale stools; risk of bile‑acid liver injury."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the three‑step pathway (heme → UCB → CB → bile) and the mnemonic “UCB = Unconjugated = Unbound, CB = Conjugated = Bile”. Recognize patterns of bilirubin fractions to localise disease.",
+   "b": [
+    "Pre‑hepatic ↑UCB, normal ALP; hepatic ↑both fractions, ALT/AST rise; post‑hepatic ↑CB, ALP high.",
+    "Crigler‑Najjar type I: absent UGT1A1, severe neonatal jaundice, fatal without transplant."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Newborn bilirubin >15 mg/dL or rapid rise >5 mg/dL in 24 h",
+  "Sudden onset of dark urine, pale stools, and intense pruritus",
+  "Signs of hepatic encephalopathy (confusion, asterixis) in adult jaundice"
+ ],
+ "faq": [
+  {
+   "q": "Why does bilirubin cause yellow skin?",
+   "a": "Bilirubin deposits in the dermis and sclera give a yellow hue when its serum level exceeds the normal threshold."
+  },
+  {
+   "q": "What differentiates Gilbert from Crigler‑Najjar?",
+   "a": "Gilbert has mildly reduced UGT1A1 activity (asymptomatic, mild ↑UCB); Crigler‑Najjar type I has absent activity causing severe neonatal jaundice."
+  },
+  {
+   "q": "Can malaria cause jaundice?",
+   "a": "Yes; malaria induces hemolysis (pre‑hepatic ↑UCB) and can cause hepatic dysfunction, leading to mixed bilirubin elevation."
+  }
+ ],
+ "exam": [
+  "Explain the clinical significance of an isolated unconjugated bilirubin rise.",
+  "List the enzymatic step impaired in Crigler‑Najjar type II and its therapeutic implication.",
+  "Interpret a bilirubin panel with total 4 mg/dL, direct 3 mg/dL, ALP 250 U/L in a patient with right‑upper‑quadrant pain."
+ ],
+ "related": [
+  "Heme catabolism",
+  "Liver function tests",
+  "Neonatal jaundice",
+  "Hemolytic anemia",
+  "Cholestasis",
+  "UGT1A1 genetics",
+  "Biliary tract infections"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

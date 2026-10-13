@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The tibia is the main weight‑bearing bone of the lower leg, forming the knee and ankle joints. Its shape, blood supply and nerve innervation are key to diagnosing fractures, infections and vascular problems.",
+ "aka": [
+  "shinbone"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The tibia is the larger of the two bones in the lower leg, running from the knee to the ankle. It supports most of the body weight and provides attachment sites for major muscles and ligaments.",
+   "b": [
+    "Weight‑bearing bone",
+    "Forms knee and ankle joints",
+    "Major muscle attachments"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The tibia has a proximal metaphysis, a shaft, and a distal metaphysis ending in the medial and lateral condyles. The proximal end articulates with the femur and patella; the distal end with the talus and fibula.",
+   "b": [
+    "Proximal tibial plateau",
+    "Medial/lateral condyles",
+    "Shinbone"
+   ],
+   "t": [
+    {
+     "a": "X‑ray",
+     "b": "Detects fractures, alignment, and bone density; a displaced fracture indicates need for surgical fixation."
+    }
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly lies the patellar tendon and quadriceps; posteriorly the popliteal artery and vein. Medially the medial collateral ligament and meniscus attach; laterally the lateral collateral ligament.",
+   "b": [
+    "Patellar tendon",
+    "Popliteal vessels",
+    "Medial collateral ligament"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Assesses soft tissue injuries around the tibia; a thickened medial collateral ligament suggests sprain."
+    }
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The tibial artery, a branch of the popliteal artery, supplies the shaft and metaphysis. The nutrient artery enters the bone via the tibial tuberosity.",
+   "b": [
+    "Tibial artery",
+    "Nutrient artery"
+   ],
+   "t": [
+    {
+     "a": "CT angiography",
+     "b": "Shows arterial occlusion or aneurysm; a filling defect indicates thrombus."
+    }
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The anterior tibial nerve supplies the anterior compartment; the tibial nerve supplies the posterior compartment. Sensory branches run along the medial and lateral borders.",
+   "b": [
+    "Anterior tibial nerve",
+    "Tibial nerve"
+   ],
+   "t": [
+    {
+     "a": "Nerve conduction study",
+     "b": "Detects neuropathy; slowed conduction suggests compressive injury."
+    }
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The tibia bears weight, facilitates locomotion, and provides a lever for muscle action. It also protects neurovascular structures in the leg.",
+   "b": [
+    "Weight bearing",
+    "Muscle lever arm",
+    "Protection of neurovascular bundle"
+   ],
+   "t": [
+    {
+     "a": "Gait analysis",
+     "b": "Identifies abnormal loading patterns; a limp may indicate tibial stress fracture."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Fractures, osteomyelitis, tibial plateau lesions, and osteoid osteoma are common. In low‑resource settings, infections and delayed fracture healing are major concerns.",
+   "b": [
+    "Fracture types: transverse, oblique, comminuted"
+   ],
+   "t": [
+    {
+     "a": "Plain radiograph",
+     "b": "Initial assessment of fracture type and displacement; a displaced fracture needs reduction."
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Elevated levels suggest infection or inflammation; normal values may miss early osteomyelitis."
+    },
+    {
+     "a": "X‑ray of ankle",
+     "b": "Detects tibial plateau involvement; a depressed fragment indicates need for surgical fixation."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the tibial tuberosity is the landmark for tibial osteoid osteoma biopsy. The proximal tibial plateau is the most common site for osteoid osteoma.",
+   "b": [
+    "Osteoid osteoma pain relieved by aspirin"
+   ],
+   "t": [
+    {
+     "a": "Pain pattern",
+     "b": "Night pain that improves with aspirin suggests osteoid osteoma."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe leg pain with swelling and inability to bear weight",
+  "High fever with localized redness and warmth",
+  "Rapidly increasing swelling or pain after a fracture"
+ ],
+ "faq": [
+  {
+   "q": "What is the tibial tuberosity used for?",
+   "a": "It is the insertion of the patellar tendon and a landmark for procedures like osteoid osteoma biopsy."
+  },
+  {
+   "q": "How does a tibial fracture heal?",
+   "a": "It heals by callus formation; adequate alignment and stability are essential for proper remodeling."
+  },
+  {
+   "q": "Why is the tibia called the shinbone?",
+   "a": "Because it forms the prominent bone on the front of the lower leg, visible as the shin."
+  }
+ ],
+ "exam": [
+  "Describe the blood supply to the tibia and explain why it is important in fracture healing.",
+  "Explain the clinical significance of a displaced tibial plateau fracture and outline initial management steps.",
+  "Identify the typical pain pattern of osteoid osteoma and justify the use of aspirin as first‑line therapy."
+ ],
+ "related": [
+  "Femur",
+  "Fibula",
+  "Patella",
+  "Popliteal artery",
+  "Tibial plateau fracture",
+  "Osteoid osteoma",
+  "Osteomyelitis",
+  "Tibial nerve"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

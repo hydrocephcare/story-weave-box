@@ -1,0 +1,197 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Congenital adrenal hyperplasia is an inherited enzyme defect that blocks cortisol and sometimes aldosterone synthesis, causing excess androgen production. It presents early with salt wasting, virilisation, or simple virilisation, and requires lifelong hormone replacement.",
+ "aka": [
+  "Adrenogenital syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "CAH is a group of autosomal recessive disorders of steroidogenesis, most commonly 21‑hydroxylase deficiency. Diagnosis is based on clinical features, biochemical screening, and confirmatory genetic testing.",
+   "b": [
+    "Early onset salt wasting or simple virilisation"
+   ],
+   "t": [
+    {
+     "a": "17‑α‑hydroxyprogesterone",
+     "b": "Screen for excess precursors; >200 ng/dL in newborns suggests 21‑hydroxylase deficiency."
+    },
+    {
+     "a": "Plasma renin activity",
+     "b": "Elevated in salt wasting; normal or low in simple virilisation."
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Hyponatraemia, hyperkalaemia indicate salt wasting."
+    },
+    {
+     "a": "Genetic testing (CYP21A2)",
+     "b": "Confirms mutation type; guides prognosis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is classified by salt‑wasting (classical) vs simple virilisation (non‑classical). Classical is further staged by the degree of aldosterone deficiency.",
+   "b": [
+    "Classical salt‑wasting: life‑threatening dehydration and hyperkalaemia"
+   ],
+   "t": [
+    {
+     "a": "Plasma renin activity",
+     "b": "High in salt‑wasting; helps stage severity."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common cause is 21‑hydroxylase deficiency due to CYP21A2 mutations. Other rare defects include 11‑β‑hydroxylase, 17‑α‑hydroxylase, and 3‑β‑HSD.",
+   "b": [
+    "21‑hydroxylase deficiency: 95% of cases"
+   ],
+   "t": [
+    {
+     "a": "CYP21A2 mutation",
+     "b": "Explains enzyme defect; guides family counselling."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Classic salt‑wasting presents in neonates with vomiting, dehydration, and ambiguous genitalia. Simple virilisation presents later with hirsutism, acne, or menstrual irregularities.",
+   "b": [
+    "Neonatal vomiting and failure to thrive"
+   ],
+   "t": [
+    {
+     "a": "Ambiguous genitalia",
+     "b": "Indicates excess androgen exposure in utero."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Initial screening uses 17‑α‑hydroxyprogesterone; confirmatory tests include ACTH stimulation and genetic analysis. In low‑resource settings, bedside electrolytes and clinical exam guide management.",
+   "b": [
+    "Use 17‑α‑hydroxyprogesterone if available"
+   ],
+   "t": [
+    {
+     "a": "ACTH stimulation test",
+     "b": "Differentiates between 21‑hydroxylase and other enzyme defects."
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Detects salt wasting; normal in simple virilisation."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent complications include adrenal crisis, hyperkalaemia, and hypoglycaemia. Long‑term complications are growth retardation, infertility, and cardiovascular risk.",
+   "b": [
+    "Hyperkalaemia >6.5 mmol/L"
+   ],
+   "t": [
+    {
+     "a": "Blood glucose",
+     "b": "Hypoglycaemia indicates adrenal insufficiency."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat acute crisis with IV hydrocortisone and saline. Long‑term therapy uses glucocorticoids and, if salt‑wasting, fludrocortisone. Stress dosing is essential during illness.",
+   "b": [
+    "Glucocorticoid replacement"
+   ],
+   "t": [
+    {
+     "a": "Hydrocortisone",
+     "b": "Preferred for its short half‑life and low mineralocorticoid activity."
+    },
+    {
+     "a": "Fludrocortisone",
+     "b": "Used only when aldosterone is deficient; avoids excess mineralocorticoid."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of growth, electrolytes, and hormone levels is essential. Newborn screening and family genetic counselling reduce morbidity.",
+   "b": [
+    "Annual growth assessment"
+   ],
+   "t": [
+    {
+     "a": "Serum electrolytes",
+     "b": "Ensure adequate mineralocorticoid replacement."
+    },
+    {
+     "a": "Plasma renin activity",
+     "b": "Adjust fludrocortisone dose."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Non‑classical CAH can mimic polycystic ovary syndrome; salt‑wasting CAH can be mistaken for diarrhoea or dehydration from other causes.",
+   "b": [
+    "Polycystic ovary syndrome"
+   ],
+   "t": [
+    {
+     "a": "17‑α‑hydroxyprogesterone",
+     "b": "Elevated in both, but much higher in CAH."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low‑dose ACTH stimulation may give false negatives; newborn screening may miss non‑classical CAH. Electrolytes can be normal early in salt‑wasting.",
+   "b": [
+    "False‑negative ACTH test"
+   ],
+   "t": [
+    {
+     "a": "ACTH stimulation",
+     "b": "Low dose may not reveal partial deficiency."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe vomiting, dehydration, lethargy, hyponatraemia, hyperkalaemia, or unexplained ambiguous genitalia"
+ ],
+ "faq": [
+  {
+   "q": "Can CAH be cured?",
+   "a": "No, but lifelong hormone replacement prevents crises."
+  },
+  {
+   "q": "Do all children with ambiguous genitalia have CAH?",
+   "a": "No, other causes exist; biochemical testing is required."
+  },
+  {
+   "q": "Is newborn screening available everywhere?",
+   "a": "It is routine in many high‑income countries but may be limited in low‑resource settings."
+  }
+ ],
+ "exam": [
+  "Explain why 17‑α‑hydroxyprogesterone is elevated in 21‑hydroxylase deficiency.",
+  "Describe the management steps in an adrenal crisis.",
+  "Differentiate between classical salt‑wasting and simple virilisation CAH based on clinical and biochemical findings."
+ ],
+ "related": [
+  "Steroidogenesis",
+  "Adrenal insufficiency",
+  "Polycystic ovary syndrome",
+  "Newborn screening",
+  "Glucocorticoid therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

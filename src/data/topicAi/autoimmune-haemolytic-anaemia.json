@@ -1,0 +1,147 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Autoimmune haemolytic anaemia (AIHA) is red‑cell destruction by autoantibodies, causing anaemia and jaundice. Diagnosis hinges on a positive direct antiglobulin test and clinical clues. Management starts with treating the underlying cause and immunosuppression.",
+ "aka": [
+  "AIHA",
+  "Autoimmune haemolytic anaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "AIHA is immune‑mediated red‑cell lysis, usually by IgG (warm) or IgM (cold) antibodies. The direct antiglobulin test (DAT) is the diagnostic cornerstone, showing antibody or complement coating the cell surface.",
+   "b": [
+    "DAT positive = AIHA",
+    "DAT negative = consider other haemolysis causes"
+   ],
+   "t": [
+    {
+     "a": "DAT",
+     "b": "Detects IgG or complement on RBCs; positive confirms immune haemolysis."
+    },
+    {
+     "a": "Peripheral smear",
+     "b": "Shows spherocytes or schistocytes; spherocytes suggest warm AIHA."
+    },
+    {
+     "a": "Reticulocyte count",
+     "b": "Elevated indicates marrow response to haemolysis."
+    },
+    {
+     "a": "LDH, bilirubin, haptoglobin",
+     "b": "High LDH, indirect bilirubin, low haptoglobin confirm haemolysis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by haemoglobin level, bilirubin, and need for transfusion. WHO anaemia grades (mild, moderate, severe) guide urgency of treatment.",
+   "b": [
+    "Hb <10 g/dL = moderate",
+    "Hb <7 g/dL or transfusion need = severe"
+   ],
+   "t": [
+    {
+     "a": "Hb",
+     "b": "Measures anaemia severity; guides transfusion threshold."
+    },
+    {
+     "a": "Bilirubin",
+     "b": "High indirect bilirubin indicates ongoing haemolysis."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary AIHA is idiopathic. Secondary causes are common in low‑resource settings: infections (malaria, HIV, TB), autoimmune diseases (SLE), malignancies (CLL), drugs, and herbal remedies.",
+   "b": [
+    "Herbal remedies: traditional concoctions"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report fatigue, pallor, jaundice, dark urine, and sometimes splenomegaly. Warm AIHA often presents with sudden drop in Hb and haemoglobinuria.",
+   "b": [
+    "Rapid Hb fall in cold AIHA"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Confirm haemolysis and rule out other causes. When tests are unavailable, clinical judgement and basic labs guide management.",
+   "b": [
+    "Bone marrow if haemoglobin <7 g/dL and unclear cause"
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe haemolysis can lead to hypovolaemic shock, renal failure, and hyperbilirubinaemic jaundice. Rapid drop in Hb or rising bilirubin warrants urgent care.",
+   "b": [
+    "Signs of DIC in severe cases"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying trigger first. Immunosuppression with steroids is first line; alternatives include rituximab or splenectomy if refractory. Supportive care includes transfusion and monitoring.",
+   "b": [
+    "Avoid transfusing incompatible blood; use washed RBCs if severe alloimmunisation"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor Hb, bilirubin, and reticulocytes. Educate patients on avoiding triggers, such as certain drugs and herbal remedies. Vaccinate against infections that can precipitate AIHA.",
+   "b": [
+    "Vaccinate against pneumococcus and influenza"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hemolytic transfusion reactions, hereditary spherocytosis, G6PD deficiency, and malaria can mimic AIHA.",
+   "b": [
+    "Malaria – positive blood smear"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "DAT can be negative in early or mixed AIHA; low haptoglobin may be falsely normal in liver disease. Low reticulocyte count may mask severe haemolysis if marrow is suppressed.",
+   "b": [
+    "Reticulocyte count low in aplastic crisis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe drop in Hb",
+  "Unexplained jaundice with high bilirubin",
+  "Renal failure signs",
+  "Shock or cardiovascular instability"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common type of AIHA?",
+   "a": "Warm AIHA, mediated by IgG antibodies reacting at body temperature."
+  },
+  {
+   "q": "Can AIHA be inherited?",
+   "a": "No, AIHA is acquired; hereditary haemolytic anaemias are separate conditions."
+  },
+  {
+   "q": "Is a blood transfusion safe in AIHA?",
+   "a": "Yes, but use washed or antigen‑matched blood and monitor for reactions."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic criteria for AIHA and the role of the direct antiglobulin test.",
+  "Describe the first‑line treatment for warm AIHA and when to consider rituximab.",
+  "Discuss how malaria can precipitate haemolytic anaemia and how you would differentiate it from AIHA."
+ ],
+ "related": [
+  "Malaria",
+  "G6PD deficiency",
+  "Hereditary spherocytosis",
+  "Splenectomy",
+  "Rituximab"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

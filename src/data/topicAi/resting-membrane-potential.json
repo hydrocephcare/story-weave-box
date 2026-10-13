@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Resting membrane potential (RMP) is the stable voltage across a cell membrane when the cell is not actively firing. It results from ion gradients and selective membrane permeability, mainly potassium. Clinicians use RMP concepts to interpret ECG changes, electrolyte disorders, and drug effects.",
+ "aka": [
+  "resting potential"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Every excitable cell maintains a voltage difference of about –70 to –95 mV at rest. This baseline sets the stage for action potentials that drive muscle contraction, nerve signaling, and hormone release.",
+   "b": [
+    "Typical cardiac myocyte RMP: –85 to –95 mV; specialized conduction tissue: –90 to –100 mV",
+    "Inside of the cell is negatively charged relative to the outside"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "The Na⁺/K⁺ ATPase pumps 3 Na⁺ out and 2 K⁺ in, creating steep concentration gradients. At rest, K⁺ channels are far more permeable than Na⁺ channels, so K⁺ efflux drives the membrane toward the K⁺ equilibrium potential (~‑90 mV).",
+   "b": [
+    "Na⁺ gradient provides the energy source for the pump",
+    "K⁺ leak channels set the voltage close to EK",
+    "Cl⁻ follows the electrical gradient, minimally affecting RMP"
+   ],
+   "t": [
+    {
+     "a": "Serum potassium level",
+     "b": "Does the K⁺ gradient support a normal RMP? Low K⁺ (<3.5 mmol/L) makes RMP less negative, predisposing to arrhythmias; high K⁺ (>5.5 mmol/L) hyperpolarises cells, slowing conduction."
+    },
+    {
+     "a": "Serum sodium level",
+     "b": "Is Na⁺ contributing to depolarisation? Severe hyponatraemia can modestly reduce RMP, but effect is small compared with K⁺."
+    },
+    {
+     "a": "ECG (resting)",
+     "b": "Does the observed resting voltage reflect normal RMP? Tall T‑waves suggest hyperkalaemia; peaked P‑waves suggest hypokalaemia."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "RMP is dynamically regulated by hormonal and neural influences that modify channel activity or pump rate.",
+   "b": [
+    "β‑adrenergic stimulation increases Na⁺/K⁺‑ATPase activity, stabilising RMP",
+    "Acidosis reduces K⁺ channel conductance, making cells less negative",
+    "Hypoxia closes ATP‑dependent K⁺ channels, depolarising cells"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Disturbances of ion balance or channel function shift the RMP, leading to excitability changes that manifest as arrhythmias, seizures, or muscle weakness.",
+   "b": [
+    "Hypokalaemia → depolarised RMP → premature ventricular beats",
+    "Hyperkalaemia → excessive hyperpolarisation → slowed conduction, sine‑wave ECG",
+    "Channelopathies (e.g., Long QT syndrome) alter RMP recovery"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding RMP guides interpretation of electrolyte disorders, drug toxicities, and acute cardiac events. Many emergency drugs (e.g., lidocaine) act by stabilising RMP to suppress ectopy.",
+   "b": [
+    "Lidocaine preferentially binds inactivated Na⁺ channels, raising the threshold for depolarisation",
+    "Digitalis increases intracellular Na⁺, indirectly raising Ca²⁺ and can exaggerate RMP changes"
+   ],
+   "t": [
+    {
+     "a": "Serum electrolytes in a patient with arrhythmia",
+     "b": "Which ion abnormality explains the ECG pattern? Correcting K⁺ or Ca²⁺ often restores normal rhythm."
+    },
+    {
+     "a": "Availability of point‑of‑care potassium testing",
+     "b": "If unavailable, use clinical signs (muscle weakness, ECG) to guide urgent treatment."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key facts that frequently appear in exams.",
+   "b": [
+    "RMP ≈ EK because K⁺ permeability dominates",
+    "Na⁺/K⁺‑ATPase maintains ion gradients; 3 Na⁺ out, 2 K⁺ in",
+    "Hypokalaemia depolarises cells; hyperkalaemia hyperpolarises cells"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hyperkalaemia (>6.5 mmol/L) with ECG changes",
+  "Life‑threatening arrhythmias (ventricular tachycardia, torsades) linked to electrolyte disturbance",
+  "Sudden cardiac arrest in a patient with known channelopathy"
+ ],
+ "faq": [
+  {
+   "q": "Why is the resting potential more negative than the potassium equilibrium potential?",
+   "a": "Because a small amount of Na⁺ leak makes the membrane slightly less negative than EK."
+  },
+  {
+   "q": "Can low sodium cause a big change in RMP?",
+   "a": "Only extreme hyponatraemia affects RMP; potassium changes have a much larger impact."
+  },
+  {
+   "q": "What is the effect of a β‑blocker on RMP?",
+   "a": "β‑blockers reduce Na⁺/K⁺‑ATPase stimulation, modestly lowering the negative charge and can predispose to bradyarrhythmias."
+  }
+ ],
+ "exam": [
+  "Explain how the Na⁺/K⁺‑ATPase creates the ion gradients that determine resting membrane potential.",
+  "A patient presents with a peaked T‑wave and muscle weakness. Which electrolyte is abnormal and how does it alter RMP?",
+  "Describe why lidocaine is useful in ventricular tachycardia from a resting membrane potential perspective."
+ ],
+ "related": [
+  "Action potential",
+  "Cardiac electrophysiology",
+  "Electrolyte disorders",
+  "Channelopathies",
+  "Anti‑arrhythmic drugs",
+  "Acid‑base disturbances"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Ulcerative colitis is a chronic inflammatory disease limited to the colon and rectum, causing continuous mucosal ulceration and bloody diarrhoea. Diagnosis relies on endoscopy and histology; severity guides treatment and surveillance for cancer.",
+ "aka": [
+  "Ulcerative colitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "UC is a continuous inflammation of the colonic mucosa starting in the rectum and extending proximally. Diagnosis requires colonoscopy with biopsies showing crypt architectural distortion and inflammatory infiltrates.",
+   "b": [
+    "Continuous colonic involvement, never skips segments",
+    "Biopsies rule out infection and confirm chronic inflammation"
+   ],
+   "t": [
+    {
+     "a": "Colonoscopy with biopsies",
+     "b": "Does the colon show continuous mucosal ulceration and histologic features of chronic colitis? Positive findings confirm UC; normal mucosa makes diagnosis unlikely."
+    },
+    {
+     "a": "Stool culture/PCR for pathogens",
+     "b": "Is an infectious cause present? Positive results redirect treatment to antibiotics, not immunosuppression."
+    },
+    {
+     "a": "Fecal calprotectin",
+     "b": "Is there intestinal inflammation? Elevated levels support IBD; low levels suggest functional disease."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Mayo Clinic score (stool frequency, rectal bleeding, endoscopic appearance, physician’s global assessment) and by extent (proctitis, left‑sided, extensive).",
+   "b": [
+    "Mild: <4 stools/day, no systemic signs",
+    "Moderate: >4 stools/day, some bleeding, anemia",
+    "Severe: >6 stools/day, fever, tachycardia, anemia"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Exact cause is unknown; a dysregulated immune response to gut flora in genetically susceptible individuals is primary. In low‑resource settings, consider co‑existing infections that can mimic or trigger flares.",
+   "b": [
+    "Genetic susceptibility (e.g., HLA‑DRB1*01)",
+    "Abnormal mucosal immune response to microbiota",
+    "Environmental triggers: smoking cessation, diet, antibiotics",
+    "Infections that can aggravate disease: CMV, C. difficile, TB colitis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with bloody diarrhoea, urgency, tenesmus, and abdominal cramping. Systemic features (weight loss, fatigue) appear with moderate‑severe disease.",
+   "b": [
+    "Bloody, mucus‑laden stools",
+    "Rectal urgency and tenesmus",
+    "Abdominal pain, usually left‑sided"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm diagnosis, assess severity, and exclude mimics. When a test is unavailable, use clinical scoring and basic labs.",
+   "b": [
+    "Baseline CBC, CRP, ESR for inflammation",
+    "Liver function tests before thiopurines"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Is there anemia or leukocytosis? Anemia supports chronic blood loss; leukocytosis may indicate severe inflammation."
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Is systemic inflammation present? Elevated values correlate with disease activity."
+    },
+    {
+     "a": "Abdominal X‑ray",
+     "b": "Is there colonic dilation suggesting toxic megacolon? Dilatation >6 cm warrants urgent surgery."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications include toxic megacolon, severe hemorrhage, perforation, and colorectal cancer. Recognize early to prevent mortality.",
+   "b": [
+    "Toxic megacolon: distended abdomen, fever, tachycardia",
+    "Massive rectal bleeding",
+    "Perforation with peritonitis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat active inflammation, maintain remission, and monitor for cancer. Choose drugs based on severity and safety profile; avoid unnecessary steroids in mild disease.",
+   "b": [
+    "5‑ASA (mesalamine) for mild‑moderate disease – topical for proctitis, oral for extensive disease",
+    "Corticosteroids for moderate‑severe flares – rapid control, taper quickly",
+    "Immunomodulators (azathioprine, 6‑MP) for steroid‑sparing maintenance",
+    "Biologics (anti‑TNF, vedolizumab, ustekinumab) for refractory disease"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular colonoscopic surveillance begins 8‑10 years after diagnosis to detect dysplasia. Vaccinate against hepatitis B and pneumococcus; counsel on smoking cessation and nutrition.",
+   "b": [
+    "Surveillance colonoscopy every 1–3 years after 8 years of disease",
+    "Bone density monitoring if long‑term steroids used"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that can mimic UC include infectious colitis, Crohn’s disease, ischemic colitis, and radiation proctitis.",
+   "b": [
+    "Crohn’s disease – skip lesions, transmural inflammation",
+    "Infectious colitis – acute onset, pathogen identified",
+    "Ischemic colitis – segmental, often in elderly"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal fecal calprotectin does not exclude mild UC; histology may appear normal in early disease; C. difficile toxin can be false‑negative.",
+   "b": [
+    "Low calprotectin in early or mild disease",
+    "Biopsies taken from healed segments may miss active inflammation",
+    "Negative stool PCR does not rule out CMV colitis in immunosuppressed patients"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain with distension",
+  "Persistent fever >38.5 °C",
+  "Profuse rectal bleeding or drop in hemoglobin"
+ ],
+ "faq": [
+  {
+   "q": "Why does UC always involve the rectum?",
+   "a": "The rectal mucosa is the first site exposed to fecal antigens, and the disease spreads proximally in a continuous pattern."
+  },
+  {
+   "q": "Can UC become a full‑thickness disease?",
+   "a": "UC is limited to mucosa and submucosa; transmural involvement suggests Crohn’s disease or complications like toxic megacolon."
+  },
+  {
+   "q": "Is colon cancer common in UC?",
+   "a": "Risk rises after 8–10 years of extensive disease; regular surveillance colonoscopy reduces mortality."
+  }
+ ],
+ "exam": [
+  "Describe the endoscopic and histologic criteria that differentiate ulcerative colitis from Crohn’s disease.",
+  "Explain how the Mayo Clinic score is used to grade disease severity and guide therapy.",
+  "List the surveillance strategy for colorectal cancer in a patient with 12 years of extensive ulcerative colitis."
+ ],
+ "related": [
+  "Crohn’s disease",
+  "Microscopic colitis",
+  "Toxic megacolon",
+  "C. difficile infection",
+  "Colorectal cancer surveillance",
+  "Inflammatory bowel disease genetics"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

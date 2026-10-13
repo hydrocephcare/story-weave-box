@@ -1,0 +1,140 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The jejunum is the middle section of the small intestine, responsible for nutrient absorption and mixing chyme with digestive enzymes. It is richly vascularized and innervated, making it a common site for infections and inflammatory conditions.",
+ "aka": [
+  "Middle small intestine"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The jejunum lies between the duodenum and ileum, about 2.5 m long in adults. It is the main site for absorption of most nutrients and electrolytes.",
+   "b": [
+    "Length: ~2.5 m",
+    "Weight: ~0.5 kg",
+    "Surface: villi and microvilli"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It starts at the ligament of Treitz and ends at the ileocecal valve. The wall has thick mucosa with many folds (plicae circulares) and a prominent submucosal lymphoid tissue.",
+   "b": [
+    "Plicae circulares increase surface area",
+    "Submucosal lymphoid aggregates (Peyer's patches)"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly it lies on the pancreas and posteriorly on the mesenteric vessels. The mesentery supplies blood and lymphatics.",
+   "b": [
+    "Anterior: pancreas",
+    "Posterior: mesenteric vessels"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Supplied by the jejunal branches of the superior mesenteric artery; drained by jejunal veins into the portal system.",
+   "b": [
+    "Artery: jejunal branches of SMA",
+    "Vein: jejunal veins to portal vein"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Parasympathetic via vagus and pelvic splanchnic nerves; sympathetic via mesenteric plexus.",
+   "b": [
+    "Parasympathetic: vagus",
+    "Sympathetic: mesenteric plexus"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Primary role is absorption of carbohydrates, proteins, fats, vitamins, and minerals. It also secretes digestive enzymes and hormones like CCK.",
+   "b": [
+    "Nutrient absorption",
+    "Secretion of CCK"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Common problems include bacterial overgrowth, Crohn’s disease, ischemia, and parasitic infections. Symptoms are abdominal pain, diarrhea, and malabsorption.",
+   "b": [
+    "Bacterial overgrowth",
+    "Crohn’s disease",
+    "Ischemia",
+    "Parasitic infections"
+   ],
+   "t": [
+    {
+     "a": "Plain abdominal X-ray",
+     "b": "Detects obstruction or perforation; shows air-fluid levels"
+    },
+    {
+     "a": "CT abdomen",
+     "b": "Identifies wall thickening, abscess, or ischemia; shows mesenteric edema"
+    },
+    {
+     "a": "Endoscopy/biopsy",
+     "b": "Diagnoses Crohn’s or infections; shows granulomas or parasites"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Assesses malabsorption; low potassium or magnesium indicates loss"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that the jejunum is the site of most nutrient absorption and is highly vascular. In low-resource settings, malabsorption often results from infections like malaria or schistosomiasis.",
+   "b": [
+    "Jejunum absorbs most nutrients",
+    "Highly vascular; prone to ischemia"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Detects anemia; low MCV suggests iron deficiency from malabsorption"
+    },
+    {
+     "a": "Stool occult blood",
+     "b": "Identifies bleeding from ulcers or parasites"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with vomiting, signs of peritonitis, sudden weight loss, or persistent diarrhea with dehydration"
+ ],
+ "faq": [
+  {
+   "q": "What is the main difference between jejunum and ileum?",
+   "a": "Jejunum absorbs most nutrients and has more villi; ileum mainly absorbs bile salts and vitamin B12."
+  },
+  {
+   "q": "Why is CCK released in the jejunum?",
+   "a": "CCK is secreted by I-cells in response to fats and proteins to stimulate gallbladder contraction and pancreatic enzyme release."
+  },
+  {
+   "q": "Can parasites live in the jejunum?",
+   "a": "Yes, parasites like Schistosoma mansoni eggs and certain protozoa can lodge in the jejunal lumen."
+  }
+ ],
+ "exam": [
+  "Describe the vascular supply of the jejunum and its clinical significance.",
+  "Explain how jejunal malabsorption can present in a patient with chronic diarrhea.",
+  "Outline the diagnostic workup for suspected jejunal Crohn’s disease."
+ ],
+ "related": [
+  "Duodenum",
+  "Ileum",
+  "Small intestine",
+  "Malabsorption syndromes",
+  "Crohn’s disease",
+  "Bacterial overgrowth",
+  "Parasitic infections"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

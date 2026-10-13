@@ -1,0 +1,121 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Cryptococcal meningitis is a life‑threatening fungal infection of the meninges, most common in immunocompromised patients, especially HIV. Early recognition, CSF testing and prompt antifungal therapy are essential to reduce mortality.",
+ "aka": [
+  "Cryptococcal meningoencephalitis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Cryptococcus neoformans (and C. gattii) are encapsulated yeasts that can cross the blood‑brain barrier and cause meningitis. The disease presents with subacute headache, fever, and meningeal signs, often mimicking tuberculous meningitis.",
+   "b": [
+    "Most common meningitis in AIDS patients",
+    "Higher mortality in low‑resource settings"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Encapsulated yeast, 5–7 µm, reproduces by budding. The polysaccharide capsule (glucuronoxylomannan) is key to immune evasion and is detected by India ink stain.",
+   "b": [
+    "Capsule → false‑negative cultures if not processed promptly",
+    "Thermotolerant (grows at 37 °C)"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Inhalation of desiccated yeast or spores from soil contaminated with bird droppings initiates pulmonary infection; hematogenous spread reaches the CNS.",
+   "b": [
+    "Environmental exposure common in tropical and temperate regions",
+    "HIV, steroids, organ transplant increase risk"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Cryptococcal meningitis presents with headache, fever, neck stiffness, photophobia, and altered mental status. It can progress to hydrocephalus, cerebral edema, and death if untreated.",
+   "b": [
+    "Often co‑exists with pulmonary cryptococcosis",
+    "Can cause cryptococcal antigenemia without meningitis"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "CSF analysis is central; rapid antigen detection and culture confirm the diagnosis.",
+   "b": [
+    "India ink shows capsule in CSF",
+    "Cryptococcal antigen (CrAg) lateral flow assay is highly sensitive"
+   ],
+   "t": [
+    {
+     "a": "CSF opening pressure",
+     "b": "Is intracranial hypertension present? High pressure (>250 mm H₂O) predicts need for therapeutic lumbar puncture"
+    },
+    {
+     "a": "CSF India ink stain",
+     "b": "Does it show encapsulated yeast? Positive confirms infection"
+    },
+    {
+     "a": "CSF CrAg lateral flow assay",
+     "b": "Is antigen present? Positive even with low organism load"
+    },
+    {
+     "a": "CSF culture on Sabouraud agar",
+     "b": "Grows yeast in 3–7 days; definitive but may be unavailable—use CrAg instead"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Induction with amphotericin B plus flucytosine for at least two weeks, followed by fluconazole consolidation and maintenance. Manage intracranial pressure aggressively.",
+   "b": [
+    "Amphotericin B → fungicidal, penetrates CNS",
+    "Flucytosine → synergistic, prevents resistance",
+    "Fluconazole → oral, good CNS levels for long‑term suppression",
+    "Therapeutic lumbar puncture if opening pressure >250 mm H₂O"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and clinical practice.",
+   "b": [
+    "Cryptococcal meningitis = most common AIDS meningitis",
+    "Positive CrAg in serum or CSF is diagnostic",
+    "High CSF opening pressure requires repeated LPs"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly worsening headache, fever, neck stiffness, or altered consciousness in an immunocompromised patient"
+ ],
+ "faq": [
+  {
+   "q": "Why is the cryptococcal antigen test preferred over culture?",
+   "a": "It gives results within minutes, is highly sensitive even with low fungal burden, and works when cultures are unavailable."
+  },
+  {
+   "q": "Can cryptococcal meningitis occur in HIV‑negative patients?",
+   "a": "Yes, especially with C. gattii exposure, organ transplantation, or chronic steroid use."
+  },
+  {
+   "q": "What is the main cause of death in cryptococcal meningitis?",
+   "a": "Raised intracranial pressure leading to brain herniation."
+  }
+ ],
+ "exam": [
+  "Describe the diagnostic algorithm for suspected cryptococcal meningitis.",
+  "Explain why amphotericin B + flucytosine is the preferred induction regimen.",
+  "List three management steps for elevated CSF opening pressure."
+ ],
+ "related": [
+  "Tuberculous meningitis",
+  "HIV‑associated opportunistic infections",
+  "Candidiasis",
+  "Histoplasmosis",
+  "Meningeal tuberculosis",
+  "Fungal meningitis"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

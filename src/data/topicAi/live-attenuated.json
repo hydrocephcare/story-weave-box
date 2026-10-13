@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Live attenuated vaccines use weakened organisms that can replicate, inducing strong, long‑lasting immunity but pose risks in immunocompromised patients. They are key in many childhood schedules, yet contraindicated in pregnancy and primary immunodeficiencies.",
+ "aka": [
+  "Live attenuated vaccine",
+  "LAIV"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Live attenuated vaccines contain organisms that have been weakened so they can replicate only briefly, mimicking natural infection and stimulating robust cellular and humoral responses.",
+   "b": [
+    "Strong, durable immunity",
+    "Requires replication for antigen presentation",
+    "Risk of disease in immunocompromised"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The pathogen is genetically or chemically altered to reduce virulence while preserving immunogenic antigens. Replication is limited to a few cycles.",
+   "b": [
+    "Replicates in host but not enough to cause disease",
+    "Preserves key surface proteins for immune recognition"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "After administration, the attenuated organism infects mucosal or skin sites, replicates locally, and is cleared by the immune system. No onward transmission occurs.",
+   "b": [
+    "Local replication",
+    "No secondary spread"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "In healthy hosts, the vaccine may cause mild, self‑limited symptoms (e.g., nasal congestion with LAIV). In immunocompromised hosts, it can lead to full‑blown disease.",
+   "b": [
+    "Mild local symptoms in healthy",
+    "Severe disease in immunodeficient or pregnant"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical recognition of vaccine‑related symptoms is usually sufficient. If severe disease is suspected, PCR or viral culture confirms the attenuated strain.",
+   "b": [
+    "PCR for viral genome",
+    "Culture for replication"
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treat underlying disease with supportive care. Antivirals (acyclovir/valacyclovir) are used if severe disease occurs. Prevention relies on contraindication in high‑risk groups.",
+   "b": [
+    "Supportive care",
+    "Antivirals for severe cases"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that live attenuated vaccines are contraindicated in primary immunodeficiency, pregnancy, and severe immunosuppression. They provide lifelong immunity after a single dose in many cases.",
+   "b": [
+    "Contraindicated in immunocompromised",
+    "Single dose often sufficient"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Inactivated vaccines (cannot replicate) and subunit vaccines (only antigens).",
+   "b": [
+    "Inactivated: no replication",
+    "Subunit: only proteins"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "PCR may detect vaccine RNA long after inoculation, potentially confusing with wild‑type infection. Clinical context is essential.",
+   "b": [
+    "PCR positivity may persist",
+    "Clinical correlation needed"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe respiratory distress after LAIV",
+  "High fever >40°C with rash after varicella vaccine",
+  "Any worsening symptoms in immunocompromised patients"
+ ],
+ "faq": [
+  {
+   "q": "Why are live attenuated vaccines contraindicated in pregnancy?",
+   "a": "The weakened pathogen can cross the placenta and cause fetal infection, as seen with rubella vaccine."
+  },
+  {
+   "q": "Can a live attenuated vaccine revert to a virulent form?",
+   "a": "Rarely; genetic stability is engineered, but theoretical risk exists, especially in immunocompromised hosts."
+  },
+  {
+   "q": "What is the advantage of a single‑dose live attenuated vaccine?",
+   "a": "It induces long‑lasting immunity with minimal exposure, improving compliance and reducing cost."
+  }
+ ],
+ "exam": [
+  "Explain why live attenuated vaccines are contraindicated in patients with selective IgA deficiency.",
+  "Describe the diagnostic approach if a patient develops severe disease after receiving a live attenuated varicella vaccine."
+ ],
+ "related": [
+  "Inactivated vaccines",
+  "Subunit vaccines",
+  "Immunocompromised patients",
+  "Pregnancy and vaccination",
+  "Antiviral therapy"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

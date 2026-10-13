@@ -1,0 +1,128 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Parvovirus B19 is a small, non‑enveloped ssDNA virus that infects erythroid precursors, causing a two‑stage illness: a brief febrile viremia followed by a rash/arthralgia phase. It can trigger aplastic crises in patients with chronic hemolysis or fetal hydrops in pregnancy.",
+ "aka": [
+  "Fifth disease",
+  "Erythema infectiosum"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Parvovirus B19 is the only human pathogenic member of the genus Parvovirus. It spreads by respiratory droplets and has a single serotype, making immunity lifelong after infection.",
+   "b": [
+    "Smallest known DNA virus (≈5 kb)",
+    "Non‑enveloped, icosahedral capsid",
+    "Peak incidence in late winter‑spring"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The virus binds the P antigen on erythroid progenitors, enters the nucleus, and replicates using host DNA polymerase, causing cell lysis and transient arrest of red‑cell production.",
+   "b": [
+    "ssDNA, linear, single‑strand",
+    "Requires dividing erythroid cells for replication",
+    "Only one serotype → no antigenic variation"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission is mainly via respiratory secretions; after a 4‑day incubation the virus enters the bloodstream, infects bone‑marrow erythroid precursors, and is cleared when IgG appears.",
+   "b": [
+    "Contagious during the febrile viremia phase only",
+    "IgM appears ~10 days, IgG confers lasting immunity"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Two clinical phases: (1) infectious febrile illness with high‑titer viremia; (2) immune‑mediated rash/arthralgia after antibodies develop. In high‑risk hosts it can cause pure red‑cell aplasia or fetal hydrops.",
+   "b": [
+    "Erythema infectiosum (slapped‑cheek rash) in children",
+    "Arthropathy in adults, often symmetric hands/feet",
+    "Aplastic crisis in sickle‑cell disease or chronic hemolysis",
+    "Fetal hydrops, miscarriage, or intrauterine death if infection occurs in pregnancy"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Combine clinical pattern with specific laboratory tests; serology is the mainstay, but PCR is useful when antibodies are absent or immunosuppression is present.",
+   "b": [
+    "If PCR unavailable, rely on IgM/IgG pattern and clinical picture."
+   ],
+   "t": [
+    {
+     "a": "IgM anti‑B19 ELISA",
+     "b": "Is the patient in the acute phase? Positive IgM confirms recent infection; negative IgM with positive IgG indicates past exposure."
+    },
+    {
+     "a": "IgG anti‑B19 ELISA",
+     "b": "Has the patient developed immunity? Positive IgG shows prior infection or immunity; useful for counseling pregnant women."
+    },
+    {
+     "a": "B19 DNA PCR (blood or marrow)",
+     "b": "Is there active viral replication? Detects virus when serology is equivocal, especially in immunocompromised patients."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Is there an aplastic crisis? Sudden drop in hemoglobin with reticulocytopenia points to B19‑mediated marrow suppression."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Supportive care is primary; treat anemia in aplastic crisis and consider IVIG for severe immunocompromised infection. Prevent spread by isolating contagious patients.",
+   "b": [
+    "Red‑cell transfusion for symptomatic anemia or aplastic crisis",
+    "IVIG (pooled immunoglobulin) for chronic infection in immunodeficiency",
+    "No specific antiviral; ribavirin not routinely used",
+    "Isolation until fever resolves and viremia clears (≈1 week)"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and clinical reasoning.",
+   "b": [
+    "Parvovirus B19 targets erythroid precursors → pure red‑cell aplasia.",
+    "Contagious period ends when IgM appears; rash phase is non‑infectious.",
+    "In sickle‑cell disease, a sudden drop in hemoglobin with low reticulocytes = aplastic crisis → test for B19."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe anemia with hemodynamic instability",
+  "Fetal hydrops or unexplained miscarriage in a pregnant woman",
+  "Persistent fever and pancytopenia in an immunocompromised patient"
+ ],
+ "faq": [
+  {
+   "q": "Why does the rash appear after the fever?",
+   "a": "The rash coincides with antibody formation; immune complexes deposit in skin, causing the characteristic erythema."
+  },
+  {
+   "q": "Can adults get slapped‑cheek rash?",
+   "a": "Adults rarely develop the classic facial rash; they more often present with arthralgia or a mild flu‑like illness."
+  },
+  {
+   "q": "Is there a vaccine for Parvovirus B19?",
+   "a": "No vaccine exists; prevention relies on hygiene and avoiding close contact during the contagious phase."
+  }
+ ],
+ "exam": [
+  "Describe the two clinical phases of Parvovirus B19 infection and their pathophysiologic basis.",
+  "A child with sickle‑cell disease presents with sudden anemia and reticulocytopenia. Which test confirms the cause and what is the management?",
+  "Explain why a pregnant woman infected in the first trimester is at risk for fetal hydrops."
+ ],
+ "related": [
+  "Human herpesvirus 6",
+  "Epstein‑Barr virus",
+  "Rubella virus",
+  "Hepatitis B virus",
+  "Sickle‑cell disease",
+  "Pure red‑cell aplasia",
+  "Fetal hydrops"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

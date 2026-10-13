@@ -1,0 +1,113 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The trigeminal nerve (CN V) is the main sensory and motor nerve of the face, branching into ophthalmic, maxillary and mandibular divisions. It supplies sensation, mastication and facial expression. Understanding its anatomy guides diagnosis of facial pain, nerve injury and cranial infections.",
+ "aka": [
+  "CN V",
+  "Facial nerve (sensory)"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The trigeminal nerve is the largest cranial nerve, carrying both sensory and motor fibers. It emerges from the pons, enters the skull through the foramen ovale, and divides into three branches that supply the face and oral cavity.",
+   "b": [
+    "Largest cranial nerve",
+    "Mixed sensory/motor"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It originates from the pontine tegmentum, travels through the middle cranial fossa, and exits the skull via the foramen ovale (mandibular) and foramen rotundum (maxillary). The ophthalmic branch exits through the superior orbital fissure.",
+   "b": [
+    "Origin: pons",
+    "Branches: V1, V2, V3"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Adjacent to the internal carotid artery, middle meningeal artery, and the cavernous sinus. The mandibular branch passes through the infratemporal fossa, close to the mandibular condyle.",
+   "b": [
+    "Near internal carotid",
+    "Shares space with middle meningeal artery"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Supplied by branches of the middle meningeal artery and the ophthalmic artery.",
+   "b": [
+    "Middle meningeal artery",
+    "Ophthalmic artery"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory fibers travel with the ophthalmic, maxillary and mandibular divisions; motor fibers are confined to the mandibular division.",
+   "b": [
+    "Sensory: V1, V2, V3"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Provides facial sensation, controls mastication muscles, and contributes to facial expression.",
+   "b": [
+    "Facial sensation",
+    "Mastication"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Injury can cause facial numbness, loss of chewing, or trigeminal neuralgia. Infections like herpes zoster ophthalmicus involve V1 and risk keratitis.",
+   "b": [
+    "Trigeminal neuralgia: lancinating facial pain"
+   ],
+   "t": [
+    {
+     "a": "MRI brain with contrast",
+     "b": "Detects compressive lesions (e.g., tumor) causing neuralgia; abnormal if enhancing mass seen"
+    },
+    {
+     "a": "CT scan of skull base",
+     "b": "Shows bony erosion or fractures affecting V3; abnormal if fracture line seen"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that V3 carries motor fibers; loss of jaw closure suggests mandibular branch damage. V1 lesions present with ocular complications.",
+   "b": [
+    "V3 motor: masseter, temporalis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Trigeminal neuralgia with sudden severe pain, loss of facial sensation, or ocular involvement such as keratitis or vision loss"
+ ],
+ "faq": [
+  {
+   "q": "What causes trigeminal neuralgia?",
+   "a": "Compression by a blood vessel, tumor, or demyelination (multiple sclerosis)."
+  },
+  {
+   "q": "How is herpes zoster ophthalmicus treated?",
+   "a": "Antiviral therapy within 72 hours and topical steroids for ocular inflammation."
+  },
+  {
+   "q": "Can the trigeminal nerve be repaired?",
+   "a": "Surgical decompression or nerve grafting may relieve symptoms but full recovery is uncommon."
+  }
+ ],
+ "exam": [
+  "Explain the anatomical course of the trigeminal nerve and its three branches.",
+  "Describe the clinical presentation of herpes zoster ophthalmicus and its complications."
+ ],
+ "related": [
+  "Cranial Nerve Anatomy",
+  "Trigeminal Neuralgia",
+  "Herpes Zoster Ophthalmicus",
+  "Facial Nerve (CN VII)"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

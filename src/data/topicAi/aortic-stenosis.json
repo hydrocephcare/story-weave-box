@@ -1,0 +1,140 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Aortic stenosis is a progressive narrowing of the aortic valve that limits blood flow from the left ventricle, causing symptoms of angina, syncope, and heart failure. It is most common in the elderly due to calcific degeneration, but can also arise from bicuspid valves or rheumatic disease.",
+ "aka": [
+  "Aortic valve stenosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Aortic stenosis (AS) is defined by a valve area <1.0 cm² or a mean gradient >40 mmHg on echocardiography. The classic murmur is a harsh systolic ejection sound at the right upper sternal border radiating to the carotids.",
+   "b": [
+    "Valve area <1.0 cm² or mean gradient >40 mmHg"
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Measures valve area, gradients, and ventricular function; confirms AS severity."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows left ventricular hypertrophy and aortic root enlargement; suggests chronic pressure overload."
+    },
+    {
+     "a": "ECG",
+     "b": "Detects LV hypertrophy, conduction delays, and arrhythmias that may accompany AS."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by valve area and mean gradient: mild (1.0–1.5 cm², 20–39 mmHg), moderate (0.75–1.0 cm², 40–59 mmHg), severe (<0.75 cm², ≥60 mmHg).",
+   "b": [
+    "Severe: <0.75 cm², ≥60 mmHg"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In developed settings, age‑related calcific degeneration is first. In younger patients, bicuspid aortic valve is common. Rheumatic fever remains a major cause in low‑resource areas.",
+   "b": [
+    "Infective endocarditis (rare)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often report exertional chest pain, fainting spells, and shortness of breath. Physical exam reveals a crescendo‑decrescendo systolic murmur, a delayed carotid upstroke, and a narrow pulse pressure.",
+   "b": [
+    "Dyspnea with minimal exertion"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Echocardiography is the gold standard. When unavailable, a focused cardiac exam and ECG can suggest AS, but confirmatory imaging is essential.",
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Quantifies valve area, gradients, and LV function; defines severity."
+    },
+    {
+     "a": "Cardiac MRI",
+     "b": "Provides detailed valve morphology when echo is suboptimal."
+    },
+    {
+     "a": "CT calcium scoring",
+     "b": "Assesses aortic valve calcification burden; useful when echo is equivocal."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled hypertension, new arrhythmias, or worsening dyspnea signal impending heart failure or sudden death. Syncope, especially on exertion, is an urgent red flag.",
+   "b": [
+    "Rapidly worsening dyspnea"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat reversible causes first. Long‑term, beta‑blockers or calcium‑channel blockers relieve angina but avoid excessive vasodilation. Definitive therapy is valve replacement (surgical or transcatheter).",
+   "b": [
+    "Transcatheter aortic valve replacement (TAVR) for high‑risk patients"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular echocardiographic surveillance every 1–2 years in asymptomatic severe AS. Prevent rheumatic fever with prompt streptococcal treatment and secondary prophylaxis.",
+   "b": [
+    "Vaccination against influenza and pneumococcus to reduce infection risk"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hypertrophic cardiomyopathy, aortic regurgitation, and pulmonary hypertension can mimic AS symptoms but have different murmurs and hemodynamics.",
+   "b": [
+    "Pulmonary hypertension – right‑sided murmur, elevated JVP"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal ECG does not exclude AS; LV hypertrophy may be subtle. A low‑grade murmur can be missed in early disease. Echo may underestimate severity if loading conditions are altered.",
+   "b": [
+    "Echo underestimation during high preload"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Exertional syncope",
+  "New atrial fibrillation",
+  "Rapidly worsening dyspnea"
+ ],
+ "faq": [
+  {
+   "q": "What is the classic murmur of aortic stenosis?",
+   "a": "A harsh crescendo‑decrescendo systolic ejection murmur at the right upper sternal border radiating to the carotids."
+  },
+  {
+   "q": "Can aortic stenosis be asymptomatic?",
+   "a": "Yes, many patients remain asymptomatic until severe, but they may still have a murmur and LV hypertrophy."
+  },
+  {
+   "q": "Why is beta‑blocker therapy used in AS?",
+   "a": "It reduces heart rate, prolongs diastole, and improves coronary perfusion, relieving angina without causing severe hypotension."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic criteria for severe aortic stenosis and why a valve area <0.75 cm² is critical.",
+  "Describe the clinical triad of aortic stenosis and how each symptom reflects underlying pathophysiology.",
+  "Outline the management pathway for a 70‑year‑old patient with severe AS and new atrial fibrillation in a low‑resource setting."
+ ],
+ "related": [
+  "Bicuspid aortic valve",
+  "Rheumatic heart disease",
+  "Hypertrophic cardiomyopathy",
+  "Transcatheter aortic valve replacement",
+  "Left ventricular hypertrophy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Constrictive pericarditis is fibrotic thickening of the pericardium that limits ventricular filling, causing right‑sided heart failure signs. Diagnosis relies on imaging, hemodynamics and exclusion of restrictive cardiomyopathy.",
+ "aka": [
+  "Constrictive pericardial disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A rigid, often calcified pericardium encases the heart, preventing normal diastolic expansion. Diagnosis requires at least two of: pericardial thickening >4 mm on CT/MRI, septal bounce on echo, equalization of diastolic pressures, and clinical signs of right‑sided congestion.",
+   "b": [
+    "Imaging shows thickened, sometimes calcified pericardium.",
+    "Hemodynamics reveal dip‑and‑plateau waveform and equal diastolic pressures."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by symptom burden and hemodynamic compromise: mild (asymptomatic, normal exercise tolerance), moderate (exertional dyspnoea, peripheral oedema), severe (resting dyspnoea, hepatic congestion, low cardiac output).",
+   "b": [
+    "Mild: no functional limitation.",
+    "Moderate: NYHA II‑III, mild hepatic congestion.",
+    "Severe: NYHA IV, hypotension, organ hypoperfusion."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Infectious and inflammatory processes dominate worldwide, especially in low‑resource settings.",
+   "b": [
+    "Tuberculosis (most common globally).",
+    "Post‑viral or bacterial pericarditis.",
+    "Cardiac surgery or pericardiotomy.",
+    "Radiation therapy (especially for thoracic malignancies).",
+    "Asbestos exposure, amiodarone, nitrofurantoin."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop right‑sided heart failure signs with preserved left‑sided function.",
+   "b": [
+    "Peripheral oedema, ascites, hepatomegaly.",
+    "Elevated JVP with Kussmaul sign (rise on inspiration).",
+    "Pericardial knock early in diastole.",
+    "Low‑voltage ECG, possible calcification on chest X‑ray."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Combine bedside, imaging and invasive studies to confirm constriction and exclude mimics.",
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Does the heart show septal bounce and respiratory variation in mitral inflow? → Positive findings support constriction; if unavailable, proceed to CT/MRI."
+    },
+    {
+     "a": "CT or cardiac MRI",
+     "b": "Is the pericardium >4 mm thick or calcified? → Confirms anatomic restriction; MRI also assesses inflammation."
+    },
+    {
+     "a": "Cardiac catheterisation",
+     "b": "Are diastolic pressures equalized with a dip‑and‑plateau waveform? → Hemodynamic confirmation; essential when echo/CT are equivocal."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Is there pericardial calcification? → Suggestive but not definitive; useful where advanced imaging is unavailable."
+    },
+    {
+     "a": "Tuberculin test / IGRA / sputum PCR",
+     "b": "Is TB infection present? → Guides antimicrobial therapy; if unavailable, treat empirically in high‑prevalence areas."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unchecked constriction leads to irreversible organ damage.",
+   "b": [
+    "Progressive hepatic failure (jaundice, coagulopathy).",
+    "Renal dysfunction from low output.",
+    "Cardiogenic shock after minor stress."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, relieve inflammation, and restore cardiac filling by pericardiectomy when indicated.",
+   "b": [
+    "Anti‑TB therapy for confirmed or probable tuberculosis.",
+    "NSAIDs or colchicine for inflammatory pericarditis when infection excluded.",
+    "Pericardiectomy (complete removal of fibrous pericardium) for symptomatic severe disease.",
+    "Diuretics for volume overload; avoid over‑diuresis that reduces preload excessively."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor for recurrence, residual heart failure and complications of surgery.",
+   "b": [
+    "Serial echo at 3‑month intervals for the first year.",
+    "Assess functional status (NYHA class) and liver/kidney labs.",
+    "Vaccinate against TB and maintain infection control in endemic regions."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also limit ventricular filling but have different pathology.",
+   "b": [
+    "Restrictive cardiomyopathy – myocardial infiltration, normal pericardium.",
+    "Right‑sided heart failure from pulmonary hypertension.",
+    "Cardiac tamponade – fluid, not fibrous shell."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may appear normal despite severe disease.",
+   "b": [
+    "Normal pericardial thickness on echo if imaging window is poor; CT/MRI needed.",
+    "Low‑voltage ECG may be absent in early disease.",
+    "JVP may be normal at rest; look for Kussmaul sign during inspiration."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of dyspnoea with hypotension",
+  "Rapidly increasing abdominal distension and jaundice",
+  "New onset syncope or presyncope"
+ ],
+ "faq": [
+  {
+   "q": "Why does constriction cause a pericardial knock?",
+   "a": "The rigid pericardium abruptly halts early diastolic filling, producing a high‑pitched early diastolic sound."
+  },
+  {
+   "q": "Can constrictive pericarditis resolve without surgery?",
+   "a": "Rarely; only if the cause is an active infection or inflammation treated early. Most fibrotic cases need pericardiectomy."
+  },
+  {
+   "q": "How is Kussmaul sign useful?",
+   "a": "A rise in JVP on inspiration indicates impaired right‑ventricular filling, a hallmark of constriction."
+  }
+ ],
+ "exam": [
+  "Explain how you would differentiate constrictive pericarditis from restrictive cardiomyopathy using imaging and haemodynamics.",
+  "List the three most common causes of constrictive pericarditis worldwide and the first‑line treatment for each.",
+  "Describe the pathophysiological basis of the pericardial knock and Kussmaul sign."
+ ],
+ "related": [
+  "Restrictive cardiomyopathy",
+  "Cardiac tamponade",
+  "Tuberculous pericarditis",
+  "Pericardiectomy",
+  "Right‑sided heart failure",
+  "Pulmonary hypertension"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

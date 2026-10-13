@@ -1,0 +1,145 @@
+{
+ "medical": true,
+ "subject": "Paediatrics",
+ "summary": "Croup is viral laryngotracheobronchitis causing a barking cough, hoarseness and inspiratory stridor in young children. Diagnosis is clinical, severity is staged by stridor and retractions.",
+ "aka": [
+  "Laryngotracheobronchitis",
+  "Barking cough syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Croup is an acute inflammation of the larynx, trachea and main bronchi, most often viral. Diagnosis is clinical: barking cough, hoarseness and inspiratory stridor after a recent upper‑respiratory infection.",
+   "b": [
+    "No imaging needed unless atypical presentation",
+    "Chest X‑ray may show steeple sign but is not required"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Westley croup score (stridor, retractions, air entry, cyanosis, consciousness). Mild: occasional bark, no stridor at rest. Moderate: frequent bark, audible stridor at rest, mild retractions. Severe: marked stridor, severe retractions, agitation or cyanosis.",
+   "b": [
+    "Score ≤2 = mild",
+    "Score 3‑7 = moderate",
+    "Score ≥8 = severe"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are viral, especially parainfluenza type 1. Other viruses include RSV, influenza, adenovirus, and measles. In low‑resource settings consider co‑infection with HIV or TB that can worsen airway inflammation.",
+   "b": [
+    "Parainfluenza 1 (most common)",
+    "RSV, influenza, adenovirus",
+    "HIV‑related immunosuppression may predispose"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Child aged 6 months‑3 years develops a dry, barking cough, hoarse voice and inspiratory stridor, often worsening at night. Fever is low‑grade; breathing may be rapid with chest wall retractions.",
+   "b": [
+    "Barking cough",
+    "Hoarseness",
+    "Stridor, worse when agitated"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are limited; they are used to rule out mimics or complications.",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Is oxygenation adequate? Low SpO2 (<92%) signals severe disease needing supplemental O₂"
+    },
+    {
+     "a": "Neck X‑ray (optional)",
+     "b": "Is there subglottic narrowing (steeple sign)? Helpful when diagnosis is unclear; if unavailable, rely on clinical picture"
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Is there leukocytosis suggesting bacterial superinfection? Mild elevation is common; marked rise may prompt antibiotics"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid deterioration, severe retractions, cyanosis, lethargy, or inability to drink indicate impending airway obstruction. Complications include bacterial tracheitis and secondary pneumonia.",
+   "b": [
+    "Cyanosis or decreased consciousness",
+    "Progressive stridor despite therapy",
+    "Signs of bacterial superinfection"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat inflammation, maintain airway patency and give supportive care. Nebulised epinephrine for moderate‑severe cases, oral dexamethasone for all severities, humidified air is optional.",
+   "b": [
+    "Nebulised epinephrine – rapid bronchodilation for airway edema",
+    "Oral dexamethasone – reduces inflammation for 12‑24 h",
+    "Supplemental O₂ if SpO₂ <92%",
+    "Avoid routine antibiotics unless bacterial superinfection is evident"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Observe for at least 2‑4 hours after epinephrine; discharge if stable. Educate caregivers on signs of worsening. Vaccination against influenza and measles reduces viral triggers.",
+   "b": [
+    "Re‑assessment within 2 h after nebulised epinephrine",
+    "Vaccinate against influenza and measles"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause stridor or cough in children.",
+   "b": [
+    "Epiglottitis – high fever, drooling, muffled voice",
+    "Bacterial tracheitis – toxic appearance, purulent secretions",
+    "Asthma – wheeze, responds to bronchodilators"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal chest X‑ray does not exclude croup; mild leukocytosis is common and may be misinterpreted as bacterial infection.",
+   "b": [
+    "Steeple sign absent in up to 30 % of cases",
+    "Mild neutrophilia can be viral"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Cyanosis or bluish lips",
+  "Severe retractions with agitation",
+  "Inability to swallow or speak",
+  "Rapid breathing >60/min in a 2‑year‑old"
+ ],
+ "faq": [
+  {
+   "q": "Why is dexamethasone preferred over other steroids?",
+   "a": "It has a long half‑life, works orally, and reduces airway edema without needing repeat dosing."
+  },
+  {
+   "q": "When is nebulised epinephrine indicated?",
+   "a": "For moderate to severe croup with audible stridor at rest or significant retractions."
+  },
+  {
+   "q": "Can humidified air cure croup?",
+   "a": "It may provide comfort but does not alter disease course; evidence does not support routine use."
+  }
+ ],
+ "exam": [
+  "Describe the Westley croup scoring system and its clinical implications.",
+  "Explain the first‑line pharmacologic management of moderate croup and why steroids are essential.",
+  "List three red‑flag features that require immediate referral to a higher‑level facility."
+ ],
+ "related": [
+  "Epiglottitis",
+  "Bacterial tracheitis",
+  "Bronchiolitis",
+  "Asthma",
+  "Viral pneumonia",
+  "Upper respiratory infection"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

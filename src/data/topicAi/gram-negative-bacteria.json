@@ -1,0 +1,105 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Gram‑negative bacteria have a thin peptidoglycan layer between inner and outer membranes, the latter containing lipopolysaccharide that drives endotoxin shock. Their outer membrane limits drug entry, making infections harder to treat, especially in low‑resource settings.",
+ "aka": [
+  "G‑ bacteria",
+  "Gram‑negative rods/cocci"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Gram‑negative organisms are diverse (e.g., Enterobacterales, Pseudomonas, Neisseria). Clinically they cause infections ranging from urinary tract infection to sepsis, often in patients with comorbidities or compromised barriers.",
+   "b": [
+    "Thin peptidoglycan, outer membrane with LPS",
+    "Porins allow selective entry of nutrients and antibiotics"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The outer membrane contains lipopolysaccharide (LPS) with lipid A (endotoxin) and core polysaccharide; a periplasmic space houses enzymes; inner membrane has typical phospholipids.",
+   "b": [
+    "LPS triggers cytokine storm when released",
+    "Porin loss or mutation → carbapenem resistance"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Most are acquired via endogenous flora (gut, skin) or environmental exposure (water, soil). Nosocomial spread occurs through contaminated devices or hands.",
+   "b": [
+    "Fomites, urinary catheters, ventilators are high‑risk"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Common syndromes: urinary tract infection, intra‑abdominal infection, pneumonia, meningitis, septicemia, wound infection. Severity is staged by sepsis criteria (SIRS → sepsis → septic shock).",
+   "b": [
+    "Enterobacterales → ESBL‑producing UTIs",
+    "Pseudomonas aeruginosa → ventilator‑associated pneumonia"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Gram stain shows pink rods/cocci; culture on MacConkey selects lactose‑fermenters. Identify species and resistance via biochemical panels or MALDI‑TOF.",
+   "t": [
+    {
+     "a": "Gram stain",
+     "b": "Is the organism Gram‑negative? Pink cells confirm Gram‑negative morphology"
+    },
+    {
+     "a": "MacConkey agar",
+     "b": "Does the organism grow on selective media? Growth indicates Gram‑negative Enterobacterales"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Start empiric broad‑spectrum β‑lactam (e.g., ceftriaxone) plus aminoglycoside for severe sepsis; de‑escalate based on susceptibility. Use monobactam (aztreonam) for β‑lactam allergy. Source control (drain abscess, remove catheter) is essential.",
+   "b": [
+    "β‑lactams target penicillin‑binding proteins; porin entry needed",
+    "Avoid fluoroquinolones in high‑risk resistance settings"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember LPS = endotoxin → fever, hypotension, DIC. In low‑resource hospitals, prioritize source control and use carbapenem‑sparing regimens when susceptibility unknown.",
+   "b": [
+    "Septic shock from Gram‑negative sepsis meets ≥2 SIRS criteria + hypotension despite fluids"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly progressive hypotension, altered mental status, oliguria, or skin mottling in a patient with suspected Gram‑negative infection"
+ ],
+ "faq": [
+  {
+   "q": "Why are Gram‑negative infections harder to treat than Gram‑positive?",
+   "a": "The outer membrane blocks many antibiotics and disinfectants, and LPS can trigger severe systemic inflammation."
+  },
+  {
+   "q": "What is the clinical significance of lipid A?",
+   "a": "Lipid A is the toxic component of LPS; when released it activates macrophages, causing fever, vasodilation, and potentially septic shock."
+  },
+  {
+   "q": "When should aztreonam be used?",
+   "a": "In patients with severe β‑lactam allergy needing coverage for aerobic Gram‑negative organisms, especially Pseudomonas."
+  }
+ ],
+ "exam": [
+  "Explain how LPS contributes to septic shock and how this guides supportive care.",
+  "List the stepwise approach to empiric therapy for suspected Gram‑negative sepsis in a resource‑limited hospital.",
+  "Interpret a Gram stain showing pink rods and a positive MacConkey growth – what organism groups are possible and what resistance mechanisms should be considered?"
+ ],
+ "related": [
+  "Gram‑positive bacteria",
+  "Antibiotic resistance mechanisms",
+  "Sepsis and septic shock",
+  "Nosocomial infections",
+  "Urinary tract infections",
+  "Ventilator‑associated pneumonia"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

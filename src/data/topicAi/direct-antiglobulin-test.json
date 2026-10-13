@@ -1,0 +1,147 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "The Direct Antiglobulin Test (DAT) detects antibodies or complement on a patient’s red cells, guiding diagnosis of autoimmune hemolytic anemia and transfusion reactions. It informs transfusion safety and treatment choices.",
+ "aka": [
+  "Coombs test",
+  "Direct Coombs test"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "DAT identifies IgG or complement bound to red blood cells in vivo. A positive result indicates immune-mediated hemolysis or a transfusion reaction.",
+   "b": [
+    "IgG warm antibodies",
+    "Complement C3d"
+   ],
+   "t": [
+    {
+     "a": "DAT",
+     "b": "Positive = immune hemolysis or transfusion reaction; negative = unlikely immune cause."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "DAT itself is not staged, but a positive result prompts evaluation of hemolysis severity via hemoglobin, LDH, bilirubin, haptoglobin, and reticulocyte count.",
+   "b": [
+    "Mild hemolysis: hemoglobin >10 g/dL, mild LDH elevation"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin",
+     "b": "Low hemoglobin indicates hemolysis severity."
+    },
+    {
+     "a": "LDH",
+     "b": "Elevated LDH supports hemolysis."
+    },
+    {
+     "a": "Bilirubin",
+     "b": "Increased indirect bilirubin confirms hemolysis."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common causes of a positive DAT are warm autoimmune hemolytic anemia and transfusion reactions. Other causes include cold agglutinin disease, drug-induced hemolysis, and infections.",
+   "b": [
+    "Warm AIHA (IgG)",
+    "Transfusion reactions (IgG/C3d)",
+    "Cold agglutinin disease (IgM)"
+   ],
+   "t": [
+    {
+     "a": "IgG antibodies",
+     "b": "Positive DAT with IgG suggests warm AIHA."
+    },
+    {
+     "a": "Complement C3d",
+     "b": "Positive DAT with C3d indicates complement-mediated hemolysis."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have fatigue, pallor, jaundice, dark urine, or splenomegaly. Transfusion reactions present with fever, chills, hypotension, or hemoglobinuria.",
+   "b": [
+    "Fatigue",
+    "Jaundice",
+    "Hemoglobinuria"
+   ],
+   "t": [
+    {
+     "a": "Clinical signs",
+     "b": "Presence of jaundice or hemoglobinuria supports hemolysis."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "After a positive DAT, confirm hemolysis and identify the specific antibody. In low-resource settings, a simple antibody screen and crossmatch may suffice.",
+   "b": [
+    "Antibody identification"
+   ],
+   "t": [
+    {
+     "a": "Antibody screen",
+     "b": "Identifies specific antibody for transfusion matching."
+    },
+    {
+     "a": "Crossmatch",
+     "b": "Ensures safe transfusion."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe hemolysis can lead to acute kidney injury, disseminated intravascular coagulation, or death. Rapid identification and transfusion avoidance are critical.",
+   "b": [
+    "Acute kidney injury"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Elevated creatinine indicates AKI."
+    },
+    {
+     "a": "Coagulation profile",
+     "b": "Prolonged PT/INR suggests DIC."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute hemolysis with hypotension or renal failure",
+  "Severe anemia with rapid drop in hemoglobin"
+ ],
+ "faq": [
+  {
+   "q": "What does a positive DAT mean?",
+   "a": "It shows antibodies or complement attached to red cells, indicating immune hemolysis or a transfusion reaction."
+  },
+  {
+   "q": "Can DAT be negative in hemolytic anemia?",
+   "a": "Yes, if hemolysis is non-immune or antibodies are below detection limits."
+  },
+  {
+   "q": "Do I need a blood transfusion if DAT is positive?",
+   "a": "Only if the patient is symptomatic or severely anemic; otherwise treat the underlying cause."
+  }
+ ],
+ "exam": [
+  "Explain the clinical significance of a positive DAT in a patient with unexplained anemia.",
+  "Describe the steps to manage a transfusion reaction when DAT is positive.",
+  "Differentiate between warm and cold autoimmune hemolytic anemia based on DAT findings."
+ ],
+ "related": [
+  "Autoimmune hemolytic anemia",
+  "Transfusion reactions",
+  "Cold agglutinin disease",
+  "Hemolytic disease of the newborn"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

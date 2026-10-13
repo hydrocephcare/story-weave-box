@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Liver tumors range from benign hemangiomas to aggressive hepatocellular carcinoma. Diagnosis hinges on imaging, tumor markers, and selective biopsy. Management balances tumor control with liver function and patient comorbidities.",
+ "aka": [
+  "Hepatic neoplasms"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Liver tumors are abnormal growths arising from hepatocytes, biliary epithelium, or vascular tissue. Diagnosis starts with imaging; biopsy is reserved for indeterminate lesions.",
+   "b": [
+    "Imaging: ultrasound, CT, MRI"
+   ],
+   "t": [
+    {
+     "a": "AFP",
+     "b": "Elevated in hepatocellular carcinoma; normal in benign lesions."
+    },
+    {
+     "a": "Immunohistochemistry (CK19, HepPar-1)",
+     "b": "Distinguishes cholangiocarcinoma from hepatocellular carcinoma."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging uses the Barcelona Clinic Liver Cancer (BCLC) system for hepatocellular carcinoma, integrating tumor burden, liver function, and performance status.",
+   "b": [
+    "BCLC 0: single <2 cm, preserved liver",
+    "BCLC A: up to 3 nodules <3 cm, preserved liver",
+    "BCLC B: multinodular, preserved liver",
+    "BCLC C: portal invasion or extrahepatic spread",
+    "BCLC D: decompensated liver"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Risk factors differ by tumor type and region. In low-resource settings, viral hepatitis and aflatoxin exposure dominate.",
+   "b": [
+    "Hepatitis B/C infection",
+    "Aflatoxin B1 exposure",
+    "Alcoholic liver disease",
+    "Non‑alcoholic fatty liver disease",
+    "Chronic parasitic infections (schistosomiasis)"
+   ],
+   "t": [
+    {
+     "a": "HBV DNA",
+     "b": "High viral load increases hepatocarcinogenesis risk."
+    },
+    {
+     "a": "Serum IgG4",
+     "b": "Suggests IgG4‑related sclerosing cholangitis, a precursor to cholangiocarcinoma."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms are often nonspecific; many tumors are asymptomatic until advanced.",
+   "b": [
+    "Right upper quadrant pain",
+    "Jaundice",
+    "Weight loss",
+    "Abdominal mass",
+    "Ascites"
+   ],
+   "t": [
+    {
+     "a": "Liver function tests",
+     "b": "Elevated bilirubin and transaminases indicate biliary obstruction or hepatocyte injury."
+    },
+    {
+     "a": "Platelet count",
+     "b": "Thrombocytopenia may signal portal hypertension."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A stepwise approach ensures accurate diagnosis while conserving limited resources.",
+   "b": [
+    "Ultrasound first-line"
+   ],
+   "t": [
+    {
+     "a": "Contrast-enhanced CT",
+     "b": "Shows arterial phase hyperenhancement and washout, characteristic of HCC."
+    },
+    {
+     "a": "MRI with hepatobiliary contrast",
+     "b": "Differentiates hemangioma (centripetal fill) from malignancy."
+    },
+    {
+     "a": "AFP",
+     "b": "Supports HCC diagnosis when >400 ng/mL."
+    },
+    {
+     "a": "Biopsy",
+     "b": "Reserved for lesions >2 cm with indeterminate imaging; avoids hemorrhage in hemangioma."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain findings mandate urgent intervention to prevent mortality.",
+   "b": [
+    "Massive hemangioma rupture",
+    "Portal vein thrombosis",
+    "Rapidly enlarging mass",
+    "Unexplained weight loss"
+   ],
+   "t": [
+    {
+     "a": "CT angiography",
+     "b": "Detects active bleeding or vascular invasion."
+    },
+    {
+     "a": "Doppler ultrasound",
+     "b": "Assesses portal vein patency."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden abdominal pain with hemodynamic instability",
+  "Rapidly enlarging abdominal mass",
+  "Unexplained jaundice",
+  "Significant weight loss"
+ ],
+ "faq": [
+  {
+   "q": "Why is biopsy avoided in hemangioma?",
+   "a": "Risk of massive hemorrhage due to vascular nature."
+  },
+  {
+   "q": "What is the most common benign liver tumor?",
+   "a": "Cavernous hemangioma."
+  },
+  {
+   "q": "Which tumor marker is most useful for HCC?",
+   "a": "Alpha‑fetoprotein (AFP)."
+  }
+ ],
+ "exam": [
+  "Explain the BCLC staging system and its clinical implications.",
+  "Describe the imaging features that differentiate a cavernous hemangioma from hepatocellular carcinoma.",
+  "Outline the management plan for a patient with intermediate‑stage HCC in a low‑resource setting."
+ ],
+ "related": [
+  "Hepatocellular carcinoma",
+  "Cholangiocarcinoma",
+  "Cavernous hemangioma",
+  "Focal nodular hyperplasia",
+  "Metastatic liver disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "A lung abscess is a necrotic cavity in lung tissue filled with pus, usually from aspirated oral flora or necrotizing pneumonia. Prompt diagnosis and targeted antibiotics plus drainage are essential to prevent severe complications.",
+ "aka": [
+  "Pulmonary abscess"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A lung abscess is a localized area of suppurative necrosis in the pulmonary parenchyma that forms a cavity ≥2 cm containing pus or necrotic debris.",
+   "b": [
+    "Diagnosis requires imaging (CXR or CT) showing a cavity with an air‑fluid level.",
+    "Microbiological confirmation is optional but helps tailor therapy."
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Does the image show a cavitary lesion with an air‑fluid level? Positive suggests abscess; a solid mass suggests tumor."
+    },
+    {
+     "a": "CT thorax",
+     "b": "What is the size, wall thickness, and surrounding inflammation? Thick wall (>15 mm) and surrounding consolidation support abscess."
+    },
+    {
+     "a": "Sputum culture",
+     "b": "Which organisms are present? Growth of anaerobes or typical pathogens guides antibiotic choice; negative cultures do not rule out abscess."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is judged by size, systemic toxicity, and complications. No universal staging system exists, but clinicians use a three‑tier approach.",
+   "b": [
+    "Mild: cavity <4 cm, stable vitals, no sepsis.",
+    "Moderate: cavity 4–6 cm, fever, leukocytosis, but no organ failure.",
+    "Severe: cavity >6 cm, septic shock, respiratory failure, or haemoptysis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most lung abscesses arise from aspiration of oropharyngeal contents, especially in patients with altered consciousness or alcohol use.",
+   "b": [
+    "Anaerobic bacteria from the oral cavity (e.g., Bacteroides, Fusobacterium).",
+    "Aspiration of gastric acid with mixed flora.",
+    "Necrotizing pneumonia (S. aureus, K. pneumoniae, Pseudomonas).",
+    "Bronchial obstruction by tumor or foreign body.",
+    "Fungal infection in immunocompromised hosts (e.g., Aspergillus).",
+    "Tuberculosis or HIV‑related opportunistic infections in low‑resource settings."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually have a sub‑acute cough with foul‑smelling sputum, fever, night sweats, and weight loss.",
+   "b": [
+    "Foul‑smelling, purulent sputum (anaerobes).",
+    "Fever and chills.",
+    "Chest pain that may be pleuritic.",
+    "Weight loss and fatigue."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging confirms the cavity; labs assess systemic response and guide antimicrobial therapy.",
+   "b": [
+    "CBC for leukocytosis.",
+    "CRP/ESR to gauge inflammation.",
+    "Blood cultures if sepsis suspected."
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Is there leukocytosis? Elevated white cells support infection; normal count does not exclude abscess."
+    },
+    {
+     "a": "CRP",
+     "b": "Is CRP markedly raised? High levels indicate active inflammation; low levels may suggest a chronic cavity."
+    },
+    {
+     "a": "Blood cultures",
+     "b": "Are organisms isolated? Positive cultures identify bacteremia; negative cultures are common."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and require urgent intervention.",
+   "b": [
+    "Massive haemoptysis.",
+    "Empyema or pleural effusion.",
+    "Septic shock.",
+    "Bronchopleural fistula.",
+    "Cor pulmonale from chronic hypoxia."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the infection, support the patient, and consider drainage if the cavity does not resolve.",
+   "b": [
+    "Empiric IV antibiotics covering anaerobes and typical necrotizing pathogens (e.g., clindamycin or β‑lactam/β‑lactamase inhibitor).",
+    "Switch to oral therapy after clinical improvement (usually 4–6 weeks total).",
+    "Chest physiotherapy and incentive spirometry to improve clearance.",
+    "Percutaneous catheter drainage for large or non‑responding cavities.",
+    "Surgery (lobectomy) only for refractory cases or massive haemoptysis."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Repeat imaging ensures resolution; address risk factors to avoid recurrence.",
+   "b": [
+    "Chest X‑ray at 4–6 weeks to confirm cavity shrinkage.",
+    "Dental evaluation and oral hygiene for aspiration‑related cases.",
+    "Alcohol cessation programs.",
+    "Vaccination against influenza and pneumococcus."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several cavitary lung diseases mimic an abscess on imaging.",
+   "b": [
+    "Pulmonary tuberculosis (especially cavitary TB).",
+    "Necrotizing pneumonia without true cavity formation.",
+    "Bronchogenic carcinoma with central necrosis.",
+    "Empyema (fluid collection in pleural space)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may give a false sense of security.",
+   "b": [
+    "Normal sputum culture does not rule out anaerobic infection (fastidious organisms).",
+    "A small air‑fluid level on X‑ray can be missed, leading to delayed diagnosis.",
+    "Leukocytosis may be absent in immunocompromised patients."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Massive or recurrent haemoptysis",
+  "High‑grade fever with hypotension (septic shock)",
+  "Sudden worsening shortness of breath or chest pain"
+ ],
+ "faq": [
+  {
+   "q": "Why is sputum foul‑smelling in lung abscess?",
+   "a": "Anaerobic bacteria produce volatile sulfur compounds that give a characteristic odor."
+  },
+  {
+   "q": "Can a lung abscess resolve without antibiotics?",
+   "a": "Rarely; most require prolonged antimicrobial therapy, though small abscesses may respond to drainage alone."
+  },
+  {
+   "q": "When is surgical removal indicated?",
+   "a": "When the cavity persists despite antibiotics and drainage, or when massive haemoptysis or bronchopleural fistula occurs."
+  }
+ ],
+ "exam": [
+  "Describe the typical imaging findings of a lung abscess and how they differ from empyema.",
+  "List the first‑line empiric antibiotic regimen for a community‑acquired lung abscess and justify each component.",
+  "Explain the major complications of lung abscess and the immediate actions required for each."
+ ],
+ "related": [
+  "Aspiration pneumonia",
+  "Necrotizing bacterial pneumonia",
+  "Pulmonary tuberculosis",
+  "Empyema",
+  "Bronchiectasis",
+  "Pulmonary cavitary carcinoma"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

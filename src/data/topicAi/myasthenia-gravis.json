@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Myasthenia gravis is an autoimmune disease where antibodies impair acetylcholine receptors at the neuromuscular junction, causing fluctuating muscle weakness that worsens with use.",
+ "aka": [
+  "Myasthenic syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Autoimmune attack on post‑synaptic acetylcholine receptors (or MuSK) reduces neuromuscular transmission. Diagnosis requires clinical pattern plus objective testing.",
+   "b": [
+    "Clinical: fatigable weakness, ptosis, diplopia, dysphagia, limb/respiratory weakness.",
+    "Positive edrophonium (Tensilon) test or ice‑pack test supports diagnosis.",
+    "Serology: anti‑AChR antibodies (≈80% generalized) or anti‑MuSK (≈5%)."
+   ],
+   "t": [
+    {
+     "a": "Anti‑AChR antibody assay",
+     "b": "Does the patient have pathogenic antibodies? Positive result confirms autoimmune MG; negative does not exclude seronegative disease."
+    },
+    {
+     "a": "Repetitive nerve stimulation (RNS)",
+     "b": "Is there a decremental response? A >10% decrement at 3 Hz indicates impaired transmission."
+    },
+    {
+     "a": "Single‑fiber EMG",
+     "b": "Is jitter increased? Highly sensitive for MG; abnormal jitter confirms neuromuscular junction disorder."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Myasthenia Gravis Foundation of America (MGFA) clinical classification grades patients from I (ocular) to V (intubation).",
+   "b": [
+    "Class I: ocular weakness only.",
+    "Class II–IV: generalized weakness with increasing functional impact.",
+    "Class V: respiratory failure requiring ventilation."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are idiopathic autoimmune; secondary causes include thymic pathology and infections common in low‑resource settings.",
+   "b": [
+    "Thymic hyperplasia (young adults) – most frequent cause.",
+    "Thymoma (older adults) – consider imaging.",
+    "Infections: HIV, hepatitis B, TB can trigger or worsen MG.",
+    "Drugs: fluoroquinolones, macrolides, beta‑blockers may precipitate crisis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Weakness worsens with activity and improves with rest; ocular signs often appear first, later spreading to bulbar, limb, and respiratory muscles.",
+   "b": [
+    "Ptosis and diplopia that increase later in the day.",
+    "Dysarthria, dysphagia, chewing difficulty.",
+    "Neck and proximal limb weakness; difficulty rising from a chair.",
+    "Respiratory fatigue leading to dyspnea or orthopnea."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Combine bedside tests, serology, electrophysiology, and imaging to confirm diagnosis and assess thymic disease.",
+   "b": [
+    "Ice‑pack test – simple bedside clue for ocular MG.",
+    "Chest CT/MRI – looks for thymoma or hyperplasia."
+   ],
+   "t": [
+    {
+     "a": "Chest CT",
+     "b": "Is a thymoma present? Detects surgically removable tumor; normal thymus does not rule out hyperplasia."
+    },
+    {
+     "a": "Pulmonary function tests (spirometry, vital capacity)",
+     "b": "Is respiratory reserve adequate? Declining VC predicts impending crisis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid deterioration can lead to myasthenic crisis, a life‑threatening respiratory failure.",
+   "b": [
+    "Sudden worsening of dyspnea or inability to speak full sentences.",
+    "Severe bulbar weakness causing aspiration.",
+    "Unexplained hypercapnia or falling vital capacity."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying immune process, improve transmission, and protect the airway.",
+   "b": [
+    "Acetylcholinesterase inhibitors (e.g., pyridostigmine) – increase available ACh at the junction.",
+    "Corticosteroids – first‑line immunosuppression; taper to lowest effective dose.",
+    "Steroid‑sparing agents (azathioprine, mycophenolate) – maintain remission, avoid long‑term steroid toxicity.",
+    "Thymectomy – indicated for thymoma or generalized MG in patients <65 y, improves long‑term outcomes.",
+    "Plasmapheresis or IVIG – rapid control in crisis or pre‑operative setting."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of muscle strength, respiratory function, and medication side effects prevents crisis.",
+   "b": [
+    "Clinic review every 3–6 months; sooner after medication changes.",
+    "Serial vital capacity measurements; educate patients to seek help if it drops >20%.",
+    "Vaccinate against influenza and pneumococcus; avoid known trigger drugs."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause fluctuating weakness or ocular signs.",
+   "b": [
+    "Lambert‑Eaton myasthenic syndrome – presynaptic, improves with use.",
+    "Ocular myopathy (e.g., chronic progressive external ophthalmoplegia).",
+    "Brainstem stroke – sudden, not fatigable."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Negative serology or normal electrophysiology does not exclude MG.",
+   "b": [
+    "Seronegative MG (MuSK or low‑titer AChR) may have normal anti‑AChR assay.",
+    "RNS can be normal in purely ocular disease; single‑fiber EMG is more sensitive.",
+    "Thymic imaging may miss small hyperplasia; clinical judgment remains essential."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden inability to speak full sentences or swallow",
+  "Rapid onset of shortness of breath or chest tightness",
+  "Drooping eyelids that do not improve with rest"
+ ],
+ "faq": [
+  {
+   "q": "Why does weakness improve with rest?",
+   "a": "Rest allows acetylcholine stores to replenish, temporarily restoring transmission."
+  },
+  {
+   "q": "Can MG be cured?",
+   "a": "Thymectomy can induce long‑term remission in many, but most patients need ongoing immunosuppression."
+  },
+  {
+   "q": "Are all antibiotics unsafe?",
+   "a": "Only those known to worsen neuromuscular transmission (e.g., fluoroquinolones, macrolides) should be avoided."
+  }
+ ],
+ "exam": [
+  "Describe the pathophysiology of myasthenia gravis and how it leads to fatigable weakness.",
+  "Explain how you would use the MGFA classification to stage a patient presenting with ocular and bulbar symptoms.",
+  "Outline the acute management steps for a myasthenic crisis."
+ ],
+ "related": [
+  "Lambert‑Eaton myasthenic syndrome",
+  "Thymoma",
+  "Autoimmune disorders",
+  "Neuromuscular junction physiology",
+  "Respiratory failure",
+  "Immunosuppressive therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

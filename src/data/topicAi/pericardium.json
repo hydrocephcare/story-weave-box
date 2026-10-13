@@ -1,0 +1,140 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The pericardium is a double‑layered sac that surrounds the heart, anchoring it and preventing over‑distension. Its layers, relations, and fluid dynamics are key to diagnosing and managing pericardial disease.",
+ "aka": [
+  "Pericardial sac"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The pericardium protects the heart, limits its movement, and provides a lubricated space for cardiac motion.",
+   "b": [
+    "Double‑layered: fibrous outer, serous inner"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lies within the mediastinum, posterior to the sternum and anterior to the great vessels. The serous pericardium has a visceral layer (epicardium) and a parietal layer.",
+   "b": [
+    "Fibrous pericardium attaches to sternum, aorta, pulmonary trunk"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Posteriorly it is adjacent to the esophagus; anteriorly to the sternum; it encloses the roots of the great vessels.",
+   "b": [
+    "Ties to phrenic nerve, vagus, sympathetic chain"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The pericardium receives arterial blood from the pericardiacophrenic, middle cardiac, and posterior intercostal arteries.",
+   "b": [
+    "Venous drainage via pericardiacophrenic veins"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Innervation is mainly sympathetic and parasympathetic via the phrenic nerve and vagus.",
+   "b": [
+    "Pain fibers travel with phrenic nerve"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "It limits cardiac expansion, provides a lubricated environment, and serves as a barrier against infection.",
+   "b": [
+    "Maintains intrapericardial pressure"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Pericardial disease presents with chest pain, dyspnea, or muffled heart sounds. Causes include infection, autoimmune disease, malignancy, trauma, and post‑cardiac surgery.",
+   "b": [
+    "Constrictive pericarditis: rigid shell, Kussmaul sign"
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Detects pericardial effusion, thickness, and diastolic collapse – confirms tamponade"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows enlarged cardiac silhouette in effusion; calcification suggests constriction"
+    },
+    {
+     "a": "ECG",
+     "b": "Diffuse ST elevation and PR depression in acute pericarditis; electrical alternans in large effusion"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that pericardial friction rub is heard best at the left lower sternal border. In tamponade, pulsus paradoxus is a key sign.",
+   "b": [
+    "Constrictive pericarditis responds poorly to diuretics"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, relieve pressure, and monitor hemodynamics.",
+   "b": [
+    "Pericardiectomy for refractory constriction"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pericarditis can mimic pleurisy, myocardial infarction, and pulmonary embolism.",
+   "b": [
+    "Pulmonary embolism can cause right heart strain"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Small effusions may be missed on chest X‑ray; ECG changes can be subtle in early pericarditis.",
+   "b": [
+    "Mild effusion may appear normal on echo if suboptimal view"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use imaging and laboratory tests to confirm diagnosis and guide treatment.",
+   "t": [
+    {
+     "a": "Serum troponin",
+     "b": "Elevated in myocardial injury, not specific for pericarditis"
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "High levels support inflammatory etiology"
+    },
+    {
+     "a": "Blood cultures",
+     "b": "Identify bacterial cause in purulent pericarditis"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Cardiac tamponade",
+  "Constrictive pericarditis with severe symptoms",
+  "Unexplained chest pain with dyspnea"
+ ],
+ "faq": [],
+ "exam": [
+  "Explain the pathophysiology of cardiac tamponade and its clinical signs.",
+  "Describe the diagnostic workup for acute pericarditis in a patient with chest pain.",
+  "Outline the management steps for a patient with constrictive pericarditis in a low‑resource setting."
+ ],
+ "related": [
+  "Heart valves",
+  "Myocarditis",
+  "Pulmonary embolism",
+  "Thoracic surgery"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

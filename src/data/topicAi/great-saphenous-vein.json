@@ -1,0 +1,129 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The great saphenous vein (GSV) is the longest superficial leg vein, draining the lower limb skin and subcutaneous tissue into the femoral vein. Its course and connections are key for varicose veins, venous insufficiency, and as a conduit for bypass grafts.",
+ "aka": [
+  "Long saphenous vein"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The GSV is a superficial, thin‑walled vein that runs from the foot to the groin, providing the main route for superficial venous return from the lower limb.",
+   "b": [
+    "Longest vein in the body (~1.5 m)",
+    "Important for clinical procedures (varicose vein surgery, coronary bypass graft)",
+    "Prone to reflux and thrombosis"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It originates from the medial dorsal venous arch, passes anterior to the medial malleolus, ascends the medial leg and thigh, and enters the femoral vein through the saphenous opening.",
+   "b": [
+    "Origin: medial dorsal venous arch",
+    "Course: anterior to medial malleolus → medial calf → thigh → saphenous hiatus",
+    "Termination: femoral vein just inferior to inguinal ligament"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Along its course the GSV lies superficial to the fascia, deep to the skin, and is accompanied by the saphenous nerve in the distal leg.",
+   "b": [
+    "Saphenous nerve runs alongside in the distal third",
+    "Close to the femoral artery in the groin",
+    "Crosses the sartorius muscle near the saphenous opening"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The GSV receives tributaries from superficial veins of the foot, leg, and thigh, and drains into the deep femoral system via the femoral vein.",
+   "b": [
+    "Tributaries: anterior and posterior tibial veins, superficial epigastric, external pudendal",
+    "No arterial supply; relies on surrounding tissue perfusion"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory innervation of the GSV wall is provided by the saphenous branch of the femoral nerve.",
+   "b": [
+    "Saphenous nerve supplies skin and vein wall sensation",
+    "Important for pain perception in thrombophlebitis"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "It returns deoxygenated blood from the superficial tissues of the lower limb to the central circulation, acting as a low‑pressure reservoir.",
+   "b": [
+    "Facilitates thermoregulation via skin blood flow",
+    "Acts as a pressure buffer during standing"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Pathology of the GSV includes varicose veins, chronic venous insufficiency, thrombophlebitis, and its use as a graft in coronary artery bypass surgery.",
+   "b": [
+    "Varicose veins: dilated, tortuous segments with reflux",
+    "Thrombophlebitis: pain, redness, cord‑like vein",
+    "GSV harvest: risk of wound infection, nerve injury"
+   ],
+   "t": [
+    {
+     "a": "Duplex ultrasound",
+     "b": "Does the vein have reflux or thrombosis? → Reflux >0.5 s confirms insufficiency; thrombus appears as non‑compressible segment."
+    },
+    {
+     "a": "Clinical examination (Trendelenburg test)",
+     "b": "Is there incompetent valve? → Persistent filling after calf elevation indicates reflux."
+    },
+    {
+     "a": "D‑dimer (if ultrasound unavailable)",
+     "b": "Is thrombosis likely? → Elevated D‑dimer supports clot but is non‑specific; proceed to clinical assessment."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and bedside assessment of the GSV.",
+   "b": [
+    "Origin: medial dorsal venous arch; termination: femoral vein via saphenous opening",
+    "Varicose veins: >3 mm diameter, reflux >0.5 s on duplex",
+    "Complications: ulceration, deep venous thrombosis, pulmonary embolism"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe leg pain with swelling and redness (possible acute thrombophlebitis)",
+  "Rapidly expanding varicose vein with skin ulceration (risk of infection)",
+  "Signs of pulmonary embolism (dyspnea, chest pain) after GSV thrombosis"
+ ],
+ "faq": [
+  {
+   "q": "Why is the GSV commonly used for coronary bypass grafts?",
+   "a": "It is long, superficial, and easily harvested; its wall is suitable for arterial pressure after preparation."
+  },
+  {
+   "q": "What differentiates a varicose vein from a normal superficial vein?",
+   "a": "Varicose veins are dilated (>3 mm), tortuous, and show reflux on duplex; normal veins are collapsible and non‑refluxing."
+  },
+  {
+   "q": "Can a thrombosed GSV cause a pulmonary embolism?",
+   "a": "Yes, clot can propagate into the deep system and travel to the lungs, especially if the deep femoral vein is involved."
+  }
+ ],
+ "exam": [
+  "Describe the full anatomical course of the great saphenous vein, including its origin and termination.",
+  "Explain how duplex ultrasound is used to diagnose venous reflux in the GSV.",
+  "List three major complications of GSV varicosities and their clinical significance."
+ ],
+ "related": [
+  "Small saphenous vein",
+  "Deep femoral vein",
+  "Chronic venous insufficiency",
+  "Varicose vein surgery",
+  "Duplex ultrasonography",
+  "Venous ulcer"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

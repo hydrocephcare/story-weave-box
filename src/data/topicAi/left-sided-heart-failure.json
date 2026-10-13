@@ -1,0 +1,175 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Left‑sided heart failure is a failure of the left ventricle to pump blood efficiently, causing pulmonary congestion and reduced systemic output. It is most often due to ischemic heart disease or hypertension.",
+ "aka": [
+  "LVHF",
+  "Left ventricular failure"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Left‑sided heart failure occurs when the left ventricle cannot eject blood adequately, leading to increased pulmonary venous pressure and pulmonary congestion. Diagnosis combines clinical signs, imaging, and biomarkers.",
+   "b": [
+    "Pulmonary congestion on chest X‑ray",
+    "Elevated BNP/NT‑proBNP",
+    "Reduced ejection fraction on echo"
+   ],
+   "t": [
+    {
+     "a": "BNP/NT‑proBNP",
+     "b": "Is the patient experiencing heart failure? High levels (>125 pg/mL) suggest HF, especially when symptoms are present."
+    },
+    {
+     "a": "Ejection fraction (EF)",
+     "b": "Is the left ventricle pumping efficiently? EF <40% confirms systolic HF; 40‑49% indicates mid‑range HF."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Does the lung show congestion? Kerley B lines, interstitial edema, or pleural effusion support HF."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The New York Heart Association (NYHA) classifies functional limitation, while the ACC/AHA stages (A–D) describe disease progression and prognosis.",
+   "b": [
+    "NYHA I–IV: symptom burden",
+    "ACC/AHA A–D: risk, symptoms, structural changes"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the top causes are ischemic heart disease, hypertension, rheumatic valve disease, and infectious myocarditis.",
+   "b": [
+    "Ischemic heart disease (MI, coronary artery disease)",
+    "Hypertension",
+    "Rheumatic mitral/aortic valve disease",
+    "Infectious myocarditis (e.g., TB, HIV)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report dyspnea on exertion, orthopnea, and paroxysmal nocturnal dyspnea. Physical exam shows tachycardia, S3 gallop, and pulmonary crackles.",
+   "b": [
+    "Dyspnea on exertion (earliest)",
+    "Orthopnea/PND",
+    "S3 gallop",
+    "Pulmonary crackles"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use tests that answer specific questions; if unavailable, rely on clinical judgment and basic labs.",
+   "t": [
+    {
+     "a": "BNP/NT‑proBNP",
+     "b": "Is the patient in heart failure? High levels support diagnosis."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "What is LV function? EF, wall motion, valve disease."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Does the lung show congestion? Edema, pleural effusion."
+    },
+    {
+     "a": "CBC, electrolytes, renal function",
+     "b": "Are there renal dysfunction or electrolyte disturbances that affect treatment?"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly worsening dyspnea, pulmonary edema, cardiogenic shock, arrhythmias, and renal failure are urgent complications.",
+   "b": [
+    "Pulmonary edema with hypoxia",
+    "Cardiogenic shock",
+    "Atrial fibrillation",
+    "Acute kidney injury"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then support circulation and relieve congestion. Drug choice balances efficacy and safety in low‑resource settings.",
+   "b": [
+    "ACE inhibitors or ARBs – reduce afterload, improve survival",
+    "Beta‑blockers – slow heart rate, improve EF",
+    "Loop diuretics – relieve pulmonary congestion",
+    "Spironolactone – RAAS blockade in advanced HF"
+   ],
+   "t": [
+    {
+     "a": "ACE inhibitor/ARB",
+     "b": "Does the patient have hypertension or LV dysfunction? These drugs lower afterload and improve survival."
+    },
+    {
+     "a": "Loop diuretic",
+     "b": "Is the patient fluid overloaded? Diuretics reduce pulmonary congestion."
+    },
+    {
+     "a": "Beta‑blocker",
+     "b": "Is the patient in sinus rhythm with LV dysfunction? They improve EF and reduce mortality."
+    },
+    {
+     "a": "Spironolactone",
+     "b": "Is the patient in NYHA III–IV? It adds mortality benefit but watch potassium."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of symptoms, weight, BP, and labs; lifestyle changes; vaccination; early treatment of infections.",
+   "b": [
+    "Weight and BP checks",
+    "Medication adherence",
+    "Smoking cessation",
+    "Vaccination against influenza and pneumococcus"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Right‑sided HF, COPD exacerbation, pneumonia, and pulmonary embolism can mimic pulmonary congestion.",
+   "b": [
+    "Right‑sided HF – peripheral edema, jugular venous distension"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe shortness of breath",
+  "Chest pain",
+  "Syncope"
+ ],
+ "faq": [
+  {
+   "q": "What is the earliest symptom of left‑sided heart failure?",
+   "a": "Dyspnea on exertion appears before orthopnea or paroxysmal nocturnal dyspnea."
+  },
+  {
+   "q": "Why is an S3 gallop significant?",
+   "a": "It indicates increased filling pressures and is a marker of systolic dysfunction."
+  },
+  {
+   "q": "Can diuretics worsen kidney function?",
+   "a": "Yes, over‑diuresis can reduce renal perfusion; monitor creatinine and electrolytes."
+  }
+ ],
+ "exam": [
+  "Explain how ischemic heart disease leads to left‑sided heart failure and describe the compensatory mechanisms.",
+  "List the diagnostic criteria for left‑sided heart failure using BNP, echocardiography, and chest X‑ray.",
+  "Outline the first‑line pharmacologic therapy for a patient with systolic left‑sided heart failure and explain why each drug is chosen."
+ ],
+ "related": [
+  "Ischemic heart disease",
+  "Hypertension",
+  "Rheumatic heart disease",
+  "Pulmonary edema",
+  "Congestive heart failure",
+  "Atrial fibrillation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

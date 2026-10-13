@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Osteomyelitis is infection of bone and marrow that can be acute or chronic. Prompt diagnosis, appropriate antibiotics and surgical debridement are essential to prevent permanent damage and systemic complications.",
+ "aka": [
+  "Bone infection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Infection of bone tissue, usually bacterial, confirmed by imaging and microbiology. Diagnosis requires clinical suspicion, elevated inflammatory markers, and evidence of bone involvement on MRI or bone scan.",
+   "b": [
+    "Acute: symptoms <2 weeks, often hematogenous.",
+    "Chronic: >6 weeks, may have sinus tract."
+   ],
+   "t": [
+    {
+     "a": "MRI",
+     "b": "Does the bone show edema or abscess? Positive MRI confirms osteomyelitis and guides surgery."
+    },
+    {
+     "a": "Blood culture",
+     "b": "Is a pathogen present in the bloodstream? Positive culture identifies organism for targeted therapy."
+    },
+    {
+     "a": "Bone biopsy",
+     "b": "What organism is in the infected bone? Provides definitive microbiology when blood cultures are negative."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use the Cierny‑Mader classification: anatomic type (I‑IV) and physiologic class (A‑C). This guides need for surgery versus medical therapy alone.",
+   "b": [
+    "Type I: medullary infection only.",
+    "Type II: superficial cortical involvement.",
+    "Type III: localized full‑thickness cortical disease.",
+    "Type IV: diffuse disease affecting the whole bone."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are bacterial, with Staphylococcus aureus leading. In low‑resource settings, consider Mycobacterium tuberculosis, Gram‑negative bacilli, and fungal agents.",
+   "b": [
+    "Hematogenous spread (children, S. aureus).",
+    "Contiguous spread from soft‑tissue infection or trauma.",
+    "Direct inoculation after surgery or penetrating injury.",
+    "Chronic TB osteomyelitis in endemic regions."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Pain is the hallmark, often deep and worsening at night. Swelling, warmth, and fever may be present. Chronic disease can produce a draining sinus tract.",
+   "b": [
+    "Acute: rapid onset pain, fever, leukocytosis.",
+    "Chronic: persistent pain, sinus, low‑grade fever, weight loss."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Combine laboratory, imaging and microbiology to confirm infection, stage disease and plan treatment.",
+   "b": [
+    "ESR/CRP: track inflammation.",
+    "Plain X‑ray: late changes (sequestrum, involucrum)."
+   ],
+   "t": [
+    {
+     "a": "ESR/CRP",
+     "b": "Is there systemic inflammation? Elevated values support infection but are nonspecific."
+    },
+    {
+     "a": "Plain radiograph",
+     "b": "Are there bone lysis or new bone formation? Positive after 2‑3 weeks; helps assess chronic changes."
+    },
+    {
+     "a": "CT scan",
+     "b": "Is cortical destruction present? Useful when MRI unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unchecked infection can lead to sepsis, pathological fracture, growth‑plate arrest in children, and chronic draining sinuses that cause amyloidosis.",
+   "b": [
+    "Rapidly expanding swelling.",
+    "Unexplained hypotension or tachycardia.",
+    "New neurologic deficit near spine."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the pathogen, remove necrotic bone, and support healing. Antibiotics are given intravenously initially, then orally, guided by culture.",
+   "b": [
+    "Empiric IV anti‑staphylococcal (e.g., cefazolin) pending cultures.",
+    "Add MRSA coverage (vancomycin) if risk factors present.",
+    "For TB, start standard anti‑TB regimen.",
+    "Surgical debridement to excise sequestrum and allow drainage."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor inflammatory markers, wound healing and functional recovery. Vaccination, wound care and early treatment of skin infections reduce recurrence.",
+   "b": [
+    "Repeat ESR/CRP at 2‑week intervals until normal.",
+    "Serial imaging if clinical response is poor.",
+    "Educate patients on foot hygiene in diabetics."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic bone infection must be considered.",
+   "b": [
+    "Bone tumor (pain, swelling, elevated ESR).",
+    "Septic arthritis (joint pain, effusion).",
+    "Chronic osteitis from sickle‑cell vaso‑occlusion."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal or abnormal, leading to delayed diagnosis.",
+   "b": [
+    "Normal X‑ray early in acute disease.",
+    "Low CRP in immunocompromised patients.",
+    "Negative blood cultures in chronic TB osteomyelitis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "High fever with chills and worsening pain",
+  "Rapid swelling or skin breakdown",
+  "Signs of sepsis (low blood pressure, fast heart rate)"
+ ],
+ "faq": [
+  {
+   "q": "Why is MRI preferred for early osteomyelitis?",
+   "a": "It shows bone marrow edema before X‑ray changes and helps locate abscesses."
+  },
+  {
+   "q": "When is oral antibiotic therapy appropriate?",
+   "a": "After 2‑4 weeks of IV therapy with clinical improvement and a susceptible organism."
+  },
+  {
+   "q": "Can osteomyelitis heal without surgery?",
+   "a": "Mild acute cases may respond to antibiotics alone, but necrotic bone usually requires debridement."
+  }
+ ],
+ "exam": [
+  "Describe the Cierny‑Mader classification and its clinical relevance.",
+  "List the first‑line empiric antibiotics for acute pyogenic osteomyelitis in a patient without MRSA risk.",
+  "Explain how a draining sinus tract indicates chronic osteomyelitis and its potential systemic complications."
+ ],
+ "related": [
+  "Septic arthritis",
+  "Diabetic foot infection",
+  "Pott's disease (spinal TB)",
+  "Bone tumor",
+  "Sickle‑cell bone infarction",
+  "AA amyloidosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

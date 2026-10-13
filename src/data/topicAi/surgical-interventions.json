@@ -1,0 +1,153 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Surgical interventions are procedures that physically alter anatomy to treat disease, relieve symptoms, or prevent complications. They are chosen after weighing risks, benefits, and available resources, especially in low‑resource settings.",
+ "aka": [
+  "Surgery",
+  "Operative treatment"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Surgical intervention means any operative procedure performed to correct, remove, or bypass a pathological process. Diagnosis relies on clinical assessment, imaging, and sometimes biopsy to confirm that an operation will address the underlying disease.",
+   "b": [
+    "Operative indication must be based on clear pathology",
+    "Diagnosis often combines history, exam, and imaging"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by disease‑specific systems (e.g., ASA physical status, tumor TNM, hydrocephalus Evans index). Staging guides whether surgery is curative, palliative, or only temporising.",
+   "b": [
+    "Higher stage usually requires more extensive surgery",
+    "Low‑resource settings may modify staging based on available tools"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Pathologies needing surgery arise from obstruction, infection, neoplasia, trauma, or congenital malformation. In low‑resource areas, infections (TB, HIV‑related abscesses), parasitic disease (schistosomiasis), and rheumatic complications are common triggers.",
+   "b": [
+    "Obstruction (e.g., bowel blockage)",
+    "Infection (e.g., empyema)",
+    "Neoplasm (e.g., breast cancer)",
+    "Trauma (e.g., splenic rupture)",
+    "Congenital anomaly (e.g., hydrocephalus)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have acute pain, swelling, functional loss, or systemic signs (fever, weight loss). The presentation reflects the organ involved and the underlying pathology.",
+   "b": [
+    "Sudden severe pain suggests torsion or perforation",
+    "Progressive mass may indicate tumor",
+    "Persistent fever with localized signs suggests abscess"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests are ordered to confirm the pathology, assess operative risk, and plan the approach.",
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Is there a fluid collection or obstruction? Positive: anechoic fluid or dilated loops guide drainage or decompression."
+    },
+    {
+     "a": "CT scan",
+     "b": "What is the extent of tissue damage? Positive: shows perforation, mass effect, or abscess; if unavailable, use plain X‑ray and clinical exam."
+    },
+    {
+     "a": "CBC with differential",
+     "b": "Is infection or anemia present? Elevated WBC supports infection; low Hb may require transfusion before surgery."
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Are metabolic derangements present? Correct abnormalities before anesthesia."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Failure to intervene promptly can lead to organ loss, sepsis, or death. Post‑operative complications include bleeding, infection, and organ dysfunction.",
+   "b": [
+    "Uncontrolled pain or tachycardia after surgery → possible bleed",
+    "Persistent fever → wound infection or intra‑abdominal abscess",
+    "Neurological decline after neurosurgery → raised intracranial pressure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First treat the underlying cause (e.g., antibiotics for infection) then perform the operation. Peri‑operative care includes fluid resuscitation, analgesia, and monitoring.",
+   "b": [
+    "Broad‑spectrum antibiotics for contaminated cases",
+    "IV crystalloids to maintain perfusion",
+    "Analgesics (opioids, NSAIDs) for pain control",
+    "Avoid anticoagulants when bleeding risk is high"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Post‑operative review checks wound healing, functional recovery, and need for adjuvant therapy (e.g., chemotherapy). Prevent recurrence with lifestyle changes, vaccination, or prophylactic surgery when indicated.",
+   "b": [
+    "Schedule wound check within 48 h",
+    "Educate on signs of infection",
+    "Plan physiotherapy for functional recovery"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Non‑operative conditions can mimic surgical emergencies.",
+   "b": [
+    "Appendicitis vs. mesenteric adenitis",
+    "Testicular torsion vs. epididymitis",
+    "Bowel obstruction vs. paralytic ileus"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal, leading to delayed surgery.",
+   "b": [
+    "Normal white count in early sepsis",
+    "Ultrasound may miss small perforations",
+    "CT contrast contraindicated in renal failure may limit detection"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain with rigidity",
+  "Acute loss of vision or speech",
+  "Uncontrolled bleeding or shock"
+ ],
+ "faq": [
+  {
+   "q": "When is surgery preferred over medical therapy?",
+   "a": "When the disease causes irreversible structural damage, threatens organ function, or cannot be controlled by drugs alone."
+  },
+  {
+   "q": "What if essential imaging is unavailable?",
+   "a": "Rely on focused physical exam, bedside ultrasound, and clinical judgment; consider transfer if safe."
+  },
+  {
+   "q": "How to reduce surgical risk in low‑resource hospitals?",
+   "a": "Optimize hydration, treat anemia, use prophylactic antibiotics, and employ simple, well‑trained techniques."
+  }
+ ],
+ "exam": [
+  "Explain how you would decide between medical versus surgical management for a patient with an abdominal abscess.",
+  "List the key investigations needed before operating on suspected testicular torsion and why each is important.",
+  "Describe the postoperative monitoring priorities after a neurosurgical shunt placement."
+ ],
+ "related": [
+  "Anesthesia",
+  "Infection control",
+  "Trauma care",
+  "Oncology surgery",
+  "Neurosurgery",
+  "Urology",
+  "Obstetric surgery",
+  "Pediatric surgery"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

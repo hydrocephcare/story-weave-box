@@ -1,0 +1,121 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The autonomic nervous system (ANS) is a hidden network that regulates involuntary organs. It balances sympathetic and parasympathetic signals to keep heart, lungs, gut and glands in sync. Understanding its pathways helps diagnose and treat life‑threatening dysregulation.",
+ "aka": [
+  "Autonomic nervous system"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The ANS is a division of the peripheral nervous system that controls involuntary functions. It operates through two complementary branches: sympathetic (fight‑or‑flight) and parasympathetic (rest‑and‑digest).",
+   "b": [
+    "Sympathetic increases heart rate, dilates pupils, inhibits digestion",
+    "Parasympathetic slows heart, constricts pupils, stimulates digestion"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Sympathetic pre‑ganglionic neurons originate in the thoracolumbar spinal cord (T1–L2). Parasympathetic pre‑ganglionic neurons arise from the brainstem (cranial nerves III, VII, IX, X) and sacral spinal cord (S2–S4).",
+   "b": [
+    "Sympathetic ganglia are near the spinal cord (paravertebral and prevertebral)",
+    "Parasympathetic ganglia are close to target organs (intramural or near organ)"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Sympathetic chains run alongside the vertebral column, while parasympathetic ganglia sit near or within target organs. The vagus nerve (CN X) supplies most thoracic and abdominal organs.",
+   "b": [
+    "Sympathetic chain ganglia are adjacent to the aorta and major vessels"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The sympathetic chain receives arterial blood from the vertebral and intercostal arteries; parasympathetic ganglia are vascularized by branches of the major arteries supplying their target organs.",
+   "b": [
+    "Adequate perfusion is essential for neurotransmitter synthesis"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Pre‑ganglionic fibers use acetylcholine at nicotinic receptors; post‑ganglionic fibers use norepinephrine (sympathetic) or acetylcholine (parasympathetic).",
+   "b": [
+    "Nicotinic receptors are absent on skeletal muscle end plates"
+   ],
+   "t": [
+    {
+     "a": "Serum catecholamines",
+     "b": "Elevated in pheochromocytoma; normal in primary orthostatic hypotension"
+    },
+    {
+     "a": "Heart rate variability",
+     "b": "Reduced variability indicates autonomic dysfunction; high variability suggests parasympathetic dominance"
+    }
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The ANS maintains homeostasis by adjusting heart rate, vascular tone, airway caliber, digestive motility, and glandular secretion. It operates continuously without conscious input.",
+   "b": [
+    "Sympathetic: increases blood pressure, dilates bronchi",
+    "Parasympathetic: slows heart, stimulates gut motility"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Dysfunction can present as syncope, tachycardia, hypertension, gastroparesis, or autonomic neuropathy. Trauma to the sympathetic chain or vagus nerve can cause severe deficits.",
+   "b": [
+    "Pheochromocytoma: episodic hypertension, headache, sweating"
+   ],
+   "t": [
+    {
+     "a": "Plasma metanephrines",
+     "b": "Positive in pheochromocytoma; negative in essential hypertension"
+    },
+    {
+     "a": "Tilt‑table test",
+     "b": "Diagnoses orthostatic hypotension; normal in neurogenic syncope"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the mnemonic ‘SAD’ for sympathetic: Salivation, Adrenaline, Dilated pupils. Parasympathetic is ‘PRACTICE’: Pupillary constriction, Respiratory rate ↓, Adenylate cyclase ↓, etc.",
+   "b": [
+    "Sympathetic ganglia are located near the spinal cord; parasympathetic ganglia are near organs"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Hypertensive crisis, severe orthostatic hypotension, sudden loss of consciousness, unexplained tachycardia or bradycardia"
+ ],
+ "faq": [
+  {
+   "q": "What is the main neurotransmitter of the sympathetic system?",
+   "a": "Norepinephrine at most effector sites; acetylcholine only at nicotinic ganglionic synapses."
+  },
+  {
+   "q": "Why does the parasympathetic system use acetylcholine everywhere?",
+   "a": "Acetylcholine is the sole neurotransmitter for parasympathetic pre‑ and post‑ganglionic fibers, acting on muscarinic receptors in target organs."
+  },
+  {
+   "q": "How can I differentiate a sympathetic from a parasympathetic response clinically?",
+   "a": "Sympathetic: tachycardia, dilated pupils, sweating; parasympathetic: bradycardia, miosis, salivation."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of pheochromocytoma and its clinical presentation.",
+  "Describe how orthostatic hypotension is diagnosed and managed in a resource‑limited setting.",
+  "Outline the differences in neurotransmitter release between sympathetic and parasympathetic nerves and give an example of a drug that enhances catecholamine release."
+ ],
+ "related": [
+  "Sympathetic nervous system",
+  "Parasympathetic nervous system",
+  "Autonomic neuropathy",
+  "Pheochromocytoma"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

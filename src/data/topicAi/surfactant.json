@@ -1,0 +1,113 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Surfactant reduces alveolar surface tension, keeping lungs open and preventing collapse. It is produced by type II pneumocytes and is crucial for breathing, especially in preterm infants.",
+ "aka": [
+  "Pulmonary surfactant"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Surfactant is a phospholipid-protein complex secreted by type II alveolar cells. It coats the alveolar surface, lowering surface tension and allowing the lungs to expand with minimal effort.",
+   "b": [
+    "Phosphatidylcholine (lecithin) 70–80%",
+    "Surfactant proteins A–D",
+    "Produced after 24 h of gestation"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "By reducing surface tension, surfactant prevents alveolar collapse (atelectasis) during exhalation and stabilises the lung volume throughout the breathing cycle.",
+   "b": [
+    "Alveolar surface tension ↓",
+    "Compliance ↑",
+    "Work of breathing ↓"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Surfactant synthesis is up‑regulated by glucocorticoids and by the maturation of type II cells. In preterm infants, surfactant production is insufficient until about 34–36 weeks.",
+   "b": [
+    "Corticosteroids ↑ surfactant gene expression",
+    "Type II cell proliferation"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Deficiency or dysfunction leads to respiratory distress syndrome (RDS) in preterm infants and can cause acute respiratory failure in adults with ARDS.",
+   "b": [
+    "Prematurity",
+    "Genetic surfactant protein mutations",
+    "Inflammation, infection, trauma"
+   ],
+   "t": [
+    {
+     "a": "Lung ultrasound",
+     "b": "Detects B-lines indicating interstitial fluid; helps differentiate RDS from other causes of respiratory distress"
+    },
+    {
+     "a": "Lung compliance measurement",
+     "b": "Low compliance suggests surfactant deficiency; guides need for exogenous surfactant"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Exogenous surfactant therapy is lifesaving for preterm infants with RDS. In adults, surfactant dysfunction contributes to ARDS severity and mortality.",
+   "b": [
+    "Surfactant replacement reduces mortality in preterm RDS"
+   ],
+   "t": [
+    {
+     "a": "Arterial blood gas",
+     "b": "PaO2/FiO2 ratio <200 indicates ARDS severity; surfactant therapy considered in severe cases"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Ground‑glass opacities suggest surfactant dysfunction in ARDS"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that surfactant is a phospholipid-protein complex secreted by type II cells; its deficiency causes RDS in preterms and contributes to ARDS in adults. Daptomycin is inactivated by surfactant, so it is contraindicated for pneumonia.",
+   "b": [
+    "Surfactant ↓ → alveolar collapse"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Respiratory distress in a newborn <34 weeks gestation",
+  "Severe hypoxaemia (PaO2/FiO2 <200) in adults with ARDS"
+ ],
+ "faq": [
+  {
+   "q": "Why is surfactant therapy given to preterm infants?",
+   "a": "It replaces the insufficient endogenous surfactant, preventing alveolar collapse and improving oxygenation."
+  },
+  {
+   "q": "What causes surfactant deficiency in adults?",
+   "a": "Severe lung injury, infection, or inflammation (e.g., ARDS) damages type II cells or inactivates surfactant."
+  },
+  {
+   "q": "Can surfactant be used for pneumonia?",
+   "a": "No; surfactant inactivates daptomycin, and exogenous surfactant has no proven benefit in bacterial pneumonia."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of respiratory distress syndrome in a 28‑week preterm infant.",
+  "Describe how surfactant deficiency contributes to the clinical picture of ARDS.",
+  "Outline the indications and contraindications for exogenous surfactant therapy."
+ ],
+ "related": [
+  "Respiratory distress syndrome",
+  "Acute respiratory distress syndrome",
+  "Type II pneumocyte",
+  "Corticosteroid therapy in preterm labour",
+  "Pulmonary surfactant proteins"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

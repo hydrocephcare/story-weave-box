@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The vagus nerve (CN X) is the longest cranial nerve, extending from the medulla to the abdomen. It carries parasympathetic fibers to thoraco‑abdominal viscera and conveys sensory information from the gut and heart.",
+ "aka": [
+  "CN X",
+  "Xth cranial nerve",
+  "Vagus"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The vagus is a mixed motor‑sensory nerve that provides the main parasympathetic outflow to the heart, lungs, and most of the gastrointestinal tract.",
+   "b": [
+    "Originates in the dorsal motor nucleus of the vagus in the medulla",
+    "Travels within the carotid sheath bilaterally"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "After exiting the jugular foramen, the nerve descends in the neck, gives off the superior laryngeal branch, then continues into the thorax and abdomen.",
+   "b": [
+    "Superior laryngeal, recurrent laryngeal, cardiac, pulmonary, and esophageal branches",
+    "Forms the anterior vagal trunk on the right and posterior trunk on the left after the esophageal hiatus"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "In the neck it lies between the internal jugular vein and the common carotid artery; in the thorax it runs posterior to the root of the lung and anterior to the aortic arch.",
+   "b": [
+    "Close to the recurrent laryngeal nerve at the aortic arch",
+    "Accompanies the thoracic duct in the posterior mediastinum"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial branches from the ascending pharyngeal, superior thyroid, and posterior auricular arteries supply the cervical portion; thoracic branches arise from the bronchial and esophageal arteries.",
+   "b": [
+    "Vascular supply mirrors its course, ensuring perfusion for autonomic fibers"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Motor fibers arise from the dorsal motor nucleus; sensory fibers from the nucleus of the solitary tract; visceral afferents travel with the vagus to the nucleus tractus solitarius.",
+   "b": [
+    "Parasympathetic pre‑ganglionic fibers synapse in intramural ganglia of target organs"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Provides parasympathetic tone to lower heart rate, stimulate gastric acid and motility, and modulate inflammation via the cholinergic anti‑inflammatory pathway.",
+   "b": [
+    "Acetylcholine release at SA node → M2 receptors → bradycardia",
+    "Stimulates gastric secretions; hypoglycemia increases vagal activity"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Vagal dysfunction can cause dysphagia, hoarseness, tachycardia, gastroparesis, or abnormal heart rate variability. Lesions may be traumatic, iatrogenic, or infectious.",
+   "b": [
+    "Recurrent laryngeal nerve injury → hoarseness",
+    "Vagal neuropathy in diabetes or HIV → gastroparesis",
+    "Vagus involvement in prion‑like spread of α‑synuclein from gut to brain"
+   ],
+   "t": [
+    {
+     "a": "Heart rate variability (HRV) testing",
+     "b": "Does autonomic balance favor parasympathetic tone? Low HRV suggests vagal impairment and higher cardiovascular risk"
+    },
+    {
+     "a": "Upper GI endoscopy with gastric emptying study",
+     "b": "Is gastric motility delayed? Delayed emptying supports vagal neuropathy"
+    },
+    {
+     "a": "Laryngoscopy",
+     "b": "Is vocal cord movement reduced? Confirms recurrent laryngeal involvement"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Know the course, key branches, and how loss of vagal tone manifests clinically.",
+   "b": [
+    "Vagal tone → bradycardia; loss → tachycardia",
+    "Vagus supplies the larynx; injury → hoarseness",
+    "Vagus mediates the cough reflex; lesions blunt cough"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden unexplained bradycardia with hypotension",
+  "Severe dysphagia or aspiration leading to respiratory failure",
+  "Acute gastroparesis causing vomiting and electrolyte loss"
+ ],
+ "faq": [
+  {
+   "q": "Why does vagal stimulation lower heart rate?",
+   "a": "Acetylcholine released at the SA node binds M2 receptors, increasing potassium conductance and slowing pacemaker activity."
+  },
+  {
+   "q": "What causes a hoarse voice after thyroid surgery?",
+   "a": "Injury to the recurrent laryngeal branch of the vagus, which innervates the vocal cords."
+  },
+  {
+   "q": "How can the vagus contribute to neurodegenerative disease?",
+   "a": "Pathogenic proteins can travel from the gut enteric nervous system via the vagus to the brainstem, seeding disease."
+  }
+ ],
+ "exam": [
+  "Describe the course of the vagus nerve from the medulla to the abdomen and name its major branches.",
+  "Explain how vagal injury leads to tachycardia and hoarseness.",
+  "Interpret a low heart‑rate variability reading in a patient with suspected autonomic neuropathy."
+ ],
+ "related": [
+  "Glossopharyngeal nerve (CN IX)",
+  "Recurrent laryngeal nerve",
+  "Autonomic nervous system",
+  "Gastrointestinal motility disorders",
+  "Cardiac electrophysiology",
+  "Enteric nervous system"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

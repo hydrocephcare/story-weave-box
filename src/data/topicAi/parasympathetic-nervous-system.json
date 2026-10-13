@@ -1,0 +1,93 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The parasympathetic nervous system (PNS) is the rest‑and‑digest arm of the autonomic nervous system, using the vagus and pelvic nerves to slow heart rate, increase digestion, and promote relaxation.",
+ "aka": [
+  "Vagal system"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The PNS counterbalances the sympathetic system, promoting energy conservation and recovery. It uses acetylcholine at ganglia and target organs.",
+   "b": [
+    "Rest‑and‑digest functions",
+    "Vagus and pelvic nerves"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Parasympathetic fibers originate in the brainstem (cranial nerves III, VII, IX, X) and sacral spinal cord (S2–S4).",
+   "b": [
+    "Brainstem nuclei",
+    "Sacral outflow"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Parasympathetic fibers run with cranial nerves and pelvic nerves, often sharing pathways with sympathetic fibers but diverging at target organs.",
+   "b": [
+    "Co‑travel with sympathetic fibers"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "No dedicated blood supply; effects are mediated by neurotransmitters released at target organs."
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Key nerves: CN III (oculomotor) for accommodation, CN VII (facial) for lacrimation, CN IX (glossopharyngeal) for pharyngeal reflexes, CN X (vagus) for heart, lungs, gut, and pelvic nerves for lower organs."
+  },
+  {
+   "h": "Function",
+   "p": "Slows heart rate, increases GI motility, stimulates salivation, dilates pupil, relaxes bladder, and promotes mucus secretion.",
+   "b": [
+    "Acetylcholine release at ganglia"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "PNS dysfunction presents as dry mouth, constipation, urinary retention, or bradycardia. Vagal nerve injury can cause syncope or gastroparesis.",
+   "b": [
+    "Dry mouth (xerostomia)",
+    "Constipation"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the mnemonic VAGAL: Vagus, Acetylcholine, Glandular secretion, Afferent, Lacrimation.",
+   "b": [
+    "VAGAL mnemonic"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What causes dry mouth in low‑resource settings?",
+   "a": "Common causes include anticholinergic drugs, dehydration, HIV, and malnutrition."
+  },
+  {
+   "q": "How to differentiate vagal from sympathetic overactivity?",
+   "a": "Vagal overactivity shows bradycardia and hypotension; sympathetic shows tachycardia and hypertension."
+  },
+  {
+   "q": "Can herbal remedies affect the PNS?",
+   "a": "Yes, some herbs (e.g., kava) have cholinergic effects that can enhance parasympathetic activity."
+  }
+ ],
+ "exam": [
+  "Explain how the parasympathetic system modulates heart rate via the vagus nerve.",
+  "Describe the clinical signs of vagal nerve injury in a patient with sudden syncope.",
+  "Outline the management steps for a patient with severe dry mouth due to anticholinergic medication."
+ ],
+ "related": [
+  "Autonomic Nervous System",
+  "Vagus Nerve",
+  "Acetylcholine",
+  "Sympathetic Nervous System"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Intellectual disability (ID) is a neurodevelopmental disorder marked by significantly reduced intellectual functioning and adaptive behavior, beginning before adulthood. Diagnosis requires standardized testing and assessment of daily living skills.",
+ "aka": [
+  "mental retardation (historical)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ID is defined by an IQ < 70 plus deficits in adaptive functioning that appear during the developmental period. Diagnosis uses age‑appropriate IQ tests and adaptive behavior scales (e.g., Vineland).",
+   "b": [
+    "IQ < 70 on standardized test",
+    "Significant limitation in communication, self‑care, home, school, or community skills",
+    "Onset before 18 years"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by IQ and adaptive level, guiding support needs.",
+   "b": [
+    "Mild: IQ 50‑69, can achieve academic skills with support",
+    "Moderate: IQ 35‑49, needs supervised living and vocational training",
+    "Severe: IQ 20‑34, requires extensive daily assistance",
+    "Profound: IQ < 20, total dependence for all activities"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped into genetic, prenatal, perinatal, and postnatal factors; genetics account for the majority of cases worldwide.",
+   "b": [
+    "Down syndrome (trisomy 21) – most common chromosomal cause",
+    "Fragile X syndrome – leading monogenic cause, especially in males",
+    "Fetal alcohol spectrum disorder – common in low‑resource settings",
+    "Congenital infections (TORCH: CMV, rubella, toxoplasmosis, HIV) – prevalent where prenatal care is limited",
+    "Perinatal hypoxia‑ischemia – birth asphyxia in low‑resource hospitals",
+    "Nutritional deficiencies (iodine, severe protein‑energy malnutrition)",
+    "Sickle cell disease complications (stroke) in endemic regions"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children show delayed milestones, limited speech, poor problem‑solving, and difficulty with self‑care. Behavioral issues such as hyperactivity or autistic traits may coexist.",
+   "b": [
+    "Failure to achieve age‑appropriate language and motor milestones",
+    "Limited eye contact, poor joint attention",
+    "Difficulty following simple instructions",
+    "Frequent tantrums or self‑injurious behavior"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Testing aims to identify a reversible or treatable cause and to classify the etiology.",
+   "t": [
+    {
+     "a": "Chromosomal microarray or karyotype",
+     "b": "Detects large chromosomal abnormalities (e.g., trisomy 21, microdeletions) – a positive result confirms a genetic etiology"
+    },
+    {
+     "a": "Fragile X PCR testing",
+     "b": "Identifies CGG repeat expansion – a positive result explains X‑linked ID"
+    },
+    {
+     "a": "Serology for TORCH infections (CMV IgM, rubella IgM, HIV ELISA)",
+     "b": "Detects congenital infections – guides antiviral or antiretroviral therapy"
+    },
+    {
+     "a": "MRI brain (if available)",
+     "b": "Shows structural anomalies (e.g., cortical malformations) – informs prognosis and surgical options"
+    },
+    {
+     "a": "Thyroid function tests",
+     "b": "Screens for hypothyroidism, a reversible cause of developmental delay"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain features suggest urgent medical issues or worsening prognosis.",
+   "b": [
+    "Severe feeding difficulties leading to aspiration pneumonia",
+    "Unexplained seizures or regression of skills",
+    "Rapid weight loss or failure to thrive despite adequate nutrition",
+    "Signs of treatable metabolic disease (e.g., ketoacidosis)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management combines cause‑specific therapy, early intervention, and lifelong support.",
+   "b": [
+    "Treat underlying cause: antiretroviral therapy for HIV, thyroid hormone replacement, seizure control with antiepileptics",
+    "Early childhood intervention: speech, occupational, and physiotherapy",
+    "Behavioral programs (ABA) for autism‑like features",
+    "Educational accommodations and vocational training for mild/moderate ID",
+    "Family counseling and respite care"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of growth, development, and comorbidities is essential.",
+   "b": [
+    "Annual developmental assessment and adaptive‑skill review",
+    "Screen for vision, hearing, and dental problems",
+    "Vaccination updates, especially for pneumococcal and influenza",
+    "Genetic counseling for families planning future pregnancies"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that may mimic or overlap with ID.",
+   "b": [
+    "Autism spectrum disorder – may have normal IQ but severe social communication deficits",
+    "Global developmental delay – used for children <5 years before IQ can be measured",
+    "Learning disability – specific academic deficits with average intelligence"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation of investigations.",
+   "b": [
+    "Normal karyotype does not exclude microdeletions – consider microarray",
+    "Mildly elevated thyroid antibodies may be incidental – correlate with TSH/T4",
+    "IQ testing in severe sensory impairment can underestimate true ability"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "New onset seizures",
+  "Acute loss of previously acquired skills",
+  "Severe feeding difficulty with choking or aspiration"
+ ],
+ "faq": [
+  {
+   "q": "Can intellectual disability be cured?",
+   "a": "Most causes are permanent, but treatable conditions (e.g., hypothyroidism, infections) can improve function if identified early."
+  },
+  {
+   "q": "How is severity determined?",
+   "a": "Severity is based on IQ ranges and adaptive‑behavior scores, guiding the level of support needed."
+  },
+  {
+   "q": "Why is genetic testing important?",
+   "a": "It identifies specific syndromes, informs prognosis, and provides recurrence risk information for families."
+  }
+ ],
+ "exam": [
+  "List the three diagnostic criteria for intellectual disability.",
+  "Describe the most common genetic cause of intellectual disability and its key clinical features.",
+  "Explain the work‑up steps to identify a reversible cause in a child with newly diagnosed intellectual disability."
+ ],
+ "related": [
+  "Down syndrome",
+  "Fragile X syndrome",
+  "Autism spectrum disorder",
+  "Fetal alcohol spectrum disorder",
+  "Congenital infections (TORCH)",
+  "Global developmental delay",
+  "Neurodevelopmental disorders"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

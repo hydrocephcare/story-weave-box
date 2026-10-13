@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Alkylating agents are chemotherapy drugs that add alkyl groups to DNA, causing cross‑linking and strand breaks. They kill rapidly dividing cells but also damage normal tissues, leading to characteristic toxicities.",
+ "aka": [
+  "CCNS",
+  "alkylating chemotherapeutics"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Alkylating agents are direct‑acting cytotoxic drugs that form covalent bonds with DNA, preventing replication and transcription. Diagnosis is clinical: a patient on such therapy with cytopenias, mucositis or organ dysfunction.",
+   "b": [
+    "Cyclophosphamide, busulfan, chlorambucil, melphalan"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Common Terminology Criteria for Adverse Events (CTCAE). Staging of complications such as myelosuppression follows WHO blood count thresholds.",
+   "b": [
+    "Grade 1: mild, no intervention; Grade 4: life‑threatening, requires hospitalization"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary cause is exposure to alkylating chemotherapy. Secondary causes include prior radiation, viral infections that induce DNA damage, and inherited DNA repair defects.",
+   "b": [
+    "Prior alkylating therapy",
+    "Radiation",
+    "HIV, HBV, TB (increasing oxidative stress)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop bone marrow suppression, mucositis, alopecia, and, after weeks, pulmonary fibrosis or secondary leukemia.",
+   "b": [
+    "Neutropenia, anemia, thrombocytopenia",
+    "Nausea, vomiting, mucosal ulceration",
+    "Dry cough, dyspnea"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab and imaging confirm toxicity and rule out other causes.",
+   "t": [
+    {
+     "a": "CBC with differential",
+     "b": "ANC <0.5×10^9/L = neutropenic fever"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "AST/ALT >3× ULN warrants dose adjustment"
+    },
+    {
+     "a": "Pulmonary function tests / chest X‑ray",
+     "b": "Ground‑glass opacities may precede clinical symptoms"
+    },
+    {
+     "a": "Bone marrow aspirate",
+     "b": "If blasts ≥20% and complex karyotype, diagnose therapy‑related AML"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed if signs of severe infection, uncontrolled bleeding, or organ failure appear.",
+   "b": [
+    "Severe neutropenia with fever",
+    "Profuse bleeding or thrombocytopenia <20×10^9/L",
+    "Respiratory distress, new pulmonary infiltrates"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying toxicity, support organ function, and consider alternative chemotherapy. Avoid drugs with overlapping toxicity.",
+   "b": [
+    "G‑CSF for neutropenia",
+    "Platelet transfusion for thrombocytopenia",
+    "Antibiotics for febrile neutropenia"
+   ],
+   "t": [
+    {
+     "a": "G‑CSF",
+     "b": "Used when ANC <0.5×10^9/L or febrile neutropenia"
+    },
+    {
+     "a": "Antifungal prophylaxis",
+     "b": "Fluconazole or posaconazole"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of blood counts, organ function, and early signs of secondary malignancy is essential. Use the lowest effective dose and consider dose‑dense schedules.",
+   "b": [
+    "Monthly CBC during therapy",
+    "Annual chest X‑ray after 6 months of therapy",
+    "Screen for secondary AML after 5 years"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other myelosuppressive agents like antimetabolites and platinum compounds share toxicity profiles but differ in mechanism.",
+   "b": [
+    "Methotrexate (antimetabolite) – causes folate deficiency rather than alkylation"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may appear normal early; for example, ANC can be normal until day 10 of neutropenia.",
+   "b": [
+    "Early CBC may miss delayed neutropenia"
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed if signs of severe infection, uncontrolled bleeding, or organ failure appear.",
+   "b": [
+    "Severe neutropenia with fever",
+    "Profuse bleeding or thrombocytopenia <20×10^9/L",
+    "Respiratory distress, new pulmonary infiltrates"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe neutropenia with fever",
+  "Uncontrolled bleeding",
+  "Respiratory distress"
+ ],
+ "faq": [
+  {
+   "q": "What is the main mechanism of alkylating agents?",
+   "a": "They add alkyl groups to DNA, causing cross‑links that prevent replication."
+  },
+  {
+   "q": "Why do they cause secondary leukemia?",
+   "a": "DNA damage from alkylation can lead to mutations in hematopoietic stem cells, especially after long latency."
+  },
+  {
+   "q": "Can I use them in pregnancy?",
+   "a": "They are teratogenic; avoid during pregnancy unless benefits outweigh risks."
+  }
+ ],
+ "exam": [
+  "Explain how alkylating agents lead to myelosuppression and why G‑CSF is used.",
+  "Describe the clinical features that would prompt you to suspect therapy‑related AML in a patient with prior cyclophosphamide.",
+  "Outline the monitoring plan for a patient receiving busulfan for chronic myeloid leukemia."
+ ],
+ "related": [
+  "Chemotherapy toxicity",
+  "Secondary acute myeloid leukemia",
+  "Pulmonary fibrosis",
+  "Bone marrow suppression"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

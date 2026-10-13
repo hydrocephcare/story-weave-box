@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Acute renal failure (now called acute kidney injury) is a rapid loss of kidney function, marked by low urine output and rising blood urea. It can be pre‑renal, intra‑renal or post‑renal and requires prompt identification of cause and supportive care.",
+ "aka": [
+  "Acute kidney injury"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "AKI is defined by any of: urine output <450 mL/24 h, increase in serum creatinine ≥0.3 mg/dL within 48 h, or rise in creatinine to ≥1.5 × baseline within 7 days.",
+   "b": [
+    "Use KDIGO criteria for staging",
+    "Measure urine output hourly in at‑risk patients"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Is kidney filtration falling? A rise confirms AKI; baseline needed for staging"
+    },
+    {
+     "a": "Urine output chart",
+     "b": "Is the patient oliguric? <0.5 mL/kg/h for 6 h signals AKI"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "KDIGO stages 1‑3 use creatinine rise and urine output thresholds; stage 3 includes need for renal replacement therapy.",
+   "b": [
+    "Stage 1: Cr ↑ 0.3 mg/dL or 1.5‑1.9 × baseline",
+    "Stage 2: Cr 2.0‑2.9 × baseline",
+    "Stage 3: Cr ≥3.0 × baseline or <0.3 mL/kg/h ≥24 h"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Classify by location of the problem: pre‑renal (decreased perfusion), intra‑renal (parenchymal damage), post‑renal (obstruction). In low‑resource settings add tropical infections.",
+   "b": [
+    "Pre‑renal: hypovolemia (diarrhoea, malaria), low cardiac output, sepsis",
+    "Intra‑renal: acute tubular necrosis (ischemia, nephrotoxins, malaria), glomerulonephritis, interstitial nephritis, sickle‑cell crisis",
+    "Post‑renal: urinary obstruction from stones, enlarged prostate, schistosomal fibrosis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be oliguric or non‑oliguric, with swelling, nausea, confusion, and lab evidence of rising urea/creatinine. Malaria‑related AKI often shows dark urine from haemoglobinuria.",
+   "b": [
+    "Reduced urine volume",
+    "Peripheral edema",
+    "Hypertension or hypotension depending on cause"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests clarify cause, severity and guide therapy.",
+   "b": [
+    "Prioritise bedside urine analysis when labs unavailable"
+   ],
+   "t": [
+    {
+     "a": "Urine sodium and fractional excretion of sodium (FeNa)",
+     "b": "Pre‑renal vs intra‑renal? FeNa <1 % suggests pre‑renal; >2 % suggests tubular injury"
+    },
+    {
+     "a": "Urine microscopy",
+     "b": "Casts present? Muddy brown granular casts point to ATN; RBC casts suggest glomerulonephritis"
+    },
+    {
+     "a": "Renal ultrasound",
+     "b": "Is there obstruction? Detects hydronephrosis; if unavailable, assess bladder scan"
+    },
+    {
+     "a": "Serology for malaria, HIV, hepatitis B",
+     "b": "Is an infectious trigger present? Positive test directs specific therapy"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncorrected AKI can rapidly lead to life‑threatening complications.",
+   "b": [
+    "Severe hyperkalemia → cardiac arrest",
+    "Pulmonary edema → respiratory failure",
+    "Metabolic acidosis → shock"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then support kidney function and prevent further injury.",
+   "b": [
+    "Fluid resuscitation for hypovolemia; use isotonic crystalloids, avoid overload",
+    "Avoid nephrotoxins (aminoglycosides, NSAIDs, herbal nephrotoxins)",
+    "Diuretics only if volume‑overloaded and urine output remains low",
+    "Renal replacement therapy when refractory hyperkalemia, acidosis, or fluid overload"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor renal function daily until stable, educate on hydration, avoid nephrotoxins, and vaccinate against hepatitis B.",
+   "b": [
+    "Re‑measure creatinine at 48 h and 7 days",
+    "Educate patients on early signs of dehydration"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic AKI but have different management.",
+   "b": [
+    "Chronic kidney disease flare (baseline creatinine already high)",
+    "Urinary tract infection causing transient oliguria"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain values may appear normal despite injury.",
+   "b": [
+    "FeNa can be falsely low in early ATN if diuretics used",
+    "Serum urea may stay normal in low‑protein diets"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of urine, severe swelling, confusion, or chest pain indicating hyperkalemia"
+ ],
+ "faq": [
+  {
+   "q": "Why is urine output important in AKI?",
+   "a": "It reflects real‑time kidney perfusion and filtration; falling output often precedes lab changes."
+  },
+  {
+   "q": "Can AKI resolve without dialysis?",
+   "a": "Yes, many patients improve with cause‑directed therapy and fluid management if complications are avoided."
+  },
+  {
+   "q": "What makes malaria a common cause of AKI in the tropics?",
+   "a": "Severe hemolysis, dehydration, and microvascular obstruction damage renal tubules."
+  }
+ ],
+ "exam": [
+  "Explain how to differentiate pre‑renal AKI from acute tubular necrosis using urine studies.",
+  "List the KDIGO criteria for stage 2 AKI.",
+  "Describe the initial management steps for a patient with malaria‑associated AKI."
+ ],
+ "related": [
+  "Chronic kidney disease",
+  "Sepsis-associated AKI",
+  "Nephrotoxic drug injury",
+  "Hemolytic‑uremic syndrome",
+  "Renal ultrasound",
+  "Fluid balance monitoring"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

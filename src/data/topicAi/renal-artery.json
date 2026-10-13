@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The renal arteries are paired vessels that arise from the abdominal aorta and supply each kidney. Their course, branches, and relations are key to understanding renal perfusion, hypertension, and surgical approaches.",
+ "aka": [
+  "Renal artery"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Each kidney receives blood from a single renal artery that originates just below the superior mesenteric artery. The artery divides into segmental branches that follow the renal capsule.",
+   "b": [
+    "Supplies ~20% of cardiac output",
+    "Critical for glomerular filtration pressure"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The renal artery emerges from the lateral aspect of the abdominal aorta at the level of L1‑L2, passes posterior to the inferior vena cava (right side) or aorta (left), and enters the renal hilum.",
+   "b": [
+    "Length ~4‑5 cm",
+    "Diameter 4‑6 mm in adults",
+    "Has an intima, media, adventitia"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "On the right, the artery lies posterior to the inferior vena cava; on the left, it is anterior to the aorta. It is accompanied by the renal vein and ureter in the hilum.",
+   "b": [
+    "Close to duodenum (right) and pancreas (left)",
+    "At risk during aortic aneurysm repair"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "After entering the hilum, the artery branches into anterior and posterior segmental arteries, which further divide into interlobar, arcuate, and interlobular arteries delivering blood to nephrons.",
+   "b": [
+    "Segmental arteries are end‑arteries – no collateral flow",
+    "Ischemia of a segment causes focal infarction"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sympathetic fibers travel with the renal artery from the thoracic splanchnic nerves, influencing renal vascular tone and renin release.",
+   "b": [
+    "Increased sympathetic activity → vasoconstriction → ↑renin"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Delivers oxygenated blood to glomeruli, establishing the filtration pressure needed for urine formation and enabling renal autoregulation of flow and pressure.",
+   "b": [
+    "Maintains glomerular filtration rate (GFR)",
+    "Supports tubular reabsorption"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Renal artery pathology can cause hypertension, renal insufficiency, or infarction. Common causes differ by setting: atherosclerosis in older adults, fibromuscular dysplasia in young women, and thrombosis or vasculitis in low‑resource regions.",
+   "b": [
+    "Renal artery stenosis (RAS): 2‑5 % of hypertension; atheroma >70 % in older men, fibromuscular dysplasia in younger women",
+    "Thrombotic occlusion: seen with antiphospholipid syndrome, sickle cell, or severe dehydration",
+    "Vasculitis (e.g., polyarteritis nodosa, Takayasu) more common where infections like hepatitis B are prevalent"
+   ],
+   "t": [
+    {
+     "a": "Duplex Doppler ultrasound",
+     "b": "Detects velocity elevation → suggests stenosis; if unavailable, use captopril renography or clinical response to ACE‑I"
+    },
+    {
+     "a": "CT or MR angiography",
+     "b": "Visualizes focal narrowing or beading; essential for planning revascularisation"
+    },
+    {
+     "a": "Serum renin level",
+     "b": "Elevated in unilateral RAS; helps differentiate from bilateral disease"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams: origin, course, segmental branches, common causes of stenosis, and the classic triad of abdominal bruit, flash pulmonary edema, and rise in creatinine after ACE‑I.",
+   "b": [
+    "Goldblatt kidney: unilateral stenosis → renin‑driven hypertension",
+    "Bilateral gradual stenosis → slower rise in blood pressure, often missed"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden flank pain with hematuria (possible renal infarction)",
+  "Rapid rise in blood pressure with pulmonary edema after starting ACE‑I (suggests bilateral RAS)",
+  "Unexplained acute kidney injury with abdominal bruit"
+ ],
+ "faq": [
+  {
+   "q": "Why does renal artery stenosis cause hypertension?",
+   "a": "Reduced perfusion triggers renin release, activating the angiotensin‑II cascade, which raises systemic blood pressure."
+  },
+  {
+   "q": "How is fibromuscular dysplasia different from atherosclerotic RAS?",
+   "a": "FMD occurs in young women, shows a ‘string‑of‑beads’ appearance, and involves medial hyperplasia, while atherosclerosis affects older men with focal plaque."
+  },
+  {
+   "q": "Can renal artery disease be cured?",
+   "a": "Yes, revascularisation (angioplasty ± stent for atherosclerotic lesions, balloon angioplasty for FMD) can restore flow and improve blood pressure in selected patients."
+  }
+ ],
+ "exam": [
+  "Describe the origin, course, and segmental branching pattern of the renal artery.",
+  "Explain the pathophysiological mechanism linking unilateral renal artery stenosis to secondary hypertension.",
+  "List the major causes of renal artery stenosis and indicate which are most common in low‑resource settings."
+ ],
+ "related": [
+  "Renal vein",
+  "Renal artery stenosis",
+  "Fibromuscular dysplasia",
+  "Atherosclerosis",
+  "Renin‑angiotensin‑aldosterone system",
+  "Renal infarction",
+  "Hypertensive nephrosclerosis"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}
