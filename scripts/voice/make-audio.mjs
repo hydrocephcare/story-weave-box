@@ -11,6 +11,7 @@ import { createClient } from "@supabase/supabase-js";
 
 const arg = (n, d = "") => { const i = process.argv.indexOf(`--${n}`); return i >= 0 ? (process.argv[i + 1] ?? "true") : d; };
 const BASE = arg("voicebox", "http://127.0.0.1:17493");
+const ENGINE = arg("engine", "luxtts"); // luxtts is made for computers without a graphics card; use --engine qwen for the heavy, slower one
 const SITE = "https://www.ompathstudy.com";
 const SB = "https://lkgfzjwhmfjvntzphbsh.supabase.co";
 const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrZ2Z6andobWZqdm50enBoYnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3Nzk5MjIsImV4cCI6MjA4NzM1NTkyMn0.a2QY6TxzKNM2AhuuoDkgdKifI3XhSGhYRlhpqZpvAwo";
@@ -29,7 +30,7 @@ async function profileId(name) {
 }
 const isAudio = (r) => /audio|octet-stream/.test(r.headers.get("content-type") ?? "");
 async function speak(text, id) {
-  const r = await fetch(`${BASE}/generate`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text, profile_id: id, language: "en" }) });
+  const r = await fetch(`${BASE}/generate`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text, profile_id: id, language: "en", engine: ENGINE }) });
   if (!r.ok) throw new Error(`Voicebox said ${r.status}: ${(await r.text()).slice(0, 200)}`);
   if (isAudio(r)) return Buffer.from(await r.arrayBuffer());
   // Voicebox answers with a job and makes the audio in the background: wait until it is done, then download it
