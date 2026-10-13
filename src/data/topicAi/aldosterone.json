@@ -1,0 +1,108 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Aldosterone is the kidney's key hormone for sodium retention and potassium excretion, controlling blood volume and pressure. It acts on the distal nephron via the mineralocorticoid receptor. Clinicians use its level to diagnose disorders of fluid balance.",
+ "aka": [
+  "Aldo",
+  "Mineralocorticoid hormone"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Aldosterone is produced in the zona glomerulosa of the adrenal cortex. It is the principal mineralocorticoid, linking the renin‑angiotensin system to sodium and water homeostasis.",
+   "b": [
+    "Stimulated by angiotensin II, high K⁺, and ACTH",
+    "Acts on principal cells of the cortical collecting duct"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Aldosterone binds the intracellular mineralocorticoid receptor, translocates to the nucleus and up‑regulates ENaC and Na⁺/K⁺‑ATPase, increasing Na⁺ reabsorption and K⁺ secretion.",
+   "b": [
+    "Na⁺ reabsorption creates an osmotic gradient that pulls water into the intravascular space",
+    "K⁺ loss can cause hypokalaemia, muscle weakness, arrhythmias"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The renin‑angiotensin‑aldosterone system (RAAS) is the dominant feedback loop: low renal perfusion → renin → angiotensin I → angiotensin II → aldosterone. High plasma K⁺ directly stimulates zona glomerulosa cells.",
+   "b": [
+    "Renin release is inhibited by increased Na⁺ delivery to the macula densa",
+    "ACE inhibitors, ARBs, and direct renin inhibitors blunt aldosterone production"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Abnormal aldosterone production disrupts fluid balance, leading to hypertension, hypokalaemia, or volume depletion.",
+   "b": [
+    "Primary hyperaldosteronism (Conn syndrome) – autonomous secretion, low renin",
+    "Secondary hyperaldosteronism – excess renin from heart failure, cirrhosis, nephrotic syndrome, or renal artery stenosis",
+    "Aldosterone deficiency – adrenal insufficiency, bilateral adrenalectomy"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Measuring aldosterone and renin helps differentiate causes of hypertension and electrolyte disturbances, guiding targeted therapy.",
+   "t": [
+    {
+     "a": "Aldosterone‑to‑renin ratio (ARR)",
+     "b": "Screen for primary hyperaldosteronism; a high ratio (>20) with elevated aldosterone suggests autonomous secretion"
+    },
+    {
+     "a": "Serum potassium",
+     "b": "Detect hypokalaemia from excess aldosterone; low K⁺ supports diagnosis"
+    },
+    {
+     "a": "Plasma renin activity (PRA)",
+     "b": "Distinguish primary (low PRA) from secondary (high PRA) hyperaldosteronism"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the physiology‑pathology link, the ARR interpretation, and the first‑line drugs for excess aldosterone.",
+   "b": [
+    "Conn syndrome: hypertension, hypokalaemia, suppressed renin, high aldosterone",
+    "Spironolactone blocks the mineralocorticoid receptor; used in primary hyperaldosteronism and heart failure",
+    "In low‑resource settings, a simple ARR can be done with bedside renin kits and serum aldosterone ELISA"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypertension (>180/120 mmHg) with neurological symptoms",
+  "Profound hypokalaemia (<2.5 mmol/L) causing muscle paralysis or arrhythmia",
+  "Acute adrenal crisis with hypotension and hyperkalaemia"
+ ],
+ "faq": [
+  {
+   "q": "Why does aldosterone cause hypertension?",
+   "a": "It increases sodium reabsorption, expanding extracellular volume and raising arterial pressure."
+  },
+  {
+   "q": "Can low aldosterone cause low blood pressure?",
+   "a": "Yes; insufficient sodium retention leads to volume depletion and hypotension, seen in adrenal insufficiency."
+  },
+  {
+   "q": "What is the first test for suspected primary hyperaldosteronism?",
+   "a": "Measure the aldosterone‑to‑renin ratio; a high ratio prompts confirmatory testing."
+  }
+ ],
+ "exam": [
+  "Explain how aldosterone regulates potassium and why hypokalaemia occurs in primary hyperaldosteronism.",
+  "Interpret an aldosterone‑to‑renin ratio of 30 with aldosterone 70 ng/dL and renin 0.2 ng/mL/hr.",
+  "List the pharmacologic actions of spironolactone and why it is preferred over thiazides in hyperaldosteronism."
+ ],
+ "related": [
+  "Renin‑angiotensin‑aldosterone system",
+  "Primary hyperaldosteronism",
+  "Secondary hyperaldosteronism",
+  "Hypertension",
+  "Hypokalaemia",
+  "Adrenal insufficiency",
+  "Mineralocorticoid receptor antagonists"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Pulmonary embolism (PE) is a blockage of a pulmonary artery by a clot, usually from a leg deep‑vein thrombosis. Prompt recognition, risk stratification and anticoagulation are essential to prevent death.",
+ "aka": [
+  "Pulmonary thromboembolism"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "PE occurs when a thrombus travels from the venous system and occludes a pulmonary artery, impairing gas exchange and causing right‑ventricular strain.",
+   "b": [
+    "Clinical probability tools (Wells, Geneva) estimate pre‑test likelihood.",
+    "CT pulmonary angiography (CTPA) is the gold standard; if unavailable, ventilation‑perfusion scan or bedside echo can be used."
+   ],
+   "t": [
+    {
+     "a": "Wells score",
+     "b": "What is the pre‑test probability? A score ≥4 suggests PE likely; guides need for imaging."
+    },
+    {
+     "a": "D‑dimer",
+     "b": "Is there evidence of active clot formation? A normal result rules out PE in low‑risk patients."
+    },
+    {
+     "a": "CTPA",
+     "b": "Does the pulmonary artery contain a filling defect? Positive confirms PE; negative excludes in most cases."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Risk is stratified by haemodynamic stability, right‑ventricular (RV) dysfunction, and biomarkers.",
+   "b": [
+    "Massive (high‑risk): shock or sustained hypotension.",
+    "Sub‑massive (intermediate‑risk): normotensive with RV strain or elevated troponin/BNP.",
+    "Low‑risk: stable, no RV dysfunction, normal biomarkers."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most emboli arise from lower‑extremity deep‑vein thrombosis, but many conditions increase clot risk.",
+   "b": [
+    "Immobilisation or recent surgery (most common).",
+    "Active cancer, especially adenocarcinoma.",
+    "Pregnancy and postpartum period.",
+    "Inherited thrombophilia (e.g., factor V Leiden).",
+    "Infections prevalent in low‑resource settings: HIV, TB, malaria, schistosomiasis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms vary with clot size and patient fitness; classic triad is rare.",
+   "b": [
+    "Sudden dyspnoea, pleuritic chest pain, tachycardia.",
+    "Syncope or hypotension in massive PE.",
+    "Unexplained cough or haemoptysis."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Combine clinical assessment with targeted tests; adapt when resources are limited.",
+   "b": [
+    "ECG may show right‑axis deviation or S1Q3T3 pattern.",
+    "Chest X‑ray often normal; may show Westermark sign or pleural effusion."
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Is there RV dilation or hypokinesis? Positive suggests intermediate‑risk PE when CT unavailable."
+    },
+    {
+     "a": "BNP/NT‑proBNP",
+     "b": "Is there RV strain? Elevated levels support intermediate‑risk classification; note elevation also occurs in kidney failure and AF."
+    },
+    {
+     "a": "Lower‑limb Doppler ultrasound",
+     "b": "Is there a proximal DVT? Finding a clot supports PE diagnosis when imaging is not feasible."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients who may deteriorate quickly and need urgent therapy.",
+   "b": [
+    "Persistent hypotension (systolic <90 mmHg).",
+    "Rapid rise in troponin or BNP indicating RV injury.",
+    "Recurrent emboli despite anticoagulation."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the clot, protect the right heart, and prevent recurrence.",
+   "b": [
+    "Initial anticoagulation with unfractionated heparin or low‑molecular‑weight heparin; chosen for rapid onset and reversibility.",
+    "For massive PE with shock, consider systemic thrombolysis (tPA) unless contraindicated.",
+    "If thrombolysis contraindicated, use catheter‑directed therapy or surgical embolectomy.",
+    "Transition to oral vitamin K antagonists (target INR 2–3) for at least 3 months in provoked PE; direct oral anticoagulants are alternatives where available."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term care focuses on recurrence risk and underlying causes.",
+   "b": [
+    "Repeat imaging only if symptoms persist or worsen.",
+    "Assess for thrombophilia after 3 months if unprovoked.",
+    "Educate on mobility, compression stockings, and prophylaxis during future surgeries or travel."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic PE’s dyspnoea and chest pain.",
+   "b": [
+    "Pneumonia – often has fever, productive cough, lobar infiltrate.",
+    "Pneumothorax – sudden unilateral chest pain, absent breath sounds.",
+    "Acute coronary syndrome – chest pressure, ECG changes, cardiac enzymes."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Beware of false‑negative or non‑specific findings.",
+   "b": [
+    "Normal D‑dimer in early or small PE; interpret only in low‑risk patients.",
+    "CTPA may miss subsegmental emboli; clinical context remains vital.",
+    "Pleural effusion in PE is usually exudative but can be transudate, leading to misclassification."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden collapse, loss of consciousness, or severe shortness of breath with chest pain.",
+  "Persistent low blood pressure or rapid heart rate despite fluids."
+ ],
+ "faq": [
+  {
+   "q": "Can a normal chest X‑ray rule out PE?",
+   "a": "No; most PEs have a normal X‑ray. Imaging of the pulmonary arteries is required when suspicion remains."
+  },
+  {
+   "q": "Why is the INR target 2–3 for warfarin therapy?",
+   "a": "This range balances preventing clot extension while minimizing bleeding risk; evidence supports it for provoked PE."
+  },
+  {
+   "q": "Is a small subsegmental PE always treated?",
+   "a": "Management depends on risk factors; low‑risk patients may be observed, while higher‑risk patients receive anticoagulation."
+  }
+ ],
+ "exam": [
+  "Explain how the Wells score influences the diagnostic pathway for suspected PE.",
+  "Describe the criteria that differentiate massive, sub‑massive, and low‑risk PE.",
+  "List first‑line anticoagulant options for acute PE and why they are preferred."
+ ],
+ "related": [
+  "Deep vein thrombosis",
+  "Right‑ventricular failure",
+  "Anticoagulation therapy",
+  "Thrombophilia",
+  "Pulmonary hypertension",
+  "Cardiac tamponade"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

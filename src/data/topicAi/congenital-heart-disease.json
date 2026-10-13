@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Congenital heart disease (CHD) comprises structural heart defects present at birth that alter normal blood flow. Early recognition, appropriate imaging, and staged management are essential to prevent heart failure and death.",
+ "aka": [
+  "congenital cardiac anomaly"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "CHD is any anatomical defect of the heart or great vessels present at birth that disrupts normal circulation.",
+   "b": [
+    "Diagnosis relies on clinical exam (murmurs, cyanosis) and imaging (echocardiography).",
+    "Screening with pulse oximetry at birth detects many critical lesions."
+   ],
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Does the newborn have hypoxemia? Low saturation (<95%) suggests right‑to‑left shunt or severe left‑to‑right lesion."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "What is the anatomy? Defines defect type, size, and hemodynamic impact; essential for surgical planning."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by hemodynamic impact and need for intervention, often using the Ross or NYHA functional classification for older children.",
+   "b": [
+    "Mild: small VSD/ASD, no symptoms, normal growth.",
+    "Moderate: moderate shunt, may need medical therapy.",
+    "Severe: cyanotic lesions or large shunts causing heart failure, require surgery."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most CHDs are sporadic, but risk factors include genetic syndromes, maternal infections, and environmental exposures.",
+   "b": [
+    "Genetic: Down syndrome, 22q11 deletion (DiGeorge).",
+    "Maternal infections: Rubella, CMV, HIV (increased risk of PDA).",
+    "Maternal diabetes, teratogens (e.g., alcohol, certain meds).",
+    "In low‑resource settings: untreated maternal malaria or schistosomiasis may increase risk."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with lesion type and shunt direction.",
+   "b": [
+    "Cyanotic lesions (e.g., Tetralogy of Fallot) → early cyanosis, clubbing.",
+    "Acyanotic left‑to‑right shunts (VSD, ASD, PDA) → murmur, tachypnea, failure to thrive, pulmonary over‑circulation.",
+    "Heart failure signs: hepatomegaly, edema, poor feeding."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging and functional tests clarify anatomy, pressure gradients, and oxygenation.",
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "What is cardiac size and pulmonary vascularity? Cardiomegaly or increased pulmonary markings suggest left‑to‑right shunt."
+    },
+    {
+     "a": "ECG",
+     "b": "Is there chamber enlargement or arrhythmia? Right‑axis deviation may point to right‑sided overload."
+    },
+    {
+     "a": "Cardiac MRI/CT",
+     "b": "What is complex anatomy when echo is limited? Provides 3‑D detail for surgical planning; use if echo unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from chronic volume overload, cyanosis, or obstruction.",
+   "b": [
+    "Pulmonary hypertension leading to Eisenmenger reversal.",
+    "Endocarditis, especially in PDA or VSD.",
+    "Growth failure, neurodevelopmental delay.",
+    "Sudden cardiac death in severe cyanotic lesions."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment follows a stepwise approach: stabilize, treat heart failure, then correct the defect.",
+   "b": [
+    "Prostaglandin E1 to keep ductus open in duct‑dependent lesions.",
+    "Diuretics and ACE inhibitors for volume overload; avoid NSAIDs that close PDA unintentionally.",
+    "Indomethacin or ibuprofen to close PDA when appropriate.",
+    "Surgical repair or catheter‑based closure for VSD, ASD, PDA; timing based on size and symptoms.",
+    "Antibiotic prophylaxis for high‑risk lesions to prevent endocarditis."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Lifelong cardiology follow‑up is needed, even after repair.",
+   "b": [
+    "Regular echo to monitor residual lesions or ventricular function.",
+    "Vaccinations (influenza, pneumococcal) to reduce respiratory infections.",
+    "Genetic counseling for families with recurrent CHD."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic CHD signs.",
+   "b": [
+    "Bronchopulmonary dysplasia – causes tachypnea but no murmur.",
+    "Septicemia – can produce cyanosis and shock without structural heart disease.",
+    "Pulmonary hypertension from chronic lung disease – similar echo findings but no septal defect."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Normal oxygen saturation in a newborn with a large PDA may be misleading if the shunt is left‑to‑right; watch for heart failure signs.",
+    "A small VSD may produce a loud murmur but be hemodynamically insignificant; avoid unnecessary surgery."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent cyanosis or blue lips",
+  "Severe rapid breathing with poor feeding",
+  "Sudden drop in oxygen saturation below 85%",
+  "Signs of heart failure: swelling, liver enlargement, lethargy"
+ ],
+ "faq": [
+  {
+   "q": "Why does a PDA cause a continuous murmur?",
+   "a": "Blood flows from the high‑pressure aorta to the low‑pressure pulmonary artery throughout systole and diastole, creating a machine‑like sound."
+  },
+  {
+   "q": "Can a small VSD close on its own?",
+   "a": "Yes, many small VSDs close spontaneously within the first years of life without intervention."
+  },
+  {
+   "q": "When is prostaglandin E1 indicated?",
+   "a": "When systemic or pulmonary blood flow depends on a patent ductus, such as in severe Tetralogy of Fallot or transposition of the great arteries."
+  }
+ ],
+ "exam": [
+  "Describe the clinical differences between left‑to‑right and right‑to‑left shunts and give an example of each.",
+  "Explain the role of prostaglandin E1 in the management of duct‑dependent lesions.",
+  "Outline the indications for surgical versus catheter‑based closure of an atrial septal defect."
+ ],
+ "related": [
+  "Tetralogy of Fallot",
+  "Atrial septal defect",
+  "Ventricular septal defect",
+  "Patent ductus arteriosus",
+  "Pulmonary hypertension",
+  "Endocarditis prophylaxis",
+  "Neonatal screening"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

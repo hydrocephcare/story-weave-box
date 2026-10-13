@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Encephalitis is inflammation of brain parenchyma causing altered mental status, seizures, and focal deficits. Prompt recognition, investigation and treatment of the underlying cause are essential to reduce mortality and long‑term disability.",
+ "aka": [
+  "Brain inflammation",
+  "Acute encephalitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Encephalitis is brain parenchymal inflammation confirmed by clinical features plus supportive CSF, imaging or histology. Diagnosis requires exclusion of mimics.",
+   "b": [
+    "Fever, new onset altered consciousness, seizures, focal neurologic signs",
+    "CSF: pleocytosis (>5 cells/µL), elevated protein, normal/low glucose",
+    "MRI: T2/FLAIR hyperintensity in gray matter, especially temporal lobes"
+   ],
+   "t": [
+    {
+     "a": "CSF analysis",
+     "b": "Does the CSF show inflammatory changes? → Pleocytosis and protein rise support encephalitis; normal CSF suggests alternative diagnosis."
+    },
+    {
+     "a": "Brain MRI",
+     "b": "Is there focal parenchymal inflammation? → Hyperintense lesions confirm involvement; normal MRI early does not exclude disease."
+    },
+    {
+     "a": "PCR/serology for pathogens",
+     "b": "Which infectious agent is present? → Positive result directs targeted therapy; negative does not rule out infection."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by level of consciousness, need for intensive care, and presence of complications.",
+   "b": [
+    "Mild: alert, no ICU, no seizures",
+    "Moderate: confusion, seizures controlled with medication",
+    "Severe: coma, refractory seizures, respiratory failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the aetiology to guide therapy; infections dominate, especially in low‑resource settings.",
+   "b": [
+    "Viral: HSV‑1 (most common worldwide), Japanese encephalitis, dengue, Zika, rabies",
+    "Bacterial: Listeria, Mycobacterium tuberculosis (TB meningitis with encephalitic features)",
+    "Parasitic: Plasmodium falciparum (cerebral malaria)",
+    "Autoimmune: NMDA‑receptor encephalitis, post‑infectious ADEM"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical picture evolves over hours to days, often after a prodrome of fever or viral illness.",
+   "b": [
+    "Fever, headache, neck stiffness",
+    "Altered mental status ranging from lethargy to coma",
+    "New seizures or focal neurologic deficits",
+    "Behavioral changes, hallucinations in autoimmune forms"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests answer key clinical questions while considering resource limits.",
+   "t": [
+    {
+     "a": "Rapid antigen test for HSV",
+     "b": "Is HSV likely? → Positive directs acyclovir; if unavailable, start empiric therapy."
+    },
+    {
+     "a": "Serum malaria smear",
+     "b": "Is cerebral malaria present? → Positive leads to antimalarial treatment; if unavailable, treat empirically in endemic area."
+    },
+    {
+     "a": "EEG",
+     "b": "Are seizures ongoing or subclinical? → Diffuse slowing supports encephalitis; periodic discharges suggest specific viral causes."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise features that predict rapid deterioration.",
+   "b": [
+    "Rapid progression to coma",
+    "Refractory seizures or status epilepticus",
+    "Brain herniation signs (pupillary changes)",
+    "Multiorgan failure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the cause first, then provide supportive care and monitor for complications.",
+   "b": [
+    "Empiric IV acyclovir for suspected HSV until PCR negative",
+    "Broad‑spectrum antibiotics if bacterial meningitis cannot be excluded",
+    "Antimalarial (artesunate) in endemic regions with compatible presentation",
+    "High‑dose steroids for autoimmune encephalitis after infectious work‑up",
+    "Seizure control with benzodiazepines then levetiracetam; avoid phenytoin in hepatic failure"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After acute care, assess neurologic recovery and vaccinate where appropriate.",
+   "b": [
+    "Neurorehabilitation for persistent deficits",
+    "Vaccination: Japanese encephalitis, measles, varicella, rabies post‑exposure prophylaxis",
+    "Education on mosquito bite avoidance in endemic areas"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic encephalitis must be ruled out.",
+   "b": [
+    "Meningitis (meningeal signs predominate)",
+    "Stroke or intracranial hemorrhage",
+    "Severe metabolic encephalopathy (hypoglycaemia, hepatic failure)",
+    "Psychiatric disorders or conversion"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Beware of false‑negative or misleading findings.",
+   "b": [
+    "Early MRI may be normal despite encephalitis",
+    "CSF PCR can be negative in HSV if performed after 10 days",
+    "Peripheral eosinophilia may suggest parasitic infection but can be absent"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid loss of consciousness",
+  "New onset seizures or status epilepticus",
+  "Signs of brain herniation (unequal pupils, abnormal breathing)",
+  "Severe respiratory distress"
+ ],
+ "faq": [
+  {
+   "q": "Why start acyclovir before a definitive HSV diagnosis?",
+   "a": "HSV encephalitis has high mortality; early therapy dramatically improves outcome, and delay waiting for PCR is unsafe."
+  },
+  {
+   "q": "Can encephalitis be viral without fever?",
+   "a": "Yes; some viral encephalitides (e.g., HSV) may present with minimal fever, especially in immunocompromised patients."
+  },
+  {
+   "q": "When are steroids indicated?",
+   "a": "After infectious causes are excluded, steroids are used for autoimmune encephalitis or to reduce cerebral edema in severe cases."
+  }
+ ],
+ "exam": [
+  "List the first‑line empiric treatment for suspected viral encephalitis and explain the rationale.",
+  "Describe the CSF findings that support a diagnosis of encephalitis and how they differ from bacterial meningitis.",
+  "Identify three red‑flag clinical features that require immediate ICU admission."
+ ],
+ "related": [
+  "Meningitis",
+  "Status epilepticus",
+  "Cerebral malaria",
+  "Japanese encephalitis",
+  "Autoimmune encephalitis",
+  "Neuroimaging"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

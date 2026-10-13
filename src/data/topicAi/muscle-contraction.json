@@ -1,0 +1,119 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Muscle contraction converts chemical energy into mechanical force, enabling movement and vital functions like breathing. Understanding the cascade from neural signal to cross‑bridge cycling helps diagnose weakness, spasticity, and fatigue.",
+ "aka": [
+  "muscle contraction",
+  "excitation‑contraction coupling"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Skeletal, cardiac and smooth muscles generate force through coordinated interaction of actin, myosin, calcium and ATP. Clinicians must link symptoms (weakness, rigidity) to where the cascade fails.",
+   "b": [
+    "Three muscle types: skeletal (voluntary), cardiac (involuntary, rhythmic), smooth (viscera).",
+    "Key players: calcium, troponin, tropomyosin, myosin heads, ATP."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "An action potential reaches the neuromuscular junction, releases acetylcholine, depolarises the muscle membrane, triggers Ca²⁺ release from the sarcoplasmic reticulum, allowing myosin to bind actin and slide filaments.",
+   "b": [
+    "Neuromuscular transmission → ACh → depolarisation.",
+    "Ca²⁺ binds troponin, moves tropomyosin, exposes myosin‑binding sites.",
+    "ATP hydrolysis powers cross‑bridge cycle and detachment."
+   ],
+   "t": [
+    {
+     "a": "Serum creatine kinase (CK)",
+     "b": "Is muscle cell membrane damaged? Elevated CK indicates myocyte injury (e.g., rhabdomyolysis, muscular dystrophy)."
+    },
+    {
+     "a": "Electromyography (EMG)",
+     "b": "Is there a neuropathic or myopathic pattern? Myopathic shows low amplitude, short duration; neuropathic shows high amplitude, prolonged duration."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Calcium handling, phosphorylation of regulatory proteins, and autonomic input fine‑tune contraction strength and duration.",
+   "b": [
+    "Voltage‑gated L‑type Ca²⁺ channels trigger SR release (skeletal) or depend on extracellular Ca²⁺ (smooth).",
+    "Beta‑adrenergic stimulation ↑ cAMP → enhanced Ca²⁺ entry and faster relaxation."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Failure at any step produces characteristic clinical patterns: weakness, fatigue, spasticity, or flaccid paralysis.",
+   "b": [
+    "Neuromuscular junction disorders (e.g., myasthenia gravis) – reduced ACh receptors.",
+    "Channelopathies (e.g., periodic paralysis) – abnormal Na⁺/K⁺/Ca²⁺ channels.",
+    "Metabolic myopathies – insufficient ATP (e.g., McArdle disease)."
+   ],
+   "t": [
+    {
+     "a": "Acetylcholine receptor antibodies",
+     "b": "Is myasthenia gravis present? Positive antibodies confirm autoimmune NMJ blockade."
+    },
+    {
+     "a": "Serum electrolytes (K⁺, Ca²⁺)",
+     "b": "Do electrolyte shifts explain periodic paralysis? Low K⁺ or Ca²⁺ triggers attacks."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Recognising the level of dysfunction guides urgent care (e.g., malignant hyperthermia) and long‑term management (e.g., physiotherapy for dystrophies).",
+   "b": [
+    "Malignant hyperthermia – uncontrolled Ca²⁺ release after volatile anesthetics; treat with dantrolene.",
+    "Spastic paralysis (e.g., after stroke) – loss of inhibitory upper‑motor‑neuron signals; manage with baclofen.",
+    "Flaccid paralysis (e.g., botulism) – presynaptic blockade of ACh release; give antitoxin."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the step‑wise cascade, typical lab patterns, and emergency presentations.",
+   "b": [
+    "Identify whether weakness is neurogenic vs myopathic by EMG.",
+    "Remember CK >5× normal suggests rhabdomyolysis; watch for renal failure.",
+    "Malignant hyperthermia: hypercarbia, hyperthermia, rigidity – treat immediately."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly rising CK with myoglobinuria (risk of acute kidney injury).",
+  "Severe hyperthermia and rigidity after anesthesia (malignant hyperthermia).",
+  "Acute flaccid paralysis with respiratory compromise (botulism, Guillain‑Barré)."
+ ],
+ "faq": [
+  {
+   "q": "Why does calcium cause contraction but not relaxation?",
+   "a": "Calcium binding to troponin exposes actin sites for myosin; removal of calcium by SERCA pumps restores tropomyosin blocking, allowing relaxation."
+  },
+  {
+   "q": "Can muscle fatigue be due to low ATP alone?",
+   "a": "Yes; metabolic myopathies or prolonged exertion deplete ATP, limiting cross‑bridge cycling and causing fatigue."
+  },
+  {
+   "q": "What distinguishes spastic from flaccid paralysis clinically?",
+   "a": "Spastic: increased tone, hyperreflexia, clonus. Flaccid: reduced tone, absent reflexes, muscle wasting."
+  }
+ ],
+ "exam": [
+  "Explain the sequence from nerve impulse to cross‑bridge formation and where myasthenia gravis interrupts it.",
+  "Interpret a CK level of 8,000 U/L with dark urine – what diagnosis and immediate management steps?",
+  "Describe the pathophysiology and emergency treatment of malignant hyperthermia."
+ ],
+ "related": [
+  "Neuromuscular junction disorders",
+  "Rhabdomyolysis",
+  "Malignant hyperthermia",
+  "Spasticity",
+  "Metabolic myopathies",
+  "Electrolyte disturbances"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

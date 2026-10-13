@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Iron deficiency anaemia is a common microcytic, hypochromic disorder caused by inadequate iron intake, absorption or chronic loss. It presents with fatigue, pallor and sometimes shortness of breath. Diagnosis relies on CBC, ferritin and transferrin receptor levels.",
+ "aka": [
+  "Microcytic anaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Iron deficiency anaemia (IDA) is defined by low haemoglobin with microcytosis and hypochromia, confirmed by low ferritin (<15 µg/L) or high soluble transferrin receptor (sTfR).",
+   "b": [
+    "Microcytic, hypochromic red cells",
+    "Low ferritin or high sTfR"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Shows low Hb, MCV <80 fL, low MCH – indicates microcytosis"
+    },
+    {
+     "a": "Serum ferritin",
+     "b": "Low ferritin (<15 µg/L) confirms iron depletion; high ferritin (>200 µg/L) rules out IDA"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by haemoglobin: mild (10–11.9 g/dL), moderate (7–9.9 g/dL), severe (<7 g/dL).",
+   "b": [
+    "Mild: 10–11.9 g/dL",
+    "Moderate: 7–9.9 g/dL",
+    "Severe: <7 g/dL"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the top causes are nutritional deficiency, chronic blood loss, and parasitic infection.",
+   "b": [
+    "Poor diet (low iron, high phytate)",
+    "Menorrhagia or menstrual bleeding",
+    "Helminth infection (hookworm, schistosomiasis)",
+    "Chronic disease (HIV, TB, malaria)",
+    "Malabsorption (celiac, gastritis)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report fatigue, pallor, dyspnoea on exertion, and sometimes a sore tongue or restless legs. Children may have growth delay.",
+   "b": [
+    "Fatigue, pallor, dyspnoea",
+    "Growth retardation in children",
+    "Glossitis or angular cheilitis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests assess iron status and rule out mimics. Use CBC, ferritin, sTfR, and CRP if inflammation is suspected.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Detects microcytosis and hypochromia – first clue"
+    },
+    {
+     "a": "Serum ferritin",
+     "b": "Low ferritin confirms iron depletion; high ferritin suggests inflammation or overload"
+    },
+    {
+     "a": "Soluble transferrin receptor",
+     "b": "High sTfR indicates iron demand; normal sTfR with low ferritin suggests anemia of chronic disease"
+    },
+    {
+     "a": "CRP or ESR",
+     "b": "Elevated values point to inflammation, which can raise ferritin independently of iron stores"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe anaemia can cause tachycardia, syncope, heart failure, and increased mortality. Untreated IDA may worsen infections and impair cognition.",
+   "b": [
+    "Tachycardia, syncope",
+    "Heart failure in severe cases",
+    "Cognitive decline in children"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide iron supplementation, and monitor response. Oral ferrous sulfate is first line; parenteral iron is reserved for malabsorption or intolerance.",
+   "b": [
+    "Oral ferrous sulfate – improves iron stores and corrects anaemia"
+   ],
+   "t": [
+    {
+     "a": "Oral iron",
+     "b": "Avoid high-dose iron in patients with active bleeding or infection due to risk of oxidative damage"
+    },
+    {
+     "a": "Parenteral iron",
+     "b": "Monitor for hypersensitivity and iron overload"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Repeat CBC and ferritin after 4–6 weeks to assess response. Preventive strategies include iron‑fortified foods, deworming, and maternal supplementation.",
+   "b": [
+    "Re‑check Hb and ferritin 4–6 weeks post‑therapy",
+    "Iron‑fortified cereals",
+    "Routine deworming in endemic areas"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "IDA mimics include thalassemia trait, anemia of chronic disease, sideroblastic anaemia, and lead poisoning.",
+   "b": [
+    "Thalassemia trait – normal ferritin, normal sTfR"
+   ],
+   "t": [
+    {
+     "a": "HbA1c",
+     "b": "Normal in IDA; elevated in diabetes"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Inflammation raises ferritin, masking IDA. GI bleeding may not show obvious blood loss. Low sTfR can be seen in liver disease.",
+   "b": [
+    "High ferritin in infection or liver disease"
+   ],
+   "t": [
+    {
+     "a": "Serum ferritin",
+     "b": "Consider sTfR or transferrin saturation"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe fatigue with syncope",
+  "Rapid heart rate >120 bpm",
+  "Chest pain or shortness of breath at rest",
+  "Unexplained pallor with bleeding"
+ ],
+ "faq": [
+  {
+   "q": "Can iron supplements cause constipation?",
+   "a": "Yes, iron can irritate the gut; taking with food or switching to a different formulation may help."
+  },
+  {
+   "q": "Is ferritin always low in iron deficiency?",
+   "a": "Not if there is inflammation; ferritin can be normal or high, so sTfR or transferrin saturation should be checked."
+  },
+  {
+   "q": "Can children with iron deficiency develop behavioural problems?",
+   "a": "Yes, iron is essential for brain development; deficiency can lead to attention difficulties and poor school performance."
+  }
+ ],
+ "exam": [
+  "Explain why ferritin is a better marker than transferrin saturation in low‑resource settings.",
+  "Describe the diagnostic work‑up for a 25‑year‑old woman with microcytic anaemia and heavy menstrual bleeding.",
+  "Outline the first‑line treatment for a child with iron deficiency anaemia in a rural clinic and how you would monitor response."
+ ],
+ "related": [
+  "Nutritional anaemias",
+  "Anemia of chronic disease",
+  "Helminthic infections",
+  "Maternal iron supplementation",
+  "Iron‑fortified foods"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

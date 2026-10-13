@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Small cell lung cancer is a neuroendocrine tumour that grows rapidly, metastasises early and is strongly linked to smoking. It often presents with paraneoplastic syndromes such as SIADH, Cushing’s, or Lambert‑Eaton myasthenic syndrome.",
+ "aka": [
+  "SCLC",
+  "Neuroendocrine lung tumour"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "SCLC is a malignant tumour of pulmonary neuroendocrine cells, usually central, that shows small, round cells with scant cytoplasm and neuroendocrine markers on immunohistochemistry.",
+   "b": [
+    "Central mass on imaging",
+    "Positive chromogranin A or synaptophysin",
+    "High mitotic rate"
+   ],
+   "t": [
+    {
+     "a": "CT chest",
+     "b": "Detects central tumour and nodal disease; a mass >1 cm in the hilar region suggests SCLC"
+    },
+    {
+     "a": "Bronchoscopy with biopsy",
+     "b": "Obtains tissue for histology and immunostaining; confirms neuroendocrine phenotype"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Hyponatraemia with low plasma osmolality and concentrated urine indicates SIADH, a common paraneoplastic sign"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "SCLC is staged as limited (confined to one hemithorax) or extensive (beyond one hemithorax or distant metastasis).",
+   "b": [
+    "Limited: treat with chemo + radiation",
+    "Extensive: systemic chemotherapy only"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The single most important risk factor is tobacco smoke. Other factors include occupational exposures and possibly viral infections.",
+   "b": [
+    "Smoking (≥20 pack‑years)",
+    "Occupational carcinogens (asbestos, diesel exhaust)",
+    "HIV infection may increase risk"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have a central cough, haemoptysis, or dyspnoea. Paraneoplastic syndromes may dominate the initial presentation.",
+   "b": [
+    "Cough, haemoptysis, chest pain",
+    "SIADH: confusion, seizures, hyponatraemia",
+    "Cushing’s: moon facies, proximal muscle weakness"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "The work‑up focuses on confirming the tumour, staging, and detecting paraneoplastic effects.",
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Initial screen for central mass"
+    },
+    {
+     "a": "PET‑CT",
+     "b": "Assesses metabolic activity and distant spread"
+    },
+    {
+     "a": "Serum cortisol and ACTH",
+     "b": "Elevated ACTH with normal pituitary imaging suggests ectopic source"
+    },
+    {
+     "a": "Serum sodium and urine osmolality",
+     "b": "Hyponatraemia with concentrated urine indicates SIADH"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid progression, early metastasis, and paraneoplastic syndromes can be life‑threatening.",
+   "b": [
+    "Early brain metastases cause seizures",
+    "SIADH can lead to severe hyponatraemia and cerebral oedema",
+    "Lambert‑Eaton can cause respiratory failure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "SCLC is chemosensitive but rarely curable; treatment is systemic and supportive.",
+   "b": [
+    "Platinum (cisplatin or carboplatin) + etoposide – first‑line chemotherapy",
+    "Concurrent thoracic radiotherapy in limited stage",
+    "Supportive care: anti‑emetics, growth factors, pain control"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular imaging to detect recurrence and counselling to stop smoking.",
+   "b": [
+    "CT chest every 3–6 months for 2 years",
+    "Smoking cessation programmes"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other central lung tumours and large cell neuroendocrine carcinoma.",
+   "b": [
+    "Large cell carcinoma – similar appearance but less neuroendocrine markers",
+    "Squamous cell carcinoma – usually peripheral and keratinising"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal early in disease.",
+   "b": [
+    "Early CT may miss small hilar nodules",
+    "Serum sodium can be normal if SIADH is intermittent"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hyponatraemia with confusion or seizures",
+  "Rapidly worsening dyspnoea or haemoptysis",
+  "New onset muscle weakness or autonomic instability"
+ ],
+ "faq": [
+  {
+   "q": "Why is smoking the biggest risk factor?",
+   "a": "Tobacco smoke contains carcinogens that cause DNA mutations in neuroendocrine cells, leading to malignant transformation."
+  },
+  {
+   "q": "Can SCLC be cured?",
+   "a": "Only in very early limited disease; most patients have metastatic disease at diagnosis and treatment is palliative."
+  },
+  {
+   "q": "What is the role of surgery?",
+   "a": "Surgery is rarely used because the tumour is usually metastatic at presentation and responds better to chemotherapy."
+  }
+ ],
+ "exam": [
+  "Explain why SCLC is usually central and strongly linked to smoking.",
+  "Describe the diagnostic work‑up for a patient with suspected SIADH due to SCLC.",
+  "Outline the first‑line chemotherapy regimen for limited‑stage SCLC and justify the choice of drugs."
+ ],
+ "related": [
+  "Paraneoplastic syndromes",
+  "Lambert–Eaton myasthenic syndrome",
+  "Cushing’s syndrome",
+  "Neuroendocrine tumours",
+  "Chemotherapy for lung cancer"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

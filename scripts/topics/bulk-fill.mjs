@@ -4,7 +4,7 @@
 //   node scripts/topics/bulk-fill.mjs [count] [--parallel=4]
 import fs from "node:fs";
 import path from "node:path";
-import { generateTopicPage } from "../../supabase/functions/_shared/topicAi.js";
+import { generateWithFallback } from "../../supabase/functions/_shared/topicAi.js";
 
 const DIR = "src/data/topicAi";
 const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 1000);
@@ -28,7 +28,7 @@ async function worker() {
       const t = JSON.parse(fs.readFileSync(path.join("public/topics", `${it.s}.json`), "utf8"));
       let page = null;
       for (let attempt = 0; attempt < 5 && !page; attempt++) {
-        try { page = await generateTopicPage({ name: t.n, category: t.c, context: contextOf(t), env }); } catch (e) { await new Promise((r) => setTimeout(r, 8000 * (attempt + 1))); }
+        try { page = await generateWithFallback({ name: t.n, category: t.c, context: contextOf(t) }, env); } catch (e) { await new Promise((r) => setTimeout(r, 8000 * (attempt + 1))); }
       }
       if (!page) { failed++; console.log("failed", t.n); continue; }
       if (!page.medical) { skipped++; console.log("not medical", t.n); continue; }

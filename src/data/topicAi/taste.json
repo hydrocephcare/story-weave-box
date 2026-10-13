@@ -1,0 +1,117 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Taste is a chemosensory system that detects five basic modalities—sweet, sour, salty, bitter, and umami—through taste buds on the tongue and oral cavity. Signals travel via cranial nerves to the brainstem and cortex, influencing appetite, safety, and digestion. Clinicians use taste disturbances to uncover systemic or local disease.",
+ "aka": [
+  "gustation"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Taste is mediated by taste receptor cells in papillae that transduce chemical stimuli into neural signals. The information is relayed by cranial nerves VII, IX, and X to the nucleus tractus solitarius and higher cortical areas, shaping feeding behavior and safety reflexes.",
+   "b": [
+    "Five basic tastes: sweet, sour, salty, bitter, umami"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Taste buds contain Type I, II, and III cells. Type II cells detect sweet, bitter, and umami via G-protein coupled receptors; Type III cells sense sour via ion channels; Type I cells modulate and support. Activation triggers neurotransmitter release onto afferent fibers.",
+   "b": [
+    "Signal transduction via G-protein pathways for sweet/bitter/umami"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Taste perception is modulated by hormonal signals (e.g., leptin, ghrelin), circadian rhythms, and local inflammation. Age, smoking, and medications can blunt sensitivity. Central processing integrates taste with smell and texture to produce flavor.",
+   "b": [
+    "Hormones influence taste thresholds"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Dysgeusia (distorted taste) and ageusia (loss of taste) arise from peripheral lesions (e.g., viral neuropathies, trauma), central lesions (stroke, neurodegeneration), systemic illnesses (diabetes, renal failure), or drug effects. In low-resource settings, infections like HIV, TB, and malnutrition are common culprits.",
+   "t": [
+    {
+     "a": "Serum zinc",
+     "b": "Low zinc suggests zinc deficiency causing taste loss; normal zinc rules out deficiency."
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Hyperglycemia can impair taste; normal glucose excludes diabetes as cause."
+    },
+    {
+     "a": "Renal function tests",
+     "b": "Elevated creatinine indicates uremic taste; normal values reduce suspicion of renal failure."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Taste disturbances can herald serious conditions such as head and neck cancers, stroke, or metabolic derangements. They affect nutrition, leading to weight loss or malnutrition, especially in vulnerable populations.",
+   "b": [
+    "Assess for underlying systemic disease"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the five basic tastes and their receptors. In exam questions, link taste loss to common causes: viral infections, chemotherapy, radiation, and metabolic disorders. Use the mnemonic \"SALT\" (Stroke, Alcohol, Low zinc, Thyroid) to recall key etiologies.",
+   "b": [
+    "SALT mnemonic"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause: correct infections, manage metabolic derangements, discontinue offending drugs, and provide nutritional support. Symptomatic care includes zinc supplementation for deficiency, saline rinses for oral dryness, and counseling for dietary adjustments.",
+   "b": [
+    "Address underlying disease first"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Ageusia (complete loss) vs. dysgeusia (distorted taste). Metallic taste can be drug-induced or due to systemic disease. Loss of flavor often attributed to taste loss but is primarily olfactory.",
+   "b": [
+    "Taste vs. smell disorders"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serum zinc may be normal in early deficiency; renal function can be normal in early uremia. Clinical context is essential to interpret tests correctly.",
+   "b": [
+    "Normal labs do not exclude early disease"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dysgeusia with weight loss, persistent metallic taste, or sudden loss of taste after head injury or stroke"
+ ],
+ "faq": [
+  {
+   "q": "Can medications cause taste changes?",
+   "a": "Yes, many drugs (antibiotics, antihypertensives, chemotherapeutics) can alter taste perception."
+  },
+  {
+   "q": "Is a metallic taste a sign of poisoning?",
+   "a": "It can indicate heavy metal exposure, but also occurs with infections, medications, or metabolic disorders."
+  },
+  {
+   "q": "How does smoking affect taste?",
+   "a": "Smoking reduces taste sensitivity, especially for sweet and bitter, and can cause chronic dysgeusia."
+  }
+ ],
+ "exam": [
+  "Explain the neural pathway of taste from taste buds to the cortex.",
+  "Describe how zinc deficiency leads to ageusia and how you would investigate it.",
+  "List common causes of dysgeusia in a patient with HIV infection."
+ ],
+ "related": [
+  "Olfaction",
+  "Salivation",
+  "Gastrointestinal motility",
+  "Metabolic disorders",
+  "Head and neck oncology"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

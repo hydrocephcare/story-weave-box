@@ -1,0 +1,97 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Glucagon is a pancreatic alpha‑cell hormone that raises blood glucose by stimulating liver glycogenolysis and gluconeogenesis, acting as a counter‑regulatory partner to insulin. It also mobilises fatty acids from adipose tissue via cAMP signalling.",
+ "aka": [
+  "Alpha‑cell hormone",
+  "Counter‑regulatory hormone"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Glucagon is a 29‑amino‑acid peptide produced by pancreatic alpha cells. It is released when blood glucose falls, acting to restore normoglycaemia by stimulating hepatic glucose output and lipolysis.",
+   "b": [
+    "Peptide hormone",
+    "Opposes insulin",
+    "Key in fasting"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Glucagon binds the G‑protein coupled GLP‑1 receptor on hepatocytes, activating adenylate cyclase, raising cAMP, and triggering protein kinase A. This phosphorylates enzymes that promote glycogen breakdown and gluconeogenesis, and activates hormone‑sensitive lipase in adipose tissue.",
+   "b": [
+    "cAMP second messenger",
+    "Activates glycogenolysis",
+    "Promotes gluconeogenesis"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Secretion rises during hypoglycaemia, prolonged fasting, or exercise. It falls after meals when insulin rises. Sympathetic stimulation and low glucose directly stimulate alpha cells.",
+   "b": [
+    "Low glucose triggers release",
+    "Insulin suppresses secretion",
+    "Exercise independent stimulus"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Excess glucagon causes glucagonoma (neuroendocrine tumour) with hyperglycaemia, weight loss, and necrolytic migratory erythema. Deficiency is rare but can contribute to severe hypoglycaemia in insulin‑treated diabetics.",
+   "b": [
+    "Glucagonoma – tumour of alpha cells",
+    "Hypoglycaemia when counter‑regulation fails"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "In hypoglycaemic emergencies, glucagon is administered IM or SC when oral glucose is unavailable. It is also used diagnostically to confirm insulin deficiency or in insulin‑related hypoglycaemia.",
+   "b": [
+    "Emergency treatment of severe hypoglycaemia",
+    "Diagnostic tool for insulin excess"
+   ],
+   "t": [
+    {
+     "a": "Serum glucagon",
+     "b": "High glucagon in hypoglycaemia indicates counter‑regulatory response; low levels suggest alpha‑cell failure or insulinoma."
+    },
+    {
+     "a": "Glucose tolerance test",
+     "b": "Failure to rise after glucagon indicates hepatic glycogen depletion or severe liver disease."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypoglycaemia unresponsive to oral glucose",
+  "Unexplained weight loss with hyperglycaemia and skin rash"
+ ],
+ "faq": [
+  {
+   "q": "Why is glucagon given when a patient cannot swallow?",
+   "a": "It raises blood glucose by stimulating liver glycogenolysis without needing intestinal absorption."
+  },
+  {
+   "q": "Can glucagon cause hypoglycaemia?",
+   "a": "No; it increases glucose. However, if given too late after insulin overdose, the rise may be insufficient."
+  },
+  {
+   "q": "What is the difference between glucagon and epinephrine in hypoglycaemia?",
+   "a": "Both raise glucose; epinephrine also increases heart rate and vasoconstriction, while glucagon acts mainly on the liver."
+  }
+ ],
+ "exam": [
+  "Explain how glucagon counteracts insulin during fasting.",
+  "Describe the mechanism by which glucagon raises blood glucose.",
+  "Outline the emergency management of a patient with severe hypoglycaemia who cannot swallow."
+ ],
+ "related": [
+  "Insulin",
+  "Pancreatic alpha cells",
+  "Glycogenolysis",
+  "Glucagonoma"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

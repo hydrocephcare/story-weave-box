@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Non-Hodgkin lymphoma (NHL) is a heterogeneous group of clonal lymphoid cancers, most often B‑cell origin, that spread non‑contiguously. Diagnosis relies on morphology, immunophenotype and genetics; treatment uses chemo‑immunotherapy.",
+ "aka": [
+  "Non-Hodgkin's lymphoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "NHL comprises clonal proliferations of lymphocytes that lack Reed‑Sternberg cells. Diagnosis requires tissue biopsy showing atypical lymphoid cells, immunophenotyping (CD20 for B‑cells), and often a defining genetic abnormality such as t(14;18) in follicular lymphoma.",
+   "b": [
+    "Biopsy with histology and immunohistochemistry is mandatory",
+    "Genetic testing (FISH, PCR) confirms specific subtypes"
+   ],
+   "t": [
+    {
+     "a": "Excisional lymph node biopsy",
+     "b": "Confirms lymphoma type and grade; morphology plus CD20 positivity indicates B‑cell NHL"
+    },
+    {
+     "a": "Flow cytometry on fresh tissue",
+     "b": "Identifies cell surface markers; CD20+ CD5‑ suggests most B‑cell NHL, guiding therapy"
+    },
+    {
+     "a": "FISH for t(14;18)",
+     "b": "Detects BCL2 translocation; positive result supports follicular lymphoma diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Ann Arbor system (modified for NHL) stages disease from I (single region) to IV (disseminated). The International Prognostic Index (IPI) adds age, LDH, performance status, stage and extranodal sites to predict outcome.",
+   "b": [
+    "Stage I–II: limited disease, often curable",
+    "Stage III–IV: advanced, need systemic therapy",
+    "High IPI score predicts poorer survival"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most NHL cases are idiopathic, but risk factors include immunodeficiency (HIV, organ transplant), chronic infections (H. pylori, EBV, hepatitis C), and autoimmune diseases.",
+   "b": [
+    "HIV infection markedly increases aggressive B‑cell NHL",
+    "H. pylori gastritis can trigger gastric MALT lymphoma",
+    "Chronic hepatitis C linked to splenic marginal zone lymphoma"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often notice painless lymphadenopathy, sometimes with B symptoms (fever, night sweats, weight loss). Extranodal disease may cause organ‑specific symptoms, e.g., abdominal mass or testicular swelling in older men.",
+   "b": [
+    "Painless, progressive lymph node enlargement",
+    "Constitutional B symptoms in 30% of aggressive NHL",
+    "Extranodal sites: GI tract, CNS, testis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond tissue diagnosis, staging uses imaging and laboratory studies to assess disease burden and organ function before therapy.",
+   "b": [
+    "CT or PET‑CT maps nodal and extranodal disease",
+    "Baseline labs evaluate marrow involvement and treatment safety"
+   ],
+   "t": [
+    {
+     "a": "PET‑CT",
+     "b": "Determines metabolic activity and stage; high uptake indicates active disease and guides radiotherapy fields"
+    },
+    {
+     "a": "Bone marrow biopsy",
+     "b": "Detects marrow infiltration; positive result upstages to IV and influences prognosis"
+    },
+    {
+     "a": "Serum LDH",
+     "b": "Elevated LDH reflects high tumor turnover; part of IPI scoring"
+    },
+    {
+     "a": "HIV test (if risk factors)",
+     "b": "Identifies immunodeficiency that alters treatment choice and prognosis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly enlarging nodes, new organ dysfunction, or severe B symptoms suggest aggressive disease needing urgent therapy. Tumor lysis syndrome, infections, and treatment‑related cytopenias are common complications.",
+   "b": [
+    "Sudden node growth → possible transformation to high‑grade lymphoma",
+    "Renal failure from tumor lysis",
+    "Severe neutropenia → opportunistic infection"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First‑line therapy combines chemotherapy (e.g., CHOP) with anti‑CD20 monoclonal antibody rituximab for CD20‑positive B‑cell NHL. Radiotherapy is added for localized disease. Supportive care includes growth‑factor support and infection prophylaxis.",
+   "b": [
+    "Rituximab targets CD20, depletes B‑cells, improves survival",
+    "Avoid anthracycline in cardiac disease; consider bendamustine as alternative",
+    "Treat underlying infections (e.g., H. pylori eradication) before chemo"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After remission, patients are monitored with periodic physical exam, imaging, and labs (CBC, LDH). Vaccination and safe sexual practices reduce infection‑related relapses in immunocompromised patients.",
+   "b": [
+    "Every 3–6 months for first 2 years, then annually",
+    "Address modifiable risk factors: HIV control, hepatitis treatment"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hodgkin lymphoma (presence of Reed‑Sternberg cells, contiguous spread) and reactive lymphadenitis (benign hyperplasia).",
+   "b": [
+    "Hodgkin lymphoma shows CD15/CD30 positivity",
+    "Reactive nodes retain normal architecture, lack clonal markers"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low LDH does not exclude aggressive disease; small biopsy samples may miss high‑grade areas, leading to under‑staging.",
+   "b": [
+    "False‑negative FISH if tumor cells are sparse",
+    "PET‑CT may be falsely negative in low‑grade indolent lymphoma"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden swelling of lymph nodes, high fever, unexplained weight loss, night sweats, or new organ pain"
+ ],
+ "faq": [
+  {
+   "q": "Why is CD20 targeted in many NHLs?",
+   "a": "CD20 is expressed on most B‑cell lymphomas; rituximab binds it, causing cell death and improving outcomes."
+  },
+  {
+   "q": "Can NHL be cured?",
+   "a": "Limited‑stage indolent NHL can achieve long‑term remission; aggressive NHL often requires curative intent chemo‑immunotherapy."
+  },
+  {
+   "q": "Is NHL contagious?",
+   "a": "No, it arises from the patient’s own lymphocytes; infections can increase risk but the lymphoma itself is not transmissible."
+  }
+ ],
+ "exam": [
+  "Describe the diagnostic steps to differentiate NHL from Hodgkin lymphoma.",
+  "Explain the components and clinical use of the International Prognostic Index in NHL.",
+  "List first‑line treatment for CD20‑positive diffuse large B‑cell lymphoma and rationale for each drug."
+ ],
+ "related": [
+  "Hodgkin lymphoma",
+  "Diffuse large B‑cell lymphoma",
+  "Follicular lymphoma",
+  "MALT lymphoma",
+  "Rituximab",
+  "International Prognostic Index",
+  "Tumor lysis syndrome",
+  "HIV-associated lymphomas"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

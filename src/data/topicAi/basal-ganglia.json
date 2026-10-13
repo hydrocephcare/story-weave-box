@@ -1,0 +1,125 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The basal ganglia are deep brain nuclei that modulate movement and cognition. Their dysfunction leads to movement disorders and neuropsychiatric symptoms. Clinicians must link clinical signs to specific nuclei and pathways.",
+ "aka": [
+  "Deep nuclei"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The basal ganglia are a group of subcortical nuclei that regulate motor output, habit formation, and reward. They form closed loops with cortex and thalamus, balancing excitation and inhibition.",
+   "b": [
+    "Key nuclei: caudate, putamen, globus pallidus, subthalamic nucleus, substantia nigra"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "They lie in the lateral and medial basal forebrain, surrounded by the internal capsule and adjacent to the lateral ventricles. Each nucleus has distinct cytoarchitecture.",
+   "b": [
+    "Caudate head sits beside lateral ventricle",
+    "Putamen forms lateral part of lentiform nucleus"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The basal ganglia are intimately related to the internal capsule, thalamus, and cortex. Their deep location makes them vulnerable to hemorrhage and ischemia.",
+   "b": [
+    "Internal capsule carries corticospinal fibers",
+    "Thalamus relays sensory signals"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "They receive arterial blood from branches of the middle cerebral artery (MCA) and anterior choroidal artery. The lenticulostriate arteries are critical feeders.",
+   "b": [
+    "Lenticulostriate arteries supply caudate and putamen",
+    "Anterior choroidal supplies globus pallidus"
+   ],
+   "t": [
+    {
+     "a": "CT angiography",
+     "b": "Shows vessel stenosis or aneurysm causing hemorrhage; abnormal flow indicates risk of stroke"
+    },
+    {
+     "a": "MRI diffusion-weighted imaging",
+     "b": "Detects acute ischemia in basal ganglia; helps differentiate hemorrhage from infarct"
+    }
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The basal ganglia receive cortical inputs via the cortico-striatal pathway and send outputs through the thalamus to cortex. They are modulated by dopaminergic neurons from the substantia nigra.",
+   "b": [
+    "Cortico-striatal glutamate excitatory input"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "They regulate movement by balancing the direct (facilitatory) and indirect (inhibitory) pathways. They also influence reward, habit, and executive functions.",
+   "b": [
+    "Direct pathway: disinhibits thalamus to promote movement"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Hemorrhage, ischemia, and neurodegeneration (Parkinson’s, Huntington’s) affect basal ganglia. Symptoms vary from rigidity to chorea to cognitive decline.",
+   "b": [
+    "Hemorrhage presents with sudden focal deficits and increased intracranial pressure"
+   ],
+   "t": [
+    {
+     "a": "Head CT",
+     "b": "Detects hyperdense hemorrhage; guides emergency surgery"
+    },
+    {
+     "a": "MRI T2/FLAIR",
+     "b": "Shows chronic lesions in Huntington’s; identifies demyelination in infections"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the direct vs indirect pathway balance. In Parkinson’s, loss of dopaminergic neurons shifts the balance toward the indirect pathway, causing rigidity.",
+   "b": [
+    "Direct pathway: striatum → GPi → thalamus → cortex"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe headache with focal neurological signs (possible basal ganglia hemorrhage)",
+  "Rapid onset of rigidity or tremor with bradykinesia (possible Parkinsonian crisis)"
+ ],
+ "faq": [
+  {
+   "q": "What causes basal ganglia hemorrhage in low‑resource settings?",
+   "a": "Hypertension, cerebral amyloid angiopathy, and malaria‑associated vasculitis are common culprits."
+  },
+  {
+   "q": "How does Parkinson’s disease affect the basal ganglia?",
+   "a": "Loss of dopaminergic neurons in substantia nigra increases indirect pathway activity, leading to over‑inhibition of thalamocortical drive."
+  },
+  {
+   "q": "Can infections damage the basal ganglia?",
+   "a": "Yes; tuberculosis, HIV, and neurocysticercosis can cause focal lesions or diffuse inflammation."
+  }
+ ],
+ "exam": [
+  "Explain the difference between the direct and indirect basal ganglia pathways and how they are altered in Parkinson’s disease.",
+  "Describe the typical imaging findings of a basal ganglia hemorrhage and the immediate management steps.",
+  "Outline the clinical features that would suggest Huntington’s disease versus a vascular lesion in the basal ganglia."
+ ],
+ "related": [
+  "Parkinson’s disease",
+  "Huntington’s disease",
+  "Cerebral small vessel disease",
+  "Neurocysticercosis",
+  "Cerebral malaria",
+  "Cerebral vasculitis",
+  "Stroke"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

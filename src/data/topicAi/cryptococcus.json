@@ -1,0 +1,125 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Cryptococcus is an encapsulated yeast found in pigeon droppings that causes life‑threatening meningitis, especially in immunocompromised hosts. Recognising its capsule and using targeted antifungal therapy are key to saving lives.",
+ "aka": [
+  "Cryptococcus neoformans",
+  "Filobasidiella neoformans"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Cryptococcus is a basidiomycetous yeast with a thick polysaccharide capsule that protects it from host immunity. Infection occurs after inhalation of aerosolised yeast from the environment, most often pigeon droppings.",
+   "b": [
+    "Encapsulated yeast, 5–10 µm, reproduces by budding",
+    "Capsule is the main virulence factor",
+    "Found worldwide; especially common in urban areas with pigeons"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The capsule stains with India ink, creating a clear halo, and is also highlighted by mucicarmine. The yeast is urease‑positive and grows on Sabouraud agar at 30–37 °C.",
+   "b": [
+    "India ink: capsule halo in CSF",
+    "Urease positive: helps differentiate from Candida",
+    "Growth at 37 °C: indicates pathogenic potential"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Spores or desiccated yeast are inhaled from contaminated soil or pigeon droppings. In the lungs they transform into budding yeast, can disseminate hematogenously, and cross the blood‑brain barrier to cause meningitis.",
+   "b": [
+    "Inhalation → pulmonary colonisation",
+    "Hematogenous spread → CNS, skin, bone",
+    "Capsule prevents phagocytosis"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Cryptococcal meningitis is the classic presentation, but pulmonary nodules, skin lesions, and disseminated disease occur, especially in HIV/AIDS, organ transplant, or steroid‑treated patients.",
+   "b": [
+    "Meningitis: headache, fever, neck stiffness, altered mental status",
+    "Pulmonary: cough, nodules, cavitation, often asymptomatic",
+    "Skin: papules, ulcers, may mimic molluscum"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Combine clinical suspicion with laboratory tests that detect the capsule or fungal DNA. In low‑resource settings, India ink and cryptococcal antigen (CrAg) lateral flow assay are most useful.",
+   "b": [
+    "CSF India ink: rapid, inexpensive, shows capsule",
+    "Serum/CSF CrAg LFA: high sensitivity, works on whole blood",
+    "Culture on Sabouraud agar: confirms species, but slower"
+   ],
+   "t": [
+    {
+     "a": "India ink microscopy",
+     "b": "Does CSF contain encapsulated yeast? Positive halo confirms Cryptococcus; negative does not rule out early infection"
+    },
+    {
+     "a": "Cryptococcal antigen lateral flow assay",
+     "b": "Is capsular polysaccharide present in serum/CSF? Positive = infection; quantitative titers help monitor response"
+    },
+    {
+     "a": "CSF opening pressure measurement",
+     "b": "Is intracranial pressure elevated? >250 mmH₂O suggests need for therapeutic lumbar puncture"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Induction therapy uses amphotericin B plus flucytosine to rapidly clear organisms, followed by consolidation with fluconazole. Manage raised intracranial pressure with serial lumbar punctures.",
+   "b": [
+    "Amphotericin B: fungicidal, penetrates CNS, but nephrotoxic – monitor renal function",
+    "Flucytosine: synergistic, avoid in severe bone‑marrow suppression",
+    "Fluconazole: oral, good CNS levels, used for maintenance",
+    "Therapeutic LPs: relieve pressure, improve outcomes"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the capsule’s diagnostic clues, the importance of CrAg testing, and the three‑phase antifungal regimen. Remember to assess and treat intracranial hypertension.",
+   "b": [
+    "India ink and CrAg are complementary; CrAg remains positive after treatment",
+    "High opening pressure (>250 mmH₂O) mandates repeated lumbar puncture",
+    "Flucytosine contraindicated in renal failure; use fluconazole alone if amphotericin unavailable"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute severe headache with fever and neck stiffness",
+  "Rapidly declining mental status",
+  "New seizures or focal neurological deficits"
+ ],
+ "faq": [
+  {
+   "q": "Why is the capsule so important?",
+   "a": "It blocks phagocytosis and masks antigenic sites, allowing the yeast to survive in blood and cross the blood‑brain barrier."
+  },
+  {
+   "q": "Can a negative India ink rule out infection?",
+   "a": "No; early infection may have low fungal burden. Use CrAg testing to increase sensitivity."
+  },
+  {
+   "q": "What if amphotericin B is unavailable?",
+   "a": "High‑dose fluconazole with close monitoring can be used, though cure rates are lower; add flucytosine if possible."
+  }
+ ],
+ "exam": [
+  "Describe the three‑stage treatment regimen for cryptococcal meningitis and the rationale for each drug.",
+  "Explain how you would diagnose cryptococcal meningitis in a setting without culture facilities.",
+  "List the key clinical features that differentiate cryptococcal meningitis from bacterial meningitis."
+ ],
+ "related": [
+  "HIV‑associated opportunistic infections",
+  "Candida albicans",
+  "Aspergillus fumigatus",
+  "Pneumocystis jirovecii",
+  "Meningitis (bacterial, tuberculous)",
+  "Urease‑positive fungi"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

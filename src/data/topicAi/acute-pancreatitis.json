@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Acute pancreatitis is sudden inflammation of the pancreas that can range from mild self‑limited disease to life‑threatening organ failure. Diagnosis relies on characteristic pain, enzymes and imaging, while severity guides management.",
+ "aka": [
+  "acute pancreatic inflammation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute pancreatitis is an abrupt inflammatory process of the pancreas that may extend to peripancreatic tissues. Diagnosis requires two of three criteria: typical abdominal pain, serum amylase or lipase ≥3 × upper limit, and imaging showing pancreatic inflammation.",
+   "b": [
+    "Two of three criteria confirm the diagnosis",
+    "Serum lipase is more specific than amylase"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is stratified by the Revised Atlanta Classification into mild (no organ failure, no local complications), moderately severe (transient organ failure or local complications) and severe (persistent organ failure >48 h). The BISAP score (0‑5) predicts early mortality.",
+   "b": [
+    "Persistent organ failure = severe disease",
+    "BISAP ≥3 predicts >10 % mortality"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped as gallstones, alcohol, and other (hypertriglyceridaemia, drugs, infections, trauma, metabolic disorders). In low‑resource settings, gallstone disease and alcohol remain top, but infections such as HIV‑related opportunistic infections, hepatitis B, malaria, and herbal toxin exposure are notable.",
+   "b": [
+    "Gallstones – most common worldwide",
+    "Alcohol – common in young males",
+    "Hypertriglyceridaemia >1000 mg/dL",
+    "Infections: HIV, hepatitis B, malaria, TB peritonitis",
+    "Herbal remedies containing toxic alkaloids"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report sudden epigastric pain radiating to the back, often worsened by eating. Nausea, vomiting, and low‑grade fever are common. On exam, the abdomen is tender with guarding; a “sentinel loop” or colon cut‑off sign may be seen on plain X‑ray.",
+   "b": [
+    "Pain radiating to back is classic",
+    "Sentinel loop on X‑ray suggests local irritation"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Laboratory and imaging confirm diagnosis, assess severity, and look for complications.",
+   "t": [
+    {
+     "a": "Serum lipase",
+     "b": "Is pancreatic enzyme markedly elevated? → ≥3 × ULN confirms pancreatic injury; normal lipase makes AP unlikely."
+    },
+    {
+     "a": "Serum amylase",
+     "b": "Is amylase elevated? → Supports diagnosis but less specific; may be normal in delayed presentation."
+    },
+    {
+     "a": "CBC & electrolytes",
+     "b": "Are there leukocytosis, hemoconcentration, or hypocalcaemia? → Suggests systemic inflammation and poorer prognosis."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Is ALT >150 U/L? → Points to gallstone etiology; normal ALT does not exclude it."
+    },
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Is there gallstone or biliary dilation? → First‑line imaging for biliary cause; if unavailable, proceed to CT when needed."
+    },
+    {
+     "a": "Contrast‑enhanced CT (CECT) after 48 h",
+     "b": "Does CT show necrosis or fluid collections? → Stages local complications; if CT unavailable, MRI or bedside ultrasound can guide."
+    },
+    {
+     "a": "Triglyceride level",
+     "b": "Is TG >1000 mg/dL? → Hypertriglyceridaemia‑induced AP; treat with insulin or plasmapheresis if severe."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from necrosis, infection, systemic inflammatory response, and organ failure.",
+   "b": [
+    "Persistent organ failure (respiratory, renal, cardiovascular)",
+    "Pancreatic necrosis → risk of infected necrosis",
+    "Acute peripancreatic fluid collections → may become pseudocyst",
+    "Hypocalcaemia from fat saponification – poor prognostic sign"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Early management focuses on fluid resuscitation, pain control, and addressing the aetiology. Monitoring for organ failure guides ICU admission.",
+   "b": [
+    "Aggressive IV crystalloid (goal: urine output ≥0.5 mL/kg/h)",
+    "Analgesia with opioids (e.g., morphine) – avoid NSAIDs if renal risk",
+    "NPO initially; advance diet when pain improves",
+    "Treat cause: ERCP for biliary obstruction, stop alcohol, lower triglycerides",
+    "Antibiotics only for proven infected necrosis"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After discharge, patients need assessment for underlying cause, lifestyle counselling, and monitoring for late complications such as pseudocyst or chronic pancreatitis.",
+   "b": [
+    "Ultrasound or MRCP to evaluate biliary stones after recovery",
+    "Alcohol cessation programs and lipid control",
+    "Vaccination against hepatitis B if risk present"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic acute pancreatitis include perforated peptic ulcer, acute cholecystitis, myocardial infarction, and mesenteric ischemia.",
+   "b": [
+    "Perforated ulcer – free air on X‑ray",
+    "Acute cholecystitis – RUQ pain, Murphy’s sign",
+    "MI – ECG changes, troponin rise"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may be falsely normal or misleading early in the disease.",
+   "b": [
+    "Serum lipase may be normal after >48 h of symptom onset",
+    "Calcium can be normal despite fat necrosis; monitor trends",
+    "ALT may be modestly raised in non‑gallstone AP"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with vomiting and inability to keep fluids down",
+  "Signs of organ failure: low blood pressure, rapid breathing, confusion",
+  "Persistent fever >38.5 °C or worsening abdominal distension"
+ ],
+ "faq": [
+  {
+   "q": "Why is lipase preferred over amylase?",
+   "a": "Lipase stays elevated longer and is more specific for pancreatic injury."
+  },
+  {
+   "q": "When is ERCP indicated in acute pancreatitis?",
+   "a": "When there is cholangitis or persistent biliary obstruction causing ongoing pancreatitis."
+  },
+  {
+   "q": "Can antibiotics prevent infection in necrotizing pancreatitis?",
+   "a": "No; prophylactic antibiotics are not recommended unless infection is documented."
+  }
+ ],
+ "exam": [
+  "Explain the three diagnostic criteria for acute pancreatitis and how many are required.",
+  "Describe how the Revised Atlanta Classification stratifies severity and why this matters for management.",
+  "Outline the early management steps for a patient with suspected gallstone‑induced acute pancreatitis."
+ ],
+ "related": [
+  "Cholecystitis",
+  "Pancreatic necrosis",
+  "Biliary colic",
+  "Hypertriglyceridaemia",
+  "ERCP complications",
+  "Acute abdomen"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

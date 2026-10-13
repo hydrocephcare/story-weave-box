@@ -1,0 +1,136 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Hepatitis B virus (HBV) is a partially double‑stranded DNA virus that infects hepatocytes, causing acute and chronic liver disease and increasing hepatocellular carcinoma risk.",
+ "aka": [
+  "Hepatitis B",
+  "HBV DNA virus"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "HBV is a small enveloped virus (≈42 nm) with a partially double‑stranded DNA genome and a reverse‑transcribing polymerase. It targets liver cells and can persist for decades.",
+   "b": [
+    "Family: Hepadnaviridae",
+    "Genome: 3.2 kb partially dsDNA",
+    "Key protein: surface antigen (HBsAg) used for vaccine"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The virus enters hepatocytes via the sodium‑taurocholate cotransporting polypeptide (NTCP) receptor, then releases its relaxed circular DNA, which is converted to covalently closed circular DNA (cccDNA) in the nucleus.",
+   "b": [
+    "cccDNA acts as a stable template for viral transcription",
+    "Reverse transcriptase makes new DNA from an RNA intermediate"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "HBV spreads through blood and body fluids; the virus is stable outside the body for up to 7 days, allowing horizontal transmission in low‑resource settings.",
+   "b": [
+    "Perinatal, sexual, percutaneous, and unsafe injections",
+    "Survives on surfaces, needles, and medical equipment"
+   ],
+   "t": [
+    {
+     "a": "HBsAg test",
+     "b": "Is the patient currently infected? Positive indicates acute or chronic infection"
+    },
+    {
+     "a": "Anti‑HBc IgM",
+     "b": "Is this an acute infection? IgM positivity points to recent exposure"
+    },
+    {
+     "a": "HBV DNA PCR",
+     "b": "What is the viral load? High levels guide treatment decisions; if unavailable, use ALT and HBeAg status as surrogate"
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "HBV infection presents as a spectrum: asymptomatic acute illness, symptomatic acute hepatitis, or chronic infection that can progress to cirrhosis and hepatocellular carcinoma (HCC).",
+   "b": [
+    "Acute phase: jaundice, fatigue, RUQ pain; usually self‑limited",
+    "Chronic infection: defined by HBsAg >6 months; risk of cirrhosis ~20 % and HCC ~5 % over 20 years",
+    "Immune‑tolerant, immune‑active, inactive carrier, and reactivation phases guide management"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Serologic profiling combined with viral load quantification determines infection stage and need for therapy.",
+   "b": [
+    "HBsAg positive >6 months → chronic infection",
+    "HBeAg positivity + high HBV DNA → active replication",
+    "ALT >2 × ULN with HBV DNA >20 000 IU/mL → treatment indication"
+   ],
+   "t": [
+    {
+     "a": "Anti‑HBs",
+     "b": "Has the patient been immunised or cleared infection? Positive indicates immunity"
+    },
+    {
+     "a": "HBeAg",
+     "b": "Is the virus actively replicating? Positive correlates with high viral load"
+    },
+    {
+     "a": "Liver ultrasound + AFP",
+     "b": "Is there evidence of HCC? Nodules + elevated AFP suggest cancer"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Therapy aims to suppress viral replication, prevent liver damage, and reduce HCC risk. First‑line agents are nucleos(t)ide analogues with high barrier to resistance.",
+   "b": [
+    "Entecavir or tenofovir: potent, low resistance, safe in pregnancy",
+    "Avoid lamivudine monotherapy due to rapid resistance",
+    "Vaccination (HBsAg) for prevention; birth‑dose crucial in endemic areas"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and clinical reasoning.",
+   "b": [
+    "HBV is a dsDNA virus with reverse transcriptase – unique among hepatitis viruses",
+    "Chronic infection defined by HBsAg >6 months",
+    "Treatment indicated when ALT >2 × ULN and HBV DNA >20 000 IU/mL in immune‑active phase"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute liver failure (jaundice, INR > 1.5, encephalopathy)",
+  "Severe ascites or variceal bleeding",
+  "Sudden rise in bilirubin with hepatic encephalopathy"
+ ],
+ "faq": [
+  {
+   "q": "Can HBV be cured?",
+   "a": "Current antivirals suppress replication but do not eradicate cccDNA; functional cure (loss of HBsAg) is rare."
+  },
+  {
+   "q": "Why is the birth‑dose vaccine important?",
+   "a": "Most chronic infections arise from perinatal exposure; a timely vaccine prevents 90 % of vertical transmission."
+  },
+  {
+   "q": "How does HBV differ from HCV?",
+   "a": "HBV is a DNA virus with a vaccine; HCV is an RNA virus, no vaccine, and treatment relies on direct‑acting antivirals."
+  }
+ ],
+ "exam": [
+  "Explain the serologic pattern that distinguishes acute, chronic, and resolved HBV infection.",
+  "Describe the criteria for initiating antiviral therapy in chronic HBV.",
+  "List the major routes of HBV transmission and preventive measures in low‑resource settings."
+ ],
+ "related": [
+  "Hepatitis C virus",
+  "Hepatitis D virus",
+  "Liver cirrhosis",
+  "Hepatocellular carcinoma",
+  "HBV vaccination programs",
+  "NTCP receptor"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "DNA replication copies the genome before cell division, ensuring each daughter cell inherits a complete set of genetic information. Errors can cause cancer, developmental disorders, or viral susceptibility.",
+ "aka": [
+  "DNA synthesis",
+  "genomic duplication"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "DNA replication is a semi‑conservative process that occurs during S‑phase of the cell cycle, producing two identical DNA molecules from one template.",
+   "b": [
+    "Each new helix contains one original strand and one newly synthesized strand.",
+    "Replication is rapid (≈50 nucleotides/second in human cells) but highly accurate."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Replication begins at origins of replication where helicase unwinds the double helix, creating replication forks. DNA polymerases synthesize new strands using the parental strands as templates.",
+   "b": [
+    "Helicase (MCM complex) separates strands.",
+    "Single‑strand binding proteins stabilize unwound DNA.",
+    "Primase lays down short RNA primers.",
+    "DNA polymerase δ (lagging) and ε (leading) extend DNA.",
+    "DNA ligase joins Okazaki fragments on the lagging strand."
+   ],
+   "t": [
+    {
+     "a": "DNA polymerase activity assay",
+     "b": "Does the patient have a polymerase deficiency? Low activity suggests inherited disorders (e.g., polymerase γ deficiency) that can cause mitochondrial disease."
+    },
+    {
+     "a": "Thymidine kinase level",
+     "b": "Is cellular proliferation increased? Elevated levels support rapid replication in malignancy; normal levels argue against high turnover."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Replication is tightly controlled by cell‑cycle checkpoints and licensing factors to prevent re‑replication.",
+   "b": [
+    "Cyclin‑E/CDK2 activates origin firing in late G1.",
+    "The G2/M checkpoint ensures replication completion before mitosis.",
+    "PCNA acts as a sliding clamp, increasing polymerase processivity."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Faulty replication leads to mutations, chromosomal breaks, or incomplete genomes, underlying many cancers and genetic diseases.",
+   "b": [
+    "Deficiency of folate or vitamin B12 impairs dTMP synthesis → uracil incorporation → strand breaks.",
+    "Mutations in DNA polymerase ε increase error rate → microsatellite instability cancers.",
+    "Herbal alkaloids (e.g., colchicine) can inhibit polymerases, causing bone‑marrow suppression."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding replication informs cancer therapy, antiviral drug design, and management of inherited replication disorders.",
+   "b": [
+    "Antimetabolites (e.g., methotrexate) block thymidylate synthesis, targeting rapidly dividing tumor cells.",
+    "Nucleoside analogues (e.g., acyclovir) are preferentially incorporated by viral polymerases, sparing host DNA.",
+    "Patients with replication defects may present with developmental delay, anemia, or immunodeficiency."
+   ],
+   "t": [
+    {
+     "a": "Serum folate and B12",
+     "b": "If unavailable, treat empirically with folic acid and monitor response."
+    },
+    {
+     "a": "PCR for viral load",
+     "b": "Is viral DNA replication active? High load guides antiviral choice; low/undetectable suggests treatment success."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points often tested in exams.",
+   "b": [
+    "Semi‑conservative model: each daughter DNA has one parental strand.",
+    "Origin of replication → helicase → leading vs lagging synthesis.",
+    "G2/M checkpoint verifies replication completion."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained progressive anemia with macrocytosis (possible folate/B12 deficiency).",
+  "Rapidly enlarging lymph nodes with constitutional symptoms (suspect replication‑driven malignancy).",
+  "Severe bone‑marrow failure after exposure to herbal toxins."
+ ],
+ "faq": [
+  {
+   "q": "Why is DNA replication called semi‑conservative?",
+   "a": "Each new DNA molecule retains one original strand, preserving half of the parental genetic information."
+  },
+  {
+   "q": "What prevents re‑replication of DNA within one cell cycle?",
+   "a": "Licensing factors (Cdt1, Cdc6) are inactivated after origin firing and checkpoints block re‑initiation."
+  },
+  {
+   "q": "How do antimetabolite drugs target replication?",
+   "a": "They inhibit enzymes needed for nucleotide synthesis, starving rapidly dividing cells of building blocks."
+  }
+ ],
+ "exam": [
+  "Explain the steps of leading‑ and lagging‑strand synthesis and why they differ.",
+  "Describe how folate deficiency disrupts DNA replication and the clinical consequences.",
+  "Identify the cell‑cycle checkpoint that ensures replication is complete before mitosis."
+ ],
+ "related": [
+  "Cell Cycle",
+  "DNA Repair",
+  "Chromosomal Aberrations",
+  "Cancer Genetics",
+  "Antiviral Pharmacology",
+  "Nucleotide Metabolism"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

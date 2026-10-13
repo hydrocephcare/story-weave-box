@@ -1,0 +1,146 @@
+{
+ "medical": true,
+ "subject": "Surgery",
+ "summary": "A hernia is the protrusion of an organ or tissue through a defect in its containing wall. Diagnosis relies on history and focused exam, with imaging when the presentation is unclear.",
+ "aka": [
+  "Hernial protrusion",
+  "Prolapse"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A hernia occurs when a structure (usually bowel) pushes through a weakness or opening in the abdominal wall or related fascia. Diagnosis is clinical: a palpable, often reducible bulge that enlarges with strain and may be tender if incarcerated.",
+   "b": [
+    "Irreducible bulge, pain, or signs of obstruction suggest incarceration.",
+    "Visible or palpable defect with cough impulse supports diagnosis."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Hernias are staged by reducibility and complications: reducible, incarcerated (cannot be reduced), and strangulated (vascular compromise). Strangulation is a surgical emergency.",
+   "b": [
+    "Reducible – can be pushed back, no acute symptoms.",
+    "Incarcerated – trapped, may cause obstruction.",
+    "Strangulated – ischemia, risk of necrosis, requires urgent surgery."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most hernias arise from a combination of congenital weakness and acquired stressors. In low‑resource settings, chronic cough (TB), heavy lifting, and malnutrition increase risk.",
+   "b": [
+    "Congenital fascial defects (e.g., indirect inguinal).",
+    "Increased intra‑abdominal pressure (chronic cough, constipation, pregnancy).",
+    "Previous surgery or trauma causing fascial disruption.",
+    "Infections that weaken tissue (TB, schistosomiasis)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients notice a bulge that may enlarge with coughing, standing, or straining. Pain is usually mild unless incarceration or strangulation occurs, which adds tenderness, nausea, vomiting, and obstipation.",
+   "b": [
+    "Bulge that reduces when supine.",
+    "Painful, firm, non‑reducible mass → possible incarceration.",
+    "Systemic signs (fever, tachycardia) → possible strangulation."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging confirms the diagnosis when the exam is equivocal or to assess complications.",
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Is the mass a hernia and is it reducible? → Shows fascial defect and contents; dynamic exam can demonstrate reducibility."
+    },
+    {
+     "a": "CT abdomen with contrast",
+     "b": "Is there bowel obstruction or strangulation? → Shows dilated loops, wall thickening, reduced enhancement; guides urgency of surgery."
+    },
+    {
+     "a": "Plain abdominal X‑ray",
+     "b": "Is there obstruction? → Dilated loops with air‑fluid levels; may be normal if hernia is not obstructed."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from loss of blood supply or bowel obstruction, leading to sepsis and death if untreated.",
+   "b": [
+    "Severe, constant pain with a hard, tender mass.",
+    "Vomiting, obstipation, or abdominal distension.",
+    "Fever, tachycardia, leukocytosis indicating strangulation."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, relieve obstruction, and repair the defect. Non‑operative reduction may be attempted for some reducible hernias, but definitive repair is surgical.",
+   "b": [
+    "Analgesia and anti‑emetics for symptom control.",
+    "Broad‑spectrum antibiotics if strangulation suspected (cover gram‑negative and anaerobes).",
+    "Elective herniorrhaphy: mesh repair for most adult inguinal/ventral hernias; tissue repair for contaminated fields."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑operative wound care and activity modification reduce recurrence. Address risk factors such as chronic cough, constipation, and heavy lifting.",
+   "b": [
+    "Encourage gradual return to activity; avoid lifting >10 kg for 4–6 weeks.",
+    "Treat chronic cough (TB, COPD) and constipation.",
+    "Weight control and smoking cessation."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other abdominal wall swellings can mimic hernias.",
+   "b": [
+    "Lipoma – soft, mobile, no cough impulse.",
+    "Femoral hernia – below inguinal ligament, higher strangulation risk.",
+    "Abdominal wall abscess – tender, erythematous, may have fluctuance."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Imaging may miss a small defect or underestimate strangulation.",
+   "b": [
+    "Ultrasound may be operator‑dependent; a negative study does not exclude a hernia.",
+    "CT can show a reducible hernia that later becomes incarcerated; clinical assessment remains paramount."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe, constant abdominal pain with a hard, non‑reducible bulge",
+  "Vomiting, inability to pass stool or gas, abdominal distension",
+  "Fever, rapid heart rate, or signs of sepsis"
+ ],
+ "faq": [
+  {
+   "q": "Can a hernia be treated without surgery?",
+   "a": "Small, reducible hernias may be observed, but definitive repair is recommended to prevent incarceration; non‑surgical reduction is only temporary."
+  },
+  {
+   "q": "Why is mesh preferred for most adult repairs?",
+   "a": "Mesh provides tension‑free reinforcement, lowering recurrence compared with tissue‑only repair."
+  },
+  {
+   "q": "What makes a femoral hernia more dangerous than an inguinal hernia?",
+   "a": "Its narrow canal predisposes to rapid strangulation, so urgent repair is advised."
+  }
+ ],
+ "exam": [
+  "Describe the clinical features that differentiate a reducible from a strangulated inguinal hernia.",
+  "Explain the role of imaging in evaluating a suspected incarcerated hernia and its limitations.",
+  "Outline the management steps for a patient presenting with a strangulated ventral hernia."
+ ],
+ "related": [
+  "Inguinal hernia",
+  "Femoral hernia",
+  "Umbilical hernia",
+  "Incisional hernia",
+  "Bowel obstruction",
+  "Abdominal wall infection",
+  "Mesh repair techniques"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

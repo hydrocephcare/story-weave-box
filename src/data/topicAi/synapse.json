@@ -1,0 +1,129 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "A synapse is the junction where a neuron communicates with another cell, using neurotransmitters to transmit signals. It is essential for all nervous system functions, from reflexes to cognition.",
+ "aka": [
+  "Neuronal junction",
+  "Neurotransmission site"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A synapse is the specialized contact point between a presynaptic neuron and a postsynaptic cell, usually another neuron, muscle, or gland. It allows electrical impulses to be converted into chemical signals that cross a tiny gap.",
+   "b": [
+    "Presynaptic terminal releases neurotransmitter",
+    "Neurotransmitter diffuses across synaptic cleft",
+    "Postsynaptic receptors bind neurotransmitter"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "When an action potential reaches the presynaptic terminal, voltage‑gated calcium channels open, allowing Ca²⁺ influx. This triggers vesicle fusion and neurotransmitter release into the cleft. The neurotransmitter binds to receptors on the postsynaptic membrane, causing ion channels to open and generate a postsynaptic potential.",
+   "b": [
+    "Action potential arrival → Ca²⁺ influx → vesicle fusion"
+   ],
+   "t": [
+    {
+     "a": "Serotonin",
+     "b": "Is serotonin low in depression? A low CSF level suggests serotonin deficiency."
+    },
+    {
+     "a": "Acetylcholine",
+     "b": "Is acetylcholine low in myasthenia gravis? Low Ach at neuromuscular junction leads to weakness."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Synaptic transmission is tightly regulated by reuptake transporters, enzymatic degradation (e.g., acetylcholinesterase), and autoreceptors that modulate release. These mechanisms ensure signal fidelity and prevent overstimulation.",
+   "b": [
+    "Reuptake transporters clear neurotransmitter",
+    "Acetylcholinesterase degrades acetylcholine",
+    "Autoreceptors inhibit further release"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Dysfunction can arise from impaired release, receptor defects, or excessive neurotransmitter accumulation. Common causes include genetic channelopathies, autoimmune antibodies, toxins, and infections.",
+   "b": [
+    "Autoimmune antibodies block acetylcholine receptors (myasthenia gravis)"
+   ],
+   "t": [
+    {
+     "a": "Acetylcholinesterase inhibitors",
+     "b": "Do they increase Ach? Yes, they prevent Ach breakdown, useful in myasthenia gravis."
+    },
+    {
+     "a": "Organophosphates",
+     "b": "Do they cause Ach accumulation? Yes, leading to cholinergic crisis."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Synaptic dysfunction underlies many neurological and psychiatric disorders. Recognizing patterns of weakness, tremor, or cognitive change guides diagnosis and treatment.",
+   "b": [
+    "Myasthenia gravis presents with fatigable weakness"
+   ],
+   "t": [
+    {
+     "a": "Edrophonium test",
+     "b": "Does it improve muscle strength? A positive response indicates myasthenia gravis."
+    },
+    {
+     "a": "Tetanus toxin assay",
+     "b": "Is it present in tetanus? Detection confirms diagnosis."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the sequence: action potential → Ca²⁺ influx → vesicle fusion → neurotransmitter release → receptor binding → postsynaptic potential. Key drugs target each step.",
+   "b": [
+    "Anticholinesterases treat myasthenia gravis"
+   ],
+   "t": [
+    {
+     "a": "Botulinum toxin",
+     "b": "Does it block Ach release? Yes, by cleaving SNARE proteins."
+    },
+    {
+     "a": "Tetrodotoxin",
+     "b": "Does it block voltage‑gated Na⁺ channels? Yes, preventing action potentials."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute cholinergic crisis (e.g., organophosphate poisoning)",
+  "Severe myasthenic crisis with respiratory failure"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between a synapse and a gap junction?",
+   "a": "Gap junctions allow direct ionic flow between cells, while synapses use neurotransmitters across a cleft."
+  },
+  {
+   "q": "Can synapses regenerate?",
+   "a": "Most central nervous system synapses are stable, but peripheral synapses can remodel with activity."
+  },
+  {
+   "q": "Why does acetylcholine act at neuromuscular junctions?",
+   "a": "Acetylcholine is the primary excitatory neurotransmitter for skeletal muscle activation."
+  }
+ ],
+ "exam": [
+  "Explain the steps of synaptic transmission and how acetylcholinesterase inhibitors modify this process.",
+  "Describe the pathophysiology of myasthenia gravis and the rationale for using anticholinesterase drugs."
+ ],
+ "related": [
+  "Neurotransmission",
+  "Acetylcholinesterase",
+  "Myasthenia gravis",
+  "Synaptic plasticity"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

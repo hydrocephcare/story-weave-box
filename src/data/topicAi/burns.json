@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Burns are tissue injuries from heat, chemicals, electricity or radiation that disrupt skin integrity, fluid balance and immune function. Clinical reasoning focuses on assessing depth, extent, and systemic impact to guide resuscitation, infection control and rehabilitation.",
+ "aka": [
+  "thermal injury",
+  "chemical burn",
+  "electrical burn"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A burn is a loss of skin integrity due to an external agent. Diagnosis is clinical, based on appearance, depth, and total body surface area (TBSA).",
+   "b": [
+    "Visual inspection, palpation, pain assessment"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by depth and TBSA. The Lund‑Browder chart estimates TBSA; the ABCDE system guides resuscitation.",
+   "b": [
+    "First‑degree: superficial epidermis, <10% TBSA; second‑degree: epidermis + dermis, <20% TBSA; third‑degree: full thickness, >20% TBSA"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common causes vary by setting. In low‑resource areas, open fire, cooking stoves, kerosene, and electrical accidents are frequent.",
+   "b": [
+    "Thermal: open flame, hot liquids, cooking fires",
+    "Chemical: acids, alkalis, household cleaners",
+    "Electrical: household wiring, industrial equipment",
+    "Radiation: sunburn, laser"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with pain, erythema, blistering, or dry scarring. Systemic signs include tachycardia, hypotension, and altered mental status.",
+   "b": [
+    "Local: erythema, blister, dry eschar",
+    "Systemic: hypovolaemia, shock, hypothermia"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm extent, rule out complications and guide fluid resuscitation.",
+   "t": [
+    {
+     "a": "Lund‑Browder chart",
+     "b": "Higher TBSA → larger fluid requirement"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Abnormal values indicate fluid shifts or organ injury"
+    },
+    {
+     "a": "Blood cultures",
+     "b": "Positive cultures guide antibiotics"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Abnormal findings alter airway management"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of shock, inhalation injury, and infection prevents mortality.",
+   "b": [
+    "Hypotension, tachycardia, cool extremities",
+    "Cyanosis, stridor, soot in mouth",
+    "Fever, leukocytosis, purulent drainage"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the cause, stabilize the patient, prevent infection, and support healing.",
+   "b": [
+    "Resuscitate with balanced crystalloids (Parkland formula)",
+    "Secure airway if inhalation injury suspected",
+    "Apply sterile dressings, avoid tight bandages",
+    "Use broad‑spectrum antibiotics if infection risk high"
+   ],
+   "t": [
+    {
+     "a": "Parkland formula",
+     "b": "Guides early fluid resuscitation"
+    },
+    {
+     "a": "Antibiotic selection",
+     "b": "Avoid nephrotoxic agents in renal impairment"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term care includes wound care, physiotherapy, and psychosocial support. Prevention focuses on safe cooking practices and fire safety.",
+   "b": [
+    "Regular dressing changes, pain control",
+    "Early physiotherapy to prevent contractures",
+    "Education on fire safety and safe use of kerosene"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential includes superficial skin infections, allergic dermatitis, and scalds from non‑thermal sources.",
+   "b": [
+    "Contact dermatitis",
+    "Infectious cellulitis",
+    "Chemical burns mistaken for scalds"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Lab values may be falsely normal early in shock; skin blanching may mask underlying depth.",
+   "b": [
+    "Early serum lactate may be low despite hypoperfusion",
+    "Dry eschar can hide underlying dermal injury"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypotension or tachycardia, signs of inhalation injury, extensive TBSA (>20%), altered mental status, signs of infection such as fever or purulent drainage"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step in managing a burn patient?",
+   "a": "Assess airway, breathing, circulation and estimate TBSA for fluid resuscitation."
+  },
+  {
+   "q": "How do you estimate burn size in children?",
+   "a": "Use the rule of nines or Lund‑Browder chart, adjusting for age and body proportions."
+  },
+  {
+   "q": "When is surgery needed for burns?",
+   "a": "For full‑thickness burns, graftable areas, or when infection or contracture threatens function."
+  }
+ ],
+ "exam": [
+  "Explain how the Parkland formula is used to calculate initial fluid resuscitation for a 30‑year‑old with 25% TBSA burns.",
+  "Describe the clinical features that differentiate a second‑degree superficial burn from a third‑degree burn.",
+  "Outline the key steps in preventing inhalation injury in a patient with a large flame burn."
+ ],
+ "related": [
+  "Fluid resuscitation",
+  "Inhalation injury",
+  "Infection control",
+  "Wound care",
+  "Rehabilitation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

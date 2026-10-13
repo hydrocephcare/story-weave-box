@@ -1,0 +1,133 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Hearing converts sound waves into neural signals that the brain interprets as sound. It relies on outer, middle and inner ear structures and precise neural pathways. Disruption at any level can cause hearing loss or auditory hallucinations.",
+ "aka": [
+  "Auditory perception",
+  "Acoustic sense"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Hearing is a sensory modality that allows detection of vibrations in the air and their translation into electrical impulses for the brain.",
+   "b": [
+    "Essential for communication, safety and learning",
+    "Impaired hearing affects language development and quality of life"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Sound enters the external auditory canal, vibrates the tympanic membrane, is amplified by the ossicles, and moves fluid in the cochlea where hair cells transduce motion into nerve impulses.",
+   "b": [
+    "Outer ear: pinna & canal collect sound",
+    "Middle ear: ossicles (malleus, incus, stapes) amplify",
+    "Inner ear: scala vestibuli, scala tympani, basilar membrane, hair cells",
+    "Auditory nerve carries signals to brainstem and auditory cortex"
+   ],
+   "t": [
+    {
+     "a": "Pure‑tone audiometry",
+     "b": "What is the patient’s hearing threshold across frequencies? → Determines degree (mild‑profound) and type (conductive vs sensorineural) of loss"
+    },
+    {
+     "a": "Tympanometry",
+     "b": "Is middle‑ear pressure normal? → Detects middle‑ear effusion, eustachian tube dysfunction, or ossicular discontinuity"
+    },
+    {
+     "a": "Otoacoustic emissions (OAEs)",
+     "b": "Are outer hair cells functioning? → Absent OAEs suggest sensorineural loss; useful when audiometry unavailable"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The auditory system adapts via the acoustic reflex and central gain control, protecting the inner ear from loud sounds and maintaining sensitivity.",
+   "b": [
+    "Stapedial reflex reduces ossicular movement for loud sounds",
+    "Cochlear hair cells have active amplification via outer hair cell motility"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Hearing loss can be conductive, sensorineural, or mixed, each with distinct pathophysiology and common causes, especially in low‑resource settings.",
+   "b": [
+    "Conductive: otitis media, cholesteatoma, tympanic perforation",
+    "Sensorineural: presbycusis, noise exposure, ototoxic drugs, meningitis, HIV‑related opportunistic infections, TB meningitis, malaria‑related cerebral involvement",
+    "Mixed: combination of above"
+   ],
+   "t": [
+    {
+     "a": "Serology for HIV/TB",
+     "b": "Is an infectious cause present? → Positive results guide antimicrobial therapy, crucial in endemic areas"
+    },
+    {
+     "a": "MRI brain with inner‑ear protocol",
+     "b": "Is there retrocochlear pathology (e.g., acoustic neuroma, TB granuloma)? → Abnormalities require neurosurgical or medical referral"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Early identification of hearing impairment prevents developmental delays, improves treatment adherence, and reduces morbidity from associated infections.",
+   "b": [
+    "Unaddressed hearing loss in children → language delay, poor school performance",
+    "Adults with sudden sensorineural loss → risk of permanent deafness if untreated within 72 h"
+   ],
+   "t": [
+    {
+     "a": "Urgent oral steroids (e.g., prednisolone)",
+     "b": "Should steroids be started? → Indicated for idiopathic sudden sensorineural loss; improves recovery if given early"
+    },
+    {
+     "a": "Antibiotics for otitis media",
+     "b": "Is bacterial infection likely? → Amoxicillin first‑line; prevents chronic perforation and mastoiditis"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on differentiating conductive vs sensorineural loss, recognizing red‑flag symptoms, and knowing first‑line investigations.",
+   "b": [
+    "Rinne test: bone > air = conductive loss",
+    "Weber test: lateralizes to affected ear in conductive loss, to better ear in sensorineural loss",
+    "Sudden unilateral loss → treat as emergency"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden unilateral hearing loss",
+  "Persistent otorrhea with fever",
+  "Severe otalgia with facial nerve palsy"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between conductive and sensorineural hearing loss?",
+   "a": "Conductive loss stems from problems in the outer/middle ear; sensorineural loss originates in the inner ear or auditory nerve."
+  },
+  {
+   "q": "Why is pure‑tone audiometry essential?",
+   "a": "It quantifies hearing thresholds across frequencies, allowing classification of loss severity and type."
+  },
+  {
+   "q": "Can infections cause permanent hearing loss?",
+   "a": "Yes; meningitis, TB, and severe otitis media can damage hair cells or the auditory nerve irreversibly."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of sensorineural hearing loss and list two common causes in low‑resource settings.",
+  "Interpret Rinne and Weber test results in a patient with unilateral ear pain.",
+  "Outline the urgent management steps for sudden sensorineural hearing loss."
+ ],
+ "related": [
+  "Ear anatomy",
+  "Otitis media",
+  "Presbycusis",
+  "Acoustic neuroma",
+  "Ototoxicity",
+  "Audiology"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

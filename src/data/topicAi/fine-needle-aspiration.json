@@ -1,0 +1,104 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Fine Needle Aspiration (FNA) is a quick, low‑risk way to sample cells from a mass for cytology. It guides diagnosis, staging, and treatment, especially when core biopsy is impractical.",
+ "aka": [
+  "FNAC",
+  "Fine Needle Aspiration Cytology"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "FNA uses a 22–25 gauge needle to withdraw cells from a lesion under palpation or imaging guidance. The material is smeared on slides for cytologic review.",
+   "b": [
+    "Minimally invasive",
+    "Outpatient"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "FNA itself has no staging; it provides cytologic categories (Benign, Atypia, Suspicious, Malignant) that inform further management."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "FNA is performed for any palpable or imaging‑identified mass where malignancy is suspected. Common indications include thyroid nodules, breast lumps, lymphadenopathy, and soft‑tissue masses.",
+   "b": [
+    "Thyroid nodules",
+    "Breast lumps",
+    "Lymph nodes",
+    "Soft‑tissue masses"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The patient may have a painless lump, or a painful, rapidly enlarging mass. FNA is often done when imaging shows suspicious features but the patient prefers a quick, low‑risk test."
+  },
+  {
+   "h": "Investigations",
+   "p": "Cytology is the primary test. Additional tests depend on the site and cytology result."
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Bleeding, infection, pneumothorax (rare), or inadequate sample. Red flags for urgent care include sudden pain, rapid growth, or signs of systemic illness.",
+   "b": [
+    "Bleeding",
+    "Infection",
+    "Pneumothorax"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying lesion: benign lesions may be observed; malignant lesions require surgery or oncology referral. Supportive care includes pain control and monitoring for complications.",
+   "b": [
+    "Observation for benign"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Repeat FNA if cytology is indeterminate or if the lesion changes. Prevention of complications involves proper technique and sterile conditions."
+  },
+  {
+   "h": "Often confused with",
+   "p": "Core needle biopsy (provides tissue architecture) and excisional biopsy (complete removal)."
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Small or necrotic samples may give false negatives. Cytology cannot assess stromal invasion or margins."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe pain or rapid enlargement of the mass",
+  "Signs of systemic infection (fever, chills)",
+  "Bleeding that does not stop"
+ ],
+ "faq": [
+  {
+   "q": "Can FNA replace a surgical biopsy?",
+   "a": "Only if cytology is definitive. Indeterminate results usually need a core or excisional biopsy."
+  },
+  {
+   "q": "Is FNA safe in pregnant patients?",
+   "a": "Yes, it is considered safe; no ionising radiation is used."
+  },
+  {
+   "q": "What if the sample is inadequate?",
+   "a": "Repeat the procedure, often with ultrasound guidance, or proceed to core biopsy."
+  }
+ ],
+ "exam": [
+  "Explain why FNA is preferred over core biopsy for thyroid nodules in a resource‑limited setting.",
+  "Describe the cytologic categories of FNA and their clinical implications.",
+  "List the potential complications of FNA and how to manage them."
+ ],
+ "related": [
+  "Thyroid nodule evaluation",
+  "Breast lump assessment",
+  "Lymph node cytology",
+  "Core needle biopsy",
+  "Imaging guidance for biopsy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

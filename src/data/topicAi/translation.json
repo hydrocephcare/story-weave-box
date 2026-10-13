@@ -1,0 +1,138 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Translation is the ribosomal synthesis of proteins from mRNA, linking genetic information to functional molecules. It is central to cell function and disease when errors or viral hijacking occur.",
+ "aka": [
+  "Protein synthesis",
+  "Ribosomal translation"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Translation converts the nucleotide sequence of mRNA into a polypeptide chain using ribosomes, tRNAs, and amino acids. It is the final step of gene expression, producing the proteins that carry out cellular functions.",
+   "b": [
+    "mRNA provides the template",
+    "tRNA brings amino acids",
+    "ribosome catalyzes peptide bonds"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "The ribosome reads mRNA codons in the 5’→3’ direction. Each codon is matched by a tRNA anticodon, delivering the correct amino acid to the growing polypeptide. Peptide bonds form at the peptidyl (P) and exit (E) sites.",
+   "b": [
+    "Initiation: start codon AUG, initiator tRNA",
+    "Elongation: codon‑anticodon pairing, peptide bond formation",
+    "Termination: stop codon UAA/UAG/UGA, release factor"
+   ],
+   "t": [
+    {
+     "a": "Ribosomal RNA (rRNA)",
+     "b": "Shows ribosome structure and catalytic sites; abnormal rRNA can cause ribosomopathies."
+    },
+    {
+     "a": "tRNA aminoacylation assay",
+     "b": "Assesses tRNA charging; low charging indicates amino acid deficiency or enzyme defect."
+    },
+    {
+     "a": "Polysome profiling",
+     "b": "Detects global translation rates; shifts indicate translational stress."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Translation is tightly controlled at initiation, elongation, and termination. Key regulators include eIFs, eEFs, and microRNAs. Stress conditions alter initiation factor phosphorylation to reduce global protein synthesis while allowing selective translation.",
+   "b": [
+    "eIF2α phosphorylation reduces initiation",
+    "mTOR pathway modulates cap‑dependent translation",
+    "miRNAs bind 3’UTR to block ribosome access"
+   ],
+   "t": [
+    {
+     "a": "Western blot for phospho‑eIF2α",
+     "b": "High levels indicate stress‑induced translational repression."
+    },
+    {
+     "a": "Polysome‑to‑monosome ratio",
+     "b": "Lower ratio suggests global translation inhibition."
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Defects in translation can arise from mutations in ribosomal proteins, rRNA, tRNA synthetases, or initiation factors. Viral infections hijack the host ribosome. Errors lead to misfolded proteins, ribosomopathies, or uncontrolled protein synthesis in cancer.",
+   "b": [
+    "Ribosomopathies: Diamond‑Blackfan anemia, 5q‑deletion syndrome"
+   ],
+   "t": [
+    {
+     "a": "SDS‑PAGE of ribosomal proteins",
+     "b": "Detects abnormal protein composition."
+    },
+    {
+     "a": "Sequencing of rRNA genes",
+     "b": "Identifies pathogenic mutations."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Translation errors cause inherited bone marrow failure, developmental disorders, and cancer. Viral translation mechanisms are targets for antiviral drugs. Understanding translation informs treatment of ribosomopathies and protein‑folding diseases.",
+   "b": [
+    "Cancer: overactive mTOR increases translation"
+   ],
+   "t": [
+    {
+     "a": "mTOR inhibitor assay",
+     "b": "Shows sensitivity of tumor cells to translation blockade."
+    },
+    {
+     "a": "Protein aggregation test (e.g., Congo red)",
+     "b": "Detects misfolded proteins in neurodegenerative disease."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the triplet codon rule, the wobble base‑pairing, and the three stages of translation. Be prepared to explain how viral RNA genomes use translation differently and how translational control is altered in disease.",
+   "b": [
+    "Triplet codon read‑through",
+    "Wobble base pairing allows G‑U",
+    "Initiation is rate‑limiting"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What causes ribosomopathies?",
+   "a": "Mutations in ribosomal proteins, rRNA, or translation factors disrupt ribosome function, leading to bone marrow failure and developmental defects."
+  },
+  {
+   "q": "How do viruses use host translation?",
+   "a": "Positive‑sense RNA viruses act directly as mRNA; negative‑sense viruses must synthesize mRNA before translation. Some viruses encode their own ribosomal proteins."
+  },
+  {
+   "q": "Why is translation a drug target?",
+   "a": "Inhibiting translation can stop rapidly dividing cells or viral replication, making it a strategy for cancer and antiviral therapies."
+  }
+ ],
+ "exam": [
+  "Explain the role of initiation factors in cap‑dependent translation and how their dysregulation contributes to cancer.",
+  "Describe how a positive‑sense RNA virus exploits the host ribosome and why this makes it a rapid replicator.",
+  "Outline the diagnostic steps for a patient with suspected ribosomopathy, including key laboratory tests."
+ ],
+ "related": [
+  "Ribosome structure",
+  "mRNA processing",
+  "tRNA aminoacylation",
+  "Protein folding",
+  "Viral replication",
+  "mTOR signaling",
+  "Ribosomopathies"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

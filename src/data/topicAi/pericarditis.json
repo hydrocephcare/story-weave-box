@@ -1,0 +1,216 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Pericarditis is inflammation of the pericardial sac that causes chest pain, friction rub, and ECG changes. It can be acute, subacute, or chronic, and may progress to tamponade or constriction.",
+ "aka": [
+  "Pericardial inflammation",
+  "Pericardial disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pericarditis is diagnosed by a combination of clinical features, ECG, echocardiography, and inflammatory markers. Classic ECG shows diffuse ST elevation and PR depression.",
+   "b": [
+    "Chest pain, often sharp and pleuritic",
+    "Friction rub on auscultation",
+    "Diffuse ST elevation, PR depression"
+   ],
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Detects diffuse ST elevation and PR depression; absence suggests alternative diagnosis"
+    },
+    {
+     "a": "Echocardiogram",
+     "b": "Shows pericardial effusion, tamponade physiology, or thickened pericardium"
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Elevated levels support inflammatory process; normal may occur in early disease"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by clinical presentation and imaging. Stage 1: acute, uncomplicated. Stage 2: effusive or tamponade. Stage 3: constrictive.",
+   "b": [
+    "Stage 1: chest pain, no effusion"
+   ],
+   "t": [
+    {
+     "a": "Echocardiogram",
+     "b": "Assesses effusion size and hemodynamic impact; large effusion with diastolic collapse indicates tamponade"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, infections dominate. Viral (e.g., enterovirus) is most common, followed by bacterial (TB, HIV), rheumatic fever, and post‑MI.",
+   "b": [
+    "Viral (enterovirus, adenovirus)",
+    "Bacterial (tuberculosis, HIV), especially in endemic areas",
+    "Rheumatic fever",
+    "Post‑myocardial infarction (Dressler syndrome)",
+    "Trauma, uraemia"
+   ],
+   "t": [
+    {
+     "a": "Mantoux/IGRA",
+     "b": "Screen for TB pericarditis; positive suggests TB etiology"
+    },
+    {
+     "a": "HIV test",
+     "b": "Positive indicates HIV‑associated pericarditis"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report sharp, pleuritic chest pain that improves when sitting up. A friction rub may be heard, and dyspnea can occur if effusion is large.",
+   "b": [
+    "Pain worse on lying flat, better upright"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Friction rub indicates active inflammation"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm diagnosis, assess severity, and identify cause. Prioritize tests that are available locally.",
+   "b": [
+    "Echocardiogram",
+    "CRP/ESR"
+   ],
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Detects diffuse ST elevation and PR depression; absence suggests alternative diagnosis"
+    },
+    {
+     "a": "Echocardiogram",
+     "b": "Shows effusion size, tamponade physiology, or thickened pericardium"
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Elevated levels support inflammatory process; normal may occur in early disease"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent complications include cardiac tamponade, constrictive pericarditis, and sudden death. Red flags are dyspnea, hypotension, pulsus paradoxus, and muffled heart sounds.",
+   "b": [
+    "Cardiac tamponade",
+    "Constrictive pericarditis",
+    "Sudden death"
+   ],
+   "t": [
+    {
+     "a": "Pulsus paradoxus",
+     "b": "Excessive drop in systolic BP on inspiration indicates tamponade"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. NSAIDs or colchicine reduce inflammation; steroids are reserved for refractory or autoimmune cases. Drainage is required for tamponade.",
+   "b": [
+    "NSAIDs (e.g., ibuprofen)",
+    "Colchicine",
+    "Steroids (if autoimmune)",
+    "Pericardiocentesis for tamponade"
+   ],
+   "t": [
+    {
+     "a": "NSAIDs",
+     "b": "Reduce inflammation and pain; avoid in renal failure or bleeding risk"
+    },
+    {
+     "a": "Colchicine",
+     "b": "Prevents recurrence; avoid in severe renal impairment"
+    },
+    {
+     "a": "Steroids",
+     "b": "Use only if infection excluded; high risk of infection"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Patients should be monitored for recurrence and progression to constriction. Prevention focuses on treating infections early and managing rheumatic fever.",
+   "b": [
+    "Regular echocardiograms in high‑risk patients",
+    "Vaccination against influenza and pneumococcus"
+   ],
+   "t": [
+    {
+     "a": "Echocardiogram",
+     "b": "Detects early constrictive changes"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic pericarditis include myocardial infarction, pulmonary embolism, pleurisy, and pneumothorax.",
+   "b": [
+    "Myocardial infarction – localized ST changes"
+   ],
+   "t": [
+    {
+     "a": "Cardiac enzymes",
+     "b": "Elevated in MI but normal in pericarditis"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low‑grade fever and normal CRP can occur in early viral pericarditis. Small effusions may be missed on transthoracic echo.",
+   "b": [
+    "Early viral pericarditis may have normal CRP"
+   ],
+   "t": [
+    {
+     "a": "Echocardiogram",
+     "b": "Small effusions may be missed; consider repeat imaging if clinical suspicion remains"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Cardiac tamponade (dyspnea, hypotension, pulsus paradoxus)",
+  "Sudden chest pain with ECG changes",
+  "Unexplained fever with pericardial rub"
+ ],
+ "faq": [
+  {
+   "q": "Can pericarditis be viral?",
+   "a": "Yes, most acute cases are viral, especially in young adults."
+  },
+  {
+   "q": "Is a pericardial rub always present?",
+   "a": "Not always; it is heard in about 50% of cases and may be absent in large effusions."
+  },
+  {
+   "q": "When is a steroid indicated?",
+   "a": "Only if NSAIDs and colchicine fail and an autoimmune cause is suspected; infection must be ruled out."
+  }
+ ],
+ "exam": [
+  "Explain the ECG changes that differentiate pericarditis from myocardial infarction.",
+  "Describe the management steps for a patient with cardiac tamponade.",
+  "List the most common infectious causes of pericarditis in a low‑resource setting."
+ ],
+ "related": [
+  "Myocardial infarction",
+  "Cardiac tamponade",
+  "Constrictive pericarditis",
+  "Tuberculous pericarditis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

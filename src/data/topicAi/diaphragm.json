@@ -1,0 +1,130 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The diaphragm is a dome‑shaped muscle that separates the thoracic and abdominal cavities, essential for breathing and protecting abdominal organs. Its function, innervation, and clinical significance are key for clinicians.",
+ "aka": [
+  "Diaphragmatic muscle",
+  "Thoracoabdominal muscle"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The diaphragm is the primary inspiratory muscle, forming a partition between the thorax and abdomen. It contracts to increase thoracic volume and decrease pressure, drawing air into the lungs.",
+   "b": [
+    "Dome‑shaped, central tendon, muscular periphery"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It spans the lower thoracic cavity, attaching to the lower ribs, sternum, and lumbar vertebrae. The central tendon is a fibroelastic core.",
+   "b": [
+    "Muscular edges: costal, sternal, lumbar",
+    "Central tendon: 2–3 cm thick"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly it lies over the liver and stomach; posteriorly it is adjacent to the kidneys and spleen. The phrenic nerve and major vessels cross its surface.",
+   "b": [
+    "Phrenic nerve (C3‑C5) crosses anterior surface",
+    "Azygos vein runs along right side"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial supply comes from the phrenic, intercostal, and musculophrenic arteries.",
+   "b": [
+    "Phrenic artery (branch of brachial plexus)",
+    "Intercostal arteries (T5‑T12)"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The phrenic nerve provides motor and sensory fibers; sympathetic fibers from the thoracic sympathetic chain also contribute.",
+   "b": [
+    "Motor: phrenic nerve (C3‑C5)",
+    "Sensory: phrenic nerve, sympathetic"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "During inspiration, contraction flattens the dome, increasing thoracic volume and decreasing intrathoracic pressure. It also assists in forced expiration and protects abdominal organs.",
+   "b": [
+    "Inspiration: negative pressure ventilation",
+    "Forced expiration: abdominal muscle cooperation"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Diaphragmatic hernias, paralysis, and trauma can impair ventilation and abdominal organ function. In low‑resource settings, delayed diagnosis may lead to respiratory failure.",
+   "b": [
+    "Traumatic rupture: often missed on X‑ray"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows flattened diaphragm or free air under diaphragm; indicates rupture or hernia"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Rapid bedside detection of diaphragmatic motion; useful when X‑ray unavailable"
+    },
+    {
+     "a": "CT scan",
+     "b": "Gold standard for occult diaphragmatic injury; confirms herniation and guides surgery"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Ask about sudden dyspnea after trauma, abdominal pain, or bowel sounds in the chest. A normal chest X‑ray does not rule out a diaphragmatic tear; consider ultrasound or CT.",
+   "b": [
+    "Trauma + chest pain + abdominal bruit = suspect tear"
+   ],
+   "t": [
+    {
+     "a": "Bowel sounds in chest",
+     "b": "Suggests herniation; requires urgent imaging"
+    },
+    {
+     "a": "Flattens diaphragm on inspiration",
+     "b": "Indicates diaphragmatic paralysis; assess phrenic nerve function"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute respiratory distress after trauma",
+  "Sudden abdominal pain with chest symptoms",
+  "Persistent dyspnea with normal chest X‑ray after injury"
+ ],
+ "faq": [
+  {
+   "q": "What causes diaphragmatic paralysis?",
+   "a": "Common causes include phrenic nerve injury from neck trauma, cervical spinal cord lesions, or inflammatory neuropathies."
+  },
+  {
+   "q": "How is a diaphragmatic hernia diagnosed in a low‑resource setting?",
+   "a": "Look for bowel sounds in the chest and use bedside ultrasound to detect abnormal diaphragmatic motion."
+  },
+  {
+   "q": "Why does the diaphragm flatten in tension pneumothorax?",
+   "a": "Increased intrathoracic pressure pushes the diaphragm downward, flattening it and shifting the mediastinum."
+  }
+ ],
+ "exam": [
+  "Explain how phrenic nerve injury leads to diaphragmatic paralysis and its clinical consequences.",
+  "Describe the imaging findings of a traumatic diaphragmatic rupture and the steps to confirm the diagnosis.",
+  "Outline the management of a patient with a diaphragmatic hernia presenting with respiratory distress."
+ ],
+ "related": [
+  "Phrenic nerve",
+  "Thoracic cavity",
+  "Abdominal hernias",
+  "Respiratory mechanics"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

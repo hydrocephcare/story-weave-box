@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Bronchiectasis is permanent, abnormal dilation of bronchi caused by chronic infection or obstruction, leading to chronic productive cough, recurrent infections, and sometimes haemoptysis.",
+ "aka": [
+  "Bronchial ectasia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Bronchiectasis is irreversible bronchi dilation due to loss of smooth muscle and elastic tissue from chronic necrotizing infection or obstruction. Diagnosis requires high‑resolution CT showing bronchial wall thickening and a broncho‑arterial ratio >1.",
+   "b": [
+    "HRCT is the gold‑standard imaging test",
+    "Diagnostic criteria: broncho‑arterial ratio >1, lack of tapering, or visible bronchial wall within 1 cm of the pleura"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom burden, exacerbation frequency, lung function, and radiologic extent (e.g., FACED or Bronchiectasis Severity Index).",
+   "b": [
+    "FACED: FEV1, Age, Chronic colonisation, Extent, Dyspnoea",
+    "Higher scores predict mortality and guide intensity of follow‑up"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Bronchiectasis is always secondary. In most settings the leading cause is post‑infectious damage; in low‑resource areas additional causes are common.",
+   "b": [
+    "Post‑infectious (post‑pneumonia, severe childhood infections)",
+    "Cystic fibrosis (especially in high‑income settings)",
+    "Primary ciliary dyskinesia/Kartagener syndrome",
+    "Chronic obstruction (tumour, foreign body, mucus plugging)",
+    "Immunodeficiency (IgG deficiency, HIV)",
+    "Tuberculosis or post‑TB scarring (important in low‑resource settings)",
+    "Non‑tuberculous mycobacteria, especially in COPD"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop a chronic productive cough with purulent sputum, recurrent chest infections, and may have haemoptysis or breathlessness on exertion.",
+   "b": [
+    "Daily cough with sputum >3 months",
+    "Exacerbations requiring antibiotics",
+    "Occasional haemoptysis",
+    "Progressive dyspnoea, especially with basal disease"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests confirm the diagnosis, identify causative organisms, and assess severity.",
+   "t": [
+    {
+     "a": "High‑resolution CT chest",
+     "b": "Does the airway show irreversible dilation? Positive result confirms bronchiectasis; if unavailable, consider chest X‑ray plus clinical picture."
+    },
+    {
+     "a": "Spirometry",
+     "b": "What is the airflow limitation? Reduced FEV1/FVC indicates obstructive physiology; severity guides management."
+    },
+    {
+     "a": "Sputum culture (bacterial, fungal, mycobacterial)",
+     "b": "Which pathogen is colonising? Identifies treatable organisms; negative cultures do not exclude infection."
+    },
+    {
+     "a": "Immunoglobulin levels",
+     "b": "Is there an underlying immunodeficiency? Low IgG suggests need for replacement therapy."
+    },
+    {
+     "a": "ABPA serology (IgE, Aspergillus precipitins)",
+     "b": "Is allergic bronchopulmonary aspergillosis present? Positive results direct steroid therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and require urgent care.",
+   "b": [
+    "Massive haemoptysis",
+    "Severe respiratory failure or hypercapnia",
+    "Sepsis from uncontrolled infection",
+    "Pneumothorax in advanced disease"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, reduce bacterial load, and support airway clearance.",
+   "b": [
+    "Antibiotics: long‑term macrolide or inhaled antibiotics for chronic Pseudomonas; avoid quinolones if QT risk high",
+    "Airway clearance: chest physiotherapy, oscillatory devices, postural drainage",
+    "Bronchodilators for co‑existent asthma/COPD",
+    "Vaccinations: influenza, pneumococcal, COVID‑19",
+    "Immunoglobulin replacement if IgG deficiency",
+    "Surgery (resection) only for localized disease refractory to medical therapy"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review prevents exacerbations and monitors progression.",
+   "b": [
+    "Clinic review every 6–12 months with spirometry and sputum culture",
+    "Prompt treatment of exacerbations to avoid lung damage",
+    "Lifestyle: smoking cessation, nutrition optimisation"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that share chronic cough and sputum production.",
+   "b": [
+    "COPD (especially chronic bronchitis)",
+    "Asthma with mucus hypersecretion",
+    "Heart failure (cardiac asthma)",
+    "Tuberculosis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some investigations may appear normal despite disease.",
+   "b": [
+    "Chest X‑ray can be normal early; HRCT is needed",
+    "Sputum cultures may be negative during stable periods",
+    "FEV1 may be preserved in early bronchiectasis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Massive or recurrent haemoptysis",
+  "Sudden worsening breathlessness with hypoxia",
+  "Fever, chills, and increasing sputum purulence suggesting sepsis"
+ ],
+ "faq": [
+  {
+   "q": "Why does bronchiectasis cause a chronic cough?",
+   "a": "Damaged airways retain mucus, which triggers cough receptors and promotes bacterial growth, perpetuating inflammation."
+  },
+  {
+   "q": "Can bronchiectasis be cured?",
+   "a": "The airway dilation is irreversible; treatment aims to control infection, improve clearance, and slow progression."
+  },
+  {
+   "q": "When is surgery considered?",
+   "a": "When disease is localized, refractory to medical therapy, and causing severe symptoms or complications."
+  }
+ ],
+ "exam": [
+  "Describe the radiologic criteria for diagnosing bronchiectasis on HRCT.",
+  "List the three most common causes of bronchiectasis in low‑resource settings and explain why they predominate.",
+  "Explain how the FACED score influences management decisions."
+ ],
+ "related": [
+  "Cystic fibrosis",
+  "Primary ciliary dyskinesia",
+  "Chronic obstructive pulmonary disease",
+  "Asthma",
+  "Non‑tuberculous mycobacterial infection",
+  "ABPA",
+  "Pulmonary tuberculosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

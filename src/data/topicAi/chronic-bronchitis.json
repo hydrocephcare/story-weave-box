@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Chronic bronchitis is a form of COPD defined by a productive cough for ≥3 months in ≥2 consecutive years, caused by long‑term airway irritation. Mucous‑gland hypertrophy and goblet‑cell hyperplasia narrow airways and produce excess mucus.",
+ "aka": [
+  "Blue bloater"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A clinical diagnosis of chronic bronchitis requires a productive cough on most days for at least three months in two consecutive years, after excluding asthma, infection, and heart failure.",
+   "b": [
+    "Reid index >0.5 on histology confirms mucous‑gland hypertrophy",
+    "Post‑bronchodilator FEV1/FVC <0.70 indicates COPD"
+   ],
+   "t": [
+    {
+     "a": "Spirometry",
+     "b": "Does the patient have airflow obstruction? A reduced FEV1/FVC (<0.70) confirms COPD, supporting chronic bronchitis."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Are there alternative diagnoses (e.g., pneumonia, heart failure)? Look for increased bronchovascular markings; a normal film does not rule out disease."
+    },
+    {
+     "a": "Sputum culture (exacerbation)",
+     "b": "Is a bacterial infection driving the current flare? Growth of typical pathogens (H. influenzae, S. pneumoniae) guides antibiotic use."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by GOLD grades using post‑bronchodilator FEV1 % predicted, and by symptom burden (mMRC dyspnoea scale or CAT score).",
+   "b": [
+    "GOLD 1: FEV1 ≥80% (mild)",
+    "GOLD 2: 50–79% (moderate)",
+    "GOLD 3: 30–49% (severe)",
+    "GOLD 4: <30% (very severe)"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Chronic irritation of the bronchial epithelium drives glandular hyperplasia and mucus over‑production.",
+   "b": [
+    "Cigarette smoke (most common worldwide)",
+    "Biomass fuel smoke (wood, charcoal – major in low‑resource settings)",
+    "Occupational dusts/fumes (grain, cotton, silica)",
+    "Ambient air pollution (SO₂, NO₂)",
+    "Recurrent lower‑respiratory infections (including TB in endemic areas)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report a daily productive cough, especially in the morning, with sputum that may become purulent during exacerbations. Over time dyspnoea, wheeze, and cyanosis develop.",
+   "b": [
+    "Coarse crackles and rhonchi on auscultation",
+    "Peripheral oedema and jugular venous distension in advanced disease (cor pulmonale)",
+    "‘Blue bloater’ phenotype: overweight, cyanosed, CO₂ retention"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests confirm airflow limitation, assess severity, and identify treatable triggers.",
+   "t": [
+    {
+     "a": "Arterial blood gas (ABG)",
+     "b": "Is there hypoxaemia or hypercapnia? Low PaO₂ or high PaCO₂ signals need for supplemental O₂ or ventilation support."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is polycythaemia present? Elevated haematocrit reflects chronic hypoxia and may guide oxygen therapy."
+    },
+    {
+     "a": "If spirometry unavailable",
+     "b": "Can peak expiratory flow (PEF) be measured? A reduced PEF suggests obstruction, though less precise than spirometry."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from chronic hypoxia, inflammation, and frequent infections.",
+   "b": [
+    "Acute exacerbation with fever, increased sputum purulence, or rapid dyspnoea",
+    "Cor pulmonale (right‑heart failure)",
+    "Respiratory failure requiring ventilation",
+    "Pulmonary hypertension"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the irritant exposure, control inflammation, and prevent or treat exacerbations.",
+   "b": [
+    "Smoking cessation (counselling, nicotine replacement, varenicline) – stops disease progression",
+    "Vaccination (influenza, pneumococcal) – reduces infection‑driven exacerbations",
+    "Long‑acting bronchodilators (LABA or LAMA) – improve airflow and symptoms",
+    "Inhaled corticosteroids for frequent exacerbators – lower inflammation, avoid in mild disease due to pneumonia risk",
+    "Pulmonary rehabilitation – enhances exercise tolerance",
+    "O₂ therapy for PaO₂ <55 mmHg or SaO₂ <88% – prevents cor pulmonale"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review monitors lung function, symptom control, and comorbidities.",
+   "b": [
+    "Spirometry every 12 months (or sooner after exacerbation)",
+    "Assess smoking status and reinforce cessation",
+    "Screen for depression and anxiety, common in chronic disease",
+    "Educate on early recognition of exacerbation signs"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions sharing cough and dyspnoea can mislead diagnosis.",
+   "b": [
+    "Asthma – reversible obstruction, often younger onset, eosinophilia",
+    "Bronchiectasis – localized dilated bronchi, frequent purulent sputum, CT changes",
+    "Heart failure – orthopnoea, peripheral oedema, cardiomegaly on X‑ray"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may appear normal despite disease.",
+   "b": [
+    "Normal chest X‑ray early in disease – does not exclude chronic bronchitis",
+    "Spirometry may be within normal limits during a symptom‑free period; repeat if suspicion persists",
+    "Sputum culture can be negative in viral‑driven exacerbations"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of breathlessness or chest tightness",
+  "New fever, chills, or purulent sputum",
+  "Swelling of ankles or sudden weight gain"
+ ],
+ "faq": [
+  {
+   "q": "Why does chronic bronchitis cause cyanosis?",
+   "a": "Mucus plugging and airway narrowing impair gas exchange, leading to low oxygen (hypoxaemia) that makes the skin appear bluish."
+  },
+  {
+   "q": "Can a non‑smoker develop chronic bronchitis?",
+   "a": "Yes; prolonged exposure to biomass fuel smoke, occupational dusts, or severe air pollution can cause the same airway changes."
+  },
+  {
+   "q": "Is chronic bronchitis reversible?",
+   "a": "Airflow limitation is largely irreversible, but quitting irritants and using bronchodilators can improve symptoms and slow progression."
+  }
+ ],
+ "exam": [
+  "State the clinical definition of chronic bronchitis and the histologic Reid index threshold.",
+  "Explain how you would stage disease severity using GOLD criteria.",
+  "List the three most common causes of chronic bronchitis in low‑resource settings and a key management step for each."
+ ],
+ "related": [
+  "Emphysema",
+  "COPD",
+  "Bronchiectasis",
+  "Asthma",
+  "Cor pulmonale",
+  "Pulmonary rehabilitation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

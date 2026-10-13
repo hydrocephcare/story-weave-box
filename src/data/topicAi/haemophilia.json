@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Haemophilia is an X‑linked deficiency of clotting factor VIII (type A) or IX (type B) causing prolonged bleeding. Diagnosis relies on coagulation studies and factor assays.",
+ "aka": [
+  "Hemophilia",
+  "Factor VIII deficiency",
+  "Factor IX deficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A hereditary bleeding disorder due to reduced activity of factor VIII (HA) or IX (HB). Diagnosis requires a prolonged activated partial thromboplastin time (aPTT) with normal PT, followed by specific factor activity assays.",
+   "b": [
+    "aPTT ↑, PT normal",
+    "Factor VIII or IX activity <30% confirms diagnosis"
+   ],
+   "t": [
+    {
+     "a": "aPTT",
+     "b": "Is intrinsic pathway prolonged? → Yes suggests factor VIII/IX deficiency; normal PT rules out extrinsic defects."
+    },
+    {
+     "a": "Factor activity assay",
+     "b": "What is the specific factor level? → <30% confirms haemophilia; >30% suggests mild disease or carrier."
+    },
+    {
+     "a": "Mixing study",
+     "b": "Does patient plasma correct aPTT when mixed with normal plasma? → No correction indicates inhibitor presence."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is classified by factor activity: severe <1%, moderate 1–5%, mild 5–40%. Severity predicts spontaneous joint bleeds and need for prophylaxis.",
+   "b": [
+    "Severe: frequent spontaneous bleeds",
+    "Moderate: bleeds after minor trauma",
+    "Mild: bleeding only with surgery or major injury"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are inherited X‑linked recessive mutations in F8 (HA) or F9 (HB). Acquired inhibitors can develop after repeated exposure to factor concentrates, especially in low‑resource settings where plasma products are used.",
+   "b": [
+    "Inherited F8/F9 mutation (≈85% male)",
+    "Acquired factor VIII inhibitor",
+    "Rare autosomal recessive combined factor deficiencies"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with prolonged bleeding after minor cuts, easy bruising, hemarthroses (especially knees, elbows), and deep muscle bleeds. In infants, prolonged umbilical stump bleeding is a clue.",
+   "b": [
+    "Spontaneous joint bleed",
+    "Prolonged bleeding after circumcision",
+    "Intracranial hemorrhage after head trauma"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Coagulation screening guides further testing; factor assays quantify deficiency; inhibitor screens detect antibodies that neutralise replacement therapy.",
+   "b": [
+    "aPTT screening",
+    "Factor VIII/IX activity",
+    "Bethesda assay for inhibitors"
+   ],
+   "t": [
+    {
+     "a": "Bethesda assay",
+     "b": "Is an inhibitor present? → Positive (>0.6 BU) means bypassing agents needed."
+    },
+    {
+     "a": "CBC",
+     "b": "Is there anemia from chronic bleeding? → Low Hb supports ongoing loss."
+    },
+    {
+     "a": "Imaging (ultrasound/MRI)",
+     "b": "Is there joint effusion? → Confirms hemarthrosis, guides physiotherapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Life‑threatening bleeding includes intracranial hemorrhage, massive gastrointestinal bleed, and compartment syndrome from muscle bleeds. Chronic joint disease (hemophilic arthropathy) leads to disability.",
+   "b": [
+    "Severe head trauma with loss of consciousness",
+    "Sudden severe abdominal pain",
+    "Progressive joint swelling limiting motion"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Replace the missing factor using plasma‑derived or recombinant concentrates; use bypassing agents (e.g., activated prothrombin complex) if inhibitors are present. Supportive care includes antifibrinolytics for mucosal bleeds and physiotherapy for joints.",
+   "b": [
+    "Factor VIII or IX concentrate for on‑demand bleed control",
+    "Prophylactic regular dosing in severe disease",
+    "Avoid fresh frozen plasma when inhibitors likely",
+    "Tranexamic acid for dental or minor mucosal bleeds"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of factor levels, inhibitor screening, and joint assessment are essential. Vaccination against hepatitis B and C reduces infection risk from plasma products. Education on injury avoidance is crucial.",
+   "b": [
+    "Annual inhibitor screen",
+    "Joint ultrasound every 1–2 years",
+    "Hepatitis B vaccination",
+    "Genetic counseling for families"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other bleeding disorders that also prolong aPTT or cause bruising.",
+   "b": [
+    "Von Willebrand disease (normal factor VIII in mild cases)",
+    "Platelet function disorders",
+    "Disseminated intravascular coagulation"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Mild haemophilia may have near‑normal aPTT, and early inhibitor development can give falsely normal factor levels if not specifically tested.",
+   "b": [
+    "Normal aPTT in mild disease → missed diagnosis",
+    "Low inhibitor titre missed without Bethesda assay"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe headache or loss of consciousness (possible intracranial bleed)",
+  "Unexplained abdominal pain with distension (possible intra‑abdominal bleed)",
+  "Rapidly expanding joint swelling with severe pain"
+ ],
+ "faq": [
+  {
+   "q": "Why is PT usually normal in haemophilia?",
+   "a": "PT measures the extrinsic pathway, which does not involve factor VIII or IX."
+  },
+  {
+   "q": "Can females have haemophilia?",
+   "a": "Rarely, as carriers with skewed X‑inactivation or homozygous females can manifest disease."
+  },
+  {
+   "q": "What is the role of antifibrinolytics?",
+   "a": "They stabilize clots in mucosal surfaces and reduce bleeding when factor replacement is not needed."
+  }
+ ],
+ "exam": [
+  "Explain how a prolonged aPTT with normal PT points toward haemophilia and which confirmatory test you would order.",
+  "Describe the classification of haemophilia severity and its impact on treatment strategy.",
+  "Discuss management steps for a haemophilia patient who develops a high‑titer inhibitor."
+ ],
+ "related": [
+  "Von Willebrand disease",
+  "Platelet function disorders",
+  "Disseminated intravascular coagulation",
+  "Hemarthrosis",
+  "Bypassing agents",
+  "Genetic counseling"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

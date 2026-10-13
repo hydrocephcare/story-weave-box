@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Salmonella are gram‑negative rods that invade the intestinal mucosa and can cause a spectrum from self‑limited gastroenteritis to life‑threatening typhoid fever. Host factors such as gastric acidity and immune status determine severity.",
+ "aka": [
+  "Salmonella spp.",
+  "Salmonella enterica",
+  "Typhoid bacillus"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Salmonella are facultative intracellular, motile, gram‑negative bacilli transmitted via contaminated food, water, or animal contact. They belong to the Enterobacteriaceae family and have many serovars, the most important being Typhi (typhoid fever) and non‑typhoidal serovars (food‑borne gastroenteritis).",
+   "b": [
+    "Facultative intracellular → survives in macrophages",
+    "Motile via peritrichous flagella",
+    "Acid‑labile; gastric acid is key defense"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Salmonella possess lipopolysaccharide (LPS) with O‑antigen, H‑antigen flagellar protein, and Vi capsule (Typhi). They use type III secretion systems to invade M cells and replicate within phagocytes.",
+   "b": [
+    "Vi capsule protects Typhi from opsonisation",
+    "Type III secretion injects effectors into host cells",
+    "Non‑typhoidal strains lack Vi capsule"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Ingestion of contaminated food/water leads to gastric passage, invasion of ileal Peyer’s patches, and systemic spread via lymphatics. Typhoid can become chronic carrier state in gallbladder.",
+   "b": [
+    "Incubation: 6–72 h (non‑typhoidal), 6–30 days (Typhi)",
+    "Carrier state common after Typhi infection"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Non‑typhoidal Salmonella (NTS) usually cause self‑limited watery or bloody diarrhea; severe disease occurs in immunocompromised, sickle‑cell, or HIV patients. Salmonella Typhi causes systemic febrile illness with rose spots, abdominal pain, and possible intestinal perforation.",
+   "b": [
+    "NTS: mild gastroenteritis, may cause bacteremia in high‑risk hosts",
+    "Typhoid: stepwise fever, hepatosplenomegaly, intestinal ulceration",
+    "Complications: septic arthritis (sickle cell), osteomyelitis, meningitis"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis relies on stool culture for NTS and blood culture for Typhi; serology (Widal) is unreliable. In low‑resource settings, stool microscopy and clinical criteria are used.",
+   "b": [
+    "Culture: gold standard, 48‑72 h for growth",
+    "PCR: rapid but often unavailable"
+   ],
+   "t": [
+    {
+     "a": "Stool culture",
+     "b": "Identifies non‑typhoidal infection; positive growth confirms diagnosis"
+    },
+    {
+     "a": "Blood culture",
+     "b": "Detects Salmonella Typhi bacteremia; positive result guides systemic therapy"
+    },
+    {
+     "a": "Widal test",
+     "b": "Detects anti‑O/anti‑H antibodies; positive may suggest Typhi but many false‑positives, use only when culture unavailable"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Mild NTS gastroenteritis needs only rehydration; antibiotics reserved for high‑risk patients. Typhoid requires systemic antibiotics. Public health measures focus on safe water, food hygiene, and vaccination.",
+   "b": [
+    "Rehydration: oral rehydration salts or IV fluids",
+    "Antibiotics for NTS: fluoroquinolones or third‑gen cephalosporins in severe cases",
+    "Typhoid: ceftriaxone or azithromycin; avoid fluoroquinolones where resistance high",
+    "Vaccines: oral Ty21a, injectable Vi polysaccharide"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams.",
+   "b": [
+    "Acid suppression (PPIs) increases risk of Salmonella infection",
+    "Sickle‑cell patients with Salmonella septic arthritis need joint aspiration",
+    "Typhoid fever incubation is longer than most food‑borne diarrheas"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "High fever >39 °C with abdominal pain and vomiting",
+  "Signs of dehydration or shock",
+  "Persistent diarrhea >7 days, blood in stool, or fever in immunocompromised"
+ ],
+ "faq": [
+  {
+   "q": "Why are infants less susceptible to non‑typhoidal Salmonella enteritis?",
+   "a": "Maternal antibodies and limited exposure to contaminated foods protect infants."
+  },
+  {
+   "q": "What is the most important host defense against Salmonella dysentery?",
+   "a": "Stomach acid; low pH kills most organisms before they reach the intestine."
+  },
+  {
+   "q": "How long after exposure does Salmonella Typhi typically cause symptoms?",
+   "a": "Usually 6–30 days (average 2 weeks) after ingestion."
+  }
+ ],
+ "exam": [
+  "Describe the pathogenesis of Salmonella Typhi and why it can become a chronic carrier.",
+  "List the first‑line antibiotics for severe non‑typhoidal Salmonella infection in a patient with sickle‑cell disease and justify your choice.",
+  "Explain how gastric acid suppression predisposes to Salmonella infection and how this influences clinical management."
+ ],
+ "related": [
+  "Shigella",
+  "Campylobacter jejuni",
+  "Escherichia coli (EHEC)",
+  "Typhoid vaccine",
+  "Food‑borne outbreaks",
+  "Septic arthritis in sickle‑cell disease"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

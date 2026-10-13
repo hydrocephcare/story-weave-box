@@ -1,0 +1,104 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Buffers maintain pH by balancing weak acids and bases, crucial for enzyme activity and cellular function. Clinicians use buffer status to assess metabolic and respiratory disorders.",
+ "aka": [
+  "pH stabilizers",
+  "acid–base buffers"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Buffers are systems of a weak acid and its conjugate base (or weak base and conjugate acid) that resist pH change when acids or bases are added.",
+   "b": [
+    "Examples: bicarbonate–CO₂, phosphate, hemoglobin"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "The Henderson–Hasselbalch equation relates pH to the ratio of conjugate base to acid. Small changes in H⁺ are absorbed by the buffer components.",
+   "b": [
+    "pH = pKa + log([A⁻]/[HA])"
+   ],
+   "t": [
+    {
+     "a": "Blood gas analysis",
+     "b": "Determines pH, PaCO₂, HCO₃⁻ to identify respiratory vs metabolic disturbances; abnormal values indicate inadequate buffering."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Homeostatic organs (lungs, kidneys, blood proteins) adjust buffer components. Respiratory compensation changes CO₂; renal compensation adjusts bicarbonate.",
+   "b": [
+    "Acute respiratory acidosis: ↓PaCO₂; chronic: ↑HCO₃⁻"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Impaired buffering leads to acid–base disorders. Causes include renal failure, severe diarrhea, sepsis, or toxin ingestion.",
+   "b": [
+    "Metabolic acidosis: low HCO₃⁻, high anion gap; respiratory alkalosis: low PaCO₂"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Buffer status guides treatment: bicarbonate therapy, ventilation adjustments, or dialysis. Recognizing buffer failure prevents organ damage.",
+   "b": [
+    "Severe acidosis can depress myocardial contractility and cause arrhythmias"
+   ],
+   "t": [
+    {
+     "a": "Serum bicarbonate",
+     "b": "Low indicates metabolic acidosis; high suggests metabolic alkalosis."
+    },
+    {
+     "a": "PaCO₂",
+     "b": "High suggests respiratory acidosis; low indicates respiratory alkalosis."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the three main buffer systems: bicarbonate, phosphate, hemoglobin. Use Henderson–Hasselbalch to calculate expected pH changes.",
+   "b": [
+    "Bicarbonate buffer dominates in plasma; phosphate in intracellular fluids; hemoglobin in red cells."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe metabolic acidosis (pH <7.0)",
+  "Respiratory failure with CO₂ retention",
+  "Unexplained arrhythmias in acid–base disorders"
+ ],
+ "faq": [
+  {
+   "q": "What is the most important buffer in blood?",
+   "a": "The bicarbonate–CO₂ system, because it accounts for ~70% of plasma buffering capacity."
+  },
+  {
+   "q": "How does hemoglobin act as a buffer?",
+   "a": "Deoxygenated hemoglobin binds H⁺ released from CO₂ hydration, reducing pH change during tissue oxygen extraction (Haldane effect)."
+  },
+  {
+   "q": "Can diet affect buffering?",
+   "a": "Yes, high intake of acidic foods can lower plasma bicarbonate, but the body compensates via renal excretion and respiratory adjustments."
+  }
+ ],
+ "exam": [
+  "Explain how the bicarbonate buffer system compensates for a sudden drop in blood pH.",
+  "Describe the laboratory findings in a patient with chronic renal failure leading to metabolic acidosis.",
+  "Differentiate between respiratory and metabolic causes of a low arterial pH using blood gas values."
+ ],
+ "related": [
+  "Acid–base balance",
+  "Renal compensation",
+  "Respiratory compensation",
+  "Metabolic acidosis",
+  "Respiratory alkalosis"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

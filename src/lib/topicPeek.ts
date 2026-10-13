@@ -21,7 +21,7 @@ export function useTopicPeekSlug(): string | null {
   return slug;
 }
 
-export interface Peek { slug: string; name: string; category: string; summary: string; points: { h: string; t: string }[]; image: { u: string; title: string } | null }
+export interface Peek { slug: string; name: string; category: string; summary: string; points: { h: string; t: string }[]; image: { u: string; title: string } | null; names: string[]; written: boolean }
 
 const firstSentence = (p: string) => { const m = p.match(/^.{20,260}?[.!?](\s|$)/); return (m ? m[0] : p).trim().slice(0, 260); };
 const deslug = (slug: string) => slug.replace(/-/g, " ").replace(/\b([a-z])/g, (m) => m.toUpperCase());
@@ -30,28 +30,34 @@ function pointsOf(page: AiPage | null): { h: string; t: string }[] {
   if (!page) return [];
   const out: { h: string; t: string }[] = [];
   for (const s of page.sections) {
-    const t = s.b?.[0] ?? (s.p ? firstSentence(s.p) : "");
-    if (!t || /confus|mislead/i.test(s.h)) continue;
+    const lead = s.p ? firstSentence(s.p) : "";
+    const t = [lead, ...(s.b ?? []).slice(0, lead ? 1 : 2)].filter(Boolean).join(" ").slice(0, 380);
+    if (!t) continue;
     out.push({ h: s.h.replace(/,? most likely first/i, ""), t });
-    if (out.length >= 5) break;
+    if (out.length >= 8) break;
   }
   return out;
 }
 
-/** What the panel shows: the summary and a few key points from the topic page, with a picture when one is found. Never writes anything. */
+/** What the panel shows at once: the summary and key points from the topic page (no waiting on the web). Never writes anything. */
 export async function loadPeek(slug: string): Promise<Peek> {
-  const topic = await loadTopic(slug);
-  const stored = await loadStoredPage(slug);
+  const [topic, stored] = await Promise.all([loadTopic(slug), loadStoredPage(slug)]);
   const page = stored ?? topic?.ai ?? null;
   const name = topic?.n ?? deslug(slug);
   let summary = page?.summary ?? topic?.sec?.[0]?.b?.[0] ?? "";
   let points = pointsOf(page);
   if (!points.length && topic?.sec?.length) points = topic.sec.slice(0, 3).map((s) => ({ h: s.h, t: s.b[0] ?? "" })).filter((p) => p.t);
-  if (!points.length && topic?.snip?.length) points = topic.snip.filter((x) => x.t.length > 40).slice(0, 3).map((x) => ({ h: "From our notes", t: x.t }));
-  const media = await loadWebMedia([name, ...(topic?.a ?? []), ...(page?.aka ?? [])].slice(0, 3)).catch(() => null);
-  // the page's own summary, or the first clear line from the site's notes; nothing is copied from elsewhere
-  if (!summary || (!page && media?.extract)) summary = media?.extract || summary || "";
-  if (!points.length && media?.sections?.length) points = media.sections.slice(0, 4).map((x) => ({ h: x.h, t: x.p[0].slice(0, 260) }));
   if (summary.length < 40) summary = "";
-  return { slug, name, category: topic?.c ?? "", summary, points, image: media?.hero ? { u: media.hero.u, title: media.hero.title } : null };
+  return { slug, name, category: topic?.c ?? "", summary, points, image: null, names: [name, ...(topic?.a ?? []), ...(page?.aka ?? [])].slice(0, 3), written: Boolean(page) };
+}
+
+/** The picture (and, for a topic with nothing written yet, the introduction) found online; slower, so it arrives after the panel is already readable. */
+export async function enrichPeek(p: Peek): Promise<Peek> {
+  const media = await loadWebMedia(p.names).catch(() => null);
+  if (!media) return p;
+  let { summary, points } = p;
+  if (!p.written && media.extract) summary = media.extract;
+  if (!points.length && media.sections?.length) points = media.sections.slice(0, 6).map((x) => ({ h: x.h, t: x.p[0].slice(0, 340) }));
+  if (summary.length < 40) summary = "";
+  return { ...p, summary, points, image: media.hero ? { u: media.hero.u, title: media.hero.title } : p.image };
 }

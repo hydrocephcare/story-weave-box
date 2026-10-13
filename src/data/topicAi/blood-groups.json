@@ -1,0 +1,110 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Blood groups are surface antigens on red cells that determine compatibility for transfusion and pregnancy. They arise from carbohydrate or protein differences encoded by ABO and Rh genes. Clinicians use group knowledge to prevent hemolysis and manage immune-mediated disease.",
+ "aka": [
+  "ABO system",
+  "Rh factor",
+  "blood type"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The ABO system classifies red cells as A, B, AB or O based on the presence of A and B antigens; the Rh system adds D antigen positivity or negativity.",
+   "b": [
+    "Antigens are inherited codominantly",
+    "Naturally occurring anti‑A or anti‑B IgM antibodies develop early in life"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "A and B antigens are carbohydrate chains added to the H antigen by specific glycosyltransferases. Rh D is a membrane protein that transports ions.",
+   "b": [
+    "ABO genes on chromosome 9, Rh genes on chromosome 1",
+    "Antibodies are IgM and do not cross the placenta"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Expression of ABO enzymes is tissue‑specific; Rh D expression is regulated during erythropoiesis. No hormonal control is needed for antigen presence.",
+   "b": [
+    "Gene dosage influences antigen density",
+    "No known acute up‑ or down‑regulation"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Incompatible transfusion or pregnancy can trigger immune hemolysis. Auto‑ or allo‑antibodies may form after sensitisation (transfusion, pregnancy, transplantation).",
+   "b": [
+    "Acute hemolytic transfusion reaction: fever, flank pain, dark urine",
+    "Hemolytic disease of the newborn (HDN): maternal anti‑D IgG crosses placenta"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Correct matching prevents life‑threatening hemolysis. Certain groups influence disease risk (e.g., severe malaria in O, thrombosis in non‑O).",
+   "b": [
+    "ABO incompatibility → intravascular hemolysis",
+    "Rh‑negative mother with Rh‑positive fetus → HDN",
+    "Group O higher risk of peptic ulcer disease"
+   ],
+   "t": [
+    {
+     "a": "ABO typing (forward and reverse)",
+     "b": "Confirms patient’s antigen profile and detects unexpected antibodies; mismatched result means risk of hemolysis"
+    },
+    {
+     "a": "Rh typing",
+     "b": "Identifies D antigen status; negative result in a pregnant woman triggers anti‑D prophylaxis"
+    },
+    {
+     "a": "Direct Coombs test",
+     "b": "Detects antibodies bound to patient’s red cells; positive in immune hemolysis or HDN"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on compatibility principles, transfusion reactions, and prevention of HDN.",
+   "b": [
+    "Always perform both forward and reverse ABO typing",
+    "Give anti‑D IgG to Rh‑negative mothers within 72 h of delivery",
+    "If cross‑match unavailable, use O‑negative blood for emergency"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden dark urine, back pain, or hypotension after transfusion; newborn jaundice with anemia; unexplained hemolysis"
+ ],
+ "faq": [
+  {
+   "q": "Why can O‑negative blood be given to anyone in an emergency?",
+   "a": "It lacks A, B, and D antigens, so no pre‑formed antibodies in the recipient will react."
+  },
+  {
+   "q": "What causes hemolytic disease of the newborn?",
+   "a": "Maternal IgG anti‑D (or anti‑A/B) crosses the placenta and destroys fetal red cells."
+  },
+  {
+   "q": "Can a person change their blood group?",
+   "a": "No, ABO and Rh are genetically fixed; only acquired antibodies can change serology."
+  }
+ ],
+ "exam": [
+  "Explain the steps of ABO and Rh typing and why reverse typing is essential.",
+  "Describe the pathophysiology and prevention of hemolytic disease of the newborn.",
+  "List the clinical signs of an acute hemolytic transfusion reaction and immediate management."
+ ],
+ "related": [
+  "Transfusion medicine",
+  "Hemolytic anemia",
+  "Coombs test",
+  "Maternal‑fetal blood group incompatibility",
+  "Malaria and blood groups",
+  "Thrombosis risk and ABO"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

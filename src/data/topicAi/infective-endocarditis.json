@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Infective endocarditis is a life‑threatening infection of the heart valves that presents with fever, new murmur and systemic emboli. Diagnosis relies on the Duke criteria, blood cultures and echocardiography. Early recognition and targeted antibiotics save lives.",
+ "aka": [
+  "Bacterial endocarditis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Infective endocarditis (IE) is an infection of the endocardial surface, usually a valve, caused by bacteria or fungi. The Duke criteria combine clinical, microbiological and imaging findings to classify cases as definite, possible or rejected.",
+   "b": [
+    "Definite IE: 2 major, or 1 major + 3 minor, or 5 minor"
+   ],
+   "t": [
+    {
+     "a": "Blood cultures",
+     "b": "Identify organism and guide antibiotics; positive cultures are a major criterion."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Detect vegetation, abscess or new regurgitation; TTE is first line, TEE if TTE negative or high suspicion."
+    },
+    {
+     "a": "New murmur",
+     "b": "Suggests valve involvement; a major criterion if new or changed."
+    },
+    {
+     "a": "Positive serology (e.g., Bartonella, Coxiella)",
+     "b": "Major if confirmed by two separate tests."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "IE severity is staged by the modified Duke criteria and by clinical status. Complications such as heart failure, emboli or sepsis dictate urgency of surgery or intensive care.",
+   "b": [
+    "Definite IE: high risk of emboli, heart failure, uncontrolled infection"
+   ],
+   "t": [
+    {
+     "a": "Heart failure signs",
+     "b": "Indicates severe valve damage; requires urgent review."
+    },
+    {
+     "a": "Neurologic deficits",
+     "b": "Suggest embolic stroke; urgent imaging and possible anticoagulation."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common pathogens differ by setting. In low‑resource areas, rheumatic heart disease, HIV, and tuberculosis increase risk. IV drug use remains the leading cause of right‑sided IE.",
+   "b": [
+    "Mycobacterium tuberculosis (tuberculous endocarditis, rare)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have fever, chills, weight loss and a new or changing heart murmur. Peripheral signs include Osler nodes, Janeway lesions, Roth spots and splinter haemorrhages.",
+   "b": [
+    "Splenomegaly – palpable spleen"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A systematic work‑up is essential. Blood cultures, echocardiography and laboratory markers guide diagnosis and treatment. When resources are limited, prioritize the most informative tests.",
+   "b": [
+    "Serology for atypical organisms if cultures negative"
+   ],
+   "t": [
+    {
+     "a": "Blood cultures",
+     "b": "Confirm bacteremia; a positive result is a major Duke criterion."
+    },
+    {
+     "a": "TTE",
+     "b": "Detect vegetations; a positive TTE is a major criterion."
+    },
+    {
+     "a": "TTE negative but high suspicion",
+     "b": "Proceed to TEE; a positive TEE is a major criterion."
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Elevated levels support inflammation but are non‑specific."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be catastrophic. Watch for heart failure, embolic events, valve rupture, and septic shock. Red flags warrant immediate transfer to a higher‑level facility.",
+   "b": [
+    "Persistent fever after 48 hours of antibiotics"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the identified organism with appropriate antibiotics, support hemodynamics, and consider surgery for valve dysfunction or uncontrolled infection. Drug choice is driven by organism, resistance patterns and patient comorbidities.",
+   "b": [
+    "Monitor for drug interactions, especially with anticoagulants"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After acute treatment, patients need long‑term follow‑up for valve function, relapse, and prevention of recurrence. Prevention focuses on dental hygiene, prophylaxis in high‑risk patients, and harm reduction for IV drug users.",
+   "b": [
+    "Regular cardiac check‑ups for rheumatic heart disease"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic IE include rheumatic fever, viral myocarditis, and non‑infectious endocardial disease. Distinguishing features are the presence of bacteremia and characteristic peripheral signs.",
+   "b": [
+    "Non‑infectious endocarditis – negative cultures, often autoimmune"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal or abnormal in IE. Low‑grade fevers, negative cultures in fastidious organisms, and normal CRP in early disease can delay diagnosis.",
+   "b": [
+    "Echocardiography may miss small vegetations on prosthetic valves"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden chest pain or shortness of breath (possible heart failure or embolus), sudden neurological deficit (stroke), persistent fever after 48 hours of antibiotics, severe hypotension or shock"
+ ],
+ "faq": [
+  {
+   "q": "Why is a new murmur important in IE?",
+   "a": "A new or changed murmur indicates valve involvement, a major Duke criterion, and signals potential heart failure."
+  },
+  {
+   "q": "Can IE occur on a normal valve?",
+   "a": "Yes, but it is less common; rheumatic heart disease or congenital defects increase susceptibility."
+  },
+  {
+   "q": "What is the role of echocardiography if cultures are negative?",
+   "a": "Echocardiography can still detect vegetations; a positive TEE is a major criterion even with negative cultures."
+  }
+ ],
+ "exam": [
+  "Explain the Duke criteria and how they guide diagnosis.",
+  "Describe the first‑line antibiotic regimen for native‑valve IE caused by Staphylococcus aureus and justify the choice.",
+  "Outline the indications for surgical intervention in infective endocarditis."
+ ],
+ "related": [
+  "Rheumatic heart disease",
+  "IV drug use complications",
+  "Prosthetic valve endocarditis",
+  "Septic emboli",
+  "Antibiotic stewardship"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

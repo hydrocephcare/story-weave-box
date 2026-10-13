@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Renal function reflects the kidneys' ability to filter waste, balance fluids, electrolytes, and acids. Impaired function can be acute or chronic, with distinct causes, stages, and management strategies.",
+ "aka": [
+  "Kidney function",
+  "Renal performance"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Renal function is measured by glomerular filtration rate (GFR) estimated from serum creatinine, age, sex, and body size. Acute kidney injury (AKI) is a rapid rise in creatinine or fall in urine output; chronic kidney disease (CKD) is persistent GFR <60 mL/min/1.73 m² for ≥3 months.",
+   "b": [
+    "GFR = filtered plasma per minute",
+    "AKI: rise ≥0.3 mg/dL in 48 h or 1.5× baseline",
+    "CKD: GFR < 60 mL/min/1.73 m² >3 mo"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "AKI is staged by KDIGO criteria (Stage 1–3) based on creatinine rise and urine output. CKD uses KDIGO stages G1–G5 (GFR ranges) plus albuminuria categories A1–A3.",
+   "b": [
+    "KDIGO AKI Stage 1: 1.5–1.9× baseline or ≥0.3 mg/dL rise",
+    "Stage 3: ≥3× baseline or <0.5 mL/kg/h urine 24 h",
+    "CKD G3a: GFR 30‑44 mL/min",
+    "G5 (ESRD): GFR < 15"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the anatomic site of injury (pre‑renal, intrinsic, post‑renal) and then consider common etiologies, especially those prevalent in low‑resource settings.",
+   "b": [
+    "Pre‑renal: dehydration, sepsis, heart failure",
+    "Intrinsic: acute tubular necrosis, glomerulonephritis, interstitial nephritis",
+    "Post‑renal: obstruction from stones, BPH, tumors"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have oliguria, edema, fatigue, nausea, or be asymptomatic with only abnormal labs. Look for systemic clues such as fever, rash, or recent drug exposure.",
+   "b": [
+    "Oliguria < 0.5 mL/kg/h",
+    "Peripheral edema",
+    "Metabolic acidosis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer specific clinical questions; if a test is unavailable, use alternatives or clinical judgment.",
+   "t": [
+    {
+     "a": "Serum creatinine & eGFR",
+     "b": "What is the current filtration capacity?"
+    },
+    {
+     "a": "Urine output monitoring",
+     "b": "Is there oliguria or polyuria?"
+    },
+    {
+     "a": "Urinalysis with microscopy",
+     "b": "Is there evidence of intrinsic damage?"
+    },
+    {
+     "a": "Renal ultrasound",
+     "b": "Is there obstruction?"
+    },
+    {
+     "a": "Serum electrolytes (K⁺, Na⁺, HCO₃⁻)",
+     "b": "Are electrolytes deranged?"
+    },
+    {
+     "a": "Urine protein/albumin‑creatinine ratio",
+     "b": "Is there significant proteinuria?"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Promptly recognise life‑threatening features and organ‑system complications.",
+   "b": [
+    "Severe hyperkalaemia >6.5 mmol/L",
+    "Pulmonary oedema",
+    "Uremic encephalopathy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, support renal perfusion, avoid nephrotoxins, and monitor complications. Choose drugs that are renally safe.",
+   "b": [
+    "Volume resuscitation with isotonic saline for pre‑renal AKI",
+    "Stop NSAIDs, aminoglycosides, contrast",
+    "Loop diuretics for fluid overload",
+    "Renin‑angiotensin‑system blockers for proteinuric CKD (avoid if GFR < 30)",
+    "Sodium bicarbonate for severe metabolic acidosis",
+    "If hyperkalaemia: calcium gluconate, insulin‑glucose, kayexalate; dialysis if refractory"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regularly reassess GFR, blood pressure, and proteinuria; educate on hydration, medication safety, and control of diabetes or hypertension.",
+   "b": [
+    "eGFR every 3–6 months in CKD",
+    "BP target <130/80 mmHg",
+    "Avoid nephrotoxic herbs"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic renal dysfunction but have different primary pathology.",
+   "b": [
+    "Acute heart failure (cardiorenal syndrome)",
+    "Hepatorenal syndrome",
+    "Rhabdomyolysis‑induced creatine kinase rise"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Be aware of factors that falsely alter lab values.",
+   "b": [
+    "Low muscle mass → low creatinine despite reduced GFR",
+    "Hemolysis → spuriously high potassium",
+    "Bilirubin interference → falsely low creatinine"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hyperkalaemia, sudden anuria, rapidly rising creatinine, pulmonary oedema, uremic signs (pericarditis, encephalopathy)"
+ ],
+ "faq": [
+  {
+   "q": "What distinguishes pre‑renal from intrinsic AKI?",
+   "a": "Pre‑renal AKI improves with fluid; intrinsic shows persistent dysfunction and abnormal urine sediment."
+  },
+  {
+   "q": "Why is albuminuria important in CKD?",
+   "a": "It signals glomerular damage and predicts faster progression regardless of GFR."
+  },
+  {
+   "q": "Can a single normal creatinine rule out kidney disease?",
+   "a": "No; early CKD or low muscle mass can mask reduced GFR, so consider eGFR and urine protein."
+  }
+ ],
+ "exam": [
+  "Explain KDIGO criteria for AKI staging and how they guide management.",
+  "List three common intrinsic causes of AKI in tropical settings and their key diagnostic clues.",
+  "Describe how you would adjust medication for a patient with CKD stage 4 (GFR 15‑29 mL/min)."
+ ],
+ "related": [
+  "Acute kidney injury",
+  "Chronic kidney disease",
+  "Glomerulonephritis",
+  "Nephrotic syndrome",
+  "Hypertension and kidney disease",
+  "Diabetic nephropathy",
+  "Renal ultrasound",
+  "Electrolyte disorders"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,113 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Cardiac output (CO) is the volume of blood the heart pumps per minute. It equals heart rate times stroke volume and determines tissue perfusion. Clinicians assess CO to diagnose shock, heart failure and guide therapy.",
+ "aka": [
+  "Cardiac output"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "CO reflects the heart’s ability to deliver oxygen and nutrients. Normal adult CO is 4–8 L/min; it varies with activity, stress and disease.",
+   "b": [
+    "CO = HR × SV",
+    "Stroke volume = preload × contractility ÷ afterload"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "During systole the left ventricle ejects blood (stroke volume). Heart rate is set by autonomic input. Together they generate the flow that reaches every organ.",
+   "b": [
+    "Preload = venous return, measured by central venous pressure",
+    "Afterload = systemic vascular resistance",
+    "Contractility = myocardial fiber shortening"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The body adjusts CO via five mechanisms: heart rate, preload, afterload, contractility, and ventricular synchrony. Baroreceptors, chemoreceptors and hormonal systems (e.g., catecholamines, renin‑angiotensin) modulate these factors.",
+   "b": [
+    "Sympathetic surge ↑ HR and contractility",
+    "Venous tone ↑ preload",
+    "Vasoconstriction ↑ afterload"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Low CO (hypoperfusion) occurs in heart failure, myocardial infarction, arrhythmias, tamponade, massive PE, and obstructive shock from tension pneumothorax. High CO may be seen in sepsis, anemia, hyperthyroidism, or pregnancy.",
+   "b": [
+    "Heart failure: reduced contractility, elevated filling pressures",
+    "Tension pneumothorax: external compression → ↓ preload → ↓ CO",
+    "Septic shock: vasodilation → low afterload, compensatory ↑ CO"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Assessing CO guides resuscitation, inotropic therapy and fluid management. In low‑resource settings, bedside pulse pressure and capillary refill help estimate perfusion when formal CO measurement is unavailable.",
+   "b": [
+    "Low CO → cold, clammy skin, oliguria, altered mental status",
+    "High CO → warm flushed skin, bounding pulses"
+   ],
+   "t": [
+    {
+     "a": "Echocardiographic LVOT VTI",
+     "b": "What is stroke volume? → Calculates CO; if unavailable, use bedside cardiac output estimation (e.g., pulse pressure method)."
+    },
+    {
+     "a": "Central venous pressure (CVP)",
+     "b": "Is preload adequate? → High CVP suggests fluid overload; low CVP suggests hypovolemia."
+    },
+    {
+     "a": "Lactate level",
+     "b": "Is tissue hypoperfusion present? → Elevated lactate indicates inadequate CO despite normal BP."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the determinants of CO, how they change in common shock states, and the bedside clues when formal measurements are lacking.",
+   "b": [
+    "Remember CO = HR × SV; each component can be altered independently.",
+    "In obstructive shock, CO falls despite normal heart rate because preload is blocked.",
+    "Pregnancy raises CO by ~30 % by ↑ HR and SV; supine position can reduce it."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent hypotension with altered mental status",
+  "Chest pain with diaphoresis suggesting myocardial infarction",
+  "Severe shortness of breath with cyanosis indicating cardiogenic shock"
+ ],
+ "faq": [
+  {
+   "q": "Why does CO fall in cardiac tamponade?",
+   "a": "Fluid in the pericardium restricts ventricular filling, lowering preload and stroke volume, so CO drops despite normal heart rate."
+  },
+  {
+   "q": "Can CO be normal in shock?",
+   "a": "Yes, early septic shock often shows high or normal CO with low systemic vascular resistance; tissue hypoxia still occurs."
+  },
+  {
+   "q": "How does pregnancy affect CO?",
+   "a": "Hormonal changes increase blood volume and heart rate; stroke volume rises, raising CO up to 50 % by the third trimester."
+  }
+ ],
+ "exam": [
+  "Explain how heart rate, preload, afterload and contractility each influence cardiac output.",
+  "Describe the hemodynamic profile (CO, SVR, PCWP) of cardiogenic vs. septic shock.",
+  "A pregnant woman in supine position becomes hypotensive. What is the mechanism and immediate management?"
+ ],
+ "related": [
+  "Stroke volume",
+  "Systemic vascular resistance",
+  "Shock physiology",
+  "Heart failure",
+  "Myocardial infarction",
+  "Septic shock",
+  "Pregnancy cardiovascular changes"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

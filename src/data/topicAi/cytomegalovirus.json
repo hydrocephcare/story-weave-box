@@ -1,0 +1,107 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "CMV is a ubiquitous herpesvirus that establishes lifelong latency and can reactivate in immunosuppressed hosts, causing severe disease especially in neonates and transplant recipients. Clinical reasoning hinges on recognizing risk factors, interpreting virology tests, and balancing antiviral therapy with toxicity.",
+ "aka": [
+  "Human herpesvirus 5"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "CMV is a double‑stranded DNA virus of the Herpesviridae family. It is widespread, often asymptomatic, but can cause life‑threatening disease when immunity wanes or in utero.",
+   "b": [
+    "Ubiquitous; seroprevalence >50% in adults",
+    "Latency in monocytes, macrophages, endothelial cells"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The virus has a large genome encoding proteins that modulate host immunity. It enters cells via glycoprotein complexes and replicates in the nucleus.",
+   "b": [
+    "DNA virus, 230 kb",
+    "Latency in myeloid lineage"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "CMV spreads by direct contact with saliva, urine, blood, breast milk, or organ transplantation. After primary infection, it establishes latency and may reactivate.",
+   "b": [
+    "Person‑to‑person via saliva/urine",
+    "Vertical transmission via placenta or breast milk",
+    "Transfusion and transplant"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "In immunocompetent adults, CMV is usually mild or asymptomatic. In neonates, transplant recipients, and HIV patients, it can cause retinitis, pneumonitis, hepatitis, and encephalitis.",
+   "b": [
+    "Congenital CMV: sensorineural deafness, microcephaly, chorioretinitis"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis relies on serology, PCR, and antigen detection. Clinical context guides interpretation."
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Antiviral therapy is the cornerstone; valganciclovir or ganciclovir are first line. Supportive care and monitoring of marrow suppression are essential.",
+   "b": [
+    "Valganciclovir (oral) preferred for outpatient"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that CMV is the most common congenital viral infection and that retinitis is a sight‑threatening complication in AIDS. In transplant patients, prophylaxis with valganciclovir reduces CMV disease.",
+   "b": [
+    "CMV retinitis presents with floaters, blurred vision; treat promptly."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "HSV and EBV share latency and reactivation patterns but differ in organ tropism and treatment.",
+   "b": [
+    "HSV: skin lesions, encephalitis; treat with acyclovir."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "IgM can persist long after infection; low PCR in early disease may miss active infection.",
+   "b": [
+    "IgG avidity needed to confirm recent infection."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe visual loss, sudden hearing loss, respiratory distress, or unexplained fever in immunocompromised patients"
+ ],
+ "faq": [
+  {
+   "q": "Can CMV be transmitted by casual contact?",
+   "a": "Yes, through saliva or urine; hand hygiene reduces risk."
+  },
+  {
+   "q": "Is there a vaccine for CMV?",
+   "a": "No licensed vaccine yet; research is ongoing."
+  },
+  {
+   "q": "What is the most common complication in newborns?",
+   "a": "Sensorineural deafness and chorioretinitis."
+  }
+ ],
+ "exam": [
+  "Describe the diagnostic approach to a pregnant woman with suspected primary CMV infection.",
+  "Explain why valganciclovir is preferred over ganciclovir in outpatient settings.",
+  "Outline the management of CMV retinitis in an AIDS patient."
+ ],
+ "related": [
+  "Herpes simplex virus",
+  "Epstein–Barr virus",
+  "Human immunodeficiency virus",
+  "Congenital infections",
+  "Transplant medicine"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

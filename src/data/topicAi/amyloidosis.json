@@ -1,0 +1,208 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Amyloidosis is the extracellular deposition of misfolded protein fibrils that disrupt organ function. It can be primary (AL), secondary (AA) or hereditary (ATTR). Clinical thinking focuses on identifying the underlying cause, organ involvement and appropriate treatment.",
+ "aka": [
+  "Amyloid deposition disease",
+  "Systemic amyloidosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Amyloidosis is the accumulation of insoluble beta‑pleated sheet protein fibrils in tissues. The gold‑standard test is Congo red staining, which shows apple‑green birefringence under polarized light. Other supportive tests include serum free light chains, immunofixation, and organ‑specific imaging.",
+   "b": [
+    "Congo red stain – apple‑green birefringence"
+   ],
+   "t": [
+    {
+     "a": "Serum free light chains",
+     "b": "Detects excess kappa or lambda light chains; a high ratio suggests AL amyloidosis."
+    },
+    {
+     "a": "Immunofixation electrophoresis",
+     "b": "Identifies monoclonal protein; confirms plasma cell dyscrasia."
+    },
+    {
+     "a": "Urine Bence Jones protein",
+     "b": "Shows free light chains in urine; supports AL diagnosis."
+    },
+    {
+     "a": "Serum amyloid A",
+     "b": "Elevated in chronic inflammation; indicates AA amyloidosis."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Assesses restrictive cardiomyopathy; helps stage cardiac involvement."
+    },
+    {
+     "a": "Renal biopsy",
+     "b": "Confirms amyloid in kidney; guides treatment of nephrotic syndrome."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging is organ‑specific. Cardiac staging uses troponin and NT‑proBNP; renal staging uses proteinuria and eGFR; hepatic staging uses bilirubin and transaminases. Higher stages predict poorer survival.",
+   "b": [
+    "Cardiac stage I: normal troponin, low NT‑proBNP",
+    "Cardiac stage II: elevated troponin or NT‑proBNP",
+    "Cardiac stage III: both elevated"
+   ],
+   "t": [
+    {
+     "a": "Troponin",
+     "b": "Elevated indicates myocardial injury; correlates with cardiac amyloid load."
+    },
+    {
+     "a": "NT‑proBNP",
+     "b": "High levels reflect ventricular wall stress; prognostic for heart failure."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common causes differ by region. In low‑resource settings, chronic infections (TB, osteomyelitis) and inflammatory diseases (rheumatoid arthritis) drive AA amyloidosis. In high‑income areas, plasma cell disorders cause AL amyloidosis. Hereditary ATTR is less common but should be considered in familial cases.",
+   "b": [
+    "AA – chronic infection or inflammation",
+    "AL – plasma cell dyscrasia",
+    "ATTR – familial or senile"
+   ],
+   "t": [
+    {
+     "a": "HIV",
+     "b": "Chronic immune activation can raise serum amyloid A; monitor for AA amyloidosis."
+    },
+    {
+     "a": "Malaria",
+     "b": "Recurrent infection may elevate SAA; consider in endemic areas."
+    },
+    {
+     "a": "Sickle cell",
+     "b": "Chronic hemolysis can increase SAA; watch for renal amyloid."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms depend on organ involvement. Renal amyloid presents with proteinuria and edema; cardiac amyloid causes dyspnea, orthopnea, and arrhythmias; neuropathy manifests as numbness and weakness; hepatomegaly may be silent or cause abdominal discomfort.",
+   "b": [
+    "Proteinuria >3.5 g/day → nephrotic syndrome",
+    "Heart failure with preserved EF",
+    "Peripheral neuropathy"
+   ],
+   "t": [
+    {
+     "a": "Edema",
+     "b": "Suggests nephrotic syndrome; check proteinuria."
+    },
+    {
+     "a": "Dyspnea on exertion",
+     "b": "Could be restrictive cardiomyopathy; evaluate with echo."
+    },
+    {
+     "a": "Numbness/tingling",
+     "b": "Peripheral neuropathy; consider nerve conduction studies."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A systematic work‑up starts with basic labs, then organ‑specific imaging and biopsy. When advanced tests are unavailable, clinical judgment and simple tests guide management.",
+   "b": [
+    "CBC, ESR, CRP",
+    "Serum free light chains",
+    "Serum amyloid A",
+    "Urine protein electrophoresis",
+    "Echocardiography"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Anemia or leukocytosis may hint at chronic disease."
+    },
+    {
+     "a": "ESR/CRP",
+     "b": "Elevated values support ongoing inflammation."
+    },
+    {
+     "a": "Serum free light chains",
+     "b": "High ratio indicates AL amyloidosis."
+    },
+    {
+     "a": "Serum amyloid A",
+     "b": "High levels point to AA amyloidosis."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Detects ventricular thickening and diastolic dysfunction."
+    },
+    {
+     "a": "Renal biopsy",
+     "b": "Confirms amyloid and guides treatment."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly progressive renal failure, severe heart failure, unexplained weight loss, or recurrent infections are red flags. Complications include nephrotic syndrome, arrhythmias, and organ failure.",
+   "b": [
+    "Acute kidney injury",
+    "Heart failure with preserved EF",
+    "Recurrent infections"
+   ],
+   "t": [
+    {
+     "a": "Proteinuria >5 g/day",
+     "b": "Indicates severe renal involvement; urgent nephrology referral."
+    },
+    {
+     "a": "New arrhythmia",
+     "b": "May signal cardiac amyloid; requires ECG and monitoring."
+    },
+    {
+     "a": "Severe anemia",
+     "b": "Could reflect marrow infiltration; evaluate marrow biopsy."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly worsening kidney function",
+  "New onset heart failure symptoms",
+  "Severe unexplained anemia",
+  "Recurrent severe infections"
+ ],
+ "faq": [
+  {
+   "q": "What is the gold‑standard test for amyloidosis?",
+   "a": "Congo red staining showing apple‑green birefringence under polarized light."
+  },
+  {
+   "q": "Which type of amyloidosis is linked to multiple myeloma?",
+   "a": "AL amyloidosis, caused by light chain deposition."
+  },
+  {
+   "q": "Can infections cause amyloidosis?",
+   "a": "Yes, chronic infections like TB or osteomyelitis can lead to AA amyloidosis."
+  }
+ ],
+ "exam": [
+  "Explain how chronic inflammation leads to AA amyloidosis and outline the diagnostic work‑up.",
+  "Describe the clinical features that would prompt you to suspect cardiac amyloidosis in a patient with heart failure.",
+  "Outline the first‑line treatment for AL amyloidosis and justify why it is chosen over other options."
+ ],
+ "related": [
+  "Chronic kidney disease",
+  "Restrictive cardiomyopathy",
+  "Peripheral neuropathy",
+  "Multiple myeloma",
+  "Rheumatoid arthritis",
+  "Hereditary transthyretin amyloidosis",
+  "Serum amyloid A",
+  "Congo red staining"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

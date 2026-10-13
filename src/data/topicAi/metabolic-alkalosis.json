@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Metabolic alkalosis is a primary increase in plasma bicarbonate that raises pH, usually from loss of gastric acid or excess alkali. The body compensates by hypoventilation, raising CO₂.",
+ "aka": [
+  "Metabolic alkalosis",
+  "High bicarbonate alkalosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A primary metabolic alkalosis is defined by pH > 7.45, HCO₃⁻ > 28 mmol/L and an elevated PCO₂ that matches the expected respiratory compensation (PCO₂ ≈ 0.7 × HCO₃⁻ + 20).",
+   "b": [
+    "Diagnostic criteria: pH > 7.45, HCO₃⁻ > 28 mmol/L, PCO₂ appropriate to HCO₃⁻."
+   ],
+   "t": [
+    {
+     "a": "Arterial blood gas",
+     "b": "Is the alkalosis metabolic or respiratory? Shows pH, HCO₃⁻, PCO₂; appropriate compensation confirms primary metabolic alkalosis."
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Are chloride and potassium low? Low Cl⁻ and K⁺ suggest chloride‑responsive (vomiting, diuretics) versus chloride‑resistant causes."
+    },
+    {
+     "a": "Urine chloride",
+     "b": "Is the alkalosis chloride‑responsive? Urine Cl⁻ < 20 mmol/L indicates volume depletion; ≥20 mmol/L suggests renal loss or alkali ingestion. If unavailable, infer from clinical volume status."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by bicarbonate level and symptom burden: mild (28‑34 mmol/L, asymptomatic), moderate (35‑44 mmol/L, mild neuromuscular signs), severe (≥45 mmol/L, marked weakness, arrhythmia).",
+   "b": [
+    "Mild: HCO₃⁻ 28‑34 mmol/L; moderate: 35‑44 mmol/L; severe: ≥45 mmol/L."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped by loss of acid, gain of alkali, or renal retention. In most settings, vomiting and diuretic use are top, but tropical infections and herbal remedies also matter.",
+   "b": [
+    "Vomiting or nasogastric suction – loss of HCl (most common).",
+    "Loop or thiazide diuretics – chloride‑responsive renal loss.",
+    "Excess alkali ingestion (antacids, milk‑alkali).",
+    "Hyperaldosteronism, Cushing’s, licorice – renal H⁺ retention.",
+    "Tubulopathies (Bartter, Gitelman) – especially in low‑resource areas.",
+    "Severe volume depletion from diarrhoea with concurrent alkali therapy."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have nausea, vomiting, or a history of diuretic use, plus neuromuscular irritability (tetany, cramps) and cardiac arrhythmias from hypokalaemia.",
+   "b": [
+    "Dry mucous membranes, orthostatic hypotension (volume depletion).",
+    "Muscle weakness, paresthesias, carpopedal spasm (hypokalaemia).",
+    "Palpitations, prolonged QT or arrhythmias."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Focused labs and bedside tests clarify the aetiology and severity, guiding therapy.",
+   "t": [
+    {
+     "a": "Serum potassium",
+     "b": "Is hypokalaemia present? Low K⁺ worsens alkalosis and predisposes to arrhythmia; replacement is essential."
+    },
+    {
+     "a": "Urine potassium",
+     "b": "Is renal K⁺ loss ongoing? High urine K⁺ (>20 mmol/L) indicates renal wasting (diuretics, hyperaldosteronism)."
+    },
+    {
+     "a": "Chest X‑ray (if respiratory compensation unclear)",
+     "b": "Is there pulmonary disease limiting hypoventilation? Absence of lung pathology supports primary metabolic alkalosis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe alkalosis can precipitate life‑threatening cardiac events and central nervous system depression.",
+   "b": [
+    "Severe hypokalaemia (<2.5 mmol/L) → ventricular arrhythmias.",
+    "Very high bicarbonate (>45 mmol/L) → decreased cerebral blood flow, seizures.",
+    "Concurrent metabolic acidosis (mixed disorder) → masked pH changes."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then correct volume, chloride, and potassium deficits while monitoring electrolytes and pH.",
+   "b": [
+    "Stop vomiting source; treat obstruction or give anti‑emetics.",
+    "Discontinue offending diuretics; switch to potassium‑sparing agents if needed.",
+    "IV isotonic saline restores volume and chloride, promoting renal bicarbonate excretion.",
+    "IV potassium chloride (or oral KCl) replaces K⁺; avoid rapid IV K⁺ without ECG monitoring.",
+    "If chloride‑resistant (e.g., hyperaldosteronism), give amiloride or spironolactone to block distal H⁺/K⁺ exchange."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑check electrolytes after each intervention, educate on medication use, and address chronic causes.",
+   "b": [
+    "Daily serum electrolytes until stable.",
+    "Educate patients on proper diuretic dosing and need for potassium‑rich diet.",
+    "Screen for endocrine causes if alkalosis recurs."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also raise pH but have different mechanisms.",
+   "b": [
+    "Respiratory alkalosis – primary low PCO₂, not high HCO₃⁻.",
+    "Mixed metabolic acidosis + respiratory alkalosis – may show normal pH despite severe disorders."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may appear normal despite serious disturbance.",
+   "b": [
+    "Urine chloride can be low in early volume depletion, falsely suggesting renal cause.",
+    "Serum bicarbonate may be normal if a mixed disorder masks the alkalosis; always interpret with pH and PCO₂."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe weakness with arrhythmia or syncope",
+  "Persistent vomiting with inability to retain fluids",
+  "Sudden onset of seizures or altered mental status"
+ ],
+ "faq": [
+  {
+   "q": "Why does vomiting cause metabolic alkalosis?",
+   "a": "Stomach acid (HCl) is lost, removing H⁺ and Cl⁻, leaving a relative excess of bicarbonate."
+  },
+  {
+   "q": "How does hypokalaemia worsen alkalosis?",
+   "a": "Low K⁺ drives H⁺ into cells, raising extracellular pH; kidneys also retain bicarbonate to conserve K⁺."
+  },
+  {
+   "q": "When is saline preferred over bicarbonate therapy?",
+   "a": "In chloride‑responsive alkalosis, saline restores volume and chloride, allowing kidneys to excrete excess bicarbonate."
+  }
+ ],
+ "exam": [
+  "Explain the physiological basis of respiratory compensation in metabolic alkalosis and calculate expected PCO₂ for a given HCO₃⁻.",
+  "List the three most common causes of metabolic alkalosis in a low‑resource setting and describe how you would differentiate them.",
+  "Describe the step‑wise management of a patient with hypokalaemic, hypochloraemic metabolic alkalosis due to loop diuretics."
+ ],
+ "related": [
+  "Metabolic acidosis",
+  "Hypokalaemia",
+  "Diuretic therapy",
+  "Gastrointestinal losses",
+  "Hyperaldosteronism",
+  "Renal tubular acidosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

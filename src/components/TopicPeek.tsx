@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Maximize2 } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
-import { loadPeek, topicPeek, useTopicPeekSlug, type Peek } from "@/lib/topicPeek";
+import { enrichPeek, loadPeek, topicPeek, useTopicPeekSlug, type Peek } from "@/lib/topicPeek";
 import { setNoteReturn } from "@/lib/noteReturn";
 import { pageForPeek } from "@/lib/topics";
 
@@ -26,16 +26,20 @@ export default function TopicPeekHost() {
     origin.current = { path: `${window.location.pathname}${window.location.search}`, title: document.title.split(" | ")[0].split(" — ")[0] || "where you were", y: window.scrollY };
     let on = true;
     setPeek(null); setFilling(false);
-    const blank: Peek = { slug, name: slug.replace(/-/g, " ").replace(/\b([a-z])/g, (m) => m.toUpperCase()), category: "", summary: "", points: [], image: null };
-    void loadPeek(slug).catch(() => blank).then(async (p) => {
+    const blank: Omit<Peek, "names" | "written"> = { slug, name: slug.replace(/-/g, " ").replace(/\b([a-z])/g, (m) => m.toUpperCase()), category: "", summary: "", points: [], image: null };
+    void loadPeek(slug).catch(() => ({ ...blank, names: [blank.name], written: false })).then(async (p0) => {
+      if (!on) return;
+      setPeek(p0);
+      // the picture and any online introduction arrive a moment later, without moving what is already on screen
+      const p = await enrichPeek(p0).catch(() => p0);
       if (!on) return;
       setPeek(p);
       // nothing written for this topic yet: it is prepared now, and the panel fills in when it is ready
-      if (!p.summary && !p.points.length) {
+      if (!p.written && !p.points.length) {
         setFilling(true);
         const page = await pageForPeek(slug, p.name, p.category).catch(() => null);
         if (!on) return;
-        if (page) { const again = await loadPeek(slug).catch(() => p); if (on) setPeek(again); }
+        if (page) { const again = await loadPeek(slug).then((x) => enrichPeek(x)).catch(() => p); if (on) setPeek(again); }
         setFilling(false);
       }
     });
@@ -66,7 +70,7 @@ export default function TopicPeekHost() {
   return (
     <Sheet open={Boolean(slug)} onOpenChange={(o) => !o && topicPeek.close()}>
       <SheetContent side={wide ? "right" : "bottom"} className={wide ? "flex h-full w-[28rem] max-w-full flex-col gap-0 p-0 sm:max-w-md" : "flex h-[82dvh] flex-col gap-0 rounded-t-3xl p-0"}>
-        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 pb-4 pt-6" data-peek-scroll>
+        <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-5 pb-4 pt-6 [-webkit-overflow-scrolling:touch]" data-peek-scroll>
           {peek ? (
             <>
               <p className="pr-8 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{peek.category || "Quick read"}</p>

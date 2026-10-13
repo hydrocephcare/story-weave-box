@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Wound healing is a dynamic, staged process that restores skin integrity after injury. It requires coordinated cellular, molecular, and systemic factors, and failure at any stage can lead to chronic wounds or excessive scarring.",
+ "aka": [
+  "Cutaneous wound repair",
+  "Tissue regeneration"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Wound healing describes the orderly progression from haemostasis to remodeling that restores the skin barrier after trauma.",
+   "b": [
+    "Diagnosed clinically by observing the wound edge, granulation tissue, and scar formation over time."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Stages are haemostasis, inflammation, proliferation, and remodeling; severity is graded by depth (superficial, partial‑thickness, full‑thickness) and by presence of infection or ischemia.",
+   "b": [
+    "Full‑thickness wounds need more aggressive care and may need grafting."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Wounds arise from trauma, surgery, pressure, or disease. In low‑resource settings, added causes include chronic infections (TB, leprosy), vascular disease (sickle cell, peripheral arterial disease), and traditional remedies that impair healing.",
+   "b": [
+    "Mechanical trauma (lacerations, abrasions)",
+    "Surgical incisions",
+    "Pressure ulcers",
+    "Infection (bacterial, mycobacterial, fungal)",
+    "Vascular insufficiency (diabetes, sickle cell)",
+    "Nutritional deficiency (protein, zinc, vitamin C)",
+    "Medications that impair collagen (steroids, chemotherapy)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Acute wounds show a predictable colour change: red, moist granulation then pink epithelialization. Chronic wounds stay inflamed, have foul odor, and may show necrotic tissue.",
+   "b": [
+    "Pain and erythema early (inflammation)",
+    "Yellow‑white granulation tissue in proliferation",
+    "Hard, pale scar in remodeling"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests identify infection, perfusion, and systemic factors that hinder repair.",
+   "t": [
+    {
+     "a": "Wound swab culture",
+     "b": "Is there pathogenic bacteria? Guides antibiotic choice; if unavailable, treat empirically based on local flora."
+    },
+    {
+     "a": "Ankle‑brachial index (ABI)",
+     "b": "Is arterial perfusion adequate? Low ABI (<0.9) suggests ischemia needing revascularization."
+    },
+    {
+     "a": "Serum albumin, pre‑albumin",
+     "b": "Is nutritional status sufficient? Low values predict delayed healing; start supplementation."
+    },
+    {
+     "a": "HbA1c",
+     "b": "Is glycemic control poor? >7% indicates need for tighter control to improve healing."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise when any stage is disrupted, leading to infection, necrosis, or hypertrophic scarring.",
+   "b": [
+    "Rapid expansion of erythema or pain → cellulitis or necrotizing fasciitis",
+    "Foul odor, purulent discharge → deep infection",
+    "Wound edge necrosis → tissue loss",
+    "Excessive granulation (proud flesh) → may need debridement"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, optimise systemic factors, and provide local wound care.",
+   "b": [
+    "Debridement of necrotic tissue (surgical, enzymatic, autolytic)",
+    "Moist dressings (hydrocolloid, alginate) to promote granulation",
+    "Topical antimicrobials (silver sulfadiazine, honey) for contaminated wounds",
+    "Systemic antibiotics for proven infection; choose agents covering Staph aureus and Gram‑negatives, avoid prolonged use to prevent resistance",
+    "Nutritional support: protein 1.2‑1.5 g/kg, zinc 15‑30 mg/day, vitamin C 500 mg/day",
+    "Control diabetes, improve perfusion (revascularization, compression for venous ulcers)",
+    "Consider negative‑pressure wound therapy for large, complex wounds"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular reassessment ensures progression through stages and early detection of complications.",
+   "b": [
+    "Inspect wounds every 2‑3 days; document size, depth, exudate",
+    "Educate patients on off‑loading, hygiene, and nutrition",
+    "Vaccinate against tetanus; screen for HIV/TB in high‑risk areas"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic poor healing can mislead clinicians.",
+   "b": [
+    "Chronic dermatitis (inflammation without true tissue loss)",
+    "Vasculitic ulcers (immune‑mediated, not purely mechanical)",
+    "Neoplastic ulceration (cancer invasion)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory or clinical signs may appear normal despite ongoing pathology.",
+   "b": [
+    "Normal white count in early infection of immunocompromised patients",
+    "Normal ABI in calcified vessels (false‑negative); use toe‑brachial index",
+    "Serum zinc may be normal despite functional deficiency; assess clinical signs"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid spreading redness or pain beyond wound margins",
+  "Fever >38°C with wound discharge",
+  "Signs of systemic toxicity (tachycardia, hypotension, altered mental status)"
+ ],
+ "faq": [
+  {
+   "q": "Why is a moist environment better for wound healing?",
+   "a": "Moisture prevents desiccation, supports cell migration, and promotes angiogenesis, leading to faster epithelialization."
+  },
+  {
+   "q": "What is the difference between primary and secondary intention healing?",
+   "a": "Primary intention closes a clean wound with sutures, resulting in minimal scar; secondary intention leaves the wound open to granulate, producing more scar."
+  },
+  {
+   "q": "How does diabetes impair wound healing?",
+   "a": "Hyperglycemia reduces neutrophil function, impairs collagen synthesis, and causes microvascular disease, all slowing the repair process."
+  }
+ ],
+ "exam": [
+  "Describe the four stages of cutaneous wound healing and the key cellular events in each.",
+  "List three systemic factors that most commonly delay wound healing and explain how you would address each.",
+  "A patient with a full‑thickness leg ulcer has a foul odor and increasing pain. What are your red‑flag concerns and immediate management steps?"
+ ],
+ "related": [
+  "Inflammation",
+  "Infection control",
+  "Diabetic foot ulcer",
+  "Pressure ulcer",
+  "Skin grafting",
+  "Negative‑pressure wound therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

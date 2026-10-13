@@ -149,6 +149,16 @@ export async function generateTopicPage({ name, category, context, env, fetchImp
   return page.medical ? { ...page, kind: kindOf(category, name), model, generatedAt: new Date().toISOString().slice(0, 10) } : page;
 }
 
+/**
+ * Groq first (a few seconds, free, keys in turn), then Gemini (keys in turn) when Groq is out of quota or down.
+ * env: { GROQ_API_KEYS, GEMINI_API_KEYS }.
+ */
+export async function generateWithFallback(input, env) {
+  const groq = String(env.GROQ_API_KEYS ?? "").trim();
+  if (groq) { try { return await generateTopicPage({ ...input, env: { GROQ_API_KEYS: groq } }); } catch { /* fall back to Gemini */ } }
+  return generateTopicPage({ ...input, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS, GROQ_API_KEYS: groq } });
+}
+
 export const slugOf = (name) => String(name).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 export const validName = (name) => typeof name === "string" && /^[A-Za-z][A-Za-z0-9 '’()\-,./&]{2,79}$/.test(name.trim());
 

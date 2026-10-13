@@ -1,0 +1,133 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Lipoproteins are protein‑lipid complexes that ferry cholesterol and triglycerides in blood. Their density classifies them (chylomicrons, VLDL, IDL, LDL, HDL, Lp(a)) and predicts atherogenic risk.",
+ "aka": [
+  "Lipoprotein particles",
+  "Lp(a)"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Lipoproteins solubilise hydrophobic lipids in plasma, allowing transport to and from tissues. Each class differs in size, density, and lipid‑protein ratio, which determines its metabolic fate.",
+   "b": [
+    "Chylomicrons – largest, least dense, carry dietary TG to muscle and adipose.",
+    "VLDL – liver‑derived, rich in TG, becomes IDL then LDL.",
+    "LDL – main cholesterol carrier to peripheral cells; high atherogenicity.",
+    "HDL – returns excess cholesterol to liver (reverse cholesterol transport).",
+    "Lp(a) – LDL‑like particle with apolipoprotein(a); independent cardiovascular risk."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "After meals, chylomicrons enter lymph, then blood, where lipoprotein lipase (LPL) hydrolyses TG to free fatty acids. The liver secretes VLDL, which is remodeled by LPL and hepatic lipase into LDL. HDL scavenges peripheral cholesterol and delivers it to the liver via SR‑B1.",
+   "b": [
+    "LPL activity = key step for TG clearance.",
+    "ApoB‑100 is essential for VLDL/LDL assembly; ApoA‑I for HDL formation."
+   ],
+   "t": [
+    {
+     "a": "Fasting lipid panel",
+     "b": "What is the patient’s baseline cholesterol/TG profile? Guides risk stratification and need for therapy."
+    },
+    {
+     "a": "ApoB or non‑HDL cholesterol",
+     "b": "How many atherogenic particles are present? Useful when TG are high and LDL‑C is unreliable."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Hepatic synthesis rises when plasma oncotic pressure falls (e.g., nephrotic syndrome) and when insulin is low. LPL is up‑regulated by insulin and down‑regulated by fasting, inflammation, and certain drugs.",
+   "b": [
+    "Low albumin → ↑ hepatic VLDL production.",
+    "Insulin resistance → ↑ VLDL secretion, ↓ LPL activity."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Genetic or secondary factors can raise atherogenic lipoproteins or lower protective HDL, leading to premature atherosclerosis, pancreatitis, or renal complications.",
+   "b": [
+    "Familial hypercholesterolaemia (LDL receptor defect) – high LDL, early MI.",
+    "Familial combined hyperlipidaemia – high VLDL and LDL.",
+    "Elevated Lp(a) – independent risk, often familial.",
+    "Nephrotic syndrome – loss of albumin → ↑ VLDL, hypertriglyceridaemia."
+   ],
+   "t": [
+    {
+     "a": "Genetic testing for LDLR, APOB, PCSK9",
+     "b": "Is a monogenic disorder present? Confirms FH and guides cascade screening."
+    },
+    {
+     "a": "Urine protein quantification",
+     "b": "Is nephrotic syndrome causing secondary hyperlipidaemia? Guides treatment of underlying kidney disease."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Lipid abnormalities drive coronary artery disease, stroke, and peripheral arterial disease. In low‑resource settings, infections (HIV, TB) and chronic kidney disease amplify dyslipidaemia and cardiovascular risk.",
+   "b": [
+    "High LDL or Lp(a) → prioritize statin or PCSK9‑inhibitor if available.",
+    "Severe hypertriglyceridaemia (>1000 mg/dL) → risk of pancreatitis; consider fibrates or omega‑3.",
+    "Nephrotic syndrome → treat proteinuria and consider lipid‑lowering agents."
+   ],
+   "t": [
+    {
+     "a": "Coronary risk calculators (e.g., QRISK, ASCVD)",
+     "b": "What is the 10‑year cardiovascular risk? Determines intensity of lipid‑lowering therapy."
+    },
+    {
+     "a": "Serum amylase/lipase when TG >1000 mg/dL",
+     "b": "Is pancreatitis developing? Guides urgent management."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on classification, atherogenic potential, and how common secondary causes modify lipid profiles.",
+   "b": [
+    "Remember: LDL = ‘bad’, HDL = ‘good’, Lp(a) = independent risk.",
+    "Nephrotic syndrome → ↑ VLDL, TG, cholesterol.",
+    "FH diagnosis: LDL‑C >190 mg/dL or tendon xanthomas + family history."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute chest pain or dyspnoea suggesting myocardial infarction.",
+  "Severe abdominal pain with vomiting and TG >1000 mg/dL (possible pancreatitis).",
+  "Rapidly worsening oedema, foamy urine and hypoalbuminaemia indicating nephrotic syndrome complications."
+ ],
+ "faq": [
+  {
+   "q": "Why is HDL called ‘good cholesterol’?",
+   "a": "HDL removes excess cholesterol from arteries and returns it to the liver, reducing plaque formation."
+  },
+  {
+   "q": "Can diet alone normalize very high LDL in familial hypercholesterolaemia?",
+   "a": "Usually not; genetic LDLR defects require pharmacologic therapy in addition to diet."
+  },
+  {
+   "q": "What makes Lp(a) especially risky?",
+   "a": "Its apolipoprotein(a) resembles plasminogen, impairing fibrinolysis and promoting clot formation alongside atherogenesis."
+  }
+ ],
+ "exam": [
+  "Classify lipoproteins by density and state their primary lipid cargo.",
+  "Explain how nephrotic syndrome leads to hyperlipidaemia and the clinical consequences.",
+  "Describe the diagnostic criteria for familial hypercholesterolaemia and its first‑line management."
+ ],
+ "related": [
+  "Cholesterol metabolism",
+  "Atherosclerosis",
+  "Nephrotic syndrome",
+  "Familial hypercholesterolaemia",
+  "Statins and lipid‑lowering therapy",
+  "Triglyceride pancreatitis",
+  "Lipoprotein(a) genetics"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

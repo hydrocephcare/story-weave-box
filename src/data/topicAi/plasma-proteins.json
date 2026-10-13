@@ -1,0 +1,171 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Plasma proteins maintain oncotic pressure, transport substances, and mediate immune responses. Their loss or dysfunction leads to edema, hypoalbuminaemia, and impaired immunity, especially in infections common in low‑resource settings.",
+ "aka": [
+  "Serum proteins",
+  "Plasma albumin",
+  "Oncotic proteins"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Plasma proteins are soluble proteins in blood plasma, mainly albumin, globulins, and fibrinogen. Diagnosis focuses on serum protein electrophoresis and albumin concentration.",
+   "b": [
+    "Albumin <3.5 g/dL indicates hypoalbuminaemia"
+   ],
+   "t": [
+    {
+     "a": "Serum albumin",
+     "b": "Low albumin suggests loss (renal, hepatic, GI) or decreased synthesis."
+    },
+    {
+     "a": "Serum protein electrophoresis",
+     "b": "A spike indicates plasma cell dyscrasia or lymphoma."
+    },
+    {
+     "a": "Urine protein/creatinine ratio",
+     "b": "High ratio points to nephrotic syndrome or glomerulonephritis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by albumin level and clinical edema. Staging of nephrotic syndrome follows proteinuria and hypoalbuminaemia thresholds.",
+   "b": [
+    "Mild: albumin 3.0‑3.5 g/dL; moderate: 2.5‑3.0; severe: <2.5"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Loss of plasma proteins occurs via kidneys, liver, gut, or skin. Infections and inflammatory states increase capillary permeability.",
+   "b": [
+    "Nephrotic syndrome (minimal change, FSGS)",
+    "Liver cirrhosis",
+    "Malnutrition",
+    "Severe infections (sepsis, malaria)",
+    "Trauma"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop generalized edema, ascites, pleural effusion, and fatigue. Infections may worsen due to impaired transport of antibodies.",
+   "b": [
+    "Peripheral pitting edema",
+    "Weight gain",
+    "Shortness of breath"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests assess protein loss, synthesis, and immune status.",
+   "t": [
+    {
+     "a": "Serum albumin",
+     "b": "Confirms hypoalbuminaemia."
+    },
+    {
+     "a": "Urine protein/creatinine ratio",
+     "b": "Suggests renal loss."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Supports hepatic cause."
+    },
+    {
+     "a": "Serum IgG, IgM, IgA",
+     "b": "Indicates protein loss or decreased synthesis."
+    },
+    {
+     "a": "Coagulation profile",
+     "b": "May signal consumption or liver failure."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid weight gain, respiratory distress, or altered mental status suggest fluid overload or severe hypoalbuminaemia.",
+   "b": [
+    "Respiratory failure",
+    "Cardiac decompensation",
+    "Sepsis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, replace albumin if needed, and support organ function.",
+   "b": [
+    "Treat infection with appropriate antibiotics"
+   ],
+   "t": [
+    {
+     "a": "Albumin infusion",
+     "b": "Improves intravascular volume and reduces edema."
+    },
+    {
+     "a": "Diuretics",
+     "b": "Promotes diuresis but monitor electrolytes."
+    },
+    {
+     "a": "ACE inhibitors/ARBs",
+     "b": "Reduce glomerular pressure and protein loss."
+    },
+    {
+     "a": "Nutritional support",
+     "b": "Increase calories and protein to aid synthesis."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor albumin, edema, and renal function. Prevent infections and malnutrition.",
+   "b": [
+    "Regular albumin checks every 4–6 weeks"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hypoalbuminaemia can mimic heart failure or liver disease; differentiate by imaging and liver tests.",
+   "b": [
+    "Heart failure (fluid overload)",
+    "Cirrhosis (low synthetic function)"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe edema with respiratory distress",
+  "Rapid weight gain",
+  "Altered consciousness",
+  "Signs of infection unresponsive to treatment"
+ ],
+ "faq": [
+  {
+   "q": "Why does low albumin cause edema?",
+   "a": "Albumin maintains oncotic pressure; low levels allow fluid to leak into interstitial spaces."
+  },
+  {
+   "q": "Can infections cause hypoalbuminaemia?",
+   "a": "Yes, sepsis increases capillary permeability and protein loss."
+  },
+  {
+   "q": "Is albumin replacement always needed?",
+   "a": "Only if hypoalbuminaemia is severe or symptomatic; otherwise treat the cause."
+  }
+ ],
+ "exam": [
+  "Explain how hypoalbuminaemia leads to pulmonary edema in a patient with nephrotic syndrome.",
+  "Describe the diagnostic workup for a patient presenting with generalized edema and low serum albumin.",
+  "Discuss management steps for a patient with severe hypoalbuminaemia due to liver cirrhosis in a low‑resource setting."
+ ],
+ "related": [
+  "Nephrotic syndrome",
+  "Liver cirrhosis",
+  "Sepsis",
+  "Malnutrition",
+  "Burns"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

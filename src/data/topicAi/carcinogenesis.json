@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Carcinogenesis is the multistep transformation of normal cells into malignant ones driven by genetic damage. Clinicians must recognize risk factors, interpret diagnostic tests, and initiate early treatment to improve outcomes.",
+ "aka": [
+  "Cancer development",
+  "Oncogenesis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Carcinogenesis is the process by which normal cells acquire mutations that enable uncontrolled growth and invasion. Diagnosis relies on histology, immunohistochemistry, and molecular testing to confirm malignancy and identify driver mutations.",
+   "b": [
+    "Histologic confirmation of atypia and invasion",
+    "Immunostains for lineage markers",
+    "Molecular profiling for actionable mutations"
+   ],
+   "t": [
+    {
+     "a": "Biopsy",
+     "b": "Presence of invasive atypical cells confirms cancer"
+    },
+    {
+     "a": "Immunohistochemistry",
+     "b": "Markers (e.g., CK7, CK20) guide origin"
+    },
+    {
+     "a": "Next‑generation sequencing",
+     "b": "Identifies targetable alterations (e.g., EGFR, KRAS)"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging uses TNM to describe tumor size, nodal involvement, and metastasis, guiding prognosis and treatment. Early stage often curable; advanced disease requires systemic therapy.",
+   "b": [
+    "T: tumor size/extent",
+    "N: regional lymph nodes",
+    "M: distant metastasis"
+   ],
+   "t": [
+    {
+     "a": "Imaging (CT/MRI)",
+     "b": "Defines T and N status"
+    },
+    {
+     "a": "PET-CT",
+     "b": "Detects M1 disease"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Carcinogenesis arises from genetic mutations caused by exogenous agents (tobacco, UV, aflatoxin) or endogenous processes (replication errors, oxidative stress). Viral infections (HPV, HBV, HCV) are major contributors, especially in low‑resource settings.",
+   "b": [
+    "Tobacco smoke",
+    "UV radiation",
+    "Aflatoxin B1",
+    "HIV/HBV/HCV infection"
+   ],
+   "t": [
+    {
+     "a": "Serology for HBV/HCV",
+     "b": "Chronic infection increases liver cancer risk"
+    },
+    {
+     "a": "HPV DNA testing",
+     "b": "Predicts cervical or oropharyngeal cancer"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms are often nonspecific: weight loss, fatigue, pain, or a mass. Site‑specific signs include hematuria for bladder cancer or jaundice for hepatocellular carcinoma.",
+   "b": [
+    "Unexplained weight loss",
+    "Persistent cough or hemoptysis",
+    "Abdominal pain or mass"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Detects masses or lymphadenopathy"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A stepwise approach combines imaging, laboratory, and tissue studies to confirm malignancy, assess extent, and guide therapy.",
+   "b": [
+    "Imaging (CT, MRI, ultrasound)",
+    "Laboratory (CBC, LFTs, tumor markers)",
+    "Biopsy with histology and molecular tests"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "May indicate marrow involvement or chronic disease"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Supports liver cancer diagnosis"
+    },
+    {
+     "a": "Tumor markers (AFP, CEA, PSA)",
+     "b": "Assist in diagnosis and monitoring"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapidly enlarging masses, unexplained bleeding, or new neurological deficits suggest aggressive disease or metastasis. Complications include cachexia, organ failure, and treatment‑related toxicity.",
+   "b": [
+    "Sudden pain or swelling",
+    "Unexplained hematuria or hemoptysis",
+    "New neurological signs"
+   ],
+   "t": [
+    {
+     "a": "Imaging",
+     "b": "Indicates advanced disease"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly enlarging mass",
+  "Unexplained bleeding",
+  "New neurological deficits"
+ ],
+ "faq": [
+  {
+   "q": "What is the earliest sign of carcinogenesis?",
+   "a": "Genetic mutations are silent; the first clinical sign is usually a mass or symptom related to the tumor site."
+  },
+  {
+   "q": "Can lifestyle changes reverse cancer?",
+   "a": "They can reduce risk and improve outcomes but cannot reverse established malignancy."
+  },
+  {
+   "q": "Why is HPV vaccination important?",
+   "a": "It prevents the high‑risk viral oncoproteins E6/E7 that drive cervical and oropharyngeal cancers."
+  }
+ ],
+ "exam": [
+  "Explain how tobacco smoke leads to mutations that drive lung cancer.",
+  "Describe the TNM staging system for colorectal cancer and its clinical implications.",
+  "Outline the first‑line management of a patient with newly diagnosed stage II breast cancer."
+ ],
+ "related": [
+  "Oncogenic viruses",
+  "Tumor staging",
+  "Cancer screening",
+  "Chemotherapy mechanisms",
+  "Public health and cancer prevention"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

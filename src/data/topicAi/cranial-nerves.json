@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "Cranial nerves are bundles of axons that exit the brain to perform sensory, motor, or mixed functions. Their anatomy guides clinical localization of brainstem lesions and informs targeted investigations. Understanding their pathways helps clinicians diagnose and manage neurological deficits efficiently.",
+ "aka": [
+  "Cranial Nerve System"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The twelve cranial nerves arise from the brain or brainstem and serve head, neck, and upper thorax structures. They are classified by function: sensory, motor, or mixed. Their arrangement reflects embryologic origin and functional demands.",
+   "b": [
+    "12 nerves, numbered I–XII",
+    "Each has a specific anatomical course and target tissue"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Nerves originate from nuclei in the brainstem (midbrain, pons, medulla) or the forebrain (olfactory). They travel through foramina or canals, often accompanied by arteries, and branch to reach target organs.",
+   "b": [
+    "Nerve roots: cranial nerve I exits through cribriform plate; others exit via skull foramina"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Cranial nerves run alongside major vessels and other nerves. Their proximity to the meninges and skull base structures explains common compressive lesions.",
+   "b": [
+    "CN V and VII share the stylomastoid foramen",
+    "CN IX, X, XI exit via jugular foramen"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Each nerve receives arterial supply from branches of the internal carotid or vertebral arteries, with venous drainage into dural sinuses.",
+   "b": [
+    "Ophthalmic artery supplies CN II",
+    "Posterior inferior cerebellar artery supplies CN VIII"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Motor fibers originate from motor nuclei; sensory fibers arise from sensory nuclei or dorsal root ganglia. Mixed nerves contain both.",
+   "b": [
+    "CN III, IV, VI: oculomotor, trochlear, abducens motor nuclei"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Functions include vision, smell, taste, facial expression, mastication, eye movement, swallowing, and autonomic control of heart and lungs.",
+   "b": [
+    "CN VII: facial expression and taste (anterior 2/3)"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Lesions can be focal (compressive, ischemic) or diffuse (infections, toxins). Clinical signs guide lesion localization using the cranial nerve nuclei map.",
+   "b": [
+    "Unilateral CN VI palsy suggests cavernous sinus thrombosis"
+   ],
+   "t": [
+    {
+     "a": "MRI brain",
+     "b": "Detects compressive lesions such as tumors or aneurysms; abnormal signal indicates mass effect"
+    },
+    {
+     "a": "CT angiography",
+     "b": "Visualizes vascular causes like aneurysm; normal result rules out large vessel occlusion"
+    },
+    {
+     "a": "Lumbar puncture",
+     "b": "Assesses infectious or inflammatory processes affecting cranial nerves; normal opening pressure excludes meningitis"
+    },
+    {
+     "a": "Nerve conduction study",
+     "b": "Differentiates demyelinating neuropathies from compressive lesions; abnormal latency suggests peripheral involvement"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Use the cranial nerve nuclei map to localize lesions: midbrain (III, IV), pons (VI, VII), medulla (XII). Remember that contralateral deficits in motor and sensory systems point to brainstem lesions.",
+   "b": [
+    "Check pupils for anisocoria (CN III, IV, VI)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause (e.g., antibiotics for meningitis, steroids for demyelination). Provide supportive care: airway protection, pain control, and rehabilitation.",
+   "b": [
+    "Antibiotics for bacterial meningitis"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Some cranial nerve deficits mimic peripheral neuropathies or musculoskeletal disorders.",
+   "b": [
+    "CN V facial pain vs trigeminal neuralgia"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal imaging does not exclude small compressive lesions; normal CSF opening pressure can still indicate early meningitis.",
+   "b": [
+    "Early aneurysm may appear normal on CT"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests confirm diagnosis and guide treatment.",
+   "t": [
+    {
+     "a": "MRI brain with contrast",
+     "b": "Detects demyelinating plaques, tumors, or vascular lesions; abnormal enhancement suggests active inflammation"
+    },
+    {
+     "a": "CSF analysis",
+     "b": "Elevated protein and lymphocytic pleocytosis indicate viral meningitis; neutrophilic pleocytosis suggests bacterial infection"
+    },
+    {
+     "a": "Serology for HIV, TB",
+     "b": "Positive results explain cranial neuropathies in immunocompromised patients"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden unilateral facial droop with headache",
+  "Rapidly progressive vision loss with cranial nerve involvement",
+  "Difficulty breathing due to cranial nerve dysfunction"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of isolated CN VII palsy?",
+   "a": "Bell’s palsy, often viral reactivation; treat with steroids and supportive care."
+  },
+  {
+   "q": "How does a brainstem stroke present with cranial nerve signs?",
+   "a": "Depends on nucleus involved; e.g., lateral medullary syndrome shows CN IX, X, XI deficits."
+  },
+  {
+   "q": "Can infections cause multiple cranial nerve palsies?",
+   "a": "Yes, meningitis or Lyme disease can affect several nerves simultaneously."
+  }
+ ],
+ "exam": [
+  "Explain how a lesion at the midbrain would affect cranial nerves III, IV, and VI and describe the expected clinical signs.",
+  "Describe the diagnostic workup for a patient with sudden CN IX and X palsies.",
+  "Outline the management steps for a patient with suspected cranial nerve involvement due to bacterial meningitis."
+ ],
+ "related": [
+  "Brainstem Anatomy",
+  "Cranial Nerve Pathology",
+  "Neuroimaging of the Brain",
+  "Peripheral Neuropathies"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

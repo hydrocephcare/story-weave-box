@@ -1,0 +1,153 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Acute lung injury (ALI) is a rapid, non‑cardiogenic pulmonary edema caused by diffuse alveolar damage. It presents with hypoxemia and bilateral infiltrates within hours of an inciting event.",
+ "aka": [
+  "Acute Respiratory Distress Syndrome (ARDS) when severe"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ALI is defined by acute onset (<1 week), bilateral infiltrates on chest imaging, PaO₂/FiO₂ ≤ 300 mmHg, and no evidence of left‑sided heart failure or fluid overload.",
+   "b": [
+    "PaO₂/FiO₂ ratio distinguishes severity",
+    "Exclusion of cardiac cause by echocardiography or BNP"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Berlin criteria stage the condition by PaO₂/FiO₂: mild (200‑300), moderate (100‑200), severe (<100) with PEEP ≥ 5 cm H₂O.",
+   "b": [
+    "Higher severity predicts higher mortality",
+    "Guides ventilator settings"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the precipitating insult; common triggers differ by setting.",
+   "b": [
+    "Sepsis (especially gram‑negative) – most frequent worldwide",
+    "Aspiration of gastric contents – common in low‑resource settings",
+    "Pneumonia (TB, bacterial, viral) – prevalent in tropics",
+    "Transfusion‑Related Acute Lung Injury (TRALI) – within 6 h of blood product",
+    "Severe malaria, sickle‑cell crisis, or inhalation injury"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop sudden dyspnea, tachypnea, and hypoxemia; auscultation shows crackles without signs of fluid overload.",
+   "b": [
+    "Chest X‑ray: diffuse bilateral infiltrates",
+    "No elevated JVP, no peripheral edema"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests confirm ALI, exclude cardiac causes, and search for triggers.",
+   "t": [
+    {
+     "a": "Arterial blood gas",
+     "b": "Is there hypoxemia and what is the PaO₂/FiO₂ ratio? Low ratio confirms ALI severity."
+    },
+    {
+     "a": "Chest radiograph or bedside ultrasound",
+     "b": "Are infiltrates present bilaterally? Confirms diffuse alveolar damage."
+    },
+    {
+     "a": "Echocardiography or BNP",
+     "b": "Is left‑ventricular dysfunction present? Normal results support non‑cardiogenic edema."
+    },
+    {
+     "a": "Blood cultures, sputum Gram stain, TB PCR",
+     "b": "Is infection the trigger? Positive results guide antimicrobial therapy."
+    },
+    {
+     "a": "Transfusion history within 6 h",
+     "b": "Was a blood product given? Suggests TRALI; if unavailable, rely on timing and donor risk factors."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid progression can lead to refractory hypoxemia, multi‑organ failure, and death.",
+   "b": [
+    "PaO₂/FiO₂ < 100 despite optimal ventilation",
+    "New onset hypotension or oliguria",
+    "Severe acidosis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then provide lung‑protective supportive care.",
+   "b": [
+    "Low‑tidal‑volume ventilation (6 mL/kg predicted body weight) to limit barotrauma",
+    "Positive end‑expiratory pressure (PEEP) to keep alveoli open",
+    "Prone positioning for severe ARDS",
+    "Conservative fluid strategy to avoid worsening edema",
+    "Empiric antibiotics if infection suspected; anti‑TB therapy if indicated",
+    "Corticosteroids only for specific causes (e.g., severe inflammation) – avoid routine use"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilization, monitor for resolution and address modifiable risk factors.",
+   "b": [
+    "Gradual weaning from ventilator once oxygenation improves",
+    "Vaccination (influenza, pneumococcus) to reduce future infections",
+    "Avoid high‑risk transfusions – use male plasma donors"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause acute respiratory distress but differ in pathophysiology.",
+   "b": [
+    "Transfusion‑Associated Circulatory Overload (TACO) – cardiogenic edema, high BNP",
+    "Pulmonary embolism – sudden hypoxemia with clear lungs",
+    "High‑altitude pulmonary edema – exposure history"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may appear normal early or be falsely abnormal.",
+   "b": [
+    "BNP can be mildly elevated in sepsis, not ruling out ALI",
+    "Chest X‑ray may be normal in the first few hours; repeat if suspicion persists"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid worsening of breathlessness with SpO₂ < 90% despite oxygen",
+  "New onset confusion or cyanosis",
+  "Severe hypotension or chest pain after transfusion"
+ ],
+ "faq": [
+  {
+   "q": "How is ALI different from ARDS?",
+   "a": "ALI has PaO₂/FiO₂ ≤ 300 mmHg; ARDS is more severe with ≤ 200 mmHg. Both share the same pathologic process."
+  },
+  {
+   "q": "Why avoid high tidal volumes?",
+   "a": "Large volumes increase alveolar stretch, worsening inflammation and leading to ventilator‑induced lung injury."
+  },
+  {
+   "q": "Can a normal BNP rule out ALI?",
+   "a": "No; BNP helps identify cardiac edema but can be modestly raised in sepsis. Clinical context remains essential."
+  }
+ ],
+ "exam": [
+  "Compare and contrast the diagnostic criteria for ALI and ARDS, including severity thresholds.",
+  "List the three most common causes of ALI in low‑resource settings and explain why they are prevalent.",
+  "Explain the rationale for low‑tidal‑volume ventilation and how it reduces mortality in ALI."
+ ],
+ "related": [
+  "Acute Respiratory Distress Syndrome (ARDS)",
+  "Transfusion‑Related Acute Lung Injury (TRALI)",
+  "Sepsis‑induced lung injury",
+  "Pulmonary edema (cardiogenic vs non‑cardiogenic)",
+  "Ventilator‑associated lung injury"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

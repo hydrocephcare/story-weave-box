@@ -1,0 +1,138 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Immunodeficiency is a failure of the immune system to protect against infection, leading to recurrent, severe, or opportunistic infections. Diagnosis combines clinical history, laboratory tests, and exclusion of secondary causes. Management focuses on treating infections, replacing missing antibodies, and addressing underlying triggers.",
+ "aka": [
+  "Immune deficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Immunodeficiency is a defect in innate or adaptive immunity that increases susceptibility to infections. Diagnosis requires a high index of suspicion, a detailed infection history, and laboratory confirmation of immune defects.",
+   "b": [
+    "Recurrent sinopulmonary infections",
+    "Opportunistic infections (e.g., PCP, CMV)",
+    "Failure to thrive in children"
+   ],
+   "t": [
+    {
+     "a": "CBC with differential",
+     "b": "Low neutrophils or lymphocytes suggest innate or adaptive defects"
+    },
+    {
+     "a": "Serum immunoglobulins (IgG, IgA, IgM)",
+     "b": "Low IgG/IgA/IgM indicates humoral deficiency"
+    },
+    {
+     "a": "Lymphocyte subset analysis (flow cytometry)",
+     "b": "Low T or B cells point to cellular or humoral defects"
+    },
+    {
+     "a": "HIV test",
+     "b": "Positive HIV indicates acquired immunodeficiency"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by infection frequency, organ involvement, and immune cell counts. The NIH Common Variable Immunodeficiency (CVID) classification uses IgG levels and infection history.",
+   "b": [
+    "Mild: isolated infections, normal IgG",
+    "Moderate: recurrent infections, IgG 2–3 SD below mean",
+    "Severe: life‑threatening infections, IgG < 2 SD below mean"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary causes are inherited defects; secondary causes are common in low‑resource settings and include infections, malnutrition, and medications.",
+   "b": [
+    "Secondary: HIV, TB, malaria, hepatitis B, malnutrition, chronic steroid use, herbal remedies"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with frequent, severe, or unusual infections, often with normal inflammatory markers. Children may have failure to thrive; adults may have chronic lung disease.",
+   "b": [
+    "Severe infections with atypical organisms (e.g., Nocardia, Aspergillus)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm the type of immune defect and rule out secondary causes. When tests are unavailable, a clinical diagnosis guides empiric therapy.",
+   "b": [
+    "PCR for CMV, EBV if available"
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include rapidly progressive infections, failure to respond to antibiotics, and opportunistic infections. Complications can be fatal if untreated.",
+   "b": [
+    "Progressive lymphoid malignancy in CVID"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide antimicrobial therapy, replace missing antibodies, and monitor immune status. Avoid drugs that worsen immunosuppression.",
+   "b": [
+    "Avoid live vaccines in severe immunodeficiency"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of immunoglobulin levels, infection history, and vaccination status is essential. Prevention includes infection control, nutrition, and early treatment of infections.",
+   "b": [
+    "Prompt treatment of any infection"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Immunodeficiency can mimic chronic infections, autoimmune disease, or malignancy. Distinguish by immune workup and infection pattern.",
+   "b": [
+    "Lymphoma"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal in acute infection or low in malnutrition. Clinical context is critical.",
+   "b": [
+    "Neutrophil count may be normal in early HIV infection"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sepsis",
+  "Unexplained weight loss",
+  "Persistent fever >2 weeks",
+  "New opportunistic infection (e.g., PCP, CMV)"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of acquired immunodeficiency?",
+   "a": "HIV infection is the most common acquired cause worldwide."
+  },
+  {
+   "q": "Can immunodeficiency be cured?",
+   "a": "Primary immunodeficiencies are usually lifelong; treatment focuses on preventing infections and replacing missing antibodies."
+  },
+  {
+   "q": "Do vaccines help people with immunodeficiency?",
+   "a": "Inactivated vaccines are safe and recommended; live vaccines are contraindicated in severe cases."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic criteria for common variable immunodeficiency and how you would confirm the diagnosis in a resource‑limited setting.",
+  "Describe the management plan for a child with recurrent bacterial pneumonia and low IgG levels.",
+  "Discuss the red flags that would prompt urgent referral for a patient with suspected immunodeficiency."
+ ],
+ "related": [
+  "HIV infection",
+  "Common variable immunodeficiency",
+  "X‑linked agammaglobulinaemia",
+  "DiGeorge syndrome",
+  "Opportunistic infections"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,104 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Gene expression is the process by which DNA instructions become functional proteins. Clinicians must understand how regulation failures cause disease and guide targeted therapy.",
+ "aka": [
+  "Transcription and translation",
+  "Gene transcription",
+  "Protein synthesis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Gene expression converts genetic code into proteins that perform cellular functions. It underlies growth, metabolism, immune response and drug action.",
+   "b": [
+    "DNA → mRNA (transcription) → protein (translation)",
+    "Key players: RNA polymerase, ribosomes, transcription factors"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "RNA polymerase binds promoters on B‑DNA, synthesising pre‑mRNA that is spliced, capped and poly‑adenylated. Mature mRNA is exported to the cytoplasm for ribosomal translation.",
+   "b": [
+    "Promoter → transcription start site",
+    "5' cap, intron removal, 3' poly‑A tail",
+    "Ribosome reads codons to build polypeptide"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Expression is controlled at transcription, RNA processing, translation and protein stability. Hormone‑bound receptors, epigenetic marks and micro‑RNAs fine‑tune output.",
+   "b": [
+    "Steroid receptors act as transcription factors",
+    "DNA methylation silences genes",
+    "miRNA can block translation"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Aberrant expression leads to over‑ or under‑production of proteins, causing metabolic, neoplastic or infectious disease.",
+   "b": [
+    "Oncogene activation (e.g., MYC) → uncontrolled growth",
+    "Tumour suppressor loss (e.g., TP53) → failed apoptosis",
+    "Promoter mutations → hereditary anaemias",
+    "Epigenetic silencing → viral latency"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Many diagnostics and therapies target gene expression: hormone‑responsive cancers, viral infections, and inherited metabolic disorders.",
+   "b": [
+    "Hormone‑driven breast cancer uses ER‑mediated transcription",
+    "HIV latency depends on chromatin silencing",
+    "Thalassaemia results from promoter mutations"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the flow of information, key regulatory mechanisms, and disease examples where expression is altered.",
+   "b": [
+    "Distinguish B‑DNA (active) from A‑/Z‑DNA (inactive)",
+    "Link steroid receptors to transcriptional changes",
+    "Recall MYC’s role in the Warburg effect"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute leukemia with rapid blast proliferation",
+  "Severe metabolic crisis from enzyme deficiency (e.g., urea cycle disorder)",
+  "Rapidly progressive neurodegeneration due to transcription factor mutation"
+ ],
+ "faq": [
+  {
+   "q": "Why do steroid hormones affect gene expression?",
+   "a": "They cross cell membranes, bind intracellular receptors that act as transcription factors, altering target gene transcription."
+  },
+  {
+   "q": "What is the clinical impact of DNA methylation?",
+   "a": "Hypermethylation can silence tumour suppressor genes, contributing to cancer; hypomethylation may activate oncogenes."
+  },
+  {
+   "q": "How can gene expression be measured in patients?",
+   "a": "Techniques include RT‑PCR for mRNA levels, microarrays or RNA‑seq for global profiling, and immunohistochemistry for protein products."
+  }
+ ],
+ "exam": [
+  "Explain how a promoter mutation can cause a hereditary haemolytic anaemia.",
+  "Describe the steps by which a steroid hormone alters target cell function.",
+  "Identify two ways epigenetic changes contribute to cancer development."
+ ],
+ "related": [
+  "DNA replication",
+  "Transcription factors",
+  "Epigenetics",
+  "RNA processing",
+  "Protein synthesis",
+  "Hormone receptors",
+  "Oncogenes",
+  "Inherited metabolic disorders"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Urinary tract infection (UTI) is an inflammation of the urinary system caused by bacteria, most often E. coli. Diagnosis relies on symptoms, urine dipstick, and culture. Management balances effective antibiotics with local resistance patterns and patient safety.",
+ "aka": [
+  "Urinary tract infection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "UTI is an infection of any part of the urinary tract. Diagnosis starts with clinical suspicion, confirmed by a positive urine dipstick for leukocyte esterase or nitrites and a urine culture showing ≥10⁵ CFU/mL of a single organism.",
+   "b": [
+    "Symptoms: dysuria, frequency, urgency, suprapubic pain, fever.",
+    "Risk factors: female sex, catheter use, pregnancy, diabetes, structural abnormalities."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "UTI severity is staged by anatomic location and systemic involvement. Simple cystitis is uncomplicated; pyelonephritis is upper tract infection; urosepsis is systemic spread.",
+   "b": [
+    "Uncomplicated cystitis: no fever, no flank pain.",
+    "Complicated cystitis: fever, flank pain, pregnancy, diabetes, catheter.",
+    "Pyelonephritis: fever, chills, flank pain, costovertebral angle tenderness.",
+    "Urosepsis: hypotension, altered mental status, organ dysfunction."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The majority of UTIs are caused by gram‑negative rods, especially E. coli, that ascend from the perineum. Other organisms include Klebsiella, Proteus, Enterococcus, and in low‑resource settings, Staphylococcus saprophyticus and Candida.",
+   "b": [
+    "E. coli (most common)",
+    "Klebsiella",
+    "Proteus",
+    "Enterococcus",
+    "Staph saprophyticus",
+    "Candida"
+   ],
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Detects leukocyte esterase and nitrites; positive suggests bacterial infection."
+    },
+    {
+     "a": "Urine culture",
+     "b": "Identifies organism and antibiotic susceptibility; confirms diagnosis."
+    },
+    {
+     "a": "Urine microscopy",
+     "b": "Counts white cells and bacteria; helps gauge severity."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report painful urination, increased frequency, urgency, and sometimes fever. In children, fever and poor urine stream may be the only clues.",
+   "b": [
+    "Adults: dysuria, frequency, suprapubic pain, low‑grade fever.",
+    "Children: fever, irritability, poor stream, abdominal pain.",
+    "Pregnancy: fever, flank pain, risk of pyelonephritis."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests confirm infection and guide therapy. In low‑resource settings, a dipstick plus microscopy may suffice when culture is unavailable.",
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Answers whether leukocytes or nitrites are present; a positive result supports infection."
+    },
+    {
+     "a": "Urine microscopy",
+     "b": "Answers if white cells or bacteria are seen; helps estimate bacterial load."
+    },
+    {
+     "a": "Urine culture",
+     "b": "Answers which organism is present and its antibiotic sensitivity; essential for complicated or recurrent cases."
+    },
+    {
+     "a": "Blood cultures",
+     "b": "Answers if bacteremia is present; indicated in fever, chills, or suspected sepsis."
+    },
+    {
+     "a": "Renal ultrasound",
+     "b": "Answers if obstruction or stones are present; indicated in recurrent or complicated UTIs."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed if there is hypotension, altered mental status, severe flank pain, or signs of sepsis. Complications include pyelonephritis, urosepsis, renal scarring, and infertility.",
+   "b": [
+    "Severe flank pain with fever – possible pyelonephritis.",
+    "Hypotension or tachycardia – possible urosepsis.",
+    "Recurrent UTIs in children – risk of renal scarring.",
+    "Pregnancy with UTI – risk of preterm labor."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the identified organism with an appropriate antibiotic, considering local resistance. Supportive care includes hydration and pain control. Monitor for treatment failure or complications.",
+   "b": [
+    "First‑line: nitrofurantoin or trimethoprim‑sulfamethoxazole for uncomplicated cystitis.",
+    "Second‑line: fluoroquinolones or beta‑lactams for resistant strains.",
+    "Avoid: fluoroquinolones in pregnancy; avoid NSAIDs in severe infection.",
+    "Supportive: oral fluids, analgesia, and monitoring of symptoms."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑check urine after treatment if symptoms persist. Prevention focuses on hydration, proper perineal hygiene, and early treatment of asymptomatic bacteriuria in high‑risk groups.",
+   "b": [
+    "Encourage 2–3 L of water daily.",
+    "Use front‑to‑back wiping.",
+    "Avoid unnecessary catheter use.",
+    "Screen pregnant women for asymptomatic bacteriuria."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "UTI can mimic prostatitis, interstitial cystitis, and sexually transmitted infections. Distinguishing features include fever and leukocytes for UTI, versus chronic pain without infection for interstitial cystitis.",
+   "b": [
+    "Prostatitis – fever, chills, and pelvic pain.",
+    "Interstitial cystitis – chronic pain without infection.",
+    "Sexually transmitted infections – urethral discharge, genital lesions."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Dipstick may be negative in early infection or with low bacterial load. Microscopy can miss bacteria in dilute samples. Culture may be delayed or unavailable in low‑resource settings.",
+   "b": [
+    "False‑negative dipstick in early UTI.",
+    "Low urine volume dilutes cells and bacteria.",
+    "Delayed culture results delay targeted therapy."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe flank pain with fever",
+  "Hypotension or tachycardia",
+  "Altered mental status",
+  "Persistent fever after 48 hours of therapy",
+  "Recurrent UTIs in children"
+ ],
+ "faq": [
+  {
+   "q": "Can a UTI be asymptomatic?",
+   "a": "Yes, especially in pregnant women or catheterised patients; screening is recommended in these groups."
+  },
+  {
+   "q": "Why is nitrofurantoin used for uncomplicated cystitis?",
+   "a": "It concentrates in urine, has broad gram‑negative coverage, and is safe for most patients except pregnancy and renal impairment."
+  },
+  {
+   "q": "When should I use a fluoroquinolone?",
+   "a": "When local resistance to first‑line agents is high or the infection is complicated; avoid in pregnancy and in patients with tendon disorders."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic criteria for uncomplicated cystitis and why a urine culture is not always needed.",
+  "Describe the management plan for a pregnant woman with a positive urine culture for E. coli.",
+  "Identify red flags that would change a simple UTI into a case of urosepsis."
+ ],
+ "related": [
+  "Antimicrobial resistance",
+  "Catheter‑associated urinary tract infection",
+  "Urinary tract stones",
+  "Pregnancy and urinary tract infection",
+  "Kidney infection (pyelonephritis)"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

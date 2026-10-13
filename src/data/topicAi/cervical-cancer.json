@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Cervical cancer is a malignant tumor of the cervix, usually driven by persistent high‑risk HPV infection. Early detection by screening allows curative treatment; advanced disease spreads locally and distally.",
+ "aka": [
+  "CaCx",
+  "Cervical carcinoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A malignant neoplasm arising from the squamous epithelium or glandular cells of the cervix. Diagnosis requires histologic confirmation from a biopsy of a suspicious lesion.",
+   "b": [
+    "Histology (squamous cell carcinoma ~70%, adenocarcinoma ~25%)",
+    "Screening: HPV DNA testing and visual inspection with acetic acid (VIA) in low‑resource settings"
+   ],
+   "t": [
+    {
+     "a": "Colposcopic directed biopsy",
+     "b": "Confirms presence and type of cancer; positive result establishes diagnosis, negative result may need repeat or excisional procedure"
+    },
+    {
+     "a": "HPV DNA test",
+     "b": "Detects high‑risk HPV (16/18); a positive test in a woman >30 prompts colposcopy, a negative test lowers immediate cancer risk"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the FIGO system, based on clinical exam and imaging when available.",
+   "b": [
+    "Stage I: confined to cervix",
+    "Stage II: beyond uterus, not to pelvic wall or lower third of vagina",
+    "Stage III: lower third vagina or pelvic wall, or hydronephrosis",
+    "Stage IV: distant metastasis"
+   ],
+   "t": [
+    {
+     "a": "Pelvic exam",
+     "b": "Determines tumor size and parametrial involvement; helps assign FIGO stage"
+    },
+    {
+     "a": "Ultrasound/CT (if available)",
+     "b": "Assesses hydronephrosis or distant spread; absence of imaging defaults to clinical staging"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Persistent infection with high‑risk HPV types 16 and 18 is the primary cause. Co‑factors accelerate progression, especially in low‑resource settings.",
+   "b": [
+    "HPV 16/18 infection (central cause)",
+    "HIV infection – reduces immune clearance of HPV",
+    "Smoking",
+    "Long‑term oral contraceptive use",
+    "Early sexual debut & multiple partners"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Early disease is often asymptomatic; when symptoms appear they reflect local invasion or bleeding.",
+   "b": [
+    "Post‑coital or intermenstrual bleeding",
+    "Persistent watery or foul discharge",
+    "Pelvic pain in advanced disease",
+    "Back pain, flank pain from ureteric obstruction"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests are chosen to confirm cancer, stage disease, and identify treatable co‑morbidities.",
+   "t": [
+    {
+     "a": "Pap smear",
+     "b": "Screens for precancerous changes; abnormal result triggers colposcopy"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Detects lung metastases; normal result does not exclude distant spread"
+    },
+    {
+     "a": "Renal function tests",
+     "b": "Identify obstruction‑related renal impairment; elevated creatinine prompts imaging or stenting"
+    },
+    {
+     "a": "HIV test",
+     "b": "Detects co‑infection that influences prognosis and treatment choice"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from local invasion, treatment side‑effects, or systemic spread.",
+   "b": [
+    "Ureteric obstruction → hydronephrosis and renal failure",
+    "Fistula formation (vesicovaginal, rectovaginal)",
+    "Severe anemia from chronic bleeding",
+    "Metastatic disease to lung, bone, liver"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment follows stage: early disease is curable with surgery or radiotherapy; advanced disease requires chemoradiation and palliative care.",
+   "b": [
+    "Stage I: radical hysterectomy (removes uterus, parametria, upper vagina) – preferred when surgery feasible",
+    "Stage II‑III: concurrent cisplatin‑based chemoradiation – cisplatin radiosensitises tumour",
+    "Stage IV or non‑resectable: palliative radiotherapy, analgesia, and management of obstruction (stent or nephrostomy)",
+    "HIV‑positive: start antiretroviral therapy before cancer treatment to improve immunity"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Surveillance detects recurrence; primary prevention targets HPV infection.",
+   "b": [
+    "Every 3–6 months for 2 years post‑treatment: pelvic exam, cytology, symptom review",
+    "HPV vaccination (bivalent or quadrivalent) before sexual debut reduces incidence",
+    "Screening with HPV test or VIA every 3–5 years in low‑resource settings"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause similar bleeding or discharge may be mistaken for cervical cancer.",
+   "b": [
+    "Cervicitis (infectious)",
+    "Endometrial cancer (post‑menopausal bleeding)",
+    "Vaginal atrophy",
+    "Benign polyps"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may give false reassurance.",
+   "b": [
+    "Negative Pap smear in presence of high‑risk HPV can miss early invasive disease – proceed to colposcopy if symptoms persist",
+    "Normal renal function despite early ureteric obstruction – imaging needed if flank pain or rising creatinine"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Heavy vaginal bleeding",
+  "Persistent pelvic or back pain",
+  "Sudden swelling of legs or abdomen",
+  "Fever with foul discharge"
+ ],
+ "faq": [
+  {
+   "q": "Why is HPV the main cause of cervical cancer?",
+   "a": "High‑risk HPV integrates into cervical cells, producing oncoproteins that disable tumor suppressors, leading to uncontrolled growth."
+  },
+  {
+   "q": "Can cervical cancer be prevented?",
+   "a": "Yes, through HPV vaccination and regular screening, which detect and treat precancerous lesions before they become invasive."
+  },
+  {
+   "q": "What is the role of HIV in cervical cancer?",
+   "a": "HIV weakens immune surveillance, allowing persistent HPV infection and faster progression to cancer."
+  }
+ ],
+ "exam": [
+  "Explain how FIGO staging guides treatment choices for cervical cancer.",
+  "Describe the screening algorithm for a 35‑year‑old woman in a low‑resource setting.",
+  "Discuss why concurrent cisplatin chemoradiation is the standard for locally advanced disease."
+ ],
+ "related": [
+  "Human papillomavirus infection",
+  "HPV vaccination",
+  "Pelvic inflammatory disease",
+  "Endometrial cancer",
+  "Vaginal cancer",
+  "HIV/AIDS and malignancy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

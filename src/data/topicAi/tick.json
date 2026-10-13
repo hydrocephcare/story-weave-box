@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Ticks are blood‑feeding arachnids that act as vectors for bacterial, viral and protozoal diseases. Understanding their biology, transmission and clinical impact guides diagnosis and management, especially in low‑resource settings.",
+ "aka": [
+  "Ixodida",
+  "hard tick",
+  "soft tick",
+  "arachnid vector"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Ticks are obligate hematophagous ectoparasites belonging to the order Ixodida. They have a two‑part body (cephalothorax and abdomen) and chelicerae for feeding. Their life cycle includes egg, larva, nymph and adult stages, each requiring a blood meal.",
+   "b": [
+    "Hard ticks (Ixodidae) have a scutum; soft ticks (Argasidae) lack a scutum.",
+    "Ticks can remain attached for hours (hard) or minutes (soft)."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Ticks possess sensory Haller’s organ on the first pair of legs to detect host cues. Saliva contains anticoagulants, immunomodulators and enzymes that facilitate feeding and pathogen transmission.",
+   "b": [
+    "Salivary proteins suppress host immunity, allowing pathogen establishment.",
+    "Multiple nymphal instars increase exposure opportunities."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Ticks acquire pathogens during a blood meal and transmit them to subsequent hosts via saliva. Soft ticks feed quickly in nests; hard ticks attach for days, increasing transmission risk.",
+   "b": [
+    "Ixodes spp. transmit Borrelia burgdorferi (Lyme disease).",
+    "Ornithodoros spp. transmit Borrelia duttonii (relapsing fever)."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Tick‑borne diseases range from mild febrile illnesses to severe neurologic or hemorrhagic syndromes. Clinical suspicion hinges on exposure history, season and geographic location.",
+   "b": [
+    "Lyme disease – erythema migrans, arthritis, neuroborreliosis.",
+    "Tick‑borne relapsing fever – recurrent fevers, meningismus.",
+    "Crimean‑Congo hemorrhagic fever – high‑grade fever, bleeding."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis combines clinical criteria with targeted laboratory tests. When tests are unavailable, empirical treatment based on exposure risk is acceptable.",
+   "b": [
+    "Erythema migrans is diagnostic for early Lyme without lab confirmation.",
+    "Serology (ELISA, Western blot) confirms later Lyme stages."
+   ],
+   "t": [
+    {
+     "a": "ELISA for Borrelia IgM/IgG",
+     "b": "Does the patient have antibodies indicating current or past infection? Positive IgM suggests recent infection; IgG indicates later stage."
+    },
+    {
+     "a": "PCR of blood or CSF",
+     "b": "Detects pathogen DNA when serology may be negative (early disease or relapsing fever). Positive result confirms active infection."
+    },
+    {
+     "a": "Thick‑film microscopy of blood smear",
+     "b": "Identifies spirochetes in relapsing fever; a negative result does not rule out disease if timing is off."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management starts with pathogen‑specific antimicrobial therapy, followed by supportive care. Vector control and personal protection reduce future risk.",
+   "b": [
+    "Doxycycline (or alternative tetracycline) for Lyme and relapsing fever – penetrates intracellular compartments.",
+    "Ribavirin for Crimean‑Congo hemorrhagic fever – broad antiviral activity.",
+    "Avoid macrolides for relapsing fever due to high resistance."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams: tick identification, typical disease presentations, diagnostic algorithms, and first‑line therapy choices.",
+   "b": [
+    "Erythema migrans >5 cm in endemic area = Lyme disease, treat without waiting for serology.",
+    "Recurrent fever spikes with a history of tick exposure = relapsing fever; treat promptly with doxycycline.",
+    "Hemorrhagic fever with tick bite in rural Asia = consider Crimean‑Congo; start ribavirin and isolation."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "High‑grade fever with bleeding diathesis after tick bite (possible hemorrhagic fever).",
+  "Neurologic deficits (meningitis, facial palsy) following tick exposure.",
+  "Rapidly expanding rash or severe joint swelling indicating disseminated infection."
+ ],
+ "faq": [
+  {
+   "q": "Can a tick bite cause disease without the tick being attached?",
+   "a": "Transmission usually requires feeding; brief contact without blood ingestion rarely transmits pathogens."
+  },
+  {
+   "q": "Why is doxycycline preferred for many tick‑borne illnesses?",
+   "a": "It has excellent intracellular penetration, covers common bacteria, and is inexpensive, making it suitable for low‑resource settings."
+  },
+  {
+   "q": "What preventive measures work in tropical, low‑resource hospitals?",
+   "a": "Use of permethrin‑treated clothing, regular tick checks, and environmental control (removing rodent nests) are effective and affordable."
+  }
+ ],
+ "exam": [
+  "Describe the life‑cycle stages of a hard tick and how each stage contributes to pathogen transmission.",
+  "Explain the diagnostic criteria for early Lyme disease and why serology may be negative initially.",
+  "Outline the first‑line treatment for tick‑borne relapsing fever and the rationale for drug choice."
+ ],
+ "related": [
+  "Lyme disease",
+  "Tick‑borne relapsing fever",
+  "Crimean‑Congo hemorrhagic fever",
+  "Arboviruses",
+  "Vector‑borne diseases",
+  "Dermatology of arthropod bites"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Epstein-Barr virus (EBV) is a ubiquitous herpesvirus that infects B cells, causing infectious mononucleosis and driving oncogenesis in diseases like Burkitt lymphoma. It establishes lifelong latency and reactivates under immune stress.",
+ "aka": [
+  "Human herpesvirus 4",
+  "HHV-4"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "EBV is a double‑stranded DNA herpesvirus that infects >90% of people worldwide, usually in childhood. Primary infection may be silent or present as infectious mononucleosis; the virus then persists in memory B cells.",
+   "b": [
+    "Latent infection → periodic reactivation",
+    "Transmitted by saliva, rarely by blood or organ transplant"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "EBV infects epithelial cells and CD21‑positive B lymphocytes. It expresses latency proteins (EBNA, LMP) that drive B‑cell proliferation and evade immune detection.",
+   "b": [
+    "Herpesvirus family, enveloped icosahedral capsid",
+    "Latency III (full) in naïve B cells, latency I in memory B cells"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Virus spreads through intimate saliva contact. After entry, it infects oropharyngeal epithelium, then B cells where it establishes latency. Reactivation can occur with immunosuppression.",
+   "b": [
+    "Incubation 4–6 weeks for mononucleosis",
+    "No airborne spread; safe to use standard precautions"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "EBV causes a spectrum from self‑limited infectious mononucleosis to malignancies (Burkitt lymphoma, nasopharyngeal carcinoma, Hodgkin lymphoma) and rare complications like splenic rupture.",
+   "b": [
+    "Infectious mononucleosis: fever, sore throat, lymphadenopathy, atypical lymphocytes",
+    "Endemic Burkitt lymphoma: jaw or abdominal mass, c‑myc translocation t(8;14)",
+    "Nasopharyngeal carcinoma: nasal obstruction, epistaxis, cervical nodes"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Combine clinical picture with serology, hematology, and, when needed, tissue pathology.",
+   "b": [
+    "If serology unavailable, rely on clinical triad + CBC and consider PCR for EBV DNA"
+   ],
+   "t": [
+    {
+     "a": "Heterophile antibody test (Monospot)",
+     "b": "Confirms recent EBV infection; positive in 80% of adolescents, may be negative early or in children"
+    },
+    {
+     "a": "EBV-specific serology (VCA‑IgM, VCA‑IgG, EBNA IgG)",
+     "b": "Distinguishes acute (VCA‑IgM+, VCA‑IgG+, EBNA‑) from past infection (VCA‑IgG+, EBNA+)"
+    },
+    {
+     "a": "CBC with differential",
+     "b": "Lymphocytosis with >10% atypical lymphocytes supports mononucleosis; severe anemia or leukopenia may suggest lymphoma"
+    },
+    {
+     "a": "Excisional lymph node biopsy",
+     "b": "Shows EBV‑positive Reed‑Sternberg cells (Hodgkin) or c‑myc translocation (Burkitt); definitive for malignancy"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "No antiviral cures EBV; management is supportive for mononucleosis and oncologic therapy for malignancies.",
+   "b": [
+    "Supportive care: analgesics, hydration, avoid contact sports for 4 weeks to prevent splenic rupture",
+    "Corticosteroids only for airway obstruction or severe hemolysis",
+    "Burkitt lymphoma: combination chemotherapy (e.g., cyclophosphamide‑based) plus supportive growth factors",
+    "Nasopharyngeal carcinoma: radiotherapy ± chemotherapy"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams.",
+   "b": [
+    "Positive heterophile test + atypical lymphocytes = infectious mononucleosis",
+    "Endemic Burkitt lymphoma = EBV + chronic malaria; look for jaw mass and t(8;14)",
+    "EBV latency patterns dictate oncogenic potential"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe throat swelling compromising airway",
+  "Sudden abdominal pain with signs of splenic rupture",
+  "Unexplained rapidly enlarging lymph node mass"
+ ],
+ "faq": [
+  {
+   "q": "Why does EBV cause a sore throat?",
+   "a": "Infected epithelial cells and reactive lymphoid tissue become inflamed, producing pharyngitis."
+  },
+  {
+   "q": "Can EBV be prevented?",
+   "a": "No vaccine exists; avoid sharing drinks or utensils with infected individuals during acute illness."
+  },
+  {
+   "q": "Is EBV reactivation dangerous?",
+   "a": "Usually mild, but can trigger lymphoproliferative disease in immunocompromised patients."
+  }
+ ],
+ "exam": [
+  "Explain the serologic pattern that distinguishes acute EBV infection from past exposure.",
+  "Describe the pathogenesis linking chronic malaria, EBV, and endemic Burkitt lymphoma.",
+  "List three clinical features that help differentiate infectious mononucleosis from bacterial pharyngitis."
+ ],
+ "related": [
+  "Cytomegalovirus infection",
+  "Human immunodeficiency virus (HIV)",
+  "Hodgkin lymphoma",
+  "Nasopharyngeal carcinoma",
+  "Malaria",
+  "Herpes simplex virus"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

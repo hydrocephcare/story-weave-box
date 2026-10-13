@@ -2,7 +2,7 @@ name: Daily topic pages and AI overviews
 
 # Every day at 05:00 Nairobi time (02:00 UTC):
 #   1. the topic pages are rebuilt from the notes, MCQs and essays (so new notes show up on their topic pages),
-#   2. a few topics that have no overview yet get an AI-written one (needs the GEMINI_API_KEY secret; without it this step is skipped),
+#   2. every morning 25 more topics get a full page (Groq first, Gemini as the backup; needs the GROQ_API_KEYS and GEMINI_API_KEYS secrets),
 #   3. the new overviews are committed, which redeploys the site and refreshes the sitemap.
 # Run it yourself any time: GitHub > Actions > "Daily topic pages and AI overviews" > Run workflow.
 # AI overviews are saved as "not reviewed" and say so on the page. To mark one as checked by a doctor, set "reviewed": true in src/data/topicAi/<topic>.json.
@@ -12,9 +12,9 @@ on:
   workflow_dispatch:
     inputs:
       count:
-        description: "How many AI overviews to write this run"
+        description: "How many topic pages to write this run"
         required: false
-        default: "5"
+        default: "25"
 
 permissions:
   contents: write
@@ -43,11 +43,11 @@ jobs:
       - name: Rebuild the topic pages
         run: node scripts/topics/build-topics.mjs --fresh
 
-      - name: Write today's AI overviews
+      - name: Write today's topic pages
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          AI_TOPICS_PER_RUN: ${{ inputs.count || '5' }}
-        run: node scripts/topics/ai-fill.mjs
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
+        run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || '25' }} --parallel=3
 
       - name: Save the new overviews
         run: |

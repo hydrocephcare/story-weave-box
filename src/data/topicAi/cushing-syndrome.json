@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Cushing syndrome is chronic cortisol excess from endogenous overproduction or exogenous steroids. It causes characteristic cushingoid features and metabolic disturbances, and diagnosis hinges on demonstrating unsuppressed cortisol.",
+ "aka": [
+  "Hypercortisolism"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cushing syndrome is chronic cortisol excess, either from external steroids or internal over‑production. Diagnosis requires biochemical proof of hypercortisolism.",
+   "b": [
+    "24‑h urinary free cortisol > 2× upper limit or loss of diurnal variation"
+   ],
+   "t": [
+    {
+     "a": "24‑h urinary free cortisol",
+     "b": "Does the patient have excess cortisol? Elevated values confirm hypercortisolism."
+    },
+    {
+     "a": "Late‑night salivary cortisol",
+     "b": "Is the normal diurnal drop absent? Elevated late‑night levels support diagnosis, useful when urine collection is impractical."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical impact and cortisol level; the most common system uses mild, moderate, severe based on blood pressure, glucose, and bone loss.",
+   "b": [
+    "Mild: BMI < 30, BP < 140/90, fasting glucose < 126 mg/dL",
+    "Moderate: BMI 30‑35, BP 140‑159/90‑99, glucose 126‑200 mg/dL",
+    "Severe: BMI > 35, resistant hypertension, diabetes >200 mg/dL, osteoporosis, or severe hypokalaemia"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify whether cortisol excess is exogenous or endogenous, then whether it is ACTH‑dependent or adrenal.",
+   "b": [
+    "Exogenous glucocorticoids – most common worldwide",
+    "Pituitary ACTH‑secreting adenoma (Cushing’s disease) – 70 % of endogenous cases",
+    "Ectopic ACTH production – small‑cell lung carcinoma, bronchial carcinoid, thymic tumour",
+    "Adrenal adenoma – unilateral, cortisol‑producing",
+    "Adrenal carcinoma – rapid, large, often with virilisation"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Cortisol excess produces a recognizable constellation of signs that develop gradually, except ectopic ACTH which may present abruptly.",
+   "b": [
+    "Central obesity, moon face, buffalo hump",
+    "Wide purple striae on abdomen or thighs",
+    "Proximal muscle weakness, easy bruising",
+    "Hypertension, hyperglycaemia, new‑onset diabetes",
+    "Osteoporosis, fractures, hirsutism, menstrual irregularities"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "After confirming hypercortisolism, determine ACTH status and locate the source.",
+   "b": [
+    "Plasma ACTH: high → ACTH‑dependent; low → adrenal",
+    "Pituitary MRI if ACTH high and pituitary source suspected",
+    "CT adrenal if ACTH low or ectopic source suspected",
+    "Inferior petrosal sinus sampling when MRI inconclusive"
+   ],
+   "t": [
+    {
+     "a": "Plasma ACTH",
+     "b": "Is the excess ACTH‑driven? High ACTH points to pituitary or ectopic source."
+    },
+    {
+     "a": "Pituitary MRI (contrast)",
+     "b": "Is there a microadenoma? Detects lesions > 2 mm; negative MRI prompts sampling."
+    },
+    {
+     "a": "CT adrenal (non‑contrast)",
+     "b": "Is there a unilateral adrenal mass? Helps identify adenoma vs carcinoma."
+    },
+    {
+     "a": "Inferior petrosal sinus sampling",
+     "b": "Does ACTH originate from pituitary vs ectopic? Central‑to‑peripheral gradient > 2 confirms pituitary."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled cortisol leads to life‑threatening problems.",
+   "b": [
+    "Severe hypertension with hypertensive emergency",
+    "Hyperglycaemic crisis (DKA or HHS)",
+    "Severe hypokalaemic metabolic alkalosis (especially ectopic ACTH)",
+    "Infections: opportunistic, wound healing failure",
+    "Thromboembolic events from hypercoagulability"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then control cortisol and its effects.",
+   "b": [
+    "Stop exogenous steroids, taper slowly to avoid adrenal crisis",
+    "Transsphenoidal surgery for pituitary adenoma – first‑line",
+    "Adrenalectomy for unilateral adrenal tumour",
+    "Medical adrenal blockade (ketoconazole, metyrapone, osilodrostat) when surgery not possible",
+    "Control hypertension, diabetes, bone loss, and infection risk"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term monitoring prevents relapse and treats sequelae.",
+   "b": [
+    "Serial cortisol testing (urine or salivary) every 6‑12 months after treatment",
+    "Blood pressure, fasting glucose, and bone density annually",
+    "Vaccinations and prophylactic antibiotics if immunosuppressed",
+    "Patient education on stress‑dose steroids if adrenal insufficiency develops"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Metabolic syndrome – shares obesity, hypertension, glucose intolerance but lacks cortisol excess",
+    "Polycystic ovary syndrome – hirsutism and menstrual changes without cushingoid features",
+    "Hyperthyroidism – weight loss, tachycardia, not central obesity"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Mild cortisol excess may have normal 24‑h urinary cortisol; use late‑night salivary test",
+    "Exogenous steroid use can suppress ACTH, making adrenal imaging misleading",
+    "Ectopic ACTH may show normal midnight cortisol if sampling is early"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe hypertension (> 180/120 mmHg)",
+  "Rapidly worsening hyperglycaemia or diabetic ketoacidosis",
+  "Severe muscle weakness with difficulty breathing",
+  "Signs of infection that spread quickly"
+ ],
+ "faq": [
+  {
+   "q": "Why does cortisol cause high blood sugar?",
+   "a": "Cortisol stimulates gluconeogenesis and blocks insulin action, leading to insulin resistance."
+  },
+  {
+   "q": "Can Cushing syndrome be cured?",
+   "a": "Yes, if the source (exogenous steroids, pituitary tumour, adrenal tumour) is removed or controlled."
+  },
+  {
+   "q": "What is the difference between Cushing disease and Cushing syndrome?",
+   "a": "Cushing disease is the specific pituitary ACTH‑adenoma cause of Cushing syndrome; the latter describes the clinical state of excess cortisol."
+  }
+ ],
+ "exam": [
+  "Explain the step‑wise diagnostic algorithm for a patient with suspected Cushing syndrome.",
+  "Differentiate the clinical clues that suggest ectopic ACTH production versus pituitary Cushing disease.",
+  "Describe the first‑line treatment for each major cause of endogenous Cushing syndrome."
+ ],
+ "related": [
+  "Adrenal insufficiency",
+  "Pituitary adenoma",
+  "Small‑cell lung carcinoma",
+  "Metabolic syndrome",
+  "Hyperglycaemia",
+  "Hypertension",
+  "Osteoporosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

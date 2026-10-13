@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Hyperparathyroidism is excess parathyroid hormone causing high calcium and low phosphate. It can be primary (autonomous gland) or secondary (reactive to low calcium). Diagnosis relies on calcium, phosphate, PTH levels and imaging.",
+ "aka": [
+  "HyperPTH"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hyperparathyroidism is defined by elevated serum PTH with discordant calcium: primary shows hypercalcemia, secondary shows normal/low calcium. Diagnosis requires at least two abnormal labs and exclusion of other causes.",
+   "b": [
+    "Elevated PTH + hypercalcemia → primary",
+    "Elevated PTH + low/normal calcium → secondary"
+   ],
+   "t": [
+    {
+     "a": "Serum calcium",
+     "b": "Is calcium high, normal, or low? High suggests primary; low/normal suggests secondary or tertiary."
+    },
+    {
+     "a": "Serum phosphate",
+     "b": "Is phosphate low, normal, or high? Low in primary; high in secondary."
+    },
+    {
+     "a": "Intact PTH assay",
+     "b": "Is PTH elevated? Confirms hyperparathyroidism; suppressed PTH points to non‑parathyroid hypercalcemia."
+    },
+    {
+     "a": "25‑OH vitamin D",
+     "b": "Is vitamin D deficient? Deficiency supports secondary hyperparathyroidism."
+    },
+    {
+     "a": "Neck ultrasound or sestamibi scan",
+     "b": "Localizes adenoma or hyperplasia when surgery is considered; if unavailable, rely on clinical and lab picture."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by serum calcium level and end‑organ effects. Mild: calcium <12 mg/dL, no symptoms. Moderate: 12‑14 mg/dL or bone pain. Severe: >14 mg/dL, nephrolithiasis, pancreatitis, neuro‑cognitive changes.",
+   "b": [
+    "Mild – asymptomatic, monitor",
+    "Moderate – symptomatic, consider surgery",
+    "Severe – urgent intervention"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary hyperparathyroidism is most often a solitary parathyroid adenoma. Secondary causes include chronic kidney disease, vitamin D deficiency, and malabsorption. In low‑resource settings, consider HIV‑associated nephropathy and TB‑related renal disease.",
+   "b": [
+    "Parathyroid adenoma (≈80%)",
+    "Parathyroid hyperplasia (MEN syndromes)",
+    "Renal failure → secondary",
+    "Vitamin D deficiency → secondary",
+    "HIV nephropathy → secondary"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have bone pain, fractures, kidney stones, abdominal groans, and psychiatric “stones”. Many are asymptomatic and discovered on routine labs.",
+   "b": [
+    "Nephrolithiasis",
+    "Bone demineralisation (osteitis fibrosa)",
+    "Fatigue, depression, confusion"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab and imaging confirm diagnosis and assess complications.",
+   "b": [
+    "Calcium, phosphate, PTH, vitamin D, creatinine"
+   ],
+   "t": [
+    {
+     "a": "24‑hour urinary calcium",
+     "b": "Is urinary calcium high? Helps differentiate primary from familial hypocalciuric hypercalcemia; high supports primary."
+    },
+    {
+     "a": "DXA bone density",
+     "b": "Is bone density reduced? Indicates skeletal involvement and guides surgery timing."
+    },
+    {
+     "a": "Renal ultrasound",
+     "b": "Are stones or nephrocalcinosis present? Detects renal complications."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Life‑threatening complications include severe hypercalcemia (>14 mg/dL), cardiac arrhythmias, pancreatitis, and renal failure.",
+   "b": [
+    "Severe hypercalcemia → cardiac arrest risk",
+    "Acute pancreatitis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, control calcium, and consider surgery for primary disease. Use hydration, bisphosphonates, or calcimimetics when needed.",
+   "b": [
+    "IV saline hydration to promote calciuresis",
+    "Bisphosphonates for rapid calcium lowering",
+    "Calcimimetic (cinacalcet) in secondary CKD"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor calcium, phosphate, PTH, renal function, and bone density every 6–12 months. Prevent fractures with calcium/vitamin D supplementation and weight‑bearing exercise.",
+   "b": [
+    "Serial labs"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause hypercalcemia or elevated PTH can mimic hyperparathyroidism.",
+   "b": [
+    "Familial hypocalciuric hypercalcemia (low urinary calcium)",
+    "Malignancy‑associated hypercalcemia (suppressed PTH)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Vitamin D deficiency can mask primary disease by lowering calcium; renal failure can elevate PTH without true hyperparathyroidism.",
+   "b": [
+    "Low vitamin D → normal calcium despite adenoma",
+    "CKD → secondary PTH rise"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypercalcemia with confusion, arrhythmia, or pancreatitis",
+  "Sudden onset of kidney stone pain",
+  "Rapidly worsening bone pain or fractures"
+ ],
+ "faq": [
+  {
+   "q": "How to differentiate primary from secondary hyperparathyroidism?",
+   "a": "Primary: high PTH with hypercalcemia and low phosphate. Secondary: high PTH with low/normal calcium and high phosphate, often due to CKD or vitamin D deficiency."
+  },
+  {
+   "q": "Why is urinary calcium measured?",
+   "a": "High urinary calcium supports primary disease; low urinary calcium suggests familial hypocalciuric hypercalcemia, a benign mimic."
+  },
+  {
+   "q": "When is surgery indicated?",
+   "a": "When calcium >1 mg/dL above normal, symptomatic bone/renal disease, age <50, or a >1 cm adenoma on imaging."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic criteria for primary hyperparathyroidism and how they differ from secondary disease.",
+  "List the most common cause of primary hyperparathyroidism and two major complications of untreated disease.",
+  "Interpret a lab set: calcium 13 mg/dL, phosphate 2.5 mg/dL, PTH 150 pg/mL, 25‑OH vitamin D 20 ng/mL."
+ ],
+ "related": [
+  "Calcium metabolism",
+  "Renal osteodystrophy",
+  "Nephrolithiasis",
+  "Osteoporosis",
+  "MEN syndromes",
+  "Vitamin D deficiency"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

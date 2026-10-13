@@ -1,0 +1,128 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The pleura are thin serous membranes covering the lungs and lining the chest wall, creating a lubricated, negative-pressure space that allows smooth lung expansion during breathing.",
+ "aka": [
+  "Pleural membranes"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The pleura consist of visceral and parietal layers that together form a potential space. They reduce friction and maintain negative intrapleural pressure, essential for efficient ventilation.",
+   "b": [
+    "Visceral pleura covers lung surface; parietal lines chest wall, diaphragm, mediastinum"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The pleural cavity lies between the two pleural layers, extending from the thoracic inlet to the diaphragm. The mediastinal pleura attaches to the pericardium and esophagus.",
+   "b": [
+    "Visceral pleura attaches to lung surface; parietal pleura attaches to chest wall"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The pleural space is adjacent to the mediastinum, diaphragm, and thoracic cavity. It communicates with the pericardial space via the mediastinal pleura.",
+   "b": [
+    "Parietal pleura contacts ribs, intercostal muscles, and diaphragm"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The pleura receive blood from the intercostal arteries (parietal) and pulmonary arteries (visceral).",
+   "b": [
+    "Parietal pleura: intercostal arteries"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory innervation comes from intercostal nerves (parietal) and phrenic nerve (diaphragmatic pleura).",
+   "b": [
+    "Parietal pleura: intercostal nerves"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The pleura create a low-friction, negative-pressure environment that allows lungs to expand and contract smoothly during breathing.",
+   "b": [
+    "Lubrication of lung surface"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Pleural disease arises when fluid, air, or infection enters the pleural space, disrupting pressure balance and lung expansion. Common causes include infection, malignancy, heart failure, and trauma.",
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows fluid level or lung collapse; indicates effusion or pneumothorax."
+    },
+    {
+     "a": "Thoracentesis",
+     "b": "Obtains fluid for cytology, culture, and biochemical analysis; confirms diagnosis."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Detects fluid, guides aspiration, and assesses pleural thickening."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that pleural effusion is a collection of fluid between visceral and parietal pleura. The pleural space is a potential space; any fluid or air breaks the potentiality.",
+   "b": [
+    "Effusion causes dyspnea, pleuritic pain, and decreased breath sounds"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause (e.g., antibiotics for infection, diuretics for heart failure). Supportive care includes thoracentesis or chest tube for large effusions or pneumothorax.",
+   "b": [
+    "Empiric antibiotics for empyema"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pneumothorax (air in pleural space) and pericardial effusion (fluid around heart)."
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Small effusions may be occult on chest X‑ray; ultrasound is more sensitive."
+  },
+  {
+   "h": "When to Seek Help",
+   "p": "Urgent care needed if sudden dyspnea, chest pain, or hemodynamic instability suggestive of tension pneumothorax or massive effusion."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe shortness of breath, chest pain, or hemodynamic instability indicating tension pneumothorax or massive effusion"
+ ],
+ "faq": [
+  {
+   "q": "What causes pleural effusion?",
+   "a": "Fluid accumulation due to increased capillary permeability, decreased oncotic pressure, or lymphatic obstruction."
+  },
+  {
+   "q": "How is a pleural effusion diagnosed?",
+   "a": "Chest X‑ray, ultrasound, and thoracentesis with fluid analysis."
+  },
+  {
+   "q": "What is the difference between pleural effusion and pneumothorax?",
+   "a": "Effusion is fluid; pneumothorax is air in the pleural space."
+  }
+ ],
+ "exam": [
+  "Explain how negative intrapleural pressure facilitates lung expansion.",
+  "Describe the diagnostic workup for a patient with suspected pleural effusion.",
+  "Outline the management steps for a large pleural effusion in a low‑resource setting."
+ ],
+ "related": [
+  "Pulmonary edema",
+  "Pneumothorax",
+  "Empyema",
+  "Mesothelioma"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

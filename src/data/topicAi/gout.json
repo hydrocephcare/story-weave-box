@@ -1,0 +1,189 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Gout is an acute inflammatory arthritis caused by monosodium urate crystal deposition in joints, triggered by hyperuricemia. Diagnosis relies on clinical presentation, crystal identification, and serum urate levels. Management balances acute control with long‑term urate lowering.",
+ "aka": [
+  "Tophi",
+  "Podagra"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Gout is the deposition of needle‑shaped monosodium urate crystals in and around joints, producing sudden, intense pain and swelling. Diagnosis is confirmed by identifying negatively birefringent crystals on polarized microscopy of synovial fluid or by clinical criteria plus serum urate >6.8 mg/dL.",
+   "b": [
+    "Acute monoarthritis, usually first MTP"
+   ],
+   "t": [
+    {
+     "a": "Synovial fluid analysis",
+     "b": "Does the joint fluid contain needle‑shaped, negatively birefringent crystals? A positive result confirms gout."
+    },
+    {
+     "a": "Serum urate",
+     "b": "Is urate >6.8 mg/dL? Elevated levels support the diagnosis but are not definitive alone."
+    },
+    {
+     "a": "X‑ray",
+     "b": "Shows joint erosions or tophi in chronic disease; normal in acute attacks."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Acute gout is staged by attack frequency and chronicity. The 2016 ACR/EULAR classification uses acute attacks, tophi, and radiographic damage to define stages I–IV.",
+   "b": [
+    "Stage I: single attack, no tophi",
+    "Stage II: recurrent attacks, no tophi",
+    "Stage III: tophi present, no erosions",
+    "Stage IV: erosions or joint damage"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Hyperuricemia results from overproduction, underexcretion, or both. Common precipitating factors include high purine diet, alcohol, diuretics, obesity, and renal impairment.",
+   "b": [
+    "Overproduction: high purine intake, cell turnover",
+    "Underexcretion: renal disease, diuretics, low salt intake"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Is renal function impaired? Reduced excretion increases urate."
+    },
+    {
+     "a": "Urine uric acid",
+     "b": "Low urine urate suggests underexcretion; high suggests overproduction."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical presentation is sudden, severe pain in the first MTP joint (podagra), with erythema, warmth, and limited motion. Attacks last 24–48 h and may recur.",
+   "b": [
+    "Painful swelling of big toe",
+    "Redness and warmth",
+    "Rapid onset"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests confirm diagnosis and guide management. In low‑resource settings, basic labs and clinical criteria are often sufficient.",
+   "t": [
+    {
+     "a": "Synovial fluid microscopy",
+     "b": "Positive = gout; negative = consider pseudogout or other arthritides."
+    },
+    {
+     "a": "Serum urate",
+     "b": ">6.8 mg/dL supports diagnosis but not definitive."
+    },
+    {
+     "a": "CBC, ESR, CRP",
+     "b": "Elevated values may indicate infection or systemic disease."
+    },
+    {
+     "a": "Renal function tests",
+     "b": "Impaired function may alter choice of urate‑lowering drugs."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe or recurrent attacks can lead to tophi, joint destruction, renal stones, and chronic kidney disease. Urgent care is needed for signs of infection or systemic involvement.",
+   "b": [
+    "Fever, chills, or systemic symptoms",
+    "Rapidly progressive renal failure",
+    "Severe pain unresponsive to NSAIDs"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the acute attack first, then initiate long‑term urate lowering. Choice of drugs depends on renal function, comorbidities, and drug availability.",
+   "b": [
+    "Long‑term: xanthine oxidase inhibitors (allopurinol, febuxostat) or uricosurics (probenecid)"
+   ],
+   "t": [
+    {
+     "a": "NSAIDs",
+     "b": "Avoid in renal impairment or GI ulcer risk."
+    },
+    {
+     "a": "Colchicine",
+     "b": "Toxicity in renal failure; dose adjustment needed."
+    },
+    {
+     "a": "Allopurinol",
+     "b": "Start low, titrate; avoid in severe renal disease without dose adjustment."
+    },
+    {
+     "a": "Febuxostat",
+     "b": "Monitor liver function; avoid in severe hepatic disease."
+    },
+    {
+     "a": "Probenecid",
+     "b": "Contraindicated in renal impairment or urinary stones."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of serum urate, renal function, and adherence is essential. Lifestyle changes reduce recurrence.",
+   "b": [
+    "Regular check‑ups every 3–6 months"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pseudogout, septic arthritis, and rheumatoid arthritis can mimic gout but differ in crystal type and clinical course.",
+   "b": [
+    "Rheumatoid arthritis: symmetric polyarthritis, morning stiffness"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serum urate can be normal during an acute attack; crystal analysis is definitive. Renal function tests may be falsely normal early in kidney disease.",
+   "b": [
+    "Early renal impairment may not raise creatinine yet"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever or chills",
+  "Rapidly worsening pain",
+  "Signs of sepsis",
+  "Severe renal impairment"
+ ],
+ "faq": [
+  {
+   "q": "Can gout be cured?",
+   "a": "There is no cure, but long‑term urate lowering can prevent attacks and joint damage."
+  },
+  {
+   "q": "Why is serum urate sometimes normal in gout?",
+   "a": "During an acute flare, urate may be consumed by crystals, lowering serum levels."
+  },
+  {
+   "q": "Is alcohol a major trigger?",
+   "a": "Yes, alcohol increases urate production and reduces excretion, precipitating attacks."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of monosodium urate crystal formation and its clinical consequences.",
+  "Describe the diagnostic criteria for gout and the role of synovial fluid analysis.",
+  "Outline the first‑line acute treatment and the rationale for long‑term urate‑lowering therapy."
+ ],
+ "related": [
+  "Hyperuricemia",
+  "Crystal arthropathies",
+  "Renal stone disease",
+  "Rheumatoid arthritis",
+  "Septic arthritis",
+  "Pseudogout",
+  "Obesity and metabolic syndrome",
+  "Kidney disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

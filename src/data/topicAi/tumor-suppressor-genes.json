@@ -1,0 +1,201 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Tumor suppressor genes act as cellular brakes, stopping division, repairing DNA, and triggering apoptosis. When both alleles are lost or silenced, unchecked proliferation leads to cancer. Clinicians must recognize how genetic loss drives disease and guide targeted therapy.",
+ "aka": [
+  "TSGs",
+  "Tumour suppressor genes"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Tumor suppressor genes (TSGs) encode proteins that inhibit cell cycle progression, promote DNA repair, and induce apoptosis. Diagnosis involves detecting loss of function by mutation, deletion, or epigenetic silencing, often using sequencing, copy‑number analysis, or methylation assays.",
+   "b": [
+    "Loss of function removes cellular brakes",
+    "Both alleles must be affected (Knudson two‑hit hypothesis)"
+   ],
+   "t": [
+    {
+     "a": "Next‑generation sequencing",
+     "b": "Detects pathogenic mutations in TSGs; a pathogenic variant suggests loss of function."
+    },
+    {
+     "a": "Multiplex ligation‑dependent probe amplification",
+     "b": "Identifies deletions/duplications of TSGs; a deletion confirms loss of one allele."
+    },
+    {
+     "a": "Methylation‑specific PCR",
+     "b": "Detects promoter hypermethylation silencing TSGs; hypermethylation indicates functional loss."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "TSG loss is a foundational event in tumorigenesis; severity is gauged by tumor stage and grade, not by the gene alone. Inherited germline mutations (e.g., BRCA1/2) confer high lifetime risk and influence surveillance strategies.",
+   "b": [
+    "Stage reflects tumor burden",
+    "Grade indicates differentiation"
+   ],
+   "t": [
+    {
+     "a": "TNM staging",
+     "b": "Assesses tumor size, nodal involvement, metastasis; guides treatment intensity."
+    },
+    {
+     "a": "Histologic grading",
+     "b": "Evaluates differentiation; high grade suggests aggressive biology."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is genetic alteration: point mutations, deletions, or epigenetic silencing. Environmental factors (radiation, carcinogens) can induce DNA damage that overwhelms TSG repair capacity.",
+   "b": [
+    "Point mutations in p53, RB, BRCA1/2"
+   ],
+   "t": [
+    {
+     "a": "Exposure history",
+     "b": "Radiation or carcinogen exposure increases DNA damage; if TSG repair fails, cancer risk rises."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical presentation mirrors the tumor type rather than the gene itself. For example, BRCA mutations present as breast or ovarian cancer; TSC1/2 loss causes tuberous sclerosis with skin, renal, and CNS lesions.",
+   "b": [
+    "Symptoms depend on organ involved",
+    "Family history may hint at inherited TSG mutations"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations focus on tumor type and TSG status. When TSG testing is unavailable, rely on histology and immunohistochemistry to infer loss of function.",
+   "b": [
+    "Immunohistochemistry for p53 overexpression"
+   ],
+   "t": [
+    {
+     "a": "Immunohistochemistry",
+     "b": "Detects protein accumulation; strong nuclear staining suggests p53 mutation."
+    },
+    {
+     "a": "Fluorescence in situ hybridization",
+     "b": "Identifies gene deletions; loss of signal indicates deletion."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include rapid tumor growth, early metastasis, or unusual histology. Complications arise from unchecked proliferation: invasion, metastasis, and treatment resistance.",
+   "b": [
+    "Sudden increase in tumor size"
+   ],
+   "t": [
+    {
+     "a": "CT/MRI imaging",
+     "b": "Detects invasion into adjacent structures; invasion indicates aggressive disease."
+    },
+    {
+     "a": "Bone scan",
+     "b": "Identifies skeletal metastasis; early metastasis requires systemic therapy."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management targets the underlying TSG loss and the tumor. For BRCA‑mutated cancers, PARP inhibitors exploit synthetic lethality. Other TSG‑driven tumors use standard cytotoxic or targeted agents, with surgery or radiation as needed.",
+   "b": [
+    "PARP inhibitors for BRCA1/2"
+   ],
+   "t": [
+    {
+     "a": "PARP inhibitor therapy",
+     "b": "Treats tumors with BRCA loss; blocks DNA repair, leading to tumor cell death."
+    },
+    {
+     "a": "Chemotherapy",
+     "b": "Used when targeted options are unavailable; cytotoxic agents kill rapidly dividing cells."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Surveillance depends on inherited TSG risk. For BRCA carriers, regular imaging and risk‑reducing surgery are options. Lifestyle modifications reduce secondary DNA damage.",
+   "b": [
+    "Annual mammography for BRCA carriers"
+   ],
+   "t": [
+    {
+     "a": "Risk‑reduction surgery",
+     "b": "Prophylactic mastectomy or oophorectomy lowers cancer incidence in high‑risk individuals."
+    },
+    {
+     "a": "Lifestyle counseling",
+     "b": "Smoking cessation and sun protection reduce DNA damage that could overwhelm TSG repair."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "TSG loss is often mistaken for oncogene activation. Both lead to proliferation but via different mechanisms. Also, epigenetic silencing can mimic gene deletion.",
+   "b": [
+    "Oncogene activation vs. TSG loss"
+   ],
+   "t": [
+    {
+     "a": "Oncogene testing",
+     "b": "Identifies activating mutations; absence suggests TSG involvement."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low‑level mosaicism or subclonal mutations may escape detection. Immunohistochemistry can show overexpression even when the gene is intact.",
+   "b": [
+    "Mosaicism may give false negatives"
+   ],
+   "t": [
+    {
+     "a": "Deep sequencing",
+     "b": "Detects low‑frequency mutations that standard panels miss."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly enlarging mass",
+  "New neurological deficits in a patient with known TSG mutation",
+  "Unexplained anemia or bleeding in a patient with a history of TSG‑related cancer"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between an oncogene and a tumor suppressor gene?",
+   "a": "Oncogenes are overactive drivers of proliferation; tumor suppressor genes normally inhibit growth and must be inactivated for cancer to develop."
+  },
+  {
+   "q": "Can lifestyle changes prevent TSG‑related cancers?",
+   "a": "Yes, reducing exposure to carcinogens and maintaining healthy habits can lower DNA damage that overwhelms TSG repair."
+  },
+  {
+   "q": "Why are PARP inhibitors effective in BRCA‑mutated cancers?",
+   "a": "They block an alternative DNA repair pathway; cells lacking BRCA cannot repair DNA, leading to cell death."
+  }
+ ],
+ "exam": [
+  "Explain how loss of function in a tumor suppressor gene leads to cancer development.",
+  "Describe the clinical approach to a patient with a germline BRCA1 mutation.",
+  "Outline the diagnostic workup for a suspected tuberous sclerosis complex case."
+ ],
+ "related": [
+  "Oncogenes",
+  "DNA repair mechanisms",
+  "Synthetic lethality",
+  "Cancer genetics",
+  "Hereditary cancer syndromes"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

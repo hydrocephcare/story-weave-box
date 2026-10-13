@@ -1,0 +1,86 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Aspergillus is a ubiquitous mold that can cause invasive disease in immunocompromised hosts and allergic disease in healthy lungs. Diagnosis relies on imaging, antigen tests, and culture, while treatment centers on voriconazole or amphotericin B with adjunctive surgery when needed.",
+ "aka": [
+  "A. fumigatus",
+  "A. flavus",
+  "A. niger"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Aspergillus species are filamentous fungi found in soil and decaying organic matter. They produce airborne spores that can be inhaled, leading to a spectrum of pulmonary disease.",
+   "b": [
+    "Ubiquitous in environment",
+    "Spore size ~2–3 µm"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The mold forms septate hyphae with acute-angle branching. Some species produce aflatoxins, potent carcinogens.",
+   "b": [
+    "Septate hyphae",
+    "Acute-angle branching",
+    "Aflatoxin B1 production"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Spores are released into air from decaying vegetation. Inhalation is the main route; spores can also contaminate food.",
+   "b": [
+    "Airborne spores",
+    "Inhalation",
+    "Food contamination"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Invasive aspergillosis (IA) occurs in neutropenic or transplant patients; allergic bronchopulmonary aspergillosis (ABPA) affects asthmatics; aspergilloma forms in pre‑existing lung cavities.",
+   "b": [
+    "IA: fever, cough, infiltrates",
+    "ABPA: wheeze, mucus plugs",
+    "Aspergilloma: hemoptysis"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis integrates clinical, radiologic, serologic, and microbiologic data.",
+   "b": [
+    "High‑resolution CT",
+    "Galactomannan antigen",
+    "Serum IgG/IgE"
+   ],
+   "t": [
+    {
+     "a": "High‑resolution CT",
+     "b": "Detects nodules, halo sign, air‑filled cavities; a halo sign suggests early IA."
+    },
+    {
+     "a": "Galactomannan assay",
+     "b": "Positive in IA; a serial rise predicts treatment failure."
+    },
+    {
+     "a": "Serum Aspergillus IgG",
+     "b": "Positive in chronic pulmonary aspergillosis and aspergilloma."
+    },
+    {
+     "a": "Culture from BAL",
+     "b": "Confirms species; guides antifungal choice."
+    },
+    {
+     "a": "PCR of respiratory sample",
+     "b": "Rapid detection; useful when culture is negative."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

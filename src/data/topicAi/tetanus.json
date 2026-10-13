@@ -1,0 +1,152 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Tetanus is a life‑threatening neuroparalytic disease caused by Clostridium tetani toxin, usually from contaminated wounds. Rapid diagnosis, wound care, antitoxin and supportive care are essential.",
+ "aka": [
+  "Lockjaw",
+  "Tetanus toxoid"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Tetanus is a toxin‑mediated disease where C. tetani releases tetanospasmin, causing sustained muscle contraction. Diagnosis is clinical, supported by history of wound and vaccination status.",
+   "b": [
+    "Classic trismus, generalized spasm, risus sardonicus"
+   ],
+   "t": [
+    {
+     "a": "Wound culture",
+     "b": "Detects C. tetani; positive confirms source but not needed for treatment"
+    },
+    {
+     "a": "Serum toxin assay",
+     "b": "Rarely used; positive confirms toxin presence but not required for management"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Modified Tetanus Severity Score (mTSS). It guides ICU need and predicts mortality.",
+   "b": [
+    "mTSS 0–5: mild, 6–10: moderate, >10: severe"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common cause is a contaminated puncture or burn wound in an unvaccinated or partially vaccinated individual.",
+   "b": [
+    "Traumatic puncture wounds, burns, surgical wounds, animal bites"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Early signs include trismus and jaw stiffness, progressing to generalized rigidity, spasms, and autonomic instability.",
+   "b": [
+    "Trismus, risus sardonicus, opisthotonus, hyperthermia, tachycardia"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are supportive; focus on ruling out other causes of rigidity and assessing complications.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Rule out sepsis; leukocytosis may indicate infection"
+    },
+    {
+     "a": "Electrolytes",
+     "b": "Identify hypocalcemia or hyponatremia that worsen spasms"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Detect aspiration pneumonia or pneumothorax"
+    },
+    {
+     "a": "ECG",
+     "b": "Monitor for arrhythmias from autonomic dysfunction"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be fatal if not promptly managed. Watch for respiratory failure, autonomic instability, and sepsis.",
+   "b": [
+    "Respiratory arrest, cardiac arrhythmia, aspiration pneumonia, sepsis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the source wound, give human tetanus immunoglobulin (HTIG) and tetanus toxoid, and provide supportive care in ICU.",
+   "b": [
+    "Wound debridement, HTIG within 24h, tetanus toxoid booster, benzodiazepines for spasms, mechanical ventilation if needed"
+   ],
+   "t": [
+    {
+     "a": "HTIG",
+     "b": "Neutralises circulating toxin; must be given within 24h of exposure"
+    },
+    {
+     "a": "Benzodiazepines",
+     "b": "Reduce muscle tone and prevent autonomic crises"
+    },
+    {
+     "a": "Mechanical ventilation",
+     "b": "Used when airway is compromised or spasms are severe"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After recovery, complete the full tetanus toxoid series and counsel on wound care. Community vaccination remains key.",
+   "b": [
+    "Complete DTP series, booster every 10 years, educate on clean wound care"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions with muscle rigidity or spasms can mimic tetanus.",
+   "b": [
+    "Myasthenia gravis, Guillain‑Barré syndrome, hypocalcemia, stroke"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal toxin assays do not exclude tetanus; clinical judgment prevails.",
+   "b": [
+    "Negative culture or toxin assay does not rule out disease"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe trismus, inability to swallow, respiratory distress, high fever, autonomic instability"
+ ],
+ "faq": [
+  {
+   "q": "Can tetanus be prevented in low‑resource settings?",
+   "a": "Yes, by ensuring timely tetanus toxoid vaccination and safe wound care."
+  },
+  {
+   "q": "What is the role of antibiotics?",
+   "a": "They eradicate C. tetani but do not neutralise toxin; used alongside antitoxin."
+  },
+  {
+   "q": "Is tetanus still common in developed countries?",
+   "a": "Rare, mainly in unvaccinated or partially vaccinated individuals."
+  }
+ ],
+ "exam": [
+  "Describe the pathophysiology of tetanus toxin and its clinical consequences.",
+  "Explain the rationale for giving human tetanus immunoglobulin and tetanus toxoid in a patient with a contaminated wound.",
+  "Outline the management steps for a patient presenting with generalized muscle spasms and autonomic instability."
+ ],
+ "related": [
+  "Vaccination schedules",
+  "Wound management",
+  "Intensive care of neuroparalytic disorders",
+  "Public health strategies for vaccine-preventable diseases"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

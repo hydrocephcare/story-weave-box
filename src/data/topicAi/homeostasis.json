@@ -1,0 +1,148 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Homeostasis is the body’s ability to keep internal conditions stable despite external changes. It relies on sensors, effectors, and feedback loops to maintain variables like temperature, pH, and electrolytes.",
+ "aka": [
+  "Internal equilibrium",
+  "Physiologic balance"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Homeostasis ensures that vital parameters stay within narrow limits, allowing cells to function and the organism to survive. It is a dynamic, continuous process.",
+   "b": [
+    "Maintains life‑supporting conditions",
+    "Requires constant monitoring and adjustment"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Sensors detect deviations, transmit signals to control centers, which activate effectors to correct the change. Negative feedback dominates, but positive feedback occurs in specific events.",
+   "b": [
+    "Sensors: receptors, chemoreceptors, baroreceptors",
+    "Control centers: CNS, endocrine glands",
+    "Effectors: muscles, glands, organs"
+   ],
+   "t": [
+    {
+     "a": "Blood gas analysis",
+     "b": "Assesses CO2, O2, pH to evaluate respiratory and metabolic balance; abnormal values indicate acid–base disorders."
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Detects shifts in Na+, K+, Ca2+, Mg2+, phosphate; informs on renal, endocrine, or dietary causes."
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Monitors glucose levels; hypoglycaemia or hyperglycaemia signals endocrine dysfunction."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Multiple systems collaborate: nervous, endocrine, renal, respiratory, and local tissue mechanisms. Hormones like insulin, glucagon, aldosterone, and PTH fine‑tune long‑term set points.",
+   "b": [
+    "Neural reflexes for rapid changes",
+    "Hormonal cascades for sustained adjustments"
+   ],
+   "t": [
+    {
+     "a": "Serum calcium",
+     "b": "Low calcium triggers PTH release; high calcium suppresses PTH. PTH increases bone resorption, renal reabsorption, and vitamin D activation."
+    },
+    {
+     "a": "Serum potassium",
+     "b": "High potassium stimulates aldosterone; low potassium reduces aldosterone. Aldosterone promotes renal potassium excretion and sodium retention."
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Disruption of any component can lead to dysregulation. Common causes include infections, toxins, genetic defects, and resource limitations.",
+   "b": [
+    "Infections: sepsis, malaria, TB",
+    "Toxins: snake venom, herbal remedies",
+    "Genetic: cystic fibrosis, G6PD deficiency"
+   ],
+   "t": [
+    {
+     "a": "CRP",
+     "b": "Elevated in infection; indicates systemic inflammation that can alter fluid balance."
+    },
+    {
+     "a": "Serum lactate",
+     "b": "High lactate suggests tissue hypoxia or impaired perfusion, common in sepsis."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Recognizing patterns of dysregulation guides diagnosis and management. Low resources demand reliance on clinical signs and basic labs.",
+   "b": [
+    "Temperature, pulse, blood pressure as bedside indicators",
+    "Use of point‑of‑care glucose and urine dipstick"
+   ],
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Detects proteinuria, ketones, glucose; informs on renal function and metabolic status."
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Measures oxygen saturation; low values prompt oxygen therapy."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that homeostatic disturbances often present with compensatory signs. Ask about triggers, history of infections, and medication use.",
+   "b": [
+    "Ask about recent infections or travel",
+    "Check for signs of dehydration or fluid overload"
+   ],
+   "t": [
+    {
+     "a": "Serum bicarbonate",
+     "b": "Low in metabolic acidosis; high in metabolic alkalosis."
+    },
+    {
+     "a": "Arterial blood gas",
+     "b": "Differentiates respiratory vs metabolic causes of pH change."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypoglycaemia (confusion, seizures), hyperkalaemia (arrhythmia), severe hyponatraemia (seizures), metabolic acidosis with lactate >4 mmol/L, uncontrolled sepsis with organ failure"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between negative and positive feedback?",
+   "a": "Negative feedback restores a variable to its set point; positive feedback amplifies a change, used in limited situations like childbirth."
+  },
+  {
+   "q": "Why is pH so tightly regulated?",
+   "a": "Enzymes and cellular processes are pH sensitive; small shifts can impair metabolism and organ function."
+  },
+  {
+   "q": "Can homeostasis fail in a healthy person?",
+   "a": "Yes, acute insults like trauma or infection can overwhelm homeostatic mechanisms, leading to shock or organ failure."
+  }
+ ],
+ "exam": [
+  "Explain how the body compensates for a sudden drop in blood glucose.",
+  "Describe the hormonal cascade that restores calcium balance after hypocalcaemia.",
+  "Identify the clinical signs that suggest a patient is developing metabolic acidosis in a low‑resource setting."
+ ],
+ "related": [
+  "Acid–base balance",
+  "Electrolyte disorders",
+  "Endocrine regulation",
+  "Renal physiology",
+  "Sepsis management"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,192 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Graves disease is an autoimmune hyperthyroidism caused by TSH‑receptor antibodies, producing diffuse goitre, eye signs and systemic hypermetabolism. Diagnosis hinges on suppressed TSH, high free T4/T3 and positive TSI. Management balances antithyroid drugs, definitive therapy and eye care.",
+ "aka": [
+  "Graves’ hyperthyroidism",
+  "Autoimmune hyperthyroidism"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Graves disease is an autoimmune hyperthyroidism where TSH‑receptor stimulating antibodies (TSI) activate the thyroid, causing diffuse goitre and systemic hypermetabolism. Diagnosis requires suppressed TSH, elevated free T4/T3, and a positive TSI or TRAb test. Clinical features such as exophthalmos or pretibial myxoedema strongly support the diagnosis.",
+   "b": [
+    "TSH <0.1 mIU/L with high free T4/T3",
+    "Positive TSI/TRAb test"
+   ],
+   "t": [
+    {
+     "a": "TSH",
+     "b": "Low TSH indicates hyperthyroidism"
+    },
+    {
+     "a": "Free T4/T3",
+     "b": "Elevated confirms thyrotoxicosis"
+    },
+    {
+     "a": "TSI/TRAb",
+     "b": "Positive confirms Graves disease"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by clinical impact: mild (stable symptoms), moderate (symptom‑driven treatment), severe (thyroid storm or ophthalmopathy). Ophthalmopathy is graded by the NOSPECS system, guiding eye‑specific therapy.",
+   "b": [
+    "Mild: stable, moderate: symptomatic, severe: thyroid storm or eye disease"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is autoimmune activation of TSH receptors by TSI. Other triggers include iodine excess, pregnancy, stress, and certain drugs (amiodarone, interferon). In low‑resource settings, infections such as HIV or TB may precipitate or mimic disease.",
+   "b": [
+    "Autoimmune TSH‑receptor antibodies",
+    "Iodine excess",
+    "Pregnancy",
+    "Stress",
+    "Amiodarone/Interferon"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with weight loss, heat intolerance, tremor, tachycardia, anxiety, and a diffuse, non‑tender goitre. Eye signs—exophthalmos, lid lag, diplopia—are classic. Pretibial myxoedema is a rare but specific sign.",
+   "b": [
+    "Weight loss, tremor, tachycardia",
+    "Diffuse goitre",
+    "Exophthalmos, lid lag"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key investigations confirm hyperthyroidism, exclude other causes, and assess eye disease. In resource‑limited settings, a simple TSH and free T4/T3 may suffice; if unavailable, a clinical diagnosis can guide empiric therapy.",
+   "t": [
+    {
+     "a": "TSH",
+     "b": "Low indicates hyperthyroidism"
+    },
+    {
+     "a": "Free T4/T3",
+     "b": "Elevated confirms thyrotoxicosis"
+    },
+    {
+     "a": "TSI/TRAb",
+     "b": "Positive confirms Graves"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Diffuse pattern supports Graves"
+    },
+    {
+     "a": "CT/MRI of orbit",
+     "b": "Indicates need for steroids"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include atrial fibrillation, heart failure, thyroid storm, or severe ophthalmopathy. Complications can be cardiovascular, ophthalmic, or neuropsychiatric. Early recognition prevents mortality.",
+   "b": [
+    "Atrial fibrillation",
+    "Heart failure",
+    "Thyroid storm",
+    "Severe eye disease"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying autoimmune drive with antithyroid drugs (methimazole preferred; PTU if pregnancy). Monitor for agranulocytosis. Definitive therapy—radioactive iodine or surgery—is reserved for refractory or severe cases. Eye disease is managed with steroids and orbital decompression if needed.",
+   "b": [
+    "Methimazole (first line)",
+    "PTU (pregnancy or severe cases)",
+    "Radioactive iodine (definitive)",
+    "Surgery (thyroidectomy)"
+   ],
+   "t": [
+    {
+     "a": "Methimazole",
+     "b": "Preferred due to safety"
+    },
+    {
+     "a": "PTU",
+     "b": "Used in pregnancy or severe disease"
+    },
+    {
+     "a": "Radioactive iodine",
+     "b": "Requires pre‑treatment with antithyroid drugs"
+    },
+    {
+     "a": "Surgery",
+     "b": "For large goitre or suspicion of cancer"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Patients need regular TSH and free T4 monitoring until euthyroid. Eye disease requires ophthalmology follow‑up. Prevention focuses on avoiding iodine excess and managing autoimmune triggers.",
+   "b": [
+    "TSH/free T4 every 6–12 weeks"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of hyperthyroidism—tissue‑damage (thyroiditis), iodine excess, factitious thyrotoxicosis—lack the characteristic eye signs and TSI positivity.",
+   "b": [
+    "Subacute thyroiditis",
+    "Iodine-induced hyperthyroidism",
+    "Factitious thyrotoxicosis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "TSH may be normal in early disease or in the presence of thyroid hormone resistance. Free T4 can be falsely low if protein binding is altered. Eye signs may be subtle in early disease.",
+   "b": [
+    "TSH normal in early thyrotoxicosis"
+   ]
+  },
+  {
+   "h": "When to Seek Help",
+   "p": "Seek urgent care if symptoms of heart failure, atrial fibrillation, or thyroid storm develop, or if eye disease threatens vision.",
+   "b": [
+    "Atrial fibrillation",
+    "Heart failure",
+    "Thyroid storm",
+    "Vision loss"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Atrial fibrillation",
+  "Heart failure",
+  "Thyroid storm",
+  "Vision loss"
+ ],
+ "faq": [
+  {
+   "q": "Can Graves disease be cured?",
+   "a": "Antithyroid drugs can induce remission, but definitive cure requires radioactive iodine or surgery."
+  },
+  {
+   "q": "Why is exophthalmos seen in Graves but not other hyperthyroidism?",
+   "a": "Autoimmune inflammation of orbital tissues driven by TSH‑receptor antibodies causes eye swelling."
+  },
+  {
+   "q": "Is pregnancy safe with Graves disease?",
+   "a": "Yes, but antithyroid drugs must be chosen carefully; methimazole is preferred, PTU used if severe or early pregnancy."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of TSH‑receptor antibodies in Graves disease.",
+  "Describe the diagnostic criteria and key investigations for Graves disease.",
+  "Outline the first‑line treatment strategy and when to consider definitive therapy."
+ ],
+ "related": [
+  "Thyroiditis",
+  "Iodine‑induced hyperthyroidism",
+  "Ophthalmopathy",
+  "Radioactive iodine therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

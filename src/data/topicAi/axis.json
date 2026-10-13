@@ -1,0 +1,108 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The axis refers to the long line running through the body, especially the vertebral column, around which the body rotates and which provides structural support. It is central to posture, movement, and spinal alignment.",
+ "aka": [
+  "Spinal axis",
+  "Body axis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The axis is the central line that runs from the skull base through the vertebral column to the pelvis, defining the body's longitudinal symmetry.",
+   "b": [
+    "Defines left/right, anterior/posterior, superior/inferior relationships"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The axis is composed of the cervical, thoracic, lumbar, sacral, and coccygeal vertebrae, with the dens (odontoid process) of C2 forming a pivot for rotation.",
+   "b": [
+    "Cervical: 7 vertebrae; Thoracic: 12; Lumbar: 5; Sacrum: 5 fused; Coccyx: 4 fused"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "It is surrounded by the spinal cord, meninges, vertebral arteries, sympathetic chain, and various muscular and ligamentous structures.",
+   "b": [
+    "Anterior: vertebral bodies, intervertebral discs; Posterior: spinous processes, facet joints"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial supply comes from the vertebral arteries (posterior) and segmental branches of the aorta (anterior).",
+   "b": [
+    "Vertebral arteries run through transverse foramina of C6–C1"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The spinal cord runs within the axis, giving rise to dorsal and ventral roots that form spinal nerves.",
+   "b": [
+    "Anterior roots: motor fibers; Posterior roots: sensory fibers"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Provides structural support, protects the spinal cord, allows flexion/extension and rotation, and maintains posture.",
+   "b": [
+    "Facilitates locomotion and balance"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Fractures, dislocations, and degenerative changes of the axis can cause spinal cord injury, nerve root compression, and chronic pain.",
+   "b": [
+    "Cervical spine fractures: high risk of quadriplegia"
+   ],
+   "t": [
+    {
+     "a": "X‑ray",
+     "b": "Shows alignment and fracture lines; normal alignment indicates no fracture"
+    },
+    {
+     "a": "MRI",
+     "b": "Detects soft tissue injury, spinal cord edema; abnormal signal suggests cord compression"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that the dens of C2 allows rotation; a fracture here (odontoid fracture) can be missed on plain films.",
+   "b": [
+    "Look for step-off at C2-C3 junction on lateral view"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the most common injury to the axis?",
+   "a": "A fracture of the odontoid process (C2) often occurs in falls or motor‑vehicle accidents."
+  },
+  {
+   "q": "How does the axis affect posture?",
+   "a": "It maintains the upright position; deformities can lead to kyphosis or lordosis."
+  },
+  {
+   "q": "Why is the axis important in imaging?",
+   "a": "It serves as a reference for aligning other spinal levels and detecting misalignments."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical landmarks that define the cervical axis and explain how a fracture of the odontoid process can lead to spinal cord injury.",
+  "Explain the blood supply to the axis and why vertebral artery injury is a concern in cervical spine trauma.",
+  "Outline the clinical presentation and management principles for a patient with a cervical spine fracture involving the axis."
+ ],
+ "related": [
+  "Spinal cord",
+  "Cervical spine",
+  "Vertebral artery",
+  "Spinal fracture",
+  "Spinal cord injury"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

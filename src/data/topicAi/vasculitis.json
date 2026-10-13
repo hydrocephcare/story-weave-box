@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Vasculitis is inflammation of vessel walls that can cause ischemia and organ damage. Diagnosis relies on clinical clues, imaging, and biopsy, with treatment targeting the underlying cause and inflammation.",
+ "aka": [
+  "Vascular inflammation",
+  "Immune‑mediated vasculitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Vasculitis refers to immune‑mediated inflammation of arteries, veins or capillaries, leading to vessel wall damage and tissue ischemia. Diagnosis combines clinical features, laboratory markers, imaging, and often a tissue biopsy.",
+   "b": [
+    "Clinical suspicion based on systemic or organ‑specific signs",
+    "Elevated ESR/CRP, ANCA, complement levels"
+   ],
+   "t": [
+    {
+     "a": "ANCA (c‑ANCA, p‑ANCA)",
+     "b": "Detects autoantibodies against neutrophil antigens; positive suggests ANCA‑associated vasculitis (e.g., GPA, MPA)."
+    },
+    {
+     "a": "Renal biopsy",
+     "b": "Confirms pauci‑immune necrotizing glomerulonephritis; guides severity and treatment."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by organ involvement and damage. The Five‑Factor Score (FFS) or BVAS score guides prognosis and treatment intensity.",
+   "b": [
+    "Mild: isolated skin or ENT disease",
+    "Moderate: renal or pulmonary involvement",
+    "Severe: life‑threatening organ failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary causes are autoimmune; secondary causes include infections, drugs, and systemic diseases common in low‑resource settings.",
+   "b": [
+    "ANCA‑associated vasculitis (GPA, MPA)",
+    "Cryoglobulinemic vasculitis (HCV)",
+    "HIV‑associated vasculitis",
+    "Tuberculosis, malaria, schistosomiasis",
+    "Drug‑induced (e.g., NSAIDs, antibiotics)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with vessel size and organ. Common features include fever, weight loss, skin lesions, arthralgia, and organ‑specific signs such as hematuria or cough.",
+   "b": [
+    "Palpable purpura (small‑vessel)",
+    "Pulmonary infiltrates (medium‑vessel)",
+    "Renal dysfunction (large‑vessel)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm vasculitis type, assess severity, and rule out mimics.",
+   "b": [
+    "CBC, ESR, CRP"
+   ],
+   "t": [
+    {
+     "a": "Complement C3/C4",
+     "b": "Low levels suggest immune complex vasculitis (e.g., cryoglobulinemia)."
+    },
+    {
+     "a": "Serum cryoglobulins",
+     "b": "Positive indicates cryoglobulinemic vasculitis; guides antiviral therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent complications include rapidly progressive glomerulonephritis, pulmonary hemorrhage, and aneurysm rupture.",
+   "b": [
+    "Sudden hematuria or oliguria",
+    "Hemoptysis",
+    "Severe hypertension"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, control inflammation, and support organ function. First‑line agents are steroids and immunosuppressants; biologics are added if refractory.",
+   "b": [
+    "High‑dose corticosteroids to reduce inflammation"
+   ],
+   "t": [
+    {
+     "a": "Cyclophosphamide",
+     "b": "Induction in severe disease; chosen for rapid immunosuppression but avoided in pregnancy due to teratogenicity."
+    },
+    {
+     "a": "Azathioprine",
+     "b": "Maintenance therapy; preferred over methotrexate in renal disease."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of disease activity, organ function, and drug toxicity is essential. Vaccination and infection control reduce secondary triggers.",
+   "b": [
+    "Annual ESR/CRP checks",
+    "Renal function tests every 3 months"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic vasculitis include infections, connective tissue diseases, and drug reactions.",
+   "b": [
+    "Systemic lupus erythematosus",
+    "Polyarteritis nodosa",
+    "Drug‑induced hypersensitivity"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal early or due to concurrent infections. Clinical correlation is mandatory.",
+   "b": [
+    "ANCA can be negative in early GPA",
+    "Renal biopsy may miss focal lesions"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of vision",
+  "Severe chest pain with hemoptysis",
+  "Acute kidney failure",
+  "Unexplained severe headache with neurological deficits"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common type of vasculitis?",
+   "a": "Granulomatosis with polyangiitis (formerly Wegener) is common in adults, especially with ENT and lung involvement."
+  },
+  {
+   "q": "Can vasculitis be cured?",
+   "a": "Many cases respond to immunosuppression and may go into remission, but relapses are common; long‑term monitoring is needed."
+  },
+  {
+   "q": "Is vasculitis contagious?",
+   "a": "No, it is an autoimmune process, not a transmissible infection."
+  }
+ ],
+ "exam": [
+  "Explain the role of ANCA in diagnosing granulomatosis with polyangiitis and how it influences treatment choice.",
+  "Describe the management steps for a patient presenting with rapidly progressive glomerulonephritis due to vasculitis.",
+  "Outline the red flags that would prompt urgent referral for a suspected vasculitis case."
+ ],
+ "related": [
+  "ANCA‑associated vasculitis",
+  "Cryoglobulinemic vasculitis",
+  "Polyarteritis nodosa",
+  "Systemic lupus erythematosus",
+  "Drug‑induced hypersensitivity",
+  "Infectious vasculitis",
+  "Renal biopsy",
+  "Immunosuppressive therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

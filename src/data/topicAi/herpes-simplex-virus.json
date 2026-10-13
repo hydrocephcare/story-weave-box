@@ -1,0 +1,121 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Herpes simplex viruses (HSV‑1, HSV‑2) are DNA viruses that cause mucocutaneous lesions, neonatal disease and encephalitis. They establish latency in sensory ganglia and reactivate under stress or immunosuppression.",
+ "aka": [
+  "Herpes simplex virus type 1",
+  "Herpes simplex virus type 2"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "HSV are enveloped, double‑stranded DNA viruses of the Herpesviridae family. They infect epithelial cells, then travel retrograde to sensory ganglia where they persist as latent genomes.",
+   "b": [
+    "Two main types: HSV‑1 (oral/ocular, also genital) and HSV‑2 (genital, neonatal).",
+    "Latency in trigeminal (HSV‑1) or sacral (HSV‑2) ganglia."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The virion contains a capsid, tegument and glycoprotein‑rich envelope that mediates entry via heparan sulfate receptors.",
+   "b": [
+    "Enveloped DNA virus; sensitive to drying, heat, detergents.",
+    "Glycoproteins gD, gB, gC essential for attachment and fusion."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "HSV spreads by direct contact with infected secretions or lesions. After replication in epithelium, virions travel to sensory neurons, establish latency, and reactivate when immunity wanes.",
+   "b": [
+    "Oral contact → HSV‑1; sexual contact → HSV‑2.",
+    "Neonatal infection via birth canal (HSV‑2) or post‑natal contact (HSV‑1)."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Clinical manifestations range from mild mucocutaneous vesicles to severe encephalitis and disseminated neonatal disease.",
+   "b": [
+    "Primary oral herpes: painful vesicles → ulceration on lips/face (HSV‑1).",
+    "Genital herpes: grouped vesicles → shallow ulcers (HSV‑2, occasional HSV‑1).",
+    "Herpes encephalitis: fever, headache, focal deficits, seizures (HSV‑1).",
+    "Neonatal HSV: skin, eye, mouth disease; disseminated organ involvement; high mortality without therapy."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Laboratory confirmation relies on direct detection of virus or its DNA, especially when clinical picture is atypical.",
+   "t": [
+    {
+     "a": "Tzanck smear",
+     "b": "Does the lesion contain multinucleated giant cells? Positive result supports HSV but cannot differentiate HSV‑1 vs HSV‑2."
+    },
+    {
+     "a": "PCR from lesion swab or CSF",
+     "b": "Is HSV DNA present? Positive result confirms infection; quantitative PCR helps monitor viral load in encephalitis."
+    },
+    {
+     "a": "Viral culture",
+     "b": "Can live virus be grown? Useful where PCR unavailable; slower and less sensitive."
+    },
+    {
+     "a": "Serology (IgM/IgG)",
+     "b": "Has the patient seroconverted? IgM indicates recent infection; IgG indicates past exposure, helpful in neonates."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Antiviral therapy targets viral DNA polymerase; early treatment reduces morbidity and mortality.",
+   "b": [
+    "Acyclovir (IV for encephalitis, oral for mucocutaneous disease) – selective toxicity via viral thymidine kinase.",
+    "Valacyclovir and famciclovir – oral prodrugs with better bioavailability.",
+    "Suppressive therapy (daily acyclovir/valacyclovir) for frequent recurrences or HIV co‑infection."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and clinical practice.",
+   "b": [
+    "HSV‑1 is the leading cause of sporadic encephalitis; treat empirically with IV acyclovir before PCR result.",
+    "Neonatal HSV presents as skin‑eye‑mouth disease, disseminated disease, or CNS disease – all need IV acyclovir.",
+    "Tzanck smear shows multinucleated giant cells but cannot type HSV; confirm with PCR."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly spreading facial or genital lesions with fever",
+  "New onset seizures, altered mental status, or focal neurologic deficits (possible encephalitis)",
+  "Neonatal vesicular rash, lethargy, or organ dysfunction"
+ ],
+ "faq": [
+  {
+   "q": "Can HSV infection be cured?",
+   "a": "No; antivirals suppress replication, but the virus remains latent for life."
+  },
+  {
+   "q": "Why is HSV‑1 more common in encephalitis than HSV‑2?",
+   "a": "HSV‑1 preferentially travels to the temporal lobe via trigeminal pathways, causing encephalitis."
+  },
+  {
+   "q": "Is a negative Tzanck smear enough to rule out HSV?",
+   "a": "No; sensitivity is low. PCR is preferred when suspicion remains."
+  }
+ ],
+ "exam": [
+  "Describe the pathogenesis of HSV latency and reactivation.",
+  "List the diagnostic steps for suspected HSV encephalitis and interpret a positive PCR result.",
+  "Explain why acyclovir is preferred for HSV treatment and why dosing adjustments are needed in renal impairment."
+ ],
+ "related": [
+  "Varicella‑zoster virus",
+  "Cytomegalovirus",
+  "Human immunodeficiency virus (HIV)",
+  "Neonatal sepsis",
+  "Molluscum contagiosum",
+  "Epstein‑Barr virus"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,152 @@
+{
+ "medical": true,
+ "subject": "Paediatrics",
+ "summary": "Down syndrome is a chromosomal disorder caused by trisomy 21, leading to characteristic facial features, developmental delay, and multiple organ system involvement, especially congenital heart disease.",
+ "aka": [
+  "Trisomy 21",
+  "Down's syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Down syndrome results from an extra copy of chromosome 21, most often from nondisjunction. Diagnosis is confirmed by karyotype showing 47,XX,+21 or 47,XY,+21.",
+   "b": [
+    "Clinical suspicion: flat facial profile, epicanthal folds, single palmar crease.",
+    "Prenatal screening: nuchal translucency, serum PAPP‑A, free β‑hCG.",
+    "Post‑natal confirmatory test: chromosomal analysis."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by functional domains (cognitive, cardiac, endocrine) rather than a single stage. The American Academy of Pediatrics uses risk‑based categories for cardiac lesions and developmental milestones.",
+   "b": [
+    "Mild: normal IQ >70, no major organ defects.",
+    "Moderate: IQ 50‑70, treatable cardiac lesion.",
+    "Severe: IQ <50, multiple organ involvement."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The overwhelming cause is meiotic nondisjunction (≈95%). Translocation (≈4%) and mosaicism (<1%) are less common.",
+   "b": [
+    "Maternal age >35 years increases nondisjunction risk.",
+    "Paternal translocation can be inherited in families."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Newborns show hypotonia, up‑slanting palpebral fissures, single transverse palmar crease, and a protruding tongue. Developmental delay becomes evident by 6‑12 months.",
+   "b": [
+    "Congenital heart disease in 40‑50% (AV septal defect most common).",
+    "Increased risk of duodenal atresia, Hirschsprung disease, and early‑onset Alzheimer’s."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations focus on confirming the genetic diagnosis and identifying associated organ anomalies.",
+   "t": [
+    {
+     "a": "Karyotype",
+     "b": "Confirms trisomy 21; a result of 47,XX,+21 or 47,XY,+21 establishes diagnosis."
+    },
+    {
+     "a": "Echocardiogram",
+     "b": "Detects structural heart disease; identifies AV septal defect, VSD, or PDA guiding surgical timing."
+    },
+    {
+     "a": "Thyroid function tests (TSH, free T4)",
+     "b": "Screens for congenital hypothyroidism; elevated TSH indicates need for replacement."
+    },
+    {
+     "a": "Hearing screen (ABR)",
+     "b": "Detects conductive or sensorineural loss; abnormal result prompts audiology referral."
+    },
+    {
+     "a": "If echocardiogram unavailable",
+     "b": "Clinical exam for murmurs + chest X‑ray can suggest cardiac shunts; refer urgently for cardiac evaluation."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications often arise from cardiac, respiratory, or endocrine problems and can be life‑threatening.",
+   "b": [
+    "Severe cyanotic heart disease causing failure to thrive.",
+    "Obstructive sleep apnea leading to hypoxia.",
+    "Acute leukemia (especially ALL) presenting with pallor, bruising."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management is multidisciplinary: correct cardiac lesions, monitor endocrine function, support development, and prevent infections.",
+   "b": [
+    "Surgical repair of AV septal defect or VSD when indicated.",
+    "Levothyroxine for hypothyroidism; chosen for safety and ease of monitoring.",
+    "Early intervention services (physiotherapy, speech, occupational therapy).",
+    "Vaccinations per schedule; extra vigilance for respiratory infections."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow‑up tracks growth, cardiac status, thyroid function, and developmental progress.",
+   "b": [
+    "Cardiology review every 6‑12 months until repair, then annually.",
+    "Thyroid tests at birth, 6 months, then yearly.",
+    "Vision and hearing screening at least annually."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions sharing facial features or developmental delay can be mistaken for Down syndrome.",
+   "b": [
+    "Williams syndrome (elfin facies, supravalvular aortic stenosis).",
+    "Noonan syndrome (short stature, cardiac defects).",
+    "Mosaic trisomy 8 (similar dysmorphic features)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may appear normal despite underlying pathology.",
+   "b": [
+    "Normal newborn hearing screen can miss later‑onset conductive loss from otitis media.",
+    "Mildly elevated TSH may be ignored; early treatment prevents neurocognitive decline."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden cyanosis or worsening murmur indicating cardiac decompensation.",
+  "High fever with lethargy suggesting sepsis or meningitis.",
+  "Rapid weight loss or feeding difficulty causing dehydration."
+ ],
+ "faq": [
+  {
+   "q": "Why is AV septal defect the most common heart lesion in Down syndrome?",
+   "a": "Trisomy 21 disrupts endocardial cushion development, leading to AV canal defects."
+  },
+  {
+   "q": "Can Down syndrome be prevented?",
+   "a": "No, but pre‑conception counseling and prenatal screening can identify risk."
+  },
+  {
+   "q": "Do all children with Down syndrome need surgery?",
+   "a": "Only those with clinically significant cardiac or gastrointestinal anomalies require operative intervention."
+  }
+ ],
+ "exam": [
+  "Describe the genetic mechanisms leading to Down syndrome and the most common cardiac anomaly.",
+  "List the key screening investigations for a newborn with suspected Down syndrome and interpret their results.",
+  "Explain the multidisciplinary management plan for a child with Down syndrome and AV septal defect."
+ ],
+ "related": [
+  "Trisomy 18",
+  "Congenital heart disease",
+  "Hypothyroidism",
+  "Early‑onset Alzheimer disease",
+  "Developmental delay",
+  "Prenatal screening"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

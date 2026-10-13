@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Atrial fibrillation (AF) is an irregularly irregular rhythm caused by chaotic atrial electrical activity. It increases risk of stroke, heart failure and death, especially when untreated.",
+ "aka": [
+  "AFib",
+  "A-fib"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "AF is defined by an irregularly irregular pulse and absence of distinct P waves on ECG, with ventricular response >100 bpm in rapid AF. Diagnosis requires a 12‑lead ECG or rhythm strip.",
+   "b": [
+    "Irregularly irregular rhythm",
+    "No discrete P waves",
+    "Variable R‑R intervals"
+   ],
+   "t": [
+    {
+     "a": "12‑lead ECG",
+     "b": "Does the rhythm meet AF criteria? → Confirms diagnosis; guides rate vs rhythm strategy."
+    },
+    {
+     "a": "Pulse palpation + auscultation",
+     "b": "Is the pulse irregular? → Raises suspicion when ECG unavailable; need confirmatory ECG later."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by symptom burden (EHRA class) and by risk of thrombo‑embolism using CHA₂DS₂‑VASc, plus bleeding risk with HAS‑BLED.",
+   "b": [
+    "EHRA I–IV for symptoms",
+    "CHA₂DS₂‑VASc ≥2 (men) / ≥3 (women) → anticoagulation",
+    "HAS‑BLED ≥3 → consider bleeding mitigation"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "AF arises from structural or electrical triggers. In low‑resource settings, rheumatic mitral stenosis, hypertension, heart failure, and infections are common.",
+   "b": [
+    "Valvular disease (rheumatic mitral stenosis)",
+    "Hypertension",
+    "Heart failure / LV dysfunction",
+    "Coronary artery disease",
+    "Thyroid disease (hyperthyroidism)",
+    "Infections: HIV, TB pericarditis, malaria‑related myocarditis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may feel palpitations, dyspnoea, fatigue, or be asymptomatic. Physical exam shows an irregular pulse and variable intensity of heart sounds.",
+   "b": [
+    "Palpitations, rapid heartbeat",
+    "Shortness of breath on exertion",
+    "Fatigue, dizziness",
+    "Irregularly irregular pulse"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm rhythm, assess underlying cause, and evaluate stroke risk.",
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Is the rhythm AF? → Diagnosis; guides rate control."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Is there structural heart disease? → Determines need for anticoagulation (e.g., rheumatic MS) and guides management."
+    },
+    {
+     "a": "Thyroid function tests",
+     "b": "Is hyperthyroidism present? → Treatable cause of AF."
+    },
+    {
+     "a": "CBC, electrolytes, renal function",
+     "b": "Are there metabolic derangements? → Correct before drugs."
+    },
+    {
+     "a": "CHA₂DS₂‑VASc calculation",
+     "b": "What is stroke risk? → Decision for anticoagulation."
+    },
+    {
+     "a": "HAS‑BLED score",
+     "b": "What is bleeding risk? → Guides anticoagulant choice and monitoring."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications include stroke, systemic embolism, tachy‑cardia‑mediated cardiomyopathy, and heart failure decompensation.",
+   "b": [
+    "Sudden neurological deficit → possible embolic stroke",
+    "Chest pain, hypotension → rapid ventricular response causing ischemia",
+    "New heart failure signs"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, control ventricular rate, consider rhythm control, and prevent thrombo‑embolism.",
+   "b": [
+    "Rate control: β‑blockers, non‑DHP calcium channel blockers, digoxin (if heart failure).",
+    "Rhythm control: cardioversion, anti‑arrhythmics (e.g., amiodarone) when symptomatic or HF.",
+    "Anticoagulation: warfarin (especially rheumatic MS) or DOACs if no contraindication.",
+    "Address reversible triggers: treat thyroid disease, control hypertension, manage infections."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review of rhythm, rate, anticoagulation adherence, and risk scores. Lifestyle measures reduce recurrence.",
+   "b": [
+    "Clinic review every 3–6 months or after any change in symptoms.",
+    "Repeat ECG or Holter if symptoms recur.",
+    "Encourage weight control, limit alcohol, treat sleep apnea."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause irregular pulse or atrial activity.",
+   "b": [
+    "Atrial flutter (regular saw‑tooth flutter waves).",
+    "Multifocal atrial tachycardia (irregular rhythm with varying P‑wave morphology).",
+    "Sinus tachycardia with premature atrial beats."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be falsely reassuring or abnormal.",
+   "b": [
+    "Normal ECG in paroxysmal AF if captured during sinus rhythm.",
+    "Low CHA₂DS₂‑VASc may still warrant anticoagulation in rheumatic mitral stenosis.",
+    "Elevated digoxin level may be missed if renal function not checked."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden weakness or speech difficulty (stroke)",
+  "Chest pain with sweating or faintness (possible rapid ventricular response)",
+  "Severe shortness of breath or swelling of legs (heart failure decompensation)"
+ ],
+ "faq": [
+  {
+   "q": "Why is anticoagulation needed in AF?",
+   "a": "Irregular atrial contraction causes blood stasis, forming clots that can travel to the brain or other organs."
+  },
+  {
+   "q": "Can AF be cured?",
+   "a": "In many patients it can be controlled, but the underlying propensity often remains; some may achieve long‑term sinus rhythm after ablation."
+  },
+  {
+   "q": "Is aspirin enough for stroke prevention?",
+   "a": "No, aspirin alone does not adequately reduce stroke risk in AF; anticoagulants are required."
+  }
+ ],
+ "exam": [
+  "Explain how to calculate CHA₂DS₂‑VASc and its impact on management.",
+  "Describe the first‑line rate‑control agents for AF in a patient with heart failure.",
+  "List three reversible causes of AF that should be screened for."
+ ],
+ "related": [
+  "Atrial flutter",
+  "Heart failure",
+  "Rheumatic heart disease",
+  "Thrombo‑embolism",
+  "Cardioversion",
+  "Anticoagulation therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

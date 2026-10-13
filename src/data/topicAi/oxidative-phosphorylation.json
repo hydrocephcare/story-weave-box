@@ -1,0 +1,125 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Oxidative phosphorylation is the mitochondrial process that couples electron transport to ATP synthesis, essential for cellular energy. Clinicians must recognize its failure in mitochondrial disorders, sepsis, and drug toxicity.",
+ "aka": [
+  "OxPhos",
+  "Mitochondrial ATP synthesis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Oxidative phosphorylation (OxPhos) occurs in the inner mitochondrial membrane, where the electron transport chain (ETC) pumps protons to create a gradient that drives ATP synthase.",
+   "b": [
+    "High-energy ATP production",
+    "Depends on oxygen"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Electrons from NADH and FADH₂ travel through complexes I–IV, releasing energy to pump protons. The resulting electrochemical gradient powers ATP synthase (complex V).",
+   "b": [
+    "Complex I: NADH dehydrogenase",
+    "Complex II: succinate dehydrogenase",
+    "Complex III: cytochrome bc1",
+    "Complex IV: cytochrome c oxidase",
+    "Complex V: ATP synthase"
+   ],
+   "t": [
+    {
+     "a": "High-resolution respirometry",
+     "b": "Measures oxygen consumption to assess ETC function; low rates suggest complex deficiency."
+    },
+    {
+     "a": "Blue native PAGE",
+     "b": "Detects assembly defects of ETC complexes; abnormal bands indicate specific complex mutations."
+    },
+    {
+     "a": "Serum lactate",
+     "b": "Elevated lactate indicates impaired oxidative phosphorylation and anaerobic metabolism."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "ATP/ADP ratio, pH, and reactive oxygen species modulate ETC activity. Uncouplers like DCCD inhibit proton pumping, reducing ATP synthesis.",
+   "b": [
+    "Allosteric inhibition by ATP"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Genetic mutations in mtDNA or nuclear genes encoding ETC proteins cause mitochondrial myopathies, cardiomyopathies, and neurodegenerative diseases.",
+   "b": [
+    "Complex I deficiency: Leigh syndrome"
+   ],
+   "t": [
+    {
+     "a": "Muscle biopsy with COX staining",
+     "b": "Shows reduced cytochrome c oxidase activity; confirms complex IV deficiency."
+    },
+    {
+     "a": "Whole-exome sequencing",
+     "b": "Identifies nuclear gene mutations affecting ETC proteins."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Sepsis, ischemia-reperfusion injury, and certain drugs (e.g., metformin, cyanide) impair OxPhos, leading to organ failure.",
+   "b": [
+    "Metformin-associated lactic acidosis"
+   ],
+   "t": [
+    {
+     "a": "Serum metformin level",
+     "b": "High levels predict risk of lactic acidosis; guide discontinuation."
+    },
+    {
+     "a": "Arterial blood gas",
+     "b": "Low pH and high lactate indicate impaired oxidative metabolism."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the P/O ratio (ATP per oxygen) and that complex I mutations often present with exercise intolerance and lactic acidosis.",
+   "b": [
+    "P/O ratio ~2.5"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe lactic acidosis with hypoxia",
+  "Cardiogenic shock due to mitochondrial cardiomyopathy"
+ ],
+ "faq": [
+  {
+   "q": "Why does metformin cause lactic acidosis?",
+   "a": "It inhibits complex I, reducing oxidative phosphorylation and increasing anaerobic glycolysis."
+  },
+  {
+   "q": "What is the difference between complex I and complex IV deficiencies?",
+   "a": "Complex I causes early-onset neurodegeneration; complex IV often presents with cardiomyopathy and exercise intolerance."
+  },
+  {
+   "q": "Can antioxidants help mitochondrial disorders?",
+   "a": "They may reduce oxidative stress but do not correct the underlying ETC defect."
+  }
+ ],
+ "exam": [
+  "Explain how a defect in complex I leads to lactic acidosis and exercise intolerance.",
+  "Describe the laboratory workup for suspected mitochondrial myopathy.",
+  "Discuss why cyanide poisoning rapidly shuts down oxidative phosphorylation."
+ ],
+ "related": [
+  "Mitochondrial genetics",
+  "Sepsis pathophysiology",
+  "Metformin toxicity",
+  "Lactic acidosis"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

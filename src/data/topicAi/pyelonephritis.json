@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Pyelonephritis is an infection of the kidney’s collecting system, usually ascending from the bladder. It presents with fever, flank pain and urinary symptoms, and requires prompt antibiotics and supportive care.",
+ "aka": [
+  "Acute pyelonephritis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute pyelonephritis is a bacterial infection of the renal parenchyma and pelvis, most often caused by E. coli ascending from the bladder. Diagnosis combines clinical features, urine culture and imaging when available.",
+   "b": [
+    "Fever >38 °C",
+    "Flank pain or costovertebral angle tenderness",
+    "Urinary urgency or dysuria"
+   ],
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Detects leukocyte esterase and nitrites; positive suggests infection."
+    },
+    {
+     "a": "Urine microscopy",
+     "b": "Shows WBCs; absence of casts indicates infection rather than glomerulonephritis."
+    },
+    {
+     "a": "Urine culture",
+     "b": "Identifies organism and guides antibiotic choice."
+    },
+    {
+     "a": "Blood culture",
+     "b": "Indicates bacteremia; positive in severe cases."
+    },
+    {
+     "a": "Renal ultrasound",
+     "b": "Rules out obstruction or abscess; used when imaging is available."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical stability and organ dysfunction. Mild disease is managed outpatient; moderate to severe requires inpatient care and monitoring for sepsis.",
+   "b": [
+    "Mild: fever, flank pain, no systemic signs",
+    "Moderate: hypotension, tachycardia, oliguria",
+    "Severe: septic shock, acute kidney injury"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common cause is ascending E. coli infection. Other bacteria include Klebsiella, Proteus, and in low‑resource settings, organisms linked to HIV, TB, or malaria.",
+   "b": [
+    "E. coli (most common)",
+    "Klebsiella",
+    "Proteus mirabilis",
+    "Streptococcus spp.",
+    "Anaerobes in complicated cases"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report fever, chills, flank pain, and urinary urgency. In children, symptoms may be nonspecific, with irritability and poor feeding.",
+   "b": [
+    "Fever and chills",
+    "Flank pain or costovertebral tenderness",
+    "Urinary urgency or dysuria",
+    "Nausea/vomiting in severe cases"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests confirm infection, identify the organism, and assess severity. When resources are limited, clinical judgment and basic labs guide treatment.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Elevated WBC suggests infection; anemia may indicate chronic disease."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Assesses kidney function; rise indicates acute kidney injury."
+    },
+    {
+     "a": "CRP or ESR",
+     "b": "Markers of inflammation; high levels support diagnosis."
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Detects leukocyte esterase and nitrites; positive supports bacterial infection."
+    },
+    {
+     "a": "Urine microscopy",
+     "b": "WBCs confirm pyuria; absence of casts differentiates from glomerulonephritis."
+    },
+    {
+     "a": "Urine culture",
+     "b": "Identifies organism and antibiotic sensitivity."
+    },
+    {
+     "a": "Blood culture",
+     "b": "Detects bacteremia; positive in severe disease."
+    },
+    {
+     "a": "Renal ultrasound",
+     "b": "Rules out obstruction or abscess; used when available."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe sepsis, hypotension, oliguria, or sudden worsening of pain require urgent care. Complications include abscess, sepsis, and chronic kidney disease.",
+   "b": [
+    "Septic shock",
+    "Acute kidney injury",
+    "Renal abscess",
+    "Severe dehydration"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypotension or shock",
+  "Sudden loss of urine output",
+  "Rapidly worsening pain",
+  "High fever >39 °C with chills",
+  "Signs of sepsis (tachycardia, tachypnea, confusion)"
+ ],
+ "faq": [
+  {
+   "q": "Can pyelonephritis happen in children?",
+   "a": "Yes, it is common in children and often presents with fever, irritability, and poor feeding."
+  },
+  {
+   "q": "What if the patient has HIV?",
+   "a": "HIV increases risk; treat with broad‑spectrum antibiotics and monitor for opportunistic infections."
+  },
+  {
+   "q": "Is a CT scan needed?",
+   "a": "Only if complications like abscess are suspected; otherwise, ultrasound or clinical assessment suffices."
+  }
+ ],
+ "exam": [
+  "Describe the typical presentation of acute pyelonephritis and explain why a urine culture is essential.",
+  "Outline the empiric antibiotic regimen for a patient with suspected pyelonephritis in a low‑resource setting and justify your choice.",
+  "Explain how you would differentiate pyelonephritis from renal colic using clinical findings and basic investigations."
+ ],
+ "related": [
+  "Urinary tract infection",
+  "Kidney abscess",
+  "Sepsis",
+  "Interstitial nephritis",
+  "Renal obstruction"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

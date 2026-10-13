@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Respiratory failure is the inability of the lungs to maintain adequate oxygenation or CO₂ elimination. It is classified by gas abnormalities and severity, and requires rapid identification of cause and supportive care.",
+ "aka": [
+  "Respiratory insufficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Respiratory failure occurs when PaO₂ < 60 mmHg (hypoxemic) or PaCO₂ > 50 mmHg with pH < 7.35 (hypercapnic) despite maximal effort. Diagnosis uses arterial blood gas (ABG) and clinical assessment of work of breathing.",
+   "b": [
+    "ABG provides the primary objective criteria.",
+    "Look for tachypnea, accessory‑muscle use, altered mental status."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The American Thoracic Society grades failure as mild, moderate, or severe based on PaO₂/FiO₂ ratio and PaCO₂ levels. This guides urgency of ventilatory support.",
+   "b": [
+    "Mild: PaO₂ 60‑80 mmHg, PaCO₂ ≤45 mmHg.",
+    "Moderate: PaO₂ 40‑60 mmHg or PaCO₂ 45‑60 mmHg.",
+    "Severe: PaO₂ <40 mmHg or PaCO₂ >60 mmHg with acidosis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify whether the primary problem is hypoxemic (type 1) or hypercapnic (type 2) and then consider common etiologies, especially those seen in low‑resource settings.",
+   "b": [
+    "Type 1: pneumonia, TB, pulmonary embolism, ARDS, severe malaria.",
+    "Type 2: COPD exacerbation, asthma status, neuromuscular weakness (GBS, myasthenia), chest wall trauma.",
+    "Mixed: sepsis with multi‑organ failure, severe anemia, high‑altitude exposure."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop dyspnea, tachypnea, use of accessory muscles, cyanosis, altered consciousness, and may have a paradoxical rise in PaCO₂ indicating fatigue.",
+   "b": [
+    "Acute: rapid onset, often after infection or asthma attack.",
+    "Chronic: progressive dyspnea, weight loss, nocturnal hypoventilation."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests answer specific questions about gas exchange, underlying disease, and severity.",
+   "t": [
+    {
+     "a": "Arterial blood gas",
+     "b": "What are the oxygenation and ventilation status? Shows PaO₂, PaCO₂, pH; guides need for ventilation."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "What structural lung pathology is present? Detects pneumonia, effusion, pneumothorax, infiltrates."
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Is oxygen saturation adequate? Quick bedside screen; if unavailable, use clinical signs."
+    },
+    {
+     "a": "Spirometry/Peak flow (if patient can cooperate)",
+     "b": "Is there obstructive airflow limitation? Helps differentiate COPD/asthma from neuromuscular causes."
+    },
+    {
+     "a": "Complete blood count & malaria smear",
+     "b": "Is infection or hemolysis contributing? Guides antimicrobial therapy in endemic areas."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognize signs that herald rapid deterioration and life‑threatening sequelae.",
+   "b": [
+    "Rising PaCO₂ or falling pH despite increased effort.",
+    "Severe hypoxemia (SpO₂ < 85%) or hemodynamic instability.",
+    "Altered mental status, bradycardia, or impending cardiac arrest."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide ventilatory support and monitor closely. Choose therapies based on pathophysiology and resource availability.",
+   "b": [
+    "Oxygen therapy: titrate to SpO₂ 92‑96% (88‑92% in COPD).",
+    "Non‑invasive ventilation (BiPAP) for hypercapnic failure if conscious.",
+    "Intubation and mechanical ventilation for severe hypoxemia or exhaustion.",
+    "Bronchodilators and steroids for asthma/ COPD exacerbations.",
+    "Antibiotics for bacterial pneumonia, anti‑TB drugs for TB, antimalarials for malaria.",
+    "Sodium bicarbonate only if metabolic acidosis coexists; not for pure respiratory acidosis."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute stabilization, address chronic risk factors and arrange monitoring to avoid recurrence.",
+   "b": [
+    "Vaccination (influenza, pneumococcal).",
+    "Smoking cessation, pulmonary rehabilitation.",
+    "Long‑term oxygen for chronic hypoxemia.",
+    "Regular review of ventilatory settings and adherence to therapy."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic respiratory failure but have different primary mechanisms.",
+   "b": [
+    "Cardiac failure – presents with dyspnea but primary problem is fluid overload.",
+    "Anemia – low oxygen content without gas exchange abnormality.",
+    "Severe sepsis – may cause hypoxia but primary driver is circulatory shock."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Beware of values that appear normal despite serious pathology.",
+   "b": [
+    "Normal PaCO₂ in a pregnant patient is abnormal (physiologic PaCO₂ is lower).",
+    "Pulse oximetry may be falsely high in carbon monoxide poisoning.",
+    "ABG may show normal PaO₂ if supplemental O₂ is already given, masking underlying lung disease."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden inability to speak full sentences, cyanosis, or unresponsive patient.",
+  "Rapidly rising PaCO₂ (>55 mmHg) or falling pH (<7.30) despite maximal effort.",
+  "Severe hypoxemia (SpO₂ < 85%) with hemodynamic instability."
+ ],
+ "faq": [
+  {
+   "q": "Why does PaCO₂ rise in a patient who looks very breathless?",
+   "a": "It indicates respiratory muscle fatigue; the patient can no longer increase ventilation."
+  },
+  {
+   "q": "When is non‑invasive ventilation preferred over intubation?",
+   "a": "When the patient is alert, can protect the airway, and has hypercapnic failure without severe hypoxemia."
+  },
+  {
+   "q": "Can a normal chest X‑ray rule out respiratory failure?",
+   "a": "No; gas exchange abnormalities can exist with a normal radiograph, especially early in COPD or neuromuscular weakness."
+  }
+ ],
+ "exam": [
+  "Explain how to differentiate type 1 and type 2 respiratory failure using ABG values.",
+  "List the first three most likely causes of acute hypercapnic respiratory failure in a low‑resource setting.",
+  "Describe the step‑wise management of a patient with status asthmaticus who develops rising PaCO₂."
+ ],
+ "related": [
+  "Acute respiratory distress syndrome (ARDS)",
+  "Chronic obstructive pulmonary disease (COPD)",
+  "Asthma exacerbation",
+  "Pulmonary embolism",
+  "Sepsis and septic shock",
+  "Neuromuscular respiratory failure"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

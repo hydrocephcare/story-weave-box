@@ -1,0 +1,139 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Differential diagnosis is the systematic process of listing, prioritising, and testing possible diseases that could explain a patient's presentation. It guides clinicians to the most likely cause while avoiding premature closure.",
+ "aka": [
+  "differential"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A differential diagnosis is a ranked list of alternative conditions that could produce the observed signs, symptoms, and test results. It is built by pattern recognition, epidemiology, and pathophysiology.",
+   "b": [
+    "Start with the chief complaint and key positive findings.",
+    "Add pertinent negatives to narrow the list."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is assessed with disease‑specific scoring systems (e.g., CURB‑65 for pneumonia, Child‑Pugh for liver disease). Staging helps decide urgency and level of care.",
+   "b": [
+    "Higher stage → earlier escalation or admission."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Group possible aetiologies by organ system, infection, inflammation, trauma, or metabolic disturbance. In low‑resource settings, include endemic infections.",
+   "b": [
+    "Infectious: TB, malaria, HIV‑related opportunists, schistosomiasis.",
+    "Inflammatory/autoimmune: vasculitis, rheumatic fever.",
+    "Metabolic/toxic: sickle‑cell crisis, herbal hepatotoxins."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Describe typical symptom clusters, physical signs, and epidemiologic clues that point toward each major category.",
+   "b": [
+    "Fever + weight loss → chronic infection or malignancy.",
+    "Jaundice + right‑upper‑quadrant pain → hepatobiliary disease."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer a specific clinical question; if unavailable, use bedside alternatives.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Is there an inflammatory or haematologic process? ↑WBC suggests infection; anemia may indicate chronic disease."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "What structural lung abnormality exists? Cavities point to TB, fungal infection, or malignancy."
+    },
+    {
+     "a": "Serum ALT/AST",
+     "b": "Is there hepatic injury? Marked elevation favours hepatitis; modest rise may be drug‑induced."
+    },
+    {
+     "a": "Rapid antigen test for malaria",
+     "b": "Is malaria present? Positive test confirms infection; negative in high‑risk area may need microscopy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify findings that signal imminent danger and require urgent intervention.",
+   "b": [
+    "Severe dyspnoea, altered mental status, uncontrolled bleeding."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the most likely cause first, then provide supportive care. Choose drugs based on efficacy, safety, and local resistance patterns.",
+   "b": [
+    "Antibiotics (e.g., amoxicillin) for bacterial pneumonia – avoid macrolides if resistance >20%.",
+    "Antitubercular therapy for confirmed TB – start before culture if high suspicion.",
+    "IV fluids and oxygen for shock or hypoxia – monitor electrolytes."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑assess response within 48‑72 h; adjust the list if improvement is absent. Prevent recurrence with vaccination, hygiene, and chronic disease control.",
+   "b": [
+    "Schedule repeat imaging if initial study was inconclusive.",
+    "Educate on insect‑net use in malaria‑endemic areas."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic each other clinically.",
+   "b": [
+    "TB vs. fungal lung infection.",
+    "Acute hepatitis vs. drug‑induced liver injury."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation that may mask the true disease.",
+   "b": [
+    "Normal white count in early sepsis.",
+    "Negative malaria rapid test in low‑parasitaemia infections."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained high fever >39 °C lasting >48 h",
+  "Severe shortness of breath or chest pain",
+  "Sudden loss of consciousness"
+ ],
+ "faq": [
+  {
+   "q": "Why not settle on the first diagnosis that fits?",
+   "a": "Because many diseases share features; confirming the most likely prevents missed serious conditions."
+  },
+  {
+   "q": "How many differentials should I list?",
+   "a": "Start with 3‑5 plausible options, then narrow as data accumulate."
+  },
+  {
+   "q": "What if a test is unavailable?",
+   "a": "Use clinical scoring, bedside ultrasound, or refer to a higher‑level centre."
+  }
+ ],
+ "exam": [
+  "Explain how you would construct a differential diagnosis for a child with wheeze and fever in a malaria‑endemic area.",
+  "List three red‑flag signs that would change the urgency of management in a patient with suspected pneumonia.",
+  "Describe how a normal CBC could be misleading in early sepsis."
+ ],
+ "related": [
+  "Clinical reasoning",
+  "Diagnostic algorithms",
+  "Epidemiology",
+  "Evidence‑based medicine",
+  "Medical decision‑making"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,183 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Diffuse Alveolar Damage (DAD) is the histologic hallmark of ARDS, showing widespread injury to the alveolar-capillary barrier with hyaline membranes and edema. It leads to severe hypoxemia and stiff lungs that require ventilatory support.",
+ "aka": [
+  "ARDS histology"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "DAD is the microscopic pattern of injury seen in acute respiratory distress syndrome, defined by diffuse alveolar wall damage, hyaline membranes, edema, and inflammation. Diagnosis requires clinical ARDS criteria plus lung biopsy or autopsy showing these features.",
+   "b": [
+    "Clinical ARDS criteria (Berlin): acute onset, PaO2/FiO2 ≤300 mmHg, bilateral infiltrates, no cardiac cause",
+    "Histology: hyaline membranes, interstitial edema, type II pneumocyte hyperplasia"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray/CT",
+     "b": "Diffuse ground‑glass opacities support ARDS; focal infiltrates suggest pneumonia"
+    },
+    {
+     "a": "Arterial blood gas",
+     "b": "Low ratio confirms ARDS severity; normal ratio argues against DAD"
+    },
+    {
+     "a": "Lung biopsy (if feasible)",
+     "b": "Hyaline membranes and edema confirm DAD; absence suggests other pathology"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Berlin criteria stage ARDS as mild (200‑300), moderate (100‑200), or severe (<100) based on PaO2/FiO2 with PEEP ≥5 cmH2O. Histologically, DAD progresses from exudative (0‑7 days) to proliferative (7‑21 days) to fibrotic (>21 days).",
+   "b": [
+    "Exudative: edema, hyaline membranes",
+    "Proliferative: type II cell hyperplasia, fibroblast infiltration",
+    "Fibrotic: collagen deposition, lung stiffening"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the inciting insult; most common are sepsis, aspiration, severe pneumonia, and trauma. In low‑resource settings add malaria, severe dengue, TB, HIV‑related opportunistic infections, and herbal toxin exposure.",
+   "b": [
+    "Sepsis (gram‑negative, gram‑positive)",
+    "Aspiration of gastric contents",
+    "Severe viral pneumonia (influenza, COVID‑19)",
+    "Malaria with severe anemia",
+    "Disseminated TB or PCP in HIV"
+   ],
+   "t": [
+    {
+     "a": "History and exposure review",
+     "b": "Recent infection, trauma, or toxin points to DAD cause; no trigger suggests alternative diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop rapid onset dyspnea, tachypnea, and hypoxemia refractory to oxygen, often with diffuse crackles. The chest is usually “wet” but the heart sounds are normal, distinguishing it from cardiogenic edema.",
+   "b": [
+    "Respiratory rate >30/min",
+    "PaO2/FiO2 ≤300 despite O2",
+    "Bilateral crackles, no JVD"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use bedside tools first; advanced tests when available. When a test is unavailable, rely on clinical criteria and basic imaging.",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Low saturation confirms severe gas exchange defect"
+    },
+    {
+     "a": "Bedside ultrasound",
+     "b": "Diffuse B‑lines support non‑cardiogenic edema"
+    },
+    {
+     "a": "Serum BNP",
+     "b": "Normal/low BNP favors DAD; high BNP suggests cardiac cause"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled hypoxemia, refractory hypercapnia, and rapid progression to fibrosis are life‑threatening. Secondary infections and barotrauma from ventilation are common complications.",
+   "b": [
+    "PaO2/FiO2 <100 despite high PEEP",
+    "Plateau pressure >30 cmH2O",
+    "New fever or purulent secretions"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then provide lung‑protective ventilation and supportive care. Avoid high tidal volumes and liberal fluids.",
+   "b": [
+    "Low tidal volume (6 mL/kg predicted body weight)",
+    "Target plateau pressure <30 cmH2O",
+    "Prone positioning for severe ARDS",
+    "Conservative fluid strategy"
+   ],
+   "t": [
+    {
+     "a": "Antibiotics (if infection suspected)",
+     "b": "Broad‑spectrum coverage started; de‑escalate when cultures return"
+    },
+    {
+     "a": "Corticosteroids (late proliferative phase)",
+     "b": "Low‑dose steroids may improve outcomes; avoid if active infection"
+    },
+    {
+     "a": "Neuromuscular blockade (severe ventilator dyssynchrony)",
+     "b": "Short‑term paralysis improves oxygenation; monitor for weakness"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After recovery, assess lung function, monitor for fibrosis, and vaccinate against influenza and pneumococcus. Educate on early treatment of infections to prevent recurrence.",
+   "b": [
+    "Pulmonary function tests at 3‑6 months",
+    "Chest CT if dyspnea persists",
+    "Vaccination schedule"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause diffuse infiltrates and hypoxemia but have different pathophysiology.",
+   "b": [
+    "Cardiogenic pulmonary edema",
+    "Pulmonary hemorrhage",
+    "Acute interstitial pneumonia"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may appear normal despite severe DAD, leading to delayed treatment.",
+   "b": [
+    "BNP may be low even with severe hypoxemia",
+    "Chest X‑ray can be deceptively normal early",
+    "Lactate may be normal if sepsis is controlled"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe dyspnea with oxygen saturation <80% despite supplemental O2",
+  "Rapidly falling PaO2/FiO2 ratio",
+  "New onset hypotension or cardiac arrest"
+ ],
+ "faq": [
+  {
+   "q": "Why are hyaline membranes important?",
+   "a": "They indicate protein‑rich edema leaking into alveoli, a hallmark of DAD."
+  },
+  {
+   "q": "Can DAD resolve completely?",
+   "a": "Yes, many patients recover, but some develop fibrotic lung disease."
+  },
+  {
+   "q": "Is fluid restriction always safe?",
+   "a": "Generally yes to limit edema, but patients with shock need balanced resuscitation."
+  }
+ ],
+ "exam": [
+  "Explain the histologic features that define diffuse alveolar damage.",
+  "List the Berlin criteria for ARDS severity and how they relate to DAD stages.",
+  "Discuss the ventilatory strategy for a patient with severe DAD and why high tidal volumes are harmful."
+ ],
+ "related": [
+  "Acute Respiratory Distress Syndrome",
+  "Pulmonary Edema",
+  "Sepsis",
+  "Ventilator‑Associated Lung Injury",
+  "Prone Positioning",
+  "Pulmonary Fibrosis",
+  "Infective Pneumonia",
+  "Malaria‑related ARDS"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

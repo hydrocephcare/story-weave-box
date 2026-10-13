@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Cholera is an acute secretory diarrhoea caused by Vibrio cholerae toxin that drives massive intestinal fluid loss. Prompt rehydration and targeted antibiotics prevent death.",
+ "aka": [
+  "Vibrio cholerae infection",
+  "cholerae"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cholera is a watery diarrhoea syndrome caused by ingestion of Vibrio cholerae producing cholera toxin. Diagnosis rests on clinical picture plus stool culture or rapid antigen test.",
+   "b": [
+    "Rapid onset of profuse rice‑water stools",
+    "History of contaminated water/food exposure",
+    "Positive stool culture for V. cholerae O1/O139"
+   ],
+   "t": [
+    {
+     "a": "Stool culture / rapid antigen test",
+     "b": "Does the patient have V. cholerae? Positive result confirms cholera; negative does not exclude early infection."
+    },
+    {
+     "a": "Stool osmotic gap",
+     "b": "Is the diarrhoea secretory? Gap <50 mOsm/kg supports secretory (cholera) diarrhoea."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by dehydration status and volume loss, using WHO criteria: no, some, or severe dehydration.",
+   "b": [
+    "Severe dehydration: >10 % body weight loss, sunken eyes, rapid pulse",
+    "Some dehydration: 5‑10 % weight loss, thirst, reduced urine"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is ingestion of V. cholerae‑contaminated water or food. Co‑factors that increase risk include poor sanitation, crowded settings, and co‑infection with HIV or malnutrition.",
+   "b": [
+    "Vibrio cholerae O1/O139 (most common)",
+    "Contaminated surface water",
+    "Food washed with unsafe water"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop sudden profuse watery diarrhoea with a “rice‑water” appearance, abdominal cramps, and rapid dehydration. Fever is usually absent.",
+   "b": [
+    "Watery, pale, non‑bloody stools",
+    "Vomiting may precede diarrhoea",
+    "Signs of dehydration develop within hours"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations focus on confirming the pathogen, assessing dehydration, and detecting electrolyte disturbances.",
+   "b": [
+    "Stool culture or rapid test for V. cholerae",
+    "Serum electrolytes, BUN, creatinine"
+   ],
+   "t": [
+    {
+     "a": "Serum electrolytes",
+     "b": "Are there hyponatraemia or hypokalaemia? Low Na⁺/K⁺ guide rehydration fluid composition."
+    },
+    {
+     "a": "Blood urea nitrogen (BUN)",
+     "b": "Is renal perfusion compromised? Elevated BUN indicates severe dehydration."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid fluid loss can lead to hypovolemic shock, acute kidney injury, and metabolic acidosis. Early recognition prevents mortality.",
+   "b": [
+    "Shock (cold, clammy skin, hypotension)",
+    "Altered mental status",
+    "Oliguria or anuria"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Rehydration is the cornerstone; replace losses with oral rehydration solution (ORS) or IV fluids for severe cases. A single dose of doxycycline or azithromycin shortens illness.",
+   "b": [
+    "ORS for mild‑moderate dehydration (WHO formula)",
+    "IV Ringer's lactate for severe dehydration",
+    "Single‑dose doxycycline (or azithromycin) to eradicate bacteria"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Observe for re‑hydration success, repeat electrolytes, and educate on safe water. Vaccination and water sanitation reduce outbreaks.",
+   "b": [
+    "Check urine output and mental status after rehydration",
+    "Advise boiled or treated water, hand hygiene",
+    "Oral cholera vaccine for high‑risk areas"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of acute watery diarrhoea can mimic cholera but differ in pathogen and management.",
+   "b": [
+    "Enterotoxigenic E. coli (ETEC) – similar exposure, no specific antibiotic need",
+    "Giardiasis – foul‑smelling stools, chronic course",
+    "Vibrio parahaemolyticus – seafood‑related, usually milder"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Stool microscopy may miss V. cholerae if sampling is delayed; normal leukocyte count does not rule out cholera because it is non‑inflammatory.",
+   "b": [
+    "Negative stool culture after >48 h of antibiotics may be false‑negative",
+    "Normal white blood cell count despite severe dehydration"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Signs of severe dehydration (sunken eyes, rapid pulse, low blood pressure)",
+  "Persistent vomiting preventing oral intake",
+  "Altered consciousness or shock"
+ ],
+ "faq": [
+  {
+   "q": "Why does cholera cause watery diarrhoea even when fasting?",
+   "a": "Cholera toxin activates adenylate cyclase, forcing chloride secretion via CFTR; water follows osmotically regardless of food intake."
+  },
+  {
+   "q": "Is antibiotic therapy always required?",
+   "a": "Antibiotics shorten illness and reduce transmission but are not needed if rehydration is prompt and the disease is mild."
+  },
+  {
+   "q": "Can cholera be prevented without a vaccine?",
+   "a": "Yes, by ensuring safe drinking water, proper sanitation, and hand hygiene."
+  }
+ ],
+ "exam": [
+  "Describe the pathophysiology of cholera toxin and its effect on intestinal secretion.",
+  "Outline the WHO dehydration classification and corresponding rehydration strategy for cholera.",
+  "List the first‑line antimicrobial agents for cholera and explain why they are preferred."
+ ],
+ "related": [
+  "Enterotoxigenic Escherichia coli",
+  "Typhoid fever",
+  "Acute watery diarrhoea",
+  "Oral rehydration therapy",
+  "Waterborne disease outbreaks",
+  "Vaccines for enteric pathogens"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

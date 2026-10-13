@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Thyroid hormone (T4/T3) regulates metabolism, heart rate, and thermogenesis via nuclear receptors. Production is controlled by the hypothalamic‑pituitary‑thyroid axis. Clinicians must recognise how alterations affect multiple organ systems.",
+ "aka": [
+  "thyroxine",
+  "triiodothyronine"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Thyroid hormone is secreted by the thyroid gland as mostly T4, which peripheral tissues convert to the active T3. It acts on nuclear receptors to modulate gene transcription.",
+   "b": [
+    "T4 → T3 conversion occurs in liver, kidney, and muscle.",
+    "T3 binds thyroid hormone receptors (TRα, TRβ) in nuclei.",
+    "Effects: ↑ basal metabolic rate, ↑ O₂ consumption, ↑ cardiac output, ↑ heat production."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "T3‑TR complexes bind thyroid response elements on DNA, recruiting co‑activators and increasing transcription of metabolic enzymes, Na⁺/K⁺‑ATPase, and β‑adrenergic receptors.",
+   "b": [
+    "Increases mitochondrial oxidative phosphorylation.",
+    "Enhances β‑adrenergic receptor density → heightened catecholamine response."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The hypothalamic‑pituitary‑thyroid (HPT) axis maintains hormone levels via negative feedback: TRH → TSH → thyroid hormone; high T3/T4 suppresses TRH and TSH.",
+   "b": [
+    "TRH released from the hypothalamic paraventricular nucleus.",
+    "TSH stimulates thyroid follicular cells to synthesize and release T4/T3.",
+    "Iodine availability and deiodinase activity modulate conversion."
+   ],
+   "t": [
+    {
+     "a": "Serum TSH",
+     "b": "Is the primary screen for thyroid dysfunction; low suggests hyperthyroidism, high suggests hypothyroidism."
+    },
+    {
+     "a": "Free T4",
+     "b": "Confirms the direction of dysfunction; low in primary hypothyroidism, high in hyperthyroidism."
+    },
+    {
+     "a": "Free T3",
+     "b": "Useful when T4 is normal but clinical suspicion persists; elevated in T3 toxicosis."
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Disorders arise from excess, deficiency, or impaired conversion of thyroid hormone, each with distinct clinical patterns and severity.",
+   "b": [
+    "Primary hypothyroidism – thyroid gland failure (e.g., iodine deficiency, autoimmune thyroiditis, post‑radioiodine).",
+    "Secondary hypothyroidism – pituitary or hypothalamic disease (e.g., pituitary infarct, Sheehan syndrome).",
+    "Primary hyperthyroidism – excess hormone production (Graves disease, toxic multinodular goitre, thyroiditis).",
+    "Thyroid hormone resistance – defective receptors, normal/high TSH with high T4/T3."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Thyroid hormone status influences cardiovascular risk, neurodevelopment, pregnancy outcomes, and peri‑operative safety.",
+   "b": [
+    "Untreated hypothyroidism → bradycardia, pericardial effusion, myxedema coma.",
+    "Untreated hyperthyroidism → atrial fibrillation, heart failure, thyroid storm.",
+    "Pregnant women need adequate T4 for fetal brain development."
+   ],
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Detects tachyarrhythmias in hyperthyroidism or bradycardia in hypothyroidism; guides urgency of treatment."
+    },
+    {
+     "a": "Thyroid ultrasound",
+     "b": "Identifies nodules or inflammation when physical exam is equivocal; not essential if imaging unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on interpreting TSH/T4 patterns, recognizing life‑threatening complications, and knowing first‑line management steps.",
+   "b": [
+    "Low TSH + high Free T4/T3 → primary hyperthyroidism; treat with antithyroid drugs, β‑blocker, consider definitive therapy.",
+    "High TSH + low Free T4 → primary hypothyroidism; start levothyroxine, monitor TSH every 6‑8 weeks.",
+    "TSH normal, Free T4 low → secondary hypothyroidism; evaluate pituitary imaging."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe tachycardia, chest pain, or altered mental status (possible thyroid storm).",
+  "Profound bradycardia, hypothermia, or coma in known hypothyroidism (myxedema crisis)."
+ ],
+ "faq": [
+  {
+   "q": "Why is TSH the preferred initial test?",
+   "a": "TSH is highly sensitive to small changes in thyroid hormone and reflects the feedback loop, making it an early indicator of dysfunction."
+  },
+  {
+   "q": "Can a patient have normal TSH with abnormal thyroid hormone levels?",
+   "a": "Yes, in central (secondary) disorders or during early thyroiditis; free T4/T3 must be measured to clarify."
+  },
+  {
+   "q": "What is the role of iodine in thyroid hormone synthesis?",
+   "a": "Iodine is incorporated into tyrosine residues to form T3/T4; deficiency reduces hormone production, causing goitre and hypothyroidism."
+  }
+ ],
+ "exam": [
+  "Interpret a lab panel: TSH 0.1 µIU/mL, Free T4 2.5 ng/dL – what is the diagnosis and next step?",
+  "List the major causes of primary hypothyroidism in low‑resource settings and the most likely first cause.",
+  "Describe the pathophysiology of thyroid storm and the immediate management priorities."
+ ],
+ "related": [
+  "Iodine deficiency disorders",
+  "Graves disease",
+  "Hashimoto thyroiditis",
+  "Thyroiditis (subacute, painless)",
+  "Pituitary disorders",
+  "Pregnancy and thyroid function"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

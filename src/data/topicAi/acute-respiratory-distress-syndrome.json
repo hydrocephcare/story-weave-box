@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "ARDS is a rapid, severe lung injury causing non‑cardiac pulmonary edema and hypoxemia. Diagnosis requires recent insult, bilateral infiltrates, and impaired oxygenation.",
+ "aka": [
+  "Acute Respiratory Distress Syndrome",
+  "ARDS"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute Respiratory Distress Syndrome is acute respiratory failure within 7 days of a known insult, with bilateral lung opacities not explained by heart failure or fluid overload.",
+   "b": [
+    "Berlin criteria: timing, imaging, origin of edema, and PaO₂/FiO₂ ratio",
+    "PaO₂/FiO₂ ≤ 300 mmHg on ≥ 5 cm H₂O PEEP defines ARDS"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray / CT",
+     "b": "Does the imaging show bilateral infiltrates? → Confirms the presence of diffuse alveolar damage; helps exclude unilateral disease."
+    },
+    {
+     "a": "Arterial blood gas (ABG)",
+     "b": "What is the PaO₂/FiO₂ ratio? → Determines severity; lower ratios indicate worse oxygenation."
+    },
+    {
+     "a": "Echocardiography or BNP",
+     "b": "Is cardiac failure contributing? → Normal cardiac pressures support non‑cardiogenic edema; if unavailable, use clinical assessment of volume status."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Berlin definition grades ARDS by the PaO₂/FiO₂ ratio on PEEP ≥ 5 cm H₂O.",
+   "b": [
+    "Mild: 200 < PaO₂/FiO₂ ≤ 300 mmHg",
+    "Moderate: 100 < PaO₂/FiO₂ ≤ 200 mmHg",
+    "Severe: PaO₂/FiO₂ ≤ 100 mmHg"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the precipitating insult; infections dominate in low‑resource settings.",
+   "b": [
+    "Pneumonia (bacterial, viral, TB, malaria‑related lung infection)",
+    "Sepsis from intra‑abdominal, urinary, or skin sources",
+    "Aspiration of gastric contents",
+    "Severe trauma or burns",
+    "Pancreatitis",
+    "Transfusion‑related acute lung injury"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop sudden dyspnea, tachypnea, and hypoxemia despite high‑flow oxygen, often with diffuse crackles.",
+   "b": [
+    "Rapid increase in work of breathing",
+    "Cyanosis or desaturation < 90 % on room air",
+    "Absence of cardiogenic signs (no JVD, clear neck veins)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Focused tests confirm the diagnosis, assess severity, and search for the trigger.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Is there leukocytosis or anemia? → May point to infection or hemorrhage as a trigger."
+    },
+    {
+     "a": "Blood cultures / sputum Gram stain",
+     "b": "Is a pathogen identified? → Guides antimicrobial therapy; if unavailable, start broad‑spectrum antibiotics based on local patterns."
+    },
+    {
+     "a": "Lactate",
+     "b": "Is tissue hypoperfusion present? → High lactate suggests severe sepsis, increasing mortality risk."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of life‑threatening progression is essential.",
+   "b": [
+    "Refractory hypoxemia despite FiO₂ > 0.8",
+    "Rapidly falling PaO₂/FiO₂ ratio",
+    "Multi‑organ failure (renal, hepatic, cardiovascular)",
+    "Barotrauma from high ventilatory pressures"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then provide lung‑protective ventilation and supportive care.",
+   "b": [
+    "Low tidal volume (6 mL/kg predicted body weight) to limit volutrauma",
+    "Plateau pressure ≤ 30 cm H₂O",
+    "Higher PEEP according to severity tables",
+    "Prone positioning for severe ARDS",
+    "Conservative fluid strategy after initial resuscitation",
+    "Broad‑spectrum antibiotics for suspected infection; de‑escalate when cultures return",
+    "Consider neuromuscular blockade if severe asynchrony"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After stabilization, monitor for recovery and prevent recurrence.",
+   "b": [
+    "Gradual weaning of ventilatory support when oxygenation improves",
+    "Pulmonary rehabilitation for residual dyspnea",
+    "Vaccination (influenza, pneumococcal) and infection control to avoid repeat insults",
+    "Avoid unnecessary transfusions and aspiration risk"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause bilateral infiltrates and hypoxemia.",
+   "b": [
+    "Cardiogenic pulmonary edema – distinguished by elevated cardiac pressures, response to diuretics",
+    "Pneumonia with consolidation – usually focal, fever, and sputum production",
+    "Pulmonary hemorrhage – presents with hemoptysis and drop in hemoglobin"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may appear normal early or be falsely abnormal.",
+   "b": [
+    "Normal BNP does not rule out cardiac contribution in mixed shock",
+    "Early chest X‑ray may miss subtle infiltrates; CT is more sensitive",
+    "PaO₂/FiO₂ can improve transiently with high FiO₂, masking severity"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of breathlessness with oxygen saturation < 85 % despite supplemental oxygen",
+  "New onset confusion or agitation indicating hypoxemic encephalopathy",
+  "Rapid drop in blood pressure or urine output suggesting multi‑organ failure"
+ ],
+ "faq": [
+  {
+   "q": "Why is ARDS called non‑cardiogenic pulmonary edema?",
+   "a": "Because the fluid leaks from damaged alveolar capillaries due to inflammation, not from high left‑heart pressures."
+  },
+  {
+   "q": "Can ARDS develop without an infection?",
+   "a": "Yes; trauma, pancreatitis, aspiration, and transfusion reactions are common non‑infectious triggers."
+  },
+  {
+   "q": "Is high‑flow nasal cannula enough for severe ARDS?",
+   "a": "Usually not; severe ARDS requires invasive mechanical ventilation with lung‑protective settings."
+  }
+ ],
+ "exam": [
+  "Explain the Berlin criteria and how they differentiate ARDS from cardiogenic edema.",
+  "List the most common causes of ARDS in low‑resource settings and the rationale for early antimicrobial therapy.",
+  "Describe the ventilatory strategy for severe ARDS and why low tidal volume is critical."
+ ],
+ "related": [
+  "Acute Lung Injury",
+  "Sepsis",
+  "Pulmonary edema",
+  "Ventilator‑associated pneumonia",
+  "Prone positioning",
+  "Fluid management in critical care"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

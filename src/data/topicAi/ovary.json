@@ -1,0 +1,125 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The ovary is a paired, intra‑pelvic organ that produces oocytes and sex steroids. Its size, position and blood supply make it vulnerable to torsion, cysts and malignancy.",
+ "aka": [
+  "Ovarian gland",
+  "Ovary"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Each ovary is a 3–5 cm almond‑shaped organ in the lateral pelvic wall, containing follicles that mature oocytes and a stromal cortex that secretes estrogen and progesterone.",
+   "b": [
+    "Contains a finite oocyte pool established before birth",
+    "Produces the majority of circulating estrogen before pregnancy"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The ovaries lie in the ovarian fossa, inferior to the pelvic brim, attached to the uterus by the ovarian ligament and to the pelvic sidewall by the suspensory ligament.",
+   "b": [
+    "Covered by peritoneum with a superficial serous membrane",
+    "Cortex holds follicles; medulla contains vessels, nerves, and lymphatics"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly the ovary contacts the fallopian tube; posteriorly it rests on the ureter and internal iliac vessels; laterally it is near the obturator nerve.",
+   "b": [
+    "Torsion often involves the vascular pedicle of the suspensory ligament",
+    "Ureteral injury can occur during ovarian surgery"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial blood arrives via the ovarian artery (branch of the abdominal aorta) and the ovarian branch of the uterine artery; venous drainage follows the ovarian veins to the IVC (right) or renal vein (left).",
+   "b": [
+    "Right ovarian vein drains directly to IVC, left to renal vein",
+    "Arterial supply is vulnerable to atherosclerosis in low‑resource settings"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sympathetic fibers travel with the ovarian vessels; parasympathetic fibers accompany the pelvic splanchnic nerves (S2‑S4). Pain from ovarian pathology is often referred to the lower abdomen or flank.",
+   "b": [
+    "Referred pain may mimic appendicitis or renal colic"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Follicles mature under FSH, releasing a single oocyte at ovulation; the corpus luteum then secretes progesterone to prepare the endometrium. Estrogen from the ovary drives secondary sexual characteristics.",
+   "b": [
+    "Oocyte number is fixed at birth; declines to menopause",
+    "Estrogen production shifts to placenta after 10 weeks gestation"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Common problems include functional cysts, endometriomas, torsion, and ovarian cancer. In low‑resource settings, infections (TB, schistosomiasis) and HIV‑related neoplasia are notable.",
+   "b": [
+    "Ovarian torsion: acute pain, absent Doppler flow; requires urgent detorsion",
+    "Endometrioma: chocolate‑colored cyst, may cause infertility",
+    "Epithelial ovarian cancer: often presents with pelvic mass, ascites, elevated CA‑125"
+   ],
+   "t": [
+    {
+     "a": "Transvaginal ultrasound",
+     "b": "Does the ovary have a cystic mass, solid components, or papillary projections? → Guides suspicion for benign cyst vs. malignancy"
+    },
+    {
+     "a": "Serum CA‑125",
+     "b": "Is the level markedly elevated (>200 U/mL) in a post‑menopausal woman? → Supports epithelial ovarian cancer; normal in pre‑menopausal may be false‑negative"
+    },
+    {
+     "a": "MRI pelvis",
+     "b": "What is the tissue character of a complex mass when ultrasound is inconclusive? → Differentiates endometrioma (high T1) from malignant lesions"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "On bimanual exam a firm, unilateral adnexal mass suggests a cyst or tumor; tenderness with guarding raises suspicion for torsion or rupture.",
+   "b": [
+    "Palpable mass >5 cm with rapid growth warrants imaging",
+    "Absence of ovarian blood flow on Doppler is an emergency"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe lower abdominal pain with vomiting (possible torsion)",
+  "Rapidly enlarging pelvic mass with weight loss or ascites (suspect malignancy)",
+  "Fever, pelvic pain, and foul discharge (possible tubo‑ovarian abscess)"
+ ],
+ "faq": [
+  {
+   "q": "Why does ovarian cancer often present late?",
+   "a": "Early tumors are small and asymptomatic; symptoms appear only when the mass irritates surrounding structures or causes ascites."
+  },
+  {
+   "q": "Can a functional cyst become cancerous?",
+   "a": "No; functional cysts resolve spontaneously and lack malignant potential, unlike epithelial tumors."
+  },
+  {
+   "q": "How does HIV increase ovarian cancer risk?",
+   "a": "Immunosuppression reduces tumor surveillance, and co‑infection with HPV can promote malignant transformation."
+  }
+ ],
+ "exam": [
+  "Describe the arterial supply to the ovary and its clinical relevance in torsion.",
+  "Explain how ultrasound findings differentiate a functional cyst from an endometrioma.",
+  "List the key steps in managing a suspected ovarian torsion."
+ ],
+ "related": [
+  "Fallopian tube",
+  "Uterus",
+  "Pelvic inflammatory disease",
+  "Ectopic pregnancy",
+  "Polycystic ovary syndrome",
+  "Ovarian cancer staging"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

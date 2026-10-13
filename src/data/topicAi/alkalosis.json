@@ -1,0 +1,156 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Alkalosis is a disturbance where blood pH rises above 7.45 due to excess base or loss of acid. It can be metabolic or respiratory and requires identifying the underlying cause.",
+ "aka": [
+  "Alkalemia",
+  "High pH"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Alkalosis is defined by arterial pH >7.45. Metabolic alkalosis shows elevated HCO3⁻ with compensatory hypoventilation; respiratory alkalosis shows low PaCO₂ with renal compensation.",
+   "b": [
+    "Arterial blood gas (ABG) is the cornerstone for diagnosis.",
+    "Calculate expected compensation to confirm primary disorder."
+   ],
+   "t": [
+    {
+     "a": "Arterial blood gas",
+     "b": "Is the pH high and what is the primary disturbance? Confirms alkalosis and distinguishes metabolic vs respiratory."
+    },
+    {
+     "a": "Serum electrolytes (Na⁺, K⁺, Cl⁻, HCO₃⁻)",
+     "b": "Are chloride and potassium low? Helps identify hypochloraemic, hypokalaemic metabolic alkalosis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by bicarbonate level and pH: mild (pH 7.45‑7.55, HCO₃⁻ 26‑30 mmol/L), moderate (pH 7.55‑7.65, HCO₃⁻ 31‑40 mmol/L), severe (pH >7.65, HCO₃⁻ >40 mmol/L).",
+   "b": [
+    "Higher severity predicts risk of arrhythmia, seizures, and respiratory failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped by loss of acid, gain of base, or shift of H⁺ into cells.",
+   "b": [
+    "Vomiting or nasogastric suction – loss of HCl (most common metabolic cause).",
+    "Diuretic therapy – volume contraction, chloride loss, and secondary aldosterone activation.",
+    "Primary hyperaldosteronism – renal H⁺ excretion and K⁺ loss.",
+    "Cystic fibrosis or chronic lung disease – chronic respiratory alkalosis.",
+    "Sepsis, malaria, severe anemia – high respiratory drive causing respiratory alkalosis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may feel light‑headed, have tingling, muscle cramps, or seizures. Severe cases show arrhythmias, decreased ventilation, and altered mental status.",
+   "b": [
+    "Hypokalaemia causes muscle weakness and cardiac ectopy.",
+    "Hypochloraemia leads to paradoxical aciduria."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond ABG, targeted tests uncover the trigger and assess complications.",
+   "t": [
+    {
+     "a": "Urine chloride",
+     "b": "Is the alkalosis chloride‑responsive? Low <20 mmol/L suggests vomiting or diuretics; >20 mmol/L suggests renal cause."
+    },
+    {
+     "a": "Serum aldosterone/renin ratio",
+     "b": "Is primary hyperaldosteronism present? Elevated ratio points to adrenal source."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Is there pulmonary disease causing chronic hyperventilation? Identifies respiratory alkalosis sources."
+    },
+    {
+     "a": "If labs unavailable",
+     "b": "Use bedside capillary blood gas and clinical clues (vomiting, diuretic use) to infer alkalosis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncorrected severe alkalosis can precipitate life‑threatening events.",
+   "b": [
+    "Cardiac arrhythmias (especially with hypokalaemia).",
+    "Seizures or decreased consciousness.",
+    "Respiratory depression from over‑compensation."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then correct electrolytes and acid‑base balance.",
+   "b": [
+    "Stop vomiting source; give anti‑emetics or surgical correction for obstruction.",
+    "Replace chloride (e.g., isotonic saline) to reverse volume contraction.",
+    "Correct hypokalaemia with potassium chloride; potassium repletion also helps alkalosis resolve.",
+    "Consider carbonic anhydrase inhibitors (acetazolamide) for renal‑mediated metabolic alkalosis when volume repletion fails."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑check ABG and electrolytes after 6‑12 hours of therapy. Educate patients on avoiding excess diuretics and recognizing early vomiting signs.",
+   "b": [
+    "Monitor cardiac rhythm in hypokalaemic patients.",
+    "Ensure adequate oral/IV hydration before discharge."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that present with similar symptoms or lab patterns.",
+   "b": [
+    "Metabolic acidosis with compensatory respiratory alkalosis – pH may be near normal but HCO₃⁻ is low.",
+    "Hypocalcaemia – also causes tetany and seizures."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain values may appear normal despite underlying alkalosis.",
+   "b": [
+    "Serum chloride can be normal in mixed disorders, masking a chloride‑responsive alkalosis.",
+    "Urine pH may be high in renal tubular acidosis type 2, confusing interpretation."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "New onset arrhythmia or cardiac arrest",
+  "Severe seizures or respiratory failure"
+ ],
+ "faq": [
+  {
+   "q": "Why does vomiting cause metabolic alkalosis?",
+   "a": "Gastric fluid loss removes HCl, decreasing chloride and hydrogen ions, raising bicarbonate and pH."
+  },
+  {
+   "q": "How does hypokalaemia sustain alkalosis?",
+   "a": "Low K⁺ drives H⁺ into cells and stimulates renal H⁺ excretion, keeping bicarbonate high."
+  },
+  {
+   "q": "When is acetazolamide indicated?",
+   "a": "In renal‑mediated metabolic alkalosis when volume repletion alone does not correct the pH."
+  }
+ ],
+ "exam": [
+  "Explain how to differentiate metabolic from respiratory alkalosis on an ABG and list the expected compensatory changes.",
+  "A patient with vomiting presents with pH 7.58, HCO₃⁻ 34 mmol/L, PaCO₂ 55 mmol/L. Identify the primary disorder and the most likely cause.",
+  "Describe the stepwise management of hypochloraemic, hypokalaemic metabolic alkalosis."
+ ],
+ "related": [
+  "Acidosis",
+  "Electrolyte disorders",
+  "Diuretic‑induced metabolic disturbances",
+  "Hyperaldosteronism",
+  "Respiratory failure",
+  "Renal tubular acidosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

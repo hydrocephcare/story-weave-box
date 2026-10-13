@@ -1,0 +1,202 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Pelvic inflammatory disease (PID) is an ascending infection of the upper genital tract, most often from sexually transmitted organisms. Early recognition and broad‑spectrum antibiotics prevent infertility and ectopic pregnancy.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "PID is inflammation of the uterus, tubes, or ovaries caused by bacterial invasion. Diagnosis relies on clinical criteria plus laboratory support.",
+   "b": [
+    "History of sexual activity, pain, fever, abnormal discharge"
+   ],
+   "t": [
+    {
+     "a": "Pelvic exam",
+     "b": "Detect cervical motion tenderness, adnexal tenderness; positive findings support PID"
+    },
+    {
+     "a": "NAAT for Chlamydia trachomatis and Neisseria gonorrhoeae",
+     "b": "Identifies common pathogens; a positive result confirms etiology and guides therapy"
+    },
+    {
+     "a": "CBC",
+     "b": "Leukocytosis suggests infection; normal counts do not exclude PID"
+    },
+    {
+     "a": "CRP or ESR",
+     "b": "Elevated values support inflammation but are nonspecific"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the CDC 2015 criteria: mild, moderate, severe, or fulminant. Fulminant PID requires hospitalization and IV antibiotics.",
+   "b": [
+    "Mild: low fever, mild pain; moderate: higher fever, moderate pain; severe: high fever, significant pain; fulminant: septic shock, organ failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The leading causes are sexually transmitted infections, especially chlamydia and gonorrhea. Other bacteria and local factors also contribute.",
+   "b": [
+    "Chlamydia trachomatis",
+    "Neisseria gonorrhoeae",
+    "Bacterial vaginosis flora",
+    "Staphylococcus aureus (rare)",
+    "Herpes simplex virus (rare)"
+   ],
+   "t": [
+    {
+     "a": "HIV status",
+     "b": "HIV infection increases PID risk and severity"
+    },
+    {
+     "a": "Recent antibiotic use",
+     "b": "May alter flora and mask symptoms"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report lower abdominal pain, fever, and abnormal vaginal discharge. Cervical motion tenderness is a key sign.",
+   "b": [
+    "Lower abdominal or pelvic pain",
+    "Fever >38°C",
+    "Abnormal vaginal discharge",
+    "Cervical motion tenderness",
+    "Adnexal tenderness"
+   ],
+   "t": [
+    {
+     "a": "Pain location",
+     "b": "Central pelvic pain suggests tubo‑ovarian involvement; flank pain may indicate pyosalpinx"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Laboratory and imaging confirm diagnosis and rule out mimics.",
+   "t": [
+    {
+     "a": "Transvaginal ultrasound",
+     "b": "Detects tubo‑ovarian abscess, free fluid, or ovarian cysts; normal in early PID"
+    },
+    {
+     "a": "Pelvic X‑ray (rare)",
+     "b": "Rule out ectopic pregnancy if pregnancy test positive"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and include sepsis, abscess, infertility, and ectopic pregnancy.",
+   "b": [
+    "Septic shock",
+    "Tubo‑ovarian abscess",
+    "Ectopic pregnancy",
+    "Infertility",
+    "Pelvic adhesions"
+   ],
+   "t": [
+    {
+     "a": "Vital signs",
+     "b": "Hypotension or tachycardia indicates sepsis"
+    },
+    {
+     "a": "Ultrasound findings",
+     "b": "Large fluid collection suggests abscess"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat empirically with broad‑spectrum antibiotics covering gonorrhea, chlamydia, and anaerobes. Adjust therapy based on culture and local resistance.",
+   "b": [
+    "Empiric oral therapy: doxycycline + ceftriaxone",
+    "IV therapy for severe cases: ceftriaxone + metronidazole + azithromycin",
+    "Supportive care: fluids, pain control",
+    "Monitor for treatment failure or complications"
+   ],
+   "t": [
+    {
+     "a": "Culture of cervical discharge",
+     "b": "Guides de‑escalation of antibiotics"
+    },
+    {
+     "a": "Repeat CBC",
+     "b": "Improvement indicates response"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Ensure treatment completion, test‑treat‑treat (partner notification), and counsel on barrier contraception.",
+   "b": [
+    "Repeat NAAT 3–6 weeks post‑treatment",
+    "Partner notification and treatment",
+    "Barrier contraception to prevent reinfection"
+   ],
+   "t": [
+    {
+     "a": "Pregnancy test",
+     "b": "Rule out pregnancy before prescribing certain antibiotics"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnoses include ectopic pregnancy, ovarian torsion, appendicitis, and urinary tract infection.",
+   "b": [
+    "Ectopic pregnancy",
+    "Ovarian torsion",
+    "Appendicitis",
+    "Urinary tract infection"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal CBC or ultrasound does not exclude PID; low-grade fever may be missed.",
+   "b": [
+    "Normal leukocyte count in early PID",
+    "Ultrasound may miss small abscesses",
+    "Pregnancy test false negative if early pregnancy"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with fever >39°C",
+  "Signs of sepsis (tachycardia, hypotension)",
+  "Sudden worsening of pain",
+  "Evidence of ectopic pregnancy (positive pregnancy test with abdominal pain)"
+ ],
+ "faq": [
+  {
+   "q": "Can PID happen without sexual activity?",
+   "a": "Rarely; non‑sexual routes include post‑operative infection or contaminated tampons, but sexual transmission is the main route."
+  },
+  {
+   "q": "Is PID curable?",
+   "a": "Yes, with appropriate antibiotics; however, scarring can lead to infertility or ectopic pregnancy."
+  },
+  {
+   "q": "Do I need to see a doctor if I have mild pain?",
+   "a": "Any pelvic pain with abnormal discharge or fever warrants evaluation to rule out PID."
+  }
+ ],
+ "exam": [
+  "Explain the CDC 2015 severity criteria for PID and how they guide treatment decisions.",
+  "Describe the rationale for empiric antibiotic choices in PID, including coverage of anaerobes and resistance patterns.",
+  "Outline the steps you would take to manage a patient with suspected PID who is pregnant."
+ ],
+ "related": [
+  "Sexually transmitted infections",
+  "Tubo‑ovarian abscess",
+  "Ectopic pregnancy",
+  "Infertility"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

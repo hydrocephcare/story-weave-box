@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Sickle cell disease is an inherited hemoglobin disorder causing rigid, sickle‑shaped red cells that lead to vaso‑occlusion, hemolytic anemia, and organ damage. Diagnosis relies on hemoglobin electrophoresis and peripheral smear; management focuses on preventing crises and infection.",
+ "aka": [
+  "Sickle cell anemia",
+  "HbSS disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Sickle cell disease comprises a group of autosomal recessive hemoglobinopathies, most commonly HbSS, where a β‑globin mutation (Glu6Val) produces HbS. Under low oxygen, HbS polymerizes, distorting red cells.",
+   "b": [
+    "Diagnostic criteria: HbS ≥ 50% on electrophoresis or HPLC, plus clinical features.",
+    "Peripheral smear shows sickle‑shaped RBCs, target cells, and Howell‑Jolly bodies."
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin electrophoresis / HPLC",
+     "b": "Confirms type and proportion of HbS vs HbF/HbA; >90% HbS in homozygous disease."
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "Identifies sickle cells and degree of hemolysis; guides urgency of care."
+    },
+    {
+     "a": "Newborn screening (IEF or HPLC)",
+     "b": "Detects disease before symptoms; enables early prophylaxis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by frequency of vaso‑occlusive crises, organ involvement, and laboratory markers (e.g., hemoglobin, LDH). The Pediatric Sickle Cell Disease Severity Score (PSCDSS) and adult complications index are used.",
+   "b": [
+    "Mild: ≤2 crises/year, no organ damage.",
+    "Moderate: 3‑5 crises/year or early organ changes (e.g., splenomegaly).",
+    "Severe: >5 crises/year, stroke, pulmonary hypertension, or renal failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is the β‑globin point mutation (HbS). Co‑existing factors that worsen sickling are common in low‑resource settings.",
+   "b": [
+    "HbSS genotype (most common cause).",
+    "Co‑inherited α‑thalassemia can modify severity.",
+    "Infections (malaria, bacterial sepsis, HIV) increase sickling risk.",
+    "Dehydration, hypoxia, acidosis, and extreme temperatures trigger crises."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with chronic hemolytic anemia and acute vaso‑occlusive events. In infants, dactylitis is typical; older children and adults develop pain crises, splenic sequestration, and organ dysfunction.",
+   "b": [
+    "Painful swelling of hands/feet (dactylitis) in <2 y.",
+    "Recurrent bone pain crises, often in long bones.",
+    "Anemia‑related fatigue, jaundice, gallstones.",
+    "Functional asplenia → fever = emergency."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond confirming diagnosis, labs assess hemolysis, organ function, and infection risk.",
+   "b": [
+    "CBC with reticulocyte count evaluates anemia severity.",
+    "LDH, indirect bilirubin, haptoglobin track hemolysis.",
+    "Renal and liver panels monitor end‑organ damage."
+   ],
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Quantifies anemia and reticulocytosis; low Hb with high retic suggests hemolysis."
+    },
+    {
+     "a": "Serum LDH & indirect bilirubin",
+     "b": "Elevated levels confirm ongoing hemolysis."
+    },
+    {
+     "a": "Transcranial Doppler ultrasound (if available)",
+     "b": "Screens for elevated cerebral blood flow velocity; predicts stroke risk."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Detects acute chest syndrome; infiltrates require urgent care."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and require rapid intervention.",
+   "b": [
+    "Acute chest syndrome: fever, chest pain, hypoxia.",
+    "Stroke: focal neurologic deficit, seizures.",
+    "Splenic sequestration: sudden abdominal fullness, drop in Hb.",
+    "Severe infection (especially encapsulated bacteria)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment combines disease‑modifying therapy, crisis prevention, and supportive care.",
+   "b": [
+    "Hydroxyurea increases HbF, reducing crises; first‑line disease‑modifying drug.",
+    "Penicillin prophylaxis (until age 5) prevents pneumococcal sepsis.",
+    "Vaccinations: pneumococcal, meningococcal, Hib, influenza.",
+    "Acute pain: IV opioids, hydration, oxygen if hypoxic.",
+    "Blood transfusion for severe anemia, stroke prevention, or ACS."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring prevents complications and guides therapy adjustments.",
+   "b": [
+    "Quarterly clinic visits with CBC, HbF level, and growth assessment.",
+    "Annual transcranial Doppler in children 2‑16 y.",
+    "Education on hydration, temperature avoidance, and early fever reporting."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Thalassemia major – also causes severe anemia but lacks sickle cells.",
+    "G6PD deficiency – hemolysis triggered by oxidative stress, not vaso‑occlusion.",
+    "Autoimmune hemolytic anemia – positive Coombs test, no sickling."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Fetal hemoglobin may be high in early infancy, masking sickling on smear.",
+    "Normal peripheral smear in early disease if sample taken during a transfusion.",
+    "Low HbF after hydroxyurea non‑adherence can be misinterpreted as disease progression."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever >38 °C in any child with SCD (risk of sepsis).",
+  "Chest pain, shortness of breath, or new infiltrate on X‑ray (acute chest syndrome).",
+  "Sudden severe abdominal pain with rapid Hb drop (splenic sequestration).",
+  "Neurologic deficit or seizure (possible stroke)."
+ ],
+ "faq": [
+  {
+   "q": "Why do patients with SCD become functionally asplenic?",
+   "a": "Repeated splenic infarction from sickling destroys splenic tissue, eliminating its ability to clear encapsulated bacteria."
+  },
+  {
+   "q": "How does hydroxyurea help SCD?",
+   "a": "It increases fetal hemoglobin (HbF), which inhibits HbS polymerization, reducing sickling and pain crises."
+  },
+  {
+   "q": "When is a blood transfusion indicated?",
+   "a": "For severe anemia, acute chest syndrome, stroke prevention, or splenic sequestration with rapid Hb decline."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of vaso‑occlusive crises and how hydroxyurea modifies it.",
+  "List the acute complications of sickle cell disease that require immediate hospitalization.",
+  "Interpret a hemoglobin electrophoresis report showing 90% HbS, 5% HbF, and 5% HbA2."
+ ],
+ "related": [
+  "Thalassemia",
+  "Hemolytic anemia",
+  "Acute chest syndrome",
+  "Stroke in children",
+  "Pneumococcal sepsis",
+  "Hydroxyurea therapy",
+  "Transcranial Doppler screening"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

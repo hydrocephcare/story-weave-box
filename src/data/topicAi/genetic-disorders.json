@@ -1,0 +1,147 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Genetic disorders are diseases caused by pathogenic DNA variants that alter protein function or regulation. They can be inherited or arise de novo, and present with multisystem signs that require pattern recognition and targeted testing.",
+ "aka": [
+  "heritable disease",
+  "inherited disorder",
+  "DNA mutation disease"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Genetic disorders result from alterations in the genome that disrupt normal development or physiology. They range from single‑gene (Mendelian) conditions to chromosomal and complex polygenic diseases.",
+   "b": [
+    "Classified as single‑gene, chromosomal, or multifactorial",
+    "Inheritance patterns: autosomal dominant, recessive, X‑linked, mitochondrial"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "A normal gene encodes a functional protein that participates in a biochemical pathway. Mutations can produce a non‑functional protein, a toxic gain‑of‑function, or alter gene dosage.",
+   "b": [
+    "Loss‑of‑function → enzyme deficiency, structural protein loss",
+    "Gain‑of‑function → abnormal signaling, toxic protein aggregates"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Gene expression is controlled by promoters, enhancers, epigenetic marks, and non‑coding RNAs. Disruption of these regulators can mimic a genetic disorder even without a coding mutation.",
+   "b": [
+    "Methylation defects cause imprinting disorders (e.g., Prader‑Willi, Angelman)",
+    "Triplet repeat expansions affect transcription (e.g., Fragile X)"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Pathogenic variants produce clinical phenotypes by impairing organ development, metabolism, or cell survival. The same mutation may have variable expressivity due to modifier genes or environment.",
+   "b": [
+    "Single‑gene: cystic fibrosis (CFTR), sickle cell (HBB)",
+    "Chromosomal: Down syndrome (trisomy 21), Turner syndrome (45,X)",
+    "Mitochondrial: MELAS, Leber hereditary optic neuropathy"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Recognising patterns (family history, multisystem signs) guides appropriate genetic testing, informs prognosis, and enables targeted therapy or counseling.",
+   "b": [
+    "Diagnostic criteria often include a combination of clinical features and molecular confirmation",
+    "Severity staging uses disease‑specific scores (e.g., CFTR‑related disease severity index)",
+    "Urgent complications: metabolic crisis in urea cycle disorders, cardiac arrhythmia in long QT syndrome"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Testing is chosen to answer a specific clinical question; when unavailable, surrogate tests or clinical criteria are used.",
+   "t": [
+    {
+     "a": "Targeted gene panel or exome sequencing",
+     "b": "What specific mutation is causing the phenotype? → Identifies pathogenic variant; guides management and family testing"
+    },
+    {
+     "a": "Karyotype or chromosomal microarray",
+     "b": "Is there a large chromosomal abnormality? → Detects aneuploidy, deletions/duplications; essential for congenital anomalies"
+    },
+    {
+     "a": "Methylation analysis",
+     "b": "Is imprinting disrupted? → Confirms Prader‑Willi/Angelman; informs recurrence risk"
+    },
+    {
+     "a": "Biochemical screening (e.g., newborn metabolic panel)",
+     "b": "Is there a metabolic block? → Abnormal metabolite levels suggest inborn errors; start urgent treatment"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Therapy focuses on correcting the molecular defect when possible, otherwise on symptom control and prevention of complications.",
+   "b": [
+    "Enzyme replacement (e.g., imiglucerase for Gaucher disease) replaces missing activity",
+    "Small‑molecule chaperones (e.g., migalastat for Fabry) stabilize mutant protein",
+    "Gene therapy (e.g., lentiviral vector for ADA‑SCID) provides functional gene",
+    "Supportive care: physiotherapy, nutritional support, cardiac monitoring"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic genetic disorders due to similar signs.",
+   "b": [
+    "Acquired metabolic diseases (e.g., alcohol‑induced neuropathy vs. hereditary neuropathy)",
+    "Infectious causes of developmental delay (e.g., congenital CMV vs. Down syndrome)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation of genetic tests.",
+   "b": [
+    "Variants of uncertain significance may be over‑interpreted",
+    "Normal sequencing does not exclude large deletions; consider microarray"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points frequently tested in exams.",
+   "b": [
+    "Know inheritance patterns and give recurrence risk",
+    "Identify hallmark clinical features of common single‑gene disorders",
+    "Select the most appropriate first‑line genetic test for a given presentation"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden metabolic decompensation (e.g., vomiting, lethargy, hyperammonemia)",
+  "Acute cardiac arrhythmia in channelopathies",
+  "Severe respiratory failure in neuromuscular genetic disease"
+ ],
+ "faq": [
+  {
+   "q": "How is a genetic disorder confirmed?",
+   "a": "By detecting a pathogenic DNA variant that matches the clinical phenotype using sequencing, microarray, or methylation studies."
+  },
+  {
+   "q": "Can genetic disorders be treated?",
+   "a": "Some have disease‑specific therapies (enzyme replacement, chaperones, gene therapy); most require symptom management and preventive care."
+  },
+  {
+   "q": "What is the recurrence risk for autosomal recessive disorders?",
+   "a": "Each sibling has a 25% chance of being affected if both parents are carriers."
+  }
+ ],
+ "exam": [
+  "Explain the difference between autosomal dominant and recessive inheritance and give an example of each.",
+  "A newborn has failure to thrive, pancreatic insufficiency, and recurrent infections. Which genetic disorder is most likely and what test confirms it?",
+  "Describe the first‑line investigation for a suspected imprinting disorder and the rationale behind it."
+ ],
+ "related": [
+  "Molecular genetics",
+  "Inborn errors of metabolism",
+  "Chromosomal abnormalities",
+  "Prenatal diagnosis",
+  "Genetic counseling",
+  "Pharmacogenomics"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

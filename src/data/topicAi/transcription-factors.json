@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Transcription factors are proteins that bind DNA to regulate gene expression, guiding cell fate and function. In disease, mutations or dysregulation can block differentiation or drive uncontrolled growth, leading to cancers or inherited disorders.",
+ "aka": [
+  "Transcriptional regulators"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Transcription factors (TFs) are proteins that bind specific DNA sequences to activate or repress transcription. Diagnosis of TF‑related disease relies on genetic testing, immunohistochemistry, and functional assays to detect mutations or abnormal expression.",
+   "b": [
+    "DNA binding domain",
+    "Transactivation domain",
+    "Co‑factor interactions"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the extent of functional loss or gain. For example, myelodysplastic syndromes with PU.1 mutations are staged by WHO criteria; solid tumours with TF fusions use TNM staging.",
+   "b": [
+    "Functional loss severity",
+    "Oncogenic gain severity"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common causes include point mutations, chromosomal translocations creating fusion TFs, promoter/enhancer mutations, and epigenetic silencing. In low‑resource settings, infections (HIV, TB) can indirectly alter TF activity via chronic inflammation.",
+   "b": [
+    "Point mutations in TF genes",
+    "Translocations forming oncogenic fusions",
+    "Promoter mutations reducing expression",
+    "Epigenetic silencing"
+   ],
+   "t": [
+    {
+     "a": "Sanger sequencing",
+     "b": "Detects point mutations in TF genes; abnormal results suggest loss or gain of function."
+    },
+    {
+     "a": "FISH",
+     "b": "Identifies chromosomal translocations; positive indicates fusion TF driving oncogenesis."
+    },
+    {
+     "a": "qRT‑PCR",
+     "b": "Quantifies TF mRNA; low levels imply loss, high levels suggest overexpression."
+    },
+    {
+     "a": "Immunohistochemistry",
+     "b": "Assesses TF protein expression in tissue; loss indicates differentiation block."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical features depend on the tissue affected. Myeloid differentiation blocks present as cytopenias; TF‑driven cancers show rapid growth, metastasis, or organ dysfunction.",
+   "b": [
+    "Anemia, neutropenia, thrombocytopenia",
+    "Rapidly enlarging masses",
+    "Organ failure from metastatic spread"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Work‑up includes CBC, flow cytometry, cytogenetics, and molecular testing. In resource‑limited settings, a peripheral smear and basic cytogenetics can guide diagnosis.",
+   "b": [
+    "CBC with differential"
+   ],
+   "t": [
+    {
+     "a": "Peripheral blood smear",
+     "b": "Evaluates cell morphology; dysplasia suggests TF mutation."
+    },
+    {
+     "a": "Flow cytometry",
+     "b": "Detects abnormal lineage markers; loss of myeloid markers indicates PU.1 deficiency."
+    },
+    {
+     "a": "Cytogenetics (karyotype)",
+     "b": "Reveals translocations; e.g., t(8;21) creates RUNX1‑RUNX1T1 fusion."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unchecked TF dysregulation can lead to aggressive malignancy, marrow failure, or severe infections. Rapidly enlarging lesions or unexplained cytopenias warrant urgent referral.",
+   "b": [
+    "Sudden drop in blood counts",
+    "Rapid tumour growth",
+    "Unexplained fevers"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause: correct the mutation‑driven block with targeted therapy (e.g., FLT3 inhibitors for FLT3‑ITD), or use chemotherapy for TF‑driven cancers. Supportive care includes transfusions and infection prophylaxis.",
+   "b": [
+    "Targeted inhibitors for specific TF fusions"
+   ],
+   "t": [
+    {
+     "a": "FLT3 inhibitor",
+     "b": "Blocks downstream signalling of FLT3‑ITD; reduces proliferation in AML."
+    },
+    {
+     "a": "All‑trans retinoic acid",
+     "b": "Differentiates promyelocytes in APL with PML‑RARA fusion."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of blood counts and imaging is essential. Prevention focuses on early detection of infections that may alter TF activity and on genetic counselling for hereditary TF disorders.",
+   "b": [
+    "Routine CBCs",
+    "Imaging for tumour surveillance",
+    "Genetic counselling"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "TF‑related differentiation blocks can mimic nutritional deficiencies or other marrow failure syndromes. TF‑driven cancers may resemble infections or inflammatory conditions.",
+   "b": [
+    "Aplastic anaemia",
+    "Iron deficiency anaemia",
+    "Sepsis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low TF expression may be falsely normal in early disease; overexpression can be seen in reactive states. Cytogenetic results may miss cryptic translocations.",
+   "b": [
+    "Early disease with normal TF levels",
+    "Reactive lymphocytosis mimicking TF overexpression"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe anaemia",
+  "Rapidly enlarging mass",
+  "Unexplained fevers"
+ ],
+ "faq": [
+  {
+   "q": "What is a transcription factor?",
+   "a": "A protein that binds DNA to control gene expression."
+  },
+  {
+   "q": "How do TF mutations cause disease?",
+   "a": "They block normal cell differentiation or drive uncontrolled proliferation."
+  },
+  {
+   "q": "Can TF disorders be treated?",
+   "a": "Yes, with targeted drugs, chemotherapy, or supportive care."
+  }
+ ],
+ "exam": [
+  "Explain how PU.1 deficiency leads to myelodysplastic syndrome.",
+  "Describe the diagnostic work‑up for a patient with suspected TF‑driven AML.",
+  "Discuss why ATRA is effective in APL with PML‑RARA fusion."
+ ],
+ "related": [
+  "Myelodysplastic syndromes",
+  "Acute myeloid leukemia",
+  "Oncogenic transcription factors",
+  "Gene regulation",
+  "Bone marrow failure syndromes"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

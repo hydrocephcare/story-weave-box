@@ -1,0 +1,125 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The gallbladder stores and concentrates bile, releasing it during meals to aid fat digestion. Its position, blood supply, and nerve connections influence common diseases like cholecystitis and gallstones.",
+ "aka": [
+  "Gallbladder"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "b": [
+    "Bile concentration up to 10‑fold",
+    "Emptying is hormonally driven by cholecystokinin"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lies in the gallbladder fossa of the right lobe, inferior to segment V, with a fundus that may be palpable in thin patients.",
+   "b": [
+    "Fundus, body, neck, cystic duct",
+    "Mucosa has folds (rugae) that flatten when full"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly covered by peritoneum, posteriorly in contact with liver tissue; the cystic duct joins the common hepatic duct to form the common bile duct.",
+   "b": [
+    "Close to hepatic flexure of colon",
+    "Near right hepatic artery"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial blood comes from the cystic artery, a branch of the right hepatic artery; venous drainage follows the cystic vein to the portal system.",
+   "b": [
+    "Cystic artery may arise from the proper hepatic artery",
+    "Supplies the wall and mucosa"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Parasympathetic fibers travel with the vagus nerve; sympathetic fibers accompany the hepatic plexus, providing pain signals to T5‑T9 dermatomes.",
+   "b": [
+    "Referred pain to right shoulder (phrenic nerve irritation)"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Stores bile produced by the liver, concentrates it by water reabsorption, and releases it in response to a fatty meal to emulsify dietary lipids.",
+   "b": [
+    "Contraction mediated by cholecystokinin",
+    "Regulates bile flow into duodenum"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Gallstones, cholecystitis, and biliary obstruction are common; anatomical variations of the cystic duct can complicate surgery. In low‑resource settings, infections (e.g., TB, HIV‑related cholangiopathy) may mimic cholecystitis.",
+   "b": [
+    "Gallstones: cholesterol or pigment, cause pain after fatty meals",
+    "Acute cholecystitis: inflammation, fever, RUQ tenderness, Murphy's sign",
+    "Courvoisier's sign: painless, palpable GB with jaundice → malignancy suspicion"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Does the gallbladder contain stones or wall thickening? Positive: echogenic stones with acoustic shadow; thickened wall (>3 mm) suggests cholecystitis."
+    },
+    {
+     "a": "HIDA scan",
+     "b": "Is the cystic duct patent? Non‑filling of GB indicates obstruction or acute cholecystitis."
+    },
+    {
+     "a": "CT/MRI",
+     "b": "What is the extent of inflammation or presence of mass? Detects complications (empyema, perforation) and malignancy."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and bedside assessment.",
+   "b": [
+    "Murphy's sign: inspiratory arrest on palpation → acute cholecystitis",
+    "Courvoisier's law: non‑tender, palpable GB with jaundice → pancreatic head cancer",
+    "Gallbladder wall >3 mm on US = inflammation"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe RUQ pain with fever and jaundice (possible cholangitis)",
+  "Sudden abdominal distension with hypotension (perforated gallbladder)",
+  "Painless jaundice with palpable gallbladder (possible malignancy)"
+ ],
+ "faq": [
+  {
+   "q": "Why does the gallbladder become tender in cholecystitis?",
+   "a": "Inflammation stretches the wall and irritates the phrenic nerve, causing localized pain."
+  },
+  {
+   "q": "Can gallstones be asymptomatic?",
+   "a": "Yes; many people have silent stones that are discovered incidentally."
+  },
+  {
+   "q": "What is a mucocele?",
+   "a": "Obstruction of the cystic duct leads to mucus accumulation, enlarging the gallbladder."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of gallstone formation and why it predisposes to cholecystitis.",
+  "Describe how to perform and interpret Murphy's sign.",
+  "Interpret a bedside ultrasound image showing a thick‑walled gallbladder with stones."
+ ],
+ "related": [
+  "Bile ducts",
+  "Pancreas",
+  "Liver",
+  "Cholecystitis",
+  "Gallstone disease",
+  "Pancreatic cancer",
+  "Hepatobiliary imaging"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

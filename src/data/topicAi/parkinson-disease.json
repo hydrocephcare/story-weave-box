@@ -1,0 +1,142 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Parkinson disease is a neurodegenerative disorder marked by loss of dopaminergic neurons in the substantia nigra, causing hypokinetic movement symptoms that improve with levodopa. It is diagnosed clinically, staged with the Hoehn‑Yahr scale, and managed with dopamine replacement and supportive care.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Parkinson disease is a progressive movement disorder caused by degeneration of substantia nigra dopaminergic neurons. Diagnosis is clinical, based on the presence of bradykinesia plus at least one of tremor, rigidity or postural instability, and confirmed by a positive response to levodopa.",
+   "b": [
+    "Resting tremor, pill‑rolling",
+    "Bradykinesia, masked facies",
+    "Rigidity, stooped posture"
+   ],
+   "t": [
+    {
+     "a": "Levodopa challenge",
+     "b": "Does the patient improve after a trial dose of levodopa? A marked improvement supports Parkinson disease."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged with the Hoehn‑Yahr scale, ranging from 1 (unilateral symptoms) to 5 (wheelchair or bedridden). Staging guides prognosis and treatment intensity.",
+   "b": [
+    "Stage 1: unilateral motor signs",
+    "Stage 3: balance impairment, falls",
+    "Stage 5: severe disability"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Idiopathic Parkinson disease is the most common cause. Genetic mutations (LRRK2, PARK2) and environmental toxins (pesticides, well water) are less frequent but important in low‑resource settings.",
+   "b": [
+    "Idiopathic",
+    "Genetic mutations (LRRK2, PARK2)",
+    "Pesticide exposure",
+    "Heavy metal exposure"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with resting tremor, bradykinesia, rigidity, stooped posture, and festinating gait. Non‑motor features include anosmia, constipation, depression, and sleep disturbances.",
+   "b": [
+    "Resting tremor, pill‑rolling",
+    "Bradykinesia, masked facies",
+    "Rigidity, stooped posture",
+    "Festinating gait"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm the diagnosis, rule out mimics, and assess complications. In low‑resource settings, clinical assessment is paramount.",
+   "t": [
+    {
+     "a": "DaT‑scan",
+     "b": "Normal uptake suggests a tremor disorder other than Parkinson disease."
+    },
+    {
+     "a": "MRI brain",
+     "b": "Normal MRI supports idiopathic Parkinson disease."
+    },
+    {
+     "a": "Basic metabolic panel",
+     "b": "Abnormal electrolytes may mimic Parkinson disease."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include rapid onset, asymmetric symptoms, severe rigidity, and hallucinations. Complications are falls, aspiration pneumonia, and medication side effects.",
+   "b": [
+    "Rapid onset of symptoms",
+    "Severe rigidity or rigidity with dystonia",
+    "Hallucinations or confusion"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause if identified, then start dopamine replacement. Levodopa with carbidopa is first line; dopamine agonists or MAO‑B inhibitors are alternatives. Monitor for dyskinesia and motor fluctuations.",
+   "b": [
+    "MAO‑B inhibitors: modest benefit, avoid with MAO‑A inhibitors"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular follow‑up assesses motor status, medication side effects, and non‑motor symptoms. Early physiotherapy, speech therapy, and nutrition support reduce disability.",
+   "b": [
+    "Encourage exercise and balance training"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Essential tremor, drug‑induced parkinsonism, Wilson disease, and stroke can mimic Parkinson disease.",
+   "b": [
+    "Wilson disease: low ceruloplasmin, Kayser‑Fleischer rings"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal DaT‑scan does not exclude Parkinson disease in early stages; normal MRI may miss small vascular lesions. Low levodopa response can be due to advanced disease.",
+   "b": [
+    "Small vascular lesions may be missed on routine MRI"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe rigidity or dystonia",
+  "Rapidly progressive symptoms",
+  "New onset hallucinations or confusion",
+  "Severe falls or aspiration risk"
+ ],
+ "faq": [
+  {
+   "q": "Can Parkinson disease be cured?",
+   "a": "No, it is a progressive neurodegenerative disorder; treatment focuses on symptom control."
+  },
+  {
+   "q": "Is Parkinson disease hereditary?",
+   "a": "Most cases are idiopathic, but some genetic forms exist, especially in families with early onset."
+  },
+  {
+   "q": "What lifestyle changes help?",
+   "a": "Regular exercise, balanced diet, adequate sleep, and avoidance of neurotoxins reduce symptom progression."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of Parkinson disease and why levodopa is effective.",
+  "Describe the Hoehn‑Yahr staging system and its clinical relevance.",
+  "List the main differential diagnoses for a patient with resting tremor and rigidity."
+ ],
+ "related": [
+  "Movement disorders",
+  "Neurodegenerative diseases",
+  "Dopaminergic therapy",
+  "Essential tremor"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

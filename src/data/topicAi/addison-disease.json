@@ -1,0 +1,179 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Addison disease is primary adrenal insufficiency caused by loss of cortisol and aldosterone production. Diagnosis relies on low cortisol, high ACTH, and electrolyte disturbances. Prompt treatment prevents adrenal crisis.",
+ "aka": [
+  "Primary adrenal insufficiency",
+  "Addison's disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Addison disease is the failure of the adrenal cortex to produce adequate glucocorticoids and mineralocorticoids. Diagnosis requires a low morning serum cortisol (<3 µg/dL) with a high plasma ACTH, confirmed by a rapid ACTH (cosyntropin) stimulation test.",
+   "b": [
+    "Low cortisol + high ACTH = primary adrenal failure",
+    "Cosyntropin test: <18 µg/dL cortisol at 30‑60 min confirms"
+   ],
+   "t": [
+    {
+     "a": "Morning serum cortisol",
+     "b": "Is basal cortisol sufficient? <3 µg/dL supports diagnosis"
+    },
+    {
+     "a": "Plasma ACTH",
+     "b": "Is ACTH elevated? High ACTH indicates primary failure"
+    },
+    {
+     "a": "Cosyntropin stimulation test",
+     "b": "Does cortisol rise >18 µg/dL? Failure confirms adrenal insufficiency"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Are Na low and K high? Hyponatremia & hyperkalemia suggest mineralocorticoid loss"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by clinical presentation and cortisol response. Acute crisis (life‑threatening) vs chronic insufficiency (fatigue, weight loss).",
+   "b": [
+    "Mild: stable, no crisis",
+    "Moderate: symptoms, labs abnormal",
+    "Severe: adrenal crisis"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are autoimmune adrenalitis; infections are common in low‑resource settings.",
+   "b": [
+    "Autoimmune adrenalitis (most common worldwide)",
+    "Tuberculosis adrenalitis (high in endemic areas)",
+    "Fungal infections (histoplasmosis, cryptococcus)",
+    "HIV‑related opportunistic infections",
+    "Metastatic cancer to adrenals",
+    "Waterhouse‑Friderichsen syndrome (meningococcemia)",
+    "Bilateral adrenal hemorrhage (anticoagulation, trauma)",
+    "Chronic use of adrenal‑suppressing drugs (e.g., ketoconazole, glucocorticoids) with abrupt withdrawal"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop fatigue, weight loss, anorexia, hyperpigmentation, orthostatic hypotension, and salt craving. Electrolyte changes cause nausea, vomiting, and muscle weakness.",
+   "b": [
+    "Diffuse hyperpigmentation of skin and mucosa",
+    "Postural dizziness or syncope",
+    "Salt craving and low blood pressure",
+    "Nausea, vomiting, abdominal pain"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Laboratory and imaging confirm adrenal failure and search for cause.",
+   "t": [
+    {
+     "a": "ACTH level",
+     "b": "Is ACTH high? Confirms primary vs secondary insufficiency"
+    },
+    {
+     "a": "Renin and aldosterone",
+     "b": "Is renin high and aldosterone low? Indicates mineralocorticoid deficiency"
+    },
+    {
+     "a": "Autoantibodies (21‑hydroxylase)",
+     "b": "Positive? Supports autoimmune etiology"
+    },
+    {
+     "a": "Chest X‑ray / CT abdomen",
+     "b": "Calcifications or enlargement? Suggests TB or metastasis"
+    },
+    {
+     "a": "If imaging unavailable",
+     "b": "Rely on clinical picture, ACTH, cortisol, electrolytes, and TB screening (Mantoux or GeneXpert)"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Adrenal crisis is the most dangerous complication; untreated can cause shock, coma, and death.",
+   "b": [
+    "Severe hypotension unresponsive to fluids",
+    "Acute abdominal pain with vomiting",
+    "Altered mental status"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Replace missing hormones, treat the underlying cause, and educate on stress dosing.",
+   "b": [
+    "Glucocorticoid replacement: hydrocortisone (physiologic) or equivalent",
+    "Mineralocorticoid replacement: fludrocortisone to control Na/K balance",
+    "Treat infection (e.g., anti‑TB therapy) before starting steroids if active TB",
+    "Avoid abrupt steroid withdrawal; taper gradually"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of symptoms, blood pressure, electrolytes, and cortisol levels; adjust doses during illness or surgery.",
+   "b": [
+    "Check electrolytes and blood pressure every 3–6 months",
+    "Educate on emergency injection kit for crisis",
+    "Vaccinate against infections (e.g., pneumococcus, influenza)"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic adrenal insufficiency.",
+   "b": [
+    "Secondary adrenal insufficiency (low ACTH)",
+    "Hypothyroidism (fatigue, weight gain)",
+    "Chronic kidney disease (hyperkalemia, hyponatremia)",
+    "Septic shock (hypotension, electrolyte shifts)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Early morning cortisol may be normal in partial insufficiency; stimulation test needed",
+    "Hyperpigmentation can be absent in non‑autoimmune causes",
+    "Electrolytes may be normal if patient is on mineralocorticoid replacement"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe weakness, vomiting, abdominal pain, or fainting",
+  "Persistent low blood pressure despite fluids",
+  "Confusion or loss of consciousness"
+ ],
+ "faq": [
+  {
+   "q": "Why is potassium high in Addison disease?",
+   "a": "Loss of aldosterone reduces potassium excretion, leading to hyperkalemia."
+  },
+  {
+   "q": "Can a patient with Addison disease live a normal life?",
+   "a": "Yes, with lifelong hormone replacement and stress‑dose education."
+  },
+  {
+   "q": "What triggers an adrenal crisis?",
+   "a": "Acute stress (infection, trauma, surgery) without adequate steroid dose increase."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic criteria for primary adrenal insufficiency and how the ACTH stimulation test is interpreted.",
+  "List the three most common causes of Addison disease worldwide and two that are prevalent in low‑resource settings.",
+  "Describe the immediate management steps for a patient presenting with adrenal crisis."
+ ],
+ "related": [
+  "Cushing syndrome",
+  "Secondary adrenal insufficiency",
+  "Waterhouse‑Friderichsen syndrome",
+  "Tuberculosis adrenalitis",
+  "Autoimmune polyendocrine syndromes",
+  "Electrolyte disorders"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

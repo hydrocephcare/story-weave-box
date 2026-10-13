@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Haemolytic anaemia is the premature destruction of red cells, leading to anaemia with a compensatory rise in reticulocytes. It can be immune or non‑immune and ranges from mild to life‑threatening.",
+ "aka": [
+  "hemolytic anemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Haemolytic anaemia is defined by a fall in haemoglobin due to increased red‑cell destruction exceeding marrow compensation. Diagnosis requires evidence of haemolysis plus exclusion of bleeding.",
+   "b": [
+    "Low Hb with reticulocytosis (>2%) indicates marrow response.",
+    "Elevated LDH, indirect bilirubin, and low haptoglobin are classic lab hallmarks."
+   ],
+   "t": [
+    {
+     "a": "Peripheral blood smear",
+     "b": "What cell morphology suggests haemolysis? → Spherocytes, schistocytes or bite cells point to specific mechanisms."
+    },
+    {
+     "a": "Direct antiglobulin test (DAT/Coombs)",
+     "b": "Is the haemolysis immune mediated? → Positive DAT indicates autoimmune or alloimmune haemolysis."
+    },
+    {
+     "a": "Serum haptoglobin",
+     "b": "Is free haemoglobin being cleared? → Undetectable haptoglobin supports intravascular haemolysis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by haemoglobin level, reticulocyte response, and presence of organ dysfunction.",
+   "b": [
+    "Mild: Hb ≥ 10 g/dL, stable vitals.",
+    "Moderate: Hb 8‑9 g/dL, may need transfusion.",
+    "Severe: Hb < 8 g/dL or signs of cardiac/renal compromise."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped by mechanism: immune, membrane defects, enzyme defects, and secondary to infections or drugs.",
+   "b": [
+    "Autoimmune warm IgG (e.g., CLL, SLE) – most common acquired.",
+    "Hereditary spherocytosis – frequent inherited membrane defect.",
+    "G6PD deficiency – enzyme defect, precipitated by drugs/ infections.",
+    "Malaria, severe bacterial sepsis, HIV – tropical infections causing haemolysis.",
+    "Drugs (e.g., penicillins, quinine) and herbal remedies – can trigger immune haemolysis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have fatigue, jaundice, dark urine, and splenomegaly. Acute crises may present with rapid Hb drop, tachycardia, and shock.",
+   "b": [
+    "Pallor + scleral icterus = anaemia + unconjugated bilirubin.",
+    "Pigmented gallstones in chronic cases.",
+    "Aplastic crisis in G6PD or sickle cell after infection."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab work confirms haemolysis, identifies the mechanism, and screens for complications.",
+   "b": [
+    "CBC with reticulocyte count.",
+    "Liver function tests for indirect bilirubin.",
+    "Renal function if hemoglobinuria suspected."
+   ],
+   "t": [
+    {
+     "a": "LDH",
+     "b": "Is there cellular breakdown? → Elevated LDH supports haemolysis."
+    },
+    {
+     "a": "Urine dipstick for blood",
+     "b": "Is haemoglobinuria present? → Positive dipstick with no RBCs indicates intravascular haemolysis."
+    },
+    {
+     "a": "G6PD assay",
+     "b": "Is an enzyme defect present? → Low activity confirms G6PD deficiency."
+    },
+    {
+     "a": "Osmotic fragility test",
+     "b": "Is membrane stability reduced? → Positive test suggests hereditary spherocytosis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unrecognised severe haemolysis can lead to cardiovascular collapse, acute kidney injury, or disseminated intravascular coagulation.",
+   "b": [
+    "Rapid Hb fall >2 g/dL in 24 h.",
+    "Hemoglobinuria with rising creatinine.",
+    "Severe jaundice with encephalopathy (bilirubin neurotoxicity)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care and monitor for complications.",
+   "b": [
+    "Corticosteroids for warm autoimmune haemolysis – suppress antibody production.",
+    "IVIG for refractory immune cases – blocks Fc receptors.",
+    "Splenectomy if steroids fail and spleen is primary site of destruction.",
+    "Avoid oxidative drugs in G6PD deficiency; treat malaria promptly.",
+    "Transfusion of washed red cells for severe anaemia when needed."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring prevents crises and organ damage.",
+   "b": [
+    "Check Hb and reticulocyte count every 3‑6 months.",
+    "Vaccinate against encapsulated organisms post‑splenectomy.",
+    "Educate patients on drug avoidance (e.g., sulfa, antimalarials for G6PD).",
+    "Screen family members for hereditary forms."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic haemolytic anaemia must be distinguished.",
+   "b": [
+    "Aplastic anaemia – low reticulocytes, marrow failure.",
+    "Iron‑deficiency anaemia – microcytosis, low ferritin.",
+    "Chronic kidney disease anaemia – low erythropoietin, normal LDH."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may be falsely normal, leading to missed diagnosis.",
+   "b": [
+    "Haptoglobin can be normal in mild intravascular haemolysis.",
+    "DAT may be negative in low‑titer autoimmune haemolysis; repeat if suspicion high.",
+    "Reticulocyte count may be blunted in concurrent marrow suppression."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden Hb drop >2 g/dL with tachycardia or hypotension",
+  "Dark urine with rising creatinine",
+  "Severe jaundice with confusion"
+ ],
+ "faq": [
+  {
+   "q": "Why is indirect bilirubin raised in haemolysis?",
+   "a": "Red‑cell breakdown releases unconjugated bilirubin faster than the liver can conjugate it."
+  },
+  {
+   "q": "What does a negative Coombs test mean?",
+   "a": "It suggests non‑immune (e.g., hereditary or microangiopathic) haemolysis, but repeat if clinical suspicion persists."
+  },
+  {
+   "q": "When is splenectomy indicated?",
+   "a": "In steroid‑refractory warm autoimmune haemolysis or hereditary spherocytosis with severe symptoms."
+  }
+ ],
+ "exam": [
+  "List the five laboratory features of haemolytic anaemia and explain the pathophysiology of each.",
+  "Differentiate warm autoimmune haemolysis from hereditary spherocytosis using peripheral smear and DAT findings.",
+  "Describe the management steps for a patient with severe G6PD‑deficiency‑related haemolysis."
+ ],
+ "related": [
+  "Autoimmune haemolytic anaemia",
+  "Hereditary spherocytosis",
+  "G6PD deficiency",
+  "Thrombotic microangiopathy",
+  "Malaria‑induced haemolysis",
+  "Sickle cell disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

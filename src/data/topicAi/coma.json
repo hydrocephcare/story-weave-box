@@ -1,0 +1,153 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Coma is a profound, sustained loss of consciousness with no purposeful response, requiring urgent evaluation of reversible causes and supportive care. It is staged by the Glasgow Coma Scale and classified by underlying pathology. Rapid, systematic assessment saves lives.",
+ "aka": [
+  "Unconsciousness",
+  "Loss of consciousness"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Coma is defined as a state of unconsciousness lasting longer than 30 minutes, with a Glasgow Coma Scale (GCS) score of 8 or less, and no purposeful response to stimuli. Diagnosis is clinical, confirmed by history, examination and basic investigations.",
+   "b": [
+    "GCS ≤8 indicates coma"
+   ],
+   "t": [
+    {
+     "a": "Glasgow Coma Scale",
+     "b": "Lower score = deeper coma"
+    },
+    {
+     "a": "Arterial blood gas",
+     "b": "Acidosis worsens neuronal injury"
+    },
+    {
+     "a": "Serum glucose",
+     "b": "Hypoglycaemia can be rapidly corrected"
+    },
+    {
+     "a": "Basic metabolic panel",
+     "b": "Abnormalities may be life‑threatening"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Glasgow Coma Scale stages coma into mild (GCS 9–12), moderate (GCS 5–8), and severe (GCS 3–4). Severity correlates with prognosis and guides urgency of intervention.",
+   "b": [
+    "Severe: GCS 3–4, imminent risk of death"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the top causes are infections (malaria, meningitis, HIV encephalopathy), metabolic disturbances (hypoglycaemia, hyponatraemia), toxins (herbal, alcohol), and trauma. Treat the most common first.",
+   "b": [
+    "Trauma: head injury, intracranial haemorrhage"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients are unresponsive, with no purposeful movement. Eye opening is absent or minimal. Breathing may be irregular, and pupils are often dilated and fixed.",
+   "b": [
+    "Pupils may be equal, dilated, or anisocoric"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to identify reversible causes and guide management. Prioritise tests that are available locally and interpret results in context.",
+   "t": [
+    {
+     "a": "Head CT",
+     "b": "Normal CT does not rule out infection or metabolic causes"
+    },
+    {
+     "a": "Lumbar puncture",
+     "b": "Avoid if raised ICP suspected"
+    },
+    {
+     "a": "Rapid malaria test",
+     "b": "Positive requires antimalarial therapy"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Correcting electrolytes is life‑saving"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include sudden onset, focal neurological signs, seizures, or signs of increased intracranial pressure. Complications are hypoxia, aspiration, pressure sores, and secondary infections.",
+   "b": [
+    "Rapid deterioration signals worsening ICP"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care: airway protection, oxygen, glucose correction, and seizure control. Use drugs with proven efficacy and minimal toxicity.",
+   "b": [
+    "Fluid balance: isotonic crystalloids, avoid overload"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After stabilization, monitor neurological status, repeat imaging if indicated, and treat underlying disease. Prevention focuses on vaccination, malaria prophylaxis, and safe medication use.",
+   "b": [
+    "Use insecticide‑treated nets to prevent malaria"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Unconsciousness can be mistaken for sleep, intoxication, or delirium. Distinguish by lack of response to pain and absence of protective reflexes.",
+   "b": [
+    "Delirium: fluctuating consciousness, but patient can follow simple commands"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal glucose or electrolytes do not exclude metabolic encephalopathy if sampling is delayed. A normal CT may miss early haemorrhage or infection.",
+   "b": [
+    "Normal electrolytes can be seen in early hyponatraemia if not repeated"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Seizures or status epilepticus",
+  "Focal neurological deficits",
+  "Breathing difficulty or abnormal breathing pattern",
+  "Unexplained vomiting or diarrhoea with dehydration"
+ ],
+ "faq": [
+  {
+   "q": "What is the quickest way to assess coma severity?",
+   "a": "Use the Glasgow Coma Scale; a score of 8 or less confirms coma."
+  },
+  {
+   "q": "Can a normal CT rule out a brain tumour?",
+   "a": "No; early tumours may not be visible, and normal CT does not exclude infection or metabolic causes."
+  },
+  {
+   "q": "Is hypoglycaemia the most common reversible cause?",
+   "a": "Yes; it is rapidly correctable and should be checked immediately in any unconscious patient."
+  }
+ ],
+ "exam": [
+  "Explain how the Glasgow Coma Scale is used to stage coma and why a score ≤8 is critical.",
+  "List the first‑line investigations for a patient with suspected coma in a low‑resource setting and justify each.",
+  "Describe the management steps for a patient with hypoglycaemic coma, including airway, glucose correction, and monitoring."
+ ],
+ "related": [
+  "Head injury",
+  "Meningitis",
+  "Diabetic ketoacidosis",
+  "Hyperosmolar hyperglycaemic state",
+  "Severe hypoglycaemia",
+  "Traumatic brain injury",
+  "Sepsis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}
