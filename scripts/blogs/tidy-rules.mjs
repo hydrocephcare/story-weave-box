@@ -6,6 +6,8 @@ export function tidy(src) {
   let t = src.replace(/\r/g, "").replace(/[ \t]+$/gm, "");
   // "### **Causes**:"  ->  "### Causes"
   t = t.replace(/^(#{1,6})\s*\*\*(.+?)\*\*\s*:?\s*$/gm, "$1 $2").replace(/^(#{1,6})\s+(.+?):\s*$/gm, "$1 $2");
+  // a note with almost no headings but bold lines standing alone: those bold lines are its headings
+  if ((t.match(/^#{1,6} /gm) ?? []).length < 2) t = t.replace(/^\s*\*\*([^*\n]{3,80}?)\*\*:?\s*$/gm, "## $1");
   // blank lines between list items are removed; items that followed a label ("- **Causes**:") are indented under it
   const lines = t.split("\n"), out = [];
   let nest = false;
