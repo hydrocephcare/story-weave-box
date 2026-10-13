@@ -1,0 +1,197 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Rheumatic heart disease is an autoimmune sequela of group A streptococcal pharyngitis that damages heart valves, especially the mitral and aortic. It presents with murmurs, heart failure, and systemic features of acute rheumatic fever. Early recognition and secondary prophylaxis prevent progression.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Rheumatic heart disease (RHD) is chronic valve damage following acute rheumatic fever (ARF), an autoimmune reaction to group A streptococcal infection. Diagnosis combines clinical criteria (Jones) with echocardiographic evidence of valve lesions.",
+   "b": [
+    "ARF per Jones criteria; echo shows regurgitation or stenosis"
+   ],
+   "t": [
+    {
+     "a": "Echocardiogram",
+     "b": "Normal valves rule out RHD; abnormal valves with history of ARF confirm diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "RHD is staged by valve involvement and functional class. The World Heart Federation (WHF) echo criteria classify mild, moderate, and severe lesions, guiding treatment urgency.",
+   "b": [
+    "Mild: single valve regurgitation",
+    "Moderate: two valves or significant stenosis",
+    "Severe: critical stenosis or heart failure"
+   ],
+   "t": [
+    {
+     "a": "WHO functional class",
+     "b": "Class I: no limitation; Class IV: symptoms at rest"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary trigger is untreated or inadequately treated group A streptococcal pharyngitis. In low‑resource settings, recurrent infections, poor access to antibiotics, and malnutrition heighten risk.",
+   "b": [
+    "Group A strep pharyngitis",
+    "Recurrent streptococcal infections",
+    "Malnutrition",
+    "Low socioeconomic status"
+   ],
+   "t": [
+    {
+     "a": "ASO titer",
+     "b": "Elevated ASO supports ARF diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have a history of ARF with migratory arthritis, chorea, or carditis. Chronic RHD presents with a systolic murmur, dyspnea, edema, and signs of heart failure.",
+   "b": [
+    "Systolic murmur at apex (mitral regurgitation) or pulmonic area (aortic stenosis)",
+    "Dyspnea on exertion",
+    "Peripheral edema"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Presence of a harsh systolic murmur suggests stenosis"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Echocardiography is the cornerstone. Blood tests for ASO and CRP support recent infection. In resource‑poor settings, a focused echo or portable device may suffice.",
+   "b": [
+    "Echocardiogram",
+    "ASO titer"
+   ],
+   "t": [
+    {
+     "a": "Echocardiogram",
+     "b": "Thickened leaflets with regurgitation confirm RHD"
+    },
+    {
+     "a": "ASO titer",
+     "b": "High titers support ARF diagnosis"
+    },
+    {
+     "a": "CRP",
+     "b": "Elevated CRP suggests active carditis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Acute heart failure, arrhythmias, embolic events, and sudden death are life‑threatening complications. Watch for rapid symptom worsening or new murmurs.",
+   "b": [
+    "Acute pulmonary edema",
+    "Atrial fibrillation",
+    "Systemic emboli"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Increased vascular markings indicate heart failure"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying streptococcal infection, provide secondary prophylaxis with benzathine penicillin, and manage heart failure with diuretics, ACE inhibitors, and beta‑blockers. Surgical valve repair or replacement is reserved for severe cases.",
+   "b": [
+    "Benzathine penicillin G",
+    "Diuretics",
+    "ACE inhibitors",
+    "Beta‑blockers",
+    "Valve surgery"
+   ],
+   "t": [
+    {
+     "a": "Benzathine penicillin",
+     "b": "Long‑acting formulation reduces relapse"
+    },
+    {
+     "a": "Diuretics",
+     "b": "Improves dyspnea and edema"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular clinical review, echocardiography every 1–2 years, and adherence to monthly penicillin injections are essential. Public health measures include improving sanitation and early treatment of sore throats.",
+   "b": [
+    "Monthly penicillin injections",
+    "Annual echo in endemic areas"
+   ],
+   "t": [
+    {
+     "a": "Patient education",
+     "b": "Reduces recurrence of ARF"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Mitral valve prolapse, infective endocarditis, and congenital valve disease can mimic RHD murmurs.",
+   "b": [
+    "Mitral valve prolapse – mid‑systolic click",
+    "Infective endocarditis – fever, emboli",
+    "Congenital valve disease – early onset"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low ASO titers may occur in chronic infections; normal CRP does not exclude carditis; echo may miss mild lesions in inexperienced hands.",
+   "b": [
+    "ASO may be low after prolonged infection",
+    "CRP can be normal in chronic inflammation"
+   ],
+   "t": [
+    {
+     "a": "Echo quality",
+     "b": "Use experienced sonographer when possible"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening dyspnea",
+  "New onset atrial fibrillation",
+  "Severe chest pain or syncope"
+ ],
+ "faq": [
+  {
+   "q": "Can RHD be cured?",
+   "a": "Valve damage is irreversible; treatment focuses on preventing progression and managing complications."
+  },
+  {
+   "q": "Is penicillin safe for all?",
+   "a": "It is generally safe; monitor for hypersensitivity reactions."
+  },
+  {
+   "q": "How often should I get an echo?",
+   "a": "Every 1–2 years in endemic areas; sooner if symptoms change."
+  }
+ ],
+ "exam": [
+  "Explain how group A strep leads to valve damage in RHD.",
+  "Describe the Jones criteria and their application in low‑resource settings.",
+  "Outline the management plan for a patient with severe mitral regurgitation due to RHD."
+ ],
+ "related": [
+  "Acute rheumatic fever",
+  "Mitral valve prolapse",
+  "Infective endocarditis",
+  "Congenital heart disease",
+  "Secondary prophylaxis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

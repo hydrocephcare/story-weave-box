@@ -1,0 +1,159 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Osteoporosis is a systemic skeletal disease with low bone mass and microarchitectural deterioration, raising fracture risk. Diagnosis relies on bone mineral density and clinical risk factors.",
+ "aka": [
+  "low bone mass disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Osteoporosis is defined by a bone mineral density (BMD) T‑score ≤ ‑2.5 at the lumbar spine, hip, or forearm, or by a fragility fracture in the presence of low BMD.",
+   "b": [
+    "BMD measured by DXA is the gold standard",
+    "Fracture history can diagnose even if DXA unavailable"
+   ],
+   "t": [
+    {
+     "a": "DXA scan",
+     "b": "What is the bone density? – A T‑score ≤ ‑2.5 confirms osteoporosis; ‑1 to ‑2.5 indicates osteopenia."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by BMD T‑score and presence of fractures: osteopenia (‑1 to ‑2.5), osteoporosis (≤ ‑2.5), severe/established osteoporosis (≤ ‑2.5 with fragility fracture).",
+   "b": [
+    "Fracture history upgrades severity",
+    "FRAX 10‑year risk >20% for major osteoporotic fracture is high risk"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are primary: post‑menopausal estrogen loss and age‑related bone loss. Secondary causes must be screened, especially in low‑resource settings.",
+   "b": [
+    "Post‑menopausal estrogen deficiency",
+    "Age‑related senile bone loss",
+    "Chronic glucocorticoid use",
+    "Malabsorption (celiac, inflammatory bowel disease)",
+    "HIV infection or antiretroviral therapy",
+    "Chronic TB or vertebral TB causing localized loss",
+    "Rheumatic diseases with long‑term steroids"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients are often asymptomatic until a low‑impact fracture occurs, commonly at the vertebrae, hip, or distal radius.",
+   "b": [
+    "Back pain from vertebral compression fracture",
+    "Loss of height or kyphosis",
+    "Hip pain after a fall from standing height"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm low bone density, assess fracture risk, and look for secondary causes.",
+   "t": [
+    {
+     "a": "Serum calcium, phosphate, alkaline phosphatase",
+     "b": "Are bone turnover markers abnormal? – Normal calcium with high ALP may suggest high turnover disease."
+    },
+    {
+     "a": "25‑OH vitamin D level",
+     "b": "Is vitamin D deficient? – <20 ng/mL indicates deficiency, which worsens bone loss."
+    },
+    {
+     "a": "Thyroid function tests",
+     "b": "Is hyperthyroidism present? – Low TSH can accelerate bone loss."
+    },
+    {
+     "a": "HIV test (if risk present)",
+     "b": "Is HIV infection a contributor? – HIV and some antiretrovirals increase fracture risk."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications include painful vertebral fractures, hip fractures, and secondary spinal cord compression.",
+   "b": [
+    "Sudden back pain with height loss – possible vertebral fracture",
+    "Inability to bear weight after a fall – possible hip fracture",
+    "Progressive kyphosis causing respiratory compromise"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying causes, ensure adequate calcium/vitamin D, and start anti‑resorptive therapy. Lifestyle measures support bone health.",
+   "b": [
+    "Calcium 1000‑1200 mg/day from diet or supplements",
+    "Vitamin D 800‑1000 IU/day (or higher if deficient)",
+    "Bisphosphonates (e.g., alendronate) – inhibit osteoclasts, reduce fracture risk",
+    "Denosumab for renal impairment or intolerance to bisphosphonates – RANKL inhibitor",
+    "Avoid long‑term steroids if possible; switch to steroid‑sparing agents"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑measure BMD every 1‑2 years, monitor adherence, and reinforce fall‑prevention strategies.",
+   "b": [
+    "DXA repeat at 2 years if on therapy, sooner if fracture occurs",
+    "Assess fall risk: vision, home hazards, muscle strength",
+    "Encourage weight‑bearing exercise (walking, resistance training)"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause bone pain or fractures can be mistaken for osteoporosis.",
+   "b": [
+    "Osteomalacia – low vitamin D causing soft bones, labs show low calcium/phosphate",
+    "Paget disease – focal bone enlargement, high ALP",
+    "Metastatic bone disease – lytic lesions on imaging"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain factors may mask true bone health.",
+   "b": [
+    "Obesity can give falsely high BMD despite poor bone quality",
+    "Degenerative spinal changes can overestimate lumbar spine BMD",
+    "Recent vertebral fracture may lower BMD, exaggerating severity"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe back pain after a minor fall",
+  "Inability to stand or walk after a fall",
+  "Progressive loss of height or new kyphosis"
+ ],
+ "faq": [
+  {
+   "q": "Can men get osteoporosis?",
+   "a": "Yes, especially after age 70 or with risk factors like steroids, low testosterone, or chronic disease."
+  },
+  {
+   "q": "Is calcium alone enough to prevent fractures?",
+   "a": "No, calcium must be combined with vitamin D and, when indicated, anti‑resorptive medication."
+  },
+  {
+   "q": "Why are bisphosphonates preferred first‑line?",
+   "a": "They have strong evidence for reducing vertebral and hip fractures and are inexpensive."
+  }
+ ],
+ "exam": [
+  "Explain how you would diagnose osteoporosis in a 68‑year‑old woman with a recent wrist fracture.",
+  "List three secondary causes of osteoporosis that are important to screen for in low‑resource settings.",
+  "Describe the first‑line pharmacologic treatment and its mechanism of action."
+ ],
+ "related": [
+  "Osteomalacia",
+  "Paget disease of bone",
+  "Fragility fractures",
+  "Calcium metabolism",
+  "Vitamin D deficiency",
+  "Glucocorticoid‑induced osteoporosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

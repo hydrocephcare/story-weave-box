@@ -1,0 +1,183 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Multiple myeloma is a malignant plasma‑cell disorder that produces excess monoclonal immunoglobulin or free light chains, causing bone destruction, anemia, renal injury and immune suppression.",
+ "aka": [
+  "Plasma cell myeloma",
+  "Kahler disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Clonal proliferation of plasma cells in bone marrow that meets ≥10% plasma cells or a biopsy‑proven plasmacytoma plus evidence of organ damage (CRAB).",
+   "b": [
+    "≥10% clonal plasma cells on marrow or biopsy‑proven plasmacytoma",
+    "Monoclonal protein in serum or urine (M‑protein)",
+    "CRAB: hyperCalcaemia, Renal failure, Anemia, Bone lesions"
+   ],
+   "t": [
+    {
+     "a": "Serum protein electrophoresis with immunofixation",
+     "b": "Detects and types the M‑protein; a sharp spike confirms monoclonal gammopathy"
+    },
+    {
+     "a": "Serum free light‑chain assay",
+     "b": "Quantifies κ/λ ratio; abnormal ratio supports diagnosis, especially when M‑protein is low"
+    },
+    {
+     "a": "Bone marrow aspirate/biopsy",
+     "b": "Counts plasma cells and assesses cytogenetics; ≥10% confirms disease"
+    },
+    {
+     "a": "Skeletal survey or low‑dose whole‑body CT",
+     "b": "Shows lytic lesions or osteoporosis; needed for the ‘B’ of CRAB"
+    },
+    {
+     "a": "Serum calcium, creatinine, hemoglobin",
+     "b": "Identifies organ damage; hypercalcaemia, renal impairment, anemia are red flags"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The International Staging System (ISS) uses serum β2‑microglobulin and albumin to stratify risk; cytogenetics add a revised ISS (R‑ISS).",
+   "b": [
+    "ISS II: intermediate values"
+   ],
+   "t": [
+    {
+     "a": "Serum albumin",
+     "b": "Low albumin (<4 g/dL) worsens stage; reflects nutrition and disease activity"
+    },
+    {
+     "a": "FISH for del(17p), t(4;14), t(14;16)",
+     "b": "Detects high‑risk cytogenetic lesions; guides therapy intensity"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are sporadic; risk factors include age, male sex, African ancestry, and prior exposure to radiation or certain chemicals.",
+   "b": [
+    "Age > 60 years (median 70)",
+    "Male gender, African descent",
+    "Prior radiation or occupational benzene exposure"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have persistent back or bone pain, fatigue, recurrent infections, and signs of anemia or renal dysfunction.",
+   "b": [
+    "Dull back pain, worsened by movement",
+    "Unexplained anemia → fatigue, pallor",
+    "Renal insufficiency: polyuria, edema"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Combine laboratory, imaging and marrow studies to confirm diagnosis, stage disease and assess organ damage.",
+   "b": [
+    "Serum/urine electrophoresis, free light‑chain assay",
+    "Complete blood count, calcium, creatinine, albumin",
+    "Whole‑body low‑dose CT or MRI for bone lesions"
+   ],
+   "t": [
+    {
+     "a": "Urine protein electrophoresis",
+     "b": "Detects Bence Jones protein; positive result supports light‑chain disease"
+    },
+    {
+     "a": "MRI of spine",
+     "b": "Identifies occult vertebral lesions not seen on X‑ray"
+    },
+    {
+     "a": "If FISH unavailable, conventional karyotype",
+     "b": "Provides some cytogenetic information; less sensitive but better than none"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications drive urgency: hypercalcaemia, renal failure, pathological fractures, and infection.",
+   "b": [
+    "Serum calcium >11 mg/dL → cardiac arrhythmia risk",
+    "Creatinine rise >2 mg/dL → dialysis may be needed",
+    "Spinal compression fracture → neurologic deficit"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the clone with anti‑myeloma therapy, protect kidneys, control calcium and prevent infections.",
+   "b": [
+    "Proteasome inhibitors (e.g., bortezomib) – disrupt plasma‑cell protein handling",
+    "Immunomodulatory drugs (lenalidomide, pomalidomide) – enhance immune clearance",
+    "Steroids (dexamethasone) – rapid tumour reduction, anti‑inflammatory",
+    "Bisphosphonates or denosumab – inhibit osteoclast‑mediated bone loss",
+    "Autologous stem‑cell transplant for eligible patients"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring for disease progression, treatment toxicity and secondary malignancies.",
+   "b": [
+    "Every 2–3 months: CBC, calcium, creatinine, M‑protein level",
+    "Annual skeletal imaging if symptoms change",
+    "Vaccinate against influenza and pneumococcus to reduce infection risk"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause bone pain, anemia and monoclonal proteins.",
+   "b": [
+    "Metastatic bone disease – usually multiple solid‑tumour sources, not plasma‑cell clone",
+    "Waldenström macroglobulinemia – IgM monoclonal protein, hyperviscosity rather than lytic lesions",
+    "AL amyloidosis – light‑chain deposition without overt bone disease"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal early in disease.",
+   "b": [
+    "Serum electrophoresis can miss low‑level light‑chain disease; add free‑light‑chain assay",
+    "Normal calcium does not exclude early bone loss; imaging is essential",
+    "Renal function may appear normal until late; monitor urine protein"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe bone pain with fever (possible fracture or infection)",
+  "Sudden rise in calcium >12 mg/dL",
+  "Rapid decline in urine output or creatinine >2 mg/dL"
+ ],
+ "faq": [
+  {
+   "q": "Why is the free light‑chain ratio important?",
+   "a": "It detects light‑chain disease when the M‑spike is small and predicts renal risk."
+  },
+  {
+   "q": "Can multiple myeloma be cured?",
+   "a": "It is treatable and can achieve long remission, but most patients eventually relapse."
+  },
+  {
+   "q": "What causes the anemia in myeloma?",
+   "a": "Bone‑marrow infiltration reduces red‑cell production and chronic disease inflammation suppresses erythropoiesis."
+  }
+ ],
+ "exam": [
+  "List the CRAB criteria and explain how each reflects organ damage in multiple myeloma.",
+  "Describe the International Staging System and how β2‑microglobulin and albumin values influence prognosis.",
+  "Explain why proteasome inhibitors are a cornerstone of therapy and what major toxicities must be monitored."
+ ],
+ "related": [
+  "Waldenström macroglobulinemia",
+  "AL amyloidosis",
+  "Skeletal metastases",
+  "Chronic lymphocytic leukemia",
+  "Renal tubular acidosis",
+  "Hyperparathyroidism"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

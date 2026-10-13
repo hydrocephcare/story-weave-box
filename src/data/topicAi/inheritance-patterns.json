@@ -1,0 +1,104 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Inheritance patterns describe how genetic variants are transmitted across generations and shape disease risk. Recognizing dominant, recessive, X-linked and mitochondrial inheritance guides history taking, testing and counseling.",
+ "aka": [
+  "Mendelian inheritance",
+  "Genetic transmission"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Genes are passed from parents to offspring in predictable ways. Patterns determine who may be affected, carrier status, and recurrence risk for families.",
+   "b": [
+    "Autosomal dominant: one mutant allele causes disease; vertical transmission.",
+    "Autosomal recessive: two mutant alleles required; often seen in siblings.",
+    "X-linked dominant/recessive: sex chromosome location influences risk.",
+    "Mitochondrial: maternal inheritance only."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Each cell contains two copies of autosomal genes (one from each parent) and one or two sex‑chromosome copies. Mutations can be loss‑of‑function or gain‑of‑function, affecting protein activity.",
+   "b": [
+    "Dominant mutations act even when a normal allele is present.",
+    "Recessive mutations need both alleles altered to manifest.",
+    "X‑linked genes escape inactivation in females, causing variable expression."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Pathogenic variants disrupt normal protein function, leading to disease phenotypes that follow the inheritance rule of the mutated gene.",
+   "b": [
+    "Huntington disease – autosomal dominant CAG repeat expansion.",
+    "Cystic fibrosis – autosomal recessive CFTR loss‑of‑function.",
+    "Hemophilia A – X‑linked recessive factor VIII deficiency.",
+    "Leber hereditary optic neuropathy – mitochondrial DNA mutation."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding inheritance guides risk assessment, genetic testing, and family counseling, especially in low‑resource settings where targeted testing may be limited.",
+   "b": [
+    "Take a three‑generation pedigree to spot dominant vs recessive patterns.",
+    "Identify carriers in consanguineous families to prevent recessive disease.",
+    "Consider mitochondrial disease when only maternal relatives are affected."
+   ],
+   "t": [
+    {
+     "a": "Pedigree analysis",
+     "b": "What pattern of transmission is present? Helps classify the disorder and estimate recurrence risk."
+    },
+    {
+     "a": "Targeted gene test (e.g., CFTR, HTT)",
+     "b": "Does the patient carry the pathogenic variant? Positive result confirms diagnosis; negative may need broader panel."
+    },
+    {
+     "a": "Mitochondrial DNA sequencing",
+     "b": "Is a mtDNA mutation present? Positive supports mitochondrial disease; if unavailable, rely on clinical criteria and maternal history."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on pattern recognition, key examples, and counseling points.",
+   "b": [
+    "Dominant: vertical transmission, 50% risk to offspring.",
+    "Recessive: siblings affected, 25% risk to each child of carrier couple.",
+    "X‑linked recessive: males affected, carrier females 50% risk of sons being affected."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "How can I differentiate autosomal dominant from autosomal recessive on a pedigree?",
+   "a": "Dominant shows affected individuals in each generation; recessive often has unaffected parents with affected siblings."
+  },
+  {
+   "q": "Why do mitochondrial diseases affect only children of affected mothers?",
+   "a": "Mitochondria are inherited solely from the oocyte; paternal mitochondria are discarded after fertilization."
+  },
+  {
+   "q": "Can a carrier of an autosomal recessive disease ever show symptoms?",
+   "a": "Rarely, if the mutation has a mild dominant effect or if there is a second hit (e.g., environmental stress)."
+  }
+ ],
+ "exam": [
+  "Describe the inheritance pattern and give one example of an autosomal dominant and an autosomal recessive disorder.",
+  "Interpret a three‑generation pedigree showing vertical transmission and state the recurrence risk for offspring.",
+  "Explain why mitochondrial inheritance results in maternal transmission only."
+ ],
+ "related": [
+  "Genetic counseling",
+  "Pedigree analysis",
+  "Mendelian genetics",
+  "Carrier screening",
+  "Mitochondrial disorders",
+  "Population genetics"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

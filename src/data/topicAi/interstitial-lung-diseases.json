@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Interstitial lung diseases are diverse disorders of lung interstitium causing inflammation or fibrosis. Diagnosis relies on imaging, lung function, and histology, while management targets the underlying cause and supports lung function.",
+ "aka": [
+  "Diffuse parenchymal lung disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ILDs are >200 disorders affecting alveolar walls and surrounding tissue, leading to impaired gas exchange. Diagnosis combines clinical history, high‑resolution CT, pulmonary function tests, and, when needed, lung biopsy.",
+   "b": [
+    "HRCT shows reticulation, honeycombing, ground‑glass opacities",
+    "Spirometry reveals restrictive pattern with reduced DLCO",
+    "BAL can differentiate inflammatory vs fibrotic disease"
+   ],
+   "t": [
+    {
+     "a": "HRCT",
+     "b": "Reticulation, honeycombing suggests fibrosis; ground‑glass indicates active inflammation"
+    },
+    {
+     "a": "Pulmonary function",
+     "b": "Reduced lung volumes and DLCO indicate interstitial involvement"
+    },
+    {
+     "a": "BAL",
+     "b": "Likely inflammatory ILD such as sarcoidosis or hypersensitivity"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by lung function and imaging. The GAP index (Gender, Age, Physiology) predicts mortality in idiopathic pulmonary fibrosis.",
+   "b": [
+    "Stage I: mild restriction, DLCO >50%",
+    "Stage II: moderate restriction, DLCO 35‑50%",
+    "Stage III: severe restriction, DLCO <35%"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped by exposure, autoimmune, infection, and idiopathic. In low‑resource settings, infections and environmental exposures are common.",
+   "b": [
+    "Occupational dust (silica, coal)",
+    "Smoking (DIP, RB‑ILD)",
+    "Infections (TB, viral, fungal)",
+    "Autoimmune diseases (SLE, RA)",
+    "Idiopathic (IPF)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually have progressive dyspnea on exertion, non‑productive cough, and clubbing. Early symptoms may be subtle, leading to delayed diagnosis.",
+   "b": [
+    "Dry cough lasting >3 weeks",
+    "Progressive exertional dyspnea",
+    "Digital clubbing in advanced disease"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm ILD, identify cause, and assess severity. When tests are unavailable, clinical judgment and basic spirometry guide management.",
+   "t": [
+    {
+     "a": "High‑resolution CT",
+     "b": "Reticulation with honeycombing, basal predominance"
+    },
+    {
+     "a": "Serum autoantibodies",
+     "b": "Possible connective tissue disease ILD"
+    },
+    {
+     "a": "Tuberculin skin test / IGRA",
+     "b": "Prior TB exposure, consider TB ILD"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include rapid progression, hypoxemia, and haemoptysis. Complications are pulmonary hypertension, respiratory failure, and infection.",
+   "b": [
+    "Oxygen saturation <88% at rest",
+    "Sudden worsening of dyspnea",
+    "Hemoptysis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first. Supportive care includes oxygen, pulmonary rehab, and antifibrotic therapy for IPF. Avoid drugs that worsen fibrosis.",
+   "b": [
+    "Antifibrotics (pirfenidone, nintedanib) for IPF"
+   ],
+   "t": [
+    {
+     "a": "Pirfenidone",
+     "b": "Slows fibrosis progression"
+    },
+    {
+     "a": "Nintedanib",
+     "b": "Inhibits growth factors driving fibrosis"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of lung function and imaging detects progression. Prevention focuses on avoiding known triggers and early treatment of infections.",
+   "b": [
+    "Annual spirometry",
+    "Quarterly symptom review",
+    "Vaccination against influenza and pneumococcus"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "ILD can mimic COPD, asthma, and pulmonary embolism. Distinguishing features include restrictive pattern and imaging findings.",
+   "b": [
+    "COPD – shows obstructive pattern on spirometry"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal spirometry can occur early; HRCT may miss subtle fibrosis. Clinical context is essential.",
+   "b": [
+    "Early ILD may have normal FVC"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of breathlessness",
+  "Oxygen saturation <88% at rest",
+  "New haemoptysis",
+  "Rapid decline in lung function"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common ILD in smokers?",
+   "a": "Respiratory bronchiolitis–interstitial lung disease and desquamative interstitial pneumonia."
+  },
+  {
+   "q": "Can ILD be cured?",
+   "a": "Most ILDs are chronic; treatment slows progression but rarely reverses fibrosis."
+  },
+  {
+   "q": "Is a lung biopsy always needed?",
+   "a": "Not always; HRCT and clinical context can suffice, but biopsy clarifies diagnosis when treatment differs."
+  }
+ ],
+ "exam": [
+  "Explain how high‑resolution CT findings guide the diagnosis of idiopathic pulmonary fibrosis.",
+  "Describe the GAP index and its use in prognostication for IPF.",
+  "Outline the first‑line management steps for a patient with suspected hypersensitivity pneumonitis."
+ ],
+ "related": [
+  "Pulmonary fibrosis",
+  "Pulmonary hypertension",
+  "Connective tissue disease",
+  "Occupational lung disease",
+  "Tuberculosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

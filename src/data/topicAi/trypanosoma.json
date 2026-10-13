@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Trypanosoma are protozoan parasites transmitted by insects that cause African sleeping sickness and Chagas disease. They invade blood, tissue and the nervous system, leading to systemic and cardiac complications.",
+ "aka": [
+  "Trypanosoma spp.",
+  "trypanosomes"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Trypanosoma are flagellated protozoa of the order Kinetoplastida. Two species are clinically important: T. brucei (subspecies gambiense and rhodesiense) causing African trypanosomiasis, and T. cruzi causing American trypanosomiasis (Chagas disease).",
+   "b": [
+    "Transmitted by tsetse flies (T. brucei) or triatomine bugs (T. cruzi)",
+    "Endemic in sub‑Saharan Africa and Latin America"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "They possess a kinetoplast DNA, a single mitochondrion, and a flagellum that aids motility and immune evasion through antigenic variation (VSG coat).",
+   "b": [
+    "Antigenic variation → chronic infection",
+    "Intracellular amastigotes (T. cruzi) hide in muscle and nerve cells"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "T. brucei is acquired when a tsetse fly bites a host, injecting metacyclic trypomastigotes that multiply in blood and lymph. T. cruzi is transmitted when a triatomine bug defecates on skin; metacyclic trypomastigotes enter through mucosa or breaks, become intracellular amastigotes, then release trypomastigotes into blood.",
+   "b": [
+    "Vector control is key in low‑resource settings",
+    "Oral transmission of T. cruzi via contaminated food occurs in outbreaks"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "African sleeping sickness presents in two stages: early haemolymphatic (fever, headache, lymphadenopathy) and late meningo‑encephalitic (sleep disturbance, neuropsychiatric signs). Chagas disease has acute phase (fever, chagoma, myocarditis) and chronic phase (cardiomyopathy, megacolon, arrhythmias).",
+   "b": [
+    "Stage determines treatment choice",
+    "Co‑infection with HIV, malaria or TB worsens outcomes"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Microscopy, serology and molecular tests are used depending on stage and resource availability.",
+   "b": [
+    "If microscopy unavailable, rely on serology for chronic Chagas and clinical picture for African trypanosomiasis"
+   ],
+   "t": [
+    {
+     "a": "Blood smear (Giemsa) or concentration techniques",
+     "b": "Detects parasites in early African trypanosomiasis; positive means active infection"
+    },
+    {
+     "a": "CSF examination (cell count, protein, parasites)",
+     "b": "Confirms late-stage disease; elevated white cells/protein plus parasites indicates CNS involvement"
+    },
+    {
+     "a": "Serology (ELISA, indirect immunofluorescence) for T. cruzi",
+     "b": "Positive in chronic Chagas; helps when parasites are not seen"
+    },
+    {
+     "a": "PCR for parasite DNA",
+     "b": "Highly sensitive; useful when microscopy unavailable or for treatment monitoring"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Therapy is stage‑specific. Early African trypanosomiasis uses pentamidine (T. b. gambiense) or suramin (T. b. rhodesiense). Late stage requires melarsoprol or nifurtimox‑eflornithine combination. Chagas acute phase uses benznidazole; chronic phase treatment is limited to benznidazole or nifurtimox in selected patients.",
+   "b": [
+    "Pentamidine/Suramin act on bloodstream trypomastigotes; avoid in renal failure",
+    "Melarsoprol crosses BBB but causes severe encephalopathy; reserve for late T. b. rhodesiense",
+    "Benznidazole targets intracellular amastigotes; monitor for dermatitis and neuropathy"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and clinical practice.",
+   "b": [
+    "African trypanosomiasis: early stage = fever + lymphadenopathy; late stage = sleep disturbance + CSF parasites",
+    "Chagas chronic disease: cardiomyopathy with apical aneurysm, megacolon, and positive serology",
+    "Antigenic variation explains why patients can have relapsing parasitemia despite immune response"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Neurological deterioration (coma, seizures) in sleeping sickness",
+  "Acute heart failure or severe arrhythmia in Chagas disease",
+  "Persistent fever with lymphadenopathy in a traveler from endemic area"
+ ],
+ "faq": [
+  {
+   "q": "Why does sleeping sickness cause daytime sleepiness?",
+   "a": "Parasites invade the hypothalamus, disrupting circadian regulation and causing somnolence."
+  },
+  {
+   "q": "Can Chagas disease be cured in the chronic phase?",
+   "a": "Treatment may reduce parasite load and slow cardiac damage, but complete cure is uncommon."
+  },
+  {
+   "q": "What is the role of vector control?",
+   "a": "Eliminating tsetse flies and triatomine bugs reduces transmission and is the most sustainable prevention in low‑resource settings."
+  }
+ ],
+ "exam": [
+  "Describe the two clinical stages of African sleeping sickness and the diagnostic criteria for each.",
+  "List the first‑line drugs for early and late African trypanosomiasis and explain why melarsoprol is reserved for late disease.",
+  "Explain the cardiac manifestations of chronic Chagas disease and how they are diagnosed."
+ ],
+ "related": [
+  "Leishmania",
+  "Plasmodium falciparum",
+  "HIV co‑infection",
+  "Vector‑borne diseases",
+  "Kinetoplastid biology",
+  "Cardiomyopathy"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Haemostasis stops bleeding after vessel injury through a coordinated platelet plug and fibrin clot. Understanding each step helps clinicians recognise and manage bleeding disorders.",
+ "aka": [
+  "Hemostasis",
+  "Coagulation"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "When a blood vessel is damaged, the body rapidly forms a temporary seal (platelet plug) and then a stable fibrin clot to prevent blood loss.",
+   "b": [
+    "Two phases: primary (platelet) and secondary (coagulation).",
+    "Essential for survival; failure leads to hemorrhage or thrombosis."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Primary haemostasis begins with platelet adhesion to exposed collagen via von Willebrand factor (vWF), activation, and aggregation forming a loose plug. Secondary haemostasis activates the coagulation cascade, converting fibrinogen to fibrin that reinforces the plug.",
+   "b": [
+    "Platelet adhesion → activation → aggregation.",
+    "Tissue factor triggers extrinsic pathway; contact activation triggers intrinsic pathway.",
+    "Thrombin converts fibrinogen → fibrin; factor XIII cross‑links fibrin."
+   ],
+   "t": [
+    {
+     "a": "Platelet count",
+     "b": "Is thrombocytopenia causing bleeding? Low count (<150 ×10⁹/L) suggests platelet loss or production problem."
+    },
+    {
+     "a": "PT/INR",
+     "b": "Is the extrinsic pathway impaired? Prolonged PT indicates factor VII, vitamin K deficiency, or warfarin effect."
+    },
+    {
+     "a": "aPTT",
+     "b": "Is the intrinsic pathway impaired? Prolonged aPTT points to factors VIII, IX, XI, XII deficiency or lupus anticoagulant."
+    },
+    {
+     "a": "Fibrinogen level",
+     "b": "Is there consumptive coagulopathy? Low fibrinogen (<1.5 g/L) suggests DIC or massive bleeding."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Endothelial cells release prostacyclin and nitric oxide to inhibit platelet activation, while tissue factor pathway inhibitor (TFPI) and antithrombin limit clot propagation.",
+   "b": [
+    "Balanced by pro‑coagulant (tissue factor) and anti‑coagulant (protein C, antithrombin) pathways.",
+    "Fibrinolysis via plasmin dissolves clots once repair is complete."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Bleeding disorders arise from platelet defects, coagulation factor deficiencies, or excessive fibrinolysis; thrombosis results from hyper‑coagulable states.",
+   "b": [
+    "Platelet disorders: ITP, drug‑induced, HIV‑related thrombocytopenia.",
+    "Factor deficiencies: hemophilia A/B, vitamin K deficiency, liver disease.",
+    "Acquired: DIC, sepsis, malaria‑induced consumption, herbal anticoagulants."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Recognising abnormal haemostasis guides urgent interventions, informs peri‑operative planning, and prevents fatal bleeding in trauma, surgery, or obstetric emergencies.",
+   "b": [
+    "Uncontrolled bleeding → shock, organ failure, death.",
+    "Thrombosis → stroke, myocardial infarction, pulmonary embolism."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on the sequence of events, key laboratory tests, and how common tropical infections alter haemostasis.",
+   "b": [
+    "Primary vs secondary haemostasis components.",
+    "Interpret PT, aPTT, platelet count together.",
+    "Identify DIC criteria: thrombocytopenia, prolonged PT/aPTT, low fibrinogen, schistocytes."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe uncontrolled bleeding (e.g., after trauma, postpartum hemorrhage).",
+  "Sudden onset of deep vein thrombosis or pulmonary embolism symptoms.",
+  "Signs of DIC: widespread bruising, petechiae, bleeding from mucosa."
+ ],
+ "faq": [
+  {
+   "q": "Why does von Willebrand factor matter?",
+   "a": "vWF bridges platelets to collagen and carries factor VIII; deficiency impairs both primary plug and secondary cascade."
+  },
+  {
+   "q": "What is the difference between PT and aPTT?",
+   "a": "PT assesses the extrinsic/common pathway (factor VII); aPTT assesses the intrinsic/common pathway (factors VIII, IX, XI, XII)."
+  },
+  {
+   "q": "Can malaria cause bleeding?",
+   "a": "Severe malaria can trigger DIC and thrombocytopenia, leading to bleeding."
+  }
+ ],
+ "exam": [
+  "Describe the three steps of primary haemostasis and the key molecules involved.",
+  "Interpret a lab panel: platelet count 80 ×10⁹/L, PT 18 s, aPTT 45 s, fibrinogen 1.2 g/L.",
+  "List two tropical infections that can precipitate DIC and explain the pathophysiology."
+ ],
+ "related": [
+  "Platelet physiology",
+  "Coagulation cascade",
+  "Disseminated intravascular coagulation",
+  "Hemophilia",
+  "Vitamin K deficiency",
+  "Thrombotic microangiopathy",
+  "Pregnancy‑associated coagulopathy",
+  "Anticoagulant therapy"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

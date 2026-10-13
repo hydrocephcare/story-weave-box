@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The testis produces sperm and testosterone, housed in the scrotum to keep temperature optimal. Understanding its anatomy helps diagnose torsion, cryptorchidism, and tumors, which are common emergencies and malignancies worldwide.",
+ "aka": [
+  "testicle",
+  "gonad"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The testis is a paired, oval organ that synthesises sperm and testosterone. It is external to the abdomen to maintain a temperature 2‑3 °C below core body temperature.",
+   "b": [
+    "Key for male fertility and endocrine function",
+    "Protected by the scrotal wall and tunica vaginalis"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Each testis lies within the scrotal sac, suspended by the spermatic cord. The organ is covered by tunica albuginea, then tunica vaginalis (parietal and visceral layers). Inside, seminiferous tubules produce sperm, while interstitial Leydig cells secrete testosterone.",
+   "b": [
+    "Tunica albuginea: dense fibrous capsule",
+    "Tunica vaginalis: serous sac allowing movement",
+    "Seminiferous tubules: 200–300 per testis",
+    "Leydig cells: located in interstitium"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly the testis contacts the epididymis; posteriorly the pampiniform plexus drains venous blood. The spermatic cord contains vas deferens, vessels, nerves, and lymphatics.",
+   "b": [
+    "Epididymis: site of sperm maturation",
+    "Pampiniform plexus: counter‑current heat exchange",
+    "Spermatic cord: passes through inguinal canal"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial blood arrives via the testicular artery (branch of the abdominal aorta) and the cremasteric and deferential arteries. Venous drainage is through the pampiniform plexus into the testicular vein (right drains to IVC, left to renal vein).",
+   "b": [
+    "Arterial supply: testicular, cremasteric, deferential",
+    "Venous drainage: pampiniform plexus → testicular vein"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory innervation is via the genital branch of the genitofemoral nerve and the ilioinguinal nerve. Autonomic fibers (sympathetic) travel with the testicular artery.",
+   "b": [
+    "Genital branch of genitofemoral: cremasteric reflex",
+    "Ilioinguinal: superficial scrotal sensation"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Spermatogenesis occurs in seminiferous tubules under Sertoli cell support and hormonal regulation (FSH, LH, testosterone). Leydig cells produce testosterone, essential for secondary sexual characteristics and libido.",
+   "b": [
+    "Blood‑testis barrier protects developing sperm",
+    "Spermatogenesis cycle ≈ 64–74 days"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Common problems include cryptorchidism, torsion, infection, and germ‑cell tumours. Recognising anatomy guides rapid assessment and management, especially in low‑resource settings where imaging may be limited.",
+   "b": [
+    "Cryptorchidism: ↑ cancer risk, orchiopexy before 2 y",
+    "Torsion: surgical emergency, viability <6 h",
+    "Germ‑cell tumours: seminoma vs non‑seminoma",
+    "Epididymitis: often infectious, treat before surgery"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Physical exam focuses on size, consistency, tenderness, and the cremasteric reflex. Absence of the reflex suggests torsion; a firm, non‑tender mass raises suspicion for tumour.",
+   "b": [
+    "Check for transillumination (hydrocele)",
+    "Palpate epididymis separately",
+    "Assess for erythema or swelling"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden, severe scrotal pain (possible torsion)",
+  "Rapidly enlarging, painless testicular mass (possible tumour)",
+  "Fever with scrotal swelling (possible epididymo‑orchitis)"
+ ],
+ "faq": [
+  {
+   "q": "Why is the testis located outside the abdomen?",
+   "a": "External placement keeps temperature low enough for normal sperm production."
+  },
+  {
+   "q": "What is the cremasteric reflex and its clinical use?",
+   "a": "Stroking the inner thigh causes the testis to rise; absent reflex suggests torsion."
+  },
+  {
+   "q": "How does cryptorchidism increase cancer risk?",
+   "a": "Undescended testes are exposed to higher temperatures, leading to germ‑cell dysplasia and higher malignancy rates."
+  }
+ ],
+ "exam": [
+  "Explain the blood supply of the testis and why left‑sided varicocele is more common.",
+  "Describe the steps in evaluating acute scrotal pain and the urgency of torsion.",
+  "Differentiate seminoma from non‑seminomatous germ‑cell tumours in terms of spread and markers."
+ ],
+ "related": [
+  "Epididymis",
+  "Spermatic cord",
+  "Varicocele",
+  "Testicular torsion",
+  "Cryptorchidism",
+  "Testicular cancer",
+  "Hormonal regulation of male reproduction"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

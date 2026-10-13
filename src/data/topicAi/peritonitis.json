@@ -1,0 +1,140 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Peritonitis is an inflammation of the peritoneal lining, usually from infection or perforation. Rapid recognition and treatment prevent sepsis and organ failure.",
+ "aka": [
+  "Peritoneal inflammation",
+  "Peritoneal infection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Peritonitis is the acute inflammation of the peritoneum, often bacterial, that can arise from perforated viscus, spontaneous bacterial peritonitis (SBP) in ascites, or other causes. Diagnosis relies on clinical suspicion, ascitic fluid analysis, and imaging.",
+   "b": [
+    "Acute abdominal pain, guarding, rebound tenderness",
+    "Ascitic fluid PMN >250 cells/µL suggests SBP"
+   ],
+   "t": [
+    {
+     "a": "Ascitic fluid culture",
+     "b": "Identifies organism; guides antibiotics"
+    },
+    {
+     "a": "Ascitic fluid PMN count",
+     "b": "PMN >250 cells/µL indicates bacterial peritonitis"
+    },
+    {
+     "a": "CT abdomen",
+     "b": "Detects perforation, abscess, or obstruction"
+    },
+    {
+     "a": "CBC",
+     "b": "Leukocytosis supports infection"
+    },
+    {
+     "a": "Serum lactate",
+     "b": "Elevated lactate indicates hypoperfusion and sepsis"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by organ dysfunction and source control needs. The most common staging is the peritonitis severity score: mild (no organ failure), moderate (single organ failure), severe (multiple organ failures).",
+   "b": [
+    "Severe: septic shock, multi‑organ failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The leading causes differ by setting. In low‑resource hospitals, common etiologies include perforated appendicitis, typhoid perforation, and spontaneous bacterial peritonitis in cirrhosis. Tropical infections such as tuberculosis and schistosomiasis also contribute.",
+   "b": [
+    "Surgical complications (e.g., post‑operative leak)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with sudden, diffuse abdominal pain, guarding, and signs of systemic infection. In SBP, pain may be less dramatic but fever and leukocytosis are common.",
+   "b": [
+    "Leukocytosis, high CRP"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigation prioritizes rapid fluid analysis and imaging when available. In resource‑limited settings, bedside ultrasound and basic labs guide management.",
+   "b": [
+    "Plain abdominal X‑ray if CT unavailable"
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include hemodynamic instability, worsening abdominal distension, and signs of peritonitis that do not improve with initial resuscitation. Complications can be septic shock, organ failure, and death.",
+   "b": [
+    "Multi‑organ failure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the source, provide supportive care, and start empiric broad‑spectrum antibiotics. Source control may require surgery or percutaneous drainage.",
+   "b": [
+    "Early surgical consultation for perforation or obstruction"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor clinical status, repeat fluid analysis if SBP, and prevent recurrence with prophylactic antibiotics in cirrhotics. Address underlying causes such as ulcer disease or malignancy.",
+   "b": [
+    "Vaccination against encapsulated organisms in immunocompromised"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Peritonitis can mimic acute appendicitis, pancreatitis, or ectopic pregnancy. Distinguishing features rely on imaging and fluid analysis.",
+   "b": [
+    "Ectopic pregnancy – positive pregnancy test, pelvic pain"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low PMN counts can occur in early SBP; normal lactate may be seen in compensated sepsis. Imaging may miss micro‑perforations.",
+   "b": [
+    "Plain X‑ray may miss small perforations"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Hypotension or shock",
+  "Rapidly worsening abdominal pain",
+  "Failure to improve after 24h of antibiotics",
+  "New organ dysfunction"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of peritonitis in cirrhotics?",
+   "a": "Spontaneous bacterial peritonitis, usually due to gut translocation of gram‑negative bacteria."
+  },
+  {
+   "q": "Why is metronidazole added to the empiric regimen?",
+   "a": "It covers anaerobes that are common in perforated viscus and intra‑abdominal infections."
+  },
+  {
+   "q": "Can peritonitis be treated without surgery?",
+   "a": "Yes, if the source is SBP or a contained abscess; surgery is needed for perforation or uncontrolled bleeding."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic criteria for spontaneous bacterial peritonitis and why ascitic fluid PMN >250 cells/µL is used.",
+  "Describe the initial resuscitation steps for a patient with peritonitis presenting in shock.",
+  "Outline the empiric antibiotic regimen for peritonitis in a low‑resource setting and justify each drug choice."
+ ],
+ "related": [
+  "Spontaneous bacterial peritonitis",
+  "Perforated viscus",
+  "Sepsis",
+  "Abdominal sepsis",
+  "Peritoneal dialysis complications"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

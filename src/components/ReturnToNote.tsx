@@ -1,12 +1,27 @@
+import { useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ArrowLeft, X } from "lucide-react";
-import { clearNoteReturn, useNoteReturn } from "@/lib/noteReturn";
+import { clearNoteReturn, getNoteReturn, setNoteReturn, useNoteReturn } from "@/lib/noteReturn";
 
 /** After following a link out of a note, a button that takes you back to the note, to the spot you were reading. */
 export default function ReturnToNote() {
   const ret = useNoteReturn();
   const { pathname, search } = useLocation();
   const navigate = useNavigate();
+
+  // Reaching a topic page from anywhere (a blog, a note, a list) leaves a "Back to <that page>" button at the spot you were reading
+  const here = useRef({ path: "", title: "", y: 0 });
+  useEffect(() => {
+    const path = `${pathname}${search}`;
+    const prev = here.current;
+    if (pathname.startsWith("/topic/") && prev.path && prev.path !== path && !prev.path.startsWith("/topic/") && !getNoteReturn()) setNoteReturn({ path: prev.path, title: prev.title || "the page you were on", y: prev.y });
+    here.current = { path, title: "", y: 0 };
+    const grab = () => { here.current.y = window.scrollY; here.current.title = document.title.split(" | ")[0].split(" — ")[0]; };
+    grab();
+    window.addEventListener("scroll", grab, { passive: true });
+    return () => window.removeEventListener("scroll", grab);
+  }, [pathname, search]);
+
   if (!ret || `${pathname}${search}` === ret.path || pathname === ret.path) return null;
 
   return (

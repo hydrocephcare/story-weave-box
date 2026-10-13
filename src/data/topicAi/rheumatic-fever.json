@@ -1,0 +1,158 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Rheumatic fever is an autoimmune inflammation of the heart, joints, skin, and nervous system that follows untreated Group A streptococcal throat infection, mainly in children. Prompt recognition using the Jones criteria and secondary prophylaxis prevent permanent heart damage.",
+ "aka": [
+  "Acute rheumatic fever"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute rheumatic fever (ARF) is a post‑streptococcal immune reaction causing multi‑system inflammation. Diagnosis relies on the Jones criteria, which combine major and minor clinical findings with evidence of recent streptococcal infection.",
+   "b": [
+    "Major: migratory polyarthritis, carditis, chorea, erythema marginatum, subcutaneous nodules.",
+    "Minor: fever, arthralgia, elevated ESR/CRP, prolonged PR interval."
+   ],
+   "t": [
+    {
+     "a": "ASO or anti‑DNAse B titer",
+     "b": "Does the patient have recent streptococcal exposure? High titres support recent infection."
+    },
+    {
+     "a": "Throat culture or rapid antigen test",
+     "b": "Is there a current streptococcal throat infection? Positive test confirms active infection; negative does not rule out prior infection."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by cardiac involvement: mild (isolated valvulitis), moderate (murmur with heart failure signs), severe (heart failure, cardiogenic shock, or severe valvular regurgitation). Neurologic chorea is staged by functional impact.",
+   "b": [
+    "Mild: no heart failure, normal ventricular function.",
+    "Moderate: mild heart failure, NYHA I‑II.",
+    "Severe: overt heart failure, NYHA III‑IV, or severe valve disease."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The trigger is a recent Group A Streptococcus (GAS) pharyngitis, especially in settings with limited access to antibiotics. Other infections are rarely implicated.",
+   "b": [
+    "Group A Streptococcus pharyngitis (most common).",
+    "Concurrent skin infection with GAS (rare).",
+    "In low‑resource settings, poor treatment adherence and crowded living conditions increase risk."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients, usually 5‑15 years old, develop fever, migratory polyarthritis, and a new heart murmur. Skin findings (erythema marginatum, subcutaneous nodules) and neurologic chorea may appear days to weeks after the sore throat.",
+   "b": [
+    "Migratory arthritis affecting large joints, resolves within weeks.",
+    "Carditis: new regurgitant murmur, pericardial rub, or heart failure.",
+    "Sydenham chorea: involuntary movements, emotional lability."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm recent streptococcal infection, assess cardiac involvement, and rule out mimics.",
+   "b": [
+    "ECG for PR prolongation, arrhythmias.",
+    "Echocardiography to detect valvulitis, regurgitation, or pericardial effusion."
+   ],
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Is there evidence of carditis? PR prolongation or arrhythmia suggests myocardial involvement."
+    },
+    {
+     "a": "Echocardiogram",
+     "b": "What is the extent of valvular damage? Detects regurgitation, thickening, or reduced function."
+    },
+    {
+     "a": "ESR/CRP",
+     "b": "Are inflammatory markers elevated? Supports active inflammation; normal does not exclude ARF."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled carditis can rapidly progress to heart failure, severe mitral or aortic regurgitation, and permanent rheumatic heart disease.",
+   "b": [
+    "Sudden dyspnea, pulmonary edema, or hypotension.",
+    "New or worsening murmur with signs of heart failure.",
+    "Severe chorea causing injury or inability to care for self."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying infection, suppress inflammation, and protect the heart. Use anti‑inflammatory agents and secondary prophylaxis to prevent recurrence.",
+   "b": [
+    "Penicillin (or amoxicillin) for 10 days to eradicate GAS; chosen for narrow spectrum and safety.",
+    "Aspirin (high‑dose) for anti‑inflammatory effect; avoids steroids unless severe carditis.",
+    "Corticosteroids for severe carditis or refractory inflammation; avoid if mild disease.",
+    "Heart failure therapy (diuretics, ACE‑inhibitors) when indicated."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long‑term secondary prophylaxis with monthly benzathine penicillin G prevents recurrence and progression to rheumatic heart disease. Follow cardiac status with periodic echocardiography.",
+   "b": [
+    "Monthly benzathine penicillin G for at least 10 years or until age 21, whichever is longer.",
+    "Echocardiogram at 6 months, then yearly if valve disease persists.",
+    "Educate families about early treatment of sore throat."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic ARF include septic arthritis, juvenile idiopathic arthritis, viral myocarditis, and systemic lupus erythematosus.",
+   "b": [
+    "Septic arthritis: usually single joint, high fever, positive joint fluid culture.",
+    "Juvenile idiopathic arthritis: chronic, not linked to recent strep.",
+    "Viral myocarditis: lacks migratory arthritis and streptococcal evidence."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal ASO titres can occur if the infection was > 8 weeks ago or if the patient is a poor antibody responder; a negative throat culture does not exclude prior infection.",
+   "b": [
+    "ASO may be low in early infection; repeat testing after 2 weeks if suspicion remains.",
+    "CRP/ESR can be modestly raised in other inflammatory conditions."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden shortness of breath or chest pain",
+  "Rapidly worsening heart murmur with signs of heart failure",
+  "Severe chorea causing injury or inability to eat"
+ ],
+ "faq": [
+  {
+   "q": "Why does a throat infection cause heart damage?",
+   "a": "Molecular mimicry makes antibodies against streptococcal antigens cross‑react with cardiac tissue, leading to inflammation."
+  },
+  {
+   "q": "Is rheumatic fever contagious?",
+   "a": "No; only the streptococcal infection is contagious, not the autoimmune reaction."
+  },
+  {
+   "q": "Can adults get rheumatic fever?",
+   "a": "It is rare but can occur, especially in those with untreated strep infections or poor access to care."
+  }
+ ],
+ "exam": [
+  "List the major and minor Jones criteria and explain how they are applied.",
+  "Describe the pathophysiology linking Group A streptococcal infection to cardiac involvement.",
+  "Outline the acute management of severe carditis in rheumatic fever."
+ ],
+ "related": [
+  "Group A streptococcal pharyngitis",
+  "Rheumatic heart disease",
+  "Sydenham chorea",
+  "Infective endocarditis",
+  "Juvenile idiopathic arthritis",
+  "Viral myocarditis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

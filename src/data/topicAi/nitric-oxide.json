@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Nitric oxide (NO) is a gaseous signaling molecule produced by endothelial cells and macrophages. It regulates vascular tone, immune responses, and smooth‑muscle relaxation. In disease, NO imbalance contributes to inflammation, thrombosis, and organ dysfunction.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "NO is synthesized from L‑arginine by nitric‑oxide synthase (NOS). Its production is measured indirectly by plasma nitrite/nitrate or urinary excretion, and by nasal NO in primary ciliary dyskinesia.",
+   "b": [
+    "NO is a short‑lived free radical, not stored in the body."
+   ],
+   "t": [
+    {
+     "a": "Plasma nitrite/nitrate",
+     "b": "Assesses systemic NO production; low levels suggest endothelial dysfunction; high levels may indicate excessive inflammatory NO."
+    },
+    {
+     "a": "Nasal NO measurement",
+     "b": "Low values are diagnostic of primary ciliary dyskinesia; normal values rule it out."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "NO imbalance is graded by clinical context: mild endothelial dysfunction (e.g., hypertension), moderate inflammatory overproduction (sepsis), severe depletion (paroxysmal nocturnal hemoglobinuria).",
+   "b": [
+    "Severity correlates with organ involvement and laboratory markers such as lactate dehydrogenase or D‑dimer."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped by source: endothelial dysfunction, inflammatory cytokines, hemolysis, and genetic defects.",
+   "b": [
+    "Endothelial dysfunction: hypertension, diabetes, smoking.",
+    "Inflammatory overproduction: sepsis, autoimmune disease, malaria.",
+    "Hemolysis: PNH, sickle cell crisis.",
+    "Genetic: primary ciliary dyskinesia (low nasal NO)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical features depend on the underlying cause: hypertension, pulmonary hypertension, hemolytic anemia, or chronic cough with nasal congestion.",
+   "b": [
+    "Hypertension with normal renal function.",
+    "Pulmonary hypertension with dyspnea and clubbing.",
+    "Hemolytic anemia with jaundice and dark urine.",
+    "Chronic sinusitis with low nasal NO."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations focus on identifying the source of NO imbalance and organ damage.",
+   "t": [
+    {
+     "a": "Coombs test",
+     "b": "Identifies autoimmune hemolysis; positive test indicates immune-mediated NO consumption."
+    },
+    {
+     "a": "D‑dimer",
+     "b": "Elevated in thrombotic states like PNH; indicates NO‑mediated platelet activation."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Assesses pulmonary hypertension; high pulmonary pressures suggest NO deficiency."
+    },
+    {
+     "a": "Urinary free hemoglobin",
+     "b": "High levels in hemolysis; correlates with NO scavenging."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise when NO depletion or excess leads to organ failure.",
+   "b": [
+    "Thrombosis (hepatic vein, pulmonary).",
+    "Acute respiratory distress syndrome.",
+    "Severe anemia leading to hypoxia."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, support organ function, and modulate NO pathways.",
+   "b": [
+    "In PNH: complement inhibition to reduce hemolysis and NO loss.",
+    "In sepsis: early antibiotics and source control to curb inflammatory NO.",
+    "In hypertension: ACE inhibitors or ARBs to restore NO production.",
+    "In pulmonary hypertension: endothelin receptor antagonists and phosphodiesterase‑5 inhibitors to enhance NO signaling."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of hemolysis markers, blood pressure, and pulmonary pressures is essential.",
+   "b": [
+    "Annual CBC and LDH in PNH.",
+    "Blood pressure checks in hypertension.",
+    "Pulmonary function tests in chronic lung disease."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic NO‑related presentations.",
+   "b": [
+    "Asthma (chronic cough).",
+    "Chronic obstructive pulmonary disease (dyspnea).",
+    "Rheumatic heart disease (pulmonary hypertension)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may appear normal despite NO imbalance.",
+   "b": [
+    "Normal nitrite in early endothelial dysfunction; need functional flow tests.",
+    "Low nasal NO can be seen in allergic rhinitis; confirm with ciliary function tests."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hemolysis with sudden drop in hemoglobin",
+  "Unexplained pulmonary hypertension",
+  "Acute respiratory distress",
+  "Sudden onset of chest pain with evidence of thrombosis"
+ ],
+ "faq": [
+  {
+   "q": "What is the main source of NO in blood vessels?",
+   "a": "Endothelial cells via endothelial nitric‑oxide synthase (eNOS)."
+  },
+  {
+   "q": "Why is NO important in sepsis?",
+   "a": "It mediates vasodilation and microcirculatory perfusion; excess production can cause hypotension."
+  },
+  {
+   "q": "Can NO levels be measured directly?",
+   "a": "NO is too short‑lived; we measure stable metabolites like nitrite/nitrate or use indirect tests such as nasal NO."
+  }
+ ],
+ "exam": [
+  "Explain how NO deficiency contributes to pulmonary hypertension in primary ciliary dyskinesia.",
+  "Describe the laboratory work‑up for a patient with suspected paroxysmal nocturnal hemoglobinuria.",
+  "Outline the therapeutic approach to NO overproduction in septic shock."
+ ],
+ "related": [
+  "Endothelial dysfunction",
+  "Sepsis",
+  "Paroxysmal nocturnal hemoglobinuria",
+  "Primary ciliary dyskinesia"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

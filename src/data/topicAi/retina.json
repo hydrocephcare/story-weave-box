@@ -1,0 +1,129 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The retina is a thin, layered neural tissue lining the back of the eye that converts light into electrical signals for vision. Its health is essential for clear sight and is vulnerable to systemic and ocular diseases.",
+ "aka": [
+  "retinal layer",
+  "neuroretina"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The retina is the light‑sensing sheet of the eye, about 0.2 mm thick, containing photoreceptors, interneurons, and ganglion cells that form the optic nerve.",
+   "b": [
+    "Four neuronal layers: photoreceptors, bipolar, ganglion, and supporting layers",
+    "Divided into central (fovea) and peripheral zones"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lines the inner surface of the globe, adherent to the choroid and separated from the vitreous by the internal limiting membrane.",
+   "b": [
+    "Fovea centralis: cone‑dense, responsible for high‑resolution vision",
+    "Peripheral retina: rod‑dense, important for dim‑light vision"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly contacts the vitreous body; posteriorly rests on the vascular choroid; the optic disc is the exit point for retinal ganglion axons.",
+   "b": [
+    "Optic disc lacks photoreceptors – creates physiological blind spot",
+    "Macula lies 3 mm temporal to the optic disc"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Dual supply: central retinal artery (inner retina) and choroidal circulation (outer retina).",
+   "b": [
+    "Inner retina: supplied by central retinal artery branches",
+    "Outer retina (photoreceptors): supplied by choroidal vessels"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Retinal ganglion cells send axons through the optic nerve to the lateral geniculate nucleus and visual cortex.",
+   "b": [
+    "Central retinal vein drains into the cavernous sinus",
+    "Retinal nerve fiber layer thickness is a marker of glaucoma"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Photoreceptors transduce photons into electrical impulses; bipolar cells relay signals to ganglion cells, which fire action potentials to the brain.",
+   "b": [
+    "Rods detect low‑light, peripheral vision",
+    "Cones detect color, fine detail, and function best in bright light"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Retinal pathology can cause irreversible vision loss; early recognition is vital, especially in low‑resource settings where treatable infections are common.",
+   "b": [
+    "Retinal detachment – urgent surgical repair",
+    "Diabetic retinopathy – microvascular leakage, proliferative disease",
+    "CMV retinitis – seen in advanced HIV, requires antiviral therapy"
+   ],
+   "t": [
+    {
+     "a": "Fundoscopy",
+     "b": "What structural abnormality is present? – Detects hemorrhages, exudates, detachments; if unavailable, use indirect ophthalmoscopy with a torch."
+    },
+    {
+     "a": "Optical coherence tomography (OCT)",
+     "b": "What is the thickness of retinal layers? – Quantifies macular edema; if unavailable, rely on clinical grading of edema."
+    },
+    {
+     "a": "Fluorescein angiography",
+     "b": "What is the pattern of vascular leakage? – Identifies neovascularisation; if unavailable, use clinical signs of proliferative disease."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and bedside assessment.",
+   "b": [
+    "Fovea contains only cones; peripheral retina contains mostly rods",
+    "Central retinal artery occlusion causes sudden painless vision loss with a cherry‑red spot",
+    "Macular edema presents with central blurring and thickened retina on OCT"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden painless loss of vision (possible central retinal artery occlusion)",
+  "Flashing lights with new floaters (risk of retinal detachment)",
+  "Rapidly worsening blurry vision in diabetes (proliferative retinopathy)"
+ ],
+ "faq": [
+  {
+   "q": "Why do rods face away from incoming light?",
+   "a": "Rods’ outer segments point toward the choroid, allowing light to pass through overlying layers before reaching them."
+  },
+  {
+   "q": "What is the significance of the optic disc’s blind spot?",
+   "a": "No photoreceptors are present, so this area cannot detect light; the brain fills in the gap during normal vision."
+  },
+  {
+   "q": "How does HIV affect the retina?",
+   "a": "Advanced immunosuppression can lead to CMV retinitis, causing necrotizing lesions and rapid vision loss."
+  }
+ ],
+ "exam": [
+  "Explain how the dual blood supply of the retina influences the presentation of central retinal artery occlusion versus choroidal ischemia.",
+  "Describe the stepwise clinical assessment of a patient with suspected retinal detachment in a setting without OCT.",
+  "List the major retinal complications of diabetes and the pathophysiologic basis for each."
+ ],
+ "related": [
+  "Optic nerve",
+  "Choroid",
+  "Macula",
+  "Glaucoma",
+  "Diabetic retinopathy",
+  "Retinal detachment",
+  "CMV retinitis",
+  "Age‑related macular degeneration"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

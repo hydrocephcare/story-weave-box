@@ -1,0 +1,120 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The limbic system is a network of medial cortical and subcortical structures that integrates emotion, memory, and autonomic regulation. Damage alters behavior, memory, and endocrine responses, making it central to many neuro‑psychiatric disorders.",
+ "aka": [
+  "Limbic circuit",
+  "Papez circuit"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A functional system rather than a single organ, the limbic system links the hippocampus, amygdala, cingulate gyrus, hypothalamus and related pathways to give emotional meaning to experiences and to drive autonomic output.",
+   "b": [
+    "Integrates emotion, memory, and endocrine control",
+    "Coordinates with prefrontal cortex for decision‑making"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Located on the medial surface of the cerebral hemispheres and extending into the diencephalon, it includes the hippocampus (temporal lobe), amygdala (medial temporal), cingulate gyrus, parahippocampal gyrus, and hypothalamus.",
+   "b": [
+    "Hippocampus: memory encoding",
+    "Amygdala: fear and reward processing",
+    "Cingulate: attention and affect",
+    "Hypothalamus: autonomic & endocrine link"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The limbic system sits adjacent to the basal ganglia, thalamus, and brainstem, receiving input from sensory cortices and sending output to the hypothalamus and brainstem nuclei.",
+   "b": [
+    "Receives visceral sensory info via thalamus",
+    "Projects to brainstem reticular formation for arousal"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Primarily supplied by branches of the anterior cerebral artery (ACA) for the cingulate, the posterior cerebral artery (PCA) for the hippocampus and amygdala, and the superior hypophyseal arteries for the hypothalamus.",
+   "b": [
+    "ACA → cingulate gyrus",
+    "PCA → hippocampus & amygdala",
+    "Superior hypophyseal → hypothalamus"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Afferent fibers travel via the fornix, mammillothalamic tract, and uncinate fasciculus; efferent signals descend through hypothalamic pathways to the autonomic nuclei of the brainstem.",
+   "b": [
+    "Fornix: hippocampal output",
+    "Uncinate fasciculus: amygdala‑orbitofrontal link"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "It tags experiences with emotional significance, consolidates declarative memory, regulates stress hormones, and influences motivation and social behavior.",
+   "b": [
+    "Emotional tagging of memories",
+    "Modulates HPA‑axis stress response",
+    "Guides reward‑based decision making"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Lesions produce amnesia, emotional lability, anxiety, or aggression. Infectious, inflammatory, or vascular insults are common in low‑resource settings and can be life‑threatening.",
+   "b": [
+    "Herpes simplex encephalitis → hippocampal necrosis, acute memory loss",
+    "TB meningitis → basal limbic inflammation, personality change",
+    "HIV‑associated neurocognitive disorder → diffuse limbic atrophy",
+    "Malaria cerebral involvement → limbic edema, seizures"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on how limbic dysfunction presents clinically and which investigations confirm involvement.",
+   "b": [
+    "Memory loss + emotional dysregulation → hippocampal lesion",
+    "Fear‑driven aggression → amygdala pathology",
+    "Hypothalamic dysfunction → temperature or endocrine abnormalities"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute encephalitis with fever, seizures, or rapid personality change",
+  "Sudden severe memory loss after head trauma",
+  "Unexplained autonomic instability (e.g., persistent hyperthermia) with neurological signs"
+ ],
+ "faq": [
+  {
+   "q": "Why does limbic damage cause both memory loss and emotional change?",
+   "a": "The hippocampus stores declarative memory while the amygdala adds emotional valence; both are tightly linked, so injury disrupts both domains."
+  },
+  {
+   "q": "Can a stroke affect the limbic system?",
+   "a": "Yes—ACA or PCA strokes can infarct the cingulate or hippocampal regions, leading to apathy, amnesia, or mood swings."
+  },
+  {
+   "q": "Is limbic system disease always psychiatric?",
+   "a": "No—infectious encephalitis, vascular events, and metabolic disorders directly damage limbic structures and present with neurological signs."
+  }
+ ],
+ "exam": [
+  "Describe the key structures of the limbic system and their primary functions.",
+  "Explain how herpes simplex encephalitis produces the classic clinical triad of fever, seizures, and memory loss.",
+  "Identify the arterial territories that supply the hippocampus and amygdala and the deficits seen with their infarction."
+ ],
+ "related": [
+  "Hippocampus",
+  "Amygdala",
+  "Hypothalamus",
+  "Cingulate gyrus",
+  "Papez circuit",
+  "Temporal lobe epilepsy",
+  "Neuroendocrine regulation",
+  "Behavioural neurology"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Thalassaemia is a hereditary microcytic anaemia caused by defective globin chains, leading to ineffective erythropoiesis and chronic transfusion needs. It presents with fatigue, splenomegaly and bone changes, and requires lifelong monitoring for iron overload and cardiac complications.",
+ "aka": [
+  "β‑thalassaemia",
+  "α‑thalassaemia",
+  "thalassemia",
+  "thalassaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Thalassaemia is inherited loss or reduction of globin chain synthesis, causing microcytic anaemia with normal or low ferritin. Diagnosis combines CBC, red cell indices, haemoglobin electrophoresis, and DNA testing.",
+   "b": [
+    "Microcytosis with normal/low MCV",
+    "Normal or low ferritin, not high"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin electrophoresis",
+     "b": "Shows elevated HbA2 (β‑thalassaemia) or HbF (α‑thalassaemia) – confirms type"
+    },
+    {
+     "a": "DNA mutation analysis",
+     "b": "Identifies specific globin gene deletions or point mutations – definitive diagnosis"
+    },
+    {
+     "a": "Peripheral smear",
+     "b": "Sickle‑shaped cells, target cells, basophilic stippling – supports diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is classified by transfusion requirement and organ damage. WHO stages: I (stable, no transfusion), II (intermittent transfusion), III (regular transfusion), IV (organ failure).",
+   "b": [
+    "Stage I: asymptomatic, no transfusion"
+   ],
+   "t": [
+    {
+     "a": "Transfusion history",
+     "b": "Frequency of transfusions indicates disease severity"
+    },
+    {
+     "a": "Iron overload assessment (serum ferritin, MRI R2*)",
+     "b": "Guides chelation intensity"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common causes are β‑thalassaemia major (HBB mutations) and α‑thalassaemia major (HBA deletions).",
+   "b": [
+    "Sickle cell disease – co‑occurs in some regions"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with fatigue, pallor, growth delay, hepatosplenomegaly, skeletal deformities, and sometimes heart failure. Transfusion history is key.",
+   "b": [
+    "Cardiac murmurs from iron overload"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm diagnosis, assess severity, and monitor complications. When tests are unavailable, clinical features and basic CBC guide management.",
+   "b": [
+    "Echocardiography"
+   ],
+   "t": [
+    {
+     "a": "Serum ferritin",
+     "b": "Elevated ferritin indicates iron overload; normal ferritin suggests thalassaemia trait or anaemia of chronic disease"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Detects cardiomyopathy early; normal echo in early disease"
+    },
+    {
+     "a": "MRI R2*",
+     "b": "Quantifies liver iron; high values require chelation"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent complications include acute splenic sequestration, severe hypoxia, and cardiac failure. Chronic complications are iron overload, endocrine dysfunction, and infections.",
+   "b": [
+    "Endocrine dysfunction – diabetes, hypothyroidism"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on transfusion therapy, iron chelation, and monitoring for organ damage. Supportive care includes folic acid and infection prophylaxis.",
+   "b": [
+    "Avoid NSAIDs in iron overload due to renal risk"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow‑up includes quarterly CBC, ferritin, and annual cardiac assessment. Prevention in families uses genetic counselling and prenatal testing.",
+   "b": [
+    "Screening of newborns in endemic areas"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Thalassaemia trait, iron‑deficiency anaemia, sideroblastic anaemia, lead poisoning, and anaemia of chronic disease.",
+   "b": [
+    "Lead poisoning – basophilic stippling, abdominal pain"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Ferritin may be normal in early iron overload; HbA2 can be low in β‑thalassaemia minor; transfusion can mask anaemia severity.",
+   "b": [
+    "Transfusion masking – use pre‑transfusion labs"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden drop in haemoglobin with abdominal pain (splenic sequestration)",
+  "Severe dyspnoea or chest pain (cardiac failure)",
+  "Unexplained fever with splenomegaly (infection)"
+ ],
+ "faq": [
+  {
+   "q": "Can thalassaemia be cured?",
+   "a": "No, but transfusion and chelation control complications; gene therapy is experimental."
+  },
+  {
+   "q": "Why is ferritin normal in some patients?",
+   "a": "Early iron overload may not raise ferritin; MRI is more sensitive."
+  },
+  {
+   "q": "Do all thalassaemia patients need transfusions?",
+   "a": "Only those with significant anaemia or complications; carriers usually do not."
+  }
+ ],
+ "exam": [
+  "Explain the rationale for regular transfusions in β‑thalassaemia major and how iron overload is monitored.",
+  "Describe the diagnostic work‑up for a child with microcytic anaemia and splenomegaly.",
+  "Outline the management plan for a patient with thalassaemia major who develops cardiac failure."
+ ],
+ "related": [
+  "Iron overload",
+  "Sickle cell disease",
+  "Sideroblastic anaemia",
+  "Hemoglobinopathies",
+  "Endocrine complications of chronic disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

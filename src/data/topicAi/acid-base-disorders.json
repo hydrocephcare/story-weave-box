@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Acid‑base disorders are disturbances in blood pH caused by excess acid or loss of base. Clinicians must identify the primary disorder, assess compensation, and treat the underlying cause.",
+ "aka": [
+  "ABG disorders",
+  "pH imbalance",
+  "acid‑base imbalance"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Blood pH is tightly regulated (7.35‑7.45). A disorder is diagnosed by arterial blood gas (ABG) showing pH, PaCO₂, and HCO₃⁻ that do not fit normal compensation.",
+   "b": [
+    "pH < 7.35 = acidemia; pH > 7.45 = alkalemia",
+    "Primary disorder: the variable that is out of proportion to the others"
+   ],
+   "t": [
+    {
+     "a": "Arterial blood gas",
+     "b": "What is the primary acid‑base disturbance? – Determines pH, PaCO₂, HCO₃⁻ and whether compensation is appropriate"
+    },
+    {
+     "a": "Serum electrolytes (Na⁺, Cl⁻, HCO₃⁻)",
+     "b": "Is there an anion‑gap metabolic acidosis? – Calculates AG = Na – (Cl + HCO₃); >12 mEq/L suggests unmeasured acids"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by pH deviation and the presence of organ dysfunction.",
+   "b": [
+    "Mild: pH 7.30‑7.34 or 7.46‑7.49, no shock",
+    "Moderate: pH 7.20‑7.29 or 7.50‑7.55, tachypnea, altered mental status",
+    "Severe: pH < 7.20 or > 7.55, hypotension, coma"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the category (respiratory vs metabolic) then narrow to common etiologies, especially those seen in low‑resource settings.",
+   "b": [
+    "Respiratory acidosis – hypoventilation (COPD, opioid overdose, severe asthma)",
+    "Respiratory alkalosis – hyperventilation (pain, sepsis, high altitude, malaria fever)",
+    "High‑anion‑gap metabolic acidosis – diabetic ketoacidosis, sepsis, lactic acidosis, renal failure, toxic ingestions, severe malaria, TB meningitis",
+    "Normal‑anion‑gap metabolic acidosis – diarrhoea, renal tubular acidosis, excessive bicarbonate loss (drainage), chronic diarrhoea from cholera",
+    "Metabolic alkalosis – vomiting, nasogastric suction, diuretic overuse, antacid abuse, hyperaldosteronism"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms reflect pH and the underlying disease.",
+   "b": [
+    "Acidemia: headache, nausea, Kussmaul breathing, lethargy, arrhythmias",
+    "Alkalemia: paresthesias, tetany, seizures, shallow rapid breathing"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond ABG, targeted tests clarify the cause and assess organ impact.",
+   "b": [
+    "Serum lactate – distinguishes lactic acidosis",
+    "Blood glucose – screens for DKA",
+    "Renal function – evaluates uremic acidosis",
+    "Urine ketones – confirms ketoacidosis"
+   ],
+   "t": [
+    {
+     "a": "Serum lactate",
+     "b": "Is lactic acidosis present? – Elevated >2 mmol/L supports tissue hypoxia or sepsis"
+    },
+    {
+     "a": "Blood glucose",
+     "b": "Is hyperglycaemia driving metabolic acidosis? – >250 mg/dL suggests DKA"
+    },
+    {
+     "a": "Serum creatinine/BUN",
+     "b": "Is renal failure contributing? – High values indicate reduced acid excretion"
+    },
+    {
+     "a": "Urine ketones",
+     "b": "Are ketones present? – Positive dipstick supports ketoacidosis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncorrected severe disorders can cause rapid deterioration.",
+   "b": [
+    "Severe acidemia (<7.20) → cardiovascular collapse, arrhythmias",
+    "Severe alkalemia (>7.55) → seizures, decreased cerebral blood flow",
+    "Persistent high anion gap despite treatment → ongoing toxin exposure or sepsis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then correct the pH if life‑threatening.",
+   "b": [
+    "Ventilatory support for respiratory acidosis (intubation, adjust ventilator settings)",
+    "Treat sepsis, DKA, or toxin exposure promptly",
+    "IV sodium bicarbonate only for pH < 7.10 or severe hyperkalemia",
+    "Potassium replacement when correcting acidosis to avoid hypokalaemia"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑check ABG after interventions and address chronic risk factors.",
+   "b": [
+    "Daily ABG or venous bicarbonate until stable",
+    "Educate patients on medication adherence (e.g., insulin, antiretrovirals)",
+    "Vaccinate against infections that precipitate acidosis (influenza, pneumococcus)"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic acid‑base disturbances.",
+   "b": [
+    "Sepsis‑induced hyperventilation vs primary respiratory alkalosis",
+    "Renal tubular acidosis vs diarrhoeal loss of bicarbonate"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Mixed disorders can mask pH change; always calculate expected compensation",
+    "Low albumin lowers the anion gap – adjust AG = AG + (2.5 – albumin g/dL)",
+    "Peripheral venous blood gases may underestimate PaCO₂"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe acidemia or alkalemia with altered consciousness",
+  "Rapidly falling blood pressure or shock",
+  "New onset seizures or arrhythmias"
+ ],
+ "faq": [
+  {
+   "q": "Why is the anion gap useful?",
+   "a": "It separates metabolic acidosis caused by added acids from that caused by bicarbonate loss."
+  },
+  {
+   "q": "Can a patient have both respiratory and metabolic disorders?",
+   "a": "Yes; mixed disorders are common and identified when compensation does not match the primary disturbance."
+  },
+  {
+   "q": "When is sodium bicarbonate indicated?",
+   "a": "Only when pH is <7.10, severe hyperkalaemia, or specific toxin ingestion; otherwise it may worsen intracellular acidosis."
+  }
+ ],
+ "exam": [
+  "Interpret an ABG showing pH 7.25, PaCO₂ 50 mmHg, HCO₃⁻ 22 mEq/L – identify the primary disorder and compensation.",
+  "Calculate the anion gap for Na⁺ 140, Cl⁻ 100, HCO₃⁻ 12, albumin 3 g/dL – state the type of metabolic acidosis.",
+  "List three common causes of high‑anion‑gap metabolic acidosis in a low‑resource setting."
+ ],
+ "related": [
+  "Respiratory physiology",
+  "Renal tubular acidosis",
+  "Diabetic ketoacidosis",
+  "Sepsis and lactic acidosis",
+  "Electrolyte disorders",
+  "Ventilator management"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

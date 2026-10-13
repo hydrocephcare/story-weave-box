@@ -1,0 +1,113 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Second messengers are tiny molecules that relay signals from receptors to intracellular targets, amplifying and coordinating cellular responses. They are essential for translating external cues into specific actions.",
+ "aka": [
+  "Intracellular signaling molecules"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Second messengers are small, diffusible molecules produced or released inside cells after a receptor is activated. They carry the signal deeper into the cell, enabling a coordinated response.",
+   "b": [
+    "They are generated rapidly and transiently",
+    "They act on enzymes or ion channels",
+    "They allow amplification of the signal"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "When a hormone or neurotransmitter binds its receptor, an enzyme is activated or a channel opens, producing a second messenger that diffuses or binds to target proteins, altering their activity.",
+   "b": [
+    "GPCRs activate G proteins → adenylyl cyclase → cAMP"
+   ],
+   "t": [
+    {
+     "a": "cAMP",
+     "b": "Measures Gs‑coupled receptor activity; high levels suggest overstimulation (e.g., hyperthyroidism) or deficiency (e.g., adrenal insufficiency)"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Second messenger levels are tightly controlled by synthesis enzymes, phosphodiesterases, and reuptake mechanisms, ensuring signals are brief and specific.",
+   "b": [
+    "Adenylyl cyclase produces cAMP from ATP"
+   ],
+   "t": [
+    {
+     "a": "Phosphodiesterase activity",
+     "b": "Assesses degradation of cAMP; low activity can cause prolonged signaling"
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Dysregulation can lead to excessive or insufficient signaling, causing disorders such as Cushing’s disease (cAMP excess) or Addison’s disease (cAMP deficiency).",
+   "b": [
+    "Mutations in G proteins alter signaling"
+   ],
+   "t": [
+    {
+     "a": "PLC activity",
+     "b": "Evaluates IP3/DAG pathway; abnormal levels may indicate phospholipase C mutations"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding second messengers helps explain drug actions (e.g., β‑agonists raise cAMP) and disease mechanisms (e.g., insulin resistance involves impaired cAMP signaling).",
+   "b": [
+    "β‑agonists for asthma increase cAMP to relax smooth muscle"
+   ],
+   "t": [
+    {
+     "a": "cAMP levels in asthma patients",
+     "b": "High cAMP indicates effective β‑agonist therapy; low levels suggest resistance"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the classic cascade: ligand → GPCR → Gs → adenylyl cyclase → cAMP → PKA → target proteins. Know the key enzymes and their inhibitors.",
+   "b": [
+    "Adenylyl cyclase inhibitors (e.g., forskolin) block cAMP production"
+   ],
+   "t": [
+    {
+     "a": "PKA activity",
+     "b": "Tests downstream effect of cAMP; low activity indicates PKA deficiency"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is a second messenger?",
+   "a": "A small molecule produced inside the cell that transmits signals from a receptor to intracellular targets."
+  },
+  {
+   "q": "Name a common second messenger and its pathway?",
+   "a": "cAMP, produced by adenylyl cyclase after GPCR activation."
+  },
+  {
+   "q": "Why are second messengers important clinically?",
+   "a": "They explain how drugs like β‑agonists work and how signaling defects cause disease."
+  }
+ ],
+ "exam": [
+  "Explain how β‑adrenergic stimulation leads to smooth muscle relaxation via a second messenger.",
+  "Describe the role of cAMP in insulin signaling and its clinical significance."
+ ],
+ "related": [
+  "Signal transduction",
+  "G protein‑coupled receptors",
+  "Phospholipase C pathway",
+  "Calcium signaling"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

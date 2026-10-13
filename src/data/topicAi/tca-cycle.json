@@ -1,0 +1,103 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "The TCA cycle oxidizes acetyl‑CoA to CO₂, generating NADH, FADH₂ and GTP for ATP production. Clinicians must recognise how its dysfunction links to metabolic acidosis, organ failure and inherited enzyme deficiencies.",
+ "aka": [
+  "Krebs cycle",
+  "Citric Acid Cycle"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The TCA cycle runs in mitochondria, coupling carbon oxidation to electron transport for most cellular ATP. It also provides precursors for amino acids and heme.",
+   "b": [
+    "Acetyl‑CoA + 4 H₂O → 2 CO₂ + 3 NADH + FADH₂ + GTP"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Acetyl‑CoA combines with oxaloacetate to form citrate, which is isomerised, decarboxylated, and dehydrogenated in a series of steps returning oxaloacetate. Each turn yields reducing equivalents for oxidative phosphorylation.",
+   "b": [
+    "Key enzymes: citrate synthase, aconitase, isocitrate dehydrogenase, α‑KGDH, succinyl‑CoA synthetase, succinate dehydrogenase, fumarase, malate dehydrogenase"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Rate‑limiting steps are controlled by substrate availability and energy status. High ATP/NADH inhibit isocitrate dehydrogenase and α‑KGDH; ADP/CoA activate them.",
+   "b": [
+    "Allosteric inhibition by ATP, NADH; activation by ADP, Ca²⁺"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Inherited enzyme defects, mitochondrial toxins, and severe sepsis can impair the cycle, leading to lactic acidosis, hypoglycaemia and multi‑organ failure.",
+   "b": [
+    "PDH deficiency, α‑KGDH deficiency, succinate dehydrogenase loss, thiamine deficiency"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "TCA dysfunction manifests as metabolic acidosis, neurologic decline, and cardiomyopathy. Recognising patterns guides urgent investigations and therapy.",
+   "b": [
+    "Elevated lactate with normal pyruvate suggests PDH block; low NADH/NAD⁺ ratio points to oxidative phosphorylation failure"
+   ],
+   "t": [
+    {
+     "a": "Serum lactate",
+     "b": "Is there impaired aerobic metabolism? High >2 mmol/L indicates anaerobic glycolysis from TCA failure; if unavailable, use arterial blood gas anion gap."
+    },
+    {
+     "a": "Thiamine level",
+     "b": "Is a cofactor missing? Low level supports thiamine‑responsive PDH or α‑KGDH deficiency; give empiric thiamine if test not feasible."
+    },
+    {
+     "a": "Genetic panel for mitochondrial enzymes",
+     "b": "Does a hereditary defect exist? Positive result confirms diagnosis; if unavailable, rely on clinical triad (neurologic signs, lactic acidosis, family history)."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on enzyme locations, products, regulation, and clinical clues of failure.",
+   "b": [
+    "Know which steps generate GTP vs NADH vs FADH₂",
+    "Identify thiamine‑dependent enzymes",
+    "Link high lactate to TCA block"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe unexplained lactic acidosis (>4 mmol/L), rapid neurologic decline, refractory shock, or sudden cardiac failure – treat as medical emergency."
+ ],
+ "faq": [
+  {
+   "q": "Why does thiamine deficiency affect the TCA cycle?",
+   "a": "Thiamine‑pyrophosphate is a cofactor for PDH, α‑KGDH and branched‑chain ketoacid dehydrogenase; without it, acetyl‑CoA cannot enter the cycle."
+  },
+  {
+   "q": "Can the TCA cycle run without oxygen?",
+   "a": "No; NADH and FADH₂ need oxidative phosphorylation to regenerate NAD⁺ and FAD, so the cycle stalls anaerobically."
+  },
+  {
+   "q": "What distinguishes a primary TCA enzyme defect from secondary mitochondrial disease?",
+   "a": "Primary defects present early with specific enzyme deficiency; secondary disease shows global mitochondrial dysfunction and multiple enzyme losses."
+  }
+ ],
+ "exam": [
+  "Explain how high ATP inhibits isocitrate dehydrogenase and the clinical significance.",
+  "Describe the metabolic consequences of pyruvate dehydrogenase deficiency.",
+  "Interpret a lactate‑pyruvate ratio in a patient with suspected TCA dysfunction."
+ ],
+ "related": [
+  "Oxidative phosphorylation",
+  "Pyruvate dehydrogenase complex",
+  "Mitochondrial diseases",
+  "Thiamine deficiency",
+  "Lactic acidosis",
+  "Krebs cycle intermediates"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

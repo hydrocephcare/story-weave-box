@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The mediastinum is the central compartment of the thorax between the lungs, containing heart, great vessels, trachea, esophagus and lymphatics. Its divisions guide diagnosis of masses, effusions and trauma.",
+ "aka": [
+  "Thoracic cavity central compartment",
+  "Mediastinal space"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The mediastinum separates the right and left pleural cavities and houses vital structures. Clinicians use its borders to locate disease on imaging and to plan interventions.",
+   "b": [
+    "Divided into superior and inferior parts; inferior further into anterior, middle, posterior"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Superior mediastinum extends from the thoracic inlet to the sternal angle; inferior lies below to the diaphragm. Anterior contains thymus, fat; middle holds heart, pericardium, roots of great vessels; posterior contains esophagus, thoracic aorta, thoracic duct.",
+   "b": [
+    "Boundaries are easy landmarks on chest X‑ray and CT"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly the sternum and costal cartilages; posteriorly the vertebral bodies and thoracic spine; laterally the pleural cavities; superiorly the thoracic inlet; inferiorly the diaphragm and upper abdomen.",
+   "b": [
+    "Mediastinal shift on tension pneumothorax or large effusion indicates pressure effect"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial supply comes from branches of the internal thoracic, bronchial, and intercostal arteries; venous drainage follows the azygos system and internal thoracic veins.",
+   "b": [
+    "Bleeding from these vessels can cause rapid mediastinal hematoma"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Autonomic fibers from the vagus and sympathetic trunks run through the posterior mediastinum, providing parasympathetic innervation to heart and lungs.",
+   "b": [
+    "Vagal injury may cause bradyarrhythmias after thoracic surgery"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Provides a protected conduit for the heart, great vessels, airway, esophagus and lymphatics, allowing coordinated cardiopulmonary function and immune surveillance.",
+   "b": [
+    "Space constraints mean any mass quickly affects neighboring structures"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Mediastinal widening on X‑ray suggests mass, hemorrhage, or large effusion. Tension pneumothorax pushes mediastinum away, flattening the diaphragm. Effusions are classified by protein: exudate (>3 g/dL) often TB; transudate (low protein) often heart failure.",
+   "b": [
+    "Stony dull percussion, absent breath sounds, reduced fremitus → pleural effusion",
+    "Bronchial breathing at upper edge → fluid level",
+    "Mediastinal shift → tension pneumothorax or large mass"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Does the mediastinum appear widened or shifted? → Suggests mass, large effusion, or tension pneumothorax"
+    },
+    {
+     "a": "Thoracentesis fluid analysis",
+     "b": "Is protein >3 g/dL? → Exudate (TB, empyema); low protein → transudate (CHF, hypoalbuminemia)"
+    },
+    {
+     "a": "CT scan",
+     "b": "What is the exact compartment of a mediastinal mass? → Guides biopsy and management"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the four mediastinal compartments and the classic causes of anterior (thymoma, lymphoma, germ cell tumor, thyroid), middle (lymphadenopathy, cysts, vascular), and posterior (neurogenic tumors, esophageal) masses.",
+   "b": [
+    "Anterior: “4 T’s” – Thymoma, Teratoma, Thyroid, Terrible lymphoma",
+    "Middle: bronchogenic cyst, lymph node enlargement (TB, HIV)",
+    "Posterior: schwannoma, neurofibroma, esophageal duplication cyst"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden mediastinal shift with respiratory distress (tension pneumothorax)",
+  "Large pleural effusion causing hemodynamic compromise",
+  "Rapidly enlarging mediastinal mass with superior vena cava syndrome"
+ ],
+ "faq": [
+  {
+   "q": "Why does a large pleural effusion push the mediastinum away?",
+   "a": "The fluid creates pressure that displaces the flexible mediastinal structures toward the opposite side."
+  },
+  {
+   "q": "How can you tell an exudative from a transudative effusion without a lab?",
+   "a": "Clinically, exudates often accompany fever, weight loss, or TB risk; transudates occur with heart failure or low albumin."
+  },
+  {
+   "q": "What is the most common anterior mediastinal mass in young adults?",
+   "a": "Thymoma, followed closely by lymphoma and germ‑cell tumors."
+  }
+ ],
+ "exam": [
+  "Name the three compartments of the inferior mediastinum and list one typical pathology for each.",
+  "Explain how a tension pneumothorax changes mediastinal position on a chest X‑ray and why this is dangerous.",
+  "Interpret pleural fluid protein of 4 g/dL: what type of effusion is it and what are the top three causes in low‑resource settings?"
+ ],
+ "related": [
+  "Pleural effusion",
+  "Tension pneumothorax",
+  "Superior vena cava syndrome",
+  "Mediastinal mass",
+  "Thoracic aorta",
+  "Esophageal cancer",
+  "Tuberculosis"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

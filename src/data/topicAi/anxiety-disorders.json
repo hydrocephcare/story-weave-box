@@ -1,0 +1,191 @@
+{
+ "medical": true,
+ "subject": "Psychiatry",
+ "summary": "Anxiety disorders are common, often presenting with excessive worry, panic attacks, or phobic avoidance. Diagnosis relies on DSM‑5 criteria, ruling out medical causes, and assessing severity. Management combines CBT, pharmacotherapy, and addressing comorbidities.",
+ "aka": [
+  "Panic Disorder",
+  "Social Anxiety",
+  "Specific Phobia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Anxiety disorders are mental illnesses marked by excessive fear or anxiety that interferes with daily life. DSM‑5 requires symptoms for at least 6 months, not better explained by another condition, and causing distress or impairment.",
+   "b": [
+    "Generalized Anxiety Disorder: excessive worry >6 months",
+    "Panic Disorder: recurrent unexpected panic attacks",
+    "Social Anxiety Disorder: marked fear of social situations",
+    "Specific Phobia: intense fear of a specific object or situation"
+   ],
+   "t": [
+    {
+     "a": "Thyroid function tests",
+     "b": "Rule out hyperthyroidism as a medical cause of anxiety; high T4/T3 or low TSH suggests thyroid disease."
+    },
+    {
+     "a": "Cortisol level",
+     "b": "Exclude Cushing’s syndrome or adrenal insufficiency; abnormal cortisol indicates endocrine disorder."
+    },
+    {
+     "a": "Screening for substance use",
+     "b": "Identify alcohol or drug withdrawal that can mimic anxiety."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by the Generalized Anxiety Disorder 7‑item scale or Panic Disorder Severity Scale. Staging informs treatment intensity: mild (self‑management), moderate (CBT + medication), severe (intensive CBT, SSRIs, or SNRIs).",
+   "b": [
+    "Mild: <10 on GAD‑7",
+    "Moderate: 10‑14",
+    "Severe: >14"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary causes are genetic predisposition, early life stress, and neurochemical imbalance. Secondary causes include medical conditions common in low‑resource settings such as hypothyroidism, HIV, TB, malaria, and chronic pain.",
+   "b": [
+    "Genetic vulnerability",
+    "Early trauma or neglect",
+    "Hypothyroidism",
+    "HIV infection",
+    "Chronic infections (TB, malaria)",
+    "Sickle cell pain crises",
+    "Rheumatic heart disease"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin",
+     "b": "Anemia can worsen anxiety; low Hb suggests chronic disease."
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Elevated inflammatory markers may indicate infection or rheumatic disease."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report excessive worry, restlessness, muscle tension, sleep disturbance, and avoidance. Panic attacks manifest as chest pain, palpitations, dizziness, and fear of dying. Social anxiety involves fear of judgment and avoidance of social settings.",
+   "b": [
+    "Worry about future events",
+    "Panic attacks with autonomic symptoms",
+    "Avoidance of social interactions",
+    "Somatic complaints"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations focus on excluding medical mimics and assessing comorbidity. In low‑resource settings, basic labs and clinical history are key.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Low Hb or elevated WBC suggests underlying disease."
+    },
+    {
+     "a": "Basic metabolic panel",
+     "b": "Abnormal electrolytes can cause anxiety symptoms."
+    },
+    {
+     "a": "Urine pregnancy test",
+     "b": "Positive test requires obstetric referral."
+    },
+    {
+     "a": "Screening for depression",
+     "b": "Positive screen indicates need for combined therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include chest pain, shortness of breath, sudden loss of consciousness, or suicidal ideation. Complications of untreated anxiety include depression, substance misuse, and cardiovascular strain.",
+   "b": [
+    "Chest pain with exertion",
+    "Unexplained dyspnea",
+    "Suicidal thoughts",
+    "Chronic insomnia leading to hypertension"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying causes first. Then provide CBT, psychoeducation, and pharmacotherapy. SSRIs or SNRIs are first‑line; benzodiazepines are reserved for acute relief.",
+   "b": [
+    "CBT: exposure, cognitive restructuring"
+   ],
+   "t": [
+    {
+     "a": "SSRIs (e.g., sertraline, fluoxetine)",
+     "b": "Improves neurotransmitter balance."
+    },
+    {
+     "a": "SNRIs (e.g., venlafaxine)",
+     "b": "Increases norepinephrine and serotonin."
+    },
+    {
+     "a": "Benzodiazepines (short‑term)",
+     "b": "Acts on GABA receptors."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review every 4–6 weeks to assess symptom change and side effects. Prevention focuses on stress management, sleep hygiene, and early detection of comorbid conditions.",
+   "b": [
+    "Schedule follow‑up visits"
+   ],
+   "t": [
+    {
+     "a": "GAD‑7 score",
+     "b": "Decrease indicates improvement."
+    },
+    {
+     "a": "Medication adherence check",
+     "b": "Non‑adherence leads to relapse."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Anxiety disorders can mimic depression, substance withdrawal, thyroid disease, and cardiac arrhythmias. Distinguishing features include the presence of excessive worry and the temporal pattern of symptoms.",
+   "b": [
+    "Cardiac arrhythmia: palpitations with ECG changes"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal thyroid tests can occur in subclinical disease; low cortisol may be due to stress rather than adrenal failure. In low‑resource settings, limited lab availability can delay diagnosis.",
+   "b": [
+    "Stress can lower cortisol temporarily"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Chest pain with exertion",
+  "Sudden loss of consciousness",
+  "Severe suicidal ideation"
+ ],
+ "faq": [
+  {
+   "q": "Can anxiety be caused by a medical condition?",
+   "a": "Yes, thyroid disorders, electrolyte imbalances, infections, and chronic diseases can trigger anxiety."
+  },
+  {
+   "q": "What is the first‑line drug for panic disorder?",
+   "a": "SSRIs or SNRIs are first‑line; benzodiazepines are used short‑term for acute relief."
+  },
+  {
+   "q": "How do I differentiate panic attacks from heart attack?",
+   "a": "Panic attacks lack exertional precipitant, have rapid onset, and are relieved by breathing techniques; cardiac tests rule out myocardial ischemia."
+  }
+ ],
+ "exam": [
+  "Explain the DSM‑5 criteria for generalized anxiety disorder and how you would rule out medical causes.",
+  "Describe the pharmacologic rationale for choosing an SSRI over a benzodiazepine in a patient with panic disorder.",
+  "Outline a low‑resource management plan for a child presenting with social anxiety disorder."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

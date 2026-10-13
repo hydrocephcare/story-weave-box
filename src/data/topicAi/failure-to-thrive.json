@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Failure to thrive (FTT) describes inadequate weight gain or growth in infants and children, reflecting an imbalance between nutritional needs and intake or absorption. It signals underlying medical, psychosocial, or environmental problems that require systematic evaluation.",
+ "aka": [
+  "poor weight gain",
+  "growth faltering"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "FTT is defined by weight below the 5th percentile for age, a drop of >2 major percentile lines on a growth chart, or weight-for-height <85% of the median.",
+   "b": [
+    "Use WHO or CDC growth charts consistently.",
+    "Confirm measurement technique (naked weight, calibrated scale)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by weight‑for‑age percentiles: mild (3‑5th), moderate (1‑3rd), severe (<1st). Staging guides urgency of work‑up and intensity of intervention.",
+   "b": [
+    "Mild: monitor, address feeding practices.",
+    "Moderate: targeted investigations, nutrition plan.",
+    "Severe: urgent referral, possible inpatient re‑feeding."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped into intake, malabsorption, increased loss, and systemic disease. In low‑resource settings, infections and chronic conditions dominate.",
+   "b": [
+    "Inadequate intake – breastfeeding problems, caregiver neglect, socioeconomic hardship.",
+    "Malabsorption – celiac disease, cystic fibrosis, chronic diarrhea (e.g., Giardia, HIV enteropathy).",
+    "Increased loss – recurrent pneumonia, congenital heart disease, chronic renal disease.",
+    "Systemic disease – HIV, TB, malaria, sickle cell disease, rheumatic heart disease."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children with FTT often appear small for age, may be irritable, have poor stamina, and show developmental delays. Feeding difficulties, chronic cough, or diarrhea are common clues.",
+   "b": [
+    "Weight loss or plateau despite normal length/height.",
+    "Frequent infections, especially respiratory or gastrointestinal.",
+    "Visible signs of micronutrient deficiency (e.g., pallor, hair loss)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are directed by the most likely cause categories and the severity of the child’s condition.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Is there anemia or infection? Low hemoglobin suggests chronic disease or iron deficiency; leukocytosis points to infection."
+    },
+    {
+     "a": "Serum electrolytes & renal function",
+     "b": "Are there electrolyte losses from diarrhea or renal disease? Hyponatremia or elevated creatinine signals dehydration or renal impairment."
+    },
+    {
+     "a": "Stool microscopy & culture",
+     "b": "Is there a chronic diarrheal pathogen? Presence of parasites (Giardia) or bacterial overgrowth guides antimicrobial therapy."
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Is HIV infection contributing? Positive test mandates antiretroviral therapy and specific nutritional support."
+    },
+    {
+     "a": "Chest X‑ray (if available)",
+     "b": "Is there chronic lung disease or heart failure? Cardiomegaly or infiltrates suggest congenital heart disease or recurrent pneumonia."
+    },
+    {
+     "a": "Celiac serology (tTG IgA)",
+     "b": "Is gluten‑sensitive enteropathy present? Positive antibodies prompt gluten‑free diet."
+    },
+    {
+     "a": "If labs unavailable",
+     "b": "Rely on clinical clues: persistent diarrhea, recurrent infections, failure to gain weight despite adequate feeding."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain findings demand urgent referral because they can rapidly become life‑threatening.",
+   "b": [
+    "Severe dehydration or electrolyte imbalance.",
+    "Persistent hypoglycemia.",
+    "Signs of cardiac failure (tachypnea, hepatomegaly)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide tailored nutritional rehabilitation and monitor growth.",
+   "b": [
+    "Caloric dense feeds (e.g., fortified breast milk, ready‑to‑use therapeutic foods).",
+    "Treat infections with appropriate antibiotics; avoid macrolides in children with known QT prolongation.",
+    "For HIV, start antiretroviral therapy; for TB, initiate DOTS regimen.",
+    "Address feeding behavior with caregiver education and, if needed, occupational therapy."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular growth monitoring and early identification of feeding problems prevent progression.",
+   "b": [
+    "Re‑measure weight weekly for severe cases, then monthly as improvement occurs.",
+    "Vaccinate against preventable infections (pneumococcus, rotavirus).",
+    "Promote exclusive breastfeeding for 6 months and safe weaning practices."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic FTT must be distinguished to avoid mismanagement.",
+   "b": [
+    "Short stature due to genetic dwarfism – normal weight‑for‑height.",
+    "Failure to thrive due to psychosocial neglect – normal labs, but social intervention needed."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some investigations may appear normal despite serious disease.",
+   "b": [
+    "Normal CBC in early HIV infection; repeat if clinical suspicion persists.",
+    "Negative stool culture in Giardia if not using concentration techniques."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dehydration, persistent vomiting, or inability to retain feeds",
+  "Signs of cardiac failure (rapid breathing, swollen abdomen)",
+  "Unexplained seizures or loss of consciousness"
+ ],
+ "faq": [
+  {
+   "q": "Is FTT always caused by poor nutrition?",
+   "a": "No; it can result from disease, malabsorption, increased metabolic demand, or psychosocial factors."
+  },
+  {
+   "q": "How quickly should weight improve after treatment?",
+   "a": "In moderate cases, a gain of 2‑3 g/kg/day is expected; severe cases may need inpatient re‑feeding to achieve this."
+  },
+  {
+   "q": "Can FTT resolve without medical intervention?",
+   "a": "Mild cases due to temporary feeding issues may improve with education, but most require targeted medical evaluation."
+  }
+ ],
+ "exam": [
+  "Describe the growth‑chart criteria used to diagnose failure to thrive.",
+  "List the four major categories of causes for FTT and give one example relevant to low‑resource settings for each.",
+  "Explain the initial investigation plan for a 12‑month‑old with FTT and chronic diarrhea."
+ ],
+ "related": [
+  "Malnutrition",
+  "Celiac disease",
+  "HIV infection in children",
+  "Congenital heart disease",
+  "Chronic diarrhea",
+  "Pediatric gastro‑esophageal reflux"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

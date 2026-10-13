@@ -1,0 +1,116 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Signal transduction converts extracellular cues into cellular responses via receptors, second messengers, and protein cascades. Understanding it helps clinicians link symptoms to molecular defects and choose targeted therapies.",
+ "aka": [
+  "cell signaling",
+  "signal cascade"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Cells sense hormones, growth factors, cytokines and environmental changes through surface or intracellular receptors. The signal is relayed inside the cell, altering gene expression or enzyme activity.",
+   "b": [
+    "Receptors: GPCRs, RTKs, ion channels, nuclear receptors",
+    "Key messengers: cAMP, Ca2+, IP3, DAG, ROS"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Ligand binding changes receptor conformation, activating intracellular proteins (G‑proteins, kinases). Cascades amplify the signal, ending with transcription factors or metabolic enzymes that produce the final response.",
+   "b": [
+    "GPCR → Gα‑GTP → adenylyl cyclase → cAMP → PKA",
+    "RTK dimerisation → autophosphorylation → MAPK cascade → gene transcription"
+   ],
+   "t": [
+    {
+     "a": "cAMP assay",
+     "b": "Does the pathway show increased adenylate cyclase activity? High cAMP suggests GPCR over‑activation (e.g., cholera toxin)."
+    },
+    {
+     "a": "Phospho‑ERK immunoblot",
+     "b": "Is the MAPK pathway active? Elevated phospho‑ERK indicates RTK or RAS mutation‑driven signaling."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Cells use phosphatases, GTPase‑activating proteins, receptor desensitisation, and feedback inhibitors to terminate signaling and prevent over‑activation.",
+   "b": [
+    "β‑arrestin uncouples GPCRs",
+    "PTEN dephosphorylates PIP3, dampening PI3K‑AKT"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Mutations, over‑expression, or infectious toxins can dysregulate pathways, leading to uncontrolled growth, immune dysfunction, or metabolic disease.",
+   "b": [
+    "Oncogenic RAS/RAF mutations → constant MAPK activation",
+    "Loss of PTEN → PI3K‑AKT hyper‑activity",
+    "HIV‑Tat protein can hijack NF‑κB signaling"
+   ],
+   "t": [
+    {
+     "a": "KRAS mutation PCR",
+     "b": "Is a constitutively active RAS present? Positive result supports targeted therapy (e.g., MEK inhibitors)."
+    },
+    {
+     "a": "PTEN immunohistochemistry",
+     "b": "Is PTEN lost? Absence predicts PI3K‑AKT pathway reliance."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Many drugs act on signaling components (β‑blockers, tyrosine‑kinase inhibitors, mTOR inhibitors). Recognising pathway defects guides precision medicine and predicts resistance.",
+   "b": [
+    "β‑blockers block β‑adrenergic GPCR → reduce cAMP in heart failure",
+    "Imatinib inhibits BCR‑ABL tyrosine kinase in CML"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on receptor classes, key second messengers, and common disease links. Remember which tests confirm pathway activation and how drugs intervene.",
+   "b": [
+    "GPCR → G protein → second messenger (cAMP, Ca2+)",
+    "RTK → autophosphorylation → MAPK/PI3K pathways"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly progressive seizures from toxin‑induced NMDA receptor over‑activation",
+  "Severe hypotension unresponsive to fluids suggesting uncontrolled β‑adrenergic blockade"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between a GPCR and a receptor tyrosine kinase?",
+   "a": "GPCRs use heterotrimeric G‑proteins and second messengers; RTKs dimerise and autophosphorylate to recruit intracellular kinases."
+  },
+  {
+   "q": "Why can a tumor with a KRAS mutation be resistant to EGFR inhibitors?",
+   "a": "KRAS is downstream of EGFR; a constitutively active KRAS bypasses the blocked receptor."
+  },
+  {
+   "q": "How does PTEN loss affect cancer therapy?",
+   "a": "Loss increases PI3K‑AKT signaling, making tumors less responsive to drugs that rely on pathway inhibition unless PI3K/AKT inhibitors are used."
+  }
+ ],
+ "exam": [
+  "Describe the signaling cascade from a hormone binding to a GPCR to the cellular response.",
+  "Explain why a patient with a BCR‑ABL fusion benefits from imatinib but not from conventional chemotherapy alone.",
+  "List two mechanisms that terminate MAPK signaling and their clinical importance."
+ ],
+ "related": [
+  "G‑protein coupled receptors",
+  "Receptor tyrosine kinases",
+  "MAPK pathway",
+  "PI3K‑AKT‑mTOR axis",
+  "Oncogenic mutations",
+  "Targeted cancer therapy",
+  "Hormone signaling"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

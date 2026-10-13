@@ -1,0 +1,154 @@
+{
+ "medical": true,
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Contraception involves methods that prevent fertilisation or implantation. Clinicians must match patient goals, health status, and resource availability to choose safe, effective options.",
+ "aka": [
+  "family planning",
+  "birth control"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Contraception refers to any intentional method that prevents pregnancy. Diagnosis is clinical: confirming desire to avoid conception and assessing suitability of methods.",
+   "b": [
+    "Identify reproductive intent",
+    "Assess contraindications (e.g., thrombosis, uncontrolled hypertension)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Not a disease, but risk of unintended pregnancy can be staged by effectiveness: perfect-use failure rates (<1% for LARC) to typical-use (>20% for withdrawal).",
+   "b": [
+    "High‑risk: no method or low‑effectiveness method",
+    "Moderate‑risk: pills, patches, rings",
+    "Low‑risk: IUDs, implants, sterilisation"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Failure of contraception is usually due to user error, method incompatibility, or drug interactions.",
+   "b": [
+    "Incorrect use (missed pills, improper condom use)",
+    "Drug interactions reducing hormonal efficacy (rifampicin, antiepileptics)",
+    "Method failure (IUD expulsion, condom breakage)",
+    "Physiologic factors (obesity reducing hormonal levels)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present seeking advice, reporting breakthrough bleeding, or after an unintended pregnancy.",
+   "b": [
+    "Desire for long‑acting reversible contraception (LARC)",
+    "Concern about side‑effects",
+    "Need for emergency contraception"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Testing ensures safety and informs method choice.",
+   "b": [
+    "If labs unavailable, use clinical history (e.g., known hypertension) to guide safe method selection."
+   ],
+   "t": [
+    {
+     "a": "Pregnancy test",
+     "b": "Is patient already pregnant? Positive result excludes hormonal methods and prompts abortion care or continuation counseling."
+    },
+    {
+     "a": "Blood pressure measurement",
+     "b": "Is there hypertension? High BP contraindicates combined hormonal contraceptives."
+    },
+    {
+     "a": "CBC and liver function tests (if considering hormonal method)",
+     "b": "Detect anemia, thrombophilia, or hepatic disease that may affect method safety."
+    },
+    {
+     "a": "HIV, hepatitis B/C screening (low‑resource settings)",
+     "b": "Identify infections that influence choice of barrier methods and need for STI counseling."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications are rare but can be serious.",
+   "b": [
+    "IUD perforation or expulsion",
+    "Thromboembolic events with estrogen‑containing pills",
+    "Severe allergic reaction to device material"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Choose method based on effectiveness, contraindications, patient preference, and resource availability.",
+   "b": [
+    "Long‑acting reversible contraception (copper IUD, hormonal IUD, implant) – highest efficacy, minimal user dependence.",
+    "Combined oral contraceptives – useful when estrogen not contraindicated; avoid in smokers >35, hypertension, migraine with aura.",
+    "Progestogen‑only pills/injectables – safe in hypertension, breastfeeding; watch for irregular bleeding.",
+    "Barrier methods (condoms, diaphragm) – add STI protection; use when hormonal methods unsuitable.",
+    "Emergency contraception – copper IUD up to 5 days; oral levonorgestrel up to 3 days if IUD unavailable."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑evaluate method tolerance, side‑effects, and reproductive goals at 3‑month intervals, then annually.",
+   "b": [
+    "Check blood pressure after 1 month on combined pills",
+    "Inspect IUD strings at each visit",
+    "Provide counseling on STI prevention and dual‑method use"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic contraceptive failure or side‑effects.",
+   "b": [
+    "Polycystic ovary syndrome – irregular bleeding may be mistaken for hormonal method side‑effect",
+    "Pregnancy – must be ruled out before starting hormonal contraception",
+    "Menstrual disorders – breakthrough bleeding is common with progestogen‑only methods"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal or abnormal.",
+   "b": [
+    "Early pregnancy test may be negative if performed too soon; repeat in 48 h if suspicion remains",
+    "Blood pressure measured in a noisy environment may overestimate hypertension, leading to unnecessary avoidance of estrogen"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain after IUD insertion (possible perforation)",
+  "Sudden unilateral leg swelling or chest pain (possible thromboembolism)",
+  "Heavy vaginal bleeding not controlled with tampon or medication"
+ ],
+ "faq": [
+  {
+   "q": "Can I use hormonal contraception while breastfeeding?",
+   "a": "Progestogen‑only methods are safe; combined estrogen‑containing pills are avoided until 6 weeks postpartum."
+  },
+  {
+   "q": "Is the copper IUD safe for emergency contraception?",
+   "a": "Yes, it can be inserted up to 5 days after unprotected intercourse and provides ongoing contraception."
+  },
+  {
+   "q": "What method is best for a woman with uncontrolled hypertension?",
+   "a": "Non‑estrogen options such as progestogen‑only pills, injectables, implants, or IUDs are preferred."
+  }
+ ],
+ "exam": [
+  "List three long‑acting reversible contraceptive methods and their primary mechanisms of action.",
+  "Explain how you would assess a patient for suitability of combined oral contraceptives.",
+  "Describe the steps and contraindications for using a copper IUD as emergency contraception."
+ ],
+ "related": [
+  "Sexually transmitted infections",
+  "Abnormal uterine bleeding",
+  "Pregnancy testing",
+  "Post‑abortion care",
+  "Fertility counseling",
+  "Menopause management"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

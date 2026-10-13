@@ -1,0 +1,177 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Cardiogenic shock is severe pump failure causing inadequate tissue perfusion despite adequate filling pressures. It requires rapid identification, hemodynamic support, and treatment of the underlying cardiac cause.",
+ "aka": [
+  "Cardiogenic circulatory failure"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cardiogenic shock is defined by systolic blood pressure <90 mmHg for >30 min or need for vasopressors, with evidence of tissue hypoperfusion (cold extremities, oliguria, altered mental status) and a cardiac origin.",
+   "b": [
+    "Low MAP despite adequate preload",
+    "Elevated lactate >2 mmol/L",
+    "Pulmonary congestion on exam or imaging"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure and MAP",
+     "b": "Is systemic perfusion adequate? Low values confirm shock."
+    },
+    {
+     "a": "Serum lactate",
+     "b": "Is there cellular hypoxia? Elevated lactate supports hypoperfusion."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "What is cardiac output and wall motion? Reduced EF <35 % confirms pump failure."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Society for Cardiovascular Angiography and Interventions (SCAI) stages CS from A (at risk) to E (extremis). Most patients present at stage C (classic shock) or D (deteriorating).",
+   "b": [
+    "Stage C: SBP < 90 mmHg, lactate > 2 mmol/L, need for inotropes",
+    "Stage D: worsening despite inotropes, rising lactate, end‑organ dysfunction"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the precipitating cardiac lesion; the most common is acute myocardial infarction, especially anterior STEMI.",
+   "b": [
+    "Acute MI (especially large anterior infarct)",
+    "Mechanical complications: papillary muscle rupture, ventricular septal defect",
+    "Severe valvular disease (e.g., acute mitral regurgitation)",
+    "Arrhythmias (ventricular tachycardia/fibrillation)",
+    "Cardiomyopathies (ischemic, stress, viral, peripartum)",
+    "Tropical considerations: rheumatic heart disease with acute decompensation, myocarditis from HIV/TB, malaria‑related cardiomyopathy"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients appear cold, clammy, with rapid weak pulse, shortness of breath, pulmonary edema, and reduced urine output.",
+   "b": [
+    "Cold extremities, cyanosis",
+    "Dyspnea with crackles",
+    "Altered mental status",
+    "Oliguria <0.5 mL/kg/h"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Focused tests confirm shock, assess cardiac function, and look for reversible causes.",
+   "t": [
+    {
+     "a": "12‑lead ECG",
+     "b": "Is there an acute ischemic pattern? ST‑elevation or new LBBB guides reperfusion."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Is there pulmonary congestion or other thoracic pathology? Helps differentiate cardiogenic from other shock types."
+    },
+    {
+     "a": "Point‑of‑care ultrasound",
+     "b": "Is there pericardial effusion or tamponade? Detects mechanical complications when formal echo unavailable."
+    },
+    {
+     "a": "Cardiac enzymes (troponin)",
+     "b": "Is myocardial injury present? Elevation supports MI as cause."
+    },
+    {
+     "a": "Complete blood count & electrolytes",
+     "b": "Are there anemia, infection, or electrolyte derangements that worsen shock? Guides supportive care."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early death often results from malignant arrhythmias, progression to refractory shock, or mechanical rupture.",
+   "b": [
+    "Ventricular tachyarrhythmia within first hours",
+    "Papillary muscle rupture (day 3‑5) → severe MR",
+    "Free‑wall rupture (day 4‑7) → tamponade",
+    "Mural thrombus formation",
+    "Dressler syndrome weeks later"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cardiac cause first, then provide hemodynamic support while monitoring end‑organ perfusion.",
+   "b": [
+    "Urgent reperfusion for MI (PCI or thrombolysis)",
+    "Inotropes (dobutamine, milrinone) to raise CO when MAP <65 mmHg",
+    "Vasopressors (norepinephrine) if hypotension persists despite inotropes",
+    "Mechanical support: intra‑aortic balloon pump or Impella when drugs insufficient",
+    "Avoid pure vasoconstrictors alone – they increase afterload and worsen pump failure"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilization, optimize coronary disease, control risk factors, and arrange cardiac rehabilitation.",
+   "b": [
+    "Beta‑blocker and ACE‑inhibitor for remodeling",
+    "Statin therapy for atherosclerosis",
+    "Vaccination and infection control in endemic areas (e.g., malaria prophylaxis)",
+    "Regular echo to monitor ventricular function"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause hypotension and pulmonary edema but have different primary mechanisms.",
+   "b": [
+    "Septic shock – distributive, warm extremities, high cardiac output",
+    "Obstructive shock – tamponade, massive PE, tension pneumothorax",
+    "Hypovolemic shock – low preload, flat neck veins"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain values may appear normal early, delaying diagnosis.",
+   "b": [
+    "Normal troponin in early MI – repeat testing after 3 h",
+    "Lactate may be modest initially – trend serially",
+    "Ejection fraction can look preserved in early right‑ventricular infarction – assess RV function"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Systolic BP <90 mmHg despite fluids",
+  "Altered consciousness or seizures",
+  "Chest pain with new ST‑elevation",
+  "Rapidly worsening dyspnea with frothy sputum"
+ ],
+ "faq": [
+  {
+   "q": "Why is cardiogenic shock the leading cause of death after MI?",
+   "a": "Because the infarcted myocardium cannot generate enough pressure, leading to rapid organ hypoperfusion and fatal arrhythmias."
+  },
+  {
+   "q": "Can fluids improve cardiogenic shock?",
+   "a": "Only if there is true hypovolemia; excess fluids raise preload and worsen pulmonary edema."
+  },
+  {
+   "q": "When is mechanical circulatory support indicated?",
+   "a": "When adequate MAP cannot be achieved with inotropes/vasopressors or when shock persists despite optimal medical therapy."
+  }
+ ],
+ "exam": [
+  "Describe the hemodynamic profile of cardiogenic shock and how it differs from septic shock.",
+  "List the first‑line pharmacologic agents for cardiogenic shock and explain the rationale for each.",
+  "Explain the timeline and pathophysiology of mechanical complications after an acute anterior MI."
+ ],
+ "related": [
+  "Acute myocardial infarction",
+  "Heart failure",
+  "Ventricular arrhythmias",
+  "Mechanical complications of MI",
+  "Intra‑aortic balloon pump",
+  "Septic shock",
+  "Obstructive shock"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

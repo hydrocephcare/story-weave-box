@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Epilepsy is a chronic brain disorder causing recurrent, unprovoked seizures due to abnormal neuronal firing. Diagnosis relies on clinical history and EEG, while treatment aims to prevent seizures and improve quality of life.",
+ "aka": [
+  "Seizure disorder",
+  "Epileptic seizures"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Epilepsy is defined as two or more unprovoked seizures >24 h apart, or one seizure with a high risk of recurrence. Diagnosis requires a detailed history, witness accounts, and EEG showing epileptiform activity.",
+   "b": [
+    "Two unprovoked seizures >24 h apart",
+    "One seizure + EEG spikes or structural lesion",
+    "Exclusion of acute provoked causes"
+   ],
+   "t": [
+    {
+     "a": "EEG",
+     "b": "Does the patient have epileptiform discharges? Presence supports epilepsy; normal EEG does not exclude it."
+    },
+    {
+     "a": "Neuroimaging (CT/MRI)",
+     "b": "Is there a structural lesion? Identifies focal causes (e.g., tumor, stroke) and guides treatment."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is classified by seizure frequency, type, and impact on daily life. The ILAE 2017 classification separates focal, generalized, and unknown onset seizures.",
+   "b": [
+    "Mild: rare, brief seizures, no injury",
+    "Moderate: frequent seizures, some impairment",
+    "Severe: daily seizures, status epilepticus risk"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are grouped as genetic, structural, metabolic, immune, and infectious. In low‑resource settings, infections are common triggers.",
+   "b": [
+    "Genetic channelopathies (e.g., SCN1A)",
+    "Structural lesions (stroke, trauma, tumor)",
+    "Neurocysticercosis, cerebral malaria, HIV encephalopathy",
+    "Metabolic disturbances (hypoglycaemia, electrolyte imbalance)",
+    "Autoimmune encephalitis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may report sudden loss of awareness, automatisms, tonic‑clonic movements, or sensory phenomena. Witnesses often describe a post‑ictal confusion or fatigue.",
+   "b": [
+    "Focal onset with impaired awareness (automatisms, aura)",
+    "Generalized tonic‑clonic seizures",
+    "Absence seizures (brief staring)",
+    "Post‑ictal headache, confusion"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select investigations answer specific clinical questions; when unavailable, rely on history and bedside observation.",
+   "t": [
+    {
+     "a": "EEG",
+     "b": "Is there epileptiform activity? Positive spikes confirm diagnosis; normal does not rule out epilepsy."
+    },
+    {
+     "a": "MRI brain",
+     "b": "Is there a structural lesion? Detects focal causes; if unavailable, CT can screen for major lesions."
+    },
+    {
+     "a": "Serum electrolytes, glucose",
+     "b": "Are metabolic triggers present? Abnormalities may explain seizures and need correction."
+    },
+    {
+     "a": "HIV, TB screening",
+     "b": "Is an infection contributing? Positive tests guide antimicrobial therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that suggest life‑threatening conditions or need urgent care.",
+   "b": [
+    "Status epilepticus (>5 min continuous seizure)",
+    "New focal neurological deficit",
+    "Severe head trauma preceding seizure",
+    "Rapidly progressive cognitive decline"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause, then start appropriate antiseizure medication (ASM). Choose drugs based on seizure type, comorbidities, and resource availability.",
+   "b": [
+    "Focal seizures: carbamazepine, levetiracetam, or valproate (if not contraindicated)",
+    "Generalized seizures: valproate, ethosuximide (absence), or lamotrigine",
+    "Avoid enzyme‑inducing ASMs in women of child‑bearing age",
+    "Monitor for rash, hepatic toxicity, and blood counts"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review of seizure control, medication side effects, and lifestyle factors reduces recurrence. Education on adherence, sleep hygiene, and trigger avoidance is essential.",
+   "b": [
+    "Clinic review every 3–6 months",
+    "Counsel on alcohol, sleep deprivation, flashing lights",
+    "Vaccinate against neurocysticercosis, malaria prophylaxis where relevant"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that can mimic seizures must be considered.",
+   "b": [
+    "Syncope with convulsive movements",
+    "Psychogenic non‑epileptic seizures",
+    "Migraine aura",
+    "Transient ischemic attack"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be falsely reassuring or alarming.",
+   "b": [
+    "Normal EEG does not exclude epilepsy",
+    "Interictal MRI may miss small cortical dysplasias",
+    "Serum drug levels can be normal in non‑adherence"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Any seizure lasting >5 minutes (status epilepticus)",
+  "First seizure with head injury, fever, or focal deficit",
+  "Sudden change in seizure pattern or new neurological signs"
+ ],
+ "faq": [
+  {
+   "q": "Can a single seizure be epilepsy?",
+   "a": "Only if EEG shows epileptiform activity or a high‑risk lesion is present; otherwise it is a provoked seizure."
+  },
+  {
+   "q": "Why avoid enzyme‑inducing ASMs in women of child‑bearing age?",
+   "a": "They reduce efficacy of hormonal contraception and increase risk of fetal malformations."
+  },
+  {
+   "q": "What is status epilepticus?",
+   "a": "A seizure lasting >5 minutes or recurrent seizures without full recovery, requiring emergency treatment."
+  }
+ ],
+ "exam": [
+  "Describe the ILAE classification of seizure types and give an example of a focal onset seizure.",
+  "Explain how you would investigate a new‑onset seizure in a low‑resource setting.",
+  "Outline first‑line management for a patient with generalized tonic‑clonic seizures."
+ ],
+ "related": [
+  "Status epilepticus",
+  "Neurocysticercosis",
+  "Antiepileptic drug monitoring",
+  "Psychogenic non‑epileptic seizures",
+  "Sudden unexpected death in epilepsy (SUDEP)",
+  "Epilepsy surgery"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

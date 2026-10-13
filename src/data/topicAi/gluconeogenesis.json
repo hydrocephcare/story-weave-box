@@ -1,0 +1,130 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Gluconeogenesis creates glucose from non‑carbohydrate precursors, crucial during fasting or stress. It shares most steps with glycolysis but uses distinct enzymes at key regulatory points.",
+ "aka": [
+  "hepatic glucose output"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The liver (and to a lesser extent kidney) synthesises glucose when dietary supply is low, using lactate, glycerol, alanine and other substrates.",
+   "b": [
+    "Provides blood glucose for brain and red cells during prolonged fasting.",
+    "Requires ATP and NAD⁺, making it energy‑intensive."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Seven of the ten steps are identical to glycolysis; three are bypass reactions catalysed by fructose‑1,6‑bisphosphatase, phosphoenolpyruvate carboxykinase (PEPCK) and glucose‑6‑phosphatase.",
+   "b": [
+    "Lactate → pyruvate (LDH) → oxaloacetate (pyruvate carboxylase) → PEP (PEPCK).",
+    "Alanine → pyruvate (ALT) enters same route.",
+    "Glycerol → DHAP (glycerol kinase, GPDH) enters glycolytic middle."
+   ],
+   "t": [
+    {
+     "a": "Serum lactate",
+     "b": "Is lactate being used as a substrate? High lactate with low glucose suggests impaired gluconeogenesis."
+    },
+    {
+     "a": "Urine organic acids",
+     "b": "Detect accumulation of intermediates (e.g., pyruvate) that indicate enzyme block."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Hormones and energy status control the three bypass enzymes. Glucagon, cortisol and catecholamines stimulate; insulin suppresses.",
+   "b": [
+    "Fructose‑1,6‑bisphosphatase is inhibited by AMP and activated by citrate.",
+    "PEPCK transcription is up‑regulated by glucagon‑cAMP‑CREB pathway.",
+    "Alcohol raises NADH/NAD⁺, blocking conversion of lactate to pyruvate."
+   ],
+   "t": [
+    {
+     "a": "Serum cortisol",
+     "b": "Is cortisol excess driving gluconeogenesis? Elevated cortisol explains hyperglycaemia in Cushing's."
+    },
+    {
+     "a": "Blood NADH/NAD⁺ ratio (indirect via lactate/pyruvate)",
+     "b": "High ratio indicates alcohol‑induced inhibition of gluconeogenesis."
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Defects in key enzymes or overwhelming substrate depletion cause hypoglycaemia, especially in newborns or critically ill patients.",
+   "b": [
+    "Fructose‑1,6‑bisphosphatase deficiency → fasting hypoglycaemia, lactic acidosis.",
+    "Severe liver failure → loss of all gluconeogenic capacity.",
+    "Alcoholic binge → NADH excess blocks lactate utilisation."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding gluconeogenesis guides management of hypoglycaemia, diabetes, and critical illness.",
+   "b": [
+    "In sepsis, high cortisol and catecholamines drive gluconeogenesis, raising glucose and insulin resistance.",
+    "In Cushing's or pheochromocytoma, excess hormones increase glucose production, worsening diabetes.",
+    "In malnutrition, preserving gluconeogenic substrates (protein) is vital."
+   ],
+   "t": [
+    {
+     "a": "Serum glucose trend",
+     "b": "Rising glucose despite fasting suggests hormonal excess; falling glucose signals inadequate gluconeogenesis."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Low albumin, elevated transaminases indicate hepatic inability to perform gluconeogenesis."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points frequently tested in exams.",
+   "b": [
+    "Name the three enzymes unique to gluconeogenesis.",
+    "Explain why alcohol causes hypoglycaemia.",
+    "Differentiate regulation by insulin vs glucagon."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe fasting hypoglycaemia (<40 mg/dL) with seizures or loss of consciousness",
+  "Acute liver failure with rising ammonia and encephalopathy",
+  "Unexplained lactic acidosis in an alcoholic patient"
+ ],
+ "faq": [
+  {
+   "q": "Why does gluconeogenesis require more ATP than glycolysis?",
+   "a": "Two ATP are used to convert pyruvate to oxaloacetate and PEP, plus GTP for PEPCK, making it energetically costly."
+  },
+  {
+   "q": "Can the kidney perform gluconeogenesis?",
+   "a": "Yes, especially during prolonged fasting; renal cortex uses glutamine and lactate."
+  },
+  {
+   "q": "How does cortisol affect blood glucose?",
+   "a": "Cortisol up‑regulates PEPCK and other enzymes, increasing glucose output and causing insulin resistance."
+  }
+ ],
+ "exam": [
+  "Describe the three bypass steps of gluconeogenesis and why they are necessary.",
+  "A patient with chronic alcoholism presents with hypoglycaemia. Explain the metabolic block.",
+  "Compare the hormonal regulation of gluconeogenesis versus glycolysis."
+ ],
+ "related": [
+  "Glycolysis",
+  "Glycogenolysis",
+  "Glycogenesis",
+  "Lactate metabolism",
+  "Cortisol excess (Cushing's syndrome)",
+  "Pheochromocytoma",
+  "Alcoholic hypoglycaemia"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

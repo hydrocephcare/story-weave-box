@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The axilla is a key anatomical space that houses neurovascular bundles, lymphatics, and fat, acting as a conduit between the arm and thorax. Clinically, it is a hub for infection, trauma, and malignancy assessment.",
+ "aka": [
+  "armpit"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The axilla is the triangular space between the upper arm and the thorax, bounded by the clavicle, scapula, and humerus. It serves as a passage for nerves, vessels, and lymphatics, and contains fatty tissue that cushions these structures.",
+   "b": [
+    "Triangular shape",
+    "Contains fat, nerves, vessels, lymph nodes"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lies inferior to the clavicle, medial to the pectoralis major, and lateral to the latissimus dorsi. The axillary fossa is divided into anterior, middle, and posterior compartments by the axillary fascia.",
+   "b": [
+    "Anterior: pectoralis major, latissimus dorsi"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Medially, the pectoralis major; laterally, the latissimus dorsi; posteriorly, the subscapularis and teres major. The axillary vein and artery lie in the middle compartment, while the brachial plexus roots are in the posterior.",
+   "b": [
+    "Clavicle superiorly"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The axillary artery, a continuation of the subclavian, gives off the thoracoacromial, lateral thoracic, and subscapular arteries. The axillary vein drains into the subclavian.",
+   "b": [
+    "Axillary artery supplies upper limb"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound Doppler",
+     "b": "Assesses arterial flow; abnormal flow suggests thrombosis or aneurysm."
+    }
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The brachial plexus passes through the axilla, giving rise to the axillary, radial, median, and ulnar nerves. The thoracodorsal nerve supplies the latissimus dorsi.",
+   "b": [
+    "Axillary nerve injury causes deltoid weakness"
+   ],
+   "t": [
+    {
+     "a": "Nerve conduction study",
+     "b": "Detects conduction block in radial or axillary nerves."
+    }
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Provides a passage for neurovascular structures and lymphatics, and allows shoulder movement by accommodating the humeral head and scapular motion.",
+   "b": [
+    "Facilitates arm elevation"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Axillary lymphadenopathy indicates infection or malignancy; trauma can injure the axillary vessels or brachial plexus; infections like candidiasis thrive in moist axillary folds.",
+   "b": [
+    "Axillary lymph node enlargement"
+   ],
+   "t": [
+    {
+     "a": "Fine‑needle aspiration",
+     "b": "Differentiates reactive from malignant nodes."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Detects axillary lymphadenopathy secondary to lung cancer."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "On inspection, look for skin changes, swelling, or erythema. Palpate for lymph nodes and assess shoulder abduction for axillary nerve function.",
+   "b": [
+    "Check for axillary lymph nodes"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Axillary mass that grows rapidly or is hard and fixed",
+  "Severe pain with swelling suggesting abscess or vascular injury",
+  "Sudden loss of shoulder abduction indicating brachial plexus injury"
+ ],
+ "faq": [
+  {
+   "q": "What causes axillary candidiasis?",
+   "a": "Moist, warm skin folds with poor hygiene, especially in diabetics or immunocompromised patients."
+  },
+  {
+   "q": "How to differentiate axillary lymphadenitis from lymphoma?",
+   "a": "Reactive nodes are usually tender and fluctuate; lymphoma nodes are often firm, non‑tender, and may be fixed."
+  },
+  {
+   "q": "Why is the axillary vein important in central line placement?",
+   "a": "It is a common site for central venous access; injury can lead to massive bleeding or air embolism."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical boundaries of the axilla and the structures contained within.",
+  "Explain how axillary lymphadenopathy can be a sign of breast cancer.",
+  "Outline the management of a traumatic axillary artery injury in a low‑resource setting."
+ ],
+ "related": [
+  "Lymphatic system",
+  "Brachial plexus",
+  "Axillary lymph nodes",
+  "Breast cancer",
+  "Central venous access"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

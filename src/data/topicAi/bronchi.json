@@ -1,0 +1,114 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The bronchi are the main airways branching from the trachea into the lungs, delivering air to alveoli. Their structure and innervation influence cough, mucus clearance and susceptibility to infection.",
+ "aka": [
+  "bronchial tree"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Bronchi are the primary conduits for air from the trachea to the lungs, branching into smaller airways that end in alveoli. Their anatomy underpins respiratory function and disease.",
+   "b": [
+    "Main bronchi: right and left"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The trachea divides at the carina into the right and left main bronchi. The right main bronchus is shorter, wider, and more vertical, making it a common site for aspiration.",
+   "b": [
+    "Right bronchus: ~5 cm, 2.5 cm diameter"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The bronchi lie posterior to the trachea, anterior to the esophagus and vertebral bodies, and are surrounded by pulmonary arteries and veins.",
+   "b": [
+    "Right main bronchus passes behind the right main pulmonary artery"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Each bronchus receives arterial supply from the bronchial arteries (branches of the thoracic aorta) and venous drainage via bronchial veins into the azygos system.",
+   "b": [
+    "Bronchial arteries: 2–3 per lung"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sympathetic fibers from the cervical sympathetic chain and parasympathetic fibers from the vagus nerve innervate the bronchi, regulating bronchial tone and mucus secretion.",
+   "b": [
+    "Vagus nerve: parasympathetic control"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Bronchi conduct air, filter debris via mucociliary escalator, and regulate airflow through bronchoconstriction or dilation.",
+   "b": [
+    "Mucus glands secrete mucus for trapping particles"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Bronchial pathology includes bronchitis, bronchiectasis, and foreign body aspiration. Clinically, bronchial obstruction leads to wheeze, cough, and infection.",
+   "b": [
+    "Bronchiectasis: permanent dilatation, chronic cough"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows bronchial wall thickening and dilatation; confirms bronchiectasis"
+    },
+    {
+     "a": "CT scan",
+     "b": "Defines extent of bronchial dilation and mucus plugging; guides surgical planning"
+    },
+    {
+     "a": "Bronchoscopy",
+     "b": "Direct visualization of airway lesions, allows biopsy or removal of foreign bodies"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the right main bronchus is more vertical and wider, making it the common site for aspiration. In bronchiectasis, look for a ‘tram‑track’ sign on imaging.",
+   "b": [
+    "Right bronchus: 2.5 cm diameter, 5 cm length"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe haemoptysis",
+  "Sudden wheeze with hypoxia",
+  "Persistent high fever with productive cough"
+ ],
+ "faq": [
+  {
+   "q": "What causes bronchiectasis?",
+   "a": "Chronic infection, obstruction, or immune deficiency leading to permanent airway dilation."
+  },
+  {
+   "q": "How is bronchial obstruction diagnosed?",
+   "a": "Chest X‑ray, CT, and bronchoscopy reveal narrowed or blocked airways."
+  },
+  {
+   "q": "Why is the right bronchus more prone to aspiration?",
+   "a": "Its vertical orientation allows foreign material to travel more easily into the lung."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical differences between the right and left main bronchi and explain why the right is more susceptible to aspiration.",
+  "Explain the pathophysiology of bronchiectasis and list key imaging findings."
+ ],
+ "related": [
+  "Bronchial tree",
+  "Bronchitis",
+  "Bronchiectasis",
+  "Pulmonary embolism",
+  "Foreign body aspiration"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

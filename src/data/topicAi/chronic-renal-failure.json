@@ -1,0 +1,175 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Chronic renal failure is the gradual loss of kidney function over months to years, driven mainly by diabetes, hypertension, or glomerulonephritis. It presents with fatigue, edema, and metabolic derangements that worsen as GFR falls.",
+ "aka": [
+  "Chronic kidney disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Chronic renal failure (CRF) is defined by a GFR <60 mL/min/1.73 m² for ≥3 months or markers of kidney damage such as albuminuria. Diagnosis relies on eGFR, urine albumin, and imaging to rule out obstruction.",
+   "b": [
+    "eGFR <60 mL/min/1.73 m² for ≥3 months"
+   ],
+   "t": [
+    {
+     "a": "eGFR",
+     "b": "Low eGFR indicates reduced filtration; the lower the value, the more advanced the disease."
+    },
+    {
+     "a": "Urine albumin/creatinine ratio",
+     "b": "Elevated ratio shows glomerular leakage, a hallmark of CKD."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Normal size kidneys with no obstruction support a functional decline rather than an anatomical block."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "CKD is staged 1–5 by eGFR and albuminuria. Stage 5 (end‑stage) requires dialysis or transplant. Staging guides treatment intensity and monitoring frequency.",
+   "b": [
+    "Stage 1: eGFR ≥90 mL/min/1.73 m², albuminuria present",
+    "Stage 5: eGFR <15 mL/min/1.73 m², dialysis indicated"
+   ],
+   "t": [
+    {
+     "a": "KDIGO staging",
+     "b": "It determines prognosis and treatment thresholds."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The leading causes are diabetic nephropathy, hypertensive nephrosclerosis, and glomerulonephritis. In low‑resource settings, infections (HIV, TB, malaria), herbal nephrotoxins, and sickle cell disease also contribute.",
+   "b": [
+    "Diabetes mellitus",
+    "Hypertension",
+    "Glomerulonephritis"
+   ],
+   "t": [
+    {
+     "a": "HbA1c",
+     "b": "High HbA1c predicts progression of diabetic nephropathy."
+    },
+    {
+     "a": "Blood pressure",
+     "b": "Persistently high BP accelerates nephron loss."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Rising creatinine reflects worsening GFR."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Early CKD is often silent. As it progresses, patients develop fatigue, anorexia, edema, hypertension, and uremic symptoms such as nausea and pruritus. Children may show growth retardation.",
+   "b": [
+    "Fatigue and weakness",
+    "Edema, especially ankles",
+    "Hypertension"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "Hypertension is both a cause and consequence of CKD."
+    },
+    {
+     "a": "Serum potassium",
+     "b": "High potassium can cause cardiac arrhythmias."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key tests assess kidney function, damage, and complications. When resources are limited, focus on creatinine, urinalysis, and basic electrolytes.",
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Elevated creatinine indicates reduced GFR."
+    },
+    {
+     "a": "Urinalysis",
+     "b": "Proteinuria signals glomerular injury; hematuria suggests glomerulonephritis or obstruction."
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Hyperkalemia risks arrhythmia; hyperphosphatemia causes bone disease."
+    },
+    {
+     "a": "Serum bicarbonate",
+     "b": "Low bicarbonate reflects loss of acid excretion."
+    },
+    {
+     "a": "Urine albumin/creatinine ratio",
+     "b": "Positive ratio confirms kidney damage."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Normal size with no obstruction supports functional decline."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid decline in eGFR, uncontrolled hypertension, hyperkalemia, severe anemia, or signs of volume overload warrant urgent care. Complications include cardiovascular disease, bone disease, and electrolyte imbalance.",
+   "b": [
+    "Sudden eGFR drop",
+    "Severe hyperkalemia",
+    "Uncontrolled hypertension"
+   ],
+   "t": [
+    {
+     "a": "Serum potassium",
+     "b": "Potassium >6.5 mmol/L requires immediate treatment."
+    },
+    {
+     "a": "Blood pressure",
+     "b": "Such levels risk stroke or heart failure."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of kidney function",
+  "Severe hyperkalemia",
+  "Uncontrolled hypertension",
+  "Signs of volume overload (pulmonary edema)"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of CKD worldwide?",
+   "a": "Diabetes mellitus is the leading cause, followed by hypertension."
+  },
+  {
+   "q": "Can CKD be reversed?",
+   "a": "Early stages may be slowed or stabilized with treatment, but irreversible loss of nephrons cannot be reversed."
+  },
+  {
+   "q": "Why does CKD cause anemia?",
+   "a": "Reduced erythropoietin production by damaged kidneys lowers red cell production."
+  }
+ ],
+ "exam": [
+  "Explain how diabetic nephropathy leads to proteinuria and progressive loss of filtration capacity.",
+  "Describe the KDIGO staging system and its clinical implications for treatment decisions.",
+  "Outline the management steps for a patient with stage 4 CKD and hyperphosphatemia in a low‑resource setting."
+ ],
+ "related": [
+  "Diabetic nephropathy",
+  "Hypertensive nephrosclerosis",
+  "Glomerulonephritis",
+  "Acute kidney injury",
+  "Dialysis",
+  "Anemia of chronic disease",
+  "Mineral bone disorder",
+  "Electrolyte disturbances"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

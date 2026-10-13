@@ -1,0 +1,150 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Alzheimer disease is the commonest cause of progressive dementia in older adults, characterized by memory loss, executive dysfunction and neuropsychiatric changes. Diagnosis relies on clinical criteria supported by imaging and biomarkers.",
+ "aka": [
+  "Alzheimer's dementia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A neurodegenerative disorder causing gradual decline in cognition and function, diagnosed by the NIA‑AA criteria: insidious onset, progressive course, and impairment in at least two cognitive domains, with biomarkers (CSF Aβ42, tau, PET) supporting AD pathology.",
+   "b": [
+    "Clinical criteria focus on history, exam, and functional impact",
+    "Biomarkers increase diagnostic certainty but are not mandatory"
+   ],
+   "t": [
+    {
+     "a": "Mini‑Mental State Examination (MMSE)",
+     "b": "How severe is the cognitive impairment? Scores <24 suggest moderate‑to‑severe dementia."
+    },
+    {
+     "a": "MRI brain",
+     "b": "Is there cortical atrophy or ventricular enlargement? Diffuse medial temporal lobe atrophy supports AD."
+    },
+    {
+     "a": "CSF Aβ42/tau ratio",
+     "b": "Does the biomarker profile indicate AD pathology? Low Aβ42 and high tau are typical; if unavailable, rely on clinical criteria."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Clinical Dementia Rating (CDR) and Global Deterioration Scale (GDS) are used to stage disease from mild (CDR 1) to severe (CDR 3).",
+   "b": [
+    "Stage guides treatment intensity and care planning",
+    "Mild stage: preserved ADLs, early memory loss"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are sporadic, linked to age, APOE ε4, and vascular risk factors. Familial early‑onset disease (<65 y) is due to APP, PSEN1/2 mutations.",
+   "b": [
+    "Sporadic AD ≈ 90 % of cases",
+    "Early‑onset AD ≈ 5‑10 % and autosomal dominant"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Gradual memory loss for recent events, difficulty finding words, disorientation, impaired judgment, and later neuropsychiatric symptoms (depression, agitation).",
+   "b": [
+    "Early episodic memory loss is the hallmark",
+    "Executive dysfunction appears as disease progresses"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Combine bedside cognition testing with imaging and, where possible, fluid biomarkers to confirm AD and exclude reversible causes.",
+   "b": [
+    "Rule out vitamin B12 deficiency, thyroid disease, depression",
+    "Consider HIV or neurosyphilis in younger patients"
+   ],
+   "t": [
+    {
+     "a": "Serum B12, TSH, RPR",
+     "b": "Are there reversible metabolic or infectious contributors? Abnormal results prompt specific treatment."
+    },
+    {
+     "a": "CT brain (if MRI unavailable)",
+     "b": "Is there significant atrophy or alternative pathology? CT can show ventricular enlargement and rule out mass lesions."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid decline, new focal neurological signs, seizures, or severe neuropsychiatric agitation require urgent evaluation for alternative diagnoses or complications.",
+   "b": [
+    "Sudden worsening may indicate stroke, infection, or medication side‑effects",
+    "Aspiration pneumonia is a common cause of death"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying reversible factors, then use symptomatic disease‑modifying agents (acetylcholinesterase inhibitors, NMDA‑receptor antagonist) and non‑pharmacologic support.",
+   "b": [
+    "Donepezil, rivastigmine, galantamine improve cognition modestly",
+    "Memantine helps moderate‑to‑severe stages",
+    "Avoid anticholinergics and sedatives that worsen cognition"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review every 6‑12 months to monitor cognition, function, medication side‑effects, and caregiver burden. Lifestyle measures (exercise, Mediterranean diet, blood pressure control) lower risk.",
+   "b": [
+    "Vaccinate against influenza and pneumococcus to prevent pneumonia",
+    "Encourage social engagement to delay functional loss"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Vascular dementia, Lewy body dementia, frontotemporal dementia, normal‑pressure hydrocephalus, and depression can mimic AD.",
+   "b": [
+    "Vascular dementia shows stepwise decline and focal deficits",
+    "Lewy body dementia has visual hallucinations and parkinsonism"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal MMSE early in disease, normal MRI in very early AD, and low CSF tau in some patients can give false reassurance.",
+   "b": [
+    "Rely on longitudinal assessment, not a single test",
+    "Consider clinical context when biomarkers are borderline"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of cognition, new focal neurological signs, seizures, severe agitation, or inability to care for basic needs"
+ ],
+ "faq": [
+  {
+   "q": "Can Alzheimer disease be cured?",
+   "a": "No cure exists; treatment aims to slow decline and improve quality of life."
+  },
+  {
+   "q": "Is Alzheimer disease only a disease of old age?",
+   "a": "Most cases occur after 65 y, but early‑onset familial forms can appear before 50 y."
+  },
+  {
+   "q": "Why are acetylcholinesterase inhibitors used?",
+   "a": "They increase synaptic acetylcholine, modestly improving memory and daily functioning."
+  }
+ ],
+ "exam": [
+  "Describe the core clinical criteria for diagnosing Alzheimer disease.",
+  "Explain how the Clinical Dementia Rating scale stages disease severity.",
+  "List two pharmacologic agents used in Alzheimer disease and their rationale."
+ ],
+ "related": [
+  "Vascular dementia",
+  "Lewy body dementia",
+  "Frontotemporal dementia",
+  "Mild cognitive impairment",
+  "Neuroimaging in dementia",
+  "CSF biomarkers",
+  "APOE genetics"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

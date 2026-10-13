@@ -1,0 +1,158 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Chronic pancreatitis is a progressive inflammatory disease of the pancreas that leads to irreversible fibrosis, exocrine and endocrine insufficiency. It is most often caused by alcohol abuse but also by genetic, metabolic, infectious and iatrogenic factors.",
+ "aka": [
+  "Chronic Pancreatic Inflammation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Chronic pancreatitis is defined by persistent abdominal pain, pancreatic fibrosis on imaging, and evidence of exocrine or endocrine dysfunction. Diagnosis requires at least two of the following: characteristic pain, imaging evidence of fibrosis or ductal changes, and pancreatic function tests showing insufficiency.",
+   "b": [
+    "Pain >3 months, epigastric, radiating to back",
+    "CT/MRI shows calcifications, ductal dilatation",
+    "Low fecal elastase <200 µg/g"
+   ],
+   "t": [
+    {
+     "a": "Fecal elastase",
+     "b": "Measures exocrine function; <200 µg/g indicates insufficiency"
+    },
+    {
+     "a": "Serum amylase/lipase",
+     "b": "Normal or mildly elevated; persistently high suggests acute flare"
+    },
+    {
+     "a": "MRCP/CT",
+     "b": "Detects calcifications, ductal strictures, mass effect; confirms fibrosis"
+    },
+    {
+     "a": "Endoscopic ultrasound",
+     "b": "Sensitive for early parenchymal changes and cysts"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by the M-ANNHEIM system, which grades pain, exocrine/endocrine insufficiency, imaging findings, and complications. Stages I–IV guide management intensity.",
+   "b": [
+    "Stage I: mild pain, no insufficiency",
+    "Stage II: moderate pain, early insufficiency",
+    "Stage III: severe pain, significant insufficiency",
+    "Stage IV: complications like pseudocyst, ductal obstruction"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Alcohol abuse is the leading cause worldwide. Other important causes include hereditary mutations (PRSS1, SPINK1, CFTR), autoimmune pancreatitis, metabolic disorders, and infections common in low‑resource settings.",
+   "b": [
+    "Pancreatic duct obstruction by stones or tumors"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report dull, persistent epigastric pain that may worsen after meals. Weight loss, steatorrhoea, and diabetes are common. Pain may be episodic and can be triggered by alcohol or fatty foods.",
+   "b": [
+    "Abdominal distension from pseudocysts"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm fibrosis, assess function, and rule out mimics. In low‑resource settings, basic labs and ultrasound are useful when advanced imaging is unavailable.",
+   "b": [
+    "HbA1c – endocrine assessment"
+   ],
+   "t": [
+    {
+     "a": "Fecal elastase",
+     "b": "Detects exocrine insufficiency; <200 µg/g indicates deficiency"
+    },
+    {
+     "a": "Serum amylase/lipase",
+     "b": "Normal or mildly elevated; persistently high suggests acute flare"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Shows ductal dilatation, stones; limited in detecting fibrosis"
+    },
+    {
+     "a": "CT/MRI",
+     "b": "Best for fibrosis, calcifications, ductal strictures"
+    },
+    {
+     "a": "Serum IgG4",
+     "b": "Elevated in autoimmune pancreatitis; supports diagnosis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening. Red flags include sudden severe pain, jaundice, vomiting, or unexplained weight loss. Complications include pseudocysts, ductal obstruction, diabetes, and pancreatic cancer.",
+   "b": [
+    "Pancreatic cancer – consider in older patients with mass"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause, controlling pain, replacing enzymes, and monitoring for complications. Alcohol cessation is paramount. Pain is managed with NSAIDs, opiates, or nerve blocks. Enzyme replacement improves nutrition.",
+   "b": [
+    "Monitor for drug interactions with enzyme therapy"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Patients require regular follow‑up to assess pain, nutrition, glycaemic control, and imaging. Prevention focuses on alcohol avoidance, early detection of enzyme deficiency, and vaccination against hepatitis.",
+   "b": [
+    "Encourage low‑fat diet"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Chronic pancreatitis can mimic gallstone pancreatitis, peptic ulcer disease, and pancreatic cancer. Distinguishing features include chronic pain pattern, imaging findings, and enzyme levels.",
+   "b": [
+    "Pancreatic cancer – weight loss, mass on imaging"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low fecal elastase can be falsely normal in early disease; serum amylase/lipase may remain normal despite fibrosis. Imaging may miss early ductal changes; ultrasound is operator dependent.",
+   "b": [
+    "CT/MRI – may miss small cysts"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain, jaundice, vomiting, unexplained weight loss, new‑onset diabetes, or signs of infection"
+ ],
+ "faq": [
+  {
+   "q": "Can chronic pancreatitis be cured?",
+   "a": "There is no cure; treatment focuses on stopping alcohol, managing pain, replacing enzymes, and monitoring complications."
+  },
+  {
+   "q": "Why do patients develop diabetes in chronic pancreatitis?",
+   "a": "Fibrosis destroys insulin‑producing islet cells, leading to insulin deficiency."
+  },
+  {
+   "q": "What is the role of enzyme replacement?",
+   "a": "It restores digestion of fats and proteins, reducing steatorrhoea and improving weight gain."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic criteria for chronic pancreatitis and why two of the listed tests are essential.",
+  "Describe the M‑ANNHEIM staging system and how it influences management decisions.",
+  "Outline the first‑line management for a patient with alcohol‑related chronic pancreatitis presenting with steatorrhoea and mild pain."
+ ],
+ "related": [
+  "Pancreatic exocrine insufficiency",
+  "Autoimmune pancreatitis",
+  "Pancreatic cancer",
+  "Alcoholic liver disease",
+  "Diabetes mellitus type 2"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

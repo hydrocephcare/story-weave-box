@@ -1,0 +1,137 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The pharynx is a muscular tube linking the nasal and oral cavities to the larynx and esophagus. It serves airway protection, speech, and swallowing. Understanding its anatomy guides diagnosis of common infections and airway emergencies.",
+ "aka": [
+  "throat",
+  "pharyngeal cavity"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The pharynx is divided into three parts—nasopharynx, oropharynx, and laryngopharynx—each with distinct mucosal lining and functions.",
+   "b": [
+    "Nasopharynx: airway only, contains adenoids.",
+    "Oropharynx: visible on oral exam, contains tonsils.",
+    "Laryngopharynx: common pathway for food and air."
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lies posterior to the nasal cavity and oral cavity, anterior to the cervical vertebral column, and is bounded laterally by the carotid sheaths.",
+   "b": [
+    "Muscle layers: superior, middle, and inferior constrictors.",
+    "Mucosa: respiratory epithelium in nasopharynx, stratified squamous in oropharynx.",
+    "Fascia: pretracheal (visceral) fascia surrounds it."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Important neighboring structures include the eustachian tube, palatine tonsils, lingual tonsil, larynx, and cervical vertebrae.",
+   "b": [
+    "Eustachian tube opens in the nasopharynx.",
+    "Tonsils lie in the lateral walls of the oropharynx.",
+    "Larynx begins at the level of C3‑C4."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial blood comes from branches of the external carotid artery, while venous drainage follows the pharyngeal plexus to the internal jugular vein.",
+   "b": [
+    "Nasopharynx: ascending pharyngeal artery.",
+    "Oropharynx: facial, lingual, and ascending pharyngeal arteries.",
+    "Laryngopharynx: superior thyroid artery."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory innervation is via CN V (V2), IX, and X; motor control of the constrictor muscles is supplied by the vagus (CN X) via the nucleus ambiguus.",
+   "b": [
+    "Taste receptors on soft palate and posterior tongue use IX.",
+    "Pharyngeal sensation: IX and X.",
+    "Motor: CN X (branchial motor)."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The pharynx directs air to the larynx and food to the esophagus, participates in speech resonance, and contributes to immune defense via Waldeyer’s ring.",
+   "b": [
+    "Swallowing: coordinated contraction of constrictors.",
+    "Ventilation: airway protection by epiglottic closure.",
+    "Immunity: tonsils filter pathogens."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Infections, obstruction, and trauma of the pharynx can compromise breathing and nutrition. Recognising patterns helps differentiate viral, bacterial, and tropical causes.",
+   "b": [
+    "Acute tonsillopharyngitis: grayish exudate, fever, sore throat.",
+    "Peritonsillar abscess: uvular deviation, muffled voice.",
+    "Epiglottitis: drooling, tripod position, rapid airway loss.",
+    "Tuberculous pharyngitis: chronic ulcer, weight loss.",
+    "HIV‑related opportunistic infections: candidiasis, ulcerative lesions."
+   ],
+   "t": [
+    {
+     "a": "Rapid antigen detection test (RADT) for Group A Strep",
+     "b": "Confirms bacterial cause of sore throat; positive result guides antibiotic therapy."
+    },
+    {
+     "a": "Throat culture",
+     "b": "Gold standard for bacterial identification; essential when RADT is negative but suspicion remains."
+    },
+    {
+     "a": "Lateral neck X‑ray",
+     "b": "Detects epiglottic swelling; if unavailable, assess clinically for stridor and drooling and arrange urgent airway support."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to examine: inspect for exudate, assess uvula position, palpate cervical nodes, and evaluate airway patency.",
+   "b": [
+    "Grayish-white pseudomembrane suggests diphtheria; isolate immediately.",
+    "Tender anterior cervical nodes point to bacterial pharyngitis.",
+    "Absence of gag reflex indicates cranial nerve IX/X involvement."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Airway obstruction with stridor or inability to swallow",
+  "Rapidly progressing neck swelling or peritonsillar abscess",
+  "High fever with toxic appearance suggesting epiglottitis or diphtheria"
+ ],
+ "faq": [
+  {
+   "q": "Why is the pharynx important in swallowing?",
+   "a": "Coordinated contraction of its constrictor muscles pushes the bolus from the mouth into the esophagus while protecting the airway."
+  },
+  {
+   "q": "What distinguishes viral from bacterial pharyngitis?",
+   "a": "Viral infections often have cough, rhinorrhea, and no exudate; bacterial (Group A Strep) shows tonsillar exudate, fever, and tender anterior nodes."
+  },
+  {
+   "q": "How does HIV affect the pharynx?",
+   "a": "It predisposes to opportunistic infections like candidiasis and ulcerative lesions, which may mimic common bacterial pharyngitis."
+  }
+ ],
+ "exam": [
+  "Describe the three anatomical divisions of the pharynx and their clinical significance.",
+  "Explain how you would differentiate acute bacterial tonsillopharyngitis from viral pharyngitis on exam and with bedside tests.",
+  "Outline the emergency management steps for a patient with suspected epiglottitis."
+ ],
+ "related": [
+  "Tonsils (Waldeyer’s ring)",
+  "Larynx",
+  "Esophagus",
+  "Eustachian tube",
+  "Epiglottitis",
+  "Peritonsillar abscess",
+  "Diphtheria",
+  "Group A Streptococcal infection"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

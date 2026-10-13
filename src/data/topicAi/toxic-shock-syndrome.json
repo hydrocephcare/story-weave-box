@@ -1,0 +1,128 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Toxic shock syndrome (TSS) is a rapid, toxin‑mediated systemic illness caused by superantigens from Staphylococcus aureus or Streptococcus pyogenes. Massive T‑cell activation leads to cytokine storm, hypotension, rash and multi‑organ failure.",
+ "aka": [
+  "Staphylococcal toxic shock",
+  "Streptococcal toxic shock"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "TSS is a medical emergency where bacterial superantigens trigger uncontrolled immune activation, causing fever, shock, rash and organ dysfunction within hours.",
+   "b": [
+    "Incidence peaks in menstruating women using high‑absorbency tampons and in postoperative wound infections.",
+    "Mortality can exceed 30 % without prompt treatment."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Most cases involve Staphylococcus aureus producing TSST‑1; Streptococcus pyogenes can cause a similar syndrome via streptococcal pyrogenic exotoxins.",
+   "b": [
+    "Gram‑positive cocci in clusters (S. aureus) or chains (S. pyogenes).",
+    "Superantigens bind directly to MHC‑II and the Vβ region of T‑cells, bypassing antigen specificity."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "The bacteria colonise skin, nares or mucosa; toxin production occurs when they proliferate in a protected niche such as a tampon, surgical wound or necrotic tissue.",
+   "b": [
+    "No person‑to‑person spread of toxin; infection spreads by direct contact with colonised skin or contaminated devices.",
+    "Low‑resource settings: poor wound hygiene, prolonged catheter use, traditional herbal dressings."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "TSS presents with sudden high fever, diffuse erythematous rash (including palms/soles), hypotension, desquamation, and rapid organ failure (renal, hepatic, pulmonary).",
+   "b": [
+    "Diagnostic criteria (CDC): fever ≥ 38.9 °C, rash, desquamation, hypotension, and ≥ 3 organ‑system involvement.",
+    "Staphylococcal TSS often follows tampon or postoperative wound; streptococcal TSS follows necrotising fasciitis or severe cellulitis."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion drives work‑up; laboratory tests confirm organ involvement and identify the pathogen when possible.",
+   "b": [
+    "Blood cultures positive in < 30 % of cases; negative cultures do not exclude TSS.",
+    "Elevated liver enzymes, creatinine, and creatine kinase reflect organ injury."
+   ],
+   "t": [
+    {
+     "a": "Blood culture",
+     "b": "Is a bacterial bloodstream infection present? Positive culture supports infection; negative does not rule out toxin‑mediated TSS."
+    },
+    {
+     "a": "CBC with differential",
+     "b": "Is there leukocytosis or left shift? High WBC supports systemic inflammation; low WBC may suggest overwhelming sepsis."
+    },
+    {
+     "a": "Serum creatinine & BUN",
+     "b": "Is renal function impaired? Rising values indicate acute kidney injury, a key organ criterion."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Are transaminases elevated? Confirms hepatic involvement, part of the organ‑system count."
+    },
+    {
+     "a": "Coagulation profile (PT/INR, fibrinogen)",
+     "b": "Is there coagulopathy? Low fibrinogen or prolonged PT suggests consumptive coagulopathy, worsening prognosis."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management combines rapid toxin‑source control, empiric antibiotics, and aggressive supportive care.",
+   "b": [
+    "Remove tampon, drain abscess, or replace contaminated catheter immediately.",
+    "IV clindamycin suppresses toxin synthesis; combine with a β‑lactam (e.g., oxacillin) for bacterial kill.",
+    "Fluid resuscitation with crystalloids to maintain MAP > 65 mmHg; vasopressors if refractory.",
+    "Monitor urine output, liver enzymes, and coagulation; treat organ failure per ICU protocols."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and clinical reasoning.",
+   "b": [
+    "TSS is a toxin‑mediated disease – antibiotics alone are insufficient without source control.",
+    "Clindamycin is essential because it blocks protein synthesis and toxin production.",
+    "Desquamation 1–2 weeks after rash is a classic clue distinguishing TSS from other rashes."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden fever with hypotension, rash, and rapid organ dysfunction",
+  "Altered mental status or oliguria",
+  "Progressive skin desquamation or severe abdominal pain"
+ ],
+ "faq": [
+  {
+   "q": "Can a negative blood culture rule out TSS?",
+   "a": "No; toxin production can occur without bacteremia, so clinical criteria are paramount."
+  },
+  {
+   "q": "Why is clindamycin preferred over other antibiotics?",
+   "a": "It inhibits bacterial protein synthesis, reducing superantigen production, unlike most β‑lactams."
+  },
+  {
+   "q": "Is TSS only related to tampon use?",
+   "a": "No; non‑menstrual sources include surgical wounds, burns, and necrotising infections."
+  }
+ ],
+ "exam": [
+  "List the CDC diagnostic criteria for toxic shock syndrome and explain why each organ system is included.",
+  "Describe the mechanism by which superantigens cause massive cytokine release.",
+  "Outline the immediate management steps for a patient with suspected TSS, including antimicrobial choice."
+ ],
+ "related": [
+  "Staphylococcal scalded skin syndrome",
+  "Necrotising fasciitis",
+  "Septic shock",
+  "Streptococcal toxic shock syndrome",
+  "Superantigen biology",
+  "Tampon‑associated infections"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

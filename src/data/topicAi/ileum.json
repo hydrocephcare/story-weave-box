@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The ileum is the distal part of the small intestine, crucial for bile acid reabsorption and immune surveillance. Clinicians must recognize its role in malabsorption, Crohn’s disease, and surgical resections. Understanding its relations helps avoid iatrogenic injury.",
+ "aka": [
+  "Terminal ileum"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The ileum is the final segment of the small intestine, extending from the jejunoileal junction to the ileocecal valve. It is a key site for nutrient absorption and immune function.",
+   "b": [
+    "Length ~2.5 m",
+    "Contains Peyer’s patches",
+    "Rich lymphoid tissue"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It begins at the jejunoileal junction and ends at the ileocecal valve. The mucosa has villi and microvilli, and the submucosa contains lymphoid aggregates.",
+   "b": [
+    "Villi taller than jejunum",
+    "Microvilli dense"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Adjacent structures include the cecum, appendix, and mesenteric vessels. The ileocecal valve separates it from the colon.",
+   "b": [
+    "Cecum anterior",
+    "Mesenteric artery/vein",
+    "Appendix in right lower quadrant"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Supplied by the ileocolic artery (branch of the superior mesenteric artery) and drained by the ileocolic vein.",
+   "b": [
+    "Artery: ileocolic"
+   ],
+   "t": [
+    {
+     "a": "Mesenteric Doppler",
+     "b": "Assesses blood flow; low flow suggests ischemia"
+    }
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Parasympathetic via vagus and pelvic splanchnic nerves; sympathetic via mesenteric plexus.",
+   "b": [
+    "Vagus for proximal ileum"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Absorbs bile acids, vitamin B12, and remaining nutrients. It also hosts immune cells that sample luminal antigens.",
+   "b": [
+    "Bile acid reabsorption"
+   ],
+   "t": [
+    {
+     "a": "Serum bile acids",
+     "b": "Elevated if ileal dysfunction"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Common issues include Crohn’s disease, ischemia, and surgical resections. Complications can lead to malabsorption and strictures.",
+   "b": [
+    "Crohn’s disease: transmural inflammation"
+   ],
+   "t": [
+    {
+     "a": "CRP",
+     "b": "Elevated in active inflammation"
+    },
+    {
+     "a": "Serum IgA",
+     "b": "Elevated in celiac disease"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the ileal brake: fat stimulates PYY release, slowing gastric emptying. In surgery, avoid damaging the ileocecal valve.",
+   "b": [
+    "Ileal brake mechanism"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with vomiting, signs of obstruction, or bloody diarrhea",
+  "Rapid weight loss with malabsorption symptoms"
+ ],
+ "faq": [
+  {
+   "q": "What causes bile acid malabsorption?",
+   "a": "Loss or dysfunction of ileal transporters, often due to Crohn’s disease or resection."
+  },
+  {
+   "q": "How is Crohn’s disease diagnosed in the ileum?",
+   "a": "Endoscopy with biopsy showing transmural inflammation and granulomas; imaging shows strictures."
+  },
+  {
+   "q": "Why is the ileum important for vitamin B12 absorption?",
+   "a": "Intrinsic factor–B12 complex is absorbed in the terminal ileum via cubilin receptors."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of bile acid malabsorption after ileal resection.",
+  "Describe the ileal brake mechanism and its clinical significance.",
+  "Outline the diagnostic workup for suspected ileal Crohn’s disease."
+ ],
+ "related": [
+  "Crohn’s disease",
+  "Bile acid malabsorption",
+  "Ileocecal valve",
+  "Peyer’s patches"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

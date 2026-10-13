@@ -1,0 +1,103 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Kaposi sarcoma is a vascular tumour driven by HHV‑8, most common in HIV‑positive patients. It presents as purple skin lesions that can spread to mucosa and organs. Early ART and local therapy control disease.",
+ "aka": [
+  "Kaposi's sarcoma",
+  "AIDS‑associated KS"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Kaposi sarcoma is a low‑grade vascular tumour caused by human herpesvirus 8 (HHV‑8). Diagnosis is clinical, confirmed by biopsy showing spindle‑cell proliferation and immunohistochemistry for HHV‑8 LANA‑1.",
+   "b": [
+    "Purple or violaceous plaques, nodules, or ulcerated lesions on skin or mucosa"
+   ],
+   "t": [
+    {
+     "a": "Skin biopsy",
+     "b": "Shows spindle cells, vascular channels, and HHV‑8 LANA‑1 positivity – confirms KS"
+    },
+    {
+     "a": "Serum HIV test",
+     "b": "Identifies immunosuppression; HIV positivity is a key risk factor for KS"
+    },
+    {
+     "a": "CD4 count",
+     "b": "Low CD4 (<200) correlates with higher KS risk and severity"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The AIDS‑associated KS is staged by the AIDS‑KS staging system: T (tumor extent), S (systemic illness), and L (lymph node involvement).",
+   "b": [
+    "T0: limited skin only; T1: visceral or extensive skin disease"
+   ],
+   "t": [
+    {
+     "a": "Imaging (CT/MRI)",
+     "b": "Detects visceral involvement; absence of lesions suggests T0"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "HHV‑8 infection is necessary; immunosuppression, especially HIV, allows viral reactivation and endothelial proliferation.",
+   "b": [
+    "HHV‑8 infection",
+    "HIV‑related immunosuppression",
+    "Other immunosuppressive states (organ transplant, steroids)"
+   ],
+   "t": [
+    {
+     "a": "HHV‑8 serology",
+     "b": "Positive indicates exposure; not diagnostic alone"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop violaceous patches or nodules on skin, often on lower limbs. Oral mucosa, genitalia, and visceral organs may be involved, causing pain or dysfunction.",
+   "b": [
+    "Visceral: cough, dyspnea, abdominal pain"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden haemorrhage from lesions",
+  "Rapidly enlarging nodules",
+  "New respiratory or abdominal symptoms",
+  "Severe pain or ulceration"
+ ],
+ "faq": [
+  {
+   "q": "Is KS always linked to HIV?",
+   "a": "No, KS can occur in immunosuppressed transplant patients or rarely in immunocompetent people, but HIV is the most common trigger."
+  },
+  {
+   "q": "Can KS be cured?",
+   "a": "Complete cure is rare; control is achieved with ART and local or systemic therapy, but lesions may recur if immunosuppression persists."
+  },
+  {
+   "q": "Does ART alone treat KS?",
+   "a": "ART reduces viral load and immune dysfunction, often shrinking lesions, but many patients need additional local or systemic therapy."
+  }
+ ],
+ "exam": [
+  "Explain how HHV‑8 infection leads to endothelial proliferation in KS.",
+  "Describe the AIDS‑KS staging system and its clinical implications.",
+  "Outline the first‑line treatment strategy for a patient with limited skin KS and HIV infection."
+ ],
+ "related": [
+  "Human herpesvirus 8",
+  "AIDS‑defining illnesses",
+  "Immunosuppression and cancer",
+  "Vascular tumours",
+  "Antiretroviral therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,123 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Precursor lesions are abnormal cells that may progress to cancer if untreated. Recognising them early guides surveillance and treatment, especially in low‑resource settings where definitive therapy may be limited.",
+ "aka": [
+  "Dysplasia",
+  "Pre‑invasive lesions"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Precursor lesions are abnormal epithelial or glandular cells confined to the epithelium, showing atypia but no invasion. Diagnosis relies on histology and grading.",
+   "b": [
+    "CIN: cervical intraepithelial neoplasia; CIS: carcinoma in situ; PIN: prostatic intraepithelial neoplasia"
+   ],
+   "t": [
+    {
+     "a": "Histopathology",
+     "b": "Atypical cells with nuclear enlargement, hyperchromasia, increased mitoses, but no basement‑membrane breach."
+    },
+    {
+     "a": "HPV DNA testing",
+     "b": "Positive in most CIN, some esophageal and penile lesions."
+    },
+    {
+     "a": "Immunohistochemistry (p16, Ki‑67)",
+     "b": "Strong p16 and Ki‑67 indicate high‑grade dysplasia."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by depth of epithelial involvement and cytologic atypia. Staging informs risk of progression and surveillance intervals.",
+   "b": [
+    "CIN 1: mild dysplasia; CIN 2: moderate; CIN 3: severe, high‑grade. PIN 1–3 similarly graded."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Infections, chronic irritation, and genetic mutations drive precursor lesions. Tropical infections and environmental exposures are common in low‑resource settings.",
+   "b": [
+    "Human papillomavirus (HPV) – cervical, anal, penile.",
+    "Chronic hepatitis B/C – hepatocellular dysplasia.",
+    "Schistosoma haematobium – bladder dysplasia.",
+    "TB, HIV – immunosuppression increases dysplasia risk."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Often asymptomatic; when symptoms occur, they reflect the organ involved.",
+   "b": [
+    "Cervical dysplasia – abnormal Pap smear, post‑coital bleeding.",
+    "Bladder dysplasia – painless hematuria.",
+    "Esophageal dysplasia – dysphagia, weight loss."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests confirm diagnosis, grade severity, and guide management. Availability may be limited; clinical judgment is essential.",
+   "t": [
+    {
+     "a": "Pap smear",
+     "b": "ASC-US, LSIL, HSIL categories guide colposcopy."
+    },
+    {
+     "a": "Colposcopy with biopsy",
+     "b": "Histology defines CIN grade."
+    },
+    {
+     "a": "Urine cytology",
+     "b": "Atypical cells suggest CIS."
+    },
+    {
+     "a": "Endoscopy with biopsy",
+     "b": "High‑grade dysplasia warrants surveillance or resection."
+    },
+    {
+     "a": "Serology (HBV, HCV)",
+     "b": "Positive serology prompts liver surveillance."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid progression, invasion, or associated symptoms require urgent care.",
+   "b": [
+    "Sudden worsening of hematuria, dysphagia, or pain."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden increase in hematuria, dysphagia, or pain; rapid lesion growth; invasive features on imaging."
+ ],
+ "faq": [
+  {
+   "q": "Can precursor lesions become cancer?",
+   "a": "Yes, especially high‑grade lesions if untreated."
+  },
+  {
+   "q": "Do all dysplasias need removal?",
+   "a": "Low‑grade lesions may regress; high‑grade usually require treatment."
+  },
+  {
+   "q": "Is HPV vaccination effective for existing lesions?",
+   "a": "It prevents new infections but does not treat existing dysplasia."
+  }
+ ],
+ "exam": [
+  "Explain the grading system for cervical intraepithelial neoplasia and its clinical implications.",
+  "Describe the management pathway for a patient with high‑grade bladder carcinoma in situ in a low‑resource setting.",
+  "Discuss how chronic schistosomiasis can lead to bladder dysplasia and outline prevention strategies."
+ ],
+ "related": [
+  "Cervical cancer",
+  "Bladder cancer",
+  "Esophageal cancer",
+  "HPV infection"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

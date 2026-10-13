@@ -1,0 +1,145 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Measles is a highly contagious RNA virus causing fever, rash and immune suppression. Diagnosis relies on clinical triad and serology; management centers on supportive care and vitamin A. Prompt care prevents severe complications.",
+ "aka": [
+  "Rubeola",
+  "Measles virus"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Measles is an acute, highly contagious viral infection caused by a paramyxovirus. Classic presentation includes fever, cough, coryza, conjunctivitis, Koplik spots, and a maculopapular rash that starts at the hairline and spreads downward.",
+   "b": [
+    "Incubation 10–14 days; rash appears 3–5 days after fever onset"
+   ],
+   "t": [
+    {
+     "a": "Serum IgM to measles",
+     "b": "Detects recent infection; positive IgM confirms acute disease"
+    },
+    {
+     "a": "RT‑PCR of throat swab",
+     "b": "Confirms diagnosis when serology unavailable or in early disease"
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Leukopenia and thrombocytopenia are typical; normal counts may mislead"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the presence of complications and organ involvement. The WHO severity scale ranges from uncomplicated to severe with pneumonia, encephalitis or death.",
+   "b": [
+    "Severe: pneumonia, otitis media, encephalitis, or death"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Primary cause is measles virus infection. In low‑resource settings, secondary bacterial pneumonia, malnutrition, HIV co‑infection, and vitamin A deficiency increase severity.",
+   "b": [
+    "Vitamin A deficiency"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop a prodrome of fever, cough, coryza, conjunctivitis, followed by Koplik spots and a spreading rash. Complications include pneumonia, otitis media, diarrhea, and encephalitis.",
+   "b": [
+    "Rash: maculopapular, starts at hairline, spreads to trunk and limbs"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm diagnosis, assess severity, and rule out mimics. In resource‑limited settings, clinical criteria may suffice.",
+   "b": [
+    "Vitamin A level – assess deficiency"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Leukopenia indicates viral infection; normal counts may miss early disease"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Detects pneumonia; absence does not rule out early pulmonary involvement"
+    },
+    {
+     "a": "Serum IgM",
+     "b": "Positive confirms measles; negative early in course may be false negative"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent complications require immediate care: severe pneumonia, dehydration, seizures, and encephalitis. Red flags include high fever >40 °C, persistent vomiting, altered consciousness, and severe respiratory distress.",
+   "b": [
+    "Severe rash with bullae – risk of secondary infection"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Supportive care is the mainstay. Vitamin A is essential to reduce mortality. Antipyretics, hydration, and monitoring are mandatory. Antibiotics are reserved for secondary bacterial infections.",
+   "b": [
+    "Vaccination – MMR for contacts and outbreak control"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Post‑infection, monitor for bronchiectasis and immune suppression. Prevention relies on vaccination, cold chain maintenance, and vitamin A supplementation in endemic areas.",
+   "b": [
+    "Surveillance for outbreaks"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Measles can be mistaken for rubella, varicella, and scarlet fever. Key distinguishing features are Koplik spots, rash distribution, and prodrome severity.",
+   "b": [
+    "Scarlet fever – sandpaper rash, strawberry tongue"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Early serology may be negative; normal CBC can occur early. Chest X‑ray may miss early pneumonia. Vitamin A levels may be falsely low due to malnutrition.",
+   "b": [
+    "Chest X‑ray normal in early viral pneumonia"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pneumonia with hypoxia",
+  "Persistent vomiting or dehydration",
+  "Seizures or altered consciousness",
+  "High fever >40 °C",
+  "Rapid breathing or chest indrawing"
+ ],
+ "faq": [
+  {
+   "q": "Why is vitamin A given to all measles patients?",
+   "a": "It reduces mortality, prevents blindness, and supports immune function."
+  },
+  {
+   "q": "Can measles be transmitted after the rash appears?",
+   "a": "Yes, patients are contagious from 4 days before to 4 days after rash onset."
+  },
+  {
+   "q": "What is the role of the cold chain for measles vaccine?",
+   "a": "Measles vaccine must be stored 2–8 °C; freezing destroys potency."
+  }
+ ],
+ "exam": [
+  "Explain the rationale for vitamin A therapy in measles and its impact on morbidity.",
+  "Describe the clinical criteria for diagnosing measles in a setting without laboratory support.",
+  "Outline the key red flags that would prompt urgent referral for a child with suspected measles."
+ ],
+ "related": [
+  "Vaccination strategies",
+  "Vitamin A supplementation",
+  "Pneumonia in measles",
+  "Post‑measles bronchiectasis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

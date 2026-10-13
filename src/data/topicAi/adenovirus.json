@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Adenovirus is a non‑enveloped dsDNA virus that infects eyes, respiratory tract, gut and other organs. It causes self‑limited fever, cough, conjunctivitis and gastroenteritis, but can be severe in immunocompromised patients.",
+ "aka": [
+  "Human adenovirus"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Adenoviruses are icosahedral, non‑enveloped viruses with linear double‑stranded DNA. Over 50 serotypes exist, grouped into species A‑G, each with tissue tropism that guides clinical presentation.",
+   "b": [
+    "Stable in the environment – survives drying and acid",
+    "Transmitted by droplets, fecal‑oral route, fomites, and water"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The virus enters cells via the coxsackie‑adenovirus receptor (CAR) and integrins, leading to lytic infection of epithelial cells. No viral envelope makes it resistant to disinfectants that target lipids.",
+   "b": [
+    "Linear dsDNA ~36 kb",
+    "Non‑enveloped → resistant to desiccation",
+    "Serotypes A, C, D: respiratory; F: enteric"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Inhaled droplets cause respiratory disease; ingestion of contaminated water or food causes gastroenteritis; direct contact spreads conjunctivitis. After entry, viral replication occurs in the nucleus, producing new virions that are shed in secretions for 1‑2 weeks.",
+   "b": [
+    "Incubation 2‑14 days",
+    "Shedding can continue after symptoms resolve"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Adenovirus produces a spectrum of illness: pharyngitis, bronchitis, pneumonia, conjunctivitis, and gastroenteritis. In children it is a leading cause of viral enteritis; in transplant or HIV patients it can cause severe, disseminated disease.",
+   "b": [
+    "Respiratory: fever, cough, sore throat, possible lobar pneumonia",
+    "Ocular: pink eye, epidemic keratoconjunctivitis",
+    "GI: watery diarrhea, vomiting, abdominal cramps",
+    "Systemic: hepatitis, myocarditis, meningoencephalitis in immunocompromised"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Does the patient have viral vs bacterial pneumonia? → Lobar infiltrates suggest bacterial; interstitial pattern supports viral adenovirus"
+    },
+    {
+     "a": "PCR on respiratory or stool sample",
+     "b": "Is adenovirus present? → Positive confirms diagnosis; negative does not rule out if sample unavailable"
+    },
+    {
+     "a": "Serology (IgM)",
+     "b": "Has there been recent infection? → IgM rise supports acute infection; may be absent in immunocompromised"
+    }
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion is based on syndrome (e.g., conjunctivitis with fever) and epidemiology. Laboratory confirmation uses PCR or antigen detection from appropriate specimens. In low‑resource settings, rapid antigen tests or viral culture may be unavailable; diagnosis then relies on clinical pattern and exclusion of bacterial causes.",
+   "b": [
+    "PCR is most sensitive and specific",
+    "Antigen detection useful for ocular specimens"
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Supportive care is the mainstay: hydration, antipyretics, and oxygen if needed. Cidofovir or brincidofovir are reserved for severe disseminated disease in immunocompromised hosts. Infection control includes hand hygiene, surface disinfection with bleach, and isolation of affected patients.",
+   "b": [
+    "No routine antivirals for mild disease",
+    "Cidofovir: inhibits viral DNA polymerase, used only in severe cases",
+    "Avoid routine steroids unless airway obstruction"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams: adenovirus is a non‑enveloped dsDNA virus; it causes conjunctivitis, pharyngitis, and gastroenteritis; PCR is diagnostic; severe disease occurs in immunocompromised patients; control relies on hygiene, not antibiotics.",
+   "b": [
+    "Most common viral cause of pediatric gastroenteritis after rotavirus",
+    "Epidemic keratoconjunctivitis spreads via contaminated surfaces"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "High‑grade fever >39 °C lasting >5 days",
+  "Rapidly worsening dyspnea or hypoxia",
+  "Severe dehydration from diarrhea",
+  "Signs of meningitis or encephalitis (neck stiffness, altered mental status)",
+  "Persistent ocular pain or vision loss"
+ ],
+ "faq": [
+  {
+   "q": "Can antibiotics treat adenovirus infection?",
+   "a": "No; antibiotics do not affect viruses. They are only used if a bacterial superinfection is suspected."
+  },
+  {
+   "q": "Why are outbreaks common in swimming pools?",
+   "a": "Adenovirus is resistant to chlorine at typical pool levels and can survive in contaminated water, leading to fecal‑oral spread."
+  },
+  {
+   "q": "Is there a vaccine for adenovirus?",
+   "a": "Vaccines exist for military personnel against serotypes 4 and 7, but no routine civilian vaccine is available."
+  }
+ ],
+ "exam": [
+  "Describe the structure of adenovirus and explain why it is resistant to drying.",
+  "List the common clinical syndromes caused by adenovirus and identify the most vulnerable patient groups.",
+  "Explain the diagnostic approach to suspected adenoviral pneumonia, including the role of PCR."
+ ],
+ "related": [
+  "Rotavirus",
+  "Respiratory syncytial virus",
+  "Human coronavirus",
+  "Herpes simplex virus",
+  "Immunocompromised host infections",
+  "Infection control"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

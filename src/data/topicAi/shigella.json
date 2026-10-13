@@ -1,0 +1,127 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Shigella is a gram‑negative, non‑motile rod that causes dysentery with a very low infectious dose. It invades colonic epithelium, triggers inflammation and bloody stools, and spreads easily in low‑resource settings.",
+ "aka": [
+  "Shigellosis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Shigella species are small, gram‑negative rods that lack flagella and are highly infectious. A few dozen organisms can produce severe diarrhoea with blood and mucus.",
+   "b": [
+    "Non‑motile, oxidase‑negative, lactose‑non‑fermenting"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The bacteria possess a type III secretion system that injects effectors into host cells, causing actin rearrangement and cell death.",
+   "b": [
+    "Type III secretion system",
+    "Low ID50 (10–100 CFU)"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Spread via the fecal–oral route, contaminated food or water, and person‑to‑person contact. The organism survives poorly outside the host but can persist in contaminated environments.",
+   "b": [
+    "Fecal–oral transmission",
+    "Contaminated food/water"
+   ],
+   "t": [
+    {
+     "a": "Stool culture",
+     "b": "Positive culture confirms dysentery due to Shigella"
+    },
+    {
+     "a": "PCR for Shigella genes",
+     "b": "Positive PCR supports diagnosis when stool culture is negative or delayed"
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Shigellosis presents as acute dysentery: crampy abdominal pain, fever, tenesmus, and bloody or mucoid stools. Severe cases can lead to dehydration, septic shock, or hemolytic‑uremic syndrome.",
+   "b": [
+    "Bloody/mucoid diarrhoea",
+    "Fever, abdominal cramps",
+    "Severe dehydration"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion is high with bloody stools and fever. Confirm with stool culture or PCR. Rule out other causes of dysentery such as amoebiasis and Campylobacter.",
+   "b": [
+    "History of recent travel or food exposure"
+   ],
+   "t": [
+    {
+     "a": "Stool microscopy",
+     "b": "Presence of leukocytes suggests invasive infection"
+    },
+    {
+     "a": "Serology for amoebic dysentery",
+     "b": "Negative serology supports bacterial cause"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treat with a first‑line oral or IV antibiotic that penetrates colonic tissue. Supportive care includes rehydration and electrolyte replacement. Avoid antibiotics that increase risk of hemolytic‑uremic syndrome.",
+   "b": [
+    "Oral ciprofloxacin or azithromycin",
+    "IV ceftriaxone if severe"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Elevated LDH or low haptoglobin suggests HUS"
+    },
+    {
+     "a": "Renal function tests",
+     "b": "Rising creatinine indicates HUS or sepsis"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the very low infectious dose and the importance of hand hygiene. In low‑resource settings, empiric therapy may be guided by local resistance patterns.",
+   "b": [
+    "Low ID50 makes outbreaks common"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dehydration, persistent high fever, blood in urine, neurological signs, or signs of septic shock"
+ ],
+ "faq": [
+  {
+   "q": "Can Shigella be transmitted by insects?",
+   "a": "No, transmission is fecal–oral; insects are not a vector."
+  },
+  {
+   "q": "Is vaccination available?",
+   "a": "No licensed vaccine for Shigella is currently available."
+  },
+  {
+   "q": "Does it cause chronic disease?",
+   "a": "Shigellosis is usually acute; chronic carriage can occur but is uncommon."
+  }
+ ],
+ "exam": [
+  "Explain why a low infectious dose of Shigella leads to rapid spread in a refugee camp.",
+  "Describe the diagnostic workup for a child with bloody diarrhoea in a rural clinic.",
+  "Outline first‑line treatment for severe Shigella dysentery and justify the choice of antibiotic."
+ ],
+ "related": [
+  "Enteric fever",
+  "Campylobacter jejuni",
+  "E. coli O157:H7",
+  "Amoebic dysentery",
+  "Hemolytic‑uremic syndrome"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

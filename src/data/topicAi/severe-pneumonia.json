@@ -1,0 +1,146 @@
+{
+ "medical": true,
+ "subject": "Paediatrics",
+ "summary": "Severe pneumonia in children is a life‑threatening infection marked by danger signs such as chest indrawing, inability to drink, convulsions or severe lethargy. Rapid recognition, prompt injectable antibiotics and oxygen are essential to prevent death.",
+ "aka": [
+  "Severe lower respiratory tract infection",
+  "Severe LRTI"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Severe pneumonia is defined by WHO as pneumonia with any danger sign: chest indrawing, inability to drink, convulsions, severe lethargy, or stridor in a calm child. Diagnosis is clinical; chest X‑ray is supportive but not required in low‑resource settings.",
+   "b": [
+    "Danger signs are the key diagnostic criteria"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "WHO classifies pneumonia into no pneumonia, non‑severe, and severe. Severe pneumonia requires admission and injectable antibiotics. In resource‑rich settings, severity may be graded by oxygen saturation, respiratory rate, and need for ventilation."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Bacterial pathogens dominate: Streptococcus pneumoniae, Haemophilus influenzae type b, and Staphylococcus aureus. In low‑resource areas, HIV‑associated bacterial pneumonia, tuberculosis, and malaria‑related pulmonary complications are common. Viral causes (RSV, influenza) can precipitate bacterial superinfection.",
+   "b": [
+    "Bacterial pneumonia is most common"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Rapid onset of cough, tachypnea, and chest indrawing. The child may be irritable, have poor feeding, or be lethargic. Stridor indicates upper airway involvement. Oxygen saturation <90% is a red flag.",
+   "b": [
+    "Chest indrawing is the hallmark"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm diagnosis, guide therapy, and rule out mimics. In low‑resource settings, focus on simple, rapid tests.",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Measures oxygen saturation; <90% indicates hypoxia and need for oxygen"
+    },
+    {
+     "a": "Rapid malaria test",
+     "b": "Rules out malaria as cause of respiratory distress"
+    },
+    {
+     "a": "Blood culture",
+     "b": "Identifies bacterial pathogen; obtain before antibiotics if it does not delay treatment"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows consolidation or effusion; useful if available but not mandatory"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Leukocytosis or neutropenia may suggest bacterial infection; anemia can worsen hypoxia"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe sepsis, respiratory failure, pneumothorax, empyema, and septic shock are life‑threatening complications. Watch for worsening tachypnea, cyanosis, or altered consciousness.",
+   "b": [
+    "Septic shock requires immediate resuscitation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying infection with injectable antibiotics, provide oxygen, and support hydration and nutrition. Choose antibiotics based on local resistance patterns and drug availability.",
+   "b": [
+    "Injectable benzylpenicillin plus gentamicin is first‑line in WHO guidelines"
+   ],
+   "t": [
+    {
+     "a": "Injectable benzylpenicillin",
+     "b": "Treats S. pneumoniae and H. influenzae; chosen for low cost and efficacy"
+    },
+    {
+     "a": "Gentamicin",
+     "b": "Adds coverage for Gram‑negative organisms; avoid in renal impairment"
+    },
+    {
+     "a": "Oxygen therapy",
+     "b": "Corrects hypoxia; use low‑flow nasal cannula if available"
+    },
+    {
+     "a": "Fluid resuscitation",
+     "b": "Maintain perfusion; avoid fluid overload in compromised lungs"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Discharge when afebrile for 48 h, breathing normal, and able to feed. Vaccination against pneumococcus and Hib, hand hygiene, and prompt treatment of cough in the community reduce incidence.",
+   "b": [
+    "Vaccination is the cornerstone of prevention"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Bronchiolitis, asthma exacerbation, and pneumonia with pleural effusion can mimic severe pneumonia. Distinguish by history, clinical signs, and simple investigations.",
+   "b": [
+    "Bronchiolitis presents with wheeze rather than chest indrawing"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal chest X‑ray does not exclude severe pneumonia; early consolidation may be missed. Pulse oximetry can be falsely normal if perfusion is poor. Blood cultures may be negative if antibiotics were given before sampling.",
+   "b": [
+    "Early consolidation may be invisible on X‑ray"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Inability to drink or breastfeed",
+  "Chest indrawing with rapid breathing",
+  "Convulsions or severe lethargy",
+  "Stridor in a calm child",
+  "Oxygen saturation <90%"
+ ],
+ "faq": [
+  {
+   "q": "Why is oxygen therapy essential in severe pneumonia?",
+   "a": "It corrects hypoxia, reduces work of breathing, and prevents organ failure."
+  },
+  {
+   "q": "Can I use oral antibiotics for severe pneumonia?",
+   "a": "No; injectable antibiotics are required because oral absorption may be unreliable and the infection is life‑threatening."
+  },
+  {
+   "q": "What if gentamicin is unavailable?",
+   "a": "Use amikacin or a third‑generation cephalosporin if local resistance patterns allow; monitor renal function."
+  }
+ ],
+ "exam": [
+  "Explain why chest indrawing is a danger sign and how it guides treatment decisions.",
+  "Describe the first‑line injectable antibiotic regimen for severe pneumonia in a child with suspected bacterial etiology.",
+  "Outline the steps you would take if a child with severe pneumonia develops sudden worsening of breathing and cyanosis."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

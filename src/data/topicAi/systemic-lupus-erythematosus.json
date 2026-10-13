@@ -1,0 +1,178 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Systemic Lupus Erythematosus (SLE) is a multisystem autoimmune disease with diverse manifestations. Diagnosis relies on clinical criteria plus autoantibodies; severity ranges from mild skin disease to life‑threatening organ involvement.",
+ "aka": [
+  "Lupus"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "SLE is a chronic autoimmune disorder causing immune complex deposition and inflammation in skin, joints, kidneys, CNS, and other organs. Diagnosis uses the 2019 EULAR/ACR criteria: ≥10 points from clinical items plus a positive ANA (≥1:80).",
+   "b": [
+    "ANA positive is entry criterion; subsequent items (e.g., anti‑dsDNA, low complement) add points.",
+    "At least 4 clinical domains (e.g., arthritis, renal, neurologic) often needed."
+   ],
+   "t": [
+    {
+     "a": "ANA (screen)",
+     "b": "Is there an autoimmune process? Positive ANA (≥1:80) allows further scoring; a negative ANA makes SLE unlikely."
+    },
+    {
+     "a": "Anti‑dsDNA / anti‑Smith",
+     "b": "Specificity for SLE? High‑titer anti‑dsDNA indicates active renal disease; anti‑Smith is highly specific but less sensitive."
+    },
+    {
+     "a": "Complement C3/C4",
+     "b": "Are immune complexes consuming complement? Low C3/C4 supports active disease, especially renal or neuro involvement."
+    },
+    {
+     "a": "Urinalysis with microscopy",
+     "b": "Is there renal involvement? Proteinuria ≥0.5 g/day or cellular casts suggest lupus nephritis."
+    },
+    {
+     "a": "Kidney biopsy (if available)",
+     "b": "What is the histologic class? Guides immunosuppression; if unavailable, treat based on clinical severity."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by organ involvement and activity scores (e.g., SLEDAI, BILAG). Lupus nephritis is staged by ISN/RPS class I–VI; neuropsychiatric disease, vasculitis, and serositis also denote high severity.",
+   "b": [
+    "Mild: skin, arthritis, serology only.",
+    "Moderate: hematologic, serositis, mild renal proteinuria.",
+    "Severe: nephritis class III–V, CNS lupus, vasculitis, pulmonary hemorrhage."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "SLE results from genetic susceptibility, hormonal influence, and environmental triggers that break tolerance.",
+   "b": [
+    "Genetic: HLA‑DR2/DR3, complement deficiencies.",
+    "Hormonal: female sex hormones, pregnancy.",
+    "Infections: EBV, HIV, hepatitis B/C – especially relevant in low‑resource settings.",
+    "Drugs/herbal: procainamide, hydralazine, herbal alkaloids."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have a combination of constitutional symptoms, mucocutaneous lesions, arthritis, and organ‑specific signs.",
+   "b": [
+    "Fatigue, fever, weight loss.",
+    "Malar rash, photosensitivity, oral ulcers.",
+    "Symmetric non‑erosive arthritis of small joints.",
+    "Renal: edema, hypertension, hematuria.",
+    "Neuro: seizures, psychosis, headaches."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted labs and imaging confirm organ involvement and guide therapy.",
+   "b": [
+    "Baseline CBC, renal and liver panels.",
+    "Urine protein/creatinine ratio.",
+    "Chest X‑ray for pleuritis or pneumonitis."
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Is there cytopenia? Anemia, leukopenia, or thrombocytopenia suggest hematologic activity."
+    },
+    {
+     "a": "Urine protein/creatinine ratio",
+     "b": "Quantifies proteinuria; >0.5 g/day indicates nephritis needing aggressive treatment."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Detects pleural effusion or pulmonary infiltrates; normal film does not rule out serositis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify life‑threatening features early to prevent mortality.",
+   "b": [
+    "Rapidly rising creatinine or nephrotic‑range proteinuria.",
+    "Neuropsychiatric flare (seizure, psychosis).",
+    "Pulmonary hemorrhage or diffuse alveolar hemorrhage.",
+    "Libman‑Sacks endocarditis causing emboli."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying autoimmunity, protect organs, and minimise drug toxicity.",
+   "b": [
+    "Hydroxychloroquine for all patients – reduces flares and improves survival.",
+    "Low‑dose glucocorticoids for active disease; taper quickly to avoid damage.",
+    "Immunosuppressants: mycophenolate mofetil or azathioprine for moderate disease; cyclophosphamide for severe nephritis or CNS lupus.",
+    "Avoid long‑term high‑dose steroids because of infection, osteoporosis, and hypertension."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring prevents irreversible organ damage.",
+   "b": [
+    "Clinic review every 3–6 months; more often during flares.",
+    "Annual eye exam for hydroxychloroquine toxicity.",
+    "Vaccinate against influenza, pneumococcus, HPV; avoid live vaccines in high‑dose steroids.",
+    "Counsel on sun protection and smoking cessation."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions sharing rash, arthritis, or serology can mimic SLE.",
+   "b": [
+    "Rheumatoid arthritis – erosive joints, negative ANA.",
+    "Dermatomyositis – Gottron papules, muscle weakness, anti‑Mi‑2 antibodies.",
+    "Mixed connective tissue disease – high anti‑RNP, overlapping features.",
+    "Infection‑related arthritis (e.g., hepatitis B) – serology distinguishes."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may be falsely normal or abnormal, leading to diagnostic error.",
+   "b": [
+    "ANA can be negative early in disease; repeat if suspicion persists.",
+    "Complement levels may normalize during quiescent phases, masking activity.",
+    "Anti‑dsDNA titers can fluctuate; clinical correlation is essential."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of kidney function, severe hypertension, or anuria",
+  "New onset seizures, severe headache, or psychosis",
+  "Chest pain with shortness of breath suggesting pericarditis or pulmonary hemorrhage"
+ ],
+ "faq": [
+  {
+   "q": "Why is hydroxychloroquine recommended for all SLE patients?",
+   "a": "It reduces disease activity, prevents flares, and improves survival with low toxicity when screened for retinal risk."
+  },
+  {
+   "q": "Can a patient have SLE with a negative ANA?",
+   "a": "Rarely; ANA is the entry criterion, but if clinical suspicion is high, repeat testing or alternative autoantibodies may be considered."
+  },
+  {
+   "q": "What distinguishes lupus nephritis from other glomerulonephritides?",
+   "a": "Presence of full‑house immunofluorescence (IgG, IgA, IgM, C3, C1q) and low complement levels are characteristic."
+  }
+ ],
+ "exam": [
+  "List the 2019 EULAR/ACR classification criteria and explain how points are assigned.",
+  "Describe the management hierarchy for a patient presenting with new‑onset lupus nephritis class III.",
+  "Identify three red‑flag complications of SLE and the immediate actions required."
+ ],
+ "related": [
+  "Rheumatoid arthritis",
+  "Mixed connective tissue disease",
+  "Antiphospholipid syndrome",
+  "Lupus nephritis",
+  "Neuropsychiatric lupus",
+  "Libman‑Sacks endocarditis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

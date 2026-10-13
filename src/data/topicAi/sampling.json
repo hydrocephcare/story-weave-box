@@ -1,0 +1,125 @@
+{
+ "medical": true,
+ "subject": "Public health",
+ "summary": "Sampling is the process of selecting a subset of a population to infer characteristics of the whole. It underpins surveillance, research, and policy decisions, especially where resources are limited.",
+ "aka": [
+  "Sampling methods",
+  "Sample selection"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Sampling refers to the systematic selection of individuals, households, or events from a larger group to estimate health indicators.",
+   "b": [
+    "Random, systematic, stratified, cluster, convenience"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Biases arise from poor sampling design, leading to inaccurate prevalence or risk estimates.",
+   "b": [
+    "Selection bias, non‑response bias, measurement bias"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "In practice, sampling shows up as study protocols, surveillance reports, or audit data that guide clinical decisions.",
+   "b": [
+    "Sample size, sampling frame, inclusion criteria"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Choosing the right sampling strategy depends on the research question, population heterogeneity, and resources.",
+   "t": [
+    {
+     "a": "Sample size calculation",
+     "b": "What is the minimum number needed to detect a true effect? → Ensures adequate power; if unavailable, use rule‑of‑thumb (e.g., 30 per group)."
+    },
+    {
+     "a": "Pilot study",
+     "b": "Does the sampling frame capture the target population? → Identifies feasibility issues before full study."
+    },
+    {
+     "a": "Sensitivity analysis",
+     "b": "How robust are results to different sampling assumptions? → Highlights potential bias when full data are missing."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Mis‑sampling can mislead public‑health policies, causing over‑ or under‑treatment of diseases.",
+   "b": [
+    "Unexpectedly low disease prevalence in high‑risk area",
+    "Wide confidence intervals despite large sample"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Correct sampling errors by revising the design, increasing sample size, or using weighting adjustments.",
+   "b": [
+    "Use probability sampling whenever possible",
+    "Apply post‑stratification weights",
+    "Document limitations transparently"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Repeat surveys at regular intervals and train staff in standardized data collection to maintain data quality.",
+   "b": [
+    "Standard operating procedures",
+    "Quality‑control checks",
+    "Community engagement"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Sampling is not the same as testing or measurement; it is the method of choosing *who* to test.",
+   "b": [
+    "Surveillance vs. sampling",
+    "Screening vs. sampling"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Small or non‑representative samples may produce statistically significant but clinically irrelevant findings.",
+   "b": [
+    "Confidence intervals that exclude null due to over‑precision",
+    "Spurious associations from cluster effects"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Why is random sampling preferred?",
+   "a": "It minimizes selection bias, giving each individual an equal chance to be chosen, which improves generalizability."
+  },
+  {
+   "q": "What if I cannot get a true random sample?",
+   "a": "Use stratified or cluster sampling to approximate randomness and apply weighting to adjust for known differences."
+  },
+  {
+   "q": "How many participants are enough?",
+   "a": "Calculate based on expected prevalence, desired precision, confidence level, and design effect; larger samples reduce random error."
+  }
+ ],
+ "exam": [
+  "Explain how sampling bias can affect disease prevalence estimates and give an example relevant to low‑resource settings.",
+  "Describe the steps to calculate sample size for a community survey estimating hypertension prevalence.",
+  "Compare stratified and cluster sampling, noting advantages in a tropical rural population."
+ ],
+ "related": [
+  "Epidemiology",
+  "Surveillance",
+  "Bias",
+  "Study design",
+  "Statistical power",
+  "Data quality",
+  "Health informatics"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

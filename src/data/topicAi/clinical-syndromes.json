@@ -1,0 +1,143 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "A clinical syndrome is a recognizable set of signs and symptoms that together suggest a particular disease process. It guides the clinician toward a working diagnosis, necessary investigations and early management.",
+ "aka": [
+  "clinical presentation",
+  "disease syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A clinical syndrome is a pattern of findings that clusters together because they share a common pathophysiology. Diagnosis starts with a focused history and physical exam, then applies validated criteria when they exist.",
+   "b": [
+    "Identify the core symptom complex (e.g., cough + sputum + recurrent infections).",
+    "Apply diagnostic criteria (e.g., ≥3 months of productive cough, HRCT bronchial dilatation for bronchiectasis)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Many syndromes have staging systems that predict prognosis and guide therapy.",
+   "b": [
+    "Bronchiectasis: mild (≤3 exacerbations/yr), moderate (≥3/yr or chronic infection), severe (requiring oxygen or frequent hospitalisation).",
+    "Acute coronary syndrome: unstable angina, NSTEMI, STEMI."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the most common aetiologies, then consider less frequent or region‑specific causes.",
+   "b": [
+    "Infectious: post‑pneumonia, tuberculosis, HIV‑related opportunistic infections.",
+    "Non‑infectious: cystic fibrosis, primary ciliary dyskinesia, allergic bronchopulmonary aspergillosis.",
+    "Tropical/low‑resource: post‑TB bronchiectasis, chronic schistosomiasis‑related pulmonary hypertension."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical features arise from the underlying pathophysiology and help differentiate from mimics.",
+   "b": [
+    "Chronic productive cough with purulent sputum.",
+    "Recurrent febrile exacerbations, occasional haemoptysis.",
+    "Digital clubbing in long‑standing disease."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer a specific clinical question; if a test is unavailable, use the next best alternative.",
+   "t": [
+    {
+     "a": "High‑resolution CT chest",
+     "b": "Does the airway show bronchial dilatation and lack of tapering? → Confirms bronchiectasis; if unavailable, use chest X‑ray plus sputum culture."
+    },
+    {
+     "a": "Sputum microbiology",
+     "b": "Which pathogen is colonising the airway? → Guides targeted antibiotics; if culture not possible, treat empirically for Pseudomonas in severe disease."
+    },
+    {
+     "a": "Pulmonary function tests (spirometry)",
+     "b": "Is there obstructive physiology (FEV1/FVC <0.7)? → Quantifies severity; if spirometer unavailable, use peak flow trends."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise features that signal imminent deterioration or life‑threatening events.",
+   "b": [
+    "Massive haemoptysis (>200 mL/24 h).",
+    "Frequent exacerbations requiring hospitalisation.",
+    "Progressive respiratory failure with hypoxia."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then provide supportive care and monitor for complications.",
+   "b": [
+    "Airway clearance: chest physiotherapy, oscillatory devices – essential for mucus removal.",
+    "Antibiotics: macrolide or fluoroquinolone for typical bacterial exacerbations; avoid aminoglycosides in renal impairment.",
+    "Anti‑inflammatories: inhaled corticosteroids for eosinophilic phenotype; avoid systemic steroids long‑term due to infection risk.",
+    "Vaccination: influenza and pneumococcal to prevent infections."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review prevents progression and identifies treatable exacerbations early.",
+   "b": [
+    "Clinic review every 3–6 months with spirometry and sputum culture.",
+    "Long‑term macrolide prophylaxis in patients with ≥3 exacerbations/yr.",
+    "Education on airway clearance techniques and smoking cessation."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that share overlapping symptoms but differ in pathogenesis.",
+   "b": [
+    "Chronic bronchitis – diffuse airway inflammation without radiologic bronchial dilatation.",
+    "COPD – emphysematous destruction may coexist but has different treatment priorities."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Beware of false‑negative or misleading findings.",
+   "b": [
+    "Normal chest X‑ray early in disease – HRCT is required for detection.",
+    "Sputum culture may be negative if patient received antibiotics before sampling."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Massive haemoptysis",
+  "Sudden worsening breathlessness with cyanosis",
+  "Fever and rigors with new infiltrate on imaging"
+ ],
+ "faq": [
+  {
+   "q": "Why is a CT scan preferred over a chest X‑ray?",
+   "a": "CT visualises bronchial wall thickening and dilatation that X‑ray often misses, confirming the syndrome."
+  },
+  {
+   "q": "Can bronchiectasis be cured?",
+   "a": "The structural damage is permanent; treatment aims to control infection, clear mucus and prevent further loss of lung function."
+  },
+  {
+   "q": "When is surgery considered?",
+   "a": "Localized disease with recurrent severe haemoptysis or failure of medical therapy may be resected."
+  }
+ ],
+ "exam": [
+  "List the diagnostic criteria for bronchiectasis and explain how you would stage severity.",
+  "Describe the first‑line management steps for an acute exacerbation in a patient with chronic bronchiectasis.",
+  "Identify three red‑flag features that require urgent referral in a patient presenting with a chronic productive cough."
+ ],
+ "related": [
+  "Chronic bronchitis",
+  "COPD",
+  "Cystic fibrosis",
+  "Primary ciliary dyskinesia",
+  "Pulmonary tuberculosis",
+  "Pseudomonas aeruginosa infection"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,132 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The sciatic nerve is the largest peripheral nerve, running from the pelvis to the foot. It supplies motor and sensory fibers to the posterior thigh, leg, and foot, and its injury produces characteristic pain and weakness.",
+ "aka": [
+  "CN XI? No",
+  "Sciatic"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The sciatic nerve is a mixed peripheral nerve formed by L4‑S3 roots. It exits the pelvis via the greater sciatic foramen and travels down the posterior thigh before dividing into tibial and common peroneal branches.",
+   "b": [
+    "Largest nerve in the body",
+    "Mixed motor‑sensory",
+    "Divides at the popliteal fossa"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lies deep to the gluteus maximus, between the hamstring muscles. Proximally it is a single trunk; distally it splits into tibial and common peroneal nerves.",
+   "b": [
+    "Origin: L4‑S3 ventral rami",
+    "Course: pelvis → posterior thigh → popliteal fossa",
+    "Division: tibial + common peroneal"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "In the gluteal region it is inferior to the piriformis muscle; in the thigh it is sandwiched between the biceps femoris (laterally) and semimembranosus/semitendinosus (medially).",
+   "b": [
+    "Piriformis may compress it (piriformis syndrome)",
+    "Close to posterior femoral cutaneous nerve"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "A longitudinal arterial anastomosis runs alongside the nerve, mainly from perforating branches of the profunda femoris, with contributions from the medial circumflex femoral and internal pudendal arteries.",
+   "b": [
+    "Profunda femoris perforators",
+    "Medial circumflex femoral",
+    "Internal pudendal"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Motor fibers to all posterior thigh muscles, most leg muscles, and foot intrinsic muscles. Sensory fibers to posterior thigh skin, most of the leg, and the lateral foot.",
+   "b": [
+    "Motor: hamstrings, adductors (via obturator), all leg muscles",
+    "Sensory: posterior thigh, most of leg, lateral foot"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Enables hip extension, knee flexion, ankle plantarflexion, and foot inversion/eversion. Provides sensation to the posterior thigh, most of the lower leg, and the foot.",
+   "b": [
+    "Hip extension (gluteus maximus synergy)",
+    "Knee flexion (hamstrings)",
+    "Ankle plantarflexion (tibial branch)",
+    "Foot sensation"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Sciatic neuropathy presents with buttock or posterior thigh pain radiating down the leg, weakness of knee flexion and foot movements, and sensory loss. Common causes include disc herniation, piriformis syndrome, trauma, intramuscular injections, and infections (e.g., HIV‑related neuropathy, TB meningitis spread).",
+   "b": [
+    "Pain radiating below knee, worsened by sitting",
+    "Weakness of hamstrings, tibial and peroneal muscles",
+    "Sensory loss in S1‑S2 distribution"
+   ],
+   "t": [
+    {
+     "a": "MRI of lumbosacral spine",
+     "b": "Identifies disc herniation or mass compressing nerve roots; a normal scan suggests peripheral lesion."
+    },
+    {
+     "a": "Ultrasound of thigh",
+     "b": "Detects nerve swelling or traumatic injury; unavailable → rely on clinical exam."
+    },
+    {
+     "a": "Nerve conduction studies",
+     "b": "Distinguishes demyelinating vs axonal loss; if unavailable, use bedside motor strength and sensory testing."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key bedside tests: Straight‑leg raise (positive if >30° reproduces radicular pain), knee flexion strength, ankle plantar‑/dorsiflexion, and sensory mapping of the foot.",
+   "b": [
+    "Positive SLR suggests proximal nerve root irritation",
+    "Weakness of ankle dorsiflexion points to common peroneal involvement",
+    "Loss of plantar sensation indicates tibial branch injury"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe, progressive weakness causing inability to walk",
+  "Sudden loss of bladder or bowel control (cauda equina suspicion)",
+  "Rapidly worsening pain with fever (possible infection or abscess)"
+ ],
+ "faq": [
+  {
+   "q": "Why does sitting worsen sciatic pain?",
+   "a": "Sitting increases pressure on the nerve within the tight gluteal space and stretches the piriformis, aggravating compression."
+  },
+  {
+   "q": "Can a hip injection cause sciatic injury?",
+   "a": "Yes, intramuscular injections placed too low in the gluteal region can puncture or compress the nerve."
+  },
+  {
+   "q": "Is sciatica always due to a disc problem?",
+   "a": "No, peripheral causes like piriformis syndrome, trauma, or infection are common, especially in low‑resource settings."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical course of the sciatic nerve and its major branches.",
+  "Explain how you would differentiate a disc‑related radiculopathy from a peripheral sciatic neuropathy on exam.",
+  "List the first‑line investigations for a patient with suspected sciatic nerve compression and why each is chosen."
+ ],
+ "related": [
+  "Piriformis syndrome",
+  "Lumbar disc herniation",
+  "Common peroneal nerve injury",
+  "Hamstring muscle anatomy",
+  "Cauda equina syndrome",
+  "Peripheral neuropathy in HIV"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

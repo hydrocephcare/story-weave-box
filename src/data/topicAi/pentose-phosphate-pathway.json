@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "The pentose phosphate pathway (PPP) supplies NADPH for reductive biosynthesis and antioxidant defense, and ribose‑5‑phosphate for nucleotide synthesis. It is crucial in red cells, liver, and rapidly dividing tissues.",
+ "aka": [
+  "Hexose Monophosphate Shunt",
+  "HMP shunt"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The PPP is a cytosolic, non‑oxidative pathway that branches from glycolysis. It generates NADPH and ribose‑5‑phosphate, both essential for cell survival and proliferation.",
+   "b": [
+    "Produces NADPH for glutathione reduction",
+    "Provides ribose‑5‑phosphate for DNA/RNA synthesis"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "The oxidative phase oxidises glucose‑6‑phosphate to 6‑phosphoglucono‑δ‑lactone, yielding NADPH. The non‑oxidative phase rearranges sugars to produce ribose‑5‑phosphate and intermediates that can re‑enter glycolysis.",
+   "b": [
+    "Oxidative: G6P → 6‑PG → 6‑PGL → 6‑PGD → 6‑PGL → 6‑PG → ribulose‑5‑P + NADPH"
+   ],
+   "t": [
+    {
+     "a": "Glucose‑6‑phosphate dehydrogenase activity",
+     "b": "Low activity indicates G6PD deficiency, leading to hemolysis in oxidative stress"
+    },
+    {
+     "a": "6‑Phosphogluconate dehydrogenase activity",
+     "b": "Deficiency causes accumulation of 6‑PG and oxidative damage"
+    },
+    {
+     "a": "Ribose‑5‑phosphate levels",
+     "b": "Low levels suggest impaired nucleotide synthesis"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The pathway is regulated by substrate availability and NADP⁺/NADPH ratio. High NADPH feedback inhibits G6PD, while high G6P activates it.",
+   "b": [
+    "Allosteric activation by G6P",
+    "Inhibition by NADPH"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Deficiencies in G6PD or 6‑PGD lead to oxidative hemolysis. In low‑resource settings, infections (malaria, HIV) or herbal remedies can precipitate hemolysis.",
+   "b": [
+    "G6PD deficiency: X‑linked, triggers hemolysis with oxidants"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin electrophoresis",
+     "b": "Detects hemoglobin variants that may mimic hemolysis"
+    },
+    {
+     "a": "Peripheral smear",
+     "b": "Shows bite cells or Heinz bodies in G6PD deficiency"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Clinicians must recognise that patients with G6PD deficiency cannot tolerate certain drugs (e.g., sulfa, antimalarials) or foods (fava beans).",
+   "b": [
+    "Avoid oxidant drugs",
+    "Monitor for jaundice and anemia"
+   ],
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Detects anemia and reticulocytosis"
+    },
+    {
+     "a": "Direct antiglobulin test",
+     "b": "Rules out immune hemolysis"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that the PPP is the only source of NADPH in red cells; G6PD deficiency is a common cause of hemolytic anemia in tropical regions.",
+   "b": [
+    "G6PD deficiency presents with episodic hemolysis after oxidative stress"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe jaundice, dark urine, sudden drop in hemoglobin, or signs of acute hemolysis"
+ ],
+ "faq": [
+  {
+   "q": "Why does the PPP produce NADPH instead of NADH?",
+   "a": "NADPH is used for reductive biosynthesis and antioxidant defense, while NADH feeds the electron transport chain for ATP production."
+  },
+  {
+   "q": "Can the PPP operate in all cells?",
+   "a": "It is active in all cells but is especially important in red blood cells, liver, and rapidly dividing tissues."
+  },
+  {
+   "q": "What triggers hemolysis in G6PD deficiency?",
+   "a": "Exposure to oxidants such as certain drugs, infections, or fava beans causes red cell oxidative damage."
+  }
+ ],
+ "exam": [
+  "Explain how G6PD deficiency leads to hemolytic anemia and list drugs that must be avoided.",
+  "Describe the regulatory mechanism of the PPP and its importance in red blood cells.",
+  "Outline the diagnostic workup for a patient with suspected oxidative hemolysis."
+ ],
+ "related": [
+  "Hemolytic anemia",
+  "Glucose‑6‑phosphate dehydrogenase deficiency",
+  "Red cell metabolism",
+  "Oxidative stress",
+  "NADPH oxidase",
+  "Glutathione reductase"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

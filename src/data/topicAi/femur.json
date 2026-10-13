@@ -1,0 +1,125 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The femur is the longest bone, forming the thigh and supporting weight. Its anatomy dictates joint mechanics, blood flow, and common injury patterns. Clinicians use this knowledge to diagnose fractures, assess vascular status, and plan surgeries.",
+ "aka": [
+  "Thigh bone"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The femur is the largest and strongest bone, extending from the hip to the knee. It bears most of the body’s weight and provides attachment for major muscle groups.",
+   "b": [
+    "Longest bone",
+    "Weight‑bearing"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It consists of a proximal head, neck, greater and lesser trochanters, shaft, and distal condyles. The head articulates with the acetabulum, while the condyles meet the tibia.",
+   "b": [
+    "Head–acetabulum joint",
+    "Trochanters serve muscle attachments"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly lies the quadriceps tendon and patella; posteriorly the hamstrings. Medially and laterally, the femur is adjacent to the iliac crest and tibia.",
+   "b": [
+    "Patellar tendon anterior",
+    "Hamstrings posterior"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The femoral artery gives off the profunda femoris and perforating branches. The nutrient artery enters the shaft, while the epiphyseal arteries supply the head and neck.",
+   "b": [
+    "Profunda femoris supplies shaft"
+   ],
+   "t": [
+    {
+     "a": "X‑ray",
+     "b": "Shows fracture location and displacement"
+    },
+    {
+     "a": "CT scan",
+     "b": "Details complex fractures and bone loss"
+    },
+    {
+     "a": "MRI",
+     "b": "Assesses soft tissue and vascular injury"
+    }
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The femoral nerve supplies the anterior thigh; the obturator nerve supplies the medial thigh; the sciatic nerve supplies the posterior thigh.",
+   "b": [
+    "Femoral nerve – motor to quadriceps"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The femur allows hip flexion, extension, abduction, and rotation, and knee flexion and extension. It transfers weight from the pelvis to the lower limb.",
+   "b": [
+    "Hip joint mobility"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Fractures of the neck, shaft, and distal femur are common. Avascular necrosis follows neck fractures. Osteolytic lesions may indicate metastases.",
+   "b": [
+    "Neck fractures risk AVN"
+   ],
+   "t": [
+    {
+     "a": "DEXA",
+     "b": "Detects osteoporosis risk for fractures"
+    },
+    {
+     "a": "Bone scan",
+     "b": "Identifies occult fractures or metastases"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "On exam, assess femoral pulse, capillary refill, and distal neurovascular status. A positive Trendelenburg sign suggests hip abductor weakness.",
+   "b": [
+    "Check femoral pulse"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pain with deformity, inability to bear weight, loss of distal pulses, or neuro deficits"
+ ],
+ "faq": [
+  {
+   "q": "What causes avascular necrosis after a femoral neck fracture?",
+   "a": "Disruption of the medial circumflex femoral artery leads to bone death."
+  },
+  {
+   "q": "How does a distal femur fracture present?",
+   "a": "Pain, swelling, and inability to extend the knee; the leg may be shortened."
+  },
+  {
+   "q": "Why is the femur prone to osteolytic metastases?",
+   "a": "It has rich red marrow and venous plexus that allow tumor spread."
+  }
+ ],
+ "exam": [
+  "Describe the blood supply to the femoral head and its clinical significance.",
+  "Explain how a femoral neck fracture can lead to avascular necrosis."
+ ],
+ "related": [
+  "Hip joint",
+  "Knee joint",
+  "Bone fracture management",
+  "Osteoporosis",
+  "Bone metastases"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

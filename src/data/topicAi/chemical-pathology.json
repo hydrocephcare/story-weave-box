@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Chemical pathology studies the biochemical changes in disease. It links clinical signs to laboratory tests, guiding diagnosis and management. Clinicians use these tests to confirm, stage, and monitor conditions.",
+ "aka": [
+  "Clinical Chemistry",
+  "Laboratory Medicine"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Chemical pathology is the analysis of body fluids and tissues for metabolic, hormonal, and toxic substances. Diagnosis relies on quantitative tests that reflect organ function or disease activity.",
+   "b": [
+    "Measures enzymes, electrolytes, hormones, toxins"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Renal function; high indicates impaired filtration"
+    },
+    {
+     "a": "AST/ALT",
+     "b": "Liver injury; high suggests hepatocellular damage"
+    },
+    {
+     "a": "Troponin I/T",
+     "b": "Cardiac muscle injury; high confirms myocardial infarction"
+    },
+    {
+     "a": "HbA1c",
+     "b": "Glycaemic control over 3 months; high indicates diabetes"
+    },
+    {
+     "a": "Prothrombin time/INR",
+     "b": "Coagulation status; prolonged indicates clotting factor deficiency or anticoagulant effect"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by laboratory thresholds and clinical context. Staging uses established systems such as the Child‑Pugh score for liver disease or the Ranson criteria for pancreatitis.",
+   "b": [
+    "Use lab values to classify mild, moderate, severe"
+   ],
+   "t": [
+    {
+     "a": "Ranson criteria",
+     "b": "Predicts mortality in acute pancreatitis; >3 points = high risk"
+    },
+    {
+     "a": "Child‑Pugh",
+     "b": "Assesses cirrhosis severity; higher points = worse prognosis"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common causes vary by setting. In low‑resource areas, infections (HIV, TB, malaria, hepatitis B), nutritional deficiencies, and herbal toxins are frequent culprits.",
+   "b": [
+    "Autoimmune: lupus, rheumatoid arthritis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often show nonspecific symptoms: fatigue, jaundice, abdominal pain, or altered mental status. Lab abnormalities guide the differential.",
+   "b": [
+    "Abdominal pain with lipase >3× ULN points to pancreatitis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests answer specific pathophysiological questions. When unavailable, clinical judgment and alternative markers are used.",
+   "b": [
+    "Use bedside tests when lab access is limited"
+   ],
+   "t": [
+    {
+     "a": "Point‑of‑care glucose",
+     "b": "Detects hypoglycaemia; low glucose = urgent treatment"
+    },
+    {
+     "a": "Rapid malaria test",
+     "b": "Confirms parasitemia; positive = treat with antimalarial"
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Detects proteinuria; high protein suggests nephrotic syndrome"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain lab patterns predict imminent danger. Prompt recognition prevents mortality.",
+   "b": [
+    "Markedly low platelets with bleeding → consumptive coagulopathy"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then support organ function. Drug choice considers efficacy, safety, and local availability.",
+   "b": [
+    "Anticoagulants for thrombotic events, avoiding bleeding risks"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of key biomarkers assesses treatment response. Prevention focuses on vaccination, safe practices, and education.",
+   "b": [
+    "Vaccinate against hepatitis B and influenza"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Some conditions mimic biochemical patterns; clinical context distinguishes them.",
+   "b": [
+    "Thyrotoxicosis vs pheochromocytoma"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain factors can distort lab values, leading to misdiagnosis.",
+   "b": [
+    "Severe dehydration concentrates electrolytes"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute renal failure with rising creatinine and oliguria",
+  "Severe hyperkalaemia with ECG changes",
+  "High troponin with chest pain",
+  "Markedly elevated liver enzymes with jaundice"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of acute kidney injury in low‑resource settings?",
+   "a": "Severe dehydration from diarrhoea or malaria, and infections like leptospirosis."
+  },
+  {
+   "q": "Why is HbA1c useful in diabetes management?",
+   "a": "It reflects average glucose over 2–3 months, guiding long‑term control."
+  },
+  {
+   "q": "When should I order a liver function panel?",
+   "a": "Any patient with jaundice, abdominal pain, or unexplained fatigue."
+  }
+ ],
+ "exam": [
+  "Explain how serum creatinine reflects glomerular filtration rate and its limitations in malnourished patients.",
+  "Describe the Ranson criteria for acute pancreatitis and how they guide treatment decisions.",
+  "Discuss the differential diagnosis of elevated AST/ALT and the role of viral serology."
+ ],
+ "related": [
+  "Hematology",
+  "Endocrinology",
+  "Infectious diseases",
+  "Renal medicine",
+  "Critical care"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

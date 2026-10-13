@@ -1,0 +1,115 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Erythropoiesis is the bone‑marrow process that creates mature red blood cells. It integrates oxygen sensing, hormone signaling, and iron handling, and its failure produces anemia.",
+ "aka": [
+  "RBC production",
+  "Erythropoietic process"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Red blood cells are generated from multipotent hematopoietic stem cells in the erythroid lineage. The journey from a pro‑erythroblast to a reticulocyte takes about 7 days and yields ~2 million cells per second in a healthy adult.",
+   "b": [
+    "Occurs in red marrow of flat bones and in the pelvis.",
+    "Each mature RBC carries ~270 million hemoglobin molecules."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Stem cells commit to the erythroid line under the influence of transcription factors (GATA‑1, EKLF). Early progenitors proliferate, then undergo hemoglobin synthesis, nuclear condensation, and enucleation to become reticulocytes that enter circulation.",
+   "b": [
+    "Iron is imported via transferrin‑receptor (CD71) and stored as ferritin.",
+    "Heme synthesis occurs partly in mitochondria (δ‑ALA → protoporphyrin IX).",
+    "Enucleation is assisted by macrophage ‘nurse cells’."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Kidney peritubular cells sense arterial O₂ tension and release erythropoietin (EPO). EPO binds the EPO‑R on early erythroblasts, promoting survival and proliferation. Iron availability, hepcidin, and cytokines fine‑tune output.",
+   "b": [
+    "Hypoxia → ↑EPO (peak 2–3 days).",
+    "Inflammation → ↑hepcidin → ↓iron release → blunted erythropoiesis."
+   ],
+   "t": [
+    {
+     "a": "Serum EPO level",
+     "b": "Is the anemia due to inadequate hormonal drive? High in hypoxic states, low in renal failure."
+    },
+    {
+     "a": "Serum ferritin / transferrin saturation",
+     "b": "Is iron supply sufficient? Low ferritin indicates true iron deficiency; high ferritin with low saturation suggests functional iron deficiency (e.g., inflammation)."
+    },
+    {
+     "a": "Reticulocyte count",
+     "b": "Is the marrow responding? Low retic in aplastic or iron‑deficiency anemia; high retic in hemolysis or blood loss."
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Failure can be quantitative (decreased production) or qualitative (defective hemoglobin). Common mechanisms include iron deficiency, chronic disease, marrow infiltration, viral suppression, and inherited dyserythropoiesis.",
+   "b": [
+    "Iron‑deficiency anemia – most common worldwide; diet‑poor or chronic blood loss.",
+    "Anemia of chronic disease – hepcidin‑mediated iron sequestration.",
+    "Aplastic crisis – parvovirus B19 transiently halts erythropoiesis, dangerous in sickle cell or thalassaemia.",
+    "Congenital dyserythropoietic anaemia – ineffective erythropoiesis with multinucleated erythroblasts."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding erythropoiesis guides work‑up of anemia, predicts response to therapy, and alerts clinicians to life‑threatening crises in hemolytic disorders.",
+   "b": [
+    "A low retic count with microcytic anemia → iron deficiency or chronic disease.",
+    "A high retic count with normocytic anemia → hemolysis or acute blood loss.",
+    "Sudden drop in retics in a sickle‑cell child → parvovirus B19 aplastic crisis; urgent transfusion needed."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points tested: stimulus for EPO, iron‑regulatory role of hepcidin, interpretation of reticulocyte index, and recognition of aplastic crisis in hemolytic disease.",
+   "b": [
+    "EPO is produced mainly by renal peritubular fibroblasts.",
+    "Hepcidin rises with inflammation and blocks ferroportin.",
+    "Parvovirus B19 targets erythroid progenitors → aplastic crisis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe anemia (Hb < 7 g/dL) with tachycardia or hypotension",
+  "Aplastic crisis in sickle‑cell disease (rapid Hb drop, retic < 1%)",
+  "Acute hemolysis with dark urine and jaundice"
+ ],
+ "faq": [
+  {
+   "q": "Why does anemia of chronic disease have normal or high ferritin?",
+   "a": "Inflammation raises hepcidin, trapping iron in macrophages; ferritin reflects stored iron and is an acute‑phase reactant."
+  },
+  {
+   "q": "Can vitamin B12 deficiency affect erythropoiesis?",
+   "a": "Yes, it impairs DNA synthesis, causing macrocytic anemia with ineffective erythropoiesis."
+  },
+  {
+   "q": "What is the role of the spleen in erythropoiesis?",
+   "a": "The spleen removes abnormal or aged RBCs and provides a niche for late‑stage maturation of reticulocytes."
+  }
+ ],
+ "exam": [
+  "Explain how hypoxia leads to increased red‑cell mass, naming the key hormone and its source.",
+  "Interpret a reticulocyte count of 0.5 % in a patient with Hb 6 g/dL and explain the likely pathophysiology.",
+  "List three causes of ineffective erythropoiesis and describe one laboratory clue for each."
+ ],
+ "related": [
+  "Iron metabolism",
+  "Hemoglobin synthesis",
+  "Anemia of chronic disease",
+  "Sickle cell disease",
+  "Thalassaemia",
+  "Parvovirus B19 infection",
+  "Bone‑marrow failure syndromes"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

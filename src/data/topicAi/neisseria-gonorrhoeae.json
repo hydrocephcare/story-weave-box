@@ -1,0 +1,115 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Neisseria gonorrhoeae is a gram‑negative diplococcus causing gonorrhoea, a sexually transmitted infection that can affect the genitourinary tract, rectum, pharynx and eyes. It spreads rapidly, often co‑infects with Chlamydia, and shows increasing antimicrobial resistance.",
+ "aka": [
+  "N. gonorrhoeae",
+  "the gonococcus"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Gonorrhoea is a common STI worldwide, transmitted by sexual contact or perinatally. It can be asymptomatic, especially in women, but may progress to pelvic inflammatory disease, epididymitis, disseminated infection, or neonatal conjunctivitis.",
+   "b": [
+    "Incidence highest in adolescents and young adults",
+    "Risk rises with multiple partners, inconsistent condom use, and co‑existing STIs"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "A fastidious, oxidase‑positive, gram‑negative diplococcus that grows on chocolate or Thayer‑Martin agar. It expresses pili for attachment, Opa proteins for invasion, and a variable outer‑membrane protein that evades immunity.",
+   "b": [
+    "Requires CO₂ and enriched media",
+    "Often β‑lactamase positive, high tetracycline resistance"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Direct mucosal contact transmits the bacteria. After attachment to epithelial cells, it multiplies intracellularly, causing local inflammation and shedding of infected cells that spread to new hosts.",
+   "b": [
+    "Can infect urethra, cervix, rectum, pharynx, conjunctiva",
+    "Perinatal transmission causes neonatal ophthalmia"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Clinical presentations vary by site. Urethritis in men causes purulent discharge and dysuria; cervicitis in women often silent but may cause mucopurulent discharge. Complications include PID, epididymitis, disseminated gonococcal infection (DGI), and neonatal conjunctivitis.",
+   "b": [
+    "PID: lower abdominal pain, cervical motion tenderness, fever",
+    "DGI: migratory arthritis, tenosynovitis, pustular rash",
+    "Neonatal conjunctivitis: purulent eye discharge within 2‑5 days of birth"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Combine clinical suspicion with laboratory confirmation. NAAT (nucleic acid amplification test) from site‑specific swabs is the preferred method; Gram stain is useful in symptomatic men.",
+   "t": [
+    {
+     "a": "NAAT from urethral, cervical, rectal or pharyngeal swab",
+     "b": "Detects bacterial DNA/RNA; a positive result confirms infection even if asymptomatic"
+    },
+    {
+     "a": "Gram stain of urethral discharge",
+     "b": "Shows intracellular gram‑negative diplococci; positive in men, less sensitive in women"
+    },
+    {
+     "a": "Culture on Thayer‑Martin agar",
+     "b": "Allows antimicrobial susceptibility testing; essential when resistance is suspected or NAAT unavailable"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treat the infection promptly with a dual‑therapy regimen to cover possible co‑infection with Chlamydia and to reduce resistance pressure. Counsel on partner notification and safe sex.",
+   "b": [
+    "Avoid fluoroquinolones and macrolides in many regions due to high resistance",
+    "If ceftriaxone unavailable, use spectinomycin where susceptibility confirmed"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and clinical practice.",
+   "b": [
+    "Gram‑negative intracellular diplococci on urethral smear = gonorrhoea in men",
+    "NAAT is the gold standard for all sites; culture needed for susceptibility",
+    "Always treat for Chlamydia when gonorrhoea is diagnosed"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pelvic pain with fever (possible PID)",
+  "High‑grade fever, joint swelling, or skin pustules (disseminated infection)",
+  "Newborn with purulent eye discharge (neonatal conjunctivitis)"
+ ],
+ "faq": [
+  {
+   "q": "Why is NAAT preferred over culture?",
+   "a": "NAAT is more sensitive, works on non‑viable specimens, and provides rapid results, essential for timely treatment."
+  },
+  {
+   "q": "Can gonorrhoea be cured without treating Chlamydia?",
+   "a": "No; co‑infection is common, and untreated Chlamydia can cause PID and infertility."
+  },
+  {
+   "q": "What if the patient is allergic to ceftriaxone?",
+   "a": "Use spectinomycin if susceptibility is known, or consult local guidelines for alternative cephalosporins or aztreonam."
+  }
+ ],
+ "exam": [
+  "Describe the laboratory findings that differentiate gonococcal urethritis from chlamydial urethritis.",
+  "Outline the recommended first‑line treatment for gonorrhoea and explain why dual therapy is used.",
+  "List the major complications of untreated gonorrhoea in women and the clinical signs that suggest each."
+ ],
+ "related": [
+  "Chlamydia trachomatis infection",
+  "Pelvic inflammatory disease",
+  "Disseminated gonococcal infection",
+  "Neonatal ophthalmia neonatorum",
+  "Sexually transmitted infections (STIs)",
+  "Antimicrobial resistance in Gram‑negative bacteria"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

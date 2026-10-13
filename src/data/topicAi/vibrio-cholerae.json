@@ -1,0 +1,125 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Vibrio cholerae is a gram‑negative, curved rod that thrives in brackish water and causes profuse, rice‑water diarrhea via cholera toxin. Prompt rehydration saves lives.",
+ "aka": [
+  "V. cholerae",
+  "cholera bacillus"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Vibrio cholerae is a motile, facultative anaerobe found in coastal and freshwater environments. It produces cholera toxin, a potent activator of intestinal cAMP, leading to massive fluid loss.",
+   "b": [
+    "Gram‑negative, comma‑shaped rod",
+    "Oxidase‑positive, grows on alkaline media",
+    "Serogroups O1 and O139 cause epidemic disease"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The organism’s flagella enable rapid movement in water; its toxin is encoded by a lysogenic bacteriophage (CTXφ).",
+   "b": [
+    "Flagellated, polar flagellum",
+    "Cholera toxin (CT) = AB5 exotoxin",
+    "Acid‑labile; high inoculum needed unless stomach acid is reduced"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Infection follows ingestion of contaminated water or seafood. The bacteria colonize the small‑intestine epithelium, secrete CT, and are shed in large numbers in stool.",
+   "b": [
+    "Fecal‑oral route via contaminated water",
+    "Seafood (raw oysters) can concentrate organisms",
+    "Human carriers can spread disease during outbreaks"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Cholera presents with sudden onset watery diarrhea, vomiting, and dehydration; fever is usually absent. Severity is graded by dehydration and shock.",
+   "b": [
+    "Profuse “rice‑water” stools (>1 L/h)",
+    "Mild: <5 % body weight loss; Moderate: 5‑10 %; Severe: >10 % or shock",
+    "Complications: hypovolemic shock, renal failure, death"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion is confirmed by stool culture or rapid antigen test; in low‑resource settings, stool microscopy for motile curved rods can guide therapy.",
+   "b": [
+    "Stool culture on TCBS agar shows yellow colonies",
+    "Rapid dipstick detects cholera toxin antigen",
+    "PCR for ctxA gene when available"
+   ],
+   "t": [
+    {
+     "a": "Stool culture",
+     "b": "Identifies V. cholerae and serogroup; confirms diagnosis when positive"
+    },
+    {
+     "a": "Rapid antigen test",
+     "b": "Provides bedside confirmation; useful when culture unavailable"
+    },
+    {
+     "a": "Stool microscopy",
+     "b": "Detects motile curved bacilli; supportive evidence if labs limited"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Rehydration is the cornerstone; antibiotics shorten illness and reduce transmission. Public health measures focus on safe water, sanitation, and oral cholera vaccine.",
+   "b": [
+    "Oral rehydration solution (ORS) first line",
+    "IV Ringer’s lactate for severe dehydration",
+    "Doxycycline or azithromycin for adults; erythromycin for children",
+    "Avoid quinolones in areas with high resistance"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points tested: classic stool appearance, dehydration grading, first‑line rehydration, and the role of cholera toxin in cAMP elevation.",
+   "b": [
+    "Rice‑water stool = cholera",
+    "Dehydration >10 % = severe, needs IV fluids",
+    "CTX toxin acts on Gs protein → ↑cAMP"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dehydration (dry mucous membranes, sunken eyes, rapid pulse, low blood pressure)",
+  "Shock or altered mental status",
+  "Persistent vomiting preventing oral intake"
+ ],
+ "faq": [
+  {
+   "q": "Why is fever usually absent in cholera?",
+   "a": "The toxin causes secretory diarrhea without triggering a systemic inflammatory response."
+  },
+  {
+   "q": "Can cholera be transmitted person‑to‑person?",
+   "a": "Direct transmission is rare; spread occurs mainly via contaminated water or food."
+  },
+  {
+   "q": "When are antibiotics indicated?",
+   "a": "In moderate to severe disease, or during outbreaks to reduce transmission; they do not replace rehydration."
+  }
+ ],
+ "exam": [
+  "Describe the pathophysiology of cholera toxin and its effect on intestinal secretion.",
+  "List the steps in assessing dehydration severity in a cholera patient.",
+  "Explain why oral rehydration is preferred over IV fluids in mild to moderate cholera."
+ ],
+ "related": [
+  "Enterotoxigenic Escherichia coli",
+  "Salmonella typhi",
+  "Shigella spp.",
+  "Rotavirus",
+  "Oral cholera vaccine",
+  "Waterborne disease outbreaks"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

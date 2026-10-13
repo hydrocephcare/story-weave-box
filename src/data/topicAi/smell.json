@@ -1,0 +1,110 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Smell (olfaction) detects volatile chemicals via receptors in the nasal epithelium, sending signals to the olfactory bulb and cortex. It influences nutrition, safety, and quality of life, and its loss can signal neurologic or sinonasal disease.",
+ "aka": [
+  "olfaction",
+  "olfactory sense"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The olfactory system converts airborne molecules into neural signals that are interpreted as odors. It is one of the five classic senses and uniquely linked to memory and emotion.",
+   "b": [
+    "Odorants bind to G‑protein‑coupled receptors on olfactory receptor neurons (ORNs).",
+    "ORNs send axons through the cribriform plate to the olfactory bulb."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Airflow carries odorants to the olfactory cleft where they dissolve in mucus and activate specific ORNs. Signals are refined in the olfactory bulb then projected to the piriform cortex, amygdala, and orbitofrontal cortex.",
+   "b": [
+    "Signal transduction uses cAMP cascade, opening cyclic nucleotide‑gated channels.",
+    "Each ORN expresses one receptor type, enabling pattern coding of odors."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Odor detection is modulated by nasal airflow, mucus composition, and central feedback. Hormonal changes (e.g., estrogen peaks) can transiently alter sensitivity.",
+   "b": [
+    "Nasal congestion reduces odorant access.",
+    "Estrogen surge during ovulation may diminish smell in some women."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Disruption can be conductive (blocking odorant access) or sensorineural (damage to ORNs or central pathways). Causes range from infections to neurodegenerative disease.",
+   "b": [
+    "Conductive: chronic rhinosinusitis, nasal polyps, allergic rhinitis.",
+    "Sensorineural: post‑viral anosmia, head trauma, Parkinson's, Alzheimer’s."
+   ],
+   "t": [
+    {
+     "a": "Olfactory testing (e.g., UPSIT)",
+     "b": "Is there quantitative loss? Severe loss suggests sensorineural damage; mild loss may be conductive."
+    },
+    {
+     "a": "Nasal endoscopy",
+     "b": "Is there obstruction or mucosal disease? Positive findings point to conductive causes."
+    },
+    {
+     "a": "MRI of olfactory tracts",
+     "b": "Is there central pathology (tumor, demyelination)? Helpful when peripheral work‑up is normal."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Loss of smell can jeopardize safety (gas leaks, spoiled food), nutrition, and mental health. It may be an early sign of neurodegeneration or systemic illness (e.g., COVID‑19).",
+   "b": [
+    "Unexplained anosmia warrants evaluation for viral, traumatic, or neurodegenerative causes.",
+    "Sudden anosmia with headache may indicate skull base fracture."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on differentiating conductive vs sensorineural loss, recognizing red‑flag symptoms, and knowing basic work‑up steps.",
+   "b": [
+    "Ask about recent upper‑respiratory infection, head injury, or exposure to toxins.",
+    "Check for nasal obstruction, discharge, or sinus pain.",
+    "Consider neurodegenerative disease if anosmia is gradual and accompanied by tremor or memory loss."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of smell with severe headache or trauma (possible skull fracture).",
+  "Progressive anosmia with cognitive decline (possible neurodegenerative disease).",
+  "Anosmia plus fever, facial swelling, or purulent discharge (possible invasive sinus infection)."
+ ],
+ "faq": [
+  {
+   "q": "Can a common cold cause permanent loss of smell?",
+   "a": "Usually the loss is temporary; persistent loss after a viral illness should be re‑evaluated."
+  },
+  {
+   "q": "Why do some women report reduced smell during ovulation?",
+   "a": "Hormonal fluctuations, especially estrogen peaks, can transiently dampen olfactory receptor sensitivity."
+  },
+  {
+   "q": "Is a foul vaginal discharge related to olfactory testing?",
+   "a": "No; the smell of discharge is assessed clinically, not via the olfactory system."
+  }
+ ],
+ "exam": [
+  "Describe the pathway from odorant binding to cortical perception.",
+  "List three common causes of conductive olfactory loss and one sensorineural cause.",
+  "Explain why sudden anosmia after head trauma is a medical emergency."
+ ],
+ "related": [
+  "Taste (gustation)",
+  "Nasal anatomy",
+  "Sinusitis",
+  "Neurodegenerative diseases",
+  "COVID‑19",
+  "Head trauma"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

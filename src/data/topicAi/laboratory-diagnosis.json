@@ -1,0 +1,92 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Laboratory diagnosis is a clinician’s detective work: choose the right sample, test, and interpretation to guide treatment. In low‑resource settings, prioritize rapid, affordable methods and know when to rely on clinical judgment.",
+ "aka": [
+  "Lab diagnosis",
+  "Microbiological testing"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Clinical suspicion drives the laboratory workup. The goal is to identify the pathogen, its resistance profile, and the infection site, while considering resource constraints.",
+   "b": [
+    "Sample type matters",
+    "Rapid tests save time",
+    "Confirmatory tests are gold standard"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Microbes vary in size, shape, staining, and growth requirements. Recognizing these traits narrows the differential and informs the choice of diagnostic tests.",
+   "b": [
+    "Gram stain distinguishes Gram‑positive vs. Gram‑negative",
+    "Culture media reveal growth patterns",
+    "Molecular probes target species‑specific DNA"
+   ],
+   "t": [
+    {
+     "a": "Gram stain",
+     "b": "Gram‑positive cocci in chains suggest staphylococci; Gram‑negative diplococci suggest Neisseria; acid‑fast rods indicate mycobacteria."
+    },
+    {
+     "a": "Culture on selective media",
+     "b": "Selective media inhibit contaminants and highlight the pathogen (e.g., blood agar for S. pneumoniae)."
+    }
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Understanding how a pathogen spreads and replicates helps choose appropriate specimens and anticipate complications.",
+   "b": [
+    "Direct contact, droplets, vectors, food",
+    "Latency periods affect sample timing"
+   ],
+   "t": [
+    {
+     "a": "PCR",
+     "b": "Detects pathogen DNA in blood, CSF, or respiratory secretions, especially when culture is negative or antibiotics have been started."
+    },
+    {
+     "a": "Antigen test",
+     "b": "Presence of specific polysaccharide or protein antigens, confirming infection even after antibiotics."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sepsis",
+  "Neurologic deterioration",
+  "Unexplained shock"
+ ],
+ "faq": [
+  {
+   "q": "When is a culture unnecessary?",
+   "a": "If a rapid, highly specific test is positive and the patient is stable, culture may be deferred, but confirmatory testing is ideal."
+  },
+  {
+   "q": "Can a negative antigen test rule out infection?",
+   "a": "No; antigen tests have limited sensitivity, especially after antibiotics; a negative result should not preclude treatment if clinical suspicion remains."
+  },
+  {
+   "q": "What if the lab cannot perform PCR?",
+   "a": "Use microscopy, culture, and antigen tests; repeat samples and consider empirical therapy guided by local resistance patterns."
+  }
+ ],
+ "exam": [
+  "Explain why a Gram‑positive lancet‑shaped diplococcus on sputum Gram stain suggests pneumococcal pneumonia and how you would confirm it.",
+  "Describe the diagnostic algorithm for suspected tuberculosis in a patient with chronic cough in a high‑prevalence area.",
+  "Outline the steps you would take to diagnose and manage a patient with suspected meningitis when only a rapid antigen test is available."
+ ],
+ "related": [
+  "Bacterial meningitis",
+  "Tuberculosis",
+  "Antimicrobial resistance",
+  "Rapid diagnostic tests",
+  "Infection control"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

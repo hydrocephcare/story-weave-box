@@ -1,0 +1,107 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The femoral artery is the main blood supplier to the lower limb, running through the femoral triangle and giving off important branches. Its pulse and sound can reveal vascular disease, and its injury can cause life‑threatening bleeding.",
+ "aka": [
+  "Femoral trunk"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The femoral artery is the continuation of the external iliac artery, entering the thigh at the inguinal ligament. It supplies oxygenated blood to the thigh, knee, and lower leg.",
+   "b": [
+    "Key artery of the lower limb",
+    "Pulse palpable in the groin"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lies medial to the femoral vein and lateral to the femoral nerve within the femoral triangle. The artery is a thick‑walled, elastic vessel.",
+   "b": [
+    "Runs from the inguinal ligament to the adductor canal"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Medial: femoral vein; lateral: femoral nerve; anteriorly: femoral sheath; posteriorly: adductor muscles.",
+   "b": [
+    "Femoral canal contains lymphatics and Cloquet's node"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "After entering the thigh it gives off the profunda femoris (deep femoral) and several perforating branches to the thigh muscles.",
+   "b": [
+    "Profunda femoris supplies posterior thigh"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "No direct nerve supply; however, the femoral nerve runs alongside and can be injured with arterial trauma."
+  },
+  {
+   "h": "Function",
+   "p": "Provides arterial blood to the thigh, knee, and lower leg. Its pulse is a vital sign for assessing peripheral perfusion."
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Femoral artery injuries can cause rapid hemorrhage. Duroziez's sign (to‑and‑fro murmur) indicates femoral artery stenosis. In low‑resource settings, trauma or infection can compromise the artery.",
+   "t": [
+    {
+     "a": "Doppler ultrasound",
+     "b": "Detects flow velocity; low velocity suggests stenosis or occlusion."
+    },
+    {
+     "a": "Ankle‑brachial index",
+     "b": "Compares ankle to arm pressure; <0.9 indicates peripheral arterial disease."
+    },
+    {
+     "a": "CT angiography",
+     "b": "Visualises arterial lumen and collateral flow; used when available."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the femoral triangle landmarks: inguinal ligament (superior), sartorius (lateral), adductor longus (medial). A palpable pulse here confirms arterial integrity.",
+   "b": [
+    "Pulse in femoral triangle = good perfusion"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe groin pain with pulselessness, sudden drop in lower limb perfusion, uncontrolled bleeding after trauma"
+ ],
+ "faq": [
+  {
+   "q": "What causes a pistol‑shot sound over the femoral artery?",
+   "a": "It is a bruit from turbulent flow, often due to atherosclerotic stenosis or atherosclerotic plaque in the femoral artery."
+  },
+  {
+   "q": "How does Duroziez's sign help in diagnosis?",
+   "a": "A to‑and‑fro murmur heard over the femoral artery indicates aortic or femoral artery stenosis and prompts further vascular imaging."
+  },
+  {
+   "q": "Why is the femoral artery preferred for central access in emergencies?",
+   "a": "It is superficial, large, and has a short course to the aorta, allowing rapid cannulation and control of bleeding."
+  }
+ ],
+ "exam": [
+  "Explain the anatomical course of the femoral artery and its relation to the femoral triangle.",
+  "Describe the clinical significance of a pistol‑shot bruit over the femoral artery and the steps to investigate it.",
+  "Outline the management of a femoral artery transection in a low‑resource setting."
+ ],
+ "related": [
+  "Femoral vein",
+  "Femoral nerve",
+  "Profunda femoris artery",
+  "Femoral triangle",
+  "Duroziez's sign",
+  "Ankle‑brachial index",
+  "Peripheral arterial disease"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

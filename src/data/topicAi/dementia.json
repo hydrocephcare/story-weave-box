@@ -1,0 +1,142 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Dementia is a progressive decline in cognition that interferes with daily life. It is diagnosed by history, exam, and supported by imaging and biomarkers, and managed by treating reversible causes and providing supportive care.",
+ "aka": [
+  "Major neurocognitive disorder",
+  "Alzheimer’s disease (most common type)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Dementia is a persistent, progressive impairment of memory and other cognitive domains that causes functional decline. Diagnosis follows DSM‑5 criteria: cognitive decline >3 months, impairment in at least two domains, and functional loss.",
+   "b": [
+    "History of gradual decline",
+    "Cognitive testing (MMSE, MoCA)",
+    "Functional assessment (ADLs)"
+   ],
+   "t": [
+    {
+     "a": "MMSE",
+     "b": "Screen for global cognition; score <24 suggests dementia"
+    },
+    {
+     "a": "MoCA",
+     "b": "Detect mild cognitive impairment; score <26 indicates impairment"
+    },
+    {
+     "a": "Brain MRI",
+     "b": "Rule out structural lesions, vascular disease, or hydrocephalus"
+    },
+    {
+     "a": "CSF Aβ42, total tau, p-tau",
+     "b": "Support Alzheimer’s pathology; low Aβ42 and high tau suggest AD"
+    },
+    {
+     "a": "Serum B12, TSH, RPR, HIV, hepatitis B/C",
+     "b": "Identify reversible causes"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Clinical Dementia Rating (CDR) stages dementia from 0 (no impairment) to 3 (severe). Staging guides prognosis and care planning.",
+   "b": [
+    "CDR 0: Normal",
+    "CDR 0.5: Very mild",
+    "CDR 1: Mild",
+    "CDR 2: Moderate",
+    "CDR 3: Severe"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, treatable causes must be excluded first. The most common causes are Alzheimer’s disease, vascular dementia, and infectious or metabolic disorders.",
+   "b": [
+    "Sickle cell disease complications"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report memory loss, confusion, and difficulty with familiar tasks. Early signs include word-finding difficulty and impaired executive function.",
+   "b": [
+    "Behavioral changes (apathy, agitation)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use a stepwise approach: basic labs, imaging, and specific biomarkers when available. When tests are unavailable, rely on clinical judgment and simple tools.",
+   "b": [
+    "Functional assessment tools"
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags suggest urgent evaluation or alternative diagnosis. Complications include falls, malnutrition, and delirium.",
+   "b": [
+    "Weight loss"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat reversible causes first, then provide disease‑specific therapy and supportive care. Pharmacologic options target cholinergic deficits and glutamatergic excess.",
+   "b": [
+    "Regular monitoring for side effects (GI, bradycardia)"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular reassessment of cognition, function, and caregiver burden is essential. Prevention focuses on vascular risk control and early treatment of reversible causes.",
+   "b": [
+    "Screen for depression and anxiety"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic dementia; distinguishing them is critical for appropriate treatment.",
+   "b": [
+    "Thyroid dysfunction"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some investigations may be falsely normal or abnormal, especially in low‑resource settings.",
+   "b": [
+    "HIV serology may be negative in early infection"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid cognitive decline, new focal neurological signs, severe agitation, unexplained weight loss, or sudden worsening of symptoms"
+ ],
+ "faq": [
+  {
+   "q": "Can dementia be cured?",
+   "a": "No, but reversible causes can be treated and disease‑specific drugs can slow progression."
+  },
+  {
+   "q": "What is pseudodementia?",
+   "a": "Cognitive decline from severe mood disorder that improves with psychiatric treatment."
+  },
+  {
+   "q": "Is normal pressure hydrocephalus a type of dementia?",
+   "a": "It presents with dementia, gait disturbance, and urinary incontinence; it is treatable with shunting."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic criteria for dementia and how you would differentiate it from pseudodementia.",
+  "List the first‑line pharmacologic treatments for Alzheimer’s disease and justify their use.",
+  "Describe the work‑up you would perform for a patient with suspected vascular dementia in a low‑resource setting."
+ ],
+ "related": [
+  "Alzheimer’s disease",
+  "Vascular dementia",
+  "Normal pressure hydrocephalus",
+  "Pseudodementia",
+  "HIV‑associated neurocognitive disorder"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The skull protects the brain, anchors the face, and supports sensory organs. Its complex sutures and foramina allow growth, vascular supply, and neural passage. Clinical insight focuses on fractures, infections, and congenital anomalies.",
+ "aka": [
+  "Cranium"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The skull is a rigid bony enclosure formed by the cranial vault and facial bones, protecting the brain and supporting facial structures. It also provides attachment sites for muscles and passageways for nerves and vessels.",
+   "b": [
+    "Cranial vault: frontal, parietal, temporal, occipital",
+    "Facial bones: maxilla, mandible, zygomatic, nasal, etc."
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The skull is divided into the cranial and facial components. The cranial vault consists of four paired bones forming the protective shell, while the facial skeleton forms the anterior face.",
+   "b": [
+    "Cranial bones articulate at sutures: coronal, sagittal, lambdoid, squamosal"
+   ],
+   "t": [
+    {
+     "a": "X‑ray skull",
+     "b": "Detects fractures, bone lesions, and suture abnormalities; a linear fracture indicates a break in bone continuity."
+    }
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The skull encases the brain, surrounds the orbits, and forms the base for the cranial cavity. It interfaces with the cervical spine and the facial skeleton.",
+   "b": [
+    "Brain: protected by dura, arachnoid, pia",
+    "Orbits: contain eyeballs"
+   ],
+   "t": [
+    {
+     "a": "CT scan",
+     "b": "Shows fracture displacement, epidural hematoma, and bone integrity; a crescent‑shaped hyperdensity suggests epidural bleed."
+    }
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Cranial bones receive blood from the external carotid system via the superficial temporal, occipital, and posterior auricular arteries.",
+   "b": [
+    "External carotid branches supply periosteum"
+   ],
+   "t": [
+    {
+     "a": "Doppler ultrasound",
+     "b": "Assesses arterial flow to the scalp; absent flow may indicate vascular injury."
+    }
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The skull houses cranial nerves that emerge through foramina, providing sensory and motor innervation to the head and neck.",
+   "b": [
+    "CN V (trigeminal) through foramen ovale and spinosum"
+   ],
+   "t": [
+    {
+     "a": "Neurological exam",
+     "b": "Tests cranial nerve function; deficits suggest skull base fractures or nerve compression."
+    }
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Beyond protection, the skull supports the brain’s metabolic activity, maintains intracranial pressure, and provides a rigid compartment for neural tissue.",
+   "b": [
+    "Maintains CSF dynamics"
+   ],
+   "t": [
+    {
+     "a": "Intracranial pressure monitoring",
+     "b": "Detects rising pressure; a sudden increase may indicate hemorrhage or edema."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Fractures, epidural hematomas, skull base injuries, and congenital anomalies like craniosynostosis are common clinical concerns. In low‑resource settings, infections such as osteomyelitis and tuberculosis can affect the skull.",
+   "b": [
+    "Linear fracture: often from blunt trauma; epidural bleed: arterial source, rapid deterioration"
+   ],
+   "t": [
+    {
+     "a": "CT scan",
+     "b": "Identifies fracture type and hematoma; a crescent shape indicates epidural bleed."
+    },
+    {
+     "a": "CBC",
+     "b": "Elevated WBC suggests infection; anemia may indicate chronic disease."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that a linear skull fracture is a simple break, whereas a depressed fracture involves bone displacement. Epidural hematomas present with a classic lucid interval.",
+   "b": [
+    "Linear fracture: no bone displacement; depressed fracture: bone is pushed inward"
+   ],
+   "t": [
+    {
+     "a": "Head CT",
+     "b": "Differentiates epidural from subdural hematoma; epidural shows lens‑shaped hyperdensity."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe head injury with loss of consciousness, vomiting, seizures, or focal neurological deficits."
+ ],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

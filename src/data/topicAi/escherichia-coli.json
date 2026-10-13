@@ -1,0 +1,145 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Escherichia coli is a Gram‑negative rod that lives in the gut but can cause infections when it escapes its niche. Clinicians must identify the strain, its resistance pattern, and the site of infection to guide therapy.",
+ "aka": [
+  "E. coli"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "E. coli is a common commensal of the intestinal tract, but pathogenic strains can cause urinary, gastrointestinal, neonatal, and bloodstream infections.",
+   "b": [
+    "Gram‑negative rod, facultative anaerobe",
+    "Encodes lipopolysaccharide (LPS) endotoxin"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Pathogenic E. coli strains are classified by virulence factors: enterotoxins, adhesins, siderophores, and LPS. They are usually susceptible to beta‑lactams but resistance is rising.",
+   "b": [
+    "LPS triggers sepsis",
+    "Enterotoxins cause watery diarrhea"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission is fecal‑oral, via contaminated food or water, or vertical from mother to infant. In the gut, the bacteria colonise the ileum and colon, then can translocate into sterile sites.",
+   "b": [
+    "Foodborne outbreaks",
+    "Maternal colonisation"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "E. coli causes urinary tract infections (most common), neonatal sepsis/meningitis, travel‑related diarrhoea, and intra‑abdominal infections.",
+   "b": [
+    "UTI: cystitis, pyelonephritis",
+    "Neonatal sepsis: early‑onset"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion is confirmed by culture and susceptibility testing. In low‑resource settings, rapid urine dipstick and bedside microscopy can guide empiric therapy.",
+   "t": [
+    {
+     "a": "Urine culture",
+     "b": "Detects colony forming units; >10^5 CFU/mL indicates infection; guides antibiotic choice."
+    },
+    {
+     "a": "Blood culture",
+     "b": "Positive in septicemia; identifies strain and resistance."
+    },
+    {
+     "a": "Dipstick leukocyte esterase",
+     "b": "Positive suggests pyuria; supports UTI diagnosis."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treat the source: antibiotics based on local resistance patterns, supportive care, and source control. Avoid nephrotoxic agents in renal failure.",
+   "t": [
+    {
+     "a": "Ceftriaxone",
+     "b": "Treats most E. coli UTIs; avoids aminoglycoside toxicity."
+    },
+    {
+     "a": "Ampicillin‑sulbactam",
+     "b": "Alternative if beta‑lactam allergy; covers many Enterobacteriaceae."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that neonatal early‑onset sepsis is often caused by E. coli; empiric therapy must cover it. In low‑resource settings, use a single‑dose ceftriaxone if culture is unavailable.",
+   "b": [
+    "Early‑onset neonatal sepsis: E. coli 80‑85%"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other Gram‑negative rods such as Klebsiella and Pseudomonas can mimic E. coli in culture, but differ in capsule and resistance patterns.",
+   "b": [
+    "Klebsiella: polysaccharide capsule"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low bacterial load may give false‑negative cultures; LPS can cause endotoxin shock even with few organisms.",
+   "b": [
+    "False‑negative urine culture in early UTI"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First treat the infection, then provide supportive care. Monitor renal function, electrolytes, and signs of sepsis.",
+   "b": [
+    "Source control: catheter removal"
+   ],
+   "t": [
+    {
+     "a": "Renal function tests",
+     "b": "Monitor for nephrotoxicity of antibiotics."
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Track inflammation; rising levels suggest treatment failure."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with fever, signs of peritonitis, persistent high fever after 48 hours of antibiotics, sudden worsening of mental status, or shock"
+ ],
+ "faq": [
+  {
+   "q": "Can E. coli cause food poisoning?",
+   "a": "Yes, enterotoxigenic strains produce heat‑labile or heat‑stable toxins that cause watery diarrhoea."
+  },
+  {
+   "q": "Is E. coli always harmful?",
+   "a": "Most strains are harmless commensals; only specific virulence factors make them pathogenic."
+  },
+  {
+   "q": "What is the best empiric antibiotic for neonatal sepsis?",
+   "a": "Ceftriaxone or ampicillin‑sulbactam, covering E. coli and group B streptococcus."
+  }
+ ],
+ "exam": [
+  "Explain why early‑onset neonatal sepsis is most often caused by E. coli and how you would empirically treat it.",
+  "Describe the diagnostic criteria for a urinary tract infection caused by E. coli and the significance of colony count thresholds.",
+  "Outline the steps you would take if a patient with suspected E. coli sepsis has a negative blood culture but remains febrile."
+ ],
+ "related": [
+  "Urinary tract infection",
+  "Neonatal sepsis",
+  "Enterotoxigenic E. coli",
+  "Antimicrobial resistance",
+  "LPS endotoxin"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

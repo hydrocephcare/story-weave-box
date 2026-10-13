@@ -1,0 +1,130 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The trachea is a 10‑12 cm cartilaginous tube that conducts air from larynx to main bronchi. Its rigidity, mucosal lining and blood supply protect the airway and influence many emergency presentations.",
+ "aka": [
+  "windpipe",
+  "trachea"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The trachea is a midline respiratory conduit extending from the cricoid cartilage (C6) to the carina at T4‑T5. It is supported by C‑shaped hyaline cartilage rings and a posterior membranous wall.",
+   "b": [
+    "Length ~10‑12 cm, diameter ~2 cm in adults",
+    "15‑20 incomplete cartilage rings",
+    "Mucosa contains ciliated pseudostratified columnar epithelium with goblet cells"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It lies anterior to the esophagus, within the visceral (pretracheal) fascia, and is slightly right‑deviated in the thorax.",
+   "b": [
+    "Upper border: inferior to cricoid cartilage",
+    "Lower border: bifurcates into right/left main bronchi at the carina",
+    "Posterior wall: smooth muscle (trachealis) allows slight diameter change"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "In the neck, the trachea is surrounded by thyroid, parathyroids, and recurrent laryngeal nerves; in the thorax, it contacts the aortic arch and superior vena cava.",
+   "b": [
+    "Lateral: thyroid lobes (upper), brachiocephalic vessels (mid)",
+    "Posterior: esophagus",
+    "Superior: larynx and cricoid cartilage"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial blood comes from inferior thyroid arteries (cervical) and bronchial arteries (thoracic). Venous drainage follows the thyroid and bronchial veins to the brachiocephalic veins.",
+   "b": [
+    "Cervical segment: inferior thyroid artery branches",
+    "Thoracic segment: bronchial arteries from thoracic aorta"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory innervation is via the recurrent laryngeal nerves (branch of vagus) and the vagus itself; autonomic fibers regulate mucosal secretions.",
+   "b": [
+    "Afferent cough reflex via vagus",
+    "Parasympathetic secretomotor fibers from vagus"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Provides a rigid, protected airway, humidifies inspired air, and clears secretions via ciliary action and cough reflex.",
+   "b": [
+    "Cough reflex triggered by irritant receptors in tracheal mucosa",
+    "Trachealis muscle adjusts lumen during coughing"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Trauma, infection, or obstruction of the trachea can cause life‑threatening airway compromise. Recognising patterns such as deviated trachea, neck vein distension, or absent breath sounds guides emergency care.",
+   "b": [
+    "Tension pneumothorax: deviated trachea away, hypotension, distended neck veins",
+    "Tracheal deviation from large pleural effusion or mass pushes airway opposite side",
+    "Traumatic tracheal rupture: subcutaneous emphysema, hoarseness, air leak"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Does the trachea deviate and is there a pneumothorax? → Confirms tension pneumothorax; immediate needle decompression needed"
+    },
+    {
+     "a": "CT neck/chest",
+     "b": "Is there tracheal wall disruption or mediastinal mass? → Guides surgical repair or oncologic work‑up"
+    },
+    {
+     "a": "Bronchoscopy",
+     "b": "Is there intraluminal obstruction (foreign body, tumor, severe edema)? → Allows direct visualization and therapeutic removal"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and bedside assessment.",
+   "b": [
+    "Trachea is normally midline; deviation signals space‑occupying process or pressure imbalance",
+    "C‑shaped rings open posteriorly; injury often tears membranous wall",
+    "Cough reflex depends on vagal afferents; loss suggests high cervical spinal injury"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden tracheal deviation with hypotension (possible tension pneumothorax)",
+  "Severe dyspnoea with stridor and palpable neck mass (possible airway obstruction)",
+  "Rapidly worsening neck swelling with subcutaneous emphysema (possible tracheal rupture)"
+ ],
+ "faq": [
+  {
+   "q": "Why does the trachea deviate in a tension pneumothorax?",
+   "a": "Air accumulation raises intrapleural pressure, pushing the mediastinum and trachea to the opposite side."
+  },
+  {
+   "q": "What protects the trachea from collapsing during coughing?",
+   "a": "The C‑shaped cartilage rings keep the lumen open; the posterior membranous wall can expand."
+  },
+  {
+   "q": "How is the cough reflex initiated?",
+   "a": "Irritant receptors in the tracheal mucosa send afferent signals via the vagus to the medulla, triggering a coordinated expiratory effort."
+  }
+ ],
+ "exam": [
+  "Explain how tracheal deviation helps differentiate tension pneumothorax from large pleural effusion.",
+  "Describe the blood supply to the cervical and thoracic portions of the trachea and its clinical relevance in surgery.",
+  "List three emergency conditions that present with a deviated trachea and the immediate management steps."
+ ],
+ "related": [
+  "Larynx",
+  "Bronchi",
+  "Pleural effusion",
+  "Tension pneumothorax",
+  "Tracheal intubation",
+  "Mediastinal masses"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

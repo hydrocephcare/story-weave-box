@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Anaphylaxis is a rapid, systemic allergic reaction that can cause airway obstruction, circulatory collapse, and death if untreated. Diagnosis relies on clinical criteria, with serum tryptase helping when the history is unclear.",
+ "aka": [
+  "Anaphylactic shock",
+  "IgE-mediated systemic reaction"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Anaphylaxis is a severe, life‑threatening systemic hypersensitivity reaction that involves two or more organ systems or causes hypotension after exposure to a trigger.",
+   "b": [
+    "Acute onset (minutes to hours)",
+    "Involves skin, respiratory, cardiovascular, or gastrointestinal systems"
+   ],
+   "t": [
+    {
+     "a": "Clinical criteria (NIAID/FAAN)",
+     "b": "Does the patient meet any of the three major criteria? Presence confirms diagnosis."
+    },
+    {
+     "a": "Serum tryptase",
+     "b": "Is tryptase elevated above baseline? Supports mast cell degranulation when history is uncertain."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Ring and Messmer system, from mild cutaneous signs (grade I) to cardiovascular collapse (grade IV).",
+   "b": [
+    "Grade I: Skin only",
+    "Grade II: Respiratory or GI symptoms",
+    "Grade III: Hypotension, bronchospasm",
+    "Grade IV: Cardiac arrest"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Triggers are grouped by exposure type; food, insect venom, and drugs are most common worldwide, with additional considerations in low‑resource settings.",
+   "b": [
+    "Food (peanuts, tree nuts, shellfish)",
+    "Parenteral drugs (penicillins, radiocontrast)",
+    "Insect stings (wasp, bee)",
+    "Latex, adhesives",
+    "Infections (HIV, malaria) can act as cofactors"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop rapid skin flushing, urticaria, angioedema, wheeze, stridor, hypotension, and possibly loss of consciousness.",
+   "b": [
+    "Cutaneous: hives, itching, swelling",
+    "Respiratory: dyspnea, stridor, bronchospasm",
+    "Cardiovascular: tachycardia, hypotension",
+    "GI: nausea, abdominal pain"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Testing supports diagnosis and identifies triggers; many tests may be unavailable in low‑resource settings, so clinical judgment is paramount.",
+   "t": [
+    {
+     "a": "Serum tryptase",
+     "b": "Is mast cell degranulation present? Elevated level (>1.2× baseline) confirms reaction when history is vague."
+    },
+    {
+     "a": "Specific IgE (ImmunoCAP)",
+     "b": "Which allergen caused the reaction? Positive result guides avoidance; not needed for acute management."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Is there eosinophilia? May suggest allergic background but not diagnostic."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid progression to airway obstruction or circulatory collapse signals imminent death; delayed epinephrine increases mortality.",
+   "b": [
+    "Persistent hypotension despite fluids",
+    "Severe bronchospasm unresponsive to inhaled bronchodilators",
+    "Altered mental status"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First‑line is intramuscular epinephrine, followed by airway support, fluids, and adjunct medications. Treat underlying trigger after stabilization.",
+   "b": [
+    "Epinephrine IM: reverses vasodilation, bronchospasm, and edema",
+    "High‑flow oxygen and airway positioning",
+    "IV crystalloids for hypotension",
+    "H1 antihistamine for cutaneous symptoms (adjunct)",
+    "Systemic corticosteroids to prevent biphasic reaction (adjunct)"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Patients need allergist referral, trigger identification, and an anaphylaxis action plan with self‑injectable epinephrine.",
+   "b": [
+    "Prescribe autoinjector and teach use",
+    "Provide written emergency plan",
+    "Educate on avoidance of known allergens"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic anaphylaxis share respiratory or cardiovascular signs but lack the multisystem allergic trigger.",
+   "b": [
+    "Vasovagal syncope (no skin changes, slower onset)",
+    "Acute asthma exacerbation (no hypotension, no urticaria)",
+    "Septic shock (fever, source of infection, gradual onset)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may be normal early or falsely elevated, leading to diagnostic uncertainty.",
+   "b": [
+    "Serum tryptase may be normal if drawn >4 h after reaction",
+    "Baseline IgE can be high in atopic patients without anaphylaxis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden difficulty breathing or voice change",
+  "Rapidly falling blood pressure or fainting",
+  "Severe swelling of lips, tongue, or throat"
+ ],
+ "faq": [
+  {
+   "q": "Can anaphylaxis occur without skin symptoms?",
+   "a": "Yes, especially in children; diagnosis relies on respiratory or cardiovascular involvement after exposure."
+  },
+  {
+   "q": "Why is epinephrine preferred over antihistamines?",
+   "a": "Epinephrine reverses life‑threatening airway and circulatory effects; antihistamines only treat cutaneous symptoms."
+  },
+  {
+   "q": "When is a biphasic reaction likely?",
+   "a": "It can occur 1‑72 h after the initial event, more common after severe initial reactions or delayed epinephrine."
+  }
+ ],
+ "exam": [
+  "List the three clinical criteria that establish a diagnosis of anaphylaxis.",
+  "Explain why intramuscular epinephrine is the first‑line treatment and describe its physiologic effects.",
+  "Identify two red‑flag features that require immediate escalation of care."
+ ],
+ "related": [
+  "Urticaria",
+  "Angioedema",
+  "Bronchial asthma",
+  "Septic shock",
+  "Mastocytosis",
+  "Drug hypersensitivity"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

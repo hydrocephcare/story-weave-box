@@ -1,0 +1,97 @@
+{
+ "medical": true,
+ "subject": "Obstetrics & gynaecology",
+ "summary": "The menstrual cycle is a hormonally driven cycle of follicular growth, ovulation, and luteal function that prepares the endometrium for implantation. Clinicians use cycle patterns to diagnose disorders, guide contraception, and assess fertility.",
+ "aka": [
+  "Menstrual cycle",
+  "Cycle"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The menstrual cycle is a 28‑day rhythm of hormonal changes that synchronise ovarian follicle development, ovulation, and endometrial preparation. It is the clinical foundation for diagnosing reproductive disorders and planning contraception.",
+   "b": [
+    "28‑day average, varies 21‑35 days",
+    "Follicular, ovulatory, luteal phases"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Follicular growth is driven by rising FSH, leading to estrogen secretion. Estrogen triggers LH surge, causing ovulation. The corpus luteum secretes progesterone to maintain the endometrium. If fertilisation fails, hormone drop triggers menstruation.",
+   "b": [
+    "FSH ↑ → follicle growth",
+    "Estrogen ↑ → LH surge → ovulation",
+    "Progesterone ↑ → endometrial thickening"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The hypothalamic GnRH pulse generator controls pituitary release of FSH and LH. Estrogen provides negative feedback early, then positive feedback for the LH surge. Progesterone maintains negative feedback during luteal phase.",
+   "b": [
+    "GnRH pulse frequency ↑ → LH surge",
+    "Estrogen negative feedback early, positive late"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Disorders arise from hormonal dysregulation, structural ovarian or uterine pathology, or systemic disease. Common causes include PCOS, thyroid dysfunction, stress, and infections such as chlamydia.",
+   "b": [
+    "Anemia, HIV, malaria – menstrual irregularity"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Clinicians assess cycle regularity, cycle length, and associated symptoms to guide diagnosis, contraception, and fertility treatment. Menstrual disorders can signal systemic disease or reproductive pathology.",
+   "b": [
+    "Irregular cycles → PCOS, thyroid disease"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the hormonal sequence: FSH rise → follicle → estrogen rise → LH surge → ovulation → progesterone rise. Use this to interpret lab patterns and explain menstrual disorders.",
+   "b": [
+    "Progesterone <3 ng/mL luteal phase → luteal phase defect"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause first: lifestyle for PCOS, thyroid hormone for hypothyroidism, antibiotics for infections. Supportive care includes iron for anemia and NSAIDs for dysmenorrhoea. Contraception or fertility treatment follows.",
+   "b": [
+    "Combined oral contraceptives for cycle regularity"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Anovulatory cycles mimic early pregnancy; heavy bleeding can be mistaken for menorrhagia. Distinguish with pregnancy test and bleeding pattern.",
+   "b": [
+    "Menorrhagia vs heavy menstrual bleeding – flow assessment"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low progesterone in luteal phase may be normal in early luteal phase; high estradiol can be seen in ovarian cysts. Clinical context is essential.",
+   "b": [
+    "Estradiol 200–300 pg/mL can be seen in cystic follicles"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use targeted tests based on clinical suspicion. In low‑resource settings, prioritize pregnancy test, CBC, and thyroid function. Ultrasound is essential if structural disease is suspected."
+  },
+  {
+   "h": "When to seek help",
+   "p": "Seek urgent care for severe bleeding, fever, severe pelvic pain, or signs of infection.",
+   "b": [
+    "Signs of sepsis – tachycardia, hypotension"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

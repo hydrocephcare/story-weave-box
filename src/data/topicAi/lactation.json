@@ -1,0 +1,106 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Lactation is the coordinated process of milk synthesis and ejection driven by hormonal signals and mechanical stimulation. Clinicians must assess milk supply, infant feeding patterns, and maternal health to identify and treat disorders.",
+ "aka": [
+  "Breastfeeding",
+  "Milk production"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Milk is produced by alveolar epithelial cells in the breast, secreted into ducts, and ejected by the myoepithelial layer when the infant suckles. The process is sustained by maternal nutrition and hormonal milieu.",
+   "b": [
+    "Alveoli produce milk; ducts transport; myoepithelium contracts"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Oxytocin released from the posterior pituitary triggers myoepithelial contraction, while prolactin stimulates alveolar cells to synthesize milk. Suckling provides negative pressure that drives milk flow.",
+   "b": [
+    "Oxytocin = ejection; prolactin = synthesis"
+   ],
+   "t": [
+    {
+     "a": "Serum prolactin",
+     "b": "High prolactin indicates adequate stimulation; low prolactin suggests hypoprolactinemia or pituitary dysfunction."
+    },
+    {
+     "a": "Serum oxytocin",
+     "b": "Low oxytocin can cause poor let‑down; high levels may reflect stress or pituitary disease."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Maternal nutrition, hydration, and rest are essential. Hormonal regulation involves hypothalamic–pituitary axis and local feedback from milk volume. Stress and illness can blunt prolactin and oxytocin release.",
+   "b": [
+    "Adequate calories and fluids support milk volume"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Common disorders include insufficient milk supply, mastitis, engorgement, and lactational infertility. Infections, malnutrition, and endocrine disorders disrupt the hormonal cascade.",
+   "b": [
+    "Mastitis: infection of breast tissue"
+   ],
+   "t": [
+    {
+     "a": "WBC count",
+     "b": "Elevated WBC indicates infection; normal WBC with pain suggests non‑infectious mastitis."
+    },
+    {
+     "a": "C-reactive protein",
+     "b": "High CRP supports inflammatory process."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Assessing lactation is vital for neonatal nutrition, maternal health, and prevention of postpartum complications. Early identification of supply issues or infections prevents growth faltering and sepsis.",
+   "b": [
+    "Neonatal weight gain reflects milk intake"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the sequence: suckling → oxytocin release → let‑down; prolactin sustains synthesis. In low‑resource settings, clinical assessment of milk volume and infant weight is often the only available tool.",
+   "b": [
+    "Suckling triggers oxytocin; prolactin is for synthesis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe pain with fever and redness (possible mastitis), inability to breastfeed with infant weight loss, nipple bleeding, or signs of systemic infection."
+ ],
+ "faq": [
+  {
+   "q": "What causes low milk supply?",
+   "a": "Common causes are inadequate suckling, maternal malnutrition, hormonal imbalance, stress, and certain medications."
+  },
+  {
+   "q": "How to treat mastitis?",
+   "a": "Treat with antibiotics targeting Staphylococcus aureus, encourage frequent nursing, and apply warm compresses."
+  },
+  {
+   "q": "Can a woman breastfeed while on antiretroviral therapy?",
+   "a": "Yes, most antiretrovirals are safe; consult local guidelines for specific drugs."
+  }
+ ],
+ "exam": [
+  "Explain the hormonal cascade that initiates milk ejection during breastfeeding.",
+  "Describe the clinical features and management of lactational mastitis.",
+  "Outline the steps to assess and improve milk supply in a mother with poor infant weight gain."
+ ],
+ "related": [
+  "Breast anatomy",
+  "Hormonal regulation",
+  "Neonatal nutrition",
+  "Postpartum infections",
+  "Maternal nutrition"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

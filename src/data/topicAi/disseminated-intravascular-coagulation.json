@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Disseminated Intravascular Coagulation (DIC) is an acquired syndrome of simultaneous widespread clotting and bleeding caused by uncontrolled activation of coagulation throughout the microvasculature.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "DIC is a systemic consumptive coagulopathy where clotting factors and platelets are used up faster than they can be replaced, leading to both thrombosis and bleeding.",
+   "b": [
+    "Diagnosed by a combination of clinical bleeding, organ dysfunction, and laboratory evidence of consumption coagulopathy."
+   ],
+   "t": [
+    {
+     "a": "Platelet count",
+     "b": "Is there thrombocytopenia? Low platelets support DIC and indicate severity."
+    },
+    {
+     "a": "PT/INR and aPTT",
+     "b": "Are clotting times prolonged? Prolongation reflects factor consumption."
+    },
+    {
+     "a": "Fibrinogen level",
+     "b": "Is fibrinogen low (<1.0 g/L)? Low fibrinogen is a key consumptive marker."
+    },
+    {
+     "a": "D-dimer / fibrin degradation products",
+     "b": "Are they markedly elevated? High levels show ongoing fibrinolysis."
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "Are schistocytes present? They indicate microvascular thrombi."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The ISTH scoring system grades DIC from overt to non‑overt based on platelet count, fibrinogen, PT prolongation, and D‑dimer.",
+   "b": [
+    "Score ≥5 = overt DIC (requires treatment).",
+    "Score <5 = non‑overt (monitor and treat underlying cause)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the trigger; treatment hinges on removing it.",
+   "b": [
+    "Sepsis (especially Gram‑negative) – most common worldwide.",
+    "Obstetric emergencies: abruptio placentae, amniotic fluid embolism, severe pre‑eclampsia/eclampsia.",
+    "Acute promyelocytic leukaemia (APL) – high‑risk malignancy.",
+    "Severe trauma or massive transfusion.",
+    "Incompatible blood transfusion reactions."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may show bleeding from venipuncture sites, mucous membranes, or surgical wounds, alongside signs of organ ischemia such as renal failure or altered mental status.",
+   "b": [
+    "Bleeding: petechiae, ecchymoses, oozing drains.",
+    "Thrombosis: skin necrosis, digital gangrene, pulmonary emboli.",
+    "Systemic: hypotension, oliguria, confusion."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lab work confirms consumptive coagulopathy; imaging is guided by organ dysfunction.",
+   "b": [
+    "Basic coagulation panel (platelets, PT/INR, aPTT, fibrinogen, D‑dimer).",
+    "Blood smear for schistocytes.",
+    "Renal and liver function tests to gauge organ injury."
+   ],
+   "t": [
+    {
+     "a": "Ultrasound of abdomen",
+     "b": "Is there organ infarction? Detects renal or hepatic ischemia when labs suggest dysfunction."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Is there pulmonary infiltrate? Helps differentiate sepsis‑related ARDS from pulmonary emboli."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid progression can cause fatal hemorrhage or multi‑organ failure.",
+   "b": [
+    "Uncontrolled bleeding despite transfusion.",
+    "Sudden rise in creatinine or liver enzymes.",
+    "Severe hypotension unresponsive to fluids."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying trigger first, then support the coagulation system while avoiding over‑correction.",
+   "b": [
+    "Treat cause: antibiotics for sepsis, delivery of fetus for obstetric DIC, ATRA for APL.",
+    "Replace depleted components: Fresh frozen plasma (provides clotting factors), cryoprecipitate (fibrinogen), platelet concentrates (if <50 × 10⁹/L or bleeding).",
+    "Consider low‑dose heparin only in chronic, low‑bleeding DIC with predominant thrombosis."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor labs every 6–12 h until stable; educate on early infection control and obstetric care to reduce triggers.",
+   "b": [
+    "Serial platelet, PT/INR, fibrinogen, D‑dimer.",
+    "Re‑evaluate cause treatment effectiveness.",
+    "Vaccination and prophylactic antibiotics in high‑risk patients."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that also cause bleeding or thrombosis but have different mechanisms.",
+   "b": [
+    "Thrombotic thrombocytopenic purpura (TTP) – ADAMTS13 deficiency, mainly neurologic signs.",
+    "Severe liver disease – reduced synthesis without consumptive clotting.",
+    "Heparin‑induced thrombocytopenia (HIT) – immune platelet activation, not consumptive."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain labs may appear normal early or be altered by other factors.",
+   "b": [
+    "Fibrinogen can be falsely normal in acute phase reactant rise despite consumption.",
+    "D‑dimer may be elevated in infection alone, not specific for DIC.",
+    "PT may stay within range early; trend over time is more informative."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Massive uncontrolled bleeding",
+  "Sudden organ failure (renal, hepatic, neurologic)",
+  "Severe hypotension unresponsive to fluids"
+ ],
+ "faq": [
+  {
+   "q": "Why does DIC cause both clotting and bleeding?",
+   "a": "Widespread clot formation uses up platelets and factors, leaving insufficient resources for normal hemostasis, so bleeding follows."
+  },
+  {
+   "q": "Can DIC be prevented?",
+   "a": "Prompt treatment of common triggers (sepsis, obstetric complications) and early infection control reduce risk."
+  },
+  {
+   "q": "When is heparin appropriate in DIC?",
+   "a": "Only in chronic, low‑bleeding DIC where thrombosis dominates and platelet/fibrinogen levels are adequate."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of DIC and why it leads to simultaneous thrombosis and hemorrhage.",
+  "List the ISTH criteria for overt DIC and interpret a sample laboratory set.",
+  "Describe the first‑line management steps for a septic patient who develops DIC."
+ ],
+ "related": [
+  "Sepsis‑induced coagulopathy",
+  "Thrombotic thrombocytopenic purpura",
+  "Acute promyelocytic leukaemia",
+  "Obstetric hemorrhage",
+  "Heparin‑induced thrombocytopenia",
+  "Disseminated intravascular coagulation scoring (ISTH)"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

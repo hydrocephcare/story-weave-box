@@ -1,0 +1,111 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "GFR measures how much plasma the kidneys filter each minute. It reflects overall kidney health and guides diagnosis, staging, and treatment of renal disease.",
+ "aka": [
+  "glomerular filtration rate"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "GFR is the volume of plasma cleared of waste per minute by the glomeruli. Normal adult GFR is ~90–120 mL/min/1.73 m²; it declines with age.",
+   "b": [
+    "Low GFR → accumulation of urea, creatinine, fluid overload",
+    "High GFR may be seen in early diabetes or pregnancy"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Blood enters the glomerular capillaries under high pressure; filtration occurs across the fenestrated endothelium, basement membrane, and podocyte slit diaphragm into Bowman's space.",
+   "b": [
+    "Filtration fraction ≈ 20 % of renal plasma flow",
+    "Starling forces (hydrostatic vs oncotic) drive filtration"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Autoregulation keeps GFR stable despite blood pressure changes via afferent arteriolar tone (myogenic response) and tubuloglomerular feedback (macula densa).",
+   "b": [
+    "Angiotensin II constricts efferent arteriole → raises glomerular pressure",
+    "Prostaglandins dilate afferent arteriole → protect GFR"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Reduced GFR signals kidney injury. Causes are grouped by location: pre‑renal (hypoperfusion), intrinsic (glomerular, tubular, interstitial), post‑renal (obstruction).",
+   "b": [
+    "Pre‑renal: dehydration, sepsis, heart failure, hepatorenal syndrome",
+    "Intrinsic glomerular: diabetic nephropathy, lupus, post‑infectious GN, HIV‑associated nephropathy, schistosomiasis",
+    "Intrinsic tubular: acute tubular necrosis from toxins, severe malaria, contrast, rhabdomyolysis",
+    "Post‑renal: obstructive stones, prostate hypertrophy, congenital anomalies"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "GFR guides staging of chronic kidney disease (CKD) and dosing of renally cleared drugs. Sudden falls define AKI (KDIGO criteria).",
+   "b": [
+    "CKD stages 1–5 based on eGFR thresholds",
+    "AKI: increase in serum creatinine ≥0.3 mg/dL in 48 h or ≥1.5× baseline in 7 d"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "What is the current filtration capacity? Elevated creatinine suggests reduced GFR; use equations (eGFR) for estimation."
+    },
+    {
+     "a": "Cystatin C",
+     "b": "When is creatinine unreliable? Provides GFR estimate independent of muscle mass; useful in malnutrition or extremes of age."
+    },
+    {
+     "a": "Urine output",
+     "b": "Is there acute renal failure? <0.5 mL/kg/h for >6 h signals AKI; monitor closely when labs unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on how GFR is calculated, what changes each physiological or pathological state causes, and how to stage CKD/AKI.",
+   "b": [
+    "Know the KDIGO AKI criteria",
+    "Remember eGFR equations (CKD‑EPI, MDRD) and their limitations",
+    "Identify reversible pre‑renal causes first"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapid rise in serum creatinine with oliguria",
+  "Severe fluid overload causing pulmonary edema",
+  "Hyperkalemia with ECG changes"
+ ],
+ "faq": [
+  {
+   "q": "Why is creatinine not perfect for GFR?",
+   "a": "It varies with muscle mass, diet, and tubular secretion, so it can misrepresent true filtration."
+  },
+  {
+   "q": "Can GFR increase in disease?",
+   "a": "Yes, early diabetic nephropathy shows hyperfiltration, which later declines."
+  },
+  {
+   "q": "What if I cannot measure serum creatinine?",
+   "a": "Use urine output trends and clinical assessment; consider bedside ultrasound for kidney size and obstruction."
+  }
+ ],
+ "exam": [
+  "Explain the three forces that determine glomerular filtration pressure.",
+  "List the KDIGO criteria for diagnosing AKI.",
+  "Describe how you would stage CKD using eGFR values."
+ ],
+ "related": [
+  "Renal plasma flow",
+  "Tubular reabsorption",
+  "Acute kidney injury",
+  "Chronic kidney disease",
+  "Nephrotic syndrome",
+  "Diabetic nephropathy"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

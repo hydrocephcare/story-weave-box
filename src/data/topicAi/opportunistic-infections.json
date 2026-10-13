@@ -1,0 +1,165 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Opportunistic infections occur when the immune system is weakened, allowing normally harmless organisms to cause disease. Clinicians must identify the underlying immune defect, recognize atypical presentations, and use targeted therapy while managing complications.",
+ "aka": [
+  "Opportunistic infections"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Opportunistic infections (OIs) are infections that exploit a compromised host defense, often seen in HIV, transplant, or malignancy patients. Diagnosis combines clinical suspicion, imaging, and microbiology, guided by the patient’s immune status.",
+   "b": [
+    "Identify immune defect (e.g., CD4 count, neutropenia)",
+    "Look for atypical pathogens (Pneumocystis, CMV, Toxoplasma)"
+   ],
+   "t": [
+    {
+     "a": "CD4 count",
+     "b": "Is the patient at risk for specific OIs? A count <200 cells/µL indicates high risk for Pneumocystis and cryptococcal meningitis."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Detects infiltrates suggestive of Pneumocystis or fungal pneumonia; a diffuse ground‑glass pattern raises suspicion."
+    },
+    {
+     "a": "PCR for CMV",
+     "b": "Positive PCR in blood or CSF confirms CMV disease; a high viral load correlates with severity."
+    },
+    {
+     "a": "Serology for cryptococcal antigen",
+     "b": "Positive result in serum or CSF indicates cryptococcal meningitis; a high titer predicts worse outcome."
+    },
+    {
+     "a": "Mantoux/IGRA",
+     "b": "Positive test suggests latent TB; in an immunocompromised host it may progress to active disease."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by organ involvement and immune status. For example, Pneumocystis pneumonia is staged by PaO₂/FiO₂ ratio; CMV retinitis severity is staged by retinal lesion size.",
+   "b": [
+    "Use WHO HIV staging for overall risk"
+   ],
+   "t": [
+    {
+     "a": "PaO₂/FiO₂",
+     "b": "A ratio <200 mmHg indicates severe hypoxia requiring high‑flow oxygen or ventilation."
+    },
+    {
+     "a": "Retinal lesion diameter",
+     "b": "Lesions >5 mm require urgent antiviral therapy."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common causes of OIs are HIV infection, chemotherapy‑induced neutropenia, organ transplantation, and congenital immunodeficiencies. In low‑resource settings, TB, malaria, and bacterial sepsis often coexist and mask OIs.",
+   "b": [
+    "HIV (low CD4)",
+    "Chemotherapy (neutropenia)",
+    "Transplant (immunosuppression)",
+    "Congenital immunodeficiency (e.g., SCID)"
+   ],
+   "t": [
+    {
+     "a": "HIV viral load",
+     "b": "High load correlates with rapid CD4 decline and higher OI risk."
+    },
+    {
+     "a": "Absolute neutrophil count",
+     "b": "ANC <500 cells/µL predicts bacterial and fungal infections."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation is often subtle and overlaps with common infections. Fever, weight loss, and night sweats are common, but organ‑specific signs (e.g., cough, visual changes, seizures) guide diagnosis.",
+   "b": [
+    "Fever + weight loss",
+    "Cough + dyspnea",
+    "Visual changes + eye pain"
+   ],
+   "t": [
+    {
+     "a": "Chest auscultation",
+     "b": "Crackles or wheeze may indicate Pneumocystis or fungal pneumonia."
+    },
+    {
+     "a": "Fundoscopy",
+     "b": "Cherry red spots or retinal hemorrhages suggest CMV retinitis."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigation strategy prioritises rapid, affordable tests. When resources are limited, clinical algorithms and empirical therapy are essential.",
+   "b": [
+    "Rapid antigen tests"
+   ],
+   "t": [
+    {
+     "a": "Rapid antigen test for malaria",
+     "b": "Detects Plasmodium falciparum; a positive result rules out malaria as sole cause of fever."
+    },
+    {
+     "a": "Ziehl‑Neelsen stain",
+     "b": "Identifies acid‑fast bacilli in sputum; a positive result confirms TB."
+    },
+    {
+     "a": "Microscopy for Pneumocystis",
+     "b": "Silver stain of induced sputum shows cysts; a positive result confirms PCP."
+    },
+    {
+     "a": "PCR for HSV",
+     "b": "Detects HSV DNA in CSF; a positive result confirms HSV encephalitis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include rapid deterioration, severe hypoxia, seizures, or shock. Complications can be organ failure, secondary infections, or drug toxicity.",
+   "b": [
+    "Sudden drop in oxygen saturation"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "Hypotension indicates septic shock; requires fluid resuscitation and vasopressors."
+    },
+    {
+     "a": "Glucose level",
+     "b": "Hypoglycaemia in a septic patient signals metabolic crisis."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypoxia, sudden neurological decline, shock, or any sign of organ failure"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common opportunistic infection in HIV patients?",
+   "a": "Pneumocystis jirovecii pneumonia, especially when CD4 counts fall below 200 cells/µL."
+  },
+  {
+   "q": "How do I differentiate bacterial sepsis from an opportunistic infection in a low‑resource setting?",
+   "a": "Look for atypical pathogens (e.g., Pneumocystis, CMV) and consider the patient’s immune status; empirical broad‑spectrum antibiotics plus targeted therapy may be needed."
+  },
+  {
+   "q": "Can a patient with a low CD4 count develop malaria?",
+   "a": "Yes; malaria can coexist and complicate the clinical picture, so malaria testing should be done even in immunocompromised patients."
+  }
+ ],
+ "exam": [
+  "Explain why Pneumocystis pneumonia is more common in patients with CD4 counts <200 cells/µL.",
+  "Describe the diagnostic approach to a patient with suspected CMV retinitis in a resource‑limited setting.",
+  "Outline the first‑line management of cryptococcal meningitis and the rationale for each drug choice."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

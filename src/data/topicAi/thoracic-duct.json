@@ -1,0 +1,130 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The thoracic duct is the main conduit for lymph and dietary fat from the abdomen to the venous system. It runs from the cisterna chyli in the abdomen to the left venous angle, where it empties into the bloodstream.",
+ "aka": [
+  "Ductus thoracicus"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The thoracic duct transports chyle—lymph rich in triglycerides—plus immune cells from the lower body and left side of the thorax to the systemic circulation.",
+   "b": [
+    "≈ 38‑45 cm long, the longest lymphatic vessel",
+    "Carries ~2 L of lymph per day in adults"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It begins as the cisterna chyli at L2, ascends through the aortic hiatus, runs right of the vertebral bodies, crosses to the left at T5‑T6, and ends at the left venous angle (junction of left internal jugular and subclavian veins).",
+   "b": [
+    "Right side of vertebrae T1‑T5",
+    "Crosses behind the aortic arch and esophagus",
+    "Enters the neck at the left scalene tubercle"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "In the superior mediastinum it lies posterior to the left brachiocephalic vein and anterior to the vertebral column, adjacent to the azygos system, vagus and phrenic nerves, and the left recurrent laryngeal nerve.",
+   "b": [
+    "Close to the left brachiocephalic vein",
+    "Near the left vagus nerve",
+    "Posterior to the left pleura"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Small arterial branches arise from the thoracic aorta and intercostal arteries, supplying the duct wall.",
+   "b": [
+    "Branches from the aorta at T4‑T6",
+    "Intercostal artery contributions"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Autonomic fibers from the sympathetic trunk modulate lymphatic contractility; somatic afferents travel with the vagus nerve.",
+   "b": [
+    "Sympathetic fibers from T2‑T4",
+    "Vagal afferents"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Collects lymph from the lower limbs, abdomen, left thorax, left head/neck, and all intestinal chyle, delivering it to the venous system for immune surveillance and nutrient distribution.",
+   "b": [
+    "Drains > 70 % of body lymph",
+    "Delivers dietary triglycerides as chylomicrons"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Disruption or obstruction produces chylothorax, lymphatic leak, or lymphedema. Recognising milky pleural fluid with triglycerides >110 mg/dL is key.",
+   "b": [
+    "Trauma (surgery, penetrating injury)",
+    "Malignancy (lymphoma, metastatic breast cancer)",
+    "Infection (TB lymphadenitis)",
+    "Congenital malformations"
+   ],
+   "t": [
+    {
+     "a": "Pleural fluid analysis",
+     "b": "Is the effusion chylous? Triglycerides >110 mg/dL confirm chylothorax; if unavailable, milky appearance plus high lymphocyte count suggests it."
+    },
+    {
+     "a": "Lymphangiography (MRI or oil‑based contrast)",
+     "b": "Where is the leak? Shows duct disruption; if imaging not available, use CT thorax to look for mediastinal fluid collections."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Is there a pleural effusion? Detects fluid; a left‑sided opacification raises suspicion for chylothorax."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Know the course, termination, and typical causes of chylothorax. Be able to differentiate chylous from empyema and transudative effusions.",
+   "b": [
+    "Cisterna chyli → left venous angle",
+    "Milky pleural fluid + TG >110 mg/dL = chylothorax",
+    "Common causes: trauma, lymphoma, TB"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden massive left‑sided pleural effusion causing respiratory distress",
+  "Unexplained high‑output lymph leak after thoracic surgery",
+  "Signs of severe malnutrition from chronic chyle loss"
+ ],
+ "faq": [
+  {
+   "q": "Why does chylothorax usually appear on the left side?",
+   "a": "The thoracic duct empties into the left venous angle; injury near its termination releases chyle into the left pleural space."
+  },
+  {
+   "q": "Can a thoracic duct injury be managed without surgery?",
+   "a": "Yes, conservative measures (dietary fat restriction, medium‑chain triglycerides, pleural drainage) succeed in many cases; surgery is reserved for persistent leaks."
+  },
+  {
+   "q": "What distinguishes chylous from empyema fluid?",
+   "a": "Chylous fluid is milky with high triglycerides; empyema is purulent, high neutrophils, and low triglycerides."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical course of the thoracic duct and its termination point.",
+  "Explain how you would confirm a suspected chylothorax and the next management steps.",
+  "List three common causes of thoracic duct injury and one preventive measure for each."
+ ],
+ "related": [
+  "Azygos vein",
+  "Cisterna chyli",
+  "Lymphatic system",
+  "Chylothorax",
+  "Mediastinal anatomy",
+  "Pleural effusion",
+  "Thoracic surgery complications"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

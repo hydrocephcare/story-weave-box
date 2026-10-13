@@ -224,6 +224,10 @@ function buildSources(r: Retrieval) {
   return list;
 }
 
+const CHAT_DOWN = "ompath_chat_api_down";
+const chatApiDown = () => { try { return Date.now() - Number(sessionStorage.getItem(CHAT_DOWN) ?? 0) < 30 * 60_000; } catch { return false; } };
+const markChatApiDown = () => { try { sessionStorage.setItem(CHAT_DOWN, String(Date.now())); } catch { /* ignore */ } };
+
 export interface StreamHandlers { onText: (full: string) => void; signal?: AbortSignal }
 
 /** Streams the model's answer. Resolves with the final text; throws a friendly Error when the model cannot answer. */
@@ -231,12 +235,23 @@ export async function streamAnswer(t: AiTurnInput, h: StreamHandlers): Promise<s
   const question = t.retrieval.grounded
     ? t.question
     : `${t.question}\n\n(Nothing on Ompath Study matched this. Answer from sound general medical knowledge and begin by saying it is general guidance, not from the site's notes.)`;
-  const send = () => fetch(`${SUPABASE_URL}/functions/v1/ompath-ai`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", apikey: SUPABASE_PUBLISHABLE_KEY, Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}` },
-    body: JSON.stringify({ question, history: t.history.slice(-6), sources: buildSources(t.retrieval) }),
-    signal: h.signal,
-  });
+  const payload = JSON.stringify({ question, history: t.history.slice(-6), sources: buildSources(t.retrieval) });
+  // our own server first (Groq, then Gemini, keys in turn); the older function is the fallback
+  const send = async () => {
+    if (!chatApiDown()) {
+      try {
+        const r = await fetch("/api/ai-chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: payload, signal: h.signal });
+        if (r.ok && r.body) return r;
+        if (r.status === 404 || r.status === 503 || r.status === 405) markChatApiDown();
+      } catch (e) { if ((e as Error).name === "AbortError") throw e; }
+    }
+    return fetch(`${SUPABASE_URL}/functions/v1/ompath-ai`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", apikey: SUPABASE_PUBLISHABLE_KEY, Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}` },
+      body: payload,
+      signal: h.signal,
+    });
+  };
   // a dropped connection or a busy server (5xx, 429) is tried once more before we fall back to the notes
   let res = await send().catch((e) => { if ((e as Error).name === "AbortError") throw e; return null; });
   if (!res || res.status >= 500 || res.status === 429) { await new Promise((r) => setTimeout(r, 900)); res = await send().catch((e) => { if ((e as Error).name === "AbortError") throw e; return res; }); }

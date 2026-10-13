@@ -1,0 +1,175 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Schistosomiasis is a parasitic infection that can cause chronic liver, intestinal, or urogenital disease. Diagnosis relies on stool/urine eggs and serology, while treatment is praziquantel. Management focuses on parasite clearance and complication prevention.",
+ "aka": [
+  "Snail fever",
+  "Schistosomiasis mansoni",
+  "Schistosomiasis japonica",
+  "Schistosomiasis haematobium"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Schistosomiasis is caused by trematode worms of the genus Schistosoma. Transmission occurs when skin contacts contaminated freshwater. Diagnosis is confirmed by detecting eggs in stool or urine, supported by serology when eggs are scarce.",
+   "b": [
+    "Eggs in stool/urine",
+    "Serology (ELISA)"
+   ],
+   "t": [
+    {
+     "a": "Stool microscopy",
+     "b": "Detects S. mansoni or S. japonicum eggs; positive means active infection."
+    },
+    {
+     "a": "Urine microscopy",
+     "b": "Detects S. haematobium eggs; positive indicates urogenital disease."
+    },
+    {
+     "a": "Serology",
+     "b": "Positive indicates exposure; useful when eggs are not found."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by parasite load and organ involvement. Mild disease shows few eggs and minimal symptoms. Moderate disease has moderate egg counts and organ dysfunction. Severe disease presents with high egg counts, portal hypertension, or bladder carcinoma risk.",
+   "b": [
+    "Mild: few eggs, asymptomatic",
+    "Moderate: moderate eggs, organ signs",
+    "Severe: high eggs, portal hypertension"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is contact with freshwater infested by Biomphalaria (S. mansoni), Bulinus (S. haematobium), or Oncomelania (S. japonicum) snails. Secondary factors include HIV, malaria, and malnutrition that worsen outcomes.",
+   "b": [
+    "Freshwater exposure",
+    "Snail intermediate host",
+    "Immunosuppression (HIV)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Early infection causes a Katayama fever with fever, cough, and eosinophilia. Chronic infection leads to abdominal pain, hepatosplenomegaly, portal hypertension, hematuria, or bladder lesions.",
+   "b": [
+    "Katayama fever",
+    "Abdominal pain",
+    "Hematuria"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm infection, assess organ damage, and guide treatment. In low-resource settings, microscopy is primary; serology and imaging are adjuncts.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Eosinophilia suggests parasitic infection."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Elevated transaminases or bilirubin indicate hepatic involvement."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Detects periportal fibrosis or bladder wall thickening."
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Assesses renal function if urogenital disease suspected."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life-threatening: portal hypertension with variceal bleeding, bladder carcinoma, severe anemia, or acute hepatic failure. Red flags include massive hematuria, upper GI bleeding, or sudden liver failure.",
+   "b": [
+    "Massive hematuria",
+    "Upper GI bleeding",
+    "Acute hepatic failure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First-line therapy is praziquantel, chosen for its broad efficacy and low toxicity. Supportive care includes pain control, iron supplementation, and management of portal hypertension. Alternatives like oxamniquine are reserved for specific species.",
+   "b": [
+    "Praziquantel – broad spectrum, low toxicity",
+    "Supportive care – analgesia, iron"
+   ],
+   "t": [
+    {
+     "a": "Praziquantel",
+     "b": "Treats all Schistosoma species; reduces egg output."
+    },
+    {
+     "a": "Octreotide",
+     "b": "Used for variceal bleeding control."
+    },
+    {
+     "a": "Antibiotics",
+     "b": "Treat secondary bacterial infections if present."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After treatment, repeat stool/urine exams after 4–6 weeks to confirm cure. Prevention focuses on avoiding freshwater contact, using protective footwear, and snail control.",
+   "b": [
+    "Repeat microscopy",
+    "Avoid freshwater",
+    "Snail control"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Schistosomiasis can mimic other causes of portal hypertension such as viral hepatitis or alcoholic cirrhosis, and hematuria can be mistaken for urinary tract infection.",
+   "b": [
+    "Viral hepatitis",
+    "Alcoholic cirrhosis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Egg counts may be falsely low in early infection or after treatment. Serology can remain positive long after cure, leading to overdiagnosis.",
+   "b": [
+    "Low egg counts in early disease",
+    "Persistent serology post-treatment"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Massive hematuria",
+  "Upper GI bleeding",
+  "Acute liver failure"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common symptom of chronic schistosomiasis?",
+   "a": "Abdominal pain and hepatosplenomegaly due to periportal fibrosis."
+  },
+  {
+   "q": "Can schistosomiasis be cured?",
+   "a": "Yes, praziquantel effectively cures most infections, but reinfection is common without preventive measures."
+  },
+  {
+   "q": "Why is eosinophilia important?",
+   "a": "Eosinophilia indicates a parasitic infection and supports the diagnosis when eggs are not seen."
+  }
+ ],
+ "exam": [
+  "Explain why praziquantel is preferred over other antiparasitics in schistosomiasis.",
+  "Describe the clinical features that differentiate schistosomiasis from viral hepatitis in a patient with portal hypertension.",
+  "Outline the steps you would take to manage a patient presenting with massive hematuria due to schistosomiasis."
+ ],
+ "related": [
+  "Parasitology",
+  "Hepatology",
+  "Urology",
+  "Infectious disease",
+  "Public health"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

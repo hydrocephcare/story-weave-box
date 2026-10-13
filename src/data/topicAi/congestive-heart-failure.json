@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Congestive heart failure is the heart’s inability to supply adequate output, often due to systolic, diastolic, or high‑output dysfunction. It presents with pulmonary congestion and systemic venous stasis, and requires rapid assessment of cause and severity.",
+ "aka": [
+  "Heart failure"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "CHF occurs when cardiac output falls below metabolic needs or when filling pressures rise, leading to pulmonary and systemic congestion. Diagnosis combines clinical signs, BNP/NT‑proBNP, and imaging.",
+   "b": [
+    "Heart cannot meet metabolic demand or does so at high filling pressures"
+   ],
+   "t": [
+    {
+     "a": "BNP/NT‑proBNP",
+     "b": "Elevated BNP indicates ventricular stretch; >125 pg/mL suggests HF in adults, >400 pg/mL in children."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Shows ejection fraction, wall motion, valve function; EF <40% = systolic HF, EF 40‑50% with diastolic dysfunction."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows pulmonary vascular congestion, cardiomegaly; absence of infiltrates helps rule out pneumonia."
+    },
+    {
+     "a": "ECG",
+     "b": "Detects arrhythmias, ischemia, LV hypertrophy; helps identify ischemic or valvular causes."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "NYHA class I–IV and ACC/AHA stages A–D guide prognosis and treatment intensity. Staging reflects functional limitation and structural progression.",
+   "b": [
+    "NYHA I: no limitation",
+    "NYHA II: slight limitation",
+    "NYHA III: marked limitation",
+    "NYHA IV: symptoms at rest"
+   ],
+   "t": [
+    {
+     "a": "Ejection fraction",
+     "b": "EF <35% = severe systolic HF; 35‑50% = moderate."
+    },
+    {
+     "a": "NT‑proBNP",
+     "b": "Higher levels correlate with worse NYHA class."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, rheumatic heart disease, HIV‑related cardiomyopathy, malaria, and anemia are common. In high‑income areas, ischemic heart disease dominates.",
+   "b": [
+    "Rheumatic heart disease",
+    "Ischemic heart disease",
+    "Hypertension",
+    "Anemia",
+    "Hyperthyroidism"
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Identifies valve lesions (rheumatic) or coronary artery disease."
+    },
+    {
+     "a": "Hemoglobin",
+     "b": "Anemia >10 g/dL can cause high‑output HF."
+    },
+    {
+     "a": "TSH",
+     "b": "Elevated TSH suggests hypothyroidism; low TSH with high free T4 indicates hyperthyroidism."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients feel breathlessness, orthopnea, paroxysmal nocturnal dyspnea, edema, fatigue, and weight gain. Signs include crackles, jugular venous distension, and peripheral edema.",
+   "b": [
+    "Dyspnea on exertion or at rest",
+    "Orthopnea",
+    "Paroxysmal nocturnal dyspnea",
+    "Peripheral edema"
+   ],
+   "t": [
+    {
+     "a": "JVP measurement",
+     "b": "Elevated JVP >8 cm H2O indicates right‑sided congestion."
+    },
+    {
+     "a": "Lung auscultation",
+     "b": "Fine crackles at lung bases suggest pulmonary edema."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use a stepwise approach: basic labs, ECG, chest X‑ray, echocardiography, and BNP. When resources are limited, clinical assessment and bedside ultrasound are key.",
+   "b": [
+    "CBC, electrolytes, renal function",
+    "Chest X‑ray",
+    "Echocardiography"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Detects anemia, infection, or leukocytosis."
+    },
+    {
+     "a": "Renal function",
+     "b": "Elevated creatinine indicates cardiorenal syndrome."
+    },
+    {
+     "a": "Bedside ultrasound",
+     "b": "Rapid assessment of ventricular size, wall motion, and pericardial effusion."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Sudden worsening dyspnea, chest pain, syncope, or arrhythmias signal acute decompensation or ischemia. Complications include pulmonary edema, renal failure, and thromboembolism.",
+   "b": [
+    "Acute pulmonary edema",
+    "Cardiac arrhythmias",
+    "Renal dysfunction",
+    "Thromboembolism"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Pulmonary edema appears as Kerley B lines and alveolar infiltrates."
+    },
+    {
+     "a": "ECG",
+     "b": "ST‑segment changes suggest acute ischemia."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe dyspnea, chest pain, syncope, or arrhythmia"
+ ],
+ "faq": [
+  {
+   "q": "Can anemia cause heart failure?",
+   "a": "Yes, severe anemia increases cardiac output, leading to high‑output heart failure."
+  },
+  {
+   "q": "Is diuretics always safe?",
+   "a": "They can worsen renal function and cause electrolyte imbalance; monitor kidney function and potassium."
+  },
+  {
+   "q": "What if echocardiography is unavailable?",
+   "a": "Use clinical exam, BNP, and bedside ultrasound to estimate ventricular function."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of systolic vs diastolic heart failure.",
+  "Describe the diagnostic workup for a patient with suspected CHF in a low‑resource setting.",
+  "Outline the first‑line pharmacologic therapy for chronic HF and justify each drug class."
+ ],
+ "related": [
+  "Cardiomyopathy",
+  "Ischemic heart disease",
+  "Hypertension",
+  "Anemia",
+  "Hyperthyroidism"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

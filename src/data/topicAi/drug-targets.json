@@ -1,0 +1,108 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Drug targets are specific bacterial, viral, fungal or parasitic structures or enzymes that medicines inhibit to stop infection. Choosing a target depends on the organism’s biology, resistance patterns and patient setting.",
+ "aka": [
+  "Therapeutic targets",
+  "Molecular targets"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A drug target is a molecule or pathway essential for a pathogen’s survival or virulence. Clinicians select drugs that hit these targets while sparing human cells.",
+   "b": [
+    "Targets must be unique to the organism or sufficiently different from human homologues to avoid toxicity."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Microbes differ in cell wall composition, replication machinery and metabolic pathways. These differences create distinct drug targets.",
+   "b": [
+    "Bacteria: peptidoglycan synthesis, protein synthesis, DNA replication, folate pathway. Viruses: polymerases, proteases, integrases. Fungi: ergosterol synthesis, β‑glucan synthesis. Parasites: unique enzymes like dihydroorotate dehydrogenase."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Understanding how a pathogen spreads and its life stages helps identify when a target is most vulnerable.",
+   "b": [
+    "Bacterial infections often spread via droplets or contact; antibiotics target actively dividing cells. Viruses replicate inside host cells; antivirals target early or late replication steps. Parasites have complex cycles; antiparasitics target specific stages such as liver or blo"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Infections range from superficial to life‑threatening. The choice of target is guided by disease severity and resource availability.",
+   "b": [
+    "Severe bacterial sepsis: β‑lactam targets cell wall. HIV: reverse transcriptase, protease, integrase. Tuberculosis: mycolic acid synthesis. Malaria: heme detoxification."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Laboratory tests confirm the pathogen and its susceptibility, guiding target selection.",
+   "b": [
+    "When tests are unavailable, empiric therapy targets the most likely organism and its common targets."
+   ],
+   "t": [
+    {
+     "a": "Gram stain",
+     "b": "Identifies Gram‑positive or Gram‑negative bacteria; informs cell wall target choice."
+    },
+    {
+     "a": "PCR for viral genes",
+     "b": "Detects viral genome; confirms need for polymerase or protease inhibitors."
+    },
+    {
+     "a": "Drug susceptibility testing",
+     "b": "Shows resistance patterns; directs choice of target‑specific drugs."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treat the underlying cause, then support the patient. Drug choice is based on target, resistance, toxicity and resource setting.",
+   "b": [
+    "Bacterial infections: β‑lactams for cell wall, macrolides for atypicals, fluoroquinolones for resistant strains. Viruses: reverse transcriptase inhibitors for HIV, neuraminidase inhibitors for influenza. Fungi: azoles for ergosterol synthesis, amphotericin B for severe disease. P"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that drug targets reflect the pathogen’s biology and the clinical context. In low‑resource settings, choose drugs with broad coverage, low toxicity and minimal monitoring.",
+   "b": [
+    "Use empiric broad‑spectrum antibiotics when culture data are delayed."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sepsis, septic shock, respiratory failure, CNS involvement, or any rapidly deteriorating infection."
+ ],
+ "faq": [
+  {
+   "q": "Why do antibiotics not work on fungi?",
+   "a": "Fungi lack bacterial cell walls and have different protein synthesis machinery; antibiotics target bacterial structures not present in fungi."
+  },
+  {
+   "q": "What is the main target of antiretroviral therapy?",
+   "a": "HIV reverse transcriptase, protease and integrase are the primary targets; drugs block viral replication at different stages."
+  },
+  {
+   "q": "Can a drug target be shared by human cells?",
+   "a": "Yes, but only if the drug’s affinity for the pathogen’s target is much higher than for the human counterpart, minimizing toxicity."
+  }
+ ],
+ "exam": [
+  "Explain why β‑lactam antibiotics are ineffective against Mycobacterium tuberculosis.",
+  "Describe the mechanism of action of azole antifungals and why they are chosen for systemic candidiasis.",
+  "Outline the rationale for using a combination of NRTIs and NNRTIs in first‑line HIV therapy."
+ ],
+ "related": [
+  "Antibiotic resistance",
+  "Antiviral drug mechanisms",
+  "Antifungal therapy",
+  "Antiparasitic drug targets",
+  "Infection control",
+  "Pharmacokinetics in low‑resource settings"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

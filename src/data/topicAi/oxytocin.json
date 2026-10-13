@@ -1,0 +1,130 @@
+{
+ "medical": true,
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Oxytocin is a hypothalamic peptide that triggers uterine contractions and milk let‑down. It is released by cervical stretch and suckling, forming a positive feedback loop. Clinically it is used to induce/augment labor and prevent postpartum hemorrhage.",
+ "aka": [
+  "Pitocin",
+  "Oxytocin",
+  "Neurohypophysial hormone"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Oxytocin is produced in the paraventricular nucleus of the hypothalamus and stored in the posterior pituitary. It acts on smooth muscle and secretory cells, coordinating parturition and lactation.",
+   "b": [
+    "Peptide hormone, 9 amino acids",
+    "Released in response to cervical stretch and suckling",
+    "Positive feedback during labor"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "During labor, uterine contractions push the fetal head against the cervix, stimulating stretch receptors that send signals to the hypothalamus. The hypothalamus releases oxytocin, which binds to oxytocin receptors on myometrial cells, causing calcium influx and contraction. In lactation, nipple stimulation triggers oxytocin release, causing myoepithelial contraction and milk ejection.",
+   "b": [
+    "Cervical stretch → hypothalamus → oxytocin release",
+    "Oxytocin → uterine smooth muscle → Ca²⁺ influx → contraction"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Oxytocin secretion is governed by a positive feedback loop: more contractions lead to more stretch, leading to more oxytocin. It is also regulated by circadian rhythms and modulated by other neuropeptides such as vasopressin.",
+   "b": [
+    "Positive feedback during labor",
+    "Negative feedback by uterine relaxation"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Excessive oxytocin can cause uterine hyperstimulation, fetal distress, or uterine rupture. Insufficient oxytocin leads to prolonged labor or postpartum hemorrhage. Synthetic oxytocin misuse may mask uterine atony.",
+   "b": [
+    "Hyperstimulation → fetal hypoxia",
+    "Uterine rupture risk with high doses",
+    "Postpartum hemorrhage if oxytocin inadequate"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Synthetic oxytocin (Pitocin) is the first‑line agent for labor induction, augmentation, and postpartum hemorrhage prevention. It is preferred over prostaglandins when no cephalopelvic disproportion exists. Monitoring uterine activity and fetal heart rate is essential.",
+   "t": [
+    {
+     "a": "Uterine contraction pattern",
+     "b": "Assess frequency, duration, and strength to detect hyperstimulation; abnormal patterns may indicate oxytocin overdose or uterine atony."
+    },
+    {
+     "a": "Fetal heart rate monitoring",
+     "b": "Detect fetal distress; decelerations may signal uterine hyperstimulation or placental insufficiency."
+    },
+    {
+     "a": "Blood loss estimation",
+     "b": "Early detection of postpartum hemorrhage; guides oxytocin use and blood transfusion decisions."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that oxytocin is a positive feedback hormone; its use requires careful titration and continuous monitoring. In low‑resource settings, intramuscular oxytocin can be used when IV access is unavailable, but the dose and timing must be strictly followed.",
+   "b": [
+    "Positive feedback loop—more contractions = more oxytocin"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause of uterine atony (e.g., uterine overdistension, prolonged labor). Administer synthetic oxytocin intravenously, titrating to effective contraction. If unavailable, intramuscular oxytocin can be used. Monitor uterine tone, bleeding, and fetal status. Avoid excessive doses to prevent hyperstimulation.",
+   "b": [
+    "IV oxytocin preferred; IM if IV not possible",
+    "Titrate to effective contraction",
+    "Monitor for hyperstimulation"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Uterine atony is not the same as uterine hyperstimulation; both can cause hemorrhage but require different management. Oxytocin is distinct from prostaglandins, which are also used for induction but act via different receptors.",
+   "b": [
+    "Uterine atony vs hyperstimulation",
+    "Oxytocin vs prostaglandins"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Uterine contraction monitoring may appear normal if the monitor is improperly placed. Fetal heart rate may be falsely reassuring if maternal tachycardia masks decelerations. Blood loss estimation can be underestimated if hidden bleeding occurs.",
+   "b": [
+    "Misplaced contraction monitor",
+    "Maternal tachycardia masking fetal distress",
+    "Hidden postpartum bleeding"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe fetal distress (persistent late decelerations), uterine rupture, uncontrolled postpartum hemorrhage"
+ ],
+ "faq": [
+  {
+   "q": "Why is oxytocin a positive feedback hormone?",
+   "a": "Because each contraction stretches the cervix, stimulating more oxytocin release, which in turn causes more contractions."
+  },
+  {
+   "q": "Can oxytocin be used in preterm labor?",
+   "a": "Yes, but only if no contraindications; it may increase the risk of uterine rupture in preterm uterine tissue."
+  },
+  {
+   "q": "What is the main side effect of oxytocin overdose?",
+   "a": "Uterine hyperstimulation leading to fetal hypoxia and possible uterine rupture."
+  }
+ ],
+ "exam": [
+  "Explain the physiological feedback loop that regulates oxytocin release during labor.",
+  "Describe how you would titrate synthetic oxytocin for a patient with prolonged second stage of labor.",
+  "Identify the key monitoring parameters to detect oxytocin overdose during induction."
+ ],
+ "related": [
+  "Uterine atony",
+  "Postpartum hemorrhage",
+  "Labor induction",
+  "Prostaglandins",
+  "Ferguson reflex"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,130 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The knee joint is a complex hinge that links the femur, tibia, and patella, allowing weight‑bearing flexion and extension. Its stability depends on bones, ligaments, menisci, and surrounding muscles, making it vulnerable to trauma and disease.",
+ "aka": [
+  "tibiofemoral joint",
+  "patellofemoral joint"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The knee is the largest synovial joint, comprising the tibiofemoral and patellofemoral compartments. It transmits forces from the thigh to the lower leg and provides proprioceptive feedback for gait.",
+   "b": [
+    "Hinge joint with limited rotation",
+    "Contains two articulations: tibiofemoral and patellofemoral"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The joint is formed by the distal femur, proximal tibia, and the patella. The femoral condyles sit on the tibial plateau, while the patella glides in the trochlear groove.",
+   "b": [
+    "Medial and lateral menisci cushion load",
+    "Four major ligaments: ACL, PCL, MCL, LCL",
+    "Joint capsule reinforced by the popliteal fascia"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly the joint is covered by the patellar tendon and the quadriceps tendon. Posteriorly lies the popliteal fossa containing vessels and nerves.",
+   "b": [
+    "Saphenous nerve supplies skin over the front of the patella",
+    "Popliteal artery runs deep to the joint capsule"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial blood reaches the knee via branches of the femoral and popliteal arteries, forming a peri‑articular plexus.",
+   "b": [
+    "Genicular arteries (superior, inferior, medial, lateral) supply the capsule and menisci",
+    "Popliteal artery gives rise to the posterior genicular branches"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory innervation comes from the femoral, saphenous, obturator, and common peroneal nerves; motor supply is via the quadriceps and hamstring groups.",
+   "b": [
+    "Saphenous nerve: skin over front of patella and anteromedial leg",
+    "Common peroneal nerve: lateral capsule sensation"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The knee permits flexion up to 135°, extension, and slight rotation when flexed, enabling walking, climbing, and squatting while bearing body weight.",
+   "b": [
+    "Menisci distribute load and improve joint congruence",
+    "Ligaments prevent excessive translation"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Trauma, infection, and systemic disease can disrupt the knee’s structures, leading to pain, instability, or loss of function. Recognising patterns guides urgent care.",
+   "b": [
+    "ACL tear: sudden pivot, positive Lachman test",
+    "MCL sprain: valgus stress, common in contact sports",
+    "Septic arthritis: fever, joint effusion, urgent drainage"
+   ],
+   "t": [
+    {
+     "a": "Lachman test",
+     "b": "Is the ACL intact? A firm end‑point indicates integrity; a soft endpoint suggests tear"
+    },
+    {
+     "a": "Joint aspiration",
+     "b": "Is there infection? Purulent fluid with >50,000 WBC/mm³ confirms septic arthritis; if unavailable, treat empirically if clinical suspicion high"
+    },
+    {
+     "a": "X‑ray (AP & lateral)",
+     "b": "Are there fractures or joint space narrowing? Detects bone injury, osteoarthritis, and alignment issues"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "A focused knee exam combines inspection, palpation, range of motion, and specific ligament tests. Correlate findings with mechanism of injury to narrow differential.",
+   "b": [
+    "Check for effusion (ballottement)",
+    "Assess gait for antalgic pattern",
+    "Test for ligament integrity in both extension and flexion"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly increasing knee swelling with fever (possible septic arthritis)",
+  "Severe trauma with inability to bear weight (possible fracture or dislocation)",
+  "Sudden loss of knee stability after a pivoting injury (possible ligament rupture)"
+ ],
+ "faq": [
+  {
+   "q": "Why does the knee feel unstable after an ACL injury?",
+   "a": "The ACL restrains anterior translation of the tibia; its loss allows the tibia to slide forward, causing a sensation of giving way."
+  },
+  {
+   "q": "Can a meniscus tear heal without surgery?",
+   "a": "Peripheral tears have blood supply and may heal conservatively; central tears lack vascularity and often need repair or removal."
+  },
+  {
+   "q": "What distinguishes osteoarthritis from rheumatoid arthritis in the knee?",
+   "a": "OA shows joint space narrowing and osteophytes on X‑ray; RA presents with symmetric joint effusions, erosions, and systemic inflammation."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical structures that form the knee joint and their functional relevance.",
+  "Explain how to perform and interpret the Lachman test for ACL integrity.",
+  "Outline the initial management steps for a patient with suspected septic knee arthritis."
+ ],
+ "related": [
+  "Hip joint",
+  "Ankle joint",
+  "Meniscus pathology",
+  "Ligament injuries",
+  "Osteoarthritis",
+  "Rheumatoid arthritis",
+  "Septic arthritis",
+  "Muscle anatomy of the thigh"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

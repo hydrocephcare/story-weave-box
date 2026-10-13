@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Angina is chest discomfort caused by myocardial oxygen supply‑demand mismatch, usually from coronary artery disease. Diagnosis relies on history, ECG changes and exclusion of other causes.",
+ "aka": [
+  "Stable angina",
+  "Ischaemic chest pain"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Angina is transient chest pain or pressure that occurs when myocardial oxygen demand exceeds supply. Diagnosis requires typical pain pattern, relief with rest or nitrates, and objective evidence such as ECG changes or imaging.",
+   "b": [
+    "Typical pain: substernal pressure, radiates to left arm/jaw, provoked by exertion, relieved in 5–10 min by rest or nitroglycerin."
+   ],
+   "t": [
+    {
+     "a": "Resting 12‑lead ECG",
+     "b": "Does the ECG show ischaemic changes? → ST‑segment depression or T‑wave inversion supports angina; a normal ECG does not exclude it."
+    },
+    {
+     "a": "Exercise stress test (or pharmacologic if unable)",
+     "b": "Does exertion provoke ECG ischaemia? → Positive test confirms functional significance of coronary stenosis; negative test lowers likelihood."
+    },
+    {
+     "a": "Coronary CT angiography",
+     "b": "Is there anatomical coronary narrowing? → Detects obstructive disease when stress testing unavailable; normal scan makes CAD unlikely."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Canadian Cardiovascular Society (CCS) classification, which links activity limitation to angina frequency.",
+   "b": [
+    "CCS I: Angina only with strenuous activity.",
+    "CCS II: Slight limitation – angina with ordinary activity.",
+    "CCS III: Marked limitation – angina with minimal activity.",
+    "CCS IV: Inability to carry out any activity without discomfort."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most angina is due to atherosclerotic coronary artery disease, but other causes must be considered, especially in low‑resource settings.",
+   "b": [
+    "Atherosclerotic plaque causing fixed stenosis (most common).",
+    "Coronary artery spasm (Prinzmetal).",
+    "Severe anemia or high output states (e.g., severe malaria).",
+    "Thrombo‑embolic occlusion (e.g., in HIV‑associated vasculitis).",
+    "Coronary involvement in rheumatic heart disease or tuberculous pericarditis."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients describe pressure‑like chest discomfort triggered by exertion or emotional stress, relieved by rest or nitrates. Associated symptoms may include dyspnoea, diaphoresis, nausea, and fatigue.",
+   "b": [
+    "Pain onset 1–5 min after activity, lasting <10 min with rest.",
+    "May be atypical in women, diabetics, or elderly (e.g., epigastric discomfort)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm ischaemia, assess severity, and identify reversible causes.",
+   "b": [
+    "ECG, cardiac biomarkers, stress testing, imaging."
+   ],
+   "t": [
+    {
+     "a": "High‑sensitivity troponin",
+     "b": "Is there myocardial injury? → Elevated troponin suggests acute coronary syndrome, not stable angina."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Is there wall‑motion abnormality or LV dysfunction? → Regional hypokinesis supports ischaemia; normal study does not rule out CAD."
+    },
+    {
+     "a": "Coronary angiography (if available)",
+     "b": "What is the anatomic severity? → Guides revascularisation; if unavailable, rely on non‑invasive imaging."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Unstable presentations or complications require urgent care.",
+   "b": [
+    "Sudden increase in pain severity or frequency.",
+    "Pain at rest or night‑time pain.",
+    "Signs of heart failure, arrhythmia, or cardiogenic shock."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying coronary disease, relieve symptoms, and modify risk factors.",
+   "b": [
+    "Aspirin – antiplatelet to prevent thrombus formation.",
+    "Statin – lowers LDL, stabilises plaque.",
+    "Beta‑blocker – reduces heart rate and contractility, lowering demand; avoid in severe asthma.",
+    "Long‑acting nitrates or calcium‑channel blockers – for patients intolerant to beta‑blockers.",
+    "ACE‑inhibitor – for hypertension or LV dysfunction; improves outcomes."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review of symptoms, risk‑factor control, and lifestyle changes are essential.",
+   "b": [
+    "Re‑assess CCS class every 6–12 months.",
+    "Encourage smoking cessation, diet low in saturated fat, regular aerobic activity.",
+    "Control diabetes, hypertension, and dyslipidaemia."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that can mimic angina must be ruled out.",
+   "b": [
+    "Gastro‑oesophageal reflux disease – burning retrosternal pain, worsens after meals.",
+    "Musculoskeletal chest wall pain – reproducible on palpation.",
+    "Pulmonary embolism – pleuritic pain, dyspnoea, tachycardia.",
+    "Pericarditis – sharp pain relieved by leaning forward."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be falsely reassuring.",
+   "b": [
+    "Normal resting ECG does not exclude CAD; stress testing needed.",
+    "Negative stress test in patients with baseline ECG abnormalities may be inconclusive.",
+    "Troponin can be normal in stable angina but elevated in acute coronary syndrome."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Chest pain that is sudden, severe, or occurs at rest.",
+  "Pain lasting >20 minutes despite rest/nitrates.",
+  "Associated syncope, severe shortness of breath, or sweating."
+ ],
+ "faq": [
+  {
+   "q": "Why does nitroglycerin relieve angina?",
+   "a": "It dilates veins, reducing preload, and at higher doses dilates coronary arteries, improving oxygen supply."
+  },
+  {
+   "q": "Can a normal stress test rule out angina?",
+   "a": "A negative test lowers the probability but does not completely exclude disease, especially with poor image quality."
+  },
+  {
+   "q": "When is revascularisation indicated?",
+   "a": "When angina persists despite optimal medical therapy or when high‑risk anatomy is identified on angiography."
+  }
+ ],
+ "exam": [
+  "Describe the CCS classification and its clinical relevance.",
+  "Explain how you would differentiate stable angina from myocardial infarction using history and investigations.",
+  "List first‑line pharmacologic agents for stable angina and justify their use."
+ ],
+ "related": [
+  "Myocardial infarction",
+  "Coronary artery disease",
+  "Heart failure",
+  "Hypertension",
+  "Dyslipidaemia",
+  "Peripheral arterial disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

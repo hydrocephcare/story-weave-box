@@ -1,0 +1,144 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Helicobacter pylori is a spiral, urease‑producing bacterium that colonises the gastric mucosa, causing chronic gastritis, peptic ulcer disease and increasing gastric cancer risk. Its survival depends on urease‑mediated neutralisation of acid and adhesins that bind to epithelial cells.",
+ "aka": [
+  "H. pylori"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "H. pylori is a microaerophilic, spiral bacterium that colonises the human stomach. It is the most common cause of chronic gastritis and peptic ulcer disease worldwide.",
+   "b": [
+    "Spiral shape, microaerophilic, urease positive"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The bacterium uses urease to hydrolyse urea, producing ammonia that neutralises gastric acid, allowing it to survive in the acidic environment. Adhesins such as BabA and SabA bind to gastric epithelial cells, promoting colonisation.",
+   "b": [
+    "Urease activity",
+    "Adhesins BabA/SabA"
+   ],
+   "t": [
+    {
+     "a": "Urease test",
+     "b": "Detects active infection by measuring ammonia production; a positive result indicates urease‑producing organisms in the biopsy."
+    }
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission is primarily fecal‑oral, often via contaminated food or water. The bacterium persists in the gastric mucosa, forming microcolonies that evade immune clearance.",
+   "b": [
+    "Fecal‑oral route",
+    "Microcolonies in mucosa"
+   ],
+   "t": [
+    {
+     "a": "Stool antigen test",
+     "b": "Detects H. pylori antigens in stool; positive indicates active infection, useful when endoscopy is unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "H. pylori infection leads to chronic gastritis, peptic ulcer disease, gastric carcinoma and MALT lymphoma. Symptoms range from epigastric pain to dyspepsia and, in severe cases, bleeding.",
+   "b": [
+    "Chronic gastritis",
+    "Peptic ulcer",
+    "Gastric cancer"
+   ],
+   "t": [
+    {
+     "a": "Endoscopic biopsy with histology",
+     "b": "Confirms gastritis and visualises organisms; guides diagnosis when non‑invasive tests are inconclusive."
+    }
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis combines non‑invasive tests (urea breath, stool antigen) and invasive tests (biopsy for histology, rapid urease, culture).",
+   "b": [
+    "Urea breath test",
+    "Stool antigen",
+    "Rapid urease"
+   ],
+   "t": [
+    {
+     "a": "Rapid urease test",
+     "b": "Answers whether urease‑producing organisms are present in biopsy; a positive result confirms infection."
+    },
+    {
+     "a": "Histology",
+     "b": "Answers presence of inflammation and organisms; helps stage gastritis severity."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "First‑line therapy is a triple or quadruple regimen that includes a proton pump inhibitor and two antibiotics. The choice of antibiotics depends on local resistance patterns.",
+   "b": [
+    "PPI + clarithromycin + amoxicillin/metronidazole",
+    "Quadruple therapy (bismuth) if resistance high"
+   ],
+   "t": [
+    {
+     "a": "Antibiotic susceptibility testing",
+     "b": "Determines resistance to clarithromycin or metronidazole; guides choice of regimen when available."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that H. pylori is urease positive, adheres via BabA/SabA, and is the main cause of peptic ulcer relapse. In low‑resource settings, stool antigen or rapid urease are practical diagnostics.",
+   "b": [
+    "Urease activity is key diagnostic feature",
+    "Adhesins explain mucosal colonisation"
+   ],
+   "t": [
+    {
+     "a": "Why use a PPI in treatment?",
+     "b": "PPI raises gastric pH, improving antibiotic efficacy and reducing bacterial load."
+    },
+    {
+     "a": "What is the most common cause of peptic ulcer relapse?",
+     "b": "H. pylori infection."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Upper GI bleeding (hematemesis, melena), severe abdominal pain, persistent vomiting, weight loss, or anemia in a patient with known H. pylori infection."
+ ],
+ "faq": [
+  {
+   "q": "Can H. pylori be cured?",
+   "a": "Yes, with appropriate antibiotic therapy and a proton pump inhibitor, most infections are eradicated."
+  },
+  {
+   "q": "Is H. pylori contagious?",
+   "a": "It spreads via fecal‑oral transmission, so good hygiene reduces risk."
+  },
+  {
+   "q": "Why is a biopsy needed if a stool test is positive?",
+   "a": "Biopsy confirms gastritis severity, rules out other causes, and allows histological staging."
+  }
+ ],
+ "exam": [
+  "Explain how urease activity helps H. pylori survive in the stomach.",
+  "Describe the diagnostic algorithm for a patient with dyspepsia in a low‑resource setting.",
+  "Outline the first‑line treatment regimen for H. pylori infection and justify the choice of each drug."
+ ],
+ "related": [
+  "Peptic ulcer disease",
+  "Gastric carcinoma",
+  "MALT lymphoma",
+  "Proton pump inhibitors",
+  "Antibiotic resistance"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

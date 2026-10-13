@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Vital signs are measurable physiological parameters that reflect the body's homeostasis. Abnormal values often signal underlying disease and guide urgent management.",
+ "aka": [
+  "vital parameters"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Vital signs are a set of objective measurements—temperature, pulse, respiratory rate, and blood pressure—used to assess a patient's current physiological state.",
+   "b": [
+    "They are obtained at the bedside with simple equipment.",
+    "Reference ranges vary by age, sex, and clinical context."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Abnormal vital signs are graded by deviation from normal ranges and by the presence of organ dysfunction.",
+   "b": [
+    "Mild: 1–2 abnormal parameters, stable mental status.",
+    "Moderate: 3 abnormal parameters or early shock signs.",
+    "Severe: 4 abnormal parameters, altered consciousness, or impending organ failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Altered vital signs arise from infection, cardiovascular collapse, respiratory compromise, metabolic disturbance, or neuro‑genic causes.",
+   "b": [
+    "Infection (e.g., malaria, TB, sepsis) – fever, tachycardia.",
+    "Hypovolemia (diarrhoea, hemorrhage) – low BP, tachycardia.",
+    "Respiratory disease (pneumonia, asthma) – tachypnoea, hypoxia.",
+    "Cardiac disease (rheumatic heart disease, heart failure) – hypotension, tachycardia.",
+    "Neuro‑genic shock (spinal injury) – bradycardia, hypotension."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may appear febrile, sweaty, short‑of‑breath, confused, or pale, depending on which sign is abnormal.",
+   "b": [
+    "Fever: warm skin, chills.",
+    "Tachycardia: rapid, thready pulse.",
+    "Tachypnoea: use of accessory muscles.",
+    "Hypotension: cool extremities, delayed capillary refill."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "When a device is unavailable, use clinical surrogates: skin temperature, capillary refill, mental status, and chest rise.",
+   "t": [
+    {
+     "a": "Temperature measurement",
+     "b": "Is there a fever or hypothermia? Guides infection vs. environmental exposure."
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Is oxygen saturation adequate? Detects hypoxia when respiratory rate is high."
+    },
+    {
+     "a": "Blood pressure cuff",
+     "b": "Is perfusion adequate? Low values suggest shock; high values may indicate hypertension crisis."
+    },
+    {
+     "a": "Manual pulse check",
+     "b": "Is rhythm regular? Helps identify arrhythmias when ECG unavailable."
+    },
+    {
+     "a": "Respiratory rate count",
+     "b": "Is ventilation sufficient? Elevated rate signals respiratory distress or metabolic acidosis."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Persistently abnormal vital signs can lead to organ ischemia, cardiac arrest, or respiratory failure.",
+   "b": [
+    "Systolic BP <90 mmHg in adults – shock.",
+    "Respiratory rate >30/min – impending respiratory failure.",
+    "Temperature >40°C – risk of seizures and brain injury."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause while stabilising the abnormal sign.",
+   "b": [
+    "Fever: antipyretics, treat infection (e.g., antibiotics for malaria, TB).",
+    "Tachycardia: fluid resuscitation, treat pain or fever, avoid unnecessary beta‑blockers in shock.",
+    "Hypotension: isotonic fluids, vasopressors if refractory, monitor urine output.",
+    "Tachypnoea: oxygen, bronchodilators for asthma, treat acidosis."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑measure vital signs after each intervention and at regular intervals; educate on early warning signs.",
+   "b": [
+    "Document trends rather than single values.",
+    "Teach patients to seek care if fever >38°C persists >3 days or BP drops."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Vital sign abnormalities can mimic other syndromes.",
+   "b": [
+    "Sepsis vs. malaria fever.",
+    "Cardiac arrhythmia vs. sinus tachycardia from pain.",
+    "Anxiety‑induced tachypnoea vs. early respiratory failure."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain conditions mask true vital sign status.",
+   "b": [
+    "Cold environments may lower skin temperature despite fever.",
+    "Beta‑blockers blunt tachycardia, hiding shock.",
+    "Pregnancy lowers BP, may appear normal when actually low for the mother."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Systolic BP <90 mmHg with altered mental status",
+  "Respiratory rate >30/min with cyanosis",
+  "Temperature >40°C or <35°C"
+ ],
+ "faq": [
+  {
+   "q": "Why are vital signs measured together?",
+   "a": "They give a quick snapshot of circulatory, respiratory, and thermoregulatory status, allowing early detection of deterioration."
+  },
+  {
+   "q": "Can a normal temperature rule out infection?",
+   "a": "No; some infections (e.g., TB, malaria) may present with normal or low temperature, especially in immunocompromised patients."
+  },
+  {
+   "q": "What if I cannot measure blood pressure?",
+   "a": "Assess perfusion by capillary refill, skin colour, urine output, and mental status while arranging equipment."
+  }
+ ],
+ "exam": [
+  "Explain how to interpret a triad of fever, tachycardia, and hypotension in a low‑resource setting.",
+  "List the first three steps in managing a patient with a respiratory rate >30/min and low oxygen saturation.",
+  "Describe how beta‑blocker therapy can mask shock signs and what alternative assessments you would use."
+ ],
+ "related": [
+  "Sepsis",
+  "Shock",
+  "Respiratory failure",
+  "Fever of unknown origin",
+  "Hypertension",
+  "Hypovolemia"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

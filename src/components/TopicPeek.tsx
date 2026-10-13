@@ -60,6 +60,24 @@ export default function TopicPeekHost() {
     return () => document.removeEventListener("click", onClick, true);
   }, []);
 
+  // Reached the end? Keep pulling (phone) or scrolling (computer) and the panel closes by itself, so there is no X to hunt for.
+  const [atEnd, setAtEnd] = useState(false);
+  const pull = useRef({ y: 0, dist: 0, wheel: 0 });
+  const scroller = useRef<HTMLDivElement | null>(null);
+  const reachedEnd = (el: HTMLElement) => el.scrollHeight - el.scrollTop - el.clientHeight < 3;
+  useEffect(() => { setAtEnd(false); pull.current = { y: 0, dist: 0, wheel: 0 }; }, [slug, peek]);
+  const onScroll = (e: React.UIEvent<HTMLDivElement>) => { const end = reachedEnd(e.currentTarget); setAtEnd(end); if (!end) pull.current.wheel = 0; };
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => { pull.current.y = e.touches[0].clientY; pull.current.dist = 0; };
+  const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    const el = e.currentTarget;
+    if (!reachedEnd(el)) { pull.current.y = e.touches[0].clientY; return; }
+    pull.current.dist = Math.max(0, pull.current.y - e.touches[0].clientY);
+    if (pull.current.dist > 70) { pull.current.dist = 0; topicPeek.close(); }
+  };
+  const onWheel = (e: React.WheelEvent<HTMLDivElement>) => {
+    if (e.deltaY > 0 && reachedEnd(e.currentTarget)) { pull.current.wheel += e.deltaY; if (pull.current.wheel > 260) { pull.current.wheel = 0; topicPeek.close(); } } else pull.current.wheel = 0;
+  };
+
   const go = () => {
     if (!slug) return;
     if (origin.current) setNoteReturn(origin.current);
@@ -70,7 +88,7 @@ export default function TopicPeekHost() {
   return (
     <Sheet open={Boolean(slug)} onOpenChange={(o) => !o && topicPeek.close()}>
       <SheetContent side={wide ? "right" : "bottom"} className={wide ? "flex h-full w-[28rem] max-w-full flex-col gap-0 p-0 sm:max-w-md" : "flex h-[82dvh] flex-col gap-0 rounded-t-3xl p-0"}>
-        <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-5 pb-4 pt-6 [-webkit-overflow-scrolling:touch]" data-peek-scroll>
+        <div className="min-h-0 flex-1 touch-pan-y overflow-y-auto overscroll-contain px-5 pb-4 pt-6 [-webkit-overflow-scrolling:touch]" data-peek-scroll ref={scroller} onScroll={onScroll} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onWheel={onWheel}>
           {peek ? (
             <>
               <p className="pr-8 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{peek.category || "Quick read"}</p>
@@ -85,6 +103,7 @@ export default function TopicPeekHost() {
                   ))}
                 </ul>
               )}
+              {(peek.points.length > 2 || peek.summary.length > 200) && <p className={`mt-5 pb-1 text-center text-xs font-semibold transition-colors ${atEnd ? "text-primary" : "text-muted-foreground/70"}`}>{atEnd ? "Keep pulling up to close" : "Scroll to the end, then keep going to close"}</p>}
               {!peek.summary && !peek.points.length && (filling
                 ? <div className="mt-5 space-y-3" role="status" aria-label="Loading" aria-live="polite">{[0, 1, 2, 3].map((i) => <div key={i} className="h-4 animate-pulse rounded bg-foreground/10" style={{ width: `${96 - i * 9}%` }} />)}<div className="h-20 animate-pulse rounded-xl bg-foreground/10" /></div>
                 : <p className="mt-4 text-[15px] text-muted-foreground">Open the full page to read about {peek.name}.</p>)}

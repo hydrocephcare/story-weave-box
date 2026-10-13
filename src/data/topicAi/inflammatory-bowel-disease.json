@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Inflammatory bowel disease (IBD) comprises ulcerative colitis and Crohn's disease, chronic immune‑mediated disorders causing relapsing gut inflammation. Diagnosis relies on endoscopy, imaging, and histology, while management balances inflammation control, nutrition, and complication prevention.",
+ "aka": [
+  "Ulcerative colitis",
+  "Crohn's disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "IBD includes two main phenotypes: ulcerative colitis (continuous colonic mucosal inflammation) and Crohn's disease (transmural, segmental inflammation that may affect any GI tract portion). Diagnosis requires endoscopic visualization with biopsies showing chronic inflammatory changes, plus imaging to assess extent.",
+   "b": [
+    "Endoscopy with biopsies is the gold standard.",
+    "Radiologic imaging (CT/MR enterography) defines disease location and complications."
+   ],
+   "t": [
+    {
+     "a": "Colonoscopy with biopsies",
+     "b": "Confirms diagnosis and distinguishes ulcerative colitis from Crohn's; histology shows crypt architectural distortion, granulomas (Crohn's)."
+    },
+    {
+     "a": "Fecal calprotectin",
+     "b": "Screens for intestinal inflammation; high levels suggest active IBD vs functional IBS."
+    },
+    {
+     "a": "CT/MR enterography",
+     "b": "Maps small‑bowel disease and detects strictures, fistulas; essential for Crohn's staging."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity guides therapy. Ulcerative colitis uses the Mayo score; Crohn's uses the CDAI and endoscopic indices. Staging also incorporates complications such as strictures, fistulas, or extra‑intestinal disease.",
+   "b": [
+    "Mayo 0‑3: remission to severe colitis.",
+    "CDAI <150: remission; 150‑220 mild; >450 severe."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "IBD results from a dysregulated immune response to gut microbiota in genetically susceptible hosts, triggered by environmental factors.",
+   "b": [
+    "Genetic predisposition (NOD2, IL23R).",
+    "Microbial dysbiosis.",
+    "Smoking (worsens Crohn's, may protect ulcerative colitis).",
+    "Infections common in low‑resource settings (e.g., TB, HIV) can mimic or trigger flares."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report chronic abdominal pain, diarrhea (often bloody in ulcerative colitis), weight loss, and fatigue. Extra‑intestinal signs include arthritis, skin lesions, and hepatic sclerosing cholangitis.",
+   "b": [
+    "Ulcerative colitis: bloody diarrhea, urgency, tenesmus.",
+    "Crohn's disease: abdominal pain, non‑bloody diarrhea, perianal disease."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond endoscopy, labs and imaging help assess activity, complications, and rule out mimics.",
+   "b": [
+    "CBC, CRP, ESR for systemic inflammation.",
+    "Serologies (ASCA, pANCA) aid phenotype but not diagnostic."
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Detects anemia or leukocytosis; anemia may indicate chronic blood loss or malabsorption."
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Quantifies inflammatory burden; high CRP suggests active disease."
+    },
+    {
+     "a": "Stool culture & C. difficile PCR",
+     "b": "Excludes infectious colitis when diarrhea is acute."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and require urgent care.",
+   "b": [
+    "Toxic megacolon (colonic dilation >6 cm with systemic toxicity).",
+    "Perforation, massive hemorrhage.",
+    "Severe malnutrition, fistulas, strictures causing obstruction."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Therapy aims to induce remission, maintain it, and prevent complications. Choice depends on severity, location, and extra‑intestinal disease.",
+   "b": [
+    "5‑ASA (mesalamine) for mild ulcerative colitis – topical anti‑inflammatory.",
+    "Corticosteroids for moderate‑severe flares – rapid control, avoid long‑term use.",
+    "Immunomodulators (azathioprine, methotrexate) for steroid‑sparing maintenance.",
+    "Biologics (anti‑TNF, anti‑integrin, anti‑IL‑12/23) for refractory disease – target specific cytokine pathways.",
+    "Surgery for complications or refractory disease; colectomy cures ulcerative colitis."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring detects relapse, medication toxicity, and cancer risk.",
+   "b": [
+    "Annual colonoscopic surveillance after 8‑10 years of disease (or sooner with primary sclerosing cholangitis).",
+    "Vaccinations (influenza, pneumococcal, hepatitis B) especially when immunosuppressed.",
+    "Nutritional support and bone health monitoring."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic IBD clinically or endoscopically.",
+   "b": [
+    "Infectious colitis (Shigella, Campylobacter, TB).",
+    "Ischemic colitis.",
+    "Irritable bowel syndrome (functional)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely reassuring.",
+   "b": [
+    "Normal fecal calprotectin does not exclude mild disease.",
+    "Negative ASCA/pANCA does not rule out IBD.",
+    "Endoscopic appearance may be normal in early Crohn's; imaging is needed."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with guarding",
+  "Persistent fever >38.5 °C",
+  "Profuse rectal bleeding",
+  "Signs of toxic megacolon (distension, tachycardia, hypotension)",
+  "Sudden weight loss with dehydration"
+ ],
+ "faq": [
+  {
+   "q": "Can IBD be cured?",
+   "a": "No cure exists; treatment controls inflammation and prevents complications."
+  },
+  {
+   "q": "Why does smoking affect Crohn's differently than ulcerative colitis?",
+   "a": "Smoking worsens Crohn's by promoting immune activation, while nicotine may reduce colonic inflammation in ulcerative colitis."
+  },
+  {
+   "q": "Is colon cancer risk higher in IBD?",
+   "a": "Yes, especially after 8‑10 years of extensive colitis; regular surveillance colonoscopy is recommended."
+  }
+ ],
+ "exam": [
+  "Describe the endoscopic and histologic criteria that differentiate ulcerative colitis from Crohn's disease.",
+  "Explain the stepwise therapeutic approach for a patient with moderate ulcerative colitis flare.",
+  "List three red‑flag complications of IBD and their immediate management."
+ ],
+ "related": [
+  "Primary sclerosing cholangitis",
+  "Celiac disease",
+  "Microscopic colitis",
+  "Intestinal tuberculosis",
+  "HIV‑associated enteropathy",
+  "Colon cancer screening"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

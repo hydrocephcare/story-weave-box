@@ -1,0 +1,178 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Crohn disease is a chronic, transmural inflammatory disorder that can affect any part of the gastrointestinal tract, most often the terminal ileum and colon. It presents with abdominal pain, diarrhoea, weight loss, and extra‑intestinal features, and is diagnosed by a combination of clinical, endoscopic, radiologic and histologic findings.",
+ "aka": [
+  "Regional enteritis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Crohn disease is a relapsing‑remitting, transmural granulomatous inflammation of the GI tract. Diagnosis requires compatible symptoms plus at least two of: endoscopic ulceration with skip lesions, radiologic bowel wall thickening, or non‑caseating granulomas on biopsy.",
+   "b": [
+    "Transmural inflammation → fistulae, strictures",
+    "Skip lesions differentiate from ulcerative colitis",
+    "Granulomas are supportive but not mandatory"
+   ],
+   "t": [
+    {
+     "a": "Colonoscopy with ileoscopy",
+     "b": "Does the mucosa show ulceration, skip lesions, or granulomas? Positive findings confirm disease location and severity."
+    },
+    {
+     "a": "Magnetic resonance enterography (MRE)",
+     "b": "Is there bowel wall thickening, mesenteric fat stranding, or fistulae? Detects disease beyond reach of endoscopy."
+    },
+    {
+     "a": "Stool culture/PCR for pathogens",
+     "b": "Are infectious causes (e.g., TB, Salmonella) excluded? Positive result redirects treatment to infection."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical activity indices (e.g., CDAI) and by endoscopic/radiologic extent. The Montreal classification stages disease by location (L1‑L4) and behavior (B1‑B3).",
+   "b": [
+    "B1: non‑stricturing, non‑penetrating",
+    "B2: stricturing disease",
+    "B3: penetrating/fistulising disease",
+    "L1‑L4: ileal, colonic, ileocolonic, upper GI"
+   ],
+   "t": [
+    {
+     "a": "CDAI score",
+     "b": "What is the activity level? >220 indicates moderate‑to‑severe disease needing systemic therapy."
+    },
+    {
+     "a": "CT enterography (if MRE unavailable)",
+     "b": "Does it show strictures or abscesses? Guides need for surgery or drainage."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Exact cause is unknown; a complex interplay of genetics (NOD2), dysregulated immunity, and environmental triggers drives inflammation.",
+   "b": [
+    "Genetic susceptibility (NOD2, IL23R)",
+    "Microbial dysbiosis",
+    "Smoking (worsens disease)",
+    "Infections that mimic Crohn (TB, schistosomiasis) – consider in low‑resource settings"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have chronic abdominal pain, diarrhoea (may be bloody), weight loss, and growth failure in children. Extra‑intestinal manifestations include oral ulcers, arthritis, and skin lesions.",
+   "b": [
+    "Right‑lower‑quadrant pain → ileal disease",
+    "Perianal fistulae → penetrating behavior",
+    "Growth failure → pediatric red flag"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Combine endoscopy, cross‑sectional imaging, laboratory tests, and histology to confirm diagnosis, assess severity, and exclude mimics.",
+   "b": [
+    "CBC for anemia, ESR/CRP for inflammation",
+    "Fecal calprotectin to screen for active inflammation",
+    "Serology (ASCA) supportive but not diagnostic"
+   ],
+   "t": [
+    {
+     "a": "Fecal calprotectin",
+     "b": "Is intestinal inflammation present? Elevated >200 µg/g suggests active disease; normal level makes IBD less likely."
+    },
+    {
+     "a": "Serum anti‑Saccharomyces cerevisiae antibodies (ASCA)",
+     "b": "Is ASCA positive? Supports Crohn but low specificity; a negative result does not exclude disease."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from transmural inflammation and chronic disease activity.",
+   "b": [
+    "Intestinal obstruction from strictures",
+    "Fistulae to bladder, vagina, skin",
+    "Abscess formation",
+    "Nutritional deficiency and growth failure",
+    "Increased colorectal cancer risk after long‑standing colonic disease"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat inflammation, maintain remission, and address complications. Therapy is step‑wise, starting with steroids for induction, then immunomodulators or biologics for maintenance.",
+   "b": [
+    "Corticosteroids (e.g., prednisone) for rapid induction – avoid long‑term due to toxicity",
+    "Azathioprine/6‑mercaptopurine for steroid‑sparing maintenance – monitor blood counts",
+    "Anti‑TNF agents (infliximab, adalimumab) for moderate‑to‑severe or fistulising disease – avoid if active infection",
+    "Nutritional support (enteral feeds) for malnutrition",
+    "Surgery for strictures, fistulae, or refractory disease"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of symptoms, labs, and imaging prevents complications and guides therapy adjustments.",
+   "b": [
+    "Clinic review every 3–6 months; more often after therapy change",
+    "Annual colonoscopic surveillance after 8‑10 years of colonic disease",
+    "Vaccinations (influenza, pneumococcal, hepatitis B) before immunosuppression"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause chronic diarrhoea and abdominal pain can mimic Crohn disease.",
+   "b": [
+    "Ulcerative colitis – continuous colonic lesions, no skip lesions, mucosal only",
+    "Intestinal tuberculosis – ileocecal ulceration, caseating granulomas, positive TB tests",
+    "Irritable bowel syndrome – functional pain, normal labs and imaging"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal or misinterpreted.",
+   "b": [
+    "Normal CRP does not exclude active disease in some patients",
+    "Absence of granulomas on biopsy does not rule out Crohn",
+    "Negative stool cultures may miss low‑level TB in endemic areas"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with guarding",
+  "Persistent vomiting or inability to tolerate fluids",
+  "High fever >38.5 °C",
+  "Visible blood per rectum with hemodynamic instability",
+  "Rapid weight loss or growth failure in a child"
+ ],
+ "faq": [
+  {
+   "q": "Why are skip lesions important?",
+   "a": "They show that diseased segments are separated by normal bowel, a hallmark that distinguishes Crohn from ulcerative colitis."
+  },
+  {
+   "q": "Can Crohn disease be cured with surgery?",
+   "a": "Surgery removes diseased segments but does not cure the underlying immune disorder; disease often recurs elsewhere."
+  },
+  {
+   "q": "What lifestyle change improves outcomes?",
+   "a": "Smoking cessation reduces relapse rates and the need for surgery."
+  }
+ ],
+ "exam": [
+  "Describe the diagnostic criteria for Crohn disease and how they differ from ulcerative colitis.",
+  "Explain the Montreal classification and its relevance to treatment decisions.",
+  "Outline the step‑wise medical management of moderate‑to‑severe Crohn disease, including when to consider biologic therapy."
+ ],
+ "related": [
+  "Ulcerative colitis",
+  "Intestinal tuberculosis",
+  "Fistula formation",
+  "Malabsorption and nutritional deficiencies",
+  "Biologic therapy in IBD",
+  "IBD-associated colorectal cancer"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

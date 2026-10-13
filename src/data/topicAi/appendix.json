@@ -1,0 +1,132 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The vermiform appendix is a narrow, blind-ended tube attached to the cecum. Its position varies, influencing clinical signs in inflammation. Though its function is limited, it can harbor disease that mimics many abdominal conditions.",
+ "aka": [
+  "vermiform appendix",
+  "appendix vermiformis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A 5–10 cm tubular structure arising from the posteromedial cecum, just below the ileocecal valve. It is covered by peritoneum and contains lymphoid tissue.",
+   "b": [
+    "Blind‑ended, not essential for digestion",
+    "Contains gut‑associated lymphoid tissue (GALT)",
+    "Variable length and tip position"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The base is 2–3 cm from the ileocecal valve; the tip may be retrocecal, pelvic, subhepatic, or pre‑ileal. Wall layers mirror the rest of the colon but are thinner.",
+   "b": [
+    "Mucosa: simple columnar epithelium with goblet cells",
+    "Submucosa: abundant lymphoid follicles",
+    "Muscularis: inner circular, outer longitudinal",
+    "Serosa: peritoneal covering"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Depending on tip position, the appendix contacts the iliopsoas muscle, obturator internus, uterus, fallopian tubes, or the right ovary, explaining specific clinical signs.",
+   "b": [
+    "Retrocecal: psoas sign",
+    "Pelvic: obturator sign, urinary symptoms"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arises from the appendicular artery, a branch of the ileocolic artery (superior mesenteric). Venous drainage follows the same route to the portal system.",
+   "b": [
+    "Artery: appendicular branch of ileocolic",
+    "Vein: drains into superior mesenteric vein"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Visceral afferents travel with the superior mesenteric plexus; somatic pain from the serosa is conveyed by the lower thoracic (T10‑T12) intercostal nerves.",
+   "b": [
+    "Visceral pain: vague periumbilical",
+    "Somatic pain: localized right lower quadrant"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Acts as a reservoir for gut flora and contributes to mucosal immunity via its lymphoid tissue, especially in early life.",
+   "b": [
+    "Maintains microbiome balance",
+    "Stimulates IgA production"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Appendicitis is the most common surgical emergency. Position determines signs (psoas, obturator) and risk of perforation. Other pathologies include carcinoid tumor, mucocele, and parasitic infection.",
+   "b": [
+    "Acute appendicitis: inflammation starts in mucosa, may spread to serosa",
+    "Perforation risk rises after 48 h",
+    "Appendiceal carcinoid: <2 cm usually cured by appendectomy"
+   ],
+   "t": [
+    {
+     "a": "Ultrasound",
+     "b": "Does the appendix appear non‑compressible >6 mm? Positive suggests appendicitis; a normal appendix does not rule it out."
+    },
+    {
+     "a": "CT abdomen with contrast",
+     "b": "Shows enlarged appendix, peri‑appendiceal fat stranding, or perforation. If unavailable, rely on clinical signs and plain X‑ray for free air."
+    },
+    {
+     "a": "White blood cell count",
+     "b": "Elevated >12 ×10⁹/L supports infection but can be normal in early disease or immunocompromised patients."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams and bedside assessment.",
+   "b": [
+    "McBurney’s point tenderness = base of appendix",
+    "Psoas sign = retrocecal appendix irritation",
+    "Obturator sign = pelvic appendix irritation"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe right lower quadrant pain with fever",
+  "Signs of peritonitis (rigidity, rebound tenderness)",
+  "Vomiting, inability to pass gas, or shock"
+ ],
+ "faq": [
+  {
+   "q": "Why does appendicitis start as vague periumbilical pain?",
+   "a": "Visceral afferents from the appendix travel with T10, which supplies the umbilical region."
+  },
+  {
+   "q": "Can the appendix be removed prophylactically?",
+   "a": "Elective removal is not recommended unless there is a tumor, mucocele, or chronic inflammation."
+  },
+  {
+   "q": "What is the significance of a yellow tip lesion on the appendix?",
+   "a": "A bright yellow lesion often represents a fecalith, a common obstructing cause of acute appendicitis."
+  }
+ ],
+ "exam": [
+  "Describe how the position of the appendix influences physical‑exam findings.",
+  "List the stepwise diagnostic approach to suspected acute appendicitis in a low‑resource setting.",
+  "Explain the blood supply of the appendix and why its occlusion leads to gangrene."
+ ],
+ "related": [
+  "Cecum",
+  "Ileum",
+  "Right lower quadrant pain",
+  "Peritonitis",
+  "Carcinoid tumor",
+  "Appendiceal mucocele",
+  "Mesenteric lymph nodes",
+  "Abdominal ultrasound"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

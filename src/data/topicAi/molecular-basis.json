@@ -1,0 +1,115 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Molecular basis links DNA, RNA and protein changes to disease. Understanding mutations, gene regulation and pathways lets clinicians predict presentation, choose tests and target therapy.",
+ "aka": [
+  "Molecular pathology",
+  "Molecular medicine"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Molecular basis describes how alterations in nucleic acids or proteins disrupt normal cellular function, leading to disease.",
+   "b": [
+    "DNA → RNA → protein cascade",
+    "Mutations can be point, insertion, deletion or epigenetic",
+    "Clinically relevant changes affect metabolism, signaling or structural proteins"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Genes are transcribed to mRNA, which is translated into proteins that perform cellular tasks. Enzyme activity, receptor binding and structural integrity depend on precise amino‑acid sequences.",
+   "b": [
+    "Transcription factors regulate gene expression",
+    "Post‑translational modifications fine‑tune protein function",
+    "Feedback loops maintain homeostasis"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Gene expression is controlled at multiple levels: chromatin remodeling, transcriptional control, RNA processing, translation and protein degradation.",
+   "b": [
+    "DNA methylation silences genes",
+    "MicroRNAs block translation",
+    "Ubiquitin‑proteasome system removes damaged proteins"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Pathogenic variants disturb normal pathways, producing loss‑of‑function, gain‑of‑function or dominant‑negative effects.",
+   "b": [
+    "Point mutation in β‑globin (Glu→Val) → sickle cell disease",
+    "BRCA1 loss → impaired DNA repair → breast/ovarian cancer",
+    "EGFR activating mutation → uncontrolled cell growth"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Identifying the molecular defect guides diagnosis, prognosis and targeted therapy, especially in oncology, hematology and inherited metabolic disorders.",
+   "b": [
+    "PCR detects specific mutations for rapid diagnosis",
+    "Targeted inhibitors (e.g., TKIs) block mutant proteins",
+    "Gene therapy corrects single‑gene defects"
+   ],
+   "t": [
+    {
+     "a": "PCR for sickle cell mutation",
+     "b": "Confirms presence of HbS allele; positive result confirms sickle cell disease or trait"
+    },
+    {
+     "a": "Next‑generation sequencing panel",
+     "b": "Identifies pathogenic variants across many genes; guides personalized cancer therapy"
+    },
+    {
+     "a": "Serum enzyme assay (e.g., G6PD)",
+     "b": "Detects functional deficiency; low activity explains hemolysis risk"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on how a specific molecular change explains the clinical picture and which test proves it.",
+   "b": [
+    "Know the amino‑acid substitution in sickle cell and its effect on polymerisation",
+    "Recall hallmark capabilities of oncogenes vs tumour suppressors",
+    "Understand why loss of DNA repair genes leads to genomic instability"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute hemolysis with shock (e.g., severe sickle crisis)",
+  "Rapidly progressive neurological decline in metabolic disease",
+  "Unexplained severe cytopenias suggesting bone‑marrow failure"
+ ],
+ "faq": [
+  {
+   "q": "Why do point mutations cause disease?",
+   "a": "A single base change can alter an amino‑acid, disrupting protein structure or function."
+  },
+  {
+   "q": "How can a normal lab be misleading?",
+   "a": "Carrier states may have normal hemoglobin levels but still carry pathogenic alleles."
+  },
+  {
+   "q": "What if genetic testing is unavailable?",
+   "a": "Use phenotype‑driven clinical criteria and family history to guide management."
+  }
+ ],
+ "exam": [
+  "Explain how the Glu→Val substitution in β‑globin leads to sickling under low‑oxygen conditions.",
+  "Differentiate oncogenes from tumour‑suppressor genes and give one clinical example of each.",
+  "Describe two molecular techniques used to identify pathogenic variants and their diagnostic utility."
+ ],
+ "related": [
+  "Genetic inheritance patterns",
+  "Molecular oncology",
+  "Hemoglobinopathies",
+  "Enzyme deficiency disorders",
+  "Pharmacogenomics",
+  "Epigenetics"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

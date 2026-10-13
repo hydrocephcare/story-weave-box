@@ -1,0 +1,134 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Hepatic encephalopathy is a neuropsychiatric syndrome caused by severe liver dysfunction and portosystemic shunting, leading to ammonia‑mediated astrocyte swelling and cerebral edema. It presents with a spectrum from subtle confusion to coma, often triggered by precipitating factors such as infection, GI bleeding, or sedatives.",
+ "aka": [
+  "hepatic encephalopathy",
+  "brain dysfunction in cirrhosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A metabolic encephalopathy due to liver failure and portosystemic shunting. Diagnosis is clinical, supported by elevated serum ammonia and exclusion of other causes.",
+   "b": [
+    "Clinical features: confusion, asterixis, altered consciousness"
+   ],
+   "t": [
+    {
+     "a": "Serum ammonia",
+     "b": "Elevated (> 80 µmol/L) supports the diagnosis but is not specific; normal levels do not exclude encephalopathy."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Markedly abnormal values indicate advanced liver dysfunction."
+    },
+    {
+     "a": "CT/MRI brain",
+     "b": "Normal imaging supports metabolic cause; abnormal findings require alternative diagnosis."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The West Haven criteria classify encephalopathy from Grade 0 (minimal) to Grade 4 (coma).",
+   "b": [
+    "Grade 0: no obvious change; Grade 1: trivial lack of awareness; Grade 2: lethargy, disorientation; Grade 3: somnolence, agitation; Grade 4: coma"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary driver is hyperammonemia from impaired hepatic detoxification and portosystemic shunting. Precipitating factors often occur in low‑resource settings.",
+   "b": [
+    "Infections (sepsis, urinary tract infection, pneumonia)",
+    "GI bleeding (variceal hemorrhage)",
+    "Electrolyte disturbances (hyponatremia, hypoglycemia)",
+    "Sedatives or opioids",
+    "Malnutrition",
+    "Alcohol binge"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms evolve from subtle cognitive changes to overt coma, often accompanied by asterixis and asterixis‑related tremor.",
+   "b": [
+    "Confusion, disorientation, impaired attention",
+    "Asterixis (flapping tremor)",
+    "Somnolence or agitation",
+    "Coma (Grade 4)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests confirm liver dysfunction, rule out other causes, and guide treatment.",
+   "t": [
+    {
+     "a": "Serum ammonia",
+     "b": "Supports diagnosis; normal does not exclude."
+    },
+    {
+     "a": "CBC, electrolytes, glucose",
+     "b": "Abnormalities point to precipitating factors."
+    },
+    {
+     "a": "Coagulation profile",
+     "b": "Indicates synthetic liver failure."
+    },
+    {
+     "a": "Liver imaging (US or CT)",
+     "b": "Confirms underlying liver disease."
+    },
+    {
+     "a": "Lumbar puncture (if infection suspected)",
+     "b": "Positive cultures change management."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain features signal imminent deterioration or life‑threatening complications.",
+   "b": [
+    "Severe encephalopathy (Grade 3–4)",
+    "Rapid neurological decline",
+    "Uncontrolled GI bleeding",
+    "Severe hyponatremia (<125 mEq/L)",
+    "Hypoglycemia (<50 mg/dL)"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe confusion or coma (Grade 3–4), uncontrolled bleeding, severe hyponatremia or hypoglycemia, sudden neurological decline"
+ ],
+ "faq": [
+  {
+   "q": "Why does ammonia cause brain swelling?",
+   "a": "Ammonia is taken up by astrocytes, forming glutamine, which draws water into cells and causes cerebral edema."
+  },
+  {
+   "q": "Can a normal ammonia level rule out encephalopathy?",
+   "a": "No; ammonia can be normal early or due to rapid clearance, so clinical assessment remains key."
+  },
+  {
+   "q": "What is asterixis?",
+   "a": "A flapping tremor seen when the patient extends the wrist; it is a classic sign of hepatic encephalopathy."
+  }
+ ],
+ "exam": [
+  "Explain the pathophysiology of hepatic encephalopathy and why lactulose is effective.",
+  "Describe the West Haven grading system and its clinical relevance.",
+  "Identify common precipitating factors in a low‑resource setting and outline initial management steps."
+ ],
+ "related": [
+  "Cirrhosis",
+  "Portal hypertension",
+  "Variceal bleeding",
+  "Liver failure",
+  "Sepsis",
+  "Alcoholic liver disease",
+  "Hypoglycemia",
+  "Hyponatremia"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

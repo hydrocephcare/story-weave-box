@@ -1,0 +1,171 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Colorectal cancer is a malignant tumor of the colon or rectum, usually arising from adenomatous polyps. Diagnosis relies on endoscopy with biopsy and staging by imaging. Early detection and multimodal therapy improve survival.",
+ "aka": [
+  "Colon cancer",
+  "Rectal cancer"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A malignant neoplasm arising from the epithelial lining of the colon or rectum, most often an adenocarcinoma. Diagnosis requires visualisation of the lesion and histologic confirmation.",
+   "b": [
+    "Colonoscopy with targeted biopsy is the gold standard.",
+    "CT colonography can be used when colonoscopy is unavailable."
+   ],
+   "t": [
+    {
+     "a": "Colonoscopy",
+     "b": "Does the lesion have malignant features and can tissue be obtained? Positive biopsy confirms cancer."
+    },
+    {
+     "a": "CT abdomen/pelvis",
+     "b": "Is there local invasion or distant metastasis? Detects stage‑defining spread."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the AJCC TNM system, guiding treatment intensity.",
+   "b": [
+    "T: depth of wall invasion.",
+    "N: regional lymph‑node involvement.",
+    "M: distant metastasis (liver, lung)."
+   ],
+   "t": [
+    {
+     "a": "MRI pelvis (for rectal cancer)",
+     "b": "What is the T stage and circumferential resection margin? Determines need for neoadjuvant therapy."
+    },
+    {
+     "a": "Chest CT",
+     "b": "Is there pulmonary metastasis? Positive result upstages to stage IV."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are sporadic, but several hereditary and environmental factors increase risk.",
+   "b": [
+    "Familial adenomatous polyposis (APC mutation).",
+    "Lynch syndrome (DNA‑mismatch repair defect).",
+    "Inflammatory bowel disease, especially ulcerative colitis.",
+    "Low‑fiber, high‑fat diet; obesity; smoking.",
+    "In low‑resource settings: schistosomiasis‑related colitis, chronic hookworm anemia."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms often develop slowly and may be mistaken for benign conditions.",
+   "b": [
+    "Change in bowel habit (diarrhoea or constipation) >4 weeks.",
+    "Occult or overt rectal bleeding.",
+    "Unexplained iron‑deficiency anaemia.",
+    "Abdominal pain or weight loss."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A stepwise approach balances diagnostic yield with resource availability.",
+   "b": [
+    "Stool guaiac test for occult blood when endoscopy is delayed.",
+    "Carcinoembryonic antigen (CEA) for baseline and monitoring."
+   ],
+   "t": [
+    {
+     "a": "Stool guaiac",
+     "b": "If unavailable, proceed directly to imaging based on symptoms."
+    },
+    {
+     "a": "CEA level",
+     "b": "What is the tumour burden and response to therapy? Rising CEA may indicate recurrence."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications can be life‑threatening and require urgent care.",
+   "b": [
+    "Intestinal obstruction.",
+    "Perforation with peritonitis.",
+    "Massive lower GI bleeding.",
+    "Liver metastasis causing hepatic failure."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment is stage‑dependent and combines surgery, systemic therapy and supportive care.",
+   "b": [
+    "Early stage (I‑II): curative surgical resection (segmental colectomy or low anterior resection).",
+    "Stage III: surgery plus adjuvant fluoropyrimidine‑based chemotherapy (e.g., 5‑FU/capecitabine).",
+    "Stage IV: systemic chemotherapy (oxaliplatin‑based) ± targeted agents; surgery for isolated metastases.",
+    "Supportive: iron supplementation for anaemia, nutritional support, VTE prophylaxis."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long‑term surveillance reduces mortality and catches metachronous lesions.",
+   "b": [
+    "Colonoscopy at 1 year post‑resection, then every 3‑5 years.",
+    "Serial CEA every 3–6 months for 2 years, then annually.",
+    "Lifestyle: high‑fiber diet, regular exercise, limit alcohol and tobacco."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic colorectal cancer clinically or endoscopically.",
+   "b": [
+    "Diverticulitis with mass‑like inflammation.",
+    "Ischemic colitis causing ulcerated lesions.",
+    "Inflammatory bowel disease strictures."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be falsely reassuring.",
+   "b": [
+    "Normal CEA does not exclude disease, especially early stage.",
+    "Negative stool guaiac can occur with right‑sided tumours that bleed intermittently.",
+    "CT may miss small peritoneal implants; consider MRI or PET if suspicion remains."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe abdominal pain with distension (possible obstruction or perforation).",
+  "Profuse rectal bleeding or melena.",
+  "Rapidly worsening anaemia or weakness."
+ ],
+ "faq": [
+  {
+   "q": "Why is colonoscopy preferred over CT for diagnosis?",
+   "a": "It allows direct visualisation, biopsy, and therapeutic polypectomy, which imaging cannot provide."
+  },
+  {
+   "q": "Can a normal CEA rule out recurrence?",
+   "a": "No; CEA is useful for trend monitoring but not 100% sensitive, especially in early recurrence."
+  },
+  {
+   "q": "What is the role of oxaliplatin in treatment?",
+   "a": "Oxaliplatin combined with fluoropyrimidines improves survival in stage III/IV disease but can cause peripheral neuropathy."
+  }
+ ],
+ "exam": [
+  "Describe the AJCC TNM criteria for colorectal cancer and how they influence treatment choices.",
+  "List the major hereditary syndromes associated with colorectal cancer and the screening recommendations for each.",
+  "Explain the management steps for a patient presenting with obstructive colorectal cancer."
+ ],
+ "related": [
+  "Colorectal polyps",
+  "Inflammatory bowel disease",
+  "Hereditary non‑polyposis colorectal cancer (Lynch syndrome)",
+  "Familial adenomatous polyposis",
+  "Colorectal cancer screening",
+  "Liver metastasis",
+  "Chemotherapy regimens for gastrointestinal cancers"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,169 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Acute Kidney Injury (AKI) is a rapid loss of kidney function, diagnosed by rising creatinine or falling urine output. Prompt identification of cause and severity guides life‑saving treatment.",
+ "aka": [
+  "Acute renal failure"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "AKI is defined by KDIGO criteria: any of the following within 48 h – serum creatinine ↑ ≥26.5 µmol/L, or ≥1.5 × baseline within 7 days, or urine output <0.5 mL/kg/h for ≥6 h.",
+   "b": [
+    "Use baseline creatinine if known; if not, estimate from age, sex, weight."
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Is kidney filtration falling? A rise meeting KDIGO thresholds confirms AKI."
+    },
+    {
+     "a": "Urine output monitoring",
+     "b": "Is the patient oliguric? <0.5 mL/kg/h signals AKI even if creatinine is lagging."
+    },
+    {
+     "a": "Point‑of‑care ultrasound (if available)",
+     "b": "Is there obstruction or volume overload? Detects hydronephrosis or a small, hyper‑echogenic kidney."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "KDIGO stages 1‑3 use creatinine rise and urine output duration; higher stage predicts mortality and need for renal replacement.",
+   "b": [
+    "Stage 1: Cr ↑ 26.5 µmol/L or 1.5‑1.9 × baseline; urine <0.5 mL/kg/h 6‑12 h.",
+    "Stage 2: Cr 2.0‑2.9 × baseline; urine <0.5 mL/kg/h ≥12 h.",
+    "Stage 3: Cr ≥3.0 × baseline or ≥354 µmol/L, or anuria ≥12 h, or need for dialysis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Classify AKI as prerenal, intrinsic, or postrenal; in low‑resource settings add tropical infections and herbal nephrotoxins.",
+   "b": [
+    "Prerenal (most common): hypovolaemia, heart failure, sepsis, NSAIDs, ACEi/ARBs.",
+    "Intrinsic: ATN (ischemia or nephrotoxins), acute interstitial nephritis (drugs, infections), glomerulonephritis.",
+    "Postrenal: obstruction – BPH, stones, malignancy, severe pelvic infection."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have oliguria, edema, fatigue, nausea, and signs of the underlying cause (e.g., fever in sepsis, hypotension in hypovolaemia).",
+   "b": [
+    "Look for volume status, skin turgor, JVP, and any recent drug exposure.",
+    "In tropical areas ask about malaria, schistosomiasis, herbal remedies."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer why kidney function fell and whether complications are present.",
+   "t": [
+    {
+     "a": "Serum electrolytes & bicarbonate",
+     "b": "Is there hyperkalaemia, metabolic acidosis, or fluid overload? Abnormalities guide urgent therapy."
+    },
+    {
+     "a": "Fractional excretion of sodium (FENa)",
+     "b": "Is the AKI prerenal (<1 %) or intrinsic (>2 %)? Helps target fluid management."
+    },
+    {
+     "a": "Urinalysis with microscopy",
+     "b": "Are there casts (muddy brown → ATN, WBC → interstitial nephritis) or proteinuria? Directs cause."
+    },
+    {
+     "a": "Renal ultrasound (if available)",
+     "b": "Is there hydronephrosis or small kidneys? Detects postrenal obstruction."
+    },
+    {
+     "a": "Infection screen (malaria rapid test, HIV, hepatitis B, TB PCR)",
+     "b": "Is an infectious disease driving AKI? Positive results prompt specific antimicrobial therapy."
+    },
+    {
+     "a": "If a test is unavailable",
+     "b": "Rely on clinical clues (volume status, drug history) and bedside ultrasound if possible."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled hyperkalaemia, severe acidosis, pulmonary oedema, and uremic encephalopathy demand urgent dialysis.",
+   "b": [
+    "K⁺ > 6.5 mmol/L with ECG changes.",
+    "pH < 7.2 despite bicarbonate.",
+    "Rapidly rising creatinine with anuria."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, optimise perfusion, avoid further nephrotoxins, and monitor complications.",
+   "b": [
+    "Fluid resuscitation for hypovolaemia – isotonic crystalloids, guided by bedside exam and CVP if available.",
+    "Hold nephrotoxic drugs (aminoglycosides, NSAIDs, contrast).",
+    "Start vasopressors for septic or cardiogenic shock to maintain MAP ≥ 65 mmHg.",
+    "Consider diuretics only if volume‑overloaded and kidney still producing urine.",
+    "Dialysis indications: refractory hyperkalaemia, severe acidosis, fluid overload, uremic symptoms."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑measure creatinine daily until stable, educate on hydration, avoid NSAIDs, and adjust doses of renally cleared drugs.",
+   "b": [
+    "Arrange outpatient review 1‑2 weeks after discharge.",
+    "Vaccinate against hepatitis B and pneumococcus in chronic kidney disease."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Chronic kidney disease (CKD) and acute on chronic kidney injury can mimic AKI but have a slower creatinine rise and prior baseline abnormalities.",
+   "b": [
+    "CKD: persistent GFR < 60 mL/min/1.73 m² for >3 months.",
+    "Acute on chronic: AKI superimposed on known CKD."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Early AKI may have normal creatinine if muscle mass is low; urine output may be misleading in patients on diuretics.",
+   "b": [
+    "Creatinine lag: rely on urine output and clinical picture.",
+    "FENa can be falsely low in diuretic use – consider FEUrea instead."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden anuria or oliguria with rising creatinine.",
+  "Severe hyperkalaemia or ECG changes.",
+  "Rapidly worsening breathlessness suggesting pulmonary oedema."
+ ],
+ "faq": [
+  {
+   "q": "Why is urine output important if creatinine can be normal early?",
+   "a": "Urine output falls before creatinine rises, giving an early warning of falling GFR."
+  },
+  {
+   "q": "Can AKI be prevented in low‑resource settings?",
+   "a": "Yes, by early rehydration, avoiding nephrotoxic herbs, and treating infections promptly."
+  },
+  {
+   "q": "When is dialysis required in AKI?",
+   "a": "When life‑threatening hyperkalaemia, severe acidosis, fluid overload, or uremic symptoms cannot be managed medically."
+  }
+ ],
+ "exam": [
+  "Explain the KDIGO criteria for AKI and how you would stage a patient with a creatinine rise from 80 to 150 µmol/L over 3 days.",
+  "A patient with sepsis is oliguric; list the first three investigations you would order and what each result would tell you.",
+  "Discuss the management steps for a prerenal AKI caused by severe diarrhoea in a rural clinic without dialysis."
+ ],
+ "related": [
+  "Chronic kidney disease",
+  "Acute tubular necrosis",
+  "Acute interstitial nephritis",
+  "Sepsis-associated AKI",
+  "Nephrotoxic drug injury",
+  "Renal replacement therapy",
+  "Electrolyte disorders in AKI",
+  "Fluid management in critical illness"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

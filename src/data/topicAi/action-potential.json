@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "An action potential is a rapid, all‑or‑nothing change in membrane potential that propagates along excitable cells, enabling nerve impulses and muscle contraction. It is driven by voltage‑gated ion channels and is essential for coordinated cardiac and nervous function.",
+ "aka": [
+  "Electrical impulse"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "An action potential is a brief, large depolarization of a cell membrane that travels along the cell, allowing rapid communication between cells.",
+   "b": [
+    "All‑or‑nothing: either a full spike or none"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Depolarization opens voltage‑gated Na⁺ channels, causing Na⁺ influx. Repolarization follows with K⁺ efflux through voltage‑gated K⁺ channels. In cardiac cells, Ca²⁺ influx sustains the plateau.",
+   "b": [
+    "Phase 0: rapid Na⁺ influx",
+    "Phase 1: transient K⁺ efflux",
+    "Phase 2: Ca²⁺ plateau",
+    "Phase 3: K⁺ repolarization",
+    "Phase 4: resting potential"
+   ],
+   "t": [
+    {
+     "a": "Electrophysiology study",
+     "b": "Shows characteristic phases of cardiac AP; abnormal patterns suggest channelopathies."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The refractory period, modulated by ion channel kinetics, prevents back‑propagation and ensures unidirectional conduction. Autonomic tone adjusts channel activity.",
+   "b": [
+    "Sinoatrial node: spontaneous depolarization"
+   ],
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Detects conduction delays or blocks; abnormal intervals indicate channel dysfunction."
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Mutations in ion channel genes, electrolyte imbalances, or drug effects can alter AP shape, leading to arrhythmias or muscle weakness.",
+   "b": [
+    "Long QT syndrome: prolonged repolarization"
+   ],
+   "t": [
+    {
+     "a": "QT interval measurement",
+     "b": "Prolonged QT predicts torsades de pointes risk."
+    },
+    {
+     "a": "Serum potassium",
+     "b": "Low K⁺ shortens AP, causing arrhythmias; high K⁺ prolongs AP."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "AP abnormalities manifest as arrhythmias, syncope, or sudden death. Recognizing patterns guides drug choice and urgent interventions.",
+   "b": [
+    "Bradyarrhythmias: treat with pacing"
+   ],
+   "t": [
+    {
+     "a": "Holter monitor",
+     "b": "Identifies paroxysmal arrhythmias; informs antiarrhythmic selection."
+    },
+    {
+     "a": "Lactate dehydrogenase",
+     "b": "Elevated LDH may indicate myocardial injury affecting AP."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the all‑or‑nothing principle and the distinct phases of cardiac AP. Know how drugs like amiodarone prolong AP by blocking K⁺ channels.",
+   "b": [
+    "Amiodarone: class III antiarrhythmic"
+   ],
+   "t": [
+    {
+     "a": "Drug mechanism",
+     "b": "Blocks K⁺ channels, prolongs repolarization, increases refractory period."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What causes a prolonged QT interval?",
+   "a": "Electrolyte disturbances, certain drugs, congenital channelopathies, or structural heart disease."
+  },
+  {
+   "q": "Why does hypokalemia lead to arrhythmias?",
+   "a": "Low K⁺ shortens repolarization, increasing excitability and risk of early afterdepolarizations."
+  },
+  {
+   "q": "How does amiodarone affect the action potential?",
+   "a": "It blocks K⁺ channels, prolonging phase 3, thereby increasing refractory period and reducing arrhythmia recurrence."
+  }
+ ],
+ "exam": [
+  "Explain the phases of a cardiac action potential and how they differ from a neuronal AP.",
+  "Describe how hypokalemia alters the action potential and the clinical consequences.",
+  "Discuss the mechanism of action of amiodarone and its impact on the cardiac action potential."
+ ],
+ "related": [
+  "Cardiac conduction system",
+  "Electrolyte disorders",
+  "Antiarrhythmic drugs",
+  "Channelopathies"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

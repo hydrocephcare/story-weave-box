@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, Check, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
+import { ArrowLeft, Check, Link2, Share2, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { aiPaused, looksLikeBot } from "@/lib/topicWriter";
 import { DOMAIN_STYLE, imageCaption, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
@@ -20,7 +20,7 @@ function Section({ id, title, children, first }: { id: string; title: string; ch
     <section id={id} className={cn("scroll-mt-28", first ? "pt-2" : "mt-14 border-t border-border pt-10")}>
       <span className="block h-1 w-12 rounded-full bg-primary" aria-hidden />
       <h2 className="mt-4 font-serif text-[1.9rem] font-bold leading-tight tracking-tight text-foreground sm:text-4xl">{title}</h2>
-      <div className="mt-5 max-w-[78ch] space-y-5 text-[18px] leading-[1.8] text-foreground/80 sm:text-[19px] [&_strong]:font-semibold [&_strong]:text-foreground">{children}</div>
+      <div className="mt-5 max-w-[78ch] space-y-4 text-[17px] leading-[1.7] text-foreground/80 sm:space-y-5 sm:text-[19px] sm:leading-[1.8] [&_strong]:font-semibold [&_strong]:text-foreground">{children}</div>
     </section>
   );
 }
@@ -52,6 +52,19 @@ function Linked({ text, self }: { text: string; self: string }) {
   }
   out.push(text.slice(last));
   return <>{out}</>;
+}
+
+/** Splits long prose into short paragraphs (two sentences each) so nothing reads as a wall of text. */
+const chunkText = (text: string): string[] => {
+  const sents = text.replace(/\s+/g, " ").trim().match(/[^.!?]+(?:[.!?]+(?=\s|$)|$)/g)?.map((x) => x.trim()).filter(Boolean) ?? [text];
+  if (sents.length <= 2) return [text.trim()];
+  const out: string[] = []; let cur = "";
+  for (const x of sents) { if (cur && (cur.split(/[.!?]\s/).length >= 2 || (cur + " " + x).length > 300)) { out.push(cur); cur = x; } else cur = cur ? cur + " " + x : x; }
+  if (cur) out.push(cur);
+  return out;
+};
+function Paras({ text, self = "" }: { text: string; self?: string }) {
+  return <>{chunkText(text).map((p, i) => <p key={i}><Linked text={p} self={self} /></p>)}</>;
 }
 
 function Bullets({ items, self = "" }: { items: string[]; self?: string }) {
@@ -150,6 +163,7 @@ function Writing({ name }: { name: string }) {
 /** /topic/<slug>: a plain, readable article about one subject (definition first), with the library's notes and questions underneath. */
 export default function TopicPage() {
   const { slug = "" } = useParams();
+  const [shared, setShared] = useState("");
   const navigate = useNavigate();
   const { topic, page, phase, fresh, redirectTo, retry, writing, name } = useTopicPage(slug);
   const [zoom, setZoom] = useState<number | null>(null);
@@ -262,11 +276,17 @@ export default function TopicPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-12 pt-8 sm:pb-16 sm:pt-12 md:grid-cols-[minmax(0,1fr)_21rem]">
           <div className="min-w-0">
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-muted-foreground"><button type="button" onClick={() => (window.history.length > 1 ? navigate(-1) : navigate("/topics"))} className="mr-2 inline-flex items-center gap-1 rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-foreground/80 hover:border-primary/60"><ArrowLeft className="h-3.5 w-3.5" aria-hidden /> Back</button><Link to="/topics" className="hover:text-primary hover:underline">Topics</Link><ChevronRight className="h-3.5 w-3.5" /><span>{style.label}</span></nav>
-            <h1 className="mt-5 font-serif text-5xl font-bold leading-[1.02] tracking-tight text-foreground sm:text-6xl lg:text-7xl">{name}</h1>
+            <h1 className={cn("mt-5 font-serif font-bold leading-[1.05] tracking-tight text-foreground [overflow-wrap:anywhere]", Math.max(...name.split(/\s+/).map((w) => w.length)) > 12 ? "text-[2.15rem] sm:text-6xl lg:text-7xl" : "text-5xl sm:text-6xl lg:text-7xl")}>{name}</h1>
             {aka.length > 0 && <p className="mt-3 text-lg text-muted-foreground">Also called {aka.join(", ")}</p>}
             {summary ? <p className="mt-6 max-w-2xl text-xl leading-[1.65] text-foreground/85 sm:text-[1.4rem] sm:leading-[1.65]">{summary}</p> : writing ? <div className="mt-6 max-w-2xl space-y-3" aria-hidden><div className="h-5 w-full animate-pulse rounded bg-foreground/10" /><div className="h-5 w-11/12 animate-pulse rounded bg-foreground/10" /><div className="h-5 w-2/3 animate-pulse rounded bg-foreground/10" /></div> : null}
             <div className="mt-7 flex flex-wrap gap-3">
               {topic && topic.qs.length > 0 && <a href="#practice" className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-90">Test yourself</a>}
+              <button type="button" onClick={async () => {
+                const url = `${SITE}${topicPath(slug)}`;
+                try { if (navigator.share) { await navigator.share({ title: `${name} | Ompath Study`, text: summary || name, url }); return; } } catch { return; }
+                try { await navigator.clipboard.writeText(url); setShared("Link copied"); } catch { setShared(url); }
+                setTimeout(() => setShared(""), 2500);
+              }} className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-base font-bold hover:border-primary/60">{shared ? <Link2 className="h-4 w-4" aria-hidden /> : <Share2 className="h-4 w-4" aria-hidden />}{shared || "Share"}</button>
               {manage && <a href={`#${anchor(manage.h)}`} className="inline-flex items-center rounded-full border border-border bg-background px-6 py-3 text-base font-bold hover:border-primary/60">Management</a>}
             </div>
           </div>
@@ -321,14 +341,14 @@ export default function TopicPage() {
 
             {intro.length > 0 && (
               <Section id="overview" title="Overview" first>
-                {intro.map((p, i) => <p key={i}>{p}</p>)}
+                {intro.map((p, i) => <Paras key={i} text={p} self={slug} />)}
               </Section>
             )}
 
             {aiSections.map((s, i) => (
               <div key={`${s.h}-${i}`}>
                 <Section id={anchor(s.h)} title={s.h} first={i === 0}>
-                  {s.p && <p><Linked text={s.p} self={slug} /></p>}
+                  {s.p && <Paras text={s.p} self={slug} />}
                   {s.t && s.t.length > 0 && <TestTable rows={s.t} />}
                   {s.b && s.b.length > 0 && <Bullets items={s.b} self={slug} />}
                 </Section>
@@ -346,7 +366,7 @@ export default function TopicPage() {
 
             {wikiSections.map((w) => (
               <Section key={w.h} id={anchor(w.h)} title={w.h}>
-                {w.p.map((p, i) => <p key={i}>{p}</p>)}
+                {w.p.map((p, i) => <Paras key={i} text={p} self={slug} />)}
               </Section>
             ))}
 

@@ -1,0 +1,142 @@
+{
+ "medical": true,
+ "subject": "Obstetrics & gynaecology",
+ "summary": "Eclampsia is new-onset generalized seizures in a woman with pre‑eclampsia, occurring before, during, or after delivery. It signals life‑threatening cerebral involvement and requires immediate stabilization and delivery.",
+ "aka": [
+  "Eclampsia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Eclampsia is diagnosed when a pregnant or postpartum woman with pre‑eclampsia (BP ≥140/90 mmHg after 20 wks + proteinuria or other end‑organ signs) develops unexplained tonic‑clonic seizures.",
+   "b": [
+    "Seizure must not be explained by epilepsy, infection, or metabolic disturbance"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure measurement",
+     "b": "Is hypertension present? If ≥140/90 mmHg, supports pre‑eclampsia diagnosis"
+    },
+    {
+     "a": "Urine protein dipstick",
+     "b": "Is proteinuria present? ≥1+ supports pre‑eclampsia"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Pre‑eclampsia severity guides urgency: severe features include BP ≥160/110 mmHg, platelets <100 000, creatinine >1.1 mg/dL, liver enzymes ≥2× ULN, pulmonary edema, or neurologic symptoms.",
+   "b": [
+    "Severe disease demands delivery within 24‑48 h and magnesium sulfate"
+   ],
+   "t": [
+    {
+     "a": "Platelet count",
+     "b": "Is thrombocytopenia present? <100 000 indicates severe disease"
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Is renal function impaired? >1.1 mg/dL signals severe disease"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Eclampsia arises from abnormal placental perfusion leading to systemic endothelial dysfunction. Risk factors (most common first) include nulliparity, pre‑existing hypertension, diabetes, obesity, low socioeconomic status, and chronic kidney disease. In low‑resource settings add malaria, HIV, and use of herbal vasoconstrictors.",
+   "b": [
+    "Placental ischemia is the primary pathophysiologic trigger"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical presentation: sudden generalized tonic‑clonic seizure in a woman with hypertension, headache, visual disturbances, epigastric pain, or edema. Post‑ictal confusion is common.",
+   "b": [
+    "Look for preceding headache, visual changes, or right upper quadrant pain"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm severity, exclude mimics, and guide management. When a test is unavailable, rely on clinical signs and bedside tools.",
+   "t": [
+    {
+     "a": "Serum magnesium",
+     "b": "Is magnesium level therapeutic? >2 mmol/L after loading indicates adequate prophylaxis"
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Are transaminases >2× ULN? Suggests severe disease"
+    },
+    {
+     "a": "Fetal heart rate monitoring",
+     "b": "Is fetal distress present? Non‑reassuring pattern mandates delivery"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Immediate threats: status epilepticus, pulmonary edema, intracerebral hemorrhage, HELLP syndrome, DIC, and placental abruption. Maternal mortality rises with delayed seizure control or uncontrolled hypertension.",
+   "b": [
+    "Any recurrent seizure after magnesium is a red flag"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Stabilize airway, breathing, circulation; give magnesium sulfate IV (loading then maintenance) to prevent further seizures; control BP with labetalol or hydralazine; give corticosteroids for fetal lung maturity if <34 wks; plan delivery—usually vaginal induction or cesarean if obstetric urgency.",
+   "b": [
+    "Magnesium stops seizures; antihypertensives prevent further cerebral injury"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After delivery, monitor BP and magnesium levels for 24‑48 h; continue antihypertensives until normotensive for 6 weeks. Counsel on future pregnancy risk (≈20% recurrence) and advise low‑dose aspirin prophylaxis in subsequent pregnancies."
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic eclampsia include epilepsy, cerebral malaria, meningitis, severe hypoglycemia, and hypertensive encephalopathy without proteinuria.",
+   "b": [
+    "Check glucose and malaria smear in endemic areas"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Proteinuria may be absent in severe pre‑eclampsia; normal platelet count does not exclude severe disease if other organ dysfunction exists. In malaria‑endemic zones, cerebral malaria can present with seizures and hypertension, misleading diagnosis.",
+   "b": [
+    "Do not rely on a single lab value"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "New seizure in pregnancy, persistent hypertension >160/110 mmHg, severe headache or visual loss, epigastric pain, decreased urine output, sudden shortness of breath"
+ ],
+ "faq": [
+  {
+   "q": "Why does magnesium sulfate stop seizures?",
+   "a": "It stabilizes neuronal membranes and reduces NMDA‑mediated excitatory transmission."
+  },
+  {
+   "q": "Can eclampsia occur postpartum?",
+   "a": "Yes, up to 48 h after delivery; vigilance continues after birth."
+  },
+  {
+   "q": "Is delivery the definitive cure?",
+   "a": "Delivery removes the placenta, the source of endothelial injury, and resolves the disease."
+  }
+ ],
+ "exam": [
+  "Explain the diagnostic criteria for eclampsia and how they differ from pre‑eclampsia.",
+  "Describe the first‑line pharmacologic management and rationale for each drug.",
+  "List three red‑flag complications and the immediate actions required."
+ ],
+ "related": [
+  "Pre‑eclampsia",
+  "HELLP syndrome",
+  "Hypertensive disorders of pregnancy",
+  "Cerebral malaria",
+  "Placental abruption",
+  "Maternal sepsis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

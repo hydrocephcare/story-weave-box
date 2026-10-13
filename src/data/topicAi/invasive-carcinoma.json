@@ -1,0 +1,171 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Invasive carcinoma is a malignant tumor that breaches the basement membrane and infiltrates surrounding tissue. Diagnosis relies on histology, grading, and staging to guide treatment and prognosis.",
+ "aka": [
+  "Invasive cancer"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Invasive carcinoma is identified when malignant epithelial cells cross the basement membrane into stroma, confirmed by core biopsy or excision. Histologic subtypes (NST, lobular, medullary) guide grading and management.",
+   "b": [
+    "Histology shows malignant cells with desmoplastic stroma",
+    "Immunohistochemistry helps subtype (e.g., E-cadherin loss in lobular)"
+   ],
+   "t": [
+    {
+     "a": "Core needle biopsy",
+     "b": "Confirms invasion and subtype; positive invasion means cancer, not DCIS"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Stage is assigned using the TNM system (tumor size, nodal involvement, metastasis). Grade (Nottingham) predicts aggressiveness: tubule formation, nuclear pleomorphism, mitoses.",
+   "b": [
+    "T1–T4 based on size",
+    "N0–N3 based on nodes",
+    "M0/M1 for distant spread"
+   ],
+   "t": [
+    {
+     "a": "Imaging (ultrasound, mammography, MRI)",
+     "b": "Determines T and N; larger size or nodal disease upstages"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most breast invasive carcinomas arise from untreated ductal carcinoma in situ (DCIS). Risk factors include age, hormonal exposure, BRCA mutations, and high‑risk HPV for cervical invasive carcinoma.",
+   "b": [
+    "DCIS progression is common",
+    "BRCA1/2, strong family history",
+    "HPV infection for cervical cancer"
+   ],
+   "t": [
+    {
+     "a": "Genetic testing (BRCA)",
+     "b": "Identifies hereditary risk; positive result prompts surveillance"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may notice a firm, irregular mass, skin dimpling, nipple retraction, or discharge. Some cancers are asymptomatic and found on screening.",
+   "b": [
+    "Hard, gritty mass with desmoplasia",
+    "Skin/nipple changes",
+    "Often painless"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A combination of imaging, pathology, and labs defines extent and biology of disease.",
+   "b": [
+    "Imaging defines size and spread",
+    "Pathology provides grade and receptors"
+   ],
+   "t": [
+    {
+     "a": "Mammography",
+     "b": "Detects mass and calcifications; helps assign T stage"
+    },
+    {
+     "a": "MRI",
+     "b": "Assesses multifocal disease and chest wall invasion"
+    },
+    {
+     "a": "ER/PR/HER2 IHC",
+     "b": "Guides hormonal and HER2‑targeted therapy"
+    },
+    {
+     "a": "CT chest/abdomen/pelvis",
+     "b": "Detects distant metastasis (M stage)"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid growth, ulceration, fixation to chest wall, or new systemic symptoms suggest aggressive disease or metastasis.",
+   "b": [
+    "Fixation to chest wall",
+    "Skin ulceration",
+    "Unexplained weight loss"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment combines surgery, systemic therapy, and radiation. Choice depends on stage, grade, and receptor status.",
+   "b": [
+    "Surgery (lumpectomy or mastectomy) removes primary tumor",
+    "Adjuvant endocrine therapy for ER‑positive disease",
+    "HER2‑targeted agents for HER2‑positive tumors",
+    "Chemotherapy for high‑grade or node‑positive disease"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular clinical exams and imaging monitor recurrence. Lifestyle changes and chemoprevention reduce risk.",
+   "b": [
+    "Annual mammography for survivors",
+    "Tamoxifen or aromatase inhibitors for high‑risk ER‑positive women",
+    "Vaccination against HPV prevents cervical invasive carcinoma"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic invasive carcinoma on exam or imaging.",
+   "b": [
+    "Ductal carcinoma in situ (non‑invasive)",
+    "Benign fibroadenoma",
+    "Fat necrosis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be falsely reassuring or alarming.",
+   "b": [
+    "Low‑grade DCIS may appear invasive on core biopsy",
+    "Inflammatory changes can mask tumor on ultrasound",
+    "Hormone receptor assays can vary between labs"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden increase in breast size or pain",
+  "Skin ulceration or bleeding from the tumor",
+  "New onset of persistent cough or bone pain suggesting metastasis"
+ ],
+ "faq": [
+  {
+   "q": "What distinguishes invasive carcinoma from DCIS?",
+   "a": "Invasion is proven when cancer cells breach the basement membrane into stroma, seen on histology."
+  },
+  {
+   "q": "Why is grading important?",
+   "a": "Grade reflects how differentiated the cells are and predicts aggressiveness, influencing adjuvant therapy."
+  },
+  {
+   "q": "Can invasive carcinoma be prevented?",
+   "a": "Risk reduction includes regular screening, lifestyle changes, HPV vaccination, and prophylactic surgery in high‑risk genetic carriers."
+  }
+ ],
+ "exam": [
+  "Describe the histologic criteria that define invasive carcinoma and how they differ from in‑situ disease.",
+  "Explain the TNM staging components and how they guide treatment decisions.",
+  "List the main systemic therapy options for ER‑positive, HER2‑negative invasive breast carcinoma and the rationale for each."
+ ],
+ "related": [
+  "Ductal carcinoma in situ",
+  "Lobular carcinoma in situ",
+  "Breast cancer screening",
+  "BRCA‑related breast cancer",
+  "HPV‑related cervical cancer",
+  "Breast surgical pathology"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

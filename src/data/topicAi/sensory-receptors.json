@@ -1,0 +1,113 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Sensory receptors convert physical or chemical stimuli into nerve signals. Their properties (threshold, adaptation, modality) determine how patients perceive pain, temperature, touch, and proprioception, guiding diagnosis and treatment.",
+ "aka": [
+  "receptor cells",
+  "sensory end organs"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Sensory receptors are specialised cells or nerve endings that detect external or internal stimuli and generate receptor potentials that trigger action potentials.",
+   "b": [
+    "Two main types: free‑ending (pain, temperature) and encapsulated (touch, vibration).",
+    "Receptor potential is graded; once threshold is reached, an action potential fires."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Stimulus energy (mechanical, thermal, chemical) opens ion channels, producing a receptor potential. If the depolarisation reaches threshold, voltage‑gated Na⁺ channels fire an action potential that travels along a labelled line to the CNS.",
+   "b": [
+    "Mechanoreceptors: stretch‑activated channels (e.g., Pacinian corpuscle).",
+    "Thermoreceptors: TRP channels respond to heat (>43 °C) or cold (<15 °C).",
+    "Chemoreceptors: detect pH, CO₂, or specific chemicals (e.g., carotid body)."
+   ],
+   "t": [
+    {
+     "a": "Quantitative sensory testing (QST)",
+     "b": "What is the patient’s detection threshold for vibration? Abnormal high threshold suggests large‑fiber neuropathy."
+    },
+    {
+     "a": "Nerve conduction study",
+     "b": "Does the sensory nerve conduct normally? Slowed velocity indicates demyelination or axonal loss."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Receptor sensitivity adapts to sustained stimuli (adaptation) and can be modulated by inflammatory mediators, hormones, and central descending pathways.",
+   "b": [
+    "Rapid adaptation: Meissner’s corpuscles – useful for detecting change.",
+    "Slow adaptation: Merkel cells – important for static pressure."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Damage or dysfunction of receptors produces sensory loss, dysesthesia, or pain syndromes. Patterns of loss help localise the lesion.",
+   "b": [
+    "Peripheral neuropathy: loss of vibration and proprioception (large‑fiber).",
+    "Small‑fiber neuropathy: burning pain, loss of temperature sensation.",
+    "Central deafferentation: loss of all modalities below the lesion."
+   ],
+   "t": [
+    {
+     "a": "Skin biopsy for intra‑epidermal nerve fibre density",
+     "b": "Is small‑fiber loss present? Reduced density confirms small‑fiber neuropathy, especially in diabetes or HIV."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding receptor types guides assessment of pain, balance, and reflexes, and informs treatment choices such as neuropathic analgesics or physiotherapy.",
+   "b": [
+    "Pain that is burning, shooting, or allodynic points to small‑fiber or central sensitisation.",
+    "Loss of proprioception increases fall risk – important in low‑resource settings where assistive devices are scarce."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points examiners test: receptor types, adaptation, clinical patterns of sensory loss, and appropriate investigations.",
+   "b": [
+    "Labelled line principle – each fibre carries one modality.",
+    "Differentiate peripheral neuropathy (stocking‑glove) from spinal cord lesions (level‑wise loss)."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of all sensation in a limb (possible acute spinal cord compression).",
+  "Rapidly progressive peripheral neuropathy with weakness (possible Guillain‑Barré or toxic neuropathy).",
+  "Severe unexplained burning pain with autonomic signs (possible acute small‑fiber neuropathy from infection)."
+ ],
+ "faq": [
+  {
+   "q": "Why do some receptors adapt quickly while others do not?",
+   "a": "Fast‑adapting receptors detect changes; slow‑adapting receptors signal sustained pressure, reflecting their ion‑channel kinetics."
+  },
+  {
+   "q": "Can a normal nerve conduction study rule out neuropathy?",
+   "a": "No; it assesses large‑fiber function. Small‑fiber neuropathy may have normal studies and requires QST or skin biopsy."
+  },
+  {
+   "q": "How does diabetes affect sensory receptors?",
+   "a": "Hyperglycaemia damages small‑fiber endings first, causing loss of temperature and pain sensation, then large‑fiber loss later."
+  }
+ ],
+ "exam": [
+  "Explain how receptor potential differs from an action potential and why a threshold is needed.",
+  "Describe the clinical examination findings that differentiate large‑fiber from small‑fiber neuropathy.",
+  "List three investigations for a patient with suspected peripheral neuropathy and state what each answers."
+ ],
+ "related": [
+  "Peripheral neuropathy",
+  "Pain pathways",
+  "Proprioception",
+  "Autonomic nervous system",
+  "Neuropathic pain management",
+  "Spinal cord injury"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

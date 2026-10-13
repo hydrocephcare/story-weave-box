@@ -1,0 +1,120 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The adrenal glands sit atop the kidneys, each with an outer cortex and inner medulla. Their structure determines hormone output and clinical signs when damaged or diseased.",
+ "aka": [
+  "suprarenal glands"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Adrenal glands are paired, triangular organs on the kidney hilum. They produce steroids and catecholamines that regulate stress, blood pressure, and metabolism.",
+   "b": [
+    "Triangular shape",
+    "Located above kidneys"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Each gland has an outer cortex (zona glomerulosa, fasciculata, reticularis) and an inner medulla. The cortex is divided into three zones by hormone type.",
+   "b": [
+    "Cortex: mineralocorticoids, glucocorticoids, androgens"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Adrenals sit posterior to the liver (right) and spleen (left), anterior to the diaphragm, and adjacent to the renal vessels.",
+   "b": [
+    "Right: liver, inferior vena cava"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Rich arterial supply from the superior, middle, and inferior adrenal arteries; venous drainage via a central vein into the renal vein (right) or IVC (left).",
+   "b": [
+    "Multiple small arteries"
+   ],
+   "t": [
+    {
+     "a": "CT angiography",
+     "b": "Shows arterial supply and detects aneurysms; abnormal flow suggests pheochromocytoma"
+    },
+    {
+     "a": "Venous sampling",
+     "b": "Differentiates unilateral vs bilateral aldosterone excess; high aldosterone/renin ratio indicates Conn's"
+    }
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sympathetic fibers innervate the medulla; parasympathetic input is minimal.",
+   "b": [
+    "Sympathetic drives catecholamine release"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Cortex secretes mineralocorticoids (aldosterone), glucocorticoids (cortisol), and adrenal androgens. Medulla releases epinephrine and norepinephrine.",
+   "b": [
+    "Cortisol: glucose homeostasis, anti‑inflammatory"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Damage or tumors alter hormone output, causing hypertension, hypoglycemia, or adrenal crisis. Pheochromocytoma presents with episodic hypertension and headaches.",
+   "b": [
+    "Adrenal crisis: sudden cortisol deficiency"
+   ],
+   "t": [
+    {
+     "a": "Serum cortisol",
+     "b": "Low cortisol with high ACTH suggests primary adrenal insufficiency"
+    },
+    {
+     "a": "Plasma metanephrines",
+     "b": "Elevated in pheochromocytoma; normal in other causes of hypertension"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the adrenal gland’s dual function: steroid hormones from cortex, catecholamines from medulla. In surgery, removal of the left gland can precipitate hypotension due to loss of aldosterone.",
+   "b": [
+    "Left adrenal removal often causes acute BP drop"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute adrenal crisis (severe hypotension, vomiting, confusion)",
+  "Severe hypertension with headache and sweating (pheochromocytoma)"
+ ],
+ "faq": [
+  {
+   "q": "What causes adrenal crisis?",
+   "a": "Sudden loss of cortisol, often after surgery or infection, leading to shock."
+  },
+  {
+   "q": "How is pheochromocytoma diagnosed?",
+   "a": "Elevated plasma metanephrines and imaging of adrenal mass."
+  },
+  {
+   "q": "Can adrenal insufficiency be chronic?",
+   "a": "Yes, primary adrenal insufficiency (Addison’s) presents with fatigue, weight loss, hyperpigmentation."
+  }
+ ],
+ "exam": [
+  "Describe the hormonal zones of the adrenal cortex and their clinical significance.",
+  "Explain why removal of the left adrenal gland can cause a sudden rise in blood pressure during surgery.",
+  "Outline the diagnostic workup for a patient with suspected pheochromocytoma."
+ ],
+ "related": [
+  "Endocrine system",
+  "Hypertension",
+  "Adrenal insufficiency",
+  "Pheochromocytoma"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}
