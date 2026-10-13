@@ -3,6 +3,7 @@ import { looksScanned, scanFirst, tidiedText } from "@/lib/blogFix";
 import { applyPolish, getPolish, polishedIds, requestPolish, wantsPolish, type Polish } from "@/lib/blogPolish";
 import AdSlot from "@/components/AdSlot";
 import SideAds from "@/components/SideAds";
+import { isPaperTitle, tileColors, usableImage } from "@/lib/blogImage";
 import BooksForPage from "@/components/BooksForPage";
 import SponsorLine from "@/components/SponsorLine";
 import StudyTools from "@/components/StudyTools";
@@ -29,7 +30,7 @@ import { Countdown, HtmlEmbed, VimeoEmbed, PasswordGate, ContentToc, ReadingTime
 import { motion, AnimatePresence } from "framer-motion";
 import { getArticleBySlugOrId, getPublishedArticleSummaries, getRelatedContent, getCategoryDisplayName, getYearFromCategory, buildBlogPath, buildMcqPath, buildFlashcardPath, type Article } from "@/lib/store";
 import { extractFirstImageFromContent, SITE_URL, stripRichText, readableSummary, updateMetaTags } from "@/lib/seo";
-import { isGenericThumbnail, useTopicThumbnailInfo } from "@/lib/topicThumbnail";
+import { isGenericThumbnail, useTopicThumbnail, useTopicThumbnailInfo } from "@/lib/topicThumbnail";
 import NoteTopics from "@/components/NoteTopics";
 import { KeywordLinkProvider, useKeywordLinks, linkifyText } from "@/lib/keyword-link";
 import { slugify, useHashFlash } from "@/lib/deep-link";
@@ -420,19 +421,25 @@ function InlineAnswerBlock({ raw }: { raw: string }) {
 }
 
 function RelatedArticleCard({ article, compact = false }: { article: any; compact?: boolean }) {
-  const image = article.og_image_url || extractFirstImageFromContent(article.content || "");
+  // the page's own picture if it has a good one (never a scanned exam page); else the topic's picture from the free image library; else a coloured tile
+  const own = usableImage(article);
+  const paper = isPaperTitle(String(article.title ?? ""));
+  const found = useTopicThumbnail(article.title ?? "", article.category, !own && !paper);
+  const image = own || found || "";
+  const [c1, c2] = tileColors(article);
   const summary = readableSummary(article.meta_description, article.content, compact ? 95 : 135);
   return (
     <Link
       to={buildBlogPath(article)}
       className={`${compact ? "w-[82vw] max-w-[340px] sm:w-80" : "w-full"} group grid shrink-0 snap-start overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-primary/40 sm:grid-cols-[132px_1fr]`}
     >
-      <div className="aspect-[4/3] bg-muted sm:aspect-auto">
+      <div className="aspect-[16/9] bg-muted sm:aspect-auto">
         {image ? (
           <img src={image} alt={article.title} loading="lazy" className="h-full w-full object-cover" />
         ) : (
-          <div className="flex h-full min-h-28 items-center justify-center bg-primary/10 text-primary">
-            <FileText className="h-7 w-7" />
+          <div className="flex h-full min-h-24 flex-col justify-end p-3 text-white" style={{ backgroundImage: `linear-gradient(135deg, ${c1}, ${c2})` }}>
+            <FileText className="h-6 w-6 opacity-80" aria-hidden />
+            <span className="mt-1 line-clamp-2 text-[11px] font-bold uppercase tracking-wider opacity-80">{getCategoryDisplayName(article.category)}</span>
           </div>
         )}
       </div>
@@ -466,7 +473,7 @@ function InArticleRelated({ articles }: { articles: any[] }) {
 }
 
 /* ─── Classic magazine-style article hero ─── */
-function ClassicHero(props: { minutes?: number; studyText?: string; studyPath?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
+function ClassicHero(props: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
   return <ClassicHeroInner {...props} />;
 }
 
@@ -503,10 +510,10 @@ async function findClosestArticle(slugOrParam: string): Promise<{ id: string; ti
 
 /* ─── Classic hero: cinematic image with title + description overlaid ─── */
 function ClassicHeroInner({
-  title, image, date, unit, shareUrl, description: rawDescription, category, summaryId, studyText, studyPath, minutes,
-}: { minutes?: number; studyText?: string; studyPath?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
+  title, image, imageHint, date, unit, shareUrl, description: rawDescription, category, summaryId, studyText, studyPath, minutes,
+}: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
   const specificImage = image && !isGenericThumbnail(image) ? image : "";
-  const topicImage = useTopicThumbnailInfo(title, category, !specificImage);
+  const topicImage = useTopicThumbnailInfo(title, category, !specificImage, imageHint || null);
   const heroImage = specificImage || topicImage?.url || "";
   const reviewer = "";
   // a description that starts with "Summary" or stops in the middle of a word reads as unfinished: tidy it and end it at a sentence
@@ -1931,7 +1938,8 @@ export default function BlogPost() {
               studyPath={buildBlogPath(article)}
               studyText={(article.content || "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/<[^>]+>/g, " ").slice(0, 6000)}
               title={decodeEntities(article.title || "").replace(/^#+\s*/, "").replace(/\s+/g, " ").trim() || cleanMetaTitle(article)}
-              image={article.og_image_url || extractFirstImageFromContent(article.content || "") || ""}
+              image={usableImage(article)}
+              imageHint={(article as { image_query?: string }).image_query}
               date={date}
               unit={unitName && unitName !== "Uncategorized" ? unitName : ""}
               shareUrl={`${SITE_URL}${buildBlogPath(article)}`}

@@ -3,7 +3,7 @@
 // that fails simply leaves the page as it was.
 import { supabase } from "@/integrations/supabase/client";
 
-export interface Polish { title: string | null; description: string | null; content: string | null; verdict: string | null; status: string }
+export interface Polish { title: string | null; description: string | null; content: string | null; image_query?: string | null; verdict: string | null; status: string }
 
 /** Pages whose polished copy has been applied: the rule-tidied copy must not replace it afterwards. */
 export const polishedIds = new Set<string>();
@@ -43,8 +43,10 @@ export async function getPolish(id: string, fresh = false): Promise<Polish | nul
     if (s !== undefined) { mem.set(id, s); return s; }
   }
   try {
-    const { data, error } = await (supabase as unknown as { from: (t: string) => { select: (c: string) => { eq: (k: string, v: string) => { maybeSingle: () => Promise<{ data: Polish | null; error: unknown }> } } } })
-      .from("blog_polish").select("title,description,content,verdict,status").eq("article_id", id).maybeSingle();
+    const table = supabase as unknown as { from: (t: string) => { select: (c: string) => { eq: (k: string, v: string) => { maybeSingle: () => Promise<{ data: Polish | null; error: unknown }> } } } };
+    let { data, error } = await table.from("blog_polish").select("title,description,content,image_query,verdict,status").eq("article_id", id).maybeSingle();
+    // a table made before the picture column existed: ask again without it
+    if (error) ({ data, error } = await table.from("blog_polish").select("title,description,content,verdict,status").eq("article_id", id).maybeSingle());
     if (error) return null; // the table may not exist yet: the page carries on as before
     const row = data && (data.status === "done" || data.status === "partial") ? data : null;
     store(id, row);
@@ -69,6 +71,7 @@ export function applyPolish<T extends { id: string; title?: string | null; conte
   const out: T = { ...a };
   if (p.title) { out.title = p.title; out.meta_title = p.title; }
   if (p.description) out.meta_description = p.description;
+  if (p.image_query) (out as { image_query?: string }).image_query = p.image_query;
   if (p.content && p.content.trim().length > 200) { out.content = p.content; polishedIds.add(a.id); }
   return out;
 }

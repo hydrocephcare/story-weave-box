@@ -13,7 +13,7 @@ const RULES = {
 };
 
 /**
- * Returns { title, description, verdict, reason, content, status }.
+ * Returns { title, description, image_query, verdict, reason, content, status }.
  * `content` is null when the text is left as it was (the reason says why). status is "done", or "partial" when the AI was too slow for the text.
  * `chunk: true` lets long pages be done piece by piece (batch job only; the page-open endpoint has a one-minute limit).
  */
@@ -21,7 +21,8 @@ export async function polishArticle(a, ask, { chunk = false } = {}) {
   const meta = parseJson(await ask(META_PROMPT(a, plain(a.content).slice(0, 2600) || a.title), 20000, 600)) ?? {};
   const verdict = VERDICTS.includes(meta.verdict) ? meta.verdict : "keep";
   const { title, description } = cleanMeta(meta.title, meta.description);
-  const result = { title: title || null, description: description || null, verdict, reason: String(meta.reason ?? "").slice(0, 240), content: null, status: "done" };
+  const image = String(meta.image ?? "").replace(/[^A-Za-z0-9 ,.'()-]/g, " ").replace(/ +/g, " ").trim().slice(0, 60);
+  const result = { title: title || null, description: description || null, image_query: image.length >= 3 ? image : null, verdict, reason: String(meta.reason ?? "").slice(0, 240), content: null, status: "done" };
   const note = (t) => { result.reason = [result.reason, t].filter(Boolean).join(" | ").slice(0, 400); };
 
   const text = a.content;

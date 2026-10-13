@@ -11,12 +11,13 @@ ${sample}
 """
 
 Answer with ONLY this JSON:
-{"verdict":"keep|review|irrelevant","reason":"one short sentence","title":"...","description":"..."}
+{"verdict":"keep|review|irrelevant","reason":"one short sentence","title":"...","description":"...","image":"..."}
 
 Rules:
 - verdict "irrelevant" only when this is not study material at all (a notice, handbook, timetable, letter, advert, personal details, empty or meaningless text). "review" when it is weak, partly broken or unclear. Otherwise "keep".
 - title: clear and specific, under 65 characters, in title case, no quotation marks. Keep a paper's unit, year or semester when it is a past paper (for example "Biochemistry End of Year Exam 2015"). Never invent facts. Drop file codes, repeated "Questions and Answers" and "Awaiting Edit".
-- description: 130 to 155 characters, plain sentences saying what a student will learn or practise. No hype, no "Free study material".`;
+- description: 130 to 155 characters, plain sentences saying what a student will learn or practise. No hype, no "Free study material".
+- image: the exact title of the English Wikipedia article whose lead picture best shows this page's main subject, for example "Kidney" or "Streptococcus pyogenes" or "Atrial septal defect". Use "" (empty) for a past paper, question bank, course outline, notice or any page that is not about one subject.`;
 
 const COMMON = `Never change the medicine. COPY THE AUTHOR'S SENTENCES NEARLY WORD FOR WORD: you may split a long sentence, join two short ones, move a sentence into the right section, turn a run of items into a list or table, and fix typing mistakes, but you must NOT summarise, shorten, paraphrase or leave anything out. Every fact, number, unit, drug name, abbreviation and every picture line (a line starting with ![ ) must stay exactly.`;
 

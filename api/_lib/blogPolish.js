@@ -68,7 +68,7 @@ export default async function handler(req, res) {
 
   try {
     const r = await polishArticle(a, ask, { chunk: false });
-    await save({ title: r.title, description: r.description, content: r.content, verdict: r.verdict, reason: r.reason || null, status: r.status, model: "ai" });
+    await save({ title: r.title, description: r.description, image_query: r.image_query, content: r.content, verdict: r.verdict, reason: r.reason || null, status: r.status, model: "ai" });
     return res.status(200).json({ status: r.status });
   } catch (e) {
     await save({ status: "failed", reason: String(e?.message ?? "failed").slice(0, 200) });

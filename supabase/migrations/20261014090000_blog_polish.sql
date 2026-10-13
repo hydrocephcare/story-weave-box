@@ -8,12 +8,15 @@ create table if not exists public.blog_polish (
   title text,
   description text,
   content text,
+  image_query text,
   verdict text check (verdict in ('keep', 'review', 'irrelevant')),
   reason text,
   model text,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+alter table public.blog_polish add column if not exists image_query text;
 
 create index if not exists blog_polish_verdict_idx on public.blog_polish (verdict) where verdict <> 'keep';
 create index if not exists blog_polish_created_idx on public.blog_polish (created_at);

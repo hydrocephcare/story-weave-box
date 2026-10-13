@@ -4,12 +4,25 @@ export const config = {
 
 const OG_FALLBACK_IMAGE = "https://www.ompathstudy.com/og-default.png";
 /** A share picture drawn from the note's own title, year and unit (api/note-card.js), for notes that have no picture of their own. */
-function cardUrl(title: unknown, category: unknown, kind: string, blurb = ""): string {
+function cardUrl(title: unknown, category: unknown, kind: string, blurb = "", image = ""): string {
   const p = new URLSearchParams({ title: String(title || "Study notes").slice(0, 140), kind });
   const m = String(category || "").match(/^Year\s*(\d)\s*:\s*(.*)$/i);
   if (m) { p.set("year", m[1]); p.set("unit", m[2].slice(0, 40)); } else if (category) p.set("unit", String(category).slice(0, 40));
   if (kind === "Topic") { p.set("pic", "wiki"); if (blurb) p.set("blurb", String(blurb).replace(/\s+/g, " ").slice(0, 150)); }
+  else if (image) p.set("image", image); // a good picture of the page's own: it is put on the card, which always carries the Ompath Study name
   return `https://www.ompathstudy.com/api/note-card?${p.toString()}`;
+}
+/** A picture that says something about the page: not a scanned exam page, a camera file, a screenshot or a logo, and not for papers. */
+function goodShareImage(title: unknown, ...urls: unknown[]): string {
+  if (/past paper|\bexam(ination)?s?\b|\bcat\b|\bsupp(lementary)?\b|make-?up|marking scheme|\bmcqs?\b|\bsaqs?\b|question bank|\bquiz\b|assessment|course outline|timetable|\bnotice\b/i.test(String(title || ""))) return "";
+  for (const u of urls) {
+    const url = String(u || "");
+    if (!/^https:\/\//.test(url)) continue;
+    const file = decodeURIComponent(url.split("?")[0].split("/").pop() || "").toLowerCase();
+    if (/(^|[-_ ])(page|pg|scan|scanned|img|dsc|screenshot|whatsapp|photo|image|doc)[-_ ]?0*\d*(\.|[-_ ]|$)|page-\d+|logo|icon|default|placeholder/.test(file)) continue;
+    return url;
+  }
+  return "";
 }
 const GEO_KEYWORDS = "Kenya, Africa, global medical students, MBChB, clinical medicine, nursing, University of Nairobi, Kenyatta University, Moi University, Kabarak University, Aga Khan University";
 const STATIC_PAGE_META: Record<string, { title: string; description: string; links: string[]; image?: string }> = {
@@ -855,7 +868,8 @@ export default async function handler(req: Request): Promise<Response> {
 
       title = toMetaTitle(rawTitle, article.title);
       description = cleanDesc;
-      ogImage = article.og_image_url || cardUrl(article.title, article.category, "Notes");
+      // always the branded card (it carries "OMPATH STUDY"); the page's own picture goes on it when it is a good one, never a scanned page
+      ogImage = cardUrl(article.title, article.category, "Notes", "", goodShareImage(article.title, article.og_image_url, (String(article.content || "").match(/!\[[^\]]*\]\(([^)\s]+)/) || [])[1]));
       keywords = `OmpathStudy, study notes Kenya, medical notes, ${article.title || ""}, ${article.category || ""}, clinical revision, exam prep, ${GEO_KEYWORDS}`;
       type = "article";
       schemaJson = JSON.stringify({

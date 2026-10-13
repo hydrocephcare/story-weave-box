@@ -55,7 +55,7 @@ for (const a of queue) {
   if (!claim.json?.length) continue; // someone else has it
   try {
     const r = await polishArticle(a, ask, { chunk: true });
-    await sb(`blog_polish?article_id=eq.${a.id}`, { method: "PATCH", body: { title: r.title, description: r.description, content: r.content, verdict: r.verdict, reason: r.reason || null, status: r.status, model: "ai", updated_at: new Date().toISOString() } });
+    await sb(`blog_polish?article_id=eq.${a.id}`, { method: "PATCH", body: { title: r.title, description: r.description, image_query: r.image_query, content: r.content, verdict: r.verdict, reason: r.reason || null, status: r.status, model: "ai", updated_at: new Date().toISOString() } });
     strikes = 0;
     if (r.content) { done++; console.log(`polished: ${a.title.slice(0, 70)}`); } else { kept++; console.log(`kept as it was (${r.verdict}): ${a.title.slice(0, 60)} | ${r.reason.slice(0, 80)}`); }
   } catch (e) {
