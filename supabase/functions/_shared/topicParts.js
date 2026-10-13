@@ -53,12 +53,45 @@ export function parseJsonReply(text) {
   try { return JSON.parse(m[0]); } catch { return null; }
 }
 
+const plain = (s) => String(s ?? "").replace(/\*\*|__|`/g, "").replace(/\s+/g, " ").trim();
+
+/**
+ * The assistant sometimes answers in its own shape (a "content" text with "## headings") instead of the one asked for. This turns that into
+ * {summary, sections} so the page is not lost; replies already in the right shape pass through untouched.
+ */
+export function normalizeReply(r) {
+  if (!r || typeof r !== "object") return r;
+  const out = { ...r };
+  if (Array.isArray(out.sections)) out.sections = out.sections.map((s) => (s && typeof s === "object" ? { ...s, h: s.h ?? s.heading ?? s.title ?? s.name, p: s.p ?? (typeof s.content === "string" ? s.content : s.text), b: s.b ?? s.bullets ?? s.points } : s));
+  if (!Array.isArray(out.sections) && typeof out.content === "string") {
+    const parts = out.content.split(/^#{1,4}\s+(.+)$/m);
+    const sections = [];
+    for (let i = 1; i < parts.length; i += 2) {
+      const lines = parts[i + 1].split("\n").map((l) => l.trim()).filter(Boolean);
+      const b = lines.filter((l) => /^[*\-•]\s+/.test(l) || /^\d+[.)]\s+/.test(l)).map((l) => plain(l.replace(/^([*\-•]|\d+[.)])\s+/, "")));
+      const p = plain(lines.filter((l) => !/^[*\-•]\s+/.test(l) && !/^\d+[.)]\s+/.test(l)).join(" "));
+      if (p || b.length) sections.push({ h: plain(parts[i]), ...(p ? { p } : {}), ...(b.length ? { b } : {}) });
+    }
+    if (sections.length) out.sections = sections;
+  }
+  if (!out.summary && Array.isArray(out.sections)) {
+    const first = out.sections.find((s) => s?.p && String(s.p).length > 50)?.p ?? "";
+    const sents = plain(first).match(/[^.!?]+[.!?]+(\s|$)/g) ?? [];
+    let sum = "";
+    for (const s of sents.slice(0, 3)) { if (sum && (sum + s).length > 300) break; sum += s; }
+    if (sum.length >= 40) out.summary = sum.trim();
+  }
+  return out;
+}
+
 /**
  * Joins the parts and checks the result. parts[0] is the clinical article; the others are optional: a page with only the first part is
  * still published. The last part carries the warning signs, questions and related topics; any part may add sections.
  */
 export function mergeParts(parts, { name, category, model }) {
-  const [a, ...rest] = parts;
+  const [a0, ...rest0] = parts;
+  const a = normalizeReply(a0);
+  const rest = rest0.map(normalizeReply);
   if (a?.medical === false) return { medical: false };
   const good = rest.filter((p) => p && p.medical !== false);
   const second = Object.assign({}, ...good);

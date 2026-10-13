@@ -1,0 +1,106 @@
+{
+ "medical": true,
+ "summary": "1. Hodgkin Lymphoma (HL): Further divided into Classical HL (Nodular sclerosis, Mixed cellularity, Lymphocyte-rich, Lymphocyte-depleted) and Nodular Lymphocyte Predominant HL. 2.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Classification",
+   "p": "1. **Hodgkin Lymphoma (HL):** Further divided into Classical HL (Nodular sclerosis, Mixed cellularity, Lymphocyte-rich, Lymphocyte-depleted) and Nodular Lymphocyte Predominant HL. 2. **Non-Hodgkin Lymphoma (NHL):** A diverse group categorized by cell type (B-cell or T-cell) and clinical behavior (Indolent vs. Aggressive). Common types include Diffuse Large B-cell Lymphoma (DLBCL) and Follicular Lymphoma."
+  },
+  {
+   "h": "Clinical Presentation",
+   "p": "Patients typically present with painless lymphadenopathy (often cervical or supraclavicular). Systemic 'B-symptoms' include unexplained weight loss (>10% in 6 months), persistent fever (>38°C), and drenching night sweats. Hepatosplenomegaly and symptoms of cytopenias may occur if bone marrow is involved."
+  },
+  {
+   "h": "Diagnosis and Staging",
+   "p": "Excisional lymph node biopsy is the gold standard for diagnosis; fine-needle aspiration (FNA) is often insufficient for architectural assessment. Immunophenotyping via flow cytometry or immunohistochemistry is essential for classification. Staging involves CT scans (neck, chest, abdomen, pelvis), PET scans, and sometimes bone marrow biopsy."
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Superior Vena Cava obstruction causing facial swelling, breathlessness, and distended neck veins due to mediastinal mass pressure.",
+    "Spinal cord compression presenting as sudden back pain, lower limb weakness, or loss of bowel and bladder control.",
+    "Tumor Lysis Syndrome characterized by rapid cell breakdown leading to kidney failure and dangerous electrolyte imbalances.",
+    "Neutropenic sepsis following treatment, marked by high fever and low white cell counts, requiring urgent antibiotics.",
+    "Hypercalcemia of malignancy causing confusion, severe constipation, and dehydration."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on histological diagnosis through biopsy followed by systemic therapy to eradicate malignant lymphocytes while managing side effects and metabolic complications.",
+   "b": [
+    "Excisional lymph node biopsy is preferred over fine needle aspiration to preserve tissue architecture for accurate classification.",
+    "Staging using CT or PET scans to determine the extent of disease and guide treatment intensity.",
+    "Combination chemotherapy using alkylating agents and antimetabolites to disrupt the cell cycle of rapidly dividing cancer cells.",
+    "Monoclonal antibodies like Rituximab to target specific B-cell surface antigens, improving survival while sparing healthy non-target tissues.",
+    "Corticosteroids to reduce inflammation, alleviate pressure from bulky masses, and directly induce apoptosis in lymphoid cells.",
+    "Allopurinol and aggressive intravenous hydration to prevent uric acid buildup and protect kidneys during initial treatment phases.",
+    "Referral to a specialized hematology-oncology center for bone marrow transplantation if the disease returns or fails initial therapy."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Regular physical exams every three to six months to check for new lymphadenopathy or recurrence of symptoms.",
+    "Periodic blood counts and imaging to monitor for late-onset complications like secondary cancers or heart damage.",
+    "Annual vaccinations, including influenza and pneumococcal vaccines, to protect the patient's compromised immune system.",
+    "Counseling on smoking cessation and sun protection to reduce the risk of secondary malignancies after chemotherapy.",
+    "Screening for thyroid dysfunction and cardiovascular disease if the patient received radiation therapy to the chest or neck."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Tuberculosis: Presents with chronic lymphadenopathy but usually shows caseating granulomas rather than malignant cells.",
+    "Infectious Mononucleosis: Causes fever and lymphadenopathy in young adults; confirmed by positive heterophile antibody test or EBV serology.",
+    "Cat Scratch Disease: Localized painful lymphadenopathy following a feline scratch, unlike the typically painless nodes in lymphoma."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Lactate Dehydrogenase (LDH): Elevated levels indicate high cell turnover but are non-specific and occur in hemolysis or myocardial infarction.",
+    "Fine Needle Aspiration (FNA): Often yields insufficient tissue for architecture; excisional biopsy is preferred to avoid false negatives.",
+    "PET Scan: Can show false positives in areas of active infection or inflammation due to high glucose uptake."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Painless, rapidly enlarging lymph nodes in the neck, axilla, or groin.",
+  "Unexplained drenching night sweats or persistent high-grade fever.",
+  "Unintentional weight loss exceeding 10% of body weight within six months.",
+  "New onset of shortness of breath or persistent dry cough."
+ ],
+ "faq": [
+  {
+   "q": "What defines 'B symptoms' in lymphoma staging?",
+   "a": "B symptoms include drenching night sweats, unexplained fever >38°C, and unintentional weight loss (>10% in 6 months), indicating systemic involvement and poorer prognosis."
+  },
+  {
+   "q": "How is Hodgkin Lymphoma histologically distinguished from Non-Hodgkin Lymphoma?",
+   "a": "Hodgkin Lymphoma is characterized by the presence of Reed-Sternberg cells (large, multinucleated 'owl-eye' cells) within a background of reactive inflammatory cells."
+  },
+  {
+   "q": "Which viral infections are strongly associated with lymphoma?",
+   "a": "Epstein-Barr Virus (EBV) is linked to Burkitt and Hodgkin lymphoma, while Human T-cell Lymphotropic Virus (HTLV-1) is associated with Adult T-cell Leukemia/Lymphoma."
+  }
+ ],
+ "exam": [
+  "Differentiate between Hodgkin and Non-Hodgkin Lymphoma regarding nodal spread and extranodal involvement.",
+  "Discuss the Ann Arbor staging system and its clinical significance in determining treatment.",
+  "Explain the 'starry sky' appearance seen on histopathology in Burkitt Lymphoma."
+ ],
+ "related": [
+  "Chronic Lymphocytic Leukemia",
+  "Multiple Myeloma",
+  "Infectious Mononucleosis",
+  "Splenomegaly",
+  "HIV-associated Malignancies",
+  "Bone Marrow Aspiration"
+ ],
+ "subject": "Pathology",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

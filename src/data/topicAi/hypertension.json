@@ -1,0 +1,131 @@
+{
+ "medical": true,
+ "summary": "Hypertension is a chronic medical condition characterized by persistently elevated systemic arterial blood pressure.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and Classification",
+   "p": "Hypertension is a chronic medical condition characterized by persistently elevated systemic arterial blood pressure. According to standard guidelines, it is typically defined as a systolic blood pressure (SBP) ≥140 mmHg and/or a diastolic blood pressure (DBP) ≥90 mmHg based on repeated office measurements."
+  },
+  {
+   "h": "Categories",
+   "b": [
+    "Primary (Essential) Hypertension: Accounts for 90-95% of cases; no single identifiable cause, likely multifactorial (genetics, diet, lifestyle).",
+    "Secondary Hypertension: Accounts for 5-10% of cases; caused by an underlying identifiable condition such as renal artery stenosis, pheochromocytoma, primary aldosteronism, or obstructive sleep apnea."
+   ]
+  },
+  {
+   "h": "Clinical Presentation",
+   "p": "Hypertension is often asymptomatic ('the silent killer') until complications occur. When symptoms are present, they may include:",
+   "b": [
+    "Headache (occipital, usually in the morning)",
+    "Visual disturbances",
+    "Epistaxis",
+    "Palpitations"
+   ]
+  },
+  {
+   "h": "Target Organ Damage (Complications)",
+   "p": "Chronic uncontrolled hypertension leads to significant morbidity and mortality via:",
+   "b": [
+    "Cardiovascular: Left ventricular hypertrophy, heart failure, myocardial infarction.",
+    "Neurological: Ischemic or hemorrhagic stroke, hypertensive encephalopathy, dementia.",
+    "Renal: Chronic kidney disease and hypertensive nephrosclerosis.",
+    "Ocular: Hypertensive retinopathy (grading from arteriolar narrowing to papilledema)."
+   ]
+  },
+  {
+   "h": "Management Principles",
+   "b": [
+    "Lifestyle Modifications: Sodium restriction, weight reduction, regular physical activity, and moderation of alcohol intake.",
+    "Pharmacotherapy: Common first-line classes include ACE inhibitors, Angiotensin II Receptor Blockers (ARBs), Calcium Channel Blockers (CCBs), and Thiazide-like diuretics."
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Hypertensive emergency: severely high blood pressure with acute organ damage like confusion, seizures, or chest pain.",
+    "Stroke: look for sudden facial drooping, arm weakness, or slurred speech.",
+    "Heart failure: indicated by sudden shortness of breath, crackles in lungs, or leg swelling.",
+    "Aortic dissection: presenting as sudden, tearing chest or back pain.",
+    "Hypertensive retinopathy: blurred vision or retinal bleeding found on eye examination."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The goal is to reduce blood pressure to target levels to prevent long-term organ damage while managing underlying risk factors and lifestyle.",
+   "b": [
+    "Confirm diagnosis with repeated measurements or ambulatory monitoring before starting long-term medication.",
+    "Initiate lifestyle changes including reduced salt intake, weight loss, and regular physical activity for all patients.",
+    "Use ACE inhibitors or ARBs to protect kidneys and heart, especially in patients with diabetes.",
+    "Prescribe Calcium Channel Blockers as first-line options for patients of African descent or older populations.",
+    "Add Thiazide-like diuretics to help the kidneys remove excess sodium and water from the bloodstream.",
+    "Reserve Beta-blockers for patients with specific heart conditions like post-myocardial infarction or heart failure.",
+    "Refer to a specialist if blood pressure remains high despite using three different classes of medications."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Schedule regular blood pressure checks to ensure the patient stays within the target range.",
+    "Monitor kidney function and electrolyte levels annually if the patient is taking antihypertensive medications.",
+    "Screen family members as genetics and shared lifestyle factors increase their risk of developing hypertension.",
+    "Advise permanent smoking cessation and limiting alcohol to prevent further cardiovascular damage.",
+    "Check cholesterol levels and blood glucose regularly to manage total cardiovascular risk."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Anxiety attacks: Both cause palpitations and high BP, but anxiety typically lacks persistent elevation or target organ damage signs.",
+    "Pheochromocytoma: Presents with paroxysmal hypertension, sweating, and tachycardia, unlike the stable elevation seen in essential hypertension."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Cuff size error: Using a small cuff on a large arm provides a falsely high reading; large cuffs on thin arms give falsely low readings.",
+    "Pain or full bladder: Acute discomfort can transiently spike blood pressure, leading to an incorrect diagnosis of chronic hypertension.",
+    "Auscultatory gap: Failure to inflate the cuff high enough may lead to underestimating systolic pressure or overestimating diastolic pressure."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe headache, blurred vision, or confusion.",
+  "Chest pain, shortness of breath, or palpitations.",
+  "Weakness or numbness in the face, arms, or legs.",
+  "Signs of hypertensive emergency like seizures or altered consciousness."
+ ],
+ "faq": [
+  {
+   "q": "What defines a hypertensive emergency versus urgency?",
+   "a": "Emergency involves acute target organ damage (e.g., encephalopathy, MI) requiring IV therapy; urgency has severely high blood pressure without acute organ dysfunction."
+  },
+  {
+   "q": "What are common secondary causes of hypertension?",
+   "a": "Renal artery stenosis, chronic kidney disease, primary aldosteronism, pheochromocytoma, Cushing's syndrome, and obstructive sleep apnea."
+  },
+  {
+   "q": "Why is the 'white coat effect' significant in diagnosis?",
+   "a": "Anxiety in clinical settings can falsely elevate readings, necessitating home monitoring or ambulatory BP checks for accurate diagnosis."
+  }
+ ],
+ "exam": [
+  "Discuss the modified Duke's criteria for diagnosing infective endocarditis (wait, topic is Hypertension): Describe the staging of hypertensive retinopathy using the Keith-Wagener-Barker classification.",
+  "Outline the appropriate initial investigations for a young patient presenting with Stage 2 hypertension.",
+  "Explain the physiological rationale behind using ACE inhibitors versus Calcium Channel Blockers in different patient demographics."
+ ],
+ "related": [
+  "Preeclampsia",
+  "Chronic Kidney Disease",
+  "Heart Failure",
+  "Ischemic Stroke",
+  "Hyperaldosteronism",
+  "Aortic Dissection"
+ ],
+ "subject": "Medicine",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

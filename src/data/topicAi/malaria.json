@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "summary": "Malaria is a life-threatening febrile illness caused by *Plasmodium* parasites transmitted through the bites of infected female *Anopheles* mosquitoes. *Plasmodium falciparum* is the most virulent species and the leading cause of severe malaria and mortality in Kenya.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Malaria is a life-threatening febrile illness caused by *Plasmodium* parasites transmitted through the bites of infected female *Anopheles* mosquitoes. *Plasmodium falciparum* is the most virulent species and the leading cause of severe malaria and mortality in Kenya."
+  },
+  {
+   "h": "Pathophysiology",
+   "p": "The lifecycle involves a hepatic phase (exo-erythrocytic) and an erythrocytic phase. *P. falciparum* causes disease primarily through the sequestration of infected erythrocytes in microvasculature, leading to tissue ischemia and end-organ dysfunction."
+  },
+  {
+   "h": "Clinical Presentation",
+   "b": [
+    "Uncomplicated Malaria: Fever, chills, headache, myalgia, and malaise.",
+    "Severe Malaria: Characterized by impaired consciousness (cerebral malaria), respiratory distress (deep acidotic breathing), severe anemia, hypoglycemia, acute kidney injury, and hemoglobinuria (Blackwater fever)."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "b": [
+    "Gold Standard: Blood film for malaria parasites (thick smear for screening, thin smear for species identification and parasite density).",
+    "Rapid Diagnostic Tests (RDTs): Detect parasite-specific antigens (e.g., HRP-2)."
+   ]
+  },
+  {
+   "h": "Management and Prevention",
+   "b": [
+    "Treatment: First-line treatment for uncomplicated malaria usually involves Artemisinin-based Combination Therapy (ACT). Severe malaria requires intravenous artesunate.",
+    "Pregnancy: Screening and Intermittent Preventive Treatment (IPTp) are critical components of antenatal care.",
+    "Prevention: Insecticide-treated nets (ITNs), indoor residual spraying, and prompt case management."
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Impaired consciousness or seizures suggesting cerebral malaria and brain swelling.",
+    "Severe anemia or jaundice indicating massive breakdown of red blood cells.",
+    "Hypoglycemia, which can cause sudden collapse, especially in children and pregnant women.",
+    "Acute kidney injury marked by significantly reduced urine output or dark-colored urine.",
+    "Respiratory distress or pulmonary edema, making it very difficult for the patient to breathe."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The primary goal is to rapidly eliminate the parasite from the bloodstream while stabilizing vital functions and preventing organ failure through careful fluid and metabolic monitoring.",
+   "b": [
+    "Use Artemisinin-based Combination Therapy (ACT) for uncomplicated malaria to kill parasites rapidly and prevent drug resistance.",
+    "Administer intravenous Artesunate for severe malaria because it acts faster than oral meds to reduce the parasite load.",
+    "Provide Quinine as an alternative if artesunate is unavailable, though it requires closer heart monitoring for side effects.",
+    "Give intravenous fluids and glucose to correct dehydration and prevent dangerous drops in blood sugar.",
+    "Refer to intensive care if the patient shows signs of organ failure, coma, or persistent respiratory distress."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Monitor hemoglobin levels and parasite clearance via blood smears for several days after treatment.",
+    "Encourage the use of insecticide-treated bed nets to prevent further mosquito bites and transmission.",
+    "Advise on indoor residual spraying and clearing stagnant water to reduce local mosquito populations.",
+    "Recommend intermittent preventive treatment for high-risk groups like pregnant women in endemic areas."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Typhoid fever: Distinguished by more prominent gastrointestinal symptoms and step-ladder fever patterns.",
+    "Meningitis: Both present with fever and altered sensorium; lumbar puncture is essential to differentiate from cerebral malaria.",
+    "Influenza/Viral prodromes: Shared myalgia and headache, but malaria requires parasitological confirmation via blood smear or RDT."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Partial immunity: Semi-immune individuals may have detectable parasitemia without malaria being the primary cause of their current illness.",
+    "Sequestration: Peripheral blood smears may be negative in severe cases because parasites are trapped in deep tissue capillaries.",
+    "Recent treatment: Rapid Diagnostic Tests (RDTs) detecting HRP2 can remain positive for weeks after parasites have been cleared."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Altered consciousness or coma (Cerebral Malaria)",
+  "Severe respiratory distress or deep breathing",
+  "Jaundice or evidence of vital organ dysfunction",
+  "Persistent vomiting and inability to tolerate oral fluids",
+  "Extreme pallor or clinical signs of severe anemia"
+ ],
+ "faq": [
+  {
+   "q": "Why is P. falciparum considered the most dangerous species?",
+   "a": "It causes infected erythrocytes to sequestrate in microvasculature, leading to organ ischemia, cerebral malaria, and severe anemia."
+  },
+  {
+   "q": "What is the mechanism of relapse in P. vivax infections?",
+   "a": "Dormant liver stages called hypnozoites can reactivate months or years after the initial infection, causing clinical recurrence."
+  },
+  {
+   "q": "How does G6PD deficiency relate to malaria treatment?",
+   "a": "Primaquine, used to clear hypnozoites, can trigger acute hemolysis in G6PD-deficient patients; screening is required before administration."
+  }
+ ],
+ "exam": [
+  "Discuss the pathogenesis of sequestration in severe malaria.",
+  "Explain the physiological basis of the cyclical fever paroxysms.",
+  "List the WHO criteria for defining severe malaria."
+ ],
+ "related": [
+  "Typhoid Fever",
+  "Dengue Fever",
+  "Leishmaniasis",
+  "Yellow Fever",
+  "Sickle Cell Trait",
+  "African Trypanosomiasis"
+ ],
+ "subject": "Microbiology & immunology",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

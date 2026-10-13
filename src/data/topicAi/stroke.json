@@ -1,0 +1,127 @@
+{
+ "medical": true,
+ "summary": "Stroke is a clinical syndrome characterized by rapidly developing clinical signs of focal or global disturbance of cerebral function lasting more than 24 hours or leading to death, with no apparent cause other than of vascular origin.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and Etiology",
+   "p": "Stroke is a clinical syndrome characterized by rapidly developing clinical signs of focal or global disturbance of cerebral function lasting more than 24 hours or leading to death, with no apparent cause other than of vascular origin. It is classified into two main types:",
+   "b": [
+    "Ischemic Stroke (85%): Resulting from arterial occlusion due to thrombosis (local clot), embolism (clot from a distant site, often the heart), or systemic hypoperfusion.",
+    "Hemorrhagic Stroke (15%): Resulting from the rupture of a blood vessel, either intracerebral hemorrhage or subarachnoid hemorrhage."
+   ]
+  },
+  {
+   "h": "Clinical Features",
+   "p": "Symptoms depend on the vascular territory involved:",
+   "b": [
+    "Motor: Contralateral hemiparesis or hemiplegia.",
+    "Sensory: Contralateral sensory loss.",
+    "Speech: Aphasia (receptive or expressive) or dysarthria.",
+    "Vision: Homonymous hemianopia or monocular vision loss (amaurosis fugax).",
+    "Cerebellar: Ataxia, vertigo, and nystagmus (posterior circulation)."
+   ]
+  },
+  {
+   "h": "Risk Factors",
+   "b": [
+    "Modifiable: Hypertension (most significant), Diabetes Mellitus, Dyslipidemia, Smoking, Atrial Fibrillation, and Sedentary lifestyle.",
+    "Non-modifiable: Increasing age, male sex, and family history."
+   ]
+  },
+  {
+   "h": "Diagnosis and Management",
+   "b": [
+    "Imaging: Non-contrast CT Head is the gold standard to differentiate between ischemic and hemorrhagic stroke.",
+    "Ischemic Management: Stabilization, blood pressure control, and reperfusion therapy (thrombolysis or thrombectomy) if within the therapeutic window. Long-term secondary prevention includes antiplatelets and statins.",
+    "Hemorrhagic Management: Blood pressure control, reversal of anticoagulation, and neurosurgical consultation."
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Rapid decline in consciousness or coma, indicating severe brain stem involvement or massive herniation.",
+    "Signs of raised intracranial pressure, such as projectile vomiting, bradycardia, and hypertension.",
+    "Aspiration pneumonia resulting from impaired swallowing reflexes and loss of airway protection.",
+    "Seizures occurring shortly after the onset of focal neurological deficits.",
+    "Sudden respiratory failure or irregular breathing patterns due to pressure on the medulla."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Immediate management focuses on stabilizing the airway, breathing, and circulation while urgently differentiating between ischemic and hemorrhagic types via neuroimaging to guide specific therapy.",
+   "b": [
+    "Perform an urgent CT head scan to rule out intracranial hemorrhage before starting any blood-thinning therapy.",
+    "Administer intravenous thrombolytics like alteplase for ischemic stroke within the strict time window to dissolve the obstructing clot.",
+    "Use antiplatelets such as aspirin after excluding hemorrhage to prevent further thrombus formation and reduce the risk of early recurrence.",
+    "Control blood pressure cautiously using intravenous labetalol or nicardipine only if levels exceed safe thresholds to maintain cerebral perfusion.",
+    "Start statins early to stabilize atherosclerotic plaques, regardless of initial cholesterol levels, to improve long-term outcomes.",
+    "Refer for neurosurgical intervention if there is massive cerebellar infarction or large intraparenchymal hemorrhage causing significant mass effect."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Long-term anticoagulation with warfarin or direct oral anticoagulants if the stroke was caused by atrial fibrillation.",
+    "Daily low-dose antiplatelet therapy to reduce the risk of subsequent ischemic events.",
+    "Strict control of hypertension and diabetes through lifestyle changes and consistent medication adherence.",
+    "Regular speech and language therapy to manage dysphagia and improve communication skills.",
+    "Physiotherapy and occupational therapy to maximize physical recovery and improve activities of daily living."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Hypoglycemia: Can mimic focal neurological deficits; always check bedside glucose immediately.",
+    "Todd's Paralysis: Post-ictal focal weakness following a seizure that mimics a stroke but resolves spontaneously.",
+    "Bell's Palsy: Affects only the face (including the forehead), whereas stroke typically spares the forehead muscles."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Early CT Scans: Ischemic changes may not appear on a CT head for the first 6–24 hours.",
+    "Small Brainstem Strokes: May be missed by standard CT imaging due to bone interference in the posterior fossa.",
+    "Diffusion-Weighted MRI: Can occasionally be negative in very small lacunar infarcts despite clear clinical symptoms."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden facial drooping or asymmetry",
+  "Acute weakness or numbness in one arm or leg",
+  "Sudden difficulty speaking, slurring, or confusion",
+  "Abrupt loss of vision or severe 'thunderclap' headache"
+ ],
+ "faq": [
+  {
+   "q": "What is the 'Golden Hour' in stroke management?",
+   "a": "It refers to the critical first sixty minutes where rapid assessment and thrombolysis significantly improve functional outcomes by salvaging the penumbra."
+  },
+  {
+   "q": "Why is a non-contrast CT head the first-line investigation?",
+   "a": "It rapidly differentiates between ischemic and hemorrhagic strokes, which is essential because anticoagulants or thrombolytics are contraindicated in hemorrhage."
+  },
+  {
+   "q": "What is the difference between a TIA and a stroke?",
+   "a": "A TIA involves transient neurological deficits resolving within 24 hours without permanent infarction, whereas a stroke results in lasting tissue death."
+  }
+ ],
+ "exam": [
+  "Differentiate between the clinical presentations of Total Anterior Circulation Infarct (TACI) and Lacunar Infarct (LACI).",
+  "List the absolute contraindications for intravenous thrombolysis in an acute ischemic stroke patient.",
+  "Explain the pathophysiology of the 'ischemic penumbra' and its relevance to emergency reperfusion therapy."
+ ],
+ "related": [
+  "Transient Ischemic Attack",
+  "Atrial Fibrillation",
+  "Subarachnoid Hemorrhage",
+  "Carotid Artery Stenosis",
+  "Hypertensive Encephalopathy",
+  "Secondary Stroke Prevention"
+ ],
+ "subject": "Medicine",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

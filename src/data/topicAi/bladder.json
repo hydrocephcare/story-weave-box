@@ -1,0 +1,81 @@
+{
+ "medical": true,
+ "summary": "The urinary bladder is a hollow muscular organ situated in the true pelvis when empty, becoming an abdominal organ when distended.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Gross Anatomy",
+   "p": "The urinary bladder is a hollow muscular organ situated in the true pelvis when empty, becoming an abdominal organ when distended. It consists of the apex (connected to the umbilicus by the median umbilical ligament), the body, the fundus (posterior wall), and the neck (the most fixed part, resting on the prostate in males or the urogenital diaphragm in females)."
+  },
+  {
+   "h": "Relations and Attachments",
+   "b": [
+    "Males: Posteriorly related to the rectum and seminal vesicles.",
+    "Females: Posteriorly related to the vagina and uterus; the bladder is displaced superiorly during pregnancy.",
+    "Trigone: A smooth triangular area at the base formed by the two ureteric orifices and the internal urethral orifice. It is clinically significant as it is sensitive to expansion and less distensible than the rest of the bladder."
+   ]
+  },
+  {
+   "h": "Neurophysiology and Voiding",
+   "b": [
+    "Sympathetic (T11-L2): Relaxes the detrusor muscle and contracts the internal sphincter, promoting urine storage.",
+    "Parasympathetic (S2-S4): Contracts the detrusor muscle and relaxes the internal sphincter, promoting micturition.",
+    "Somatic (Pudendal nerve): Provides voluntary control over the external urethral sphincter."
+   ]
+  },
+  {
+   "h": "Clinical Relevance",
+   "b": [
+    "Obstetrics: An empty bladder is required for procedures like instrumental delivery to prevent injury. In cord prolapse, filling the bladder can help relieve pressure on the cord.",
+    "Pathology: Atrophy of the bladder epithelium occurs in menopause due to estrogen deficiency, leading to frequency and urgency. Palpability of the bladder suggests urinary retention or significant distension."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Distended bladder vs. Ovarian cyst: A full bladder is midline, dull to percussion, and disappears upon catheterization.",
+    "Ureteric orifice vs. Urethral orifice: The two ureteric orifices form the superior angles of the trigone, while the internal urethral orifice forms the inferior angle."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Suprapubic dullness: May be absent in a collapsed bladder but can be mimicked by pelvic masses or pregnancy.",
+    "Cystography: Diverticula may be missed if only anteroposterior views are taken; oblique views are necessary to visualize the entire bladder wall."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the clinical significance of the trigone?",
+   "a": "The trigone is a smooth triangular area at the bladder base. It is sensitive to expansion and remains fixed during bladder filling, unlike the rugose walls."
+  },
+  {
+   "q": "Which muscle is responsible for bladder contraction?",
+   "a": "The detrusor muscle, a thick layer of smooth muscle fibers, contracts under parasympathetic stimulation to expel urine through the urethra."
+  },
+  {
+   "q": "What prevents urine reflux into the ureters?",
+   "a": "Ureters enter the bladder wall obliquely. As the bladder fills, internal pressure compresses these intramural segments, acting as a physiological valve."
+  }
+ ],
+ "exam": [
+  "Describe the arterial supply and venous drainage of the bladder, including the clinical importance of the vesical venous plexus.",
+  "Explain the nervous control of micturition, distinguishing between sympathetic, parasympathetic, and somatic (pudendal) pathways.",
+  "Outline the anatomical relations of the bladder in both males and females, specifically regarding the rectum, uterus, and prostate."
+ ],
+ "related": [
+  "Ureters",
+  "Urethra",
+  "Prostate Gland",
+  "Micturition Reflex",
+  "Pelvic Diaphragm",
+  "Internal Iliac Artery"
+ ],
+ "subject": "Anatomy",
+ "kind": "anatomy",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

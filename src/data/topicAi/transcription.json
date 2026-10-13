@@ -1,0 +1,85 @@
+{
+ "medical": true,
+ "summary": "Transcription is the process by which genetic information encoded in DNA is copied into messenger RNA (mRNA) by the enzyme RNA polymerase. In eukaryotes, this occurs in the nucleus and serves as the primary control point for gene expression.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Transcription is the process by which genetic information encoded in DNA is copied into messenger RNA (mRNA) by the enzyme RNA polymerase. In eukaryotes, this occurs in the nucleus and serves as the primary control point for gene expression."
+  },
+  {
+   "h": "Stages of Transcription",
+   "b": [
+    "Initiation: RNA polymerase II binds to the promoter region (e.g., TATA box) with the help of general transcription factors. This forms the pre-initiation complex.",
+    "Elongation: The DNA double helix unwinds, and RNA polymerase reads the template strand in a 3' to 5' direction, synthesizing the nascent mRNA in a 5' to 3' direction.",
+    "Termination: The polymerase reaches a termination signal, releasing the completed pre-mRNA transcript."
+   ]
+  },
+  {
+   "h": "Post-Transcriptional Processing",
+   "p": "Before leaving the nucleus, pre-mRNA undergoes three essential modifications:",
+   "b": [
+    "5' Capping: Addition of a 7-methylguanosine cap to protect against degradation.",
+    "3' Polyadenylation: Addition of a poly-A tail (200+ adenine nucleotides) for stability and nuclear export.",
+    "Splicing: Removal of non-coding introns and ligation of coding exons by the spliceosome."
+   ]
+  },
+  {
+   "h": "Medical Relevance",
+   "b": [
+    "Rifampicin: An antibiotic that inhibits bacterial DNA-dependent RNA polymerase, used in treating Tuberculosis.",
+    "Alpha-amanitin: A toxin from the *Amanita phalloides* mushroom that inhibits RNA polymerase II, leading to severe liver failure.",
+    "Genetic Disorders: Mutations in promoter regions or splice sites cause diseases such as Beta-thalassemia."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Replication: DNA is copied to DNA for cell division, whereas transcription copies DNA into RNA for protein synthesis.",
+    "Translation: This occurs in the ribosome to turn mRNA into proteins, following the transcription process in the nucleus.",
+    "Reverse Transcription: The process where RNA is used as a template to produce DNA, typically seen in retroviruses like HIV."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Intron presence: Genomic DNA sequences may mislead researchers about protein size because non-coding introns are removed during splicing.",
+    "RNA stability: Rapid degradation of mRNA in lab samples can lead to falsely low measurements of gene expression levels.",
+    "Alternative splicing: A single gene can produce multiple different mRNA transcripts, leading to different protein isoforms from one DNA sequence."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the primary enzyme responsible for transcription?",
+   "a": "RNA polymerase is the key enzyme. In eukaryotes, RNA Polymerase II specifically synthesizes messenger RNA (mRNA) from a DNA template."
+  },
+  {
+   "q": "How does transcription differ between prokaryotes and eukaryotes?",
+   "a": "Prokaryotic transcription occurs in the cytoplasm and is coupled with translation. Eukaryotic transcription occurs in the nucleus and requires extensive post-transcriptional processing."
+  },
+  {
+   "q": "What is the function of the promoter region?",
+   "a": "The promoter is a specific DNA sequence, such as the TATA box, where RNA polymerase and transcription factors bind to initiate the process."
+  }
+ ],
+ "exam": [
+  "Describe the three main stages of transcription: initiation, elongation, and termination.",
+  "Explain the role of post-transcriptional modifications, including 5' capping, polyadenylation, and splicing.",
+  "Discuss how specific toxins, like alpha-amanitin from mushrooms, inhibit RNA polymerase activity."
+ ],
+ "related": [
+  "DNA Replication",
+  "Translation",
+  "RNA Processing",
+  "Gene Regulation",
+  "Reverse Transcription",
+  "Chromatin Remodeling"
+ ],
+ "subject": "Biochemistry & genetics",
+ "kind": "physiology",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

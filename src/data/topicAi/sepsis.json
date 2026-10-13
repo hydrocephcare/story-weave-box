@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "summary": "Sepsis is defined as life-threatening organ dysfunction caused by a dysregulated host response to infection. It involves a complex interplay between the infecting pathogen and the host's immune, coagulation, and endocrine systems.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and Pathophysiology",
+   "p": "Sepsis is defined as life-threatening organ dysfunction caused by a dysregulated host response to infection. It involves a complex interplay between the infecting pathogen and the host's immune, coagulation, and endocrine systems. The systemic inflammatory response syndrome (SIRS) can lead to widespread tissue hypoperfusion, cellular hypoxia, and eventual multi-organ failure."
+  },
+  {
+   "h": "Clinical Presentation",
+   "b": [
+    "Vital Signs: Fever or hypothermia, tachycardia, tachypnea, and hypotension.",
+    "Mental Status: Acute confusion or altered level of consciousness (sepsis-associated encephalopathy).",
+    "End-organ perfusion: Reduced urine output (oliguria), mottled skin, and delayed capillary refill time."
+   ]
+  },
+  {
+   "h": "Diagnosis and Screening",
+   "b": [
+    "SOFA Score: The Sequential Organ Failure Assessment (SOFA) is used to track organ dysfunction. A change in score of $\\ge 2$ points indicates sepsis.",
+    "qSOFA: A bedside tool consisting of respiratory rate $\\ge 22$/min, altered mentation, and systolic BP $\\le 100$ mmHg.",
+    "Laboratories: Elevated serum lactate (indicating tissue hypoxia), leukocytosis or leukopenia, thrombocytopenia, and elevated creatinine or bilirubin."
+   ]
+  },
+  {
+   "h": "Management Principles",
+   "b": [
+    "Stabilization: Immediate airway assessment and intravenous fluid resuscitation to restore perfusion.",
+    "Source Control: Identification and treatment of the infection nidus (e.g., abscess drainage, debridement).",
+    "Antimicrobial Therapy: Early administration of broad-spectrum intravenous antibiotics after obtaining blood cultures.",
+    "Vasopressors: Indicated if hypotension persists despite adequate fluid resuscitation (Septic Shock)."
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Altered mental status or confusion indicates poor brain perfusion and worsening encephalopathy.",
+    "Systolic blood pressure below 100 mmHg suggests progression to septic shock.",
+    "A respiratory rate above 22 breaths per minute signals physiological distress and metabolic acidosis.",
+    "Low urine output or anuria indicates acute kidney injury due to decreased renal blood flow.",
+    "Mottled skin and prolonged capillary refill time are signs of severe peripheral circulatory failure.",
+    "Disseminated intravascular coagulation can cause spontaneous bleeding or bruising due to consumed clotting factors."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on the 'Sepsis Six' protocol, aiming to restore tissue perfusion and eradicate the underlying infection within the first hour of recognition.",
+   "b": [
+    "Administer high-flow oxygen to maintain arterial saturation and support cellular respiration.",
+    "Obtain blood cultures before starting antibiotics to identify the specific pathogen without interference.",
+    "Give broad-spectrum intravenous antibiotics to cover likely pathogens based on the suspected source of infection.",
+    "Start intravenous crystalloid fluids to restore circulating volume and improve blood pressure.",
+    "Measure serial lactate levels to assess the severity of tissue hypoxia and monitor response to treatment.",
+    "Insert a urinary catheter to monitor hourly output as a proxy for organ perfusion.",
+    "Refer to intensive care if blood pressure remains low despite adequate fluid resuscitation, requiring vasopressors."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Monitor for Post-Sepsis Syndrome, including long-term physical weakness, cognitive impairment, and psychological distress.",
+    "Ensure vaccinations for influenza and pneumococcus are up to date to prevent common triggers of sepsis.",
+    "Educate patients on early signs of infection and the importance of prompt medical review for minor wounds.",
+    "Review chronic conditions like diabetes or heart failure to optimize health and reduce infection risk.",
+    "Screen household contacts only if the underlying cause was a transmissible disease like meningococcal meningitis."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Hypovolemic shock: Differentiated by low CVP and rapid improvement with fluids; sepsis often has peripheral vasodilation.",
+    "Acute Pancreatitis: Both cause SIRS, but pancreatitis presents with severe epigastric pain and elevated amylase/lipase without primary infection.",
+    "Anaphylaxis: Presents with hypotension and tachycardia, but features urticaria, angioedema, or wheezing rather than a fever prodrome."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "White cell count: Can be normal or low (leukopenia) in overwhelming sepsis, particularly in elderly or immunocompromised patients.",
+    "Lactate: May be elevated due to liver failure or albuterol use rather than tissue hypoperfusion.",
+    "Fever: Hypothermia is common in geriatric sepsis and carries a worse prognosis than a high fever."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Altered mental status, confusion, or extreme lethargy.",
+  "Systolic blood pressure below 100 mmHg.",
+  "Respiratory rate greater than 22 breaths per minute.",
+  "Signs of organ failure like decreased urine output or cyanosis."
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between sepsis and septicemia?",
+   "a": "Septicemia refers specifically to the presence of pathogens in the blood, while sepsis is the life-threatening systemic inflammatory response to an infection."
+  },
+  {
+   "q": "What defines Septic Shock?",
+   "a": "Septic shock is sepsis requiring vasopressors to maintain MAP ≥65 mmHg and having a serum lactate level >2 mmol/L despite adequate fluid resuscitation."
+  },
+  {
+   "q": "What is the 'Sepsis Six' bundle?",
+   "a": "It involves giving oxygen, taking blood cultures, starting IV antibiotics, giving IV fluids, measuring serial lactates, and monitoring hourly urine output."
+  }
+ ],
+ "exam": [
+  "Compare and contrast the qSOFA score with the full SOFA score in clinical practice.",
+  "Explain the pathophysiology of disseminated intravascular coagulation (DIC) in the context of severe sepsis.",
+  "What are the primary goals of initial fluid resuscitation according to the Surviving Sepsis Campaign guidelines?"
+ ],
+ "related": [
+  "Systemic Inflammatory Response Syndrome (SIRS)",
+  "Bacteremia",
+  "Hypovolemic Shock",
+  "Multiple Organ Dysfunction Syndrome (MODS)",
+  "Lactic Acidosis",
+  "Adrenal Insufficiency"
+ ],
+ "subject": "Microbiology & immunology",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,121 @@
+{
+ "medical": true,
+ "summary": "A head-to-toe examination performed only after the primary survey is complete and the patient is stabilized. It includes a detailed history (AMPLE: Allergies, Medications, Past illness, Last meal, Events) and physical exam.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Primary Survey (ABCDE)",
+   "b": [
+    "A - Airway & C-Spine: Ensure patency; maintain cervical spine immobilization.",
+    "B - Breathing: Assess oxygenation and ventilation; exclude tension pneumothorax or flail chest.",
+    "C - Circulation: Control external hemorrhage; assess perfusion (pulse, BP, capillary refill); initiate fluid resuscitation.",
+    "D - Disability: Neurological status using Glasgow Coma Scale (GCS) and pupil reactivity.",
+    "E - Exposure/Environment: Full exposure to identify injuries while preventing hypothermia."
+   ]
+  },
+  {
+   "h": "Secondary Survey",
+   "p": "A head-to-toe examination performed only after the primary survey is complete and the patient is stabilized. It includes a detailed history (AMPLE: Allergies, Medications, Past illness, Last meal, Events) and physical exam."
+  },
+  {
+   "h": "Lethal Triad in Trauma",
+   "b": [
+    "Acidosis: Resulting from tissue hypoperfusion.",
+    "Coagulopathy: Impaired blood clotting worsened by dilution and consumption.",
+    "Hypothermia: Impairs enzyme function and worsens coagulopathy."
+   ]
+  },
+  {
+   "h": "Adjuncts",
+   "b": [
+    "Focused Assessment with Sonography for Trauma (FAST) scan.",
+    "Chest and pelvic X-rays.",
+    "CT imaging for stable patients."
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Airway obstruction indicated by snoring, stridor, or paradoxical chest movement, leading to rapid asphyxia.",
+    "Tension pneumothorax marked by tracheal deviation, absent breath sounds, and hypotension requiring immediate decompression.",
+    "Hypovolemic shock evidenced by tachycardia, delayed capillary refill, and cold extremities from internal or external bleeding.",
+    "Increased intracranial pressure shown by a declining Glasgow Coma Scale score, blown pupils, or Cushing’s triad."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The primary goal is to identify and treat life-threatening injuries using a systematic approach that prioritizes oxygenation and circulatory stability before definitive surgical or medical repair.",
+   "b": [
+    "Secure the airway while maintaining cervical spine immobilization to prevent spinal cord injury during intubation.",
+    "Administer supplemental oxygen to ensure adequate tissue perfusion and prevent secondary hypoxic organ damage.",
+    "Provide isotonic crystalloids to restore circulating volume, avoiding excessive glucose-containing fluids which can worsen cerebral edema.",
+    "Use opioid analgesics for pain control because they are reversible, unlike some non-steroidal anti-inflammatory drugs that interfere with platelet function.",
+    "Apply tranexamic acid in cases of significant hemorrhage to stabilize clots and reduce mortality from bleeding.",
+    "Refer to a trauma surgeon or specialized center if the patient requires operative intervention or ICU-level monitoring."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Monitor vital signs and hemoglobin levels frequently to detect delayed internal bleeding or secondary organ failure.",
+    "Implement venous thromboembolism prophylaxis with low-molecular-weight heparin once bleeding is controlled to prevent pulmonary embolism.",
+    "Screen for psychological trauma and post-traumatic stress disorder during recovery phases to ensure holistic rehabilitation.",
+    "Advocate for secondary prevention through seatbelt use, helmet laws, and workplace safety protocols to reduce injury recurrence."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Cardiac tamponade vs Tension pneumothorax: Both cause hypotension and JVD, but breath sounds are absent only in pneumothorax.",
+    "Hypovolemic vs Neurogenic shock: Neurogenic shock presents with bradycardia and warm extremities, unlike the tachycardia seen in hypovolemia."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Initial Hematocrit: May be falsely normal in acute hemorrhage before compensatory hemodilution or fluid resuscitation occurs.",
+    "FAST Scan: High specificity but low sensitivity for hollow viscus injury or retroperitoneal bleeding.",
+    "Cervical Spine X-rays: A single lateral view cannot exclude injury; inadequate visualization of the C7-T1 junction is a common pitfall."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Altered consciousness or a Glasgow Coma Scale score below 15.",
+  "Hemodynamic instability including hypotension or persistent tachycardia.",
+  "Penetrating injuries to the torso, neck, or proximal extremities.",
+  "Respiratory distress, tachypnea, or paradoxical chest wall movement.",
+  "Focused Assessment with Sonography for Trauma (FAST) showing free fluid."
+ ],
+ "faq": [
+  {
+   "q": "What is the 'lethal triad' in trauma management?",
+   "a": "It consists of acidosis, coagulopathy, and hypothermia, which exacerbate bleeding and physiological collapse."
+  },
+  {
+   "q": "What is the goal of damage control surgery?",
+   "a": "To rapidly control hemorrhage and contamination rather than definitive repair, allowing for physiological stabilization."
+  },
+  {
+   "q": "When should the secondary survey be performed?",
+   "a": "Only after the primary survey (ABCDE) is completed and the patient's vital signs are stabilized."
+  }
+ ],
+ "exam": [
+  "Describe the steps and components of the Primary Survey in a poly-trauma patient.",
+  "Discuss the indications and limitations of a FAST scan in blunt abdominal trauma.",
+  "Explain the classification and immediate management of tension pneumothorax versus simple pneumothorax."
+ ],
+ "related": [
+  "Hypovolemic Shock",
+  "Traumatic Brain Injury",
+  "Tension Pneumothorax",
+  "Cardiac Tamponade",
+  "Pelvic Fractures",
+  "Spinal Cord Injury"
+ ],
+ "subject": "Surgery",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

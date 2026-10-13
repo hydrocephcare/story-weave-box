@@ -1,0 +1,120 @@
+{
+ "medical": true,
+ "summary": "Hepatitis refers to inflammation of the liver parenchyma. While it can be caused by toxins, alcohol, or autoimmune processes, viral hepatitis (Types A, B, C, D, and E) is a leading cause of global morbidity and mortality.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Hepatitis refers to inflammation of the liver parenchyma. While it can be caused by toxins, alcohol, or autoimmune processes, viral hepatitis (Types A, B, C, D, and E) is a leading cause of global morbidity and mortality."
+  },
+  {
+   "h": "Viral Etiology",
+   "b": [
+    "Hepatitis A & E: Transmitted via the fecal-oral route. They typically cause acute, self-limiting illness and do not lead to chronic carrier states.",
+    "Hepatitis B (HBV): A unique DNA virus (Hepadnaviridae) transmitted parenterally, sexually, or perinatally. It can lead to chronic infection, cirrhosis, and hepatocellular carcinoma.",
+    "Hepatitis C (HCV): An RNA virus primarily transmitted via blood-to-blood contact. It has a high rate of chronicity.",
+    "Hepatitis D (HDV): An incomplete virus that requires the presence of HBsAg (HBV) to replicate."
+   ]
+  },
+  {
+   "h": "Clinical Presentation",
+   "b": [
+    "Prodromal Phase: Malaise, anorexia, nausea, and right upper quadrant pain.",
+    "Icteric Phase: Jaundice, dark urine (bilirubinuria), and pale stools.",
+    "Laboratory Findings: Marked elevation of transaminases (ALT and AST), elevated bilirubin, and specific serological markers (e.g., HBsAg, Anti-HAV IgM)."
+   ]
+  },
+  {
+   "h": "Prevention and Public Health",
+   "b": [
+    "Vaccination: Effective vaccines exist for HBV (included in the pentavalent vaccine) and HAV. HBV vaccine is freeze-sensitive and requires careful cold chain management.",
+    "Screening: Essential in antenatal care to prevent vertical transmission and in blood transfusion services to ensure blood safety.",
+    "Drug-Induced Hepatitis: Certain medications, notably Rifampicin and Isoniazid, are known to cause hepatotoxicity, requiring monitoring during treatment."
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Fulminant hepatic failure characterized by altered consciousness (encephalopathy) and flapping tremors (asterixis).",
+    "Signs of coagulopathy such as easy bruising, mucosal bleeding, or prolonged oozing from injection sites.",
+    "Deepening jaundice, ascites, and peripheral edema indicating severe loss of liver synthetic function.",
+    "Development of hepatocellular carcinoma or cirrhosis in chronic viral hepatitis cases."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on identifying the specific etiology, providing supportive care to allow the liver to recover, and utilizing targeted therapy for chronic or severe cases.",
+   "b": [
+    "Supportive care includes adequate hydration, high-calorie nutrition, and avoidance of alcohol or hepatotoxic substances.",
+    "Nucleoside analogues like Tenofovir or Entecavir for chronic Hepatitis B to suppress viral replication and prevent cirrhosis.",
+    "Direct-acting antivirals for Hepatitis C to achieve a sustained virologic response and eradicate the virus.",
+    "Corticosteroids or Azathioprine for autoimmune hepatitis to dampen the immune-mediated destruction of hepatocytes.",
+    "Refer to a gastroenterologist if there is evidence of acute liver failure, cirrhosis, or diagnostic uncertainty."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Serial monitoring of liver enzymes and viral load to assess treatment response and disease progression.",
+    "Universal vaccination for Hepatitis A and B for all infants and high-risk groups.",
+    "Screening of household and sexual contacts to prevent further transmission of blood-borne viruses.",
+    "Regular ultrasound and Alpha-fetoprotein monitoring for patients with cirrhosis to screen for early liver cancer."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Drug-induced liver injury (DILI) often mimics viral hepatitis; a detailed drug history including herbal supplements is essential.",
+    "Biliary obstruction can cause jaundice and elevated transaminases, but typically presents with significant alkaline phosphatase elevation and dilated ducts on ultrasound.",
+    "Wilson’s Disease may present as acute hepatitis in younger patients, often distinguished by low ceruloplasmin and Kayser-Fleischer rings."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Aminotransferase levels do not always correlate with the severity of liver necrosis or long-term prognosis.",
+    "In end-stage cirrhosis, ALT and AST may appear 'normal' due to the lack of remaining viable hepatocytes to release enzymes.",
+    "A positive Hepatitis C antibody test does not distinguish between an active infection and a previously cleared infection; HCV RNA is required."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Development of altered consciousness, confusion, or flapping tremors (asterixis).",
+  "Rapidly worsening jaundice or dark tea-colored urine.",
+  "Persistent vomiting with an inability to maintain oral hydration.",
+  "Severe abdominal pain or signs of gastrointestinal hemorrhage.",
+  "Evidence of easy bruising or spontaneous bleeding from gums or mucosa."
+ ],
+ "faq": [
+  {
+   "q": "What defines the window period in Hepatitis B testing?",
+   "a": "The time between the disappearance of HBsAg and the appearance of Anti-HBs, where IgM Anti-HBc may be the only marker of acute infection."
+  },
+  {
+   "q": "Which types of viral hepatitis are transmitted via the fecal-oral route?",
+   "a": "Hepatitis A and E are primarily transmitted through contaminated food and water, whereas B, C, and D are blood-borne."
+  },
+  {
+   "q": "Why is Hepatitis D unique among the viral hepatitides?",
+   "a": "It is a defective virus that requires the presence of Hepatitis B surface antigen (HBsAg) to replicate and cause infection."
+  }
+ ],
+ "exam": [
+  "Interpret a serological profile showing HBsAg negative, Anti-HBc positive, and Anti-HBs positive.",
+  "List three extra-hepatic manifestations of chronic Hepatitis C infection.",
+  "Discuss the criteria used to differentiate between acute liver injury and fulminant hepatic failure."
+ ],
+ "related": [
+  "Cirrhosis",
+  "Hepatocellular Carcinoma",
+  "Liver Function Tests",
+  "Ascites",
+  "Portal Hypertension",
+  "Alcoholic Liver Disease"
+ ],
+ "subject": "Microbiology & immunology",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

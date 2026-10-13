@@ -1,0 +1,78 @@
+{
+ "medical": true,
+ "summary": "Bile consists primarily of water (97%), bile salts (derived from cholesterol), phospholipids (lecithin), bile pigments (bilirubin), cholesterol, and electrolytes (sodium, potassium, calcium, and bicarbonate).",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Composition",
+   "p": "Bile consists primarily of water (97%), bile salts (derived from cholesterol), phospholipids (lecithin), bile pigments (bilirubin), cholesterol, and electrolytes (sodium, potassium, calcium, and bicarbonate)."
+  },
+  {
+   "h": "Formation and Secretion",
+   "p": "Hepatocytes secrete bile into canaliculi. It is concentrated in the gallbladder through the active reabsorption of sodium and water. Secretion is stimulated by Cholecystokinin (CCK) in response to fat in the duodenum, causing gallbladder contraction and Sphincter of Oddi relaxation."
+  },
+  {
+   "h": "Functions",
+   "p": "1. Emulsification: Bile salts reduce surface tension of fat droplets, increasing surface area for pancreatic lipase. 2. Micelle Formation: Facilitates absorption of fatty acids and fat-soluble vitamins (A, D, E, K). 3. Excretion: Serves as the primary route for eliminating bilirubin, excess cholesterol, and drug metabolites."
+  },
+  {
+   "h": "Enterohepatic Circulation",
+   "p": "Approximately 95% of bile salts are reabsorbed in the terminal ileum via active transport and returned to the liver via the portal vein, minimizing the need for de novo synthesis."
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Gallbladder mucus: Mucus is clear and lacks pigments, whereas bile is dark green, yellow, or brown due to bilirubin content.",
+    "Pancreatic juice: Pancreatic juice is enzyme-rich and clear, while bile is primarily an emulsifier and excretory vehicle for waste.",
+    "Haemosiderin: Both are pigments, but haemosiderin is an intracellular iron-storage complex, while bilirubin is a breakdown product of heme found in bile."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal bilirubin in early obstruction: Serum bilirubin may remain normal in the very early stages of acute cholecystitis or biliary colic.",
+    "Urine urobilinogen: May be absent in complete biliary obstruction even if serum bilirubin is extremely high.",
+    "Carotenemia: High intake of carrots can cause yellow skin, but unlike jaundice, it spares the sclera due to lack of bile pigment deposition."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Icterus involving the sclera or skin",
+  "Pale, clay-colored stools indicating biliary obstruction",
+  "Dark 'coke-colored' urine suggesting conjugated hyperbilirubinemia",
+  "Severe right upper quadrant pain radiating to the shoulder",
+  "Fever accompanied by jaundice (Charcot’s Triad)"
+ ],
+ "faq": [
+  {
+   "q": "What is the primary function of bile salts in digestion?",
+   "a": "Bile salts act as detergents to emulsify large fat globules into smaller micelles, increasing the surface area for pancreatic lipase activity."
+  },
+  {
+   "q": "What is the enterohepatic circulation?",
+   "a": "The process where approximately 95% of secreted bile salts are reabsorbed in the terminal ileum and returned to the liver via the portal vein."
+  },
+  {
+   "q": "How does Cholecystokinin (CCK) affect the biliary system?",
+   "a": "CCK is released in response to duodenal fat, causing gallbladder contraction and relaxation of the Sphincter of Oddi to release bile."
+  }
+ ],
+ "exam": [
+  "Outline the composition of bile and the role of its organic constituents.",
+  "Explain the physiological consequences of a total distal ileum resection on bile acid metabolism.",
+  "Differentiate between the mechanisms of pre-hepatic, intra-hepatic, and post-hepatic jaundice."
+ ],
+ "related": [
+  "Bilirubin Metabolism",
+  "Cholelithiasis",
+  "Enterohepatic Circulation",
+  "Pancreatic Lipase",
+  "Gallbladder Physiology",
+  "Portal Hypertension"
+ ],
+ "subject": "Physiology",
+ "kind": "physiology",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

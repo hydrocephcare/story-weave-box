@@ -1,0 +1,119 @@
+{
+ "medical": true,
+ "summary": "Necrosis is a form of cell death characterized by the loss of membrane integrity and leakage of cellular contents, culminating in an inflammatory response. Unlike apoptosis, it is always a pathological process resulting from irreversible exogenous injury.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Necrosis is a form of cell death characterized by the loss of membrane integrity and leakage of cellular contents, culminating in an inflammatory response. Unlike apoptosis, it is always a pathological process resulting from irreversible exogenous injury."
+  },
+  {
+   "h": "Morphological Changes",
+   "b": [
+    "Cytoplasmic: Increased eosinophilia (due to loss of RNA and denatured proteins) and a glassy, homogeneous appearance.",
+    "Nuclear:",
+    "Pyknosis: Nuclear shrinkage and increased basophilia.",
+    "Karyorrhexis: Fragmentation of the pyknotic nucleus.",
+    "Karyolysis: Fading of chromatin due to DNAse activity."
+   ]
+  },
+  {
+   "h": "Patterns of Tissue Necrosis",
+   "b": [
+    "Coagulative: Preservation of tissue architecture for several days; characteristic of infarcts in solid organs (except the brain).",
+    "Liquefactive: Digestion of dead cells into a liquid viscous mass; seen in focal bacterial/fungal infections and CNS hypoxic death.",
+    "Gangrenous: Usually refers to a limb that has lost blood supply and undergone coagulative necrosis (dry gangrene), or with superimposed bacterial infection (wet gangrene).",
+    "Caseous: 'Cheese-like' friable white appearance; characteristic of tuberculous infection (granuloma).",
+    "Fat Necrosis: Focal areas of fat destruction resulting from release of activated lipases (e.g., in acute pancreatitis), leading to saponification.",
+    "Fibrinoid: Seen in immune reactions involving blood vessels; complexes of antigens and antibodies are deposited in arterial walls."
+   ]
+  },
+  {
+   "h": "Clinical Significance",
+   "p": "Leakage of intracellular proteins through the damaged membrane into the serum serves as a diagnostic marker for tissue-specific injury, such as cardiac troponins in myocardial infarction or transaminases in hepatic injury."
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Systemic inflammatory response syndrome (SIRS) indicating the spread of toxins or bacteria into the bloodstream.",
+    "Loss of function or sensation in the affected limb, suggesting critical ischemia or compartment syndrome.",
+    "Crepitus or gas bubbles under the skin, which may indicate life-threatening gas gangrene.",
+    "Secondary bacterial infection leading to septic shock, multi-organ failure, and rapid clinical decline."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The primary goal is to remove the source of cell death and stabilize the patient through aggressive source control and physiological support.",
+   "b": [
+    "Address the underlying cause such as restoring blood flow in ischemia or debriding infected tissue.",
+    "Provide intravenous fluids to maintain organ perfusion and prevent acute kidney injury from released cellular debris.",
+    "Administer broad-spectrum antibiotics like penicillins or clindamycin to treat or prevent secondary bacterial invasion.",
+    "Use analgesics like paracetamol or opioids for severe pain management while avoiding nephrotoxic NSAIDs in unstable patients.",
+    "Refer to a surgeon immediately for necrotic tissue debridement or amputation to prevent the spread of toxins."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Monitor wound healing progress and look for signs of recurring tissue death or infection.",
+    "Manage chronic conditions like diabetes or atherosclerosis to prevent further ischemic necrotic events.",
+    "Perform regular neurovascular checks in high-risk patients to ensure adequate distal blood flow.",
+    "Educate patients on foot care and early symptom recognition to avoid delayed presentation of tissue injury."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Apoptosis: Differentiated by lack of inflammation, cell shrinkage rather than swelling, and intact plasma membranes.",
+    "Post-mortem autolysis: Distinguished from necrosis by the total absence of an inflammatory response in surrounding tissues.",
+    "Caseous vs. Liquefactive: Caseous maintains a crumbly solid structure; liquefactive results in a complete loss of tissue architecture into fluid."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Serum enzymes (e.g., Troponin): May be normal if checked too early before cellular contents have leaked into the bloodstream.",
+    "Radiology: Early ischemic necrosis may not show changes on X-ray or CT until significant tissue density changes occur.",
+    "Biopsy sampling: Taking a sample from the purely necrotic center may miss the diagnostic pathology occurring at the viable periphery."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden skin discoloration (black, blue, or dusky purple)",
+  "Severe pain followed by a complete loss of sensation in the affected area",
+  "Foul-smelling discharge or crepitus (crunching sound) under the skin",
+  "High fever accompanied by rapid heart rate and confusion"
+ ],
+ "faq": [
+  {
+   "q": "What is the fundamental difference between necrosis and apoptosis?",
+   "a": "Necrosis is always pathological, involving cell swelling and membrane rupture causing inflammation. Apoptosis is often physiological, programmed, and does not trigger an inflammatory response."
+  },
+  {
+   "q": "Why is liquefactive necrosis unique to the brain?",
+   "a": "The brain lacks a strong connective tissue framework and is rich in lipids and hydrolytic enzymes, leading to rapid tissue digestion into liquid mass."
+  },
+  {
+   "q": "What characterizes caseous necrosis macroscopically?",
+   "a": "It appears as a yellow-white, friable, 'cheese-like' substance, typically seen in the center of granulomas during tuberculosis infections."
+  }
+ ],
+ "exam": [
+  "Describe the morphological patterns of necrosis and provide a clinical example for each.",
+  "Explain the biochemical mechanisms leading to irreversible cell injury and membrane damage.",
+  "Contrast the nuclear changes seen in necrotic cells: pyknosis, karyorrhexis, and karyolysis."
+ ],
+ "related": [
+  "Apoptosis",
+  "Ischemia-Reperfusion Injury",
+  "Coagulative Necrosis",
+  "Gangrenous Necrosis",
+  "Fat Necrosis",
+  "Fibrinoid Necrosis"
+ ],
+ "subject": "Pathology",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

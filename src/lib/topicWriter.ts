@@ -8,14 +8,18 @@ import { buildPartPrompts, mergeParts, parseJsonReply } from "../../supabase/fun
 import { slugOf, validName } from "../../supabase/functions/_shared/topicAi.js";
 import type { AiPage } from "@/lib/topics";
 
-export type WriteResult = { status: "published"; page: AiPage & { subject?: string }; saved: boolean } | { status: "rejected" | "failed" | "busy" | "limit" | "bot" };
+export type WriteResult = { status: "published"; page: AiPage & { subject?: string }; saved: boolean } | { status: "rejected" | "failed" | "busy" | "limit" | "bot" | "paused" };
 
 const DAY_KEY = "ompath_topic_writes";
-const PER_VISITOR_PER_DAY = 5;
+const PER_VISITOR_PER_DAY = 40;
 const FN_DOWN = "ompath_topic_fn_down";
+const AI_PAUSED = "ompath_ai_paused";
+/** When the assistant has said it is out of credits, nothing is asked of it again for an hour: no wasted calls, no spinner. */
+export const aiPaused = () => { try { return Date.now() - Number(localStorage.getItem(AI_PAUSED) ?? 0) < 3600_000; } catch { return false; } };
+const pauseAi = () => { try { localStorage.setItem(AI_PAUSED, String(Date.now())); } catch { /* ignore */ } };
 const today = () => new Date().toISOString().slice(0, 10);
 
-const looksLikeBot = () => typeof navigator === "undefined" || /bot|crawl|spider|slurp|headless|lighthouse|preview|facebookexternalhit|whatsapp/i.test(navigator.userAgent) || (navigator as Navigator & { webdriver?: boolean }).webdriver === true;
+export const looksLikeBot = () => typeof navigator === "undefined" || /bot|crawl|spider|slurp|headless|lighthouse|preview|facebookexternalhit|whatsapp/i.test(navigator.userAgent) || (navigator as Navigator & { webdriver?: boolean }).webdriver === true;
 
 function writesToday(): number { try { const v = JSON.parse(localStorage.getItem(DAY_KEY) ?? "null"); return v?.day === today() ? Number(v.n) || 0 : 0; } catch { return 0; } }
 function countWrite() { try { localStorage.setItem(DAY_KEY, JSON.stringify({ day: today(), n: writesToday() + 1 })); } catch { /* storage blocked */ } }
@@ -29,6 +33,7 @@ async function askOmpathAi(question: string, snippet: string, name: string, cate
     headers: { "Content-Type": "application/json", apikey: SUPABASE_PUBLISHABLE_KEY, Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}` },
     body: JSON.stringify({ question, history: [], sources: snippet ? [{ kind: "site", title: name, subtitle: category, snippet: snippet.slice(0, 2600) }] : [] }),
   });
+  if (res.status === 402 || res.status === 429) { pauseAi(); throw new Error("paused"); }
   if (!res.ok || !res.body) throw new Error(`ai ${res.status}`);
   const reader = res.body.getReader(); const dec = new TextDecoder();
   let buf = "", text = "";
@@ -51,6 +56,7 @@ async function askOmpathAi(question: string, snippet: string, name: string, cate
 export async function writeTopicPage({ name, category, context, signal }: { name: string; category: string; context: string; signal?: AbortSignal }): Promise<WriteResult> {
   if (!validName(name)) return { status: "failed" };
   if (looksLikeBot()) return { status: "bot" };
+  if (aiPaused()) return { status: "paused" };
   if (writesToday() >= PER_VISITOR_PER_DAY) return { status: "limit" };
   const slug = slugOf(name);
 
@@ -70,13 +76,19 @@ export async function writeTopicPage({ name, category, context, signal }: { name
   // Route 2: Ompath AI in short parts, then publish with the database function
   try {
     const prompts = buildPartPrompts({ name, category });
-    const first = await askOmpathAi(prompts[0], context, name, category, signal).then(parseJsonReply, () => null);
-    if (!first) return { status: "failed" };
+    let first = await askOmpathAi(prompts[0], context, name, category, signal).then(parseJsonReply, () => null);
+    if (!first) first = await askOmpathAi(prompts[0], "", name, category, signal).then(parseJsonReply, () => null);
+    if (!first) return { status: aiPaused() ? "paused" : "failed" };
     if (first.medical === false) return { status: "rejected" };
     const later = await Promise.all(prompts.slice(1).map((p) => askOmpathAi(p, "", name, category, signal).then(parseJsonReply, () => null)));
     const parts = [first, ...later] as (Record<string, unknown> | null)[];
     let page: AiPage & { medical?: boolean };
-    try { page = mergeParts(parts, { name, category, model: "gemini" }) as AiPage & { medical?: boolean }; } catch { return { status: "failed" }; }
+    try { page = mergeParts(parts, { name, category, model: "gemini" }) as AiPage & { medical?: boolean }; } catch {
+      // the answer came in an unusable shape: ask once more without the site's notes
+      const again = await askOmpathAi(prompts[0], "", name, category, signal).then(parseJsonReply, () => null);
+      if (!again) return { status: "failed" };
+      try { page = mergeParts([again, ...later], { name, category, model: "gemini" }) as AiPage & { medical?: boolean }; } catch { return { status: "failed" }; }
+    }
     if (page.medical === false) return { status: "rejected" };
     countWrite();
     let saved = false;

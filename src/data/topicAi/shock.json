@@ -1,0 +1,108 @@
+{
+ "medical": true,
+ "summary": "Shock involves inadequate oxygen delivery to tissues. Initially, compensatory mechanisms (tachycardia, peripheral vasoconstriction) maintain blood pressure. If uncorrected, this progresses to anaerobic metabolism, lactic acidosis, cellular injury, and irreversible multi-organ failure.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Pathophysiology",
+   "p": "Shock involves inadequate oxygen delivery to tissues. Initially, compensatory mechanisms (tachycardia, peripheral vasoconstriction) maintain blood pressure. If uncorrected, this progresses to anaerobic metabolism, lactic acidosis, cellular injury, and irreversible multi-organ failure."
+  },
+  {
+   "h": "Classification",
+   "p": "- **Hypovolemic:** Loss of blood or fluid volume (e.g., hemorrhage, severe dehydration). - **Cardiogenic:** Failure of the myocardial pump (e.g., myocardial infarction, arrhythmias). - **Distributive:** Excessive vasodilation (e.g., septic shock, anaphylaxis, neurogenic shock). - **Obstructive:** Physical obstruction to blood flow (e.g., pulmonary embolism, cardiac tamponade)."
+  },
+  {
+   "h": "Clinical Presentation",
+   "p": "Common signs include hypotension (often late), tachycardia, tachypnea, altered mental status, and oliguria. Skin may be cold and clammy (hypovolemic/cardiogenic) or warm and flushed (early distributive/septic)."
+  },
+  {
+   "h": "Management Principles",
+   "p": "Management focuses on restoring perfusion through airway protection, oxygenation, and fluid resuscitation. Specific interventions include vasopressors for distributive shock, thrombolytics for massive pulmonary embolism, or surgical intervention for hemorrhage or cardiac tamponade."
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Altered mental status or confusion indicates inadequate cerebral perfusion and impending coma.",
+    "Significant drop in blood pressure and rapid, weak pulse suggest compensatory mechanisms are failing.",
+    "Decreased urine output signals acute kidney injury due to prolonged lack of blood flow.",
+    "Cold, clammy, or mottled skin reflects severe peripheral vasoconstriction to protect vital organs.",
+    "Multi-organ dysfunction syndrome occurs when prolonged ischemia leads to irreversible cellular and organ damage."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The primary goal is to restore tissue perfusion and oxygen delivery by addressing the underlying trigger while providing aggressive circulatory and respiratory support.",
+   "b": [
+    "Identify and stop the primary cause, such as controlling hemorrhage, draining a cardiac tamponade, or administering antibiotics for sepsis.",
+    "Provide high-flow oxygen or mechanical ventilation to ensure adequate arterial oxygen saturation and reduce the work of breathing.",
+    "Administer intravenous crystalloids to increase intravascular volume, unless the patient has fluid overload from cardiogenic failure.",
+    "Use vasopressors like norepinephrine to increase systemic vascular resistance and maintain mean arterial pressure in distributive shock.",
+    "Utilize inotropes such as dobutamine to improve myocardial contractility specifically in cases of cardiogenic shock.",
+    "Refer to intensive care when the patient requires invasive hemodynamic monitoring or advanced life support measures."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Monitor vital signs, lactate levels, and urine output continuously to ensure the shock state is resolving.",
+    "Perform serial echocardiograms or lung ultrasounds to check for recovering organ function and fluid status.",
+    "Implement early mobilization and nutritional support to prevent complications like muscle wasting and pressure sores.",
+    "Educate patients on early signs of infection or dehydration to prevent recurrence of distributive or hypovolemic shock."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Vasovagal syncope: Distinguishable by rapid recovery and lack of persistent metabolic derangement seen in true shock.",
+    "Postictal state: May mimic the altered mental status of shock but lacks the systemic hypotension and markers of poor perfusion."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal blood pressure: Compensatory mechanisms may maintain BP initially (compensated shock) despite critical reductions in organ perfusion.",
+    "Hematocrit: In acute massive hemorrhage, hematocrit may appear normal initially until hemodilution occurs through fluid shifts or resuscitation.",
+    "Pulse oximetry: May be inaccurate or fail to provide a reading in states of severe peripheral vasoconstriction."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Systolic blood pressure below 90 mmHg",
+  "Altered mental status or sudden confusion",
+  "Marked oliguria or complete absence of urine output",
+  "Cold, clammy, or mottled skin extremities",
+  "Rapid, weak pulse and tachypnea"
+ ],
+ "faq": [
+  {
+   "q": "What is the defining feature of shock at the cellular level?",
+   "a": "Shock is defined by systemic hypoperfusion leading to an imbalance between cellular oxygen supply and metabolic demand, resulting in reversible and then irreversible cellular injury."
+  },
+  {
+   "q": "How does neurogenic shock differ from other types hemodynamically?",
+   "a": "Unlike most forms of shock, neurogenic shock presents with bradycardia and warm, dry skin due to the loss of sympathetic vascular tone."
+  },
+  {
+   "q": "What characterizes the progressive stage of shock?",
+   "a": "The progressive stage is marked by the failure of compensatory mechanisms, leading to metabolic acidosis, tissue hypoxia, and the onset of organ dysfunction."
+  }
+ ],
+ "exam": [
+  "Describe the three morphological stages of shock: nonprogressive, progressive, and irreversible.",
+  "Explain the pathophysiology of Septic Shock, focusing on the role of inflammatory mediators and endothelial activation.",
+  "Compare and contrast the clinical presentation and hemodynamics of Cardiogenic vs Hypovolemic shock."
+ ],
+ "related": [
+  "Multiple Organ Dysfunction Syndrome",
+  "Disseminated Intravascular Coagulation",
+  "Systemic Inflammatory Response Syndrome",
+  "Acute Respiratory Distress Syndrome",
+  "Acute Tubular Necrosis",
+  "Adrenal Insufficiency"
+ ],
+ "subject": "Pathology",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

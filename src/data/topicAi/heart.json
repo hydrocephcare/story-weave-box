@@ -1,0 +1,85 @@
+{
+ "medical": true,
+ "summary": "The heart is a four-chambered muscular pump located in the middle mediastinum. It consists of two atria (receiving chambers) and two ventricles (pumping chambers). The wall comprises three layers: the outer epicardium (visceral pericardium), the thick muscular myocardium, and the inner endocardium.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Chambers and Layers",
+   "p": "The heart is a four-chambered muscular pump located in the middle mediastinum. It consists of two atria (receiving chambers) and two ventricles (pumping chambers). The wall comprises three layers: the outer epicardium (visceral pericardium), the thick muscular myocardium, and the inner endocardium."
+  },
+  {
+   "h": "External Anatomy and Surfaces",
+   "b": [
+    "Apex: Formed by the left ventricle, located in the 5th left intercostal space, midclavicular line.",
+    "Base: Primarily formed by the left atrium, facing posteriorly.",
+    "Sternocostal (Anterior) Surface: Mainly formed by the right ventricle.",
+    "Diaphragmatic (Inferior) Surface: Formed by both ventricles, primarily the left."
+   ]
+  },
+  {
+   "h": "Valvular Anatomy",
+   "b": [
+    "Atrioventricular (AV) Valves: Tricuspid (right) and Mitral (left). Supported by chordae tendineae and papillary muscles to prevent regurgitation during systole.",
+    "Semilunar Valves: Pulmonary and Aortic. These prevent backflow from the great vessels during diastole."
+   ]
+  },
+  {
+   "h": "Coronary Circulation",
+   "b": [
+    "Right Coronary Artery (RCA): Supplies the right atrium, right ventricle, SA node (60%), and AV node (80%).",
+    "Left Coronary Artery (LCA): Divides into the Left Anterior Descending (LAD), supplying the anterior septum and apex, and the Circumflex artery, supplying the left atrium and posterior left ventricle."
+   ]
+  },
+  {
+   "h": "Clinical Correlates",
+   "p": "Understanding heart anatomy is essential for interpreting Chest X-rays (cardiac silhouette) and diagnosing conditions like heart failure, valvular heart disease, and myocardial infarction."
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Auricles vs Atria: Auricles are small, muscular pouches projecting from the atria, while atria are the main receiving chambers.",
+    "Right vs Left Ventricle walls: The left ventricle is three times thicker than the right to overcome high systemic vascular resistance."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Dextrocardia: In this congenital condition, the heart is mirrored on the right side, which can lead to incorrect electrode placement during ECGs.",
+    "Referred pain: Cardiac ischemia often presents as pain in the left arm or jaw due to shared spinal cord segments (T1-T5)."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What defines the 'base' of the heart?",
+   "a": "The base is the posterior aspect, formed mainly by the left atrium and a small part of the right atrium, facing the vertebrae."
+  },
+  {
+   "q": "Which coronary artery is usually dominant?",
+   "a": "The right coronary artery is dominant in approximately 70% of people, meaning it gives rise to the posterior interventricular artery."
+  },
+  {
+   "q": "Where is the apex beat normally palpated?",
+   "a": "It is typically found in the left fifth intercostal space, along the midclavicular line."
+  }
+ ],
+ "exam": [
+  "Describe the boundaries and contents of the pericardial sinuses (transverse and oblique).",
+  "Trace the conduction system of the heart starting from the sinoatrial node.",
+  "List the structures that open into the right atrium."
+ ],
+ "related": [
+  "Pericardium",
+  "Coronary Circulation",
+  "Mediastinum",
+  "Cardiac Cycle",
+  "Fetal Circulation",
+  "Great Vessels"
+ ],
+ "subject": "Anatomy",
+ "kind": "anatomy",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

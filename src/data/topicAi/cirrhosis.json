@@ -1,0 +1,108 @@
+{
+ "medical": true,
+ "summary": "Common causes include chronic viral hepatitis (B and C), alcoholic liver disease, and non-alcoholic steatohepatitis (NASH). Chronic inflammation triggers stellate cell activation, leading to collagen deposition.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Etiology and Pathophysiology",
+   "p": "Common causes include chronic viral hepatitis (B and C), alcoholic liver disease, and non-alcoholic steatohepatitis (NASH). Chronic inflammation triggers stellate cell activation, leading to collagen deposition. This fibrosis increases intrahepatic resistance, causing portal hypertension and peripheral vasodilation."
+  },
+  {
+   "h": "Clinical Features and Diagnosis",
+   "p": "Patients may present with jaundice, ascites, splenomegaly, and stigmata of chronic liver disease (e.g., palmar erythema, spider naevi). Diagnosis involves liver function tests, imaging (ultrasound), and severity assessment using the Child-Pugh score or MELD score. Ascitic fluid analysis typically shows a Serum-Ascites Albumin Gradient (SAAG) >1.1 g/dL, indicating portal hypertension."
+  },
+  {
+   "h": "Complications",
+   "p": "Key complications include esophageal varices (due to portal hypertension), hepatic encephalopathy (due to ammonia buildup), and Spontaneous Bacterial Peritonitis (SBP), often caused by gut aerobes like E. coli. There is also a significantly increased risk of Hepatocellular Carcinoma (HCC)."
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause, sodium restriction, and diuretics for ascites. Prophylactic antibiotics and beta-blockers may be used for SBP and varices, respectively. Liver transplantation is the definitive treatment for decompensated cirrhosis."
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Hematemesis or melena indicating esophageal variceal bleeding, which requires urgent endoscopic intervention.",
+    "Altered consciousness, confusion, or flapping tremor signaling hepatic encephalopathy due to toxin buildup.",
+    "Rapidly increasing abdominal girth and pain suggesting spontaneous bacterial peritonitis in patients with ascites.",
+    "Decreased urine output or rising creatinine pointing toward hepatorenal syndrome and kidney failure.",
+    "Development of new-onset jaundice or weight loss, which may indicate progression to hepatocellular carcinoma."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on stopping further liver injury, controlling fluid retention, and preventing life-threatening bleeding or brain dysfunction through lifestyle changes and targeted pharmacotherapy.",
+   "b": [
+    "Eliminate the underlying cause by strictly avoiding alcohol and treating viral hepatitis with antivirals to prevent further scarring.",
+    "Restrict dietary sodium to manage fluid overload and reduce the formation of ascites.",
+    "Use diuretics like spironolactone to counter hyperaldosteronism, often adding furosemide to maintain potassium balance and increase fluid clearance.",
+    "Administer non-selective beta-blockers such as propranolol to lower portal pressure and prevent variceal bleeding.",
+    "Prescribe lactulose to promote ammonia excretion in the stool, preventing brain dysfunction while avoiding sedatives that mask mental status changes.",
+    "Refer for liver transplantation assessment if the patient develops decompensated disease or a high MELD score."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Perform abdominal ultrasound and alpha-fetoprotein testing every six months to screen for hepatocellular carcinoma.",
+    "Schedule regular upper endoscopies to monitor for the development or enlargement of esophageal varices.",
+    "Maintain current immunizations for Hepatitis A and B to prevent additional acute viral insults to the liver.",
+    "Provide ongoing nutritional support and counseling to prevent malnutrition and muscle wasting common in chronic liver disease."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Non-cirrhotic portal fibrosis: Presents with portal hypertension but maintains normal liver architecture and biopsy.",
+    "Heart Failure: Can cause 'cardiac cirrhosis' and hepatomegaly, but presents with elevated JVP and orthopnea.",
+    "Budd-Chiari Syndrome: Hepatic vein obstruction causes similar ascites and hepatomegaly but requires vascular imaging to differentiate."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Liver Enzymes (ALT/AST): May be normal or near-normal in end-stage cirrhosis because there are few healthy hepatocytes left to leak enzymes.",
+    "INR: While used in Child-Pugh, a high INR in cirrhosis does not accurately predict bleeding risk or response to anticoagulation.",
+    "Platelet Count: Thrombocytopenia is often the earliest laboratory indicator of cirrhosis, even when liver function tests appear normal."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Vomiting of bright red blood or coffee-ground material (hematemesis).",
+  "New or worsening confusion, drowsiness, or altered personality (hepatic encephalopathy).",
+  "Development of a high fever or severe abdominal pain (possible spontaneous bacterial peritonitis).",
+  "Rapidly increasing abdominal girth or severe swelling of the legs."
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between compensated and decompensated cirrhosis?",
+   "a": "Compensated cirrhosis is asymptomatic with preserved liver function, while decompensated involves jaundice, ascites, variceal bleeding, or encephalopathy."
+  },
+  {
+   "q": "Is every patient with cirrhosis at risk for liver cancer?",
+   "a": "Yes, cirrhosis is the primary risk factor for hepatocellular carcinoma, requiring lifelong ultrasound screening every six months."
+  },
+  {
+   "q": "Why do patients with cirrhosis bleed easily?",
+   "a": "The liver fails to produce clotting factors, and portal hypertension leads to splenomegaly, which sequesters and destroys platelets."
+  }
+ ],
+ "exam": [
+  "List the components of the Child-Pugh classification and explain its clinical significance.",
+  "Describe the pathophysiology and management of spontaneous bacterial peritonitis (SBP).",
+  "What are the physical exam findings of portal hypertension and hyperestrogenism?"
+ ],
+ "related": [
+  "Portal Hypertension",
+  "Hepatocellular Carcinoma",
+  "Alcoholic Liver Disease",
+  "Chronic Hepatitis B",
+  "Ascites Management",
+  "Hepatic Encephalopathy"
+ ],
+ "subject": "Medicine",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

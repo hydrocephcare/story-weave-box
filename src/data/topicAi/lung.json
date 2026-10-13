@@ -1,0 +1,87 @@
+{
+ "medical": true,
+ "summary": "The lungs are the essential organs of respiration situated within the thoracic cavity, separated by the mediastinum. The right lung is shorter and wider, consisting of three lobes (superior, middle, inferior) divided by horizontal and oblique fissures.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Gross Anatomy",
+   "p": "The lungs are the essential organs of respiration situated within the thoracic cavity, separated by the mediastinum. The right lung is shorter and wider, consisting of three lobes (superior, middle, inferior) divided by horizontal and oblique fissures. The left lung is smaller, has two lobes (superior, inferior) divided by an oblique fissure, and features the cardiac notch and lingula."
+  },
+  {
+   "h": "Surfaces and Borders",
+   "p": "Each lung possesses:",
+   "b": [
+    "Apex: Projects above the first rib into the root of the neck.",
+    "Base: Concave surface resting on the diaphragm.",
+    "Costal surface: Adjacent to the ribs and intercostal spaces.",
+    "Mediastinal surface: Contains the hilum, where the bronchus, pulmonary vessels, and nerves enter or exit."
+   ]
+  },
+  {
+   "h": "Bronchopulmonary Segments",
+   "p": "These are the functional, surgically resectable units of the lung, each supplied by a tertiary (segmental) bronchus and a tertiary branch of the pulmonary artery. There are typically 10 segments in the right lung and 8–10 in the left."
+  },
+  {
+   "h": "Blood Supply and Innervation",
+   "b": [
+    "Functional: Pulmonary arteries carry deoxygenated blood from the heart; pulmonary veins return oxygenated blood.",
+    "Nutritive: Bronchial arteries (branches of the thoracic aorta) supply the lung parenchyma.",
+    "Nerve supply: Derived from the pulmonary plexuses (sympathetic and parasympathetic/vagus nerve)."
+   ]
+  },
+  {
+   "h": "Clinical Relevance",
+   "b": [
+    "Aspiration: More common in the right lung due to the right main bronchus being wider, shorter, and more vertical.",
+    "Pleural Effusion: Accumulation of fluid in the pleural cavity, often settling in the costodiaphragmatic recess."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Lingula vs Middle Lobe: The lingula is a structural homologue on the left lung, whereas the middle lobe is a distinct third lobe on the right.",
+    "Epaterial vs Hyparterial Bronchi: Eparterial bronchi pass above the pulmonary artery (right side only), while hyparterial bronchi pass below it."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Auscultation: Breath sounds from the right middle lobe are best heard anteriorly, while lower lobe sounds are best heard on the posterior chest wall.",
+    "Radiology: The minor fissure is only visible on a lateral X-ray in many patients, potentially masking fluid collections in the horizontal plane."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What are the primary differences between the right and left lungs?",
+   "a": "The right lung has three lobes and two fissures, while the left lung has two lobes, one fissure, a cardiac notch, and a lingula."
+  },
+  {
+   "q": "What defines a bronchopulmonary segment?",
+   "a": "It is a pyramid-shaped anatomical unit supplied by a tertiary bronchus and a segmental artery, functioning as an independent surgical unit."
+  },
+  {
+   "q": "What is the nerve supply to the visceral and parietal pleura?",
+   "a": "Visceral pleura is supplied by autonomic nerves (insensitive to pain), whereas parietal pleura is supplied by intercostal and phrenic nerves (highly pain-sensitive)."
+  }
+ ],
+ "exam": [
+  "Describe the relations of the mediastinal surface of the right lung.",
+  "List the structures entering and leaving the lung at the hilum.",
+  "Explain the anatomical basis for the common site of inhaled foreign bodies."
+ ],
+ "related": [
+  "Pleura",
+  "Tracheobronchial Tree",
+  "Diaphragm",
+  "Mediastinum",
+  "Pulmonary Circulation",
+  "Thoracic Wall"
+ ],
+ "subject": "Anatomy",
+ "kind": "anatomy",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

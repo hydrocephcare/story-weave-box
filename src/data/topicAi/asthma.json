@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "summary": "Asthma is a chronic inflammatory airway disease characterized by reversible airway obstruction, bronchial hyperresponsiveness, and variable symptoms including wheezing, cough, and dyspnea.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition",
+   "p": "Asthma is a chronic inflammatory airway disease characterized by reversible airway obstruction, bronchial hyperresponsiveness, and variable symptoms including wheezing, cough, and dyspnea."
+  },
+  {
+   "h": "Pathophysiology",
+   "b": [
+    "Type I Hypersensitivity: Mediated by IgE and Th2 cells.",
+    "Airway Remodeling: Chronic inflammation leads to subepithelial fibrosis, smooth muscle hypertrophy, and mucous gland hyperplasia.",
+    "Bronchoconstriction: Triggered by allergens, cold air, exercise, or viral infections."
+   ]
+  },
+  {
+   "h": "Clinical Features",
+   "b": [
+    "Symptoms: Episodic wheezing, chest tightness, shortness of breath, and nocturnal cough.",
+    "Signs: Tachypnea, use of accessory muscles, prolonged expiratory phase, and polyphonic wheezing on auscultation."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "b": [
+    "Spirometry: Demonstrates obstructive defect (FEV1/FVC < 0.70).",
+    "Peak Expiratory Flow (PEF): Diurnal variation >10%.",
+    "Fractional Exhaled Nitric Oxide (FeNO): Marker of eosinophilic inflammation."
+   ]
+  },
+  {
+   "h": "Management Principles",
+   "b": [
+    "Relievers: Short-acting beta-agonists (SABA) for acute symptom relief.",
+    "Controllers: Inhaled corticosteroids (ICS) to treat underlying inflammation; Long-acting beta-agonists (LABA) used in combination with ICS.",
+    "Acute Exacerbation: Oxygen, systemic corticosteroids, and nebulized bronchodilators."
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Silent chest on auscultation indicates minimal air movement and impending respiratory failure.",
+    "Cyanosis and altered consciousness suggest life-threatening hypoxia and hypercapnia.",
+    "Inability to speak in full sentences or a rapid, weak pulse signal severe distress.",
+    "Pneumothorax may occur if high airway pressure causes a lung to collapse.",
+    "Status asthmaticus is a prolonged, severe attack that does not respond to standard initial treatments."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The management goal is to reverse acute bronchospasm, reduce airway inflammation, and maintain long-term control using a stepped approach based on symptom frequency.",
+   "b": [
+    "Short-acting beta-agonists (SABA) are used for immediate relief by relaxing bronchial smooth muscle during acute attacks.",
+    "Inhaled corticosteroids (ICS) serve as the primary long-term controller to reduce underlying airway inflammation and prevent remodeling.",
+    "Long-acting beta-agonists (LABA) are added to ICS for persistent symptoms but are never used alone due to increased mortality risk.",
+    "Oral corticosteroids are reserved for severe exacerbations to speed up recovery by suppressing the systemic inflammatory response.",
+    "Muscarinic antagonists provide additional bronchodilation if beta-agonists are insufficient or poorly tolerated by the patient.",
+    "Refer to a specialist if the diagnosis is uncertain, symptoms remain uncontrolled on high-dose therapy, or life-threatening attacks occur."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Monitor peak expiratory flow rates and provide a written action plan for self-management.",
+    "Identify and avoid environmental triggers such as tobacco smoke, dust mites, and pet dander.",
+    "Assess inhaler technique at every visit to ensure medication reaches the lower airways effectively.",
+    "Encourage annual influenza vaccinations to prevent viral infections that commonly trigger severe asthma exacerbations."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "COPD: Typically occurs in older smokers; characterized by fixed, non-reversible airflow limitation.",
+    "Congestive Heart Failure: 'Cardiac asthma' presents with wheeze but includes orthopnea, elevated JVP, and basal crackles.",
+    "Vocal Cord Dysfunction: Presents with inspiratory stridor rather than expiratory wheeze; confirmed by laryngoscopy."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Chest X-ray: Often normal in stable asthma; primarily used to rule out complications like pneumothorax or pneumonia.",
+    "Pulse Oximetry: Can remain normal initially in severe attacks; does not reflect the significant work of breathing or rising CO2.",
+    "Peak Flow: Highly effort-dependent; a patient may have a 'good' reading but still be in significant respiratory distress."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Silent chest on auscultation (minimal air movement)",
+  "Inability to complete full sentences in one breath",
+  "Cyanosis or altered level of consciousness",
+  "Peak expiratory flow rate less than 33% of predicted best",
+  "Persistent tachycardia or tachypnea despite initial bronchodilator use"
+ ],
+ "faq": [
+  {
+   "q": "What is the hallmark physiological feature of asthma?",
+   "a": "Reversible airway obstruction caused by bronchial hyperresponsiveness, chronic inflammation, and smooth muscle constriction."
+  },
+  {
+   "q": "Why is a 'normal' pCO2 concerning in acute severe asthma?",
+   "a": "It suggests respiratory muscle fatigue; early hyperventilation should typically result in low pCO2. A rising pCO2 indicates impending respiratory failure."
+  }
+ ],
+ "exam": [
+  "Classify the severity of an acute asthma exacerbation based on clinical signs.",
+  "Discuss the stepwise pharmacological management according to GINA guidelines.",
+  "Explain the role of inhaled corticosteroids versus long-acting beta-agonists in chronic management."
+ ],
+ "related": [
+  "COPD",
+  "Allergic Rhinitis",
+  "Bronchiectasis",
+  "Anaphylaxis",
+  "Gastroesophageal Reflux Disease",
+  "Churg-Strauss Syndrome"
+ ],
+ "subject": "Medicine",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

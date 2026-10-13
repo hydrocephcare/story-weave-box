@@ -1,0 +1,127 @@
+{
+ "medical": true,
+ "summary": "Pneumonia is an acute infection of the lung parenchyma involving the alveoli and distal airways, leading to impaired gas exchange. It is clinically classified as Community-Acquired (CAP), Hospital-Acquired (HAP), or Ventilator-Associated (VAP).",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Pneumonia is an acute infection of the lung parenchyma involving the alveoli and distal airways, leading to impaired gas exchange. It is clinically classified as Community-Acquired (CAP), Hospital-Acquired (HAP), or Ventilator-Associated (VAP)."
+  },
+  {
+   "h": "Etiology",
+   "b": [
+    "Bacterial: *Streptococcus pneumoniae* (most common), *Haemophilus influenzae*, *Staphylococcus aureus*.",
+    "Atypical: *Mycoplasma pneumoniae*, *Legionella pneumophila*, *Chlamydophila pneumoniae*.",
+    "Viral: Influenza, Respiratory Syncytial Virus (RSV), SARS-CoV-2.",
+    "Fungal: *Pneumocystis jirovecii* (common in immunocompromised states)."
+   ]
+  },
+  {
+   "h": "Pathophysiology",
+   "p": "Infection occurs via inhalation, aspiration, or hematogenous spread. Pathogens trigger an inflammatory response characterized by neutrophil recruitment and exudate accumulation in the alveoli. This results in consolidation, which can be lobar (confined to one lobe) or bronchial (patchy distribution)."
+  },
+  {
+   "h": "Clinical Features",
+   "b": [
+    "Symptoms: Productive cough (often with purulent sputum), pleuritic chest pain, dyspnea, fever, and rigors.",
+    "Signs: Tachypnea, tachycardia, bronchial breath sounds, crepitations (crackles), and dullness to percussion over consolidated areas."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "b": [
+    "Imaging: Chest X-ray (CXR) showing new infiltrates or consolidation.",
+    "Laboratory: Elevated inflammatory markers (CRP, WCC), sputum culture, and blood cultures.",
+    "Severity Scoring: CURB-65 (Confusion, Urea, Respiratory rate, Blood pressure, Age ≥65) is used to determine if inpatient care is required."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment focuses on supportive care (oxygen, hydration) and empirical antibiotics targeting the most likely pathogens based on local resistance patterns and clinical setting."
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Septic shock indicated by low blood pressure, cold extremities, and altered consciousness requiring immediate fluid resuscitation.",
+    "Respiratory failure marked by cyanosis, rapid shallow breathing, or an inability to maintain oxygen saturation without assistance.",
+    "Pleural effusion or empyema, suggested by persistent fever and dullness to percussion despite appropriate antibiotic therapy.",
+    "Lung abscess formation characterized by the production of foul-smelling sputum and cavitary lesions on chest imaging."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The primary goal is to eradicate the causative pathogen while providing aggressive supportive care to maintain oxygenation and hydration until the infection resolves.",
+   "b": [
+    "Empiric antibiotics like Amoxicillin or Benzylpenicillin are used to target common Gram-positive bacteria like Streptococcus pneumoniae.",
+    "Macrolides such as Azithromycin are added if atypical pathogens are suspected or if the patient has a penicillin allergy.",
+    "Oxygen therapy is administered via nasal prongs or mask to maintain peripheral saturation above 92 percent.",
+    "Intravenous fluids are provided to patients with signs of dehydration or those unable to maintain oral intake.",
+    "Refer to a higher-level facility if the patient shows signs of multi-organ failure or requires mechanical ventilation."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Repeat chest X-ray in six weeks for smokers or older patients to ensure complete resolution and exclude underlying malignancy.",
+    "Administer pneumococcal and annual influenza vaccines to high-risk groups to reduce the incidence of future infections.",
+    "Provide smoking cessation counseling as tobacco use impairs mucociliary clearance and increases susceptibility to lung infections.",
+    "Monitor for clinical improvement within 48 to 72 hours; failure to improve warrants a review of the diagnosis or microbial resistance."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Pulmonary edema: Features bilateral basal crackles, orthopnea, and cardiomegaly on X-ray rather than focal consolidation.",
+    "Pulmonary infarction: Presents with sudden pleuritic pain and hemoptysis; history often reveals risk factors for deep vein thrombosis.",
+    "Lung malignancy: Persistent consolidation that fails to resolve with antibiotics; may present with weight loss and clubbing."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Dehydrated patients may show a normal chest X-ray initially; consolidation often becomes apparent only after rehydration.",
+    "Neutropenic patients may lack characteristic purulent sputum or significant X-ray changes due to a diminished inflammatory response.",
+    "Early viral pneumonia may present with a normal white cell count and no visible infiltrates on an initial radiograph."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Respiratory rate greater than 30 breaths per minute",
+  "New onset confusion or altered mental status",
+  "Oxygen saturation below 92% on room air",
+  "Systolic blood pressure below 90 mmHg",
+  "Cyanosis or inability to complete sentences"
+ ],
+ "faq": [
+  {
+   "q": "What defines 'typical' vs 'atypical' pneumonia?",
+   "a": "Typical pneumonia presents with sudden onset, high fever, and lobar consolidation. Atypical pneumonia features subacute onset, dry cough, and interstitial patterns on imaging."
+  },
+  {
+   "q": "When is a chest X-ray repeated after treatment?",
+   "a": "Repeat imaging is usually done after 6 weeks to ensure resolution and screen for underlying malignancy, especially in smokers or patients over 50."
+  },
+  {
+   "q": "What is the significance of the CURB-65 score?",
+   "a": "It is a clinical prediction rule that estimates mortality risk to help clinicians decide between outpatient, inpatient, or intensive care management."
+  }
+ ],
+ "exam": [
+  "What are the most common causative organisms in Community-Acquired vs. Hospital-Acquired Pneumonia?",
+  "Interpret a chest X-ray showing air bronchograms and silhouette signs.",
+  "Discuss the pathophysiological stages of lobar pneumonia: congestion, red hepatization, gray hepatization, and resolution."
+ ],
+ "related": [
+  "Pulmonary Tuberculosis",
+  "Pleural Effusion",
+  "Lung Abscess",
+  "Bronchiectasis",
+  "Heart Failure",
+  "Pulmonary Embolism"
+ ],
+ "subject": "Microbiology & immunology",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

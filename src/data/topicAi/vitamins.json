@@ -1,0 +1,68 @@
+{
+ "medical": true,
+ "summary": "Vitamins are essential organic micronutrients required in small quantities for normal metabolism, growth, and physical well-being. They act primarily as coenzymes or precursors to signaling molecules, categorized by their solubility into fat-soluble and water-soluble groups.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Fat-Soluble Vitamins (A, D, E, K)",
+   "p": "These vitamins are absorbed alongside dietary fats and stored in the liver and adipose tissue. * **Vitamin A (Retinol):** Essential for vision (rhodopsin), epithelial integrity, and immune function. Deficiency causes xerophthalmia and night blindness. * **Vitamin D (Calciferol):** Regulates calcium and phosphate homeostasis. Deficiency leads to rickets in children and osteomalacia in adults. * **Vitamin E (Tocopherol):** Functions as a potent antioxidant, protecting cell membranes from lipid peroxidation. * **Vitamin K:** A necessary cofactor for the gamma-carboxylation of clotting factors II, VII, IX, and X. Deficiency results in impaired coagulation."
+  },
+  {
+   "h": "Water-Soluble Vitamins (B-complex and C)",
+   "p": "These vitamins are not stored extensively in the body (except B12) and require regular intake. * **B-Complex:** Includes Thiamine (B1), Riboflavin (B2), Niacin (B3), Pantothenic acid (B5), Pyridoxine (B6), Biotin (B7), Folate (B9), and Cobalamin (B12). They serve as cofactors in energy metabolism (TCA cycle) and DNA synthesis. * **Vitamin C (Ascorbic Acid):** Critical for collagen synthesis (hydroxylation of proline and lysine) and antioxidant defense. Deficiency causes scurvy, characterized by capillary fragility and poor wound healing."
+  },
+  {
+   "h": "Clinical Significance",
+   "p": "Vitamin deficiencies often present with specific clinical syndromes, such as megaloblastic anemia (B9/B12 deficiency), beriberi (B1 deficiency), or pellagra (B3 deficiency). Conversely, fat-soluble vitamins can accumulate to toxic levels (hypervitaminosis), particularly Vitamin A and D, leading to systemic complications."
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Vitamin B12 deficiency vs. Folate deficiency: Both cause megaloblastic anemia, but only B12 deficiency presents with subacute combined degeneration of the spinal cord.",
+    "Rickets vs. Osteomalacia: Both involve defective bone mineralization; rickets occurs in children at the growth plates, while osteomalacia occurs in adults.",
+    "Pellagra vs. Photosensitive Dermatitis: Pellagra (B3 deficiency) features the 'DDD' triad (Dermatitis, Diarrhea, Dementia) and a characteristic Casal necklace rash."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Serum B12 levels: May appear falsely normal in patients with myeloproliferative disorders or liver disease; check methylmalonic acid levels for confirmation.",
+    "Folate levels: Recent intake can normalize serum folate despite tissue deficiency; red cell folate is a more accurate reflection of long-term stores.",
+    "Vitamin D testing: 25-hydroxyvitamin D is the correct marker for nutritional status, whereas 1,25-dihydroxyvitamin D can be misleadingly elevated in secondary hyperparathyroidism."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the primary difference between fat-soluble and water-soluble vitamins?",
+   "a": "Fat-soluble vitamins (A, D, E, K) are stored in the liver and adipose tissue, posing a higher risk of toxicity if consumed in excess."
+  },
+  {
+   "q": "Which vitamin deficiency is associated with megaloblastic anemia?",
+   "a": "Deficiencies in Vitamin B12 (cobalamin) or Vitamin B9 (folate) impair DNA synthesis, leading to the production of large, immature red blood cells."
+  },
+  {
+   "q": "Why is Vitamin K administered to newborns?",
+   "a": "Neonates have sterile guts and poor placental transfer of Vitamin K, necessitating supplementation to prevent Vitamin K deficiency bleeding (hemorrhagic disease of the newborn)."
+  }
+ ],
+ "exam": [
+  "Describe the biochemical role of Vitamin C in collagen synthesis and the clinical manifestations of scurvy.",
+  "Explain the activation pathway of Vitamin D from skin synthesis to its functional form in the kidneys.",
+  "Compare the clinical presentations of dry beriberi versus wet beriberi in Thiamine (B1) deficiency."
+ ],
+ "related": [
+  "Trace Elements and Minerals",
+  "Metabolic Biochemistry",
+  "Malabsorption Syndromes",
+  "Iron Metabolism",
+  "Coagulation Cascade",
+  "Hypervitaminosis"
+ ],
+ "subject": "Biochemistry & genetics",
+ "kind": "physiology",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

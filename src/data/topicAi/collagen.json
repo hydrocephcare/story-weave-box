@@ -1,0 +1,86 @@
+{
+ "medical": true,
+ "summary": "Collagen is the most abundant protein in the human body, serving as the primary structural component of the extracellular matrix (ECM) in connective tissues such as skin, bone, cartilage, and blood vessels.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Collagen is the most abundant protein in the human body, serving as the primary structural component of the extracellular matrix (ECM) in connective tissues such as skin, bone, cartilage, and blood vessels."
+  },
+  {
+   "h": "Structure and Synthesis",
+   "b": [
+    "Amino Acid Composition: Characterized by a repeating sequence of (Gly-X-Y), where X is often proline and Y is hydroxyproline or hydroxylysine.",
+    "Triple Helix: Three polypeptide alpha-chains wind around each other to form a stable rope-like structure.",
+    "Post-translational Modification:",
+    "Hydroxylation: Requires Vitamin C (Ascorbate) and iron. Deficiency leads to scurvy.",
+    "Glycosylation: Addition of glucose/galactose to hydroxylysine residues.",
+    "Cross-linking: Lysyl oxidase (copper-dependent) creates covalent bonds between collagen fibrils to provide tensile strength."
+   ]
+  },
+  {
+   "h": "Major Types and Distribution",
+   "b": [
+    "Type I: Bone, skin, tendons, and late wound healing (scar). Most common.",
+    "Type II: Cartilage and vitreous body.",
+    "Type III (Reticulin): Blood vessels, fetal skin, and early wound healing.",
+    "Type IV: Basement membrane (lamina densa)."
+   ]
+  },
+  {
+   "h": "Clinical Correlates",
+   "b": [
+    "Osteogenesis Imperfecta: Genetic defect (usually Type I) leading to brittle bones, blue sclerae, and hearing loss.",
+    "Ehlers-Danlos Syndrome: Group of disorders affecting collagen synthesis (e.g., Type III or V), resulting in hypermobile joints and hyperextensible skin.",
+    "Alport Syndrome: Defect in Type IV collagen affecting the basement membrane of the kidney (glomerulonephritis), ears, and eyes."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Elastin: Unlike collagen, elastin lacks a triple helix, contains desmosine cross-links, and provides recoil rather than tensile strength.",
+    "Reticulin: Once thought distinct, these are actually Type III collagen fibers that form delicate branched networks in lymphoid organs."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal collagen levels in Scurvy: The total amount of collagen may appear normal initially, but the lack of hydroxylation makes the fibers functionally defective.",
+    "Biopsy limitations: A skin biopsy might show normal collagen architecture in early stages of certain systemic connective tissue diseases."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the basic structural unit of collagen?",
+   "a": "The tropocollagen molecule, consisting of a triple helix of three polypeptide alpha chains stabilized by hydrogen bonding."
+  },
+  {
+   "q": "Why is Vitamin C essential for collagen synthesis?",
+   "a": "It acts as a cofactor for prolyl and lysyl hydroxylase enzymes, which hydroxylate amino acids to allow stable cross-linking."
+  },
+  {
+   "q": "Which amino acid is most abundant in collagen?",
+   "a": "Glycine occurs at every third position (Gly-X-Y) because its small size allows it to fit in the tight central core of the helix."
+  }
+ ],
+ "exam": [
+  "Describe the intracellular and extracellular steps of collagen biosynthesis.",
+  "Compare the clinical presentations of Osteogenesis Imperfecta and Ehlers-Danlos Syndrome.",
+  "Explain the biochemical basis of Scurvy in relation to collagen stability."
+ ],
+ "related": [
+  "Elastin",
+  "Glycosaminoglycans",
+  "Osteogenesis Imperfecta",
+  "Ehlers-Danlos Syndrome",
+  "Scurvy",
+  "Connective Tissue Disorders"
+ ],
+ "subject": "Biochemistry & genetics",
+ "kind": "physiology",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,119 @@
+{
+ "medical": true,
+ "summary": "A granuloma is a focal collection of inflammatory cells, predominantly activated macrophages (epithelioid cells), forming a distinct microscopic aggregate. It represents a form of chronic inflammation initiated to contain an offending agent that is difficult to eradicate.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition",
+   "p": "A granuloma is a focal collection of inflammatory cells, predominantly activated macrophages (epithelioid cells), forming a distinct microscopic aggregate. It represents a form of chronic inflammation initiated to contain an offending agent that is difficult to eradicate."
+  },
+  {
+   "h": "Cellular Composition",
+   "b": [
+    "Epithelioid Histiocytes: Activated macrophages with abundant pink cytoplasm and indistinct cell borders, resembling epithelial cells.",
+    "Multinucleated Giant Cells: Formed by the fusion of macrophages (e.g., Langhans giant cells in TB, with peripheral nuclei, or Foreign Body giant cells with central disorganized nuclei).",
+    "Lymphocytes: Usually form a 'cuff' around the periphery.",
+    "Fibroblasts: May produce a peripheral rim of collagen (fibrosis) in older lesions."
+   ]
+  },
+  {
+   "h": "Classification by Morphology",
+   "b": [
+    "Caseating Granulomas: Characterized by central 'cheese-like' necrosis (e.g., *Mycobacterium tuberculosis*).",
+    "Non-caseating Granulomas: Lack central necrosis (e.g., Sarcoidosis, Crohn’s disease, beryllium exposure)."
+   ]
+  },
+  {
+   "h": "Clinical Relevance and Etiology",
+   "b": [
+    "Infections: Tuberculosis (classic acid-fast bacilli), Leprosy, Schistosomiasis, and deep fungal infections (Histoplasmosis).",
+    "Immune-Mediated: Sarcoidosis, Crohn’s disease.",
+    "Foreign Bodies: Sutures, silica, or talc.",
+    "Diagnostic Significance: The presence of granulomas narrows the differential diagnosis significantly, often requiring special stains (e.g., Ziehl-Neelsen) or cultures to identify the causative pathogen."
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Caseous necrosis leading to tissue destruction and cavity formation in the lungs.",
+    "Compression of vital structures, such as the airway or spinal cord, by enlarging masses.",
+    "Systemic spread of infection (miliary spread) if the immune system fails to contain the pathogen.",
+    "Organ dysfunction, such as liver or kidney failure, due to extensive replacement of healthy tissue by granulomas."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on identifying the underlying inflammatory or infectious trigger to stop new granuloma formation while managing existing tissue damage and systemic inflammation.",
+   "b": [
+    "Antibiotics or antifungals are used to eliminate infectious triggers like Mycobacterium tuberculosis or Histoplasma.",
+    "Corticosteroids are prescribed to reduce non-infectious inflammation in conditions like sarcoidosis by inhibiting macrophage activation.",
+    "Immunosuppressants such as methotrexate may be used if steroids are ineffective or cause severe side effects.",
+    "Surgical excision is reserved for localized granulomas causing mechanical obstruction or when malignancy cannot be ruled out.",
+    "Refer to a specialist if there is vision loss, cardiac involvement, or progressive respiratory failure."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Serial imaging, such as chest X-rays, to monitor the size and stability of granulomatous lesions.",
+    "Screening of close contacts if the cause is identified as a contagious infection like tuberculosis.",
+    "Regular blood tests to monitor organ function and side effects of long-term immunosuppressant therapy.",
+    "Environmental modification to avoid exposure to known triggers like silica dust, bird droppings, or mold."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Granulation tissue: Consists of new capillaries and fibroblasts for wound healing, whereas granulomas are specific chronic inflammatory aggregates.",
+    "Abscesses: Characterized by acute neutrophilic infiltration and liquefactive necrosis rather than organized macrophage clusters.",
+    "Tumor metastases: Can mimic the nodular appearance of granulomas on imaging; biopsy is required to distinguish malignant cells from inflammatory cells."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Sputum smears: May be negative in pulmonary tuberculosis despite granuloma presence if the bacterial load is low or the lesion is closed.",
+    "ACE levels: Often elevated in sarcoidosis but lack specificity as they can rise in other granulomatous diseases like leprosy.",
+    "Chest X-ray: Hilar lymphadenopathy can appear identical in sarcoidosis, lymphoma, or fungal infections, requiring histological confirmation."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent unexplained cough or coughing up blood.",
+  "Unintentional significant weight loss and drenching night sweats.",
+  "Rapidly enlarging, painless firm lumps in the neck or axilla.",
+  "Shortness of breath that worsens over a short period."
+ ],
+ "faq": [
+  {
+   "q": "What defines a granuloma histologically?",
+   "a": "A collection of epithelioid macrophages surrounded by a rim of lymphocytes and occasionally multinucleated giant cells, representing a type IV hypersensitivity response."
+  },
+  {
+   "q": "What is the difference between caseating and non-caseating granulomas?",
+   "a": "Caseating granulomas have a central zone of 'cheese-like' necrosis typical of tuberculosis, while non-caseating granulomas lack central necrosis, common in sarcoidosis."
+  },
+  {
+   "q": "What role do Langhans giant cells play?",
+   "a": "They are formed by the fusion of epithelioid macrophages with nuclei arranged in a horseshoe pattern at the periphery, characteristic of granulomatous inflammation."
+  }
+ ],
+ "exam": [
+  "Describe the role of IFN-gamma and TNF-alpha in granuloma formation and maintenance.",
+  "List four infectious and two non-infectious causes of granulomatous inflammation.",
+  "Differentiate between foreign body granulomas and immune granulomas based on their pathogenesis."
+ ],
+ "related": [
+  "Tuberculosis",
+  "Sarcoidosis",
+  "Leprosy",
+  "Schistosomiasis",
+  "Chronic Granulomatous Disease",
+  "Type IV Hypersensitivity"
+ ],
+ "subject": "Pathology",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

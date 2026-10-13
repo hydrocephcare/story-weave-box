@@ -156,7 +156,7 @@ async function askServer(slug: string, name: string, category: string, context: 
   if (r.status === "published") { if (!r.saved) writeLocal(slug, r.page); addToTopicIndex({ s: slug, n: name, c: category || (r.page as { subject?: string }).subject }); return { status: "published", page: r.page }; }
   if (r.status === "rejected") { markRejected(slug); return { status: "rejected" }; }
   if (r.status === "busy" || r.status === "limit") return { status: "busy" };
-  return { status: r.status === "bot" ? "unavailable" : "failed" };
+  return { status: r.status === "bot" || r.status === "paused" ? "unavailable" : "failed" };
 }
 
 /**
@@ -174,6 +174,14 @@ export async function ensureTopicPage(rawName: string): Promise<void> {
     if (await loadStoredPage(slug)) return;
     await askServer(slug, name, "", "");
   } catch { /* background work must never show an error */ }
+}
+
+/** For the quick-read panel: the full write-up for a topic, from storage or written now. Null when it cannot be had. */
+export async function pageForPeek(slug: string, name: string, category: string): Promise<AiPage | null> {
+  const stored = await loadStoredPage(slug);
+  if (stored) return stored;
+  const r = await askServer(slug, name, category, "");
+  return r.status === "published" ? r.page : null;
 }
 
 const TRIED = "ompath_topic_tried";

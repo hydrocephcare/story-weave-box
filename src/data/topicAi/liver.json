@@ -1,0 +1,86 @@
+{
+ "medical": true,
+ "summary": "The liver is the largest visceral organ and largest gland in the human body, located primarily in the right hypochondrium and epigastrium, extending into the left hypochondrium. It is intraperitoneal, covered by Glisson's capsule, and performs vital metabolic, exocrine, and hematological functions.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The liver is the largest visceral organ and largest gland in the human body, located primarily in the right hypochondrium and epigastrium, extending into the left hypochondrium. It is intraperitoneal, covered by Glisson's capsule, and performs vital metabolic, exocrine, and hematological functions."
+  },
+  {
+   "h": "Gross Anatomy",
+   "b": [
+    "Surfaces: Diaphragmatic (smooth, convex) and Visceral (irregular, molded by adjacent organs).",
+    "Lobes: Anatomically divided by the falciform ligament into Right and Left lobes. The visceral surface also features the Caudate (superior) and Quadrate (inferior) lobes.",
+    "Ligaments: Falciform, coronary, right and left triangular ligaments, and the ligamentum teres (remnant of the umbilical vein).",
+    "Porta Hepatis: The transverse fissure where the portal vein, hepatic artery proper, and hepatic ducts enter/exit."
+   ]
+  },
+  {
+   "h": "Segmental Anatomy",
+   "p": "Based on the Couinaud classification, the liver is divided into eight functionally independent segments. Each segment has its own dual vascular inflow, biliary drainage, and lymphatic drainage, which allows for surgical resection (hepatectomy) without compromising remaining segments."
+  },
+  {
+   "h": "Blood Supply and Drainage",
+   "b": [
+    "Dual Inflow: 75-80% from the Portal Vein (nutrient-rich, deoxygenated); 20-25% from the Hepatic Artery (oxygenated).",
+    "Venous Drainage: Three major hepatic veins (Right, Middle, Left) drain directly into the Inferior Vena Cava (IVC)."
+   ]
+  },
+  {
+   "h": "Clinical Relevance",
+   "b": [
+    "Cirrhosis: Fibrosis of liver tissue leads to portal hypertension and portosystemic shunts (e.g., esophageal varices).",
+    "Hepatomegaly: Enlargement due to heart failure, malignancy, or infection, palpable below the right costal margin.",
+    "Jaundice: Blockage of the biliary tree or hepatic dysfunction resulting in hyperbilirubinemia."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Falciform ligament vs. Ligamentum teres: The falciform attaches the liver to the anterior wall; the ligamentum teres is the fibrous remnant of the umbilical vein.",
+    "Hepatic veins vs. Portal veins: Hepatic veins drain directly into the IVC; portal veins bring nutrient-rich blood from the GI tract to the liver parenchyma."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal ALT/AST in Cirrhosis: In end-stage liver disease, enzyme levels may appear normal because there are few healthy hepatocytes left to leak enzymes.",
+    "Albumin levels: Low albumin may reflect chronic liver failure but can also be caused by malnutrition, nephrotic syndrome, or systemic inflammation."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What defines the functional segments of the liver?",
+   "a": "The Couinaud classification divides the liver into eight segments based on independent portal venous, hepatic arterial, and biliary drainage."
+  },
+  {
+   "q": "Which ligament contains the portal triad?",
+   "a": "The hepatoduodenal ligament, which is the thickened free edge of the lesser omentum, contains the portal vein, hepatic artery, and common bile duct."
+  },
+  {
+   "q": "What is the difference between the anatomical and physiological lobes?",
+   "a": "Anatomical lobes are divided by the falciform ligament; physiological lobes are divided by Cantlie’s line, based on internal blood supply and biliary drainage."
+  }
+ ],
+ "exam": [
+  "Describe the boundaries and clinical significance of the epiploic foramen (Foramen of Winslow).",
+  "Trace the venous drainage of the liver and explain the significance of the porto-systemic anastomoses.",
+  "Explain the relations of the visceral surface of the liver, including the gallbladder fossa and grooves for major vessels."
+ ],
+ "related": [
+  "Biliary Tree",
+  "Portal Hypertension",
+  "Pancreas Anatomy",
+  "Spleen",
+  "Hepatic Portal Vein",
+  "Lesser Omentum"
+ ],
+ "subject": "Anatomy",
+ "kind": "anatomy",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

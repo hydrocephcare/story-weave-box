@@ -1,0 +1,120 @@
+{
+ "medical": true,
+ "summary": "Infarction is an area of ischemic necrosis caused by occlusion of either the arterial supply or the venous drainage. Most infarcts result from thrombotic or embolic arterial occlusions.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition",
+   "p": "Infarction is an area of ischemic necrosis caused by occlusion of either the arterial supply or the venous drainage. Most infarcts result from thrombotic or embolic arterial occlusions."
+  },
+  {
+   "h": "Types of Infarcts",
+   "p": "Infarcts are classified based on their color (reflecting the amount of hemorrhage) and the presence or absence of microbial infection:",
+   "b": [
+    "Red (Hemorrhagic) Infarcts: Occur in venous occlusions, loose tissues (e.g., lungs), tissues with dual circulations (e.g., small intestine/liver), or when flow is re-established to a previously necrotic area.",
+    "White (Anemic) Infarcts: Occur in arterial occlusions in solid organs with end-arterial circulation (e.g., heart, spleen, kidney), where tissue density limits the seepage of blood.",
+    "Septic Infarcts: Occur when bacterial vegetations embolize or when necrotic tissue becomes secondary infected."
+   ]
+  },
+  {
+   "h": "Morphology",
+   "b": [
+    "Shape: Most infarcts are wedge-shaped, with the occluded vessel at the apex and the organ periphery at the base.",
+    "Histology: The dominant histologic characteristic is ischemic coagulative necrosis. An exception is the brain, which undergoes liquefactive necrosis."
+   ]
+  },
+  {
+   "h": "Factors Influencing Development",
+   "b": [
+    "Nature of Vascular Supply: Availability of collateral circulation (e.g., dual supply in lungs vs. end-artery in kidneys).",
+    "Rate of Occlusion: Slow-developing occlusions allow time for collateral pathway development.",
+    "Tissue Vulnerability to Hypoxia: Neurons undergo irreversible damage in 3–4 minutes; myocardial cells in 20–30 minutes.",
+    "Oxygen Content of Blood: Anemia or cyanosis increases the risk and severity."
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Cardiogenic shock or hypotension indicating extensive myocardial tissue death and pump failure.",
+    "Sudden neurological deficits such as hemiparesis or aphasia suggesting cerebral tissue infarction.",
+    "Acute severe abdominal pain with guarding, which may indicate life-threatening mesenteric ischemia or bowel infarction.",
+    "Signs of gangrene in extremities, such as skin discoloration and loss of sensation, requiring urgent intervention."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The primary goal is to restore blood flow to the ischemic tissue as quickly as possible to limit the size of the infarct and preserve function.",
+   "b": [
+    "Reestablish perfusion immediately using mechanical interventions like angioplasty or surgical bypass to remove the obstruction.",
+    "Administer antiplatelet agents, such as aspirin, to prevent further thrombus growth and stabilize the existing blockage.",
+    "Use anticoagulants like heparin to inhibit the clotting cascade and reduce the risk of new emboli forming.",
+    "Prescribe thrombolytic agents if mechanical intervention is unavailable to chemically dissolve the causative blood clot.",
+    "Provide supplemental oxygen and intravenous fluids to optimize tissue oxygenation and maintain systemic blood pressure.",
+    "Refer to a specialist unit, such as cardiology or neurosurgery, when specialized imaging or surgical revascularization is required."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Monitor organ function through serial imaging and biomarkers to assess the extent of permanent tissue scarring.",
+    "Implement long-term statin therapy to stabilize atherosclerotic plaques and prevent future ischemic events.",
+    "Control systemic risk factors like hypertension and diabetes through regular screening and lifestyle modifications.",
+    "Use long-term low-dose antiplatelet therapy for secondary prevention of recurrent arterial occlusion."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Post-mortem autolysis: Unlike infarction, autolysis lacks an inflammatory border and occurs uniformly throughout the tissue.",
+    "Ischemia: Ischemia is the process of reduced blood flow; infarction is the resulting irreversible tissue death (necrosis).",
+    "Hemorrhage: Simple hemorrhage lacks the structured wedge shape and secondary necrotic changes characteristic of a true hemorrhagic infarct."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Early ECG in MI: A normal ECG within the first few hours does not rule out acute myocardial infarction.",
+    "Early CT Brain: Ischemic strokes may not show density changes on a CT scan for the first 6 to 24 hours.",
+    "Serum Troponins: Levels may remain normal in the very early stages of infarction before significant cell death occurs."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden, crushing chest pain radiating to the left arm or jaw.",
+  "Acute onset of focal neurological deficits like facial drooping or limb weakness.",
+  "Sudden, severe abdominal pain associated with vomiting or bloody stools.",
+  "Cool, pale, or pulseless limb with intense pain."
+ ],
+ "faq": [
+  {
+   "q": "What is the primary difference between a red and white infarct?",
+   "a": "Red infarcts occur in venous occlusion or loose tissues with dual blood supply; white infarcts occur in solid organs with end-arterial circulation."
+  },
+  {
+   "q": "What is the most common histological pattern of necrosis in infarction?",
+   "a": "Coagulative necrosis is the hallmark for most organs, except the brain, which undergoes liquefactive necrosis."
+  },
+  {
+   "q": "How does the age of an infarct change its gross appearance?",
+   "a": "Acute infarcts are poorly defined and hemorrhagic; older infarcts become well-demarcated, pale, and eventually replaced by firm, grey-white scar tissue."
+  }
+ ],
+ "exam": [
+  "Describe the morphological evolution of a myocardial infarct from 24 hours to 8 weeks.",
+  "Compare and contrast the mechanisms leading to hemorrhagic versus septic infarction.",
+  "List four factors that influence the severity and development of an infarct."
+ ],
+ "related": [
+  "Ischemia",
+  "Coagulative necrosis",
+  "Thrombosis",
+  "Embolism",
+  "Liquefactive necrosis",
+  "Shock"
+ ],
+ "subject": "Pathology",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

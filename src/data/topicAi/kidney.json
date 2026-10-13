@@ -1,0 +1,75 @@
+{
+ "medical": true,
+ "summary": "The kidneys are paired, bean-shaped retroperitoneal organs located in the posterior abdominal wall, typically extending from the level of the T12 to L3 vertebrae. The right kidney is usually slightly lower than the left due to the presence of the liver.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Anatomical Location",
+   "p": "The kidneys are paired, bean-shaped retroperitoneal organs located in the posterior abdominal wall, typically extending from the level of the T12 to L3 vertebrae. The right kidney is usually slightly lower than the left due to the presence of the liver."
+  },
+  {
+   "h": "Gross Structure",
+   "b": [
+    "Renal Capsule: The fibrous outer layer protecting the organ.",
+    "Cortex: The outer functional layer containing the majority of the nephrons.",
+    "Medulla: The inner layer organized into renal pyramids, where urine concentration occurs via the loops of Henle.",
+    "Renal Pelvis: A funnel-shaped structure that collects urine from the major calyces and narrows into the ureter."
+   ]
+  },
+  {
+   "h": "Vasculature",
+   "p": "The kidneys receive approximately 20-25% of the cardiac output. The renal arteries arise directly from the abdominal aorta. The renal veins drain into the inferior vena cava; notably, the left renal vein is longer and passes between the aorta and the superior mesenteric artery."
+  },
+  {
+   "h": "Clinical Significance",
+   "p": "Knowledge of renal anatomy is essential for understanding pathology such as nephrolithiasis (stones), which often lodge at anatomical constrictions (e.g., the ureteropelvic junction). Furthermore, because lithium and other drugs are excreted primarily via the kidneys, structural or functional impairment (Chronic Kidney Disease) leads to toxicity. In systemic diseases like heart or liver failure, altered pressure gradients across these vascular beds can result in transudative effusions."
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Adrenal glands: Superior to kidneys but separated by a thin septum within the renal fascia.",
+    "Renal pelvis vs. Ureter: Pelvis is the dilated proximal portion; the ureter begins at the narrowing of the ureteropelvic junction."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Accessory renal arteries: Common anatomical variations that can be missed on imaging and complicate surgical procedures.",
+    "Floating kidney (Nephroptosis): Abnormal mobility where the kidney descends when standing, potentially mimicking an abdominal mass."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the vertebral level of the kidneys?",
+   "a": "The kidneys typically extend from the T12 to L3 vertebrae, with the right kidney sitting slightly lower due to the liver."
+  },
+  {
+   "q": "Which structures are found in the renal hilum?",
+   "a": "From anterior to posterior, the hilum contains the renal vein, renal artery, and the renal pelvis/ureter."
+  },
+  {
+   "q": "What are the layers of protective tissue surrounding the kidney?",
+   "a": "From deep to superficial: fibrous capsule, perirenal fat, renal fascia (Gerota's fascia), and pararenal fat."
+  }
+ ],
+ "exam": [
+  "Describe the posterior relations of the kidneys, including muscles and nerves.",
+  "Explain the segments of the kidney based on arterial supply.",
+  "Outline the lymphatic drainage of the kidneys and their associated nodes."
+ ],
+ "related": [
+  "Ureter Anatomy",
+  "Adrenal Glands",
+  "Renal Circulation",
+  "Nephron Histology",
+  "Retroperitoneal Space",
+  "Urinary Bladder"
+ ],
+ "subject": "Anatomy",
+ "kind": "anatomy",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

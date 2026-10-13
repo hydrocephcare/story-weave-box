@@ -1,0 +1,84 @@
+{
+ "medical": true,
+ "summary": "The skin (integument) is the largest organ of the body, functioning as a protective barrier, thermoregulator, and sensory organ. It consists of two primary layers: the epidermis and the dermis, resting upon the subcutaneous tissue (hypodermis).",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The skin (integument) is the largest organ of the body, functioning as a protective barrier, thermoregulator, and sensory organ. It consists of two primary layers: the epidermis and the dermis, resting upon the subcutaneous tissue (hypodermis)."
+  },
+  {
+   "h": "Layers of the Skin",
+   "b": [
+    "Epidermis: A non-vascularized stratified squamous epithelium. It consists of five layers (strata) in thick skin: corneum, lucidum, granulosum, spinosum, and basale. Key cells include keratinocytes, melanocytes (pigment), Langerhans cells (immune), and Merkel cells (touch).",
+    "Dermis: A vascularized connective tissue layer providing structural support. It is divided into the superficial papillary dermis (loose connective tissue) and the deep reticular dermis (dense irregular connective tissue containing collagen and elastin).",
+    "Hypodermis: Composed of adipose and loose connective tissue; it anchors the skin to underlying fascia."
+   ]
+  },
+  {
+   "h": "Skin Appendages",
+   "b": [
+    "Hair Follicles: Associated with sebaceous glands and arrector pili muscles.",
+    "Glands: Includes sebaceous glands (holocrine secretion of sebum) and sweat glands (eccrine for cooling; apocrine in axillary/anogenital regions).",
+    "Nails: Keratinized plates on the dorsal distal phalanges."
+   ]
+  },
+  {
+   "h": "Clinical Relevance",
+   "b": [
+    "Burns: Classified by depth (superficial to full-thickness), affecting fluid balance and infection risk.",
+    "Dermatomes: Areas of skin supplied by a single spinal nerve; essential for neurological localization.",
+    "Wound Healing: Involves hemostasis, inflammation, proliferation, and remodeling layers."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Stratum lucidum vs Stratum corneum: Lucidum is a thin, clear layer found only in thick skin, whereas corneum is the superficial cornified layer.",
+    "Dermal papillae vs Rete ridges: Papillae are upward projections of the dermis, while rete ridges are downward extensions of the epidermis.",
+    "Apocrine vs Eccrine glands: Eccrine glands are for thermoregulation body-wide; apocrine glands are larger, limited to specific areas, and open into hair follicles."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Turgor tests in the elderly: Decreased skin elasticity due to aging can mimic dehydration signs even when the patient is euvolemic.",
+    "Cyanosis in dark skin: Central cyanosis may be difficult to detect on the skin surface; clinicians must check mucous membranes and nail beds.",
+    "Erythema in shock: In dark-skinned patients, inflammation or redness may appear as a subtle darkening or purplish hue rather than bright red."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the difference between thick and thin skin?",
+   "a": "Thick skin has a prominent stratum lucidum and lacks hair follicles or sebaceous glands, while thin skin covers most of the body and contains appendages."
+  },
+  {
+   "q": "Which cell layer is responsible for constant regeneration?",
+   "a": "The stratum basale contains stem cells that undergo mitosis to replace keratinocytes lost at the surface."
+  },
+  {
+   "q": "What provides the primary structural strength of the skin?",
+   "a": "The dermis, specifically the reticular layer, provides tensile strength due to its dense irregular connective tissue and collagen fibers."
+  }
+ ],
+ "exam": [
+  "Describe the five histological layers of the epidermis in thick skin.",
+  "Explain the embryological origins of the epidermis versus the dermis.",
+  "Outline the function and location of Langerhans cells and Melanocytes."
+ ],
+ "related": [
+  "Fascia and Compartments",
+  "Burn Classification",
+  "Dermatomes",
+  "Wound Healing Phases",
+  "Cutaneous Innervation",
+  "Appendages of the Skin"
+ ],
+ "subject": "Anatomy",
+ "kind": "anatomy",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

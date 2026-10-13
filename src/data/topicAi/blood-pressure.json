@@ -1,0 +1,76 @@
+{
+ "medical": true,
+ "summary": "Blood pressure (BP) is the lateral pressure exerted by columns of blood against the arterial walls. It is determined by the product of Cardiac Output (CO) and Total Peripheral Resistance (TPR).",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and Components",
+   "p": "Blood pressure (BP) is the lateral pressure exerted by columns of blood against the arterial walls. It is determined by the product of Cardiac Output (CO) and Total Peripheral Resistance (TPR). Systolic BP represents the peak pressure during ventricular contraction, while Diastolic BP represents the minimum pressure during ventricular relaxation."
+  },
+  {
+   "h": "Short-term Regulation",
+   "p": "Short-term regulation is mediated by the baroreceptor reflex. High-pressure baroreceptors in the carotid sinus and aortic arch detect stretch. Increased stretch triggers increased parasympathetic outflow (via the vagus nerve) and decreased sympathetic outflow to the heart and vessels, lowering heart rate and causing vasodilation to restore homeostatic levels."
+  },
+  {
+   "h": "Long-term Regulation",
+   "p": "The kidneys manage long-term BP through the Renin-Angiotensin-Aldosterone System (RAAS) and pressure natriuresis. Decreased renal perfusion triggers renin release, leading to the production of Angiotensin II (a potent vasoconstrictor) and Aldosterone (which increases sodium and water reabsorption), thereby increasing blood volume and pressure."
+  },
+  {
+   "h": "Clinical Relevance",
+   "p": "Physiological variations in BP occur due to age, posture, exercise, and sleep. Pathological elevations (Hypertension) increase the risk of cerebrovascular accidents, myocardial infarction, and chronic kidney disease. Conversely, Hypotension may lead to inadequate organ perfusion and shock."
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Cardiac Output: BP is the pressure exerted on vessel walls, whereas Cardiac Output is the volume of blood pumped per minute.",
+    "Blood Volume: Though related, BP depends on both the volume of fluid and the diameter/compliance of the vascular container."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "White Coat Hypertension: Anxiety in clinical settings causes falsely elevated readings compared to the patient's baseline home pressure.",
+    "Incorrect Cuff Size: Using a cuff that is too small yields falsely high readings; a cuff too large yields falsely low readings.",
+    "Auscultatory Gap: A silent interval during Korotkoff sound auscultation can lead to significant underestimation of systolic or overestimation of diastolic pressure."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Systolic pressure exceeding 180 mmHg or diastolic exceeding 120 mmHg (Hypertensive Urgency/Emergency).",
+  "Severe headache, blurred vision, or confusion associated with elevated readings.",
+  "Chest pain, shortness of breath, or sudden weakness/numbness.",
+  "Persistent dizziness or fainting episodes (Syncope) indicating severe hypotension."
+ ],
+ "faq": [
+  {
+   "q": "What is the physiological basis of the Mean Arterial Pressure (MAP)?",
+   "a": "MAP represents the average pressure pushing blood into tissues throughout the cardiac cycle, calculated as Diastolic BP + 1/3 Pulse Pressure."
+  },
+  {
+   "q": "How does the baroreceptor reflex respond to a sudden drop in blood pressure?",
+   "a": "Decreased stretch triggers reduced firing to the medulla, increasing sympathetic outflow to raise heart rate, contractility, and peripheral vascular resistance."
+  },
+  {
+   "q": "What role does the Renin-Angiotensin-Aldosterone System (RAAS) play in long-term regulation?",
+   "a": "RAAS increases blood volume and pressure via sodium retention, water reabsorption, and systemic vasoconstriction in response to low renal perfusion."
+  }
+ ],
+ "exam": [
+  "Define Pulse Pressure and describe the clinical conditions that cause it to widen or narrow.",
+  "Explain the short-term and long-term compensatory mechanisms for maintaining systemic arterial pressure.",
+  "Discuss the factors affecting Peripheral Vascular Resistance (PVR) according to Poiseuille’s Law."
+ ],
+ "related": [
+  "Cardiac Output",
+  "Peripheral Vascular Resistance",
+  "Baroreceptor Reflex",
+  "Starling's Law of the Heart",
+  "Renal Physiology",
+  "Autonomic Nervous System"
+ ],
+ "subject": "Physiology",
+ "kind": "physiology",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

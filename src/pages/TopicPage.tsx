@@ -3,6 +3,7 @@ import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Check, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
+import { aiPaused, looksLikeBot } from "@/lib/topicWriter";
 import { DOMAIN_STYLE, imageCaption, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
 import { useWebMedia } from "@/lib/webMedia";
 import { rebalanceMcqAnswerLetters } from "@/lib/store";
@@ -208,7 +209,7 @@ export default function TopicPage() {
         {(phase === "failed" || phase === "unavailable" || phase === "missing") && (
           <div className="text-center">
             <h1 className="font-serif text-2xl font-bold">We could not build the page on “{name}” just now</h1>
-            <p className="mt-2 text-sm text-muted-foreground">{phase === "unavailable" ? "Page writing is not switched on yet." : "This is usually temporary."} You can try again, or search the notes.</p>
+            <p className="mt-2 text-sm text-muted-foreground">{phase === "unavailable" ? "This page is not ready yet, please check back soon." : "This is usually temporary."} You can try again, or search the notes.</p>
             <button type="button" onClick={retry} className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground"><RefreshCw className="h-4 w-4" /> Try again</button>
           </div>
         )}
@@ -301,6 +302,13 @@ export default function TopicPage() {
 
           <div className="mt-8 space-y-4">
             {writing && <Writing name={name} />}
+            {!writing && !page && phase !== "rejected" && !aiPaused() && !looksLikeBot() && (
+              <div className="rounded-2xl border border-border bg-muted/40 p-6 text-center">
+                <p className="font-serif text-xl font-bold">This page is taking a moment</p>
+                <p className="mt-1 text-[15px] text-muted-foreground">Tap below to load the full write-up on {name}.</p>
+                <button type="button" onClick={retry} className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground"><RefreshCw className="h-4 w-4" aria-hidden /> Load it now</button>
+              </div>
+            )}
           </div>
 
           <div className="mt-6">
@@ -361,6 +369,16 @@ export default function TopicPage() {
             )}
 
             {!aiSections.length && <div className="mb-2"><Disclaimer disease={isDisease} /></div>}
+
+            {topic && !topic.sec.length && !aiSections.length && topic.snip.length > 0 && (
+              <Section id="notes-say" title="From the Ompath Study notes">
+                <ul className="space-y-3">
+                  {topic.snip.slice(0, 6).map((x) => (
+                    <li key={x.t} className="rounded-2xl border border-border bg-card p-4 text-[16px] leading-relaxed">{x.t}<Link to={x.u} className="mt-2 block text-sm font-bold text-primary hover:underline">Read this in {x.s} →</Link></li>
+                  ))}
+                </ul>
+              </Section>
+            )}
 
             {topic?.sec && topic.sec.length > 0 && (
               <Section id="notes-say" title="In the Ompath Study notes">

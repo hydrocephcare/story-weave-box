@@ -1,0 +1,91 @@
+{
+ "medical": true,
+ "summary": "The colon is the major part of the large intestine, extending from the cecum to the rectum. It is responsible for water and electrolyte absorption and the formation and propulsion of feces.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The colon is the major part of the large intestine, extending from the cecum to the rectum. It is responsible for water and electrolyte absorption and the formation and propulsion of feces."
+  },
+  {
+   "h": "Anatomical Divisions",
+   "b": [
+    "Ascending Colon: Retroperitoneal; extends superiorly from the cecum to the right colic (hepatic) flexure.",
+    "Transverse Colon: Intraperitoneal; suspended by the transverse mesocolon between the hepatic and splenic flexures.",
+    "Descending Colon: Retroperitoneal; extends inferiorly from the left colic (splenic) flexure to the pelvic brim.",
+    "Sigmoid Colon: Intraperitoneal; S-shaped segment suspended by the sigmoid mesocolon, terminating at the third sacral vertebra (S3)."
+   ]
+  },
+  {
+   "h": "Cardinal Features",
+   "p": "The colon is distinguished from the small intestine by:",
+   "b": [
+    "Teniae coli: Three longitudinal bands of smooth muscle.",
+    "Haustra: Sacculations produced by the shortening of teniae coli.",
+    "Omental (epiploic) appendices: Small, fat-filled pouches of peritoneum."
+   ]
+  },
+  {
+   "h": "Neurovascular Supply",
+   "b": [
+    "Midgut (up to distal 1/3 of transverse colon): Supplied by the Superior Mesenteric Artery (SMA); venous drainage to the SMV; parasympathetic supply via the Vagus nerve (CN X).",
+    "Hindgut (distal 1/3 of transverse colon to rectum): Supplied by the Inferior Mesenteric Artery (IMA); venous drainage to the IMV; parasympathetic supply via Pelvic Splanchnic nerves (S2-S4)."
+   ]
+  },
+  {
+   "h": "Clinical Relevance",
+   "b": [
+    "Volvulus: Twisting of the mobile segments (sigmoid or transverse) around their mesentery, leading to bowel obstruction.",
+    "Diverticulosis: Herniation of mucosa through muscular defects, most common in the sigmoid colon.",
+    "Colorectal Carcinoma: Primarily occurs in the sigmoid colon and rectum; lymphatic spread follows the arterial supply."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Small bowel: Identified by circular folds (plicae circulares) crossing the full width, whereas haustral clefts in the colon are incomplete.",
+    "Duodenum: The ascending colon is retroperitoneal like the distal duodenum, but lacks the characteristic C-shape and digestive enzyme inlets."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Abdominal X-rays: Dilated small bowel can mimic the colon if valvulae conniventes are sparse, requiring peripheral vs. central positioning for differentiation.",
+    "Referred pain: Early obstruction or inflammation in the midgut-derived colon presents as periumbilical pain rather than localized lower quadrant pain."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What are the three cardinal features that distinguish the colon from the small intestine?",
+   "a": "The colon is identified by the presence of teniae coli (longitudinal muscle bands), haustra (sacculations), and appendices epiploicae (fat-filled peritoneal pouches)."
+  },
+  {
+   "q": "Which parts of the colon are located intraperitoneally?",
+   "a": "The cecum, transverse colon, and sigmoid colon are intraperitoneal and mobile, whereas the ascending and descending colon are primarily retroperitoneal."
+  },
+  {
+   "q": "Where does the transition from midgut to hindgut blood supply occur?",
+   "a": "The transition occurs at the distal third of the transverse colon, where the superior mesenteric artery supply ends and the inferior mesenteric artery begins."
+  }
+ ],
+ "exam": [
+  "Describe the lymphatic drainage of the colon and its clinical significance in malignancy.",
+  "Explain the anatomical basis and locations of the 'watershed areas' prone to ischemia.",
+  "Detail the relations of the hepatic and splenic flexures to surrounding viscera."
+ ],
+ "related": [
+  "Inferior mesenteric artery",
+  "Marginal artery of Drummond",
+  "Sigmoid volvulus",
+  "Rectum",
+  "Ileocecal valve",
+  "Mesocolon"
+ ],
+ "subject": "Anatomy",
+ "kind": "anatomy",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

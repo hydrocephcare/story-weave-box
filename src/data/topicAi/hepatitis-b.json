@@ -1,0 +1,132 @@
+{
+ "medical": true,
+ "summary": "Hepatitis B virus (HBV) is a partially double-stranded DNA virus (Hepadnaviridae). It is a major cause of acute and chronic liver disease, including cirrhosis and hepatocellular carcinoma (HCC).",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Hepatitis B virus (HBV) is a partially double-stranded DNA virus (Hepadnaviridae). It is a major cause of acute and chronic liver disease, including cirrhosis and hepatocellular carcinoma (HCC)."
+  },
+  {
+   "h": "Transmission",
+   "b": [
+    "Parenteral: Contaminated needles or blood products.",
+    "Sexual: Unprotected intercourse.",
+    "Vertical: Perinatal transmission from mother to child (high risk of chronicity)."
+   ]
+  },
+  {
+   "h": "Serology and Diagnosis",
+   "p": "Diagnosis relies on specific antigens and antibodies:",
+   "b": [
+    "HBsAg (Surface Antigen): Indicates active infection (acute or chronic).",
+    "Anti-HBs: Indicates immunity (via vaccination or recovery).",
+    "Anti-HBc (Core Antibody): IgM indicates acute infection; IgG indicates past or chronic infection.",
+    "HBeAg (Envelope Antigen): Indicates high viral replication and infectivity.",
+    "HBV DNA: Quantitative measure of viral load."
+   ]
+  },
+  {
+   "h": "Clinical Course",
+   "b": [
+    "Acute Infection: Often asymptomatic in children; adults may present with jaundice, fever, and elevated transaminases.",
+    "Chronic Infection: Defined by HBsAg persistence >6 months. Risk of chronicity is inversely proportional to age at infection."
+   ]
+  },
+  {
+   "h": "Prevention",
+   "b": [
+    "Vaccination: Recombinant HBsAg vaccine (part of the KEPI pentavalent series).",
+    "Post-Exposure: Hepatitis B Immunoglobulin (HBIG) and vaccination.",
+    "Safe Practices: Screening blood donors and practicing safe sex."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment aims to suppress viral replication using nucleoside/nucleotide analogues or pegylated interferon. Monitoring for HCC with ultrasound and alpha-fetoprotein (AFP) is essential in chronic carriers."
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Fulminant hepatic failure presenting with hepatic encephalopathy, confusion, and coagulopathy indicated by a high INR.",
+    "Ascites, jaundice, and peripheral edema signifying progression to liver cirrhosis.",
+    "Right upper quadrant pain and weight loss suggesting development of hepatocellular carcinoma.",
+    "Gastrointestinal bleeding from esophageal varices due to portal hypertension."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The goal is to suppress viral replication, prevent progression to cirrhosis, and reduce the risk of liver cancer through long-term antiviral therapy and supportive measures.",
+   "b": [
+    "Nucleoside or nucleotide analogues like Tenofovir or Entecavir are used to inhibit viral DNA polymerase, chosen for their high potency and low resistance rates.",
+    "Pegylated Interferon-alpha may be considered in specific patients to induce an immune response, though it is avoided in decompensated cirrhosis due to side effects.",
+    "Provide supportive care including high-calorie nutrition, avoidance of hepatotoxic substances like alcohol, and management of fluid overload.",
+    "Refer to a gastroenterologist or hepatologist if there are signs of liver failure, cirrhosis, or if the patient requires specialized antiviral initiation."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Monitor liver function tests and viral load regularly to assess treatment response and disease activity.",
+    "Screen for hepatocellular carcinoma using abdominal ultrasound and alpha-fetoprotein levels every six months in high-risk patients.",
+    "Test and vaccinate household and sexual contacts who are not already immune.",
+    "Administer the Hepatitis B vaccine and immunoglobulin to neonates born to infected mothers to prevent vertical transmission."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Hepatitis A: Presents with similar acute prodrome but is strictly fecal-oral and never progresses to a chronic state.",
+    "Drug-Induced Liver Injury: May mimic acute hepatitis; distinguish by detailed medication history and absence of viral serological markers.",
+    "Wilson Disease: Can present as acute liver failure in young patients; check for Kayser-Fleischer rings and low serum ceruloplasmin."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Isolated Anti-HBc: May represent a distal past infection, a low-level chronic carrier, or a false positive result requiring further testing.",
+    "ALT levels: Can be normal in chronic inactive carriers despite significant underlying liver fibrosis or high viral loads.",
+    "HBsAg in neonates: Testing immediately after birth may yield false positives due to passive transfer; wait until the infant is older."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Development of jaundice (yellowing of eyes or skin)",
+  "Persistent vomiting or inability to tolerate oral fluids",
+  "Signs of encephalopathy such as confusion, altered consciousness, or extreme drowsiness",
+  "Severe right upper quadrant abdominal pain",
+  "Evidence of coagulopathy such as unexplained bruising or mucosal bleeding"
+ ],
+ "faq": [
+  {
+   "q": "What is the significance of HBeAg in a patient's serum?",
+   "a": "HBeAg indicates high viral replication and increased infectivity. Its presence suggests a higher risk of transmission to others."
+  },
+  {
+   "q": "Can Hepatitis B be cured with current antiviral therapies?",
+   "a": "Current treatments aim for functional cure (HBsAg loss) rather than complete eradication, focusing on suppressing viral replication and preventing cirrhosis."
+  },
+  {
+   "q": "How is a 'Window Period' defined in Hepatitis B serology?",
+   "a": "It is the interval where HBsAg has disappeared but Anti-HBs has not yet appeared; only Anti-HBc IgM is detectable."
+  }
+ ],
+ "exam": [
+  "Interpret a serology panel showing HBsAg negative, Anti-HBc positive, and Anti-HBs positive.",
+  "Discuss the indications for initiating antiviral therapy in a chronic Hepatitis B carrier.",
+  "Explain the mechanism and prevention of vertical transmission from mother to child."
+ ],
+ "related": [
+  "Hepatitis D co-infection",
+  "Hepatocellular Carcinoma",
+  "Liver Cirrhosis",
+  "Ascites Management",
+  "Hepatitis C",
+  "Alcoholic Liver Disease"
+ ],
+ "subject": "Microbiology & immunology",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

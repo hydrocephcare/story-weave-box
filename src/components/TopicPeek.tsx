@@ -4,6 +4,7 @@ import { Maximize2 } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
 import { loadPeek, topicPeek, useTopicPeekSlug, type Peek } from "@/lib/topicPeek";
 import { setNoteReturn } from "@/lib/noteReturn";
+import { pageForPeek } from "@/lib/topics";
 
 /**
  * The quick-read panel (mounted once, in App). It slides up on a phone and in from the side on a computer.
@@ -15,6 +16,7 @@ export default function TopicPeekHost() {
   const navigate = useNavigate();
   const [peek, setPeek] = useState<Peek | null>(null);
   const [wide, setWide] = useState(typeof window !== "undefined" ? window.matchMedia("(min-width: 768px)").matches : false);
+  const [filling, setFilling] = useState(false);
   const origin = useRef<{ path: string; title: string; y: number } | null>(null);
 
   useEffect(() => { const mq = window.matchMedia("(min-width: 768px)"); const on = () => setWide(mq.matches); mq.addEventListener("change", on); return () => mq.removeEventListener("change", on); }, []);
@@ -23,8 +25,20 @@ export default function TopicPeekHost() {
     // remember exactly where the reader was, before anything on screen moves
     origin.current = { path: `${window.location.pathname}${window.location.search}`, title: document.title.split(" | ")[0].split(" — ")[0] || "where you were", y: window.scrollY };
     let on = true;
-    setPeek(null);
-    void loadPeek(slug).then((p) => on && setPeek(p)).catch(() => on && setPeek({ slug, name: slug.replace(/-/g, " "), category: "", summary: "", points: [], image: null }));
+    setPeek(null); setFilling(false);
+    const blank: Peek = { slug, name: slug.replace(/-/g, " ").replace(/([a-z])/g, (m) => m.toUpperCase()), category: "", summary: "", points: [], image: null };
+    void loadPeek(slug).catch(() => blank).then(async (p) => {
+      if (!on) return;
+      setPeek(p);
+      // nothing written for this topic yet: it is prepared now, and the panel fills in when it is ready
+      if (!p.summary && !p.points.length) {
+        setFilling(true);
+        const page = await pageForPeek(slug, p.name, p.category).catch(() => null);
+        if (!on) return;
+        if (page) { const again = await loadPeek(slug).catch(() => p); if (on) setPeek(again); }
+        setFilling(false);
+      }
+    });
     return () => { on = false; };
   }, [slug]);
 
@@ -67,7 +81,9 @@ export default function TopicPeekHost() {
                   ))}
                 </ul>
               )}
-              {!peek.summary && !peek.points.length && <p className="mt-4 text-[15px] text-muted-foreground">Open the full page to read about {peek.name}.</p>}
+              {!peek.summary && !peek.points.length && (filling
+                ? <div className="mt-5 space-y-3" role="status" aria-label="Loading" aria-live="polite">{[0, 1, 2, 3].map((i) => <div key={i} className="h-4 animate-pulse rounded bg-foreground/10" style={{ width: `${96 - i * 9}%` }} />)}<div className="h-20 animate-pulse rounded-xl bg-foreground/10" /></div>
+                : <p className="mt-4 text-[15px] text-muted-foreground">Open the full page to read about {peek.name}.</p>)}
             </>
           ) : (
             <div aria-busy="true"><div className="h-4 w-24 animate-pulse rounded bg-muted" /><div className="mt-3 h-8 w-2/3 animate-pulse rounded bg-muted" /><div className="mt-6 h-24 animate-pulse rounded-2xl bg-muted" /><div className="mt-4 h-16 animate-pulse rounded-xl bg-muted" /></div>

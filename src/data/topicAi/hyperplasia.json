@@ -1,0 +1,115 @@
+{
+ "medical": true,
+ "summary": "Hyperplasia is an increase in the number of cells in an organ or tissue in response to a stimulus, resulting in increased volume of the organ. It only occurs in cell populations capable of replication (mitosis).",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition",
+   "p": "Hyperplasia is an increase in the number of cells in an organ or tissue in response to a stimulus, resulting in increased volume of the organ. It only occurs in cell populations capable of replication (mitosis)."
+  },
+  {
+   "h": "Physiological Hyperplasia",
+   "b": [
+    "Hormonal: Proliferation of the female mammary glandular epithelium during puberty and pregnancy.",
+    "Compensatory: Occurs when a portion of the tissue is removed or diseased, such as regeneration of the liver after partial hepatectomy."
+   ]
+  },
+  {
+   "h": "Pathological Hyperplasia",
+   "p": "Most forms are caused by excessive or inappropriate actions of hormones or growth factors.",
+   "b": [
+    "Endometrial Hyperplasia: Driven by an imbalance between estrogen and progesterone; a common cause of abnormal uterine bleeding and a precursor to endometrial cancer.",
+    "Benign Prostatic Hyperplasia (BPH): Induced by responses to androgens, leading to urinary tract obstruction.",
+    "Viral Infections: Certain viruses, like Human Papillomavirus (HPV), induce hyperplasia resulting in skin warts or mucosal lesions."
+   ]
+  },
+  {
+   "h": "Mechanisms and Characteristics",
+   "b": [
+    "Mechanism: Driven by growth factor-induced proliferation of mature cells or increased output of new cells from tissue stem cells.",
+    "Reversibility: Unlike neoplasia, hyperplasia is a controlled process; if the stimulus (hormone/growth factor) is removed, the hyperplasia regresses.",
+    "Clinical Significance: While hyperplasia itself is not cancerous, pathological hyperplasia constitutes a fertile soil in which cancerous proliferation may eventually arise."
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "b": [
+    "Progression to neoplasia, particularly in endometrial or atypical ductal hyperplasia, which may lead to malignancy.",
+    "Significant blood loss leading to acute anemia, often seen in cases of severe endometrial hyperplasia.",
+    "Organ dysfunction caused by physical obstruction, such as urinary retention due to benign prostatic hyperplasia.",
+    "Uncontrolled cellular growth that fails to regress after the initial stimulus or hormonal trigger is removed."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The primary goal is to identify and eliminate the underlying physiological or pathological stimulus causing the cell proliferation, while monitoring for cellular changes.",
+   "b": [
+    "Address the root cause by correcting hormonal imbalances or removing chronic mechanical irritation to stop further cell division.",
+    "Use hormonal modulators like progestogens in endometrial hyperplasia to counteract the effects of excess estrogen and thin the lining.",
+    "Utilize alpha-blockers to relax smooth muscle or 5-alpha reductase inhibitors to shrink tissue in prostatic hyperplasia for symptom relief.",
+    "Refer for surgical intervention, such as a hysterectomy or transurethral resection, if there is a high risk of cancer or severe obstruction."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "b": [
+    "Schedule regular biopsies or ultrasound scans to ensure the tissue returns to its normal size and architecture.",
+    "Implement routine screening for high-risk patients, such as those with long-term exposure to unopposed estrogen.",
+    "Educate patients on lifestyle modifications to manage metabolic factors that can drive hormonal triggers for abnormal growth.",
+    "Monitor for recurring symptoms to catch early signs of relapse or transformation into a malignant state."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Hypertrophy: Hyperplasia increases cell number, while hypertrophy increases cell size. Both can occur simultaneously in tissues like the uterus.",
+    "Neoplasia: Both involve increased cell numbers, but hyperplasia stops when the stimulus is removed, whereas neoplasia persists independently."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Biopsy Sampling: A small biopsy might miss areas of focal atypia in hyperplasia, leading to an underestimation of malignancy risk.",
+    "Serum Markers: Elevated PSA in benign prostatic hyperplasia can be falsely interpreted as prostate cancer without clinical correlation."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Presence of a rapidly enlarging or hard fixed tissue mass",
+  "Abnormal uterine bleeding or post-menopausal bleeding",
+  "Unexplained weight loss associated with tissue overgrowth",
+  "Symptoms of organ dysfunction, such as urinary retention in BPH"
+ ],
+ "faq": [
+  {
+   "q": "What is the primary mechanism of hyperplasia?",
+   "a": "It is an increase in the number of cells in an organ or tissue, usually resulting from growth factor-driven proliferation of mature cells."
+  },
+  {
+   "q": "Is hyperplasia reversible?",
+   "a": "Yes, if the external stimulus or hormonal signal is removed, the hyperplastic growth typically regresses."
+  },
+  {
+   "q": "How does hyperplasia differ from neoplasia?",
+   "a": "Hyperplasia is a controlled response to stimuli; neoplasia involves autonomous, unregulated cell growth due to genetic mutations."
+  }
+ ],
+ "exam": [
+  "Distinguish between physiologic and pathologic hyperplasia with clinical examples.",
+  "Explain why hyperplasia can only occur in cell populations capable of mitotic division.",
+  "Discuss the relationship between endometrial hyperplasia and the subsequent risk of adenocarcinoma."
+ ],
+ "related": [
+  "Hypertrophy",
+  "Atrophy",
+  "Metaplasia",
+  "Dysplasia",
+  "Neoplasia",
+  "Cell Cycle Regulation"
+ ],
+ "subject": "Pathology",
+ "kind": "disease",
+ "model": "gemini",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}
