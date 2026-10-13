@@ -60,6 +60,7 @@ const AdminOutlineSync = lazy(() => import("./pages/AdminOutlineSync"));
 const Review = lazy(() => import("./pages/Review"));
 const AdminMonetise = lazy(() => import("./pages/AdminMonetise"));
 const AdminAnalytics = lazy(() => import("./pages/AdminAnalytics"));
+const AdminVoice = lazy(() => import("./pages/AdminVoice"));
 const AdminTools = lazy(() => import("./pages/AdminTools"));
 const AdminContentHealth = lazy(() => import("./pages/AdminContentHealth"));
 const YearTimetable = lazy(() => import("./pages/YearTimetable"));
@@ -210,6 +211,7 @@ const AnimatedRoutes = () => {
             <Route path="/review" element={<Review />} />
             <Route path="/admin/monetise" element={<AdminRoute><AdminMonetise /></AdminRoute>} />
             <Route path="/admin/analytics" element={<AdminRoute><AdminAnalytics /></AdminRoute>} />
+            <Route path="/admin/voice" element={<AdminRoute><AdminVoice /></AdminRoute>} />
             <Route path="/admin/tools" element={<AdminRoute><AdminTools /></AdminRoute>} />
             <Route path="/admin/content-health" element={<AdminRoute><AdminContentHealth /></AdminRoute>} />
             <Route path="/admin/outline-sync" element={<AdminRoute><AdminOutlineSync /></AdminRoute>} />

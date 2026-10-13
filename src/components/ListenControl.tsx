@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { getSetting } from "@/lib/store";
 import { Mic, Settings2, Square, Volume2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { SUPABASE_URL } from "@/lib/supabase-config";
@@ -13,7 +14,7 @@ const publicUrl = (key: string, ext: string) => `${SUPABASE_URL}/storage/v1/obje
 
 /** The saved recording of this page, if the admin made one: its address, or null. */
 async function findRecording(key: string): Promise<string | null> {
-  for (const ext of ["webm", "mp4"]) {
+  for (const ext of ["mp3", "webm", "mp4"]) {
     try {
       const r = await fetch(publicUrl(key, ext), { method: "HEAD", cache: "no-store" });
       if (r.ok && /audio|video|octet/.test(r.headers.get("content-type") ?? "audio")) return `${publicUrl(key, ext)}?v=${encodeURIComponent(r.headers.get("etag") ?? r.headers.get("last-modified") ?? "")}`;
@@ -114,7 +115,36 @@ export default function ListenControl({ text, path, btnClass }: { text: string; 
     setRec({ state: "idle", secs: 0 });
     setNote(check ? `Saved. This page now plays in ${OWNER}'s voice. Tap Listen to hear it.` : "It uploaded but cannot be played back yet. Check that the page-audio storage bucket is public.");
   };
-  const removeRec = async () => { await supabase.storage.from(BUCKET).remove([`${key}.webm`, `${key}.mp4`]); setOwn(null); setNote("The recording was removed."); };
+  const [cloneBusy, setCloneBusy] = useState("");
+  // the whole page, read in the copy of the admin's voice made on /admin/voice, and kept so every reader hears it
+  const readInMyVoice = async () => {
+    setNote("");
+    let voiceId = "";
+    try { voiceId = JSON.parse((await getSetting("voice_clone")) || "{}").voiceId || ""; } catch { /* none */ }
+    if (!voiceId) { setNote("Make your voice first: Admin, Tools, My voice."); return; }
+    const paras = text.split(/\n+/).map((l) => l.trim()).filter(Boolean);
+    const groups: string[] = []; let cur = "";
+    for (const p of paras) { const line = /[.!?:]$/.test(p) || p.length > 70 ? p : `${p}.`; if ((cur + " " + line).length > 2400 && cur) { groups.push(cur); cur = line; } else cur = cur ? `${cur}\n${line}` : line; }
+    if (cur) groups.push(cur);
+    const { data } = await supabase.auth.getSession();
+    const parts: Blob[] = [];
+    try {
+      for (let i = 0; i < groups.length; i++) {
+        setCloneBusy(`Reading part ${i + 1} of ${groups.length} in your voice…`);
+        const r = await fetch("/api/voice", { method: "POST", headers: { "content-type": "application/json", Authorization: `Bearer ${data.session?.access_token ?? ""}` }, body: JSON.stringify({ action: "speak", voiceId, text: groups[i] }) });
+        if (!r.ok) { const j = await r.json().catch(() => ({})); throw new Error(j.error === "setup" ? j.message : j.error || `The voice service said ${r.status}.`); }
+        parts.push(await r.blob());
+      }
+      setCloneBusy("Saving…");
+      const mp3 = new Blob(parts, { type: "audio/mpeg" });
+      const { error } = await supabase.storage.from(BUCKET).upload(`${key}.mp3`, mp3, { upsert: true, contentType: "audio/mpeg", cacheControl: "60" });
+      if (error) throw error;
+      setOwn(await findRecording(key));
+      setNote(`Done. This page now reads in ${OWNER}'s voice for everyone. Tap Listen to hear it.`);
+    } catch (e) { setNote((e as Error).message || "It did not work."); }
+    setCloneBusy("");
+  };
+  const removeRec = async () => { await supabase.storage.from(BUCKET).remove([`${key}.webm`, `${key}.mp4`, `${key}.mp3`]); setOwn(null); setNote("The recording was removed."); };
 
   // the page's text, line by line, to read from while recording
   const lines = text.split(/\n+/).map((l) => l.trim()).filter(Boolean).slice(0, 80);
@@ -150,7 +180,10 @@ export default function ListenControl({ text, path, btnClass }: { text: string; 
 
           {isAdmin && (
             <div className="space-y-3 border-t border-border pt-4">
-              <p className="font-semibold">Record this page in your own voice (admin)</p>
+              <p className="font-semibold">Read this page in my voice (admin)</p>
+              <p className="text-muted-foreground">Uses the copy of your voice made on the <a className="font-semibold text-primary hover:underline" href="/admin/voice">My voice</a> page. It reads the whole page, titles included, and keeps it for everyone.</p>
+              <button type="button" disabled={Boolean(cloneBusy)} onClick={readInMyVoice} className="h-11 rounded-full bg-primary px-6 font-bold text-primary-foreground disabled:opacity-60">{cloneBusy || "Read this page in my voice"}</button>
+              <p className="pt-3 font-semibold">Or record this page yourself</p>
               <p className="text-muted-foreground">Read the text below at your natural pace, with the pauses you want. Whatever you record is what everyone hears, at the speed you read it.</p>
               <div ref={script} className={cn("max-h-52 space-y-2 overflow-y-auto rounded-xl bg-muted/50 p-3 text-[15px] leading-relaxed", rec.state === "recording" && "ring-2 ring-destructive/50")}>
                 {lines.map((l, i) => <p key={i} className={l.length < 70 && !/[.!?:]$/.test(l) ? "font-serif text-lg font-bold" : ""}>{l}</p>)}

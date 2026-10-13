@@ -4,8 +4,9 @@ import chat from "./_lib/aiChat.js";
 import topic from "./_lib/topicWrite.js";
 import outline from "./_lib/outlineParse.js";
 import study from "./_lib/pageStudy.js";
+import voice from "./_lib/voice.js";
 
-const TASKS = { chat, topic, outline, study };
+const TASKS = { chat, topic, outline, study, voice };
 
 export default async function handler(req, res) {
   const task = String(Array.isArray(req.query?.task) ? req.query.task[0] : req.query?.task ?? "");

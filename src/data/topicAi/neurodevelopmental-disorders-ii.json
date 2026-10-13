@@ -1,0 +1,179 @@
+{
+ "medical": true,
+ "subject": "Psychiatry",
+ "summary": "Neurodevelopmental Disorders II covers ADHD and disruptive behaviour disorders, focusing on clinical presentation, diagnosis, severity grading, causes, investigations and management in diverse settings.",
+ "aka": [
+  "ADHD",
+  "Attention‑Deficit/Hyperactivity Disorder",
+  "Oppositional Defiant Disorder",
+  "Conduct Disorder"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ADHD is a persistent pattern of inattention and/or hyperactivity‑impulsivity that interferes with functioning. Disruptive behaviour disorders (ODD, CD) involve chronic irritability, defiance or violation of rights.",
+   "b": [
+    "DSM‑5 criteria require ≥6 symptoms for >6 months in children, present in two settings, and onset before age 12.",
+    "ODD: ≥4 symptoms of angry/irritable mood, argumentative behaviour, or vindictiveness.",
+    "CD: ≥3 serious rule‑breaking behaviours (aggression, property destruction, theft, serious rule violations)."
+   ],
+   "t": [
+    {
+     "a": "Clinical interview with child and caregivers",
+     "b": "Confirms symptom count, duration, cross‑setting presence; distinguishes ADHD from normal developmental variation."
+    },
+    {
+     "a": "Rating scales (e.g., Conners, Vanderbilt)",
+     "b": "Quantifies severity; helps track response to treatment."
+    },
+    {
+     "a": "Neuropsychological testing (optional)",
+     "b": "Identifies comorbid learning or executive deficits; guides educational support."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom count, functional impairment, and presence of comorbidities.",
+   "b": [
+    "Mild: symptoms cause minor impairment, no academic failure.",
+    "Moderate: noticeable academic/social problems, may need school support.",
+    "Severe: marked dysfunction, frequent disciplinary actions, high risk of substance use."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Neurodevelopmental disorders are multifactorial; genetics dominate, but environmental hits modify risk.",
+   "b": [
+    "Genetic: polygenic risk, copy‑number variants, ADHD‑linked loci (e.g., DRD4, DAT1).",
+    "Prenatal: maternal smoking, alcohol, infections (CMV, rubella), malnutrition.",
+    "Perinatal: hypoxia, low birth weight, preterm birth.",
+    "Post‑natal: early childhood adversity, lead exposure, untreated sleep apnea.",
+    "In low‑resource settings: perinatal infections (malaria, HIV), severe anemia, chronic otitis media."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children show age‑inappropriate restlessness, difficulty sustaining attention, impulsive actions, and may argue or defy authority.",
+   "b": [
+    "Inattention: careless mistakes, forgetfulness, losing items.",
+    "Hyperactivity: fidgeting, running/climbing excessively.",
+    "Impulsivity: blurting answers, interrupting.",
+    "ODD: frequent temper loss, blaming others.",
+    "CD: aggression toward people/animals, property destruction."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "No single lab test diagnoses ADHD; investigations aim to rule out mimics and identify comorbidities.",
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Excludes anemia or infection that can mimic fatigue and inattention; low hemoglobin suggests treatable anemia."
+    },
+    {
+     "a": "Thyroid function tests",
+     "b": "Detects hypothyroidism, which can cause concentration problems; normal TSH rules it out."
+    },
+    {
+     "a": "Lead level (if exposure risk)",
+     "b": "Elevated lead can cause attention deficits; chelation considered if >10 µg/dL."
+    },
+    {
+     "a": "HIV test (high‑risk settings)",
+     "b": "Chronic HIV may affect cognition; a positive result redirects care to antiretroviral therapy."
+    },
+    {
+     "a": "Neuroimaging (MRI) – only if neurological signs",
+     "b": "Identifies structural lesions; if unavailable, rely on clinical exam and refer when possible."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain features demand urgent evaluation or signal poor prognosis.",
+   "b": [
+    "Severe aggression with weapons or self‑harm.",
+    "Sudden loss of previously acquired skills.",
+    "Unexplained weight loss, seizures, or visual changes.",
+    "Co‑existing psychosis or mood disorder."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "A stepped approach: psychoeducation, behavioural interventions, then medication when impairment remains moderate‑severe.",
+   "b": [
+    "Parent‑training programmes (e.g., Triple P) improve compliance.",
+    "School‑based behavioural plans (token systems, clear expectations).",
+    "Stimulants (methylphenidate, amphetamine) – first‑line for core ADHD symptoms; avoid in uncontrolled hypertension or severe anxiety.",
+    "Non‑stimulants (atomoxetine, guanfacine) – useful when stimulants fail or cause tics.",
+    "For ODD/CD: structured therapy (CBT, anger‑management), family therapy; antipsychotics only for severe aggression."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review monitors symptom control, side effects, academic progress and emerging comorbidities.",
+   "b": [
+    "Visit every 3‑6 months initially, then annually if stable.",
+    "Screen for substance use, mood disorders, and school dropout.",
+    "Promote sleep hygiene, balanced diet, and physical activity to reduce symptom burden."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic ADHD or disruptive behaviour.",
+   "b": [
+    "Learning disorders – primary academic deficits without attention problems.",
+    "Anxiety/depression – may cause inattention but with pervasive low mood.",
+    "Thyroid disease or anemia – reversible metabolic causes.",
+    "Autism spectrum disorder – social communication deficits dominate."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory or behavioural findings may be falsely reassuring.",
+   "b": [
+    "Normal CBC does not exclude iron deficiency if ferritin not measured.",
+    "Negative lead screen may miss recent exposure; repeat if risk persists.",
+    "Rating scales can be biased by cultural expectations; corroborate with observation."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe aggression with weapons",
+  "Self‑injurious behaviour",
+  "Sudden functional decline",
+  "Signs of psychosis or mania"
+ ],
+ "faq": [
+  {
+   "q": "Can ADHD be cured?",
+   "a": "No; it is a chronic condition, but symptoms can be well‑controlled with therapy and medication."
+  },
+  {
+   "q": "Why are stimulants first‑line?",
+   "a": "They increase dopamine and norepinephrine in the prefrontal cortex, rapidly improving attention and impulse control."
+  },
+  {
+   "q": "Do children outgrow ADHD?",
+   "a": "Many improve with age, but a substantial proportion retain symptoms into adulthood."
+  }
+ ],
+ "exam": [
+  "List the DSM‑5 criteria for ADHD and explain how you would confirm cross‑setting impairment.",
+  "Describe the first‑line pharmacologic treatment for ADHD, including contraindications.",
+  "Identify three red‑flag features that require urgent referral in a child with disruptive behaviour."
+ ],
+ "related": [
+  "Neurodevelopmental Disorders I",
+  "Autism Spectrum Disorder",
+  "Learning Disabilities",
+  "Child and Adolescent Psychiatry",
+  "Behavioral Therapy",
+  "Psychopharmacology"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

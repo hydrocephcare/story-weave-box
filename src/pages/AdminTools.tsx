@@ -3,7 +3,7 @@ import { Mic, BarChart3, CalendarCheck, HeartPulse, Wallet, LayoutDashboard } fr
 
 const TOOLS = [
   { to: "/admin/analytics", icon: BarChart3, title: "Visitors", text: "Who is on the site now, how many used it each day, each week and each year, and a picture of the numbers to share on WhatsApp." },
-  { to: "/topics", icon: Mic, title: "Record your voice", text: "Open any note, blog or topic page, tap the small settings icon beside Listen, and record. Everyone who taps Listen on that page then hears you." },
+  { to: "/admin/voice", icon: Mic, title: "My voice", text: "Read a short script once. A copy of your voice is made, and any page can then be read aloud in it." },
   { to: "/admin/outline-sync", icon: CalendarCheck, title: "Course outline sync", text: "Paste a course outline: every matching note, blog and topic shows its year, semester, week and lecturer." },
   { to: "/admin/content-health", icon: HeartPulse, title: "Content health", text: "Every blog checked for thin pages, scan noise, bad titles and weak question banks, with one-tap fixes." },
   { to: "/admin/monetise", icon: Wallet, title: "Monetise", text: "Ads, a sponsor line and book links. All off until you switch them on." },
