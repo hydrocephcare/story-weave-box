@@ -36,9 +36,9 @@ async function speak(text, id) {
   const j = await r.json();
   const gid = j.id ?? j.generation_id;
   if (!gid) throw new Error(`Voicebox gave no job id: ${JSON.stringify(j).slice(0, 300)}`);
-  for (let attempt = 0; attempt < 400; attempt++) {
+  for (let attempt = 0; attempt < 800; attempt++) {
     await sleep(1500);
-    const st = await fetch(`${BASE}/generate/${gid}/status`).then((x) => (x.ok ? x.text() : "")).catch(() => "");
+    const st = await fetch(`${BASE}/history/${gid}`).then((x) => (x.ok ? x.text() : "")).catch(() => "");
     if (/"status"s*:s*"(failed|error|cancelled)"/i.test(st)) throw new Error(`Voicebox could not make this part: ${st.slice(0, 200)}`);
     if (/"status"s*:s*"(completed|complete|done|ready)"/i.test(st) || attempt % 5 === 4) {
       const a = await fetch(`${BASE}/audio/${gid}`).catch(() => null);
