@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
+import OutlineLine from "@/components/OutlineLine";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Check, ClipboardCheck, Link2, Share2, Stethoscope, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
@@ -277,6 +278,7 @@ export default function TopicPage() {
             <h1 className={cn("mt-5 font-serif font-bold leading-[1.05] tracking-tight text-foreground [overflow-wrap:anywhere]", Math.max(...name.split(/\s+/).map((w) => w.length)) > 12 ? "text-[2.15rem] sm:text-6xl lg:text-7xl" : "text-5xl sm:text-6xl lg:text-7xl")}>{name}</h1>
             {aka.length > 0 && <p className="mt-3 text-lg text-muted-foreground">Also called {aka.join(", ")}</p>}
             {summary ? <p className="mt-6 max-w-2xl text-xl leading-[1.65] text-foreground/85 sm:text-[1.4rem] sm:leading-[1.65]">{summary}</p> : writing ? <div className="mt-6 max-w-2xl space-y-3" aria-hidden><div className="h-5 w-full animate-pulse rounded bg-foreground/10" /><div className="h-5 w-11/12 animate-pulse rounded bg-foreground/10" /><div className="h-5 w-2/3 animate-pulse rounded bg-foreground/10" /></div> : null}
+            <OutlineLine title={name} className="mt-5 max-w-2xl" />
             <div className="mt-7 flex flex-wrap gap-2.5 sm:gap-3">
               {topic && topic.qs.length > 0 && <a href="#practice" className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] bg-primary text-primary-foreground shadow-md shadow-primary/25 hover:brightness-110"><ClipboardCheck className="h-4 w-4" aria-hidden /> Test yourself</a>}
               <button type="button" onClick={() => openAI(`Explain ${name} simply, then give me the five points an examiner expects.`)} className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/15"><Sparkles className="h-4 w-4 text-primary" aria-hidden /> Ask Ompath AI</button>

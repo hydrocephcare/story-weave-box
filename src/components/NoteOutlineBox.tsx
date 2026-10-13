@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ClipboardList, ChevronRight } from "lucide-react";
+import { matchOutline, useOutlineDocs } from "@/lib/outlineSync";
 import { COURSE_OUTLINES, getCourseOutlineForUnit, type CourseOutline, type OutlineItem } from "@/data/courseOutlines";
 
 interface Ref { outline: CourseOutline; items: { item: OutlineItem; section: string }[] }
@@ -23,8 +24,11 @@ export function outlineRefFor(note: { slug: string; year: number; unit: string }
 const weekOf = (w?: string) => { const m = String(w ?? "").match(/\d+(\s*[-–]\s*\d+)?/); return m ? `Wk ${m[0].replace(/\s+/g, "")}` : ""; };
 
 /** One short line at the top of a note: the week it is taught this semester, with an arrow to the outline, or "No outline" when there is none. */
-export default function NoteOutlineBox({ note }: { note: { slug: string; year: number; unit: string } }) {
+export default function NoteOutlineBox({ note }: { note: { slug: string; year: number; unit: string; title?: string } }) {
   const ref = useMemo(() => outlineRefFor(note), [note]);
+  const synced = useOutlineDocs();
+  // when an outline the admin added covers this page, the one-line "where it sits" replaces this card
+  if (note.title && synced.length && matchOutline(synced, { title: note.title, year: note.year, unit: note.unit })) return null;
   const row = "mt-4 flex items-center gap-2 rounded-xl border px-3.5 py-2.5 text-sm print:hidden";
   if (!ref) return <p className={`${row} border-border bg-muted/40 text-muted-foreground`}><ClipboardList className="h-4 w-4 shrink-0" aria-hidden /> No outline for this note</p>;
   const { outline, items } = ref;

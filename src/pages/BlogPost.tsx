@@ -1,4 +1,7 @@
 import { useState, useEffect, useMemo, useLayoutEffect, forwardRef, memo } from "react";
+import PageSummary from "@/components/PageSummary";
+import OutlineLine from "@/components/OutlineLine";
+import { yearOfCategory } from "@/hooks/useMyYear";
 import HeroAurora from "@/components/HeroAurora";
 import { mdToHtml } from "@/lib/miniMarkdown";
 import ConnectedLearning from "@/components/ConnectedLearning";
@@ -456,7 +459,7 @@ function InArticleRelated({ articles }: { articles: any[] }) {
 }
 
 /* ─── Classic magazine-style article hero ─── */
-function ClassicHero(props: { title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
+function ClassicHero(props: { summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
   return <ClassicHeroInner {...props} />;
 }
 
@@ -493,8 +496,8 @@ async function findClosestArticle(slugOrParam: string): Promise<{ id: string; ti
 
 /* ─── Classic hero: cinematic image with title + description overlaid ─── */
 function ClassicHeroInner({
-  title, image, date, unit, shareUrl, description, category,
-}: { title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
+  title, image, date, unit, shareUrl, description, category, summaryId,
+}: { summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
   const specificImage = image && !isGenericThumbnail(image) ? image : "";
   const topicImage = useTopicThumbnailInfo(title, category, !specificImage);
   const heroImage = specificImage || topicImage?.url || "";
@@ -507,6 +510,8 @@ function ClassicHeroInner({
         {unit && <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{unit}</p>}
         <h1 id={slugify(title)} className="mt-2 scroll-mt-20 font-serif text-[2rem] font-bold leading-[1.1] tracking-tight text-foreground sm:text-[2.8rem] lg:text-[3.3rem]">{title}</h1>
         {description && <p className="mt-4 max-w-[68ch] text-[17px] leading-relaxed text-foreground/75 sm:text-xl sm:leading-relaxed">{description}</p>}
+        {summaryId && <PageSummary id={summaryId} className="mt-5" />}
+        <OutlineLine title={title} year={yearOfCategory(category)} className="mt-4 max-w-[68ch]" />
         <ReviewedBadge reviewer={reviewer} date={date} />
       </div>
       {heroImage && (
@@ -1877,7 +1882,8 @@ export default function BlogPost() {
               storageKey={article.slug || article.id}
             >
             <ClassicHero
-              title={decodeEntities(article.title || "").replace(/^#+s*/, "").replace(/s+/g, " ").trim() || cleanMetaTitle(article)}
+              summaryId={article.slug ? `a:${article.slug}` : undefined}
+              title={decodeEntities(article.title || "").replace(/^#+\s*/, "").replace(/\s+/g, " ").trim() || cleanMetaTitle(article)}
               image={article.og_image_url || extractFirstImageFromContent(article.content || "") || ""}
               date={date}
               unit={unitName && unitName !== "Uncategorized" ? unitName : ""}

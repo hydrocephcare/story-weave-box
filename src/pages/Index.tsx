@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import TaughtThisWeek from "@/components/TaughtThisWeek";
 import { useMyYear as useHomeYear } from "@/hooks/useMyYear";
 import LoadMoreButton from "@/components/LoadMoreButton";
 import { Link, useNavigate } from "react-router-dom";
@@ -443,6 +444,7 @@ export default function Index() {
         </motion.div>
 
         {/* New in the student's own year (the site-wide list is the one at the top) */}
+        {homeYear && <TaughtThisWeek year={homeYear} className="mb-10" />}
         {homeYear && <RecentlyPublished className="px-0" year={homeYear} limit={6} />}
       </div>
       </section>

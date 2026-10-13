@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import TaughtThisWeek from "@/components/TaughtThisWeek";
 import HeroAurora from "@/components/HeroAurora";
 import RecentlyPublished from "@/components/RecentlyPublished";
 import { Link, useLocation, useParams } from "react-router-dom";
@@ -223,6 +224,8 @@ export default function YearHub() {
           {(parsedYear <= 4 || parsedYear === 6) && <Link to={`/course-outlines/year-${parsedYear}`} className="flex items-center gap-3 py-2.5 text-[17px] font-semibold text-foreground transition-colors hover:text-primary"><ClipboardCheck className="h-5 w-5 shrink-0 text-primary" />Course outlines</Link>}
         </nav>
       </header>
+
+      <TaughtThisWeek year={parsedYear} className="mt-8" />
 
       <details open={ttOpen} onToggle={(e) => setTtOpen((e.currentTarget as HTMLDetailsElement).open)} className="group mt-4 rounded-2xl border border-border bg-card">
         <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 [&::-webkit-details-marker]:hidden">

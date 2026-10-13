@@ -49,14 +49,20 @@ jobs:
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || '25' }} --parallel=3
 
+      - name: Write today's page summaries
+        env:
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
+        run: node scripts/summaries/fill.mjs 25 --parallel=2
+
       - name: Save the new overviews
         run: |
-          if [ -z "$(git status --porcelain src/data/topicAi)" ]; then
+          if [ -z "$(git status --porcelain src/data/topicAi src/data/pageSummaries.json)" ]; then
             echo "No new overviews today."
           else
             git config user.name "ompath-bot"
             git config user.email "ompath-bot@users.noreply.github.com"
-            git add src/data/topicAi
+            git add src/data/topicAi src/data/pageSummaries.json
             git commit -m "Daily AI topic overviews"
             git pull --rebase origin main
             git push origin main

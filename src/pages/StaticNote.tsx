@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
+import PageSummary from "@/components/PageSummary";
+import OutlineLine from "@/components/OutlineLine";
 import HeroAurora from "@/components/HeroAurora";
 import { Link, Navigate, useLocation, useNavigate, useNavigationType, useParams } from "react-router-dom";
 import { Printer, ScanLine } from "lucide-react";
@@ -133,6 +135,8 @@ function StaticNoteView() {
 
       {quick && <QuickSummaryDialog summary={quick} />}
 
+      {!note.paper && <PageSummary id={`n:${note.slug}`} className="mt-5" />}
+      {!note.paper && <OutlineLine title={note.title} year={note.year} unit={note.unit} className="mt-4" />}
       {!note.paper && <NoteOutlineBox note={note} />}
 
       {note.paper && (
