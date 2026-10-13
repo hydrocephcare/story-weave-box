@@ -53,7 +53,12 @@ export function soundPolish(original, out, { headings = true, maxRatio = 1.4, mi
 export function cleanMeta(title, description) {
   const t = String(title ?? "").replace(/\s+/g, " ").trim().replace(/^["'“”]+|["'“”]+$/g, "").trim().slice(0, 90);
   let d = String(description ?? "").replace(/\s+/g, " ").trim().replace(/^["'“”]+|["'“”]+$/g, "").trim();
-  if (d.length > 160) d = d.slice(0, 157).replace(/\s+\S*$/, "") + "…";
+  if (d.length > 160) {
+    // end at a full sentence when there is one, otherwise at a whole word: no trailing "…"
+    const head = d.slice(0, 158);
+    const stop = Math.max(head.lastIndexOf(". "), head.lastIndexOf("; "));
+    d = stop >= 80 ? head.slice(0, stop + 1) : head.replace(/\s+\S*$/, "").replace(/[,;:\s]+$/, "") + ".";
+  }
   return { title: t.length >= 8 ? t : "", description: d.length >= 40 ? d : "" };
 }
 
