@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { useLocation, useNavigationType } from "react-router-dom";
 import { flashAnchor } from "@/lib/deep-link";
 import { clearNoteReturn, getNoteReturn } from "@/lib/noteReturn";
@@ -22,6 +22,8 @@ export default function ScrollToTop() {
   const { pathname, search, hash, state } = useLocation();
   const navigationType = useNavigationType();
   const currentPath = pathname + search;
+  // Back from a panel (it has its own history entry) lands on the same page: the reader must stay exactly where they are
+  const lastPath = useRef<string | null>(null);
 
   useEffect(() => {
     const old = window.history.scrollRestoration;
@@ -40,6 +42,9 @@ export default function ScrollToTop() {
   }, [currentPath]);
 
   useLayoutEffect(() => {
+    const samePage = lastPath.current === currentPath;
+    lastPath.current = currentPath;
+    if (samePage && navigationType === "POP" && !hash) return;
     if (hash) {
       const frame = requestAnimationFrame(() => flashAnchor(hash.slice(1)));
       return () => cancelAnimationFrame(frame);
