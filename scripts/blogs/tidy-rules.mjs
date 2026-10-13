@@ -28,6 +28,13 @@ export function tidy(src) {
   t = t.replace(/^\s*---\s*$/gm, "").replace(/\n{3,}/g, "\n\n").trim();
   // headings start at "##"
   t = t.replace(/^# (?!#)/gm, "## ");
+  // a lone title heading above several "###" sections repeats the page title: drop it and lift the sections
+  const h2 = (t.match(/^## /gm) ?? []).length, h3 = (t.match(/^### /gm) ?? []).length;
+  if (h2 === 1 && h3 >= 2) {
+    const first = t.split("\n").find((l) => l.trim() !== "");
+    if (/^## /.test(first ?? "")) t = t.replace(/^## .*\n+/m, "");
+    t = t.replace(/^(#{3,6}) /gm, (m, h) => "#".repeat(h.length - 1) + " ");
+  }
   const levels = [...t.matchAll(/^(#{1,6})\s/gm)].map((m) => m[1].length);
   if (levels.length && Math.min(...levels) > 2) {
     const up = Math.min(...levels) - 2;

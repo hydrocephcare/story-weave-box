@@ -1,7 +1,8 @@
-// Tidying by hand (no AI keys): prints the next notes to tidy, then checks and saves a tidied version.
-//   node scripts/blogs/manual.mjs next 3 --year 3 [outDir]     writes the next 3 notes to outDir/<id>.src.md and lists them
-//   node scripts/blogs/manual.mjs accept <id> <file>            checks <file> against the original and saves it as public/blog-fixes/<id>.md
-//   node scripts/blogs/manual.mjs skip <id> "reason"            leaves a note as it is, for good
+// Tidying without AI keys.
+//   node scripts/blogs/manual.mjs clean [--year N]          tidy notes by rule (tidy-rules.mjs), checked against the original, saved as public/blog-fixes/<id>.md
+//   node scripts/blogs/manual.mjs next 3 --year 3 [outDir]  writes the next notes to outDir/<id>.src.md so they can be tidied by hand
+//   node scripts/blogs/manual.mjs accept <id> <file>        checks <file> against the original and saves it
+//   node scripts/blogs/manual.mjs skip <id> "reason"        leaves a note as it is, for good
 import fs from "node:fs";
 import path from "node:path";
 import { tidy } from "./tidy-rules.mjs";
@@ -15,6 +16,10 @@ const skipped = fs.existsSync(skippedFile) ? JSON.parse(fs.readFileSync(skippedF
 const yearOf = (c) => Number(String(c || "").match(/^Year\s*(\d)/i)?.[1] ?? 0);
 const text = (c) => c.replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 const isBank = (a) => (a.content.match(/^(?:#{1,4}\s*)?\**Question\s+\d+/gim) ?? []).length >= 5 || /past paper|questions? (&|and) answers?|\bmcqs?\b|\bsaqs?\b|\bcat\b|\bexam\b|\bquiz\b/i.test(a.title);
+// reasons that only the AI job had, or that the old rule check gave, are tried again by the rule cleaner
+const retry = (why) => /^(rule tidy rejected|too long|tidy rejected)/.test(why ?? "");
+const yi = process.argv.indexOf("--year"), year = yi >= 0 ? Number(process.argv[yi + 1]) : 0;
+const inYears = (a) => (year ? yearOf(a.category) === year : [3, 2, 1].includes(yearOf(a.category)));
 
 async function rows(filter) {
   const all = [];
@@ -43,54 +48,33 @@ function sound(original, out) {
   return "";
 }
 
-
 const [cmd, a1, a2] = process.argv.slice(2);
-if (cmd === "next") {
-  const yi = process.argv.indexOf("--year"), year = yi >= 0 ? Number(process.argv[yi + 1]) : 0;
-  const outDir = process.argv.filter((x, i) => !x.startsWith("--") && i > 3 && i !== yi + 1).pop() || ".";
+if (cmd === "clean") {
+  const all = await rows("");
+  let ok = 0, bad = 0, ign = 0;
+  for (const a of all) {
+    if (!inYears(a) || index[a.id]) continue;
+    if (skipped[a.id] && !retry(skipped[a.id])) continue;
+    if (isBank(a) || text(a.content).length < 700) { ign++; continue; }
+    const out = tidy(a.content), why = sound(a.content, out);
+    if (why) { bad++; skipped[a.id] = "rule tidy rejected: " + why; continue; }
+    delete skipped[a.id];
+    fs.writeFileSync(path.join(DIR, a.id + ".md"), out); index[a.id] = new Date().toISOString().slice(0, 10); ok++;
+  }
+  fs.writeFileSync(indexFile, JSON.stringify(index)); fs.writeFileSync(skippedFile, JSON.stringify(skipped, null, 1));
+  console.log(`tidied ${ok}, rejected ${bad}, ignored (papers, banks, short) ${ign}`);
+} else if (cmd === "next") {
+  const outDir = process.argv.filter((x, i) => !x.startsWith("--") && i > 4 && i !== yi + 1).pop() || ".";
   const n = Number(a1 || 3);
   const all = await rows("");
   let got = 0;
   for (const a of all) {
     if (got >= n) break;
-    if (year ? yearOf(a.category) !== year : ![3, 2, 1].includes(yearOf(a.category))) continue;
-    if (index[a.id] || skipped[a.id]) continue;
-    if (isBank(a)) { skipped[a.id] = "question bank or paper: keeps its own format"; continue; }
-    if (text(a.content).length < 700) { skipped[a.id] = "too short"; continue; }
-    if (a.content.length > 15000) { skipped[a.id] = "too long to tidy in one go"; continue; }
-    if ((a.content.match(/!\[[^\]]*\]\([^)]*\)/g) ?? []).length >= 3 && text(a.content).length < 1200) { skipped[a.id] = "mostly pictures"; continue; }
+    if (!inYears(a) || index[a.id] || skipped[a.id]) continue;
+    if (isBank(a) || text(a.content).length < 700) continue;
     fs.writeFileSync(path.join(outDir, `${a.id}.src.md`), a.content);
     console.log(`${a.id} | ${a.title} | ${a.content.length} chars`); got++;
   }
-  fs.writeFileSync(skippedFile, JSON.stringify(skipped, null, 1));
-} else if (cmd === "clean") {
-  const yi = process.argv.indexOf("--year"), year = yi >= 0 ? Number(process.argv[yi + 1]) : 0;
-  const all = await rows("");
-  let ok = 0, bad = 0, ign = 0;
-  for (const a of all) {
-    if (year ? yearOf(a.category) !== year : ![3, 2, 1].includes(yearOf(a.category))) continue;
-    if (index[a.id] || skipped[a.id]) continue;
-    if (isBank(a) || text(a.content).length < 700 || a.content.length > 15000) { ign++; continue; }
-    const out = tidy(a.content), why = sound(a.content, out);
-    if (why) { bad++; skipped[a.id] = "rule tidy rejected: " + why; continue; }
-    fs.writeFileSync(path.join(DIR, a.id + ".md"), out); index[a.id] = new Date().toISOString().slice(0, 10); ok++;
-  }
-  fs.writeFileSync(indexFile, JSON.stringify(index)); fs.writeFileSync(skippedFile, JSON.stringify(skipped, null, 1));
-  console.log("tidied " + ok + ", rejected " + bad + ", ignored (papers, short, long) " + ign);
-} else if (cmd === "clean") {
-  const yi = process.argv.indexOf("--year"), year = yi >= 0 ? Number(process.argv[yi + 1]) : 0;
-  const all = await rows("");
-  let ok = 0, bad = 0, ign = 0;
-  for (const a of all) {
-    if (year ? yearOf(a.category) !== year : ![3, 2, 1].includes(yearOf(a.category))) continue;
-    if (index[a.id] || skipped[a.id]) continue;
-    if (isBank(a) || text(a.content).length < 700 || a.content.length > 15000) { ign++; continue; }
-    const out = tidy(a.content), why = sound(a.content, out);
-    if (why) { bad++; skipped[a.id] = "rule tidy rejected: " + why; continue; }
-    fs.writeFileSync(path.join(DIR, a.id + ".md"), out); index[a.id] = new Date().toISOString().slice(0, 10); ok++;
-  }
-  fs.writeFileSync(indexFile, JSON.stringify(index)); fs.writeFileSync(skippedFile, JSON.stringify(skipped, null, 1));
-  console.log("tidied " + ok + ", rejected " + bad + ", ignored (papers, short, long) " + ign);
 } else if (cmd === "accept") {
   const [row] = await rows(`&id=eq.${a1}`);
   if (!row) { console.log("no such note"); process.exit(1); }
@@ -105,4 +89,4 @@ if (cmd === "next") {
   skipped[a1] = a2 || "left as it is";
   fs.writeFileSync(skippedFile, JSON.stringify(skipped, null, 1));
   console.log("skipped");
-} else console.log("use: next | accept | skip");
+} else console.log("use: clean | next | accept | skip");
