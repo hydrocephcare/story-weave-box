@@ -71,7 +71,7 @@ export function sanitizePage(raw) {
 let turn = 0;
 const deadKeys = new Set();
 const deadModels = new Set();
-export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000 } = {}) {
+export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000, maxTokens = 5000 } = {}) {
   const gateways = [];
   if (env.LOVABLE_API_KEY) gateways.push(["https://ai.gateway.lovable.dev/v1/chat/completions", env.LOVABLE_API_KEY, env.TOPIC_AI_MODEL || "google/gemini-3-flash-preview"]);
   if (env.OMNIROUTE_BASE_URL && env.OMNIROUTE_API_KEY) gateways.push([`${String(env.OMNIROUTE_BASE_URL).replace(/\/+$/, "").replace(/\/v1$/, "")}/v1/chat/completions`, env.OMNIROUTE_API_KEY, env.OMNIROUTE_MODEL || "ompathstudy"]);
@@ -104,7 +104,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
       if (deadModels.has(key + model)) continue;
       try {
         const text = await timed(async (signal) => {
-          const r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal, headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.3, maxOutputTokens: 7000, responseMimeType: "application/json", ...(model.includes("2.5-flash") && !model.includes("lite") ? { thinkingConfig: { thinkingBudget: 0 } } : model.startsWith("gemini-3") ? { thinkingConfig: { thinkingLevel: "low" } } : {}) } }) });
+          const r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal, headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.3, maxOutputTokens: maxTokens, responseMimeType: "application/json", ...(model.includes("2.5-flash") && !model.includes("lite") ? { thinkingConfig: { thinkingBudget: 0 } } : model.startsWith("gemini-3") ? { thinkingConfig: { thinkingLevel: "low" } } : {}) } }) });
           if (r.status === 404) deadModels.add(key + model);
           if (r.status === 429 || r.status === 503) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
           if (r.status === 403 || r.status === 401) deadKeys.add(key);
@@ -127,7 +127,7 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
       if (deadModels.has(key + model)) continue;
       try {
         const text = await timed(async (signal) => {
-          const r = await fetchImpl("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal, headers: { "content-type": "application/json", Authorization: "Bearer " + key }, body: JSON.stringify({ model, temperature: 0.3, max_tokens: 7000, reasoning_effort: "low", response_format: { type: "json_object" }, messages: [{ role: "user", content: prompt }] }) });
+          const r = await fetchImpl("https://api.groq.com/openai/v1/chat/completions", { method: "POST", signal, headers: { "content-type": "application/json", Authorization: "Bearer " + key }, body: JSON.stringify({ model, temperature: 0.3, max_tokens: maxTokens, reasoning_effort: "low", response_format: { type: "json_object" }, messages: [{ role: "user", content: prompt }] }) });
           if (r.status === 429 || r.status === 503 || r.status === 404) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
           if (!r.ok) throw new Error("groq " + r.status);
           return (await r.json())?.choices?.[0]?.message?.content;
