@@ -110,7 +110,8 @@ export function restorePictures(original, out) {
   const total = original.length || 1;
   for (const p of missing) {
     const frac = original.indexOf(p) / total;
-    const breaks = [...text.matchAll(/\n\s*\n/g)].map((m) => m.index + m[0].length);
+    // a picture goes after a paragraph, never straight under a heading
+    const breaks = [...text.matchAll(/\n\s*\n/g)].filter((m) => !/^#{1,6}\s/.test(text.slice(0, m.index).split("\n").pop() ?? "")).map((m) => m.index + m[0].length);
     const target = Math.round(frac * text.length);
     const at = breaks.length ? breaks.reduce((best, b) => (Math.abs(b - target) < Math.abs(best - target) ? b : best), breaks[0]) : text.length;
     text = `${text.slice(0, at)}${p.trim()}\n\n${text.slice(at)}`;
