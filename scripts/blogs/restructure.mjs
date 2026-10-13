@@ -8,7 +8,9 @@ import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 
 const DIR = "public/blog-fixes";
 const START = process.env.BLOG_FIX_START || "2026-11-01";
-const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 12);
+const yi = process.argv.indexOf("--year");
+const ONLY_YEAR = yi >= 0 ? Number(process.argv[yi + 1]) : 0; // --year 2: only that year's notes
+const COUNT = Number(process.argv.find((a, i) => /^\d+$/.test(a) && i !== yi + 1) || 12);
 const FORCE = process.argv.includes("--force");
 if (!FORCE && new Date() < new Date(START)) { console.log(`Blog tidy-up starts on ${START}. Nothing to do yet.`); process.exit(0); }
 
@@ -36,7 +38,7 @@ const yearOf = (c) => Number(String(c || "").match(/^Year\s*(\d)/i)?.[1] ?? 0);
 const isBank = (a) => (a.content.match(/^(?:#{1,4}\s*)?\**Question\s+\d+/gim) ?? []).length >= 5 || /past paper|questions? (&|and) answers?|\bmcqs?\b|\bsaqs?\b|\bcat\b|\bexam\b|\bquiz\b/i.test(a.title);
 const text = (c) => c.replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
 const queue = all
-  .filter((a) => [3, 2, 1].includes(yearOf(a.category)) && !index[a.id] && !skipped[a.id])
+  .filter((a) => (ONLY_YEAR ? yearOf(a.category) === ONLY_YEAR : [3, 2, 1].includes(yearOf(a.category))) && !index[a.id] && !skipped[a.id])
   .sort((a, b) => [0, 3, 2, 1].indexOf(yearOf(a.category)) - [0, 3, 2, 1].indexOf(yearOf(b.category)));
 console.log(`${queue.length} blogs still to tidy (Year 3, then 2, then 1); doing up to ${COUNT}.`);
 
@@ -44,11 +46,11 @@ const PROMPT = (a) => `You are tidying the layout of a medical study note. Chang
 Title: "${a.title}" (${a.category}).
 
 Rules:
-1. Keep every fact, number, unit, drug name, abbreviation and every picture line (a line starting with ![ ) exactly. Do not add anything new. Do not remove anything.
+1. Copy the text word for word. Do not reword, shorten, summarise, merge or drop any sentence, fact, number, unit, drug name or abbreviation, and keep every picture line (a line starting with ![ ) exactly. Do not add anything new. Only the layout changes: headings, line breaks, lists.
 2. Split the text into clear sections with "## " headings (a short, plain heading for each; 3 to 9 of them). Use "### " only for a real sub-section.
 3. Paragraphs of at most three sentences. Turn lists and sequences into bullet lists ("- ") or numbered lists. Put a comparison into a table only if the original already compared things.
 4. Bold ("**") only the few key terms a student must remember, never more than two in a paragraph.
-5. Remove chat leftovers, page markers, repeated lines and stray symbols. Fix obvious typing errors only when certain.
+5. Remove only chat leftovers ("Got it, here are the notes"), page markers and stray symbols. Keep everything else, even if a line repeats.
 6. Output ONLY the finished markdown, no commentary, no code fences.
 
 NOTE:
