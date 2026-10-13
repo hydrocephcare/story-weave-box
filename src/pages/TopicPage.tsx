@@ -291,6 +291,7 @@ export default function TopicPage() {
             {aka.length > 0 && <p className="mt-3 text-lg text-muted-foreground">Also called {aka.join(", ")}</p>}
             {summary ? <p className="mt-6 max-w-2xl text-xl leading-[1.65] text-foreground/85 sm:text-[1.4rem] sm:leading-[1.65]">{summary}</p> : writing ? <div className="mt-6 max-w-2xl space-y-3" aria-hidden><div className="h-5 w-full animate-pulse rounded bg-foreground/10" /><div className="h-5 w-11/12 animate-pulse rounded bg-foreground/10" /><div className="h-5 w-2/3 animate-pulse rounded bg-foreground/10" /></div> : null}
             <OutlineLine title={name} className="mt-5 max-w-2xl" />
+            {(summary || aiSections.length > 0) && <StudyTools className="mt-6 max-w-2xl" title={name} path={topicPath(slug)} pictures={subject === "Anatomy" || /anatom|embryo|histolog/i.test(subject)} text={[name, summary, ...aiSections.map((s) => [s.h, s.p, ...(s.b ?? [])].filter(Boolean).join("\n"))].filter(Boolean).join("\n")} />}
             <div className="mt-7 flex flex-wrap gap-2.5 sm:gap-3">
               {topic && topic.qs.length > 0 && <a href="#practice" className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] bg-primary text-primary-foreground shadow-md shadow-primary/25 hover:brightness-110"><ClipboardCheck className="h-4 w-4" aria-hidden /> Test yourself</a>}
               <button type="button" onClick={() => openAI(`Explain ${name} simply, then give me the five points an examiner expects.`)} className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] border border-primary/40 bg-primary/10 text-foreground hover:bg-primary/15"><Sparkles className="h-4 w-4 text-primary" aria-hidden /> Ask Ompath AI</button>
@@ -500,7 +501,6 @@ export default function TopicPage() {
                   ["Ward round", `I am presenting a patient with ${name} on a ward round. How do I present and what will the consultant ask me?`],
                 ].map(([label, q]) => <button key={label} type="button" onClick={() => openAI(q)} className="rounded-full border border-border bg-background px-4 py-2.5 text-sm font-bold transition hover:border-primary/60 hover:bg-primary/5 active:scale-[.97]">{label}</button>)}
               </div>
-              <StudyTools className="mt-5" title={name} path={topicPath(slug)} pictures={subject === "Anatomy" || /anatom|embryo|histolog/i.test(subject)} text={[name, summary, ...aiSections.map((s) => [s.h, s.p, ...(s.b ?? [])].filter(Boolean).join("\n"))].filter(Boolean).join("\n")} />
             </div>
 
             {related.length > 0 && (
