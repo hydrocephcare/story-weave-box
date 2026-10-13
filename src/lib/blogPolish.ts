@@ -3,7 +3,7 @@
 // that fails simply leaves the page as it was.
 import { supabase } from "@/integrations/supabase/client";
 
-export interface Polish { title: string | null; description: string | null; content: string | null; image_query?: string | null; verdict: string | null; status: string }
+export interface Polish { title: string | null; description: string | null; content: string | null; image_query?: string | null; reason?: string | null; verdict: string | null; status: string }
 
 /** Pages whose polished copy has been applied: the rule-tidied copy must not replace it afterwards. */
 export const polishedIds = new Set<string>();
@@ -44,9 +44,9 @@ export async function getPolish(id: string, fresh = false): Promise<Polish | nul
   }
   try {
     const table = supabase as unknown as { from: (t: string) => { select: (c: string) => { eq: (k: string, v: string) => { maybeSingle: () => Promise<{ data: Polish | null; error: unknown }> } } } };
-    let { data, error } = await table.from("blog_polish").select("title,description,content,image_query,verdict,status").eq("article_id", id).maybeSingle();
+    let { data, error } = await table.from("blog_polish").select("title,description,content,image_query,reason,verdict,status").eq("article_id", id).maybeSingle();
     // a table made before the picture column existed: ask again without it
-    if (error) ({ data, error } = await table.from("blog_polish").select("title,description,content,verdict,status").eq("article_id", id).maybeSingle());
+    if (error) ({ data, error } = await table.from("blog_polish").select("title,description,content,reason,verdict,status").eq("article_id", id).maybeSingle());
     if (error) return null; // the table may not exist yet: the page carries on as before
     const row = data && (data.status === "done" || data.status === "partial") ? data : null;
     store(id, row);
@@ -58,15 +58,15 @@ export async function getPolish(id: string, fresh = false): Promise<Polish | nul
  * Ask the server to polish this blog (it does it once for everyone, only when someone opens it). A long page is done a couple of pieces per
  * request, so `more` tells the page to ask again. `again` is for those follow-up asks. Returns { status: "" } when nothing was asked.
  */
-export async function requestPolish(id: string, again = false): Promise<{ status: string; more: boolean }> {
-  const none = { status: "", more: false };
+export async function requestPolish(id: string, again = false): Promise<{ status: string; more: boolean; progress: string }> {
+  const none = { status: "", more: false, progress: "" };
   if (typeof navigator === "undefined" || navigator.webdriver || /bot|crawl|spider|slurp|headless|lighthouse/i.test(navigator.userAgent)) return none;
   if (!again) { try { if (sessionStorage.getItem(`ompath_polish_asked_${id}`)) return none; sessionStorage.setItem(`ompath_polish_asked_${id}`, "1"); } catch { /* ignore */ } }
   try {
     const r = await fetch("/api/ai-polish", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ id }) });
     if (!r.ok) return none;
-    const j = (await r.json().catch(() => ({}))) as { status?: string; more?: boolean };
-    return { status: j.status ?? "", more: Boolean(j.more) };
+    const j = (await r.json().catch(() => ({}))) as { status?: string; more?: boolean; progress?: string };
+    return { status: j.status ?? "", more: Boolean(j.more), progress: j.progress ?? "" };
   } catch { return none; }
 }
 

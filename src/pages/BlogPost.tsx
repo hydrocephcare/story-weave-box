@@ -1333,6 +1333,7 @@ export default function BlogPost() {
   const [related, setRelated] = useState<{ articles: any[]; flashcards: any[]; mcqs: any[]; essays: any[] }>({ articles: [], flashcards: [], mcqs: [], essays: [] });
   const [activeSection, setActiveSection] = useState("");
   const [previewOpen, setPreviewOpen] = useState(false);
+  const [polishNote, setPolishNote] = useState(""); // shown while the AI is making the page cleaner
 
   // A paper that was only scanned: the page pictures are stored apart from the text (they are heavy), so they are fetched now and shown instead of reading noise.
   const scanId = article && looksScanned(article) && !String((article as { original_notes?: string }).original_notes ?? "").includes("![") ? article.id : null;
@@ -1630,14 +1631,19 @@ export default function BlogPost() {
             const show = (q: Polish | null) => { if (q) setArticle((cur) => (cur && cur.id === a.id ? applyPolish(cur, q) : cur)); };
             show(p);
             // nothing yet, or a long page part-way: ask the server, and keep asking for the next piece while this page is open
-            if (!p || p.status === "partial") {
+            const longWaiting = Boolean(p && p.status === "done" && !p.content && /left for later|too long/i.test(p.reason ?? "") && (a.content ?? "").length > 14000);
+            if (!p || p.status === "partial" || longWaiting) {
               const here = window.location.pathname;
-              for (let n = 0; n < 16; n++) {
-                const r = await requestPolish(a.id, n > 0);
-                if (r.status === "done" || r.status === "partial") { p = (await getPolish(a.id, true)) ?? p; show(p); }
-                if (!r.more || window.location.pathname !== here) break;
-                await new Promise((res) => setTimeout(res, 700));
-              }
+              setPolishNote("Making this page cleaner…");
+              try {
+                for (let n = 0; n < 24; n++) {
+                  const r = await requestPolish(a.id, n > 0);
+                  if (r.status === "done" || r.status === "partial") { p = (await getPolish(a.id, true)) ?? p; show(p); }
+                  if (r.progress && r.more) setPolishNote(`Making this page cleaner… part ${r.progress.replace("/", " of ")}`);
+                  if (!r.more || window.location.pathname !== here) break;
+                  await new Promise((res) => setTimeout(res, 500));
+                }
+              } finally { setPolishNote(""); }
             }
           })();
         }
@@ -1942,6 +1948,13 @@ export default function BlogPost() {
               password={(article as any).access_password}
               storageKey={article.slug || article.id}
             >
+            {polishNote && (
+              <div role="status" aria-live="polite" className="mb-3 flex items-center gap-2.5 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-[13px] font-semibold text-primary print:hidden">
+                <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-primary" aria-hidden />
+                <span>{polishNote}</span>
+                <span className="ml-auto hidden h-1.5 w-24 overflow-hidden rounded-full bg-primary/15 sm:block" aria-hidden><span className="block h-full w-1/2 animate-[pulse_1.2s_ease-in-out_infinite] rounded-full bg-primary/60" /></span>
+              </div>
+            )}
             <ClassicHero
               minutes={Math.max(1, Math.round((article.content || "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").split(/\s+/).length / 210))}
               summaryId={article.slug ? `a:${article.slug}` : undefined}

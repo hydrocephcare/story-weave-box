@@ -49,16 +49,19 @@ export default async function handler(req, res) {
   if (!a || !a.published || a.deleted_at || a.password_protected || ![1, 2, 3, 4, 5, 6].includes(yearOf(a.category))) return res.status(404).json({ status: "invalid" });
 
   // already finished, or being worked on: nothing to do. A finished page is never polished again.
-  // (a database that does not have the progress column yet is read without it, and long pages are then only given their title and description)
-  const withProgress = await sb(`blog_polish?select=status,updated_at,parts_done,content,title&article_id=eq.${id}`);
-  const hasProgress = withProgress.ok;
-  const existing = (hasProgress ? withProgress : await sb(`blog_polish?select=status,updated_at,content,title&article_id=eq.${id}`)).json?.[0];
+  // (progress on a long page is kept at the top of its saved text as <!--parts:N-->, so no extra database column is needed)
+  const existing = (await sb(`blog_polish?select=status,updated_at,content,title,reason&article_id=eq.${id}`)).json?.[0];
   const ageS = existing ? (now - new Date(existing.updated_at).getTime()) / 1000 : 0;
   const long = a.content.length > 14000;
-  // a long page that is part-way carries on a few seconds after the last piece; anything else waits (a slow page an hour, a failure twelve hours)
+  const marker = /^<!--parts:(\d+)-->\n?/;
+  const doneParts = Number(existing?.content?.match(marker)?.[1] ?? 0);
+  const saved = (existing?.content ?? "").replace(marker, "");
+  // a long page that is part-way carries on a few seconds after the last piece; a long page marked done before its text could be done starts now;
+  // anything else waits (a slow page an hour, a failure twelve hours)
   const carryOn = existing?.status === "partial" && long && ageS > 12;
+  const lateStart = existing?.status === "done" && !existing.content && long && /left for later|too long/i.test(existing.reason ?? "");
   const retry = (existing?.status === "failed" && ageS > 12 * 3600) || (existing?.status === "partial" && !long && ageS > 3600) || (existing?.status === "working" && ageS > 720);
-  if (existing && !(carryOn || retry)) return res.status(200).json({ status: existing.status, more: false });
+  if (existing && !(carryOn || lateStart || retry)) return res.status(200).json({ status: existing.status, more: false });
 
   // only when the AI has room: if several pages failed in the last half hour the keys have run out, so nobody is made to wait for nothing
   const recent = new Date(now - 30 * 60_000).toISOString();
@@ -89,15 +92,14 @@ export default async function handler(req, res) {
     }
     // a long page: its title and description first (a small request), then a couple of pieces of the text on each visit
     let row = {};
-    if (!hasProgress) { const m = await metaFor(a, ask); await save({ title: m.title, description: m.description, image_query: m.image_query, verdict: m.verdict, reason: [m.reason, "long page: text left for later"].filter(Boolean).join(" | ").slice(0, 400), status: "done", model: "ai" }); return res.status(200).json({ status: "done", more: false }); }
     if (!existing?.title) {
       const m = await metaFor(a, ask);
       row = { title: m.title, description: m.description, image_query: m.image_query, verdict: m.verdict, reason: m.reason || null, model: "ai" };
-      if (m.verdict === "irrelevant") { await save({ ...row, status: "done", parts_done: 0 }); return res.status(200).json({ status: "done", more: false }); }
+      if (m.verdict === "irrelevant") { await save({ ...row, status: "done" }); return res.status(200).json({ status: "done", more: false }); }
     }
-    const step = await polishStep(a, ask, existing ?? {}, { budgetMs: existing?.title ? 36000 : 22000 });
-    const note = step.reason ? [row.reason ?? null, step.reason].filter(Boolean).join(" | ").slice(0, 400) : row.reason ?? null;
-    await save({ ...row, content: step.content, parts_done: step.parts_done, status: step.finished ? "done" : "partial", reason: note });
+    const step = await polishStep(a, ask, { parts_done: doneParts, content: saved }, { budgetMs: existing?.title ? 36000 : 22000 });
+    const why = step.reason ? [step.reason].filter(Boolean).join(" | ") : (existing?.reason ?? null);
+    await save({ ...row, content: step.finished ? step.content : `<!--parts:${step.parts_done}-->\n${step.content ?? ""}`, status: step.finished ? "done" : "partial", reason: (why ?? "").slice(0, 400) || null });
     return res.status(200).json({ status: step.finished ? "done" : "partial", more: !step.finished, progress: `${step.parts_done}/${step.total}` });
   } catch (e) {
     // what is already done stays saved; the page is tried again later
