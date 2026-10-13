@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useLayoutEffect, forwardRef, memo } from "react";
-import { scanFirst, tidiedText } from "@/lib/blogFix";
+import { looksScanned, scanFirst, tidiedText } from "@/lib/blogFix";
 import AdSlot from "@/components/AdSlot";
 import BooksForPage from "@/components/BooksForPage";
 import SponsorLine from "@/components/SponsorLine";
@@ -1324,6 +1324,19 @@ export default function BlogPost() {
   const [related, setRelated] = useState<{ articles: any[]; flashcards: any[]; mcqs: any[]; essays: any[] }>({ articles: [], flashcards: [], mcqs: [], essays: [] });
   const [activeSection, setActiveSection] = useState("");
   const [previewOpen, setPreviewOpen] = useState(false);
+
+  // A paper that was only scanned: the page pictures are stored apart from the text (they are heavy), so they are fetched now and shown instead of reading noise.
+  const scanId = article && looksScanned(article) && !String((article as { original_notes?: string }).original_notes ?? "").includes("![") ? article.id : null;
+  useEffect(() => {
+    if (!scanId) return;
+    let on = true;
+    void (async () => {
+      const { data } = await supabase.from("articles").select("original_notes").eq("id", scanId).maybeSingle();
+      const notes = String(data?.original_notes ?? "");
+      if (on && notes.includes("![")) setArticle((cur) => (cur && cur.id === scanId ? scanFirst({ ...cur, original_notes: notes }) : cur));
+    })();
+    return () => { on = false; };
+  }, [scanId]);
 
   const handleBack = () => {
     const fromPath = (location.state as { from?: string } | null)?.from;

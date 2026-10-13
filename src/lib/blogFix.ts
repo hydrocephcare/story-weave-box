@@ -14,16 +14,21 @@ export async function tidiedText(id: string): Promise<string | null> {
   } catch { return null; }
 }
 
-/**
- * A paper that was only scanned: the stored text is noise from reading the pictures ("Scanned by CamScanner", broken lines). The pictures of the
- * pages are the real paper, so those are shown instead, in order, and the noise is left out of the page. The stored text is never changed.
- */
-export function scanFirst<T extends { title?: string | null; content: string; original_notes?: string | null }>(a: T): T {
+/** True when the stored text is only reading noise or a stub, so the scanned pages are the real paper. */
+export function looksScanned(a: { content: string }): boolean {
   const plain = a.content.replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
   // a stub ("The original paper scans are available…", "Awaiting manual transcription") has nothing to read, only the scans
   const stub = plain.length < 260 && /original (paper )?scans|awaiting manual transcription|transcription is being generated/i.test(plain);
-  const noisy = stub || /Visual Scan Archive/i.test(a.content) || (a.content.match(/Scanned by Cam\s?Scanner/gi) ?? []).length >= 3;
-  if (!noisy) return a;
+  return stub || /Visual Scan Archive/i.test(a.content) || (a.content.match(/Scanned by Cam\s?Scanner/gi) ?? []).length >= 3;
+}
+
+/**
+ * A paper that was only scanned: the stored text is noise from reading the pictures ("Scanned by CamScanner", broken lines). The pictures of the
+ * pages are the real paper, so those are shown instead, in order, and the noise is left out of the page. The stored text is never changed.
+ * The page pictures live in `original_notes`, which the article page does not download with the rest, so the caller fetches them when needed.
+ */
+export function scanFirst<T extends { title?: string | null; content: string; original_notes?: string | null }>(a: T): T {
+  if (!looksScanned(a)) return a;
   const pages = String(a.original_notes ?? "").split(/\r?\n/).map((l) => l.trim()).filter((l) => /^!\[[^\]]*\]\([^\s)]+\)$/.test(l));
   if (!pages.length) return a;
   const heading = (a.title ?? "Past paper").replace(/\s+—\s+Past Paper Questions & Answers$/i, "").trim();
