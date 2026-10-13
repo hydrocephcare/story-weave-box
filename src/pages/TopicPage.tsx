@@ -3,6 +3,7 @@ import BooksForPage from "@/components/BooksForPage";
 import SponsorLine from "@/components/SponsorLine";
 import AdSlot from "@/components/AdSlot";
 import StudyTools from "@/components/StudyTools";
+import SideAds from "@/components/SideAds";
 import OutlineLine from "@/components/OutlineLine";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -322,7 +323,8 @@ export default function TopicPage() {
         </div>
       </header>
 
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 pt-10 lg:grid-cols-[13.5rem_minmax(0,52rem)]">
+      <div data-ad-anchor className="mx-auto grid max-w-6xl gap-12 px-5 pt-10 lg:grid-cols-[13.5rem_minmax(0,52rem)]">
+        <SideAds title={name} />
         <aside className="hidden lg:block">
           <nav aria-label="On this page" className="sticky top-24 max-h-[calc(100dvh-7rem)] overflow-y-auto border-l border-border text-[15px]">
             <p className="pl-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">On this page</p>

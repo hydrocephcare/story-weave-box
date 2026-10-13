@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import StudyTools from "@/components/StudyTools";
+import SideAds from "@/components/SideAds";
 import PageSummary from "@/components/PageSummary";
 import OutlineLine from "@/components/OutlineLine";
 import HeroAurora from "@/components/HeroAurora";
@@ -119,7 +120,8 @@ function StaticNoteView() {
   };
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-10">
+    <div data-ad-anchor className="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-10">
+      <SideAds title={note.title} />
       <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1 text-xs font-semibold text-muted-foreground print:hidden">
         <Link to="/" className="hover:text-primary">Home</Link> ›
         <Link to={`/year/${note.year}`} className="hover:text-primary">Year {note.year}</Link> ›

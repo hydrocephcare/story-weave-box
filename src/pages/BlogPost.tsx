@@ -2063,7 +2063,6 @@ export default function BlogPost() {
 
             <BooksForPage text={`${article.title} ${(article.content || "").slice(0, 4000)}`} className="mt-12" />
             <AdSlot />
-            <SideAds title={article.title} />
             <NoteTopics text={article.content || ""} title={article.title} className="mt-10" />
             <SponsorLine className="mt-8" />
 
@@ -2125,6 +2124,7 @@ export default function BlogPost() {
           {!slideDeck && (
             <aside className="hidden xl:block" aria-label="Study desk">
               <StudyPanel year={Number(/Year\s*([1-6])/i.exec(yearName || "")?.[1]) || null} />
+              <SideAds title={article.title} mode="rail" />
             </aside>
           )}
           {!slideDeck && <ConnectedLearning className="mt-6 lg:hidden" target={{ id: `note:${article.id}`, title: article.title, where: article.category, year: Number((yearName || "").match(/[1-6]/)?.[0]) || null }} />}

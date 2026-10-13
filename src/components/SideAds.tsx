@@ -6,8 +6,10 @@ import { openAI } from "@/lib/aiEvents";
 import { useAccess } from "@/lib/access";
 
 /**
- * Ads for the empty sides of a blog page, on wide screens only. They advertise Ompath's own tools, move gently and give a small wiggle now and then
+ * Ads for the empty sides of a page, on wide screens only. They advertise Ompath's own tools, move gently and give a small wiggle now and then
  * to catch the eye (still, when the reader asked their device for less motion). Never shown to a subscriber, to a crawler, or in print.
+ *  - mode "rail": inside a page's own side column, under what is already there (study blogs)
+ *  - mode "gutters": in the free space left and right of the page's content, measured from the element marked data-ad-anchor
  */
 interface Ad { key: string; tag: string; head: string; line: string; cta: string; hue: [number, number]; icon: typeof Sparkles }
 
@@ -18,9 +20,9 @@ const ADS = (title: string): Ad[] => [
   { key: "share", tag: "Share", head: "Send it to a classmate", line: "Notes are better with company. Share this page on WhatsApp in one tap.", cta: "Share on WhatsApp", hue: [140, 178], icon: MessageCircle },
 ];
 
-function Card({ ad, title, index }: { ad: Ad; title: string; index: number }) {
+function Card({ ad, title, index, fluid }: { ad: Ad; title: string; index: number; fluid?: boolean }) {
   const Icon = ad.icon;
-  const style = { "--a": `hsl(${ad.hue[0]} 70% 38%)`, "--b": `hsl(${ad.hue[1]} 75% 30%)`, animationDelay: `${index * 0.9}s, ${index * 2.3}s, 0s` } as React.CSSProperties;
+  const style = { "--a": `hsl(${ad.hue[0]} 70% 38%)`, "--b": `hsl(${ad.hue[1]} 75% 30%)`, animationDelay: `${index * 0.9}s, ${index * 2.3}s, 0s`, ...(fluid ? { width: "100%" } : {}) } as React.CSSProperties;
   const inner = (
     <>
       <span className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-white/75"><Icon className="h-3.5 w-3.5" aria-hidden /> {ad.tag}</span>
@@ -29,44 +31,75 @@ function Card({ ad, title, index }: { ad: Ad; title: string; index: number }) {
       <span className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 text-[13px] font-bold text-slate-900">{ad.cta} <ArrowRight className="h-3.5 w-3.5" aria-hidden /></span>
     </>
   );
-  const cls = "side-ad block rounded-3xl p-5 text-left shadow-lg shadow-black/25";
+  const cls = "side-ad block rounded-3xl p-5 text-left shadow-lg shadow-black/20";
   if (ad.key === "ai") return <button type="button" style={style} className={cls} onClick={() => openAI(`Explain "${title}" simply, then give me the five points an examiner expects.`)}>{inner}</button>;
   if (ad.key === "share") return <a style={style} className={cls} target="_blank" rel="noopener noreferrer" href={`https://wa.me/?text=${encodeURIComponent(`${title} | Ompath Study\n${window.location.href}`)}`}>{inner}</a>;
   return <Link style={style} className={cls} to={ad.key === "review" ? "/review" : "/papers"}>{inner}</Link>;
 }
 
-export default function SideAds({ title }: { title: string }) {
+const MOTION = `
+  @keyframes side-ad-float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-7px) } }
+  @keyframes side-ad-wiggle { 0%,86%,100% { rotate: 0deg } 89% { rotate: -1.6deg } 92% { rotate: 1.6deg } 95% { rotate: -1deg } 98% { rotate: .6deg } }
+  @keyframes side-ad-shift { 0% { background-position: 0% 50% } 50% { background-position: 100% 50% } 100% { background-position: 0% 50% } }
+  .side-ad { width: 270px; background-image: linear-gradient(120deg, var(--a), var(--b), var(--a)); background-size: 220% 220%; animation: side-ad-float 4.6s ease-in-out infinite, side-ad-wiggle 7s ease-in-out infinite, side-ad-shift 12s ease infinite; transition: filter .2s; }
+  .side-ad:hover { filter: brightness(1.12); animation-play-state: paused; }
+  @media (prefers-reduced-motion: reduce) { .side-ad { animation: none } }
+`;
+
+const blocked = (hasPass: boolean, loading: boolean) => hasPass || loading || typeof navigator === "undefined" || /bot|crawl|spider|headless|lighthouse/i.test(navigator.userAgent);
+
+export default function SideAds({ title, mode = "gutters" }: { title: string; mode?: "rail" | "gutters" }) {
   const { hasPass, loading } = useAccess();
-  const [wide, setWide] = useState(false);
+  const [room, setRoom] = useState<{ left: number | null; right: number | null }>({ left: null, right: null });
+
+  // gutters: the space left and right of the content, measured, so an ad is only placed where it really fits
   useEffect(() => {
-    const mq = window.matchMedia("(min-width: 1500px)");
-    const on = () => setWide(mq.matches);
-    on(); mq.addEventListener("change", on);
-    return () => mq.removeEventListener("change", on);
-  }, []);
-  if (typeof document === "undefined" || !wide || hasPass || loading || /bot|crawl|spider|headless|lighthouse/i.test(navigator.userAgent)) return null;
+    if (mode !== "gutters") return;
+    const AD = 270, GAP = 28;
+    const measure = () => {
+      const el = document.querySelector("[data-ad-anchor]");
+      if (!el) return setRoom({ left: null, right: null });
+      const r = el.getBoundingClientRect();
+      const rightFree = window.innerWidth - r.right - GAP - 16;
+      const leftFree = r.left - GAP - 16;
+      setRoom({ right: rightFree >= AD ? r.right + GAP : null, left: leftFree >= AD ? r.left - GAP - AD : null });
+    };
+    measure();
+    const t = window.setTimeout(measure, 600); // the page settles after its fonts and pictures
+    window.addEventListener("resize", measure);
+    return () => { window.clearTimeout(t); window.removeEventListener("resize", measure); };
+  }, [mode, title]);
+
+  if (blocked(hasPass, loading)) return null;
   const ads = ADS(title);
-  // the centre column is about 888px wide; each stack sits in the free space beside it
-  const left = { left: "calc(50% - 444px - 24px - 270px)" };
-  const right = { left: "calc(50% + 444px + 24px)" };
+
+  if (mode === "rail") {
+    return (
+      <div className="sticky top-24 mt-6 hidden space-y-5 print:hidden xl:block" aria-label="Advertisements">
+        <style>{MOTION}</style>
+        <Card ad={ads[0]} title={title} index={0} fluid />
+        <Card ad={ads[1]} title={title} index={1} fluid />
+        <Card ad={ads[2]} title={title} index={2} fluid />
+      </div>
+    );
+  }
+
+  if (typeof document === "undefined" || (room.left === null && room.right === null)) return null;
   return createPortal(
     <div className="print:hidden" aria-label="Advertisements">
-      <style>{`
-        @keyframes side-ad-float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-7px) } }
-        @keyframes side-ad-wiggle { 0%,86%,100% { rotate: 0deg } 89% { rotate: -1.6deg } 92% { rotate: 1.6deg } 95% { rotate: -1deg } 98% { rotate: .6deg } }
-        @keyframes side-ad-shift { 0% { background-position: 0% 50% } 50% { background-position: 100% 50% } 100% { background-position: 0% 50% } }
-        .side-ad { width: 270px; background-image: linear-gradient(120deg, var(--a), var(--b), var(--a)); background-size: 220% 220%; animation: side-ad-float 4.6s ease-in-out infinite, side-ad-wiggle 7s ease-in-out infinite, side-ad-shift 12s ease infinite; transition: filter .2s; }
-        .side-ad:hover { filter: brightness(1.12); animation-play-state: paused; }
-        @media (prefers-reduced-motion: reduce) { .side-ad { animation: none } }
-      `}</style>
-      <div className="pointer-events-auto fixed top-36 z-30 space-y-6" style={left}>
-        <Card ad={ads[0]} title={title} index={0} />
-        <Card ad={ads[1]} title={title} index={1} />
-      </div>
-      <div className="pointer-events-auto fixed top-[21rem] z-30 space-y-6" style={right}>
-        <Card ad={ads[2]} title={title} index={2} />
-        <Card ad={ads[3]} title={title} index={3} />
-      </div>
+      <style>{MOTION}</style>
+      {room.left !== null && (
+        <div className="pointer-events-auto fixed top-36 z-30 space-y-6" style={{ left: room.left }}>
+          <Card ad={ads[0]} title={title} index={0} />
+          <Card ad={ads[1]} title={title} index={1} />
+        </div>
+      )}
+      {room.right !== null && (
+        <div className="pointer-events-auto fixed top-36 z-30 space-y-6" style={{ left: room.right }}>
+          <Card ad={ads[2]} title={title} index={2} />
+          <Card ad={ads[3]} title={title} index={3} />
+        </div>
+      )}
     </div>,
     document.body,
   );
