@@ -13,3 +13,17 @@ export async function tidiedText(id: string): Promise<string | null> {
     return t.trim().length > 300 ? t : null;
   } catch { return null; }
 }
+
+/**
+ * A paper that was only scanned: the stored text is noise from reading the pictures ("Scanned by CamScanner", broken lines). The pictures of the
+ * pages are the real paper, so those are shown instead, in order, and the noise is left out of the page. The stored text is never changed.
+ */
+export function scanFirst<T extends { title?: string | null; content: string; original_notes?: string | null }>(a: T): T {
+  const noisy = /Visual Scan Archive/i.test(a.content) || (a.content.match(/Scanned by Cam\s?Scanner/gi) ?? []).length >= 3;
+  if (!noisy) return a;
+  const pages = String(a.original_notes ?? "").split(/\r?\n/).map((l) => l.trim()).filter((l) => /^!\[[^\]]*\]\([^\s)]+\)$/.test(l));
+  if (!pages.length) return a;
+  const heading = (a.title ?? "Past paper").replace(/\s+—\s+Past Paper Questions & Answers$/i, "").trim();
+  const intro = `This paper is shown as the original scanned pages (${pages.length}), in order. Tap a page to enlarge it.`;
+  return { ...a, content: [`## ${heading}`, intro, ...pages].join("\n\n") };
+}
