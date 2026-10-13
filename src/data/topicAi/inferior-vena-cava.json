@@ -1,0 +1,105 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The inferior vena cava (IVC) is the main conduit for systemic venous return from the lower body to the heart. Its anatomy, relations, and clinical significance—especially in thrombosis and compression—are essential for safe patient care.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The IVC is a large vein formed by the confluence of the common iliac veins. It ascends through the abdomen, crosses the liver, and empties into the right atrium.",
+   "b": [
+    "Key role in returning deoxygenated blood to the heart"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It runs posterior to the liver, anterior to the right kidney, and passes through the diaphragm at the caval opening.",
+   "b": [
+    "Crosses the hepatic hilum; lies above the right renal vein"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Adjacent structures include the liver, right kidney, right adrenal gland, and the aorta. It is closely related to the hepatic veins and the portal vein.",
+   "b": [
+    "Can be compressed by an enlarged uterus or abdominal masses"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The IVC receives tributaries from the hepatic veins, renal veins, adrenal veins, gonadal veins, and lumbar veins.",
+   "b": [
+    "Hepatic veins are the largest tributaries"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sympathetic fibers accompany the IVC, but it is not a major site of autonomic innervation."
+  },
+  {
+   "h": "Function",
+   "p": "It returns deoxygenated blood from the lower extremities, pelvis, and abdominal organs to the right atrium, maintaining preload."
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "IVC thrombosis (Budd‑Chiari syndrome) and compression by pregnancy or tumors are common causes of venous congestion.",
+   "b": [
+    "Thrombosis can lead to hepatic congestion and ascites"
+   ],
+   "t": [
+    {
+     "a": "Doppler ultrasound",
+     "b": "Detects IVC thrombus; confirms obstruction"
+    },
+    {
+     "a": "CT angiography",
+     "b": "Visualises IVC patency and identifies compression"
+    },
+    {
+     "a": "Venography",
+     "b": "Gold standard for detailed IVC mapping when non‑invasive imaging is inconclusive"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the IVC is the largest vein; its compression by a gravid uterus causes supine hypotensive syndrome. Budd‑Chiari presents with abdominal pain, ascites, and hepatomegaly.",
+   "b": [
+    "Supine hypotensive syndrome: left lateral tilt improves venous return"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute abdominal pain with ascites and hepatomegaly (Budd‑Chiari), sudden swelling of legs with pain (IVC thrombosis), or signs of pulmonary embolism after IVC thrombus"
+ ],
+ "faq": [
+  {
+   "q": "What causes the IVC to be compressed during pregnancy?",
+   "a": "The enlarged uterus pushes against the IVC, raising venous pressure in the legs."
+  },
+  {
+   "q": "How is IVC thrombosis diagnosed?",
+   "a": "With Doppler ultrasound or CT angiography to show a filling defect."
+  },
+  {
+   "q": "Why is the IVC important in cardiac output?",
+   "a": "It supplies the right atrium with blood; obstruction reduces preload and cardiac output."
+  }
+ ],
+ "exam": [
+  "Explain why the IVC is the preferred site for central venous access in adults.",
+  "Describe the clinical features and diagnostic workup of Budd‑Chiari syndrome.",
+  "Outline management steps for an IVC thrombus in a low‑resource setting."
+ ],
+ "related": [
+  "Portal vein",
+  "Hepatic veins",
+  "Renal veins",
+  "Venous thromboembolism",
+  "Supine hypotensive syndrome"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

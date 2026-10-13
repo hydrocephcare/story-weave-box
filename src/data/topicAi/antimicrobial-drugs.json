@@ -1,0 +1,151 @@
+{
+ "medical": true,
+ "subject": "Pharmacology",
+ "summary": "Antimicrobial drugs inhibit or kill pathogens. Clinicians choose agents based on likely organisms, site of infection, resistance patterns, and patient factors, then monitor response and toxicity.",
+ "aka": [
+  "antibiotics",
+  "antimicrobials",
+  "anti-infective agents"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Antimicrobials are medicines that prevent growth (bacteriostatic) or kill (bactericidal) microorganisms. Diagnosis of infection relies on clinical syndrome plus microbiologic confirmation when possible.",
+   "b": [
+    "Bacteriostatic: inhibits replication, requires immune clearance.",
+    "Bactericidal: kills organisms, useful in immunocompromised hosts."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Infection severity is staged by systemic response (e.g., SIRS, sepsis, septic shock) and organ dysfunction. This guides route (oral vs IV) and urgency of therapy.",
+   "b": [
+    "Mild: localized, no systemic signs.",
+    "Moderate: fever, tachycardia, but stable vitals.",
+    "Severe: sepsis or organ dysfunction."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the most probable pathogen based on infection site, patient risk factors, and local epidemiology, especially in low‑resource settings.",
+   "b": [
+    "Community‑acquired pneumonia: Streptococcus pneumoniae, atypicals.",
+    "UTI: Escherichia coli, especially in women.",
+    "Skin/soft‑tissue: Staphylococcus aureus, including MRSA.",
+    "TB, malaria, HIV‑related opportunists in endemic areas."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms reflect the infected organ (cough, dysuria, wound erythema) plus systemic signs (fever, chills, malaise). Recognize patterns that suggest resistant organisms.",
+   "b": [
+    "Rapid progression, high fever → possible resistant gram‑negatives.",
+    "Pustules, necrosis → consider MRSA or necrotizing fasciitis."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use targeted tests to confirm pathogen, assess severity, and guide drug choice.",
+   "t": [
+    {
+     "a": "Blood cultures",
+     "b": "Identify bloodstream pathogen; positive culture directs definitive therapy."
+    },
+    {
+     "a": "Urine dipstick & culture",
+     "b": "Detect bacteriuria; culture confirms organism and susceptibility."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows infiltrates; helps differentiate bacterial vs viral pneumonia."
+    },
+    {
+     "a": "Rapid antigen test for malaria",
+     "b": "Detects Plasmodium; guides antimalarial choice when co‑infection suspected."
+    },
+    {
+     "a": "If test unavailable",
+     "b": "Rely on clinical syndrome, local resistance patterns, and start empiric therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify signs that indicate imminent deterioration or need for escalation.",
+   "b": [
+    "Persistent hypotension despite fluids.",
+    "Rising lactate >2 mmol/L.",
+    "Organ failure (renal, respiratory, mental status)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Start empiric therapy promptly, then de‑escalate based on culture results and patient response.",
+   "b": [
+    "Broad‑spectrum β‑lactam (e.g., ceftriaxone) for severe community infections.",
+    "Add vancomycin if MRSA risk high.",
+    "Use macrolide (erythromycin) or chloramphenicol for atypical pneumonia when macrolide resistance low.",
+    "Avoid chloramphenicol in neonates (gray baby syndrome) and in patients with bone marrow suppression."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑assess clinical response at 48‑72 h, adjust therapy, and educate on adherence and infection control.",
+   "b": [
+    "Switch to oral agents when stable and infection source controlled.",
+    "Vaccinate against pneumococcus and influenza to reduce future infections."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguish antimicrobial therapy from anti‑inflammatory or antiviral agents.",
+   "b": [
+    "Antivirals treat viruses; antibiotics do not.",
+    "Steroids reduce inflammation but do not eradicate bacteria."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Be aware of false‑negative cultures and atypical presentations.",
+   "b": [
+    "Prior antibiotics can sterilize cultures → rely on clinical judgment.",
+    "White‑blood‑cell count may be normal in early sepsis or immunocompromised patients."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Septic shock (hypotension unresponsive to fluids)",
+  "Rapid respiratory failure",
+  "Altered mental status"
+ ],
+ "faq": [
+  {
+   "q": "Why choose a bactericidal over a bacteriostatic drug?",
+   "a": "Bactericidal agents are preferred when host immunity is weak or infection is in sterile sites."
+  },
+  {
+   "q": "When can oral antibiotics replace IV therapy?",
+   "a": "When the patient is afebrile, tolerating oral intake, and infection source is controlled."
+  },
+  {
+   "q": "What is the risk of using chloramphenicol?",
+   "a": "It can cause bone‑marrow suppression and gray‑baby syndrome; reserve for situations with no alternatives."
+  }
+ ],
+ "exam": [
+  "Explain how you would choose empiric antibiotics for a patient with severe community‑acquired pneumonia in a low‑resource setting.",
+  "List the red‑flag signs that indicate progression from sepsis to septic shock.",
+  "Describe how prior antibiotic use can affect culture results and subsequent management."
+ ],
+ "related": [
+  "Antibiotic resistance",
+  "Sepsis",
+  "Pharmacokinetics",
+  "Infection control",
+  "Vaccination"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

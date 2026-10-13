@@ -1,0 +1,158 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Benign prostatic hyperplasia is an age‑related, androgen‑driven growth of prostate tissue that narrows the urethra, causing urinary symptoms. Diagnosis relies on history, digital rectal exam, PSA, and imaging when needed. Management balances symptom relief, medication choice, and monitoring for complications.",
+ "aka": [
+  "Nodular hyperplasia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "BPH is a non‑cancerous proliferation of stromal and glandular cells in the transitional zone, driven by dihydrotestosterone. It is diagnosed clinically and confirmed by prostate volume and PSA trends.",
+   "b": [
+    "Age >40, male",
+    "Lower urinary tract symptoms (LUTS)",
+    "Digital rectal exam (DRE) shows a firm, nodular prostate"
+   ],
+   "t": [
+    {
+     "a": "PSA",
+     "b": "Is PSA elevated in BPH? PSA rises with prostate size; a value >4 ng/mL warrants further workup for cancer."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the International Prostate Symptom Score (IPSS) and prostate volume. Staging guides treatment intensity.",
+   "b": [
+    "IPSS 0–7 mild",
+    "IPSS 8–19 moderate",
+    "IPSS 20–35 severe"
+   ],
+   "t": [
+    {
+     "a": "IPSS score",
+     "b": "Quantifies symptom burden; higher scores predict need for medication or surgery."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary driver is androgen excess, especially DHT, acting on androgen receptors in prostatic cells. Secondary factors include aging, inflammation, and comorbidities.",
+   "b": [
+    "DHT from testosterone via 5α‑reductase type 2",
+    "Age‑related stromal growth",
+    "Chronic prostatitis",
+    "Metabolic syndrome"
+   ],
+   "t": [
+    {
+     "a": "5α‑reductase activity",
+     "b": "Increased activity leads to higher DHT; explains why 5α‑reductase inhibitors work."
+    },
+    {
+     "a": "Inflammatory markers",
+     "b": "Elevated CRP or ESR may suggest prostatitis contributing to symptoms."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report a slow, progressive urinary pattern with both obstructive and irritative features.",
+   "b": [
+    "Weak stream, hesitancy, incomplete emptying",
+    "Frequent nocturia, urgency, frequency"
+   ],
+   "t": [
+    {
+     "a": "Symptom diary",
+     "b": "Helps differentiate obstructive vs irritative patterns."
+    },
+    {
+     "a": "Voiding chart",
+     "b": "Quantifies flow rate and residual volume."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests are ordered to rule out cancer, assess severity, and guide therapy.",
+   "t": [
+    {
+     "a": "PSA",
+     "b": "Distinguishes BPH from prostate cancer; a sharp rise may indicate cancer."
+    },
+    {
+     "a": "Transrectal ultrasound",
+     "b": "Measures volume; guides surgical planning."
+    },
+    {
+     "a": "Uroflowmetry",
+     "b": "Assesses peak flow rate; <10 mL/s suggests obstruction."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs warrant urgent evaluation to prevent serious outcomes.",
+   "b": [
+    "Acute urinary retention",
+    "Severe hematuria",
+    "Rapid PSA rise",
+    "Worsening pain or fever"
+   ],
+   "t": [
+    {
+     "a": "Acute retention",
+     "b": "Requires catheterization to avoid bladder damage."
+    },
+    {
+     "a": "Hematuria",
+     "b": "May signal infection, stone, or malignancy."
+    },
+    {
+     "a": "Rapid PSA increase",
+     "b": "Suggests possible cancer; needs prompt biopsy."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute urinary retention",
+  "Severe hematuria",
+  "Rapid PSA rise",
+  "Worsening pain or fever"
+ ],
+ "faq": [
+  {
+   "q": "Can BPH turn into prostate cancer?",
+   "a": "No, BPH is benign; however, both share risk factors and PSA can be elevated in either."
+  },
+  {
+   "q": "Is surgery always needed?",
+   "a": "No, most patients respond to medication; surgery is reserved for refractory or severe cases."
+  },
+  {
+   "q": "Do herbal remedies help?",
+   "a": "Evidence is limited; some may lower DHT but can interact with drugs and are not first‑line."
+  }
+ ],
+ "exam": [
+  "Explain how DHT drives prostate growth and why 5α‑reductase inhibitors are effective.",
+  "Describe the IPSS scoring system and how it guides treatment choice.",
+  "Outline the red flags that would prompt immediate urological referral in a patient with LUTS."
+ ],
+ "related": [
+  "Prostate cancer",
+  "Prostatitis",
+  "Urethral stricture",
+  "Bladder outlet obstruction",
+  "5α‑reductase inhibitors",
+  "Alpha‑blockers",
+  "PSA testing"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

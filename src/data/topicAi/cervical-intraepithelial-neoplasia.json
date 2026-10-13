@@ -1,0 +1,180 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Cervical intraepithelial neoplasia (CIN) is a spectrum of precancerous squamous lesions driven mainly by high‑risk HPV. Clinicians must assess severity, risk factors, and choose treatment that balances cure with preservation of fertility.",
+ "aka": [
+  "Squamous intraepithelial lesion (SIL)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "CIN refers to dysplastic changes in cervical squamous epithelium, graded I–III by the extent of epithelial involvement. Diagnosis requires colposcopy‑guided biopsy and histologic review for koilocytosis and nuclear atypia.",
+   "b": [
+    "CIN I: <1/3 thickness",
+    "CIN II: 1/3–2/3 thickness",
+    "CIN III: >2/3 thickness"
+   ],
+   "t": [
+    {
+     "a": "Pap smear",
+     "b": "Screen for abnormal cytology; LSIL suggests CIN I, HSIL suggests CIN II/III."
+    },
+    {
+     "a": "Colposcopy",
+     "b": "Visual assessment of acetowhite changes; guides biopsy site."
+    },
+    {
+     "a": "Biopsy histology",
+     "b": "Confirms grade, shows koilocytes, nuclear enlargement, and mitotic activity."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The CIN grading system directly correlates with risk of progression to invasive cancer. CIN III has the highest risk and often requires definitive treatment.",
+   "b": [
+    "CIN I: 5–10% progression risk",
+    "CIN II: 15–20% progression risk",
+    "CIN III: 30–50% progression risk"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "High‑risk human papillomavirus (HPV 16, 18) is the primary cause. Other factors modify risk, especially in low‑resource settings.",
+   "b": [
+    "HPV infection",
+    "Chronic immunosuppression (HIV)",
+    "Smoking",
+    "Early sexual activity",
+    "Multiple partners",
+    "Low socioeconomic status"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Most patients are asymptomatic. When symptoms occur, they are nonspecific: postcoital bleeding, abnormal discharge, or pelvic pain.",
+   "b": [
+    "Postcoital bleeding",
+    "Intermenstrual spotting",
+    "Vaginal discharge"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A stepwise approach ensures accurate staging and guides treatment, especially where resources are limited.",
+   "t": [
+    {
+     "a": "HPV DNA testing",
+     "b": "Detects high‑risk genotypes; positive in >90% of CIN II/III."
+    },
+    {
+     "a": "Colposcopic impression",
+     "b": "Assesses lesion size, margins, and vascular pattern."
+    },
+    {
+     "a": "Biopsy histology",
+     "b": "Confirms grade and rule out invasive disease."
+    },
+    {
+     "a": "MRI/CT (if invasive suspected)",
+     "b": "Evaluates parametrial extension."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent referral is needed if invasive cancer is suspected or if complications arise.",
+   "b": [
+    "Sudden heavy bleeding",
+    "Pelvic pain with fever",
+    "Signs of anemia",
+    "Rapidly enlarging mass"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment is tailored to grade, patient age, and fertility goals. The goal is complete removal while minimizing morbidity.",
+   "b": [
+    "CIN I: Observation with repeat screening",
+    "CIN II/III: Excisional procedures (LEEP, cold knife conization)",
+    "HIV‑positive: Consider earlier treatment"
+   ],
+   "t": [
+    {
+     "a": "LEEP",
+     "b": "Positive: Excision removes dysplasia; negative: consider repeat colposcopy."
+    },
+    {
+     "a": "Cold knife conization",
+     "b": "Positive: Provides margin assessment; negative: may impair future pregnancy."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular surveillance prevents recurrence and progression. Prevention focuses on HPV vaccination and safe sexual practices.",
+   "b": [
+    "Pap every 3–5 years after treatment",
+    "HPV vaccine for ages 9–26",
+    "Barrier contraception"
+   ],
+   "t": [
+    {
+     "a": "Post‑treatment Pap",
+     "b": "Detects residual or recurrent disease; abnormal results warrant repeat colposcopy."
+    },
+    {
+     "a": "HPV testing post‑treatment",
+     "b": "Positive high‑risk HPV indicates higher recurrence risk."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic CIN on cytology or colposcopy.",
+   "b": [
+    "Cervical adenocarcinoma in situ",
+    "Infectious cervicitis",
+    "Reactive epithelial changes"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be falsely normal or abnormal, especially in resource‑limited labs.",
+   "b": [
+    "HPV testing may miss low‑viral‑load infections",
+    "Colposcopic assessment subjective; inter‑observer variability",
+    "Biopsy sampling error if lesion is multifocal"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden heavy bleeding",
+  "Pelvic pain with fever",
+  "Rapidly enlarging cervical mass"
+ ],
+ "faq": [
+  {
+   "q": "Can CIN ever regress on its own?",
+   "a": "Yes, especially CIN I in young women; immune clearance of HPV can lead to regression."
+  },
+  {
+   "q": "Is HPV vaccination effective after CIN diagnosis?",
+   "a": "It prevents new infections but does not treat existing lesions; it still reduces recurrence risk."
+  },
+  {
+   "q": "What is the risk of progression from CIN I to invasive cancer?",
+   "a": "Approximately 5–10% over 10–20 years; most regress spontaneously."
+  }
+ ],
+ "exam": [
+  "Explain the rationale for choosing LEEP over cold knife conization in a 28‑year‑old woman desiring future fertility.",
+  "Describe how HIV infection modifies the natural history of CIN and its management.",
+  "Outline the follow‑up schedule for a patient treated for CIN III with a cold knife conization."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,131 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Neisseria meningitidis is a gram‑negative diplococcus that can rapidly cause meningitis or septicemia, especially in adolescents and young adults. Early recognition and prompt treatment are lifesaving.",
+ "aka": [
+  "Meningococcus",
+  "N. meningitidis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "N. meningitidis is a small, oxidase‑positive diplococcus that lives in the nasopharynx. It can invade the bloodstream and central nervous system, producing meningitis or meningococcemia.",
+   "b": [
+    "Gram‑negative, oxidase‑positive diplococcus",
+    "Encapsulated, polysaccharide capsule is main virulence factor",
+    "Capsule types A, B, C, W, Y"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The capsule protects against phagocytosis and complement. Pili and opacity proteins aid adhesion to mucosal cells.",
+   "b": [
+    "Polysaccharide capsule (serogroups)",
+    "Pili for adhesion",
+    "Opacity protein Opa for immune evasion"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission is via respiratory droplets. Colonisation is asymptomatic; invasive disease occurs when the bacterium breaches mucosal barriers.",
+   "b": [
+    "Close contact, crowded settings",
+    "Seasonal peaks in winter",
+    "High carriage in adolescents"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Acute meningitis and meningococcemia with petechial rash. Rapid progression can lead to shock, DIC, and adrenal hemorrhage (Waterhouse‑Friderichsen).",
+   "b": [
+    "Meningitis: fever, neck stiffness, altered mental status",
+    "Meningococcemia: petechiae, shock, DIC"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion plus rapid laboratory tests. CSF shows neutrophilic pleocytosis, low glucose, high protein. Blood cultures and PCR confirm.",
+   "b": [
+    "CSF Gram stain: gram‑negative diplococci"
+   ],
+   "t": [
+    {
+     "a": "CSF cell count",
+     "b": "Neutrophilic pleocytosis indicates bacterial meningitis; high WBC >1000/mm3 suggests severe infection"
+    },
+    {
+     "a": "CSF glucose",
+     "b": "Low (<40 mg/dL) indicates bacterial consumption"
+    },
+    {
+     "a": "CSF protein",
+     "b": "Elevated (>100 mg/dL) reflects blood‑brain barrier disruption"
+    },
+    {
+     "a": "Blood culture",
+     "b": "Positive in ~70% of meningococcemia cases; identifies serogroup"
+    },
+    {
+     "a": "PCR for N. meningitidis",
+     "b": "Rapid, high sensitivity; useful when antibiotics already started"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Empiric therapy with third‑generation cephalosporin plus doxycycline or rifampicin for contacts. Supportive care for shock and DIC. Vaccination prevents most serogroups.",
+   "b": [
+    "Cephalosporin (e.g., ceftriaxone) chosen for CNS penetration and low resistance"
+   ],
+   "t": [
+    {
+     "a": "Doxycycline",
+     "b": "Used for post‑exposure prophylaxis; oral route convenient in low‑resource settings"
+    },
+    {
+     "a": "Rifampicin",
+     "b": "Effective prophylaxis; avoid in patients with liver disease or drug interactions"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the classic triad of meningitis and the rapid progression to shock. Waterhouse‑Friderichsen is a medical emergency. Vaccination coverage gaps explain outbreaks.",
+   "b": [
+    "Waterhouse‑Friderichsen: adrenal hemorrhage causes sudden death"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly worsening headache, neck stiffness, fever, petechial rash, confusion, or shock"
+ ],
+ "faq": [
+  {
+   "q": "Can meningococcal disease be prevented?",
+   "a": "Yes, conjugate vaccines cover serogroups A, C, W, Y, and B in many countries. Routine childhood and adolescent immunisation reduces outbreaks."
+  },
+  {
+   "q": "What if a patient has already started antibiotics?",
+   "a": "PCR and antigen tests remain useful; blood cultures may be negative. Clinical diagnosis still guides treatment."
+  },
+  {
+   "q": "Why is a third‑generation cephalosporin preferred?",
+   "a": "It penetrates the CSF well, has broad activity against N. meningitidis, and has a favourable safety profile in children and adults."
+  }
+ ],
+ "exam": [
+  "Explain why a patient with sudden onset fever, neck stiffness, and petechial rash should be treated immediately for meningococcemia.",
+  "Describe the pathophysiology of Waterhouse‑Friderichsen syndrome and its clinical implications.",
+  "Outline the steps of post‑exposure prophylaxis for close contacts of a meningococcal case."
+ ],
+ "related": [
+  "Meningococcal vaccination",
+  "Waterhouse‑Friderichsen syndrome",
+  "Septic shock",
+  "Polysaccharide capsule"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

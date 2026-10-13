@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Platelet function is crucial for hemostasis, involving adhesion, aggregation, and release of factors. Disorders impair this process, leading to bleeding. Diagnosis involves assessing platelet number and function, with management focusing on the underlying cause and supportive measures.",
+ "aka": [
+  "Platelet disorders",
+  "Thrombocytopathy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Platelet function refers to the ability of platelets to stop bleeding by adhering to injured blood vessels, aggregating to form a plug, and releasing factors that promote clotting. Disorders of platelet function impair these processes, leading to excessive bleeding.",
+   "b": [
+    "Key functions: adhesion, aggregation, release, amplification.",
+    "Adhesion involves VWF binding to exposed subendothelium.",
+    "Aggregation forms the primary plug."
+   ],
+   "t": [
+    {
+     "a": "Platelet Count",
+     "b": "Assesses the number of platelets. A normal count does not exclude a functional defect."
+    },
+    {
+     "a": "Bleeding Time (historical)",
+     "b": "Measures the time taken for bleeding to stop after a standardized skin puncture. Assesses overall platelet function and small vessel integrity."
+    },
+    {
+     "a": "Platelet Function Analyzer (PFA-100)",
+     "b": "Tests platelet function under shear stress, mimicking conditions in injured vessels. Measures closure time."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Platelet function can be impaired by inherited disorders, acquired conditions, or medications. In low-resource settings, infections and chronic diseases are important considerations.",
+   "b": [
+    "Inherited: Glanzmann thrombasthenia, Bernard-Soulier syndrome.",
+    "Acquired: Uremia (renal failure), myeloproliferative disorders, myelodysplastic syndromes.",
+    "Medications: Aspirin, clopidogrel, NSAIDs.",
+    "Infections: HIV, malaria, viral infections.",
+    "Other: Liver disease, certain herbal remedies."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients typically present with a history of easy bruising, prolonged bleeding after minor injuries or surgery, nosebleeds, and bleeding gums. Petechiae may be present, but larger ecchymoses are more common than in coagulation factor deficiencies.",
+   "b": [
+    "Easy bruising (ecchymoses).",
+    "Prolonged bleeding from cuts.",
+    "Epistaxis (nosebleeds).",
+    "Gingival bleeding.",
+    "Menorrhagia (heavy menstrual bleeding)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm a platelet defect and identify the underlying cause. This includes assessing platelet number and function, and ruling out other bleeding disorders.",
+   "t": [
+    {
+     "a": "Complete Blood Count (CBC)",
+     "b": "Assesses platelet count and morphology. Also checks for anemia which can worsen bleeding symptoms."
+    },
+    {
+     "a": "Peripheral Blood Smear",
+     "b": "Examines platelet size and morphology, and can reveal abnormal platelet forms or other blood cell abnormalities."
+    },
+    {
+     "a": "Coagulation Profile (PT, aPTT, INR)",
+     "b": "Assesses the extrinsic and intrinsic pathways of coagulation. Helps differentiate platelet disorders from coagulation factor deficiencies."
+    },
+    {
+     "a": "PFA-100 or Platelet Aggregometry",
+     "b": "Specifically tests platelet aggregation in response to various agonists (ADP, collagen, epinephrine)."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe or spontaneous bleeding, particularly in critical areas like the brain or gastrointestinal tract, is a major concern. Complications arise from blood loss and the underlying cause.",
+   "b": [
+    "Intracranial hemorrhage.",
+    "Severe gastrointestinal bleeding.",
+    "Bleeding into joints (hemarthrosis) - less common than in hemophilia.",
+    "Complications from the underlying disease (e.g., liver failure, malignancy)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause, preventing bleeding, and managing acute bleeding episodes. This may involve medications to improve platelet function or replacement therapy.",
+   "b": [
+    "Treat underlying cause (e.g., optimize renal function, stop offending drug, treat infection).",
+    "Desmopressin (DDAVP): Can improve platelet adhesion in some mild disorders.",
+    "Platelet Transfusion: Used for severe bleeding or before invasive procedures. Concentrates platelets.",
+    "Antifibrinolytics (e.g., tranexamic acid): Can help stabilize clots, especially for mucosal bleeding."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Platelet function disorders can be mistaken for coagulation factor deficiencies, as both cause bleeding. Thrombocytopenia (low platelet count) is also a common cause of bleeding and must be differentiated.",
+   "b": [
+    "Coagulation factor deficiencies (e.g., hemophilia, von Willebrand disease).",
+    "Thrombocytopenia (low platelet count).",
+    "Vascular disorders (e.g., vasculitis)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal platelet count does not rule out a platelet function disorder. Similarly, normal coagulation tests (PT, aPTT) do not exclude bleeding due to platelet issues.",
+   "b": [
+    "Normal platelet count with significant bleeding.",
+    "Normal PT/aPTT in the presence of bleeding.",
+    "Effect of medications (e.g., aspirin) on PFA-100 results."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe headache or neurological changes.",
+  "Vomiting blood or coffee-ground material.",
+  "Black, tarry stools or bright red blood in stool.",
+  "Uncontrolled bleeding from a wound or injury.",
+  "Severe nosebleeds or gum bleeding that doesn't stop."
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between platelet count and platelet function?",
+   "a": "Platelet count measures the number of platelets, while platelet function assesses how well they work to stop bleeding."
+  },
+  {
+   "q": "Can aspirin cause bleeding problems?",
+   "a": "Yes, aspirin irreversibly inhibits platelet aggregation, increasing the risk of bleeding, especially in individuals with underlying platelet function defects."
+  },
+  {
+   "q": "Are platelet function disorders common?",
+   "a": "Acquired platelet dysfunction (e.g., due to uremia or medications) is more common than inherited disorders. Inherited disorders are rare but can cause significant bleeding."
+  }
+ ],
+ "exam": [
+  "How would you differentiate a platelet function disorder from a coagulation factor deficiency based on clinical presentation and initial investigations?",
+  "What are the key steps in platelet activation, and how can defects in these steps lead to bleeding?",
+  "Describe the role of von Willebrand factor (VWF) in platelet adhesion and how its dysfunction can present."
+ ],
+ "related": [
+  "Hemostasis",
+  "Thrombocytopenia",
+  "Coagulation Cascade",
+  "Von Willebrand Disease",
+  "Disseminated Intravascular Coagulation (DIC)",
+  "Anemia of Chronic Disease",
+  "Uremia"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

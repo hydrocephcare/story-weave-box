@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Cholecystitis is gallbladder inflammation, usually due to gallstones blocking the cystic duct. It causes severe right upper quadrant pain, fever, and nausea. Diagnosis involves imaging and clinical signs, with management often requiring surgery.",
+ "aka": [
+  "Gallbladder inflammation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cholecystitis is inflammation of the gallbladder, most commonly caused by a gallstone obstructing the cystic duct. Diagnosis relies on clinical presentation, laboratory tests, and imaging, particularly ultrasound.",
+   "b": [
+    "Almost always associated with gallstones.",
+    "A common surgical indication."
+   ],
+   "t": [
+    {
+     "a": "History and Physical Exam",
+     "b": "Assesses for characteristic symptoms like RUQ pain, fever, and nausea. Murphy's sign (inspiratory arrest on RUQ palpation) is suggestive of cholecystitis."
+    },
+    {
+     "a": "Abdominal Ultrasound",
+     "b": "Visualizes gallstones, gallbladder wall thickening, pericholecystic fluid, and ductal dilation."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Acute cholecystitis can be classified by severity. Mild cases involve localized inflammation, while severe cases can lead to gangrene, perforation, or systemic inflammatory response syndrome (SIRS).",
+   "b": [
+    "Mild (Stage I): Acute cholecystitis without organ dysfunction.",
+    "Moderate (Stage II): Acute cholecystitis with organ dysfunction.",
+    "Severe (Stage III): Acute cholecystitis with SIRS or organ failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The vast majority of cases are due to gallstones. Less common causes include infections, parasites, or ischemia, particularly in critically ill patients.",
+   "b": [
+    "Gallstones (calculous cholecystitis): Obstruction of the cystic duct.",
+    "Acalculous cholecystitis: Often seen in critically ill, post-operative, or trauma patients, possibly due to gallbladder stasis or ischemia.",
+    "Infections: Bacterial, viral (e.g., CMV in immunocompromised), or parasitic (e.g., Ascaris)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients typically present with persistent, severe pain in the right upper quadrant (RUQ) of the abdomen, often radiating to the right shoulder or back. Associated symptoms include fever, nausea, and vomiting.",
+   "b": [
+    "RUQ pain, constant and severe.",
+    "Fever.",
+    "Nausea and vomiting.",
+    "Anorexia."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A combination of laboratory tests and imaging is used to confirm the diagnosis, assess for complications, and guide management.",
+   "t": [
+    {
+     "a": "Complete Blood Count (CBC)",
+     "b": "Checks for elevated white blood cell count (leukocytosis), indicating infection or inflammation."
+    },
+    {
+     "a": "Liver Function Tests (LFTs)",
+     "b": "Assesses for elevated bilirubin and alkaline phosphatase, suggesting biliary obstruction or inflammation."
+    },
+    {
+     "a": "Amylase/Lipase",
+     "b": "Rules out concurrent pancreatitis, which can be caused by gallstones."
+    },
+    {
+     "a": "Abdominal Ultrasound",
+     "b": "Primary imaging modality to detect gallstones, gallbladder wall thickening, pericholecystic fluid, and bile duct dilation."
+    },
+    {
+     "a": "Hepatobiliary Iminodiacetic Acid (HIDA) Scan",
+     "b": "Assesses gallbladder function and cystic duct patency when ultrasound is equivocal."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from prolonged inflammation, ischemia, or infection, leading to serious conditions requiring urgent intervention.",
+   "b": [
+    "Gangrene and perforation of the gallbladder.",
+    "Peritonitis.",
+    "Cholecystoenteric fistula.",
+    "Gallstone ileus.",
+    "Cholangitis (infection of bile ducts).",
+    "Pancreatitis.",
+    "Sepsis."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Initial management focuses on supportive care and antibiotics, followed by definitive treatment, usually cholecystectomy.",
+   "b": [
+    "Fluid resuscitation and electrolyte correction.",
+    "Analgesia for pain control.",
+    "Antibiotics: Broad-spectrum coverage targeting common biliary pathogens (e.g., gram-negatives and anaerobes).",
+    "Cholecystectomy: Laparoscopic or open surgery to remove the gallbladder, typically performed within 24-72 hours of admission for acute cholecystitis.",
+    "Percutaneous cholecystostomy: Drainage of the gallbladder for patients too unstable for surgery."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "After cholecystectomy, most patients recover fully. Prevention focuses on managing risk factors for gallstone formation.",
+   "b": [
+    "Dietary modifications: Low-fat diet may help reduce symptoms.",
+    "Weight management.",
+    "Ursodeoxycholic acid: May be used for gallstone dissolution in select cases, though less common for acute cholecystitis."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions can mimic the symptoms of cholecystitis, requiring careful differentiation.",
+   "b": [
+    "Peptic ulcer disease.",
+    "Acute pancreatitis.",
+    "Appendicitis (especially if pain is atypical).",
+    "Hepatitis.",
+    "Biliary colic (uncomplicated gallstones).",
+    "Pyelonephritis.",
+    "Right lower lobe pneumonia."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings can be misleading, necessitating a comprehensive clinical assessment.",
+   "b": [
+    "Normal LFTs: Can occur in uncomplicated cholecystitis, especially early on.",
+    "Normal WBC count: Does not rule out cholecystitis, particularly in elderly or immunocompromised patients.",
+    "Ultrasound findings: Wall thickening can be seen in other conditions like ascites or hypoalbuminemia."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe, worsening abdominal pain.",
+  "High fever.",
+  "Jaundice (yellowing of skin or eyes).",
+  "Signs of sepsis (rapid heart rate, low blood pressure, confusion)."
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of cholecystitis?",
+   "a": "The most common cause is a gallstone blocking the cystic duct, leading to inflammation of the gallbladder."
+  },
+  {
+   "q": "What is Murphy's sign?",
+   "a": "Murphy's sign is the cessation of inspiration by the patient when the examiner palpates the right upper quadrant of the abdomen, suggestive of cholecystitis."
+  },
+  {
+   "q": "Can cholecystitis occur without gallstones?",
+   "a": "Yes, this is called acalculous cholecystitis and is less common, often occurring in critically ill patients."
+  }
+ ],
+ "exam": [
+  "How would you differentiate between acute cholecystitis and biliary colic?",
+  "What are the key investigations to confirm a diagnosis of acute cholecystitis, and what does each test tell you?",
+  "Describe the potential complications of untreated acute cholecystitis and why they are dangerous."
+ ],
+ "related": [
+  "Gallstones (Cholelithiasis)",
+  "Biliary Colic",
+  "Choledocholithiasis",
+  "Cholangitis",
+  "Pancreatitis",
+  "Gallbladder polyps",
+  "Hepatitis",
+  "Peptic Ulcer Disease"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

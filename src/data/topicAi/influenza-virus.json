@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Influenza virus is an RNA virus causing respiratory illness. Its surface proteins, hemagglutinin and neuraminidase, undergo rapid changes, leading to seasonal epidemics and occasional pandemics. Transmission is via respiratory droplets.",
+ "aka": [
+  "Flu virus"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Influenza virus belongs to the Orthomyxoviridae family and is a major cause of respiratory illness in humans. It is classified into types A, B, and C, with type A responsible for most epidemics and pandemics due to its ability to undergo significant genetic reassignment.",
+   "b": [
+    "RNA virus with a segmented genome.",
+    "Enveloped virus with surface glycoproteins."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Influenza viruses are enveloped RNA viruses with 8 segmented negative-sense RNA genomes. The envelope contains two key surface glycoproteins: hemagglutinin (HA), which mediates viral entry by binding to sialic acid receptors on host cells, and neuraminidase (NA), which facilitates viral release from infected cells.",
+   "b": [
+    "Family: Orthomyxoviridae.",
+    "Genome: Negative-sense single-stranded RNA, segmented (8 segments).",
+    "Envelope: Derived from host cell membrane.",
+    "Surface glycoproteins: Hemagglutinin (HA) and Neuraminidase (NA)."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Influenza virus primarily spreads through respiratory droplets produced when an infected person coughs, sneezes, or talks. The virus binds to sialic acid receptors on epithelial cells in the respiratory tract, enters the cell, replicates, and new virions are released, often facilitated by neuraminidase.",
+   "b": [
+    "Mode of transmission: Respiratory droplets.",
+    "Entry: HA binds to sialic acid receptors.",
+    "Replication: Occurs in host cell nucleus.",
+    "Release: NA cleaves sialic acid to release new virions."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Influenza virus causes acute respiratory illness ranging from mild symptoms to severe pneumonia and death. Symptoms typically include fever, cough, sore throat, muscle aches, and fatigue. Complications can include secondary bacterial pneumonia, exacerbation of chronic conditions, and encephalitis.",
+   "b": [
+    "Clinical syndrome: Influenza (flu).",
+    "Common symptoms: Fever, cough, sore throat, myalgia, headache.",
+    "Potential complications: Pneumonia, bronchitis, sinusitis, otitis media, myocarditis."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis is often clinical, based on characteristic symptoms during flu season. Laboratory confirmation can be done using rapid influenza diagnostic tests (RIDTs), RT-PCR, or viral culture, which are most accurate when performed early in the illness.",
+   "t": [
+    {
+     "a": "Rapid Influenza Diagnostic Tests (RIDTs)",
+     "b": "Detect viral antigens. Useful for quick diagnosis in outpatient settings, especially during peak season. A positive result is generally reliable; a negative result in a high-risk patient may warrant further testing."
+    },
+    {
+     "a": "Reverse Transcription Polymerase Chain Reaction (RT-PCR)",
+     "b": "Detects viral RNA. Highly sensitive and specific. Confirms influenza infection and can identify specific strains. Best performed within the first few days of illness."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Antiviral medications, such as neuraminidase inhibitors, can reduce the severity and duration of illness if started within 48 hours of symptom onset. Vaccination is the primary method of prevention, targeting circulating strains predicted to be most common.",
+   "b": [
+    "Antivirals: Neuraminidase inhibitors (e.g., oseltamivir) block viral release.",
+    "Prevention: Annual influenza vaccination.",
+    "Supportive care: Rest, hydration, antipyretics."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Understanding antigenic variation (drift and shift) is crucial for explaining influenza epidemics and pandemics. Recognition of clinical signs and prompt initiation of antiviral therapy in high-risk individuals are key clinical skills.",
+   "b": [
+    "Antigenic drift: Minor changes in HA/NA leading to seasonal epidemics.",
+    "Antigenic shift: Major reassortment of viral genes, causing pandemics.",
+    "Clinical suspicion is key, especially during flu season."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Difficulty breathing or shortness of breath",
+  "Chest pain or pressure",
+  "Sudden dizziness or confusion",
+  "Severe or persistent vomiting",
+  "High fever that doesn't respond to medication"
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between antigenic drift and antigenic shift?",
+   "a": "Antigenic drift involves small, gradual changes in viral surface proteins, leading to seasonal flu. Antigenic shift involves major changes, often through reassortment of gene segments, which can cause pandemics."
+  },
+  {
+   "q": "Why is the flu vaccine updated annually?",
+   "a": "The vaccine is updated annually to match the circulating influenza strains, which change due to antigenic drift and shift, ensuring better protection against the most likely viruses."
+  },
+  {
+   "q": "Can influenza be treated with antibiotics?",
+   "a": "No, influenza is caused by a virus, so antibiotics, which target bacteria, are ineffective. Antiviral medications are used to treat influenza."
+  }
+ ],
+ "exam": [
+  "Explain the mechanisms of antigenic drift and shift and their clinical significance.",
+  "Describe the role of hemagglutinin and neuraminidase in the influenza virus life cycle.",
+  "What are the key clinical features of influenza, and which patients are at highest risk for complications?"
+ ],
+ "related": [
+  "Viral Respiratory Infections",
+  "Epidemiology of Infectious Diseases",
+  "Vaccine Development",
+  "Antiviral Medications",
+  "Public Health Surveillance",
+  "Pneumonia",
+  "Bronchiolitis"
+ ],
+ "kind": "microbe",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

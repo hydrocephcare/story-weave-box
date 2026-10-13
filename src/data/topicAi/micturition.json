@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Micturition is the process of expelling urine from the bladder, involving coordinated muscle contractions and relaxations. It is a reflex controlled by the spinal cord, but modulated by higher brain centers. Dysfunction can lead to incontinence or retention.",
+ "aka": [
+  "Urination",
+  "Voiding"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Micturition is the physiological process by which the urinary bladder empties when it becomes filled. It is a complex reflex involving both involuntary autonomic control and voluntary somatic control, allowing for conscious regulation of when and where urination occurs. Understanding this process is crucial for diagnosing and managing various urinary disorders.",
+   "b": [
+    "The bladder stores urine until a suitable time for expulsion.",
+    "The process involves contraction of the detrusor muscle and relaxation of urethral sphincters.",
+    "Both the nervous system and muscle function are essential for proper micturition."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "The micturition reflex is primarily a spinal cord-mediated process, controlled by autonomic and somatic nerves. As the bladder fills, stretch receptors in its wall send signals to the sacral spinal cord. This initiates a reflex arc that, if unopposed, leads to bladder contraction and sphincter relaxation.",
+   "b": [
+    "Bladder filling activates stretch receptors in the detrusor muscle.",
+    "Afferent signals travel via pelvic nerves to the sacral spinal cord (S2-S4).",
+    "Parasympathetic efferent fibers (pelvic nerves) stimulate detrusor contraction.",
+    "Sympathetic efferent fibers (hypogastric nerves) inhibit detrusor contraction and stimulate internal urethral sphincter contraction during filling.",
+    "Somatic efferent fibers (pudendal nerve) control the external urethral sphincter, allowing voluntary control."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "While the basic micturition reflex is spinal, higher brain centers exert significant control, allowing for voluntary initiation or inhibition of urination. This supraspinal control ensures social continence and proper bladder emptying.",
+   "b": [
+    "The pontine micturition center (PMC) in the brainstem coordinates detrusor contraction and sphincter relaxation.",
+    "Cerebral cortex provides voluntary control, overriding the reflex until a convenient time.",
+    "Loss of supraspinal inhibition can lead to neurogenic bladder and urinary frequency."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Dysfunction in any part of the micturition pathway can lead to problems with urine storage or emptying. These issues can range from minor inconvenience to severe health risks, such as kidney damage from chronic retention.",
+   "b": [
+    "Urinary tract infections (UTIs) can cause painful micturition (dysuria) and frequency.",
+    "Pelvic organ prolapse, like a cystocele, can prevent complete bladder emptying in women.",
+    "Neurological conditions can disrupt nerve signals, leading to incontinence or retention.",
+    "Obstruction, such as an enlarged prostate, can impede urine flow."
+   ],
+   "t": [
+    {
+     "a": "Urinalysis",
+     "b": "Answers: Is there an infection or other abnormalities in the urine? Result: Presence of white cells and bacteria suggests a urinary tract infection (UTI)."
+    },
+    {
+     "a": "Post-void residual volume (PVR)",
+     "b": "Answers: How much urine remains in the bladder after voiding? Result: High PVR indicates incomplete bladder emptying, suggesting obstruction or bladder muscle weakness."
+    },
+    {
+     "a": "Urodynamic studies",
+     "b": "Answers: How well does the bladder store and empty urine? Result: Can identify detrusor overactivity, sphincter dysfunction, or bladder outlet obstruction."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding micturition is vital for diagnosing and managing common clinical conditions. Symptoms like painful micturition, urinary frequency, and incontinence are frequent presentations in primary care and specialized clinics.",
+   "b": [
+    "Painful micturition (dysuria) with fever suggests a urinary tract infection, common in children like Wairimu.",
+    "Increased frequency of micturition can be due to bladder congestion or neurogenic bladder.",
+    "Micturition syncope is a type of vasovagal syncope triggered by the act of urination.",
+    "Cystocele, from pelvic support relaxation, can cause incomplete bladder emptying and urinary symptoms."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "For exams, focus on the neural pathways and the interplay between voluntary and involuntary control. Be prepared to explain how different pathologies affect the micturition reflex.",
+   "b": [
+    "Remember the sacral spinal cord (S2-S4) as the primary reflex center.",
+    "Differentiate between sympathetic (storage) and parasympathetic (voiding) roles.",
+    "Understand how supraspinal centers modulate the basic reflex."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden inability to urinate (acute urinary retention)",
+  "Severe pain during urination accompanied by fever and chills",
+  "Blood in the urine (hematuria)",
+  "New onset of incontinence or significant changes in urination patterns"
+ ],
+ "faq": [
+  {
+   "q": "What is the detrusor muscle?",
+   "a": "The detrusor muscle is the smooth muscle forming the wall of the urinary bladder. Its contraction expels urine during micturition."
+  },
+  {
+   "q": "What is the difference between the internal and external urethral sphincters?",
+   "a": "The internal sphincter is involuntary smooth muscle, while the external sphincter is voluntary skeletal muscle, allowing conscious control over urination."
+  },
+  {
+   "q": "Why do pregnant women experience increased urinary frequency?",
+   "a": "Increased frequency is common in early pregnancy due to hormonal changes and uterine pressure on the bladder. It can return late in pregnancy when the fetal head descends."
+  }
+ ],
+ "exam": [
+  "Describe the neural pathways involved in the micturition reflex, distinguishing between the storage and voiding phases.",
+  "A patient presents with urinary incontinence. Discuss the potential physiological mechanisms that could be disrupted.",
+  "Explain how higher brain centers modulate the basic spinal micturition reflex and the clinical implications of their dysfunction."
+ ],
+ "related": [
+  "Urinary Tract Infection",
+  "Neurogenic Bladder",
+  "Urinary Incontinence",
+  "Urinary Retention",
+  "Autonomic Nervous System",
+  "Pelvic Organ Prolapse",
+  "Kidney Physiology",
+  "Vasovagal Syncope"
+ ],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

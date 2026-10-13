@@ -1,0 +1,143 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Breast carcinoma is a malignant epithelial tumour of the breast, most often invasive ductal carcinoma. Diagnosis relies on imaging, core biopsy and histologic grading, while staging uses the TNM system. Management integrates surgery, systemic therapy and radiotherapy based on tumour biology.",
+ "aka": [
+  "Breast cancer",
+  "Invasive ductal carcinoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Breast carcinoma is a malignant tumour arising from breast epithelium, usually ductal. Diagnosis starts with a palpable lump or imaging abnormality, confirmed by core needle biopsy and histology.",
+   "b": [
+    "Imaging: mammogram, ultrasound, MRI"
+   ],
+   "t": [
+    {
+     "a": "Core needle biopsy",
+     "b": "Positive for invasive carcinoma confirms diagnosis"
+    },
+    {
+     "a": "Immunohistochemistry (ER, PR, HER2/neu, Ki‑67)",
+     "b": "Determines prognosis and systemic therapy options"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the AJCC TNM system, incorporating tumour size (T), nodal involvement (N) and metastasis (M). Grade (G) reflects histologic differentiation and is added to the prognostic score.",
+   "b": [
+    "T1–T4: tumour size and extent"
+   ],
+   "t": [
+    {
+     "a": "Sentinel lymph node biopsy",
+     "b": "Positive nodes upstage the disease and guide adjuvant therapy"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The leading risk factors are female sex, age, family history, BRCA mutations, early menarche, late menopause, obesity and alcohol. Hormonal exposure and reproductive history are key.",
+   "b": [
+    "Reproductive history: early menarche, late menopause"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often notice a painless lump; skin changes (peau d’orange), nipple retraction or discharge may occur, especially in inflammatory carcinoma.",
+   "b": [
+    "Breast pain (less common)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond core biopsy, imaging and IHC guide treatment. In low‑resource settings, ultrasound and clinical exam remain vital.",
+   "b": [
+    "Clinical breast exam"
+   ],
+   "t": [
+    {
+     "a": "Mammogram",
+     "b": "Dense breast tissue may mask lesions; repeat imaging or ultrasound is needed"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Benign cysts appear anechoic; solid masses warrant biopsy"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid growth, ulceration, fever, or systemic symptoms suggest aggressive disease or metastasis. Complications include local invasion and distant spread.",
+   "b": [
+    "Bone pain (possible metastasis)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment is multimodal: surgery (lumpectomy or mastectomy), systemic therapy (hormonal, HER2‑targeted, chemotherapy) and radiotherapy. Choice depends on tumour biology and stage.",
+   "b": [
+    "Supportive care: pain control, psychosocial support"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular clinical exams and annual mammograms after treatment reduce recurrence risk. Lifestyle changes and prophylactic surgery are options for high‑risk patients.",
+   "b": [
+    "Risk‑reduction mastectomy for BRCA carriers"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Benign breast lesions such as fibroadenoma, cysts, and mastitis can mimic carcinoma clinically.",
+   "b": [
+    "Mastitis – erythema, warmth, fever"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Dense breast tissue can mask lesions on mammography; low Ki‑67 may underestimate proliferation in aggressive tumours.",
+   "b": [
+    "Low Ki‑67 in triple‑negative tumours – may still be aggressive"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly enlarging breast lump",
+  "Breast ulceration or nipple discharge",
+  "Unexplained weight loss or bone pain",
+  "Sudden onset of breast pain with fever"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common type of breast carcinoma?",
+   "a": "Invasive ductal carcinoma accounts for about 70–80% of cases."
+  },
+  {
+   "q": "Can breast cancer be cured?",
+   "a": "Early‑stage disease is often curable with surgery and adjuvant therapy; advanced disease is managed palliatively."
+  },
+  {
+   "q": "Why is hormone therapy used?",
+   "a": "ER‑positive tumours rely on estrogen; blocking its action reduces tumour growth."
+  }
+ ],
+ "exam": [
+  "Explain how the TNM staging system informs treatment decisions for breast carcinoma.",
+  "Describe the role of hormone receptors and HER2 status in selecting systemic therapy.",
+  "Outline the key clinical features that differentiate inflammatory breast carcinoma from other breast lesions."
+ ],
+ "related": [
+  "Breast imaging",
+  "Breast surgery",
+  "Breast radiotherapy",
+  "Hormone‑receptor testing",
+  "HER2‑targeted therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}
