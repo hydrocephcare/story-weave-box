@@ -1,0 +1,36 @@
+name: Site health check
+
+# Opens real pages of the live site in a browser, at phone and desktop width, and fails when anything is broken:
+# script errors, failed requests, empty pages, placeholders that never fill in, sideways scrolling, missing titles.
+# It runs after every deploy, every morning, and on demand (Actions > Site health check > Run workflow).
+# A failed run is e-mailed to you by GitHub, and the log lists exactly which page and what is wrong.
+on:
+  deployment_status:
+  schedule:
+    - cron: "30 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-audit
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    if: github.event_name != 'deployment_status' || github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Give the new deploy a minute to settle
+        if: github.event_name == 'deployment_status'
+        run: sleep 60
+      - name: Check the pages
+        run: node scripts/audit/site-audit.mjs https://www.ompathstudy.com
+        env:
+          CHROME_PATH: google-chrome

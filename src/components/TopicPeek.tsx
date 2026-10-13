@@ -130,9 +130,9 @@ export default function TopicPeekHost() {
               {peek.image && <img src={peek.image.u} alt={peek.image.title} className="mt-4 max-h-44 w-full rounded-2xl border border-border bg-white object-contain" loading="lazy" />}
               {peek.summary && <p className="mt-4 text-[17px] leading-relaxed text-foreground/85">{peek.summary}</p>}
               {peek.points.length > 0 && (
-                <ul className="mt-4 space-y-3">
+                <ul className="mt-6 space-y-6">
                   {peek.points.map((p) => (
-                    <li key={p.h} className="rounded-xl bg-muted/60 p-3.5"><p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{p.h}</p><p className="mt-1 text-[15px] leading-snug text-foreground/90">{p.t}</p></li>
+                    <li key={p.h}><p className="font-serif text-lg font-bold text-foreground">{p.h}</p><p className="mt-1 text-[16px] leading-relaxed text-foreground/80">{p.t}</p></li>
                   ))}
                 </ul>
               )}

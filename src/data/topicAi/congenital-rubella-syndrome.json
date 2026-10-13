@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Rubella virus infection during early pregnancy can cause congenital rubella syndrome, presenting with sensorineural deafness, cataracts, heart defects and blueberry‑muffin rash. Early recognition and prevention are key.",
+ "aka": [
+  "Rubella congenital infection"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Rubella is a togavirus transmitted by respiratory droplets. In pregnancy, especially the first trimester, it can cross the placenta and damage the fetus.",
+   "b": [
+    "Mild rash in children; severe in fetus"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Rubella is a single‑stranded, positive‑sense RNA virus with a lipid envelope. It replicates in the cytoplasm and spreads via respiratory secretions."
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Human-to-human spread through droplets; incubation 14–21 days. The virus infects epithelial cells, spreads to lymphoid tissue, then to the fetus via the placenta.",
+   "b": [
+    "No animal reservoir"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Congenital rubella syndrome (CRS) results from maternal infection in the first trimester. Classic triad: sensorineural deafness, cataracts, patent ductus arteriosus. Other findings include blueberry‑muffin rash, hepatosplenomegaly, growth restriction.",
+   "b": [
+    "Risk decreases after 20 weeks"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis is clinical plus laboratory confirmation. Maternal serology (IgM, IgG) and PCR; fetal ultrasound for structural anomalies; newborn hearing and eye exams.",
+   "t": [
+    {
+     "a": "Maternal rubella IgM",
+     "b": "Positive IgM indicates recent infection; supports CRS risk"
+    },
+    {
+     "a": "Maternal rubella IgG",
+     "b": "IgG alone suggests past infection; absence of IgM reduces CRS risk"
+    },
+    {
+     "a": "PCR of maternal or fetal sample",
+     "b": "Detects viral RNA; confirms active infection"
+    },
+    {
+     "a": "Newborn hearing test",
+     "b": "Identifies sensorineural deafness early"
+    },
+    {
+     "a": "Ophthalmologic exam",
+     "b": "Detects cataracts or retinopathy"
+    },
+    {
+     "a": "Echocardiogram",
+     "b": "Reveals PDA or other congenital heart defects"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "No specific antiviral for rubella. Management focuses on supportive care and prevention of complications. Vaccination of women of childbearing age is the cornerstone of control.",
+   "b": [
+    "Avoid live vaccines in pregnancy"
+   ],
+   "t": [
+    {
+     "a": "Vaccination (MMR)",
+     "b": "Prevents maternal infection; contraindicated in pregnancy"
+    },
+    {
+     "a": "Antibiotics for secondary bacterial infections",
+     "b": "Treat complications like pneumonia"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the classic triad and blueberry‑muffin rash. Maternal infection before 20 weeks carries the highest risk. Prevention via vaccination is the most effective strategy.",
+   "b": [
+    "First‑trimester infection = highest risk"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hearing loss, cataracts, heart murmurs, or unexplained rash in a newborn",
+  "Maternal rubella infection during pregnancy"
+ ],
+ "faq": [
+  {
+   "q": "Can rubella be treated with antivirals?",
+   "a": "No specific antiviral exists; treatment is supportive."
+  },
+  {
+   "q": "Is the MMR vaccine safe in pregnancy?",
+   "a": "No, it is a live vaccine and is contraindicated during pregnancy."
+  },
+  {
+   "q": "What is the blueberry‑muffin rash?",
+   "a": "It is extramedullary hematopoiesis seen as purplish skin lesions in infants with CRS."
+  }
+ ],
+ "exam": [
+  "Describe the classic triad of congenital rubella syndrome and explain why first‑trimester infection is most dangerous.",
+  "Explain the rationale for avoiding the MMR vaccine during pregnancy and how to counsel a woman of childbearing age."
+ ],
+ "related": [
+  "Rubella virus",
+  "Congenital infections",
+  "Vaccination in pregnancy",
+  "Sensorineural hearing loss",
+  "Patent ductus arteriosus"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

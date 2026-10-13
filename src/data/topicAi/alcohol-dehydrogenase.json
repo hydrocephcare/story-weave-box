@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "subject": "Biochemistry & genetics",
+ "summary": "Alcohol dehydrogenase (ADH) is a liver enzyme that oxidises ethanol to acetaldehyde, generating NADH. Its activity influences intoxication, metabolism of other alcohols, and clinical toxicology.",
+ "aka": [
+  "Alcohol dehydrogenase"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "ADH is a zinc‑dependent enzyme found mainly in hepatocyte cytosol. It catalyses the first step of ethanol metabolism, converting ethanol to acetaldehyde while reducing NAD+ to NADH.",
+   "b": [
+    "Three major isoforms (ADH1, ADH2, ADH3) differ in affinity for ethanol.",
+    "Genetic polymorphisms affect drinking behaviour and risk of alcohol‑related disease."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Ethanol binds the active site, zinc assists hydride transfer to NAD+, producing acetaldehyde and NADH. The reaction is reversible but in vivo proceeds forward because acetaldehyde is rapidly removed by aldehyde dehydrogenase (ALDH).",
+   "b": [
+    "High NADH/NAD+ ratio drives fatty acid synthesis → hepatic steatosis.",
+    "Acetaldehyde is toxic; accumulation causes flushing, nausea, and tissue injury."
+   ],
+   "t": [
+    {
+     "a": "Serum gamma‑glutamyl transferase (GGT)",
+     "b": "Is chronic ADH activity up‑regulated? Elevated GGT suggests sustained alcohol use."
+    },
+    {
+     "a": "Blood ethanol level",
+     "b": "How much substrate is present for ADH? Correlates with clinical intoxication."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "ADH expression is induced by chronic ethanol exposure via transcription factors (e.g., HNF‑4α). Acute regulation occurs through NAD+/NADH ratio and substrate availability.",
+   "b": [
+    "Chronic drinkers have higher hepatic ADH activity.",
+    "Acute binge drinking temporarily saturates ADH, leading to higher blood ethanol."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Deficient ALDH (e.g., genetic ALDH2*2) leads to acetaldehyde buildup, causing facial flushing and increased cancer risk. Over‑active ADH can accelerate toxic alcohol metabolism (methanol, ethylene glycol).",
+   "b": [
+    "Methanol → formaldehyde → formic acid; ADH converts methanol to formaldehyde.",
+    "Genetic ADH variants alter rate of ethanol clearance, influencing intoxication level."
+   ],
+   "t": [
+    {
+     "a": "Serum formic acid",
+     "b": "Is methanol poisoning present? Elevated formic acid confirms toxic metabolite accumulation."
+    },
+    {
+     "a": "Blood acetaldehyde (research use)",
+     "b": "Is ALDH activity impaired? High acetaldehyde suggests ALDH deficiency."
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding ADH guides management of acute alcohol intoxication, chronic liver disease, and toxic alcohol ingestions. Inhibitors (ethanol, fomepizole) block ADH to prevent formation of toxic metabolites in methanol or ethylene glycol poisoning.",
+   "b": [
+    "Ethanol or fomepizole competitively inhibit ADH in methanol poisoning.",
+    "Chronic heavy drinking → fatty liver → cirrhosis via NADH excess."
+   ],
+   "t": [
+    {
+     "a": "Serum methanol level",
+     "b": "Is toxic alcohol present? Guides need for ADH inhibition therapy."
+    },
+    {
+     "a": "Arterial blood gas",
+     "b": "Is metabolic acidosis from formic acid? Low pH with high anion gap indicates severe poisoning."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams: ADH converts ethanol → acetaldehyde; NADH rise drives fatty liver; fomepizole blocks ADH in methanol/ethylene glycol poisoning; ALDH2 deficiency causes flushing.",
+   "b": [
+    "ADH location: cytosol of hepatocytes.",
+    "Competitive inhibition of ADH is the basis of antidotes for toxic alcohols."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe metabolic acidosis (pH <7.1) in suspected methanol or ethylene glycol ingestion",
+  "Altered mental status with high blood ethanol (>300 mg/dL)",
+  "Signs of acute liver failure in chronic heavy drinkers (jaundice, coagulopathy)"
+ ],
+ "faq": [
+  {
+   "q": "Why does chronic alcohol use cause fatty liver?",
+   "a": "ADH generates NADH; excess NADH forces acetyl‑CoA into fatty acid synthesis, leading to triglyceride accumulation."
+  },
+  {
+   "q": "How does fomepizole treat methanol poisoning?",
+   "a": "It binds ADH, preventing conversion of methanol to formaldehyde, thus stopping formation of the toxic metabolite formic acid."
+  },
+  {
+   "q": "What explains the flushing reaction in some Asian individuals after drinking?",
+   "a": "A common ALDH2 deficiency slows acetaldehyde clearance, causing its buildup and vasodilation."
+  }
+ ],
+ "exam": [
+  "Explain the biochemical pathway of ethanol metabolism and the role of NADH.",
+  "Describe the rationale for using ethanol or fomepizole in methanol poisoning.",
+  "List the clinical consequences of an elevated NADH/NAD+ ratio in the liver."
+ ],
+ "related": [
+  "Aldehyde dehydrogenase",
+  "Alcoholic liver disease",
+  "Methanol poisoning",
+  "Fomepizole",
+  "NAD+/NADH balance",
+  "Genetic polymorphisms of ADH"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

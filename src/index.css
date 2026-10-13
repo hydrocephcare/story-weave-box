@@ -571,3 +571,6 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
 @keyframes aurora-b { 0%, 100% { transform: translate(0, 0) scale(1.1); } 50% { transform: translate(-6rem, 6rem) scale(.9); } }
 @keyframes aurora-c { 0%, 100% { transform: translate(0, 0) scale(.95); } 50% { transform: translate(-5rem, -6rem) scale(1.2); } }
 @media (prefers-reduced-motion: reduce) { .hero-aurora, .hero-aurora span { animation: none; } }
+
+/* Article flow: the opening paragraph of a section reads as a lead. */
+.flow > p:first-child { font-size: 1.07em; color: hsl(var(--foreground) / .9); }

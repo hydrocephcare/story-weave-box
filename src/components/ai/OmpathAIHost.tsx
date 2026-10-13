@@ -152,7 +152,8 @@ export default function OmpathAIHost() {
   const askRef = useRef<(q: string) => Promise<void>>(async () => undefined);
   const mount = useCallback((question?: string) => {
     setOpen(true); setView("chat");
-    if (!aiStore.get().activeId || !aiStore.get().sessions.length) aiStore.newSession();
+    // a new chat every time it is opened; the earlier ones stay in the history
+    { const cur = aiStore.get().sessions.find((x) => x.id === aiStore.get().activeId); if (!cur || cur.turns.length) aiStore.newSession(); }
     if (question && question.trim().length >= 2) window.setTimeout(() => void askRef.current(question), 60);
     else window.setTimeout(() => inputRef.current?.focus(), 150);
     // eslint-disable-next-line react-hooks/exhaustive-deps

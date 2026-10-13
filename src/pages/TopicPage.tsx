@@ -15,12 +15,12 @@ import { openAI } from "@/lib/aiEvents";
 const SITE = "https://www.ompathstudy.com";
 const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
-/** One section of the article: a big serif heading, a thin rule above it, and readable text. No boxes, no colours: the words are the design. */
+/** One section of the article: a large serif heading and text that flows. No boxes, no rules, no colour bars: space and type do the work. */
 function Section({ id, title, children, first }: { id: string; title: string; children: ReactNode; first?: boolean }) {
   return (
-    <section id={id} className={cn("scroll-mt-28 rounded-2xl border border-border/60 bg-card px-5 py-6 shadow-sm sm:rounded-3xl sm:px-8 sm:py-8", first ? "mt-2" : "mt-5 sm:mt-6")}>
-      <h2 className="font-serif text-[1.6rem] font-bold leading-tight tracking-tight text-foreground sm:text-[2rem]">{title}</h2>
-      <div className="mt-4 max-w-[78ch] space-y-4 text-[17px] leading-[1.7] text-foreground/80 sm:space-y-5 sm:text-[19px] sm:leading-[1.8] [&_strong]:font-semibold [&_strong]:text-foreground">{children}</div>
+    <section id={id} className={cn("scroll-mt-28", first ? "pt-1" : "mt-14 sm:mt-20")}>
+      <h2 className="font-serif text-[1.85rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[2.35rem]">{title}</h2>
+      <div className="flow mt-5 max-w-[68ch] space-y-4 text-[17px] leading-[1.75] text-foreground/80 sm:space-y-5 sm:text-[19px] sm:leading-[1.8] [&_strong]:font-semibold [&_strong]:text-foreground">{children}</div>
     </section>
   );
 }
@@ -79,14 +79,11 @@ function Bullets({ items, self = "" }: { items: string[]; self?: string }) {
 
 function TestTable({ rows }: { rows: { a: string; b: string }[] }) {
   return (
-    <div className="max-w-none overflow-hidden rounded-2xl border border-border bg-card">
-      <div className="hidden grid-cols-[minmax(0,14rem)_1fr] gap-4 border-b border-border bg-muted/60 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-muted-foreground sm:grid"><span>Test</span><span>What it tells you</span></div>
-      <ul className="divide-y divide-border">
-        {rows.map((r, i) => (
-          <li key={i} className="grid gap-1 px-5 py-4 text-[16.5px] leading-relaxed sm:grid-cols-[minmax(0,14rem)_1fr] sm:gap-4"><span className="font-bold text-foreground">{r.a}</span><span className="text-foreground/80">{r.b}</span></li>
-        ))}
-      </ul>
-    </div>
+    <dl className="space-y-5">
+      {rows.map((r, i) => (
+        <div key={i}><dt className="font-semibold text-foreground">{r.a}</dt><dd className="mt-1 text-foreground/80">{r.b}</dd></div>
+      ))}
+    </dl>
   );
 }
 
@@ -94,7 +91,7 @@ function Mcq({ q, n }: { q: TopicQuestion; n: number }) {
   const [pick, setPick] = useState<number | null>(null);
   const done = pick !== null;
   return (
-    <article className="rounded-2xl border border-border bg-card p-5">
+    <article className="py-1">
       <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Question {n}</p>
       <h3 className="mt-1.5 text-[17px] font-semibold leading-snug text-foreground">{q.q}</h3>
       <ul className="mt-4 grid gap-2">
@@ -131,7 +128,7 @@ function Mcq({ q, n }: { q: TopicQuestion; n: number }) {
 function Written({ q, m, k, u, s }: { q: string; m: string; k: number | null; u: string; s: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <article className="rounded-2xl border border-border bg-card p-5">
+    <article className="py-1">
       <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Written question{k ? ` · ${k} marks` : ""}</p>
       <h3 className="mt-1.5 text-[17px] font-semibold leading-snug">{q}</h3>
       <button type="button" onClick={() => setOpen((v) => !v)} aria-expanded={open} className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-1.5 text-sm font-bold hover:border-primary/60">{open ? "Hide model answer" : "Show model answer"}</button>
@@ -142,10 +139,10 @@ function Written({ q, m, k, u, s }: { q: string; m: string; k: number | null; u:
 
 function Disclaimer({ disease }: { disease: boolean }) {
   return (
-    <aside className="flex gap-3 border-l-4 border-primary/60 bg-muted/50 py-3 pl-4 pr-3 text-[15px] leading-relaxed text-foreground/85" role="note">
-      <Info className="mt-1 h-4 w-4 shrink-0 text-primary" aria-hidden />
-      <p><strong className="text-foreground">For learning, not medical advice.</strong> {disease ? "If you think you or someone you know may have this condition, please see a doctor or health worker. In an emergency, go to the nearest hospital." : "Always check against your lecturers' notes and your textbooks."}</p>
-    </aside>
+    <p className="flex gap-2.5 text-[14.5px] leading-relaxed text-muted-foreground" role="note">
+      <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
+      <span><strong className="font-semibold text-foreground/80">For learning, not medical advice.</strong> {disease ? "If you think you or someone you know may have this condition, please see a doctor or health worker. In an emergency, go to the nearest hospital." : "Always check against your lecturers' notes and your textbooks."}</span>
+    </p>
   );
 }
 
@@ -292,7 +289,7 @@ export default function TopicPage() {
           </div>
           {media?.hero && (
             <figure className="-mt-2 md:mt-0 md:justify-self-end">
-              <button type="button" onClick={() => setHeroZoom(true)} aria-label={`Enlarge the picture of ${name}`} className="block w-full overflow-hidden rounded-2xl border border-border bg-white p-2 shadow-sm md:rounded-3xl md:p-3">
+              <button type="button" onClick={() => setHeroZoom(true)} aria-label={`Enlarge the picture of ${name}`} className="block w-full overflow-hidden rounded-2xl bg-white p-2 shadow-md ring-1 ring-black/5 md:rounded-3xl md:p-3">
                 <img src={media.hero.u} alt={name} loading="eager" decoding="async" className="mx-auto h-44 w-full rounded-xl bg-white object-contain sm:h-52 md:aspect-[4/3] md:h-auto" />
               </button>
               <Dialog open={heroZoom} onOpenChange={setHeroZoom}>
@@ -355,8 +352,8 @@ export default function TopicPage() {
                 {i === Math.floor((aiSections.length - 1) / 2) && <div className="mt-12"><Disclaimer disease={isDisease} /></div>}
                 {/* the warning signs come right after the treatment, where a worried reader needs them */}
                 {i === seekAfter && page?.whenToSeekHelp && page.whenToSeekHelp.length > 0 && (
-                  <section id="seek-help" className="mt-14 scroll-mt-28 rounded-2xl border border-amber-500/40 bg-amber-500/[0.07] p-6 sm:p-7">
-                    <h2 className="font-serif text-2xl font-bold sm:text-[1.75rem]">When to seek help</h2>
+                  <section id="seek-help" className="mt-14 scroll-mt-28 sm:mt-20">
+                    <h2 className="font-serif text-[1.85rem] font-bold leading-[1.15] tracking-tight text-amber-700 dark:text-amber-400 sm:text-[2.35rem]">When to seek help</h2>
                     <p className="mt-3 text-[17px] text-foreground/85">See a doctor or health worker, or go to the nearest hospital, if there is:</p>
                     <div className="mt-4 text-[17px] leading-relaxed"><Bullets items={page.whenToSeekHelp} /></div>
                   </section>
@@ -412,7 +409,7 @@ export default function TopicPage() {
               <Section id="notes-say" title="From the Ompath Study notes">
                 <ul className="space-y-3">
                   {topic.snip.slice(0, 6).map((x) => (
-                    <li key={x.t} className="rounded-2xl border border-border bg-card p-4 text-[16px] leading-relaxed">{x.t}<Link to={x.u} className="mt-2 block text-sm font-bold text-primary hover:underline">Read this in {x.s} →</Link></li>
+                    <li key={x.t} className="text-[16.5px] leading-relaxed">{x.t}<Link to={x.u} className="mt-2 block text-sm font-bold text-primary hover:underline">Read this in {x.s} →</Link></li>
                   ))}
                 </ul>
               </Section>
@@ -421,7 +418,7 @@ export default function TopicPage() {
             {topic?.sec && topic.sec.length > 0 && (
               <Section id="notes-say" title="In the Ompath Study notes">
                 {topic.sec.map((x) => (
-                  <div key={x.u} className="rounded-2xl border border-border bg-card p-5">
+                  <div key={x.u}>
                     <h3 className="font-serif text-xl font-bold">{x.h}</h3>
                     <div className="mt-3 text-[16px] leading-relaxed"><Bullets items={x.b} /></div>
                     <Link to={x.u} className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">Read this in {x.s} <ChevronRight className="h-3.5 w-3.5" /></Link>
@@ -433,7 +430,7 @@ export default function TopicPage() {
             {topic && (topic.qs.length > 0 || topic.es.length > 0) && (
               <Section id="practice" title={`Test yourself on ${name}`}>
                 <p className="text-base text-muted-foreground">Questions from past papers and MCQ sets on this site. Pick an answer to see why.</p>
-                <div className="space-y-4">{qs.map((q, i) => <Mcq key={q.q} q={q} n={i + 1} />)}{topic.es.map((e) => <Written key={e.q} {...e} />)}</div>
+                <div className="space-y-10">{qs.map((q, i) => <Mcq key={q.q} q={q} n={i + 1} />)}{topic.es.map((e) => <Written key={e.q} {...e} />)}</div>
               </Section>
             )}
 
@@ -459,9 +456,9 @@ export default function TopicPage() {
 
             {page?.faq && page.faq.length > 0 && (
               <Section id="faq" title="Common questions">
-                <div className="divide-y divide-border rounded-2xl border border-border bg-card">
+                <div className="space-y-5">
                   {page.faq.map((f) => (
-                    <details key={f.q} className="group p-5"><summary className="flex cursor-pointer list-none items-start justify-between gap-3 text-[18px] font-semibold"><span>{f.q}</span><ChevronDown className="mt-1.5 h-4 w-4 shrink-0 transition group-open:rotate-180" aria-hidden /></summary><p className="mt-3 text-[17px] text-foreground/85">{f.a}</p></details>
+                    <details key={f.q} className="group"><summary className="flex cursor-pointer list-none items-start justify-between gap-3 text-[18px] font-semibold"><span>{f.q}</span><ChevronDown className="mt-1.5 h-4 w-4 shrink-0 transition group-open:rotate-180" aria-hidden /></summary><p className="mt-3 text-[17px] text-foreground/85">{f.a}</p></details>
                   ))}
                 </div>
               </Section>
@@ -469,15 +466,15 @@ export default function TopicPage() {
 
             {topic && (topic.src.length > 0 || topic.sets.length > 0) && (
               <Section id="material" title={`Study material on ${name}`}>
-                <ul className="divide-y divide-border rounded-2xl border border-border bg-card">
-                  {topic.src.map((s) => <li key={s.u}><Link to={s.u} className="group flex items-center gap-3 p-4 hover:bg-muted/50"><span className="min-w-0 flex-1"><span className="block text-base font-bold leading-snug group-hover:text-primary">{s.t}</span><span className="mt-0.5 block text-sm text-muted-foreground">{[s.y ? `Year ${s.y}` : "", s.n].filter(Boolean).join(" · ")}</span></span><ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground group-hover:text-primary" /></Link></li>)}
-                  {topic.sets.map((s) => <li key={s.u}><Link to={s.u} className="group flex items-center gap-3 p-4 hover:bg-muted/50"><span className="min-w-0 flex-1"><span className="block text-base font-bold leading-snug group-hover:text-primary">{s.t}</span><span className="mt-0.5 block text-sm text-muted-foreground">{s.k === "mcq" ? "MCQ set" : "Essay questions"}{s.y ? ` · Year ${s.y}` : ""}</span></span><ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground group-hover:text-primary" /></Link></li>)}
+                <ul className="space-y-4">
+                  {topic.src.map((s) => <li key={s.u}><Link to={s.u} className="group flex items-center gap-3"><span className="min-w-0 flex-1"><span className="block text-base font-bold leading-snug group-hover:text-primary">{s.t}</span><span className="mt-0.5 block text-sm text-muted-foreground">{[s.y ? `Year ${s.y}` : "", s.n].filter(Boolean).join(" · ")}</span></span><ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground group-hover:text-primary" /></Link></li>)}
+                  {topic.sets.map((s) => <li key={s.u}><Link to={s.u} className="group flex items-center gap-3"><span className="min-w-0 flex-1"><span className="block text-base font-bold leading-snug group-hover:text-primary">{s.t}</span><span className="mt-0.5 block text-sm text-muted-foreground">{s.k === "mcq" ? "MCQ set" : "Essay questions"}{s.y ? ` · Year ${s.y}` : ""}</span></span><ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground group-hover:text-primary" /></Link></li>)}
                 </ul>
               </Section>
             )}
 
-            <div className="mt-5 overflow-hidden rounded-2xl border border-primary/25 bg-gradient-to-br from-primary/10 via-card to-card p-5 sm:mt-6 sm:rounded-3xl sm:p-8">
-              <p className="flex items-center gap-2 font-serif text-[1.35rem] font-bold sm:text-2xl"><Sparkles className="h-5 w-5 text-primary" aria-hidden /> Study {name} with Ompath AI</p>
+            <div className="mt-14 sm:mt-20">
+              <p className="flex items-center gap-2 font-serif text-[1.6rem] font-bold sm:text-[2rem]"><Sparkles className="h-5 w-5 text-primary" aria-hidden /> Study {name} with Ompath AI</p>
               <p className="mt-1.5 text-[15px] text-muted-foreground">Ask anything, or start with one of these. Answers use the site's notes first.</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {[
