@@ -1,0 +1,145 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Hageman factor (Factor XII) starts the intrinsic coagulation cascade and produces kallikrein, which generates bradykinin, a key mediator of inflammation and vascular permeability.",
+ "aka": [
+  "Factor XII",
+  "Hageman factor"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Factor XII is a plasma protein that, when activated by contact with negatively charged surfaces, initiates the intrinsic coagulation pathway and the kallikrein–kinin system.",
+   "b": [
+    "Plasma protein, serine protease",
+    "Activates intrinsic pathway and kallikrein"
+   ],
+   "t": [
+    {
+     "a": "Activated partial thromboplastin time (aPTT)",
+     "b": "Prolonged aPTT with normal clotting time indicates intrinsic pathway abnormality"
+    },
+    {
+     "a": "Plasma Factor XII activity assay",
+     "b": "Low activity confirms Factor XII deficiency"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Factor XII deficiency is usually asymptomatic; severe deficiency can cause delayed clotting in vitro but rarely bleeding. Overactivation may contribute to inflammation.",
+   "b": [
+    "Mild: prolonged aPTT, no bleeding",
+    "Severe: prolonged aPTT, possible inflammatory complications"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Genetic mutations in the F12 gene are the primary cause. Acquired causes include liver disease, pregnancy, and use of anticoagulants.",
+   "b": [
+    "Genetic deficiency",
+    "Liver dysfunction",
+    "Anticoagulant therapy"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Most patients are asymptomatic. In rare cases, patients may have recurrent inflammatory episodes or unusual bleeding after surgery.",
+   "b": [
+    "Asymptomatic in most cases",
+    "Inflammatory flares or post‑operative bleeding"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Confirm deficiency or overactivation with coagulation tests and specific Factor XII activity.",
+   "t": [
+    {
+     "a": "Activated partial thromboplastin time (aPTT)",
+     "b": "Prolonged aPTT, normal PT"
+    },
+    {
+     "a": "Factor XII activity assay",
+     "b": "Low activity indicates deficiency"
+    },
+    {
+     "a": "Kallikrein activity assay",
+     "b": "Elevated activity suggests inflammatory role"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe overactivation can lead to excessive bradykinin, causing angioedema or severe inflammation.",
+   "b": [
+    "Angioedema",
+    "Excessive vascular permeability"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying cause. For deficiency, monitor but no routine replacement is needed. For overactivation, use bradykinin pathway inhibitors.",
+   "b": [
+    "Supportive care",
+    "Bradykinin antagonists (e.g., icatibant) for angioedema"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of coagulation profile in patients with known deficiency. Avoid unnecessary invasive procedures.",
+   "b": [
+    "Periodic aPTT checks",
+    "Limit invasive procedures"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Factor XI deficiency (hemophilia C) and other intrinsic pathway defects.",
+   "b": [
+    "Factor XI deficiency",
+    "Hemophilia A/B"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Factor XII deficiency prolongs aPTT but does not cause bleeding; normal aPTT does not exclude other intrinsic defects.",
+   "b": [
+    "Prolonged aPTT may be misinterpreted as bleeding risk"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe angioedema with airway compromise",
+  "Unexplained recurrent inflammatory episodes"
+ ],
+ "faq": [
+  {
+   "q": "Does Factor XII deficiency cause bleeding?",
+   "a": "No, it usually does not cause bleeding despite prolonged aPTT."
+  },
+  {
+   "q": "Can Factor XII be replaced?",
+   "a": "Replacement therapy is rarely needed; management focuses on underlying causes."
+  },
+  {
+   "q": "What triggers overactivation of Factor XII?",
+   "a": "Contact with negatively charged surfaces, trauma, surgery, or inflammatory states can activate Factor XII."
+  }
+ ],
+ "exam": [
+  "Explain how Factor XII initiates the intrinsic coagulation pathway and the kallikrein–kinin system.",
+  "Describe the laboratory findings that differentiate Factor XII deficiency from other intrinsic pathway disorders.",
+  "Discuss the clinical significance of prolonged aPTT in a patient with normal bleeding history."
+ ],
+ "related": [
+  "Kallikrein–kinin system",
+  "Bradykinin",
+  "Intrinsic coagulation pathway",
+  "Hemophilia C",
+  "Angioedema"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -12,6 +12,7 @@ import { aiPaused, looksLikeBot } from "@/lib/topicWriter";
 import { DOMAIN_STYLE, imageCaption, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
 import { useWebMedia } from "@/lib/webMedia";
 import HeroAurora from "@/components/HeroAurora";
+import { Answer } from "@/components/ai/AnswerText";
 import { rebalanceMcqAnswerLetters } from "@/lib/store";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -131,14 +132,21 @@ function Mcq({ q, n }: { q: TopicQuestion; n: number }) {
   );
 }
 
+/** A model answer that arrived as one run of text ("a) **Epidemiology** … b) **Classification** … * item * item") laid out as paragraphs and bullet lists. */
+function prettyAnswer(m: string): string {
+  return m.replace(/\r/g, "").replace(/\s+\*\s+(?=\S)/g, "\n- ").replace(/([.:;)])\s+(?=[a-eA-E]\)\s)/g, "$1\n\n").replace(/(\*\*)\s+(?=\*\*[A-Z])/g, "$1\n\n").replace(/\n{3,}/g, "\n\n").trim();
+}
+/** A question cut off in the middle of a sentence ends with an ellipsis, not a dangling word. */
+const tidyQuestion = (q: string) => { const t = q.replace(/\s+/g, " ").trim(); return /[?.:!)…]$/.test(t) ? t : `${t}…`; };
+
 function Written({ q, m, k, u, s }: { q: string; m: string; k: number | null; u: string; s: string }) {
   const [open, setOpen] = useState(false);
   return (
     <article className="py-1">
       <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Written question{k ? ` · ${k} marks` : ""}</p>
-      <h3 className="mt-1.5 text-[17px] font-semibold leading-snug">{q}</h3>
+      <h3 className="mt-1.5 text-[17px] font-semibold leading-snug">{tidyQuestion(q)}</h3>
       <button type="button" onClick={() => setOpen((v) => !v)} aria-expanded={open} className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-1.5 text-sm font-bold hover:border-primary/60">{open ? "Hide model answer" : "Show model answer"}</button>
-      {open && <div className="mt-3 rounded-xl bg-muted/70 p-4 text-[15px] leading-relaxed"><p className="whitespace-pre-line">{m}{m.length >= 699 ? "…" : ""}</p><Link to={u} className="mt-2 inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">Full answer: {s} <ChevronRight className="h-3.5 w-3.5" /></Link></div>}
+      {open && <div className="mt-3 text-[16px] leading-relaxed text-foreground/85"><Answer text={prettyAnswer(m) + (m.length >= 699 ? "…" : "")} /><Link to={u} className="mt-2 inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">Full answer: {s} <ChevronRight className="h-3.5 w-3.5" /></Link></div>}
     </article>
   );
 }

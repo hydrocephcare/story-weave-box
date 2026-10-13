@@ -63,8 +63,22 @@ function table(rows) {
 // ---------- practice questions ----------
 const Q_BOLD = /^\*\*\s*(?:Question\s*|Q)?(\d{1,3})\s*[.):]\s*(.+?)\s*\*\*\s*$/i;
 const Q_PLAIN = /^(?:Question\s*|Q)(\d{1,3})\s*[.):]\s*(.+?)\s*$/i;
+// "**1.** stem": only the number in bold, the way the Year 4 notes are written
+const Q_BOLDNUM = /^\*\*\s*(\d{1,3})\s*[.):]\s*\*\*\s+(.+?)\s*$/;
 const Q_NUM = /^(\d{1,3})[.)]\s+(.+?)\s*$/;
 const OPT = /^\s*\(?([A-Ea-e])[.)]\s+(.*?)\s*$/;
+/** Options written on one line, "A. one · B. two · **C. three**": split into [letter, text] pairs, or null when the line is not like that. */
+export function inlineOptions(line) {
+  const t = String(line ?? "").trim();
+  if (!/^\**\s*\(?[A-Ea-e][.)]\s/.test(t) || !/\s·\s/.test(t)) return null;
+  const out = [];
+  for (const part of t.split(/\s+·\s+/)) {
+    const m = part.trim().replace(/^\*\*\s*/, "").replace(/\s*\*\*$/, "").match(/^\(?([A-Ea-e])[.)]\s+(.+)$/);
+    if (!m) return null;
+    out.push([m[1].toUpperCase(), m[2].trim()]);
+  }
+  return out.length >= 2 ? out : null;
+}
 const ANS = /^\*{0,2}\s*(?:correct\s+)?answer\s*:?\s*\*{0,2}\s*:?\s*\(?([A-Ea-e])\)?\s*[.)]?\s*\*{0,2}\s*(.*)$/i;
 const EXPL = /^\*{0,2}\s*(?:explanation|rationale|reasoning)\s*:?\s*\*{0,2}\s*:?\s*(.*)$/i;
 const MODEL = /^\*{0,2}\s*(?:model\s+answer|suggested\s+answer|answer)\s*:?\s*\*{0,2}\s*:?\s*(.*)$/i;
@@ -72,7 +86,7 @@ const isBlock = (l) => /^(#{1,4}\s|-{3,}\s*$|\s*\||>)/.test(l);
 
 function questionStart(line) {
   const t = line.trim();
-  const m = t.match(Q_BOLD) || t.match(Q_PLAIN) || t.match(Q_NUM);
+  const m = t.match(Q_BOLDNUM) || t.match(Q_BOLD) || t.match(Q_PLAIN) || t.match(Q_NUM);
   return m ? { n: m[1], stem: m[2].replace(/\*\*/g, "").trim() } : null;
 }
 const nextNonBlank = (lines, i) => { let j = i; while (j < lines.length && !lines[j].trim()) j++; return j; };
@@ -87,7 +101,11 @@ function mcqBlock(lines, i) {
   while (j < lines.length && lines[j].trim() && !OPT.test(lines[j]) && !isBlock(lines[j]) && !questionStart(lines[j]) && stem.length < 3) stem.push(lines[j++].trim());
   j = nextNonBlank(lines, j);
   const opts = [];
-  while (j < lines.length && OPT.test(lines[j])) { const m = lines[j].match(OPT); opts.push([m[1].toUpperCase(), m[2]]); j++; }
+  while (j < lines.length && (inlineOptions(lines[j]) || OPT.test(lines[j]))) {
+    const inl = inlineOptions(lines[j]);
+    if (inl) opts.push(...inl); else { const m = lines[j].match(OPT); opts.push([m[1].toUpperCase(), m[2]]); }
+    j++;
+  }
   if (opts.length < 2) return null;
   let k = nextNonBlank(lines, j);
   let letter = null;
@@ -95,7 +113,7 @@ function mcqBlock(lines, i) {
   const a = k < lines.length ? lines[k].trim().match(ANS) : null;
   if (a) {
     letter = a[1].toUpperCase();
-    if (a[2]) why.push(a[2].replace(/^\*+\s*/, "").replace(/^(?:explanation|rationale)\s*:?\s*/i, ""));
+    if (a[2]) why.push(a[2].replace(/\*+\s*$/, "").replace(/^\*+\s*/, "").replace(/^(?:explanation|rationale)\s*:?\s*/i, ""));
     k++;
     // explanation lines directly after the answer
     while (k < lines.length && lines[k].trim() && !questionStart(lines[k]) && !isBlock(lines[k]) && !OPT.test(lines[k])) {
