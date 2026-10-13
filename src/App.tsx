@@ -62,6 +62,7 @@ const AdminMonetise = lazy(() => import("./pages/AdminMonetise"));
 const AdminAnalytics = lazy(() => import("./pages/AdminAnalytics"));
 const AdminTools = lazy(() => import("./pages/AdminTools"));
 const AdminContentHealth = lazy(() => import("./pages/AdminContentHealth"));
+const AdminPolish = lazy(() => import("./pages/AdminPolish"));
 const YearTimetable = lazy(() => import("./pages/YearTimetable"));
 const UnitPage = lazy(() => import("./pages/UnitPage"));
 const MyRevision = lazy(() => import("./pages/MyRevision"));
@@ -212,6 +213,7 @@ const AnimatedRoutes = () => {
             <Route path="/admin/analytics" element={<AdminRoute><AdminAnalytics /></AdminRoute>} />
             <Route path="/admin/tools" element={<AdminRoute><AdminTools /></AdminRoute>} />
             <Route path="/admin/content-health" element={<AdminRoute><AdminContentHealth /></AdminRoute>} />
+            <Route path="/admin/polish" element={<AdminRoute><AdminPolish /></AdminRoute>} />
             <Route path="/admin/outline-sync" element={<AdminRoute><AdminOutlineSync /></AdminRoute>} />
             <Route path="/admin/editor" element={<AdminRoute><AdminEditor /></AdminRoute>} />
             <Route path="/admin/categories" element={<AdminRoute><CategoryManager /></AdminRoute>} />

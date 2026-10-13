@@ -120,6 +120,7 @@
     { "source": "/api/topic-write", "destination": "/api/ai?task=topic" },
     { "source": "/api/outline-parse", "destination": "/api/ai?task=outline" },
     { "source": "/api/page-study", "destination": "/api/ai?task=study" },
+    { "source": "/api/ai-polish", "destination": "/api/ai?task=polish" },
     {
       "source": "/topics-sitemap.xml",
       "destination": "/api/topics-sitemap"

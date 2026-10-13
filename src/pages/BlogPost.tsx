@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useLayoutEffect, forwardRef, memo } from "react";
 import { looksScanned, scanFirst, tidiedText } from "@/lib/blogFix";
+import { applyPolish, getPolish, polishedIds, requestPolish, wantsPolish, type Polish } from "@/lib/blogPolish";
 import AdSlot from "@/components/AdSlot";
 import BooksForPage from "@/components/BooksForPage";
 import SponsorLine from "@/components/SponsorLine";
@@ -1613,7 +1614,15 @@ export default function BlogPost() {
         setNotFound(false);
         setArticle(scanFirst(a));
         // a blog that has been tidied (headings, short paragraphs, lists) shows the tidied text; the stored one is never changed
-        void tidiedText(a.id).then((fixed) => { if (fixed) setArticle((cur) => (cur && cur.id === a.id ? { ...cur, content: fixed } : cur)); });
+        void tidiedText(a.id).then((fixed) => { if (fixed) setArticle((cur) => (cur && cur.id === a.id && !polishedIds.has(a.id) ? { ...cur, content: fixed } : cur)); });
+        // Year 1 to 3: the polished copy (title, description, text) is shown when it exists. The first visitor to a blog starts the polish; everyone after gets it saved.
+        if (wantsPolish(a as { category?: string | null; password_protected?: boolean | null })) {
+          void (async () => {
+            let p = await getPolish(a.id);
+            if (!p) { const st = await requestPolish(a.id); if (st === "done" || st === "partial") p = await getPolish(a.id, true); }
+            if (p) setArticle((cur) => (cur && cur.id === a.id ? applyPolish(cur, p as Polish) : cur));
+          })();
+        }
         const canonicalPath = buildBlogPath(a);
         if (location.pathname !== canonicalPath) navigate(`${canonicalPath}${location.hash || ""}`, { replace: true });
         markArticleVisited({ id: a.id, title: a.title, category: a.category, visitedAt: Date.now() });

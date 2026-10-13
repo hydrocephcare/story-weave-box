@@ -1,11 +1,12 @@
 // All the site's AI endpoints in one serverless function (the Hobby plan allows twelve functions in total).
-// /api/ai-chat, /api/topic-write, /api/outline-parse and /api/page-study are rewritten to /api/ai?task=chat|topic|outline|study (vercel.json).
+// /api/ai-chat, /api/topic-write, /api/outline-parse and /api/page-study and /api/ai-polish are rewritten to /api/ai?task=chat|topic|outline|study|polish (vercel.json).
 import chat from "./_lib/aiChat.js";
 import topic from "./_lib/topicWrite.js";
 import outline from "./_lib/outlineParse.js";
 import study from "./_lib/pageStudy.js";
+import polish from "./_lib/blogPolish.js";
 
-const TASKS = { chat, topic, outline, study };
+const TASKS = { chat, topic, outline, study, polish };
 
 export default async function handler(req, res) {
   const task = String(Array.isArray(req.query?.task) ? req.query.task[0] : req.query?.task ?? "");

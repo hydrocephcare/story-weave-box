@@ -6,6 +6,7 @@ import { BarChart3, CalendarCheck, HeartPulse, Wallet, LayoutDashboard } from "l
 const TOOLS = [
   { to: "/admin/analytics", icon: BarChart3, title: "Visitors", text: "Who is on the site now, how many used it each day, each week and each year, and a picture of the numbers to share on WhatsApp." },
   { to: "/admin/outline-sync", icon: CalendarCheck, title: "Course outline sync", text: "Paste a course outline: every matching note, blog and topic shows its year, semester, week and lecturer." },
+  { to: "/admin/polish", icon: HeartPulse, title: "Polished blogs", text: "Each Year 1 to 3 blog gets a clear title, description and tidy text the first time it is opened. Weak and irrelevant pages are listed here to hide or keep." },
   { to: "/admin/content-health", icon: HeartPulse, title: "Content health", text: "Every blog checked for thin pages, scan noise, bad titles and weak question banks, with one-tap fixes." },
   { to: "/admin/monetise", icon: Wallet, title: "Monetise", text: "Ads, a sponsor line and book links. All off until you switch them on." },
   { to: "/admin", icon: LayoutDashboard, title: "The rest of the admin", text: "Notes, MCQs, flashcards, categories, payments and settings." },
