@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import HeroAurora from "@/components/HeroAurora";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
@@ -210,7 +211,8 @@ export default function UnitPage() {
         <span className="text-foreground">{unit.name}</span>
       </nav>
 
-      <header className="rounded-2xl border border-border bg-card p-6">
+      <header className="relative isolate overflow-hidden rounded-3xl p-6 sm:p-8">
+        <HeroAurora about={String(unit.name ?? "")} year={Number(year) || undefined} />
         <p className="text-xs font-semibold uppercase tracking-wide text-primary">
           Year {year}{unit.course_code ? ` · ${unit.course_code}` : ""}
         </p>

@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from "react";
+import SearchExtras from "@/components/SearchExtras";
 import LoadMoreButton from "@/components/LoadMoreButton";
 import StickyRail from "@/components/StickyRail";
 import { EmptyStateHub } from "@/components/YearHubPanel";
@@ -675,6 +676,7 @@ export default function Blog() {
             {searchLoading ? "Searching…" : filtered.length === 0 ? `No results for "${search}"` : `${filtered.length} matching articles`}
           </p>
         )}
+        <SearchExtras query={search} year={yearNum} />
         {!search.trim() && <p className="mt-2 hidden text-xs text-muted-foreground sm:block">Press <kbd className="rounded border border-border bg-muted px-1 py-0.5 font-sans text-[10px]">/</kbd> to search the library.</p>}
         </div>
       </motion.div>

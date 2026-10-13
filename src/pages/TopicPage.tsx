@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Check, ClipboardCheck, Link2, Share2, Stethoscope, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
@@ -6,6 +6,7 @@ import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/compone
 import { aiPaused, looksLikeBot } from "@/lib/topicWriter";
 import { DOMAIN_STYLE, imageCaption, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
 import { useWebMedia } from "@/lib/webMedia";
+import HeroAurora from "@/components/HeroAurora";
 import { rebalanceMcqAnswerLetters } from "@/lib/store";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -13,12 +14,6 @@ import { cn } from "@/lib/utils";
 import { openAI } from "@/lib/aiEvents";
 
 const SITE = "https://www.ompathstudy.com";
-/** Three hues per subject for the moving colour behind the opening block. */
-const HUES: Record<string, [number, number, number]> = {
-  Anatomy: [8, 32, 330], Physiology: [212, 190, 262], "Biochemistry & genetics": [188, 262, 150], Pharmacology: [32, 12, 48],
-  "Microbiology & immunology": [142, 84, 190], Pathology: [268, 330, 212], Psychiatry: [238, 280, 180], Paediatrics: [198, 48, 130],
-  "Obstetrics & gynaecology": [330, 12, 280], Surgery: [352, 214, 28], "Public health": [166, 120, 200], Medicine: [174, 205, 268],
-};
 const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
 /** One section of the article: a large serif heading and text that flows. No boxes, no rules, no colour bars: space and type do the work. */
@@ -275,7 +270,7 @@ export default function TopicPage() {
       </Helmet>
 
       <header className="relative isolate overflow-hidden border-b border-border/60">
-        <div className="hero-aurora" aria-hidden style={{ "--a": (HUES[subject] ?? HUES.Medicine)[0], "--b": (HUES[subject] ?? HUES.Medicine)[1], "--c": (HUES[subject] ?? HUES.Medicine)[2] } as CSSProperties}><span /><span /><span /></div>
+        <HeroAurora about={subject || name} />
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-12 pt-8 sm:pb-16 sm:pt-12 md:grid-cols-[minmax(0,1fr)_21rem]">
           <div className="min-w-0">
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-muted-foreground"><button type="button" onClick={() => (window.history.length > 1 ? navigate(-1) : navigate("/topics"))} className="mr-2 inline-flex items-center gap-1 rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-foreground/80 hover:border-primary/60"><ArrowLeft className="h-3.5 w-3.5" aria-hidden /> Back</button><Link to="/topics" className="hover:text-primary hover:underline">Topics</Link><ChevronRight className="h-3.5 w-3.5" /><span>{style.label}</span></nav>

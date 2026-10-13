@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import HeroAurora from "@/components/HeroAurora";
 import RecentlyPublished from "@/components/RecentlyPublished";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { ArrowRight, BookMarked, ChevronDown, ChevronRight, CalendarDays, BookOpen, ClipboardCheck, Clock, FileQuestion, FolderOpen, GraduationCap, Images, ListChecks, Pill, Flame, Stethoscope, Trophy } from "lucide-react";
@@ -206,19 +207,20 @@ export default function YearHub() {
         <span className="text-foreground">{yearLabel}</span>
       </nav>
 
-      <header className="rounded-3xl border border-border bg-gradient-to-br from-primary/[0.12] via-card to-card p-5 sm:p-8">
+      <header className="relative isolate overflow-hidden rounded-3xl p-5 sm:p-8">
+        <HeroAurora about="" year={Number(String(yearLabel).replace(/\D/g, "")) || undefined} />
         <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Your year</p>
         <h1 className="mt-1 font-serif text-4xl font-bold text-foreground sm:text-5xl">{yearLabel}</h1>
         <p className="mt-2 text-[15px] text-muted-foreground">Notes, past papers, questions and files for {yearLabel}, all in one place.</p>
-        <nav aria-label="Year shortcuts" className="mt-5 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+        <nav aria-label="Year shortcuts" className="mt-4 flex flex-col sm:flex-row sm:flex-wrap sm:gap-x-7">
           {sections.filter((x) => ["Blog", "Flashcards", "Exams", "Pharmacology", "Must-knows by unit", "Clinical simulator"].includes(x.title)).map((section) => (
-            <Link key={section.title} to={section.to} className="flex items-center gap-2.5 rounded-2xl border border-border bg-background px-3.5 py-3 text-[15px] font-bold text-foreground transition-colors hover:border-primary/60 hover:text-primary">
+            <Link key={section.title} to={section.to} className="flex items-center gap-3 py-2.5 text-[17px] font-semibold text-foreground transition-colors hover:text-primary">
               <section.icon className="h-5 w-5 shrink-0 text-primary" />
               {section.title.replace("Blog", "Notes").replace("Must-knows by unit", "Must-knows")}
             </Link>
           ))}
-          <Link to={`/books/year-${parsedYear}`} className="flex items-center gap-2.5 rounded-2xl border border-border bg-background px-3.5 py-3 text-[15px] font-bold text-foreground transition-colors hover:border-primary/60 hover:text-primary"><BookMarked className="h-5 w-5 shrink-0 text-primary" />Books</Link>
-          {(parsedYear <= 4 || parsedYear === 6) && <Link to={`/course-outlines/year-${parsedYear}`} className="flex items-center gap-2.5 rounded-2xl border border-border bg-background px-3.5 py-3 text-[15px] font-bold text-foreground transition-colors hover:border-primary/60 hover:text-primary"><ClipboardCheck className="h-5 w-5 shrink-0 text-primary" />Course outlines</Link>}
+          <Link to={`/books/year-${parsedYear}`} className="flex items-center gap-3 py-2.5 text-[17px] font-semibold text-foreground transition-colors hover:text-primary"><BookMarked className="h-5 w-5 shrink-0 text-primary" />Books</Link>
+          {(parsedYear <= 4 || parsedYear === 6) && <Link to={`/course-outlines/year-${parsedYear}`} className="flex items-center gap-3 py-2.5 text-[17px] font-semibold text-foreground transition-colors hover:text-primary"><ClipboardCheck className="h-5 w-5 shrink-0 text-primary" />Course outlines</Link>}
         </nav>
       </header>
 
@@ -275,8 +277,8 @@ export default function YearHub() {
         <section className="mt-6 rounded-2xl border-2 border-primary/30 bg-primary/5 p-5 sm:p-6">
           <p className="text-[11px] font-bold uppercase tracking-widest text-primary">Pinned for Year 3</p>
           <h2 className="mt-1 font-serif text-xl font-bold text-foreground">Priority revision units</h2>
-          <div className="mt-4 grid gap-2 sm:grid-cols-2">
-            {YEAR3_PRIORITY.map((item) => <Link key={item.title} to={item.to} className="group rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary/50 hover:bg-primary/5">
+          <div className="mt-4 space-y-3">
+            {YEAR3_PRIORITY.map((item) => <Link key={item.title} to={item.to} className="group block py-1">
               <span className="flex items-center justify-between gap-2 font-bold text-foreground">{item.title}<ArrowRight className="h-4 w-4 text-primary transition-transform group-hover:translate-x-0.5" /></span>
               <span className="mt-1 block text-xs leading-relaxed text-muted-foreground">{item.description}</span>
             </Link>)}

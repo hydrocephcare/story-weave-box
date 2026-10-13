@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import HeroAurora from "@/components/HeroAurora";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Search, Shuffle, X } from "lucide-react";
@@ -51,7 +52,8 @@ export default function TopicsIndex() {
         <link rel="canonical" href="https://www.ompathstudy.com/topics" />
       </Helmet>
 
-      <header className="border-b border-border bg-gradient-to-br from-primary/[0.12] via-background to-background">
+      <header className="relative isolate overflow-hidden">
+        <HeroAurora about="Medicine" />
         <div className="mx-auto max-w-5xl px-5 pb-10 pt-10 sm:pt-14">
           <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight sm:text-6xl">Medical topics A to Z</h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-foreground/75 sm:text-xl">Look up a disease, a bone, a hormone or a process. Every page explains it first, then shows the notes, pictures and practice questions we have on it.</p>

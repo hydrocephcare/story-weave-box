@@ -59,20 +59,20 @@ export default function RecentlyPublished({ year, limit = 8, className }: { year
     <section aria-label="Recently published" className={cn("mx-auto max-w-6xl px-5", className)}>
       <div className="flex items-end justify-between gap-4">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Fresh on the site</p>
-          <h2 className="mt-1 font-serif text-2xl font-bold sm:text-3xl">{year ? `Recently published in Year ${year}` : "Recently published"}</h2>
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">{year ? "For your year" : "Fresh on the site"}</p>
+          <h2 className="mt-1 font-serif text-2xl font-bold sm:text-3xl">{year ? `New in Year ${year}` : "Recently published"}</h2>
         </div>
         <Link to="/new-notes" className="inline-flex shrink-0 items-center gap-1 text-sm font-bold text-primary hover:underline">See all new <ArrowRight className="h-4 w-4" aria-hidden /></Link>
       </div>
-      <ul className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+      <ul className="mt-5 space-y-1">
         {rows.map((r) => {
           const Icon = ICON[r.kind];
           return (
             <li key={r.key} className="min-w-0">
-              <Link to={r.to} className="group flex min-w-0 items-center gap-3 rounded-xl border border-border bg-card p-3.5 transition hover:border-primary/60">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary"><Icon className="h-4 w-4" aria-hidden /></span>
+              <Link to={r.to} className="group flex min-w-0 items-center gap-3 py-2.5">
+                <Icon className="h-4 w-4 shrink-0 text-primary" aria-hidden />
                 <span className="min-w-0 flex-1">
-                  <span className="block truncate text-[15px] font-bold leading-snug group-hover:text-primary">{r.title}</span>
+                  <span className="block truncate text-[16px] font-semibold leading-snug group-hover:text-primary">{r.title}</span>
                   <span className="mt-0.5 block truncate text-xs text-muted-foreground">{r.kind}{r.year ? ` · Year ${r.year}` : ""} · {r.unit}</span>
                 </span>
                 <span className="shrink-0 text-xs font-semibold text-muted-foreground">{ago(r.at)}</span>

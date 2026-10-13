@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useMyYear as useHomeYear } from "@/hooks/useMyYear";
 import LoadMoreButton from "@/components/LoadMoreButton";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -80,6 +81,7 @@ const tileReveal = {
 
 // Sync probe: repository edits should appear automatically in the Lovable editor.
 export default function Index() {
+  const { year: homeYear } = useHomeYear();
   const { user } = useAuth();
   const navigate = useNavigate();
   const heroRef = useRef<HTMLDivElement>(null);
@@ -440,63 +442,8 @@ export default function Index() {
           )}
         </motion.div>
 
-        {/* Recently Added */}
-        <motion.div
-          variants={sectionReveal}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          <div className="mb-5">
-            <h2 className="font-serif text-xl font-bold text-foreground sm:text-2xl">Recently added</h2>
-            <p className="mt-0.5 text-xs text-muted-foreground sm:text-sm">Fresh notes, MCQs, flashcards &amp; clinical stories</p>
-          </div>
-          <div className="flex gap-2 mb-5 overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }}>
-            {(["all", "articles", "flashcards", "stories"] as const).map(tab => (
-              <button key={tab} onClick={() => setActiveTab(tab)}
-                className={`shrink-0 rounded-full px-4 py-1.5 text-xs font-semibold transition-all capitalize ${activeTab === tab ? "bg-foreground text-background" : "border border-border bg-card text-muted-foreground hover:text-foreground"}`}>
-                {tab}
-              </button>
-            ))}
-          </div>
-          {filteredRecent.length === 0 ? (
-            <div className="rounded-xl border border-dashed border-border p-8 text-center">
-              <p className="text-sm text-muted-foreground">No content yet. Check back soon!</p>
-            </div>
-          ) : (
-            <div className="overflow-hidden rounded-2xl border border-border bg-card">
-              {filteredRecent.slice(0, recentShown).map(item => {
-                const meta = typeMeta[item.type];
-                const Icon = meta.icon;
-                return (
-                  <Link key={`${item.type}-${item.id}`} to={getItemLink(item)}
-                    className="row-cv group relative flex items-center gap-3 border-b border-border px-3 py-3 transition-colors last:border-b-0 hover:bg-muted/50 sm:gap-4 sm:px-4">
-                    <span className="absolute left-0 top-0 h-full w-[3px] bg-primary/60" aria-hidden />
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-muted text-foreground/70">
-                      <Icon className="h-4 w-4" />
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-2 mb-0.5">
-                        <span className={`rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${meta.badge}`}>{meta.label}</span>
-                        <span className="text-[11px] text-muted-foreground">{timeAgo(item.created_at)}</span>
-                      </div>
-                      <h4 className="truncate text-sm sm:text-base font-semibold text-foreground group-hover:text-primary transition-colors">{item.title}</h4>
-                      <p className="truncate text-xs text-muted-foreground">{getCategoryDisplayName(item.category)}</p>
-                    </div>
-                    <ArrowRight className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
-                  </Link>
-                );
-              })}
-            </div>
-          )}
-          {filteredRecent.length > recentShown && (
-            <div className="mt-5 flex justify-center">
-              <LoadMoreButton onMore={() => setRecentShown((n) => n + 10)} className="rounded-lg border border-border bg-card px-6 py-2.5 text-sm font-bold text-foreground transition-colors hover:border-primary/40 hover:text-primary">
-                Show more
-              </LoadMoreButton>
-            </div>
-          )}
-        </motion.div>
+        {/* New in the student's own year (the site-wide list is the one at the top) */}
+        {homeYear && <RecentlyPublished className="px-0" year={homeYear} limit={6} />}
       </div>
       </section>
 

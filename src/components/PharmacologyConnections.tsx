@@ -15,7 +15,7 @@ export default function PharmacologyConnections({ ids, conditionIds, leave, clas
   const conditions = conditionIds.map((id) => CONDITIONS.find((c) => c.id === id)).filter((c): c is NonNullable<typeof c> => Boolean(c));
   if (conditions.length === 0 && ids.length === 0) return null;
   return (
-    <aside aria-label="Pharmacology connections" className={`rounded-xl border border-primary/30 bg-primary/5 p-4 print:hidden ${className}`}>
+    <aside aria-label="Pharmacology connections" className={`py-3 print:hidden ${className}`}>
       <p className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-primary"><Pill className="h-3.5 w-3.5" /> Pharmacology connections</p>
       {conditions.slice(0, 2).map((c) => (
         <button key={c.id} type="button" onClick={() => leave(`/pharmacology?tab=conditions&c=${c.id}`)} className="mt-2 flex w-full items-center justify-between gap-2 rounded-lg border border-border bg-card px-3 py-2.5 text-left text-sm font-bold text-foreground transition-colors hover:border-primary/50 hover:text-primary">

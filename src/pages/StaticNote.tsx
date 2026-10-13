@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import HeroAurora from "@/components/HeroAurora";
 import { Link, Navigate, useLocation, useNavigate, useNavigationType, useParams } from "react-router-dom";
 import { Printer, ScanLine } from "lucide-react";
 import DriveFileViewer, { type DriveFile } from "@/components/DriveFileViewer";
@@ -121,7 +122,8 @@ function StaticNoteView() {
         <Link to={`/year/${note.year}`} className="hover:text-primary">Year {note.year}</Link> ›
         <span className="text-foreground">{note.unit}</span>
       </nav>
-      <header className="mt-3">
+      <header className="relative isolate -mx-4 mt-3 overflow-hidden px-4 pb-5 pt-4 sm:mx-0 sm:rounded-3xl sm:px-6">
+        <HeroAurora about={`${note.unit} ${note.title}`} year={note.year} />
         <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">Year {note.year} · {note.unit}</p>
         {note.series && <div className="mt-2 flex flex-wrap items-center gap-2"><span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-primary">{note.series}</span>{note.week && <span className="inline-flex rounded-full border border-border bg-card px-3 py-1 text-[11px] font-bold text-foreground">{note.week}</span>}{(note.slug === "paediatrics-history-taking-and-examination" || note.slug === "paediatrics-growth-and-development") && <Link to={note.slug === "paediatrics-history-taking-and-examination" ? "/course-outlines/paediatrics#pd-t1-01" : "/course-outlines/paediatrics#pd-t1-02"} className="text-xs font-bold text-primary hover:underline">View course outline ↗</Link>}</div>}
         <h1 className="mt-1 font-serif text-3xl font-bold leading-tight text-foreground sm:text-4xl">{note.title}</h1>
@@ -160,7 +162,7 @@ function StaticNoteView() {
       {parsed && linked && (
         <>
           {parsed.headings.length > 2 && (
-            <nav aria-label="In this note" className="mt-6 rounded-xl border border-border bg-card p-4 print:hidden">
+            <nav aria-label="In this note" className="mt-6 py-2 print:hidden">
               <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">In this note</p>
               <ol className="no-scrollbar mt-2 grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
                 {parsed.headings.map((h) => <li key={h.id}><a href={`#${h.id}`} className="text-foreground hover:text-primary">{h.text}</a></li>)}

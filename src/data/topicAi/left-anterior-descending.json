@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "The left anterior descending (LAD) artery supplies the anterior wall and septum of the heart. Occlusion leads to anterior wall myocardial infarction with characteristic ECG changes. Early recognition and reperfusion are critical.",
+ "aka": [
+  "Anterior interventricular artery"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The LAD is a branch of the left coronary artery that runs along the anterior interventricular sulcus, supplying the anterior LV wall and part of the septum. Diagnosis of LAD disease is made by coronary angiography, CT angiography, or invasive angiography, showing stenosis or occlusion.",
+   "b": [
+    "LAD supplies anterior LV wall and septum",
+    "Occlusion causes anterior wall MI"
+   ],
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Detects anterior ST‑segment elevation (V1‑V4). A positive result indicates LAD involvement."
+    },
+    {
+     "a": "Coronary angiography",
+     "b": "Shows degree of stenosis/occlusion. 75% stenosis is significant and warrants intervention."
+    },
+    {
+     "a": "Troponin",
+     "b": "Elevated levels confirm myocardial injury, but do not localise to LAD."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the extent of stenosis and by the presence of infarction. The TIMI flow grade and the extent of myocardial damage (e.g., transmural vs. subendocardial) guide management.",
+   "b": [
+    "<50% stenosis – stable angina",
+    "50‑90% stenosis – high risk for ACS",
+    ">90% stenosis or occlusion – acute MI"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Atherosclerosis is the leading cause of LAD disease. Risk factors include smoking, hypertension, diabetes, dyslipidaemia, and obesity. In low‑resource settings, infections such as HIV and TB can accelerate atherosclerosis.",
+   "b": [
+    "Atherosclerosis",
+    "Smoking",
+    "Hypertension",
+    "Diabetes",
+    "HIV/TB infection"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with LAD occlusion present with crushing chest pain radiating to the left arm or jaw, diaphoresis, nausea, and shortness of breath. In diabetics, pain may be atypical or absent.",
+   "b": [
+    "Crushing chest pain",
+    "ST‑segment elevation V1‑V4",
+    "Diaphoresis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Key investigations confirm the diagnosis, assess severity, and guide reperfusion strategy.",
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Shows anterior ST elevation; confirms LAD involvement."
+    },
+    {
+     "a": "Cardiac biomarkers",
+     "b": "Elevated troponin confirms myocardial necrosis."
+    },
+    {
+     "a": "Coronary angiography",
+     "b": "Defines stenosis severity and guides PCI or CABG."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Assesses wall motion abnormalities and ventricular function."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed if the patient has hemodynamic instability, cardiogenic shock, ventricular arrhythmias, or signs of heart failure.",
+   "b": [
+    "Cardiogenic shock",
+    "Ventricular tachycardia/fibrillation",
+    "Heart failure"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying atherosclerosis, provide reperfusion, and support cardiac function. Drug choices are based on efficacy and safety.",
+   "b": [
+    "Antiplatelet therapy (aspirin, P2Y12 inhibitor) – reduces clot propagation",
+    "Anticoagulation (heparin) – prevents new clot",
+    "Beta‑blocker – reduces oxygen demand",
+    "ACE inhibitor – improves remodeling",
+    "Statin – stabilises plaque"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long‑term care focuses on risk factor modification and monitoring for recurrent ischemia.",
+   "b": [
+    "Lifestyle changes – diet, exercise, smoking cessation",
+    "Regular ECG and troponin monitoring",
+    "Medication adherence"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of anterior chest pain include pericarditis, pulmonary embolism, and aortic dissection.",
+   "b": [
+    "Pericarditis – diffuse ST elevation, PR depression",
+    "Pulmonary embolism – right‑sided ECG changes"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Troponin can be falsely normal early; ECG changes may be subtle in diabetics; angiography may miss small distal lesions.",
+   "b": [
+    "Early troponin – may be normal within first hour"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Cardiogenic shock",
+  "Ventricular arrhythmia",
+  "Unrelenting chest pain despite treatment"
+ ],
+ "faq": [
+  {
+   "q": "What ECG changes indicate LAD involvement?",
+   "a": "ST‑segment elevation in leads V1‑V4 suggests anterior wall infarction due to LAD occlusion."
+  },
+  {
+   "q": "Why is the internal mammary artery preferred for bypassing the LAD?",
+   "a": "It has high long‑term patency (>90% at 10 years) and provides a durable conduit for the LAD."
+  },
+  {
+   "q": "Can a patient with LAD disease be asymptomatic?",
+   "a": "Yes, stable angina may be mild or absent, especially in diabetics; routine screening is important."
+  }
+ ],
+ "exam": [
+  "Explain why ST‑segment elevation in V1‑V4 indicates LAD occlusion.",
+  "Describe the first‑line pharmacologic therapy for an acute LAD infarction and why each drug is chosen.",
+  "Outline the risk factors that most strongly predispose a patient to LAD atherosclerosis and how you would counsel a patient in a low‑resource setting."
+ ],
+ "related": [
+  "Coronary artery disease",
+  "Acute myocardial infarction",
+  "Percutaneous coronary intervention",
+  "Coronary artery bypass grafting",
+  "Atherosclerosis",
+  "Risk factor modification",
+  "Cardiac biomarkers"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

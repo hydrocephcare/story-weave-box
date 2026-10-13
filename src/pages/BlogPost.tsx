@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useLayoutEffect, forwardRef, memo } from "react";
+import HeroAurora from "@/components/HeroAurora";
 import { mdToHtml } from "@/lib/miniMarkdown";
 import ConnectedLearning from "@/components/ConnectedLearning";
 import PharmacologyConnections from "@/components/PharmacologyConnections";
@@ -500,8 +501,9 @@ function ClassicHeroInner({
   const reviewer = "";
 
   return (
-    <header className="mb-8">
-      <div className={heroImage ? "" : "border-b border-border pb-6"}>
+    <header className="relative isolate -mx-4 mb-8 overflow-hidden px-4 pb-6 pt-5 sm:mx-0 sm:rounded-3xl sm:px-8 sm:pt-8">
+      <HeroAurora about={`${category ?? ""} ${title}`} />
+      <div>
         {unit && <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{unit}</p>}
         <h1 id={slugify(title)} className="mt-2 scroll-mt-20 font-serif text-[2rem] font-bold leading-[1.1] tracking-tight text-foreground sm:text-[2.8rem] lg:text-[3.3rem]">{title}</h1>
         {description && <p className="mt-4 max-w-[68ch] text-[17px] leading-relaxed text-foreground/75 sm:text-xl sm:leading-relaxed">{description}</p>}
