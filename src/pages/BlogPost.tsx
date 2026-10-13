@@ -1,4 +1,7 @@
 import { useState, useEffect, useMemo, useLayoutEffect, forwardRef, memo } from "react";
+import AdSlot from "@/components/AdSlot";
+import BooksForPage from "@/components/BooksForPage";
+import SponsorLine from "@/components/SponsorLine";
 import StudyTools from "@/components/StudyTools";
 import PageSummary from "@/components/PageSummary";
 import OutlineLine from "@/components/OutlineLine";
@@ -2000,7 +2003,10 @@ export default function BlogPost() {
               </section>
             )}
 
+            <BooksForPage text={`${article.title} ${(article.content || "").slice(0, 4000)}`} className="mt-12" />
+            <AdSlot />
             <NoteTopics text={article.content || ""} title={article.title} className="mt-10" />
+            <SponsorLine className="mt-8" />
 
             {hasRelated && (
               <div className="mt-12 rounded-lg border border-border p-5">

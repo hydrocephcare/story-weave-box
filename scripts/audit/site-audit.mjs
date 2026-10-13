@@ -55,7 +55,14 @@ for (const route of routes) for (const [label, W, H, mobile] of [["phone", 390, 
   errors = []; failed = [];
   await send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceScaleFactor: 1, mobile });
   await send("Page.navigate", { url: base + route });
-  await sleep(6500);
+  // wait until the page has drawn its heading and its placeholders are gone (up to 16 seconds), so a slow moment is not mistaken for a fault
+  await sleep(2500);
+  for (let i = 0; i < 27; i++) {
+    const r0 = await send("Runtime.evaluate", { expression: "Boolean(document.querySelector('h1')) && document.querySelectorAll('.animate-pulse').length <= 2 && document.body.innerText.length > 300", returnByValue: true });
+    if (r0?.result?.value === true) break;
+    await sleep(500);
+  }
+  await sleep(600);
   const r = await send("Runtime.evaluate", { expression: probe, returnByValue: true });
   let p; try { p = JSON.parse(r.result.value); } catch { p = { err: true }; }
   const flags = [];

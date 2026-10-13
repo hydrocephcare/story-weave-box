@@ -1,4 +1,7 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
+import BooksForPage from "@/components/BooksForPage";
+import SponsorLine from "@/components/SponsorLine";
+import AdSlot from "@/components/AdSlot";
 import StudyTools from "@/components/StudyTools";
 import OutlineLine from "@/components/OutlineLine";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
@@ -498,7 +501,10 @@ export default function TopicPage() {
               </Section>
             )}
 
-            <footer className="mt-14 border-t border-border pt-6 text-sm leading-relaxed text-muted-foreground">
+            <BooksForPage text={`${name} ${summary}`} className="mt-14 sm:mt-20" />
+            <AdSlot />
+            <footer className="mt-14 pt-2 text-sm leading-relaxed text-muted-foreground">
+              <SponsorLine className="mb-3" />
               <p className="font-bold text-foreground">Sources</p>
               <p className="mt-1.5">Ompath Study notes{topic ? ` (${topic.docs} ${topic.docs === 1 ? "page" : "pages"} mention ${name})` : ""} and standard medical references. Picture credits are shown when you enlarge a picture. Found a mistake? <a className="font-bold text-primary hover:underline" href={`mailto:ompathstudy@gmail.com?subject=${encodeURIComponent(`Correction: ${name}`)}`}>Tell us</a>. <Link to="/topics" className="font-bold text-primary hover:underline">Browse all topics</Link>.</p>
             </footer>

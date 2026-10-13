@@ -56,6 +56,8 @@ const LegacyLibraryRedirect = lazy(() => import("./pages/LegacyLibraryRedirect")
 const CourseOutlines = lazy(() => import("./pages/CourseOutlines"));
 const AdminOutlineSync = lazy(() => import("./pages/AdminOutlineSync"));
 const Review = lazy(() => import("./pages/Review"));
+const AdminMonetise = lazy(() => import("./pages/AdminMonetise"));
+const AdminTools = lazy(() => import("./pages/AdminTools"));
 const AdminContentHealth = lazy(() => import("./pages/AdminContentHealth"));
 const YearTimetable = lazy(() => import("./pages/YearTimetable"));
 const UnitPage = lazy(() => import("./pages/UnitPage"));
@@ -201,6 +203,8 @@ const AnimatedRoutes = () => {
             <Route path="/contests/:slug/progress" element={<SignedInRoute><ContestProgress /></SignedInRoute>} />
             <Route path="/contests/:slug/certificate/:attemptId" element={<SignedInRoute><ContestCertificate /></SignedInRoute>} />
             <Route path="/review" element={<Review />} />
+            <Route path="/admin/monetise" element={<AdminRoute><AdminMonetise /></AdminRoute>} />
+            <Route path="/admin/tools" element={<AdminRoute><AdminTools /></AdminRoute>} />
             <Route path="/admin/content-health" element={<AdminRoute><AdminContentHealth /></AdminRoute>} />
             <Route path="/admin/outline-sync" element={<AdminRoute><AdminOutlineSync /></AdminRoute>} />
             <Route path="/admin/editor" element={<AdminRoute><AdminEditor /></AdminRoute>} />
