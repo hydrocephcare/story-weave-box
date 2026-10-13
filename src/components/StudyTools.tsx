@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import ListenControl from "@/components/ListenControl";
 import { Link } from "react-router-dom";
-import { Check, ClipboardCheck, FileText, Layers, Loader2, Square, Volume2, X } from "lucide-react";
+import { Check, ClipboardCheck, FileText, Layers, Loader2, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { srs } from "@/lib/srs";
 import { useAccess } from "@/lib/access";
@@ -55,10 +56,8 @@ export default function StudyTools({ title, path, text, className = "" }: { titl
   const [note, setNote] = useState<{ ok: boolean; text: string } | null>(null);
   const [quiz, setQuiz] = useState<Q[] | null>(null);
   const [picked, setPicked] = useState<Record<number, number>>({});
-  const [speaking, setSpeaking] = useState(false);
-  const canSpeak = typeof window !== "undefined" && "speechSynthesis" in window;
   const alive = useRef(true);
-  useEffect(() => { alive.current = true; return () => { alive.current = false; if (canSpeak) window.speechSynthesis.cancel(); }; }, [canSpeak]);
+  useEffect(() => { alive.current = true; return () => { alive.current = false; }; }, []);
 
   const btn = "inline-flex h-11 items-center gap-2 rounded-full border border-border bg-background px-5 text-sm font-bold transition hover:border-primary/60 hover:bg-primary/5 active:scale-[.97] disabled:opacity-60";
 
@@ -84,16 +83,6 @@ export default function StudyTools({ title, path, text, className = "" }: { titl
     try { const { questions } = await call("quiz", title, text); spendOne("quiz"); if (alive.current) { setPicked({}); setQuiz(spread(questions)); } }
     catch (e) { if (alive.current) setNote({ ok: false, text: (e as Error).message }); } finally { if (alive.current) setBusy(""); }
   };
-  const listen = () => {
-    if (!canSpeak) return;
-    const synth = window.speechSynthesis;
-    if (speaking) { synth.cancel(); setSpeaking(false); return; }
-    const chunks = text.replace(/\s+/g, " ").match(/.{1,220}(?:[.!?]\s|$)/g) ?? [text];
-    synth.cancel();
-    chunks.slice(0, 40).forEach((c, i, arr) => { const u = new SpeechSynthesisUtterance(c.trim()); u.rate = 0.98; if (i === arr.length - 1) u.onend = () => setSpeaking(false); synth.speak(u); });
-    setSpeaking(true);
-  };
-
   const score = quiz ? quiz.filter((q, i) => picked[i] === q.answer).length : 0;
   return (
     <div className={className}>
@@ -101,7 +90,7 @@ export default function StudyTools({ title, path, text, className = "" }: { titl
         <button type="button" className={btn} onClick={makeCards} disabled={Boolean(busy)}>{busy === "cards" ? <Loader2 className="h-4 w-4 animate-spin" /> : <Layers className="h-4 w-4 text-primary" aria-hidden />} Make flashcards</button>
         <button type="button" className={btn} onClick={makeQuiz} disabled={Boolean(busy)}>{busy === "quiz" ? <Loader2 className="h-4 w-4 animate-spin" /> : <ClipboardCheck className="h-4 w-4 text-primary" aria-hidden />} Test me on this page</button>
         <button type="button" className={btn} onClick={makeEssays} disabled={Boolean(busy)}>{busy === "essays" ? <Loader2 className="h-4 w-4 animate-spin" /> : <FileText className="h-4 w-4 text-primary" aria-hidden />} Essay questions</button>
-        {canSpeak && <button type="button" className={btn} onClick={listen}>{speaking ? <Square className="h-4 w-4 text-primary" aria-hidden /> : <Volume2 className="h-4 w-4 text-primary" aria-hidden />} {speaking ? "Stop" : "Listen"}</button>}
+        <ListenControl text={text} path={path} btnClass={btn} />
       </div>
       {note && <p className={cn("mt-3 text-sm font-semibold", note.ok ? "text-primary" : "text-destructive")} role="status">{note.text} {note.ok && <Link to="/review" className="underline">Review now</Link>}</p>}
 

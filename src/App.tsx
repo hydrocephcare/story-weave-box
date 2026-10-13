@@ -1,4 +1,5 @@
 import { Suspense, lazy } from "react";
+import { useVisitCounter } from "@/lib/analytics";
 import RouteAurora from "@/components/RouteAurora";
 import RailLayout from "@/components/RailLayout";
 import SearchGate from "@/components/SearchGate";
@@ -58,6 +59,7 @@ const CourseOutlines = lazy(() => import("./pages/CourseOutlines"));
 const AdminOutlineSync = lazy(() => import("./pages/AdminOutlineSync"));
 const Review = lazy(() => import("./pages/Review"));
 const AdminMonetise = lazy(() => import("./pages/AdminMonetise"));
+const AdminAnalytics = lazy(() => import("./pages/AdminAnalytics"));
 const AdminTools = lazy(() => import("./pages/AdminTools"));
 const AdminContentHealth = lazy(() => import("./pages/AdminContentHealth"));
 const YearTimetable = lazy(() => import("./pages/YearTimetable"));
@@ -126,6 +128,7 @@ const RouteLoader = () => (
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+  useVisitCounter();
   return (
     <RouteErrorBoundary key={location.pathname}>
       <main className="relative isolate min-h-[65vh]">
@@ -206,6 +209,7 @@ const AnimatedRoutes = () => {
             <Route path="/contests/:slug/certificate/:attemptId" element={<SignedInRoute><ContestCertificate /></SignedInRoute>} />
             <Route path="/review" element={<Review />} />
             <Route path="/admin/monetise" element={<AdminRoute><AdminMonetise /></AdminRoute>} />
+            <Route path="/admin/analytics" element={<AdminRoute><AdminAnalytics /></AdminRoute>} />
             <Route path="/admin/tools" element={<AdminRoute><AdminTools /></AdminRoute>} />
             <Route path="/admin/content-health" element={<AdminRoute><AdminContentHealth /></AdminRoute>} />
             <Route path="/admin/outline-sync" element={<AdminRoute><AdminOutlineSync /></AdminRoute>} />
