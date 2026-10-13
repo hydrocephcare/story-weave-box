@@ -1,0 +1,169 @@
+{
+ "medical": true,
+ "subject": "Psychiatry",
+ "summary": "Psychopathology studies mental illness patterns, their causes, presentation, and management. Clinicians must integrate history, exam, and context to diagnose and treat safely.",
+ "aka": [
+  "Mental illness",
+  "Psychiatric disorders",
+  "Psychopathology"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Psychopathology refers to the study of abnormal thoughts, emotions, and behaviors that cause distress or impairment. Diagnosis follows DSM‑5 or ICD‑10 criteria, requiring a clear symptom cluster, duration, and functional impact.",
+   "b": [
+    "Use structured interview (e.g., MINI, SCID) to ensure reliable criteria.",
+    "Rule out medical mimics before labeling a primary psychiatric disorder."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom intensity, functional loss, and risk (e.g., mild, moderate, severe, psychotic). Staging models (e.g., prodrome → acute → chronic) guide treatment intensity.",
+   "b": [
+    "Mild: symptoms present but daily life mostly intact.",
+    "Severe: marked dysfunction, possible psychosis or suicidality."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Etiology is multifactorial: genetic vulnerability, neurochemical dysregulation, psychosocial stressors, and medical illnesses.",
+   "b": [
+    "Genetic predisposition (family history of mood or psychotic disorders).",
+    "Neurotransmitter imbalance (serotonin, dopamine).",
+    "Stressful life events (trauma, loss).",
+    "Infections common in low‑resource settings (HIV, TB meningitis, malaria).",
+    "Substance use (alcohol, cannabis).",
+    "Medication side‑effects (corticosteroids, antiretrovirals)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may report persistent low mood, anxiety, hallucinations, or disorganized thinking, often with sleep, appetite, or concentration changes.",
+   "b": [
+    "Mood disorders: depressed mood >2 weeks, anhedonia, guilt.",
+    "Anxiety disorders: excessive worry, somatic tension.",
+    "Psychotic disorders: delusions, hallucinations, thought disorder.",
+    "Cognitive decline may hint at delirium or neuroinfection."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm diagnosis, rule out medical mimics, and guide treatment.",
+   "t": [
+    {
+     "a": "Basic metabolic panel",
+     "b": "Are electrolyte or endocrine abnormalities causing symptoms? Abnormalities suggest metabolic delirium or thyroid disease."
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Is anemia, infection, or hematologic disease present? Low hemoglobin may explain fatigue and cognitive slowing."
+    },
+    {
+     "a": "Thyroid function tests",
+     "b": "Is hypo‑ or hyperthyroidism contributing? Abnormal TSH/T4 explains mood swings."
+    },
+    {
+     "a": "HIV test",
+     "b": "Is HIV infection present, which can cause neuropsychiatric symptoms? Positive result prompts antiretroviral therapy and CNS evaluation."
+    },
+    {
+     "a": "Urine toxicology",
+     "b": "Are substances influencing mental state? Detects alcohol, cannabis, stimulants."
+    },
+    {
+     "a": "Neuroimaging (CT/MRI) – if available",
+     "b": "Is there structural brain disease (stroke, tumor)? Findings direct neurosurgical referral."
+    },
+    {
+     "a": "If imaging unavailable, bedside neurological exam",
+     "b": "Does the exam reveal focal deficits? Guides urgency of referral."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent intervention.",
+   "b": [
+    "Suicidal intent or plan.",
+    "Psychosis with command hallucinations.",
+    "Severe agitation risking harm.",
+    "Rapid deterioration suggesting delirium or neuroinfection."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying medical causes first, then address psychiatric symptoms with evidence‑based therapies.",
+   "b": [
+    "Antidepressants (SSRIs) for depressive disorders – chosen for safety and low toxicity.",
+    "Antipsychotics (second‑generation) for psychosis – avoid high‑risk EPS drugs in low‑resource settings.",
+    "Benzodiazepines short‑term for severe anxiety or agitation – limit due to dependence.",
+    "Psychotherapy (CBT, supportive counseling) – essential adjunct, feasible even in brief formats.",
+    "Address substance use with counseling and detox when needed."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular review of symptoms, medication side‑effects, and functional status is vital. Prevent relapse with maintenance therapy, psychoeducation, and community support.",
+   "b": [
+    "Schedule visits every 2–4 weeks initially, then monthly.",
+    "Monitor weight, metabolic labs for antipsychotics.",
+    "Encourage adherence, social support, and stress‑reduction strategies."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic psychiatric illness.",
+   "b": [
+    "Delirium – fluctuating consciousness, often medical cause.",
+    "Hypothyroidism – depressive picture with low energy.",
+    "Substance‑induced mood disorder – resolves with abstinence.",
+    "Neurological disease (e.g., epilepsy) – may present with transient psychosis."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpretation.",
+   "b": [
+    "Normal thyroid tests do not exclude central hypothyroidism.",
+    "Negative urine toxicology may miss recent cannabis use (short detection window).",
+    "Normal CT does not rule out early HIV encephalitis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Suicidal thoughts or attempts",
+  "Acute psychosis with danger to self or others",
+  "Rapid mental status change suggesting delirium or infection"
+ ],
+ "faq": [
+  {
+   "q": "How do I differentiate depression from normal sadness?",
+   "a": "Depression persists >2 weeks, impairs function, and includes guilt, anhedonia, or suicidal thoughts, unlike transient sadness."
+  },
+  {
+   "q": "When is hospitalization required?",
+   "a": "When there is imminent risk of harm, inability to care for self, or severe psychosis unresponsive to outpatient measures."
+  },
+  {
+   "q": "Can psychiatric symptoms be the first sign of HIV?",
+   "a": "Yes; HIV can cause mood changes, psychosis, or cognitive decline before other systemic signs appear."
+  }
+ ],
+ "exam": [
+  "List the core DSM‑5 criteria for major depressive disorder and explain how to assess severity.",
+  "Describe the step‑wise approach to evaluating a patient with new‑onset psychosis in a low‑resource setting.",
+  "Identify three red‑flag features that mandate urgent referral or admission."
+ ],
+ "related": [
+  "Mood disorders",
+  "Psychotic disorders",
+  "Substance‑induced mental disorders",
+  "Delirium",
+  "Neurocognitive disorders",
+  "Psychiatric emergencies"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}
