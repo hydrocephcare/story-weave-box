@@ -6,8 +6,8 @@ name: Tidy the blogs
 # Uses only the morning-job keys (the GROQ_API_KEYS and GEMINI_API_KEYS secrets), never the keys visitors use.
 # Run it yourself any time: Actions > Tidy the blogs > Run workflow (tick "force" to run before 1 November).
 on:
-  schedule:
-    - cron: "30 2 * * *"
+  # The daily schedule is off: the site now polishes each blog by itself the first time someone opens it (see api/_lib/blogPolish.js), so this job
+  # would only spend AI for nothing. It can still be run by hand.
   workflow_dispatch:
     inputs:
       count:
