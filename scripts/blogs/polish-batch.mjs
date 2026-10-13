@@ -1,6 +1,7 @@
 // Polishes Year 1 to 3 blogs in bulk (the page-open endpoint does one at a time). Long pages are done piece by piece.
 //   node scripts/blogs/polish-batch.mjs [count] [--year N] [--minutes M]
 // Needs POLISH_WRITE_KEY (made on /admin/polish) plus GROQ_API_KEYS and/or GEMINI_API_KEYS in the environment. Results go to the blog_polish table, never into the articles.
+import fs from "node:fs";
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 import { yearOf } from "../../api/_lib/blogPolishCore.js";
 import { polishArticle } from "../../api/_lib/blogPolishRun.js";
@@ -9,8 +10,10 @@ const SB = process.env.SUPABASE_URL || "https://lkgfzjwhmfjvntzphbsh.supabase.co
 const SERVICE = process.env.SUPABASE_SERVICE_ROLE_KEY; // optional: the write key does the job without it
 const WRITE = process.env.POLISH_WRITE_KEY || "";
 const KEY = SERVICE || process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrZ2Z6andobWZqdm50enBoYnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3Nzk5MjIsImV4cCI6MjA4NzM1NTkyMn0.a2QY6TxzKNM2AhuuoDkgdKifI3XhSGhYRlhpqZpvAwo";
-const groq = process.env.GROQ_API_KEYS || "";
-const gem = process.env.GEMINI_API_KEYS || "";
+// on your own computer the keys can sit in the git-ignored files .groq-keys.local and .gemini-keys.local (one key per line); in GitHub they come from secrets
+const fromFile = (f) => (fs.existsSync(f) ? fs.readFileSync(f, "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "");
+const groq = [process.env.GROQ_API_KEYS, fromFile(".groq-keys.local")].filter(Boolean).join(",");
+const gem = [process.env.GEMINI_API_KEYS, fromFile(".gemini-keys.local")].filter(Boolean).join(",");
 if (!SERVICE && !WRITE) { console.log("POLISH_WRITE_KEY is not set: nothing to do."); process.exit(0); }
 if (!groq.trim() && !gem.trim()) { console.log("No AI keys: nothing to do."); process.exit(0); }
 
