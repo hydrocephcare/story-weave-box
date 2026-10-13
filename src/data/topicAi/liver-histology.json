@@ -1,0 +1,112 @@
+{
+ "medical": true,
+ "summary": "Liver histology is the microscopic study of liver tissue, crucial for diagnosing and understanding liver diseases. It reveals structural changes in hepatocytes, bile ducts, and blood vessels, guiding clinical management. This detailed examination helps identify the cause and severity of liver injury.",
+ "aka": [
+  "Hepatic histology",
+  "Liver biopsy interpretation"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Liver histology involves examining liver tissue under a microscope, typically obtained via biopsy. This allows clinicians to identify specific patterns of injury, inflammation, and fibrosis that are characteristic of various liver diseases. Understanding these microscopic changes is fundamental for accurate diagnosis, prognosis, and treatment planning, moving beyond just abnormal lab values to the underlying pathology."
+  },
+  {
+   "h": "Location and structure",
+   "p": "The liver's functional unit is often described as the hepatic lobule, a hexagonal structure with a central vein and portal triads at its corners. Alternatively, the hepatic acinus emphasizes blood flow and metabolic zonation. Key cellular components include:",
+   "b": [
+    "**Hepatocytes:** The main parenchymal cells, arranged in plates, performing most metabolic functions.",
+    "**Sinusoids:** Capillaries lined by fenestrated endothelial cells, where blood from portal vein and hepatic artery mixes.",
+    "**Kupffer cells:** Specialized macrophages within sinusoids, part of the reticuloendothelial system.",
+    "**Stellate cells (Ito cells):** Located in the space of Disse, store vitamin A and become fibrogenic in injury.",
+    "**Portal triad:** Consists of a branch of the hepatic artery, portal vein, and bile duct, surrounded by connective tissue."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The liver has a dual blood supply, essential for its function and vulnerability to injury. Blood flows from the portal triads through the sinusoids to the central vein.",
+   "b": [
+    "**Hepatic artery:** Supplies oxygenated blood (25-30% of total flow) to hepatocytes and bile ducts.",
+    "**Portal vein:** Carries nutrient-rich, deoxygenated blood (70-75% of total flow) from the GI tract, spleen, and pancreas.",
+    "**Sinusoids:** Where arterial and portal venous blood mix, allowing exchange with hepatocytes.",
+    "**Central vein:** Collects blood from sinusoids, draining into hepatic veins and then the inferior vena cava."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The liver receives both sympathetic and parasympathetic innervation, primarily from the celiac plexus and vagus nerve, respectively. These nerves regulate blood flow, bile secretion, and metabolic activity, though their direct histological appearance is less prominent than the vascular structures.",
+   "b": [
+    "Sympathetic nerves cause vasoconstriction and inhibit bile flow.",
+    "Parasympathetic nerves promote vasodilation and stimulate bile secretion."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The liver's diverse functions are directly supported by its unique histological architecture. Hepatocytes are metabolic powerhouses, while other cells contribute to immunity and structural integrity.",
+   "b": [
+    "**Metabolism:** Processing carbohydrates, fats, and proteins (e.g., gluconeogenesis, cholesterol synthesis).",
+    "**Detoxification:** Metabolizing drugs, toxins, and waste products (e.g., ammonia to urea).",
+    "**Synthesis:** Producing plasma proteins (albumin, clotting factors), bile, and hormones.",
+    "**Storage:** Storing glycogen, vitamins (A, D, B12), and iron.",
+    "**Immunity:** Kupffer cells phagocytose pathogens and cellular debris."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Histological examination is critical for diagnosing liver diseases, identifying specific patterns of injury, and assessing severity. Different insults lead to distinct microscopic changes, guiding clinical decisions.",
+   "b": [
+    "**Zonal necrosis:** Damage concentrated in specific areas of the lobule (e.g., centrilobular in ischemia, midzonal in yellow fever).",
+    "**Inflammation:** Presence and type of inflammatory cells (lymphocytes, neutrophils, eosinophils) indicate different etiologies.",
+    "**Steatosis:** Accumulation of fat within hepatocytes, seen in alcoholic and non-alcoholic fatty liver disease.",
+    "**Fibrosis/Cirrhosis:** Excessive collagen deposition, leading to scarring and architectural distortion, a common end-stage of chronic liver injury.",
+    "**Councilman bodies:** Eosinophilic, shrunken, apoptotic hepatocytes, characteristic of viral hepatitis and drug-induced liver injury.",
+    "**Midzonal necrosis:** Necrosis primarily affecting hepatocytes in the middle zone of the hepatic acinus, notably seen in yellow fever and some toxic injuries, indicating specific patterns of damage.",
+    "**Cholestasis:** Impaired bile flow, histologically seen as bile plugs in canaliculi and bile duct proliferation."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "When interpreting liver histology, focus on identifying the primary cell type affected, the pattern of injury, and the presence of fibrosis. These elements collectively point towards a diagnosis and help predict prognosis.",
+   "b": [
+    "Recognize the components of a portal triad: hepatic artery, portal vein, bile duct.",
+    "Differentiate between acute (inflammation, necrosis) and chronic (fibrosis, cirrhosis) injury patterns.",
+    "Identify Councilman bodies as a sign of hepatocyte apoptosis, often in viral hepatitis.",
+    "Understand that midzonal necrosis suggests specific toxic or infectious causes like yellow fever.",
+    "Correlate histological findings with clinical history and laboratory results for a complete picture."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Why is liver histology preferred over blood tests for some liver conditions?",
+   "a": "While blood tests indicate liver function and injury, histology provides direct visualization of tissue damage, inflammation, fibrosis, and specific disease patterns, which is crucial for definitive diagnosis and staging, especially in chronic diseases."
+  },
+  {
+   "q": "What is the significance of fibrosis in liver histology?",
+   "a": "Fibrosis is the accumulation of scar tissue, indicating chronic liver injury. Its severity (staging) is critical for prognosis, as advanced fibrosis (cirrhosis) can lead to liver failure and portal hypertension. Histology is the gold standard for staging fibrosis."
+  },
+  {
+   "q": "Can liver histology be normal in a patient with liver disease?",
+   "a": "Rarely, early or patchy disease might be missed if the biopsy sample is not representative. However, significant liver disease usually presents with discernible histological changes. Clinical correlation is always vital."
+  }
+ ],
+ "exam": [
+  "A patient presents with elevated liver enzymes and jaundice. Describe the key histological features you would look for to differentiate between acute viral hepatitis and drug-induced liver injury.",
+  "Explain how the presence and distribution of fibrosis on a liver biopsy can help stage chronic liver disease and predict patient outcomes.",
+  "Discuss the clinical significance of finding Councilman bodies and midzonal necrosis in a liver biopsy specimen."
+ ],
+ "related": [
+  "Liver Anatomy",
+  "Liver Physiology",
+  "Viral Hepatitis",
+  "Cirrhosis",
+  "Non-alcoholic Fatty Liver Disease (NAFLD)",
+  "Drug-Induced Liver Injury",
+  "Portal Hypertension",
+  "Liver Biopsy"
+ ],
+ "kind": "anatomy",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

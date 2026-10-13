@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "summary": "The stomach is a muscular, J-shaped organ of the upper gastrointestinal tract, primarily responsible for food storage, mechanical churning, and initial chemical digestion of proteins and fats. It secretes gastric acid and enzymes, preparing food for further digestion in the small intestine.",
+ "aka": [
+  "Gastric (adjective)"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The stomach is a dilated part of the alimentary canal, connecting the esophagus to the duodenum. It serves as a temporary reservoir for food, where it undergoes mechanical and chemical breakdown before passing into the small intestine. Its acidic environment is crucial for digestion and pathogen inactivation."
+  },
+  {
+   "h": "Location and structure",
+   "p": "Located in the epigastric and left hypochondriac regions of the abdomen, the stomach is a J-shaped organ. Its position can vary with body habitus and distension.",
+   "b": [
+    "Cardia: Surrounds the superior opening, receiving the esophagus.",
+    "Fundus: Dome-shaped part superior to the cardia, often filled with gas.",
+    "Body: The largest central part, between the fundus and pylorus.",
+    "Pylorus: Distal part, divided into pyloric antrum, pyloric canal, and the pyloric sphincter, which controls gastric emptying.",
+    "Curvatures: Lesser curvature (medial, concave) and greater curvature (lateral, convex).",
+    "Rugae: Folds in the internal mucosa that allow for expansion."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Understanding the stomach's anatomical relations is vital for surgical approaches and interpreting imaging.",
+   "b": [
+    "Anteriorly: Liver (left lobe), diaphragm, anterior abdominal wall.",
+    "Posteriorly: Lesser sac, pancreas, left kidney and adrenal gland, spleen, transverse colon, splenic artery.",
+    "Superiorly: Diaphragm, esophagus.",
+    "Inferiorly: Transverse colon and mesocolon.",
+    "Left: Spleen, diaphragm.",
+    "Right: Liver, duodenum."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The stomach has a rich arterial supply from the celiac trunk, ensuring adequate perfusion for its metabolic demands and secretory functions.",
+   "b": [
+    "Arterial: Primarily from branches of the celiac trunk: left gastric artery, right gastric artery (from common hepatic), short gastric arteries (from splenic), left gastro-omental artery (from splenic), right gastro-omental artery (from gastroduodenal).",
+    "Venous: Veins generally follow the arteries, draining into the portal venous system (left and right gastric veins directly into portal vein; short gastric and gastro-omental veins into splenic vein, then portal vein)."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Gastric motility, secretion, and blood flow are tightly regulated by both extrinsic and intrinsic nervous systems.",
+   "b": [
+    "Parasympathetic: Vagus nerves (anterior and posterior vagal trunks) stimulate secretion and motility.",
+    "Sympathetic: Nerves from the celiac plexus inhibit secretion and motility, and convey pain sensation.",
+    "Enteric Nervous System: Intrinsic plexuses (Meissner's and Auerbach's) coordinate local reflexes."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The stomach performs crucial roles in digestion, acting as a temporary storage unit and initiating the breakdown of specific macromolecules.",
+   "b": [
+    "Storage: Holds ingested food, allowing for controlled release into the duodenum.",
+    "Mechanical Digestion: Muscular contractions (churning) mix food with gastric juices, forming chyme.",
+    "Chemical Digestion (Proteins): Pepsinogen is activated by gastric HCl to Pepsin, an endopeptidase that cleaves interior peptide bonds, producing large peptides and polypeptides.",
+    "Chemical Digestion (Fats): Gastric lipase hydrolyzes triglycerides into fatty acids and diglycerides, contributing ~15% of total fat digestion. Churning creates lipid droplets.",
+    "Minimal Carbohydrate Digestion: Salivary amylase is inactivated by gastric acid, resulting in minimal carbohydrate breakdown in the stomach.",
+    "Intrinsic Factor Production: Parietal cells produce intrinsic factor, essential for Vitamin B12 absorption in the ileum.",
+    "Motility: The Migrating Motor Complex (MMC) is a cleaning wave that sweeps the stomach and small bowel every 90 to 120 minutes in the fasting state."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "The stomach is susceptible to various conditions, often related to its acidic environment, motility, or anatomical position.",
+   "b": [
+    "Peptic Ulcer Disease: Erosion of the gastric mucosa, often caused by Helicobacter pylori infection or NSAID use.",
+    "Gastritis: Inflammation of the gastric lining, which can be acute or chronic.",
+    "Gastroesophageal Reflux Disease (GERD): Reduced gastro-oesophageal sphincter tone and a displaced stomach (e.g., hiatal hernia) can cause heartburn and reflux.",
+    "NSAID-induced Gastropathy: Non-steroidal anti-inflammatory drugs (NSAIDs) like ibuprofen can cause stomach irritation and pain by inhibiting prostaglandin synthesis, which protects the gastric mucosa.",
+    "Upper Gastrointestinal Bleed: Bleeding originating from the esophagus, stomach, or duodenum (above the ligament of Treitz) can manifest as hematemesis or melena.",
+    "Gastric Cancer: Malignancy of the stomach, often presenting late.",
+    "Pyloric Stenosis: Narrowing of the pyloric sphincter, common in infants, leading to projectile vomiting."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "To excel, understand the stomach's functional anatomy and its clinical implications.",
+   "b": [
+    "Trace the arterial supply and venous drainage, noting their origins and terminations.",
+    "Explain how gastric acid production is regulated and its role in protein digestion.",
+    "Describe the mechanisms by which NSAIDs cause gastric irritation.",
+    "Identify the key anatomical landmarks and their clinical significance (e.g., pyloric sphincter, fundus)."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the primary role of the stomach in digestion?",
+   "a": "The stomach primarily stores food, mechanically churns it, and initiates protein and fat digestion through gastric acid and enzymes like pepsin and gastric lipase."
+  },
+  {
+   "q": "Why is carbohydrate digestion minimal in the stomach?",
+   "a": "Salivary amylase, which begins carbohydrate digestion in the mouth, is inactivated by the highly acidic environment of the stomach, limiting further breakdown."
+  },
+  {
+   "q": "How do NSAIDs affect the stomach?",
+   "a": "NSAIDs like ibuprofen can cause stomach irritation and pain by inhibiting prostaglandins, which are crucial for protecting the gastric lining."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical divisions of the stomach and their respective functions.",
+  "Outline the arterial supply to the stomach, identifying the major vessels and their origins.",
+  "Explain how the stomach contributes to protein and fat digestion, including the enzymes involved and their activation."
+ ],
+ "related": [
+  "Esophagus",
+  "Duodenum",
+  "Pancreas",
+  "Liver",
+  "Celiac Trunk",
+  "Peritoneum",
+  "Gastroesophageal Reflux Disease",
+  "Peptic Ulcer Disease"
+ ],
+ "kind": "anatomy",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,205 @@
+{
+ "medical": true,
+ "summary": "Anaemia is a condition where the blood lacks healthy red blood cells or haemoglobin, reducing oxygen delivery to tissues. It is a sign of an underlying problem, not a disease itself. Diagnosis involves identifying the cause for effective treatment.",
+ "aka": [
+  "Anemia",
+  "Low blood count"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Anaemia is defined as a reduction in the number of red blood cells or the amount of haemoglobin (Hb) in the blood, leading to decreased oxygen-carrying capacity. It is a clinical sign, not a diagnosis, and always requires investigation into its underlying cause.",
+   "b": [
+    "Diagnosis is based on haemoglobin levels, which vary by age, sex, and physiological state.",
+    "WHO criteria for anaemia: Hb <130 g/L for men, <120 g/L for non-pregnant women, <110 g/L for pregnant women and children 6 months to 5 years."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Anaemia severity is typically staged based on haemoglobin concentration, guiding urgency of investigation and management.",
+   "b": [
+    "Mild anaemia: Hb 100-119 g/L (non-pregnant women), 100-129 g/L (men).",
+    "Moderate anaemia: Hb 70-99 g/L.",
+    "Severe anaemia: Hb <70 g/L."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Anaemia results from three main mechanisms: decreased red blood cell production, increased red blood cell destruction (haemolysis), or blood loss. Identifying the mechanism helps narrow down the causes.",
+   "b": [
+    "**Decreased Red Blood Cell Production (Hypoproliferative - reticulocyte count <2.5%)**:",
+    "Nutritional deficiencies: Iron deficiency (most common worldwide), Vitamin B12 deficiency, Folate deficiency.",
+    "Anaemia of chronic disease/inflammation: Common in chronic infections (e.g., HIV, TB), autoimmune diseases, chronic kidney disease.",
+    "Bone marrow disorders: Aplastic anaemia, myelodysplastic syndromes, leukaemia, marrow infiltration.",
+    "Endocrine disorders: Hypothyroidism, hypopituitarism.",
+    "**Increased Red Blood Cell Destruction (Haemolysis)**:",
+    "Genetic disorders: Sickle cell disease, thalassaemias, G6PD deficiency.",
+    "Autoimmune haemolytic anaemia (AIHA).",
+    "Infections: Malaria (direct destruction), Clostridium perfringens.",
+    "Drug-induced haemolysis.",
+    "**Blood Loss**:",
+    "Acute haemorrhage: Trauma, gastrointestinal bleeding (e.g., peptic ulcer, varices)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms of anaemia arise from reduced oxygen delivery to tissues and vary with severity, duration, and the underlying cause. Chronic anaemia often allows for compensatory mechanisms, so symptoms may be less pronounced than in acute onset.",
+   "b": [
+    "General symptoms: Fatigue, weakness, pallor (conjunctival, palmar, nail beds), dizziness, headache, shortness of breath (dyspnoea), palpitations.",
+    "Severe anaemia: Angina, confusion, syncope, signs of heart failure (tachycardia, oedema).",
+    "Specific signs related to cause: Jaundice (haemolysis), pica (iron deficiency), glossitis (iron, B12, folate deficiency), neurological symptoms (B12 deficiency), bone pain (marrow disorders)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "The diagnostic approach starts with a Full Blood Count (FBC) to confirm anaemia and classify it, followed by targeted tests to identify the underlying cause. In low-resource settings, a peripheral blood smear is crucial if automated FBC is unavailable.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Confirms anaemia (low Hb, Hct), classifies it by red cell indices (MCV, MCH, MCHC), and provides clues from white blood cell and platelet counts. MCV helps categorise anaemia as microcytic (<80 fL), normocytic (80-100 fL), or macrocytic (>100 fL)."
+    },
+    {
+     "a": "Reticulocyte count",
+     "b": "Measures the rate of new red blood cell production by the bone marrow. A low count (<2.5%) indicates hypoproliferative anaemia (production problem); a high count suggests haemolysis or blood loss (marrow compensating)."
+    },
+    {
+     "a": "Peripheral Blood Smear (PBS)",
+     "b": "Directly visualises red blood cell morphology (size, shape, inclusions), white blood cells, and platelets. Essential for identifying specific causes like sickle cells, schistocytes, malaria parasites, or megaloblastic changes, especially where automated FBC is limited."
+    },
+    {
+     "a": "Iron Studies (Serum iron, ferritin, TIBC, transferrin saturation)",
+     "b": "Assesses iron status. Low ferritin is the most sensitive marker for iron deficiency. High ferritin can indicate inflammation or iron overload."
+    },
+    {
+     "a": "Vitamin B12 and Folate levels",
+     "b": "Identifies deficiencies causing macrocytic anaemia. Important for neurological and haematological function."
+    },
+    {
+     "a": "Stool for occult blood / Ova and Parasites",
+     "b": "Detects gastrointestinal blood loss (e.g., from hookworm, ulcers) or parasitic infections (e.g., schistosomiasis) which are common causes of chronic blood loss, particularly in endemic areas."
+    },
+    {
+     "a": "Renal function tests (Creatinine, Urea)",
+     "b": "Screens for chronic kidney disease, a common cause of anaemia due to reduced erythropoietin (EPO) production."
+    },
+    {
+     "a": "Liver function tests (LFTs)",
+     "b": "Screens for liver disease which can cause anaemia or affect metabolism of nutrients vital for erythropoiesis."
+    },
+    {
+     "a": "HIV, Malaria, Syphilis tests",
+     "b": "Identifies common infectious causes of anaemia, especially in endemic regions. Early detection and treatment are crucial for patient outcomes."
+    },
+    {
+     "a": "High Vaginal Swab and Culture (for women)",
+     "b": "Detects infection contributing to chronic inflammation or identifies causes of heavy menstrual bleeding."
+    },
+    {
+     "a": "Coomb's test (Direct Antiglobulin Test)",
+     "b": "Detects antibodies on red blood cell surfaces, confirming autoimmune haemolytic anaemia."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs and symptoms indicate severe anaemia requiring urgent medical attention due to the risk of organ damage or life-threatening complications.",
+   "b": [
+    "Severe pallor with signs of heart failure (e.g., tachycardia, dyspnoea at rest, peripheral oedema).",
+    "Altered mental status, confusion, or syncope.",
+    "Chest pain or signs of myocardial ischaemia.",
+    "Active, heavy bleeding (e.g., haematemesis, melaena, severe menorrhagia).",
+    "Rapid drop in haemoglobin levels.",
+    "Signs of shock (e.g., hypotension, cold clammy skin)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Effective management of anaemia focuses on treating the underlying cause, providing supportive care, and monitoring the patient's response. Symptom control is also important.",
+   "b": [
+    "**Treat the underlying cause**:",
+    "Iron deficiency: Oral iron supplementation (e.g., ferrous sulfate). Address the source of blood loss (e.g., deworming for hookworm, NSAIDs and tranexamic acid for heavy bleeding, GnRH agonists like leuprolide for fibroids before surgery).",
+    "Vitamin B12/Folate deficiency: Supplementation (oral or intramuscular B12).",
+    "Malaria: Appropriate antimalarial drugs.",
+    "HIV/TB: Antiretroviral therapy/anti-TB drugs.",
+    "Chronic disease: Manage the primary condition (e.g., EPO for chronic kidney disease).",
+    "**Supportive care**:",
+    "Blood transfusion: For severe symptomatic anaemia (e.g., Hb <70 g/L, or <80 g/L with comorbidities like cardiac disease) or acute significant blood loss.",
+    "Oxygen therapy: For severe hypoxia.",
+    "Dietary advice: Encourage iron-rich foods and fortified foods."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor treatment efficacy, identify complications, and prevent recurrence. Prevention strategies are vital, especially in vulnerable populations and low-resource settings.",
+   "b": [
+    "Regular haemoglobin checks to assess response to treatment and adjust therapy.",
+    "Dietary counselling on iron, B12, and folate-rich foods.",
+    "Deworming programs in areas endemic for parasitic infections (e.g., hookworm, schistosomiasis).",
+    "Early detection and treatment of conditions such as malaria, syphilis, and HIV.",
+    "Anaemia screening in vulnerable groups like pregnant women and young children.",
+    "Management of chronic conditions to prevent anaemia of chronic disease."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Anaemia symptoms can overlap with other conditions, making careful differentiation important for accurate diagnosis and treatment.",
+   "b": [
+    "Fatigue from other causes (e.g., chronic fatigue syndrome, depression, hypothyroidism, sleep disorders).",
+    "Pallor due to vasoconstriction (e.g., shock, cold exposure) without true anaemia.",
+    "Hypotension, which can cause dizziness and weakness but is distinct from anaemia.",
+    "Dehydration, which can cause weakness and fatigue."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Several clinical situations can lead to misleading laboratory results, requiring careful interpretation of haemoglobin levels and other parameters.",
+   "b": [
+    "**Physiological (dilutional) anaemia in pregnancy**: Plasma volume rises by 40-50% and red cell mass by 20-30%, causing a lower haemoglobin concentration without a true deficit in red cell mass.",
+    "**Acute blood loss**: Initial haemoglobin may be normal as plasma and red cells are lost proportionally; the drop becomes evident as fluid shifts or is replaced.",
+    "**Dehydration**: Can falsely elevate haemoglobin due to haemoconcentration, masking underlying anaemia.",
+    "**Recent blood transfusion**: Can temporarily normalise haemoglobin, masking the underlying anaemia or altering other FBC parameters.",
+    "**Reticulocyte count**: Can be falsely low if the bone marrow is suppressed (e.g., by infection, drugs, or severe nutritional deficiency) even when there is a stimulus for red cell production."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe shortness of breath at rest or with minimal exertion",
+  "Chest pain or discomfort",
+  "Fainting or severe dizziness",
+  "Rapid or irregular heartbeat",
+  "Active, heavy bleeding that doesn't stop"
+ ],
+ "faq": [
+  {
+   "q": "Can anaemia be normal?",
+   "a": "Physiological (dilutional) anaemia is common in pregnancy due to increased plasma volume, which is a normal adaptation, not a disease."
+  },
+  {
+   "q": "Is anaemia a disease itself?",
+   "a": "No, anaemia is a sign or symptom of an underlying medical condition, not a disease in its own right. Its cause must always be investigated."
+  },
+  {
+   "q": "What is the most common cause of anaemia worldwide?",
+   "a": "Iron deficiency is the most prevalent cause of anaemia globally, often due to inadequate dietary intake, chronic blood loss, or malabsorption."
+  }
+ ],
+ "exam": [
+  "A 35-year-old woman presents with chronic fatigue, pallor, and heavy menstrual bleeding. Outline your diagnostic approach and initial management plan, considering a low-resource setting.",
+  "Describe the classification of anaemia based on red cell indices (MCV) and list common causes for each type (microcytic, normocytic, macrocytic).",
+  "Discuss the red flags for severe anaemia and the immediate steps you would take to manage a patient presenting with these signs."
+ ],
+ "related": [
+  "Iron Deficiency Anaemia",
+  "Sickle Cell Disease",
+  "Malaria",
+  "Thalassemia",
+  "Vitamin B12 Deficiency",
+  "Chronic Kidney Disease",
+  "Gastrointestinal Bleeding",
+  "Menorrhagia"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,195 @@
+{
+ "medical": true,
+ "summary": "Screening involves systematically testing asymptomatic individuals in a defined population to identify those at higher risk of a specific disease. The goal is early detection and intervention, aiming to reduce morbidity and mortality. Effective screening programs must be safe, acceptable, and cost-effective.",
+ "aka": [
+  "Population screening",
+  "Mass screening"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Screening is a public health strategy to identify individuals who are apparently healthy but may have an undiagnosed disease or a precursor condition. It differs from diagnostic testing, which is performed on individuals with symptoms or signs of a disease. The 'diagnosis' in screening refers to identifying those who need further diagnostic workup, not a definitive disease diagnosis itself.",
+   "b": [
+    "Targets asymptomatic individuals in a defined population.",
+    "Aims for early detection before symptoms appear.",
+    "Requires a treatable condition and an effective, safe screening test.",
+    "Must be acceptable to the target population and cost-effective."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The 'severity' of a screening program is assessed by its effectiveness in reducing disease burden and its operational characteristics. Key metrics evaluate how well the test performs and the overall impact on public health.",
+   "b": [
+    "Sensitivity: Proportion of true positives correctly identified by the test.",
+    "Specificity: Proportion of true negatives correctly identified by the test.",
+    "Positive Predictive Value (PPV): Probability that a positive test result truly indicates the presence of the disease.",
+    "Negative Predictive Value (NPV): Probability that a negative test result truly indicates the absence of the disease.",
+    "Lead time bias: Apparent increase in survival due to earlier detection, not necessarily due to improved outcome.",
+    "Length time bias: Screening tends to detect slower-growing, less aggressive forms of disease, making outcomes appear better."
+   ]
+  },
+  {
+   "h": "Principles and Rationale for Screening",
+   "p": "Screening programs are justified when the disease is a significant public health problem, has a detectable preclinical phase, and effective treatment is available. The benefits of early detection must outweigh the potential harms and costs.",
+   "b": [
+    "Disease is a serious health problem with high prevalence or incidence.",
+    "Natural history of the disease is well understood.",
+    "There is a recognizable latent or early symptomatic stage.",
+    "Effective and acceptable treatment is available for detected cases.",
+    "Facilities for diagnosis and treatment are available.",
+    "The screening test is accurate, safe, and acceptable to the population.",
+    "The cost of screening is economically balanced in relation to the overall health expenditure."
+   ]
+  },
+  {
+   "h": "Types of Screening and Target Populations",
+   "p": "Screening can be universal, targeting entire populations, or selective, focusing on high-risk groups. The choice depends on disease prevalence, risk factors, and resource availability.",
+   "b": [
+    "Universal screening: Offered to all individuals in a specified age group or population (e.g., newborn screening, cervical cancer screening).",
+    "Selective screening: Targets individuals at higher risk due to genetics, lifestyle, or environmental exposures (e.g., HIV screening in specific populations, low-dose CT for high-risk smokers).",
+    "Opportunistic screening: Performed during routine healthcare visits when a patient presents for other reasons."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Various tests are employed for screening, chosen based on their accuracy, safety, and feasibility in different settings. The Ompath Study library highlights several key examples relevant globally, including in low-resource settings.",
+   "t": [
+    {
+     "a": "VIA/VILI (Visual Inspection with Acetic Acid/Lugol's Iodine)",
+     "b": "Answers: Is there evidence of cervical pre-cancer or cancer? Meaning: White lesions after acetic acid or yellow lesions after iodine suggest abnormal cells, requiring further investigation (e.g., colposcopy, biopsy). Valuable in low-resource settings where Pap smears or HPV DNA testing are unavailable."
+    },
+    {
+     "a": "Pap smear (Papanicolaou test)",
+     "b": "Answers: Are there abnormal cervical cells that could indicate pre-cancer or cancer? Meaning: Detects cytological changes; abnormal results require colposcopy and biopsy. Recommended from age 25, or from 30 years where resources are limited."
+    },
+    {
+     "a": "HPV DNA testing",
+     "b": "Answers: Is high-risk Human Papillomavirus present? Meaning: Detects the presence of oncogenic HPV types, identifying individuals at high risk for cervical cancer. Recommended from age 25, or from 30 years where resources are limited, and from diagnosis in HIV-positive women."
+    },
+    {
+     "a": "HIV screening",
+     "b": "Answers: Is HIV infection present? Meaning: Positive results require confirmatory testing and linkage to care. Essential in general populations, pregnant women, and high-risk groups (e.g., in Kenya)."
+    },
+    {
+     "a": "TB screening (e.g., in silica-exposed workers, HIV patients)",
+     "b": "Answers: Is there evidence of latent or active tuberculosis? Meaning: Positive results (e.g., TST, IGRA, CXR) require further diagnostic workup and treatment to prevent active disease or transmission. Chest X-ray uses ILO classification for pneumoconioses."
+    },
+    {
+     "a": "Syphilis screening",
+     "b": "Answers: Is there evidence of syphilis infection? Meaning: Positive serological tests (e.g., RPR, VDRL) require confirmatory testing and treatment, especially crucial in pregnant women to prevent congenital syphilis."
+    },
+    {
+     "a": "Hepatitis B screening",
+     "b": "Answers: Is there evidence of Hepatitis B infection? Meaning: Positive HBsAg indicates current infection, requiring further evaluation and management to prevent chronic liver disease and transmission."
+    },
+    {
+     "a": "Malaria prevention screening (e.g., in pregnant women)",
+     "b": "Answers: Is there asymptomatic malaria parasitemia? Meaning: Detection allows for intermittent preventive treatment (IPTp) to protect mother and fetus, particularly in endemic areas."
+    },
+    {
+     "a": "Low-dose CT screening (for high-risk smokers)",
+     "b": "Answers: Is there evidence of early lung cancer? Meaning: Detects suspicious nodules that may require further investigation. Limited availability in many low-resource settings (e.g., Kenya), typically for ages 50-80 with 20+ pack-years."
+    },
+    {
+     "a": "Mood Disorder Questionnaire (MDQ)",
+     "b": "Answers: Is there a high likelihood of bipolar disorder? Meaning: A positive screen suggests the need for a comprehensive psychiatric evaluation for mood disorders."
+    },
+    {
+     "a": "PHQ-9 (Patient Health Questionnaire-9)",
+     "b": "Answers: What is the severity of depressive symptoms? Meaning: Scores indicate the presence and severity of depression, guiding further assessment and management."
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Answers: Is there evidence of pulmonary hypertension? Meaning: Can estimate pulmonary artery pressures and assess right heart function, indicating the need for further diagnostic workup."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "While beneficial, screening programs are not without risks. Clinicians must be aware of potential harms to patients and the healthcare system.",
+   "b": [
+    "False positives: Can lead to unnecessary anxiety, further invasive tests, and associated risks.",
+    "False negatives: Can provide false reassurance, delaying diagnosis and treatment.",
+    "Overdiagnosis: Detection of conditions that would never have caused symptoms or harm during a person's lifetime, leading to unnecessary treatment.",
+    "Over-treatment: Treating overdiagnosed conditions, exposing patients to treatment side effects without benefit.",
+    "Psychological harm: Anxiety, fear, and distress from screening processes or results.",
+    "Resource drain: High costs and demands on healthcare infrastructure, potentially diverting resources from other essential services."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management following a screening test is not treatment of the disease itself, but rather the appropriate response to the screening result. This typically involves further diagnostic evaluation and, if disease is confirmed, initiation of evidence-based treatment.",
+   "b": [
+    "Positive screen: Refer for definitive diagnostic testing (e.g., biopsy after abnormal Pap smear, Western blot after positive HIV ELISA).",
+    "Confirmed diagnosis: Initiate appropriate treatment protocols (e.g., antiretroviral therapy for HIV, chemotherapy/radiation for cancer, antibiotics for STIs).",
+    "Negative screen: Provide reassurance and advise on recommended rescreening intervals based on guidelines.",
+    "Risk reduction: For conditions like STIs, screening is linked to prevention strategies like immunisation (e.g., rubella, tetanus) and Rhesus immunoglobulin for Rhesus-negative women."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Effective screening programs integrate follow-up for those with positive results and contribute to broader prevention efforts. This ensures that the benefits of early detection are fully realized.",
+   "b": [
+    "Regular rescreening: Adherence to recommended intervals for repeat screening based on age, risk factors, and previous results.",
+    "Linkage to care: Ensuring individuals with positive screens are connected to diagnostic and treatment services.",
+    "Health education: Providing information on risk factors, healthy lifestyles, and the importance of screening.",
+    "Immunization: Integrating screening with vaccination programs, such as rubella and tetanus immunisation, and HPV vaccination for cervical cancer prevention.",
+    "Prevention of mother-to-child transmission: Screening pregnant women for HIV, syphilis, and hepatitis B, and providing interventions to protect the infant."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Screening is distinct from diagnostic testing, though both use medical tests. Understanding the difference is crucial for appropriate clinical reasoning and patient communication.",
+   "b": [
+    "Diagnostic testing: Performed on individuals with symptoms or signs to confirm or rule out a specific disease. It aims to establish a definitive diagnosis.",
+    "Case finding: Identifying individuals with a specific disease among those already seeking healthcare for other reasons, often less systematic than screening."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Several factors can lead to misleading screening results, impacting patient care and public health outcomes. Clinicians must interpret results cautiously, considering the context.",
+   "b": [
+    "Prevalence of disease: In populations with very low disease prevalence, even highly specific tests can yield many false positives.",
+    "Test limitations: No screening test is 100% accurate; false positives and false negatives are inherent limitations.",
+    "Human error: Incorrect sample collection, handling, or laboratory processing can lead to inaccurate results.",
+    "Window period: For infectious diseases (e.g., HIV), screening during the 'window period' before antibody/antigen levels are detectable can result in false negatives.",
+    "Patient factors: Immunosuppression (e.g., in HIV) can affect the sensitivity of tests like TST for TB.",
+    "Quality control: Lack of rigorous quality control in laboratories, especially in low-resource settings, can compromise test reliability."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What are the main ethical considerations in screening?",
+   "a": "Ethical considerations include informed consent, potential for psychological harm, ensuring equity of access, and managing false positive/negative results responsibly. The benefits must outweigh the harms."
+  },
+  {
+   "q": "Why is screening not always recommended for every disease?",
+   "a": "Screening is only recommended when the disease is serious, has a detectable preclinical phase, and there's an effective, acceptable treatment. Also, the screening test must be accurate, safe, and cost-effective, and the overall program must demonstrate a net benefit."
+  },
+  {
+   "q": "How do resource limitations impact screening programs?",
+   "a": "Resource limitations can affect the choice of screening tests (e.g., VIA/VILI over HPV DNA testing for cervical cancer), the age at which screening begins, and the capacity for follow-up diagnostics and treatment. Prioritization based on disease burden and cost-effectiveness becomes critical."
+  }
+ ],
+ "exam": [
+  "A 35-year-old woman with no symptoms presents for a routine check-up. Discuss the principles guiding which screening tests might be offered to her, considering both high-income and low-resource settings.",
+  "Explain the potential harms of a screening program, using examples of false positives, false negatives, and overdiagnosis. How can these harms be mitigated?",
+  "Differentiate between screening and diagnostic testing. Provide examples of how a positive screening result for HIV or cervical cancer would lead to subsequent diagnostic steps."
+ ],
+ "related": [
+  "Public Health",
+  "Epidemiology",
+  "Preventive Medicine",
+  "Health Promotion",
+  "Disease Surveillance",
+  "Diagnostic Testing",
+  "Biostatistics",
+  "Health Economics"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

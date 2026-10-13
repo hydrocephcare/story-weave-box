@@ -1,0 +1,189 @@
+{
+ "medical": true,
+ "summary": "Diabetes mellitus is a chronic condition characterized by high blood glucose levels due to problems with insulin secretion or action. It is broadly classified into Type 1 (autoimmune, absolute insulin deficiency) and Type 2 (insulin resistance with relative deficiency).",
+ "aka": [
+  "Diabetes"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Diabetes mellitus is defined by persistently elevated blood glucose levels. Diagnosis is confirmed by specific glucose measurements or HbA1c levels.",
+   "b": [
+    "Fasting plasma glucose ≥7.0 mmol/L",
+    "Random plasma glucose ≥11.1 mmol/L",
+    "HbA1c ≥48 mmol/mol (6.5%)",
+    "2-hour plasma glucose on OGTT ≥11.1 mmol/L"
+   ],
+   "t": [
+    {
+     "a": "Fasting Plasma Glucose",
+     "b": "Measures blood glucose after at least 8 hours without food. Elevated levels suggest impaired glucose regulation."
+    },
+    {
+     "a": "Random Plasma Glucose",
+     "b": "Measures blood glucose at any time, regardless of food intake. A high level in a symptomatic patient is diagnostic."
+    },
+    {
+     "a": "HbA1c",
+     "b": "Reflects average blood glucose over the past 2-3 months. Useful for diagnosis and monitoring, but can be affected by anaemia or haemoglobinopathies."
+    },
+    {
+     "a": "Oral Glucose Tolerance Test (OGTT)",
+     "b": "Measures blood glucose response after consuming a standard glucose drink. Used when other tests are borderline."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Diabetes severity is often assessed by the degree of hyperglycaemia and the presence of complications. Acute severe hyperglycaemic states like Diabetic Ketoacidosis (DKA) and Hyperosmolar Hyperglycaemic State (HHS) represent medical emergencies.",
+   "b": [
+    "Type 1 DM is typically associated with absolute insulin deficiency and a higher risk of DKA.",
+    "Type 2 DM is characterized by insulin resistance and relative insulin deficiency, with a higher risk of HHS."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Diabetes is primarily classified into Type 1 and Type 2. Other causes include genetic defects, pancreatic diseases, and endocrine disorders.",
+   "b": [
+    "Type 1 Diabetes: Autoimmune destruction of pancreatic beta-cells.",
+    "Type 2 Diabetes: Insulin resistance and progressive beta-cell dysfunction.",
+    "Gestational Diabetes: Occurs during pregnancy, increasing risk for both mother and child.",
+    "Secondary Diabetes: Caused by conditions like pancreatitis, cystic fibrosis, or certain medications (e.g., steroids)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms are often related to hyperglycaemia and can develop gradually or acutely. Uncontrolled diabetes can lead to severe metabolic disturbances.",
+   "b": [
+    "Classic symptoms: polyuria (frequent urination), polydipsia (excessive thirst), polyphagia (increased hunger).",
+    "Unexplained weight loss (more common in Type 1).",
+    "Fatigue, blurred vision, slow-healing sores.",
+    "Diabetic Ketoacidosis (DKA): nausea, vomiting, abdominal pain, Kussmaul breathing, acetone breath.",
+    "Hyperosmolar Hyperglycaemic State (HHS): severe dehydration, altered mental status, seizures."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the diagnosis, assess glycaemic control, and screen for complications.",
+   "b": [
+    "Fasting blood glucose",
+    "Random blood glucose",
+    "Urine dipstick for glucose and ketones",
+    "Renal function tests (creatinine, eGFR)",
+    "Lipid profile",
+    "Liver function tests",
+    "Electrolytes"
+   ],
+   "t": [
+    {
+     "a": "Urine dipstick for ketones",
+     "b": "Detects ketones, suggesting significant lipolysis and potential DKA. Absence does not rule out DKA if patient has vomited."
+    },
+    {
+     "a": "Serum electrolytes and bicarbonate",
+     "b": "Assesses for metabolic acidosis and electrolyte imbalances, crucial in DKA and HHS management."
+    },
+    {
+     "a": "Renal function tests (Creatinine, eGFR)",
+     "b": "Evaluates kidney function, which can be affected by diabetes and influences medication choices."
+    },
+    {
+     "a": "Lipid profile",
+     "b": "Assesses cardiovascular risk factors, as dyslipidaemia is common in diabetes."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent attention is needed for acute hyperglycaemic crises and signs of developing chronic complications.",
+   "b": [
+    "Diabetic Ketoacidosis (DKA): rapid breathing, confusion, vomiting, abdominal pain.",
+    "Hyperosmolar Hyperglycaemic State (HHS): severe dehydration, decreased consciousness, seizures.",
+    "Hypoglycaemia: sweating, palpitations, confusion, seizures (often due to treatment).",
+    "Acute infections: often precipitate DKA/HHS.",
+    "Cardiovascular disease, nephropathy, retinopathy, neuropathy, foot ulcers."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on achieving glycaemic control, preventing acute crises, and managing long-term complications through lifestyle changes and medication.",
+   "b": [
+    "Lifestyle modification: Diet control, regular exercise, weight management.",
+    "Oral hypoglycaemic agents (e.g., Metformin for insulin resistance).",
+    "Injectable therapies (e.g., GLP-1 receptor agonists, insulin).",
+    "Management of acute crises (DKA/HHS) involves fluid resuscitation, insulin therapy, and electrolyte correction.",
+    "Regular screening for complications (eyes, kidneys, feet, cardiovascular)."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor glycaemic control, screen for complications, and adjust treatment. Prevention strategies target modifiable risk factors.",
+   "b": [
+    "Annual eye and foot examinations.",
+    "Regular checks of kidney function and HbA1c.",
+    "Screening for cardiovascular risk factors.",
+    "Education on self-management, sick-day rules, and hypoglycaemia awareness.",
+    "Lifestyle interventions for pre-diabetes can prevent progression to Type 2 DM."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other conditions can mimic diabetes symptoms or have overlapping features.",
+   "b": [
+    "Diabetes Insipidus: Characterized by excessive thirst and urination, but due to ADH deficiency, not glucose metabolism.",
+    "Hyperthyroidism: Can cause weight loss and palpitations, sometimes mistaken for uncontrolled diabetes.",
+    "Pancreatitis: Can cause abdominal pain and affect glucose regulation."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain conditions or factors can affect the accuracy of diagnostic tests.",
+   "b": [
+    "HbA1c can be falsely low in haemolytic anaemia or haemoglobinopathies.",
+    "HbA1c is less reliable in pregnancy and in individuals with chronic kidney disease.",
+    "Fasting glucose can be elevated due to stress or illness (e.g., infection).",
+    "Urine glucose may be normal in mild hyperglycaemia if the renal threshold is high."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Signs of Diabetic Ketoacidosis (DKA): severe nausea/vomiting, abdominal pain, rapid breathing, confusion.",
+  "Signs of Hyperosmolar Hyperglycaemic State (HHS): extreme thirst, confusion, drowsiness, seizures.",
+  "Symptoms of severe hypoglycaemia: confusion, seizures, loss of consciousness.",
+  "New or worsening vision changes.",
+  "Non-healing wounds or signs of infection on the feet."
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between Type 1 and Type 2 diabetes?",
+   "a": "Type 1 is an autoimmune condition causing absolute insulin deficiency, usually diagnosed in younger people. Type 2 involves insulin resistance and relative deficiency, more common in older, overweight individuals."
+  },
+  {
+   "q": "Can diabetes be cured?",
+   "a": "Currently, diabetes mellitus cannot be cured, but it can be effectively managed through lifestyle changes, medication, and regular monitoring to prevent complications."
+  },
+  {
+   "q": "What is HbA1c and why is it important?",
+   "a": "HbA1c measures your average blood sugar level over the past 2-3 months. It's a key indicator for diagnosing diabetes and monitoring long-term glycaemic control."
+  }
+ ],
+ "exam": [
+  "How would you differentiate between Diabetic Ketoacidosis (DKA) and Hyperosmolar Hyperglycaemic State (HHS) based on clinical presentation and initial investigations?",
+  "What are the key diagnostic criteria for diabetes mellitus, and which test is most useful for assessing long-term control?",
+  "Describe the immediate management priorities for a patient presenting with DKA."
+ ],
+ "related": [
+  "Insulin",
+  "Metabolic Syndrome",
+  "Obesity",
+  "Cardiovascular Disease",
+  "Diabetic Ketoacidosis",
+  "Hyperosmolar Hyperglycaemic State",
+  "Diabetic Nephropathy",
+  "Diabetic Retinopathy"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

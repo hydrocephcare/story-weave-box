@@ -1,0 +1,187 @@
+{
+ "medical": true,
+ "summary": "Hepatocellular carcinoma (HCC) is the most common primary liver cancer, often arising in the context of chronic liver disease and cirrhosis. Diagnosis relies on imaging and alpha-fetoprotein (AFP) levels, with staging guiding treatment decisions. Management focuses on curative or palliative options depending on disease extent.",
+ "aka": [
+  "Primary liver cancer",
+  "Hepatoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hepatocellular carcinoma is a malignant tumor originating from hepatocytes, the main cells of the liver. It is a major cause of cancer-related death worldwide, particularly in regions with high rates of chronic viral hepatitis.",
+   "b": [
+    "Often develops in patients with underlying chronic liver disease, especially cirrhosis from any cause.",
+    "Diagnosis is typically made using imaging (ultrasound, CT, MRI) and elevated alpha-fetoprotein (AFP) levels."
+   ],
+   "t": [
+    {
+     "a": "Imaging (Ultrasound, CT, MRI)",
+     "b": "Detects liver lesions and assesses their characteristics."
+    },
+    {
+     "a": "Alpha-fetoprotein (AFP)",
+     "b": "A tumor marker that can be elevated in HCC."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "HCC staging systems, like the Barcelona Clinic Liver Cancer (BCLC) staging system, integrate tumor burden, liver function, and patient performance status to guide treatment and predict prognosis.",
+   "b": [
+    "Early-stage HCC is often asymptomatic and amenable to curative treatments.",
+    "Advanced-stage HCC is associated with poor prognosis and requires palliative management."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Chronic viral hepatitis B and C are the leading causes globally. Other significant risk factors include alcohol-related cirrhosis, non-alcoholic fatty liver disease (NAFLD), and certain inherited metabolic disorders.",
+   "b": [
+    "Chronic Hepatitis B infection",
+    "Chronic Hepatitis C infection",
+    "Alcoholic liver disease (cirrhosis)",
+    "Non-alcoholic fatty liver disease (NAFLD)/Non-alcoholic steatohepatitis (NASH)",
+    "Cirrhosis from any cause (e.g., autoimmune hepatitis, hemochromatosis, Wilson's disease)",
+    "Aflatoxin exposure (from moldy food, common in some tropical regions)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Early HCC is often asymptomatic and detected during screening for chronic liver disease. As it progresses, patients may develop symptoms related to liver dysfunction or the tumor itself.",
+   "b": [
+    "Abdominal pain or discomfort, especially in the upper right quadrant.",
+    "Unexplained weight loss.",
+    "Fatigue and weakness.",
+    "Jaundice (yellowing of skin and eyes).",
+    "Abdominal swelling (ascites).",
+    "Nausea and vomiting."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Diagnostic workup aims to confirm the presence of HCC, assess its extent, and evaluate the underlying liver function.",
+   "t": [
+    {
+     "a": "Liver Function Tests (LFTs)",
+     "b": "Assesses the degree of liver damage and dysfunction."
+    },
+    {
+     "a": "Complete Blood Count (CBC)",
+     "b": "Checks for anemia, thrombocytopenia, or leukocytosis."
+    },
+    {
+     "a": "Coagulation Profile (PT/INR)",
+     "b": "Evaluates the liver's synthetic function and clotting ability."
+    },
+    {
+     "a": "Viral Hepatitis Serologies (HBsAg, Anti-HCV)",
+     "b": "Identifies chronic hepatitis B or C infection as a cause."
+    },
+    {
+     "a": "Abdominal Ultrasound",
+     "b": "Primary screening tool for HCC in at-risk individuals."
+    },
+    {
+     "a": "Contrast-enhanced CT or MRI",
+     "b": "Provides detailed imaging of liver lesions and vascularity."
+    },
+    {
+     "a": "Alpha-fetoprotein (AFP)",
+     "b": "Tumor marker for HCC."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from tumor progression, liver failure, or treatment side effects. Urgent medical attention is needed for signs of decompensated cirrhosis or tumor rupture.",
+   "b": [
+    "Gastrointestinal bleeding (from varices or tumor erosion).",
+    "Hepatic encephalopathy (confusion due to liver failure).",
+    "Spontaneous bacterial peritonitis (SBP).",
+    "Ascites refractory to diuretics.",
+    "Tumor rupture with hemoperitoneum.",
+    "Acute liver failure."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment strategies are tailored to the stage of HCC, liver function, and patient's overall health, aiming for cure, local control, or palliation.",
+   "b": [
+    "Curative options (for early-stage HCC): Surgical resection, liver transplantation, or ablation (e.g., radiofrequency ablation).",
+    "Loco-regional therapies (for intermediate-stage HCC): Transarterial chemoembolization (TACE) or radioembolization (TARE) to control tumor growth.",
+    "Systemic therapy (for advanced-stage HCC): Targeted therapies (e.g., sorafenib, lenvatinib) or immunotherapy to slow disease progression.",
+    "Supportive care: Management of ascites, encephalopathy, and nutritional support."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular surveillance is crucial for early detection in at-risk populations. Prevention strategies focus on managing underlying liver disease and avoiding risk factors.",
+   "b": [
+    "Screening with ultrasound and AFP every 6 months for patients with cirrhosis or chronic hepatitis B.",
+    "Hepatitis B vaccination to prevent primary infection.",
+    "Antiviral therapy for chronic hepatitis B and C to reduce liver inflammation and fibrosis.",
+    "Limiting alcohol consumption.",
+    "Weight management and healthy diet to prevent/manage NAFLD.",
+    "Avoiding exposure to aflatoxins."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other liver lesions or conditions can mimic HCC, requiring careful differentiation.",
+   "b": [
+    "Benign liver tumors (e.g., hemangioma, focal nodular hyperplasia).",
+    "Liver metastases from other primary cancers.",
+    "Cholangiocarcinoma (bile duct cancer).",
+    "Abscesses or granulomas."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings can be misleading, necessitating a comprehensive clinical assessment.",
+   "b": [
+    "Normal AFP levels can occur in patients with confirmed HCC.",
+    "Elevated AFP can be seen in non-cancerous liver conditions (e.g., active hepatitis, cirrhosis).",
+    "Imaging findings can be equivocal, especially for small lesions or in the presence of severe fatty liver or cirrhosis.",
+    "Patients with chronic liver disease may have baseline abnormalities in LFTs that can mask or be confused with changes due to HCC."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe abdominal pain.",
+  "Vomiting blood or passing black, tarry stools.",
+  "Worsening jaundice or confusion (hepatic encephalopathy).",
+  "Rapidly increasing abdominal swelling (ascites)."
+ ],
+ "faq": [
+  {
+   "q": "What is the main risk factor for hepatocellular carcinoma?",
+   "a": "Chronic infection with Hepatitis B or C virus, leading to cirrhosis, is the most significant risk factor globally."
+  },
+  {
+   "q": "Can HCC be cured?",
+   "a": "Yes, early-stage HCC can be cured with treatments like surgery, liver transplant, or ablation, especially if detected during screening."
+  },
+  {
+   "q": "Is screening for HCC important?",
+   "a": "Yes, regular screening with ultrasound and AFP for individuals at high risk (e.g., those with cirrhosis) is crucial for early detection and better outcomes."
+  }
+ ],
+ "exam": [
+  "How would you differentiate between HCC and liver metastases on imaging?",
+  "What are the key components of the BCLC staging system, and why is staging important?",
+  "Describe the role of AFP in the diagnosis and monitoring of HCC, and discuss its limitations."
+ ],
+ "related": [
+  "Cirrhosis",
+  "Hepatitis B",
+  "Hepatitis C",
+  "Liver Transplantation",
+  "Alpha-fetoprotein (AFP)",
+  "Transarterial Chemoembolization (TACE)",
+  "Non-alcoholic Fatty Liver Disease (NAFLD)",
+  "Aflatoxin"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,134 @@
+{
+ "medical": true,
+ "summary": "Hypertrophy is an increase in the size of an organ or tissue due to an increase in the size of its cells, not their number. It is a response to increased workload or hormonal stimulation. While often adaptive, it can lead to dysfunction if excessive.",
+ "aka": [
+  "Increased cell size"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hypertrophy is the enlargement of an organ or tissue due to an increase in the size of its constituent cells. This contrasts with hyperplasia, where cell number increases. Diagnosis is often made by imaging or histological examination showing enlarged cells within the tissue.",
+   "b": [
+    "Increased cell size, not number.",
+    "Can be physiological or pathological."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is typically assessed by the degree of organ enlargement and the degree of functional impairment. For example, in cardiac hypertrophy, the degree of wall thickening and its impact on diastolic filling and systolic ejection are key.",
+   "b": [
+    "Assessed by imaging (e.g., echocardiogram, MRI).",
+    "Functional impact is crucial."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common causes include increased workload (e.g., exercise leading to cardiac hypertrophy, skeletal muscle hypertrophy), hormonal stimulation (e.g., uterine hypertrophy during pregnancy), and pathological conditions like hypertension or valvular heart disease causing cardiac hypertrophy. In airways, chronic inflammation from smoking or infections can cause smooth muscle hypertrophy.",
+   "b": [
+    "Increased functional demand (e.g., exercise, hypertension).",
+    "Hormonal influences.",
+    "Chronic inflammation (e.g., airway disease)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with the affected organ. Cardiac hypertrophy can lead to shortness of breath, chest pain, or arrhythmias. Airway smooth muscle hypertrophy contributes to chronic cough and partially fixed airflow obstruction.",
+   "b": [
+    "Symptoms depend on the organ involved.",
+    "May be asymptomatic initially.",
+    "Can cause organ dysfunction."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Echocardiogram",
+     "b": "To assess cardiac chamber size, wall thickness, and function."
+    },
+    {
+     "a": "Pulmonary function tests (PFTs)",
+     "b": "To evaluate lung volumes and airflow, especially in airway disease."
+    },
+    {
+     "a": "Biopsy",
+     "b": "Histological examination of tissue."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "In cardiac hypertrophy, complications include heart failure, arrhythmias (like atrial fibrillation), and sudden cardiac death. In airway disease, severe hypertrophy can lead to irreversible airflow obstruction and respiratory failure."
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause. For cardiac hypertrophy due to hypertension, blood pressure control is key. For airway hypertrophy, smoking cessation and bronchodilators are used. Reducing the stimulus for hypertrophy is the primary goal.",
+   "b": [
+    "Treat the underlying cause (e.g., control hypertension).",
+    "Reduce the stimulus for hypertrophy.",
+    "Manage symptoms and complications."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of the affected organ's function is essential. Preventing conditions that lead to hypertrophy, such as maintaining a healthy weight, controlling blood pressure, and avoiding smoking, is crucial for prevention.",
+   "b": [
+    "Regular clinical and imaging follow-up.",
+    "Lifestyle modifications to prevent underlying causes.",
+    "Adherence to treatment for chronic conditions."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Hypertrophy is often confused with hyperplasia, which is an increase in the number of cells. Both can lead to organ enlargement, but the underlying cellular mechanism differs.",
+   "b": [
+    "Hyperplasia (increase in cell number).",
+    "Edema (fluid accumulation).",
+    "Neoplasia (tumor growth)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal-sized organ on imaging does not rule out significant cellular hypertrophy if the enlargement is diffuse. Conversely, some conditions causing organ enlargement might involve other processes like inflammation or fibrosis, not just pure hypertrophy.",
+   "b": [
+    "Imaging may underestimate diffuse hypertrophy.",
+    "Functional tests are crucial for assessing impact.",
+    "Biopsy may be needed for definitive diagnosis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the difference between hypertrophy and hyperplasia?",
+   "a": "Hypertrophy is an increase in cell size, while hyperplasia is an increase in cell number. Both can cause tissue enlargement."
+  },
+  {
+   "q": "Is hypertrophy always a bad thing?",
+   "a": "No, hypertrophy can be a normal adaptive response, such as in skeletal muscles during exercise. However, pathological hypertrophy can lead to organ dysfunction."
+  },
+  {
+   "q": "Can hypertrophy be reversed?",
+   "a": "Reversal depends on the cause. If the stimulus for hypertrophy is removed early, some degree of reversal may be possible, but significant or long-standing hypertrophy can be permanent."
+  }
+ ],
+ "exam": [
+  "Describe the cellular mechanisms of hypertrophy and contrast it with hyperplasia.",
+  "Explain how cardiac hypertrophy develops in response to chronic hypertension and its clinical consequences.",
+  "Discuss the role of airway smooth muscle hypertrophy in the pathophysiology of chronic obstructive pulmonary disease (COPD)."
+ ],
+ "related": [
+  "Cardiac Hypertrophy",
+  "Skeletal Muscle Hypertrophy",
+  "Smooth Muscle Hypertrophy",
+  "Hyperplasia",
+  "Atrophy",
+  "Adaptation to Stress",
+  "Chronic Bronchitis",
+  "Hypertension"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

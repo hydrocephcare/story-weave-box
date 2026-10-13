@@ -68,6 +68,9 @@ export function sanitizePage(raw) {
  * Asks a Gemini model. Tried in order: the Lovable gateway (what Ompath AI uses), OmniRoute, then a Google key directly.
  * env is a plain object of secrets. Throws if every route fails.
  */
+let turn = 0;
+const deadKeys = new Set();
+const deadModels = new Set();
 export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs = 50000 } = {}) {
   const gateways = [];
   if (env.LOVABLE_API_KEY) gateways.push(["https://ai.gateway.lovable.dev/v1/chat/completions", env.LOVABLE_API_KEY, env.TOPIC_AI_MODEL || "google/gemini-3-flash-preview"]);
@@ -89,17 +92,29 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
       lastErr = new Error("empty reply");
     } catch (e) { lastErr = e; }
   }
-  for (const key of [env.GEMINI_API_KEY, env.GEMINI_API_KEY_2, env.GEMINI_API_KEY_3].filter(Boolean)) {
-    for (const model of ["gemini-2.5-flash", "gemini-2.5-flash-lite"]) {
+  // Google keys: any number, comma separated in GEMINI_API_KEYS (or GEMINI_API_KEY, _2, _3). They take turns, so no single key is worn out,
+  // and a key that is over its limit or refused is skipped for the rest of this run.
+  const keys = [...new Set([...String(env.GEMINI_API_KEYS ?? "").split(/[s,]+/), env.GEMINI_API_KEY, env.GEMINI_API_KEY_2, env.GEMINI_API_KEY_3].map((k) => String(k ?? "").trim()).filter(Boolean))];
+  const models = String(env.GEMINI_MODELS ?? "gemini-2.5-flash,gemini-3.8-flash,gemini-2.5-flash-lite").split(",").map((m) => m.trim()).filter(Boolean);
+  const start = keys.length ? turn++ % keys.length : 0;
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[(start + i) % keys.length];
+    if (deadKeys.has(key)) continue;
+    for (const model of models) {
+      if (deadModels.has(key + model)) continue;
       try {
         const text = await timed(async (signal) => {
-          const r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`, { method: "POST", signal, headers: { "content-type": "application/json" }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.3, maxOutputTokens: 3600, responseMimeType: "application/json" } }) });
+          const r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", signal, headers: { "content-type": "application/json", "x-goog-api-key": key }, body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.3, maxOutputTokens: 7000, responseMimeType: "application/json" } }) });
+          if (r.status === 404) deadModels.add(key + model);
+          if (r.status === 429) { deadModels.add(key + model); setTimeout(() => deadModels.delete(key + model), 45_000).unref?.(); }
+          if (r.status === 403 || r.status === 401) deadKeys.add(key);
           if (!r.ok) throw new Error(`gemini ${r.status}`);
           return (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("");
         });
         if (text?.trim()) return { text, model };
         lastErr = new Error("empty reply");
       } catch (e) { lastErr = e; }
+      if (deadKeys.has(key)) break;
     }
   }
   throw lastErr;

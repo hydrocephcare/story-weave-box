@@ -1,0 +1,166 @@
+{
+ "medical": true,
+ "summary": "AIDS is a chronic, potentially life-threatening condition caused by the human immunodeficiency virus (HIV). HIV damages the immune system, making individuals susceptible to opportunistic infections and cancers. Early diagnosis and treatment with antiretroviral therapy are crucial for managing the condition and preventing progression.",
+ "aka": [
+  "Acquired Immunodeficiency Syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "AIDS is the most advanced stage of HIV infection, characterized by severe damage to the immune system. Diagnosis is typically made when an HIV-positive individual develops specific opportunistic infections or cancers, or has a very low CD4 cell count.",
+   "b": [
+    "AIDS-defining conditions include certain cancers (Kaposi sarcoma, lymphomas, cervical cancer) and severe opportunistic infections."
+   ],
+   "t": [
+    {
+     "a": "HIV antibody test",
+     "b": "Confirms the presence of HIV infection. A positive result indicates HIV, but not necessarily AIDS."
+    },
+    {
+     "a": "CD4 cell count",
+     "b": "Measures the number of CD4 T-cells, a key indicator of immune system strength. A count below 200 cells/mm³ is diagnostic of AIDS."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "HIV infection is staged from 0 to 3, with Stage 3 being AIDS. Staging is based on CD4 counts and the presence of AIDS-defining conditions. Higher stages indicate more severe immune compromise.",
+   "b": [
+    "Stage 1: CD4 count ≥ 500 cells/mm³.",
+    "Stage 2: CD4 count 200-499 cells/mm³.",
+    "Stage 3 (AIDS): CD4 count < 200 cells/mm³ or presence of an AIDS-defining condition."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "AIDS is caused by the Human Immunodeficiency Virus (HIV). HIV is transmitted through specific bodily fluids. In individuals with untreated HIV, the virus progressively destroys CD4 cells, leading to AIDS.",
+   "b": [
+    "HIV infection (primary cause of AIDS).",
+    "Opportunistic infections (e.g., Pneumocystis pneumonia, Cryptosporidium, Tuberculosis, Candidiasis).",
+    "AIDS-defining cancers (e.g., Kaposi sarcoma, certain lymphomas, cervical cancer)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms of AIDS are often due to opportunistic infections or cancers, as the immune system can no longer fight them off. These can include unexplained weight loss, chronic diarrhea, persistent fever, and severe fatigue.",
+   "b": [
+    "Unexplained respiratory symptoms or chest X-ray abnormalities.",
+    "Profuse watery diarrhea (e.g., Cryptosporidium).",
+    "Penile ulcers with lymphadenopathy (e.g., Syphilis, Herpes).",
+    "Enlarged lymph nodes and spleen (splenomegaly)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm HIV infection, assess immune status, and identify specific opportunistic infections or cancers.",
+   "t": [
+    {
+     "a": "HIV antigen/antibody test",
+     "b": "Detects HIV infection. A positive result confirms HIV."
+    },
+    {
+     "a": "CD4 T-cell count",
+     "b": "Assesses immune system damage. A count < 200 cells/mm³ indicates AIDS."
+    },
+    {
+     "a": "Viral load (HIV RNA)",
+     "b": "Measures the amount of HIV in the blood. High viral load indicates active replication."
+    },
+    {
+     "a": "Chest X-ray",
+     "b": "Helps diagnose opportunistic lung infections like Pneumocystis pneumonia. Abnormalities suggest infection."
+    },
+    {
+     "a": "Biopsy of lesions",
+     "b": "Diagnoses AIDS-defining cancers like Kaposi sarcoma. Confirms malignancy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe complications arise from the inability to fight infections and cancers. These can be life-threatening and require immediate attention.",
+   "b": [
+    "Severe opportunistic infections (e.g., Pneumocystis pneumonia, Toxoplasmosis encephalitis).",
+    "AIDS-defining cancers.",
+    "Wasting syndrome.",
+    "Neurological complications."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on suppressing HIV replication with antiretroviral therapy (ART) to restore immune function and prevent opportunistic infections. Treatment of specific opportunistic infections and cancers is also critical.",
+   "b": [
+    "Antiretroviral Therapy (ART): A combination of drugs to reduce viral load and preserve immune function.",
+    "Prophylaxis for opportunistic infections: Medications to prevent common infections in immunocompromised individuals.",
+    "Treatment of opportunistic infections and cancers: Specific therapies targeting the diagnosed conditions."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of viral load and CD4 counts is essential to assess treatment effectiveness. Prevention strategies focus on reducing HIV transmission and preventing opportunistic infections in those with AIDS.",
+   "b": [
+    "Adherence to ART is crucial for long-term health.",
+    "Safe sex practices and sterile needle use prevent HIV transmission.",
+    "Vaccinations against common infections are recommended."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other conditions can mimic the symptoms of AIDS, especially opportunistic infections, leading to diagnostic challenges.",
+   "b": [
+    "Advanced HIV infection (pre-AIDS stages).",
+    "Other causes of immunosuppression (e.g., chemotherapy, malnutrition).",
+    "Other causes of chronic diarrhea or weight loss.",
+    "Other cancers."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain factors can affect test results, potentially leading to misinterpretation if not considered.",
+   "b": [
+    "A negative HIV test does not rule out recent infection; a window period exists.",
+    "CD4 counts can fluctuate due to factors like hydration and time of day.",
+    "Viral load may be temporarily undetectable due to ART adherence or recent infection."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe shortness of breath.",
+  "High fever with confusion or stiff neck.",
+  "Severe, persistent diarrhea with dehydration.",
+  "New onset of neurological symptoms (e.g., seizures, weakness)."
+ ],
+ "faq": [
+  {
+   "q": "Can a person with AIDS recover?",
+   "a": "While AIDS is the most advanced stage of HIV, effective treatment can restore immune function and prevent progression, allowing individuals to live long, healthy lives."
+  },
+  {
+   "q": "How is HIV different from AIDS?",
+   "a": "HIV is the virus that causes the infection. AIDS is the most severe stage of HIV infection, characterized by significant immune system damage."
+  },
+  {
+   "q": "Can AIDS be prevented?",
+   "a": "HIV, the cause of AIDS, can be prevented through safe sex practices, not sharing needles, and using pre-exposure prophylaxis (PrEP) if at high risk."
+  }
+ ],
+ "exam": [
+  "How would you differentiate between HIV infection and AIDS based on clinical findings and investigations?",
+  "What are the key opportunistic infections or cancers that define AIDS, and why do they occur?",
+  "Describe the principles of managing a patient with AIDS, including antiretroviral therapy and opportunistic infection prophylaxis."
+ ],
+ "related": [
+  "Human Immunodeficiency Virus (HIV)",
+  "Opportunistic Infections",
+  "Antiretroviral Therapy (ART)",
+  "Kaposi Sarcoma",
+  "Lymphoma",
+  "Tuberculosis",
+  "Pneumocystis Pneumonia",
+  "CD4 Cell Count"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

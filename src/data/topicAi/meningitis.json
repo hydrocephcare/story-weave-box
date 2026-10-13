@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "summary": "Meningitis is a severe infection of the meninges, the membranes surrounding the brain and spinal cord. It presents with fever, severe headache, and stiff neck, and can lead to rapid deterioration and serious complications.",
+ "aka": [
+  "Meningeal inflammation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Meningitis is an inflammation of the meninges, typically caused by infection. Diagnosis relies on clinical suspicion supported by investigations, especially lumbar puncture, to identify the causative agent and inflammatory markers.",
+   "b": [
+    "Key signs include fever, severe headache, nuchal rigidity, and altered mental status.",
+    "In infants, irritability, poor feeding, and a bulging fontanelle may be present."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Meningitis can range from mild to life-threatening. Severity is often assessed by the patient's clinical status, vital signs, and neurological examination, with rapid deterioration possible.",
+   "b": [
+    "Rapid assessment of consciousness and haemodynamic stability is crucial.",
+    "Complications can significantly impact the patient's outcome and long-term prognosis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Bacterial meningitis is a medical emergency. Viral meningitis is more common but usually less severe. Other causes include fungal, parasitic, and non-infectious inflammatory conditions.",
+   "b": [
+    "Bacterial: Streptococcus pneumoniae, Neisseria meningitidis, Haemophilus influenzae.",
+    "Tuberculous meningitis: common in low-resource settings.",
+    "Viral: Enteroviruses, Herpes Simplex Virus.",
+    "Fungal: Cryptococcus (especially in immunocompromised individuals)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Common symptoms include sudden onset of high fever, severe headache, photophobia, and a stiff neck. Altered mental status, from confusion to coma, can also occur. Seizures are a frequent complication.",
+   "b": [
+    "Neck stiffness (nuchal rigidity) is a hallmark sign.",
+    "Photophobia (sensitivity to light) is common.",
+    "Altered mental status can range from mild confusion to coma."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Lumbar puncture is essential for diagnosis, analysing cerebrospinal fluid (CSF) for cells, protein, glucose, and Gram stain/culture. Blood tests and imaging may also be needed.",
+   "t": [
+    {
+     "a": "CSF analysis",
+     "b": "To identify the causative organism and inflammatory markers in CSF. Elevated white blood cells, protein, and low glucose suggest bacterial meningitis. Normal or slightly elevated cells and protein suggest viral meningitis. Culture confirms the specific pathogen."
+    },
+    {
+     "a": "Blood tests",
+     "b": "To detect bacteraemia, which can indicate the source of infection or spread. Positive cultures help identify the pathogen and guide antibiotic choice."
+    },
+    {
+     "a": "Blood tests",
+     "b": "To assess for signs of infection (e.g., elevated white blood cell count)."
+    },
+    {
+     "a": "Imaging",
+     "b": "To rule out complications like brain abscess, hydrocephalus, or mass effect, especially if there are focal neurological signs or if lumbar puncture is contraindicated."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include rapid deterioration of consciousness, seizures, focal neurological deficits, and signs of raised intracranial pressure. Complications are serious and can be permanent.",
+   "b": [
+    "Seizures",
+    "Cerebral edema and herniation",
+    "Cranial nerve palsies",
+    "Hearing loss",
+    "Hydrocephalus",
+    "Neurological deficits (e.g., weakness, cognitive impairment)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Prompt antibiotic therapy is critical for bacterial meningitis. Supportive care includes fluid management, fever control, and seizure management. Specific treatment targets the underlying cause.",
+   "b": [
+    "Empirical antibiotics (e.g., ceftriaxone) should be started immediately if bacterial meningitis is suspected.",
+    "Corticosteroids may be used to reduce inflammation and neurological sequelae.",
+    "Supportive care includes monitoring vital signs, managing seizures, and maintaining fluid balance."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is essential to monitor for complications and long-term sequelae. Prevention strategies include vaccination and prompt treatment of underlying infections.",
+   "b": [
+    "Vaccination against common bacterial pathogens (e.g., Pneumococcus, Meningococcus, Haemophilus influenzae type b) is key.",
+    "Prophylactic antibiotics may be given to close contacts of patients with meningococcal meningitis.",
+    "Early recognition and treatment of infections can prevent secondary meningitis."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions can mimic meningitis, requiring careful differentiation based on clinical presentation and investigations.",
+   "b": [
+    "Encephalitis",
+    "Subarachnoid hemorrhage",
+    "Brain abscess",
+    "Migraine",
+    "Cervical spine pathology"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Lumbar puncture results can be normal in early or partially treated meningitis. Imaging may be normal in early stages or if the pathology is subtle.",
+   "b": [
+    "A normal white blood cell count in CSF does not exclude meningitis, especially in immunocompromised patients.",
+    "Fever may be absent in some cases, particularly in the very young or elderly.",
+    "Focal neurological signs can be absent despite significant intracranial pathology."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe headache",
+  "Stiff neck",
+  "Fever",
+  "Altered mental status or confusion",
+  "Seizures",
+  "Photophobia"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of meningitis?",
+   "a": "Bacterial meningitis is the most dangerous, with common causes including Streptococcus pneumoniae and Neisseria meningitidis. Viral meningitis is more frequent but usually less severe."
+  },
+  {
+   "q": "Can meningitis be prevented?",
+   "a": "Yes, vaccination against key bacterial pathogens like Pneumococcus, Meningococcus, and Haemophilus influenzae type b significantly reduces the risk."
+  },
+  {
+   "q": "What are the long-term effects of meningitis?",
+   "a": "Long-term effects can include hearing loss, learning disabilities, developmental delays, and neurological deficits, depending on the severity and cause of the infection."
+  }
+ ],
+ "exam": [
+  "Describe the key clinical features that would lead you to suspect meningitis.",
+  "What are the immediate investigations you would order for a suspected case of bacterial meningitis, and what information do you expect from each?",
+  "What are the most critical complications of meningitis that you must monitor for?"
+ ],
+ "related": [
+  "Encephalitis",
+  "Sepsis",
+  "Tuberculous meningitis",
+  "Lumbar puncture",
+  "Cerebrospinal fluid analysis",
+  "Bacterial pneumonia",
+  "Fungal infections",
+  "Neurological examination"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

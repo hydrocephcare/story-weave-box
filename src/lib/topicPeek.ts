@@ -50,6 +50,8 @@ export async function loadPeek(slug: string): Promise<Peek> {
   if (!points.length && topic?.snip?.length) points = topic.snip.filter((x) => x.t.length > 40).slice(0, 3).map((x) => ({ h: "From our notes", t: x.t }));
   const media = await loadWebMedia([name, ...(topic?.a ?? []), ...(page?.aka ?? [])].slice(0, 3)).catch(() => null);
   // the page's own summary, or the first clear line from the site's notes; nothing is copied from elsewhere
-  if (!summary || summary.length < 40) summary = "";
+  if (!summary || (!page && media?.extract)) summary = media?.extract || summary || "";
+  if (!points.length && media?.sections?.length) points = media.sections.slice(0, 4).map((x) => ({ h: x.h, t: x.p[0].slice(0, 260) }));
+  if (summary.length < 40) summary = "";
   return { slug, name, category: topic?.c ?? "", summary, points, image: media?.hero ? { u: media.hero.u, title: media.hero.title } : null };
 }

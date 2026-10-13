@@ -1,0 +1,120 @@
+{
+ "medical": true,
+ "summary": "Neurotransmitters are chemical messengers that transmit signals across synapses between neurons or from neurons to target cells like muscles. They are crucial for virtually all nervous system functions, from thought and emotion to movement and autonomic regulation.",
+ "aka": [
+  "Chemical messengers"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Neurotransmitters are endogenous chemicals that enable neurotransmission. They are released from presynaptic neurons and bind to receptors on postsynaptic cells, altering their activity. This process forms the basis of communication within the nervous system.",
+   "b": [
+    "Neurons communicate via chemical signals at specialized junctions called synapses.",
+    "Neurotransmitters are stored in vesicles at the axon terminal.",
+    "Their action is specific, binding to particular receptors on the postsynaptic membrane."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "When an action potential reaches the axon terminal, it triggers the influx of calcium ions. This causes synaptic vesicles containing neurotransmitters to fuse with the presynaptic membrane and release their contents into the synaptic cleft. Neurotransmitters then diffuse across the cleft and bind to specific receptors on the postsynaptic neuron or target cell.",
+   "b": [
+    "Binding to receptors can cause excitation (depolarization) or inhibition (hyperpolarization) of the postsynaptic cell.",
+    "The effect depends on the type of neurotransmitter and the type of receptor.",
+    "Examples include acetylcholine at the neuromuscular junction, dopamine in the brain, and serotonin."
+   ],
+   "t": [
+    {
+     "a": "Neurotransmitter release",
+     "b": "How an electrical signal is converted to a chemical signal at the synapse. Calcium influx triggers vesicle fusion and neurotransmitter exocytosis."
+    },
+    {
+     "a": "Receptor binding",
+     "b": "How neurotransmitters exert their effect. Binding to specific receptors on the postsynaptic membrane initiates a cellular response."
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Neurotransmitter action must be precisely controlled to ensure proper signaling. This involves mechanisms for synthesis, storage, release, receptor binding, and importantly, termination of the signal. Termination prevents continuous stimulation and allows for new signals to be processed.",
+   "b": [
+    "Synthesis: Neurotransmitters are synthesized in the neuron.",
+    "Storage: They are packaged into vesicles.",
+    "Release: Triggered by action potentials.",
+    "Reuptake: Neurotransmitters are transported back into the presynaptic neuron.",
+    "Enzymatic degradation: Enzymes break down neurotransmitters in the synaptic cleft or within the neuron."
+   ],
+   "t": [
+    {
+     "a": "Termination of neurotransmitter action",
+     "b": "How neurotransmitter signaling is stopped. Mechanisms include enzymatic degradation (e.g., acetylcholinesterase breaking down acetylcholine), reuptake into the presynaptic neuron, or diffusion away from the synapse."
+    }
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Dysregulation of neurotransmitter systems can lead to various neurological and psychiatric disorders. This can involve imbalances in synthesis, release, receptor sensitivity, or termination mechanisms. Many psychotropic medications work by modulating these systems.",
+   "b": [
+    "Imbalances can lead to conditions like Parkinson's disease (dopamine deficiency), depression (serotonin/norepinephrine issues), and schizophrenia (dopamine dysregulation).",
+    "Autoimmune conditions can target neurotransmitter receptors.",
+    "Toxins or drugs can interfere with synthesis, release, or breakdown."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding neurotransmitters is fundamental to diagnosing and treating a wide range of conditions. Many common medications, including antidepressants, antipsychotics, and drugs for Parkinson's disease, target specific neurotransmitter pathways to restore balance and alleviate symptoms.",
+   "b": [
+    "Psychiatric disorders often involve neurotransmitter imbalances.",
+    "Neurological diseases like Parkinson's and Alzheimer's are linked to specific neurotransmitter deficits.",
+    "Anesthetics and muscle relaxants at the neuromuscular junction directly affect neurotransmission."
+   ],
+   "t": [
+    {
+     "a": "Effect of acetylcholinesterase inhibition",
+     "b": "What happens if acetylcholine is broken down too quickly. Premature degradation leads to insufficient acetylcholine in the synapse, impairing neuromuscular transmission or cholinergic signaling, potentially causing weakness or cognitive deficits."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Clinicians must appreciate how neurotransmitter systems underpin neurological and psychiatric function. Understanding drug mechanisms often involves knowing which neurotransmitter system they affect and how.",
+   "b": [
+    "How do psychotropic drugs generally work? They alter neurotransmitter release, reuptake, breakdown, or receptor activity.",
+    "What are the criteria for classifying a substance as a neurotransmitter? It must be synthesized in the neuron, present in the presynaptic terminal, released upon stimulation, and produce a specific response when applied exogenously."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the difference between a neurotransmitter and a hormone?",
+   "a": "Neurotransmitters act locally across synapses, while hormones travel through the bloodstream to target cells throughout the body."
+  },
+  {
+   "q": "Can neurotransmitters be measured directly in the blood?",
+   "a": "Generally, neurotransmitters themselves are not reliably measured in blood as they act locally. However, their metabolites or related markers can sometimes be assessed."
+  },
+  {
+   "q": "What is the role of neurotransmitters in mood?",
+   "a": "Neurotransmitters like serotonin, dopamine, and norepinephrine play critical roles in regulating mood, with imbalances often implicated in depression and anxiety disorders."
+  }
+ ],
+ "exam": [
+  "Outline the criteria used to classify compounds as neurotransmitters.",
+  "Mention three ways in which neurotransmitter action is terminated.",
+  "Indicate the possible effect of premature degradation of acetylcholine by acetylcholinesterase."
+ ],
+ "related": [
+  "Synaptic Transmission",
+  "Neuromuscular Junction",
+  "Action Potential",
+  "Dopamine Pathways",
+  "Serotonin",
+  "Acetylcholine",
+  "Psychopharmacology",
+  "Neurotransmission"
+ ],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

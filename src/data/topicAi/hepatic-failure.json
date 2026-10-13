@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "summary": "Hepatic failure is the severe deterioration of liver function, leading to a decline in the liver's ability to perform its essential metabolic and synthetic roles. It can progress rapidly, causing life-threatening complications due to the accumulation of toxins and the loss of vital protein production.",
+ "aka": [
+  "Liver Failure"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hepatic failure is defined by the severe impairment of liver function. Diagnosis involves identifying signs of liver dysfunction and ruling out other causes of similar symptoms. Key indicators include jaundice, coagulopathy, and encephalopathy in the absence of pre-existing liver disease.",
+   "b": [
+    "Acute liver injury with coagulopathy (INR > 1.5) and encephalopathy.",
+    "Chronic liver disease with decompensation."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity ranges from compensated liver disease to acute decompensation and fulminant hepatic failure. Staging often relies on clinical signs of complications like ascites, encephalopathy, and variceal bleeding, alongside laboratory markers.",
+   "b": [
+    "Child-Pugh score for chronic liver disease.",
+    "King's College Criteria for acute liver failure."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes are diverse and depend on the setting. In acute settings, viral hepatitis (A, B, E), drug-induced liver injury (paracetamol, herbal remedies), and ischemic hepatitis are common. Chronic causes include viral hepatitis (B, C), alcohol, and non-alcoholic fatty liver disease.",
+   "b": [
+    "Viral hepatitis (Hepatitis A, B, E).",
+    "Drug-induced liver injury (paracetamol, antibiotics, herbal remedies).",
+    "Alcoholic liver disease.",
+    "Non-alcoholic fatty liver disease (NAFLD).",
+    "Ischemic hepatitis.",
+    "Autoimmune hepatitis.",
+    "Wilson's disease, hemochromatosis.",
+    "Budd-Chiari syndrome."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation can be insidious or abrupt. Early symptoms are often nonspecific, including fatigue, nausea, and abdominal discomfort. As it progresses, jaundice, ascites, peripheral edema, and confusion (hepatic encephalopathy) become apparent.",
+   "b": [
+    "Fatigue, malaise, anorexia.",
+    "Jaundice, dark urine.",
+    "Abdominal distension (ascites), edema.",
+    "Easy bruising, bleeding.",
+    "Altered mental status, confusion."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Liver Function Tests (LFTs)",
+     "b": "Assess liver damage and synthetic function. Elevated transaminases (ALT, AST) indicate hepatocellular injury. Elevated bilirubin suggests impaired conjugation or excretion. Low albumin and prolonged INR indicate reduced synthetic capacity."
+    },
+    {
+     "a": "Coagulation Profile (INR, PT)",
+     "b": "Evaluate the liver's ability to produce clotting factors. An elevated INR is a key indicator of synthetic dysfunction and coagulopathy."
+    },
+    {
+     "a": "Serum Albumin",
+     "b": "Assesses synthetic function. Low levels indicate chronic liver disease or malnutrition."
+    },
+    {
+     "a": "Viral Serologies (HAV, HBV, HCV, HEV)",
+     "b": "Identify specific viral causes of hepatitis. Crucial for guiding treatment and prognosis."
+    },
+    {
+     "a": "Imaging (Ultrasound, CT, MRI)",
+     "b": "Evaluate liver size, morphology, and detect ascites, portal hypertension, or masses. Ultrasound is often the first-line investigation."
+    },
+    {
+     "a": "Ammonia Levels",
+     "b": "May correlate with the severity of hepatic encephalopathy, though not always reliable. Useful in monitoring response to treatment."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Hepatic failure can lead to multiple life-threatening complications. Early recognition and management of these are critical for patient survival.",
+   "b": [
+    "Hepatic encephalopathy (altered mental status).",
+    "Coagulopathy and bleeding (e.g., GI hemorrhage).",
+    "Hepatorenal syndrome (kidney dysfunction).",
+    "Ascites and spontaneous bacterial peritonitis (SBP).",
+    "Esophageal varices and rupture.",
+    "Sepsis and multi-organ failure.",
+    "Hepatocellular carcinoma (in chronic cases)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause, supportive care, and preventing/managing complications. Liver transplantation is the definitive treatment for irreversible failure.",
+   "b": [
+    "Treat the underlying cause (e.g., antivirals for viral hepatitis, stop offending drug).",
+    "Supportive care: fluid and electrolyte balance, nutritional support.",
+    "Manage encephalopathy: lactulose, rifaximin to reduce ammonia production.",
+    "Manage coagulopathy: Vitamin K, fresh frozen plasma (FFP) if actively bleeding.",
+    "Monitor for and manage ascites, SBP, variceal bleeding.",
+    "Consider liver transplantation for eligible patients."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up depends on the cause and severity. Prevention strategies include vaccination against hepatitis A and B, safe sex practices, avoiding excessive alcohol, and caution with medications and herbal supplements.",
+   "b": [
+    "Regular LFT monitoring.",
+    "Hepatitis A and B vaccination.",
+    "Screening for hepatocellular carcinoma in chronic liver disease.",
+    "Patient education on alcohol and medication use."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions can mimic hepatic failure, requiring careful differentiation.",
+   "b": [
+    "Acute kidney injury (can cause similar electrolyte disturbances).",
+    "Sepsis (can cause multi-organ dysfunction).",
+    "Heart failure (can cause ascites and edema).",
+    "Gastroenteritis (can cause nausea, vomiting, dehydration)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain lab results or clinical signs can be misleading in the context of hepatic failure.",
+   "b": [
+    "Normal transaminases in end-stage liver disease.",
+    "Normal albumin in acute liver failure (due to short half-life).",
+    "Ammonia levels may not always correlate with encephalopathy severity.",
+    "INR may be affected by Vitamin K deficiency unrelated to liver function."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of jaundice.",
+  "Abdominal swelling (ascites).",
+  "Confusion or significant changes in mental state.",
+  "Vomiting blood or passing black, tarry stools.",
+  "Signs of severe dehydration or electrolyte imbalance."
+ ],
+ "faq": [
+  {
+   "q": "Can hepatic failure be reversed?",
+   "a": "Mild to moderate hepatic dysfunction can sometimes be reversed if the underlying cause is identified and treated promptly. Severe or fulminant hepatic failure often requires liver transplantation."
+  },
+  {
+   "q": "What is the role of diet in hepatic failure?",
+   "a": "A balanced diet is important for nutrition. Protein intake may need adjustment in severe encephalopathy, but severe restriction is usually avoided. Sodium restriction helps manage ascites."
+  },
+  {
+   "q": "Is hepatic failure contagious?",
+   "a": "Some causes of hepatic failure, like viral hepatitis A and E, are contagious. Others, such as alcoholic liver disease or drug-induced injury, are not directly contagious."
+  }
+ ],
+ "exam": [
+  "Describe the key clinical features that differentiate acute liver failure from decompensated chronic liver disease.",
+  "What are the most critical complications of hepatic failure, and how would you monitor for them?",
+  "Explain the rationale behind using lactulose in the management of hepatic encephalopathy."
+ ],
+ "related": [
+  "Hepatitis A",
+  "Hepatitis B",
+  "Hepatitis E",
+  "Drug-Induced Liver Injury",
+  "Alcoholic Liver Disease",
+  "Hepatic Encephalopathy",
+  "Hepatorenal Syndrome",
+  "Liver Transplantation"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

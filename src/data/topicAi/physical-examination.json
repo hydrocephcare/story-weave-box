@@ -1,0 +1,127 @@
+{
+ "medical": true,
+ "summary": "The physical examination is a systematic process of observing and assessing a patient's body to detect signs of disease or injury. It involves inspection, palpation, percussion, and auscultation to gather objective data that complements the patient's history.",
+ "aka": [
+  "Clinical Examination",
+  "Physical Assessment"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Physical examination is the process of evaluating objective physical signs of a patient's health status. It is a cornerstone of clinical diagnosis, helping to identify abnormalities and formulate a differential diagnosis.",
+   "b": [
+    "Involves systematic observation and use of senses (sight, touch, hearing).",
+    "Complements patient history to build a complete clinical picture.",
+    "Aids in identifying specific disease patterns and syndromes."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The presentation of findings during a physical examination varies greatly depending on the underlying condition. Signs can range from subtle changes in appearance or texture to gross abnormalities.",
+   "b": [
+    "Inspection: Visual observation of the patient's general appearance, posture, skin, and specific body parts.",
+    "Palpation: Using touch to assess texture, temperature, tenderness, masses, and pulsations.",
+    "Percussion: Tapping on body surfaces to elicit sounds that indicate the density of underlying tissues.",
+    "Auscultation: Listening to internal body sounds, typically with a stethoscope, to assess heart, lung, and bowel activity."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Inspection",
+     "b": "What does the patient look like? Reveals general health, distress, skin changes, deformities, or swelling."
+    },
+    {
+     "a": "Palpation",
+     "b": "What does the body feel like? Assesses tenderness, masses, organ size, temperature, and pulse characteristics."
+    },
+    {
+     "a": "Percussion",
+     "b": "What is the density of the underlying tissue? Differentiates solid, fluid, or air-filled structures."
+    },
+    {
+     "a": "Auscultation",
+     "b": "What sounds are heard within the body? Assesses breath sounds, heart murmurs, bowel sounds, and bruits."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain physical findings can indicate immediate life threats or severe complications requiring urgent intervention.",
+   "b": [
+    "Signs of shock (e.g., hypotension, tachycardia, clammy skin).",
+    "Respiratory distress (e.g., severe tachypnea, accessory muscle use, cyanosis).",
+    "Neurological deficits (e.g., sudden onset weakness, altered consciousness).",
+    "Signs of severe infection (e.g., high fever with rigors, purulent discharge)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "The physical examination itself does not involve treatment, but its findings guide management decisions. It helps determine the urgency, type, and location of necessary interventions.",
+   "b": [
+    "Directs further diagnostic testing.",
+    "Informs the choice of initial medical or surgical treatment.",
+    "Guides monitoring of treatment response."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "The interpretation of physical signs can sometimes be confused with other findings or conditions.",
+   "b": [
+    "Subjective symptoms vs. objective signs.",
+    "Normal physiological variations vs. pathological findings.",
+    "Signs of acute illness vs. chronic conditions."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Physical examination findings can sometimes be normal despite significant disease, or abnormal in the absence of disease.",
+   "b": [
+    "Early stages of disease may have minimal or no physical signs.",
+    "Compensatory mechanisms can mask underlying pathology.",
+    "Patient factors (e.g., obesity, pain) can alter findings.",
+    "Examiner inexperience or bias."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe chest pain.",
+  "Difficulty breathing or shortness of breath.",
+  "Sudden weakness or numbness, especially on one side of the body.",
+  "Loss of consciousness or severe confusion.",
+  "Signs of severe bleeding."
+ ],
+ "faq": [
+  {
+   "q": "Why is physical examination still important in the age of advanced imaging?",
+   "a": "It provides immediate, cost-effective information, guides the selection of appropriate investigations, and builds a crucial doctor-patient relationship."
+  },
+  {
+   "q": "What are the four main techniques of physical examination?",
+   "a": "The four main techniques are inspection, palpation, percussion, and auscultation."
+  },
+  {
+   "q": "Can a physical examination be normal even if a person is sick?",
+   "a": "Yes, early in many diseases, or in conditions that primarily affect internal organs without causing external signs, the physical examination may appear normal."
+  }
+ ],
+ "exam": [
+  "How do the four cardinal techniques of physical examination (inspection, palpation, percussion, auscultation) help you assess different body systems?",
+  "Describe how you would systematically examine the respiratory system and what abnormal findings might indicate.",
+  "What are the key differences between assessing a patient for acute distress versus a routine check-up during physical examination?"
+ ],
+ "related": [
+  "Clinical History Taking",
+  "Differential Diagnosis",
+  "Vital Signs",
+  "Diagnostic Reasoning",
+  "Patient Assessment",
+  "Symptom Interpretation",
+  "Medical Observation"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,145 @@
+{
+ "medical": true,
+ "summary": "Apoptosis is programmed cell death, a controlled process essential for development and tissue homeostasis. It differs from necrosis, which results from irreversible injury. Dysregulation of apoptosis contributes to diseases like cancer and autoimmune disorders.",
+ "aka": [
+  "Programmed cell death"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Apoptosis is a highly regulated, energy-dependent process of programmed cell death. It is characterized by cell shrinkage, chromatin condensation, and formation of apoptotic bodies, without causing significant inflammation. Diagnosis is typically inferred from the clinical context and histological findings of characteristic cellular changes.",
+   "b": [
+    "Controlled, active process.",
+    "Morphologically distinct from necrosis.",
+    "Essential for normal development and tissue turnover."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Apoptosis itself is not staged by severity. However, its dysregulation (too much or too little) is a feature of various diseases. For example, insufficient apoptosis can lead to cancer or autoimmune diseases, while excessive apoptosis can cause tissue damage in conditions like neurodegeneration or ischemia.",
+   "b": [
+    "Severity is assessed by the clinical condition it contributes to.",
+    "Insufficient apoptosis: cancer, autoimmunity.",
+    "Excessive apoptosis: neurodegeneration, ischemia."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Apoptosis is a normal physiological process triggered by developmental cues or mild cellular stress. Pathological apoptosis can be induced by severe stress, toxins, radiation, or viral infections. Dysregulation involves imbalances in pro-apoptotic (e.g., BAX, BAK) and anti-apoptotic (e.g., BCL2, BCL-XL) proteins.",
+   "b": [
+    "Physiological signals (development, immune regulation).",
+    "Mild cellular stress (DNA damage, growth factor withdrawal).",
+    "Pathological inducers (toxins, radiation, viruses).",
+    "Genetic mutations affecting apoptotic pathways (e.g., p53)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Apoptosis itself does not present with symptoms. Its clinical significance lies in its contribution to diseases. For instance, failure of apoptosis during development can cause syndactyly (webbed fingers/toes). In adults, dysregulation can manifest as increased susceptibility to infections, autoimmune conditions, or cancer.",
+   "b": [
+    "No direct clinical presentation.",
+    "Clinical signs relate to the underlying disease.",
+    "Embryonic failure: malformations (e.g., syndactyly).",
+    "Dysregulation: cancer, autoimmune disease, neurodegeneration."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Histopathology (biopsy)",
+     "b": "To identify characteristic apoptotic morphology (cell shrinkage, nuclear condensation, apoptotic bodies) and rule out necrosis or malignancy."
+    },
+    {
+     "a": "Immunohistochemistry (e.g., for cleaved caspase-3)",
+     "b": "To detect specific markers of activated apoptotic pathways."
+    },
+    {
+     "a": "Flow cytometry (e.g., Annexin V staining)",
+     "b": "To quantify apoptotic cells in a population."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "The primary 'red flag' is the clinical context suggesting a disease where apoptosis is dysregulated. Complications arise from the disease process itself, such as uncontrolled cell proliferation in cancer (due to insufficient apoptosis) or tissue destruction in autoimmune diseases (due to excessive apoptosis).",
+   "b": [
+    "Uncontrolled cell growth (cancer).",
+    "Autoimmune tissue damage.",
+    "Neurodegenerative disorders.",
+    "Failure of normal tissue remodeling."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on the underlying disease process causing apoptotic dysregulation. For conditions with insufficient apoptosis (e.g., cancer), treatments aim to induce apoptosis (chemotherapy, radiation). For conditions with excessive apoptosis (e.g., neurodegeneration), therapies may aim to inhibit apoptotic pathways or provide supportive care.",
+   "b": [
+    "Treat the underlying disease.",
+    "Induce apoptosis in cancer (chemotherapy, radiation).",
+    "Inhibit apoptosis in neurodegeneration (experimental).",
+    "Supportive care for tissue damage."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is dictated by the disease associated with apoptotic dysregulation. Prevention strategies are disease-specific, focusing on factors that influence cell survival and death, such as avoiding carcinogens, managing infections, and maintaining a healthy lifestyle to support cellular homeostasis.",
+   "b": [
+    "Disease-specific follow-up.",
+    "Preventing exposure to apoptotic inducers (toxins, radiation).",
+    "Promoting cellular health.",
+    "Early detection and management of diseases."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Apoptosis is most often confused with necrosis. Necrosis is a form of accidental cell death resulting from irreversible injury, characterized by cell swelling, membrane rupture, and inflammatory response, unlike the controlled, non-inflammatory process of apoptosis.",
+   "b": [
+    "Necrosis (accidental cell death).",
+    "Autophagy (cellular self-eating, can lead to cell death but is distinct)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Histological findings can be misleading if apoptosis is not clearly distinguished from early necrosis, especially in rapidly progressing conditions. In vitro assays like Annexin V staining can show false positives or negatives depending on the cell preparation and experimental conditions.",
+   "b": [
+    "Early necrosis mimicking apoptosis.",
+    "Artifacts in tissue processing.",
+    "In vitro assay limitations."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the main difference between apoptosis and necrosis?",
+   "a": "Apoptosis is programmed, controlled cell death without inflammation, while necrosis is accidental cell death due to injury, causing inflammation."
+  },
+  {
+   "q": "Why is apoptosis important?",
+   "a": "It's crucial for normal development, removing damaged cells, and maintaining tissue balance, preventing diseases like cancer."
+  },
+  {
+   "q": "Can apoptosis be reversed?",
+   "a": "No, once the apoptotic pathway is initiated, it is a one-way process leading to cell death."
+  }
+ ],
+ "exam": [
+  "Describe the key morphological and biochemical features that distinguish apoptosis from necrosis.",
+  "Explain how the BCL-2 family of proteins regulates the intrinsic pathway of apoptosis.",
+  "Provide clinical examples where dysregulation of apoptosis leads to disease."
+ ],
+ "related": [
+  "Necrosis",
+  "Cellular injury",
+  "Autophagy",
+  "Cancer biology",
+  "Immunology",
+  "Developmental biology",
+  "Mitochondrial function",
+  "Caspases"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

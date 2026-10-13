@@ -1,0 +1,95 @@
+{
+ "medical": true,
+ "summary": "The nervous system controls body functions through electrical and chemical signals. It includes the brain, spinal cord, and nerves, enabling sensation, thought, movement, and organ regulation. Understanding its physiology is key to diagnosing and managing neurological disorders.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The nervous system is the body's command center, responsible for rapid communication and control. It's divided into the central nervous system (CNS), comprising the brain and spinal cord, and the peripheral nervous system (PNS), which includes all other nerves.",
+   "b": [
+    "It allows us to perceive the world, think, learn, remember, and move.",
+    "It regulates vital functions like heart rate, breathing, and digestion."
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Nerve cells, or neurons, transmit signals using electrical impulses (action potentials) and chemical messengers (neurotransmitters). Sensory neurons detect stimuli, interneurons process information, and motor neurons carry commands to muscles and glands. Synapses are the junctions where neurons communicate.",
+   "b": [
+    "Action potentials are rapid changes in membrane potential that travel along the neuron.",
+    "Neurotransmitters are released at synapses to excite or inhibit the next neuron or target cell."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "The nervous system's activity is tightly regulated. The autonomic nervous system (ANS) controls involuntary functions, with sympathetic (fight-or-flight) and parasympathetic (rest-and-digest) divisions often having opposing effects. Neurotransmitter levels and receptor sensitivity are also crucial for balanced function.",
+   "b": [
+    "The ANS maintains homeostasis by adjusting organ activity.",
+    "Feedback mechanisms ensure appropriate neural responses."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Disruptions can occur at any level, from neurotransmitter imbalances to structural damage. Causes include infections (e.g., meningitis, encephalitis), trauma, genetic disorders, autoimmune diseases, degenerative conditions (e.g., Parkinson's, Alzheimer's), and vascular events (e.g., stroke).",
+   "b": [
+    "Inflammation of the nervous system, like in rheumatic fever, can cause diverse symptoms.",
+    "Developmental issues can arise from genetic or environmental factors affecting neural maturation."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding nervous system physiology is fundamental for diagnosing conditions affecting cognition, sensation, motor control, and autonomic function. It guides the interpretation of neurological exams and the selection of appropriate investigations and treatments.",
+   "b": [
+    "The blood-brain barrier, formed by continuous capillaries in the CNS, protects the brain but can limit drug access.",
+    "Peristalsis, controlled by the enteric nervous system, is vital for digestion and can be affected by neurological conditions."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Clinicians assess nervous system function through history taking and physical examination, focusing on mental status, cranial nerves, motor and sensory pathways, reflexes, and coordination. Specific patterns of deficits point to the location and nature of the problem.",
+   "b": [
+    "A thorough neurological exam is essential for localizing lesions.",
+    "Understanding neurotransmitter roles is key in psychopharmacology."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe headache",
+  "Sudden weakness or numbness",
+  "Loss of consciousness",
+  "Seizures",
+  "Vision loss"
+ ],
+ "faq": [
+  {
+   "q": "What is a neurotransmitter?",
+   "a": "A chemical messenger that transmits signals across a synapse from one neuron to another."
+  },
+  {
+   "q": "What is the difference between CNS and PNS?",
+   "a": "The CNS is the brain and spinal cord; the PNS includes all nerves outside the CNS."
+  },
+  {
+   "q": "How does the nervous system control involuntary actions?",
+   "a": "Through the autonomic nervous system, which regulates organs like the heart, lungs, and digestive tract."
+  }
+ ],
+ "exam": [
+  "Describe the basic mechanism of neuronal signal transmission.",
+  "Explain the roles of the sympathetic and parasympathetic nervous systems.",
+  "How can a lesion in the brain manifest clinically?"
+ ],
+ "related": [
+  "Neurotransmitters",
+  "Action Potential",
+  "Autonomic Nervous System",
+  "Blood-Brain Barrier",
+  "Neurological Examination",
+  "Stroke",
+  "Meningitis",
+  "Psychopharmacology"
+ ],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

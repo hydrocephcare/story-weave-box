@@ -1,0 +1,186 @@
+{
+ "medical": true,
+ "summary": "Hypersensitivity refers to exaggerated or inappropriate immune responses that cause tissue damage and disease. These reactions are classified into four main types (I-IV) based on the immune mechanism and timing. Understanding the specific type helps guide diagnosis and management to prevent severe outcomes.",
+ "aka": [
+  "Allergy",
+  "Immune Hypersensitivity Reaction"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hypersensitivity reactions are detrimental immune responses to otherwise harmless antigens, leading to tissue injury and disease. They are classified by the Gell and Coombs system into four types, each with distinct immunological mechanisms and clinical presentations. Diagnosis involves identifying the specific type of reaction and the causative antigen.",
+   "b": [
+    "Type I (Immediate/Anaphylactic): IgE-mediated, rapid onset (minutes). Mast cell and basophil degranulation releases mediators like histamine.",
+    "Type II (Cytotoxic): IgG or IgM antibodies bind to cell surface antigens, leading to cell destruction via complement activation or antibody-dependent cellular cytotoxicity (ADCC).",
+    "Type III (Immune Complex): Soluble antigen-antibody complexes form in circulation, deposit in tissues, and activate complement, causing inflammation and tissue damage.",
+    "Type IV (Delayed-Type Hypersensitivity, DTH): T-cell mediated, typically manifesting 24-72 hours after antigen exposure. Involves sensitized T lymphocytes releasing cytokines."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of hypersensitivity reactions ranges from mild localized symptoms to life-threatening systemic responses. Staging is crucial for immediate management, especially for Type I reactions like anaphylaxis.",
+   "b": [
+    "Mild: Localized skin reactions (urticaria, pruritus), mild rhinitis or conjunctivitis.",
+    "Moderate: Widespread urticaria, angioedema, mild bronchospasm, gastrointestinal symptoms (nausea, vomiting).",
+    "Severe (Anaphylaxis): Rapidly progressing, life-threatening systemic reaction involving multiple organ systems. Characterized by airway compromise (stridor, dyspnea), circulatory shock (hypotension), and severe skin/mucosal changes.",
+    "Chronic: Persistent inflammation and tissue damage, as seen in chronic hypersensitivity pneumonitis leading to fibrosis."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes vary widely depending on the type of hypersensitivity, involving environmental, food, drug, and occupational exposures.",
+   "b": [
+    "Type I: Pollen (e.g., goldenrod), dust mites, animal dander, insect venom, foods (e.g., milk in Heiner syndrome), drugs (e.g., penicillin). Often associated with atopy in childhood asthma, stimulated by IL-4 and IL-5.",
+    "Type II: Drug-induced hemolytic anemia (e.g., penicillin, quinidine), transfusion reactions, autoimmune hemolytic anemia, Rh incompatibility.",
+    "Type III: Serum sickness (e.g., animal antitoxins, some drugs), immune complex glomerulonephritis, Arthus reaction.",
+    "Type IV: Contact dermatitis (e.g., poison ivy, nickel), tuberculin skin test reaction, graft rejection, hypersensitivity pneumonitis (immune reaction to inhaled organic antigens like mouldy hay for farmer's lung, bird droppings for bird fancier's lung).",
+    "Occupational exposures for Type IV: Silica, asbestos, coal, certain drugs (amiodarone, methotrexate, nitrofurantoin, bleomycin), radiation."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical presentation is diverse, reflecting the specific immune mechanism and target tissues involved.",
+   "b": [
+    "Type I: Rapid onset (minutes to hours) of urticaria, angioedema, pruritus, rhinitis, conjunctivitis, bronchospasm, abdominal pain, hypotension, or anaphylactic shock.",
+    "Type II: Hemolytic anemia (fatigue, pallor, jaundice), thrombocytopenia (purpura, bleeding), or neutropenia (infections). Symptoms depend on the affected cell type.",
+    "Type III: Manifests hours to days after exposure with fever, rash (urticarial or vasculitic), arthralgia, lymphadenopathy, and sometimes glomerulonephritis.",
+    "Type IV: Delayed onset (24-72 hours) with contact dermatitis (erythema, vesicles, pruritus), granulomas, or flu-like symptoms (fever, cough, dyspnea) in acute hypersensitivity pneumonitis. Chronic hypersensitivity pneumonitis can lead to progressive dyspnea and cough."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm hypersensitivity, identify the specific type, and pinpoint the causative allergen or antigen. Availability of tests may vary in low-resource settings, necessitating reliance on clinical history and physical examination.",
+   "t": [
+    {
+     "a": "Skin Prick Test (SPT)",
+     "b": "Does the patient have IgE antibodies to specific allergens? A wheal and flare reaction indicates Type I hypersensitivity to that allergen. If unavailable, careful history of exposure and reaction is critical."
+    },
+    {
+     "a": "Specific IgE Blood Test (RAST/ImmunoCAP)",
+     "b": "Are there circulating IgE antibodies to specific allergens? Elevated levels support Type I hypersensitivity. Useful when skin testing is contraindicated or unavailable."
+    },
+    {
+     "a": "Patch Test",
+     "b": "Is there a delayed (Type IV) hypersensitivity reaction to a contact allergen? Erythema, papules, or vesicles at the site 48-72 hours after application indicate a positive reaction."
+    },
+    {
+     "a": "Complete Blood Count (CBC) with Differential",
+     "b": "Are there signs of immune activation or cell destruction? Eosinophilia suggests Type I, II, or III. Anemia, thrombocytopenia, or neutropenia may suggest Type II. If unavailable, clinical signs of anemia or bleeding are important."
+    },
+    {
+     "a": "Serum Complement Levels (C3, C4)",
+     "b": "Is there complement consumption, suggesting immune complex (Type III) or cytotoxic (Type II) reactions? Decreased levels support these types."
+    },
+    {
+     "a": "Biopsy (e.g., skin, lung)",
+     "b": "What is the underlying tissue pathology? Histology can differentiate types (e.g., eosinophils in Type I, immune complex deposition in Type III, granulomas in Type IV). Essential for diagnosing conditions like hypersensitivity pneumonitis."
+    },
+    {
+     "a": "Allergen Challenge Test (Oral, Inhalation)",
+     "b": "Is a specific substance truly causing the reaction? Carefully controlled exposure under medical supervision can confirm hypersensitivity, especially for foods or drugs. Reserved for specific situations due to risk."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition of severe reactions is critical to prevent life-threatening complications and long-term organ damage.",
+   "b": [
+    "Anaphylaxis: Rapid onset of airway obstruction (stridor, hoarseness), severe bronchospasm, hypotension, cardiovascular collapse. This is a medical emergency.",
+    "Angioedema of the airway: Swelling of the tongue, lips, or larynx, leading to respiratory compromise.",
+    "Organ damage: Acute kidney injury (Type III glomerulonephritis), lung fibrosis (chronic hypersensitivity pneumonitis), hemolytic crisis (Type II).",
+    "Shock: Profound hypotension and inadequate tissue perfusion, particularly in severe Type I reactions."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on immediate life support for severe reactions, identifying and avoiding the trigger, and modulating the immune response.",
+   "b": [
+    "Emergency Management (Anaphylaxis): Administer epinephrine intramuscularly immediately. Secure airway, provide oxygen, intravenous fluids for hypotension. Antihistamines and corticosteroids are adjuncts.",
+    "Avoidance: Crucial for all types. Identify and eliminate exposure to the causative allergen/antigen. For Heiner syndrome, a milk-free diet is essential.",
+    "Antihistamines (e.g., H1 blockers like diphenhydramine, loratadine): Used for symptomatic relief of pruritus, urticaria, and rhinitis in Type I reactions. Chosen for efficacy and side effect profile.",
+    "Corticosteroids (e.g., prednisone, hydrocortisone): Reduce inflammation in Type I (severe), Type III, and Type IV reactions. Used systemically for severe cases or topically for localized reactions.",
+    "Immunosuppressants (e.g., methotrexate, azathioprine): May be used for chronic or severe Type III or Type IV reactions, such as severe hypersensitivity pneumonitis, when corticosteroids are insufficient or contraindicated.",
+    "Desensitization/Immunotherapy: Gradually introduce increasing doses of allergen to induce tolerance in selected Type I hypersensitivity cases (e.g., pollen, insect venom).",
+    "Supportive Care: Symptomatic treatment for rash, pain, fever. Monitor vital signs and organ function, especially in systemic reactions."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long-term management involves patient education, monitoring, and strategies to prevent future reactions.",
+   "b": [
+    "Patient Education: Teach patients to recognize symptoms, avoid triggers, and use emergency medications (e.g., auto-injectable epinephrine).",
+    "Allergen Avoidance: Strict adherence to dietary restrictions (e.g., milk-free for Heiner syndrome), environmental controls (e.g., dust mite covers), or occupational safety measures.",
+    "Medical Alert Identification: Patients with severe allergies should wear medical alert bracelets or carry cards.",
+    "Regular Monitoring: For chronic conditions like hypersensitivity pneumonitis, regular pulmonary function tests and imaging are needed to monitor disease progression.",
+    "Pharmacological Prevention: Daily antihistamines for chronic allergic rhinitis, mast cell stabilizers (e.g., cromolyn) for some allergic conditions."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguishing hypersensitivity from other conditions with similar symptoms is vital for correct diagnosis and treatment.",
+   "b": [
+    "Autoimmune Diseases: Both involve immune system dysregulation, but autoimmune diseases target self-antigens, while hypersensitivity targets external antigens.",
+    "Infections: Viral exanthems or bacterial toxins can cause rashes and systemic symptoms mimicking hypersensitivity reactions.",
+    "Drug Side Effects (Non-Allergic): Many drugs cause adverse reactions not mediated by the immune system (e.g., nausea, diarrhea, direct histamine release from opioids).",
+    "NASH (Non-alcoholic steatohepatitis): Comes with insulin resistance, not hypersensitivity, despite some shared inflammatory pathways."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting diagnostic tests requires careful clinical correlation, as certain factors can lead to misleading results.",
+   "b": [
+    "False Negative Skin Prick Test: Can occur if patient is on antihistamines, has poor skin reactivity, or if allergen extract potency is low.",
+    "False Positive Skin Prick Test: Irritant reactions, dermographism, or cross-reactivity with unrelated allergens can cause false positives.",
+    "Specific IgE Blood Test: Elevated levels indicate sensitization but not necessarily clinical allergy; many sensitized individuals do not react clinically.",
+    "Patch Test Interpretation: Requires expertise to differentiate irritant reactions from true allergic contact dermatitis. Reading too early or too late can miss reactions.",
+    "Challenge Tests: Risk of severe reaction, requiring careful patient selection and expert supervision. Negative challenge does not always rule out a rare or unusual reaction."
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Immediate medical attention is required for signs of a severe or rapidly worsening allergic reaction.",
+   "b": [
+    "Difficulty breathing, wheezing, or stridor.",
+    "Swelling of the face, lips, tongue, or throat.",
+    "Sudden widespread rash or hives.",
+    "Dizziness, lightheadedness, or fainting.",
+    "Rapid heart rate or a sudden drop in blood pressure.",
+    "Severe abdominal pain, vomiting, or diarrhea after exposure."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the main difference between allergy and hypersensitivity?",
+   "a": "Allergy is a common term for Type I hypersensitivity, specifically referring to IgE-mediated reactions. Hypersensitivity is a broader medical term encompassing all four types of exaggerated immune responses that cause tissue damage."
+  },
+  {
+   "q": "Can hypersensitivity reactions change over time?",
+   "a": "Yes, hypersensitivity reactions can evolve. For example, childhood allergies may resolve, or new sensitivities can develop with repeated exposure. Chronic exposure in Type IV reactions can lead to irreversible tissue damage like fibrosis."
+  },
+  {
+   "q": "Is it possible to be allergic to multiple things?",
+   "a": "Yes, it is common for individuals to be sensitized to multiple allergens, especially in Type I hypersensitivity. This is often seen in atopic individuals who may have allergic rhinitis, asthma, and food allergies."
+  }
+ ],
+ "exam": [
+  "A patient presents with acute dyspnea and widespread urticaria shortly after eating. How would you classify this reaction, what is the underlying mechanism, and what is your immediate management plan?",
+  "Describe the key differences in immune mechanisms and clinical presentation between Type I and Type IV hypersensitivity reactions, providing an example for each.",
+  "A farmer develops progressive shortness of breath and cough. What type of hypersensitivity might be involved, what investigations would you consider, and how would you manage this condition?"
+ ],
+ "related": [
+  "Anaphylaxis",
+  "Asthma",
+  "Allergic Rhinitis",
+  "Contact Dermatitis",
+  "Autoimmune Diseases",
+  "Immunology",
+  "Inflammation",
+  "Drug Reactions"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

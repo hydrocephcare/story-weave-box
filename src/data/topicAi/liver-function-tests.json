@@ -1,0 +1,145 @@
+{
+ "medical": true,
+ "summary": "Liver Function Tests (LFTs) assess liver health by measuring enzymes, proteins, and bilirubin. Abnormal results can indicate liver damage, inflammation, or bile duct obstruction, prompting further investigation into the underlying cause.",
+ "aka": [
+  "LFTs",
+  "Liver Panel"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "LFTs are a panel of blood tests used to evaluate liver health and detect liver damage or disease. They measure levels of specific enzymes, proteins, and bilirubin produced or processed by the liver. Abnormalities suggest the liver is not functioning correctly.",
+   "b": [
+    "LFTs are not a single test but a group of tests.",
+    "Diagnosis of liver disease relies on LFTs combined with clinical history, physical exam, and imaging."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Alanine Aminotransferase (ALT)",
+     "b": "Question: Which liver enzyme is elevated? Indicates hepatocellular injury. Elevated ALT suggests damage to liver cells."
+    },
+    {
+     "a": "Aspartate Aminotransferase (AST)",
+     "b": "Question: Which liver enzyme is elevated? Indicates hepatocellular injury. Elevated AST also suggests damage to liver cells, but can also be elevated in muscle injury."
+    },
+    {
+     "a": "Alkaline Phosphatase (ALP)",
+     "b": "Question: Which liver enzyme is elevated? Primarily indicates cholestasis (impaired bile flow) or bone disease. Elevated ALP suggests bile duct issues or bone conditions. Normal GGT with elevated ALP may be benign."
+    },
+    {
+     "a": "Gamma-Glutamyl Transferase (GGT)",
+     "b": "Question: Which liver enzyme is elevated? Sensitive indicator of liver disease, particularly cholestasis and alcohol-induced injury. Elevated GGT often accompanies elevated ALP in bile duct problems."
+    },
+    {
+     "a": "Bilirubin (Total and Direct)",
+     "b": "Question: What is the bilirubin level? Measures the breakdown product of red blood cells processed by the liver. Elevated bilirubin (jaundice) indicates impaired liver function or bile duct obstruction."
+    },
+    {
+     "a": "Albumin",
+     "b": "Question: What is the liver's synthetic function? A protein made by the liver. Low albumin suggests chronic liver disease and impaired synthetic function."
+    },
+    {
+     "a": "Prothrombin Time (PT)/International Normalized Ratio (INR)",
+     "b": "Question: How well is the liver synthesizing clotting factors? Measures blood clotting time. Prolonged PT/INR indicates impaired liver synthesis of clotting factors, suggesting severe liver dysfunction."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Causes of abnormal LFTs are diverse and can include viral hepatitis (A, B, C), alcoholic liver disease, non-alcoholic fatty liver disease (NAFLD), drug-induced liver injury, autoimmune hepatitis, and genetic disorders. In tropical settings, consider parasitic infections like schistosomiasis and malaria, and infections like HIV and TB affecting the liver.",
+   "b": [
+    "Hepatitis B and C are common causes of chronic liver disease.",
+    "Alcohol abuse is a leading cause of liver damage.",
+    "Medications and herbal remedies can cause drug-induced liver injury.",
+    "NAFLD is increasingly prevalent, linked to obesity and metabolic syndrome."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may be asymptomatic with abnormal LFTs found incidentally. Symptoms can include fatigue, abdominal pain (especially in the upper right quadrant), jaundice (yellowing of skin and eyes), dark urine, pale stools, nausea, vomiting, and loss of appetite. Advanced disease can lead to ascites (fluid in the abdomen) and confusion (hepatic encephalopathy).",
+   "b": [
+    "Jaundice is a key sign of elevated bilirubin.",
+    "Pale stools suggest obstruction of bile flow.",
+    "Ascites indicates significant liver dysfunction and fluid retention."
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags include rapidly rising transaminases, significant jaundice, coagulopathy (high INR), and signs of hepatic encephalopathy (confusion, asterixis). Complications include liver failure, portal hypertension leading to varices and bleeding, ascites, spontaneous bacterial peritonitis, and hepatocellular carcinoma.",
+   "b": [
+    "Acute liver failure is a medical emergency.",
+    "Bleeding from esophageal varices can be life-threatening.",
+    "Hepatic encephalopathy impairs brain function."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause. This may involve antiviral medications for hepatitis B/C, abstinence from alcohol, stopping offending drugs, or immunosuppressants for autoimmune conditions. Supportive care includes managing complications like ascites and encephalopathy. Nutritional support is crucial.",
+   "b": [
+    "Treating the specific cause is paramount.",
+    "Diuretics may be used for ascites.",
+    "Lactulose can help manage hepatic encephalopathy."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "LFT abnormalities can be confused with conditions affecting other organs. For example, elevated ALP can be due to bone disease, and elevated AST/ALT can be seen in muscle injury. Gallstones causing biliary colic might mimic liver pain.",
+   "b": [
+    "Bone disorders can elevate ALP.",
+    "Muscle damage can elevate AST.",
+    "Gallstones can cause abdominal pain and jaundice."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "LFTs can be normal in early or mild liver disease. Conversely, some results can be falsely elevated or lowered by non-liver conditions. For instance, strenuous exercise can raise AST, and certain medications can affect bilirubin levels without indicating liver disease.",
+   "b": [
+    "Normal LFTs do not rule out liver disease.",
+    "Medications can interfere with LFT results.",
+    "Non-liver conditions can mimic liver abnormalities."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe abdominal pain",
+  "Yellowing of skin or eyes (jaundice)",
+  "Confusion or altered mental state",
+  "Vomiting blood or black, tarry stools"
+ ],
+ "faq": [
+  {
+   "q": "What are the main components of LFTs?",
+   "a": "LFTs typically include ALT, AST, ALP, GGT, bilirubin, albumin, and prothrombin time/INR."
+  },
+  {
+   "q": "Can LFTs be normal if I have liver disease?",
+   "a": "Yes, LFTs can be normal in early or mild liver disease. Further tests may be needed."
+  },
+  {
+   "q": "What should I do if my LFTs are abnormal?",
+   "a": "An abnormal LFT result requires further investigation by a healthcare professional to determine the cause and appropriate management."
+  }
+ ],
+ "exam": [
+  "Explain the significance of elevated ALT and AST in diagnosing liver injury.",
+  "Describe how LFTs help differentiate between hepatocellular injury and cholestasis.",
+  "What are the key LFT findings in chronic liver disease versus acute liver failure?"
+ ],
+ "related": [
+  "Hepatitis B",
+  "Hepatitis C",
+  "Alcoholic Liver Disease",
+  "Non-alcoholic Fatty Liver Disease (NAFLD)",
+  "Cirrhosis",
+  "Jaundice",
+  "Biliary Atresia",
+  "Hepatic Encephalopathy"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

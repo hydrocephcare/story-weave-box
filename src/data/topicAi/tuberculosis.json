@@ -1,0 +1,162 @@
+{
+ "medical": true,
+ "summary": "Tuberculosis (TB) is a communicable chronic granulomatous disease caused by *Mycobacterium tuberculosis*. It primarily affects the lungs but can spread to other organs, causing significant global morbidity and mortality, especially in low-resource settings.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Tuberculosis (TB) is a serious bacterial infection caused by *Mycobacterium tuberculosis*. The World Health Organization (WHO) considers TB the most common cause of death from a single infectious agent, with approximately 1.7 billion infected globally. *M. tuberculosis* are slender rods that are acid-fast, meaning they resist decolorization with acid-alcohol after specific staining.",
+   "b": [
+    "The bacterium has a very thick, waxy cell wall, making it resistant to many antibiotics.",
+    "It grows very slowly, necessitating treatment that takes months.",
+    "It can hide inside cells in an inactive (latent) state, posing a risk for future active disease."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "TB can manifest as latent infection, where the bacteria are present but not causing active disease, or as active disease, which can be pulmonary (affecting the lungs) or extrapulmonary (affecting other organs). Active disease ranges from localized infection to widespread, severe forms like miliary tuberculosis.",
+   "b": [
+    "Latent TB infection means the bacteria are in the body but not causing symptoms or spreading.",
+    "Active TB disease causes symptoms and is contagious, especially pulmonary forms.",
+    "Miliary tuberculosis is a severe, disseminated form where bacteria spread throughout the body via the bloodstream, often seen in children or immunocompromised individuals."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Tuberculosis is exclusively caused by infection with *Mycobacterium tuberculosis*. There are no other known infectious agents or conditions that directly cause TB.",
+   "b": [
+    "The reservoir for *M. tuberculosis* is individuals with active pulmonary disease.",
+    "Transmission occurs via inhalation of airborne organisms in aerosols produced during coughing or expectoration.",
+    "Contaminated secretions can also contribute to transmission."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Active tuberculosis typically presents with a chronic cough, often with expectoration, which can sometimes be bloody. Systemic symptoms are common and include fever, night sweats, unexplained weight loss, and fatigue. Extrapulmonary TB presents with symptoms related to the affected organ.",
+   "b": [
+    "Pulmonary TB symptoms include persistent cough, chest pain, and shortness of breath.",
+    "Systemic symptoms like fever, night sweats, and weight loss are common in active disease.",
+    "Symptoms of extrapulmonary TB vary widely depending on the site of infection (e.g., lymphadenopathy, abdominal pain, neurological deficits)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Acid-Fast Bacilli (AFB) Smear (Ziehl-Neelsen or fluorescent auramine-rhodamine stains)",
+     "b": "Identifies acid-fast bacilli in sputum or tissue samples. A positive result suggests active TB, requiring further confirmation."
+    },
+    {
+     "a": "Mycobacterial Culture (sputum, tissue, fluid)",
+     "b": "Confirms the presence and species of *Mycobacterium tuberculosis* and allows for drug susceptibility testing. This is the gold standard for diagnosis."
+    },
+    {
+     "a": "Chest X-ray (CXR)",
+     "b": "Assesses lung involvement and characteristic lesions (e.g., infiltrates, cavities, hilar lymphadenopathy), suggesting pulmonary TB. Useful for initial screening and monitoring."
+    },
+    {
+     "a": "Thoracentesis fluid analysis (for pleural TB)",
+     "b": "Measures cell count (lymphocytic exudate) and adenosine deaminase (ADA) levels. A lymphocytic exudate with high ADA should strongly suggest tuberculosis."
+    },
+    {
+     "a": "Tuberculin Skin Test (TST) or Interferon-Gamma Release Assay (IGRA)",
+     "b": "Screens for *M. tuberculosis* infection by detecting an immune response. A positive result indicates exposure but does not differentiate between latent and active disease."
+    },
+    {
+     "a": "HIV testing",
+     "b": "Identifies co-infection, as HIV significantly impacts TB presentation, progression, and management, often leading to atypical presentations or more severe disease."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Untreated active tuberculosis can lead to severe complications, including widespread dissemination (miliary TB), respiratory failure, and death. Drug resistance is a significant concern, making treatment more challenging and increasing mortality.",
+   "b": [
+    "Miliary TB is a life-threatening form where bacteria spread throughout the body, affecting multiple organs.",
+    "Respiratory failure can occur due to extensive lung damage from pulmonary TB.",
+    "Drug-resistant TB (MDR-TB, XDR-TB) is a major public health threat, requiring longer and more toxic treatment regimens.",
+    "Pleural effusion, empyema, and pneumothorax are common pulmonary complications."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of active tuberculosis involves a prolonged, multi-drug regimen to eliminate the slow-growing bacteria and prevent drug resistance. Treatment typically lasts for several months, requiring strict adherence.",
+   "b": [
+    "First-line drugs include isoniazid, rifampicin, pyrazinamide, and ethambutol, used in combination.",
+    "Treatment aims to cure the patient, prevent transmission, and avoid the development of drug resistance.",
+    "Directly Observed Treatment, Short-course (DOTS) is a WHO-recommended strategy to ensure treatment adherence, especially in low-resource settings.",
+    "Supportive care includes nutritional support and management of co-morbidities like HIV."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is crucial to monitor treatment response, detect adverse drug reactions, and ensure treatment completion. Prevention strategies are essential to control the spread of TB.",
+   "b": [
+    "Monitoring involves clinical assessment, sputum smear microscopy, and culture to confirm treatment success.",
+    "Adherence to the full course of medication is vital to prevent relapse and drug resistance.",
+    "The BCG vaccine is used in many countries to prevent severe forms of TB, especially in children.",
+    "Contact tracing and prophylactic treatment for close contacts of active TB cases are important for prevention.",
+    "Infection control measures, such as respiratory hygiene and adequate ventilation, reduce airborne transmission."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Tuberculosis can mimic several other respiratory and systemic conditions, making accurate diagnosis challenging, especially in areas with high prevalence of other infections.",
+   "b": [
+    "Acute bronchitis, severe pneumonia, measles, whooping cough, and adenovirus infections.",
+    "Pulmonary embolism, lung abscess, and empyema.",
+    "Asthma or COPD exacerbation, especially in older patients.",
+    "HIV-related pneumonia, such as *Pneumocystis* pneumonia, due to similar presentations in immunocompromised individuals.",
+    "Malignancy, particularly lung cancer, can present with similar chronic cough, weight loss, and abnormal chest imaging."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical situations and patient factors can lead to misleading test results, complicating the diagnosis and management of tuberculosis.",
+   "b": [
+    "Immunocompromised patients (e.g., HIV-positive) may have atypical presentations or false-negative TST/IGRA results due to an impaired immune response.",
+    "AFB smears can be negative in paucibacillary disease (low bacterial load) or extrapulmonary TB, despite active infection.",
+    "Culture results can take weeks, delaying definitive diagnosis and initiation of appropriate treatment.",
+    "TST and IGRA cannot distinguish between latent infection and active disease, requiring further investigation for active TB."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent cough lasting more than 2-3 weeks, especially if accompanied by blood.",
+  "Unexplained weight loss, night sweats, or prolonged fever.",
+  "Shortness of breath or chest pain that worsens over time."
+ ],
+ "faq": [
+  {
+   "q": "Why does TB treatment take so long?",
+   "a": "TB bacteria grow very slowly and have a thick, waxy cell wall, making them difficult to kill and requiring prolonged multi-drug therapy to ensure eradication and prevent resistance."
+  },
+  {
+   "q": "Can TB affect organs other than the lungs?",
+   "a": "Yes, while primarily affecting the lungs, TB can spread to almost any organ, including lymph nodes, bones, kidneys, brain, and intestines, leading to extrapulmonary TB."
+  },
+  {
+   "q": "What is the difference between latent TB infection and active TB disease?",
+   "a": "Latent TB means the bacteria are in the body but inactive, causing no symptoms and not contagious. Active TB means the bacteria are multiplying, causing symptoms, and can be transmitted to others."
+  }
+ ],
+ "exam": [
+  "Describe the key characteristics of *Mycobacterium tuberculosis* that influence its diagnosis and treatment, and explain why these factors necessitate a specific management approach.",
+  "A 35-year-old patient from a low-resource setting presents with chronic cough, weight loss, and night sweats. Outline your diagnostic approach for suspected pulmonary tuberculosis, including expected findings and considerations for resource",
+  "Discuss the major challenges in managing tuberculosis globally, focusing on issues of drug resistance, co-infection with HIV, and the importance of public health interventions."
+ ],
+ "related": [
+  "HIV/AIDS",
+  "Pneumonia",
+  "Granulomatous diseases",
+  "Infectious diseases",
+  "Antimicrobial resistance",
+  "Public health",
+  "BCG vaccine",
+  "Respiratory medicine"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

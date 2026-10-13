@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "summary": "Breast cancer is a malignancy originating from breast tissue, most commonly from the ducts or lobules. Early detection and accurate staging are crucial for effective treatment and improved patient outcomes. It is a leading cause of cancer-related mortality in women globally.",
+ "aka": [
+  "Mammary carcinoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Breast cancer is a heterogeneous disease characterized by the uncontrolled growth of abnormal cells in the breast. It typically arises from the epithelial cells lining the milk ducts (ductal carcinoma) or lobules (lobular carcinoma). Diagnosis requires histological confirmation.",
+   "b": [
+    "Definitive diagnosis relies on tissue biopsy showing malignant cells.",
+    "Invasive carcinoma means cancer cells have spread beyond the duct or lobule.",
+    "In situ carcinoma (e.g., DCIS, LCIS) refers to non-invasive cancer confined to its origin."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging determines the extent of the cancer, guiding treatment and prognosis. The TNM (Tumor, Node, Metastasis) system is universally used, assessing tumor size, lymph node involvement, and distant spread.",
+   "b": [
+    "T (Tumor): Describes the size of the primary tumor.",
+    "N (Nodes): Indicates if cancer has spread to regional lymph nodes, especially axillary.",
+    "M (Metastasis): Denotes if cancer has spread to distant sites (e.g., bone, liver, lung, brain).",
+    "Higher stages (e.g., Stage III, IV) indicate more advanced disease and often require more aggressive treatment."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Breast cancer development is multifactorial, involving a complex interplay of genetic, hormonal, and environmental factors. Risk increases with age, but many cases occur without clear risk factors.",
+   "b": [
+    "Genetic predisposition: Family history, especially first-degree relatives, significantly increases risk. BRCA1/BRCA2 gene mutations are major contributors.",
+    "Hormonal factors: Early menarche, late menopause, never having children, or late first pregnancy increase lifetime estrogen exposure. Postmenopausal hormone replacement therapy also increases risk.",
+    "Lifestyle factors: Obesity, alcohol consumption, lack of physical activity, and certain dietary patterns are associated with increased risk.",
+    "Radiation exposure: Prior chest radiation, particularly at a young age, can increase risk.",
+    "Benign breast disease: Some types, like atypical hyperplasia, are associated with higher future cancer risk."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Breast cancer often presents as a painless lump, but symptoms can vary. Early detection through screening is vital, as many early cancers are asymptomatic.",
+   "b": [
+    "Breast lump or mass: Often firm, irregular, and fixed, but can be soft or mobile.",
+    "Nipple changes: Inversion, discharge (especially bloody), or changes in appearance.",
+    "Skin changes: Redness, dimpling (peau d'orange), scaling, or thickening of the breast skin.",
+    "Axillary lump: Swelling or a lump in the armpit, indicating lymph node involvement.",
+    "Breast pain: Less common as a primary symptom, but can occur."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Clinical Breast Exam (CBE)",
+     "b": "Does a palpable abnormality exist? Identifies lumps, skin changes, or nipple discharge. A suspicious finding warrants further imaging."
+    },
+    {
+     "a": "Mammography",
+     "b": "Are there suspicious lesions not palpable? Detects calcifications, masses, and architectural distortion. Abnormal findings (e.g., spiculated mass) suggest malignancy."
+    },
+    {
+     "a": "Breast Ultrasound",
+     "b": "Is a palpable lump solid or cystic? Characterizes masses seen on mammography or felt on exam. Differentiates solid tumors from benign cysts."
+    },
+    {
+     "a": "Breast MRI",
+     "b": "What is the extent of disease, especially in dense breasts or for high-risk patients? Provides detailed imaging, useful for staging and detecting multifocal disease. Often used for treatment planning."
+    },
+    {
+     "a": "Core Needle Biopsy (CNB)",
+     "b": "Are the cells malignant, and what is their type? Obtains tissue for histological diagnosis. Confirms cancer type (ductal, lobular) and grade. If unavailable, excisional biopsy is an alternative."
+    },
+    {
+     "a": "Immunohistochemistry (IHC) on biopsy",
+     "b": "What are the molecular characteristics of the tumor? Assesses estrogen receptor (ER), progesterone receptor (PR), and HER2 status. Guides targeted therapy decisions (e.g., hormone therapy for ER/PR+, HER2-targeted therapy for HER2+). Triple-negative (ER-, PR-, HER2-) cancers are harder to treat but respond to chemother"
+    },
+    {
+     "a": "Staging Scans (CT chest/abdomen/pelvis, Bone Scan, PET Scan)",
+     "b": "Has the cancer spread to distant organs? Detects metastases to bone, liver, lungs, or other sites. Positive findings indicate advanced disease (Stage IV)."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs indicate advanced disease or urgent complications requiring immediate attention. Metastatic disease can severely impact organ function and prognosis.",
+   "b": [
+    "New, rapidly growing breast lump or skin changes.",
+    "Persistent nipple discharge, especially bloody.",
+    "Bone pain, unexplained weight loss, or persistent cough, suggesting metastasis.",
+    "Lymphedema: Swelling of the arm due to lymphatic obstruction from tumor infiltration or post-surgical/radiotherapy damage (e.g., axillary clearance).",
+    "Pathological fractures: Bone metastases can weaken bones, leading to fractures with minimal trauma.",
+    "Hypercalcemia: Can occur with extensive bone metastases, causing confusion, nausea, and kidney issues."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Breast cancer management is multidisciplinary, involving surgery, radiation, chemotherapy, hormone therapy, and targeted therapy, tailored to the individual and tumor characteristics.",
+   "b": [
+    "Surgery: Lumpectomy (breast-conserving) or mastectomy (removal of entire breast), often with sentinel lymph node biopsy or axillary dissection.",
+    "Radiotherapy: Often given after lumpectomy or mastectomy to reduce local recurrence risk.",
+    "Chemotherapy: Systemic treatment, used for high-risk early-stage disease or metastatic disease. Essential for triple-negative breast cancers.",
+    "Hormone therapy: For ER/PR-positive cancers (e.g., Tamoxifen, Aromatase Inhibitors). Counsel on risks like venous thrombosis, stroke, and endometrial cancer.",
+    "Targeted therapy: For HER2-positive cancers (e.g., Trastuzumab) to specifically block HER2 protein activity.",
+    "Supportive care: Pain management, psychological support, and rehabilitation are integral to patient well-being."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor for recurrence and manage long-term side effects. Prevention strategies focus on risk reduction and early detection.",
+   "b": [
+    "Regular clinical exams and imaging (mammography, MRI) post-treatment to detect recurrence early.",
+    "Lifestyle modifications: Maintaining a healthy weight, limiting alcohol, regular exercise, and a balanced diet can reduce risk.",
+    "Genetic counseling and testing: For individuals with strong family history or known genetic mutations (e.g., BRCA1/2) to assess risk and discuss preventive options.",
+    "Chemoprevention: Medications like Tamoxifen may be considered for very high-risk individuals to reduce cancer incidence.",
+    "Breast self-awareness: Encouraging women to know their breasts and report any changes promptly."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Benign breast diseases: Fibroadenomas (mobile, rubbery lumps), breast cysts (fluid-filled sacs), and mastitis (breast inflammation, often with infection).",
+    "Fat necrosis: A firm lump resulting from trauma or surgery, often mimicking cancer.",
+    "Sclerosing adenosis: A benign condition with excessive growth of glandular tissue, which can appear as a mass on imaging.",
+    "Gynecomastia: Benign enlargement of male breast tissue, which can be mistaken for male breast cancer."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Dense breast tissue on mammography can obscure small cancers, leading to false negatives.",
+    "Biopsy results can be false negative if the sample does not contain malignant cells, requiring repeat biopsy or excisional biopsy.",
+    "Inflammatory breast cancer can mimic mastitis, delaying diagnosis if not recognized as a distinct, aggressive form of cancer.",
+    "Benign conditions can sometimes have suspicious imaging features, leading to unnecessary biopsies (false positives)."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Any new, persistent, or growing breast lump or mass.",
+  "Changes in breast size or shape, or persistent breast pain.",
+  "Nipple discharge (especially bloody or clear), inversion, or rash.",
+  "Skin changes like dimpling, redness, scaling, or thickening.",
+  "Swelling or a lump in the armpit or collarbone area."
+ ],
+ "faq": [
+  {
+   "q": "What is 'triple-negative breast cancer'?",
+   "a": "It's a subtype where cancer cells lack estrogen receptors (ER), progesterone receptors (PR), and do not overexpress HER2 protein. It's often more aggressive and treated primarily with chemotherapy."
+  },
+  {
+   "q": "Does a family history of breast cancer mean I will get it?",
+   "a": "While a family history, especially in close relatives, significantly increases your risk, it does not guarantee you will develop breast cancer. Many factors contribute, and regular screening is key."
+  },
+  {
+   "q": "Can men get breast cancer?",
+   "a": "Yes, men can get breast cancer, though it is rare, accounting for less than 1% of all breast cancers. Symptoms and treatment are similar to those in women."
+  }
+ ],
+ "exam": [
+  "A 45-year-old woman presents with a new, firm, painless lump in her left breast. Outline your diagnostic approach, including key investigations and what information each provides.",
+  "Discuss the prognostic and therapeutic implications of estrogen receptor (ER), progesterone receptor (PR), and HER2 status in breast cancer.",
+  "Describe the management options for a patient diagnosed with Stage II, ER-positive, HER2-negative breast cancer, explaining the rationale for each modality."
+ ],
+ "related": [
+  "Mammography",
+  "Oncology",
+  "Lymphedema",
+  "Hormone Replacement Therapy",
+  "Genetic Counseling",
+  "Benign Breast Disease",
+  "Metastasis",
+  "Chemotherapy"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "summary": "The pancreas is a gland located behind the stomach, crucial for digestion and blood sugar regulation. It produces digestive enzymes and hormones like insulin and glucagon. Its dysfunction can lead to serious conditions like pancreatitis and diabetes.",
+ "aka": [
+  "Pancreatic gland"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The pancreas is a vital organ with both exocrine and endocrine functions. Its exocrine role involves secreting digestive enzymes into the duodenum, while its endocrine role produces hormones like insulin and glucagon to regulate blood glucose.",
+   "b": [
+    "Dual function: exocrine (digestion) and endocrine (hormones).",
+    "Essential for nutrient metabolism and digestion."
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The pancreas is an elongated gland situated retroperitoneally, posterior to the stomach. It is divided into a head, neck, body, and tail. The head is nestled in the C-shaped curve of the duodenum, while the tail extends towards the spleen.",
+   "b": [
+    "Head: lies in the duodenal curve.",
+    "Neck: connects head to body.",
+    "Body: extends across the abdomen.",
+    "Tail: points towards the spleen."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The pancreas has close anatomical relationships with surrounding structures. The head is related to the duodenum and the common bile duct. The body lies anterior to the aorta and superior mesenteric artery, and the tail is near the spleen.",
+   "b": [
+    "Anterior: Stomach, transverse colon.",
+    "Posterior: Aorta, superior mesenteric artery, left adrenal gland, left kidney.",
+    "Medial: Duodenum (C-loop).",
+    "Lateral: Spleen (tail)."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The pancreas receives arterial supply from branches of the celiac trunk and the superior mesenteric artery. Venous drainage follows the arterial supply, with veins draining into the portal vein system.",
+   "b": [
+    "Arterial: Splenic artery (branches: dorsal pancreatic, transverse pancreatic, caudal pancreatic), superior mesenteric artery (branches: anterior superior pancreaticoduodenal, posterior superior pancreaticoduodenal).",
+    "Venous: Splenic vein, superior mesenteric vein, portal vein."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The pancreas is innervated by both sympathetic and parasympathetic fibers from the celiac and superior mesenteric plexuses. This innervation influences enzyme secretion and blood flow.",
+   "b": [
+    "Sympathetic: T5-T12 spinal segments.",
+    "Parasympathetic: Vagus nerve.",
+    "Innervation controls exocrine secretion and vascular tone."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The pancreas has two main functions: exocrine and endocrine. Exocrine function involves producing digestive enzymes (amylase, lipase, proteases) released into the duodenum. Endocrine function involves producing hormones (insulin, glucagon, somatostatin, pancreatic polypeptide) released into the bloodstream.",
+   "b": [
+    "Exocrine: Digestive enzymes (lipase, amylase, proteases) for nutrient breakdown.",
+    "Endocrine: Hormones (insulin, glucagon) for glucose homeostasis.",
+    "Hormones regulate blood sugar levels."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Pancreatic dysfunction can lead to serious health issues. Acute pancreatitis, an inflammatory process, can be caused by gallstones or alcohol. Chronic pancreatitis can lead to malabsorption and diabetes. Pancreatic cancer is often diagnosed late and has a poor prognosis. Hemochromatosis can affect the pancreas, causing diabetes.",
+   "b": [
+    "Acute pancreatitis: Inflammation due to premature enzyme activation.",
+    "Chronic pancreatitis: Progressive inflammation leading to fibrosis and dysfunction.",
+    "Pancreatic cancer: Malignancy often presenting late.",
+    "Diabetes mellitus: Due to impaired insulin production (endocrine failure)."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Clinicians should be aware of key signs and laws related to pancreatic pathology. Courvoisier's law is particularly relevant for differentiating causes of jaundice. Palpation for tenderness or masses is crucial.",
+   "b": [
+    "Courvoisier's Law: Palpable, non-tender gallbladder with jaundice suggests malignancy (e.g., pancreatic head cancer), not gallstones.",
+    "Tenderness in the epigastrium can indicate pancreatitis.",
+    "Jaundice may suggest obstruction of the common bile duct by pancreatic head mass."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe, sudden abdominal pain radiating to the back.",
+  "Persistent vomiting and inability to keep fluids down.",
+  "Jaundice (yellowing of skin and eyes).",
+  "Fever and chills.",
+  "Bloody stools or black, tarry stools."
+ ],
+ "faq": [
+  {
+   "q": "What are the main hormones produced by the pancreas?",
+   "a": "The pancreas produces insulin and glucagon, which are critical for regulating blood sugar levels."
+  },
+  {
+   "q": "What are the most common causes of acute pancreatitis?",
+   "a": "The most common causes are gallstones obstructing the common bile duct and excessive alcohol consumption."
+  },
+  {
+   "q": "How does the pancreas aid digestion?",
+   "a": "It secretes digestive enzymes like amylase, lipase, and proteases into the small intestine to break down carbohydrates, fats, and proteins."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical relations of the pancreas and explain their clinical significance.",
+  "Explain the exocrine and endocrine functions of the pancreas and what happens when these functions fail.",
+  "What is Courvoisier's Law, and how does it relate to pancreatic pathology?"
+ ],
+ "related": [
+  "Acute Pancreatitis",
+  "Chronic Pancreatitis",
+  "Pancreatic Cancer",
+  "Diabetes Mellitus",
+  "Gallstones",
+  "Biliary System",
+  "Duodenum",
+  "Spleen"
+ ],
+ "kind": "anatomy",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

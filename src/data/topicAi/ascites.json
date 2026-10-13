@@ -1,0 +1,184 @@
+{
+ "medical": true,
+ "summary": "Ascites is the abnormal accumulation of fluid in the peritoneal cavity. It is most commonly caused by cirrhosis of the liver and is a key factor in assessing liver disease severity and patient prognosis.",
+ "aka": [
+  "Abdominal dropsy"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Ascites is the pathological accumulation of excess fluid within the peritoneal cavity. Diagnosis is usually made clinically by physical examination, confirmed by imaging or paracentesis. The presence of ascites significantly impacts prognosis, especially in liver disease.",
+   "b": [
+    "Fluid accumulation in the abdomen.",
+    "Often a sign of underlying serious disease."
+   ],
+   "t": [
+    {
+     "a": "Physical Examination (Flank dullness, Shifting dullness, Fluid thrill)",
+     "b": "To detect the presence of free fluid in the peritoneal cavity. Dullness in dependent areas that shifts with position suggests free fluid."
+    },
+    {
+     "a": "Ultrasound of the Abdomen",
+     "b": "To confirm the presence and estimate the volume of ascites. It can also help identify septations or solid components within the fluid, suggesting malignancy."
+    },
+    {
+     "a": "Paracentesis (Diagnostic)",
+     "b": "To analyze the ascitic fluid. This is crucial for determining the cause, especially differentiating between transudative (e.g., cirrhosis) and exudative (e.g., infection, malignancy) ascites."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Ascites is often staged based on its volume and the underlying cause. In cirrhosis, it is a key component of the Child-Pugh score, which stratifies patients into classes A, B, and C, correlating with severity and survival.",
+   "b": [
+    "Child-Pugh score incorporates ascites (and encephalopathy) to grade liver disease severity.",
+    "Presence of ascites in cirrhosis is associated with poorer survival rates."
+   ],
+   "t": [
+    {
+     "a": "Child-Pugh Score",
+     "b": "Assesses liver disease severity. Ascites is graded (0=none, 1=mild, 2=moderate, 3=large). A higher score indicates more severe disease and worse prognosis."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common cause of ascites globally is cirrhosis, particularly due to alcohol or viral hepatitis (B and C). Other causes include malignancy, heart failure, kidney disease, and infections like tuberculosis.",
+   "b": [
+    "Cirrhosis (Alcoholic, Viral Hepatitis B/C, NASH).",
+    "Malignancy (Ovarian, Colorectal, Gastric, Pancreatic, Hepatocellular).",
+    "Heart Failure.",
+    "Nephrotic Syndrome.",
+    "Tuberculosis (Peritoneal TB).",
+    "Pancreatitis.",
+    "Budd-Chiari Syndrome."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with abdominal distension, early satiety, weight gain, and discomfort. In advanced stages, shortness of breath can occur due to diaphragmatic splinting. Signs of underlying disease, like jaundice or edema, may also be present.",
+   "b": [
+    "Progressive abdominal swelling.",
+    "Feeling of fullness and early satiety.",
+    "Shortness of breath.",
+    "Peripheral edema (legs, periorbital)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm ascites, determine its cause, and assess the severity of the underlying condition. This includes laboratory tests, imaging, and analysis of ascitic fluid.",
+   "t": [
+    {
+     "a": "Serum Albumin and Bilirubin",
+     "b": "To assess liver synthetic function and detect jaundice. Low albumin contributes to fluid transudation."
+    },
+    {
+     "a": "Complete Blood Count (CBC)",
+     "b": "To check for anemia (common in chronic liver disease) or signs of infection (leukocytosis)."
+    },
+    {
+     "a": "Renal Function Tests (Urea, Creatinine)",
+     "b": "To assess kidney function, important in fluid balance and management of diuretic therapy."
+    },
+    {
+     "a": "Ascitic Fluid Analysis (Cell count, Protein, Albumin, Cytology, Culture)",
+     "b": "Crucial for diagnosis. Differentiates transudate (low SAAG) from exudate (high SAAG). Identifies infection (neutrophils), malignancy (cytology), and specific organisms (culture)."
+    },
+    {
+     "a": "Serum Ascites Albumin Gradient (SAAG)",
+     "b": "Calculated as Serum Albumin - Ascitic Fluid Albumin. A SAAG >= 1.1 g/dL suggests portal hypertension (e.g., cirrhosis, heart failure). A SAAG < 1.1 g/dL suggests other causes (e.g., malignancy, infection, pancreatitis)."
+    },
+    {
+     "a": "CT Scan or MRI Abdomen",
+     "b": "To visualize liver structure, detect masses, assess for portal vein thrombosis, and identify other causes of ascites like malignancy or peritoneal thickening."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Spontaneous bacterial peritonitis (SBP) is a life-threatening complication. Other serious issues include hepatorenal syndrome, hepatic encephalopathy, and respiratory compromise. Signs of peritonitis or worsening systemic illness require urgent attention.",
+   "b": [
+    "Spontaneous Bacterial Peritonitis (SBP): fever, abdominal pain, worsening encephalopathy.",
+    "Hepatorenal Syndrome: worsening kidney function in liver disease.",
+    "Respiratory distress: due to large ascites or pleural effusion.",
+    "Worsening jaundice or encephalopathy."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management focuses on treating the underlying cause and relieving symptoms. For cirrhotic ascites, sodium restriction and diuretics are first-line. Therapeutic paracentesis may be needed for large-volume ascites. SBP requires prompt antibiotic treatment.",
+   "b": [
+    "Sodium restriction (<2g/day).",
+    "Diuretics (Spironolactone, Furosemide) to reduce fluid volume.",
+    "Therapeutic paracentesis for symptomatic relief of large-volume ascites.",
+    "Antibiotics for Spontaneous Bacterial Peritonitis (SBP).",
+    "Shunting procedures (e.g., TIPS) for refractory ascites."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of weight, abdominal girth, and electrolytes is essential. Prevention strategies target the underlying causes, such as alcohol cessation, antiviral therapy for hepatitis, and management of heart failure or kidney disease.",
+   "b": [
+    "Regular clinical and laboratory monitoring.",
+    "Adherence to dietary and medication regimens.",
+    "Alcohol cessation.",
+    "Vaccination against Hepatitis A and B.",
+    "Management of comorbidities."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Ascites can be mistaken for generalized edema, obesity, or large ovarian cysts. Distinguishing between transudative and exudative ascites is critical for diagnosis.",
+   "b": [
+    "Generalized edema (e.g., from heart failure or nephrotic syndrome).",
+    "Abdominal obesity.",
+    "Ovarian cyst or other large abdominal mass.",
+    "Full bladder."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A low SAAG (<1.1 g/dL) can sometimes be seen in early cirrhosis or portal hypertension. Malignancy can present with a high SAAG if it causes significant portal hypertension. SBP can occur with minimal symptoms.",
+   "b": [
+    "Low SAAG (<1.1) can occur in early cirrhosis.",
+    "High SAAG (>=1.1) can occur with malignancy causing portal hypertension.",
+    "Normal white cell count in early SBP.",
+    "Normal liver function tests in some causes of ascites."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "What is the most common cause of ascites?",
+   "a": "The most common cause is cirrhosis of the liver, usually due to alcohol abuse or viral hepatitis."
+  },
+  {
+   "q": "What is spontaneous bacterial peritonitis (SBP)?",
+   "a": "SBP is a serious infection of the ascitic fluid, often occurring in patients with cirrhosis, and requires prompt antibiotic treatment."
+  },
+  {
+   "q": "How is ascites managed?",
+   "a": "Management involves treating the underlying cause, restricting sodium, using diuretics, and sometimes therapeutic paracentesis or shunting procedures."
+  }
+ ],
+ "exam": [
+  "How would you differentiate between ascites due to cirrhosis and ascites due to malignancy?",
+  "What are the key investigations to perform when ascites is suspected?",
+  "Describe the management of spontaneous bacterial peritonitis."
+ ],
+ "related": [
+  "Cirrhosis",
+  "Portal Hypertension",
+  "Liver Failure",
+  "Spontaneous Bacterial Peritonitis",
+  "Hepatorenal Syndrome",
+  "Hepatic Encephalopathy",
+  "Malignancy",
+  "Tuberculosis"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

@@ -1,0 +1,134 @@
+{
+ "medical": true,
+ "summary": "The breast is a modified sweat gland on the anterior chest wall, composed of glandular, fibrous, and adipose tissues. Its primary function is lactation, but it is also a site for common pathologies like cancer. Understanding its anatomy is crucial for clinical assessment and diagnosis.",
+ "aka": [
+  "Mammary gland"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The breast, or mammary gland, is a superficial organ located on the anterior thoracic wall. While its primary physiological role is milk production (lactation) in females, it is also a common site for various clinical conditions in both sexes. A thorough understanding of its anatomical components and relations is fundamental for accurate clinical examination and interpretation of findings."
+  },
+  {
+   "h": "Location and structure",
+   "p": "The breast typically extends vertically from the 2nd to the 6th ribs and horizontally from the sternum to the midaxillary line. A small extension, the axillary tail of Spence, projects superolaterally towards the axilla. It is composed of glandular tissue, fibrous connective tissue, and adipose tissue, all encased within the superficial fascia.",
+   "b": [
+    "Glandular tissue: Consists of 15-20 lobes, each containing lobules with milk-producing alveoli, which drain into lactiferous ducts and sinuses.",
+    "Fibrous tissue: Includes Cooper's ligaments (suspensory ligaments) that connect the deep fascia to the skin, providing structural support.",
+    "Adipose tissue: Surrounds the glandular elements, contributing significantly to breast size and contour.",
+    "Nipple and Areola: The nipple is a conical projection containing lactiferous duct openings, surrounded by the pigmented areola. Montgomery tubercles, sebaceous glands, are visible on the areola."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The breast lies superficial to the deep fascia covering the pectoralis major muscle. A loose connective tissue layer, the retromammary space, separates the breast from the deep fascia, allowing for some mobility over the chest wall.",
+   "b": [
+    "Deep relations: Primarily the pectoralis major muscle, but also parts of the serratus anterior and external oblique muscles laterally.",
+    "Retromammary space: A potential space that facilitates breast movement and can be a site for implants or abscesses."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The breast receives a rich arterial supply from several sources, reflecting its metabolic demands, especially during lactation. Venous drainage largely follows the arterial supply, with clinical implications for the spread of malignancy.",
+   "b": [
+    "Arterial supply: Medial mammary branches from the internal thoracic artery; lateral thoracic and thoracoacromial arteries (pectoral branch) from the axillary artery; and posterior intercostal arteries.",
+    "Venous drainage: Corresponding veins drain primarily into the axillary vein and internal thoracic vein, with some drainage to intercostal veins."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The breast receives sensory innervation from intercostal nerves, which also carry sympathetic fibers to the smooth muscle and blood vessels within the breast.",
+   "b": [
+    "Sensory innervation: Anterior and lateral cutaneous branches of the 4th-6th intercostal nerves supply sensation to the breast skin and nipple/areola.",
+    "Autonomic innervation: Sympathetic fibers accompany the intercostal nerves to supply blood vessels and smooth muscle in the nipple and areola, involved in nipple erection."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The primary function of the female breast is lactation, the production and secretion of milk to nourish an infant. This process is under complex hormonal control, leading to significant anatomical and physiological changes throughout life.",
+   "b": [
+    "Lactation: Milk production is stimulated by prolactin, and milk ejection (let-down) by oxytocin, in response to suckling.",
+    "Hormonal changes: During puberty, estrogen stimulates breast development (thelarche). During pregnancy, high levels of estrogen and progesterone cause breast enlargement, tenderness, darkening of the areola, and prominent Montgomery tubercles.",
+    "Milk synthesis: The rate of milk synthesis is not related to how full the breast is, allowing for continuous production based on demand."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Understanding breast anatomy is critical for diagnosing and managing a range of conditions, from benign changes to life-threatening malignancies. The lymphatic drainage pathways are particularly important for cancer staging.",
+   "b": [
+    "Breast cancer: The most common cancer in women, often spreading via lymphatic vessels to axillary lymph nodes, necessitating careful examination of these areas.",
+    "Mastitis: Inflammation of breast tissue, commonly occurring during lactation due to bacterial infection, often presenting with pain, redness, and swelling.",
+    "Fibrocystic changes: Benign, common changes in breast tissue, often presenting as lumps, pain, or tenderness, especially premenstrually.",
+    "Gynecomastia: Benign enlargement of male breast tissue, often due to hormonal imbalances.",
+    "Trauma: Direct injury can lead to hematoma, fat necrosis (a firm, irregular mass), or rupture of implants."
+   ],
+   "t": [
+    {
+     "a": "Clinical breast examination",
+     "b": "To detect palpable masses, skin changes, nipple discharge, or lymphadenopathy. Abnormal findings may indicate benign conditions or malignancy, requiring further imaging."
+    },
+    {
+     "a": "Mammography",
+     "b": "To screen for breast cancer and evaluate suspicious lumps, especially in older women. Detects calcifications, masses, and architectural distortion, guiding biopsy if needed. If unavailable, thorough clinical exam and ultrasound are crucial."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "To differentiate solid from cystic masses, especially in younger women or dense breasts. Cystic lesions appear anechoic; solid lesions require further characterization. Also useful for guiding biopsies."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "A systematic and sensitive approach to breast examination is essential for detecting abnormalities. Clinicians must be aware of normal variations and key signs of pathology.",
+   "b": [
+    "Conduct with a chaperone, patient disrobed to the waist, arms relaxed by the sides, ensuring tact and sensitivity.",
+    "Inspect with the patient seated (arms on sides, then raised) and then supine, checking for asymmetry, contour changes (e.g., dimpling), and skin color.",
+    "Check for nipple inversion, which can be a normal variant or a sign of underlying pathology if new onset.",
+    "Palpate for masses using the pads of your middle three fingers with rotatory movements, gently compressing tissue against the chest wall.",
+    "Proceed systematically to examine all quadrants, the axillary tail, and areola, noting size, consistency, mobility, and tenderness of any masses.",
+    "Breast changes like enlargement, tenderness, darkening of the areola, and prominent Montgomery tubercles are common during puberty and pregnancy.",
+    "In Tanner stage 3 of female puberty, the breast and areola enlarge with no separation of contours, indicating normal development."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "New or persistent breast lump",
+  "Nipple discharge (especially bloody or spontaneous)",
+  "Skin changes (redness, dimpling, thickening, 'peau d'orange')",
+  "New onset nipple inversion or retraction",
+  "Persistent breast pain not related to menstrual cycle"
+ ],
+ "faq": [
+  {
+   "q": "What are Cooper's ligaments?",
+   "a": "These are fibrous bands that extend from the deep fascia overlying the pectoralis major muscle through the breast tissue to the skin, providing structural support and maintaining breast shape."
+  },
+  {
+   "q": "Why is lymphatic drainage important in breast cancer?",
+   "a": "Breast cancer commonly metastasizes via lymphatic vessels to regional lymph nodes, primarily the axillary nodes. Understanding these pathways is crucial for staging the cancer and guiding surgical and medical treatment."
+  },
+  {
+   "q": "What are Montgomery tubercles?",
+   "a": "These are sebaceous glands located on the areola that become more prominent during pregnancy and lactation. They secrete an oily substance that lubricates and protects the nipple and areola."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical boundaries and deep relations of the breast, explaining how this knowledge informs surgical approaches and the interpretation of imaging.",
+  "Trace the lymphatic drainage pathways of the breast, detailing their clinical significance in the staging and prognosis of breast malignancy.",
+  "Outline the systematic steps of a clinical breast examination, identifying key findings on inspection and palpation that would warrant further investigation."
+ ],
+ "related": [
+  "Lactation",
+  "Lymphatic system",
+  "Pectoralis major muscle",
+  "Thoracic wall",
+  "Hormonal regulation",
+  "Breast cancer",
+  "Puberty",
+  "Pregnancy"
+ ],
+ "kind": "anatomy",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

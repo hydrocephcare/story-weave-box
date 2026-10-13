@@ -176,8 +176,9 @@ export default function TopicPage() {
     if (page?.summary) return page.summary;
     // a clean definition beats a line lifted from an exam question, so the web summary comes before the site's own snippet
     const own = topic?.sec?.[0]?.b?.[0];
-    return own && own.length >= 60 ? own : "";
-  }, [page, topic]);
+    if (own && own.length >= 60) return own;
+    return media?.extract ?? "";
+  }, [page, topic, media]);
 
   const related = useMemo(() => {
     const seen = new Set<string>(); const out: { s: string; n: string }[] = [];
@@ -219,11 +220,16 @@ export default function TopicPage() {
   }
 
   const aiSections = page?.sections ?? [];
+  // with no written article yet, the introduction found online is the overview, followed by its sections
+  const intro = (!aiSections.length && media?.intro ? media.intro.split(/\n+/).filter(Boolean) : []).map((p, i) => (i === 0 && summary && p.startsWith(summary) ? p.slice(summary.length).trim() : p)).filter(Boolean);
+  const wikiSections = !aiSections.length ? (media?.sections ?? []) : [];
   const manage = aiSections.find((s) => /manage|treat/i.test(s.h));
   const seekAfter = aiSections.length ? Math.max(0, manage ? aiSections.indexOf(manage) : aiSections.length - 1) : -1;
   const hasStudy = Boolean(topic && (topic.sec?.length || topic.src.length || topic.sets.length || topic.imgs.length || topic.qs.length || topic.es.length));
   const toc = [
+    ...(intro.length ? [{ id: "overview", t: "Overview" }] : []),
     ...aiSections.map((s) => ({ id: anchor(s.h), t: s.h })),
+    ...wikiSections.map((w) => ({ id: anchor(w.h), t: w.h })),
     ...(page?.exam?.length ? [{ id: "examiner", t: "Examiner questions" }] : []),
     ...(page?.whenToSeekHelp?.length ? [{ id: "seek-help", t: "When to seek help" }] : []),
     ...(media?.more.length ? [{ id: "web-images", t: "Pictures" }] : []),
@@ -302,7 +308,7 @@ export default function TopicPage() {
 
           <div className="mt-8 space-y-4">
             {writing && <Writing name={name} />}
-            {!writing && !page && phase !== "rejected" && !aiPaused() && !looksLikeBot() && (
+            {!writing && !page && phase !== "rejected" && !aiPaused() && !looksLikeBot() && !intro.length && (
               <div className="rounded-2xl border border-border bg-muted/40 p-6 text-center">
                 <p className="font-serif text-xl font-bold">This page is taking a moment</p>
                 <p className="mt-1 text-[15px] text-muted-foreground">Tap below to load the full write-up on {name}.</p>
@@ -312,6 +318,12 @@ export default function TopicPage() {
           </div>
 
           <div className="mt-6">
+
+            {intro.length > 0 && (
+              <Section id="overview" title="Overview" first>
+                {intro.map((p, i) => <p key={i}>{p}</p>)}
+              </Section>
+            )}
 
             {aiSections.map((s, i) => (
               <div key={`${s.h}-${i}`}>
@@ -330,6 +342,12 @@ export default function TopicPage() {
                   </section>
                 )}
               </div>
+            ))}
+
+            {wikiSections.map((w) => (
+              <Section key={w.h} id={anchor(w.h)} title={w.h}>
+                {w.p.map((p, i) => <p key={i}>{p}</p>)}
+              </Section>
             ))}
 
             {page?.exam && page.exam.length > 0 && (

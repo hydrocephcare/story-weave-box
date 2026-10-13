@@ -1,0 +1,168 @@
+{
+ "medical": true,
+ "summary": "Thrombosis is the formation of a blood clot (thrombus) within a blood vessel, obstructing blood flow. It can occur in arteries or veins, leading to tissue damage or organ dysfunction. Understanding its causes is key to prevention and treatment.",
+ "aka": [
+  "Blood clot formation"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Thrombosis is the pathological process of forming a thrombus, a solid mass of blood constituents, within the vascular system during life. This clot adheres to the vessel wall and obstructs blood flow, leading to ischemia or congestion in the affected tissue. Diagnosis involves identifying the clot's presence and assessing its impact.",
+   "b": [
+    "Arterial thrombosis often involves an acute change in vulnerable atherosclerotic plaque, leading to local occlusion or distal embolization.",
+    "Venous thrombosis, such as deep vein thrombosis (DVT), is a blood clot in a deep vein, commonly in the leg (calf, popliteal, femoral, iliac veins).",
+    "Clinical suspicion is based on symptoms and risk factors, confirmed by imaging."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of thrombosis depends on its location, size, and the degree of vessel occlusion, directly impacting tissue perfusion and organ function. Staging often relates to the extent of vessel involvement and the presence of complications.",
+   "b": [
+    "Deep Vein Thrombosis (DVT) severity is often assessed using clinical probability scores like the Wells score, which helps determine the likelihood of DVT or pulmonary embolism (PE).",
+    "Arterial thrombosis severity is graded by the extent of ischemia; for example, stroke severity is measured by neurological deficits, and myocardial infarction by the extent of heart muscle damage.",
+    "A thrombus can progressively narrow a vessel, extend anterograde, or fragment and embolize distally, leading to more severe consequences."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Thrombosis is fundamentally driven by Virchow's triad: endothelial injury, altered blood flow (stasis or turbulence), and hypercoagulability. Understanding these factors helps identify specific causes.",
+   "b": [
+    "Endothelial injury: Atherosclerosis (common in carotid bifurcation, origin of MCA, basilar artery), trauma, surgery, central lines, vasculitis.",
+    "Altered blood flow: Immobility and bed rest, heart failure, long-haul travel, venous insufficiency, atrial fibrillation.",
+    "Hypercoagulability: Malignancy, pregnancy and the postpartum period, oestrogen therapy (oral contraceptives or HRT), thrombophilia (e.g., Factor V Leiden, antithrombin III deficiency, increased fibrinogen), severe infection, dehydration.",
+    "Strongly associated with hypertension and diabetes, which promote atherosclerosis and endothelial dysfunction.",
+    "Portal vein thrombosis can be a post-hepatic cause of portal hypertension, often linked to liver cirrhosis or local inflammatory conditions."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical presentation varies widely depending on the location and size of the thrombus, and whether it has embolized. Symptoms arise from impaired blood flow to the affected tissue or organ.",
+   "b": [
+    "Deep Vein Thrombosis (DVT): Pain, swelling, warmth, and redness in the affected limb (usually leg). May be asymptomatic.",
+    "Arterial thrombosis (e.g., in brain, heart, limb): Sudden onset of symptoms related to ischemia, such as severe pain, pallor, pulselessness, paresthesia, paralysis (limb); chest pain, shortness of breath (heart); sudden weakness, speech difficulty, vision changes (brain).",
+    "Pulmonary Embolism (PE): Sudden shortness of breath, chest pain (often pleuritic), cough, sometimes hemoptysis. Can be life-threatening.",
+    "Portal vein thrombosis: Abdominal pain, ascites, gastrointestinal bleeding due to portal hypertension."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the presence of a thrombus, determine its extent, identify underlying causes, and assess for complications. The choice of test depends on the suspected location and clinical context.",
+   "t": [
+    {
+     "a": "D-dimer blood test",
+     "b": "Answers: Is there recent fibrin degradation, suggesting clot formation? Meaning: Elevated levels suggest a clot but are non-specific (can be high in infection, trauma, pregnancy). A normal D-dimer can help rule out DVT/PE in low-risk patients. If unavailable, rely on clinical assessment and imaging."
+    },
+    {
+     "a": "Duplex Ultrasound (for DVT)",
+     "b": "Answers: Is there a clot in the deep veins? Meaning: Visualizes the thrombus, assesses blood flow, and compressibility of veins. It is the primary diagnostic tool for DVT. If unavailable, serial clinical exams and D-dimer (if available) are crucial, or consider venography if feasible."
+    },
+    {
+     "a": "CT Angiography (CTA) (for PE, arterial thrombosis)",
+     "b": "Answers: Is there a clot obstructing arterial flow in the lungs or other arteries? Meaning: Provides detailed images of vessels and can identify thrombi. Essential for diagnosing PE and many arterial thromboses. If unavailable, V/Q scan for PE or conventional angiography for arterial clots may be considered, or clinica"
+    },
+    {
+     "a": "Electrocardiogram (ECG) and Cardiac Enzymes (e.g., Troponin)",
+     "b": "Answers: Is there myocardial ischemia or infarction? Meaning: ECG changes (e.g., ST elevation) and elevated troponins indicate cardiac muscle damage, often due to coronary artery thrombosis. If unavailable, clinical assessment of chest pain and risk factors is paramount."
+    },
+    {
+     "a": "Blood tests (FBC, U&E, LFTs, Coagulation Screen, Thrombophilia Screen)",
+     "b": "Answers: What are the patient's baseline parameters, bleeding risk, and potential underlying hypercoagulable states? Meaning: Assesses general health, kidney/liver function (important for drug dosing), bleeding risk, and identifies inherited or acquired thrombophilias (e.g., antithrombin III deficiency, Factor V Leiden"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Thrombosis can lead to severe, life-threatening complications if not promptly recognized and managed. Clinicians must be vigilant for signs of organ damage or embolization.",
+   "b": [
+    "Pulmonary Embolism (PE): A thrombus from a DVT can break off and travel to the lungs, causing acute shortness of breath, chest pain, and potentially cardiovascular collapse.",
+    "Stroke: Arterial thrombosis in the brain (e.g., carotid, middle cerebral artery) or embolization from a cardiac source can lead to permanent neurological deficits or death.",
+    "Myocardial Infarction (MI): Coronary artery thrombosis causes heart muscle damage, leading to heart failure, arrhythmias, or sudden cardiac death.",
+    "Limb ischemia/gangrene: Severe arterial thrombosis can cut off blood supply to a limb, requiring amputation.",
+    "Post-thrombotic syndrome: Chronic pain, swelling, skin changes, and ulceration in a limb after DVT due to venous valve damage.",
+    "Portal hypertension: From portal vein thrombosis, leading to variceal bleeding, ascites, and liver dysfunction."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management aims to prevent clot extension, dissolve existing clots, prevent embolization, and address underlying causes. Treatment strategies differ for arterial and venous thrombosis.",
+   "b": [
+    "Anticoagulation: Used for venous thrombosis (DVT, PE) to prevent clot growth and new clot formation. Initial treatment often involves low molecular weight heparin (LMWH) or unfractionated heparin (UFH), followed by long-term oral anticoagulants like warfarin or direct oral antico",
+    "Antiplatelet agents: Used for arterial thrombosis (e.g., after ACS or stenting) to reduce platelet aggregation and prevent clot formation. Examples include aspirin and clopidogrel (especially when aspirin is not tolerated).",
+    "Thrombolysis (Fibrinolysis): 'Clot-busting' drugs (e.g., alteplase) used in severe, life-threatening cases (e.g., massive PE, acute ischemic stroke) to rapidly dissolve the thrombus.",
+    "Mechanical thrombectomy: Surgical or catheter-based removal of a thrombus, particularly for large arterial clots causing acute limb ischemia or stroke.",
+    "Inferior Vena Cava (IVC) filters: May be considered for patients with DVT/PE who have contraindications to anticoagulation or recurrent PE despite adequate anticoagulation.",
+    "Treating underlying causes: Managing hypertension and diabetes, cessation of hormone therapy if indicated, treating malignancy, or addressing thrombophilia."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long-term follow-up is crucial to monitor treatment effectiveness, manage potential complications, and implement preventive strategies to reduce recurrence risk.",
+   "b": [
+    "Regular monitoring of anticoagulation: For warfarin, frequent INR (International Normalized Ratio) checks are essential to maintain therapeutic levels and prevent bleeding or re-thrombosis.",
+    "Lifestyle modifications: Encouraging regular physical activity, weight management, smoking cessation, and hydration helps reduce overall thrombotic risk.",
+    "Management of chronic conditions: Strict control of hypertension and diabetes is vital to prevent atherosclerotic plaque progression.",
+    "Prophylaxis in high-risk situations: Post-surgery (especially orthopaedic), during prolonged immobility (e.g., long-haul travel), or in hospitalized patients, prophylactic LMWH, compression stockings, and early ambulation are recommended.",
+    "Review of hormone therapy: Counsel on risks of hormone therapy (breast cancer, venous thrombosis, stroke) and review regularly, considering alternatives if high risk."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Thrombosis can mimic other conditions, making accurate diagnosis challenging. Differentiating these is crucial for appropriate management.",
+   "b": [
+    "Cellulitis: Shares symptoms like redness, warmth, and swelling with DVT, but cellulitis typically has a more diffuse erythema and often a clear entry point for infection.",
+    "Muscle strain or rupture: Can cause acute limb pain and swelling similar to DVT, but usually has a clear history of injury and localized tenderness.",
+    "Lymphedema: Causes chronic limb swelling, but typically non-pitting, less painful, and without the acute inflammatory signs of DVT.",
+    "Arterial embolism: While also an acute arterial occlusion, an embolism typically originates from a distant source (e.g., heart in atrial fibrillation) and travels, whereas a thrombus forms in situ."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Diagnostic tests for thrombosis are not always definitive, and results can be misleading, requiring careful clinical correlation.",
+   "b": [
+    "Elevated D-dimer: Can be falsely elevated in many conditions (e.g., infection, trauma, surgery, pregnancy, malignancy) without an active thrombus, leading to unnecessary further investigation.",
+    "Normal D-dimer: While useful for ruling out DVT/PE in low-risk patients, it can be falsely normal in small or older clots, or if the test is performed too early.",
+    "Ultrasound for DVT: Operator-dependent and can miss small calf DVTs or be challenging in obese patients. A negative scan does not always completely exclude DVT, especially if clinical suspicion remains high.",
+    "Clinical probability scores (e.g., Wells score): These are risk stratification tools, not diagnostic tests. A low score does not definitively rule out thrombosis, nor does a high score confirm it without further imaging."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden, severe pain, swelling, or tenderness in a limb, especially if accompanied by warmth or redness.",
+  "Sudden onset of shortness of breath, chest pain (especially if worse with breathing), or coughing up blood.",
+  "Sudden weakness, numbness, difficulty speaking, vision changes, or severe headache.",
+  "Severe, unexplained abdominal pain, particularly if accompanied by vomiting or bloody stools."
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between a thrombus and an embolus?",
+   "a": "A thrombus is a blood clot that forms and remains attached to the wall of a blood vessel or heart chamber. An embolus is a piece of a thrombus (or other material like fat or air) that breaks off, travels through the bloodstream, and lodges in a distant vessel, blocking it."
+  },
+  {
+   "q": "Can thrombosis be prevented?",
+   "a": "Yes, prevention involves managing risk factors such as hypertension and diabetes, maintaining a healthy lifestyle, and using prophylactic anticoagulation or antiplatelet agents in high-risk situations like after surgery or during prolonged immobility."
+  },
+  {
+   "q": "Why is thrombosis dangerous?",
+   "a": "Thrombosis is dangerous because it can block blood flow to vital organs, causing tissue damage (e.g., stroke, heart attack, limb loss) or travel to the lungs (pulmonary embolism), which can be fatal."
+  }
+ ],
+ "exam": [
+  "A 55-year-old patient with a history of hypertension and diabetes presents with sudden onset of left-sided weakness and slurred speech. Discuss the most likely underlying pathology and outline your initial diagnostic and management approach",
+  "Explain the components of Virchow's triad and provide clinical examples for each factor that contributes to the development of deep vein thrombosis (DVT). How would you counsel a patient on DVT prevention during long-haul travel?",
+  "Compare and contrast the indications and mechanisms of action for antiplatelet agents versus anticoagulant medications in the context of thrombotic diseases, providing specific examples of conditions where each is preferred."
+ ],
+ "related": [
+  "Deep Vein Thrombosis (DVT)",
+  "Pulmonary Embolism (PE)",
+  "Atherosclerosis",
+  "Stroke",
+  "Myocardial Infarction (MI)",
+  "Anticoagulants",
+  "Thrombophilia",
+  "Virchow's Triad"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}

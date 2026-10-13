@@ -1,0 +1,120 @@
+{
+ "medical": true,
+ "summary": "The spleen is a lymphoid organ in the upper left abdomen, filtering blood and housing immune cells. It plays a role in fighting infections and removing old red blood cells. Injury can cause severe bleeding, and enlargement can indicate various systemic diseases.",
+ "aka": [
+  "Lien"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The spleen is the largest organ of the lymphatic system, acting as a filter for blood and a site for immune responses. It's crucial for removing old or damaged red blood cells and for fighting certain types of infections.",
+   "b": [
+    "Part of the immune system.",
+    "Filters blood.",
+    "Removes old red blood cells."
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "Located in the left upper quadrant of the abdomen, posterior to the stomach and inferior to the diaphragm. It's a soft, friable, purplish organ, typically about 12 cm long, enclosed in a capsule. Its internal structure includes red pulp (for filtering blood) and white pulp (for immune functions).",
+   "b": [
+    "Left upper quadrant.",
+    "Posterior to stomach.",
+    "Inferior to diaphragm.",
+    "Capsule-enclosed.",
+    "Red and white pulp."
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "The spleen lies close to several key structures. It is related to the tail of the pancreas posteriorly, the fundus of the stomach anteriorly, and the left colic flexure inferiorly. The diaphragm separates it from the left lung and pleura.",
+   "b": [
+    "Posterior: Pancreatic tail.",
+    "Anterior: Gastric fundus.",
+    "Inferior: Left colic flexure.",
+    "Superior: Diaphragm."
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The spleen receives its blood supply from the splenic artery, a branch of the celiac trunk. Blood leaves the spleen via the splenic vein, which joins the superior mesenteric vein to form the portal vein.",
+   "b": [
+    "Splenic artery (from celiac trunk).",
+    "Splenic vein (drains to portal vein)."
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The spleen is innervated by sympathetic and parasympathetic fibers from the celiac plexus. The nerve supply primarily influences blood flow and the contraction of smooth muscle within the splenic capsule and trabeculae.",
+   "b": [
+    "Celiac plexus.",
+    "Sympathetic and parasympathetic fibers.",
+    "Influences blood flow."
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The spleen filters blood, removing old or damaged red blood cells and pathogens. Its white pulp contains lymphocytes and macrophages that mount immune responses against blood-borne infections. It also stores platelets and some red blood cells.",
+   "b": [
+    "Filters blood.",
+    "Removes old/damaged RBCs.",
+    "Immune surveillance.",
+    "Stores platelets."
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Splenic enlargement (splenomegaly) can indicate infections (malaria, HIV, TB), liver disease, blood disorders, or cancers. Traumatic rupture is a surgical emergency due to severe bleeding, potentially leading to hemorrhagic shock. A 'colloid shift' on scans means uptake moves from liver to spleen/marrow.",
+   "b": [
+    "Splenomegaly causes: infection, liver disease, blood disorders.",
+    "Rupture causes shock.",
+    "Colloid shift indicates uptake changes."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "When examining the abdomen, the spleen is usually not palpable. If enlarged, it may be felt as a firm mass descending from the left upper quadrant with inspiration. Its consistency (soft vs. firm) and tenderness can offer diagnostic clues.",
+   "b": [
+    "Normally impalpable.",
+    "Enlarged spleen moves with inspiration.",
+    "Assess consistency and tenderness."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden, severe abdominal pain, especially after trauma.",
+  "Signs of shock (dizziness, rapid heart rate, low blood pressure)."
+ ],
+ "faq": [
+  {
+   "q": "Can a person live without a spleen?",
+   "a": "Yes, people can live without a spleen, but they have an increased risk of certain bacterial infections."
+  },
+  {
+   "q": "What causes a spleen to become enlarged?",
+   "a": "Enlargement can be caused by infections like malaria or HIV, liver disease, blood cancers, or sickle cell disease."
+  },
+  {
+   "q": "What is a 'colloid shift' related to the spleen?",
+   "a": "It refers to a change in how imaging agents are taken up, shifting from the liver to the spleen and bone marrow, often seen in certain conditions."
+  }
+ ],
+ "exam": [
+  "Where is the spleen located and what are its key relations?",
+  "What are the main functions of the spleen?",
+  "What are the immediate dangers of a ruptured spleen?"
+ ],
+ "related": [
+  "Lymphatic System",
+  "Immune System",
+  "Abdominal Anatomy",
+  "Hepatomegaly",
+  "Malaria",
+  "Sickle Cell Disease",
+  "Trauma"
+ ],
+ "kind": "anatomy",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-13",
+ "reviewed": false
+}
