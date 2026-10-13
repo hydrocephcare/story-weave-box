@@ -106,6 +106,7 @@ export async function polishStep(a, ask, state, { budgetMs = 36000 } = {}) {
   const scanned = scanPages(a.original_notes).length >= 2;
   const t0 = Date.now();
   let done = Math.min(state?.parts_done ?? 0, parts.length);
+  let raw = state?.raw ?? 0; // pieces kept as the author wrote them because the polish of that piece did not pass the check
   let acc = done > 0 ? String(state?.content ?? "") : "";
   if (done > 0 && !acc.trim()) done = 0;
   const left = () => 56000 - (Date.now() - t0);
@@ -122,12 +123,15 @@ export async function polishStep(a, ask, state, { budgetMs = 36000 } = {}) {
       out = restorePictures(part, unfence(await ask(REPAIR_PROMPT(a, out, missingSentences(part, out), bad), Math.max(8000, Math.min(26000, left() - 4000)), 6000)));
       bad = soundPolish(part, out, partRules);
     }
-    if (bad) return { content: null, parts_done: parts.length, total: parts.length, finished: true, reason: `polish rejected in part ${done + 1}: ${bad}` };
+    // a piece that did not pass stays as the author wrote it, and the rest of the page is still polished
+    if (bad) { out = part; raw++; }
     acc = acc ? `${acc}\n\n${out}` : out;
     done++;
   }
-  if (done < parts.length) return { content: acc, parts_done: done, total: parts.length, finished: false, reason: "" };
+  if (done < parts.length) return { content: acc, parts_done: done, raw, total: parts.length, finished: false, reason: "" };
+  // if most pieces could not be polished safely there is nothing worth showing
+  if (raw > parts.length * 0.4) return { content: null, parts_done: done, raw, total: parts.length, finished: true, reason: `${raw} of ${parts.length} parts could not be polished safely` };
   const bad = soundPolish(a.content, acc, { ...(kind === "note" ? RULES.note : RULES.questions), ...(scanned ? SCANNED : {}) });
   const finalText = kind === "note" ? acc : withScans(acc, a.original_notes);
-  return bad ? { content: null, parts_done: done, total: parts.length, finished: true, reason: `polish rejected: ${bad}` } : { content: finalText, parts_done: done, total: parts.length, finished: true, reason: "" };
+  return bad ? { content: null, parts_done: done, raw, total: parts.length, finished: true, reason: `polish rejected: ${bad}` } : { content: finalText, parts_done: done, raw, total: parts.length, finished: true, reason: "" };
 }

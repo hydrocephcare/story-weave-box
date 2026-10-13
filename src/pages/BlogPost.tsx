@@ -1631,7 +1631,7 @@ export default function BlogPost() {
             const show = (q: Polish | null) => { if (q) setArticle((cur) => (cur && cur.id === a.id ? applyPolish(cur, q) : cur)); };
             show(p);
             // nothing yet, or a long page part-way: ask the server, and keep asking for the next piece while this page is open
-            const longWaiting = Boolean(p && p.status === "done" && !p.content && /left for later|too long/i.test(p.reason ?? "") && (a.content ?? "").length > 14000);
+            const longWaiting = Boolean(p && p.status === "done" && !p.content && /left for later|too long|rejected in part/i.test(p.reason ?? "") && (a.content ?? "").length > 14000);
             if (!p || p.status === "partial" || longWaiting) {
               const here = window.location.pathname;
               setPolishNote("Making this page cleaner…");

@@ -42,6 +42,31 @@ describe("polishing a long page a few pieces per visit", () => {
     const r1 = await polishStep(article, async () => "## Part\n\nShort.", { parts_done: 0, content: "" }, { budgetMs: 60_000 });
     expect(r1.finished).toBe(true);
     expect(r1.content).toBeNull();
-    expect(r1.reason).toContain("rejected");
+    expect(r1.reason).toContain("could not be polished safely");
+  });
+});
+
+describe("a piece that fails the check", () => {
+  it("stays as the author wrote it and the rest of the page is still polished", async () => {
+    let n = 0;
+    const ask = async (p: string) => { n++; const m = p.match(/PART:\n"""\n([\s\S]*?)\n"""/); const text = m ? m[1] : ""; return n === 2 ? "## Short\n\nx" : text; };
+    let state: { parts_done: number; raw: number; content: string } = { parts_done: 0, raw: 0, content: "" };
+    let r;
+    for (let i = 0; i < 40; i++) {
+      r = await polishStep(article, ask, state, { budgetMs: 0 });
+      state = { parts_done: r.parts_done, raw: r.raw ?? 0, content: r.content ?? "" };
+      if (r.finished) break;
+    }
+    expect(r!.finished).toBe(true);
+    expect(r!.content).toBeTruthy(); // one bad piece of many does not throw the page away
+    expect(r!.content!.replace(/\s+/g, "")).toBe(longNote.replace(/\s+/g, ""));
+    expect(state.raw).toBe(1);
+  });
+
+  it("gives the page up when most pieces fail", async () => {
+    const r = await polishStep(article, async () => "## Short\n\nx", { parts_done: 0, raw: 0, content: "" }, { budgetMs: 100000 });
+    expect(r.finished).toBe(true);
+    expect(r.content).toBeNull();
+    expect(r.reason).toContain("could not be polished safely");
   });
 });

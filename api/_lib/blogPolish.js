@@ -53,13 +53,14 @@ export default async function handler(req, res) {
   const existing = (await sb(`blog_polish?select=status,updated_at,content,title,reason&article_id=eq.${id}`)).json?.[0];
   const ageS = existing ? (now - new Date(existing.updated_at).getTime()) / 1000 : 0;
   const long = a.content.length > 14000;
-  const marker = /^<!--parts:(\d+)-->\n?/;
+  const marker = /^<!--parts:(\d+)(?::(\d+))?-->\n?/;
   const doneParts = Number(existing?.content?.match(marker)?.[1] ?? 0);
+  const rawParts = Number(existing?.content?.match(marker)?.[2] ?? 0);
   const saved = (existing?.content ?? "").replace(marker, "");
   // a long page that is part-way carries on a few seconds after the last piece; a long page marked done before its text could be done starts now;
   // anything else waits (a slow page an hour, a failure twelve hours)
   const carryOn = existing?.status === "partial" && long && ageS > 12;
-  const lateStart = existing?.status === "done" && !existing.content && long && /left for later|too long/i.test(existing.reason ?? "");
+  const lateStart = existing?.status === "done" && !existing.content && long && /left for later|too long|rejected in part/i.test(existing.reason ?? "");
   const retry = (existing?.status === "failed" && ageS > 12 * 3600) || (existing?.status === "partial" && !long && ageS > 3600) || (existing?.status === "working" && ageS > 720);
   if (existing && !(carryOn || lateStart || retry)) return res.status(200).json({ status: existing.status, more: false });
 
@@ -97,9 +98,9 @@ export default async function handler(req, res) {
       row = { title: m.title, description: m.description, image_query: m.image_query, verdict: m.verdict, reason: m.reason || null, model: "ai" };
       if (m.verdict === "irrelevant") { await save({ ...row, status: "done" }); return res.status(200).json({ status: "done", more: false }); }
     }
-    const step = await polishStep(a, ask, { parts_done: doneParts, content: saved }, { budgetMs: existing?.title ? 36000 : 22000 });
+    const step = await polishStep(a, ask, { parts_done: doneParts, raw: rawParts, content: saved }, { budgetMs: existing?.title ? 36000 : 22000 });
     const why = step.reason ? [step.reason].filter(Boolean).join(" | ") : (existing?.reason ?? null);
-    await save({ ...row, content: step.finished ? step.content : `<!--parts:${step.parts_done}-->\n${step.content ?? ""}`, status: step.finished ? "done" : "partial", reason: (why ?? "").slice(0, 400) || null });
+    await save({ ...row, content: step.finished ? step.content : `<!--parts:${step.parts_done}:${step.raw ?? 0}-->\n${step.content ?? ""}`, status: step.finished ? "done" : "partial", reason: (why ?? "").slice(0, 400) || null });
     return res.status(200).json({ status: step.finished ? "done" : "partial", more: !step.finished, progress: `${step.parts_done}/${step.total}` });
   } catch (e) {
     // what is already done stays saved; the page is tried again later
