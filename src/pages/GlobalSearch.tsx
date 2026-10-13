@@ -151,7 +151,7 @@ export default function GlobalSearch() {
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Topic page</p>
             <ul className="mt-2 space-y-1">
               {topicHits.map((t) => (
-                <li key={t.s}><Link to={topicPath(t.s)} className="group flex items-start gap-3 py-2"><BookOpen className="mt-1 h-4 w-4 shrink-0 text-primary" aria-hidden /><span><span className="block font-serif text-xl font-bold group-hover:text-primary">{t.n}: everything in one page</span><span className="text-sm text-muted-foreground">{t.d} pages{t.q ? ` · ${t.q} questions` : ""}{t.i ? ` · ${t.i} images` : ""}</span></span></Link></li>
+                <li key={t.s}><Link to={topicPath(t.s)} className="group flex items-start gap-3 py-2"><BookOpen className="mt-1 h-4 w-4 shrink-0 text-primary" aria-hidden /><span><span className="block font-serif text-xl font-bold group-hover:text-primary">{t.n}: everything in one page</span><span className="text-sm text-muted-foreground">{Math.max(1, t.d)} page{Math.max(1, t.d) === 1 ? "" : "s"}{t.q ? ` · ${t.q} questions` : ""}{t.i ? ` · ${t.i} images` : ""}</span></span></Link></li>
               ))}
             </ul>
           </section>
@@ -165,7 +165,7 @@ export default function GlobalSearch() {
 
         {loading && !hits.length ? (
           <div className="mt-10 space-y-8">{[1, 2].map((g) => <div key={g}><Skeleton className="mb-3 h-7 w-40" /><Skeleton className="mb-2 h-5 w-full" /><Skeleton className="mb-2 h-5 w-5/6" /></div>)}</div>
-        ) : searched && hits.length === 0 ? (
+        ) : searched && hits.length === 0 && topicHits.length > 0 ? null : searched && hits.length === 0 ? (
           <div className="mt-12">
             <p className="font-serif text-2xl font-bold">Nothing found for “{q}”{hasFilters ? " with these filters" : ""}</p>
             <p className="mt-2 text-[16px] text-muted-foreground">Try a broader medical term or a course code{hasFilters ? <>, or <button type="button" onClick={() => { setYear(""); setContentType(""); }} className="font-semibold text-primary hover:underline">clear the filters</button></> : ", or check the spelling"}.</p>
