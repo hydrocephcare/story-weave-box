@@ -1,28 +1,22 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Search, Shuffle, Sparkles, History } from "lucide-react";
-import LoadMoreButton from "@/components/LoadMoreButton";
-import { DOMAIN_STYLE, recentTopics, slugFromName, topicPath, useTopicIndex } from "@/lib/topics";
+import { Search, Shuffle, X } from "lucide-react";
+import { recentTopics, slugFromName, topicPath, useTopicIndex, type TopicIndexItem } from "@/lib/topics";
 import { cn } from "@/lib/utils";
 
-/** /topics: every subject the library covers, one page each. Search, filter by subject, or browse A to Z. */
+const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const POPULAR = ["Hypertension", "Diabetes mellitus", "Pneumonia", "Heart failure", "Tuberculosis", "Malaria", "Asthma", "Anaemia"];
+const letterOf = (n: string) => { const c = n.trim().charAt(0).toUpperCase(); return /[A-Z]/.test(c) ? c : "#"; };
+
+/** /topics: an A to Z directory of every subject, in plain columns like a textbook index. Search, pick a subject, or jump to a letter. */
 export default function TopicsIndex() {
   const items = useTopicIndex();
   const [params, setParams] = useSearchParams();
   const q = params.get("q") ?? "";
   const subject = params.get("subject") ?? "";
-  const [shown, setShown] = useState(48);
   const navigate = useNavigate();
   const recent = useMemo(() => recentTopics(), []);
-  // the same topic for everyone all day, picked from the ones with the most to read
-  const daily = useMemo(() => {
-    const pool = (items ?? []).filter((t) => t.d >= 4).sort((a, b) => a.s.localeCompare(b.s));
-    if (!pool.length) return null;
-    const day = Math.floor(Date.now() / 86_400_000);
-    return pool[(day * 7919) % pool.length];
-  }, [items]);
-  const surprise = () => { const pool = items ?? []; if (pool.length) navigate(topicPath(pool[Math.floor(Math.random() * pool.length)].s)); };
 
   const subjects = useMemo(() => {
     const m = new Map<string, number>();
@@ -30,81 +24,115 @@ export default function TopicsIndex() {
     return [...m.entries()].sort((a, b) => b[1] - a[1]);
   }, [items]);
 
+  const needle = q.trim().toLowerCase();
   const list = useMemo(() => {
-    const needle = q.trim().toLowerCase();
-    return (items ?? [])
-      .filter((t) => (!subject || t.c === subject) && (!needle || t.n.toLowerCase().includes(needle) || t.a.some((a) => a.toLowerCase() === needle)))
-      .sort((a, b) => (needle ? Number(b.n.toLowerCase().startsWith(needle)) - Number(a.n.toLowerCase().startsWith(needle)) : 0) || b.d - a.d);
-  }, [items, q, subject]);
+    const base = (items ?? []).filter((t) => (!subject || t.c === subject) && (!needle || t.n.toLowerCase().includes(needle) || t.a.some((a) => a.toLowerCase() === needle)));
+    return needle
+      ? base.sort((a, b) => Number(b.n.toLowerCase().startsWith(needle)) - Number(a.n.toLowerCase().startsWith(needle)) || b.d - a.d)
+      : base.sort((a, b) => a.n.localeCompare(b.n));
+  }, [items, needle, subject]);
 
-  const set = (k: string, v: string) => { const p = new URLSearchParams(params); if (v) p.set(k, v); else p.delete(k); setParams(p, { replace: true }); setShown(48); };
-  const chip = (on: boolean) => cn("shrink-0 rounded-full border px-3 py-1 text-xs font-bold", on ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/50");
+  const groups = useMemo(() => {
+    const m = new Map<string, TopicIndexItem[]>();
+    for (const t of list) { const l = letterOf(t.n); if (!m.has(l)) m.set(l, []); m.get(l)!.push(t); }
+    return [...m.entries()].sort((a, b) => (a[0] === "#" ? 1 : b[0] === "#" ? -1 : a[0].localeCompare(b[0])));
+  }, [list]);
+  const have = new Set(groups.map(([l]) => l));
+
+  const set = (k: string, v: string) => { const p = new URLSearchParams(params); if (v) p.set(k, v); else p.delete(k); setParams(p, { replace: true }); };
+  const surprise = () => { const pool = items ?? []; if (pool.length) navigate(topicPath(pool[Math.floor(Math.random() * pool.length)].s)); };
+  const popular = useMemo(() => POPULAR.map((n) => (items ?? []).find((t) => t.n.toLowerCase() === n.toLowerCase())).filter(Boolean) as TopicIndexItem[], [items]);
 
   return (
-    <main className="mx-auto max-w-5xl px-5 py-10 sm:py-14">
+    <main className="pb-20">
       <Helmet>
         <title>Medical topics A to Z: diseases, anatomy, physiology and more | Ompath Study</title>
-        <meta name="description" content="One page for every subject in the library: notes, images and practice questions on diseases, anatomy, physiology, pathology, microbiology and pharmacology for medical students." />
+        <meta name="description" content="An A to Z of medical topics: diseases, anatomy, physiology, pathology, microbiology and pharmacology, each with notes, images and practice questions for medical students." />
         <link rel="canonical" href="https://www.ompathstudy.com/topics" />
       </Helmet>
-      <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Ompath Study</p>
-      <h1 className="mt-1 font-serif text-3xl font-bold sm:text-5xl">Every topic, one page</h1>
-      <p className="mt-2 max-w-2xl text-sm text-muted-foreground sm:text-base">Pick a disease, a bone, a hormone or a process. Each page collects the notes, images and practice questions the library has on it, and grows as new notes are added.</p>
 
-      <label className="relative mt-6 block max-w-xl">
-        <span className="sr-only">Search topics</span>
-        <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-        <input value={q} onChange={(e) => set("q", e.target.value)} placeholder="Try humerus, ODD, nephrotic syndrome…" className="w-full rounded-xl border border-border bg-background py-3 pl-10 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40" />
-      </label>
+      <header className="border-b border-border bg-gradient-to-br from-primary/[0.12] via-background to-background">
+        <div className="mx-auto max-w-5xl px-5 pb-10 pt-10 sm:pt-14">
+          <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight sm:text-6xl">Medical topics A to Z</h1>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-foreground/75 sm:text-xl">Look up a disease, a bone, a hormone or a process. Every page explains it first, then shows the notes, pictures and practice questions we have on it.</p>
 
-      {!q && !subject && (daily || recent.length > 0) && (
-        <div className="mt-5 grid gap-3 md:grid-cols-[minmax(0,1fr)_auto]">
-          {daily && (
-            <Link to={topicPath(daily.s)} className="group relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-primary/10 via-card to-card p-4 transition hover:border-primary/50">
-              <span className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-primary"><Sparkles className="h-3.5 w-3.5" aria-hidden /> Topic of the day</span>
-              <span className="mt-1 block font-serif text-xl font-bold leading-snug group-hover:text-primary">{daily.n}</span>
-              <span className="block text-xs text-muted-foreground">{daily.c}{daily.q ? ` · ${daily.q} practice questions` : ""}</span>
-            </Link>
-          )}
-          <button type="button" onClick={surprise} className="inline-flex items-center justify-center gap-2 rounded-2xl border border-border bg-card px-5 py-4 text-sm font-bold hover:border-primary/50"><Shuffle className="h-4 w-4 text-primary" aria-hidden /> Surprise me</button>
-          {recent.length > 0 && (
-            <div className="md:col-span-2"><p className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-muted-foreground"><History className="h-3.5 w-3.5" aria-hidden /> Pick up where you left off</p>
-              <ul className="mt-2 flex flex-wrap gap-2">{recent.map((r) => <li key={r.s}><Link to={topicPath(r.s)} className="inline-flex rounded-full border border-border bg-background px-3 py-1 text-xs font-bold hover:border-primary/50 hover:text-primary">{r.n}</Link></li>)}</ul></div>
+          <label className="relative mt-8 block max-w-2xl">
+            <span className="sr-only">Search topics</span>
+            <Search className="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+            <input value={q} onChange={(e) => set("q", e.target.value)} placeholder="Search a topic, e.g. nephrotic syndrome" className="h-14 w-full rounded-full border border-border bg-background pl-13 pr-12 text-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/40" style={{ paddingLeft: "3.25rem" }} />
+            {q && <button type="button" onClick={() => set("q", "")} aria-label="Clear search" className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full p-1.5 text-muted-foreground hover:bg-muted"><X className="h-4 w-4" /></button>}
+          </label>
+
+          {!q && popular.length > 0 && (
+            <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-sm">
+              <span className="font-semibold text-muted-foreground">Popular:</span>
+              {popular.map((t) => <Link key={t.s} to={topicPath(t.s)} className="rounded-full border border-border bg-background px-3.5 py-1.5 font-semibold hover:border-primary/60 hover:text-primary">{t.n}</Link>)}
+              <button type="button" onClick={surprise} className="ml-1 inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 font-semibold text-primary hover:bg-primary/10"><Shuffle className="h-3.5 w-3.5" aria-hidden /> Surprise me</button>
+            </p>
           )}
         </div>
-      )}
+      </header>
 
-      <div className="mt-4 flex gap-1.5 overflow-x-auto pb-1" role="group" aria-label="Subject">
-        <button type="button" className={chip(!subject)} aria-pressed={!subject} onClick={() => set("subject", "")}>All subjects</button>
-        {subjects.map(([s, n]) => <button key={s} type="button" className={chip(subject === s)} aria-pressed={subject === s} onClick={() => set("subject", subject === s ? "" : s)}>{s} <span className="opacity-70">{n}</span></button>)}
-      </div>
+      <div className="mx-auto max-w-5xl px-5">
+        {!q && recent.length > 0 && (
+          <p className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-2 text-sm"><span className="font-semibold text-muted-foreground">You looked at:</span>{recent.slice(0, 6).map((r) => <Link key={r.s} to={topicPath(r.s)} className="font-semibold text-primary hover:underline">{r.n}</Link>)}</p>
+        )}
 
-      {items === null && <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">{Array.from({ length: 9 }).map((_, i) => <div key={i} className="h-24 animate-pulse rounded-2xl bg-muted" />)}</div>}
-      {items && list.length === 0 && (
-        <div className="mt-8 rounded-2xl border border-dashed border-primary/40 bg-primary/5 p-6 text-center">
-          <p className="font-serif text-lg font-bold">No page on “{q}” yet</p>
-          <p className="mt-1 text-sm text-muted-foreground">If it is a medical topic, we can write the page now. It takes under a minute, and everyone gets it after that.</p>
-          <div className="mt-4 flex flex-wrap justify-center gap-2">
-            {slugFromName(q).length >= 3 && <Link to={topicPath(slugFromName(q))} className="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">Write the page on {q}</Link>}
-            <Link to={`/search?q=${encodeURIComponent(q)}`} className="rounded-lg border border-border px-4 py-2 text-sm font-bold">Search the whole site</Link>
+        <div className="mt-8 flex gap-2 overflow-x-auto pb-1" role="group" aria-label="Subject">
+          {[["", "All subjects"] as const, ...subjects.map(([s]) => [s, s] as const)].map(([val, label]) => (
+            <button key={val || "all"} type="button" aria-pressed={subject === val} onClick={() => set("subject", subject === val ? "" : val)}
+              className={cn("shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition", subject === val ? "bg-foreground text-background" : "bg-muted text-foreground/75 hover:bg-muted/70 hover:text-foreground")}>{label}</button>
+          ))}
+        </div>
+
+        {!needle && (
+          <nav aria-label="Jump to letter" className="mt-6 flex flex-wrap gap-1 border-y border-border py-3">
+            {LETTERS.map((l) => have.has(l)
+              ? <a key={l} href={`#letter-${l}`} className="flex h-9 w-9 items-center justify-center rounded-lg text-base font-bold text-primary hover:bg-primary/10">{l}</a>
+              : <span key={l} className="flex h-9 w-9 items-center justify-center text-base font-semibold text-muted-foreground/40" aria-hidden>{l}</span>)}
+          </nav>
+        )}
+
+        {items === null && <div className="mt-8 space-y-3">{Array.from({ length: 8 }).map((_, i) => <div key={i} className="h-6 w-2/3 animate-pulse rounded bg-muted" />)}</div>}
+
+        {items && list.length === 0 && (
+          <div className="mt-10 max-w-xl">
+            <p className="font-serif text-2xl font-bold">No page on “{q}” yet</p>
+            <p className="mt-2 text-base text-muted-foreground">If it is a medical topic, we can write the page now. It takes under a minute, and everyone gets it after that.</p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              {slugFromName(q).length >= 3 && <Link to={topicPath(slugFromName(q))} className="rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground">Write the page on {q}</Link>}
+              <Link to={`/search?q=${encodeURIComponent(q)}`} className="rounded-full border border-border px-6 py-3 text-base font-bold hover:border-primary/60">Search the whole site</Link>
+            </div>
           </div>
-        </div>
-      )}
-      <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {list.slice(0, shown).map((t) => {
-          const st = DOMAIN_STYLE[t.c] ?? DOMAIN_STYLE.Medicine;
-          return (
-            <li key={t.s}><Link to={topicPath(t.s)} className="group relative block h-full overflow-hidden rounded-2xl border border-border bg-card p-4 transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md">
-              <span className={cn("absolute inset-x-0 top-0 h-1 bg-gradient-to-r", st.hue)} aria-hidden />
-              <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">{t.c}</span>
-              <span className="mt-0.5 block font-serif text-lg font-bold leading-snug group-hover:text-primary">{t.n}</span>
-              {t.a.length > 0 && <span className="mt-0.5 block text-xs text-muted-foreground">{t.a.join(" · ")}</span>}
-              <span className="mt-2 block text-xs text-muted-foreground">{t.d} {t.d === 1 ? "page" : "pages"}{t.q ? ` · ${t.q} questions` : ""}{t.i ? ` · ${t.i} images` : ""}</span>
-            </Link></li>
-          );
-        })}
-      </ul>
-      {list.length > shown && <LoadMoreButton onMore={() => setShown((n) => n + 48)} className="mx-auto mt-6 flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-bold hover:border-primary/50">Show {Math.min(48, list.length - shown)} more topics</LoadMoreButton>}
+        )}
+
+        {needle && list.length > 0 && (
+          <ul className="mt-6 divide-y divide-border border-y border-border">
+            {list.slice(0, 80).map((t) => (
+              <li key={t.s}><Link to={topicPath(t.s)} className="group flex items-baseline justify-between gap-4 py-3.5">
+                <span className="min-w-0"><span className="text-lg font-semibold text-foreground group-hover:text-primary">{t.n}</span>{t.a.length > 0 && <span className="ml-2 text-sm text-muted-foreground">{t.a.join(", ")}</span>}</span>
+                <span className="shrink-0 text-sm text-muted-foreground">{t.c}</span>
+              </Link></li>
+            ))}
+          </ul>
+        )}
+
+        {!needle && groups.map(([letter, ts]) => (
+          <section key={letter} id={`letter-${letter}`} className="mt-12 scroll-mt-24">
+            <h2 className="flex items-center gap-4 font-serif text-4xl font-bold text-primary"><span>{letter}</span><span className="h-px flex-1 bg-border" aria-hidden /></h2>
+            <ul className="mt-4 columns-1 gap-x-10 sm:columns-2 lg:columns-3">
+              {ts.map((t) => (
+                <li key={t.s} className="break-inside-avoid">
+                  <Link to={topicPath(t.s)} className="group block py-1.5 text-[17px] leading-snug text-foreground/90 hover:text-primary">
+                    <span className="font-medium underline-offset-4 group-hover:underline">{t.n}</span>
+                    {!subject && <span className="ml-2 text-xs text-muted-foreground">{t.c}</span>}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
     </main>
   );
 }

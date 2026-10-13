@@ -1760,5 +1760,65 @@
     "description": "Acute rheumatic fever: the 2015 Jones criteria, investigations, treatment, long-term penicillin prophylaxis, complications and practice questions.",
     "updated": "2026-10-12",
     "file": "src/content/notes/cardio-rheumatic-fever-and-jones-criteria.md"
+  },
+  {
+    "slug": "diabetic-ketoacidosis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Endocrinology",
+    "title": "Diabetic ketoacidosis and hyperglycaemic emergencies",
+    "description": "Diabetic ketoacidosis and HHS: diagnostic criteria, triggers, investigations with the question each answers, fluids, insulin and potassium management, complications and practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/endocrine-diabetic-ketoacidosis.md"
+  },
+  {
+    "slug": "sepsis-and-septic-shock",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Infectious disease",
+    "title": "Sepsis and septic shock",
+    "description": "Sepsis and septic shock: Sepsis-3 definitions, finding the source, investigations, the first-hour Sepsis Six, antibiotic reasoning, source control and practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/infectious-sepsis-and-septic-shock.md"
+  },
+  {
+    "slug": "hypertension",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Cardiovascular",
+    "title": "Hypertension",
+    "description": "Hypertension: confirming the diagnosis, grades and emergencies, secondary causes and the tests for them, organ damage, drug classes and how to combine them, pregnancy and practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/cardio-hypertension.md"
+  },
+  {
+    "slug": "approach-to-anaemia",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Haematology",
+    "title": "Approach to anaemia",
+    "description": "Approach to anaemia: classification by MCV and reticulocytes, investigations with their questions, local causes, iron, B12 and folate treatment, transfusion and practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/haem-approach-to-anaemia.md"
+  },
+  {
+    "slug": "upper-gi-bleeding",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Gastroenterology and hepatology",
+    "title": "Upper gastrointestinal bleeding",
+    "description": "Upper GI bleeding: resuscitation, risk scoring, ulcer and variceal causes, investigations, endoscopy, management by cause and practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/gastro-upper-gi-bleeding.md"
+  },
+  {
+    "slug": "nephrotic-and-nephritic-syndromes",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Renal",
+    "title": "Nephrotic and nephritic syndromes",
+    "description": "Nephrotic versus nephritic syndrome: how to tell them apart, causes including local ones, investigations, treatment and complications, with practice questions.",
+    "updated": "2026-10-13",
+    "file": "src/content/notes/renal-nephrotic-and-nephritic-syndromes.md"
   }
 ]
