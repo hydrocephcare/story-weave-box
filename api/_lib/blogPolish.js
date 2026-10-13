@@ -43,7 +43,7 @@ export default async function handler(req, res) {
   // only public, published Year 1 to 3 blogs
   const got = await sb(`articles?select=id,title,category,content,published,deleted_at,password_protected&id=eq.${id}`);
   const a = got.json?.[0];
-  if (!a || !a.published || a.deleted_at || a.password_protected || ![1, 2, 3].includes(yearOf(a.category))) return res.status(404).json({ status: "invalid" });
+  if (!a || !a.published || a.deleted_at || a.password_protected || ![1, 2, 3, 4, 5, 6].includes(yearOf(a.category))) return res.status(404).json({ status: "invalid" });
 
   // already done or being done: nothing to do
   const existing = (await sb(`blog_polish?select=status,updated_at&article_id=eq.${id}`)).json?.[0];

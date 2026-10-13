@@ -33,7 +33,7 @@ const store = (id: string, v: Polish | null) => {
 };
 
 export const wantsPolish = (a: { category?: string | null; password_protected?: boolean | null }) =>
-  /^Year\s*[123]\b/i.test(a.category ?? "") && !a.password_protected;
+  /^Year\s*[1-6]\b/i.test(a.category ?? "") && !a.password_protected;
 
 /** The saved polished copy, or null when there is none yet. `fresh` skips what this device remembers. */
 export async function getPolish(id: string, fresh = false): Promise<Polish | null> {

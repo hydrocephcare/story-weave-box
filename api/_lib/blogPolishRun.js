@@ -1,9 +1,16 @@
 // The polish itself, shared by the page-open endpoint (api/_lib/blogPolish.js) and the batch job (scripts/blogs/polish-batch.mjs).
 // `ask(prompt, timeoutMs, maxTokens)` returns the model's text. Nothing here talks to the database.
-import { BANK_PROMPT, CHUNK_PROMPT, META_PROMPT, NOTE_PROMPT, PAPER_PROMPT } from "./blogPolishPrompts.js";
-import { chunksOf, cleanMeta, kindOf, parseJson, plain, restorePictures, soundPolish, VERDICTS } from "./blogPolishCore.js";
+import { CHUNK_PROMPT, META_PROMPT, NOTE_PROMPT, QUESTIONS_PROMPT, REPAIR_PROMPT } from "./blogPolishPrompts.js";
+import { chunksOf, cleanMeta, kindOf, missingSentences, hasLocked, parseJson, plain, restorePictures, soundPolish, VERDICTS } from "./blogPolishCore.js";
 
 const unfence = (s) => String(s ?? "").replace(/^```(?:markdown|md)?\s*/i, "").replace(/```\s*$/, "").trim();
+
+// The polish may never strip more than about a fifth of what the author wrote. A note gains an intro and practice questions, so only its floor is lower.
+const RULES = {
+  note: { headings: true, maxRatio: 2.0, minWords: 0.8, minRatio: 0.7 },
+  questions: { headings: false, maxRatio: 1.5, minWords: 0.8, minRatio: 0.8 },
+  part: { headings: false, maxRatio: 1.6, minWords: 0.8, minRatio: 0.75 },
+};
 
 /**
  * Returns { title, description, verdict, reason, content, status }.
@@ -20,32 +27,40 @@ export async function polishArticle(a, ask, { chunk = false } = {}) {
   const text = a.content;
   const kind = kindOf(text);
   if (verdict === "irrelevant") { note("text left as it was"); return result; }
+  if (hasLocked(text)) { note("has locked sections: text left as it was"); return result; }
   if (kind === "scan") { note("scanned pages: shown as pictures"); return result; }
-  if (kind === "formatted") { note("question format already fine"); return result; }
+  if (kind === "formatted") { note("question layout already fine"); return result; }
 
   const long = text.length > 14000;
   if (long && !chunk) { note("too long to polish on open; the batch job does it"); return result; }
-  const prompts = { note: NOTE_PROMPT, bank: BANK_PROMPT, paper: PAPER_PROMPT };
+  const make = (part, first) => (kind === "note" ? (long ? CHUNK_PROMPT(a, part, first) : NOTE_PROMPT(a, part)) : QUESTIONS_PROMPT(a, part));
+
+  // one piece: ask, check it keeps at least 80% of what the author wrote, and if not ask once more naming what was left out
+  const once = async (part, rules, first) => {
+    let out = restorePictures(part, unfence(await ask(make(part, first), long ? 55000 : 40000, 8000)));
+    let bad = soundPolish(part, out, rules);
+    if (bad && /^(words|numbers|length)/.test(bad)) {
+      out = restorePictures(part, unfence(await ask(REPAIR_PROMPT(a, out, missingSentences(part, out), bad), long ? 55000 : 40000, 8000)));
+      bad = soundPolish(part, out, rules);
+    }
+    return { out, bad };
+  };
 
   try {
-    let out;
+    let out, bad;
     if (!long) {
-      out = unfence(await ask(prompts[kind](a, text), 40000, 8000));
+      ({ out, bad } = await once(text, kind === "note" ? RULES.note : RULES.questions, true));
     } else {
       const parts = chunksOf(text, 8500);
       const done = [];
       for (let i = 0; i < parts.length; i++) {
-        const p = kind === "note" ? CHUNK_PROMPT(a, parts[i], i === 0) : prompts[kind](a, parts[i]);
-        const piece = unfence(await ask(p, 55000, 8000));
-        const bad = soundPolish(parts[i], piece, { headings: false, maxRatio: 1.6 });
-        if (bad) { note(`polish rejected in part ${i + 1}: ${bad}`); return result; }
-        done.push(piece);
+        const r = await once(parts[i], RULES.part, i === 0);
+        if (r.bad) { note(`polish rejected in part ${i + 1}: ${r.bad}`); return result; }
+        done.push(r.out);
       }
       out = done.join("\n\n");
+      bad = soundPolish(text, out, kind === "note" ? RULES.note : RULES.questions);
     }
-    // a note gains an intro and practice questions, so it may be longer; banks and papers only change shape
-    out = restorePictures(text, out);
-    const bad = soundPolish(text, out, { headings: kind === "note", maxRatio: kind === "note" ? 2.0 : 1.4, minWords: kind === "note" ? 0.68 : 0.8 });
     if (bad) { note(`polish rejected: ${bad}`); result.rejected = out; } else result.content = out;
   } catch (e) {
     result.status = "partial";

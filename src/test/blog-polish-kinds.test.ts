@@ -8,14 +8,16 @@ const essays = Array.from({ length: 4 }, (_, i) => `Question ${i + 1}\nDiscuss t
 describe("kind of page", () => {
   it("sends each kind of page to the right polish", () => {
     expect(kindOf("# Biochemistry EOY 2015 — Visual Scan Archive\n\nnoise")).toBe("scan");
-    expect(kindOf(mcq(8, false))).toBe("bank");
+    expect(kindOf(mcq(8, false))).toBe("questions");
     expect(kindOf(mcq(8, true).replace(/Question (\d+)/g, "### Question $1"))).toBe("formatted");
-    expect(kindOf(essays)).toBe("paper");
+    expect(kindOf(essays)).toBe("questions");
     expect(kindOf("## Heart\n\nA note about the heart and its valves. ".repeat(10))).toBe("note");
   });
   it("sees an essay paper that is not yet one question per heading", () => {
     expect(needsPaperFormat(essays)).toBe(true);
-    expect(needsPaperFormat(essays.replace(/Question (\d+)/g, "### Question $1"))).toBe(false);
+    // already in the site's layout: "**1. question**" then "**Model answer:** ..." (the page tells it apart by those bold numbered lines)
+    const standard = Array.from({ length: 4 }, (_, i) => `Question ${i + 1}\n**${i + 1}. Discuss the topic number ${i + 1} in full.**\n**Model answer:** points`).join("\n\n");
+    expect(needsPaperFormat(standard)).toBe(false);
   });
 });
 

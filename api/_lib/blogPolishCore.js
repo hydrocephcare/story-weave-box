@@ -33,7 +33,7 @@ export function needsMcqFormat(content) {
 }
 
 /** The polished text must still say what the original said: numbers and long words kept, pictures kept, a sensible length, real headings. */
-export function soundPolish(original, out, { headings = true, maxRatio = 1.4, minWords = 0.8 } = {}) {
+export function soundPolish(original, out, { headings = true, maxRatio = 1.4, minWords = 0.8, minRatio = 0.8 } = {}) {
   const nums = [...new Set((plain(original).match(/\d+(?:[.,]\d+)?/g) ?? []).filter((n) => n.length >= 2))];
   const keptNums = nums.filter((n) => out.includes(n)).length;
   if (nums.length >= 5 && keptNums / nums.length < 0.9) return `numbers lost (${keptNums}/${nums.length})`;
@@ -42,7 +42,7 @@ export function soundPolish(original, out, { headings = true, maxRatio = 1.4, mi
   const kept = words.filter((w) => o.includes(w)).length;
   if (words.length >= 20 && kept / words.length < minWords) return `words lost (${kept}/${words.length})`;
   const ratio = plain(out).length / Math.max(1, plain(original).length);
-  if (ratio < 0.6 || ratio > maxRatio) return `length changed (${ratio.toFixed(2)})`;
+  if (ratio < minRatio || ratio > maxRatio) return `length changed (${ratio.toFixed(2)})`;
   if (headings && (out.match(/^##\s/gm) ?? []).length < 2) return "no headings";
   const pics = picturesIn(original);
   if (pics && picturesIn(out) < pics) return "pictures lost";
@@ -65,23 +65,26 @@ export function parseJson(text) {
 
 export const VERDICTS = ["keep", "review", "irrelevant"];
 
-/** A written-question paper (essays, short answers) that is not yet laid out one question per heading. */
+/** Written questions (essay, short answer, spot) not yet in the site's layout: "**1. question**" then "**Model answer:** ...". */
 export function needsPaperFormat(content) {
   const c = String(content ?? "");
-  const qs = (c.match(/^(?:#{1,4}\s*)?\**Question\s*\d+/gim) ?? []).length;
+  const qs = (c.match(/^(?:#{1,4}\s*)?\**(?:Question|Q)\s*\d+/gim) ?? []).length;
   if (qs < 3) return false;
   const options = (c.match(/^\s*[-*]?\s*\(?[A-E][.)]\s+\S/gm) ?? []).length;
   if (options >= qs * 2) return false; // a multiple-choice bank
-  const headed = (c.match(/^###\s+Question\s*\d+/gim) ?? []).length;
-  return headed < qs * 0.8;
+  const standard = (c.match(/^\*\*\d+\.\s+.+\*\*\s*$/gm) ?? []).length;
+  return standard < qs * 0.8;
 }
 
-/** What kind of page this is, which decides how it is polished: scan | bank | paper | note. */
+/** What kind of page this is, which decides how it is polished: scan | questions | formatted | note.
+ *  "questions" is any page of MCQs, essays, short answers or spot questions that is not yet in the site's layout. */
 export function kindOf(content) {
   if (isScanOnly(content)) return "scan";
-  if (isBank(content)) return needsMcqFormat(content) ? "bank" : needsPaperFormat(content) ? "paper" : "formatted";
-  // a short written paper (three or four questions) is not a bank, but it is not a note either: few sections, mostly questions
-  if (needsPaperFormat(content) && (String(content).match(/^##s/gm) ?? []).length < 3) return "paper";
+  const c = String(content ?? "");
+  const qs = (c.match(/^(?:#{1,4}\s*)?\**(?:Question|Q)\s*\d+/gim) ?? []).length;
+  const sections = (c.match(/^##\s/gm) ?? []).length;
+  const questionPage = isBank(c) || (qs >= 3 && sections < 3);
+  if (questionPage) return needsMcqFormat(c) || needsPaperFormat(c) ? "questions" : "formatted";
   return "note";
 }
 
@@ -118,3 +121,29 @@ export function restorePictures(original, out) {
   }
   return text;
 }
+
+/** The long words and numbers of the original that the polished text left out (for asking the AI to put them back). */
+export function missingFrom(original, out) {
+  const o = out.toLowerCase();
+  const words = [...new Set(plain(original).toLowerCase().match(/[a-z]{7,}/g) ?? [])].filter((w) => !o.includes(w));
+  const nums = [...new Set((plain(original).match(/\d+(?:[.,]\d+)?/g) ?? []).filter((n) => n.length >= 2))].filter((n) => !out.includes(n));
+  return [...nums, ...words];
+}
+
+/** Sentences or lines of the original that the polished text does not carry: most of their longer words are absent, or a number they hold is. */
+export function missingSentences(original, out, limit = 40) {
+  const o = out.toLowerCase();
+  const lines = String(original ?? "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").split(/\n+|(?<=[.!?])\s+/).map((l) => l.trim()).filter((l) => l.length > 12);
+  const missing = [];
+  for (const l of lines) {
+    const ws = [...new Set(l.toLowerCase().match(/[a-z]{6,}/g) ?? [])];
+    const nums = (l.match(/\d{2,}/g) ?? []).filter((n) => !out.includes(n));
+    const wordsGone = ws.length >= 2 && ws.filter((w) => o.includes(w)).length / ws.length < 0.6;
+    if (wordsGone || nums.length) missing.push(l.slice(0, 300));
+    if (missing.length >= limit) break;
+  }
+  return missing;
+}
+
+/** Pages with the site's pay-gate markers must never be rewritten. */
+export const hasLocked = (content) => /\[locked\b/i.test(String(content ?? ""));

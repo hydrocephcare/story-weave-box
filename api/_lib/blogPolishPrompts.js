@@ -65,10 +65,13 @@ PART:
 ${content}
 """`;
 
-export const BANK_PROMPT = (a, content) => `You are formatting a medical multiple-choice question bank for a study website, in the house style of the Year 4 papers. Change ONLY the format, never a question, an option or an answer.
+/** Every page of questions, whatever mix it has (multiple-choice only, essays only, both, or spot questions with pictures). */
+export const QUESTIONS_PROMPT = (a, content) => `You are formatting a page of exam questions for a medical study website, in the house style. Change ONLY the format: never a question, an option, an answer, a mark or a number. ${COMMON}
 Title: "${a.title}" (${a.category}).
 
-Format every multiple-choice question exactly like this:
+The page may have multiple-choice questions, written questions (essay, short answer, spot questions with pictures), or both. Lay it out like this.
+
+MULTIPLE-CHOICE questions go first, under the heading "## Multiple-choice questions", each exactly:
 
 ### Question 1
 Question text
@@ -81,27 +84,33 @@ D. option
 Answer: B. the correct option text
 Explanation: one or two sentences (only if the original had one)
 
-Rules:
-1. Keep every question, option, answer and explanation word for word. Do not add questions, answers or explanations that are not there. If the original has no answer for a question, write "Answer: not given" and leave it.
-2. Keep section headings, instructions and picture lines (lines starting with ![ ), each picture under the question it belongs to.
-3. Remove only stray symbols and page markers.
-4. Output ONLY the finished markdown, no commentary, no code fences.
+WRITTEN questions go after them, under the heading "## Written questions" (use "## Questions" when the page has no multiple-choice at all), each exactly:
 
-BANK:
+**1. The question text, with its marks if given (a, b, c parts stay on the same line or as a list under it)**
+![a picture, if the question has one](the original picture line)
+**Model answer:** the original answer or marking scheme, as bullet points, word for word
+
+Rules:
+1. Every question, option, answer, explanation, mark and picture of the original must be in your output, word for word, in the original order within each group. Do not shorten anything.
+2. Never make an answer up. If a multiple-choice question has no answer, write "Answer: not given". If a written question has no answer, write only its bold question line and nothing after it.
+3. Keep other headings, section titles and instructions where they are: a section heading and its instructions stay directly above that section's own questions, and a page holding two papers keeps them apart. Number the questions of each section from 1. Each picture stays directly under the question it belongs to.
+4. Remove only stray symbols, page markers and chat leftovers. Output ONLY the finished markdown, no commentary, no code fences.
+
+PAGE:
 """
 ${content}
 """`;
 
-export const PAPER_PROMPT = (a, content) => `You are formatting a past paper with written (essay and short-answer) questions for a study website, in the house style of the Year 4 papers. Change ONLY the format.
+/** The first attempt dropped content: give back your own version and the exact sentences that are missing from it. */
+export const REPAIR_PROMPT = (a, previous, missing, why) => `Your version of this medical page was rejected (${why}) because it left out parts of the original. Below is your version and the sentences of the original that are missing from it. Put every missing sentence back in the right section, word for word, and keep everything else as it is. Never shorten, summarise or paraphrase anything.
 Title: "${a.title}" (${a.category}).
 
-Rules:
-1. Each question becomes "### Question N" (with its marks in brackets if given), then the question text. Sub-parts (a, b, c) stay as a list.
-2. If the original has an answer or marking scheme for a question, put it under a line "**Model answer**" as bullet points, word for word. If it has none, write nothing: do not make an answer up.
-3. Keep section headings ("## Section A" and so on), instructions, and picture lines (lines starting with ![ ) exactly.
-4. Remove only stray symbols and page markers. Output ONLY the finished markdown, no commentary, no code fences.
+MISSING SENTENCES:
+${missing.map((m, i) => `${i + 1}. ${m}`).join("\n")}
 
-PAPER:
+YOUR VERSION:
 """
-${content}
-"""`;
+${previous}
+"""
+
+Output ONLY the full finished markdown, no commentary, no code fences.`;

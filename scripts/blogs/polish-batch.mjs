@@ -39,9 +39,9 @@ const eligible = (a) => {
   if (!s) return true;
   return (s.status === "failed" && hours(s) > 12) || (s.status === "partial" && hours(s) > 1) || (s.status === "working" && hours(s) > 0.5);
 };
-// Year 2 and Year 1 first, then Year 3
-const order = (a) => [0, 2, 1, 3].indexOf(yearOf(a.category));
-const queue = rows.filter((a) => (ONLY ? yearOf(a.category) === ONLY : [1, 2, 3].includes(yearOf(a.category))) && eligible(a)).sort((a, b) => order(a) - order(b));
+// Year 2 and Year 1 first, then Year 3 and the rest
+const order = (a) => [0, 2, 1, 3, 4, 5, 6].indexOf(yearOf(a.category));
+const queue = rows.filter((a) => (ONLY ? yearOf(a.category) === ONLY : [1, 2, 3, 4, 5, 6].includes(yearOf(a.category))) && eligible(a)).sort((a, b) => order(a) - order(b));
 console.log(`${queue.length} blogs still to polish; doing up to ${COUNT} (about ${MINUTES} minutes).`);
 
 const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env: { GROQ_API_KEYS: groq, GEMINI_API_KEYS: gem }, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
