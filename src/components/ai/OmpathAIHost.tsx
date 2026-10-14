@@ -92,6 +92,9 @@ function SourceRow({ h, onOpen, canMark, onLocked }: { h: SiteHit; onOpen: (h: S
   );
 }
 
+// set once the assistant has been closed since this page was loaded (a refresh resets it, which starts a fresh chat)
+let closedThisVisit = false;
+
 export default function OmpathAIHost() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -150,10 +153,11 @@ export default function OmpathAIHost() {
   const liveHits = useMemo(() => live.hits.filter((h) => h.group !== "Pages").slice(0, 4), [live.hits]);
 
   const askRef = useRef<(q: string) => Promise<void>>(async () => undefined);
+  useEffect(() => { if (!open) return () => undefined; return () => { closedThisVisit = true; }; }, [open]);
   const mount = useCallback((question?: string) => {
     setOpen(true); setView("chat");
-    // a new chat every time it is opened; the earlier ones stay in the history
-    { const cur = aiStore.get().sessions.find((x) => x.id === aiStore.get().activeId); if (!cur || cur.turns.length) aiStore.newSession(); }
+    // reopening it (closed and opened again without a refresh, no new question) goes back to the chat in progress; otherwise a new chat starts, and the earlier ones stay in the history
+    { const cur = aiStore.get().sessions.find((x) => x.id === aiStore.get().activeId); const keep = !question?.trim() && closedThisVisit && cur?.turns.length; if (!keep && (!cur || cur.turns.length)) aiStore.newSession(); }
     if (question && question.trim().length >= 2) window.setTimeout(() => void askRef.current(question), 60);
     else window.setTimeout(() => inputRef.current?.focus(), 150);
     // eslint-disable-next-line react-hooks/exhaustive-deps

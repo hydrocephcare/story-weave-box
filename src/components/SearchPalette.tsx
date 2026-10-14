@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, BookOpen, CalendarDays, ClipboardList, CornerDownLeft, File, FileText, FolderOpen, GraduationCap, Layers, Loader2, Newspaper, Presentation, Search, Film, Image as ImageIcon, X } from "lucide-react";
+import { ArrowRight, BookOpen, Minus, CalendarDays, ClipboardList, CornerDownLeft, File, FileText, FolderOpen, GraduationCap, Layers, Loader2, Newspaper, Presentation, Search, Film, Image as ImageIcon, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { useSiteSearch } from "@/hooks/useSiteSearch";
 import { groupSiteHits, type SiteHit } from "@/lib/siteSearch";
@@ -9,6 +9,7 @@ import Highlight from "@/components/Highlight";
 import { HitIcon } from "@/components/HitIcon";
 import { OPEN_SEARCH_EVENT } from "@/lib/searchEvents";
 import { openAI } from "@/lib/aiEvents";
+import { topicPath, useTopicIndex } from "@/lib/topics";
 import { useMyYear } from "@/hooks/useMyYear";
 import { parseQuery } from "@/lib/ompathAiQuery";
 import OmpathMark from "@/components/ai/OmpathMark";
@@ -33,6 +34,8 @@ export default function SearchPalette() {
   const [q, setQ] = useState("");
   const [active, setActive] = useState(0);
   const [recent, setRecent] = useState<string[]>([]);
+  const [mini, setMini] = useState(false); // shrunk to a small pill so the page can be read while the search waits
+  const topicIndex = useTopicIndex();
   const listRef = useRef<HTMLDivElement>(null);
   const { year: myYear } = useMyYear();
   const { hits, loading, searched } = useSiteSearch(q, { prefer: myYear }, open);
@@ -57,15 +60,21 @@ export default function SearchPalette() {
     return () => { clearTimeout(t); ctl.abort(); };
   }, [q, open, searched, loading, hasPass]);
 
+  const topicHits = useMemo(() => {
+    const needle = q.trim().toLowerCase();
+    if (needle.length < 3 || !topicIndex) return [];
+    return topicIndex.filter((t) => t.n.toLowerCase() === needle || t.a.some((a) => a.toLowerCase() === needle) || t.n.toLowerCase().startsWith(needle)).sort((a, b) => Number(b.ai) - Number(a.ai) || b.d - a.d).slice(0, 2);
+  }, [q, topicIndex]);
+
   const shown = useMemo(() => hits.slice(0, 24), [hits]);
   const groups = useMemo(() => groupSiteHits(shown), [shown]);
   const flat = useMemo(() => groups.flatMap((g) => g.rows), [groups]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); setRecent(readRecent()); setOpen((o) => !o); }
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); setRecent(readRecent()); setMini(false); setOpen((o) => !o); }
     };
-    const onOpen = (e: Event) => { setRecent(readRecent()); setQ(String((e as CustomEvent).detail ?? "")); setOpen(true); };
+    const onOpen = (e: Event) => { setRecent(readRecent()); setQ(String((e as CustomEvent).detail ?? "")); setMini(false); setOpen(true); };
     const w = window as unknown as { __ompathSearchPending?: string };
     if (w.__ompathSearchPending !== undefined) { setRecent(readRecent()); setQ(w.__ompathSearchPending); setOpen(true); delete w.__ompathSearchPending; }
     window.addEventListener("keydown", onKey);
@@ -99,7 +108,14 @@ export default function SearchPalette() {
 
   let idx = -1;
   return (
-    <Dialog open={open} onOpenChange={(o) => { setOpen(o); if (!o) setQ(""); }}>
+    <>
+    {mini && !open && q.trim() && (
+      <div className="fixed bottom-20 left-3 z-50 flex max-w-[calc(100vw-1.5rem)] items-center gap-1 rounded-full border border-primary/40 bg-background py-1 pl-3 pr-1 shadow-lg print:hidden">
+        <button type="button" onClick={() => { setMini(false); setOpen(true); }} className="flex min-w-0 items-center gap-2 text-sm font-semibold text-primary"><Search className="h-4 w-4 shrink-0" aria-hidden /><span className="max-w-[40vw] truncate">{q.trim()}</span></button>
+        <button type="button" onClick={() => { setMini(false); setQ(""); }} aria-label="Close search" className="flex h-7 w-7 items-center justify-center rounded-full hover:bg-muted"><X className="h-3.5 w-3.5" /></button>
+      </div>
+    )}
+    <Dialog open={open} onOpenChange={(o) => { setOpen(o); if (!o && !mini) setQ(""); }}>
       <DialogContent className="top-[12%] flex max-h-[78dvh] w-[94vw] max-w-2xl translate-y-0 flex-col gap-0 overflow-hidden p-0 [&>button]:hidden">
         <DialogTitle className="sr-only">Search the site</DialogTitle>
         <DialogDescription className="sr-only">Search notes, library files, course outline topics and pages. Use the arrow keys and Enter.</DialogDescription>
@@ -114,6 +130,7 @@ export default function SearchPalette() {
             aria-label="Search the site"
             className="h-14 min-w-0 flex-1 bg-transparent text-base outline-none placeholder:text-muted-foreground"
           />
+          <button type="button" onClick={() => { setMini(true); setOpen(false); }} aria-label="Minimize search" title="Minimize" className="rounded-md border border-border px-2 py-1 text-muted-foreground hover:text-foreground"><Minus className="h-3.5 w-3.5" /></button>
           <button type="button" onClick={() => setOpen(false)} aria-label="Close search" className="rounded-md border border-border px-2 py-1 text-[10px] font-bold text-muted-foreground hover:text-foreground sm:hidden"><X className="h-3.5 w-3.5" /></button>
           <kbd className="hidden rounded border border-border bg-muted px-1.5 py-0.5 text-[10px] font-semibold text-muted-foreground sm:block">Esc</kbd>
         </div>
@@ -152,6 +169,18 @@ export default function SearchPalette() {
             <div className="mx-3 mb-2 rounded-xl border border-border bg-background p-3" aria-label="Quick answer">
               <p className="mb-1.5 text-[10px] font-bold uppercase tracking-wider text-primary">Quick answer</p>
               {qa.text ? <div className="text-sm text-foreground/90"><Answer text={qa.text} /></div> : <div className="space-y-2" role="status" aria-label="Writing the answer"><div className="h-3 w-full animate-pulse rounded bg-muted" /><div className="h-3 w-5/6 animate-pulse rounded bg-muted" /><div className="h-3 w-2/3 animate-pulse rounded bg-muted" /></div>}
+            </div>
+          )}
+          {topicHits.length > 0 && (
+            <div className="mx-3 mb-2">
+              <p className="px-1 pb-1 text-[10px] font-bold uppercase tracking-wider text-muted-foreground">Topic page</p>
+              {topicHits.map((t) => (
+                <button key={t.s} type="button" onClick={() => { setOpen(false); setQ(""); navigate(topicPath(t.s)); }} className="flex w-full items-center gap-3 rounded-xl border border-primary/40 bg-primary/10 px-3 py-2.5 text-left hover:bg-primary/15">
+                  <BookOpen className="h-5 w-5 shrink-0 text-primary" aria-hidden />
+                  <span className="min-w-0 flex-1"><span className="block truncate text-sm font-bold text-primary">{t.n}: everything in one page</span><span className="block truncate text-[11px] text-muted-foreground">{Math.max(1, t.d)} page{Math.max(1, t.d) === 1 ? "" : "s"}{t.q ? ` · ${t.q} questions` : ""}</span></span>
+                  <ArrowRight className="h-4 w-4 shrink-0 text-primary" aria-hidden />
+                </button>
+              ))}
             </div>
           )}
           {q.trim().length < 2 ? null : searched && flat.length === 0 ? (
@@ -196,5 +225,6 @@ export default function SearchPalette() {
         </div>
       </DialogContent>
     </Dialog>
+    </>
   );
 }

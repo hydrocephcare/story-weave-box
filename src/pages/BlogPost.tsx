@@ -1828,8 +1828,13 @@ export default function BlogPost() {
   const yearName = getYearFromCategory(article.category);
   const hasRelated = related.flashcards.length > 0 || related.mcqs.length > 0;
   const articleEssay = related.essays?.[0];
-  const essaySaqs: any[] = Array.isArray(articleEssay?.short_answer_questions) ? articleEssay.short_answer_questions : [];
-  const essayLaqs: any[] = Array.isArray(articleEssay?.long_answer_questions) ? articleEssay.long_answer_questions : [];
+  // stored practice questions that are really headings or plain statements (made badly from the notes) are not shown
+  const realEssay = (q: any) => {
+    const t = String(q?.question ?? "").trim();
+    return t.length >= 15 && !/^#/.test(t) && (/?s*$/.test(t) || /^(describe|explain|discuss|outline|define|state|list|name|enumerate|compare|contrast|differentiate|distinguish|write|give|mention|what|how|why|when|which|where|who|a d|an? w+-year)/i.test(t)) && String(q?.model_answer || q?.answer || "").trim().length >= 25;
+  };
+  const essaySaqs: any[] = (Array.isArray(articleEssay?.short_answer_questions) ? articleEssay.short_answer_questions : []).filter(realEssay);
+  const essayLaqs: any[] = (Array.isArray(articleEssay?.long_answer_questions) ? articleEssay.long_answer_questions : []).filter(realEssay);
 
   return (
     <>
@@ -1950,7 +1955,7 @@ export default function BlogPost() {
               password={(article as any).access_password}
               storageKey={article.slug || article.id}
             >
-            {polishNote && (
+            {false && polishNote && ( // visitors are not told a page is being polished: the better text simply replaces the old one
               <div role="status" aria-live="polite" className="mb-3 flex items-center gap-2.5 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-[13px] font-semibold text-primary print:hidden">
                 <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-primary" aria-hidden />
                 <span>{polishNote}</span>
