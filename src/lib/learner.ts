@@ -2,6 +2,7 @@
 // Used to shape answers (depth, links between topics, what to revisit). Nothing here leaves the browser except as one short sentence in the question.
 import { aiStore } from "@/lib/ompathAiStore";
 import { readsThisWeek } from "@/lib/readLog";
+import { readWeak } from "@/lib/weakTopics";
 
 const clip = (s: string, n = 48) => (s.length > n ? `${s.slice(0, n - 1)}…` : s);
 
@@ -12,7 +13,9 @@ export function learnerNote(userId: string | null | undefined, current: string):
     const asked = [...new Set(turns.map((t) => clip(t.q.replace(/\s+/g, " ").trim())).filter((q) => q.length > 5))].slice(-4);
     const unclear = [...new Set(turns.filter((t) => t.vote === "down").map((t) => clip(t.q.replace(/\s+/g, " ").trim())))].slice(-2);
     const read = readsThisWeek(userId).slice(0, 3).map((r) => clip(r.t));
+    const missed = readWeak(userId).slice(0, 2).map((w) => clip(w.q, 60));
     const bits: string[] = [];
+    if (missed.length) bits.push(`got these wrong in revision: ${missed.join("; ")} (reinforce if relevant)`);
     if (asked.length) bits.push(`recently asked: ${asked.join("; ")}`);
     if (read.length) bits.push(`has read: ${read.join("; ")}`);
     if (unclear.length) bits.push(`found these unclear: ${unclear.join("; ")} (explain more simply)`);

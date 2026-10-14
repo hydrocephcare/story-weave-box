@@ -57,8 +57,9 @@ const STATIC_PAGE_META: Record<string, { title: string; description: string; lin
     links: ["/", "/blog", "/mcqs", "/flashcards", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
   "/contests": {
-    title: "Medical Knowledge Contests | Ompath Study",
-    description: "OmpathStudy medical knowledge contests for students worldwide, with published briefings and competition information.",
+    title: "Inter-University Medical Contests: coming soon | Ompath Study",
+    description: "Medical students from universities across the world compete on one board. Briefings, rules and dates are published here before each contest opens. Coming soon.",
+    image: cardUrl("Inter-University Medical Contest", "", "Coming soon", "Universities compete on one board. Dates and rules will be published here."),
     links: ["/", "/blog", "/mcqs", "/flashcards", "/exams", "/year/1", "/year/2", "/year/3", "/year/4", "/year/5", "/year/6"],
   },
   "/ai": {
