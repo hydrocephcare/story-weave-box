@@ -1833,7 +1833,7 @@ export default function BlogPost() {
   // stored practice questions that are really headings or plain statements (made badly from the notes) are not shown
   const realEssay = (q: any) => {
     const t = String(q?.question ?? "").trim();
-    return t.length >= 15 && !/^#/.test(t) && (/?s*$/.test(t) || /^(describe|explain|discuss|outline|define|state|list|name|enumerate|compare|contrast|differentiate|distinguish|write|give|mention|what|how|why|when|which|where|who|a d|an? w+-year)/i.test(t)) && String(q?.model_answer || q?.answer || "").trim().length >= 25;
+    return t.length >= 15 && !/^#/.test(t) && (/\?\s*$/.test(t) || /^(describe|explain|discuss|outline|define|state|list|name|enumerate|compare|contrast|differentiate|distinguish|write|give|mention|what|how|why|when|which|where|who|a \d|an? \w+-year)/i.test(t)) && String(q?.model_answer || q?.answer || "").trim().length >= 25;
   };
   const essaySaqs: any[] = (Array.isArray(articleEssay?.short_answer_questions) ? articleEssay.short_answer_questions : []).filter(realEssay);
   const essayLaqs: any[] = (Array.isArray(articleEssay?.long_answer_questions) ? articleEssay.long_answer_questions : []).filter(realEssay);
