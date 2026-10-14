@@ -30,3 +30,11 @@ Essay 2. Outline the toxins of Clostridium tetani.`;
     expect(r.essays).toHaveLength(2);
   });
 });
+
+describe("weekly assessment parts", () => {
+  it("marks questions under PART B as read-notes questions", () => {
+    const q = (n: number) => `Q${n}. Which drug blocks oestrogen receptors in breast tissue?\nA. Tamoxifen\nB. Insulin\nC. Heparin\nD. Warfarin\nE. Digoxin\nAnswer: A\nWhy: SERM.\n`;
+    const r = parseAssessment(`PART A\n${q(1)}\n${q(2)}\nPART B\n${q(3)}\nEssay 1. Describe the mechanism of tamoxifen action.`);
+    expect(r.mcqs.map((m) => m.part)).toEqual(["asked", "asked", "read"]);
+  });
+});

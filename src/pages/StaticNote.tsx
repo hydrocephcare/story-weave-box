@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useReadLog } from "@/lib/readLog";
 import StudyTools from "@/components/StudyTools";
 import SideAds from "@/components/SideAds";
 import PageSummary from "@/components/PageSummary";
@@ -37,6 +38,7 @@ export default function StaticNotePage() {
 function StaticNoteView() {
   const { slug = "" } = useParams();
   const note = findStaticNote(slug);
+  useReadLog(note?.title);
   const location = useLocation();
   const navigate = useNavigate();
   const navType = useNavigationType();

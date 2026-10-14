@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useLayoutEffect, forwardRef, memo } from "react";
+import { useReadLog } from "@/lib/readLog";
 import { looksScanned, scanFirst, tidiedText } from "@/lib/blogFix";
 import { applyPolish, getPolish, polishedIds, requestPolish, wantsPolish, type Polish } from "@/lib/blogPolish";
 import AdSlot from "@/components/AdSlot";
@@ -1333,6 +1334,7 @@ export default function BlogPost() {
   const [related, setRelated] = useState<{ articles: any[]; flashcards: any[]; mcqs: any[]; essays: any[] }>({ articles: [], flashcards: [], mcqs: [], essays: [] });
   const [activeSection, setActiveSection] = useState("");
   const [previewOpen, setPreviewOpen] = useState(false);
+  useReadLog(article?.title);
   const [polishNote, setPolishNote] = useState(""); // shown while the AI is making the page cleaner
 
   // A paper that was only scanned: the page pictures are stored apart from the text (they are heavy), so they are fetched now and shown instead of reading noise.

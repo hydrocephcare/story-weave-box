@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
+import { useReadLog } from "@/lib/readLog";
 import BooksForPage from "@/components/BooksForPage";
 import SponsorLine from "@/components/SponsorLine";
 import AdSlot from "@/components/AdSlot";
@@ -178,6 +179,7 @@ export default function TopicPage() {
   const [shared, setShared] = useState("");
   const navigate = useNavigate();
   const { topic, page, phase, fresh, redirectTo, retry, writing, name } = useTopicPage(slug);
+  useReadLog(topic?.n ?? name);
   const [zoom, setZoom] = useState<number | null>(null);
   const [webZoom, setWebZoom] = useState<number | null>(null);
   const [heroZoom, setHeroZoom] = useState(false);

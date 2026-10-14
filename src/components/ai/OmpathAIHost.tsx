@@ -29,6 +29,7 @@ import { reportAiFailure } from "@/lib/aiHealth";
 import { saveAnswerAsDraft } from "@/lib/answerToNote";
 import { toast } from "@/hooks/use-toast";
 import { answerStyle } from "@/lib/ompathAiStyle";
+import { learnerNote } from "@/lib/learner";
 import { useFeatures } from "@/lib/features";
 import { UNIVERSITIES, benefitsFor, shortName, useUniversity } from "@/lib/university";
 import { AI_SHARE_TEXT, AI_TITLE, AI_URL } from "@/lib/aiShare";
@@ -349,7 +350,7 @@ export default function OmpathAIHost() {
         aiStore.flush();
         return;
       }
-      const answer = await streamAnswer({ question: opts.context ? `${text}\n\nThe official answer key for this question, from the Ompath bank:\n${opts.context}` : answerStyle(text, myYear), history: prior, retrieval }, { onText: (full) => aiStore.patchTurn(sessionId, id, { answer: full }), signal: abort.current.signal });
+      const answer = await streamAnswer({ question: opts.context ? `${text}\n\nThe official answer key for this question, from the Ompath bank:\n${opts.context}` : answerStyle(text, myYear, learnerNote(user?.id, text)), history: prior, retrieval }, { onText: (full) => aiStore.patchTurn(sessionId, id, { answer: full }), signal: abort.current.signal });
       countQuestion();
       aiStore.patchTurn(sessionId, id, { answer });
       aiStore.flush();

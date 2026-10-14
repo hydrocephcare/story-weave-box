@@ -169,6 +169,7 @@ export default function SearchPalette() {
             <div className="mx-3 mb-2 rounded-xl border border-border bg-background p-3" aria-label="Quick answer">
               <p className="mb-1.5 text-[10px] font-bold uppercase tracking-wider text-primary">Quick answer</p>
               {qa.text ? <div className="text-sm text-foreground/90"><Answer text={qa.text} /></div> : <div className="space-y-2" role="status" aria-label="Writing the answer"><div className="h-3 w-full animate-pulse rounded bg-muted" /><div className="h-3 w-5/6 animate-pulse rounded bg-muted" /><div className="h-3 w-2/3 animate-pulse rounded bg-muted" /></div>}
+              {qa.text && !qa.busy && <button type="button" onClick={() => { setOpen(false); setQ(""); navigate(`/search?q=${encodeURIComponent(qa.q)}`); }} className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline">View more: topic page and all notes <ArrowRight className="h-3.5 w-3.5" aria-hidden /></button>}
             </div>
           )}
           {topicHits.length > 0 && (

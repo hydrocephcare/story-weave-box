@@ -1,6 +1,7 @@
 import { getCategoryDisplayName, type Article } from "@/lib/store";
 import { readableSummary, stripRichText } from "@/lib/seo";
 import { slugify } from "@/lib/deep-link";
+import { joinTableRows } from "@/lib/tableRows";
 
 /**
  * Pure text/data helpers extracted from BlogPost.tsx: OCR/markdown cleanup,
