@@ -5,8 +5,9 @@ import topic from "./_lib/topicWrite.js";
 import outline from "./_lib/outlineParse.js";
 import study from "./_lib/pageStudy.js";
 import polish from "./_lib/blogPolish.js";
+import { draft, health } from "./_lib/aiDraft.js";
 
-const TASKS = { chat, topic, outline, study, polish };
+const TASKS = { chat, topic, outline, study, polish, draft, health };
 
 export default async function handler(req, res) {
   const task = String(Array.isArray(req.query?.task) ? req.query.task[0] : req.query?.task ?? "");

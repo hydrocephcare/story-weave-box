@@ -8,6 +8,7 @@ import { SubscribeModal } from "@/components/SubscribeModal";
 import NotePreview from "@/components/ai/NotePreview";
 import OmpathMark from "@/components/ai/OmpathMark";
 import { Answer } from "@/components/ai/AnswerText";
+import { offerDraft } from "@/lib/aiDraft";
 import QuestionDrill from "@/components/ai/QuestionDrill";
 import UpgradeCard from "@/components/ai/UpgradeCard";
 import LoginCard from "@/components/ai/LoginCard";
@@ -353,6 +354,8 @@ export default function OmpathAIHost() {
       aiStore.patchTurn(sessionId, id, { answer });
       aiStore.flush();
       if (answer.length > 140 && retrieval.parsed.topic) void ensureTopicPage(retrieval.parsed.topic);
+      // nothing on the site matched and the answer is a full note: offer it to the admin as a draft (never published without approval)
+      if (!opts.context && !retrieval.grounded && retrieval.hits.filter((x) => x.group !== "Pages").length === 0 && answer.length >= 1200 && retrieval.parsed.topic) offerDraft(retrieval.parsed.topic, answer, myYear);
       if (answer.trim().length > 40) { saveCached(text, { answer, grounded: retrieval.grounded, hits: retrieval.hits, followUps: followUps(retrieval.parsed) }); void saveShared(text, answer, retrieval.grounded); }
     } catch (e) {
       if ((e as Error).name === "AbortError") { aiStore.flush(); return; }

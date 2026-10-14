@@ -4,6 +4,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { BarChart3, CalendarCheck, HeartPulse, Wallet, LayoutDashboard } from "lucide-react";
 
 const TOOLS = [
+  { to: "/admin/drafts", icon: HeartPulse, title: "AI notes to approve", text: "Notes Ompath AI wrote for searches the site had nothing for. Read, fix the title or year, and publish, or discard." },
+  { to: "/admin/activity", icon: BarChart3, title: "Activity & AI keys", text: "What students searched this week, searches that found nothing, whether each AI key works, and what is waiting for you." },
   { to: "/admin/analytics", icon: BarChart3, title: "Visitors", text: "Who is on the site now, how many used it each day, each week and each year, and a picture of the numbers to share on WhatsApp." },
   { to: "/admin/outline-sync", icon: CalendarCheck, title: "Course outline sync", text: "Paste a course outline: every matching note, blog and topic shows its year, semester, week and lecturer." },
   { to: "/admin/polish", icon: HeartPulse, title: "Polished blogs", text: "Each Year 1 to 3 blog gets a clear title, description and tidy text the first time it is opened. Weak and irrelevant pages are listed here to hide or keep." },

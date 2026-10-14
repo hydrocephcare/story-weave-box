@@ -164,6 +164,7 @@ export default function StudyPanel({ year: preferredYear }: { year?: number | nu
           <p className="mt-2 text-[11px] font-semibold text-muted-foreground">No upcoming dates set</p>
         )}
         <Link to="/revise" className="mt-2 inline-flex items-center gap-1 rounded-full bg-amber-500/10 px-2.5 py-1 text-[11px] font-bold text-amber-700">🔥 {streak}-day streak · Smart revision →</Link>
+        <Link to="/my-week" className="mt-2 ml-1 inline-flex items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-bold text-primary">My week · test me →</Link>
         {!user && <Link to="/login" className="mt-2 inline-block text-[11px] font-bold text-primary hover:underline">Sign in to keep your progress →</Link>}
       </section>
 

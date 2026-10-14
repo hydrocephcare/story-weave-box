@@ -63,6 +63,9 @@ const AdminAnalytics = lazy(() => import("./pages/AdminAnalytics"));
 const AdminTools = lazy(() => import("./pages/AdminTools"));
 const AdminContentHealth = lazy(() => import("./pages/AdminContentHealth"));
 const AdminPolish = lazy(() => import("./pages/AdminPolish"));
+const MyWeek = lazy(() => import("./pages/MyWeek"));
+const AdminDrafts = lazy(() => import("./pages/AdminDrafts"));
+const AdminActivity = lazy(() => import("./pages/AdminActivity"));
 const YearTimetable = lazy(() => import("./pages/YearTimetable"));
 const UnitPage = lazy(() => import("./pages/UnitPage"));
 const MyRevision = lazy(() => import("./pages/MyRevision"));
@@ -153,6 +156,7 @@ const AnimatedRoutes = () => {
             <Route path="/revision-planner" element={<SignedInRoute><RevisionPlanner /></SignedInRoute>} />
             <Route path="/supplementary-revision" element={<Navigate to="/revision-index" replace />} />
             <Route path="/revision-index" element={<RevisionIndex />} />
+            <Route path="/my-week" element={<RailLayout><MyWeek /></RailLayout>} />
             <Route path="/revise" element={<RailLayout><SmartRevision /></RailLayout>} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/study-map" element={<RailLayout><StudyMap /></RailLayout>} />
@@ -213,6 +217,8 @@ const AnimatedRoutes = () => {
             <Route path="/admin/analytics" element={<AdminRoute><AdminAnalytics /></AdminRoute>} />
             <Route path="/admin/tools" element={<AdminRoute><AdminTools /></AdminRoute>} />
             <Route path="/admin/content-health" element={<AdminRoute><AdminContentHealth /></AdminRoute>} />
+            <Route path="/admin/drafts" element={<AdminRoute><AdminDrafts /></AdminRoute>} />
+            <Route path="/admin/activity" element={<AdminRoute><AdminActivity /></AdminRoute>} />
             <Route path="/admin/polish" element={<AdminRoute><AdminPolish /></AdminRoute>} />
             <Route path="/admin/outline-sync" element={<AdminRoute><AdminOutlineSync /></AdminRoute>} />
             <Route path="/admin/editor" element={<AdminRoute><AdminEditor /></AdminRoute>} />
