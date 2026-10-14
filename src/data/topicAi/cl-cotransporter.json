@@ -1,0 +1,111 @@
+{
+ "medical": true,
+ "subject": "Physiology",
+ "summary": "Cl‑cotransporters move chloride together with another ion (Na⁺ or K⁺) across cell membranes, crucial for renal salt handling and neuronal excitability. Dysfunction causes electrolyte disorders and hypertension.",
+ "aka": [
+  "Na⁺‑Cl⁻ cotransporter (NCC)",
+  "Na⁺‑K⁺‑2Cl⁻ cotransporter (NKCC)",
+  "SLC12 family"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Cl‑cotransporters are membrane proteins that couple the movement of Cl⁻ with Na⁺ (NCC) or Na⁺/K⁺ (NKCC) without using ATP. They maintain cell volume, set intracellular Cl⁻, and drive Na⁺ reabsorption in the kidney.",
+   "b": [
+    "Located in renal tubules, inner ear, brain, and vascular smooth muscle",
+    "Part of the SLC12 solute carrier family"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "In the distal convoluted tubule (DCT), NCC reabsorbs Na⁺ and Cl⁻ from the lumen into the cell, driven by the Na⁺ gradient created by the basolateral Na⁺/K⁺‑ATPase. NKCC2 in the thick ascending limb works similarly but also brings K⁺.",
+   "b": [
+    "NCC: 1 Na⁺ + 1 Cl⁻ per cycle",
+    "NKCC2: 1 Na⁺ + 1 K⁺ + 2 Cl⁻ per cycle"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Phosphorylation by the WNK‑SPAK/OSR1 kinase cascade increases transporter activity; hormones (aldosterone, vasopressin) modulate expression; intracellular Cl⁻ concentration provides feedback inhibition.",
+   "b": [
+    "Low intracellular Cl⁻ → WNK activation → ↑ NCC/NKCC activity",
+    "Thiazides inhibit NCC, causing natriuresis"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Genetic or acquired defects alter NaCl reabsorption, leading to electrolyte imbalance, blood pressure changes, or neurologic symptoms.",
+   "b": [
+    "Gitelman syndrome – loss‑of‑function NCC → hypokalemia, metabolic alkalosis, hypomagnesemia",
+    "Bartter syndrome type I – NKCC2 loss → salt wasting, polyuria, hypercalciuria",
+    "Secondary hyper‑activation (e.g., hyperaldosteronism) → hypertension"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding Cl‑cotransporters guides diuretic choice, explains inherited tubulopathies, and informs treatment of hypertension and edema.",
+   "b": [
+    "Thiazides treat hypertension by blocking NCC",
+    "Loop diuretics block NKCC2, useful in CHF and AKI"
+   ],
+   "t": [
+    {
+     "a": "Serum electrolytes",
+     "b": "What is the pattern of Na⁺, K⁺, Cl⁻, Mg²⁺? → Detects Gitelman vs. Bartter vs. diuretic effect"
+    },
+    {
+     "a": "Urine calcium excretion",
+     "b": "Is calcium loss high? → Hypercalciuria suggests NKCC2 loss (Bartter) or loop diuretic use"
+    },
+    {
+     "a": "Blood pressure measurement",
+     "b": "Is hypertension present? → Suggests secondary NCC activation (e.g., hyperaldosteronism)"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Focus on distinguishing Gitelman from Bartter, the mechanism of thiazide and loop diuretics, and the regulatory kinase pathway.",
+   "b": [
+    "Gitelman = NCC defect → low Mg²⁺, normal Ca²⁺",
+    "Bartter = NKCC2 defect → high Ca²⁺ loss"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypokalemia (<2.5 mmol/L) with muscle weakness or arrhythmia",
+  "Unexplained refractory hypertension in a young adult",
+  "Acute volume depletion with hypotension after diuretic use"
+ ],
+ "faq": [
+  {
+   "q": "Why do thiazides cause hypokalemia?",
+   "a": "Blocking NCC increases Na⁺ delivery to the collecting duct, enhancing Na⁺ reabsorption via ENaC and driving K⁺ secretion."
+  },
+  {
+   "q": "How does NKCC2 inhibition lead to calcium stones?",
+   "a": "Less positive lumen voltage reduces paracellular Ca²⁺ reabsorption, increasing urinary calcium."
+  },
+  {
+   "q": "Can Gitelman syndrome be confused with chronic thiazide use?",
+   "a": "Yes; both show similar labs, but Gitelman is lifelong, often with low Mg²⁺ and no diuretic exposure."
+  }
+ ],
+ "exam": [
+  "Explain how thiazide diuretics lower blood pressure at the molecular level.",
+  "Compare the electrolyte patterns of Gitelman and Bartter syndromes and the underlying transporter defects.",
+  "Describe the WNK‑SPAK pathway’s role in regulating NCC activity."
+ ],
+ "related": [
+  "Na⁺/K⁺‑ATPase",
+  "Renin‑angiotensin‑aldosterone system",
+  "Loop diuretics",
+  "Thiazide diuretics",
+  "Hypertension",
+  "Electrolyte disorders"
+ ],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-14",
+ "reviewed": false
+}

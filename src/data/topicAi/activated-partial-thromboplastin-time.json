@@ -1,0 +1,177 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Activated Partial Thromboplastin Time (APTT) measures the intrinsic and common coagulation pathways. A prolonged APTT suggests factor deficiencies, inhibitors, or lupus anticoagulant, guiding further work‑up and treatment.",
+ "aka": [
+  "aPTT",
+  "partial thromboplastin time"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "APTT is a plasma clotting test that evaluates the intrinsic pathway (factors XII, XI, IX, VIII) and the common pathway (factors X, V, II, fibrinogen). It is performed after adding phospholipid and a contact activator to patient plasma.",
+   "b": [
+    "Used to screen for hemophilia, lupus anticoagulant, and monitor heparin therapy"
+   ],
+   "t": [
+    {
+     "a": "APTT",
+     "b": "Prolonged APTT indicates a deficiency or inhibitor in intrinsic/common pathway."
+    },
+    {
+     "a": "Factor VIII/IX/XI levels",
+     "b": "Identifies specific hemophilia or acquired deficiency."
+    },
+    {
+     "a": "Mixing study (patient + normal plasma)",
+     "b": "Correction suggests factor deficiency; no correction suggests inhibitor."
+    },
+    {
+     "a": "Dilute Russell viper venom time (dRVVT)",
+     "b": "Positive dRVVT supports antiphospholipid syndrome."
+    },
+    {
+     "a": "Heparin screen (anti‑Xa)",
+     "b": "Elevated anti‑Xa confirms therapeutic heparin."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "APTT itself is not staged, but the underlying disorder is. For hemophilia, severity is classified by factor activity: mild (>5–40%), moderate (1–5%), severe (<1%).",
+   "b": [
+    "Severe hemophilia presents with spontaneous bleeding; mild often asymptomatic."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The most common causes of a prolonged APTT are factor deficiencies, lupus anticoagulant, and heparin therapy. In low‑resource settings, infections and herbal remedies can also interfere.",
+   "b": [
+    "Factor VIII deficiency (hemophilia A)",
+    "Factor IX deficiency (hemophilia B)",
+    "Lupus anticoagulant (antiphospholipid syndrome)",
+    "Heparin (therapeutic or accidental)",
+    "Vitamin K deficiency (rare, usually prolongs PT)",
+    "Herbal anticoagulants (e.g., garlic, ginkgo)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with factor deficiencies may have bruising, joint bleeds, or prolonged bleeding after surgery. Lupus anticoagulant patients often have thrombosis rather than bleeding.",
+   "b": [
+    "Spontaneous hemarthroses in hemophilia",
+    "Prolonged bleeding after trauma or surgery",
+    "Thrombotic events in antiphospholipid syndrome"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "APTT is the first test; if abnormal, a systematic work‑up follows to identify the cause.",
+   "t": [
+    {
+     "a": "APTT",
+     "b": "Indicates intrinsic/common pathway problem."
+    },
+    {
+     "a": "Factor assays",
+     "b": "Defines specific deficiency."
+    },
+    {
+     "a": "Mixing study",
+     "b": "Correction = deficiency; no correction = inhibitor."
+    },
+    {
+     "a": "dRVVT",
+     "b": "Positive supports antiphospholipid syndrome."
+    },
+    {
+     "a": "Anti‑Xa assay",
+     "b": "Positive confirms therapeutic heparin."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "A prolonged APTT can mask a bleeding risk or, if due to lupus anticoagulant, predispose to life‑threatening clots.",
+   "b": [
+    "Unexplained bruising or hemarthroses",
+    "Unprovoked deep vein thrombosis or stroke",
+    "Pregnancy loss in antiphospholipid syndrome"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care, and monitor coagulation status. Anticoagulation is avoided if a bleeding disorder is present.",
+   "b": [
+    "Factor replacement (VIII or IX concentrates) for hemophilia"
+   ],
+   "t": [
+    {
+     "a": "Factor concentrate",
+     "b": "Specific factor to replace the deficient protein."
+    },
+    {
+     "a": "Vitamin K",
+     "b": "Only if deficiency suspected; usually normal in intrinsic pathway."
+    },
+    {
+     "a": "Avoid anticoagulants",
+     "b": "Risk of severe bleeding outweighs benefit in factor deficiency."
+    },
+    {
+     "a": "Heparin reversal (protamine sulfate)",
+     "b": "If accidental heparin exposure causes dangerous prolongation."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of factor levels and APTT ensures adequate protection. Vaccination against hepatitis B and safe injection practices reduce infection‑related coagulopathies.",
+   "b": [
+    "Annual factor level checks for hemophilia patients"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "APTT is often mistaken for PT/INR, which assess the extrinsic pathway. A normal PT with prolonged APTT points to intrinsic pathway issues.",
+   "b": [
+    "PT/INR – extrinsic pathway"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unexplained spontaneous bleeding",
+  "Unprovoked thrombosis",
+  "Pregnancy loss in a woman with prolonged APTT"
+ ],
+ "faq": [
+  {
+   "q": "What does a normal APTT mean?",
+   "a": "It indicates that the intrinsic and common coagulation pathways are functioning normally."
+  },
+  {
+   "q": "Can APTT be prolonged by vitamin K deficiency?",
+   "a": "No, vitamin K deficiency mainly prolongs PT/INR."
+  },
+  {
+   "q": "Why is a mixing study performed?",
+   "a": "It distinguishes between a factor deficiency and an inhibitor."
+  }
+ ],
+ "exam": [
+  "Explain why a patient with hemophilia A has a prolonged APTT but normal PT.",
+  "Describe the steps you would take if a patient on heparin develops a prolonged APTT.",
+  "Interpret a mixing study that does not correct the prolonged APTT."
+ ],
+ "related": [
+  "Hemophilia",
+  "Lupus anticoagulant",
+  "Heparin therapy",
+  "Coagulation screen",
+  "Thrombin time"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-14",
+ "reviewed": false
+}

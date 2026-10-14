@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The carpal tunnel is a fibro‑osseous canal at the wrist that transmits the median nerve and nine flexor tendons. Compression of the median nerve produces characteristic sensory and motor deficits.",
+ "aka": [
+  "Carpal tunnel syndrome (CTS)"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A narrow passage formed by the carpal bones and the flexor retinaculum. It protects structures that move the fingers while allowing them to glide smoothly.",
+   "b": [
+    "Depth ~1.5 cm; width ~2 cm",
+    "Contains median nerve, flexor digitorum superficialis & profundus tendons, flexor pollicis longus tendon"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The tunnel lies on the volar side of the wrist, extending from the distal forearm (space of Parona) to the proximal palm.",
+   "b": [
+    "Bound dorsally by carpal arch (scaphoid, lunate, triquetrum, pisiform)",
+    "Bound volarly by flexor retinaculum (transverse carpal ligament)"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Immediately radial to the tunnel lies the thenar branch of the median nerve; ulnar to it are the ulnar nerve and artery in Guyon's canal.",
+   "b": [
+    "Flexor tendons lie deep to the retinaculum",
+    "Median nerve lies superficial to the tendons"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Supplied by branches of the radial and ulnar arteries that form the superficial palmar arch and give perforating branches into the tunnel.",
+   "b": [
+    "Radial artery contributes via the deep palmar branch",
+    "Ulnar artery contributes via the palmar carpal branch"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The median nerve provides sensory innervation to the lateral three‑and‑a‑half digits and motor innervation to the thenar muscles and the first two lumbricals.",
+   "b": [
+    "Sensory: palmar surface of thumb, index, middle, radial half of ring finger",
+    "Motor: opponens pollicis, abductor pollicis brevis, flexor pollicis brevis"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Allows coordinated flexion of the fingers while protecting the median nerve from external pressure.",
+   "b": [
+    "Facilitates grip and fine motor tasks",
+    "Maintains tendon glide during wrist motion"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Median nerve compression (carpal tunnel syndrome) presents with nocturnal paresthesia, thenar weakness, and positive Tinel/Phalen signs. Causes range from repetitive use to systemic disease.",
+   "b": [
+    "Idiopathic or occupational overuse",
+    "Systemic: diabetes, hypothyroidism, rheumatoid arthritis, pregnancy",
+    "Infections/tropics: HIV neuropathy, TB meningitis with wrist involvement, leprosy, chronic hepatitis B"
+   ],
+   "t": [
+    {
+     "a": "Tinel's sign",
+     "b": "Does tapping over the median nerve reproduce tingling? Positive indicates nerve irritation."
+    },
+    {
+     "a": "Phalen's maneuver",
+     "b": "Does wrist flexion for 60 s cause symptoms? Positive supports compression."
+    },
+    {
+     "a": "Nerve conduction study",
+     "b": "Is median nerve latency prolonged? Confirms CTS; if unavailable, rely on clinical criteria."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Look for thenar atrophy, loss of thumb opposition, and sensory loss over the lateral three‑and‑a‑half fingers. Check for associated systemic signs.",
+   "b": [
+    "Positive Tinel or Phalen",
+    "Weakness of thumb abduction/opposition",
+    "Sensory deficit in median nerve distribution"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Progressive weakness leading to loss of hand function",
+  "Severe night pain unrelieved by positioning",
+  "Signs of infection (redness, fever) over the wrist"
+ ],
+ "faq": [
+  {
+   "q": "Why does CTS worsen at night?",
+   "a": "Wrist flexion during sleep reduces tunnel space, increasing pressure on the median nerve."
+  },
+  {
+   "q": "Can CTS be caused by pregnancy?",
+   "a": "Yes; fluid retention enlarges the contents of the tunnel, raising pressure."
+  },
+  {
+   "q": "Is CTS always due to overuse?",
+   "a": "No; systemic diseases, anatomical variants, and space‑occupying lesions are common causes."
+  }
+ ],
+ "exam": [
+  "Describe the anatomical boundaries of the carpal tunnel and the structures it contains.",
+  "Explain how median nerve compression produces the characteristic sensory and motor findings.",
+  "List three systemic conditions that predispose to carpal tunnel syndrome and how they increase tunnel pressure."
+ ],
+ "related": [
+  "Guyon's canal",
+  "Median nerve anatomy",
+  "Flexor retinaculum injuries",
+  "Rheumatoid arthritis of the wrist",
+  "Diabetic peripheral neuropathy",
+  "Occupational ergonomics"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-14",
+ "reviewed": false
+}

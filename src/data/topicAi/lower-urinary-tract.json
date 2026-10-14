@@ -1,0 +1,167 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Lower urinary tract pathology covers diseases of the ureters, bladder and urethra, from infections to malignancy. Clinicians must link symptoms to anatomical sites, use targeted tests, and treat underlying causes while monitoring for complications.",
+ "aka": [
+  "LUT pathology",
+  "Lower Urinary Tract Disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Lower urinary tract disease refers to any pathology affecting the ureters, bladder or urethra that alters urine flow or storage.",
+   "b": [
+    "Includes cystitis, ureteral obstruction, bladder cancer, urethral stricture"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows organ‑specific systems: bladder cancer uses TNM, ureteral obstruction graded by degree of hydronephrosis, and urethral strictures staged by length and severity."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Infections dominate in low‑resource settings; bacterial cystitis, schistosomiasis, HIV‑related urethritis, and TB urethritis are common. Non‑infectious causes include stones, trauma, and congenital anomalies.",
+   "b": [
+    "Bacterial cystitis (E. coli)",
+    "Schistosoma haematobium infection",
+    "HIV urethritis",
+    "Ureteral stones",
+    "Congenital ureteropelvic junction obstruction"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms vary with site: dysuria and frequency for cystitis, flank pain and oliguria for ureteral obstruction, hematuria and irritative voiding for bladder cancer, and painful voiding or obstruction for urethral stricture.",
+   "b": [
+    "Painful urination",
+    "Frequent urination",
+    "Visible blood in urine",
+    "Flank pain",
+    "Urinary retention"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests are chosen to confirm site, cause and severity.",
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Positive nitrites suggest gram‑negative infection; leukocyte esterase indicates inflammation"
+    },
+    {
+     "a": "Urine culture",
+     "b": "Guides antibiotic choice"
+    },
+    {
+     "a": "Ultrasound (renal & bladder)",
+     "b": "Normal bladder wall <5mm; >5mm suggests inflammation or tumor"
+    },
+    {
+     "a": "CT urography",
+     "b": "High sensitivity for stones and tumors"
+    },
+    {
+     "a": "Cystoscopy",
+     "b": "Detects tumors, strictures, stones"
+    },
+    {
+     "a": "Urine cytology",
+     "b": "Positive in high‑grade bladder cancer"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent signs require immediate care to prevent renal loss or sepsis.",
+   "b": [
+    "Severe flank pain with fever",
+    "Sudden oliguria or anuria",
+    "Gross hematuria with pain",
+    "Rapidly worsening urinary retention",
+    "Signs of sepsis (tachycardia, hypotension)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care and monitor for progression.",
+   "b": [
+    "Antibiotics for bacterial cystitis (e.g., nitrofurantoin, trimethoprim‑sulfamethoxazole) – chosen for low resistance and safety in pregnancy"
+   ],
+   "t": [
+    {
+     "a": "Antibiotics",
+     "b": "Avoid fluoroquinolones in pregnancy due to cartilage risk"
+    },
+    {
+     "a": "Alpha‑blockers",
+     "b": "Preferred over anticholinergics in elderly to avoid cognitive side effects"
+    },
+    {
+     "a": "Surgery (e.g., ureteral stent, TURBT, urethrotomy)",
+     "b": "Chosen when medical therapy fails or obstruction is mechanical"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of renal function and imaging, patient education on hygiene, and vaccination where applicable.",
+   "b": [
+    "Repeat ultrasound in 3 months for hydronephrosis"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic lower urinary tract symptoms but involve different organs.",
+   "b": [
+    "Kidney stones (renal colic)",
+    "Prostatitis",
+    "Interstitial cystitis",
+    "Urinary tract infection in pregnancy"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may give false negatives or positives, especially in low‑resource settings.",
+   "b": [
+    "Urine dipstick may miss low‑grade hematuria; microscopy needed"
+   ],
+   "t": [
+    {
+     "a": "Urine microscopy",
+     "b": "False negatives if sample is dilute"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe flank pain with fever",
+  "Sudden loss of urine output",
+  "Gross hematuria with pain",
+  "Rapidly worsening urinary retention",
+  "Signs of sepsis"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of cystitis in women?",
+   "a": "E. coli infection from the perineum"
+  },
+  {
+   "q": "Why is schistosomiasis a concern for bladder cancer?",
+   "a": "It causes chronic inflammation that predisposes to squamous cell carcinoma"
+  },
+  {
+   "q": "When is a CT scan preferred over ultrasound?",
+   "a": "When stones are suspected in the ureter or when detailed anatomy is needed"
+  }
+ ],
+ "exam": [
+  "Explain how a patient with flank pain and fever is evaluated for ureteral obstruction. What imaging is first line and why?",
+  "Describe the diagnostic criteria for bladder cancer using TNM staging. How does tumor invasion of muscularis propria affect prognosis?",
+  "Outline the management steps for a patient with a urethral stricture presenting with urinary retention. Which treatments are first line and why?"
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-14",
+ "reviewed": false
+}

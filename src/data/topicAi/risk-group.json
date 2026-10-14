@@ -1,0 +1,115 @@
+{
+ "medical": true,
+ "subject": "Public health",
+ "summary": "Risk groups are populations identified as having higher likelihood of infection or disease due to factors like age, immunity, occupation or behavior. Clinicians use this concept to target screening, prevention and treatment efficiently.",
+ "aka": [
+  "High‑risk population",
+  "At‑risk group"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Risk groups are defined by epidemiologic data that show increased incidence or severity of a disease. Identifying them guides resource allocation and preventive measures.",
+   "b": [
+    "Population characteristics",
+    "Exposure level",
+    "Health status"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Not applicable – risk groups relate to host factors rather than a specific organism."
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Not applicable – focus is on host susceptibility."
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Risk groups are linked to a range of infections: HIV, TB, malaria, hepatitis B, COVID‑19, bacterial meningitis, and vaccine‑preventable diseases. The same risk factors can increase severity of non‑infectious conditions such as cardiovascular disease.",
+   "b": [
+    "Immunosuppression",
+    "Pregnancy",
+    "Occupational exposure",
+    "Socioeconomic status"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis is based on clinical evaluation and laboratory tests tailored to the suspected infection. In low‑resource settings, point‑of‑care tests and clinical algorithms are essential.",
+   "b": [
+    "History of exposure",
+    "Symptom screening",
+    "Rapid diagnostic tests"
+   ],
+   "t": [
+    {
+     "a": "Rapid antigen test",
+     "b": "A negative result does not rule out disease if pre‑test probability is high"
+    },
+    {
+     "a": "PCR",
+     "b": "Requires laboratory infrastructure; consider when available"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treat the underlying infection and provide supportive care. Prevention focuses on vaccination, prophylaxis, and risk‑specific education.",
+   "b": [
+    "Antimicrobial therapy",
+    "Vaccination",
+    "Prophylactic agents"
+   ],
+   "t": [
+    {
+     "a": "Antibiotics",
+     "b": "Avoid when bacterial etiology is unlikely to prevent resistance"
+    },
+    {
+     "a": "Antiretroviral therapy",
+     "b": "Initiate early to improve outcomes"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember that risk‑group designation changes management: high‑risk patients may need earlier treatment, broader coverage, or additional monitoring. Use risk stratification tools where available.",
+   "b": [
+    "Apply WHO risk categories"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe respiratory distress, high fever with confusion, sudden severe headache, chest pain, or signs of sepsis in a high‑risk individual"
+ ],
+ "faq": [
+  {
+   "q": "How do I identify a risk group in my clinic?",
+   "a": "Use age, immune status, occupation, pregnancy, and known exposures to classify patients into low, moderate, or high risk."
+  },
+  {
+   "q": "What if a risk group patient has a negative test?",
+   "a": "Consider repeat testing, alternative diagnostics, or empirical treatment if clinical suspicion remains high."
+  },
+  {
+   "q": "Can a low‑risk patient still get severe disease?",
+   "a": "Yes, but the probability is lower; still monitor and treat promptly if symptoms develop."
+  }
+ ],
+ "exam": [
+  "Explain why HIV‑positive patients are considered high risk for invasive fungal infections and how this affects management.",
+  "Describe the risk factors that classify a patient as high risk for severe COVID‑19 and outline the preventive measures.",
+  "Outline the steps to take when a high‑risk patient presents with suspected tuberculosis in a low‑resource setting."
+ ],
+ "related": [
+  "Immunocompromised patients",
+  "Vaccination strategies",
+  "Infection control",
+  "Epidemiologic risk assessment"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-14",
+ "reviewed": false
+}

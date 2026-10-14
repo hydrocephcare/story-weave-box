@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The trapezius is a large superficial back muscle that moves and stabilises the scapula. It is innervated by the spinal accessory nerve and receives proprioceptive input from the cervical plexus.",
+ "aka": [
+  "Trapezius muscle",
+  "Trap"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The trapezius spans the posterior neck, upper back and shoulder, forming a diamond‑shaped sheet that connects the occipital bone to the thoracic spine and clavicle.",
+   "b": [
+    "Divided into descending, transverse and ascending fibers",
+    "Acts to elevate, retract and rotate the scapula"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "It originates from the external occipital protuberance, nuchal ligament, and spinous processes C7–T12, inserting on the lateral clavicle, acromion and spine of scapula.",
+   "b": [
+    "Superficial to the rhomboids",
+    "Visible as a contour on the posterior neck and shoulder"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Deep to the trapezius lie the levator scapulae and rhomboids; the spinal accessory nerve runs on its surface before piercing it.",
+   "b": [
+    "Posterior triangle of neck contains CN XI and the transverse cervical vessels",
+    "Upper fibers overlies the supraclavicular nerves"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial blood comes from the transverse cervical artery (branch of the thyrocervical trunk) and the dorsal scapular artery.",
+   "b": [
+    "Venous drainage follows the transverse cervical veins to the brachiocephalic vein"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Motor innervation is via the spinal accessory nerve (CN XI); proprioceptive fibers travel with the cervical plexus (C3‑C4).",
+   "b": [
+    "Lesion of CN XI causes shoulder droop and inability to shrug"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Upper fibers elevate the scapula; middle fibers retract; lower fibers depress and upwardly rotate the scapula during arm elevation.",
+   "b": [
+    "Cooperates with serratus anterior for full overhead reach",
+    "Stabilises the scapula during posture"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Weakness or paralysis of the trapezius leads to shoulder droop, winged scapula, and difficulty raising the arm above head. Trauma, neck surgery, or accessory nerve injury are common causes.",
+   "b": [
+    "Accessory nerve palsy: ipsilateral shoulder droop, difficulty shrugging",
+    "Spinal accessory nerve stretch in neck dissection",
+    "Upper motor neuron lesions produce contralateral trapezius weakness with ipsilateral SCM signs"
+   ],
+   "t": [
+    {
+     "a": "Spinal accessory nerve EMG",
+     "b": "Confirms neurogenic loss; absent motor unit potentials indicate nerve injury"
+    },
+    {
+     "a": "MRI of neck",
+     "b": "Detects compressive lesions (tumor, hematoma) affecting CN XI"
+    },
+    {
+     "a": "Physical exam – shoulder shrug test",
+     "b": "Assesses motor function; inability to raise shoulder indicates trapezius weakness"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Ask the patient to shrug against resistance (trapezius) and turn the head against resistance (sternocleidomastoid) to test CN XI integrity.",
+   "b": [
+    "Upper motor neuron lesion: contralateral trapezius weakness, ipsilateral SCM weakness",
+    "Lower motor neuron lesion: isolated ipsilateral trapezius weakness"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden shoulder droop with neck pain after trauma",
+  "Progressive weakness preventing arm elevation",
+  "Associated neurological deficits suggesting spinal cord or brainstem involvement"
+ ],
+ "faq": [
+  {
+   "q": "Why does a lesion of the spinal accessory nerve cause shoulder droop?",
+   "a": "The nerve supplies the trapezius, which lifts the shoulder; loss of this action lets the arm hang."
+  },
+  {
+   "q": "Can a brain stroke affect the trapezius?",
+   "a": "Yes; a unilateral upper motor neuron lesion can cause contralateral trapezius weakness together with ipsilateral SCM signs."
+  },
+  {
+   "q": "What is the difference between a winged scapula from trapezius vs. serratus anterior?",
+   "a": "Trapezius weakness causes medial winging with drooping shoulder; serratus anterior loss causes lateral winging with the scapula protruding outward."
+  }
+ ],
+ "exam": [
+  "Explain how to test spinal accessory nerve function and interpret the findings.",
+  "Describe the anatomical course of the trapezius and its clinical significance in neck surgery.",
+  "Identify the pattern of weakness seen in an upper motor neuron lesion affecting the trapezius and sternocleidomastoid."
+ ],
+ "related": [
+  "Sternocleidomastoid",
+  "Spinal accessory nerve (CN XI)",
+  "Rhomboid muscles",
+  "Levator scapulae",
+  "Scapulothoracic articulation",
+  "Upper motor neuron lesions"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-14",
+ "reviewed": false
+}

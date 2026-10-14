@@ -1,0 +1,138 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Atypical ductal hyperplasia (ADH) is a proliferative breast lesion with some, but not all, features of ductal carcinoma in situ. It confers a 4‑5‑fold increased risk of future breast cancer and may be a precursor to DCIS and invasive carcinoma.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ADH is a focal proliferation of atypical epithelial cells within breast ducts that partially fills the ductal lumen and shows low‑grade cytologic atypia, but does not meet all criteria for DCIS.",
+   "b": [
+    "Diagnosis requires core needle or excisional biopsy.",
+    "Criteria: ≤2 mm of contiguous involvement or ≤2 mm of total lesion size, and ≤1 mm of ductal space filled."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "ADH is not staged like invasive cancer; it is classified as a high‑risk lesion on the breast pathology spectrum.",
+   "b": [
+    "Risk stratification: low‑risk (no ADH), moderate‑risk (ADH), high‑risk (DCIS, invasive cancer)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "ADH arises from genetic and hormonal influences that drive abnormal ductal proliferation.",
+   "b": [
+    "BRCA2 mutation increases susceptibility.",
+    "Hormone exposure (early menarche, late menopause, hormone replacement).",
+    "Family history of breast cancer."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Most patients are asymptomatic; ADH is usually discovered incidentally on imaging performed for another reason.",
+   "b": [
+    "Mammographic microcalcifications (fine, linear, branching).",
+    "Occasional palpable mass if lesion is large."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Imaging and tissue sampling confirm ADH and rule out more advanced disease.",
+   "t": [
+    {
+     "a": "Mammography",
+     "b": "Does the lesion show suspicious calcifications? → Presence suggests ADH/DCIS; absence may lower suspicion."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Is there a solid mass correlating with calcifications? → Helps guide biopsy; a cystic appearance argues against ADH."
+    },
+    {
+     "a": "Core needle biopsy",
+     "b": "What is the histology? → Shows partial ductal involvement with low‑grade atypia; confirms ADH."
+    },
+    {
+     "a": "Genetic testing (BRCA)",
+     "b": "Is there a pathogenic mutation? → Positive result raises long‑term risk and influences management."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "ADH itself is not malignant but signals a higher chance of progression to DCIS or invasive carcinoma.",
+   "b": [
+    "Progression to DCIS if atypia expands beyond criteria.",
+    "Development of invasive ductal carcinoma, especially with BRCA2 mutation."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment balances removal of the lesion, risk reduction, and patient preferences.",
+   "b": [
+    "Surgical excision of the core‑biopsy site to ensure complete removal.",
+    "Consider chemoprevention (selective estrogen receptor modulators or aromatase inhibitors) for risk reduction.",
+    "Avoid hormone replacement therapy in high‑risk women."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long‑term surveillance is essential because risk persists after excision.",
+   "b": [
+    "Annual mammography; consider MRI if strong family history or BRCA mutation.",
+    "Lifestyle: maintain healthy weight, limit alcohol, regular exercise."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "ADH shares features with several other breast lesions.",
+   "b": [
+    "Low‑grade DCIS – differs by extent of ductal involvement.",
+    "Flat epithelial atypia – lacks significant cytologic atypia.",
+    "Benign papilloma – shows papillary architecture, not atypical cells."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may give a false sense of security.",
+   "b": [
+    "Small calcifications on mammography can be missed, leading to under‑diagnosis.",
+    "Core biopsy may underestimate lesion size; surgical excision may reveal more extensive disease."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "New breast lump, skin changes, or nipple discharge accompanying imaging findings."
+ ],
+ "faq": [
+  {
+   "q": "Is ADH cancer?",
+   "a": "No, ADH is a benign lesion but it raises the future risk of breast cancer."
+  },
+  {
+   "q": "Do I need surgery for ADH?",
+   "a": "Complete excision of the area is recommended to rule out missed DCIS."
+  },
+  {
+   "q": "Can medication lower my risk?",
+   "a": "Selective estrogen receptor modulators or aromatase inhibitors can reduce the long‑term cancer risk."
+  }
+ ],
+ "exam": [
+  "Describe the histologic criteria that differentiate ADH from low‑grade DCIS.",
+  "Explain why ADH confers a 4‑5‑fold increased risk of breast cancer and how this influences management.",
+  "List the recommended surveillance strategy after excision of ADH."
+ ],
+ "related": [
+  "Ductal carcinoma in situ (DCIS)",
+  "Flat epithelial atypia",
+  "Atypical lobular hyperplasia",
+  "Breast cancer risk assessment",
+  "BRCA mutation testing",
+  "Chemoprevention in breast disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-14",
+ "reviewed": false
+}
