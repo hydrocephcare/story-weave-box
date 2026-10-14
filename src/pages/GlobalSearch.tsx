@@ -9,6 +9,7 @@ import { useSmartSearch } from "@/hooks/useSmartSearch";
 import { groupSiteHits, type SiteHit } from "@/lib/siteSearch";
 import { CONTENT_TYPES } from "@/lib/academic";
 import { useAccess } from "@/lib/access";
+import { askable, cachedAnswer, FREE_PER_DAY, streamQuickAnswer, usedToday } from "@/lib/quickAnswer";
 import { Answer } from "@/components/ai/AnswerText";
 import { Skeleton } from "@/components/ui/skeleton";
 import Highlight from "@/components/Highlight";
@@ -17,11 +18,6 @@ import HeroAurora from "@/components/HeroAurora";
 import { cn } from "@/lib/utils";
 
 const YEARS = [1, 2, 3, 4, 5, 6];
-const FREE_PER_DAY = 12;
-const dayKey = () => `ompath_search_ai_${new Date().toISOString().slice(0, 10)}`;
-const usedToday = () => { try { return Number(localStorage.getItem(dayKey()) ?? 0); } catch { return 0; } };
-const spend = () => { try { localStorage.setItem(dayKey(), String(usedToday() + 1)); } catch { /* ignore */ } };
-
 /** A short answer to what was searched, written from the site's own results first. Asked once per search, remembered for the session. */
 function QuickAnswer({ q, hits, ready }: { q: string; hits: SiteHit[]; ready: boolean }) {
   const { hasPass } = useAccess();
@@ -30,33 +26,14 @@ function QuickAnswer({ q, hits, ready }: { q: string; hits: SiteHit[]; ready: bo
   const done = useRef("");
   useEffect(() => {
     const query = q.trim();
-    if (!ready || query.length < 4 || /^[A-Za-z]{3,4}\s?\d{3,4}/.test(query) || done.current === query) return;
-    const cached = (() => { try { return sessionStorage.getItem(`ompath_qa_${query.toLowerCase()}`); } catch { return null; } })();
+    if (!ready || !askable(query) || done.current === query) return;
+    const cached = cachedAnswer(query);
     done.current = query;
     if (cached) { setText(cached); setState("done"); return; }
     if (!hasPass && usedToday() >= FREE_PER_DAY) { setText(""); setState("limit"); return; }
     const ctl = new AbortController();
     setText(""); setState("busy");
-    (async () => {
-      try {
-        const sources = hits.slice(0, 5).map((h) => ({ kind: "site", title: h.title, subtitle: h.subtitle, snippet: (h.snippet ?? "").slice(0, 900) }));
-        const r = await fetch("/api/ai-chat", { method: "POST", signal: ctl.signal, headers: { "content-type": "application/json" }, body: JSON.stringify({ question: `Explain "${query}" for a medical student in five short bullet points. Start with what it is. Use the site's notes first.`, history: [], sources }) });
-        if (!r.ok || !r.body) throw new Error("off");
-        const reader = r.body.getReader(); const dec = new TextDecoder();
-        let buf = "", out = "";
-        for (;;) {
-          const { done: end, value } = await reader.read();
-          if (end) break;
-          buf += dec.decode(value, { stream: true });
-          const lines = buf.split("\n"); buf = lines.pop() ?? "";
-          for (const l of lines) { const d = l.trim(); if (!d.startsWith("data:")) continue; const p = d.slice(5).trim(); if (!p || p === "[DONE]") continue; try { const piece = JSON.parse(p)?.choices?.[0]?.delta?.content; if (piece) { out += piece; setText(out); } } catch { /* partial */ } }
-        }
-        if (!out.trim()) throw new Error("empty");
-        spend();
-        try { sessionStorage.setItem(`ompath_qa_${query.toLowerCase()}`, out); } catch { /* ignore */ }
-        setState("done");
-      } catch (e) { if ((e as Error).name !== "AbortError") setState("off"); }
-    })();
+    streamQuickAnswer(query, hits, ctl.signal, setText).then(() => setState("done")).catch((e) => { if ((e as Error).name !== "AbortError") setState("off"); });
     return () => ctl.abort();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [q, ready]);

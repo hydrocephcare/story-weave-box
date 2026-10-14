@@ -12,6 +12,9 @@ import { openAI } from "@/lib/aiEvents";
 import { useMyYear } from "@/hooks/useMyYear";
 import { parseQuery } from "@/lib/ompathAiQuery";
 import OmpathMark from "@/components/ai/OmpathMark";
+import { Answer } from "@/components/ai/AnswerText";
+import { useAccess } from "@/lib/access";
+import { askable, cachedAnswer, FREE_PER_DAY, streamQuickAnswer, usedToday } from "@/lib/quickAnswer";
 
 
 const RECENT_KEY = "ompath_recent_searches";
@@ -35,6 +38,24 @@ export default function SearchPalette() {
   const { hits, loading, searched } = useSiteSearch(q, { prefer: myYear }, open);
   const topic = useMemo(() => parseQuery(q).topic || q.trim(), [q]);
   const askAi = useCallback((question: string) => { setOpen(false); setQ(""); window.setTimeout(() => openAI(question), 60); }, []);
+
+  // a short answer under the search box, written after a short pause in typing (never on every key)
+  const { hasPass } = useAccess();
+  const [qa, setQa] = useState<{ q: string; text: string; busy: boolean } | null>(null);
+  const hitsRef = useRef(hits); hitsRef.current = hits;
+  useEffect(() => {
+    const query = q.trim();
+    if (!open || !askable(query) || !searched || loading) { if (!askable(query)) setQa(null); return; }
+    const cached = cachedAnswer(query);
+    if (cached) { setQa({ q: query, text: cached, busy: false }); return; }
+    if (!hasPass && usedToday() >= FREE_PER_DAY) { setQa(null); return; }
+    const ctl = new AbortController();
+    const t = setTimeout(() => {
+      setQa({ q: query, text: "", busy: true });
+      streamQuickAnswer(query, hitsRef.current, ctl.signal, (text) => setQa({ q: query, text, busy: true })).then((text) => setQa({ q: query, text, busy: false })).catch((e) => { if ((e as Error).name !== "AbortError") setQa(null); });
+    }, 900);
+    return () => { clearTimeout(t); ctl.abort(); };
+  }, [q, open, searched, loading, hasPass]);
 
   const shown = useMemo(() => hits.slice(0, 24), [hits]);
   const groups = useMemo(() => groupSiteHits(shown), [shown]);
@@ -125,6 +146,12 @@ export default function SearchPalette() {
               <div className="mt-1.5 flex flex-wrap gap-1.5 px-1">
                 {[`10 mcqs on ${topic}`, `Essay questions on ${topic}`, `Explain ${topic}`].map((c) => <button key={c} type="button" onClick={() => askAi(c)} className="rounded-full border border-primary/30 bg-background px-2.5 py-1 text-[11px] font-bold text-primary hover:bg-primary/10">{c.length > 44 ? `${c.slice(0, 43)}…` : c}</button>)}
               </div>
+            </div>
+          )}
+          {qa && qa.q === q.trim() && (
+            <div className="mx-3 mb-2 rounded-xl border border-border bg-background p-3" aria-label="Quick answer">
+              <p className="mb-1.5 text-[10px] font-bold uppercase tracking-wider text-primary">Quick answer</p>
+              {qa.text ? <div className="text-sm text-foreground/90"><Answer text={qa.text} /></div> : <div className="space-y-2" role="status" aria-label="Writing the answer"><div className="h-3 w-full animate-pulse rounded bg-muted" /><div className="h-3 w-5/6 animate-pulse rounded bg-muted" /><div className="h-3 w-2/3 animate-pulse rounded bg-muted" /></div>}
             </div>
           )}
           {q.trim().length < 2 ? null : searched && flat.length === 0 ? (
