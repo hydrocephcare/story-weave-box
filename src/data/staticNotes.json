@@ -1911,5 +1911,25 @@
     "description": "Ectopic pregnancy: sites, risk factors, presentation, ultrasound and hCG, differential diagnosis, methotrexate criteria, surgery and follow-up, with practice questions.",
     "updated": "2026-10-13",
     "file": "src/content/notes/obstetrics-ectopic-pregnancy.md"
+  },
+  {
+    "slug": "year-4-imed-revision-roadmap",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Revision roadmap",
+    "title": "Year 4 Internal Medicine: Exam Revision Roadmap",
+    "description": "A structured, clinical-case-focused revision sequence for Year 4 IMED: respiratory, cardiovascular, infectious disease, renal, gastroenterology, haematology, neurology, endocrine, rheumatology and cross-cutting emergencies, with a method for answering cases.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/imed-year-4-revision-roadmap.md"
+  },
+  {
+    "slug": "cardio-approach-to-cardiovascular-symptoms-and-examination",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Cardiovascular",
+    "title": "Approach to Cardiovascular Symptoms and Examination",
+    "description": "Year 4 IMED clinical method: red flags, focused cardiovascular history, bedside examination, first-line investigations and three clinical cases linking heart failure, acute coronary syndrome and infective endocarditis.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/cardio-approach-to-cardiovascular-symptoms-and-examination.md"
   }
 ]
