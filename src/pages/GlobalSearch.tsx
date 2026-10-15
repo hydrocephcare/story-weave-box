@@ -88,6 +88,7 @@ export default function GlobalSearch() {
   const hasFilters = year || contentType;
   const chip = (on: boolean) => cn("h-9 shrink-0 rounded-full border px-4 text-sm font-semibold transition", on ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/60");
 
+    const readAbout = topicHits.length === 0 && Boolean(topicIndex) && q.trim().length >= 4 && /^[A-Za-z][A-Za-z0-9 '’()\-,./&]{3,70}$/.test(q.trim());
   return (
     <main>
       <Helmet><title>Search Medical Study Resources | Ompath Study</title><meta name="robots" content="noindex,follow" /></Helmet>
@@ -142,7 +143,7 @@ export default function GlobalSearch() {
 
         {loading && !hits.length ? (
           <div className="mt-10 space-y-8">{[1, 2].map((g) => <div key={g}><Skeleton className="mb-3 h-7 w-40" /><Skeleton className="mb-2 h-5 w-full" /><Skeleton className="mb-2 h-5 w-5/6" /></div>)}</div>
-        ) : searched && hits.length === 0 && topicHits.length > 0 ? null : searched && hits.length === 0 ? (
+        ) : searched && hits.length === 0 && (topicHits.length > 0 || readAbout) ? null : searched && hits.length === 0 ? (
           <div className="mt-12">
             <p className="font-serif text-2xl font-bold">Nothing found for “{q}”{hasFilters ? " with these filters" : ""}</p>
             <p className="mt-2 text-[16px] text-muted-foreground">Try a broader medical term or a course code{hasFilters ? <>, or <button type="button" onClick={() => { setYear(""); setContentType(""); }} className="font-semibold text-primary hover:underline">clear the filters</button></> : ", or check the spelling"}.</p>
