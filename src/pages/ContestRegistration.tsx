@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useState } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Award, BellRing, CheckCircle2, Loader2, LockKeyhole, School, ShieldCheck, Trophy } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { CONTEST_RULES } from "@/lib/contest";
@@ -10,6 +10,7 @@ import ContestCalendarActions from "@/components/ContestCalendarActions";
 
 export default function ContestRegistrationPage() {
   const { slug = "" } = useParams();
+  const [search] = useSearchParams();
   const { user, loading: authLoading } = useAuth();
   const [contest, setContest] = useState<ContestRecord | null>(null);
   const [universities, setUniversities] = useState<ContestUniversity[]>([]);
@@ -33,6 +34,8 @@ export default function ContestRegistrationPage() {
     Promise.all([getContestBySlug(slug), loadContestPlatform()]).then(async ([record, platform]) => {
       setContest(record);
       setUniversities(platform.universities);
+      const wanted = platform.universities.find((u) => u.slug === search.get("university"));
+      if (wanted) setUniversityId((cur) => cur || wanted.id);
       if (record) {
         setRounds(await loadContestRounds(record.id));
         if (user) { const entry = await getMyContestRegistration(record.id, user.id); setRegistration(entry); if (entry) setAttempts(await loadMyContestAttempts(entry.id)); }
