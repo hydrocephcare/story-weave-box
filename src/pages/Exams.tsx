@@ -183,8 +183,7 @@ export default function Exams() {
         <div className="mx-auto max-w-6xl">
           <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.16em] text-primary"><Trophy className="h-3.5 w-3.5" aria-hidden /> Timed exams</p>
           <h1 className="mt-1 font-serif text-3xl font-bold text-foreground sm:text-5xl">Exam Center</h1>
-          <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">Timed multiple-choice exams from your unit content, marked at the end with the answers explained. {loading ? "" : `${examSets.length + 1} exams available.`}</p>
-          <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700 dark:border-rose-900/40 dark:bg-rose-950/20 dark:text-rose-300"><Heart className="h-3.5 w-3.5" aria-hidden /> Each exam is KES {examPrice}; it keeps Ompath Study free for health students.</p>
+          <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">Timed multiple-choice exams from your units. You get your score and the answers at the end. {loading ? "" : `${examSets.length + 1} exams available.`}</p>
           <ContentCredit />
         </div>
       </section>
@@ -198,12 +197,6 @@ export default function Exams() {
           <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search exams, e.g. pathology, physiology" aria-label="Search exams" className="max-w-sm" />
           <span className="text-sm text-muted-foreground">{loading ? "" : `${allExams.length} shown`}</span>
         </div>
-        {unitChips.length > 1 && (
-          <div className="mt-3 flex gap-2 overflow-x-auto pb-1" role="group" aria-label="Unit">
-            <button type="button" onClick={() => setUnitPick(null)} aria-pressed={!unitPick} className={chip(!unitPick)}>Every unit</button>
-            {unitChips.map(([u, n]) => <button key={u} type="button" onClick={() => setUnitPick(unitPick === u ? null : u)} aria-pressed={unitPick === u} className={chip(unitPick === u)}>{u} <span className="text-xs opacity-70">{n}</span></button>)}
-          </div>
-        )}
       </section>
 
       <section className="mx-auto max-w-6xl space-y-4 px-4 py-6">
@@ -218,20 +211,10 @@ export default function Exams() {
               const unitName = inferUnit(exam);
               const yearTag = getYearFromCategory(exam.category);
               return (
-                <article key={exam.id} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md">
-                  <div className="h-1.5 bg-gradient-to-r from-primary via-primary/60 to-violet-400" aria-hidden />
-                  <div className="flex flex-1 flex-col p-4 sm:p-5">
-                    <div className="mb-2 flex flex-wrap items-center gap-1.5">
-                      <span className="rounded-md bg-primary/10 px-2 py-0.5 text-[11px] font-bold text-primary">{unitName}</span>
-                      {yearTag && <span className="rounded-md bg-secondary px-2 py-0.5 text-[11px] font-semibold text-muted-foreground">{yearTag}</span>}
-                    </div>
-                    <h2 className="font-serif text-lg font-bold leading-snug text-foreground">{exam.title}</h2>
-                    <p className="mt-2 flex items-center gap-3 text-xs font-semibold text-muted-foreground"><span className="inline-flex items-center gap-1"><Clock className="h-3.5 w-3.5" aria-hidden /> Timed</span><span className="inline-flex items-center gap-1"><CheckCircle className="h-3.5 w-3.5" aria-hidden /> Marked with answers</span></p>
-                    <div className="mt-auto flex items-center justify-between pt-4">
-                      <span className="rounded-full border border-border px-2.5 py-0.5 text-[11px] font-bold">FREE</span>
-                      <Button size="sm" onClick={() => navigate(isSample ? `/exams/${exam.id}/start` : buildExamPath(exam))} className="gap-1.5">Start exam <ArrowRight className="h-3.5 w-3.5" /></Button>
-                    </div>
-                  </div>
+                <article key={exam.id} className="exam-simple flex flex-col rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/50">
+                  <p className="text-xs font-bold uppercase tracking-wider text-primary">{unitName}{yearTag ? ` · ${yearTag}` : ""}</p>
+                  <h2 className="mt-1 font-serif text-lg font-bold leading-snug text-foreground">{exam.title}</h2>
+                  <div className="mt-auto pt-4"><Button size="sm" onClick={() => navigate(isSample ? `/exams/${exam.id}/start` : buildExamPath(exam))} className="gap-1.5">Start exam <ArrowRight className="h-3.5 w-3.5" /></Button></div>
                 </article>
               );
             })}
