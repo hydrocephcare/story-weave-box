@@ -244,8 +244,8 @@ function StaticNoteView() {
         )}
         <div className="w-full min-w-0">
         {railOn && parsed && (
-          <div className="note-toolbar sticky top-[4.25rem] z-20 -mx-1 mb-6 overflow-hidden rounded-xl border border-border bg-background/90 shadow-sm backdrop-blur print:hidden">
-            <div className="flex flex-wrap items-center gap-1.5 px-2 py-1.5 text-xs font-bold">
+          <div className="note-toolbar sticky top-14 z-20 -mx-1 mb-5 overflow-hidden rounded-xl border border-border bg-background/95 shadow-sm backdrop-blur print:hidden sm:top-[4.25rem]">
+            <div className="no-scrollbar flex flex-nowrap items-center gap-1 overflow-x-auto whitespace-nowrap px-2 py-1.5 text-xs font-bold">
               <button type="button" onClick={toggleFinished} aria-pressed={finished} className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 transition-colors ${finished ? "bg-emerald-600 text-white" : "hover:bg-muted"}`}><Check className="h-3.5 w-3.5" aria-hidden /> {finished ? "Finished" : "Finish"}</button>
               <button type="button" onClick={() => { toggleSaved(railUser?.id, note.slug); setSavedTick((n) => n + 1); }} aria-pressed={saved} className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 transition-colors ${saved ? "bg-primary/10 text-primary" : "hover:bg-muted"}`}><Bookmark className={`h-3.5 w-3.5 ${saved ? "fill-current" : ""}`} aria-hidden /> {saved ? "Saved" : "Save"}</button>
               <button type="button" onClick={() => openAI(`Quiz me on ${note.title}`)} className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 hover:bg-muted"><Sparkles className="h-3.5 w-3.5" aria-hidden /> Ask AI</button>
@@ -254,7 +254,7 @@ function StaticNoteView() {
                 <button type="button" onClick={() => setFontStep((n) => Math.max(-2, n - 1))} className="px-2.5 py-1.5 hover:bg-muted" aria-label="Smaller text">A-</button>
                 <button type="button" onClick={() => setFontStep((n) => Math.min(4, n + 1))} className="px-2.5 py-1.5 hover:bg-muted" aria-label="Larger text">A+</button>
               </span>
-              <span className="ml-auto pr-2 text-muted-foreground">{finished ? "Finished" : `${spy.progress}% read`}</span>
+              <span className="ml-auto hidden shrink-0 pl-2 pr-2 text-muted-foreground sm:inline">{finished ? "Finished" : `${spy.progress}% read`}</span>
             </div>
             <div className="h-0.5 bg-muted" role="progressbar" aria-valuenow={spy.progress} aria-valuemin={0} aria-valuemax={100} aria-label="How far down this note you are"><div className="h-full bg-primary transition-[width] duration-200" style={{ width: `${finished ? 100 : spy.progress}%` }} /></div>
           </div>

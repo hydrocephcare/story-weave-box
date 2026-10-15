@@ -7,9 +7,13 @@ export interface WebImage { u: string; full: string; title: string; credit: stri
 export interface WebMedia { title: string; description: string; extract: string; intro: string; sections: { h: string; p: string[] }[]; url: string; hero: WebImage | null; more: WebImage[] }
 
 const API = "https://en.wikipedia.org/w/api.php";
-const CACHE = "ompath_webmedia_v4";
+const CACHE = "ompath_webmedia_v5";
 const DAY = 86_400_000;
 const SKIP_FILE = /icon|logo|symbol|ambox|flag|commons-|wikidata|wikiquote|wiktionary|edit-|stub|portal|question|disambig|padlock|folder|nuvola|crystal|office-book|speaker|loudspeaker|button|arrow|red_pencil|merge|increase|decrease|steady|pictogram|map_of|\.ogg|\.ogv|\.webm|\.tif|\.pdf/i;
+// a picture found by searching must look clinical, and must not be about the military, buildings, ceremonies or groups of people
+const NOT_CLINICAL = /air force|army|navy|military|squadron|\bbase\b|troops?|soldier|veteran|ceremon|ribbon|opening of|celebrat|\bgroup\b|staff|team|building|campus|hospital (entrance|exterior)|facility|award|graduat|portrait|president|general\b|colonel|captain/i;
+const CLINICAL = /x-?ray|radiograph|ct\b|mri|scan|ultrasound|histolog|patholog|microscop|stain|biopsy|specimen|anatom|diagram|illustration|lesion|rash|clinical|patient|disease|syndrome|infection|tumou?r|cancer|lung|heart|liver|kidney|brain|blood|cell|bacteri|virus|parasite|drug|ecg|ekg|angiogra|endoscop|gross/i;
+const clinicalPic = (t: string, file: string) => !NOT_CLINICAL.test(`${t} ${file}`) && CLINICAL.test(`${t} ${file}`);
 const OK_LICENCE = /^(cc[- ]|public domain|pd|attribution|gfdl)/i;
 
 const strip = (h: string) => h.replace(/<[^>]+>/g, "").replace(/&amp;/g, "&").replace(/&#039;|&quot;/g, "'").replace(/\s+/g, " ").trim();
@@ -111,7 +115,7 @@ export async function loadWebMedia(names: string[]): Promise<WebMedia | null> {
       // Wikipedia reuses stock pictures of neighbouring conditions; keep those only when the file name mentions this topic
       const files = (first?.images ?? []).map((x) => x.title).filter((t) => !SKIP_FILE.test(t) && (!/blausen|medical gallery/i.test(t) || words.some((w) => t.toLowerCase().includes(w))));
       const lead = article.original?.source ? article.original.source.split("/").pop() : "";
-      const gallery = await describeFiles(files.slice(0, 14)).catch(() => []);
+      const gallery = (await describeFiles(files.slice(0, 14)).catch(() => [])).filter((g) => !NOT_CLINICAL.test(`${g.title} ${g.u}`));
       const heroSrc = article.thumbnail?.source ?? null;
       const heroFile = gallery.find((g) => lead && decodeURIComponent(g.full).includes(decodeURIComponent(lead)));
       const hero: WebImage | null = heroFile ?? (heroSrc ? { u: heroSrc, full: article.original?.source ?? heroSrc, title: article.title, credit: "", licence: "free licence", page: article.fullurl ?? "https://commons.wikimedia.org" } : null);
@@ -142,7 +146,8 @@ export async function loadWebMedia(names: string[]): Promise<WebMedia | null> {
         if (!i || !/^image\/(jpeg|png)/.test(i.mime ?? "") || i.width < 300 || !OK_LICENCE.test(licence)) continue;
         pics.push({ u: i.thumburl ?? i.url, full: i.url, title: (strip(i.extmetadata?.ImageDescription?.value ?? "") || p.title.replace(/^File:/, "").replace(/\.[a-z]+$/i, "").replace(/_/g, " ")).slice(0, 140), credit: strip(i.extmetadata?.Artist?.value ?? "Wikimedia Commons").slice(0, 80), licence, page: i.descriptionurl });
       }
-      if (pics.length) result = { title: names[0], description: "", extract: "", intro: "", sections: [], url: "https://commons.wikimedia.org", hero: pics[0], more: pics.slice(1, 7) };
+      const clinical = pics.filter((p) => clinicalPic(p.title, p.u));
+      if (clinical.length) result = { title: names[0], description: "", extract: "", intro: "", sections: [], url: "https://commons.wikimedia.org", hero: clinical[0], more: clinical.slice(1, 7) };
     }
   } catch { result = null; }
 
