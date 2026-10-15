@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AlertTriangle, Check, ExternalLink, History, ListChecks, Loader2, MessageCircle, Pencil, Plus, Send, Sparkles, Trash2, Undo2, Wand2, X, Zap } from "lucide-react";
+import { AlertTriangle, Check, ExternalLink, FileText, History, ListChecks, Loader2, MessageCircle, Mic, MicOff, Plus, Send, Sparkles, Trash2, Undo2, Wand2, X, Zap } from "lucide-react";
+import { runSiteHealth } from "@/lib/adminHealth";
 import { supabase } from "@/integrations/supabase/client";
 import { recentProblems } from "@/lib/adminProblems";
 import { agentContext, askAgent, describe, loadAgentWorld, runAction, runReadOnly, type ActionResult, type AgentAction, type AgentWorld, type PlanItem } from "@/lib/adminAgent";
@@ -13,12 +14,15 @@ type Item =
   | { kind: "result"; result: ActionResult }
   | { kind: "ask"; question: string; options: string[]; answered?: string }
   | { kind: "draft"; draft: Draft; state: DraftState; fresh?: boolean };
-const READ_ONLY = new Set(["seo_scan", "site_stats", "contest_report", "find_content", "notification_report"]);
+const READ_ONLY = new Set(["seo_scan", "site_stats", "contest_report", "find_content", "notification_report", "site_health"]);
+const LONG_PASTE = 400; // a paste longer than this becomes an attachment, like in ChatGPT, so you can type your instruction beside it
+const STATUS_STYLE = { good: "border-emerald-500/40 bg-emerald-500/10", warn: "border-amber-500/40 bg-amber-500/10", bad: "border-red-500/40 bg-red-500/10" } as const;
+const STATUS_DOT = { good: "bg-emerald-500", warn: "bg-amber-500", bad: "bg-red-500" } as const;
 const DRAFTERS = new Set(["publish_note", "make_mcqs", "create_flashcards", "write_article"]);
 const ALWAYS_ASK = new Set(["send_notification", "delete_contest", "remove_item"]);
 const IDEAS = [
-  "What can I do on this page?", "Explain the last error and fix it", "Check my posts for SEO problems", "Clean my notification bell",
-  "Make a UoN vs MKU contest tomorrow at 8pm", "Write a note on nephrotic syndrome", "How many visitors this week?", "I will paste notes: polish them and publish",
+  "How is my site doing? Is it growing?", "Check everything and fix what you can", "Explain the last error and fix it", "Check my posts for SEO problems",
+  "Make a UoN vs MKU contest tomorrow at 8pm", "Write a note on nephrotic syndrome", "Clean my notification bell", "I will paste notes: polish them and publish",
 ];
 const plain = (md: string) => md.replace(/^#+\s*/gm, "").replace(/[*_`>|]/g, "").replace(/\n{2,}/g, "\n");
 const when = (iso: string) => new Intl.DateTimeFormat("en-KE", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit", timeZone: "Africa/Nairobi" }).format(new Date(iso));
@@ -38,6 +42,9 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
   const [busy, setBusy] = useState(false);
   const [plan, setPlan] = useState<PlanItem[] | null>(null);
   const [error, setError] = useState("");
+  const [attachments, setAttachments] = useState<string[]>([]);
+  const [listening, setListening] = useState(false);
+  const recognition = useRef<any>(null);
   const [revising, setRevising] = useState<number | null>(null);
   const [revision, setRevision] = useState("");
   const end = useRef<HTMLDivElement>(null);
@@ -95,21 +102,38 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
     if (rest.length) setPlan(rest);
   }
 
+  // voice: the browser turns speech into text in the box (Chrome, Edge, Safari; the phone keyboard's own microphone also works)
+  function toggleMic() {
+    const SR = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (!SR) { setError("Voice typing is not available in this browser. Use the microphone on your keyboard instead."); return; }
+    if (listening) { recognition.current?.stop(); return; }
+    const r = new SR(); r.lang = "en-KE"; r.interimResults = true; r.continuous = true;
+    const base = text ? `${text} ` : "";
+    r.onresult = (e: any) => { let t = ""; for (let i = 0; i < e.results.length; i++) t += e.results[i][0].transcript; setText(base + t); };
+    r.onerror = (e: any) => { setListening(false); if (e.error === "not-allowed") setError("Allow the microphone for this site, then try again."); };
+    r.onend = () => setListening(false);
+    recognition.current = r; setListening(true); r.start();
+  }
+
   async function send(message: string) {
-    if (!message.trim() || !world || busy) return;
-    const raw = message.trim();
+    const typed = message.trim(); const att = attachments.join("\n\n").trim();
+    if ((!typed && !att) || !world || busy) return;
+    recognition.current?.stop();
+    const raw = typed || "Polish these notes and publish them.";
+    const source = att || raw; // the text the writing jobs work on
+    const intent = att ? `${raw} [pasted text attached: ${att.length} characters, beginning "${att.slice(0, 160).replace(/\s+/g, " ")}"]` : raw;
     setBusy(true); setError(""); setPlan(null);
     const sent = history();
-    push({ kind: "text", role: "user", content: raw.length > 900 ? `${raw.slice(0, 900)}…\n(${raw.length.toLocaleString()} characters pasted)` : raw }); setText("");
+    push({ kind: "text", role: "user", content: `${raw.length > 900 ? `${raw.slice(0, 900)}…` : raw}${att ? `\n📎 Pasted text · ${att.length.toLocaleString()} characters` : ""}` }); setText(""); setAttachments([]);
     try {
-      const out = await askAgent(raw.slice(0, 2000), sent, { ...agentContext(world), page: pathname, problems: recentProblems() });
+      const out = await askAgent(intent.slice(0, 2000), sent, { ...agentContext(world), page: pathname, problems: recentProblems() });
       const add: Item[] = [];
       if (out.reply) add.push({ kind: "text", role: "assistant", content: out.reply });
       if (out.ask) add.push({ kind: "ask", question: out.ask.question, options: out.ask.options });
       const nav = out.actions.find((a) => a.tool === "go_to" && /^\/admin(\/[a-z0-9-]+)*$/.test(String(a.args?.path)));
       if (nav) navigate(String(nav.args.path));
       for (const a of out.actions.filter((x) => READ_ONLY.has(x.tool))) {
-        try { const r = await runReadOnly(a as AgentAction, world); if (r) add.push({ kind: "result", result: r }); }
+        try { const r = a.tool === "site_health" ? await runSiteHealth() : await runReadOnly(a as AgentAction, world); if (r) add.push({ kind: "result", result: r }); }
         catch (e: any) { add.push({ kind: "text", role: "assistant", content: `I could not read that: ${e?.message || "error"}` }); }
       }
       // writing jobs: draft first, you approve (or Auto-run publishes it, with an Undo)
@@ -119,10 +143,10 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
         try {
           const prior = [...feed].reverse().find((i) => i.kind === "draft" && i.draft.type === "note") as Extract<Item, { kind: "draft" }> | undefined;
           const fromNote = a.args?.from === "note";
-          const base = fromNote ? (lastNote?.content || (prior?.draft as NoteDraft | undefined)?.content || raw) : raw;
+          const base = fromNote ? (lastNote?.content || (prior?.draft as NoteDraft | undefined)?.content || source) : source;
           const noteTitle = lastNote?.title || (prior?.draft as NoteDraft | undefined)?.title || "";
           let d: Draft;
-          if (a.tool === "publish_note") { d = await draftNote(raw, { title: a.args?.title, category: a.args?.category, year: a.args?.year ?? null }, world.categories); lastNote = d; }
+          if (a.tool === "publish_note") { d = await draftNote(source, { title: a.args?.title, category: a.args?.category, year: a.args?.year ?? null }, world.categories); lastNote = d; }
           else if (a.tool === "write_article") { d = await draftArticle(String(a.args?.topic || raw), { category: a.args?.category, year: a.args?.year ?? null }, world.categories); lastNote = d as NoteDraft; }
           else if (a.tool === "make_mcqs") d = await draftMcqs(base, Number(a.args?.count) || 10, String(a.args?.title || (noteTitle ? `MCQs: ${noteTitle}` : "MCQ practice")), String(a.args?.category || lastNote?.category || ""));
           else d = await draftCards(base, Number(a.args?.count) || 15, String(a.args?.title || (noteTitle ? `Flashcards: ${noteTitle}` : "Flashcards")), String(a.args?.category || lastNote?.category || ""));
@@ -230,6 +254,18 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
                 {r.thumb && <img src={r.thumb} alt="" loading="lazy" className="aspect-[40/21] w-full object-cover" />}
                 <div className="px-3 py-2">
                   <p className="whitespace-pre-line break-words">{r.partial ? <AlertTriangle className="mr-1 inline h-4 w-4 text-amber-600" /> : <Check className="mr-1 inline h-4 w-4 text-primary" />}{r.text}</p>
+                  {r.health && (
+                    <div className="mt-2 space-y-2">
+                      <div className="flex items-center gap-3"><div className="relative h-2 flex-1 overflow-hidden rounded-full bg-muted"><div className={`h-full ${r.health.score >= 80 ? "bg-emerald-500" : r.health.score >= 60 ? "bg-amber-500" : "bg-red-500"}`} style={{ width: `${r.health.score}%` }} /></div><span className="text-xs font-bold">{r.health.score}%</span></div>
+                      {r.health.sections.map((sec) => (
+                        <div key={sec.title} className={`rounded-lg border p-2 ${STATUS_STYLE[sec.status]}`}>
+                          <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide"><span className={`h-2 w-2 rounded-full ${STATUS_DOT[sec.status]}`} />{sec.title}</p>
+                          <ul className="mt-1 space-y-0.5 text-xs">{sec.lines.map((l, li) => <li key={li}>{l}</li>)}</ul>
+                        </div>
+                      ))}
+                      {r.fixes?.length ? <button type="button" disabled={busy || !world} onClick={() => world && setPlan(describe(r.fixes as AgentAction[], world))} className={`${btn} w-full bg-primary text-primary-foreground`}><Wand2 className="h-4 w-4" /> Fix everything I can ({r.fixes.length})</button> : null}
+                    </div>
+                  )}
                   {(r.links?.length || r.undo) && (
                     <div className="mt-2 flex flex-wrap gap-2">
                       {r.links?.map((l) => l.external
@@ -295,9 +331,25 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
         <div ref={end} />
       </div>
       {error && <p className="mt-2 shrink-0 rounded-lg border border-destructive/40 bg-destructive/10 p-2 text-sm">{error}</p>}
+      {attachments.length > 0 && (
+        <div className="mt-2 flex shrink-0 flex-wrap gap-2">
+          {attachments.map((a, i) => (
+            <span key={i} className="inline-flex max-w-full items-center gap-2 rounded-lg border bg-muted px-2.5 py-1.5 text-xs">
+              <FileText className="h-4 w-4 shrink-0 text-primary" /><span className="min-w-0 truncate"><strong>Pasted text</strong> · {a.length.toLocaleString()} characters · {a.slice(0, 40).replace(/\s+/g, " ")}…</span>
+              <button type="button" aria-label="Remove the pasted text" onClick={() => setAttachments((l) => l.filter((_, k) => k !== i))} className="rounded p-1 hover:bg-background"><X className="h-3.5 w-3.5" /></button>
+            </span>
+          ))}
+        </div>
+      )}
       <form className="mt-2 flex shrink-0 items-end gap-2 pb-[env(safe-area-inset-bottom)]" onSubmit={(e) => { e.preventDefault(); void send(text); }}>
-        <textarea value={text} onChange={(e) => setText(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey && text.length < 400 && window.matchMedia("(hover: hover)").matches) { e.preventDefault(); void send(text); } }} rows={text.length > 120 ? 6 : 2} disabled={!world || busy} placeholder={world ? "Ask, or paste notes…" : "Loading your data…"} className="min-w-0 flex-1 resize-none rounded-lg border bg-background px-3 py-2.5 text-base sm:text-sm" />
-        <button type="submit" disabled={!text.trim() || !world || busy} aria-label="Send" className="flex min-h-11 min-w-11 items-center justify-center rounded-lg bg-primary text-primary-foreground disabled:opacity-40"><Send className="h-4 w-4" /></button>
+        <textarea value={text} onChange={(e) => setText(e.target.value)}
+          onPaste={(e) => { const t = e.clipboardData.getData("text"); if (t.length > LONG_PASTE) { e.preventDefault(); setAttachments((l) => [...l, t.trim()]); } }}
+          onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey && window.matchMedia("(hover: hover)").matches) { e.preventDefault(); void send(text); } }}
+          rows={text.length > 120 ? 5 : 2} disabled={!world || busy}
+          placeholder={world ? (attachments.length ? "Tell me what to do with the pasted text…" : listening ? "Listening… speak now" : "Ask, speak, or paste notes…") : "Loading your data…"}
+          className="min-w-0 flex-1 resize-none rounded-lg border bg-background px-3 py-2.5 text-base sm:text-sm" />
+        <button type="button" onClick={toggleMic} disabled={!world || busy} aria-label={listening ? "Stop listening" : "Speak instead of typing"} className={`flex min-h-11 min-w-11 items-center justify-center rounded-lg border disabled:opacity-40 ${listening ? "animate-pulse border-red-500 bg-red-500 text-white" : "hover:bg-muted"}`}>{listening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}</button>
+        <button type="submit" disabled={(!text.trim() && !attachments.length) || !world || busy} aria-label="Send" className="flex min-h-11 min-w-11 items-center justify-center rounded-lg bg-primary text-primary-foreground disabled:opacity-40"><Send className="h-4 w-4" /></button>
       </form>
     </section>
   );

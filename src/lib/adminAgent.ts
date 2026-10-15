@@ -6,7 +6,7 @@ import {
 import type { ContestStage } from "@/lib/contest";
 import { loadCategories, removeItem } from "@/lib/adminWriter";
 
-export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget"; args: Record<string, any> }
+export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget" | "site_health" | "update_post" | "publish_post" | "restore_post"; args: Record<string, any> }
 export interface AgentContext { memory?: string[]; autorun?: boolean; categories?: string[]; page?: string; problems?: { at: string; what: string }[]; now: string; universities: { slug: string; name: string }[]; exams: string[]; contests: { slug: string; title: string; stage: string }[] }
 export interface PlanItem { action: AgentAction; line: string; danger: boolean; ok: boolean }
 
@@ -59,6 +59,9 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
     if (action.tool === "go_to") return { action, danger: false, ok: /^\/admin(\/[a-z0-9-]+)*$/.test(String(a.path)), line: `Open ${a.path}.` };
     if (action.tool === "set_autopilot_mode") return { action, danger: false, ok: ["approve_access", "daily_digest"].includes(a.key) && ["off", "ask", "auto"].includes(a.mode), line: `Set Autopilot job "${a.key}" to ${a.mode}${a.mode === "auto" ? " (it will act on its own, with an Undo in the log)" : ""}.` };
     if (action.tool === "run_autopilot") return { action, danger: false, ok: true, line: "Run the Autopilot jobs now." };
+    if (action.tool === "update_post") return { action, danger: false, ok: String(a.query || "").trim().length > 1 && Boolean(a.title || a.meta_description || a.category), line: `Change the post matching "${a.query}": ${[a.title && `title → "${a.title}"`, a.meta_description && "search description", a.category && `category → ${a.category}`].filter(Boolean).join(", ")}. The old values are kept so you can undo.` };
+    if (action.tool === "publish_post") return { action, danger: false, ok: String(a.query || "").trim().length > 1, line: `Publish up to 5 unpublished drafts whose title matches "${a.query}".` };
+    if (action.tool === "restore_post") return { action, danger: false, ok: Boolean(a.id), line: `Put "${a.label || "the post"}" back the way it was.` };
     if (action.tool === "clean_notifications") return { action, danger: false, ok: true, line: `Clear your notification bell: mark everything read and remove read ones older than ${Math.max(0, Number(a.days) || 14)} days.` };
     if (action.tool === "send_notification") return { action, danger: true, ok: String(a.title || "").trim().length > 2 && String(a.message || "").trim().length > 2 && ["all_users", "subscribers", "study_year"].includes(a.audience), line: `SEND to ${a.audience === "study_year" ? `Year ${a.year} students` : a.audience === "subscribers" ? "subscribers" : "ALL users"}: "${a.title}" — ${String(a.message).slice(0, 140)}${a.link ? ` (link ${a.link})` : ""}. Students will see it and may get an email.` };
     if (action.tool === "remember") return { action, danger: false, ok: String(a.note || "").trim().length > 2, line: `Remember: "${a.note}".` };
@@ -73,7 +76,9 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
 
 export interface ActionLink { label: string; href: string; external?: boolean }
 /** What happened, plus where to go next. `partial` means it got part of the way and the links continue from there; `undo` is the action that reverses it. */
-export interface ActionResult { thumb?: string; text: string; links?: ActionLink[]; undo?: AgentAction; partial?: boolean }
+export interface HealthSection { title: string; status: "good" | "warn" | "bad"; lines: string[] }
+export interface HealthReport { score: number; sections: HealthSection[] }
+export interface ActionResult { health?: HealthReport; fixes?: AgentAction[]; thumb?: string; text: string; links?: ActionLink[]; undo?: AgentAction; partial?: boolean }
 const SITE = "https://www.ompathstudy.com";
 const wa = (t: string) => `https://wa.me/?text=${encodeURIComponent(t)}`;
 
@@ -84,6 +89,31 @@ export async function runAction(action: AgentAction, w: AgentWorld): Promise<Act
   if (action.tool === "run_autopilot") { const { data, error } = await (supabase as any).rpc("admin_agent_run"); if (error) throw new Error(/schema cache|admin_agent_run/.test(error.message) ? "Run autopilot.sql first." : error.message); return { text: `Autopilot ran: ${data?.approved ?? 0} approved, ${data?.queued ?? 0} waiting for you.`, links: [{ label: "See the log", href: "/admin/autopilot" }] }; }
   if (action.tool === "go_to") return { text: `Opened ${a.path}.` };
   if (action.tool === "seo_fix") return runSeoFix(Number(a.limit) || 10);
+  if (action.tool === "update_post" || action.tool === "publish_post") {
+    const q = String(a.query || "").trim().replace(/[%,()]/g, " ").slice(0, 80);
+    const pub = action.tool === "publish_post";
+    let query = (supabase as any).from("articles").select("id,title,slug,meta_description,category,published").is("deleted_at", null).ilike("title", `%${q}%`).limit(6);
+    query = pub ? query.eq("published", false) : query;
+    const { data, error } = await query;
+    if (error) throw new Error(error.message);
+    if (!data?.length) throw new Error(pub ? `No unpublished draft has "${q}" in its title.` : `No post has "${q}" in its title.`);
+    if (!pub && data.length > 1) throw new Error(`More than one post matches "${q}": ${data.map((r: any) => `"${r.title}"`).slice(0, 4).join(", ")}. Say which one, using more of its title.`);
+    const done: string[] = []; const before: any[] = [];
+    for (const row of pub ? data.slice(0, 5) : data) {
+      const patch: Record<string, unknown> = pub ? { published: true } : { ...(a.title ? { title: String(a.title).slice(0, 120) } : {}), ...(a.meta_description ? { meta_description: String(a.meta_description).slice(0, 160) } : {}), ...(a.category ? { category: String(a.category) } : {}) };
+      const { error: ue } = await (supabase as any).from("articles").update({ ...patch, updated_at: new Date().toISOString() }).eq("id", row.id);
+      if (ue) throw new Error(ue.message);
+      before.push({ id: row.id, title: row.title, meta_description: row.meta_description, category: row.category, published: row.published }); done.push(row.title);
+    }
+    return { text: `${pub ? "Published" : "Updated"} ${done.length}: ${done.map((t) => `"${t}"`).join(", ")}.`, links: [{ label: "Open it", href: `/blog/${data[0].slug || data[0].id}` }], undo: { tool: "restore_post", args: { items: before, label: done[0] } } };
+  }
+  if (action.tool === "restore_post") {
+    for (const it of (a.items || []) as any[]) {
+      const { error: ue } = await (supabase as any).from("articles").update({ title: it.title, meta_description: it.meta_description, category: it.category, published: it.published, updated_at: new Date().toISOString() }).eq("id", it.id);
+      if (ue) throw new Error(ue.message);
+    }
+    return { text: `Put ${(a.items || []).length} post(s) back the way they were.` };
+  }
   if (action.tool === "clean_notifications") {
     const { data, error } = await (supabase as any).rpc("admin_clean_my_notifications", { p_days: Math.max(0, Number(a.days) || 14) });
     if (error) throw new Error(/schema cache|admin_clean/.test(error.message) ? "Run RUN-THESE.sql first." : error.message);
@@ -151,10 +181,10 @@ export async function runAction(action: AgentAction, w: AgentWorld): Promise<Act
 }
 
 // ---- search-engine (SEO) checks on the published posts: read-only scan, and a fixer that keeps the old text so it can be undone
-const PLACEHOLDER = /awaiting edit|source paper|private source/i;
-interface PostRow { id: string; slug: string | null; title: string | null; meta_title: string | null; meta_description: string | null; content?: string | null }
+export const PLACEHOLDER = /awaiting edit|source paper|private source/i;
+export interface PostRow { id: string; slug: string | null; title: string | null; meta_title: string | null; meta_description: string | null; content?: string | null }
 
-async function loadPosts(withContent = false): Promise<PostRow[]> {
+export async function loadPosts(withContent = false): Promise<PostRow[]> {
   const out: PostRow[] = [];
   for (let from = 0; from < 3000; from += 500) {
     const { data, error } = await (supabase as any).from("articles").select(`id,slug,title,meta_title,meta_description${withContent ? ",content" : ""}`).eq("published", true).is("deleted_at", null).order("created_at").range(from, from + 499);

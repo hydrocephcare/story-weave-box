@@ -30,3 +30,17 @@ suite("admin assistant plan", () => {
     expect(del.danger).toBe(true); expect(del.ok).toBe(true); expect(ghost.ok).toBe(false);
   });
 });
+
+suite("admin assistant: more tools", () => {
+  it("describes post edits, publishing and clean-up, and refuses empty ones", () => {
+    const [edit, pub, clean, bad, send] = plan([
+      { tool: "update_post", args: { query: "nephrotic", meta_description: "A clearer description." } },
+      { tool: "publish_post", args: { query: "nephrotic" } },
+      { tool: "clean_notifications", args: { days: 7 } },
+      { tool: "update_post", args: { query: "x" } },
+      { tool: "send_notification", args: { title: "Hello", message: "New notes are up", audience: "all_users" } },
+    ], world);
+    expect(edit.ok).toBe(true); expect(pub.ok).toBe(true); expect(clean.ok).toBe(true); expect(bad.ok).toBe(false);
+    expect(send.danger).toBe(true); expect(send.line).toContain("ALL users");
+  });
+});
