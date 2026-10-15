@@ -72,3 +72,19 @@ describe("note descriptions (shown under the title and in Google)", () => {
     expect(bad).toEqual([]);
   });
 });
+
+describe("practice questions become tappable cards", () => {
+  it("every '### Question N' block that has A. B. C. D. options is rendered as a question card with its answer behind a button", () => {
+    const bad: string[] = [];
+    for (const f of files) {
+      const text = fs.readFileSync(path.join(DIR, f), "utf8").replace(/\r\n/g, "\n");
+      const blocks = text.split(/^###\s+Question\s+\d+\s*$/im).slice(1).filter((b) => /^\s*A\.\s/m.test(b) && /^\s*B\.\s/m.test(b) && /answer/i.test(b));
+      if (!blocks.length) continue;
+      const html = mdToHtml(text, { skipTitle: true, questions: true }).html;
+      const cards = (html.match(/class="qa qa-mcq"/g) ?? []).length;
+      const answers = (html.match(/class="qa-ans"/g) ?? []).length;
+      if (cards < blocks.length || answers < blocks.length) bad.push(`${f}: ${blocks.length} questions, ${cards} cards, ${answers} hidden answers`);
+    }
+    expect(bad).toEqual([]);
+  });
+});

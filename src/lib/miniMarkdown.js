@@ -125,7 +125,8 @@ function mcqBlock(lines, i) {
   const a = k < lines.length ? lines[k].trim().match(ANS) : null;
   if (a) {
     letter = a[1].toUpperCase();
-    if (a[2]) why.push(a[2].replace(/\*+\s*$/, "").replace(/^\*+\s*/, "").replace(/^(?:explanation|rationale)\s*:?\s*/i, ""));
+    const sameAsOption = (t) => { const o = opts.find((x) => x[0] === letter); const n = (v) => String(v ?? "").toLowerCase().replace(/[^a-z0-9]+/g, ""); return Boolean(o) && n(t).length > 0 && n(o[1]).startsWith(n(t).slice(0, 24)); };
+    if (a[2] && !sameAsOption(a[2])) why.push(a[2].replace(/\*+\s*$/, "").replace(/^\*+\s*/, "").replace(/^(?:explanation|rationale)\s*:?\s*/i, ""));
     k++;
     // explanation lines directly after the answer
     while (k < lines.length && lines[k].trim() && !questionStart(lines[k]) && !isBlock(lines[k]) && !OPT.test(lines[k])) {
@@ -139,7 +140,7 @@ function mcqBlock(lines, i) {
   const reveal = letter && letters.includes(letter);
   const optHtml = opts.map(([l, t]) => `<li class="qa-opt" data-l="${l}" role="button" tabindex="0"><span class="qa-l">${l}</span><span>${inline(t.replace(/\*\*/g, ""))}</span></li>`).join("");
   const right = reveal ? opts.find((o) => o[0] === letter)[1].replace(/\*\*/g, "") : "";
-  const explain = why.join(" ").replace(/\s+/g, " ").trim();
+  const explain = why.join(" ").replace(/\*\*/g, "").replace(/\s+/g, " ").trim();
   const ansHtml = reveal
     ? `<details class="qa-ans"><summary>Show answer</summary><div class="qa-a"><p><strong>Answer: ${letter}.</strong> ${inline(right)}</p>${explain ? `<p class="qa-why">${inline(explain)}</p>` : ""}</div></details>`
     : "";
@@ -169,9 +170,31 @@ function recallBlock(lines, i) {
 const CALLOUT = /^\*\*(core rule|remember|key point|key points|exam tip|high yield|high-yield|red flag|red flags|safety|important|mnemonic|clinical pearl|pearl|tip|warning|note)\b[^*]*\*\*/i;
 const CARD_HEADING = /^(key points?|learning objectives?|objectives?|at a glance|high[- ]yield( points)?|summary)$/i;
 
+// "### Question 3" on its own line, then the stem, the options (one per line) and the answer: read as the question "**3.** stem" so it becomes a card
+const QUESTION_HEADING = /^#{3,4}\s+Question\s+(\d{1,3})\s*$/i;
+function foldQuestionHeadings(lines) {
+  const out = [];
+  for (let i = 0; i < lines.length; i++) {
+    const m = lines[i].match(QUESTION_HEADING);
+    if (!m) { out.push(lines[i]); continue; }
+    let j = i + 1;
+    while (j < lines.length && !lines[j].trim()) j++;
+    if (j >= lines.length || isBlock(lines[j]) || LIST.test(lines[j])) { out.push(lines[i]); continue; }
+    // the stem may run over several paragraphs before the first option: join them
+    const stem = [];
+    let k = j;
+    while (k < lines.length && !OPT.test(lines[k]) && !isBlock(lines[k]) && !/^#{2,4}\s/.test(lines[k])) { if (lines[k].trim()) stem.push(lines[k].trim()); k++; }
+    if (k < lines.length && OPT.test(lines[k]) && stem.length) { out.push(`**${m[1]}.** ${stem.join(" ")}`, ""); i = k - 1; continue; }
+    out.push(`**${m[1]}.** ${lines[j].trim()}`);
+    i = j;
+  }
+  return out;
+}
+
 /** Markdown to HTML. Returns { html, headings } where headings lists the ## sections for a table of contents. */
 export function mdToHtml(source, { skipTitle = false, questions = false } = {}) {
-  const lines = String(source).replace(/\r\n/g, "\n").split("\n");
+  let lines = String(source).replace(/\r\n/g, "\n").split("\n");
+  if (questions) lines = foldQuestionHeadings(lines);
   if (skipTitle) { const first = lines.findIndex((l) => l.trim()); if (first >= 0 && /^#\s/.test(lines[first])) lines.splice(first, 1); }
   const out = [];
   const headings = [];
