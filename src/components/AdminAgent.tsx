@@ -1,40 +1,49 @@
 import { useEffect, useRef, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { AlertTriangle, Check, Loader2, Send, Sparkles, X } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AlertTriangle, Check, ExternalLink, Loader2, Send, Sparkles, Undo2, X } from "lucide-react";
 import { recentProblems } from "@/lib/adminProblems";
-import { agentContext, askAgent, describe, loadAgentWorld, runAction, type AgentAction, type AgentWorld, type PlanItem } from "@/lib/adminAgent";
+import { agentContext, askAgent, describe, loadAgentWorld, runAction, runReadOnly, type ActionResult, type AgentAction, type AgentWorld, type PlanItem } from "@/lib/adminAgent";
 
-type Turn = { role: "user" | "assistant"; content: string };
-const IDEAS = ["What can I do on this page?", "Explain the last error and fix it", "Make a UoN vs MKU contest tomorrow at 8pm using a respiratory exam", "Which contests do I have?", "Delete the contest called test", "Open registration for the newest contest"];
+type Item = { kind: "text"; role: "user" | "assistant"; content: string } | { kind: "result"; result: ActionResult };
+const READ_ONLY = new Set(["seo_scan", "site_stats", "contest_report"]);
+const IDEAS = ["What can I do on this page?", "Explain the last error and fix it", "Check my posts for SEO problems", "Make a UoN vs MKU contest tomorrow at 8pm using a respiratory exam", "How many people registered for my newest contest?", "How many visitors this week?"];
 
-/** Admin assistant: you say what you need, it shows exactly what it will do, and nothing runs until you press Yes. */
+/** Admin assistant: you say what you need. Questions are answered straight away; anything that changes something shows what it will do and waits for your Yes. Results come with links and an Undo. */
 export default function AdminAgent({ compact = false }: { compact?: boolean }) {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const [world, setWorld] = useState<AgentWorld | null>(null);
-  const [turns, setTurns] = useState<Turn[]>([]);
+  const [feed, setFeed] = useState<Item[]>([]);
   const [text, setText] = useState("");
   const [busy, setBusy] = useState(false);
   const [plan, setPlan] = useState<PlanItem[] | null>(null);
-  const [results, setResults] = useState<string[]>([]);
   const [error, setError] = useState("");
   const end = useRef<HTMLDivElement>(null);
 
   useEffect(() => { void loadAgentWorld().then(setWorld).catch((e) => setError(e?.message || "Could not load your contests and exams.")); }, []);
-  useEffect(() => { end.current?.scrollIntoView({ block: "nearest" }); }, [turns, plan, results]);
+  useEffect(() => { end.current?.scrollIntoView({ block: "nearest" }); }, [feed, plan]);
+
+  const history = () => feed.filter((i): i is Extract<Item, { kind: "text" }> => i.kind === "text").map((i) => ({ role: i.role, content: i.content }));
 
   async function send(message: string) {
     if (!message.trim() || !world || busy) return;
-    setBusy(true); setError(""); setPlan(null); setResults([]);
-    const next: Turn[] = [...turns, { role: "user", content: message.trim() }];
-    setTurns(next); setText("");
+    setBusy(true); setError(""); setPlan(null);
+    const sent = history();
+    setFeed((f) => [...f, { kind: "text", role: "user", content: message.trim() }]); setText("");
     try {
-      const out = await askAgent(message.trim(), turns, { ...agentContext(world), page: pathname, problems: recentProblems() });
-      setTurns([...next, { role: "assistant", content: out.reply || (out.actions.length ? "Here is what I will do:" : "Done thinking, nothing to do.") }]);
-      // opening a page changes nothing, so it happens straight away; everything else waits for your Yes
+      const out = await askAgent(message.trim(), sent, { ...agentContext(world), page: pathname, problems: recentProblems() });
+      const add: Item[] = [];
+      if (out.reply) add.push({ kind: "text", role: "assistant", content: out.reply });
+      // changes nothing, so it happens straight away: opening a page, and every read-only question
       const nav = out.actions.find((a) => a.tool === "go_to" && /^\/admin(\/[a-z0-9-]+)*$/.test(String(a.args?.path)));
       if (nav) navigate(String(nav.args.path));
-      const rest = out.actions.filter((a) => a.tool !== "go_to");
+      for (const a of out.actions.filter((x) => READ_ONLY.has(x.tool))) {
+        try { const r = await runReadOnly(a as AgentAction, world); if (r) add.push({ kind: "result", result: r }); }
+        catch (e: any) { add.push({ kind: "text", role: "assistant", content: `I could not read that: ${e?.message || "error"}` }); }
+      }
+      if (!add.length) add.push({ kind: "text", role: "assistant", content: out.actions.length ? "Here is what I will do:" : "Nothing to do there." });
+      setFeed((f) => [...f, ...add]);
+      const rest = out.actions.filter((a) => a.tool !== "go_to" && !READ_ONLY.has(a.tool));
       if (rest.length) setPlan(describe(rest, world));
     } catch (e: any) { setError(e?.message || "Something went wrong."); }
     finally { setBusy(false); }
@@ -42,24 +51,42 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
 
   async function confirm() {
     if (!plan || !world) return;
-    setBusy(true); setError(""); const done: string[] = [];
-    try {
-      for (const item of plan) { if (!item.ok) continue; done.push(await runAction(item.action as AgentAction, world)); setResults([...done]); }
-      setPlan(null); setWorld(await loadAgentWorld());
-    } catch (e: any) { setError(`${e?.message || "A step failed."}${done.length ? ` (done so far: ${done.join(" ")})` : ""}`); setResults(done); }
-    finally { setBusy(false); }
+    setBusy(true); setError("");
+    const todo = plan.filter((p) => p.ok); setPlan(null);
+    for (const item of todo) {
+      try {
+        const r = await runAction(item.action as AgentAction, world);
+        setFeed((f) => [...f, { kind: "result", result: r }]);
+      } catch (e: any) { setError(`${e?.message || "A step failed."}`); break; }
+    }
+    try { setWorld(await loadAgentWorld()); } catch { /* keep the old picture */ }
+    setBusy(false);
   }
 
   const danger = plan?.some((p) => p.danger);
   return (
     <section className={compact ? "flex h-full flex-col p-4" : "rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/5 to-card p-4 sm:p-5"} aria-label="Admin assistant">
-      <div className="flex items-center gap-2"><Sparkles className="h-5 w-5 text-primary" /><h2 className="font-serif text-xl font-bold">Admin assistant</h2></div>
-      <p className="mt-1 text-sm text-muted-foreground">Tell me what you need in plain words. I will show what I am about to do and wait for your Yes.</p>
+      <div className="flex items-center gap-2 pr-8"><Sparkles className="h-5 w-5 text-primary" /><h2 className="font-serif text-xl font-bold">Admin assistant</h2></div>
+      <p className="mt-1 text-sm text-muted-foreground">Ask in plain words. Questions are answered at once. Before I change anything I show what I will do and wait for your Yes.</p>
 
-      {!turns.length && <div className="mt-3 flex flex-wrap gap-2">{IDEAS.map((i) => <button key={i} type="button" onClick={() => void send(i)} disabled={!world || busy} className="rounded-full border px-3 py-1.5 text-xs font-semibold hover:bg-muted disabled:opacity-40">{i}</button>)}</div>}
+      {!feed.length && <div className="mt-3 flex flex-wrap gap-2">{IDEAS.map((i) => <button key={i} type="button" onClick={() => void send(i)} disabled={!world || busy} className="rounded-full border px-3 py-1.5 text-xs font-semibold hover:bg-muted disabled:opacity-40">{i}</button>)}</div>}
 
-      <div className={`mt-3 space-y-2 overflow-y-auto ${compact ? "min-h-0 flex-1" : "max-h-80"}`}>
-        {turns.map((t, i) => <p key={i} className={`rounded-xl px-3 py-2 text-sm ${t.role === "user" ? "ml-8 bg-primary/10" : "mr-8 bg-muted"}`}>{t.content}</p>)}
+      <div className={`mt-3 space-y-2 overflow-y-auto ${compact ? "min-h-0 flex-1" : "max-h-96"}`}>
+        {feed.map((it, i) => it.kind === "text"
+          ? <p key={i} className={`whitespace-pre-line rounded-xl px-3 py-2 text-sm ${it.role === "user" ? "ml-8 bg-primary/10" : "mr-8 bg-muted"}`}>{it.content}</p>
+          : (
+            <div key={i} className={`rounded-xl border px-3 py-2 text-sm ${it.result.partial ? "border-amber-500/50 bg-amber-500/10" : "border-primary/30 bg-primary/10"}`}>
+              <p className="whitespace-pre-line break-words">{it.result.partial ? <AlertTriangle className="mr-1 inline h-4 w-4 text-amber-600" /> : <Check className="mr-1 inline h-4 w-4 text-primary" />}{it.result.text}</p>
+              {(it.result.links?.length || it.result.undo) && (
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {it.result.links?.map((l) => l.external
+                    ? <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 rounded-lg border bg-background px-2.5 py-1.5 text-xs font-semibold hover:bg-muted"><ExternalLink className="h-3 w-3" /> {l.label}</a>
+                    : <Link key={l.label} to={l.href} className="inline-flex items-center rounded-lg border bg-background px-2.5 py-1.5 text-xs font-semibold hover:bg-muted">{l.label} →</Link>)}
+                  {it.result.undo && world && <button type="button" disabled={busy} onClick={() => setPlan(describe([it.result.undo as AgentAction], world))} className="inline-flex items-center gap-1 rounded-lg border border-destructive/40 bg-background px-2.5 py-1.5 text-xs font-semibold text-destructive hover:bg-destructive/10"><Undo2 className="h-3 w-3" /> Undo (delete it)</button>}
+                </div>
+              )}
+            </div>
+          ))}
         {plan && (
           <div className={`rounded-xl border p-3 ${danger ? "border-destructive/50 bg-destructive/5" : "border-primary/40 bg-primary/5"}`}>
             <p className="flex items-center gap-2 text-sm font-bold">{danger ? <AlertTriangle className="h-4 w-4 text-destructive" /> : <Check className="h-4 w-4 text-primary" />} {danger ? "Are you sure? This cannot be undone." : "Shall I go ahead?"}</p>
@@ -70,8 +97,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
             </div>
           </div>
         )}
-        {results.map((r, i) => <p key={i} className="rounded-xl border border-primary/30 bg-primary/10 px-3 py-2 text-sm break-all"><Check className="mr-1 inline h-4 w-4 text-primary" />{r}</p>)}
-        {busy && !plan && <p className="flex items-center gap-2 px-1 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" /> Thinking…</p>}
+        {busy && !plan && <p className="flex items-center gap-2 px-1 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" /> Working…</p>}
         <div ref={end} />
       </div>
       {error && <p className="mt-2 rounded-lg border border-destructive/40 bg-destructive/10 p-2 text-sm">{error}</p>}

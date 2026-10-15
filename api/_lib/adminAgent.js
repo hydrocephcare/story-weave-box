@@ -5,7 +5,7 @@ const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZ
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
 let turn = 0;
 
-async function isAdmin(token) {
+export async function isAdmin(token) {
   try {
     const u = await fetch(`${SUPABASE}/auth/v1/user`, { headers: { apikey: ANON, Authorization: `Bearer ${token}` } });
     if (!u.ok) return false;
@@ -23,7 +23,11 @@ const TOOLS = `Tools you can plan (use ONLY these; each action is {"tool": "..."
 4. go_to           args: { "path": string }   (open an admin page; only paths from the list below)
 5. set_autopilot_mode args: { "key": "approve_access" | "daily_digest", "mode": "off" | "ask" | "auto" }
 6. run_autopilot   args: {}   (run the Autopilot jobs now)
-7. none: no action, just answer or ask a question.
+7. seo_scan        args: {}   (read-only report of search-description and title problems across all posts; runs straight away)
+8. seo_fix         args: { "limit": number }   (rewrites up to 15 weak or missing search descriptions; the old text is kept so it can be undone)
+9. site_stats      args: { "days": number }   (read-only visitors summary)
+10. contest_report args: { "slug": string }   (read-only: registrations per university for one contest)
+11. none: no action, just answer or ask a question.
 Admin pages (path = what it is): /admin = main admin; /admin/contests = contests; /admin/contests/new = quick contest builder; /admin/contests/setup = advanced contest setup; /admin/contests/appeals = contest appeals; /admin/autopilot = Autopilot switches and log; /admin/access = book access rules; /admin/analytics = visitors; /admin/activity = searches and AI keys; /admin/comments = comments; /admin/drafts = AI notes to approve; /admin/content-checks = content checks; /admin/content-health = content health; /admin/polish = polished blogs; /admin/duplicates = repeated pages; /admin/thin-topics = deep exam notes; /admin/monetise = monetise; /admin/tools = all admin tools.`;
 
 const system = (ctx) => `You are the Ompath Study admin assistant. You help the site owner run contests. You never run anything yourself: you plan, the owner confirms, then the browser runs it.
@@ -71,7 +75,7 @@ async function geminiJson(msgs, keys) {
   return null;
 }
 
-const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "none"]);
+const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "none"]);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
