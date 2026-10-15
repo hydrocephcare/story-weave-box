@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AlertTriangle, Check, ExternalLink, FileText, History, ListChecks, Loader2, MessageCircle, Mic, MicOff, Plus, Send, Sparkles, Trash2, Undo2, Wand2, X, Zap } from "lucide-react";
+import OmpathMark from "@/components/ai/OmpathMark";
+import { AlertTriangle, BarChart3, Bell, Check, Search, Trophy, ExternalLink, FileText, History, ListChecks, Loader2, MessageCircle, Mic, MicOff, Plus, Send, Sparkles, Trash2, Undo2, Wand2, X, Zap } from "lucide-react";
 import { runSiteHealth } from "@/lib/adminHealth";
 import { runBriefing } from "@/lib/adminBriefing";
 import { downloadDataUrl, makeStatusPoster, type PosterSpec } from "@/lib/statusPoster";
@@ -23,6 +24,16 @@ const STATUS_STYLE = { good: "border-emerald-500/40 bg-emerald-500/10", warn: "b
 const STATUS_DOT = { good: "bg-emerald-500", warn: "bg-amber-500", bad: "bg-red-500" } as const;
 const DRAFTERS = new Set(["publish_note", "make_mcqs", "create_flashcards", "write_article", "import_mcqs"]);
 const ALWAYS_ASK = new Set(["send_notification", "delete_contest", "remove_item"]);
+const CAPS: { icon: typeof Sparkles; title: string; hint: string; prompt: string; fill?: boolean }[] = [
+  { icon: FileText, title: "Polish and publish notes", hint: "Paste text; I tidy it, add content, publish", prompt: "Polish these notes and publish them, then make 10 MCQs and flashcards:\n\n", fill: true },
+  { icon: ListChecks, title: "MCQs and flashcards", hint: "From your notes, or import yours", prompt: "I will paste MCQs: publish them as an MCQ set:\n\n", fill: true },
+  { icon: Trophy, title: "Run a contest", hint: "Any universities, any time", prompt: "Make a UoN vs MKU contest tomorrow at 8pm" },
+  { icon: BarChart3, title: "Site health and growth", hint: "Visitors, SEO, what needs you", prompt: "How is my site doing? Is it growing?" },
+  { icon: Sparkles, title: "Today's briefing", hint: "Good news and what to do next", prompt: "Today's briefing" },
+  { icon: Search, title: "Fix SEO", hint: "Weak descriptions, rewritten", prompt: "Check my posts for SEO problems" },
+  { icon: Wand2, title: "Write a new note", hint: "From a topic, saved for review", prompt: "Write a note on nephrotic syndrome", fill: true },
+  { icon: Bell, title: "Clean notifications", hint: "Clear your bell in one go", prompt: "Clean my notification bell" },
+];
 const IDEAS = [
   "Today's briefing", "How is my site doing? Is it growing?", "Check everything and fix what you can", "Explain the last error and fix it", "Check my posts for SEO problems",
   "Make a UoN vs MKU contest tomorrow at 8pm", "Write a note on nephrotic syndrome", "Clean my notification bell", "I will paste notes: polish them and publish",
@@ -250,15 +261,21 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
   const isNote = (d: Draft): d is NoteDraft => d.type === "note";
 
   return (
-    <section className={compact ? "flex h-full min-h-0 flex-col p-3 sm:p-4" : "rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/5 to-card p-4 sm:p-5"} aria-label="Admin assistant">
-      <div className="flex flex-wrap items-center gap-x-2 gap-y-2 pr-11">
-        <Sparkles className="h-5 w-5 shrink-0 text-primary" /><h2 className="font-serif text-lg font-bold sm:text-xl">Admin assistant</h2>
-        <span className="flex w-full shrink-0 gap-1.5 sm:ml-auto sm:w-auto">
-          <button type="button" onClick={() => void toggleAuto()} disabled={!world} title={world?.autorun ? "Auto-run is ON: safe steps run without asking. Tap to switch off." : "Auto-run is OFF: I ask before every change. Tap to let me run safe steps myself."} className={`${btn} border ${world?.autorun ? "border-primary bg-primary text-primary-foreground" : "hover:bg-muted"}`}><Zap className="h-4 w-4" /><span className="hidden sm:inline">Auto-run {world?.autorun ? "on" : "off"}</span></button>
-          <button type="button" onClick={newTask} className={`${btn} border hover:bg-muted`} aria-label="New task"><Plus className="h-4 w-4" /><span className="hidden sm:inline">New</span></button>
-          <button type="button" onClick={() => { setShowHistory((v) => !v); void refreshChats(); }} className={`${btn} border hover:bg-muted`} aria-label="Earlier tasks"><History className="h-4 w-4" /><span className="hidden sm:inline">History</span></button>
-        </span>
-      </div>
+    <section className={compact ? "flex h-full min-h-0 flex-col bg-gradient-to-b from-primary/[0.12] via-background to-background px-3 pb-3 pt-3 sm:px-4" : "rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/5 to-card p-4 sm:p-5"} aria-label="Admin assistant">
+      <header className="shrink-0 pr-11">
+        <div className="flex items-center gap-3">
+          <OmpathMark className="h-11 w-11 shrink-0 shadow-lg shadow-primary/30" />
+          <div className="min-w-0">
+            <h2 className="font-serif text-xl font-bold leading-tight">Ompath Admin AI</h2>
+            <p className="truncate text-[13px] text-muted-foreground">Ask. Check the preview. Approve. Done.</p>
+          </div>
+        </div>
+        <div className="mt-3 flex flex-wrap gap-2">
+          <button type="button" onClick={() => void toggleAuto()} disabled={!world} title={world?.autorun ? "Auto-run is ON: safe steps run without asking. Tap to switch off." : "Auto-run is OFF: I ask before every change. Tap to let me run safe steps myself."} className={`${btn} border ${world?.autorun ? "border-primary bg-primary text-primary-foreground shadow-md shadow-primary/30" : "bg-card hover:bg-muted"}`}><Zap className="h-4 w-4" /> Auto-run {world?.autorun ? "on" : "off"}</button>
+          <button type="button" onClick={newTask} className={`${btn} border bg-card hover:bg-muted`} aria-label="New task"><Plus className="h-4 w-4" /> New task</button>
+          <button type="button" onClick={() => { setShowHistory((v) => !v); void refreshChats(); }} className={`${btn} border bg-card hover:bg-muted`} aria-label="Earlier tasks"><History className="h-4 w-4" /> History</button>
+        </div>
+      </header>
       {showHistory && (
         <div className="mt-2 max-h-52 shrink-0 overflow-y-auto rounded-xl border bg-card text-sm">
           {!chats.length ? <p className="p-3 text-muted-foreground">No earlier tasks yet.</p> : chats.map((c) => (
@@ -280,18 +297,31 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
           </div>
         </div>
       )}
-      {world?.memory.length ? <p className="mt-1 text-[12px] text-muted-foreground">I remember {world.memory.length} thing{world.memory.length === 1 ? "" : "s"} you told me.</p> : null}
-      {!feed.length && <p className="mt-1 text-sm text-muted-foreground">Ask in plain words, or paste notes. {world?.autorun ? "Auto-run is on: I do safe steps myself and show you the result with an Undo." : "Before I change or publish anything I show you a preview and wait for your Yes."}</p>}
-
-      {!feed.length && <div className="mt-3 flex flex-wrap gap-2">{IDEAS.map((i) => <button key={i} type="button" onClick={() => (i.startsWith("I will paste") ? setText("Polish these notes and publish them, then make 10 MCQs and flashcards:\n\n") : void send(i))} disabled={!world || busy} className="min-h-9 rounded-full border px-3 py-1.5 text-xs font-semibold hover:bg-muted disabled:opacity-40">{i}</button>)}</div>}
+      {world?.memory.length ? <p className="mt-2 shrink-0 text-[12px] text-muted-foreground">I remember {world.memory.length} thing{world.memory.length === 1 ? "" : "s"} you told me.</p> : null}
+      {!feed.length && (
+        <div className="mt-4 min-h-0 flex-1 overflow-y-auto overscroll-contain pb-2">
+          <p className="text-[15px] leading-relaxed text-muted-foreground">Hi. Tell me what you need in plain words, speak, or paste notes. {world?.autorun ? "Auto-run is on, so I do safe steps myself and show the result with an Undo." : "I show a preview first and wait for your Yes."}</p>
+          <div className="mt-3 grid grid-cols-2 gap-2.5">
+            {CAPS.map(({ icon: Icon, title, hint, prompt, fill }) => (
+              <button key={title} type="button" disabled={!world || busy} onClick={() => (fill ? setText(prompt) : void send(prompt))} className="group flex min-h-[7.5rem] flex-col items-start gap-2 rounded-2xl border bg-card p-3.5 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md disabled:opacity-40">
+                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary/15 text-primary transition group-hover:bg-primary group-hover:text-primary-foreground"><Icon className="h-[18px] w-[18px]" /></span>
+                <span className="text-[15px] font-bold leading-tight">{title}</span>
+                <span className="text-[13px] leading-snug text-muted-foreground">{hint}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className={`mt-3 space-y-2 overflow-y-auto overscroll-contain ${compact ? "min-h-0 flex-1" : "max-h-[32rem]"}`}>
         {feed.map((it, i) => {
-          if (it.kind === "text") return <p key={i} className={`whitespace-pre-line break-words rounded-2xl px-4 py-3 text-[15px] leading-relaxed ${it.role === "user" ? "ml-6 bg-primary/10" : "mr-4 bg-muted"}`}>{it.content}</p>;
+          if (it.kind === "text") return it.role === "user"
+            ? <div key={i} className="flex justify-end"><p className="max-w-[88%] whitespace-pre-line break-words rounded-2xl rounded-br-md bg-primary px-4 py-2.5 text-[15px] leading-relaxed text-primary-foreground shadow-sm">{it.content}</p></div>
+            : <div key={i} className="flex items-start gap-2.5"><OmpathMark className="mt-0.5 h-8 w-8 shrink-0" /><p className="max-w-[88%] whitespace-pre-line break-words rounded-2xl rounded-tl-md border bg-card px-4 py-2.5 text-[15px] leading-relaxed shadow-sm">{it.content}</p></div>;
           if (it.kind === "ask") return (
-            <div key={i} className="mr-2 rounded-xl border border-primary/30 bg-card p-3">
-              <p className="flex items-start gap-2 text-sm font-semibold"><ListChecks className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> {it.question}</p>
-              <div className="mt-2 flex flex-wrap gap-2">{it.options.map((o) => <button key={o} type="button" disabled={busy || Boolean(it.answered)} onClick={() => answer(i, o)} className={`min-h-10 rounded-full border px-3 py-1.5 text-xs font-semibold ${it.answered === o ? "border-primary bg-primary text-primary-foreground" : "hover:bg-muted disabled:opacity-40"}`}>{o}</button>)}</div>
+            <div key={i} className="ml-10 rounded-2xl border border-primary/30 bg-card p-3.5 shadow-sm">
+              <p className="flex items-start gap-2 text-[15px] font-semibold"><ListChecks className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> {it.question}</p>
+              <div className="mt-2 flex flex-wrap gap-2">{it.options.map((o) => <button key={o} type="button" disabled={busy || Boolean(it.answered)} onClick={() => answer(i, o)} className={`min-h-11 rounded-full border px-4 py-2 text-sm font-semibold ${it.answered === o ? "border-primary bg-primary text-primary-foreground" : "hover:bg-muted disabled:opacity-40"}`}>{o}</button>)}</div>
             </div>
           );
           if (it.kind === "result") {
@@ -408,9 +438,10 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
         )}
         <div ref={end} />
       </div>
-      {error && <p className="mt-2 shrink-0 rounded-lg border border-destructive/40 bg-destructive/10 p-2 text-sm">{error}</p>}
+      {error && <p className="mt-2 shrink-0 rounded-2xl border border-destructive/40 bg-destructive/10 px-3.5 py-2.5 text-[14px] leading-snug" role="alert">{error}</p>}
+      <div className="mt-2 shrink-0 rounded-3xl border bg-card shadow-lg pb-[env(safe-area-inset-bottom)]">
       {attachments.length > 0 && (
-        <div className="mt-2 flex shrink-0 flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 px-3 pt-3">
           {attachments.map((a, i) => (
             <span key={i} className="inline-flex max-w-full items-center gap-2 rounded-lg border bg-muted px-2.5 py-1.5 text-xs">
               <FileText className="h-4 w-4 shrink-0 text-primary" /><span className="min-w-0 truncate"><strong>Pasted text</strong> · {a.length.toLocaleString()} characters · {a.slice(0, 40).replace(/\s+/g, " ")}…</span>
@@ -419,7 +450,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
           ))}
         </div>
       )}
-      <form className="mt-2 flex shrink-0 items-end gap-2 pb-[env(safe-area-inset-bottom)]" onSubmit={(e) => { e.preventDefault(); void send(text); }}>
+      <form className="flex items-end gap-2 p-2" onSubmit={(e) => { e.preventDefault(); void send(text); }}>
         <textarea value={text} onChange={(e) => {
           const v = e.target.value;
           // some phone keyboards insert a pasted block as typing (no paste event): a big sudden jump becomes an attachment too
@@ -435,10 +466,11 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
           onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey && window.matchMedia("(hover: hover)").matches) { e.preventDefault(); void send(text); } }}
           rows={text.length > 120 ? 5 : 2} disabled={!world || busy}
           placeholder={world ? (attachments.length ? "Tell me what to do with the pasted text…" : listening ? "Listening… speak now" : "Ask, speak, or paste notes…") : "Loading your data…"}
-          className="min-w-0 flex-1 resize-none rounded-lg border bg-background px-3 py-2.5 text-base sm:text-sm" />
-        <button type="button" onClick={toggleMic} disabled={!world || busy} aria-label={listening ? "Stop listening" : "Speak instead of typing"} className={`flex min-h-11 min-w-11 items-center justify-center rounded-lg border disabled:opacity-40 ${listening ? "animate-pulse border-red-500 bg-red-500 text-white" : "hover:bg-muted"}`}>{listening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}</button>
-        <button type="submit" disabled={(!text.trim() && !attachments.length) || !world || busy} aria-label="Send" className="flex min-h-11 min-w-11 items-center justify-center rounded-lg bg-primary text-primary-foreground disabled:opacity-40"><Send className="h-4 w-4" /></button>
+          className="min-w-0 flex-1 resize-none rounded-2xl bg-transparent px-3 py-2.5 text-base outline-none placeholder:text-muted-foreground/70 sm:text-[15px]" />
+        <button type="button" onClick={toggleMic} disabled={!world || busy} aria-label={listening ? "Stop listening" : "Speak instead of typing"} className={`flex min-h-11 min-w-11 items-center justify-center rounded-full border disabled:opacity-40 ${listening ? "animate-pulse border-red-500 bg-red-500 text-white" : "hover:bg-muted"}`}>{listening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}</button>
+        <button type="submit" disabled={(!text.trim() && !attachments.length) || !world || busy} aria-label="Send" className="flex min-h-11 min-w-11 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-md shadow-primary/30 disabled:opacity-40"><Send className="h-4 w-4" /></button>
       </form>
+      </div>
     </section>
   );
 }

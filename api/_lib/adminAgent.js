@@ -1,9 +1,9 @@
 // POST /api/ai?task=agent { message, history, context }: the admin assistant. It only PLANS: it returns { reply, actions } and the browser, with the admin's own
 // login, runs the actions after the admin presses Yes. Requires a signed-in administrator (checked against Supabase with the caller's own token).
+import { askJson } from "./llm.js";
 const SUPABASE = "https://lkgfzjwhmfjvntzphbsh.supabase.co";
 const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrZ2Z6andobWZqdm50enBoYnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3Nzk5MjIsImV4cCI6MjA4NzM1NTkyMn0.a2QY6TxzKNM2AhuuoDkgdKifI3XhSGhYRlhpqZpvAwo";
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
-let turn = 0;
 
 export async function isAdmin(token) {
   try {
@@ -68,35 +68,6 @@ Rules:
 - To ask the admin a question with buttons, add "ask": {"question": "...", "options": ["short option", ...]} (2 to 5 options) and no actions.
 - Return ONLY JSON: {"reply": "...", "ask": null, "actions": [ ... ]}. "reply" says in one or two sentences what you will do (or asks the question).`;
 
-async function groqJson(msgs, keys) {
-  const models = list(process.env.GROQ_CHAT_MODELS || "openai/gpt-oss-120b,openai/gpt-oss-20b");
-  const start = keys.length ? turn++ % keys.length : 0;
-  for (let i = 0; i < keys.length; i++) for (const model of models) {
-    try {
-      const r = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", headers: { "content-type": "application/json", Authorization: `Bearer ${keys[(start + i) % keys.length]}` }, body: JSON.stringify({ model, messages: msgs, response_format: { type: "json_object" }, temperature: 0.1 }) });
-      if (!r.ok) continue;
-      const t = (await r.json())?.choices?.[0]?.message?.content;
-      if (t) return t;
-    } catch { /* next */ }
-  }
-  return null;
-}
-
-async function geminiJson(msgs, keys) {
-  const models = list(process.env.GEMINI_CHAT_MODELS || "gemini-2.5-flash,gemini-2.5-flash-lite");
-  const contents = msgs.slice(1).map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
-  const start = keys.length ? turn++ % keys.length : 0;
-  for (let i = 0; i < keys.length; i++) for (const model of models) {
-    try {
-      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", headers: { "content-type": "application/json", "x-goog-api-key": keys[(start + i) % keys.length] }, body: JSON.stringify({ systemInstruction: { parts: [{ text: msgs[0].content }] }, contents, generationConfig: { responseMimeType: "application/json", temperature: 0.1 } }) });
-      if (!r.ok) continue;
-      const t = (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join("");
-      if (t?.trim()) return t;
-    } catch { /* next */ }
-  }
-  return null;
-}
-
 const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "publish_note", "make_mcqs", "create_flashcards", "write_article", "find_content", "clean_notifications", "notification_report", "send_notification", "remember", "forget", "site_health", "update_post", "publish_post", "briefing", "import_mcqs", "none"]);
 
 export default async function handler(req, res) {
@@ -110,10 +81,9 @@ export default async function handler(req, res) {
   const msgs = [{ role: "system", content: system(ctx) }];
   for (const h of (Array.isArray(body.history) ? body.history : []).slice(-8)) if (h && (h.role === "user" || h.role === "assistant")) msgs.push({ role: h.role, content: String(h.content ?? "").slice(0, 1500) });
   msgs.push({ role: "user", content: message });
-  const groq = list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY), gem = list(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY);
-  if (!groq.length && !gem.length) return res.status(503).json({ error: "AI is not configured." });
-  const raw = (groq.length && (await groqJson(msgs, groq))) || (gem.length && (await geminiJson(msgs, gem)));
-  if (!raw) return res.status(502).json({ error: "The assistant is busy. Try again in a moment." });
+  const got = await askJson(msgs, { prefer: "groq", temperature: 0.1, maxTokens: 1800 });
+  if (got.error) return res.status(502).json({ error: got.error });
+  const raw = got.text;
   let out;
   try { out = JSON.parse(String(raw).replace(/^```(?:json)?|```$/gm, "").trim()); } catch { return res.status(200).json({ reply: String(raw).slice(0, 600), actions: [] }); }
   const actions = (Array.isArray(out.actions) ? out.actions : []).filter((a) => a && KNOWN.has(a.tool) && a.tool !== "none" && (a.args && typeof a.args === "object" ? true : (a.args = {}, true))).slice(0, 5);

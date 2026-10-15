@@ -1,8 +1,8 @@
 // POST /api/ai?task=write { mode: "note" | "mcq", ... }: admin only. Polishes pasted notes into a site note, or writes MCQs from a text. It only returns text;
 // the browser shows it to the admin and saves it with the admin's own login after they press Publish.
 import { isAdmin } from "./adminAgent.js";
+import { askJson } from "./llm.js";
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
-let turn = 0;
 
 const ENRICH = `
 - The admin asked you to ADD MORE CONTENT. After the author's own material, add standard textbook knowledge that completes the topic (definition, causes, pathophysiology, features, investigations, management principles, complications), under a heading "## Added for completeness". Name drug classes, never doses or exact figures you are not certain of. The author's own facts stay first and unchanged.`;
@@ -36,31 +36,6 @@ Return ONLY JSON: {"title": "clear title, max 70 characters", "category": "...",
 const REVISE = `You revise a study note exactly as the admin asks (for example "shorter", "simpler words", "add a table of the causes", "remove the last section"). Keep all facts that remain; never add new medical facts that are not already in the note unless the admin explicitly asks and they are standard textbook knowledge (no doses).
 Return ONLY JSON: {"content": "the full revised markdown", "meta_description": "120 to 155 characters, updated if the content changed"}`;
 
-async function groq(msgs, keys) {
-  const models = list(process.env.GROQ_CHAT_MODELS || "openai/gpt-oss-120b,openai/gpt-oss-20b");
-  const start = keys.length ? turn++ % keys.length : 0;
-  for (let i = 0; i < keys.length; i++) for (const model of models) {
-    try {
-      const r = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", headers: { "content-type": "application/json", Authorization: `Bearer ${keys[(start + i) % keys.length]}` }, body: JSON.stringify({ model, messages: msgs, response_format: { type: "json_object" }, temperature: 0.3 }) });
-      if (!r.ok) continue;
-      const t = (await r.json())?.choices?.[0]?.message?.content; if (t) return t;
-    } catch { /* next */ }
-  }
-  return null;
-}
-async function gemini(msgs, keys) {
-  const models = list(process.env.GEMINI_CHAT_MODELS || "gemini-2.5-flash,gemini-2.5-flash-lite");
-  const start = keys.length ? turn++ % keys.length : 0;
-  for (let i = 0; i < keys.length; i++) for (const model of models) {
-    try {
-      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", headers: { "content-type": "application/json", "x-goog-api-key": keys[(start + i) % keys.length] }, body: JSON.stringify({ systemInstruction: { parts: [{ text: msgs[0].content }] }, contents: [{ role: "user", parts: [{ text: msgs[1].content }] }], generationConfig: { responseMimeType: "application/json", temperature: 0.3, maxOutputTokens: 8000 } }) });
-      if (!r.ok) continue;
-      const t = (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join(""); if (t?.trim()) return t;
-    } catch { /* next */ }
-  }
-  return null;
-}
-
 const parse = (raw) => { try { return JSON.parse(String(raw).replace(/^```(?:json)?|```$/gm, "").trim()); } catch { return null; } };
 
 export default async function handler(req, res) {
@@ -76,9 +51,10 @@ export default async function handler(req, res) {
   const system = mode === "mcq_import" ? MCQ_IMPORT : mode === "mcq" ? MCQ(count) : mode === "cards" ? CARDS(count) : mode === "article" ? ARTICLE(cats) : mode === "revise" ? REVISE : NOTE(cats, Boolean(body.enrich));
   const user = mode === "revise" ? `INSTRUCTION: ${String(body.instruction ?? "").slice(0, 500)}\nNOTE:\n${text}` : `${body.title ? `Title hint: ${String(body.title).slice(0, 120)}\n` : ""}${body.category ? `Category hint: ${String(body.category).slice(0, 120)}\n` : ""}${mode === "article" ? "TOPIC" : "TEXT"}:\n${text}`;
   const msgs = [{ role: "system", content: system }, { role: "user", content: user }];
-  const g = list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY), m = list(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY);
-  const raw = (g.length && (await groq(msgs, g))) || (m.length && (await gemini(msgs, m)));
-  if (!raw) return res.status(502).json({ error: "The writer is busy. Try again in a moment." });
+  // long writing jobs go to Gemini first (large context, generous free limits); short ones are fine on Groq
+  const got = await askJson(msgs, { prefer: text.length > 3500 || mode === "article" || mode === "note" ? "gemini" : "groq", temperature: 0.3, maxTokens: mode === "mcq_import" ? 7000 : 6500 });
+  if (got.error) return res.status(502).json({ error: got.error });
+  const raw = got.text;
   const out = parse(raw);
   if (!out) return res.status(502).json({ error: "The writer gave an unreadable answer. Try again." });
 
