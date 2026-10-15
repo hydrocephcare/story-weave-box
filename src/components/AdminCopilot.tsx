@@ -21,8 +21,8 @@ export default function AdminCopilot() {
         </button>
       )}
       {open && (
-        <div className="fixed inset-x-2 bottom-2 z-50 flex h-[min(34rem,calc(100dvh-1rem))] flex-col overflow-hidden rounded-2xl border border-border bg-background shadow-2xl sm:inset-x-auto sm:right-4 sm:bottom-4 sm:w-[26rem]" role="dialog" aria-label="Admin assistant">
-          <button type="button" onClick={() => setOpen(false)} aria-label="Close the assistant" className="absolute right-2 top-2 z-10 rounded-full p-1.5 hover:bg-muted"><X className="h-4 w-4" /></button>
+        <div className="fixed inset-0 z-50 flex h-dvh flex-col overflow-hidden bg-background pt-[env(safe-area-inset-top)] sm:inset-auto sm:bottom-4 sm:right-4 sm:h-[min(40rem,calc(100dvh-2rem))] sm:w-[28rem] sm:rounded-2xl sm:border sm:border-border sm:pt-0 sm:shadow-2xl" role="dialog" aria-label="Admin assistant">
+          <button type="button" onClick={() => setOpen(false)} aria-label="Close the assistant" className="absolute right-2 top-[calc(env(safe-area-inset-top)+0.5rem)] z-10 flex h-10 w-10 items-center justify-center rounded-full hover:bg-muted sm:top-2"><X className="h-5 w-5" /></button>
           <AdminAgent compact />
         </div>
       )}

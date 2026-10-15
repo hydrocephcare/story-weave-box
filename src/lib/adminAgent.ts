@@ -6,22 +6,23 @@ import {
 import type { ContestStage } from "@/lib/contest";
 import { loadCategories, removeItem } from "@/lib/adminWriter";
 
-export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item"; args: Record<string, any> }
-export interface AgentContext { categories?: string[]; page?: string; problems?: { at: string; what: string }[]; now: string; universities: { slug: string; name: string }[]; exams: string[]; contests: { slug: string; title: string; stage: string }[] }
+export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget"; args: Record<string, any> }
+export interface AgentContext { memory?: string[]; autorun?: boolean; categories?: string[]; page?: string; problems?: { at: string; what: string }[]; now: string; universities: { slug: string; name: string }[]; exams: string[]; contests: { slug: string; title: string; stage: string }[] }
 export interface PlanItem { action: AgentAction; line: string; danger: boolean; ok: boolean }
 
 const nairobiNow = () => new Intl.DateTimeFormat("en-KE", { dateStyle: "full", timeStyle: "short", timeZone: "Africa/Nairobi" }).format(new Date());
 const toDate = (local: string) => new Date(`${local}:00+03:00`);
 
-export interface AgentWorld { categories: string[]; universities: (ContestUniversity & { active: boolean })[]; papers: AdminExamPaper[]; contests: Awaited<ReturnType<typeof loadAdminContests>> }
+export interface AgentWorld { memory: { id: string; note: string }[]; autorun: boolean; categories: string[]; universities: (ContestUniversity & { active: boolean })[]; papers: AdminExamPaper[]; contests: Awaited<ReturnType<typeof loadAdminContests>> }
 
 export async function loadAgentWorld(): Promise<AgentWorld> {
-  const [universities, papers, contests, categories] = await Promise.all([loadAllContestUniversities(), loadAdminExamPapers(), loadAdminContests(), loadCategories().catch(() => [] as string[])]);
-  return { universities: universities.filter((u) => u.active), papers, contests, categories };
+  const db = supabase as any;
+  const [universities, papers, contests, categories, mem, auto] = await Promise.all([loadAllContestUniversities(), loadAdminExamPapers(), loadAdminContests(), loadCategories().catch(() => [] as string[]), db.from("agent_memory").select("id,note").order("at", { ascending: false }).limit(30), db.from("agent_capabilities").select("mode").eq("key", "assistant_autorun").maybeSingle()]);
+  return { universities: universities.filter((u) => u.active), papers, contests, categories, memory: mem.error ? [] : (mem.data || []), autorun: !auto.error && auto.data?.mode === "auto" };
 }
 
 export function agentContext(w: AgentWorld): AgentContext {
-  return { categories: w.categories, now: nairobiNow(), universities: w.universities.map((u) => ({ slug: u.slug, name: u.name })), exams: w.papers.map((p) => p.title), contests: w.contests.map((c) => ({ slug: c.slug, title: c.title, stage: c.stage })) };
+  return { memory: w.memory.map((m) => m.note), autorun: w.autorun, categories: w.categories, now: nairobiNow(), universities: w.universities.map((u) => ({ slug: u.slug, name: u.name })), exams: w.papers.map((p) => p.title), contests: w.contests.map((c) => ({ slug: c.slug, title: c.title, stage: c.stage })) };
 }
 
 /** Closest exam to the words the assistant gave: most shared words, ties go to the shorter title. */
@@ -58,6 +59,10 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
     if (action.tool === "go_to") return { action, danger: false, ok: /^\/admin(\/[a-z0-9-]+)*$/.test(String(a.path)), line: `Open ${a.path}.` };
     if (action.tool === "set_autopilot_mode") return { action, danger: false, ok: ["approve_access", "daily_digest"].includes(a.key) && ["off", "ask", "auto"].includes(a.mode), line: `Set Autopilot job "${a.key}" to ${a.mode}${a.mode === "auto" ? " (it will act on its own, with an Undo in the log)" : ""}.` };
     if (action.tool === "run_autopilot") return { action, danger: false, ok: true, line: "Run the Autopilot jobs now." };
+    if (action.tool === "clean_notifications") return { action, danger: false, ok: true, line: `Clear your notification bell: mark everything read and remove read ones older than ${Math.max(0, Number(a.days) || 14)} days.` };
+    if (action.tool === "send_notification") return { action, danger: true, ok: String(a.title || "").trim().length > 2 && String(a.message || "").trim().length > 2 && ["all_users", "subscribers", "study_year"].includes(a.audience), line: `SEND to ${a.audience === "study_year" ? `Year ${a.year} students` : a.audience === "subscribers" ? "subscribers" : "ALL users"}: "${a.title}" — ${String(a.message).slice(0, 140)}${a.link ? ` (link ${a.link})` : ""}. Students will see it and may get an email.` };
+    if (action.tool === "remember") return { action, danger: false, ok: String(a.note || "").trim().length > 2, line: `Remember: "${a.note}".` };
+    if (action.tool === "forget") return { action, danger: false, ok: String(a.match || "").trim().length > 1, line: `Forget notes that mention "${a.match}".` };
     if (action.tool === "remove_item") return { action, danger: true, ok: Boolean(a.id) && ["articles", "mcq_sets"].includes(a.table), line: `Take "${a.title || "this page"}" off the site (it stays in the database, so it can be brought back).` };
     if (action.tool === "seo_fix") return { action, danger: false, ok: true, line: `Rewrite up to ${Math.min(15, Number(a.limit) || 10)} weak search descriptions with AI. The old text is kept so you can undo it.` };
     const c = w.contests.find((x) => x.slug === a.slug);
@@ -79,6 +84,27 @@ export async function runAction(action: AgentAction, w: AgentWorld): Promise<Act
   if (action.tool === "run_autopilot") { const { data, error } = await (supabase as any).rpc("admin_agent_run"); if (error) throw new Error(/schema cache|admin_agent_run/.test(error.message) ? "Run autopilot.sql first." : error.message); return { text: `Autopilot ran: ${data?.approved ?? 0} approved, ${data?.queued ?? 0} waiting for you.`, links: [{ label: "See the log", href: "/admin/autopilot" }] }; }
   if (action.tool === "go_to") return { text: `Opened ${a.path}.` };
   if (action.tool === "seo_fix") return runSeoFix(Number(a.limit) || 10);
+  if (action.tool === "clean_notifications") {
+    const { data, error } = await (supabase as any).rpc("admin_clean_my_notifications", { p_days: Math.max(0, Number(a.days) || 14) });
+    if (error) throw new Error(/schema cache|admin_clean/.test(error.message) ? "Run RUN-THESE.sql first." : error.message);
+    return { text: `Notification bell cleared: ${data?.marked_read ?? 0} marked read, ${data?.removed ?? 0} old ones removed.` };
+  }
+  if (action.tool === "send_notification") {
+    const { data, error } = await supabase.functions.invoke("send-notification", { body: { title: String(a.title).trim(), message: String(a.message).trim(), action_url: String(a.link || "").trim() || null, audience: a.audience, study_year: a.audience === "study_year" ? Number(a.year) : null } });
+    if (error || data?.error) throw new Error(String(data?.error || error?.message || "The notification could not be sent."));
+    return { text: `Sent to ${data?.recipients ?? "?"} users${data?.email_configured ? `; ${data.delivered} emails delivered` : " (in the site only: email sending is not configured)"}.`, links: [{ label: "Notifications", href: "/admin#notifications" }] };
+  }
+  if (action.tool === "remember") {
+    const { data: u } = await supabase.auth.getUser();
+    const { error } = await (supabase as any).from("agent_memory").insert({ owner: u.user?.id, note: String(a.note).trim().slice(0, 400) });
+    if (error) throw new Error(/agent_memory|schema cache/.test(error.message) ? "Run RUN-THESE.sql first, then I can remember things." : error.message);
+    return { text: `I will remember: "${a.note}".` };
+  }
+  if (action.tool === "forget") {
+    const hit = w.memory.filter((m) => m.note.toLowerCase().includes(String(a.match).toLowerCase()));
+    for (const m of hit) await (supabase as any).from("agent_memory").delete().eq("id", m.id);
+    return { text: hit.length ? `Forgot ${hit.length} note(s).` : "I had nothing like that to forget." };
+  }
   if (action.tool === "remove_item") { await removeItem(a.table, String(a.id)); return { text: `Took "${a.title || "the page"}" off the site.`, links: [{ label: "Admin home", href: "/admin" }] }; }
   if (action.tool === "delete_contest") {
     const { error } = await (supabase as any).rpc("admin_delete_contest", { p_slug: String(a.slug) });
@@ -185,6 +211,21 @@ async function runSeoFix(limit: number): Promise<ActionResult> {
 export async function runReadOnly(action: AgentAction, w: AgentWorld): Promise<ActionResult | null> {
   const a = action.args || {};
   if (action.tool === "seo_scan") return runSeoScan();
+  if (action.tool === "find_content") {
+    const q = String(a.query || "").trim().replace(/[%,()]/g, " ").slice(0, 80);
+    if (q.length < 2) throw new Error("Tell me what to look for.");
+    const { data, error } = await (supabase as any).from("articles").select("id,title,slug,published,category").is("deleted_at", null).ilike("title", `%${q}%`).order("created_at", { ascending: false }).limit(8);
+    if (error) throw new Error(error.message);
+    if (!data?.length) return { text: `No post has "${q}" in its title.` };
+    return { text: `Found ${data.length}:\n${data.map((r: any) => `• ${r.title}${r.published ? "" : " (draft)"}${r.category ? ` — ${r.category}` : ""}`).join("\n")}`, links: data.slice(0, 4).map((r: any) => ({ label: String(r.title).slice(0, 28), href: `/blog/${r.slug || r.id}` })) };
+  }
+  if (action.tool === "notification_report") {
+    const { data, error } = await (supabase as any).from("user_notifications").select("email_status,email_error,created_at").order("created_at", { ascending: false }).limit(300);
+    if (error) throw new Error(error.message);
+    const by: Record<string, number> = {}; for (const r of data || []) by[r.email_status] = (by[r.email_status] || 0) + 1;
+    const errs = [...new Set((data || []).filter((r: any) => r.email_error).map((r: any) => String(r.email_error).slice(0, 80)))].slice(0, 3);
+    return { text: `Last ${data?.length ?? 0} notifications: ${Object.entries(by).map(([k, v]) => `${v} ${k}`).join(", ") || "none"}.${errs.length ? `\nEmail errors seen: ${errs.join(" | ")}` : ""}${by.failed ? "\nFailures usually mean the email service key is missing or a mailbox rejected it; in-site notifications still arrived." : ""}`, links: [{ label: "Notifications", href: "/admin#notifications" }] };
+  }
   if (action.tool === "site_stats") {
     const { data, error } = await (supabase as any).rpc("admin_site_stats", { p_days: Math.max(1, Math.min(90, Number(a.days) || 7)) });
     if (error) throw new Error(error.message);

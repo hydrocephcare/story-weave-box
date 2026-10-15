@@ -29,12 +29,22 @@ const TOOLS = `Tools you can plan (use ONLY these; each action is {"tool": "..."
 10. contest_report args: { "slug": string }   (read-only: registrations per university for one contest)
 11. publish_note   args: { "title": string (optional), "category": string (one from the category list, or ""), "year": 1-6 or null }   (use this when the admin pastes or gives notes/text to polish and publish. The text itself is taken from their message: NEVER repeat it. The browser polishes it and shows a preview they approve.)
 12. make_mcqs      args: { "count": 1-30, "from": "message" | "note", "title": string, "category": string }   (write MCQs from the text in their message, or from the note just polished ("note"); previewed before publishing)
-13. none: no action, just answer or ask a question.
+13. create_flashcards args: { "count": 1-40, "from": "message" | "note", "title": string, "category": string }   (flashcards from the pasted text, or from the note just polished; previewed before publishing)
+14. write_article  args: { "topic": string, "category": string, "year": 1-6 or null }   (write a NEW note from scratch on a topic; saved for review, previewed first)
+15. find_content   args: { "query": string }   (read-only: search the site's posts by title; runs straight away)
+16. clean_notifications args: { "days": number }   (clear the admin's own notification bell: mark all read, remove read ones older than days)
+17. notification_report args: {}   (read-only: how the latest notifications and emails did, including failures)
+18. send_notification args: { "title": string, "message": string, "link": string, "audience": "all_users" | "subscribers" | "study_year", "year": 1-6 or null }   (message students; always needs the admin's Yes)
+19. remember       args: { "note": string }   (keep a preference or fact for future tasks, e.g. "Year 3 pathology notes go in the 'Year 3: General Pathology' category")
+20. forget         args: { "match": string }   (remove remembered notes containing these words)
+21. none: no action, just answer or ask a question.
 Admin pages (path = what it is): /admin = main admin; /admin/contests = contests; /admin/contests/new = quick contest builder; /admin/contests/setup = advanced contest setup; /admin/contests/appeals = contest appeals; /admin/autopilot = Autopilot switches and log; /admin/access = book access rules; /admin/analytics = visitors; /admin/activity = searches and AI keys; /admin/comments = comments; /admin/drafts = AI notes to approve; /admin/content-checks = content checks; /admin/content-health = content health; /admin/polish = polished blogs; /admin/duplicates = repeated pages; /admin/thin-topics = deep exam notes; /admin/monetise = monetise; /admin/tools = all admin tools.`;
 
 const system = (ctx) => `You are the Ompath Study admin assistant. You help the site owner run contests. You never run anything yourself: you plan, the owner confirms, then the browser runs it.
 Now (Nairobi time): ${ctx.now}.
 ${TOOLS}
+Things the admin asked you to remember (use them): ${(ctx.memory || []).join(" | ") || "nothing yet"}.
+Auto-run is ${ctx.autorun ? "ON: safe steps run without a confirm card, so never ask 'shall I go ahead' for them" : "OFF: every change is confirmed by the admin"}.
 Note categories on the site: ${(ctx.categories || []).slice(0, 90).join(" | ")}
 Universities (slug = name): ${(ctx.universities || []).map((u) => `${u.slug} = ${u.name}`).join("; ")}
 Exams on the site (use words from these titles): ${(ctx.exams || []).slice(0, 150).join(" | ")}
@@ -80,7 +90,7 @@ async function geminiJson(msgs, keys) {
   return null;
 }
 
-const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "publish_note", "make_mcqs", "none"]);
+const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "publish_note", "make_mcqs", "create_flashcards", "write_article", "find_content", "clean_notifications", "notification_report", "send_notification", "remember", "forget", "none"]);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
