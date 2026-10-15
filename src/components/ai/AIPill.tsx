@@ -12,7 +12,7 @@ const KEY = "ompath_ai_pill";
 const clamp = (n: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, n));
 
 function load(): { docked: boolean; y: number } {
-  try { const v = JSON.parse(localStorage.getItem(KEY) ?? "{}"); return { docked: Boolean(v.docked), y: typeof v.y === "number" ? v.y : 96 }; } catch { return { docked: false, y: 96 }; }
+  try { const v = JSON.parse(localStorage.getItem(KEY) ?? "{}"); return { docked: Boolean(v.docked), y: typeof v.y === "number" ? Math.max(128, v.y) : 132 }; } catch { return { docked: false, y: 96 }; }
 }
 
 export default function AIPill() {
@@ -48,7 +48,7 @@ export default function AIPill() {
     if (d.id !== e.pointerId) return;
     const dx = e.clientX - d.x0, dy = e.clientY - d.y0;
     if (!d.moved && Math.hypot(dx, dy) > 8) { d.moved = true; window.clearTimeout(d.timer); setDragging(true); }
-    if (d.moved) setState((s) => ({ ...s, y: clamp(d.yStart - dy, 72, window.innerHeight - 120) }));
+    if (d.moved) setState((s) => ({ ...s, y: clamp(d.yStart - dy, 128, window.innerHeight - 120) }));
   };
   const onUp = (e: React.PointerEvent) => {
     const d = drag.current;
