@@ -163,7 +163,12 @@ export default function StudyPanel({ year: preferredYear }: { year?: number | nu
         ) : (
           <p className="mt-2 text-[11px] font-semibold text-muted-foreground">No upcoming dates set</p>
         )}
-        <Link to="/revise" className="mt-2 inline-flex items-center gap-1 rounded-full bg-amber-500/10 px-2.5 py-1 text-[11px] font-bold text-amber-700">🔥 {streak}-day streak · Smart revision →</Link>
+        {catIn >= 0 && nextDate && (() => {
+          const cat = /cat|exam/i.test(nextDate.label);
+          const msg = catIn === 0 ? `${nextDate.label} are today. You have prepared for this. Good luck.` : catIn <= 3 && cat ? `${nextDate.label} are almost here. Sleep well and revise only your weak topics.` : catIn <= 14 && cat ? `${nextDate.label} are close. A little each day beats a night before: try Smart revision.` : catIn <= 30 && cat ? `Plan your revision for ${nextDate.label} now: pick a few topics each day.` : "";
+          return msg ? <p className="mt-1.5 rounded-lg bg-primary/10 px-2 py-1 text-[11px] font-semibold leading-snug text-foreground">{msg}</p> : null;
+        })()}
+        <Link to="/revise" className="mt-2 inline-flex items-center gap-1 rounded-full bg-amber-500/10 px-2.5 py-1 text-[11px] font-bold text-amber-700">🔥 {streak}-day streak{streak >= 3 ? " · keep it going" : ""} · Smart revision →</Link>
         <Link to="/my-week" className="mt-2 ml-1 inline-flex items-center gap-1 rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-bold text-primary">My week · test me →</Link>
         {!user && <Link to="/login" className="mt-2 inline-block text-[11px] font-bold text-primary hover:underline">Sign in to keep your progress →</Link>}
       </section>
