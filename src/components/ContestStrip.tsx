@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Trophy, X } from "lucide-react";
-import { loadContestPlatform, type ContestRecord } from "@/lib/contest-store";
+import { loadContestPlatform, sortContests, type ContestRecord } from "@/lib/contest-store";
 
 const seenKey = (c: ContestRecord) => `ompath_contest_strip_${c.slug}_${c.stage}`;
 
@@ -14,7 +14,7 @@ export default function ContestStrip() {
     let alive = true;
     loadContestPlatform().then(({ contests }) => {
       if (!alive) return;
-      setContest(contests.find((c) => c.stage === "live") ?? contests.find((c) => c.stage === "registration") ?? null);
+      setContest(sortContests(contests).find((c) => c.stage === "live" || c.stage === "registration") ?? null);
     }).catch(() => { /* no contests yet */ });
     return () => { alive = false; };
   }, []);

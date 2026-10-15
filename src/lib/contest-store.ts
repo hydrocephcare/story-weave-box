@@ -427,6 +427,12 @@ let contestOnce: ReturnType<typeof fetchContestPlatform> | null = null;
  * The contest tables are only on some databases. On every page the bell and the year hub ask for them, so a missing table meant two
  * failed requests (and console errors) per page. After one failure the answer is "no contests" for 30 minutes, with no request at all.
  */
+/** Live first, then registration open, then the rest; within a group the newest contest comes first. */
+export function sortContests(list: ContestRecord[]): ContestRecord[] {
+  const rank = (c: ContestRecord) => (c.stage === "live" ? 0 : c.stage === "registration" ? 1 : c.stage === "concept" ? 2 : 3);
+  return list.map((c, i) => ({ c, i })).sort((a, b) => rank(a.c) - rank(b.c) || b.i - a.i).map((x) => x.c);
+}
+
 export function loadContestPlatform(): ReturnType<typeof fetchContestPlatform> {
   try { if (Date.now() - Number(sessionStorage.getItem(CONTESTS_OFF) ?? 0) < 30 * 60 * 1000) return Promise.resolve({ contests: [], universities: [] }); } catch { /* storage blocked */ }
   contestOnce ??= fetchContestPlatform().catch((e) => {
