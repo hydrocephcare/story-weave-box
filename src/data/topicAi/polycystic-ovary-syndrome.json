@@ -1,0 +1,183 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "PCOS is a common endocrine disorder in reproductive‑age women, defined by excess androgens, irregular menses, and ovarian cysts. It causes infertility, metabolic issues, and hirsutism.",
+ "aka": [
+  "Polycystic Ovary Syndrome",
+  "PCOS"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "PCOS is diagnosed when two of three features are present: clinical or biochemical hyperandrogenism, oligo/anovulation, and polycystic ovaries on ultrasound, after excluding other causes.",
+   "b": [
+    "Hyperandrogenism: hirsutism, acne, alopecia",
+    "Oligo/anovulation: cycles >35 days or absent",
+    "Polycystic ovaries: >12 follicles 2–9 mm or >10 cm volume"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by the Rotterdam criteria and the NIH 2003 criteria. A simple staging uses the number of cysts and androgen level.",
+   "b": [
+    "Stage I: mild hirsutism, few cysts",
+    "Stage II: moderate hirsutism, many cysts",
+    "Stage III: severe hirsutism, many cysts and metabolic derangements"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The exact cause is unknown; most likely a combination of genetic predisposition and insulin resistance leading to hyperandrogenism.",
+   "b": [
+    "Genetic susceptibility: family history",
+    "Insulin resistance: hyperinsulinemia stimulates ovarian androgen production",
+    "Environmental factors: diet, stress"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Women present with irregular periods, hirsutism, acne, weight gain, and infertility. Metabolic signs include acne, acneiform rash, and darkening of skin.",
+   "b": [
+    "Oligomenorrhoea or amenorrhoea",
+    "Hirsutism and acne",
+    "Weight gain, especially central"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm diagnosis, exclude mimics, and assess complications.",
+   "t": [
+    {
+     "a": "LH:FSH ratio",
+     "b": "Suggests PCOS; normal in other causes"
+    },
+    {
+     "a": "Serum testosterone",
+     "b": "Supports hyperandrogenism"
+    },
+    {
+     "a": "Fasting insulin and glucose",
+     "b": "Indicates insulin resistance"
+    },
+    {
+     "a": "Pelvic ultrasound",
+     "b": "Confirms polycystic ovaries"
+    },
+    {
+     "a": "Thyroid function test",
+     "b": "Excludes thyroid dysfunction"
+    },
+    {
+     "a": "Prolactin",
+     "b": "Excludes hyperprolactinemia"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications include endometrial hyperplasia, type 2 diabetes, cardiovascular disease, and infertility. Red flags need urgent care.",
+   "b": [
+    "Unexplained weight loss",
+    "Severe abdominal pain",
+    "Menorrhagia with heavy bleeding"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying insulin resistance, control androgen excess, and manage menstrual irregularity. Lifestyle first, then pharmacology.",
+   "b": [
+    "Lifestyle: diet, exercise, weight loss"
+   ],
+   "t": [
+    {
+     "a": "Metformin",
+     "b": "Yes, by reducing insulin resistance"
+    },
+    {
+     "a": "Spironolactone",
+     "b": "Yes, as an antiandrogen"
+    },
+    {
+     "a": "Clomiphene citrate",
+     "b": "Yes, unless contraindicated"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of metabolic parameters and menstrual regularity is essential. Prevention focuses on early lifestyle changes.",
+   "b": [
+    "Annual fasting glucose and lipid profile"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic PCOS include congenital adrenal hyperplasia, androgen‑producing tumors, thyroid disorders, and hyperprolactinemia.",
+   "b": [
+    "Congenital adrenal hyperplasia: 21‑hydroxylase deficiency"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low‑grade hyperandrogenism can be missed; ultrasound may be normal in early disease; insulin tests vary with fasting state.",
+   "b": [
+    "Serum testosterone may be normal in mild cases"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Seek urgent care for severe abdominal pain, heavy bleeding, or signs of endometrial cancer."
+  },
+  {
+   "h": "FAQ",
+   "t": [
+    {
+     "a": "What causes hirsutism in PCOS?",
+     "b": "Excess ovarian and adrenal androgens stimulate hair follicles"
+    },
+    {
+     "a": "Can PCOS lead to diabetes?",
+     "b": "Yes, insulin resistance increases diabetes risk"
+    },
+    {
+     "a": "Is weight loss enough to treat PCOS?",
+     "b": "Weight loss improves insulin sensitivity but often needs medication for ovulation"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain",
+  "Heavy menstrual bleeding",
+  "Sudden weight loss"
+ ],
+ "faq": [
+  {
+   "q": "What causes hirsutism in PCOS?",
+   "a": "Excess ovarian and adrenal androgens stimulate hair follicles"
+  },
+  {
+   "q": "Can PCOS lead to diabetes?",
+   "a": "Yes, insulin resistance increases diabetes risk"
+  },
+  {
+   "q": "Is weight loss enough to treat PCOS?",
+   "a": "Weight loss improves insulin sensitivity but often needs medication for ovulation"
+  }
+ ],
+ "exam": [
+  "Explain how insulin resistance contributes to hyperandrogenism in PCOS.",
+  "Describe the Rotterdam criteria for diagnosing PCOS and why each component is important.",
+  "Outline a first‑line treatment plan for a 28‑year‑old woman with oligomenorrhoea and hirsutism due to PCOS."
+ ],
+ "related": [
+  "Endocrinology of Reproduction",
+  "Metabolic Syndrome",
+  "Infertility Management",
+  "Thyroid Disorders"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-15",
+ "reviewed": false
+}

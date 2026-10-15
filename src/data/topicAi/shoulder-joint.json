@@ -1,0 +1,129 @@
+{
+ "medical": true,
+ "subject": "Anatomy",
+ "summary": "The shoulder (glenohumeral) joint is a highly mobile ball‑and‑socket articulation that relies on muscular and capsular support. Understanding its anatomy helps diagnose instability, rotator cuff tears, and infection, especially in low‑resource settings.",
+ "aka": [
+  "Glenohumeral joint",
+  "Shoulder joint"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The shoulder joint connects the humeral head to the glenoid fossa of the scapula, allowing the widest range of motion of any joint.",
+   "b": [
+    "Ball‑and‑socket type",
+    "Most mobile joint in the body",
+    "Relies on soft‑tissue stabilisers"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The joint lies laterally on the upper thorax, deep to the deltoid, and is surrounded by the joint capsule, glenoid labrum, and rotator cuff tendons.",
+   "b": [
+    "Glenoid cavity is shallow; labrum deepens it",
+    "Capsule reinforced by coracohumeral and glenohumeral ligaments",
+    "Rotator cuff: supraspinatus, infraspinatus, teres minor, subscapularis"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly the joint is adjacent to the subscapularis and the axillary nerve; posteriorly it contacts the infraspinatus and teres minor; superiorly the acromion and clavicle form the AC joint.",
+   "b": [
+    "Acromioclavicular joint lies superior",
+    "Bursa between deltoid and capsule reduces friction"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial blood reaches the joint via the anterior and posterior circumflex humeral arteries, branches of the axillary artery.",
+   "b": [
+    "Anterior circumflex supplies the anterior capsule",
+    "Posterior circumflex supplies the posterior capsule and rotator cuff"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "Sensory innervation comes from the suprascapular, axillary, and lateral pectoral nerves; motor supply to the rotator cuff is from the suprascapular and subscapular nerves.",
+   "b": [
+    "Axillary nerve: lateral shoulder skin and deltoid",
+    "Suprascapular nerve: supraspinatus & infraspinatus"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Provides flexion, extension, abduction, adduction, internal and external rotation, and circumduction, essential for reaching and lifting.",
+   "b": [
+    "Stability from rotator cuff and labrum",
+    "Mobility from shallow glenoid"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Instability, rotator cuff tears, adhesive capsulitis, and septic arthritis are common. In low‑resource settings, TB or bacterial infection may involve the joint.",
+   "b": [
+    "Dislocation: usually anterior; assess neurovascular status",
+    "Rotator cuff tear: pain on abduction, weakness in external rotation",
+    "Septic arthritis: fever, severe pain, limited motion; consider TB in endemic areas"
+   ],
+   "t": [
+    {
+     "a": "X‑ray (AP, scapular Y, axillary)",
+     "b": "Detects dislocation, fractures, joint space narrowing; if unavailable, use clinical exam and ultrasound"
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Identifies rotator cuff tears and effusion; portable in low‑resource settings"
+    },
+    {
+     "a": "Joint aspiration & Gram stain / culture",
+     "b": "Confirms septic arthritis; if culture unavailable, treat empirically for Staph aureus and consider TB PCR"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for bedside assessment and exams.",
+   "b": [
+    "Apprehension test assesses anterior instability",
+    "Drop arm test screens supraspinatus tear",
+    "Passive external rotation limited in adhesive capsulitis"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly progressive shoulder pain with fever (possible septic arthritis)",
+  "Severe deformity after trauma (possible dislocation or fracture)",
+  "Sudden loss of shoulder function with neurovascular deficits"
+ ],
+ "faq": [
+  {
+   "q": "Why is the shoulder more prone to dislocation than other joints?",
+   "a": "The glenoid is shallow, giving the humeral head great freedom but less bony stability."
+  },
+  {
+   "q": "What distinguishes adhesive capsulitis from rotator cuff tear?",
+   "a": "Adhesive capsulitis limits both active and passive motion; rotator cuff tear spares passive range."
+  },
+  {
+   "q": "Can TB affect the shoulder joint?",
+   "a": "Yes, especially in endemic regions; presents with chronic pain, swelling, and systemic symptoms."
+  }
+ ],
+ "exam": [
+  "Describe the bony and soft‑tissue structures that stabilise the glenohumeral joint.",
+  "Explain how you would differentiate an anterior shoulder dislocation from a rotator cuff tear on examination.",
+  "List the first‑line investigations for suspected septic arthritis of the shoulder and their diagnostic purpose."
+ ],
+ "related": [
+  "Rotator cuff anatomy",
+  "Acromioclavicular joint",
+  "Brachial plexus",
+  "Upper limb vascular anatomy",
+  "Shoulder osteoarthritis",
+  "Shoulder impingement syndrome"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-15",
+ "reviewed": false
+}

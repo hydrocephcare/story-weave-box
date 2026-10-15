@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Strongyloides stercoralis is a soil-transmitted nematode that can persist for decades via autoinfection. It causes strongyloidiasis, ranging from asymptomatic infection to life‑threatening hyperinfection, especially in immunocompromised hosts.",
+ "aka": [
+  "S. stercoralis",
+  "threadworm"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A tiny roundworm that lives in the small intestine. Unique ability to complete a free‑living cycle in soil and an internal autoinfection cycle, allowing chronic infection.",
+   "b": [
+    "Endemic in tropical/subtropical regions and warm temperate zones",
+    "Transmission through skin contact with contaminated soil"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The smallest human‑infecting nematode (≈2 mm adult female). Females are parthenogenetic; males are rare. Larvae are rhabditiform (non‑infective) and filariform (infective).",
+   "b": [
+    "Free‑living adult stage in soil",
+    "Filariform larvae penetrate skin, migrate via bloodstream to lungs, then to gut"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Infective filariform larvae enter through bare skin, travel to lungs, ascend the trachea, are swallowed, and mature in the duodenum. Some larvae become rhabditiform, are excreted, or transform into filariform larvae within the host (autoinfection).",
+   "b": [
+    "Direct skin contact with contaminated soil",
+    "Autoinfection can maintain infection for decades"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Strongyloidiasis presents as asymptomatic, chronic intestinal disease, or severe hyperinfection/disseminated disease. Hyperinfection occurs when immune control fails, leading to massive larval burden and bacterial sepsis.",
+   "b": [
+    "Mild: intermittent abdominal pain, diarrhea, eosinophilia",
+    "Severe: respiratory distress, shock, Gram‑negative sepsis, meningitis"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Detect larvae in stool, duodenal aspirate, or serology. Sensitivity improves with multiple samples. In hyperinfection, larvae appear in sputum, BAL, or urine.",
+   "b": [
+    "If microscopy unavailable, send stool for concentration technique to a reference lab."
+   ],
+   "t": [
+    {
+     "a": "Stool microscopy (direct smear, Baermann concentration)",
+     "b": "Is the patient shedding larvae? Positive confirms infection; negative does not rule out low‑level disease."
+    },
+    {
+     "a": "Serology (ELISA for IgG)",
+     "b": "Has the patient been exposed? Positive supports diagnosis, especially when stool is negative; cross‑reactivity possible."
+    },
+    {
+     "a": "Sputum/BAL cytology",
+     "b": "Is there pulmonary involvement? Finding larvae indicates hyperinfection."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Eradicate the parasite with ivermectin; alternative albendazole is less effective. Treat hyperinfection aggressively and manage secondary bacterial infections. Prevent reinfection by improving sanitation and wearing footwear.",
+   "b": [
+    "Ivermectin: kills all larval stages, preferred for safety and efficacy",
+    "Albendazole: second line, lower cure rates",
+    "Supportive care: oxygen, fluids, antibiotics for sepsis"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points to remember for exams.",
+   "b": [
+    "Autoinfection distinguishes Strongyloides from hookworms.",
+    "Hyperinfection risk ↑ with steroids, HTLV‑1, HIV, chemotherapy.",
+    "Eosinophilia may be absent in severe disease."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe abdominal pain with vomiting",
+  "Respiratory distress or hemoptysis",
+  "Shock, unexplained fever, or meningitis in a known case"
+ ],
+ "faq": [
+  {
+   "q": "Why can Strongyloides infection last a lifetime?",
+   "a": "Because larvae can reinfect the host internally without leaving the body."
+  },
+  {
+   "q": "What drugs increase the risk of hyperinfection?",
+   "a": "Corticosteroids, other immunosuppressants, and HTLV‑1 infection."
+  },
+  {
+   "q": "Is eosinophilia reliable for diagnosis?",
+   "a": "It is common in chronic infection but may be normal in hyperinfection."
+  }
+ ],
+ "exam": [
+  "Explain how autoinfection leads to chronic Strongyloides infection.",
+  "List three risk factors for hyperinfection and the pathophysiologic reason.",
+  "Describe the diagnostic algorithm for suspected strongyloidiasis in a low‑resource setting."
+ ],
+ "related": [
+  "Hookworm infection",
+  "HTLV‑1 infection",
+  "Corticosteroid therapy",
+  "Soil‑transmitted helminths",
+  "Eosinophilia",
+  "Sepsis from Gram‑negative bacteria"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-15",
+ "reviewed": false
+}

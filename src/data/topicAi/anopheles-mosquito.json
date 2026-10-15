@@ -1,0 +1,129 @@
+{
+ "medical": true,
+ "subject": "Microbiology & immunology",
+ "summary": "Anopheles mosquitoes are the sole vectors of human malaria. Only female Anopheles transmit Plasmodium sporozoites during a blood meal, linking vector biology to disease risk.",
+ "aka": [
+  "Anopheles spp.",
+  "malaria vector"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Anopheles are a genus of night‑biting mosquitoes found in tropical and subtropical regions. Their biology determines where malaria can occur and guides control strategies.",
+   "b": [
+    "Females require a blood meal to develop eggs.",
+    "Only Anopheles (not Culex or Aedes) transmit human malaria."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Adult Anopheles have a characteristic resting posture with the abdomen at an angle to the surface and palps longer than those of other genera.",
+   "b": [
+    "Scale‑covered wings with spotted patterns.",
+    "Larvae develop in clean, sunlit water."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Female Anopheles ingest Plasmodium gametocytes during a blood meal, which develop into sporozoites in the mosquito’s salivary glands. A subsequent bite injects sporozoites into the human host.",
+   "b": [
+    "Mosquito = definitive host; human = intermediate host.",
+    "Sporozoites travel to liver → hepatic schizogony."
+   ],
+   "t": [
+    {
+     "a": "Entomological inoculation rate (EIR)",
+     "b": "How many infectious bites per person per time; high EIR predicts outbreak risk."
+    },
+    {
+     "a": "Larval habitat survey",
+     "b": "Identifies breeding sites; guides vector control when labs unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "Anopheles transmits Plasmodium falciparum, vivax, ovale, malariae, and knowlesi, causing malaria with a spectrum from uncomplicated fever to severe organ dysfunction.",
+   "b": [
+    "Uncomplicated malaria: fever, chills, headache, anemia.",
+    "Severe malaria: cerebral involvement, severe anemia, renal failure, hypoglycemia."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis focuses on detecting Plasmodium in the patient, not the mosquito, but understanding vector exposure informs pre‑test probability.",
+   "b": [
+    "Thick and thin blood smears remain gold standard.",
+    "Rapid diagnostic tests (RDTs) detect HRP2 or pLDH antigens."
+   ],
+   "t": [
+    {
+     "a": "Blood smear microscopy",
+     "b": "Confirms species and parasite density; high density (>100,000/µL) indicates severe disease."
+    },
+    {
+     "a": "HRP2‑based RDT",
+     "b": "Quick rule‑in for P. falciparum; may be false‑negative with HRP2 gene deletions."
+    },
+    {
+     "a": "PCR (if available)",
+     "b": "Detects low‑level infection and mixed species; used when microscopy/RDT inconclusive."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management combines antimalarial therapy with vector control. Treat the parasite first, then prevent further bites.",
+   "b": [
+    "Artemisinin‑based combination therapy (ACT) for uncomplicated falciparum malaria – kills blood‑stage parasites.",
+    "Intravenous artesunate for severe malaria – rapid parasite clearance, avoids quinine toxicity.",
+    "Insecticide‑treated nets (ITNs) and indoor residual spraying (IRS) reduce exposure."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Key points that often appear in exams.",
+   "b": [
+    "Only female Anopheles transmit malaria – remember the “only female” rule.",
+    "Severe malaria criteria: cerebral signs, >5% parasitemia, renal failure, severe anemia, hypoglycemia.",
+    "HRP2‑RDT false‑negative in areas with HRP2‑deleted P. falciparum."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Altered consciousness or seizures (cerebral malaria)",
+  "Severe anemia (Hb <5 g/dL) or respiratory distress",
+  "Renal failure, persistent vomiting, or hypoglycemia"
+ ],
+ "faq": [
+  {
+   "q": "Why are only female Anopheles vectors?",
+   "a": "Only females need blood for egg development, so they bite and can inoculate sporozoites."
+  },
+  {
+   "q": "Can other mosquitoes transmit malaria?",
+   "a": "No, Culex and Aedes do not support Plasmodium development; they are vectors for other diseases."
+  },
+  {
+   "q": "What if a rapid test is negative but suspicion remains high?",
+   "a": "Perform microscopy or PCR; consider HRP2 gene deletion and repeat testing."
+  }
+ ],
+ "exam": [
+  "Explain the life cycle of Plasmodium in the Anopheles mosquito and why only females transmit the parasite.",
+  "List the WHO criteria for severe malaria and describe the immediate management steps.",
+  "Describe two vector‑control measures and the rationale behind each."
+ ],
+ "related": [
+  "Plasmodium falciparum",
+  "Malaria epidemiology",
+  "Insecticide‑treated nets",
+  "Indoor residual spraying",
+  "Severe malaria complications",
+  "Antimalarial drug resistance"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-15",
+ "reviewed": false
+}

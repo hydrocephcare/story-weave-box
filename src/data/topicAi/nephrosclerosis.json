@@ -1,0 +1,179 @@
+{
+ "medical": true,
+ "subject": "Pathology",
+ "summary": "Nephrosclerosis is the hardening and scarring of small renal arteries, driven mainly by chronic hypertension. It leads to ischemic damage, progressive kidney failure, and a vicious cycle that worsens blood pressure.",
+ "aka": [
+  "Renal arteriolosclerosis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Nephrosclerosis refers to fibrous thickening of renal arterioles, causing ischemic injury to the cortex and medulla. Diagnosis is clinical, supported by imaging and biopsy when feasible.",
+   "b": [
+    "Hypertension history",
+    "Renal ultrasound showing small kidneys"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Is the kidney filtering properly? Elevated indicates reduced function."
+    },
+    {
+     "a": "Urinalysis",
+     "b": "Detects proteinuria or hematuria, suggesting glomerular involvement."
+    },
+    {
+     "a": "Renal Doppler",
+     "b": "Assesses arterial flow; absent or reduced flow supports arteriolar disease."
+    },
+    {
+     "a": "Kidney biopsy",
+     "b": "Confirms arteriolar thickening and fibrosis when imaging is inconclusive."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging follows the KDIGO chronic kidney disease stages, correlating with eGFR and proteinuria. Early stages show mild hypertension; advanced stages present with oliguria and electrolyte imbalance.",
+   "b": [
+    "Stage 1: eGFR >90, mild proteinuria",
+    "Stage 5: eGFR <15, dialysis needed"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary driver is long‑standing hypertension. Other contributors include diabetes, aging, and systemic vasculitis. In low‑resource settings, infections such as HIV and malaria can exacerbate vascular injury.",
+   "b": [
+    "Hypertension",
+    "Diabetes mellitus",
+    "HIV infection",
+    "Malaria"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure measurement",
+     "b": "Identifies uncontrolled hypertension as the root cause."
+    },
+    {
+     "a": "HbA1c",
+     "b": "Detects diabetes contributing to vascular damage."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often have asymptomatic hypertension, gradual decline in renal function, and may develop edema or anemia. Sudden worsening can occur with acute tubular necrosis or superimposed infection.",
+   "b": [
+    "Hypertension",
+    "Fatigue",
+    "Anemia",
+    "Proteinuria"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use readily available tests; when unavailable, rely on clinical judgment and basic labs.",
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Measures kidney filtration; rising levels indicate worsening function."
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Detects hyperkalemia or hyponatremia from impaired excretion."
+    },
+    {
+     "a": "Renal ultrasound",
+     "b": "Shows small, echogenic kidneys typical of chronic disease."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid loss of urine output, severe hyperkalemia, or uncontrolled hypertension are emergencies. Complications include heart failure, electrolyte disturbances, and progression to end‑stage kidney disease.",
+   "b": [
+    "Oliguria",
+    "Hyperkalemia >6.5 mmol/L",
+    "Hypertensive crisis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Control blood pressure with ACE inhibitors or ARBs, avoid nephrotoxic drugs, and manage anemia and mineral bone disorder. Treat underlying causes such as diabetes.",
+   "b": [
+    "ACE inhibitors/ARBs – reduce intraglomerular pressure",
+    "Diuretics – manage edema",
+    "Erythropoietin – treat anemia"
+   ],
+   "t": [
+    {
+     "a": "ACE inhibitor",
+     "b": "Does it lower intraglomerular pressure? Yes, it protects the kidney."
+    },
+    {
+     "a": "Diuretic",
+     "b": "Does it reduce edema? Yes, it removes excess fluid."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of blood pressure, kidney function, and proteinuria is essential. Lifestyle changes and early treatment of hypertension prevent progression.",
+   "b": [
+    "Annual BP check",
+    "Quarterly creatinine and albuminuria",
+    "Lifestyle counseling"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Renal artery stenosis presents similarly but is a focal narrowing; acute tubular necrosis shows sudden creatinine rise without chronic changes.",
+   "b": [
+    "Renal artery stenosis",
+    "Acute tubular necrosis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serum creatinine may remain normal until late stages; proteinuria can be transient in infections.",
+   "b": [
+    "Creatinine normal in early disease",
+    "Proteinuria from urinary tract infection"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden oliguria",
+  "Severe hyperkalemia",
+  "Hypertensive emergency"
+ ],
+ "faq": [
+  {
+   "q": "Can nephrosclerosis be reversed?",
+   "a": "Early stages can be stabilized with blood pressure control, but fibrosis is irreversible."
+  },
+  {
+   "q": "Does it always cause kidney failure?",
+   "a": "Not always; many patients remain stable for years with good BP control."
+  },
+  {
+   "q": "What is the role of ACE inhibitors?",
+   "a": "They lower intraglomerular pressure, slowing progression and reducing proteinuria."
+  }
+ ],
+ "exam": [
+  "Explain how chronic hypertension leads to arteriolar sclerosis and kidney damage.",
+  "Describe the diagnostic workup for a patient with suspected nephrosclerosis.",
+  "Outline the first‑line pharmacologic treatment and its rationale."
+ ],
+ "related": [
+  "Hypertension",
+  "Chronic kidney disease",
+  "Renal artery stenosis",
+  "Diabetic nephropathy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-15",
+ "reviewed": false
+}
