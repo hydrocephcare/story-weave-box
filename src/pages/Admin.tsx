@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Loader2, FileText, Layers, Settings, Trash2, Pencil, ListChecks, Save, Key, Zap, RefreshCw, Bolt, AlertTriangle, Building2, Check, X, Sparkles, Eye, Upload, Wrench, Globe, Search, Copy, ExternalLink, BookOpen, ChevronDown, Edit3, Bell, HardDrive } from "lucide-react";
+import { Bot, Loader2, FileText, Layers, Settings, Trash2, Pencil, ListChecks, Save, Key, Zap, RefreshCw, Bolt, AlertTriangle, Building2, Check, X, Sparkles, Eye, Upload, Wrench, Globe, Search, Copy, ExternalLink, BookOpen, ChevronDown, Edit3, Bell, HardDrive } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -449,6 +449,7 @@ export default function Admin() {
     { id: "route:/admin/duplicates", label: "Repeated pages", icon: Layers },
     { id: "route:/admin/comments", label: "Comments", icon: Bell },
     { id: "route:/admin/drafts", label: "AI notes to approve", icon: Sparkles },
+    { id: "route:/admin/autopilot", label: "Autopilot", icon: Bot },
     { id: "route:/admin/activity", label: "Activity & AI keys", icon: Search },
     { id: "route:/admin/analytics", label: "Visitors", icon: Globe },
     { id: "route:/admin/polish", label: "Polished blogs", icon: Wrench },

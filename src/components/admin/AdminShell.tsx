@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { AlertTriangle, BarChart3, Bell, BookOpen, Building2, Check, Edit3, FileText, Globe, HardDrive, KeyRound, Layers, ListChecks, Search, Settings, Sparkles, Upload, Wallet, Wrench } from "lucide-react";
+import { AlertTriangle, Bot, BarChart3, Bell, BookOpen, Building2, Check, Edit3, FileText, Globe, HardDrive, KeyRound, Layers, ListChecks, Search, Settings, Sparkles, Upload, Wallet, Wrench } from "lucide-react";
 import AdminWorkspace, { type AdminNavGroup } from "@/components/admin/AdminWorkspace";
 
 /**
@@ -10,6 +10,7 @@ import AdminWorkspace, { type AdminNavGroup } from "@/components/admin/AdminWork
 const tab = (id: string, label: string, icon: React.ElementType) => ({ id, label, icon });
 const GROUPS: AdminNavGroup[] = [
   { label: "Tools", items: [
+    tab("route:/admin/autopilot", "Autopilot", Bot),
     tab("route:/admin/activity", "Activity & AI keys", Search),
     tab("route:/admin/analytics", "Visitors", BarChart3),
     tab("route:/admin/access", "Book access rules", KeyRound),
