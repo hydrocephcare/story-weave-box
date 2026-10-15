@@ -15,6 +15,9 @@ const goodPage = {
   related: ["Conduct disorder", "ADHD"],
 };
 
+// what the writer must hand back before a page is published: 7+ sections and 8+ examiner questions
+const deepPage = { ...goodPage, sections: [...goodPage.sections, ...["Causes", "Investigations", "Complications", "Prognosis"].map((h) => ({ h, b: [`${h}: a clear point for revision`] }))], exam: Array.from({ length: 8 }, (_, k) => `Examiner question number ${k + 1}, what would you do next?`) };
+
 describe("topic page writer", () => {
   it("accepts a good page and keeps its shape", () => {
     const p = sanitizePage(goodPage);
@@ -59,7 +62,7 @@ describe("topic page writer", () => {
   });
 
   it("calls Gemini through the gateway and returns a checked page", async () => {
-    const fetchImpl = vi.fn(async () => ({ ok: true, json: async () => ({ choices: [{ message: { content: "Here you go: " + JSON.stringify(goodPage) } }] }) }));
+    const fetchImpl = vi.fn(async () => ({ ok: true, json: async () => ({ choices: [{ message: { content: "Here you go: " + JSON.stringify(deepPage) } }] }) }));
     const page = await generateTopicPage({ name: "Oppositional defiant disorder", category: "Psychiatry", env: { LOVABLE_API_KEY: "k" }, fetchImpl });
     expect(page.medical).toBe(true);
     expect(page.kind).toBe("disease");
@@ -68,7 +71,7 @@ describe("topic page writer", () => {
   });
 
   it("falls back to a direct Gemini key when the gateway fails", async () => {
-    const fetchImpl = vi.fn(async (url: string) => String(url).includes("lovable") ? { ok: false, status: 500, json: async () => ({}) } : { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify(goodPage) }] } }] }) });
+    const fetchImpl = vi.fn(async (url: string) => String(url).includes("lovable") ? { ok: false, status: 500, json: async () => ({}) } : { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify(deepPage) }] } }] }) });
     const page = await generateTopicPage({ name: "Oppositional defiant disorder", category: "Psychiatry", env: { LOVABLE_API_KEY: "k", GEMINI_API_KEY: "g" }, fetchImpl });
     expect(page.medical).toBe(true);
     expect(fetchImpl).toHaveBeenCalledTimes(2);
@@ -89,7 +92,7 @@ describe("topic-ai flow", () => {
     return { ok: true, headers: new Headers(), json: async () => (rows[slug] ? [rows[slug]] : []) };
   };
   const call = (input: unknown, env: Record<string, string> = baseEnv) => topicAiCore(input, { env, fetchImpl });
-  beforeEach(() => { rows = {}; modelCalls = 0; modelReply = { ok: true, json: async () => ({ choices: [{ message: { content: JSON.stringify(goodPage) } }] }) }; });
+  beforeEach(() => { rows = {}; modelCalls = 0; modelReply = { ok: true, json: async () => ({ choices: [{ message: { content: JSON.stringify(deepPage) } }] }) }; });
 
   it("says 'unavailable' when no AI key is set up", async () => {
     const r = await call({ name: "Oppositional defiant disorder" }, { SUPABASE_URL: "https://db.test", SUPABASE_SERVICE_ROLE_KEY: "s" });
@@ -100,7 +103,7 @@ describe("topic-ai flow", () => {
   it("writes a page once, saves it, and gives the saved copy to the next reader without spending credits", async () => {
     const first = await call({ name: "Oppositional defiant disorder", category: "Psychiatry" });
     expect(first.code).toBe(200);
-    expect((first.body as any).page.sections).toHaveLength(3);
+    expect((first.body as any).page.sections).toHaveLength(7);
     expect(rows["oppositional-defiant-disorder"].status).toBe("published");
     expect(modelCalls).toBe(1);
     const second = await call({ name: "Oppositional defiant disorder" });

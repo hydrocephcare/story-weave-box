@@ -8,7 +8,7 @@ type Db = { from: (t: string) => any };
 interface Row { slug: string; name: string; category: string | null; sections: unknown[] | null; exam: unknown[] | null; down: number; up: number }
 
 /**
- * /admin/thin-topics: topic pages written before the deep layout (fewer than 9 sections or 8 examiner questions) and pages students voted down.
+ * /admin/thin-topics: topic pages written before the deep layout (fewer than 7 sections or 8 examiner questions) and pages students voted down.
  * A thin page is upgraded once, on its own, the first time a student reads it; this list lets you do the most-wanted ones yourself, one tap each.
  */
 export default function AdminThinTopics() {
@@ -26,7 +26,7 @@ export default function AdminThinTopics() {
       const votes = new Map<string, { up: number; down: number }>();
       for (const x of (v.data ?? []) as { slug: string; vote: number }[]) { const c = votes.get(x.slug) ?? { up: 0, down: 0 }; if (x.vote > 0) c.up++; else c.down++; votes.set(x.slug, c); }
       const all = ((p.data ?? []) as Omit<Row, "up" | "down">[]).map((r) => ({ ...r, up: votes.get(r.slug)?.up ?? 0, down: votes.get(r.slug)?.down ?? 0 }));
-      setRows(all.filter((r) => (r.sections?.length ?? 0) < 9 || (r.exam?.length ?? 0) < 8 || r.down > 0).sort((a, b) => b.down - a.down || (a.sections?.length ?? 0) - (b.sections?.length ?? 0)));
+      setRows(all.filter((r) => (r.sections?.length ?? 0) < 7 || (r.exam?.length ?? 0) < 8 || r.down > 0).sort((a, b) => b.down - a.down || (a.sections?.length ?? 0) - (b.sections?.length ?? 0)));
       setBusy(false);
     })();
   }, [db]);

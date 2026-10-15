@@ -10,14 +10,12 @@ export default async function handler(req, res) {
   try {
     const key = KEY;
     const [rowsRes, indexRes] = await Promise.all([
-      fetch(`${DB}/rest/v1/topic_pages?select=slug,updated_at,sections:content->sections,exam:content->exam&status=eq.published&order=updated_at.desc&limit=2000`, { headers: { apikey: key, Authorization: `Bearer ${key}` } }),
+      fetch(`${DB}/rest/v1/topic_pages?select=slug,updated_at&status=eq.published&order=updated_at.desc&limit=2000`, { headers: { apikey: key, Authorization: `Bearer ${key}` } }),
       fetch(`${SITE}/topics/index.json`),
     ]);
     const rows = rowsRes.ok ? await rowsRes.json() : [];
     const indexed = new Set(indexRes.ok && (indexRes.headers.get("content-type") || "").includes("json") ? (await indexRes.json()).map((t) => t.s) : []);
-    // only pages deep enough to be indexed (thin ones carry noindex until they are rewritten)
-    const deep = (r) => Array.isArray(r.sections) && r.sections.length >= 9 && Array.isArray(r.exam) && r.exam.length >= 8;
-    const fresh = rows.filter((r) => r.slug && !indexed.has(r.slug) && deep(r));
+    const fresh = rows.filter((r) => r.slug && !indexed.has(r.slug));
     const top = `  <url>\n    <loc>${SITE}/topics</loc>\n    <changefreq>daily</changefreq>\n    <priority>0.7</priority>\n  </url>`;
     const urls = [top, ...fresh.map((r) => `  <url>\n    <loc>${SITE}/topic/${r.slug}</loc>\n    <lastmod>${String(r.updated_at).slice(0, 10)}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>0.6</priority>\n  </url>`)].join("\n");
     res.setHeader("Cache-Control", "public, s-maxage=900, stale-while-revalidate=86400");

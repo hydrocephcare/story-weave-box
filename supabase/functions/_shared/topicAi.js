@@ -7,9 +7,9 @@ export const DEEP_DISEASE = ["Definition and epidemiology", "Causes and risk fac
 export const KINDS = {
   disease: ["Definition and diagnosis", "Severity and staging", "Causes, most likely first", "How it presents", "Investigations", "Red flags and complications", "Management", "Follow-up and prevention", "Often confused with", "Where results can mislead"],
   anatomy: ["Overview", "Location and structure", "Relations", "Blood supply", "Nerve supply", "Function", "Clinical relevance and injuries", "Exam pearls"],
-  physiology: ["Overview", "How it works", "Regulation", "What goes wrong", "Clinical relevance", "Exam pearls"],
+  physiology: ["Overview", "How it works", "Regulation", "What goes wrong", "Clinical correlations", "Investigations and how to read them", "Common exam traps", "Exam pearls"],
   microbe: ["Overview", "Features of the organism", "Transmission and life cycle", "Disease it causes", "Diagnosis", "Treatment and control", "Exam pearls"],
-  general: ["Overview", "Key concepts", "Clinical relevance", "Exam pearls", "Common mistakes"],
+  general: ["Overview", "Key concepts", "How it works", "Clinical relevance", "Investigations or applications", "Related conditions", "Common mistakes", "Exam pearls"],
 };
 
 /** Which layout a topic gets, from the subject the site filed it under. */
@@ -178,6 +178,8 @@ export async function generateTopicPage({ name, category, context, choices, env,
   const m = text.match(/\{[\s\S]*\}/);
   if (!m) throw new Error("no JSON in the reply");
   const page = sanitizePage(JSON.parse(m[0]));
+  // the publishing rule: a full page is only accepted when it is deep (7+ sections, 8+ examiner questions); a thin answer is retried with the next key or provider
+  if (deep && page.medical && (page.sections.length < 7 || page.exam.length < 8)) throw new Error("too thin");
   return page.medical ? { ...page, kind: kindOf(category, name), model, generatedAt: new Date().toISOString().slice(0, 10) } : page;
 }
 

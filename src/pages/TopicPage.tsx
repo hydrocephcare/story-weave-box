@@ -376,7 +376,6 @@ export default function TopicPage() {
         <title>{title}</title>
         <meta name="description" content={desc} />
         <link rel="canonical" href={`${SITE}${topicPath(slug)}`} />
-        {!topic && page && !isDeepPage(page) && <meta name="robots" content="noindex,follow" />}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
         {(topic?.imgs[0] || media?.hero) && <meta property="og:image" content={topic?.imgs[0]?.u ?? media?.hero?.u} />}

@@ -273,7 +273,7 @@ export function useTopicPage(slug: string) {
 export function isDeepPage(p: { sections?: { b?: unknown[]; t?: unknown[]; p?: string }[]; exam?: unknown[] } | null | undefined): boolean {
   if (!p) return false;
   const secs = p.sections ?? [];
-  return secs.length >= 9 && (p.exam?.length ?? 0) >= 8; // the same rule the database uses before it will replace a page
+  return secs.length >= 7 && (p.exam?.length ?? 0) >= 8; // the same rule the database uses before it will replace a page
 }
 
 /** Admin: write the full, deep version now and replace what is saved. */
