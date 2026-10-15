@@ -8,7 +8,7 @@ import { buildPartPrompts, mergeParts, parseJsonReply } from "../../supabase/fun
 import { slugOf, validName } from "../../supabase/functions/_shared/topicAi.js";
 import type { AiPage } from "@/lib/topics";
 
-export type WriteResult = { status: "published"; page: AiPage & { subject?: string }; saved: boolean } | { status: "rejected" | "failed" | "busy" | "limit" | "bot" | "paused" };
+export type WriteResult = { status: "published"; page: AiPage & { subject?: string }; saved: boolean; slug?: string; name?: string } | { status: "rejected" | "failed" | "busy" | "limit" | "bot" | "paused" };
 
 const DAY_KEY = "ompath_topic_writes";
 const PER_VISITOR_PER_DAY = 40;
@@ -88,7 +88,15 @@ export async function writeTopicPage({ name, category, context, signal }: { name
   // Route 0: our own server with the Gemini keys
   const viaApi = await viaServer(name, category, context, signal);
   if (viaApi?.status === "rejected") return { status: "rejected" };
-  if (viaApi?.status === "published") { countWrite(); const { saved } = await publish(viaApi.page, slug, name, category); return { status: "published", page: viaApi.page, saved }; }
+  if (viaApi?.status === "published") {
+    countWrite();
+    // the page is saved under the clean title the writer chose, not under what was typed
+    const title = String((viaApi.page as { title?: string }).title ?? "").trim();
+    const cleanName = validName(title) ? title : name;
+    const cleanSlug = slugOf(cleanName) || slug;
+    const { saved } = await publish(viaApi.page, cleanSlug, cleanName, category);
+    return { status: "published", page: viaApi.page, saved, slug: cleanSlug, name: cleanName };
+  }
 
   // Route 1: the server function, when it has been deployed
   if (!fnKnownDown()) {

@@ -137,7 +137,7 @@ export async function loadStoredPage(slug: string): Promise<AiPage | null> {
   } catch { return null; }
 }
 
-type Ask = { status: "published"; page: AiPage } | { status: "generating" | "unavailable" | "busy" | "failed" | "rejected" };
+type Ask = { status: "published"; page: AiPage; redirect?: string } | { status: "generating" | "unavailable" | "busy" | "failed" | "rejected" };
 // pages written but not saved (the publish step was not available) are kept on this device for a day, so the reader is not charged twice
 const LOCAL = "ompath_topic_local";
 const readLocal = (slug: string): AiPage | null => { try { const m = JSON.parse(localStorage.getItem(LOCAL) ?? "{}") as Record<string, { at: number; page: AiPage }>; const v = m[slug]; return v && Date.now() - v.at < 86_400_000 ? v.page : null; } catch { return null; } };
@@ -153,7 +153,13 @@ async function askServer(slug: string, name: string, category: string, context: 
   const local = readLocal(slug);
   if (local) return { status: "published", page: local };
   const r = await writeTopicPage({ name, category, context });
-  if (r.status === "published") { if (!r.saved) writeLocal(slug, r.page); addToTopicIndex({ s: slug, n: name, c: category || (r.page as { subject?: string }).subject }); return { status: "published", page: r.page }; }
+  if (r.status === "published") {
+    const finalSlug = r.slug || slug;
+    const finalName = r.name || name;
+    if (!r.saved) writeLocal(finalSlug, r.page);
+    addToTopicIndex({ s: finalSlug, n: finalName, c: category || (r.page as { subject?: string }).subject });
+    if (finalSlug !== slug) { try { const m = JSON.parse(localStorage.getItem("ompath_topic_alias") ?? "{}") as Record<string, string>; m[slug] = finalSlug; localStorage.setItem("ompath_topic_alias", JSON.stringify(m)); } catch { /* ignore */ } return { status: "published", page: r.page, redirect: finalSlug }; }
+    return { status: "published", page: r.page }; }
   if (r.status === "rejected") { markRejected(slug); return { status: "rejected" }; }
   if (r.status === "busy" || r.status === "limit") return { status: "busy" };
   return { status: r.status === "bot" || r.status === "paused" ? "unavailable" : "failed" };
@@ -204,6 +210,7 @@ export function useTopicPage(slug: string) {
     let on = true;
     setTopic(null); setPage(null); setPhase("loading"); setFresh(false); setRedirectTo(null);
     void (async () => {
+      try { const to = (JSON.parse(localStorage.getItem("ompath_topic_alias") ?? "{}") as Record<string, string>)[slug]; if (to && to !== slug) { setRedirectTo(to); return; } } catch { /* ignore */ }
       let t = await loadTopic(slug);
       if (!on) return;
       if (!t) {
@@ -229,6 +236,7 @@ export function useTopicPage(slug: string) {
       for (let i = 0; i < 16 && on; i++) {
         const res = await askServer(slug, name, category, context);
         if (!on) return;
+        if (res.status === "published" && res.redirect) { setRedirectTo(res.redirect); return; }
         if (res.status === "published") { setPage(res.page); setPhase("ready"); setFresh(Boolean(t)); return; }
         if (res.status === "generating") { await new Promise((r) => setTimeout(r, 4000)); continue; }
         if (res.status === "rejected") { setPhase(t ? "ready" : "rejected"); return; }
@@ -244,5 +252,5 @@ export function useTopicPage(slug: string) {
 
   const retry = useCallback(() => { try { const m = JSON.parse(sessionStorage.getItem(TRIED) ?? "{}") as Record<string, number>; delete m[slug]; sessionStorage.setItem(TRIED, JSON.stringify(m)); } catch { /* ignore */ } setAttempt((a) => a + 1); }, [slug]);
   const writing = asking;
-  return { topic, page, phase, fresh, redirectTo, retry, writing, name: topic?.n ?? deslug(slug) };
+  return { topic, page, phase, fresh, redirectTo, retry, writing, name: topic?.n ?? (page as { title?: string } | null)?.title ?? deslug(slug) };
 }
