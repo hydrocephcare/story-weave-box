@@ -68,3 +68,12 @@ describe("revision page and deep exam notes", () => {
     expect(text).toContain("Case:");
   });
 });
+
+import { extractJson } from "../../supabase/functions/_shared/topicAi.js";
+describe("reading JSON out of a model reply", () => {
+  it("takes the first complete object and ignores what comes before or after it", () => {
+    expect(extractJson('Here you go: {"a": 1, "b": {"c": "}"}} and also {"x": 2}')).toEqual({ a: 1, b: { c: "}" } });
+    expect(extractJson("no json here")).toBeNull();
+    expect(extractJson('{"a": "unfinished')).toBeNull();
+  });
+});

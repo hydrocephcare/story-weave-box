@@ -1,7 +1,7 @@
 // A second AI reads medical study material the way a strict senior clinician would and lists what is wrong. It is used on the notes, the topic pages
 // and the deep exam notes, so a page that carries a wrong threshold, a wrong first-line drug or an MCQ whose marked answer is wrong does not get the
 // "AI cross-checked" mark. This is a safety net, not a doctor's review, and the site says so. Plain JS (no Deno or Node APIs) so scripts and edge code share it.
-import { askModel } from "./topicAi.js";
+import { askModel, extractJson, generateDeepWithFallback } from "./topicAi.js";
 
 export const CHECK_RULES = `Check for these errors and nothing else:
 - a wrong number, unit or threshold (for example a diagnostic cut-off, a duration, a ratio) compared with current standard guidelines (WHO, Kenya MoH, EASL/AASLD, KDIGO, ESC/AHA, BTS and similar);
@@ -54,9 +54,9 @@ Reply with ONLY one JSON object: {"real": [numbers of the claims that are real e
   // the verifier is a DIFFERENT model family from the first reader when the keys allow (Groq if the first pass used Gemini), so one model's habit is not repeated
   const other = env.GROQ_API_KEYS && env.GEMINI_API_KEYS ? { GROQ_API_KEYS: env.GROQ_API_KEYS } : env;
   const r = await askModel(prompt, { env: other, fetchImpl, timeoutMs, maxTokens: 800 });
-  const m = r.text.match(/{[sS]*}/);
-  if (!m) return issues;
-  const keep = new Set((JSON.parse(m[0]).real ?? []).map(Number));
+  const json = extractJson(r.text);
+  if (!json) return issues;
+  const keep = new Set((json.real ?? []).map(Number));
   return issues.filter((_, i) => keep.has(i + 1));
 }
 
@@ -81,9 +81,9 @@ export async function checkContent({ title, kind = "note", text, env, fetchImpl 
     if (!piece.trim()) continue;
     const r = await askModel(buildCheckPrompt({ title, kind, text: piece }), { env, fetchImpl, timeoutMs, maxTokens: 3500 });
     model = r.model;
-    const m = r.text.match(/\{[\s\S]*\}/);
-    if (!m) throw new Error("no JSON in the reply");
-    const found = sanitizeCheck(JSON.parse(m[0])).issues.filter((x) => x.severity !== "low");
+    const json = extractJson(r.text);
+    if (!json) throw new Error("no JSON in the reply");
+    const found = sanitizeCheck(json).issues.filter((x) => x.severity !== "low");
     all.push(...(await verifyIssues({ text: piece, issues: found, env, fetchImpl, timeoutMs })));
   }
   return { ...sanitizeCheck({ issues: all }), model, at: new Date().toISOString().slice(0, 10) };
@@ -96,4 +96,47 @@ export function deepToText(deep) {
   const mcq = (deep.mcqs ?? []).map((x) => `MCQ: ${x.q}\n${x.o.map((o, i) => `${"ABCD"[i]}. ${o}`).join("\n")}\nMarked answer: ${"ABCD"[x.a]}. ${x.e}`).join("\n");
   const cases = (deep.cases ?? []).map((c) => `Case: ${c.v}\n${c.qs.map((x) => `Q: ${x.q}\nA: ${x.a}`).join("\n")}`).join("\n");
   return [...sec, `## Numbers to memorise\n${(deep.facts ?? []).join("\n")}`, `## Viva questions\n${viva}`, `## MCQs\n${mcq}`, `## Cases\n${cases}`, `## Common mistakes\n${(deep.mistakes ?? []).join("\n")}`].join("\n\n");
+}
+
+/** Letters and digits only, lower case: so a quote and the text it came from can be compared. */
+const norm = (v) => String(v ?? "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+
+/** Cuts out every bullet, row, question or fact that a flagged issue points at (matched by its quoted text). Returns { deep, removed }. */
+export function dropFlagged(deep, issues) {
+  const keys = issues.map((x) => norm(x.where)).filter((k) => k.length >= 18).map((k) => k.slice(0, 40));
+  let removed = 0;
+  const hit = (...texts) => { const n = norm(texts.join(" ")); const bad = keys.some((k) => n.includes(k)) || texts.some((t) => { const m = norm(t).slice(0, 40); return m.length >= 18 && issues.some((x) => norm(x.where).includes(m)); }); if (bad) removed++; return bad; };
+  const out = { ...deep };
+  out.sections = (deep.sections ?? []).map((x) => ({ ...x, b: (x.b ?? []).filter((t) => !hit(t)), t: (x.t ?? []).filter((r) => !hit(r.a, r.b)) })).filter((x) => x.p || x.b.length || x.t.length);
+  out.facts = (deep.facts ?? []).filter((t) => !hit(t));
+  out.mnemonics = (deep.mnemonics ?? []).filter((m) => !hit(m.n, m.t));
+  out.vivas = (deep.vivas ?? []).filter((v) => !hit(v.q, v.a));
+  out.mcqs = (deep.mcqs ?? []).filter((m) => !hit(m.q, ...m.o, m.e));
+  out.cases = (deep.cases ?? []).map((c) => ({ ...c, qs: c.qs.filter((x) => !hit(x.q, x.a)) })).filter((c) => c.qs.length >= 2 && !hit(c.v));
+  out.mistakes = (deep.mistakes ?? []).filter((t) => !hit(t));
+  out.exam = out.vivas.slice(0, 14).map((x) => x.q + " — " + x.a);
+  return { deep: out, removed };
+}
+
+/**
+ * Writes the deep notes, has a second AI check them, and if the check finds a serious error writes them once more with the errors listed.
+ * If a serious error is still there, the flagged statements are cut out and the rest is published when enough remains.
+ * Returns the notes with the date they passed. Throws when too little would be left (nothing wrong is ever published).
+ */
+export async function generateCheckedDeep(input, env, fetchImpl = fetch, budgetMs = 600000) {
+  let fixes = [];
+  let deep = null;
+  let last = null;
+  const t0 = Date.now();
+  for (let round = 0; round < 2; round++) {
+    // a second write only when there is time left inside the caller's limit (a web request has about a minute)
+    if (round > 0 && Date.now() - t0 > budgetMs * 0.5) break;
+    deep = await generateDeepWithFallback({ ...input, fixes }, env);
+    last = await checkContent({ title: input.name, kind: "deep exam notes", text: deepToText(deep), env, fetchImpl });
+    if (last.validated) return { ...deep, checked: last.at };
+    fixes = last.issues.filter((x) => x.severity !== "low").map((x) => x.problem + " Correct: " + x.fix);
+  }
+  const { deep: trimmed, removed } = dropFlagged(deep, last.issues.filter((x) => x.severity === "high"));
+  if (!removed || (trimmed.sections?.length ?? 0) < 5 || (trimmed.vivas?.length ?? 0) < 8) throw new Error("deep notes held back: " + fixes.join(" | ").slice(0, 300));
+  return { ...trimmed, checked: last.at, trimmed: removed };
 }

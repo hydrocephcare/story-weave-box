@@ -179,9 +179,9 @@ export async function askModel(prompt, { env = {}, fetchImpl = fetch, timeoutMs 
 export async function generateTopicPage({ name, category, context, choices, env, fetchImpl = fetch, timeoutMs }) {
   const deep = cleanChoices(choices).depth === "full";
   const { text, model } = await askModel(buildPrompt({ name, category, context, choices }), { env, fetchImpl, timeoutMs: timeoutMs ?? (deep ? 55000 : 50000), maxTokens: deep ? 10000 : 5000 });
-  const m = text.match(/\{[\s\S]*\}/);
-  if (!m) throw new Error("no JSON in the reply");
-  const page = sanitizePage(JSON.parse(m[0]));
+  const json = extractJson(text);
+  if (!json) throw new Error("no JSON in the reply");
+  const page = sanitizePage(json);
   return page.medical ? { ...page, kind: kindOf(category, name), model, generatedAt: new Date().toISOString().slice(0, 10) } : page;
 }
 
@@ -211,7 +211,7 @@ const DEEP_PARTS = {
   },
 };
 
-export function buildDeepPrompt({ name, category, base, part = "clinical", past = [] }) {
+export function buildDeepPrompt({ name, category, base, part = "clinical", past = [], fixes = [] }) {
   const have = (Array.isArray(base?.sections) ? base.sections : []).map((x) => String(x?.h ?? "")).filter(Boolean).join("; ");
   const points = (Array.isArray(base?.sections) ? base.sections : []).flatMap((x) => [x?.p, ...(Array.isArray(x?.b) ? x.b : [])]).filter(Boolean).map((x) => clip(x, 110)).slice(0, 24).join(" | ");
   const asked = (Array.isArray(base?.exam) ? base.exam : []).map((x) => clip(String(x).split(" — ")[0], 100)).slice(0, 8).join(" | ");
@@ -223,6 +223,7 @@ The revision page already has these sections: ${have || "(none)"}.
 Points it already makes: ${clip(points, 2200)}
 Examiner questions it already asks: ${clip(asked, 800)}
 ${pastList.length ? `\nPAST-PAPER questions asked at this medical school on this topic (examiners repeat themselves, so answer each):\n- ${pastList.join("\n- ")}\n` : ""}
+${fixes.length ? `\nA REVIEWER FOUND THESE ERRORS IN AN EARLIER DRAFT. Do not repeat them: wherever your text touches these facts, state them correctly:\n- ${fixes.map((x) => clip(x, 260)).join("\n- ")}\n` : ""}
 YOUR PART: ${P.ask}
 ${DEEP_RULES}
 ${ACCURACY_RULES}
@@ -273,12 +274,12 @@ export function sanitizeDeep(parts, name = "this topic") {
   return { sections: sections.slice(0, 14), facts, mnemonics, vivas, mcqs, cases, mistakes, exam: vivas.slice(0, 14).map((x) => `${x.q} — ${x.a}`) };
 }
 
-export async function generateDeepNotes({ name, category, base, past = [], env, fetchImpl = fetch, timeoutMs }) {
+export async function generateDeepNotes({ name, category, base, past = [], fixes = [], env, fetchImpl = fetch, timeoutMs }) {
   const run = async (part) => {
-    const { text, model } = await askModel(buildDeepPrompt({ name, category, base, part, past }), { env, fetchImpl, timeoutMs: timeoutMs ?? 55000, maxTokens: 6000 });
-    const m = text.match(/\{[\s\S]*\}/);
-    if (!m) throw new Error("no JSON in the reply");
-    return { json: JSON.parse(m[0]), model };
+    const { text, model } = await askModel(buildDeepPrompt({ name, category, base, part, past, fixes }), { env, fetchImpl, timeoutMs: timeoutMs ?? 55000, maxTokens: 6000 });
+    const json = extractJson(text);
+    if (!json) throw new Error("no JSON in the reply");
+    return { json, model };
   };
   const done = await Promise.all(["clinical", "management", "exam"].map(run));
   return { ...sanitizeDeep(done.map((d) => d.json), name), model: done[0].model, generatedAt: new Date().toISOString().slice(0, 10) };
@@ -289,6 +290,22 @@ export async function generateDeepWithFallback(input, env) {
   const groq = String(env.GROQ_API_KEYS ?? "").trim();
   if (groq) { try { return await generateDeepNotes({ ...input, timeoutMs: 34000, env: { GROQ_API_KEYS: groq } }); } catch { /* fall back to Gemini */ } }
   return generateDeepNotes({ ...input, timeoutMs: groq ? 22000 : input.timeoutMs, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS, GROQ_API_KEYS: groq } });
+}
+
+/** The first complete JSON object in a model's reply (text before or after it, or a second object, is ignored). Returns null when there is none. */
+export function extractJson(text) {
+  const t = String(text ?? "");
+  for (let start = t.indexOf("{"); start >= 0; start = t.indexOf("{", start + 1)) {
+    let depth = 0, inStr = false, esc = false;
+    for (let i = start; i < t.length; i++) {
+      const c = t[i];
+      if (inStr) { if (esc) esc = false; else if (c === "\\") esc = true; else if (c === '"') inStr = false; continue; }
+      if (c === '"') inStr = true;
+      else if (c === "{") depth++;
+      else if (c === "}" && --depth === 0) { try { return JSON.parse(t.slice(start, i + 1)); } catch { break; } }
+    }
+  }
+  return null;
 }
 
 export const slugOf = (name) => String(name).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");

@@ -4,8 +4,7 @@
 // Reads and writes src/data/topicAi/<slug>.json (adds a "deep" key). Most-used topics first. Stops by itself when the AI keys run out.
 import fs from "node:fs";
 import path from "node:path";
-import { generateDeepWithFallback } from "../../supabase/functions/_shared/topicAi.js";
-import { checkContent, deepToText } from "../../supabase/functions/_shared/contentCheck.js";
+import { generateCheckedDeep } from "../../supabase/functions/_shared/contentCheck.js";
 
 const DIR = "src/data/topicAi";
 const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 10);
@@ -32,12 +31,9 @@ for (const slug of todo) {
   try {
     const full = fs.existsSync(path.join("public/topics", `${slug}.json`)) ? JSON.parse(fs.readFileSync(path.join("public/topics", `${slug}.json`), "utf8")) : {};
     const past = [...(full.qs ?? []).map((x) => x.q), ...(full.es ?? []).map((x) => x.q)].slice(0, 12);
-    const deep = await generateDeepWithFallback({ name: t?.n ?? page.title ?? slug.replace(/-/g, " "), category: t?.c ?? page.subject ?? "", base: page, past }, env);
-    // a second AI reads the deep notes before they are saved: anything with a serious error is not published
-    const text = deepToText(deep);
-    const check = await checkContent({ title: t?.n ?? slug, kind: "deep exam notes", text, env });
-    if (!check.validated) { console.log(`held back ${slug}: ${check.issues.filter((i) => i.severity === "high").map((i) => i.problem).join(" | ").slice(0, 300)}`); continue; }
-    fs.writeFileSync(file, JSON.stringify({ ...page, deep: { ...deep, checked: check.at } }, null, 1) + "\n");
+    const deep = await generateCheckedDeep({ name: t?.n ?? page.title ?? slug.replace(/-/g, " "), category: t?.c ?? page.subject ?? "", base: page, past }, env);
+    // the notes were cross-checked (and repaired once if needed) inside generateCheckedDeep; a serious error left over throws and nothing is saved
+    fs.writeFileSync(file, JSON.stringify({ ...page, deep: deep }, null, 1) + "\n");
     written++; misses = 0;
     console.log(`deep notes: ${slug}`);
   } catch (e) {
