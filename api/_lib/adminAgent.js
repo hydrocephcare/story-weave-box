@@ -27,7 +27,7 @@ const TOOLS = `Tools you can plan (use ONLY these; each action is {"tool": "..."
 8. seo_fix         args: { "limit": number }   (rewrites up to 15 weak or missing search descriptions; the old text is kept so it can be undone)
 9. site_stats      args: { "days": number }   (read-only visitors summary)
 10. contest_report args: { "slug": string }   (read-only: registrations per university for one contest)
-11. publish_note   args: { "title": string (optional), "category": string (one from the category list, or ""), "year": 1-6 or null }   (use this when the admin pastes or gives notes/text to polish and publish. The text itself is taken from their message: NEVER repeat it. The browser polishes it and shows a preview they approve.)
+11. publish_note   args: { "title": string (optional), "category": string (one from the category list, or ""), "year": 1-6 or null, "enrich": true|false }   (set "enrich": true when the admin says add more content / expand / make it fuller; otherwise false. Use this when the admin pastes or gives notes/text to polish and publish. The text itself is taken from their message: NEVER repeat it. The browser polishes it and shows a preview they approve.)
 12. make_mcqs      args: { "count": 1-30, "from": "message" | "note", "title": string, "category": string }   (write MCQs from the text in their message, or from the note just polished ("note"); previewed before publishing)
 13. create_flashcards args: { "count": 1-40, "from": "message" | "note", "title": string, "category": string }   (flashcards from the pasted text, or from the note just polished; previewed before publishing)
 14. write_article  args: { "topic": string, "category": string, "year": 1-6 or null }   (write a NEW note from scratch on a topic; saved for review, previewed first)
@@ -40,7 +40,9 @@ const TOOLS = `Tools you can plan (use ONLY these; each action is {"tool": "..."
 21. site_health     args: {}   (read-only report: visitors and growth, content and SEO health, what is waiting; it offers one-tap fixes. Use for "how is the site", "is it growing", "check everything")
 22. update_post     args: { "query": string (words from the post title), "title": string?, "meta_description": string?, "category": string? }   (change an existing post; the old values are kept so it can be undone)
 23. publish_post    args: { "query": string (words from the draft title) }   (publish unpublished drafts whose title matches; max 5)
-24. none: no action, just answer or ask a question.
+24. briefing        args: {}   (read-only: today's briefing: visitors, what to celebrate, what needs a look, suggestions)
+25. import_mcqs    args: { "title": string, "category": string }   (the pasted text already CONTAINS MCQs (with or without answers): structure them exactly as written and publish them as an MCQ set; previewed first)
+26. none: no action, just answer or ask a question.
 Admin pages (path = what it is): /admin = main admin; /admin/contests = contests; /admin/contests/new = quick contest builder; /admin/contests/setup = advanced contest setup; /admin/contests/appeals = contest appeals; /admin/autopilot = Autopilot switches and log; /admin/access = book access rules; /admin/analytics = visitors; /admin/activity = searches and AI keys; /admin/comments = comments; /admin/drafts = AI notes to approve; /admin/content-checks = content checks; /admin/content-health = content health; /admin/polish = polished blogs; /admin/duplicates = repeated pages; /admin/thin-topics = deep exam notes; /admin/monetise = monetise; /admin/tools = all admin tools.`;
 
 const system = (ctx) => `You are the Ompath Study admin assistant. You help the site owner run contests. You never run anything yourself: you plan, the owner confirms, then the browser runs it.
@@ -61,6 +63,7 @@ Rules:
 - If the admin hit a problem, explain it in plain words first, then plan the closest working alternative (for example a different page or a retry). If it is a missing database file (a message about running SQL), name the file and tell them to run it. Never invent buttons that do not exist.
 - You can help while they navigate: say what the page they are on does and what to do next.
 - The admin message may be cut off for you when they paste long text; that is fine, the browser has all of it. If they paste notes and say polish/publish, plan publish_note (and make_mcqs with from "note" if they also want questions). If it is not clear what to do with pasted text, ask.
+- Pasted text arrives as an attachment you cannot see in full. If the admin attached text and did not say what to do, ask with buttons: [Polish and publish as a note, Polish, add more content and publish, These are MCQs: publish them, Make MCQs from it, Make flashcards from it].
 - To ask the admin a question with buttons, add "ask": {"question": "...", "options": ["short option", ...]} (2 to 5 options) and no actions.
 - Return ONLY JSON: {"reply": "...", "ask": null, "actions": [ ... ]}. "reply" says in one or two sentences what you will do (or asks the question).`;
 
@@ -93,7 +96,7 @@ async function geminiJson(msgs, keys) {
   return null;
 }
 
-const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "publish_note", "make_mcqs", "create_flashcards", "write_article", "find_content", "clean_notifications", "notification_report", "send_notification", "remember", "forget", "site_health", "update_post", "publish_post", "none"]);
+const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "publish_note", "make_mcqs", "create_flashcards", "write_article", "find_content", "clean_notifications", "notification_report", "send_notification", "remember", "forget", "site_health", "update_post", "publish_post", "briefing", "import_mcqs", "none"]);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });

@@ -25,13 +25,19 @@ export async function loadCategories(): Promise<string[]> {
   return [...count].sort((a, b) => b[1] - a[1]).map(([c]) => c);
 }
 
-export async function draftNote(raw: string, hint: { title?: string; category?: string; year?: number | null }, categories: string[]): Promise<NoteDraft> {
-  const out = await call<Omit<NoteDraft, "type" | "raw">>({ mode: "note", text: raw, title: hint.title, category: hint.category, categories });
+export async function draftNote(raw: string, hint: { title?: string; category?: string; year?: number | null; enrich?: boolean }, categories: string[]): Promise<NoteDraft> {
+  const out = await call<Omit<NoteDraft, "type" | "raw">>({ mode: "note", text: raw, title: hint.title, category: hint.category, categories, enrich: Boolean(hint.enrich) });
   return { type: "note", ...out, category: hint.category && categories.includes(hint.category) ? hint.category : out.category, year: hint.year ?? out.year, title: (hint.title || out.title || "Study notes").trim(), raw };
 }
 
 export async function draftMcqs(text: string, count: number, title: string, category: string): Promise<McqDraft> {
   const out = await call<{ questions: McqDraft["questions"] }>({ mode: "mcq", text, count, title });
+  return { type: "mcq", title: title || "MCQ practice", category, questions: out.questions, source: text.slice(0, 200) };
+}
+
+/** The pasted text already holds MCQs: keep them exactly as written, with their answers, and make them ready to publish. */
+export async function importMcqs(text: string, title: string, category: string): Promise<McqDraft> {
+  const out = await call<{ questions: McqDraft["questions"]; dropped?: number }>({ mode: "mcq_import", text, title });
   return { type: "mcq", title: title || "MCQ practice", category, questions: out.questions, source: text.slice(0, 200) };
 }
 

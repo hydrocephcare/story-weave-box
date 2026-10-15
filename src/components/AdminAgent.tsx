@@ -2,11 +2,12 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AlertTriangle, Check, ExternalLink, FileText, History, ListChecks, Loader2, MessageCircle, Mic, MicOff, Plus, Send, Sparkles, Trash2, Undo2, Wand2, X, Zap } from "lucide-react";
 import { runSiteHealth } from "@/lib/adminHealth";
+import { runBriefing } from "@/lib/adminBriefing";
 import { supabase } from "@/integrations/supabase/client";
 import { recentProblems } from "@/lib/adminProblems";
 import { agentContext, askAgent, describe, loadAgentWorld, runAction, runReadOnly, type ActionResult, type AgentAction, type AgentWorld, type PlanItem } from "@/lib/adminAgent";
 import { deleteChat, listChats, loadChat, saveChat, type ChatMeta } from "@/lib/adminChats";
-import { draftArticle, draftCards, draftMcqs, draftNote, publishDraft, reviseNote, seoChecks, thumbFor, type Draft, type NoteDraft } from "@/lib/adminWriter";
+import { draftArticle, draftCards, draftMcqs, draftNote, importMcqs, publishDraft, reviseNote, seoChecks, thumbFor, type Draft, type NoteDraft } from "@/lib/adminWriter";
 
 type DraftState = "ready" | "published" | "saved" | "discarded";
 type Item =
@@ -14,14 +15,15 @@ type Item =
   | { kind: "result"; result: ActionResult }
   | { kind: "ask"; question: string; options: string[]; answered?: string }
   | { kind: "draft"; draft: Draft; state: DraftState; fresh?: boolean };
-const READ_ONLY = new Set(["seo_scan", "site_stats", "contest_report", "find_content", "notification_report", "site_health"]);
+const READ_ONLY = new Set(["seo_scan", "site_stats", "contest_report", "find_content", "notification_report", "site_health", "briefing"]);
+const WHAT_TO_DO = ["Polish it and publish as a note", "Polish it, add more content, and publish", "These are MCQs: publish them", "Make 10 MCQs from it and publish", "Make flashcards from it and publish"];
 const LONG_PASTE = 400; // a paste longer than this becomes an attachment, like in ChatGPT, so you can type your instruction beside it
 const STATUS_STYLE = { good: "border-emerald-500/40 bg-emerald-500/10", warn: "border-amber-500/40 bg-amber-500/10", bad: "border-red-500/40 bg-red-500/10" } as const;
 const STATUS_DOT = { good: "bg-emerald-500", warn: "bg-amber-500", bad: "bg-red-500" } as const;
-const DRAFTERS = new Set(["publish_note", "make_mcqs", "create_flashcards", "write_article"]);
+const DRAFTERS = new Set(["publish_note", "make_mcqs", "create_flashcards", "write_article", "import_mcqs"]);
 const ALWAYS_ASK = new Set(["send_notification", "delete_contest", "remove_item"]);
 const IDEAS = [
-  "How is my site doing? Is it growing?", "Check everything and fix what you can", "Explain the last error and fix it", "Check my posts for SEO problems",
+  "Today's briefing", "How is my site doing? Is it growing?", "Check everything and fix what you can", "Explain the last error and fix it", "Check my posts for SEO problems",
   "Make a UoN vs MKU contest tomorrow at 8pm", "Write a note on nephrotic syndrome", "Clean my notification bell", "I will paste notes: polish them and publish",
 ];
 const plain = (md: string) => md.replace(/^#+\s*/gm, "").replace(/[*_`>|]/g, "").replace(/\n{2,}/g, "\n");
@@ -43,6 +45,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
   const [plan, setPlan] = useState<PlanItem[] | null>(null);
   const [error, setError] = useState("");
   const [attachments, setAttachments] = useState<string[]>([]);
+  const [progress, setProgress] = useState(0);
   const [listening, setListening] = useState(false);
   const recognition = useRef<any>(null);
   const [revising, setRevising] = useState<number | null>(null);
@@ -58,11 +61,28 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
     void reloadWorld();
     void (async () => {
       const r = await refreshChats(); const last = r.chats[0];
-      if (last) { setChatId(last.id); setFeed((await loadChat(last.id)) as Item[]); }
+      if (last) { setChatId(last.id); const saved = (await loadChat(last.id)) as Item[]; setFeed((cur) => [...saved, ...cur.filter((i) => i.kind === "result" && i.result.briefing && !saved.some((s) => s.kind === "result" && s.result.briefing && s.result.text === i.result.text))]); }
       loaded.current = true;
     })();
   }, [refreshChats, reloadWorld]);
   useEffect(() => { end.current?.scrollIntoView({ block: "nearest" }); }, [feed, plan]);
+
+  // the circle: climbs quickly to about 90% while the work runs, then the result replaces it
+  useEffect(() => {
+    if (!busy) { setProgress(0); return; }
+    setProgress(6);
+    const t = window.setInterval(() => setProgress((p) => p + (92 - p) * 0.05), 150);
+    return () => window.clearInterval(t);
+  }, [busy]);
+
+  // once a day, the first time the assistant opens: a briefing on what happened on the site and what to do next
+  useEffect(() => {
+    if (!world) return;
+    const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Africa/Nairobi" }).format(new Date());
+    try { if (localStorage.getItem("ompath_briefing_day") === today) return; localStorage.setItem("ompath_briefing_day", today); } catch { return; }
+    void runBriefing().then((r) => push({ kind: "result", result: r })).catch(() => { /* the briefing is a bonus; ask for it again any time */ });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [world]);
 
   useEffect(() => {
     if (!loaded.current || !feed.length) return;
@@ -119,7 +139,12 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
     const typed = message.trim(); const att = attachments.join("\n\n").trim();
     if ((!typed && !att) || !world || busy) return;
     recognition.current?.stop();
-    const raw = typed || "Polish these notes and publish them.";
+    // only pasted text and no instruction: ask what to do with it (instant, no waiting)
+    if (att && !typed) {
+      push({ kind: "text", role: "user", content: `📎 Pasted text · ${att.length.toLocaleString()} characters` }, { kind: "ask", question: "What should I do with this text?", options: WHAT_TO_DO });
+      return;
+    }
+    const raw = typed;
     const source = att || raw; // the text the writing jobs work on
     const intent = att ? `${raw} [pasted text attached: ${att.length} characters, beginning "${att.slice(0, 160).replace(/\s+/g, " ")}"]` : raw;
     setBusy(true); setError(""); setPlan(null);
@@ -133,7 +158,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
       const nav = out.actions.find((a) => a.tool === "go_to" && /^\/admin(\/[a-z0-9-]+)*$/.test(String(a.args?.path)));
       if (nav) navigate(String(nav.args.path));
       for (const a of out.actions.filter((x) => READ_ONLY.has(x.tool))) {
-        try { const r = a.tool === "site_health" ? await runSiteHealth() : await runReadOnly(a as AgentAction, world); if (r) add.push({ kind: "result", result: r }); }
+        try { const r = a.tool === "site_health" ? await runSiteHealth() : a.tool === "briefing" ? await runBriefing() : await runReadOnly(a as AgentAction, world); if (r) add.push({ kind: "result", result: r }); }
         catch (e: any) { add.push({ kind: "text", role: "assistant", content: `I could not read that: ${e?.message || "error"}` }); }
       }
       // writing jobs: draft first, you approve (or Auto-run publishes it, with an Undo)
@@ -146,7 +171,8 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
           const base = fromNote ? (lastNote?.content || (prior?.draft as NoteDraft | undefined)?.content || source) : source;
           const noteTitle = lastNote?.title || (prior?.draft as NoteDraft | undefined)?.title || "";
           let d: Draft;
-          if (a.tool === "publish_note") { d = await draftNote(source, { title: a.args?.title, category: a.args?.category, year: a.args?.year ?? null }, world.categories); lastNote = d; }
+          if (a.tool === "publish_note") { d = await draftNote(source, { title: a.args?.title, category: a.args?.category, year: a.args?.year ?? null, enrich: Boolean(a.args?.enrich) }, world.categories); lastNote = d; }
+          else if (a.tool === "import_mcqs") d = await importMcqs(source, String(a.args?.title || "MCQ practice"), String(a.args?.category || ""));
           else if (a.tool === "write_article") { d = await draftArticle(String(a.args?.topic || raw), { category: a.args?.category, year: a.args?.year ?? null }, world.categories); lastNote = d as NoteDraft; }
           else if (a.tool === "make_mcqs") d = await draftMcqs(base, Number(a.args?.count) || 10, String(a.args?.title || (noteTitle ? `MCQs: ${noteTitle}` : "MCQ practice")), String(a.args?.category || lastNote?.category || ""));
           else d = await draftCards(base, Number(a.args?.count) || 15, String(a.args?.title || (noteTitle ? `Flashcards: ${noteTitle}` : "Flashcards")), String(a.args?.category || lastNote?.category || ""));
@@ -254,6 +280,13 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
                 {r.thumb && <img src={r.thumb} alt="" loading="lazy" className="aspect-[40/21] w-full object-cover" />}
                 <div className="px-3 py-2">
                   <p className="whitespace-pre-line break-words">{r.partial ? <AlertTriangle className="mr-1 inline h-4 w-4 text-amber-600" /> : <Check className="mr-1 inline h-4 w-4 text-primary" />}{r.text}</p>
+                  {r.briefing && (
+                    <div className="mt-2 space-y-2">
+                      {r.briefing.good.length > 0 && <div className="rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-2"><p className="text-xs font-bold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">Good news</p><ul className="mt-1 space-y-1 text-xs">{r.briefing.good.map((l, li) => <li key={li}>{l}</li>)}</ul></div>}
+                      {r.briefing.watch.length > 0 && <div className="rounded-lg border border-amber-500/40 bg-amber-500/10 p-2"><p className="text-xs font-bold uppercase tracking-wide text-amber-800 dark:text-amber-200">Needs a look</p><ul className="mt-1 space-y-1 text-xs">{r.briefing.watch.map((l, li) => <li key={li}>{l}</li>)}</ul></div>}
+                      <div className="flex flex-wrap gap-2">{r.briefing.suggestions.map((s) => <button key={s.label} type="button" disabled={busy || !world} onClick={() => void send(s.prompt)} className={`${btn} border bg-background hover:bg-muted`}><Wand2 className="h-3.5 w-3.5" /> {s.label}</button>)}</div>
+                    </div>
+                  )}
                   {r.health && (
                     <div className="mt-2 space-y-2">
                       <div className="flex items-center gap-3"><div className="relative h-2 flex-1 overflow-hidden rounded-full bg-muted"><div className={`h-full ${r.health.score >= 80 ? "bg-emerald-500" : r.health.score >= 60 ? "bg-amber-500" : "bg-red-500"}`} style={{ width: `${r.health.score}%` }} /></div><span className="text-xs font-bold">{r.health.score}%</span></div>
@@ -327,7 +360,15 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
             </div>
           </div>
         )}
-        {busy && !plan && <p className="flex items-center gap-2 px-1 text-sm text-muted-foreground"><Loader2 className="h-4 w-4 animate-spin" /> Working… (a long note can take up to a minute)</p>}
+        {busy && !plan && (
+          <div className="flex items-center gap-3 px-1 text-sm text-muted-foreground" role="status" aria-live="polite">
+            <svg viewBox="0 0 36 36" className="h-11 w-11 shrink-0 -rotate-90" aria-hidden>
+              <circle cx="18" cy="18" r="15.5" fill="none" strokeWidth="3.5" className="stroke-muted" />
+              <circle cx="18" cy="18" r="15.5" fill="none" strokeWidth="3.5" strokeLinecap="round" className="stroke-primary transition-[stroke-dashoffset] duration-150" strokeDasharray={97.4} strokeDashoffset={97.4 * (1 - progress / 100)} />
+            </svg>
+            <span><strong className="text-foreground">{Math.round(progress)}%</strong> · {progress < 30 ? "Reading" : progress < 75 ? "Writing" : "Checking and saving"}…</span>
+          </div>
+        )}
         <div ref={end} />
       </div>
       {error && <p className="mt-2 shrink-0 rounded-lg border border-destructive/40 bg-destructive/10 p-2 text-sm">{error}</p>}
@@ -342,7 +383,17 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
         </div>
       )}
       <form className="mt-2 flex shrink-0 items-end gap-2 pb-[env(safe-area-inset-bottom)]" onSubmit={(e) => { e.preventDefault(); void send(text); }}>
-        <textarea value={text} onChange={(e) => setText(e.target.value)}
+        <textarea value={text} onChange={(e) => {
+          const v = e.target.value;
+          // some phone keyboards insert a pasted block as typing (no paste event): a big sudden jump becomes an attachment too
+          if (v.length - text.length > LONG_PASTE) {
+            let p = 0; while (p < text.length && text[p] === v[p]) p++;
+            let q = 0; while (q < text.length - p && text[text.length - 1 - q] === v[v.length - 1 - q]) q++;
+            const chunk = v.slice(p, v.length - q).trim();
+            if (chunk.length > LONG_PASTE) { setAttachments((l) => [...l, chunk]); setText(v.slice(0, p) + v.slice(v.length - q)); return; }
+          }
+          setText(v);
+        }}
           onPaste={(e) => { const t = e.clipboardData.getData("text"); if (t.length > LONG_PASTE) { e.preventDefault(); setAttachments((l) => [...l, t.trim()]); } }}
           onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey && window.matchMedia("(hover: hover)").matches) { e.preventDefault(); void send(text); } }}
           rows={text.length > 120 ? 5 : 2} disabled={!world || busy}

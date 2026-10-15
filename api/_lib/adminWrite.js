@@ -4,9 +4,12 @@ import { isAdmin } from "./adminAgent.js";
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
 let turn = 0;
 
-const NOTE = (cats) => `You polish medical study notes for a free website used by medical students.
+const ENRICH = `
+- The admin asked you to ADD MORE CONTENT. After the author's own material, add standard textbook knowledge that completes the topic (definition, causes, pathophysiology, features, investigations, management principles, complications), under a heading "## Added for completeness". Name drug classes, never doses or exact figures you are not certain of. The author's own facts stay first and unchanged.`;
+const NOTE = (cats, enrich) => `You polish medical study notes for a free website used by medical students.
 Rules:
 - Keep every fact the author wrote. Do NOT add drug doses, numbers, statistics or claims that are not in the text. If something looks wrong, keep it and add the line "Check: <what looks off>" at the end of that section.
+${enrich ? ENRICH : ""}
 - Fix spelling and grammar. Expand an abbreviation on first use. Make it clear and exam-friendly.
 - Structure with markdown: "## " headings (never a single "#"), short paragraphs, bullet lists, a table only when the text has comparable data, and a final "## Quick revision" with 5 to 8 bullets taken from the text.
 - Choose the best category from this list, exactly as written, or "" if none fits: ${cats.slice(0, 90).join(" | ")}
@@ -15,6 +18,10 @@ Return ONLY JSON: {"title": "clear title, max 70 characters", "category": "...",
 const MCQ = (n) => `You write single-best-answer multiple-choice questions for medical students, from the text you are given ONLY.
 Write exactly ${n} questions. Each has 4 distinct options with one clearly correct answer, tests understanding (not trivia about wording), and a 1 to 2 sentence explanation that says why the answer is right. Do not use "all of the above" or "none of the above". Do not invent facts that are not in the text.
 Return ONLY JSON: {"questions":[{"question":"...","options":["...","...","...","..."],"correct_answer":0,"explanation":"..."}]}  (correct_answer is the index 0-3 of the right option; vary it across questions).`;
+
+const MCQ_IMPORT = `The text contains multiple-choice questions written by a lecturer or student (possibly messy: numbering, A/B/C/D or a/b/c, "Answer: B", a star or tick on the right option, or no answers at all).
+Structure every question EXACTLY as written: keep the wording, keep the options in order, do not rewrite or add questions. If the answer is marked, use it. If it is NOT marked, work out the single best answer and add "(answer chosen by AI, please check)" to that question's explanation.
+Return ONLY JSON: {"questions":[{"question":"...","options":["...","...","...","..."],"correct_answer":0,"explanation":"..."}]} (2 to 6 options are allowed; correct_answer is the 0-based index).`;
 
 const CARDS = (n) => `You write flashcards for medical students from the text you are given ONLY.
 Write up to ${n} cards. Each card tests ONE fact or one piece of reasoning: a short question on the front, and an answer of one or two short sentences (under 35 words) on the back. No yes/no questions, no "what is the name of the chapter", no invented facts.
@@ -61,12 +68,12 @@ export default async function handler(req, res) {
   const token = String(req.headers.authorization || "").replace(/^Bearer\s+/i, "");
   if (!token || !(await isAdmin(token))) return res.status(403).json({ error: "Administrators only." });
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
-  const mode = ["mcq", "cards", "article", "revise"].includes(body.mode) ? body.mode : "note";
+  const mode = ["mcq", "mcq_import", "cards", "article", "revise"].includes(body.mode) ? body.mode : "note";
   const text = String(body.text ?? "").slice(0, 24000).trim();
   if (text.length < (mode === "article" ? 3 : 40)) return res.status(400).json({ error: mode === "article" ? "Tell me the topic." : "Give me at least a few lines of text." });
   const count = Math.max(1, Math.min(30, Number(body.count) || 10));
   const cats = (Array.isArray(body.categories) ? body.categories : []).map((c) => String(c)).filter(Boolean);
-  const system = mode === "mcq" ? MCQ(count) : mode === "cards" ? CARDS(count) : mode === "article" ? ARTICLE(cats) : mode === "revise" ? REVISE : NOTE(cats);
+  const system = mode === "mcq_import" ? MCQ_IMPORT : mode === "mcq" ? MCQ(count) : mode === "cards" ? CARDS(count) : mode === "article" ? ARTICLE(cats) : mode === "revise" ? REVISE : NOTE(cats, Boolean(body.enrich));
   const user = mode === "revise" ? `INSTRUCTION: ${String(body.instruction ?? "").slice(0, 500)}\nNOTE:\n${text}` : `${body.title ? `Title hint: ${String(body.title).slice(0, 120)}\n` : ""}${body.category ? `Category hint: ${String(body.category).slice(0, 120)}\n` : ""}${mode === "article" ? "TOPIC" : "TEXT"}:\n${text}`;
   const msgs = [{ role: "system", content: system }, { role: "user", content: user }];
   const g = list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY), m = list(process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY);
@@ -75,6 +82,14 @@ export default async function handler(req, res) {
   const out = parse(raw);
   if (!out) return res.status(502).json({ error: "The writer gave an unreadable answer. Try again." });
 
+  if (mode === "mcq_import") {
+    const qs = (Array.isArray(out.questions) ? out.questions : []).map((q) => ({
+      question: String(q?.question ?? "").trim(), options: (Array.isArray(q?.options) ? q.options : []).map((o) => String(o).trim()),
+      correct_answer: Number(q?.correct_answer), explanation: String(q?.explanation ?? "").trim(),
+    })).filter((q) => q.question.length > 5 && q.options.length >= 2 && q.options.length <= 6 && q.options.every(Boolean) && Number.isInteger(q.correct_answer) && q.correct_answer >= 0 && q.correct_answer < q.options.length);
+    if (!qs.length) return res.status(502).json({ error: "I could not find multiple-choice questions in that text." });
+    return res.status(200).json({ questions: qs.slice(0, 120), dropped: Math.max(0, (out.questions?.length || 0) - qs.length) });
+  }
   if (mode === "mcq") {
     const qs = (Array.isArray(out.questions) ? out.questions : []).map((q) => ({
       question: String(q?.question ?? "").trim(), options: (Array.isArray(q?.options) ? q.options : []).map((o) => String(o).trim()),
