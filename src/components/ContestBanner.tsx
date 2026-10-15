@@ -34,7 +34,7 @@ export default function ContestBanner({ contest, universities, className = "" }:
           ))}
         </div>
       ) : (
-        <div className="relative px-6 text-center">
+        <div className="relative px-6 pt-8 text-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-white/55">{chosen.length ? "Head to head" : "Open to every university"}</p>
           <p className="mt-2 font-serif text-3xl font-bold leading-tight text-white">{contest.title}</p>
         </div>
