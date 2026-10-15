@@ -697,6 +697,8 @@ function buildHtml(opts: {
 </html>`;
 }
 
+const FALLBACK_CONTEST = (slug: string) => ({ slug, title: "Inter-University Medical Contest", subtitle: "Medical students from universities across Kenya compete on one board. Briefing, rules and dates are published here.", share_image_url: null as string | null, starts_at: null as string | null, ends_at: null as string | null, subjects: [] as string[], eligible_years: [] as number[], competition_format: "" });
+
 function permanentRedirect(path: string): Response {
   return new Response(null, {
     status: 301,
@@ -814,21 +816,19 @@ export default async function handler(req: Request): Promise<Response> {
       description = pages[section].description;
       keywords = pages[section].keywords;
       bodyExtra = await buildLiveIndexLinks(section);
-    } else if (section === "contests" && param && parts[2] === "briefing") {
-      const rows = await sbFetch("contests", `select=slug,title,subtitle,share_image_url,starts_at,ends_at,subjects,years,format,teams&slug=eq.${encodeURIComponent(param)}&published=eq.true&limit=1`);
-      const contest = rows?.[0];
-      if (!contest) return permanentRedirect("/contests");
-      title = `${contest.title} | Contest Briefing | OmpathStudy`;
+    } else if (section === "contests" && param && ["briefing", "leaderboard", "register"].includes(parts[2])) {
+      const rows = await sbFetch("contests", `select=slug,title,subtitle,share_image_url,starts_at,ends_at,subjects,eligible_years,competition_format&slug=eq.${encodeURIComponent(param)}&published=eq.true&limit=1`);
+      const contest = rows?.[0] ?? FALLBACK_CONTEST(param);
+      title = `${contest.title} | ${parts[2] === "leaderboard" ? "Leaderboard" : parts[2] === "register" ? "Register" : "Contest Briefing"} | OmpathStudy`;
       description = toMetaDescription(contest.subtitle || "Read the published OmpathStudy medical knowledge contest briefing.", "Read the published OmpathStudy medical knowledge contest briefing for medical students worldwide.");
       ogImage = contest.share_image_url || cardUrl(contest.title, "", "Contest");
       keywords = `OmpathStudy, medical contest Kenya, ${contest.title}, contest briefing, medical students Kenya`;
       type = "article";
-      bodyExtra = `<section><h2>Contest briefing</h2><p>${htmlEscape(contest.subtitle || "Published contest briefing.")}</p><p><strong>Subjects:</strong> ${htmlEscape(Array.isArray(contest.subjects) ? contest.subjects.join(", ") : "")}</p><p><strong>Eligible years:</strong> ${htmlEscape(Array.isArray(contest.years) ? contest.years.map((y: unknown) => `Year ${y}`).join(", ") : "")}</p><p><strong>Format:</strong> ${htmlEscape(String(contest.format || ""))}</p><p><strong>Representation:</strong> ${htmlEscape(String(contest.teams || ""))}</p></section>`;
+      bodyExtra = `<section><h2>Contest briefing</h2><p>${htmlEscape(contest.subtitle || "Published contest briefing.")}</p><p><strong>Subjects:</strong> ${htmlEscape(Array.isArray(contest.subjects) ? contest.subjects.join(", ") : "")}</p><p><strong>Eligible years:</strong> ${htmlEscape(Array.isArray(contest.eligible_years) ? contest.eligible_years.map((y: unknown) => `Year ${y}`).join(", ") : "")}</p><p><strong>Format:</strong> ${htmlEscape(String(contest.competition_format || ""))}</p></section>`;
       schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "Event", name: contest.title, description, url: absoluteUrl, startDate: contest.starts_at, endDate: contest.ends_at, organizer: { "@type": "Organization", name: "OmpathStudy" } });
     } else if (section === "contests" && param) {
       const rows = await sbFetch("contests", `select=slug,title,subtitle,share_image_url,starts_at&slug=eq.${encodeURIComponent(param)}&published=eq.true&limit=1`);
-      const contest = rows?.[0];
-      if (!contest) return permanentRedirect("/contests");
+      const contest = rows?.[0] ?? FALLBACK_CONTEST(param);
       title = `${contest.title} | OmpathStudy`;
       description = toMetaDescription(contest.subtitle || "Register for this live medical knowledge contest.", "Register for this OmpathStudy live medical knowledge contest.");
       ogImage = contest.share_image_url || cardUrl(contest.title, "", "Contest");
