@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useReadLog } from "@/lib/readLog";
+import { useScrollSpy } from "@/hooks/useScrollSpy";
 import BooksForPage from "@/components/BooksForPage";
 import SponsorLine from "@/components/SponsorLine";
 import AdSlot from "@/components/AdSlot";
@@ -174,6 +175,24 @@ function Writing({ name }: { name: string }) {
 }
 
 /** /topic/<slug>: a plain, readable article about one subject (definition first), with the library's notes and questions underneath. */
+/** The "On this page" rail: the section you are in is highlighted and a bar shows how far down you are. */
+function TopicRail({ toc }: { toc: { id: string; t: string }[] }) {
+  const spy = useScrollSpy(toc.map((t) => t.id));
+  return (
+    <aside className="hidden lg:block">
+      <nav aria-label="On this page" className="sticky top-24 max-h-[calc(100dvh-7rem)] overflow-y-auto border-l border-border text-[15px]">
+        <p className="pl-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">On this page</p>
+        <ul className="mt-3 space-y-0.5">{toc.map((t) => <li key={t.id}><a href={`#${t.id}`} aria-current={spy.active === t.id ? "location" : undefined} className={`-ml-px block border-l-2 py-1.5 pl-4 font-medium transition-colors hover:border-primary hover:text-foreground ${spy.active === t.id ? "border-primary font-bold text-primary" : "border-transparent text-muted-foreground"}`}>{t.t}</a></li>)}</ul>
+        <div className="mt-5 pl-4 pr-1">
+          <div className="flex items-center justify-between text-xs font-bold text-muted-foreground"><span>Reading</span><span>{spy.progress}%</span></div>
+          <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuenow={spy.progress} aria-valuemin={0} aria-valuemax={100} aria-label="How far down this page you are"><div className="h-full rounded-full bg-primary transition-[width] duration-200" style={{ width: `${spy.progress}%` }} /></div>
+          <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="mt-3 block w-full text-left text-xs font-bold text-muted-foreground hover:text-primary">↑ Back to top</button>
+        </div>
+      </nav>
+    </aside>
+  );
+}
+
 export default function TopicPage() {
   const { slug = "" } = useParams();
   const [shared, setShared] = useState("");
@@ -327,12 +346,7 @@ export default function TopicPage() {
 
       <div data-ad-anchor className="mx-auto grid max-w-6xl gap-12 px-5 pt-10 lg:grid-cols-[13.5rem_minmax(0,52rem)]">
         <SideAds title={name} />
-        <aside className="hidden lg:block">
-          <nav aria-label="On this page" className="sticky top-24 max-h-[calc(100dvh-7rem)] overflow-y-auto border-l border-border text-[15px]">
-            <p className="pl-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">On this page</p>
-            <ul className="mt-3 space-y-0.5">{toc.map((t) => <li key={t.id}><a href={`#${t.id}`} className="-ml-px block border-l-2 border-transparent py-1.5 pl-4 font-medium text-muted-foreground hover:border-primary hover:text-foreground">{t.t}</a></li>)}</ul>
-          </nav>
-        </aside>
+        <TopicRail toc={toc} />
 
         <div className="min-w-0">
           {isAdmin && page && (

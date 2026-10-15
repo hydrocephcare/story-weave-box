@@ -1,6 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
 import { useReadLog } from "@/lib/readLog";
 import ImedLinks from "@/components/ImedLinks";
+import { useScrollSpy } from "@/hooks/useScrollSpy";
+import { openAI } from "@/lib/aiEvents";
+import { topicForNote } from "@/data/imed";
+import { doneTopics, toggleTopic } from "@/lib/imedProgress";
+import { useAuth } from "@/hooks/useAuth";
 import StudyTools from "@/components/StudyTools";
 import SideAds from "@/components/SideAds";
 import PageSummary from "@/components/PageSummary";
@@ -91,6 +96,23 @@ function StaticNoteView() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [linked]);
 
+  const { user: railUser } = useAuth();
+  const spy = useScrollSpy(parsed ? parsed.headings.map((h) => h.id) : []);
+  const [doneTick, setDoneTick] = useState(0);
+  const imedTopic = note ? topicForNote(note.slug) : null;
+  const finishedKey = `ompath_note_done_${railUser?.id ?? "guest"}`;
+  const finished = (() => { void doneTick; try { if (imedTopic && doneTopics(railUser?.id).has(imedTopic.topic.id)) return true; return (JSON.parse(localStorage.getItem(finishedKey) ?? "[]") as string[]).includes(note?.slug ?? ""); } catch { return false; } })();
+  const toggleFinished = () => {
+    if (!note) return;
+    try {
+      if (imedTopic) toggleTopic(railUser?.id, imedTopic.topic.id);
+      const list = new Set(JSON.parse(localStorage.getItem(finishedKey) ?? "[]") as string[]);
+      if (list.has(note.slug)) list.delete(note.slug); else list.add(note.slug);
+      localStorage.setItem(finishedKey, JSON.stringify([...list]));
+    } catch { /* storage blocked */ }
+    setDoneTick((n) => n + 1);
+  };
+  const nextNote = (() => { if (!note) return null; const all = STATIC_NOTES.filter((n) => n.unit === note.unit && n.group === note.group && !n.paper); const i = all.findIndex((n) => n.slug === note.slug); return i >= 0 ? all[i + 1] ?? null : null; })();
   const railOn = !note?.paper && Boolean(parsed && parsed.headings.length > 2);
   const siblings = useMemo(() => (note ? STATIC_NOTES.filter((n) => n.unit === note.unit && n.group === note.group && n.slug !== note.slug) : []), [note]);
   if (!note) return <Navigate to="/notes" replace />;
@@ -170,8 +192,16 @@ function StaticNoteView() {
             <nav className="sticky top-24 max-h-[calc(100dvh-7rem)] overflow-y-auto border-l border-border text-[15px]">
               <p className="pl-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">On this page</p>
               <ol className="mt-2">
-                {parsed.headings.map((h) => <li key={h.id}><a href={`#${h.id}`} className="-ml-px block border-l-2 border-transparent py-1.5 pl-4 leading-snug text-muted-foreground hover:border-primary hover:text-primary">{h.text}</a></li>)}
+                {parsed.headings.map((h) => <li key={h.id}><a href={`#${h.id}`} aria-current={spy.active === h.id ? "location" : undefined} className={`-ml-px block border-l-2 py-1.5 pl-4 leading-snug transition-colors hover:border-primary hover:text-primary ${spy.active === h.id ? "border-primary font-bold text-primary" : "border-transparent text-muted-foreground"}`}>{h.text}</a></li>)}
               </ol>
+              <div className="mt-5 pl-4 pr-1">
+                <div className="flex items-center justify-between text-xs font-bold text-muted-foreground"><span>Reading</span><span>{spy.progress}%</span></div>
+                <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuenow={spy.progress} aria-valuemin={0} aria-valuemax={100} aria-label="How far down this note you are"><div className="h-full rounded-full bg-primary transition-[width] duration-200" style={{ width: `${spy.progress}%` }} /></div>
+                <button type="button" onClick={toggleFinished} aria-pressed={finished} className={`mt-4 flex w-full items-center justify-center gap-2 rounded-lg border px-3 py-2 text-sm font-bold transition-colors ${finished ? "border-emerald-600 bg-emerald-600 text-white" : "border-border hover:border-primary hover:text-primary"}`}>{finished ? "Finished ✓" : "Mark as finished"}</button>
+                <button type="button" onClick={() => openAI(`Quiz me on ${note.title}`)} className="mt-2 flex w-full items-center justify-center gap-2 rounded-lg border border-border px-3 py-2 text-sm font-bold hover:border-primary hover:text-primary">Ask Ompath AI</button>
+                {nextNote && <Link to={`/notes/${nextNote.slug}`} className="mt-2 block rounded-lg bg-primary/10 px-3 py-2 text-sm font-bold text-primary hover:bg-primary/15">Next: {nextNote.title} →</Link>}
+                <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="mt-2 block w-full px-1 text-left text-xs font-bold text-muted-foreground hover:text-primary">↑ Back to top</button>
+              </div>
             </nav>
           </aside>
         )}
