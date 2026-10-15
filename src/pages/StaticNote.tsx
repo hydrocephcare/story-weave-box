@@ -20,6 +20,7 @@ import HeroAurora from "@/components/HeroAurora";
 import { Link, Navigate, useLocation, useNavigate, useNavigationType, useParams } from "react-router-dom";
 import { ArrowUp, Bookmark, Check, Printer, BadgeCheck, ScanLine, Sparkles } from "lucide-react";
 import contentMarks from "@/data/contentMarks.json";
+import MyNotesBox from "@/components/MyNotesBox";
 import DriveFileViewer, { type DriveFile } from "@/components/DriveFileViewer";
 import { startDownload } from "@/lib/driveDownload";
 import PaperBody from "@/components/PaperBody";
@@ -315,6 +316,7 @@ function StaticNoteView() {
           )}
           {!note.paper && <ImedLinks slug={note.slug} />}
           {!note.paper && <NoteNavCards slug={note.slug} />}
+          {!note.paper && <MyNotesBox title={note.title} />}
           {!note.paper && <NoteComments slug={note.slug} title={note.title} />}
 
           <div className="print:hidden"><ContentCredit /></div>

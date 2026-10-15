@@ -6,6 +6,7 @@ import { useAiStore } from "@/lib/ompathAiStore";
 import { useAuth } from "@/hooks/useAuth";
 import { Answer } from "@/components/ai/AnswerText";
 import { readsThisWeek } from "@/lib/readLog";
+import StudyTimeCard from "@/components/StudyTimeCard";
 import { addWeak, clearWeak, dueNow, readWeak, review } from "@/lib/weakTopics";
 import { openAI } from "@/lib/aiEvents";
 
@@ -109,6 +110,8 @@ export default function MyWeek() {
       <Helmet><title>My week — Ompath Study</title><meta name="robots" content="noindex" /></Helmet>
       <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Your week</p>
       <h1 className="mt-1 font-serif text-4xl font-bold">What you studied, tested</h1>
+
+      <StudyTimeCard />
 
       {due.length > 0 && (
         <section className="mt-6 rounded-xl border border-amber-500/40 bg-amber-500/5 p-4" aria-label="Revise today">

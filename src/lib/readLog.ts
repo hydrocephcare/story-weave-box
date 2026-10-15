@@ -2,6 +2,7 @@
 // Kept on this device per account; only the student's own weekly assessment uses it.
 import { useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
+import { addStudySeconds } from "@/lib/studyTime";
 
 export interface ReadEntry { t: string; p: string; at: number; secs: number }
 export const READ_SECONDS = 150; // two and a half active minutes on a long page; a short page needs less (see needSeconds)
@@ -42,6 +43,7 @@ export function useReadLog(title: string | null | undefined) {
     const tick = window.setInterval(() => {
       if (document.visibilityState !== "visible" || Date.now() - last > 45_000) return; // away or idle
       secs += 5;
+      addStudySeconds(uid, 5);
       measure();
       if (!logged && secs >= needSeconds() && depth >= MIN_DEPTH) { logged = true; record(uid, { t: title.slice(0, 120), p: path, at: Date.now(), secs }); }
     }, 5000);

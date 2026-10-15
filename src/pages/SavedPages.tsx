@@ -6,6 +6,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { savedNotes, savedTopics, toggleSavedNote, toggleTopicSaved } from "@/lib/savedPages";
 import { findStaticNote } from "@/data/staticNotes";
 import { topicPath } from "@/lib/topics";
+import { allMyNotes } from "@/lib/myNotes";
 
 /** /saved: everything this student saved on this device, topics and notes together. */
 export default function SavedPages() {
@@ -14,7 +15,8 @@ export default function SavedPages() {
   void tick;
   const topics = savedTopics(user?.id);
   const notes = savedNotes(user?.id).map((s) => findStaticNote(s)).filter((n): n is NonNullable<ReturnType<typeof findStaticNote>> => Boolean(n));
-  const empty = !topics.length && !notes.length;
+  const mine = Object.entries(allMyNotes(user?.id)).sort((a, b) => b[1].at - a[1].at);
+  const empty = !topics.length && !notes.length && !mine.length;
   return (
     <main className="mx-auto max-w-3xl px-5 py-10">
       <Helmet><title>Saved | Ompath Study</title><meta name="robots" content="noindex" /></Helmet>
@@ -31,6 +33,16 @@ export default function SavedPages() {
                 <Link to={topicPath(t.s)} className="min-w-0 flex-1 truncate font-semibold hover:underline">{t.n}</Link>
                 <button type="button" aria-label={`Remove ${t.n}`} onClick={() => { toggleTopicSaved(user?.id, t.s, t.n); setTick((n) => n + 1); }} className="rounded-full p-1.5 text-muted-foreground hover:bg-muted"><X className="h-4 w-4" /></button>
               </li>
+            ))}
+          </ul>
+        </section>
+      )}
+      {mine.length > 0 && (
+        <section className="mt-8">
+          <h2 className="font-serif text-2xl font-bold">My notes</h2>
+          <ul className="mt-3 divide-y divide-border rounded-2xl border border-border">
+            {mine.map(([path, n]) => (
+              <li key={path} className="px-4 py-3"><Link to={path} className="font-semibold hover:underline">{n.t}</Link><p className="mt-1 line-clamp-2 whitespace-pre-line text-sm text-muted-foreground">{n.text}</p></li>
             ))}
           </ul>
         </section>

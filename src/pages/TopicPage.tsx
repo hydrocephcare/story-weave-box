@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useReadLog } from "@/lib/readLog";
 import SaveTopicButton from "@/components/SaveTopicButton";
+import MyNotesBox from "@/components/MyNotesBox";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import BooksForPage from "@/components/BooksForPage";
 import SponsorLine from "@/components/SponsorLine";
@@ -744,6 +745,7 @@ export default function TopicPage() {
             )}
 
             {page && <HelpfulVote slug={slug} />}
+            {page && <MyNotesBox title={name} />}
 
             {page?.faq && page.faq.length > 0 && (
               <Section id="faq" title="Common questions">

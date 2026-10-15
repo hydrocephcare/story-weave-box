@@ -175,6 +175,19 @@ Today we see psychosis as a treatable illness shaped by genes and life experienc
 - **2022**: Mental Health (Amendment) Act: patients' rights, support in decision-making, county funding.
 - **2025**: mental health included in SHA / Taifa Care insurance.
 
+## Ten things to remember
+
+1. **Psychosis** = losing touch with reality without realising it.
+2. It is a **syndrome, not a diagnosis**: like fever, find the cause.
+3. **Kraepelin** = course. **Bleuler** = the name "schizophrenia" and the 4 As.
+4. **Jaspers** = describing symptoms; a delusion is certain, incorrigible and false.
+5. **Schneider** = first-rank symptoms. **Meyer** = the whole person. **Lambo** = community care.
+6. **DSM-5-TR**: five features. **APA and ICD-11**: impaired reality testing.
+7. A belief shared by the patient's **culture** is not a delusion.
+8. Kenya's **treatment gap is about 75%**. About half of Africans see a **healer first**.
+9. Healers are chosen for **beliefs, access, cost, trust and stigma**. Work with them, not against them.
+10. Today: **early help, genes plus environment, rule out medical causes, rights-based care**.
+
 ## High-yield exam points
 
 - Psychosis = losing touch with reality without realising it. It is a **syndrome, not a diagnosis**: like fever, find the cause.
@@ -270,5 +283,7 @@ D. About 95%
 
 **Answer:** C. About 75%
 **Explanation:** The Kenya Taskforce on Mental Health (2020) puts the treatment gap at about 75%, that is three in four people.
+
+**Further reading**: DSM-5-TR (APA, 2022) · ICD-11 (WHO) · NIMH, "What is psychosis?" · Burns and Tomita 2015, healers in the pathway to care in Africa · Gureje et al. 2020 (COSIMPO), *Lancet* · Kenya Mental Health (Amendment) Act 2022.
 
 *Prepared from Dr Kendi's class summary of 15 October 2026 and edited for the site. Check details against your lecture notes and current guidelines; this is not a doctor's review.*
