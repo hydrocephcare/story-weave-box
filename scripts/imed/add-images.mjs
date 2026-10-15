@@ -15,6 +15,8 @@ const ARTICLE = {
   "acute-kidney-injury": "Acute kidney injury", "approach-to-anaemia": "Anemia", "hypertension": "Hypertension",
   "sepsis-and-septic-shock": "Sepsis", "nephrotic-and-nephritic-syndromes": "Nephrotic syndrome",
   "diabetic-ketoacidosis": "Diabetic ketoacidosis",
+  "acs": "Acute coronary syndrome", "endocarditis": "Infective endocarditis", "arrhythmia": "Electrocardiography", "pericardium": "Pericarditis", "cardiomyopathy": "Cardiomyopathy",
+  "pvd": "Peripheral artery disease", "hiv": "HIV/AIDS", "malaria": "Malaria", "meningitis": "Meningitis", "enteric": "Typhoid fever", "amr": "Antimicrobial resistance",
 };
 const OK = /^(public domain|cc0|cc[ -]by|cc[ -]by[ -]sa|pd)/i;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

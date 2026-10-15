@@ -3,6 +3,7 @@
 // Keys come from .groq-keys.local / .gemini-keys.local (git-ignored) or GROQ_API_KEYS / GEMINI_API_KEYS. Groq is used first; nothing is run in a loop:
 // a note that fails the checks is skipped, never half-saved, and the cost is one request per note.
 import fs from "node:fs";
+import { linkNote, missingTopics, planFor } from "./plan-auto.mjs";
 import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 
 const fromFile = (f) => (fs.existsSync(f) ? fs.readFileSync(f, "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "");
@@ -18,7 +19,7 @@ const PLAN = {
   "pulmonary-hypertension-and-cor-pulmonale": { group: "Respiratory", title: "Pulmonary hypertension and cor pulmonale", focus: "definition and the WHO groups of pulmonary hypertension, causes in our setting (chronic lung disease, schistosomiasis, thromboembolism, left heart disease, sickle cell), symptoms, signs of right heart strain, ECG, chest X-ray, echocardiography, right heart catheterisation, treatment principles and long-term oxygen.", traps: "loud P2, parasternal heave, raised JVP, why diuretics are used carefully" },
 };
 
-const RULES = `Rules: standard accepted medical knowledge only; if unsure, leave it out. Never give drug doses, never invent statistics, references or guideline numbers. Name drug classes and usual medicines and say why each is chosen. Be specific and clinical, explain why things happen, no filler. Tables must be compact: one short phrase per cell, single spaces only, the separator row exactly like |---|---|---|, and at most 7 rows. Do not add a "related topics" section (the site adds it).`;
+const RULES = `Rules: standard accepted medical knowledge only; if unsure, leave it out. Never give drug doses (write no amount in mg, mcg or µg), never invent statistics, references or guideline numbers. Name drug classes and usual medicines and say why each is chosen. Be specific and clinical, explain why things happen, no filler. Tables must be compact: one short phrase per cell, single spaces only, the separator row exactly like |---|---|---|, and at most 7 rows. Do not add a "related topics" section (the site adds it).`;
 
 // the note is written in three requests so that no single answer can run out of room halfway through a table
 const PARTS = (p) => [
@@ -69,7 +70,13 @@ ${RULES} About 700 words.`;
 const registry = JSON.parse(fs.readFileSync("src/data/staticNotes.json", "utf8"));
 const clean = (t) => String(t).replace(/^```(?:markdown|md)?\s*/i, "").replace(/```\s*$/, "").trim();
 const squeeze = (md) => md.split("\n").map((l) => (l.trim().startsWith("|") ? l.replace(/[ \t]{2,}/g, " ").replace(/-{4,}/g, "---") : l)).join("\n");
-const todo = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(PLAN);
+// --auto [--max N]: the next N topics of the curriculum that have no note yet (one system after another), planned from imed.ts
+const AUTO = process.argv.includes("--auto");
+const MAX = Number(process.argv[process.argv.indexOf("--max") + 1]) || 8;
+const idOf = {};
+if (AUTO) for (const t of missingTopics().filter((x) => !registry.some((n) => n.slug === x.id)).slice(0, MAX)) { PLAN[t.id] = planFor(t); idOf[t.id] = t.id; }
+const todo = AUTO ? Object.keys(idOf) : process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(PLAN);
+let failedInARow = 0; // two provider failures in a row means the AI quota is spent: stop instead of burning more
 
 for (const slug of todo) {
   const p = PLAN[slug];
@@ -88,6 +95,7 @@ for (const slug of todo) {
         const runs = text.split("\n").reduce((a, l) => { if (l.trim().startsWith("|")) a[a.length - 1] = (a[a.length - 1] ?? 0) + 1; else if (a[a.length - 1] !== 0) a.push(0); return a; }, [0]).filter((n) => n > 0);
         const tablesOk = (!/table/.test(part.ask) || runs.length >= 1) && runs.every((n) => n >= 3);
         if (have && tablesOk) break;
+        console.log(`  part ${i + 1} attempt ${attempt + 1}: sections ${have ? "ok" : "MISSING " + part.sections.filter((s) => !new RegExp(`^#{2,3}\\s+${s.split(" ")[0]}`, "im").test(text)).join(", ")}; tables ${tablesOk ? "ok" : "bad (" + runs.join(",") + ")"}; ${text.length} chars`);
         text = "";
       }
       if (!text) throw new Error(`part ${i + 1} incomplete`);
@@ -99,11 +107,13 @@ for (const slug of todo) {
     const dose = md.match(/\b\d+(?:\.\d+)?\s?(?:mg|mcg|µg)\b(?!\s?\/\s?(?:d?l|ml|mmol))/i);
     if (md.length < 7000 || heads < 11 || qs < 4 || rows < 6 || dose) { console.log("rejected (checks):", slug, md.length, heads, qs, rows, dose ? `dose: "${dose[0]}"` : ""); continue; }
     md += `\n\n*Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*\n`;
-    const file = `src/content/notes/${p.group.toLowerCase()}-${slug}.md`;
+    const file = `src/content/notes/${p.group.toLowerCase().split(/[ ,]/)[0]}-${slug}.md`;
     fs.writeFileSync(file, md);
     const desc = `${p.title}: ${p.focus}`.replace(/\s+/g, " ").slice(0, 190).replace(/[,;:\s]+\S*$/, "") + ".";
     registry.push({ slug, year: 4, unit: "Internal Medicine", group: p.group, title: p.title, description: desc, updated: new Date().toISOString().slice(0, 10), file });
     fs.writeFileSync("src/data/staticNotes.json", JSON.stringify(registry, null, 2) + "\n");
+    if (AUTO) linkNote(slug, slug);
+    failedInARow = 0;
     console.log("written:", slug, md.length, "chars,", heads, "sections,", qs, "questions,", rows, "table rows");
-  } catch (e) { console.log("failed:", slug, String(e.message).slice(0, 100)); }
+  } catch (e) { console.log("failed:", slug, String(e.message).slice(0, 100)); if (!/^part \d incomplete/.test(String(e.message)) && ++failedInARow >= 2) { console.log("two failures in a row: the AI quota is probably spent, stopping."); break; } }
 }

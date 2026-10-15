@@ -1991,5 +1991,155 @@
     "description": "Approach to respiratory symptoms and the chest examination: cough, dyspnoea, haemoptysis, wheeze, chest pain: the history questions that narrow the diagnosis; the full chest examination.",
     "updated": "2026-10-15",
     "file": "src/content/notes/respiratory-approach-to-respiratory-symptoms.md"
+  },
+  {
+    "slug": "acs",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Cardiovascular",
+    "title": "Acute coronary syndrome and myocardial infarction",
+    "description": "Acute coronary syndrome and myocardial infarction: the complete clinical approach to Acute coronary syndrome and myocardial infarction: definition; causes and risk factors in our setting.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/cardiovascular-acs.md"
+  },
+  {
+    "slug": "endocarditis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Cardiovascular",
+    "title": "Infective endocarditis",
+    "description": "Infective endocarditis: the complete clinical approach to Infective endocarditis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/cardiovascular-endocarditis.md"
+  },
+  {
+    "slug": "arrhythmia",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Cardiovascular",
+    "title": "Arrhythmias and ECG interpretation",
+    "description": "Arrhythmias and ECG interpretation: the complete clinical approach to Arrhythmias and ECG interpretation: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/cardiovascular-arrhythmia.md"
+  },
+  {
+    "slug": "pericardium",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Cardiovascular",
+    "title": "Pericarditis, effusion and tamponade",
+    "description": "Pericarditis, effusion and tamponade: the complete clinical approach to Pericarditis, effusion and tamponade: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/cardiovascular-pericardium.md"
+  },
+  {
+    "slug": "cardiomyopathy",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Cardiovascular",
+    "title": "Cardiomyopathies",
+    "description": "Cardiomyopathies: the complete clinical approach to Cardiomyopathies: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/cardiovascular-cardiomyopathy.md"
+  },
+  {
+    "slug": "pvd",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Cardiovascular",
+    "title": "Peripheral vascular disease",
+    "description": "Peripheral vascular disease: the complete clinical approach to Peripheral vascular disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/cardiovascular-pvd.md"
+  },
+  {
+    "slug": "shock",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Cardiovascular",
+    "title": "Shock and cardiovascular emergencies",
+    "description": "Shock and cardiovascular emergencies: the complete clinical approach to Shock and cardiovascular emergencies: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/cardiovascular-shock.md"
+  },
+  {
+    "slug": "fever",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Infectious disease",
+    "title": "Approach to fever",
+    "description": "Approach to fever: the complete clinical approach to Approach to fever: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/infectious-fever.md"
+  },
+  {
+    "slug": "hiv",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Infectious disease",
+    "title": "HIV and opportunistic infections",
+    "description": "HIV and opportunistic infections: the complete clinical approach to HIV and opportunistic infections: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/infectious-hiv.md"
+  },
+  {
+    "slug": "malaria",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Infectious disease",
+    "title": "Malaria, including severe malaria",
+    "description": "Malaria, including severe malaria: the complete clinical approach to Malaria, including severe malaria: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/infectious-malaria.md"
+  },
+  {
+    "slug": "meningitis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Infectious disease",
+    "title": "Bacterial meningitis and encephalitis",
+    "description": "Bacterial meningitis and encephalitis: the complete clinical approach to Bacterial meningitis and encephalitis: definition; causes and risk factors in our setting (including HIV, TB.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/infectious-meningitis.md"
+  },
+  {
+    "slug": "enteric",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Infectious disease",
+    "title": "Enteric fever",
+    "description": "Enteric fever: the complete clinical approach to Enteric fever: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/infectious-enteric.md"
+  },
+  {
+    "slug": "amr",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Infectious disease",
+    "title": "Antimicrobial selection, stewardship and resistance",
+    "description": "Antimicrobial selection, stewardship and resistance: the complete clinical approach to Antimicrobial selection, stewardship and resistance: definition; causes and risk factors in our.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/infectious-amr.md"
+  },
+  {
+    "slug": "fungal-parasitic",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Infectious disease",
+    "title": "Common fungal and parasitic infections",
+    "description": "Common fungal and parasitic infections: the complete clinical approach to Common fungal and parasitic infections: definition; causes and risk factors in our setting (including HIV, TB.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/infectious-fungal-parasitic.md"
+  },
+  {
+    "slug": "renal-approach",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Renal",
+    "title": "Approach to renal disease",
+    "description": "Approach to renal disease: the complete clinical approach to Approach to renal disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/renal-renal-approach.md"
   }
 ]
