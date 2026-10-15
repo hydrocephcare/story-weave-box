@@ -1,6 +1,5 @@
 import { useState, type ReactNode, type ElementType } from "react";
 import { ExternalLink, Menu, PanelLeftClose, X } from "lucide-react";
-import AdminCopilot from "@/components/AdminCopilot";
 
 export type AdminNavItem<T extends string = string> = { id: T; label: string; icon: ElementType };
 export type AdminNavGroup<T extends string = string> = { label: string; items: AdminNavItem<T>[] };
@@ -72,7 +71,6 @@ export default function AdminWorkspace<T extends string>({ activeId, activeLabel
             </div>
           </div>
           <div className="mx-auto max-w-6xl p-3 pb-24 sm:p-6 lg:p-8"><div className="rounded-2xl border border-border/70 bg-background p-3 shadow-sm sm:p-5 lg:p-6">{children}</div></div>
-          <AdminCopilot />
         </main>
       </div>
     </div>

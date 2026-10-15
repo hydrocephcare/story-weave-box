@@ -10,6 +10,7 @@ import AIGate from "@/components/ai/AIGate";
 import AIPill from "@/components/ai/AIPill";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ContestStrip from "@/components/ContestStrip";
+import AdminCopilot from "@/components/AdminCopilot";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -313,6 +314,7 @@ const App = () => (
             <AIPill />
             <Navbar />
             <AnimatedRoutes />
+            <AdminCopilot />
             <SiteFooter />
           </BrowserRouter>
         </TooltipProvider>

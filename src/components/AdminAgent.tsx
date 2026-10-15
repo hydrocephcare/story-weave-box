@@ -73,6 +73,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
       const r = await refreshChats(); const last = r.chats[0];
       if (last) { setChatId(last.id); const saved = (await loadChat(last.id)) as Item[]; setFeed((cur) => [...saved, ...cur.filter((i) => i.kind === "result" && i.result.briefing && !saved.some((s) => s.kind === "result" && s.result.briefing && s.result.text === i.result.text))]); }
       loaded.current = true;
+      setFeed((cur) => { const lastItem = cur[cur.length - 1]; if (lastItem && lastItem.kind === "text" && lastItem.role === "user" && !lastItem.content.includes("📎")) { setText(lastItem.content); return [...cur, { kind: "text", role: "assistant", content: "That request was interrupted because the page was closed. I put it back in the box: press send to run it again." }]; } return cur; });
     })();
   }, [refreshChats, reloadWorld]);
   useEffect(() => { end.current?.scrollIntoView({ block: "nearest" }); }, [feed, plan]);

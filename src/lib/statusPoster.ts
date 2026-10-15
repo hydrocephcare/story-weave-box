@@ -24,10 +24,11 @@ function wrap(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): st
   return lines;
 }
 
-const loadImg = (src: string) => new Promise<HTMLImageElement | null>((resolve) => { const im = new Image(); im.onload = () => resolve(im); im.onerror = () => resolve(null); im.src = src; });
+const loadImg = (src: string) => new Promise<HTMLImageElement | null>((resolve) => { const im = new Image(); const t = window.setTimeout(() => resolve(null), 4000); im.onload = () => { window.clearTimeout(t); resolve(im); }; im.onerror = () => { window.clearTimeout(t); resolve(null); }; im.src = src; });
 
 export async function makeStatusPoster(spec: PosterSpec): Promise<string> {
-  try { await document.fonts?.load("700 60px Poppins"); await document.fonts?.load("700 80px 'Source Serif 4'"); } catch { /* fall back to system fonts */ }
+  // fonts get 1.5 seconds; if they are slow or blocked the poster is drawn with system fonts instead of waiting forever
+  try { await Promise.race([Promise.all([document.fonts?.load("700 60px Poppins"), document.fonts?.load("700 80px 'Source Serif 4'")]), new Promise((r) => window.setTimeout(r, 1500))]); } catch { /* system fonts */ }
   const mark = await loadImg("/brand/mark-dark.png");
   const c = document.createElement("canvas"); c.width = W; c.height = H;
   const ctx = c.getContext("2d")!;
