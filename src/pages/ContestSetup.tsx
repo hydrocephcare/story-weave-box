@@ -10,6 +10,7 @@ import {
   type AdminExamPaper, type ContestRecord, type ContestRound, type ContestUniversity,
 } from "@/lib/contest-store";
 import type { ContestStage } from "@/lib/contest";
+import ContestScopePanel from "@/components/ContestScopePanel";
 
 const SAMPLE_PASTE = `1. Which structure forms the floor of the anatomical snuffbox?
 A. Scaphoid and trapezium *
@@ -223,6 +224,7 @@ export default function ContestSetup() {
             ))}
             <Link to={`/contests/${contest.slug}/briefing`} className="text-sm font-bold text-primary hover:underline">Open public page →</Link>
           </div>
+          <ContestScopePanel contest={contest} universities={universities} onSaved={async () => setContests(await loadAdminContests())} />
           <div className="grid gap-4 rounded-xl border p-4 md:grid-cols-[1fr,auto]">
             <label className="text-sm font-semibold"><span className="flex items-center gap-2"><Image className="h-4 w-4 text-primary" /> Contest share image</span><input type="url" value={contest.shareImageUrl || ""} onChange={(e) => setContests((items) => items.map((item) => item.id === contest.id ? { ...item, shareImageUrl: e.target.value } : item))} placeholder="Paste a public HTTPS image URL" className="mt-2 w-full rounded-lg border bg-background px-3 py-2.5 text-sm font-normal" /></label>
             <button disabled={busy === "share-image"} onClick={() => void run("share-image", async () => { await updateContestDetails(contest.id, { title: contest.title, subtitle: contest.subtitle, subjects: contest.subjects, years: contest.years, format: contest.format, registrationOpensAt: contest.registrationOpensAt, registrationClosesAt: contest.registrationClosesAt, startsAt: contest.startsAt, shareImageUrl: contest.shareImageUrl, published: contest.published }); setContests(await loadAdminContests()); return "Share image saved."; })} className="self-end rounded-lg bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground">Save image</button>

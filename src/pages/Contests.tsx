@@ -43,6 +43,7 @@ export default function Contests() {
   }, []);
 
   const featured = contests.find((c) => c.stage === "live") ?? contests.find((c) => c.stage === "registration") ?? contests[0] ?? null;
+  const shownUniversities = featured?.universityIds?.length ? universities.filter((u) => featured.universityIds.includes(u.id)) : universities;
   const stage = STAGE[featured?.stage ?? "concept"] ?? STAGE.concept;
   const slug = featured?.slug ?? FLAGSHIP_CONTEST.slug;
   const shareUrl = `https://www.ompathstudy.com/contests/${slug}`;
@@ -88,12 +89,12 @@ export default function Contests() {
           </ol>
         </section>
 
-        {universities.length > 0 && (
+        {shownUniversities.length > 0 && (
           <section aria-labelledby="unis">
-            <div className="flex flex-wrap items-end justify-between gap-3"><h2 id="unis" className="font-serif text-2xl font-bold sm:text-3xl">Represent your university</h2><span className="text-sm text-white/45">{universities.length} universities</span></div>
-            <p className="mt-2 text-sm text-white/55">Tap yours to register. Not listed? You can add it on the registration form.</p>
+            <div className="flex flex-wrap items-end justify-between gap-3"><h2 id="unis" className="font-serif text-2xl font-bold sm:text-3xl">Represent your university</h2><span className="text-sm text-white/45">{shownUniversities.length} universities</span></div>
+            <p className="mt-2 text-sm text-white/55">Tap yours to register.{featured?.universityIds?.length ? "" : " Not listed? You can add it on the registration form."}</p>
             <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {universities.map((u) => (
+              {shownUniversities.map((u) => (
                 <li key={u.id}>
                   <Link to={`/contests/${slug}/register?university=${u.slug}`} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/[0.035] p-3.5 transition hover:border-teal-300/40 hover:bg-white/[0.06]">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-teal-300/25 to-teal-300/5 text-xs font-black tracking-wide text-teal-100">{monogram(u)}</span>

@@ -33,8 +33,10 @@ export default function ContestRegistrationPage() {
     updateMetaTags({ title: "Contest Registration | OmpathStudy", description: "Register for an OmpathStudy inter-university medical contest." });
     Promise.all([getContestBySlug(slug), loadContestPlatform()]).then(async ([record, platform]) => {
       setContest(record);
-      setUniversities(platform.universities);
-      const wanted = platform.universities.find((u) => u.slug === search.get("university"));
+      const allowed = record?.universityIds ?? [];
+      const list = allowed.length ? platform.universities.filter((u) => allowed.includes(u.id)) : platform.universities;
+      setUniversities(list);
+      const wanted = list.find((u) => u.slug === search.get("university"));
       if (wanted) setUniversityId((cur) => cur || wanted.id);
       if (record) {
         setRounds(await loadContestRounds(record.id));
@@ -91,7 +93,7 @@ export default function ContestRegistrationPage() {
           <p className="mt-2 text-sm text-white/55">This competition is still in the concept stage. Dates and eligibility rules will be published before registration opens.</p>
         </div> : <form onSubmit={submit} className="mt-7 space-y-5">
           {nextRound?.starts_at && <div className="rounded-xl border border-amber-300/20 bg-amber-300/[0.07] p-4"><p className="text-sm font-bold text-amber-200">Scheduled exam</p><ContestCountdown startsAt={nextRound.starts_at} className="mt-3" /><ContestCalendarActions title={`${contest.title} — ${nextRound.title}`} startsAt={nextRound.starts_at} endsAt={nextRound.ends_at} details="Ompath Study medical competition exam. Sign in and enter the secure lobby before the scheduled start." location={`https://www.ompathstudy.com/contests/${slug}/lobby`} className="mt-4" /></div>}
-          <label className="block text-sm font-semibold">University<select required value={universityId} onChange={(e) => setUniversityId(e.target.value)} className="mt-2 w-full rounded-lg border border-white/15 bg-[#0b1d20] px-3 py-3 text-white"><option value="">Select institution</option>{universities.map((u) => <option key={u.id} value={u.id}>{u.name}</option>)}<option value="__new__">My university is not listed</option></select></label>
+          <label className="block text-sm font-semibold">University<select required value={universityId} onChange={(e) => setUniversityId(e.target.value)} className="mt-2 w-full rounded-lg border border-white/15 bg-[#0b1d20] px-3 py-3 text-white"><option value="">Select institution</option>{universities.map((u) => <option key={u.id} value={u.id}>{u.name}</option>)}{!(contest.universityIds?.length) && <option value="__new__">My university is not listed</option>}</select></label>
           {universityId === "__new__" && <div className="rounded-xl border border-teal-300/20 bg-teal-300/[0.06] p-4">
             <p className="text-sm font-bold text-teal-200">Add your university</p>
             <p className="mt-1 text-xs leading-relaxed text-white/50">You can register immediately. An administrator will review the institution before verifying your contest admission.</p>

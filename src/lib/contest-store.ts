@@ -18,11 +18,18 @@ export interface ContestRecord extends ContestPreview {
   shareImageUrl: string | null;
   published: boolean;
   maxParticipantsPerUniversity: number;
+  /** Universities the contest is open to; empty means every university. */
+  universityIds: string[];
 }
 
 async function fetchContestPlatform(): Promise<{ contests: ContestRecord[]; universities: ContestUniversity[] }> {
+  const contestCols = "id,slug,title,subtitle,status,subjects,eligible_years,competition_format,registration_opens_at,registration_closes_at,starts_at,share_image_url,published,max_participants_per_university";
+  const queryContests = async () => {
+    const withScope = await (supabase as any).from("contests").select(contestCols + ",university_ids").eq("published", true).order("created_at");
+    return withScope.error ? (supabase as any).from("contests").select(contestCols).eq("published", true).order("created_at") : withScope;
+  };
   const [{ data: contestRows, error: contestError }, { data: universityRows, error: universityError }] = await Promise.all([
-    (supabase as any).from("contests").select("id,slug,title,subtitle,status,subjects,eligible_years,competition_format,registration_opens_at,registration_closes_at,starts_at,share_image_url,published,max_participants_per_university").eq("published", true).order("created_at"),
+    queryContests(),
     (supabase as any).from("contest_universities").select("id,name,slug,abbreviation,verified").eq("active", true).order("name"),
   ]);
   if (contestError) throw contestError;
@@ -33,7 +40,7 @@ async function fetchContestPlatform(): Promise<{ contests: ContestRecord[]; univ
       stage: row.status as ContestStage, subjects: row.subjects || [], years: row.eligible_years || [],
       format: row.competition_format || "", teams: "University teams and individual representatives",
       registrationOpensAt: row.registration_opens_at, registrationClosesAt: row.registration_closes_at,
-      startsAt: row.starts_at, shareImageUrl: row.share_image_url, published: row.published, maxParticipantsPerUniversity: row.max_participants_per_university || 50,
+      startsAt: row.starts_at, shareImageUrl: row.share_image_url, published: row.published, maxParticipantsPerUniversity: row.max_participants_per_university || 50, universityIds: row.university_ids || [],
     })),
     universities: (universityRows || []) as ContestUniversity[],
   };
@@ -322,15 +329,15 @@ export async function registerForContest(input: { contestId: string; userId: str
 }
 
 export async function loadAdminContests(): Promise<ContestRecord[]> {
-  const { data, error } = await (supabase as any).from("contests")
-    .select("id,slug,title,subtitle,status,subjects,eligible_years,competition_format,registration_opens_at,registration_closes_at,starts_at,share_image_url,published,max_participants_per_university")
-    .order("created_at");
+  const cols = "id,slug,title,subtitle,status,subjects,eligible_years,competition_format,registration_opens_at,registration_closes_at,starts_at,share_image_url,published,max_participants_per_university";
+  let { data, error } = await (supabase as any).from("contests").select(cols + ",university_ids").order("created_at");
+  if (error) ({ data, error } = await (supabase as any).from("contests").select(cols).order("created_at"));
   if (error) throw error;
   return (data || []).map((row: any) => ({
     id: row.id, slug: row.slug, title: row.title, subtitle: row.subtitle, stage: row.status,
     subjects: row.subjects || [], years: row.eligible_years || [], format: row.competition_format || "",
     teams: "University teams and individual representatives", registrationOpensAt: row.registration_opens_at,
-    registrationClosesAt: row.registration_closes_at, startsAt: row.starts_at, shareImageUrl: row.share_image_url, published: row.published, maxParticipantsPerUniversity: row.max_participants_per_university || 50,
+    registrationClosesAt: row.registration_closes_at, startsAt: row.starts_at, shareImageUrl: row.share_image_url, published: row.published, maxParticipantsPerUniversity: row.max_participants_per_university || 50, universityIds: row.university_ids || [],
   }));
 }
 
@@ -394,6 +401,11 @@ export async function addContestUniversity(name: string, abbreviation: string) {
 
 export async function setContestUniversityActive(universityId: string, active: boolean) {
   await contestControl({ action: "set_university_active", universityId, active });
+}
+
+/** Limit a contest to chosen universities (2, 3, ...). An empty list opens it to every university. */
+export async function setContestUniversityScope(contestId: string, universityIds: string[]) {
+  await contestControl({ action: "set_contest_universities", contestId, universityIds });
 }
 
 export async function createSampleContest(title?: string) {

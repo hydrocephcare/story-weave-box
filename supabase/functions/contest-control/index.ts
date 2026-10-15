@@ -70,6 +70,14 @@ serve(async (req) => {
       return json({ success: true, contest: data });
     }
 
+    if (action === "set_contest_universities") {
+      if (!await isAdmin()) return json({ error: "Administrator access required" }, 403);
+      const ids = Array.isArray(body?.universityIds) ? [...new Set(body.universityIds.map((item: unknown) => String(item)))].slice(0, 200) : [];
+      const { error } = await admin.from("contests").update({ university_ids: ids, updated_at: new Date().toISOString() }).eq("id", String(body?.contestId || ""));
+      if (error) throw error;
+      return json({ success: true, count: ids.length });
+    }
+
     if (action === "create_round") {
       if (!await isAdmin()) return json({ error: "Administrator access required" }, 403);
       const contestId = String(body?.contestId || "");
@@ -146,6 +154,9 @@ serve(async (req) => {
       const now = Date.now();
       if (!contest || !contest.published || contest.status !== "registration" || (contest.registration_opens_at && new Date(contest.registration_opens_at).getTime() > now) || (contest.registration_closes_at && new Date(contest.registration_closes_at).getTime() <= now)) return json({ error: "Registration is not open" }, 409);
       if (Array.isArray(contest.eligible_years) && contest.eligible_years.length && !contest.eligible_years.includes(studyYear)) return json({ error: "Your study year is not eligible" }, 400);
+      const { data: scope } = await admin.from("contests").select("university_ids").eq("id", contestId).maybeSingle(); // absent until the scope SQL is installed
+      const allowed: string[] = Array.isArray(scope?.university_ids) ? scope.university_ids : [];
+      if (allowed.length && !allowed.includes(universityId)) return json({ error: "This contest is not open to that university" }, 400);
       const { count } = await admin.from("contest_registrations").select("id", { count: "exact", head: true }).eq("contest_id", contestId).eq("university_id", universityId).neq("status", "withdrawn");
       if ((count || 0) >= Number(contest.max_participants_per_university || 50)) return json({ error: "This university has reached its participant limit" }, 409);
       if (representation === "university_team" && teamRole === "captain") { const { count: captains } = await admin.from("contest_registrations").select("id", { count: "exact", head: true }).eq("contest_id", contestId).eq("university_id", universityId).ilike("team_name", teamName).eq("team_role", "captain").neq("status", "withdrawn"); if (captains) return json({ error: "This team already has a captain" }, 409); }
