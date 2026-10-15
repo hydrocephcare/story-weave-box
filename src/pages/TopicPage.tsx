@@ -131,7 +131,7 @@ function Mcq({ q, n }: { q: TopicQuestion; n: number }) {
         <div className="mt-4 rounded-xl bg-muted/70 p-4 text-[15px] leading-relaxed" role="status">
           <p className="font-bold">{pick === q.a ? "Correct." : `Not quite. The answer is ${"ABCDE"[q.a]}.`}</p>
           {q.e && <p className="mt-1 text-muted-foreground">{q.e}</p>}
-          <Link to={q.u} className="mt-2 inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">From: {q.s} <ChevronRight className="h-3.5 w-3.5" /></Link>
+          {q.u && <Link to={q.u} className="mt-2 inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">From: {q.s} <ChevronRight className="h-3.5 w-3.5" /></Link>}
         </div>
       )}
     </article>
@@ -167,42 +167,119 @@ function Disclaimer({ disease }: { disease: boolean }) {
 }
 
 /** A quiet placeholder while a page is being prepared: no words about how it is made. */
-/** The deep exam notes: shown when they exist; otherwise one button writes them once (builds on the revision page) and saves them for everyone. */
-function DeepView({ slug, name, category, page, deep, onDone, canRead }: { slug: string; name: string; category: string; page: AiPage; deep: DeepNotes | null; onDone: (d: DeepNotes) => void; canRead: boolean }) {
+/** Drill mode: the viva questions one at a time. Tap to see the answer, then mark it "Got it" or "Again"; what you mark is remembered on this device. */
+function DrillMode({ slug, items, onClose }: { slug: string; items: { q: string; a: string }[]; onClose: () => void }) {
+  const key = `ompath_drill_${slug}`;
+  const [marks, setMarks] = useState<Record<number, "got" | "again">>(() => { try { return JSON.parse(localStorage.getItem(key) ?? "{}") as Record<number, "got" | "again">; } catch { return {}; } });
+  const [pile, setPile] = useState<number[]>(() => items.map((_, i) => i));
+  const [pos, setPos] = useState(0);
+  const [show, setShow] = useState(false);
+  const save = (next: Record<number, "got" | "again">) => { setMarks(next); try { localStorage.setItem(key, JSON.stringify(next)); } catch { /* ignore */ } };
+  const mark = (v: "got" | "again") => { save({ ...marks, [pile[pos]]: v }); setShow(false); setPos((p) => p + 1); };
+  const again = items.map((_, i) => i).filter((i) => marks[i] === "again");
+  const done = pos >= pile.length;
+  const item = items[pile[pos]];
+  return (
+    <section aria-label="Drill mode" className="no-print mb-8 rounded-3xl border border-primary/30 bg-primary/5 p-5 sm:p-7">
+      <div className="flex items-center justify-between gap-3">
+        <p className="text-xs font-bold uppercase tracking-wider text-primary">Drill · {Math.min(pos + 1, pile.length)} of {pile.length} · {again.length} to revise</p>
+        <button type="button" onClick={onClose} className="rounded-full p-1.5 text-muted-foreground hover:bg-muted" aria-label="Close drill"><X className="h-4 w-4" /></button>
+      </div>
+      {!done && item ? (
+        <>
+          <p className="mt-4 font-serif text-2xl font-bold leading-snug sm:text-[1.7rem]">{item.q}</p>
+          {show
+            ? <p className="mt-4 rounded-xl border border-emerald-500/30 bg-emerald-500/5 px-4 py-3 text-[17px] leading-[1.7]">{item.a}</p>
+            : <button type="button" onClick={() => setShow(true)} className="mt-5 rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-primary-foreground">Show answer</button>}
+          {show && (
+            <div className="mt-4 flex flex-wrap gap-2">
+              <button type="button" onClick={() => mark("got")} className="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/50 bg-emerald-500/10 px-5 py-2 text-sm font-bold text-emerald-700 dark:text-emerald-300"><Check className="h-4 w-4" aria-hidden /> Got it</button>
+              <button type="button" onClick={() => mark("again")} className="inline-flex items-center gap-1.5 rounded-full border border-amber-500/50 bg-amber-500/10 px-5 py-2 text-sm font-bold text-amber-700 dark:text-amber-300"><RefreshCw className="h-4 w-4" aria-hidden /> Again</button>
+            </div>
+          )}
+        </>
+      ) : (
+        <div className="mt-4">
+          <p className="font-serif text-2xl font-bold">{again.length ? `${again.length} to go over again` : "All of them, well done"}</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {again.length > 0 && <button type="button" onClick={() => { setPile(again); setPos(0); setShow(false); }} className="rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground">Drill the {again.length} I missed</button>}
+            <button type="button" onClick={() => { save({}); setPile(items.map((_, i) => i)); setPos(0); setShow(false); }} className="rounded-full border border-border bg-background px-5 py-2.5 text-sm font-bold hover:bg-muted">Start again</button>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
+const DEEP_BAND = "rounded-3xl border border-primary/20 bg-primary/5 p-5 sm:p-7";
+
+/** The deep exam notes: shown when they exist; otherwise one button writes them once (builds on the revision page, and on past-paper questions) and saves them for everyone. */
+function DeepView({ slug, name, category, page, deep, onDone, canRead, past }: { slug: string; name: string; category: string; page: AiPage; deep: DeepNotes | null; onDone: (d: DeepNotes) => void; canRead: boolean; past: string[] }) {
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
+  const [drill, setDrill] = useState(false);
   const write = async () => {
     setBusy(true); setErr("");
-    const r = await writeDeepNotes(slug, name, category, page);
+    const r = await writeDeepNotes(slug, name, category, page, past);
     setBusy(false);
     if ("deep" in r) onDone(r.deep); else setErr(r.error === "busy" ? "The writer is busy right now. Try again in a minute." : r.error === "bot" ? "Open this page in a normal browser to write the deep notes." : "The deep notes could not be written just now. Try again in a minute.");
   };
-  const unlock = () => openSubscribePrompt("Deep exam notes are a Pro feature: bedside examination step by step, how to read every test, complicating factors, management step by step, and 10 or more extra examiner questions on every topic.");
+  const unlock = () => openSubscribePrompt("Deep exam notes are a Pro feature: bedside examination step by step, how to read every test, a management ladder, numbers and mnemonics to memorise, 15 or more viva questions with answers, MCQs and cases, with the questions most likely to be asked marked.");
   if (!deep && !canRead) {
     return (
-      <section id="deep-start" data-deep="1" className="rounded-3xl border border-primary/25 bg-primary/5 p-6 sm:p-8">
+      <section id="deep-start" data-deep="1" className={DEEP_BAND}>
         <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary"><Lock className="h-3.5 w-3.5" aria-hidden /> Pro · Deep exam notes</p>
         <h2 className="mt-1 font-serif text-2xl font-bold sm:text-3xl">Go deeper on {name}</h2>
-        <p className="mt-2 max-w-[60ch] text-[17px] leading-relaxed text-foreground/80">The revision notes stay free. Pro adds the exam-depth layer: how to examine at the bedside, how to read each test, what complicates it, management step by step, and extra examiner questions.</p>
+        <p className="mt-2 max-w-[60ch] text-[17px] leading-relaxed text-foreground/80">The revision notes stay free. Pro adds the exam layer: the bedside examination step by step, how to read each test, a management ladder, numbers to memorise, 15+ viva questions with answers (the most likely ones marked), MCQs and two cases.</p>
         <button type="button" onClick={unlock} className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-95"><Sparkles className="h-4 w-4" aria-hidden /> See Pro</button>
       </section>
     );
   }
   if (!deep) {
     return (
-      <section id="deep-start" data-deep="1" className="rounded-3xl border border-primary/25 bg-primary/5 p-6 sm:p-8">
+      <section id="deep-start" data-deep="1" className={DEEP_BAND}>
         <p className="text-xs font-bold uppercase tracking-wider text-primary">Deep exam notes</p>
         <h2 className="mt-1 font-serif text-2xl font-bold sm:text-3xl">Go deeper on {name}</h2>
-        <p className="mt-2 max-w-[60ch] text-[17px] leading-relaxed text-foreground/80">The revision notes stay short. The deep notes read what the revision page already says, then add what is missing: how to examine at the bedside, how to read each test, complicating factors, step-by-step management, and more examiner questions.</p>
-        <button type="button" onClick={() => void write()} disabled={busy} className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-95 disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : <Sparkles className="h-4 w-4" aria-hidden />} {busy ? "Writing, about 40 seconds..." : "Write the deep exam notes"}</button>
-        <p className="mt-3 text-sm text-muted-foreground">Written once, then saved for everyone. AI-written and not yet reviewed by a doctor.</p>
+        <p className="mt-2 max-w-[60ch] text-[17px] leading-relaxed text-foreground/80">The writer reads the revision page and the past-paper questions on this topic, then adds what is missing: the bedside examination, how to read each test, a management ladder, numbers to memorise, 15+ viva questions with answers, MCQs and two cases.</p>
+        <button type="button" onClick={() => void write()} disabled={busy} className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-95 disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : <Sparkles className="h-4 w-4" aria-hidden />} {busy ? "Writing, about 15 seconds..." : "Write the deep exam notes"}</button>
+        <p className="mt-3 text-sm text-muted-foreground">Written once, then saved for everyone. AI-written, cross-checked, and not reviewed by a doctor.</p>
         {err && <p role="alert" className="mt-3 text-sm font-semibold text-red-600">{err}</p>}
       </section>
     );
   }
+  const vivas: { q: string; a: string; hot?: boolean; past?: boolean }[] = deep.vivas?.length ? deep.vivas : deep.exam.map((t) => { const i = t.search(/\?\s[—–]\s/); return i > 0 ? { q: t.slice(0, i + 1), a: t.slice(i + 1).replace(/^\s[—–]\s/, "") } : { q: t, a: "" }; });
+  const counts: [number, string][] = [[vivas.length, "viva questions"], [deep.mcqs?.length ?? 0, "MCQs"], [deep.cases?.length ?? 0, "cases"], [deep.facts?.length ?? 0, "numbers to memorise"]];
   const shown = canRead ? deep.sections : deep.sections.slice(0, 1);
   return (
     <div>
+      <div className="no-print mb-8 flex flex-wrap items-center gap-2">
+        {counts.filter(([n]) => n > 0).map(([n, l]) => <span key={l} className="rounded-full border border-border bg-muted/40 px-3.5 py-1.5 text-sm font-semibold"><strong className="font-extrabold text-primary">{n}</strong> {l}</span>)}
+        {canRead && vivas.some((v) => v.a) && !drill && <button type="button" onClick={() => setDrill(true)} className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground shadow-sm hover:opacity-95"><Zap className="h-4 w-4" aria-hidden /> Drill me</button>}
+      </div>
+      {canRead && !deep.vivas?.length && (
+        <div className="no-print mb-8 flex flex-wrap items-center gap-3 rounded-2xl border border-amber-500/40 bg-amber-500/10 px-5 py-4">
+          <p className="min-w-0 flex-1 text-[16px] font-semibold">These are the first version of the deep notes. The full version adds numbers to memorise, 15+ viva questions with answers, MCQs and cases.</p>
+          <button type="button" onClick={() => void write()} disabled={busy} className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : <Sparkles className="h-4 w-4" aria-hidden />} {busy ? "Writing, about 15 seconds..." : "Write the full version"}</button>
+          {err && <p role="alert" className="w-full text-sm font-semibold text-red-600">{err}</p>}
+        </div>
+      )}
+      {canRead && drill && <DrillMode slug={slug} items={vivas.filter((v) => v.a)} onClose={() => setDrill(false)} />}
+      {canRead && ((deep.facts?.length ?? 0) > 0 || (deep.mnemonics?.length ?? 0) > 0) && (
+        <section id="deep-memorise" data-deep="1" className={`${DEEP_BAND} mb-10 grid gap-6 sm:grid-cols-2`}>
+          {(deep.facts?.length ?? 0) > 0 && (
+            <div>
+              <h2 className="font-serif text-xl font-bold">Numbers to memorise</h2>
+              <ul className="mt-3 space-y-2 text-[16px] leading-snug">{deep.facts!.map((f) => <li key={f} className="flex gap-2"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden />{f}</li>)}</ul>
+            </div>
+          )}
+          {(deep.mnemonics?.length ?? 0) > 0 && (
+            <div>
+              <h2 className="font-serif text-xl font-bold">Memory aids</h2>
+              <ul className="mt-3 space-y-3 text-[16px] leading-snug">{deep.mnemonics!.map((m) => <li key={m.n}><span className="font-extrabold text-primary">{m.n}</span><br />{m.t}</li>)}</ul>
+            </div>
+          )}
+        </section>
+      )}
       {shown.map((x, i) => (
         <Section key={`${x.h}-${i}`} id={`deep-${anchor(x.h)}`} title={x.h} first={i === 0} deep>
           {x.p && <Paras text={x.p} self={slug} />}
@@ -211,14 +288,45 @@ function DeepView({ slug, name, category, page, deep, onDone, canRead }: { slug:
         </Section>
       ))}
       {canRead ? (
-        <Section id="deep-exam" title="More examiner questions" deep>
-          <ol className="space-y-5">{deep.exam.map((q, i) => <ExaminerQuestion key={q} n={i + 1} text={q} />)}</ol>
-        </Section>
+        <>
+          {vivas.length > 0 && (
+            <Section id="deep-exam" title="Viva questions with answers" deep>
+              <ol className="space-y-6">{vivas.map((v, i) => <ExaminerQuestion key={v.q} n={i + 1} q={v.q} a={v.a} hot={v.hot} past={v.past} />)}</ol>
+            </Section>
+          )}
+          {(deep.mcqs?.length ?? 0) > 0 && (
+            <Section id="deep-mcqs" title="Test yourself: MCQs" deep>
+              <div className="space-y-8">{deep.mcqs!.map((m, i) => <Mcq key={m.q} n={i + 1} q={{ q: m.q, o: m.o, a: m.a, e: m.e, u: "", s: "" }} />)}</div>
+            </Section>
+          )}
+          {(deep.cases?.length ?? 0) > 0 && (
+            <Section id="deep-cases" title="Clinical cases" deep>
+              <div className="space-y-8">
+                {deep.cases!.map((c, k) => (
+                  <article key={k} className="rounded-2xl border border-border bg-card p-5">
+                    <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Case {k + 1}</p>
+                    <p className="mt-1.5 text-[17px] leading-relaxed text-foreground">{c.v}</p>
+                    <ol className="mt-4 space-y-5">{c.qs.map((x, i) => <ExaminerQuestion key={x.q} n={i + 1} q={x.q} a={x.a} />)}</ol>
+                  </article>
+                ))}
+              </div>
+            </Section>
+          )}
+          {(deep.mistakes?.length ?? 0) > 0 && (
+            <Section id="deep-mistakes" title="Common mistakes that cost marks" deep>
+              <Bullets items={deep.mistakes!} self={slug} />
+            </Section>
+          )}
+          <p className="mt-10 text-sm text-muted-foreground">AI-written{deep.checked ? ", cross-checked by a second AI on " + deep.checked : ""}, and not reviewed by a doctor. Check details against your lecture notes and the Kenya MoH guideline.</p>
+        </>
       ) : (
-        <section id="deep-locked" data-deep="1" className="mt-10 rounded-3xl border border-primary/25 bg-primary/5 p-6 sm:p-8">
+        <section id="deep-locked" data-deep="1" className={`${DEEP_BAND} mt-10`}>
           <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary"><Lock className="h-3.5 w-3.5" aria-hidden /> Pro</p>
           <h2 className="mt-1 font-serif text-2xl font-bold">The rest of the deep notes</h2>
-          <ul className="mt-3 space-y-1.5 text-[17px] text-foreground/80">{deep.sections.slice(1).map((x) => <li key={x.h} className="flex items-start gap-2"><Lock className="mt-1.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" aria-hidden />{x.h}</li>)}<li className="flex items-start gap-2"><Lock className="mt-1.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" aria-hidden />{deep.exam.length} more examiner questions with answers</li></ul>
+          <ul className="mt-3 space-y-1.5 text-[17px] text-foreground/80">
+            {deep.sections.slice(1).map((x) => <li key={x.h} className="flex items-start gap-2"><Lock className="mt-1.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" aria-hidden />{x.h}</li>)}
+            {counts.filter(([n]) => n > 0).map(([n, l]) => <li key={l} className="flex items-start gap-2"><Lock className="mt-1.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" aria-hidden />{n} {l}</li>)}
+          </ul>
           <button type="button" onClick={unlock} className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-95"><Sparkles className="h-4 w-4" aria-hidden /> Unlock with Pro</button>
         </section>
       )}
@@ -262,19 +370,30 @@ function Writing({ name }: { name: string }) {
 }
 
 /** /topic/<slug>: a plain, readable article about one subject (definition first), with the library's notes and questions underneath. */
-/** One examiner question: the question is shown, the answer ("question? — answer") waits behind a button so the student tries first. */
-function ExaminerQuestion({ n, text }: { n: number; text: string }) {
+/** One examiner question: the question is shown, the answer waits behind a button so the student tries first. Old pages give "question? — answer" in one line; new deep notes give them separately. */
+function ExaminerQuestion({ n, text, q, a, hot, past }: { n: number; text?: string; q?: string; a?: string; hot?: boolean; past?: boolean }) {
   const [open, setOpen] = useState(false);
-  // the answer starts after the dash that follows the question mark; with no question mark, after the last dash
-  const afterQ = text.search(/\?\s[—–]\s/);
-  const dashes = [...text.matchAll(/\s[—–]\s/g)];
-  const cut = afterQ > 0 ? afterQ + 1 : dashes.length ? (dashes[dashes.length - 1].index ?? -1) : -1;
-  const question = cut > 0 ? text.slice(0, cut).trim() : text.trim();
-  const answer = cut > 0 ? text.slice(cut).replace(/^\s[—–]\s/, "").trim() : "";
+  let question = q ?? "";
+  let answer = a ?? "";
+  if (q === undefined) {
+    const t = text ?? "";
+    // the answer starts after the dash that follows the question mark; with no question mark, after the last dash
+    const afterQ = t.search(/\?\s[—–]\s/);
+    const dashes = [...t.matchAll(/\s[—–]\s/g)];
+    const cut = afterQ > 0 ? afterQ + 1 : dashes.length ? (dashes[dashes.length - 1].index ?? -1) : -1;
+    question = cut > 0 ? t.slice(0, cut).trim() : t.trim();
+    answer = cut > 0 ? t.slice(cut).replace(/^\s[—–]\s/, "").trim() : "";
+  }
   return (
     <li className="flex gap-4">
       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{n}</span>
       <div className="min-w-0 flex-1">
+        {(hot || past) && (
+          <p className="mb-1 flex flex-wrap gap-1.5">
+            {hot && <span className="rounded-full bg-amber-500/15 px-2.5 py-0.5 text-[11px] font-extrabold uppercase tracking-wide text-amber-700 dark:text-amber-300">Most likely</span>}
+            {past && <span className="rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-[11px] font-extrabold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">Asked in a past paper</span>}
+          </p>
+        )}
         <p className="text-[19px] font-semibold leading-[1.6] text-foreground">{question}</p>
         {answer && (
           <>
@@ -321,6 +440,7 @@ export default function TopicPage() {
   const [deepLocal, setDeepLocal] = useState<DeepNotes | null>(null);
   useEffect(() => { setView("revision"); setDeepLocal(null); }, [slug]);
   const deep = deepLocal ?? page?.deep ?? null;
+  const past = [...(topic?.qs ?? []).map((x) => x.q), ...(topic?.es ?? []).map((x) => x.q)].slice(0, 12);
   const access = useAccess();
   const canRead = useFeatures(isAdmin || access.hasPass).can("deepNotes");
   useEffect(() => { if (!fresh) return; setShowFresh(true); const t = setTimeout(() => setShowFresh(false), 9000); return () => clearTimeout(t); }, [fresh]);
@@ -392,7 +512,7 @@ export default function TopicPage() {
   const manage = aiSections.find((s) => /manage|treat/i.test(s.h));
   const seekAfter = aiSections.length ? Math.max(0, manage ? aiSections.indexOf(manage) : aiSections.length - 1) : -1;
   const hasStudy = Boolean(topic && (topic.sec?.length || topic.src.length || topic.sets.length || topic.imgs.length || topic.qs.length || topic.es.length));
-  const toc = view === "deep" && deep ? [...deep.sections.map((x) => ({ id: `deep-${anchor(x.h)}`, t: x.h })), { id: "deep-exam", t: "More examiner questions" }] : [
+  const toc = view === "deep" && deep ? [...deep.sections.map((x) => ({ id: `deep-${anchor(x.h)}`, t: x.h })), ...(deep.facts?.length ? [{ id: "deep-memorise", t: "Numbers to memorise" }] : []), ...(deep.vivas?.length || deep.exam.length ? [{ id: "deep-exam", t: "Viva questions" }] : []), ...(deep.mcqs?.length ? [{ id: "deep-mcqs", t: "MCQs" }] : []), ...(deep.cases?.length ? [{ id: "deep-cases", t: "Cases" }] : [])] : [
     ...(intro.length ? [{ id: "overview", t: "Overview" }] : []),
     ...aiSections.map((s) => ({ id: anchor(s.h), t: s.h })),
     ...wikiSections.map((w) => ({ id: anchor(w.h), t: w.h })),
@@ -489,15 +609,16 @@ export default function TopicPage() {
 
           <div className={cn("mt-6", view === "deep" && "deep-view")}>
             {page && (
-              <div className="no-print mb-6 flex flex-wrap items-center gap-2">
-                <div role="tablist" aria-label="Which notes" className="inline-flex rounded-full border border-border bg-muted/40 p-1">
-                  <button type="button" role="tab" aria-selected={view === "revision"} onClick={() => setView("revision")} className={cn("rounded-full px-4 py-1.5 text-sm font-bold transition-colors", view === "revision" ? "bg-primary text-primary-foreground" : "text-foreground/70 hover:text-foreground")}>Revision notes</button>
-                  <button type="button" role="tab" aria-selected={view === "deep"} onClick={() => setView("deep")} className={cn("inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-bold transition-colors", view === "deep" ? "bg-primary text-primary-foreground" : "text-foreground/70 hover:text-foreground")}><Zap className="h-4 w-4" aria-hidden /> Deep exam notes</button>
+              <div className="no-print mb-8 flex flex-wrap items-end gap-x-7 gap-y-2 border-b border-border">
+                <div role="tablist" aria-label="Which notes" className="flex gap-7">
+                  {([["revision", "Revision notes"], ["deep", "Deep exam notes"]] as const).map(([k, l]) => (
+                    <button key={k} type="button" role="tab" aria-selected={view === k} onClick={() => setView(k)} className={cn("-mb-px inline-flex items-center gap-1.5 border-b-[3px] pb-2.5 text-[16px] font-bold outline-none transition-colors focus-visible:text-primary", view === k ? "border-primary text-foreground" : "border-transparent text-muted-foreground hover:text-foreground")}>{k === "deep" && <Zap className="h-4 w-4" aria-hidden />}{l}</button>
+                  ))}
                 </div>
-                <button type="button" onClick={() => window.print()} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-4 py-1.5 text-sm font-bold hover:bg-muted"><Printer className="h-4 w-4" aria-hidden /> Print or save as PDF</button>
+                <button type="button" onClick={() => window.print()} className="mb-2.5 ml-auto inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground hover:text-primary"><Printer className="h-4 w-4" aria-hidden /> Print or save as PDF</button>
               </div>
             )}
-            {view === "deep" && page && <DeepView slug={slug} name={name} category={topic?.c ?? ""} page={page} deep={deep} onDone={setDeepLocal} canRead={canRead} />}
+            {view === "deep" && page && <DeepView slug={slug} name={name} category={topic?.c ?? ""} page={page} deep={deep} onDone={setDeepLocal} canRead={canRead} past={past} />}
 
             {intro.length > 0 && (
               <Section id="overview" title="Overview" first>

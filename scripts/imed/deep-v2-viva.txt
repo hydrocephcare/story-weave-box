@@ -1,0 +1,36 @@
+/** One examiner question: the question is shown, the answer waits behind a button so the student tries first. Old pages give "question? — answer" in one line; new deep notes give them separately. */
+function ExaminerQuestion({ n, text, q, a, hot, past }: { n: number; text?: string; q?: string; a?: string; hot?: boolean; past?: boolean }) {
+  const [open, setOpen] = useState(false);
+  let question = q ?? "";
+  let answer = a ?? "";
+  if (q === undefined) {
+    const t = text ?? "";
+    // the answer starts after the dash that follows the question mark; with no question mark, after the last dash
+    const afterQ = t.search(/\?\s[—–]\s/);
+    const dashes = [...t.matchAll(/\s[—–]\s/g)];
+    const cut = afterQ > 0 ? afterQ + 1 : dashes.length ? (dashes[dashes.length - 1].index ?? -1) : -1;
+    question = cut > 0 ? t.slice(0, cut).trim() : t.trim();
+    answer = cut > 0 ? t.slice(cut).replace(/^\s[—–]\s/, "").trim() : "";
+  }
+  return (
+    <li className="flex gap-4">
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{n}</span>
+      <div className="min-w-0 flex-1">
+        {(hot || past) && (
+          <p className="mb-1 flex flex-wrap gap-1.5">
+            {hot && <span className="rounded-full bg-amber-500/15 px-2.5 py-0.5 text-[11px] font-extrabold uppercase tracking-wide text-amber-700 dark:text-amber-300">Most likely</span>}
+            {past && <span className="rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-[11px] font-extrabold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">Asked in a past paper</span>}
+          </p>
+        )}
+        <p className="text-[19px] font-semibold leading-[1.6] text-foreground">{question}</p>
+        {answer && (
+          <>
+            <button type="button" onClick={() => setOpen((v) => !v)} aria-expanded={open} className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3.5 py-1.5 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-500/20 dark:text-emerald-300">{open ? "Hide answer" : "Show answer"}</button>
+            {open && <p className="mt-2 rounded-xl border border-emerald-500/30 bg-emerald-500/5 px-4 py-3 text-[17px] leading-[1.7] text-foreground/90">{answer}</p>}
+          </>
+        )}
+      </div>
+    </li>
+  );
+}
+

@@ -1,0 +1,93 @@
+/** The second layer: deep exam notes, written in three focused parts (run in parallel) that build on the revision page without repeating it. */
+const DEEP_PARTS = {
+  clinical: {
+    ask: 'Write 3 or 4 sections, in this order: "Bedside: history and how to examine" (the history questions as bullets, then the examination step by step: each named sign, how to elicit it, what a positive result means, and what a bedside test cannot tell you), "Investigations and how to read them" (use the "t" table: every test, the question it answers and how to read the result, including indices and diagnostic criteria, plus what to do when a test is unavailable), "Diagnosis, staging and severity" (the recognised criteria or classification, written as bullets), and if it fits "Look-alike conditions" (use the "t" table: condition, what points to it, how to separate it).',
+    out: '{"sections": [{"h": "heading", "p": "one short paragraph", "b": ["bullet"], "t": [{"a": "test or item", "b": "the question it answers and what the result means"}]}]}',
+  },
+  management: {
+    ask: 'Write 4 or 5 sections, in this order: "Management step by step" (a numbered ladder in bullets: first things first, definitive treatment, monitoring, when to escalate or refer; name drug classes and medicines with the reason for each choice and what to avoid and why; no doses), "Drug effects and what to do" (the important adverse effects and interactions, and the action for each), "Complications and when to escalate", "Complicating and confounding factors" (HIV, TB, malnutrition, pregnancy, diabetes, drugs and herbal remedies, alcohol, kidney or liver failure, age extremes: how each changes the picture, the results or the treatment) and "Special groups" (children, pregnancy, the elderly, people with HIV, low-resource settings).',
+    out: '{"sections": [{"h": "heading", "p": "one short paragraph", "b": ["bullet"], "t": [{"a": "item", "b": "what it means or what to do"}]}]}',
+  },
+  exam: {
+    ask: 'Do NOT write sections. Write the examination material. Think of what Kenyan university examiners (viva, OSCE and written) most probably ask on this topic: put the MOST likely questions first. Write: "facts": 8 to 10 numbers, cut-offs, criteria or drug names a student must memorise, each one short line; "mnemonics": 2 to 4 memory aids (only if they are real and standard, otherwise fewer); "vivas": 15 to 18 questions with answers, mixed: definitions, bedside "what would you do next", interpreting a result, "why is this avoided", "how do you tell X from Y", complications; each answer 1 to 3 sentences with the key points; set "hot": true on the 5 most probable questions; "mcqs": 6 to 8 multiple-choice questions, mostly clinical scenarios, each with exactly 4 options, "a" the index (0 to 3) of the one correct option, and "e" a one-sentence reason; "cases": 2 short clinical cases (age, presentation, findings) each with 3 questions and model answers; "mistakes": 6 to 8 common mistakes students make or that cost marks. If a list of PAST-PAPER questions is given, answer each of them inside "vivas" or "mcqs" and set "past": true on those.',
+    out: '{"facts": ["..."], "mnemonics": [{"n": "name", "t": "what it stands for and why it matters"}], "vivas": [{"q": "question", "a": "answer", "hot": true, "past": false}], "mcqs": [{"q": "stem", "o": ["A", "B", "C", "D"], "a": 0, "e": "reason", "past": false}], "cases": [{"v": "vignette", "qs": [{"q": "question", "a": "answer"}]}], "mistakes": ["..."]}',
+  },
+};
+
+export function buildDeepPrompt({ name, category, base, part = "clinical", past = [] }) {
+  const have = (Array.isArray(base?.sections) ? base.sections : []).map((x) => String(x?.h ?? "")).filter(Boolean).join("; ");
+  const points = (Array.isArray(base?.sections) ? base.sections : []).flatMap((x) => [x?.p, ...(Array.isArray(x?.b) ? x.b : [])]).filter(Boolean).map((x) => clip(x, 110)).slice(0, 24).join(" | ");
+  const asked = (Array.isArray(base?.exam) ? base.exam : []).map((x) => clip(String(x).split(" — ")[0], 100)).slice(0, 8).join(" | ");
+  const pastList = (Array.isArray(past) ? past : []).map((x) => clip(x, 220)).filter(Boolean).slice(0, 12);
+  const P = DEEP_PARTS[part] ?? DEEP_PARTS.clinical;
+  return `You are a clinical reasoning tutor writing PART OF the DEEP EXAM NOTES for "${name}" (area: ${category || "medicine"}), for a Year 4 clinical student in East African and other low-resource hospitals. The site already has a SHORT REVISION page; the deep notes sit behind it and must not repeat it.
+
+The revision page already has these sections: ${have || "(none)"}.
+Points it already makes: ${clip(points, 2200)}
+Examiner questions it already asks: ${clip(asked, 800)}
+${pastList.length ? `\nPAST-PAPER questions asked at this medical school on this topic (examiners repeat themselves, so answer each):\n- ${pastList.join("\n- ")}\n` : ""}
+YOUR PART: ${P.ask}
+${DEEP_RULES}
+${ACCURACY_RULES}
+Reply with ONLY one JSON object of this shape: ${P.out}
+Be thorough: this is exam-preparation material, so write 4 to 8 bullets or a short paragraph plus bullets in every section. Rules: standard accepted medical knowledge only; leave out anything you are unsure of; no doses, no brand names, no invented statistics. Every bullet under 45 words. Plain words.`;
+}
+
+const noAngle = (v) => String(v ?? "").replace(/<(?=[A-Za-z/!])/g, "< ");
+const okLine = (v, max) => { const t = clip(noAngle(v), max); return t && !DOSE.test(t) ? t : ""; };
+
+/** Checks the sections the model returned for one part (same safety rules as a page: no doses, no links, no tags). */
+function cleanSections(rawSections, name) {
+  if (!Array.isArray(rawSections) || !rawSections.length) return [];
+  const page = sanitizePage({ medical: true, summary: `Deep exam notes on ${name}, covering what the revision page leaves out.`, sections: rawSections.map((x) => ({ ...x, h: noAngle(x?.h), p: noAngle(x?.p), b: (x?.b ?? []).map(noAngle), t: (x?.t ?? []).map((r) => ({ a: noAngle(r?.a), b: noAngle(r?.b) })) })), exam: [] });
+  return page.sections;
+}
+
+/** Checks and merges the three parts into one deep-notes object. Throws when the notes are too thin to be worth saving. */
+export function sanitizeDeep(parts, name = "this topic") {
+  const list = Array.isArray(parts) ? parts : [parts];
+  const sections = [];
+  let exam = {};
+  for (const raw of list) {
+    if (!raw || typeof raw !== "object") continue;
+    try { sections.push(...cleanSections(raw.sections, name)); } catch { /* a part with too few sections adds nothing */ }
+    if (raw.vivas || raw.mcqs || raw.facts || raw.cases) exam = raw;
+    // the first version of the deep notes only had "exam": strings "question — answer"
+    if (!exam.vivas && Array.isArray(raw.exam)) exam = { ...exam, vivas: raw.exam.map((x) => { const [q, ...r] = String(x).split(" — "); return { q, a: r.join(" — ") }; }) };
+  }
+  const vivas = (Array.isArray(exam.vivas) ? exam.vivas : []).map((x) => ({ q: okLine(x?.q, 320), a: okLine(x?.a, 700), ...(x?.hot ? { hot: true } : {}), ...(x?.past ? { past: true } : {}) })).filter((x) => x.q.length >= 10 && x.a.length >= 8).slice(0, 20);
+  const mcqs = (Array.isArray(exam.mcqs) ? exam.mcqs : []).map((x) => {
+    const o = (Array.isArray(x?.o) ? x.o : []).map((v) => okLine(v, 200));
+    const a = Number(x?.a);
+    return { q: okLine(x?.q, 500), o, a, e: okLine(x?.e, 400), ...(x?.past ? { past: true } : {}) };
+  }).filter((x) => x.q.length >= 15 && x.o.length === 4 && x.o.every(Boolean) && new Set(x.o).size === 4 && Number.isInteger(x.a) && x.a >= 0 && x.a <= 3).slice(0, 10);
+  const cases = (Array.isArray(exam.cases) ? exam.cases : []).map((c) => ({
+    v: okLine(c?.v, 600),
+    qs: (Array.isArray(c?.qs) ? c.qs : []).map((x) => ({ q: okLine(x?.q, 300), a: okLine(x?.a, 600) })).filter((x) => x.q.length >= 8 && x.a.length >= 8).slice(0, 4),
+  })).filter((c) => c.v.length >= 30 && c.qs.length >= 2).slice(0, 3);
+  const facts = (Array.isArray(exam.facts) ? exam.facts : []).map((x) => okLine(x, 200)).filter((x) => x.length >= 6).slice(0, 12);
+  const mnemonics = (Array.isArray(exam.mnemonics) ? exam.mnemonics : []).map((x) => ({ n: okLine(x?.n, 60), t: okLine(x?.t, 300) })).filter((x) => x.n && x.t.length >= 8).slice(0, 5);
+  const mistakes = (Array.isArray(exam.mistakes) ? exam.mistakes : []).map((x) => okLine(x, 220)).filter((x) => x.length >= 8).slice(0, 10);
+  if (sections.length < 5 || vivas.length < 8) throw new Error("deep notes too thin");
+  // "exam" keeps the question and answer as one line each, so older pages and the database checks still read the notes
+  return { sections: sections.slice(0, 14), facts, mnemonics, vivas, mcqs, cases, mistakes, exam: vivas.slice(0, 14).map((x) => `${x.q} — ${x.a}`) };
+}
+
+export async function generateDeepNotes({ name, category, base, past = [], env, fetchImpl = fetch, timeoutMs }) {
+  const run = async (part) => {
+    const { text, model } = await askModel(buildDeepPrompt({ name, category, base, part, past }), { env, fetchImpl, timeoutMs: timeoutMs ?? 55000, maxTokens: 6000 });
+    const m = text.match(/\{[\s\S]*\}/);
+    if (!m) throw new Error("no JSON in the reply");
+    return { json: JSON.parse(m[0]), model };
+  };
+  const done = await Promise.all(["clinical", "management", "exam"].map(run));
+  return { ...sanitizeDeep(done.map((d) => d.json), name), model: done[0].model, generatedAt: new Date().toISOString().slice(0, 10) };
+}
+
+/** Groq first (free), then Gemini, the same order as the revision page. */
+export async function generateDeepWithFallback(input, env) {
+  const groq = String(env.GROQ_API_KEYS ?? "").trim();
+  if (groq) { try { return await generateDeepNotes({ ...input, timeoutMs: 34000, env: { GROQ_API_KEYS: groq } }); } catch { /* fall back to Gemini */ } }
+  return generateDeepNotes({ ...input, timeoutMs: groq ? 22000 : input.timeoutMs, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS, GROQ_API_KEYS: groq } });
+}
+

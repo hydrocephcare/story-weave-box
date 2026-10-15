@@ -28,7 +28,16 @@ export interface AiPage {
   /** The deep exam notes: written once, on request, from what the revision page lacks. */
   deep?: DeepNotes;
 }
-export interface DeepNotes { sections: { h: string; p?: string; b?: string[]; t?: { a: string; b: string }[] }[]; exam: string[]; model?: string; generatedAt?: string }
+export interface DeepNotes {
+  sections: { h: string; p?: string; b?: string[]; t?: { a: string; b: string }[] }[];
+  /** the viva questions as "question — answer" lines (the first version of the deep notes, and what the database checks) */
+  exam: string[];
+  facts?: string[]; mnemonics?: { n: string; t: string }[];
+  vivas?: { q: string; a: string; hot?: boolean; past?: boolean }[];
+  mcqs?: { q: string; o: string[]; a: number; e: string; past?: boolean }[];
+  cases?: { v: string; qs: { q: string; a: string }[] }[];
+  mistakes?: string[]; model?: string; generatedAt?: string; checked?: string;
+}
 export interface Topic {
   s: string; n: string; c: string; y: number[]; a: string[]; docs: number;
   lead: TopicSnippet | null; sec?: { h: string; b: string[]; u: string; s: string }[]; src: TopicSource[]; sets: TopicSet[]; snip: TopicSnippet[]; imgs: TopicImage[]; qs: TopicQuestion[]; es: TopicEssay[];
@@ -262,11 +271,11 @@ export function useTopicPage(slug: string) {
  * Writes the deep exam notes for a topic, once. The writer is shown the revision page, so it adds what is missing and does not repeat it; the notes are
  * saved with the page and every later reader gets them without any AI call. Returns the notes, or why it failed.
  */
-export async function writeDeepNotes(slug: string, name: string, category: string, base: AiPage): Promise<{ deep: DeepNotes } | { error: "busy" | "failed" | "bot" }> {
+export async function writeDeepNotes(slug: string, name: string, category: string, base: AiPage, past: string[] = []): Promise<{ deep: DeepNotes } | { error: "busy" | "failed" | "bot" }> {
   if (looksLikeBot()) return { error: "bot" };
   try {
     const digest = { sections: base.sections.map((x) => ({ h: x.h, p: x.p, b: (x.b ?? []).slice(0, 4) })), exam: base.exam ?? [] };
-    const r = await fetch("/api/topic-write", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ mode: "deep", name, category, base: digest }) });
+    const r = await fetch("/api/topic-write", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ mode: "deep", name, category, base: digest, past: past.slice(0, 12) }) });
     const j = (await r.json().catch(() => null)) as { status?: string; deep?: DeepNotes } | null;
     if (j?.status === "published" && j.deep) {
       const clean = { ...base, deep: undefined } as AiPage;

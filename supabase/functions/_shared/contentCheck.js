@@ -88,3 +88,12 @@ export async function checkContent({ title, kind = "note", text, env, fetchImpl 
   }
   return { ...sanitizeCheck({ issues: all }), model, at: new Date().toISOString().slice(0, 10) };
 }
+
+/** The deep notes as plain text for the cross-check: sections, then viva questions, MCQs, cases, numbers and mistakes. */
+export function deepToText(deep) {
+  const sec = (deep.sections ?? []).map((x) => `## ${x.h}\n${x.p ?? ""}\n${(x.b ?? []).join("\n")}\n${(x.t ?? []).map((r) => `${r.a}: ${r.b}`).join("\n")}`);
+  const viva = (deep.vivas ?? []).map((x) => `Q: ${x.q}\nA: ${x.a}`).join("\n") || (deep.exam ?? []).join("\n");
+  const mcq = (deep.mcqs ?? []).map((x) => `MCQ: ${x.q}\n${x.o.map((o, i) => `${"ABCD"[i]}. ${o}`).join("\n")}\nMarked answer: ${"ABCD"[x.a]}. ${x.e}`).join("\n");
+  const cases = (deep.cases ?? []).map((c) => `Case: ${c.v}\n${c.qs.map((x) => `Q: ${x.q}\nA: ${x.a}`).join("\n")}`).join("\n");
+  return [...sec, `## Numbers to memorise\n${(deep.facts ?? []).join("\n")}`, `## Viva questions\n${viva}`, `## MCQs\n${mcq}`, `## Cases\n${cases}`, `## Common mistakes\n${(deep.mistakes ?? []).join("\n")}`].join("\n\n");
+}

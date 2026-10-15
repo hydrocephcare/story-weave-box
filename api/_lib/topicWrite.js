@@ -26,7 +26,8 @@ export default async function handler(req, res) {
     // the deep exam notes: a second write that builds on the revision page it is given
     try {
       const base = body.base && typeof body.base === "object" ? body.base : {};
-      const deep = await generateDeepWithFallback({ name, category: String(body.category ?? "").slice(0, 60), base }, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: keys });
+      const past = (Array.isArray(body.past) ? body.past : []).map((x) => String(x).slice(0, 240)).slice(0, 12);
+      const deep = await generateDeepWithFallback({ name, category: String(body.category ?? "").slice(0, 60), base, past }, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: keys });
       return res.status(200).json({ status: "published", deep });
     } catch (e) {
       return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: /429|503/.test(String(e?.message)) ? "busy" : "failed" });
