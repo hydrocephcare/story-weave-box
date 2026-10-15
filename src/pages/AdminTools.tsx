@@ -4,6 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { BarChart3, CalendarCheck, HeartPulse, Wallet, LayoutDashboard } from "lucide-react";
 
 const TOOLS = [
+  { to: "/admin/comments", icon: HeartPulse, title: "Comments", text: "The newest questions and comments under the notes, with one tap to hide or delete." },
   { to: "/admin/duplicates", icon: HeartPulse, title: "Repeated pages", text: "Pages that carry the same text as another page, with the fuller one marked Keep. Hide the copy with one tap." },
   { to: "/admin/drafts", icon: HeartPulse, title: "AI notes to approve", text: "Notes Ompath AI wrote for searches the site had nothing for. Read, fix the title or year, and publish, or discard." },
   { to: "/admin/activity", icon: BarChart3, title: "Activity & AI keys", text: "What students searched this week, searches that found nothing, whether each AI key works, and what is waiting for you." },

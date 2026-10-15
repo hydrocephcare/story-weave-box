@@ -9,6 +9,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { allReads } from "@/lib/readLog";
 import { IMED, isPublished } from "@/data/imed";
 import { unfinished } from "@/lib/noteProgress";
+import { savedNotes } from "@/lib/savedNotes";
 import { getUnitsForYear, unitPath, type Unit } from "@/lib/academic";
 
 /** Past papers are not study notes: they are on /papers. */
@@ -46,6 +47,7 @@ export default function StaticNotesIndex() {
   const switchYear = (y: number) => { setYear(y); setUnit(null); setQ(""); setParams({ year: String(y) }, { replace: true }); };
 
   const resume = useMemo(() => unfinished(user?.id), [user?.id]);
+  const shelf = useMemo(() => savedNotes(user?.id).map((slug) => NOTES.find((n) => n.slug === slug)).filter((n): n is StaticNote => Boolean(n)).slice(0, 6), [user?.id]);
   const imedWritten = IMED.reduce((a, s) => a + s.topics.filter(isPublished).length, 0);
   const imedTotal = IMED.reduce((a, s) => a + s.topics.length, 0);
 
@@ -90,6 +92,13 @@ export default function StaticNotesIndex() {
         <section className="mt-5 rounded-2xl border border-primary/30 bg-primary/5 p-4" aria-label="Continue reading">
           <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">Continue where you stopped</p>
           <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">{resume.map((p) => <li key={p.slug}><Link to={`/notes/${p.slug}`} className="flex items-center justify-between gap-3 rounded-lg bg-background px-3 py-2 text-sm font-semibold hover:text-primary"><span className="min-w-0 truncate">{p.title}</span><span className="shrink-0 text-xs font-bold text-muted-foreground">{p.progress}%</span></Link></li>)}</ul>
+        </section>
+      )}
+
+      {shelf.length > 0 && (
+        <section className="mt-5 rounded-2xl border border-border bg-card p-4" aria-label="Saved for later">
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">Saved for later</p>
+          <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">{shelf.map((n) => <li key={n.slug}><Link to={`/notes/${n.slug}`} className="block truncate rounded-lg bg-background px-3 py-2 text-sm font-semibold hover:text-primary">{n.title}</Link></li>)}</ul>
         </section>
       )}
 
