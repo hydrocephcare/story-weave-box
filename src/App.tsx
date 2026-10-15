@@ -67,6 +67,7 @@ const AdminPolish = lazy(() => import("./pages/AdminPolish"));
 const Imed = lazy(() => import("./pages/Imed"));
 const MyWeek = lazy(() => import("./pages/MyWeek"));
 const AdminDuplicates = lazy(() => import("./pages/AdminDuplicates"));
+const AdminThinTopics = lazy(() => import("./pages/AdminThinTopics"));
 const AdminAccess = lazy(() => import("./pages/AdminAccess"));
 const AdminComments = lazy(() => import("./pages/AdminComments"));
 const AdminDrafts = lazy(() => import("./pages/AdminDrafts"));
@@ -224,6 +225,7 @@ const AnimatedRoutes = () => {
             <Route path="/admin/tools" element={<AdminPage><AdminTools /></AdminPage>} />
             <Route path="/admin/content-health" element={<AdminPage><AdminContentHealth /></AdminPage>} />
             <Route path="/admin/duplicates" element={<AdminPage><AdminDuplicates /></AdminPage>} />
+            <Route path="/admin/thin-topics" element={<AdminPage><AdminThinTopics /></AdminPage>} />
             <Route path="/admin/access" element={<AdminPage><AdminAccess /></AdminPage>} />
             <Route path="/admin/comments" element={<AdminPage><AdminComments /></AdminPage>} />
             <Route path="/admin/drafts" element={<AdminPage><AdminDrafts /></AdminPage>} />

@@ -9,9 +9,10 @@ import SideAds from "@/components/SideAds";
 import OutlineLine from "@/components/OutlineLine";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, Check, ClipboardCheck, Link2, Share2, Stethoscope, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
+import { ArrowLeft, Check, ClipboardCheck, Link2, Share2, Stethoscope, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X, Zap, Printer, ThumbsUp, ThumbsDown } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { aiPaused, looksLikeBot, type TopicChoices } from "@/lib/topicWriter";
+import { isExamTitle } from "@/lib/examMode";
 import { DOMAIN_STYLE, imageCaption, isDeepPage, rewriteDeeper, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
 import { useWebMedia } from "@/lib/webMedia";
 import HeroAurora from "@/components/HeroAurora";
@@ -26,9 +27,9 @@ const SITE = "https://www.ompathstudy.com";
 const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
 /** One section of the article: a large serif heading and text that flows. No boxes, no rules, no colour bars: space and type do the work. */
-function Section({ id, title, children, first }: { id: string; title: string; children: ReactNode; first?: boolean }) {
+function Section({ id, title, children, first, keep }: { id: string; title: string; children: ReactNode; first?: boolean; keep?: boolean }) {
   return (
-    <section id={id} className={cn("scroll-mt-28", first ? "pt-1" : "mt-14 sm:mt-20")}>
+    <section id={id} data-keep={keep ? "1" : undefined} className={cn("scroll-mt-28", first ? "pt-1" : "mt-14 sm:mt-20")}>
       <h2 className="font-serif text-[1.85rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[2.35rem]">{title}</h2>
       <div className="flow mt-5 max-w-[68ch] space-y-4 text-[17px] leading-[1.75] text-foreground/80 sm:space-y-5 sm:text-[19px] sm:leading-[1.8] [&_strong]:font-semibold [&_strong]:text-foreground">{children}</div>
     </section>
@@ -189,6 +190,31 @@ function IntakeCard({ name, onStart }: { name: string; onStart: (c: TopicChoices
   );
 }
 
+/** "Was this page helpful?": one vote per visitor; pages students vote down are listed for the admin to rewrite. */
+function HelpfulVote({ slug }: { slug: string }) {
+  const key = `ompath_vote_${slug}`;
+  const [voted, setVoted] = useState<number>(() => { try { return Number(localStorage.getItem(key) ?? 0); } catch { return 0; } });
+  const send = (v: 1 | -1) => {
+    setVoted(v);
+    try {
+      localStorage.setItem(key, String(v));
+      let id = localStorage.getItem("ompath_vote_id");
+      if (!id) { id = crypto.randomUUID(); localStorage.setItem("ompath_vote_id", id); }
+      void (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<unknown> }).rpc("vote_topic", { p_slug: slug, p_visitor: id, p_vote: v });
+    } catch { /* ignore */ }
+  };
+  const btn = (on: boolean) => cn("inline-flex h-10 w-10 items-center justify-center rounded-full border", on ? "border-primary bg-primary text-primary-foreground" : "border-border bg-background hover:bg-muted");
+  return (
+    <div className="no-print mt-14 flex flex-wrap items-center gap-3 rounded-2xl border border-border bg-muted/30 px-5 py-4">
+      <p className="font-semibold">{voted ? "Thanks, that helps us improve this page." : "Was this page helpful?"}</p>
+      <div className="flex gap-2">
+        <button type="button" aria-label="Yes, helpful" aria-pressed={voted === 1} onClick={() => send(1)} className={btn(voted === 1)}><ThumbsUp className="h-4 w-4" /></button>
+        <button type="button" aria-label="No, not helpful" aria-pressed={voted === -1} onClick={() => send(-1)} className={btn(voted === -1)}><ThumbsDown className="h-4 w-4" /></button>
+      </div>
+    </div>
+  );
+}
+
 function Writing({ name }: { name: string }) {
   return (
     <div role="status" aria-live="polite" aria-label={`Loading ${name}`} className="space-y-8">
@@ -255,6 +281,7 @@ export default function TopicPage() {
   const { isAdmin } = useAuth();
   const [adminMsg, setAdminMsg] = useState("");
   const [showFresh, setShowFresh] = useState(false);
+  const [quick, setQuick] = useState(false);
   useEffect(() => { if (!fresh) return; setShowFresh(true); const t = setTimeout(() => setShowFresh(false), 9000); return () => clearTimeout(t); }, [fresh]);
   useEffect(() => { document.body.classList.add("has-toc-bar"); return () => document.body.classList.remove("has-toc-bar"); }, []);
   useEffect(() => { if (topic || page) rememberTopic(slug, topic?.n ?? name); }, [slug, topic, page]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -423,17 +450,23 @@ export default function TopicPage() {
             )}
           </div>
 
-          <div className="mt-6">
+          <div className={cn("mt-6", quick && "quick-mode")}>
+            {page && (
+              <div className="no-print mb-6 flex flex-wrap items-center gap-2">
+                <button type="button" aria-pressed={quick} onClick={() => setQuick((q) => !q)} className={cn("inline-flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-sm font-bold transition-colors", quick ? "border-primary bg-primary text-primary-foreground" : "border-border bg-background hover:bg-muted")}><Zap className="h-4 w-4" aria-hidden /> {quick ? "Quick revision: tap for the full page" : "Quick revision"}</button>
+                <button type="button" onClick={() => window.print()} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-4 py-1.5 text-sm font-bold hover:bg-muted"><Printer className="h-4 w-4" aria-hidden /> Print or save as PDF</button>
+              </div>
+            )}
 
             {intro.length > 0 && (
-              <Section id="overview" title="Overview" first>
+              <Section id="overview" title="Overview" first keep>
                 {intro.map((p, i) => <Paras key={i} text={p} self={slug} />)}
               </Section>
             )}
 
             {aiSections.map((s, i) => (
               <div key={`${s.h}-${i}`}>
-                <Section id={anchor(s.h)} title={s.h} first={i === 0}>
+                <Section id={anchor(s.h)} title={s.h} first={i === 0} keep={isExamTitle(s.h)}>
                   {s.p && <Paras text={s.p} self={slug} />}
                   {s.t && s.t.length > 0 && <TestTable rows={s.t} />}
                   {s.b && s.b.length > 0 && <Bullets items={s.b} self={slug} />}
@@ -441,7 +474,7 @@ export default function TopicPage() {
                 {i === Math.floor((aiSections.length - 1) / 2) && <div className="mt-12"><Disclaimer disease={isDisease} /></div>}
                 {/* the warning signs come right after the treatment, where a worried reader needs them */}
                 {i === seekAfter && page?.whenToSeekHelp && page.whenToSeekHelp.length > 0 && (
-                  <section id="seek-help" className="mt-14 scroll-mt-28 sm:mt-20">
+                  <section id="seek-help" data-keep="1" className="mt-14 scroll-mt-28 sm:mt-20">
                     <h2 className="font-serif text-[1.85rem] font-bold leading-[1.15] tracking-tight text-amber-700 dark:text-amber-400 sm:text-[2.35rem]">When to seek help</h2>
                     <p className="mt-3 text-[17px] text-foreground/85">See a doctor or health worker, or go to the nearest hospital, if there is:</p>
                     <div className="mt-4 text-[17px] leading-relaxed"><Bullets items={page.whenToSeekHelp} /></div>
@@ -457,7 +490,7 @@ export default function TopicPage() {
             ))}
 
             {page?.exam && page.exam.length > 0 && (
-              <Section id="examiner" title="Questions an examiner may ask">
+              <Section id="examiner" title="Questions an examiner may ask" keep>
                 <ol className="space-y-5">{page.exam.map((q, i) => <ExaminerQuestion key={q} n={i + 1} text={q} />)}</ol>
                 <p className="text-sm text-muted-foreground">Try answering aloud before you scroll back up.</p>
               </Section>
@@ -486,7 +519,7 @@ export default function TopicPage() {
             )}
 
             {topic?.rx && !aiSections.length && (
-              <Section id="treatment" title="Treatment at a glance">
+              <Section id="treatment" title="Treatment at a glance" keep>
                 <Bullets items={topic.rx.first} />
                 <Link to="/pharmacology?tab=conditions" className="inline-flex items-center gap-1 text-base font-bold text-primary hover:underline">Open the pharmacology guide <ChevronRight className="h-4 w-4" /></Link>
               </Section>
@@ -542,6 +575,8 @@ export default function TopicPage() {
                 </Dialog>
               </Section>
             )}
+
+            {page && <HelpfulVote slug={slug} />}
 
             {page?.faq && page.faq.length > 0 && (
               <Section id="faq" title="Common questions">
