@@ -14,7 +14,17 @@ function visitorId(): string {
     return v;
   } catch { return ""; }
 }
-const device = () => (window.innerWidth < 768 ? "phone" : window.innerWidth < 1100 ? "tablet" : "desktop");
+const deviceKind = () => (window.innerWidth < 768 ? "phone" : window.innerWidth < 1100 ? "tablet" : "desktop");
+/** What kind of computer this is, whatever browser is open: system, screen size, time zone and language (not the browser, so Chrome and Edge on one laptop match). */
+const machineHint = () => {
+  try {
+    const ua = navigator.userAgent;
+    const os = /Windows/i.test(ua) ? "win" : /Android/i.test(ua) ? "android" : /iPhone|iPad|iOS/i.test(ua) ? "ios" : /Mac OS/i.test(ua) ? "mac" : /Linux/i.test(ua) ? "linux" : "other";
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone ?? "";
+    return `${os}|${Math.max(screen.width, screen.height)}x${Math.min(screen.width, screen.height)}|${tz}|${(navigator.language ?? "").slice(0, 5)}`;
+  } catch { return ""; }
+};
+const device = () => `${deviceKind()}~${machineHint()}`;
 const outsideReferrer = () => { try { const h = new URL(document.referrer).hostname; return h && !h.endsWith("ompathstudy.com") ? h : ""; } catch { return ""; } };
 
 let off = false; // the counting functions are not in the database yet: stay quiet
