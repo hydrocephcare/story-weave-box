@@ -244,7 +244,7 @@ function StaticNoteView() {
         )}
         <div className="w-full min-w-0">
         {railOn && parsed && (
-          <div className="note-toolbar z-20 sm:sticky -mx-1 mb-5 overflow-hidden rounded-xl border border-border bg-background/95 shadow-sm backdrop-blur print:hidden sm:top-[4.25rem]">
+          <div className="note-toolbar -mx-1 mb-5 overflow-hidden rounded-xl border border-border bg-background/95 shadow-sm backdrop-blur print:hidden">
             <div className="no-scrollbar flex flex-nowrap items-center gap-1 overflow-x-auto whitespace-nowrap px-2 py-1.5 text-xs font-bold">
               <button type="button" onClick={toggleFinished} aria-pressed={finished} className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 transition-colors ${finished ? "bg-emerald-600 text-white" : "hover:bg-muted"}`}><Check className="h-3.5 w-3.5" aria-hidden /> {finished ? "Finished" : "Finish"}</button>
               <button type="button" onClick={() => { toggleSaved(railUser?.id, note.slug); setSavedTick((n) => n + 1); }} aria-pressed={saved} className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 transition-colors ${saved ? "bg-primary/10 text-primary" : "hover:bg-muted"}`}><Bookmark className={`h-3.5 w-3.5 ${saved ? "fill-current" : ""}`} aria-hidden /> {saved ? "Saved" : "Save"}</button>
@@ -303,10 +303,12 @@ function StaticNoteView() {
           {!note.paper && <PharmacologyConnections ids={linked.ids} conditionIds={note.condition ? [note.condition] : []} leave={leave} className="mt-4" />}
 
           {note.paper && text ? <PaperBody text={text} onClick={onBodyClick} /> : (
+            <>
             {examMode && !note.paper && (
-              <div role="status" className="mt-6 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-amber-500/40 bg-amber-500/10 px-4 py-2.5 text-sm"><span><b>Exam mode.</b> Showing the {examOnly(linked.html).match(/<h2[s>]/g)?.length ?? 0} sections examiners draw on, out of {examSectionCount(linked.html)}.</span><button type="button" onClick={() => setExamMode(false)} className="font-bold text-primary hover:underline">Show everything</button></div>
+              <div role="status" className="mt-6 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-amber-500/40 bg-amber-500/10 px-4 py-2.5 text-sm"><span><b>Exam mode.</b> Showing the {examOnly(linked.html).match(/<h2[\s>]/g)?.length ?? 0} sections examiners draw on, out of {examSectionCount(linked.html)}.</span><button type="button" onClick={() => setExamMode(false)} className="font-bold text-primary hover:underline">Show everything</button></div>
             )}
             <article style={note.paper ? undefined : { fontSize: `${1 + fontStep * 0.0625}em` }} className={`note-body mt-6 ${note.paper ? "" : "note-topic"}`} onClick={onBodyClick} onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && pickOption(e.target as HTMLElement)) e.preventDefault(); }} dangerouslySetInnerHTML={{ __html: examMode && !note.paper ? examOnly(linked.html) : linked.html }} />
+            </>
           )}
           {!note.paper && <ImedLinks slug={note.slug} />}
           {!note.paper && <NoteNavCards slug={note.slug} />}
