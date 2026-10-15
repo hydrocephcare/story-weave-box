@@ -587,3 +587,9 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
 .note-body.note-topic .note-table { max-width: 100%; }
 .note-body.note-topic .note-table table { min-width: 0; }
 .note-body.note-topic img, .note-body.note-topic pre { max-width: 100%; }
+
+/* note text sized like the topic pages */
+.note-body.note-topic { font-size: 1.125rem; line-height: 1.8; color: hsl(var(--foreground) / 0.88); }
+@media (min-width: 640px) { .note-body.note-topic { font-size: 1.1875rem; } }
+.note-body.note-topic h2 { font-size: 2.25rem; }
+.note-body.note-topic strong { color: hsl(var(--foreground)); }

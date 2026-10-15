@@ -124,8 +124,10 @@ function StaticNoteView() {
   };
 
   return (
-    <div data-ad-anchor className={`mx-auto w-full min-w-0 overflow-x-clip px-4 py-6 sm:px-6 sm:py-10 ${note.paper ? "max-w-4xl" : "max-w-[72rem]"}`}>
+    <div data-ad-anchor className={`w-full min-w-0 overflow-x-clip ${note.paper ? "mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-10" : "pb-16"}`}>
       <SideAds title={note.title} />
+      {note.paper ? (
+        <>
       <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1 text-xs font-semibold text-muted-foreground print:hidden">
         <Link to="/" className="hover:text-primary">Home</Link> ›
         <Link to={`/year/${note.year}`} className="hover:text-primary">Year {note.year}</Link> ›
@@ -140,23 +142,43 @@ function StaticNoteView() {
         <p className="mt-2 text-sm text-muted-foreground">Updated {new Date(note.updated).toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" })}</p>
         <button type="button" onClick={() => window.print()} className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-1.5 text-xs font-bold text-muted-foreground hover:border-primary/50 hover:text-primary print:hidden"><Printer className="h-3.5 w-3.5" /> Print or save as PDF</button>
       </header>
+        </>
+      ) : (
+        <header className="topic-hero relative isolate overflow-hidden border-b border-border/60">
+          <HeroAurora about={`${note.unit} ${note.title}`} year={note.year} />
+          <div className="mx-auto max-w-6xl px-5 pb-10 pt-8 sm:pb-14 sm:pt-12">
+            <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1 text-xs font-semibold text-muted-foreground print:hidden">
+              <Link to="/" className="hover:text-primary">Home</Link> ›
+              <Link to={`/year/${note.year}`} className="hover:text-primary">Year {note.year}</Link> ›
+              <Link to={`/notes?year=${note.year}&unit=${encodeURIComponent(note.unit)}`} className="text-foreground hover:text-primary">{note.unit}</Link>
+            </nav>
+            <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">Year {note.year} · {note.unit}{note.group ? ` · ${note.group}` : ""}</p>
+            <h1 className="mt-2 max-w-4xl font-serif text-4xl font-bold leading-[1.08] text-foreground sm:text-6xl">{note.title}</h1>
+            <p className="mt-3 text-sm font-semibold text-muted-foreground">{text ? `${Math.max(1, Math.round(text.split(/\s+/).length / 210))} min read` : "Loading"}{parsed && parsed.headings.length ? ` · ${parsed.headings.length} sections` : ""} · Updated {new Date(note.updated).toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" })}</p>
+            <p className="mt-5 max-w-3xl text-xl leading-[1.65] text-foreground/85 sm:text-[1.35rem]">{note.description}</p>
+            {text && text.length > 400 && <StudyTools className="mt-6 max-w-3xl" title={note.title} path={`/notes/${note.slug}`} text={text} />}
+            <button type="button" onClick={() => window.print()} className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-border bg-background/70 px-3.5 py-1.5 text-xs font-bold text-muted-foreground hover:border-primary/50 hover:text-primary print:hidden"><Printer className="h-3.5 w-3.5" aria-hidden /> Print or save as PDF</button>
+          </div>
+        </header>
+      )}
 
-      <div className={railOn ? "mt-6 lg:grid lg:grid-cols-[minmax(0,13.75rem)_minmax(0,1fr)] lg:gap-10" : ""}>
+      <div className={note.paper ? "" : "mx-auto max-w-6xl px-5 pt-10"}>
+
+      <div className={railOn ? "lg:grid lg:grid-cols-[13.5rem_minmax(0,52rem)] lg:gap-12" : ""}>
         {railOn && parsed && (
           <aside className="hidden lg:block print:hidden" aria-label="On this page">
-            <nav className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2">
-              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-muted-foreground">On this page</p>
-              <ol className="mt-3 space-y-1.5 border-l border-border">
-                {parsed.headings.map((h) => <li key={h.id}><a href={`#${h.id}`} className="-ml-px block border-l-2 border-transparent py-1 pl-3 text-[13px] font-semibold leading-snug text-muted-foreground hover:border-primary hover:text-primary">{h.text}</a></li>)}
+            <nav className="sticky top-24 max-h-[calc(100dvh-7rem)] overflow-y-auto border-l border-border text-[15px]">
+              <p className="pl-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">On this page</p>
+              <ol className="mt-2">
+                {parsed.headings.map((h) => <li key={h.id}><a href={`#${h.id}`} className="-ml-px block border-l-2 border-transparent py-1.5 pl-4 leading-snug text-muted-foreground hover:border-primary hover:text-primary">{h.text}</a></li>)}
               </ol>
             </nav>
           </aside>
         )}
-        <div className="w-full min-w-0 max-w-3xl">
+        <div className="w-full min-w-0">
       {quick && <QuickSummaryDialog summary={quick} />}
 
       {!note.paper && <PageSummary id={`n:${note.slug}`} className="mt-5" />}
-      {!note.paper && text && text.length > 400 && <StudyTools className="mt-5" title={note.title} path={`/notes/${note.slug}`} text={text} />}
       {!note.paper && <OutlineLine title={note.title} year={note.year} unit={note.unit} className="mt-4" />}
       {!note.paper && <NoteOutlineBox note={note} />}
 
@@ -216,6 +238,7 @@ function StaticNoteView() {
         </>
       )}
         </div>
+      </div>
       </div>
     </div>
   );
