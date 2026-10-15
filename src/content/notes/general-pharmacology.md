@@ -6,15 +6,13 @@
 Clinical pharmacology is the science of how drugs act in humans, encompassing absorption, distribution, metabolism, excretion and the relationship between drug concentration and therapeutic or adverse effect. Rational prescribing is the systematic process of selecting the right drug, at the right dose, for the right duration, for the right patient, while minimizing harm and cost.
 
 ## Anatomy and physiology you need  
-| System | Key structures/functions relevant to prescribing |
-|---|---|
-| Gastro‑intestinal | Gastric pH, motility, surface area – affect oral absorption |
-| Hepatic | Cytochrome P450 enzymes (CYP3A4, CYP2C9, CYP2D6) – major site of metabolism |
-| Renal | Glomerular filtration, tubular secretion – primary route of excretion for many drugs |
-| Cardiovascular | Cardiac output, plasma protein (albumin) – influence distribution |
-| Central nervous system | Blood‑brain barrier – limits entry of many agents |
-| Immune system | Cytokine milieu, CD4 count – alters drug‑drug interactions in HIV/TB |
-| Hematologic | Sickle‑cell disease (hemolysis, vaso‑occlusion) – impacts drug safety (e.g., analgesics) |
+- **Gastro‑intestinal**: Gastric pH, motility, surface area – affect oral absorption
+- **Hepatic**: Cytochrome P450 enzymes (CYP3A4, CYP2C9, CYP2D6) – major site of metabolism
+- **Renal**: Glomerular filtration, tubular secretion – primary route of excretion for many drugs
+- **Cardiovascular**: Cardiac output, plasma protein (albumin) – influence distribution
+- **Central nervous system**: Blood‑brain barrier – limits entry of many agents
+- **Immune system**: Cytokine milieu, CD4 count – alters drug‑drug interactions in HIV/TB
+- **Hematologic**: Sickle‑cell disease (hemolysis, vaso‑occlusion) – impacts drug safety (e.g., analgesics)
 
 ## Causes and risk factors  
 - **Polypharmacy** in chronic HIV/TB co‑infection, malaria prophylaxis, rheumatic disease, and sickle‑cell disease.  
@@ -43,21 +41,19 @@ Vaso‑occlusive crisis → tissue hypoxia → renal papillary necrosis → impa
 
 ## Clinical features  
 
-| Domain | Key questions / findings | Why it matters |
-|---|---|---|
-| **Presenting complaint** | Onset, duration, pattern of symptoms (e.g., pain, dyspnoea, fever, rash, dizziness). | Determines acute vs chronic process and guides urgency of review. |
-| **Medication history** | All prescribed drugs, over‑the‑counter meds, traditional/herbal remedies, recent changes, adherence, self‑medication for malaria, TB prophylaxis, HIV ART. | Polypharmacy and drug‑drug interactions are common sources of prescribing errors; herbal products may affect metabolism. |
-| **Co‑morbidities** | HIV status, TB treatment, malaria episodes, rheumatic disease, sickle‑cell disease, renal or hepatic impairment, pregnancy, age‑related frailty. | Co‑morbid conditions alter pharmacokinetics, increase risk of adverse drug reactions (ADRs) and dictate dose adjustments. |
-| **Allergies / previous ADRs** | Type of reaction, drug involved, severity, timing. | Prevent repeat exposure to offending agents; informs choice of safer alternatives. |
-| **Social & environmental factors** | Occupation, travel, nutrition, alcohol use, smoking, access to health care, health‑literacy level. | Influences drug metabolism (e.g., alcohol‑induced liver injury) and adherence potential. |
-| **System review** | Cardiovascular (palpitations, edema), respiratory (cough, wheeze), GI (nausea, diarrhoea), neuro (confusion, seizures), skin (rashes, bruising). | Detects organ‑specific toxicity or disease that may mimic drug effects. |
-| **Examination – vital signs** | Blood pressure, heart rate, respiratory rate, temperature, oxygen saturation, weight. | Hypertension, tachycardia or hypotension may signal drug toxicity or under‑treatment; weight informs dosing in obesity or cachexia. |
-| **Cardiovascular exam** | Heart sounds, peripheral pulses, edema. | Fluid overload or cardiomyopathy can be drug‑induced (e.g., β‑blocker overdose) or disease‑related. |
-| **Respiratory exam** | Breath sounds, use of accessory muscles. | Pulmonary infiltrates may be due to TB drugs, malaria, or drug‑induced pneumonitis. |
-| **Abdominal exam** | Hepatomegaly, tenderness, ascites. | Hepatic enlargement suggests drug‑induced hepatitis; ascites may reflect heart failure from inappropriate prescribing. |
-| **Neurological exam** | Level of consciousness, focal deficits, reflexes. | Confusion or seizures may be from anticholinergic toxicity, quinine, or ART interactions. |
-| **Skin exam** | Rashes, urticaria, jaundice, bruising. | Cutaneous eruptions are common ADRs; jaundice signals hepatic injury. |
-| **Musculoskeletal** | Joint swelling, tenderness, sickle‑cell vaso‑occlusive pain. | Rheumatic disease flares may be precipitated by NSAID withdrawal or steroid tapering. |
+- **Presenting complaint**: Onset, duration, pattern of symptoms (e.g., pain, dyspnoea, fever, rash, dizziness). — Determines acute vs chronic process and guides urgency of review.
+- **Medication history**: All prescribed drugs, over‑the‑counter meds, traditional/herbal remedies, recent changes, adherence, self‑medication for malaria, TB prophylaxis, HIV ART. — Polypharmacy and drug‑drug interactions are common sources of prescribing errors; herbal products may affect metabolism.
+- **Co‑morbidities**: HIV status, TB treatment, malaria episodes, rheumatic disease, sickle‑cell disease, renal or hepatic impairment, pregnancy, age‑related frailty. — Co‑morbid conditions alter pharmacokinetics, increase risk of adverse drug reactions (ADRs) and dictate dose adjustments.
+- **Allergies / previous ADRs**: Type of reaction, drug involved, severity, timing. — Prevent repeat exposure to offending agents; informs choice of safer alternatives.
+- **Social & environmental factors**: Occupation, travel, nutrition, alcohol use, smoking, access to health care, health‑literacy level. — Influences drug metabolism (e.g., alcohol‑induced liver injury) and adherence potential.
+- **System review**: Cardiovascular (palpitations, edema), respiratory (cough, wheeze), GI (nausea, diarrhoea), neuro (confusion, seizures), skin (rashes, bruising). — Detects organ‑specific toxicity or disease that may mimic drug effects.
+- **Examination – vital signs**: Blood pressure, heart rate, respiratory rate, temperature, oxygen saturation, weight. — Hypertension, tachycardia or hypotension may signal drug toxicity or under‑treatment; weight informs dosing in obesity or cachexia.
+- **Cardiovascular exam**: Heart sounds, peripheral pulses, edema. — Fluid overload or cardiomyopathy can be drug‑induced (e.g., β‑blocker overdose) or disease‑related.
+- **Respiratory exam**: Breath sounds, use of accessory muscles. — Pulmonary infiltrates may be due to TB drugs, malaria, or drug‑induced pneumonitis.
+- **Abdominal exam**: Hepatomegaly, tenderness, ascites. — Hepatic enlargement suggests drug‑induced hepatitis; ascites may reflect heart failure from inappropriate prescribing.
+- **Neurological exam**: Level of consciousness, focal deficits, reflexes. — Confusion or seizures may be from anticholinergic toxicity, quinine, or ART interactions.
+- **Skin exam**: Rashes, urticaria, jaundice, bruising. — Cutaneous eruptions are common ADRs; jaundice signals hepatic injury.
+- **Musculoskeletal**: Joint swelling, tenderness, sickle‑cell vaso‑occlusive pain. — Rheumatic disease flares may be precipitated by NSAID withdrawal or steroid tapering.
 
 ---
 
@@ -97,12 +93,10 @@ Vaso‑occlusive crisis → tissue hypoxia → renal papillary necrosis → impa
 1. **Identify the primary pharmacological problem** – e.g., drug‑induced hepatotoxicity, therapeutic failure, adverse drug reaction, or drug‑drug interaction.  
 2. **Classify severity** (adapted from WHO‑UMC and CTCAE concepts):  
 
-| Severity | Clinical picture | Management urgency |
-|---|---|---|
-| **Mild** | Asymptomatic lab abnormality, ≤2× ULN transaminases, no organ dysfunction | Close monitoring, possible dose adjustment |
-| **Moderate** | Symptomatic (e.g., nausea, mild jaundice), 2–5× ULN, mild renal rise, no life‑threatening signs | Prompt drug review, consider substitution, supportive care |
-| **Severe** | Life‑threatening manifestations (e.g., hepatic failure, acute kidney injury requiring dialysis, severe arrhythmia, anaphylaxis) | Immediate drug cessation, intensive care, specific antidotes where available |
-| **Critical** | Multi‑organ failure, shock, severe haemolysis, status epilepticus | Emergency resuscitation, multidisciplinary team, possible transfer to tertiary centre |
+- **Mild**: Asymptomatic lab abnormality, ≤2× ULN transaminases, no organ dysfunction — Close monitoring, possible dose adjustment
+- **Moderate**: Symptomatic (e.g., nausea, mild jaundice), 2–5× ULN, mild renal rise, no life‑threatening signs — Prompt drug review, consider substitution, supportive care
+- **Severe**: Life‑threatening manifestations (e.g., hepatic failure, acute kidney injury requiring dialysis, severe arrhythmia, anaphylaxis) — Immediate drug cessation, intensive care, specific antidotes where available
+- **Critical**: Multi‑organ failure, shock, severe haemolysis, status epilepticus — Emergency resuscitation, multidisciplinary team, possible transfer to tertiary centre
 
 3. **Document the diagnosis** using a structured format:  
 
@@ -127,14 +121,12 @@ By systematically gathering history, performing targeted examination, ordering f
 - **Identify drug‑related emergencies** – anaphylaxis (epinephrine auto‑injector), severe hypersensitivity to antiretrovirals or anti‑TB drugs (stop offending agent, give antihistamine and steroids), drug‑induced QT prolongation (review ECG, correct electrolytes, avoid further QT‑prolonging drugs).  
 
 **Definitive treatment** – rational prescribing principles:  
-| Step | Action | Rationale |
-|---|---|---|
-| 1 | Confirm indication (e.g., bacterial infection, hypertension, pain) | Avoid unnecessary exposure |
-| 2 | Choose drug class with best efficacy‑safety profile for local resistance patterns | E.g., first‑line β‑lactam for community pneumonia; artemisinin‑based combination for malaria |
-| 3 | Check patient‑specific factors (age, renal/hepatic function, comorbidities, pregnancy, HIV/TB co‑therapy) | Prevent toxicity and drug‑drug interactions |
-| 4 | Start at lowest effective dose, titrate as needed | Minimise adverse effects |
-| 5 | Provide clear instructions on timing, food‑effects, adherence | Improves therapeutic outcome |
-| 6 | Document allergies, previous ADRs, and monitoring plan | Facilitates safe follow‑up |
+- **1**: Confirm indication (e.g., bacterial infection, hypertension, pain) — Avoid unnecessary exposure
+- **2**: Choose drug class with best efficacy‑safety profile for local resistance patterns — E.g., first‑line β‑lactam for community pneumonia; artemisinin‑based combination for malaria
+- **3**: Check patient‑specific factors (age, renal/hepatic function, comorbidities, pregnancy, HIV/TB co‑therapy) — Prevent toxicity and drug‑drug interactions
+- **4**: Start at lowest effective dose, titrate as needed — Minimise adverse effects
+- **5**: Provide clear instructions on timing, food‑effects, adherence — Improves therapeutic outcome
+- **6**: Document allergies, previous ADRs, and monitoring plan — Facilitates safe follow‑up
 
 **Monitoring & follow‑up**  
 - **Therapeutic drug monitoring (TDM)** where available (e.g., aminoglycosides, antiepileptics, some antiretrovirals).  

@@ -11,22 +11,20 @@ Cardiac cells possess automaticity (ability to spontaneously depolarize), excita
 ## Causes and risk factors
 Arrhythmias arise from abnormalities in impulse formation (e.g., enhanced automaticity, triggered activity) or impulse conduction (e.g., re-entry, heart block).
 
-| Category | Specific Causes/Risk Factors | Relevance in Kenyan Setting |
-|---|---|---|
-| **Ischemic Heart Disease** | Myocardial infarction, angina | Increasing prevalence with changing lifestyles. |
-| **Hypertension** | Left ventricular hypertrophy, atrial stretch | Very common, major risk factor for AF. |
-| **Valvular Heart Disease** | Rheumatic heart disease (mitral stenosis/regurgitation, aortic disease) | Significant burden due to untreated streptococcal infections. |
-| **Cardiomyopathies** | Dilated, hypertrophic, restrictive, arrhythmogenic right ventricular | Idiopathic, genetic, or secondary to chronic conditions. |
-| **Infections** | Myocarditis (viral, bacterial, parasitic), HIV, TB, Malaria | Direct myocardial damage, systemic inflammation, drug effects. |
-| **Electrolyte Imbalances** | Hypokalemia, hyperkalemia, hypomagnesemia, hypercalcemia | Diuretic use, renal failure, severe gastroenteritis, malnutrition. |
-| **Thyroid Disorders** | Hyperthyroidism (thyrotoxicosis), hypothyroidism | Common endocrine disorders affecting cardiac excitability. |
-| **Drug Effects** | Antiarrhythmics, digoxin, tricyclic antidepressants, stimulants, recreational drugs | Polypharmacy, self-medication, drug interactions. |
-| **Structural Heart Disease** | Congenital heart defects, previous cardiac surgery | Persistent shunts, scar tissue acting as re-entry circuits. |
-| **Autonomic Dysfunction** | Diabetes mellitus, neurological disorders | Peripheral neuropathy affecting cardiac innervation. |
-| **Inflammatory Conditions** | Systemic lupus erythematosus, sarcoidosis | Myocardial infiltration or inflammation. |
-| **Sickle Cell Disease** | Chronic anemia, iron overload, pulmonary hypertension | Chronic stress on the heart, potential for myocardial fibrosis. |
-| **Sleep Apnea** | Intermittent hypoxia, sympathetic activation | Underdiagnosed, contributes to atrial fibrillation. |
-| **Alcohol/Caffeine** | Excessive intake | Direct myocardial depressant or stimulant effects. |
+- **Ischemic Heart Disease**: Myocardial infarction, angina — Increasing prevalence with changing lifestyles.
+- **Hypertension**: Left ventricular hypertrophy, atrial stretch — Very common, major risk factor for AF.
+- **Valvular Heart Disease**: Rheumatic heart disease (mitral stenosis/regurgitation, aortic disease) — Significant burden due to untreated streptococcal infections.
+- **Cardiomyopathies**: Dilated, hypertrophic, restrictive, arrhythmogenic right ventricular — Idiopathic, genetic, or secondary to chronic conditions.
+- **Infections**: Myocarditis (viral, bacterial, parasitic), HIV, TB, Malaria — Direct myocardial damage, systemic inflammation, drug effects.
+- **Electrolyte Imbalances**: Hypokalemia, hyperkalemia, hypomagnesemia, hypercalcemia — Diuretic use, renal failure, severe gastroenteritis, malnutrition.
+- **Thyroid Disorders**: Hyperthyroidism (thyrotoxicosis), hypothyroidism — Common endocrine disorders affecting cardiac excitability.
+- **Drug Effects**: Antiarrhythmics, digoxin, tricyclic antidepressants, stimulants, recreational drugs — Polypharmacy, self-medication, drug interactions.
+- **Structural Heart Disease**: Congenital heart defects, previous cardiac surgery — Persistent shunts, scar tissue acting as re-entry circuits.
+- **Autonomic Dysfunction**: Diabetes mellitus, neurological disorders — Peripheral neuropathy affecting cardiac innervation.
+- **Inflammatory Conditions**: Systemic lupus erythematosus, sarcoidosis — Myocardial infiltration or inflammation.
+- **Sickle Cell Disease**: Chronic anemia, iron overload, pulmonary hypertension — Chronic stress on the heart, potential for myocardial fibrosis.
+- **Sleep Apnea**: Intermittent hypoxia, sympathetic activation — Underdiagnosed, contributes to atrial fibrillation.
+- **Alcohol/Caffeine**: Excessive intake — Direct myocardial depressant or stimulant effects.
 
 ## Pathophysiology
 ### Abnormal Impulse Formation

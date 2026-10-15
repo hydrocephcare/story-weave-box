@@ -1,4 +1,4 @@
-# Peripheral neuropathy and Guillain‑Barre syndrome  
+# Peripheral neuropathy and Guillain-Barre syndrome
 
 *After reading this note you will be able to describe the clinical approach to peripheral neuropathy and Guillain‑Barre syndrome, list local aetiologies, recognise key examination findings, interpret basic investigations and outline immediate and definitive management – remembering to verify drug choices and dosing against the Kenya MoH guideline and your hospital formulary.*
 
@@ -9,25 +9,21 @@
 
 ## Anatomy and physiology you need  
 
-| Structure | Relevance to disease |
-|---|---|
-| **Peripheral nerve fiber** (myelinated A‑α, A‑β, A‑δ; unmyelinated C) | Determines pattern of loss (motor vs sensory) and speed of conduction. |
-| **Dorsal root ganglion** | Site of sensory neuron bodies; vulnerable in toxic and metabolic neuropathies. |
-| **Spinal nerve roots** | In GBS the immune attack targets myelin at the node of Ranvier in roots → conduction block. |
-| **Autonomic fibers** | Involvement explains tachycardia, labile BP, urinary retention in severe GBS. |
-| **Blood‑nerve barrier** | Disruption allows immune complexes, toxins or infections to reach nerve tissue. |
+- **Peripheral nerve fiber (myelinated A‑α, A‑β, A‑δ; unmyelinated C)**: Determines pattern of loss (motor vs sensory) and speed of conduction.
+- **Dorsal root ganglion**: Site of sensory neuron bodies; vulnerable in toxic and metabolic neuropathies.
+- **Spinal nerve roots**: In GBS the immune attack targets myelin at the node of Ranvier in roots → conduction block.
+- **Autonomic fibers**: Involvement explains tachycardia, labile BP, urinary retention in severe GBS.
+- **Blood‑nerve barrier**: Disruption allows immune complexes, toxins or infections to reach nerve tissue.
 
 ## Causes and risk factors  
 
-| Category | Common Kenyan / tropical aetiologies |
-|---|---|
-| **Infectious** | HIV, TB (especially TB meningitis with nerve root involvement), malaria (cerebral malaria sequelae), hepatitis B/C, Campylobacter jejuni (classic GBS trigger), dengue, chikungunya |
-| **Metabolic / Nutritional** | Diabetes mellitus, chronic alcohol excess, vitamin B12 deficiency, folate deficiency, thiamine deficiency (wet beri‑beri) |
-| **Autoimmune / Inflammatory** | Systemic lupus erythematosus, rheumatoid arthritis, vasculitis, sarcoidosis |
-| **Toxic** | Lead exposure (mining areas), organophosphates (agricultural), antiretroviral neurotoxicity, isoniazid (TB therapy) |
-| **Hematologic** | Sickle cell disease (vaso‑occlusive neuropathy), sickle‑cell crisis‑related ischemia |
-| **Genetic / Hereditary** | Charcot‑Marie‑Tooth disease (rare but relevant for family history) |
-| **Other** | Chronic renal failure (uremic neuropathy), post‑surgical positioning injuries, malignancy‑related paraneoplastic neuropathy |
+- **Infectious**: HIV, TB (especially TB meningitis with nerve root involvement), malaria (cerebral malaria sequelae), hepatitis B/C, Campylobacter jejuni (classic GBS trigger), dengue, chikungunya
+- **Metabolic / Nutritional**: Diabetes mellitus, chronic alcohol excess, vitamin B12 deficiency, folate deficiency, thiamine deficiency (wet beri‑beri)
+- **Autoimmune / Inflammatory**: Systemic lupus erythematosus, rheumatoid arthritis, vasculitis, sarcoidosis
+- **Toxic**: Lead exposure (mining areas), organophosphates (agricultural), antiretroviral neurotoxicity, isoniazid (TB therapy)
+- **Hematologic**: Sickle cell disease (vaso‑occlusive neuropathy), sickle‑cell crisis‑related ischemia
+- **Genetic / Hereditary**: Charcot‑Marie‑Tooth disease (rare but relevant for family history)
+- **Other**: Chronic renal failure (uremic neuropathy), post‑surgical positioning injuries, malignancy‑related paraneoplastic neuropathy
 
 ## Pathophysiology  
 
@@ -49,33 +45,29 @@
 
 **History – key questions**  
 
-| Domain | Questions | Rationale |
-|---|---|---|
-| Onset & progression | “When did symptoms start? Sudden vs. gradual? Has it spread proximally?” | Guillain‑Barre (GBS) is usually acute (days‑weeks) with rapid ascending spread; chronic peripheral neuropathy evolves over months‑years. |
-| Distribution | “Are the feet, hands, legs, arms affected first? Any facial or bulbar weakness?” | Distal‑to‑proximal pattern suggests length‑dependent neuropathy; facial/bulbar involvement points toward GBS or certain infectious neuropathies. |
-| Sensory profile | “Do you feel numbness, tingling, burning, or loss of vibration? Is it glove‑and‑stocking?” | Small‑fiber dysfunction gives burning/tingling; large‑fiber loss gives loss of proprioception and vibration, typical of many metabolic/tropical neuropathies. |
-| Motor impact | “Any weakness, difficulty climbing stairs, lifting objects, or walking?” | Motor weakness is hallmark of GBS; in diabetic or toxic neuropathy motor loss is usually mild and distal. |
-| Autonomic symptoms | “Do you have dizziness on standing, palpitations, sweating, urinary retention, or constipation?” | Autonomic dysfunction is common in GBS and in some toxic or HIV‑related neuropathies; helps gauge severity. |
-| Pain | “Is pain present? Where and what type (sharp, aching, electric)?” | Neuropathic pain is frequent in distal symmetric polyneuropathy; severe radicular pain may suggest vasculitic or infectious causes. |
-| Preceding events | “Recent infection (respiratory, GI), vaccination, travel, malaria treatment, TB therapy, HIV seroconversion, trauma?” | GBS often follows Campylobacter, CMV, HIV, or recent vaccination; toxic neuropathies follow antitubercular drugs, antiretrovirals, or anti‑malaria agents. |
-| Systemic illnesses | “Do you have diabetes, renal failure, liver disease, hypothyroidism, sickle cell disease, rheumatic fever?” | Metabolic and systemic diseases are common causes of chronic peripheral neuropathy in Kenya. |
-| Drug & toxin exposure | “Current or recent meds (isoniazid, dapsone, stavudine, quinine), alcohol, heavy metals?” | Identifies iatrogenic or toxic neuropathies. |
-| Family history | “Any relatives with neuropathy, Charcot‑Marie‑Tooth, hereditary sensory neuropathy?” | Screens for inherited neuropathies. |
-| Occupational / environmental | “Work in agriculture, exposure to pesticides, repeated heat?” | Pesticide‑related neuropathy is relevant in rural settings. |
+- **Onset & progression**: “When did symptoms start? Sudden vs. gradual? Has it spread proximally?” — Guillain‑Barre (GBS) is usually acute (days‑weeks) with rapid ascending spread; chronic peripheral neuropathy evolves over months‑years.
+- **Distribution**: “Are the feet, hands, legs, arms affected first? Any facial or bulbar weakness?” — Distal‑to‑proximal pattern suggests length‑dependent neuropathy; facial/bulbar involvement points toward GBS or certain infectious neuropathies.
+- **Sensory profile**: “Do you feel numbness, tingling, burning, or loss of vibration? Is it glove‑and‑stocking?” — Small‑fiber dysfunction gives burning/tingling; large‑fiber loss gives loss of proprioception and vibration, typical of many metabolic/tropical neuropathies.
+- **Motor impact**: “Any weakness, difficulty climbing stairs, lifting objects, or walking?” — Motor weakness is hallmark of GBS; in diabetic or toxic neuropathy motor loss is usually mild and distal.
+- **Autonomic symptoms**: “Do you have dizziness on standing, palpitations, sweating, urinary retention, or constipation?” — Autonomic dysfunction is common in GBS and in some toxic or HIV‑related neuropathies; helps gauge severity.
+- **Pain**: “Is pain present? Where and what type (sharp, aching, electric)?” — Neuropathic pain is frequent in distal symmetric polyneuropathy; severe radicular pain may suggest vasculitic or infectious causes.
+- **Preceding events**: “Recent infection (respiratory, GI), vaccination, travel, malaria treatment, TB therapy, HIV seroconversion, trauma?” — GBS often follows Campylobacter, CMV, HIV, or recent vaccination; toxic neuropathies follow antitubercular drugs, antiretrovirals, or anti‑malaria agents.
+- **Systemic illnesses**: “Do you have diabetes, renal failure, liver disease, hypothyroidism, sickle cell disease, rheumatic fever?” — Metabolic and systemic diseases are common causes of chronic peripheral neuropathy in Kenya.
+- **Drug & toxin exposure**: “Current or recent meds (isoniazid, dapsone, stavudine, quinine), alcohol, heavy metals?” — Identifies iatrogenic or toxic neuropathies.
+- **Family history**: “Any relatives with neuropathy, Charcot‑Marie‑Tooth, hereditary sensory neuropathy?” — Screens for inherited neuropathies.
+- **Occupational / environmental**: “Work in agriculture, exposure to pesticides, repeated heat?” — Pesticide‑related neuropathy is relevant in rural settings.
 
 **Examination – what to look for and why**  
 
-| Finding | What it indicates | Pathophysiologic basis |
-|---|---|---|
-| Sensory map (pinprick, temperature, vibration, proprioception) | Distal loss > proximal; stocking‑glove pattern | Length‑dependent axonal degeneration of longest fibers. |
-| Muscle strength (MRC scale) | Symmetric proximal > distal weakness in GBS; distal weakness in metabolic neuropathy | Demyelination in GBS impairs conduction to proximal muscles first; axonal loss spares proximal muscles initially. |
-| Deep tendon reflexes | Absent or markedly reduced in both GBS and chronic polyneuropathy; may be brisk early in demyelinating variants | Reflex arc interruption by sensory or motor fiber dysfunction. |
-| Cranial nerve exam | Facial weakness, dysphagia, ophthalmoplegia | GBS (Miller‑Fisher variant) or HIV‑related neuropathy; helps differentiate from pure peripheral neuropathy. |
-| Autonomic testing (heart rate variability, blood pressure response) | Orthostatic hypotension, tachycardia, arrhythmias | Autonomic fiber involvement, especially in GBS. |
-| Gait assessment | Ataxic gait from proprioceptive loss; foot drop from peroneal weakness | Large‑fiber loss or motor weakness. |
-| Skin & nail changes | Ulcers, trophic changes, loss of hair | Chronic sensory loss leads to unnoticed trauma. |
-| Upper limb coordination (finger‑nose, rapid alternating movements) | Dysmetria if proprioception impaired | Large‑fiber sensory loss. |
-| Respiratory assessment (vital capacity, chest expansion) | Reduced vital capacity in GBS | Diaphragmatic and intercostal weakness from motor fiber involvement. |
+- **Sensory map (pinprick, temperature, vibration, proprioception)**: Distal loss > proximal; stocking‑glove pattern — Length‑dependent axonal degeneration of longest fibers.
+- **Muscle strength (MRC scale)**: Symmetric proximal > distal weakness in GBS; distal weakness in metabolic neuropathy — Demyelination in GBS impairs conduction to proximal muscles first; axonal loss spares proximal muscles initially.
+- **Deep tendon reflexes**: Absent or markedly reduced in both GBS and chronic polyneuropathy; may be brisk early in demyelinating variants — Reflex arc interruption by sensory or motor fiber dysfunction.
+- **Cranial nerve exam**: Facial weakness, dysphagia, ophthalmoplegia — GBS (Miller‑Fisher variant) or HIV‑related neuropathy; helps differentiate from pure peripheral neuropathy.
+- **Autonomic testing (heart rate variability, blood pressure response)**: Orthostatic hypotension, tachycardia, arrhythmias — Autonomic fiber involvement, especially in GBS.
+- **Gait assessment**: Ataxic gait from proprioceptive loss; foot drop from peroneal weakness — Large‑fiber loss or motor weakness.
+- **Skin & nail changes**: Ulcers, trophic changes, loss of hair — Chronic sensory loss leads to unnoticed trauma.
+- **Upper limb coordination (finger‑nose, rapid alternating movements)**: Dysmetria if proprioception impaired — Large‑fiber sensory loss.
+- **Respiratory assessment (vital capacity, chest expansion)**: Reduced vital capacity in GBS — Diaphragmatic and intercostal weakness from motor fiber involvement.
 
 ---
 
@@ -125,15 +117,13 @@ If the above are met, label as **Guillain‑Barre syndrome**.
 
 **Severity grading (for GBS)** – use the Hughes Functional Grading Scale:  
 
-| Grade | Clinical picture |
-|---|---|
-| 0 | Healthy, no symptoms |
-| 1 | Minor symptoms, able to run |
-| 2 | Able to walk 10 m independently |
-| 3 | Able to walk 10 m with assistance |
-| 4 | Bed‑ridden or chair‑bound |
-| 5 | Requires assisted ventilation |
-| 6 | Death |
+- **0**: Healthy, no symptoms
+- **1**: Minor symptoms, able to run
+- **2**: Able to walk 10 m independently
+- **3**: Able to walk 10 m with assistance
+- **4**: Bed‑ridden or chair‑bound
+- **5**: Requires assisted ventilation
+- **6**: Death
 
 For chronic peripheral neuropathy, severity is staged by:  
 
@@ -152,13 +142,11 @@ Severity guides urgency of immunotherapy (IVIG or plasma exchange for moderate�
 
 **Definitive treatment**  
 
-| Situation | First‑line disease‑modifying therapy | Adjunctive measures |
-|---|---|---|
-| Classic Guillain‑Barre (rapidly progressive ≤4 weeks) | Intravenous immunoglobulin (IVIG) – 2 days course | Monitor renal function, avoid volume overload |
-| Same as above | Plasma exchange (PE) – 4‑5 exchanges over 1‑2 weeks | Ensure central line patency, replace electrolytes |
-| Chronic inflammatory demyelinating polyneuropathy (CIDP) | IVIG or PE (induction) → oral steroids or steroid‑sparing immunosuppressants (azathioprine, mycophenolate) | Physiotherapy, occupational therapy |
-| Metabolic/toxic neuropathy (e.g., diabetes, HIV, antiretroviral toxicity) | Treat underlying cause (optimise glycaemia, switch offending drug) | Vitamin supplementation (B‑complex), analgesia |
-| Infectious neuropathy (e.g., leprosy, TB) | Appropriate antimicrobial regimen (rifampicin‑based for leprosy; anti‑TB therapy) | Corticosteroids for nerve inflammation when indicated |
+- **Classic Guillain‑Barre (rapidly progressive ≤4 weeks)**: Intravenous immunoglobulin (IVIG) – 2 days course — Monitor renal function, avoid volume overload
+- **Same as above**: Plasma exchange (PE) – 4‑5 exchanges over 1‑2 weeks — Ensure central line patency, replace electrolytes
+- **Chronic inflammatory demyelinating polyneuropathy (CIDP)**: IVIG or PE (induction) → oral steroids or steroid‑sparing immunosuppressants (azathioprine, mycophenolate) — Physiotherapy, occupational therapy
+- **Metabolic/toxic neuropathy (e.g., diabetes, HIV, antiretroviral toxicity)**: Treat underlying cause (optimise glycaemia, switch offending drug) — Vitamin supplementation (B‑complex), analgesia
+- **Infectious neuropathy (e.g., leprosy, TB)**: Appropriate antimicrobial regimen (rifampicin‑based for leprosy; anti‑TB therapy) — Corticosteroids for nerve inflammation when indicated
 
 **Monitoring & follow‑up**  
 - Daily bedside assessment of motor strength (MRC scale) and respiratory function (vital capacity, negative inspiratory force).  

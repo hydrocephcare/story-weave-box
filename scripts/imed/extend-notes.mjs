@@ -18,7 +18,7 @@ const WANT = [
   { key: "tricky", test: /tricky|examiner/i, group: "B", ask: "## Tricky questions examiners ask\nSix short scenario questions (a patient lying in bed with these findings: what next, what separates two conditions, why is a choice avoided). Write each as \"**Q1.** question\" followed by \"**Answer:** the answer and the reason\". No lettered options." },
 ];
 const RULES = `Rules: standard accepted medical knowledge only; if unsure, leave it out. Never give drug doses (write no amount in mg, mcg or µg), never invent statistics, references or guideline numbers. Use medical terms a clinical-year student is expected to know. Tables must be compact: single spaces, separator row exactly |---|---|---|, at most 7 rows. Do not repeat anything the note already says. Do not add a "related topics" section.`;
-const DOSE = /\b\d+(?:[.,]\d+)?(?:\s?[-–]\s?\d+(?:[.,]\d+)?)?\s?(?:mg|mcg|µg|ug)(?:\s?\/\s?(?:kg|day|dose|h|hr|hour|24\s?h))*\b(?!\s?\/\s?(?:d?l|ml|mmol))/gi;
+const DOSE = /\b\d+(?:[.,]\d+)?(?:\s?[-–]\s?\d+(?:[.,]\d+)?)?\s?(?:mg|mcg|µg|ug)(?:\s?\/\s?(?:kg|day|dose|h|hr|hour|24\s?h))*\b(?!\s?\/\s?(?:d?l|ml|mmol|mol|g\b|l\b))/gi;
 const clean = (t) => String(t).replace(/^```(?:markdown|md)?\s*/i, "").replace(/```\s*$/, "").trim();
 const squeeze = (md) => md.split("\n").map((l) => (l.trim().startsWith("|") ? l.replace(/[ \t]{2,}/g, " ").replace(/-{4,}/g, "---") : l)).join("\n");
 const shortRuns = (t) => t.split("\n").reduce((a, l) => { if (l.trim().startsWith("|")) a[a.length - 1] = (a[a.length - 1] ?? 0) + 1; else if (a[a.length - 1] !== 0) a.push(0); return a; }, [0]).filter((n) => n > 0 && n < 3).length;

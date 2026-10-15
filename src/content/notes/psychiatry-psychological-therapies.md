@@ -12,22 +12,20 @@
 
 ## The interventions at a glance
 
-| Intervention | What it does | Used for |
-|---|---|---|
-| **Supportive psychotherapy** | Reassurance, guidance and coping skills during crises | Crises |
-| **Psychoeducation** | Helps patients and families understand the illness, keep to treatment and prevent relapse | Patients and families |
-| **Cognitive behavioural therapy (CBT)** | Identifies and restructures maladaptive thoughts and behaviours | Depression, anxiety, OCD, psychosis |
-| **Behaviour therapy** | Systematic desensitisation, exposure and token economy | Phobias, OCD, behavioural problems |
-| **Interpersonal therapy (IPT)** | Addresses grief, role disputes and interpersonal deficits | Especially depressive disorders |
-| **Psychodynamic therapy** | Explores unconscious conflicts and past experiences for insight and resolution | Personality and neurotic disorders |
-| **Family therapy** | Improves communication, reduces relapse and strengthens family dynamics | Schizophrenia, substance use disorders |
-| **Group therapy** | Peer support, social learning and coping | Addiction, chronic illness |
-| **Motivational interviewing** | Builds intrinsic motivation for behaviour change | Especially substance use |
-| **Mindfulness-based therapies (MBSR, MBCT)** | Stress management and relapse prevention | Stress, anxiety, depression relapse prevention |
-| **Relaxation techniques** | Deep breathing, guided imagery, progressive muscle relaxation | Calming, with breathing, imagery and muscle relaxation |
-| **Occupational and recreational therapy** | Restores function, promotes socialisation, improves quality of life | Function, socialisation and quality of life |
-| **Community-based interventions** | Integrate mental health into primary care, with home visits and community health workers | Primary care and the community |
-| **Spiritual and cultural therapies** | Culturally sensitive approaches, working with religious or traditional leaders where appropriate | Culturally sensitive care |
+- **Supportive psychotherapy**: Reassurance, guidance and coping skills during crises — Crises
+- **Psychoeducation**: Helps patients and families understand the illness, keep to treatment and prevent relapse — Patients and families
+- **Cognitive behavioural therapy (CBT)**: Identifies and restructures maladaptive thoughts and behaviours — Depression, anxiety, OCD, psychosis
+- **Behaviour therapy**: Systematic desensitisation, exposure and token economy — Phobias, OCD, behavioural problems
+- **Interpersonal therapy (IPT)**: Addresses grief, role disputes and interpersonal deficits — Especially depressive disorders
+- **Psychodynamic therapy**: Explores unconscious conflicts and past experiences for insight and resolution — Personality and neurotic disorders
+- **Family therapy**: Improves communication, reduces relapse and strengthens family dynamics — Schizophrenia, substance use disorders
+- **Group therapy**: Peer support, social learning and coping — Addiction, chronic illness
+- **Motivational interviewing**: Builds intrinsic motivation for behaviour change — Especially substance use
+- **Mindfulness-based therapies (MBSR, MBCT)**: Stress management and relapse prevention — Stress, anxiety, depression relapse prevention
+- **Relaxation techniques**: Deep breathing, guided imagery, progressive muscle relaxation — Calming, with breathing, imagery and muscle relaxation
+- **Occupational and recreational therapy**: Restores function, promotes socialisation, improves quality of life — Function, socialisation and quality of life
+- **Community-based interventions**: Integrate mental health into primary care, with home visits and community health workers — Primary care and the community
+- **Spiritual and cultural therapies**: Culturally sensitive approaches, working with religious or traditional leaders where appropriate — Culturally sensitive care
 
 > Exam tip: for each therapy, learn **what it targets** and **one condition it suits**. That is the shape of most exam questions.
 

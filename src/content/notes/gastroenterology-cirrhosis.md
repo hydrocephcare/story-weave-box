@@ -9,28 +9,24 @@ Chronic liver disease (CLD) is a progressive, usually irreversible disorder of h
 Cirrhosis is the end‑stage of CLD in which normal hepatic lobules are replaced by regenerative nodules surrounded by fibrous septa, leading to portal hypertension and loss of synthetic, detoxifying and metabolic capacity.
 
 ## Anatomy and physiology you need
-| Structure | Relevance to CLD |
-|---|---|
-| Hepatocytes | Primary site of metabolism, detoxification, protein synthesis; injury initiates fibrosis |
-| Sinusoids | Endothelial barrier; loss → portal hypertension |
-| Portal triad (portal vein, hepatic artery, bile duct) | Conduit for inflow; fibrosis narrows vessels → increased portal pressure |
-| Central vein | Outflow tract; congestion contributes to hepatic congestion |
-| Bile canaliculi | Damage → cholestasis, jaundice |
-| Collagen‑producing stellate cells | Activation → extracellular matrix deposition, fibrosis |
-| Liver capsule & peritoneum | Stretching → ascites, abdominal discomfort |
+- **Hepatocytes**: Primary site of metabolism, detoxification, protein synthesis; injury initiates fibrosis
+- **Sinusoids**: Endothelial barrier; loss → portal hypertension
+- **Portal triad (portal vein, hepatic artery, bile duct)**: Conduit for inflow; fibrosis narrows vessels → increased portal pressure
+- **Central vein**: Outflow tract; congestion contributes to hepatic congestion
+- **Bile canaliculi**: Damage → cholestasis, jaundice
+- **Collagen‑producing stellate cells**: Activation → extracellular matrix deposition, fibrosis
+- **Liver capsule & peritoneum**: Stretching → ascites, abdominal discomfort
 
 ## Causes and risk factors
-| Category | Common aetiologies in Kenya |
-|---|---|
-| Viral | Chronic hepatitis B (endemic), hepatitis C (especially in people who inject drugs) |
-| Alcoholic | Heavy (> 60 g ethanol/day) or chronic consumption of locally brewed spirits |
-| Metabolic | Non‑alcoholic fatty liver disease (obesity, diabetes), haemochromatosis (rare) |
-| Autoimmune | Autoimmune hepatitis, primary biliary cholangitis |
-| Infectious (tropical) | HIV (direct hepatic injury, drug toxicity), disseminated TB, malaria (repeated severe episodes), schistosomiasis (S. mansoni), visceral leishmaniasis |
-| Hematologic | Sickle cell disease (repeated vaso‑occlusive hepatic infarcts), thalassaemia |
-| Drug‑induced | Traditional herbal remedies, antitubercular therapy (isoniazid, rifampicin), antiretrovirals (especially nevirapine), antimalarials (artemisinin derivatives) |
-| Vascular | Budd‑Chiari syndrome (hepatic vein thrombosis), portal vein thrombosis |
-| Others | Wilson disease (copper overload), alpha‑1 antitrypsin deficiency |
+- **Viral**: Chronic hepatitis B (endemic), hepatitis C (especially in people who inject drugs)
+- **Alcoholic**: Heavy (> 60 g ethanol/day) or chronic consumption of locally brewed spirits
+- **Metabolic**: Non‑alcoholic fatty liver disease (obesity, diabetes), haemochromatosis (rare)
+- **Autoimmune**: Autoimmune hepatitis, primary biliary cholangitis
+- **Infectious (tropical)**: HIV (direct hepatic injury, drug toxicity), disseminated TB, malaria (repeated severe episodes), schistosomiasis (S. mansoni), visceral leishmaniasis
+- **Hematologic**: Sickle cell disease (repeated vaso‑occlusive hepatic infarcts), thalassaemia
+- **Drug‑induced**: Traditional herbal remedies, antitubercular therapy (isoniazid, rifampicin), antiretrovirals (especially nevirapine), antimalarials (artemisinin derivatives)
+- **Vascular**: Budd‑Chiari syndrome (hepatic vein thrombosis), portal vein thrombosis
+- **Others**: Wilson disease (copper overload), alpha‑1 antitrypsin deficiency
 
 ## Pathophysiology
 Chronic insult → hepatocyte death → inflammatory cytokines → activation of hepatic stellate cells → collagen deposition → fibrosis → architectural distortion → nodular regeneration → portal hypertension → clinical decompensation.  
@@ -48,20 +44,18 @@ Chronic insult → hepatocyte death → inflammatory cytokines → activation of
 
 ## Clinical features  
 
-| Domain | Key questions / findings | Why it occurs |
-|---|---|---|
-| **History – constitutional** | Fatigue, weight loss, anorexia, low‑grade fever, night sweats | Chronic inflammation and impaired hepatic metabolism reduce energy stores; fever may signal active hepatitis or infection (e.g., TB, HIV). |
-| **History – gastrointestinal** | Appetite change, early satiety, nausea, vomiting, abdominal distension, change in stool colour (pale, tarry), pruritus, haematemesis or melena | Early satiety & nausea from enlarged liver (hepatomegaly) or ascites; pale stools from cholestasis; tarry stools from variceal bleed; pruritus from bile salt deposition. |
-| **History – alcohol / toxin exposure** | Quantity and duration of alcohol, use of traditional herbal remedies, acetaminophen, industrial solvents | Direct hepatotoxicity accelerates fibrosis; dose‑response relationship helps gauge contribution. |
-| **History – viral / infectious** | Prior hepatitis B/C testing, HIV status, TB treatment, malaria episodes, schistosomiasis exposure, transfusion history | Chronic viral hepatitis, HIV‑related liver disease, TB drugs (isoniazid, rifampicin) and malaria can cause chronic injury; schistosomiasis leads to periportal fibrosis. |
-| **History – metabolic / systemic** | Diabetes, obesity, dyslipidaemia, hypertension, family history of liver disease, sickle‑cell crises, rheumatic fever, use of steroids or immunosuppressants | Metabolic syndrome drives non‑alcoholic fatty liver disease (NAFLD); sickle‑cell disease causes hepatic infarction; rheumatic disease may involve immune‑mediated hepatitis. |
-| **History – bleeding / clotting** | Easy bruising, epistaxis, gum bleeding, prolonged bleeding after minor cuts | Reduced synthesis of clotting factors (II, VII, IX, X) and thrombocytopenia from splenic sequestration. |
-| **History – encephalopathy** | Confusion, personality change, asterixis, sleep reversal, forgetfulness | Accumulation of ammonia and other neurotoxins due to impaired hepatic detoxification. |
-| **Examination – general** | Jaundice, spider angiomas, palmar erythema, gynecomastia, muscle wasting | Hyperbilirubinaemia → jaundice; estrogen excess from reduced metabolism → spider angiomas, gynecomastia; chronic catabolism → wasting. |
-| **Examination – abdomen** | Hepatomegaly, firm nodular liver edge, splenomegaly, ascites (shifting dullness, fluid wave), caput medusae, umbilical hernia | Fibrotic liver becomes nodular and may enlarge; portal hypertension → splenomegaly, collateral veins (caput medusae), ascites; increased intra‑abdominal pressure predisposes to umbilical hernia. |
-| **Examination – stigmata of portal hypertension** | Dilated abdominal veins, palpable left renal vein, hemorrhoids, rectal varices | Collateral circulation forms to bypass high portal pressure. |
-| **Examination – neurologic** | Asterixis, flapping tremor, altered mental status | Hepatic encephalopathy due to neurotoxin buildup. |
-| **Examination – skin** | Pruritus, xanthomas, bruising, petechiae | Cholestasis → pruritus; hyperlipidaemia in cholestatic disease → xanthomas; coagulopathy → bruising/petechiae. |
+- **History – constitutional**: Fatigue, weight loss, anorexia, low‑grade fever, night sweats — Chronic inflammation and impaired hepatic metabolism reduce energy stores; fever may signal active hepatitis or infection (e.g., TB, HIV).
+- **History – gastrointestinal**: Appetite change, early satiety, nausea, vomiting, abdominal distension, change in stool colour (pale, tarry), pruritus, haematemesis or melena — Early satiety & nausea from enlarged liver (hepatomegaly) or ascites; pale stools from cholestasis; tarry stools from variceal bleed; pruritus from bile salt deposition.
+- **History – alcohol / toxin exposure**: Quantity and duration of alcohol, use of traditional herbal remedies, acetaminophen, industrial solvents — Direct hepatotoxicity accelerates fibrosis; dose‑response relationship helps gauge contribution.
+- **History – viral / infectious**: Prior hepatitis B/C testing, HIV status, TB treatment, malaria episodes, schistosomiasis exposure, transfusion history — Chronic viral hepatitis, HIV‑related liver disease, TB drugs (isoniazid, rifampicin) and malaria can cause chronic injury; schistosomiasis leads to periportal fibrosis.
+- **History – metabolic / systemic**: Diabetes, obesity, dyslipidaemia, hypertension, family history of liver disease, sickle‑cell crises, rheumatic fever, use of steroids or immunosuppressants — Metabolic syndrome drives non‑alcoholic fatty liver disease (NAFLD); sickle‑cell disease causes hepatic infarction; rheumatic disease may involve immune‑mediated hepatitis.
+- **History – bleeding / clotting**: Easy bruising, epistaxis, gum bleeding, prolonged bleeding after minor cuts — Reduced synthesis of clotting factors (II, VII, IX, X) and thrombocytopenia from splenic sequestration.
+- **History – encephalopathy**: Confusion, personality change, asterixis, sleep reversal, forgetfulness — Accumulation of ammonia and other neurotoxins due to impaired hepatic detoxification.
+- **Examination – general**: Jaundice, spider angiomas, palmar erythema, gynecomastia, muscle wasting — Hyperbilirubinaemia → jaundice; estrogen excess from reduced metabolism → spider angiomas, gynecomastia; chronic catabolism → wasting.
+- **Examination – abdomen**: Hepatomegaly, firm nodular liver edge, splenomegaly, ascites (shifting dullness, fluid wave), caput medusae, umbilical hernia — Fibrotic liver becomes nodular and may enlarge; portal hypertension → splenomegaly, collateral veins (caput medusae), ascites; increased intra‑abdominal pressure predisposes to umbilical hernia.
+- **Examination – stigmata of portal hypertension**: Dilated abdominal veins, palpable left renal vein, hemorrhoids, rectal varices — Collateral circulation forms to bypass high portal pressure.
+- **Examination – neurologic**: Asterixis, flapping tremor, altered mental status — Hepatic encephalopathy due to neurotoxin buildup.
+- **Examination – skin**: Pruritus, xanthomas, bruising, petechiae — Cholestasis → pruritus; hyperlipidaemia in cholestatic disease → xanthomas; coagulopathy → bruising/petechiae.
 
 ---
 
@@ -119,13 +113,11 @@ Patients are stratified into **compensated** (no ascites, encephalopathy, varice
 ## Management  
 
 **Immediate stabilisation**  
-| Problem | Immediate action | Rationale |
-|---|---|---|
-| Hemodynamic instability (hypotension, tachycardia) | Give isotonic crystalloid bolus; consider albumin if suspicion of large‑volume ascites with renal dysfunction | Restores intravascular volume, improves renal perfusion |
-| Active upper GI bleed | Secure airway if needed, give IV octreotide infusion, start IV proton‑pump inhibitor, transfuse packed red cells to keep Hb ≈ 7‑8 g/dL, request urgent endoscopy | Reduces portal pressure, promotes clot stability, corrects anemia |
-| Encephalopathy | Protect airway, give lactulose (or lactitol) orally/NG, consider rifaximin if refractory | Lowers ammonia production and absorption |
-| Coagulopathy with bleeding | Give fresh frozen plasma or prothrombin complex concentrate if INR > 2.5 and bleeding; give vitamin K if deficiency suspected | Supplies clotting factors, corrects deficiency |
-| Acute kidney injury on cirrhosis | Stop nephrotoxic drugs, give albumin 1 g/kg (max 100 g) over 48 h, monitor urine output, consider early nephrology referral | Improves renal perfusion, prevents hepatorenal syndrome |
+- **Hemodynamic instability (hypotension, tachycardia)**: Give isotonic crystalloid bolus; consider albumin if suspicion of large‑volume ascites with renal dysfunction — Restores intravascular volume, improves renal perfusion
+- **Active upper GI bleed**: Secure airway if needed, give IV octreotide infusion, start IV proton‑pump inhibitor, transfuse packed red cells to keep Hb ≈ 7‑8 g/dL, request urgent endoscopy — Reduces portal pressure, promotes clot stability, corrects anemia
+- **Encephalopathy**: Protect airway, give lactulose (or lactitol) orally/NG, consider rifaximin if refractory — Lowers ammonia production and absorption
+- **Coagulopathy with bleeding**: Give fresh frozen plasma or prothrombin complex concentrate if INR > 2.5 and bleeding; give vitamin K if deficiency suspected — Supplies clotting factors, corrects deficiency
+- **Acute kidney injury on cirrhosis**: Stop nephrotoxic drugs, give albumin 1 g/kg (max 100 g) over 48 h, monitor urine output, consider early nephrology referral — Improves renal perfusion, prevents hepatorenal syndrome
 
 **Definitive treatment**  
 - **Aetiology‑directed therapy** – antiviral therapy for hepatitis B/C, alcohol cessation programmes, anti‑TB treatment, antiretroviral optimisation, schistosomiasis praziquantel, sickle‑cell disease disease‑modifying agents.  
@@ -151,15 +143,13 @@ Patients are stratified into **compensated** (no ascites, encephalopathy, varice
 
 ## Complications and prognosis  
 
-| Complication | Clinical clue | Management principle |
-|---|---|---|
-| Variceal hemorrhage | Hematemesis, melena, drop in Hb | Endoscopic band ligation ± β‑blocker; consider TIPS if refractory |
-| Ascites → spontaneous bacterial peritonitis | Fever, abdominal pain, leukocytosis, ascitic PMN > 250 cells/µL | Empirical cefotaxime/ceftriaxone, albumin infusion |
-| Hepatic encephalopathy | Asterixis, altered mental status | Lactulose ± rifaximin, treat precipitating factors |
-| Hepatorenal syndrome | Rising creatinine, oliguria, no intrinsic renal disease | Albumin + vasoconstrictor (e.g., terlipressin), early transplant referral |
-| Hepatocellular carcinoma | New focal lesion on US/CT, AFP rise | Multidisciplinary oncology review; curative options (resection, ablation, transplant) if early |
-| Coagulopathy & bleeding | Prolonged INR, low platelets, mucosal bleeding | Vitamin K, plasma, platelet transfusion as indicated |
-| Bone disease (osteoporosis) | Chronic pain, fractures | Calcium, vitamin D, bisphosphonates if indicated |
+- **Variceal hemorrhage**: Hematemesis, melena, drop in Hb — Endoscopic band ligation ± β‑blocker; consider TIPS if refractory
+- **Ascites → spontaneous bacterial peritonitis**: Fever, abdominal pain, leukocytosis, ascitic PMN > 250 cells/µL — Empirical cefotaxime/ceftriaxone, albumin infusion
+- **Hepatic encephalopathy**: Asterixis, altered mental status — Lactulose ± rifaximin, treat precipitating factors
+- **Hepatorenal syndrome**: Rising creatinine, oliguria, no intrinsic renal disease — Albumin + vasoconstrictor (e.g., terlipressin), early transplant referral
+- **Hepatocellular carcinoma**: New focal lesion on US/CT, AFP rise — Multidisciplinary oncology review; curative options (resection, ablation, transplant) if early
+- **Coagulopathy & bleeding**: Prolonged INR, low platelets, mucosal bleeding — Vitamin K, plasma, platelet transfusion as indicated
+- **Bone disease (osteoporosis)**: Chronic pain, fractures — Calcium, vitamin D, bisphosphonates if indicated
 
 Prognosis is staged by Child‑Pugh (A‑C) and MELD scores; decompensated cirrhosis (ascites, variceal bleed, encephalopathy) carries a 5‑year survival < 50 % without transplant. Early identification of complications and timely referral improve outcomes.
 

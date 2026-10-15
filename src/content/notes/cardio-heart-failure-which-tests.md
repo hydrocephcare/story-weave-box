@@ -1,4 +1,4 @@
-# Heart failure: which tests, and why — Year 4 Internal Medicine (Cardiovascular) Notes
+# Heart failure: which tests and why
 
 *Clinical reasoning notes. The point of an investigation is the question it answers.*
 
@@ -6,32 +6,28 @@
 
 ## 1. Which tests?
 
-| Test | The question it answers |
-|---|---|
-| **NT-proBNP or BNP** | Is this heart failure? **A normal level makes it unlikely** |
-| **Echocardiogram** | Confirms the diagnosis; **ejection fraction** (reduced or preserved); the **valves** (rheumatic heart disease); the cause |
-| **ECG** | Ischaemia, **arrhythmia (atrial fibrillation)**, left ventricular hypertrophy |
-| **Chest X-ray** | **Pulmonary oedema**, cardiomegaly, pleural effusions |
-| **Full haemogram** | **Anaemia**, which worsens or can cause heart failure |
-| **Urea, creatinine, electrolytes** | Kidney function before starting diuretics or ACE inhibitors; potassium |
-| **Liver tests, thyroid tests, glucose, lipids** | Congestive liver disease; a thyroid cause; risk factors |
-| **Troponin** | Is an acute coronary syndrome the trigger? |
-| **HIV test** | **HIV cardiomyopathy** |
+- **NT-proBNP or BNP**: Is this heart failure? **A normal level makes it unlikely**
+- **Echocardiogram**: Confirms the diagnosis; **ejection fraction** (reduced or preserved); the **valves** (rheumatic heart disease); the cause
+- **ECG**: Ischaemia, **arrhythmia (atrial fibrillation)**, left ventricular hypertrophy
+- **Chest X-ray**: **Pulmonary oedema**, cardiomegaly, pleural effusions
+- **Full haemogram**: **Anaemia**, which worsens or can cause heart failure
+- **Urea, creatinine, electrolytes**: Kidney function before starting diuretics or ACE inhibitors; potassium
+- **Liver tests, thyroid tests, glucose, lipids**: Congestive liver disease; a thyroid cause; risk factors
+- **Troponin**: Is an acute coronary syndrome the trigger?
+- **HIV test**: **HIV cardiomyopathy**
 
 ![Chest radiograph with signs of congestive heart failure: an enlarged heart, upper-lobe blood diversion, Kerley B lines and pleural effusions. Mikael Häggström, CC0](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Chest_radiograph_with_signs_of_congestive_heart_failure_-_annotated.jpg/960px-Chest_radiograph_with_signs_of_congestive_heart_failure_-_annotated.jpg)
 
 ## Anatomy and physiology you need  
 
-| Structure / Function | Why it matters for heart failure (clinical hook) |
-|---|---|
-| **Left ventricle (LV) myocardium** – contractile fibers, sarcomere calcium handling, Frank‑Starling stretch response | Reduced systolic shortening → low ejection fraction → pulmonary congestion; preserved contractility with stiff ventricle → high filling pressures and orthopnoea. |
-| **LV diastolic compliance** – collagen matrix, titin elasticity, relaxation‐dependent calcium re‑uptake | Impaired relaxation raises left‑atrial pressure → dyspnoea on exertion, PND; examiner will ask about “preserved EF but high LVEDP”. |
-| **Right ventricle (RV) geometry** – crescent‑shaped wall, thin free wall, dependence on preload | RV failure follows chronic LV overload or pulmonary hypertension; gives peripheral oedema, raised JVP – a clue to biventricular involvement. |
-| **Atrioventricular valves (mitral & tricuspid)** – annular dynamics, chordae tendineae, papillary muscle tethering | Regurgitation adds volume load, worsens dilation; a murmur points to a secondary cause that the examiner may probe. |
-| **Coronary arterial tree** – epicardial vessels, microvascular perfusion, subendocardial oxygen demand | Ischaemia reduces contractility and can precipitate decompensation; ECG changes or troponin rise are red‑flags. |
-| **Neuro‑hormonal axes** – sympathetic nervous system, renin‑angiotensin‑aldosterone system (RAAS), natriuretic peptide system | Chronic activation drives vasoconstriction, sodium retention, remodeling; explains why ACE‑I, β‑blocker and MRAs improve survival – a common exam point. |
-| **Kidney‑cardiac coupling** – glomerular filtration pressure, renal sympathetic tone, natriuresis | Worsening renal function limits diuretic efficacy and raises BNP; examiners love “cardiorenal syndrome” scenarios. |
-| **Pulmonary lymphatics & alveolar capillaries** – Starling forces, interstitial fluid clearance | When LV pressure exceeds pulmonary capillary pressure, fluid transudates → crackles, Kerley B lines; the examiner may ask what radiographic sign reflects this. |
+- **Left ventricle (LV) myocardium – contractile fibers, sarcomere calcium handling, Frank‑Starling stretch response**: Reduced systolic shortening → low ejection fraction → pulmonary congestion; preserved contractility with stiff ventricle → high filling pressures and orthopnoea.
+- **LV diastolic compliance – collagen matrix, titin elasticity, relaxation‐dependent calcium re‑uptake**: Impaired relaxation raises left‑atrial pressure → dyspnoea on exertion, PND; examiner will ask about “preserved EF but high LVEDP”.
+- **Right ventricle (RV) geometry – crescent‑shaped wall, thin free wall, dependence on preload**: RV failure follows chronic LV overload or pulmonary hypertension; gives peripheral oedema, raised JVP – a clue to biventricular involvement.
+- **Atrioventricular valves (mitral & tricuspid) – annular dynamics, chordae tendineae, papillary muscle tethering**: Regurgitation adds volume load, worsens dilation; a murmur points to a secondary cause that the examiner may probe.
+- **Coronary arterial tree – epicardial vessels, microvascular perfusion, subendocardial oxygen demand**: Ischaemia reduces contractility and can precipitate decompensation; ECG changes or troponin rise are red‑flags.
+- **Neuro‑hormonal axes – sympathetic nervous system, renin‑angiotensin‑aldosterone system (RAAS), natriuretic peptide system**: Chronic activation drives vasoconstriction, sodium retention, remodeling; explains why ACE‑I, β‑blocker and MRAs improve survival – a common exam point.
+- **Kidney‑cardiac coupling – glomerular filtration pressure, renal sympathetic tone, natriuresis**: Worsening renal function limits diuretic efficacy and raises BNP; examiners love “cardiorenal syndrome” scenarios.
+- **Pulmonary lymphatics & alveolar capillaries – Starling forces, interstitial fluid clearance**: When LV pressure exceeds pulmonary capillary pressure, fluid transudates → crackles, Kerley B lines; the examiner may ask what radiographic sign reflects this.
 
 ---
 
@@ -122,15 +118,13 @@ Key examiner focus: **“What breaks the compensation?”** – the shift from a
 
 ## Complications and prognosis  
 
-| Complication | Pathophysiological mechanism | Clinical clue for the examiner |
-|---|---|---|
-| **Cardiorenal syndrome** | Elevated venous pressure and neuro‑hormonal activation reduce renal perfusion; diuretics may worsen azotaemia | Rising creatinine, oliguria, refractory congestion |
-| **Cardiac cachexia** | Chronic catabolism driven by cytokines (TNF‑α, IL‑6) and sympathetic over‑activity | Unintentional >5 % weight loss, low BMI, low albumin |
-| **Pulmonary hypertension** | Persistent left‑sided pressures transmit backward, causing remodeling of pulmonary arterioles | Loud P2, right‑sided S3, echocardiographic RV systolic pressure ↑ |
-| **Arrhythmia (atrial fibrillation, ventricular tachycardia)** | Stretch‑induced atrial remodeling, scar tissue from ischaemia or cardiomyopathy | Irregular pulse, new‑onset rapid ventricular response, ECG changes |
-| **Thrombo‑embolism** | Stasis in dilated atria or ventricles promotes mural thrombus formation | Embolic stroke, peripheral arterial occlusion, echocardiographic thrombus |
-| **Hepatic congestion (cardiac cirrhosis)** | Chronic right‑sided pressure elevation impairs hepatic outflow, leading to fibrosis | Tender hepatomegaly, jaundice, elevated bilirubin, abnormal LFTs |
-| **Sudden cardiac death** | Malignant ventricular arrhythmias secondary to scar, electrolyte disturbance, or severe LV dysfunction | Low EF (<35 %), prior ventricular ectopy, syncope episodes |
+- **Cardiorenal syndrome**: Elevated venous pressure and neuro‑hormonal activation reduce renal perfusion; diuretics may worsen azotaemia — Rising creatinine, oliguria, refractory congestion
+- **Cardiac cachexia**: Chronic catabolism driven by cytokines (TNF‑α, IL‑6) and sympathetic over‑activity — Unintentional >5 % weight loss, low BMI, low albumin
+- **Pulmonary hypertension**: Persistent left‑sided pressures transmit backward, causing remodeling of pulmonary arterioles — Loud P2, right‑sided S3, echocardiographic RV systolic pressure ↑
+- **Arrhythmia (atrial fibrillation, ventricular tachycardia)**: Stretch‑induced atrial remodeling, scar tissue from ischaemia or cardiomyopathy — Irregular pulse, new‑onset rapid ventricular response, ECG changes
+- **Thrombo‑embolism**: Stasis in dilated atria or ventricles promotes mural thrombus formation — Embolic stroke, peripheral arterial occlusion, echocardiographic thrombus
+- **Hepatic congestion (cardiac cirrhosis)**: Chronic right‑sided pressure elevation impairs hepatic outflow, leading to fibrosis — Tender hepatomegaly, jaundice, elevated bilirubin, abnormal LFTs
+- **Sudden cardiac death**: Malignant ventricular arrhythmias secondary to scar, electrolyte disturbance, or severe LV dysfunction — Low EF (<35 %), prior ventricular ectopy, syncope episodes
 
 **Prognostic pointers** that an examiner expects you to mention:  
 

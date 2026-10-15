@@ -5,28 +5,24 @@
 Malabsorption is the impaired digestion and/or absorption of macronutrients (carbohydrates, proteins, fats), micronutrients (vitamins, minerals) and electrolytes, leading to quantitative nutrient loss despite an adequate oral intake.
 
 ## Anatomy and physiology you need  
-| Segment | Primary function in absorption | Key transport mechanisms |
-|---|---|---|
-| Stomach | Mechanical breakdown, gastric lipase, acid‑dependent activation of pancreatic enzymes | Pepsin, acid‑dependent ionisation |
-| Duodenum (proximal small bowel) | Major site for iron, calcium, folate, simple sugars, peptide absorption | Sodium‑dependent cotransport, active calcium transport (vitamin D‑dependent) |
-| Jejunum | Principal site for carbohydrate, amino‑acid, most vitamin absorption | Carrier‑mediated, facilitated diffusion |
-| Ileum | Bile‑acid, vitamin B12 (intrinsic factor complex) and bile‑salt recycling | Apical ileal bile‑acid transporter, cubilin‑mediated B12 uptake |
-| Colon | Water, electrolyte, short‑chain fatty acid absorption (from bacterial fermentation) | Passive diffusion, Na⁺/H⁺ exchange |
+- **Stomach**: Mechanical breakdown, gastric lipase, acid‑dependent activation of pancreatic enzymes — Pepsin, acid‑dependent ionisation
+- **Duodenum (proximal small bowel)**: Major site for iron, calcium, folate, simple sugars, peptide absorption — Sodium‑dependent cotransport, active calcium transport (vitamin D‑dependent)
+- **Jejunum**: Principal site for carbohydrate, amino‑acid, most vitamin absorption — Carrier‑mediated, facilitated diffusion
+- **Ileum**: Bile‑acid, vitamin B12 (intrinsic factor complex) and bile‑salt recycling — Apical ileal bile‑acid transporter, cubilin‑mediated B12 uptake
+- **Colon**: Water, electrolyte, short‑chain fatty acid absorption (from bacterial fermentation) — Passive diffusion, Na⁺/H⁺ exchange
 
 Integrity of the mucosal brush border enzymes (lactase, sucrase‑isomaltase, peptidases) and the lymphatic lacteal network for long‑chain fatty acids are essential. Disruption at any level can produce a malabsorptive picture.
 
 ## Causes and risk factors  
 
-| Category | Representative conditions in Kenya | Why they matter |
-|---|---|---|
-| Infectious | HIV enteropathy, intestinal TB, chronic malaria, giardiasis, cryptosporidiosis, strongyloidiasis | Direct mucosal injury, villous blunting, diarrhoea, immune suppression |
-| Inflammatory/autoimmune | Celiac disease, Crohn’s disease, ulcerative colitis | Auto‑immune villous atrophy, transmural inflammation |
-| Post‑surgical / anatomical | Small‑bowel resection, bariatric surgery, blind loop syndrome | Reduced absorptive surface, bacterial overgrowth |
-| Pancreatic exocrine insufficiency | Chronic pancreatitis, cystic fibrosis, pancreatic TB | Lack of lipases, amylase, proteases → fat maldigestion |
-| Hepatobiliary | Primary sclerosing cholangitis, cholestasis, gallstone disease | Impaired bile‑acid delivery → fat malabsorption |
-| Tropical / haematologic | Sickle‑cell disease (recurrent vaso‑occlusive gut ischemia), rheumatic fever (post‑streptococcal gut involvement) | Repeated ischemic injury, immune‑mediated mucosal damage |
-| Medications / toxins | Long‑term antibiotics, antitubercular therapy (rifampicin), antiretrovirals (especially protease inhibitors) | Altered flora, direct mucosal toxicity |
-| Others | Protein‑losing enteropathy, Whipple disease | Rare but documented in tertiary centres |
+- **Infectious**: HIV enteropathy, intestinal TB, chronic malaria, giardiasis, cryptosporidiosis, strongyloidiasis — Direct mucosal injury, villous blunting, diarrhoea, immune suppression
+- **Inflammatory/autoimmune**: Celiac disease, Crohn’s disease, ulcerative colitis — Auto‑immune villous atrophy, transmural inflammation
+- **Post‑surgical / anatomical**: Small‑bowel resection, bariatric surgery, blind loop syndrome — Reduced absorptive surface, bacterial overgrowth
+- **Pancreatic exocrine insufficiency**: Chronic pancreatitis, cystic fibrosis, pancreatic TB — Lack of lipases, amylase, proteases → fat maldigestion
+- **Hepatobiliary**: Primary sclerosing cholangitis, cholestasis, gallstone disease — Impaired bile‑acid delivery → fat malabsorption
+- **Tropical / haematologic**: Sickle‑cell disease (recurrent vaso‑occlusive gut ischemia), rheumatic fever (post‑streptococcal gut involvement) — Repeated ischemic injury, immune‑mediated mucosal damage
+- **Medications / toxins**: Long‑term antibiotics, antitubercular therapy (rifampicin), antiretrovirals (especially protease inhibitors) — Altered flora, direct mucosal toxicity
+- **Others**: Protein‑losing enteropathy, Whipple disease — Rare but documented in tertiary centres
 
 ## Pathophysiology  
 
@@ -47,32 +43,28 @@ Enzyme deficiency → undigested substrates → osmotic load → diarrhoea → f
 
 ## Clinical features  
 
-| Aspect | Key questions to ask | Why it matters / pathophysiologic link |
-|---|---|---|
-| **Stool pattern** | Frequency, volume, consistency, presence of steatorrhea (floats, foul‑smelling, greasy), mucus or blood | Fat malabsorption → bulky, oily stools; mucosal inflammation → mucus; ulceration or infection → blood |
-| **Weight & growth** | Unintentional weight loss, change in body habitus, difficulty gaining weight (especially in younger trainees) | Negative energy balance from loss of macronutrients; chronic disease may blunt appetite |
-| **Dietary intake** | Recent changes, restrictive diets, food intolerances, alcohol use, high‑fat meals | Helps separate primary malabsorption from functional or dietary causes |
-| **Symptoms of nutrient deficiency** | Fat‑soluble vitamin deficiency (night blindness, easy bruising, bone pain), iron deficiency (pallor, fatigue), B12 deficiency (paresthesias, gait disturbance) | Specific malabsorption sites (duodenum → iron/B12; ileum → B12; pancreas → fat soluble vitamins) |
-| **Abdominal pain / bloating** | Timing (post‑prandial), character, relation to meals, radiation | Motility disturbance, bacterial overgrowth, pancreatic insufficiency |
-| **Systemic illness** | HIV status, TB treatment, recent malaria, sickle‑cell crises, rheumatic disease, use of antibiotics or antitubercular drugs | Underlying tropical or immunologic conditions that predispose to malabsorption |
-| **Medication history** | Long‑term antibiotics, metformin, antiepileptics, antiretrovirals, NSAIDs | Drug‑induced mucosal injury or pancreatic toxicity |
-| **Family history** | Celiac disease, cystic fibrosis, hereditary fructose intolerance | Genetic predisposition to specific malabsorptive disorders |
+- **Stool pattern**: Frequency, volume, consistency, presence of steatorrhea (floats, foul‑smelling, greasy), mucus or blood — Fat malabsorption → bulky, oily stools; mucosal inflammation → mucus; ulceration or infection → blood
+- **Weight & growth**: Unintentional weight loss, change in body habitus, difficulty gaining weight (especially in younger trainees) — Negative energy balance from loss of macronutrients; chronic disease may blunt appetite
+- **Dietary intake**: Recent changes, restrictive diets, food intolerances, alcohol use, high‑fat meals — Helps separate primary malabsorption from functional or dietary causes
+- **Symptoms of nutrient deficiency**: Fat‑soluble vitamin deficiency (night blindness, easy bruising, bone pain), iron deficiency (pallor, fatigue), B12 deficiency (paresthesias, gait disturbance) — Specific malabsorption sites (duodenum → iron/B12; ileum → B12; pancreas → fat soluble vitamins)
+- **Abdominal pain / bloating**: Timing (post‑prandial), character, relation to meals, radiation — Motility disturbance, bacterial overgrowth, pancreatic insufficiency
+- **Systemic illness**: HIV status, TB treatment, recent malaria, sickle‑cell crises, rheumatic disease, use of antibiotics or antitubercular drugs — Underlying tropical or immunologic conditions that predispose to malabsorption
+- **Medication history**: Long‑term antibiotics, metformin, antiepileptics, antiretrovirals, NSAIDs — Drug‑induced mucosal injury or pancreatic toxicity
+- **Family history**: Celiac disease, cystic fibrosis, hereditary fructose intolerance — Genetic predisposition to specific malabsorptive disorders
 
 ### Examination findings and rationale  
 
-| Finding | What it indicates | Pathophysiologic explanation |
-|---|---|---|
-| **Cachexia / low BMI** | Chronic nutrient loss | Energy deficit from macronutrient malabsorption |
-| **Peripheral edema / ascites** | Hypoalbuminemia | Loss of protein absorption → low oncotic pressure |
-| **Dermatitis or hyperpigmented skin** | Fat‑soluble vitamin A deficiency | Impaired absorption of retinol |
-| **Easy bruising, petechiae** | Vitamin K deficiency | Reduced synthesis of clotting factors |
-| **Angular stomatitis, glossitis** | Riboflavin or B‑complex deficiency | Malabsorption of water‑soluble vitamins |
-| **Neurological signs (paresthesias, gait ataxia)** | Vitamin B12 deficiency | Ileal disease or bacterial overgrowth consuming B12 |
-| **Bony tenderness or fractures** | Vitamin D deficiency | Fat malabsorption → osteomalacia |
-| **Abdominal distension, tympany** | Gas from bacterial overgrowth or unabsorbed carbohydrates | Stasis of luminal contents |
-| **Steatorrhea on stool exam** | Fat malabsorption | Pancreatic exocrine insufficiency, bile salt loss, mucosal disease |
-| **Digital clubbing** | Chronic hypoxia or long‑standing inflammatory bowel disease | Release of growth factors from inflamed mucosa |
-| **Signs of chronic liver disease (spider naevi, palmar erythema)** | Concomitant hepatobiliary disease affecting bile flow | Bile is essential for fat emulsification |
+- **Cachexia / low BMI**: Chronic nutrient loss — Energy deficit from macronutrient malabsorption
+- **Peripheral edema / ascites**: Hypoalbuminemia — Loss of protein absorption → low oncotic pressure
+- **Dermatitis or hyperpigmented skin**: Fat‑soluble vitamin A deficiency — Impaired absorption of retinol
+- **Easy bruising, petechiae**: Vitamin K deficiency — Reduced synthesis of clotting factors
+- **Angular stomatitis, glossitis**: Riboflavin or B‑complex deficiency — Malabsorption of water‑soluble vitamins
+- **Neurological signs (paresthesias, gait ataxia)**: Vitamin B12 deficiency — Ileal disease or bacterial overgrowth consuming B12
+- **Bony tenderness or fractures**: Vitamin D deficiency — Fat malabsorption → osteomalacia
+- **Abdominal distension, tympany**: Gas from bacterial overgrowth or unabsorbed carbohydrates — Stasis of luminal contents
+- **Steatorrhea on stool exam**: Fat malabsorption — Pancreatic exocrine insufficiency, bile salt loss, mucosal disease
+- **Digital clubbing**: Chronic hypoxia or long‑standing inflammatory bowel disease — Release of growth factors from inflamed mucosa
+- **Signs of chronic liver disease (spider naevi, palmar erythema)**: Concomitant hepatobiliary disease affecting bile flow — Bile is essential for fat emulsification
 
 ---
 
@@ -97,7 +89,7 @@ Enzyme deficiency → undigested substrates → osmotic load → diarrhoea → f
 | Test | What it answers | Interpretation |
 |---|---|---|
 | **Stool fat quantification (72‑hour collection)** | Presence and degree of steatorrhea | >7 g fat/day = significant fat malabsorption |
-| **Fecal elastase‑1** | Pancreatic exocrine function | <the protocol dose/g = pancreatic insufficiency |
+| **Fecal elastase‑1** | Pancreatic exocrine function | <200 µg/g = pancreatic insufficiency |
 | **Serum electrolytes, albumin, total protein** | Nutritional status, protein loss | Low albumin → protein‑losing enteropathy |
 | **Complete blood count + iron studies + folate & B12** | Micronutrient deficiencies | Microcytic anemia → iron loss; macrocytosis → B12/folate deficiency |
 | **Serum vitamin A, D, E, K levels** | Fat‑soluble vitamin status | Low levels confirm fat malabsorption |
@@ -112,7 +104,7 @@ Enzyme deficiency → undigested substrates → osmotic load → diarrhoea → f
 
 ## Diagnosis and severity  
 
-1. **Confirm malabsorption** – Presence of ≥2 objective markers (e.g., steatorrhea >7 g/day, fecal elastase <the protocol dose/g, low fat‑soluble vitamins) together with clinical symptoms.  
+1. **Confirm malabsorption** – Presence of ≥2 objective markers (e.g., steatorrhea >7 g/day, fecal elastase <200 µg/g, low fat‑soluble vitamins) together with clinical symptoms.  
 
 2. **Classify by predominant nutrient loss**  
    - **Fat malabsorption** – Positive stool fat, low fat‑soluble vitamins, low fecal elastase.  
@@ -122,11 +114,9 @@ Enzyme deficiency → undigested substrates → osmotic load → diarrhoea → f
 
 4. **Severity grading (clinical)**  
 
-| Severity | Clinical criteria | Management focus |
-|---|---|---|
-| **Mild** | Weight loss <5 % of body weight, stool fat <10 g/day, no electrolyte disturbance | Oral supplementation, dietary modification, treat underlying cause |
-| **Moderate** | Weight loss 5–10 %, stool fat 10–20 g/day, mild hypoalbuminemia, mild anemia | Add medium‑chain triglyceride (MCT) oil, parenteral vitamin replacement if needed, consider pancreatic enzyme replacement |
-| **Severe** | Weight loss >10 %, stool fat >20 g/day, albumin <30 g/L, electrolyte derangements, severe anemia or neuropathy | Initiate total parenteral nutrition (TPN) if oral intake impossible, aggressive correction of deficiencies, hospital admission, multidisciplinary team involvement |
+- **Mild**: Weight loss <5 % of body weight, stool fat <10 g/day, no electrolyte disturbance — Oral supplementation, dietary modification, treat underlying cause
+- **Moderate**: Weight loss 5–10 %, stool fat 10–20 g/day, mild hypoalbuminemia, mild anemia — Add medium‑chain triglyceride (MCT) oil, parenteral vitamin replacement if needed, consider pancreatic enzyme replacement
+- **Severe**: Weight loss >10 %, stool fat >20 g/day, albumin <30 g/L, electrolyte derangements, severe anemia or neuropathy — Initiate total parenteral nutrition (TPN) if oral intake impossible, aggressive correction of deficiencies, hospital admission, multidisciplinary team involvement
 
 5. **Document aetiology** on the discharge summary and plan for definitive therapy (e.g., gluten‑free diet for celiac, tetracycline + folate for tropical sprue, pancreatic enzyme replacement for exocrine insufficiency, antitubercular therapy for ileal TB).  
 
@@ -146,16 +136,14 @@ Enzyme deficiency → undigested substrates → osmotic load → diarrhoea → f
 
 **Definitive treatment** – directed at the underlying aetiology and the malabsorption itself.  
 
-| Underlying cause | First‑line therapy | Rationale |
-|---|---|---|
-| Celiac disease | Gluten‑free diet | Removes antigenic trigger; rapid symptom resolution. |
-| Tropical sprue | Tetracycline class + folic acid | Antimicrobial effect; folate corrects megaloblastic anaemia. |
-| HIV‑associated chronic diarrhoea | Optimise ART + metronidazole class if *Cystoisospora* suspected | ART restores immunity; metronidazole covers common protozoa. |
-| Intestinal TB | Rifampicin‑based regimen (standard TB therapy) | Eradicates *Mycobacterium*; improves mucosal healing. |
-| Pancreatic exocrine insufficiency | Pancrelipase (enteric‑coated) | Supplies lipase, amylase, protease; improves fat absorption. |
-| Small‑bowel bacterial over‑growth (SBBO) | Rifaximin class (or metronidazole) for 2 weeks | Reduces bacterial load, alleviates bloating and steatorrhea. |
-| Micronutrient deficiencies | Oral/IV replacement (iron, folic acid, vitamin B12, fat‑soluble vitamins) | Reverses anaemia, neuropathy, osteopenia. |
-| Chronic pancreatitis / cystic fibrosis | High‑calorie, medium‑chain triglyceride (MCT) diet + pancreatic enzymes | MCTs are absorbed directly; enzymes aid digestion. |
+- **Celiac disease**: Gluten‑free diet — Removes antigenic trigger; rapid symptom resolution.
+- **Tropical sprue**: Tetracycline class + folic acid — Antimicrobial effect; folate corrects megaloblastic anaemia.
+- **HIV‑associated chronic diarrhoea**: Optimise ART + metronidazole class if *Cystoisospora* suspected — ART restores immunity; metronidazole covers common protozoa.
+- **Intestinal TB**: Rifampicin‑based regimen (standard TB therapy) — Eradicates *Mycobacterium*; improves mucosal healing.
+- **Pancreatic exocrine insufficiency**: Pancrelipase (enteric‑coated) — Supplies lipase, amylase, protease; improves fat absorption.
+- **Small‑bowel bacterial over‑growth (SBBO)**: Rifaximin class (or metronidazole) for 2 weeks — Reduces bacterial load, alleviates bloating and steatorrhea.
+- **Micronutrient deficiencies**: Oral/IV replacement (iron, folic acid, vitamin B12, fat‑soluble vitamins) — Reverses anaemia, neuropathy, osteopenia.
+- **Chronic pancreatitis / cystic fibrosis**: High‑calorie, medium‑chain triglyceride (MCT) diet + pancreatic enzymes — MCTs are absorbed directly; enzymes aid digestion.
 
 **Monitoring & follow‑up**  
 - **Weight & BMI** weekly for the first month, then monthly.  
@@ -174,15 +162,13 @@ Enzyme deficiency → undigested substrates → osmotic load → diarrhoea → f
 
 ## Complications and prognosis  
 
-| Complication | Clinical impact | Prevention / management |
-|---|---|---|
-| Severe protein‑energy malnutrition | Weight loss, oedema, immune suppression | Early nutritional rehabilitation, high‑protein diet, supplements |
-| Micronutrient deficiency (e.g., vitamin D, B12) | Osteomalacia, neuropathy, anaemia | Routine labs, targeted replacement |
-| Osteoporosis / fractures | Reduced bone mineral density | Calcium + vitamin D, weight‑bearing exercise, DEXA screening |
-| Chronic diarrhoea → electrolyte derangement | Cardiac arrhythmias, renal impairment | Ongoing electrolyte monitoring, rehydration |
-| Increased infection risk (especially HIV/TB) | Opportunistic infections | Optimize ART/TB therapy, prophylactic antibiotics when indicated |
-| Small‑bowel bacterial over‑growth → further malabsorption | Worsening steatorrhea, bloating | Periodic courses of rifaximin, probiotic consideration |
-| Malignancy (e.g., enteropathy‑associated T‑cell lymphoma in celiac) | Poor prognosis | Long‑term gluten‑free adherence, surveillance endoscopy in refractory cases |
+- **Severe protein‑energy malnutrition**: Weight loss, oedema, immune suppression — Early nutritional rehabilitation, high‑protein diet, supplements
+- **Micronutrient deficiency (e.g., vitamin D, B12)**: Osteomalacia, neuropathy, anaemia — Routine labs, targeted replacement
+- **Osteoporosis / fractures**: Reduced bone mineral density — Calcium + vitamin D, weight‑bearing exercise, DEXA screening
+- **Chronic diarrhoea → electrolyte derangement**: Cardiac arrhythmias, renal impairment — Ongoing electrolyte monitoring, rehydration
+- **Increased infection risk (especially HIV/TB)**: Opportunistic infections — Optimize ART/TB therapy, prophylactic antibiotics when indicated
+- **Small‑bowel bacterial over‑growth → further malabsorption**: Worsening steatorrhea, bloating — Periodic courses of rifaximin, probiotic consideration
+- **Malignancy (e.g., enteropathy‑associated T‑cell lymphoma in celiac)**: Poor prognosis — Long‑term gluten‑free adherence, surveillance endoscopy in refractory cases
 
 Prognosis is excellent when the aetiology is identified and treated promptly; chronic refractory cases carry higher morbidity.
 

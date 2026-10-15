@@ -1,4 +1,4 @@
-# Obstetrics and Gynaecology Question Bank: 12 Clinical MCQs with Explanations
+# Obstetrics and Gynaecology Question Bank: 12 Clinical MCQs
 
 ## Key points
 

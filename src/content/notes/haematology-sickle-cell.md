@@ -9,26 +9,22 @@
 A hereditary hemoglobinopathy caused by a point mutation in the β‑globin gene (HBB) that produces haemoglobin S (HbS). When deoxygenated, HbS polymerises, distorting red cells into a sickle shape, leading to chronic haemolysis and vaso‑occlusion.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to disease |
-|---|---|
-| Red blood cell membrane | Polymerised HbS stiffens membrane → reduced deformability |
-| Microvasculature (arterioles, capillaries) | Narrow lumen predisposes to sickling‑induced blockage |
-| Spleen | Repeated infarction → functional asplenia, susceptibility to encapsulated organisms |
-| Bone marrow | Hyperplasia from chronic anaemia → marrow expansion, pain |
-| Liver & biliary system | Haemolysis → bilirubin overload, gallstones |
-| Kidney medulla | Hyperosmolar, low pH environment promotes sickling → papillary necrosis |
+- **Red blood cell membrane**: Polymerised HbS stiffens membrane → reduced deformability
+- **Microvasculature (arterioles, capillaries)**: Narrow lumen predisposes to sickling‑induced blockage
+- **Spleen**: Repeated infarction → functional asplenia, susceptibility to encapsulated organisms
+- **Bone marrow**: Hyperplasia from chronic anaemia → marrow expansion, pain
+- **Liver & biliary system**: Haemolysis → bilirubin overload, gallstones
+- **Kidney medulla**: Hyperosmolar, low pH environment promotes sickling → papillary necrosis
 
 ## Causes and risk factors  
-| Factor | Why it matters in Kenya |
-|---|---|
-| Homozygous HbSS genotype | Most severe phenotype, common in certain ethnic groups |
-| Heterozygous HbAS (trait) + other haemoglobinopathies (e.g., HbC) | Can modify severity when co‑inherited |
-| Co‑infection with malaria | Parasite‑induced haemolysis worsens anaemia; sickle cells confer some protection, altering prevalence |
-| HIV infection | Immunosuppression increases infection risk; drug interactions with hydroxyurea |
-| Tuberculosis | Chronic inflammation and marrow suppression exacerbate anaemia |
-| Recurrent bacterial infections (especially encapsulated) | Functional asplenia predisposes to sepsis |
-| Nutritional deficiencies (vit B12, folate) | Impair erythropoiesis, aggravate anaemia |
-| Dehydration, hypoxia, cold exposure | Promote sickling crises |
+- **Homozygous HbSS genotype**: Most severe phenotype, common in certain ethnic groups
+- **Heterozygous HbAS (trait) + other haemoglobinopathies (e.g., HbC)**: Can modify severity when co‑inherited
+- **Co‑infection with malaria**: Parasite‑induced haemolysis worsens anaemia; sickle cells confer some protection, altering prevalence
+- **HIV infection**: Immunosuppression increases infection risk; drug interactions with hydroxyurea
+- **Tuberculosis**: Chronic inflammation and marrow suppression exacerbate anaemia
+- **Recurrent bacterial infections (especially encapsulated)**: Functional asplenia predisposes to sepsis
+- **Nutritional deficiencies (vit B12, folate)**: Impair erythropoiesis, aggravate anaemia
+- **Dehydration, hypoxia, cold exposure**: Promote sickling crises
 
 ## Pathophysiology  
 Genetic mutation → HbS production → ↓ oxygen affinity → HbS polymerisation → RBC sickling → ↑ rigidity & adhesion → vaso‑occlusion → tissue ischaemia & pain → chronic haemolysis → anaemia, jaundice, gallstones → organ damage (splenic infarction → functional asplenia, renal papillary necrosis, pulmonary hypertension).  
@@ -40,34 +36,30 @@ Mutation → HbS → Polymerisation → Sickling → Occlusion → Ischaemia →
 
 ## Clinical features  
 
-| History domain | Key questions | Why it matters |
-|---|---|---|
-| **Pain** | Onset, location, duration, triggers, pattern (vaso‑occlusive crisis vs. chronic), response to analgesia | Pain is the hallmark of sickle cell disease (SCD). Vaso‑occlusive crises produce acute, severe, often migratory pain; chronic pain may indicate avascular necrosis or neuropathic component. |
-| **Fever / infection** | Recent fever, cough, dysuria, wound infection, sick contacts, HIV/TB status, malaria exposure | SCD patients have functional asplenia; infections (especially encapsulated bacteria, malaria, TB, HIV) precipitate crises and can be life‑threatening. |
-| **Anemia symptoms** | Fatigue, dyspnoea on exertion, palpitations, dizziness, jaundice | Chronic hemolysis leads to anemia; worsening may signal aplastic crisis, splenic sequestration, or hemolytic flare. |
-| **Growth & development** | Height/weight trends, school performance, puberty timing | Chronic disease and repeated crises can impair growth and delay puberty. |
-| **Past crises** | Number, severity, triggers, need for hospitalization, transfusions | Frequency of crises guides severity classification and prophylactic strategies. |
-| **Transfusion history** | Number of units, allo‑immunisation, iron overload symptoms | Repeated transfusions increase risk of allo‑antibodies and iron overload; influences future management. |
-| **Family history** | Sickle trait/disease in relatives, consanguinity | Autosomal recessive inheritance; carrier status in parents informs counselling. |
-| **Vaccination & prophylaxis** | Penicillin prophylaxis, pneumococcal, meningococcal, Hib vaccines, folic acid use | Prevents overwhelming infections; adherence reflects risk mitigation. |
-| **Co‑morbidities** | HIV status, TB treatment, malaria prophylaxis, rheumatic fever history | Co‑existing infections/tropical diseases exacerbate hemolysis and vaso‑occlusion. |
-| **Social factors** | Access to clean water, nutrition, distance to health facility | Determines ability to seek timely care during crises. |
+- **Pain**: Onset, location, duration, triggers, pattern (vaso‑occlusive crisis vs. chronic), response to analgesia — Pain is the hallmark of sickle cell disease (SCD). Vaso‑occlusive crises produce acute, severe, often migratory pain; chronic pain may indicate avascular necrosis or neuropathic component.
+- **Fever / infection**: Recent fever, cough, dysuria, wound infection, sick contacts, HIV/TB status, malaria exposure — SCD patients have functional asplenia; infections (especially encapsulated bacteria, malaria, TB, HIV) precipitate crises and can be life‑threatening.
+- **Anemia symptoms**: Fatigue, dyspnoea on exertion, palpitations, dizziness, jaundice — Chronic hemolysis leads to anemia; worsening may signal aplastic crisis, splenic sequestration, or hemolytic flare.
+- **Growth & development**: Height/weight trends, school performance, puberty timing — Chronic disease and repeated crises can impair growth and delay puberty.
+- **Past crises**: Number, severity, triggers, need for hospitalization, transfusions — Frequency of crises guides severity classification and prophylactic strategies.
+- **Transfusion history**: Number of units, allo‑immunisation, iron overload symptoms — Repeated transfusions increase risk of allo‑antibodies and iron overload; influences future management.
+- **Family history**: Sickle trait/disease in relatives, consanguinity — Autosomal recessive inheritance; carrier status in parents informs counselling.
+- **Vaccination & prophylaxis**: Penicillin prophylaxis, pneumococcal, meningococcal, Hib vaccines, folic acid use — Prevents overwhelming infections; adherence reflects risk mitigation.
+- **Co‑morbidities**: HIV status, TB treatment, malaria prophylaxis, rheumatic fever history — Co‑existing infections/tropical diseases exacerbate hemolysis and vaso‑occlusion.
+- **Social factors**: Access to clean water, nutrition, distance to health facility — Determines ability to seek timely care during crises.
 
 ### Examination findings and pathophysiologic basis  
 
-| Finding | Explanation |
-|---|---|
-| **Pallor** | Reduced hemoglobin from chronic hemolysis. |
-| **Jaundice (scleral, skin)** | Accumulation of unconjugated bilirubin due to increased red cell breakdown. |
-| **Splenomegaly (early childhood) → autosplenectomy (adolescence)** | Repeated splenic infarction leads to progressive fibrosis and loss of function; early enlargement reflects sequestration episodes. |
-| **Hepatomegaly** | Congestion from sickling in hepatic sinusoids; iron overload from transfusions. |
-| **Bone tenderness / swelling** | Vaso‑occlusion in marrow causing infarction; may progress to osteomyelitis (especially Salmonella). |
-| **Joint limitation** | Avascular necrosis of femoral/shoulder heads from repeated infarcts. |
-| **Growth retardation** | Chronic anemia and metabolic demand impair linear growth. |
-| **Cardiac murmur (flow murmur)** | High‑output state secondary to anemia. |
-| **Peripheral edema** | Renal concentrating defect or right‑heart strain from chronic anemia. |
-| **Neurological deficits** | Stroke from large‑vessel occlusion; silent infarcts present as subtle neurocognitive changes. |
-| **Chest findings (crepitations, tachypnoea)** | Acute chest syndrome – pulmonary vaso‑occlusion, infection, or fat embolism. |
+- **Pallor**: Reduced hemoglobin from chronic hemolysis.
+- **Jaundice (scleral, skin)**: Accumulation of unconjugated bilirubin due to increased red cell breakdown.
+- **Splenomegaly (early childhood) → autosplenectomy (adolescence)**: Repeated splenic infarction leads to progressive fibrosis and loss of function; early enlargement reflects sequestration episodes.
+- **Hepatomegaly**: Congestion from sickling in hepatic sinusoids; iron overload from transfusions.
+- **Bone tenderness / swelling**: Vaso‑occlusion in marrow causing infarction; may progress to osteomyelitis (especially Salmonella).
+- **Joint limitation**: Avascular necrosis of femoral/shoulder heads from repeated infarcts.
+- **Growth retardation**: Chronic anemia and metabolic demand impair linear growth.
+- **Cardiac murmur (flow murmur)**: High‑output state secondary to anemia.
+- **Peripheral edema**: Renal concentrating defect or right‑heart strain from chronic anemia.
+- **Neurological deficits**: Stroke from large‑vessel occlusion; silent infarcts present as subtle neurocognitive changes.
+- **Chest findings (crepitations, tachypnoea)**: Acute chest syndrome – pulmonary vaso‑occlusion, infection, or fat embolism.
 
 ---
 
@@ -89,21 +81,19 @@ Mutation → HbS → Polymerisation → Sickling → Occlusion → Ischaemia →
 
 ## Investigations  
 
-| Test | What it answers | Interpretation |
-|---|---|---|
-| **Complete blood count** | Anemia severity, leukocytosis, platelet count | Hb low, MCV normocytic, retic high (hemolysis) or low (aplastic) |
-| **Peripheral smear** | Presence of sickled erythrocytes, target cells, Howell‑Jolly bodies | Sickled cells confirm SCD; Howell‑Jolly → functional asplenia |
-| **Hemoglobin electrophoresis / HPLC** | Hb genotype, proportion of HbS, HbF, HbA | HbSS >90% HbS, HbSC shows HbS + HbC, HbF level predicts severity |
-| **Reticulocyte count** | Bone‑marrow response to anemia | Elevated in hemolysis, suppressed in aplastic crisis |
-| **Serum bilirubin (direct/indirect)** | Hemolysis vs. hepatic obstruction | Predominantly indirect bilirubin in hemolysis |
-| **Liver function tests** | Hepatopathy, iron overload | Elevated transaminases may indicate sickle‑cell hepatopathy |
-| **Renal function (creatinine, eGFR, urinalysis)** | Renal tubular dysfunction, proteinuria | Low concentrating ability, micro‑albuminuria signals early nephropathy |
-| **Chest X‑ray** | Acute chest syndrome, pneumonia | New infiltrate, pleural effusion |
-| **Ultrasound abdomen** | Splenic size (sequestration), hepatic congestion | Enlarged spleen in sequestration; shrunken in autosplenectomy |
-| **Blood cultures** | Bacterial sepsis | Positive growth guides antibiotics |
-| **Malaria rapid test / thick smear** | Malaria infection | Positive parasites confirm malaria |
-| **HIV test** | Co‑infection status | Positive → need integrated care |
-| **Iron studies (serum ferritin, transferrin saturation)** | Iron overload from transfusions | Ferritin markedly raised, saturation >50% |
+- **Complete blood count**: Anemia severity, leukocytosis, platelet count — Hb low, MCV normocytic, retic high (hemolysis) or low (aplastic)
+- **Peripheral smear**: Presence of sickled erythrocytes, target cells, Howell‑Jolly bodies — Sickled cells confirm SCD; Howell‑Jolly → functional asplenia
+- **Hemoglobin electrophoresis / HPLC**: Hb genotype, proportion of HbS, HbF, HbA — HbSS >90% HbS, HbSC shows HbS + HbC, HbF level predicts severity
+- **Reticulocyte count**: Bone‑marrow response to anemia — Elevated in hemolysis, suppressed in aplastic crisis
+- **Serum bilirubin (direct/indirect)**: Hemolysis vs. hepatic obstruction — Predominantly indirect bilirubin in hemolysis
+- **Liver function tests**: Hepatopathy, iron overload — Elevated transaminases may indicate sickle‑cell hepatopathy
+- **Renal function (creatinine, eGFR, urinalysis)**: Renal tubular dysfunction, proteinuria — Low concentrating ability, micro‑albuminuria signals early nephropathy
+- **Chest X‑ray**: Acute chest syndrome, pneumonia — New infiltrate, pleural effusion
+- **Ultrasound abdomen**: Splenic size (sequestration), hepatic congestion — Enlarged spleen in sequestration; shrunken in autosplenectomy
+- **Blood cultures**: Bacterial sepsis — Positive growth guides antibiotics
+- **Malaria rapid test / thick smear**: Malaria infection — Positive parasites confirm malaria
+- **HIV test**: Co‑infection status — Positive → need integrated care
+- **Iron studies (serum ferritin, transferrin saturation)**: Iron overload from transfusions — Ferritin markedly raised, saturation >50%
 
 ---
 
@@ -116,24 +106,20 @@ Mutation → HbS → Polymerisation → Sickling → Occlusion → Ischaemia →
 
 **Severity classification (adapted for Kenyan setting)**  
 
-| Category | Clinical parameters | Management implications |
-|---|---|---|
-| **Mild** | ≤2 pain crises/year, no hospitalisation for ACS, normal growth, Hb ≥ 8 g/dL, no organ damage | Routine prophylaxis, folic acid, vaccination, education; outpatient follow‑up. |
-| **Moderate** | 3–5 crises/year or ≥1 ACS episode, Hb 7–8 g/dL, mild splenomegaly or early organ changes, growth <5th percentile | Consider chronic transfusion programme, hydroxyurea initiation, regular monitoring of organ function. |
-| **Severe** | ≥6 crises/year or ≥2 ACS, Hb < 7 g/dL, documented stroke, avascular necrosis, renal/hepatic dysfunction, iron overload | Aggressive disease‑modifying therapy (hydroxyurea, chronic transfusion, possible bone‑marrow transplant referral), multidisciplinary care, close cardiac/renal surveillance. |
+- **Mild**: ≤2 pain crises/year, no hospitalisation for ACS, normal growth, Hb ≥ 8 g/dL, no organ damage — Routine prophylaxis, folic acid, vaccination, education; outpatient follow‑up.
+- **Moderate**: 3–5 crises/year or ≥1 ACS episode, Hb 7–8 g/dL, mild splenomegaly or early organ changes, growth <5th percentile — Consider chronic transfusion programme, hydroxyurea initiation, regular monitoring of organ function.
+- **Severe**: ≥6 crises/year or ≥2 ACS, Hb < 7 g/dL, documented stroke, avascular necrosis, renal/hepatic dysfunction, iron overload — Aggressive disease‑modifying therapy (hydroxyurea, chronic transfusion, possible bone‑marrow transplant referral), multidisciplinary care, close cardiac/renal surveillance.
 
 Severity guides intensity of disease‑modifying therapy, frequency of specialist review, and need for psychosocial support. Regular reassessment (at least annually) is essential, as disease trajectory can change with age, infection exposure, and treatment adherence.
 
 ## Management  
 
 **Immediate stabilisation**  
-| Situation | Action | Rationale |
-|---|---|---|
-| Acute vaso‑occlusive pain crisis | Give rapid‑acting opioid (e.g. morphine) + IV fluids (isotonic) | Relieve pain, improve microvascular flow, prevent dehydration‑induced sickling |
-| Acute chest syndrome (ACS) | Admit to high‑dependency, give supplemental O₂ to keep SpO₂ > 94 %, start broad‑spectrum antibiotics, consider blood transfusion | Prevent respiratory failure; infection and sickling both contribute |
-| Severe anaemia (Hb < 5 g/dL) or hemodynamic compromise | Urgent packed red cell transfusion (simple or exchange) | Improves oxygen‑carrying capacity, reduces sickled cells |
-| Stroke or neurologic deficit | Immediate exchange transfusion, start antiplatelet (aspirin) after imaging | Reduces Hb S proportion, limits infarct extension |
-| Fever > 38.5 °C in a child | Full septic work‑up, start empiric IV antibiotics (e.g. ceftriaxone) | Children with SCD are functionally asplenic |
+- **Acute vaso‑occlusive pain crisis**: Give rapid‑acting opioid (e.g. morphine) + IV fluids (isotonic) — Relieve pain, improve microvascular flow, prevent dehydration‑induced sickling
+- **Acute chest syndrome (ACS)**: Admit to high‑dependency, give supplemental O₂ to keep SpO₂ > 94 %, start broad‑spectrum antibiotics, consider blood transfusion — Prevent respiratory failure; infection and sickling both contribute
+- **Severe anaemia (Hb < 5 g/dL) or hemodynamic compromise**: Urgent packed red cell transfusion (simple or exchange) — Improves oxygen‑carrying capacity, reduces sickled cells
+- **Stroke or neurologic deficit**: Immediate exchange transfusion, start antiplatelet (aspirin) after imaging — Reduces Hb S proportion, limits infarct extension
+- **Fever > 38.5 °C in a child**: Full septic work‑up, start empiric IV antibiotics (e.g. ceftriaxone) — Children with SCD are functionally asplenic
 
 **Definitive treatment**  
 - **Hydroxyurea** (myelosuppressive agent) – increases fetal haemoglobin, lowers VOC frequency, reduces transfusion need. Start after baseline blood counts, monitor CBC every 4 weeks.  
@@ -158,17 +144,15 @@ Severity guides intensity of disease‑modifying therapy, frequency of specialis
 
 ## Complications and prognosis  
 
-| Complication | Typical presentation | Key preventive / therapeutic measure |
-|---|---|---|
-| Acute chest syndrome | New infiltrate + fever + chest pain or dyspnoea | Early antibiotics, O₂, transfusion, incentive spirometry |
-| Stroke (ischemic) | Focal neuro deficit, seizures | TCD screening, chronic transfusion, aspirin |
-| Splenic sequestration | Rapid abdominal distension, falling Hb, thrombocytopenia | Immediate transfusion, splenectomy if recurrent |
-| Aplastic crisis (parvovirus B19) | Sudden severe anaemia, low retic count | Supportive care, transfusion; monitor for recovery |
-| Chronic kidney disease | Proteinuria, rising creatinine | ACE‑inhibitor/ARB, control hypertension, avoid nephrotoxins |
-| Leg ulcers | Chronic painful ulcer on lower leg | Wound care, compression, optimise haemoglobin |
-| Gallstones (pigment) | RUQ pain, jaundice | Ultrasound screening, cholecystectomy if symptomatic |
-| Priapism (male) | Persistent painful erection > 4 h | Ice packs, analgesia, aspiration ± phenylephrine; urology referral |
-| Iron overload (from transfusion) | Elevated ferritin, organ dysfunction | Iron chelation therapy (deferasirox, deferoxamine) |
+- **Acute chest syndrome**: New infiltrate + fever + chest pain or dyspnoea — Early antibiotics, O₂, transfusion, incentive spirometry
+- **Stroke (ischemic)**: Focal neuro deficit, seizures — TCD screening, chronic transfusion, aspirin
+- **Splenic sequestration**: Rapid abdominal distension, falling Hb, thrombocytopenia — Immediate transfusion, splenectomy if recurrent
+- **Aplastic crisis (parvovirus B19)**: Sudden severe anaemia, low retic count — Supportive care, transfusion; monitor for recovery
+- **Chronic kidney disease**: Proteinuria, rising creatinine — ACE‑inhibitor/ARB, control hypertension, avoid nephrotoxins
+- **Leg ulcers**: Chronic painful ulcer on lower leg — Wound care, compression, optimise haemoglobin
+- **Gallstones (pigment)**: RUQ pain, jaundice — Ultrasound screening, cholecystectomy if symptomatic
+- **Priapism (male)**: Persistent painful erection > 4 h — Ice packs, analgesia, aspiration ± phenylephrine; urology referral
+- **Iron overload (from transfusion)**: Elevated ferritin, organ dysfunction — Iron chelation therapy (deferasirox, deferoxamine)
 
 **Prognosis** – With modern preventive care (vaccination, penicillin, hydroxyurea, transfusion programmes) life expectancy in Kenya approaches 50–60 years, but morbidity from organ damage remains high. Early detection of complications and adherence to therapy are the main determinants of outcome.
 

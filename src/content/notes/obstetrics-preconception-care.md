@@ -1,4 +1,4 @@
-# Pre-conception care — Year 4 Obstetrics and Gynaecology Notes
+# Pre-conception care
 
 *Based on the Department's pre-conception care lectures. Many serious problems in pregnancy are decided before the woman knows she is pregnant, so this is the cheapest and earliest intervention in obstetrics.*
 
@@ -22,14 +22,12 @@
 
 ## 3. Who is at risk? (the reproductive health risk list)
 
-| Risk | Examples |
-|---|---|
-| **Age and parity** | Under 18 or over 35; **grand multiparity** (gravida 5 and above); short birth interval |
-| **Social** | Low socio-economic status, gender-based violence, **FGM**, **early marriage**, harmful food taboos and delays in seeking care |
-| **Previous adverse outcomes** | Recurrent miscarriages, **stillbirth**, early neonatal death, a baby with a **congenital abnormality** |
-| **Medical conditions** | **Anaemia, malaria, HIV/AIDS, TB, STIs**, heart disease, **diabetes, sickle cell disease**, asthma, **hypertension**, kidney disease, **ABO and rhesus incompatibility**, breast and cervical cancer |
-| **Obstetric complications** | Previous **postpartum haemorrhage**, **caesarean section scars**, previous **preterm labour**, previous **pre-eclampsia or eclampsia** |
-| **Substances** | Smoking, alcohol, drugs, **teratogenic prescription or over-the-counter medicines**, herbs |
+- **Age and parity**: Under 18 or over 35; **grand multiparity** (gravida 5 and above); short birth interval
+- **Social**: Low socio-economic status, gender-based violence, **FGM**, **early marriage**, harmful food taboos and delays in seeking care
+- **Previous adverse outcomes**: Recurrent miscarriages, **stillbirth**, early neonatal death, a baby with a **congenital abnormality**
+- **Medical conditions**: **Anaemia, malaria, HIV/AIDS, TB, STIs**, heart disease, **diabetes, sickle cell disease**, asthma, **hypertension**, kidney disease, **ABO and rhesus incompatibility**, breast and cervical cancer
+- **Obstetric complications**: Previous **postpartum haemorrhage**, **caesarean section scars**, previous **preterm labour**, previous **pre-eclampsia or eclampsia**
+- **Substances**: Smoking, alcohol, drugs, **teratogenic prescription or over-the-counter medicines**, herbs
 
 ## 4. History: take it in eight parts
 
@@ -48,14 +46,12 @@ Examine **general health, blood pressure, weight and BMI**, thyroid, heart and l
 
 **Minimum investigations:**
 
-| Test | The question it answers |
-|---|---|
-| **Full blood count** | Anaemia, sickle cell trait signs, haemoglobinopathy |
-| **Random blood sugar** | Diabetes (a major cause of malformations when poorly controlled) |
-| **Syphilis test** | Congenital syphilis can be prevented |
-| **HIV test** | Start treatment before pregnancy to prevent mother-to-child transmission |
-| **Blood group and rhesus** | Plan for rhesus incompatibility |
-| **Urinalysis** | Infection, protein, sugar |
+- **Full blood count**: Anaemia, sickle cell trait signs, haemoglobinopathy
+- **Random blood sugar**: Diabetes (a major cause of malformations when poorly controlled)
+- **Syphilis test**: Congenital syphilis can be prevented
+- **HIV test**: Start treatment before pregnancy to prevent mother-to-child transmission
+- **Blood group and rhesus**: Plan for rhesus incompatibility
+- **Urinalysis**: Infection, protein, sugar
 
 Add rubella immunity, hepatitis B, haemoglobin electrophoresis, thyroid function and genetic tests **as the history suggests**.
 

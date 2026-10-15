@@ -8,27 +8,23 @@
 Haemolytic anaemia is a reduction in haemoglobin concentration caused by premature destruction of red blood cells (RBCs) either within the circulation (intravascular) or in the reticulo‑endothelial system (extravascular), leading to a compensatory increase in erythropoiesis that is insufficient to maintain normal haematocrit.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to haemolysis |
-|---|---|
-| RBC membrane | Defects (e.g., hereditary spherocytosis) make cells fragile → splenic sequestration |
-| Cytoskeleton (spectrin, ankyrin) | Mutations alter deformability → intravascular rupture |
-| Spleen | Primary site of extravascular removal of opsonised or rigid cells |
-| Liver (Kupffer cells) | Clears circulating free haemoglobin and damaged cells |
-| Bone marrow | Increases erythropoietin‑driven reticulocytosis as compensation |
-| Complement system | Auto‑antibody activation can tag RBCs for destruction |
-| Haptoglobin & hemopexin | Bind free haemoglobin/heme; depleted in massive intravascular haemolysis |
+- **RBC membrane**: Defects (e.g., hereditary spherocytosis) make cells fragile → splenic sequestration
+- **Cytoskeleton (spectrin, ankyrin)**: Mutations alter deformability → intravascular rupture
+- **Spleen**: Primary site of extravascular removal of opsonised or rigid cells
+- **Liver (Kupffer cells)**: Clears circulating free haemoglobin and damaged cells
+- **Bone marrow**: Increases erythropoietin‑driven reticulocytosis as compensation
+- **Complement system**: Auto‑antibody activation can tag RBCs for destruction
+- **Haptoglobin & hemopexin**: Bind free haemoglobin/heme; depleted in massive intravascular haemolysis
 
 ## Causes and risk factors  
 
-| Category | Common aetiologies in Kenya |
-|---|---|
-| Immune‑mediated | Autoimmune haemolytic anaemia (warm IgG, cold IgM), drug‑induced (e.g., penicillins, quinine) |
-| Infectious | Malaria (Plasmodium falciparum), HIV‑related immune dysregulation, acute bacterial sepsis (e.g., *Clostridium perfringens*), TB (rarely) |
-| Hemoglobinopathies | Sickle cell disease, thalassaemia intermedia |
-| Enzyme deficiencies | G6PD deficiency (triggered by antimalarials, sulfa drugs, fava beans) |
-| Membrane disorders | Hereditary spherocytosis, hereditary elliptocytosis |
-| Mechanical | Prosthetic heart valves, severe malaria‑induced microvascular obstruction |
-| Miscellaneous tropical | Babesiosis (rare), leishmaniasis (splenic sequestration) |
+- **Immune‑mediated**: Autoimmune haemolytic anaemia (warm IgG, cold IgM), drug‑induced (e.g., penicillins, quinine)
+- **Infectious**: Malaria (Plasmodium falciparum), HIV‑related immune dysregulation, acute bacterial sepsis (e.g., *Clostridium perfringens*), TB (rarely)
+- **Hemoglobinopathies**: Sickle cell disease, thalassaemia intermedia
+- **Enzyme deficiencies**: G6PD deficiency (triggered by antimalarials, sulfa drugs, fava beans)
+- **Membrane disorders**: Hereditary spherocytosis, hereditary elliptocytosis
+- **Mechanical**: Prosthetic heart valves, severe malaria‑induced microvascular obstruction
+- **Miscellaneous tropical**: Babesiosis (rare), leishmaniasis (splenic sequestration)
 
 Risk factors specific to our setting include high malaria transmission zones, widespread use of antimalarials and sulfa drugs, HIV prevalence, and consanguinity in certain communities increasing hereditary disorders.
 
@@ -44,20 +40,18 @@ Risk factors specific to our setting include high malaria transmission zones, wi
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Onset & tempo** | “When did you first notice symptoms? Sudden vs. gradual?” | Acute hemolysis (e.g., malaria, drug‑induced) gives rapid onset; chronic hemolysis (e.g., sickle cell, hereditary spherocytosis) is insidious. |
-| **Fever / infection** | Recent fever, cough, night sweats, TB exposure, HIV status, malaria travel | Infections can trigger immune hemolysis or cause direct parasite‑mediated RBC destruction. |
-| **Jaundice** | Yellow eyes or skin, dark urine, timing relative to illness | Unconjugated bilirubin rises from rapid breakdown of hemoglobin; urine may be dark from hemoglobinuria. |
-| **Fatigue & dyspnoea** | “Do you feel unusually tired or short‑of‑breath on exertion?” | Anemia reduces oxygen‑carrying capacity; hemolysis also reduces functional RBC mass. |
-| **Chest pain / palpitations** | Chest discomfort, rapid heartbeat | Tissue hypoxia and high-output cardiac state can precipitate angina or arrhythmias. |
-| **Abdominal pain** | Right upper quadrant discomfort, splenomegaly symptoms | Enlarged spleen from sequestration of damaged RBCs can cause pain; hepatic congestion from bilirubin overload. |
-| **Dark urine / hemoglobinuria** | “Is your urine tea‑coloured or reddish?” | Free hemoglobin filtered by kidneys when intravascular hemolysis overwhelms haptoglobin. |
-| **Pruritus after bathing** | “Do you itch after a hot shower?” | Biliary salts from unconjugated bilirubin can deposit in skin, causing cholestatic pruritus. |
-| **History of drugs / toxins** | Recent antibiotics, antimalarials, herbal remedies, quinine, dapsone | Many drugs act as haptens, provoking immune‑mediated RBC destruction. |
-| **Family history** | “Any relatives with anemia, jaundice, gallstones?” | Inherited membrane or enzyme defects (spherocytosis, G6PD deficiency) are familial. |
-| **Ethnicity / geography** | Kenyan, tribal background, residence in malaria‑endemic area | Sickle cell trait, G6PD variants, malaria exposure are more prevalent locally. |
-| **Past medical history** | Known HIV, TB, autoimmune disease, splenectomy | HIV‑associated autoimmune hemolysis; TB drugs (rifampicin) can trigger hemolysis; splenectomy predisposes to certain hemolytic processes. |
+- **Onset & tempo**: “When did you first notice symptoms? Sudden vs. gradual?” — Acute hemolysis (e.g., malaria, drug‑induced) gives rapid onset; chronic hemolysis (e.g., sickle cell, hereditary spherocytosis) is insidious.
+- **Fever / infection**: Recent fever, cough, night sweats, TB exposure, HIV status, malaria travel — Infections can trigger immune hemolysis or cause direct parasite‑mediated RBC destruction.
+- **Jaundice**: Yellow eyes or skin, dark urine, timing relative to illness — Unconjugated bilirubin rises from rapid breakdown of hemoglobin; urine may be dark from hemoglobinuria.
+- **Fatigue & dyspnoea**: “Do you feel unusually tired or short‑of‑breath on exertion?” — Anemia reduces oxygen‑carrying capacity; hemolysis also reduces functional RBC mass.
+- **Chest pain / palpitations**: Chest discomfort, rapid heartbeat — Tissue hypoxia and high-output cardiac state can precipitate angina or arrhythmias.
+- **Abdominal pain**: Right upper quadrant discomfort, splenomegaly symptoms — Enlarged spleen from sequestration of damaged RBCs can cause pain; hepatic congestion from bilirubin overload.
+- **Dark urine / hemoglobinuria**: “Is your urine tea‑coloured or reddish?” — Free hemoglobin filtered by kidneys when intravascular hemolysis overwhelms haptoglobin.
+- **Pruritus after bathing**: “Do you itch after a hot shower?” — Biliary salts from unconjugated bilirubin can deposit in skin, causing cholestatic pruritus.
+- **History of drugs / toxins**: Recent antibiotics, antimalarials, herbal remedies, quinine, dapsone — Many drugs act as haptens, provoking immune‑mediated RBC destruction.
+- **Family history**: “Any relatives with anemia, jaundice, gallstones?” — Inherited membrane or enzyme defects (spherocytosis, G6PD deficiency) are familial.
+- **Ethnicity / geography**: Kenyan, tribal background, residence in malaria‑endemic area — Sickle cell trait, G6PD variants, malaria exposure are more prevalent locally.
+- **Past medical history**: Known HIV, TB, autoimmune disease, splenectomy — HIV‑associated autoimmune hemolysis; TB drugs (rifampicin) can trigger hemolysis; splenectomy predisposes to certain hemolytic processes.
 
 **Examination findings**  
 
@@ -91,21 +85,19 @@ Risk factors specific to our setting include high malaria transmission zones, wi
 
 ## Investigations  
 
-| Test | What it answers | Interpretation |
-|---|---|---|
-| Full blood count with reticulocyte count | Anemia severity, marrow response | Low Hb + high retic = hemolysis; low retic suggests marrow failure. |
-| Peripheral blood smear | Morphology of RBCs | Spherocytes → hereditary spherocytosis/AIHA; bite cells → G6PD; schistocytes → TMA; sickle cells → sickle disease. |
-| Direct antiglobulin test (DAT/Coombs) | Immune vs. non‑immune hemolysis | Positive = AIHA or drug‑induced immune; negative points to non‑immune causes. |
-| Serum bilirubin (total & direct) | Unconjugated vs. conjugated rise | Predominantly indirect ↑ → hemolysis; direct ↑ suggests hepatic obstruction. |
-| Lactate dehydrogenase (LDH) | Cell turnover | Markedly elevated in hemolysis; normal in anemia of chronic disease. |
-| Haptoglobin | Free hemoglobin binding capacity | Low/undetectable in intravascular hemolysis; normal in extravascular. |
-| Urine dipstick for blood & microscopy | Hemoglobinuria vs. hematuria | Positive dipstick, no RBCs → hemoglobinuria (intravascular). |
-| G6PD assay | Enzyme deficiency | Low activity confirms G6PD deficiency; avoid oxidative drugs. |
-| Hemoglobin electrophoresis / HPLC | Hemoglobin variants | Detects HbS, HbC, HbF elevations; confirms sickle cell or thalassemia. |
-| Malaria rapid diagnostic test / thick smear | Parasite presence | Positive → malaria‑related hemolysis; treat accordingly. |
-| HIV serology & viral load | Underlying infection | HIV can cause immune hemolysis; antiretroviral therapy needed. |
-| TB screening (GeneXpert, sputum) | Co‑existing infection | TB drugs may precipitate hemolysis; treat TB concurrently. |
-| ADAMTS13 activity (if TMA suspected) | Distinguish TTP | Severely reduced activity supports TTP; requires plasma exchange. |
+- **Full blood count with reticulocyte count**: Anemia severity, marrow response — Low Hb + high retic = hemolysis; low retic suggests marrow failure.
+- **Peripheral blood smear**: Morphology of RBCs — Spherocytes → hereditary spherocytosis/AIHA; bite cells → G6PD; schistocytes → TMA; sickle cells → sickle disease.
+- **Direct antiglobulin test (DAT/Coombs)**: Immune vs. non‑immune hemolysis — Positive = AIHA or drug‑induced immune; negative points to non‑immune causes.
+- **Serum bilirubin (total & direct)**: Unconjugated vs. conjugated rise — Predominantly indirect ↑ → hemolysis; direct ↑ suggests hepatic obstruction.
+- **Lactate dehydrogenase (LDH)**: Cell turnover — Markedly elevated in hemolysis; normal in anemia of chronic disease.
+- **Haptoglobin**: Free hemoglobin binding capacity — Low/undetectable in intravascular hemolysis; normal in extravascular.
+- **Urine dipstick for blood & microscopy**: Hemoglobinuria vs. hematuria — Positive dipstick, no RBCs → hemoglobinuria (intravascular).
+- **G6PD assay**: Enzyme deficiency — Low activity confirms G6PD deficiency; avoid oxidative drugs.
+- **Hemoglobin electrophoresis / HPLC**: Hemoglobin variants — Detects HbS, HbC, HbF elevations; confirms sickle cell or thalassemia.
+- **Malaria rapid diagnostic test / thick smear**: Parasite presence — Positive → malaria‑related hemolysis; treat accordingly.
+- **HIV serology & viral load**: Underlying infection — HIV can cause immune hemolysis; antiretroviral therapy needed.
+- **TB screening (GeneXpert, sputum)**: Co‑existing infection — TB drugs may precipitate hemolysis; treat TB concurrently.
+- **ADAMTS13 activity (if TMA suspected)**: Distinguish TTP — Severely reduced activity supports TTP; requires plasma exchange.
 
 ---
 
@@ -124,27 +116,23 @@ Severity guides urgency of transfusion, need for intensive monitoring, and wheth
 ## Management  
 
 **Immediate stabilisation**  
-| Issue | Action | Rationale |
-|---|---|---|
-| Severe anaemia (Hb < 6 g/dL) | Transfuse packed red cells (type‑specific, cross‑matched) | Restores oxygen‑carrying capacity; avoid over‑transfusion in chronic hemolysis |
-| Acute hemolysis with renal risk | Give isotonic IV fluids (e.g., normal saline) ± diuretics if oliguric | Prevents pigment nephropathy; maintain urine output |
-| Hyperbilirubinaemia with risk of kernicterus (neonate) | Phototherapy or exchange transfusion as per protocol | Reduces unconjugated bilirubin load |
-| Severe thrombocytopaenia or coagulopathy | Replace platelets / fresh frozen plasma if bleeding | Controls hemorrhagic complications |
-| Hypotension/shock | Fluid resuscitation, vasopressors if needed | Maintains perfusion to vital organs |
+- **Severe anaemia (Hb < 6 g/dL)**: Transfuse packed red cells (type‑specific, cross‑matched) — Restores oxygen‑carrying capacity; avoid over‑transfusion in chronic hemolysis
+- **Acute hemolysis with renal risk**: Give isotonic IV fluids (e.g., normal saline) ± diuretics if oliguric — Prevents pigment nephropathy; maintain urine output
+- **Hyperbilirubinaemia with risk of kernicterus (neonate)**: Phototherapy or exchange transfusion as per protocol — Reduces unconjugated bilirubin load
+- **Severe thrombocytopaenia or coagulopathy**: Replace platelets / fresh frozen plasma if bleeding — Controls hemorrhagic complications
+- **Hypotension/shock**: Fluid resuscitation, vasopressors if needed — Maintains perfusion to vital organs
 
 **Definitive treatment** – directed at the underlying cause  
 
-| Underlying cause | First‑line therapy (drug class) | Adjuncts / special considerations |
-|---|---|---|
-| Autoimmune (warm) AIHA | Corticosteroids (e.g., prednisolone) | Taper once Hb stabilises; consider rituximab if refractory |
-| Autoimmune (cold) AIHA | Avoid cold exposure; rituximab ± complement inhibitor | Splenectomy rarely needed |
-| Hereditary spherocytosis / G6PD deficiency | Folate supplementation; splenectomy for spherocytosis if symptomatic | Avoid oxidant drugs, infections, and certain foods in G6PD |
-| Sickle cell disease with hemolysis | Hydroxyurea (disease‑modifying) + analgesia; consider chronic transfusion program | Vaccinate against encapsulated organisms; penicillin prophylaxis in children |
-| Malaria‑induced hemolysis | Artemisinin‑based combination therapy (ACT) | Treat concurrently for anemia; monitor for delayed hemolysis |
-| HIV‑associated hemolysis | Optimise antiretroviral therapy; treat opportunistic infections | Screen for drug‑induced hemolysis (e.g., TMP‑SMX) |
-| TB‑associated hemolysis | Standard anti‑TB regimen; corticosteroids if immune‑mediated | Monitor liver function; avoid hemolytic drugs |
-| Paroxysmal nocturnal hemoglobinuria | Eculizumab (complement inhibitor) or ravulizumab | Vaccinate against meningococcus before start |
-| Drug‑induced immune hemolysis | Discontinue offending drug | Supportive transfusion if needed |
+- **Autoimmune (warm) AIHA**: Corticosteroids (e.g., prednisolone) — Taper once Hb stabilises; consider rituximab if refractory
+- **Autoimmune (cold) AIHA**: Avoid cold exposure; rituximab ± complement inhibitor — Splenectomy rarely needed
+- **Hereditary spherocytosis / G6PD deficiency**: Folate supplementation; splenectomy for spherocytosis if symptomatic — Avoid oxidant drugs, infections, and certain foods in G6PD
+- **Sickle cell disease with hemolysis**: Hydroxyurea (disease‑modifying) + analgesia; consider chronic transfusion program — Vaccinate against encapsulated organisms; penicillin prophylaxis in children
+- **Malaria‑induced hemolysis**: Artemisinin‑based combination therapy (ACT) — Treat concurrently for anemia; monitor for delayed hemolysis
+- **HIV‑associated hemolysis**: Optimise antiretroviral therapy; treat opportunistic infections — Screen for drug‑induced hemolysis (e.g., TMP‑SMX)
+- **TB‑associated hemolysis**: Standard anti‑TB regimen; corticosteroids if immune‑mediated — Monitor liver function; avoid hemolytic drugs
+- **Paroxysmal nocturnal hemoglobinuria**: Eculizumab (complement inhibitor) or ravulizumab — Vaccinate against meningococcus before start
+- **Drug‑induced immune hemolysis**: Discontinue offending drug — Supportive transfusion if needed
 
 **Monitoring & follow‑up**  
 - Daily Hb, reticulocyte count, LDH, bilirubin until stable.  
@@ -163,15 +151,13 @@ Severity guides urgency of transfusion, need for intensive monitoring, and wheth
 
 ## Complications and prognosis  
 
-| Complication | Mechanism | Clinical impact |
-|---|---|---|
-| Iron overload | Repeated transfusions → excess iron deposition | Cardiac failure, hepatic cirrhosis, endocrine dysfunction; monitor ferritin, consider chelation |
-| Pigment nephropathy | Hemoglobin casts obstruct tubules | Acute kidney injury; may need dialysis |
-| Gallstones (pigment) | Chronic bilirubin excess | Biliary colic, cholangitis; ultrasound screening in chronic hemolysis |
-| Aplastic crisis | Parvovirus B19 infection in patients with high turnover | Sudden severe anemia; supportive transfusion |
-| Thromboembolism | Hyper‑coagulable state in hemolysis (free hemoglobin scavenges NO) | Deep vein thrombosis, pulmonary embolism; consider prophylaxis in high‑risk |
-| Splenic sequestration (sickle cell) | Acute splenic pooling of blood | Rapid drop in Hb, hypovolaemia; emergency transfusion & splenectomy if recurrent |
-| Autoimmune hemolysis relapse | Inadequate immunosuppression | Chronic morbidity; requires long‑term monitoring |
+- **Iron overload**: Repeated transfusions → excess iron deposition — Cardiac failure, hepatic cirrhosis, endocrine dysfunction; monitor ferritin, consider chelation
+- **Pigment nephropathy**: Hemoglobin casts obstruct tubules — Acute kidney injury; may need dialysis
+- **Gallstones (pigment)**: Chronic bilirubin excess — Biliary colic, cholangitis; ultrasound screening in chronic hemolysis
+- **Aplastic crisis**: Parvovirus B19 infection in patients with high turnover — Sudden severe anemia; supportive transfusion
+- **Thromboembolism**: Hyper‑coagulable state in hemolysis (free hemoglobin scavenges NO) — Deep vein thrombosis, pulmonary embolism; consider prophylaxis in high‑risk
+- **Splenic sequestration (sickle cell)**: Acute splenic pooling of blood — Rapid drop in Hb, hypovolaemia; emergency transfusion & splenectomy if recurrent
+- **Autoimmune hemolysis relapse**: Inadequate immunosuppression — Chronic morbidity; requires long‑term monitoring
 
 **Prognosis** depends on cause:  
 - AIHA: good with steroids/rituximab, poorer if refractory.  

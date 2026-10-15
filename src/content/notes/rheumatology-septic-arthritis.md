@@ -11,18 +11,16 @@ Septic arthritis (also called infectious arthritis) is an acute, usually bacteri
 - **Joint defence** – synovial fluid contains neutrophils and complement; however, the avascular cartilage lacks intrinsic immune cells, making it vulnerable once bacteria breach the synovium.
 
 ## Causes and risk factors
-| Category | Common agents / conditions | Why relevant in Kenya |
-|---|---|---|
-| Bacterial | *Staphylococcus aureus* (incl. MRSA), *Streptococcus pyogenes*, *Neisseria gonorrhoeae* | Most frequent; skin colonisation and STIs common |
-| Gram‑negative rods | *Klebsiella*, *E. coli*, *Pseudomonas* | Urinary or gastrointestinal sources, especially in immunocompromised |
-| Mycobacterial | *Mycobacterium tuberculosis* | High TB prevalence; often sub‑acute presentation |
-| Fungal | *Candida* spp., *Cryptococcus* | HIV, prolonged steroids |
-| Viral (rare) | Parvovirus B19, Hepatitis B | May mimic but not true septic arthritis |
-| Trauma | Open fractures, intra‑articular injections | Direct inoculation |
-| Joint disease | Rheumatoid arthritis, osteoarthritis | Damaged cartilage and synovium lower barrier |
-| Systemic risk factors | HIV infection, sickle cell disease, diabetes, chronic kidney disease, malnutrition | Impaired immunity, sickle cell vaso‑occlusion predisposes to Salmonella |
-| Tropical infections | *Salmonella* (especially in sickle cell), *Burkholderia pseudomallei* (melioidosis) | Environmental exposure in rural settings |
-| Iatrogenic | Arthroscopy, joint aspiration, intra‑articular steroids | Breach of sterile barrier |
+- **Bacterial**: *Staphylococcus aureus* (incl. MRSA), *Streptococcus pyogenes*, *Neisseria gonorrhoeae* — Most frequent; skin colonisation and STIs common
+- **Gram‑negative rods**: *Klebsiella*, *E. coli*, *Pseudomonas* — Urinary or gastrointestinal sources, especially in immunocompromised
+- **Mycobacterial**: *Mycobacterium tuberculosis* — High TB prevalence; often sub‑acute presentation
+- **Fungal**: *Candida* spp., *Cryptococcus* — HIV, prolonged steroids
+- **Viral (rare)**: Parvovirus B19, Hepatitis B — May mimic but not true septic arthritis
+- **Trauma**: Open fractures, intra‑articular injections — Direct inoculation
+- **Joint disease**: Rheumatoid arthritis, osteoarthritis — Damaged cartilage and synovium lower barrier
+- **Systemic risk factors**: HIV infection, sickle cell disease, diabetes, chronic kidney disease, malnutrition — Impaired immunity, sickle cell vaso‑occlusion predisposes to Salmonella
+- **Tropical infections**: *Salmonella* (especially in sickle cell), *Burkholderia pseudomallei* (melioidosis) — Environmental exposure in rural settings
+- **Iatrogenic**: Arthroscopy, joint aspiration, intra‑articular steroids — Breach of sterile barrier
 
 ## Pathophysiology
 1. **Bacterial entry** → hematogenous spread, direct inoculation, or contiguous spread from osteomyelitis.  
@@ -37,31 +35,27 @@ Septic arthritis (also called infectious arthritis) is an acute, usually bacteri
 
 ## Clinical features  
 
-| History element | Why it matters |
-|---|---|
-| **Onset** – rapid (hours‑days) vs insidious | Septic arthritis classically has an acute, fulminant onset; a slower course suggests crystal arthropathy or sub‑acute TB arthritis. |
-| **Pain** – severe, constant, worsens with movement | Infection inflames the synovium and joint capsule, producing intense nociceptive pain; mechanical irritation is less prominent in non‑infective arthritis. |
-| **Swelling** – tense, warm, often unilateral | Synovial exudate and hyperemia raise intra‑articular pressure; warmth reflects increased blood flow from inflammatory mediators. |
-| **Fever** – documented or subjective chills | Systemic response to bacterial toxins; absence does not exclude infection, especially in immunocompromised or elderly patients. |
-| **Joint involved** – large joints (knee, hip, shoulder) most common; small joints possible in children or TB | Large joints have more synovial tissue and are more prone to hematogenous seeding; TB often affects weight‑bearing joints. |
-| **Recent trauma or intra‑articular procedure** | Provides a portal for bacteria; even minor skin breaches can seed the joint via bloodstream. |
-| **Co‑morbidities** – HIV, diabetes, sickle‑cell disease, chronic steroid use, recent malaria or TB treatment | Impair immune defenses, increase bacteremia risk, and may alter typical organism profile (e.g., Salmonella in sickle‑cell). |
-| **Drug history** – recent antibiotics, immunosuppressants | May mask fever or alter culture yield; immunosuppression predisposes to atypical organisms. |
-| **Systemic symptoms** – weight loss, night sweats, cough | Suggest alternative diagnoses such as TB or disseminated fungal infection. |
-| **Functional limitation** – inability to bear weight or use the limb | Reflects joint effusion and pain; severe limitation raises concern for rapid joint destruction. |
+- **Onset – rapid (hours‑days) vs insidious**: Septic arthritis classically has an acute, fulminant onset; a slower course suggests crystal arthropathy or sub‑acute TB arthritis.
+- **Pain – severe, constant, worsens with movement**: Infection inflames the synovium and joint capsule, producing intense nociceptive pain; mechanical irritation is less prominent in non‑infective arthritis.
+- **Swelling – tense, warm, often unilateral**: Synovial exudate and hyperemia raise intra‑articular pressure; warmth reflects increased blood flow from inflammatory mediators.
+- **Fever – documented or subjective chills**: Systemic response to bacterial toxins; absence does not exclude infection, especially in immunocompromised or elderly patients.
+- **Joint involved – large joints (knee, hip, shoulder) most common; small joints possible in children or TB**: Large joints have more synovial tissue and are more prone to hematogenous seeding; TB often affects weight‑bearing joints.
+- **Recent trauma or intra‑articular procedure**: Provides a portal for bacteria; even minor skin breaches can seed the joint via bloodstream.
+- **Co‑morbidities – HIV, diabetes, sickle‑cell disease, chronic steroid use, recent malaria or TB treatment**: Impair immune defenses, increase bacteremia risk, and may alter typical organism profile (e.g., Salmonella in sickle‑cell).
+- **Drug history – recent antibiotics, immunosuppressants**: May mask fever or alter culture yield; immunosuppression predisposes to atypical organisms.
+- **Systemic symptoms – weight loss, night sweats, cough**: Suggest alternative diagnoses such as TB or disseminated fungal infection.
+- **Functional limitation – inability to bear weight or use the limb**: Reflects joint effusion and pain; severe limitation raises concern for rapid joint destruction.
 
 ### Examination findings and pathophysiologic basis  
 
-| Finding | Reason it occurs |
-|---|---|
-| **Joint effusion** – visible swelling, bulging capsule | Accumulation of purulent synovial fluid raises intra‑articular pressure. |
-| **Warmth & erythema** – localized increase in temperature, redness | Vasodilation and hyperemia driven by cytokines (IL‑1, TNF‑α). |
-| **Tenderness** – disproportionate to range of motion | Inflammatory mediators sensitize nociceptors in the synovium and capsule. |
-| **Reduced active & passive ROM** – especially painful on passive movement | Joint capsule stretch stimulates pain fibers; effusion mechanically limits motion. |
-| **Joint instability or crepitus** – may appear later | Cartilage destruction and ligamentous laxity from enzymatic degradation. |
-| **Systemic signs** – tachycardia, fever, hypotension (if sepsis) | Reflect systemic inflammatory response; important for severity assessment. |
-| **Skin changes** – punctate lesions, ulceration, sinus tract (especially in TB) | Direct extension of infection from adjacent skin or chronic draining sinuses. |
-| **Neurovascular status** – intact distal pulses, sensation | Needed to rule out compartment syndrome or vascular compromise secondary to swelling. |
+- **Joint effusion – visible swelling, bulging capsule**: Accumulation of purulent synovial fluid raises intra‑articular pressure.
+- **Warmth & erythema – localized increase in temperature, redness**: Vasodilation and hyperemia driven by cytokines (IL‑1, TNF‑α).
+- **Tenderness – disproportionate to range of motion**: Inflammatory mediators sensitize nociceptors in the synovium and capsule.
+- **Reduced active & passive ROM – especially painful on passive movement**: Joint capsule stretch stimulates pain fibers; effusion mechanically limits motion.
+- **Joint instability or crepitus – may appear later**: Cartilage destruction and ligamentous laxity from enzymatic degradation.
+- **Systemic signs – tachycardia, fever, hypotension (if sepsis)**: Reflect systemic inflammatory response; important for severity assessment.
+- **Skin changes – punctate lesions, ulceration, sinus tract (especially in TB)**: Direct extension of infection from adjacent skin or chronic draining sinuses.
+- **Neurovascular status – intact distal pulses, sensation**: Needed to rule out compartment syndrome or vascular compromise secondary to swelling.
 
 ---
 
@@ -108,11 +102,9 @@ Presence of any two of the above, plus a compatible clinical picture, confirms s
 
 **Severity grading (used to guide urgency of intervention and level of monitoring)**  
 
-| Severity | Clinical hallmarks | Management implications |
-|---|---|---|
-| **Mild** | Stable vitals, limited systemic response, joint <24 h symptom duration, no comorbid immunosuppression | Outpatient IV/IM antibiotics possible after aspiration; close follow‑up within 24 h |
-| **Moderate** | Fever, tachycardia, CRP markedly raised, joint symptoms 1–3 days, single comorbidity (e.g., diabetes) | Admit for IV antibiotics, repeat aspiration, monitor labs daily |
-| **Severe** | Hypotension or septic shock, multi‑organ dysfunction, >3 days symptoms, poly‑articular involvement, immunocompromised (HIV, sickle‑cell) | Immediate surgical drainage (arthroscopy or open), ICU care, broad‑spectrum IV antibiotics, serial joint assessments |
+- **Mild**: Stable vitals, limited systemic response, joint <24 h symptom duration, no comorbid immunosuppression — Outpatient IV/IM antibiotics possible after aspiration; close follow‑up within 24 h
+- **Moderate**: Fever, tachycardia, CRP markedly raised, joint symptoms 1–3 days, single comorbidity (e.g., diabetes) — Admit for IV antibiotics, repeat aspiration, monitor labs daily
+- **Severe**: Hypotension or septic shock, multi‑organ dysfunction, >3 days symptoms, poly‑articular involvement, immunocompromised (HIV, sickle‑cell) — Immediate surgical drainage (arthroscopy or open), ICU care, broad‑spectrum IV antibiotics, serial joint assessments
 
 **Key points for clinicians**  
 
@@ -126,13 +118,30 @@ Prompt recognition, timely joint drainage, and appropriate antimicrobial therapy
 
 ## Management  
 
-| Phase | Key actions | Rationale / safety notes |
-|---|---|---|
-| **Immediate stabilisation** | • Assess airway, breathing, circulation; give O₂ if hypoxic. <br>• Establish large‑bore IV access. <br>• Give empirical IV **broad‑spectrum antibiotics** (cover Staphylococcus aureus, Streptococci, Gram‑negatives, and *Neisseria gonorrhoeae* in sexually active adolescents). <br>• Obtain blood cultures **before** antibiotics if possible (≤ 1 hour). <br>• Analgesia with paracetamol ± opioid; avoid NSAIDs until infection control is confirmed. | Prevent septic shock, ensure adequate tissue perfusion, and start antimicrobial therapy within the “golden hour”. |
-| **Definitive treatment** | 1. **Joint aspiration** under aseptic technique; send synovial fluid for Gram stain, culture, cell count, glucose, protein, crystal analysis. <br>2. **Targeted antibiotics** once organism identified; continue IV for 2‑4 weeks (adjust for TB, atypical mycobacteria, or fungal pathogens). <br>3. **Surgical drainage** – arthroscopic washout for most joints; open arthrotomy for hip, shoulder, or when arthroscopy unavailable. <br>4. **Adjuncts** – consider steroids only after adequate antimicrobial coverage and in selected immune‑mediated co‑pathology. | Synovial analysis confirms infection and guides therapy. Early drainage reduces bacterial load, prevents cartilage destruction, and improves outcomes. |
-| **Monitoring** | • Vital signs q4‑6 h; watch for fever, hypotension, tachycardia. <br>• Serial CRP/ESR (falling trend indicates response). <br>• Repeat joint aspiration if clinical deterioration or no improvement after 48‑72 h. <br>• Renal and hepatic function tests if using nephro‑ or hepatotoxic agents. | Detect treatment failure, drug toxicity, and need for repeat drainage. |
-| **Follow‑up** | • Transition to oral antibiotics after ≥ 2 weeks IV and clinical stability; total duration 4‑6 weeks (longer for TB or prosthetic joints). <br>• Physiotherapy to restore range of motion once inflammation subsides. <br>• Monitor for late complications (e.g., osteomyelitis) with repeat imaging if indicated. | Prevent stiffness, maintain joint function, and ensure eradication of infection. |
-| **Contra‑indications / safety** | • NSAIDs before drainage may mask fever and worsen renal perfusion. <br>• Intra‑articular steroids without antibiotics can exacerbate infection. <br>• Arthrocentesis in a joint with overlying cellulitis should be delayed until skin infection controlled, unless septic shock mandates immediate drainage. | Avoid iatrogenic worsening and ensure safe procedural environment. |
+- **Immediate stabilisation**
+  - Assess airway, breathing, circulation; give O₂ if hypoxic.
+  - Establish large‑bore IV access.
+  - Give empirical IV **broad‑spectrum antibiotics** (cover Staphylococcus aureus, Streptococci, Gram‑negatives, and *Neisseria gonorrhoeae* in sexually active adolescents).
+  - Obtain blood cultures **before** antibiotics if possible (≤ 1 hour).
+  - Analgesia with paracetamol ± opioid; avoid NSAIDs until infection control is confirmed. — Prevent septic shock, ensure adequate tissue perfusion, and start antimicrobial therapy within the “golden hour”.
+- **Definitive treatment**
+  - 1. **Joint aspiration** under aseptic technique; send synovial fluid for Gram stain, culture, cell count, glucose, protein, crystal analysis.
+  - 2. **Targeted antibiotics** once organism identified; continue IV for 2‑4 weeks (adjust for TB, atypical mycobacteria, or fungal pathogens).
+  - 3. **Surgical drainage** – arthroscopic washout for most joints; open arthrotomy for hip, shoulder, or when arthroscopy unavailable.
+  - 4. **Adjuncts** – consider steroids only after adequate antimicrobial coverage and in selected immune‑mediated co‑pathology. — Synovial analysis confirms infection and guides therapy. Early drainage reduces bacterial load, prevents cartilage destruction, and improves outcomes.
+- **Monitoring**
+  - Vital signs q4‑6 h; watch for fever, hypotension, tachycardia.
+  - Serial CRP/ESR (falling trend indicates response).
+  - Repeat joint aspiration if clinical deterioration or no improvement after 48‑72 h.
+  - Renal and hepatic function tests if using nephro‑ or hepatotoxic agents. — Detect treatment failure, drug toxicity, and need for repeat drainage.
+- **Follow‑up**
+  - Transition to oral antibiotics after ≥ 2 weeks IV and clinical stability; total duration 4‑6 weeks (longer for TB or prosthetic joints).
+  - Physiotherapy to restore range of motion once inflammation subsides.
+  - Monitor for late complications (e.g., osteomyelitis) with repeat imaging if indicated. — Prevent stiffness, maintain joint function, and ensure eradication of infection.
+- **Contra‑indications / safety**
+  - NSAIDs before drainage may mask fever and worsen renal perfusion.
+  - Intra‑articular steroids without antibiotics can exacerbate infection.
+  - Arthrocentesis in a joint with overlying cellulitis should be delayed until skin infection controlled, unless septic shock mandates immediate drainage. — Avoid iatrogenic worsening and ensure safe procedural environment.
 
 ---
 

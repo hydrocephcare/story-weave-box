@@ -17,6 +17,7 @@ const GROUPS: AdminNavGroup[] = [
     tab("route:/admin/comments", "Comments", Bell),
     tab("route:/admin/duplicates", "Repeated pages", Layers),
     tab("route:/admin/thin-topics", "Deep exam notes", Layers),
+    tab("route:/admin/content-checks", "Content checks", Check),
     tab("route:/admin/polish", "Polished blogs", Wrench),
     tab("route:/admin/content-health", "Content health", AlertTriangle),
     tab("route:/admin/monetise", "Monetise", Wallet),

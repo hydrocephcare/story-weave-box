@@ -1,4 +1,4 @@
-# Abortion and miscarriage — Year 4 Obstetrics and Gynaecology Notes
+# Abortion and miscarriage
 
 *Built from the two abortion lecture decks (the Department's "Abortions" slides and the "Abortion and Miscarriage" slides). Doses are left out on purpose: use your hospital protocol.*
 
@@ -18,28 +18,24 @@
 
 ## 2. Causes of spontaneous abortion
 
-| Group | Examples |
-|---|---|
-| **Fetal (about half of early losses)** | **Chromosomal abnormalities** (50% of early miscarriages): trisomies (the commonest is trisomy 16), triploidy, monosomy X; structural defects; **multiple pregnancy**; degeneration of villi |
-| **Maternal: endocrine and metabolic (10–15%)** | **Poorly controlled diabetes**, thyroid disease, luteal phase defect, PCOS (raised LH) |
-| **Maternal: anatomical (10–15%)** | **Müllerian anomalies** (septate, bicornuate, double uterus), **submucous fibroids**, polyps, **intrauterine adhesions (Asherman syndrome)**, **cervical incompetence** |
-| **Infections (about 5%)** | **TORCH** (toxoplasma, rubella, CMV, herpes), HIV, **syphilis**, malaria, *Ureaplasma*, *Chlamydia*, brucellosis, listeria |
-| **Immunological (5–10%)** | **Antiphospholipid syndrome** (lupus anticoagulant, anticardiolipin antibodies), alloimmune factors |
-| **Environmental and lifestyle** | **Smoking, alcohol, drugs**, heavy caffeine, some drugs, radiation |
-| **Other maternal illness** | Cyanotic heart disease, haemoglobinopathies (sickle cell), kidney disease, SLE |
-| **Advancing maternal age** | The risk rises from under 2% below 30 to above 10% over 40 and about 50% at 45 (more chromosomal errors) |
-| **Unexplained** | **40–60%** |
+- **Fetal (about half of early losses)**: **Chromosomal abnormalities** (50% of early miscarriages): trisomies (the commonest is trisomy 16), triploidy, monosomy X; structural defects; **multiple pregnancy**; degeneration of villi
+- **Maternal: endocrine and metabolic (10–15%)**: **Poorly controlled diabetes**, thyroid disease, luteal phase defect, PCOS (raised LH)
+- **Maternal: anatomical (10–15%)**: **Müllerian anomalies** (septate, bicornuate, double uterus), **submucous fibroids**, polyps, **intrauterine adhesions (Asherman syndrome)**, **cervical incompetence**
+- **Infections (about 5%)**: **TORCH** (toxoplasma, rubella, CMV, herpes), HIV, **syphilis**, malaria, *Ureaplasma*, *Chlamydia*, brucellosis, listeria
+- **Immunological (5–10%)**: **Antiphospholipid syndrome** (lupus anticoagulant, anticardiolipin antibodies), alloimmune factors
+- **Environmental and lifestyle**: **Smoking, alcohol, drugs**, heavy caffeine, some drugs, radiation
+- **Other maternal illness**: Cyanotic heart disease, haemoglobinopathies (sickle cell), kidney disease, SLE
+- **Advancing maternal age**: The risk rises from under 2% below 30 to above 10% over 40 and about 50% at 45 (more chromosomal errors)
+- **Unexplained**: **40–60%**
 
 ## 3. The five types and how to tell them apart
 
-| Type | Bleeding and pain | Cervical os | Tissue passed | Ultrasound | Plan |
-|---|---|---|---|---|---|
-| **Threatened** | Small bleed, little or no pain | **Closed** | None | **Viable** pregnancy (heartbeat) | Rest and reassure; 80% reach term |
-| **Inevitable** | **Heavy bleed, colicky pain** | **Open** | None yet | Pregnancy in the uterus, may be failing | Empty the uterus |
-| **Incomplete** | Persistent bleeding and pain | **Open** | **Some tissue passed, some retained** | Retained products | Evacuate |
-| **Complete** | **Pain and bleeding settle** | **Closed** | **All passed** | **Empty uterus** | Observe, support |
-| **Missed** | Often none, or old brown spotting; symptoms of pregnancy fade | **Closed** | None | **No heartbeat**, or an empty sac | Medical or surgical evacuation |
-| **Septic** | Fever, pain, foul discharge | Open, purulent | May be retained | Retained products | Antibiotics then evacuate |
+- **Threatened**: Small bleed, little or no pain — **Closed** — None — **Viable** pregnancy (heartbeat) — Rest and reassure; 80% reach term
+- **Inevitable**: **Heavy bleed, colicky pain** — **Open** — None yet — Pregnancy in the uterus, may be failing — Empty the uterus
+- **Incomplete**: Persistent bleeding and pain — **Open** — **Some tissue passed, some retained** — Retained products — Evacuate
+- **Complete**: **Pain and bleeding settle** — **Closed** — **All passed** — **Empty uterus** — Observe, support
+- **Missed**: Often none, or old brown spotting; symptoms of pregnancy fade — **Closed** — None — **No heartbeat**, or an empty sac — Medical or surgical evacuation
+- **Septic**: Fever, pain, foul discharge — Open, purulent — May be retained — Retained products — Antibiotics then evacuate
 
 ### Threatened abortion
 
@@ -69,11 +65,9 @@ The fetus is **dead and retained**. The **uterus is smaller than dates**, the **
 
 **Any abortion with clinical infection of the uterus and its contents:** fever (38 °C or more for 24 hours), **offensive purulent discharge**, lower abdominal pain and tenderness. **Commonest cause: an unsafe induced abortion** by an untrained person; spontaneous cases are usually mild.
 
-| Grade | Spread |
-|---|---|
-| **I** | Infection **confined to the uterus** (commonest, usually spontaneous) |
-| **II** | Spread to the **parametrium, tubes, ovaries or pelvic peritoneum** |
-| **III** | **Generalised peritonitis, endotoxic shock, jaundice or acute kidney injury** |
+- **I**: Infection **confined to the uterus** (commonest, usually spontaneous)
+- **II**: Spread to the **parametrium, tubes, ovaries or pelvic peritoneum**
+- **III**: **Generalised peritonitis, endotoxic shock, jaundice or acute kidney injury**
 
 **Clues to spread:** a pulse above 100 to 120 matters more than fever. **Examination:** tender uterus, open os, foul discharge; guarding means peritonitis.
 

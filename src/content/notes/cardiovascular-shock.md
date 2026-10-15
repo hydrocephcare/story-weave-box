@@ -21,12 +21,10 @@ In the microcirculation, inadequate capillary hydrostatic pressure and cellular 
 ## Causes and risk factors
 The etiologies of shock are categorized into four broad classes, with distinct regional drivers in East Africa:
 
-| Class | Mechanism | Local Etiologies and Risk Factors |
-|---|---|---|
-| Hypovolemic | Loss of intravascular volume | Severe dehydration (cholera, gastroenteritis), postpartum hemorrhage, trauma, ruptured ectopic pregnancy |
-| Cardiogenic | Primary pump failure | Rheumatic heart disease, acute coronary syndromes, endomyocardial fibrosis, peripartum cardiomyopathy |
-| Distributive | Vasodilation and capillary leak | Severe bacterial sepsis, severe *Plasmodium falciparum* malaria, advanced HIV with cryptococcosis, anaphylaxis |
-| Obstructive | Extracardiac flow obstruction | Pericardial tamponade (TB pericarditis), tension pneumothorax, pulmonary embolism, sickle cell acute chest syndrome |
+- **Hypovolemic**: Loss of intravascular volume — Severe dehydration (cholera, gastroenteritis), postpartum hemorrhage, trauma, ruptured ectopic pregnancy
+- **Cardiogenic**: Primary pump failure — Rheumatic heart disease, acute coronary syndromes, endomyocardial fibrosis, peripartum cardiomyopathy
+- **Distributive**: Vasodilation and capillary leak — Severe bacterial sepsis, severe *Plasmodium falciparum* malaria, advanced HIV with cryptococcosis, anaphylaxis
+- **Obstructive**: Extracardiac flow obstruction — Pericardial tamponade (TB pericarditis), tension pneumothorax, pulmonary embolism, sickle cell acute chest syndrome
 
 ### Region-Specific Risk Factors
 *   **Tuberculosis:** A primary driver of obstructive shock via massive pericardial effusion (cardiac tamponade) or constrictive pericarditis.
@@ -122,13 +120,11 @@ Identify the shock phenotype via volume status and JVP: elevated JVP denotes car
 
 ### Definitive Management
 
-| Shock Type | Primary Interventions | Disease-Specific Therapy |
-|---|---|---|
-| Hypovolaemic | Crystalloid boluses, blood products | Tranexamic acid, surgical haemostasis |
-| Cardiogenic | Inotropes, mechanical support | Coronary reperfusion, valve repair |
-| Distributive (Sepsis) | Broad-spectrum antibiotics, noradrenaline | Focus control, drainage, antimalarials |
-| Distributive (Anaphylaxis) | Intramuscular adrenaline, fluids | Antihistamines, systemic corticosteroids |
-| Obstructive | Bedside procedural decompression | Thrombolysis, surgical embolectomy |
+- **Hypovolaemic**: Crystalloid boluses, blood products — Tranexamic acid, surgical haemostasis
+- **Cardiogenic**: Inotropes, mechanical support — Coronary reperfusion, valve repair
+- **Distributive (Sepsis)**: Broad-spectrum antibiotics, noradrenaline — Focus control, drainage, antimalarials
+- **Distributive (Anaphylaxis)**: Intramuscular adrenaline, fluids — Antihistamines, systemic corticosteroids
+- **Obstructive**: Bedside procedural decompression — Thrombolysis, surgical embolectomy
 
 * **Empiric Antimicrobials:** Administer within the first hour of suspected sepsis (e.g., intravenous ceftriaxone plus metronidazole, with blood-film guided antimalarials such as artesunate if indicated in endemic zones).
 * **Cardiovascular Emergencies:** Dual antiplatelet therapy and anticoagulation for acute coronary syndromes; intravenous labetalol or hydralazine for hypertensive emergencies with end-organ damage (aim to lower mean arterial pressure by no more than twenty-five percent in the first hour).

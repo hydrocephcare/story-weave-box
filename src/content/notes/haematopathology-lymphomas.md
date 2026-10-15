@@ -39,32 +39,26 @@ Classification uses **cell lineage, stage of differentiation, morphology, immuno
 
 ### Low grade and high grade
 
-| Feature | Low grade (indolent) | High grade (aggressive) |
-|---|---|---|
-| Examples | Follicular, SLL/CLL, marginal zone | DLBCL, Burkitt, lymphoblastic |
-| Course | Slow, often months to years | Fatal in weeks to months untreated |
-| Response to chemotherapy | Good but **rarely curative** | Often **curable** with intensive treatment |
-| Strategy | Watch and wait can be right | Urgent treatment |
+- **Examples**: Follicular, SLL/CLL, marginal zone — DLBCL, Burkitt, lymphoblastic
+- **Course**: Slow, often months to years — Fatal in weeks to months untreated
+- **Response to chemotherapy**: Good but **rarely curative** — Often **curable** with intensive treatment
+- **Strategy**: Watch and wait can be right — Urgent treatment
 
 ## Pathogenesis: translocations and viruses
 
 Most NHL arise from **translocations that bring an oncogene next to an immunoglobulin gene** (chromosomes 14, 2, 22), so the oncogene is overexpressed.
 
-| Lymphoma | Translocation | Overexpressed gene | Effect |
-|---|---|---|---|
-| Follicular | t(14;18) | **BCL2** | Blocks apoptosis |
-| Mantle cell | t(11;14) | **Cyclin D1** | Drives the cell cycle |
-| Burkitt | t(8;14) (also t(2;8), t(8;22)) | **MYC** | Uncontrolled proliferation |
-| ALK-positive ALCL | t(2;5) | **ALK** | Constitutive kinase signalling |
+- **Follicular**: t(14;18) — **BCL2** — Blocks apoptosis
+- **Mantle cell**: t(11;14) — **Cyclin D1** — Drives the cell cycle
+- **Burkitt**: t(8;14) (also t(2;8), t(8;22)) — **MYC** — Uncontrolled proliferation
+- **ALK-positive ALCL**: t(2;5) — **ALK** — Constitutive kinase signalling
 
-| Infection | Lymphoma |
-|---|---|
-| **EBV** | Burkitt (endemic, jaw, with malaria), classical HL, post-transplant lymphoproliferative disease, CNS lymphoma in AIDS, NK/T-cell lymphoma |
-| **HIV** | DLBCL, Burkitt, primary CNS lymphoma, HL |
-| **HTLV-1** | Adult T-cell leukaemia/lymphoma |
-| **HHV-8** | Primary effusion lymphoma, Kaposi sarcoma |
-| ***H. pylori*** | Gastric MALT lymphoma |
-| **Hepatitis C** | Marginal zone lymphoma |
+- **EBV**: Burkitt (endemic, jaw, with malaria), classical HL, post-transplant lymphoproliferative disease, CNS lymphoma in AIDS, NK/T-cell lymphoma
+- **HIV**: DLBCL, Burkitt, primary CNS lymphoma, HL
+- **HTLV-1**: Adult T-cell leukaemia/lymphoma
+- **HHV-8**: Primary effusion lymphoma, Kaposi sarcoma
+- ***H. pylori***: Gastric MALT lymphoma
+- **Hepatitis C**: Marginal zone lymphoma
 
 In Kenya the **endemic Burkitt lymphoma** of children (jaw and facial tumours, linked to holoendemic malaria and EBV) and **HIV-associated lymphomas** are the cases examiners expect you to recognise.
 

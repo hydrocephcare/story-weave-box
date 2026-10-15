@@ -6,25 +6,21 @@
 A headache is a pain or discomfort localized to any region of the head, scalp, or neck, with or without associated symptoms (nausea, photophobia, phonophobia). Red‑flag headaches are those that suggest an underlying secondary, potentially life‑threatening disorder and warrant urgent evaluation.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to headache |
-|---|---|
-| Meninges (dura, arachnoid, pia) | Stretch or inflammation → meningeal pain |
-| Cerebral arteries & veins | Vascular dilation or thrombosis → pulsatile or ischemic pain |
-| Trigeminal nerve (V) | Primary afferent pathway for most primary headaches |
-| Cervical nerves (C1‑C3) | Referred pain from neck → tension‑type headache |
-| Brain parenchyma | Intracranial mass or edema → raised ICP headache |
-| Autonomic nuclei (hypothalamus) | Cluster headache, migraine aura |
+- **Meninges (dura, arachnoid, pia)**: Stretch or inflammation → meningeal pain
+- **Cerebral arteries & veins**: Vascular dilation or thrombosis → pulsatile or ischemic pain
+- **Trigeminal nerve (V)**: Primary afferent pathway for most primary headaches
+- **Cervical nerves (C1‑C3)**: Referred pain from neck → tension‑type headache
+- **Brain parenchyma**: Intracranial mass or edema → raised ICP headache
+- **Autonomic nuclei (hypothalamus)**: Cluster headache, migraine aura
 
 ## Causes and risk factors  
 
-| Category | Common conditions in Kenya | Key risk factors |
-|---|---|---|
-| Primary | Migraine, tension‑type, cluster | Family history, stress, hormonal changes |
-| Infectious | Cerebral malaria, tuberculous meningitis, cryptococcal meningitis, HIV‑related opportunistic infections | Recent travel, immunosuppression, poor malaria prophylaxis |
-| Vascular | Subarachnoid haemorrhage, hypertensive encephalopathy, cerebral venous sinus thrombosis | Uncontrolled hypertension, pregnancy, dehydration |
-| Structural | Brain tumour, abscess, hydrocephalus | HIV (primary CNS lymphoma), TB (tuberculoma), sickle cell disease (stroke) |
-| Metabolic / systemic | Severe anaemia, electrolyte imbalance, sickle cell crisis, rheumatic fever (post‑streptococcal) | Sickle cell disease, chronic kidney disease, malnutrition |
-| Trauma | Post‑concussive headache, intracranial bleed | Road‑traffic accidents, falls |
+- **Primary**: Migraine, tension‑type, cluster — Family history, stress, hormonal changes
+- **Infectious**: Cerebral malaria, tuberculous meningitis, cryptococcal meningitis, HIV‑related opportunistic infections — Recent travel, immunosuppression, poor malaria prophylaxis
+- **Vascular**: Subarachnoid haemorrhage, hypertensive encephalopathy, cerebral venous sinus thrombosis — Uncontrolled hypertension, pregnancy, dehydration
+- **Structural**: Brain tumour, abscess, hydrocephalus — HIV (primary CNS lymphoma), TB (tuberculoma), sickle cell disease (stroke)
+- **Metabolic / systemic**: Severe anaemia, electrolyte imbalance, sickle cell crisis, rheumatic fever (post‑streptococcal) — Sickle cell disease, chronic kidney disease, malnutrition
+- **Trauma**: Post‑concussive headache, intracranial bleed — Road‑traffic accidents, falls
 
 ## Pathophysiology  
 
@@ -40,53 +36,47 @@ A headache is a pain or discomfort localized to any region of the head, scalp, o
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it matters |
-|---|---|---|
-| **Onset** | Sudden (“thunderclap”) vs gradual; first attack vs recurrent | Sudden onset suggests subarachnoid haemorrhage or vascular event; gradual points to primary headache or infection |
-| **Location** | Unilateral, bilateral, frontal, occipital, cervical | Unilateral piercing pain → trigeminal autonomic cephalgias; occipital pain → cervicogenic or posterior fossa lesion |
-| **Quality** | Throbbing, pressure‑like, stabbing, burning | Throbbing typical of migraine; stabbing suggests cluster or trigeminal neuralgia; burning may indicate neuropathic pain |
-| **Duration** | Seconds, minutes, hours, days, chronic (>15 days/month) | Short bursts → primary stabbing headache; >15 days/month → chronic migraine or medication‑overuse |
-| **Pattern** | Episodic vs continuous; seasonal variation | Episodic with triggers → primary; continuous worsening → secondary cause |
-| **Triggers** | Light, noise, foods, alcohol, stress, hormonal changes, posture, travel, dehydration | Identifies migraine or tension‑type triggers; posture‑related pain may point to intracranial mass or meningitis |
-| **Associated symptoms** | Nausea/vomiting, photophobia, phonophobia, aura, fever, neck stiffness, focal neurological deficits, seizures, visual loss, diplopia, altered mental status | Photophobia/phonophobia → migraine; fever/neck stiffness → meningitis; focal deficits → stroke, tumour, HIV‑related opportunistic infection |
-| **Red‑flag history** | Age >50 new onset, immunosuppression (HIV, steroids), recent trauma, cancer, TB exposure, sickle‑cell crisis, malaria, rheumatic disease, anticoagulant use, progressive worsening, morning headache, vomiting >2 times, weight loss | Each flag raises suspicion for secondary, potentially life‑threatening causes that need urgent work‑up |
-| **Medication use** | Acute analgesics, triptans, NSAIDs, opioids, over‑the‑counter combinations, prophylactic agents | Over‑use can cause medication‑overuse headache; lack of response may suggest secondary cause |
-| **Social / occupational** | Work stress, shift patterns, exposure to chemicals, travel to endemic areas | May uncover occupational headache or exposure‑related infections (e.g., malaria, TB) |
+- **Onset**: Sudden (“thunderclap”) vs gradual; first attack vs recurrent — Sudden onset suggests subarachnoid haemorrhage or vascular event; gradual points to primary headache or infection
+- **Location**: Unilateral, bilateral, frontal, occipital, cervical — Unilateral piercing pain → trigeminal autonomic cephalgias; occipital pain → cervicogenic or posterior fossa lesion
+- **Quality**: Throbbing, pressure‑like, stabbing, burning — Throbbing typical of migraine; stabbing suggests cluster or trigeminal neuralgia; burning may indicate neuropathic pain
+- **Duration**: Seconds, minutes, hours, days, chronic (>15 days/month) — Short bursts → primary stabbing headache; >15 days/month → chronic migraine or medication‑overuse
+- **Pattern**: Episodic vs continuous; seasonal variation — Episodic with triggers → primary; continuous worsening → secondary cause
+- **Triggers**: Light, noise, foods, alcohol, stress, hormonal changes, posture, travel, dehydration — Identifies migraine or tension‑type triggers; posture‑related pain may point to intracranial mass or meningitis
+- **Associated symptoms**: Nausea/vomiting, photophobia, phonophobia, aura, fever, neck stiffness, focal neurological deficits, seizures, visual loss, diplopia, altered mental status — Photophobia/phonophobia → migraine; fever/neck stiffness → meningitis; focal deficits → stroke, tumour, HIV‑related opportunistic infection
+- **Red‑flag history**: Age >50 new onset, immunosuppression (HIV, steroids), recent trauma, cancer, TB exposure, sickle‑cell crisis, malaria, rheumatic disease, anticoagulant use, progressive worsening, morning headache, vomiting >2 times, weight loss — Each flag raises suspicion for secondary, potentially life‑threatening causes that need urgent work‑up
+- **Medication use**: Acute analgesics, triptans, NSAIDs, opioids, over‑the‑counter combinations, prophylactic agents — Over‑use can cause medication‑overuse headache; lack of response may suggest secondary cause
+- **Social / occupational**: Work stress, shift patterns, exposure to chemicals, travel to endemic areas — May uncover occupational headache or exposure‑related infections (e.g., malaria, TB)
 
 **Examination findings**  
 
-| Finding | Expected abnormality | Rationale |
-|---|---|---|
-| **General appearance** | Fever, pallor, jaundice, cachexia | Systemic infection (TB, malaria), anemia (sickle cell), HIV‑related wasting |
-| **Vital signs** | Hypertension, fever, tachycardia, low GCS | Hypertensive crisis can cause headache; fever → infection; low GCS → raised ICP or encephalitis |
-| **Head** | Scalp tenderness, sinus tenderness, temporal artery thickening | Temporal arteritis (elderly); sinusitis; meningitis (neck stiffness) |
-| **Neck** | Nuchal rigidity, Kernig/Brudzinski signs | Meningeal irritation from meningitis, TB meningitis, subarachnoid haemorrhage |
-| **Cranial nerves** | Visual field cuts, papilledema, diplopia, facial weakness | Papilledema = raised ICP; cranial nerve palsies = cavernous sinus thrombosis, HIV‑related lesions |
-| **Motor & sensory** | Weakness, sensory loss, ataxia | Focal deficits indicate stroke, space‑occupying lesion, HIV opportunistic infection |
-| **Coordination & gait** | Dysmetria, gait instability | Posterior fossa pathology, cerebellar involvement (malaria cerebral, TB) |
-| **Fundoscopy** | Papilledema, optic disc pallor, retinal hemorrhages | Raised ICP, optic neuritis (HIV), malaria retinopathy |
-| **Skin** | Rash, petechiae, purpura, livedo | Vasculitis (HIV, rheumatic disease), meningococcal sepsis, sickle‑cell vaso‑occlusion |
-| **Neck veins** | Jugular venous distension | Cerebral venous sinus thrombosis (pro‑thrombotic states in HIV, sickle cell) |
+- **General appearance**: Fever, pallor, jaundice, cachexia — Systemic infection (TB, malaria), anemia (sickle cell), HIV‑related wasting
+- **Vital signs**: Hypertension, fever, tachycardia, low GCS — Hypertensive crisis can cause headache; fever → infection; low GCS → raised ICP or encephalitis
+- **Head**: Scalp tenderness, sinus tenderness, temporal artery thickening — Temporal arteritis (elderly); sinusitis; meningitis (neck stiffness)
+- **Neck**: Nuchal rigidity, Kernig/Brudzinski signs — Meningeal irritation from meningitis, TB meningitis, subarachnoid haemorrhage
+- **Cranial nerves**: Visual field cuts, papilledema, diplopia, facial weakness — Papilledema = raised ICP; cranial nerve palsies = cavernous sinus thrombosis, HIV‑related lesions
+- **Motor & sensory**: Weakness, sensory loss, ataxia — Focal deficits indicate stroke, space‑occupying lesion, HIV opportunistic infection
+- **Coordination & gait**: Dysmetria, gait instability — Posterior fossa pathology, cerebellar involvement (malaria cerebral, TB)
+- **Fundoscopy**: Papilledema, optic disc pallor, retinal hemorrhages — Raised ICP, optic neuritis (HIV), malaria retinopathy
+- **Skin**: Rash, petechiae, purpura, livedo — Vasculitis (HIV, rheumatic disease), meningococcal sepsis, sickle‑cell vaso‑occlusion
+- **Neck veins**: Jugular venous distension — Cerebral venous sinus thrombosis (pro‑thrombotic states in HIV, sickle cell)
 
 ---
 
 ## Differential diagnosis  
 
-| Condition | Points toward it | Distinguishing feature |
-|---|---|---|
-| Primary migraine | Aura, throbbing, photophobia, family history | Normal neuro exam, no red flags |
-| Tension‑type headache | Bilateral pressure, stress‑related, no nausea | Absence of photophobia, normal exam |
-| Cluster headache | Unilateral orbital pain, lacrimation, nasal congestion, episodic | Autonomic signs, attacks at night |
-| Temporal arteritis | Age >50, scalp tenderness, jaw claudication, ESR ↑ | Temporal artery thickening, visual loss |
-| Subarachnoid haemorrhage | Thunderclap onset, neck stiffness, loss of consciousness | CT within 6 h positive, xanthochromia in CSF |
-| Bacterial meningitis | Fever, neck stiffness, altered mental status | CSF neutrophils, low glucose |
-| Tuberculous meningitis | Subacute onset, weight loss, HIV+, basal meningeal enhancement | CSF lymphocytes, high protein, low glucose |
-| Cerebral malaria | Recent travel to endemic area, fever, seizures, coma | Peripheral smear positive for Plasmodium falciparum |
-| HIV‑related opportunistic infection (e.g., cryptococcal meningitis) | HIV+, CD4 <100, chronic headache, papilledema | CSF India‑ink positive, low opening pressure |
-| Cerebral venous sinus thrombosis | Pro‑thrombotic state (sickle cell, HIV), headache worsening, seizures | MRV shows venous occlusion |
-| Space‑occupying lesion (tumour, abscess) | Progressive headache, focal deficits, seizures, HIV+ | Imaging shows mass effect |
-| Medication‑overuse headache | Frequent analgesic use, daily headache | Improves after withdrawal of medication |
-| Hypertensive encephalopathy | Severe hypertension, visual changes, papilledema | BP markedly elevated, reversible with BP control |
+- **Primary migraine**: Aura, throbbing, photophobia, family history — Normal neuro exam, no red flags
+- **Tension‑type headache**: Bilateral pressure, stress‑related, no nausea — Absence of photophobia, normal exam
+- **Cluster headache**: Unilateral orbital pain, lacrimation, nasal congestion, episodic — Autonomic signs, attacks at night
+- **Temporal arteritis**: Age >50, scalp tenderness, jaw claudication, ESR ↑ — Temporal artery thickening, visual loss
+- **Subarachnoid haemorrhage**: Thunderclap onset, neck stiffness, loss of consciousness — CT within 6 h positive, xanthochromia in CSF
+- **Bacterial meningitis**: Fever, neck stiffness, altered mental status — CSF neutrophils, low glucose
+- **Tuberculous meningitis**: Subacute onset, weight loss, HIV+, basal meningeal enhancement — CSF lymphocytes, high protein, low glucose
+- **Cerebral malaria**: Recent travel to endemic area, fever, seizures, coma — Peripheral smear positive for Plasmodium falciparum
+- **HIV‑related opportunistic infection (e.g., cryptococcal meningitis)**: HIV+, CD4 <100, chronic headache, papilledema — CSF India‑ink positive, low opening pressure
+- **Cerebral venous sinus thrombosis**: Pro‑thrombotic state (sickle cell, HIV), headache worsening, seizures — MRV shows venous occlusion
+- **Space‑occupying lesion (tumour, abscess)**: Progressive headache, focal deficits, seizures, HIV+ — Imaging shows mass effect
+- **Medication‑overuse headache**: Frequent analgesic use, daily headache — Improves after withdrawal of medication
+- **Hypertensive encephalopathy**: Severe hypertension, visual changes, papilledema — BP markedly elevated, reversible with BP control
 
 ---
 
@@ -117,11 +107,9 @@ A headache is a pain or discomfort localized to any region of the head, scalp, o
 
 2. **Determine severity** (use a simple three‑tier system)  
 
-| Tier | Clinical picture | Management focus |
-|---|---|---|
-| **Mild** | Intermittent, tolerable, no functional limitation, no red flags | Outpatient education, lifestyle modification, acute abortive therapy, consider prophylaxis if frequent |
-| **Moderate** | Daily or disabling pain, limited activities, but no neurological deficit or systemic danger | Prompt outpatient work‑up, start appropriate acute therapy, begin prophylaxis, arrange follow‑up within 1 week |
-| **Severe / urgent** | Sudden thunderclap, progressive worsening, focal deficits, altered consciousness, papilledema, systemic signs (fever, hypertension) | Immediate emergency evaluation, neuro‑imaging, possible lumbar puncture, admission, targeted disease‑specific treatment (e.g., antibiotics for meningitis, antiretroviral optimisation, antimalarial therapy, anticoagulation for CVST) |
+- **Mild**: Intermittent, tolerable, no functional limitation, no red flags — Outpatient education, lifestyle modification, acute abortive therapy, consider prophylaxis if frequent
+- **Moderate**: Daily or disabling pain, limited activities, but no neurological deficit or systemic danger — Prompt outpatient work‑up, start appropriate acute therapy, begin prophylaxis, arrange follow‑up within 1 week
+- **Severe / urgent**: Sudden thunderclap, progressive worsening, focal deficits, altered consciousness, papilledema, systemic signs (fever, hypertension) — Immediate emergency evaluation, neuro‑imaging, possible lumbar puncture, admission, targeted disease‑specific treatment (e.g., antibiotics for meningitis, antiretroviral optimisation, antimalarial therapy, anticoagulation for CVST)
 
 3. **Assign a working diagnosis** based on the most likely condition after history, exam, and initial investigations. Document the rationale, any pending tests, and the plan for definitive confirmation.
 
@@ -138,11 +126,9 @@ By systematically applying the history, focused examination, targeted investigat
 ## Management  
 
 **Immediate stabilisation**  
-| Situation | Action | Rationale |
-|---|---|---|
-| Sudden severe (“thunderclap”) headache ± neck stiffness | Secure airway, give high‑flow O₂, obtain IV access, start IV antihypertensive if MAP > 110 mmHg, give IV mannitol/ hypertonic saline if raised ICP suspected, arrange emergent CT head | Prevent secondary brain injury and treat possible subarachnoid haemorrhage or cerebral venous thrombosis |
-| Fever, neck rigidity, altered mental state | Same as above + give broad‑spectrum IV antibiotics (e.g., a third‑generation cephalosporin + vancomycin) after cultures, start antitubercular therapy if TB meningitis likely | Covers bacterial meningitis while awaiting CSF results |
-| Focal neurological deficit or seizures | Give IV benzodiazepine for seizure control, start antiepileptic loading dose, protect airway, consider IV steroids if tumour/abscess suspected | Stops ongoing neuronal injury |
+- **Sudden severe (“thunderclap”) headache ± neck stiffness**: Secure airway, give high‑flow O₂, obtain IV access, start IV antihypertensive if MAP > 110 mmHg, give IV mannitol/ hypertonic saline if raised ICP suspected, arrange emergent CT head — Prevent secondary brain injury and treat possible subarachnoid haemorrhage or cerebral venous thrombosis
+- **Fever, neck rigidity, altered mental state**: Same as above + give broad‑spectrum IV antibiotics (e.g., a third‑generation cephalosporin + vancomycin) after cultures, start antitubercular therapy if TB meningitis likely — Covers bacterial meningitis while awaiting CSF results
+- **Focal neurological deficit or seizures**: Give IV benzodiazepine for seizure control, start antiepileptic loading dose, protect airway, consider IV steroids if tumour/abscess suspected — Stops ongoing neuronal injury
 
 **Definitive treatment**  
 
@@ -176,14 +162,12 @@ By systematically applying the history, focused examination, targeted investigat
 
 ## Complications and prognosis  
 
-| Complication | Typical outcome if untreated | Preventive/early‑treatment measure |
-|---|---|---|
-| Subarachnoid haemorrhage → re‑bleed, vasospasm, permanent deficit | High mortality/morbidity | Early aneurysm securing, nimodipine, BP control |
-| Cerebral venous thrombosis → venous infarction, seizures | Variable; can be fatal | Prompt anticoagulation |
-| Bacterial meningitis → hydrocephalus, hearing loss, seizures | Significant morbidity | Immediate antibiotics + steroids |
-| TB meningitis → basal meningitis, infarcts | Poor neurological recovery | Early antitubercular therapy + steroids |
-| Chronic migraine → medication‑overuse headache, disability | Reduced quality of life | Structured preventive regimen |
-| HIV CNS opportunistic infection → neurocognitive decline | Progressive deterioration | ART optimisation, pathogen‑specific therapy |
+- **Subarachnoid haemorrhage → re‑bleed, vasospasm, permanent deficit**: High mortality/morbidity — Early aneurysm securing, nimodipine, BP control
+- **Cerebral venous thrombosis → venous infarction, seizures**: Variable; can be fatal — Prompt anticoagulation
+- **Bacterial meningitis → hydrocephalus, hearing loss, seizures**: Significant morbidity — Immediate antibiotics + steroids
+- **TB meningitis → basal meningitis, infarcts**: Poor neurological recovery — Early antitubercular therapy + steroids
+- **Chronic migraine → medication‑overuse headache, disability**: Reduced quality of life — Structured preventive regimen
+- **HIV CNS opportunistic infection → neurocognitive decline**: Progressive deterioration — ART optimisation, pathogen‑specific therapy
 
 Overall, prognosis hinges on rapid identification of red‑flags and timely definitive therapy. Primary headaches have an excellent long‑term outlook with appropriate prophylaxis.
 

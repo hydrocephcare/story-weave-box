@@ -1,4 +1,4 @@
-# Paediatrics Question Bank: 12 Clinical MCQs with Explanations
+# Paediatrics Question Bank: 12 Clinical MCQs
 
 ## Key points
 

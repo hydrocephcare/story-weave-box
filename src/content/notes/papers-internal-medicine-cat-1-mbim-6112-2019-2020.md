@@ -333,12 +333,10 @@ A curved, Gram-negative, comma-shaped, motile rod (serogroups O1 classical and E
 
 ### 3(ii). Identify and describe the different types of Shigella (6 marks)
 
-| Species (group) | Features |
-|---|---|
-| Shigella dysenteriae (A) | The most severe; serotype 1 produces Shiga toxin; epidemics; can cause HUS |
-| Shigella flexneri (B) | Moderate illness; common in developing countries; linked to reactive arthritis (Reiter's syndrome) in HLA-B27 people |
-| Shigella boydii (C) | Rarer; mostly the Indian subcontinent; moderate illness |
-| Shigella sonnei (D) | The mildest; commonest in developed countries; often watery diarrhoea |
+- **Shigella dysenteriae (A)**: The most severe; serotype 1 produces Shiga toxin; epidemics; can cause HUS
+- **Shigella flexneri (B)**: Moderate illness; common in developing countries; linked to reactive arthritis (Reiter's syndrome) in HLA-B27 people
+- **Shigella boydii (C)**: Rarer; mostly the Indian subcontinent; moderate illness
+- **Shigella sonnei (D)**: The mildest; commonest in developed countries; often watery diarrhoea
 
 All are non-motile, Gram-negative rods with a very low infectious dose (10 to 100 organisms). They invade the colonic mucosa and cause bloody mucoid diarrhoea (dysentery) with tenesmus.
 

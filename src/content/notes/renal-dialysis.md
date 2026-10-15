@@ -6,27 +6,23 @@
 Dialysis is the extracorporeal or peritoneal removal of excess fluid, electrolytes, and metabolic waste when the kidneys can no longer perform these functions adequately. In the acute setting it is termed **renal replacement therapy (RRT)**; in chronic disease it is called **maintenance dialysis**.
 
 ## Anatomy and physiology you need  
-| Structure | Key Function | Relevance to dialysis |
-|---|---|---|
-| Glomerulus | Filtration of plasma → ultrafiltrate | Loss of GFR reduces clearance of urea, creatinine, potassium |
-| Proximal tubule | Reabsorption of Na⁺, glucose, bicarbonate | Dysfunction leads to metabolic acidosis, volume depletion |
-| Loop of Henle | Counter‑current concentration | Impaired concentrating ability → polyuria, electrolyte loss |
-| Collecting duct | Water reabsorption under ADH | Failure contributes to polyuria and hypernatremia |
-| Peritoneum (for PD) | Semi‑permeable membrane | Provides surface for diffusion of solutes and water |
+- **Glomerulus**: Filtration of plasma → ultrafiltrate — Loss of GFR reduces clearance of urea, creatinine, potassium
+- **Proximal tubule**: Reabsorption of Na⁺, glucose, bicarbonate — Dysfunction leads to metabolic acidosis, volume depletion
+- **Loop of Henle**: Counter‑current concentration — Impaired concentrating ability → polyuria, electrolyte loss
+- **Collecting duct**: Water reabsorption under ADH — Failure contributes to polyuria and hypernatremia
+- **Peritoneum (for PD)**: Semi‑permeable membrane — Provides surface for diffusion of solutes and water
 
 Understanding that the kidney normally balances fluid, electrolytes, acid‑base and clears nitrogenous waste underpins why dialysis is required when these processes fail.
 
 ## Causes and risk factors  
 In Kenya the spectrum of renal injury reflects infectious, haemolytic, and chronic non‑communicable disease burdens.
 
-| Category | Common aetiologies in our setting |
-|---|---|
-| Infectious | HIV‑associated nephropathy, disseminated TB, severe malaria, leptospirosis |
-| Haemolytic / Vaso‑occlusive | Sickle cell disease crises, severe falciparum malaria, hemolytic uremic syndrome |
-| Autoimmune / Rheumatic | Lupus nephritis, post‑streptococcal glomerulonephritis, rheumatoid vasculitis |
-| Toxic / Drug‑induced | Traditional herbal nephrotoxins, aminoglycosides, NSAIDs |
-| Chronic non‑communicable | Hypertension, diabetic nephropathy, obstructive uropathy |
-| Peri‑operative / Trauma | Massive blood loss, rhabdomyolysis, crush injury |
+- **Infectious**: HIV‑associated nephropathy, disseminated TB, severe malaria, leptospirosis
+- **Haemolytic / Vaso‑occlusive**: Sickle cell disease crises, severe falciparum malaria, hemolytic uremic syndrome
+- **Autoimmune / Rheumatic**: Lupus nephritis, post‑streptococcal glomerulonephritis, rheumatoid vasculitis
+- **Toxic / Drug‑induced**: Traditional herbal nephrotoxins, aminoglycosides, NSAIDs
+- **Chronic non‑communicable**: Hypertension, diabetic nephropathy, obstructive uropathy
+- **Peri‑operative / Trauma**: Massive blood loss, rhabdomyolysis, crush injury
 
 Risk factors include late presentation to health facilities, limited access to early laboratory monitoring, and co‑existing malnutrition which can worsen renal reserve.
 
@@ -45,19 +41,17 @@ When the combined effect of steps 2‑4 reaches thresholds that threaten life 
 
 ## Clinical features  
 
-| Domain | Key questions / findings | Why it matters |
-|---|---|---|
-| **Onset & tempo** | Sudden vs. gradual rise in symptoms; any precipitating event (e.g., infection, nephrotoxic drug, contrast) | Acute kidney injury (AKI) may need emergent dialysis; chronic kidney disease (CKD) progression guides timing of elective dialysis |
-| **Urine output** | Polyuria, oliguria, anuria; change in volume over last 24‑48 h | Low output (< 400 ml/24 h) signals severe retention of fluid and toxins; anuria suggests imminent need for renal replacement |
-| **Fluid overload** | Dyspnoea on exertion, orthopnoea, peripheral oedema, weight gain, neck vein distension | Volume overload is a primary indication for dialysis when refractory to diuretics |
-| **Uremic symptoms** | Nausea, vomiting, anorexia, pruritus, taste changes, pericardial pain, encephalopathy, seizures, altered mental status | Accumulation of nitrogenous waste produces “uremic syndrome”; neuro‑cognitive changes are a red‑flag for dialysis |
-| **Electrolyte disturbances** | Muscle weakness, cramps, palpitations, arrhythmia history, recent ECG changes | Hyperkalaemia > 6 mmol/L or refractory metabolic acidosis are life‑threatening indications |
-| **Acid‑base status** | Shortness of breath, rapid breathing (Kussmaul), fatigue | Severe metabolic acidosis (pH < 7.1) despite bicarbonate therapy mandates dialysis |
-| **Bleeding tendency** | Easy bruising, gum bleeding, haematuria, recent anticoagulant use | Coagulopathy may be worsened by uremia; dialysis can correct platelet dysfunction |
-| **Comorbid infections** | Recent TB, malaria, HIV opportunistic infections, sepsis | Infections can precipitate AKI and also affect fluid/electrolyte balance; dialysis may be needed for toxin removal |
-| **Medication history** | Use of nephrotoxins (aminoglycosides, NSAIDs, herbal remedies), ART, anti‑TB drugs | Identifies reversible causes and informs need for urgent clearance |
-| **Past renal history** | Prior CKD stage, dialysis episodes, transplant status | Determines baseline renal reserve and urgency |
-| **Pregnancy** | Gestational age, pre‑eclampsia, proteinuria | Pregnancy‑related AKI may require dialysis to protect mother and fetus |
+- **Onset & tempo**: Sudden vs. gradual rise in symptoms; any precipitating event (e.g., infection, nephrotoxic drug, contrast) — Acute kidney injury (AKI) may need emergent dialysis; chronic kidney disease (CKD) progression guides timing of elective dialysis
+- **Urine output**: Polyuria, oliguria, anuria; change in volume over last 24‑48 h — Low output (< 400 ml/24 h) signals severe retention of fluid and toxins; anuria suggests imminent need for renal replacement
+- **Fluid overload**: Dyspnoea on exertion, orthopnoea, peripheral oedema, weight gain, neck vein distension — Volume overload is a primary indication for dialysis when refractory to diuretics
+- **Uremic symptoms**: Nausea, vomiting, anorexia, pruritus, taste changes, pericardial pain, encephalopathy, seizures, altered mental status — Accumulation of nitrogenous waste produces “uremic syndrome”; neuro‑cognitive changes are a red‑flag for dialysis
+- **Electrolyte disturbances**: Muscle weakness, cramps, palpitations, arrhythmia history, recent ECG changes — Hyperkalaemia > 6 mmol/L or refractory metabolic acidosis are life‑threatening indications
+- **Acid‑base status**: Shortness of breath, rapid breathing (Kussmaul), fatigue — Severe metabolic acidosis (pH < 7.1) despite bicarbonate therapy mandates dialysis
+- **Bleeding tendency**: Easy bruising, gum bleeding, haematuria, recent anticoagulant use — Coagulopathy may be worsened by uremia; dialysis can correct platelet dysfunction
+- **Comorbid infections**: Recent TB, malaria, HIV opportunistic infections, sepsis — Infections can precipitate AKI and also affect fluid/electrolyte balance; dialysis may be needed for toxin removal
+- **Medication history**: Use of nephrotoxins (aminoglycosides, NSAIDs, herbal remedies), ART, anti‑TB drugs — Identifies reversible causes and informs need for urgent clearance
+- **Past renal history**: Prior CKD stage, dialysis episodes, transplant status — Determines baseline renal reserve and urgency
+- **Pregnancy**: Gestational age, pre‑eclampsia, proteinuria — Pregnancy‑related AKI may require dialysis to protect mother and fetus
 
 **Examination findings**  
 
@@ -172,14 +166,12 @@ Each sign reflects the underlying accumulation of fluid, electrolytes, acid, or 
 
 ## Complications and Prognosis
 
-| Complication | Mechanism | Prevention / Management |
-|---|---|---|
-| Dialysis Disequilibrium Syndrome | Rapid urea clearance causing cerebral oedema | Limit first session duration and blood flow rate |
-| Intradialytic Hypotension | Excessive or ultra-rapid fluid extraction | Reduce ultrafiltration rate; infuse normal saline |
-| Vascular Access Infection | Bacterial entry via non-tunnelled catheter | Strict asepsis; remove catheter if bacterinaemic |
-| Catheter-Related Thrombosis | Endothelial trauma and low flow states | Catheter lock solutions; systemic anticoagulation |
-| Bleeding (Heparin-induced) | Anticoagulation during intermittent dialysis | Regional citrate anticoagulation or heparin-free runs |
-| Cardiac Arrhythmias | Rapid potassium and bicarbonate shifts | Adjust dialysate potassium concentration |
+- **Dialysis Disequilibrium Syndrome**: Rapid urea clearance causing cerebral oedema — Limit first session duration and blood flow rate
+- **Intradialytic Hypotension**: Excessive or ultra-rapid fluid extraction — Reduce ultrafiltration rate; infuse normal saline
+- **Vascular Access Infection**: Bacterial entry via non-tunnelled catheter — Strict asepsis; remove catheter if bacterinaemic
+- **Catheter-Related Thrombosis**: Endothelial trauma and low flow states — Catheter lock solutions; systemic anticoagulation
+- **Bleeding (Heparin-induced)**: Anticoagulation during intermittent dialysis — Regional citrate anticoagulation or heparin-free runs
+- **Cardiac Arrhythmias**: Rapid potassium and bicarbonate shifts — Adjust dialysate potassium concentration
 
 *Prognosis:* AKI requiring dialysis carries an in-hospital mortality of 30–50%, rising significantly in multi-organ failure. Surviving patients require close follow-up; up to 20% progress to chronic kidney disease (CKD) within 1 year.
 

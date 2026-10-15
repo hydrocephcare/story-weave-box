@@ -9,57 +9,62 @@
 Osteoarthritis (OA) is a chronic, progressive, degenerative joint disease characterised by loss of articular cartilage, sub‑chondral bone remodelling, osteophyte formation and synovial inflammation, leading to pain, stiffness and functional limitation.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to OA |
-|---|---|
-| Articular cartilage | Provides smooth, low‑friction surface; loss initiates OA |
-| Sub‑chondral bone | Thickens and remodels as cartilage thins; osteophytes arise here |
-| Synovial membrane | Produces fluid; becomes inflamed secondary to cartilage debris |
-| Joint capsule & ligaments | Stabilise joint; may become lax with chronic degeneration |
-| Peri‑articular muscles | Weakness contributes to abnormal loading and progression |
+- **Articular cartilage**: Provides smooth, low‑friction surface; loss initiates OA
+- **Sub‑chondral bone**: Thickens and remodels as cartilage thins; osteophytes arise here
+- **Synovial membrane**: Produces fluid; becomes inflamed secondary to cartilage debris
+- **Joint capsule & ligaments**: Stabilise joint; may become lax with chronic degeneration
+- **Peri‑articular muscles**: Weakness contributes to abnormal loading and progression
 
 Key points: cartilage is avascular, relies on diffusion from synovial fluid; chondrocytes maintain matrix balance. Disruption of this balance → net matrix loss.
 
 ## Causes and risk factors  
-| Category | Specific factors in Kenya |
-|---|---|
-| Age | Incidence rises after 45 years |
-| Sex | Slight female predominance, especially post‑menopause |
-| Obesity | Increases mechanical load on weight‑bearing joints |
-| Joint injury | Post‑traumatic OA common after road‑traffic accidents |
-| Occupation | Repetitive kneeling, squatting, heavy lifting (farmers, construction) |
-| Genetics | Family history of early OA |
-| Metabolic | Diabetes mellitus, dyslipidaemia |
-| Infectious / Tropical | HIV (synovial inflammation, altered bone metabolism), chronic TB arthritis (joint damage), malaria‑related hemolysis in sickle‑cell disease causing joint pain, sickle‑cell disease itself (avascular necrosis mimics OA), endemic rheumatic fever (post‑streptococcal joint damage) |
-| Other systemic | Hyperuricaemia, hypothyroidism |
+- **Age**: Incidence rises after 45 years
+- **Sex**: Slight female predominance, especially post‑menopause
+- **Obesity**: Increases mechanical load on weight‑bearing joints
+- **Joint injury**: Post‑traumatic OA common after road‑traffic accidents
+- **Occupation**: Repetitive kneeling, squatting, heavy lifting (farmers, construction)
+- **Genetics**: Family history of early OA
+- **Metabolic**: Diabetes mellitus, dyslipidaemia
+- **Infectious / Tropical**: HIV (synovial inflammation, altered bone metabolism), chronic TB arthritis (joint damage), malaria‑related hemolysis in sickle‑cell disease causing joint pain, sickle‑cell disease itself (avascular necrosis mimics OA), endemic rheumatic fever (post‑streptococcal joint damage)
+- **Other systemic**: Hyperuricaemia, hypothyroidism
 
 ## Pathophysiology  
 Mechanical stress → chondrocyte injury → release of inflammatory cytokines (IL‑1, TNF‑α) → up‑regulation of matrix‑degrading enzymes (MMPs, ADAMTS) → loss of collagen & proteoglycans → cartilage thinning → exposed sub‑chondral bone → bone remodelling & osteophyte formation → synovial irritation → pain and stiffness.
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Onset & duration** | “When did the pain start? Was it sudden or gradual?” | OA is usually insidious; chronic wear‑and‑tear produces progressive symptoms. |
-| **Pain pattern** | • Pain worsens with use (walking, climbing stairs, rising from a chair) <br>• Improves with rest or after a few minutes of activity (“stiffness that eases”) <br>• Night pain? (usually absent) | Mechanical stress irritates degenerated cartilage and sub‑chondral bone → nociceptor activation. Rest reduces load, relieving pain. Night pain suggests inflammatory or malignant processes. |
-| **Stiffness** | “Do you feel stiffness in the morning? How long does it last?” | Joint capsule and peri‑articular structures become stiff after inactivity; in OA stiffness is <30 min, reflecting limited capsular fibrosis rather than synovitis. |
-| **Functional limitation** | • Difficulty walking, climbing stairs, squatting, kneeling <br>• Need for assistive devices? | Cartilage loss and osteophyte formation limit joint range and alter biomechanics, leading to functional loss. |
-| **Joint swelling** | “Is the joint swollen? Is it hard or soft? Does it fluctuate?” | Swelling may be due to joint effusion (synovial inflammation secondary to cartilage debris) or bony enlargement from osteophytes. |
-| **Crepitus** | “Do you hear or feel grinding when you move the joint?” | Rough articular surfaces rub against each other producing audible/ palpable crepitus. |
-| **Deformity** | “Have you noticed any change in joint shape (e.g., bow‑leg, valgus, ulnar deviation)?” | Osteophytes, sub‑chondral sclerosis and ligament laxity cause malalignment. |
-| **Systemic symptoms** | Fever, weight loss, fatigue? | Absence supports primary OA; presence raises suspicion for inflammatory, infectious or neoplastic disease. |
-| **Risk‑factor history** | • Age, gender, occupation (heavy manual work, squatting) <br>• Prior joint injury or surgery <br>• Obesity, metabolic syndrome <br>• HIV, TB, malaria, sickle‑cell disease, other tropical infections <br>• Family history of early OA | Mechanical overload, metabolic inflammation, and disease‑related joint damage accelerate cartilage loss. |
-| **Medication & comorbidity review** | NSAID use, glucocorticoids, anticoagulants, renal disease, hypertension | Influences choice of analgesic, disease‑modifying options and monitoring needs. |
+- **Onset & duration**: “When did the pain start? Was it sudden or gradual?” — OA is usually insidious; chronic wear‑and‑tear produces progressive symptoms.
+- **Pain pattern**
+  - Pain worsens with use (walking, climbing stairs, rising from a chair)
+  - Improves with rest or after a few minutes of activity (“stiffness that eases”)
+  - Night pain? (usually absent) — Mechanical stress irritates degenerated cartilage and sub‑chondral bone → nociceptor activation. Rest reduces load, relieving pain. Night pain suggests inflammatory or malignant processes.
+- **Stiffness**: “Do you feel stiffness in the morning? How long does it last?” — Joint capsule and peri‑articular structures become stiff after inactivity; in OA stiffness is <30 min, reflecting limited capsular fibrosis rather than synovitis.
+- **Functional limitation**
+  - Difficulty walking, climbing stairs, squatting, kneeling
+  - Need for assistive devices? — Cartilage loss and osteophyte formation limit joint range and alter biomechanics, leading to functional loss.
+- **Joint swelling**: “Is the joint swollen? Is it hard or soft? Does it fluctuate?” — Swelling may be due to joint effusion (synovial inflammation secondary to cartilage debris) or bony enlargement from osteophytes.
+- **Crepitus**: “Do you hear or feel grinding when you move the joint?” — Rough articular surfaces rub against each other producing audible/ palpable crepitus.
+- **Deformity**: “Have you noticed any change in joint shape (e.g., bow‑leg, valgus, ulnar deviation)?” — Osteophytes, sub‑chondral sclerosis and ligament laxity cause malalignment.
+- **Systemic symptoms**: Fever, weight loss, fatigue? — Absence supports primary OA; presence raises suspicion for inflammatory, infectious or neoplastic disease.
+- **Risk‑factor history**
+  - Age, gender, occupation (heavy manual work, squatting)
+  - Prior joint injury or surgery
+  - Obesity, metabolic syndrome
+  - HIV, TB, malaria, sickle‑cell disease, other tropical infections
+  - Family history of early OA — Mechanical overload, metabolic inflammation, and disease‑related joint damage accelerate cartilage loss.
+- **Medication & comorbidity review**: NSAID use, glucocorticoids, anticoagulants, renal disease, hypertension — Influences choice of analgesic, disease‑modifying options and monitoring needs.
 
 **Examination findings**  
 
-| Finding | What you look for | Pathophysiologic explanation |
-|---|---|---|
-| **Inspection** | Joint swelling, bony enlargement, deformity, muscle wasting | Osteophytes and synovial effusion produce visible enlargement; disuse atrophy of surrounding muscles. |
-| **Palpation** | Tenderness over joint line, crepitus, warmth, effusion | Cartilage breakdown releases inflammatory mediators → localized tenderness; osteophytes create palpable irregularities; effusion feels fluid‑filled. |
-| **Range of motion (ROM)** | ↓ active & passive ROM, especially terminal flexion/extension; pain at extremes | Mechanical obstruction by osteophytes and capsular contracture limits motion; pain limits active use. |
-| **Gait assessment** | Antalgic gait, reduced stride, “shuffling” (hip/knee) | Pain avoidance leads to altered biomechanics; joint instability may cause compensatory gait. |
-| **Special tests** | <br>• **Joint line tenderness** (knee) – indicates cartilage loss <br>• **McMurray / Apley** – may be positive if meniscal involvement secondary to OA <br>• **Valgus/varus stress** – assess ligament laxity | Degenerated cartilage and osteophytes alter joint congruity, making menisci more vulnerable; chronic overload stretches ligaments. |
-| **Neurovascular** | Intact sensation, pulses | Excludes compressive neuropathy or vascular compromise that can mimic or complicate OA. |
+- **Inspection**: Joint swelling, bony enlargement, deformity, muscle wasting — Osteophytes and synovial effusion produce visible enlargement; disuse atrophy of surrounding muscles.
+- **Palpation**: Tenderness over joint line, crepitus, warmth, effusion — Cartilage breakdown releases inflammatory mediators → localized tenderness; osteophytes create palpable irregularities; effusion feels fluid‑filled.
+- **Range of motion (ROM)**: ↓ active & passive ROM, especially terminal flexion/extension; pain at extremes — Mechanical obstruction by osteophytes and capsular contracture limits motion; pain limits active use.
+- **Gait assessment**: Antalgic gait, reduced stride, “shuffling” (hip/knee) — Pain avoidance leads to altered biomechanics; joint instability may cause compensatory gait.
+- **Special tests**
+  - **Joint line tenderness** (knee) – indicates cartilage loss
+  - **McMurray / Apley** – may be positive if meniscal involvement secondary to OA
+  - **Valgus/varus stress** – assess ligament laxity — Degenerated cartilage and osteophytes alter joint congruity, making menisci more vulnerable; chronic overload stretches ligaments.
+- **Neurovascular**: Intact sensation, pulses — Excludes compressive neuropathy or vascular compromise that can mimic or complicate OA.
 
 ---
 
@@ -106,23 +111,42 @@ If all three domains are present, OA is diagnosed. Absence of significant inflam
 
 **Severity grading (Kellgren‑Lawrence or similar)**  
 
-| Grade | Radiographic features | Clinical correlation |
-|---|---|---|
-| 0 – No OA | Normal joint | Asymptomatic |
-| I – Doubtful | Possible osteophyte | Mild intermittent pain |
-| II – Mild | Definite osteophytes, possible joint‑space narrowing | Pain with activity, minimal functional limitation |
-| III – Moderate | Multiple osteophytes, definite narrowing, sub‑chondral sclerosis | Pain at end‑range, early gait changes |
-| IV – Severe | Large osteophytes, marked narrowing, bone deformity, sclerosis | Constant pain, marked disability, possible deformity |
+- **0 – No OA**: Normal joint — Asymptomatic
+- **I – Doubtful**: Possible osteophyte — Mild intermittent pain
+- **II – Mild**: Definite osteophytes, possible joint‑space narrowing — Pain with activity, minimal functional limitation
+- **III – Moderate**: Multiple osteophytes, definite narrowing, sub‑chondral sclerosis — Pain at end‑range, early gait changes
+- **IV – Severe**: Large osteophytes, marked narrowing, bone deformity, sclerosis — Constant pain, marked disability, possible deformity
 
 Severity guides management intensity: mild disease often responds to lifestyle modification and simple analgesics; moderate to severe disease may require intra‑articular steroids, viscosupplementation, or referral for surgical evaluation (arthroplasty). Monitoring includes periodic pain scores, functional questionnaires, and repeat imaging if progression is suspected.
 
 ## Management  
 
-| Phase | Goal | Key Interventions | Monitoring / Safety |
-|---|---|---|---|
-| **Immediate stabilisation** | Relieve acute pain, maintain function, prevent falls | • Simple analgesics (paracetamol) <br>• Topical NSAID or capsaicin for focal pain <br>• Short‑term oral NSAID if no contraindication (e.g., ulcer, CKD, uncontrolled hypertension) <br>• Rest of the affected joint, use of crutches or cane | • Pain score 0‑10 every 4‑6 h <br>• GI tolerance, renal function, blood pressure |
-| **Definitive treatment** | Slow disease progression, improve joint mechanics, optimise quality of life | **Non‑pharmacological** <br>• Structured physiotherapy: quadriceps strengthening, range‑of‑motion exercises, low‑impact aerobic activity <br>• Weight reduction (target ≤ 5 % of body weight) <br>• Joint protection: assistive devices, orthoses, ergonomic modifications <br>**Pharmacological** <br>• Oral NSAID (if tolerated) <br>• Intra‑articular corticosteroid (single injection for flare) <br>• Intra‑articular hyaluronic acid (where available) <br>• Duloxetine (for chronic pain with central sensitisation) <br>**Surgical** <br>• Arthroscopy for mechanical symptoms (loose bodies) <br>• Unicompartmental or total knee/hip arthroplasty when severe pain limits daily activities despite optimal medical therapy | • Functional scores (WOMAC, KOOS) every 3 months <br>• Weight, BMI, blood pressure, renal & hepatic labs if NSAID used <br>• Joint range of motion and muscle strength at each physio visit |
-| **Contra‑indications / safety** | Avoid harm from therapy | • NSAID: active peptic ulcer, severe heart failure, eGFR < 30 ml/min/1.73 m², uncontrolled hypertension <br>• Intra‑articular steroid: infection, coagulopathy, uncontrolled diabetes (monitor glucose) <br>• Duloxetine: uncontrolled narrow‑angle glaucoma, recent MAOI use, severe hepatic disease <br>• Surgery: severe cardiopulmonary comorbidity, active infection, poor bone quality without optimisation |
+- **Immediate stabilisation**
+  - Relieve acute pain, maintain function, prevent falls — • Simple analgesics (paracetamol)
+  - Topical NSAID or capsaicin for focal pain
+  - Short‑term oral NSAID if no contraindication (e.g., ulcer, CKD, uncontrolled hypertension)
+  - Rest of the affected joint, use of crutches or cane — • Pain score 0‑10 every 4‑6 h
+  - GI tolerance, renal function, blood pressure
+- **Definitive treatment**
+  - Slow disease progression, improve joint mechanics, optimise quality of life — **Non‑pharmacological**
+  - Structured physiotherapy: quadriceps strengthening, range‑of‑motion exercises, low‑impact aerobic activity
+  - Weight reduction (target ≤ 5 % of body weight)
+  - Joint protection: assistive devices, orthoses, ergonomic modifications
+  - **Pharmacological**
+  - Oral NSAID (if tolerated)
+  - Intra‑articular corticosteroid (single injection for flare)
+  - Intra‑articular hyaluronic acid (where available)
+  - Duloxetine (for chronic pain with central sensitisation)
+  - **Surgical**
+  - Arthroscopy for mechanical symptoms (loose bodies)
+  - Unicompartmental or total knee/hip arthroplasty when severe pain limits daily activities despite optimal medical therapy — • Functional scores (WOMAC, KOOS) every 3 months
+  - Weight, BMI, blood pressure, renal & hepatic labs if NSAID used
+  - Joint range of motion and muscle strength at each physio visit
+- **Contra‑indications / safety**
+  - Avoid harm from therapy — • NSAID: active peptic ulcer, severe heart failure, eGFR < 30 ml/min/1.73 m², uncontrolled hypertension
+  - Intra‑articular steroid: infection, coagulopathy, uncontrolled diabetes (monitor glucose)
+  - Duloxetine: uncontrolled narrow‑angle glaucoma, recent MAOI use, severe hepatic disease
+  - Surgery: severe cardiopulmonary comorbidity, active infection, poor bone quality without optimisation
 
 ---
 

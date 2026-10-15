@@ -60,7 +60,7 @@
 2. **Inspection**: a distended abdomen with **bulging flanks**, an **everted umbilicus**, an umbilical hernia, tight shiny skin, dilated veins (*caput medusae*, flow away from the umbilicus), and scars.
 3. **Percussion first, then confirm**:
    - **Flank dullness**: tympanic centre, dull flanks. If the flanks are not dull, large ascites is unlikely.
-   - **Shifting dullness**: with the patient supine, mark the border of flank dullness, roll them onto their side and wait about a minute. The dull area moves up to the new uppermost flank. It is the most useful single test.
+   - **Shifting dullness**: with the patient supine, mark the border of flank dullness, roll them onto one side and wait about a minute, then percuss again. The fluid falls to the dependent (lower) flank, so that flank is now dull and the upper flank, where the gas-filled bowel has floated up, becomes resonant. Dullness that shifts like this is the most useful single test.
    - **Fluid thrill** (needs an assistant to press the edge of a hand on the midline to stop skin transmission): tap one flank and feel for a wave on the other. It is quite specific but only becomes positive with a lot of fluid.
 4. **Palpation**: tenderness and guarding (peritonitis), a *ballotable* liver or spleen (portal hypertension), masses, an enlarged hard nodular liver (carcinoma), a Sister Mary Joseph nodule at the umbilicus.
 5. **Chest and heart**: a right pleural effusion (hepatic hydrothorax), raised JVP or murmurs (heart cause), and an enlarged left supraclavicular node.
@@ -138,7 +138,7 @@
 ## Complications and prognosis
 
 - **Hepatorenal syndrome and kidney injury**: a major cause of death in decompensated cirrhosis. Early albumin and a vasoconstrictor improve survival.
-- **SBP recurrence**: about **70% within a year** without prophylaxis, and much lower with it.
+- **SBP recurrence**: about **40 to 70% within a year** without prophylaxis, and much lower with it.
 - **Hepatic encephalopathy**: infection and bleeding precipitate it.
 - **Variceal bleeding**: the risk rises during an SBP episode.
 - **Refractory ascites and hepatic hydrothorax**: poor prognosis, a signal for transplant assessment.

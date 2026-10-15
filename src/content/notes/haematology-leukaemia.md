@@ -8,14 +8,12 @@
 Leukaemia is a malignant clonal proliferation of hematopoietic stem cells resulting in uncontrolled growth of immature white blood cells (blasts) in the bone marrow, peripheral blood and often extramedullary sites. It is classified by lineage (myeloid vs lymphoid) and by speed of onset (acute vs chronic).
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to leukaemia |
-|---|---|
-| Bone marrow | Site of hematopoiesis; blasts replace normal progenitors → cytopenias |
-| Spleen & liver | Common sites of extramedullary infiltration → hepatosplenomegaly |
-| Lymph nodes | Primary organ for lymphoid leukaemias; may be enlarged |
-| Thymus | T‑cell development; involved in T‑ALL |
-| Peripheral blood | Vehicle for circulating blasts; basis for smear diagnosis |
-| CNS (meninges) | Sanctuary site; risk of leukemic meningitis, especially ALL |
+- **Bone marrow**: Site of hematopoiesis; blasts replace normal progenitors → cytopenias
+- **Spleen & liver**: Common sites of extramedullary infiltration → hepatosplenomegaly
+- **Lymph nodes**: Primary organ for lymphoid leukaemias; may be enlarged
+- **Thymus**: T‑cell development; involved in T‑ALL
+- **Peripheral blood**: Vehicle for circulating blasts; basis for smear diagnosis
+- **CNS (meninges)**: Sanctuary site; risk of leukemic meningitis, especially ALL
 
 ## Causes and risk factors  
 *Environmental & infectious exposures common in Kenya*  
@@ -42,28 +40,24 @@ Leukaemia is a malignant clonal proliferation of hematopoietic stem cells result
 
 **History – key questions**  
 
-| Domain | Questions | Rationale |
-|---|---|---|
-| General | Fever, night sweats, weight loss, fatigue, loss of appetite | Cytokine‑mediated “B‑symptoms” and marrow failure produce constitutional complaints. |
-| Bleeding / bruising | Easy bruising, petechiae, gum bleeding, menorrhagia, epistaxis, prolonged bleeding after minor cuts | Thrombocytopenia from marrow infiltration or peripheral consumption. |
-| Infections | Recurrent or severe infections, recent opportunistic infections (e.g., oral thrush, TB, pneumocystis), history of HIV or immunosuppression | Neutropenia and functional defects of leukocytes predispose to infections. |
-| Bone‑pain / skeletal | Deep bone pain (especially long bones, pelvis, ribs), back pain | Marrow expansion and leukemic infiltration of bone. |
-| Lymphadenopathy / organomegaly | Swollen neck, axillae, groin nodes; abdominal fullness, early satiety, early fullness after meals | Extramedullary disease – common in acute lymphoblastic leukaemia (ALL) and chronic lymphocytic leukaemia (CLL). |
-| Constitutional in children | Failure to thrive, irritability, pallor, recurrent infections | Paediatric leukaemias often present with nonspecific growth failure. |
-| Past medical / exposures | Prior chemotherapy/radiation, known genetic syndromes (Down, Fanconi), exposure to benzene, pesticides, chronic infections (HIV, TB, malaria), sickle‑cell disease | Identifies known risk factors prevalent in Kenya. |
-| Medications / supplements | Use of herbal remedies, antiretrovirals, antimalarials | Some agents can cause marrow suppression or interact with chemotherapy. |
-| Family history | Relatives with haematologic malignancies or inherited bone‑marrow failure syndromes | Hereditary predisposition. |
+- **General**: Fever, night sweats, weight loss, fatigue, loss of appetite — Cytokine‑mediated “B‑symptoms” and marrow failure produce constitutional complaints.
+- **Bleeding / bruising**: Easy bruising, petechiae, gum bleeding, menorrhagia, epistaxis, prolonged bleeding after minor cuts — Thrombocytopenia from marrow infiltration or peripheral consumption.
+- **Infections**: Recurrent or severe infections, recent opportunistic infections (e.g., oral thrush, TB, pneumocystis), history of HIV or immunosuppression — Neutropenia and functional defects of leukocytes predispose to infections.
+- **Bone‑pain / skeletal**: Deep bone pain (especially long bones, pelvis, ribs), back pain — Marrow expansion and leukemic infiltration of bone.
+- **Lymphadenopathy / organomegaly**: Swollen neck, axillae, groin nodes; abdominal fullness, early satiety, early fullness after meals — Extramedullary disease – common in acute lymphoblastic leukaemia (ALL) and chronic lymphocytic leukaemia (CLL).
+- **Constitutional in children**: Failure to thrive, irritability, pallor, recurrent infections — Paediatric leukaemias often present with nonspecific growth failure.
+- **Past medical / exposures**: Prior chemotherapy/radiation, known genetic syndromes (Down, Fanconi), exposure to benzene, pesticides, chronic infections (HIV, TB, malaria), sickle‑cell disease — Identifies known risk factors prevalent in Kenya.
+- **Medications / supplements**: Use of herbal remedies, antiretrovirals, antimalarials — Some agents can cause marrow suppression or interact with chemotherapy.
+- **Family history**: Relatives with haematologic malignancies or inherited bone‑marrow failure syndromes — Hereditary predisposition.
 
 **Examination – findings and why they occur**  
 
-| Finding | Pathophysiologic explanation |
-|---|---|
-| Pallor (conjunctival, mucosal) | Anaemia from marrow replacement or haemolysis. |
-| Petechiae / purpura | Platelet count <20 × 10⁹/L or platelet dysfunction. |
-| Bleeding gums, epistaxis | Thrombocytopenia + mucosal fragility. |
-| Hepatosplenomegaly | Extramedullary haematopoiesis and leukemic infiltration. |
-| Lymphadenopathy (non‑tender, firm) | Infiltration of nodal tissue, especially in ALL and CLL. |
-| Bone tenderness / joint pain | Marrow expansion causing periosteal irritation. |
+- **Pallor (conjunctival, mucosal)**: Anaemia from marrow replacement or haemolysis.
+- **Petechiae / purpura**: Platelet count <20 × 10⁹/L or platelet dysfunction.
+- **Bleeding gums, epistaxis**: Thrombocytopenia + mucosal fragility.
+- **Hepatosplenomegaly**: Extramedullary haematopoiesis and leukemic infiltration.
+- **Lymphadenopathy (non‑tender, firm)**: Infiltration of nodal tissue, especially in ALL and CLL.
+- **Bone tenderness / joint pain**: Marrow expansion causing periosteal irritation.
 > *Note*: In chronic myeloid leukaemia (CML) splenomegaly is often massive, whereas in acute leukaemias it may be modest.
 
 ---
@@ -109,15 +103,13 @@ Leukaemia is a malignant clonal proliferation of hematopoietic stem cells result
 
 **Severity grading** (used to guide urgency of therapy)  
 
-| Parameter | Low‑risk | Intermediate‑risk | High‑risk |
-|---|---|---|---|
-| Age (ALL) | ≤35 y | 36‑50 y | >50 y |
-| White‑cell count at presentation (ALL) | ≤30 × 10⁹/L | 30‑100 × 10⁹/L | >100 × 10⁹/L |
-| Cytogenetics (ALL) | Hyperdiploidy, TEL‑AML1 | Normal, other intermediate | t(9;22), MLL‑rearranged |
-| Blast % (AML) | ≤30 % | 30‑50 % | >50 % |
-| Cytogenetics (AML) | Favorable (t(8;21), inv16) | Intermediate (normal) | Adverse (complex, monosomal) |
-| Performance status (all) | ECOG 0‑1 | ECOG 2 | ECOG ≥3 |
-| Organ dysfunction (renal, hepatic, cardiac) | None or mild | Moderate | Severe |
+- **Age (ALL)**: ≤35 y — 36‑50 y — >50 y
+- **White‑cell count at presentation (ALL)**: ≤30 × 10⁹/L — 30‑100 × 10⁹/L — >100 × 10⁹/L
+- **Cytogenetics (ALL)**: Hyperdiploidy, TEL‑AML1 — Normal, other intermediate — t(9;22), MLL‑rearranged
+- **Blast % (AML)**: ≤30 % — 30‑50 % — >50 %
+- **Cytogenetics (AML)**: Favorable (t(8;21), inv16) — Intermediate (normal) — Adverse (complex, monosomal)
+- **Performance status (all)**: ECOG 0‑1 — ECOG 2 — ECOG ≥3
+- **Organ dysfunction (renal, hepatic, cardiac)**: None or mild — Moderate — Severe
 
 *Risk stratification informs choice of induction regimen, need for early stem‑cell transplant, and intensity of supportive care.*  
 
@@ -131,13 +123,11 @@ In the Kenyan setting, special attention is given to HIV status, concomitant TB,
 - **Bleeding risk** – transfuse packed red cells if Hb < 8 g/dL (or symptomatic); give platelet concentrates if platelets < 10 × 10⁹/L (or < 20 × 10⁹/L with bleeding).  
 
 **Definitive treatment**  
-| Leukemia type | Curative intent regimen (class) | Supportive adjuncts |
-|---|---|---|
-| ALL (children) | Multi‑agent induction (vincristine‑type, steroids, anthracycline, asparaginase) | CNS prophylaxis (intrathecal methotrexate), TLS prophylaxis |
-| ALL (adults) | Similar agents, add tyrosine‑kinase inhibitor if Ph‑positive | Same as above |
-| AML | “7 + 3” (anthracycline + cytarabine) ± FLT3 inhibitor if mutation | ATRA for M3, TLS prophylaxis |
-| CML (chronic) | BCR‑ABL tyrosine‑kinase inhibitor (imatinib, dasatinib) | Monitor for cytopenias |
-| CLL (symptomatic) | Chemo‑immunotherapy (fludarabine‑type + anti‑CD20) or BTK inhibitor | Prophylactic antivirals (HSV, VZV) |
+- **ALL (children)**: Multi‑agent induction (vincristine‑type, steroids, anthracycline, asparaginase) — CNS prophylaxis (intrathecal methotrexate), TLS prophylaxis
+- **ALL (adults)**: Similar agents, add tyrosine‑kinase inhibitor if Ph‑positive — Same as above
+- **AML**: “7 + 3” (anthracycline + cytarabine) ± FLT3 inhibitor if mutation — ATRA for M3, TLS prophylaxis
+- **CML (chronic)**: BCR‑ABL tyrosine‑kinase inhibitor (imatinib, dasatinib) — Monitor for cytopenias
+- **CLL (symptomatic)**: Chemo‑immunotherapy (fludarabine‑type + anti‑CD20) or BTK inhibitor — Prophylactic antivirals (HSV, VZV)
 
 - **Allogeneic stem‑cell transplant** is offered for high‑risk AML, relapsed ALL, or poor‑risk CML after failure of TKIs.  
 - **Targeted agents** – ATRA for acute promyelocytic leukemia; arsenic trioxide for same; FLT3 inhibitors for FLT3‑mutated AML; BCR‑ABL TKIs for Ph‑positive ALL/CML.  

@@ -9,12 +9,10 @@
 Myasthenia gravis (MG) is a chronic, autoimmune neuromuscular junction disorder characterised by fluctuating skeletal muscle weakness that worsens with activity and improves with rest.
 
 ## Anatomy and physiology you need  
-| Structure | Role in normal transmission | Relevance to MG |
-|---|---|---|
-| Motor nerve terminal | Releases acetylcholine (ACh) into synaptic cleft | Target of auto‑antibodies |
-| Motor end‑plate (post‑synaptic membrane) | Contains nicotinic ACh receptors (nAChR) that bind ACh → depolarisation | Site of receptor loss or blockade |
-| Acetylcholinesterase (AChE) | Hydrolyses ACh, terminating signal | Inhibition prolongs ACh action, useful therapeutically |
-| Muscle fibre | Generates contraction when depolarised | Weakness results when insufficient ACh‑receptor activation |
+- **Motor nerve terminal**: Releases acetylcholine (ACh) into synaptic cleft — Target of auto‑antibodies
+- **Motor end‑plate (post‑synaptic membrane)**: Contains nicotinic ACh receptors (nAChR) that bind ACh → depolarisation — Site of receptor loss or blockade
+- **Acetylcholinesterase (AChE)**: Hydrolyses ACh, terminating signal — Inhibition prolongs ACh action, useful therapeutically
+- **Muscle fibre**: Generates contraction when depolarised — Weakness results when insufficient ACh‑receptor activation
 
 ## Causes and risk factors  
 - **Primary autoimmune MG** – idiopathic, most common.  
@@ -39,18 +37,16 @@ Myasthenia gravis (MG) is a chronic, autoimmune neuromuscular junction disorder 
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Onset & course** | “When did the symptoms start?” “Did they get worse during the day or after activity?” | Auto‑antibody‑mediated loss of acetylcholine receptors produces fatigue that worsens with use and improves with rest (fluctuating weakness). |
-| **Pattern of weakness** | Ptosis, diplopia, difficulty chewing, swallowing, speaking, neck flexion, proximal limb weakness, respiratory effort. Ask about “drooping eyelids”, “trouble holding objects”, “climbing stairs”, “getting up from a chair”. | Extra‑ocular muscles have a high firing rate and few reserve fibers, making them early targets. Bulbar and proximal muscles are similarly vulnerable. |
-| **Fluctuation & fatigability** | “Do symptoms improve after a short rest or after sleeping?” “Do they worsen in hot weather or after infections?” | Reduced safety factor at the neuromuscular junction becomes more pronounced with sustained activity or metabolic stress. |
-| **Cranial nerve involvement** | “Any change in voice, difficulty swallowing liquids or solids, choking, nasal speech?” | Impaired transmission at the neuromuscular junction of muscles innervated by cranial nerves (IX, X, XII). |
-| **Respiratory symptoms** | “Shortness of breath when climbing stairs or lying flat?” “Any episodes of sudden breathlessness at night?” | Weakness of diaphragm and intercostals can precipitate myasthenic crisis, especially when supine. |
-| **Associated autoimmune disease** | “History of thymoma, thymic hyperplasia, other autoimmune conditions (e.g., lupus, rheumatoid arthritis)?” | Thymic pathology is a common source of auto‑antibody production. |
-| **Triggers / exacerbating factors** | Recent infection (TB, malaria, HIV), fever, pregnancy, certain antibiotics (e.g., aminoglycosides), β‑blockers, magnesium, stress. | Infections and drugs that impair neuromuscular transmission lower the already compromised safety factor. |
-| **Medication history** | Use of quinine, penicillamine, procainamide, or other known precipitants. | These agents can worsen neuromuscular transmission. |
-| **Family history** | Any relatives with MG or other autoimmune disease. | Rare familial forms exist; helps in counseling. |
-| **Systemic symptoms** | Weight loss, fatigue unrelated to muscle use, fever. | May indicate concurrent infection (TB, HIV) that can mimic or aggravate MG. |
+- **Onset & course**: “When did the symptoms start?” “Did they get worse during the day or after activity?” — Auto‑antibody‑mediated loss of acetylcholine receptors produces fatigue that worsens with use and improves with rest (fluctuating weakness).
+- **Pattern of weakness**: Ptosis, diplopia, difficulty chewing, swallowing, speaking, neck flexion, proximal limb weakness, respiratory effort. Ask about “drooping eyelids”, “trouble holding objects”, “climbing stairs”, “getting up from a chair”. — Extra‑ocular muscles have a high firing rate and few reserve fibers, making them early targets. Bulbar and proximal muscles are similarly vulnerable.
+- **Fluctuation & fatigability**: “Do symptoms improve after a short rest or after sleeping?” “Do they worsen in hot weather or after infections?” — Reduced safety factor at the neuromuscular junction becomes more pronounced with sustained activity or metabolic stress.
+- **Cranial nerve involvement**: “Any change in voice, difficulty swallowing liquids or solids, choking, nasal speech?” — Impaired transmission at the neuromuscular junction of muscles innervated by cranial nerves (IX, X, XII).
+- **Respiratory symptoms**: “Shortness of breath when climbing stairs or lying flat?” “Any episodes of sudden breathlessness at night?” — Weakness of diaphragm and intercostals can precipitate myasthenic crisis, especially when supine.
+- **Associated autoimmune disease**: “History of thymoma, thymic hyperplasia, other autoimmune conditions (e.g., lupus, rheumatoid arthritis)?” — Thymic pathology is a common source of auto‑antibody production.
+- **Triggers / exacerbating factors**: Recent infection (TB, malaria, HIV), fever, pregnancy, certain antibiotics (e.g., aminoglycosides), β‑blockers, magnesium, stress. — Infections and drugs that impair neuromuscular transmission lower the already compromised safety factor.
+- **Medication history**: Use of quinine, penicillamine, procainamide, or other known precipitants. — These agents can worsen neuromuscular transmission.
+- **Family history**: Any relatives with MG or other autoimmune disease. — Rare familial forms exist; helps in counseling.
+- **Systemic symptoms**: Weight loss, fatigue unrelated to muscle use, fever. — May indicate concurrent infection (TB, HIV) that can mimic or aggravate MG.
 
 **Examination findings**  
 
@@ -108,24 +104,32 @@ When both clinical and laboratory criteria are met, the diagnosis is **definite 
 
 **Severity grading (for initial management planning)**  
 
-| Grade | Clinical picture | Management implication |
-|---|---|---|
-| **I (ocular)** | Isolated ptosis/diplopia, no bulbar or limb weakness | Anticholinesterase ± low‑dose steroids; monitor for generalisation. |
-| **II (mild generalized)** | Limb or bulbar weakness but able to sit upright, normal respiration | Anticholinesterase + steroids; consider early immunosuppressant; outpatient follow‑up. |
-| **III (moderate)** | Marked limb/bulbar weakness, may need assistance for ADLs, vital capacity > 1 L | Higher‑dose steroids, add steroid‑sparing agent (azathioprine, mycophenolate); consider thymectomy if indicated. |
-| **IV (severe)** | Severe weakness, respiratory compromise (vital capacity ≤ 1 L), may need ventilatory support | Admit to high‑dependency unit, start IV immunoglobulin or plasma exchange, aggressive immunosuppression, plan for definitive thymectomy if thymoma present. |
-| **V (crisis)** | Acute respiratory failure requiring intubation | Immediate airway protection, plasma exchange or IVIG, high‑dose steroids, treat precipitating factors (infection, drugs). |
+- **I (ocular)**: Isolated ptosis/diplopia, no bulbar or limb weakness — Anticholinesterase ± low‑dose steroids; monitor for generalisation.
+- **II (mild generalized)**: Limb or bulbar weakness but able to sit upright, normal respiration — Anticholinesterase + steroids; consider early immunosuppressant; outpatient follow‑up.
+- **III (moderate)**: Marked limb/bulbar weakness, may need assistance for ADLs, vital capacity > 1 L — Higher‑dose steroids, add steroid‑sparing agent (azathioprine, mycophenolate); consider thymectomy if indicated.
+- **IV (severe)**: Severe weakness, respiratory compromise (vital capacity ≤ 1 L), may need ventilatory support — Admit to high‑dependency unit, start IV immunoglobulin or plasma exchange, aggressive immunosuppression, plan for definitive thymectomy if thymoma present.
+- **V (crisis)**: Acute respiratory failure requiring intubation — Immediate airway protection, plasma exchange or IVIG, high‑dose steroids, treat precipitating factors (infection, drugs).
 
 Severity assessment should be repeated after any change in therapy or after an infection, as patients can shift rapidly between grades. Early recognition of respiratory decline (fall in vital capacity or negative inspiratory force) is critical to prevent crisis.
 
 ## Management  
 
-| Phase | Goal | Key Interventions | Monitoring / Safety |
-|---|---|---|---|
-| **Immediate stabilisation** | Secure airway, maintain ventilation | • Assess for respiratory fatigue (vital capacity, negative inspiratory force) <br>• Give supplemental O₂ if SpO₂ < 94 % <br>• Prepare for non‑invasive ventilation or intubation if VC < 1 L or rapid decline | Continuous pulse‑oximetry, bedside spirometry every 30 min, cardiac monitoring; have senior anaesthetist on standby |
-| **Definitive medical therapy** | Reduce auto‑antibody activity | • **Acetylcholinesterase inhibitor** (e.g., pyridostigmine) – start low, titrate to symptom control <br>• **Rapid‑acting immunotherapy** for crisis or severe disease: plasma exchange *or* intravenous immunoglobulin (IVIG) <br>• **Long‑term immunosuppression** – corticosteroids (prednisone‑type) → steroid‑sparing agents (azathioprine, mycophenolate mofetil, cyclosporine) <br>• **Thymectomy** for patients < 60 yr with generalized MG, especially if thymoma present | Baseline CBC, LFT, renal function before immunosuppressants; weekly weight & blood pressure on steroids; screen for infections; repeat antibody titres only for research, not routine |
-| **Adjuncts** | Symptom control, prevent exacerbations | • Avoid medications that worsen MG (e.g., aminoglycosides, fluoroquinolones, certain β‑blockers) <br>• Counsel on stress, infection, pregnancy, and vaccination timing | Review medication list at each visit; educate patient/family |
-| **Follow‑up** | Assess disease control, taper steroids, monitor complications | • Clinic review 4‑6 weeks after any change, then 3‑6 monthly <br>• Repeat pulmonary function tests if respiratory symptoms recur <br>• Monitor for steroid‑related adverse effects (glucose, bone density, cataract) | Use standardized MG‑ADL score to track functional status |
+- **Immediate stabilisation**
+  - Secure airway, maintain ventilation — • Assess for respiratory fatigue (vital capacity, negative inspiratory force)
+  - Give supplemental O₂ if SpO₂ < 94 %
+  - Prepare for non‑invasive ventilation or intubation if VC < 1 L or rapid decline — Continuous pulse‑oximetry, bedside spirometry every 30 min, cardiac monitoring; have senior anaesthetist on standby
+- **Definitive medical therapy**
+  - Reduce auto‑antibody activity — • **Acetylcholinesterase inhibitor** (e.g., pyridostigmine) – start low, titrate to symptom control
+  - **Rapid‑acting immunotherapy** for crisis or severe disease: plasma exchange *or* intravenous immunoglobulin (IVIG)
+  - **Long‑term immunosuppression** – corticosteroids (prednisone‑type) → steroid‑sparing agents (azathioprine, mycophenolate mofetil, cyclosporine)
+  - **Thymectomy** for patients < 60 yr with generalized MG, especially if thymoma present — Baseline CBC, LFT, renal function before immunosuppressants; weekly weight & blood pressure on steroids; screen for infections; repeat antibody titres only for research, not routine
+- **Adjuncts**
+  - Symptom control, prevent exacerbations — • Avoid medications that worsen MG (e.g., aminoglycosides, fluoroquinolones, certain β‑blockers)
+  - Counsel on stress, infection, pregnancy, and vaccination timing — Review medication list at each visit; educate patient/family
+- **Follow‑up**
+  - Assess disease control, taper steroids, monitor complications — • Clinic review 4‑6 weeks after any change, then 3‑6 monthly
+  - Repeat pulmonary function tests if respiratory symptoms recur
+  - Monitor for steroid‑related adverse effects (glucose, bone density, cataract) — Use standardized MG‑ADL score to track functional status
 
 **Contra‑indications / safety notes**  
 - Plasma exchange is contraindicated in severe coagulopathy or uncontrolled bleeding.  

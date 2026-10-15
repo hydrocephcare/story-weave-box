@@ -6,15 +6,13 @@
 A structured clinical process that elicits the patient’s symptom chronology, associated systemic features and risk factors, followed by a step‑by‑step neurological examination to localise lesions, grade severity and guide investigations and treatment.
 
 ## Anatomy and physiology you need  
-| System | Key structures | Clinical relevance |
-|---|---|---|
-| Cerebrum | Frontal, parietal, temporal, occipital lobes; motor & sensory cortices | Focal weakness, aphasia, visual field cuts |
-| Basal ganglia & thalamus | Caudate, putamen, globus pallidus, thalamic nuclei | Movement disorders, sensory thalamic pain |
-| Brainstem | Midbrain, pons, medulla; cranial nerve nuclei | Cranial nerve palsies, respiratory drive |
-| Cerebellum | Vermis, hemispheres; Purkinje cells | Ataxia, dysmetria, nystagmus |
-| Spinal cord | Cervical, thoracic, lumbar, sacral segments | Level‑specific motor/sensory loss, reflex changes |
-| Peripheral nerves & NMJ | Roots, plexi, peripheral nerves, neuromuscular junction | Peripheral neuropathy, myasthenia |
-| Meninges & CSF | Dura, arachnoid, pia; CSF dynamics | Headache, meningitis, raised ICP |
+- **Cerebrum**: Frontal, parietal, temporal, occipital lobes; motor & sensory cortices — Focal weakness, aphasia, visual field cuts
+- **Basal ganglia & thalamus**: Caudate, putamen, globus pallidus, thalamic nuclei — Movement disorders, sensory thalamic pain
+- **Brainstem**: Midbrain, pons, medulla; cranial nerve nuclei — Cranial nerve palsies, respiratory drive
+- **Cerebellum**: Vermis, hemispheres; Purkinje cells — Ataxia, dysmetria, nystagmus
+- **Spinal cord**: Cervical, thoracic, lumbar, sacral segments — Level‑specific motor/sensory loss, reflex changes
+- **Peripheral nerves & NMJ**: Roots, plexi, peripheral nerves, neuromuscular junction — Peripheral neuropathy, myasthenia
+- **Meninges & CSF**: Dura, arachnoid, pia; CSF dynamics — Headache, meningitis, raised ICP
 
 ## Causes and risk factors  
 - **Infectious**: HIV (neuro‑candidiasis, CMV, HIV‑associated neurocognitive disorder), cerebral malaria, tuberculous meningitis, bacterial meningitis, neuro‑borreliosis (rare).  
@@ -37,19 +35,17 @@ Autoimmune vasculitis → vessel wall inflammation → ischemia or hemorrhage �
 
 ## Clinical features  
 
-| Domain | Key questions / findings | Why it matters (pathophysiologic link) |
-|---|---|---|
-| **Onset** | Sudden vs. insidious; exact time of first symptom | Sudden suggests vascular, trauma or infection; gradual points to neuro‑degeneration, demyelination or metabolic disease |
-| **Progression** | Stepwise deterioration, relapsing‑remitting, continuous decline | Stepwise → demyelinating disease; relapsing‑remitting → multiple sclerosis; continuous → tumour, chronic infection, metabolic encephalopathy |
-| **Age & gender** | Age at presentation, sex | Certain disorders have age peaks (e.g., stroke >55 y, cerebral malaria in children, HIV‑related neuropathy in young adults) |
-| **Risk factors** | Hypertension, diabetes, smoking, HIV status, TB exposure, recent malaria, sickle‑cell crisis, rheumatic fever, family history | Directly point to common Kenyan aetiologies (vascular, infectious, hemoglobinopathies) |
-| **Focal neurological deficits** | Weakness (side, distribution), sensory loss (type, level), visual changes, dysphasia, facial droop | Localisation of lesion to specific CNS region or peripheral nerve |
-| **Global symptoms** | Headache (pattern, triggers), seizures, altered consciousness, fever, neck stiffness | Headache → raised ICP or meningitis; seizures → cortical irritation; fever/neck stiffness → infection |
-| **Cognitive & behavioural** | Memory loss, personality change, hallucinations, mood swings | Diffuse cortical or subcortical involvement (e.g., HIV encephalopathy, TB meningitis, metabolic encephalopathy) |
-| **Autonomic** | Urinary urgency/incontinence, constipation, erectile dysfunction | Spinal cord or brainstem involvement |
-| **Peripheral signs** | Numbness, tingling, burning, gait ataxia, tremor, myoclonus | Peripheral neuropathy (HIV, diabetes, TB drugs), cerebellar disease, extrapyramidal syndromes |
-| **Systemic review** | Recent infections, drug exposures, trauma, travel, vaccinations | Identify precipitating infectious or toxic causes (malaria, TB, antiretroviral neurotoxicity) |
-| **Functional impact** | Ability to perform ADLs, work, school | Guides severity grading and need for urgent intervention |
+- **Onset**: Sudden vs. insidious; exact time of first symptom — Sudden suggests vascular, trauma or infection; gradual points to neuro‑degeneration, demyelination or metabolic disease
+- **Progression**: Stepwise deterioration, relapsing‑remitting, continuous decline — Stepwise → demyelinating disease; relapsing‑remitting → multiple sclerosis; continuous → tumour, chronic infection, metabolic encephalopathy
+- **Age & gender**: Age at presentation, sex — Certain disorders have age peaks (e.g., stroke >55 y, cerebral malaria in children, HIV‑related neuropathy in young adults)
+- **Risk factors**: Hypertension, diabetes, smoking, HIV status, TB exposure, recent malaria, sickle‑cell crisis, rheumatic fever, family history — Directly point to common Kenyan aetiologies (vascular, infectious, hemoglobinopathies)
+- **Focal neurological deficits**: Weakness (side, distribution), sensory loss (type, level), visual changes, dysphasia, facial droop — Localisation of lesion to specific CNS region or peripheral nerve
+- **Global symptoms**: Headache (pattern, triggers), seizures, altered consciousness, fever, neck stiffness — Headache → raised ICP or meningitis; seizures → cortical irritation; fever/neck stiffness → infection
+- **Cognitive & behavioural**: Memory loss, personality change, hallucinations, mood swings — Diffuse cortical or subcortical involvement (e.g., HIV encephalopathy, TB meningitis, metabolic encephalopathy)
+- **Autonomic**: Urinary urgency/incontinence, constipation, erectile dysfunction — Spinal cord or brainstem involvement
+- **Peripheral signs**: Numbness, tingling, burning, gait ataxia, tremor, myoclonus — Peripheral neuropathy (HIV, diabetes, TB drugs), cerebellar disease, extrapyramidal syndromes
+- **Systemic review**: Recent infections, drug exposures, trauma, travel, vaccinations — Identify precipitating infectious or toxic causes (malaria, TB, antiretroviral neurotoxicity)
+- **Functional impact**: Ability to perform ADLs, work, school — Guides severity grading and need for urgent intervention
 
 **Examination findings and rationale**  
 
@@ -102,15 +98,13 @@ Autoimmune vasculitis → vessel wall inflammation → ischemia or hemorrhage �
 
 ## Diagnosis and severity  
 
-| Clinical syndrome | Diagnostic criteria (snapshot) | Severity grading (examples) |
-|---|---|---|
-| Acute ischaemic stroke | Sudden focal deficit + imaging evidence of infarct | NIH Stroke Scale: mild (0‑5), moderate (6‑15), severe (>15) |
-| TB meningitis | Subacute meningitic picture + CSF lymphocytosis, low glucose, high protein + MRI basal enhancement | British Medical Research Council stages: Stage I (alert), Stage II (confused), Stage III (coma) |
-| HIV‑associated neurocognitive disorder | HIV+ + neurocognitive testing showing impairment + exclusion of other causes | Asymptomatic neurocognitive impairment, mild neurocognitive disorder, HIV‑associated dementia |
-| Cerebral malaria | Recent travel, fever, seizures + peripheral smear positive for P. falciparum | WHO coma score: mild (≥11), moderate (8‑10), severe (≤7) |
-| Sickle‑cell CNS crisis | Sickle‑cell disease + acute focal deficit during vaso‑occlusive episode + MRI diffusion restriction | Mild (single transient deficit), moderate (persistent deficit <1 week), severe (deficit >1 week or coma) |
-| Peripheral neuropathy (drug‑induced) | Distal symmetric sensory loss + nerve conduction study showing axonal loss + temporal relation to drug | Graded by NCI‑CTCAE: Grade 1 (asymptomatic), Grade 2 (moderate symptoms), Grade 3 (severe limiting ADL) |
-| Brain tumour | Progressive focal signs + contrast‑enhancing mass on MRI + histology (if biopsied) | WHO tumour grade I‑IV; functional status by Karnofsky Performance Scale |
+- **Acute ischaemic stroke**: Sudden focal deficit + imaging evidence of infarct — NIH Stroke Scale: mild (0‑5), moderate (6‑15), severe (>15)
+- **TB meningitis**: Subacute meningitic picture + CSF lymphocytosis, low glucose, high protein + MRI basal enhancement — British Medical Research Council stages: Stage I (alert), Stage II (confused), Stage III (coma)
+- **HIV‑associated neurocognitive disorder**: HIV+ + neurocognitive testing showing impairment + exclusion of other causes — Asymptomatic neurocognitive impairment, mild neurocognitive disorder, HIV‑associated dementia
+- **Cerebral malaria**: Recent travel, fever, seizures + peripheral smear positive for P. falciparum — WHO coma score: mild (≥11), moderate (8‑10), severe (≤7)
+- **Sickle‑cell CNS crisis**: Sickle‑cell disease + acute focal deficit during vaso‑occlusive episode + MRI diffusion restriction — Mild (single transient deficit), moderate (persistent deficit <1 week), severe (deficit >1 week or coma)
+- **Peripheral neuropathy (drug‑induced)**: Distal symmetric sensory loss + nerve conduction study showing axonal loss + temporal relation to drug — Graded by NCI‑CTCAE: Grade 1 (asymptomatic), Grade 2 (moderate symptoms), Grade 3 (severe limiting ADL)
+- **Brain tumour**: Progressive focal signs + contrast‑enhancing mass on MRI + histology (if biopsied) — WHO tumour grade I‑IV; functional status by Karnofsky Performance Scale
 
 *Severity guides urgency of imaging, need for intensive monitoring, and choice of definitive therapy.*
 
@@ -124,16 +118,14 @@ Autoimmune vasculitis → vessel wall inflammation → ischemia or hemorrhage �
 
 **Definitive treatment** – directed at the underlying aetiology  
 
-| Condition | First‑line drug class | Rationale |
-|---|---|---|
-| Bacterial meningitis | Third‑generation cephalosporin + vancomycin | Broad coverage for common pathogens and resistant *Streptococcus pneumoniae* |
-| Tuberculous meningitis | Anti‑TB regimen (rifampicin, isoniazid, pyrazinamide, ethambutol) + adjunctive steroids | Steroids reduce mortality and neurologic sequelae |
-| Cerebral malaria | Artemisinin‑based combination therapy | Rapid parasite clearance; prevents cerebral oedema |
-| HIV‑related opportunistic CNS infection | Appropriate antiretroviral + pathogen‑specific therapy (e.g., cryptococcal fluconazole) | Immune restoration plus targeted antimicrobial |
-| Stroke (ischemic) | Antiplatelet (aspirin) ± anticoagulation if cardio‑embolic | Prevents extension of infarct |
-| Stroke (hemorrhagic) | Blood pressure control, reversal of anticoagulation, neurosurgical evacuation if indicated | Limits expansion of bleed |
-| Guillain‑Barré syndrome | IV immunoglobulin or plasma exchange | Modulates immune attack on peripheral nerves |
-| Sickle‑cell vaso‑occlusive CNS crisis | Exchange transfusion, analgesia, hydration | Reduces HbS concentration, improves oxygen delivery |
+- **Bacterial meningitis**: Third‑generation cephalosporin + vancomycin — Broad coverage for common pathogens and resistant *Streptococcus pneumoniae*
+- **Tuberculous meningitis**: Anti‑TB regimen (rifampicin, isoniazid, pyrazinamide, ethambutol) + adjunctive steroids — Steroids reduce mortality and neurologic sequelae
+- **Cerebral malaria**: Artemisinin‑based combination therapy — Rapid parasite clearance; prevents cerebral oedema
+- **HIV‑related opportunistic CNS infection**: Appropriate antiretroviral + pathogen‑specific therapy (e.g., cryptococcal fluconazole) — Immune restoration plus targeted antimicrobial
+- **Stroke (ischemic)**: Antiplatelet (aspirin) ± anticoagulation if cardio‑embolic — Prevents extension of infarct
+- **Stroke (hemorrhagic)**: Blood pressure control, reversal of anticoagulation, neurosurgical evacuation if indicated — Limits expansion of bleed
+- **Guillain‑Barré syndrome**: IV immunoglobulin or plasma exchange — Modulates immune attack on peripheral nerves
+- **Sickle‑cell vaso‑occlusive CNS crisis**: Exchange transfusion, analgesia, hydration — Reduces HbS concentration, improves oxygen delivery
 
 **Monitoring & follow‑up**  
 - Neurological status every 15 min for the first hour, then hourly (GCS, pupil size, motor response).  

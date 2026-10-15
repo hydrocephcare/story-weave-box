@@ -1,4 +1,4 @@
-# Lung Cancer — Year 4 Internal Medicine (Respiratory) Notes
+# Lung Cancer
 
 *Orientation notes for study. Treatment is decided by a multidisciplinary team; check current oncology guidelines.*
 
@@ -11,15 +11,13 @@
 
 ## Anatomy and physiology you need  
 
-| Structure / Function | Why it matters in lung cancer |
-|---|---|
-| **Bronchial tree (trachea → main bronchi → segmental bronchi)** – lined by pseudostratified ciliated columnar epithelium with basal cells that can undergo dysplasia. | Malignant transformation originates in these epithelial cells; central tumours (squamous, small‑cell) arise in larger bronchi where airflow turbulence concentrates carcinogens. |
-| **Alveolar type I & II cells** – type I for gas exchange, type II produce surfactant and act as progenitors. | Peripheral adenocarcinomas often arise from type II cells or bronchioalveolar stem cells; loss of surfactant regulation contributes to tumour‑induced inflammation. |
-| **Pulmonary vasculature (pulmonary arteries, veins, capillaries)** – low‑pressure system for gas exchange. | Tumour angiogenesis (VEGF‑driven) creates abnormal, leaky vessels that facilitate hematogenous spread to brain, bone, adrenal glands. |
-| **Lymphatic drainage (peribronchial, hilar, mediastinal nodes)** – filters interstitial fluid and immune cells. | Lymphatic invasion is the first step of regional spread; nodal status is a key component of TNM staging. |
-| **Pleura (visceral & parietal)** – serous membrane with rich lymphatics. | Invasion produces malignant pleural effusion; pleural seeding is a common route for distant metastasis. |
-| **Nervous supply** – vagus (parasympathetic), recurrent laryngeal nerves, phrenic, sympathetic chain. | Tumour compression or infiltration causes hoarseness (recurrent laryngeal), diaphragmatic paralysis (phrenic), Horner’s syndrome (sympathetic chain) – clues to localisation. |
-| **Respiratory mechanics** – compliance, airway resistance, ventilation‑perfusion (V/Q) matching. | Obstructive tumours raise airway resistance → dyspnoea, atelectasis, V/Q mismatch → hypoxaemia; these physiologic changes explain the clinical picture of breathlessness and cough. |
+- **Bronchial tree (trachea → main bronchi → segmental bronchi) – lined by pseudostratified ciliated columnar epithelium with basal cells that can undergo dysplasia.**: Malignant transformation originates in these epithelial cells; central tumours (squamous, small‑cell) arise in larger bronchi where airflow turbulence concentrates carcinogens.
+- **Alveolar type I & II cells – type I for gas exchange, type II produce surfactant and act as progenitors.**: Peripheral adenocarcinomas often arise from type II cells or bronchioalveolar stem cells; loss of surfactant regulation contributes to tumour‑induced inflammation.
+- **Pulmonary vasculature (pulmonary arteries, veins, capillaries) – low‑pressure system for gas exchange.**: Tumour angiogenesis (VEGF‑driven) creates abnormal, leaky vessels that facilitate hematogenous spread to brain, bone, adrenal glands.
+- **Lymphatic drainage (peribronchial, hilar, mediastinal nodes) – filters interstitial fluid and immune cells.**: Lymphatic invasion is the first step of regional spread; nodal status is a key component of TNM staging.
+- **Pleura (visceral & parietal) – serous membrane with rich lymphatics.**: Invasion produces malignant pleural effusion; pleural seeding is a common route for distant metastasis.
+- **Nervous supply – vagus (parasympathetic), recurrent laryngeal nerves, phrenic, sympathetic chain.**: Tumour compression or infiltration causes hoarseness (recurrent laryngeal), diaphragmatic paralysis (phrenic), Horner’s syndrome (sympathetic chain) – clues to localisation.
+- **Respiratory mechanics – compliance, airway resistance, ventilation‑perfusion (V/Q) matching.**: Obstructive tumours raise airway resistance → dyspnoea, atelectasis, V/Q mismatch → hypoxaemia; these physiologic changes explain the clinical picture of breathlessness and cough.
 
 ---
 
@@ -56,14 +54,12 @@ Host response (cachexia, inflammatory cytokines) → weight loss, anorexia, fati
 
 ## Pathology
 
-| Type | Features |
-|---|---|
-| **Non-small cell lung cancer (NSCLC) ≈ 85%** | |
-| • **Adenocarcinoma** | **Commonest overall**; **peripheral**; **women and never-smokers**; often **EGFR, ALK, ROS1** mutations; mucin production; metastasises early to bone and brain |
-| • **Squamous cell carcinoma** | **Central** near the hilum; **smokers**; **cavitation**; **keratin**; **PTHrP secretion causing hypercalcaemia** |
-| • **Large cell carcinoma** | Peripheral, undifferentiated |
-| **Small cell lung cancer (SCLC) ≈ 15%** | **Central**; **very strong smoking link**; **neuroendocrine** origin; **very rapid growth and early metastasis**; **paraneoplastic syndromes** (ectopic ACTH, SIADH, Lambert–Eaton); chemotherapy-sensitive |
-| **Others** | Carcinoid, mesothelioma (pleura), metastases from elsewhere (commonest lung malignancy overall) |
+- **Non-small cell lung cancer (NSCLC) ≈ 85%**
+- **• Adenocarcinoma**: **Commonest overall**; **peripheral**; **women and never-smokers**; often **EGFR, ALK, ROS1** mutations; mucin production; metastasises early to bone and brain
+- **• Squamous cell carcinoma**: **Central** near the hilum; **smokers**; **cavitation**; **keratin**; **PTHrP secretion causing hypercalcaemia**
+- **• Large cell carcinoma**: Peripheral, undifferentiated
+- **Small cell lung cancer (SCLC) ≈ 15%**: **Central**; **very strong smoking link**; **neuroendocrine** origin; **very rapid growth and early metastasis**; **paraneoplastic syndromes** (ectopic ACTH, SIADH, Lambert–Eaton); chemotherapy-sensitive
+- **Others**: Carcinoid, mesothelioma (pleura), metastases from elsewhere (commonest lung malignancy overall)
 
 ## Clinical features
 
@@ -185,17 +181,15 @@ Host response (cachexia, inflammatory cytokines) → weight loss, anorexia, fati
 
 Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [lung cancer drugs](/pharmacology?tab=conditions&c=lungca).
 
-| Drug | Class | Role here | Watch for |
-|---|---|---|---|
-| Cisplatin | Platinum chemotherapy | Backbone of non-small cell and small cell regimens | Kidney damage, hearing loss, severe vomiting, low magnesium |
-| Carboplatin | Platinum chemotherapy | Used when kidney function is poor or cisplatin is not tolerated | Low platelets and white cells |
-| Etoposide | Topoisomerase II inhibitor | With a platinum drug in small cell lung cancer | Low blood counts, hair loss |
-| Osimertinib | EGFR tyrosine kinase inhibitor | EGFR-mutant adenocarcinoma | Rash, diarrhoea, interstitial lung disease |
-| Pembrolizumab | PD-1 checkpoint inhibitor | High PD-L1 non-small cell lung cancer | Immune-related colitis, pneumonitis, thyroid disease |
-| Dexamethasone | Corticosteroid | Brain metastases, cord compression, SVC obstruction | High glucose, mood change, infection |
-| Morphine | Opioid analgesic | Cancer pain and breathlessness | Constipation, drowsiness; give a laxative |
-| Zoledronic acid | Bisphosphonate | Bone metastases and hypercalcaemia | Jaw osteonecrosis, kidney function |
-| Ondansetron | 5-HT₃ antagonist | Chemotherapy-induced vomiting | Constipation, QT prolongation |
+- **Cisplatin**: Platinum chemotherapy — Backbone of non-small cell and small cell regimens — Kidney damage, hearing loss, severe vomiting, low magnesium
+- **Carboplatin**: Platinum chemotherapy — Used when kidney function is poor or cisplatin is not tolerated — Low platelets and white cells
+- **Etoposide**: Topoisomerase II inhibitor — With a platinum drug in small cell lung cancer — Low blood counts, hair loss
+- **Osimertinib**: EGFR tyrosine kinase inhibitor — EGFR-mutant adenocarcinoma — Rash, diarrhoea, interstitial lung disease
+- **Pembrolizumab**: PD-1 checkpoint inhibitor — High PD-L1 non-small cell lung cancer — Immune-related colitis, pneumonitis, thyroid disease
+- **Dexamethasone**: Corticosteroid — Brain metastases, cord compression, SVC obstruction — High glucose, mood change, infection
+- **Morphine**: Opioid analgesic — Cancer pain and breathlessness — Constipation, drowsiness; give a laxative
+- **Zoledronic acid**: Bisphosphonate — Bone metastases and hypercalcaemia — Jaw osteonecrosis, kidney function
+- **Ondansetron**: 5-HT₃ antagonist — Chemotherapy-induced vomiting — Constipation, QT prolongation
 
 **Test before you treat:** the tissue type and the EGFR, ALK and PD-L1 results decide which drug is used.
 

@@ -1,4 +1,4 @@
-# Hepatitis B and the approach to hepatitis — Year 4 Internal Medicine (Gastroenterology) Notes
+# Hepatitis B and the approach to hepatitis
 
 *Clinical reasoning notes. Treatment thresholds change with new guidance: check your current national guidelines before treating.*
 
@@ -12,15 +12,13 @@ Jaundice, fatigue, right upper quadrant pain, nausea and vomiting, fever, dark u
 
 ## Anatomy and physiology you need  
 
-| Structure / Function | Why it matters for HBV | Clinical relevance |
-|---|---|---|
-| **Hepatocytes** – main parenchymal cells, contain the sodium‑taurocholate cotransporting polypeptide (NTCP) that HBV uses as its entry receptor | HBV binds to NTCP on the basolateral membrane → internalisation of the nucleocapsid | Damage to hepatocytes raises ALT/AST; loss of synthetic function (albumin, clotting factors) signals advanced disease |
-| **Sinusoids** – low‑pressure capillary network lined by fenestrated endothelium and Kupffer cells | Allows free passage of virions from portal blood to hepatocytes; Kupffer cells produce cytokines that modulate viral clearance | Inflammation of sinusoids (lobular hepatitis) produces the “ground‑glass” appearance on biopsy and correlates with ALT spikes |
-| **Bile canaliculi** – tiny ducts that drain bile into the intra‑hepatic bile ducts | HBV does not infect cholangiocytes, but cholestasis can develop from hepatocellular swelling that compresses canaliculi | Predominant cholestatic LFT pattern (↑ALP, GGT) suggests an alternative or superimposed pathology |
-| **Portal triad (portal vein, hepatic artery, bile duct)** – supplies blood and bile outflow | Portal inflow delivers HBV‑containing lymphocytes; arterial supply sustains immune surveillance | Fibrosis begins in the portal tract; progression to bridging fibrosis and cirrhosis is staged by the extent of portal‑centric scarring |
-| **Liver‑associated lymphoid tissue (LALT)** – intra‑hepatic CD8⁺ T‑cells, NK cells, dendritic cells | Cytotoxic T‑cells recognise HBV core antigen presented on HLA‑I; successful clearance requires a robust CD8 response | Weak cellular immunity → chronic infection; high HBV DNA despite normal ALT suggests immune tolerance phase |
-| **Hepatic stellate cells (Ito cells)** – quiescent vitamin‑A‑storing cells that become myofibroblasts when activated | Persistent inflammation releases TGF‑β, PDGF → activation of stellate cells → collagen deposition | Fibrosis progression is the key determinant of treatment indication and prognosis |
-| **Spleen & reticulo‑endothelial system** – filters blood, produces anti‑HBs antibodies after vaccination | Provides the source of anti‑HBs after successful immunisation or natural recovery | Presence of anti‑HBs with anti‑HBc IgG confirms immunity after infection; anti‑HBs alone indicates vaccine‑derived immunity |
+- **Hepatocytes – main parenchymal cells, contain the sodium‑taurocholate cotransporting polypeptide (NTCP) that HBV uses as its entry receptor**: HBV binds to NTCP on the basolateral membrane → internalisation of the nucleocapsid — Damage to hepatocytes raises ALT/AST; loss of synthetic function (albumin, clotting factors) signals advanced disease
+- **Sinusoids – low‑pressure capillary network lined by fenestrated endothelium and Kupffer cells**: Allows free passage of virions from portal blood to hepatocytes; Kupffer cells produce cytokines that modulate viral clearance — Inflammation of sinusoids (lobular hepatitis) produces the “ground‑glass” appearance on biopsy and correlates with ALT spikes
+- **Bile canaliculi – tiny ducts that drain bile into the intra‑hepatic bile ducts**: HBV does not infect cholangiocytes, but cholestasis can develop from hepatocellular swelling that compresses canaliculi — Predominant cholestatic LFT pattern (↑ALP, GGT) suggests an alternative or superimposed pathology
+- **Portal triad (portal vein, hepatic artery, bile duct) – supplies blood and bile outflow**: Portal inflow delivers HBV‑containing lymphocytes; arterial supply sustains immune surveillance — Fibrosis begins in the portal tract; progression to bridging fibrosis and cirrhosis is staged by the extent of portal‑centric scarring
+- **Liver‑associated lymphoid tissue (LALT) – intra‑hepatic CD8⁺ T‑cells, NK cells, dendritic cells**: Cytotoxic T‑cells recognise HBV core antigen presented on HLA‑I; successful clearance requires a robust CD8 response — Weak cellular immunity → chronic infection; high HBV DNA despite normal ALT suggests immune tolerance phase
+- **Hepatic stellate cells (Ito cells) – quiescent vitamin‑A‑storing cells that become myofibroblasts when activated**: Persistent inflammation releases TGF‑β, PDGF → activation of stellate cells → collagen deposition — Fibrosis progression is the key determinant of treatment indication and prognosis
+- **Spleen & reticulo‑endothelial system – filters blood, produces anti‑HBs antibodies after vaccination**: Provides the source of anti‑HBs after successful immunisation or natural recovery — Presence of anti‑HBs with anti‑HBc IgG confirms immunity after infection; anti‑HBs alone indicates vaccine‑derived immunity
 
 ---
 
@@ -48,11 +46,9 @@ Jaundice, fatigue, right upper quadrant pain, nausea and vomiting, fever, dark u
 
 ## 2. Start with the pattern: liver function tests
 
-| Pattern | What is raised | Think of |
-|---|---|---|
-| **Hepatocellular** | **ALT and AST** high | Viral hepatitis, drugs, alcohol, autoimmune hepatitis |
-| **Cholestatic** | **ALP and GGT** high | Gallstones in the bile duct, tumour, primary biliary cholangitis |
-| **Synthetic function** | **Low albumin, prolonged INR** | How badly the liver is failing (more serious than ALT) |
+- **Hepatocellular**: **ALT and AST** high — Viral hepatitis, drugs, alcohol, autoimmune hepatitis
+- **Cholestatic**: **ALP and GGT** high — Gallstones in the bile duct, tumour, primary biliary cholangitis
+- **Synthetic function**: **Low albumin, prolonged INR** — How badly the liver is failing (more serious than ALT)
 
 ## 3. Find the cause
 
@@ -66,35 +62,31 @@ Jaundice, fatigue, right upper quadrant pain, nausea and vomiting, fever, dark u
 
 ## 4. Hepatitis B serology: read it like a story
 
-| Marker | What it tells you |
-|---|---|
-| **HBsAg** | The patient has the virus now (acute or chronic). Positive for more than 6 months means chronic infection |
-| **Anti-HBc IgM** | **Acute** (recent) infection |
-| **Anti-HBc IgG** | Past or chronic infection |
-| **Anti-HBs** | **Immunity**: from vaccination (anti-HBs alone) or after recovery (with anti-HBc IgG) |
-| **HBeAg** | The virus is actively replicating: high infectivity |
-| **HBV DNA (viral load)** | How much virus there is: the key number for the decision to treat |
+- **HBsAg**: The patient has the virus now (acute or chronic). Positive for more than 6 months means chronic infection
+- **Anti-HBc IgM**: **Acute** (recent) infection
+- **Anti-HBc IgG**: Past or chronic infection
+- **Anti-HBs**: **Immunity**: from vaccination (anti-HBs alone) or after recovery (with anti-HBc IgG)
+- **HBeAg**: The virus is actively replicating: high infectivity
+- **HBV DNA (viral load)**: How much virus there is: the key number for the decision to treat
 
 ![Hepatitis B virus particles under the electron microscope. Public domain](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Hepatitis_B_virus_01.jpg/960px-Hepatitis_B_virus_01.jpg)
 
 ## Investigations: what each test answers  
 
-| Test | Question it answers | Interpretation (brief) |
-|---|---|---|
-| HBsAg | Is the patient currently infected? | Positive = infection (acute or chronic) |
-| Anti‑HBc IgM | Is the infection recent (<6 mo)? | Positive = acute infection |
-| Anti‑HBc IgG | Has the patient been exposed in the past? | Positive = past or chronic infection |
-| HBeAg | Is the virus replicating vigorously? | Positive = high infectivity, high HBV DNA |
-| Anti‑HBe | Has replication waned? | Positive = lower infectivity, often seroconversion |
-| HBV DNA (quantitative PCR) | How much virus is circulating? | Detectable → guides treatment threshold; undetectable → viral suppression |
-| ALT / AST | Is there active hepatocellular injury? | Elevated → necro‑inflammation; trend monitors response |
-| ALP / GGT | Is there cholestasis? | Predominant rise suggests biliary obstruction or drug injury |
-| INR / Albumin | How well is synthetic function preserved? | Prolonged INR / low albumin = advanced disease |
-| Liver ultrasound (with Doppler) | Is there cirrhosis, focal lesion, portal hypertension? | Nodular surface, splenomegaly, or HCC lesion → further imaging |
-| FibroScan (transient elastography) | What is the degree of fibrosis? | Stiffness > 9 kPa (approx) = significant fibrosis; > 12 kPa = cirrhosis |
-| AFP (alpha‑fetoprotein) | Is there a marker for HCC? | Elevated in many HCCs but not specific; used with imaging |
-| Full blood count & platelets | Is there hypersplenism or marrow suppression? | Thrombocytopenia may indicate portal hypertension |
-| Anti‑HBs | Does the patient have immunity? | Positive alone = vaccine immunity; with anti‑HBc IgG = natural immunity |
+- **HBsAg**: Is the patient currently infected? — Positive = infection (acute or chronic)
+- **Anti‑HBc IgM**: Is the infection recent (<6 mo)? — Positive = acute infection
+- **Anti‑HBc IgG**: Has the patient been exposed in the past? — Positive = past or chronic infection
+- **HBeAg**: Is the virus replicating vigorously? — Positive = high infectivity, high HBV DNA
+- **Anti‑HBe**: Has replication waned? — Positive = lower infectivity, often seroconversion
+- **HBV DNA (quantitative PCR)**: How much virus is circulating? — Detectable → guides treatment threshold; undetectable → viral suppression
+- **ALT / AST**: Is there active hepatocellular injury? — Elevated → necro‑inflammation; trend monitors response
+- **ALP / GGT**: Is there cholestasis? — Predominant rise suggests biliary obstruction or drug injury
+- **INR / Albumin**: How well is synthetic function preserved? — Prolonged INR / low albumin = advanced disease
+- **Liver ultrasound (with Doppler)**: Is there cirrhosis, focal lesion, portal hypertension? — Nodular surface, splenomegaly, or HCC lesion → further imaging
+- **FibroScan (transient elastography)**: What is the degree of fibrosis? — Stiffness > 9 kPa (approx) = significant fibrosis; > 12 kPa = cirrhosis
+- **AFP (alpha‑fetoprotein)**: Is there a marker for HCC? — Elevated in many HCCs but not specific; used with imaging
+- **Full blood count & platelets**: Is there hypersplenism or marrow suppression? — Thrombocytopenia may indicate portal hypertension
+- **Anti‑HBs**: Does the patient have immunity? — Positive alone = vaccine immunity; with anti‑HBc IgG = natural immunity
 
 ## 5. Chronic hepatitis B: who needs treatment?
 
@@ -108,13 +100,11 @@ Newer WHO guidance has widened who is eligible for treatment, so check what is c
 
 ## 6. Drugs: why this one and not that one
 
-| Drug | Role | The point to remember |
-|---|---|---|
-| **Tenofovir** | First line | Very high barrier to resistance; check kidney function and bone health |
-| **Entecavir** | First line | High barrier to resistance |
-| **Lamivudine** | Cheap but no longer first line | Resistance develops through the **YMDD mutation** in the viral reverse transcriptase |
-| **Pegylated interferon-α** | A finite course in selected patients | Many side effects; not for cirrhosis with decompensation |
-| **Ribavirin** | **Hepatitis C**, not hepatitis B | A classic exam trap: do not confuse the two viruses' drugs |
+- **Tenofovir**: First line — Very high barrier to resistance; check kidney function and bone health
+- **Entecavir**: First line — High barrier to resistance
+- **Lamivudine**: Cheap but no longer first line — Resistance develops through the **YMDD mutation** in the viral reverse transcriptase
+- **Pegylated interferon-α**: A finite course in selected patients — Many side effects; not for cirrhosis with decompensation
+- **Ribavirin**: **Hepatitis C**, not hepatitis B — A classic exam trap: do not confuse the two viruses' drugs
 
 ## 7. Supportive care, and why
 

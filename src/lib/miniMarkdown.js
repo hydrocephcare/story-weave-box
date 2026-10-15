@@ -22,7 +22,7 @@ function inline(text) {
     ? `<a class="note-link" href="${href}">${label}</a>`
     : `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`));
   t = t.replace(/`([^`]+)`/g, "<code>$1</code>");
-  t = t.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  t = t.replace(/\*\*(?=\S)(.+?)(?<=\S)\*\*/g, "<strong>$1</strong>");
   t = t.replace(/(^|[^*])\*([^*\s][^*]*)\*(?!\*)/g, "$1<em>$2</em>");
   return t;
 }
@@ -30,27 +30,39 @@ function inline(text) {
 const LIST = /^(\s*)([-*]|\d+\.)\s+(.*)$/;
 
 function parseList(lines, start, indent) {
-  const ordered = /\d+\./.test(lines[start].match(LIST)[2]);
+  const first = lines[start].match(LIST);
+  const ordered = /\d+\./.test(first[2]);
+  const startAt = ordered ? parseInt(first[2], 10) : 1;
   let html = "";
   let i = start;
   while (i < lines.length) {
     const m = lines[i].match(LIST);
-    if (!m || m[1].length !== indent) break;
+    if (!m || m[1].length !== indent || /\d+\./.test(m[2]) !== ordered) break;
     let text = m[3];
     let box = "";
     const cb = text.match(/^\[( |x)\]\s+(.*)$/i);
     if (cb) { box = `<input type="checkbox" disabled ${cb[1].toLowerCase() === "x" ? "checked " : ""}/> `; text = cb[2]; }
     i++;
+    let more = "";
     let nested = "";
-    const next = lines[i]?.match(LIST);
-    if (next && next[1].length > indent) {
-      const [sub, after] = parseList(lines, i, next[1].length);
-      nested = sub; i = after;
+    for (;;) {
+      // indented lines under an item (a model answer, a second sentence) belong to that item, also after a blank line
+      let j = i;
+      while (j < lines.length && !lines[j].trim()) j++;
+      const l = lines[j];
+      if (l === undefined) break;
+      const lead = l.match(/^(\s*)/)[1].length;
+      const asList = l.match(LIST);
+      if (asList && lead > indent) { const [sub, after] = parseList(lines, j, lead); nested += sub; i = after; continue; }
+      if (!asList && lead > indent && !/^\s*\|/.test(l)) { more += `<br />${inline(l.trim())}`; i = j + 1; continue; }
+      // a blank line, then the next item of the same list: keep it in this list (so numbering carries on)
+      if (j > i && asList && lead === indent && /\d+\./.test(asList[2]) === ordered) i = j;
+      break;
     }
-    html += `<li>${box}${inline(text)}${nested}</li>`;
+    html += `<li>${box}${inline(text)}${more}${nested}</li>`;
   }
   const tag = ordered ? "ol" : "ul";
-  return [`<${tag}>${html}</${tag}>`, i];
+  return [`<${tag}${ordered && startAt !== 1 ? ` start="${startAt}"` : ""}>${html}</${tag}>`, i];
 }
 
 function table(rows) {

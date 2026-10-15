@@ -27,13 +27,11 @@ The pulmonary circulation is a low-pressure, high-flow system.
 
 The World Health Organization (WHO) classifies PH into five groups based on shared pathophysiological mechanisms, clinical presentation, and therapeutic approaches.
 
-| WHO Group | Category | Common Causes in Kenya |
-|---|---|---|
-| Group 1 | Pulmonary Arterial Hypertension (PAH) | Idiopathic, HIV, portal hypertension, schistosomiasis, congenital heart disease (e.g., VSD, PDA, ASD with Eisenmenger's) |
-| Group 2 | PH due to Left Heart Disease | Left ventricular systolic or diastolic dysfunction, valvular heart disease (mitral stenosis, aortic stenosis/regurgitation) |
-| Group 3 | PH due to Lung Diseases and/or Hypoxia | COPD, interstitial lung disease (ILD), chronic high altitude exposure, obstructive sleep apnoea, TB sequelae (fibrosis, bronchiectasis) |
-| Group 4 | Chronic Thromboembolic PH (CTEPH) | Previous pulmonary embolism (PE), recurrent DVT, antiphospholipid syndrome |
-| Group 5 | PH with Unclear Multifactorial Mechanisms | Haematological disorders (sickle cell disease, myeloproliferative disorders), systemic disorders (sarcoidosis, chronic renal failure), metabolic disorders (glycogen storage diseases), external compression of pulmonary vasculature |
+- **Group 1**: Pulmonary Arterial Hypertension (PAH) — Idiopathic, HIV, portal hypertension, schistosomiasis, congenital heart disease (e.g., VSD, PDA, ASD with Eisenmenger's)
+- **Group 2**: PH due to Left Heart Disease — Left ventricular systolic or diastolic dysfunction, valvular heart disease (mitral stenosis, aortic stenosis/regurgitation)
+- **Group 3**: PH due to Lung Diseases and/or Hypoxia — COPD, interstitial lung disease (ILD), chronic high altitude exposure, obstructive sleep apnoea, TB sequelae (fibrosis, bronchiectasis)
+- **Group 4**: Chronic Thromboembolic PH (CTEPH) — Previous pulmonary embolism (PE), recurrent DVT, antiphospholipid syndrome
+- **Group 5**: PH with Unclear Multifactorial Mechanisms — Haematological disorders (sickle cell disease, myeloproliferative disorders), systemic disorders (sarcoidosis, chronic renal failure), metabolic disorders (glycogen storage diseases), external compression of pulmonary vasculature
 
 **Specific causes in our Kenyan setting:**
 *   **Chronic Lung Disease:** COPD (due to biomass fuel exposure, smoking), interstitial lung disease (e.g., post-TB fibrosis, pneumoconiosis), severe asthma.

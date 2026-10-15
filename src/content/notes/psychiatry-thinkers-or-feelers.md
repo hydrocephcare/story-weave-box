@@ -1,4 +1,4 @@
-# Are Human Beings Thinkers with Emotions, or Emotional Thinkers? — Year 4 Psychiatry Notes
+# Are Human Beings Thinkers with Emotions, or Emotional Thinkers?
 
 *Discussion topic for a class presentation. A balanced argument from philosophy, neuroscience and psychiatry. Plan 15–20 minutes.*
 
@@ -33,15 +33,13 @@ Is a person **mainly a rational thinker** who also has feelings (reason in charg
 
 ## 5. What psychiatry shows: both directions go wrong
 
-| Condition | Thought → emotion | Emotion → thought |
-|---|---|---|
-| **Depression** | Negative automatic thoughts and hopelessness deepen the low mood | Low mood causes negative bias, slowed thinking, poor concentration |
-| **Anxiety / panic** | **Catastrophic misinterpretation** of body sensations ("I'm dying") produces panic | Fear narrows attention to threat |
-| **Mania** | Grandiose ideas fuel euphoria | **Elation drives** racing thoughts, poor judgement and risk-taking |
-| **OCD** | Intrusive thoughts cause distress and rituals | Anxiety strengthens the obsessions |
-| **Psychopathy / alexithymia** | Intact reasoning | **Blunted emotion** leads to poor moral and social judgement (shows reason alone is not enough) |
-| **Schizophrenia** | Delusional interpretations | Flat or inappropriate affect disconnected from thought |
-| **PTSD** | Intrusive memories | Emotional memory hijacks present perception |
+- **Depression**: Negative automatic thoughts and hopelessness deepen the low mood — Low mood causes negative bias, slowed thinking, poor concentration
+- **Anxiety / panic**: **Catastrophic misinterpretation** of body sensations ("I'm dying") produces panic — Fear narrows attention to threat
+- **Mania**: Grandiose ideas fuel euphoria — **Elation drives** racing thoughts, poor judgement and risk-taking
+- **OCD**: Intrusive thoughts cause distress and rituals — Anxiety strengthens the obsessions
+- **Psychopathy / alexithymia**: Intact reasoning — **Blunted emotion** leads to poor moral and social judgement (shows reason alone is not enough)
+- **Schizophrenia**: Delusional interpretations — Flat or inappropriate affect disconnected from thought
+- **PTSD**: Intrusive memories — Emotional memory hijacks present perception
 
 **Treatment mirrors this:** CBT works through **thinking**, while **medication, mindfulness, exposure and behavioural activation** work through **emotion and behaviour**, and the best results combine them.
 

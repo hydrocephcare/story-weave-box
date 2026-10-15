@@ -14,13 +14,11 @@ The respiratory system comprises the upper airways (nose, pharynx, larynx), lowe
 *   **Respiratory control centre:** In brainstem, regulates breathing rate and depth.
 
 ## Causes and risk factors
-| Symptom | Common Causes | Risk Factors |
-|---|---|---|
-| **Cough** | URTI, LRTI (pneumonia, bronchitis, TB), asthma, COPD, GERD, ACE inhibitors, heart failure, post-nasal drip | Smoking, exposure to irritants, immunosuppression, recurrent infections, older age |
-| **Dyspnoea** | Asthma, COPD, heart failure, pneumonia, pleural effusion, pneumothorax, anaemia, anxiety, PE | Smoking, obesity, cardiac disease, occupational exposures, sedentary lifestyle |
-| **Haemoptysis** | Bronchitis, TB, bronchiectasis, pneumonia, lung cancer, PE, trauma, foreign body | Smoking, chronic lung disease, immunosuppression, history of TB, coagulopathy |
-| **Wheeze** | Asthma, COPD, bronchiolitis, foreign body aspiration, anaphylaxis | Atopy, smoking, exposure to allergens/irritants, prematurity |
-| **Chest Pain** | Musculoskeletal, pleurisy, pneumonia, PE, pneumothorax, MI, GERD, anxiety | Trauma, recent cough, smoking, cardiac risk factors, immunosuppression |
+- **Cough**: URTI, LRTI (pneumonia, bronchitis, TB), asthma, COPD, GERD, ACE inhibitors, heart failure, post-nasal drip — Smoking, exposure to irritants, immunosuppression, recurrent infections, older age
+- **Dyspnoea**: Asthma, COPD, heart failure, pneumonia, pleural effusion, pneumothorax, anaemia, anxiety, PE — Smoking, obesity, cardiac disease, occupational exposures, sedentary lifestyle
+- **Haemoptysis**: Bronchitis, TB, bronchiectasis, pneumonia, lung cancer, PE, trauma, foreign body — Smoking, chronic lung disease, immunosuppression, history of TB, coagulopathy
+- **Wheeze**: Asthma, COPD, bronchiolitis, foreign body aspiration, anaphylaxis — Atopy, smoking, exposure to allergens/irritants, prematurity
+- **Chest Pain**: Musculoskeletal, pleurisy, pneumonia, PE, pneumothorax, MI, GERD, anxiety — Trauma, recent cough, smoking, cardiac risk factors, immunosuppression
 
 ## Pathophysiology
 

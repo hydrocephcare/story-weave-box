@@ -6,14 +6,12 @@
 Blood transfusion is the intravenous administration of whole blood or blood components (red cells, plasma, platelets, cryoprecipitate) to a recipient for therapeutic or prophylactic purposes. A transfusion reaction is any adverse symptom or sign occurring during or within 24 h of the transfusion that is temporally related to the infused product and not explained by the underlying disease.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to transfusion |
-|---|---|
-| Vascular endothelium | Barrier to plasma proteins; site of immune complex deposition |
-| Red blood cell membrane antigens (ABO, Rh, Kell, Duffy…) | Basis of allo‑immunisation and hemolysis |
-| Plasma proteins (IgG, IgM, complement) | Mediate immune‑mediated reactions |
-| Coagulation cascade | Determines need for plasma/cryoprecipitate |
-| Platelet receptors (GPIb, GPIIb/IIIa) | Target of allo‑antibodies causing platelet destruction |
-| Spleen and reticulo‑endothelial system | Clears opsonised cells; site of sequestration in hemolysis |
+- **Vascular endothelium**: Barrier to plasma proteins; site of immune complex deposition
+- **Red blood cell membrane antigens (ABO, Rh, Kell, Duffy…)**: Basis of allo‑immunisation and hemolysis
+- **Plasma proteins (IgG, IgM, complement)**: Mediate immune‑mediated reactions
+- **Coagulation cascade**: Determines need for plasma/cryoprecipitate
+- **Platelet receptors (GPIb, GPIIb/IIIa)**: Target of allo‑antibodies causing platelet destruction
+- **Spleen and reticulo‑endothelial system**: Clears opsonised cells; site of sequestration in hemolysis
 
 Understanding these structures helps explain why mismatched antigens, antibodies, or cytokines provoke specific clinical pictures.
 
@@ -50,20 +48,24 @@ Understanding these structures helps explain why mismatched antigens, antibodies
 
 ## Clinical features  
 
-| Domain | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Timing** | *When did the transfusion start?* <br> *When did symptoms appear?* | Acute reactions usually begin ≤ 4 h (most within minutes). Delayed reactions appear days to weeks later. |
-| **Fever** | *Did temperature rise during or after the transfusion?* <br> *Any chills or rigors?* | Cytokine release (febrile non‑hemolytic), bacterial contamination, or hemolysis provoke pyrogenic response. |
-| **Pain** | *Any pain at the infusion site, back, chest, abdomen, joints or muscles?* |  - **Infusion‑related**: venous irritation, extravasation. <br> - **Hemolysis**: retro‑orbital, flank or back pain from renal vasoconstriction. |
-| **Skin** | *Rash, urticaria, flushing, itching, or mottled discoloration?* | IgE‑mediated anaphylaxis, complement activation (TRALI), or immune complex deposition (serum sickness). |
-| **Respiratory** | *Shortness of breath, cough, wheeze, or chest tightness?* | Pulmonary capillary leak (TRALI), bronchospasm (anaphylaxis), fluid overload. |
-| **Cardiovascular** | *Palpitations, hypotension, tachycardia, or hypertension?* | Anaphylaxis (vasodilation, capillary leak), hemolysis (hypotension from volume loss), volume overload. |
-| **Renal** | *Decreased urine output, hematuria, flank pain?* | Acute tubular necrosis from hemoglobinuria (intravascular hemolysis) or pigment nephropathy. |
-| **Neurological** | *Dizziness, headache, visual changes, seizures?* | Cerebral hypoperfusion (anaphylaxis), micro‑emboli (TRALI), or severe anemia from hemolysis. |
-| **Bleeding / Hemolysis** | *Dark urine, jaundice, pallor, or increased bleeding?* | Massive hemolysis releases bilirubin, hemoglobin; consumptive coagulopathy may develop. |
-| **Past transfusion history** | *Previous reactions, allo‑immunisation, antibodies?* | Prior sensitisation raises risk of delayed hemolytic or anaphylactic reactions. |
-| **Co‑morbidities** | *HIV, TB, malaria, sickle cell disease, rheumatic heart disease, pregnancy?* | Underlying disease may predispose to specific reactions (e.g., allo‑antibodies in sickle cell, hyper‑immune state in pregnancy). |
-| **Medications** | *Recent antibiotics, immunosuppressants, antihistamines?* | Certain drugs (e.g., ceftriaxone) can cause immune complex reactions; antihistamines may mask early signs. |
+- **Timing**
+  - *When did the transfusion start?*
+  - *When did symptoms appear?* — Acute reactions usually begin ≤ 4 h (most within minutes). Delayed reactions appear days to weeks later.
+- **Fever**
+  - *Did temperature rise during or after the transfusion?*
+  - *Any chills or rigors?* — Cytokine release (febrile non‑hemolytic), bacterial contamination, or hemolysis provoke pyrogenic response.
+- **Pain**
+  - *Any pain at the infusion site, back, chest, abdomen, joints or muscles?* — - **Infusion‑related**: venous irritation, extravasation.
+  - - **Hemolysis**: retro‑orbital, flank or back pain from renal vasoconstriction.
+- **Skin**: *Rash, urticaria, flushing, itching, or mottled discoloration?* — IgE‑mediated anaphylaxis, complement activation (TRALI), or immune complex deposition (serum sickness).
+- **Respiratory**: *Shortness of breath, cough, wheeze, or chest tightness?* — Pulmonary capillary leak (TRALI), bronchospasm (anaphylaxis), fluid overload.
+- **Cardiovascular**: *Palpitations, hypotension, tachycardia, or hypertension?* — Anaphylaxis (vasodilation, capillary leak), hemolysis (hypotension from volume loss), volume overload.
+- **Renal**: *Decreased urine output, hematuria, flank pain?* — Acute tubular necrosis from hemoglobinuria (intravascular hemolysis) or pigment nephropathy.
+- **Neurological**: *Dizziness, headache, visual changes, seizures?* — Cerebral hypoperfusion (anaphylaxis), micro‑emboli (TRALI), or severe anemia from hemolysis.
+- **Bleeding / Hemolysis**: *Dark urine, jaundice, pallor, or increased bleeding?* — Massive hemolysis releases bilirubin, hemoglobin; consumptive coagulopathy may develop.
+- **Past transfusion history**: *Previous reactions, allo‑immunisation, antibodies?* — Prior sensitisation raises risk of delayed hemolytic or anaphylactic reactions.
+- **Co‑morbidities**: *HIV, TB, malaria, sickle cell disease, rheumatic heart disease, pregnancy?* — Underlying disease may predispose to specific reactions (e.g., allo‑antibodies in sickle cell, hyper‑immune state in pregnancy).
+- **Medications**: *Recent antibiotics, immunosuppressants, antihistamines?* — Certain drugs (e.g., ceftriaxone) can cause immune complex reactions; antihistamines may mask early signs.
 
 **Examination**  
 
@@ -112,15 +114,13 @@ Each finding reflects the underlying pathophysiology of the reaction and guides 
 
 ## Diagnosis and severity  
 
-| Reaction type | Diagnostic criteria (core) | Severity grading* |
-|---|---|---|
-| **Acute hemolytic transfusion reaction** | Fever, flank pain, ↓Hb, ↑LDH, ↓haptoglobin, positive DAT, hemoglobinuria, timing ≤ 4 h | **Mild** – symptoms controlled with fluids; **Moderate** – hypotension, renal impairment; **Severe** – shock, disseminated intravascular coagulation, death. |
-| **Febrile non‑hemolytic** | Fever ≥ 1 °C, chills, no hemolysis labs, ≤ 4 h | **Mild** – resolves with antipyretics; **Moderate** – persistent high fever > 2 h; **Severe** – fever > 40 °C, hemodynamic change. |
-| **Allergic/Anaphylactic** | Urticaria ± wheeze, hypotension, rapid onset, possible positive tryptase | **Mild** – limited cutaneous; **Moderate** – respiratory involvement; **Severe** – hypotension, airway compromise. |
-| **TRALI** | Acute hypoxia, PaO₂/FiO₂ < 300, bilateral infiltrates, no cardiac overload, ≤ 6 h | **Mild** – oxygen requirement < 2 L/min; **Moderate** – need > 2 L/min, ICU admission; **Severe** – mechanical ventilation, multi‑organ failure. |
-| **TACO** | Signs of volume overload, BNP rise, cardiomegaly, ≤ 6 h | **Mild** – responds to diuretics; **Moderate** – persistent edema, O₂ > 4 L/min; **Severe** – respiratory failure, need for ventilation. |
-| **Bacterial contamination** | Fever > 38 °C, rigors, hypotension, positive cultures, ≤ 6 h | **Mild** – fever only; **Moderate** – sepsis criteria; **Severe** – septic shock. |
-| **Delayed hemolytic transfusion reaction** | Fever, jaundice, falling Hb 3‑14 days, positive indirect Coombs, no acute renal signs | **Mild** – asymptomatic fall in Hb; **Moderate** – symptomatic anemia, jaundice; **Severe** – renal impairment, severe anemia. |
+- **Acute hemolytic transfusion reaction**: Fever, flank pain, ↓Hb, ↑LDH, ↓haptoglobin, positive DAT, hemoglobinuria, timing ≤ 4 h — **Mild** – symptoms controlled with fluids; **Moderate** – hypotension, renal impairment; **Severe** – shock, disseminated intravascular coagulation, death.
+- **Febrile non‑hemolytic**: Fever ≥ 1 °C, chills, no hemolysis labs, ≤ 4 h — **Mild** – resolves with antipyretics; **Moderate** – persistent high fever > 2 h; **Severe** – fever > 40 °C, hemodynamic change.
+- **Allergic/Anaphylactic**: Urticaria ± wheeze, hypotension, rapid onset, possible positive tryptase — **Mild** – limited cutaneous; **Moderate** – respiratory involvement; **Severe** – hypotension, airway compromise.
+- **TRALI**: Acute hypoxia, PaO₂/FiO₂ < 300, bilateral infiltrates, no cardiac overload, ≤ 6 h — **Mild** – oxygen requirement < 2 L/min; **Moderate** – need > 2 L/min, ICU admission; **Severe** – mechanical ventilation, multi‑organ failure.
+- **TACO**: Signs of volume overload, BNP rise, cardiomegaly, ≤ 6 h — **Mild** – responds to diuretics; **Moderate** – persistent edema, O₂ > 4 L/min; **Severe** – respiratory failure, need for ventilation.
+- **Bacterial contamination**: Fever > 38 °C, rigors, hypotension, positive cultures, ≤ 6 h — **Mild** – fever only; **Moderate** – sepsis criteria; **Severe** – septic shock.
+- **Delayed hemolytic transfusion reaction**: Fever, jaundice, falling Hb 3‑14 days, positive indirect Coombs, no acute renal signs — **Mild** – asymptomatic fall in Hb; **Moderate** – symptomatic anemia, jaundice; **Severe** – renal impairment, severe anemia.
 
 *Severity is based on clinical impact, need for organ‑support, and response to initial measures.  
 
@@ -134,15 +134,13 @@ Prompt recognition, classification, and escalation of care according to severity
 
 **Definitive treatment** – varies with reaction type  
 
-| Reaction type | First‑line therapy | Rationale |
-|---|---|---|
-| Acute hemolytic (ABO‑incompatible) | Aggressive IV crystalloids, consider albumin, monitor urine output, give diuretics if oliguria | Prevent renal tubular injury from free haemoglobin; maintain perfusion |
-| Febrile non‑haemolytic | Antipyretics (paracetamol) | Symptomatic relief; no immune suppression needed |
-| Allergic (urticarial) | Antihistamine (H1 blocker) ± short course corticosteroid | Blocks histamine release, reduces rash/pruritus |
-| Anaphylaxis | IM epinephrine, IV fluids, high‑flow O₂, antihistamine, corticosteroid | Rapid reversal of airway edema and hypotension |
-| Transfusion‑related acute lung injury (TRALI) | Supportive ventilation, diuretics only if fluid overload, avoid diuretics if hypovolaemic | Lung injury is immune‑mediated; fluid balance is key |
-| Transfusion‑associated circulatory overload (TACO) | IV diuretics, oxygen, consider CPAP/NIV | Relieve pulmonary congestion |
-| Delayed hemolytic | Corticosteroid (if severe), monitor Hb, give compatible washed RBCs if repeat transfusion needed | Immune‑mediated destruction; steroids blunt antibody response |
+- **Acute hemolytic (ABO‑incompatible)**: Aggressive IV crystalloids, consider albumin, monitor urine output, give diuretics if oliguria — Prevent renal tubular injury from free haemoglobin; maintain perfusion
+- **Febrile non‑haemolytic**: Antipyretics (paracetamol) — Symptomatic relief; no immune suppression needed
+- **Allergic (urticarial)**: Antihistamine (H1 blocker) ± short course corticosteroid — Blocks histamine release, reduces rash/pruritus
+- **Anaphylaxis**: IM epinephrine, IV fluids, high‑flow O₂, antihistamine, corticosteroid — Rapid reversal of airway edema and hypotension
+- **Transfusion‑related acute lung injury (TRALI)**: Supportive ventilation, diuretics only if fluid overload, avoid diuretics if hypovolaemic — Lung injury is immune‑mediated; fluid balance is key
+- **Transfusion‑associated circulatory overload (TACO)**: IV diuretics, oxygen, consider CPAP/NIV — Relieve pulmonary congestion
+- **Delayed hemolytic**: Corticosteroid (if severe), monitor Hb, give compatible washed RBCs if repeat transfusion needed — Immune‑mediated destruction; steroids blunt antibody response
 
 **Monitoring**  
 - Vital signs every 5 min for the first 30 min, then hourly for 2 h.  
@@ -164,15 +162,13 @@ Prompt recognition, classification, and escalation of care according to severity
 ---
 
 ## Complications and prognosis  
-| Complication | Typical outcome | Key preventive measure |
-|---|---|---|
-| Acute hemolytic reaction | Can lead to acute renal failure, DIC, death if untreated | Strict ABO/Rh matching, double‑check patient ID |
-| TRALI | Mortality 5–10 %; most recover with supportive care | Use plasma from male donors or screened female donors |
-| TACO | Mortality up to 15 % in frail patients | Assess volume status, limit rate, use diuretics prophylactically in high‑risk |
-| Febrile non‑haemolytic | Benign, resolves in hours | Leukoreduction of blood components |
-| Allergic / anaphylactic | Usually self‑limited; anaphylaxis can be fatal | Use washed RBCs for IgA‑deficient patients |
-| Delayed hemolytic | Mild anaemia, may require repeat compatible unit | Extended phenotyping, consider genotyping in multiply transfused |
-| Transfusion‑transmitted infections (HIV, HBV, malaria, TB) | Chronic disease; malaria can be severe in non‑immune | Rigorous donor screening, pathogen‑reduction where available |
+- **Acute hemolytic reaction**: Can lead to acute renal failure, DIC, death if untreated — Strict ABO/Rh matching, double‑check patient ID
+- **TRALI**: Mortality 5–10 %; most recover with supportive care — Use plasma from male donors or screened female donors
+- **TACO**: Mortality up to 15 % in frail patients — Assess volume status, limit rate, use diuretics prophylactically in high‑risk
+- **Febrile non‑haemolytic**: Benign, resolves in hours — Leukoreduction of blood components
+- **Allergic / anaphylactic**: Usually self‑limited; anaphylaxis can be fatal — Use washed RBCs for IgA‑deficient patients
+- **Delayed hemolytic**: Mild anaemia, may require repeat compatible unit — Extended phenotyping, consider genotyping in multiply transfused
+- **Transfusion‑transmitted infections (HIV, HBV, malaria, TB)**: Chronic disease; malaria can be severe in non‑immune — Rigorous donor screening, pathogen‑reduction where available
 
 Overall prognosis is excellent when reactions are recognised early and managed promptly. Severe immune‑mediated reactions carry higher morbidity and require close follow‑up.
 

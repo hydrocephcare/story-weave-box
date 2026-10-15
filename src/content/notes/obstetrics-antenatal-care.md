@@ -1,4 +1,4 @@
-# Antenatal care — Year 4 Obstetrics and Gynaecology Notes
+# Antenatal care
 
 *From the Department's antenatal care lecture (photographed slides), organised as a visit-by-visit guide. Visit schedules differ between the WHO 2016 model and the focused (FANC) model used in many Kenyan facilities: know both.*
 
@@ -29,21 +29,17 @@ The lesson of FANC: **every pregnant woman is at risk of a complication**, so ev
 
 ## 3. Timing of visits
 
-| Model | Schedule |
-|---|---|
-| **WHO 2016 (eight contacts)** | **1st within 12 weeks**; then at **20, 26, 30, 34, 36, 38 and 40 weeks** |
-| **WHO focused ANC (four visits)** | **1st within 16 weeks**; **2nd at 24–28 weeks**; **3rd at 32 weeks**; **4th at 36 weeks** |
-| **Visits as taught locally** | **1st at 8–12 weeks, 2nd at 24–26 weeks, 3rd at 32 weeks, 4th at 36–38 weeks** |
+- **WHO 2016 (eight contacts)**: **1st within 12 weeks**; then at **20, 26, 30, 34, 36, 38 and 40 weeks**
+- **WHO focused ANC (four visits)**: **1st within 16 weeks**; **2nd at 24–28 weeks**; **3rd at 32 weeks**; **4th at 36 weeks**
+- **Visits as taught locally**: **1st at 8–12 weeks, 2nd at 24–26 weeks, 3rd at 32 weeks, 4th at 36–38 weeks**
 
 ## 4. What happens at each visit
 
-| Visit | Gestation | Activities |
-|---|---|---|
-| **First** | **8–12 weeks** | **Confirm the pregnancy and the EDD**; **classify the woman** for basic ANC (four visits) or specialised care; **screen, treat and give preventive measures** (anaemia, syphilis, malaria, HIV); start the **birth plan and immunisation schedule**; counsel on **ITN use**; give **iron and folic acid** whether anaemic or not |
-| **Second** | **24–26 weeks** | Assess **maternal and fetal well-being**; **exclude pregnancy-induced hypertension (PIH) and anaemia**; give preventive measures; **review the birth and emergency plan**; advise and counsel |
-| **Third** | **32 weeks** | Assess well-being; exclude PIH, anaemia and **multiple pregnancy**; preventive measures; review the plan |
-| **Fourth** | **36–38 weeks** | Assess well-being; **repeat the HIV test**; exclude PIH, anaemia, multiple pregnancy and **malpresentation**; review the plan; counsel on **labour, delivery and newborn care** |
-| **Subsequent** | Any | Confirm **fetal life**, detect abnormalities, finalise the birth plan. The **ANC card** is the basic tool of FANC |
+- **First**: **8–12 weeks** — **Confirm the pregnancy and the EDD**; **classify the woman** for basic ANC (four visits) or specialised care; **screen, treat and give preventive measures** (anaemia, syphilis, malaria, HIV); start the **birth plan and immunisation schedule**; counsel on **ITN use**; give **iron and folic acid** whether anaemic or not
+- **Second**: **24–26 weeks** — Assess **maternal and fetal well-being**; **exclude pregnancy-induced hypertension (PIH) and anaemia**; give preventive measures; **review the birth and emergency plan**; advise and counsel
+- **Third**: **32 weeks** — Assess well-being; exclude PIH, anaemia and **multiple pregnancy**; preventive measures; review the plan
+- **Fourth**: **36–38 weeks** — Assess well-being; **repeat the HIV test**; exclude PIH, anaemia, multiple pregnancy and **malpresentation**; review the plan; counsel on **labour, delivery and newborn care**
+- **Subsequent**: Any — Confirm **fetal life**, detect abnormalities, finalise the birth plan. The **ANC card** is the basic tool of FANC
 
 ## 5. The first visit in detail
 
@@ -74,14 +70,12 @@ General examination, **weight**, **blood pressure**, **oedema**, **pallor**, **b
 
 ## 7. Early detection and treatment: at every visit
 
-| Condition | How it is found |
-|---|---|
-| **Severe anaemia** | Pallor, haemoglobin |
-| **Pre-eclampsia / eclampsia** | **Blood pressure** and **urine protein** |
-| **HIV** | Voluntary counselling and testing |
-| **STIs, including syphilis** | Testing |
-| **Malaria** | History and examination (fever and signs); test and treat |
-| **Complicated versus uncomplicated** | Decide who needs referral |
+- **Severe anaemia**: Pallor, haemoglobin
+- **Pre-eclampsia / eclampsia**: **Blood pressure** and **urine protein**
+- **HIV**: Voluntary counselling and testing
+- **STIs, including syphilis**: Testing
+- **Malaria**: History and examination (fever and signs); test and treat
+- **Complicated versus uncomplicated**: Decide who needs referral
 
 ## 8. Health education: the topics
 

@@ -1,4 +1,4 @@
-# Safe motherhood, maternal and newborn health — Year 4 Obstetrics and Gynaecology Notes
+# Safe motherhood, maternal and newborn health
 
 *From the Department's safe motherhood lecture (photographed slides), with the Kenyan figures from the slides. Examiners love this topic because it joins clinical care to the health system.*
 
@@ -8,24 +8,20 @@
 
 **Maternal death (WHO):** the death of a woman **while pregnant or within 42 days of the end of pregnancy, irrespective of the duration or site of the pregnancy, from any cause related to or aggravated by the pregnancy or its management, but not from accidental or incidental causes.**
 
-| Type | Meaning |
-|---|---|
-| **Direct** | Result from **obstetric complications** of pregnancy, labour and the puerperium, or from interventions, omissions or incorrect treatment |
-| **Indirect** | Result from **pre-existing disease or disease that developed in pregnancy** (not a direct obstetric cause) that was **aggravated by the physiological effects of pregnancy**: in our setting **malaria, HIV/AIDS and anaemia** |
+- **Direct**: Result from **obstetric complications** of pregnancy, labour and the puerperium, or from interventions, omissions or incorrect treatment
+- **Indirect**: Result from **pre-existing disease or disease that developed in pregnancy** (not a direct obstetric cause) that was **aggravated by the physiological effects of pregnancy**: in our setting **malaria, HIV/AIDS and anaemia**
 
 **The five major direct causes, in order of frequency:** **1. haemorrhage, 2. sepsis, 3. hypertensive disorders, 4. complications of abortion, 5. obstructed labour.** About **13% of all maternal deaths occur in adolescents, mostly from unsafe abortion**.
 
 ### Causes of maternal death in Kenya (slide figures)
 
-| Cause | Share |
-|---|---|
-| **Haemorrhage** | **45%** |
-| **Sepsis and infections** | **13%** |
-| **Hypertensive disorders** | **12%** |
-| **HIV/AIDS** | **9%** |
-| **Obstructed labour** | **6%** |
-| **Abortion** | **5%** |
-| Other direct causes | 10% |
+- **Haemorrhage**: **45%**
+- **Sepsis and infections**: **13%**
+- **Hypertensive disorders**: **12%**
+- **HIV/AIDS**: **9%**
+- **Obstructed labour**: **6%**
+- **Abortion**: **5%**
+- **Other direct causes**: 10%
 
 ## 2. Maternal morbidity
 
@@ -49,11 +45,9 @@ Maternal health and newborn survival are **linked**: **lack of antenatal care, u
 
 (Thaddeus and Maine, 1994)
 
-| Delay | Causes |
-|---|---|
-| **1. In deciding to seek care** | Socio-cultural barriers, **failure to recognise danger signs**, failure to perceive the severity, **cost** |
-| **2. In reaching a facility** | **Long distance, poor roads, no transport**, cost |
-| **3. In receiving adequate care at the facility** | **Shortage of staff, supplies and equipment**, untrained personnel, **user fees** |
+- **1. In deciding to seek care**: Socio-cultural barriers, **failure to recognise danger signs**, failure to perceive the severity, **cost**
+- **2. In reaching a facility**: **Long distance, poor roads, no transport**, cost
+- **3. In receiving adequate care at the facility**: **Shortage of staff, supplies and equipment**, untrained personnel, **user fees**
 
 **Fix them:** **birth plans** and **community education** (delay 1), **transport schemes and a working referral system** (delay 2), and **well-staffed, well-equipped facilities** with **emergency obstetric care** (delay 3).
 
@@ -70,14 +64,12 @@ Maternal health and newborn survival are **linked**: **lack of antenatal care, u
 
 Standing on a base of **skilled attendants and an enabling environment**, **supportive health systems**, **community action, partnerships and male involvement**, and **equity and human rights for all**:
 
-| Pillar | Purpose |
-|---|---|
-| **1. Family planning and pre-pregnancy care** | Information and services to plan the **timing, number and spacing** of pregnancies |
-| **2. Focused antenatal care** | **Prevent** complications where possible and **detect and treat** them early |
-| **3. Essential obstetric care** | Make care for **high-risk pregnancies and complications** available to all women who need it |
-| **4. Essential newborn care** | Care for newborns **from birth to 28 days** to prevent complications |
-| **5. Targeted postpartum care** | Prevent complications after childbirth, keep mother and baby healthy and **prevent transmission of infection from mother to child** |
-| **6. Post-abortion care** | **Clinical treatment** of incomplete abortion and miscarriage complications, plus **counselling and contraception** |
+- **1. Family planning and pre-pregnancy care**: Information and services to plan the **timing, number and spacing** of pregnancies
+- **2. Focused antenatal care**: **Prevent** complications where possible and **detect and treat** them early
+- **3. Essential obstetric care**: Make care for **high-risk pregnancies and complications** available to all women who need it
+- **4. Essential newborn care**: Care for newborns **from birth to 28 days** to prevent complications
+- **5. Targeted postpartum care**: Prevent complications after childbirth, keep mother and baby healthy and **prevent transmission of infection from mother to child**
+- **6. Post-abortion care**: **Clinical treatment** of incomplete abortion and miscarriage complications, plus **counselling and contraception**
 
 ## 7. The foundations
 
@@ -87,9 +79,7 @@ Only **two interventions** have been shown to improve maternal health and reduce
 
 ### Emergency obstetric care (EmOC): the "signal functions"
 
-| Basic EmOC (BEmOC) | Comprehensive EmOC (CEmOC) |
-|---|---|
-| IV or IM **antibiotics**, **uterotonics (oxytocin)**, **IV anticonvulsants (magnesium sulphate)**, **manual removal of the placenta**, **removal of retained products**, **assisted vaginal delivery**, and **newborn resuscitation** | **All of the basic functions plus caesarean section and blood transfusion** |
+- **IV or IM antibiotics, uterotonics (oxytocin), IV anticonvulsants (magnesium sulphate), manual removal of the placenta, removal of retained products, assisted vaginal delivery, and newborn resuscitation**: **All of the basic functions plus caesarean section and blood transfusion**
 
 **WHO benchmark:** at least **five EmOC facilities per 500,000 people (including at least one comprehensive)**.
 

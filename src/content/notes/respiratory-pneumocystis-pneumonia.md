@@ -91,22 +91,20 @@ PCP typically presents as a subacute illness, developing over days to weeks, rat
 
 ## Investigations
 
-| Test | What it answers 
-| --- | --- | --- |
-| **FBC** | Assess for anaemia, leukopenia, or neutrophilia. | Low Hb suggests chronic disease. Normal WBC is common in PCP. Leukocytosis suggests bacterial infection. |
-| **Full Blood Picture (FBP)** | Assess for atypical lymphocytes or other features of viral infection. | Normal in PCP. Atypical lymphocytes suggest viral infection. |
-| **Erythrocyte Sedimentation Rate (ESR)** | General marker of inflammation. | Usually normal or mildly elevated in PCP. Markedly elevated in bacterial pneumonia or TB. |
-| **C-Reactive Protein (CRP)** | General marker of inflammation. | Usually normal or mildly elevated in PCP. Markedly elevated in bacterial pneumonia. |
-| **Lactate Dehydrogenase (LDH)** | Marker of cellular damage and turnover. | **Often significantly elevated** in PCP, reflecting lung epithelial damage. Normal LDH makes PCP less likely. |
-| **Arterial Blood Gas (ABG)** | Assess severity of hypoxemia and respiratory failure. | Hypoxemia (low PaO2) and increased alveolar-arterial (A-a) gradient, especially on exertion. Can show respiratory alkalosis initially. |
-| **HIV serology & CD4 count** | Confirm HIV status and degree of immunosuppression. | Positive HIV, typically CD4 <200 cells/µL. Essential for risk assessment. |
-| **Chest X-ray (CXR)** | Initial imaging to assess lung parenchyma. | **Diffuse bilateral interstitial infiltrates**, often perihilar, described as "ground glass" or "reticular-nodular." Can be normal in early disease. |
-| **High-Resolution CT (HRCT) Chest** | More sensitive imaging for subtle lung changes. | **Ground-glass opacities** (GGOs), often patchy or mosaic, with a geographic distribution. Can show cysts or pneumatoceles. More sensitive than CXR. |
-| **Sputum microscopy for AFB** | Rule out pulmonary tuberculosis. | Negative for AFB in PCP. |
-| **Sputum Gram stain & culture** | Rule out bacterial pneumonia. | Negative or normal flora in PCP. Positive for specific bacteria in bacterial pneumonia. |
-| **Induced sputum for *P. jirovecii*** | Non-invasive method to detect the organism. | Positive for *P. jirovecii* using specific stains (e.g., Giemsa, Gomori methenamine silver [GMS], immunofluorescence). Lower sensitivity than BAL. |
-| **Bronchoalveolar Lavage (BAL) with microscopy** | Invasive, highly sensitive method to detect the organism. | **Gold standard for diagnosis.** Positive for *P. jirovecii* using specific stains. Can also identify other opportunistic pathogens. |
-| **Beta-D-glucan** | Cell wall component of fungi, including *P. jirovecii*. | **Elevated** in PCP. Useful as a supportive diagnostic test, especially when invasive procedures are not feasible. Not specific to PCP. |
+- **FBC**: Assess for anaemia, leukopenia, or neutrophilia. — Low Hb suggests chronic disease. Normal WBC is common in PCP. Leukocytosis suggests bacterial infection.
+- **Full Blood Picture (FBP)**: Assess for atypical lymphocytes or other features of viral infection. — Normal in PCP. Atypical lymphocytes suggest viral infection.
+- **Erythrocyte Sedimentation Rate (ESR)**: General marker of inflammation. — Usually normal or mildly elevated in PCP. Markedly elevated in bacterial pneumonia or TB.
+- **C-Reactive Protein (CRP)**: General marker of inflammation. — Usually normal or mildly elevated in PCP. Markedly elevated in bacterial pneumonia.
+- **Lactate Dehydrogenase (LDH)**: Marker of cellular damage and turnover. — **Often significantly elevated** in PCP, reflecting lung epithelial damage. Normal LDH makes PCP less likely.
+- **Arterial Blood Gas (ABG)**: Assess severity of hypoxemia and respiratory failure. — Hypoxemia (low PaO2) and increased alveolar-arterial (A-a) gradient, especially on exertion. Can show respiratory alkalosis initially.
+- **HIV serology & CD4 count**: Confirm HIV status and degree of immunosuppression. — Positive HIV, typically CD4 <200 cells/µL. Essential for risk assessment.
+- **Chest X-ray (CXR)**: Initial imaging to assess lung parenchyma. — **Diffuse bilateral interstitial infiltrates**, often perihilar, described as "ground glass" or "reticular-nodular." Can be normal in early disease.
+- **High-Resolution CT (HRCT) Chest**: More sensitive imaging for subtle lung changes. — **Ground-glass opacities** (GGOs), often patchy or mosaic, with a geographic distribution. Can show cysts or pneumatoceles. More sensitive than CXR.
+- **Sputum microscopy for AFB**: Rule out pulmonary tuberculosis. — Negative for AFB in PCP.
+- **Sputum Gram stain & culture**: Rule out bacterial pneumonia. — Negative or normal flora in PCP. Positive for specific bacteria in bacterial pneumonia.
+- **Induced sputum for *P. jirovecii***: Non-invasive method to detect the organism. — Positive for *P. jirovecii* using specific stains (e.g., Giemsa, Gomori methenamine silver [GMS], immunofluorescence). Lower sensitivity than BAL.
+- **Bronchoalveolar Lavage (BAL) with microscopy**: Invasive, highly sensitive method to detect the organism. — **Gold standard for diagnosis.** Positive for *P. jirovecii* using specific stains. Can also identify other opportunistic pathogens.
+- **Beta-D-glucan**: Cell wall component of fungi, including *P. jirovecii*. — **Elevated** in PCP. Useful as a supportive diagnostic test, especially when invasive procedures are not feasible. Not specific to PCP.
 
 ## Diagnosis and severity
 

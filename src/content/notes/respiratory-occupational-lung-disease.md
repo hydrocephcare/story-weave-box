@@ -1,4 +1,4 @@
-# Occupational Lung Disease — Year 4 Internal Medicine (Respiratory) Notes
+# Occupational Lung Disease
 
 *Orientation notes for study. Check Kenyan occupational health law and local guidelines for notification and compensation.*
 
@@ -8,16 +8,14 @@
 
 ## Anatomy and physiology you need  
 
-| Structure / Function | Why it matters for occupational lung disease |
-|---|---|
-| **Alveolar‑capillary membrane** – thin type I pneumocytes, basement membrane, capillary endothelium | Site of gas exchange; fibrosis or inflammation (silicosis, asbestosis, HP) thickens this barrier → ↓ diffusion, hypoxaemia, exertional dyspnoea. |
-| **Terminal bronchioles and respiratory bronchioles** – smooth‑muscle‑rich airways without cartilage | Early target of inhaled irritants (isocyanates, wood dust). Hyper‑reactivity here produces occupational asthma and chronic bronchitis. |
-| **Macrophage‑mediated clearance** – alveolar macrophages ingest particles, present antigens, release cytokines | Inorganic dusts that are **non‑soluble** (silica, asbestos) resist clearance → macrophage activation → release of TNF‑α, IL‑1, growth factors → fibroblast proliferation and progressive fibrosis. |
-| **Lymphatic drainage of the pleura** – stomata on parietal pleura, subpleural lymphatics | Asbestos fibres migrate to pleural space, provoke chronic inflammation → pleural plaques, diffuse thickening, and mesothelioma. |
-| **Pulmonary surfactant system** – type II pneumocytes produce phospholipid film | Toxic gases (chlorine, ammonia) denature surfactant → alveolar collapse, acute respiratory distress, and later fibrosis if exposure persists. |
-| **Immune complex formation in the interstitium** – Th1‑mediated granulomatous response | Organic antigens (mould spores, bird proteins) trigger type III/IV hypersensitivity → hypersensitivity pneumonitis with lymphocytic alveolitis, granulomas, and eventual fibrosis. |
-| **Ventilation‑perfusion (V/Q) matching** – regional differences in perfusion and ventilation | Upper‑zone predominance of silicosis reflects higher ventilation relative to perfusion in apices, allowing more particle deposition; lower‑zone asbestosis mirrors greater perfusion and particle settling in bases. |
-| **Airway smooth‑muscle tone regulation** – cholinergic, histaminergic, leukotriene pathways | Occupational asthmatic agents provoke bronchoconstriction via mast‑cell degranulation; serial peak‑flow variation reflects reversible airway obstruction. |
+- **Alveolar‑capillary membrane – thin type I pneumocytes, basement membrane, capillary endothelium**: Site of gas exchange; fibrosis or inflammation (silicosis, asbestosis, HP) thickens this barrier → ↓ diffusion, hypoxaemia, exertional dyspnoea.
+- **Terminal bronchioles and respiratory bronchioles – smooth‑muscle‑rich airways without cartilage**: Early target of inhaled irritants (isocyanates, wood dust). Hyper‑reactivity here produces occupational asthma and chronic bronchitis.
+- **Macrophage‑mediated clearance – alveolar macrophages ingest particles, present antigens, release cytokines**: Inorganic dusts that are **non‑soluble** (silica, asbestos) resist clearance → macrophage activation → release of TNF‑α, IL‑1, growth factors → fibroblast proliferation and progressive fibrosis.
+- **Lymphatic drainage of the pleura – stomata on parietal pleura, subpleural lymphatics**: Asbestos fibres migrate to pleural space, provoke chronic inflammation → pleural plaques, diffuse thickening, and mesothelioma.
+- **Pulmonary surfactant system – type II pneumocytes produce phospholipid film**: Toxic gases (chlorine, ammonia) denature surfactant → alveolar collapse, acute respiratory distress, and later fibrosis if exposure persists.
+- **Immune complex formation in the interstitium – Th1‑mediated granulomatous response**: Organic antigens (mould spores, bird proteins) trigger type III/IV hypersensitivity → hypersensitivity pneumonitis with lymphocytic alveolitis, granulomas, and eventual fibrosis.
+- **Ventilation‑perfusion (V/Q) matching – regional differences in perfusion and ventilation**: Upper‑zone predominance of silicosis reflects higher ventilation relative to perfusion in apices, allowing more particle deposition; lower‑zone asbestosis mirrors greater perfusion and particle settling in bases.
+- **Airway smooth‑muscle tone regulation – cholinergic, histaminergic, leukotriene pathways**: Occupational asthmatic agents provoke bronchoconstriction via mast‑cell degranulation; serial peak‑flow variation reflects reversible airway obstruction.
 
 ---
 
@@ -49,13 +47,11 @@
 
 ## The pneumoconioses
 
-| Disease | Agent | Typical workers | Features |
-|---|---|---|---|
-| **Silicosis** | **Silica (quartz) dust** | **Miners, quarry and stone workers, sandblasters, tunnellers, ceramics, masons** | **Upper-zone nodules**, **eggshell calcification** of hilar nodes, progressive massive fibrosis; **high risk of TB (silico-tuberculosis)**, lung cancer, COPD, autoimmune disease |
-| **Asbestosis** | **Asbestos fibres** (roofing, insulation, brakes, shipbuilding, demolition) | Construction and building workers, mechanics, insulators | **Lower-zone fibrosis**, **pleural plaques** (calcified, marker of exposure), **diffuse pleural thickening**, **benign pleural effusion**; risk of **mesothelioma** and **lung cancer** (especially with smoking) |
-| **Coal worker's pneumoconiosis** | Coal dust | Coal miners | Small upper-zone nodules, **progressive massive fibrosis**, **Caplan syndrome** (rheumatoid arthritis + nodules) |
-| **Berylliosis** | Beryllium | Aerospace, electronics, nuclear | **Granulomas** that look like sarcoid |
-| **Siderosis, stannosis, baritosis** | Iron, tin, barium | Welders, miners | Radiological change with little functional impairment |
+- **Silicosis**: **Silica (quartz) dust** — **Miners, quarry and stone workers, sandblasters, tunnellers, ceramics, masons** — **Upper-zone nodules**, **eggshell calcification** of hilar nodes, progressive massive fibrosis; **high risk of TB (silico-tuberculosis)**, lung cancer, COPD, autoimmune disease
+- **Asbestosis**: **Asbestos fibres** (roofing, insulation, brakes, shipbuilding, demolition) — Construction and building workers, mechanics, insulators — **Lower-zone fibrosis**, **pleural plaques** (calcified, marker of exposure), **diffuse pleural thickening**, **benign pleural effusion**; risk of **mesothelioma** and **lung cancer** (especially with smoking)
+- **Coal worker's pneumoconiosis**: Coal dust — Coal miners — Small upper-zone nodules, **progressive massive fibrosis**, **Caplan syndrome** (rheumatoid arthritis + nodules)
+- **Berylliosis**: Beryllium — Aerospace, electronics, nuclear — **Granulomas** that look like sarcoid
+- **Siderosis, stannosis, baritosis**: Iron, tin, barium — Welders, miners — Radiological change with little functional impairment
 
 ## Occupational asthma
 
@@ -133,15 +129,13 @@
 
 ## Complications and prognosis  
 
-| Complication | Pathophysiology | Clinical impact | Typical time‑frame |
-|---|---|---|---|
-| **Progressive massive fibrosis (PMF)** | Coalescence of nodules → dense collagenous mass, usually in upper zones (silica, coal) or lower zones (asbestos) | Severe restrictive defect, hypoxaemia, right‑heart strain, high mortality | 5–15 yr after radiographic onset; accelerated if exposure continues |
-| **Silico‑tuberculosis** | Silica impairs macrophage killing, facilitates *Mycobacterium tuberculosis* replication | Chronic cough, weight loss, cavitary disease; synergistic increase in mortality | Often within 2–10 yr of silicosis diagnosis |
-| **Pulmonary hypertension** | Chronic hypoxic vasoconstriction + loss of capillary bed from fibrosis | Exertional dyspnoea out of proportion to spirometry, right‑sided edema | Late stage, 10–20 yr after disease onset |
-| **Lung cancer** | Carcinogenic dust (silica, asbestos, diesel) + chronic inflammation | New infiltrate, weight loss, haemoptysis; prognosis poorer than idiopathic lung cancer | 15–30 yr latency; risk proportional to cumulative exposure |
-| **Malignant mesothelioma** | Asbestos fibres provoke chronic pleural inflammation → mesothelial transformation | Pleural effusion, chest pain, weight loss; median survival < 12 months | 20–40 yr after asbestos exposure |
-| **Autoimmune disease** (e.g., rheumatoid arthritis, systemic sclerosis) | Silica acts as adjuvant, breaking tolerance | Polyarthritis, skin thickening; may worsen pulmonary fibrosis | Can appear years after exposure; prevalence higher in silicosis |
-| **Chronic obstructive pulmonary disease (COPD)** | Dust‑induced airway inflammation + smoking synergy | Fixed airflow obstruction, frequent exacerbations | Often concurrent; worsens functional reserve |
+- **Progressive massive fibrosis (PMF)**: Coalescence of nodules → dense collagenous mass, usually in upper zones (silica, coal) or lower zones (asbestos) — Severe restrictive defect, hypoxaemia, right‑heart strain, high mortality — 5–15 yr after radiographic onset; accelerated if exposure continues
+- **Silico‑tuberculosis**: Silica impairs macrophage killing, facilitates *Mycobacterium tuberculosis* replication — Chronic cough, weight loss, cavitary disease; synergistic increase in mortality — Often within 2–10 yr of silicosis diagnosis
+- **Pulmonary hypertension**: Chronic hypoxic vasoconstriction + loss of capillary bed from fibrosis — Exertional dyspnoea out of proportion to spirometry, right‑sided edema — Late stage, 10–20 yr after disease onset
+- **Lung cancer**: Carcinogenic dust (silica, asbestos, diesel) + chronic inflammation — New infiltrate, weight loss, haemoptysis; prognosis poorer than idiopathic lung cancer — 15–30 yr latency; risk proportional to cumulative exposure
+- **Malignant mesothelioma**: Asbestos fibres provoke chronic pleural inflammation → mesothelial transformation — Pleural effusion, chest pain, weight loss; median survival < 12 months — 20–40 yr after asbestos exposure
+- **Autoimmune disease (e.g., rheumatoid arthritis, systemic sclerosis)**: Silica acts as adjuvant, breaking tolerance — Polyarthritis, skin thickening; may worsen pulmonary fibrosis — Can appear years after exposure; prevalence higher in silicosis
+- **Chronic obstructive pulmonary disease (COPD)**: Dust‑induced airway inflammation + smoking synergy — Fixed airflow obstruction, frequent exacerbations — Often concurrent; worsens functional reserve
 
 **Prognostic pearls for the examiner**  
 

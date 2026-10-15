@@ -21,12 +21,10 @@ Oxygen (O2) moves from alveoli to blood down a partial pressure gradient. Carbon
 
 ## Causes and risk factors
 
-| Type of Failure | Primary Problem | Common Causes | Risk Factors |
-|---|---|---|---|
-| **Type 1 (Hypoxemic)** | Impaired oxygenation | Pneumonia, ARDS, Pulmonary oedema, PE, Severe asthma | Smoking, COPD, Immunosuppression, Cardiac disease, Surgery |
-| | | Interstitial lung disease, High altitude | Immobility, Hypercoagulable states |
-| **Type 2 (Hypercapnic)** | Inadequate alveolar ventilation | COPD exacerbation, Asthma (severe), Neuromuscular disease | Smoking, Obesity, Sedative use, Spinal cord injury |
-| | | Opioid overdose, Chest wall deformity, Brainstem lesion | Pre-existing lung disease, Neuromuscular disorders |
+- **Type 1 (Hypoxemic)**: Impaired oxygenation — Pneumonia, ARDS, Pulmonary oedema, PE, Severe asthma — Smoking, COPD, Immunosuppression, Cardiac disease, Surgery
+- Interstitial lung disease, High altitude — Immobility, Hypercoagulable states
+- **Type 2 (Hypercapnic)**: Inadequate alveolar ventilation — COPD exacerbation, Asthma (severe), Neuromuscular disease — Smoking, Obesity, Sedative use, Spinal cord injury
+- Opioid overdose, Chest wall deformity, Brainstem lesion — Pre-existing lung disease, Neuromuscular disorders
 
 ## Pathophysiology
 **Type 1 Respiratory Failure (Hypoxemic)**

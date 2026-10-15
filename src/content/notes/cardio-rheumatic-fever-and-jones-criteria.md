@@ -1,4 +1,4 @@
-# Acute rheumatic fever and rheumatic heart disease — Year 4 Internal Medicine (Cardiovascular) Notes
+# Acute rheumatic fever and rheumatic heart disease
 
 *Clinical reasoning notes. Rheumatic heart disease is the commonest cause of valve disease in young people across much of Africa and Asia.*
 
@@ -10,15 +10,13 @@
 
 ## Anatomy and physiology you need  
 
-| Structure / Physiology | Why it matters for ARF / RHD | Clinical implication |
-|---|---|---|
-| **Mucosal immunity of the oropharynx** – tonsillar crypts, secretory IgA, M‑cell sampling | First exposure to *Streptococcus pyogenes* occurs here; inadequate clearance allows a robust humoral response that later cross‑reacts with host tissues. | History of sore throat or scarlet fever; importance of prompt antibiotic therapy. |
-| **M‑protein of GAS** – surface fibrillar protein with epitopes that mimic cardiac myosin, laminin, and valve‑specific proteins (e.g., α‑actinin). | Molecular mimicry drives production of cross‑reactive IgG that binds to endocardial endothelium and myocardial tissue. | Basis of Jones criteria (carditis, chorea). |
-| **Valvular architecture** – mitral valve leaflets (fibrosa, atrialis, ventricularis) rich in collagen and elastin; aortic valve similar but less exposed to high pressure gradients in children. | Auto‑antibodies and T‑cell mediated inflammation preferentially target the mitral valve’s connective tissue, leading to Aschoff bodies, fibrosis, and eventual stenosis. | Murmur of mitral stenosis (diastolic rumble) is the classic late finding. |
-| **Cardiac conduction system** – AV node and proximal His‑Purkinje network. | Inflammatory infiltrates can prolong the PR interval (first‑degree AV block) without overt heart failure. | PR prolongation counts as a minor criterion; ECG helps detect silent carditis. |
-| **Synovial membrane of large joints** – lined by type‑B synoviocytes, rich in fibrinous exudate. | Immune complexes deposit in the synovium, causing a transient, migratory polyarthritis that resolves within weeks. | Joint swelling is a major criterion; rapid response to aspirin may mask it. |
-| **Basal ganglia (caudate/putamen)** – dopaminergic pathways modulated by GABAergic interneurons. | Anti‑neuronal antibodies (e.g., anti‑lysoganglioside) disrupt basal ganglia signaling, producing Sydenham chorea. | Chorea may appear months after the initial infection; important for delayed diagnosis. |
-| **Skin microvasculature** – dermal capillaries with perivascular connective tissue. | Immune‑mediated vasculitis produces erythema marginatum, a fleeting rash that spares the face. | Recognising the rash helps fulfill major criteria, especially in high‑risk settings. |
+- **Mucosal immunity of the oropharynx – tonsillar crypts, secretory IgA, M‑cell sampling**: First exposure to *Streptococcus pyogenes* occurs here; inadequate clearance allows a robust humoral response that later cross‑reacts with host tissues. — History of sore throat or scarlet fever; importance of prompt antibiotic therapy.
+- **M‑protein of GAS – surface fibrillar protein with epitopes that mimic cardiac myosin, laminin, and valve‑specific proteins (e.g., α‑actinin).**: Molecular mimicry drives production of cross‑reactive IgG that binds to endocardial endothelium and myocardial tissue. — Basis of Jones criteria (carditis, chorea).
+- **Valvular architecture – mitral valve leaflets (fibrosa, atrialis, ventricularis) rich in collagen and elastin; aortic valve similar but less exposed to high pressure gradients in children.**: Auto‑antibodies and T‑cell mediated inflammation preferentially target the mitral valve’s connective tissue, leading to Aschoff bodies, fibrosis, and eventual stenosis. — Murmur of mitral stenosis (diastolic rumble) is the classic late finding.
+- **Cardiac conduction system – AV node and proximal His‑Purkinje network.**: Inflammatory infiltrates can prolong the PR interval (first‑degree AV block) without overt heart failure. — PR prolongation counts as a minor criterion; ECG helps detect silent carditis.
+- **Synovial membrane of large joints – lined by type‑B synoviocytes, rich in fibrinous exudate.**: Immune complexes deposit in the synovium, causing a transient, migratory polyarthritis that resolves within weeks. — Joint swelling is a major criterion; rapid response to aspirin may mask it.
+- **Basal ganglia (caudate/putamen) – dopaminergic pathways modulated by GABAergic interneurons.**: Anti‑neuronal antibodies (e.g., anti‑lysoganglioside) disrupt basal ganglia signaling, producing Sydenham chorea. — Chorea may appear months after the initial infection; important for delayed diagnosis.
+- **Skin microvasculature – dermal capillaries with perivascular connective tissue.**: Immune‑mediated vasculitis produces erythema marginatum, a fleeting rash that spares the face. — Recognising the rash helps fulfill major criteria, especially in high‑risk settings.
 
 ---
 
@@ -67,14 +65,12 @@ In **high-risk populations** the thresholds for fever, joint involvement and inf
 
 ## 3. Investigate with purpose
 
-| Test | The question it answers |
-|---|---|
-| **ASO titre, anti-DNase B** | Was there a recent streptococcal infection? |
-| **ESR and CRP** | Is there systemic inflammation (a minor criterion)? |
-| **ECG** | Is the PR interval prolonged? Any heart block? |
-| **Echocardiography** | Is there valve disease or silent carditis? How severe is it? |
-| **Blood cultures** | Is this endocarditis instead? |
-| **Throat swab** | Is the organism still there? |
+- **ASO titre, anti-DNase B**: Was there a recent streptococcal infection?
+- **ESR and CRP**: Is there systemic inflammation (a minor criterion)?
+- **ECG**: Is the PR interval prolonged? Any heart block?
+- **Echocardiography**: Is there valve disease or silent carditis? How severe is it?
+- **Blood cultures**: Is this endocarditis instead?
+- **Throat swab**: Is the organism still there?
 
 ## 4. Treatment
 
@@ -111,11 +107,9 @@ A 12‑year‑old boy from a rural Kenyan village presents with a 4‑day histor
 
 ### Questions and model answers
 
-| # | Question | Model answer |
-|---|---|---|
-| 1 | Which of the following is the most appropriate next step in the management of this patient? | **Initiate a full course of intramuscular benzathine penicillin G and start high‑dose aspirin for the arthritis, while arranging a repeat echocardiogram in 6 weeks to assess progression of the mitral regurgitation.** |
-| 2 | Explain the immunopathogenic mechanism that leads from a GAS throat infection to the cardiac manifestations seen in this case. | **Molecular mimicry: antibodies raised against the M‑protein of GAS cross‑react with cardiac myosin and endothelial antigens, activating complement and recruiting neutrophils, which cause myofibrillar necrosis and valvular scarring.** |
-| 3 | In this patient, which of the Jones criteria is fulfilled by the presence of a PR interval of 200 ms? | **Prolonged PR interval is a minor criterion (electrocardiographic evidence of atrioventricular block).**
+- **1**: Which of the following is the most appropriate next step in the management of this patient? — **Initiate a full course of intramuscular benzathine penicillin G and start high‑dose aspirin for the arthritis, while arranging a repeat echocardiogram in 6 weeks to assess progression of the mitral regurgitation.**
+- **2**: Explain the immunopathogenic mechanism that leads from a GAS throat infection to the cardiac manifestations seen in this case. — **Molecular mimicry: antibodies raised against the M‑protein of GAS cross‑react with cardiac myosin and endothelial antigens, activating complement and recruiting neutrophils, which cause myofibrillar necrosis and valvular scarring.**
+- **3**: In this patient, which of the Jones criteria is fulfilled by the presence of a PR interval of 200 ms? — **Prolonged PR interval is a minor criterion (electrocardiographic evidence of atrioventricular block).**
 
 ## Practice questions
 

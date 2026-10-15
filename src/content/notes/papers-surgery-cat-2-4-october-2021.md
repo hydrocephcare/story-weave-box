@@ -107,19 +107,17 @@ A hernia through the triangle is a **direct inguinal hernia.**
 
 ## Question 13. Prefix for cancers arising from the following (11 marks)
 
-| Tissue | Prefix | Malignant example |
-|---|---|---|
-| Bone | osteo- | osteosarcoma |
-| Muscle | myo- (rhabdomyo-, leiomyo-) | rhabdomyosarcoma, leiomyosarcoma |
-| Bone marrow | myelo- | multiple myeloma |
-| Pigment cells | melano- | melanoma |
-| Lymphocyte | lympho- | lymphoma |
-| Fat | lipo- | liposarcoma |
-| Liver | hepato- | hepatocellular carcinoma |
-| Blood vessels | angio- | angiosarcoma |
-| Red blood cells | erythro- | erythroleukaemia |
-| Cartilage | chondro- | chondrosarcoma |
-| Gland | adeno- | adenocarcinoma |
+- **Bone**: osteo- — osteosarcoma
+- **Muscle**: myo- (rhabdomyo-, leiomyo-) — rhabdomyosarcoma, leiomyosarcoma
+- **Bone marrow**: myelo- — multiple myeloma
+- **Pigment cells**: melano- — melanoma
+- **Lymphocyte**: lympho- — lymphoma
+- **Fat**: lipo- — liposarcoma
+- **Liver**: hepato- — hepatocellular carcinoma
+- **Blood vessels**: angio- — angiosarcoma
+- **Red blood cells**: erythro- — erythroleukaemia
+- **Cartilage**: chondro- — chondrosarcoma
+- **Gland**: adeno- — adenocarcinoma
 
 ## Question 14. The 4 grades of tumour differentiation (2 marks)
 1. **Well differentiated**

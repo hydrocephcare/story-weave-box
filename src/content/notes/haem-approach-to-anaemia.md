@@ -1,4 +1,4 @@
-# Approach to anaemia — Year 4 Internal Medicine (Haematology) Notes
+# Approach to anaemia
 
 *Clinical reasoning notes. Anaemia is a sign, not a diagnosis: always ask why.*
 
@@ -13,25 +13,21 @@ Anaemia is a **haemoglobin below normal for age and sex**: roughly below **13 g/
 
 ## Anatomy and physiology you need  
 
-| Structure / Process | Why it matters for anaemia | Clinical implication |
-|---|---|---|
-| **Erythropoietic niche (bone‑marrow sinusoids, stromal cells, macrophages)** | Provides the micro‑environment for erythroid progenitors, supplies iron via transferrin‑bound uptake, and clears expelled nuclei. Disruption (fibrosis, infiltration, aplasia) limits red‑cell output → low reticulocyte count. | A low retic with normal iron studies points to marrow failure; a marrow biopsy will show hypocellularity or dysplasia. |
-| **Renal peritubular fibroblasts (EPO‑producing cells)** | Synthesize erythropoietin in response to hypoxia via HIF‑2α signalling. Chronic kidney disease reduces EPO → normocytic, low‑retic anaemia. | In CKD the appropriate next step is to assess renal function and consider erythropoiesis‑stimulating agents. |
-| **Hepatic hepcidin regulation** | Hepcidin binds ferroportin on enterocytes and macrophages, blocking iron export. In inflammation (IL‑6 driven) hepcidin rises → iron sequestration → anaemia of chronic disease. | High ferritin with low transferrin saturation suggests functional iron deficiency; the examiner may ask how to differentiate from true iron deficiency. |
-| **Spleen (red‑pulp macrophages)** | Removes senescent or defective erythrocytes; also a site of extravascular haemolysis. Splenomegaly signals increased clearance. | Elevated LDH, indirect bilirubin, low haptoglobin plus splenomegaly points to haemolysis; the examiner may probe the distinction between intravascular vs. extravascular haemolysis. |
-| **Intestinal iron absorption (duodenal enterocytes)** | DMT1 transports Fe²⁺ across the apical membrane; ferroportin exports it to plasma where it binds transferrin. Absorption is up‑regulated by low hepcidin. | In iron‑deficiency anaemia, ferritin is low and transferrin saturation falls; the student should explain why oral iron works only when hepcidin is suppressed. |
-| **Vitamin B12‑intrinsic factor complex (terminal ileum)** | B12 is absorbed after binding intrinsic factor; it is required for methylmalonyl‑CoA mutase and methionine synthase, crucial for DNA synthesis in rapidly dividing erythroid precursors. Deficiency arrests nuclear maturation → macrocytosis and megaloblastic changes. | Presence of hypersegmented neutrophils on the film and elevated methylmalonic acid helps the examiner differentiate B12 from folate deficiency. |
-| **Folate metabolism (enterocytes, liver)** | Folate is reduced to tetrahydrofolate, a one‑carbon donor for thymidylate synthesis. Deficiency also produces megaloblastic anaemia but without neurologic sequelae. | The examiner may ask why giving folate alone can mask B12 deficiency – it improves the haematologic picture while neurological damage progresses. |
+- **Erythropoietic niche (bone‑marrow sinusoids, stromal cells, macrophages)**: Provides the micro‑environment for erythroid progenitors, supplies iron via transferrin‑bound uptake, and clears expelled nuclei. Disruption (fibrosis, infiltration, aplasia) limits red‑cell output → low reticulocyte count. — A low retic with normal iron studies points to marrow failure; a marrow biopsy will show hypocellularity or dysplasia.
+- **Renal peritubular fibroblasts (EPO‑producing cells)**: Synthesize erythropoietin in response to hypoxia via HIF‑2α signalling. Chronic kidney disease reduces EPO → normocytic, low‑retic anaemia. — In CKD the appropriate next step is to assess renal function and consider erythropoiesis‑stimulating agents.
+- **Hepatic hepcidin regulation**: Hepcidin binds ferroportin on enterocytes and macrophages, blocking iron export. In inflammation (IL‑6 driven) hepcidin rises → iron sequestration → anaemia of chronic disease. — High ferritin with low transferrin saturation suggests functional iron deficiency; the examiner may ask how to differentiate from true iron deficiency.
+- **Spleen (red‑pulp macrophages)**: Removes senescent or defective erythrocytes; also a site of extravascular haemolysis. Splenomegaly signals increased clearance. — Elevated LDH, indirect bilirubin, low haptoglobin plus splenomegaly points to haemolysis; the examiner may probe the distinction between intravascular vs. extravascular haemolysis.
+- **Intestinal iron absorption (duodenal enterocytes)**: DMT1 transports Fe²⁺ across the apical membrane; ferroportin exports it to plasma where it binds transferrin. Absorption is up‑regulated by low hepcidin. — In iron‑deficiency anaemia, ferritin is low and transferrin saturation falls; the student should explain why oral iron works only when hepcidin is suppressed.
+- **Vitamin B12‑intrinsic factor complex (terminal ileum)**: B12 is absorbed after binding intrinsic factor; it is required for methylmalonyl‑CoA mutase and methionine synthase, crucial for DNA synthesis in rapidly dividing erythroid precursors. Deficiency arrests nuclear maturation → macrocytosis and megaloblastic changes. — Presence of hypersegmented neutrophils on the film and elevated methylmalonic acid helps the examiner differentiate B12 from folate deficiency.
+- **Folate metabolism (enterocytes, liver)**: Folate is reduced to tetrahydrofolate, a one‑carbon donor for thymidylate synthesis. Deficiency also produces megaloblastic anaemia but without neurologic sequelae. — The examiner may ask why giving folate alone can mask B12 deficiency – it improves the haematologic picture while neurological damage progresses.
 
 ---
 
 ## 2. Classify by MCV, then by mechanism
 
-| Type | MCV | Common causes |
-|---|---|---|
-| **Microcytic** | below 80 fL | **Iron deficiency** (commonest), **thalassaemia**, anaemia of chronic disease, sideroblastic anaemia, lead |
-| **Normocytic** | 80–100 fL | Anaemia of chronic disease, **acute blood loss**, **haemolysis**, **chronic kidney disease**, **marrow failure**, mixed deficiencies |
-| **Macrocytic** | above 100 fL | **Vitamin B12 or folate deficiency**, alcohol, hypothyroidism, liver disease, drugs (zidovudine, methotrexate, hydroxycarbamide), myelodysplasia |
+- **Microcytic**: below 80 fL — **Iron deficiency** (commonest), **thalassaemia**, anaemia of chronic disease, sideroblastic anaemia, lead
+- **Normocytic**: 80–100 fL — Anaemia of chronic disease, **acute blood loss**, **haemolysis**, **chronic kidney disease**, **marrow failure**, mixed deficiencies
+- **Macrocytic**: above 100 fL — **Vitamin B12 or folate deficiency**, alcohol, hypothyroidism, liver disease, drugs (zidovudine, methotrexate, hydroxycarbamide), myelodysplasia
 
 **Then ask: is the reticulocyte count high or low?**
 
@@ -55,19 +51,17 @@ Anaemia is a **haemoglobin below normal for age and sex**: roughly below **13 g/
 
 ## 3. Investigate with purpose
 
-| Test | The question it answers |
-|---|---|
-| **Full haemogram with MCV and red cell indices** | Is it anaemia, and what type? Are other lines affected? |
-| **Blood film** | Hypochromic cells (iron deficiency), target cells (thalassaemia), sickle cells, spherocytes, schistocytes, parasites, blasts |
-| **Reticulocyte count** | Is the marrow responding? |
-| **Ferritin, iron studies** | Iron deficiency (low ferritin); a **raised ferritin can hide deficiency** in inflammation |
-| **B12 and folate** | Macrocytic anaemia |
-| **Bilirubin, LDH, haptoglobin, direct Coombs test** | Haemolysis? Autoimmune? |
-| **Haemoglobin electrophoresis** | Sickle cell disease, thalassaemia |
-| **Malaria test, HIV test, stool for ova (hookworm)** | Local causes |
-| **Urea, creatinine, liver and thyroid tests** | Chronic kidney, liver or thyroid disease |
-| **Bone marrow aspirate and biopsy** | Marrow failure, infiltration, myelodysplasia, leukaemia, myeloma |
-| **Endoscopy, colonoscopy, or stool occult blood** | **In an adult with iron deficiency, find the bleeding site** until proved otherwise |
+- **Full haemogram with MCV and red cell indices**: Is it anaemia, and what type? Are other lines affected?
+- **Blood film**: Hypochromic cells (iron deficiency), target cells (thalassaemia), sickle cells, spherocytes, schistocytes, parasites, blasts
+- **Reticulocyte count**: Is the marrow responding?
+- **Ferritin, iron studies**: Iron deficiency (low ferritin); a **raised ferritin can hide deficiency** in inflammation
+- **B12 and folate**: Macrocytic anaemia
+- **Bilirubin, LDH, haptoglobin, direct Coombs test**: Haemolysis? Autoimmune?
+- **Haemoglobin electrophoresis**: Sickle cell disease, thalassaemia
+- **Malaria test, HIV test, stool for ova (hookworm)**: Local causes
+- **Urea, creatinine, liver and thyroid tests**: Chronic kidney, liver or thyroid disease
+- **Bone marrow aspirate and biopsy**: Marrow failure, infiltration, myelodysplasia, leukaemia, myeloma
+- **Endoscopy, colonoscopy, or stool occult blood**: **In an adult with iron deficiency, find the bleeding site** until proved otherwise
 
 **Where results can mislead:** **ferritin is an acute-phase reactant**, so a "normal" level in an inflamed patient may still mean deficiency (use transferrin saturation); the **haemoglobin falls late after an acute bleed** (the concentration is unchanged at first); **mixed deficiencies** (iron plus B12) can give a normal MCV.
 
@@ -99,14 +93,12 @@ Anaemia **with fever, bleeding, bruising or abnormal white cells or platelets** 
 
 ## Complications and prognosis
 
-| Complication | Pathophysiology | Clinical impact | Prognostic implication |
-|---|---|---|---|
-| **Cardiovascular strain** | Chronic anaemia reduces oxygen delivery → compensatory tachycardia, left‑ventricular hypertrophy, and eventual heart failure. | Exertional dyspnoea, arrhythmias, congestive heart failure. | Poorer survival in patients with heart disease; early transfusion or erythropoietin improves outcomes. |
-| **Iron overload** | Repeated transfusions or ineffective erythropoiesis with iron‑recycling → hepatic, cardiac, endocrine deposition. | Hepatomegaly, cirrhosis, cardiomyopathy, diabetes, hypogonadism. | Mortality rises with hepatic failure; chelation therapy mitigates risk. |
-| **Infection risk** | Anemia of chronic disease or marrow suppression impairs neutrophil function; iron overload favours bacterial growth. | Sepsis, osteomyelitis, invasive fungal disease. | Higher morbidity; early antimicrobial coverage essential. |
-| **Cognitive and neuro‑psychiatric sequelae** | Severe hypoxia in children → impaired neurodevelopment; B12 deficiency → subacute combined degeneration. | Learning difficulties, ataxia, neuropathy. | Long‑term disability if untreated; early correction restores function. |
-| **Pregnancy‑related complications** | Maternal anaemia → placental hypoxia → intra‑uterine growth restriction, pre‑eclampsia, perinatal death. | Low birth weight, neonatal anaemia. | Risk stratified by Hb <10 g/dL; aggressive iron/folate therapy improves neonatal outcomes. |
-| **Marrow failure progression** | Aplastic anaemia or myelodysplasia may evolve to acute leukaemia. | Cytopenias, bleeding, infection. | Prognosis depends on cytogenetics; allogeneic transplant offers cure in fit patients. |
+- **Cardiovascular strain**: Chronic anaemia reduces oxygen delivery → compensatory tachycardia, left‑ventricular hypertrophy, and eventual heart failure. — Exertional dyspnoea, arrhythmias, congestive heart failure. — Poorer survival in patients with heart disease; early transfusion or erythropoietin improves outcomes.
+- **Iron overload**: Repeated transfusions or ineffective erythropoiesis with iron‑recycling → hepatic, cardiac, endocrine deposition. — Hepatomegaly, cirrhosis, cardiomyopathy, diabetes, hypogonadism. — Mortality rises with hepatic failure; chelation therapy mitigates risk.
+- **Infection risk**: Anemia of chronic disease or marrow suppression impairs neutrophil function; iron overload favours bacterial growth. — Sepsis, osteomyelitis, invasive fungal disease. — Higher morbidity; early antimicrobial coverage essential.
+- **Cognitive and neuro‑psychiatric sequelae**: Severe hypoxia in children → impaired neurodevelopment; B12 deficiency → subacute combined degeneration. — Learning difficulties, ataxia, neuropathy. — Long‑term disability if untreated; early correction restores function.
+- **Pregnancy‑related complications**: Maternal anaemia → placental hypoxia → intra‑uterine growth restriction, pre‑eclampsia, perinatal death. — Low birth weight, neonatal anaemia. — Risk stratified by Hb <10 g/dL; aggressive iron/folate therapy improves neonatal outcomes.
+- **Marrow failure progression**: Aplastic anaemia or myelodysplasia may evolve to acute leukaemia. — Cytopenias, bleeding, infection. — Prognosis depends on cytogenetics; allogeneic transplant offers cure in fit patients.
 
 **Prognosis** is largely determined by the underlying cause, the degree of haemoglobin reduction, and the presence of comorbidities.  
 - *Iron‑deficiency anaemia* in otherwise healthy adults has an excellent prognosis once the source of bleeding is controlled.  

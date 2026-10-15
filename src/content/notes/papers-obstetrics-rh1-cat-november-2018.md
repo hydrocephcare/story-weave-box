@@ -34,15 +34,13 @@ Others: colostrum, nausea and vomiting (mostly first trimester), vascular spider
 
 ### Question 3. Differentiate an incomplete abortion from a threatened abortion (5 marks)
 
-| Feature | Threatened abortion | Incomplete abortion |
-|---|---|---|
-| Bleeding | Light or moderate | Heavy, sometimes with clots |
-| Pain | Mild or absent | Colicky lower abdominal pain |
-| Cervical os | **Closed** | **Open**, with tissue in the canal |
-| Products of conception | None passed, still in utero | **Partially expelled**, some retained |
-| Uterine size | Equal to dates | Smaller than dates |
-| Fetus | Viable on ultrasound | Retained products on ultrasound |
-| Management | Rest, reassurance, treat the cause, review | Evacuation (MVA or misoprostol), antibiotics, resuscitate if shocked |
+- **Bleeding**: Light or moderate — Heavy, sometimes with clots
+- **Pain**: Mild or absent — Colicky lower abdominal pain
+- **Cervical os**: **Closed** — **Open**, with tissue in the canal
+- **Products of conception**: None passed, still in utero — **Partially expelled**, some retained
+- **Uterine size**: Equal to dates — Smaller than dates
+- **Fetus**: Viable on ultrasound — Retained products on ultrasound
+- **Management**: Rest, reassurance, treat the cause, review — Evacuation (MVA or misoprostol), antibiotics, resuscitate if shocked
 
 ### Question 4. Outline 4 areas of counselling during preconception care (5 marks)
 

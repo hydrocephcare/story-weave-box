@@ -12,14 +12,12 @@
 
 ## Units and credits
 
-| Unit code | Unit title | Credits | Hours |
-|---|---|---|---|
-| **MBPS 4537** | Junior Clerkship in Psychiatry and Mental Health I | 2 | 26 |
-| **MBPS 4539** | Junior Clerkship in Psychiatry and Mental Health II | 2 | 26 |
-| **MBPS 4513** | Clinical rotation for junior clerkship in Psychiatry and Mental Health I | 2 | 26 |
-| **MBPS 4535** | Clinical rotation for junior clerkship in Psychiatry and Mental Health II | 2 | 26 |
-| **MBPS 4537** | Clinical rotation for junior clerkship in Psychiatry and Mental Health III | 2 | 26 |
-| **MBPS 4538** | Clinical rotation for junior clerkship in Psychiatry and Mental Health IV | 2 | 26 |
+- **MBPS 4537**: Junior Clerkship in Psychiatry and Mental Health I — 2 — 26
+- **MBPS 4539**: Junior Clerkship in Psychiatry and Mental Health II — 2 — 26
+- **MBPS 4513**: Clinical rotation for junior clerkship in Psychiatry and Mental Health I — 2 — 26
+- **MBPS 4535**: Clinical rotation for junior clerkship in Psychiatry and Mental Health II — 2 — 26
+- **MBPS 4537**: Clinical rotation for junior clerkship in Psychiatry and Mental Health III — 2 — 26
+- **MBPS 4538**: Clinical rotation for junior clerkship in Psychiatry and Mental Health IV — 2 — 26
 
 The curriculum lists the two lecture units in trimester I, the first two clinical rotations in trimester II and the last two in trimester III.
 
@@ -40,13 +38,11 @@ The curriculum lists the two lecture units in trimester I, the first two clinica
 
 ### Course outline
 
-| Topic | What it covers |
-|---|---|
-| **Introduction to psychopathology** | Phenomenology and classification; theoretical models; normal and abnormal thoughts; signs versus symptoms versus syndrome; causes, prognosis and comorbidity; disorders of thought, perception, mood and affect, psychomotor behaviour, speech, memory and cognition; DSM-5-TR and ICD-11 |
-| **Introduction to psychopharmacology** | Pharmacokinetics and pharmacodynamics; neurotransmitters and dopamine pathways; antidepressants, anxiolytics and hypnotics, antipsychotics, mood stabilisers, ADHD medication; special populations; adherence and polypharmacy |
-| **Psychiatric disorders** | Schizophrenia spectrum and other psychotic disorders; catatonia; bipolar and related disorders |
-| **Psychological therapies and non-pharmacological interventions** | Supportive therapy, psychoeducation, CBT, behaviour therapy, IPT, psychodynamic, family and group therapy, motivational interviewing, mindfulness, relaxation, occupational therapy, community and cultural approaches |
-| **Psychiatric emergencies** | Suicidal behaviour, violence, acute psychosis and mania, severe depression, delirium, substance-related emergencies, agitation, catatonia, special populations and other crises |
+- **Introduction to psychopathology**: Phenomenology and classification; theoretical models; normal and abnormal thoughts; signs versus symptoms versus syndrome; causes, prognosis and comorbidity; disorders of thought, perception, mood and affect, psychomotor behaviour, speech, memory and cognition; DSM-5-TR and ICD-11
+- **Introduction to psychopharmacology**: Pharmacokinetics and pharmacodynamics; neurotransmitters and dopamine pathways; antidepressants, anxiolytics and hypnotics, antipsychotics, mood stabilisers, ADHD medication; special populations; adherence and polypharmacy
+- **Psychiatric disorders**: Schizophrenia spectrum and other psychotic disorders; catatonia; bipolar and related disorders
+- **Psychological therapies and non-pharmacological interventions**: Supportive therapy, psychoeducation, CBT, behaviour therapy, IPT, psychodynamic, family and group therapy, motivational interviewing, mindfulness, relaxation, occupational therapy, community and cultural approaches
+- **Psychiatric emergencies**: Suicidal behaviour, violence, acute psychosis and mania, severe depression, delirium, substance-related emergencies, agitation, catatonia, special populations and other crises
 
 ## MBPS 4539: Junior Clerkship in Psychiatry and Mental Health II
 
@@ -88,14 +84,12 @@ Psychiatric history taking, mental status examination, formulation and managemen
 
 ## Teaching and assessment
 
-| | Details |
-|---|---|
-| **Teaching methods** | Lectures, seminars, clinicopathological conferences, bedside teaching, simulated patients, grand rounds, emergency calls, tutorials, group discussions, e-learning, ward rounds and self-directed learning |
-| **Practicals** | Clinical rotations, skills lab (percussion, palpation, auscultation) and the mental state examination |
-| **What to bring** | Stethoscope, torch, patella hammer and other examination tools |
-| **Continuous assessment (30%)** | Written tests, assignments, clinical assessment, long cases and vivas |
-| **Logbook (10%)** | A log of procedures performed, assisted in and observed, showing the competencies achieved |
-| **End-of-clerkship examination (60%)** | MCQ and short answer questions, plus clinical skills assessed with OSCEs and vivas |
+- **Teaching methods**: Lectures, seminars, clinicopathological conferences, bedside teaching, simulated patients, grand rounds, emergency calls, tutorials, group discussions, e-learning, ward rounds and self-directed learning
+- **Practicals**: Clinical rotations, skills lab (percussion, palpation, auscultation) and the mental state examination
+- **What to bring**: Stethoscope, torch, patella hammer and other examination tools
+- **Continuous assessment (30%)**: Written tests, assignments, clinical assessment, long cases and vivas
+- **Logbook (10%)**: A log of procedures performed, assisted in and observed, showing the competencies achieved
+- **End-of-clerkship examination (60%)**: MCQ and short answer questions, plus clinical skills assessed with OSCEs and vivas
 
 ## Reading list
 

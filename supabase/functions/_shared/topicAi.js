@@ -39,6 +39,9 @@ export function cleanChoices(c) {
 const ANGLE_TEXT = { bedside: "the bedside (history, how to examine, named signs and how to elicit them)", medicine: "internal medicine reasoning", surgery: "surgical angles and when to operate", pathology: "pathology and mechanisms", drugs: "pharmacology (why each drug, why others are avoided, monitoring)", emergency: "emergency first steps" };
 const READER = { year3: "an early clinical student (explain mechanisms simply and link them to basic science)", year4: "a Year 4 clinical student preparing for ward rounds and written and oral exams", year5: "a final-year student or intern who must manage the patient (decisions, escalation, monitoring)" };
 
+const ACCURACY_RULES = `
+ACCURACY RULES (read before you write): every number, cut-off, drug and sign must match standard current guidelines. Name a sign, score or eponym only if you are certain of the name and of what it shows; otherwise describe it in plain words. Write each threshold the same way every time it appears (for example always "250 or more", never "over 250" in one place and "250 or more" in another). Describe examination signs by what actually happens (for example in shifting dullness the fluid falls to the dependent flank, so that flank is dull and the upper flank is resonant). If you are not sure of a fact, leave it out. Do not invent statistics.`;
+
 const DEEP_RULES = `
 DEPTH: this page must be thorough, not a summary. A lecturer should be able to ask a dozen different questions on this topic and find each answer here. Write 4 to 8 bullets or a rich paragraph in every section. Where they apply to this topic, include:
 - Bedside: the key history questions, then the examination step by step: each named sign, how to elicit it, what a positive result means (for example for ascites: inspection, flank dullness, shifting dullness, fluid thrill, and why each is done), and what a bedside test cannot tell you.
@@ -70,6 +73,7 @@ Reasoning to build in (for diseases): do not stop at the label. Give the diagnos
 For anatomy, physiology and other topics, still explain how it works and why it matters clinically, then what goes wrong.
 Each section needs "p", "b" or "t". 3 faq items.
 Plan first, then write. The reader is a clinical-year student, so before you write, decide the angles an examiner would use for this topic: the bedside approach (history, examination, a patient lying in bed), internal medicine, surgery, pathology, pharmacology, complications and look-alike conditions, and the first things to do in an emergency. "exam" must hold ${deep ? "10-12" : "6-8"} strategic, tricky questions across those angles (what would you do next, what distinguishes it from, why is this drug avoided), never plain definitions.
+${ACCURACY_RULES}
 Rules: standard accepted medical knowledge only; leave out anything you are unsure of; no doses, no brand names, no invented statistics or references. Lab thresholds and diagnostic criteria are welcome. Every bullet under ${deep ? 40 : 28} words. Plain words a first-year student can follow.
 ${context ? `\nThe Ompath Study library says (use as main source, keep to it where specific):\n${clip(context, 3000)}\n` : ""}`;
 }
@@ -204,6 +208,7 @@ Examiner questions it already asks: ${clip(asked, 900)}
 
 Do NOT repeat the revision page. First decide what an examiner could ask on "${name}" that the revision page does not answer, then write those sections in depth. Choose the sections that fit this topic from: bedside history and how to examine; how to read each investigation (with calculated indices and diagnostic criteria); severity and staging; complicating and confounding factors; step by step management and monitoring; complications and when to escalate; special groups; where results mislead; look-alike conditions.
 ${DEEP_RULES}
+${ACCURACY_RULES}
 Reply with ONLY one JSON object: {"sections": [{"h": "heading", "p": "short paragraph", "b": ["bullet"], "t": [{"a": "test or item", "b": "the question it answers and what the result means"}]}], "exam": ["10-12 NEW tricky examiner questions that are not in the list above, each followed by ' — ' and the key points of a good answer"]}
 5 to 9 sections. Rules: standard accepted medical knowledge only; leave out anything you are unsure of; no doses, no brand names, no invented statistics. Every bullet under 40 words. Plain words.`;
 }

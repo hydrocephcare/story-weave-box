@@ -1,4 +1,4 @@
-# Lung Abscess — Year 4 Internal Medicine (Respiratory) Notes
+# Lung Abscess
 
 *Orientation notes for study. Check local guidelines before prescribing.*
 
@@ -11,16 +11,14 @@ A **lung abscess** is a **localised area of necrosis of lung parenchyma with a c
 
 ## Anatomy and physiology you need  
 
-| Structure / Function | Why it matters for lung abscess |
-|---|---|
-| **Bronchial tree (segmental bronchi, bronchioles)** | Aspiration deposits bacteria into dependent bronchi; obstruction (tumour, mucus plug) creates stasis, allowing anaerobic proliferation and tissue necrosis. |
-| **Alveolar walls (type I & II pneumocytes, interstitium)** | Necrosis of type I cells produces a cavity; loss of type II cells impairs surfactant, promoting atelectasis and further hypoxia that favours anaerobes. |
-| **Pulmonary microcirculation (capillary bed, pulmonary arteries)** | Septic emboli or infarction interrupt perfusion → ischaemia → coagulative necrosis, pre‑disposing to cavitation. |
-| **Lymphatic drainage of the lung** | Impaired drainage (e.g., from tumour) reduces clearance of bacteria and inflammatory exudate, facilitating pus accumulation. |
-| **Pleural membranes (visceral pleura, parietal pleura)** | Extension of infection through the visceral pleura can produce empyema or bronchopleural fistula; knowledge of pleural anatomy guides drainage decisions. |
-| **Respiratory muscles & posture** | Supine or recumbent position directs aspirated material to the posterior segment of the right upper lobe and the superior segment of the right lower lobe because of the right main bronchus’s more vertical orientation. |
-| **Mucociliary clearance** | Dysfunction (alcohol, smoking, neuromuscular disease) diminishes removal of secretions, allowing bacterial colonisation and progression to abscess formation. |
-| **Immune cells in lung (alveolar macrophages, neutrophils)** | Anaerobes are less efficiently killed in hypoxic, acidic pus; a blunted neutrophil response (diabetes, steroids) permits unchecked infection. |
+- **Bronchial tree (segmental bronchi, bronchioles)**: Aspiration deposits bacteria into dependent bronchi; obstruction (tumour, mucus plug) creates stasis, allowing anaerobic proliferation and tissue necrosis.
+- **Alveolar walls (type I & II pneumocytes, interstitium)**: Necrosis of type I cells produces a cavity; loss of type II cells impairs surfactant, promoting atelectasis and further hypoxia that favours anaerobes.
+- **Pulmonary microcirculation (capillary bed, pulmonary arteries)**: Septic emboli or infarction interrupt perfusion → ischaemia → coagulative necrosis, pre‑disposing to cavitation.
+- **Lymphatic drainage of the lung**: Impaired drainage (e.g., from tumour) reduces clearance of bacteria and inflammatory exudate, facilitating pus accumulation.
+- **Pleural membranes (visceral pleura, parietal pleura)**: Extension of infection through the visceral pleura can produce empyema or bronchopleural fistula; knowledge of pleural anatomy guides drainage decisions.
+- **Respiratory muscles & posture**: Supine or recumbent position directs aspirated material to the posterior segment of the right upper lobe and the superior segment of the right lower lobe because of the right main bronchus’s more vertical orientation.
+- **Mucociliary clearance**: Dysfunction (alcohol, smoking, neuromuscular disease) diminishes removal of secretions, allowing bacterial colonisation and progression to abscess formation.
+- **Immune cells in lung (alveolar macrophages, neutrophils)**: Anaerobes are less efficiently killed in hypoxic, acidic pus; a blunted neutrophil response (diabetes, steroids) permits unchecked infection.
 
 Understanding these anatomic‑physiologic relationships helps the examiner anticipate where a cavity will appear on imaging, why foul‑smelling sputum suggests anaerobes, and which clinical signs (e.g., pleural rub, bronchial breath sounds) are expected.
 
@@ -151,15 +149,13 @@ The examiner expects you to trace the chain from a predisposing factor (e.g., as
 
 Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [lung abscess drugs](/pharmacology?tab=conditions&c=lungabscess).
 
-| Drug | Class | Role here | Watch for |
-|---|---|---|---|
-| Co-amoxiclav | Penicillin plus β-lactamase inhibitor | First-line for 4–6 weeks (anaerobes and mixed flora) | Diarrhoea, liver injury |
-| Clindamycin | Lincosamide | Alternative first-line, good abscess penetration | C. difficile colitis |
-| Benzylpenicillin | Penicillin | IV with metronidazole in the traditional regimen | Allergy |
-| Metronidazole | Nitroimidazole | Anaerobic cover | Metallic taste, neuropathy with long courses; no alcohol |
-| Flucloxacillin | Anti-staphylococcal penicillin | Staphylococcus aureus (septic emboli, post-influenza) | Cholestatic jaundice |
-| Vancomycin | Glycopeptide | MRSA | Kidney injury, infusion reaction; level monitoring |
-| Ceftriaxone | Third-generation cephalosporin | Gram-negative cover in hospital | Biliary sludge, allergy |
+- **Co-amoxiclav**: Penicillin plus β-lactamase inhibitor — First-line for 4–6 weeks (anaerobes and mixed flora) — Diarrhoea, liver injury
+- **Clindamycin**: Lincosamide — Alternative first-line, good abscess penetration — C. difficile colitis
+- **Benzylpenicillin**: Penicillin — IV with metronidazole in the traditional regimen — Allergy
+- **Metronidazole**: Nitroimidazole — Anaerobic cover — Metallic taste, neuropathy with long courses; no alcohol
+- **Flucloxacillin**: Anti-staphylococcal penicillin — Staphylococcus aureus (septic emboli, post-influenza) — Cholestatic jaundice
+- **Vancomycin**: Glycopeptide — MRSA — Kidney injury, infusion reaction; level monitoring
+- **Ceftriaxone**: Third-generation cephalosporin — Gram-negative cover in hospital — Biliary sludge, allergy
 
 **Weeks, not days:** treat until the cavity has resolved or is small and stable, and always exclude TB and cancer.
 

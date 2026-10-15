@@ -20,6 +20,10 @@ on:
         description: "How many topics get deep exam notes this run"
         required: false
         default: "12"
+      check:
+        description: "How many notes the second AI cross-checks this run"
+        required: false
+        default: "8"
 
 permissions:
   contents: write
@@ -60,6 +64,12 @@ jobs:
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/topics/deep-fill.mjs ${{ inputs.deep || '12' }}
 
+      - name: Cross-check notes with a second AI (marks the clean ones, lists the rest in Admin > Content checks)
+        env:
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
+        run: node scripts/imed/validate-notes.mjs ${{ inputs.check || '8' }}
+
       - name: Write today's page summaries
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
@@ -68,12 +78,12 @@ jobs:
 
       - name: Save the new overviews
         run: |
-          if [ -z "$(git status --porcelain src/data/topicAi src/data/pageSummaries.json)" ]; then
+          if [ -z "$(git status --porcelain src/data/topicAi src/data/pageSummaries.json src/data/contentChecks.json src/data/contentMarks.json)" ]; then
             echo "No new overviews today."
           else
             git config user.name "ompath-bot"
             git config user.email "ompath-bot@users.noreply.github.com"
-            git add src/data/topicAi src/data/pageSummaries.json
+            git add src/data/topicAi src/data/pageSummaries.json src/data/contentChecks.json src/data/contentMarks.json
             git commit -m "Daily AI topic overviews"
             git pull --rebase origin main
             git push origin main

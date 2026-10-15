@@ -6,25 +6,21 @@
 A rapid, systemic, IgE‑mediated (or sometimes non‑IgE) hypersensitivity reaction that leads to airway compromise, circulatory collapse, or both, occurring minutes to hours after exposure to a trigger.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to anaphylaxis |
-|---|---|
-| Mast cells & basophils | Release histamine, tryptase, leukotrienes on activation |
-| Endothelium | Becomes leaky → plasma extravasation, edema |
-| Bronchial smooth muscle | Contracts → bronchospasm |
-| Upper airway mucosa | Swells → laryngeal edema, stridor |
-| Cardiovascular system | Vasodilation & increased permeability → hypotension |
-| Gastro‑intestinal tract | Smooth‑muscle spasm → abdominal pain, vomiting |
+- **Mast cells & basophils**: Release histamine, tryptase, leukotrienes on activation
+- **Endothelium**: Becomes leaky → plasma extravasation, edema
+- **Bronchial smooth muscle**: Contracts → bronchospasm
+- **Upper airway mucosa**: Swells → laryngeal edema, stridor
+- **Cardiovascular system**: Vasodilation & increased permeability → hypotension
+- **Gastro‑intestinal tract**: Smooth‑muscle spasm → abdominal pain, vomiting
 
 ## Causes and risk factors  
 
-| Category | Common triggers in Kenya | Specific risk factors |
-|---|---|---|
-| Drugs | Penicillins, cephalosporins, NSAIDs, neuromuscular blockers, contrast media | Prior drug allergy, HIV (immune dysregulation) |
-| Foods | Peanuts, tree nuts, shellfish, milk, eggs | Atopic dermatitis, asthma |
-| Insect stings | Hymenoptera (bees, wasps), ants | Rural exposure, occupational beekeeping |
-| Latex | Surgical gloves, catheters | Repeated surgeries, healthcare workers |
-| Infections / disease states | TB treatment (rifampicin), antiretrovirals, malaria prophylaxis, sickle‑cell disease (transfusion reactions) | HIV infection, active TB, malaria endemic areas, sickle‑cell disease, rheumatic fever (immune complex load) |
-| Physical factors | Exercise, cold, heat, vibration | Athletes, outdoor workers |
+- **Drugs**: Penicillins, cephalosporins, NSAIDs, neuromuscular blockers, contrast media — Prior drug allergy, HIV (immune dysregulation)
+- **Foods**: Peanuts, tree nuts, shellfish, milk, eggs — Atopic dermatitis, asthma
+- **Insect stings**: Hymenoptera (bees, wasps), ants — Rural exposure, occupational beekeeping
+- **Latex**: Surgical gloves, catheters — Repeated surgeries, healthcare workers
+- **Infections / disease states**: TB treatment (rifampicin), antiretrovirals, malaria prophylaxis, sickle‑cell disease (transfusion reactions) — HIV infection, active TB, malaria endemic areas, sickle‑cell disease, rheumatic fever (immune complex load)
+- **Physical factors**: Exercise, cold, heat, vibration — Athletes, outdoor workers
 
 ## Pathophysiology  
 
@@ -44,29 +40,25 @@ Non‑IgE mechanisms (e.g., direct mast‑cell activation by radiocontrast) foll
 
 **History questions that matter**  
 
-| Question | Why it matters |
-|---|---|
-| Onset of symptoms – how quickly after exposure? | Anaphylaxis classically begins within minutes (often <30 min). A rapid onset points to IgE‑mediated reaction; slower onset suggests other causes. |
-| What was the trigger? (food, drug, insect sting, latex, contrast, herbal remedy, recent vaccination) | Identifying the allergen guides avoidance and informs risk of recurrence. In Kenya, common triggers include peanuts, shellfish, penicillins, sulfonamides, antimalarials, and hymenoptera stings. |
-| Prior episodes of similar reactions or known allergy? | A previous anaphylactic episode dramatically raises the pre‑test probability and dictates that the current event is likely anaphylaxis rather than a new disease. |
-| Concomitant illnesses (HIV, TB, malaria, sickle cell disease, rheumatic fever) or recent infections? | Underlying immune dysregulation (e.g., HIV) or chronic inflammation can modify mast‑cell reactivity and may predispose to severe reactions. |
-| Medications taken in the last 24 h (especially β‑blockers, ACE‑inhibitors, NSAIDs, antiretrovirals)? | β‑blockers can blunt response to epinephrine; ACE‑inhibitors may worsen angio‑oedema. |
-| Pregnancy status | Pregnancy alters cardiovascular reserve and may affect drug choices (e.g., epinephrine is still first‑line). |
-| Presence of wheeze, throat tightness, abdominal pain, vomiting, diarrhoea, urticaria, or feeling faint? | These are the cardinal organ system manifestations that define anaphylaxis (skin‑mucosal, respiratory, cardiovascular, gastrointestinal). |
-| Any recent exposure to latex (e.g., during surgery) or to new cosmetics/soaps? | Latex allergy is a notable cause of peri‑operative anaphylaxis, especially in patients with multiple surgeries. |
-| Family history of severe allergy or anaphylaxis? | May suggest a hereditary predisposition (e.g., mast‑cell activation disorders). |
+- **Onset of symptoms – how quickly after exposure?**: Anaphylaxis classically begins within minutes (often <30 min). A rapid onset points to IgE‑mediated reaction; slower onset suggests other causes.
+- **What was the trigger? (food, drug, insect sting, latex, contrast, herbal remedy, recent vaccination)**: Identifying the allergen guides avoidance and informs risk of recurrence. In Kenya, common triggers include peanuts, shellfish, penicillins, sulfonamides, antimalarials, and hymenoptera stings.
+- **Prior episodes of similar reactions or known allergy?**: A previous anaphylactic episode dramatically raises the pre‑test probability and dictates that the current event is likely anaphylaxis rather than a new disease.
+- **Concomitant illnesses (HIV, TB, malaria, sickle cell disease, rheumatic fever) or recent infections?**: Underlying immune dysregulation (e.g., HIV) or chronic inflammation can modify mast‑cell reactivity and may predispose to severe reactions.
+- **Medications taken in the last 24 h (especially β‑blockers, ACE‑inhibitors, NSAIDs, antiretrovirals)?**: β‑blockers can blunt response to epinephrine; ACE‑inhibitors may worsen angio‑oedema.
+- **Pregnancy status**: Pregnancy alters cardiovascular reserve and may affect drug choices (e.g., epinephrine is still first‑line).
+- **Presence of wheeze, throat tightness, abdominal pain, vomiting, diarrhoea, urticaria, or feeling faint?**: These are the cardinal organ system manifestations that define anaphylaxis (skin‑mucosal, respiratory, cardiovascular, gastrointestinal).
+- **Any recent exposure to latex (e.g., during surgery) or to new cosmetics/soaps?**: Latex allergy is a notable cause of peri‑operative anaphylaxis, especially in patients with multiple surgeries.
+- **Family history of severe allergy or anaphylaxis?**: May suggest a hereditary predisposition (e.g., mast‑cell activation disorders).
 
 **Examination findings and why they occur**  
 
-| Finding | Pathophysiologic basis |
-|---|---|
-| **Cutaneous:** diffuse urticaria, erythema, flushing, angio‑edema of lips/eyelids | Histamine and other mediators cause vasodilation, increased vascular permeability, and dermal edema. |
-| **Respiratory:** wheeze, stridor, bronchospasm, reduced breath sounds, tachypnoea, use of accessory muscles | Bronchial smooth‑muscle contraction and laryngeal edema narrow airways; increased secretions add to obstruction. |
-| **Cardiovascular:** hypotension, tachycardia, weak peripheral pulses, capillary refill >2 s, cool clammy skin | Systemic vasodilation and plasma leakage reduce preload; compensatory tachycardia may be blunted by β‑blockers. |
-| **Gastro‑intestinal:** abdominal pain, nausea, vomiting, diarrhoea | Smooth‑muscle contraction of gut and increased permeability cause cramping and fluid loss. |
-| **Neurological:** anxiety, sense of impending doom, altered mental status, syncope | Cerebral hypoperfusion from hypotension; catecholamine surge can cause agitation. |
-| **Ocular:** conjunctival injection, periorbital edema | Vascular leakage in conjunctival vessels. |
-| **Other:** generalized oedema, laryngeal swelling visible on indirect laryngoscopy | Direct effect of mediators on upper airway mucosa. |
+- **Cutaneous: diffuse urticaria, erythema, flushing, angio‑edema of lips/eyelids**: Histamine and other mediators cause vasodilation, increased vascular permeability, and dermal edema.
+- **Respiratory: wheeze, stridor, bronchospasm, reduced breath sounds, tachypnoea, use of accessory muscles**: Bronchial smooth‑muscle contraction and laryngeal edema narrow airways; increased secretions add to obstruction.
+- **Cardiovascular: hypotension, tachycardia, weak peripheral pulses, capillary refill >2 s, cool clammy skin**: Systemic vasodilation and plasma leakage reduce preload; compensatory tachycardia may be blunted by β‑blockers.
+- **Gastro‑intestinal: abdominal pain, nausea, vomiting, diarrhoea**: Smooth‑muscle contraction of gut and increased permeability cause cramping and fluid loss.
+- **Neurological: anxiety, sense of impending doom, altered mental status, syncope**: Cerebral hypoperfusion from hypotension; catecholamine surge can cause agitation.
+- **Ocular: conjunctival injection, periorbital edema**: Vascular leakage in conjunctival vessels.
+- **Other: generalized oedema, laryngeal swelling visible on indirect laryngoscopy**: Direct effect of mediators on upper airway mucosa.
 
 A systematic “ABCDE” assessment (Airway, Breathing, Circulation, Disability, Exposure) ensures that each organ system is evaluated promptly.
 
@@ -115,25 +107,21 @@ A systematic “ABCDE” assessment (Airway, Breathing, Circulation, Disability,
 
 **Severity grading (practical for the Kenyan setting)**  
 
-| Grade | Clinical picture | Management focus |
-|---|---|---|
-| **Mild** | Cutaneous signs only, stable vitals | Observe, antihistamine, consider oral corticosteroid; educate on avoidance. |
-| **Moderate** | Skin + respiratory symptoms **or** mild hypotension (responsive to fluids) | Immediate intramuscular epinephrine, high‑flow oxygen, nebulised β‑agonist, IV crystalloids, monitor vitals. |
-| **Severe / life‑threatening** | Respiratory failure, refractory hypotension, altered mental status, cardiac arrest | Immediate IM epinephrine (repeat every 5‑15 min if needed), secure airway (intubation), aggressive IV fluids, vasopressors if unresponsive, continuous cardiac monitoring, consider adjunctive IV glucocorticoids and antihistamines. |
+- **Mild**: Cutaneous signs only, stable vitals — Observe, antihistamine, consider oral corticosteroid; educate on avoidance.
+- **Moderate**: Skin + respiratory symptoms **or** mild hypotension (responsive to fluids) — Immediate intramuscular epinephrine, high‑flow oxygen, nebulised β‑agonist, IV crystalloids, monitor vitals.
+- **Severe / life‑threatening**: Respiratory failure, refractory hypotension, altered mental status, cardiac arrest — Immediate IM epinephrine (repeat every 5‑15 min if needed), secure airway (intubation), aggressive IV fluids, vasopressors if unresponsive, continuous cardiac monitoring, consider adjunctive IV glucocorticoids and antihistamines.
 
 Severity is reassessed every 5 minutes during the acute phase; escalation is driven by airway patency, oxygen saturation, blood pressure, and mental status. Prompt recognition of progression from moderate to severe is critical, as delayed epinephrine is the most common cause of mortality.
 
 ## Management  
 **Immediate stabilisation**  
-| Step | Action | Rationale |
-|---|---|---|
-| 1 | Call for help, activate emergency response | Time‑critical; ensure airway, breathing, circulation (ABC) support |
-| 2 | Position – supine with legs raised (unless respiratory distress) | Improves venous return and counteracts distributive shock |
-| 3 | High‑flow oxygen (≥10 L/min) via non‑rebreather | Treats hypoxia from bronchospasm and shunting |
-| 4 | Secure airway – early intubation if stridor, altered consciousness, or rapid deterioration | Prevents airway obstruction from edema or laryngeal spasm |
-| 5 | Intramuscular adrenaline (epinephrine) in the mid‑outer thigh | First‑line drug; reverses vasodilation, bronchoconstriction, and mucosal edema |
-| 6 | Intravenous crystalloid bolus (e.g., normal saline) | Restores intravascular volume in distributive shock |
-| 7 | Place large‑bore IV, obtain blood for labs (see below) | Enables rapid drug administration and monitoring |
+- **1**: Call for help, activate emergency response — Time‑critical; ensure airway, breathing, circulation (ABC) support
+- **2**: Position – supine with legs raised (unless respiratory distress) — Improves venous return and counteracts distributive shock
+- **3**: High‑flow oxygen (≥10 L/min) via non‑rebreather — Treats hypoxia from bronchospasm and shunting
+- **4**: Secure airway – early intubation if stridor, altered consciousness, or rapid deterioration — Prevents airway obstruction from edema or laryngeal spasm
+- **5**: Intramuscular adrenaline (epinephrine) in the mid‑outer thigh — First‑line drug; reverses vasodilation, bronchoconstriction, and mucosal edema
+- **6**: Intravenous crystalloid bolus (e.g., normal saline) — Restores intravascular volume in distributive shock
+- **7**: Place large‑bore IV, obtain blood for labs (see below) — Enables rapid drug administration and monitoring
 
 **Definitive treatment**  
 1. **Adrenaline** – repeat IM dose every 5–15 min if symptoms persist; consider IV infusion for refractory cases under cardiac monitoring.  

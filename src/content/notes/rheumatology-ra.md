@@ -6,14 +6,12 @@
 Rheumatoid arthritis (RA) is a chronic, systemic, autoimmune inflammatory arthritis characterised by symmetric synovial joint involvement that leads to progressive joint destruction, functional disability, and extra‑articular manifestations.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to RA |
-|---|---|
-| Synovial membrane (intima) | Site of inflammatory cell infiltration and pannus formation |
-| Joint capsule & ligaments | Targeted by pannus → erosion of cartilage & bone |
-| Subchondral bone | Resorption by osteoclasts driven by cytokines |
-| Periarticular muscles | Atrophy from disuse and inflammatory cytokines |
-| Lymphoid tissue (e.g., spleen, lymph nodes) | Source of auto‑reactive B‑ and T‑cells |
-| Systemic organs (lung, heart, vessels) | Sites of extra‑articular disease (e.g., interstitial lung disease) |
+- **Synovial membrane (intima)**: Site of inflammatory cell infiltration and pannus formation
+- **Joint capsule & ligaments**: Targeted by pannus → erosion of cartilage & bone
+- **Subchondral bone**: Resorption by osteoclasts driven by cytokines
+- **Periarticular muscles**: Atrophy from disuse and inflammatory cytokines
+- **Lymphoid tissue (e.g., spleen, lymph nodes)**: Source of auto‑reactive B‑ and T‑cells
+- **Systemic organs (lung, heart, vessels)**: Sites of extra‑articular disease (e.g., interstitial lung disease)
 
 ## Causes and risk factors  
 - **Genetic predisposition** – HLA‑DRB1 shared epitope alleles common in African populations.  
@@ -43,31 +41,27 @@ Rheumatoid arthritis (RA) is a chronic, systemic, autoimmune inflammatory arthri
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Onset & duration** | “When did the joint pain start? Has it been gradual or sudden?” | RA usually begins insidiously over weeks‑months; chronicity distinguishes it from post‑infective or crystal arthropathies. |
-| **Pattern of joint involvement** | “Which joints are painful or swollen? Are they the same on both sides?” “Do you have morning stiffness? How long does it last?” | Symmetrical polyarthritis of small joints (MCP, PIP, wrists) is classic; stiffness >30 min reflects inflammatory synovitis. |
-| **Systemic symptoms** | “Do you feel feverish, fatigued, lose weight or have night sweats?” | Cytokine‑driven inflammation produces constitutional features; helps separate from purely mechanical pain. |
-| **Functional impact** | “Can you dress, write or open jars?” “Any difficulty climbing stairs?” | Joint damage and pain limit daily activities; early functional loss signals aggressive disease. |
-| **Extra‑articular manifestations** | “Do you have dry eyes or mouth, nodules on elbows, rash, shortness of breath, chest pain, or leg swelling?” | Rheumatoid nodules, sicca symptoms (secondary Sjögren), interstitial lung disease, pleuritis, pericarditis, vasculitis are immune‑mediated extensions of the disease. |
-| **Past medical & infection history** | “Have you been diagnosed with HIV, TB, malaria, or sickle‑cell disease? Any recent infections or vaccinations?” | In our setting, HIV, TB and chronic malaria can trigger or mimic RA; sickle‑cell disease may cause joint pain that confounds the picture. |
-| **Family & ethnic background** | “Any relatives with rheumatoid arthritis or other autoimmune disease?” “What is your tribe/ethnicity?” | Genetic predisposition (HLA‑DRB1 shared epitope) and certain ethnic groups have higher prevalence. |
-| **Medication & exposure history** | “Do you take any herbal remedies, antibiotics, or anti‑malarial drugs?” | Some drugs (e.g., minocycline) can cause drug‑induced arthritis; herbal products may mask symptoms. |
+- **Onset & duration**: “When did the joint pain start? Has it been gradual or sudden?” — RA usually begins insidiously over weeks‑months; chronicity distinguishes it from post‑infective or crystal arthropathies.
+- **Pattern of joint involvement**: “Which joints are painful or swollen? Are they the same on both sides?” “Do you have morning stiffness? How long does it last?” — Symmetrical polyarthritis of small joints (MCP, PIP, wrists) is classic; stiffness >30 min reflects inflammatory synovitis.
+- **Systemic symptoms**: “Do you feel feverish, fatigued, lose weight or have night sweats?” — Cytokine‑driven inflammation produces constitutional features; helps separate from purely mechanical pain.
+- **Functional impact**: “Can you dress, write or open jars?” “Any difficulty climbing stairs?” — Joint damage and pain limit daily activities; early functional loss signals aggressive disease.
+- **Extra‑articular manifestations**: “Do you have dry eyes or mouth, nodules on elbows, rash, shortness of breath, chest pain, or leg swelling?” — Rheumatoid nodules, sicca symptoms (secondary Sjögren), interstitial lung disease, pleuritis, pericarditis, vasculitis are immune‑mediated extensions of the disease.
+- **Past medical & infection history**: “Have you been diagnosed with HIV, TB, malaria, or sickle‑cell disease? Any recent infections or vaccinations?” — In our setting, HIV, TB and chronic malaria can trigger or mimic RA; sickle‑cell disease may cause joint pain that confounds the picture.
+- **Family & ethnic background**: “Any relatives with rheumatoid arthritis or other autoimmune disease?” “What is your tribe/ethnicity?” — Genetic predisposition (HLA‑DRB1 shared epitope) and certain ethnic groups have higher prevalence.
+- **Medication & exposure history**: “Do you take any herbal remedies, antibiotics, or anti‑malarial drugs?” — Some drugs (e.g., minocycline) can cause drug‑induced arthritis; herbal products may mask symptoms.
 
 **Examination findings**  
 
-| Finding | What it indicates | Pathophysiologic basis |
-|---|---|---|
-| **Symmetrical swelling of MCP/PIP/wrist joints** | Active synovitis | Synovial membrane hypertrophy and effusion from cytokine‑driven inflammation. |
-| **Tenderness over the same joints** | Pain generator | Inflamed pannus irritates nociceptors. |
-| **Joint warmth & erythema** | Inflammatory nature | Increased blood flow and capillary leak in inflamed synovium. |
-| **Reduced range of motion (active > passive)** | Pain‑limited movement | Pain inhibits active motion; passive may be preserved early. |
-| **Ulnar deviation of fingers, boutonnière or swan‑neck deformities** | Chronic damage | Tendon imbalance and ligamentous laxity from prolonged synovitis. |
-| **Rheumatoid nodules (subcutaneous, over extensor surfaces)** | Extra‑articular disease | Granulomatous inflammation in subcutaneous tissue. |
-| **Sicca signs (dry eyes, dry mouth)** | Secondary Sjögren’s | Autoimmune exocrine gland involvement. |
-| **Pleural rub, reduced breath sounds, crackles** | Pulmonary involvement | Rheumatoid pleuritis or interstitial lung disease. |
-| **Peripheral edema, skin ulcerations** | Vasculitis | Small‑vessel immune complex deposition. |
-| **Positive rheumatoid factor or anti‑CCP in serum** (lab) | Serologic confirmation | Autoantibodies formed against Fc portion of IgG (RF) or citrullinated peptides (anti‑CCP). |
+- **Symmetrical swelling of MCP/PIP/wrist joints**: Active synovitis — Synovial membrane hypertrophy and effusion from cytokine‑driven inflammation.
+- **Tenderness over the same joints**: Pain generator — Inflamed pannus irritates nociceptors.
+- **Joint warmth & erythema**: Inflammatory nature — Increased blood flow and capillary leak in inflamed synovium.
+- **Reduced range of motion (active > passive)**: Pain‑limited movement — Pain inhibits active motion; passive may be preserved early.
+- **Ulnar deviation of fingers, boutonnière or swan‑neck deformities**: Chronic damage — Tendon imbalance and ligamentous laxity from prolonged synovitis.
+- **Rheumatoid nodules (subcutaneous, over extensor surfaces)**: Extra‑articular disease — Granulomatous inflammation in subcutaneous tissue.
+- **Sicca signs (dry eyes, dry mouth)**: Secondary Sjögren’s — Autoimmune exocrine gland involvement.
+- **Pleural rub, reduced breath sounds, crackles**: Pulmonary involvement — Rheumatoid pleuritis or interstitial lung disease.
+- **Peripheral edema, skin ulcerations**: Vasculitis — Small‑vessel immune complex deposition.
+- **Positive rheumatoid factor or anti‑CCP in serum (lab)**: Serologic confirmation — Autoantibodies formed against Fc portion of IgG (RF) or citrullinated peptides (anti‑CCP).
 
 ---
 
@@ -115,22 +109,37 @@ Rheumatoid arthritis (RA) is a chronic, systemic, autoimmune inflammatory arthri
 
 **Severity grading** (used to guide therapy)
 
-| Category | Clinical / lab features | Management implication |
-|---|---|---|
-| **Mild** | ≤3 swollen joints, low ESR/CRP, no erosions, functional score low | Start conventional DMARD (e.g., methotrexate) ± short course NSAID; monitor every 3 months |
-| **Moderate** | 4–10 swollen joints, moderate ESR/CRP, early erosions, some functional limitation | Conventional DMARD + consider combination DMARD or biologic if inadequate response at 3–6 months |
-| **Severe** | >10 swollen joints, high ESR/CRP, progressive erosions, extra‑articular disease (nodules, lung) | Early combination DMARD + biologic (TNF‑α inhibitor, IL‑6 blocker, or B‑cell depletor) plus glucocorticoid bridge; close monitoring for toxicity |
+- **Mild**: ≤3 swollen joints, low ESR/CRP, no erosions, functional score low — Start conventional DMARD (e.g., methotrexate) ± short course NSAID; monitor every 3 months
+- **Moderate**: 4–10 swollen joints, moderate ESR/CRP, early erosions, some functional limitation — Conventional DMARD + consider combination DMARD or biologic if inadequate response at 3–6 months
+- **Severe**: >10 swollen joints, high ESR/CRP, progressive erosions, extra‑articular disease (nodules, lung) — Early combination DMARD + biologic (TNF‑α inhibitor, IL‑6 blocker, or B‑cell depletor) plus glucocorticoid bridge; close monitoring for toxicity
 
 Severity is reassessed using disease activity scores (e.g., DAS28) and functional indices (HAQ). Prompt escalation is essential to prevent irreversible joint damage and systemic complications.
 
 ## Management  
 
-| Phase | Goal | Key Interventions | Monitoring / Safety |
-|---|---|---|---|
-| **Immediate stabilisation** | Relieve severe pain, protect joints, prevent functional loss | • High‑dose oral or parenteral glucocorticoid bridge (short‑term) <br>• NSAID for analgesia (avoid if active TB, peptic ulcer, renal impairment) <br>• Splinting of inflamed joints, physiotherapy to maintain range | • Vital signs, blood pressure, blood glucose (steroids) <br>• GI protection if NSAID used (PPI) <br>• Screen for latent TB and hepatitis before steroids |
-| **Definitive disease‑modifying therapy** | Suppress immune‑mediated synovitis, halt radiographic progression | • Conventional synthetic DMARDs (methotrexate, leflunomide, sulfasalazine) – start early, preferably within 3 months of symptom onset <br>• If rapid erosive disease or poor prognostic factors → add a biologic (TNF‑α inhibitor, IL‑6 receptor antagonist, abatacept, rituximab) or targeted synthetic DMARD (JAK inhibitor) <br>• Hydroxychloroquine for milder disease or as part of triple therapy | • Baseline CBC, LFT, renal function; repeat every 4–8 weeks initially <br>• Hepatitis B/C screening before biologics/JAK inhibitors <br>• TB screening (IGRA or Mantoux) and chest X‑ray before biologics <br>• Vaccination status – give inactivated vaccines before immunosuppression |
-| **Adjunctive care** | Preserve function, reduce comorbidity impact | • Regular physiotherapy & occupational therapy <br>• Patient education on joint protection, smoking cessation <br>• Osteoporosis prophylaxis (calcium, vitamin D, bisphosphonate if steroid‑dependent) <br>• Cardiovascular risk assessment (lipids, BP) | • Bone mineral density every 1–2 years if on long‑term steroids <br>• Lipid profile annually |
-| **Follow‑up** | Assess disease activity, drug toxicity, adjust therapy | • DAS28 or SDAI every 3 months <br>• Review for infections, skin lesions, cytopenias <br>• Adjust DMARDs based on response and side‑effects | • Prompt evaluation of new fever, cough, skin rash (possible infection or drug reaction) |
+- **Immediate stabilisation**
+  - Relieve severe pain, protect joints, prevent functional loss — • High‑dose oral or parenteral glucocorticoid bridge (short‑term)
+  - NSAID for analgesia (avoid if active TB, peptic ulcer, renal impairment)
+  - Splinting of inflamed joints, physiotherapy to maintain range — • Vital signs, blood pressure, blood glucose (steroids)
+  - GI protection if NSAID used (PPI)
+  - Screen for latent TB and hepatitis before steroids
+- **Definitive disease‑modifying therapy**
+  - Suppress immune‑mediated synovitis, halt radiographic progression — • Conventional synthetic DMARDs (methotrexate, leflunomide, sulfasalazine) – start early, preferably within 3 months of symptom onset
+  - If rapid erosive disease or poor prognostic factors → add a biologic (TNF‑α inhibitor, IL‑6 receptor antagonist, abatacept, rituximab) or targeted synthetic DMARD (JAK inhibitor)
+  - Hydroxychloroquine for milder disease or as part of triple therapy — • Baseline CBC, LFT, renal function; repeat every 4–8 weeks initially
+  - Hepatitis B/C screening before biologics/JAK inhibitors
+  - TB screening (IGRA or Mantoux) and chest X‑ray before biologics
+  - Vaccination status – give inactivated vaccines before immunosuppression
+- **Adjunctive care**
+  - Preserve function, reduce comorbidity impact — • Regular physiotherapy & occupational therapy
+  - Patient education on joint protection, smoking cessation
+  - Osteoporosis prophylaxis (calcium, vitamin D, bisphosphonate if steroid‑dependent)
+  - Cardiovascular risk assessment (lipids, BP) — • Bone mineral density every 1–2 years if on long‑term steroids
+  - Lipid profile annually
+- **Follow‑up**
+  - Assess disease activity, drug toxicity, adjust therapy — • DAS28 or SDAI every 3 months
+  - Review for infections, skin lesions, cytopenias
+  - Adjust DMARDs based on response and side‑effects — • Prompt evaluation of new fever, cough, skin rash (possible infection or drug reaction)
 
 **Contra‑indications / safety notes**  
 - **NSAIDs**: avoid in active peptic ulcer disease, severe renal insufficiency, uncontrolled heart failure.  

@@ -1,4 +1,4 @@
-# Bronchiectasis — Year 4 Internal Medicine (Respiratory) Notes
+# Bronchiectasis
 
 *Orientation notes for study. Check local guidelines before prescribing.*
 
@@ -11,16 +11,14 @@
 
 ## Anatomy and physiology you need  
 
-| Structure / Function | Why it matters in bronchiectasis |
-|---|---|
-| **Conducting airways (bronchi and bronchioles)** – cartilaginous support, smooth‑muscle tone, mucosal glands and ciliated epithelium | Loss of elastic recoil and cartilage integrity after chronic inflammation produces permanent dilatation; the widened lumen impairs laminar airflow and promotes turbulent eddies that trap secretions. |
-| **Mucociliary clearance** – coordinated beating of cilia propels mucus toward the pharynx | Damage to cilia (by infection, smoking, or primary ciliary dyskinesia) reduces clearance, allowing mucus stasis, bacterial over‑growth and a self‑perpetuating “vicious cycle”. |
-| **Bronchial wall components** – collagen, elastin, smooth‑muscle, submucosal glands | Inflammatory proteases (neutrophil elastase, matrix metalloproteinases) degrade elastin and collagen, thinning the wall and permitting outward expansion under airway pressure. |
-| **Bronchial arterial supply** – systemic bronchial arteries run alongside bronchi | Chronic inflammation induces neovascularisation; fragile bronchial vessels are the source of haemoptysis when they rupture. |
-| **Ventilation‑perfusion (V/Q) matching** – alveolar ventilation matched to pulmonary perfusion | Dilated, mucus‑filled bronchi cause regional hypoventilation, producing low V/Q units, hypoxaemia and dyspnoea that worsen with disease progression. |
-| **Airway smooth‑muscle tone** – β₂‑adrenergic and cholinergic regulation | Bronchospasm can superimpose an obstructive component; bronchodilators improve airflow and facilitate chest‑physiotherapy‑mediated clearance. |
-| **Lymphatic drainage of the lung** – interstitial lymphatics remove excess fluid and immune cells | Chronic infection overwhelms lymphatic capacity, leading to peribronchial oedema and further narrowing of the airway lumen. |
-| **Systemic inflammatory response** – cytokines (IL‑8, TNF‑α) and acute‑phase reactants | Persistent systemic inflammation contributes to weight loss, anemia and, in severe cases, secondary amyloidosis. |
+- **Conducting airways (bronchi and bronchioles) – cartilaginous support, smooth‑muscle tone, mucosal glands and ciliated epithelium**: Loss of elastic recoil and cartilage integrity after chronic inflammation produces permanent dilatation; the widened lumen impairs laminar airflow and promotes turbulent eddies that trap secretions.
+- **Mucociliary clearance – coordinated beating of cilia propels mucus toward the pharynx**: Damage to cilia (by infection, smoking, or primary ciliary dyskinesia) reduces clearance, allowing mucus stasis, bacterial over‑growth and a self‑perpetuating “vicious cycle”.
+- **Bronchial wall components – collagen, elastin, smooth‑muscle, submucosal glands**: Inflammatory proteases (neutrophil elastase, matrix metalloproteinases) degrade elastin and collagen, thinning the wall and permitting outward expansion under airway pressure.
+- **Bronchial arterial supply – systemic bronchial arteries run alongside bronchi**: Chronic inflammation induces neovascularisation; fragile bronchial vessels are the source of haemoptysis when they rupture.
+- **Ventilation‑perfusion (V/Q) matching – alveolar ventilation matched to pulmonary perfusion**: Dilated, mucus‑filled bronchi cause regional hypoventilation, producing low V/Q units, hypoxaemia and dyspnoea that worsen with disease progression.
+- **Airway smooth‑muscle tone – β₂‑adrenergic and cholinergic regulation**: Bronchospasm can superimpose an obstructive component; bronchodilators improve airflow and facilitate chest‑physiotherapy‑mediated clearance.
+- **Lymphatic drainage of the lung – interstitial lymphatics remove excess fluid and immune cells**: Chronic infection overwhelms lymphatic capacity, leading to peribronchial oedema and further narrowing of the airway lumen.
+- **Systemic inflammatory response – cytokines (IL‑8, TNF‑α) and acute‑phase reactants**: Persistent systemic inflammation contributes to weight loss, anemia and, in severe cases, secondary amyloidosis.
 
 *Exam tip:* When asked why HRCT is the gold standard, cite that it visualises the **airway wall thickness, loss of tapering and the signet‑ring sign**, all direct consequences of the anatomical changes above.
 
@@ -32,16 +30,14 @@
 
 ## Causes
 
-| Group | Examples |
-|---|---|
-| **Post-infectious** (commonest, especially in Kenya) | **Tuberculosis**, severe pneumonia, **measles**, **whooping cough**, adenovirus |
-| **Congenital and genetic** | **Cystic fibrosis**, **primary ciliary dyskinesia** (Kartagener: bronchiectasis, sinusitis, dextrocardia), alpha-1 antitrypsin deficiency, Young's syndrome |
-| **Immune deficiency** | **HIV**, hypogammaglobulinaemia (common variable immunodeficiency) |
-| **Obstruction** | **Foreign body**, tumour, enlarged nodes (compressing a bronchus), mucus plug |
-| **Allergic** | **Allergic bronchopulmonary aspergillosis (ABPA)** (central bronchiectasis in asthma) |
-| **Inflammatory and autoimmune** | **Rheumatoid arthritis**, inflammatory bowel disease, Sjögren's |
-| **Aspiration** | Recurrent aspiration, GORD |
-| **Idiopathic** | A large fraction |
+- **Post-infectious (commonest, especially in Kenya)**: **Tuberculosis**, severe pneumonia, **measles**, **whooping cough**, adenovirus
+- **Congenital and genetic**: **Cystic fibrosis**, **primary ciliary dyskinesia** (Kartagener: bronchiectasis, sinusitis, dextrocardia), alpha-1 antitrypsin deficiency, Young's syndrome
+- **Immune deficiency**: **HIV**, hypogammaglobulinaemia (common variable immunodeficiency)
+- **Obstruction**: **Foreign body**, tumour, enlarged nodes (compressing a bronchus), mucus plug
+- **Allergic**: **Allergic bronchopulmonary aspergillosis (ABPA)** (central bronchiectasis in asthma)
+- **Inflammatory and autoimmune**: **Rheumatoid arthritis**, inflammatory bowel disease, Sjögren's
+- **Aspiration**: Recurrent aspiration, GORD
+- **Idiopathic**: A large fraction
 
 ## Clinical features
 
@@ -148,15 +144,13 @@
 
 Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [bronchiectasis drugs](/pharmacology?tab=conditions&c=bronchiectasis).
 
-| Drug | Class | Role here | Watch for |
-|---|---|---|---|
-| Amoxicillin | Penicillin | Exacerbation with Haemophilus or pneumococcus (14 days) | Rash, diarrhoea |
-| Doxycycline | Tetracycline | Alternative for exacerbations | Photosensitivity, oesophagitis |
-| Ciprofloxacin | Fluoroquinolone | Pseudomonas exacerbations | Tendon injury, QT prolongation |
-| Azithromycin | Macrolide | Long-term prophylaxis if 3 or more exacerbations a year | QT prolongation, hearing loss; exclude non-tuberculous mycobacteria first |
-| Gentamicin | Aminoglycoside | Nebulised or IV for resistant Pseudomonas | Kidney and hearing damage; level monitoring |
-| Salbutamol | Short-acting β₂-agonist | Bronchodilator before airway clearance | Tremor, palpitations |
-| Prednisolone | Systemic corticosteroid | Allergic bronchopulmonary aspergillosis | High glucose, infection risk |
+- **Amoxicillin**: Penicillin — Exacerbation with Haemophilus or pneumococcus (14 days) — Rash, diarrhoea
+- **Doxycycline**: Tetracycline — Alternative for exacerbations — Photosensitivity, oesophagitis
+- **Ciprofloxacin**: Fluoroquinolone — Pseudomonas exacerbations — Tendon injury, QT prolongation
+- **Azithromycin**: Macrolide — Long-term prophylaxis if 3 or more exacerbations a year — QT prolongation, hearing loss; exclude non-tuberculous mycobacteria first
+- **Gentamicin**: Aminoglycoside — Nebulised or IV for resistant Pseudomonas — Kidney and hearing damage; level monitoring
+- **Salbutamol**: Short-acting β₂-agonist — Bronchodilator before airway clearance — Tremor, palpitations
+- **Prednisolone**: Systemic corticosteroid — Allergic bronchopulmonary aspergillosis — High glucose, infection risk
 
 **Culture first, then treat:** short courses relapse, so a full 14 days is the usual duration.
 

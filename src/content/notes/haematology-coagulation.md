@@ -6,25 +6,21 @@
 A coagulation disorder is any abnormality of the haemostatic system that results in either excessive bleeding (hypocoagulability) or pathological clot formation (hypercoagulability). In practice the term is most often applied to acquired or inherited defects that present with abnormal bleeding times, bruising, mucosal haemorrhage, or thrombotic events.
 
 ## Anatomy and physiology you need  
-| Component | Role in haemostasis | Key test |
-|---|---|---|
-| Vascular endothelium | Provides surface, releases von Willebrand factor (vWF) & prostacyclin | Clinical exam (pulses, cap refill) |
-| Platelets | Primary plug formation, release granules, provide phospholipid surface | Platelet count, platelet function assay |
-| Coagulation cascade (intrinsic & extrinsic) | Generates thrombin → fibrin clot | PT, aPTT, INR, fibrinogen |
-| Fibrinolytic system | Dissolves clot via plasmin | D‑dimer, fibrin degradation products |
-| Natural anticoagulants (protein C, protein S, antithrombin) | Limit clot propagation | Specific factor assays |
+- **Vascular endothelium**: Provides surface, releases von Willebrand factor (vWF) & prostacyclin — Clinical exam (pulses, cap refill)
+- **Platelets**: Primary plug formation, release granules, provide phospholipid surface — Platelet count, platelet function assay
+- **Coagulation cascade (intrinsic & extrinsic)**: Generates thrombin → fibrin clot — PT, aPTT, INR, fibrinogen
+- **Fibrinolytic system**: Dissolves clot via plasmin — D‑dimer, fibrin degradation products
+- **Natural anticoagulants (protein C, protein S, antithrombin)**: Limit clot propagation — Specific factor assays
 
 ## Causes and risk factors  
-| Category | Common aetiologies in Kenya | Why they matter |
-|---|---|---|
-| Infectious | HIV (immune dysregulation, ART), TB (disseminated intravascular coagulation), malaria (platelet sequestration, DIC), hepatitis B/C (liver synthetic failure) | High prevalence; often present with mixed bleeding & clotting |
-| Hemoglobinopathies | Sickle cell disease (functional asplenia, vaso‑occlusion, chronic hemolysis) | Leads to both thrombosis and bleeding from splenic sequestration |
-| Autoimmune / Rheumatic | Systemic lupus erythematosus (antiphospholipid antibodies), rheumatic fever (immune complex vasculitis) | Antiphospholipid syndrome causes hypercoagulability; vasculitis can cause bleeding |
-| Liver disease | Chronic hepatitis, alcoholic liver disease, aflatoxin exposure | Liver makes most clotting factors and anticoagulants |
-| Nutritional | Vitamin K deficiency (poor diet, broad‑spectrum antibiotics) | Reduces synthesis of factors II, VII, IX, X |
-| Medications | Antibiotics (alter gut flora → vit K), antiretrovirals (protease inhibitors), traditional herbal remedies (unknown anticoagulant compounds) | Frequently used; may precipitate bleeding |
-| Pregnancy & puerperium | Increased clotting factor levels, reduced protein S | High risk of venous thromboembolism |
-| Malignancy | Kaposi sarcoma, lymphomas, solid tumours | Tumour‑derived pro‑coagulants, DIC |
+- **Infectious**: HIV (immune dysregulation, ART), TB (disseminated intravascular coagulation), malaria (platelet sequestration, DIC), hepatitis B/C (liver synthetic failure) — High prevalence; often present with mixed bleeding & clotting
+- **Hemoglobinopathies**: Sickle cell disease (functional asplenia, vaso‑occlusion, chronic hemolysis) — Leads to both thrombosis and bleeding from splenic sequestration
+- **Autoimmune / Rheumatic**: Systemic lupus erythematosus (antiphospholipid antibodies), rheumatic fever (immune complex vasculitis) — Antiphospholipid syndrome causes hypercoagulability; vasculitis can cause bleeding
+- **Liver disease**: Chronic hepatitis, alcoholic liver disease, aflatoxin exposure — Liver makes most clotting factors and anticoagulants
+- **Nutritional**: Vitamin K deficiency (poor diet, broad‑spectrum antibiotics) — Reduces synthesis of factors II, VII, IX, X
+- **Medications**: Antibiotics (alter gut flora → vit K), antiretrovirals (protease inhibitors), traditional herbal remedies (unknown anticoagulant compounds) — Frequently used; may precipitate bleeding
+- **Pregnancy & puerperium**: Increased clotting factor levels, reduced protein S — High risk of venous thromboembolism
+- **Malignancy**: Kaposi sarcoma, lymphomas, solid tumours — Tumour‑derived pro‑coagulants, DIC
 
 ## Pathophysiology  
 Infection or inflammation → cytokine surge → endothelial activation → tissue factor exposure → extrinsic pathway activation → thrombin burst → fibrin formation → consumption of clotting factors → **DIC** → simultaneous bleeding (factor depletion) and micro‑thrombosis.  
@@ -43,16 +39,24 @@ These steps illustrate how a single trigger can shift the balance toward either 
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Bleeding pattern** | • Onset – sudden vs gradual <br>• Site – mucosal (epistaxis, gum, menorrhagia), skin (petechiae, purpura), gastrointestinal, genitourinary, intracranial <br>• Trauma‑related vs spontaneous <br>• Relation to surgery or dental work | The vascular bed and coagulation cascade determine where a defect becomes evident. Platelet disorders give mucocutaneous bleeding; factor deficiencies or liver disease produce deep tissue/hemorrhagic bleeding. |
-| **Family history** | • Consanguinity, known inherited bleeding disorder, early‑onset bleeding in relatives | Inherited deficiencies (e.g., hemophilia A/B, von Willebrand disease) follow autosomal or X‑linked patterns. |
-| **Medication / substance use** | • NSAIDs, aspirin, antiplatelet agents, warfarin, DOACs, traditional herbal remedies, alcohol excess | Drugs can impair platelet function or the coagulation cascade, precipitating bleeding. |
-| **Infectious / systemic illnesses** | • HIV status, TB treatment, recent malaria, sickle‑cell crises, rheumatic fever, liver disease, renal disease | HIV can cause thrombocytopenia; TB and malaria may trigger DIC; sickle cell and rheumatic disease can cause splenic sequestration or immune‑mediated platelet destruction. |
-| **Pregnancy / obstetric history** | • Prior postpartum hemorrhage, placental abnormalities, pre‑eclampsia | Pregnancy stresses the hemostatic system; underlying disorders become apparent during delivery. |
-| **Surgical / invasive procedures** | • Recent or planned surgery, catheterisation, biopsies | Provides a stress test for hemostasis; excessive bleeding points to a disorder. |
-| **Constitutional symptoms** | • Fever, weight loss, night sweats, fatigue | May indicate underlying infection, malignancy or systemic inflammation that can trigger consumptive coagulopathy. |
-| **Physical examination** | • **Skin** – petechiae, purpura, ecchymoses, bruises, hematomas (platelet or vascular fragility) <br>• **Mucosa** – bleeding gums, epistaxis, menorrhagia (platelet or von Willebrand) <br>• **Jaundice** – suggests liver disease affecting clotting factor synthesis <br>• **Hepatosplenomegaly** – portal hypertension, sequestration of platelets <br>• **Lymphadenopathy / organomegaly** – possible hematologic malignancy <br>• **Signs of DIC** – diffuse oozing from venipuncture sites, shock, organ dysfunction | Each sign reflects a specific component of hemostasis: platelet number/function, coagulation factor levels, vascular integrity, or consumptive processes. Recognising the pattern directs further testing. |
+- **Bleeding pattern**
+  - Onset – sudden vs gradual
+  - Site – mucosal (epistaxis, gum, menorrhagia), skin (petechiae, purpura), gastrointestinal, genitourinary, intracranial
+  - Trauma‑related vs spontaneous
+  - Relation to surgery or dental work — The vascular bed and coagulation cascade determine where a defect becomes evident. Platelet disorders give mucocutaneous bleeding; factor deficiencies or liver disease produce deep tissue/hemorrhagic bleeding.
+- **Family history**: • Consanguinity, known inherited bleeding disorder, early‑onset bleeding in relatives — Inherited deficiencies (e.g., hemophilia A/B, von Willebrand disease) follow autosomal or X‑linked patterns.
+- **Medication / substance use**: • NSAIDs, aspirin, antiplatelet agents, warfarin, DOACs, traditional herbal remedies, alcohol excess — Drugs can impair platelet function or the coagulation cascade, precipitating bleeding.
+- **Infectious / systemic illnesses**: • HIV status, TB treatment, recent malaria, sickle‑cell crises, rheumatic fever, liver disease, renal disease — HIV can cause thrombocytopenia; TB and malaria may trigger DIC; sickle cell and rheumatic disease can cause splenic sequestration or immune‑mediated platelet destruction.
+- **Pregnancy / obstetric history**: • Prior postpartum hemorrhage, placental abnormalities, pre‑eclampsia — Pregnancy stresses the hemostatic system; underlying disorders become apparent during delivery.
+- **Surgical / invasive procedures**: • Recent or planned surgery, catheterisation, biopsies — Provides a stress test for hemostasis; excessive bleeding points to a disorder.
+- **Constitutional symptoms**: • Fever, weight loss, night sweats, fatigue — May indicate underlying infection, malignancy or systemic inflammation that can trigger consumptive coagulopathy.
+- **Physical examination**
+  - **Skin** – petechiae, purpura, ecchymoses, bruises, hematomas (platelet or vascular fragility)
+  - **Mucosa** – bleeding gums, epistaxis, menorrhagia (platelet or von Willebrand)
+  - **Jaundice** – suggests liver disease affecting clotting factor synthesis
+  - **Hepatosplenomegaly** – portal hypertension, sequestration of platelets
+  - **Lymphadenopathy / organomegaly** – possible hematologic malignancy
+  - **Signs of DIC** – diffuse oozing from venipuncture sites, shock, organ dysfunction — Each sign reflects a specific component of hemostasis: platelet number/function, coagulation factor levels, vascular integrity, or consumptive processes. Recognising the pattern directs further testing.
 
 ---
 
@@ -98,11 +102,9 @@ These steps illustrate how a single trigger can shift the balance toward either 
 
 2. **Classify severity** (clinical rather than numeric)  
 
-| Severity | Clinical criteria | Management focus |
-|---|---|---|
-| **Mild** | Minor mucosal bleeding, no hemodynamic impact, platelet >50 × 10⁹/L, PT/INR <1.5, aPTT <1.5× control | Observation, treat reversible causes, prophylactic measures |
-| **Moderate** | Frequent mucocutaneous bleeding, menorrhagia, epistaxis requiring medical attention, platelet 30‑50 × 10⁹/L, PT/INR 1.5‑2.5, aPTT 1.5‑2.5× control | Targeted replacement (platelets, VWF concentrate, factor concentrates), address underlying disease |
-| **Severe / life‑threatening** | Intracranial, gastrointestinal, or surgical bleeding; hemodynamic instability; platelet <30 × 10⁹/L, PT/INR >2.5, aPTT >2.5× control, fibrinogen <1 g/L | Urgent hemostatic therapy (massive transfusion protocol, specific factor concentrates, antifibrinolytics), intensive monitoring, treat precipitating cause (e.g., infection, liver failure) |
+- **Mild**: Minor mucosal bleeding, no hemodynamic impact, platelet >50 × 10⁹/L, PT/INR <1.5, aPTT <1.5× control — Observation, treat reversible causes, prophylactic measures
+- **Moderate**: Frequent mucocutaneous bleeding, menorrhagia, epistaxis requiring medical attention, platelet 30‑50 × 10⁹/L, PT/INR 1.5‑2.5, aPTT 1.5‑2.5× control — Targeted replacement (platelets, VWF concentrate, factor concentrates), address underlying disease
+- **Severe / life‑threatening**: Intracranial, gastrointestinal, or surgical bleeding; hemodynamic instability; platelet <30 × 10⁹/L, PT/INR >2.5, aPTT >2.5× control, fibrinogen <1 g/L — Urgent hemostatic therapy (massive transfusion protocol, specific factor concentrates, antifibrinolytics), intensive monitoring, treat precipitating cause (e.g., infection, liver failure)
 
 3. **Confirmatory diagnosis** – combine history, exam, and the pattern of laboratory abnormalities. For inherited disorders, family studies and genetic testing (where available) may be added. For acquired disorders, identify and treat the trigger (e.g., antiretroviral therapy for HIV, antimalarials, anti‑TB drugs, antibiotics for sepsis).  
 
@@ -110,11 +112,32 @@ These steps illustrate how a single trigger can shift the balance toward either 
 
 ## Management  
 
-| Phase | Goal | Key actions | Monitoring / safety |
-|---|---|---|---|
-| **Immediate stabilisation** | Preserve life, stop active bleeding | • Secure airway, breathing, circulation (IV access, fluids) <br>• Apply pressure dressings or tourniquet for limb bleeds <br>• Transfuse packed red cells if haemodynamic compromise <br>• Give *fresh frozen plasma* (FFP) or *prothrombin complex concentrate* (PCC) for severe INR elevation or factor deficiency <br>• Give *cryoprecipitate* for isolated fibrinogen <br>• Administer *tranexamic acid* early in trauma‑related bleeding | • Vital signs q15‑30 min until stable <br>• Repeat PT/INR, aPTT, fibrinogen after each product <br>• Watch for transfusion reactions, volume overload |
-| **Definitive treatment** | Correct underlying cause, restore haemostasis | • **Vitamin K** for warfarin‑related coagulopathy or malnutrition <br>• **Antifibrinolytics** (tranexamic acid, epsilon‑aminocaproic acid) for hyperfibrinolysis <br>• **Specific factor concentrates** (e.g., recombinant factor VIII for haemophilia A) <br>• **Desmopressin (DDAVP)** for mild haemophilia A, von Willebrand disease, or uremic platelet dysfunction <br>• Treat infections (TB, malaria, HIV) that precipitate DIC or thrombocytopenia <br>• Manage autoimmune causes with steroids or rituximab <br>• For DIC, replace depleted components (FFP, platelets, cryoprecipitate) and treat trigger | • Daily PT/INR, aPTT, fibrinogen, D‑dimer while on therapy <br>• Platelet count q12‑h if thrombocytopenic <br>• Renal & hepatic function for drug clearance <br>• Watch for thrombotic complications when using PCC or factor concentrates |
-| **Long‑term follow‑up** | Prevent recurrence, monitor for late effects | • Education on medication adherence (e.g., warfarin monitoring) <br>• Periodic screening for inhibitor development in haemophilia <br>• Vaccination and prophylaxis for HIV/TB patients on long‑term anticoagulation <br>• Assess for chronic organ damage (renal, hepatic) | • Outpatient coagulation profile every 3‑6 months (or sooner if unstable) <br>• Review of bleeding diary, quality‑of‑life scores |
+- **Immediate stabilisation**
+  - Preserve life, stop active bleeding — • Secure airway, breathing, circulation (IV access, fluids)
+  - Apply pressure dressings or tourniquet for limb bleeds
+  - Transfuse packed red cells if haemodynamic compromise
+  - Give *fresh frozen plasma* (FFP) or *prothrombin complex concentrate* (PCC) for severe INR elevation or factor deficiency
+  - Give *cryoprecipitate* for isolated fibrinogen
+  - Administer *tranexamic acid* early in trauma‑related bleeding — • Vital signs q15‑30 min until stable
+  - Repeat PT/INR, aPTT, fibrinogen after each product
+  - Watch for transfusion reactions, volume overload
+- **Definitive treatment**
+  - Correct underlying cause, restore haemostasis — • **Vitamin K** for warfarin‑related coagulopathy or malnutrition
+  - **Antifibrinolytics** (tranexamic acid, epsilon‑aminocaproic acid) for hyperfibrinolysis
+  - **Specific factor concentrates** (e.g., recombinant factor VIII for haemophilia A)
+  - **Desmopressin (DDAVP)** for mild haemophilia A, von Willebrand disease, or uremic platelet dysfunction
+  - Treat infections (TB, malaria, HIV) that precipitate DIC or thrombocytopenia
+  - Manage autoimmune causes with steroids or rituximab
+  - For DIC, replace depleted components (FFP, platelets, cryoprecipitate) and treat trigger — • Daily PT/INR, aPTT, fibrinogen, D‑dimer while on therapy
+  - Platelet count q12‑h if thrombocytopenic
+  - Renal & hepatic function for drug clearance
+  - Watch for thrombotic complications when using PCC or factor concentrates
+- **Long‑term follow‑up**
+  - Prevent recurrence, monitor for late effects — • Education on medication adherence (e.g., warfarin monitoring)
+  - Periodic screening for inhibitor development in haemophilia
+  - Vaccination and prophylaxis for HIV/TB patients on long‑term anticoagulation
+  - Assess for chronic organ damage (renal, hepatic) — • Outpatient coagulation profile every 3‑6 months (or sooner if unstable)
+  - Review of bleeding diary, quality‑of‑life scores
 
 **Contra‑indications / safety notes**  
 - Avoid tranexamic acid in patients with active intravascular clotting (e.g., recent myocardial infarction, stroke).  

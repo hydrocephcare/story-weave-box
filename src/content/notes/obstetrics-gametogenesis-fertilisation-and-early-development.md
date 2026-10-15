@@ -1,4 +1,4 @@
-# Gametogenesis, fertilisation and the first two weeks of development — Year 4 Obstetrics and Gynaecology Notes
+# Gametogenesis, fertilisation and the first two weeks of development
 
 *From the Department's gametogenesis and early embryology slides (photographed), rewritten as a clinical story: how the gametes are made, how they meet, and how the embryo implants. The clinical payoff is infertility, ectopic pregnancy, molar pregnancy and early pregnancy loss.*
 
@@ -28,13 +28,11 @@ The whole process takes about **64–74 days** in the seminiferous tubules, supp
 
 ![Oogenesis: the primary oocyte, the first polar body and the secondary oocyte. Studentreader, CC BY-SA 3.0](https://upload.wikimedia.org/wikipedia/commons/4/44/Oogenesis-polar-body-diagram.png)
 
-| | **Spermatogenesis** | **Oogenesis** |
-|---|---|---|
-| **Starts** | At puberty | In fetal life |
-| **Meiotic arrest** | None | Prophase I (until puberty), then metaphase II (until fertilisation) |
-| **Product of one germ cell** | **4 sperm** | **1 ovum + polar bodies** |
-| **Duration** | Continuous, 64–74 days | Years, and ends at fertilisation |
-| **Cell supply** | Renewable (stem cells) | **Fixed at birth** |
+- **Starts**: At puberty — In fetal life
+- **Meiotic arrest**: None — Prophase I (until puberty), then metaphase II (until fertilisation)
+- **Product of one germ cell**: **4 sperm** — **1 ovum + polar bodies**
+- **Duration**: Continuous, 64–74 days — Years, and ends at fertilisation
+- **Cell supply**: Renewable (stem cells) — **Fixed at birth**
 
 ## 2. Week 1: fertilisation, cleavage and the blastocyst
 

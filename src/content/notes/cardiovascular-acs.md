@@ -140,11 +140,9 @@ Stratification identifies patients at high risk of rapid decompensation and deat
 
 ### Definitive Management
 
-| ACS Type | Primary Reperfusion Strategy | Alternative Reperfusion Strategy |
-|---|---|---|
-| STEMI | Primary Percutaneous Coronary Intervention (PCI) | Intravenous fibrinolysis |
-| High-risk NSTEMI/UA | Early invasive coronary angiography (within 24 hours) | Medical stabilisation, delayed invasive strategy |
-| Low-risk NSTEMI/UA | Selective invasive strategy based on ischemia testing | Medical therapy with risk stratification |
+- **STEMI**: Primary Percutaneous Coronary Intervention (PCI) — Intravenous fibrinolysis
+- **High-risk NSTEMI/UA**: Early invasive coronary angiography (within 24 hours) — Medical stabilisation, delayed invasive strategy
+- **Low-risk NSTEMI/UA**: Selective invasive strategy based on ischemia testing — Medical therapy with risk stratification
 
 * **STEMI reperfusion:** Primary PCI is the preferred modality if achievable within standard transfer windows. If delayed beyond target windows, administer intravenous fibrinolytic therapy (e.g., tenecteplase, alteplase, or streptokinase) unless absolute contraindications exist. Following fibrinolysis, arrange urgent transfer for rescue PCI (if failed reperfusion) or routine post-thrombolysis angiography.
 * **NSTEMI/Unstable Angina:** Reperfusion with fibrinolytics is contraindicated. Manage with anti-ischemic medical therapy, parenteral anticoagulation, dual antiplatelets, and risk-stratify for urgent versus elective coronary angiography.

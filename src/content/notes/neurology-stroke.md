@@ -6,27 +6,23 @@
 - **Haemorrhagic stroke** – sudden neurological deficit caused by intracerebral bleeding (parenchymal haemorrhage) or subarachnoid haemorrhage (SAH) from rupture of a vessel.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to stroke |
-|---|---|
-| Middle cerebral artery (MCA) | Most common site of large‑vessel ischaemia; produces contralateral face‑arm‑leg weakness and aphasia (dominant side). |
-| Internal carotid artery (ICA) | Proximal source of emboli; carotid stenosis is a major preventable cause. |
-| Basilar artery | Posterior circulation strokes give brain‑stem signs, cranial nerve palsies, and “locked‑in” syndrome. |
-| Lenticulostriate arteries | Small‑penetrating vessels; occlusion → lacunar infarcts with pure motor or sensory deficits. |
-| Cerebral autoregulation | Maintains perfusion between MAP 50‑150 mmHg; failure predisposes to both ischaemia and haemorrhage. |
-| Blood‑brain barrier | Disruption after ischaemia leads to oedema; rupture leads to haemorrhage. |
+- **Middle cerebral artery (MCA)**: Most common site of large‑vessel ischaemia; produces contralateral face‑arm‑leg weakness and aphasia (dominant side).
+- **Internal carotid artery (ICA)**: Proximal source of emboli; carotid stenosis is a major preventable cause.
+- **Basilar artery**: Posterior circulation strokes give brain‑stem signs, cranial nerve palsies, and “locked‑in” syndrome.
+- **Lenticulostriate arteries**: Small‑penetrating vessels; occlusion → lacunar infarcts with pure motor or sensory deficits.
+- **Cerebral autoregulation**: Maintains perfusion between MAP 50‑150 mmHg; failure predisposes to both ischaemia and haemorrhage.
+- **Blood‑brain barrier**: Disruption after ischaemia leads to oedema; rupture leads to haemorrhage.
 
 ## Causes and risk factors  
 
-| Category | Ischaemic | Haemorrhagic |
-|---|---|---|
-| Atherosclerotic disease | ICA/MCA stenosis, plaque rupture | Small‑vessel lipohyalinosis → deep intracerebral bleed |
-| Cardio‑embolism | Atrial fibrillation, rheumatic mitral stenosis, ventricular thrombus | Rare, but can cause lobar bleed after embolic infarct conversion |
-| Small‑vessel disease | Hypertension, diabetes, smoking | Chronic hypertension → Charcot‑Bouchard micro‑aneurysms |
-| Infectious / tropical | HIV‑associated vasculitis, TB meningitis vasculopathy, malaria cerebral sequestration | TB meningitis → basal SAH, HIV‑related vasculitis → bleed |
-| Haematological | Sickle cell disease (vaso‑occlusion) | Sickle cell crisis → intracerebral bleed, especially in children |
-| Coagulopathy | Anticoagulant use, liver disease | Warfarin/DOAC excess, severe thrombocytopenia, vitamin K deficiency |
-| Lifestyle | Obesity, physical inactivity, alcohol excess | Alcohol binge → hypertension spikes, aneurysm rupture |
-| Age / sex | >55 yr, male predominance | Similar age, slight female preponderance for SAH |
+- **Atherosclerotic disease**: ICA/MCA stenosis, plaque rupture — Small‑vessel lipohyalinosis → deep intracerebral bleed
+- **Cardio‑embolism**: Atrial fibrillation, rheumatic mitral stenosis, ventricular thrombus — Rare, but can cause lobar bleed after embolic infarct conversion
+- **Small‑vessel disease**: Hypertension, diabetes, smoking — Chronic hypertension → Charcot‑Bouchard micro‑aneurysms
+- **Infectious / tropical**: HIV‑associated vasculitis, TB meningitis vasculopathy, malaria cerebral sequestration — TB meningitis → basal SAH, HIV‑related vasculitis → bleed
+- **Haematological**: Sickle cell disease (vaso‑occlusion) — Sickle cell crisis → intracerebral bleed, especially in children
+- **Coagulopathy**: Anticoagulant use, liver disease — Warfarin/DOAC excess, severe thrombocytopenia, vitamin K deficiency
+- **Lifestyle**: Obesity, physical inactivity, alcohol excess — Alcohol binge → hypertension spikes, aneurysm rupture
+- **Age / sex**: >55 yr, male predominance — Similar age, slight female preponderance for SAH
 
 ## Pathophysiology  
 
@@ -47,34 +43,30 @@ Berry aneurysm wall weakness → rupture → blood in subarachnoid space → men
 
 ### History – what to ask  
 
-| Domain | Key questions | Rationale |
-|---|---|---|
-| Onset | “When did the symptoms start? Sudden or progressive?” | Sudden maximal deficit → arterial occlusion; step‑wise or delayed onset → hemorrhage or evolving infarct. |
-| Time course | “Did the symptoms reach a peak within 1 hour? Any fluctuation?” | Determines eligibility for reperfusion therapy and helps differentiate transient ischemic attack from completed stroke. |
-| Symptom type | “Weakness, numbness, speech difficulty, visual loss, facial droop, gait imbalance, headache, vomiting, loss of consciousness?” | Focal cortical signs → ischemic infarct; severe headache, vomiting, decreased consciousness → intracerebral bleed or subarachnoid bleed. |
-| Laterality | “Which side of the body is affected? Any facial involvement?” | Contralateral motor/sensory signs point to supratentorial lesion; brain‑stem lesions give ipsilateral cranial nerve findings. |
-| Speech & cognition | “Any trouble speaking, understanding, reading, writing?” | Dysphasia (dominant‑hemisphere cortical stroke) vs. dysarthria (brain‑stem or basal ganglia). |
-| Visual field | “Any loss of vision in one or both eyes?” | Homonymous hemianopia → occipital or optic radiations infarct; cortical blindness → posterior circulation. |
-| Pre‑stroke functional status | “What was your usual activity level? Any recent falls?” | Baseline helps gauge severity and plan rehabilitation. |
-| Vascular risk profile | “History of hypertension, diabetes, dyslipidaemia, smoking, atrial fibrillation, prior stroke/TIA, coronary disease?” | Identifies modifiable risk factors; atrial fibrillation strongly suggests cardio‑embolic ischemia. |
-| Infectious / tropical exposures | “HIV status, TB treatment, recent malaria, sickle‑cell disease, rheumatic fever?” | HIV‑associated vasculitis, TB meningitis with vasculopathy, malaria‑related cerebral sequestration, sickle‑cell vaso‑occlusion, rheumatic heart disease with embolic risk are relevant in Kenya. |
-| Medications & substances | “Current drugs (anticoagulants, antiplatelets, antiretrovirals), alcohol, illicit drugs?” | Anticoagulant use influences hemorrhagic risk; certain antiretrovirals may affect lipid profile. |
-| Recent procedures / trauma | “Any recent surgery, dental work, or head injury?” | Post‑procedural emboli or trauma‑related bleed. |
-| Family history | “Stroke or early cardiovascular disease in relatives?” | Genetic predisposition to small‑vessel disease or hypercoagulable states. |
+- **Onset**: “When did the symptoms start? Sudden or progressive?” — Sudden maximal deficit → arterial occlusion; step‑wise or delayed onset → hemorrhage or evolving infarct.
+- **Time course**: “Did the symptoms reach a peak within 1 hour? Any fluctuation?” — Determines eligibility for reperfusion therapy and helps differentiate transient ischemic attack from completed stroke.
+- **Symptom type**: “Weakness, numbness, speech difficulty, visual loss, facial droop, gait imbalance, headache, vomiting, loss of consciousness?” — Focal cortical signs → ischemic infarct; severe headache, vomiting, decreased consciousness → intracerebral bleed or subarachnoid bleed.
+- **Laterality**: “Which side of the body is affected? Any facial involvement?” — Contralateral motor/sensory signs point to supratentorial lesion; brain‑stem lesions give ipsilateral cranial nerve findings.
+- **Speech & cognition**: “Any trouble speaking, understanding, reading, writing?” — Dysphasia (dominant‑hemisphere cortical stroke) vs. dysarthria (brain‑stem or basal ganglia).
+- **Visual field**: “Any loss of vision in one or both eyes?” — Homonymous hemianopia → occipital or optic radiations infarct; cortical blindness → posterior circulation.
+- **Pre‑stroke functional status**: “What was your usual activity level? Any recent falls?” — Baseline helps gauge severity and plan rehabilitation.
+- **Vascular risk profile**: “History of hypertension, diabetes, dyslipidaemia, smoking, atrial fibrillation, prior stroke/TIA, coronary disease?” — Identifies modifiable risk factors; atrial fibrillation strongly suggests cardio‑embolic ischemia.
+- **Infectious / tropical exposures**: “HIV status, TB treatment, recent malaria, sickle‑cell disease, rheumatic fever?” — HIV‑associated vasculitis, TB meningitis with vasculopathy, malaria‑related cerebral sequestration, sickle‑cell vaso‑occlusion, rheumatic heart disease with embolic risk are relevant in Kenya.
+- **Medications & substances**: “Current drugs (anticoagulants, antiplatelets, antiretrovirals), alcohol, illicit drugs?” — Anticoagulant use influences hemorrhagic risk; certain antiretrovirals may affect lipid profile.
+- **Recent procedures / trauma**: “Any recent surgery, dental work, or head injury?” — Post‑procedural emboli or trauma‑related bleed.
+- **Family history**: “Stroke or early cardiovascular disease in relatives?” — Genetic predisposition to small‑vessel disease or hypercoagulable states.
 
 ### Examination – what to look for and why  
 
-| System | Findings | Pathophysiologic explanation |
-|---|---|---|
-| General | Level of consciousness (GCS), pupil size/reactivity, blood pressure, cardiac rhythm | Depressed consciousness suggests large hemispheric infarct, brain‑stem involvement, or raised intracranial pressure (ICP). Hypertension is common in acute stroke, especially hemorrhagic. |
-| Cranial nerves | Facial droop (upper vs lower), tongue deviation, dysphagia, dysarthria, gaze palsy, visual field cuts | Upper‑face sparing indicates central lesion; gaze palsy points to brain‑stem or frontal eye field involvement; visual field defects map to occipital cortex or optic radiations. |
-| Motor | Muscle strength (Medical Research Council scale), pronator drift, hemiparesis, hemiplegia, limb ataxia | Contralateral weakness reflects corticospinal tract interruption; ataxia suggests cerebellar or proprioceptive pathway involvement. |
-| Sensory | Pinprick, temperature, vibration, proprioception, cortical sensory loss (stereognosis) | Cortical sensory loss is typical of parietal lobe infarct; diffuse loss suggests thalamic or brain‑stem lesion. |
-| Coordination | Finger‑nose, heel‑shin, dysmetria, dysdiadochokinesia | Cerebellar infarcts or hemorrhage produce ipsilateral limb ataxia and gait instability. |
-| Reflexes | Deep tendon reflexes, Babinski sign, clonus | Upper motor neuron signs (hyperreflexia, extensor plantar) confirm supratentorial corticospinal involvement. |
-| Gait & balance | Ability to sit, stand, walk, Romberg test | Posterior circulation strokes often impair gait and balance; cerebellar lesions cause truncal ataxia. |
-| Cardiovascular | Irregular pulse, murmurs (e.g., mitral stenosis), peripheral pulses | Irregular pulse → atrial fibrillation; murmurs suggest rheumatic valve disease as embolic source. |
-| Skin | Rashes, petechiae, stigmata of HIV (oral thrush, Kaposi lesions) | May point to underlying infection or coagulopathy. |
+- **General**: Level of consciousness (GCS), pupil size/reactivity, blood pressure, cardiac rhythm — Depressed consciousness suggests large hemispheric infarct, brain‑stem involvement, or raised intracranial pressure (ICP). Hypertension is common in acute stroke, especially hemorrhagic.
+- **Cranial nerves**: Facial droop (upper vs lower), tongue deviation, dysphagia, dysarthria, gaze palsy, visual field cuts — Upper‑face sparing indicates central lesion; gaze palsy points to brain‑stem or frontal eye field involvement; visual field defects map to occipital cortex or optic radiations.
+- **Motor**: Muscle strength (Medical Research Council scale), pronator drift, hemiparesis, hemiplegia, limb ataxia — Contralateral weakness reflects corticospinal tract interruption; ataxia suggests cerebellar or proprioceptive pathway involvement.
+- **Sensory**: Pinprick, temperature, vibration, proprioception, cortical sensory loss (stereognosis) — Cortical sensory loss is typical of parietal lobe infarct; diffuse loss suggests thalamic or brain‑stem lesion.
+- **Coordination**: Finger‑nose, heel‑shin, dysmetria, dysdiadochokinesia — Cerebellar infarcts or hemorrhage produce ipsilateral limb ataxia and gait instability.
+- **Reflexes**: Deep tendon reflexes, Babinski sign, clonus — Upper motor neuron signs (hyperreflexia, extensor plantar) confirm supratentorial corticospinal involvement.
+- **Gait & balance**: Ability to sit, stand, walk, Romberg test — Posterior circulation strokes often impair gait and balance; cerebellar lesions cause truncal ataxia.
+- **Cardiovascular**: Irregular pulse, murmurs (e.g., mitral stenosis), peripheral pulses — Irregular pulse → atrial fibrillation; murmurs suggest rheumatic valve disease as embolic source.
+- **Skin**: Rashes, petechiae, stigmata of HIV (oral thrush, Kaposi lesions) — May point to underlying infection or coagulopathy.
 
 ---
 
@@ -135,14 +127,12 @@ The clinician should document stroke type, presumed aetiology, NIHSS score, and 
 
 ## Management  
 
-| Phase | Key actions | Rationale / safety notes |
-|---|---|---|
-| **Immediate stabilisation** | • Airway, breathing, oxygen (target SpO₂ ≥ 94 %); • Blood pressure control – lower SBP < 185 mmHg & DBP < 110 mmHg for thrombolysis, otherwise keep MAP ≥ 70 mmHg; • Rapid glucose check – treat hypoglycaemia < 3 mmol/L; • Position head 30°; • IV access, cardiac monitoring, urine output catheter. | Prevent hypoxia, hypotension and hyperglycaemia which worsen penumbra; avoid over‑rapid BP drop that can precipitate cerebral hypoperfusion. |
-| **Definitive treatment – Ischaemic stroke** | • Assess eligibility for IV thrombolysis (within 4.5 h) – give recombinant tissue plasminogen activator; • If large‑vessel occlusion and within 6–24 h, arrange endovascular thrombectomy; • Initiate antiplatelet (aspirin) after imaging rules out haemorrhage; • Statin therapy (high‑intensity) for secondary prevention; • Manage atrial fibrillation – start oral anticoagulant after haemorrhage excluded. | Thrombolysis restores flow; thrombectomy for proximal MCA, ICA or basilar occlusions; antiplatelet reduces early recurrence; statins stabilise plaque; anticoagulation for cardio‑embolic sources. |
-| **Definitive treatment – Haemorrhagic stroke** | • Reverse anticoagulation (vitamin K antagonists → vitamin K + PCC; DOACs → specific antidote if available); • Control BP aggressively to SBP < 140 mmHg (unless contraindicated); • Neurosurgical referral for lobar bleed > 30 mL, cerebellar bleed with brainstem compression, or hydrocephalus; • Osmotherapy (mannitol or hypertonic saline) for raised ICP; • Seizure prophylaxis only if seizures occur or high risk (e.g., cortical bleed). | Rapid reversal limits expansion; BP lowering reduces re‑bleeding; surgery evacuates mass effect; osmotherapy buys time; routine prophylaxis not recommended. |
-| **Monitoring** | • Neurological checks (NIHSS or GCS) every 15 min for first hour, then hourly for 24 h; • Continuous cardiac rhythm; • Strict input‑output chart; • Repeat CT at 24 h or if deterioration; • Screen for dysphagia before oral intake. | Detect early neurological decline, arrhythmias, fluid overload, re‑bleed; dysphagia screening prevents aspiration pneumonia. |
-| **Safety & contraindications** | • Thrombolysis contraindicated: intracranial haemorrhage, recent major surgery, uncontrolled hypertension, active bleeding, platelet < 100 × 10⁹/L; • Anticoagulation contraindicated in large haemorrhagic stroke, recent intracranial surgery; • Mannitol contraindicated in severe hypovolaemia or renal failure. | Avoid iatrogenic worsening. |
-| **Secondary prevention** | • Lifestyle: smoking cessation, diet, exercise; • Blood pressure target < 130/80 mmHg; • Diabetes control (HbA1c < 7 %); • Lipid target LDL < 1.8 mmol/L; • Antiplatelet long‑term (aspirin) or anticoagulant for AF; • Vaccination (influenza, pneumococcal). | Reduces recurrent stroke risk. |
+- **Immediate stabilisation**: • Airway, breathing, oxygen (target SpO₂ ≥ 94 %); • Blood pressure control – lower SBP < 185 mmHg & DBP < 110 mmHg for thrombolysis, otherwise keep MAP ≥ 70 mmHg; • Rapid glucose check – treat hypoglycaemia < 3 mmol/L; • Position head 30°; • IV access, cardiac monitoring, urine output catheter. — Prevent hypoxia, hypotension and hyperglycaemia which worsen penumbra; avoid over‑rapid BP drop that can precipitate cerebral hypoperfusion.
+- **Definitive treatment – Ischaemic stroke**: • Assess eligibility for IV thrombolysis (within 4.5 h) – give recombinant tissue plasminogen activator; • If large‑vessel occlusion and within 6–24 h, arrange endovascular thrombectomy; • Initiate antiplatelet (aspirin) after imaging rules out haemorrhage; • Statin therapy (high‑intensity) for secondary prevention; • Manage atrial fibrillation – start oral anticoagulant after haemorrhage excluded. — Thrombolysis restores flow; thrombectomy for proximal MCA, ICA or basilar occlusions; antiplatelet reduces early recurrence; statins stabilise plaque; anticoagulation for cardio‑embolic sources.
+- **Definitive treatment – Haemorrhagic stroke**: • Reverse anticoagulation (vitamin K antagonists → vitamin K + PCC; DOACs → specific antidote if available); • Control BP aggressively to SBP < 140 mmHg (unless contraindicated); • Neurosurgical referral for lobar bleed > 30 mL, cerebellar bleed with brainstem compression, or hydrocephalus; • Osmotherapy (mannitol or hypertonic saline) for raised ICP; • Seizure prophylaxis only if seizures occur or high risk (e.g., cortical bleed). — Rapid reversal limits expansion; BP lowering reduces re‑bleeding; surgery evacuates mass effect; osmotherapy buys time; routine prophylaxis not recommended.
+- **Monitoring**: • Neurological checks (NIHSS or GCS) every 15 min for first hour, then hourly for 24 h; • Continuous cardiac rhythm; • Strict input‑output chart; • Repeat CT at 24 h or if deterioration; • Screen for dysphagia before oral intake. — Detect early neurological decline, arrhythmias, fluid overload, re‑bleed; dysphagia screening prevents aspiration pneumonia.
+- **Safety & contraindications**: • Thrombolysis contraindicated: intracranial haemorrhage, recent major surgery, uncontrolled hypertension, active bleeding, platelet < 100 × 10⁹/L; • Anticoagulation contraindicated in large haemorrhagic stroke, recent intracranial surgery; • Mannitol contraindicated in severe hypovolaemia or renal failure. — Avoid iatrogenic worsening.
+- **Secondary prevention**: • Lifestyle: smoking cessation, diet, exercise; • Blood pressure target < 130/80 mmHg; • Diabetes control (HbA1c < 7 %); • Lipid target LDL < 1.8 mmol/L; • Antiplatelet long‑term (aspirin) or anticoagulant for AF; • Vaccination (influenza, pneumococcal). — Reduces recurrent stroke risk.
 
 ---
 

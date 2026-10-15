@@ -6,14 +6,12 @@
 Nutrition and vitamin deficiencies refer to states in which intake, absorption, transport, storage or utilisation of macronutrients (protein, carbohydrate, fat) or micronutrients (vitamins, minerals) is insufficient to meet the body’s metabolic demands, leading to clinical signs, biochemical abnormalities and functional impairment.
 
 ## Anatomy and physiology you need  
-| System | Key structures/functions relevant to nutrition |
-|---|---|
-| Gastro‑intestinal tract | Oral cavity, stomach acid, pancreatic enzymes, brush‑border transporters, ileal bile acid re‑absorption |
-| Liver | Synthesis of transport proteins (e.g., RBP, transcobalamin), storage of fat‑soluble vitamins, gluconeogenesis |
-| Pancreas | Exocrine enzymes for fat digestion, endocrine insulin/glucagon for carbohydrate utilisation |
-| Kidneys | Re‑absorption of water‑soluble vitamins, activation of vitamin D |
-| Bone marrow & muscle | Sites of protein synthesis, iron incorporation, vitamin‑dependent enzymatic reactions |
-| Immune system | Lymphocyte proliferation, oxidative burst (vitamin C, E), cytokine modulation (vitamin D) |
+- **Gastro‑intestinal tract**: Oral cavity, stomach acid, pancreatic enzymes, brush‑border transporters, ileal bile acid re‑absorption
+- **Liver**: Synthesis of transport proteins (e.g., RBP, transcobalamin), storage of fat‑soluble vitamins, gluconeogenesis
+- **Pancreas**: Exocrine enzymes for fat digestion, endocrine insulin/glucagon for carbohydrate utilisation
+- **Kidneys**: Re‑absorption of water‑soluble vitamins, activation of vitamin D
+- **Bone marrow & muscle**: Sites of protein synthesis, iron incorporation, vitamin‑dependent enzymatic reactions
+- **Immune system**: Lymphocyte proliferation, oxidative burst (vitamin C, E), cytokine modulation (vitamin D)
 
 ## Causes and risk factors  
 - **Inadequate dietary intake** – poverty, food insecurity, restrictive diets, alcoholism.  
@@ -54,32 +52,28 @@ Nutrition and vitamin deficiencies refer to states in which intake, absorption, 
 
 ## Clinical features  
 
-| Aspect | Questions to ask | Why it matters |
-|---|---|---|
-| **General** | Weight trend (loss, gain, plateau); appetite changes; dietary intake (type, frequency, food security); recent illness or hospitalisation; socioeconomic factors; alcohol or substance use | Weight loss or poor intake is the first clue to malnutrition; socioeconomic constraints are common drivers in Kenya. |
-| **Gastro‑intestinal** | Nausea, vomiting, diarrhoea, constipation, dysphagia, odynophagia, abdominal pain, bloating, recent bariatric surgery or intestinal resection | Chronic diarrhoea or malabsorption syndromes (e.g., tropical sprue, HIV enteropathy) directly reduce nutrient absorption. |
-| **Metabolic / Endocrine** | Polyuria, polydipsia, heat intolerance, cold intolerance, menstrual irregularities, libido changes, fatigue, muscle weakness | Thyroid disorders, diabetes and adrenal insufficiency can mimic or aggravate nutritional deficits. |
-| **Specific vitamin‑related** | Night‑time visual disturbances, peripheral neuropathy, paresthesias, muscle cramps, easy bruising, gum bleeding, hair loss, skin changes (hyperpigmentation, scaling), oral ulcerations, sore tongue, poor wound healing | Classic manifestations of deficiencies (e.g., vitamin A – night blindness; B‑complex – neuropathy; C – gum disease; D – bone pain). |
-| **Infection‑related** | HIV status, TB treatment history, malaria episodes, recurrent infections, sickle‑cell crises, rheumatic fever episodes | Chronic infections increase catabolism and nutrient loss; some (e.g., TB) cause specific micronutrient depletion. |
-| **Medication history** | Use of antiretrovirals, anti‑TB drugs, anticonvulsants, diuretics, steroids, metformin, oral contraceptives | Certain drugs interfere with absorption or increase excretion of vitamins (e.g., isoniazid → B6 depletion). |
-| **Functional** | Ability to perform ADLs, exercise tolerance, school/work attendance | Functional decline often precedes overt biochemical abnormalities. |
+- **General**: Weight trend (loss, gain, plateau); appetite changes; dietary intake (type, frequency, food security); recent illness or hospitalisation; socioeconomic factors; alcohol or substance use — Weight loss or poor intake is the first clue to malnutrition; socioeconomic constraints are common drivers in Kenya.
+- **Gastro‑intestinal**: Nausea, vomiting, diarrhoea, constipation, dysphagia, odynophagia, abdominal pain, bloating, recent bariatric surgery or intestinal resection — Chronic diarrhoea or malabsorption syndromes (e.g., tropical sprue, HIV enteropathy) directly reduce nutrient absorption.
+- **Metabolic / Endocrine**: Polyuria, polydipsia, heat intolerance, cold intolerance, menstrual irregularities, libido changes, fatigue, muscle weakness — Thyroid disorders, diabetes and adrenal insufficiency can mimic or aggravate nutritional deficits.
+- **Specific vitamin‑related**: Night‑time visual disturbances, peripheral neuropathy, paresthesias, muscle cramps, easy bruising, gum bleeding, hair loss, skin changes (hyperpigmentation, scaling), oral ulcerations, sore tongue, poor wound healing — Classic manifestations of deficiencies (e.g., vitamin A – night blindness; B‑complex – neuropathy; C – gum disease; D – bone pain).
+- **Infection‑related**: HIV status, TB treatment history, malaria episodes, recurrent infections, sickle‑cell crises, rheumatic fever episodes — Chronic infections increase catabolism and nutrient loss; some (e.g., TB) cause specific micronutrient depletion.
+- **Medication history**: Use of antiretrovirals, anti‑TB drugs, anticonvulsants, diuretics, steroids, metformin, oral contraceptives — Certain drugs interfere with absorption or increase excretion of vitamins (e.g., isoniazid → B6 depletion).
+- **Functional**: Ability to perform ADLs, exercise tolerance, school/work attendance — Functional decline often precedes overt biochemical abnormalities.
 
 ### Examination findings and rationale  
 
-| Finding | What it indicates | Pathophysiologic link |
-|---|---|---|
-| **Weight loss / low BMI** | Undernutrition, possible protein‑energy malnutrition (PEM) | Negative energy balance, loss of lean body mass. |
-| **Muscle wasting (temporal, clavicular, quadriceps)** | Protein deficiency, chronic catabolism | Reduced synthesis of muscle proteins, increased proteolysis. |
-| **Skin changes** – dry, thin, hyperpigmented, “flaky paint” dermatitis | Vitamin A, C, B2, niacin deficiency | Impaired epithelial maintenance, antioxidant deficiency. |
-| **Hair changes** – thinning, loss, “flag sign” (coarse, pigmented) | Protein, zinc, biotin deficiency | Keratin synthesis requires adequate protein and trace elements. |
-| **Glossitis, angular cheilitis** | B‑complex (B2, B3, B6, B12, folate) deficiency | Rapidly dividing mucosal cells need folate/B‑vitamins. |
-| **Peripheral neuropathy** – stocking‑glove loss of sensation, diminished reflexes | B1, B6, B12 deficiency | Vitamins required for neuronal metabolism and myelin formation. |
-| **Bleeding gums, petechiae, easy bruising** | Vitamin C deficiency | Impaired collagen synthesis → fragile capillaries. |
-| **Scleral icterus, jaundice** | Fat‑soluble vitamin malabsorption (A, D, E, K) secondary to cholestasis | Bile needed for absorption of these vitamins. |
-| **Bone tenderness, deformities, muscle pain** | Vitamin D deficiency, calcium deficiency | Impaired mineralisation of bone matrix. |
-| **Cardiovascular signs** – tachycardia, hypotension, peripheral edema | Severe protein deficiency (hypoalbuminemia) | Reduced oncotic pressure → third‑spacing. |
-| **Neurological signs** – confusion, ataxia, seizures | Thiamine (B1) deficiency (Wernicke’s) or severe B12 deficiency | Energy failure in CNS neurons. |
-| **Palmar erythema, spider angiomas** | Chronic liver disease with fat‑soluble vitamin loss | Impaired synthesis and storage of vitamins. |
+- **Weight loss / low BMI**: Undernutrition, possible protein‑energy malnutrition (PEM) — Negative energy balance, loss of lean body mass.
+- **Muscle wasting (temporal, clavicular, quadriceps)**: Protein deficiency, chronic catabolism — Reduced synthesis of muscle proteins, increased proteolysis.
+- **Skin changes – dry, thin, hyperpigmented, “flaky paint” dermatitis**: Vitamin A, C, B2, niacin deficiency — Impaired epithelial maintenance, antioxidant deficiency.
+- **Hair changes – thinning, loss, “flag sign” (coarse, pigmented)**: Protein, zinc, biotin deficiency — Keratin synthesis requires adequate protein and trace elements.
+- **Glossitis, angular cheilitis**: B‑complex (B2, B3, B6, B12, folate) deficiency — Rapidly dividing mucosal cells need folate/B‑vitamins.
+- **Peripheral neuropathy – stocking‑glove loss of sensation, diminished reflexes**: B1, B6, B12 deficiency — Vitamins required for neuronal metabolism and myelin formation.
+- **Bleeding gums, petechiae, easy bruising**: Vitamin C deficiency — Impaired collagen synthesis → fragile capillaries.
+- **Scleral icterus, jaundice**: Fat‑soluble vitamin malabsorption (A, D, E, K) secondary to cholestasis — Bile needed for absorption of these vitamins.
+- **Bone tenderness, deformities, muscle pain**: Vitamin D deficiency, calcium deficiency — Impaired mineralisation of bone matrix.
+- **Cardiovascular signs – tachycardia, hypotension, peripheral edema**: Severe protein deficiency (hypoalbuminemia) — Reduced oncotic pressure → third‑spacing.
+- **Neurological signs – confusion, ataxia, seizures**: Thiamine (B1) deficiency (Wernicke’s) or severe B12 deficiency — Energy failure in CNS neurons.
+- **Palmar erythema, spider angiomas**: Chronic liver disease with fat‑soluble vitamin loss — Impaired synthesis and storage of vitamins.
 
 ---
 
@@ -118,11 +112,9 @@ Nutrition and vitamin deficiencies refer to states in which intake, absorption, 
 
 ## Diagnosis and severity  
 
-| Category | Criteria | Severity grading |
-|---|---|---|
-| **Protein‑energy malnutrition** | BMI <18.5 kg/m² **or** MUAC <23 cm **plus** at least two clinical signs (muscle wasting, edema, low albumin) | *Mild*: BMI 16‑18.5, no edema; *Moderate*: BMI 14‑16, mild edema; *Severe*: BMI <14 or presence of marked edema/ascites |
-| **Micronutrient deficiency** | Specific serum level below laboratory reference **and** compatible clinical signs | *Mild*: level 0.8‑1.0 ×  lower limit, isolated symptom; *Moderate*: 0.5‑0.8 ×  lower limit, multiple symptoms; *Severe*: <0.5 ×  lower limit, life‑threatening manifestations (e.g., Wernicke’s, severe anemia) |
-| **Combined deficiency** | Two or more micronutrient levels deficient **or** protein‑energy malnutrition plus micronutrient loss | Graded by the most severe component; management addresses both. |
+- **Protein‑energy malnutrition**: BMI <18.5 kg/m² **or** MUAC <23 cm **plus** at least two clinical signs (muscle wasting, edema, low albumin) — *Mild*: BMI 16‑18.5, no edema; *Moderate*: BMI 14‑16, mild edema; *Severe*: BMI <14 or presence of marked edema/ascites
+- **Micronutrient deficiency**: Specific serum level below laboratory reference **and** compatible clinical signs — *Mild*: level 0.8‑1.0 ×  lower limit, isolated symptom; *Moderate*: 0.5‑0.8 ×  lower limit, multiple symptoms; *Severe*: <0.5 ×  lower limit, life‑threatening manifestations (e.g., Wernicke’s, severe anemia)
+- **Combined deficiency**: Two or more micronutrient levels deficient **or** protein‑energy malnutrition plus micronutrient loss — Graded by the most severe component; management addresses both.
 
 **Clinical decision**:  
 - Confirm the primary driver (energy deficit vs. specific vitamin loss).  
@@ -137,16 +129,35 @@ This framework equips the junior doctor to recognise, differentiate, and stage n
 
 ## Management  
 
-| Step | What to do | Rationale / safety notes |
-|---|---|---|
-| **Immediate stabilisation** | • Assess airway, breathing, circulation; give O₂ if hypoxic. <br>• Correct severe electrolyte or fluid loss with isotonic IV fluids. <br>• Treat hypoglycaemia with dextrose bolus (if unconscious). | Prevents life‑threatening shock, cerebral oedema and cardiac arrhythmia. |
-| **Re‑feeding** | • Start low‑calorie enteral feeding (≈10 kcal/kg/day) and increase by 10–20 % daily. <br>• Monitor for re‑feeding syndrome (phosphate, magnesium, potassium). | Gradual increase avoids sudden insulin surge and electrolyte shifts. |
-| **Micronutrient replacement** | • Give oral/IV multivitamin‑mineral complexes (B‑complex, vitamin C, vitamin D, zinc, selenium). <br>• Specific therapy: <br> – Vitamin A (for xerophthalmia, measles‑related deficiency) – give as oral/IM retinol ester. <br> – Vitamin B1 (thiamine) – give before glucose infusion to prevent Wernicke’s. <br> – Vitamin B12 (cobalamin) – give intramuscular cyanocobalamin in pernicious anaemia or malabsorption. <br> – Folate – give oral folic acid in macrocytic anaemia or pregnancy. | Replace the deficient vitamin before giving carbohydrate loads; avoid precipitating neurologic injury. |
-| **Treat underlying disease** | • Antiretroviral therapy for HIV, anti‑TB drugs, antimalarials, disease‑modifying agents for rheumatic disease, hydroxyurea for sickle cell. | Improves appetite, absorption and reduces catabolic drive. |
-| **Nutritional counselling** | • Energy‑dense, locally available foods (maize, beans, groundnuts, leafy greens). <br>• Small frequent meals, fortified porridges, use of oil or butter for added calories. | Sustainable long‑term correction; respects cultural diet. |
-| **Monitoring** | • Daily weight, fluid balance, vitals. <br>• Electrolytes (phosphate, potassium, magnesium) every 24 h for first 5 days. <br>• Haematology (Hb, MCV) weekly; serum vitamin levels where available. | Detects re‑feeding syndrome, treatment response, and need for dose adjustment. |
-| **Follow‑up** | • Outpatient review at 2 weeks, then monthly until nutritional targets met. <br>• Repeat full blood count and relevant vitamin assays at 3 months. | Ensures complete recovery and identifies late complications. |
-| **Contra‑indications / safety** | • High‑dose vitamin A in pregnancy (teratogenic). <br>• Thiamine in alcoholic patients – give before glucose. <br>• Intravenous iron in active infection without antibiotics. | Avoid iatrogenic harm; respect drug‑disease interactions. |
+- **Immediate stabilisation**
+  - Assess airway, breathing, circulation; give O₂ if hypoxic.
+  - Correct severe electrolyte or fluid loss with isotonic IV fluids.
+  - Treat hypoglycaemia with dextrose bolus (if unconscious). — Prevents life‑threatening shock, cerebral oedema and cardiac arrhythmia.
+- **Re‑feeding**
+  - Start low‑calorie enteral feeding (≈10 kcal/kg/day) and increase by 10–20 % daily.
+  - Monitor for re‑feeding syndrome (phosphate, magnesium, potassium). — Gradual increase avoids sudden insulin surge and electrolyte shifts.
+- **Micronutrient replacement**
+  - Give oral/IV multivitamin‑mineral complexes (B‑complex, vitamin C, vitamin D, zinc, selenium).
+  - Specific therapy:
+  - – Vitamin A (for xerophthalmia, measles‑related deficiency) – give as oral/IM retinol ester.
+  - – Vitamin B1 (thiamine) – give before glucose infusion to prevent Wernicke’s.
+  - – Vitamin B12 (cobalamin) – give intramuscular cyanocobalamin in pernicious anaemia or malabsorption.
+  - – Folate – give oral folic acid in macrocytic anaemia or pregnancy. — Replace the deficient vitamin before giving carbohydrate loads; avoid precipitating neurologic injury.
+- **Treat underlying disease**: • Antiretroviral therapy for HIV, anti‑TB drugs, antimalarials, disease‑modifying agents for rheumatic disease, hydroxyurea for sickle cell. — Improves appetite, absorption and reduces catabolic drive.
+- **Nutritional counselling**
+  - Energy‑dense, locally available foods (maize, beans, groundnuts, leafy greens).
+  - Small frequent meals, fortified porridges, use of oil or butter for added calories. — Sustainable long‑term correction; respects cultural diet.
+- **Monitoring**
+  - Daily weight, fluid balance, vitals.
+  - Electrolytes (phosphate, potassium, magnesium) every 24 h for first 5 days.
+  - Haematology (Hb, MCV) weekly; serum vitamin levels where available. — Detects re‑feeding syndrome, treatment response, and need for dose adjustment.
+- **Follow‑up**
+  - Outpatient review at 2 weeks, then monthly until nutritional targets met.
+  - Repeat full blood count and relevant vitamin assays at 3 months. — Ensures complete recovery and identifies late complications.
+- **Contra‑indications / safety**
+  - High‑dose vitamin A in pregnancy (teratogenic).
+  - Thiamine in alcoholic patients – give before glucose.
+  - Intravenous iron in active infection without antibiotics. — Avoid iatrogenic harm; respect drug‑disease interactions.
 
 ---
 

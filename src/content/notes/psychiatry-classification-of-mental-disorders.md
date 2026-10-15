@@ -1,4 +1,4 @@
-# Classification of Mental Disorders — Year 4 Psychiatry Notes
+# Classification of Mental Disorders
 
 *Class presentation 1: how psychiatry organises disorders. Ten questions plus the take-home question. Based on DSM-5-TR (APA, 2022) and ICD-11 (WHO). Plan 15–20 minutes: about 8 slides.*
 
@@ -30,14 +30,12 @@
 
 ## 4. What is the difference between DSM-5-TR and ICD-11?
 
-| Feature | ICD-11 | DSM-5-TR |
-|---|---|---|
-| Scope | **All diseases**; mental disorders are one chapter | Mental disorders only |
-| Official use | The **international standard** for health statistics, used by ministries of health (including Kenya's reporting system), insurers and WHO members | Mostly used in the USA and widely in research and teaching |
-| Style | **Clinical descriptions and diagnostic requirements**, written for use in many settings and cultures, including low-resource ones | Detailed **operational criteria** (symptom counts, durations) |
-| Cost | Free online | Paid publication |
-| Personality disorder | **Dimensional**: one diagnosis graded by severity (mild, moderate, severe) with trait domains | Categorical (10 types) in the main text, with an alternative dimensional model |
-| Examples of differences | Includes **complex PTSD** and **gaming disorder**; gender incongruence is moved out of the mental disorders chapter | PTSD without a separate complex form; **prolonged grief disorder** was added in the text revision |
+- **Scope**: **All diseases**; mental disorders are one chapter — Mental disorders only
+- **Official use**: The **international standard** for health statistics, used by ministries of health (including Kenya's reporting system), insurers and WHO members — Mostly used in the USA and widely in research and teaching
+- **Style**: **Clinical descriptions and diagnostic requirements**, written for use in many settings and cultures, including low-resource ones — Detailed **operational criteria** (symptom counts, durations)
+- **Cost**: Free online — Paid publication
+- **Personality disorder**: **Dimensional**: one diagnosis graded by severity (mild, moderate, severe) with trait domains — Categorical (10 types) in the main text, with an alternative dimensional model
+- **Examples of differences**: Includes **complex PTSD** and **gaming disorder**; gender incongruence is moved out of the mental disorders chapter — PTSD without a separate complex form; **prolonged grief disorder** was added in the text revision
 
 **What they share:** the two have been **harmonised** so that the broad categories and many diagnoses line up, which makes research and records comparable.
 
@@ -63,11 +61,9 @@ Roughly the same families appear in both systems:
 
 ## 6. Symptom, syndrome and disorder
 
-| Term | Meaning | Example |
-|---|---|---|
-| **Symptom** | What the patient **experiences and reports** (subjective). A **sign** is what the examiner **observes** | Low mood, hearing voices; psychomotor slowing (sign) |
-| **Syndrome** | A **cluster of symptoms and signs that occur together** and form a recognisable pattern | Depressive syndrome: low mood, anhedonia, poor sleep, guilt |
-| **Disorder** | A syndrome that meets **defined criteria** (number of symptoms, duration, course), causes **distress or impairment**, and is **not better explained** by another condition, a substance or a normal reaction | Major depressive disorder: 5 of 9 symptoms for 2 weeks with impairment |
+- **Symptom**: What the patient **experiences and reports** (subjective). A **sign** is what the examiner **observes** — Low mood, hearing voices; psychomotor slowing (sign)
+- **Syndrome**: A **cluster of symptoms and signs that occur together** and form a recognisable pattern — Depressive syndrome: low mood, anhedonia, poor sleep, guilt
+- **Disorder**: A syndrome that meets **defined criteria** (number of symptoms, duration, course), causes **distress or impairment**, and is **not better explained** by another condition, a substance or a normal reaction — Major depressive disorder: 5 of 9 symptoms for 2 weeks with impairment
 
 A symptom alone is not a diagnosis. Sadness is a symptom of many conditions and also part of normal life.
 

@@ -1,4 +1,4 @@
-# Surgery Question Bank: 12 Clinical MCQs with Explanations
+# Surgery Question Bank: 12 Clinical MCQs
 
 ## Key points
 

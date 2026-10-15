@@ -9,29 +9,25 @@
 
 ## Anatomy and physiology you need  
 
-| Structure | Hormone(s) produced | Main actions |
-|---|---|---|
-| Zona glomerulosa | Aldosterone | Sodium retention, potassium excretion, water balance |
-| Zona fasciculata | Cortisol | Glucose metabolism, anti‑inflammatory, stress response |
-| Zona reticularis | Androgens (DHEA, androstenedione) | Peripheral conversion to testosterone/estrogen |
-| Adrenal medulla | Catecholamines | Acute stress response (not central to AI/CS) |
-| Pituitary ACTH | – | Stimulates cortisol (and, at high levels, aldosterone) |
-| Hypothalamic CRH | – | Drives ACTH release |
+- **Zona glomerulosa**: Aldosterone — Sodium retention, potassium excretion, water balance
+- **Zona fasciculata**: Cortisol — Glucose metabolism, anti‑inflammatory, stress response
+- **Zona reticularis**: Androgens (DHEA, androstenedione) — Peripheral conversion to testosterone/estrogen
+- **Adrenal medulla**: Catecholamines — Acute stress response (not central to AI/CS)
+- **Pituitary ACTH**: – — Stimulates cortisol (and, at high levels, aldosterone)
+- **Hypothalamic CRH**: – — Drives ACTH release
 
 Key feedback loops: cortisol → negative feedback on CRH & ACTH; renin‑angiotensin → aldosterone regulation.
 
 ## Causes and risk factors  
 
-| Category | AI (primary) | AI (secondary) | CS (endogenous) |
-|---|---|---|---|
-| Infectious | TB adrenalitis, disseminated fungal (histoplasmosis, cryptococcus) | HIV‑related pituitary disease, TB meningitis | HIV‑associated adrenal hyperplasia (rare) |
-| Autoimmune | Autoimmune adrenalitis (Addison’s disease) | Autoimmune hypophysitis | ACTH‑secreting pituitary adenoma |
-| Hemorrhagic / Infarct | Waterhouse‑Friderichsen syndrome ( meningococcemia) | Pituitary apoplexy, postpartum pituitary necrosis | – |
-| Metabolic / Infiltrative | Amyloidosis, sarcoidosis, hemochromatosis | – | – |
-| Iatrogenic | – | Chronic glucocorticoid therapy → suppression | Long‑term oral or inhaled steroids, topical high‑potency steroids |
-| Genetic | Congenital adrenal hyperplasia (21‑hydroxylase deficiency) | – | Carney complex, McCune‑Albright syndrome |
-| Miscellaneous tropical | Severe malaria with adrenal hemorrhage, sickle‑cell vaso‑occlusion of adrenal vessels | – | – |
-| Neoplastic | Metastatic adrenal disease | Pituitary macroadenoma, ectopic ACTH tumour (small‑cell lung, bronchial carcinoid) | Ectopic ACTH secretion, adrenal adenoma/carcinoma |
+- **Infectious**: TB adrenalitis, disseminated fungal (histoplasmosis, cryptococcus) — HIV‑related pituitary disease, TB meningitis — HIV‑associated adrenal hyperplasia (rare)
+- **Autoimmune**: Autoimmune adrenalitis (Addison’s disease) — Autoimmune hypophysitis — ACTH‑secreting pituitary adenoma
+- **Hemorrhagic / Infarct**: Waterhouse‑Friderichsen syndrome ( meningococcemia) — Pituitary apoplexy, postpartum pituitary necrosis — –
+- **Metabolic / Infiltrative**: Amyloidosis, sarcoidosis, hemochromatosis — – — –
+- **Iatrogenic**: – — Chronic glucocorticoid therapy → suppression — Long‑term oral or inhaled steroids, topical high‑potency steroids
+- **Genetic**: Congenital adrenal hyperplasia (21‑hydroxylase deficiency) — – — Carney complex, McCune‑Albright syndrome
+- **Miscellaneous tropical**: Severe malaria with adrenal hemorrhage, sickle‑cell vaso‑occlusion of adrenal vessels — – — –
+- **Neoplastic**: Metastatic adrenal disease — Pituitary macroadenoma, ectopic ACTH tumour (small‑cell lung, bronchial carcinoid) — Ectopic ACTH secretion, adrenal adenoma/carcinoma
 
 Risk factors specific to Kenya: high TB prevalence, HIV burden, malaria endemicity, sickle‑cell disease clusters, limited access to early imaging, and widespread use of over‑the‑counter steroids.
 
@@ -54,16 +50,36 @@ These concise arrows guide the clinical picture and laboratory expectations.
 
 ## Clinical features  
 
-| Domain | Key questions / findings | Why it occurs |
-|---|---|---|
-| **General** | • Onset and duration of symptoms (acute vs insidious) <br>• Weight loss or gain, change in appetite <br>• Fatigue, weakness, dizziness on standing <br>• Fever, night sweats, recent infections | Weight loss & anorexia reflect glucocorticoid deficiency (AI) or catabolism in Cushing. Orthostatic dizziness signals mineralocorticoid loss (primary AI). Fever/night sweats may hint at TB or HIV‑related adrenalitis. |
-| **Skin & integument** | • Hyperpigmentation of buccal mucosa, palmar creases, scars (AI) <br>• Easy bruising, thin skin, purple striae, facial rounding, dorsocervical “buffalo hump” (Cushing) | ACTH excess stimulates melanocytes → hyperpigmentation. Excess cortisol impairs collagen → thin skin, bruising, striae. |
-| **Cardiovascular** | • Syncope or presyncope, palpitations <br>• Hypertension (especially in Cushing) <br>• History of electrolyte disturbances (salt craving, polyuria) | Mineralocorticoid deficiency → Na⁺ loss, volume depletion → syncope. Cortisol excess potentiates vasoconstriction → hypertension. |
-| **Gastro‑intestinal** | • Nausea, vomiting, abdominal pain <br>• Diarrhoea or constipation <br>• Change in bowel habits after steroids (Cushing) | Glucocorticoid deficiency reduces gastric mucosal protection; excess cortisol slows gut motility. |
-| **Genitourinary** | • Polyuria, polydipsia (AI) <br>• Decreased libido, menstrual irregularities, hirsutism, acne (Cushing) | Lack of aldosterone → renal water loss. Cortisol excess cross‑reacts with androgen receptors → virilisation. |
-| **Musculoskeletal** | • Proximal muscle weakness, myalgia <br>• Bone pain, fractures (Cushing) | Catabolic effect of cortisol on protein; inhibition of osteoblasts → osteoporosis. |
-| **Neuro‑psychiatric** | • Mood swings, irritability, depression, anxiety <br>• Cognitive slowing, insomnia <br>• Psychosis (severe Cushing) | Cortisol influences neurotransmitter balance; deficiency causes lethargy, excess causes agitation. |
-| **History of exposures** | • Prior TB, HIV status, chronic malaria, rheumatic disease, sickle cell crises, long‑term antifungal or antiretroviral therapy <br>• Use of exogenous steroids (oral, inhaled, topical) <br>• Recent surgery, trauma, or severe illness | TB, HIV, disseminated fungal infection and infiltrative diseases can destroy adrenal cortex. Exogenous steroids suppress HPA axis → secondary AI after abrupt withdrawal. |
+- **General**
+  - Onset and duration of symptoms (acute vs insidious)
+  - Weight loss or gain, change in appetite
+  - Fatigue, weakness, dizziness on standing
+  - Fever, night sweats, recent infections — Weight loss & anorexia reflect glucocorticoid deficiency (AI) or catabolism in Cushing. Orthostatic dizziness signals mineralocorticoid loss (primary AI). Fever/night sweats may hint at TB or HIV‑related adrenalitis.
+- **Skin & integument**
+  - Hyperpigmentation of buccal mucosa, palmar creases, scars (AI)
+  - Easy bruising, thin skin, purple striae, facial rounding, dorsocervical “buffalo hump” (Cushing) — ACTH excess stimulates melanocytes → hyperpigmentation. Excess cortisol impairs collagen → thin skin, bruising, striae.
+- **Cardiovascular**
+  - Syncope or presyncope, palpitations
+  - Hypertension (especially in Cushing)
+  - History of electrolyte disturbances (salt craving, polyuria) — Mineralocorticoid deficiency → Na⁺ loss, volume depletion → syncope. Cortisol excess potentiates vasoconstriction → hypertension.
+- **Gastro‑intestinal**
+  - Nausea, vomiting, abdominal pain
+  - Diarrhoea or constipation
+  - Change in bowel habits after steroids (Cushing) — Glucocorticoid deficiency reduces gastric mucosal protection; excess cortisol slows gut motility.
+- **Genitourinary**
+  - Polyuria, polydipsia (AI)
+  - Decreased libido, menstrual irregularities, hirsutism, acne (Cushing) — Lack of aldosterone → renal water loss. Cortisol excess cross‑reacts with androgen receptors → virilisation.
+- **Musculoskeletal**
+  - Proximal muscle weakness, myalgia
+  - Bone pain, fractures (Cushing) — Catabolic effect of cortisol on protein; inhibition of osteoblasts → osteoporosis.
+- **Neuro‑psychiatric**
+  - Mood swings, irritability, depression, anxiety
+  - Cognitive slowing, insomnia
+  - Psychosis (severe Cushing) — Cortisol influences neurotransmitter balance; deficiency causes lethargy, excess causes agitation.
+- **History of exposures**
+  - Prior TB, HIV status, chronic malaria, rheumatic disease, sickle cell crises, long‑term antifungal or antiretroviral therapy
+  - Use of exogenous steroids (oral, inhaled, topical)
+  - Recent surgery, trauma, or severe illness — TB, HIV, disseminated fungal infection and infiltrative diseases can destroy adrenal cortex. Exogenous steroids suppress HPA axis → secondary AI after abrupt withdrawal.
 
 ---
 
@@ -86,23 +102,21 @@ These concise arrows guide the clinical picture and laboratory expectations.
 
 ## Investigations  
 
-| Test | What it answers | Interpretation |
-|---|---|---|
-| 8 am serum cortisol | Basal adrenal output | < 3 µg/dL → strong AI; > 18 µg/dL → AI unlikely |
-| Plasma ACTH | Distinguish primary vs secondary AI | High ACTH → primary; low/normal → secondary |
-| Cosyntropin (synthetic ACTH) stimulation | Adrenal reserve | ↑ cortisol ≥ 60 % of baseline at 30‑60 min → adequate; blunted rise → AI |
-| Serum electrolytes (Na⁺, K⁺) | Mineralocorticoid effect | Hyponatraemia & hyperkalaemia → primary AI |
-| Renin‑angiotensin‑aldosterone panel | Aldosterone deficiency | High renin with low aldosterone → primary AI |
-| 24‑h urinary free cortisol | Total cortisol production (Cushing) | > 2‑3× upper limit → Cushing |
-| Late‑night salivary cortisol | Loss of diurnal rhythm (Cushing) | Elevated > normal midnight level → Cushing |
-| Low‑dose dexamethasone suppression test | Cortisol autonomy (Cushing) | Failure to suppress (< 1.8 µg/dL) → Cushing |
-| High‑dose dexamethasone test | Source of ACTH (Cushing) | Suppression → pituitary; no suppression → ectopic |
-| Pituitary MRI | ACTH‑producing adenoma | Microadenoma > 6 mm supports Cushing disease |
-| Adrenal CT/MRI | Structural lesions (TB, hemorrhage, carcinoma) | Enlargement, calcifications, mass effect |
-| 21‑hydroxylase antibodies | Autoimmune adrenalitis | Positive → autoimmune AI |
-| TB PCR / GeneXpert on adrenal tissue or sputum | Infectious adrenalitis | Positive → TB adrenal involvement |
-| HIV ELISA / viral load | HIV‑related adrenal disease | Positive HIV → consider opportunistic adrenal infection |
-| Full blood count, ESR/CRP | Inflammatory/infective state | Elevated ESR/CRP supports TB or fungal infection |
+- **8 am serum cortisol**: Basal adrenal output — < 3 µg/dL → strong AI; > 18 µg/dL → AI unlikely
+- **Plasma ACTH**: Distinguish primary vs secondary AI — High ACTH → primary; low/normal → secondary
+- **Cosyntropin (synthetic ACTH) stimulation**: Adrenal reserve — ↑ cortisol ≥ 60 % of baseline at 30‑60 min → adequate; blunted rise → AI
+- **Serum electrolytes (Na⁺, K⁺)**: Mineralocorticoid effect — Hyponatraemia & hyperkalaemia → primary AI
+- **Renin‑angiotensin‑aldosterone panel**: Aldosterone deficiency — High renin with low aldosterone → primary AI
+- **24‑h urinary free cortisol**: Total cortisol production (Cushing) — > 2‑3× upper limit → Cushing
+- **Late‑night salivary cortisol**: Loss of diurnal rhythm (Cushing) — Elevated > normal midnight level → Cushing
+- **Low‑dose dexamethasone suppression test**: Cortisol autonomy (Cushing) — Failure to suppress (< 1.8 µg/dL) → Cushing
+- **High‑dose dexamethasone test**: Source of ACTH (Cushing) — Suppression → pituitary; no suppression → ectopic
+- **Pituitary MRI**: ACTH‑producing adenoma — Microadenoma > 6 mm supports Cushing disease
+- **Adrenal CT/MRI**: Structural lesions (TB, hemorrhage, carcinoma) — Enlargement, calcifications, mass effect
+- **21‑hydroxylase antibodies**: Autoimmune adrenalitis — Positive → autoimmune AI
+- **TB PCR / GeneXpert on adrenal tissue or sputum**: Infectious adrenalitis — Positive → TB adrenal involvement
+- **HIV ELISA / viral load**: HIV‑related adrenal disease — Positive HIV → consider opportunistic adrenal infection
+- **Full blood count, ESR/CRP**: Inflammatory/infective state — Elevated ESR/CRP supports TB or fungal infection
 
 ---
 
@@ -134,25 +148,40 @@ These concise arrows guide the clinical picture and laboratory expectations.
 
 ## Management  
 
-| Phase | Key actions | Rationale / safety notes |
-|---|---|---|
-| **Immediate stabilisation** | • Secure airway, breathing, circulation; give IV isotonic saline bolus (20 mL/kg) <br>• Administer stress‑dose glucocorticoid (hydrocortisone‑type) intravenously <br>• If adrenal crisis suspected, give dextrose‑containing fluid when hypoglycaemia present | Rapid volume expansion restores perfusion; glucocorticoid replaces cortisol that is absent and also provides mineralocorticoid activity. Avoid delay for labs. |
-| **Definitive treatment – Primary adrenal insufficiency** | • Switch to oral glucocorticoid (hydrocortisone‑type) in divided doses mimicking circadian rhythm <br>• Add mineralocorticoid (fludrocortisone‑type) if renin is elevated or symptomatic hypotension persists <br>• Educate on sick‑day rules (double‑dose glucocorticoid during fever, surgery, trauma) | Oral regimen maintains basal cortisol; mineralocorticoid corrects Na⁺ loss and K⁺ retention. |
-| **Definitive treatment – Secondary/tertiary insufficiency** | • Only glucocorticoid replacement (no mineralocorticoid) <br>• Taper slowly if cause is reversible (e.g., after pituitary surgery) | ACTH deficiency does not affect aldosterone. |
-| **Definitive treatment – Cushing syndrome** | **Pituitary (ACTH‑dependent)**: trans‑sphenoidal surgery first line; consider medical adrenal blockade (ketoconazole‑type, metyrapone‑type, osilodrostat‑type) if surgery unavailable or as bridge. <br>**Ectopic ACTH**: locate tumour (CT/MRI, functional imaging) → surgical resection; medical blockade if not resectable. <br>**Adrenal (ACTH‑independent)**: unilateral adrenalectomy for adenoma; bilateral adrenalectomy only for bilateral hyperplasia or carcinoma. | Surgery offers cure; medical agents control cortisol while awaiting definitive surgery or when surgery contraindicated. |
-| **Monitoring** | • Vital signs, fluid balance, electrolytes (Na⁺, K⁺) daily in acute phase <br>• Serum cortisol and ACTH after 24 h of therapy to confirm adequacy (avoid over‑replacement) <br>• For Cushing: urinary free cortisol, late‑night salivary cortisol, and blood pressure/ glucose trends after treatment | Prevent hypokalaemia, hypertension, hyperglycaemia and ensure adequate replacement. |
-| **Follow‑up** | • Outpatient review 1–2 weeks after discharge, then 3‑monthly for the first year <br>• Long‑term: bone density, cardiovascular risk, infection prophylaxis, psychosocial support | Chronic glucocorticoid excess or deficiency have delayed sequelae. |
-| **Contra‑indications / safety** | • Do not give mineralocorticoid in secondary insufficiency <br>• Avoid abrupt cessation of glucocorticoid – taper to prevent adrenal crisis <br>• In Cushing, avoid drugs that inhibit CYP450 if patient is on ketoconazole‑type therapy (e.g., certain antiretrovirals) | Tailor therapy to underlying axis and drug interactions common in Kenya (e.g., ART, anti‑TB). |
+- **Immediate stabilisation**
+  - Secure airway, breathing, circulation; give IV isotonic saline bolus (20 mL/kg)
+  - Administer stress‑dose glucocorticoid (hydrocortisone‑type) intravenously
+  - If adrenal crisis suspected, give dextrose‑containing fluid when hypoglycaemia present — Rapid volume expansion restores perfusion; glucocorticoid replaces cortisol that is absent and also provides mineralocorticoid activity. Avoid delay for labs.
+- **Definitive treatment – Primary adrenal insufficiency**
+  - Switch to oral glucocorticoid (hydrocortisone‑type) in divided doses mimicking circadian rhythm
+  - Add mineralocorticoid (fludrocortisone‑type) if renin is elevated or symptomatic hypotension persists
+  - Educate on sick‑day rules (double‑dose glucocorticoid during fever, surgery, trauma) — Oral regimen maintains basal cortisol; mineralocorticoid corrects Na⁺ loss and K⁺ retention.
+- **Definitive treatment – Secondary/tertiary insufficiency**
+  - Only glucocorticoid replacement (no mineralocorticoid)
+  - Taper slowly if cause is reversible (e.g., after pituitary surgery) — ACTH deficiency does not affect aldosterone.
+- **Definitive treatment – Cushing syndrome**
+  - **Pituitary (ACTH‑dependent)**: trans‑sphenoidal surgery first line; consider medical adrenal blockade (ketoconazole‑type, metyrapone‑type, osilodrostat‑type) if surgery unavailable or as bridge.
+  - **Ectopic ACTH**: locate tumour (CT/MRI, functional imaging) → surgical resection; medical blockade if not resectable.
+  - **Adrenal (ACTH‑independent)**: unilateral adrenalectomy for adenoma; bilateral adrenalectomy only for bilateral hyperplasia or carcinoma. — Surgery offers cure; medical agents control cortisol while awaiting definitive surgery or when surgery contraindicated.
+- **Monitoring**
+  - Vital signs, fluid balance, electrolytes (Na⁺, K⁺) daily in acute phase
+  - Serum cortisol and ACTH after 24 h of therapy to confirm adequacy (avoid over‑replacement)
+  - For Cushing: urinary free cortisol, late‑night salivary cortisol, and blood pressure/ glucose trends after treatment — Prevent hypokalaemia, hypertension, hyperglycaemia and ensure adequate replacement.
+- **Follow‑up**
+  - Outpatient review 1–2 weeks after discharge, then 3‑monthly for the first year
+  - Long‑term: bone density, cardiovascular risk, infection prophylaxis, psychosocial support — Chronic glucocorticoid excess or deficiency have delayed sequelae.
+- **Contra‑indications / safety**
+  - Do not give mineralocorticoid in secondary insufficiency
+  - Avoid abrupt cessation of glucocorticoid – taper to prevent adrenal crisis
+  - In Cushing, avoid drugs that inhibit CYP450 if patient is on ketoconazole‑type therapy (e.g., certain antiretrovirals) — Tailor therapy to underlying axis and drug interactions common in Kenya (e.g., ART, anti‑TB).
 
 ---
 
 ## Complications and prognosis  
 
-| Condition | Acute complications | Chronic complications | Expected prognosis (with treatment) |
-|---|---|---|---|
-| Primary adrenal insufficiency | adrenal crisis (shock, arrhythmia, death) | chronic fatigue, salt craving, hyperpigmentation, osteoporosis, increased infection risk | Excellent if lifelong replacement is adhered to; mortality rises markedly with missed crises |
-| Secondary/tertiary insufficiency | adrenal crisis (less common, mineralocorticoid spared) | similar to primary but less electrolyte disturbance; possible pituitary hormone deficits | Good with hormone replacement; prognosis depends on underlying pituitary disease |
-| Cushing syndrome (any aetiology) | severe hypertension, hyperglycaemia, infection, thrombo‑embolism | osteoporotic fractures, muscle wasting, skin thinning, psychiatric illness, increased cardiovascular mortality | Curative surgery → normal life expectancy; persistent hypercortisolism → markedly reduced survival |
+- **Primary adrenal insufficiency**: adrenal crisis (shock, arrhythmia, death) — chronic fatigue, salt craving, hyperpigmentation, osteoporosis, increased infection risk — Excellent if lifelong replacement is adhered to; mortality rises markedly with missed crises
+- **Secondary/tertiary insufficiency**: adrenal crisis (less common, mineralocorticoid spared) — similar to primary but less electrolyte disturbance; possible pituitary hormone deficits — Good with hormone replacement; prognosis depends on underlying pituitary disease
+- **Cushing syndrome (any aetiology)**: severe hypertension, hyperglycaemia, infection, thrombo‑embolism — osteoporotic fractures, muscle wasting, skin thinning, psychiatric illness, increased cardiovascular mortality — Curative surgery → normal life expectancy; persistent hypercortisolism → markedly reduced survival
 
 ---
 

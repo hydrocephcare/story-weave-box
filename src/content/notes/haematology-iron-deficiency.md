@@ -9,26 +9,22 @@
 Iron‑deficiency anaemia (IDA) is a microcytic, hypochromic anaemia caused by a total body iron deficit that is insufficient to sustain normal haemoglobin synthesis.
 
 ## Anatomy and physiology you need  
-| Structure / Function | Relevance to IDA |
-|---|---|
-| **Erythropoietic marrow** | Site of red‑cell production; requires iron for haemoglobin assembly. |
-| **Duodenal mucosa (proximal)** | Main site of dietary iron absorption (ferrous Fe²⁺). |
-| **Transferrin** | Plasma iron‑binding protein; low saturation signals deficiency. |
-| **Ferritin** | Intracellular iron store; serum level reflects total body iron. |
-| **Hepcidin** | Hormone that down‑regulates ferroportin; raised in inflammation, blocks iron release. |
-| **Reticulo‑endothelial system** | Recycles iron from senescent erythrocytes; impaired recycling contributes to deficiency. |
-| **Kidney (EPO production)** | Stimulated by hypoxia; may be blunted in chronic disease, worsening anaemia. |
+- **Erythropoietic marrow**: Site of red‑cell production; requires iron for haemoglobin assembly.
+- **Duodenal mucosa (proximal)**: Main site of dietary iron absorption (ferrous Fe²⁺).
+- **Transferrin**: Plasma iron‑binding protein; low saturation signals deficiency.
+- **Ferritin**: Intracellular iron store; serum level reflects total body iron.
+- **Hepcidin**: Hormone that down‑regulates ferroportin; raised in inflammation, blocks iron release.
+- **Reticulo‑endothelial system**: Recycles iron from senescent erythrocytes; impaired recycling contributes to deficiency.
+- **Kidney (EPO production)**: Stimulated by hypoxia; may be blunted in chronic disease, worsening anaemia.
 
 ## Causes and risk factors  
 
-| Category | Kenyan‑relevant examples |
-|---|---|
-| **Inadequate intake** | Low‑iron diets (maize‑based, limited meat), vegetarianism, poverty. |
-| **Increased loss** | Menstrual bleeding, gastrointestinal bleeding (ulcers, hemorrhoids, parasites), postpartum haemorrhage. |
-| **Increased demand** | Pregnancy, rapid infant growth, chronic infections (TB, HIV). |
-| **Malabsorption** | Celiac disease, tropical sprue, chronic diarrhoea, post‑gastrectomy. |
-| **Chronic inflammation** | HIV infection, active TB, malaria, rheumatic fever, sickle‑cell disease (functional iron sequestration). |
-| **Other tropical contributors** | Hookworm infestation, schistosomiasis, repeated malaria episodes causing haemolysis and iron loss. |
+- **Inadequate intake**: Low‑iron diets (maize‑based, limited meat), vegetarianism, poverty.
+- **Increased loss**: Menstrual bleeding, gastrointestinal bleeding (ulcers, hemorrhoids, parasites), postpartum haemorrhage.
+- **Increased demand**: Pregnancy, rapid infant growth, chronic infections (TB, HIV).
+- **Malabsorption**: Celiac disease, tropical sprue, chronic diarrhoea, post‑gastrectomy.
+- **Chronic inflammation**: HIV infection, active TB, malaria, rheumatic fever, sickle‑cell disease (functional iron sequestration).
+- **Other tropical contributors**: Hookworm infestation, schistosomiasis, repeated malaria episodes causing haemolysis and iron loss.
 
 ## Pathophysiology  
 
@@ -43,28 +39,24 @@ Inadequate intake / loss / sequestration → ↓ plasma iron → ↓ transferrin
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it occurs |
-|---|---|---|
-| **General symptoms** | Fatigue, easy tiredness, reduced exercise tolerance, breathlessness on exertion, dizziness, palpitations. | Reduced oxygen‑carrying capacity → tissue hypoxia → compensatory increase in cardiac output and perception of low energy. |
-| **Gastro‑intestinal** | Change in appetite, pica (craving for ice, dirt, clay), dysphagia, early satiety, abdominal pain, melena or occult blood loss. | Iron deficiency stimulates craving for non‑nutritive substances; chronic blood loss (ulcers, parasites, hemorrhoids) depletes iron stores. |
-| **Genitourinary** | Menstrual history (heavy, prolonged bleeding, intermenstrual spotting), post‑partum bleeding, urinary symptoms suggestive of schistosomiasis. | Menstrual or genital blood loss is a common source of iron loss in women of reproductive age. |
-| **Infectious / inflammatory** | History of recent or recurrent malaria episodes, TB treatment, HIV status, chronic cough, night sweats, weight loss, rheumatic fever, sickle‑cell crises. | Chronic infection or inflammation can cause iron sequestration and increased loss (e.g., hemolysis in sickle cell, hematuria in schistosomiasis). |
-| **Dietary** | Frequency of meat, leafy greens, legumes; vegetarian/vegan diet; use of tea/coffee with meals; socioeconomic constraints. | Low dietary heme iron intake or inhibitors of iron absorption (phytates, polyphenols) limit iron availability. |
-| **Medication / supplements** | Use of antacids, PPIs, iron chelators, chronic NSAIDs, anti‑malarial prophylaxis. | Reduced gastric acidity or drug‑induced GI bleeding impair iron absorption or increase loss. |
-| **Family / past medical** | Family history of haemoglobinopathies, previous anaemia, surgeries (gastric bypass). | Genetic conditions or prior surgeries can affect iron metabolism or loss. |
+- **General symptoms**: Fatigue, easy tiredness, reduced exercise tolerance, breathlessness on exertion, dizziness, palpitations. — Reduced oxygen‑carrying capacity → tissue hypoxia → compensatory increase in cardiac output and perception of low energy.
+- **Gastro‑intestinal**: Change in appetite, pica (craving for ice, dirt, clay), dysphagia, early satiety, abdominal pain, melena or occult blood loss. — Iron deficiency stimulates craving for non‑nutritive substances; chronic blood loss (ulcers, parasites, hemorrhoids) depletes iron stores.
+- **Genitourinary**: Menstrual history (heavy, prolonged bleeding, intermenstrual spotting), post‑partum bleeding, urinary symptoms suggestive of schistosomiasis. — Menstrual or genital blood loss is a common source of iron loss in women of reproductive age.
+- **Infectious / inflammatory**: History of recent or recurrent malaria episodes, TB treatment, HIV status, chronic cough, night sweats, weight loss, rheumatic fever, sickle‑cell crises. — Chronic infection or inflammation can cause iron sequestration and increased loss (e.g., hemolysis in sickle cell, hematuria in schistosomiasis).
+- **Dietary**: Frequency of meat, leafy greens, legumes; vegetarian/vegan diet; use of tea/coffee with meals; socioeconomic constraints. — Low dietary heme iron intake or inhibitors of iron absorption (phytates, polyphenols) limit iron availability.
+- **Medication / supplements**: Use of antacids, PPIs, iron chelators, chronic NSAIDs, anti‑malarial prophylaxis. — Reduced gastric acidity or drug‑induced GI bleeding impair iron absorption or increase loss.
+- **Family / past medical**: Family history of haemoglobinopathies, previous anaemia, surgeries (gastric bypass). — Genetic conditions or prior surgeries can affect iron metabolism or loss.
 
 **Examination findings**
 
-| Finding | Interpretation |
-|---|---|
-| **Pallor** – conjunctiva, palmar creases, nail beds | Visible reduction in perfused hemoglobin; early sign of moderate anaemia. |
-| **Tachycardia** (resting) | Compensatory increase in cardiac output to maintain tissue oxygen delivery. |
-| **Systolic flow murmur** (soft, ejection) | Turbulent flow due to increased blood velocity in a low‑viscosity circuit. |
-| **Glossitis** (smooth, beefy red tongue) | Rapid turnover of mucosal epithelium with iron‑dependent enzymes impaired. |
-| **Angular cheilitis / atrophic mucosa** | Iron is required for epithelial integrity; deficiency leads to fissuring. |
-| **Koilonychia** (spoon‑shaped nails) | Chronic iron shortage affects keratin synthesis. |
-| **Splenomegaly** (if co‑existing hemolysis e.g., sickle cell) | May indicate overlapping haemolytic process rather than pure iron deficiency. |
-| **Peripheral edema** (rare) | Severe anaemia can precipitate high‑output cardiac failure. |
+- **Pallor – conjunctiva, palmar creases, nail beds**: Visible reduction in perfused hemoglobin; early sign of moderate anaemia.
+- **Tachycardia (resting)**: Compensatory increase in cardiac output to maintain tissue oxygen delivery.
+- **Systolic flow murmur (soft, ejection)**: Turbulent flow due to increased blood velocity in a low‑viscosity circuit.
+- **Glossitis (smooth, beefy red tongue)**: Rapid turnover of mucosal epithelium with iron‑dependent enzymes impaired.
+- **Angular cheilitis / atrophic mucosa**: Iron is required for epithelial integrity; deficiency leads to fissuring.
+- **Koilonychia (spoon‑shaped nails)**: Chronic iron shortage affects keratin synthesis.
+- **Splenomegaly (if co‑existing hemolysis e.g., sickle cell)**: May indicate overlapping haemolytic process rather than pure iron deficiency.
+- **Peripheral edema (rare)**: Severe anaemia can precipitate high‑output cardiac failure.
 
 ---
 
@@ -116,21 +108,19 @@ The clinical approach therefore proceeds from confirming the iron‑deficiency p
 
 ## Management  
 
-| Phase | What to do | Rationale / safety notes |
-|---|---|---|
-| **Immediate stabilisation** | • Assess airway, breathing, circulation; give supplemental O₂ if SpO₂ < 94 % | Anaemia can precipitate tissue hypoxia, especially in severe cases or co‑existing cardiopulmonary disease. |
-| | • Obtain rapid bedside haemoglobin (point‑of‑care) and full blood count | Guides urgency of transfusion. |
-| | • Transfuse packed red cells **only** if haemoglobin < 7 g/dL (or < 8 g/dL with cardiac disease, active bleeding, or pregnancy) | Avoids volume overload; monitor for transfusion reactions. |
-| | • Correct any active bleeding (e.g., GI bleed, menorrhagia) before iron replacement | Ongoing loss will negate replacement. |
-| **Definitive treatment** | **Oral iron** (ferrous salts) – first line for uncomplicated IDA | Improves stores in 2–3 weeks; give on empty stomach if tolerated, otherwise with food to reduce GI upset. |
-| | **Parenteral iron** (IV iron sucrose, ferric carboxymaltose) – for intolerance to oral iron, malabsorption, severe anaemia needing rapid repletion, or when oral therapy is contraindicated (e.g., active infection, inflammatory bowel disease flare) | Faster repletion; monitor for hypotension, rash, or rare anaphylaxis during infusion. |
-| | **Treat underlying cause** – anti‑TB therapy, antiretroviral therapy optimisation, malaria treatment, deworming, surgical correction of chronic blood loss, etc. | Without addressing source, anaemia recurs. |
-| | **Nutritional optimisation** – ensure adequate folate, vitamin B12, protein, and calories; counsel on iron‑rich foods (red meat, beans, dark leafy greens) and enhancers (vit C) and inhibitors (tea, coffee, calcium) | Improves absorption and overall haematopoiesis. |
-| **Monitoring** | • Repeat full blood count at 2–4 weeks; reticulocyte count rises within 7‑10 days if therapy effective | Detects non‑response early. |
-| | • Serum ferritin and transferrin saturation after 8‑12 weeks of therapy to confirm repletion | Ferritin normalises before haemoglobin. |
-| | • Watch for side‑effects: GI irritation (oral), infusion reactions (IV), iron overload (rare, in repeated IV courses) | Stop or switch therapy if severe. |
-| **Follow‑up** | • Continue oral iron for at least 3 months after haemoglobin normalises to replenish stores | Prevent relapse. |
-| | • Re‑evaluate for occult bleeding if anaemia recurs despite adherence | Ensures hidden source is not missed. |
+- **Immediate stabilisation**: • Assess airway, breathing, circulation; give supplemental O₂ if SpO₂ < 94 % — Anaemia can precipitate tissue hypoxia, especially in severe cases or co‑existing cardiopulmonary disease.
+- • Obtain rapid bedside haemoglobin (point‑of‑care) and full blood count — Guides urgency of transfusion.
+- • Transfuse packed red cells **only** if haemoglobin < 7 g/dL (or < 8 g/dL with cardiac disease, active bleeding, or pregnancy) — Avoids volume overload; monitor for transfusion reactions.
+- • Correct any active bleeding (e.g., GI bleed, menorrhagia) before iron replacement — Ongoing loss will negate replacement.
+- **Definitive treatment**: **Oral iron** (ferrous salts) – first line for uncomplicated IDA — Improves stores in 2–3 weeks; give on empty stomach if tolerated, otherwise with food to reduce GI upset.
+- **Parenteral iron** (IV iron sucrose, ferric carboxymaltose) – for intolerance to oral iron, malabsorption, severe anaemia needing rapid repletion, or when oral therapy is contraindicated (e.g., active infection, inflammatory bowel disease flare) — Faster repletion; monitor for hypotension, rash, or rare anaphylaxis during infusion.
+- **Treat underlying cause** – anti‑TB therapy, antiretroviral therapy optimisation, malaria treatment, deworming, surgical correction of chronic blood loss, etc. — Without addressing source, anaemia recurs.
+- **Nutritional optimisation** – ensure adequate folate, vitamin B12, protein, and calories; counsel on iron‑rich foods (red meat, beans, dark leafy greens) and enhancers (vit C) and inhibitors (tea, coffee, calcium) — Improves absorption and overall haematopoiesis.
+- **Monitoring**: • Repeat full blood count at 2–4 weeks; reticulocyte count rises within 7‑10 days if therapy effective — Detects non‑response early.
+- • Serum ferritin and transferrin saturation after 8‑12 weeks of therapy to confirm repletion — Ferritin normalises before haemoglobin.
+- • Watch for side‑effects: GI irritation (oral), infusion reactions (IV), iron overload (rare, in repeated IV courses) — Stop or switch therapy if severe.
+- **Follow‑up**: • Continue oral iron for at least 3 months after haemoglobin normalises to replenish stores — Prevent relapse.
+- • Re‑evaluate for occult bleeding if anaemia recurs despite adherence — Ensures hidden source is not missed.
 
 **Contra‑indications / safety**  
 - Oral iron: known hypersensitivity to ferrous salts, active haemochromatosis.  

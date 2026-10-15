@@ -10,26 +10,22 @@
 - **Acute pyelonephritis:** infection that has ascended to involve the renal parenchyma and pelvis, producing systemic signs of infection and renal inflammation.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to infection |
-|---|---|
-| Urethra (short in females) | Easy bacterial entry; catheter trauma predisposes |
-| Bladder (distensible, mucosal glycosaminoglycan layer) | Stasis or mucosal damage facilitates colonisation |
-| Vesicoureteric junction (VUJ) | Antireflux mechanism; obstruction or reflux ↑ risk |
-| Renal pelvis & calyces | Site of bacterial proliferation in pyelonephritis |
-| Renal interstitium & tubules | Inflammation can impair concentrating ability |
-| Autonomic innervation | Pain signals (flank tenderness) arise from renal capsule |
+- **Urethra (short in females)**: Easy bacterial entry; catheter trauma predisposes
+- **Bladder (distensible, mucosal glycosaminoglycan layer)**: Stasis or mucosal damage facilitates colonisation
+- **Vesicoureteric junction (VUJ)**: Antireflux mechanism; obstruction or reflux ↑ risk
+- **Renal pelvis & calyces**: Site of bacterial proliferation in pyelonephritis
+- **Renal interstitium & tubules**: Inflammation can impair concentrating ability
+- **Autonomic innervation**: Pain signals (flank tenderness) arise from renal capsule
 
 ## Causes and risk factors  
 
-| Category | Specific factors in Kenya |
-|---|---|
-| **Sex‑related** | Female sex, recent intercourse, contraceptive diaphragm |
-| **Anatomical/functional** | Pregnancy, urinary obstruction (stones, BPH), neurogenic bladder, VUR |
-| **Procedural** | Catheterisation, cystoscopy, recent surgery, obstetric delivery |
-| **Systemic illnesses** | HIV infection, diabetes mellitus, sickle‑cell disease, TB (genitourinary TB), malaria (hemolysis → urinary stasis), rheumatic fever with valvular disease causing renal hypoperfusion |
-| **Immunosuppression** | Corticosteroids, chemotherapy, transplant immunosuppression |
-| **Behavioural** | Inadequate perineal hygiene, delayed voiding, high fluid loss (e.g., hot climate, diarrhoea) |
-| **Microbial** | *Escherichia coli* (most common), *Klebsiella*, *Proteus*, *Enterococcus*, *Staphylococcus saprophyticus*, *Pseudomonas* (catheter‑associated), *Candida* (immunocompromised) |
+- **Sex‑related**: Female sex, recent intercourse, contraceptive diaphragm
+- **Anatomical/functional**: Pregnancy, urinary obstruction (stones, BPH), neurogenic bladder, VUR
+- **Procedural**: Catheterisation, cystoscopy, recent surgery, obstetric delivery
+- **Systemic illnesses**: HIV infection, diabetes mellitus, sickle‑cell disease, TB (genitourinary TB), malaria (hemolysis → urinary stasis), rheumatic fever with valvular disease causing renal hypoperfusion
+- **Immunosuppression**: Corticosteroids, chemotherapy, transplant immunosuppression
+- **Behavioural**: Inadequate perineal hygiene, delayed voiding, high fluid loss (e.g., hot climate, diarrhoea)
+- **Microbial**: *Escherichia coli* (most common), *Klebsiella*, *Proteus*, *Enterococcus*, *Staphylococcus saprophyticus*, *Pseudomonas* (catheter‑associated), *Candida* (immunocompromised)
 
 ## Pathophysiology  
 
@@ -43,29 +39,25 @@
 
 **History – what to ask**  
 
-| Domain | Key questions | Rationale |
-|---|---|---|
-| **Typical urinary symptoms** | Dysuria, frequency, urgency, suprapubic pain, nocturia, hematuria | Direct irritation of the bladder mucosa; helps differentiate lower UTI from pyelonephritis (systemic signs added). |
-| **Systemic features** | Fever, chills, rigors, flank pain, malaise, anorexia, vomiting | Fever and flank pain suggest renal parenchymal involvement (pyelonephritis). |
-| **Risk‑factor exposure** | Recent sexual activity, contraceptive use, recent catheterisation, recent hospitalisation, recent antibiotics, diabetes, HIV status, TB history, sickle‑cell disease, pregnancy, known urinary tract anomalies | These conditions predispose to colonisation, ascending infection or atypical organisms. |
-| **Previous episodes** | Prior UTI, recurrent infections, prior imaging showing stones or obstruction | Recurrence often signals underlying structural problem. |
-| **Medication & allergies** | Current drugs (especially immunosuppressants, antiretrovirals), drug allergies | Guides choice of empiric agents and avoids adverse reactions. |
-| **Associated tropical illnesses** | Recent malaria treatment, rheumatic fever, known TB, sickle‑cell crises | Certain infections (e.g., TB) can produce atypical pyelonephritis; sickle‑cell disease predisposes to papillary necrosis. |
-| **Pregnancy** | Gestational age, obstetric complications | Pregnancy alters urinary stasis and changes antimicrobial safety. |
-| **Fluid intake & voiding pattern** | Daily fluid volume, voiding frequency, any obstruction symptoms (hesitancy, weak stream) | Low fluid intake and obstruction increase infection risk. |
+- **Typical urinary symptoms**: Dysuria, frequency, urgency, suprapubic pain, nocturia, hematuria — Direct irritation of the bladder mucosa; helps differentiate lower UTI from pyelonephritis (systemic signs added).
+- **Systemic features**: Fever, chills, rigors, flank pain, malaise, anorexia, vomiting — Fever and flank pain suggest renal parenchymal involvement (pyelonephritis).
+- **Risk‑factor exposure**: Recent sexual activity, contraceptive use, recent catheterisation, recent hospitalisation, recent antibiotics, diabetes, HIV status, TB history, sickle‑cell disease, pregnancy, known urinary tract anomalies — These conditions predispose to colonisation, ascending infection or atypical organisms.
+- **Previous episodes**: Prior UTI, recurrent infections, prior imaging showing stones or obstruction — Recurrence often signals underlying structural problem.
+- **Medication & allergies**: Current drugs (especially immunosuppressants, antiretrovirals), drug allergies — Guides choice of empiric agents and avoids adverse reactions.
+- **Associated tropical illnesses**: Recent malaria treatment, rheumatic fever, known TB, sickle‑cell crises — Certain infections (e.g., TB) can produce atypical pyelonephritis; sickle‑cell disease predisposes to papillary necrosis.
+- **Pregnancy**: Gestational age, obstetric complications — Pregnancy alters urinary stasis and changes antimicrobial safety.
+- **Fluid intake & voiding pattern**: Daily fluid volume, voiding frequency, any obstruction symptoms (hesitancy, weak stream) — Low fluid intake and obstruction increase infection risk.
 
 **Examination – what to look for and why**  
 
-| Finding | What it indicates | Why it occurs |
-|---|---|---|
-| **Vital signs** (temperature, pulse, blood pressure) | Fever, tachycardia, hypotension | Systemic response to infection; hypotension signals sepsis. |
-| **Costovertebral angle (CVA) tenderness** | Positive CVA tenderness | Inflammation of renal capsule or parenchyma (pyelonephritis). |
-| **Suprapubic tenderness** | Localised bladder pain | Irritation of bladder wall in cystitis. |
-| **Abdominal exam** (distension, masses) | Palpable kidney, flank mass | May indicate obstructing stone or enlarged kidney from infection. |
-| **Genitourinary inspection** | Perineal erythema, discharge, urethral meatus lesions | Possible sexually transmitted infection or external source of bacteria. |
-| **Neurological assessment** (confusion, altered mental status) | Especially in elderly or immunocompromised | Sepsis‑associated encephalopathy; important for severity grading. |
-| **Skin** (pallor, rash) | Signs of systemic infection or drug reaction | Helps differentiate from other febrile illnesses. |
-| **Peripheral edema** | May suggest renal impairment or heart failure | Provides context for renal function assessment. |
+- **Vital signs (temperature, pulse, blood pressure)**: Fever, tachycardia, hypotension — Systemic response to infection; hypotension signals sepsis.
+- **Costovertebral angle (CVA) tenderness**: Positive CVA tenderness — Inflammation of renal capsule or parenchyma (pyelonephritis).
+- **Suprapubic tenderness**: Localised bladder pain — Irritation of bladder wall in cystitis.
+- **Abdominal exam (distension, masses)**: Palpable kidney, flank mass — May indicate obstructing stone or enlarged kidney from infection.
+- **Genitourinary inspection**: Perineal erythema, discharge, urethral meatus lesions — Possible sexually transmitted infection or external source of bacteria.
+- **Neurological assessment (confusion, altered mental status)**: Especially in elderly or immunocompromised — Sepsis‑associated encephalopathy; important for severity grading.
+- **Skin (pallor, rash)**: Signs of systemic infection or drug reaction — Helps differentiate from other febrile illnesses.
+- **Peripheral edema**: May suggest renal impairment or heart failure — Provides context for renal function assessment.
 
 ---
 
@@ -111,11 +103,9 @@
 
 **Severity grading (adapted for Kenyan setting)**  
 
-| Severity | Clinical hallmarks | Management implication |
-|---|---|---|
-| **Mild** | Fever <39 °C, stable vitals, no vomiting, normal mental status, eGFR >60 mL/min/1.73 m² | Oral antibiotics, outpatient follow‑up if reliable |
-| **Moderate** | Fever ≥39 °C, vomiting, mild dehydration, eGFR 30‑60 mL/min/1.73 m², no organ dysfunction | IV antibiotics, inpatient observation, fluid resuscitation |
-| **Severe / Septic** | Hypotension, tachycardia, altered mental status, eGFR <30 mL/min/1.73 m², positive blood cultures, evidence of abscess or emphysematous change | ICU‑level care, broad‑spectrum IV antibiotics, aggressive fluid resuscitation, possible drainage |
+- **Mild**: Fever <39 °C, stable vitals, no vomiting, normal mental status, eGFR >60 mL/min/1.73 m² — Oral antibiotics, outpatient follow‑up if reliable
+- **Moderate**: Fever ≥39 °C, vomiting, mild dehydration, eGFR 30‑60 mL/min/1.73 m², no organ dysfunction — IV antibiotics, inpatient observation, fluid resuscitation
+- **Severe / Septic**: Hypotension, tachycardia, altered mental status, eGFR <30 mL/min/1.73 m², positive blood cultures, evidence of abscess or emphysematous change — ICU‑level care, broad‑spectrum IV antibiotics, aggressive fluid resuscitation, possible drainage
 
 **Key points for the student**  
 
@@ -133,12 +123,10 @@ By systematically gathering the targeted history, performing a focused exam, and
 - **Sepsis bundle** – obtain blood cultures *before* antibiotics, give broad‑spectrum IV antibiotics within the first hour, monitor lactate, and reassess perfusion (urine output ≥ 0.5 mL/kg/h).  
 
 **Definitive antimicrobial therapy**  
-| Clinical scenario | First‑line IV class* | Oral step‑down (if stable) | Rationale |
-|---|---|---|---|
-| Uncomplicated cystitis in non‑pregnant adult | Fluoroquinolone (e.g., ciprofloxacin) | Fluoroquinolone PO | Excellent urinary penetration, low resistance in most Kenyan isolates. |
-| Complicated UTI / pyelonephritis | Third‑generation cephalosporin (e.g., ceftriaxone) or carbapenem if ESBL risk | Trimethoprim‑sulfamethoxazole or nitro‑furantoin (if susceptible) | Cephalosporin covers most Gram‑negatives; carbapenem reserved for proven ESBL. |
-| Pregnant woman | IV ampicillin + gentamicin (or oral amoxicillin) | Continue oral amoxicillin | Safe for fetus, covers common uropathogens. |
-| HIV‑positive with CD4 < 200 cells/µL | IV cefepime ± vancomycin (if MRSA risk) | Switch to oral fluoroquinolone when stable | Broader Gram‑negative coverage; consider opportunistic pathogens. |
+- **Uncomplicated cystitis in non‑pregnant adult**: Fluoroquinolone (e.g., ciprofloxacin) — Fluoroquinolone PO — Excellent urinary penetration, low resistance in most Kenyan isolates.
+- **Complicated UTI / pyelonephritis**: Third‑generation cephalosporin (e.g., ceftriaxone) or carbapenem if ESBL risk — Trimethoprim‑sulfamethoxazole or nitro‑furantoin (if susceptible) — Cephalosporin covers most Gram‑negatives; carbapenem reserved for proven ESBL.
+- **Pregnant woman**: IV ampicillin + gentamicin (or oral amoxicillin) — Continue oral amoxicillin — Safe for fetus, covers common uropathogens.
+- **HIV‑positive with CD4 < 200 cells/µL**: IV cefepime ± vancomycin (if MRSA risk) — Switch to oral fluoroquinolone when stable — Broader Gram‑negative coverage; consider opportunistic pathogens.
 
 *Choose agents based on local antibiogram; avoid fluoroquinolones in patients with QT prolongation or tendon disease.  
 

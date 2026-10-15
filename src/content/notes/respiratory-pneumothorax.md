@@ -1,4 +1,4 @@
-# Pneumothorax — Year 4 Internal Medicine (Respiratory) Notes
+# Pneumothorax
 
 *Orientation notes for study. Check current BTS or local guidelines and follow your hospital protocol.*
 
@@ -11,15 +11,13 @@ A **pneumothorax** is **air in the pleural space**, which allows the lung to **c
 
 ## Anatomy and physiology you need  
 
-| Structure / Concept | Why it matters for pneumothorax | Clinical implication |
-|---|---|---|
-| **Parietal pleura** (costal, diaphragmatic, mediastinal) – thin serous membrane attached to chest wall, diaphragm and mediastinum. | Forms the outer layer of the pleural cavity; its adherence to the endothoracic fascia creates a potential space that can fill with air. | Loss of the negative pressure between parietal and visceral pleura allows the lung to collapse; the parietal pleura transmits transmitted sounds (eg, bronchial breath sounds) that disappear when it is separated from the visceral layer. |
-| **Visceral pleura** – delicate membrane covering the lung surface, continuous with the parietal pleura at the pleural recesses. | Provides the suction that keeps the lung expanded (‑5 cm H₂O intrapleural pressure at rest). | When air enters the pleural space, this suction is abolished, so the lung recoils and collapses; the loss of visceral‑parietal apposition explains the hyper‑resonant percussion and absent breath sounds. |
-| **Pleural cavity (potential space)** – normally contains a thin film of fluid that permits gliding of the two pleural layers. | The cavity is a “vacuum” that can be breached by air from the lung (ruptured bleb) or from the outside (trauma). | Air in this space creates a true pneumothorax; the size of the air pocket determines the degree of lung collapse and the shift of mediastinal structures in tension. |
-| **Intercostal muscles & ribs** – generate the negative intrathoracic pressure during inspiration. | Their contraction expands the thoracic volume, pulling the pleural surfaces apart. | In a tension pneumothorax the one‑way valve effect means each inspiratory effort adds more air, rapidly raising intrapleural pressure and compromising venous return. |
-| **Mediastinum (great vessels, heart, trachea)** – suspended by the pericardial and pleural reflections. | Sensitive to changes in intrathoracic pressure; a rapid rise pushes the mediastinum away from the affected side. | Tracheal deviation, hypotension and distended neck veins are hallmarks of tension physiology and guide the examiner to immediate decompression. |
-| **Alveolar‑capillary interface** – site of gas exchange. | When a subpleural bleb ruptures, air escapes directly from the alveolar space into the pleural cavity. | The sudden loss of functional alveolar surface produces pleuritic pain (visceral pleura irritation) and acute dyspnoea, which the examiner will ask you to describe. |
-| **Pulmonary vasculature (pulmonary veins & arteries)** – low‑pressure system that drains into the left atrium and right ventricle. | Elevated intrapleural pressure in tension compresses pulmonary vessels, reducing preload and cardiac output. | The examiner may test your understanding of why hypotension and tachycardia occur before any obvious respiratory failure. |
+- **Parietal pleura (costal, diaphragmatic, mediastinal) – thin serous membrane attached to chest wall, diaphragm and mediastinum.**: Forms the outer layer of the pleural cavity; its adherence to the endothoracic fascia creates a potential space that can fill with air. — Loss of the negative pressure between parietal and visceral pleura allows the lung to collapse; the parietal pleura transmits transmitted sounds (eg, bronchial breath sounds) that disappear when it is separated from the visceral layer.
+- **Visceral pleura – delicate membrane covering the lung surface, continuous with the parietal pleura at the pleural recesses.**: Provides the suction that keeps the lung expanded (‑5 cm H₂O intrapleural pressure at rest). — When air enters the pleural space, this suction is abolished, so the lung recoils and collapses; the loss of visceral‑parietal apposition explains the hyper‑resonant percussion and absent breath sounds.
+- **Pleural cavity (potential space) – normally contains a thin film of fluid that permits gliding of the two pleural layers.**: The cavity is a “vacuum” that can be breached by air from the lung (ruptured bleb) or from the outside (trauma). — Air in this space creates a true pneumothorax; the size of the air pocket determines the degree of lung collapse and the shift of mediastinal structures in tension.
+- **Intercostal muscles & ribs – generate the negative intrathoracic pressure during inspiration.**: Their contraction expands the thoracic volume, pulling the pleural surfaces apart. — In a tension pneumothorax the one‑way valve effect means each inspiratory effort adds more air, rapidly raising intrapleural pressure and compromising venous return.
+- **Mediastinum (great vessels, heart, trachea) – suspended by the pericardial and pleural reflections.**: Sensitive to changes in intrathoracic pressure; a rapid rise pushes the mediastinum away from the affected side. — Tracheal deviation, hypotension and distended neck veins are hallmarks of tension physiology and guide the examiner to immediate decompression.
+- **Alveolar‑capillary interface – site of gas exchange.**: When a subpleural bleb ruptures, air escapes directly from the alveolar space into the pleural cavity. — The sudden loss of functional alveolar surface produces pleuritic pain (visceral pleura irritation) and acute dyspnoea, which the examiner will ask you to describe.
+- **Pulmonary vasculature (pulmonary veins & arteries) – low‑pressure system that drains into the left atrium and right ventricle.**: Elevated intrapleural pressure in tension compresses pulmonary vessels, reducing preload and cardiac output. — The examiner may test your understanding of why hypotension and tachycardia occur before any obvious respiratory failure.
 
 ---
 
@@ -46,13 +44,11 @@ Air removal → sudden increase in pulmonary blood flow to previously collapsed 
 
 ## Types and causes
 
-| Type | Cause |
-|---|---|
-| **Primary spontaneous** | No underlying lung disease: **tall, thin young men, smokers**, rupture of subpleural **blebs** |
-| **Secondary spontaneous** | Underlying lung disease: **COPD** (commonest), **TB**, **PCP** (HIV), cystic fibrosis, asthma, lung cancer, ILD, Marfan syndrome, catamenial (menstrual) |
-| **Traumatic** | Penetrating or blunt chest injury, rib fracture |
-| **Iatrogenic** | Central line insertion, lung biopsy, pleural aspiration, mechanical ventilation (barotrauma) |
-| **Tension** | One-way valve: air enters but cannot leave, pressure builds (see below) |
+- **Primary spontaneous**: No underlying lung disease: **tall, thin young men, smokers**, rupture of subpleural **blebs**
+- **Secondary spontaneous**: Underlying lung disease: **COPD** (commonest), **TB**, **PCP** (HIV), cystic fibrosis, asthma, lung cancer, ILD, Marfan syndrome, catamenial (menstrual)
+- **Traumatic**: Penetrating or blunt chest injury, rib fracture
+- **Iatrogenic**: Central line insertion, lung biopsy, pleural aspiration, mechanical ventilation (barotrauma)
+- **Tension**: One-way valve: air enters but cannot leave, pressure builds (see below)
 
 ## Clinical features
 
@@ -164,11 +160,9 @@ Needle aspiration with a 16 G cannula yields immediate symptom relief; a repea
 
 Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot.
 
-| Drug | Class | Role here | Watch for |
-|---|---|---|---|
-| Paracetamol | Analgesic | First-line for pleuritic pain | Liver injury in overdose |
-| Ibuprofen | NSAID | Added for pain if no contraindication | Stomach irritation, kidney injury |
-| Morphine | Opioid analgesic | Severe pain, for example with a chest drain | Drowsiness, respiratory depression, constipation |
+- **Paracetamol**: Analgesic — First-line for pleuritic pain — Liver injury in overdose
+- **Ibuprofen**: NSAID — Added for pain if no contraindication — Stomach irritation, kidney injury
+- **Morphine**: Opioid analgesic — Severe pain, for example with a chest drain — Drowsiness, respiratory depression, constipation
 
 **Oxygen** speeds reabsorption of air in a small pneumothorax. Local anaesthetic is used for the chest drain site, and the key treatment is mechanical: aspiration or a drain.
 

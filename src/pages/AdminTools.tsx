@@ -7,6 +7,7 @@ const TOOLS = [
   { to: "/admin/access", icon: HeartPulse, title: "Book access rules", text: "Which admission numbers open the books and papers (BMS/2023/60482, MBCHB…). Add a format from one example; matching students are verified automatically." },
   { to: "/admin/comments", icon: HeartPulse, title: "Comments", text: "The newest questions and comments under the notes, with one tap to hide or delete." },
   { to: "/admin/duplicates", icon: HeartPulse, title: "Repeated pages", text: "Pages that carry the same text as another page, with the fuller one marked Keep. Hide the copy with one tap." },
+  { to: "/admin/content-checks", icon: HeartPulse, title: "Content checks", text: "What the second AI found when it cross-checked each note: serious errors and suggested fixes. Notes with no serious issue carry the AI cross-checked mark." },
   { to: "/admin/thin-topics", icon: HeartPulse, title: "Deep exam notes", text: "Which topic pages have deep exam notes yet, with a one-tap write for the ones you want ready now. Students can also write them from the page." },
   { to: "/admin/drafts", icon: HeartPulse, title: "AI notes to approve", text: "Notes Ompath AI wrote for searches the site had nothing for. Read, fix the title or year, and publish, or discard." },
   { to: "/admin/activity", icon: BarChart3, title: "Activity & AI keys", text: "What students searched this week, searches that found nothing, whether each AI key works, and what is waiting for you." },

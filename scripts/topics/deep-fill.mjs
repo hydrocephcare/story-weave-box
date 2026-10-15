@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { generateDeepWithFallback } from "../../supabase/functions/_shared/topicAi.js";
+import { checkContent } from "../../supabase/functions/_shared/contentCheck.js";
 
 const DIR = "src/data/topicAi";
 const COUNT = Number(process.argv.find((a) => /^\d+$/.test(a)) || 10);
@@ -28,7 +29,11 @@ for (const slug of todo) {
   const t = names.get(slug);
   try {
     const deep = await generateDeepWithFallback({ name: t?.n ?? page.title ?? slug.replace(/-/g, " "), category: t?.c ?? page.subject ?? "", base: page }, env);
-    fs.writeFileSync(file, JSON.stringify({ ...page, deep }, null, 1) + "\n");
+    // a second AI reads the deep notes before they are saved: anything with a serious error is not published
+    const text = [...deep.sections.map((x) => `## ${x.h}\n${x.p ?? ""}\n${(x.b ?? []).join("\n")}\n${(x.t ?? []).map((r) => `${r.a}: ${r.b}`).join("\n")}`), `## Examiner questions\n${deep.exam.join("\n")}`].join("\n\n");
+    const check = await checkContent({ title: t?.n ?? slug, kind: "deep exam notes", text, env });
+    if (!check.validated) { console.log(`held back ${slug}: ${check.issues.filter((i) => i.severity === "high").map((i) => i.problem).join(" | ").slice(0, 300)}`); continue; }
+    fs.writeFileSync(file, JSON.stringify({ ...page, deep: { ...deep, checked: check.at } }, null, 1) + "\n");
     written++; misses = 0;
     console.log(`deep notes: ${slug}`);
   } catch (e) {

@@ -143,12 +143,10 @@ The standard regimen for drug-susceptible TB is a 6-month course:
 *   **Intensive Phase (2 months):** Isoniazid (H), Rifampicin (R), Pyrazinamide (Z), Ethambutol (E) – often referred to as 2HRZE.
 *   **Continuation Phase (4 months):** Isoniazid (H), Rifampicin (R) – often referred to as 4HR.
 
-| Drug | Key Action | Major Adverse Effects |
-| :--- | :--- | :--- |
-| Isoniazid (H) | Bactericidal, inhibits mycolic acid synthesis | Peripheral neuropathy (give pyridoxine), hepatotoxicity |
-| Rifampicin (R)| Bactericidal, inhibits RNA synthesis | Red-orange body fluids, hepatotoxicity, drug interactions |
-| Pyrazinamide (Z)| Bactericidal (acidic environment) | Hepatotoxicity, hyperuricemia (gouty arthritis) |
-| Ethambutol (E)| Bacteriostatic, inhibits cell wall synthesis | Optic neuritis (red-green colour blindness) |
+- **Isoniazid (H)**: Bactericidal, inhibits mycolic acid synthesis — Peripheral neuropathy (give pyridoxine), hepatotoxicity
+- **Rifampicin (R)**: Bactericidal, inhibits RNA synthesis — Red-orange body fluids, hepatotoxicity, drug interactions
+- **Pyrazinamide (Z)**: Bactericidal (acidic environment) — Hepatotoxicity, hyperuricemia (gouty arthritis)
+- **Ethambutol (E)**: Bacteriostatic, inhibits cell wall synthesis — Optic neuritis (red-green colour blindness)
 
 **Monitoring and Follow-up:**
 *   **Clinical:** Regular assessment for symptom resolution and adverse drug reactions.

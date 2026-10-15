@@ -8,15 +8,13 @@
 Systemic lupus erythematosus (SLE) is a chronic, multisystem autoimmune disease characterised by loss of tolerance to nuclear antigens, formation of immune complexes and complement activation, leading to episodic inflammation of skin, joints, kidneys, central nervous system, hematopoietic system and serosal membranes.
 
 ## Anatomy and physiology you need  
-| Organ/system | Relevant structure | Why it matters in SLE |
-|---|---|---|
-| Skin | Epidermis & dermal basement membrane | Deposition of immune complexes → malar rash, discoid lesions |
-| Joints | Synovial membrane | Non‑erosive synovitis from cytokine‑driven inflammation |
-| Kidneys | Glomerular basement membrane, mesangium | Immune‑complex mediated proliferative glomerulonephritis |
-| CNS | Blood‑brain barrier, cerebral vessels | Vasculitis & antibody‑mediated neuronal injury |
-| Hematopoietic | Bone marrow, peripheral blood cells | Auto‑antibody mediated cytopenias |
-| Serosa | Pleura, pericardium | Serositis from complement‑driven inflammation |
-| Complement system | C1–C9 | Classical pathway activation amplifies tissue injury |
+- **Skin**: Epidermis & dermal basement membrane — Deposition of immune complexes → malar rash, discoid lesions
+- **Joints**: Synovial membrane — Non‑erosive synovitis from cytokine‑driven inflammation
+- **Kidneys**: Glomerular basement membrane, mesangium — Immune‑complex mediated proliferative glomerulonephritis
+- **CNS**: Blood‑brain barrier, cerebral vessels — Vasculitis & antibody‑mediated neuronal injury
+- **Hematopoietic**: Bone marrow, peripheral blood cells — Auto‑antibody mediated cytopenias
+- **Serosa**: Pleura, pericardium — Serositis from complement‑driven inflammation
+- **Complement system**: C1–C9 — Classical pathway activation amplifies tissue injury
 
 ## Causes and risk factors  
 - **Genetic predisposition** – HLA‑DR2/DR3, family clustering.  
@@ -36,31 +34,27 @@ Genetic susceptibility → loss of central/peripheral tolerance → auto‑react
 
 ## Clinical features  
 
-| Domain | Key history questions | Why they matter (pathophysiologic link) |
-|---|---|---|
-| General | Fatigue, fever, weight loss, night sweats | Cytokine‑driven inflammation and anemia of chronic disease produce constitutional symptoms; fever may be low‑grade and intermittent. |
-| Musculoskeletal | Joint pain or swelling, morning stiffness, pattern of involvement (symmetrical, small joints), history of non‑erosive arthritis | Immune complex deposition in synovium causes transient, migratory, non‑erosive arthritis; distinguishes from rheumatoid arthritis. |
-| Dermatologic | Photosensitive rash, malar (“butterfly”) rash, discoid lesions, livedo reticularis, oral or nasal ulcers, alopecia | UV‑induced apoptosis releases nuclear antigens, amplifying auto‑antibody formation; mucosal ulcers are a hallmark of vasculitis. |
-| Renal | Swelling of ankles/feet, frothy urine, decreased urine output, hypertension | Lupus nephritis (immune complex glomerulonephritis) leads to proteinuria, edema, and secondary hypertension. |
-| Cardiopulmonary | Chest pain (pleuritic), dyspnoea, pericardial rub, history of pleuritis or pericarditis, palpitations | Serositis from immune complex deposition in pleura/pericardium; pulmonary involvement may be hemorrhage or interstitial disease. |
-| Neurologic | Headache, seizures, psychosis, mood changes, peripheral neuropathy, memory loss | Central or peripheral nervous system vasculitis; antiphospholipid antibodies can cause cerebrovascular events. |
-| Hematologic | Easy bruising, bleeding, recurrent infections, history of anemia, leukopenia, thrombocytopenia | Auto‑immune cytopenias from antibody‑mediated destruction; splenic sequestration. |
-| Obstetric / Reproductive | History of miscarriage, stillbirth, pre‑eclampsia, menstrual irregularities | Antiphospholipid antibodies cause placental thrombosis; hormonal dysregulation may be secondary to disease activity. |
-| Infectious / Tropical context | Recent or past TB, malaria, HIV status, sickle‑cell crises, exposure to rheumatic fever | Co‑existing infections can mimic or trigger flares; immunosuppression from HIV alters presentation and management. |
+- **General**: Fatigue, fever, weight loss, night sweats — Cytokine‑driven inflammation and anemia of chronic disease produce constitutional symptoms; fever may be low‑grade and intermittent.
+- **Musculoskeletal**: Joint pain or swelling, morning stiffness, pattern of involvement (symmetrical, small joints), history of non‑erosive arthritis — Immune complex deposition in synovium causes transient, migratory, non‑erosive arthritis; distinguishes from rheumatoid arthritis.
+- **Dermatologic**: Photosensitive rash, malar (“butterfly”) rash, discoid lesions, livedo reticularis, oral or nasal ulcers, alopecia — UV‑induced apoptosis releases nuclear antigens, amplifying auto‑antibody formation; mucosal ulcers are a hallmark of vasculitis.
+- **Renal**: Swelling of ankles/feet, frothy urine, decreased urine output, hypertension — Lupus nephritis (immune complex glomerulonephritis) leads to proteinuria, edema, and secondary hypertension.
+- **Cardiopulmonary**: Chest pain (pleuritic), dyspnoea, pericardial rub, history of pleuritis or pericarditis, palpitations — Serositis from immune complex deposition in pleura/pericardium; pulmonary involvement may be hemorrhage or interstitial disease.
+- **Neurologic**: Headache, seizures, psychosis, mood changes, peripheral neuropathy, memory loss — Central or peripheral nervous system vasculitis; antiphospholipid antibodies can cause cerebrovascular events.
+- **Hematologic**: Easy bruising, bleeding, recurrent infections, history of anemia, leukopenia, thrombocytopenia — Auto‑immune cytopenias from antibody‑mediated destruction; splenic sequestration.
+- **Obstetric / Reproductive**: History of miscarriage, stillbirth, pre‑eclampsia, menstrual irregularities — Antiphospholipid antibodies cause placental thrombosis; hormonal dysregulation may be secondary to disease activity.
+- **Infectious / Tropical context**: Recent or past TB, malaria, HIV status, sickle‑cell crises, exposure to rheumatic fever — Co‑existing infections can mimic or trigger flares; immunosuppression from HIV alters presentation and management.
 
 ### Examination findings and rationale  
 
-| System | Typical finding | Pathophysiologic explanation |
-|---|---|---|
-| Skin | Malar rash sparing nasolabial folds, discoid plaques, photosensitivity, livedo reticularis | Cutaneous immune complex deposition; UV light increases antigen exposure. |
-| Musculoskeletal | Swollen, tender small joints (MCP, PIP) without erosions, limited range of motion, “rubbery” feel | Synovitis from immune complexes; lack of erosions differentiates from erosive arthritides. |
-| Cardiovascular | Pericardial friction rub, muffled heart sounds if effusion, tachycardia | Serosal inflammation; fluid accumulation can impair cardiac filling. |
-| Respiratory | Pleural friction rub, decreased breath sounds at bases, crackles if alveolar hemorrhage | Pleural serositis or pulmonary capillaritis leading to hemorrhage. |
-| Renal | Edema of lower limbs, hypertension, possible flank tenderness | Glomerulonephritis causing sodium retention and protein loss. |
-| Neurologic | Focal deficits, cranial nerve palsies, altered mental status, seizures | Cerebral vasculitis or antiphospholipid‑mediated thrombosis. |
-| Hematologic | Petechiae, ecchymoses, lymphadenopathy, splenomegaly | Cytopenias from peripheral destruction; splenic sequestration. |
-| Obstetric | Uterine tenderness, signs of miscarriage (if pregnant) | Antiphospholipid antibody‑mediated placental thrombosis. |
-| General | Low‑grade fever, weight loss, malaise | Systemic inflammatory response. |
+- **Skin**: Malar rash sparing nasolabial folds, discoid plaques, photosensitivity, livedo reticularis — Cutaneous immune complex deposition; UV light increases antigen exposure.
+- **Musculoskeletal**: Swollen, tender small joints (MCP, PIP) without erosions, limited range of motion, “rubbery” feel — Synovitis from immune complexes; lack of erosions differentiates from erosive arthritides.
+- **Cardiovascular**: Pericardial friction rub, muffled heart sounds if effusion, tachycardia — Serosal inflammation; fluid accumulation can impair cardiac filling.
+- **Respiratory**: Pleural friction rub, decreased breath sounds at bases, crackles if alveolar hemorrhage — Pleural serositis or pulmonary capillaritis leading to hemorrhage.
+- **Renal**: Edema of lower limbs, hypertension, possible flank tenderness — Glomerulonephritis causing sodium retention and protein loss.
+- **Neurologic**: Focal deficits, cranial nerve palsies, altered mental status, seizures — Cerebral vasculitis or antiphospholipid‑mediated thrombosis.
+- **Hematologic**: Petechiae, ecchymoses, lymphadenopathy, splenomegaly — Cytopenias from peripheral destruction; splenic sequestration.
+- **Obstetric**: Uterine tenderness, signs of miscarriage (if pregnant) — Antiphospholipid antibody‑mediated placental thrombosis.
+- **General**: Low‑grade fever, weight loss, malaise — Systemic inflammatory response.
 
 ---
 
@@ -107,12 +101,10 @@ Genetic susceptibility → loss of central/peripheral tolerance → auto‑react
 
 **Severity grading** (practical for Kenyan settings)  
 
-| Grade | Organ involvement | Clinical implication |
-|---|---|---|
-| Mild | Cutaneous, arthritis, serositis without organ damage | Outpatient management, NSAIDs, hydroxychloroquine. |
-| Moderate | Persistent proteinuria (<1 g/day), mild cytopenias, mild neuro‑psychiatric symptoms | Add low‑dose glucocorticoids, consider immunosuppressants (azathioprine, mycophenolate). |
-| Severe | Nephrotic‑range proteinuria, renal failure, CNS lupus, severe hematologic cytopenia, life‑threatening serositis | High‑dose glucocorticoids, induction with cyclophosphamide or mycophenolate, possible plasma exchange. |
-| Life‑threatening | Diffuse alveolar hemorrhage, catastrophic antiphospholipid syndrome, fulminant lupus nephritis with rapid decline | Multidisciplinary ICU care, aggressive immunosuppression, anticoagulation if APS. |
+- **Mild**: Cutaneous, arthritis, serositis without organ damage — Outpatient management, NSAIDs, hydroxychloroquine.
+- **Moderate**: Persistent proteinuria (<1 g/day), mild cytopenias, mild neuro‑psychiatric symptoms — Add low‑dose glucocorticoids, consider immunosuppressants (azathioprine, mycophenolate).
+- **Severe**: Nephrotic‑range proteinuria, renal failure, CNS lupus, severe hematologic cytopenia, life‑threatening serositis — High‑dose glucocorticoids, induction with cyclophosphamide or mycophenolate, possible plasma exchange.
+- **Life‑threatening**: Diffuse alveolar hemorrhage, catastrophic antiphospholipid syndrome, fulminant lupus nephritis with rapid decline — Multidisciplinary ICU care, aggressive immunosuppression, anticoagulation if APS.
 
 Severity guides intensity of immunosuppression, need for specialist referral, and frequency of monitoring (e.g., weekly labs for severe disease vs. monthly for mild).
 
@@ -127,13 +119,11 @@ Severity guides intensity of immunosuppression, need for specialist referral, an
 
 **Definitive treatment** (step‑wise, organ‑based)  
 
-| Goal | First‑line agents | When to add / switch | Rationale |
-|---|---|---|---|
-| Control systemic inflammation | Oral prednisone (taper) + hydroxychloroquine | Persistent activity after 4‑6 weeks or organ‑specific flare | Hydroxychloroquine reduces flares, improves survival; steroids give rapid control |
-| Maintain remission / steroid‑sparing | Azathioprine, mycophenolate mofetil, methotrexate | Renal disease, musculoskeletal disease, steroid toxicity | Mycophenolate preferred for proliferative nephritis; azathioprine for milder disease |
-| Severe refractory disease | Cyclophosphamide (IV) or rituximab | Life‑threatening renal, CNS, or vasculitic manifestations not responding to steroids + DMARD | Cyclophosphamide for class III/IV lupus nephritis; rituximab useful in refractory or when cyclophosphamide contraindicated |
-| Antiphospholipid syndrome (APS) | Long‑term warfarin (target INR 2‑3) | History of thrombosis or obstetric loss | Prevents recurrent clotting; DOACs not recommended in high‑risk APS |
-| Cutaneous disease | Topical steroids, calcineurin inhibitors | Persistent rash despite systemic therapy | Local control while minimizing systemic exposure |
+- **Control systemic inflammation**: Oral prednisone (taper) + hydroxychloroquine — Persistent activity after 4‑6 weeks or organ‑specific flare — Hydroxychloroquine reduces flares, improves survival; steroids give rapid control
+- **Maintain remission / steroid‑sparing**: Azathioprine, mycophenolate mofetil, methotrexate — Renal disease, musculoskeletal disease, steroid toxicity — Mycophenolate preferred for proliferative nephritis; azathioprine for milder disease
+- **Severe refractory disease**: Cyclophosphamide (IV) or rituximab — Life‑threatening renal, CNS, or vasculitic manifestations not responding to steroids + DMARD — Cyclophosphamide for class III/IV lupus nephritis; rituximab useful in refractory or when cyclophosphamide contraindicated
+- **Antiphospholipid syndrome (APS)**: Long‑term warfarin (target INR 2‑3) — History of thrombosis or obstetric loss — Prevents recurrent clotting; DOACs not recommended in high‑risk APS
+- **Cutaneous disease**: Topical steroids, calcineurin inhibitors — Persistent rash despite systemic therapy — Local control while minimizing systemic exposure
 
 **Monitoring & safety**  
 - **Baseline**: CBC, renal & liver panels, fasting glucose, lipid profile, ophthalmic exam (hydroxychloroquine).  
@@ -194,7 +184,7 @@ Severity guides intensity of immunosuppression, need for specialist referral, an
 ### Question 1  
 A 22‑year‑old male with known SLE presents with fever, cough, and new‑onset pleuritic chest pain. CXR shows bilateral infiltrates. What is the safest immediate action?  
 
-A. Increase prednisone dose to the protocol dose daily  
+A. Increase the prednisone dose  
 B. Start empiric broad‑spectrum antibiotics and obtain sputum culture  
 C. Begin high‑dose IV cyclophosphamide  
 D. Add hydroxychloroquine  

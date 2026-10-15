@@ -1,4 +1,4 @@
-# Vasvasitis
+# Vasculitis
 
 *After completing this note you will be able to construct a systematic clinical approach to a patient with suspected vasculitis, recognise the key tropical and infectious triggers relevant in Kenya, and outline the immediate and definitive investigations and management while knowing to verify drug doses and local protocols against the Kenya MoH guideline and your hospital formulary.*
 
@@ -9,27 +9,23 @@
 Vasculitis is a heterogeneous group of disorders characterised by inflammation of blood vessel walls, leading to vessel wall damage, luminal narrowing or occlusion, aneurysm formation and downstream tissue ischaemia or necrosis. The classification is usually based on the size of vessels involved (large, medium, small) and on the presence of systemic features or organ‑specific disease.
 
 ## Anatomy and physiology you need
-| Vessel size | Typical examples | Key functions |
-|---|---|---|
-| Large | Aorta, carotid, renal arteries | High‑flow conduit, pressure regulation |
-| Medium | Mesenteric, hepatic, coronary arteries | Distribution to organs, pulsatile flow |
-| Small | Arterioles, capillaries, venules | Exchange of gases, nutrients, immune cells |
-| Endothelium | Lining of all vessels | Barrier, anticoagulant surface, cytokine release |
-| Media | Smooth muscle layer | Vascular tone, structural integrity |
-| Adventitia | Connective tissue, nerves | Support, vasa vasorum supply |
+- **Large**: Aorta, carotid, renal arteries — High‑flow conduit, pressure regulation
+- **Medium**: Mesenteric, hepatic, coronary arteries — Distribution to organs, pulsatile flow
+- **Small**: Arterioles, capillaries, venules — Exchange of gases, nutrients, immune cells
+- **Endothelium**: Lining of all vessels — Barrier, anticoagulant surface, cytokine release
+- **Media**: Smooth muscle layer — Vascular tone, structural integrity
+- **Adventitia**: Connective tissue, nerves — Support, vasa vasorum supply
 
 Understanding that inflammation can begin in any layer but most clinically relevant damage occurs when the media and adventitia are breached, causing aneurysm or rupture, or when the intima thickens, causing stenosis.
 
 ## Causes and risk factors
-| Category | Relevant agents in Kenya | Reason for relevance |
-|---|---|---|
-| Infectious | HIV, Mycobacterium tuberculosis, Plasmodium falciparum, hepatitis B & C, streptococcal infections | Chronic immune activation, molecular mimicry, direct endothelial invasion |
-| Autoimmune / rheumatic | Systemic lupus erythematosus, rheumatoid arthritis, Sjögren’s, mixed connective tissue disease | Auto‑antibody mediated vessel injury |
-| Hematologic | Sickle cell disease, antiphospholipid syndrome | Vaso‑occlusion, thrombosis, endothelial activation |
-| Drug‑induced | Minocycline, allopurinol, anti‑TNF agents, certain herbal preparations | Hypersensitivity vasculitis, immune complex deposition |
-| Malignancy | Lymphoma, leukemia, solid tumours | Paraneoplastic immune complexes |
-| Genetic / primary | ANCA‑associated vasculitides, Takayasu arteritis, polyarteritis nodosa | Auto‑immune dysregulation, HLA associations |
-| Environmental | Dust, silica exposure, smoking | Chronic irritation, immune priming |
+- **Infectious**: HIV, Mycobacterium tuberculosis, Plasmodium falciparum, hepatitis B & C, streptococcal infections — Chronic immune activation, molecular mimicry, direct endothelial invasion
+- **Autoimmune / rheumatic**: Systemic lupus erythematosus, rheumatoid arthritis, Sjögren’s, mixed connective tissue disease — Auto‑antibody mediated vessel injury
+- **Hematologic**: Sickle cell disease, antiphospholipid syndrome — Vaso‑occlusion, thrombosis, endothelial activation
+- **Drug‑induced**: Minocycline, allopurinol, anti‑TNF agents, certain herbal preparations — Hypersensitivity vasculitis, immune complex deposition
+- **Malignancy**: Lymphoma, leukemia, solid tumours — Paraneoplastic immune complexes
+- **Genetic / primary**: ANCA‑associated vasculitides, Takayasu arteritis, polyarteritis nodosa — Auto‑immune dysregulation, HLA associations
+- **Environmental**: Dust, silica exposure, smoking — Chronic irritation, immune priming
 
 ## Pathophysiology
 1. Trigger (infection, auto‑antibody, drug) →  
@@ -47,36 +43,32 @@ Understanding that inflammation can begin in any layer but most clinically relev
 
 ## Clinical features  
 
-| History element | Why it matters |
-|---|---|
-| **Onset and tempo** – sudden vs insidious | Acute onset suggests infection‑related or drug‑induced vasculitis; a gradual course fits primary systemic vasculitides. |
-| **Pattern of organ involvement** – skin lesions, neuropathy, renal symptoms, respiratory complaints, gastrointestinal pain, fever, weight loss | Vasculitis is a multisystem disease; the distribution of symptoms helps to map the size of vessels involved (large‑vessel – limb claudication, aortic pain; medium‑vessel – nodular skin lesions, mononeuritis multiplex; small‑vessel – palpable purpura, glomerulonephritis). |
-| **Skin findings** – palpable purpura, livedo reticularis, ulcerations, necrotic nodules, urticarial rash | Small‑vessel disease typically gives palpable purpura; livedo reticularis points to medium‑vessel involvement; necrotic ulcers suggest severe ischemia. |
-| **Neurologic symptoms** – mononeuritis multiplex, peripheral neuropathy, stroke‑like events | Nerve ischemia is common in medium‑ and small‑vessel vasculitis; focal deficits raise suspicion for CNS vasculitis or embolic phenomena. |
-| **Renal complaints** – hematuria, proteinuria, edema, hypertension | Glomerulonephritis is the hallmark of small‑vessel (ANCA‑associated) vasculitis; hypertension may reflect renal artery involvement. |
-| **Respiratory signs** – cough, hemoptysis, dyspnoea, sinusitis, otitis media | Pulmonary capillaritis (hemoptysis) is typical of ANCA vasculitis; chronic sinusitis points to granulomatosis with polyangiitis. |
-| **Gastro‑intestinal symptoms** – abdominal pain, melena, perforation | Mesenteric ischemia from medium‑vessel vasculitis or vasculitic ulceration. |
-| **Constitutional symptoms** – fever, night sweats, weight loss, malaise | Systemic inflammation; also overlap with infections (TB, HIV) common in Kenya. |
-| **Drug exposure** – recent antibiotics, anti‑TNF agents, cocaine, herbal remedies | Drug‑induced vasculitis often mimics primary forms but resolves with withdrawal. |
-| **Infectious history** – HIV status, recent TB treatment, malaria episodes, chronic hepatitis B/C | Infections can trigger immune complex vasculitis (e.g., hepatitis B‑associated polyarteritis nodosa) or act as direct pathogens (e.g., HIV‑associated vasculitis). |
-| **Sickle cell disease** – crises, transfusion history | Sickle cell vasculopathy can present with similar skin and renal findings; differentiating is essential. |
-| **Family history / autoimmune disease** – SLE, rheumatoid arthritis, Sjögren’s | Overlap vasculitis may accompany systemic autoimmune disorders. |
+- **Onset and tempo – sudden vs insidious**: Acute onset suggests infection‑related or drug‑induced vasculitis; a gradual course fits primary systemic vasculitides.
+- **Pattern of organ involvement – skin lesions, neuropathy, renal symptoms, respiratory complaints, gastrointestinal pain, fever, weight loss**: Vasculitis is a multisystem disease; the distribution of symptoms helps to map the size of vessels involved (large‑vessel – limb claudication, aortic pain; medium‑vessel – nodular skin lesions, mononeuritis multiplex; small‑vessel – palpable purpura, glomerulonephritis).
+- **Skin findings – palpable purpura, livedo reticularis, ulcerations, necrotic nodules, urticarial rash**: Small‑vessel disease typically gives palpable purpura; livedo reticularis points to medium‑vessel involvement; necrotic ulcers suggest severe ischemia.
+- **Neurologic symptoms – mononeuritis multiplex, peripheral neuropathy, stroke‑like events**: Nerve ischemia is common in medium‑ and small‑vessel vasculitis; focal deficits raise suspicion for CNS vasculitis or embolic phenomena.
+- **Renal complaints – hematuria, proteinuria, edema, hypertension**: Glomerulonephritis is the hallmark of small‑vessel (ANCA‑associated) vasculitis; hypertension may reflect renal artery involvement.
+- **Respiratory signs – cough, hemoptysis, dyspnoea, sinusitis, otitis media**: Pulmonary capillaritis (hemoptysis) is typical of ANCA vasculitis; chronic sinusitis points to granulomatosis with polyangiitis.
+- **Gastro‑intestinal symptoms – abdominal pain, melena, perforation**: Mesenteric ischemia from medium‑vessel vasculitis or vasculitic ulceration.
+- **Constitutional symptoms – fever, night sweats, weight loss, malaise**: Systemic inflammation; also overlap with infections (TB, HIV) common in Kenya.
+- **Drug exposure – recent antibiotics, anti‑TNF agents, cocaine, herbal remedies**: Drug‑induced vasculitis often mimics primary forms but resolves with withdrawal.
+- **Infectious history – HIV status, recent TB treatment, malaria episodes, chronic hepatitis B/C**: Infections can trigger immune complex vasculitis (e.g., hepatitis B‑associated polyarteritis nodosa) or act as direct pathogens (e.g., HIV‑associated vasculitis).
+- **Sickle cell disease – crises, transfusion history**: Sickle cell vasculopathy can present with similar skin and renal findings; differentiating is essential.
+- **Family history / autoimmune disease – SLE, rheumatoid arthritis, Sjögren’s**: Overlap vasculitis may accompany systemic autoimmune disorders.
 
 ### Examination findings and rationale  
 
-| Finding | Pathophysiologic explanation |
-|---|---|
-| **Palpable purpura** (non‑blanching, raised) | Leukocytoclastic inflammation of post‑capillary venules causing extravasation of red cells. |
-| **Livedo reticularis / racemosa** | Occlusion of medium‑size dermal arteries producing a net‑like mottling. |
-| **Necrotic or ulcerated nodules** (especially on lower limbs) | Ischemic necrosis from vessel occlusion; common in polyarteritis nodosa. |
-| **Mononeuritis multiplex** (asymmetric sensory loss, foot drop) | Segmental ischemia of peripheral nerves due to vasa nervorum involvement. |
-| **Blood pressure elevation** | Renal artery stenosis or glomerular inflammation leading to sodium retention. |
-| **Renal bruit** | Turbulent flow in stenotic renal arteries (large‑ or medium‑vessel disease). |
-| **Pulmonary crackles or haemorrhagic infiltrates** | Alveolar hemorrhage from pulmonary capillaritis. |
-| **Joint swelling/tenderness without erosions** | Immune complex deposition in synovium; often non‑destructive. |
-| **Abdominal tenderness, guarding** | Mesenteric ischemia or bowel infarction from medium‑vessel vasculitis. |
-| **Peripheral pulses diminished** (especially femoral/renal) | Large‑vessel stenosis or occlusion (e.g., Takayasu arteritis). |
-| **Mucosal ulcers (oral, nasal)** | Small‑vessel inflammation of mucosal capillaries. |
+- **Palpable purpura (non‑blanching, raised)**: Leukocytoclastic inflammation of post‑capillary venules causing extravasation of red cells.
+- **Livedo reticularis / racemosa**: Occlusion of medium‑size dermal arteries producing a net‑like mottling.
+- **Necrotic or ulcerated nodules (especially on lower limbs)**: Ischemic necrosis from vessel occlusion; common in polyarteritis nodosa.
+- **Mononeuritis multiplex (asymmetric sensory loss, foot drop)**: Segmental ischemia of peripheral nerves due to vasa nervorum involvement.
+- **Blood pressure elevation**: Renal artery stenosis or glomerular inflammation leading to sodium retention.
+- **Renal bruit**: Turbulent flow in stenotic renal arteries (large‑ or medium‑vessel disease).
+- **Pulmonary crackles or haemorrhagic infiltrates**: Alveolar hemorrhage from pulmonary capillaritis.
+- **Joint swelling/tenderness without erosions**: Immune complex deposition in synovium; often non‑destructive.
+- **Abdominal tenderness, guarding**: Mesenteric ischemia or bowel infarction from medium‑vessel vasculitis.
+- **Peripheral pulses diminished (especially femoral/renal)**: Large‑vessel stenosis or occlusion (e.g., Takayasu arteritis).
+- **Mucosal ulcers (oral, nasal)**: Small‑vessel inflammation of mucosal capillaries.
 
 ---
 
@@ -97,22 +89,20 @@ Understanding that inflammation can begin in any layer but most clinically relev
 
 ## Investigations  
 
-| Test | What it answers | Interpretation |
-|---|---|---|
-| CBC with differential | Anaemia, leukocytosis, eosinophilia | Eosinophilia suggests EGPA; anaemia of chronic disease common in systemic vasculitis |
-| ESR/CRP | Inflammatory activity | Markedly raised in active vasculitis, but non‑specific |
-| Urinalysis + microscopy | Hematuria, proteinuria, casts | RBC casts → glomerulonephritis; proteinuria quantifies renal involvement |
-| Serum creatinine & eGFR | Renal function | Rising creatinine signals renal vasculitis |
-| ANCA (c‑ANCA, p‑ANCA) | Presence of anti‑proteinase 3 or MPO antibodies | Positive in GPA (c‑ANCA) or MPA/EGPA (p‑ANCA); negative does not exclude vasculitis |
-| Complement levels (C3, C4) | Immune‑complex activity | Low C4 suggests cryoglobulinaemia or lupus vasculitis |
-| Hepatitis B & C serology | Infectious trigger | Positive HBV → polyarteritis nodosa; HCV → cryoglobulinaemic vasculitis |
-| HIV test | Underlying immunosuppression | Positive HIV may indicate HIV‑associated vasculitis |
-| Cryoglobulin assay | Cryoglobulinaemia | Detectable cryoglobulins support cryoglobulin vasculitis |
-| Chest X‑ray / CT thorax | Pulmonary infiltrates, cavitation | Diffuse alveolar hemorrhage or nodules point to ANCA vasculitis |
-| Angiography (CT/MR/Conventional) | Vessel lumen, aneurysms, stenoses | Microaneurysms in mesenteric/renal arteries → polyarteritis nodosa |
-| Skin or renal biopsy with immunofluorescence | Histopathology, immune deposits | Leukocytoclastic vasculitis, necrotising granulomas, immune‑complex deposition pattern |
-| Nerve conduction studies | Neuropathy type | Mononeuritis multiplex supports vasculitic neuropathy |
-| Urine culture, blood cultures | Exclude infection | Negative cultures favour primary vasculitis over infective endocarditis |
+- **CBC with differential**: Anaemia, leukocytosis, eosinophilia — Eosinophilia suggests EGPA; anaemia of chronic disease common in systemic vasculitis
+- **ESR/CRP**: Inflammatory activity — Markedly raised in active vasculitis, but non‑specific
+- **Urinalysis + microscopy**: Hematuria, proteinuria, casts — RBC casts → glomerulonephritis; proteinuria quantifies renal involvement
+- **Serum creatinine & eGFR**: Renal function — Rising creatinine signals renal vasculitis
+- **ANCA (c‑ANCA, p‑ANCA)**: Presence of anti‑proteinase 3 or MPO antibodies — Positive in GPA (c‑ANCA) or MPA/EGPA (p‑ANCA); negative does not exclude vasculitis
+- **Complement levels (C3, C4)**: Immune‑complex activity — Low C4 suggests cryoglobulinaemia or lupus vasculitis
+- **Hepatitis B & C serology**: Infectious trigger — Positive HBV → polyarteritis nodosa; HCV → cryoglobulinaemic vasculitis
+- **HIV test**: Underlying immunosuppression — Positive HIV may indicate HIV‑associated vasculitis
+- **Cryoglobulin assay**: Cryoglobulinaemia — Detectable cryoglobulins support cryoglobulin vasculitis
+- **Chest X‑ray / CT thorax**: Pulmonary infiltrates, cavitation — Diffuse alveolar hemorrhage or nodules point to ANCA vasculitis
+- **Angiography (CT/MR/Conventional)**: Vessel lumen, aneurysms, stenoses — Microaneurysms in mesenteric/renal arteries → polyarteritis nodosa
+- **Skin or renal biopsy with immunofluorescence**: Histopathology, immune deposits — Leukocytoclastic vasculitis, necrotising granulomas, immune‑complex deposition pattern
+- **Nerve conduction studies**: Neuropathy type — Mononeuritis multiplex supports vasculitic neuropathy
+- **Urine culture, blood cultures**: Exclude infection — Negative cultures favour primary vasculitis over infective endocarditis
 
 ---
 
@@ -125,14 +115,12 @@ Understanding that inflammation can begin in any layer but most clinically relev
    - **Secondary vasculitis**: identified trigger (infection, drug, underlying autoimmune disease) with vasculitic manifestations.
 
 2. **Assessing severity**  
- | Domain | Mild | Moderate | Severe / Life‑threatening |
- |---|---|---|---|
- | **Renal** | Creatinine <2 mg/dL, no dialysis | Creatinine 2–4 mg/dL, proteinuria >1 g/day | Creatinine >4 mg/dL, dialysis dependence, rapidly progressive GN |
- | **Pulmonary** | Mild cough, no haemoptysis | Dyspnoea, limited haemoptysis | Massive haemoptysis, respiratory failure |
- | **Neurologic** | Peripheral neuropathy without functional loss | Mononeuritis multiplex with disability | CNS involvement (stroke, seizures) |
- | **GI** | Mild abdominal pain | Persistent pain, melena | Perforation, massive bleeding |
- | **Constitutional** | Low‑grade fever, mild weight loss | Fever >38 °C, significant weight loss | Septic‑like picture, multi‑organ failure |
- | **Laboratory** | Normal or mildly raised CRP/ESR | CRP/ESR markedly raised, anemia | Cytopenias, high CRP, organ‑specific labs deranged |
+- **Renal**: Creatinine <2 mg/dL, no dialysis — Creatinine 2–4 mg/dL, proteinuria >1 g/day — Creatinine >4 mg/dL, dialysis dependence, rapidly progressive GN
+- **Pulmonary**: Mild cough, no haemoptysis — Dyspnoea, limited haemoptysis — Massive haemoptysis, respiratory failure
+- **Neurologic**: Peripheral neuropathy without functional loss — Mononeuritis multiplex with disability — CNS involvement (stroke, seizures)
+- **GI**: Mild abdominal pain — Persistent pain, melena — Perforation, massive bleeding
+- **Constitutional**: Low‑grade fever, mild weight loss — Fever >38 °C, significant weight loss — Septic‑like picture, multi‑organ failure
+- **Laboratory**: Normal or mildly raised CRP/ESR — CRP/ESR markedly raised, anemia — Cytopenias, high CRP, organ‑specific labs deranged
 
    *Patients with any severe domain are classified as **high‑risk** and require urgent immunosuppression and close monitoring.*  
 
@@ -147,22 +135,18 @@ Severity scoring guides intensity of induction therapy, need for plasma exchange
 ## Management  
 
 **1. Immediate stabilisation**  
-| Situation | Action | Rationale |
-|---|---|---|
-| Severe renal impairment (eGFR < 30 ml/min) or rapidly rising creatinine | Initiate urgent plasma exchange (if ANCA‑associated) and start high‑dose intravenous glucocorticoid pulse | Removes pathogenic antibodies and controls inflammation while definitive therapy is arranged |
-| Life‑threatening pulmonary haemorrhage or diffuse alveolar bleeding | Admit to high‑dependency/ICU, give IV methylprednisolone, consider plasma exchange, give supplemental O₂, monitor ABGs | Prevents respiratory failure; early aggressive immunosuppression improves survival |
-| Acute neuropathy with motor weakness threatening airway or limb viability | Give IV glucocorticoids immediately; arrange nerve conduction studies once stable | Reduces inflammatory edema of nerves, limits permanent deficit |
-| Uncontrolled hypertension in renal vasculitis | IV labetalol or nicardipine infusion, then oral antihypertensives | Protects kidney and prevents cerebrovascular complications |
+- **Severe renal impairment (eGFR < 30 ml/min) or rapidly rising creatinine**: Initiate urgent plasma exchange (if ANCA‑associated) and start high‑dose intravenous glucocorticoid pulse — Removes pathogenic antibodies and controls inflammation while definitive therapy is arranged
+- **Life‑threatening pulmonary haemorrhage or diffuse alveolar bleeding**: Admit to high‑dependency/ICU, give IV methylprednisolone, consider plasma exchange, give supplemental O₂, monitor ABGs — Prevents respiratory failure; early aggressive immunosuppression improves survival
+- **Acute neuropathy with motor weakness threatening airway or limb viability**: Give IV glucocorticoids immediately; arrange nerve conduction studies once stable — Reduces inflammatory edema of nerves, limits permanent deficit
+- **Uncontrolled hypertension in renal vasculitis**: IV labetalol or nicardipine infusion, then oral antihypertensives — Protects kidney and prevents cerebrovascular complications
 
 **2. Definitive treatment**  
 
-| Vasculitis type (most common in Kenya) | First‑line immunosuppression | Adjunct/maintenance |
-|---|---|---|
-| ANCA‑associated (GPA, MPA, EGPA) | Intravenous glucocorticoid pulse → oral taper + cyclophosphamide (or rituximab if cyclophosphamide contraindicated) | Azathioprine or methotrexate for maintenance; low‑dose glucocorticoid taper |
-| Immune‑complex small vessel (IgA vasculitis, cryoglobulinaemic) | Oral glucocorticoids; add mycophenolate mofetil if renal involvement is severe | Hydroxychloroquine for skin/joint disease; treat underlying infection (e.g., hepatitis C) |
-| Large‑vessel (Takayasu, giant‑cell) | High‑dose oral glucocorticoids + tocilizumab (IL‑6 blocker) or methotrexate | Low‑dose glucocorticoid taper; aspirin for arterial protection |
-| Medium‑vessel (polyarteritis nodosa) | Glucocorticoids + cyclophosphamide; if hepatitis B related, add antiviral therapy | Azathioprine for maintenance |
-| Vasculitis secondary to HIV, TB, malaria or sickle cell | Treat underlying infection/disease first; use short‑course glucocorticoids only if organ‑threatening inflammation persists | Continue disease‑specific therapy (antiretrovirals, anti‑TB drugs, antimalarials) |
+- **ANCA‑associated (GPA, MPA, EGPA)**: Intravenous glucocorticoid pulse → oral taper + cyclophosphamide (or rituximab if cyclophosphamide contraindicated) — Azathioprine or methotrexate for maintenance; low‑dose glucocorticoid taper
+- **Immune‑complex small vessel (IgA vasculitis, cryoglobulinaemic)**: Oral glucocorticoids; add mycophenolate mofetil if renal involvement is severe — Hydroxychloroquine for skin/joint disease; treat underlying infection (e.g., hepatitis C)
+- **Large‑vessel (Takayasu, giant‑cell)**: High‑dose oral glucocorticoids + tocilizumab (IL‑6 blocker) or methotrexate — Low‑dose glucocorticoid taper; aspirin for arterial protection
+- **Medium‑vessel (polyarteritis nodosa)**: Glucocorticoids + cyclophosphamide; if hepatitis B related, add antiviral therapy — Azathioprine for maintenance
+- **Vasculitis secondary to HIV, TB, malaria or sickle cell**: Treat underlying infection/disease first; use short‑course glucocorticoids only if organ‑threatening inflammation persists — Continue disease‑specific therapy (antiretrovirals, anti‑TB drugs, antimalarials)
 
 **3. Monitoring & safety**  
 - **Clinical**: Daily assessment of organ function (urine output, skin lesions, neuropathy, respiratory status).  
@@ -184,15 +168,13 @@ Severity scoring guides intensity of induction therapy, need for plasma exchange
 
 ## Complications and prognosis  
 
-| Complication | Typical time‑frame | Clinical impact |
-|---|---|---|
-| Chronic kidney disease / end‑stage renal failure | Months to years if renal vasculitis untreated | Requires dialysis or transplant; major mortality driver |
-| Permanent peripheral neuropathy | Weeks to months | Functional disability, may need physiotherapy or orthotics |
-| Pulmonary fibrosis after alveolar haemorrhage | 6–12 months | Reduced exercise tolerance, risk of respiratory failure |
-| Aneurysm formation (especially in polyarteritis nodosa) | Variable | Risk of rupture → life‑threatening hemorrhage |
-| Opportunistic infection (TB, PCP, fungal) | During immunosuppression | Increases morbidity; prophylaxis (e.g., cotrimoxazole) often needed |
-| Malignancy (especially bladder cancer with cyclophosphamide) | Years after exposure | Requires long‑term surveillance |
-| Relapse of vasculitis | Any time, most common within first 2 years | Re‑initiation of induction therapy; close monitoring of ANCA titres helpful |
+- **Chronic kidney disease / end‑stage renal failure**: Months to years if renal vasculitis untreated — Requires dialysis or transplant; major mortality driver
+- **Permanent peripheral neuropathy**: Weeks to months — Functional disability, may need physiotherapy or orthotics
+- **Pulmonary fibrosis after alveolar haemorrhage**: 6–12 months — Reduced exercise tolerance, risk of respiratory failure
+- **Aneurysm formation (especially in polyarteritis nodosa)**: Variable — Risk of rupture → life‑threatening hemorrhage
+- **Opportunistic infection (TB, PCP, fungal)**: During immunosuppression — Increases morbidity; prophylaxis (e.g., cotrimoxazole) often needed
+- **Malignancy (especially bladder cancer with cyclophosphamide)**: Years after exposure — Requires long‑term surveillance
+- **Relapse of vasculitis**: Any time, most common within first 2 years — Re‑initiation of induction therapy; close monitoring of ANCA titres helpful
 
 Prognosis depends on organ involvement, speed of diagnosis, and adequacy of immunosuppression. ANCA‑associated vasculitis has a 5‑year survival > 80 % with modern therapy, but renal or pulmonary involvement lowers survival markedly. Early treatment of infection‑related vasculitis improves outcomes dramatically.
 

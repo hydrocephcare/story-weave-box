@@ -77,22 +77,20 @@ $\rightarrow$ Microvascular leakage, dyserythropoiesis, marked intravascular hem
 
 ### Examination Findings
 
-| Finding | Reason |
-| :--- | :--- |
-| **Fever** | Parasitaemia and host inflammatory response. |
-| **Pallor** | Anaemia due to haemolysis, bone marrow suppression. |
-| **Jaundice** | Haemolysis of infected red blood cells, impaired liver function. |
-| **Splenomegaly** | Increased red blood cell destruction, immune response. |
-| **Hepatomegaly** | Congestion, inflammation, impaired liver function. |
-| **Tachycardia** | Fever, anaemia, dehydration, hypovolaemia. |
-| **Tachypnoea** | Fever, anaemia, metabolic acidosis, pulmonary oedema. |
-| **Hypotension** | Dehydration, vasodilation, sepsis, adrenal insufficiency. |
-| **Altered Mental Status** | Cerebral malaria, hypoglycaemia, metabolic derangements. |
-| **Seizures** | Cerebral malaria, hypoglycaemia, electrolyte imbalance. |
-| **Pulmonary Oedema** | Increased capillary permeability, fluid overload. |
-| **Abdominal Tenderness**| Hepatosplenomegaly, possible bowel involvement. |
-| **Petechiae/Purpura** | Thrombocytopenia, disseminated intravascular coagulation (DIC). |
-| **Oedema (peripheral)** | Hypoalbuminaemia, fluid shifts. |
+- **Fever**: Parasitaemia and host inflammatory response.
+- **Pallor**: Anaemia due to haemolysis, bone marrow suppression.
+- **Jaundice**: Haemolysis of infected red blood cells, impaired liver function.
+- **Splenomegaly**: Increased red blood cell destruction, immune response.
+- **Hepatomegaly**: Congestion, inflammation, impaired liver function.
+- **Tachycardia**: Fever, anaemia, dehydration, hypovolaemia.
+- **Tachypnoea**: Fever, anaemia, metabolic acidosis, pulmonary oedema.
+- **Hypotension**: Dehydration, vasodilation, sepsis, adrenal insufficiency.
+- **Altered Mental Status**: Cerebral malaria, hypoglycaemia, metabolic derangements.
+- **Seizures**: Cerebral malaria, hypoglycaemia, electrolyte imbalance.
+- **Pulmonary Oedema**: Increased capillary permeability, fluid overload.
+- **Abdominal Tenderness**: Hepatosplenomegaly, possible bowel involvement.
+- **Petechiae/Purpura**: Thrombocytopenia, disseminated intravascular coagulation (DIC).
+- **Oedema (peripheral)**: Hypoalbuminaemia, fluid shifts.
 
 ## Differential Diagnosis
 
@@ -179,18 +177,16 @@ Definitive treatment involves prompt administration of antimalarial drugs.
 
 Complications of severe malaria are numerous and can be life-threatening:
 
-| Complication | Reason |
-| :--- | :--- |
-| Cerebral Malaria | Sequestration of infected erythrocytes in cerebral capillaries. |
-| Severe Anaemia | Haemolysis of infected and uninfected red blood cells. |
-| Acute Kidney Injury | Hypoperfusion, haemolysis, and direct toxicity. |
-| Pulmonary Oedema | Increased capillary permeability, fluid overload. |
-| Hypoglycaemia | Increased glucose utilisation by parasites and host. |
-| Jaundice | Hepatic dysfunction, haemolysis. |
-| Shock | Hypovolaemia, vasodilation, cytokine-mediated effects. |
-| Acidosis | Lactic acidosis due to tissue hypoperfusion and parasite metabolism. |
-| Convulsions | Cerebral malaria, metabolic disturbances. |
-| Disseminated Intravascular Coagulation (DIC) | Endothelial damage, release of procoagulant factors. |
+- **Cerebral Malaria**: Sequestration of infected erythrocytes in cerebral capillaries.
+- **Severe Anaemia**: Haemolysis of infected and uninfected red blood cells.
+- **Acute Kidney Injury**: Hypoperfusion, haemolysis, and direct toxicity.
+- **Pulmonary Oedema**: Increased capillary permeability, fluid overload.
+- **Hypoglycaemia**: Increased glucose utilisation by parasites and host.
+- **Jaundice**: Hepatic dysfunction, haemolysis.
+- **Shock**: Hypovolaemia, vasodilation, cytokine-mediated effects.
+- **Acidosis**: Lactic acidosis due to tissue hypoperfusion and parasite metabolism.
+- **Convulsions**: Cerebral malaria, metabolic disturbances.
+- **Disseminated Intravascular Coagulation (DIC)**: Endothelial damage, release of procoagulant factors.
 
 The prognosis depends on the severity of illness, promptness of treatment, and presence of complications. Early diagnosis and aggressive management significantly improve outcomes. Untreated or delayed treatment of severe malaria has a high mortality rate.
 

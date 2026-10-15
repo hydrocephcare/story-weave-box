@@ -10,25 +10,21 @@ A pituitary disorder is any condition that impairs the normal structure or funct
 
 ## Anatomy and physiology you need  
 
-| Structure | Key point for clinical relevance |
-|---|---|
-| Anterior pituitary (adenohypophysis) | Produces ACTH, TSH, GH, PRL, LH, FSH; vulnerable to vascular compromise and compression. |
-| Posterior pituitary (neurohypophysis) | Stores ADH and oxytocin; lesions here cause diabetes insipidus. |
-| Stalk (infundibulum) | Conveys hypothalamic releasing/inhibiting hormones; stalk effect → hyperprolactinemia. |
-| Portal circulation | Low‑pressure venous system; thrombosis → pan‑hypopituitarism. |
-| Sella turcica | Bony enclosure; expansion produces headache, visual field loss (bitemporal hemianopia). |
+- **Anterior pituitary (adenohypophysis)**: Produces ACTH, TSH, GH, PRL, LH, FSH; vulnerable to vascular compromise and compression.
+- **Posterior pituitary (neurohypophysis)**: Stores ADH and oxytocin; lesions here cause diabetes insipidus.
+- **Stalk (infundibulum)**: Conveys hypothalamic releasing/inhibiting hormones; stalk effect → hyperprolactinemia.
+- **Portal circulation**: Low‑pressure venous system; thrombosis → pan‑hypopituitarism.
+- **Sella turcica**: Bony enclosure; expansion produces headache, visual field loss (bitemporal hemianopia).
 
 ## Causes and risk factors  
 
-| Category | Common aetiologies in Kenya |
-|---|---|
-| Primary tumours | Pituitary adenoma (prolactinoma, GH‑secreting, ACTH‑secreting), craniopharyngioma (children). |
-| Infiltrative / infectious | Tuberculosis (sellar TB), HIV‑associated opportunistic infections, malaria cerebral complications, fungal infections (Histoplasma, Cryptococcus). |
-| Vascular | Pituitary apoplexy (hemorrhage/infarction), Sheehan’s syndrome (post‑partum haemorrhage). |
-| Autoimmune / inflammatory | Lymphocytic hypophysitis (more common in postpartum women). |
-| Traumatic / iatrogenic | Head injury, surgery, radiotherapy to brain. |
-| Systemic diseases | Sickle cell disease (micro‑infarction), systemic lupus erythematosus, sarcoidosis. |
-| Metabolic / endocrine | Chronic glucocorticoid therapy, severe hypothyroidism (can suppress TSH). |
+- **Primary tumours**: Pituitary adenoma (prolactinoma, GH‑secreting, ACTH‑secreting), craniopharyngioma (children).
+- **Infiltrative / infectious**: Tuberculosis (sellar TB), HIV‑associated opportunistic infections, malaria cerebral complications, fungal infections (Histoplasma, Cryptococcus).
+- **Vascular**: Pituitary apoplexy (hemorrhage/infarction), Sheehan’s syndrome (post‑partum haemorrhage).
+- **Autoimmune / inflammatory**: Lymphocytic hypophysitis (more common in postpartum women).
+- **Traumatic / iatrogenic**: Head injury, surgery, radiotherapy to brain.
+- **Systemic diseases**: Sickle cell disease (micro‑infarction), systemic lupus erythematosus, sarcoidosis.
+- **Metabolic / endocrine**: Chronic glucocorticoid therapy, severe hypothyroidism (can suppress TSH).
 
 ## Pathophysiology  
 
@@ -52,32 +48,28 @@ Stalk compression → ↓ dopamine → ↑ prolactin → galactorrhoea/infertili
 
 ## Clinical features  
 
-| Aspect | Key questions for the history | Why it matters / pathophysiologic link |
-|---|---|---|
-| **General** | Weight change (gain or loss), appetite, fatigue, fever, night sweats | Weight gain suggests ACTH excess (Cushing); loss points to hypopituitarism or chronic infection (TB, HIV). Fever/night sweats raise suspicion of infectious pituitary involvement (TB, malaria‑related sepsis). |
-| **Headache** | Onset, pattern (steady vs. sudden), radiation to eyes, aggravating/relieving factors | Pituitary macroadenoma or apoplexy compresses the dura and cavernous sinus → frontal‑temporal headache; sudden “thunderclap” headache suggests apoplexy or hemorrhage. |
-| **Visual symptoms** | Blurred vision, loss of peripheral vision, double vision, colour changes | Enlargement of the sellar mass compresses the optic chiasm → bitemporal hemianopia; cavernous sinus invasion can affect cranial nerves III, IV, VI → diplopia. |
-| **Menstrual / reproductive** | Cycle regularity, amenorrhoea, galactorrhoea, infertility, libido | Hyperprolactinaemia (prolactinoma) suppresses GnRH → oligomenorrhoea/amenorrhoea; galactorrhoea from prolactin excess. In men, low libido and erectile dysfunction reflect gonadotropin deficiency. |
-| **Sexual / adrenal** | Decreased libido, erectile dysfunction, loss of axillary/pubic hair, skin hyperpigmentation, salt craving | ACTH deficiency → adrenal insufficiency (fatigue, hyperpigmentation). Low LH/FSH → loss of secondary sexual hair. |
-| **Metabolic** | Central obesity, moon face, striae, easy bruising, hypertension, glucose intolerance | Classic Cushing’s syndrome from ACTH‑secreting adenoma or ectopic source. |
-| **Growth / bone** | Height change (in children), joint pain, fractures, bone pain | GH excess (acromegaly) → soft‑tissue swelling, joint pain; GH deficiency → reduced bone density. |
-| **Infectious / systemic** | Recent TB exposure, HIV status, malaria episodes, sickle‑cell crises, rheumatic fever history | TB, HIV, malaria and sickle‑cell disease can infiltrate or infarct the pituitary, leading to hypopituitarism or mass effect. |
-| **Medication / substance** | Use of dopamine antagonists, estrogen therapy, steroids, opiates | Dopamine antagonists raise prolactin; steroids suppress ACTH → secondary adrenal insufficiency. |
+- **General**: Weight change (gain or loss), appetite, fatigue, fever, night sweats — Weight gain suggests ACTH excess (Cushing); loss points to hypopituitarism or chronic infection (TB, HIV). Fever/night sweats raise suspicion of infectious pituitary involvement (TB, malaria‑related sepsis).
+- **Headache**: Onset, pattern (steady vs. sudden), radiation to eyes, aggravating/relieving factors — Pituitary macroadenoma or apoplexy compresses the dura and cavernous sinus → frontal‑temporal headache; sudden “thunderclap” headache suggests apoplexy or hemorrhage.
+- **Visual symptoms**: Blurred vision, loss of peripheral vision, double vision, colour changes — Enlargement of the sellar mass compresses the optic chiasm → bitemporal hemianopia; cavernous sinus invasion can affect cranial nerves III, IV, VI → diplopia.
+- **Menstrual / reproductive**: Cycle regularity, amenorrhoea, galactorrhoea, infertility, libido — Hyperprolactinaemia (prolactinoma) suppresses GnRH → oligomenorrhoea/amenorrhoea; galactorrhoea from prolactin excess. In men, low libido and erectile dysfunction reflect gonadotropin deficiency.
+- **Sexual / adrenal**: Decreased libido, erectile dysfunction, loss of axillary/pubic hair, skin hyperpigmentation, salt craving — ACTH deficiency → adrenal insufficiency (fatigue, hyperpigmentation). Low LH/FSH → loss of secondary sexual hair.
+- **Metabolic**: Central obesity, moon face, striae, easy bruising, hypertension, glucose intolerance — Classic Cushing’s syndrome from ACTH‑secreting adenoma or ectopic source.
+- **Growth / bone**: Height change (in children), joint pain, fractures, bone pain — GH excess (acromegaly) → soft‑tissue swelling, joint pain; GH deficiency → reduced bone density.
+- **Infectious / systemic**: Recent TB exposure, HIV status, malaria episodes, sickle‑cell crises, rheumatic fever history — TB, HIV, malaria and sickle‑cell disease can infiltrate or infarct the pituitary, leading to hypopituitarism or mass effect.
+- **Medication / substance**: Use of dopamine antagonists, estrogen therapy, steroids, opiates — Dopamine antagonists raise prolactin; steroids suppress ACTH → secondary adrenal insufficiency.
 
 **Examination findings and rationale**
 
-| Finding | Why it occurs |
-|---|---|
-| **Visual field testing (confrontation)** | Detects bitemporal hemianopia from chiasmal compression. |
-| **Fundoscopy** | May reveal papilledema if raised intracranial pressure from large adenoma or apoplexy. |
-| **Cranial nerve palsies (III, IV, VI)** | Mass effect on cavernous sinus; explains diplopia. |
-| **Galactorrhoea** | Prolactin excess stimulates milk production. |
-| **Skin changes** | Purple striae, bruising, acne, hyperpigmentation reflect cortisol excess or deficiency. |
-| **Blood pressure & glucose** | Hypertension & hyperglycaemia are common in Cushing’s; hypotension may signal adrenal crisis. |
-| **Body habitus** | Central obesity, moon face, buffalo hump point to chronic cortisol excess. |
-| **Peripheral edema, loss of axillary/pubic hair** | Low androgen production from gonadotropin deficiency. |
-| **Joint swelling, enlarged hands/feet** | GH excess (acromegaly) causes soft‑tissue overgrowth. |
-| **Signs of chronic infection** | Cervical lymphadenopathy, hepatosplenomegaly (TB, malaria) may coexist with pituitary involvement. |
+- **Visual field testing (confrontation)**: Detects bitemporal hemianopia from chiasmal compression.
+- **Fundoscopy**: May reveal papilledema if raised intracranial pressure from large adenoma or apoplexy.
+- **Cranial nerve palsies (III, IV, VI)**: Mass effect on cavernous sinus; explains diplopia.
+- **Galactorrhoea**: Prolactin excess stimulates milk production.
+- **Skin changes**: Purple striae, bruising, acne, hyperpigmentation reflect cortisol excess or deficiency.
+- **Blood pressure & glucose**: Hypertension & hyperglycaemia are common in Cushing’s; hypotension may signal adrenal crisis.
+- **Body habitus**: Central obesity, moon face, buffalo hump point to chronic cortisol excess.
+- **Peripheral edema, loss of axillary/pubic hair**: Low androgen production from gonadotropin deficiency.
+- **Joint swelling, enlarged hands/feet**: GH excess (acromegaly) causes soft‑tissue overgrowth.
+- **Signs of chronic infection**: Cervical lymphadenopathy, hepatosplenomegaly (TB, malaria) may coexist with pituitary involvement.
 
 ---
 
@@ -130,27 +122,41 @@ Stalk compression → ↓ dopamine → ↑ prolactin → galactorrhoea/infertili
 
 ## Management  
 
-| Phase | Key actions | Rationale / safety notes |
-|---|---|---|
-| **Immediate stabilisation** | • Secure airway, breathing, circulation – treat adrenal crisis with IV hydrocortisone (or equivalent) and isotonic saline. <br>• Correct severe hyponatraemia or hypoglycaemia promptly. <br>• Give high‑dose glucocorticoid **before** any thyroid hormone if both are deficient. | Prevent life‑threatening shock, seizures and cerebral oedema. Glucocorticoid replacement precedes thyroxine to avoid precipitating adrenal collapse. |
-| **Definitive endocrine therapy** | • Long‑term glucocorticoid replacement (physiological dose). <br>• Mineralocorticoid replacement if primary adrenal insufficiency (fludrocortisone). <br>• Levothyroxine titrated to normal TSH once cortisol covered. <br>• Sex steroid replacement (estrogen‑progestogen or testosterone) for gonadal failure. <br>• Desmopressin for central diabetes insipidus. | Mimic normal pituitary output; avoid over‑replacement which can cause osteoporosis, hypertension or fluid overload. |
-| **Surgical / radiological treatment** | • Trans‑sphenoidal surgery for macroadenoma causing visual loss, CSF leak or apoplexy. <br>• Radiosurgery (Gamma Knife) for residual or recurrent tumour. <br>• Dopamine agonists (e.g., cabergoline) for prolactinoma; somatostatin analogues for GH‑secreting adenoma. | Aim for tumour control while preserving pituitary function. Dopamine agonists are first‑line for prolactinoma because they shrink tumour and restore gonadal axis. |
-| **Monitoring** | • Daily electrolytes, glucose and blood pressure in acute phase. <br>• 6‑weekly TFT, cortisol, IGF‑1, prolactin after initiating therapy. <br>• Visual field testing after surgery or when tumour enlarges. <br>• MRI at 3‑6 months post‑op, then annually if stable. | Detect under‑ or over‑replacement, tumour regrowth and complications early. |
-| **Contra‑indications / safety** | • Do **not** start levothyroxine before adequate glucocorticoid cover. <br>• Avoid abrupt withdrawal of steroids – taper slowly. <br>• Dopamine agonists are contraindicated in uncontrolled hypertension or severe cardiac disease. | Prevent adrenal crisis, thyroid storm, hypertensive emergencies and cardiac arrhythmias. |
+- **Immediate stabilisation**
+  - Secure airway, breathing, circulation – treat adrenal crisis with IV hydrocortisone (or equivalent) and isotonic saline.
+  - Correct severe hyponatraemia or hypoglycaemia promptly.
+  - Give high‑dose glucocorticoid **before** any thyroid hormone if both are deficient. — Prevent life‑threatening shock, seizures and cerebral oedema. Glucocorticoid replacement precedes thyroxine to avoid precipitating adrenal collapse.
+- **Definitive endocrine therapy**
+  - Long‑term glucocorticoid replacement (physiological dose).
+  - Mineralocorticoid replacement if primary adrenal insufficiency (fludrocortisone).
+  - Levothyroxine titrated to normal TSH once cortisol covered.
+  - Sex steroid replacement (estrogen‑progestogen or testosterone) for gonadal failure.
+  - Desmopressin for central diabetes insipidus. — Mimic normal pituitary output; avoid over‑replacement which can cause osteoporosis, hypertension or fluid overload.
+- **Surgical / radiological treatment**
+  - Trans‑sphenoidal surgery for macroadenoma causing visual loss, CSF leak or apoplexy.
+  - Radiosurgery (Gamma Knife) for residual or recurrent tumour.
+  - Dopamine agonists (e.g., cabergoline) for prolactinoma; somatostatin analogues for GH‑secreting adenoma. — Aim for tumour control while preserving pituitary function. Dopamine agonists are first‑line for prolactinoma because they shrink tumour and restore gonadal axis.
+- **Monitoring**
+  - Daily electrolytes, glucose and blood pressure in acute phase.
+  - 6‑weekly TFT, cortisol, IGF‑1, prolactin after initiating therapy.
+  - Visual field testing after surgery or when tumour enlarges.
+  - MRI at 3‑6 months post‑op, then annually if stable. — Detect under‑ or over‑replacement, tumour regrowth and complications early.
+- **Contra‑indications / safety**
+  - Do **not** start levothyroxine before adequate glucocorticoid cover.
+  - Avoid abrupt withdrawal of steroids – taper slowly.
+  - Dopamine agonists are contraindicated in uncontrolled hypertension or severe cardiac disease. — Prevent adrenal crisis, thyroid storm, hypertensive emergencies and cardiac arrhythmias.
 
 ---
 
 ## Complications and prognosis  
 
-| Complication | Typical presentation | Impact on prognosis |
-|---|---|---|
-| **Adrenal crisis** | Sudden hypotension, vomiting, abdominal pain, hypoglycaemia | High early mortality; reversible with prompt steroids and fluids |
-| **Permanent hypopituitarism** | Need for lifelong hormone replacement | Good quality of life if replacement is adequate; risk of osteoporosis, cardiovascular disease |
-| **Visual field loss** | Bitemporal hemianopia, decreased acuity | May improve after decompression; delayed treatment leads to permanent deficit |
-| **Pituitary apoplexy** | Sudden severe headache, ophthalmoplegia, altered consciousness | Acute emergency; surgery within 24 h improves outcomes |
-| **Diabetes insipidus** | Polyuria, polydipsia, hypernatremia | Managed with desmopressin; chronic cases need monitoring of fluid balance |
-| **Tumour recurrence** | Rising hormone levels, new visual symptoms, MRI growth | Requires repeat surgery or radiotherapy; long‑term surveillance essential |
-| **Cardiovascular disease** | From chronic cortisol excess (Cushing) or GH excess | Increases morbidity; control of hormone excess improves survival |
+- **Adrenal crisis**: Sudden hypotension, vomiting, abdominal pain, hypoglycaemia — High early mortality; reversible with prompt steroids and fluids
+- **Permanent hypopituitarism**: Need for lifelong hormone replacement — Good quality of life if replacement is adequate; risk of osteoporosis, cardiovascular disease
+- **Visual field loss**: Bitemporal hemianopia, decreased acuity — May improve after decompression; delayed treatment leads to permanent deficit
+- **Pituitary apoplexy**: Sudden severe headache, ophthalmoplegia, altered consciousness — Acute emergency; surgery within 24 h improves outcomes
+- **Diabetes insipidus**: Polyuria, polydipsia, hypernatremia — Managed with desmopressin; chronic cases need monitoring of fluid balance
+- **Tumour recurrence**: Rising hormone levels, new visual symptoms, MRI growth — Requires repeat surgery or radiotherapy; long‑term surveillance essential
+- **Cardiovascular disease**: From chronic cortisol excess (Cushing) or GH excess — Increases morbidity; control of hormone excess improves survival
 
 Overall, patients with microadenomas and isolated hormone excess have an excellent prognosis when treated appropriately. Macroadenomas with visual compromise or apoplexy carry higher morbidity but still achieve good outcomes with timely intervention.
 

@@ -1,4 +1,4 @@
-# Biopsychosocial Formulation — Year 4 Psychiatry Notes
+# Biopsychosocial Formulation
 
 *Class presentation 3: how information about a patient is organised into an explanation of their presentation. Ten questions plus the take-home question. Plan 15–20 minutes.*
 
@@ -13,14 +13,12 @@
 
 ## 2. How is a formulation different from a diagnosis?
 
-| | **Diagnosis** | **Formulation** |
-|---|---|---|
-| Asks | *"What disorder might this be?"* | *"Why is this person presenting this way, now?"* |
-| Based on | Symptom patterns matched to criteria | The whole person: history, context, meaning |
-| Gives | A **label** and a category | An **explanation** and a **plan** |
-| Is | Shared by many people | **Unique** to the patient |
-| Guides | Which treatments are generally effective | **What to target first, how, and why** |
-| Changes | When criteria are met or not | As understanding grows |
+- **Asks**: *"What disorder might this be?"* — *"Why is this person presenting this way, now?"*
+- **Based on**: Symptom patterns matched to criteria — The whole person: history, context, meaning
+- **Gives**: A **label** and a category — An **explanation** and a **plan**
+- **Is**: Shared by many people — **Unique** to the patient
+- **Guides**: Which treatments are generally effective — **What to target first, how, and why**
+- **Changes**: When criteria are met or not — As understanding grows
 
 They **work together**: the diagnosis tells you what the illness is likely to be; the formulation tells you what to do for this person.
 
@@ -33,30 +31,24 @@ They **work together**: the diagnosis tells you what the illness is likely to be
 
 ## 4. Examples in each domain
 
-| Domain | Examples |
-|---|---|
-| **Biological** | Family history of depression; HIV or another chronic illness; head injury; alcohol, khat or cannabis use; steroid treatment; poor sleep; postpartum hormonal change |
-| **Psychological** | Anxious, perfectionist personality; harsh self-criticism; childhood abuse or loss; avoidant coping; hopelessness; low self-efficacy |
-| **Social** | Unemployment or debt; relationship breakdown; bereavement; living alone or far from family; exam pressure; stigma; supportive family; strong faith community |
+- **Biological**: Family history of depression; HIV or another chronic illness; head injury; alcohol, khat or cannabis use; steroid treatment; poor sleep; postpartum hormonal change
+- **Psychological**: Anxious, perfectionist personality; harsh self-criticism; childhood abuse or loss; avoidant coping; hopelessness; low self-efficacy
+- **Social**: Unemployment or debt; relationship breakdown; bereavement; living alone or far from family; exam pressure; stigma; supportive family; strong faith community
 
 ## 5. The four time-based factors
 
-| Factor | Meaning | Question it answers | Example |
-|---|---|---|---|
-| **Predisposing** | Make a person **vulnerable** over the long term | *Why this person?* | Family history, childhood trauma, anxious temperament |
-| **Precipitating** | The **trigger** that tips vulnerability into illness | *Why now?* | Bereavement, exam failure, drug use, loss of job |
-| **Perpetuating** | Keep the problem **going** or make it worse | *Why does it continue?* | Poor sleep, avoidance, ongoing conflict, non-adherence, isolation |
-| **Protective** | **Reduce** risk or help recovery | *What is helping, and what can we build on?* | Supportive family, faith, employment, good insight, treatment access |
+- **Predisposing**: Make a person **vulnerable** over the long term — *Why this person?* — Family history, childhood trauma, anxious temperament
+- **Precipitating**: The **trigger** that tips vulnerability into illness — *Why now?* — Bereavement, exam failure, drug use, loss of job
+- **Perpetuating**: Keep the problem **going** or make it worse — *Why does it continue?* — Poor sleep, avoidance, ongoing conflict, non-adherence, isolation
+- **Protective**: **Reduce** risk or help recovery — *What is helping, and what can we build on?* — Supportive family, faith, employment, good insight, treatment access
 
 ## 6. How these become the "4Ps" of formulation
 
 Place the **three domains** (biological, psychological, social) against the **four Ps**. That gives a **grid of 12 cells**, and every cell is a prompt for a question:
 
-| | Predisposing | Precipitating | Perpetuating | Protective |
-|---|---|---|---|---|
-| **Biological** | | | | |
-| **Psychological** | | | | |
-| **Social** | | | | |
+- **Biological**
+- **Psychological**
+- **Social**
 
 You fill the grid from the history, then **write the explanation** that links the cells.
 
@@ -90,11 +82,9 @@ You fill the grid from the history, then **write the explanation** that links th
 
 *Wanjiru, 24, a final-year student, presents with 6 weeks of low mood, poor sleep, weight loss and thoughts that she is a burden. She started drinking heavily after failing a major exam. Her mother has "depression". She lives alone far from home. A close friend has been checking on her.*
 
-| | Predisposing | Precipitating | Perpetuating | Protective |
-|---|---|---|---|---|
-| **Biological** | Mother with depression (family history) | Poor sleep and weight loss as the illness began | Insomnia, **alcohol use**, poor diet | Good physical health |
-| **Psychological** | Perfectionism, harsh self-criticism | **Failing the exam**, seen as total failure | Rumination, hopelessness, avoidance | Wants to get better, some insight |
-| **Social** | Lives far from family | Academic pressure, exam result | Isolation, withdrawal from classes, money worries | **Supportive friend**, university counselling available |
+- **Biological**: Mother with depression (family history) — Poor sleep and weight loss as the illness began — Insomnia, **alcohol use**, poor diet — Good physical health
+- **Psychological**: Perfectionism, harsh self-criticism — **Failing the exam**, seen as total failure — Rumination, hopelessness, avoidance — Wants to get better, some insight
+- **Social**: Lives far from family — Academic pressure, exam result — Isolation, withdrawal from classes, money worries — **Supportive friend**, university counselling available
 
 **Formulation (narrative):** *Wanjiru has a biological vulnerability to depression through her family history and a perfectionistic, self-critical style. The failed exam, in a young woman living alone under academic pressure, acted as the precipitant and she began to drink to cope. Heavy drinking, poor sleep, isolation and ruminative thinking are now maintaining and worsening her depression and raising her suicide risk. Her supportive friend and her wish to recover are strengths.*
 

@@ -1,4 +1,4 @@
-# Skin and soft‑tissue infections  
+# Skin and soft-tissue infections
 
 *After reading this note you will be able to recognise, classify and initiate appropriate investigation and management of common skin and soft‑tissue infections seen in Kenyan hospitals.  Always verify drug choices, doses and local protocols against the Kenya Ministry of Health guidelines and your hospital formulary.*
 
@@ -6,33 +6,29 @@
 Skin and soft‑tissue infections (SSTIs) are a spectrum of bacterial, fungal or parasitic conditions that involve the epidermis, dermis, subcutaneous tissue, fascia, muscle or associated structures, ranging from superficial cellulitis to necrotising fasciitis.
 
 ## Anatomy and physiology you need  
-| Layer | Relevant features for infection |
-|---|---|
-| Epidermis | Keratinised barrier; breach (trauma, ulcer) allows entry |
-| Dermis | Rich vascular supply – rapid spread of organisms & inflammatory cells |
-| Subcutaneous fat | Loose connective tissue – favours cellulitis, abscess formation |
-| Superficial fascia (Camper) | Plane for spread of cellulitis; barrier to deeper structures |
-| Deep fascia (Scarpa) | Tight, low‑vascular plane – when breached → necrotising fasciitis |
-| Muscle | Highly vascular; infection usually secondary to spread from fascia |
+- **Epidermis**: Keratinised barrier; breach (trauma, ulcer) allows entry
+- **Dermis**: Rich vascular supply – rapid spread of organisms & inflammatory cells
+- **Subcutaneous fat**: Loose connective tissue – favours cellulitis, abscess formation
+- **Superficial fascia (Camper)**: Plane for spread of cellulitis; barrier to deeper structures
+- **Deep fascia (Scarpa)**: Tight, low‑vascular plane – when breached → necrotising fasciitis
+- **Muscle**: Highly vascular; infection usually secondary to spread from fascia
 
 Understanding these layers helps localise the infection clinically and predicts the route of spread.
 
 ## Causes and risk factors  
 
-| Agent / Condition | Typical presentation | Kenyan risk factors |
-|---|---|---|
-| **Staphylococcus aureus** (incl. MRSA) | Purulent cellulitis, abscess, impetigo | Skin trauma, community‑acquired MRSA, HIV |
-| **Streptococcus pyogenes** (Group A) | Non‑purulent cellulitis, erysipelas | Crowded living conditions, lymphatic obstruction |
-| **Gram‑negative bacilli** (e.g., *Pseudomonas*) | Wet ulcers, diabetic foot infections | Chronic wounds, burns, immunosuppression |
-| **Anaerobes** (e.g., *Bacteroides*) | Deep tissue/necrotising infections | Poor hygiene, necrotic tissue, diabetic foot |
-| **Fungi** (*Candida*, dermatophytes) | Intertriginous erythema, chronic ulceration | Diabetes, HIV, prolonged antibiotics |
-| **Parasites** (*Leishmania*) | Ulcerating lesions | Rural exposure, malnutrition |
-| **HIV infection** | Extensive, atypical presentations, opportunistic pathogens | Low CD4 count |
-| **Tuberculosis (cutaneous TB)** | Lupus vulgaris, scrofuloderma | Co‑existing pulmonary TB |
-| **Malaria** (severe) | Secondary bacterial SSTI due to immunomodulation | High parasitaemia, splenomegaly |
-| **Sickle cell disease** | Leg ulcers, osteomyelitis | Vaso‑occlusive crises, poor perfusion |
-| **Rheumatic diseases** (e.g., lupus) | Vasculitic skin lesions prone to infection | Immunosuppressive therapy |
-| **Trauma, animal bites, burns** | Direct inoculation | Agricultural work, road traffic injuries |
+- **Staphylococcus aureus (incl. MRSA)**: Purulent cellulitis, abscess, impetigo — Skin trauma, community‑acquired MRSA, HIV
+- **Streptococcus pyogenes (Group A)**: Non‑purulent cellulitis, erysipelas — Crowded living conditions, lymphatic obstruction
+- **Gram‑negative bacilli (e.g., *Pseudomonas*)**: Wet ulcers, diabetic foot infections — Chronic wounds, burns, immunosuppression
+- **Anaerobes (e.g., *Bacteroides*)**: Deep tissue/necrotising infections — Poor hygiene, necrotic tissue, diabetic foot
+- **Fungi (*Candida*, dermatophytes)**: Intertriginous erythema, chronic ulceration — Diabetes, HIV, prolonged antibiotics
+- **Parasites (*Leishmania*)**: Ulcerating lesions — Rural exposure, malnutrition
+- **HIV infection**: Extensive, atypical presentations, opportunistic pathogens — Low CD4 count
+- **Tuberculosis (cutaneous TB)**: Lupus vulgaris, scrofuloderma — Co‑existing pulmonary TB
+- **Malaria (severe)**: Secondary bacterial SSTI due to immunomodulation — High parasitaemia, splenomegaly
+- **Sickle cell disease**: Leg ulcers, osteomyelitis — Vaso‑occlusive crises, poor perfusion
+- **Rheumatic diseases (e.g., lupus)**: Vasculitic skin lesions prone to infection — Immunosuppressive therapy
+- **Trauma, animal bites, burns**: Direct inoculation — Agricultural work, road traffic injuries
 
 ## Pathophysiology  
 
@@ -49,19 +45,17 @@ Understanding these layers helps localise the infection clinically and predicts 
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it matters |
-|---|---|---|
-| **Onset** | Sudden vs gradual; time since first sign | Rapid onset suggests cellulitis, necrotizing infection; gradual points to chronic ulcer or deep‑seated abscess |
-| **Pain** | Intensity, progression, pain out of proportion to appearance | Severe, disproportionate pain is a red flag for necrotizing fasciitis or deep tissue involvement |
-| **Systemic symptoms** | Fever, chills, rigors, malaise, headache, nausea, vomiting | Presence indicates systemic inflammatory response; helps grade severity and need for inpatient care |
-| **Local signs** | Erythema, warmth, swelling, tenderness, induration, bullae, necrosis, purulent discharge, foul odor | Erythema & warmth = cellulitis; fluctuance = abscess; bullae/necrosis = severe infection or toxin‑mediated disease |
-| **Progression** | How fast the lesion is expanding (cm/hr) | Fast spread (>2 cm in 24 h) suggests aggressive infection (e.g., necrotizing fasciitis) |
-| **Trauma / breach** | Recent cuts, insect bites, surgical wounds, pressure sores, animal bites | Provides portal of entry; certain organisms are linked to specific portals (e.g., Pasteurella in animal bites) |
-| **Comorbidities** | HIV status, diabetes, sickle‑cell disease, peripheral vascular disease, chronic steroid use, recent TB treatment, malaria, rheumatic disease | Immunocompromise or vascular disease predisposes to atypical organisms and poorer outcomes |
-| **Previous skin infection** | Recurrence, prior MRSA colonisation, recent antibiotics | Guides likely pathogen and empirical therapy |
-| **Medication / allergies** | Recent antibiotics, immunosuppressants, drug allergies | Influences choice of empiric agents and need for desensitisation |
-| **Travel / exposure** | Recent travel to rural areas, contact with livestock, swimming in fresh water | Raises suspicion for tropical pathogens (e.g., Vibrio, Mycobacterium ulcerans) |
-| **Vaccination** | Tetanus immunisation status | Determines need for tetanus prophylaxis |
+- **Onset**: Sudden vs gradual; time since first sign — Rapid onset suggests cellulitis, necrotizing infection; gradual points to chronic ulcer or deep‑seated abscess
+- **Pain**: Intensity, progression, pain out of proportion to appearance — Severe, disproportionate pain is a red flag for necrotizing fasciitis or deep tissue involvement
+- **Systemic symptoms**: Fever, chills, rigors, malaise, headache, nausea, vomiting — Presence indicates systemic inflammatory response; helps grade severity and need for inpatient care
+- **Local signs**: Erythema, warmth, swelling, tenderness, induration, bullae, necrosis, purulent discharge, foul odor — Erythema & warmth = cellulitis; fluctuance = abscess; bullae/necrosis = severe infection or toxin‑mediated disease
+- **Progression**: How fast the lesion is expanding (cm/hr) — Fast spread (>2 cm in 24 h) suggests aggressive infection (e.g., necrotizing fasciitis)
+- **Trauma / breach**: Recent cuts, insect bites, surgical wounds, pressure sores, animal bites — Provides portal of entry; certain organisms are linked to specific portals (e.g., Pasteurella in animal bites)
+- **Comorbidities**: HIV status, diabetes, sickle‑cell disease, peripheral vascular disease, chronic steroid use, recent TB treatment, malaria, rheumatic disease — Immunocompromise or vascular disease predisposes to atypical organisms and poorer outcomes
+- **Previous skin infection**: Recurrence, prior MRSA colonisation, recent antibiotics — Guides likely pathogen and empirical therapy
+- **Medication / allergies**: Recent antibiotics, immunosuppressants, drug allergies — Influences choice of empiric agents and need for desensitisation
+- **Travel / exposure**: Recent travel to rural areas, contact with livestock, swimming in fresh water — Raises suspicion for tropical pathogens (e.g., Vibrio, Mycobacterium ulcerans)
+- **Vaccination**: Tetanus immunisation status — Determines need for tetanus prophylaxis
 
 **Examination findings**  
 
@@ -124,12 +118,10 @@ Understanding these layers helps localise the infection clinically and predicts 
 
 **Severity grading** (adapted for resource‑limited settings):  
 
-| Category | Clinical criteria | Management implication |
-|---|---|---|
-| **Mild** | Limited (<5 cm) erythema, no systemic signs, stable vitals | Oral antibiotics, outpatient follow‑up if reliable |
-| **Moderate** | Erythema >5 cm, fever, tachycardia, elevated CRP, no organ dysfunction | IV antibiotics, consider short inpatient stay, monitor labs |
-| **Severe** | Hypotension, tachypnea, altered mental status, extensive necrosis, gas on imaging, LRINEC ≥8 | Immediate IV broad‑spectrum antibiotics, surgical consultation for debridement, ICU support if needed |
-| **Life‑threatening** | Septic shock, multi‑organ failure, rapidly progressing necrosis | Aggressive resuscitation, broad‑spectrum IV therapy, emergent surgical exploration, intensive monitoring |
+- **Mild**: Limited (<5 cm) erythema, no systemic signs, stable vitals — Oral antibiotics, outpatient follow‑up if reliable
+- **Moderate**: Erythema >5 cm, fever, tachycardia, elevated CRP, no organ dysfunction — IV antibiotics, consider short inpatient stay, monitor labs
+- **Severe**: Hypotension, tachypnea, altered mental status, extensive necrosis, gas on imaging, LRINEC ≥8 — Immediate IV broad‑spectrum antibiotics, surgical consultation for debridement, ICU support if needed
+- **Life‑threatening**: Septic shock, multi‑organ failure, rapidly progressing necrosis — Aggressive resuscitation, broad‑spectrum IV therapy, emergent surgical exploration, intensive monitoring
 
 Prompt recognition of severity guides the need for hospitalization, surgical intervention, and level of monitoring. Early escalation improves outcomes, especially in necrotising infections where delay beyond 6 hours markedly increases mortality.
 
@@ -141,13 +133,11 @@ Prompt recognition of severity guides the need for hospitalization, surgical int
 
 **Definitive treatment**  
 
-| Clinical pattern | First‑line antimicrobial class* | Adjunctive measures |
-|---|---|---|
-| Uncomplicated cellulitis (non‑purulent) | β‑lactam (penicillin / cephalosporin) covering streptococci | Elevation, warm compresses, analgesia |
-| Purulent cellulitis / abscess | Anti‑staphylococcal (cloxacillin, dicloxacillin, cefazolin) ± MRSA‑active (clindamycin, doxycycline, TMP‑SMX) if risk factors | Incision & drainage (I&D) of any fluctuant collection |
-| Necrotising fasciitis / severe SSTI | Carbapenem or β‑lactam/β‑lactamase inhibitor + clindamycin + MRSA‑active agent | Urgent surgical debridement, ICU support, IV immunoglobulin (if streptococcal toxic shock) |
-| Diabetic foot infection (moderate‑severe) | Broad‑spectrum covering gram‑positive, gram‑negative and anaerobes (e.g., amoxicillin‑clavulanate or carbapenem) | Off‑loading, wound care, glycaemic optimisation, possible surgical debridement |
-| HIV‑related extensive cellulitis | Same as above but low threshold for MRSA coverage and for opportunistic pathogens (e.g., atypical mycobacteria) | CD4 count, antiretroviral optimisation |
+- **Uncomplicated cellulitis (non‑purulent)**: β‑lactam (penicillin / cephalosporin) covering streptococci — Elevation, warm compresses, analgesia
+- **Purulent cellulitis / abscess**: Anti‑staphylococcal (cloxacillin, dicloxacillin, cefazolin) ± MRSA‑active (clindamycin, doxycycline, TMP‑SMX) if risk factors — Incision & drainage (I&D) of any fluctuant collection
+- **Necrotising fasciitis / severe SSTI**: Carbapenem or β‑lactam/β‑lactamase inhibitor + clindamycin + MRSA‑active agent — Urgent surgical debridement, ICU support, IV immunoglobulin (if streptococcal toxic shock)
+- **Diabetic foot infection (moderate‑severe)**: Broad‑spectrum covering gram‑positive, gram‑negative and anaerobes (e.g., amoxicillin‑clavulanate or carbapenem) — Off‑loading, wound care, glycaemic optimisation, possible surgical debridement
+- **HIV‑related extensive cellulitis**: Same as above but low threshold for MRSA coverage and for opportunistic pathogens (e.g., atypical mycobacteria) — CD4 count, antiretroviral optimisation
 
 \*Specify drug class; exact agents can be chosen according to local formulary and resistance patterns.  
 

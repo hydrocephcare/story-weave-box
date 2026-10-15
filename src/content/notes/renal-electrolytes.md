@@ -4,11 +4,9 @@
 
 ## Definition  
 
-| Electrolyte | Normal serum range | Disorder definition |
-|---|---|---|
-| Sodium (Na⁺) | 135‑145 mmol/L | Hyponatraemia < 135 mmol/L; Hypernatraemia > 145 mmol/L |
-| Potassium (K⁺) | 3.5‑5.0 mmol/L | Hypokalaemia < 3.5 mmol/L; Hyperkalaemia > 5.0 mmol/L |
-| Calcium (Ca²⁺) (total) | 2.1‑2.6 mmol/L | Hypocalcaemia < 2.1 mmol/L; Hypercalcaemia > 2.6 mmol/L |
+- **Sodium (Na⁺)**: 135‑145 mmol/L — Hyponatraemia < 135 mmol/L; Hypernatraemia > 145 mmol/L
+- **Potassium (K⁺)**: 3.5‑5.0 mmol/L — Hypokalaemia < 3.5 mmol/L; Hyperkalaemia > 5.0 mmol/L
+- **Calcium (Ca²⁺) (total)**: 2.1‑2.6 mmol/L — Hypocalcaemia < 2.1 mmol/L; Hypercalcaemia > 2.6 mmol/L
 
 Disorders are further graded by severity (mild, moderate, severe) based on serum values and presence of symptoms.
 
@@ -20,14 +18,12 @@ Disorders are further graded by severity (mild, moderate, severe) based on serum
 
 ## Causes and risk factors  
 
-| Electrolyte | Common Kenyan causes | Tropical / infection‑related risk factors |
-|---|---|---|
-| Hyponatraemia | Excess free water intake, SIADH, heart failure, liver cirrhosis, nephrotic syndrome, thiazide diuretics, adrenal insufficiency | Severe malaria (SIADH), TB meningitis (SIADH), HIV‑associated adrenal disease, chronic diarrhoea from dysentery |
-| Hypernatraemia | Water loss (vomiting, diarrhoea, fever), diabetes insipidus, inadequate water intake, high‑salt diet, osmotic diuresis | Malaria with high fever, sickle‑cell vaso‑occlusive crisis causing insensible loss, HIV‑related nephrogenic DI |
-| Hypokalaemia | Diuretics, vomiting, diarrhoea, laxative abuse, insulin therapy, β‑agonists, renal tubular acidosis type 1 | Severe malaria with profuse sweating, TB treatment (rifampicin‑induced loss), HIV‑associated diarrhoea |
-| Hyperkalaemia | Acute kidney injury, chronic kidney disease, ACE‑inhibitors/ARBs, potassium‑sparing diuretics, tissue breakdown (rhabdomyolysis) | Sickle‑cell crisis (muscle breakdown), severe malaria (haemolysis), HIV‑related nephropathy |
-| Hypocalcaemia | Vitamin D deficiency, hypoparathyroidism, renal failure, acute pancreatitis, massive transfusion | HIV‑related malabsorption, TB meningitis (calcitonin dysregulation), chronic diarrhoea, malaria‑induced hypomagnesaemia |
-| Hypercalcaemia | Primary hyperparathyroidism, malignancy (bone metastases, PTH‑rP), granulomatous disease (TB), excessive vitamin D | Disseminated TB (granulomatous production of 1‑α‑hydroxylase), HIV‑associated lymphoma, sickle‑cell osteonecrosis |
+- **Hyponatraemia**: Excess free water intake, SIADH, heart failure, liver cirrhosis, nephrotic syndrome, thiazide diuretics, adrenal insufficiency — Severe malaria (SIADH), TB meningitis (SIADH), HIV‑associated adrenal disease, chronic diarrhoea from dysentery
+- **Hypernatraemia**: Water loss (vomiting, diarrhoea, fever), diabetes insipidus, inadequate water intake, high‑salt diet, osmotic diuresis — Malaria with high fever, sickle‑cell vaso‑occlusive crisis causing insensible loss, HIV‑related nephrogenic DI
+- **Hypokalaemia**: Diuretics, vomiting, diarrhoea, laxative abuse, insulin therapy, β‑agonists, renal tubular acidosis type 1 — Severe malaria with profuse sweating, TB treatment (rifampicin‑induced loss), HIV‑associated diarrhoea
+- **Hyperkalaemia**: Acute kidney injury, chronic kidney disease, ACE‑inhibitors/ARBs, potassium‑sparing diuretics, tissue breakdown (rhabdomyolysis) — Sickle‑cell crisis (muscle breakdown), severe malaria (haemolysis), HIV‑related nephropathy
+- **Hypocalcaemia**: Vitamin D deficiency, hypoparathyroidism, renal failure, acute pancreatitis, massive transfusion — HIV‑related malabsorption, TB meningitis (calcitonin dysregulation), chronic diarrhoea, malaria‑induced hypomagnesaemia
+- **Hypercalcaemia**: Primary hyperparathyroidism, malignancy (bone metastases, PTH‑rP), granulomatous disease (TB), excessive vitamin D — Disseminated TB (granulomatous production of 1‑α‑hydroxylase), HIV‑associated lymphoma, sickle‑cell osteonecrosis
 
 ## Pathophysiology  
 
@@ -54,31 +50,27 @@ PTH excess or malignancy → ↑ bone resorption → hypercalcaemia → polyuria
 
 ## Clinical features  
 
-| Aspect | Questions to ask | Why it matters |
-|---|---|---|
-| **Onset & tempo** | “When did you first notice the symptoms? Did they appear suddenly or develop gradually?” | Acute changes suggest rapid shifts (e.g., hyper‑natremia from water loss, hyper‑kalemia from AKI) whereas chronic evolution points to endocrine or medication‑related disorders. |
-| **Fluid balance** | “How much fluid do you drink each day? Any recent vomiting, diarrhoea, fever, sweating, or diuretic use?” | Excess loss → hyponatraemia, hypokalaemia, hypocalcaemia; inadequate intake or water excess → hypernatremia, hyperkalaemia, hypercalcaemia. |
-| **Medication & supplements** | “What medicines, herbal remedies or over‑the‑counter supplements are you taking? Any recent changes?” | Loop/thiazide diuretics, ACE‑I/ARBs, potassium‑sparing agents, steroids, vitamin D, calcium tablets, antiretrovirals, anti‑TB drugs all alter electrolytes. |
-| **Renal & endocrine history** | “Do you have known kidney disease, diabetes, hypertension, thyroid or adrenal problems?” | CKD, diabetic nephropathy, primary hyperaldosteronism, Addison’s disease, hyperparathyroidism are common causes. |
-| **Infectious & tropical context** | “Recent malaria, TB, HIV infection or treatment? Any sickle‑cell crisis?” | Malaria‑induced hemolysis, TB drugs (rifampicin), HIV‑associated nephropathy, sickle‑cell vaso‑occlusion can precipitate electrolyte shifts. |
-| **Gastro‑intestinal losses** | “Any recent laxative abuse, nasogastric suction, bowel surgery?” | Direct loss of Na⁺, K⁺, Ca²⁺ in stool or gastric secretions. |
-| **Neurological symptoms** | “Weakness, cramps, paresthesias, confusion, seizures, altered consciousness?” | Hyper‑ or hypo‑natremia affect brain volume; hypo‑kalaemia and hypo‑calcaemia cause neuromuscular irritability; hyper‑kalaemia produces muscle weakness. |
-| **Cardiovascular signs** | “Palpitations, chest pain, dyspnoea, syncope?” | Hyper‑kalaemia produces brady‑arrhythmias; hypo‑kalaemia predisposes to ventricular ectopy; hyper‑calcaemia can cause shortened QT. |
-| **Bone & renal stone history** | “History of fractures, bone pain, kidney stones?” | Hyper‑calcaemia → stones, bone demineralisation; hypocalcaemia → tetany, osteomalacia. |
+- **Onset & tempo**: “When did you first notice the symptoms? Did they appear suddenly or develop gradually?” — Acute changes suggest rapid shifts (e.g., hyper‑natremia from water loss, hyper‑kalemia from AKI) whereas chronic evolution points to endocrine or medication‑related disorders.
+- **Fluid balance**: “How much fluid do you drink each day? Any recent vomiting, diarrhoea, fever, sweating, or diuretic use?” — Excess loss → hyponatraemia, hypokalaemia, hypocalcaemia; inadequate intake or water excess → hypernatremia, hyperkalaemia, hypercalcaemia.
+- **Medication & supplements**: “What medicines, herbal remedies or over‑the‑counter supplements are you taking? Any recent changes?” — Loop/thiazide diuretics, ACE‑I/ARBs, potassium‑sparing agents, steroids, vitamin D, calcium tablets, antiretrovirals, anti‑TB drugs all alter electrolytes.
+- **Renal & endocrine history**: “Do you have known kidney disease, diabetes, hypertension, thyroid or adrenal problems?” — CKD, diabetic nephropathy, primary hyperaldosteronism, Addison’s disease, hyperparathyroidism are common causes.
+- **Infectious & tropical context**: “Recent malaria, TB, HIV infection or treatment? Any sickle‑cell crisis?” — Malaria‑induced hemolysis, TB drugs (rifampicin), HIV‑associated nephropathy, sickle‑cell vaso‑occlusion can precipitate electrolyte shifts.
+- **Gastro‑intestinal losses**: “Any recent laxative abuse, nasogastric suction, bowel surgery?” — Direct loss of Na⁺, K⁺, Ca²⁺ in stool or gastric secretions.
+- **Neurological symptoms**: “Weakness, cramps, paresthesias, confusion, seizures, altered consciousness?” — Hyper‑ or hypo‑natremia affect brain volume; hypo‑kalaemia and hypo‑calcaemia cause neuromuscular irritability; hyper‑kalaemia produces muscle weakness.
+- **Cardiovascular signs**: “Palpitations, chest pain, dyspnoea, syncope?” — Hyper‑kalaemia produces brady‑arrhythmias; hypo‑kalaemia predisposes to ventricular ectopy; hyper‑calcaemia can cause shortened QT.
+- **Bone & renal stone history**: “History of fractures, bone pain, kidney stones?” — Hyper‑calcaemia → stones, bone demineralisation; hypocalcaemia → tetany, osteomalacia.
 
 ### Examination findings and pathophysiologic basis  
 
-| Finding | Reason it occurs |
-|---|---|
-| **Altered mental status** (confusion, lethargy, seizures) | Cerebral oedema in hyponatraemia; cellular dehydration in hyper‑natremia. |
-| **Muscle weakness / cramps** | Hypokalaemia → impaired Na⁺/K⁺‑ATPase; hyperkalaemia → membrane depolarisation; hypocalcaemia → increased neuronal excitability. |
-| **Tetany, Chvostek & Trousseau signs** | Low ionised Ca²⁺ increases neuromuscular excitability. |
-| **Blood pressure changes** (hypotension or hypertension) | Volume depletion (hyponatraemia) → hypotension; hyperaldosteronism or hyper‑calcaemia → hypertension. |
-| **Peripheral edema** | Hypervolemic hyponatraemia (e.g., heart failure, cirrhosis) or hyper‑calcaemia‑induced nephrogenic diabetes insipidus causing polyuria then volume overload. |
-| **Cardiac rhythm abnormalities** (peaked T waves, widened QRS, U waves) | Hyperkalaemia → peaked T, widened QRS; hypokalaemia → U waves, flattened T. |
-| **Dry mucous membranes, poor skin turgor** | Dehydration leading to hypernatremia. |
-| **Abdominal tenderness, renal colic** | Calcium stones from hyper‑calcaemia or hyperparathyroidism. |
-| **Signs of chronic disease** (e.g., lymphadenopathy, oral thrush) | Underlying HIV or TB that may drive renal tubular dysfunction. |
+- **Altered mental status (confusion, lethargy, seizures)**: Cerebral oedema in hyponatraemia; cellular dehydration in hyper‑natremia.
+- **Muscle weakness / cramps**: Hypokalaemia → impaired Na⁺/K⁺‑ATPase; hyperkalaemia → membrane depolarisation; hypocalcaemia → increased neuronal excitability.
+- **Tetany, Chvostek & Trousseau signs**: Low ionised Ca²⁺ increases neuromuscular excitability.
+- **Blood pressure changes (hypotension or hypertension)**: Volume depletion (hyponatraemia) → hypotension; hyperaldosteronism or hyper‑calcaemia → hypertension.
+- **Peripheral edema**: Hypervolemic hyponatraemia (e.g., heart failure, cirrhosis) or hyper‑calcaemia‑induced nephrogenic diabetes insipidus causing polyuria then volume overload.
+- **Cardiac rhythm abnormalities (peaked T waves, widened QRS, U waves)**: Hyperkalaemia → peaked T, widened QRS; hypokalaemia → U waves, flattened T.
+- **Dry mucous membranes, poor skin turgor**: Dehydration leading to hypernatremia.
+- **Abdominal tenderness, renal colic**: Calcium stones from hyper‑calcaemia or hyperparathyroidism.
+- **Signs of chronic disease (e.g., lymphadenopathy, oral thrush)**: Underlying HIV or TB that may drive renal tubular dysfunction.
 
 ---
 
@@ -117,14 +109,12 @@ PTH excess or malignancy → ↑ bone resorption → hypercalcaemia → polyuria
 
 ## Diagnosis and severity  
 
-| Disorder | Diagnostic criteria | Mild | Moderate | Severe |
-|---|---|---|---|---|
-| **Hyponatraemia** | Serum Na⁺ <135 mmol/L, confirmed hypotonic | 130‑134 | 125‑129 | <125 or symptomatic (seizure, coma) |
-| **Hypernatremia** | Serum Na⁺ >145 mmol/L, hypertonic | 146‑150 | 151‑155 | >155 or neurologic signs |
-| **Hypokalaemia** | Serum K⁺ <3.5 mmol/L | 3.0‑3.4 | 2.5‑2.9 | <2.5 or ECG changes |
-| **Hyperkalaemia** | Serum K⁺ >5.0 mmol/L | 5.1‑5.5 | 5.6‑6.0 | >6.0 or ECG changes |
-| **Hypocalcaemia** | Ionised Ca²⁺ <1.12 mmol/L | 1.0‑1.11 | 0.9‑0.99 | <0.9 or tetany/seizure |
-| **Hypercalcaemia** | Corrected Ca²⁺ >2.6 mmol/L | 2.6‑2.9 | 3.0‑3.4 | >3.5 or renal failure, neuropsychosis |
+- **Hyponatraemia**: Serum Na⁺ <135 mmol/L, confirmed hypotonic — 130‑134 — 125‑129 — <125 or symptomatic (seizure, coma)
+- **Hypernatremia**: Serum Na⁺ >145 mmol/L, hypertonic — 146‑150 — 151‑155 — >155 or neurologic signs
+- **Hypokalaemia**: Serum K⁺ <3.5 mmol/L — 3.0‑3.4 — 2.5‑2.9 — <2.5 or ECG changes
+- **Hyperkalaemia**: Serum K⁺ >5.0 mmol/L — 5.1‑5.5 — 5.6‑6.0 — >6.0 or ECG changes
+- **Hypocalcaemia**: Ionised Ca²⁺ <1.12 mmol/L — 1.0‑1.11 — 0.9‑0.99 — <0.9 or tetany/seizure
+- **Hypercalcaemia**: Corrected Ca²⁺ >2.6 mmol/L — 2.6‑2.9 — 3.0‑3.4 — >3.5 or renal failure, neuropsychosis
 
 Severity guides urgency: **Severe** disturbances demand immediate correction (IV fluids, calcium gluconate for hyperkalaemia, etc.) with continuous cardiac monitoring. **Moderate** cases allow slower correction, often oral/IV replacement or restriction. **Mild** disorders are managed with dietary advice and adjustment of offending drugs, with repeat labs in 24‑48 h.
 
@@ -149,14 +139,12 @@ Severity guides urgency: **Severe** disturbances demand immediate correction (IV
   * Aggressive intravenous hydration with isotonic saline to restore intravascular volume and promote renal calcium excretion.
 
 ### Definitive Management, Monitoring, and Safety
-| Disorder | Definitive Therapy | Monitoring Parameters | Safety & Contraindications |
-|---|---|---|---|
-| Hyponatraemia | Fluid restriction (SIADH); 0.9% saline (hypovolaemic); stop thiazides | Serum sodium every 2–4 hours during acute correction | Max correction rate strict; avoid rapid shifts |
-| Hypernatraemia | Enteral free water or 5% dextrose; treat diabetes insipidus | Strict fluid input/output, neurological checks | Avoid rapid drop to prevent cerebral oedema |
-| Hypokalaemia | Oral potassium chloride; potassium-sparing diuretics | Serum potassium, magnesium, continuous ECG | Max peripheral infusion concentration limits; check renal output |
-| Hyperkalaemia | Stop ACE inhibitors, ARBs, spironolactone; renal replacement | Serial ECGs, glucose, renal profile | Digoxin toxicity (calcium caution); never give IV push K+ |
-| Hypocalcaemia | Oral calcium carbonate; active vitamin D (calcitriol) | Chvostek/Trousseau signs, corrected calcium, phosphate | Avoid extravasation; correct hypomagnesaemia first |
-| Hypercalcaemia | Intravenous bisphosphonates (e.g., zoledronic acid); calcitonin | Hydration status, urine output, renal function | Bisphosphonates contraindicated in severe acute renal failure |
+- **Hyponatraemia**: Fluid restriction (SIADH); 0.9% saline (hypovolaemic); stop thiazides — Serum sodium every 2–4 hours during acute correction — Max correction rate strict; avoid rapid shifts
+- **Hypernatraemia**: Enteral free water or 5% dextrose; treat diabetes insipidus — Strict fluid input/output, neurological checks — Avoid rapid drop to prevent cerebral oedema
+- **Hypokalaemia**: Oral potassium chloride; potassium-sparing diuretics — Serum potassium, magnesium, continuous ECG — Max peripheral infusion concentration limits; check renal output
+- **Hyperkalaemia**: Stop ACE inhibitors, ARBs, spironolactone; renal replacement — Serial ECGs, glucose, renal profile — Digoxin toxicity (calcium caution); never give IV push K+
+- **Hypocalcaemia**: Oral calcium carbonate; active vitamin D (calcitriol) — Chvostek/Trousseau signs, corrected calcium, phosphate — Avoid extravasation; correct hypomagnesaemia first
+- **Hypercalcaemia**: Intravenous bisphosphonates (e.g., zoledronic acid); calcitonin — Hydration status, urine output, renal function — Bisphosphonates contraindicated in severe acute renal failure
 
 ---
 

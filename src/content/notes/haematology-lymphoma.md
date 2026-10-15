@@ -9,30 +9,26 @@
 Lymphomas are malignant proliferations of lymphoid cells that arise in the lymphoid system (lymph nodes, spleen, thymus, Waldeyer’s ring, gastrointestinal tract, bone marrow and extranodal sites). They are broadly classified into **Hodgkin lymphoma (HL)** and **non‑Hodgkin lymphoma (NHL)** based on histopathology and immunophenotype.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to lymphoma |
-|---|---|
-| Lymph node | Site of organised B‑cell germinal centres and T‑cell zones; common primary site |
-| Spleen | Filters blood, houses marginal zone B cells; frequent involvement in NHL |
-| Thymus | Site of T‑cell maturation; primary site for T‑cell lymphomas |
-| MALT (mucosa‑associated lymphoid tissue) | Extranodal origin for many gastric and intestinal NHL |
-| Bone marrow | Produces lymphoid precursors; site of disease spread and staging |
-| Lymphatic vessels | Conduit for tumour spread to contiguous nodes and distant sites |
+- **Lymph node**: Site of organised B‑cell germinal centres and T‑cell zones; common primary site
+- **Spleen**: Filters blood, houses marginal zone B cells; frequent involvement in NHL
+- **Thymus**: Site of T‑cell maturation; primary site for T‑cell lymphomas
+- **MALT (mucosa‑associated lymphoid tissue)**: Extranodal origin for many gastric and intestinal NHL
+- **Bone marrow**: Produces lymphoid precursors; site of disease spread and staging
+- **Lymphatic vessels**: Conduit for tumour spread to contiguous nodes and distant sites
 
 Understanding the normal flow of lymph (afferent → node → efferent → thoracic duct) helps explain patterns of nodal spread and why certain nodal groups are commonly involved first.
 
 ## Causes and risk factors  
 
-| Factor | Why it matters in Kenya |
-|---|---|
-| HIV infection | Immunosuppression reduces tumour surveillance; high incidence of aggressive NHL (especially Burkitt and diffuse large B‑cell) |
-| Endemic EBV exposure | EBV drives B‑cell proliferation; linked to endemic Burkitt lymphoma and some HL |
-| Chronic malaria | Repeated immune activation may facilitate EBV‑driven B‑cell transformation |
-| Tuberculosis (especially disseminated) | Chronic antigenic stimulation; co‑infection with HIV amplifies risk |
-| Sickle cell disease | Functional asplenia and chronic inflammation increase lymphoma risk |
-| Autoimmune rheumatic diseases (e.g., SLE, rheumatoid arthritis) | Persistent immune activation and immunosuppressive therapy raise NHL risk |
-| Occupational pesticide exposure (agricultural workers) | Possible genotoxic effect on lymphoid cells |
-| Family history of lymphoid malignancy | Genetic susceptibility (e.g., polymorphisms in DNA repair genes) |
-| Age and gender | HL peaks in young adults; NHL incidence rises after 50, slight male predominance |
+- **HIV infection**: Immunosuppression reduces tumour surveillance; high incidence of aggressive NHL (especially Burkitt and diffuse large B‑cell)
+- **Endemic EBV exposure**: EBV drives B‑cell proliferation; linked to endemic Burkitt lymphoma and some HL
+- **Chronic malaria**: Repeated immune activation may facilitate EBV‑driven B‑cell transformation
+- **Tuberculosis (especially disseminated)**: Chronic antigenic stimulation; co‑infection with HIV amplifies risk
+- **Sickle cell disease**: Functional asplenia and chronic inflammation increase lymphoma risk
+- **Autoimmune rheumatic diseases (e.g., SLE, rheumatoid arthritis)**: Persistent immune activation and immunosuppressive therapy raise NHL risk
+- **Occupational pesticide exposure (agricultural workers)**: Possible genotoxic effect on lymphoid cells
+- **Family history of lymphoid malignancy**: Genetic susceptibility (e.g., polymorphisms in DNA repair genes)
+- **Age and gender**: HL peaks in young adults; NHL incidence rises after 50, slight male predominance
 
 ## Pathophysiology  
 
@@ -50,41 +46,37 @@ In HIV‑positive patients, loss of CD4‑mediated immune surveillance accelerat
 
 ## Clinical features  
 
-| History element | Why it matters |
-|---|---|
-| **Duration of symptoms** | Distinguishes indolent (months‑years) from aggressive (weeks) disease. |
-| **B‑symptoms** (fever > 38 °C, drenching night sweats, unexplained weight loss > 10 % in 6 mo) | Classic systemic response to cytokine release; indicate higher tumour burden and poorer prognosis. |
-| **Site of lymphadenopathy** (cervical, supraclavicular, axillary, inguinal, mediastinal) | Certain subtypes favour specific regions (e.g., Hodgkin’s often cervical/supraclavicular; Burkitt’s may present with abdominal mass). |
-| **Pain or tenderness** | Tender nodes suggest infection or inflammatory cause; painless nodes are typical of lymphoma. |
-| **Rapid growth of a mass** | Suggests aggressive histology (e.g., diffuse large B‑cell, Burkitt’s). |
-| **Pruritus** | Common in Hodgkin’s disease; reflects cytokine‑mediated skin irritation. |
-| **History of HIV infection** | Immunosuppression predisposes to high‑grade B‑cell lymphomas and primary CNS lymphoma. |
-| **Previous TB or chronic malaria exposure** | Chronic antigenic stimulation may contribute to certain endemic lymphomas (e.g., EBV‑associated). |
-| **Autoimmune disease (SLE, rheumatoid arthritis)** | Long‑standing immune activation raises risk of lymphoma, especially diffuse large B‑cell. |
-| **Family history of haematological malignancy** | May indicate inherited susceptibility (e.g., familial CLL). |
-| **Exposure to pesticides or herbicides** | Occupational risk factor for non‑Hodgkin lymphoma in agricultural regions. |
-| **Symptoms of organ compression** (dyspnoea, dysphagia, superior vena cava syndrome) | Large mediastinal masses can impinge on airway or vessels. |
-| **Neurological deficits** (cranial nerve palsies, seizures) | May indicate CNS involvement or paraneoplastic phenomena. |
-| **Bleeding tendency or easy bruising** | Suggests marrow infiltration or thrombocytopenia. |
-| **Nighttime cough or hemoptysis** | Mediastinal or pulmonary involvement. |
-| **Abdominal fullness, early satiety, palpable mass** | Intra‑abdominal lymphadenopathy or organomegaly (e.g., splenic, hepatic). |
+- **Duration of symptoms**: Distinguishes indolent (months‑years) from aggressive (weeks) disease.
+- **B‑symptoms (fever > 38 °C, drenching night sweats, unexplained weight loss > 10 % in 6 mo)**: Classic systemic response to cytokine release; indicate higher tumour burden and poorer prognosis.
+- **Site of lymphadenopathy (cervical, supraclavicular, axillary, inguinal, mediastinal)**: Certain subtypes favour specific regions (e.g., Hodgkin’s often cervical/supraclavicular; Burkitt’s may present with abdominal mass).
+- **Pain or tenderness**: Tender nodes suggest infection or inflammatory cause; painless nodes are typical of lymphoma.
+- **Rapid growth of a mass**: Suggests aggressive histology (e.g., diffuse large B‑cell, Burkitt’s).
+- **Pruritus**: Common in Hodgkin’s disease; reflects cytokine‑mediated skin irritation.
+- **History of HIV infection**: Immunosuppression predisposes to high‑grade B‑cell lymphomas and primary CNS lymphoma.
+- **Previous TB or chronic malaria exposure**: Chronic antigenic stimulation may contribute to certain endemic lymphomas (e.g., EBV‑associated).
+- **Autoimmune disease (SLE, rheumatoid arthritis)**: Long‑standing immune activation raises risk of lymphoma, especially diffuse large B‑cell.
+- **Family history of haematological malignancy**: May indicate inherited susceptibility (e.g., familial CLL).
+- **Exposure to pesticides or herbicides**: Occupational risk factor for non‑Hodgkin lymphoma in agricultural regions.
+- **Symptoms of organ compression (dyspnoea, dysphagia, superior vena cava syndrome)**: Large mediastinal masses can impinge on airway or vessels.
+- **Neurological deficits (cranial nerve palsies, seizures)**: May indicate CNS involvement or paraneoplastic phenomena.
+- **Bleeding tendency or easy bruising**: Suggests marrow infiltration or thrombocytopenia.
+- **Nighttime cough or hemoptysis**: Mediastinal or pulmonary involvement.
+- **Abdominal fullness, early satiety, palpable mass**: Intra‑abdominal lymphadenopathy or organomegaly (e.g., splenic, hepatic).
 
 ### Examination findings and rationale  
 
-| Finding | Pathophysiological explanation |
-|---|---|
-| **Painless, firm, rubbery lymph nodes** | Neoplastic proliferation replaces normal nodal architecture, producing a non‑tender, solid mass. |
-| **Supraclavicular (Virchow’s) node** | Drainage from thoracic and abdominal cavities; enlargement often signals advanced disease. |
-| **Mediastinal widening on inspection** | Large anterior mediastinal mass (common in Hodgkin’s and primary mediastinal B‑cell lymphoma). |
-| **Splenomegaly** | Lymphoid infiltration of the spleen; common in CLL, follicular lymphoma, and some aggressive subtypes. |
-| **Hepatomegaly** | Hepatic involvement by lymphoma cells or secondary infiltration. |
-| **Palpable abdominal mass** | Enlarged mesenteric or retroperitoneal nodes (e.g., Burkitt’s, mantle‑cell). |
-| **Skin lesions (pruritic rash, nodules)** | Paraneoplastic pruritus or cutaneous lymphoma involvement. |
-| **Neurological signs** (cranial nerve palsy, focal deficits) | Direct CNS infiltration or compression by lymphomatous mass. |
-| **Anemia, thrombocytopenia, leukopenia on bedside CBC** | Marrow replacement reduces normal haematopoiesis. |
-| **Elevated lactate dehydrogenase (LDH) on bedside test** | High tumour turnover releases LDH; correlates with aggressive disease. |
-| **Bilateral cervical node enlargement with “B‑symptoms”** | Classic presentation of Hodgkin’s disease. |
-| **Peripheral lymphadenopathy with “B‑cell” pattern** (e.g., diffuse, non‑tender) | Suggests non‑Hodgkin lymphoma. |
+- **Painless, firm, rubbery lymph nodes**: Neoplastic proliferation replaces normal nodal architecture, producing a non‑tender, solid mass.
+- **Supraclavicular (Virchow’s) node**: Drainage from thoracic and abdominal cavities; enlargement often signals advanced disease.
+- **Mediastinal widening on inspection**: Large anterior mediastinal mass (common in Hodgkin’s and primary mediastinal B‑cell lymphoma).
+- **Splenomegaly**: Lymphoid infiltration of the spleen; common in CLL, follicular lymphoma, and some aggressive subtypes.
+- **Hepatomegaly**: Hepatic involvement by lymphoma cells or secondary infiltration.
+- **Palpable abdominal mass**: Enlarged mesenteric or retroperitoneal nodes (e.g., Burkitt’s, mantle‑cell).
+- **Skin lesions (pruritic rash, nodules)**: Paraneoplastic pruritus or cutaneous lymphoma involvement.
+- **Neurological signs (cranial nerve palsy, focal deficits)**: Direct CNS infiltration or compression by lymphomatous mass.
+- **Anemia, thrombocytopenia, leukopenia on bedside CBC**: Marrow replacement reduces normal haematopoiesis.
+- **Elevated lactate dehydrogenase (LDH) on bedside test**: High tumour turnover releases LDH; correlates with aggressive disease.
+- **Bilateral cervical node enlargement with “B‑symptoms”**: Classic presentation of Hodgkin’s disease.
+- **Peripheral lymphadenopathy with “B‑cell” pattern (e.g., diffuse, non‑tender)**: Suggests non‑Hodgkin lymphoma.
 
 ---
 
@@ -140,20 +132,16 @@ Severity is therefore a composite of histology, stage, IPI/IPS score, and patien
 ## Management  
 
 **1. Immediate stabilisation**  
-| Situation | Action | Rationale |
-|---|---|---|
-| Airway/respiratory compromise from mediastinal mass | Give supplemental O₂, position upright, arrange urgent radiology and possible steroids (e.g., dexamethasone) to reduce mass effect | Prevent airway collapse; steroids shrink lymphoid tissue rapidly |
-| Hyper‑uricaemic tumour lysis risk (large tumour burden, high LDH) | Start aggressive IV hydration, allopurinol or rasburicase, monitor electrolytes | Prevent acute kidney injury and cardiac arrhythmias |
-| Severe anaemia or thrombocytopenia causing bleeding | Transfuse packed red cells or platelets as indicated | Maintain tissue oxygenation and haemostasis |
+- **Airway/respiratory compromise from mediastinal mass**: Give supplemental O₂, position upright, arrange urgent radiology and possible steroids (e.g., dexamethasone) to reduce mass effect — Prevent airway collapse; steroids shrink lymphoid tissue rapidly
+- **Hyper‑uricaemic tumour lysis risk (large tumour burden, high LDH)**: Start aggressive IV hydration, allopurinol or rasburicase, monitor electrolytes — Prevent acute kidney injury and cardiac arrhythmias
+- **Severe anaemia or thrombocytopenia causing bleeding**: Transfuse packed red cells or platelets as indicated — Maintain tissue oxygenation and haemostasis
 
 **2. Definitive treatment** – chosen according to histology, stage and patient factors  
 
-| Lymphoma type | First‑line regimen (class) | When to add radiotherapy | Special considerations in Kenya |
-|---|---|---|---|
-| Diffuse large B‑cell (DLBCL) | Anthracycline‑based chemo (e.g., CHOP) + anti‑CD20 monoclonal antibody | Bulky disease >10 cm or residual mass after chemo | Ensure availability of rituximab; monitor cardiac function |
-| Hodgkin lymphoma (classical) | ABVD‑type regimen (adriamycin, bleomycin, vinblastine, dacarbazine) | Early stage favourable disease may use combined chemo‑radiotherapy | Bleomycin pulmonary toxicity – avoid in pre‑existing lung disease |
-| Burkitt lymphoma (endemic) | Intensive short‑course chemo (e.g., cyclophosphamide‑based) + CNS prophylaxis | Not routine; consider radiotherapy for residual CNS disease | High prevalence of EBV; screen for HIV, treat concurrently |
-| T‑cell lymphomas | CHOP‑like or newer agents (e.g., pralatrexate) | Rarely; consider radiotherapy for localized disease | Limited drug access – may need referral to tertiary centre |
+- **Diffuse large B‑cell (DLBCL)**: Anthracycline‑based chemo (e.g., CHOP) + anti‑CD20 monoclonal antibody — Bulky disease >10 cm or residual mass after chemo — Ensure availability of rituximab; monitor cardiac function
+- **Hodgkin lymphoma (classical)**: ABVD‑type regimen (adriamycin, bleomycin, vinblastine, dacarbazine) — Early stage favourable disease may use combined chemo‑radiotherapy — Bleomycin pulmonary toxicity – avoid in pre‑existing lung disease
+- **Burkitt lymphoma (endemic)**: Intensive short‑course chemo (e.g., cyclophosphamide‑based) + CNS prophylaxis — Not routine; consider radiotherapy for residual CNS disease — High prevalence of EBV; screen for HIV, treat concurrently
+- **T‑cell lymphomas**: CHOP‑like or newer agents (e.g., pralatrexate) — Rarely; consider radiotherapy for localized disease — Limited drug access – may need referral to tertiary centre
 
 **3. Monitoring & follow‑up**  
 - **During chemo:** CBC, renal & liver panels twice weekly; LDH weekly; cardiac echo before anthracyclines; pulmonary function if bleomycin used.  
@@ -170,14 +158,12 @@ Severity is therefore a composite of histology, stage, IPI/IPS score, and patien
 
 ## Complications and prognosis  
 
-| Complication | Typical timing | Clinical clue | Management |
-|---|---|---|---|
-| Tumour lysis syndrome | Early cycles | Rising uric acid, hyper‑K, falling Ca | Aggressive hydration, uric acid‑lowering agents, electrolyte correction |
-| Infections (bacterial, fungal, viral) | Throughout therapy | Fever, neutropenia, mucositis | Empiric broad‑spectrum antibiotics; antifungal if persistent; consider antiviral for HSV/CMV |
-| Secondary malignancies (AML, MDS) | Years after therapy | Cytopenias, new blasts | Bone‑marrow evaluation; refer to oncology for salvage |
-| Cardiotoxicity (anthracyclines) | Cumulative dose‑related | Dyspnoea, reduced EF | Cardiac monitoring; switch to non‑anthracycline regimen if needed |
-| Pulmonary toxicity (bleomycin) | After several cycles | Dry cough, hypoxia | Stop bleomycin, give steroids, oxygen support |
-| Relapse / refractory disease | Variable | New lymphadenopathy, B symptoms | Re‑staging, consider salvage chemo, autologous stem‑cell transplant if eligible |
+- **Tumour lysis syndrome**: Early cycles — Rising uric acid, hyper‑K, falling Ca — Aggressive hydration, uric acid‑lowering agents, electrolyte correction
+- **Infections (bacterial, fungal, viral)**: Throughout therapy — Fever, neutropenia, mucositis — Empiric broad‑spectrum antibiotics; antifungal if persistent; consider antiviral for HSV/CMV
+- **Secondary malignancies (AML, MDS)**: Years after therapy — Cytopenias, new blasts — Bone‑marrow evaluation; refer to oncology for salvage
+- **Cardiotoxicity (anthracyclines)**: Cumulative dose‑related — Dyspnoea, reduced EF — Cardiac monitoring; switch to non‑anthracycline regimen if needed
+- **Pulmonary toxicity (bleomycin)**: After several cycles — Dry cough, hypoxia — Stop bleomycin, give steroids, oxygen support
+- **Relapse / refractory disease**: Variable — New lymphadenopathy, B symptoms — Re‑staging, consider salvage chemo, autologous stem‑cell transplant if eligible
 
 **Prognosis** depends on histology, stage, LDH, performance status and HIV status. In Kenya, early‑stage Hodgkin lymphoma has >80 % cure rates; DLBCL 5‑year survival ~60 % with full therapy; HIV‑associated lymphomas have poorer outcomes but improve markedly with combined antiretroviral therapy and chemo.
 

@@ -23,12 +23,10 @@
 
 ## 2. Pharmacokinetics: what the body does to the drug
 
-| Step | What happens | Why it matters in psychiatry |
-|---|---|---|
-| **Absorption** | The drug enters the blood: oral, intramuscular, intravenous, or a long-acting depot injection. Oral drugs go through the liver first (first-pass metabolism). | Intramuscular and depot injections help in agitation and when adherence is poor. |
-| **Distribution** | The drug moves to tissues, bound partly to plasma proteins. Lipid-soluble drugs cross the blood-brain barrier and accumulate in fat. | Highly protein-bound drugs can interact; fat-soluble drugs (such as diazepam) act longer in older and obese patients. |
-| **Metabolism** | Mainly in the liver by **cytochrome P450 (CYP)** enzymes, such as CYP2D6, CYP3A4, CYP1A2 and CYP2C19. | Inhibitors raise drug levels (for example fluoxetine and paroxetine inhibit CYP2D6). Inducers lower them (for example carbamazepine, rifampicin). Smoking induces CYP1A2 and can lower olanzapine and clozapine levels. |
-| **Excretion** | Mainly by the kidney (lithium is excreted unchanged) or bile. | In kidney disease lithium accumulates and becomes toxic. |
+- **Absorption**: The drug enters the blood: oral, intramuscular, intravenous, or a long-acting depot injection. Oral drugs go through the liver first (first-pass metabolism). — Intramuscular and depot injections help in agitation and when adherence is poor.
+- **Distribution**: The drug moves to tissues, bound partly to plasma proteins. Lipid-soluble drugs cross the blood-brain barrier and accumulate in fat. — Highly protein-bound drugs can interact; fat-soluble drugs (such as diazepam) act longer in older and obese patients.
+- **Metabolism**: Mainly in the liver by **cytochrome P450 (CYP)** enzymes, such as CYP2D6, CYP3A4, CYP1A2 and CYP2C19. — Inhibitors raise drug levels (for example fluoxetine and paroxetine inhibit CYP2D6). Inducers lower them (for example carbamazepine, rifampicin). Smoking induces CYP1A2 and can lower olanzapine and clozapine levels.
+- **Excretion**: Mainly by the kidney (lithium is excreted unchanged) or bile. — In kidney disease lithium accumulates and becomes toxic.
 
 **Half-life** tells you how long a drug lasts. A drug reaches **steady state** after about 5 half-lives, so a change in dose shows its full effect only after that time.
 
@@ -56,47 +54,39 @@ Most psychotropic drugs work at this point: they **block reuptake** (SSRIs), **b
 
 ## 5. Neurotransmitters
 
-| Transmitter | Main role | Link to psychiatry and drugs |
-|---|---|---|
-| **Dopamine** | Reward, motivation, movement, thinking | Excess activity in some pathways is linked to psychosis. Antipsychotics block D2 receptors. |
-| **Serotonin (5-HT)** | Mood, sleep, appetite, anxiety | SSRIs raise synaptic serotonin. Many second-generation antipsychotics block 5-HT2A. |
-| **Norepinephrine** | Alertness, arousal, mood | SNRIs and atomoxetine raise it. |
-| **GABA** | Main inhibitory transmitter | Benzodiazepines enhance GABA-A receptor action: sedation, anxiolysis, anticonvulsant effect. |
-| **Glutamate** | Main excitatory transmitter | Involved in schizophrenia (NMDA receptor hypofunction) and in learning and memory. |
-| **Acetylcholine** | Memory, attention, autonomic function | **Nicotinic** receptors are ion channels; **muscarinic** receptors are G-protein coupled. Blocking muscarinic receptors causes dry mouth, constipation and blurred vision. |
-| **Histamine** | Wakefulness | Blocking H1 receptors causes sedation and weight gain. |
-| **Neuropeptides** | Modulate other transmitters (for example endorphins, oxytocin, substance P) | Involved in pain, stress and social behaviour. |
+- **Dopamine**: Reward, motivation, movement, thinking — Excess activity in some pathways is linked to psychosis. Antipsychotics block D2 receptors.
+- **Serotonin (5-HT)**: Mood, sleep, appetite, anxiety — SSRIs raise synaptic serotonin. Many second-generation antipsychotics block 5-HT2A.
+- **Norepinephrine**: Alertness, arousal, mood — SNRIs and atomoxetine raise it.
+- **GABA**: Main inhibitory transmitter — Benzodiazepines enhance GABA-A receptor action: sedation, anxiolysis, anticonvulsant effect.
+- **Glutamate**: Main excitatory transmitter — Involved in schizophrenia (NMDA receptor hypofunction) and in learning and memory.
+- **Acetylcholine**: Memory, attention, autonomic function — **Nicotinic** receptors are ion channels; **muscarinic** receptors are G-protein coupled. Blocking muscarinic receptors causes dry mouth, constipation and blurred vision.
+- **Histamine**: Wakefulness — Blocking H1 receptors causes sedation and weight gain.
+- **Neuropeptides**: Modulate other transmitters (for example endorphins, oxytocin, substance P) — Involved in pain, stress and social behaviour.
 
 ## 6. The four dopamine pathways
 
-| Pathway | Function | If activity is high | If a drug blocks D2 receptors here |
-|---|---|---|---|
-| **Mesolimbic** | Reward and salience | Positive symptoms of psychosis (hallucinations, delusions) | Positive symptoms improve (the aim of treatment) |
-| **Mesocortical** | Cognition, motivation, emotion | Low activity is linked to negative and cognitive symptoms | Negative symptoms may not improve or may worsen |
-| **Tuberoinfundibular** | Dopamine inhibits prolactin release from the pituitary | | **Hyperprolactinaemia** (galactorrhoea, menstrual disturbance, sexual dysfunction) |
-| **Nigrostriatal** | Control of movement | | **Extrapyramidal side effects** (dystonia, akathisia, parkinsonism, tardive dyskinesia) |
+- **Mesolimbic**: Reward and salience — Positive symptoms of psychosis (hallucinations, delusions) — Positive symptoms improve (the aim of treatment)
+- **Mesocortical**: Cognition, motivation, emotion — Low activity is linked to negative and cognitive symptoms — Negative symptoms may not improve or may worsen
+- **Tuberoinfundibular**: Dopamine inhibits prolactin release from the pituitary — **Hyperprolactinaemia** (galactorrhoea, menstrual disturbance, sexual dysfunction)
+- **Nigrostriatal**: Control of movement — **Extrapyramidal side effects** (dystonia, akathisia, parkinsonism, tardive dyskinesia)
 
 > Exam tip: link each pathway to one symptom and one side effect. Mesolimbic = positive symptoms; mesocortical = negative symptoms; tuberoinfundibular = prolactin; nigrostriatal = movement disorders.
 
 ## 7. Effects of psychotropic drugs: short term and long term
 
-| | Short term | Long term |
-|---|---|---|
-| **What happens** | Receptor effects begin within hours, with early side effects (sedation, nausea, agitation) | The brain adapts over weeks, and the clinical benefit appears |
-| **Examples** | SSRIs may cause anxiety and nausea in week 1; antipsychotics sedate and calm agitation quickly | Antidepressant response takes **about 2 to 4 weeks**; antipsychotics need weeks for psychotic symptoms; long-term risks are weight gain and metabolic syndrome, tardive dyskinesia, tolerance and dependence (benzodiazepines), and discontinuation symptoms |
+- **What happens**: Receptor effects begin within hours, with early side effects (sedation, nausea, agitation) — The brain adapts over weeks, and the clinical benefit appears
+- **Examples**: SSRIs may cause anxiety and nausea in week 1; antipsychotics sedate and calm agitation quickly — Antidepressant response takes **about 2 to 4 weeks**; antipsychotics need weeks for psychotic symptoms; long-term risks are weight gain and metabolic syndrome, tardive dyskinesia, tolerance and dependence (benzodiazepines), and discontinuation symptoms
 
 ## 8. Antidepressants
 
 **Theories.** The **monoamine hypothesis** says depression involves low serotonin, norepinephrine and dopamine function. The **inflammatory hypothesis** links depression with raised inflammatory markers and immune activation. Neither explains everything, and the delay before benefit suggests the brain adapts over time.
 
-| Class | Examples | Mechanism | Points to remember |
-|---|---|---|---|
-| **SSRIs** | Fluoxetine, sertraline, paroxetine, escitalopram | Block the serotonin transporter | First-line for depression and anxiety. Nausea, sexual dysfunction, insomnia or agitation at first, **hyponatraemia** (especially in older patients), increased bleeding risk. Paroxetine has the worst discontinuation symptoms. Fluoxetine has a long half-life. |
-| **SNRIs** | Venlafaxine, duloxetine | Block serotonin and norepinephrine reuptake | Can raise blood pressure (venlafaxine, dose-dependent). Nausea, sweating. Duloxetine also helps neuropathic pain. |
-| **Atypical antidepressants** | Bupropion | Blocks dopamine and norepinephrine reuptake | Lowers the seizure threshold; little sexual dysfunction; used in smoking cessation. |
-| | Trazodone | 5-HT2A antagonist and weak reuptake blocker | Sedating; priapism is a rare risk. |
-| | Mirtazapine | Blocks alpha-2, 5-HT2 and H1 receptors | Sedating, increases appetite and weight. |
-| | Vortioxetine | Multimodal serotonergic action | Nausea is the commonest side effect. |
+- **SSRIs**: Fluoxetine, sertraline, paroxetine, escitalopram — Block the serotonin transporter — First-line for depression and anxiety. Nausea, sexual dysfunction, insomnia or agitation at first, **hyponatraemia** (especially in older patients), increased bleeding risk. Paroxetine has the worst discontinuation symptoms. Fluoxetine has a long half-life.
+- **SNRIs**: Venlafaxine, duloxetine — Block serotonin and norepinephrine reuptake — Can raise blood pressure (venlafaxine, dose-dependent). Nausea, sweating. Duloxetine also helps neuropathic pain.
+- **Atypical antidepressants**: Bupropion — Blocks dopamine and norepinephrine reuptake — Lowers the seizure threshold; little sexual dysfunction; used in smoking cessation.
+- Trazodone — 5-HT2A antagonist and weak reuptake blocker — Sedating; priapism is a rare risk.
+- Mirtazapine — Blocks alpha-2, 5-HT2 and H1 receptors — Sedating, increases appetite and weight.
+- Vortioxetine — Multimodal serotonergic action — Nausea is the commonest side effect.
 
 **Safety points**
 
@@ -122,12 +112,10 @@ Most psychotropic drugs work at this point: they **block reuptake** (SSRIs), **b
 - Mechanism: block **D2 and 5-HT2A receptors**.
 - Fewer extrapyramidal effects at usual doses, but more **metabolic effects**.
 
-| Drug | Notable adverse effects |
-|---|---|
-| **Olanzapine** | Marked weight gain, diabetes and lipid changes, sedation |
-| **Risperidone** | Hyperprolactinaemia, extrapyramidal effects at higher doses |
-| **Quetiapine** | Sedation, postural hypotension, weight gain |
-| **Lurasidone** | Less weight gain; nausea and akathisia; take with food |
+- **Olanzapine**: Marked weight gain, diabetes and lipid changes, sedation
+- **Risperidone**: Hyperprolactinaemia, extrapyramidal effects at higher doses
+- **Quetiapine**: Sedation, postural hypotension, weight gain
+- **Lurasidone**: Less weight gain; nausea and akathisia; take with food
 
 **Monitor** weight, waist, blood pressure, glucose or HbA1c and lipids, and ask about movement symptoms.
 
@@ -151,11 +139,9 @@ Most psychotropic drugs work at this point: they **block reuptake** (SSRIs), **b
 
 ### Anticonvulsants used as mood stabilisers
 
-| Drug | Notes |
-|---|---|
-| **Valproic acid** | Effective in mania. **Teratogenic** (neural tube defects): avoid in women who can become pregnant. Weight gain, tremor, liver toxicity, pancreatitis. |
-| **Carbamazepine** | Mania and prevention. Strong CYP enzyme inducer, so it lowers levels of many drugs. Hyponatraemia, rash (HLA-B*1502 risk of Stevens-Johnson syndrome in some Asian populations), blood count changes. |
-| **Lamotrigine** | Prevents bipolar depression. **Titrate slowly**: rash can progress to Stevens-Johnson syndrome. |
+- **Valproic acid**: Effective in mania. **Teratogenic** (neural tube defects): avoid in women who can become pregnant. Weight gain, tremor, liver toxicity, pancreatitis.
+- **Carbamazepine**: Mania and prevention. Strong CYP enzyme inducer, so it lowers levels of many drugs. Hyponatraemia, rash (HLA-B*1502 risk of Stevens-Johnson syndrome in some Asian populations), blood count changes.
+- **Lamotrigine**: Prevents bipolar depression. **Titrate slowly**: rash can progress to Stevens-Johnson syndrome.
 
 ## 12. ADHD medication
 
@@ -164,12 +150,10 @@ Most psychotropic drugs work at this point: they **block reuptake** (SSRIs), **b
 
 ## 13. Special populations
 
-| Group | Points to consider |
-|---|---|
-| **Children and adolescents** | Few drugs are licensed for them; start low and go slow; monitor growth. Watch for suicidal thoughts when starting an antidepressant. Psychological therapy is often tried first. |
-| **Pregnancy and lactation** | Weigh the risk of untreated illness against the risk to the baby. **Avoid valproate.** Lithium and carbamazepine carry risks. Paroxetine is usually avoided in pregnancy. Benzodiazepines late in pregnancy can affect the newborn. Sertraline is commonly preferred during breastfeeding. Refer early for specialist advice. |
-| **Medically ill patients** | Adjust for kidney and liver disease; check heart disease and QT prolongation; consider interactions with other drugs. |
-| **Substance use disorder** | Benzodiazepines can be misused and are dangerous with alcohol and opioids. Bupropion lowers the seizure threshold, a problem in alcohol withdrawal. Treat withdrawal and intoxication first. |
+- **Children and adolescents**: Few drugs are licensed for them; start low and go slow; monitor growth. Watch for suicidal thoughts when starting an antidepressant. Psychological therapy is often tried first.
+- **Pregnancy and lactation**: Weigh the risk of untreated illness against the risk to the baby. **Avoid valproate.** Lithium and carbamazepine carry risks. Paroxetine is usually avoided in pregnancy. Benzodiazepines late in pregnancy can affect the newborn. Sertraline is commonly preferred during breastfeeding. Refer early for specialist advice.
+- **Medically ill patients**: Adjust for kidney and liver disease; check heart disease and QT prolongation; consider interactions with other drugs.
+- **Substance use disorder**: Benzodiazepines can be misused and are dangerous with alcohol and opioids. Bupropion lowers the seizure threshold, a problem in alcohol withdrawal. Treat withdrawal and intoxication first.
 
 ## 14. Cultural and ethnic considerations
 
@@ -197,17 +181,15 @@ Most psychotropic drugs work at this point: they **block reuptake** (SSRIs), **b
 
 ## Drugs at a glance
 
-| Class | Examples | Key warning |
-|---|---|---|
-| SSRIs | Fluoxetine, sertraline, paroxetine, escitalopram | Hyponatraemia, serotonin syndrome, discontinuation |
-| SNRIs | Venlafaxine, duloxetine | Raised blood pressure |
-| Atypical antidepressants | Bupropion, trazodone, mirtazapine, vortioxetine | Seizures (bupropion), sedation and weight gain (mirtazapine) |
-| First-generation antipsychotics | Haloperidol, fluphenazine, chlorpromazine | Extrapyramidal effects, NMS |
-| Second-generation antipsychotics | Olanzapine, risperidone, quetiapine, lurasidone | Metabolic syndrome, prolactin (risperidone) |
-| Benzodiazepines | Diazepam, clonazepam, alprazolam | Dependence, respiratory depression |
-| Non-benzodiazepine hypnotics, buspirone | Zolpidem, zopiclone, buspirone | Short-term use; buspirone is slow |
-| Mood stabilisers | Lithium, valproic acid, carbamazepine, lamotrigine | Lithium toxicity, valproate teratogenicity, lamotrigine rash |
-| ADHD drugs | Methylphenidate, atomoxetine | Appetite and growth, misuse; suicidality (atomoxetine) |
+- **SSRIs**: Fluoxetine, sertraline, paroxetine, escitalopram — Hyponatraemia, serotonin syndrome, discontinuation
+- **SNRIs**: Venlafaxine, duloxetine — Raised blood pressure
+- **Atypical antidepressants**: Bupropion, trazodone, mirtazapine, vortioxetine — Seizures (bupropion), sedation and weight gain (mirtazapine)
+- **First-generation antipsychotics**: Haloperidol, fluphenazine, chlorpromazine — Extrapyramidal effects, NMS
+- **Second-generation antipsychotics**: Olanzapine, risperidone, quetiapine, lurasidone — Metabolic syndrome, prolactin (risperidone)
+- **Benzodiazepines**: Diazepam, clonazepam, alprazolam — Dependence, respiratory depression
+- **Non-benzodiazepine hypnotics, buspirone**: Zolpidem, zopiclone, buspirone — Short-term use; buspirone is slow
+- **Mood stabilisers**: Lithium, valproic acid, carbamazepine, lamotrigine — Lithium toxicity, valproate teratogenicity, lamotrigine rash
+- **ADHD drugs**: Methylphenidate, atomoxetine — Appetite and growth, misuse; suicidality (atomoxetine)
 
 ## Practice questions
 

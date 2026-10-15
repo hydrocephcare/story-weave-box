@@ -25,24 +25,20 @@ These concepts are the foundation of psychiatric assessment. They let clinicians
 
 ## Normal and abnormal thoughts
 
-| Normal thoughts | Abnormal thoughts |
-|---|---|
-| Goal-directed and logical | Disorganised or illogical |
-| Contextually appropriate | Circumstantial or tangential |
-| Flexible and adaptive | Rigid or perseverative |
-| Reality-based content | Delusional or bizarre content |
-| Coherent organisation | Fragmented structure |
-| Appropriate emotional tone | Inappropriate affect |
+- **Goal-directed and logical**: Disorganised or illogical
+- **Contextually appropriate**: Circumstantial or tangential
+- **Flexible and adaptive**: Rigid or perseverative
+- **Reality-based content**: Delusional or bizarre content
+- **Coherent organisation**: Fragmented structure
+- **Appropriate emotional tone**: Inappropriate affect
 
 > Exam tip: telling normal from abnormal thinking needs careful assessment of **content**, **form**, and the degree to which the thoughts interfere with daily functioning and social relationships.
 
 ## Signs, symptoms and syndromes
 
-| | What it is | Examples |
-|---|---|---|
-| **Signs** | Objective, observable manifestations of illness detected by the clinician through examination | Psychomotor agitation, formal thought disorder, inappropriate affect |
-| **Symptoms** | Subjective experiences reported by the patient, which cannot be directly observed | Auditory hallucinations, depressed mood, anxiety, intrusive thoughts |
-| **Syndromes** | Clusters of signs and symptoms that consistently occur together, forming a recognisable pattern | Major depressive episode, psychotic syndrome |
+- **Signs**: Objective, observable manifestations of illness detected by the clinician through examination — Psychomotor agitation, formal thought disorder, inappropriate affect
+- **Symptoms**: Subjective experiences reported by the patient, which cannot be directly observed — Auditory hallucinations, depressed mood, anxiety, intrusive thoughts
+- **Syndromes**: Clusters of signs and symptoms that consistently occur together, forming a recognisable pattern — Major depressive episode, psychotic syndrome
 
 Accurate diagnosis needs you to identify these systematically, understand how they relate in time, and assess their effect on psychosocial functioning.
 
@@ -79,46 +75,38 @@ Recurrent, intrusive thoughts, images or impulses that are experienced as **dist
 
 ## Disorders of perception
 
-| Term | Meaning |
-|---|---|
-| **Hallucinations** | Perceptions in the absence of external stimuli, in any sensory modality. Auditory hallucinations are the most common in psychiatric disorders, particularly command voices in schizophrenia. |
-| **Illusions** | Misperceptions of actual external stimuli. They often occur in altered consciousness, delirium or extreme emotional states, where reality testing remains partly intact. |
-| **Pseudohallucinations** | Vivid mental imagery experienced as coming from internal sources. It lacks the external quality of true hallucinations, and the person keeps some insight into its unreality. |
+- **Hallucinations**: Perceptions in the absence of external stimuli, in any sensory modality. Auditory hallucinations are the most common in psychiatric disorders, particularly command voices in schizophrenia.
+- **Illusions**: Misperceptions of actual external stimuli. They often occur in altered consciousness, delirium or extreme emotional states, where reality testing remains partly intact.
+- **Pseudohallucinations**: Vivid mental imagery experienced as coming from internal sources. It lacks the external quality of true hallucinations, and the person keeps some insight into its unreality.
 
 *In the lecture slides, delusions appear next to the perception disorders. They are a disorder of thought content, so they are listed above.*
 
 ## Mood and affect
 
-| Term | Meaning |
-|---|---|
-| **Euthymic** | Normal, stable mood without significant elevation or depression. |
-| **Euphoric** | Abnormally elevated, expansive or irritable mood; in a manic episode it lasts at least one week. |
-| **Irritable** | Easily provoked to anger or annoyance, often accompanying mood episodes. |
-| **Affect assessment** | Congruent, restricted, blunted or inappropriate emotional expression relative to content. |
+- **Euthymic**: Normal, stable mood without significant elevation or depression.
+- **Euphoric**: Abnormally elevated, expansive or irritable mood; in a manic episode it lasts at least one week.
+- **Irritable**: Easily provoked to anger or annoyance, often accompanying mood episodes.
+- **Affect assessment**: Congruent, restricted, blunted or inappropriate emotional expression relative to content.
 
 **Mood** is the sustained emotional state. **Affect** is the immediate emotional expression observed during the clinical interview, and you assess its congruence and appropriateness.
 
 ## Psychomotor behaviour and speech
 
-| Psychomotor behaviour | Speech disorders |
-|---|---|
-| **Normal:** appropriate motor activity | **Alogia:** poverty of speech |
-| **Agitated:** excessive, restless movement | **Clang associations:** sound-based connections |
-| **Retarded:** slowed motor responses | **Neologisms:** invented words or phrases |
-| **Catatonic:** waxy flexibility, negativism | **Pressured speech:** rapid, excessive talking |
-| **Tics:** involuntary motor movements | **Mutism:** complete absence of speech |
+- **Normal: appropriate motor activity**: **Alogia:** poverty of speech
+- **Agitated: excessive, restless movement**: **Clang associations:** sound-based connections
+- **Retarded: slowed motor responses**: **Neologisms:** invented words or phrases
+- **Catatonic: waxy flexibility, negativism**: **Pressured speech:** rapid, excessive talking
+- **Tics: involuntary motor movements**: **Mutism:** complete absence of speech
 
 These often occur together and give important diagnostic information about the underlying neuropsychiatric condition, particularly in psychotic and mood disorders.
 
 ## Memory and cognition
 
-| Memory disorders | Cognitive deficits |
-|---|---|
-| Confabulation | Attention impairment |
-| Déjà vu phenomena | Concentration difficulties |
-| Jamais vu experiences | Disorientation |
-| Anterograde amnesia | Planning deficits |
-| Retrograde amnesia | Executive dysfunction |
+- **Confabulation**: Attention impairment
+- **Déjà vu phenomena**: Concentration difficulties
+- **Jamais vu experiences**: Disorientation
+- **Anterograde amnesia**: Planning deficits
+- **Retrograde amnesia**: Executive dysfunction
 
 Cognitive assessment covers several domains: **orientation** to time, place and person, and the **executive functions** that are critical for independent living and for keeping to treatment.
 

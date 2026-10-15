@@ -6,15 +6,13 @@
 Geriatric medicine is the branch of internal medicine that addresses the health care needs of adults aged ≥ 65 years, with emphasis on multimorbidity, functional decline, poly‑pharmacy, and the social‑environmental context that influences ageing in Kenya.
 
 ## Anatomy and physiology you need  
-| System | Key age‑related change | Clinical relevance |
-|---|---|---|
-| Cardiovascular | Reduced arterial compliance, LV diastolic dysfunction | ↑ systolic BP, orthostatic hypotension, heart failure |
-| Respiratory | Decreased elastic recoil, weaker cough | ↑ risk of pneumonia, TB re‑activation |
-| Renal | ↓ GFR, impaired concentrating ability | Drug accumulation, electrolyte imbalance |
-| Musculoskeletal | Sarcopenia, osteopenia | Falls, frailty, limited ADL |
-| Neurologic | Neuronal loss, slower conduction | Cognitive decline, gait disturbance |
-| Immune | Immunosenescence | Higher infection susceptibility (HIV, malaria, TB) |
-| Gastro‑intestinal | Delayed gastric emptying, reduced motility | Constipation, malabsorption |
+- **Cardiovascular**: Reduced arterial compliance, LV diastolic dysfunction — ↑ systolic BP, orthostatic hypotension, heart failure
+- **Respiratory**: Decreased elastic recoil, weaker cough — ↑ risk of pneumonia, TB re‑activation
+- **Renal**: ↓ GFR, impaired concentrating ability — Drug accumulation, electrolyte imbalance
+- **Musculoskeletal**: Sarcopenia, osteopenia — Falls, frailty, limited ADL
+- **Neurologic**: Neuronal loss, slower conduction — Cognitive decline, gait disturbance
+- **Immune**: Immunosenescence — Higher infection susceptibility (HIV, malaria, TB)
+- **Gastro‑intestinal**: Delayed gastric emptying, reduced motility — Constipation, malabsorption
 
 ## Causes and risk factors  
 - **Non‑communicable diseases**: hypertension, type 2 diabetes, ischaemic heart disease, chronic kidney disease, COPD.  
@@ -35,33 +33,29 @@ Poly‑pharmacy → drug‑drug interactions + renal/hepatic clearance decline �
 
 **History – key questions**  
 
-| Domain | Questions to ask | Why it matters |
-|---|---|---|
-| Functional status | “Can you walk unaided? How many stairs can you climb? Do you need help with bathing, dressing, feeding?” | Decline in ADL/IADL signals frailty, sarcopenia or early cognitive impairment. |
-| Falls & balance | “Any falls in the past year? Any near‑falls or unsteadiness?” | Falls are the common presentation of orthostatic hypotension, neuropathy, visual loss, polypharmacy or cardiac arrhythmia. |
-| Cognition & mood | “Do you have memory problems? Any confusion, disorientation, mood changes, loss of interest?” | Early dementia, delirium, depression or medication side‑effects may mimic or worsen geriatric syndromes. |
-| Polypharmacy | “What medicines (prescribed, OTC, herbal) do you take? Any recent changes?” | Drug‑drug interactions, anticholinergic burden and renal/hepatic clearance affect presentation and safety. |
-| Chronic diseases | “Do you have hypertension, diabetes, heart disease, HIV, TB, malaria, sickle cell, rheumatic disease?” | Co‑morbidities drive organ‑specific symptoms (e.g., dyspnoea from heart failure, neuropathy from HIV). |
-| Nutrition & weight | “Any recent weight loss or gain? Appetite? Dietary restrictions?” | Malnutrition, sarcopenia, and micronutrient deficiencies (e.g., B12) influence frailty and wound healing. |
-| Social & environmental | “Who lives with you? Access to water, sanitation, transport? Any recent travel?” | Social isolation, poor housing, and exposure to endemic infections (malaria, TB) affect risk and adherence. |
-| Urinary & bowel | “Frequency, urgency, incontinence, constipation?” | Urinary tract infection, prostate disease, neurogenic bladder or constipation can precipitate delirium. |
-| Pain & sensory | “Any joint pain, back pain, numbness, tingling?” | Osteoarthritis, rheumatoid arthritis, peripheral neuropathy (diabetes, HIV) limit mobility. |
-| Sleep & fatigue | “Difficulty sleeping? Daytime sleepiness?” | Sleep apnea, restless legs, depression, medication side‑effects contribute to functional decline. |
+- **Functional status**: “Can you walk unaided? How many stairs can you climb? Do you need help with bathing, dressing, feeding?” — Decline in ADL/IADL signals frailty, sarcopenia or early cognitive impairment.
+- **Falls & balance**: “Any falls in the past year? Any near‑falls or unsteadiness?” — Falls are the common presentation of orthostatic hypotension, neuropathy, visual loss, polypharmacy or cardiac arrhythmia.
+- **Cognition & mood**: “Do you have memory problems? Any confusion, disorientation, mood changes, loss of interest?” — Early dementia, delirium, depression or medication side‑effects may mimic or worsen geriatric syndromes.
+- **Polypharmacy**: “What medicines (prescribed, OTC, herbal) do you take? Any recent changes?” — Drug‑drug interactions, anticholinergic burden and renal/hepatic clearance affect presentation and safety.
+- **Chronic diseases**: “Do you have hypertension, diabetes, heart disease, HIV, TB, malaria, sickle cell, rheumatic disease?” — Co‑morbidities drive organ‑specific symptoms (e.g., dyspnoea from heart failure, neuropathy from HIV).
+- **Nutrition & weight**: “Any recent weight loss or gain? Appetite? Dietary restrictions?” — Malnutrition, sarcopenia, and micronutrient deficiencies (e.g., B12) influence frailty and wound healing.
+- **Social & environmental**: “Who lives with you? Access to water, sanitation, transport? Any recent travel?” — Social isolation, poor housing, and exposure to endemic infections (malaria, TB) affect risk and adherence.
+- **Urinary & bowel**: “Frequency, urgency, incontinence, constipation?” — Urinary tract infection, prostate disease, neurogenic bladder or constipation can precipitate delirium.
+- **Pain & sensory**: “Any joint pain, back pain, numbness, tingling?” — Osteoarthritis, rheumatoid arthritis, peripheral neuropathy (diabetes, HIV) limit mobility.
+- **Sleep & fatigue**: “Difficulty sleeping? Daytime sleepiness?” — Sleep apnea, restless legs, depression, medication side‑effects contribute to functional decline.
 
 **Examination – what to look for and why**  
 
-| System / Sign | What to assess | Pathophysiologic rationale |
-|---|---|---|
-| General | Weight, BMI, skin turgor, hair, nails, frailty phenotype (shrinking, weakness, slowness, low activity, exhaustion) | Detects malnutrition, sarcopenia, chronic disease cachexia. |
-| Vital signs | Blood pressure (supine & standing), heart rate, respiratory rate, temperature, oxygen saturation | Orthostatic hypotension, fever (infection), tachyarrhythmia, hypoxia. |
-| Cardiovascular | JVP, heart sounds, peripheral pulses, edema | Heart failure, valvular disease, peripheral vascular disease. |
-| Respiratory | Chest expansion, breath sounds, percussion | Pneumonia, COPD, TB, pleural effusion. |
-| Neurological | Mental status (MMSE/6‑CIT), cranial nerves, gait (timed up‑and‑go), reflexes, sensation, coordination | Delirium, dementia, stroke, peripheral neuropathy (diabetes, HIV, sickle cell). |
-| Musculoskeletal | Joint range, deformities, muscle bulk, grip strength | Osteoarthritis, rheumatoid arthritis, sarcopenia. |
-| Abdominal | Liver size, tenderness, ascites | Hepatomegaly (viral hepatitis, TB), portal hypertension. |
-| Skin | Rashes, ulcers, bruises, fungal lesions | Pressure sores, cellulitis, drug eruptions, opportunistic infections (HIV). |
-| Genitourinary | Prostate exam (men), pelvic exam (women if indicated) | BPH, prostate cancer, urinary infection. |
-| Sensory (vision, hearing) | Visual acuity, fundus, hearing test (whisper) | Visual impairment contributes to falls; hearing loss to social isolation and delirium. |
+- **General**: Weight, BMI, skin turgor, hair, nails, frailty phenotype (shrinking, weakness, slowness, low activity, exhaustion) — Detects malnutrition, sarcopenia, chronic disease cachexia.
+- **Vital signs**: Blood pressure (supine & standing), heart rate, respiratory rate, temperature, oxygen saturation — Orthostatic hypotension, fever (infection), tachyarrhythmia, hypoxia.
+- **Cardiovascular**: JVP, heart sounds, peripheral pulses, edema — Heart failure, valvular disease, peripheral vascular disease.
+- **Respiratory**: Chest expansion, breath sounds, percussion — Pneumonia, COPD, TB, pleural effusion.
+- **Neurological**: Mental status (MMSE/6‑CIT), cranial nerves, gait (timed up‑and‑go), reflexes, sensation, coordination — Delirium, dementia, stroke, peripheral neuropathy (diabetes, HIV, sickle cell).
+- **Musculoskeletal**: Joint range, deformities, muscle bulk, grip strength — Osteoarthritis, rheumatoid arthritis, sarcopenia.
+- **Abdominal**: Liver size, tenderness, ascites — Hepatomegaly (viral hepatitis, TB), portal hypertension.
+- **Skin**: Rashes, ulcers, bruises, fungal lesions — Pressure sores, cellulitis, drug eruptions, opportunistic infections (HIV).
+- **Genitourinary**: Prostate exam (men), pelvic exam (women if indicated) — BPH, prostate cancer, urinary infection.
+- **Sensory (vision, hearing)**: Visual acuity, fundus, hearing test (whisper) — Visual impairment contributes to falls; hearing loss to social isolation and delirium.
 
 ---
 
@@ -85,26 +79,24 @@ Poly‑pharmacy → drug‑drug interactions + renal/hepatic clearance decline �
 
 ## Investigations  
 
-| Test | What it answers | Interpretation |
-|---|---|---|
-| Full blood count | Anaemia, infection, leukopenia | Low Hb → chronic disease, iron deficiency, hemolysis; neutrophilia → bacterial infection; lymphopenia → HIV |
-| Electrolytes & renal panel | Kidney function, electrolyte disturbances | Creatinine ↑ → CKD; Na⁺ ↓ → SIADH or dehydration |
-| Liver function tests | Hepatocellular injury, cholestasis | ALT/AST ↑ → viral hepatitis, TB meds; ALP ↑ → bone disease |
-| Fasting glucose / HbA1c | Diabetes status | HbA1c ≥6.5 % → diabetes; >8 % suggests poor control |
-| Lipid profile | Cardiovascular risk | LDL ↑ → atherosclerosis risk |
-| BNP or NT‑proBNP | Cardiac stretch | Elevated → heart failure; helps differentiate from COPD |
-| Chest X‑ray | Pulmonary pathology | Consolidation → pneumonia; cavitation → TB |
-| ECG | Arrhythmia, ischemia | A‑fib, LVH, ST changes |
-| Spirometry | Obstructive vs restrictive lung disease | FEV1/FVC <0.7 → COPD; reduced FVC → restriction |
-| Urinalysis & culture | UTI, proteinuria | Leukocyte esterase + nitrites → infection; protein → renal disease |
-| HIV test (4th generation) | HIV status | Positive → need CD4, viral load |
-| CD4 count & viral load (if HIV+) | Immune status, treatment response | CD4 <200 → opportunistic infection risk |
-| Sputum GeneXpert / AFB smear | TB detection | MTB detected → start anti‑TB |
-| Rapid malaria test | Malaria infection | Positive HRP‑2 → treat malaria |
-| Serum B12 & folate | Macrocytic anaemia, neuropathy | Low B12 → neuropathy, cognitive decline |
-| Bone mineral density (DXA) | Osteoporosis | T‑score ≤‑2.5 → high fracture risk |
-| Cognitive screen (MMSE/6‑CIT) | Baseline cognition | Score <24 → probable dementia |
-| Geriatric Depression Scale | Mood disorder | Score ≥5 → depression |
+- **Full blood count**: Anaemia, infection, leukopenia — Low Hb → chronic disease, iron deficiency, hemolysis; neutrophilia → bacterial infection; lymphopenia → HIV
+- **Electrolytes & renal panel**: Kidney function, electrolyte disturbances — Creatinine ↑ → CKD; Na⁺ ↓ → SIADH or dehydration
+- **Liver function tests**: Hepatocellular injury, cholestasis — ALT/AST ↑ → viral hepatitis, TB meds; ALP ↑ → bone disease
+- **Fasting glucose / HbA1c**: Diabetes status — HbA1c ≥6.5 % → diabetes; >8 % suggests poor control
+- **Lipid profile**: Cardiovascular risk — LDL ↑ → atherosclerosis risk
+- **BNP or NT‑proBNP**: Cardiac stretch — Elevated → heart failure; helps differentiate from COPD
+- **Chest X‑ray**: Pulmonary pathology — Consolidation → pneumonia; cavitation → TB
+- **ECG**: Arrhythmia, ischemia — A‑fib, LVH, ST changes
+- **Spirometry**: Obstructive vs restrictive lung disease — FEV1/FVC <0.7 → COPD; reduced FVC → restriction
+- **Urinalysis & culture**: UTI, proteinuria — Leukocyte esterase + nitrites → infection; protein → renal disease
+- **HIV test (4th generation)**: HIV status — Positive → need CD4, viral load
+- **CD4 count & viral load (if HIV+)**: Immune status, treatment response — CD4 <200 → opportunistic infection risk
+- **Sputum GeneXpert / AFB smear**: TB detection — MTB detected → start anti‑TB
+- **Rapid malaria test**: Malaria infection — Positive HRP‑2 → treat malaria
+- **Serum B12 & folate**: Macrocytic anaemia, neuropathy — Low B12 → neuropathy, cognitive decline
+- **Bone mineral density (DXA)**: Osteoporosis — T‑score ≤‑2.5 → high fracture risk
+- **Cognitive screen (MMSE/6‑CIT)**: Baseline cognition — Score <24 → probable dementia
+- **Geriatric Depression Scale**: Mood disorder — Score ≥5 → depression
 
 ---
 
@@ -131,19 +123,17 @@ Poly‑pharmacy → drug‑drug interactions + renal/hepatic clearance decline �
 - **Fall risk** – place on low‑bed, assist with transfers, remove hazards, apply hip protectors if high fracture risk.  
 
 **Definitive treatment**  
-| Problem | First‑line drug class / intervention | Rationale |
-|---|---|---|
-| Hypertension (SBP ≥ 150 mmHg) | ACE‑inhibitor or ARB | Reduces cardiovascular events; renal‑protective in diabetics. |
-| Diabetes mellitus (HbA1c > 8 %) | Metformin (if eGFR ≥ 30 ml/min) + lifestyle | Improves glycaemic control, low hypoglycaemia risk. |
-| Dyslipidaemia | Statin (moderate‑intensity) | Proven mortality benefit in >65 yr. |
-| Osteoporosis | Calcium + Vitamin D + bisphosphonate | Reduces vertebral and hip fracture risk. |
-| Depression | SSRI | Safe in older adults, minimal anticholinergic load. |
-| Chronic heart failure | Loop diuretic + beta‑blocker + aldosterone antagonist | Improves symptoms, reduces rehospitalisation. |
-| HIV (if present) | Integrase‑strand transfer inhibitor‑based regimen | Potent, fewer drug‑drug interactions. |
-| TB (pulmonary) | Rifampicin‑based short‑course therapy | Standard 6‑month regimen; monitor liver function. |
-| Malaria (severe) | Intravenous artesunate | Rapid parasite clearance, safe in elderly. |
-| Rheumatic disease flare | Low‑dose glucocorticoid + disease‑modifying agent | Controls inflammation, limits joint damage. |
-| Sickle cell crisis | Hydration, analgesia, oxygen, exchange transfusion if severe | Prevents vaso‑occlusion, improves oxygen delivery. |
+- **Hypertension (SBP ≥ 150 mmHg)**: ACE‑inhibitor or ARB — Reduces cardiovascular events; renal‑protective in diabetics.
+- **Diabetes mellitus (HbA1c > 8 %)**: Metformin (if eGFR ≥ 30 ml/min) + lifestyle — Improves glycaemic control, low hypoglycaemia risk.
+- **Dyslipidaemia**: Statin (moderate‑intensity) — Proven mortality benefit in >65 yr.
+- **Osteoporosis**: Calcium + Vitamin D + bisphosphonate — Reduces vertebral and hip fracture risk.
+- **Depression**: SSRI — Safe in older adults, minimal anticholinergic load.
+- **Chronic heart failure**: Loop diuretic + beta‑blocker + aldosterone antagonist — Improves symptoms, reduces rehospitalisation.
+- **HIV (if present)**: Integrase‑strand transfer inhibitor‑based regimen — Potent, fewer drug‑drug interactions.
+- **TB (pulmonary)**: Rifampicin‑based short‑course therapy — Standard 6‑month regimen; monitor liver function.
+- **Malaria (severe)**: Intravenous artesunate — Rapid parasite clearance, safe in elderly.
+- **Rheumatic disease flare**: Low‑dose glucocorticoid + disease‑modifying agent — Controls inflammation, limits joint damage.
+- **Sickle cell crisis**: Hydration, analgesia, oxygen, exchange transfusion if severe — Prevents vaso‑occlusion, improves oxygen delivery.
 
 **Monitoring & follow‑up**  
 - **Vital signs** every 4 h initially, then daily once stable.  

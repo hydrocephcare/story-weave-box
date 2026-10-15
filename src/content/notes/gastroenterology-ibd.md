@@ -9,26 +9,22 @@
 Inflammatory bowel disease (IBD) comprises chronic, relapsing inflammatory disorders of the gastrointestinal tract, principally **Crohn’s disease (CD)** and **ulcerative colitis (UC)**. Both are characterised by mucosal ulceration, crypt architectural distortion and a propensity for extra‑intestinal manifestations.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to IBD |
-|---|---|
-| Terminal ileum | Common CD site; B12 absorption |
-| Colon (rectum to cecum) | UC involves continuous mucosa, starts in rectum |
-| Mesenteric lymph nodes | Site of granuloma formation in CD |
-| Submucosal plexus | Autonomic dysregulation contributes to motility symptoms |
-| Hepatobiliary tree | Primary sclerosing cholangitis linked to UC |
-| Perianal region | Fistulae, abscesses frequent in CD |
+- **Terminal ileum**: Common CD site; B12 absorption
+- **Colon (rectum to cecum)**: UC involves continuous mucosa, starts in rectum
+- **Mesenteric lymph nodes**: Site of granuloma formation in CD
+- **Submucosal plexus**: Autonomic dysregulation contributes to motility symptoms
+- **Hepatobiliary tree**: Primary sclerosing cholangitis linked to UC
+- **Perianal region**: Fistulae, abscesses frequent in CD
 
 Understanding the layered gut wall (mucosa → submucosa → muscularis → serosa) helps explain why CD can be transmural while UC remains mucosal.
 
 ## Causes and risk factors  
-| Category | Specific factors in Kenya |
-|---|---|
-| Genetic | NOD2, IL23R variants; family history |
-| Infectious (tropical) | Prior intestinal TB, chronic schistosomiasis, HIV (immune dysregulation) |
-| Environmental | High‑fat Western diet, smoking (worsens CD, may protect UC), urbanisation |
-| Immunologic | Dysregulated Th1/Th17 response, loss of regulatory T‑cell control |
-| Other comorbidities | Sickle cell disease (vascular compromise), rheumatic diseases (e.g., ankylosing spondylitis) |
-| Medication | Long‑term NSAIDs, antibiotics altering gut flora |
+- **Genetic**: NOD2, IL23R variants; family history
+- **Infectious (tropical)**: Prior intestinal TB, chronic schistosomiasis, HIV (immune dysregulation)
+- **Environmental**: High‑fat Western diet, smoking (worsens CD, may protect UC), urbanisation
+- **Immunologic**: Dysregulated Th1/Th17 response, loss of regulatory T‑cell control
+- **Other comorbidities**: Sickle cell disease (vascular compromise), rheumatic diseases (e.g., ankylosing spondylitis)
+- **Medication**: Long‑term NSAIDs, antibiotics altering gut flora
 
 ## Pathophysiology  
 Genetic susceptibility → impaired epithelial barrier → **↑ intestinal permeability** → luminal antigens (bacterial, dietary) penetrate → **aberrant innate immune activation** → cytokine cascade (TNF‑α, IL‑12/23, IL‑17) → **chronic adaptive Th1/Th17 response** → tissue injury (ulceration, fibrosis) → clinical disease.  
@@ -40,30 +36,26 @@ Genetic susceptibility → impaired epithelial barrier → **↑ intestinal perm
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Onset & duration** | “When did the symptoms start? Have they been continuous or episodic?” | IBD is chronic; flares may be intermittent, whereas infection is often acute. |
-| **Stool pattern** | Frequency, consistency, presence of blood or mucus, nocturnal stools, urgency, tenesmus | Ulceration of colonic mucosa → bloody mucus; rectal involvement → urgency and tenesmus; small‑bowel disease (Crohn’s) often watery, non‑bloody. |
-| **Abdominal pain** | Location (right lower quadrant, periumbilical, left lower), character (cramping vs. constant), relation to meals or bowel movements | Crohn’s ileocolitis → RLQ or periumbilical pain; colonic disease → left‑sided cramping; pain improves after defecation in ulcerative colitis. |
-| **Weight & appetite** | Unintentional weight loss, reduced appetite, early satiety | Chronic inflammation, malabsorption (especially in Crohn’s), and cytokine‑mediated catabolism. |
-| **Systemic symptoms** | Fever, night sweats, fatigue, arthralgia, skin lesions, eye symptoms | Extra‑intestinal manifestations driven by immune dysregulation; systemic inflammation can cause low‑grade fever and fatigue. |
-| **Growth & development (pediatrics)** | Change in growth velocity, delayed puberty | Chronic disease and steroid exposure impair growth; relevant for younger trainees. |
-| **Medication & infection history** | Recent antibiotics, NSAIDs, anti‑TB therapy, HIV status, malaria episodes, sickle‑cell crises | Certain drugs and infections can mimic or trigger colitis; HIV/TB are important mimics in Kenya. |
-| **Family history** | Relatives with IBD, psoriasis, ankylosing spondylitis | Genetic predisposition (NOD2, IL23R) increases risk. |
-| **Social & dietary factors** | Smoking status, diet high in processed foods, travel history | Smoking worsens Crohn’s, may protect ulcerative colitis; travel raises suspicion for infectious colitis. |
+- **Onset & duration**: “When did the symptoms start? Have they been continuous or episodic?” — IBD is chronic; flares may be intermittent, whereas infection is often acute.
+- **Stool pattern**: Frequency, consistency, presence of blood or mucus, nocturnal stools, urgency, tenesmus — Ulceration of colonic mucosa → bloody mucus; rectal involvement → urgency and tenesmus; small‑bowel disease (Crohn’s) often watery, non‑bloody.
+- **Abdominal pain**: Location (right lower quadrant, periumbilical, left lower), character (cramping vs. constant), relation to meals or bowel movements — Crohn’s ileocolitis → RLQ or periumbilical pain; colonic disease → left‑sided cramping; pain improves after defecation in ulcerative colitis.
+- **Weight & appetite**: Unintentional weight loss, reduced appetite, early satiety — Chronic inflammation, malabsorption (especially in Crohn’s), and cytokine‑mediated catabolism.
+- **Systemic symptoms**: Fever, night sweats, fatigue, arthralgia, skin lesions, eye symptoms — Extra‑intestinal manifestations driven by immune dysregulation; systemic inflammation can cause low‑grade fever and fatigue.
+- **Growth & development (pediatrics)**: Change in growth velocity, delayed puberty — Chronic disease and steroid exposure impair growth; relevant for younger trainees.
+- **Medication & infection history**: Recent antibiotics, NSAIDs, anti‑TB therapy, HIV status, malaria episodes, sickle‑cell crises — Certain drugs and infections can mimic or trigger colitis; HIV/TB are important mimics in Kenya.
+- **Family history**: Relatives with IBD, psoriasis, ankylosing spondylitis — Genetic predisposition (NOD2, IL23R) increases risk.
+- **Social & dietary factors**: Smoking status, diet high in processed foods, travel history — Smoking worsens Crohn’s, may protect ulcerative colitis; travel raises suspicion for infectious colitis.
 
 **Examination findings**
 
-| Finding | Interpretation |
-|---|---|
-| **General** – pallor, low‑grade fever, tachycardia | Anemia of chronic disease or iron deficiency; systemic inflammation. |
-| **Abdominal** – tenderness (RLQ or left lower), palpable mass, distension, guarding | Local inflammation (Crohn’s ileitis → RLQ), colonic spasm (ulcerative colitis), strictures or abscesses (Crohn’s). |
-| **Perianal** – fissures, fistulae, skin tags, abscess | Typical of Crohn’s perianal disease; absent in ulcerative colitis. |
-| **Rectal exam** – friable mucosa, blood, ulceration | Direct visualization of ulcerative colitis; may be normal in isolated small‑bowel Crohn’s. |
-| **Skin** – erythema nodosum, pyoderma gangrenosum | Immune‑mediated extra‑intestinal manifestations; help differentiate from infection. |
-| **Joint** – swelling of large joints, sacroiliac tenderness | Arthropathy associated with IBD; helps support diagnosis. |
-| **Eye** – uveitis, episcleritis | Extra‑intestinal sign, more common in Crohn’s. |
-| **Growth parameters (children)** – height/weight centiles | Chronic disease impact; useful for severity assessment. |
+- **General – pallor, low‑grade fever, tachycardia**: Anemia of chronic disease or iron deficiency; systemic inflammation.
+- **Abdominal – tenderness (RLQ or left lower), palpable mass, distension, guarding**: Local inflammation (Crohn’s ileitis → RLQ), colonic spasm (ulcerative colitis), strictures or abscesses (Crohn’s).
+- **Perianal – fissures, fistulae, skin tags, abscess**: Typical of Crohn’s perianal disease; absent in ulcerative colitis.
+- **Rectal exam – friable mucosa, blood, ulceration**: Direct visualization of ulcerative colitis; may be normal in isolated small‑bowel Crohn’s.
+- **Skin – erythema nodosum, pyoderma gangrenosum**: Immune‑mediated extra‑intestinal manifestations; help differentiate from infection.
+- **Joint – swelling of large joints, sacroiliac tenderness**: Arthropathy associated with IBD; helps support diagnosis.
+- **Eye – uveitis, episcleritis**: Extra‑intestinal sign, more common in Crohn’s.
+- **Growth parameters (children) – height/weight centiles**: Chronic disease impact; useful for severity assessment.
 
 ---
 
@@ -109,11 +101,9 @@ Genetic susceptibility → impaired epithelial barrier → **↑ intestinal perm
 
 3. **Determine activity (severity)** – use a combination of clinical indices (e.g., Mayo score for UC, CDAI for Crohn’s), laboratory markers, and endoscopic findings.  
 
-| Severity | Clinical clues | Objective markers |
-|---|---|---|
-| **Mild** | <4 stools/day, no systemic signs, no weight loss, no anemia | CRP normal‑low, fecal calprotectin modestly raised, endoscopy shows limited ulceration |
-| **Moderate** | 4–6 stools/day, mild anemia, low‑grade fever, abdominal pain | CRP moderately raised, calprotectin high, endoscopy shows larger ulcerated areas |
-| **Severe/fulminant** | >6 stools/day, gross bleeding, high fever, tachycardia, significant weight loss, toxic megacolon risk | CRP markedly high, calprotectin very high, endoscopy shows deep ulceration, possible perforation on imaging |
+- **Mild**: <4 stools/day, no systemic signs, no weight loss, no anemia — CRP normal‑low, fecal calprotectin modestly raised, endoscopy shows limited ulceration
+- **Moderate**: 4–6 stools/day, mild anemia, low‑grade fever, abdominal pain — CRP moderately raised, calprotectin high, endoscopy shows larger ulcerated areas
+- **Severe/fulminant**: >6 stools/day, gross bleeding, high fever, tachycardia, significant weight loss, toxic megacolon risk — CRP markedly high, calprotectin very high, endoscopy shows deep ulceration, possible perforation on imaging
 
 4. **Risk stratification** – consider age, extra‑intestinal manifestations, perianal disease, growth failure (children), and comorbid infections (HIV, TB). These influence choice of therapy and monitoring intensity.  
 
@@ -142,21 +132,17 @@ Genetic susceptibility → impaired epithelial barrier → **↑ intestinal perm
 
 ## Management  
 **Immediate stabilisation**  
-| Problem | Immediate action | Rationale |
-|---|---|---|
-| Severe anaemia or active GI bleed | Give packed red cells (type‑specific) and tranexamic acid if bleeding is brisk | Restores oxygen delivery; antifibrinolytic reduces ongoing loss |
-| Hypovolaemia / electrolyte loss | Rapid IV crystalloids (e.g. normal saline) + replace potassium & magnesium as labs dictate | Prevents shock and arrhythmias |
-| Acute severe colitis (≥6 bloody stools/day, fever, tachycardia, anaemia) | Start IV corticosteroid (e.g. methylprednisolone) within 24 h, nil per os, nasogastric tube if vomiting, broad‑spectrum IV antibiotics if perforation risk | Steroid is first‑line rescue; bowel rest limits perforation; antibiotics cover translocation |
-| Toxic megacolon suspicion (diameter > 6 cm, systemic toxicity) | Nil per os, broad‑spectrum IV antibiotics, IV steroids, urgent surgical consult | Prevents perforation; early surgery if no response in 24‑48 h |
+- **Severe anaemia or active GI bleed**: Give packed red cells (type‑specific) and tranexamic acid if bleeding is brisk — Restores oxygen delivery; antifibrinolytic reduces ongoing loss
+- **Hypovolaemia / electrolyte loss**: Rapid IV crystalloids (e.g. normal saline) + replace potassium & magnesium as labs dictate — Prevents shock and arrhythmias
+- **Acute severe colitis (≥6 bloody stools/day, fever, tachycardia, anaemia)**: Start IV corticosteroid (e.g. methylprednisolone) within 24 h, nil per os, nasogastric tube if vomiting, broad‑spectrum IV antibiotics if perforation risk — Steroid is first‑line rescue; bowel rest limits perforation; antibiotics cover translocation
+- **Toxic megacolon suspicion (diameter > 6 cm, systemic toxicity)**: Nil per os, broad‑spectrum IV antibiotics, IV steroids, urgent surgical consult — Prevents perforation; early surgery if no response in 24‑48 h
 
 **Definitive treatment** – choose according to disease type, severity, and extra‑intestinal manifestations (EIMs).  
 
-| Disease | First‑line oral/IV agents | When to step‑up | Role of biologics / small molecules |
-|---|---|---|---|
-| Mild‑moderate Crohn’s (ileocaecal) | Oral 5‑ASA (mesalamine) ± budesonide | Persistent symptoms after 8 weeks → azathioprine/6‑mercaptopurine | Anti‑TNF (infliximab/adalimumab) if refractory; ustekinumab for stricturing disease |
-| Moderate‑severe Crohn’s | Systemic steroids → taper | Failure to taper or steroid dependence → immunomodulators (azathioprine) ± anti‑TNF | Anti‑TNF or vedolizumab; consider combination with immunomodulator |
-| Mild‑moderate ulcerative colitis (UC) | Oral 5‑ASA + topical 5‑ASA (enema/suppository) | Inadequate response → oral steroids (short course) | Anti‑TNF or vedolizumab if steroid‑dependent; tofacitinib for refractory UC |
-| Moderate‑severe UC | Oral steroids → taper | Steroid non‑response after 3 days → infliximab or ciclosporin (IV) | Anti‑TNF, vedolizumab, or tofacitinib as maintenance; consider colectomy if no response |
+- **Mild‑moderate Crohn’s (ileocaecal)**: Oral 5‑ASA (mesalamine) ± budesonide — Persistent symptoms after 8 weeks → azathioprine/6‑mercaptopurine — Anti‑TNF (infliximab/adalimumab) if refractory; ustekinumab for stricturing disease
+- **Moderate‑severe Crohn’s**: Systemic steroids → taper — Failure to taper or steroid dependence → immunomodulators (azathioprine) ± anti‑TNF — Anti‑TNF or vedolizumab; consider combination with immunomodulator
+- **Mild‑moderate ulcerative colitis (UC)**: Oral 5‑ASA + topical 5‑ASA (enema/suppository) — Inadequate response → oral steroids (short course) — Anti‑TNF or vedolizumab if steroid‑dependent; tofacitinib for refractory UC
+- **Moderate‑severe UC**: Oral steroids → taper — Steroid non‑response after 3 days → infliximab or ciclosporin (IV) — Anti‑TNF, vedolizumab, or tofacitinib as maintenance; consider colectomy if no response
 
 **Monitoring & safety**  
 - **Clinical**: stool frequency, blood, weight, pain score daily while inpatient; weekly in the first month of steroids.  

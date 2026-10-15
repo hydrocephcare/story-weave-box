@@ -1,4 +1,4 @@
-# Introduction to Psychopathology — Year 4 Psychiatry Notes
+# Introduction to Psychopathology
 
 *Class presentation 2: the language psychiatrists use to describe abnormalities of mental experience and behaviour. Ten questions plus the take-home question. Plan 15–20 minutes.*
 
@@ -74,12 +74,10 @@ The same patient can have **normal form with abnormal content** (a patient with 
 
 ## 6. Delusion, hallucination and illusion
 
-| | **Delusion** | **Hallucination** | **Illusion** |
-|---|---|---|---|
-| Disorder of | **Thought (belief)** | **Perception** | **Perception** |
-| Definition | A **fixed, false belief**, held with unshakeable conviction, **out of keeping** with the person's education and culture, not changed by evidence | A perception **without an external stimulus** | A **misinterpretation of a real stimulus** |
-| Example | "The president is sending me secret messages" | Hearing a voice commenting when nobody is present | Seeing a coat on a door as a person in the dark |
-| Seen in | Schizophrenia, mania, psychotic depression, delirium | Schizophrenia, delirium, substance use, epilepsy | Delirium, anxiety, fatigue; can be **normal** |
+- **Disorder of**: **Thought (belief)** — **Perception** — **Perception**
+- **Definition**: A **fixed, false belief**, held with unshakeable conviction, **out of keeping** with the person's education and culture, not changed by evidence — A perception **without an external stimulus** — A **misinterpretation of a real stimulus**
+- **Example**: "The president is sending me secret messages" — Hearing a voice commenting when nobody is present — Seeing a coat on a door as a person in the dark
+- **Seen in**: Schizophrenia, mania, psychotic depression, delirium — Schizophrenia, delirium, substance use, epilepsy — Delirium, anxiety, fatigue; can be **normal**
 
 **Types of delusion:** persecutory, grandiose, delusion of reference, jealousy (Othello), erotomanic, somatic, guilt, and nihilistic (Cotard).
 **Primary delusions** arise "out of the blue"; **secondary** delusions follow another experience (for example mood).

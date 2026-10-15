@@ -1,4 +1,4 @@
-# Neurodevelopmental Disorders II: ADHD and Disruptive Behaviour — Year 4 Psychiatry
+# Neurodevelopmental Disorders II: ADHD and Disruptive Behaviour
 
 *MKU MBChB Year 4 · Junior Clerkship · Week 7 · Clinical revision notes*
 

@@ -6,29 +6,25 @@
 - **Chronic pancreatitis (CP):** Persistent inflammation leading to irreversible structural damage, fibrosis and loss of exocrine/endocrine function, often with recurrent attacks.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to disease |
-|---|---|
-| Pancreatic head, body, tail | Site of enzyme production; obstruction (e.g., stone, tumour) most often at the head |
-| Ductal system (main pancreatic duct, accessory duct) | Blockage raises intraductal pressure → acinar injury |
-| Acinar cells | Synthesize digestive enzymes; premature activation triggers autodigestion |
-| Islet cells | Endocrine loss in CP → diabetes mellitus |
-| Sphincter of Oddi | Dysfunction can cause reflux of duodenal contents into pancreas |
-| Peripancreatic fat & retroperitoneum | Site of necrosis and fluid collections in severe AP |
+- **Pancreatic head, body, tail**: Site of enzyme production; obstruction (e.g., stone, tumour) most often at the head
+- **Ductal system (main pancreatic duct, accessory duct)**: Blockage raises intraductal pressure → acinar injury
+- **Acinar cells**: Synthesize digestive enzymes; premature activation triggers autodigestion
+- **Islet cells**: Endocrine loss in CP → diabetes mellitus
+- **Sphincter of Oddi**: Dysfunction can cause reflux of duodenal contents into pancreas
+- **Peripancreatic fat & retroperitoneum**: Site of necrosis and fluid collections in severe AP
 
 ## Causes and risk factors  
-| Category | Common in Kenya | Why it matters |
-|---|---|---|
-| Alcohol | Heavy local brews, spirits | Direct toxic effect on acinar cells, promotes ductal spasm |
-| Gallstones | Biliary disease prevalent | Obstructs ampulla → sudden rise in ductal pressure |
-| Hypertriglyceridaemia | Poorly controlled diabetes, diet | TG >1000 mg/dL cause free fatty acid toxicity |
-| HIV infection / ART | Protease inhibitors, immune activation | Drug‑induced pancreatitis; HIV itself may infiltrate pancreas |
-| Tuberculosis | Extrapulmonary TB | Peripancreatic TB nodes can compress ducts |
-| Malaria (severe) | Plasmodium falciparum | Microvascular obstruction, cytokine surge |
-| Sickle cell disease | Vaso‑occlusive crises | Ischaemia of pancreatic microcirculation |
-| Autoimmune pancreatitis | IgG4‑related disease | Lymphoplasmacytic infiltration, responds to steroids |
-| Medications | Didanosine, azathioprine, tetracyclines, antiretrovirals | Direct toxic or hypersensitivity mechanisms |
-| Genetic predisposition | PRSS1, SPINK1 mutations (rare) | Early‑onset CP, especially in families |
-| Trauma | Road‑traffic accidents, blunt abdominal injury | Direct ductal disruption |
+- **Alcohol**: Heavy local brews, spirits — Direct toxic effect on acinar cells, promotes ductal spasm
+- **Gallstones**: Biliary disease prevalent — Obstructs ampulla → sudden rise in ductal pressure
+- **Hypertriglyceridaemia**: Poorly controlled diabetes, diet — TG >1000 mg/dL cause free fatty acid toxicity
+- **HIV infection / ART**: Protease inhibitors, immune activation — Drug‑induced pancreatitis; HIV itself may infiltrate pancreas
+- **Tuberculosis**: Extrapulmonary TB — Peripancreatic TB nodes can compress ducts
+- **Malaria (severe)**: Plasmodium falciparum — Microvascular obstruction, cytokine surge
+- **Sickle cell disease**: Vaso‑occlusive crises — Ischaemia of pancreatic microcirculation
+- **Autoimmune pancreatitis**: IgG4‑related disease — Lymphoplasmacytic infiltration, responds to steroids
+- **Medications**: Didanosine, azathioprine, tetracyclines, antiretrovirals — Direct toxic or hypersensitivity mechanisms
+- **Genetic predisposition**: PRSS1, SPINK1 mutations (rare) — Early‑onset CP, especially in families
+- **Trauma**: Road‑traffic accidents, blunt abdominal injury — Direct ductal disruption
 
 ## Pathophysiology  
 **Acute pancreatitis**  
@@ -44,21 +40,19 @@ Risk factor → Ductal obstruction / acinar injury → Premature enzyme activati
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Onset & timing** | Sudden vs gradual pain; hours to days for acute, months‑years for chronic | Acute inflammation produces rapid enzymatic injury; chronic disease reflects ongoing fibrosis and ductal obstruction |
-| **Pain character** | Severe epigastric pain radiating to the back, “boring” or “knife‑like”, worsened by meals or lying supine, relieved by leaning forward | Stretch of the inflamed pancreas and irritation of retroperitoneal nerves; forward flexion reduces intra‑abdominal pressure on the gland |
-| **Meal relation** | Pain after fatty meals, alcohol binge, or fasting | Fat stimulates pancreatic secretion; alcohol and fasting both trigger premature enzyme activation |
-| **Associated symptoms** | Nausea, vomiting, early satiety, weight loss, steatorrhea (large foul‑smelling stools), new‑onset diabetes, fever, chills | Vomiting from visceral irritation; malabsorption from exocrine insufficiency; loss of β‑cell mass → hyperglycaemia; systemic inflammation → fever |
-| **Alcohol & toxin exposure** | Quantity and pattern of alcohol intake, use of herbal medicines, exposure to pesticides, recent antiretroviral therapy, TB treatment | Alcohol is the dominant cause in adults; some drugs (e.g., didanosine, protease inhibitors) and toxins precipitate pancreatitis in the Kenyan setting |
-| **Infectious history** | Recent malaria, HIV infection, TB, hepatitis, or schistosomiasis; recent travel to endemic areas | HIV, TB, malaria and some parasitic infections can cause pancreatic inflammation directly or via drug toxicity |
-| **Haematologic & rheumatic background** | Sickle‑cell disease, autoimmune disorders (e.g., systemic lupus), recent transfusion | Sickle‑cell vaso‑occlusion can infarct pancreatic tissue; autoimmune pancreatitis presents with IgG4‑related disease |
-| **Past pancreatic disease** | Prior episodes, known gallstones, previous ERCP, pancreatic surgery | Recurrent gallstone obstruction or iatrogenic injury predisposes to repeat attacks |
-| **Systemic signs** | Jaundice, pruritus, dark urine, pale stools | Obstruction of the common bile duct by pancreatic head swelling or stones |
-| **Examination – abdomen** | Tenderness in epigastrium, guarding, possible palpable mass in chronic disease, decreased bowel sounds | Inflammation irritates peritoneum; chronic fibrosis may produce a firm, irregular mass |
-| **Examination – systemic** | Fever, tachycardia, hypotension, signs of dehydration, peripheral edema, pleural effusion, ascites | Systemic inflammatory response; third‑space fluid shifts; severe pancreatitis can cause capillary leak |
-| **Examination – skin** | Xanthomas, necrotic skin lesions, livedo reticularis | Hypertriglyceridaemia‑related pancreatitis or vasculitic processes |
-| **Examination – respiratory** | Tachypnoea, decreased breath sounds at bases | Pleural effusion or atelectasis secondary to diaphragmatic irritation |
+- **Onset & timing**: Sudden vs gradual pain; hours to days for acute, months‑years for chronic — Acute inflammation produces rapid enzymatic injury; chronic disease reflects ongoing fibrosis and ductal obstruction
+- **Pain character**: Severe epigastric pain radiating to the back, “boring” or “knife‑like”, worsened by meals or lying supine, relieved by leaning forward — Stretch of the inflamed pancreas and irritation of retroperitoneal nerves; forward flexion reduces intra‑abdominal pressure on the gland
+- **Meal relation**: Pain after fatty meals, alcohol binge, or fasting — Fat stimulates pancreatic secretion; alcohol and fasting both trigger premature enzyme activation
+- **Associated symptoms**: Nausea, vomiting, early satiety, weight loss, steatorrhea (large foul‑smelling stools), new‑onset diabetes, fever, chills — Vomiting from visceral irritation; malabsorption from exocrine insufficiency; loss of β‑cell mass → hyperglycaemia; systemic inflammation → fever
+- **Alcohol & toxin exposure**: Quantity and pattern of alcohol intake, use of herbal medicines, exposure to pesticides, recent antiretroviral therapy, TB treatment — Alcohol is the dominant cause in adults; some drugs (e.g., didanosine, protease inhibitors) and toxins precipitate pancreatitis in the Kenyan setting
+- **Infectious history**: Recent malaria, HIV infection, TB, hepatitis, or schistosomiasis; recent travel to endemic areas — HIV, TB, malaria and some parasitic infections can cause pancreatic inflammation directly or via drug toxicity
+- **Haematologic & rheumatic background**: Sickle‑cell disease, autoimmune disorders (e.g., systemic lupus), recent transfusion — Sickle‑cell vaso‑occlusion can infarct pancreatic tissue; autoimmune pancreatitis presents with IgG4‑related disease
+- **Past pancreatic disease**: Prior episodes, known gallstones, previous ERCP, pancreatic surgery — Recurrent gallstone obstruction or iatrogenic injury predisposes to repeat attacks
+- **Systemic signs**: Jaundice, pruritus, dark urine, pale stools — Obstruction of the common bile duct by pancreatic head swelling or stones
+- **Examination – abdomen**: Tenderness in epigastrium, guarding, possible palpable mass in chronic disease, decreased bowel sounds — Inflammation irritates peritoneum; chronic fibrosis may produce a firm, irregular mass
+- **Examination – systemic**: Fever, tachycardia, hypotension, signs of dehydration, peripheral edema, pleural effusion, ascites — Systemic inflammatory response; third‑space fluid shifts; severe pancreatitis can cause capillary leak
+- **Examination – skin**: Xanthomas, necrotic skin lesions, livedo reticularis — Hypertriglyceridaemia‑related pancreatitis or vasculitic processes
+- **Examination – respiratory**: Tachypnoea, decreased breath sounds at bases — Pleural effusion or atelectasis secondary to diaphragmatic irritation
 
 ---
 
@@ -107,11 +101,9 @@ If only one criterion is met, repeat testing after 24 h or obtain imaging.
 
 **Severity grading (revised Atlanta classification)**  
 
-| Category | Clinical / laboratory markers | Management implications |
-|---|---|---|
-| **Mild** | No organ failure, no local or systemic complications | Early oral feeding as tolerated, routine monitoring |
-| **Moderately severe** | Transient organ failure (<48 h) **or** local complications (peripancreatic fluid, necrosis, pseudocyst) | Close ICU/ward observation, fluid resuscitation, early enteral nutrition, consider antibiotics if infected necrosis |
-| **Severe** | Persistent organ failure (>48 h) involving respiratory, cardiovascular or renal systems | Admit to high‑dependency/ICU, aggressive fluid management, vasopressor support, renal replacement if needed, early multidisciplinary input (surgery, radiology, nutrition) |
+- **Mild**: No organ failure, no local or systemic complications — Early oral feeding as tolerated, routine monitoring
+- **Moderately severe**: Transient organ failure (<48 h) **or** local complications (peripancreatic fluid, necrosis, pseudocyst) — Close ICU/ward observation, fluid resuscitation, early enteral nutrition, consider antibiotics if infected necrosis
+- **Severe**: Persistent organ failure (>48 h) involving respiratory, cardiovascular or renal systems — Admit to high‑dependency/ICU, aggressive fluid management, vasopressor support, renal replacement if needed, early multidisciplinary input (surgery, radiology, nutrition)
 
 **Key bedside severity clues**  
 
@@ -128,14 +120,12 @@ If only one criterion is met, repeat testing after 24 h or obtain imaging.
 
 ## Management  
 **Immediate stabilisation**  
-| Step | Rationale |
-|---|---|
-| Airway, breathing, circulation (ABCs) | Ensure oxygenation, treat hypotension promptly |
-| Large‑bore IV access (2 × 18 G) | Allows rapid fluid resuscitation and drug administration |
-| Aggressive isotonic crystalloid (e.g., normal saline) – give until urine output ≥0.5 mL/kg/h | Reverses third‑spacing, improves pancreatic microcirculation |
-| Analgesia (opioid or NSAID) titrated to pain score | Reduces sympathetic stress, facilitates breathing |
-| NPO (nil per os) and nasogastric tube if vomiting or ileus | Limits pancreatic stimulation |
-| Early assessment for organ failure (renal, respiratory, cardiovascular) | Guides severity scoring and ICU need |
+- **Airway, breathing, circulation (ABCs)**: Ensure oxygenation, treat hypotension promptly
+- **Large‑bore IV access (2 × 18 G)**: Allows rapid fluid resuscitation and drug administration
+- **Aggressive isotonic crystalloid (e.g., normal saline) – give until urine output ≥0.5 mL/kg/h**: Reverses third‑spacing, improves pancreatic microcirculation
+- **Analgesia (opioid or NSAID) titrated to pain score**: Reduces sympathetic stress, facilitates breathing
+- **NPO (nil per os) and nasogastric tube if vomiting or ileus**: Limits pancreatic stimulation
+- **Early assessment for organ failure (renal, respiratory, cardiovascular)**: Guides severity scoring and ICU need
 
 **Definitive treatment** – tailored to aetiology and severity  
 

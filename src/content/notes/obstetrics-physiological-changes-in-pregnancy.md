@@ -1,4 +1,4 @@
-# Physiological changes in pregnancy — Year 4 Obstetrics and Gynaecology Notes
+# Physiological changes in pregnancy
 
 *From the Department's lecture slides, rewritten as a system-by-system table with the clinical meaning of each change. Know what is normal first, so you can spot what is not.*
 
@@ -12,25 +12,21 @@
 
 ## 2. Skin
 
-| Change | Cause or note |
-|---|---|
-| **Striae gravidarum** (stretch marks) | Stretching in genetically predisposed women: abdomen, breasts, thighs, buttocks |
-| **Linea nigra** | Pigmented line from the pubis to the umbilicus (MSH and oestrogen) |
-| **Chloasma (melasma)** | Blotchy facial pigmentation |
-| **Spider naevi and palmar erythema** | Raised oestrogen and skin blood flow; normal |
-| **Chadwick's sign** | Bluish discolouration of vagina and cervix |
+- **Striae gravidarum (stretch marks)**: Stretching in genetically predisposed women: abdomen, breasts, thighs, buttocks
+- **Linea nigra**: Pigmented line from the pubis to the umbilicus (MSH and oestrogen)
+- **Chloasma (melasma)**: Blotchy facial pigmentation
+- **Spider naevi and palmar erythema**: Raised oestrogen and skin blood flow; normal
+- **Chadwick's sign**: Bluish discolouration of vagina and cervix
 
 ## 3. Cardiovascular system: a hyperkinetic state
 
-| Parameter | Change | Why it matters |
-|---|---|---|
-| **Blood pressure** | Falls early; the **diastolic falls more (up to 15 mmHg)**; lowest at **24–28 weeks**; rises towards term but not above pre-pregnancy values | **A raised BP is never normal**: think pre-eclampsia |
-| **Plasma volume** | **Rises up to 50%** (most by 30 weeks; more in twins) | A cushion against blood loss at delivery |
-| **Cardiac output** | **Rises up to 50%** (most by 20 weeks) | Heart rate rises about **20 beats/min** by the third trimester and **stroke volume by about 30%** |
-| **Systemic vascular resistance** | Falls about **30%** (lowest at 20 weeks) | Improves blood flow to the uterus and placenta |
-| **Central venous pressure** | Unchanged | |
-| **Femoral venous pressure** | **Rises two- to threefold** by 30 weeks | **Leg oedema, varicose veins and haemorrhoids** |
-| **Position** | Cardiac output is **lowest supine** (the uterus compresses the inferior vena cava) and **highest in left lateral** | **Supine hypotensive syndrome**: examine and rest the woman **tilted to the left** |
+- **Blood pressure**: Falls early; the **diastolic falls more (up to 15 mmHg)**; lowest at **24–28 weeks**; rises towards term but not above pre-pregnancy values — **A raised BP is never normal**: think pre-eclampsia
+- **Plasma volume**: **Rises up to 50%** (most by 30 weeks; more in twins) — A cushion against blood loss at delivery
+- **Cardiac output**: **Rises up to 50%** (most by 20 weeks) — Heart rate rises about **20 beats/min** by the third trimester and **stroke volume by about 30%**
+- **Systemic vascular resistance**: Falls about **30%** (lowest at 20 weeks) — Improves blood flow to the uterus and placenta
+- **Central venous pressure**: Unchanged
+- **Femoral venous pressure**: **Rises two- to threefold** by 30 weeks — **Leg oedema, varicose veins and haemorrhoids**
+- **Position**: Cardiac output is **lowest supine** (the uterus compresses the inferior vena cava) and **highest in left lateral** — **Supine hypotensive syndrome**: examine and rest the woman **tilted to the left**
 
 **The heart** is enlarged and pushed up and to the left, so **ECG and chest X-ray changes** (left axis deviation, flattened T waves, a larger heart shadow) can look pathological.
 
@@ -38,15 +34,13 @@
 
 ## 4. Blood
 
-| Parameter | Change | Meaning |
-|---|---|---|
-| **Red cell mass** | Rises about **30%** | More oxygen carrying capacity |
-| **Haemoglobin and haematocrit** | **Fall about 15%**, lowest at **28–30 weeks** | **Physiological (dilutional) anaemia**: plasma rises more than red cells. The WHO cut-off for **anaemia in pregnancy is 11 g/dL** (10.5 g/dL in the second trimester) |
-| **White cells** | Rise progressively; up to **16,000/mm³** in the third trimester (and far higher in labour) | Do not over-read a mild leucocytosis |
-| **ESR** | **Rises** (more globulins and fibrinogen) | Useless as an infection marker in pregnancy |
-| **Platelets** | The range is **unchanged** (can fall slightly: gestational thrombocytopenia) | |
-| **Clotting** | **Factors V, VII, VIII, IX, X, XII, von Willebrand factor and fibrinogen (doubles) rise**; **antithrombin III and protein S fall**; fibrinolysis is reduced | A **hypercoagulable state**: protects against postpartum haemorrhage but raises the risk of **venous thromboembolism** |
-| **Immune system** | T and B cell counts unchanged, **function suppressed** | More susceptible to **malaria, viral infections, listeria and TB reactivation** |
+- **Red cell mass**: Rises about **30%** — More oxygen carrying capacity
+- **Haemoglobin and haematocrit**: **Fall about 15%**, lowest at **28–30 weeks** — **Physiological (dilutional) anaemia**: plasma rises more than red cells. The WHO cut-off for **anaemia in pregnancy is 11 g/dL** (10.5 g/dL in the second trimester)
+- **White cells**: Rise progressively; up to **16,000/mm³** in the third trimester (and far higher in labour) — Do not over-read a mild leucocytosis
+- **ESR**: **Rises** (more globulins and fibrinogen) — Useless as an infection marker in pregnancy
+- **Platelets**: The range is **unchanged** (can fall slightly: gestational thrombocytopenia)
+- **Clotting**: **Factors V, VII, VIII, IX, X, XII, von Willebrand factor and fibrinogen (doubles) rise**; **antithrombin III and protein S fall**; fibrinolysis is reduced — A **hypercoagulable state**: protects against postpartum haemorrhage but raises the risk of **venous thromboembolism**
+- **Immune system**: T and B cell counts unchanged, **function suppressed** — More susceptible to **malaria, viral infections, listeria and TB reactivation**
 
 **Iron:** needs rise (about 1 g over pregnancy) and gastric acidity falls, so **iron deficiency is common**; supplement **iron and folic acid** routinely.
 
@@ -56,15 +50,13 @@ The **diaphragm rises about 4 cm** and the **chest widens**; the **subcostal ang
 
 ## 6. Gastrointestinal system and liver
 
-| Change | Cause | Result |
-|---|---|---|
-| **Ptyalism, altered taste, increased appetite and thirst** | Hormonal | Small frequent snacks help |
-| **Nausea and vomiting** (about 50%) | hCG and oestrogen | **Hyperemesis gravidarum** is the severe form |
-| **Heartburn (reflux)** | **Relaxed lower oesophageal sphincter** (progesterone, relaxin) and a pressing uterus | Antacids, small meals, head-up sleeping |
-| **Constipation** | Reduced motility (**progesterone**) and more water absorption | Fibre and fluids |
-| **Reduced gastric acidity** | | Interferes with iron absorption |
-| **Gallbladder** | Larger, empties slowly; **cholestasis is almost physiological** | **Gallstones and intrahepatic cholestasis of pregnancy** |
-| **Liver tests** | **Albumin falls**, **ALP rises (placental)**, globulins, fibrinogen and binding proteins rise; **ALT and AST stay normal** | Raised ALT/AST is abnormal: **HELLP, fatty liver, hepatitis** |
+- **Ptyalism, altered taste, increased appetite and thirst**: Hormonal — Small frequent snacks help
+- **Nausea and vomiting (about 50%)**: hCG and oestrogen — **Hyperemesis gravidarum** is the severe form
+- **Heartburn (reflux)**: **Relaxed lower oesophageal sphincter** (progesterone, relaxin) and a pressing uterus — Antacids, small meals, head-up sleeping
+- **Constipation**: Reduced motility (**progesterone**) and more water absorption — Fibre and fluids
+- **Reduced gastric acidity**: Interferes with iron absorption
+- **Gallbladder**: Larger, empties slowly; **cholestasis is almost physiological** — **Gallstones and intrahepatic cholestasis of pregnancy**
+- **Liver tests**: **Albumin falls**, **ALP rises (placental)**, globulins, fibrinogen and binding proteins rise; **ALT and AST stay normal** — Raised ALT/AST is abnormal: **HELLP, fatty liver, hepatitis**
 
 ## 7. Urinary system
 
@@ -72,13 +64,11 @@ The **kidneys enlarge slightly**; the **renal pelvis and ureters dilate** (more 
 
 ## 8. Endocrine system
 
-| Gland | Change |
-|---|---|
-| **Pituitary** | Anterior pituitary **enlarges** (prolactin rises); oxytocin released in labour |
-| **Thyroid** | Enlarges slightly (a "physiological goitre"); **thyroid-binding globulin doubles**, so **total T3 and T4 rise but free T3 and T4 do not**; most women are euthyroid; hCG can mildly stimulate the thyroid in early pregnancy |
-| **Parathyroid** | More active to meet calcium needs |
-| **Adrenal** | **Total cortisol rises; free cortisol is unchanged**; aldosterone rises (salt and water retention) |
-| **Pancreas** | **Insulin resistance** rises in the second and third trimesters (**human placental lactogen**), the basis of **gestational diabetes** |
+- **Pituitary**: Anterior pituitary **enlarges** (prolactin rises); oxytocin released in labour
+- **Thyroid**: Enlarges slightly (a "physiological goitre"); **thyroid-binding globulin doubles**, so **total T3 and T4 rise but free T3 and T4 do not**; most women are euthyroid; hCG can mildly stimulate the thyroid in early pregnancy
+- **Parathyroid**: More active to meet calcium needs
+- **Adrenal**: **Total cortisol rises; free cortisol is unchanged**; aldosterone rises (salt and water retention)
+- **Pancreas**: **Insulin resistance** rises in the second and third trimesters (**human placental lactogen**), the basis of **gestational diabetes**
 
 ### Placental hormones
 
@@ -92,14 +82,12 @@ The **kidneys enlarge slightly**; the **renal pelvis and ureters dilate** (more 
 
 ## 9. Reproductive system
 
-| Organ | Change |
-|---|---|
-| **Uterus** | **Hypertrophy and hyperplasia.** **Length rises from 7.5 cm to about 35 cm** and **weight from about 50 g to 1,000 g** at term; capacity from about 10 mL to 5 L. **Dextrorotation** (tilted and twisted to the right in about 80%). **Lower uterine segment** forms from the **isthmus** from about the **fourth month** and reaches about **10 cm at term** |
-| **Cervix** | **Softens (Goodell's sign), oedematous and congested**; glands multiply and secrete a thick **mucus plug (operculum)** that closes the canal |
-| **Vagina and vulva** | **Increased vascularity**, soft, moist, bluish (**Chadwick's sign**); **varicosities**; increased discharge with lower pH |
-| **Ovary** | One contains the **corpus luteum of pregnancy**; **no ovulation** during pregnancy |
-| **Pelvic ligaments and joints** | **Relax** (relaxin), so the pelvis becomes more mobile and the capacity increases; **backache and pubic pain** |
-| **Breasts** | **Increased size, vascularity, warmth and tenderness**; **darker nipples and areola**, **secondary areola**, **Montgomery's tubercles**; **colostrum** by the end of the third month |
+- **Uterus**: **Hypertrophy and hyperplasia.** **Length rises from 7.5 cm to about 35 cm** and **weight from about 50 g to 1,000 g** at term; capacity from about 10 mL to 5 L. **Dextrorotation** (tilted and twisted to the right in about 80%). **Lower uterine segment** forms from the **isthmus** from about the **fourth month** and reaches about **10 cm at term**
+- **Cervix**: **Softens (Goodell's sign), oedematous and congested**; glands multiply and secrete a thick **mucus plug (operculum)** that closes the canal
+- **Vagina and vulva**: **Increased vascularity**, soft, moist, bluish (**Chadwick's sign**); **varicosities**; increased discharge with lower pH
+- **Ovary**: One contains the **corpus luteum of pregnancy**; **no ovulation** during pregnancy
+- **Pelvic ligaments and joints**: **Relax** (relaxin), so the pelvis becomes more mobile and the capacity increases; **backache and pubic pain**
+- **Breasts**: **Increased size, vascularity, warmth and tenderness**; **darker nipples and areola**, **secondary areola**, **Montgomery's tubercles**; **colostrum** by the end of the third month
 
 ## 10. Metabolism, weight and the musculoskeletal system
 

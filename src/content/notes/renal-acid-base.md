@@ -6,21 +6,17 @@
 Acid‑base disorders are abnormalities in the body’s hydrogen ion concentration that disturb the normal pH range (7.35‑7.45). They arise from either an excess of acid, a loss of base, or a failure of compensatory mechanisms, and may be metabolic, respiratory, or mixed.
 
 ## Anatomy and physiology you need  
-| System | Key component | Relevance to pH |
-|---|---|---|
-| Respiratory | Lungs (ventilation) | Expel CO₂ → ↓ H₂CO₃ → ↑ pH |
-| Renal | Proximal & distal tubules | Reabsorb HCO₃⁻, secrete H⁺ |
-| Buffer | Intracellular proteins, hemoglobin, phosphate, bicarbonate | Immediate neutralisation of H⁺ |
-| Cellular metabolism | Aerobic/anaerobic pathways | Produce CO₂ and lactic acid |
-| Endocrine | Aldosterone, ADH | Modulate renal H⁺/HCO₃⁻ handling |
+- **Respiratory**: Lungs (ventilation) — Expel CO₂ → ↓ H₂CO₃ → ↑ pH
+- **Renal**: Proximal & distal tubules — Reabsorb HCO₃⁻, secrete H⁺
+- **Buffer**: Intracellular proteins, hemoglobin, phosphate, bicarbonate — Immediate neutralisation of H⁺
+- **Cellular metabolism**: Aerobic/anaerobic pathways — Produce CO₂ and lactic acid
+- **Endocrine**: Aldosterone, ADH — Modulate renal H⁺/HCO₃⁻ handling
 
 ## Causes and risk factors  
-| Category | Common causes in Kenya | Specific risk factors |
-|---|---|---|
-| Metabolic acidosis | Diarrhoea, severe malaria, septic shock, renal failure, keto‑acidosis (diabetes, alcoholic), lactic acidosis (post‑operative, severe anemia) | HIV‑related opportunistic infections, TB meningitis, sickle cell vaso‑occlusive crisis |
-| Metabolic alkalosis | Prolonged vomiting, nasogastric suction, diuretic over‑use, mineralocorticoid excess | Chronic rheumatic heart disease with loop diuretic therapy, adrenal tumours |
-| Respiratory acidosis | COPD exacerbation, severe pneumonia, airway obstruction, opioid overdose, neuromuscular weakness | TB lung disease, HIV‑related pneumocystis pneumonia |
-| Respiratory alkalosis | Hyperventilation from pain, fever, anxiety, high altitude, sepsis | Malaria‑induced fever spikes, pulmonary embolism |
+- **Metabolic acidosis**: Diarrhoea, severe malaria, septic shock, renal failure, keto‑acidosis (diabetes, alcoholic), lactic acidosis (post‑operative, severe anemia) — HIV‑related opportunistic infections, TB meningitis, sickle cell vaso‑occlusive crisis
+- **Metabolic alkalosis**: Prolonged vomiting, nasogastric suction, diuretic over‑use, mineralocorticoid excess — Chronic rheumatic heart disease with loop diuretic therapy, adrenal tumours
+- **Respiratory acidosis**: COPD exacerbation, severe pneumonia, airway obstruction, opioid overdose, neuromuscular weakness — TB lung disease, HIV‑related pneumocystis pneumonia
+- **Respiratory alkalosis**: Hyperventilation from pain, fever, anxiety, high altitude, sepsis — Malaria‑induced fever spikes, pulmonary embolism
 
 ## Pathophysiology  
 
@@ -41,24 +37,22 @@ Cause → ↑/↓ acid or base → change in [HCO₃⁻] or PaCO₂ → pH shift
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Onset & tempo** | “When did you first notice symptoms? Sudden vs. gradual?” | Acute disturbances (e.g., keto‑acidosis, severe sepsis) produce rapid pH change; chronic disorders (e.g., CKD) evolve slowly. |
-| **Respiratory symptoms** | Dyspnoea, tachypnoea, “air‑hungry” breathing, orthopnoea, cough, sputum colour | Hyperventilation is a compensatory response to metabolic acidosis; hypoventilation may accompany metabolic alkalosis (e.g., vomiting). |
-| **Neurological status** | Confusion, lethargy, headache, seizures, coma, asterixis | Cerebral effects of pH shift: acidosis depresses neuronal activity, alkalosis increases neuronal excitability. |
-| **Gastro‑intestinal** | Nausea, vomiting, diarrhoea, abdominal pain, loss of appetite | Vomiting removes HCl → metabolic alkalosis; diarrhoea loses bicarbonate → metabolic acidosis. |
-| **Renal history** | “Any known kidney disease, recent AKI, use of diuretics, NSAIDs?” | Impaired H⁺ excretion or HCO₃⁻ reabsorption drives metabolic acidosis; diuretics can cause alkalosis. |
-| **Endocrine / metabolic** | Polyuria, polydipsia, weight loss, recent infection, steroid use | Diabetic ketoacidosis, hyperaldosteronism, Cushing’s, thyroid disease affect acid‑base. |
-| **Infectious / tropical** | Recent malaria, TB treatment, HIV status, sickle‑cell crisis, rheumatic fever | Malaria and severe sepsis cause lactic acidosis; TB drugs (e.g., isoniazid) can precipitate metabolic acidosis; HIV‑related opportunistic infections and sickle‑cell vaso‑occlusion generate lactic or ketoacidosis. |
-| **Medication & toxin exposure** | “Any over‑the‑counter meds, antacids, diuretics, laxatives, alcohol, methanol, ethylene glycol?” | Antacids → alkalosis; diuretics → alkalosis; toxins → high‑anion‑gap acidosis. |
-| **Fluid & electrolyte balance** | Recent IV fluids, oral rehydration, salt intake, urine output | Volume status influences renal compensation; chloride‑rich fluids can cause hyperchloraemic acidosis. |
-| **Physical exam – general** | Level of consciousness, skin colour, temperature, capillary refill | Altered mental status reflects severe pH derangement; warm skin may suggest sepsis‑related lactic acidosis. |
-| **Respiratory** | Respiratory rate, depth, use of accessory muscles, arterial CO₂ (if available) | Kussmaul breathing (deep, rapid) = metabolic acidosis; shallow breathing = metabolic alkalosis. |
-| **Cardiovascular** | Blood pressure, pulse, signs of volume overload or depletion | Hypotension → tissue hypoperfusion → lactic acidosis; hypertension may accompany primary alkalosis (e.g., hyperaldosteronism). |
-| **Abdominal** | Tenderness, bowel sounds, signs of obstruction or ileus | Vomiting or diarrhoea clues to loss of H⁺ or HCO₃⁻. |
-| **Neurological** | Tremor, seizures, asterixis, focal deficits | Asterixis is classic for metabolic encephalopathy (uremic, hepatic, severe alkalosis). |
-| **Skin** | Dryness, diaphoresis, flushing | Diaphoresis common in metabolic acidosis; flushing may accompany alkalosis (e.g., hyperventilation). |
-| **Extremities** | Edema, peripheral pulses, capillary refill | Volume status influences renal compensation and guides fluid therapy. |
+- **Onset & tempo**: “When did you first notice symptoms? Sudden vs. gradual?” — Acute disturbances (e.g., keto‑acidosis, severe sepsis) produce rapid pH change; chronic disorders (e.g., CKD) evolve slowly.
+- **Respiratory symptoms**: Dyspnoea, tachypnoea, “air‑hungry” breathing, orthopnoea, cough, sputum colour — Hyperventilation is a compensatory response to metabolic acidosis; hypoventilation may accompany metabolic alkalosis (e.g., vomiting).
+- **Neurological status**: Confusion, lethargy, headache, seizures, coma, asterixis — Cerebral effects of pH shift: acidosis depresses neuronal activity, alkalosis increases neuronal excitability.
+- **Gastro‑intestinal**: Nausea, vomiting, diarrhoea, abdominal pain, loss of appetite — Vomiting removes HCl → metabolic alkalosis; diarrhoea loses bicarbonate → metabolic acidosis.
+- **Renal history**: “Any known kidney disease, recent AKI, use of diuretics, NSAIDs?” — Impaired H⁺ excretion or HCO₃⁻ reabsorption drives metabolic acidosis; diuretics can cause alkalosis.
+- **Endocrine / metabolic**: Polyuria, polydipsia, weight loss, recent infection, steroid use — Diabetic ketoacidosis, hyperaldosteronism, Cushing’s, thyroid disease affect acid‑base.
+- **Infectious / tropical**: Recent malaria, TB treatment, HIV status, sickle‑cell crisis, rheumatic fever — Malaria and severe sepsis cause lactic acidosis; TB drugs (e.g., isoniazid) can precipitate metabolic acidosis; HIV‑related opportunistic infections and sickle‑cell vaso‑occlusion generate lactic or ketoacidosis.
+- **Medication & toxin exposure**: “Any over‑the‑counter meds, antacids, diuretics, laxatives, alcohol, methanol, ethylene glycol?” — Antacids → alkalosis; diuretics → alkalosis; toxins → high‑anion‑gap acidosis.
+- **Fluid & electrolyte balance**: Recent IV fluids, oral rehydration, salt intake, urine output — Volume status influences renal compensation; chloride‑rich fluids can cause hyperchloraemic acidosis.
+- **Physical exam – general**: Level of consciousness, skin colour, temperature, capillary refill — Altered mental status reflects severe pH derangement; warm skin may suggest sepsis‑related lactic acidosis.
+- **Respiratory**: Respiratory rate, depth, use of accessory muscles, arterial CO₂ (if available) — Kussmaul breathing (deep, rapid) = metabolic acidosis; shallow breathing = metabolic alkalosis.
+- **Cardiovascular**: Blood pressure, pulse, signs of volume overload or depletion — Hypotension → tissue hypoperfusion → lactic acidosis; hypertension may accompany primary alkalosis (e.g., hyperaldosteronism).
+- **Abdominal**: Tenderness, bowel sounds, signs of obstruction or ileus — Vomiting or diarrhoea clues to loss of H⁺ or HCO₃⁻.
+- **Neurological**: Tremor, seizures, asterixis, focal deficits — Asterixis is classic for metabolic encephalopathy (uremic, hepatic, severe alkalosis).
+- **Skin**: Dryness, diaphoresis, flushing — Diaphoresis common in metabolic acidosis; flushing may accompany alkalosis (e.g., hyperventilation).
+- **Extremities**: Edema, peripheral pulses, capillary refill — Volume status influences renal compensation and guides fluid therapy.
 
 ---
 
@@ -136,16 +130,26 @@ Cause → ↑/↓ acid or base → change in [HCO₃⁻] or PaCO₂ → pH shift
 
 ## Management  
 
-| Step | What to do | Rationale |
-|---|---|---|
-| **Airway‑breathing‑circulation** | Give supplemental O₂ if SpO₂ < 94 % or respiratory distress; consider non‑invasive ventilation for severe metabolic acidosis with Kussmaul breathing. | Improves tissue oxygenation and reduces work of breathing. |
-| **Correct life‑threatening derangements** | • Rapid IV sodium bicarbonate **only** for pH < 7.1 with haemodynamic compromise or severe hyper‑K⁺. <br>• IV calcium gluconate (or chloride) for imminent hyper‑K⁺‑induced arrhythmia. | Bicarbonate buffers H⁺; calcium stabilises myocardial membranes. |
-| **Identify and treat the primary disorder** | • **Respiratory acidosis** – improve ventilation (e.g., treat COPD exacerbation, reverse opioid overdose, consider BiPAP). <br>• **Respiratory alkalosis** – treat underlying hyperventilation (pain, anxiety, sepsis, high‑altitude). <br>• **Metabolic acidosis** – give the missing anion (e.g., insulin + dextrose for DKA, thiamine for alcoholic ketoacidosis, folate for methanol/ethylene glycol). <br>• **Metabolic alkalosis** – replace volume and chloride (IV saline), give potassium if low, stop excess alkali. | Targeting the root cause stops ongoing acid/base shift. |
-| **Electrolyte optimisation** | Replace K⁺ cautiously (avoid rapid shifts), correct Mg²⁺, monitor Na⁺ and Cl⁻. | Electrolyte disturbances perpetuate acid‑base imbalance and arrhythmias. |
-| **Fluid management** | Give isotonic saline for volume depletion; avoid excessive chloride‑rich fluids in chloride‑responsive metabolic alkalosis. | Restores perfusion and influences strong ion difference. |
-| **Monitoring** | • Serial ABG (or VBG) every 2–4 h until stable. <br>• Continuous ECG for arrhythmia risk. <br>• Urine output, serum lactate, glucose, renal function. | Detects over‑correction, emerging complications, and guides therapy titration. |
-| **Definitive therapy** | Treat underlying disease: antiretroviral optimisation for HIV‑related renal tubular acidosis, anti‑TB drugs with renal dose adjustment, malaria antimalarials, disease‑modifying therapy for sickle cell crisis, etc. | Prevents recurrence and addresses the systemic cause. |
-| **Safety / Contra‑indications** | • Avoid bicarbonate in pure respiratory alkalosis, in chronic compensated metabolic alkalosis, or when pH > 7.45. <br>• Do not give potassium without ECG monitoring in severe hyper‑K⁺. <br>• Caution with rapid fluid shifts in severe heart failure or pulmonary oedema. | Prevents iatrogenic harm. |
+- **Airway‑breathing‑circulation**: Give supplemental O₂ if SpO₂ < 94 % or respiratory distress; consider non‑invasive ventilation for severe metabolic acidosis with Kussmaul breathing. — Improves tissue oxygenation and reduces work of breathing.
+- **Correct life‑threatening derangements**
+  - Rapid IV sodium bicarbonate **only** for pH < 7.1 with haemodynamic compromise or severe hyper‑K⁺.
+  - IV calcium gluconate (or chloride) for imminent hyper‑K⁺‑induced arrhythmia. — Bicarbonate buffers H⁺; calcium stabilises myocardial membranes.
+- **Identify and treat the primary disorder**
+  - **Respiratory acidosis** – improve ventilation (e.g., treat COPD exacerbation, reverse opioid overdose, consider BiPAP).
+  - **Respiratory alkalosis** – treat underlying hyperventilation (pain, anxiety, sepsis, high‑altitude).
+  - **Metabolic acidosis** – give the missing anion (e.g., insulin + dextrose for DKA, thiamine for alcoholic ketoacidosis, folate for methanol/ethylene glycol).
+  - **Metabolic alkalosis** – replace volume and chloride (IV saline), give potassium if low, stop excess alkali. — Targeting the root cause stops ongoing acid/base shift.
+- **Electrolyte optimisation**: Replace K⁺ cautiously (avoid rapid shifts), correct Mg²⁺, monitor Na⁺ and Cl⁻. — Electrolyte disturbances perpetuate acid‑base imbalance and arrhythmias.
+- **Fluid management**: Give isotonic saline for volume depletion; avoid excessive chloride‑rich fluids in chloride‑responsive metabolic alkalosis. — Restores perfusion and influences strong ion difference.
+- **Monitoring**
+  - Serial ABG (or VBG) every 2–4 h until stable.
+  - Continuous ECG for arrhythmia risk.
+  - Urine output, serum lactate, glucose, renal function. — Detects over‑correction, emerging complications, and guides therapy titration.
+- **Definitive therapy**: Treat underlying disease: antiretroviral optimisation for HIV‑related renal tubular acidosis, anti‑TB drugs with renal dose adjustment, malaria antimalarials, disease‑modifying therapy for sickle cell crisis, etc. — Prevents recurrence and addresses the systemic cause.
+- **Safety / Contra‑indications**
+  - Avoid bicarbonate in pure respiratory alkalosis, in chronic compensated metabolic alkalosis, or when pH > 7.45.
+  - Do not give potassium without ECG monitoring in severe hyper‑K⁺.
+  - Caution with rapid fluid shifts in severe heart failure or pulmonary oedema. — Prevents iatrogenic harm.
 
 ---
 

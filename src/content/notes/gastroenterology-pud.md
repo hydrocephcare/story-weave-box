@@ -10,25 +10,21 @@
 - **Peptic ulcer disease (PUD)**: mucosal breach ≥ 5 mm in the stomach or duodenum that extends through the muscularis mucosa, confirmed endoscopically or radiologically, and associated with typical ulcer‑related symptoms.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to dyspepsia/PUD |
-|---|---|
-| Esophagogastric junction (lower esophageal sphincter) | Barrier to reflux; dysfunction contributes to epigastric pain. |
-| Gastric fundus & body | Parietal cell acid secretion; H. pylori colonisation often in antrum. |
-| Duodenal bulb | Common site of duodenal ulcer; exposed to gastric acid and bile. |
-| Mucosal protective layer (bicarbonate, mucus, prostaglandins) | Deficiency predisposes to ulcer formation. |
-| Vagus nerve (parasympathetic) | Stimulates acid secretion; vagotomy reduces ulcer recurrence. |
-| Submucosal blood flow | Ischaemia impairs healing, relevant in NSAID‑related ulcers. |
+- **Esophagogastric junction (lower esophageal sphincter)**: Barrier to reflux; dysfunction contributes to epigastric pain.
+- **Gastric fundus & body**: Parietal cell acid secretion; H. pylori colonisation often in antrum.
+- **Duodenal bulb**: Common site of duodenal ulcer; exposed to gastric acid and bile.
+- **Mucosal protective layer (bicarbonate, mucus, prostaglandins)**: Deficiency predisposes to ulcer formation.
+- **Vagus nerve (parasympathetic)**: Stimulates acid secretion; vagotomy reduces ulcer recurrence.
+- **Submucosal blood flow**: Ischaemia impairs healing, relevant in NSAID‑related ulcers.
 
 ## Causes and risk factors  
 
-| Category | Specific factors in Kenya |
-|---|---|
-| Infectious | *Helicobacter pylori* infection, HIV‑associated gastritis, intestinal TB involving the duodenum |
-| Medications | NSAIDs, low‑dose aspirin, corticosteroids, antiretrovirals (e.g., protease inhibitors) |
-| Lifestyle | Heavy alcohol use, smoking, khat chewing, irregular meals |
-| Systemic disease | Sickle cell disease (gastric ischaemia), rheumatic fever (auto‑immune gastritis), chronic malaria (stress ulcer risk) |
-| Socio‑economic | Low socioeconomic status, crowded living conditions (higher H. pylori prevalence) |
-| Others | Stress (critical illness), Zollinger‑Ellison syndrome (rare) |
+- **Infectious**: *Helicobacter pylori* infection, HIV‑associated gastritis, intestinal TB involving the duodenum
+- **Medications**: NSAIDs, low‑dose aspirin, corticosteroids, antiretrovirals (e.g., protease inhibitors)
+- **Lifestyle**: Heavy alcohol use, smoking, khat chewing, irregular meals
+- **Systemic disease**: Sickle cell disease (gastric ischaemia), rheumatic fever (auto‑immune gastritis), chronic malaria (stress ulcer risk)
+- **Socio‑economic**: Low socioeconomic status, crowded living conditions (higher H. pylori prevalence)
+- **Others**: Stress (critical illness), Zollinger‑Ellison syndrome (rare)
 
 ## Pathophysiology  
 
@@ -42,30 +38,26 @@
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it matters |
-|---|---|---|
-| **Onset** | “When did the discomfort start? Was it sudden or gradual?” | Acute onset may suggest complications (bleed, perforation) or infection (e.g., *H. pylori*‑related gastritis). |
-| **Location & character** | Epigastric pain vs. burning vs. heaviness; radiation to back or chest. | Epigastric burning typical of acid‑related disease; back radiation raises suspicion of penetrating ulcer. |
-| **Timing related to meals** | “Does it occur before a meal, during, or 2‑3 h after eating?” “Does eating relieve or worsen it?” | Pain that improves with food → duodenal ulcer; pain that worsens with food → gastric ulcer or gastritis. |
-| **Nocturnal symptoms** | “Do you wake up with pain?” | Night pain suggests acid hypersecretion or refractory ulcer. |
-| **Associated symptoms** | Nausea, vomiting (especially coffee‑ground), early satiety, bloating, belching, weight loss, dysphagia, odynophagia, hematemesis, melena, anemia‑related fatigue. | Vomiting of blood or melena points to bleeding ulcer; weight loss or dysphagia may indicate malignancy or severe gastropathy. |
-| **Red‑flag features** | Age > 55, unexplained weight loss, persistent vomiting, anemia, GI bleeding, dysphagia, odynophagia, family history of gastric cancer, NSAID use > 3 months. | Prompt endoscopic evaluation is required; higher pre‑test probability of malignancy or complicated ulcer. |
-| **Medication history** | NSAIDs, aspirin, steroids, antiplatelets, PPIs, H2‑blockers, herbal remedies, antiretrovirals, anti‑TB drugs. | NSAIDs and steroids impair mucosal defence → ulcer; antiretrovirals (especially protease inhibitors) increase gastric acidity. |
-| **Social & exposure history** | Alcohol intake, smoking, coffee/tea consumption, stress, recent travel, known *H. pylori* infection, HIV status, TB exposure, malaria episodes, sickle‑cell crises. | Smoking, alcohol, and stress aggravate acid secretion; HIV, TB, malaria, sickle‑cell disease can cause gastritis/ulcer through mucosal ischemia or opportunistic infection. |
-| **Past GI history** | Previous ulcer disease, endoscopic findings, H. pylori eradication, surgeries. | Recurrence risk is higher after prior ulcer; informs need for repeat testing. |
+- **Onset**: “When did the discomfort start? Was it sudden or gradual?” — Acute onset may suggest complications (bleed, perforation) or infection (e.g., *H. pylori*‑related gastritis).
+- **Location & character**: Epigastric pain vs. burning vs. heaviness; radiation to back or chest. — Epigastric burning typical of acid‑related disease; back radiation raises suspicion of penetrating ulcer.
+- **Timing related to meals**: “Does it occur before a meal, during, or 2‑3 h after eating?” “Does eating relieve or worsen it?” — Pain that improves with food → duodenal ulcer; pain that worsens with food → gastric ulcer or gastritis.
+- **Nocturnal symptoms**: “Do you wake up with pain?” — Night pain suggests acid hypersecretion or refractory ulcer.
+- **Associated symptoms**: Nausea, vomiting (especially coffee‑ground), early satiety, bloating, belching, weight loss, dysphagia, odynophagia, hematemesis, melena, anemia‑related fatigue. — Vomiting of blood or melena points to bleeding ulcer; weight loss or dysphagia may indicate malignancy or severe gastropathy.
+- **Red‑flag features**: Age > 55, unexplained weight loss, persistent vomiting, anemia, GI bleeding, dysphagia, odynophagia, family history of gastric cancer, NSAID use > 3 months. — Prompt endoscopic evaluation is required; higher pre‑test probability of malignancy or complicated ulcer.
+- **Medication history**: NSAIDs, aspirin, steroids, antiplatelets, PPIs, H2‑blockers, herbal remedies, antiretrovirals, anti‑TB drugs. — NSAIDs and steroids impair mucosal defence → ulcer; antiretrovirals (especially protease inhibitors) increase gastric acidity.
+- **Social & exposure history**: Alcohol intake, smoking, coffee/tea consumption, stress, recent travel, known *H. pylori* infection, HIV status, TB exposure, malaria episodes, sickle‑cell crises. — Smoking, alcohol, and stress aggravate acid secretion; HIV, TB, malaria, sickle‑cell disease can cause gastritis/ulcer through mucosal ischemia or opportunistic infection.
+- **Past GI history**: Previous ulcer disease, endoscopic findings, H. pylori eradication, surgeries. — Recurrence risk is higher after prior ulcer; informs need for repeat testing.
 
 **Examination findings and rationale**
 
-| Finding | Expected result | Pathophysiological explanation |
-|---|---|---|
-| **General appearance** | Pallor, cachexia, dehydration | Chronic blood loss → anemia; poor intake → weight loss; vomiting → volume depletion. |
-| **Vital signs** | Tachycardia, hypotension (if bleeding); fever (if infection) | Hemodynamic response to acute bleed; fever may indicate perforation or secondary infection (e.g., TB peritonitis). |
-| **Abdominal inspection** | Visible peristalsis, distension | May be present in severe gastric outlet obstruction. |
-| **Palpation** | Epigastric tenderness, guarding, rigidity (perforation); palpable mass (advanced cancer) | Local inflammation or peritoneal irritation; mass effect from tumor or enlarged lymph nodes. |
-| **Auscultation** | Hyperactive bowel sounds (early obstruction) or absent (perforation with ileus) | Reflects motility changes secondary to pain or inflammation. |
-| **Percussion** | Tympanic over gas‑filled stomach (gastric outlet obstruction) | Accumulation of gastric contents due to obstructive ulcer scar. |
-| **Rectal exam** | Melena or occult blood | Confirms upper GI bleeding when stool is black/tarry. |
-| **Extra‑intestinal signs** | Oral thrush, lymphadenopathy (HIV), hepatosplenomegaly (TB, malaria) | Systemic infections that can predispose to mucosal ulceration. |
+- **General appearance**: Pallor, cachexia, dehydration — Chronic blood loss → anemia; poor intake → weight loss; vomiting → volume depletion.
+- **Vital signs**: Tachycardia, hypotension (if bleeding); fever (if infection) — Hemodynamic response to acute bleed; fever may indicate perforation or secondary infection (e.g., TB peritonitis).
+- **Abdominal inspection**: Visible peristalsis, distension — May be present in severe gastric outlet obstruction.
+- **Palpation**: Epigastric tenderness, guarding, rigidity (perforation); palpable mass (advanced cancer) — Local inflammation or peritoneal irritation; mass effect from tumor or enlarged lymph nodes.
+- **Auscultation**: Hyperactive bowel sounds (early obstruction) or absent (perforation with ileus) — Reflects motility changes secondary to pain or inflammation.
+- **Percussion**: Tympanic over gas‑filled stomach (gastric outlet obstruction) — Accumulation of gastric contents due to obstructive ulcer scar.
+- **Rectal exam**: Melena or occult blood — Confirms upper GI bleeding when stool is black/tarry.
+- **Extra‑intestinal signs**: Oral thrush, lymphadenopathy (HIV), hepatosplenomegaly (TB, malaria) — Systemic infections that can predispose to mucosal ulceration.
 
 ---
 
@@ -108,11 +100,9 @@
 
 2. **Severity grading (based on endoscopic findings and clinical status)**  
 
-| Grade | Endoscopic appearance | Clinical correlates |
-|---|---|---|
-| **Mild** | Small (< 5 mm) superficial ulcer, no bleeding stigmata | Minimal pain, no anemia, stable vitals |
-| **Moderate** | Ulcer 5‑10 mm, visible vessel or adherent clot, mild anemia | Intermittent melena, mild tachycardia |
-| **Severe / complicated** | Ulcer > 10 mm, active spurting bleed, perforation, obstruction, or malignant features | Hemodynamic instability, peritonitis, massive melena, obstructive symptoms |
+- **Mild**: Small (< 5 mm) superficial ulcer, no bleeding stigmata — Minimal pain, no anemia, stable vitals
+- **Moderate**: Ulcer 5‑10 mm, visible vessel or adherent clot, mild anemia — Intermittent melena, mild tachycardia
+- **Severe / complicated**: Ulcer > 10 mm, active spurting bleed, perforation, obstruction, or malignant features — Hemodynamic instability, peritonitis, massive melena, obstructive symptoms
 
 3. **Risk stratification for urgent endoscopy**  
    * **High‑risk**: age > 55, anemia, overt GI bleed, weight loss, NSAID use, comorbid HIV/TB.  
@@ -131,14 +121,12 @@ The clinical approach proceeds from thorough history and focused exam, through t
 
 **Definitive treatment**  
 
-| Situation | First‑line therapy | Rationale |
-|---|---|---|
-| Uncomplicated dyspepsia (no alarm features) | Empiric PPI trial (8 weeks) | Acid suppression heals most functional dyspepsia and small ulcers. |
-| H. pylori‑positive ulcer disease | Triple therapy (PPI + clarithromycin + amoxicillin) *or* quadruple therapy (PPI + bismuth + metronidazole + tetracycline) for 14 days | Eradicates infection; reduces recurrence. |
-| H. pylori‑negative ulcer disease | PPI alone (8 weeks) ± H2‑blocker if needed | Allows ulcer healing by suppressing acid. |
-| NSAID‑induced ulcer | Stop/replace NSAID, start PPI (high‑dose) and consider misoprostol if NSAID cannot be stopped | Protects mucosa and promotes healing. |
-| HIV‑associated ulcer (CMV, TB) | Treat underlying infection (antiretroviral optimisation, anti‑TB regimen, ganciclovir for CMV) + PPI | Addresses the specific pathogen driving ulceration. |
-| Refractory ulcer after 8 weeks therapy | Repeat endoscopy, test for resistant H. pylori, consider second‑line eradication regimen, assess for malignancy | Ensures missed pathology is not overlooked. |
+- **Uncomplicated dyspepsia (no alarm features)**: Empiric PPI trial (8 weeks) — Acid suppression heals most functional dyspepsia and small ulcers.
+- **H. pylori‑positive ulcer disease**: Triple therapy (PPI + clarithromycin + amoxicillin) *or* quadruple therapy (PPI + bismuth + metronidazole + tetracycline) for 14 days — Eradicates infection; reduces recurrence.
+- **H. pylori‑negative ulcer disease**: PPI alone (8 weeks) ± H2‑blocker if needed — Allows ulcer healing by suppressing acid.
+- **NSAID‑induced ulcer**: Stop/replace NSAID, start PPI (high‑dose) and consider misoprostol if NSAID cannot be stopped — Protects mucosa and promotes healing.
+- **HIV‑associated ulcer (CMV, TB)**: Treat underlying infection (antiretroviral optimisation, anti‑TB regimen, ganciclovir for CMV) + PPI — Addresses the specific pathogen driving ulceration.
+- **Refractory ulcer after 8 weeks therapy**: Repeat endoscopy, test for resistant H. pylori, consider second‑line eradication regimen, assess for malignancy — Ensures missed pathology is not overlooked.
 
 **Monitoring & safety**  
 - Re‑evaluate symptoms after 4–8 weeks of therapy; if persistent, arrange endoscopy.  

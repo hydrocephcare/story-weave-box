@@ -1,4 +1,4 @@
-# Chronic Obstructive Pulmonary Disease (COPD) — Year 4 Internal Medicine (Respiratory) Notes
+# Chronic Obstructive Pulmonary Disease (COPD)
 
 *Orientation notes for study, based on GOLD and NICE. Check the Kenya MoH and your hospital guideline before prescribing.*
 
@@ -140,18 +140,16 @@
 
 Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [COPD drugs](/pharmacology?tab=conditions&c=copd).
 
-| Drug | Class | Role here | Watch for |
-|---|---|---|---|
-| Salbutamol | Short-acting β₂-agonist | Relief of breathlessness; nebulised in exacerbations | Tremor, palpitations, low potassium |
-| Ipratropium | Short-acting antimuscarinic | Nebulised with salbutamol in exacerbations | Dry mouth, urinary retention |
-| Tiotropium | Long-acting antimuscarinic (LAMA) | Maintenance bronchodilator | Dry mouth, urinary retention in older men |
-| Budesonide–formoterol | Inhaled steroid plus long-acting β₂-agonist | Add the steroid if frequent exacerbations and eosinophils 300/µL or more | Pneumonia risk with inhaled steroids, thrush |
-| Prednisolone | Systemic corticosteroid | Exacerbation: 30–40 mg for 5 days | High glucose, mood change |
-| Doxycycline | Tetracycline | Exacerbation with purulent sputum | Photosensitivity, oesophagitis (take upright with water) |
-| Amoxicillin | Penicillin | Alternative for a purulent exacerbation | Rash, diarrhoea, allergy |
-| Co-amoxiclav | Penicillin plus β-lactamase inhibitor | Resistant organisms or pneumonia | Diarrhoea, liver injury |
-| Azithromycin | Macrolide | Prevents exacerbations in former smokers with frequent attacks | QT prolongation, hearing loss |
-| Roflumilast | Phosphodiesterase-4 inhibitor | Severe COPD with chronic bronchitis and exacerbations | Weight loss, diarrhoea, low mood |
+- **Salbutamol**: Short-acting β₂-agonist — Relief of breathlessness; nebulised in exacerbations — Tremor, palpitations, low potassium
+- **Ipratropium**: Short-acting antimuscarinic — Nebulised with salbutamol in exacerbations — Dry mouth, urinary retention
+- **Tiotropium**: Long-acting antimuscarinic (LAMA) — Maintenance bronchodilator — Dry mouth, urinary retention in older men
+- **Budesonide–formoterol**: Inhaled steroid plus long-acting β₂-agonist — Add the steroid if frequent exacerbations and eosinophils 300/µL or more — Pneumonia risk with inhaled steroids, thrush
+- **Prednisolone**: Systemic corticosteroid — Exacerbation: 30–40 mg for 5 days — High glucose, mood change
+- **Doxycycline**: Tetracycline — Exacerbation with purulent sputum — Photosensitivity, oesophagitis (take upright with water)
+- **Amoxicillin**: Penicillin — Alternative for a purulent exacerbation — Rash, diarrhoea, allergy
+- **Co-amoxiclav**: Penicillin plus β-lactamase inhibitor — Resistant organisms or pneumonia — Diarrhoea, liver injury
+- **Azithromycin**: Macrolide — Prevents exacerbations in former smokers with frequent attacks — QT prolongation, hearing loss
+- **Roflumilast**: Phosphodiesterase-4 inhibitor — Severe COPD with chronic bronchitis and exacerbations — Weight loss, diarrhoea, low mood
 
 **Oxygen is a drug too:** aim for 88–92% in an exacerbation; too much oxygen can worsen carbon dioxide retention.
 

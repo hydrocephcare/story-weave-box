@@ -1,4 +1,4 @@
-# Introduction to Psychiatry — Year 4 Notes
+# Introduction to Psychiatry
 
 ## Definition
 **Psychiatry** is the medical specialty concerned with assessing, diagnosing, treating and preventing mental, emotional and behavioural disorders, and supporting recovery.

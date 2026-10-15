@@ -3,27 +3,23 @@
 *After reading this note you will be able to recognise, investigate and initiate appropriate management of diabetic kidney disease in Kenyan clinical settings, while remembering to verify drug choices and local protocols against the Kenya MoH guideline and your hospital formulary.*
 
 ## Definition  
-Diabetic kidney disease (DKD) – also called diabetic nephropathy – is a chronic renal complication of type 1 or type 2 diabetes mellitus characterised by persistent albuminuria (≥the protocol dose/g creatinine) and/or a sustained decline in estimated glomerular filtration rate (eGFR < 60 mL/min/1.73 m²) after at least 5 years of diabetes, in the absence of other primary renal diseases.
+Diabetic kidney disease (DKD) – also called diabetic nephropathy – is a chronic renal complication of type 1 or type 2 diabetes mellitus characterised by persistent albuminuria (≥ 30 mg/g creatinine) and/or a sustained decline in estimated glomerular filtration rate (eGFR < 60 mL/min/1.73 m²) after at least 5 years of diabetes, in the absence of other primary renal diseases.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to DKD |
-|---|---|
-| Glomerular capillary wall (endothelium, basement membrane, podocytes) | Site of hyperfiltration‑induced injury; thickening and loss of charge selectivity lead to albumin leakage |
-| Proximal tubule | Reabsorbs filtered albumin; tubular injury amplifies proteinuria and promotes interstitial fibrosis |
-| Afferent/efferent arterioles | Hyperglycaemia triggers afferent dilation and efferent constriction → intraglomerular hypertension |
-| Renin‑angiotensin‑aldosterone system (RAAS) | Chronic activation drives fibrosis, sodium retention and hypertension |
+- **Glomerular capillary wall (endothelium, basement membrane, podocytes)**: Site of hyperfiltration‑induced injury; thickening and loss of charge selectivity lead to albumin leakage
+- **Proximal tubule**: Reabsorbs filtered albumin; tubular injury amplifies proteinuria and promotes interstitial fibrosis
+- **Afferent/efferent arterioles**: Hyperglycaemia triggers afferent dilation and efferent constriction → intraglomerular hypertension
+- **Renin‑angiotensin‑aldosterone system (RAAS)**: Chronic activation drives fibrosis, sodium retention and hypertension
 
 ## Causes and risk factors  
 
-| Category | Specific factors in Kenya |
-|---|---|
-| Diabetes‑related | Poor glycaemic control, long disease duration, early onset type 1, obesity, dyslipidaemia |
-| Hypertension | Uncontrolled BP, salt‑rich diet, low awareness |
-| Genetic/ethnic | African ancestry associated with faster eGFR decline |
-| Infectious comorbidities | HIV infection (especially with ART nephrotoxicity), tuberculosis (renal TB), malaria (repeated acute kidney injury), sickle‑cell disease (renal papillary necrosis) |
-| Other renal stressors | Use of nephrotoxic drugs (NSAIDs, certain antiretrovirals), recurrent urinary tract infections, rheumatic fever (immune complex deposition) |
-| Lifestyle | Smoking, high‑protein diet, excessive alcohol |
-| Socio‑economic | Limited access to regular monitoring, delayed presentation |
+- **Diabetes‑related**: Poor glycaemic control, long disease duration, early onset type 1, obesity, dyslipidaemia
+- **Hypertension**: Uncontrolled BP, salt‑rich diet, low awareness
+- **Genetic/ethnic**: African ancestry associated with faster eGFR decline
+- **Infectious comorbidities**: HIV infection (especially with ART nephrotoxicity), tuberculosis (renal TB), malaria (repeated acute kidney injury), sickle‑cell disease (renal papillary necrosis)
+- **Other renal stressors**: Use of nephrotoxic drugs (NSAIDs, certain antiretrovirals), recurrent urinary tract infections, rheumatic fever (immune complex deposition)
+- **Lifestyle**: Smoking, high‑protein diet, excessive alcohol
+- **Socio‑economic**: Limited access to regular monitoring, delayed presentation
 
 ## Pathophysiology  
 
@@ -45,35 +41,31 @@ Superimposed hypertension, HIV‑related immune activation, and repeated AKI fro
 
 **History – what to ask**  
 
-| Domain | Key questions | Rationale |
-|---|---|---|
-| Diabetes control | “When was your diabetes diagnosed? What is your most recent HbA1c? Any recent changes in glucose‑lowering therapy?” | Poor glycaemic control accelerates glomerular injury. |
-| Duration & type | “Type 1 or type 2? How long have you had diabetes?” | Longer disease duration = higher risk of DKD. |
-| Blood pressure | “Do you monitor your BP? Any recent readings or antihypertensive changes?” | Hypertension is a major co‑factor for progression. |
-| Proteinuria symptoms | “Have you noticed foamy urine, swelling of ankles or face, or weight gain?” | Protein loss → hypo‑albuminaemia → oedema. |
-| Urinary symptoms | “Dysuria, frequency, haematuria, flank pain?” | May indicate superimposed infection or other renal disease. |
-| Cardiovascular & cerebrovascular history | “Chest pain, palpitations, stroke, peripheral claudication?” | DKD often co‑exists with macrovascular disease. |
-| HIV / TB / malaria exposure | “Are you HIV positive or on ART? Any recent TB treatment or malaria episodes?” | Co‑morbid infections accelerate renal decline in our setting. |
-| Sickle cell / rheumatic disease | “Do you have sickle cell disease or a history of rheumatic fever?” | These conditions can cause secondary nephropathy. |
-| Medication review | “Use of NSAIDs, traditional herbs, ACE‑inhibitors/ARBs, diuretics, antiretrovirals?” | Nephrotoxic agents or renoprotective drugs affect presentation. |
-| Family history | “Kidney disease in relatives?” | Genetic predisposition (e.g., APOL1 variants). |
-| Lifestyle | “Salt intake, alcohol, smoking, physical activity?” | Modifiable risk factors for progression. |
-| Symptoms of uremia | “Nausea, loss of appetite, pruritus, restless legs, confusion?” | Late‑stage DKD may already be symptomatic. |
+- **Diabetes control**: “When was your diabetes diagnosed? What is your most recent HbA1c? Any recent changes in glucose‑lowering therapy?” — Poor glycaemic control accelerates glomerular injury.
+- **Duration & type**: “Type 1 or type 2? How long have you had diabetes?” — Longer disease duration = higher risk of DKD.
+- **Blood pressure**: “Do you monitor your BP? Any recent readings or antihypertensive changes?” — Hypertension is a major co‑factor for progression.
+- **Proteinuria symptoms**: “Have you noticed foamy urine, swelling of ankles or face, or weight gain?” — Protein loss → hypo‑albuminaemia → oedema.
+- **Urinary symptoms**: “Dysuria, frequency, haematuria, flank pain?” — May indicate superimposed infection or other renal disease.
+- **Cardiovascular & cerebrovascular history**: “Chest pain, palpitations, stroke, peripheral claudication?” — DKD often co‑exists with macrovascular disease.
+- **HIV / TB / malaria exposure**: “Are you HIV positive or on ART? Any recent TB treatment or malaria episodes?” — Co‑morbid infections accelerate renal decline in our setting.
+- **Sickle cell / rheumatic disease**: “Do you have sickle cell disease or a history of rheumatic fever?” — These conditions can cause secondary nephropathy.
+- **Medication review**: “Use of NSAIDs, traditional herbs, ACE‑inhibitors/ARBs, diuretics, antiretrovirals?” — Nephrotoxic agents or renoprotective drugs affect presentation.
+- **Family history**: “Kidney disease in relatives?” — Genetic predisposition (e.g., APOL1 variants).
+- **Lifestyle**: “Salt intake, alcohol, smoking, physical activity?” — Modifiable risk factors for progression.
+- **Symptoms of uremia**: “Nausea, loss of appetite, pruritus, restless legs, confusion?” — Late‑stage DKD may already be symptomatic.
 
 **Examination – what to look for and why**  
 
-| Finding | Why it occurs in DKD |
-|---|---|
-| Blood pressure (often ≥130/80 mmHg) | Hypertension both cause and consequence of glomerular hyperfiltration. |
-| Peripheral oedema (ankles, sacrum) | Loss of albumin → reduced oncotic pressure; sodium retention. |
-| Skin – dry, itchy, hyperpigmented patches | Uraemic pruritus and altered skin barrier from chronic kidney disease. |
-| Fundoscopy – hypertensive retinopathy, diabetic retinopathy | Microvascular disease parallels renal microangiopathy. |
-| Neuropathy – diminished vibration sense, monofilament loss | Diabetic neuropathy often co‑exists; may affect autonomic control of renal perfusion. |
-| Cardiovascular exam – displaced apex, S3 gallop | Volume overload and LVH from hypertension. |
-| Abdominal exam – enlarged kidneys (palpable) | Early DKD may have hypertrophied kidneys; later shrinkage. |
-| Signs of infection – oral thrush, lymphadenopathy | HIV/TB co‑infection may be present; infections can precipitate AKI on CKD. |
-| Joint exam – murmurs of rheumatic heart disease | Helps differentiate rheumatic kidney disease. |
-| Sickle cell signs – splenomegaly, jaundice | Suggest alternative or additive nephropathy. |
+- **Blood pressure (often ≥130/80 mmHg)**: Hypertension both cause and consequence of glomerular hyperfiltration.
+- **Peripheral oedema (ankles, sacrum)**: Loss of albumin → reduced oncotic pressure; sodium retention.
+- **Skin – dry, itchy, hyperpigmented patches**: Uraemic pruritus and altered skin barrier from chronic kidney disease.
+- **Fundoscopy – hypertensive retinopathy, diabetic retinopathy**: Microvascular disease parallels renal microangiopathy.
+- **Neuropathy – diminished vibration sense, monofilament loss**: Diabetic neuropathy often co‑exists; may affect autonomic control of renal perfusion.
+- **Cardiovascular exam – displaced apex, S3 gallop**: Volume overload and LVH from hypertension.
+- **Abdominal exam – enlarged kidneys (palpable)**: Early DKD may have hypertrophied kidneys; later shrinkage.
+- **Signs of infection – oral thrush, lymphadenopathy**: HIV/TB co‑infection may be present; infections can precipitate AKI on CKD.
+- **Joint exam – murmurs of rheumatic heart disease**: Helps differentiate rheumatic kidney disease.
+- **Sickle cell signs – splenomegaly, jaundice**: Suggest alternative or additive nephropathy.
 
 ---
 
@@ -93,43 +85,39 @@ Superimposed hypertension, HIV‑related immune activation, and repeated AKI fro
 
 ## Investigations  
 
-| Test | What it answers | Interpretation |
-|---|---|---|
-| Serum creatinine & eGFR (CKD‑EPI) | Current renal function | eGFR < 60 ml/min/1.73 m² = CKD; stage based on eGFR |
-| Urine albumin‑to‑creatinine ratio (UACR) | Degree of albuminuria | <the protocol dose/g = normal; 30‑the protocol dose/g = microalbuminuria; >the protocol dose/g = macroalbuminuria |
-| Spot urine protein/creatinine ratio | Total protein loss when albuminuria not available | >0.5 g/g suggests nephrotic range |
-| HbA1c | Glycaemic control | >7 % indicates suboptimal control, risk factor for progression |
-| Blood pressure measurement (automated, seated) | Hypertension status | ≥130/80 mmHg = target not met |
-| Lipid profile | Cardiovascular risk | Elevated LDL adds to CKD progression risk |
-| Serum electrolytes, bicarbonate, calcium, phosphate, PTH | Metabolic complications of CKD | Hyperkalaemia, metabolic acidosis, secondary hyperparathyroidism |
-| Complete blood count | Anaemia of CKD | Haemoglobin <12 g/dL suggests need for erythropoietin |
-| HIV test, CD4 count, viral load (if applicable) | Co‑infection status | Positive HIV influences management (ART choice) |
-| TB screening (GeneXpert urine, chest X‑ray) | TB kidney involvement | Positive test indicates TB‑related renal disease |
-| Renal ultrasound | Structural changes | Enlarged kidneys early, cortical thinning later; rules out obstruction |
-| Serology for ANA, anti‑dsDNA, complement levels (if lupus suspected) | Autoimmune kidney disease | Low complement, positive ANA point away from DKD |
-| Kidney biopsy (selected cases) | Definitive histology | Distinguishes DKD from other glomerulopathies when diagnosis uncertain |
+- **Serum creatinine & eGFR (CKD‑EPI)**: Current renal function — eGFR < 60 ml/min/1.73 m² = CKD; stage based on eGFR
+- **Urine albumin‑to‑creatinine ratio (UACR)**: Degree of albuminuria — <30 mg/g = normal; 30‑300 mg/g = microalbuminuria; >300 mg/g = macroalbuminuria
+- **Spot urine protein/creatinine ratio**: Total protein loss when albuminuria not available — >0.5 g/g suggests nephrotic range
+- **HbA1c**: Glycaemic control — >7 % indicates suboptimal control, risk factor for progression
+- **Blood pressure measurement (automated, seated)**: Hypertension status — ≥130/80 mmHg = target not met
+- **Lipid profile**: Cardiovascular risk — Elevated LDL adds to CKD progression risk
+- **Serum electrolytes, bicarbonate, calcium, phosphate, PTH**: Metabolic complications of CKD — Hyperkalaemia, metabolic acidosis, secondary hyperparathyroidism
+- **Complete blood count**: Anaemia of CKD — Haemoglobin <12 g/dL suggests need for erythropoietin
+- **HIV test, CD4 count, viral load (if applicable)**: Co‑infection status — Positive HIV influences management (ART choice)
+- **TB screening (GeneXpert urine, chest X‑ray)**: TB kidney involvement — Positive test indicates TB‑related renal disease
+- **Renal ultrasound**: Structural changes — Enlarged kidneys early, cortical thinning later; rules out obstruction
+- **Serology for ANA, anti‑dsDNA, complement levels (if lupus suspected)**: Autoimmune kidney disease — Low complement, positive ANA point away from DKD
+- **Kidney biopsy (selected cases)**: Definitive histology — Distinguishes DKD from other glomerulopathies when diagnosis uncertain
 
 ---
 
 ## Diagnosis and severity  
 
 1. **Establish diabetic kidney disease**  
-   * Presence of diabetes mellitus **plus** either persistent albuminuria (UACR ≥ the protocol dose/g) **or** reduced eGFR < 60 ml/min/1.73 m² for ≥3 months, after excluding other primary renal diseases.  
+   * Presence of diabetes mellitus **plus** either persistent albuminuria (UACR ≥ 30 mg/g) **or** reduced eGFR < 60 ml/min/1.73 m² for ≥3 months, after excluding other primary renal diseases.  
 
 2. **Stage DKD** (based on KDIGO 2023 framework, adapted to local resources)  
 
-| eGFR (ml/min/1.73 m²) | Albuminuria (UACR) | KDIGO category | Clinical implication |
-|---|---|---|---|
-| ≥90 | <30 | G1 A1 | Normal renal function; monitor annually |
-| ≥90 | 30‑300 | G1 A2 | Early DKD; start ACE‑I/ARB, optimise glucose |
-| ≥90 | >300 | G1 A3 | Nephrotic range; consider nephrology referral |
-| 60‑89 | <30 | G2 A1 | Mild CKD; lifestyle, BP control |
-| 60‑89 | 30‑300 | G2 A2 | Moderate DKD; ACE‑I/ARB, tighter BP |
-| 60‑89 | >300 | G2 A3 | High risk; nephrology input |
-| 45‑59 | any | G3a | Moderate CKD; prepare for possible referral |
-| 30‑44 | any | G3b | Severe CKD; start renal protective measures, plan for dialysis education |
-| 15‑29 | any | G4 | Advanced CKD; multidisciplinary care, early transplant discussion |
-| <15 | any | G5 | End‑stage renal disease; dialysis or transplant evaluation |
+- **≥90**: <30 — G1 A1 — Normal renal function; monitor annually
+- **≥90**: 30‑300 — G1 A2 — Early DKD; start ACE‑I/ARB, optimise glucose
+- **≥90**: >300 — G1 A3 — Nephrotic range; consider nephrology referral
+- **60‑89**: <30 — G2 A1 — Mild CKD; lifestyle, BP control
+- **60‑89**: 30‑300 — G2 A2 — Moderate DKD; ACE‑I/ARB, tighter BP
+- **60‑89**: >300 — G2 A3 — High risk; nephrology input
+- **45‑59**: any — G3a — Moderate CKD; prepare for possible referral
+- **30‑44**: any — G3b — Severe CKD; start renal protective measures, plan for dialysis education
+- **15‑29**: any — G4 — Advanced CKD; multidisciplinary care, early transplant discussion
+- **<15**: any — G5 — End‑stage renal disease; dialysis or transplant evaluation
 
 3. **Document co‑morbidities** – hypertension, HIV, TB, sickle cell, etc., as they modify both prognosis and therapeutic choices.  
 
@@ -141,20 +129,40 @@ Severity assessment guides frequency of follow‑up (every 3‑6 months for ea
 
 ## Management  
 
-| Phase | Key actions | Rationale / safety notes |
-|---|---|---|
-| **Immediate stabilisation** | • Correct volume status – give isotonic saline if hypotensive or dehydrated, switch to loop diuretic if fluid overloaded. <br>• Treat severe hypertension (BP > 180/110 mmHg) with rapid‑acting IV antihypertensives (e.g., labetalol, nicardipine). <br>• Manage hyperglycaemia – start insulin infusion, monitor capillary glucose every hour. <br>• Address electrolyte emergencies – replace potassium only after confirming serum level, avoid rapid correction of severe hyperkalaemia without cardiac monitoring. | Prevents acute kidney injury progression, reduces risk of cerebral or cardiac events, and avoids osmotic diuresis‑related worsening of renal perfusion. |
-| **Definitive treatment** | • Optimise glycaemic control – basal‑bolus insulin regimen or oral agents (metformin if eGFR > 30 ml/min/1.73 m², SGLT2 inhibitor if proteinuria present and eGFR > 45). <br>• Blood pressure target < 130/80 mmHg; first‑line ACE inhibitor or ARB, titrate to maximal tolerated dose. <br>• Reduce proteinuria – ACEI/ARB, consider adding a non‑dihydropyridine calcium‑channel blocker if needed. <br>• Lipid management – high‑intensity statin, add ezetimibe if LDL remains > 100 mg/dL. <br>• Lifestyle – low‑salt diet, moderate protein (≈0.8 g/kg), smoking cessation, regular aerobic exercise. | ACEI/ARB slow progression of diabetic nephropathy and lower proteinuria. SGLT2 inhibitors provide renal protection independent of glucose lowering. Statins reduce cardiovascular mortality, the leading cause of death in DKD. |
-| **Monitoring** | • Serum creatinine & eGFR: baseline, 2 weeks after ACEI/ARB start, then every 3 months. <br>• Urine albumin‑to‑creatinine ratio (UACR): every 6 months. <br>• Electrolytes (K⁺, Na⁺, HCO₃⁻) after any medication change. <br>• HbA1c every 3 months; adjust therapy if > 7 % (or local target). <br>• Blood pressure at each visit; home monitoring encouraged. | Detects drug‑induced AKI, hyperkalaemia, and ensures targets are being met. |
-| **When to refer / definitive renal replacement** | • eGFR < 30 ml/min/1.73 m² with rapid decline (> 5 ml/min/yr). <br>• Persistent nephrotic‑range proteinuria despite optimal ACEI/ARB. <br>• Refractory hypertension, fluid overload, or uremic symptoms. <br>• Prepare for dialysis or transplant evaluation. | Early referral improves access to education, vascular access creation, and transplant work‑up. |
-| **Contra‑indications / safety** | • ACEI/ARB contraindicated in bilateral renal artery stenosis, pregnancy, or severe hyperkalaemia. <br>• SGLT2 inhibitors avoided in eGFR < 45 ml/min/1.73 m² (or local guideline cut‑off). <br>• Metformin stopped if eGFR < 30 ml/min/1.73 m². <br>• NSAIDs should be avoided or used sparingly; they blunt prostaglandin‑mediated renal vasodilation. | Prevents iatrogenic worsening of renal function and metabolic derangements. |
+- **Immediate stabilisation**
+  - Correct volume status – give isotonic saline if hypotensive or dehydrated, switch to loop diuretic if fluid overloaded.
+  - Treat severe hypertension (BP > 180/110 mmHg) with rapid‑acting IV antihypertensives (e.g., labetalol, nicardipine).
+  - Manage hyperglycaemia – start insulin infusion, monitor capillary glucose every hour.
+  - Address electrolyte emergencies – replace potassium only after confirming serum level, avoid rapid correction of severe hyperkalaemia without cardiac monitoring. — Prevents acute kidney injury progression, reduces risk of cerebral or cardiac events, and avoids osmotic diuresis‑related worsening of renal perfusion.
+- **Definitive treatment**
+  - Optimise glycaemic control – basal‑bolus insulin regimen or oral agents (metformin if eGFR > 30 ml/min/1.73 m², SGLT2 inhibitor if proteinuria present and eGFR > 45).
+  - Blood pressure target < 130/80 mmHg; first‑line ACE inhibitor or ARB, titrate to maximal tolerated dose.
+  - Reduce proteinuria – ACEI/ARB, consider adding a non‑dihydropyridine calcium‑channel blocker if needed.
+  - Lipid management – high‑intensity statin, add ezetimibe if LDL remains > 100 mg/dL.
+  - Lifestyle – low‑salt diet, moderate protein (≈0.8 g/kg), smoking cessation, regular aerobic exercise. — ACEI/ARB slow progression of diabetic nephropathy and lower proteinuria. SGLT2 inhibitors provide renal protection independent of glucose lowering. Statins reduce cardiovascular mortality, the leading cause of death in DKD.
+- **Monitoring**
+  - Serum creatinine & eGFR: baseline, 2 weeks after ACEI/ARB start, then every 3 months.
+  - Urine albumin‑to‑creatinine ratio (UACR): every 6 months.
+  - Electrolytes (K⁺, Na⁺, HCO₃⁻) after any medication change.
+  - HbA1c every 3 months; adjust therapy if > 7 % (or local target).
+  - Blood pressure at each visit; home monitoring encouraged. — Detects drug‑induced AKI, hyperkalaemia, and ensures targets are being met.
+- **When to refer / definitive renal replacement**
+  - eGFR < 30 ml/min/1.73 m² with rapid decline (> 5 ml/min/yr).
+  - Persistent nephrotic‑range proteinuria despite optimal ACEI/ARB.
+  - Refractory hypertension, fluid overload, or uremic symptoms.
+  - Prepare for dialysis or transplant evaluation. — Early referral improves access to education, vascular access creation, and transplant work‑up.
+- **Contra‑indications / safety**
+  - ACEI/ARB contraindicated in bilateral renal artery stenosis, pregnancy, or severe hyperkalaemia.
+  - SGLT2 inhibitors avoided in eGFR < 45 ml/min/1.73 m² (or local guideline cut‑off).
+  - Metformin stopped if eGFR < 30 ml/min/1.73 m².
+  - NSAIDs should be avoided or used sparingly; they blunt prostaglandin‑mediated renal vasodilation. — Prevents iatrogenic worsening of renal function and metabolic derangements.
 
 ---
 
 ## Complications and prognosis  
 
 * **Progressive CKD → End‑stage renal disease (ESRD)** – median time from DKD diagnosis to dialysis ≈ 10–12 years if uncontrolled; slower with ACEI/ARB + SGLT2i.  
-* **Cardiovascular disease** – leading cause of death; risk rises with albuminuria > the protocol dose/g.  
+* **Cardiovascular disease** – leading cause of death; risk rises with albuminuria > 30 mg/g.  
 * **Hyperkalaemia** – from ACEI/ARB, especially with reduced eGFR; may limit dose escalation.  
 * **Anemia of chronic disease** – treat with iron, ESA when Hb < 10 g/dL and iron replete.  
 * **Bone‑mineral disorder** – secondary hyperparathyroidism, vascular calcification; monitor calcium, phosphate, PTH.  
@@ -167,9 +175,9 @@ Prognosis hinges on glycaemic, BP, and proteinuria control. Early use of ACEI/AR
 
 ## High‑yield exam points  
 
-* **Look‑alike conditions** – hypertensive nephrosclerosis, HIV‑associated nephropathy, sickle‑cell nephropathy; differentiate by proteinuria pattern (DKD: albuminuria > the protocol dose/g, often with retinopathy).  
+* **Look‑alike conditions** – hypertensive nephrosclerosis, HIV‑associated nephropathy, sickle‑cell nephropathy; differentiate by proteinuria pattern (DKD: albuminuria > 300 mg/g, often with retinopathy).  
 * **Common wrong first step** – starting a loop diuretic in a volume‑depleted patient with rising creatinine; examiners expect assessment of volume status first.  
-* **Bedside questioning** – “What does a urine albumin‑to‑creatinine ratio of the protocol dose/g tell you about prognosis?” (Answer: high risk of CKD progression).  
+* **Bedside questioning** – “What does a urine albumin‑to‑creatinine ratio of 450 mg/g tell you about prognosis?” (Answer: high risk of CKD progression).  
 * **Key exam finding** – presence of diabetic retinopathy strongly supports DKD as the cause of CKD.  
 * **Medication safety** – “Why would you stop an ACE inhibitor in a patient with a sudden rise in serum creatinine of 30 %?” (Answer: suspect bilateral renal artery stenosis or acute tubular necrosis; need to reassess).  
 
@@ -183,7 +191,7 @@ Prognosis hinges on glycaemic, BP, and proteinuria control. Early use of ACEI/AR
 * BP 158/92 mmHg, BMI 31 kg/m².  
 * Bilateral pitting oedema up to mid‑calf.  
 * Labs: serum creatinine 1.9 mg/dL (eGFR ≈ 38 ml/min/1.73 m²), HbA1c 8.5 %, potassium 5.2 mmol/L, serum albumin 3.8 g/dL.  
-* Urine ACR the protocol dose/g (macro‑albuminuria).  
+* Urine ACR > 300 mg/g (macro‑albuminuria).  
 * Fundoscopy: moderate non‑proliferative diabetic retinopathy.  
 
 ### Questions  
@@ -202,7 +210,7 @@ Prognosis hinges on glycaemic, BP, and proteinuria control. Early use of ACEI/AR
 ## Practice questions  
 
 ### Question 1  
-A 45‑year‑old woman with type 2 diabetes presents with new‑onset peripheral oedema. Her BP is 165/100 mmHg, serum creatinine 1.4 mg/dL, potassium 5.0 mmol/L, and urine ACR the protocol dose/g. What is the best immediate action?  
+A 45‑year‑old woman with type 2 diabetes presents with new‑onset peripheral oedema. Her BP is 165/100 mmHg, serum creatinine 1.4 mg/dL, potassium 5.0 mmol/L, and urine ACR 450 mg/g. What is the best immediate action?  
 
 A. Start a high‑dose loop diuretic  
 B. Begin an ACE inhibitor and check potassium in 1 week  

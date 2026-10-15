@@ -1,4 +1,4 @@
-# Pleural Effusion — Year 4 Internal Medicine (Respiratory) Notes
+# Pleural Effusion
 
 *Orientation notes for study. Check local guidelines before prescribing or performing procedures.*
 
@@ -8,15 +8,13 @@ A **pleural effusion** is an **abnormal collection of fluid in the pleural space
 
 ## Anatomy and physiology you need  
 
-| Structure / Process | Why it matters for pleural effusion | Clinical implication |
-|---|---|---|
-| **Visceral and parietal pleura** – serous membranes covering lung and chest wall, respectively, with a potential space between them. | The pleural space normally contains a thin lubricating film; any imbalance in fluid formation or removal fills this potential space. | Presence of fluid produces dullness, reduced breath sounds and shifts on imaging; localisation (e.g., loculated vs free‑flowing) depends on pleural surface integrity. |
-| **Parietal pleural capillaries (systemic circulation)** – low‑pressure, high‑protein vessels. | Hydrostatic pressure here drives fluid out; increased systemic venous pressure (right‑heart failure, constrictive pericarditis) pushes plasma into the space → transudate. | Bilateral, symmetric effusions are typical; pleural fluid protein/LDH low, pleural‑serum gradients normal. |
-| **Visceral pleural capillaries (pulmonary circulation)** – high‑pressure, low‑protein vessels. | Inflammation or infection raises permeability, allowing protein‑rich exudate to leak into the space. | Unilateral, often associated with pneumonia, TB or malignancy; pleural fluid protein and LDH high, Light’s criteria met. |
-| **Pleural lymphatics (parietal)** – drain fluid and proteins into mediastinal nodes. | Obstruction (malignancy, fibrosis) impairs clearance, causing fluid accumulation despite normal pressures. | Persistent or recurrent effusions despite treatment of systemic causes; may show malignant cells on cytology. |
-| **Pleural‑peritoneal communication (diaphragmatic pores, congenital defects)** – allows ascitic fluid to track into pleural space. | Low oncotic pressure in the abdomen can transmit fluid → hepatic hydrothorax, usually right‑sided. | Large unilateral right effusion in cirrhosis with minimal abdominal distension; fluid is transudate with low protein. |
-| **Pleural pressure dynamics** – negative intrapleural pressure during inspiration, positive during expiration. | Sudden removal of large volumes (>1.5 L) can reverse this gradient, causing rapid re‑expansion of the lung and pulmonary oedema. | Limit aspiration volume, monitor for chest tightness, cough or hypoxia; re‑expansion pulmonary oedema is a procedural complication. |
-| **Pleural elasticity and “meniscus sign”** – surface tension of fluid creates a curved air‑fluid interface on radiograph. | The classic meniscus on chest X‑ray indicates free‑flowing fluid; a straight line suggests loculation or thickened pleura. | Helps differentiate simple effusion from empyema or malignant pleural disease that may require chest tube or thoracoscopy. |
+- **Visceral and parietal pleura – serous membranes covering lung and chest wall, respectively, with a potential space between them.**: The pleural space normally contains a thin lubricating film; any imbalance in fluid formation or removal fills this potential space. — Presence of fluid produces dullness, reduced breath sounds and shifts on imaging; localisation (e.g., loculated vs free‑flowing) depends on pleural surface integrity.
+- **Parietal pleural capillaries (systemic circulation) – low‑pressure, high‑protein vessels.**: Hydrostatic pressure here drives fluid out; increased systemic venous pressure (right‑heart failure, constrictive pericarditis) pushes plasma into the space → transudate. — Bilateral, symmetric effusions are typical; pleural fluid protein/LDH low, pleural‑serum gradients normal.
+- **Visceral pleural capillaries (pulmonary circulation) – high‑pressure, low‑protein vessels.**: Inflammation or infection raises permeability, allowing protein‑rich exudate to leak into the space. — Unilateral, often associated with pneumonia, TB or malignancy; pleural fluid protein and LDH high, Light’s criteria met.
+- **Pleural lymphatics (parietal) – drain fluid and proteins into mediastinal nodes.**: Obstruction (malignancy, fibrosis) impairs clearance, causing fluid accumulation despite normal pressures. — Persistent or recurrent effusions despite treatment of systemic causes; may show malignant cells on cytology.
+- **Pleural‑peritoneal communication (diaphragmatic pores, congenital defects) – allows ascitic fluid to track into pleural space.**: Low oncotic pressure in the abdomen can transmit fluid → hepatic hydrothorax, usually right‑sided. — Large unilateral right effusion in cirrhosis with minimal abdominal distension; fluid is transudate with low protein.
+- **Pleural pressure dynamics – negative intrapleural pressure during inspiration, positive during expiration.**: Sudden removal of large volumes (>1.5 L) can reverse this gradient, causing rapid re‑expansion of the lung and pulmonary oedema. — Limit aspiration volume, monitor for chest tightness, cough or hypoxia; re‑expansion pulmonary oedema is a procedural complication.
+- **Pleural elasticity and “meniscus sign” – surface tension of fluid creates a curved air‑fluid interface on radiograph.**: The classic meniscus on chest X‑ray indicates free‑flowing fluid; a straight line suggests loculation or thickened pleura. — Helps differentiate simple effusion from empyema or malignant pleural disease that may require chest tube or thoracoscopy.
 
 ---
 
@@ -141,13 +139,11 @@ A 68‑year‑old man with known ischaemic cardiomyopathy (EF 30 %) presents
 
 Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot.
 
-| Drug | Class | Role here | Watch for |
-|---|---|---|---|
-| Furosemide | Loop diuretic | Effusion from heart failure | Low potassium and sodium, dehydration |
-| Rifampicin | Anti-TB drug | Tuberculous pleural effusion, as part of the standard regimen | Hepatitis, orange urine, many interactions |
-| Ceftriaxone | Third-generation cephalosporin | Parapneumonic effusion and empyema | Biliary sludge, allergy |
-| Metronidazole | Nitroimidazole | Anaerobic cover in empyema | Metallic taste; no alcohol |
-| Paracetamol | Analgesic | Pleuritic pain | Liver injury in overdose |
+- **Furosemide**: Loop diuretic — Effusion from heart failure — Low potassium and sodium, dehydration
+- **Rifampicin**: Anti-TB drug — Tuberculous pleural effusion, as part of the standard regimen — Hepatitis, orange urine, many interactions
+- **Ceftriaxone**: Third-generation cephalosporin — Parapneumonic effusion and empyema — Biliary sludge, allergy
+- **Metronidazole**: Nitroimidazole — Anaerobic cover in empyema — Metallic taste; no alcohol
+- **Paracetamol**: Analgesic — Pleuritic pain — Liver injury in overdose
 
 **Drain, do not just drug:** a pleural pH below 7.2, pus or a positive culture needs a chest drain as well as antibiotics.
 

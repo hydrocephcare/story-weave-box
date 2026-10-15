@@ -24,15 +24,13 @@ Enteric fever is a systemic, life-threatening infection caused by the invasive, 
 
 ### Local and tropical risk factors (Kenyan context)
 
-| Factor | Mechanism of vulnerability |
-|---|---|
-| Inadequate WASH | Drinking untreated water, poor pit latrine access, informal urban settlements |
-| Sickle cell disease | Functional asplenia, impaired opsonization, macrophage iron overload |
-| Advanced HIV disease | Impaired cell-mediated immunity, blunted mucosal defenses, recurrent bacteremia |
-| Concomitant malaria | Hemolysis leads to heme oxygenase-1 induction, impairing macrophage bactericidal capacity |
-| Chronic schistosomiasis | Adult *Schistosoma* worms harbor *Salmonella* in tegument, causing prolonged bacteremia |
-| Hypochlorhydria | Use of antacids/PPIs or atrophic gastritis reduces gastric acid kill rate |
-| Chronic cholelithiasis | Biliary stones permit bacterial biofilm formation, sustaining the chronic carrier state |
+- **Inadequate WASH**: Drinking untreated water, poor pit latrine access, informal urban settlements
+- **Sickle cell disease**: Functional asplenia, impaired opsonization, macrophage iron overload
+- **Advanced HIV disease**: Impaired cell-mediated immunity, blunted mucosal defenses, recurrent bacteremia
+- **Concomitant malaria**: Hemolysis leads to heme oxygenase-1 induction, impairing macrophage bactericidal capacity
+- **Chronic schistosomiasis**: Adult *Schistosoma* worms harbor *Salmonella* in tegument, causing prolonged bacteremia
+- **Hypochlorhydria**: Use of antacids/PPIs or atrophic gastritis reduces gastric acid kill rate
+- **Chronic cholelithiasis**: Biliary stones permit bacterial biofilm formation, sustaining the chronic carrier state
 
 ## Pathophysiology
 
@@ -162,14 +160,12 @@ Close monitoring is essential to assess treatment response and detect complicati
 
 Enteric fever can lead to significant morbidity and mortality if not managed promptly and effectively.
 
-| Complication | Description |
-| :--- | :--- |
-| **Gastrointestinal** | Intestinal perforation, haemorrhage, ileus, toxic megacolon. |
-| **Neurological** | Meningoencephalitis, delirium, seizures, peripheral neuropathy. |
-| **Cardiovascular** | Myocarditis, endocarditis, shock. |
-| **Hepatic/Splenic** | Hepatitis, cholecystitis, splenic abscess, splenic rupture. |
-| **Renal** | Acute kidney injury. |
-| **Other** | Pneumonia, osteomyelitis, chorioamnionitis (in pregnancy), relapsing fever. |
+- **Gastrointestinal**: Intestinal perforation, haemorrhage, ileus, toxic megacolon.
+- **Neurological**: Meningoencephalitis, delirium, seizures, peripheral neuropathy.
+- **Cardiovascular**: Myocarditis, endocarditis, shock.
+- **Hepatic/Splenic**: Hepatitis, cholecystitis, splenic abscess, splenic rupture.
+- **Renal**: Acute kidney injury.
+- **Other**: Pneumonia, osteomyelitis, chorioamnionitis (in pregnancy), relapsing fever.
 
 **Prognosis:** With prompt diagnosis and appropriate antibiotic therapy, the prognosis is generally good. However, complications significantly worsen the prognosis and increase mortality. Untreated or delayed treatment carries a high mortality rate. Chronic carrier state can occur, particularly in individuals with gallstones.
 

@@ -8,23 +8,19 @@
 - **Platelet function disorder**: normal platelet count with impaired adhesion, activation or aggregation leading to abnormal bleeding time or specialised testing.
 
 ## Anatomy and physiology you need  
-| Structure | Role in haemostasis |
-|---|---|
-| Megakaryocyte (bone marrow) | Produces platelets; regulated by thrombopoietin |
-| Platelet membrane receptors (GPIb, GPIIb/IIIa) | Adhesion to collagen, aggregation |
-| Granules (α, dense) | Release ADP, serotonin, fibrinogen‑binding proteins |
-| Endothelium (von Willebrand factor) | Mediates platelet adhesion under shear |
-| Coagulation cascade (intrinsic & extrinsic) | Provides fibrin scaffold for platelet plug |
+- **Megakaryocyte (bone marrow)**: Produces platelets; regulated by thrombopoietin
+- **Platelet membrane receptors (GPIb, GPIIb/IIIa)**: Adhesion to collagen, aggregation
+- **Granules (α, dense)**: Release ADP, serotonin, fibrinogen‑binding proteins
+- **Endothelium (von Willebrand factor)**: Mediates platelet adhesion under shear
+- **Coagulation cascade (intrinsic & extrinsic)**: Provides fibrin scaffold for platelet plug
 
 ## Causes and risk factors  
 
-| Category | Common Kenyan aetiologies |
-|---|---|
-| Decreased production | HIV, TB (marrow infiltration), malaria, sickle cell disease, aplastic anaemia, chemotherapy, severe malnutrition |
-| Increased destruction | Immune thrombocytopenia (ITP), drug‑induced (e.g., quinine, penicillins), disseminated intravascular coagulation (sepsis, severe malaria), hypersplenism (schistosomiasis, portal hypertension) |
-| Sequestration | Splenomegaly from malaria, schistosomiasis, sickle cell, portal hypertension |
-| Platelet function defects | Glanzmann thrombasthenia (rare), Bernard‑Soulier, antiplatelet drugs (aspirin, clopidogrel), uremia |
-| Mixed/other | Pregnancy‑associated ITP, viral hepatitis, rheumatic fever (immune complexes) |
+- **Decreased production**: HIV, TB (marrow infiltration), malaria, sickle cell disease, aplastic anaemia, chemotherapy, severe malnutrition
+- **Increased destruction**: Immune thrombocytopenia (ITP), drug‑induced (e.g., quinine, penicillins), disseminated intravascular coagulation (sepsis, severe malaria), hypersplenism (schistosomiasis, portal hypertension)
+- **Sequestration**: Splenomegaly from malaria, schistosomiasis, sickle cell, portal hypertension
+- **Platelet function defects**: Glanzmann thrombasthenia (rare), Bernard‑Soulier, antiplatelet drugs (aspirin, clopidogrel), uremia
+- **Mixed/other**: Pregnancy‑associated ITP, viral hepatitis, rheumatic fever (immune complexes)
 
 ## Pathophysiology  
 
@@ -36,33 +32,29 @@
 
 ## Clinical features  
 
-| History question | Why it matters |
-|---|---|
-| Onset of bruising or petechiae (sudden vs gradual) | Sudden fall suggests acute consumptive process (e.g., DIC, severe infection) whereas gradual decline fits chronic marrow suppression or immune thrombocytopenia. |
-| Recent infections (malaria, HIV, TB, viral gastro‑enteritis) | Many tropical infections cause platelet sequestration or immune destruction; HIV and TB are common causes of secondary immune thrombocytopenia in Kenya. |
-| Drug exposure (antibiotics, antimalarials, antiretrovirals, traditional medicines) | Drug‑dependent antibodies or marrow toxicity can lower platelet count; identifying the culprit allows withdrawal. |
-| Bleeding history (mucosal bleeding, epistaxis, menorrhagia, GI bleed, hematuria) | Determines clinical severity and guides urgency of treatment; mucocutaneous bleeding is typical of platelet defects, while deep bleeding may indicate co‑existing coagulopathy. |
-| Pregnancy status or recent childbirth | Gestational thrombocytopenia and HELLP syndrome are important differentials; management differs from immune causes. |
-| Past haematological disease (sickle cell, thalassaemia, aplastic anaemia) | Underlying marrow pathology predisposes to low platelets and may affect choice of definitive therapy. |
-| Family history of bleeding diathesis | Inherited platelet function disorders (e.g., Bernard‑Soulier, Glanzmann) present with lifelong bleeding; distinguishes from acquired causes. |
-| Alcohol intake, nutritional status | Chronic alcohol or malnutrition can suppress marrow production; addressing these factors is part of management. |
-| Splenomegaly or abdominal pain | Suggests sequestration (e.g., portal hypertension, malaria, sickle cell) or infiltrative disease. |
-| Recent surgery or trauma | Provides context for possible consumptive loss or need for peri‑operative platelet support. |
+- **Onset of bruising or petechiae (sudden vs gradual)**: Sudden fall suggests acute consumptive process (e.g., DIC, severe infection) whereas gradual decline fits chronic marrow suppression or immune thrombocytopenia.
+- **Recent infections (malaria, HIV, TB, viral gastro‑enteritis)**: Many tropical infections cause platelet sequestration or immune destruction; HIV and TB are common causes of secondary immune thrombocytopenia in Kenya.
+- **Drug exposure (antibiotics, antimalarials, antiretrovirals, traditional medicines)**: Drug‑dependent antibodies or marrow toxicity can lower platelet count; identifying the culprit allows withdrawal.
+- **Bleeding history (mucosal bleeding, epistaxis, menorrhagia, GI bleed, hematuria)**: Determines clinical severity and guides urgency of treatment; mucocutaneous bleeding is typical of platelet defects, while deep bleeding may indicate co‑existing coagulopathy.
+- **Pregnancy status or recent childbirth**: Gestational thrombocytopenia and HELLP syndrome are important differentials; management differs from immune causes.
+- **Past haematological disease (sickle cell, thalassaemia, aplastic anaemia)**: Underlying marrow pathology predisposes to low platelets and may affect choice of definitive therapy.
+- **Family history of bleeding diathesis**: Inherited platelet function disorders (e.g., Bernard‑Soulier, Glanzmann) present with lifelong bleeding; distinguishes from acquired causes.
+- **Alcohol intake, nutritional status**: Chronic alcohol or malnutrition can suppress marrow production; addressing these factors is part of management.
+- **Splenomegaly or abdominal pain**: Suggests sequestration (e.g., portal hypertension, malaria, sickle cell) or infiltrative disease.
+- **Recent surgery or trauma**: Provides context for possible consumptive loss or need for peri‑operative platelet support.
 
 **Examination findings and their rationale**
 
-| Finding | Pathophysiological explanation |
-|---|---|
-| Petechiae (0.5 mm–2 mm) on trunk/extremities | Capillary rupture due to insufficient platelet plug formation; classic for platelet numbers <20 × 10⁹/L. |
-| Purpura or ecchymoses >5 mm | Larger vessel leakage when platelet plug is inadequate; severity correlates with count. |
-| Mucosal bleeding (gum, oral, nasal) | Platelets are first line for mucosal haemostasis; low counts produce easy bleeding. |
-| Hematuria or melena | Indicates that platelet deficiency is severe enough to allow bleeding from urinary or gastrointestinal mucosa. |
-| Splenomegaly | Platelet sequestration in an enlarged spleen (common in malaria, sickle cell, portal hypertension). |
-| Hepatomegaly or signs of chronic liver disease | Reduced thrombopoietin production and portal hypertension‑related sequestration. |
-| Lymphadenopathy | May point to lymphoproliferative disorders (e.g., lymphoma) causing marrow infiltration or immune-mediated destruction. |
-| Signs of systemic infection (fever, rigors) | Suggests consumptive processes (sepsis‑related DIC) or infection‑driven immune thrombocytopenia. |
-| Joint swelling or rash (malar, malar‑like) | May indicate systemic autoimmune disease (SLE) that can cause immune platelet destruction. |
-| Neurological deficits or severe headache | Rare but possible with intracranial hemorrhage when platelets are critically low. |
+- **Petechiae (0.5 mm–2 mm) on trunk/extremities**: Capillary rupture due to insufficient platelet plug formation; classic for platelet numbers <20 × 10⁹/L.
+- **Purpura or ecchymoses >5 mm**: Larger vessel leakage when platelet plug is inadequate; severity correlates with count.
+- **Mucosal bleeding (gum, oral, nasal)**: Platelets are first line for mucosal haemostasis; low counts produce easy bleeding.
+- **Hematuria or melena**: Indicates that platelet deficiency is severe enough to allow bleeding from urinary or gastrointestinal mucosa.
+- **Splenomegaly**: Platelet sequestration in an enlarged spleen (common in malaria, sickle cell, portal hypertension).
+- **Hepatomegaly or signs of chronic liver disease**: Reduced thrombopoietin production and portal hypertension‑related sequestration.
+- **Lymphadenopathy**: May point to lymphoproliferative disorders (e.g., lymphoma) causing marrow infiltration or immune-mediated destruction.
+- **Signs of systemic infection (fever, rigors)**: Suggests consumptive processes (sepsis‑related DIC) or infection‑driven immune thrombocytopenia.
+- **Joint swelling or rash (malar, malar‑like)**: May indicate systemic autoimmune disease (SLE) that can cause immune platelet destruction.
+- **Neurological deficits or severe headache**: Rare but possible with intracranial hemorrhage when platelets are critically low.
 
 ---
 
@@ -107,12 +99,10 @@
    * **Decreased production** – low immature platelet fraction, associated cytopenias, abnormal marrow.  
 3. **Assign severity** (guides transfusion and specialist referral):  
 
-| Severity | Platelet count | Clinical implication |
-|---|---|---|
-| Mild | 100–150 × 10⁹/L | Usually asymptomatic; monitor. |
-| Moderate | 50–99 × 10⁹/L | May have mucosal bleeding; consider prophylactic measures. |
-| Severe | 20–49 × 10⁹/L | High risk of spontaneous bleed; urgent evaluation, possible platelet transfusion. |
-| Life‑threatening | <20 × 10⁹/L | Immediate platelet support, treat underlying cause aggressively. |
+- **Mild**: 100–150 × 10⁹/L — Usually asymptomatic; monitor.
+- **Moderate**: 50–99 × 10⁹/L — May have mucosal bleeding; consider prophylactic measures.
+- **Severe**: 20–49 × 10⁹/L — High risk of spontaneous bleed; urgent evaluation, possible platelet transfusion.
+- **Life‑threatening**: <20 × 10⁹/L — Immediate platelet support, treat underlying cause aggressively.
 
 4. **Integrate history, exam, and investigations** to label the specific entity (e.g., immune thrombocytopenia, malaria‑associated, DIC, etc.). This final diagnosis directs definitive therapy and informs prognosis.
 
@@ -124,17 +114,15 @@
 - **Reverse drugs**: Stop or hold antiplatelet agents (aspirin, clopidogrel) and anticoagulants; give vitamin K or prothrombin complex concentrate if warfarin‑related.  
 
 **Definitive treatment**  
-| Situation | First‑line therapy | Rationale |
-|---|---|---|
-| Immune thrombocytopenia (ITP) | Corticosteroids (prednisone‑like) | Suppress auto‑antibody production |
-| Steroid‑refractory ITP | Intravenous immunoglobulin (IVIG) or anti‑D immunoglobulin | Rapid rise in platelets via Fc‑receptor blockade |
-| Severe ITP with bleeding | Combination of steroids + IVIG ± platelet transfusion | Synergistic effect, temporary platelet support |
-| Drug‑induced thrombocytopenia | Discontinue offending drug | Removes antigenic stimulus |
-| HIV‑associated thrombocytopenia | Optimise antiretroviral therapy; consider steroids if severe | Viral suppression improves marrow output |
-| Sepsis/TB‑related consumptive coagulopathy | Treat underlying infection; consider platelet transfusion if count < 20 × 10⁹/L | Removes trigger of platelet consumption |
-| Malaria‑related thrombocytopenia | Prompt antimalarial therapy | Parasite clearance restores marrow function |
-| Sickle cell vaso‑occlusive crisis with thrombocytopenia | Exchange transfusion if indicated; supportive care | Reduces sickled cells, improves marrow perfusion |
-| Bone‑marrow failure (aplastic, leukemia) | Refer to haematology for disease‑specific therapy (e.g., chemotherapy, stem‑cell transplant) | Underlying pathology must be addressed |
+- **Immune thrombocytopenia (ITP)**: Corticosteroids (prednisone‑like) — Suppress auto‑antibody production
+- **Steroid‑refractory ITP**: Intravenous immunoglobulin (IVIG) or anti‑D immunoglobulin — Rapid rise in platelets via Fc‑receptor blockade
+- **Severe ITP with bleeding**: Combination of steroids + IVIG ± platelet transfusion — Synergistic effect, temporary platelet support
+- **Drug‑induced thrombocytopenia**: Discontinue offending drug — Removes antigenic stimulus
+- **HIV‑associated thrombocytopenia**: Optimise antiretroviral therapy; consider steroids if severe — Viral suppression improves marrow output
+- **Sepsis/TB‑related consumptive coagulopathy**: Treat underlying infection; consider platelet transfusion if count < 20 × 10⁹/L — Removes trigger of platelet consumption
+- **Malaria‑related thrombocytopenia**: Prompt antimalarial therapy — Parasite clearance restores marrow function
+- **Sickle cell vaso‑occlusive crisis with thrombocytopenia**: Exchange transfusion if indicated; supportive care — Reduces sickled cells, improves marrow perfusion
+- **Bone‑marrow failure (aplastic, leukemia)**: Refer to haematology for disease‑specific therapy (e.g., chemotherapy, stem‑cell transplant) — Underlying pathology must be addressed
 
 **Monitoring & follow‑up**  
 - Daily full blood count until platelet trend stabilises.  

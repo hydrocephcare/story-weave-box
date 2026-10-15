@@ -126,13 +126,11 @@ Diagnosis of acute pericarditis requires at least two of the following four crit
   * Screen for high-risk features warranting admission: fever, subacute course, large effusion, immunosuppression (advanced HIV), trauma, or failure of response to anti-inflammatory therapy.
 
 ### Definitive Medical Therapy
-| Clinical Condition | First-Line Medicines | Rationale / Mechanism |
-|---|---|---|
-| Idiopathic / Viral Pericarditis | High-dose NSAID (ibuprofen/aspirin) + Colchicine | Inhibits prostaglandins; microtubule inhibitor halts recurrent flares |
-| Tuberculous Pericarditis | Standard 4-drug RHZE anti-TB regimen | Eradicates *M. tuberculosis* infection |
-| Adjunctive TB Therapy | Oral corticosteroids (prednisolone taper) | Reduces constrictive pericarditis risk in HIV-negative patients |
-| Pericardial Effusion in HIV | Antiretroviral therapy (ART) + TB regimen | Reconstitutes immunity; treat opportunistic cause first |
-| Refractory / Autoimmune | Systemic glucocorticoids | Immunosuppression (use only once bacterial/TB infection excluded) |
+- **Idiopathic / Viral Pericarditis**: High-dose NSAID (ibuprofen/aspirin) + Colchicine — Inhibits prostaglandins; microtubule inhibitor halts recurrent flares
+- **Tuberculous Pericarditis**: Standard 4-drug RHZE anti-TB regimen — Eradicates *M. tuberculosis* infection
+- **Adjunctive TB Therapy**: Oral corticosteroids (prednisolone taper) — Reduces constrictive pericarditis risk in HIV-negative patients
+- **Pericardial Effusion in HIV**: Antiretroviral therapy (ART) + TB regimen — Reconstitutes immunity; treat opportunistic cause first
+- **Refractory / Autoimmune**: Systemic glucocorticoids — Immunosuppression (use only once bacterial/TB infection excluded)
 
 ### Surgical Interventions
 * **Pericardial window / Subxiphoid pericardiotomy:** Indicated for recurrent or loculated effusions, diagnostic biopsy, or purulent pericarditis.

@@ -6,26 +6,22 @@
 Raised intracranial pressure is a sustained increase in the pressure within the cranial vault above the normal range of 5‑15 mm Hg in adults, sufficient to compromise cerebral perfusion, produce neurological signs, or cause herniation.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to ICP |
-|---|---|
-| Brain parenchyma | Volume of tissue; swelling directly raises pressure |
-| Cerebrospinal fluid (CSF) | Produced in choroid plexus, circulates in ventricles & subarachnoid space; excess or obstruction raises pressure |
-| Intracranial blood volume | Arterial inflow and venous outflow; venous congestion adds to pressure |
-| Rigid skull | Fixed volume; according to Monro‑Kellie doctrine, increase in one component must be offset by decrease in another or pressure rises |
-| Dura mater & venous sinuses | Major pathways for CSF absorption and venous drainage; thrombosis impairs outflow |
-| Brainstem | Houses vital centres; herniation here is life‑threatening |
+- **Brain parenchyma**: Volume of tissue; swelling directly raises pressure
+- **Cerebrospinal fluid (CSF)**: Produced in choroid plexus, circulates in ventricles & subarachnoid space; excess or obstruction raises pressure
+- **Intracranial blood volume**: Arterial inflow and venous outflow; venous congestion adds to pressure
+- **Rigid skull**: Fixed volume; according to Monro‑Kellie doctrine, increase in one component must be offset by decrease in another or pressure rises
+- **Dura mater & venous sinuses**: Major pathways for CSF absorption and venous drainage; thrombosis impairs outflow
+- **Brainstem**: Houses vital centres; herniation here is life‑threatening
 
 ## Causes and risk factors  
 
-| Category | Common Kenyan examples |
-|---|---|
-| Space‑occupying lesions | Large tuberculoma, cerebral abscess (bacterial, fungal, malaria‑related), primary brain tumour, metastatic disease |
-| Hydrocephalus | Obstructive (e.g., aqueductal stenosis from TB meningitis), communicating (post‑meningitic scarring) |
-| Cerebral edema | Severe cerebral malaria, hypoxic‑ischemic injury, hypertensive encephalopathy, neuro‑toxicity (e.g., antiretroviral drug toxicity) |
-| Vascular lesions | Subarachnoid haemorrhage (trauma, ruptured aneurysm), intracerebral haemorrhage (hypertension, sickle‑cell vaso‑occlusion) |
-| Venous outflow obstruction | Cerebral venous sinus thrombosis (often associated with HIV, pregnancy, dehydration) |
-| Infections & inflammation | HIV encephalopathy, cryptococcal meningitis, TB meningitis, bacterial meningitis |
-| Metabolic / systemic | Severe hyponatraemia, hepatic encephalopathy, renal failure uremia, severe anaemia in sickle‑cell disease |
+- **Space‑occupying lesions**: Large tuberculoma, cerebral abscess (bacterial, fungal, malaria‑related), primary brain tumour, metastatic disease
+- **Hydrocephalus**: Obstructive (e.g., aqueductal stenosis from TB meningitis), communicating (post‑meningitic scarring)
+- **Cerebral edema**: Severe cerebral malaria, hypoxic‑ischemic injury, hypertensive encephalopathy, neuro‑toxicity (e.g., antiretroviral drug toxicity)
+- **Vascular lesions**: Subarachnoid haemorrhage (trauma, ruptured aneurysm), intracerebral haemorrhage (hypertension, sickle‑cell vaso‑occlusion)
+- **Venous outflow obstruction**: Cerebral venous sinus thrombosis (often associated with HIV, pregnancy, dehydration)
+- **Infections & inflammation**: HIV encephalopathy, cryptococcal meningitis, TB meningitis, bacterial meningitis
+- **Metabolic / systemic**: Severe hyponatraemia, hepatic encephalopathy, renal failure uremia, severe anaemia in sickle‑cell disease
 
 Risk factors specific to our setting include HIV infection, TB exposure, malaria endemicity, sickle‑cell disease prevalence, and limited access to early neuro‑imaging.
 
@@ -45,34 +41,30 @@ Each step amplifies the next, explaining why early control of ICP is critical.
 
 ## Clinical features  
 
-| History element | Why it matters |
-|---|---|
-| **Onset and progression** – sudden (e.g., hemorrhage) vs. insidious (e.g., tumor, chronic hydrocephalus) | Helps differentiate acute life‑threatening causes from sub‑acute or chronic processes. |
-| **Headache** – often described as “worst ever”, worse on waking, aggravated by coughing or Valsalva | Raised ICP stretches pain‑sensitive dura and meningeal vessels; positional change alters pressure. |
-| **Nausea / vomiting** – especially projectile, without nausea, often early morning | Vomiting is a brainstem reflex to pressure on the medullary vomiting centre; lack of nausea suggests central origin. |
-| **Visual disturbances** – blurred vision, transient loss, double vision, papilledema | Papilledema reflects chronic elevation of ICP; cranial nerve VI palsy (abducens) is the classic false‑localising sign. |
-| **Altered consciousness** – from lethargy to coma | Progressive compression of the reticular activating system as ICP rises. |
-| **Seizures** – new‑onset focal or generalized | Cortical irritation from mass effect, edema or infection. |
-| **Focal neurological deficits** – weakness, sensory loss, aphasia | Local mass effect or infarction; helps localise the lesion. |
-| **Recent infection or systemic illness** – TB, malaria, HIV‑related opportunistic infections, sickle‑cell vaso‑occlusive crisis | Many tropical infections produce space‑occupying lesions or cerebral edema. |
-| **Trauma history** – recent head injury, fall, road‑traffic accident | Traumatic brain injury is a leading cause of acute ICP rise. |
-| **Medication / substance use** – steroids, diuretics, antiretrovirals, traditional medicines | Some drugs can precipitate cerebral edema (e.g., rapid steroid withdrawal) or mask symptoms. |
-| **Pregnancy** – especially in the third trimester | Venous congestion and hormonal changes can worsen ICP in pre‑existing lesions. |
+- **Onset and progression – sudden (e.g., hemorrhage) vs. insidious (e.g., tumor, chronic hydrocephalus)**: Helps differentiate acute life‑threatening causes from sub‑acute or chronic processes.
+- **Headache – often described as “worst ever”, worse on waking, aggravated by coughing or Valsalva**: Raised ICP stretches pain‑sensitive dura and meningeal vessels; positional change alters pressure.
+- **Nausea / vomiting – especially projectile, without nausea, often early morning**: Vomiting is a brainstem reflex to pressure on the medullary vomiting centre; lack of nausea suggests central origin.
+- **Visual disturbances – blurred vision, transient loss, double vision, papilledema**: Papilledema reflects chronic elevation of ICP; cranial nerve VI palsy (abducens) is the classic false‑localising sign.
+- **Altered consciousness – from lethargy to coma**: Progressive compression of the reticular activating system as ICP rises.
+- **Seizures – new‑onset focal or generalized**: Cortical irritation from mass effect, edema or infection.
+- **Focal neurological deficits – weakness, sensory loss, aphasia**: Local mass effect or infarction; helps localise the lesion.
+- **Recent infection or systemic illness – TB, malaria, HIV‑related opportunistic infections, sickle‑cell vaso‑occlusive crisis**: Many tropical infections produce space‑occupying lesions or cerebral edema.
+- **Trauma history – recent head injury, fall, road‑traffic accident**: Traumatic brain injury is a leading cause of acute ICP rise.
+- **Medication / substance use – steroids, diuretics, antiretrovirals, traditional medicines**: Some drugs can precipitate cerebral edema (e.g., rapid steroid withdrawal) or mask symptoms.
+- **Pregnancy – especially in the third trimester**: Venous congestion and hormonal changes can worsen ICP in pre‑existing lesions.
 
 ### Examination findings and their pathophysiology  
 
-| Finding | Mechanism |
-|---|---|
-| **Altered level of consciousness** (GCS <15) | Direct compression of the ascending reticular activating system. |
-| **Papilledema** (bilateral optic disc swelling) | Increased subarachnoid pressure transmitted to the optic nerve sheath, impeding axoplasmic flow. |
-| **Cranial nerve VI palsy** (horizontal diplopia) | The abducens nerve has a long intracranial course; it is stretched by raised pressure. |
-| **Cushing’s triad** (hypertension, bradycardia, irregular respirations) | Autonomic response to maintain cerebral perfusion when ICP approaches MAP. |
-| **Motor weakness** (upper motor neuron pattern) | Compression of corticospinal tracts by a mass or edema. |
-| **Sensory level** (e.g., loss below a spinal segment) | Downward herniation compressing the spinal cord or brainstem. |
-| **Seizure activity** (post‑ictal confusion) | Cortical irritation from edema or lesion. |
-| **Meningeal signs** (neck rigidity) – only if meningitis or subarachnoid bleed | Irritation of the meninges by blood or inflammatory exudate. |
-| **Focal scalp tenderness** (overlying tumour) | Local inflammation or tumour invasion of periosteum. |
-| **Signs of systemic infection** (fever, tachycardia) | Underlying infectious aetiology (TB meningitis, cerebral malaria). |
+- **Altered level of consciousness (GCS <15)**: Direct compression of the ascending reticular activating system.
+- **Papilledema (bilateral optic disc swelling)**: Increased subarachnoid pressure transmitted to the optic nerve sheath, impeding axoplasmic flow.
+- **Cranial nerve VI palsy (horizontal diplopia)**: The abducens nerve has a long intracranial course; it is stretched by raised pressure.
+- **Cushing’s triad (hypertension, bradycardia, irregular respirations)**: Autonomic response to maintain cerebral perfusion when ICP approaches MAP.
+- **Motor weakness (upper motor neuron pattern)**: Compression of corticospinal tracts by a mass or edema.
+- **Sensory level (e.g., loss below a spinal segment)**: Downward herniation compressing the spinal cord or brainstem.
+- **Seizure activity (post‑ictal confusion)**: Cortical irritation from edema or lesion.
+- **Meningeal signs (neck rigidity) – only if meningitis or subarachnoid bleed**: Irritation of the meninges by blood or inflammatory exudate.
+- **Focal scalp tenderness (overlying tumour)**: Local inflammation or tumour invasion of periosteum.
+- **Signs of systemic infection (fever, tachycardia)**: Underlying infectious aetiology (TB meningitis, cerebral malaria).
 
 ---
 
@@ -111,11 +103,9 @@ Each step amplifies the next, explaining why early control of ICP is critical.
 
 2. **Classify severity** (based on clinical and radiological criteria):  
 
-| Severity | Clinical picture | Imaging clues |
-|---|---|---|
-| **Mild** | Alert, GCS ≥ 14, no Cushing’s signs, papilledema absent or early | Small mass effect, ventricles normal size |
-| **Moderate** | Drowsy, GCS 13‑14, early Cushing’s response, papilledema present | Midline shift 5‑10 mm, compressed cisterns |
-| **Severe** | Coma (GCS ≤ 8), full Cushing’s triad, bilateral fixed pupils possible | Shift > 10 mm, herniation signs, obliterated basal cisterns |
+- **Mild**: Alert, GCS ≥ 14, no Cushing’s signs, papilledema absent or early — Small mass effect, ventricles normal size
+- **Moderate**: Drowsy, GCS 13‑14, early Cushing’s response, papilledema present — Midline shift 5‑10 mm, compressed cisterns
+- **Severe**: Coma (GCS ≤ 8), full Cushing’s triad, bilateral fixed pupils possible — Shift > 10 mm, herniation signs, obliterated basal cisterns
 
 3. **Assign a working aetiology** – integrate history, exam, and investigations (e.g., “TB meningitis with hydrocephalus” or “malaria‑related cerebral edema”).  
 
@@ -129,14 +119,12 @@ Each step amplifies the next, explaining why early control of ICP is critical.
 
 **Immediate stabilisation**  
 
-| Step | What to do | Rationale |
-|---|---|---|
-| Airway & breathing | Position head 30° – 45° (unless cervical spine injury), give 100 % O₂, secure airway if GCS ≤ 8 | Improves venous outflow, prevents hypoxia which worsens cerebral edema |
-| Circulation | Maintain MAP ≥ 65 mmHg (or SBP ≥ 90 mmHg) with isotonic fluids; avoid hypotension | Cerebral perfusion pressure = MAP – ICP; low MAP → ischemia |
-| Hyperventilation (short‑term) | Bag‑mask ventilation to achieve PaCO₂ ≈ 30 mmHg for ≤ 30 min | Lowers ICP by cerebral vasoconstriction; only a bridge to definitive therapy |
-| Osmotherapy (first line) | Give mannitol or hypertonic saline bolus | Creates osmotic gradient, draws water out of brain tissue |
-| Analgesia & sedation | Short‑acting agents (e.g., fentanyl, propofol) to blunt pain‑induced ICP spikes | Reduces sympathetic surge and ICP elevation |
-| Anticonvulsants (if seizure risk) | Load with a broad‑spectrum agent (e.g., levetiracetam) | Prevents secondary injury from seizures |
+- **Airway & breathing**: Position head 30° – 45° (unless cervical spine injury), give 100 % O₂, secure airway if GCS ≤ 8 — Improves venous outflow, prevents hypoxia which worsens cerebral edema
+- **Circulation**: Maintain MAP ≥ 65 mmHg (or SBP ≥ 90 mmHg) with isotonic fluids; avoid hypotension — Cerebral perfusion pressure = MAP – ICP; low MAP → ischemia
+- **Hyperventilation (short‑term)**: Bag‑mask ventilation to achieve PaCO₂ ≈ 30 mmHg for ≤ 30 min — Lowers ICP by cerebral vasoconstriction; only a bridge to definitive therapy
+- **Osmotherapy (first line)**: Give mannitol or hypertonic saline bolus — Creates osmotic gradient, draws water out of brain tissue
+- **Analgesia & sedation**: Short‑acting agents (e.g., fentanyl, propofol) to blunt pain‑induced ICP spikes — Reduces sympathetic surge and ICP elevation
+- **Anticonvulsants (if seizure risk)**: Load with a broad‑spectrum agent (e.g., levetiracetam) — Prevents secondary injury from seizures
 
 **Definitive treatment**  
 
@@ -169,14 +157,12 @@ Each step amplifies the next, explaining why early control of ICP is critical.
 
 ## Complications and prognosis  
 
-| Complication | Mechanism | Clinical impact |
-|---|---|---|
-| Brain herniation | Uncontrolled ICP forces brain tissue across dural openings | Rapid loss of consciousness, pinpoint pupils, respiratory arrest – often fatal |
-| Cerebral ischemia | Raised ICP reduces cerebral perfusion pressure | Permanent neurological deficit, infarction |
-| Electrolyte derangements | Osmotherapy shifts water and ions | Hypernatremia, hypokalemia, renal impairment |
-| Infection of CSF drain | Colonisation of external ventricular drain | Meningitis or ventriculitis |
-| Seizures | Irritated cortex, metabolic disturbance | Additional ICP spikes, secondary injury |
-| Long‑term neurocognitive deficits | Prolonged edema or infarction | Memory, executive function, motor deficits; prognosis depends on cause and speed of control |
+- **Brain herniation**: Uncontrolled ICP forces brain tissue across dural openings — Rapid loss of consciousness, pinpoint pupils, respiratory arrest – often fatal
+- **Cerebral ischemia**: Raised ICP reduces cerebral perfusion pressure — Permanent neurological deficit, infarction
+- **Electrolyte derangements**: Osmotherapy shifts water and ions — Hypernatremia, hypokalemia, renal impairment
+- **Infection of CSF drain**: Colonisation of external ventricular drain — Meningitis or ventriculitis
+- **Seizures**: Irritated cortex, metabolic disturbance — Additional ICP spikes, secondary injury
+- **Long‑term neurocognitive deficits**: Prolonged edema or infarction — Memory, executive function, motor deficits; prognosis depends on cause and speed of control
 
 Early recognition and rapid ICP reduction improve survival; outcome is best when the primary pathology (e.g., TB meningitis, malaria) is treated promptly.
 

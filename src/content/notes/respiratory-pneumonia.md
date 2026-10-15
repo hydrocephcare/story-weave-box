@@ -1,4 +1,4 @@
-# Pneumonia — Year 4 Internal Medicine (Respiratory) Notes
+# Pneumonia
 
 *Orientation notes for study. Doses and regimens vary with local guidelines (Kenya MoH, hospital protocols): always check before prescribing.*
 
@@ -11,15 +11,13 @@
 
 ## Anatomy and physiology you need  
 
-| Structure / Function | Why it matters for pneumonia |
-|---|---|
-| **Alveolar‑capillary membrane** – thin type I pneumocytes for gas exchange, type II cells produce surfactant | Infection fills alveoli with exudate → loss of surfactant → atelectasis and impaired O₂ diffusion, producing hypoxaemia and dyspnoea. |
-| **Bronchial tree (conducting airways)** – cartilaginous rings, mucociliary escalator, submucosal glands | Pathogens enter via inhalation or aspiration; impaired clearance (e.g., smoking, alcohol) predisposes to colonisation and spread into distal alveoli. |
-| **Pulmonary interstitium** – loose connective tissue, lymphatics, capillaries | Inflammatory oedema expands the interstitium, producing crackles on auscultation and increasing the work of breathing. |
-| **Pleural membranes** – visceral and parietal pleura with potential space | Inflammation can extend to the pleura → pleuritic pain, pleural rub, and effusion/empyema if fluid accumulates. |
-| **Respiratory control centres (medulla, pons)** – chemoreceptor‑driven drive | Hypoxaemia and hypercapnia from alveolar filling trigger tachypnoea; in the elderly the ventilatory response may be blunted, masking severity. |
-| **Immune cells in lung** – alveolar macrophages, neutrophils, complement | Rapid neutrophil influx creates purulent exudate; failure of opsonisation (e.g., splenic dysfunction) predisposes to encapsulated organisms like *Streptococcus pneumoniae*. |
-| **Pulmonary circulation** – low‑pressure, high‑flow system | Inflammation increases vascular permeability → pulmonary oedema; septic emboli can seed additional lobes, explaining multilobar disease. |
+- **Alveolar‑capillary membrane – thin type I pneumocytes for gas exchange, type II cells produce surfactant**: Infection fills alveoli with exudate → loss of surfactant → atelectasis and impaired O₂ diffusion, producing hypoxaemia and dyspnoea.
+- **Bronchial tree (conducting airways) – cartilaginous rings, mucociliary escalator, submucosal glands**: Pathogens enter via inhalation or aspiration; impaired clearance (e.g., smoking, alcohol) predisposes to colonisation and spread into distal alveoli.
+- **Pulmonary interstitium – loose connective tissue, lymphatics, capillaries**: Inflammatory oedema expands the interstitium, producing crackles on auscultation and increasing the work of breathing.
+- **Pleural membranes – visceral and parietal pleura with potential space**: Inflammation can extend to the pleura → pleuritic pain, pleural rub, and effusion/empyema if fluid accumulates.
+- **Respiratory control centres (medulla, pons) – chemoreceptor‑driven drive**: Hypoxaemia and hypercapnia from alveolar filling trigger tachypnoea; in the elderly the ventilatory response may be blunted, masking severity.
+- **Immune cells in lung – alveolar macrophages, neutrophils, complement**: Rapid neutrophil influx creates purulent exudate; failure of opsonisation (e.g., splenic dysfunction) predisposes to encapsulated organisms like *Streptococcus pneumoniae*.
+- **Pulmonary circulation – low‑pressure, high‑flow system**: Inflammation increases vascular permeability → pulmonary oedema; septic emboli can seed additional lobes, explaining multilobar disease.
 
 ---
 
@@ -45,14 +43,12 @@ Complications arise when **exudate becomes loculated** → **Parapneumonic effus
 
 ## Causes (organisms)
 
-| Setting | Common organisms |
-|---|---|
-| **CAP** | **Streptococcus pneumoniae** (commonest), *Haemophilus influenzae*, *Mycoplasma pneumoniae*, *Legionella*, *Chlamydophila*, viruses (influenza, RSV, SARS-CoV-2) |
-| **Post-influenza, IV drug use** | *Staphylococcus aureus* (cavitating) |
-| **Alcoholism, aspiration, diabetes** | *Klebsiella pneumoniae* ("redcurrant jelly" sputum, upper lobe), anaerobes |
-| **HAP / VAP** | Gram-negative bacilli (*Pseudomonas*, *Klebsiella*, *E. coli*), *S. aureus* including MRSA |
-| **HIV** | **Pneumococcus**, **TB**, **PCP** (dry cough, exertional dyspnoea, very low saturation, bilateral "ground-glass" infiltrates) |
-| **Atypical** | *Mycoplasma* (young, extrapulmonary features, cold agglutinins), *Legionella* (hyponatraemia, diarrhoea, confusion) |
+- **CAP**: **Streptococcus pneumoniae** (commonest), *Haemophilus influenzae*, *Mycoplasma pneumoniae*, *Legionella*, *Chlamydophila*, viruses (influenza, RSV, SARS-CoV-2)
+- **Post-influenza, IV drug use**: *Staphylococcus aureus* (cavitating)
+- **Alcoholism, aspiration, diabetes**: *Klebsiella pneumoniae* ("redcurrant jelly" sputum, upper lobe), anaerobes
+- **HAP / VAP**: Gram-negative bacilli (*Pseudomonas*, *Klebsiella*, *E. coli*), *S. aureus* including MRSA
+- **HIV**: **Pneumococcus**, **TB**, **PCP** (dry cough, exertional dyspnoea, very low saturation, bilateral "ground-glass" infiltrates)
+- **Atypical**: *Mycoplasma* (young, extrapulmonary features, cold agglutinins), *Legionella* (hyponatraemia, diarrhoea, confusion)
 
 **Kenya:** think of **pneumococcus, TB and HIV-related disease** in every patient. Biomass smoke and malnutrition increase risk.
 
@@ -66,11 +62,9 @@ Complications arise when **exudate becomes loculated** → **Parapneumonic effus
 
 One point each for: **C**onfusion · **U**rea above 7 mmol/L · **R**espiratory rate 30 or more · **B**lood pressure low (systolic below 90 or diastolic 60 or below) · age **65** or more.
 
-| Score | Risk | Usual place of care |
-|---|---|---|
-| 0–1 | Low | Home or outpatient |
-| 2 | Moderate | Hospital |
-| 3–5 | Severe | Consider **ICU** |
+- **0–1**: Low — Home or outpatient
+- **2**: Moderate — Hospital
+- **3–5**: Severe — Consider **ICU**
 
 Also consider oxygen saturation (below 92%), multilobar involvement, comorbidity and social circumstances.
 
@@ -170,19 +164,17 @@ Also consider oxygen saturation (below 92%), multilobar involvement, comorbidity
 
 Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [pneumonia drugs](/pharmacology?tab=conditions&c=cap).
 
-| Drug | Class | Role here | Watch for |
-|---|---|---|---|
-| Amoxicillin | Penicillin | First-line for low-severity community-acquired pneumonia | Rash, diarrhoea; allergy |
-| Clarithromycin | Macrolide | Atypical cover added in moderate disease | QT prolongation, many interactions |
-| Azithromycin | Macrolide | Atypical cover, or if clarithromycin interacts | QT prolongation |
-| Doxycycline | Tetracycline | Alternative to a macrolide | Photosensitivity, oesophagitis |
-| Co-amoxiclav | Penicillin plus β-lactamase inhibitor | Moderate to severe disease | Diarrhoea, liver injury |
-| Ceftriaxone | Third-generation cephalosporin | Severe pneumonia (IV) | Biliary sludge, allergy |
-| Benzylpenicillin | Penicillin | IV for severe pneumococcal pneumonia | Allergy |
-| Metronidazole | Nitroimidazole | Added for aspiration pneumonia | Metallic taste; no alcohol |
-| Cotrimoxazole | Sulphonamide combination | High-dose for Pneumocystis pneumonia in HIV | Rash, high potassium, low blood count |
-| Paracetamol | Analgesic and antipyretic | Pleuritic pain and fever | Liver injury in overdose |
-| Heparin | Low-molecular-weight heparin | Prevents clots in admitted patients | Bleeding, low platelets |
+- **Amoxicillin**: Penicillin — First-line for low-severity community-acquired pneumonia — Rash, diarrhoea; allergy
+- **Clarithromycin**: Macrolide — Atypical cover added in moderate disease — QT prolongation, many interactions
+- **Azithromycin**: Macrolide — Atypical cover, or if clarithromycin interacts — QT prolongation
+- **Doxycycline**: Tetracycline — Alternative to a macrolide — Photosensitivity, oesophagitis
+- **Co-amoxiclav**: Penicillin plus β-lactamase inhibitor — Moderate to severe disease — Diarrhoea, liver injury
+- **Ceftriaxone**: Third-generation cephalosporin — Severe pneumonia (IV) — Biliary sludge, allergy
+- **Benzylpenicillin**: Penicillin — IV for severe pneumococcal pneumonia — Allergy
+- **Metronidazole**: Nitroimidazole — Added for aspiration pneumonia — Metallic taste; no alcohol
+- **Cotrimoxazole**: Sulphonamide combination — High-dose for Pneumocystis pneumonia in HIV — Rash, high potassium, low blood count
+- **Paracetamol**: Analgesic and antipyretic — Pleuritic pain and fever — Liver injury in overdose
+- **Heparin**: Low-molecular-weight heparin — Prevents clots in admitted patients — Bleeding, low platelets
 
 **Timing matters:** in severe pneumonia give the first antibiotic dose within 4 hours (sooner in sepsis), and take blood cultures first if this does not delay treatment.
 

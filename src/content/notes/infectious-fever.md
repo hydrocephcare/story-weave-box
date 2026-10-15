@@ -142,14 +142,12 @@ Use bedside physiological criteria (e.g., quick SOFA) to rapidly stratify risk.
 
 ## Complications and Prognosis
 
-| Complication | Pathophysiological Basis | Clinical Indicator |
-|---|---|---|
-| Septic Shock | Cytokine storm, vasoplegia, endothelial leak | Refractory hypotension, high lactate |
-| Acute Kidney Injury | Acute tubular necrosis from hypoperfusion or pigment | Oliguria, rising urea and creatinine |
-| ARDS | Increased alveolar-capillary permeability | Severe dyspnoea, bilateral infiltrates |
-| DIC | Uncontrolled coagulation cascade consumption | Spontaneous mucosal oozing, petechiae |
-| Febrile Encephalopathy | Cerebral hypoperfusion, microvascular sequestration | Delirium, seizures, declining GCS |
-| Hypoglycaemia | Hepatic impairment, pathogen glucose consumption | Diaphoresis, tremors, altered awareness |
+- **Septic Shock**: Cytokine storm, vasoplegia, endothelial leak — Refractory hypotension, high lactate
+- **Acute Kidney Injury**: Acute tubular necrosis from hypoperfusion or pigment — Oliguria, rising urea and creatinine
+- **ARDS**: Increased alveolar-capillary permeability — Severe dyspnoea, bilateral infiltrates
+- **DIC**: Uncontrolled coagulation cascade consumption — Spontaneous mucosal oozing, petechiae
+- **Febrile Encephalopathy**: Cerebral hypoperfusion, microvascular sequestration — Delirium, seizures, declining GCS
+- **Hypoglycaemia**: Hepatic impairment, pathogen glucose consumption — Diaphoresis, tremors, altered awareness
 
 * **Prognosis:** Excellent with early presentation, prompt diagnostic testing, and targeted antimicrobial coverage. Mortality rises steeply with delays in antibiotic administration for sepsis/meningitis, presence of multi-organ failure, underlying advanced HIV disease, or severe baseline immunosuppression.
 

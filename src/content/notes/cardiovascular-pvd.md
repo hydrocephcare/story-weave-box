@@ -159,15 +159,13 @@ Severity is stratified using two established systems to guide limb-salvage urgen
 
 ### Definitive Management
 
-| Strategy | Modality / Drugs | Clinical Purpose |
-|---|---|---|
-| Antiplatelet | Low-dose aspirin or clopidogrel | Reduces secondary myocardial infarction and stroke |
-| Lipid-lowering | High-intensity statin (e.g., atorvastatin) | Plaque stabilisation and systemic cardiovascular risk reduction |
-| Vasodilation | Cilostazol | Phosphodiesterase inhibitor; improves walking distance in claudication |
-| Glycaemic control | Metformin, insulin, or SGLT2 inhibitors | Halts microvascular and macrovascular accelerated atherosclerosis |
-| Blood pressure | ACE inhibitors (e.g., enalapril) or ARBs | Provides end-organ vascular protection |
-| Endovascular | Balloon angioplasty, stenting | Revascularisation for focal or short-segment lesions |
-| Surgical | Bypass grafting, surgical embolectomy | Revascularisation for long occlusions or acute embolic disease |
+- **Antiplatelet**: Low-dose aspirin or clopidogrel — Reduces secondary myocardial infarction and stroke
+- **Lipid-lowering**: High-intensity statin (e.g., atorvastatin) — Plaque stabilisation and systemic cardiovascular risk reduction
+- **Vasodilation**: Cilostazol — Phosphodiesterase inhibitor; improves walking distance in claudication
+- **Glycaemic control**: Metformin, insulin, or SGLT2 inhibitors — Halts microvascular and macrovascular accelerated atherosclerosis
+- **Blood pressure**: ACE inhibitors (e.g., enalapril) or ARBs — Provides end-organ vascular protection
+- **Endovascular**: Balloon angioplasty, stenting — Revascularisation for focal or short-segment lesions
+- **Surgical**: Bypass grafting, surgical embolectomy — Revascularisation for long occlusions or acute embolic disease
 
 ### Monitoring and Safety
 *   **Supervised exercise therapy:** First-line intervention for claudication; builds collateral vessels.

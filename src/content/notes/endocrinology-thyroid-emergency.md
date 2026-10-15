@@ -7,30 +7,26 @@
 **Myxoedema coma** – the extreme end of untreated or undertreated hypothyroidism presenting with profound metabolic depression, hypothermia, and altered consciousness, often triggered by infection, drugs or systemic illness.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to crisis |
-|---|---|
-| Thyroid follicular cells | Synthesize T₃/T₄; excess → storm, deficiency → coma |
-| β‑adrenergic receptors | Mediate tachycardia, tremor, heat production in storm |
-| Hypothalamic‑pituitary‑thyroid axis | Loss of negative feedback in storm; blunted axis in coma |
-| Cardiovascular system | ↑ contractility & heart rate (storm) vs bradycardia, low output (coma) |
-| Central nervous system | Hyperexcitability (storm) vs cerebral edema, reduced mental status (coma) |
-| Thermoregulatory centre | Hyperthermia (storm) vs hypothermia (coma) |
+- **Thyroid follicular cells**: Synthesize T₃/T₄; excess → storm, deficiency → coma
+- **β‑adrenergic receptors**: Mediate tachycardia, tremor, heat production in storm
+- **Hypothalamic‑pituitary‑thyroid axis**: Loss of negative feedback in storm; blunted axis in coma
+- **Cardiovascular system**: ↑ contractility & heart rate (storm) vs bradycardia, low output (coma)
+- **Central nervous system**: Hyperexcitability (storm) vs cerebral edema, reduced mental status (coma)
+- **Thermoregulatory centre**: Hyperthermia (storm) vs hypothermia (coma)
 
 ## Causes and risk factors (Kenyan context)  
-| Condition | How it precipitates storm | How it precipitates coma |
-|---|---|---|
-| Untreated Graves’ disease | Sudden increase in circulating T₃/T₄ | – |
-| Toxic multinodular goitre | Autonomously high hormone output | – |
-| Iodine excess (contrast, amiodarone) | Acute surge in hormone synthesis | – |
-| Surgery or anaesthesia | Stress → catecholamine surge, hormone release | – |
-| Infection (TB, malaria, HIV‑related opportunistic infections) | Cytokines amplify thyroid hormone effects | Fever, metabolic demand precipitates decompensation |
-| Drug withdrawal (β‑blockers, antithyroid drugs) | Loss of sympathetic blockade | – |
-| Pregnancy/post‑partum | Immune shift, increased thyroid demand | – |
-| Severe hypothyroidism (post‑radioiodine, thyroidectomy) | – | Metabolic reserve exhausted |
-| Acute illness (pneumonia, sepsis, diarrhoea) | Stress hormones increase hormone conversion | Energy deficit, hypoxia worsen depression |
-| Medications (lithium, amiodarone, steroids) | ↑ hormone release or conversion | Inhibit peripheral conversion, precipitate coma |
-| Chronic diseases (sickle cell crisis, rheumatic fever) | Heightened inflammatory milieu | Increased catabolism, infection risk |
-| Malnutrition & electrolyte disturbances | – | Impaired thermogenesis, cardiac depression |
+- **Untreated Graves’ disease**: Sudden increase in circulating T₃/T₄ — –
+- **Toxic multinodular goitre**: Autonomously high hormone output — –
+- **Iodine excess (contrast, amiodarone)**: Acute surge in hormone synthesis — –
+- **Surgery or anaesthesia**: Stress → catecholamine surge, hormone release — –
+- **Infection (TB, malaria, HIV‑related opportunistic infections)**: Cytokines amplify thyroid hormone effects — Fever, metabolic demand precipitates decompensation
+- **Drug withdrawal (β‑blockers, antithyroid drugs)**: Loss of sympathetic blockade — –
+- **Pregnancy/post‑partum**: Immune shift, increased thyroid demand — –
+- **Severe hypothyroidism (post‑radioiodine, thyroidectomy)**: – — Metabolic reserve exhausted
+- **Acute illness (pneumonia, sepsis, diarrhoea)**: Stress hormones increase hormone conversion — Energy deficit, hypoxia worsen depression
+- **Medications (lithium, amiodarone, steroids)**: ↑ hormone release or conversion — Inhibit peripheral conversion, precipitate coma
+- **Chronic diseases (sickle cell crisis, rheumatic fever)**: Heightened inflammatory milieu — Increased catabolism, infection risk
+- **Malnutrition & electrolyte disturbances**: – — Impaired thermogenesis, cardiac depression
 
 ## Pathophysiology  
 
@@ -52,19 +48,17 @@ Both crises are amplified by precipitating stressors (infection, drugs, surgery)
 
 ## Clinical features  
 
-| Domain | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Onset** | “When did the symptoms start? How rapidly did they progress?” | Thyroid storm and myxoedema coma both evolve quickly; a sudden deterioration after a precipitating event is typical. |
-| **Temperature** | Fever, chills, feeling hot or cold | Hypermetabolism in storm raises core temperature; loss of thermogenesis in coma leads to hypothermia. |
-| **Cardiac** | Palpitations, chest pain, dyspnoea, recent arrhythmia, history of heart disease | Excess thyroid hormone ↑ β‑adrenergic tone → tachycardia, atrial fibrillation, high‑output failure (storm). In myxoedema, bradycardia, low output and pericardial effusion predominate. |
-| **Neurologic** | Confusion, agitation, seizures, coma, tremor, myoclonus, sleepiness | Storm: catecholamine surge, hyperthermia, hypoxia → agitation → seizures. Myxoedema: reduced cerebral metabolism → lethargy → coma; may see “myxedema madness”. |
-| **Gastro‑intestinal** | Nausea, vomiting, diarrhoea, abdominal pain, constipation | Storm stimulates gut motility; myxoedema slows motility → constipation, ileus. |
-| **Respiratory** | Dyspnoea, cough, recent infection, recent intubation | Storm may precipitate pulmonary oedema; myxoedema can cause hypoventilation and CO₂ retention. |
-| **Skin / mucosa** | Sweating, flushing, warm skin vs. dry, cool, coarse hair, facial puffiness, non‑pitting edema | Hyperadrenergic state in storm → diaphoresis; hypothyroid state → myxedema (glycosaminoglycan deposition) and loss of vasomotor tone. |
-| **Precipitating events** | Recent infection (TB, malaria, HIV opportunistic infection), surgery, trauma, iodine load, drug non‑adherence, withdrawal of antithyroid drugs, childbirth | These stressors tip a compensated thyroid disorder into decompensation. |
-| **Medication history** | Antithyroid drugs, levothyroxine, amiodarone, lithium, steroids, β‑blockers, antiretrovirals | Non‑compliance or abrupt changes can precipitate either crisis; amiodarone can cause both hyper‑ and hypothyroidism. |
-| **Past thyroid disease** | Known Graves’ disease, toxic nodular goitre, prior thyroidectomy, long‑standing hypothyroidism | Underlying disease determines which crisis is possible. |
-| **Other comorbidities** | HIV status, TB treatment, sickle‑cell disease, rheumatic heart disease, chronic kidney disease | Co‑existing illnesses increase susceptibility to infection‑related precipitations and alter drug metabolism. |
+- **Onset**: “When did the symptoms start? How rapidly did they progress?” — Thyroid storm and myxoedema coma both evolve quickly; a sudden deterioration after a precipitating event is typical.
+- **Temperature**: Fever, chills, feeling hot or cold — Hypermetabolism in storm raises core temperature; loss of thermogenesis in coma leads to hypothermia.
+- **Cardiac**: Palpitations, chest pain, dyspnoea, recent arrhythmia, history of heart disease — Excess thyroid hormone ↑ β‑adrenergic tone → tachycardia, atrial fibrillation, high‑output failure (storm). In myxoedema, bradycardia, low output and pericardial effusion predominate.
+- **Neurologic**: Confusion, agitation, seizures, coma, tremor, myoclonus, sleepiness — Storm: catecholamine surge, hyperthermia, hypoxia → agitation → seizures. Myxoedema: reduced cerebral metabolism → lethargy → coma; may see “myxedema madness”.
+- **Gastro‑intestinal**: Nausea, vomiting, diarrhoea, abdominal pain, constipation — Storm stimulates gut motility; myxoedema slows motility → constipation, ileus.
+- **Respiratory**: Dyspnoea, cough, recent infection, recent intubation — Storm may precipitate pulmonary oedema; myxoedema can cause hypoventilation and CO₂ retention.
+- **Skin / mucosa**: Sweating, flushing, warm skin vs. dry, cool, coarse hair, facial puffiness, non‑pitting edema — Hyperadrenergic state in storm → diaphoresis; hypothyroid state → myxedema (glycosaminoglycan deposition) and loss of vasomotor tone.
+- **Precipitating events**: Recent infection (TB, malaria, HIV opportunistic infection), surgery, trauma, iodine load, drug non‑adherence, withdrawal of antithyroid drugs, childbirth — These stressors tip a compensated thyroid disorder into decompensation.
+- **Medication history**: Antithyroid drugs, levothyroxine, amiodarone, lithium, steroids, β‑blockers, antiretrovirals — Non‑compliance or abrupt changes can precipitate either crisis; amiodarone can cause both hyper‑ and hypothyroidism.
+- **Past thyroid disease**: Known Graves’ disease, toxic nodular goitre, prior thyroidectomy, long‑standing hypothyroidism — Underlying disease determines which crisis is possible.
+- **Other comorbidities**: HIV status, TB treatment, sickle‑cell disease, rheumatic heart disease, chronic kidney disease — Co‑existing illnesses increase susceptibility to infection‑related precipitations and alter drug metabolism.
 
 **Examination pearls**  
 
@@ -126,21 +120,17 @@ Prompt recognition of the pattern (hyper‑ vs. hypo‑metabolic) and the scorin
 
 **1. Immediate stabilisation**  
 
-| Goal | Immediate actions | Rationale |
-|---|---|---|
-| Airway‑breathing‑circulation | Position semi‑upright, give high‑flow O₂, secure airway if GCS < 8 or severe respiratory failure, start IV crystalloid bolus (isotonic) | Prevent hypoxia, improve tissue perfusion; thyroid hormones increase metabolic demand and can precipitate shock |
-| Temperature control | Cool the patient with tepid sponging, fan, antipyretics (paracetamol) for TS; passive re‑warming for MC | Hyperthermia worsens tachyarrhythmia in TS; hypothermia worsens bradycardia in MC |
-| Cardiovascular support | Give IV beta‑blocker (e.g., propranolol) *after* fluid resuscitation; consider short‑acting vasopressor (e.g., norepinephrine) if hypotensive despite fluids | Propranolol blocks peripheral conversion of T4→T3 and controls adrenergic surge; vasopressor maintains MAP while thyroid blockade takes effect |
-| Glucose & electrolytes | Check bedside glucose; give dextrose if < 70 mg/dL; correct hypokalemia, hyponatraemia | Both crises can cause metabolic derangements that precipitate arrhythmias and seizures |
+- **Airway‑breathing‑circulation**: Position semi‑upright, give high‑flow O₂, secure airway if GCS < 8 or severe respiratory failure, start IV crystalloid bolus (isotonic) — Prevent hypoxia, improve tissue perfusion; thyroid hormones increase metabolic demand and can precipitate shock
+- **Temperature control**: Cool the patient with tepid sponging, fan, antipyretics (paracetamol) for TS; passive re‑warming for MC — Hyperthermia worsens tachyarrhythmia in TS; hypothermia worsens bradycardia in MC
+- **Cardiovascular support**: Give IV beta‑blocker (e.g., propranolol) *after* fluid resuscitation; consider short‑acting vasopressor (e.g., norepinephrine) if hypotensive despite fluids — Propranolol blocks peripheral conversion of T4→T3 and controls adrenergic surge; vasopressor maintains MAP while thyroid blockade takes effect
+- **Glucose & electrolytes**: Check bedside glucose; give dextrose if < 70 mg/dL; correct hypokalemia, hyponatraemia — Both crises can cause metabolic derangements that precipitate arrhythmias and seizures
 
 **2. Definitive treatment**  
 
-| Thyroid storm (TS) | Myxoedema coma (MC) |
-|---|---|
-| **Block hormone synthesis** – give a thionamide (e.g., propylthiouracil or methimazole) *as soon as possible* | **Replace hormone** – give IV levothyroxine (large loading dose) followed by daily maintenance |
-| **Block peripheral conversion** – propranolol (also reduces tachycardia) | **Support adrenal axis** – give IV hydrocortisone (stress dose) before thyroid hormone to avoid precipitating adrenal insufficiency |
-| **Inhibit hormone release** – iodine solution (e.g., Lugol’s) *after* thionamide, 1 hour later, for 10–14 h | **Correct precipitating factors** – treat infection (malaria, TB, HIV‑related sepsis), stop offending drugs (e.g., amiodarone), optimise fluid/electrolytes |
-| **Treat precipitant** – broad‑spectrum antibiotics if infection suspected, stop antithyroid drugs if allergic, manage heart failure, correct electrolyte disturbances | **Supportive care** – ventilatory support if CO₂ retention, careful re‑warming (avoid rapid rise > 1 °C/h), treat hyponatraemia slowly |
+- **Block hormone synthesis – give a thionamide (e.g., propylthiouracil or methimazole) *as soon as possible***: **Replace hormone** – give IV levothyroxine (large loading dose) followed by daily maintenance
+- **Block peripheral conversion – propranolol (also reduces tachycardia)**: **Support adrenal axis** – give IV hydrocortisone (stress dose) before thyroid hormone to avoid precipitating adrenal insufficiency
+- **Inhibit hormone release – iodine solution (e.g., Lugol’s) *after* thionamide, 1 hour later, for 10–14 h**: **Correct precipitating factors** – treat infection (malaria, TB, HIV‑related sepsis), stop offending drugs (e.g., amiodarone), optimise fluid/electrolytes
+- **Treat precipitant – broad‑spectrum antibiotics if infection suspected, stop antithyroid drugs if allergic, manage heart failure, correct electrolyte disturbances**: **Supportive care** – ventilatory support if CO₂ retention, careful re‑warming (avoid rapid rise > 1 °C/h), treat hyponatraemia slowly
 
 **3. Monitoring & safety**  
 
@@ -160,10 +150,8 @@ Prompt recognition of the pattern (hyper‑ vs. hypo‑metabolic) and the scorin
 
 ## Complications and prognosis  
 
-| Condition | Early complications | Late sequelae | Prognostic factors |
-|---|---|---|---|
-| Thyroid storm | Cardiac failure, atrial fibrillation, ventricular tachycardia, pulmonary edema, hepatic dysfunction, DIC, sepsis | Persistent cardiomyopathy, neurocognitive deficits after prolonged hypoxia | Prompt recognition, control of temperature, early thionamide + beta‑blocker, absence of multi‑organ failure |
-| Myxoedema coma | Respiratory failure, severe bradyarrhythmia, hypotension, hypoglycaemia, hyponatraemia, myxedema‑related skin breakdown | Prolonged ventilatory dependence, neuro‑cognitive impairment, recurrent hypothyroid crises if precipitant not addressed | Age > 60 y, delayed re‑warming, co‑existent infection (malaria, TB, HIV), severe electrolyte derangement |
+- **Thyroid storm**: Cardiac failure, atrial fibrillation, ventricular tachycardia, pulmonary edema, hepatic dysfunction, DIC, sepsis — Persistent cardiomyopathy, neurocognitive deficits after prolonged hypoxia — Prompt recognition, control of temperature, early thionamide + beta‑blocker, absence of multi‑organ failure
+- **Myxoedema coma**: Respiratory failure, severe bradyarrhythmia, hypotension, hypoglycaemia, hyponatraemia, myxedema‑related skin breakdown — Prolonged ventilatory dependence, neuro‑cognitive impairment, recurrent hypothyroid crises if precipitant not addressed — Age > 60 y, delayed re‑warming, co‑existent infection (malaria, TB, HIV), severe electrolyte derangement
 
 Overall mortality remains high (≈ 10–30 %) but falls dramatically with early, protocol‑driven management.  
 

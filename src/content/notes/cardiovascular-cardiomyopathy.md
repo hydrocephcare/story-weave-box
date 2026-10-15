@@ -18,12 +18,10 @@ Cardiomyopathies are a heterogeneous group of myocardial diseases characterized 
 * **Coronary Perfusion Dynamics:** Left ventricular subendocardial perfusion occurs almost exclusively during diastole. When diastolic pressures rise or ventricular wall thickness increases without proportional capillary angiogenesis (as in HCM), the myocardial oxygen supply-demand balance fails, inducing ischemia without epicardial coronary occlusion.
 
 ## Causes and Risk Factors
-| Phenotype | Primary / Genetic Causes | Tropical, Infectious & Acquired Causes (Regional Focus) |
-|---|---|---|
-| DCM | Titin (*TTN*), lamin A/C (*LMNA*) mutations | Post-viral myocarditis, advanced HIV infection, peripartum state, chronic alcohol use |
-| HCM | Sarcomeric mutations (*MYH7*, *MYBPC3*) | Storage disorders (Fabry disease, glycogen storage) |
-| RCM | Sarcomeric mutations, familial amyloidosis | Endomyocardial fibrosis, cardiac tuberculosis, untreated sickle cell disease (iron overload) |
-| ARVC | Desmosomal gene mutations (*PKP2*, *DSP*) | Chagas disease (rare/imported), inflammatory mimickers |
+- **DCM**: Titin (*TTN*), lamin A/C (*LMNA*) mutations — Post-viral myocarditis, advanced HIV infection, peripartum state, chronic alcohol use
+- **HCM**: Sarcomeric mutations (*MYH7*, *MYBPC3*) — Storage disorders (Fabry disease, glycogen storage)
+- **RCM**: Sarcomeric mutations, familial amyloidosis — Endomyocardial fibrosis, cardiac tuberculosis, untreated sickle cell disease (iron overload)
+- **ARVC**: Desmosomal gene mutations (*PKP2*, *DSP*) — Chagas disease (rare/imported), inflammatory mimickers
 
 * **Infectious & Immune-mediated:** Advanced HIV causes direct myocyte toxicity, cytokine-driven apoptosis, or secondary myocarditis via opportunistic pathogens (e.g., cytomegalovirus, toxoplasmosis). Tuberculosis leads to myocardial tuberculomas or chronic constrictive-restrictive myopericarditis. Enteroviruses (Coxsackievirus B) and arboviruses cause post-infectious inflammatory DCM.
 * **Infiltrative & Interstitial:** Endomyocardial fibrosis (EMF)—endemic to warm, humid tropical belts—causes apical obliteration and severe restriction via subendocardial fibrous tissue deposition. Secondary hemochromatosis from repeated blood transfusions in severe sickle cell anemia induces myocardial iron overload, causing secondary RCM transitioning to DCM.
@@ -115,12 +113,10 @@ Diagnosis requires clinical suspicion substantiated by objective transthoracic e
 
 ### Definitive Treatment
 
-| Cardiomyopathy Type | Pharmacotherapy | Interventions & Devices |
-|---|---|---|
-| Dilated (DCM) | ACEi/ARNI, beta-blocker, MRA, SGLT2i | ICD for sudden death risk; CRT-P/D |
-| Hypertrophic (HCM) | Non-vasodilating beta-blockers, verapamil | Septal myectomy, alcohol septal ablation, ICD |
-| Restrictive (RCM) | Cautious loop diuretics; treat primary cause | Endomyocardial resection; cardiac transplant |
-| Peripartum (PPCM) | Standard HFrEF therapy; bromocriptine | Anticoagulation while EF severely reduced |
+- **Dilated (DCM)**: ACEi/ARNI, beta-blocker, MRA, SGLT2i — ICD for sudden death risk; CRT-P/D
+- **Hypertrophic (HCM)**: Non-vasodilating beta-blockers, verapamil — Septal myectomy, alcohol septal ablation, ICD
+- **Restrictive (RCM)**: Cautious loop diuretics; treat primary cause — Endomyocardial resection; cardiac transplant
+- **Peripartum (PPCM)**: Standard HFrEF therapy; bromocriptine — Anticoagulation while EF severely reduced
 
 * **Dilated Cardiomyopathy:** Once euvolaemic, establish the four foundational pillars of heart failure therapy: an ACE inhibitor, ARB, or ARNI (sacubitril-valsartan); an evidence-based beta-blocker (carvedilol, bisoprolol, or sustained-release metoprolol); a mineralocorticoid receptor antagonist (spironolactone); and an SGLT2 inhibitor (dapagliflozin or empagliflozin). Add oral loop diuretics as needed for symptom control. Address underlying tropical triggers: optimise antiretroviral therapy for HIV-associated cardiomyopathy, initiate full-course antituberculous therapy for TB myocarditis, and correct severe chronic anaemia.
 * **Hypertrophic Cardiomyopathy:** Beta-blockers (propranolol, metoprolol, atenolol) form first-line therapy to slow the heart rate, prolong diastolic filling, and diminish dynamic left ventricular outflow tract (LVOT) obstruction. Use non-dihydropyridine calcium channel blockers (verapamil) if beta-blockers fail or are contraindicated. 

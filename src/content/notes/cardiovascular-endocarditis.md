@@ -141,13 +141,11 @@ High-risk features requiring urgent cardiothoracic surgical consultation and int
 
 ## Complications and Prognosis
 
-| Complication Category | Specific Manifestation | Clinical Consequence |
-|---|---|---|
-| Cardiac | Perivalvular abscess, fistula | AV block, worsening heart failure |
-| Neurological | Embolic stroke, mycotic aneurysm | Focal deficits, intracranial bleed |
-| Renal | Immune-complex glomerulonephritis | Acute kidney injury, haematuria |
-| Systemic embolic | Splenic or mesenteric infarction | Abdominal pain, secondary abscess |
-| Metastatic infection | Septic arthritis, vertebral osteomyelitis | Localised back pain, joint effusion |
+- **Cardiac**: Perivalvular abscess, fistula — AV block, worsening heart failure
+- **Neurological**: Embolic stroke, mycotic aneurysm — Focal deficits, intracranial bleed
+- **Renal**: Immune-complex glomerulonephritis — Acute kidney injury, haematuria
+- **Systemic embolic**: Splenic or mesenteric infarction — Abdominal pain, secondary abscess
+- **Metastatic infection**: Septic arthritis, vertebral osteomyelitis — Localised back pain, joint effusion
 
 Prognosis is poorest with prosthetic valve involvement, *Staphylococcus aureus* etiology, heart failure, and perivalvular invasive disease.
 

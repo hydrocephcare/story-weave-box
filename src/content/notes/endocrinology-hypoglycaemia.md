@@ -6,27 +6,23 @@
 Hypoglycaemia is a plasma glucose concentration low enough to cause neuro‑glycopenic symptoms or signs. In practice, a capillary glucose < 2.8 mmol/L (≈50 mg/dL) or any level that produces symptoms that resolve with glucose administration is considered clinically significant.
 
 ## Anatomy and physiology you need  
-| System | Key element | Clinical relevance |
-|---|---|---|
-| Pancreas | β‑cell insulin secretion (glucose‑stimulated) | Excess insulin → rapid glucose fall |
-| Liver | Glycogenolysis & gluconeogenesis (via glucagon, catecholamines) | Primary source of endogenous glucose during fasting |
-| Adrenal medulla | Epinephrine release | Counter‑regulatory hormone, raises glucose |
-| Kidney | Gluconeogenesis (especially in prolonged fasting) | Supports glucose homeostasis when liver capacity is exhausted |
-| Brain | Glucose‑dependent metabolism | Symptoms arise when cerebral glucose < 2.5 mmol/L |
-| Peripheral tissues | GLUT transporters (insulin‑dependent & independent) | Determine glucose uptake rate |
+- **Pancreas**: β‑cell insulin secretion (glucose‑stimulated) — Excess insulin → rapid glucose fall
+- **Liver**: Glycogenolysis & gluconeogenesis (via glucagon, catecholamines) — Primary source of endogenous glucose during fasting
+- **Adrenal medulla**: Epinephrine release — Counter‑regulatory hormone, raises glucose
+- **Kidney**: Gluconeogenesis (especially in prolonged fasting) — Supports glucose homeostasis when liver capacity is exhausted
+- **Brain**: Glucose‑dependent metabolism — Symptoms arise when cerebral glucose < 2.5 mmol/L
+- **Peripheral tissues**: GLUT transporters (insulin‑dependent & independent) — Determine glucose uptake rate
 
 Understanding that insulin drives glucose into muscle and fat, while glucagon, epinephrine, cortisol and growth hormone oppose this, is essential for interpreting why hypoglycaemia occurs in different contexts.
 
 ## Causes and risk factors  
 
-| Category | Common causes in Kenya | Specific risk factors |
-|---|---|---|
-| Medication‑induced | Sulfonylureas, meglitinides, insulin analogues, high‑dose quinine (rare) | Poor adherence to dosing schedule, renal impairment, concomitant alcohol |
-| Endocrine | Insulinoma, adrenal insufficiency, hypopituitarism | Chronic steroid withdrawal, pituitary surgery |
-| Critical illness | Severe malaria, disseminated TB, sepsis, HIV/AIDS with opportunistic infections, sickle cell crisis | Malnutrition, hepatic dysfunction, renal failure |
-| Nutritional | Prolonged fasting, malnutrition, bariatric surgery | Low carbohydrate intake, night‑time fasting in children |
-| Hepatic & renal disease | Advanced cirrhosis, acute hepatitis, chronic kidney disease | Impaired gluconeogenesis, reduced insulin clearance |
-| Inborn errors (rare) | Glycogen storage disease, fatty acid oxidation defects | Present in childhood, often missed |
+- **Medication‑induced**: Sulfonylureas, meglitinides, insulin analogues, high‑dose quinine (rare) — Poor adherence to dosing schedule, renal impairment, concomitant alcohol
+- **Endocrine**: Insulinoma, adrenal insufficiency, hypopituitarism — Chronic steroid withdrawal, pituitary surgery
+- **Critical illness**: Severe malaria, disseminated TB, sepsis, HIV/AIDS with opportunistic infections, sickle cell crisis — Malnutrition, hepatic dysfunction, renal failure
+- **Nutritional**: Prolonged fasting, malnutrition, bariatric surgery — Low carbohydrate intake, night‑time fasting in children
+- **Hepatic & renal disease**: Advanced cirrhosis, acute hepatitis, chronic kidney disease — Impaired gluconeogenesis, reduced insulin clearance
+- **Inborn errors (rare)**: Glycogen storage disease, fatty acid oxidation defects — Present in childhood, often missed
 
 ## Pathophysiology  
 
@@ -44,29 +40,25 @@ Understanding that insulin drives glucose into muscle and fat, while glucagon, e
 
 ## Clinical features  
 
-| Aspect | Questions to ask | Why it matters / expected finding |
-|---|---|---|
-| **Timing of symptoms** | “When did the episode start? How long does it last? Is it related to meals or fasting?” | Hypoglycaemia classically occurs after a prolonged fast (≥ 8 h) or soon after a carbohydrate‑rich meal in insulin‑oma or drug‑induced cases. |
-| **Meal pattern** | “What did you eat before the event? Any missed meals or irregular eating?” | Missed or delayed meals are the common precipitant in patients on sulfonylureas or insulin; a high‑carb meal followed by rapid fall suggests insulin excess. |
-| **Medication review** | “What antidiabetic drugs are you taking? Any recent dose changes? Use of quinine, beta‑blockers, salicylates, or herbal preparations?” | Sulfonylureas, insulin, quinine (malaria treatment) and some antibiotics can provoke hypoglycaemia. Beta‑blockers mask adrenergic symptoms. |
-| **Co‑morbidities** | “Do you have HIV, TB, malaria, sickle‑cell disease, chronic liver disease, renal failure, or adrenal insufficiency?” | HIV/TB therapy (e.g., rifampicin) alters drug metabolism; malaria and sickle‑cell crises increase glucose utilisation; liver/renal disease impairs gluconeogenesis and drug clearance. |
-| **Alcohol intake** | “Do you drink alcohol? How much and when?” | Alcohol inhibits gluconeogenesis and can precipitate delayed hypoglycaemia, especially in malnourished patients. |
-| **Symptoms** | “Do you feel shaky, sweaty, hungry, palpitations, anxiety, headache, visual changes, confusion, seizures or loss of consciousness?” | Autonomic (adrenergic) symptoms reflect catecholamine surge; neuroglycopenic symptoms indicate brain glucose deprivation. |
-| **Previous episodes** | “Have you had similar episodes before? How were they treated?” | Recurrent episodes suggest chronic risk (e.g., insulinoma, medication error). |
-| **Family history** | “Any relatives with diabetes, endocrine tumours, or inherited metabolic disorders?” | Familial hyperinsulinism or MODY may be relevant in younger patients. |
-| **Pregnancy status** | “Are you pregnant?” | Pregnancy increases insulin sensitivity and risk of hypoglycaemia, especially in insulin‑treated diabetics. |
+- **Timing of symptoms**: “When did the episode start? How long does it last? Is it related to meals or fasting?” — Hypoglycaemia classically occurs after a prolonged fast (≥ 8 h) or soon after a carbohydrate‑rich meal in insulin‑oma or drug‑induced cases.
+- **Meal pattern**: “What did you eat before the event? Any missed meals or irregular eating?” — Missed or delayed meals are the common precipitant in patients on sulfonylureas or insulin; a high‑carb meal followed by rapid fall suggests insulin excess.
+- **Medication review**: “What antidiabetic drugs are you taking? Any recent dose changes? Use of quinine, beta‑blockers, salicylates, or herbal preparations?” — Sulfonylureas, insulin, quinine (malaria treatment) and some antibiotics can provoke hypoglycaemia. Beta‑blockers mask adrenergic symptoms.
+- **Co‑morbidities**: “Do you have HIV, TB, malaria, sickle‑cell disease, chronic liver disease, renal failure, or adrenal insufficiency?” — HIV/TB therapy (e.g., rifampicin) alters drug metabolism; malaria and sickle‑cell crises increase glucose utilisation; liver/renal disease impairs gluconeogenesis and drug clearance.
+- **Alcohol intake**: “Do you drink alcohol? How much and when?” — Alcohol inhibits gluconeogenesis and can precipitate delayed hypoglycaemia, especially in malnourished patients.
+- **Symptoms**: “Do you feel shaky, sweaty, hungry, palpitations, anxiety, headache, visual changes, confusion, seizures or loss of consciousness?” — Autonomic (adrenergic) symptoms reflect catecholamine surge; neuroglycopenic symptoms indicate brain glucose deprivation.
+- **Previous episodes**: “Have you had similar episodes before? How were they treated?” — Recurrent episodes suggest chronic risk (e.g., insulinoma, medication error).
+- **Family history**: “Any relatives with diabetes, endocrine tumours, or inherited metabolic disorders?” — Familial hyperinsulinism or MODY may be relevant in younger patients.
+- **Pregnancy status**: “Are you pregnant?” — Pregnancy increases insulin sensitivity and risk of hypoglycaemia, especially in insulin‑treated diabetics.
 
 ### Examination findings and rationale  
 
-| Finding | Expected result | Pathophysiological explanation |
-|---|---|---|
-| **Vital signs** | Tachycardia, mild hypertension, sweating | Catecholamine release (epinephrine, norepinephrine) stimulates heart rate and peripheral vasoconstriction. |
-| **Neurological exam** | Confusion, dysarthria, focal deficits (rare), seizures if severe | Neuroglycopenia impairs cortical function; severe depletion can provoke seizures. |
-| **Skin** | Diaphoresis, pallor | Sympathetic activation and peripheral vasoconstriction. |
-| **Mental status** | Irritability, anxiety, lethargy, stupor, coma (graded by severity) | Direct effect of low glucose on neuronal metabolism. |
-| **Cardiac exam** | Usually normal; may hear a rapid pulse | Reflex tachycardia from adrenergic surge. |
-| **Abdominal exam** | Usually unremarkable; may note hepatomegaly in chronic liver disease | Liver disease reduces glycogen stores, predisposing to fasting hypoglycaemia. |
-| **Signs of chronic disease** | Lymphadenopathy (TB), splenomegaly (malaria), joint deformities (rheumatic fever) | Underlying infections or inflammatory states can increase glucose utilisation or alter drug metabolism. |
+- **Vital signs**: Tachycardia, mild hypertension, sweating — Catecholamine release (epinephrine, norepinephrine) stimulates heart rate and peripheral vasoconstriction.
+- **Neurological exam**: Confusion, dysarthria, focal deficits (rare), seizures if severe — Neuroglycopenia impairs cortical function; severe depletion can provoke seizures.
+- **Skin**: Diaphoresis, pallor — Sympathetic activation and peripheral vasoconstriction.
+- **Mental status**: Irritability, anxiety, lethargy, stupor, coma (graded by severity) — Direct effect of low glucose on neuronal metabolism.
+- **Cardiac exam**: Usually normal; may hear a rapid pulse — Reflex tachycardia from adrenergic surge.
+- **Abdominal exam**: Usually unremarkable; may note hepatomegaly in chronic liver disease — Liver disease reduces glycogen stores, predisposing to fasting hypoglycaemia.
+- **Signs of chronic disease**: Lymphadenopathy (TB), splenomegaly (malaria), joint deformities (rheumatic fever) — Underlying infections or inflammatory states can increase glucose utilisation or alter drug metabolism.
 
 ---
 
@@ -105,11 +97,9 @@ Understanding that insulin drives glucose into muscle and fat, while glucagon, e
 
 2. **Classify severity (based on clinical state and glucose level)**  
 
-| Severity | Glucose (mmol/L) | Clinical picture |
-|---|---|---|
-| **Mild** | 2.2 – 2.8 | Autonomic symptoms only; patient alert, able to cooperate. |
-| **Moderate** | 1.7 – 2.1 | Neuroglycopenic signs (confusion, dysarthria) but still responsive. |
-| **Severe** | < 1.7 | Seizures, loss of consciousness, coma; requires airway protection. |
+- **Mild**: 2.2 – 2.8 — Autonomic symptoms only; patient alert, able to cooperate.
+- **Moderate**: 1.7 – 2.1 — Neuroglycopenic signs (confusion, dysarthria) but still responsive.
+- **Severe**: < 1.7 — Seizures, loss of consciousness, coma; requires airway protection.
 
 3. **Assign aetiology** – Use the investigation panel to determine whether the cause is endogenous hyperinsulinism, drug‑induced, organ failure, infection, endocrine insufficiency, or alcohol‑related.  
 
@@ -117,13 +107,11 @@ Understanding that insulin drives glucose into muscle and fat, while glucagon, e
 
 ## Management  
 **Immediate stabilisation**  
-| Step | Action | Rationale |
-|---|---|---|
-| 1 | Check airway, breathing, circulation; give supplemental O₂ if SpO₂ < 94 % | Prevent hypoxic injury while glucose is being restored |
-| 2 | Obtain a rapid bedside capillary glucose (glucometer) | Confirms true hypoglycaemia (≤ 2.8 mmol/L) before treatment |
-| 3 | If patient is unconscious, seizing or unable to swallow → give IV **dextrose 50 %** (or glucagon IM/SC if IV unavailable) | Rapidly raises plasma glucose and stops neuroglycopenic symptoms |
-| 4 | If conscious and able to swallow → give oral glucose (e.g., 15 g rapid‑acting carbohydrate such as glucose tablets, fruit juice, or sugary soft drink) | Safe, avoids IV line in stable patients |
-| 5 | Re‑measure glucose after 15 min; repeat step 3/4 if still ≤ 2.8 mmol/L | Ensures adequate correction |
+- **1**: Check airway, breathing, circulation; give supplemental O₂ if SpO₂ < 94 % — Prevent hypoxic injury while glucose is being restored
+- **2**: Obtain a rapid bedside capillary glucose (glucometer) — Confirms true hypoglycaemia (≤ 2.8 mmol/L) before treatment
+- **3**: If patient is unconscious, seizing or unable to swallow → give IV **dextrose 50 %** (or glucagon IM/SC if IV unavailable) — Rapidly raises plasma glucose and stops neuroglycopenic symptoms
+- **4**: If conscious and able to swallow → give oral glucose (e.g., 15 g rapid‑acting carbohydrate such as glucose tablets, fruit juice, or sugary soft drink) — Safe, avoids IV line in stable patients
+- **5**: Re‑measure glucose after 15 min; repeat step 3/4 if still ≤ 2.8 mmol/L — Ensures adequate correction
 
 **Definitive treatment**  
 1. **Identify and treat the underlying cause** – stop offending insulin or sulfonylurea, treat infection (e.g., malaria, TB, HIV‑related opportunistic infection), correct adrenal insufficiency, manage hepatic failure, etc.  

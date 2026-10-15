@@ -16,16 +16,14 @@ Parkinson disease (PD) is a progressive neuro‑degenerative disorder characteri
 
 ## Causes and risk factors  
 
-| Category | Relevant factors in Kenya |
-|---|---|
-| Idiopathic | Age >60, male sex, family history of PD |
-| Genetic | LRRK2, PARK2 mutations (rare, but reported) |
-| Secondary / vascular | Stroke, chronic hypertension, HIV‑associated neurodegeneration |
-| Infectious | TB meningitis sequelae, cerebral malaria, neurocysticercosis |
-| Autoimmune / inflammatory | Post‑infectious encephalitis, rheumatic fever (rare) |
-| Hematologic | Sickle cell disease with chronic hypoxia |
-| Toxin exposure | Pesticides (organophosphates), heavy metals, manganese (found in mining areas) |
-| Drug‑induced | Antipsychotics, metoclopramide, some anti‑emetics |
+- **Idiopathic**: Age >60, male sex, family history of PD
+- **Genetic**: LRRK2, PARK2 mutations (rare, but reported)
+- **Secondary / vascular**: Stroke, chronic hypertension, HIV‑associated neurodegeneration
+- **Infectious**: TB meningitis sequelae, cerebral malaria, neurocysticercosis
+- **Autoimmune / inflammatory**: Post‑infectious encephalitis, rheumatic fever (rare)
+- **Hematologic**: Sickle cell disease with chronic hypoxia
+- **Toxin exposure**: Pesticides (organophosphates), heavy metals, manganese (found in mining areas)
+- **Drug‑induced**: Antipsychotics, metoclopramide, some anti‑emetics
 
 ## Pathophysiology  
 
@@ -41,27 +39,40 @@ Environmental toxins → mitochondrial dysfunction → apoptosis of nigral cells
 
 ## Clinical features  
 
-| Aspect | Key questions for the history | Why it matters / pathophysiologic link |
-|---|---|---|
-| **Motor symptoms** | • Onset – when did the tremor or stiffness first appear?<br>• Resting tremor – is it unilateral, “pill‑rolling”, improves with action?<br>• Bradykinesia – do you notice slowness in getting up, dressing, eating?<br>• Rigidity – any “cogwheel” feel, stiffness that is present in all directions?<br>• Postural instability – have you had falls, difficulty turning, trouble with balance?<br>• Fluctuations – do symptoms vary during the day or with stress? | Resting tremor, bradykinesia and rigidity are the classic triad that reflect loss of dopaminergic input to the basal ganglia. Postural instability appears later when compensatory pathways fail. |
-| **Non‑motor symptoms** | • Sleep – vivid dreams, REM behaviour disorder, insomnia?<br>• Autonomic – constipation, urinary urgency, orthostatic dizziness, erectile dysfunction?<br>• Neuropsychiatric – depression, anxiety, apathy, hallucinations?<br>• Cognitive – memory lapses, difficulty planning, “brain fog”? | Autonomic and neuropsychiatric features stem from widespread Lewy body deposition and loss of non‑dopaminergic nuclei. Early recognition improves quality of life and may influence drug choice (e.g., avoid anticholinergics in cognitive impairment). |
-| **Medication history** | • Prior use of antipsychotics, metoclopramide, or other dopamine‑blocking drugs?<br>• Exposure to neurotoxins (pesticides, manganese)? | Drug‑induced parkinsonism mimics idiopathic disease but often improves on withdrawal; important for reversible causes. |
-| **Risk factors specific to Kenya** | • HIV status, TB treatment history, malaria episodes, sickle‑cell disease, rheumatic fever, occupational exposure to pesticides?<br>• Family history of parkinsonism or early‑onset disease? | Infections (HIV, TB meningitis) and chronic inflammation can precipitate secondary parkinsonism. Pesticide exposure is a recognized environmental risk. |
-| **Functional impact** | • Ability to perform ADLs (feeding, grooming, walking)?<br>• Need for assistive devices?<br>• Driving safety? | Determines disease stage, need for physiotherapy, occupational therapy, and safety counseling. |
+- **Motor symptoms**
+  - Onset – when did the tremor or stiffness first appear?
+  - Resting tremor – is it unilateral, “pill‑rolling”, improves with action?
+  - Bradykinesia – do you notice slowness in getting up, dressing, eating?
+  - Rigidity – any “cogwheel” feel, stiffness that is present in all directions?
+  - Postural instability – have you had falls, difficulty turning, trouble with balance?
+  - Fluctuations – do symptoms vary during the day or with stress? — Resting tremor, bradykinesia and rigidity are the classic triad that reflect loss of dopaminergic input to the basal ganglia. Postural instability appears later when compensatory pathways fail.
+- **Non‑motor symptoms**
+  - Sleep – vivid dreams, REM behaviour disorder, insomnia?
+  - Autonomic – constipation, urinary urgency, orthostatic dizziness, erectile dysfunction?
+  - Neuropsychiatric – depression, anxiety, apathy, hallucinations?
+  - Cognitive – memory lapses, difficulty planning, “brain fog”? — Autonomic and neuropsychiatric features stem from widespread Lewy body deposition and loss of non‑dopaminergic nuclei. Early recognition improves quality of life and may influence drug choice (e.g., avoid anticholinergics in cognitive impairment).
+- **Medication history**
+  - Prior use of antipsychotics, metoclopramide, or other dopamine‑blocking drugs?
+  - Exposure to neurotoxins (pesticides, manganese)? — Drug‑induced parkinsonism mimics idiopathic disease but often improves on withdrawal; important for reversible causes.
+- **Risk factors specific to Kenya**
+  - HIV status, TB treatment history, malaria episodes, sickle‑cell disease, rheumatic fever, occupational exposure to pesticides?
+  - Family history of parkinsonism or early‑onset disease? — Infections (HIV, TB meningitis) and chronic inflammation can precipitate secondary parkinsonism. Pesticide exposure is a recognized environmental risk.
+- **Functional impact**
+  - Ability to perform ADLs (feeding, grooming, walking)?
+  - Need for assistive devices?
+  - Driving safety? — Determines disease stage, need for physiotherapy, occupational therapy, and safety counseling.
 
 ### Examination findings and their rationale  
 
-| Examination component | Expected finding in Parkinson disease | Why it occurs |
-|---|---|---|
-| **General observation** | Reduced arm swing, stooped posture, shuffling gait | Loss of automatic movement scaling from basal ganglia output. |
-| **Tremor assessment** | Resting tremor, unilateral at onset, “pill‑rolling” 4–6 Hz, diminishes with purposeful movement | Disinhibition of the thalamocortical loop due to dopaminergic loss. |
-| **Rigidity testing** | Increased tone throughout range, “cogwheel” quality when passively moved | Intermittent stretch‑reflex activation from basal ganglia dysfunction. |
-| **Bradykinesia** | Slowness of finger tapping, reduced amplitude of repetitive movements, delayed initiation of gait | Impaired facilitation of motor programs. |
-| **Postural reflexes** | Positive pull test (patient takes a step backward to prevent falling) | Failure of automatic postural adjustments. |
-| **Facial expression** | Masked facies, reduced blink rate | Diminished dopaminergic drive to facial nuclei. |
-| **Speech** | Soft, monotone, hypophonic voice | Reduced motor output to laryngeal muscles. |
-| **Autonomic exam** | Orthostatic drop in BP, dry skin, reduced sweating | Involvement of autonomic nuclei and peripheral sympathetic fibers. |
-| **Cognitive screen** (e.g., MoCA) | May show mild executive dysfunction | Early cortical Lewy body spread. |
+- **General observation**: Reduced arm swing, stooped posture, shuffling gait — Loss of automatic movement scaling from basal ganglia output.
+- **Tremor assessment**: Resting tremor, unilateral at onset, “pill‑rolling” 4–6 Hz, diminishes with purposeful movement — Disinhibition of the thalamocortical loop due to dopaminergic loss.
+- **Rigidity testing**: Increased tone throughout range, “cogwheel” quality when passively moved — Intermittent stretch‑reflex activation from basal ganglia dysfunction.
+- **Bradykinesia**: Slowness of finger tapping, reduced amplitude of repetitive movements, delayed initiation of gait — Impaired facilitation of motor programs.
+- **Postural reflexes**: Positive pull test (patient takes a step backward to prevent falling) — Failure of automatic postural adjustments.
+- **Facial expression**: Masked facies, reduced blink rate — Diminished dopaminergic drive to facial nuclei.
+- **Speech**: Soft, monotone, hypophonic voice — Reduced motor output to laryngeal muscles.
+- **Autonomic exam**: Orthostatic drop in BP, dry skin, reduced sweating — Involvement of autonomic nuclei and peripheral sympathetic fibers.
+- **Cognitive screen (e.g., MoCA)**: May show mild executive dysfunction — Early cortical Lewy body spread.
 
 ---
 
@@ -107,13 +118,11 @@ If the above are met and no red‑flag signs (early severe autonomic failure, ra
 
 **Severity staging (Hoehn & Yahr)**  
 
-| Stage | Clinical picture | Management implication |
-|---|---|---|
-| 1 | Unilateral involvement, minimal disability | Initiate lifestyle measures, consider early levodopa or MAO‑B inhibitor if functional impact |
-| 2 | Bilateral signs, no balance impairment | Add dopamine agonist if needed; physiotherapy for gait |
-| 3 | Early postural instability, still independent | Introduce levodopa, monitor for dyskinesia; safety counseling (fall prevention) |
-| 4 | Severe disability, still able to walk with aid | Optimize levodopa, consider adjunctive COMT inhibitor; refer for occupational therapy |
-| 5 | Wheelchair bound or bedridden | Palliative approach, manage non‑motor symptoms aggressively, consider deep brain stimulation if still ambulatory and medication‑responsive |
+- **1**: Unilateral involvement, minimal disability — Initiate lifestyle measures, consider early levodopa or MAO‑B inhibitor if functional impact
+- **2**: Bilateral signs, no balance impairment — Add dopamine agonist if needed; physiotherapy for gait
+- **3**: Early postural instability, still independent — Introduce levodopa, monitor for dyskinesia; safety counseling (fall prevention)
+- **4**: Severe disability, still able to walk with aid — Optimize levodopa, consider adjunctive COMT inhibitor; refer for occupational therapy
+- **5**: Wheelchair bound or bedridden — Palliative approach, manage non‑motor symptoms aggressively, consider deep brain stimulation if still ambulatory and medication‑responsive
 
 Severity guides **pharmacologic choice** (early disease – MAO‑B inhibitors or dopamine agonists to delay levodopa; later disease – levodopa ± adjuncts) and **non‑pharmacologic interventions** (physio, speech therapy, occupational therapy, fall‑prevention programs).  
 
@@ -121,26 +130,40 @@ Monitoring includes regular assessment of motor scores (UPDRS), cognitive screen
 
 ## Management  
 
-| Phase | Goal | Key actions | Safety / contraindications |
-|---|---|---|---|
-| **Immediate stabilisation** | Prevent falls, treat acute motor crises, address autonomic emergencies | • Place patient in a safe, low‑risk environment (bed rails, non‑slip footwear) <br>• Treat severe rigidity or “off” state with rapid‑acting dopaminergic agents (e.g., sub‑cutaneous apomorphine) if available <br>• Correct dehydration, electrolyte imbalance, urinary retention, or constipation <br>• Review current meds for dopamine‑blocking agents (antipsychotics, metoclopramide) and stop them | Apomorphine contraindicated in severe cardiovascular disease, uncontrolled hypertension, or hypersensitivity. |
-| **Definitive pharmacologic therapy** | Re‑establish dopaminergic tone, improve motor function, control non‑motor symptoms | • **Levodopa/Carbidopa** – mainstay for most patients; start low, titrate slowly to avoid dyskinesia. <br>• **Dopamine agonists** (e.g., pramipexole, ropinirole) – useful in younger patients or as levodopa‑sparing agents. <br>• **MAO‑B inhibitors** (selegiline, rasagiline) – modest symptom control, neuroprotective rationale. <br>• **COMT inhibitor** (entacapone) – add when levodopa wearing‑off appears. <br>• **Anticholinergics** (trihexyphenidyl, benztropine) – for prominent tremor in younger patients; avoid in older adults with cognitive impairment. <br>• **Amantadine** – for dyskinesia or mild motor benefit. | Avoid dopamine antagonists (typical antipsychotics, metoclopramide). Anticholinergics contraindicated in glaucoma, urinary retention, severe cognitive decline. |
-| **Non‑pharmacologic measures** | Optimize function, reduce complications | • Physiotherapy: gait training, balance exercises, stretching. <br>• Occupational therapy: adaptive utensils, dressing strategies. <br>• Speech‑language therapy for dysarthria and swallowing. <br>• Regular aerobic activity to improve mood and cognition. | Ensure exercises are supervised initially to prevent falls. |
-| **Monitoring & follow‑up** | Detect motor fluctuations, side‑effects, disease progression | • Review motor score (UPDRS/MDS‑UPDRS) every 6–12 months. <br>• Screen for dyskinesia, hallucinations, orthostatic hypotension, constipation, depression. <br>• Laboratory: liver function (amantadine), renal function (levodopa metabolites), CBC if on MAO‑B inhibitors with antidepressants. <br>• Adjust therapy based on “on/off” patterns and patient‑reported quality of life. | Watch for serotonin syndrome when MAO‑B inhibitors are combined with SSRIs. |
+- **Immediate stabilisation**
+  - Prevent falls, treat acute motor crises, address autonomic emergencies — • Place patient in a safe, low‑risk environment (bed rails, non‑slip footwear)
+  - Treat severe rigidity or “off” state with rapid‑acting dopaminergic agents (e.g., sub‑cutaneous apomorphine) if available
+  - Correct dehydration, electrolyte imbalance, urinary retention, or constipation
+  - Review current meds for dopamine‑blocking agents (antipsychotics, metoclopramide) and stop them — Apomorphine contraindicated in severe cardiovascular disease, uncontrolled hypertension, or hypersensitivity.
+- **Definitive pharmacologic therapy**
+  - Re‑establish dopaminergic tone, improve motor function, control non‑motor symptoms — • **Levodopa/Carbidopa** – mainstay for most patients; start low, titrate slowly to avoid dyskinesia.
+  - **Dopamine agonists** (e.g., pramipexole, ropinirole) – useful in younger patients or as levodopa‑sparing agents.
+  - **MAO‑B inhibitors** (selegiline, rasagiline) – modest symptom control, neuroprotective rationale.
+  - **COMT inhibitor** (entacapone) – add when levodopa wearing‑off appears.
+  - **Anticholinergics** (trihexyphenidyl, benztropine) – for prominent tremor in younger patients; avoid in older adults with cognitive impairment.
+  - **Amantadine** – for dyskinesia or mild motor benefit. — Avoid dopamine antagonists (typical antipsychotics, metoclopramide). Anticholinergics contraindicated in glaucoma, urinary retention, severe cognitive decline.
+- **Non‑pharmacologic measures**
+  - Optimize function, reduce complications — • Physiotherapy: gait training, balance exercises, stretching.
+  - Occupational therapy: adaptive utensils, dressing strategies.
+  - Speech‑language therapy for dysarthria and swallowing.
+  - Regular aerobic activity to improve mood and cognition. — Ensure exercises are supervised initially to prevent falls.
+- **Monitoring & follow‑up**
+  - Detect motor fluctuations, side‑effects, disease progression — • Review motor score (UPDRS/MDS‑UPDRS) every 6–12 months.
+  - Screen for dyskinesia, hallucinations, orthostatic hypotension, constipation, depression.
+  - Laboratory: liver function (amantadine), renal function (levodopa metabolites), CBC if on MAO‑B inhibitors with antidepressants.
+  - Adjust therapy based on “on/off” patterns and patient‑reported quality of life. — Watch for serotonin syndrome when MAO‑B inhibitors are combined with SSRIs.
 
 ---
 
 ## Complications and prognosis  
 
-| Complication | Typical onset | Clinical impact | Management tip |
-|---|---|---|---|
-| Motor fluctuations (wearing‑off, “on/off”) | 3–5 years on levodopa | Unpredictable mobility, falls | Add COMT inhibitor or adjust levodopa dosing interval |
-| Dyskinesias | After several years of levodopa | Involuntary choreic movements, may limit activities | Reduce levodopa dose, add amantadine |
-| Orthostatic hypotension | Early or late disease | Dizziness, syncope, falls | Encourage slow position changes, increase salt/fluid, consider fludrocortisone |
-| Neuropsychiatric (depression, hallucinations, psychosis) | Variable | Reduced adherence, caregiver burden | Treat depression with SSRIs (avoid MAO‑B overlap), use low‑dose quetiapine for psychosis |
-| Swallowing dysfunction & aspiration pneumonia | Advanced stage | Major cause of mortality | Speech therapy, diet modification, consider PEG if severe |
-| Cognitive decline/dementia | Late stage | Loss of independence | Cholinesterase inhibitors may help; avoid anticholinergics |
-| Falls & fractures | Throughout disease | Morbidity, mortality | Fall‑prevention program, bone health assessment, vitamin D/calcium |
+- **Motor fluctuations (wearing‑off, “on/off”)**: 3–5 years on levodopa — Unpredictable mobility, falls — Add COMT inhibitor or adjust levodopa dosing interval
+- **Dyskinesias**: After several years of levodopa — Involuntary choreic movements, may limit activities — Reduce levodopa dose, add amantadine
+- **Orthostatic hypotension**: Early or late disease — Dizziness, syncope, falls — Encourage slow position changes, increase salt/fluid, consider fludrocortisone
+- **Neuropsychiatric (depression, hallucinations, psychosis)**: Variable — Reduced adherence, caregiver burden — Treat depression with SSRIs (avoid MAO‑B overlap), use low‑dose quetiapine for psychosis
+- **Swallowing dysfunction & aspiration pneumonia**: Advanced stage — Major cause of mortality — Speech therapy, diet modification, consider PEG if severe
+- **Cognitive decline/dementia**: Late stage — Loss of independence — Cholinesterase inhibitors may help; avoid anticholinergics
+- **Falls & fractures**: Throughout disease — Morbidity, mortality — Fall‑prevention program, bone health assessment, vitamin D/calcium
 
 **Prognosis** – Parkinson disease is progressive; median survival after diagnosis is roughly 10–15 years, but many patients maintain functional independence for many years with optimal therapy. Early recognition of complications and multidisciplinary care improve quality of life.
 

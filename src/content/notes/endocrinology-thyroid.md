@@ -9,32 +9,28 @@
 
 ## Anatomy and physiology you need  
 
-| Structure | Relevance |
-|---|---|
-| Thyroid gland (follicular cells) | Synthesise T4 & T3 from iodide; regulated by TSH |
-| Hypothalamus‑pituitary axis | TRH → TSH release; feedback by T4/T3 |
-| Peripheral deiodinases (type 1 & 2) | Convert T4 → active T3 in tissues |
-| Thyroid hormone receptors (nuclear) | Mediate genomic effects on metabolism, heart, CNS |
-| Iodine transport (NIS) | Essential for hormone synthesis; deficiency common in some Kenyan regions |
+- **Thyroid gland (follicular cells)**: Synthesise T4 & T3 from iodide; regulated by TSH
+- **Hypothalamus‑pituitary axis**: TRH → TSH release; feedback by T4/T3
+- **Peripheral deiodinases (type 1 & 2)**: Convert T4 → active T3 in tissues
+- **Thyroid hormone receptors (nuclear)**: Mediate genomic effects on metabolism, heart, CNS
+- **Iodine transport (NIS)**: Essential for hormone synthesis; deficiency common in some Kenyan regions
 
 ## Causes and risk factors  
 
-| Condition | Hyper‑ / Hypothyroidism | Kenyan relevance |
-|---|---|---|
-| Graves’ disease | Hyper | Most common autoimmune cause |
-| Toxic multinodular goitre | Hyper | Iodine‑deficient areas |
-| Post‑radioiodine or surgery | Hypo | Iatrogenic |
-| Hashimoto’s thyroiditis | Hypo | Autoimmune, prevalent in women |
-| Subacute (de Quervain) thyroiditis | Hyper → Hypo | Viral, can follow malaria |
-| HIV infection | Hyper (immune reconstitution) / Hypo (autoimmune) | High prevalence |
-| Tuberculosis of thyroid | Hypo | Rare but reported |
-| Antitubercular therapy (rifampicin) | Hyper | Enzyme induction ↑ hormone clearance |
-| Malaria (severe) | Hyper | Cytokine surge may increase hormone release |
-| Sickle cell disease (chronic hemolysis) | Hyper | Increased peripheral conversion |
-| Rheumatic fever (post‑infective) | Hyper | Rare, autoimmune cross‑reactivity |
-| Iodine excess (iodinated contrast, supplements) | Hyper | Common in urban centres |
-| Iodine deficiency (soil, diet) | Hypo | Rural high‑altitude areas |
-| Medications – amiodarone, lithium, interferon | Hyper / Hypo | Drug‑induced thyroid dysfunction |
+- **Graves’ disease**: Hyper — Most common autoimmune cause
+- **Toxic multinodular goitre**: Hyper — Iodine‑deficient areas
+- **Post‑radioiodine or surgery**: Hypo — Iatrogenic
+- **Hashimoto’s thyroiditis**: Hypo — Autoimmune, prevalent in women
+- **Subacute (de Quervain) thyroiditis**: Hyper → Hypo — Viral, can follow malaria
+- **HIV infection**: Hyper (immune reconstitution) / Hypo (autoimmune) — High prevalence
+- **Tuberculosis of thyroid**: Hypo — Rare but reported
+- **Antitubercular therapy (rifampicin)**: Hyper — Enzyme induction ↑ hormone clearance
+- **Malaria (severe)**: Hyper — Cytokine surge may increase hormone release
+- **Sickle cell disease (chronic hemolysis)**: Hyper — Increased peripheral conversion
+- **Rheumatic fever (post‑infective)**: Hyper — Rare, autoimmune cross‑reactivity
+- **Iodine excess (iodinated contrast, supplements)**: Hyper — Common in urban centres
+- **Iodine deficiency (soil, diet)**: Hypo — Rural high‑altitude areas
+- **Medications – amiodarone, lithium, interferon**: Hyper / Hypo — Drug‑induced thyroid dysfunction
 
 ## Pathophysiology  
 
@@ -50,17 +46,15 @@ Thyroiditis → follicular damage → ↓ hormone release → ↓ metabolic rate
 
 ## Clinical features  
 
-| Domain | Key questions / findings | Why it occurs |
-|---|---|---|
-| **General** | Weight loss despite normal/increased appetite; heat intolerance; sweating; tremor; fatigue or paradoxical “restlessness”; insomnia; menstrual irregularities; libido change; change in bowel habit (more frequent). | Excess thyroid hormone accelerates basal metabolic rate, increases catecholamine sensitivity and alters gut motility. |
-| **Cardiovascular** | Palpitations; dyspnoea on exertion; chest discomfort; history of atrial fibrillation; orthopnoea. | Thyroid hormone ↑ β‑adrenergic receptors → tachycardia, increased stroke volume, atrial ectopy; high output state may precipitate heart failure. |
-| **Ophthalmic** | Grittiness, diplopia, lid lag, proptosis, periorbital oedema, dry eyes. | Auto‑immune orbital fibroblast activation (Graves’ ophthalmopathy) leads to extra‑ocular muscle swelling and glycosaminoglycan deposition. |
-| **Dermatologic** | Warm, moist skin; fine hair; pretibial myxedema (non‑pitting induration). | Vasodilation and increased sweat gland activity; fibroblast stimulation in Graves’ disease. |
-| **Neurological / Psychiatric** | Anxiety, irritability, tremor, hyperreflexia, fine motor clumsiness, difficulty concentrating, occasional psychosis. | ↑ sympathetic tone and direct central effects of T3/T4 on neuronal excitability. |
-| **Reproductive** | Menstrual oligomenorrhoea or amenorrhoea; infertility; decreased libido. | Hormonal imbalance interferes with gonadotropin secretion and peripheral conversion. |
-| **Gastro‑intestinal** | Increased frequency of bowel movements, occasional diarrhoea, nausea. | Accelerated GI motility from heightened metabolic activity. |
-| **Musculoskeletal** | Proximal muscle weakness, especially in thighs; easy fatigability. | Catabolic effect of thyroid hormone on skeletal muscle proteins. |
-| **History of exposure** | Recent iodine load (contrast, iodinated drugs, seaweed), family history of thyroid disease, prior radiation to neck, presence of autoimmune disease, HIV status, TB history, use of amiodarone, pregnancy. | Iodine excess can precipitate hyperthyroidism (Jod‑Basedow); autoimmune predisposition; infections (TB) can cause destructive thyroiditis; amiodarone releases iodine. |
+- **General**: Weight loss despite normal/increased appetite; heat intolerance; sweating; tremor; fatigue or paradoxical “restlessness”; insomnia; menstrual irregularities; libido change; change in bowel habit (more frequent). — Excess thyroid hormone accelerates basal metabolic rate, increases catecholamine sensitivity and alters gut motility.
+- **Cardiovascular**: Palpitations; dyspnoea on exertion; chest discomfort; history of atrial fibrillation; orthopnoea. — Thyroid hormone ↑ β‑adrenergic receptors → tachycardia, increased stroke volume, atrial ectopy; high output state may precipitate heart failure.
+- **Ophthalmic**: Grittiness, diplopia, lid lag, proptosis, periorbital oedema, dry eyes. — Auto‑immune orbital fibroblast activation (Graves’ ophthalmopathy) leads to extra‑ocular muscle swelling and glycosaminoglycan deposition.
+- **Dermatologic**: Warm, moist skin; fine hair; pretibial myxedema (non‑pitting induration). — Vasodilation and increased sweat gland activity; fibroblast stimulation in Graves’ disease.
+- **Neurological / Psychiatric**: Anxiety, irritability, tremor, hyperreflexia, fine motor clumsiness, difficulty concentrating, occasional psychosis. — ↑ sympathetic tone and direct central effects of T3/T4 on neuronal excitability.
+- **Reproductive**: Menstrual oligomenorrhoea or amenorrhoea; infertility; decreased libido. — Hormonal imbalance interferes with gonadotropin secretion and peripheral conversion.
+- **Gastro‑intestinal**: Increased frequency of bowel movements, occasional diarrhoea, nausea. — Accelerated GI motility from heightened metabolic activity.
+- **Musculoskeletal**: Proximal muscle weakness, especially in thighs; easy fatigability. — Catabolic effect of thyroid hormone on skeletal muscle proteins.
+- **History of exposure**: Recent iodine load (contrast, iodinated drugs, seaweed), family history of thyroid disease, prior radiation to neck, presence of autoimmune disease, HIV status, TB history, use of amiodarone, pregnancy. — Iodine excess can precipitate hyperthyroidism (Jod‑Basedow); autoimmune predisposition; infections (TB) can cause destructive thyroiditis; amiodarone releases iodine.
 
 **Examination findings and rationale**  
 
@@ -116,22 +110,18 @@ Thyroiditis → follicular damage → ↓ hormone release → ↓ metabolic rate
 2. **Identify cause** – use TRAb, RAIU, antibodies, clinical clues (pain, nodules, drug exposure).  
 3. **Grade severity (based on clinical and biochemical parameters)**  
 
-| Severity | Clinical hallmarks | Biochemistry |
-|---|---|---|
-| **Mild** | Weight loss <5 kg, HR 90‑110, no atrial fibrillation, no heart failure, mild tremor | Free T4 modestly ↑, T3 normal or mildly ↑ |
-| **Moderate** | Weight loss ≥5 kg, HR >110, tremor, anxiety, mild dyspnoea, possible paroxysmal AF, goitre >2 cm | Free T4 ↑↑, T3 ↑ |
-| **Severe / Thyrotoxic storm** | Fever >38 °C, HR >130, marked agitation or delirium, heart failure, high‑output cardiac failure, gastrointestinal upset, precipitating event | Very high free T4/T3, suppressed TSH, possible electrolyte derangements |
+- **Mild**: Weight loss <5 kg, HR 90‑110, no atrial fibrillation, no heart failure, mild tremor — Free T4 modestly ↑, T3 normal or mildly ↑
+- **Moderate**: Weight loss ≥5 kg, HR >110, tremor, anxiety, mild dyspnoea, possible paroxysmal AF, goitre >2 cm — Free T4 ↑↑, T3 ↑
+- **Severe / Thyrotoxic storm**: Fever >38 °C, HR >130, marked agitation or delirium, heart failure, high‑output cardiac failure, gastrointestinal upset, precipitating event — Very high free T4/T3, suppressed TSH, possible electrolyte derangements
 
 Severity guides urgency of **immediate management** (beta‑blockade, antithyroid drugs, iodine, steroids) and need for intensive monitoring (telemetry, electrolytes, cardiac output). The definitive plan (radio‑iodine ablation, thyroidectomy, long‑term antithyroid medication) follows once the patient is euthyroid or near‑euthyroid and the underlying aetiology is clarified.
 
 ## Management  
 **Immediate stabilisation**  
-| Situation | Priority action | Rationale |
-|---|---|---|
-| Thyrotoxic storm (hyperthyroidism) | Give high‑flow oxygen, IV fluids, β‑blocker (non‑selective) and antithyroid drug (ATD) promptly | Reduces peripheral conversion of T4→T3, controls tachycardia and prevents cardiovascular collapse |
-| Myxedema coma (severe hypothyroidism) | Secure airway, warm environment, IV glucocorticoids, and levothyroxine loading (IV) | Prevents adrenal crisis, restores thyroid hormone quickly, supports hemodynamics |
-| Severe atrial fibrillation with rapid ventricular response | Rate control with β‑blocker or calcium‑channel blocker; consider electrical cardioversion if unstable | Prevents heart failure and thrombo‑embolism |
-| Pregnancy with overt hyperthyroidism | Start PTU (first trimester) or methimazole (after first trimester) plus β‑blocker if needed | Minimises fetal exposure while controlling maternal disease |
+- **Thyrotoxic storm (hyperthyroidism)**: Give high‑flow oxygen, IV fluids, β‑blocker (non‑selective) and antithyroid drug (ATD) promptly — Reduces peripheral conversion of T4→T3, controls tachycardia and prevents cardiovascular collapse
+- **Myxedema coma (severe hypothyroidism)**: Secure airway, warm environment, IV glucocorticoids, and levothyroxine loading (IV) — Prevents adrenal crisis, restores thyroid hormone quickly, supports hemodynamics
+- **Severe atrial fibrillation with rapid ventricular response**: Rate control with β‑blocker or calcium‑channel blocker; consider electrical cardioversion if unstable — Prevents heart failure and thrombo‑embolism
+- **Pregnancy with overt hyperthyroidism**: Start PTU (first trimester) or methimazole (after first trimester) plus β‑blocker if needed — Minimises fetal exposure while controlling maternal disease
 
 **Definitive (long‑term) treatment**  
 
@@ -159,12 +149,10 @@ Severity guides urgency of **immediate management** (beta‑blockade, antithyroi
 ---
 
 ## Complications and prognosis  
-| Condition | Major complications | Typical prognosis (with treatment) |
-|---|---|---|
-| Hyperthyroidism (overt) | Thyrotoxic storm, atrial fibrillation, high‑output heart failure, osteoporosis, pretibial myxedema, Graves’ ophthalmopathy | Excellent if diagnosed early; storm mortality < 5 % with prompt care |
-| Subclinical hyperthyroidism | Progression to overt disease, atrial fibrillation, reduced bone density in post‑menopausal women | Often stable; treat if TSH < 0.1 mIU/L or symptomatic |
-| Hypothyroidism (overt) | Myxedema coma, dyslipidaemia, pericardial effusion, pregnancy loss, neurocognitive decline | Full reversal of symptoms with adequate levothyroxine; mortality low unless coma |
-| Subclinical hypothyroidism | Progression to overt disease, dyslipidaemia, pregnancy complications | Treat if TSH > 10 mIU/L or symptomatic; many remain stable |
+- **Hyperthyroidism (overt)**: Thyrotoxic storm, atrial fibrillation, high‑output heart failure, osteoporosis, pretibial myxedema, Graves’ ophthalmopathy — Excellent if diagnosed early; storm mortality < 5 % with prompt care
+- **Subclinical hyperthyroidism**: Progression to overt disease, atrial fibrillation, reduced bone density in post‑menopausal women — Often stable; treat if TSH < 0.1 mIU/L or symptomatic
+- **Hypothyroidism (overt)**: Myxedema coma, dyslipidaemia, pericardial effusion, pregnancy loss, neurocognitive decline — Full reversal of symptoms with adequate levothyroxine; mortality low unless coma
+- **Subclinical hypothyroidism**: Progression to overt disease, dyslipidaemia, pregnancy complications — Treat if TSH > 10 mIU/L or symptomatic; many remain stable
 
 ---
 

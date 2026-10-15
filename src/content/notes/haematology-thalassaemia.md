@@ -8,14 +8,12 @@
 Thalassaemia is a hereditary haemoglobinopathy characterised by reduced or absent synthesis of one or more globin chains of adult haemoglobin (Hb A). The imbalance between α‑ and β‑globin synthesis leads to ineffective erythropoiesis, chronic haemolysis and variable degrees of anaemia.
 
 ## Anatomy and physiology you need
-| Structure | Relevance to thalassaemia |
-|---|---|
-| **Erythroid precursors (bone marrow)** | Site of globin chain synthesis; defective synthesis causes apoptosis of precursors (ineffective erythropoiesis). |
-| **Red cell membrane** | Abnormal membrane stability from excess unpaired globin chains → microcytosis, target cells. |
-| **Spleen** | Hyperactive in clearing abnormal red cells → splenomegaly, hypersplenism. |
-| **Liver** | Stores iron; chronic transfusion → secondary iron overload, hepatic fibrosis. |
-| **Heart** | End‑organ target of iron overload → cardiomyopathy, arrhythmias. |
-| **Endocrine glands** | Pituitary, thyroid, pancreas vulnerable to iron deposition → endocrine dysfunction. |
+- **Erythroid precursors (bone marrow)**: Site of globin chain synthesis; defective synthesis causes apoptosis of precursors (ineffective erythropoiesis).
+- **Red cell membrane**: Abnormal membrane stability from excess unpaired globin chains → microcytosis, target cells.
+- **Spleen**: Hyperactive in clearing abnormal red cells → splenomegaly, hypersplenism.
+- **Liver**: Stores iron; chronic transfusion → secondary iron overload, hepatic fibrosis.
+- **Heart**: End‑organ target of iron overload → cardiomyopathy, arrhythmias.
+- **Endocrine glands**: Pituitary, thyroid, pancreas vulnerable to iron deposition → endocrine dysfunction.
 
 ## Causes and risk factors
 - **Genetic mutations**  
@@ -46,21 +44,19 @@ Transfusion dependence → excess iron intake → ferritin ↑ → non‑transfe
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Age of onset** | “When did you first notice symptoms?” – neonatal jaundice, failure to thrive, or later fatigue? | β‑thalassaemia major presents in the first 2 years; β‑thalassaemia intermedia may appear after infancy; α‑thalassaemia trait is often silent. |
-| **Family history** | Consanguinity, affected siblings, parents from malaria‑endemic regions, known carrier status? | Autosomal recessive inheritance; carrier frequency is high in certain Kenyan ethnic groups. |
-| **Ethnicity / geographic origin** | “What is your tribe or region of origin?” | Certain tribes (e.g., Luo, Luhya) have higher carrier rates. |
-| **Pregnancy / transfusion history** | Prior blood transfusions, iron chelation, obstetric complications? | Chronic transfusion leads to iron overload; pregnancy can unmask milder forms. |
-| **Symptoms of anaemia** | Fatigue, dyspnoea on exertion, palpitations, dizziness, pallor, exercise intolerance? | Reduced haemoglobin from ineffective erythropoiesis and haemolysis. |
-| **Skeletal changes** | “Do you have bone pain or facial deformities?” – frontal bossing, maxillary prominence, crew‑cut long bones? | Marrow expansion to compensate for ineffective erythropoiesis causes cortical thinning and facial bone remodeling. |
-| **Splenomegaly** | Abdominal fullness, early satiety, left upper quadrant pain? | Hyperactive spleen sequesters abnormal red cells and destroys them, leading to enlargement. |
-| **Jaundice / bilirubin** | Episodes of yellowing of skin or sclera, especially after infections? | Chronic haemolysis releases unconjugated bilirubin. |
-| **Growth & development** | Delayed height/weight, delayed puberty? | Chronic anaemia and iron overload impair growth hormone axis. |
-| **Infections** | Recurrent fevers, especially after transfusion or splenectomy? | Functional asplenia or splenectomy predisposes to encapsulated organisms; transfusion‑related infections (HIV, hepatitis) are relevant in Kenya. |
-| **Cardiac symptoms** | Palpitations, chest pain, dyspnoea at rest, leg swelling? | Iron deposition in myocardium leads to cardiomyopathy and arrhythmias. |
-| **Endocrine symptoms** | Polyuria, polydipsia, amenorrhea, skin hyperpigmentation? | Iron overload damages pancreas (diabetes), pituitary (hypogonadism), thyroid. |
-| **Skin changes** | “Do you notice dark patches on skin?” – especially over the cheeks? | Hyperpigmentation from hemosiderin deposition. |
+- **Age of onset**: “When did you first notice symptoms?” – neonatal jaundice, failure to thrive, or later fatigue? — β‑thalassaemia major presents in the first 2 years; β‑thalassaemia intermedia may appear after infancy; α‑thalassaemia trait is often silent.
+- **Family history**: Consanguinity, affected siblings, parents from malaria‑endemic regions, known carrier status? — Autosomal recessive inheritance; carrier frequency is high in certain Kenyan ethnic groups.
+- **Ethnicity / geographic origin**: “What is your tribe or region of origin?” — Certain tribes (e.g., Luo, Luhya) have higher carrier rates.
+- **Pregnancy / transfusion history**: Prior blood transfusions, iron chelation, obstetric complications? — Chronic transfusion leads to iron overload; pregnancy can unmask milder forms.
+- **Symptoms of anaemia**: Fatigue, dyspnoea on exertion, palpitations, dizziness, pallor, exercise intolerance? — Reduced haemoglobin from ineffective erythropoiesis and haemolysis.
+- **Skeletal changes**: “Do you have bone pain or facial deformities?” – frontal bossing, maxillary prominence, crew‑cut long bones? — Marrow expansion to compensate for ineffective erythropoiesis causes cortical thinning and facial bone remodeling.
+- **Splenomegaly**: Abdominal fullness, early satiety, left upper quadrant pain? — Hyperactive spleen sequesters abnormal red cells and destroys them, leading to enlargement.
+- **Jaundice / bilirubin**: Episodes of yellowing of skin or sclera, especially after infections? — Chronic haemolysis releases unconjugated bilirubin.
+- **Growth & development**: Delayed height/weight, delayed puberty? — Chronic anaemia and iron overload impair growth hormone axis.
+- **Infections**: Recurrent fevers, especially after transfusion or splenectomy? — Functional asplenia or splenectomy predisposes to encapsulated organisms; transfusion‑related infections (HIV, hepatitis) are relevant in Kenya.
+- **Cardiac symptoms**: Palpitations, chest pain, dyspnoea at rest, leg swelling? — Iron deposition in myocardium leads to cardiomyopathy and arrhythmias.
+- **Endocrine symptoms**: Polyuria, polydipsia, amenorrhea, skin hyperpigmentation? — Iron overload damages pancreas (diabetes), pituitary (hypogonadism), thyroid.
+- **Skin changes**: “Do you notice dark patches on skin?” – especially over the cheeks? — Hyperpigmentation from hemosiderin deposition.
 
 **Examination**  
 
@@ -110,38 +106,51 @@ Transfusion dependence → excess iron intake → ferritin ↑ → non‑transfe
 
 2. **Classification of severity** (clinical rather than numeric):  
 
-| Category | Criteria | Clinical implications |
-|---|---|---|
-| **Thalassaemia major** | Homozygous β‑thalassaemia or 4‑gene α‑thalassaemia (Hb Bart’s); transfusion‑dependent from infancy; Hb < 7 g/dL without transfusion | Requires regular transfusion, aggressive iron chelation, monitoring for cardiac/hepatic iron overload. |
-| **Thalassaemia intermedia** | Compound heterozygotes or milder β‑/α‑genotypes; transfusion‑independent or occasional transfusion; Hb 7–10 g/dL | Intermittent transfusion, chelation if ferritin > 1000 µg/L, surveillance for splenomegaly and bone changes. |
-| **Thalassaemia trait (carrier)** | Heterozygous β‑ or α‑gene deletion; mild microcytosis, normal Hb > 11 g/dL; no clinical anaemia | No treatment needed; counselling for family planning. |
-| **Severe iron overload** | Ferritin > 2500 µg/L or cardiac MRI T2* < 20 ms | Intensify chelation, consider deferasirox or deferoxamine; monitor cardiac function. |
-| **Complicated disease** | Presence of cardiac failure, endocrine failure, hepatic fibrosis, or severe osteoporosis | Multidisciplinary management, possible bone marrow transplant evaluation. |
+- **Thalassaemia major**: Homozygous β‑thalassaemia or 4‑gene α‑thalassaemia (Hb Bart’s); transfusion‑dependent from infancy; Hb < 7 g/dL without transfusion — Requires regular transfusion, aggressive iron chelation, monitoring for cardiac/hepatic iron overload.
+- **Thalassaemia intermedia**: Compound heterozygotes or milder β‑/α‑genotypes; transfusion‑independent or occasional transfusion; Hb 7–10 g/dL — Intermittent transfusion, chelation if ferritin > 1000 µg/L, surveillance for splenomegaly and bone changes.
+- **Thalassaemia trait (carrier)**: Heterozygous β‑ or α‑gene deletion; mild microcytosis, normal Hb > 11 g/dL; no clinical anaemia — No treatment needed; counselling for family planning.
+- **Severe iron overload**: Ferritin > 2500 µg/L or cardiac MRI T2* < 20 ms — Intensify chelation, consider deferasirox or deferoxamine; monitor cardiac function.
+- **Complicated disease**: Presence of cardiac failure, endocrine failure, hepatic fibrosis, or severe osteoporosis — Multidisciplinary management, possible bone marrow transplant evaluation.
 
 Severity guides the intensity of transfusion support, chelation strategy, and need for specialist referral (cardiology, endocrinology, hepatology). Regular reassessment every 3–6 months is essential to adjust therapy and prevent irreversible organ damage.
 
 ## Management  
 
-| Phase | Goal | Key Interventions | Monitoring / Safety |
-|---|---|---|---|
-| **Immediate stabilisation** | Correct life‑threatening anaemia & hypoxia | • Rapid transfusion of packed red cells (type‑specific, cross‑matched) <br>• Give supplemental O₂ to keep SpO₂ > 94 % <br>• Start IV fluids judiciously (avoid overload) | • Vital signs q15 min → q1 h <br>• Hemoglobin trend (target 8–10 g/dL in children, 10–12 g/dL in adults) <br>• Signs of fluid overload (JVD, crackles) |
-| **Definitive treatment** | Reduce transfusion burden & prevent iron overload | • Regular transfusion programme (maintain target Hb) <br>• Iron chelation (deferoxamine, deferasirox, deferiprone) – choose based on route, adherence, renal/hepatic status <br>• Consider curative options where available: bone‑marrow transplant (matched sibling) or gene‑therapy trials | • Serum ferritin every 3 months; MRI T2* liver & heart annually <br>• Renal & hepatic function (creatinine, ALT/AST) before and during chelation <br>• Audiology & ophthalmology for deferoxamine toxicity |
-| **Supportive care** | Manage complications & improve quality of life | • Folic acid supplementation <br>• Vaccinations (pneumococcal, Hib, hepatitis B, influenza) <br>• Antimicrobial prophylaxis in splenectomised patients (penicillin, pneumococcal vaccine) <br>• Education on recognizing fever, bone pain, and transfusion reactions | • Review growth & development in children <br>• Psychosocial support, counselling on reproductive issues |
-| **Contra‑indications / safety** | Avoid harm | • Deferoxamine contraindicated in severe visual/hearing loss <br>• Deferasirox avoided in severe renal impairment <br>• Bone‑marrow transplant not offered in uncontrolled infection or severe organ damage | • Baseline and periodic ECG for cardiac iron overload <br>• Monitor for chelator‑related cytopenias, GI upset, skin rash |
+- **Immediate stabilisation**
+  - Correct life‑threatening anaemia & hypoxia — • Rapid transfusion of packed red cells (type‑specific, cross‑matched)
+  - Give supplemental O₂ to keep SpO₂ > 94 %
+  - Start IV fluids judiciously (avoid overload) — • Vital signs q15 min → q1 h
+  - Hemoglobin trend (target 8–10 g/dL in children, 10–12 g/dL in adults)
+  - Signs of fluid overload (JVD, crackles)
+- **Definitive treatment**
+  - Reduce transfusion burden & prevent iron overload — • Regular transfusion programme (maintain target Hb)
+  - Iron chelation (deferoxamine, deferasirox, deferiprone) – choose based on route, adherence, renal/hepatic status
+  - Consider curative options where available: bone‑marrow transplant (matched sibling) or gene‑therapy trials — • Serum ferritin every 3 months; MRI T2* liver & heart annually
+  - Renal & hepatic function (creatinine, ALT/AST) before and during chelation
+  - Audiology & ophthalmology for deferoxamine toxicity
+- **Supportive care**
+  - Manage complications & improve quality of life — • Folic acid supplementation
+  - Vaccinations (pneumococcal, Hib, hepatitis B, influenza)
+  - Antimicrobial prophylaxis in splenectomised patients (penicillin, pneumococcal vaccine)
+  - Education on recognizing fever, bone pain, and transfusion reactions — • Review growth & development in children
+  - Psychosocial support, counselling on reproductive issues
+- **Contra‑indications / safety**
+  - Avoid harm — • Deferoxamine contraindicated in severe visual/hearing loss
+  - Deferasirox avoided in severe renal impairment
+  - Bone‑marrow transplant not offered in uncontrolled infection or severe organ damage — • Baseline and periodic ECG for cardiac iron overload
+  - Monitor for chelator‑related cytopenias, GI upset, skin rash
 
 ---
 
 ## Complications and prognosis  
 
-| Complication | Pathogenesis | Clinical clue | Management |
-|---|---|---|---|
-| **Iron overload** | Repeated transfusions → non‑transferrin‑bound iron deposition | Elevated ferritin, hepatic/ cardiac MRI T2* loss | Chelation; consider cardiac transplant if end‑stage |
-| **Cardiac disease** | Iron‑induced cardiomyopathy, arrhythmias | Dyspnoea, tachycardia, cardiomegaly on CXR | Optimize chelation, beta‑blockers for arrhythmias, heart failure therapy |
-| **Endocrine dysfunction** | Iron deposition in pituitary, thyroid, pancreas | Delayed puberty, hypothyroidism, diabetes mellitus | Hormone replacement, insulin, regular endocrine screening |
-| **Skeletal deformities** | Marrow expansion → hair‑on‑end ribs, facial bone changes | Facial bone prominence, frontal bossing | Adequate transfusion to suppress erythropoiesis, physiotherapy |
-| **Splenomegaly / hypersplenism** | Chronic sequestration of abnormal cells | Massive spleen, cytopenias | Consider splenectomy if refractory; vaccinate pre‑op |
-| **Infections** | Functional asplenia, iron‑rich media | Fever, sepsis, especially with encapsulated organisms | Prompt antibiotics, prophylactic penicillin, immunisations |
-| **Psychosocial impact** | Chronic disease burden | School absenteeism, depression | Counselling, support groups |
+- **Iron overload**: Repeated transfusions → non‑transferrin‑bound iron deposition — Elevated ferritin, hepatic/ cardiac MRI T2* loss — Chelation; consider cardiac transplant if end‑stage
+- **Cardiac disease**: Iron‑induced cardiomyopathy, arrhythmias — Dyspnoea, tachycardia, cardiomegaly on CXR — Optimize chelation, beta‑blockers for arrhythmias, heart failure therapy
+- **Endocrine dysfunction**: Iron deposition in pituitary, thyroid, pancreas — Delayed puberty, hypothyroidism, diabetes mellitus — Hormone replacement, insulin, regular endocrine screening
+- **Skeletal deformities**: Marrow expansion → hair‑on‑end ribs, facial bone changes — Facial bone prominence, frontal bossing — Adequate transfusion to suppress erythropoiesis, physiotherapy
+- **Splenomegaly / hypersplenism**: Chronic sequestration of abnormal cells — Massive spleen, cytopenias — Consider splenectomy if refractory; vaccinate pre‑op
+- **Infections**: Functional asplenia, iron‑rich media — Fever, sepsis, especially with encapsulated organisms — Prompt antibiotics, prophylactic penicillin, immunisations
+- **Psychosocial impact**: Chronic disease burden — School absenteeism, depression — Counselling, support groups
 
 *Prognosis* improves markedly with early diagnosis, regular transfusion, and effective chelation. Untreated severe β‑thalassaemia major carries high mortality in the first two decades from cardiac failure or infection. Curative transplant offers > 80 % long‑term survival when performed early.
 

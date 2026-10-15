@@ -1,4 +1,4 @@
-# Nephrotic and nephritic syndromes — Year 4 Internal Medicine (Renal) Notes
+# Nephrotic and nephritic syndromes
 
 *Clinical reasoning notes. The two syndromes are the classic exam confusion: learn the pattern, then the causes.*
 
@@ -9,28 +9,24 @@
 
 ## 1. The core difference
 
-| | **Nephrotic syndrome** | **Nephritic syndrome** |
-|---|---|---|
-| **Main problem** | Heavy **protein** loss through a leaky filter | **Inflammation** of the glomerulus |
-| **Urine** | **Protein above 3.5 g/day** (a protein:creatinine ratio above 300 mg/mmol); frothy | **Blood** (red cell casts, dysmorphic red cells), modest protein |
-| **Blood** | **Low albumin** (below 25–30 g/L), **high cholesterol** | Raised urea and creatinine |
-| **Oedema** | **Gross** (face, legs, ascites, effusions) | Mild |
-| **Blood pressure** | Normal or low | **High** |
-| **Urine volume** | Normal | **Reduced (oliguria)** |
-| **Typical** | Child: minimal change disease | Child after throat infection: PSGN |
+- **Main problem**: Heavy **protein** loss through a leaky filter — **Inflammation** of the glomerulus
+- **Urine**: **Protein above 3.5 g/day** (a protein:creatinine ratio above 300 mg/mmol); frothy — **Blood** (red cell casts, dysmorphic red cells), modest protein
+- **Blood**: **Low albumin** (below 25–30 g/L), **high cholesterol** — Raised urea and creatinine
+- **Oedema**: **Gross** (face, legs, ascites, effusions) — Mild
+- **Blood pressure**: Normal or low — **High**
+- **Urine volume**: Normal — **Reduced (oliguria)**
+- **Typical**: Child: minimal change disease — Child after throat infection: PSGN
 
 **Mnemonic:** nephrotic = **protein** (tonnes of it); nephritic = **blood and pressure**.
 
 ## Anatomy and physiology you need  
-| Feature | Clinical relevance |
-|---|---|
-| **Glomerular filtration barrier** (fenestrated endothelium → glomerular basement membrane → podocyte slit diaphragm) | Loss of selective permeability explains proteinuria in nephrotic syndrome and hematuria in nephritic syndrome. |
-| **Podocyte foot processes** | Effacement (minimal change disease) or segmental sclerosis (FSGS) directly reduces filtration surface area, driving protein loss. |
-| **Complement regulatory proteins** (factor H, CD46) | Deficiency or autoantibody‑mediated inhibition leads to uncontrolled C3 activation, precipitating post‑streptococcal or lupus nephritis. |
-| **Renal autoregulation** (myogenic response, tubuloglomerular feedback) | Failure in nephritic disease (e.g., crescentic GN) causes intraglomerular hypertension, raising systemic BP and reducing urine output. |
-| **Renin‑angiotensin‑aldosterone system (RAAS)** | Proteinuria induces intrarenal RAAS activation, worsening edema and accelerating progression; ACE‑I/ARB therapy exploits this mechanism. |
-| **Antithrombin III and protein C/S** | Urinary loss of these anticoagulants in nephrotic syndrome explains the hypercoagulable state and risk of venous thromboembolism. |
-| **Lipid metabolism in the liver** | Hypoalbuminaemia stimulates hepatic lipoprotein synthesis, causing hypercholesterolaemia and atherogenic risk. |
+- **Glomerular filtration barrier (fenestrated endothelium → glomerular basement membrane → podocyte slit diaphragm)**: Loss of selective permeability explains proteinuria in nephrotic syndrome and hematuria in nephritic syndrome.
+- **Podocyte foot processes**: Effacement (minimal change disease) or segmental sclerosis (FSGS) directly reduces filtration surface area, driving protein loss.
+- **Complement regulatory proteins (factor H, CD46)**: Deficiency or autoantibody‑mediated inhibition leads to uncontrolled C3 activation, precipitating post‑streptococcal or lupus nephritis.
+- **Renal autoregulation (myogenic response, tubuloglomerular feedback)**: Failure in nephritic disease (e.g., crescentic GN) causes intraglomerular hypertension, raising systemic BP and reducing urine output.
+- **Renin‑angiotensin‑aldosterone system (RAAS)**: Proteinuria induces intrarenal RAAS activation, worsening edema and accelerating progression; ACE‑I/ARB therapy exploits this mechanism.
+- **Antithrombin III and protein C/S**: Urinary loss of these anticoagulants in nephrotic syndrome explains the hypercoagulable state and risk of venous thromboembolism.
+- **Lipid metabolism in the liver**: Hypoalbuminaemia stimulates hepatic lipoprotein synthesis, causing hypercholesterolaemia and atherogenic risk.
 
 ## Pathophysiology  
 **Nephrotic syndrome**  
@@ -67,13 +63,11 @@ Crescent formation (if severe) → rapid loss of filtration surface → oliguria
 
 ## 3. Causes of nephritic syndrome
 
-| Cause | Clues |
-|---|---|
-| **Post-streptococcal GN (PSGN)** | 1–3 weeks after a throat or skin infection; **low C3, raised ASO**; usually self-limiting in children |
-| **IgA nephropathy** | Haematuria **during or just after** an upper respiratory infection; normal complement |
-| **Rapidly progressive GN (RPGN)** | Creatinine rises over days to weeks; **crescents** on biopsy; causes: anti-GBM (Goodpasture), ANCA vasculitis, immune complex disease |
-| **Lupus nephritis** | Young woman, arthralgia, rash; **low C3 and C4, anti-dsDNA** |
-| **Infective endocarditis, hepatitis B/C, HIV, shunt nephritis** | Think of the infection that drives it |
+- **Post-streptococcal GN (PSGN)**: 1–3 weeks after a throat or skin infection; **low C3, raised ASO**; usually self-limiting in children
+- **IgA nephropathy**: Haematuria **during or just after** an upper respiratory infection; normal complement
+- **Rapidly progressive GN (RPGN)**: Creatinine rises over days to weeks; **crescents** on biopsy; causes: anti-GBM (Goodpasture), ANCA vasculitis, immune complex disease
+- **Lupus nephritis**: Young woman, arthralgia, rash; **low C3 and C4, anti-dsDNA**
+- **Infective endocarditis, hepatitis B/C, HIV, shunt nephritis**: Think of the infection that drives it
 
 ## Differential diagnosis and how to tell them apart  
 
@@ -94,17 +88,15 @@ Crescent formation (if severe) → rapid loss of filtration surface → oliguria
 
 ## 4. Investigate with purpose
 
-| Test | The question it answers |
-|---|---|
-| **Urinalysis and microscopy** | Protein (nephrotic) or red cell casts (nephritic)? |
-| **Urine protein:creatinine ratio, 24-hour protein** | How heavy is the proteinuria? |
-| **Albumin, cholesterol, creatinine, electrolytes** | Severity of nephrotic syndrome; kidney function |
-| **Complement C3 and C4** | Low in PSGN, lupus, and some membranoproliferative disease |
-| **ASO titre, anti-DNase B, throat or skin swab** | Streptococcal link |
-| **ANA, anti-dsDNA, ANCA, anti-GBM** | Autoimmune cause |
-| **HIV, hepatitis B and C, malaria tests, blood glucose** | Secondary causes |
-| **Kidney ultrasound** | Size; obstruction; chronic disease |
-| **Renal biopsy** | Adults with nephrotic syndrome, any RPGN, steroid-resistant disease, children older than 10 |
+- **Urinalysis and microscopy**: Protein (nephrotic) or red cell casts (nephritic)?
+- **Urine protein:creatinine ratio, 24-hour protein**: How heavy is the proteinuria?
+- **Albumin, cholesterol, creatinine, electrolytes**: Severity of nephrotic syndrome; kidney function
+- **Complement C3 and C4**: Low in PSGN, lupus, and some membranoproliferative disease
+- **ASO titre, anti-DNase B, throat or skin swab**: Streptococcal link
+- **ANA, anti-dsDNA, ANCA, anti-GBM**: Autoimmune cause
+- **HIV, hepatitis B and C, malaria tests, blood glucose**: Secondary causes
+- **Kidney ultrasound**: Size; obstruction; chronic disease
+- **Renal biopsy**: Adults with nephrotic syndrome, any RPGN, steroid-resistant disease, children older than 10
 
 **Where results can mislead:** a **normal creatinine does not exclude significant disease**; **ASO may be normal in skin-related PSGN** (use anti-DNase B); in a child, **do not biopsy first**: treat with steroids and biopsy if there is no response.
 
@@ -130,15 +122,13 @@ Crescent formation (if severe) → rapid loss of filtration surface → oliguria
 
 ## Complications and prognosis  
 
-| Complication | Pathophysiological basis | Clinical impact | Typical time‑frame |
-|---|---|---|---|
-| **Thrombo‑embolism** | Urinary loss of antithrombin III, protein C, protein S and fibrinogen; hyper‑coagulable plasma viscosity from hypo‑albuminaemia | Deep‑vein thrombosis, pulmonary embolus, renal vein thrombosis | Often within the first 6 months of heavy proteinuria |
-| **Infectious peritonitis** | Depleted complement factors (especially C3) and immunoglobulins in the urine; ascites provides a culture medium | Fever, abdominal pain, cloudy ascitic fluid; high mortality if delayed | Can occur at any stage, but risk peaks when oedema is severe |
-| **Acute kidney injury (AKI)** | Intrarenal hypovolaemia from aggressive diuresis, interstitial edema compressing tubules, or superimposed nephritic flare | Rising creatinine, oliguria, need for renal replacement therapy | Usually precipitated by infection, NSAID use or rapid diuresis |
-| **Progressive chronic kidney disease (CKD)** | Persistent podocyte injury (FSGS, membranous) → glomerulosclerosis; ongoing hypertension and proteinuria accelerate nephron loss | Declining eGFR, eventual dialysis or transplant | Variable; median 5–10 years in untreated membranous, longer in steroid‑responsive minimal change |
-| **Hyperlipidaemia‑related atherosclerosis** | Hepatic up‑regulation of VLDL synthesis secondary to hypo‑albuminaemia; oxidative modification of lipids | Premature cardiovascular disease, especially in adults with long‑standing nephrosis | Develops over years; risk amplified by steroid therapy |
-| **Hypovolaemic shock** | Over‑diuresis or albumin loss leading to intravascular depletion despite peripheral oedema | Tachycardia, hypotension, renal hypoperfusion | Acute, often after aggressive diuretic regimens |
-| **Electrolyte disturbances** | Sodium‑water shifts, loss of potassium and magnesium in urine; ACE‑I/ARB‑induced hyperkalaemia | Muscle weakness, arrhythmias | Can appear early when diuretics are introduced |
+- **Thrombo‑embolism**: Urinary loss of antithrombin III, protein C, protein S and fibrinogen; hyper‑coagulable plasma viscosity from hypo‑albuminaemia — Deep‑vein thrombosis, pulmonary embolus, renal vein thrombosis — Often within the first 6 months of heavy proteinuria
+- **Infectious peritonitis**: Depleted complement factors (especially C3) and immunoglobulins in the urine; ascites provides a culture medium — Fever, abdominal pain, cloudy ascitic fluid; high mortality if delayed — Can occur at any stage, but risk peaks when oedema is severe
+- **Acute kidney injury (AKI)**: Intrarenal hypovolaemia from aggressive diuresis, interstitial edema compressing tubules, or superimposed nephritic flare — Rising creatinine, oliguria, need for renal replacement therapy — Usually precipitated by infection, NSAID use or rapid diuresis
+- **Progressive chronic kidney disease (CKD)**: Persistent podocyte injury (FSGS, membranous) → glomerulosclerosis; ongoing hypertension and proteinuria accelerate nephron loss — Declining eGFR, eventual dialysis or transplant — Variable; median 5–10 years in untreated membranous, longer in steroid‑responsive minimal change
+- **Hyperlipidaemia‑related atherosclerosis**: Hepatic up‑regulation of VLDL synthesis secondary to hypo‑albuminaemia; oxidative modification of lipids — Premature cardiovascular disease, especially in adults with long‑standing nephrosis — Develops over years; risk amplified by steroid therapy
+- **Hypovolaemic shock**: Over‑diuresis or albumin loss leading to intravascular depletion despite peripheral oedema — Tachycardia, hypotension, renal hypoperfusion — Acute, often after aggressive diuretic regimens
+- **Electrolyte disturbances**: Sodium‑water shifts, loss of potassium and magnesium in urine; ACE‑I/ARB‑induced hyperkalaemia — Muscle weakness, arrhythmias — Can appear early when diuretics are introduced
 
 **Prognostic pearls for the examiner**  
 - **Minimal change disease**: excellent prognosis if steroid‑responsive; relapse common but renal function usually preserved.  

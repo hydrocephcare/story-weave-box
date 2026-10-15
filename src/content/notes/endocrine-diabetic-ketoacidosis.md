@@ -1,4 +1,4 @@
-# Diabetic ketoacidosis and hyperglycaemic emergencies — Year 4 Internal Medicine (Endocrinology) Notes
+# Diabetic ketoacidosis and hyperglycaemic emergencies
 
 *Clinical reasoning notes. Fluid, insulin and potassium regimens differ between hospitals: follow your local protocol and monitor closely.*
 
@@ -18,15 +18,13 @@
 
 ## Anatomy and physiology you need
 
-| System | Key anatomical/physiological feature | Clinical relevance in DKA/HHS |
-|---|---|---|
-| **Pancreas** | β‑cells in the islets of Langerhans secrete insulin; α‑cells secrete glucagon. | Loss of insulin and relative glucagon excess drives lipolysis and gluconeogenesis. |
-| **Adrenal medulla** | Releases catecholamines (epinephrine, norepinephrine). | Stress‑induced catecholamines raise hepatic glucose output and inhibit insulin secretion, worsening hyperglycaemia. |
-| **Renal tubules** | Sodium‑glucose cotransporter‑2 (SGLT2) reabsorbs glucose; proximal tubule reabsorbs water via aquaporins. | In DKA, osmotic diuresis overwhelms reabsorption, leading to volume depletion and loss of electrolytes. |
-| **Vascular endothelium** | Endothelial glycocalyx regulates fluid exchange; capillary permeability is increased by inflammatory cytokines. | Inflammatory triggers (infection, sepsis) increase capillary leak, compounding dehydration and hypotension. |
-| **Muscle and adipose tissue** | Intracellular potassium is largely stored in muscle cells; adipocytes store triglycerides. | Acidosis shifts K⁺ out of cells; lipolysis releases free fatty acids that are converted to ketone bodies in the liver. |
-| **Liver** | Hepatocytes convert fatty acids to ketone bodies (acetoacetate, β‑hydroxybutyrate) via β‑oxidation and ketogenesis. | Ketone bodies are the primary acid load in DKA; their accumulation lowers blood pH. |
-| **Brain** | Cerebral glucose uptake is insulin‑independent but sensitive to osmolarity. | Hyperosmolarity in HHS leads to cerebral dehydration; in DKA, cerebral edema risk rises when fluids are over‑replaced. |
+- **Pancreas**: β‑cells in the islets of Langerhans secrete insulin; α‑cells secrete glucagon. — Loss of insulin and relative glucagon excess drives lipolysis and gluconeogenesis.
+- **Adrenal medulla**: Releases catecholamines (epinephrine, norepinephrine). — Stress‑induced catecholamines raise hepatic glucose output and inhibit insulin secretion, worsening hyperglycaemia.
+- **Renal tubules**: Sodium‑glucose cotransporter‑2 (SGLT2) reabsorbs glucose; proximal tubule reabsorbs water via aquaporins. — In DKA, osmotic diuresis overwhelms reabsorption, leading to volume depletion and loss of electrolytes.
+- **Vascular endothelium**: Endothelial glycocalyx regulates fluid exchange; capillary permeability is increased by inflammatory cytokines. — Inflammatory triggers (infection, sepsis) increase capillary leak, compounding dehydration and hypotension.
+- **Muscle and adipose tissue**: Intracellular potassium is largely stored in muscle cells; adipocytes store triglycerides. — Acidosis shifts K⁺ out of cells; lipolysis releases free fatty acids that are converted to ketone bodies in the liver.
+- **Liver**: Hepatocytes convert fatty acids to ketone bodies (acetoacetate, β‑hydroxybutyrate) via β‑oxidation and ketogenesis. — Ketone bodies are the primary acid load in DKA; their accumulation lowers blood pH.
+- **Brain**: Cerebral glucose uptake is insulin‑independent but sensitive to osmolarity. — Hyperosmolarity in HHS leads to cerebral dehydration; in DKA, cerebral edema risk rises when fluids are over‑replaced.
 
 ---
 
@@ -75,16 +73,14 @@ Polyuria, polydipsia, weight loss, **nausea, vomiting and abdominal pain** (can 
 
 ## 5. Investigate with purpose
 
-| Test | The question it answers |
-|---|---|
-| **Capillary glucose and blood or urine ketones** | Is it DKA? Quick to do at the bedside |
-| **Blood gas (arterial or venous)** | How acidotic? pH and bicarbonate stage the severity |
-| **Urea, creatinine, electrolytes** | Kidney function; **potassium** decides the insulin plan; sodium (correct it for the glucose) |
-| **Anion gap** | A raised gap confirms a ketoacid cause: gap = Na − (Cl + HCO₃) |
-| **Full haemogram, CRP, blood cultures, urine culture, malaria test, chest X-ray** | Is there infection as the trigger? |
-| **ECG** | Is there a silent infarct? What do the potassium changes look like? |
-| **HbA1c** | How long has glucose been high? New diabetes or poorly controlled? |
-| **Serum amylase or lipase** | Pancreatitis can cause DKA, and DKA can raise amylase |
+- **Capillary glucose and blood or urine ketones**: Is it DKA? Quick to do at the bedside
+- **Blood gas (arterial or venous)**: How acidotic? pH and bicarbonate stage the severity
+- **Urea, creatinine, electrolytes**: Kidney function; **potassium** decides the insulin plan; sodium (correct it for the glucose)
+- **Anion gap**: A raised gap confirms a ketoacid cause: gap = Na − (Cl + HCO₃)
+- **Full haemogram, CRP, blood cultures, urine culture, malaria test, chest X-ray**: Is there infection as the trigger?
+- **ECG**: Is there a silent infarct? What do the potassium changes look like?
+- **HbA1c**: How long has glucose been high? New diabetes or poorly controlled?
+- **Serum amylase or lipase**: Pancreatitis can cause DKA, and DKA can raise amylase
 
 **Where results can mislead:** the **serum potassium can be normal or high at presentation** although the body is very short of potassium (acidosis moves potassium out of the cells). It **falls fast once insulin starts**. The **measured sodium is falsely low** with very high glucose. The abdominal pain of DKA often **settles once treated**: do not rush to surgery.
 

@@ -1,4 +1,4 @@
-# Spondylitisarthritis  
+# Spondyloarthritis
 
 *After reading this note you will be able to describe the clinical approach to spondyloarthritis, list the local risk factors, recognise key examination findings, interpret the basic investigations and outline the initial and definitive management plans – remembering to verify drug choices and dosing against the Kenya MoH guideline and your hospital formulary.*
 
@@ -9,14 +9,12 @@
 Spondyloarthritis (SpA) is a group of inter‑related inflammatory rheumatic diseases that primarily affect the axial skeleton (sacroiliac joints and spine) and may involve peripheral joints, entheses, skin, eyes and the gastrointestinal tract. The umbrella includes ankylosing spondylitis, psoriatic arthritis, reactive arthritis, enteropathic arthritis and undifferentiated spondyloarthritis.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to SpA |
-|---|---|
-| Sacroiliac joints | First site of inflammation; pain radiates to buttocks, groin |
-| Vertebral bodies & intervertebral discs | Inflammation → syndesmophyte formation → spinal rigidity |
-| Entheses (tendon/ligament insertions) | Site of enthesitis, hallmark of SpA |
-| HLA‑B27 presenting cells | Genetic predisposition; influences immune response |
-| Gut‑associated lymphoid tissue | Microbial translocation may trigger reactive/enteropathic arthritis |
-| Synovial membrane | Peripheral joint swelling when disease extends beyond axial skeleton |
+- **Sacroiliac joints**: First site of inflammation; pain radiates to buttocks, groin
+- **Vertebral bodies & intervertebral discs**: Inflammation → syndesmophyte formation → spinal rigidity
+- **Entheses (tendon/ligament insertions)**: Site of enthesitis, hallmark of SpA
+- **HLA‑B27 presenting cells**: Genetic predisposition; influences immune response
+- **Gut‑associated lymphoid tissue**: Microbial translocation may trigger reactive/enteropathic arthritis
+- **Synovial membrane**: Peripheral joint swelling when disease extends beyond axial skeleton
 
 ## Causes and risk factors  
 - **Genetic**: HLA‑B27 positivity (high prevalence in certain Kenyan ethnic groups)  
@@ -39,21 +37,19 @@ Genetic susceptibility (HLA‑B27) → altered antigen presentation → abnormal
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Onset & duration** | “When did the pain start? Was it sudden or gradual? Has it been continuous or intermittent?” | Inflammatory back pain often begins insidiously and persists >3 months; mechanical pain improves with rest. |
-| **Pain character** | “Is the pain worse in the morning or after periods of inactivity? Does it improve with activity or showering?” | Cytokine‑driven inflammation causes stiffness that eases with movement; mechanical pain is activity‑related. |
-| **Morning stiffness** | “How long does the stiffness last after getting out of bed?” | Stiffness >30 min is typical of axial spondyloarthritis (axSpA). |
-| **Peripheral joint involvement** | “Do you have swelling, redness or pain in knees, ankles, hips, shoulders, or small joints?” | Enthesitis and synovitis are common extra‑axial manifestations. |
-| **Enthesitis** | “Do you feel pain at the sites where tendons or ligaments attach to bone (e.g., heel, iliac crest, costochondral joints)?” | Inflammation at entheses is a hallmark of the spondyloarthritis spectrum. |
-| **Dactylitis** | “Is any finger or toe uniformly swollen, giving a ‘sausage’ appearance?” | Diffuse synovitis of the entire digit reflects systemic inflammation. |
-| **Urogenital symptoms** | “Any recent urethritis, cervicitis, or conjunctivitis?” | Reactive arthritis follows infections; mucocutaneous involvement is part of the triad. |
-| **Skin lesions** | “Do you have pustular or scaly rash on palms/soles, or nail changes?” | Psoriatic arthritis is associated with psoriasis; nail pitting or onycholysis are clues. |
-| **Family history** | “Any relatives with arthritis, psoriasis, inflammatory bowel disease (IBD) or known HLA‑B27?” | Strong genetic predisposition, especially HLA‑B27 positivity. |
-| **IBD symptoms** | “Any chronic diarrhoea, abdominal pain, blood in stool?” | Enteropathic arthritis accompanies Crohn’s disease or ulcerative colitis. |
-| **Systemic features** | “Fever, weight loss, fatigue?” | Active systemic inflammation may produce constitutional symptoms. |
-| **Trauma or infection history** | “Recent gastrointestinal or genitourinary infection? Travel to malaria‑endemic area? HIV status?” | Reactive arthritis can be triggered by infections; HIV and TB can modify presentation. |
-| **Medication & comorbidities** | “Current drugs, especially biologics, steroids, or antiretrovirals? Sickle‑cell disease?” | Certain drugs mask symptoms; sickle‑cell disease can cause vaso‑occlusive pain mimicking arthritis. |
+- **Onset & duration**: “When did the pain start? Was it sudden or gradual? Has it been continuous or intermittent?” — Inflammatory back pain often begins insidiously and persists >3 months; mechanical pain improves with rest.
+- **Pain character**: “Is the pain worse in the morning or after periods of inactivity? Does it improve with activity or showering?” — Cytokine‑driven inflammation causes stiffness that eases with movement; mechanical pain is activity‑related.
+- **Morning stiffness**: “How long does the stiffness last after getting out of bed?” — Stiffness >30 min is typical of axial spondyloarthritis (axSpA).
+- **Peripheral joint involvement**: “Do you have swelling, redness or pain in knees, ankles, hips, shoulders, or small joints?” — Enthesitis and synovitis are common extra‑axial manifestations.
+- **Enthesitis**: “Do you feel pain at the sites where tendons or ligaments attach to bone (e.g., heel, iliac crest, costochondral joints)?” — Inflammation at entheses is a hallmark of the spondyloarthritis spectrum.
+- **Dactylitis**: “Is any finger or toe uniformly swollen, giving a ‘sausage’ appearance?” — Diffuse synovitis of the entire digit reflects systemic inflammation.
+- **Urogenital symptoms**: “Any recent urethritis, cervicitis, or conjunctivitis?” — Reactive arthritis follows infections; mucocutaneous involvement is part of the triad.
+- **Skin lesions**: “Do you have pustular or scaly rash on palms/soles, or nail changes?” — Psoriatic arthritis is associated with psoriasis; nail pitting or onycholysis are clues.
+- **Family history**: “Any relatives with arthritis, psoriasis, inflammatory bowel disease (IBD) or known HLA‑B27?” — Strong genetic predisposition, especially HLA‑B27 positivity.
+- **IBD symptoms**: “Any chronic diarrhoea, abdominal pain, blood in stool?” — Enteropathic arthritis accompanies Crohn’s disease or ulcerative colitis.
+- **Systemic features**: “Fever, weight loss, fatigue?” — Active systemic inflammation may produce constitutional symptoms.
+- **Trauma or infection history**: “Recent gastrointestinal or genitourinary infection? Travel to malaria‑endemic area? HIV status?” — Reactive arthritis can be triggered by infections; HIV and TB can modify presentation.
+- **Medication & comorbidities**: “Current drugs, especially biologics, steroids, or antiretrovirals? Sickle‑cell disease?” — Certain drugs mask symptoms; sickle‑cell disease can cause vaso‑occlusive pain mimicking arthritis.
 
 **Examination findings**  
 
@@ -109,23 +105,38 @@ Genetic susceptibility (HLA‑B27) → altered antigen presentation → abnormal
 
 **Severity grading** (clinical and imaging):  
 
-| Domain | Mild | Moderate | Severe |
-|---|---|---|---|
-| **Pain & function** | BASDAI <3, normal daily activities | BASDAI 3–5, occasional limitation | BASDAI >5, major activity restriction |
-| **Spinal mobility** | Normal Schober, chest expansion >2.5 cm | Reduced Schober 3–4 cm, chest 1.5–2.5 cm | Schober <3 cm, chest <1.5 cm |
-| **Radiographic damage** | No syndesmophytes, isolated sacroiliitis | Isolated syndesmophytes, partial ankylosis | Extensive syndesmophytes, bamboo spine |
-| **Extra‑articular** | None or isolated uveitis | Recurrent uveitis, mild IBD | Chronic uveitis, active IBD, severe psoriasis |
-| **Inflammatory markers** | Normal CRP/ESR | Mildly elevated | Persistently high |
+- **Pain & function**: BASDAI <3, normal daily activities — BASDAI 3–5, occasional limitation — BASDAI >5, major activity restriction
+- **Spinal mobility**: Normal Schober, chest expansion >2.5 cm — Reduced Schober 3–4 cm, chest 1.5–2.5 cm — Schober <3 cm, chest <1.5 cm
+- **Radiographic damage**: No syndesmophytes, isolated sacroiliitis — Isolated syndesmophytes, partial ankylosis — Extensive syndesmophytes, bamboo spine
+- **Extra‑articular**: None or isolated uveitis — Recurrent uveitis, mild IBD — Chronic uveitis, active IBD, severe psoriasis
+- **Inflammatory markers**: Normal CRP/ESR — Mildly elevated — Persistently high
 
 Severity guides therapy: mild disease may be managed with NSAIDs and physiotherapy; moderate to severe disease warrants escalation to disease‑modifying agents (TNF‑α inhibitors, IL‑17 inhibitors) after screening for infections and TB. Regular reassessment using BASDAI, functional scores, and imaging monitors progression and treatment response.
 
 ## Management  
 
-| Phase | Goal | Key actions | Monitoring / safety |
-|---|---|---|---|
-| **Immediate stabilisation** | Relieve severe pain, protect function, rule out red‑flag infection | • High‑dose NSA NSAID (e.g., ibuprofen, naproxen) unless contraindicated <br>• Short course oral glucocorticoid if acute sacroiliitis or peripheral flare and NSAID not tolerated <br>• Analgesia with paracetamol or weak opioid if needed <br>• Assess for active TB, HIV, hepatitis before long‑term immunosuppression | • Vital signs, GI tolerance, renal function, liver enzymes <br>• Screen for latent TB (IGRA or Mantoux) and hepatitis B/C |
-| **Definitive treatment** | Control inflammation, prevent structural damage, maintain mobility | • **NSAID** continued as first‑line long‑term therapy <br>• **TNF‑α inhibitor** (e.g., etanercept, adalimumab, infliximab) if inadequate response to NSAID after 3–6 months or high disease activity <br>• **IL‑17 inhibitor** (e.g., secukinumab) as alternative when TNF‑α blocker fails or is contraindicated <br>• **Sulfasalazine** for predominant peripheral arthritis <br>• **Physical therapy**: daily stretching, posture training, core strengthening <br>• **Patient education**: smoking cessation, weight control, ergonomic advice | • Disease activity scores (BASDAI, ASDAS) every 3 months <br>• Laboratory safety: CBC, LFT, renal panel, CRP/ESR <br>• Infection surveillance: repeat TB screen if on biologic > 12 months, monitor for opportunistic infections <br>• Ophthalmology review if uveitis symptoms |
-| **Long‑term follow‑up** | Detect complications, adjust therapy, ensure adherence | • Clinic visit every 6 months (more often if on biologic) <br>• Imaging (pelvic X‑ray or MRI) every 2–3 years to assess radiographic progression <br>• Bone density scan every 5 years or earlier if steroids used <br>• Vaccinations: influenza annually, pneumococcal, hepatitis B, HPV; avoid live vaccines while on biologics | • Document adverse events, especially infections, hepatic or hematologic toxicity <br>• Review vaccination status before initiating biologics |
+- **Immediate stabilisation**
+  - Relieve severe pain, protect function, rule out red‑flag infection — • High‑dose NSA NSAID (e.g., ibuprofen, naproxen) unless contraindicated
+  - Short course oral glucocorticoid if acute sacroiliitis or peripheral flare and NSAID not tolerated
+  - Analgesia with paracetamol or weak opioid if needed
+  - Assess for active TB, HIV, hepatitis before long‑term immunosuppression — • Vital signs, GI tolerance, renal function, liver enzymes
+  - Screen for latent TB (IGRA or Mantoux) and hepatitis B/C
+- **Definitive treatment**
+  - Control inflammation, prevent structural damage, maintain mobility — • **NSAID** continued as first‑line long‑term therapy
+  - **TNF‑α inhibitor** (e.g., etanercept, adalimumab, infliximab) if inadequate response to NSAID after 3–6 months or high disease activity
+  - **IL‑17 inhibitor** (e.g., secukinumab) as alternative when TNF‑α blocker fails or is contraindicated
+  - **Sulfasalazine** for predominant peripheral arthritis
+  - **Physical therapy**: daily stretching, posture training, core strengthening
+  - **Patient education**: smoking cessation, weight control, ergonomic advice — • Disease activity scores (BASDAI, ASDAS) every 3 months
+  - Laboratory safety: CBC, LFT, renal panel, CRP/ESR
+  - Infection surveillance: repeat TB screen if on biologic > 12 months, monitor for opportunistic infections
+  - Ophthalmology review if uveitis symptoms
+- **Long‑term follow‑up**
+  - Detect complications, adjust therapy, ensure adherence — • Clinic visit every 6 months (more often if on biologic)
+  - Imaging (pelvic X‑ray or MRI) every 2–3 years to assess radiographic progression
+  - Bone density scan every 5 years or earlier if steroids used
+  - Vaccinations: influenza annually, pneumococcal, hepatitis B, HPV; avoid live vaccines while on biologics — • Document adverse events, especially infections, hepatic or hematologic toxicity
+  - Review vaccination status before initiating biologics
 
 **Contra‑indications / safety notes**  
 - Active untreated infection (including TB, hepatitis B reactivation) → postpone biologic.  

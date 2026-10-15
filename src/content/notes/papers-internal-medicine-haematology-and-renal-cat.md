@@ -310,11 +310,9 @@ Heavy proteinuria of this size means nephrotic-range glomerular disease:
 
 ### 3. Five features that separate platelet-disorder bleeding from coagulation-factor bleeding (5 marks)
 
-| Feature | Platelet disorder | Coagulation-factor disorder |
-|---|---|---|
-| Skin | Petechiae and small ecchymoses | Large ecchymoses and deep haematomas |
-| Joints and muscle | Haemarthrosis rare | Haemarthrosis and muscle bleeds common |
-| Mucosa | Epistaxis, gum, menorrhagia | Less common |
-| After a small cut | Bleeds immediately and stops with pressure only after a while | Delayed bleeding, restarts after a few hours |
-| Sex | Both | Usually male (haemophilia A and B are X-linked) |
-| Tests | Low platelets or abnormal bleeding time; normal PT and APTT | Prolonged PT or APTT; normal platelets |
+- **Skin**: Petechiae and small ecchymoses — Large ecchymoses and deep haematomas
+- **Joints and muscle**: Haemarthrosis rare — Haemarthrosis and muscle bleeds common
+- **Mucosa**: Epistaxis, gum, menorrhagia — Less common
+- **After a small cut**: Bleeds immediately and stops with pressure only after a while — Delayed bleeding, restarts after a few hours
+- **Sex**: Both — Usually male (haemophilia A and B are X-linked)
+- **Tests**: Low platelets or abnormal bleeding time; normal PT and APTT — Prolonged PT or APTT; normal platelets

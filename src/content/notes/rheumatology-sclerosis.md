@@ -6,15 +6,13 @@
 Systemic sclerosis (SSc) is a chronic, multisystem autoimmune connective‑tissue disease characterised by progressive fibrosis of skin and internal organs, vasculopathy and immune dysregulation. It is classically divided into limited cutaneous (lcSSc) and diffuse cutaneous (dcSSc) subsets based on the extent of skin involvement.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to SSc |
-|---|---|
-| Dermis & subcutaneous tissue | Target of fibroblast activation → skin thickening |
-| Small arterioles & capillaries | Endothelial injury → Raynaud’s, digital ulcers |
-| Lung interstitium & pulmonary vasculature | Fibrosis → interstitial lung disease (ILD); vasculopathy → pulmonary arterial hypertension (PAH) |
-| Esophagus (smooth muscle) | Fibrosis → dysphagia, reflux |
-| Kidneys (glomeruli & arterioles) | Vascular injury → scleroderma renal crisis |
-| Heart (myocardium, pericardium, conduction system) | Fibrosis & vasospasm → arrhythmias, pericardial effusion |
-| Gastro‑intestinal tract (stomach to colon) | Smooth‑muscle fibrosis → dysmotility, malabsorption |
+- **Dermis & subcutaneous tissue**: Target of fibroblast activation → skin thickening
+- **Small arterioles & capillaries**: Endothelial injury → Raynaud’s, digital ulcers
+- **Lung interstitium & pulmonary vasculature**: Fibrosis → interstitial lung disease (ILD); vasculopathy → pulmonary arterial hypertension (PAH)
+- **Esophagus (smooth muscle)**: Fibrosis → dysphagia, reflux
+- **Kidneys (glomeruli & arterioles)**: Vascular injury → scleroderma renal crisis
+- **Heart (myocardium, pericardium, conduction system)**: Fibrosis & vasospasm → arrhythmias, pericardial effusion
+- **Gastro‑intestinal tract (stomach to colon)**: Smooth‑muscle fibrosis → dysmotility, malabsorption
 
 Understanding that fibroblast activation, collagen over‑production and endothelial dysfunction are central helps link clinical signs to organ pathology.
 
@@ -42,37 +40,33 @@ Key mediators: TGF‑β, PDGF, endothelin‑1, IL‑6.
 
 **History – questions that matter**  
 
-| Domain | Key questions | Rationale |
-|---|---|---|
-| **Raynaud’s phenomenon** | “Do your fingers or toes change colour when exposed to cold or stress? How long does each colour last?” | Early manifestation of digital vasospasm; helps differentiate primary from secondary Raynaud’s (the latter is common in systemic sclerosis). |
-| **Skin changes** | “When did you first notice tightening of the skin? Which areas are affected? Any difficulty putting on clothes or opening jars?” | Progressive skin fibrosis begins on the fingers (sclerodactyly) and may spread proximally (limited vs diffuse). |
-| **Digital ulcers / pitting scars** | “Do you have painful sores on the fingertips or tips? Have you noticed any scarring?” | Ulcers reflect severe microvascular disease; a marker of disease activity and risk of infection. |
-| **Gastro‑intestinal (GI) symptoms** | “Do you have difficulty swallowing solids or liquids? Heartburn, reflux, bloating, constipation or diarrhoea?” | Esophageal dysmotility, gastro‑oesophageal reflux, intestinal hypomotility are common; early detection prevents complications. |
-| **Respiratory complaints** | “Do you have shortness of breath on exertion or at rest? Any dry cough?” | Interstitial lung disease (ILD) and pulmonary arterial hypertension (PAH) are leading causes of mortality. |
-| **Cardiovascular symptoms** | “Chest pain, palpitations, syncope, swelling of ankles?” | Myocardial fibrosis, pericardial effusion, PAH can present with these signs. |
-| **Renal involvement** | “Any recent swelling of legs, reduced urine output, blood in urine, sudden rise in blood pressure?” | Scleroderma renal crisis (SRC) is an emergency; early hypertension or proteinuria is a red flag. |
-| **Musculoskeletal** | “Joint pain, stiffness, swelling? Muscle weakness?” | Polyarthritis, myopathy may coexist; helps differentiate from other rheumatic diseases. |
-| **Systemic symptoms** | “Fever, weight loss, fatigue?” | Non‑specific but may indicate active disease or infection (important in our setting with TB, HIV). |
-| **Exposure / comorbidities** | “Do you have HIV, TB, malaria, sickle cell disease? Any recent infections or vaccinations?” | In Kenya, co‑existing infections can modify presentation and influence drug choice (e.g., avoid high‑dose steroids in active TB). |
-| **Family history** | “Any relatives with autoimmune disease?” | Genetic predisposition; may raise suspicion for overlap syndromes. |
-| **Medication history** | “Use of calcium channel blockers, ACE inhibitors, NSAIDs, immunosuppressants?” | Baseline therapy may mask or modify symptoms; important for drug interactions. |
+- **Raynaud’s phenomenon**: “Do your fingers or toes change colour when exposed to cold or stress? How long does each colour last?” — Early manifestation of digital vasospasm; helps differentiate primary from secondary Raynaud’s (the latter is common in systemic sclerosis).
+- **Skin changes**: “When did you first notice tightening of the skin? Which areas are affected? Any difficulty putting on clothes or opening jars?” — Progressive skin fibrosis begins on the fingers (sclerodactyly) and may spread proximally (limited vs diffuse).
+- **Digital ulcers / pitting scars**: “Do you have painful sores on the fingertips or tips? Have you noticed any scarring?” — Ulcers reflect severe microvascular disease; a marker of disease activity and risk of infection.
+- **Gastro‑intestinal (GI) symptoms**: “Do you have difficulty swallowing solids or liquids? Heartburn, reflux, bloating, constipation or diarrhoea?” — Esophageal dysmotility, gastro‑oesophageal reflux, intestinal hypomotility are common; early detection prevents complications.
+- **Respiratory complaints**: “Do you have shortness of breath on exertion or at rest? Any dry cough?” — Interstitial lung disease (ILD) and pulmonary arterial hypertension (PAH) are leading causes of mortality.
+- **Cardiovascular symptoms**: “Chest pain, palpitations, syncope, swelling of ankles?” — Myocardial fibrosis, pericardial effusion, PAH can present with these signs.
+- **Renal involvement**: “Any recent swelling of legs, reduced urine output, blood in urine, sudden rise in blood pressure?” — Scleroderma renal crisis (SRC) is an emergency; early hypertension or proteinuria is a red flag.
+- **Musculoskeletal**: “Joint pain, stiffness, swelling? Muscle weakness?” — Polyarthritis, myopathy may coexist; helps differentiate from other rheumatic diseases.
+- **Systemic symptoms**: “Fever, weight loss, fatigue?” — Non‑specific but may indicate active disease or infection (important in our setting with TB, HIV).
+- **Exposure / comorbidities**: “Do you have HIV, TB, malaria, sickle cell disease? Any recent infections or vaccinations?” — In Kenya, co‑existing infections can modify presentation and influence drug choice (e.g., avoid high‑dose steroids in active TB).
+- **Family history**: “Any relatives with autoimmune disease?” — Genetic predisposition; may raise suspicion for overlap syndromes.
+- **Medication history**: “Use of calcium channel blockers, ACE inhibitors, NSAIDs, immunosuppressants?” — Baseline therapy may mask or modify symptoms; important for drug interactions.
 
 **Examination – findings and why they occur**  
 
-| Finding | Pathophysiologic basis |
-|---|---|
-| **Sclerodactyly** – thickened, taut skin of fingers, loss of skin creases | Collagen over‑production in dermis causing fibrosis; limits joint flexion. |
-| **Digital pitting scars / ulcers** | Chronic ischemia from obliterative vasculopathy of digital arterioles. |
-| **Facial skin tightening** – “mask‑like” appearance, reduced nasolabial folds | Diffuse dermal fibrosis extending to face. |
-| **Telangiectasia** – blanch‑red spots on face, hands, oral mucosa | Dilated post‑capillary venules secondary to endothelial injury. |
-| **Calcinosis cutis** – firm subcutaneous nodules, may ulcerate | Calcium deposition in areas of chronic inflammation and tissue hypoxia. |
-| **Raynaud’s colour change** – triphasic (white‑blue‑red) on cold exposure | Exaggerated sympathetic vasoconstriction of digital arteries. |
-| **Reduced chest expansion** – “shiny” skin over thorax, decreased inspiratory depth | Skin and sub‑cutaneous fibrosis restrict rib cage movement, predisposing to restrictive lung pattern. |
-| **Bibasilar crackles** | Interstitial fibrosis of lung parenchyma. |
-| **Elevated JVP, right‑sided heart sounds** | Pulmonary arterial hypertension leading to right‑heart strain. |
-| **Peripheral edema, hypertension** | Early renal involvement (SRC) or cardiac failure. |
-| **Joint contractures** | Fibrosis of peri‑articular tissues limiting range of motion. |
-| **Abdominal tenderness / ascites** | Mesenteric vascular involvement or portal hypertension secondary to liver fibrosis (rare). |
+- **Sclerodactyly – thickened, taut skin of fingers, loss of skin creases**: Collagen over‑production in dermis causing fibrosis; limits joint flexion.
+- **Digital pitting scars / ulcers**: Chronic ischemia from obliterative vasculopathy of digital arterioles.
+- **Facial skin tightening – “mask‑like” appearance, reduced nasolabial folds**: Diffuse dermal fibrosis extending to face.
+- **Telangiectasia – blanch‑red spots on face, hands, oral mucosa**: Dilated post‑capillary venules secondary to endothelial injury.
+- **Calcinosis cutis – firm subcutaneous nodules, may ulcerate**: Calcium deposition in areas of chronic inflammation and tissue hypoxia.
+- **Raynaud’s colour change – triphasic (white‑blue‑red) on cold exposure**: Exaggerated sympathetic vasoconstriction of digital arteries.
+- **Reduced chest expansion – “shiny” skin over thorax, decreased inspiratory depth**: Skin and sub‑cutaneous fibrosis restrict rib cage movement, predisposing to restrictive lung pattern.
+- **Bibasilar crackles**: Interstitial fibrosis of lung parenchyma.
+- **Elevated JVP, right‑sided heart sounds**: Pulmonary arterial hypertension leading to right‑heart strain.
+- **Peripheral edema, hypertension**: Early renal involvement (SRC) or cardiac failure.
+- **Joint contractures**: Fibrosis of peri‑articular tissues limiting range of motion.
+- **Abdominal tenderness / ascites**: Mesenteric vascular involvement or portal hypertension secondary to liver fibrosis (rare).
 
 ---
 
@@ -92,21 +86,19 @@ Key mediators: TGF‑β, PDGF, endothelin‑1, IL‑6.
 
 ## Investigations  
 
-| Test | What it answers | Interpretation |
-|---|---|---|
-| **ANA (screen)** | Presence of auto‑antibodies | Positive in >90 % of patients; non‑specific. |
-| **Anti‑centromere antibody** | Limited cutaneous disease (CREST) | Positive → limited form, lower ILD risk. |
-| **Anti‑Scl‑70 (topoisomerase I)** | Diffuse cutaneous disease | Positive → higher ILD and renal risk. |
-| **Anti‑RNA polymerase III** | Rapid skin thickening, renal crisis | Positive → strong predictor of SRC. |
-| **Nailfold capillaroscopy** | Microvascular damage | Giant capillaries, avascular areas support diagnosis; helps differentiate primary Raynaud’s. |
-| **Pulmonary function tests (spirometry + DLCO)** | Lung involvement severity | Reduced FVC and DLCO indicate ILD; isolated DLCO drop suggests PAH. |
-| **High‑resolution CT chest** | Extent of interstitial fibrosis | Ground‑glass opacities, honey‑comb pattern confirm ILD. |
-| **Echocardiography (transthoracic)** | Pulmonary arterial pressure, cardiac function | Elevated PASP → PAH; pericardial effusion or LV dysfunction noted. |
-| **Renal function panel (creatinine, electrolytes, urinalysis)** | Detect renal crisis | Rising creatinine, new proteinuria, or hypertension signals SRC. |
-| **Complete blood count** | Anemia, leukopenia, thrombocytopenia | May reflect chronic disease or drug toxicity. |
-| **CRP/ESR** | Inflammatory activity | Elevated in active disease or superimposed infection. |
-| **Serum creatine kinase** | Myositis component | Raised if overlap with polymyositis. |
-| **Chest X‑ray** | Baseline lung status | May show ILD or pulmonary hypertension signs. |
+- **ANA (screen)**: Presence of auto‑antibodies — Positive in >90 % of patients; non‑specific.
+- **Anti‑centromere antibody**: Limited cutaneous disease (CREST) — Positive → limited form, lower ILD risk.
+- **Anti‑Scl‑70 (topoisomerase I)**: Diffuse cutaneous disease — Positive → higher ILD and renal risk.
+- **Anti‑RNA polymerase III**: Rapid skin thickening, renal crisis — Positive → strong predictor of SRC.
+- **Nailfold capillaroscopy**: Microvascular damage — Giant capillaries, avascular areas support diagnosis; helps differentiate primary Raynaud’s.
+- **Pulmonary function tests (spirometry + DLCO)**: Lung involvement severity — Reduced FVC and DLCO indicate ILD; isolated DLCO drop suggests PAH.
+- **High‑resolution CT chest**: Extent of interstitial fibrosis — Ground‑glass opacities, honey‑comb pattern confirm ILD.
+- **Echocardiography (transthoracic)**: Pulmonary arterial pressure, cardiac function — Elevated PASP → PAH; pericardial effusion or LV dysfunction noted.
+- **Renal function panel (creatinine, electrolytes, urinalysis)**: Detect renal crisis — Rising creatinine, new proteinuria, or hypertension signals SRC.
+- **Complete blood count**: Anemia, leukopenia, thrombocytopenia — May reflect chronic disease or drug toxicity.
+- **CRP/ESR**: Inflammatory activity — Elevated in active disease or superimposed infection.
+- **Serum creatine kinase**: Myositis component — Raised if overlap with polymyositis.
+- **Chest X‑ray**: Baseline lung status — May show ILD or pulmonary hypertension signs.
 
 ---
 
@@ -123,14 +115,12 @@ Key mediators: TGF‑β, PDGF, endothelin‑1, IL‑6.
 
 **Severity grading (practical for clinical rotations)**  
 
-| Domain | Mild | Moderate | Severe |
-|---|---|---|---|
-| **Skin** | Limited to distal digits (≤ 10 % BSA) | Extends to forearms or calves | Diffuse, trunk involvement (> 30 % BSA) |
-| **Lung** | Normal PFT, HRCT | FVC 50‑70 % predicted, DLCO 40‑60 % | FVC < 50 %, progressive fibrosis, PAH (PASP > 50 mmHg) |
-| **Renal** | Normal creatinine, BP | Mild hypertension, proteinuria | Sudden rise in BP, creatinine > 150 µmol/L (SRC) |
-| **GI** | Mild dysphagia, occasional reflux | Frequent reflux, early dysphagia, malabsorption | Severe dysphagia, pseudo‑obstruction, weight loss |
-| **Cardiac** | No echo abnormalities | Mild pericardial effusion, diastolic dysfunction | PAH, systolic dysfunction, arrhythmias |
-| **Functional** | Able to perform daily activities | Limited ADL, needs assistance | Bed‑bound or requires full support |
+- **Skin**: Limited to distal digits (≤ 10 % BSA) — Extends to forearms or calves — Diffuse, trunk involvement (> 30 % BSA)
+- **Lung**: Normal PFT, HRCT — FVC 50‑70 % predicted, DLCO 40‑60 % — FVC < 50 %, progressive fibrosis, PAH (PASP > 50 mmHg)
+- **Renal**: Normal creatinine, BP — Mild hypertension, proteinuria — Sudden rise in BP, creatinine > 150 µmol/L (SRC)
+- **GI**: Mild dysphagia, occasional reflux — Frequent reflux, early dysphagia, malabsorption — Severe dysphagia, pseudo‑obstruction, weight loss
+- **Cardiac**: No echo abnormalities — Mild pericardial effusion, diastolic dysfunction — PAH, systolic dysfunction, arrhythmias
+- **Functional**: Able to perform daily activities — Limited ADL, needs assistance — Bed‑bound or requires full support
 
 Severity guides therapy: **Mild** disease may be managed with symptomatic agents (e.g., calcium‑channel blockers for Raynaud’s, proton‑pump inhibitors for reflux). **Moderate–severe** disease warrants early introduction of disease‑modifying agents (mycophenolate mofetil, cyclophosphamide, or newer antifibrotics) and close monitoring for organ complications.  
 
@@ -148,15 +138,13 @@ Severity guides therapy: **Mild** disease may be managed with symptomatic agents
 
 **Definitive (long‑term) treatment**  
 
-| Manifestation | First‑line class | Typical agents (no doses) | Rationale |
-|---|---|---|---|
-| Skin fibrosis & early disease | Disease‑modifying anti‑fibrotics | Mycophenolate mofetil, cyclophosphamide (IV) | Reduce collagen deposition, improve skin scores |
-| Interstitial lung disease (ILD) | Anti‑fibrotics / immunosuppressants | Nintedanib, pirfenidone, mycophenolate | Slow FVC decline, limit progression |
-| Pulmonary arterial hypertension (PAH) | Targeted PAH therapy | Endothelin‑receptor antagonist, phosphodiesterase‑5 inhibitor, prostacyclin analogue (inhaled/IV) | Vasodilation, improve RV function |
-| Raynaud’s & digital ulcers | Vasodilators | Calcium‑channel blocker, phosphodiesterase‑5 inhibitor, prostacyclin analogue (topical) | Improves microvascular flow |
-| Scleroderma renal crisis | ACE‑inhibitor (e.g., captopril) | – | Rapid BP control, renal protection |
-| Gastro‑intestinal dysmotility | Pro‑kinetics | Metoclopramide, domperidone | Improves esophageal clearance |
-| Musculoskeletal pain | NSAID (short course) or low‑dose glucocorticoid | – | Symptom control; avoid long‑term steroids due to infection risk |
+- **Skin fibrosis & early disease**: Disease‑modifying anti‑fibrotics — Mycophenolate mofetil, cyclophosphamide (IV) — Reduce collagen deposition, improve skin scores
+- **Interstitial lung disease (ILD)**: Anti‑fibrotics / immunosuppressants — Nintedanib, pirfenidone, mycophenolate — Slow FVC decline, limit progression
+- **Pulmonary arterial hypertension (PAH)**: Targeted PAH therapy — Endothelin‑receptor antagonist, phosphodiesterase‑5 inhibitor, prostacyclin analogue (inhaled/IV) — Vasodilation, improve RV function
+- **Raynaud’s & digital ulcers**: Vasodilators — Calcium‑channel blocker, phosphodiesterase‑5 inhibitor, prostacyclin analogue (topical) — Improves microvascular flow
+- **Scleroderma renal crisis**: ACE‑inhibitor (e.g., captopril) — – — Rapid BP control, renal protection
+- **Gastro‑intestinal dysmotility**: Pro‑kinetics — Metoclopramide, domperidone — Improves esophageal clearance
+- **Musculoskeletal pain**: NSAID (short course) or low‑dose glucocorticoid — – — Symptom control; avoid long‑term steroids due to infection risk
 
 **Monitoring & follow‑up**  
 - **Every 3–6 months**: modified Rodnan skin score, pulmonary function tests (FVC, DLCO), echocardiogram, renal function, BP.  
@@ -173,15 +161,13 @@ Severity guides therapy: **Mild** disease may be managed with symptomatic agents
 
 ## Complications and prognosis  
 
-| Complication | Clinical impact | Key monitoring |
-|---|---|---|
-| Interstitial lung disease | Leading cause of mortality; progressive dyspnoea, hypoxia | Serial PFTs, HRCT, O₂ sat |
-| Pulmonary arterial hypertension | Right‑heart failure, reduced survival | Echo, NT‑proBNP, 6‑min walk |
-| Scleroderma renal crisis | Acute renal failure, malignant hypertension | Daily BP, renal panel |
-| Digital ulcers / gangrene | Pain, infection, possible amputation | Wound inspection, Doppler if ischemic |
-| Gastro‑intestinal dysmotility | Malnutrition, aspiration | Barium swallow, nutritional labs |
-| Cardiac arrhythmias / myocarditis | Sudden death risk | ECG, Holter, cardiac MRI if symptomatic |
-| Malignancy (especially lung) | Higher incidence in diffuse disease | Age‑appropriate cancer screening |
+- **Interstitial lung disease**: Leading cause of mortality; progressive dyspnoea, hypoxia — Serial PFTs, HRCT, O₂ sat
+- **Pulmonary arterial hypertension**: Right‑heart failure, reduced survival — Echo, NT‑proBNP, 6‑min walk
+- **Scleroderma renal crisis**: Acute renal failure, malignant hypertension — Daily BP, renal panel
+- **Digital ulcers / gangrene**: Pain, infection, possible amputation — Wound inspection, Doppler if ischemic
+- **Gastro‑intestinal dysmotility**: Malnutrition, aspiration — Barium swallow, nutritional labs
+- **Cardiac arrhythmias / myocarditis**: Sudden death risk — ECG, Holter, cardiac MRI if symptomatic
+- **Malignancy (especially lung)**: Higher incidence in diffuse disease — Age‑appropriate cancer screening
 
 Prognosis hinges on extent of internal organ involvement. Early detection of ILD or PAH markedly improves survival; skin‑limited disease generally has a more favourable course.
 

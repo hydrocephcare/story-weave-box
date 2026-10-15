@@ -1,4 +1,4 @@
-# Interstitial Lung Diseases — Year 4 Internal Medicine (Respiratory) Notes
+# Interstitial Lung Diseases
 
 *Orientation notes for study. Specialist diagnosis uses a multidisciplinary team; check local guidelines before prescribing.*
 
@@ -11,15 +11,13 @@
 
 ## Anatomy and physiology you need  
 
-| Structure / Function | Why it matters for ILD |
-|---|---|
-| **Alveolar‑capillary membrane** – thin type I pneumocytes, basement membrane, capillary endothelium | The primary site of gas exchange; inflammation or fibrosis thickens this barrier → ↓ diffusion capacity (low DLCO) and hypoxaemia on exertion. |
-| **Interstitial compartment** – connective tissue surrounding alveoli, bronchioles, vessels, lymphatics | ILD is defined by pathology in this zone. Expansion by oedema, cellular infiltrates or collagen replaces normal elastic recoil, producing a **restrictive** ventilatory pattern (reduced TLC, FVC). |
-| **Pulmonary surfactant system** – type II pneumocytes produce phospholipid film | Damage or loss of type II cells reduces surfactant → alveolar collapse (atelectasis) and contributes to stiff lungs; also releases profibrotic cytokines (e.g., TGF‑β). |
-| **Lymphatic drainage of the lung** – peribronchovascular and subpleural lymphatics | Impaired drainage from chronic inflammation leads to interstitial oedema and facilitates deposition of fibrotic tissue; also a route for antigen presentation in hypersensitivity pneumonitis. |
-| **Pulmonary vasculature (arterioles & veins)** – thin‑walled muscular vessels | Fibrotic distortion narrows vessels, raising pulmonary vascular resistance → secondary pulmonary hypertension and right‑heart strain (cor pulmonale). |
-| **Chest wall & diaphragm mechanics** – rib cage, intercostals, diaphragm | Restriction from stiff lungs limits tidal volume; the diaphragm must generate higher pressures, which is why patients develop rapid, shallow breathing and early fatigue. |
-| **Neuro‑humoral control of ventilation** – chemoreceptors, mechanoreceptors | Progressive hypoxaemia stimulates peripheral chemoreceptors → tachypnoea; however, fibrotic lungs blunt stretch‑receptor feedback, reducing the normal drive to increase tidal volume. |
+- **Alveolar‑capillary membrane – thin type I pneumocytes, basement membrane, capillary endothelium**: The primary site of gas exchange; inflammation or fibrosis thickens this barrier → ↓ diffusion capacity (low DLCO) and hypoxaemia on exertion.
+- **Interstitial compartment – connective tissue surrounding alveoli, bronchioles, vessels, lymphatics**: ILD is defined by pathology in this zone. Expansion by oedema, cellular infiltrates or collagen replaces normal elastic recoil, producing a **restrictive** ventilatory pattern (reduced TLC, FVC).
+- **Pulmonary surfactant system – type II pneumocytes produce phospholipid film**: Damage or loss of type II cells reduces surfactant → alveolar collapse (atelectasis) and contributes to stiff lungs; also releases profibrotic cytokines (e.g., TGF‑β).
+- **Lymphatic drainage of the lung – peribronchovascular and subpleural lymphatics**: Impaired drainage from chronic inflammation leads to interstitial oedema and facilitates deposition of fibrotic tissue; also a route for antigen presentation in hypersensitivity pneumonitis.
+- **Pulmonary vasculature (arterioles & veins) – thin‑walled muscular vessels**: Fibrotic distortion narrows vessels, raising pulmonary vascular resistance → secondary pulmonary hypertension and right‑heart strain (cor pulmonale).
+- **Chest wall & diaphragm mechanics – rib cage, intercostals, diaphragm**: Restriction from stiff lungs limits tidal volume; the diaphragm must generate higher pressures, which is why patients develop rapid, shallow breathing and early fatigue.
+- **Neuro‑humoral control of ventilation – chemoreceptors, mechanoreceptors**: Progressive hypoxaemia stimulates peripheral chemoreceptors → tachypnoea; however, fibrotic lungs blunt stretch‑receptor feedback, reducing the normal drive to increase tidal volume.
 
 ---
 
@@ -134,13 +132,11 @@ Pulmonary vascular remodeling → pulmonary hypertension → right‑sided heart
 
 **Key findings**  
 
-| Finding | Relevance |
-|---|---|
-| Bibasal “velcro” crackles on auscultation | Typical of a fibrotic interstitial process |
-| Digital clubbing (grade 2) | Suggests chronic hypoxaemia and fibrosis |
-| HRCT: subpleural basal reticulation with honey‑comb cysts and traction bronchiectasis | Usual interstitial pneumonia (UIP) pattern – diagnostic of idiopathic pulmonary fibrosis in the appropriate clinical context |
-| Spirometry: FVC 58 % predicted, FEV₁/FVC = 0.82, TLC reduced, DLCO 45 % predicted | Restrictive physiology with impaired gas transfer |
-| No occupational exposure to asbestos, no recent drug changes, ANA negative | Helps exclude known‑cause ILD |
+- **Bibasal “velcro” crackles on auscultation**: Typical of a fibrotic interstitial process
+- **Digital clubbing (grade 2)**: Suggests chronic hypoxaemia and fibrosis
+- **HRCT: subpleural basal reticulation with honey‑comb cysts and traction bronchiectasis**: Usual interstitial pneumonia (UIP) pattern – diagnostic of idiopathic pulmonary fibrosis in the appropriate clinical context
+- **Spirometry: FVC 58 % predicted, FEV₁/FVC = 0.82, TLC reduced, DLCO 45 % predicted**: Restrictive physiology with impaired gas transfer
+- **No occupational exposure to asbestos, no recent drug changes, ANA negative**: Helps exclude known‑cause ILD
 
 ### Questions  
 
@@ -179,16 +175,14 @@ Pulmonary vascular remodeling → pulmonary hypertension → right‑sided heart
 
 Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [idiopathic pulmonary fibrosis drugs](/pharmacology?tab=conditions&c=ipf).
 
-| Drug | Class | Role here | Watch for |
-|---|---|---|---|
-| Nintedanib | Tyrosine kinase inhibitor (antifibrotic) | IPF and other progressive fibrosing ILD | Diarrhoea, liver tests, bleeding |
-| Pirfenidone | Antifibrotic | IPF | Nausea, photosensitivity rash |
-| Prednisolone | Systemic corticosteroid | Inflammatory ILD (sarcoid, organising pneumonia, hypersensitivity pneumonitis); not for IPF | High glucose, infection, bone loss |
-| Methotrexate | Antimetabolite | Steroid-sparing agent in CTD-ILD, but can itself cause pneumonitis | Lung toxicity, liver, blood count |
-| Rituximab | Anti-CD20 antibody | Refractory connective-tissue-disease ILD | Infusion reactions, infection |
-| Amiodarone | Antiarrhythmic | A common drug cause of pulmonary fibrosis | Thyroid, liver, lung and eye toxicity |
-| Nitrofurantoin | Urinary antibiotic | Drug cause of acute and chronic lung disease | Pulmonary reactions with long use |
-| Bleomycin | Cytotoxic antibiotic | Chemotherapy cause of pulmonary fibrosis | Dose-related lung toxicity |
+- **Nintedanib**: Tyrosine kinase inhibitor (antifibrotic) — IPF and other progressive fibrosing ILD — Diarrhoea, liver tests, bleeding
+- **Pirfenidone**: Antifibrotic — IPF — Nausea, photosensitivity rash
+- **Prednisolone**: Systemic corticosteroid — Inflammatory ILD (sarcoid, organising pneumonia, hypersensitivity pneumonitis); not for IPF — High glucose, infection, bone loss
+- **Methotrexate**: Antimetabolite — Steroid-sparing agent in CTD-ILD, but can itself cause pneumonitis — Lung toxicity, liver, blood count
+- **Rituximab**: Anti-CD20 antibody — Refractory connective-tissue-disease ILD — Infusion reactions, infection
+- **Amiodarone**: Antiarrhythmic — A common drug cause of pulmonary fibrosis — Thyroid, liver, lung and eye toxicity
+- **Nitrofurantoin**: Urinary antibiotic — Drug cause of acute and chronic lung disease — Pulmonary reactions with long use
+- **Bleomycin**: Cytotoxic antibiotic — Chemotherapy cause of pulmonary fibrosis — Dose-related lung toxicity
 
 **Always ask about drugs:** stopping the cause is the first treatment in drug-induced lung disease.
 

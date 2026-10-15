@@ -14,15 +14,13 @@ A syndrome in which an extrinsic lesion (tumour, infection, haemorrhage, inflamm
 
 ## Causes and risk factors  
 
-| Category | Common aetiologies in Kenya | Key risk factors |
-|---|---|---|
-| Metastatic disease | Breast, prostate, lung, Kaposi sarcoma | Advanced cancer, HIV‑associated malignancies |
-| Infectious | Tuberculous epidural abscess, pyogenic abscess (Staph aureus), fungal (Cryptococcus) | HIV, uncontrolled diabetes, recent spinal procedures |
-| Traumatic | Vertebral fracture, disc herniation | Road‑traffic accidents, falls, mining injuries |
-| Hematologic | Sickle cell vaso‑occlusive infarcts, marrow expansion | Sickle cell disease, severe anaemia |
-| Inflammatory / rheumatic | Ankylosing spondylitis (vertebral fusion), rheumatoid pannus | Chronic inflammatory arthritis |
-| Tropical / other | Cerebral malaria cerebral sequestration (rare spinal involvement), schistosomiasis (granuloma) | High malaria burden, endemic schistosomiasis |
-| Iatrogenic | Post‑operative epidural haematoma, radiation fibrosis | Recent spine surgery, radiotherapy |
+- **Metastatic disease**: Breast, prostate, lung, Kaposi sarcoma — Advanced cancer, HIV‑associated malignancies
+- **Infectious**: Tuberculous epidural abscess, pyogenic abscess (Staph aureus), fungal (Cryptococcus) — HIV, uncontrolled diabetes, recent spinal procedures
+- **Traumatic**: Vertebral fracture, disc herniation — Road‑traffic accidents, falls, mining injuries
+- **Hematologic**: Sickle cell vaso‑occlusive infarcts, marrow expansion — Sickle cell disease, severe anaemia
+- **Inflammatory / rheumatic**: Ankylosing spondylitis (vertebral fusion), rheumatoid pannus — Chronic inflammatory arthritis
+- **Tropical / other**: Cerebral malaria cerebral sequestration (rare spinal involvement), schistosomiasis (granuloma) — High malaria burden, endemic schistosomiasis
+- **Iatrogenic**: Post‑operative epidural haematoma, radiation fibrosis — Recent spine surgery, radiotherapy
 
 ## Pathophysiology  
 
@@ -32,30 +30,40 @@ Extrinsic lesion → mechanical compression of cord → **ischemia** (arterial/v
 
 ## Clinical features  
 
-| Domain | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Onset & tempo** | *When did symptoms start?* <br> *Was the onset sudden, sub‑acute (days‑weeks) or chronic (months)?* | Rapid compression (e.g., epidural abscess, fracture) gives abrupt deficits; slower processes (TB, metastatic tumour) allow gradual progression and possible spinal deformity. |
-| **Pain** | *Location (neck, mid‑back, lower back)?* <br> *Radiation to shoulders, arms, abdomen or legs?* <br> *Is the pain worse with movement or lying still?* | Compression irritates the dura and nerve roots → axial pain. Radicular pain follows the dermatomal distribution of the involved cord segment. Mechanical instability amplifies pain on movement. |
-| **Motor weakness** | *Do you have difficulty lifting objects, climbing stairs, walking, or using your hands?* <br> *Is the weakness symmetric or one‑sided?* | Anterior horn cell and corticospinal tract involvement produce paresis. Cervical lesions affect upper limbs first; thoracic lesions affect trunk/legs; lumbar lesions may spare the arms. |
-| **Sensory change** | *Any numbness, tingling, “pins‑and‑needles” or loss of sensation?* <br> *Which areas are affected – trunk, limbs, perineum?* | Dorsal column (vibration, proprioception) and spinothalamic tract (pain, temperature) are compressed. A “sensory level” (sharp demarcation) indicates the spinal segment involved. |
-| **Autonomic dysfunction** | *Any urinary urgency, frequency, retention or incontinence?* <br> *Bowel habit change?* <br> *Sexual dysfunction?* | Sacral autonomic fibres run on the ventral surface of the cord; compression leads to neurogenic bladder/bowel and erectile dysfunction. |
-| **Gait & balance** | *Do you feel unsteady, sway, or have difficulty turning?* | Posterior column loss of proprioception and corticospinal tract involvement cause ataxic gait and spasticity. |
-| **Systemic clues** | *Fever, night sweats, weight loss?* <br> *History of TB, HIV, recent trauma, malignancy, sickle‑cell crises?* | Infective (TB, pyogenic abscess) or neoplastic causes often have constitutional symptoms; trauma points to fracture; sickle‑cell disease predisposes to vertebral infarction. |
-| **Red‑flag features** | *Rapid progression (<24 h), severe pain, new bladder dysfunction, fever, recent spinal procedure?* | Suggests emergency compression (e.g., epidural haematoma, abscess) requiring urgent decompression. |
+- **Onset & tempo**
+  - *When did symptoms start?*
+  - *Was the onset sudden, sub‑acute (days‑weeks) or chronic (months)?* — Rapid compression (e.g., epidural abscess, fracture) gives abrupt deficits; slower processes (TB, metastatic tumour) allow gradual progression and possible spinal deformity.
+- **Pain**
+  - *Location (neck, mid‑back, lower back)?*
+  - *Radiation to shoulders, arms, abdomen or legs?*
+  - *Is the pain worse with movement or lying still?* — Compression irritates the dura and nerve roots → axial pain. Radicular pain follows the dermatomal distribution of the involved cord segment. Mechanical instability amplifies pain on movement.
+- **Motor weakness**
+  - *Do you have difficulty lifting objects, climbing stairs, walking, or using your hands?*
+  - *Is the weakness symmetric or one‑sided?* — Anterior horn cell and corticospinal tract involvement produce paresis. Cervical lesions affect upper limbs first; thoracic lesions affect trunk/legs; lumbar lesions may spare the arms.
+- **Sensory change**
+  - *Any numbness, tingling, “pins‑and‑needles” or loss of sensation?*
+  - *Which areas are affected – trunk, limbs, perineum?* — Dorsal column (vibration, proprioception) and spinothalamic tract (pain, temperature) are compressed. A “sensory level” (sharp demarcation) indicates the spinal segment involved.
+- **Autonomic dysfunction**
+  - *Any urinary urgency, frequency, retention or incontinence?*
+  - *Bowel habit change?*
+  - *Sexual dysfunction?* — Sacral autonomic fibres run on the ventral surface of the cord; compression leads to neurogenic bladder/bowel and erectile dysfunction.
+- **Gait & balance**: *Do you feel unsteady, sway, or have difficulty turning?* — Posterior column loss of proprioception and corticospinal tract involvement cause ataxic gait and spasticity.
+- **Systemic clues**
+  - *Fever, night sweats, weight loss?*
+  - *History of TB, HIV, recent trauma, malignancy, sickle‑cell crises?* — Infective (TB, pyogenic abscess) or neoplastic causes often have constitutional symptoms; trauma points to fracture; sickle‑cell disease predisposes to vertebral infarction.
+- **Red‑flag features**: *Rapid progression (<24 h), severe pain, new bladder dysfunction, fever, recent spinal procedure?* — Suggests emergency compression (e.g., epidural haematoma, abscess) requiring urgent decompression.
 
 **Examination**  
 
-| Finding | Interpretation |
-|---|---|
-| **Spinal tenderness** | Localised bony or soft‑tissue pain → fracture, infection, tumour. |
-| **Motor exam** (strength grading, tone) | Upper motor neuron signs (spasticity, hyperreflexia, Babinski) indicate cord involvement above the level of the lesion; lower motor neuron signs (flaccidity, fasciculations) suggest anterior horn cell or nerve root compression. |
-| **Sensory level** | Sharp demarcation of loss of pin‑prick, temperature, or proprioception defines the highest affected spinal segment. |
-| **Proprioceptive loss** (position sense, vibration) | Posterior column compression → gait ataxia, positive Romberg. |
-| **Reflexes** (deep tendon, plantar) | Hyperreflexia and extensor plantar response = corticospinal tract involvement; absent reflexes below the lesion may reflect spinal shock early on. |
-| **Sphincter tone** (perineal sensation, anal wink) | Sacral cord involvement → neurogenic bladder/bowel. |
-| **Upper limb signs** (e.g., Hoffmann’s, clonus) | Cervical cord compression. |
-| **Lower limb signs** (e.g., ankle clonus) | Thoracic or lumbar cord compression. |
-| **Systemic exam** (fever, lymphadenopathy, skin lesions) | Clues to infectious or malignant aetiology. |
+- **Spinal tenderness**: Localised bony or soft‑tissue pain → fracture, infection, tumour.
+- **Motor exam (strength grading, tone)**: Upper motor neuron signs (spasticity, hyperreflexia, Babinski) indicate cord involvement above the level of the lesion; lower motor neuron signs (flaccidity, fasciculations) suggest anterior horn cell or nerve root compression.
+- **Sensory level**: Sharp demarcation of loss of pin‑prick, temperature, or proprioception defines the highest affected spinal segment.
+- **Proprioceptive loss (position sense, vibration)**: Posterior column compression → gait ataxia, positive Romberg.
+- **Reflexes (deep tendon, plantar)**: Hyperreflexia and extensor plantar response = corticospinal tract involvement; absent reflexes below the lesion may reflect spinal shock early on.
+- **Sphincter tone (perineal sensation, anal wink)**: Sacral cord involvement → neurogenic bladder/bowel.
+- **Upper limb signs (e.g., Hoffmann’s, clonus)**: Cervical cord compression.
+- **Lower limb signs (e.g., ankle clonus)**: Thoracic or lumbar cord compression.
+- **Systemic exam (fever, lymphadenopathy, skin lesions)**: Clues to infectious or malignant aetiology.
 
 ---
 
@@ -96,13 +104,11 @@ Extrinsic lesion → mechanical compression of cord → **ischemia** (arterial/v
 
 2. **Severity grading (based on neurological status)**  
 
-| Grade | Clinical picture | Management urgency |
-|---|---|---|
-| **Grade 0** – No neurological deficit | Pain only, normal exam | Urgent imaging; treat underlying cause promptly |
-| **Grade 1** – Mild deficit | Slight weakness, hyperreflexia, no sphincter involvement | Imaging within 24 h; consider steroids and early decompression if progressive |
-| **Grade 2** – Moderate deficit | Motor strength ≤ 3/5, sensory level, early bladder change | Imaging ASAP; high‑dose steroids (e.g., methylprednisolone) while arranging surgical/medical decompression |
-| **Grade 3** – Severe deficit | Motor ≤ 2/5, complete sensory loss below level, urinary retention | Immediate MRI and emergency decompression (surgical or percutaneous) within hours |
-| **Grade 4** – Complete cord transection | No motor or sensory function below level, flaccid paralysis, absent reflexes (spinal shock) | Urgent decompression if any residual cord; otherwise focus on rehabilitation and complication prevention |
+- **Grade 0 – No neurological deficit**: Pain only, normal exam — Urgent imaging; treat underlying cause promptly
+- **Grade 1 – Mild deficit**: Slight weakness, hyperreflexia, no sphincter involvement — Imaging within 24 h; consider steroids and early decompression if progressive
+- **Grade 2 – Moderate deficit**: Motor strength ≤ 3/5, sensory level, early bladder change — Imaging ASAP; high‑dose steroids (e.g., methylprednisolone) while arranging surgical/medical decompression
+- **Grade 3 – Severe deficit**: Motor ≤ 2/5, complete sensory loss below level, urinary retention — Immediate MRI and emergency decompression (surgical or percutaneous) within hours
+- **Grade 4 – Complete cord transection**: No motor or sensory function below level, flaccid paralysis, absent reflexes (spinal shock) — Urgent decompression if any residual cord; otherwise focus on rehabilitation and complication prevention
 
 3. **Prognostic indicators** – Rapid onset, severe motor loss, and delayed decompression (> 24 h) predict poorer functional recovery. Presence of infection (TB, abscess) or malignancy also influences long‑term outcome.
 
@@ -111,24 +117,20 @@ Extrinsic lesion → mechanical compression of cord → **ischemia** (arterial/v
 ## Management  
 
 **1. Immediate stabilisation**  
-| Step | Rationale |
-|---|---|
-| Immobilise spine (log‑roll, rigid cervical collar, thoracolumbar board) | Prevent further mechanical insult while the cord is vulnerable |
-| Maintain MAP ≥ 85 mmHg (fluid bolus, vasopressor if needed) | Improves spinal cord perfusion; ischemia worsens neurological loss |
-| High‑flow oxygen (if hypoxic) | Optimises oxygen delivery to injured cord |
-| Analgesia & anti‑spasm (e.g., benzodiazepine, baclofen) | Reduces pain‑induced hypertension and muscle spasm that can increase cord compression |
-| Urgent neuro‑imaging (MRI spine, preferably within 24 h) | Confirms level, extent and aetiology; guides definitive therapy |
-| Steroid therapy (short‑course dexamethasone) *only* if tumour or inflammatory lesion suspected and no contraindication | Diminishes vasogenic oedema; not indicated for TB or pyogenic abscesses |
+- **Immobilise spine (log‑roll, rigid cervical collar, thoracolumbar board)**: Prevent further mechanical insult while the cord is vulnerable
+- **Maintain MAP ≥ 85 mmHg (fluid bolus, vasopressor if needed)**: Improves spinal cord perfusion; ischemia worsens neurological loss
+- **High‑flow oxygen (if hypoxic)**: Optimises oxygen delivery to injured cord
+- **Analgesia & anti‑spasm (e.g., benzodiazepine, baclofen)**: Reduces pain‑induced hypertension and muscle spasm that can increase cord compression
+- **Urgent neuro‑imaging (MRI spine, preferably within 24 h)**: Confirms level, extent and aetiology; guides definitive therapy
+- **Steroid therapy (short‑course dexamethasone) *only* if tumour or inflammatory lesion suspected and no contraindication**: Diminishes vasogenic oedema; not indicated for TB or pyogenic abscesses
 
 **2. Definitive treatment** – tailored to aetiology  
 
-| Aetiology | First‑line definitive measure | Adjuncts |
-|---|---|---|
-| Metastatic tumour | Urgent decompressive laminectomy ± instrumented fusion + radiotherapy (post‑op) | Steroids peri‑operatively, oncologic systemic therapy |
-| Epidural abscess (TB, pyogenic) | Surgical drainage + targeted antimicrobial therapy (anti‑TB regimen or broad‑spectrum antibiotics) | Immobilisation for 4–6 weeks, physiotherapy |
-| Vertebral fracture (trauma, osteoporotic) | Posterior instrumentation ± vertebroplasty; early mobilisation | Analgesia, calcium/vit D, bisphosphonates if appropriate |
-| Disc herniation with acute cord compromise | Anterior cervical discectomy & fusion (or posterior approach depending on level) | Post‑op steroids for 24 h, early rehab |
-| Haematological (sickle cell vaso‑occlusive) | Exchange transfusion to reduce HbS, analgesia, hydration | Consider surgical decompression if infarction confirmed |
+- **Metastatic tumour**: Urgent decompressive laminectomy ± instrumented fusion + radiotherapy (post‑op) — Steroids peri‑operatively, oncologic systemic therapy
+- **Epidural abscess (TB, pyogenic)**: Surgical drainage + targeted antimicrobial therapy (anti‑TB regimen or broad‑spectrum antibiotics) — Immobilisation for 4–6 weeks, physiotherapy
+- **Vertebral fracture (trauma, osteoporotic)**: Posterior instrumentation ± vertebroplasty; early mobilisation — Analgesia, calcium/vit D, bisphosphonates if appropriate
+- **Disc herniation with acute cord compromise**: Anterior cervical discectomy & fusion (or posterior approach depending on level) — Post‑op steroids for 24 h, early rehab
+- **Haematological (sickle cell vaso‑occlusive)**: Exchange transfusion to reduce HbS, analgesia, hydration — Consider surgical decompression if infarction confirmed
 
 **3. Monitoring & follow‑up**  
 - Neurological exam (motor, sensory, sphincter) every 2 h for first 24 h, then q4‑6 h.  
@@ -146,14 +148,12 @@ Extrinsic lesion → mechanical compression of cord → **ischemia** (arterial/v
 
 ## Complications and prognosis  
 
-| Complication | Clinical impact |
-|---|---|
-| Permanent motor deficit (paraplegia/quadriplegia) | Loss of ambulation, dependence on assistive devices |
-| Neurogenic bladder/bowel | Recurrent UTIs, renal impairment, social disability |
-| Spinal instability / deformity | Chronic pain, need for further surgery |
-| Post‑operative wound infection / epidural abscess | May require repeat drainage, prolonged antibiotics |
-| Thrombo‑embolism (DVT/PE) | Immobilisation risk; prophylaxis with compression devices |
-| Respiratory compromise (high cervical lesions) | Need for ventilatory support, risk of pneumonia |
+- **Permanent motor deficit (paraplegia/quadriplegia)**: Loss of ambulation, dependence on assistive devices
+- **Neurogenic bladder/bowel**: Recurrent UTIs, renal impairment, social disability
+- **Spinal instability / deformity**: Chronic pain, need for further surgery
+- **Post‑operative wound infection / epidural abscess**: May require repeat drainage, prolonged antibiotics
+- **Thrombo‑embolism (DVT/PE)**: Immobilisation risk; prophylaxis with compression devices
+- **Respiratory compromise (high cervical lesions)**: Need for ventilatory support, risk of pneumonia
 
 Prognosis hinges on **time to decompression**: neurological recovery is greatest when surgery occurs within 24 h of onset. Early presentation, preserved sensation, and non‑malignant aetiology (e.g., disc herniation) carry a better outlook. Late presentation, complete motor loss, or malignant infiltration portend poorer functional recovery.
 

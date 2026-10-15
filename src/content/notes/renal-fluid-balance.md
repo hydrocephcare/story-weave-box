@@ -7,30 +7,26 @@ Fluid balance is the net difference between fluid intake (oral, enteral, parente
 
 ## Anatomy and physiology you need  
 
-| Structure/ system | Key role in fluid homeostasis |
-|---|---|
-| Kidneys (nephron) | Filter plasma, re‑absorb Na⁺/water, excrete waste |
-| Renin‑angiotensin‑aldosterone system (RAAS) | Conserves Na⁺ and water when volume falls |
-| Antidiuretic hormone (ADH) | Increases water re‑absorption in collecting ducts |
-| Natriuretic peptides (ANP, BNP) | Promote natriuresis and vasodilation in overload |
-| Capillary membrane (Starling forces) | Governs fluid shift between intravascular and interstitial spaces |
-| Lymphatic system | Returns interstitial fluid to circulation |
-| Gastro‑intestinal tract | Provides bulk intake, absorbs water and electrolytes |
+- **Kidneys (nephron)**: Filter plasma, re‑absorb Na⁺/water, excrete waste
+- **Renin‑angiotensin‑aldosterone system (RAAS)**: Conserves Na⁺ and water when volume falls
+- **Antidiuretic hormone (ADH)**: Increases water re‑absorption in collecting ducts
+- **Natriuretic peptides (ANP, BNP)**: Promote natriuresis and vasodilation in overload
+- **Capillary membrane (Starling forces)**: Governs fluid shift between intravascular and interstitial spaces
+- **Lymphatic system**: Returns interstitial fluid to circulation
+- **Gastro‑intestinal tract**: Provides bulk intake, absorbs water and electrolytes
 
 Understanding how these components interact explains why disease states tip the balance toward excess or deficit.
 
 ## Causes and risk factors  
 
-| Category | Common Kenyan examples | Why they disturb balance |
-|---|---|---|
-| Infectious | Severe malaria, TB meningitis, HIV‑associated opportunistic infections, bacterial sepsis | Fever, vomiting, diarrhoea, capillary leak, adrenal insufficiency |
-| Hematologic | Sickle cell crisis, severe anaemia | Vaso‑occlusion → renal medullary ischemia, increased urine loss |
-| Cardiovascular | Congestive heart failure, rheumatic valvular disease | Reduced forward flow → renal hypoperfusion, activation of RAAS |
-| Renal | Acute kidney injury (AKI) from nephrotoxins, glomerulonephritis, HIV‑associated nephropathy | Impaired excretion, sodium retention |
-| Gastro‑intestinal | Acute gastroenteritis, chronic diarrhoea (e.g., from parasitic infection) | Direct fluid loss, electrolyte depletion |
-| Endocrine | Diabetes mellitus (DKA), adrenal insufficiency | Osmotic diuresis, loss of aldosterone effect |
-| Iatrogenic | Over‑aggressive IV fluids, diuretic over‑use, dialysis errors | Direct alteration of intake‑output ratio |
-| Pregnancy & obstetric | Preeclampsia, postpartum haemorrhage | Altered plasma volume, bleeding |
+- **Infectious**: Severe malaria, TB meningitis, HIV‑associated opportunistic infections, bacterial sepsis — Fever, vomiting, diarrhoea, capillary leak, adrenal insufficiency
+- **Hematologic**: Sickle cell crisis, severe anaemia — Vaso‑occlusion → renal medullary ischemia, increased urine loss
+- **Cardiovascular**: Congestive heart failure, rheumatic valvular disease — Reduced forward flow → renal hypoperfusion, activation of RAAS
+- **Renal**: Acute kidney injury (AKI) from nephrotoxins, glomerulonephritis, HIV‑associated nephropathy — Impaired excretion, sodium retention
+- **Gastro‑intestinal**: Acute gastroenteritis, chronic diarrhoea (e.g., from parasitic infection) — Direct fluid loss, electrolyte depletion
+- **Endocrine**: Diabetes mellitus (DKA), adrenal insufficiency — Osmotic diuresis, loss of aldosterone effect
+- **Iatrogenic**: Over‑aggressive IV fluids, diuretic over‑use, dialysis errors — Direct alteration of intake‑output ratio
+- **Pregnancy & obstetric**: Preeclampsia, postpartum haemorrhage — Altered plasma volume, bleeding
 
 Risk factors specific to our setting include limited access to clean water, high prevalence of infectious diseases, delayed presentation, and use of traditional remedies that may contain diuretics.
 
@@ -46,38 +42,34 @@ These causal chains guide the clinical focus: identify the primary driver (loss 
 
 ## Clinical features  
 
-| History element | Why it matters |
-|---|---|
-| Onset and tempo of weight change (gain or loss) | Rapid gain suggests fluid overload; rapid loss suggests dehydration or diuresis. |
-| Daily fluid intake (water, tea/coffee, oral rehydration solutions, alcohol, IV fluids) | Quantifies net balance; excess intake can precipitate overload, especially with renal impairment. |
-| Urine output (volume, frequency, colour, presence of foaming) | Low output (<0.5 mL/kg/h) points to oliguria/AKI; high output with dilute urine suggests loss (diabetes insipidus, osmotic diuresis). |
-| Vomiting, diarrhoea, loose stools, fever, night sweats | Gastro‑intestinal losses are common causes of dehydration in tropical settings (malaria, dysentery, TB). |
-| Pulmonary symptoms (dyspnoea, orthopnoea, cough, frothy sputum) | Fluid accumulation in lungs (pulmonary oedema) is a hallmark of volume overload or cardiac failure. |
-| Edema distribution (peripheral, sacral, facial, abdominal) | Dependent oedema indicates hydrostatic pressure rise; facial/ periorbital swelling suggests hypo‑albuminaemia or nephrotic syndrome. |
-| Recent infections (HIV, TB, malaria, schistosomiasis) | These diseases can cause capillary leak, renal loss of protein, or direct renal injury leading to fluid shifts. |
-| Medications (diuretics, ACE‑inhibitors, ARBs, antiretrovirals, anti‑TB drugs) | Diuretics can precipitate dehydration; ACE‑I/ARBs may cause renal hypoperfusion; some antiretrovirals cause nephrotoxicity. |
-| Past renal disease (CKD, glomerulonephritis, sickle‑cell nephropathy) | Baseline renal reserve determines ability to handle fluid loads or losses. |
-| Pregnancy status | Physiological plasma volume expansion; pre‑eclampsia can cause abrupt fluid shifts. |
-| Dietary sodium intake | High salt intake promotes water retention, worsening overload. |
-| Symptoms of orthostatic intolerance (dizziness, syncope) | Suggest intravascular depletion. |
+- **Onset and tempo of weight change (gain or loss)**: Rapid gain suggests fluid overload; rapid loss suggests dehydration or diuresis.
+- **Daily fluid intake (water, tea/coffee, oral rehydration solutions, alcohol, IV fluids)**: Quantifies net balance; excess intake can precipitate overload, especially with renal impairment.
+- **Urine output (volume, frequency, colour, presence of foaming)**: Low output (<0.5 mL/kg/h) points to oliguria/AKI; high output with dilute urine suggests loss (diabetes insipidus, osmotic diuresis).
+- **Vomiting, diarrhoea, loose stools, fever, night sweats**: Gastro‑intestinal losses are common causes of dehydration in tropical settings (malaria, dysentery, TB).
+- **Pulmonary symptoms (dyspnoea, orthopnoea, cough, frothy sputum)**: Fluid accumulation in lungs (pulmonary oedema) is a hallmark of volume overload or cardiac failure.
+- **Edema distribution (peripheral, sacral, facial, abdominal)**: Dependent oedema indicates hydrostatic pressure rise; facial/ periorbital swelling suggests hypo‑albuminaemia or nephrotic syndrome.
+- **Recent infections (HIV, TB, malaria, schistosomiasis)**: These diseases can cause capillary leak, renal loss of protein, or direct renal injury leading to fluid shifts.
+- **Medications (diuretics, ACE‑inhibitors, ARBs, antiretrovirals, anti‑TB drugs)**: Diuretics can precipitate dehydration; ACE‑I/ARBs may cause renal hypoperfusion; some antiretrovirals cause nephrotoxicity.
+- **Past renal disease (CKD, glomerulonephritis, sickle‑cell nephropathy)**: Baseline renal reserve determines ability to handle fluid loads or losses.
+- **Pregnancy status**: Physiological plasma volume expansion; pre‑eclampsia can cause abrupt fluid shifts.
+- **Dietary sodium intake**: High salt intake promotes water retention, worsening overload.
+- **Symptoms of orthostatic intolerance (dizziness, syncope)**: Suggest intravascular depletion.
 
 ### Examination findings and pathophysiology  
 
-| Finding | Mechanistic explanation |
-|---|---|
-| **Weight change** (gain >2 kg in 24 h or loss >2 kg) | Direct measure of net fluid balance. |
-| **Blood pressure** (hypotension or hypertension) | Low BP → volume depletion; high BP with signs of overload may reflect fluid excess or renal sodium retention. |
-| **Pulse** (tachycardia) | Compensatory response to hypovolaemia; may also be sinus tachycardia from fever or pain. |
-| **Skin turgor & mucous membranes** (dry, poor recoil) | Dehydration reduces interstitial fluid, flattening skin folds. |
-| **Capillary refill** (>2 s) | Peripheral hypoperfusion from low intravascular volume. |
-| **Jugular venous pressure (JVP)** (elevated) | Increased right‑sided filling pressures from volume overload or heart failure. |
-| **Peripheral edema** (pitting, dependent) | Elevated hydrostatic pressure in capillaries pushes fluid into interstitium. |
-| **Facial/ periorbital edema** | Low oncotic pressure (hypo‑albuminaemia) or fluid overload. |
-| **Ascites** (shifting dullness, fluid wave) | Severe plasma volume expansion with portal hypertension or hypo‑albuminaemia. |
-| **Lung auscultation** (crackles, wheeze) | Interstitial fluid from pulmonary oedema. |
-| **Heart sounds** (S3 gallop) | Volume overload leading to rapid ventricular filling. |
-| **Abdominal exam** (bowel oedema, tenderness) | Fluid sequestration in gut wall (common in severe malaria, sepsis). |
-| **Neurological status** (confusion, lethargy) | Cerebral hypoperfusion in dehydration or cerebral oedema in severe overload. |
+- **Weight change (gain >2 kg in 24 h or loss >2 kg)**: Direct measure of net fluid balance.
+- **Blood pressure (hypotension or hypertension)**: Low BP → volume depletion; high BP with signs of overload may reflect fluid excess or renal sodium retention.
+- **Pulse (tachycardia)**: Compensatory response to hypovolaemia; may also be sinus tachycardia from fever or pain.
+- **Skin turgor & mucous membranes (dry, poor recoil)**: Dehydration reduces interstitial fluid, flattening skin folds.
+- **Capillary refill (>2 s)**: Peripheral hypoperfusion from low intravascular volume.
+- **Jugular venous pressure (JVP) (elevated)**: Increased right‑sided filling pressures from volume overload or heart failure.
+- **Peripheral edema (pitting, dependent)**: Elevated hydrostatic pressure in capillaries pushes fluid into interstitium.
+- **Facial/ periorbital edema**: Low oncotic pressure (hypo‑albuminaemia) or fluid overload.
+- **Ascites (shifting dullness, fluid wave)**: Severe plasma volume expansion with portal hypertension or hypo‑albuminaemia.
+- **Lung auscultation (crackles, wheeze)**: Interstitial fluid from pulmonary oedema.
+- **Heart sounds (S3 gallop)**: Volume overload leading to rapid ventricular filling.
+- **Abdominal exam (bowel oedema, tenderness)**: Fluid sequestration in gut wall (common in severe malaria, sepsis).
+- **Neurological status (confusion, lethargy)**: Cerebral hypoperfusion in dehydration or cerebral oedema in severe overload.
 
 ---
 
@@ -97,21 +89,19 @@ These causal chains guide the clinical focus: identify the primary driver (loss 
 
 ## Investigations  
 
-| Test | What it answers | Interpretation |
-|---|---|---|
-| Full blood count | Anaemia, infection, eosinophilia | Low Hb suggests chronic disease; leukocytosis points to infection |
-| Serum electrolytes & creatinine | Volume status, renal function, electrolyte disturbances | ↑Creatinine = AKI/CKD; ↑Na with oedema = hypernatraemic dehydration |
-| Blood urea nitrogen (BUN) | Prerenal vs intrinsic renal loss | BUN/Cr >20 suggests hypovolaemia |
-| Serum albumin | Oncotic pressure, protein loss | <30 g/L indicates hypo‑albuminaemia (nephrotic, liver disease) |
-| Urinalysis (dipstick + microscopy) | Proteinuria, haematuria, casts | +3 protein = nephrotic; granular casts = ATN |
-| Urine sodium & fractional excretion of Na (FENa) | Prerenal vs intrinsic AKI | FENa <1% = prerenal; >2% = intrinsic |
-| Chest X‑ray | Pulmonary congestion, pleural effusion | Kerley B lines, cardiomegaly = fluid overload |
-| Echocardiogram (if available) | Cardiac function, ejection fraction | EF <40% supports heart failure |
-| Abdominal ultrasound | Ascites, liver size, renal size | Small kidneys = chronic disease; large liver with nodularity = cirrhosis |
-| BNP/NT‑proBNP | Cardiac vs renal cause of oedema | Elevated >500 pg/mL favors heart failure |
-| Malaria rapid diagnostic test / thick smear | Presence of Plasmodium | Positive in febrile patients with oedema |
-| HIV test (if status unknown) | Immunosuppression risk factor | Positive influences differential (TB, nephropathy) |
-| TB GeneXpert (sputum/urine) | Active TB | Positive in disseminated TB causing renal involvement |
+- **Full blood count**: Anaemia, infection, eosinophilia — Low Hb suggests chronic disease; leukocytosis points to infection
+- **Serum electrolytes & creatinine**: Volume status, renal function, electrolyte disturbances — ↑Creatinine = AKI/CKD; ↑Na with oedema = hypernatraemic dehydration
+- **Blood urea nitrogen (BUN)**: Prerenal vs intrinsic renal loss — BUN/Cr >20 suggests hypovolaemia
+- **Serum albumin**: Oncotic pressure, protein loss — <30 g/L indicates hypo‑albuminaemia (nephrotic, liver disease)
+- **Urinalysis (dipstick + microscopy)**: Proteinuria, haematuria, casts — +3 protein = nephrotic; granular casts = ATN
+- **Urine sodium & fractional excretion of Na (FENa)**: Prerenal vs intrinsic AKI — FENa <1% = prerenal; >2% = intrinsic
+- **Chest X‑ray**: Pulmonary congestion, pleural effusion — Kerley B lines, cardiomegaly = fluid overload
+- **Echocardiogram (if available)**: Cardiac function, ejection fraction — EF <40% supports heart failure
+- **Abdominal ultrasound**: Ascites, liver size, renal size — Small kidneys = chronic disease; large liver with nodularity = cirrhosis
+- **BNP/NT‑proBNP**: Cardiac vs renal cause of oedema — Elevated >500 pg/mL favors heart failure
+- **Malaria rapid diagnostic test / thick smear**: Presence of Plasmodium — Positive in febrile patients with oedema
+- **HIV test (if status unknown)**: Immunosuppression risk factor — Positive influences differential (TB, nephropathy)
+- **TB GeneXpert (sputum/urine)**: Active TB — Positive in disseminated TB causing renal involvement
 
 ---
 
@@ -121,11 +111,9 @@ These causal chains guide the clinical focus: identify the primary driver (loss 
 
 2. **Severity grading** (adapted for bedside use):  
 
-| Category | Clinical criteria | Management urgency |
-|---|---|---|
-| Mild | Weight change <2 kg, stable vitals, urine output >0.5 mL/kg/h, no organ dysfunction | Outpatient monitoring or oral therapy |
-| Moderate | Weight change 2–5 kg, BP borderline, urine output 0.3–0.5 mL/kg/h, early signs of organ stress (elevated creatinine, mild dyspnoea) | Admit, IV fluid titration or diuretics, close labs |
-| Severe | Weight change >5 kg, hypotension or severe hypertension, urine output <0.3 mL/kg/h, overt organ failure (pulmonary oedema, encephalopathy, AKI stage 3) | ICU/high‑dependency care, aggressive fluid management, treat underlying cause urgently |
+- **Mild**: Weight change <2 kg, stable vitals, urine output >0.5 mL/kg/h, no organ dysfunction — Outpatient monitoring or oral therapy
+- **Moderate**: Weight change 2–5 kg, BP borderline, urine output 0.3–0.5 mL/kg/h, early signs of organ stress (elevated creatinine, mild dyspnoea) — Admit, IV fluid titration or diuretics, close labs
+- **Severe**: Weight change >5 kg, hypotension or severe hypertension, urine output <0.3 mL/kg/h, overt organ failure (pulmonary oedema, encephalopathy, AKI stage 3) — ICU/high‑dependency care, aggressive fluid management, treat underlying cause urgently
 
 3. **Document primary diagnosis** (e.g., “Severe hypovolaemic dehydration secondary to acute gastro‑enteritis in a HIV‑positive adult”) and **secondary contributors** (e.g., “Concurrent mild AKI”).  
 
@@ -140,13 +128,11 @@ By following this structured approach, Year‑4 MBChB students will be able to r
 
 ## Management  
 **Immediate stabilisation**  
-| Problem | Immediate action | Rationale |
-|---|---|---|
-| Hypovolaemia (SBP < 90 mmHg, tachycardia) | Rapid isotonic crystalloid bolus (e.g. normal saline) via large‑bore IV; reassess haemodynamics after 250 ml | Restores intravascular volume, improves perfusion |
-| Hypervolaemia with pulmonary oedema | Give high‑flow oxygen, position upright, start loop diuretic IV, consider non‑invasive ventilation if SpO₂ < 90 % | Reduces preload, improves gas exchange |
-| Severe hyponatraemia with seizures or coma | Hypertonic saline (3 %) bolus under cardiac monitoring | Raises serum Na + rapidly enough to stop cerebral oedema |
-| Hyperkalaemia with ECG changes | Calcium gluconate IV (to stabilise myocardium), insulin + glucose, nebulised β‑agonist, consider loop diuretic or dialysis | Protects heart while shifting K⁺ intracellularly |
-| Acute kidney injury (AKI) with oliguria | Stop nephrotoxic drugs, optimise preload, consider renal replacement therapy if refractory | Prevents further renal insult |
+- **Hypovolaemia (SBP < 90 mmHg, tachycardia)**: Rapid isotonic crystalloid bolus (e.g. normal saline) via large‑bore IV; reassess haemodynamics after 250 ml — Restores intravascular volume, improves perfusion
+- **Hypervolaemia with pulmonary oedema**: Give high‑flow oxygen, position upright, start loop diuretic IV, consider non‑invasive ventilation if SpO₂ < 90 % — Reduces preload, improves gas exchange
+- **Severe hyponatraemia with seizures or coma**: Hypertonic saline (3 %) bolus under cardiac monitoring — Raises serum Na + rapidly enough to stop cerebral oedema
+- **Hyperkalaemia with ECG changes**: Calcium gluconate IV (to stabilise myocardium), insulin + glucose, nebulised β‑agonist, consider loop diuretic or dialysis — Protects heart while shifting K⁺ intracellularly
+- **Acute kidney injury (AKI) with oliguria**: Stop nephrotoxic drugs, optimise preload, consider renal replacement therapy if refractory — Prevents further renal insult
 
 **Definitive treatment** – directed at the underlying aetiology  
 

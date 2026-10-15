@@ -15,12 +15,10 @@
 ## Causes and risk factors
 
 ### Common Etiological Agents
-| Clinical Setting | Primary Bacterial Pathogens | Tropical / Encephalitic Mimics |
-|---|---|---|
-| Community-acquired (Adults) | *Streptococcus pneumoniae*, *Neisseria meningitidis* | *Herpes simplex virus-1 (HSV-1)*, Cerebral malaria |
-| Immunocompromised / Elderly | *Listeria monocytogenes*, Gram-negative bacilli | *Cryptococcus neoformans*, *Mycobacterium tuberculosis* |
-| Basilar skull fracture / Post-trauma | *Streptococcus pneumoniae*, *Staphylococcus aureus* | Rabies virus (animal bite history) |
-| Post-neurosurgery / Shunts | *Staphylococcus epidermidis*, *Pseudomonas aeruginosa* | Abscess or subdural empyema |
+- **Community-acquired (Adults)**: *Streptococcus pneumoniae*, *Neisseria meningitidis* — *Herpes simplex virus-1 (HSV-1)*, Cerebral malaria
+- **Immunocompromised / Elderly**: *Listeria monocytogenes*, Gram-negative bacilli — *Cryptococcus neoformans*, *Mycobacterium tuberculosis*
+- **Basilar skull fracture / Post-trauma**: *Streptococcus pneumoniae*, *Staphylococcus aureus* — Rabies virus (animal bite history)
+- **Post-neurosurgery / Shunts**: *Staphylococcus epidermidis*, *Pseudomonas aeruginosa* — Abscess or subdural empyema
 
 ### Kenyan Context and Local Risk Factors
 * **HIV/AIDS:** Major predisposing factor in our wards. Advanced immunosuppression radically alters the differential: *Cryptococcus neoformans* and *Mycobacterium tuberculosis* (TBM) often outnumber classic acute pyogenic bacteria. Also predisposes to pneumococcal bacteremia and *Listeria*.

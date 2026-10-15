@@ -1,4 +1,4 @@
-# Respiratory Medicine Question Bank: 15 Clinical MCQs with Explanations
+# Respiratory Medicine Question Bank: 15 Clinical MCQs
 
 ## Key points
 

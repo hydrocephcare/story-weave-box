@@ -1,4 +1,4 @@
-# Approach to Cardiovascular Symptoms and Examination — Year 4 IMED
+# Approach to Cardiovascular Symptoms and Examination
 
 *Clinical method notes · Start with the patient, then use the findings to narrow the diagnosis.*
 
@@ -17,16 +17,14 @@ Use an ABCDE approach, call for senior/emergency help early, monitor vital signs
 
 ## Anatomy and physiology you need  
 
-| Structure / system | Why it matters for the presenting cardiovascular complaint |
-|---|---|
-| **Myocardial fibres (subendocardial vs subepicardial)** | Subendocardial layers are most vulnerable to ischaemia because they receive blood during diastole; loss of contractility here produces early systolic dysfunction and can manifest as exertional dyspnoea before overt chest pain. |
-| **Coronary arterial tree (left main, LAD, circumflex, RCA)** | Occlusion of the left main or proximal LAD rapidly compromises >70 % of left‑ventricular mass → acute coronary syndrome; a right‑sided lesion may present with isolated inferior ST changes and bradyarrhythmia. |
-| **Aortic wall layers (intima, media, adventitia) and vasa vasorum** | A tear in the intima with propagation through the media creates a false lumen (dissection). The presence of aortic media cystic necrosis (e.g., in hypertension) predisposes to this, explaining tearing chest pain radiating to the back and pulse deficits. |
-| **Cardiac conduction system (SA node, AV node, His‑Purkinje)** | Ischaemia or fibrosis here produces arrhythmias that can cause palpitations, syncope or haemodynamic collapse; recognising a regular narrow‑complex tachycardia versus an irregular irregular rhythm guides immediate management. |
-| **Venous return pathways (jugular veins, superior/inferior vena cava, hepatic veins)** | Elevated right‑atrial pressure transmits back to the jugular veins (raised JVP) and hepatic veins (congestive hepatomegaly). The examiner assesses JVP height and hepato‑jugular reflux to infer right‑sided failure or tamponade. |
-| **Pulmonary capillary bed and alveolar fluid dynamics** | Increased left‑atrial pressure → pulmonary venous hypertension → transudation of fluid into interstitium and alveoli, producing crackles and orthopnoea. Understanding Starling forces helps the examiner link dyspnoea to left‑sided failure. |
-| **Peripheral arterial tree (radial, femoral, popliteal)** | Pulse deficits or radio‑femoral delay suggest large‑vessel obstruction (e.g., coarctation, dissection). The examiner compares pulse timing and amplitude to localise the lesion. |
-| **Valvular anatomy (leaflet motion, annulus, chordae tendineae)** | Stenosis creates a pressure gradient that can be heard as a systolic ejection murmur; regurgitation produces a holosystolic murmur radiating to the apex or back. The examiner correlates murmur timing, location and radiation with the underlying valve lesion. |
+- **Myocardial fibres (subendocardial vs subepicardial)**: Subendocardial layers are most vulnerable to ischaemia because they receive blood during diastole; loss of contractility here produces early systolic dysfunction and can manifest as exertional dyspnoea before overt chest pain.
+- **Coronary arterial tree (left main, LAD, circumflex, RCA)**: Occlusion of the left main or proximal LAD rapidly compromises >70 % of left‑ventricular mass → acute coronary syndrome; a right‑sided lesion may present with isolated inferior ST changes and bradyarrhythmia.
+- **Aortic wall layers (intima, media, adventitia) and vasa vasorum**: A tear in the intima with propagation through the media creates a false lumen (dissection). The presence of aortic media cystic necrosis (e.g., in hypertension) predisposes to this, explaining tearing chest pain radiating to the back and pulse deficits.
+- **Cardiac conduction system (SA node, AV node, His‑Purkinje)**: Ischaemia or fibrosis here produces arrhythmias that can cause palpitations, syncope or haemodynamic collapse; recognising a regular narrow‑complex tachycardia versus an irregular irregular rhythm guides immediate management.
+- **Venous return pathways (jugular veins, superior/inferior vena cava, hepatic veins)**: Elevated right‑atrial pressure transmits back to the jugular veins (raised JVP) and hepatic veins (congestive hepatomegaly). The examiner assesses JVP height and hepato‑jugular reflux to infer right‑sided failure or tamponade.
+- **Pulmonary capillary bed and alveolar fluid dynamics**: Increased left‑atrial pressure → pulmonary venous hypertension → transudation of fluid into interstitium and alveoli, producing crackles and orthopnoea. Understanding Starling forces helps the examiner link dyspnoea to left‑sided failure.
+- **Peripheral arterial tree (radial, femoral, popliteal)**: Pulse deficits or radio‑femoral delay suggest large‑vessel obstruction (e.g., coarctation, dissection). The examiner compares pulse timing and amplitude to localise the lesion.
+- **Valvular anatomy (leaflet motion, annulus, chordae tendineae)**: Stenosis creates a pressure gradient that can be heard as a systolic ejection murmur; regurgitation produces a holosystolic murmur radiating to the apex or back. The examiner correlates murmur timing, location and radiation with the underlying valve lesion.
 
 ---
 
@@ -168,14 +166,12 @@ Proceed to **hypertension and hypertensive emergencies**, then heart failure, ac
 
 ## Complications and prognosis  
 
-| Primary syndrome | Acute complications | Chronic sequelae | Key prognostic determinants |
-|---|---|---|---|
-| Acute coronary syndrome | Ventricular fibrillation, cardiogenic shock, papillary‑muscle rupture, free‑wall rupture, acute mitral regurgitation | Ischaemic cardiomyopathy, heart failure with reduced ejection fraction, ventricular aneurysm, arrhythmogenic scar | Infarct size (peak troponin, ECG changes), reperfusion delay, left‑ventricular ejection fraction, presence of diabetes or chronic kidney disease |
-| Acute decompensated heart failure | Pulmonary oedema, severe hypoxaemia, arrhythmia, renal hypoperfusion (cardiorenal syndrome), hepatic congestion | Progressive systolic/diastolic dysfunction, atrial fibrillation, cachexia, thrombo‑embolism from stasis | NYHA class at discharge, natriuretic peptide level, renal function, adherence to guideline‑directed medical therapy |
-| Aortic dissection (type A) | Cardiac tamponade, aortic regurgitation, myocardial ischaemia, stroke, renal malperfusion | Chronic aortic aneurysm, recurrent dissection, hypertension‑related aortopathy | Extent of dissection, involvement of coronary or cerebral vessels, time to surgical repair, pre‑existing connective‑tissue disease |
-| Pulmonary embolism | Right‑ventricular failure, haemodynamic collapse, infarction‑related pleuritic pain, haemoptysis | Chronic thrombo‑embolic pulmonary hypertension, recurrent emboli | RV/LV diameter ratio on CT, troponin/BNP elevation, underlying malignancy or thrombophilia |
-| Pericardial tamponade | Pulsus paradoxus, electrical alternans, shock | Constrictive pericarditis (if chronic effusion), recurrent effusion | Rate of fluid accumulation, volume of effusion, underlying cause (malignancy, uremia, infection) |
-| Valvular disease (e.g., severe aortic stenosis) | Syncope, acute decompensation, sudden death | Progressive LV hypertrophy, heart failure, atrial fibrillation | Valve area/gradient, symptom burden, LV systolic function, presence of coronary disease |
+- **Acute coronary syndrome**: Ventricular fibrillation, cardiogenic shock, papillary‑muscle rupture, free‑wall rupture, acute mitral regurgitation — Ischaemic cardiomyopathy, heart failure with reduced ejection fraction, ventricular aneurysm, arrhythmogenic scar — Infarct size (peak troponin, ECG changes), reperfusion delay, left‑ventricular ejection fraction, presence of diabetes or chronic kidney disease
+- **Acute decompensated heart failure**: Pulmonary oedema, severe hypoxaemia, arrhythmia, renal hypoperfusion (cardiorenal syndrome), hepatic congestion — Progressive systolic/diastolic dysfunction, atrial fibrillation, cachexia, thrombo‑embolism from stasis — NYHA class at discharge, natriuretic peptide level, renal function, adherence to guideline‑directed medical therapy
+- **Aortic dissection (type A)**: Cardiac tamponade, aortic regurgitation, myocardial ischaemia, stroke, renal malperfusion — Chronic aortic aneurysm, recurrent dissection, hypertension‑related aortopathy — Extent of dissection, involvement of coronary or cerebral vessels, time to surgical repair, pre‑existing connective‑tissue disease
+- **Pulmonary embolism**: Right‑ventricular failure, haemodynamic collapse, infarction‑related pleuritic pain, haemoptysis — Chronic thrombo‑embolic pulmonary hypertension, recurrent emboli — RV/LV diameter ratio on CT, troponin/BNP elevation, underlying malignancy or thrombophilia
+- **Pericardial tamponade**: Pulsus paradoxus, electrical alternans, shock — Constrictive pericarditis (if chronic effusion), recurrent effusion — Rate of fluid accumulation, volume of effusion, underlying cause (malignancy, uremia, infection)
+- **Valvular disease (e.g., severe aortic stenosis)**: Syncope, acute decompensation, sudden death — Progressive LV hypertrophy, heart failure, atrial fibrillation — Valve area/gradient, symptom burden, LV systolic function, presence of coronary disease
 
 **Mechanistic insight for the examiner** – When you hear a murmur or see a raised JVP, think of the underlying pressure‑volume relationship. For example, a rapid‑onset pericardial effusion raises intrapericardial pressure, equalising diastolic pressures across chambers and precipitating tamponade. In chronic aortic stenosis, the LV faces a fixed afterload; concentric hypertrophy maintains wall stress but eventually leads to diastolic dysfunction and subendocardial ischaemia, explaining exertional syncope. Examiners expect you to link the bedside finding to the pathophysiology and then to the most important prognostic marker (e.g., EF in MI, RV dysfunction in PE).
 

@@ -300,14 +300,12 @@ It is linked to **anti-centromere antibody**. The skin disease is limited to han
 
 ### 4. Difference between polymyositis and dermatomyositis (5 marks)
 
-| Feature | Polymyositis | Dermatomyositis |
-|---|---|---|
-| Skin | No rash | Heliotrope rash, Gottron's papules, shawl sign |
-| Muscle | Symmetrical proximal weakness | Same proximal weakness |
-| Age | Adults (over 20) | Children and adults |
-| Cancer link | Weaker | Stronger (screen for malignancy) |
-| Biopsy | Endomysial inflammation (CD8 T cells) | Perifascicular atrophy, perivascular inflammation |
-| Both | Raised CK, EMG changes, anti-Jo-1 in some | Raised CK, EMG changes |
+- **Skin**: No rash — Heliotrope rash, Gottron's papules, shawl sign
+- **Muscle**: Symmetrical proximal weakness — Same proximal weakness
+- **Age**: Adults (over 20) — Children and adults
+- **Cancer link**: Weaker — Stronger (screen for malignancy)
+- **Biopsy**: Endomysial inflammation (CD8 T cells) — Perifascicular atrophy, perivascular inflammation
+- **Both**: Raised CK, EMG changes, anti-Jo-1 in some — Raised CK, EMG changes
 
 ### 5. Features of fibromyalgia (5 marks)
 

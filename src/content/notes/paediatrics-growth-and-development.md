@@ -89,14 +89,12 @@ A **z-score** describes how far a measurement is from the reference median in st
 
 ### Common WHO growth indicators
 
-| Indicator | What it assesses | Important interpretation |
-|---|---|---|
-| Weight-for-age (WFA) | Weight relative to age | Low WFA indicates underweight but does not distinguish wasting from stunting |
-| Length/height-for-age (L/HA) | Linear growth relative to age | Below −2 SD indicates stunting; below −3 SD indicates severe stunting |
-| Weight-for-length/height (WFL/H) | Weight relative to length/height | Below −2 SD indicates wasting; below −3 SD indicates severe wasting |
-| BMI-for-age | BMI relative to age and sex | Helps assess thinness and excess weight using the correct child chart |
-| Head circumference-for-age | Head growth relative to age and sex | Unusually small or large values, or abnormal trajectory, need assessment |
-| MUAC | Arm circumference | Screens for acute malnutrition in the relevant age group |
+- **Weight-for-age (WFA)**: Weight relative to age — Low WFA indicates underweight but does not distinguish wasting from stunting
+- **Length/height-for-age (L/HA)**: Linear growth relative to age — Below −2 SD indicates stunting; below −3 SD indicates severe stunting
+- **Weight-for-length/height (WFL/H)**: Weight relative to length/height — Below −2 SD indicates wasting; below −3 SD indicates severe wasting
+- **BMI-for-age**: BMI relative to age and sex — Helps assess thinness and excess weight using the correct child chart
+- **Head circumference-for-age**: Head growth relative to age and sex — Unusually small or large values, or abnormal trajectory, need assessment
+- **MUAC**: Arm circumference — Screens for acute malnutrition in the relevant age group
 
 For WHO child growth standards, z-scores below −2 or above +2 often warrant further assessment depending on the indicator and age. Use the exact chart and national protocol; a chart is a screening and monitoring tool, not a diagnosis by itself.
 
@@ -140,18 +138,16 @@ Some frameworks assess cognition/problem-solving separately; include it in your 
 
 Milestones are approximate ranges, not deadlines. There is normal variation; assess the overall pattern and any loss of skills.
 
-| Approximate age | Examples of skills commonly emerging |
-|---|---|
-| 2 months | Social smile, reacts to loud sounds, begins to hold head up when prone |
-| 4 months | Holds head steady better, brings hands to mouth, enjoys interaction and makes sounds |
-| 6 months | Rolls, reaches for objects, laughs and responds to familiar people |
-| 9 months | Sits without support, transfers objects, babbles repetitive sounds, responds to own name |
-| 12 months | Pulls to stand or stands holding on, uses a pincer grasp, gestures and may say a meaningful word |
-| 18 months | Walks independently, scribbles, uses several meaningful words, points to show interest |
-| 2 years | Runs, kicks a ball, uses two-word phrases, follows simple instructions and engages in simple pretend play |
-| 3 years | Pedals a tricycle or similar, uses short sentences, participates in interactive play and may copy a circle |
-| 4 years | Hops on one foot or balances briefly, tells simple stories, plays with other children and draws a person with some features |
-| 5 years | Hops, follows rules in simple games, tells a story and draws/writes some letters or numbers |
+- **2 months**: Social smile, reacts to loud sounds, begins to hold head up when prone
+- **4 months**: Holds head steady better, brings hands to mouth, enjoys interaction and makes sounds
+- **6 months**: Rolls, reaches for objects, laughs and responds to familiar people
+- **9 months**: Sits without support, transfers objects, babbles repetitive sounds, responds to own name
+- **12 months**: Pulls to stand or stands holding on, uses a pincer grasp, gestures and may say a meaningful word
+- **18 months**: Walks independently, scribbles, uses several meaningful words, points to show interest
+- **2 years**: Runs, kicks a ball, uses two-word phrases, follows simple instructions and engages in simple pretend play
+- **3 years**: Pedals a tricycle or similar, uses short sentences, participates in interactive play and may copy a circle
+- **4 years**: Hops on one foot or balances briefly, tells simple stories, plays with other children and draws a person with some features
+- **5 years**: Hops, follows rules in simple games, tells a story and draws/writes some letters or numbers
 
 Use an age-specific milestone resource and local child health record for detailed milestone ranges. Never diagnose a delay from one missed milestone alone.
 

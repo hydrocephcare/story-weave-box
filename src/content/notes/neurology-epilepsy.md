@@ -7,26 +7,22 @@
 **Status epilepticus (SE)** – a seizure lasting ≥5 min or recurrent seizures without full recovery of consciousness between episodes. It is a medical emergency because neuronal injury and systemic complications increase rapidly after the first few minutes.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to seizures |
-|---|---|
-| Cerebral cortex | Site of synchronous neuronal firing that produces clinical seizures |
-| Thalamocortical circuits | Modulate spread of ictal activity; important in generalized seizures |
-| Hippocampus & limbic system | Common focus for temporal lobe epilepsy |
-| Basal ganglia | Inhibitory influence; dysfunction can facilitate motor seizures |
-| GABAergic interneurons | Primary inhibitory neurotransmission; loss → hyperexcitability |
-| Glutamatergic neurons | Main excitatory drive; excess release promotes ictogenesis |
-| Blood‑brain barrier | Disruption allows inflammatory mediators to lower seizure threshold |
+- **Cerebral cortex**: Site of synchronous neuronal firing that produces clinical seizures
+- **Thalamocortical circuits**: Modulate spread of ictal activity; important in generalized seizures
+- **Hippocampus & limbic system**: Common focus for temporal lobe epilepsy
+- **Basal ganglia**: Inhibitory influence; dysfunction can facilitate motor seizures
+- **GABAergic interneurons**: Primary inhibitory neurotransmission; loss → hyperexcitability
+- **Glutamatergic neurons**: Main excitatory drive; excess release promotes ictogenesis
+- **Blood‑brain barrier**: Disruption allows inflammatory mediators to lower seizure threshold
 
 ## Causes and risk factors (Kenyan context)  
 
-| Category | Typical aetiologies in Kenya |
-|---|---|
-| Structural brain lesions | Post‑traumatic scar, stroke, cerebral malaria, tuberculoma, HIV‑associated neurocognitive disorder, neurocysticercosis |
-| Metabolic / toxic | Hypoglycaemia, hyponatraemia, uremia, antiretroviral toxicity, antimalarial drug interactions |
-| Infectious | HIV, cerebral malaria, tuberculous meningitis, bacterial meningitis, neurocysticercosis |
-| Genetic / developmental | Congenital malformations, perinatal hypoxia‑ischemia, sickle‑cell vaso‑occlusive cerebral infarcts |
-| Immune‑mediated | Autoimmune encephalitis (e.g., NMDA‑R), rheumatic fever with chorea |
-| Unknown (idiopathic) | Often reflects genetic predisposition not yet identified |
+- **Structural brain lesions**: Post‑traumatic scar, stroke, cerebral malaria, tuberculoma, HIV‑associated neurocognitive disorder, neurocysticercosis
+- **Metabolic / toxic**: Hypoglycaemia, hyponatraemia, uremia, antiretroviral toxicity, antimalarial drug interactions
+- **Infectious**: HIV, cerebral malaria, tuberculous meningitis, bacterial meningitis, neurocysticercosis
+- **Genetic / developmental**: Congenital malformations, perinatal hypoxia‑ischemia, sickle‑cell vaso‑occlusive cerebral infarcts
+- **Immune‑mediated**: Autoimmune encephalitis (e.g., NMDA‑R), rheumatic fever with chorea
+- **Unknown (idiopathic)**: Often reflects genetic predisposition not yet identified
 
 Risk factors specific to our setting include poor malaria control, high HIV prevalence, limited neuro‑imaging, and delayed treatment of bacterial meningitis or TB.
 
@@ -46,32 +42,28 @@ In status epilepticus, prolonged depolarisation leads to intracellular calcium o
 
 **History – key questions**  
 
-| Domain | Questions | Rationale |
-|---|---|---|
-| Seizure description | “What was the person doing when it started? How long did it last? Was there a loss of awareness? Any tonic‑clonic movements, stiffening, rhythmic jerking, automatisms, tongue biting, incontinence?” | Determines type (focal vs generalized), duration (helps identify status), and whether the event was a true epileptic seizure or a mimic. |
-| Pre‑ictal and post‑ictal state | “Did they feel an aura, headache, visual changes, or a sense of déjà vu before the event? How long did confusion, fatigue or headache last afterwards?” | Aura suggests focal onset; post‑ictal confusion is typical of generalized tonic‑clonic seizures and helps differentiate from psychogenic events. |
-| Triggers / precipitants | “Recent fever, head injury, missed antiepileptic drugs, alcohol binge, sleep deprivation, menstrual cycle, new medication, substance use?” | Identifies reversible precipitants that may need urgent correction. |
-| Past medical & family history | “Previous seizures, known CNS infection (TB meningitis, cerebral malaria), stroke, head trauma, HIV status, rheumatic fever, sickle‑cell disease, neuro‑developmental disorder?” | Many local etiologies (HIV, TB, malaria, sickle‑cell) predispose to epilepsy; family history points to genetic epilepsy. |
-| Medication & adherence | “Current drugs (including antiretrovirals, anti‑TB, antimalarials), recent changes, missed doses?” | Non‑adherence is a common cause of breakthrough seizures and status. |
-| Social & environmental factors | “Alcohol use, recreational drugs, exposure to pesticides, occupational hazards, access to care?” | Substance‑related seizures are frequent in young adults. |
-| Pregnancy & obstetric history (women) | “Current pregnancy, complications, pre‑eclampsia, eclampsia?” | Eclampsia is a cause of status in pregnancy. |
-| Frequency & pattern | “How many episodes, interval between them, any clustering?” | Helps classify epilepsy syndrome and assess control. |
-| Safety & impact | “Driving, work, school performance, injuries, stigma?” | Guides counseling and need for protective measures. |
+- **Seizure description**: “What was the person doing when it started? How long did it last? Was there a loss of awareness? Any tonic‑clonic movements, stiffening, rhythmic jerking, automatisms, tongue biting, incontinence?” — Determines type (focal vs generalized), duration (helps identify status), and whether the event was a true epileptic seizure or a mimic.
+- **Pre‑ictal and post‑ictal state**: “Did they feel an aura, headache, visual changes, or a sense of déjà vu before the event? How long did confusion, fatigue or headache last afterwards?” — Aura suggests focal onset; post‑ictal confusion is typical of generalized tonic‑clonic seizures and helps differentiate from psychogenic events.
+- **Triggers / precipitants**: “Recent fever, head injury, missed antiepileptic drugs, alcohol binge, sleep deprivation, menstrual cycle, new medication, substance use?” — Identifies reversible precipitants that may need urgent correction.
+- **Past medical & family history**: “Previous seizures, known CNS infection (TB meningitis, cerebral malaria), stroke, head trauma, HIV status, rheumatic fever, sickle‑cell disease, neuro‑developmental disorder?” — Many local etiologies (HIV, TB, malaria, sickle‑cell) predispose to epilepsy; family history points to genetic epilepsy.
+- **Medication & adherence**: “Current drugs (including antiretrovirals, anti‑TB, antimalarials), recent changes, missed doses?” — Non‑adherence is a common cause of breakthrough seizures and status.
+- **Social & environmental factors**: “Alcohol use, recreational drugs, exposure to pesticides, occupational hazards, access to care?” — Substance‑related seizures are frequent in young adults.
+- **Pregnancy & obstetric history (women)**: “Current pregnancy, complications, pre‑eclampsia, eclampsia?” — Eclampsia is a cause of status in pregnancy.
+- **Frequency & pattern**: “How many episodes, interval between them, any clustering?” — Helps classify epilepsy syndrome and assess control.
+- **Safety & impact**: “Driving, work, school performance, injuries, stigma?” — Guides counseling and need for protective measures.
 
 **Examination – what to look for and why**  
 
-| Finding | Why it matters |
-|---|---|
-| General appearance & level of consciousness | Post‑ictal drowsiness, ongoing seizure activity, or a non‑convulsive status may be evident. |
-| Vital signs (BP, pulse, temperature, O₂ sat) | Fever may point to infection; hypotension or hypoxia suggests complications; hypertension may be seen in eclampsia. |
-| Neurological exam – focal deficits | New weakness, cranial nerve palsy, visual field loss, or aphasia indicates a structural lesion (stroke, TB granuloma, malaria‑related infarct). |
-| Post‑ictal tongue bite, bruises, bite marks | Supports a true convulsive seizure; lateral tongue bite is classic. |
-| Skin examination – rash, petechiae | May hint at meningococcemia, severe malaria, or drug reaction. |
-| Cardiovascular exam – murmurs, signs of endocarditis | Rheumatic fever can cause cerebral emboli leading to seizures. |
-| Abdominal exam – splenomegaly, hepatomegaly | Suggests chronic malaria or sickle‑cell disease. |
-| HIV‑related stigmata (oral thrush, lymphadenopathy) | Raises suspicion for opportunistic CNS infections. |
-| Obstetric exam (if pregnant) – uterine height, edema | Helps identify eclampsia or pre‑eclampsia. |
-| Mental status & cognition | Persistent confusion may indicate non‑convulsive status or post‑ictal encephalopathy. |
+- **General appearance & level of consciousness**: Post‑ictal drowsiness, ongoing seizure activity, or a non‑convulsive status may be evident.
+- **Vital signs (BP, pulse, temperature, O₂ sat)**: Fever may point to infection; hypotension or hypoxia suggests complications; hypertension may be seen in eclampsia.
+- **Neurological exam – focal deficits**: New weakness, cranial nerve palsy, visual field loss, or aphasia indicates a structural lesion (stroke, TB granuloma, malaria‑related infarct).
+- **Post‑ictal tongue bite, bruises, bite marks**: Supports a true convulsive seizure; lateral tongue bite is classic.
+- **Skin examination – rash, petechiae**: May hint at meningococcemia, severe malaria, or drug reaction.
+- **Cardiovascular exam – murmurs, signs of endocarditis**: Rheumatic fever can cause cerebral emboli leading to seizures.
+- **Abdominal exam – splenomegaly, hepatomegaly**: Suggests chronic malaria or sickle‑cell disease.
+- **HIV‑related stigmata (oral thrush, lymphadenopathy)**: Raises suspicion for opportunistic CNS infections.
+- **Obstetric exam (if pregnant) – uterine height, edema**: Helps identify eclampsia or pre‑eclampsia.
+- **Mental status & cognition**: Persistent confusion may indicate non‑convulsive status or post‑ictal encephalopathy.
 
 ---
 
@@ -118,12 +110,10 @@ In status epilepticus, prolonged depolarisation leads to intracellular calcium o
 
 **Severity grading for status epilepticus** (used to guide urgency of treatment)  
 
-| Grade | Duration / clinical picture | Immediate action |
-|---|---|---|
-| **Convulsive status** | Continuous tonic‑clonic activity ≥5 min or recurrent seizures without full recovery | Immediate airway protection, IV benzodiazepine, rapid control of seizures. |
-| **Non‑convulsive status** | Altered mental state with EEG seizure activity, no obvious motor signs | Urgent EEG, treat as status with IV benzodiazepine and load antiepileptic. |
-| **Refractory status** | Seizure persists after first‑line benzodiazepine and a second‑line antiepileptic | Escalate to continuous infusions, consider ICU admission, treat underlying cause. |
-| **Super‑refractory** | Status continues >24 h despite anesthetic agents | Multidisciplinary management, address complications (infection, organ failure). |
+- **Convulsive status**: Continuous tonic‑clonic activity ≥5 min or recurrent seizures without full recovery — Immediate airway protection, IV benzodiazepine, rapid control of seizures.
+- **Non‑convulsive status**: Altered mental state with EEG seizure activity, no obvious motor signs — Urgent EEG, treat as status with IV benzodiazepine and load antiepileptic.
+- **Refractory status**: Seizure persists after first‑line benzodiazepine and a second‑line antiepileptic — Escalate to continuous infusions, consider ICU admission, treat underlying cause.
+- **Super‑refractory**: Status continues >24 h despite anesthetic agents — Multidisciplinary management, address complications (infection, organ failure).
 
 **Severity of chronic epilepsy** (for long‑term planning)  
 
@@ -140,14 +130,12 @@ Severity assessment informs choice of antiepileptic class, need for specialist r
 3. **Treat the underlying trigger** – check glucose (treat hypoglycaemia), correct electrolyte disturbances, give antipyretics for fever, start anti‑TB therapy if TB meningitis is suspected, treat malaria promptly, and start ART/PCP prophylaxis in known HIV‑positive patients.  
 
 **Definitive treatment**  
-| Situation | Preferred drug class | Typical agents (no doses) | Rationale |
-|---|---|---|---|
-| Established epilepsy (after seizure control) | Sodium‑channel blockers | Phenytoin, carbamazepine, lamotrigine | Good for focal onset seizures; inexpensive and widely available. |
-| Generalised tonic‑clonic seizures | Broad‑spectrum AEDs | Valproate, levetiracetam, phenobarbital | Effective for both focal and generalized seizures; valproate also covers absence. |
-| Women of child‑bearing age | Avoid teratogenic AEDs | Levetiracetam, lamotrigine | Lower fetal risk. |
-| HIV/TB co‑infection | Consider drug interactions | Adjust doses of enzyme‑inducing AEDs; prefer levetiracetam or valproate if possible | Minimise interaction with rifampicin and ART. |
-| Status epilepticus refractory to benzodiazepine | Second‑line IV AED | Phenytoin, fosphenytoin, valproate, levetiracetam | Rapid loading stops ongoing seizure. |
-| Refractory status (≥ 30 min) | Anesthetic agents | Midazolam infusion, propofol, pentobarbital | Induce burst‑suppression on EEG; ICU monitoring required. |
+- **Established epilepsy (after seizure control)**: Sodium‑channel blockers — Phenytoin, carbamazepine, lamotrigine — Good for focal onset seizures; inexpensive and widely available.
+- **Generalised tonic‑clonic seizures**: Broad‑spectrum AEDs — Valproate, levetiracetam, phenobarbital — Effective for both focal and generalized seizures; valproate also covers absence.
+- **Women of child‑bearing age**: Avoid teratogenic AEDs — Levetiracetam, lamotrigine — Lower fetal risk.
+- **HIV/TB co‑infection**: Consider drug interactions — Adjust doses of enzyme‑inducing AEDs; prefer levetiracetam or valproate if possible — Minimise interaction with rifampicin and ART.
+- **Status epilepticus refractory to benzodiazepine**: Second‑line IV AED — Phenytoin, fosphenytoin, valproate, levetiracetam — Rapid loading stops ongoing seizure.
+- **Refractory status (≥ 30 min)**: Anesthetic agents — Midazolam infusion, propofol, pentobarbital — Induce burst‑suppression on EEG; ICU monitoring required.
 
 **Monitoring & safety**  
 - Continuous pulse oximetry, cardiac monitoring, and frequent neurological checks (Glasgow Coma Scale, seizure activity).  

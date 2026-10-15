@@ -1,4 +1,4 @@
-# Cardiology Question Bank: 15 Clinical MCQs with Explanations
+# Cardiology Question Bank: 15 Clinical MCQs
 
 ## Key points
 

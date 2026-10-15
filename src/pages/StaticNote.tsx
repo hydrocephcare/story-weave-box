@@ -18,7 +18,8 @@ import PageSummary from "@/components/PageSummary";
 import OutlineLine from "@/components/OutlineLine";
 import HeroAurora from "@/components/HeroAurora";
 import { Link, Navigate, useLocation, useNavigate, useNavigationType, useParams } from "react-router-dom";
-import { ArrowUp, Bookmark, Check, Printer, ScanLine, Sparkles } from "lucide-react";
+import { ArrowUp, Bookmark, Check, Printer, ScanLine, ShieldCheck, Sparkles } from "lucide-react";
+import contentMarks from "@/data/contentMarks.json";
 import DriveFileViewer, { type DriveFile } from "@/components/DriveFileViewer";
 import { startDownload } from "@/lib/driveDownload";
 import PaperBody from "@/components/PaperBody";
@@ -196,6 +197,7 @@ function StaticNoteView() {
         <h1 className={`mt-1 font-serif font-bold leading-tight text-foreground ${note.paper ? "text-3xl sm:text-4xl" : "text-4xl sm:text-5xl"}`}>{note.title}</h1>
         {!note.paper && <p className="mt-2 text-sm font-semibold text-muted-foreground">{note.group ?? note.unit}{text ? ` · ${Math.max(1, Math.round(text.split(/\s+/).length / 210))} min read` : ""}{parsed && parsed.headings.length ? ` · ${parsed.headings.length} sections` : ""}</p>}
         <p className="mt-2 text-sm text-muted-foreground">Updated {new Date(note.updated).toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" })}</p>
+        {(contentMarks as { notes: Record<string, string> }).notes[note.slug] && <p className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-bold text-emerald-700 dark:text-emerald-300"><ShieldCheck className="h-3.5 w-3.5" aria-hidden /> Cross-checked by a second AI on {new Date((contentMarks as { notes: Record<string, string> }).notes[note.slug]).toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" })} · not a doctor’s review</p>}
         <button type="button" onClick={() => window.print()} className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-1.5 text-xs font-bold text-muted-foreground hover:border-primary/50 hover:text-primary print:hidden"><Printer className="h-3.5 w-3.5" /> Print or save as PDF</button>
       </header>
         </>

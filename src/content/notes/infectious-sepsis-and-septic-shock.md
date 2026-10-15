@@ -1,4 +1,4 @@
-# Sepsis and septic shock — Year 4 Internal Medicine (Infectious Disease) Notes
+# Sepsis and septic shock
 
 *Clinical reasoning notes. Sepsis kills by delay: time to antibiotics and fluids matters more than the perfect diagnosis.*
 
@@ -14,15 +14,13 @@
 - **Bedside screen (qSOFA):** two or more of **respiratory rate 22 or more, altered mentation, systolic blood pressure 100 or less**. It flags patients at risk: it is a warning, not a diagnosis.
 
 ## Anatomy and physiology you need
-| System | Key anatomical/physiological feature | Clinical relevance |
-|---|---|---|
-| **Circulation** | Endothelial glycocalyx layer, tight junctions, and shear‑stress‑sensitive mechanoreceptors | Damage to glycocalyx releases syndecan‑1, increases vascular permeability, and promotes micro‑thrombi; explains capillary leak and organ hypoperfusion seen in septic shock. |
-| **Immune system** | Pattern‑recognition receptors (TLRs, NOD‑like receptors) on innate cells; complement cascade (classical, alternative, lectin) | TLR activation by LPS or other PAMPs triggers NF‑κB‑driven cytokine storm; complement activation generates C5a, a potent chemoattractant that drives neutrophil recruitment and further endothelial injury. |
-| **Coagulation** | Endothelial tissue factor (TF) expression, protein C pathway, fibrinolysis | TF exposure initiates extrinsic coagulation; loss of protein C and antithrombin in sepsis shifts balance toward fibrin deposition, explaining DIC and micro‑vascular occlusion. |
-| **Respiratory** | Alveolar‑capillary membrane, surfactant production by type II pneumocytes | Inflammatory cytokines impair surfactant synthesis and increase alveolar permeability, leading to non‑cardiogenic pulmonary oedema (ARDS). |
-| **Renal** | Glomerular filtration barrier (fenestrated endothelium, glomerular basement membrane, podocytes) | Cytokine‑mediated endothelial dysfunction and micro‑thrombi reduce GFR; tubular epithelial cell apoptosis from hypoxia and endotoxin causes acute tubular necrosis. |
-| **Hepatic** | Sinusoidal endothelium, Kupffer cells, hepatic arterial buffer response | Kupffer cells phagocytose bacteria and release cytokines; impaired arterial buffer response reduces hepatic perfusion, contributing to cholestasis and coagulopathy. |
-| **Endocrine** | Adrenal cortex (zona fasciculata) and medulla (chromaffin cells) | Sepsis‑induced cytokines suppress ACTH release and cortisol synthesis, leading to relative adrenal insufficiency; catecholamine surge from sympathetic activation further stresses the system. |
+- **Circulation**: Endothelial glycocalyx layer, tight junctions, and shear‑stress‑sensitive mechanoreceptors — Damage to glycocalyx releases syndecan‑1, increases vascular permeability, and promotes micro‑thrombi; explains capillary leak and organ hypoperfusion seen in septic shock.
+- **Immune system**: Pattern‑recognition receptors (TLRs, NOD‑like receptors) on innate cells; complement cascade (classical, alternative, lectin) — TLR activation by LPS or other PAMPs triggers NF‑κB‑driven cytokine storm; complement activation generates C5a, a potent chemoattractant that drives neutrophil recruitment and further endothelial injury.
+- **Coagulation**: Endothelial tissue factor (TF) expression, protein C pathway, fibrinolysis — TF exposure initiates extrinsic coagulation; loss of protein C and antithrombin in sepsis shifts balance toward fibrin deposition, explaining DIC and micro‑vascular occlusion.
+- **Respiratory**: Alveolar‑capillary membrane, surfactant production by type II pneumocytes — Inflammatory cytokines impair surfactant synthesis and increase alveolar permeability, leading to non‑cardiogenic pulmonary oedema (ARDS).
+- **Renal**: Glomerular filtration barrier (fenestrated endothelium, glomerular basement membrane, podocytes) — Cytokine‑mediated endothelial dysfunction and micro‑thrombi reduce GFR; tubular epithelial cell apoptosis from hypoxia and endotoxin causes acute tubular necrosis.
+- **Hepatic**: Sinusoidal endothelium, Kupffer cells, hepatic arterial buffer response — Kupffer cells phagocytose bacteria and release cytokines; impaired arterial buffer response reduces hepatic perfusion, contributing to cholestasis and coagulopathy.
+- **Endocrine**: Adrenal cortex (zona fasciculata) and medulla (chromaffin cells) — Sepsis‑induced cytokines suppress ACTH release and cortisol synthesis, leading to relative adrenal insufficiency; catecholamine surge from sympathetic activation further stresses the system.
 
 ---
 
@@ -49,15 +47,13 @@ If MAP <65 mmHg despite fluids → septic shock
 
 ## 2. Find the source
 
-| Source | Clues |
-|---|---|
-| **Lungs** | Cough, breathlessness, crackles, consolidation on X-ray |
-| **Urine** | Dysuria, loin pain, catheter, pyuria |
-| **Abdomen** | Peritonism, jaundice (cholangitis), diarrhoea, perforation, abscess |
-| **Skin and soft tissue** | Cellulitis, necrotising fasciitis (pain out of proportion), wounds, injection sites |
-| **CNS** | Headache, neck stiffness, rash (meningococcus) |
-| **Blood** | Endocarditis, line infection, malaria |
-| **Obstetric and gynaecological** | Septic abortion, puerperal sepsis, pelvic inflammatory disease |
+- **Lungs**: Cough, breathlessness, crackles, consolidation on X-ray
+- **Urine**: Dysuria, loin pain, catheter, pyuria
+- **Abdomen**: Peritonism, jaundice (cholangitis), diarrhoea, perforation, abscess
+- **Skin and soft tissue**: Cellulitis, necrotising fasciitis (pain out of proportion), wounds, injection sites
+- **CNS**: Headache, neck stiffness, rash (meningococcus)
+- **Blood**: Endocarditis, line infection, malaria
+- **Obstetric and gynaecological**: Septic abortion, puerperal sepsis, pelvic inflammatory disease
 
 **Think local:** **malaria**, **typhoid**, **TB**, **HIV with opportunistic infection**, **meningitis** and **puerperal sepsis** must be on the list in many settings, and are easily missed when the focus is on bacteria alone.
 
@@ -83,17 +79,15 @@ If MAP <65 mmHg despite fluids → septic shock
 
 ## 3. Investigate with purpose
 
-| Test | The question it answers |
-|---|---|
-| **Blood cultures (before antibiotics, two sets)** | Which organism, and which antibiotic works? |
-| **Lactate** | How badly is tissue perfusion failing? Above 2 mmol/L is sepsis-range; above 4 is severe |
-| **Full haemogram** | White cells high or very low (a bad sign), platelets low (DIC) |
-| **Urea, creatinine, electrolytes, liver tests, glucose** | Organ dysfunction; hypoglycaemia is common |
-| **Clotting screen** | Disseminated intravascular coagulation |
-| **Blood gas** | Acidosis and oxygenation |
-| **Urine culture, malaria test, HIV test, chest X-ray** | Source |
-| **Lumbar puncture** (if no contraindication) | Meningitis |
-| **CT or ultrasound** | Collection or obstruction needing drainage |
+- **Blood cultures (before antibiotics, two sets)**: Which organism, and which antibiotic works?
+- **Lactate**: How badly is tissue perfusion failing? Above 2 mmol/L is sepsis-range; above 4 is severe
+- **Full haemogram**: White cells high or very low (a bad sign), platelets low (DIC)
+- **Urea, creatinine, electrolytes, liver tests, glucose**: Organ dysfunction; hypoglycaemia is common
+- **Clotting screen**: Disseminated intravascular coagulation
+- **Blood gas**: Acidosis and oxygenation
+- **Urine culture, malaria test, HIV test, chest X-ray**: Source
+- **Lumbar puncture (if no contraindication)**: Meningitis
+- **CT or ultrasound**: Collection or obstruction needing drainage
 
 **Where results can mislead:** **a normal white count does not exclude sepsis**; elderly, diabetic and immunosuppressed patients may have **no fever**; lactate may rise from **metformin, seizures or liver disease**, not only from shock.
 

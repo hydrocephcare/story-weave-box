@@ -6,29 +6,25 @@
 A reversible neuropsychiatric syndrome caused by accumulation of neurotoxic substances—principally ammonia—in patients with acute or chronic liver dysfunction or portosystemic shunting.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to HE |
-|---|---|
-| Hepatocytes | Detoxify ammonia (urea cycle) and other gut‑derived toxins |
-| Portal vein | Carries ammonia‑rich blood from gut to liver |
-| Portosystemic collaterals | Bypass the liver, allowing toxins to reach systemic circulation |
-| Blood‑brain barrier (BBB) | Normally limits toxin entry; becomes permeable in liver disease |
-| Astrocytes | Convert ammonia to glutamine; excess glutamine causes cellular swelling (cerebral edema) |
-| Basal ganglia & cerebral cortex | Sites of altered neurotransmission producing the clinical spectrum of HE |
+- **Hepatocytes**: Detoxify ammonia (urea cycle) and other gut‑derived toxins
+- **Portal vein**: Carries ammonia‑rich blood from gut to liver
+- **Portosystemic collaterals**: Bypass the liver, allowing toxins to reach systemic circulation
+- **Blood‑brain barrier (BBB)**: Normally limits toxin entry; becomes permeable in liver disease
+- **Astrocytes**: Convert ammonia to glutamine; excess glutamine causes cellular swelling (cerebral edema)
+- **Basal ganglia & cerebral cortex**: Sites of altered neurotransmission producing the clinical spectrum of HE
 
 ## Causes and risk factors  
 
-| Category | Common Kenyan triggers |
-|---|---|
-| Cirrhosis (any aetiology) | Alcoholic, viral hepatitis B/C, non‑alcoholic fatty liver disease |
-| Acute liver failure | Viral hepatitis (A, E), drug‑induced (e.g., paracetamol), toxins |
-| Portosystemic shunts | Spontaneous (cirrhosis) or iatrogenic (TIPS) |
-| Precipitating factors | GI bleed, infection (spontaneous bacterial peritonitis, TB, malaria), electrolyte disturbance (hypokalemia, alkalosis), constipation, excess dietary protein, sedatives (benzodiazepines, opioids), renal dysfunction |
-| HIV‑related | Advanced HIV with opportunistic infections, antiretroviral hepatotoxicity |
-| Tuberculosis | Disseminated TB with hepatic involvement or anti‑TB drug hepatotoxicity |
-| Malaria | Severe falciparum malaria causing hepatic congestion and hemolysis |
-| Sickle cell disease | Chronic hemolysis and hepatic sequestration leading to cholestasis |
-| Rheumatic fever / autoimmune hepatitis | Immune‑mediated liver injury |
-| Pregnancy | Acute fatty liver of pregnancy, HELLP syndrome |
+- **Cirrhosis (any aetiology)**: Alcoholic, viral hepatitis B/C, non‑alcoholic fatty liver disease
+- **Acute liver failure**: Viral hepatitis (A, E), drug‑induced (e.g., paracetamol), toxins
+- **Portosystemic shunts**: Spontaneous (cirrhosis) or iatrogenic (TIPS)
+- **Precipitating factors**: GI bleed, infection (spontaneous bacterial peritonitis, TB, malaria), electrolyte disturbance (hypokalemia, alkalosis), constipation, excess dietary protein, sedatives (benzodiazepines, opioids), renal dysfunction
+- **HIV‑related**: Advanced HIV with opportunistic infections, antiretroviral hepatotoxicity
+- **Tuberculosis**: Disseminated TB with hepatic involvement or anti‑TB drug hepatotoxicity
+- **Malaria**: Severe falciparum malaria causing hepatic congestion and hemolysis
+- **Sickle cell disease**: Chronic hemolysis and hepatic sequestration leading to cholestasis
+- **Rheumatic fever / autoimmune hepatitis**: Immune‑mediated liver injury
+- **Pregnancy**: Acute fatty liver of pregnancy, HELLP syndrome
 
 ## Pathophysiology  
 
@@ -45,34 +41,30 @@ Protein → gut bacteria → NH₃ → portal vein → **impaired hepatic metabo
 
 ## Clinical features  
 
-| Domain | Key questions to ask | Why it matters |
-|---|---|---|
-| **Onset & course** | *When did the change start?* *Was it sudden or gradual?* *Any precipitating event (infection, GI bleed, medication change, surgery)?* | Hepatic encephalopathy (HE) often follows a trigger that raises ammonia or other neurotoxins; rapid onset suggests an acute precipitant, while a slow decline may indicate chronic decompensation. |
-| **Mental status** | *Do you feel “foggy”, confused, sleepy, or have trouble concentrating?* *Any episodes of disorientation, agitation, or hallucinations?* | The spectrum ranges from subtle neurocognitive impairment (minimal HE) to coma; mental status is the cornerstone of grading severity. |
-| **Asterixis** | *Do you notice a “flapping” when you hold your arms out?* *Has a caregiver observed tremor‑like movements?* | Asterixis is a classic motor sign of cortical dysfunction caused by impaired astrocyte metabolism; its presence helps differentiate HE from other metabolic encephalopathies. |
-| **Sleep‑wake cycle** | *Do you nap excessively or have reversed sleep patterns?* | Sleep disturbance is an early manifestation of cerebral ammonia toxicity. |
-| **Behavioral changes** | *Any irritability, aggression, or personality change?* *Any recent episodes of inappropriate laughter or crying?* | Disinhibition and emotional lability reflect frontal lobe involvement. |
-| **Gastro‑intestinal symptoms** | *Nausea, vomiting, constipation, or recent GI bleed?* *Any recent use of laxatives or enemas?* | GI bleeding and constipation increase ammonia production/absorption; they are common precipitants in our setting. |
-| **Medication & substance use** | *Current use of diuretics, lactulose, antibiotics, sedatives, or herbal remedies?* *Alcohol intake?* | Diuretics and sedatives can precipitate HE; lactulose is both a treatment and a potential precipitant if stopped abruptly. |
-| **Infections** | *Fever, cough, dysuria, recent malaria, TB, or HIV‑related illness?* | Infections are the leading precipitant in African hospitals; malaria, TB, and opportunistic infections raise systemic inflammation and ammonia. |
-| **Renal function** | *History of kidney disease, reduced urine output, or recent nephrotoxic drugs?* | Renal impairment reduces ammonia clearance, worsening HE. |
-| **Past liver disease** | *Known cirrhosis, hepatitis B/C, alcoholic liver disease, schistosomiasis, sickle‑cell hepatopathy?* | Underlying chronic liver disease sets the stage; tropical causes (schistosomiasis, sickle‑cell) are common in Kenya. |
-| **Nutritional status** | *Recent weight loss, poor protein intake, or high‑protein meals?* | Both protein excess and severe malnutrition can affect ammonia generation and brain susceptibility. |
+- **Onset & course**: *When did the change start?* *Was it sudden or gradual?* *Any precipitating event (infection, GI bleed, medication change, surgery)?* — Hepatic encephalopathy (HE) often follows a trigger that raises ammonia or other neurotoxins; rapid onset suggests an acute precipitant, while a slow decline may indicate chronic decompensation.
+- **Mental status**: *Do you feel “foggy”, confused, sleepy, or have trouble concentrating?* *Any episodes of disorientation, agitation, or hallucinations?* — The spectrum ranges from subtle neurocognitive impairment (minimal HE) to coma; mental status is the cornerstone of grading severity.
+- **Asterixis**: *Do you notice a “flapping” when you hold your arms out?* *Has a caregiver observed tremor‑like movements?* — Asterixis is a classic motor sign of cortical dysfunction caused by impaired astrocyte metabolism; its presence helps differentiate HE from other metabolic encephalopathies.
+- **Sleep‑wake cycle**: *Do you nap excessively or have reversed sleep patterns?* — Sleep disturbance is an early manifestation of cerebral ammonia toxicity.
+- **Behavioral changes**: *Any irritability, aggression, or personality change?* *Any recent episodes of inappropriate laughter or crying?* — Disinhibition and emotional lability reflect frontal lobe involvement.
+- **Gastro‑intestinal symptoms**: *Nausea, vomiting, constipation, or recent GI bleed?* *Any recent use of laxatives or enemas?* — GI bleeding and constipation increase ammonia production/absorption; they are common precipitants in our setting.
+- **Medication & substance use**: *Current use of diuretics, lactulose, antibiotics, sedatives, or herbal remedies?* *Alcohol intake?* — Diuretics and sedatives can precipitate HE; lactulose is both a treatment and a potential precipitant if stopped abruptly.
+- **Infections**: *Fever, cough, dysuria, recent malaria, TB, or HIV‑related illness?* — Infections are the leading precipitant in African hospitals; malaria, TB, and opportunistic infections raise systemic inflammation and ammonia.
+- **Renal function**: *History of kidney disease, reduced urine output, or recent nephrotoxic drugs?* — Renal impairment reduces ammonia clearance, worsening HE.
+- **Past liver disease**: *Known cirrhosis, hepatitis B/C, alcoholic liver disease, schistosomiasis, sickle‑cell hepatopathy?* — Underlying chronic liver disease sets the stage; tropical causes (schistosomiasis, sickle‑cell) are common in Kenya.
+- **Nutritional status**: *Recent weight loss, poor protein intake, or high‑protein meals?* — Both protein excess and severe malnutrition can affect ammonia generation and brain susceptibility.
 
 ### Examination findings and rationale  
 
-| Finding | What it indicates | Pathophysiologic basis |
-|---|---|---|
-| **Asterixis** (flapping tremor) | Cortical motor dysfunction | Interruption of thalamocortical pathways by astrocyte swelling due to ammonia. |
-| **West‑Haven grade** (1‑4) | Severity of encephalopathy | Grading correlates with level of consciousness and risk of mortality. |
-| **Focal neurological deficits** (absent) | Helps exclude stroke, space‑occupying lesion | HE is a diffuse metabolic process; focal signs suggest alternative diagnosis. |
-| **Miosis or mydriasis** (absent) | Rules out opioid or anticholinergic toxicity | Pupillary changes are drug‑specific, not typical of HE. |
-| **Jaundice, spider angiomas, palmar erythema** | Chronic liver disease | Visual clues to underlying hepatic insufficiency. |
-| **Ascites & peripheral edema** | Portal hypertension & hypoalbuminemia | Fluid shifts reflect advanced cirrhosis, a common substrate for HE. |
-| **Auscultation: asterixis‑related tremor, hyperactive bowel sounds** | Possible constipation or ileus | Reduced gut motility raises ammonia absorption. |
-| **Signs of infection** (fever, tachycardia, lung crackles) | Infective precipitant | Systemic inflammation amplifies neurotoxic effects. |
-| **Scleral icterus, hepatomegaly** | Acute liver injury (e.g., malaria‑related hepatitis) | Helps differentiate acute hepatic failure from chronic decompensation. |
-| **Neurological exam: normal reflexes, no neck rigidity** | Excludes meningitis/encephalitis | Absence of meningeal signs supports metabolic encephalopathy. |
+- **Asterixis (flapping tremor)**: Cortical motor dysfunction — Interruption of thalamocortical pathways by astrocyte swelling due to ammonia.
+- **West‑Haven grade (1‑4)**: Severity of encephalopathy — Grading correlates with level of consciousness and risk of mortality.
+- **Focal neurological deficits (absent)**: Helps exclude stroke, space‑occupying lesion — HE is a diffuse metabolic process; focal signs suggest alternative diagnosis.
+- **Miosis or mydriasis (absent)**: Rules out opioid or anticholinergic toxicity — Pupillary changes are drug‑specific, not typical of HE.
+- **Jaundice, spider angiomas, palmar erythema**: Chronic liver disease — Visual clues to underlying hepatic insufficiency.
+- **Ascites & peripheral edema**: Portal hypertension & hypoalbuminemia — Fluid shifts reflect advanced cirrhosis, a common substrate for HE.
+- **Auscultation: asterixis‑related tremor, hyperactive bowel sounds**: Possible constipation or ileus — Reduced gut motility raises ammonia absorption.
+- **Signs of infection (fever, tachycardia, lung crackles)**: Infective precipitant — Systemic inflammation amplifies neurotoxic effects.
+- **Scleral icterus, hepatomegaly**: Acute liver injury (e.g., malaria‑related hepatitis) — Helps differentiate acute hepatic failure from chronic decompensation.
+- **Neurological exam: normal reflexes, no neck rigidity**: Excludes meningitis/encephalitis — Absence of meningeal signs supports metabolic encephalopathy.
 
 ---
 
@@ -113,27 +105,23 @@ Protein → gut bacteria → NH₃ → portal vein → **impaired hepatic metabo
 
 **Severity grading** follows the West‑Haven criteria:  
 
-| Grade | Clinical picture | Typical management focus |
-|---|---|---|
-| 0 | No detectable changes (minimal HE) – only neuropsych testing | Early lactulose, identify precipitant |
-| 1 | Trivial lack of awareness, euphoria or anxiety, mild asterixis | Oral lactulose, consider rifaximin |
-| 2 | Lethargy, disorientation to time, obvious asterixis | Nasogastric lactulose, start rifaximin |
-| 3 | Somnolence, confusion, inability to perform simple tasks | IV lactulose, aggressive infection control |
-| 4 | Coma, unresponsive to pain | ICU care, airway protection, consider liver transplant referral |
+- **0**: No detectable changes (minimal HE) – only neuropsych testing — Early lactulose, identify precipitant
+- **1**: Trivial lack of awareness, euphoria or anxiety, mild asterixis — Oral lactulose, consider rifaximin
+- **2**: Lethargy, disorientation to time, obvious asterixis — Nasogastric lactulose, start rifaximin
+- **3**: Somnolence, confusion, inability to perform simple tasks — IV lactulose, aggressive infection control
+- **4**: Coma, unresponsive to pain — ICU care, airway protection, consider liver transplant referral
 
 Severity guides the intensity of monitoring (e.g., need for ICU, invasive ventilation) and the urgency of definitive therapies such as liver transplantation.
 
 ## Management  
 
 **Immediate stabilisation**  
-| Step | What to do | Rationale |
-|---|---|---|
-| Airway & breathing | Give supplemental O₂; consider non‑invasive ventilation if GCS ≤ 10 or CO₂ retention | Prevent hypoxia‑hypercapnia which worsens cerebral edema |
-| Circulatory support | Give IV crystalloids to maintain MAP ≥ 65 mmHg; treat sepsis aggressively | Adequate perfusion reduces ammonia production from gut ischemia |
-| Identify precipitants | Stop sedatives, correct electrolyte disturbances (especially Na⁺ < 130 mmol/L, Mg²⁺ < 0.7 mmol/L), treat infection, stop GI bleed | Removing triggers halts the acute rise in neurotoxins |
-| Lactulose (first‑line gut‑decontaminant) | Administer orally or via NG tube; titrate to 2–3 soft stools/24 h | Acidifies colonic lumen, traps NH₃ as NH₄⁺ and reduces absorption |
-| Rifaximin (add‑on) | Give when lactulose alone insufficient or recurrent episodes | Broad‑spectrum gut‑restricted antibiotic lowers ammonia‑producing bacteria |
-| Correct hyponatraemia | Raise Na⁺ cautiously (≤ 10 mmol/L/24 h) with hypertonic saline if severe symptomatic | Rapid shifts precipitate cerebral oedema |
+- **Airway & breathing**: Give supplemental O₂; consider non‑invasive ventilation if GCS ≤ 10 or CO₂ retention — Prevent hypoxia‑hypercapnia which worsens cerebral edema
+- **Circulatory support**: Give IV crystalloids to maintain MAP ≥ 65 mmHg; treat sepsis aggressively — Adequate perfusion reduces ammonia production from gut ischemia
+- **Identify precipitants**: Stop sedatives, correct electrolyte disturbances (especially Na⁺ < 130 mmol/L, Mg²⁺ < 0.7 mmol/L), treat infection, stop GI bleed — Removing triggers halts the acute rise in neurotoxins
+- **Lactulose (first‑line gut‑decontaminant)**: Administer orally or via NG tube; titrate to 2–3 soft stools/24 h — Acidifies colonic lumen, traps NH₃ as NH₄⁺ and reduces absorption
+- **Rifaximin (add‑on)**: Give when lactulose alone insufficient or recurrent episodes — Broad‑spectrum gut‑restricted antibiotic lowers ammonia‑producing bacteria
+- **Correct hyponatraemia**: Raise Na⁺ cautiously (≤ 10 mmol/L/24 h) with hypertonic saline if severe symptomatic — Rapid shifts precipitate cerebral oedema
 
 **Definitive/long‑term treatment**  
 - **Secondary prophylaxis**: Continue lactulose lifelong; add rifaximin for frequent relapses.  
@@ -161,14 +149,12 @@ Severity guides the intensity of monitoring (e.g., need for ICU, invasive ventil
 
 ## Complications and prognosis  
 
-| Complication | Clinical impact | Management tip |
-|---|---|---|
-| Cerebral oedema | Can progress to coma, brain herniation | Maintain normocapnia, avoid rapid Na⁺ correction, consider mannitol if signs of raised ICP |
-| Falls & aspiration | Due to impaired consciousness | Elevate head of bed, swallow assessment, early physiotherapy |
-| Infections (SBP, pneumonia) | Frequently precipitate recurrent HE | Prophylactic antibiotics in high‑risk cirrhotics, early culture‑directed therapy |
-| Renal dysfunction (HRS) | Worsens ammonia clearance | Albumin + vasoconstrictor therapy, avoid nephrotoxins |
-| Nutritional depletion | Muscle wasting → more ammonia | Early dietitian input, BCAA supplementation |
-| Poor long‑term survival | Grade III–IV HE predicts 1‑year mortality > 50 % | Early transplant referral, aggressive management of portal hypertension |
+- **Cerebral oedema**: Can progress to coma, brain herniation — Maintain normocapnia, avoid rapid Na⁺ correction, consider mannitol if signs of raised ICP
+- **Falls & aspiration**: Due to impaired consciousness — Elevate head of bed, swallow assessment, early physiotherapy
+- **Infections (SBP, pneumonia)**: Frequently precipitate recurrent HE — Prophylactic antibiotics in high‑risk cirrhotics, early culture‑directed therapy
+- **Renal dysfunction (HRS)**: Worsens ammonia clearance — Albumin + vasoconstrictor therapy, avoid nephrotoxins
+- **Nutritional depletion**: Muscle wasting → more ammonia — Early dietitian input, BCAA supplementation
+- **Poor long‑term survival**: Grade III–IV HE predicts 1‑year mortality > 50 % — Early transplant referral, aggressive management of portal hypertension
 
 Prognosis improves markedly when precipitating factors are rapidly corrected and secondary prophylaxis is maintained. Recurrent episodes signal advancing liver disease and merit transplant evaluation.
 

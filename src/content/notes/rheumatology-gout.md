@@ -16,14 +16,12 @@ Gout is a metabolic disease characterised by deposition of monosodium urate (MSU
 
 ## Causes and risk factors  
 
-| Category | Specific factors relevant in Kenya |
-|---|---|
-| **Genetic** | Family history of hyperuricaemia, HLA‑B*58:01 (allopurinol hypersensitivity) |
-| **Metabolic** | Obesity, insulin resistance, hypertension, chronic kidney disease |
-| **Dietary** | High purine foods (organ meat, certain fish), fructose‑rich drinks, alcohol (especially local brews) |
-| **Infectious / Tropical** | HIV infection (immune activation, renal disease), TB (renal involvement, drug‑induced hyperuricaemia), malaria (hemolysis, dehydration), sickle cell disease (renal concentrating defect) |
-| **Medications** | Diuretics, low‑dose aspirin, azathioprine, antiretrovirals (e.g., protease inhibitors), anti‑TB drugs (rifampicin) |
-| **Other** | Lead exposure, rapid cell turnover (haemolysis, tumour lysis), dehydration (common in hot climates) |
+- **Genetic**: Family history of hyperuricaemia, HLA‑B*58:01 (allopurinol hypersensitivity)
+- **Metabolic**: Obesity, insulin resistance, hypertension, chronic kidney disease
+- **Dietary**: High purine foods (organ meat, certain fish), fructose‑rich drinks, alcohol (especially local brews)
+- **Infectious / Tropical**: HIV infection (immune activation, renal disease), TB (renal involvement, drug‑induced hyperuricaemia), malaria (hemolysis, dehydration), sickle cell disease (renal concentrating defect)
+- **Medications**: Diuretics, low‑dose aspirin, azathioprine, antiretrovirals (e.g., protease inhibitors), anti‑TB drugs (rifampicin)
+- **Other**: Lead exposure, rapid cell turnover (haemolysis, tumour lysis), dehydration (common in hot climates)
 
 ## Pathophysiology  
 
@@ -39,21 +37,19 @@ Gout is a metabolic disease characterised by deposition of monosodium urate (MSU
 
 ## Clinical features  
 
-| Aspect | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Onset** | “How suddenly did the pain start?” – typical gout attacks begin within minutes to a few hours. | Deposition of monosodium urate (MSU) crystals triggers an intense neutrophil‑mediated inflammatory response. |
-| **Pain character** | Severe, throbbing, “worst pain ever”, often described as burning or stabbing. | Crystal‑induced activation of the NLRP3 inflammasome leads to high levels of IL‑1β and intense nociception. |
-| **Joint distribution** | First metatarsophalangeal (MTP) joint (podagra) most common; also ankles, knees, elbows, wrists, fingers, and the ear helix. | Lower temperature in distal joints favors crystal precipitation; mechanical stress and reduced blood flow promote nucleation. |
-| **Pattern of involvement** | Mono‑articular at onset; may become poly‑articular in chronic gout or with calcium pyrophosphate deposition disease (CPPD). | Initial crystal load usually limited to one joint; with time, cumulative deposition spreads. |
-| **Duration** | Attack lasts 3‑10 days if untreated; may recur weekly to monthly. | Ongoing crystal shedding sustains inflammation until crystal burden is cleared or anti‑inflammatory therapy is given. |
-| **Triggers** | Recent high‑purine meals, alcohol (especially beer), dehydration, recent surgery, initiation of diuretics, rapid weight loss, infection, trauma. | Purine excess raises serum urate; dehydration concentrates urate; certain drugs reduce renal urate excretion. |
-| **Systemic symptoms** | Fever, chills, malaise, night sweats (especially in TB‑associated gout). | Cytokine surge (IL‑1, IL‑6, TNF‑α) produces systemic inflammatory response. |
-| **Past history** | Prior similar attacks, kidney stones, chronic kidney disease, hypertension, metabolic syndrome, use of allopurinol or febuxostat, HIV/TB treatment, sickle‑cell crises, malaria prophylaxis. | Co‑morbidities impair urate excretion or increase production; some infections and drugs alter urate metabolism. |
-| **Medication history** | Loop/thiazide diuretics, low‑dose aspirin, pyrazinamide, azathioprine, protease inhibitors, antiretrovirals. | These agents decrease renal clearance of uric acid or increase its production. |
-| **Family history** | Relatives with gout, hyperuricemia, renal disease. | Genetic variants (e.g., SLC2A9, ABCG2) affect urate transport. |
-| **Examination – joint** | Swollen, erythematous, warm, exquisitely tender joint; overlying skin may be shiny; limited active range of motion; tophi (chalky subcutaneous nodules) over ears, olecranon, Achilles, fingers. | Acute crystal‑induced synovitis produces effusion and hyperemia; chronic deposition forms aggregates of urate crystals (tophi). |
-| **Examination – systemic** | No other joint involvement (unless poly‑gout); check for signs of infection (lymphadenopathy, hepatosplenomegaly) or other rheumatologic disease (rash, nail changes). | Helps exclude septic arthritis, rheumatoid arthritis, systemic lupus. |
-| **Examination – renal** | Flank tenderness, palpable kidneys, evidence of nephrolithiasis on imaging. | Urate stones may cause renal colic or chronic kidney disease. |
+- **Onset**: “How suddenly did the pain start?” – typical gout attacks begin within minutes to a few hours. — Deposition of monosodium urate (MSU) crystals triggers an intense neutrophil‑mediated inflammatory response.
+- **Pain character**: Severe, throbbing, “worst pain ever”, often described as burning or stabbing. — Crystal‑induced activation of the NLRP3 inflammasome leads to high levels of IL‑1β and intense nociception.
+- **Joint distribution**: First metatarsophalangeal (MTP) joint (podagra) most common; also ankles, knees, elbows, wrists, fingers, and the ear helix. — Lower temperature in distal joints favors crystal precipitation; mechanical stress and reduced blood flow promote nucleation.
+- **Pattern of involvement**: Mono‑articular at onset; may become poly‑articular in chronic gout or with calcium pyrophosphate deposition disease (CPPD). — Initial crystal load usually limited to one joint; with time, cumulative deposition spreads.
+- **Duration**: Attack lasts 3‑10 days if untreated; may recur weekly to monthly. — Ongoing crystal shedding sustains inflammation until crystal burden is cleared or anti‑inflammatory therapy is given.
+- **Triggers**: Recent high‑purine meals, alcohol (especially beer), dehydration, recent surgery, initiation of diuretics, rapid weight loss, infection, trauma. — Purine excess raises serum urate; dehydration concentrates urate; certain drugs reduce renal urate excretion.
+- **Systemic symptoms**: Fever, chills, malaise, night sweats (especially in TB‑associated gout). — Cytokine surge (IL‑1, IL‑6, TNF‑α) produces systemic inflammatory response.
+- **Past history**: Prior similar attacks, kidney stones, chronic kidney disease, hypertension, metabolic syndrome, use of allopurinol or febuxostat, HIV/TB treatment, sickle‑cell crises, malaria prophylaxis. — Co‑morbidities impair urate excretion or increase production; some infections and drugs alter urate metabolism.
+- **Medication history**: Loop/thiazide diuretics, low‑dose aspirin, pyrazinamide, azathioprine, protease inhibitors, antiretrovirals. — These agents decrease renal clearance of uric acid or increase its production.
+- **Family history**: Relatives with gout, hyperuricemia, renal disease. — Genetic variants (e.g., SLC2A9, ABCG2) affect urate transport.
+- **Examination – joint**: Swollen, erythematous, warm, exquisitely tender joint; overlying skin may be shiny; limited active range of motion; tophi (chalky subcutaneous nodules) over ears, olecranon, Achilles, fingers. — Acute crystal‑induced synovitis produces effusion and hyperemia; chronic deposition forms aggregates of urate crystals (tophi).
+- **Examination – systemic**: No other joint involvement (unless poly‑gout); check for signs of infection (lymphadenopathy, hepatosplenomegaly) or other rheumatologic disease (rash, nail changes). — Helps exclude septic arthritis, rheumatoid arthritis, systemic lupus.
+- **Examination – renal**: Flank tenderness, palpable kidneys, evidence of nephrolithiasis on imaging. — Urate stones may cause renal colic or chronic kidney disease.
 
 ---
 
@@ -95,11 +91,9 @@ Gout is a metabolic disease characterised by deposition of monosodium urate (MSU
 
 **Severity grading (based on attack frequency, joint involvement, and systemic impact)**  
 
-| Grade | Features | Management implication |
-|---|---|---|
-| **Mild** | ≤1 attack/year, mono‑articular, no tophi, normal renal function. | Acute therapy alone; consider lifestyle modification, start urate‑lowering if serum urate persistently > 6 mg/dL. |
-| **Moderate** | 2–4 attacks/year, poly‑articular or recurrent mono‑articular, early tophi, mild renal impairment. | Acute therapy plus early initiation of urate‑lowering (xanthine oxidase inhibitor or uricosuric); monitor renal function and urate levels. |
-| **Severe** | >4 attacks/year, extensive tophi, chronic joint damage, renal stones or CKD stage 3+, contraindications to NSAIDs/colchicine. | Aggressive urate‑lowering (combine xanthine oxidase inhibitor with uricosuric if needed), consider IL‑1 blockade for refractory inflammation; close monitoring for drug toxicity and renal status. |
+- **Mild**: ≤1 attack/year, mono‑articular, no tophi, normal renal function. — Acute therapy alone; consider lifestyle modification, start urate‑lowering if serum urate persistently > 6 mg/dL.
+- **Moderate**: 2–4 attacks/year, poly‑articular or recurrent mono‑articular, early tophi, mild renal impairment. — Acute therapy plus early initiation of urate‑lowering (xanthine oxidase inhibitor or uricosuric); monitor renal function and urate levels.
+- **Severe**: >4 attacks/year, extensive tophi, chronic joint damage, renal stones or CKD stage 3+, contraindications to NSAIDs/colchicine. — Aggressive urate‑lowering (combine xanthine oxidase inhibitor with uricosuric if needed), consider IL‑1 blockade for refractory inflammation; close monitoring for drug toxicity and renal status.
 
 **Key points for confirming diagnosis**  
 - Presence of MSU crystals is gold‑standard.  
@@ -117,12 +111,23 @@ Gout is a metabolic disease characterised by deposition of monosodium urate (MSU
 
 ## Management  
 
-| Phase | Goal | Key interventions | Monitoring / safety |
-|---|---|---|---|
-| **Immediate stabilisation** | Relieve acute pain, protect joint, prevent renal injury | • NSAID (e.g., ibuprofen, naproxen) **or** colchicine (if NSAID contraindicated) <br>• Adequate hydration (IV saline if oral intake poor) <br>• Elevate and immobilise affected joint | Renal function, gastrointestinal tolerance, complete blood count for colchicine toxicity |
-| **Definitive (long‑term) treatment** | Lower serum urate, prevent recurrences, treat tophi | • Xanthine oxidase inhibitor (allopurinol, febuxostat) – start low, titrate to target urate <br>• Uricosuric agents (probenecid, lesinurad) if under‑excretion and no renal stones <br>• Continue low‑dose colchicine or intermittent NSAID for prophylaxis during urate‑lowering initiation (first 3–6 months) | Serum urate (target < 0.36 mmol/L), liver enzymes, renal function, drug interactions (e.g., allopurinol + azathioprine) |
-| **Lifestyle & risk‑factor modification** | Reduce endogenous urate production | • Limit purine‑rich foods (organ meats, certain seafood) <br>• Reduce fructose‑sweetened drinks <br>• Encourage weight loss, regular exercise <br>• Review diuretics, low‑dose aspirin, and antiretrovirals that raise urate; switch if possible | Weight, blood pressure, medication review |
-| **Contra‑indications / safety** | Avoid harm | • NSAID avoided in advanced CKD, active peptic ulcer, uncontrolled hypertension <br>• Colchicine avoided in severe hepatic or renal failure, concurrent strong CYP3A4 inhibitors <br>• Allopurinol avoided in known hypersensitivity; start after HLA‑B*58:01 testing in high‑risk ethnic groups (e.g., some Asian populations) | Watch for rash, eosinophilia, liver injury; stop drug promptly if severe reaction |
+- **Immediate stabilisation**
+  - Relieve acute pain, protect joint, prevent renal injury — • NSAID (e.g., ibuprofen, naproxen) **or** colchicine (if NSAID contraindicated)
+  - Adequate hydration (IV saline if oral intake poor)
+  - Elevate and immobilise affected joint — Renal function, gastrointestinal tolerance, complete blood count for colchicine toxicity
+- **Definitive (long‑term) treatment**
+  - Lower serum urate, prevent recurrences, treat tophi — • Xanthine oxidase inhibitor (allopurinol, febuxostat) – start low, titrate to target urate
+  - Uricosuric agents (probenecid, lesinurad) if under‑excretion and no renal stones
+  - Continue low‑dose colchicine or intermittent NSAID for prophylaxis during urate‑lowering initiation (first 3–6 months) — Serum urate (target < 0.36 mmol/L), liver enzymes, renal function, drug interactions (e.g., allopurinol + azathioprine)
+- **Lifestyle & risk‑factor modification**
+  - Reduce endogenous urate production — • Limit purine‑rich foods (organ meats, certain seafood)
+  - Reduce fructose‑sweetened drinks
+  - Encourage weight loss, regular exercise
+  - Review diuretics, low‑dose aspirin, and antiretrovirals that raise urate; switch if possible — Weight, blood pressure, medication review
+- **Contra‑indications / safety**
+  - Avoid harm — • NSAID avoided in advanced CKD, active peptic ulcer, uncontrolled hypertension
+  - Colchicine avoided in severe hepatic or renal failure, concurrent strong CYP3A4 inhibitors
+  - Allopurinol avoided in known hypersensitivity; start after HLA‑B*58:01 testing in high‑risk ethnic groups (e.g., some Asian populations) — Watch for rash, eosinophilia, liver injury; stop drug promptly if severe reaction
 
 ---
 

@@ -1,4 +1,4 @@
-# Assessment of the obstetric patient — Year 4 Obstetrics and Gynaecology Notes
+# Assessment of the obstetric patient
 
 *Week 1, Department of Obstetrics and Gynaecology (lecture by Dr Ritho). Rewritten as clinical notes: what to ask, what to examine, and what each finding means on the ward.*
 
@@ -51,13 +51,11 @@ Examine in a **private room** with a **chaperone**. Explain what you will do bef
 
 Look at the **conjunctiva, sclera, teeth and buccal mucosa** for pallor, jaundice, mucosal congestion and dental caries.
 
-| Finding | What is normal or abnormal in pregnancy |
-|---|---|
-| **Blood pressure** | Use **left lateral with 30° tilt** (or sitting) to avoid the **supine hypotensive syndrome** |
-| **Pulse** | Rises by 10–15 beats per minute |
-| **Respiratory rate** | Rises by 1–4 breaths per minute |
-| **Weight** | A gain of **more than 1 kg a week is abnormal** (fluid retention, pre-eclampsia) |
-| **Height** | Below **150 cm** may be constitutional but is a risk factor (contracted pelvis) |
+- **Blood pressure**: Use **left lateral with 30° tilt** (or sitting) to avoid the **supine hypotensive syndrome**
+- **Pulse**: Rises by 10–15 beats per minute
+- **Respiratory rate**: Rises by 1–4 breaths per minute
+- **Weight**: A gain of **more than 1 kg a week is abnormal** (fluid retention, pre-eclampsia)
+- **Height**: Below **150 cm** may be constitutional but is a risk factor (contracted pelvis)
 
 **Breasts:** nipple retraction, pigmentation, lumps, discharge, colour change.
 
@@ -90,12 +88,10 @@ Look at the **conjunctiva, sclera, teeth and buccal mucosa** for pallor, jaundic
 
 ### The four Leopold manoeuvres
 
-| Manoeuvre | What you do and find |
-|---|---|
-| **1st: fundal** | Measure the fundal height. A **soft, irregular, bulky** mass at the fundus is the **breech**; a **hard, round, ballotable** mass is the **head** |
-| **2nd: lateral** | Finds the **lie** (longitudinal, transverse, oblique) and, in a longitudinal lie, **which side the back is on**. The back is linear, rigid and smooth; the limbs are small, irregular and bulky. The fetal heart is best heard over the back |
-| **3rd: pelvic** | Finds the **presentation**: head (cephalic), breech or shoulder. In a cephalic presentation, descent is judged by the **rule of fifths**: **5/5 floating, 4/5 fixed, 2/5 engaged**. Together with the 2nd manoeuvre it shows the **attitude**: extended (the head prominence is on the same side as the back), flexed (the opposite side), or military (both sides at the same level) |
-| **4th: Pawlik grip** | The **only manoeuvre done with one hand**; it checks the presenting part |
+- **1st: fundal**: Measure the fundal height. A **soft, irregular, bulky** mass at the fundus is the **breech**; a **hard, round, ballotable** mass is the **head**
+- **2nd: lateral**: Finds the **lie** (longitudinal, transverse, oblique) and, in a longitudinal lie, **which side the back is on**. The back is linear, rigid and smooth; the limbs are small, irregular and bulky. The fetal heart is best heard over the back
+- **3rd: pelvic**: Finds the **presentation**: head (cephalic), breech or shoulder. In a cephalic presentation, descent is judged by the **rule of fifths**: **5/5 floating, 4/5 fixed, 2/5 engaged**. Together with the 2nd manoeuvre it shows the **attitude**: extended (the head prominence is on the same side as the back), flexed (the opposite side), or military (both sides at the same level)
+- **4th: Pawlik grip**: The **only manoeuvre done with one hand**; it checks the presenting part
 
 ![Leopold's manoeuvres, from the original figures by Christian Gerhard Leopold. Public domain](https://upload.wikimedia.org/wikipedia/commons/e/eb/Handgriffe.JPG)
 

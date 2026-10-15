@@ -1,4 +1,4 @@
-# Neurodevelopmental Disorders I: Autism Spectrum Disorder and Intellectual Disability — Year 4 Psychiatry
+# Neurodevelopmental Disorders I: Autism Spectrum Disorder and Intellectual Disability
 
 *MKU MBChB Year 4 · Junior Clerkship · Week 6 · Clinical revision notes*
 

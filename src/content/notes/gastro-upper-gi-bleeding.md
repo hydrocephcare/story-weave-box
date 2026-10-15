@@ -1,4 +1,4 @@
-# Upper gastrointestinal bleeding — Year 4 Internal Medicine (Gastroenterology) Notes
+# Upper gastrointestinal bleeding
 
 *Clinical reasoning notes. Resuscitate first, diagnose second.*
 
@@ -9,13 +9,11 @@
 **Haematemesis** (vomiting blood, red or "coffee-ground") and **melaena** (black, tarry, foul-smelling stool). Rapid bleeding can give **fresh red blood per rectum** with shock. The bleed is **upper** if it arises above the ligament of Treitz (oesophagus, stomach, duodenum).
 
 ## Anatomy and physiology you need  
-| Structure | Clinical relevance in UGIB | Why it matters for assessment or management |
-|---|---|---|
-| **Oesophageal–gastric junction (GEJ) and lower oesophageal sphincter (LES)** | The LES is a high‑pressure zone that normally prevents reflux of gastric contents; its failure can lead to reflux oesophagitis or Mallory‑Weiss tears. | A high‑pressure LES is a protective factor; its incompetence predisposes to erosive disease and can be identified by endoscopy, influencing therapeutic choice (e.g., PPIs). |
-| **Stomach (fundus, body, antrum) and proximal duodenum** | These are the most common sites of peptic ulcer disease; acid secretion from parietal cells and H⁺/K⁺‑ATPase activity drive ulcer formation. | Understanding acid secretion helps explain why PPIs are effective and why H. pylori eradication reduces recurrence. |
-| **Portal venous system (splenic vein, portal vein, hepatic veins)** | Portal hypertension causes varices in the oesophagus and stomach; increased pressure leads to dilated submucosal veins that are fragile and bleed easily. | Knowledge of portal pressure guides the use of vasoactive drugs, the urgency of endoscopy, and the decision for TIPS or balloon tamponade. |
-| **Liver parenchyma and hepatic sinusoids** | Cirrhosis alters coagulation factor synthesis, platelet function, and portal flow, increasing bleeding risk and complicating resuscitation. | Coagulation profile (INR, platelets) must be checked before endoscopy; reversal agents or plasma may be required. |
-| **Gastric mucosal blood supply (right and left gastric arteries, short gastric arteries)** | These vessels supply the gastric fundus where varices form; their size and flow determine the risk of massive bleeding. | Endoscopic band ligation targets these vessels; interventional radiology may embolise them if endoscopy fails. |
+- **Oesophageal–gastric junction (GEJ) and lower oesophageal sphincter (LES)**: The LES is a high‑pressure zone that normally prevents reflux of gastric contents; its failure can lead to reflux oesophagitis or Mallory‑Weiss tears. — A high‑pressure LES is a protective factor; its incompetence predisposes to erosive disease and can be identified by endoscopy, influencing therapeutic choice (e.g., PPIs).
+- **Stomach (fundus, body, antrum) and proximal duodenum**: These are the most common sites of peptic ulcer disease; acid secretion from parietal cells and H⁺/K⁺‑ATPase activity drive ulcer formation. — Understanding acid secretion helps explain why PPIs are effective and why H. pylori eradication reduces recurrence.
+- **Portal venous system (splenic vein, portal vein, hepatic veins)**: Portal hypertension causes varices in the oesophagus and stomach; increased pressure leads to dilated submucosal veins that are fragile and bleed easily. — Knowledge of portal pressure guides the use of vasoactive drugs, the urgency of endoscopy, and the decision for TIPS or balloon tamponade.
+- **Liver parenchyma and hepatic sinusoids**: Cirrhosis alters coagulation factor synthesis, platelet function, and portal flow, increasing bleeding risk and complicating resuscitation. — Coagulation profile (INR, platelets) must be checked before endoscopy; reversal agents or plasma may be required.
+- **Gastric mucosal blood supply (right and left gastric arteries, short gastric arteries)**: These vessels supply the gastric fundus where varices form; their size and flow determine the risk of massive bleeding. — Endoscopic band ligation targets these vessels; interventional radiology may embolise them if endoscopy fails.
 
 ---
 
@@ -52,13 +50,11 @@ Repeated retching → ↑ intra‑abdominal pressure + oesophageal mucosal shear
 
 ## 3. Find the cause
 
-| Cause | Clues |
-|---|---|
-| **Peptic ulcer (duodenal or gastric)** | Epigastric pain, **NSAIDs, aspirin, H. pylori**, previous ulcer |
-| **Oesophageal or gastric varices** | **Known or suspected cirrhosis, jaundice, ascites, spider naevi, splenomegaly, alcohol, hepatitis B**, **schistosomiasis** with portal hypertension; **massive** bleeding |
-| **Gastritis or erosions** | Alcohol, NSAIDs, stress in a sick patient |
-| **Mallory-Weiss tear** | Retching, then fresh blood after repeated vomiting |
-| **Oesophagitis, cancer, angiodysplasia, Dieulafoy lesion** | Less common |
+- **Peptic ulcer (duodenal or gastric)**: Epigastric pain, **NSAIDs, aspirin, H. pylori**, previous ulcer
+- **Oesophageal or gastric varices**: **Known or suspected cirrhosis, jaundice, ascites, spider naevi, splenomegaly, alcohol, hepatitis B**, **schistosomiasis** with portal hypertension; **massive** bleeding
+- **Gastritis or erosions**: Alcohol, NSAIDs, stress in a sick patient
+- **Mallory-Weiss tear**: Retching, then fresh blood after repeated vomiting
+- **Oesophagitis, cancer, angiodysplasia, Dieulafoy lesion**: Less common
 
 **Think local:** in many African settings, **bleeding varices from cirrhosis (hepatitis B or schistosomiasis)** are a leading cause, and the management differs from that of an ulcer.
 
@@ -79,15 +75,13 @@ Repeated retching → ↑ intra‑abdominal pressure + oesophageal mucosal shear
 
 ## 4. Investigate with purpose
 
-| Test | The question it answers |
-|---|---|
-| **Haemoglobin** | How much has been lost? (It may be normal in the first hours.) |
-| **Urea and creatinine** | A **raised urea with a normal creatinine** suggests an upper GI bleed (blood is digested as protein) |
-| **Group and crossmatch, clotting screen, platelets** | Blood ready? Coagulopathy? |
-| **Liver tests, albumin, INR** | Is there cirrhosis and how severe? |
-| **ECG and troponin** | Anaemia can cause ischaemia in older patients |
-| **Upper GI endoscopy within 24 hours** | The cause, the risk of rebleeding, and treatment in one test |
-| **H. pylori test** | If an ulcer is found |
+- **Haemoglobin**: How much has been lost? (It may be normal in the first hours.)
+- **Urea and creatinine**: A **raised urea with a normal creatinine** suggests an upper GI bleed (blood is digested as protein)
+- **Group and crossmatch, clotting screen, platelets**: Blood ready? Coagulopathy?
+- **Liver tests, albumin, INR**: Is there cirrhosis and how severe?
+- **ECG and troponin**: Anaemia can cause ischaemia in older patients
+- **Upper GI endoscopy within 24 hours**: The cause, the risk of rebleeding, and treatment in one test
+- **H. pylori test**: If an ulcer is found
 
 ## 5. Management by cause
 
@@ -120,16 +114,14 @@ Repeated retching → ↑ intra‑abdominal pressure + oesophageal mucosal shear
 
 ## Complications and prognosis
 
-| Complication | Pathophysiology | Clinical impact | Prognostic implication |
-|---|---|---|---|
-| Re‑bleeding | Inadequate haemostasis, ongoing portal hypertension, or failure of endoscopic therapy | Re‑occurrence of haematemesis or melena, often within 5 days | Increases mortality by 2‑3 fold; predicts need for repeat endoscopy or interventional radiology |
-| Acute liver failure | Massive variceal bleed can precipitate hepatic encephalopathy or coagulopathy | Altered sensorium, jaundice, coagulopathy | Poor prognosis; 30‑day mortality > 30 % if encephalopathy develops |
-| Acute kidney injury | Hypovolaemia, haemoglobinuria, or nephrotoxic drugs | Oliguria, rising creatinine | Associated with 20‑30 % mortality; requires renal replacement therapy in severe cases |
-| Infection (spontaneous bacterial peritonitis) | Bacterial translocation from gut lumen during bleeding | Fever, abdominal pain, ascites | Increases mortality by 15 %; warrants prophylactic antibiotics |
-| Cardiac arrhythmia or myocardial ischaemia | Anaemia‑induced hypoxia, catecholamine surge | Palpitations, chest pain, ECG changes | Can precipitate cardiac arrest; requires ECG monitoring and troponin assessment |
-| Pulmonary aspiration | Vomiting blood with impaired airway reflexes | Pneumonia, ARDS | Requires airway protection and ventilatory support |
-| Portal vein thrombosis | Endoscopic manipulation or prolonged stasis | Abdominal pain, splenomegaly | May necessitate anticoagulation; worsens portal hypertension |
-| Death | Multifactorial: massive bleeding, refractory shock, organ failure | Sudden collapse | Mortality 5‑15 % in high‑risk patients; lower with early vasoactive therapy and endoscopic control |
+- **Re‑bleeding**: Inadequate haemostasis, ongoing portal hypertension, or failure of endoscopic therapy — Re‑occurrence of haematemesis or melena, often within 5 days — Increases mortality by 2‑3 fold; predicts need for repeat endoscopy or interventional radiology
+- **Acute liver failure**: Massive variceal bleed can precipitate hepatic encephalopathy or coagulopathy — Altered sensorium, jaundice, coagulopathy — Poor prognosis; 30‑day mortality > 30 % if encephalopathy develops
+- **Acute kidney injury**: Hypovolaemia, haemoglobinuria, or nephrotoxic drugs — Oliguria, rising creatinine — Associated with 20‑30 % mortality; requires renal replacement therapy in severe cases
+- **Infection (spontaneous bacterial peritonitis)**: Bacterial translocation from gut lumen during bleeding — Fever, abdominal pain, ascites — Increases mortality by 15 %; warrants prophylactic antibiotics
+- **Cardiac arrhythmia or myocardial ischaemia**: Anaemia‑induced hypoxia, catecholamine surge — Palpitations, chest pain, ECG changes — Can precipitate cardiac arrest; requires ECG monitoring and troponin assessment
+- **Pulmonary aspiration**: Vomiting blood with impaired airway reflexes — Pneumonia, ARDS — Requires airway protection and ventilatory support
+- **Portal vein thrombosis**: Endoscopic manipulation or prolonged stasis — Abdominal pain, splenomegaly — May necessitate anticoagulation; worsens portal hypertension
+- **Death**: Multifactorial: massive bleeding, refractory shock, organ failure — Sudden collapse — Mortality 5‑15 % in high‑risk patients; lower with early vasoactive therapy and endoscopic control
 
 **Prognostic scoring**  
 - **Glasgow‑Blatchford score** predicts need for intervention; a score ≥ 10 correlates with 30‑day mortality > 10 %.  

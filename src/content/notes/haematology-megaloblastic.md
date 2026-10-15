@@ -9,25 +9,21 @@
 Megaloblastic anaemia is a macrocytic anaemia characterised by impaired nuclear maturation of haematopoietic cells, leading to the presence of large, immature red‑cell precursors (megaloblasts) in the bone marrow and hypersegmented neutrophils in peripheral blood.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to megaloblastosis |
-|---|---|
-| Bone marrow erythroid lineage | Site of DNA synthesis; folate/ B12 deficiency stalls nuclear division while cytoplasm continues to grow → large precursors |
-| Gastro‑intestinal mucosa | Primary site of folate absorption (duodenum) and vitamin B12‑intrinsic factor complex formation (terminal ileum) |
-| Liver | Stores folate; synthesises transport proteins; impaired function reduces folate availability |
-| Kidney | Produces erythropoietin; chronic kidney disease can coexist, worsening anaemia |
-| Spleen | Removes abnormal macrocytes; splenomegaly may develop from extramedullary haematopoiesis |
+- **Bone marrow erythroid lineage**: Site of DNA synthesis; folate/ B12 deficiency stalls nuclear division while cytoplasm continues to grow → large precursors
+- **Gastro‑intestinal mucosa**: Primary site of folate absorption (duodenum) and vitamin B12‑intrinsic factor complex formation (terminal ileum)
+- **Liver**: Stores folate; synthesises transport proteins; impaired function reduces folate availability
+- **Kidney**: Produces erythropoietin; chronic kidney disease can coexist, worsening anaemia
+- **Spleen**: Removes abnormal macrocytes; splenomegaly may develop from extramedullary haematopoiesis
 
 ## Causes and risk factors  
 
-| Category | Kenyan‑relevant examples |
-|---|---|
-| Nutritional deficiency | Poor diet low in leafy vegetables, chronic alcoholism, pregnancy, lactation |
-| Malabsorption | Tropical sprue, celiac disease, post‑gastro‑intestinal surgery, helminthic infestation |
-| Drugs & toxins | Antimetabolites (methotrexate, antiretrovirals), anticonvulsants (phenytoin), trimethoprim‑sulfamethoxazole |
-| Chronic infections | HIV (direct marrow effect, opportunistic infections), TB (granulomatous infiltration), malaria (hemolysis + folate loss) |
-| Autoimmune & inflammatory | Rheumatic diseases with chronic NSAID use, inflammatory bowel disease |
-| Hemoglobinopathies & sickle cell | Increased folate turnover due to chronic haemolysis |
-| Other systemic illnesses | Chronic liver disease, renal failure, malignancies (especially leukaemia) |
+- **Nutritional deficiency**: Poor diet low in leafy vegetables, chronic alcoholism, pregnancy, lactation
+- **Malabsorption**: Tropical sprue, celiac disease, post‑gastro‑intestinal surgery, helminthic infestation
+- **Drugs & toxins**: Antimetabolites (methotrexate, antiretrovirals), anticonvulsants (phenytoin), trimethoprim‑sulfamethoxazole
+- **Chronic infections**: HIV (direct marrow effect, opportunistic infections), TB (granulomatous infiltration), malaria (hemolysis + folate loss)
+- **Autoimmune & inflammatory**: Rheumatic diseases with chronic NSAID use, inflammatory bowel disease
+- **Hemoglobinopathies & sickle cell**: Increased folate turnover due to chronic haemolysis
+- **Other systemic illnesses**: Chronic liver disease, renal failure, malignancies (especially leukaemia)
 
 ## Pathophysiology  
 
@@ -44,31 +40,27 @@ Nutrient deficiency / drug inhibition → ↓ tetrahydrofolate or methylcobalami
 
 **History – what to ask**  
 
-| Domain | Key questions | Rationale |
-|---|---|---|
-| General symptoms | Fatigue, weakness, dyspnoea on exertion, palpitations, dizziness, headache | Reflect reduced oxygen‑carrying capacity and high-output cardiac stress. |
-| Gastro‑intestinal | Appetite loss, early satiety, glossitis, sore tongue, dysphagia, abdominal pain, diarrhoea or constipation | Mucosal turnover is rapid; folate‑ or B12‑deficiency produces atrophic glossitis, esophageal inflammation and malabsorption. |
-| Neurological | Numbness/tingling, gait instability, memory loss, mood change, depression, visual disturbances | Vitamin B12 deficiency (cobalamin) causes sub‑acute combined degeneration; folate deficiency may give mild neuro‑cognitive changes. |
-| Hematologic | Easy bruising, petechiae, bleeding gums, menorrhagia, prior transfusions | Severe macrocytosis can impair platelet production; co‑existent iron deficiency may exaggerate bleeding. |
-| Drug / dietary exposure | Use of methotrexate, antiepileptics (phenytoin, carbamazepine), sulfasalazine, trimethoprim‑sulfamethoxazole, oral contraceptives, chronic alcohol, strict vegan diet, prolonged parenteral nutrition | Many drugs antagonise folate metabolism; dietary lack is common in low‑resource settings. |
-| Infectious / systemic | HIV status, TB treatment (especially isoniazid), malaria episodes, chronic rheumatic disease, sickle‑cell disease, gastrointestinal infections, prior abdominal surgery | HIV and TB drugs (isoniazid) increase folate demand; malaria and sickle‑cell disease cause hemolysis that can mask macrocytosis. |
-| Obstetric / paediatric | Recent pregnancy, lactation, infant feeding practices | Pregnancy increases folate requirement; infants of deficient mothers may develop early anemia. |
-| Family / genetic | History of hereditary macrocytosis, pernicious anemia, cobalamin transport defects | Autoimmune gastritis (pernicious anemia) is rare but possible; rare inherited disorders may be relevant. |
+- **General symptoms**: Fatigue, weakness, dyspnoea on exertion, palpitations, dizziness, headache — Reflect reduced oxygen‑carrying capacity and high-output cardiac stress.
+- **Gastro‑intestinal**: Appetite loss, early satiety, glossitis, sore tongue, dysphagia, abdominal pain, diarrhoea or constipation — Mucosal turnover is rapid; folate‑ or B12‑deficiency produces atrophic glossitis, esophageal inflammation and malabsorption.
+- **Neurological**: Numbness/tingling, gait instability, memory loss, mood change, depression, visual disturbances — Vitamin B12 deficiency (cobalamin) causes sub‑acute combined degeneration; folate deficiency may give mild neuro‑cognitive changes.
+- **Hematologic**: Easy bruising, petechiae, bleeding gums, menorrhagia, prior transfusions — Severe macrocytosis can impair platelet production; co‑existent iron deficiency may exaggerate bleeding.
+- **Drug / dietary exposure**: Use of methotrexate, antiepileptics (phenytoin, carbamazepine), sulfasalazine, trimethoprim‑sulfamethoxazole, oral contraceptives, chronic alcohol, strict vegan diet, prolonged parenteral nutrition — Many drugs antagonise folate metabolism; dietary lack is common in low‑resource settings.
+- **Infectious / systemic**: HIV status, TB treatment (especially isoniazid), malaria episodes, chronic rheumatic disease, sickle‑cell disease, gastrointestinal infections, prior abdominal surgery — HIV and TB drugs (isoniazid) increase folate demand; malaria and sickle‑cell disease cause hemolysis that can mask macrocytosis.
+- **Obstetric / paediatric**: Recent pregnancy, lactation, infant feeding practices — Pregnancy increases folate requirement; infants of deficient mothers may develop early anemia.
+- **Family / genetic**: History of hereditary macrocytosis, pernicious anemia, cobalamin transport defects — Autoimmune gastritis (pernicious anemia) is rare but possible; rare inherited disorders may be relevant.
 
 **Examination – what to look for and why**  
 
-| Finding | Explanation |
-|---|---|
-| Pallor (conjunctivae, palms) | Reduced hemoglobin from ineffective erythropoiesis. |
-| Glossitis (smooth, beefy‑red tongue) | Rapid turnover of oral mucosa is impaired by folate/B12 deficiency. |
-| Angular cheilitis, mouth ulcers | Same mucosal vulnerability. |
-| Neurological signs – loss of vibration/position sense, gait ataxia, positive Romberg | Demyelination of dorsal columns and corticospinal tracts in B12 deficiency. |
-| Peripheral neuropathy – stocking‑glove paraesthesia | Axonal degeneration due to cobalamin shortage. |
-| Jaundice or scleral icterus (mild) | Ineffective erythropoiesis leads to intramedullary hemolysis and bilirubin rise. |
-| Splenomegaly (rare) | Extramedullary hematopoiesis when marrow stress is severe. |
-| Tachycardia, hyperdynamic precordium | Compensatory response to anemia. |
-| Low blood pressure, orthostatic drop | Volume depletion from chronic GI loss or poor intake. |
-| Skin changes – hyperpigmentation, vitiligo (if autoimmune gastritis) | Associated autoimmune phenomena. |
+- **Pallor (conjunctivae, palms)**: Reduced hemoglobin from ineffective erythropoiesis.
+- **Glossitis (smooth, beefy‑red tongue)**: Rapid turnover of oral mucosa is impaired by folate/B12 deficiency.
+- **Angular cheilitis, mouth ulcers**: Same mucosal vulnerability.
+- **Neurological signs – loss of vibration/position sense, gait ataxia, positive Romberg**: Demyelination of dorsal columns and corticospinal tracts in B12 deficiency.
+- **Peripheral neuropathy – stocking‑glove paraesthesia**: Axonal degeneration due to cobalamin shortage.
+- **Jaundice or scleral icterus (mild)**: Ineffective erythropoiesis leads to intramedullary hemolysis and bilirubin rise.
+- **Splenomegaly (rare)**: Extramedullary hematopoiesis when marrow stress is severe.
+- **Tachycardia, hyperdynamic precordium**: Compensatory response to anemia.
+- **Low blood pressure, orthostatic drop**: Volume depletion from chronic GI loss or poor intake.
+- **Skin changes – hyperpigmentation, vitiligo (if autoimmune gastritis)**: Associated autoimmune phenomena.
 
 ---
 
@@ -119,11 +111,9 @@ Nutrient deficiency / drug inhibition → ↓ tetrahydrofolate or methylcobalami
 
 3. **Severity grading (based on hemoglobin)**  
 
-| Severity | Hb (g/dL) | Clinical implication |
-|---|---|---|
-| Mild | ≥ 10 | Usually outpatient, monitor for symptoms. |
-| Moderate | 8–9.9 | May need short‑term transfusion if symptomatic; start definitive therapy promptly. |
-| Severe | < 8 | High risk of cardiac decompensation; consider inpatient care, transfusion, and urgent correction of deficiency. |
+- **Mild**: ≥ 10 — Usually outpatient, monitor for symptoms.
+- **Moderate**: 8–9.9 — May need short‑term transfusion if symptomatic; start definitive therapy promptly.
+- **Severe**: < 8 — High risk of cardiac decompensation; consider inpatient care, transfusion, and urgent correction of deficiency.
 
 4. **Urgency of treatment**  
    * If neurological signs are present, treat immediately (parenteral B12 if B12‑deficiency suspected) to prevent irreversible damage.  
@@ -135,15 +125,24 @@ Nutrient deficiency / drug inhibition → ↓ tetrahydrofolate or methylcobalami
 
 ## Management  
 
-| Step | What to do | Rationale / safety notes |
-|---|---|---|
-| **Immediate stabilisation** | • Give high‑flow O₂ if dyspnoeic or saturations < 94 % <br>• Transfuse packed red cells only if Hb < 7 g/dL or symptomatic (angina, severe tachycardia, hypotension) | Correct tissue hypoxia; avoid unnecessary transfusion because the underlying defect is reversible. |
-| **Definitive therapy – folate deficiency** | • Start oral folic acid (tablet once daily) immediately; switch to parenteral folate (e.g., folinic acid) if malabsorption, severe ileal disease or inability to take oral meds. | Folate repletion reverses macro‑ovalocytosis within 5‑7 days; oral route works in most patients, parenteral for rapid effect or gut loss. |
-| **Definitive therapy – vitamin B12 deficiency** | • Begin intramuscular cyanocobalamin (or hydroxocobalamin) weekly for 4 weeks, then monthly lifelong. <br>• If oral absorption is possible, give high‑dose oral cyanocobalamin daily. | Parenteral route bypasses intrinsic factor defect; lifelong maintenance prevents relapse. |
-| **Address precipitating/associated conditions** | • Treat HIV (ART), TB (anti‑TB regimen), malaria (artemisinin‑based therapy), rheumatic disease (DMARDs), sickle‑cell crises (hydroxyurea, transfusion) as indicated. | Removing the trigger stops ongoing folate loss or malabsorption. |
-| **Adjuncts** | • Give folic acid supplementation (low‑dose) to all patients on methotrexate, antiepileptics, or with chronic haemolysis. <br>• Counsel on diet rich in leafy greens, legumes, meat, eggs. | Prevents recurrence; dietary advice is essential in low‑resource settings. |
-| **Monitoring** | • CBC & reticulocyte count day 3–5, then weekly until normalisation. <br>• Serum B12 & folate at baseline, repeat if no response. <br>• Watch for hyper‑reflexia or neuropathy worsening after B12 therapy (rare “rebound” phenomenon). | Reticulocytosis indicates marrow response; lack of rise suggests alternative diagnosis. |
-| **Safety / contraindications** | • Do **not** give folic acid before confirming B12 status if neurological signs are present – it may mask haematologic response while neuropathy progresses. <br>• Avoid high‑dose parenteral folate in known B12 deficiency without B12 replacement. | Prevents irreversible neurologic damage. |
+- **Immediate stabilisation**
+  - Give high‑flow O₂ if dyspnoeic or saturations < 94 %
+  - Transfuse packed red cells only if Hb < 7 g/dL or symptomatic (angina, severe tachycardia, hypotension) — Correct tissue hypoxia; avoid unnecessary transfusion because the underlying defect is reversible.
+- **Definitive therapy – folate deficiency**: • Start oral folic acid (tablet once daily) immediately; switch to parenteral folate (e.g., folinic acid) if malabsorption, severe ileal disease or inability to take oral meds. — Folate repletion reverses macro‑ovalocytosis within 5‑7 days; oral route works in most patients, parenteral for rapid effect or gut loss.
+- **Definitive therapy – vitamin B12 deficiency**
+  - Begin intramuscular cyanocobalamin (or hydroxocobalamin) weekly for 4 weeks, then monthly lifelong.
+  - If oral absorption is possible, give high‑dose oral cyanocobalamin daily. — Parenteral route bypasses intrinsic factor defect; lifelong maintenance prevents relapse.
+- **Address precipitating/associated conditions**: • Treat HIV (ART), TB (anti‑TB regimen), malaria (artemisinin‑based therapy), rheumatic disease (DMARDs), sickle‑cell crises (hydroxyurea, transfusion) as indicated. — Removing the trigger stops ongoing folate loss or malabsorption.
+- **Adjuncts**
+  - Give folic acid supplementation (low‑dose) to all patients on methotrexate, antiepileptics, or with chronic haemolysis.
+  - Counsel on diet rich in leafy greens, legumes, meat, eggs. — Prevents recurrence; dietary advice is essential in low‑resource settings.
+- **Monitoring**
+  - CBC & reticulocyte count day 3–5, then weekly until normalisation.
+  - Serum B12 & folate at baseline, repeat if no response.
+  - Watch for hyper‑reflexia or neuropathy worsening after B12 therapy (rare “rebound” phenomenon). — Reticulocytosis indicates marrow response; lack of rise suggests alternative diagnosis.
+- **Safety / contraindications**
+  - Do **not** give folic acid before confirming B12 status if neurological signs are present – it may mask haematologic response while neuropathy progresses.
+  - Avoid high‑dose parenteral folate in known B12 deficiency without B12 replacement. — Prevents irreversible neurologic damage.
 
 ---
 

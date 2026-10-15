@@ -6,14 +6,12 @@
 Hepatorenal syndrome (HRS) is a functional, rapidly progressive renal failure that occurs in patients with advanced chronic liver disease (usually cirrhosis) or acute severe liver injury, in the absence of intrinsic kidney pathology. It is characterised by marked reduction in glomerular filtration rate (GFR) that is reversible if the underlying hepatic circulatory dysfunction is corrected.
 
 ## Anatomy and physiology you need  
-| Structure | Relevance to HRS |
-|---|---|
-| Liver sinusoids | Portal hypertension → splanchnic vasodilation |
-| Splanchnic arterial bed | Excess nitric oxide production → systemic vasodilation |
-| Renal afferent arterioles | Intense vasoconstriction mediated by sympathetic activation, RAAS, endothelin |
-| Circulating plasma volume | Effective arterial hypovolemia despite total fluid overload |
-| Nephron (glomerulus) | Filtration falls because of reduced renal perfusion pressure |
-| Lymphatic drainage of abdomen | Ascites contributes to intra‑abdominal pressure, further impairing renal blood flow |
+- **Liver sinusoids**: Portal hypertension → splanchnic vasodilation
+- **Splanchnic arterial bed**: Excess nitric oxide production → systemic vasodilation
+- **Renal afferent arterioles**: Intense vasoconstriction mediated by sympathetic activation, RAAS, endothelin
+- **Circulating plasma volume**: Effective arterial hypovolemia despite total fluid overload
+- **Nephron (glomerulus)**: Filtration falls because of reduced renal perfusion pressure
+- **Lymphatic drainage of abdomen**: Ascites contributes to intra‑abdominal pressure, further impairing renal blood flow
 
 Understanding that the kidney itself is structurally intact is essential; the failure is driven by haemodynamic derangement secondary to severe liver disease.
 
@@ -23,16 +21,14 @@ Understanding that the kidney itself is structurally intact is essential; the fa
 - Acute‑on‑chronic liver failure (e.g., super‑infection, drug‑induced injury)  
 
 *Common precipitants in the Kenyan context*  
-| Factor | Why it matters locally |
-|---|---|
-| Spontaneous bacterial peritonitis (SBP) | High prevalence of ascites and limited early presentation |
-| Large volume paracentesis without albumin replacement | Common practice in resource‑limited settings |
-| Gastrointestinal bleeding | Hepatitis B/C and schistosomiasis increase portal hypertension |
-| Diuretic over‑use (furosemide, spironolactone) | Often prescribed empirically for ascites |
-| Infections: HIV, TB, malaria, bacterial sepsis | All can precipitate systemic vasodilation and renal hypoperfusion |
-| Rheumatic fever with cardiorenal involvement | Rare but reported in rural clinics |
-| Sickle cell disease crises | Vaso‑occlusion can worsen hepatic congestion and renal flow |
-| Hepatotoxic herbal remedies | Unregulated use leads to acute liver injury |
+- **Spontaneous bacterial peritonitis (SBP)**: High prevalence of ascites and limited early presentation
+- **Large volume paracentesis without albumin replacement**: Common practice in resource‑limited settings
+- **Gastrointestinal bleeding**: Hepatitis B/C and schistosomiasis increase portal hypertension
+- **Diuretic over‑use (furosemide, spironolactone)**: Often prescribed empirically for ascites
+- **Infections: HIV, TB, malaria, bacterial sepsis**: All can precipitate systemic vasodilation and renal hypoperfusion
+- **Rheumatic fever with cardiorenal involvement**: Rare but reported in rural clinics
+- **Sickle cell disease crises**: Vaso‑occlusion can worsen hepatic congestion and renal flow
+- **Hepatotoxic herbal remedies**: Unregulated use leads to acute liver injury
 
 ## Pathophysiology  
 1. **Advanced liver disease** → portal hypertension → massive **splanchnic vasodilation** (↑ NO, prostacyclin)  
@@ -51,34 +47,30 @@ Understanding that the kidney itself is structurally intact is essential; the fa
 
 **History – what to ask**  
 
-| Domain | Key questions | Rationale |
-|---|---|---|
-| Liver disease | “When was your liver disease diagnosed? What complications have you had (ascites, variceal bleed, encephalopathy)?” | Establish chronic liver disease and its decompensation – prerequisite for HRS. |
-| Ascites & diuretics | “How much fluid have you been retaining? Have you been on spironolactone, furosemide or other diuretics? Any recent dose changes?” | Over‑diuresis precipitates renal hypoperfusion; recent diuretic escalation is a common trigger. |
-| Infections | “Any recent fever, cough, dysuria, abdominal pain, skin sores, or recent hospitalisation? Have you been treated for TB, malaria or HIV‑related infections?” | Bacterial infection, spontaneous bacterial peritonitis (SBP), TB peritonitis, malaria or HIV‑related sepsis are frequent precipitants in our setting. |
-| Gastro‑intestinal bleeding | “Any vomiting of blood or black stools? Any recent endoscopy?” | Acute variceal bleed causes massive vasodilation and renal vasoconstriction. |
-| Medications & nephrotoxins | “Use of NSAIDs, aminoglycosides, contrast studies, herbal remedies?” | Direct renal insults must be excluded; NSAIDs blunt prostaglandin‑mediated renal vasodilation. |
-| Volume status | “Do you feel thirsty? Any swelling of legs or abdomen? Any recent diarrhoea or vomiting?” | Helps differentiate hypovolaemia from true HRS. |
-| HIV / TB / malaria | “Are you HIV positive? On antiretroviral therapy? Any recent TB treatment or malaria episodes?” | These infections can cause both liver injury and renal dysfunction, mimicking HRS. |
-| Sickle cell / rheumatic disease | “Do you have sickle cell disease or a history of rheumatic fever?” | Sickle cell nephropathy or immune‑complex GN can present similarly. |
-| Baseline renal function | “Have you ever had kidney disease? Any prior creatinine values?” | Excludes chronic kidney disease as primary cause. |
+- **Liver disease**: “When was your liver disease diagnosed? What complications have you had (ascites, variceal bleed, encephalopathy)?” — Establish chronic liver disease and its decompensation – prerequisite for HRS.
+- **Ascites & diuretics**: “How much fluid have you been retaining? Have you been on spironolactone, furosemide or other diuretics? Any recent dose changes?” — Over‑diuresis precipitates renal hypoperfusion; recent diuretic escalation is a common trigger.
+- **Infections**: “Any recent fever, cough, dysuria, abdominal pain, skin sores, or recent hospitalisation? Have you been treated for TB, malaria or HIV‑related infections?” — Bacterial infection, spontaneous bacterial peritonitis (SBP), TB peritonitis, malaria or HIV‑related sepsis are frequent precipitants in our setting.
+- **Gastro‑intestinal bleeding**: “Any vomiting of blood or black stools? Any recent endoscopy?” — Acute variceal bleed causes massive vasodilation and renal vasoconstriction.
+- **Medications & nephrotoxins**: “Use of NSAIDs, aminoglycosides, contrast studies, herbal remedies?” — Direct renal insults must be excluded; NSAIDs blunt prostaglandin‑mediated renal vasodilation.
+- **Volume status**: “Do you feel thirsty? Any swelling of legs or abdomen? Any recent diarrhoea or vomiting?” — Helps differentiate hypovolaemia from true HRS.
+- **HIV / TB / malaria**: “Are you HIV positive? On antiretroviral therapy? Any recent TB treatment or malaria episodes?” — These infections can cause both liver injury and renal dysfunction, mimicking HRS.
+- **Sickle cell / rheumatic disease**: “Do you have sickle cell disease or a history of rheumatic fever?” — Sickle cell nephropathy or immune‑complex GN can present similarly.
+- **Baseline renal function**: “Have you ever had kidney disease? Any prior creatinine values?” — Excludes chronic kidney disease as primary cause.
 
 **Examination – what to look for and why**  
 
-| Finding | Interpretation |
-|---|---|
-| **General** – cachexia, spider nevi, palmar erythema | Reflect chronic liver disease severity. |
-| **Mental status** – asterixis, confusion | May indicate hepatic encephalopathy; altered neuro‑hormonal balance contributes to renal vasoconstriction. |
-| **Jaundice** – scleral icterus, skin | Confirms cholestasis or hepatocellular injury; severe jaundice correlates with poor hepatic reserve. |
-| **Ascites** – shifting dullness, fluid wave | Presence of large-volume ascites is a major risk factor; intra‑abdominal pressure can impair renal perfusion. |
-| **Peripheral edema** – pitting edema of lower limbs | May be due to hypo‑albuminemia or renal sodium retention; helps gauge volume status. |
-| **Blood pressure** – low systolic (<100 mmHg) or narrow pulse pressure | Indicates systemic vasodilation and effective hypovolaemia driving renal vasoconstriction. |
-| **Heart rate** – tachycardia | Compensatory response to low arterial filling. |
-| **Peripheral pulses** – weak, delayed capillary refill | Sign of reduced peripheral perfusion. |
-| **Skin** – cool, clammy | Reflects peripheral vasoconstriction secondary to neuro‑hormonal activation. |
-| **Abdominal exam** – tender hepatomegaly, splenomegaly | Suggests portal hypertension and advanced disease. |
-| **Signs of infection** – fever, localized tenderness, murmur | Identify precipitating sepsis or SBP. |
-| **Urine output** – oliguria (<0.5 mL/kg/h) despite adequate fluid intake | Core clinical hallmark of HRS. |
+- **General – cachexia, spider nevi, palmar erythema**: Reflect chronic liver disease severity.
+- **Mental status – asterixis, confusion**: May indicate hepatic encephalopathy; altered neuro‑hormonal balance contributes to renal vasoconstriction.
+- **Jaundice – scleral icterus, skin**: Confirms cholestasis or hepatocellular injury; severe jaundice correlates with poor hepatic reserve.
+- **Ascites – shifting dullness, fluid wave**: Presence of large-volume ascites is a major risk factor; intra‑abdominal pressure can impair renal perfusion.
+- **Peripheral edema – pitting edema of lower limbs**: May be due to hypo‑albuminemia or renal sodium retention; helps gauge volume status.
+- **Blood pressure – low systolic (<100 mmHg) or narrow pulse pressure**: Indicates systemic vasodilation and effective hypovolaemia driving renal vasoconstriction.
+- **Heart rate – tachycardia**: Compensatory response to low arterial filling.
+- **Peripheral pulses – weak, delayed capillary refill**: Sign of reduced peripheral perfusion.
+- **Skin – cool, clammy**: Reflects peripheral vasoconstriction secondary to neuro‑hormonal activation.
+- **Abdominal exam – tender hepatomegaly, splenomegaly**: Suggests portal hypertension and advanced disease.
+- **Signs of infection – fever, localized tenderness, murmur**: Identify precipitating sepsis or SBP.
+- **Urine output – oliguria (<0.5 mL/kg/h) despite adequate fluid intake**: Core clinical hallmark of HRS.
 
 ---
 
@@ -100,23 +92,21 @@ Understanding that the kidney itself is structurally intact is essential; the fa
 
 ## Investigations  
 
-| Test | What it answers | Typical result in HRS |
-|---|---|---|
-| Serum creatinine & urea | Baseline renal function, trend | Rising creatinine, BUN/Cr <20 |
-| Electrolytes (Na⁺, K⁺) | Volume status, renal handling | Hyponatraemia, normal‑high K⁺ |
-| Liver panel (AST, ALT, ALP, GGT, bilirubin) | Severity of hepatic injury | Elevated bilirubin, variable transaminases |
-| INR / PT | Synthetic liver function | Prolonged INR |
-| Complete blood count | Infection, anemia | Leukocytosis if infection, anemia of chronic disease |
-| Urinalysis & microscopy | Intrinsic renal disease | Bland urine, no casts, low Na⁺ (<10 mmol/L) |
-| Fractional excretion of sodium (FeNa) | Prerenal vs intrinsic | <1 % (prerenal pattern) |
-| Urine sodium concentration | Same as FeNa | <10 mmol/L |
-| Ascitic fluid analysis (if ascites) | SBP screening | PMN >250 cells/µL suggests SBP |
-| Blood cultures | Sepsis source | Positive in septic precipitant |
-| Imaging – renal ultrasound | Structural kidney disease | Normal size, no obstruction |
-| Doppler hepatic ultrasound | Portal hypertension severity | High portal pressure, reversed flow |
-| Serum albumin | Oncotic pressure | Low albumin |
-| HIV, hepatitis B/C serology | Underlying infection | Positive if relevant |
-| Malaria rapid test / thick smear | Recent malaria | Positive if malaria precipitant |
+- **Serum creatinine & urea**: Baseline renal function, trend — Rising creatinine, BUN/Cr <20
+- **Electrolytes (Na⁺, K⁺)**: Volume status, renal handling — Hyponatraemia, normal‑high K⁺
+- **Liver panel (AST, ALT, ALP, GGT, bilirubin)**: Severity of hepatic injury — Elevated bilirubin, variable transaminases
+- **INR / PT**: Synthetic liver function — Prolonged INR
+- **Complete blood count**: Infection, anemia — Leukocytosis if infection, anemia of chronic disease
+- **Urinalysis & microscopy**: Intrinsic renal disease — Bland urine, no casts, low Na⁺ (<10 mmol/L)
+- **Fractional excretion of sodium (FeNa)**: Prerenal vs intrinsic — <1 % (prerenal pattern)
+- **Urine sodium concentration**: Same as FeNa — <10 mmol/L
+- **Ascitic fluid analysis (if ascites)**: SBP screening — PMN >250 cells/µL suggests SBP
+- **Blood cultures**: Sepsis source — Positive in septic precipitant
+- **Imaging – renal ultrasound**: Structural kidney disease — Normal size, no obstruction
+- **Doppler hepatic ultrasound**: Portal hypertension severity — High portal pressure, reversed flow
+- **Serum albumin**: Oncotic pressure — Low albumin
+- **HIV, hepatitis B/C serology**: Underlying infection — Positive if relevant
+- **Malaria rapid test / thick smear**: Recent malaria — Positive if malaria precipitant
 
 ---
 
@@ -134,11 +124,9 @@ If all are met → **Hepatorenal syndrome**.
 
 **Severity grading** (clinical practice)  
 
-| Grade | Creatinine (mg/dL) | Clinical picture | Management implication |
-|---|---|---|---|
-| **Type 1 (rapid)** | >2.5 or ≥50 % rise within ≤2 weeks | Sudden oliguria, high mortality | Urgent vasoconstrictor therapy, early transplant referral |
-| **Type 2 (slow)** | 1.5–2.5, progressive over weeks | Refractory ascites, modest renal decline | Long‑term albumin + vasoconstrictor, consider TIPS |
-| **Very severe** | >4.0 | Marked encephalopathy, hypotension | ICU care, renal replacement therapy as bridge to transplant |
+- **Type 1 (rapid)**: >2.5 or ≥50 % rise within ≤2 weeks — Sudden oliguria, high mortality — Urgent vasoconstrictor therapy, early transplant referral
+- **Type 2 (slow)**: 1.5–2.5, progressive over weeks — Refractory ascites, modest renal decline — Long‑term albumin + vasoconstrictor, consider TIPS
+- **Very severe**: >4.0 — Marked encephalopathy, hypotension — ICU care, renal replacement therapy as bridge to transplant
 
 Severity guides urgency of liver transplantation evaluation and need for renal replacement therapy (RRT). In Kenya, early referral to transplant centres and use of affordable vasoconstrictor regimens (e.g., terlipressin where available, otherwise norepinephrine infusion) are critical. Monitoring includes daily creatinine, urine output, electrolytes, and hemodynamics.
 
@@ -149,12 +137,10 @@ Severity guides urgency of liver transplantation evaluation and need for renal r
 - **Infection screen**: draw blood, urine and ascitic fluid for culture; start empiric broad‑spectrum antibiotics (e.g., a third‑generation cephalosporin) if infection is suspected.  
 
 **Definitive treatment**  
-| Goal | Agent / measure | Rationale |
-|---|---|---|
-| Splanchnic vasoconstriction | **Terlipressin** (vasopressin analogue) or **midodrine** + **octreotide** | Reduces portal inflow, raises systemic vascular resistance, improves renal blood flow. |
-| Plasma expansion | **Albumin** (repeat 20–40 g daily) | Maintains oncotic pressure, supports response to vasoconstrictors. |
-| Underlying liver disease | **Transjugular intra‑hepatic portosystemic shunt (TIPS)** if refractory ascites or variceal bleed; **liver transplantation** is definitive cure. |
-| Supportive care | Sodium restriction (≤ 2 g/day), diuretics only after volume expansion, avoid nephrotoxins (NSAIDs, aminoglycosides, contrast). | Prevent further renal insult. |
+- **Splanchnic vasoconstriction**: **Terlipressin** (vasopressin analogue) or **midodrine** + **octreotide** — Reduces portal inflow, raises systemic vascular resistance, improves renal blood flow.
+- **Plasma expansion**: **Albumin** (repeat 20–40 g daily) — Maintains oncotic pressure, supports response to vasoconstrictors.
+- **Underlying liver disease**: **Transjugular intra‑hepatic portosystemic shunt (TIPS)** if refractory ascites or variceal bleed; **liver transplantation** is definitive cure.
+- **Supportive care**: Sodium restriction (≤ 2 g/day), diuretics only after volume expansion, avoid nephrotoxins (NSAIDs, aminoglycosides, contrast). — Prevent further renal insult.
 
 **Monitoring & safety**  
 - **Vitals** q1‑2 h (BP, HR, MAP > 65 mmHg).  

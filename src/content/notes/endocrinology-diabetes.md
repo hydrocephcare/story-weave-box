@@ -5,12 +5,10 @@
 ## Definition  
 A chronic metabolic disorder characterised by persistent hyperglycaemia resulting from absolute insulin deficiency (type 1), relative insulin deficiency and/or insulin resistance (type 2), or other specific causes (e.g., drug‑induced, endocrine disease). Diagnosis is made when any of the following criteria are met on two separate occasions:  
 
-| Criterion | Value |
-|---|---|
-| Fasting plasma glucose | ≥7.0 mmol/L |
-| 2‑hour OGTT | ≥11.1 mmol/L |
-| Random plasma glucose with symptoms | ≥11.1 mmol/L |
-| HbA1c | ≥48 mmol/mol (6.5 %) |
+- **Fasting plasma glucose**: ≥7.0 mmol/L
+- **2‑hour OGTT**: ≥11.1 mmol/L
+- **Random plasma glucose with symptoms**: ≥11.1 mmol/L
+- **HbA1c**: ≥48 mmol/mol (6.5 %)
 
 ## Anatomy and physiology you need  
 - **Pancreatic β‑cells**: synthesize, store and secrete insulin in response to rising glucose.  
@@ -23,17 +21,15 @@ Understanding these sites helps explain why β‑cell loss, receptor down‑regu
 
 ## Causes and risk factors  
 
-| Category | Local relevance in Kenya |
-|---|---|
-| Genetic | Family history, African ancestry (higher insulin resistance) |
-| Lifestyle | Urbanisation, sedentary work, high‑calorie diets, tobacco use |
-| Obesity | Central adiposity common in peri‑urban populations |
-| Infections | HIV (ART‑induced insulin resistance), TB (steroid therapy), chronic malaria (stress hyperglycaemia), hepatitis C |
-| Hematologic | Sickle cell disease (β‑cell stress), thalassaemia (iron overload) |
-| Medications | Protease inhibitors, corticosteroids, some antipsychotics |
-| Endocrine | Cushing’s, acromegaly, pheochromocytoma |
-| Pregnancy | Gestational diabetes (risk for later type 2) |
-| Socio‑economic | Limited access to healthy foods, delayed screening |
+- **Genetic**: Family history, African ancestry (higher insulin resistance)
+- **Lifestyle**: Urbanisation, sedentary work, high‑calorie diets, tobacco use
+- **Obesity**: Central adiposity common in peri‑urban populations
+- **Infections**: HIV (ART‑induced insulin resistance), TB (steroid therapy), chronic malaria (stress hyperglycaemia), hepatitis C
+- **Hematologic**: Sickle cell disease (β‑cell stress), thalassaemia (iron overload)
+- **Medications**: Protease inhibitors, corticosteroids, some antipsychotics
+- **Endocrine**: Cushing’s, acromegaly, pheochromocytoma
+- **Pregnancy**: Gestational diabetes (risk for later type 2)
+- **Socio‑economic**: Limited access to healthy foods, delayed screening
 
 ## Pathophysiology  
 
@@ -52,37 +48,33 @@ Obesity → ↑ FFAs → ↓ insulin receptor signalling → insulin resistance 
 
 ## Clinical features  
 
-| Domain | Key questions / findings | Why it occurs |
-|---|---|---|
-| **Polyuria** | “How many times do you urinate each day? Do you wake at night to go?” | Hyperglycaemia exceeds renal tubular re‑absorption capacity → osmotic diuresis. |
-| **Polydipsia** | “Do you feel unusually thirsty? How much water/fluids do you drink?” | Loss of water with osmotic diuresis triggers thirst centre. |
-| **Polyphagia** | “Has your appetite increased? Are you eating more than usual?” | Cells perceive intracellular glucose deficiency → hunger signals. |
-| **Weight change** | “Unintentional weight loss or gain? Recent diet changes?” | Catabolic state (type 1) or insulin resistance with adiposity (type 2). |
-| **Fatigue** | “Do you feel unusually tired even after rest?” | Impaired glucose utilisation and dehydration reduce energy. |
-| **Blurred vision** | “Any recent changes in eyesight?” | Hyperosmolarity draws fluid into lens, altering refractive index. |
-| **Infections** | “Frequent skin, urinary, or genital infections?” | Hyperglycaemia impairs neutrophil function and promotes microbial growth. |
-| **Neuropathy symptoms** | “Numbness, tingling, burning in feet or hands?” | Chronic hyperglycaemia damages peripheral nerves. |
-| **Cardiovascular symptoms** | “Chest pain, dyspnoea, claudication?” | Accelerated atherosclerosis in diabetes. |
-| **Pregnancy history** | “History of gestational diabetes or macrosomic infant?” | Prior gestational diabetes is a strong risk factor for type 2. |
-| **Family & ethnic background** | “Any relatives with diabetes? Ethnicity?” | Genetic predisposition; African ancestry has higher risk of type 2. |
-| **Co‑morbid infections** | “Do you have HIV, TB, recurrent malaria, sickle cell disease?” | HIV, TB, chronic malaria and sickle cell can worsen insulin resistance or precipitate hyperglycaemia. |
-| **Medication history** | “Use of steroids, antiretrovirals, protease inhibitors, thiazides?” | Certain drugs increase insulin resistance or impair secretion. |
-| **Lifestyle** | “Physical activity level, diet, alcohol use, smoking?” | Sedentary lifestyle, high‑calorie diet, alcohol and smoking aggravate insulin resistance. |
+- **Polyuria**: “How many times do you urinate each day? Do you wake at night to go?” — Hyperglycaemia exceeds renal tubular re‑absorption capacity → osmotic diuresis.
+- **Polydipsia**: “Do you feel unusually thirsty? How much water/fluids do you drink?” — Loss of water with osmotic diuresis triggers thirst centre.
+- **Polyphagia**: “Has your appetite increased? Are you eating more than usual?” — Cells perceive intracellular glucose deficiency → hunger signals.
+- **Weight change**: “Unintentional weight loss or gain? Recent diet changes?” — Catabolic state (type 1) or insulin resistance with adiposity (type 2).
+- **Fatigue**: “Do you feel unusually tired even after rest?” — Impaired glucose utilisation and dehydration reduce energy.
+- **Blurred vision**: “Any recent changes in eyesight?” — Hyperosmolarity draws fluid into lens, altering refractive index.
+- **Infections**: “Frequent skin, urinary, or genital infections?” — Hyperglycaemia impairs neutrophil function and promotes microbial growth.
+- **Neuropathy symptoms**: “Numbness, tingling, burning in feet or hands?” — Chronic hyperglycaemia damages peripheral nerves.
+- **Cardiovascular symptoms**: “Chest pain, dyspnoea, claudication?” — Accelerated atherosclerosis in diabetes.
+- **Pregnancy history**: “History of gestational diabetes or macrosomic infant?” — Prior gestational diabetes is a strong risk factor for type 2.
+- **Family & ethnic background**: “Any relatives with diabetes? Ethnicity?” — Genetic predisposition; African ancestry has higher risk of type 2.
+- **Co‑morbid infections**: “Do you have HIV, TB, recurrent malaria, sickle cell disease?” — HIV, TB, chronic malaria and sickle cell can worsen insulin resistance or precipitate hyperglycaemia.
+- **Medication history**: “Use of steroids, antiretrovirals, protease inhibitors, thiazides?” — Certain drugs increase insulin resistance or impair secretion.
+- **Lifestyle**: “Physical activity level, diet, alcohol use, smoking?” — Sedentary lifestyle, high‑calorie diet, alcohol and smoking aggravate insulin resistance.
 
 **Examination findings**
 
-| Finding | Interpretation |
-|---|---|
-| **Elevated BMI / central obesity** | Visceral fat drives insulin resistance (type 2). |
-| **Acanthosis nigricans** (hyperpigmented velvety plaques on neck, axillae) | Marker of chronic hyperinsulinaemia and insulin resistance. |
-| **Dry skin, fissures** | Dehydration from osmotic diuresis; predisposes to infection. |
-| **Peripheral neuropathy** (reduced vibration, pin‑prick sensation) | Long‑standing hyperglycaemia causing nerve damage. |
-| **Foot deformities / ulcers** | Neuropathy + peripheral arterial disease → loss of protective sensation and poor healing. |
-| **Hypertension** | Common comorbidity; contributes to macrovascular risk. |
-| **Cardiac exam** (S4 gallop) | Diastolic dysfunction from hypertension and diabetic cardiomyopathy. |
-| **Fundoscopic changes** (microaneurysms, hemorrhages) | Early diabetic retinopathy; indicates microvascular disease. |
-| **Signs of infection** (erythema, swelling) | Hyperglycaemia impairs immunity; infections may be presenting feature. |
-| **Hepatomegaly / fatty liver** | Non‑alcoholic fatty liver disease common in insulin resistance. |
+- **Elevated BMI / central obesity**: Visceral fat drives insulin resistance (type 2).
+- **Acanthosis nigricans (hyperpigmented velvety plaques on neck, axillae)**: Marker of chronic hyperinsulinaemia and insulin resistance.
+- **Dry skin, fissures**: Dehydration from osmotic diuresis; predisposes to infection.
+- **Peripheral neuropathy (reduced vibration, pin‑prick sensation)**: Long‑standing hyperglycaemia causing nerve damage.
+- **Foot deformities / ulcers**: Neuropathy + peripheral arterial disease → loss of protective sensation and poor healing.
+- **Hypertension**: Common comorbidity; contributes to macrovascular risk.
+- **Cardiac exam (S4 gallop)**: Diastolic dysfunction from hypertension and diabetic cardiomyopathy.
+- **Fundoscopic changes (microaneurysms, hemorrhages)**: Early diabetic retinopathy; indicates microvascular disease.
+- **Signs of infection (erythema, swelling)**: Hyperglycaemia impairs immunity; infections may be presenting feature.
+- **Hepatomegaly / fatty liver**: Non‑alcoholic fatty liver disease common in insulin resistance.
 
 ---
 
@@ -104,21 +96,19 @@ Obesity → ↑ FFAs → ↓ insulin receptor signalling → insulin resistance 
 
 ## Investigations  
 
-| Test | What it answers | Interpretation |
-|---|---|---|
-| Fasting plasma glucose (FPG) | Baseline glucose status | ≥7.0 mmol/L = diabetes; 5.6‑6.9 mmol/L = pre‑diabetes |
-| 2‑hour oral glucose tolerance test (OGTT) | Glucose handling after load | ≥11.1 mmol/L = diabetes; 7.8‑11.0 mmol/L = impaired glucose tolerance |
-| HbA1c | Average glycaemia over 2‑3 months | ≥6.5 % = diabetes; 5.7‑6.4 % = increased risk |
-| Random plasma glucose (RPG) with symptoms | Diagnostic in symptomatic patients | ≥11.1 mmol/L with classic symptoms = diabetes |
-| C‑peptide (fasting or stimulated) | Endogenous insulin secretion | Low → insulin deficiency (type 1); normal/high → insulin resistance (type 2) |
-| Auto‑antibodies (GAD‑65, IA‑2, ZnT8) | Autoimmune etiology | Positive = type 1 or LADA |
-| Lipid profile | Cardiovascular risk | Elevated LDL, TG, low HDL common in type 2 |
-| Renal function (eGFR, urine albumin‑creatinine ratio) | Diabetic kidney disease | Albuminuria >the protocol dose/g or reduced eGFR indicates nephropathy |
-| Liver function tests & ultrasound | NAFLD assessment | Elevated ALT/AST, fatty infiltration on US |
-| Fundoscopy (or retinal photography) | Diabetic retinopathy | Microaneurysms, hemorrhages, exudates |
-| Foot assessment (monofilament, pulses) | Neuropathy & peripheral arterial disease | Loss of sensation or absent pulses → high ulcer risk |
-| HIV test, TB screening (GeneXpert, chest X‑ray) | Co‑morbid infections influencing glucose | Positive results guide integrated management |
-| Pregnancy test (women of reproductive age) | Exclude gestational diabetes | Positive → refer for obstetric evaluation |
+- **Fasting plasma glucose (FPG)**: Baseline glucose status — ≥7.0 mmol/L = diabetes; 5.6‑6.9 mmol/L = pre‑diabetes
+- **2‑hour oral glucose tolerance test (OGTT)**: Glucose handling after load — ≥11.1 mmol/L = diabetes; 7.8‑11.0 mmol/L = impaired glucose tolerance
+- **HbA1c**: Average glycaemia over 2‑3 months — ≥6.5 % = diabetes; 5.7‑6.4 % = increased risk
+- **Random plasma glucose (RPG) with symptoms**: Diagnostic in symptomatic patients — ≥11.1 mmol/L with classic symptoms = diabetes
+- **C‑peptide (fasting or stimulated)**: Endogenous insulin secretion — Low → insulin deficiency (type 1); normal/high → insulin resistance (type 2)
+- **Auto‑antibodies (GAD‑65, IA‑2, ZnT8)**: Autoimmune etiology — Positive = type 1 or LADA
+- **Lipid profile**: Cardiovascular risk — Elevated LDL, TG, low HDL common in type 2
+- **Renal function (eGFR, urine albumin‑creatinine ratio)**: Diabetic kidney disease — Albuminuria > 30 mg/g or reduced eGFR indicates nephropathy
+- **Liver function tests & ultrasound**: NAFLD assessment — Elevated ALT/AST, fatty infiltration on US
+- **Fundoscopy (or retinal photography)**: Diabetic retinopathy — Microaneurysms, hemorrhages, exudates
+- **Foot assessment (monofilament, pulses)**: Neuropathy & peripheral arterial disease — Loss of sensation or absent pulses → high ulcer risk
+- **HIV test, TB screening (GeneXpert, chest X‑ray)**: Co‑morbid infections influencing glucose — Positive results guide integrated management
+- **Pregnancy test (women of reproductive age)**: Exclude gestational diabetes — Positive → refer for obstetric evaluation
 
 ---
 
@@ -137,11 +127,9 @@ Obesity → ↑ FFAs → ↓ insulin receptor signalling → insulin resistance 
 
 3. **Assess severity** (glycaemic control and organ involvement):  
 
-| Category | Glycaemic marker | Target | Complication risk |
-|---|---|---|---|
-| **Well‑controlled** | HbA1c <7 % (or <53 mmol/mol) | Near‑normal glucose | Low micro‑ and macro‑vascular risk |
-| **Moderately uncontrolled** | HbA1c 7‑9 % | Requires treatment intensification | Rising risk of retinopathy, nephropathy |
-| **Poorly controlled** | HbA1c >9 % | High risk of ketoacidosis (type 1) or hyperosmolar state (type 2) | Advanced micro‑vascular disease, cardiovascular events |
+- **Well‑controlled**: HbA1c <7 % (or <53 mmol/mol) — Near‑normal glucose — Low micro‑ and macro‑vascular risk
+- **Moderately uncontrolled**: HbA1c 7‑9 % — Requires treatment intensification — Rising risk of retinopathy, nephropathy
+- **Poorly controlled**: HbA1c >9 % — High risk of ketoacidosis (type 1) or hyperosmolar state (type 2) — Advanced micro‑vascular disease, cardiovascular events
 
 4. **Stage organ damage** using:  
    - **Nephropathy**: albuminuria categories (normo‑, micro‑, macro‑) and eGFR.  
@@ -157,13 +145,11 @@ Severity grading guides urgency of glycaemic control, choice of drug class (e.g.
 - **Hypoglycaemia** – administer glucose (IV dextrose if unconscious, oral glucose if conscious) and reassess cause.  
 
 **Definitive treatment**  
-| Goal | First‑line agents (class) | Rationale |
-|---|---|---|
-| Lower fasting glucose | Metformin (biguanide) | Reduces hepatic gluconeogenesis, improves peripheral insulin sensitivity; weight neutral. |
-| Post‑prandial control | DPP‑4 inhibitor or GLP‑1 receptor agonist | Enhance incretin effect, low hypoglycaemia risk; GLP‑1 also promotes weight loss. |
-| Established cardiovascular disease / CKD | SGL‑2 inhibitor (if eGFR acceptable) | Lowers glucose, reduces CV events and slows renal decline. |
-| When HbA1c remains >9 % despite oral agents | Add basal insulin (long‑acting) | Provides steady background insulin, easy titration. |
-| Pregnancy or severe insulin resistance | Rapid‑acting insulin + basal insulin regimen | Tight control needed, oral agents contraindicated. |
+- **Lower fasting glucose**: Metformin (biguanide) — Reduces hepatic gluconeogenesis, improves peripheral insulin sensitivity; weight neutral.
+- **Post‑prandial control**: DPP‑4 inhibitor or GLP‑1 receptor agonist — Enhance incretin effect, low hypoglycaemia risk; GLP‑1 also promotes weight loss.
+- **Established cardiovascular disease / CKD**: SGL‑2 inhibitor (if eGFR acceptable) — Lowers glucose, reduces CV events and slows renal decline.
+- **When HbA1c remains >9 % despite oral agents**: Add basal insulin (long‑acting) — Provides steady background insulin, easy titration.
+- **Pregnancy or severe insulin resistance**: Rapid‑acting insulin + basal insulin regimen — Tight control needed, oral agents contraindicated.
 
 **Monitoring**  
 - **Glycaemia**: capillary glucose 4‑hourly in acute phase, then fasting & 2‑hour post‑meal glucose daily; HbA1c every 3 months until stable, then 6 months.  

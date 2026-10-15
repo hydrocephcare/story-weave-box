@@ -105,7 +105,7 @@ for (const slug of todo) {
     const heads = (md.match(/^## /gm) ?? []).length, qs = (md.match(/^### Question \d/gm) ?? []).length, rows = (md.match(/^\|/gm) ?? []).length;
     // a drug dose is a number with mg/mcg/µg that is not a laboratory value (mg/dL, mg/L)
     // doses that slipped in are not kept: the number goes and the sentence says to use the protocol dose, so the note is not thrown away for one figure
-    const DOSE = /\b\d+(?:[.,]\d+)?(?:\s?[-–]\s?\d+(?:[.,]\d+)?)?\s?(?:mg|mcg|µg|ug)(?:\s?\/\s?(?:kg|day|dose|h|hr|hour|24\s?h))*\b(?!\s?\/\s?(?:d?l|ml|mmol))/gi;
+    const DOSE = /\b\d+(?:[.,]\d+)?(?:\s?[-–]\s?\d+(?:[.,]\d+)?)?\s?(?:mg|mcg|µg|ug)(?:\s?\/\s?(?:kg|day|dose|h|hr|hour|24\s?h))*\b(?!\s?\/\s?(?:d?l|ml|mmol|mol|g\b|l\b))/gi;
     const doses = md.match(DOSE) ?? [];
     if (doses.length) md = md.replace(DOSE, "the protocol dose");
     if (md.length < 7000 || heads < 11 || qs < 4 || rows < 6) { console.log("rejected (checks):", slug, md.length, heads, qs, rows); continue; }

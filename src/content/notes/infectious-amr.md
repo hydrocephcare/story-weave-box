@@ -11,15 +11,13 @@ Stewardship is the coordinated effort to promote the optimal use of antimicrobia
 Resistance refers to the ability of microorganisms to survive and multiply despite exposure to an antimicrobial that would normally inhibit or kill them.
 
 ## Anatomy and physiology you need  
-| System | Relevant structures | Key physiological concepts |
-|---|---|---|
-| Respiratory | Upper airway, trachea, bronchi, alveoli | Mucociliary clearance, surfactant, gas exchange |
-| Cardiovascular | Endocardium, valvular tissue, myocardium | Endothelial integrity, blood flow dynamics |
-| Gastro‑intestinal | Stomach, small intestine, colon | Acidic barrier, gut microbiota, absorption |
-| Urinary | Renal pelvis, ureter, bladder, prostate | Urine flow, urothelial defence |
-| Skin & soft tissue | Epidermis, dermis, subcutaneous fat | Barrier function, lymphatic drainage |
-| Central nervous system | Meninges, blood‑brain barrier | Limited drug penetration, CSF turnover |
-| Hepatic & biliary | Hepatocytes, bile ducts | Biliary excretion, first‑pass metabolism |
+- **Respiratory**: Upper airway, trachea, bronchi, alveoli — Mucociliary clearance, surfactant, gas exchange
+- **Cardiovascular**: Endocardium, valvular tissue, myocardium — Endothelial integrity, blood flow dynamics
+- **Gastro‑intestinal**: Stomach, small intestine, colon — Acidic barrier, gut microbiota, absorption
+- **Urinary**: Renal pelvis, ureter, bladder, prostate — Urine flow, urothelial defence
+- **Skin & soft tissue**: Epidermis, dermis, subcutaneous fat — Barrier function, lymphatic drainage
+- **Central nervous system**: Meninges, blood‑brain barrier — Limited drug penetration, CSF turnover
+- **Hepatic & biliary**: Hepatocytes, bile ducts — Biliary excretion, first‑pass metabolism
 
 Understanding these sites helps predict drug distribution, required penetration, and potential toxicities.
 
@@ -45,24 +43,22 @@ Understanding these sites helps predict drug distribution, required penetration,
 
 ## Clinical features  
 
-| Domain | Key questions / findings | Rationale |
-|---|---|---|
-| **Onset & chronology** | *When did the symptoms start?* *Was the onset sudden or gradual?* | Sudden onset suggests toxin‑mediated or acute bacterial infection; gradual rise favours opportunistic or chronic infections (e.g., TB, fungal). |
-| **Fever pattern** | *Peak temperature, chills, rigors, diurnal variation?* | High, sustained fevers with rigors point to invasive bacterial sepsis; intermittent fevers are classic for malaria or TB. |
-| **Localising symptoms** | *Cough, sputum, dyspnoea, chest pain, dysuria, abdominal pain, diarrhoea, skin lesions, joint swelling?* | Guides organ system involved; e.g., productive cough with purulent sputum → lower respiratory infection; dysuria with suprapubic pain → urinary tract infection. |
-| **Risk‑factor exposure** | *Recent travel, animal contact, sick contacts, hospitalisation, surgery, indwelling catheters, recent antibiotics, HIV status, CD4 count, TB exposure, malaria prophylaxis, sickle‑cell crises, rheumatic disease, immunosuppressants?* | Identifies predisposition to specific pathogens (e.g., HIV → opportunistic fungi; sickle‑cell → encapsulated bacteria). |
-| **Medication history** | *Current antibiotics, antiretrovirals, antimalarials, immunosuppressants, recent drug allergies?* | Prior antibiotics select resistant flora; drug interactions affect choice of agents. |
-| **Vaccination status** | *Pneumococcal, Hib, influenza, typhoid, yellow fever, BCG?* | Lack of vaccine protection raises likelihood of vaccine‑preventable organisms. |
-| **Systemic review** | *Weight loss, night sweats, fatigue, myalgia, headache, neurological signs?* | Constitutional symptoms suggest disseminated infection or TB; neurological signs may indicate meningitis or cerebral malaria. |
-| **Examination – General** | *Temperature, pulse, blood pressure, respiratory rate, mental status, skin colour, jaundice, lymphadenopathy, rash, petechiae?* | Fever, tachycardia, hypotension = systemic inflammatory response; rash/petechiae may indicate meningococcemia or drug reaction. |
-| **HEENT** | *Conjunctival injection, oropharyngeal erythema, tonsillar exudate, sinus tenderness?* | Upper respiratory sources; sinusitis can seed lower tract. |
-| **Chest** | *Breath sounds (crackles, bronchial breath sounds), pleural rub, egophony, percussion dullness?* | Consolidation → bacterial pneumonia; pleural rub → pleuritis or TB pleuritis. |
-| **Cardiovascular** | *Murmurs, signs of endocarditis (Osler nodes, Janeway lesions), peripheral pulses?* | New murmur or peripheral stigmata suggest infective endocarditis, especially in HIV or IV drug users. |
-| **Abdomen** | *Tenderness, guarding, organomegaly, hepatosplenomegaly, ascites?* | Hepatosplenomegaly common in malaria, disseminated TB, or opportunistic fungal infection. |
-| **Genitourinary** | *Costovertebral angle tenderness, suprapubic tenderness, discharge?* | CVA tenderness → pyelonephritis; discharge → STI‑related urethritis. |
-| **Skin** | *Lesions (ulcers, pustules, necrotic eschars), cellulitis, erythema nodosum?* | Necrotic eschar → cutaneous anthrax; cellulitis → Staphylococcus/Streptococcus; erythema nodosum → TB or sarcoidosis. |
-| **Neurological** | *Neck stiffness, photophobia, focal deficits, altered consciousness?* | Meningeal signs → meningitis; focal deficits → brain abscess or cerebral malaria. |
-| **Peripheral** | *Joint swelling, warmth, limited ROM?* | Septic arthritis, especially in sickle‑cell disease or HIV. |
+- **Onset & chronology**: *When did the symptoms start?* *Was the onset sudden or gradual?* — Sudden onset suggests toxin‑mediated or acute bacterial infection; gradual rise favours opportunistic or chronic infections (e.g., TB, fungal).
+- **Fever pattern**: *Peak temperature, chills, rigors, diurnal variation?* — High, sustained fevers with rigors point to invasive bacterial sepsis; intermittent fevers are classic for malaria or TB.
+- **Localising symptoms**: *Cough, sputum, dyspnoea, chest pain, dysuria, abdominal pain, diarrhoea, skin lesions, joint swelling?* — Guides organ system involved; e.g., productive cough with purulent sputum → lower respiratory infection; dysuria with suprapubic pain → urinary tract infection.
+- **Risk‑factor exposure**: *Recent travel, animal contact, sick contacts, hospitalisation, surgery, indwelling catheters, recent antibiotics, HIV status, CD4 count, TB exposure, malaria prophylaxis, sickle‑cell crises, rheumatic disease, immunosuppressants?* — Identifies predisposition to specific pathogens (e.g., HIV → opportunistic fungi; sickle‑cell → encapsulated bacteria).
+- **Medication history**: *Current antibiotics, antiretrovirals, antimalarials, immunosuppressants, recent drug allergies?* — Prior antibiotics select resistant flora; drug interactions affect choice of agents.
+- **Vaccination status**: *Pneumococcal, Hib, influenza, typhoid, yellow fever, BCG?* — Lack of vaccine protection raises likelihood of vaccine‑preventable organisms.
+- **Systemic review**: *Weight loss, night sweats, fatigue, myalgia, headache, neurological signs?* — Constitutional symptoms suggest disseminated infection or TB; neurological signs may indicate meningitis or cerebral malaria.
+- **Examination – General**: *Temperature, pulse, blood pressure, respiratory rate, mental status, skin colour, jaundice, lymphadenopathy, rash, petechiae?* — Fever, tachycardia, hypotension = systemic inflammatory response; rash/petechiae may indicate meningococcemia or drug reaction.
+- **HEENT**: *Conjunctival injection, oropharyngeal erythema, tonsillar exudate, sinus tenderness?* — Upper respiratory sources; sinusitis can seed lower tract.
+- **Chest**: *Breath sounds (crackles, bronchial breath sounds), pleural rub, egophony, percussion dullness?* — Consolidation → bacterial pneumonia; pleural rub → pleuritis or TB pleuritis.
+- **Cardiovascular**: *Murmurs, signs of endocarditis (Osler nodes, Janeway lesions), peripheral pulses?* — New murmur or peripheral stigmata suggest infective endocarditis, especially in HIV or IV drug users.
+- **Abdomen**: *Tenderness, guarding, organomegaly, hepatosplenomegaly, ascites?* — Hepatosplenomegaly common in malaria, disseminated TB, or opportunistic fungal infection.
+- **Genitourinary**: *Costovertebral angle tenderness, suprapubic tenderness, discharge?* — CVA tenderness → pyelonephritis; discharge → STI‑related urethritis.
+- **Skin**: *Lesions (ulcers, pustules, necrotic eschars), cellulitis, erythema nodosum?* — Necrotic eschar → cutaneous anthrax; cellulitis → Staphylococcus/Streptococcus; erythema nodosum → TB or sarcoidosis.
+- **Neurological**: *Neck stiffness, photophobia, focal deficits, altered consciousness?* — Meningeal signs → meningitis; focal deficits → brain abscess or cerebral malaria.
+- **Peripheral**: *Joint swelling, warmth, limited ROM?* — Septic arthritis, especially in sickle‑cell disease or HIV.
 
 ---
 
@@ -83,23 +79,21 @@ Understanding these sites helps predict drug distribution, required penetration,
 
 ## Investigations  
 
-| Test | What it answers | Interpretation |
-|---|---|---|
-| Full blood count | Leukocyte response, anaemia, thrombocytopenia | Neutrophilia → bacterial; lymphopenia → viral/HIV; anaemia with schistocytes → malaria |
-| Blood culture (2 sets) | Presence of bacteremia/fungemia | Growth of organism guides definitive therapy; no growth after 48 h suggests non‑bacterial or prior antibiotics |
-| Urine microscopy & culture | Urinary tract infection | Pyuria + ≥10⁵ CFU/mL of a single organism = significant UTI |
-| Sputum Gram stain & culture | Lower respiratory pathogens | Gram‑positive cocci in chains → Streptococcus pneumoniae; Gram‑negative rods → H. influenzae, Klebsiella |
-| Chest X‑ray | Lung infiltrates, effusion, cavitation | Lobar consolidation → typical pneumonia; cavitation → TB or necrotising infection |
-| Rapid malaria test (HRP‑2) | Presence of Plasmodium falciparum | Positive = treat for malaria; negative → consider microscopy |
-| Thick & thin blood smear | Species identification, parasite density | Ring forms, gametocytes confirm falciparum; high density predicts severe disease |
-| HIV test (4th generation) | HIV status | Positive → need opportunistic infection work‑up, CD4 count |
-| CD4 count & viral load (if HIV+) | Immune competence | CD4 < 200 cells/µL = high risk for opportunistic pathogens |
-| GeneXpert MTB/RIF (sputum or CSF) | Mycobacterium tuberculosis & rifampicin resistance | Positive = TB; rifampicin resistance alters regimen |
-| CSF analysis (cell count, protein, glucose, Gram stain, culture, cryptococcal antigen) | Meningitis aetiology | Neutrophilic pleocytosis → bacterial; lymphocytic + low glucose → TB/fungal |
-| Liver function tests | Hepatic involvement, drug safety | Elevated transaminases may limit hepatotoxic agents |
-| Renal function (creatinine, electrolytes) | Kidney involvement, dosing considerations | Rising creatinine → adjust nephrotoxic drugs |
-| Procalcitonin | Bacterial vs viral infection | High level supports bacterial sepsis; low level suggests viral or non‑infective inflammation |
-| C‑reactive protein | Inflammatory burden | Very high values correlate with severe bacterial infection |
+- **Full blood count**: Leukocyte response, anaemia, thrombocytopenia — Neutrophilia → bacterial; lymphopenia → viral/HIV; anaemia with schistocytes → malaria
+- **Blood culture (2 sets)**: Presence of bacteremia/fungemia — Growth of organism guides definitive therapy; no growth after 48 h suggests non‑bacterial or prior antibiotics
+- **Urine microscopy & culture**: Urinary tract infection — Pyuria + ≥10⁵ CFU/mL of a single organism = significant UTI
+- **Sputum Gram stain & culture**: Lower respiratory pathogens — Gram‑positive cocci in chains → Streptococcus pneumoniae; Gram‑negative rods → H. influenzae, Klebsiella
+- **Chest X‑ray**: Lung infiltrates, effusion, cavitation — Lobar consolidation → typical pneumonia; cavitation → TB or necrotising infection
+- **Rapid malaria test (HRP‑2)**: Presence of Plasmodium falciparum — Positive = treat for malaria; negative → consider microscopy
+- **Thick & thin blood smear**: Species identification, parasite density — Ring forms, gametocytes confirm falciparum; high density predicts severe disease
+- **HIV test (4th generation)**: HIV status — Positive → need opportunistic infection work‑up, CD4 count
+- **CD4 count & viral load (if HIV+)**: Immune competence — CD4 < 200 cells/µL = high risk for opportunistic pathogens
+- **GeneXpert MTB/RIF (sputum or CSF)**: Mycobacterium tuberculosis & rifampicin resistance — Positive = TB; rifampicin resistance alters regimen
+- **CSF analysis (cell count, protein, glucose, Gram stain, culture, cryptococcal antigen)**: Meningitis aetiology — Neutrophilic pleocytosis → bacterial; lymphocytic + low glucose → TB/fungal
+- **Liver function tests**: Hepatic involvement, drug safety — Elevated transaminases may limit hepatotoxic agents
+- **Renal function (creatinine, electrolytes)**: Kidney involvement, dosing considerations — Rising creatinine → adjust nephrotoxic drugs
+- **Procalcitonin**: Bacterial vs viral infection — High level supports bacterial sepsis; low level suggests viral or non‑infective inflammation
+- **C‑reactive protein**: Inflammatory burden — Very high values correlate with severe bacterial infection
 
 ---
 
@@ -157,15 +151,13 @@ Apply the core principles of antimicrobial stewardship (AMS) throughout therapy:
 * **IV-to-Oral Switch:** Transition to oral therapy once the patient is clinically stable, afebrile for 24–48 hours, tolerating oral intake, and has an intact gastrointestinal tract with a bioequivalent oral option (e.g., fluoroquinolones, co-trimoxazole, metronidazole, or amoxicillin-clavulanate).
 * **Fixed Duration:** Use the shortest validated curative duration (e.g., 5–7 days for uncomplicated community-acquired pneumonia, 7 days for uncomplicated pyelonephritis) to minimise selective pressure. Stop antibiotics if a non-infectious aetiology is confirmed.
 
-| Drug Class | Common Agents | Primary Clinical Indication | Stewardship Rationale |
-|---|---|---|---|
-| Penicillins | Crystalline penicillin, Ampicillin | Streptococcal, enterococcal infections | Narrowest spectrum; saves broad agents |
-| Antipseudomonal β-lactam | Piperacillin-tazobactam | Severe nosocomial sepsis, intra-abdominal | Sparing carbapenems; covers *P. aeruginosa* |
-| Cephalosporins (3rd/4th gen) | Ceftriaxone, Cefepime | Severe CAP, meningitis, pyelonephritis | High ESBL induction risk; de-escalate early |
-| Carbapenems | Meropenem | Documented ESBL, multidrug-resistant sepsis | "Watch/Reserve" class; restricted use |
-| Glycopeptides | Vancomycin | Documented or high-risk MRSA | Guided by levels; avoid in MSSA |
-| Oxazolidinones | Linezolid | VRE, MRSA pneumonia/soft tissue | Reserve oral/IV agent; avoid prolonged use |
-| Polymyxins | Colistin | Extensively drug-resistant Gram-negatives | Last-line resort; requires renal monitoring |
+- **Penicillins**: Crystalline penicillin, Ampicillin — Streptococcal, enterococcal infections — Narrowest spectrum; saves broad agents
+- **Antipseudomonal β-lactam**: Piperacillin-tazobactam — Severe nosocomial sepsis, intra-abdominal — Sparing carbapenems; covers *P. aeruginosa*
+- **Cephalosporins (3rd/4th gen)**: Ceftriaxone, Cefepime — Severe CAP, meningitis, pyelonephritis — High ESBL induction risk; de-escalate early
+- **Carbapenems**: Meropenem — Documented ESBL, multidrug-resistant sepsis — "Watch/Reserve" class; restricted use
+- **Glycopeptides**: Vancomycin — Documented or high-risk MRSA — Guided by levels; avoid in MSSA
+- **Oxazolidinones**: Linezolid — VRE, MRSA pneumonia/soft tissue — Reserve oral/IV agent; avoid prolonged use
+- **Polymyxins**: Colistin — Extensively drug-resistant Gram-negatives — Last-line resort; requires renal monitoring
 
 ### Monitoring and Safety
 * **Clinical Response:** Track temperature curve, heart rate, respiratory rate, resolution of local signs, and clearance of organ dysfunction daily.

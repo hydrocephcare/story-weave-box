@@ -1,4 +1,4 @@
-# Ectopic pregnancy — Year 4 Obstetrics and Gynaecology Notes
+# Ectopic pregnancy
 
 *Based on the Department of Obstetrics and Gynaecology lecture (Dr Ritho), reorganised for the ward. Ectopic pregnancy is a life-threatening emergency in any woman of reproductive age with pain, bleeding or collapse: think of it first, exclude it last.*
 
@@ -10,14 +10,12 @@ An **ectopic pregnancy** is one in which the fertilised ovum **implants and deve
 
 ## 2. Where it implants
 
-| Site | Share |
-|---|---|
-| **Fallopian tube** (ampulla commonest, then isthmus, fimbria, interstitial) | **about 98%** |
-| Ovary | about 0.5% |
-| Abdominal and intraligamentous | rare |
-| Cervix | about 0.4% |
-| **Cornual / interstitial** | rare but bleeds torrentially |
-| Caesarean scar | increasing with caesarean rates |
+- **Fallopian tube (ampulla commonest, then isthmus, fimbria, interstitial)**: **about 98%**
+- **Ovary**: about 0.5%
+- **Abdominal and intraligamentous**: rare
+- **Cervix**: about 0.4%
+- **Cornual / interstitial**: rare but bleeds torrentially
+- **Caesarean scar**: increasing with caesarean rates
 
 ![An ectopic pregnancy in the fallopian tube seen at laparoscopy. Mikael Häggström, CC BY-SA 3.0](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ectopic_pregnancy_on_laparoscopy.png/960px-Ectopic_pregnancy_on_laparoscopy.png)
 
@@ -72,13 +70,11 @@ The pregnancy ends in one of three ways: **tubal rupture** (heavy bleeding into 
 
 ## 8. Investigate with purpose
 
-| Test | The question it answers |
-|---|---|
-| **Urine pregnancy test (positive)** | Is she pregnant? (Do this in every woman of reproductive age with abdominal pain.) |
-| **Serum β-hCG** | Is the level rising normally? In a healthy early pregnancy it **roughly doubles every 48 hours**. A slow rise or plateau suggests ectopic or failing pregnancy |
-| **Transvaginal ultrasound** | Is there a pregnancy in the uterus? **No intrauterine pregnancy** with a positive test, an **adnexal mass** (the "**blob sign**" or "**bagel sign**"), a "**double ring**" appearance, **free fluid in the pouch of Douglas** |
-| **Full blood count, group and crossmatch, clotting screen** | How much blood has been lost, and is blood ready? |
-| **Rhesus group** | **Give anti-D immunoglobulin to rhesus-negative women** |
+- **Urine pregnancy test (positive)**: Is she pregnant? (Do this in every woman of reproductive age with abdominal pain.)
+- **Serum β-hCG**: Is the level rising normally? In a healthy early pregnancy it **roughly doubles every 48 hours**. A slow rise or plateau suggests ectopic or failing pregnancy
+- **Transvaginal ultrasound**: Is there a pregnancy in the uterus? **No intrauterine pregnancy** with a positive test, an **adnexal mass** (the "**blob sign**" or "**bagel sign**"), a "**double ring**" appearance, **free fluid in the pouch of Douglas**
+- **Full blood count, group and crossmatch, clotting screen**: How much blood has been lost, and is blood ready?
+- **Rhesus group**: **Give anti-D immunoglobulin to rhesus-negative women**
 
 **The discriminatory zone:** when the hCG is above about **1,500 to 2,000 IU/L**, a normal uterine pregnancy should be visible on transvaginal ultrasound. If nothing is seen in the uterus at that level, **ectopic pregnancy is likely**. Below that level, repeat the hCG in 48 hours.
 
@@ -113,11 +109,9 @@ Choose between **expectant, medical or surgical** care:
 
 **Surgical:** **laparoscopy** is the gold standard in a stable woman (less pain, shorter stay, faster recovery).
 
-| Operation | When |
-|---|---|
-| **Salpingectomy** (remove the whole tube) | The default; the other tube is healthy; the tube is badly damaged or bleeding; the woman has completed her family |
-| **Salpingotomy / salpingostomy** (open the tube, remove the pregnancy, leave the tube) | The other tube is damaged and she wants to conceive; **needs follow-up hCG** because trophoblast can persist |
-| **Partial salpingectomy** | Rarely used |
+- **Salpingectomy (remove the whole tube)**: The default; the other tube is healthy; the tube is badly damaged or bleeding; the woman has completed her family
+- **Salpingotomy / salpingostomy (open the tube, remove the pregnancy, leave the tube)**: The other tube is damaged and she wants to conceive; **needs follow-up hCG** because trophoblast can persist
+- **Partial salpingectomy**: Rarely used
 
 ## 10. Follow-up and counselling
 

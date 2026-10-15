@@ -8,11 +8,9 @@ The commonest tumour in the liver is a **metastasis**, not a primary. Among prim
 
 ## Benign tumours
 
-| Tumour | Who and why | Key features | What matters |
-|---|---|---|---|
-| **Cavernous haemangioma** | Any age, women more | **Commonest benign liver tumour**; vascular channels; incidental on ultrasound or CT | **Do not biopsy** (risk of haemorrhage); usually needs no treatment |
-| **Focal nodular hyperplasia (FNH)** | Young women | **Central stellate scar**; hyperplastic response to an arterial malformation; **no link to the pill, no malignant potential, no rupture** | Reassure; follow-up only |
-| **Hepatocellular adenoma** | **Young women on oral contraceptives**; anabolic steroids, glycogen storage disease | Benign hepatocytes without portal tracts; **can rupture** and bleed into the abdomen; rarely turns malignant | Stop the pill (it may regress); resect large (over 5 cm), symptomatic or bleeding lesions |
+- **Cavernous haemangioma**: Any age, women more — **Commonest benign liver tumour**; vascular channels; incidental on ultrasound or CT — **Do not biopsy** (risk of haemorrhage); usually needs no treatment
+- **Focal nodular hyperplasia (FNH)**: Young women — **Central stellate scar**; hyperplastic response to an arterial malformation; **no link to the pill, no malignant potential, no rupture** — Reassure; follow-up only
+- **Hepatocellular adenoma**: **Young women on oral contraceptives**; anabolic steroids, glycogen storage disease — Benign hepatocytes without portal tracts; **can rupture** and bleed into the abdomen; rarely turns malignant — Stop the pill (it may regress); resect large (over 5 cm), symptomatic or bleeding lesions
 
 *Adenoma versus FNH:* adenoma has a **bleeding risk and is linked to the pill**; FNH has a **central scar and neither**.
 

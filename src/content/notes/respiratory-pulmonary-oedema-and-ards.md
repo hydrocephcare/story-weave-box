@@ -22,17 +22,15 @@ The lung's gas exchange unit consists of alveoli and surrounding capillaries. Th
 
 ## Causes and risk factors
 
-| Cardiogenic Pulmonary Oedema (CPO) | Non-Cardiogenic Pulmonary Oedema (NCPO) / ARDS |
-| :--- | :--- |
-| Acute Myocardial Infarction | Sepsis (most common cause) |
-| Chronic Heart Failure exacerbation | Severe Pneumonia (bacterial, viral, fungal) |
-| Valvular Heart Disease (e.g., mitral regurgitation, aortic stenosis) | Aspiration of gastric contents |
-| Hypertensive Crisis | Severe Trauma with shock |
-| Arrhythmias (e.g., rapid AF) | Pancreatitis |
-| Myocarditis | Non-thoracic trauma with massive transfusions |
-| Fluid overload (e.g., iatrogenic) | Drug overdose (e.g., opioids, salicylates) |
-| Renal failure with fluid overload | Inhalation injury (smoke, toxic gases) |
-| | Near-drowning |
+- **Acute Myocardial Infarction**: Sepsis (most common cause)
+- **Chronic Heart Failure exacerbation**: Severe Pneumonia (bacterial, viral, fungal)
+- **Valvular Heart Disease (e.g., mitral regurgitation, aortic stenosis)**: Aspiration of gastric contents
+- **Hypertensive Crisis**: Severe Trauma with shock
+- **Arrhythmias (e.g., rapid AF)**: Pancreatitis
+- **Myocarditis**: Non-thoracic trauma with massive transfusions
+- **Fluid overload (e.g., iatrogenic)**: Drug overdose (e.g., opioids, salicylates)
+- **Renal failure with fluid overload**: Inhalation injury (smoke, toxic gases)
+- Near-drowning
 
 ## Pathophysiology
 

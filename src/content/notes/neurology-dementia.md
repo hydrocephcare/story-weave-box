@@ -16,15 +16,13 @@
 
 ## Causes and risk factors  
 
-| Category | Common local aetiologies | Key risk factors |
-|---|---|---|
-| Neurodegenerative | Alzheimer’s disease, vascular dementia, Lewy‑body dementia, frontotemporal dementia | Age > 65, family history, hypertension, diabetes |
-| Infectious | HIV‑associated neurocognitive disorder, tuberculous meningitis, cerebral malaria, neurosyphilis, bacterial meningitis | HIV positivity, TB exposure, recent malaria, immunosuppression |
-| Metabolic / Toxic | Vitamin B12 deficiency, folate deficiency, chronic alcohol, lead exposure, anticholinergic burden | Poor nutrition, alcoholism, occupational exposure |
-| Vascular / Cardiac | Multi‑infarct dementia, cardio‑embolic stroke, hypertension, atrial fibrillation | Uncontrolled BP, AF, prior stroke |
-| Hematologic / Genetic | Sickle‑cell disease (cerebral infarcts), sickle‑cell trait, hereditary ataxias | Sickle‑cell disease, consanguinity |
-| Autoimmune / Inflammatory | Systemic lupus erythematosus, vasculitis, rheumatic fever (Sydenham chorea) | Autoimmune disease, recent streptococcal infection |
-| Medication‑induced | Benzodiazepines, anticholinergics, opioids, corticosteroids | Polypharmacy, high‑risk drugs |
+- **Neurodegenerative**: Alzheimer’s disease, vascular dementia, Lewy‑body dementia, frontotemporal dementia — Age > 65, family history, hypertension, diabetes
+- **Infectious**: HIV‑associated neurocognitive disorder, tuberculous meningitis, cerebral malaria, neurosyphilis, bacterial meningitis — HIV positivity, TB exposure, recent malaria, immunosuppression
+- **Metabolic / Toxic**: Vitamin B12 deficiency, folate deficiency, chronic alcohol, lead exposure, anticholinergic burden — Poor nutrition, alcoholism, occupational exposure
+- **Vascular / Cardiac**: Multi‑infarct dementia, cardio‑embolic stroke, hypertension, atrial fibrillation — Uncontrolled BP, AF, prior stroke
+- **Hematologic / Genetic**: Sickle‑cell disease (cerebral infarcts), sickle‑cell trait, hereditary ataxias — Sickle‑cell disease, consanguinity
+- **Autoimmune / Inflammatory**: Systemic lupus erythematosus, vasculitis, rheumatic fever (Sydenham chorea) — Autoimmune disease, recent streptococcal infection
+- **Medication‑induced**: Benzodiazepines, anticholinergics, opioids, corticosteroids — Polypharmacy, high‑risk drugs
 
 ## Pathophysiology  
 
@@ -40,20 +38,18 @@ Systemic insult (infection, drugs, metabolic derangement) → inflammatory cytok
 
 ## Clinical features  
 
-| Domain | Key questions / findings | Why it matters |
-|---|---|---|
-| **Onset** | “When did the problem start?” “Was the change sudden (hours‑days) or gradual (months‑years)?” | Sudden onset favours delirium; insidious onset points to dementia. |
-| **Course** | Fluctuation of symptoms (better in the morning, worse at night)? | Fluctuating consciousness is classic for delirium; dementia is usually progressive but may have day‑to‑day variability in later stages. |
-| **Memory** | Recent memory loss (forgetting recent conversations, appointments)? Remote memory intact? | Early episodic memory loss is typical of Alzheimer’s dementia; delirium may have global attention deficit with impaired recall of recent events. |
-| **Attention** | Ability to follow a conversation, count backwards, spell “world” backwards? | Impaired sustained attention is a core feature of delirium; attention is relatively preserved early in most dementias. |
-| **Orientation** | “What is the date? Where are you? Who are you?” | Disorientation to time/place is common in delirium; in dementia it appears later. |
-| **Behaviour / psychosis** | Hallucinations, delusions, agitation, aggression, sleep‑wake reversal? | Visual hallucinations are frequent in Lewy body dementia and delirium; acute agitation suggests delirium. |
-| **Functional decline** | Ability to perform ADLs (bathing, dressing, cooking) before and now? | Decline in instrumental ADLs precedes basic ADLs in dementia; delirium can cause abrupt loss of all functions. |
-| **Risk exposures** | Recent infection, fever, new medication, surgery, electrolyte imbalance, alcohol withdrawal, substance use, HIV status, TB treatment, malaria, sickle‑cell crisis? | Identifiable precipitants point to delirium; chronic infections (TB, HIV) can also cause dementia‑type syndromes. |
-| **Past medical history** | Vascular disease, hypertension, diabetes, stroke, head injury, rheumatic fever (carditis), neuro‑degenerative disease in family? | Vascular risk factors predispose to vascular dementia; rheumatic fever can cause Sydenham chorea and later cognitive issues. |
-| **Medication review** | Anticholinergics, benzodiazepines, opioids, steroids, antipsychotics, HIV antiretrovirals, anti‑TB drugs? | Many drugs are delirium precipitants; some (e.g., cholinesterase inhibitors) are used in dementia. |
-| **Social / environmental** | Recent relocation, sensory deprivation, lack of caregiver support? | Environmental stressors precipitate delirium; social isolation worsens dementia progression. |
-| **Physical symptoms** | Fever, headache, neck stiffness, focal weakness, seizures? | Suggests infectious or metabolic cause of delirium; focal deficits hint at stroke or space‑occupying lesion. |
+- **Onset**: “When did the problem start?” “Was the change sudden (hours‑days) or gradual (months‑years)?” — Sudden onset favours delirium; insidious onset points to dementia.
+- **Course**: Fluctuation of symptoms (better in the morning, worse at night)? — Fluctuating consciousness is classic for delirium; dementia is usually progressive but may have day‑to‑day variability in later stages.
+- **Memory**: Recent memory loss (forgetting recent conversations, appointments)? Remote memory intact? — Early episodic memory loss is typical of Alzheimer’s dementia; delirium may have global attention deficit with impaired recall of recent events.
+- **Attention**: Ability to follow a conversation, count backwards, spell “world” backwards? — Impaired sustained attention is a core feature of delirium; attention is relatively preserved early in most dementias.
+- **Orientation**: “What is the date? Where are you? Who are you?” — Disorientation to time/place is common in delirium; in dementia it appears later.
+- **Behaviour / psychosis**: Hallucinations, delusions, agitation, aggression, sleep‑wake reversal? — Visual hallucinations are frequent in Lewy body dementia and delirium; acute agitation suggests delirium.
+- **Functional decline**: Ability to perform ADLs (bathing, dressing, cooking) before and now? — Decline in instrumental ADLs precedes basic ADLs in dementia; delirium can cause abrupt loss of all functions.
+- **Risk exposures**: Recent infection, fever, new medication, surgery, electrolyte imbalance, alcohol withdrawal, substance use, HIV status, TB treatment, malaria, sickle‑cell crisis? — Identifiable precipitants point to delirium; chronic infections (TB, HIV) can also cause dementia‑type syndromes.
+- **Past medical history**: Vascular disease, hypertension, diabetes, stroke, head injury, rheumatic fever (carditis), neuro‑degenerative disease in family? — Vascular risk factors predispose to vascular dementia; rheumatic fever can cause Sydenham chorea and later cognitive issues.
+- **Medication review**: Anticholinergics, benzodiazepines, opioids, steroids, antipsychotics, HIV antiretrovirals, anti‑TB drugs? — Many drugs are delirium precipitants; some (e.g., cholinesterase inhibitors) are used in dementia.
+- **Social / environmental**: Recent relocation, sensory deprivation, lack of caregiver support? — Environmental stressors precipitate delirium; social isolation worsens dementia progression.
+- **Physical symptoms**: Fever, headache, neck stiffness, focal weakness, seizures? — Suggests infectious or metabolic cause of delirium; focal deficits hint at stroke or space‑occupying lesion.
 
 **Examination findings**  
 
@@ -85,21 +81,19 @@ Systemic insult (infection, drugs, metabolic derangement) → inflammatory cytok
 
 ## Investigations  
 
-| Test | What it answers | Meaning of result |
-|---|---|---|
-| Full blood count, ESR/CRP | Infection, anemia, inflammation | Elevated CRP/ESR → possible infection precipitating delirium |
-| Electrolytes, renal & liver panel, glucose | Metabolic derangements | Hyponatremia, hyperglycemia, hepatic failure → reversible delirium causes |
-| Thyroid function (TSH, free T4) | Thyroid dysfunction | Hypo‑ or hyper‑thyroidism can mimic cognitive decline |
-| HIV serology + CD4 count + viral load | HIV status, immune competence | Low CD4 with high viral load → risk for HIV‑associated dementia |
-| TB work‑up (sputum GeneXpert, chest X‑ray) | Active TB | Positive GeneXpert → possible CNS TB contribution |
-| Malaria rapid test / thick smear | Recent malaria infection | Positive → consider cerebral malaria if neurologic signs |
-| Serum vitamin B12, folate, thiamine | Nutritional deficiencies | Low B12 → reversible cognitive impairment |
-| Urinalysis & culture | Urinary infection | Significant bacteriuria → common delirium trigger |
-| Brain CT (non‑contrast) | Structural lesions, bleed, hydrocephalus | Acute bleed → delirium; cortical atrophy → dementia |
-| Brain MRI (if available) | Detailed parenchymal changes, infarcts, white‑matter disease | Multiple infarcts → vascular dementia; hippocampal atrophy → Alzheimer’s |
-| EEG | Diffuse slowing vs. epileptiform activity | Diffuse slowing → metabolic or delirium; periodic sharp waves → CJD |
-| CSF analysis (cell count, protein, glucose, cultures, PCR for TB, cryptococcus) | CNS infection, inflammatory disease | Lymphocytic pleocytosis + low glucose → TB meningitis |
-| Neuropsychological testing (MMSE, MoCA) | Baseline cognitive profile, severity | Scores <24 suggest moderate‑severe dementia; rapid drop suggests delirium |
+- **Full blood count, ESR/CRP**: Infection, anemia, inflammation — Elevated CRP/ESR → possible infection precipitating delirium
+- **Electrolytes, renal & liver panel, glucose**: Metabolic derangements — Hyponatremia, hyperglycemia, hepatic failure → reversible delirium causes
+- **Thyroid function (TSH, free T4)**: Thyroid dysfunction — Hypo‑ or hyper‑thyroidism can mimic cognitive decline
+- **HIV serology + CD4 count + viral load**: HIV status, immune competence — Low CD4 with high viral load → risk for HIV‑associated dementia
+- **TB work‑up (sputum GeneXpert, chest X‑ray)**: Active TB — Positive GeneXpert → possible CNS TB contribution
+- **Malaria rapid test / thick smear**: Recent malaria infection — Positive → consider cerebral malaria if neurologic signs
+- **Serum vitamin B12, folate, thiamine**: Nutritional deficiencies — Low B12 → reversible cognitive impairment
+- **Urinalysis & culture**: Urinary infection — Significant bacteriuria → common delirium trigger
+- **Brain CT (non‑contrast)**: Structural lesions, bleed, hydrocephalus — Acute bleed → delirium; cortical atrophy → dementia
+- **Brain MRI (if available)**: Detailed parenchymal changes, infarcts, white‑matter disease — Multiple infarcts → vascular dementia; hippocampal atrophy → Alzheimer’s
+- **EEG**: Diffuse slowing vs. epileptiform activity — Diffuse slowing → metabolic or delirium; periodic sharp waves → CJD
+- **CSF analysis (cell count, protein, glucose, cultures, PCR for TB, cryptococcus)**: CNS infection, inflammatory disease — Lymphocytic pleocytosis + low glucose → TB meningitis
+- **Neuropsychological testing (MMSE, MoCA)**: Baseline cognitive profile, severity — Scores <24 suggest moderate‑severe dementia; rapid drop suggests delirium
 
 ---
 
@@ -134,14 +128,12 @@ Systemic insult (infection, drugs, metabolic derangement) → inflammatory cytok
 
 **Definitive treatment**  
 
-| Condition | First‑line pharmacologic class | Rationale | Non‑pharmacologic adjunct |
-|---|---|---|---|
-| Alzheimer’s disease | Acetylcholinesterase inhibitor (donepezil, rivastigmine, galantamine) | Improves cortical cholinergic transmission, modestly slows cognitive decline | Cognitive stimulation, regular exercise, caregiver education |
-| Vascular dementia | Control of vascular risk (antihypertensives, statins, antiplatelets) | Prevents further infarcts | Physical therapy, gait training |
-| Lewy‑body dementia | Antipsychotic avoidance; consider low‑dose atypical only if severe psychosis | High sensitivity to neuroleptics → severe parkinsonism | Structured routine, visual cues |
-| Frontotemporal dementia | No disease‑modifying drugs; manage behaviour with selective serotonin reuptake inhibitors (SSRIs) for disinhibition | Targets serotonergic dysregulation | Speech therapy, occupational therapy |
-| Delirium (hyperactive) | Low‑dose antipsychotic (haloperidol or atypical) only after non‑pharm measures fail | Reduces agitation, prevents injury | Reorientation, sleep‑wake cycle optimisation, early mobilisation |
-| Delirium (hypoactive) | Treat underlying cause; consider low‑dose stimulant (e.g., methylphenidate) if severe lethargy | Improves alertness without excessive sedation | Mobilise, ensure adequate nutrition & hydration |
+- **Alzheimer’s disease**: Acetylcholinesterase inhibitor (donepezil, rivastigmine, galantamine) — Improves cortical cholinergic transmission, modestly slows cognitive decline — Cognitive stimulation, regular exercise, caregiver education
+- **Vascular dementia**: Control of vascular risk (antihypertensives, statins, antiplatelets) — Prevents further infarcts — Physical therapy, gait training
+- **Lewy‑body dementia**: Antipsychotic avoidance; consider low‑dose atypical only if severe psychosis — High sensitivity to neuroleptics → severe parkinsonism — Structured routine, visual cues
+- **Frontotemporal dementia**: No disease‑modifying drugs; manage behaviour with selective serotonin reuptake inhibitors (SSRIs) for disinhibition — Targets serotonergic dysregulation — Speech therapy, occupational therapy
+- **Delirium (hyperactive)**: Low‑dose antipsychotic (haloperidol or atypical) only after non‑pharm measures fail — Reduces agitation, prevents injury — Reorientation, sleep‑wake cycle optimisation, early mobilisation
+- **Delirium (hypoactive)**: Treat underlying cause; consider low‑dose stimulant (e.g., methylphenidate) if severe lethargy — Improves alertness without excessive sedation — Mobilise, ensure adequate nutrition & hydration
 
 **Monitoring & follow‑up**  
 - Re‑assess mental status every 4–6 h in acute delirium (CAM or 4AT).  

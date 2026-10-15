@@ -1,4 +1,4 @@
-# Obesity and Metabolic Syndrome  
+# Obesity and metabolic syndrome
 
 *After reading this note you will be able to define obesity and metabolic syndrome, list the local aetiologies, describe the key pathophysiological steps and recognise the essential clinical findings.  Always verify drug choices, doses and local protocols against the Kenya MoH guideline and your hospital formulary.*
 
@@ -9,26 +9,22 @@
 
 ## Anatomy and physiology you need  
 
-| Structure | Relevance to obesity/MetS |
-|---|---|
-| Adipose tissue (subcutaneous & visceral) | Stores triglycerides; visceral fat releases free fatty acids & adipokines that drive insulin resistance |
-| Hypothalamus (ARC, PVN) | Integrates leptin & insulin signals to regulate appetite & energy expenditure |
-| Pancreas (β‑cells) | Secretes insulin; chronic insulin resistance leads to hyperinsulinaemia and β‑cell stress |
-| Liver | Site of de‑novo lipogenesis; hepatic insulin resistance causes ↑ VLDL, ↑ TG |
-| Muscle | Major glucose sink; insulin resistance reduces glucose uptake |
-| Endothelium | Exposed to inflammatory cytokines from adipose tissue → atherogenesis |
+- **Adipose tissue (subcutaneous & visceral)**: Stores triglycerides; visceral fat releases free fatty acids & adipokines that drive insulin resistance
+- **Hypothalamus (ARC, PVN)**: Integrates leptin & insulin signals to regulate appetite & energy expenditure
+- **Pancreas (β‑cells)**: Secretes insulin; chronic insulin resistance leads to hyperinsulinaemia and β‑cell stress
+- **Liver**: Site of de‑novo lipogenesis; hepatic insulin resistance causes ↑ VLDL, ↑ TG
+- **Muscle**: Major glucose sink; insulin resistance reduces glucose uptake
+- **Endothelium**: Exposed to inflammatory cytokines from adipose tissue → atherogenesis
 
 ## Causes and risk factors  
 
-| Category | Specific factors in Kenya |
-|---|---|
-| Lifestyle | High‑calorie western‑type diets, sugary drinks, low fruit/veg intake, sedentary occupations, urban migration |
-| Socio‑economic | Poverty limiting access to healthy foods, food insecurity leading to “feast‑famine” cycles |
-| Genetic/ethnic | African ancestry predisposes to central fat deposition; family history of obesity/diabetes |
-| Infectious | **HIV** (ART‑associated lipodystrophy, chronic inflammation), **TB** (post‑treatment weight gain), **malaria** (repeated episodes may alter metabolism), **rheumatic fever** (steroid therapy), **sickle cell disease** (chronic anemia, steroid use) |
-| Medications | Second‑generation antipsychotics, glucocorticoids, some antiretrovirals, protease inhibitors |
-| Endocrine | Hypothyroidism, Cushing’s syndrome, polycystic ovary syndrome |
-| Psychosocial | Depression, stress, cultural perceptions of “larger body” as health |
+- **Lifestyle**: High‑calorie western‑type diets, sugary drinks, low fruit/veg intake, sedentary occupations, urban migration
+- **Socio‑economic**: Poverty limiting access to healthy foods, food insecurity leading to “feast‑famine” cycles
+- **Genetic/ethnic**: African ancestry predisposes to central fat deposition; family history of obesity/diabetes
+- **Infectious**: **HIV** (ART‑associated lipodystrophy, chronic inflammation), **TB** (post‑treatment weight gain), **malaria** (repeated episodes may alter metabolism), **rheumatic fever** (steroid therapy), **sickle cell disease** (chronic anemia, steroid use)
+- **Medications**: Second‑generation antipsychotics, glucocorticoids, some antiretrovirals, protease inhibitors
+- **Endocrine**: Hypothyroidism, Cushing’s syndrome, polycystic ovary syndrome
+- **Psychosocial**: Depression, stress, cultural perceptions of “larger body” as health
 
 ## Pathophysiology  
 
@@ -46,31 +42,27 @@
 
 ## Clinical features  
 
-| History domain | Key questions | Why it matters |
-|---|---|---|
-| Weight trajectory | “When did you first notice weight gain? How fast has it progressed?” | Rapid rise suggests endocrine or medication effect; gradual rise points to lifestyle or genetic predisposition. |
-| Distribution of fat | “Do you carry weight around the waist, hips, or elsewhere?” | Central (visceral) adiposity is the hallmark of metabolic syndrome and predicts cardiovascular risk. |
-| Appetite & diet | “What do you eat daily? Any binge episodes? Use of sugary drinks or high‑fat foods?” | Excess caloric intake and poor diet quality are modifiable drivers. |
-| Physical activity | “How many days per week do you walk, run, or do farm work? Any sedentary occupations?” | Low energy expenditure reinforces weight gain and insulin resistance. |
-| Medications & supplements | “Are you on steroids, antiretrovirals, protease inhibitors, antipsychotics, or herbal remedies?” | Many drugs (e.g., ART, steroids) cause lipodystrophy or weight gain in Kenyan patients. |
-| Co‑morbid infections | “History of TB, HIV, malaria, sickle‑cell crises, rheumatic fever?” | Chronic infections can alter metabolism, cause steroid use, or lead to secondary obesity (e.g., HIV‑associated lipodystrophy). |
-| Family history | “Any close relatives with diabetes, hypertension, dyslipidaemia, early heart disease?” | Genetic predisposition to insulin resistance and dyslipidaemia. |
-| Menstrual/reproductive history (women) | “Irregular periods, polycystic ovary syndrome symptoms?” | PCOS is a common cause of central obesity and insulin resistance. |
-| Sleep & stress | “Do you have sleep apnoea, shift work, chronic stress?” | Sleep deprivation and stress hormones worsen insulin resistance. |
-| Symptoms of complications | “Chest pain, dyspnoea, leg swelling, polyuria, nocturia, visual changes, skin changes?” | Early detection of cardiovascular, renal, or hepatic sequelae. |
+- **Weight trajectory**: “When did you first notice weight gain? How fast has it progressed?” — Rapid rise suggests endocrine or medication effect; gradual rise points to lifestyle or genetic predisposition.
+- **Distribution of fat**: “Do you carry weight around the waist, hips, or elsewhere?” — Central (visceral) adiposity is the hallmark of metabolic syndrome and predicts cardiovascular risk.
+- **Appetite & diet**: “What do you eat daily? Any binge episodes? Use of sugary drinks or high‑fat foods?” — Excess caloric intake and poor diet quality are modifiable drivers.
+- **Physical activity**: “How many days per week do you walk, run, or do farm work? Any sedentary occupations?” — Low energy expenditure reinforces weight gain and insulin resistance.
+- **Medications & supplements**: “Are you on steroids, antiretrovirals, protease inhibitors, antipsychotics, or herbal remedies?” — Many drugs (e.g., ART, steroids) cause lipodystrophy or weight gain in Kenyan patients.
+- **Co‑morbid infections**: “History of TB, HIV, malaria, sickle‑cell crises, rheumatic fever?” — Chronic infections can alter metabolism, cause steroid use, or lead to secondary obesity (e.g., HIV‑associated lipodystrophy).
+- **Family history**: “Any close relatives with diabetes, hypertension, dyslipidaemia, early heart disease?” — Genetic predisposition to insulin resistance and dyslipidaemia.
+- **Menstrual/reproductive history (women)**: “Irregular periods, polycystic ovary syndrome symptoms?” — PCOS is a common cause of central obesity and insulin resistance.
+- **Sleep & stress**: “Do you have sleep apnoea, shift work, chronic stress?” — Sleep deprivation and stress hormones worsen insulin resistance.
+- **Symptoms of complications**: “Chest pain, dyspnoea, leg swelling, polyuria, nocturia, visual changes, skin changes?” — Early detection of cardiovascular, renal, or hepatic sequelae.
 
-| Examination element | What to look for | Pathophysiological explanation |
-|---|---|---|
-| BMI & waist circumference | Measure weight, height, waist at midpoint between iliac crest and rib cage | BMI quantifies overall adiposity; waist >94 cm (men) or >80 cm (women) signals visceral fat. |
-| Hip circumference & waist‑to‑hip ratio | Hip measurement, calculate ratio | High ratio (>0.90 men, >0.85 women) confirms central obesity. |
-| Blood pressure (both arms) | Systolic/diastolic reading | Hypertension is a core component of metabolic syndrome, driven by insulin resistance and sympathetic activation. |
-| Skin inspection | Acanthosis nigricans, striae, xanthelasma, skin tags | Hyperinsulinaemia stimulates keratinocyte proliferation (acanthosis) and lipid deposition (xanthelasma). |
-| Neck & upper back | “Buffalo hump”, cervical fat pad | Corticosteroid excess or HIV‑associated lipodystrophy. |
-| Peripheral pulses & edema | Check for peripheral vascular disease, fluid overload | Hypertension and dyslipidaemia predispose to atherosclerosis; heart failure may cause edema. |
-| Hepatomegaly & liver edge | Palpate liver, assess for fatty infiltration | Non‑alcoholic fatty liver disease (NAFLD) is common in obesity. |
-| Thyroid exam | Size, nodules, bruit | Excludes hypothyroidism, a reversible cause of weight gain. |
-| Musculoskeletal | Joint line tenderness, limited ROM | Obesity stresses weight‑bearing joints, may reveal early osteoarthritis. |
-| Neurological | Peripheral neuropathy signs | Chronic hyperglycaemia can cause sensory loss. |
+- **BMI & waist circumference**: Measure weight, height, waist at midpoint between iliac crest and rib cage — BMI quantifies overall adiposity; waist >94 cm (men) or >80 cm (women) signals visceral fat.
+- **Hip circumference & waist‑to‑hip ratio**: Hip measurement, calculate ratio — High ratio (>0.90 men, >0.85 women) confirms central obesity.
+- **Blood pressure (both arms)**: Systolic/diastolic reading — Hypertension is a core component of metabolic syndrome, driven by insulin resistance and sympathetic activation.
+- **Skin inspection**: Acanthosis nigricans, striae, xanthelasma, skin tags — Hyperinsulinaemia stimulates keratinocyte proliferation (acanthosis) and lipid deposition (xanthelasma).
+- **Neck & upper back**: “Buffalo hump”, cervical fat pad — Corticosteroid excess or HIV‑associated lipodystrophy.
+- **Peripheral pulses & edema**: Check for peripheral vascular disease, fluid overload — Hypertension and dyslipidaemia predispose to atherosclerosis; heart failure may cause edema.
+- **Hepatomegaly & liver edge**: Palpate liver, assess for fatty infiltration — Non‑alcoholic fatty liver disease (NAFLD) is common in obesity.
+- **Thyroid exam**: Size, nodules, bruit — Excludes hypothyroidism, a reversible cause of weight gain.
+- **Musculoskeletal**: Joint line tenderness, limited ROM — Obesity stresses weight‑bearing joints, may reveal early osteoarthritis.
+- **Neurological**: Peripheral neuropathy signs — Chronic hyperglycaemia can cause sensory loss.
 
 ---
 
@@ -119,12 +111,10 @@
 
 **Obesity severity** (BMI classification):  
 
-| BMI (kg/m²) | Category | Clinical implication |
-|---|---|---|
-| 25‑29.9 | Overweight | Early metabolic changes, counsel on lifestyle. |
-| 30‑34.9 | Class I obesity | Higher risk of hypertension, dyslipidaemia. |
-| 35‑39.9 | Class II obesity | Consider pharmacologic adjuncts, monitor end‑organ damage. |
-| ≥40 | Class III (severe) | Strong indication for multidisciplinary management, possible bariatric referral. |
+- **25‑29.9**: Overweight — Early metabolic changes, counsel on lifestyle.
+- **30‑34.9**: Class I obesity — Higher risk of hypertension, dyslipidaemia.
+- **35‑39.9**: Class II obesity — Consider pharmacologic adjuncts, monitor end‑organ damage.
+- **≥40**: Class III (severe) — Strong indication for multidisciplinary management, possible bariatric referral.
 
 **Staging of NAFLD (if present)** can be approximated by liver enzymes and ultrasound; referral for elastography or biopsy if suspicion of steato‑hepatitis or fibrosis.
 
@@ -147,15 +137,19 @@ Patients with **≥3 components, BMI ≥35 kg/m², or any end‑organ involv
 
 **Definitive treatment**  
 
-| Goal | Intervention | Rationale |
-|---|---|---|
-| Weight loss (5–10 % in 6 months) | Lifestyle modification: calorie‑restricted diet (≈500 kcal deficit), high‑protein, low‑glycaemic index, ≥150 min/week moderate activity (walking, cycling) | Reduces insulin resistance, improves lipid profile, lowers BP |
-| Behavioural support | Structured counselling, motivational interviewing, group sessions, digital apps | Improves adherence, addresses emotional eating |
-| Pharmacotherapy (if BMI ≥ 30 kg/m² or ≥ 27 kg/m² with comorbidity) | • GLP‑1 receptor agonist (e.g., liraglutide) <br>• SGLT‑2 inhibitor (e.g., empagliflozin) <br>• Orlistat (lipase inhibitor) | GLP‑1 agents lower appetite and improve glycaemia; SGLT‑2 reduce weight and cardiovascular risk; Orlistat blocks fat absorption – useful when cost is limiting |
-| Bariatric surgery (BMI ≥ 35 kg/m² with metabolic disease, or BMI ≥ 40 kg/m²) | Sleeve gastrectomy or Roux‑en‑Y gastric bypass – performed in a centre with multidisciplinary team | Provides >25 % excess weight loss, rapid remission of type 2 diabetes, improves hypertension and dyslipidaemia |
-| Management of comorbidities | • Antihypertensives (ACE‑I/ARB, calcium‑channel blocker) <br>• Statins for dyslipidaemia <br>• Metformin for insulin resistance (if not contraindicated) | Target BP < 130/80 mmHg, LDL‑C < 2.5 mmol/L, improve insulin sensitivity |
-| Treat OSA | CPAP therapy, weight loss, positional therapy | Reduces cardiovascular strain, improves daytime alertness |
-| Address HIV/TB/other tropical infections | Optimise antiretroviral therapy, complete TB treatment, treat malaria promptly; avoid steroids that worsen weight gain unless essential | Prevents drug‑induced metabolic derangements |
+- **Weight loss (5–10 % in 6 months)**: Lifestyle modification: calorie‑restricted diet (≈500 kcal deficit), high‑protein, low‑glycaemic index, ≥150 min/week moderate activity (walking, cycling) — Reduces insulin resistance, improves lipid profile, lowers BP
+- **Behavioural support**: Structured counselling, motivational interviewing, group sessions, digital apps — Improves adherence, addresses emotional eating
+- **Pharmacotherapy (if BMI ≥ 30 kg/m² or ≥ 27 kg/m² with comorbidity)**
+  - GLP‑1 receptor agonist (e.g., liraglutide)
+  - SGLT‑2 inhibitor (e.g., empagliflozin)
+  - Orlistat (lipase inhibitor) — GLP‑1 agents lower appetite and improve glycaemia; SGLT‑2 reduce weight and cardiovascular risk; Orlistat blocks fat absorption – useful when cost is limiting
+- **Bariatric surgery (BMI ≥ 35 kg/m² with metabolic disease, or BMI ≥ 40 kg/m²)**: Sleeve gastrectomy or Roux‑en‑Y gastric bypass – performed in a centre with multidisciplinary team — Provides >25 % excess weight loss, rapid remission of type 2 diabetes, improves hypertension and dyslipidaemia
+- **Management of comorbidities**
+  - Antihypertensives (ACE‑I/ARB, calcium‑channel blocker)
+  - Statins for dyslipidaemia
+  - Metformin for insulin resistance (if not contraindicated) — Target BP < 130/80 mmHg, LDL‑C < 2.5 mmol/L, improve insulin sensitivity
+- **Treat OSA**: CPAP therapy, weight loss, positional therapy — Reduces cardiovascular strain, improves daytime alertness
+- **Address HIV/TB/other tropical infections**: Optimise antiretroviral therapy, complete TB treatment, treat malaria promptly; avoid steroids that worsen weight gain unless essential — Prevents drug‑induced metabolic derangements
 
 **Monitoring and follow‑up**  
 - **Weight & waist circumference**: every 4 weeks initially, then 3‑monthly.  
@@ -174,15 +168,13 @@ Patients with **≥3 components, BMI ≥35 kg/m², or any end‑organ involv
 
 ## Complications and prognosis  
 
-| System | Typical complication | Clinical impact |
-|---|---|---|
-| Cardiovascular | Ischaemic heart disease, heart failure, atrial fibrillation | Leading cause of mortality; weight loss reduces event rates |
-| Metabolic | Type 2 diabetes mellitus, dyslipidaemia, non‑alcoholic fatty liver disease (NAFLD) → steatohepatitis, cirrhosis | Progression to end‑stage liver disease if untreated |
-| Respiratory | Obstructive sleep‑apnoea, obesity hypoventilation syndrome | Daytime somnolence, pulmonary hypertension |
-| Musculoskeletal | Osteoarthritis, gout | Reduced mobility, chronic pain |
-| Gastro‑intestinal | Gastro‑oesophageal reflux, gallstones | May limit diet choices, require surgical intervention |
-| Cancer | Endometrial, breast, colorectal, pancreatic | Relative risk rises with each 5 kg increase in weight |
-| Psychosocial | Depression, stigma, reduced quality of life | Affects adherence to therapy |
+- **Cardiovascular**: Ischaemic heart disease, heart failure, atrial fibrillation — Leading cause of mortality; weight loss reduces event rates
+- **Metabolic**: Type 2 diabetes mellitus, dyslipidaemia, non‑alcoholic fatty liver disease (NAFLD) → steatohepatitis, cirrhosis — Progression to end‑stage liver disease if untreated
+- **Respiratory**: Obstructive sleep‑apnoea, obesity hypoventilation syndrome — Daytime somnolence, pulmonary hypertension
+- **Musculoskeletal**: Osteoarthritis, gout — Reduced mobility, chronic pain
+- **Gastro‑intestinal**: Gastro‑oesophageal reflux, gallstones — May limit diet choices, require surgical intervention
+- **Cancer**: Endometrial, breast, colorectal, pancreatic — Relative risk rises with each 5 kg increase in weight
+- **Psychosocial**: Depression, stigma, reduced quality of life — Affects adherence to therapy
 
 **Prognosis** improves markedly with ≥ 5 % weight loss: blood pressure falls, insulin sensitivity improves, and cardiovascular risk scores decline. Early bariatric surgery in eligible patients can lead to remission of type 2 diabetes in up to 60 % of cases.  
 

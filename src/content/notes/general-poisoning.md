@@ -9,42 +9,36 @@
 
 **Adverse drug reaction (ADR)** – any noxious, unintended response to a medication at doses normally used for prophylaxis, diagnosis or therapy. ADRs are classified as:  
 
-| Type | Description |
-|---|---|
-| A (dose‑related) | Predictable, related to pharmacologic action |
-| B (bizarre) | Unpredictable, immune‑mediated or idiosyncratic |
-| C (chronic) | Result of long‑term use |
-| D (delayed) | Appear after drug discontinuation |
-| E (withdrawal) | Due to abrupt cessation |
-| F (failure) | Unexpected lack of therapeutic effect |
+- **A (dose‑related)**: Predictable, related to pharmacologic action
+- **B (bizarre)**: Unpredictable, immune‑mediated or idiosyncratic
+- **C (chronic)**: Result of long‑term use
+- **D (delayed)**: Appear after drug discontinuation
+- **E (withdrawal)**: Due to abrupt cessation
+- **F (failure)**: Unexpected lack of therapeutic effect
 
 ---
 
 ## Anatomy and physiology you need  
 
-| System | Relevance to poisoning/ADRs |
-|---|---|
-| Gastro‑intestinal mucosa | Absorption site; barrier to toxins; vomiting reflex |
-| Liver (hepatocytes, CYP450) | Phase I/II metabolism; bioactivation or detoxification |
-| Kidneys (glomeruli, tubules) | Excretion of unchanged drug and metabolites; renal tubular reabsorption of weak acids/bases |
-| Cardiovascular system | Distribution via blood; toxin‑induced arrhythmias, hypotension |
-| Central nervous system (BBB, brainstem) | Site of many neurotoxic effects; altered consciousness |
-| Respiratory system | Ventilation removes volatile agents; pulmonary edema in some poisonings |
-| Skin & mucous membranes | First‑line decontamination; signs of exposure (e.g., erythema, burns) |
+- **Gastro‑intestinal mucosa**: Absorption site; barrier to toxins; vomiting reflex
+- **Liver (hepatocytes, CYP450)**: Phase I/II metabolism; bioactivation or detoxification
+- **Kidneys (glomeruli, tubules)**: Excretion of unchanged drug and metabolites; renal tubular reabsorption of weak acids/bases
+- **Cardiovascular system**: Distribution via blood; toxin‑induced arrhythmias, hypotension
+- **Central nervous system (BBB, brainstem)**: Site of many neurotoxic effects; altered consciousness
+- **Respiratory system**: Ventilation removes volatile agents; pulmonary edema in some poisonings
+- **Skin & mucous membranes**: First‑line decontamination; signs of exposure (e.g., erythema, burns)
 
 ---
 
 ## Causes and risk factors  
 
-| Category | Common agents in Kenya | Specific risk factors |
-|---|---|---|
-| Household chemicals | Organophosphates (pesticides), bleach, kerosene | Rural farming, poor storage |
-| Traditional medicines & herbs | *Mitragyna speciosa*, *Artemisia* spp., herbal concoctions | Cultural practices, self‑medication |
-| Pharmaceuticals (over‑the‑counter) | Paracetamol, NSAIDs, antimalarials, antiretrovirals, anti‑TB drugs | Polypharmacy, HIV/TB co‑treatment, self‑prescribing |
-| Occupational exposures | Lead, mercury, solvents | Mining, battery recycling, paint work |
-| Food‑borne toxins | Aflatoxin, cyanogenic glycosides (cassava) | Improper storage, famine conditions |
-| Intentional overdose | Tricyclic antidepressants, antipsychotics, barbiturates | Psychiatric illness, substance abuse |
-| Disease‑related susceptibility | HIV (immune dysregulation), TB (liver disease), malaria (hemolysis), sickle cell disease (renal impairment), rheumatic fever (cardiac involvement) | Co‑morbid organ dysfunction, drug‑drug interactions |
+- **Household chemicals**: Organophosphates (pesticides), bleach, kerosene — Rural farming, poor storage
+- **Traditional medicines & herbs**: *Mitragyna speciosa*, *Artemisia* spp., herbal concoctions — Cultural practices, self‑medication
+- **Pharmaceuticals (over‑the‑counter)**: Paracetamol, NSAIDs, antimalarials, antiretrovirals, anti‑TB drugs — Polypharmacy, HIV/TB co‑treatment, self‑prescribing
+- **Occupational exposures**: Lead, mercury, solvents — Mining, battery recycling, paint work
+- **Food‑borne toxins**: Aflatoxin, cyanogenic glycosides (cassava) — Improper storage, famine conditions
+- **Intentional overdose**: Tricyclic antidepressants, antipsychotics, barbiturates — Psychiatric illness, substance abuse
+- **Disease‑related susceptibility**: HIV (immune dysregulation), TB (liver disease), malaria (hemolysis), sickle cell disease (renal impairment), rheumatic fever (cardiac involvement) — Co‑morbid organ dysfunction, drug‑drug interactions
 
 ---
 
@@ -60,30 +54,26 @@ Drug administration → Pharmacologic interaction with receptors/enzymes → Pre
 
 ## Clinical features  
 
-| History element | Why it matters |
-|---|---|
-| **Time line of exposure** – exact time of ingestion, inhalation, dermal contact or iatrogenic administration | Determines window for decontamination, predicts onset of symptoms (early vs delayed) and helps estimate severity |
-| **Substance identity** – name (brand/generic), formulation, concentration, amount (if known) | Guides specific antidote use, predicts organ systems at risk and informs toxicokinetic expectations |
-| **Route of exposure** – oral, IV, IM, inhalation, dermal, rectal | Influences absorption rate, first‑pass metabolism and need for activated charcoal or gastric lavage |
-| **Co‑ingestants / polypharmacy** – other drugs, alcohol, traditional medicines | Synergistic toxicity (e.g., CNS depression with alcohol) and risk of drug‑drug interactions |
-| **Pre‑existing conditions** – HIV, TB, malaria, rheumatic disease, sickle‑cell disease, chronic liver or renal disease | Altered metabolism, reduced clearance and increased susceptibility to organ injury |
-| **Intent** – accidental vs deliberate | Affects need for psychiatric assessment and possible repeat exposure |
-| **Symptoms at presentation** – nausea, vomiting, abdominal pain, altered mental status, seizures, cardiac arrhythmia, respiratory distress, skin changes | Correlates with organ systems involved and helps prioritize investigations |
-| **Recent treatments** – antiretrovirals, anti‑TB drugs, antimalarials, disease‑modifying agents | Some have narrow therapeutic windows and can cause toxicity at therapeutic doses (e.g., isoniazid, quinine) |
+- **Time line of exposure – exact time of ingestion, inhalation, dermal contact or iatrogenic administration**: Determines window for decontamination, predicts onset of symptoms (early vs delayed) and helps estimate severity
+- **Substance identity – name (brand/generic), formulation, concentration, amount (if known)**: Guides specific antidote use, predicts organ systems at risk and informs toxicokinetic expectations
+- **Route of exposure – oral, IV, IM, inhalation, dermal, rectal**: Influences absorption rate, first‑pass metabolism and need for activated charcoal or gastric lavage
+- **Co‑ingestants / polypharmacy – other drugs, alcohol, traditional medicines**: Synergistic toxicity (e.g., CNS depression with alcohol) and risk of drug‑drug interactions
+- **Pre‑existing conditions – HIV, TB, malaria, rheumatic disease, sickle‑cell disease, chronic liver or renal disease**: Altered metabolism, reduced clearance and increased susceptibility to organ injury
+- **Intent – accidental vs deliberate**: Affects need for psychiatric assessment and possible repeat exposure
+- **Symptoms at presentation – nausea, vomiting, abdominal pain, altered mental status, seizures, cardiac arrhythmia, respiratory distress, skin changes**: Correlates with organ systems involved and helps prioritize investigations
+- **Recent treatments – antiretrovirals, anti‑TB drugs, antimalarials, disease‑modifying agents**: Some have narrow therapeutic windows and can cause toxicity at therapeutic doses (e.g., isoniazid, quinine)
 
 ### Examination findings and pathophysiologic basis  
 
-| Finding | Pathophysiologic explanation |
-|---|---|
-| **Altered level of consciousness** (drowsiness, agitation, coma) | Direct CNS depressant effect, hypoxia, metabolic encephalopathy, seizures |
-| **Pupil size/reactivity** – pinpoint, dilated, sluggish | Opioids → miosis; anticholinergics, sympathomimetics → mydriasis; brainstem involvement |
-| **Skin** – flushing, diaphoresis, pallor, rash, bullae, necrosis | Vasodilation or vasoconstriction, histamine release, direct cytotoxicity, metabolic acidosis |
-| **Cardiovascular** – tachycardia, bradycardia, hypotension, hypertension, arrhythmias | Catecholamine excess, direct myocardial toxicity, electrolyte disturbances |
-| **Respiratory** – tachypnea, bronchospasm, pulmonary edema, apnea | Central respiratory depression, airway irritation, fluid shifts, aspiration |
-| **Abdominal** – tenderness, guarding, ileus | Gastric irritation, pancreatitis, hepatic congestion |
-| **Neurological** – tremor, fasciculations, seizures, peripheral neuropathy | Neuroexcitatory toxins, cholinergic excess, demyelination from metabolic derangement |
-| **Renal** – oliguria, flank pain | Acute tubular necrosis from nephrotoxic agents, hemoglobinuria/myoglobinuria |
-| **Hepatic** – jaundice, hepatomegaly | Direct hepatocellular injury, cholestasis |
+- **Altered level of consciousness (drowsiness, agitation, coma)**: Direct CNS depressant effect, hypoxia, metabolic encephalopathy, seizures
+- **Pupil size/reactivity – pinpoint, dilated, sluggish**: Opioids → miosis; anticholinergics, sympathomimetics → mydriasis; brainstem involvement
+- **Skin – flushing, diaphoresis, pallor, rash, bullae, necrosis**: Vasodilation or vasoconstriction, histamine release, direct cytotoxicity, metabolic acidosis
+- **Cardiovascular – tachycardia, bradycardia, hypotension, hypertension, arrhythmias**: Catecholamine excess, direct myocardial toxicity, electrolyte disturbances
+- **Respiratory – tachypnea, bronchospasm, pulmonary edema, apnea**: Central respiratory depression, airway irritation, fluid shifts, aspiration
+- **Abdominal – tenderness, guarding, ileus**: Gastric irritation, pancreatitis, hepatic congestion
+- **Neurological – tremor, fasciculations, seizures, peripheral neuropathy**: Neuroexcitatory toxins, cholinergic excess, demyelination from metabolic derangement
+- **Renal – oliguria, flank pain**: Acute tubular necrosis from nephrotoxic agents, hemoglobinuria/myoglobinuria
+- **Hepatic – jaundice, hepatomegaly**: Direct hepatocellular injury, cholestasis
 
 ---
 
@@ -121,11 +111,9 @@ Drug administration → Pharmacologic interaction with receptors/enzymes → Pre
 1. **Establish the toxic exposure** – combine history (substance, dose, route, timing) with clinical picture and confirmatory laboratory data.  
 2. **Classify severity** (adapted from common toxicology grading):  
 
-| Severity | Clinical criteria |
-|---|---|
-| **Mild** | Minimal symptoms (e.g., mild nausea, transient dizziness), normal vitals, no organ dysfunction, toxin level below established toxic threshold. |
-| **Moderate** | Persistent gastrointestinal symptoms, mild CNS changes (confusion, tremor), mild tachycardia or hypertension, laboratory abnormalities not yet causing organ failure (e.g., mild transaminitis, modest metabolic acidosis). |
-| **Severe** | Life‑threatening manifestations: respiratory depression, seizures, hemodynamic instability, marked metabolic derangement, organ failure (acute liver or renal failure), toxin level well above toxic threshold. |
+- **Mild**: Minimal symptoms (e.g., mild nausea, transient dizziness), normal vitals, no organ dysfunction, toxin level below established toxic threshold.
+- **Moderate**: Persistent gastrointestinal symptoms, mild CNS changes (confusion, tremor), mild tachycardia or hypertension, laboratory abnormalities not yet causing organ failure (e.g., mild transaminitis, modest metabolic acidosis).
+- **Severe**: Life‑threatening manifestations: respiratory depression, seizures, hemodynamic instability, marked metabolic derangement, organ failure (acute liver or renal failure), toxin level well above toxic threshold.
 
 3. **Document** – record exact substance, estimated amount, time of exposure, clinical grade, investigations performed, and initial management steps. This forms the basis for ongoing monitoring, definitive therapy, and medico‑legal reporting.  
 
@@ -141,14 +129,12 @@ By systematically integrating history, examination, targeted investigations and 
 
 ## Management  
 **Immediate stabilisation**  
-| Step | Action | Rationale |
-|---|---|---|
-| Airway | Position, suction, or secure with endotracheal tube if compromised | Prevent aspiration of vomitus or caustic material |
-| Breathing | Give high‑flow oxygen, assess for bronchospasm or pulmonary edema | Correct hypoxia, treat airway irritation (e.g., bronchodilators for organophosphate bronchospasm) |
-| Circulation | Large‑bore IV/IO line, isotonic fluids, treat hypotension | Restore perfusion; many poisons cause vasodilation or myocardial depression |
-| Decontamination | Activated charcoal (if within appropriate time and airway protected) or gastric lavage for life‑threatening ingestion | Reduces systemic absorption |
-| Antidotes (if indicated) | *e.g.* atropine for organophosphates, naloxone for opioid overdose, N‑acetylcysteine for paracetamol, fomepizole for toxic alcohols | Counteract specific toxin mechanisms |
-| Seizure control | Benzodiazepine (IV/IM) for toxin‑induced seizures | Prevent secondary brain injury |
+- **Airway**: Position, suction, or secure with endotracheal tube if compromised — Prevent aspiration of vomitus or caustic material
+- **Breathing**: Give high‑flow oxygen, assess for bronchospasm or pulmonary edema — Correct hypoxia, treat airway irritation (e.g., bronchodilators for organophosphate bronchospasm)
+- **Circulation**: Large‑bore IV/IO line, isotonic fluids, treat hypotension — Restore perfusion; many poisons cause vasodilation or myocardial depression
+- **Decontamination**: Activated charcoal (if within appropriate time and airway protected) or gastric lavage for life‑threatening ingestion — Reduces systemic absorption
+- **Antidotes (if indicated)**: *e.g.* atropine for organophosphates, naloxone for opioid overdose, N‑acetylcysteine for paracetamol, fomepizole for toxic alcohols — Counteract specific toxin mechanisms
+- **Seizure control**: Benzodiazepine (IV/IM) for toxin‑induced seizures — Prevent secondary brain injury
 
 **Definitive treatment**  
 1. **Identify the toxin** – history, container, regional epidemiology (e.g., pesticide exposure in rural Kenya, traditional herbal preparations).  

@@ -1,4 +1,4 @@
-# Psychiatry, Sociology, Anthropology and Psychology: Mental, Physical and Social Health — Year 4 Psychiatry Notes
+# Psychiatry, Sociology, Anthropology and Psychology
 
 *Discussion topic: the association of psychiatry with sociology, anthropology and psychology, and the mental, physical and social aspects of health. Plan 15–20 minutes.*
 
@@ -7,11 +7,9 @@
 - **Psychiatry** is the branch of **medicine** concerned with the **diagnosis, treatment and prevention of mental illness**. It is a medical specialty, but it draws on three **behavioural and social sciences** to understand the whole person.
 - No single discipline explains mental illness. The **biopsychosocial model** (Engel, 1977) holds that mental health depends on **biological, psychological and social** factors acting together.
 
-| Discipline | Studies | What it gives psychiatry |
-|---|---|---|
-| **Psychology** | Mental processes and behaviour in the **individual**: thinking, emotion, learning, personality, development | Understanding of **how the mind works**; psychological **treatments** (CBT, psychodynamic, family therapy); **assessment tools** (IQ and personality tests, rating scales) |
-| **Sociology** | **Groups and society**: family, class, work, institutions, inequality, norms | How **social conditions cause, shape and maintain** illness; stigma; **health systems** and the sick role |
-| **Anthropology** | **Culture**: beliefs, customs, healing systems, meanings of illness | How **culture shapes** symptoms, explanation and help-seeking; **cultural competence**; traditional healing |
+- **Psychology**: Mental processes and behaviour in the **individual**: thinking, emotion, learning, personality, development — Understanding of **how the mind works**; psychological **treatments** (CBT, psychodynamic, family therapy); **assessment tools** (IQ and personality tests, rating scales)
+- **Sociology**: **Groups and society**: family, class, work, institutions, inequality, norms — How **social conditions cause, shape and maintain** illness; stigma; **health systems** and the sick role
+- **Anthropology**: **Culture**: beliefs, customs, healing systems, meanings of illness — How **culture shapes** symptoms, explanation and help-seeking; **cultural competence**; traditional healing
 
 ## 2. Psychology and psychiatry
 
@@ -48,11 +46,9 @@
 **WHO definition (1948):** *"health is a state of complete physical, mental and social well-being, and not merely the absence of disease or infirmity."*
 **Mental health (WHO):** a state of well-being in which a person can cope with the normal stresses of life, realise their abilities, learn and work well, and contribute to their community.
 
-| Aspect | Meaning | Examples |
-|---|---|---|
-| **Physical** | Functioning of the body | Absence of disease, fitness, nutrition, sleep, freedom from pain |
-| **Mental** | Emotional, psychological and cognitive well-being | Coping, mood, thinking, resilience, self-esteem |
-| **Social** | Quality of relationships and place in society | Family, friends, work, income, housing, belonging, safety, absence of discrimination |
+- **Physical**: Functioning of the body — Absence of disease, fitness, nutrition, sleep, freedom from pain
+- **Mental**: Emotional, psychological and cognitive well-being — Coping, mood, thinking, resilience, self-esteem
+- **Social**: Quality of relationships and place in society — Family, friends, work, income, housing, belonging, safety, absence of discrimination
 
 **They are inseparable, and each affects the others:**
 - **Physical → mental:** chronic illness (HIV, diabetes, cancer, stroke), pain, and disability raise the rate of **depression and anxiety**; some medicines (steroids, efavirenz, isoniazid) cause psychiatric effects.

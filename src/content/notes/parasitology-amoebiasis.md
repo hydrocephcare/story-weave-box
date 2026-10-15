@@ -26,14 +26,12 @@
 
 ## Clinical syndromes
 
-| Syndrome | Features |
-|---|---|
-| **Asymptomatic carriage** | Cysts in stool; no symptoms; a reservoir of infection |
-| **Amoebic colitis (dysentery)** | Gradual onset over 1-3 weeks of **bloody, mucoid diarrhoea**, cramps, tenesmus; **fever is mild or absent** |
-| **Fulminant colitis** | Toxic megacolon, perforation, peritonitis; more in children, pregnancy and steroid users |
-| **Amoeboma** | A localised granulomatous mass in the caecum or rectosigmoid that mimics **carcinoma** |
-| **Amoebic liver abscess (the commonest extra-intestinal form)** | **Right upper quadrant pain, fever, tender hepatomegaly**, often **without preceding diarrhoea**; usually a **single abscess in the right lobe** (portal drainage from the caecum); pus is **sterile "anchovy paste"** (liquefied necrotic liver, brown-red) |
-| **Other** | Rupture into the pleura, lung (empyema, hepatobronchial fistula), pericardium (rare, dangerous) or peritoneum; amoebic brain abscess (rare); skin (perianal) |
+- **Asymptomatic carriage**: Cysts in stool; no symptoms; a reservoir of infection
+- **Amoebic colitis (dysentery)**: Gradual onset over 1-3 weeks of **bloody, mucoid diarrhoea**, cramps, tenesmus; **fever is mild or absent**
+- **Fulminant colitis**: Toxic megacolon, perforation, peritonitis; more in children, pregnancy and steroid users
+- **Amoeboma**: A localised granulomatous mass in the caecum or rectosigmoid that mimics **carcinoma**
+- **Amoebic liver abscess (the commonest extra-intestinal form)**: **Right upper quadrant pain, fever, tender hepatomegaly**, often **without preceding diarrhoea**; usually a **single abscess in the right lobe** (portal drainage from the caecum); pus is **sterile "anchovy paste"** (liquefied necrotic liver, brown-red)
+- **Other**: Rupture into the pleura, lung (empyema, hepatobronchial fistula), pericardium (rare, dangerous) or peritoneum; amoebic brain abscess (rare); skin (perianal)
 
 ## Differential diagnosis
 
@@ -74,11 +72,9 @@ Safe water, boiling or filtering, hand-washing, food hygiene, proper sewage disp
 
 These are environmental amoebae that cause rare but lethal brain infections. They are *not* spread person to person.
 
-| Organism | Disease | How it is acquired | Key features |
-|---|---|---|---|
-| ***Naegleria fowleri*** ("brain-eating amoeba") | **Primary amoebic meningoencephalitis (PAM)** | **Warm fresh water** forced up the nose (swimming, diving) | Enters via the **cribriform plate** and olfactory nerve; **fulminant**, death in 5 to 10 days; CSF is purulent with motile trophozoites; treatment with **amphotericin B** and other agents, usually too late |
-| ***Acanthamoeba*** spp. | **Granulomatous amoebic encephalitis (GAE)**; **amoebic keratitis** | Skin or lung entry, **contact lenses rinsed with tap water** | GAE in immunocompromised (HIV) patients, subacute; **keratitis** with severe pain and a ring infiltrate |
-| ***Balamuthia mandrillaris*** | GAE | Skin lesions or inhalation | Subacute, can affect immunocompetent people; skin lesion first |
+- ***Naegleria fowleri* ("brain-eating amoeba")**: **Primary amoebic meningoencephalitis (PAM)** — **Warm fresh water** forced up the nose (swimming, diving) — Enters via the **cribriform plate** and olfactory nerve; **fulminant**, death in 5 to 10 days; CSF is purulent with motile trophozoites; treatment with **amphotericin B** and other agents, usually too late
+- ***Acanthamoeba* spp.**: **Granulomatous amoebic encephalitis (GAE)**; **amoebic keratitis** — Skin or lung entry, **contact lenses rinsed with tap water** — GAE in immunocompromised (HIV) patients, subacute; **keratitis** with severe pain and a ring infiltrate
+- ***Balamuthia mandrillaris***: GAE — Skin lesions or inhalation — Subacute, can affect immunocompetent people; skin lesion first
 
 ## High-yield exam points
 

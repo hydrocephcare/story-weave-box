@@ -1,4 +1,4 @@
-# Bipolar and Related Disorders — Year 4 Psychiatry Notes
+# Bipolar and Related Disorders
 
 *Seminar notes in 14 parts. Aligned to DSM-5-TR and ICD-11. Read alongside Kaplan & Sadock's, the Oxford Handbook of Psychiatry and the Maudsley Prescribing Guidelines. Doses are for orientation only: always check the current Kenya MoH guidelines and the BNF/formulary before prescribing.*
 
@@ -10,12 +10,10 @@
 - **Affect** is the emotional expression the examiner *observes* in the interview, moment to moment. Think of it as the **weather**. Seen in facial expression, tone of voice, posture, gesture.
 - Both are recorded in the mental state examination (MSE): *mood* in the patient's own words, *affect* by the clinician's description.
 
-| | Mood | Affect |
-|---|---|---|
-| Source | Subjective (what the patient says) | Objective (what the examiner sees) |
-| Timescale | Sustained, hours to weeks | Changes within minutes |
-| Analogy | Climate | Weather |
-| Described as | Euthymic, elated, euphoric, irritable, depressed, anxious, anhedonic | Range, intensity, mobility, reactivity, congruence |
+- **Source**: Subjective (what the patient says) — Objective (what the examiner sees)
+- **Timescale**: Sustained, hours to weeks — Changes within minutes
+- **Analogy**: Climate — Weather
+- **Described as**: Euthymic, elated, euphoric, irritable, depressed, anxious, anhedonic — Range, intensity, mobility, reactivity, congruence
 
 **Describing affect:** *range* (full, restricted, blunted, flat), *mobility* (labile = rapid shifts), *reactivity* (does it change with the topic?), *congruence* (does it fit the thoughts and the mood?), *appropriateness*.
 
@@ -37,13 +35,11 @@ Feelings are not symptoms. Everyone is happy, sad, excited, irritable and confid
 8. **Impairment** — work, school, relationships, self-care.
 9. **Risk** — to self (suicide, recklessness) or others.
 
-| Mood | Normal | Pathological (think mood disorder) |
-|---|---|---|
-| **Happiness** | After good news, settles in hours to days, sleep and judgement intact | Persistent elation with little need for sleep, grandiosity, spending sprees |
-| **Sadness** | Grief or disappointment, comes in waves, can still enjoy things | Pervasive low mood plus anhedonia, guilt, early waking, poor concentration for 2+ weeks |
-| **Excitement** | Before an event, matches the context, can be calmed | Unprovoked, sustained, with pressured speech, racing thoughts and increased risk-taking |
-| **Irritability** | Tired or stressed, short-lived | Marked, persistent, out of proportion, with aggression or breakdown of relationships |
-| **Confidence** | Realistic, based on skill | Grandiose, unrealistic (believes they have special powers, ignores consequences), sometimes delusional |
+- **Happiness**: After good news, settles in hours to days, sleep and judgement intact — Persistent elation with little need for sleep, grandiosity, spending sprees
+- **Sadness**: Grief or disappointment, comes in waves, can still enjoy things — Pervasive low mood plus anhedonia, guilt, early waking, poor concentration for 2+ weeks
+- **Excitement**: Before an event, matches the context, can be calmed — Unprovoked, sustained, with pressured speech, racing thoughts and increased risk-taking
+- **Irritability**: Tired or stressed, short-lived — Marked, persistent, out of proportion, with aggression or breakdown of relationships
+- **Confidence**: Realistic, based on skill — Grandiose, unrealistic (believes they have special powers, ignores consequences), sometimes delusional
 
 **The clinical rule:** a mood becomes a symptom when it is **excessive, prolonged, out of context, a change from baseline, clustered with other symptoms, and causes distress, impairment or risk.**
 
@@ -266,18 +262,16 @@ Bipolar disorder is a **clinical diagnosis**. Investigations are there to exclud
 
 Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot. Condition guide: [bipolar disorder drugs](/pharmacology?tab=conditions&c=bipolar).
 
-| Drug | Class | Role here | Watch for |
-|---|---|---|---|
-| Lithium | Mood stabiliser | Gold standard for mania, prevention and reducing suicide | Narrow safety margin: tremor, thirst, kidney and thyroid effects; toxicity with NSAIDs and dehydration |
-| Valproate | Anticonvulsant mood stabiliser | Acute mania and prevention | Avoid in women who could become pregnant; liver, platelets, weight gain |
-| Lamotrigine | Anticonvulsant mood stabiliser | Prevents depressive relapse | Stevens–Johnson rash: titrate slowly |
-| Carbamazepine | Anticonvulsant mood stabiliser | Alternative for mania and prevention | Interactions (antiretrovirals, the pill), low sodium, rash |
-| Quetiapine | Atypical antipsychotic | Mania and bipolar depression | Sedation, weight gain, metabolic effects |
-| Olanzapine | Atypical antipsychotic | Acute mania and maintenance | Weight gain, high glucose and lipids |
-| Risperidone | Atypical antipsychotic | Acute mania; long-acting injection for adherence | Raised prolactin, stiffness |
-| Haloperidol | Typical antipsychotic | Rapid tranquillisation in severe agitation | Stiffness, restlessness (akathisia), QT prolongation |
-| Diazepam | Benzodiazepine | Short-term for agitation and insomnia | Sedation, dependence |
-| Fluoxetine | SSRI antidepressant | Only with an antimanic drug, never alone in bipolar depression | Can trigger a switch to mania |
+- **Lithium**: Mood stabiliser — Gold standard for mania, prevention and reducing suicide — Narrow safety margin: tremor, thirst, kidney and thyroid effects; toxicity with NSAIDs and dehydration
+- **Valproate**: Anticonvulsant mood stabiliser — Acute mania and prevention — Avoid in women who could become pregnant; liver, platelets, weight gain
+- **Lamotrigine**: Anticonvulsant mood stabiliser — Prevents depressive relapse — Stevens–Johnson rash: titrate slowly
+- **Carbamazepine**: Anticonvulsant mood stabiliser — Alternative for mania and prevention — Interactions (antiretrovirals, the pill), low sodium, rash
+- **Quetiapine**: Atypical antipsychotic — Mania and bipolar depression — Sedation, weight gain, metabolic effects
+- **Olanzapine**: Atypical antipsychotic — Acute mania and maintenance — Weight gain, high glucose and lipids
+- **Risperidone**: Atypical antipsychotic — Acute mania; long-acting injection for adherence — Raised prolactin, stiffness
+- **Haloperidol**: Typical antipsychotic — Rapid tranquillisation in severe agitation — Stiffness, restlessness (akathisia), QT prolongation
+- **Diazepam**: Benzodiazepine — Short-term for agitation and insomnia — Sedation, dependence
+- **Fluoxetine**: SSRI antidepressant — Only with an antimanic drug, never alone in bipolar depression — Can trigger a switch to mania
 
 **Never treat bipolar depression with an antidepressant alone:** the switch risk is real.
 

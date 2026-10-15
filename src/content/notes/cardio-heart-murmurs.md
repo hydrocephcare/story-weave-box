@@ -1,4 +1,4 @@
-# Heart murmurs — Year 4 Internal Medicine (Cardiovascular) Notes
+# Heart murmurs
 
 *Clinical reasoning notes for the bedside. Describe every murmur the same way, then ask what is causing it.*
 
@@ -9,14 +9,12 @@
 A **murmur** is the extra sound made by turbulent blood flow across a valve or defect. A systolic murmur falls between the first and second heart sounds; a diastolic murmur falls after the second. **Diastolic murmurs are always pathological.** Many soft systolic murmurs in children and in pregnancy are harmless (flow murmurs).
 
 ## Anatomy and physiology you need  
-| Structure | Physiological relevance for murmurs | Clinical implication |
-|---|---|---|
-| **Aortic valve (bicuspid/tri‑cuspid)** | Opening pressure gradient during systole; leaflet coaptation determines flow velocity. | A stenotic valve creates a high‑velocity jet → harsh ejection murmur; a regurgitant valve allows backflow → early diastolic decrescendo murmur. |
-| **Mitral valve (leaflets, chordae, papillary muscles)** | Left ventricular systolic pressure vs. left atrial pressure; chordal tension maintains leaflet position. | Regurgitation produces a pansystolic murmur radiating to the axilla; stenosis creates a mid‑diastolic rumble due to turbulent flow across a narrowed orifice. |
-| **Pulmonary valve & tricuspid valve** | Right‑ventricular systolic pressure vs. right‑atrial pressure; tricuspid annulus dilates in right‑heart failure. | Tricuspid regurgitation gives a pansystolic murmur louder on inspiration; pulmonary stenosis gives an ejection systolic murmur best heard at the left upper sternal border. |
-| **Vascular compliance (aorta, pulmonary artery)** | Pulse pressure is the difference between systolic and diastolic pressures; compliance determines pulse wave velocity. | Aortic regurgitation reduces compliance → wide pulse pressure, water‑hammer pulse, and peripheral pulsations. |
-| **Carotid and femoral arteries** | Reflection of pulse wave; arterial stiffness alters wave timing. | Corrigan’s sign (carotid pulsation) and Traube’s sign (femoral “pistol‑shot” sound) are classic for aortic regurgitation. |
-| **Right‑to‑left shunts (ASD, VSD)** | Left‑to‑right shunt increases pulmonary flow and right‑ventricular volume. | A continuous “machinery” murmur is heard best at the left sternal border; differentiates from isolated valvular murmurs. |
+- **Aortic valve (bicuspid/tri‑cuspid)**: Opening pressure gradient during systole; leaflet coaptation determines flow velocity. — A stenotic valve creates a high‑velocity jet → harsh ejection murmur; a regurgitant valve allows backflow → early diastolic decrescendo murmur.
+- **Mitral valve (leaflets, chordae, papillary muscles)**: Left ventricular systolic pressure vs. left atrial pressure; chordal tension maintains leaflet position. — Regurgitation produces a pansystolic murmur radiating to the axilla; stenosis creates a mid‑diastolic rumble due to turbulent flow across a narrowed orifice.
+- **Pulmonary valve & tricuspid valve**: Right‑ventricular systolic pressure vs. right‑atrial pressure; tricuspid annulus dilates in right‑heart failure. — Tricuspid regurgitation gives a pansystolic murmur louder on inspiration; pulmonary stenosis gives an ejection systolic murmur best heard at the left upper sternal border.
+- **Vascular compliance (aorta, pulmonary artery)**: Pulse pressure is the difference between systolic and diastolic pressures; compliance determines pulse wave velocity. — Aortic regurgitation reduces compliance → wide pulse pressure, water‑hammer pulse, and peripheral pulsations.
+- **Carotid and femoral arteries**: Reflection of pulse wave; arterial stiffness alters wave timing. — Corrigan’s sign (carotid pulsation) and Traube’s sign (femoral “pistol‑shot” sound) are classic for aortic regurgitation.
+- **Right‑to‑left shunts (ASD, VSD)**: Left‑to‑right shunt increases pulmonary flow and right‑ventricular volume. — A continuous “machinery” murmur is heard best at the left sternal border; differentiates from isolated valvular murmurs.
 
 ## Pathophysiology  
 **Rheumatic mitral stenosis →**  
@@ -40,14 +38,12 @@ Calcific degeneration → leaflet thickening → reduced valve area → ↑ LV a
 
 ## 4. The lesions
 
-| Lesion | Murmur | Key features |
-|---|---|---|
-| **Mitral stenosis** | **Mid-diastolic rumble** at the apex | **Loud first sound and opening snap**; best with the bell, left lateral, in expiration |
-| **Mitral regurgitation** | **Pansystolic** at the apex | **Radiates to the axilla** |
-| **Aortic stenosis** | **Ejection systolic**, right 2nd intercostal space | **Radiates to the carotids**; **slow-rising pulse** |
-| **Aortic regurgitation** | **Early diastolic**, left sternal edge | Patient sitting forward, in expiration; **wide pulse pressure** |
-| **Tricuspid stenosis / regurgitation** | Diastolic / pansystolic | **Louder on inspiration**; raised JVP |
-| **Pulmonary stenosis / regurgitation** | Ejection systolic / early diastolic | Left 2nd intercostal space |
+- **Mitral stenosis**: **Mid-diastolic rumble** at the apex — **Loud first sound and opening snap**; best with the bell, left lateral, in expiration
+- **Mitral regurgitation**: **Pansystolic** at the apex — **Radiates to the axilla**
+- **Aortic stenosis**: **Ejection systolic**, right 2nd intercostal space — **Radiates to the carotids**; **slow-rising pulse**
+- **Aortic regurgitation**: **Early diastolic**, left sternal edge — Patient sitting forward, in expiration; **wide pulse pressure**
+- **Tricuspid stenosis / regurgitation**: Diastolic / pansystolic — **Louder on inspiration**; raised JVP
+- **Pulmonary stenosis / regurgitation**: Ejection systolic / early diastolic — Left 2nd intercostal space
 
 ![Mitral stenosis in a heart specimen: the valve is thickened and fused, producing a "fish-mouth" opening. Public domain](https://upload.wikimedia.org/wikipedia/commons/2/2f/Mitral_stenosis%2C_gross_pathology_20G0015_lores.jpg)
 
@@ -111,14 +107,12 @@ These sections provide the anatomical, physiological, and investigative depth re
 
 ## Complications and prognosis  
 
-| Lesion | Major haemodynamic consequence | Potential complications | Typical prognostic trajectory* |
-|---|---|---|---|
-| Mitral stenosis | ↑ left atrial pressure → pulmonary venous congestion | Atrial fibrillation, thrombo‑embolism, right‑sided heart failure, pulmonary hypertension | Progressive dyspnoea; symptom‑limited survival improves markedly after percutaneous balloon commissurotomy or valve replacement |
-| Mitral regurgitation (chronic) | Volume overload of left ventricle → eccentric hypertrophy | Progressive LV dilation, systolic dysfunction, atrial fibrillation, pulmonary oedema | Asymptomatic patients have long latent period; once EF falls < 50 % or symptoms appear, surgical repair/replacement confers survival benefit |
-| Aortic stenosis (calcific) | Fixed outflow obstruction → LV pressure overload | LV concentric hypertrophy, myocardial ischaemia, syncope, sudden cardiac death, heart failure | Once mean gradient > 40 mmHg or symptoms develop, median survival < 2 years without valve replacement |
-| Aortic regurgitation (chronic) | Diastolic run‑off → LV volume overload | LV dilation, reduced EF, aortic root dilatation, end‑aortic dissection (in Marfan or bicuspid valve), infective endocarditis | Asymptomatic patients may remain stable for decades; onset of symptoms or LV end‑diastolic dimension > 65 mm prompts surgery |
-| Tricuspid regurgitation (functional) | Systemic venous congestion | Hepatomegaly, ascites, peripheral oedema, right‑sided failure | Often a marker of advanced left‑sided disease; prognosis tied to underlying cause rather than regurgitation severity alone |
-| Pulmonary stenosis (severe) | RV pressure overload | Right‑ventricular hypertrophy, cyanosis (if associated with shunt), arrhythmia | In isolated valvular disease, balloon valvuloplasty yields excellent long‑term survival; untreated severe lesions carry high early mortality |
+- **Mitral stenosis**: ↑ left atrial pressure → pulmonary venous congestion — Atrial fibrillation, thrombo‑embolism, right‑sided heart failure, pulmonary hypertension — Progressive dyspnoea; symptom‑limited survival improves markedly after percutaneous balloon commissurotomy or valve replacement
+- **Mitral regurgitation (chronic)**: Volume overload of left ventricle → eccentric hypertrophy — Progressive LV dilation, systolic dysfunction, atrial fibrillation, pulmonary oedema — Asymptomatic patients have long latent period; once EF falls < 50 % or symptoms appear, surgical repair/replacement confers survival benefit
+- **Aortic stenosis (calcific)**: Fixed outflow obstruction → LV pressure overload — LV concentric hypertrophy, myocardial ischaemia, syncope, sudden cardiac death, heart failure — Once mean gradient > 40 mmHg or symptoms develop, median survival < 2 years without valve replacement
+- **Aortic regurgitation (chronic)**: Diastolic run‑off → LV volume overload — LV dilation, reduced EF, aortic root dilatation, end‑aortic dissection (in Marfan or bicuspid valve), infective endocarditis — Asymptomatic patients may remain stable for decades; onset of symptoms or LV end‑diastolic dimension > 65 mm prompts surgery
+- **Tricuspid regurgitation (functional)**: Systemic venous congestion — Hepatomegaly, ascites, peripheral oedema, right‑sided failure — Often a marker of advanced left‑sided disease; prognosis tied to underlying cause rather than regurgitation severity alone
+- **Pulmonary stenosis (severe)**: RV pressure overload — Right‑ventricular hypertrophy, cyanosis (if associated with shunt), arrhythmia — In isolated valvular disease, balloon valvuloplasty yields excellent long‑term survival; untreated severe lesions carry high early mortality
 
 \*Prognosis is expressed in broad clinical terms; individual outcome depends on age, comorbidities (e.g., HIV, hypertension), and timely intervention. In Kenya, rheumatic aetiology often leads to earlier presentation of mitral lesions, whereas degenerative aortic disease predominates in older adults.  
 

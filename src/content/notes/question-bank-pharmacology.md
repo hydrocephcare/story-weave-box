@@ -1,4 +1,4 @@
-# Pharmacology Question Bank: 15 Clinical MCQs with Explanations
+# Pharmacology Question Bank: 15 Clinical MCQs
 
 ## Key points
 

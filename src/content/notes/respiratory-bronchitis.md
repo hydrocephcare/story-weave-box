@@ -1,4 +1,4 @@
-# Bronchitis (Acute and Chronic) — Year 4 Internal Medicine (Respiratory) Notes
+# Bronchitis (Acute and Chronic)
 
 *Orientation notes for study. Check local guidelines before prescribing.*
 
@@ -14,15 +14,13 @@
 
 ## Anatomy and physiology you need  
 
-| Structure / Function | Why it matters for bronchitis |
-|---|---|
-| **Trachea and main bronchi** – cartilaginous rings keep airway patency; mucosa lined by pseudostratified ciliated columnar epithelium with goblet cells. | Inflammation targets this epithelium; loss of ciliary beat and excess mucus → cough and sputum production. |
-| **Submucosal mucous glands (seromucous)** – located in the larger bronchi; normal **Reid index ≈ 0.4**. | Chronic irritation causes gland hypertrophy → Reid index > 0.5, the hallmark of chronic bronchitis; explains persistent mucus hypersecretion. |
-| **Bronchial smooth muscle** – innervated by autonomic (parasympathetic → constriction) and sensory nerves (cough reflex). | Viral or irritant‑mediated inflammation releases acetylcholine and neuropeptides → bronchoconstriction and cough; bronchodilators act here. |
-| **Pulmonary vasculature (bronchial circulation)** – supplies airway walls; can become engorged in chronic inflammation. | Vascular engorgement contributes to airway wall thickening and may worsen ventilation‑perfusion mismatch in advanced disease. |
-| **Alveolar ventilation‑perfusion (V/Q) unit** – normal matching depends on airway calibre and reflexes. | In acute bronchitis, transient airway narrowing creates mild V/Q mismatch → occasional desaturation; in chronic bronchitis, persistent narrowing and loss of elastic recoil cause chronic hypoxaemia and hypercapnia. |
-| **Ciliary apparatus & mucociliary clearance** – coordinated beating moves mucus cephalad. | Infection or smoke damages cilia → impaired clearance, mucus stasis, bacterial colonisation, and exacerbations. |
-| **Respiratory control centres (medulla)** – respond to CO₂ and O₂ levels. | Chronic CO₂ retention in “blue bloater” phenotype blunts ventilatory drive, leading to CO₂ narcosis if decompensated. |
+- **Trachea and main bronchi – cartilaginous rings keep airway patency; mucosa lined by pseudostratified ciliated columnar epithelium with goblet cells.**: Inflammation targets this epithelium; loss of ciliary beat and excess mucus → cough and sputum production.
+- **Submucosal mucous glands (seromucous) – located in the larger bronchi; normal Reid index ≈ 0.4.**: Chronic irritation causes gland hypertrophy → Reid index > 0.5, the hallmark of chronic bronchitis; explains persistent mucus hypersecretion.
+- **Bronchial smooth muscle – innervated by autonomic (parasympathetic → constriction) and sensory nerves (cough reflex).**: Viral or irritant‑mediated inflammation releases acetylcholine and neuropeptides → bronchoconstriction and cough; bronchodilators act here.
+- **Pulmonary vasculature (bronchial circulation) – supplies airway walls; can become engorged in chronic inflammation.**: Vascular engorgement contributes to airway wall thickening and may worsen ventilation‑perfusion mismatch in advanced disease.
+- **Alveolar ventilation‑perfusion (V/Q) unit – normal matching depends on airway calibre and reflexes.**: In acute bronchitis, transient airway narrowing creates mild V/Q mismatch → occasional desaturation; in chronic bronchitis, persistent narrowing and loss of elastic recoil cause chronic hypoxaemia and hypercapnia.
+- **Ciliary apparatus & mucociliary clearance – coordinated beating moves mucus cephalad.**: Infection or smoke damages cilia → impaired clearance, mucus stasis, bacterial colonisation, and exacerbations.
+- **Respiratory control centres (medulla) – respond to CO₂ and O₂ levels.**: Chronic CO₂ retention in “blue bloater” phenotype blunts ventilatory drive, leading to CO₂ narcosis if decompensated.
 
 ---
 
@@ -135,14 +133,12 @@ Clinical picture: productive cough most days, dyspnoea on exertion, “blue bloa
 
 ## Complications and prognosis  
 
-| Complication | Pathophysiological basis | Clinical impact | Typical time‑frame |
-|---|---|---|---|
-| **Acute bacterial super‑infection (pneumonia)** | Disruption of mucociliary clearance and viral‑induced epithelial injury allow bacterial colonisation of distal airways | New focal crackles, fever >38 °C, tachypnoea, pleuritic pain; may require hospitalisation | Usually within the first 2 weeks of an acute episode |
-| **Post‑infectious cough** | Persistent airway hyper‑reactivity and mucus gland irritation after viral clearance | Cough lasting >3 weeks, often dry, may respond to inhaled bronchodilator or low‑dose steroid | 3–8 weeks after onset |
-| **Exacerbation of underlying asthma or COPD** | Inflammatory mediators (IL‑6, TNF‑α) amplify bronchial smooth‑muscle tone | Worsening wheeze, dyspnoea, fall in FEV₁, possible need for systemic steroids | Can occur during the acute bout or shortly after |
-| **Cor pulmonale (in chronic bronchitis)** | Chronic hypoxic vasoconstriction → pulmonary arterial hypertension → right‑ventricular overload | Peripheral oedema, raised JVP, hepatomegaly; predicts higher mortality | Develops over years of untreated disease |
-| **Secondary bacterial infection of the lower airway (bronchiectasis)** | Recurrent inflammation damages bronchial wall, impairs clearance, leading to permanent dilatation | Daily sputum, frequent exacerbations, haemoptysis; radiological bronchial wall thickening | Usually a late sequela of long‑standing chronic bronchitis |
-| **Systemic effects of chronic hypoxaemia** | Polycythaemia, digital clubbing, impaired cognition | Increased thrombotic risk, reduced exercise tolerance | Progressive with disease severity |
+- **Acute bacterial super‑infection (pneumonia)**: Disruption of mucociliary clearance and viral‑induced epithelial injury allow bacterial colonisation of distal airways — New focal crackles, fever >38 °C, tachypnoea, pleuritic pain; may require hospitalisation — Usually within the first 2 weeks of an acute episode
+- **Post‑infectious cough**: Persistent airway hyper‑reactivity and mucus gland irritation after viral clearance — Cough lasting >3 weeks, often dry, may respond to inhaled bronchodilator or low‑dose steroid — 3–8 weeks after onset
+- **Exacerbation of underlying asthma or COPD**: Inflammatory mediators (IL‑6, TNF‑α) amplify bronchial smooth‑muscle tone — Worsening wheeze, dyspnoea, fall in FEV₁, possible need for systemic steroids — Can occur during the acute bout or shortly after
+- **Cor pulmonale (in chronic bronchitis)**: Chronic hypoxic vasoconstriction → pulmonary arterial hypertension → right‑ventricular overload — Peripheral oedema, raised JVP, hepatomegaly; predicts higher mortality — Develops over years of untreated disease
+- **Secondary bacterial infection of the lower airway (bronchiectasis)**: Recurrent inflammation damages bronchial wall, impairs clearance, leading to permanent dilatation — Daily sputum, frequent exacerbations, haemoptysis; radiological bronchial wall thickening — Usually a late sequela of long‑standing chronic bronchitis
+- **Systemic effects of chronic hypoxaemia**: Polycythaemia, digital clubbing, impaired cognition — Increased thrombotic risk, reduced exercise tolerance — Progressive with disease severity
 
 **Prognostic considerations**  
 
@@ -193,14 +189,12 @@ A 58‑year‑old male farmer presents with a 4‑month history of a productive 
 
 Tap a drug name for its full card (how it works, adverse effects, cautions, dose), then use **Back to this note** to return to this spot.
 
-| Drug | Class | Role here | Watch for |
-|---|---|---|---|
-| Paracetamol | Analgesic and antipyretic | Fever and chest discomfort in acute bronchitis | Liver injury in overdose |
-| Ibuprofen | NSAID | Alternative for fever and aches | Stomach irritation; avoid in asthma if aspirin-sensitive |
-| Salbutamol | Short-acting β₂-agonist | Wheeze or chest tightness | Tremor, palpitations |
-| Amoxicillin | Penicillin | Only if systemically unwell, frail or in a purulent chronic bronchitis exacerbation | Rash, diarrhoea |
-| Doxycycline | Tetracycline | Alternative antibiotic for a purulent exacerbation | Photosensitivity, oesophagitis |
-| Azithromycin | Macrolide | Suspected pertussis (whooping cough) | QT prolongation |
+- **Paracetamol**: Analgesic and antipyretic — Fever and chest discomfort in acute bronchitis — Liver injury in overdose
+- **Ibuprofen**: NSAID — Alternative for fever and aches — Stomach irritation; avoid in asthma if aspirin-sensitive
+- **Salbutamol**: Short-acting β₂-agonist — Wheeze or chest tightness — Tremor, palpitations
+- **Amoxicillin**: Penicillin — Only if systemically unwell, frail or in a purulent chronic bronchitis exacerbation — Rash, diarrhoea
+- **Doxycycline**: Tetracycline — Alternative antibiotic for a purulent exacerbation — Photosensitivity, oesophagitis
+- **Azithromycin**: Macrolide — Suspected pertussis (whooping cough) — QT prolongation
 
 **Most acute bronchitis is viral:** antibiotics do not shorten it and are not routinely needed.
 

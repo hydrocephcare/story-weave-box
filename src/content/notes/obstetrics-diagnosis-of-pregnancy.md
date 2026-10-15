@@ -1,4 +1,4 @@
-# Diagnosis of pregnancy — Year 4 Obstetrics and Gynaecology Notes
+# Diagnosis of pregnancy
 
 *Based on the Department lecture (Dr Ritho). The point on the ward: confirm the pregnancy, say how far along it is, and be sure where it is.*
 
@@ -12,13 +12,11 @@
 
 ## 2. First trimester: symptoms
 
-| Symptom | Notes |
-|---|---|
-| **Amenorrhoea** | The commonest symptom: a sudden stop of regular periods. It can also occur in lactation, illness, stress or endocrine disease; and **bleeding can occur in early pregnancy** (threatened abortion, or slight bleeding at the expected period in the first 12 weeks, **Hartman's sign**) |
-| **Morning sickness** | Nausea with or without vomiting, about **6 weeks** after the LMP, usually gone by about **12–14 weeks** |
-| **Frequency of micturition** | From congestion and pressure on the bladder; it returns late in pregnancy when the head descends |
-| **Breast symptoms** | Enlargement, fullness, tingling and tenderness |
-| **Appetite changes, sleepiness, fatigue** | Common |
+- **Amenorrhoea**: The commonest symptom: a sudden stop of regular periods. It can also occur in lactation, illness, stress or endocrine disease; and **bleeding can occur in early pregnancy** (threatened abortion, or slight bleeding at the expected period in the first 12 weeks, **Hartman's sign**)
+- **Morning sickness**: Nausea with or without vomiting, about **6 weeks** after the LMP, usually gone by about **12–14 weeks**
+- **Frequency of micturition**: From congestion and pressure on the bladder; it returns late in pregnancy when the head descends
+- **Breast symptoms**: Enlargement, fullness, tingling and tenderness
+- **Appetite changes, sleepiness, fatigue**: Common
 
 ## 3. First trimester: signs
 
@@ -28,15 +26,13 @@ Increased **size and vascularity**, increased **pigmentation of the nipple and p
 
 ### Pelvic and uterine signs
 
-| Sign | What you find |
-|---|---|
-| **Uterine enlargement** | Enlarged, globular, soft; remains a pelvic organ until **12 weeks**, when it can just be felt above the symphysis |
-| **Hegar's sign** | On bimanual examination, the two fingers in the anterior fornix can nearly touch the abdominal hand behind the **softened lower uterine segment** (6–10 weeks) |
-| **Palmer's sign** | Rhythmic uterine contractions felt on bimanual examination |
-| **Jacquemier's (Chadwick's) sign** | **Bluish or violet** discolouration of the vestibule and anterior vaginal wall, from vascular congestion (about **8 weeks**) |
-| **Osiander's sign** | Increased **pulsation felt through the lateral fornices** |
-| **Goodell's sign** | **Softening of the cervix** from about **6 weeks** ("like the lips of the mouth", not "the tip of the nose") with bluish colour on speculum examination |
-| **Vagina** | Violet, moist and warm with more discharge and increased acidity |
+- **Uterine enlargement**: Enlarged, globular, soft; remains a pelvic organ until **12 weeks**, when it can just be felt above the symphysis
+- **Hegar's sign**: On bimanual examination, the two fingers in the anterior fornix can nearly touch the abdominal hand behind the **softened lower uterine segment** (6–10 weeks)
+- **Palmer's sign**: Rhythmic uterine contractions felt on bimanual examination
+- **Jacquemier's (Chadwick's) sign**: **Bluish or violet** discolouration of the vestibule and anterior vaginal wall, from vascular congestion (about **8 weeks**)
+- **Osiander's sign**: Increased **pulsation felt through the lateral fornices**
+- **Goodell's sign**: **Softening of the cervix** from about **6 weeks** ("like the lips of the mouth", not "the tip of the nose") with bluish colour on speculum examination
+- **Vagina**: Violet, moist and warm with more discharge and increased acidity
 
 ## 4. Investigations: pregnancy tests
 
@@ -55,13 +51,11 @@ Increased **size and vascularity**, increased **pigmentation of the nipple and p
 
 Counted from the **last menstrual period (weeks of amenorrhoea)**:
 
-| Finding | When |
-|---|---|
-| **Gestational sac** | About **4 to 5 weeks** (transvaginal) |
-| **Yolk sac** | About **5 weeks** |
-| **Fetal pole and cardiac activity** | About **6 weeks** |
-| **Embryonic movements** | About **7 weeks** |
-| **Fetal heart by Doppler** | About **10 weeks** |
+- **Gestational sac**: About **4 to 5 weeks** (transvaginal)
+- **Yolk sac**: About **5 weeks**
+- **Fetal pole and cardiac activity**: About **6 weeks**
+- **Embryonic movements**: About **7 weeks**
+- **Fetal heart by Doppler**: About **10 weeks**
 
 **Ultrasound also tells you where the pregnancy is** (excluding ectopic), **how many embryos there are**, **how old the pregnancy is** (crown-rump length in the first trimester) and whether it is alive.
 
@@ -79,11 +73,9 @@ The fundus rises to the **xiphisternum at term (36 weeks)** and may **drop (ligh
 
 ## 7. Summary of the signs
 
-| Type | Examples |
-|---|---|
-| **Presumptive** (felt by the woman; many causes) | Amenorrhoea, nausea and vomiting, breast changes, frequency, fatigue, quickening, skin changes |
-| **Probable** (found by the examiner; other causes possible) | Enlarged uterus, Hegar's, Goodell's, Chadwick's signs, Braxton Hicks contractions, ballottement, **positive pregnancy test** |
-| **Positive (certain)** | **Fetal heart heard or seen, fetal movements felt by the examiner, fetal parts palpated, and ultrasound of the fetus** |
+- **Presumptive (felt by the woman; many causes)**: Amenorrhoea, nausea and vomiting, breast changes, frequency, fatigue, quickening, skin changes
+- **Probable (found by the examiner; other causes possible)**: Enlarged uterus, Hegar's, Goodell's, Chadwick's signs, Braxton Hicks contractions, ballottement, **positive pregnancy test**
+- **Positive (certain)**: **Fetal heart heard or seen, fetal movements felt by the examiner, fetal parts palpated, and ultrasound of the fetus**
 
 ## 8. What else can mimic pregnancy?
 
