@@ -78,7 +78,9 @@ export default function ContestSetup() {
       setUniversities(universityRows);
       setExamPapers(paperRows);
       setSelectedExamId(paperRows.find((paper) => /ha?ematology exam 2025/i.test(paper.title))?.id || paperRows[0]?.id || "");
-      setContestId((current) => current || contestRows[0]?.id || "");
+      // /admin/contests/setup?contest=<id> opens that contest (the admin assistant links here when it has to hand a job over)
+      const wanted = new URLSearchParams(window.location.search).get("contest") ?? "";
+      setContestId((current) => current || (contestRows.some((c) => c.id === wanted) ? wanted : "") || contestRows[0]?.id || "");
     }).catch((cause) => setError(cause?.message || "The contest workspace could not be loaded."));
   }, [isAdmin]);
 
