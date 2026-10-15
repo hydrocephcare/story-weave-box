@@ -37,9 +37,9 @@ export default function ContestBanner({ contest, universities, className = "" }:
       <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
       <div className="absolute -bottom-12 -left-8 h-40 w-40 rounded-full bg-teal-300/15 blur-2xl" />
       <img src="/brand/mark-dark.png" alt="" className="absolute bottom-2 right-3 h-9 w-auto opacity-90" decoding="async" />
-      <YearBadges years={contest.years} className="absolute left-3 top-3 max-w-[60%]" />
+      <YearBadges years={contest.years} className="absolute right-3 top-3 max-w-[45%] justify-end" />
       {shown.length >= 2 ? (
-        <div className="relative mt-4 flex items-center gap-3 sm:gap-5">
+        <div className="relative mt-6 flex items-center gap-3 sm:gap-5">
           {shown.map((u, i) => (
             <div key={u.id} className="flex items-center gap-3 sm:gap-5">
               {i > 0 && <span className="text-xs font-black uppercase tracking-[0.3em] text-white/50">vs</span>}
@@ -48,9 +48,9 @@ export default function ContestBanner({ contest, universities, className = "" }:
           ))}
         </div>
       ) : (
-        <div className="relative mt-4 text-center">
-          <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-white/55">{chosen.length ? "Head to head" : "Open to every university"}</p>
-          <p className="mt-2 font-serif text-3xl font-bold leading-tight text-white">{contest.title}</p>
+        <div className="relative mt-7 w-full max-w-[88%] text-center">
+          <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/55">{chosen.length ? "Head to head" : "Open to every university"}</p>
+          <p className={`mt-1.5 line-clamp-3 font-serif font-bold leading-tight text-white ${contest.title.length > 40 ? "text-lg sm:text-xl" : contest.title.length > 22 ? "text-xl sm:text-2xl" : "text-2xl sm:text-3xl"}`}>{contest.title}</p>
         </div>
       )}
       {contest.startsAt && <p className="absolute bottom-3 left-3 text-[11px] font-semibold text-white/75">{when(contest.startsAt)} EAT</p>}

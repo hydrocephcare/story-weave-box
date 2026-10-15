@@ -4,6 +4,7 @@ import {
   setContestUniversityScope, updateContestStage, updateContestDetails, loadAdminContestRegistrations, type AdminExamPaper, type ContestUniversity,
 } from "@/lib/contest-store";
 import type { ContestStage } from "@/lib/contest";
+import type { PosterSpec } from "@/lib/statusPoster";
 import { loadCategories, removeItem } from "@/lib/adminWriter";
 
 export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget" | "site_health" | "update_post" | "publish_post" | "restore_post" | "briefing" | "import_mcqs"; args: Record<string, any> }
@@ -78,7 +79,7 @@ export interface ActionLink { label: string; href: string; external?: boolean }
 /** What happened, plus where to go next. `partial` means it got part of the way and the links continue from there; `undo` is the action that reverses it. */
 export interface HealthSection { title: string; status: "good" | "warn" | "bad"; lines: string[] }
 export interface HealthReport { score: number; sections: HealthSection[] }
-export interface ActionResult { briefing?: { greeting: string; good: string[]; watch: string[]; suggestions: { label: string; prompt: string }[] }; health?: HealthReport; fixes?: AgentAction[]; thumb?: string; text: string; links?: ActionLink[]; undo?: AgentAction; partial?: boolean }
+export interface ActionResult { poster?: PosterSpec; briefing?: { greeting: string; good: string[]; watch: string[]; suggestions: { label: string; prompt: string }[] }; health?: HealthReport; fixes?: AgentAction[]; thumb?: string; text: string; links?: ActionLink[]; undo?: AgentAction; partial?: boolean }
 const SITE = "https://www.ompathstudy.com";
 const wa = (t: string) => `https://wa.me/?text=${encodeURIComponent(t)}`;
 

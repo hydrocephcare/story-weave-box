@@ -1,86 +1,25 @@
 import { useState } from "react";
 import { Download, Image as ImageIcon, Loader2 } from "lucide-react";
 import type { ContestRecord, ContestUniversity } from "@/lib/contest-store";
+import { downloadDataUrl, hueOf, makeStatusPoster, type PosterSpec } from "@/lib/statusPoster";
 
-const W = 1080, H = 1920;
+const fmt = (iso: string, o: Intl.DateTimeFormatOptions) => new Intl.DateTimeFormat("en-KE", { ...o, timeZone: "Africa/Nairobi" }).format(new Date(iso));
 
-function wrap(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
-  const lines: string[] = []; let line = "";
-  for (const word of text.split(/\s+/)) {
-    const test = line ? `${line} ${word}` : word;
-    if (ctx.measureText(test).width > maxWidth && line) { lines.push(line); line = word; } else line = test;
-  }
-  if (line) lines.push(line);
-  return lines;
-}
-
-function draw(contest: ContestRecord, universities: ContestUniversity[], uniName: string | undefined, mark: HTMLImageElement | null): HTMLCanvasElement {
-  const c = document.createElement("canvas"); c.width = W; c.height = H;
-  const ctx = c.getContext("2d")!;
-  const bg = ctx.createLinearGradient(0, 0, W, H); bg.addColorStop(0, "#071315"); bg.addColorStop(0.6, "#0b2a2c"); bg.addColorStop(1, "#103c3a");
-  ctx.fillStyle = bg; ctx.fillRect(0, 0, W, H);
-  const glow = ctx.createRadialGradient(W * 0.8, H * 0.18, 20, W * 0.8, H * 0.18, 700); glow.addColorStop(0, "rgba(39,196,180,0.35)"); glow.addColorStop(1, "rgba(39,196,180,0)");
-  ctx.fillStyle = glow; ctx.fillRect(0, 0, W, H);
-  ctx.fillStyle = "#fff"; ctx.textBaseline = "alphabetic";
-
-  // brand
-  let bx = 80;
-  if (mark) { const h = 130, w = h * (mark.naturalWidth / mark.naturalHeight); ctx.drawImage(mark, 80, 70, w, h); bx = 80 + w + 20; }
-  ctx.textAlign = "left"; ctx.fillStyle = "#fff"; ctx.font = "700 60px Poppins, Arial, sans-serif"; ctx.fillText("Ompath", bx, 160);
-  ctx.fillStyle = "#5eead4"; ctx.fillText("Study", bx + ctx.measureText("Ompath").width, 160);
-
-  // status chip
+export function contestPosterSpec(contest: ContestRecord, universities: ContestUniversity[], university?: ContestUniversity): PosterSpec {
   const live = contest.stage === "live", reg = contest.stage === "registration";
-  const chip = live ? "LIVE NOW" : reg ? "REGISTRATION OPEN" : contest.stage === "completed" ? "FINISHED" : "COMING SOON";
-  ctx.font = "800 34px Arial, sans-serif"; const cw = ctx.measureText(chip).width + 64;
-  ctx.fillStyle = live ? "#f87171" : "#5eead4"; ctx.beginPath(); ctx.roundRect(80, 330, cw, 76, 38); ctx.fill();
-  ctx.fillStyle = "#071315"; ctx.fillText(chip, 112, 381);
-
-  // title
-  ctx.fillStyle = "#fff"; ctx.font = "800 112px Georgia, serif";
-  let y = 560; for (const l of wrap(ctx, contest.title, W - 160).slice(0, 4)) { ctx.fillText(l, 80, y); y += 128; }
-  ctx.fillStyle = "rgba(255,255,255,0.72)"; ctx.font = "400 44px Arial, sans-serif";
-  y += 10; for (const l of wrap(ctx, contest.subtitle || "Medical students across Kenya compete on one leaderboard.", W - 160).slice(0, 3)) { ctx.fillText(l, 80, y); y += 62; }
-
-  // date + details
-  y += 50;
-  if (contest.startsAt) {
-    ctx.fillStyle = "#5eead4"; ctx.font = "800 36px Arial, sans-serif"; ctx.fillText("STARTS", 80, y);
-    ctx.fillStyle = "#fff"; ctx.font = "700 54px Arial, sans-serif";
-    ctx.fillText(new Intl.DateTimeFormat("en-KE", { weekday: "long", day: "numeric", month: "long", timeZone: "Africa/Nairobi" }).format(new Date(contest.startsAt)), 80, y + 68);
-    ctx.fillStyle = "rgba(255,255,255,0.7)"; ctx.font = "400 40px Arial, sans-serif";
-    ctx.fillText(new Intl.DateTimeFormat("en-KE", { hour: "numeric", minute: "2-digit", timeZone: "Africa/Nairobi" }).format(new Date(contest.startsAt)) + " EAT", 80, y + 124);
-    y += 200;
-  }
-  const meta = [contest.subjects.join(" · "), contest.years.length ? contest.years.map((v) => `Year ${v}`).join(", ") : ""].filter(Boolean);
-  ctx.fillStyle = "rgba(255,255,255,0.6)"; ctx.font = "400 38px Arial, sans-serif";
-  for (const m of meta) for (const l of wrap(ctx, m, W - 160).slice(0, 2)) { ctx.fillText(l, 80, y); y += 54; }
-
-  // universities
-  const list = contest.universityIds.length ? universities.filter((u) => contest.universityIds.includes(u.id)) : universities;
-  const names = list.slice(0, 8).map((u) => u.abbreviation || u.name);
-  if (names.length) {
-    y += 40; ctx.font = "800 30px Arial, sans-serif"; ctx.fillStyle = "#5eead4";
-    ctx.fillText(contest.universityIds.length ? "CHOSEN UNIVERSITIES" : "OPEN TO ALL UNIVERSITIES", 80, y); y += 30;
-    let x = 80; ctx.font = "700 34px Arial, sans-serif";
-    for (const n of names) {
-      const w = ctx.measureText(n).width + 44;
-      if (x + w > W - 80) { x = 80; y += 80; }
-      ctx.fillStyle = "rgba(255,255,255,0.1)"; ctx.beginPath(); ctx.roundRect(x, y, w, 62, 31); ctx.fill();
-      ctx.fillStyle = "#fff"; ctx.fillText(n, x + 22, y + 43); x += w + 14;
-    }
-    if (list.length > names.length) { ctx.fillStyle = "rgba(255,255,255,0.55)"; ctx.fillText(`+${list.length - names.length} more`, x, y + 43); }
-    y += 100;
-  }
-
-  // call to action
-  const cta = uniName ? `Represent ${uniName}` : "Represent your university";
-  ctx.fillStyle = "#5eead4"; ctx.beginPath(); ctx.roundRect(80, H - 330, W - 160, 130, 30); ctx.fill();
-  ctx.fillStyle = "#071315"; ctx.font = "900 50px Arial, sans-serif"; ctx.textAlign = "center"; ctx.fillText(cta, W / 2, H - 248);
-  ctx.font = "600 32px Arial, sans-serif"; ctx.fillText("Register free on ompathstudy.com", W / 2, H - 208);
-  ctx.fillStyle = "rgba(255,255,255,0.55)"; ctx.font = "400 30px Arial, sans-serif";
-  ctx.fillText(`ompathstudy.com/contests/${contest.slug}`.slice(0, 60), W / 2, H - 120);
-  return c;
+  const chosen = contest.universityIds.length ? universities.filter((u) => contest.universityIds.includes(u.id)) : [];
+  const uniName = university?.abbreviation || university?.name;
+  return {
+    kicker: "Inter-university contest",
+    status: { label: live ? "Live now" : reg ? "Registration open" : contest.stage === "completed" ? "Finished" : "Coming soon", live },
+    title: contest.title,
+    subtitle: contest.subtitle || (chosen.length ? "" : "Medical students across Kenya compete on one leaderboard."),
+    duel: chosen.length >= 2 ? chosen.slice(0, 3).map((u) => ({ name: u.abbreviation || u.name, hue: hueOf(u.slug) })) : undefined,
+    when: contest.startsAt ? { top: fmt(contest.startsAt, { weekday: "long", day: "numeric", month: "long" }), bottom: `${fmt(contest.startsAt, { hour: "numeric", minute: "2-digit" })} · East Africa Time` } : undefined,
+    pills: [...contest.years.map((y) => `Year ${y}`), ...(chosen.length ? [] : ["All universities"]), ...contest.subjects.slice(0, 3)],
+    cta: { title: uniName ? `Represent ${uniName}` : "Represent your university", sub: "Register free on ompathstudy.com" },
+    url: `https://www.ompathstudy.com/contests/${contest.slug}`,
+  };
 }
 
 /** Makes a 1080x1920 WhatsApp-status poster for a contest, in the browser. Optionally with one university's name on the button. */
@@ -90,11 +29,8 @@ export default function ContestPoster({ contest, universities, university, class
   async function make() {
     setBusy(true);
     try {
-      await document.fonts?.load("700 60px Poppins").catch(() => []);
-      const mark = await new Promise<HTMLImageElement | null>((resolve) => { const im = new Image(); im.onload = () => resolve(im); im.onerror = () => resolve(null); im.src = "/brand/mark-dark.png"; });
-      const canvas = draw(contest, universities, university?.abbreviation || university?.name, mark);
-      const url = canvas.toDataURL("image/png"); setPreview(url);
-      const a = document.createElement("a"); a.href = url; a.download = `${contest.slug}${university ? `-${university.slug}` : ""}-status.png`; a.click();
+      const url = await makeStatusPoster(contestPosterSpec(contest, universities, university));
+      setPreview(url); downloadDataUrl(url, `${contest.slug}${university ? `-${university.slug}` : ""}-status.png`);
     } finally { setBusy(false); }
   }
   return (

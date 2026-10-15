@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AlertTriangle, Check, ExternalLink, FileText, History, ListChecks, Loader2, MessageCircle, Mic, MicOff, Plus, Send, Sparkles, Trash2, Undo2, Wand2, X, Zap } from "lucide-react";
 import { runSiteHealth } from "@/lib/adminHealth";
 import { runBriefing } from "@/lib/adminBriefing";
+import { downloadDataUrl, makeStatusPoster, type PosterSpec } from "@/lib/statusPoster";
 import { supabase } from "@/integrations/supabase/client";
 import { recentProblems } from "@/lib/adminProblems";
 import { agentContext, askAgent, describe, loadAgentWorld, runAction, runReadOnly, type ActionResult, type AgentAction, type AgentWorld, type PlanItem } from "@/lib/adminAgent";
@@ -26,6 +27,12 @@ const IDEAS = [
   "Today's briefing", "How is my site doing? Is it growing?", "Check everything and fix what you can", "Explain the last error and fix it", "Check my posts for SEO problems",
   "Make a UoN vs MKU contest tomorrow at 8pm", "Write a note on nephrotic syndrome", "Clean my notification bell", "I will paste notes: polish them and publish",
 ];
+const posterFor = (d: Draft, url: string, live: boolean): PosterSpec | undefined => {
+  if (!live) return undefined;
+  if (d.type === "note") return { kicker: "Study notes", title: d.title, subtitle: d.meta_description, pills: [d.category.replace(/^Year\s*\d+:\s*/i, ""), d.year ? `Year ${d.year}` : ""].filter(Boolean), cta: { title: "Read it free", sub: "ompathstudy.com" }, url };
+  if (d.type === "mcq") return { kicker: "MCQ practice", title: d.title, subtitle: `${d.questions.length} questions with answers and explanations`, pills: [d.category.replace(/^Year\s*\d+:\s*/i, "")].filter(Boolean), cta: { title: "Test yourself", sub: "Free on ompathstudy.com" }, url };
+  return { kicker: "Flashcards", title: d.title, subtitle: `${d.cards.length} cards to revise`, pills: [d.category.replace(/^Year\s*\d+:\s*/i, "")].filter(Boolean), cta: { title: "Revise now", sub: "Free on ompathstudy.com" }, url };
+};
 const plain = (md: string) => md.replace(/^#+\s*/gm, "").replace(/[*_`>|]/g, "").replace(/\n{2,}/g, "\n");
 const when = (iso: string) => new Intl.DateTimeFormat("en-KE", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit", timeZone: "Africa/Nairobi" }).format(new Date(iso));
 const btn = "inline-flex min-h-10 items-center justify-center gap-1 rounded-lg px-3 py-2 text-xs font-semibold disabled:opacity-40";
@@ -217,7 +224,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
       const p = await publishDraft(it.draft, publish);
       mark(publish ? "published" : "saved");
       push({ kind: "result", result: {
-        thumb: p.thumb, text: publish ? `Published "${p.title}". It is live with a search title, description and a share picture.` : `Saved "${p.title}" as a draft. Students cannot see it yet; read it, then publish from the editor.`,
+        thumb: p.thumb, poster: posterFor(it.draft, p.url, publish), text: publish ? `Published "${p.title}". It is live with a search title, description and a share picture.` : `Saved "${p.title}" as a draft. Students cannot see it yet; read it, then publish from the editor.`,
         links: [{ label: "Open the page", href: p.href }, { label: "Share on WhatsApp", href: `https://wa.me/?text=${encodeURIComponent(`${p.title} on Ompath Study: ${p.url}`)}`, external: true }, { label: "Admin editor", href: "/admin/editor" }],
         undo: { tool: "remove_item", args: { table: p.table, id: p.id, title: p.title } },
       } });
@@ -240,9 +247,9 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
 
   return (
     <section className={compact ? "flex h-full min-h-0 flex-col p-3 sm:p-4" : "rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/5 to-card p-4 sm:p-5"} aria-label="Admin assistant">
-      <div className="flex items-center gap-2 pr-9">
-        <Sparkles className="h-5 w-5 shrink-0 text-primary" /><h2 className="truncate font-serif text-lg font-bold sm:text-xl">Admin assistant</h2>
-        <span className="ml-auto flex shrink-0 gap-1">
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-2 pr-11">
+        <Sparkles className="h-5 w-5 shrink-0 text-primary" /><h2 className="font-serif text-lg font-bold sm:text-xl">Admin assistant</h2>
+        <span className="flex w-full shrink-0 gap-1.5 sm:ml-auto sm:w-auto">
           <button type="button" onClick={() => void toggleAuto()} disabled={!world} title={world?.autorun ? "Auto-run is ON: safe steps run without asking. Tap to switch off." : "Auto-run is OFF: I ask before every change. Tap to let me run safe steps myself."} className={`${btn} border ${world?.autorun ? "border-primary bg-primary text-primary-foreground" : "hover:bg-muted"}`}><Zap className="h-4 w-4" /><span className="hidden sm:inline">Auto-run {world?.autorun ? "on" : "off"}</span></button>
           <button type="button" onClick={newTask} className={`${btn} border hover:bg-muted`} aria-label="New task"><Plus className="h-4 w-4" /><span className="hidden sm:inline">New</span></button>
           <button type="button" onClick={() => { setShowHistory((v) => !v); void refreshChats(); }} className={`${btn} border hover:bg-muted`} aria-label="Earlier tasks"><History className="h-4 w-4" /><span className="hidden sm:inline">History</span></button>
@@ -304,6 +311,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
                       {r.links?.map((l) => l.external
                         ? <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" className={`${btn} border bg-background hover:bg-muted`}>{l.label.includes("WhatsApp") ? <MessageCircle className="h-3.5 w-3.5" /> : <ExternalLink className="h-3.5 w-3.5" />} {l.label}</a>
                         : <Link key={l.label} to={l.href} className={`${btn} border bg-background hover:bg-muted`}>{l.label} →</Link>)}
+                      {r.poster && <button type="button" onClick={() => void makeStatusPoster(r.poster as PosterSpec).then((u) => downloadDataUrl(u, "ompath-status.png"))} className={`${btn} border bg-background hover:bg-muted`}>📱 Status image</button>}
                       {r.undo && world && <button type="button" disabled={busy} onClick={() => setPlan(describe([r.undo as AgentAction], world))} className={`${btn} border border-destructive/40 bg-background text-destructive hover:bg-destructive/10`}><Undo2 className="h-3.5 w-3.5" /> Undo / remove</button>}
                     </div>
                   )}
