@@ -32,7 +32,7 @@ export const IMED: ImedSystem[] = [
     t("pulm-htn", "Pulmonary hypertension and cor pulmonale", "pulmonary-hypertension-and-cor-pulmonale"),
   ] },
   { id: "cardiovascular", name: "Cardiovascular medicine", blurb: "The heart and circulation: pressure, pump, rhythm, valves and shock.", topics: [
-    t("cvs-approach", "Cardiovascular history and examination"),
+    t("cvs-approach", "Cardiovascular history and examination", "cardio-approach-to-cardiovascular-symptoms-and-examination"),
     t("hypertension", "Hypertension and hypertensive emergencies", "hypertension"),
     t("heart-failure", "Heart failure", "heart-failure-which-tests"),
     t("acs", "Acute coronary syndrome and myocardial infarction"),

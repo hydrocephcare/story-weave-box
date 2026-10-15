@@ -26,6 +26,8 @@ export default function Imed() {
       <h1 className="mt-1 font-serif text-4xl font-bold">Internal medicine</h1>
       <p className="mt-2 text-[17px] text-muted-foreground">{live} of {total} topics are written so far; the rest are marked coming soon. Every note ends with the topics it connects to and why. A tick means you finished the topic: it appears by itself after you read a note for a couple of active minutes, or tap the circle.</p>
 
+      <Link to="/notes/year-4-imed-revision-roadmap" className="mt-5 inline-block font-bold text-primary hover:underline">Exam revision roadmap for Year 4 internal medicine →</Link>
+
       <div className="mt-8 space-y-3">
         {IMED.map((s) => {
           const p = systemProgress(user?.id, s.topics);
