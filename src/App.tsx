@@ -30,6 +30,7 @@ import AccessibilityTools from "@/components/AccessibilityTools";
 import TopicPeekHost from "@/components/TopicPeek";
 import PageHelpers from "@/components/PageHelpers";
 import { AdminRoute, SignedInRoute, StudentRoute } from "@/components/AccessRoute";
+import AdminShell from "@/components/admin/AdminShell";
 
 const Index = lazy(() => import("./pages/Index"));
 const Brand = lazy(() => import("./pages/Brand"));
@@ -66,6 +67,7 @@ const AdminPolish = lazy(() => import("./pages/AdminPolish"));
 const Imed = lazy(() => import("./pages/Imed"));
 const MyWeek = lazy(() => import("./pages/MyWeek"));
 const AdminDuplicates = lazy(() => import("./pages/AdminDuplicates"));
+const AdminAccess = lazy(() => import("./pages/AdminAccess"));
 const AdminComments = lazy(() => import("./pages/AdminComments"));
 const AdminDrafts = lazy(() => import("./pages/AdminDrafts"));
 const AdminActivity = lazy(() => import("./pages/AdminActivity"));
@@ -217,25 +219,26 @@ const AnimatedRoutes = () => {
             <Route path="/contests/:slug/progress" element={<SignedInRoute><ContestProgress /></SignedInRoute>} />
             <Route path="/contests/:slug/certificate/:attemptId" element={<SignedInRoute><ContestCertificate /></SignedInRoute>} />
             <Route path="/review" element={<Review />} />
-            <Route path="/admin/monetise" element={<AdminRoute><AdminMonetise /></AdminRoute>} />
-            <Route path="/admin/analytics" element={<AdminRoute><AdminAnalytics /></AdminRoute>} />
-            <Route path="/admin/tools" element={<AdminRoute><AdminTools /></AdminRoute>} />
-            <Route path="/admin/content-health" element={<AdminRoute><AdminContentHealth /></AdminRoute>} />
-            <Route path="/admin/duplicates" element={<AdminRoute><AdminDuplicates /></AdminRoute>} />
-            <Route path="/admin/comments" element={<AdminRoute><AdminComments /></AdminRoute>} />
-            <Route path="/admin/drafts" element={<AdminRoute><AdminDrafts /></AdminRoute>} />
-            <Route path="/admin/activity" element={<AdminRoute><AdminActivity /></AdminRoute>} />
-            <Route path="/admin/polish" element={<AdminRoute><AdminPolish /></AdminRoute>} />
-            <Route path="/admin/outline-sync" element={<AdminRoute><AdminOutlineSync /></AdminRoute>} />
-            <Route path="/admin/editor" element={<AdminRoute><AdminEditor /></AdminRoute>} />
-            <Route path="/admin/categories" element={<AdminRoute><CategoryManager /></AdminRoute>} />
-            <Route path="/admin/study-system" element={<AdminRoute><StudySystemAdmin /></AdminRoute>} />
-            <Route path="/admin/contests" element={<AdminRoute><ContestAdmin /></AdminRoute>} />
-            <Route path="/admin/contests/setup" element={<AdminRoute><ContestSetup /></AdminRoute>} />
-            <Route path="/admin/contests/questions" element={<AdminRoute><ContestQuestionAdmin /></AdminRoute>} />
-            <Route path="/admin/contests/operations" element={<AdminRoute><ContestOperations /></AdminRoute>} />
-            <Route path="/admin/contests/rehearsal" element={<AdminRoute><ContestRehearsal /></AdminRoute>} />
-            <Route path="/admin/contests/appeals" element={<AdminRoute><ContestAppealsAdmin /></AdminRoute>} />
+            <Route path="/admin/monetise" element={<AdminPage><AdminMonetise /></AdminPage>} />
+            <Route path="/admin/analytics" element={<AdminPage><AdminAnalytics /></AdminPage>} />
+            <Route path="/admin/tools" element={<AdminPage><AdminTools /></AdminPage>} />
+            <Route path="/admin/content-health" element={<AdminPage><AdminContentHealth /></AdminPage>} />
+            <Route path="/admin/duplicates" element={<AdminPage><AdminDuplicates /></AdminPage>} />
+            <Route path="/admin/access" element={<AdminPage><AdminAccess /></AdminPage>} />
+            <Route path="/admin/comments" element={<AdminPage><AdminComments /></AdminPage>} />
+            <Route path="/admin/drafts" element={<AdminPage><AdminDrafts /></AdminPage>} />
+            <Route path="/admin/activity" element={<AdminPage><AdminActivity /></AdminPage>} />
+            <Route path="/admin/polish" element={<AdminPage><AdminPolish /></AdminPage>} />
+            <Route path="/admin/outline-sync" element={<AdminPage><AdminOutlineSync /></AdminPage>} />
+            <Route path="/admin/editor" element={<AdminPage><AdminEditor /></AdminPage>} />
+            <Route path="/admin/categories" element={<AdminPage><CategoryManager /></AdminPage>} />
+            <Route path="/admin/study-system" element={<AdminPage><StudySystemAdmin /></AdminPage>} />
+            <Route path="/admin/contests" element={<AdminPage><ContestAdmin /></AdminPage>} />
+            <Route path="/admin/contests/setup" element={<AdminPage><ContestSetup /></AdminPage>} />
+            <Route path="/admin/contests/questions" element={<AdminPage><ContestQuestionAdmin /></AdminPage>} />
+            <Route path="/admin/contests/operations" element={<AdminPage><ContestOperations /></AdminPage>} />
+            <Route path="/admin/contests/rehearsal" element={<AdminPage><ContestRehearsal /></AdminPage>} />
+            <Route path="/admin/contests/appeals" element={<AdminPage><ContestAppealsAdmin /></AdminPage>} />
             <Route path="/stories" element={<RailLayout><Stories /></RailLayout>} />
             <Route path="/stories/:id" element={<StoryRead />} />
             <Route path="/submit-story" element={<Navigate to="/stories?write=1" replace />} />
@@ -267,6 +270,8 @@ const AnimatedRoutes = () => {
 };
 
 const AIPage = lazy(() => import("@/pages/OmpathAIPage"));
+
+const AdminPage = ({ children }: { children: React.ReactNode }) => <AdminRoute><AdminShell>{children}</AdminShell></AdminRoute>;
 
 const App = () => (
   <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>

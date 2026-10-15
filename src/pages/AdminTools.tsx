@@ -4,6 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { BarChart3, CalendarCheck, HeartPulse, Wallet, LayoutDashboard } from "lucide-react";
 
 const TOOLS = [
+  { to: "/admin/access", icon: HeartPulse, title: "Book access rules", text: "Which admission numbers open the books and papers (BMS/2023/60482, MBCHB…). Add a format from one example; matching students are verified automatically." },
   { to: "/admin/comments", icon: HeartPulse, title: "Comments", text: "The newest questions and comments under the notes, with one tap to hide or delete." },
   { to: "/admin/duplicates", icon: HeartPulse, title: "Repeated pages", text: "Pages that carry the same text as another page, with the fuller one marked Keep. Hide the copy with one tap." },
   { to: "/admin/drafts", icon: HeartPulse, title: "AI notes to approve", text: "Notes Ompath AI wrote for searches the site had nothing for. Read, fix the title or year, and publish, or discard." },
