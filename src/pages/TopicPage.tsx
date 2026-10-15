@@ -178,7 +178,10 @@ function Writing({ name }: { name: string }) {
 /** One examiner question: the question is shown, the answer ("question? — answer") waits behind a button so the student tries first. */
 function ExaminerQuestion({ n, text }: { n: number; text: string }) {
   const [open, setOpen] = useState(false);
-  const cut = text.search(/\s[—–]\s/);
+  // the answer starts after the dash that follows the question mark; with no question mark, after the last dash
+  const afterQ = text.search(/\?\s[—–]\s/);
+  const dashes = [...text.matchAll(/\s[—–]\s/g)];
+  const cut = afterQ > 0 ? afterQ + 1 : dashes.length ? (dashes[dashes.length - 1].index ?? -1) : -1;
   const question = cut > 0 ? text.slice(0, cut).trim() : text.trim();
   const answer = cut > 0 ? text.slice(cut).replace(/^\s[—–]\s/, "").trim() : "";
   return (
