@@ -17,3 +17,8 @@ export const examSectionCount = (html: string) => (html.match(/<h2[\s>]/g) ?? []
 
 /** Whether a section with this heading is kept in exam mode (the contents list uses it too, so it only lists what is shown). */
 export const isExamTitle = (title: string) => KEEP.test(title);
+
+/** Under "Tricky questions": each "Q1. question Answer: reason" paragraph shows the question first and keeps the answer behind a "Show answer" button. */
+export function hideAnswers(html: string): string {
+  return html.replace(/<p>(<strong>Q\d+\.<\/strong>[\s\S]*?)<strong>Answer:<\/strong>([\s\S]*?)<\/p>/g, (_m, q: string, a: string) => `<p>${q.trim()}</p><details class="qa-hide"><summary>Show answer</summary><p>${a.trim()}</p></details>`);
+}

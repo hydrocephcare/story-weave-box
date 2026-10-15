@@ -175,6 +175,28 @@ function Writing({ name }: { name: string }) {
 }
 
 /** /topic/<slug>: a plain, readable article about one subject (definition first), with the library's notes and questions underneath. */
+/** One examiner question: the question is shown, the answer ("question? — answer") waits behind a button so the student tries first. */
+function ExaminerQuestion({ n, text }: { n: number; text: string }) {
+  const [open, setOpen] = useState(false);
+  const cut = text.search(/\s[—–]\s/);
+  const question = cut > 0 ? text.slice(0, cut).trim() : text.trim();
+  const answer = cut > 0 ? text.slice(cut).replace(/^\s[—–]\s/, "").trim() : "";
+  return (
+    <li className="flex gap-4">
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{n}</span>
+      <div className="min-w-0 flex-1">
+        <p className="text-[19px] font-semibold leading-[1.6] text-foreground">{question}</p>
+        {answer && (
+          <>
+            <button type="button" onClick={() => setOpen((v) => !v)} aria-expanded={open} className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-3.5 py-1.5 text-sm font-bold text-emerald-700 transition-colors hover:bg-emerald-500/20 dark:text-emerald-300">{open ? "Hide answer" : "Show answer"}</button>
+            {open && <p className="mt-2 rounded-xl border border-emerald-500/30 bg-emerald-500/5 px-4 py-3 text-[17px] leading-[1.7] text-foreground/90">{answer}</p>}
+          </>
+        )}
+      </div>
+    </li>
+  );
+}
+
 /** The "On this page" rail: the section you are in is highlighted and a bar shows how far down you are. */
 function TopicRail({ toc }: { toc: { id: string; t: string }[] }) {
   const spy = useScrollSpy(toc.map((t) => t.id));
@@ -404,7 +426,7 @@ export default function TopicPage() {
 
             {page?.exam && page.exam.length > 0 && (
               <Section id="examiner" title="Questions an examiner may ask">
-                <ol className="space-y-4">{page.exam.map((q, i) => <li key={q} className="flex gap-4"><span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{i + 1}</span><span className="min-w-0 flex-1 pt-0.5 font-medium text-foreground">{q}</span></li>)}</ol>
+                <ol className="space-y-5">{page.exam.map((q, i) => <ExaminerQuestion key={q} n={i + 1} text={q} />)}</ol>
                 <p className="text-sm text-muted-foreground">Try answering aloud before you scroll back up.</p>
               </Section>
             )}

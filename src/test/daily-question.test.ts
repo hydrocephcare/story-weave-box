@@ -16,3 +16,13 @@ describe("question of the day and exam mode", () => {
     expect(cut).not.toContain("Anatomy and physiology");
   });
 });
+
+import { hideAnswers } from "@/lib/examMode";
+describe("tricky question answers", () => {
+  it("keeps the answer behind a button", () => {
+    const out = hideAnswers("<p><strong>Q1.</strong> What next? <strong>Answer:</strong> Admit the patient.</p>");
+    expect(out).toContain("<details");
+    expect(out.indexOf("What next?")).toBeLessThan(out.indexOf("<details"));
+    expect(out).toContain("Admit the patient.");
+  });
+});
