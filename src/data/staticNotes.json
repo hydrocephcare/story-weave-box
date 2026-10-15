@@ -2751,5 +2751,25 @@
     "description": "Amoebiasis: life cycle, pathogenesis, dysentery, amoebic liver abscess, diagnosis, treatment in two steps, and the free-living amoebae (Naegleria, Acanthamoeba), with practice questions.",
     "updated": "2026-10-15",
     "file": "src/content/notes/parasitology-amoebiasis.md"
+  },
+  {
+    "slug": "understanding-psychosis",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Psychotic disorders",
+    "title": "Understanding Psychosis: history, meaning and today's view",
+    "description": "Dr Kendi's first class on psychosis: who shaped the idea, what psychosis is and why it is a syndrome, how DSM-5-TR and ICD-11 define it, and why Kenyan families turn to healers.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/psychiatry-understanding-psychosis.md"
+  },
+  {
+    "slug": "psychiatry-group-assignments-2026",
+    "year": 4,
+    "unit": "Mental Health/Psychiatry",
+    "group": "Course information",
+    "title": "Year 4 Psychiatry group assignments: presentation on 22 October 2026",
+    "description": "Which group presents which topic on Thursday 22 October 2026 (psychopathology and psychotic disorders), with the notes to start from.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/psychiatry-group-assignments-2026.md"
   }
 ]
