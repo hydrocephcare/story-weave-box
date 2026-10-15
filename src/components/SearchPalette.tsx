@@ -173,9 +173,9 @@ export default function SearchPalette() {
             </div>
           )}
           {q.trim().length < 2 ? null : searched && flat.length === 0 ? (
-            <div className="px-4 py-10 text-center">
-              <p className="text-sm font-semibold text-foreground">Nothing found for “{q}”</p>
-              <p className="mt-1 text-xs text-muted-foreground">Check the spelling, or try a broader word.</p>
+            <div className="px-4 py-6 text-center">
+              {q.trim().length < 3 && <><p className="text-sm font-semibold text-foreground">Nothing found for “{q}”</p>
+              <p className="mt-1 text-xs text-muted-foreground">Check the spelling, or try a broader word.</p></>}
               <button type="button" onClick={() => { setOpen(false); navigate(`/search?q=${encodeURIComponent(q.trim())}`); }} className="mt-3 text-xs font-bold text-primary hover:underline">Search inside every note →</button>
             </div>
           ) : (
@@ -217,3 +217,4 @@ export default function SearchPalette() {
     </>
   );
 }
+

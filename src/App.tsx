@@ -102,6 +102,7 @@ const Contact = lazy(() => import("./pages/InfoPages").then((m) => ({ default: m
 const Privacy = lazy(() => import("./pages/InfoPages").then((m) => ({ default: m.Privacy })));
 const TopicPage = lazy(() => import("./pages/TopicPage"));
 const TopicsIndex = lazy(() => import("./pages/TopicsIndex"));
+const SavedPages = lazy(() => import("./pages/SavedPages"));
 const Contests = lazy(() => import("./pages/Contests"));
 const ContestBriefing = lazy(() => import("./pages/ContestBriefing"));
 const ContestRegistration = lazy(() => import("./pages/ContestRegistration"));
@@ -263,6 +264,7 @@ const AnimatedRoutes = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/topics" element={<TopicsIndex />} />
+            <Route path="/saved" element={<SavedPages />} />
             <Route path="/topic/:slug" element={<TopicPage />} />
             <Route path="/download-app" element={<AppDownload />} />
             <Route path="*" element={<NotFound />} />

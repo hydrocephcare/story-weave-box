@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useReadLog } from "@/lib/readLog";
+import SaveTopicButton from "@/components/SaveTopicButton";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import BooksForPage from "@/components/BooksForPage";
 import SponsorLine from "@/components/SponsorLine";
@@ -565,6 +566,7 @@ export default function TopicPage() {
                 try { await navigator.clipboard.writeText(url); setShared("Link copied"); } catch { setShared(url); }
                 setTimeout(() => setShared(""), 2500);
               }} className="inline-flex h-12 items-center gap-2 rounded-full px-5 text-[15px] font-bold transition active:scale-[.97] border border-border/70 bg-background/85 hover:border-primary/60 hover:bg-background">{shared ? <Link2 className="h-4 w-4" aria-hidden /> : <Share2 className="h-4 w-4" aria-hidden />}{shared || "Share"}</button>
+              <SaveTopicButton slug={slug} name={name} />
             </div>
           </div>
           {media?.hero && (
