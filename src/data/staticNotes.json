@@ -1998,7 +1998,7 @@
     "unit": "Internal Medicine",
     "group": "Cardiovascular",
     "title": "Acute coronary syndrome and myocardial infarction",
-    "description": "Acute coronary syndrome and myocardial infarction: the complete clinical approach to Acute coronary syndrome and myocardial infarction: definition; causes and risk factors in our setting.",
+    "description": "Acute Coronary Syndrome (ACS) is a spectrum of clinical presentations that arise from a sudden, reduced blood flow to the heart muscle.",
     "updated": "2026-10-15",
     "file": "src/content/notes/cardiovascular-acs.md"
   },
@@ -2008,7 +2008,7 @@
     "unit": "Internal Medicine",
     "group": "Cardiovascular",
     "title": "Infective endocarditis",
-    "description": "Infective endocarditis: the complete clinical approach to Infective endocarditis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "description": "Infective endocarditis (IE) is an infection of the endocardium, which is the inner lining of the heart chambers and valves.",
     "updated": "2026-10-15",
     "file": "src/content/notes/cardiovascular-endocarditis.md"
   },
@@ -2018,7 +2018,7 @@
     "unit": "Internal Medicine",
     "group": "Cardiovascular",
     "title": "Arrhythmias and ECG interpretation",
-    "description": "Arrhythmias and ECG interpretation: the complete clinical approach to Arrhythmias and ECG interpretation: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "An arrhythmia (or dysrhythmia) is any deviation from the normal cardiac rhythm, encompassing abnormalities in the rate, regularity.",
     "updated": "2026-10-15",
     "file": "src/content/notes/cardiovascular-arrhythmia.md"
   },
@@ -2028,7 +2028,7 @@
     "unit": "Internal Medicine",
     "group": "Cardiovascular",
     "title": "Pericarditis, effusion and tamponade",
-    "description": "Pericarditis, effusion and tamponade: the complete clinical approach to Pericarditis, effusion and tamponade: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Pericarditis is inflammation of the pericardium, the double-layered sac surrounding the heart.",
     "updated": "2026-10-15",
     "file": "src/content/notes/cardiovascular-pericardium.md"
   },
@@ -2038,7 +2038,7 @@
     "unit": "Internal Medicine",
     "group": "Cardiovascular",
     "title": "Cardiomyopathies",
-    "description": "Cardiomyopathies: the complete clinical approach to Cardiomyopathies: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "Cardiomyopathies are a heterogeneous group of myocardial diseases characterized by structural and functional abnormalities of the ventricular myocardium that.",
     "updated": "2026-10-15",
     "file": "src/content/notes/cardiovascular-cardiomyopathy.md"
   },
@@ -2048,7 +2048,7 @@
     "unit": "Internal Medicine",
     "group": "Cardiovascular",
     "title": "Peripheral vascular disease",
-    "description": "Peripheral vascular disease: the complete clinical approach to Peripheral vascular disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle.",
+    "description": "Peripheral vascular disease (PVD) refers to conditions affecting blood circulation outside of the heart and brain.",
     "updated": "2026-10-15",
     "file": "src/content/notes/cardiovascular-pvd.md"
   },
@@ -2058,7 +2058,7 @@
     "unit": "Internal Medicine",
     "group": "Cardiovascular",
     "title": "Shock and cardiovascular emergencies",
-    "description": "Shock and cardiovascular emergencies: the complete clinical approach to Shock and cardiovascular emergencies: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Shock is a state of systemic hypoperfusion resulting in acute cellular hypoxia due to an imbalance between oxygen delivery ($DO_2$) and systemic oxygen.",
     "updated": "2026-10-15",
     "file": "src/content/notes/cardiovascular-shock.md"
   },
@@ -2068,7 +2068,7 @@
     "unit": "Internal Medicine",
     "group": "Infectious disease",
     "title": "Approach to fever",
-    "description": "Approach to fever: the complete clinical approach to Approach to fever: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "Fever, also known as pyrexia, is an elevation of body temperature above the normal range. In clinical practice, a temperature of 38°C (100.4°F) or higher.",
     "updated": "2026-10-15",
     "file": "src/content/notes/infectious-fever.md"
   },
@@ -2078,7 +2078,7 @@
     "unit": "Internal Medicine",
     "group": "Infectious disease",
     "title": "HIV and opportunistic infections",
-    "description": "HIV and opportunistic infections: the complete clinical approach to HIV and opportunistic infections: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Human Immunodeficiency Virus (HIV) infection is a chronic retroviral disease characterized by progressive depletion of CD4+ T-helper lymphocytes.",
     "updated": "2026-10-15",
     "file": "src/content/notes/infectious-hiv.md"
   },
@@ -2088,7 +2088,7 @@
     "unit": "Internal Medicine",
     "group": "Infectious disease",
     "title": "Malaria, including severe malaria",
-    "description": "Malaria, including severe malaria: the complete clinical approach to Malaria, including severe malaria: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Malaria is an acute, potentially life-threatening protozoan infection caused by obligate intra-erythrocytic parasites of the genus Plasmodium.",
     "updated": "2026-10-15",
     "file": "src/content/notes/infectious-malaria.md"
   },
@@ -2098,7 +2098,7 @@
     "unit": "Internal Medicine",
     "group": "Infectious disease",
     "title": "Bacterial meningitis and encephalitis",
-    "description": "Bacterial meningitis and encephalitis: the complete clinical approach to Bacterial meningitis and encephalitis: definition; causes and risk factors in our setting (including HIV, TB.",
+    "description": "Acute bacterial meningitis: Life-threatening acute purulent infection of the leptomeninges (pia mater, arachnoid mater) and the subarachnoid space.",
     "updated": "2026-10-15",
     "file": "src/content/notes/infectious-meningitis.md"
   },
@@ -2108,7 +2108,7 @@
     "unit": "Internal Medicine",
     "group": "Infectious disease",
     "title": "Enteric fever",
-    "description": "Enteric fever: the complete clinical approach to Enteric fever: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical.",
+    "description": "Enteric fever is a systemic, life-threatening infection caused by the invasive, host-restricted bacteria Salmonella enterica serovar Typhi (S.",
     "updated": "2026-10-15",
     "file": "src/content/notes/infectious-enteric.md"
   },
@@ -2118,7 +2118,7 @@
     "unit": "Internal Medicine",
     "group": "Infectious disease",
     "title": "Antimicrobial selection, stewardship and resistance",
-    "description": "Antimicrobial selection, stewardship and resistance: the complete clinical approach to Antimicrobial selection, stewardship and resistance: definition; causes and risk factors in our.",
+    "description": "Antimicrobial selection is the process of matching a pathogen’s susceptibility profile with a drug that achieves therapeutic concentrations at the site of.",
     "updated": "2026-10-15",
     "file": "src/content/notes/infectious-amr.md"
   },
@@ -2128,7 +2128,7 @@
     "unit": "Internal Medicine",
     "group": "Infectious disease",
     "title": "Common fungal and parasitic infections",
-    "description": "Common fungal and parasitic infections: the complete clinical approach to Common fungal and parasitic infections: definition; causes and risk factors in our setting (including HIV, TB.",
+    "description": "Fungal infections (mycoses) are diseases caused by pathogenic fungi. Parasitic infections are caused by organisms that live on or in a host organism and.",
     "updated": "2026-10-15",
     "file": "src/content/notes/infectious-fungal-parasitic.md"
   },
@@ -2138,7 +2138,7 @@
     "unit": "Internal Medicine",
     "group": "Renal",
     "title": "Approach to renal disease",
-    "description": "Approach to renal disease: the complete clinical approach to Approach to renal disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle.",
+    "description": "Renal disease encompasses a broad spectrum of conditions that affect the structure and function of the kidneys.",
     "updated": "2026-10-15",
     "file": "src/content/notes/renal-renal-approach.md"
   },
@@ -2148,7 +2148,7 @@
     "unit": "Internal Medicine",
     "group": "Renal",
     "title": "Sodium, potassium and calcium disorders",
-    "description": "Sodium, potassium and calcium disorders: the complete clinical approach to Sodium, potassium and calcium disorders: definition; causes and risk factors in our setting (including HIV, TB.",
+    "description": "Sodium (Na⁺): 135‑145 mmol/L — Hyponatraemia < 135 mmol/L; Hypernatraemia > 145 mmol/L.",
     "updated": "2026-10-15",
     "file": "src/content/notes/renal-electrolytes.md"
   },
@@ -2158,7 +2158,7 @@
     "unit": "Internal Medicine",
     "group": "Renal",
     "title": "Indications for dialysis",
-    "description": "Indications for dialysis: the complete clinical approach to Indications for dialysis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell.",
+    "description": "Dialysis is the extracorporeal or peritoneal removal of excess fluid, electrolytes.",
     "updated": "2026-10-15",
     "file": "src/content/notes/renal-dialysis.md"
   },
@@ -2168,7 +2168,7 @@
     "unit": "Internal Medicine",
     "group": "Infectious disease",
     "title": "Skin and soft-tissue infections",
-    "description": "Skin and soft-tissue infections: the complete clinical approach to Skin and soft-tissue infections: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Skin and soft‑tissue infections (SSTIs) are a spectrum of bacterial, fungal or parasitic conditions that involve the epidermis, dermis, subcutaneous tissue.",
     "updated": "2026-10-15",
     "file": "src/content/notes/infectious-skin-infection.md"
   },
@@ -2178,7 +2178,7 @@
     "unit": "Internal Medicine",
     "group": "Renal",
     "title": "Acid-base disorders",
-    "description": "Acid-base disorders: the complete clinical approach to Acid-base disorders: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "Acid‑base disorders are abnormalities in the body’s hydrogen ion concentration that disturb the normal pH range (7.35‑7.45).",
     "updated": "2026-10-15",
     "file": "src/content/notes/renal-acid-base.md"
   },
@@ -2188,7 +2188,7 @@
     "unit": "Internal Medicine",
     "group": "Renal",
     "title": "Urinary tract infection and pyelonephritis",
-    "description": "Urinary tract infection and pyelonephritis: the complete clinical approach to Urinary tract infection and pyelonephritis: definition; causes and risk factors in our setting (including HIV.",
+    "description": "Urinary tract infection (UTI): microbial invasion of any part of the urinary system (urethra, bladder, ureters.",
     "updated": "2026-10-15",
     "file": "src/content/notes/renal-uti.md"
   },
@@ -2198,7 +2198,7 @@
     "unit": "Internal Medicine",
     "group": "Renal",
     "title": "Fluid balance",
-    "description": "Fluid balance: the complete clinical approach to Fluid balance: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical.",
+    "description": "Fluid balance is the net difference between fluid intake (oral, enteral, parenteral, metabolic water) and fluid output (urine, feces, insensible loss.",
     "updated": "2026-10-15",
     "file": "src/content/notes/renal-fluid-balance.md"
   },
@@ -2208,7 +2208,7 @@
     "unit": "Internal Medicine",
     "group": "Gastroenterology and hepatology",
     "title": "Dyspepsia and peptic ulcer disease",
-    "description": "Dyspepsia and peptic ulcer disease: the complete clinical approach to Dyspepsia and peptic ulcer disease: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Dyspepsia: persistent or recurrent pain or discomfort centered in the upper abdomen, often accompanied by early satiety, post‑prandial fullness, bloating.",
     "updated": "2026-10-15",
     "file": "src/content/notes/gastroenterology-pud.md"
   },
@@ -2218,7 +2218,7 @@
     "unit": "Internal Medicine",
     "group": "Gastroenterology and hepatology",
     "title": "Hepatic encephalopathy",
-    "description": "Hepatic encephalopathy: the complete clinical approach to Hepatic encephalopathy: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "description": "A reversible neuropsychiatric syndrome caused by accumulation of neurotoxic substances—principally ammonia—in patients with acute or chronic liver.",
     "updated": "2026-10-15",
     "file": "src/content/notes/gastroenterology-hep-enceph.md"
   },
@@ -2228,7 +2228,7 @@
     "unit": "Internal Medicine",
     "group": "Gastroenterology and hepatology",
     "title": "Inflammatory bowel disease",
-    "description": "Inflammatory bowel disease: the complete clinical approach to Inflammatory bowel disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle.",
+    "description": "Inflammatory bowel disease (IBD) comprises chronic, relapsing inflammatory disorders of the gastrointestinal tract.",
     "updated": "2026-10-15",
     "file": "src/content/notes/gastroenterology-ibd.md"
   },
@@ -2238,7 +2238,7 @@
     "unit": "Internal Medicine",
     "group": "Gastroenterology and hepatology",
     "title": "Hepatorenal syndrome",
-    "description": "Hepatorenal syndrome: the complete clinical approach to Hepatorenal syndrome: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "description": "Hepatorenal syndrome (HRS) is a functional, rapidly progressive renal failure that occurs in patients with advanced chronic liver disease (usually cirrhosis).",
     "updated": "2026-10-15",
     "file": "src/content/notes/gastroenterology-hrs.md"
   },
@@ -2248,7 +2248,7 @@
     "unit": "Internal Medicine",
     "group": "Haematology",
     "title": "Iron-deficiency anaemia",
-    "description": "Iron-deficiency anaemia: the complete clinical approach to Iron-deficiency anaemia: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell.",
+    "description": "Iron‑deficiency anaemia (IDA) is a microcytic, hypochromic anaemia caused by a total body iron deficit that is insufficient to sustain normal haemoglobin.",
     "updated": "2026-10-15",
     "file": "src/content/notes/haematology-iron-deficiency.md"
   },
@@ -2258,7 +2258,7 @@
     "unit": "Internal Medicine",
     "group": "Haematology",
     "title": "Megaloblastic anaemia",
-    "description": "Megaloblastic anaemia: the complete clinical approach to Megaloblastic anaemia: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "description": "Megaloblastic anaemia is a macrocytic anaemia characterised by impaired nuclear maturation of haematopoietic cells, leading to the presence of large.",
     "updated": "2026-10-15",
     "file": "src/content/notes/haematology-megaloblastic.md"
   },
@@ -2268,7 +2268,7 @@
     "unit": "Internal Medicine",
     "group": "Renal",
     "title": "Chronic kidney disease",
-    "description": "Chronic kidney disease: the complete clinical approach to Chronic kidney disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "description": "Chronic kidney disease (CKD) is defined as abnormalities of kidney structure or function, present for ≥3 months, with either:.",
     "updated": "2026-10-15",
     "file": "src/content/notes/renal-ckd.md"
   },
@@ -2278,7 +2278,7 @@
     "unit": "Internal Medicine",
     "group": "Renal",
     "title": "Diabetic kidney disease",
-    "description": "Diabetic kidney disease: the complete clinical approach to Diabetic kidney disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell.",
+    "description": "Diabetic kidney disease (DKD) – also called diabetic nephropathy – is a chronic renal complication of type 1 or type 2 diabetes mellitus characterised by.",
     "updated": "2026-10-15",
     "file": "src/content/notes/renal-diabetic-kidney.md"
   },
@@ -2288,7 +2288,7 @@
     "unit": "Internal Medicine",
     "group": "Gastroenterology and hepatology",
     "title": "Chronic liver disease and cirrhosis",
-    "description": "Chronic liver disease and cirrhosis: the complete clinical approach to Chronic liver disease and cirrhosis: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Chronic liver disease (CLD) is a progressive, usually irreversible disorder of hepatic structure and function lasting > 6 months, characterised by fibrosis.",
     "updated": "2026-10-15",
     "file": "src/content/notes/gastroenterology-cirrhosis.md"
   },
@@ -2298,7 +2298,7 @@
     "unit": "Internal Medicine",
     "group": "Gastroenterology and hepatology",
     "title": "Ascites and spontaneous bacterial peritonitis",
-    "description": "Ascites and spontaneous bacterial peritonitis: the complete clinical approach to Ascites and spontaneous bacterial peritonitis: definition; causes and risk factors in our setting (including.",
+    "description": "Ascites: pathological accumulation of free fluid in the peritoneal cavity. It is the commonest complication of cirrhosis.",
     "updated": "2026-10-15",
     "file": "src/content/notes/gastroenterology-ascites-sbp.md"
   },
@@ -2308,7 +2308,7 @@
     "unit": "Internal Medicine",
     "group": "Gastroenterology and hepatology",
     "title": "Acute and chronic pancreatitis",
-    "description": "Acute and chronic pancreatitis: the complete clinical approach to Acute and chronic pancreatitis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic.",
+    "description": "Acute pancreatitis (AP): A sudden inflammation of the pancreas presenting with abdominal pain and/or enzyme elevation.",
     "updated": "2026-10-15",
     "file": "src/content/notes/gastroenterology-pancreatitis.md"
   },
@@ -2318,7 +2318,7 @@
     "unit": "Internal Medicine",
     "group": "Gastroenterology and hepatology",
     "title": "Malabsorption",
-    "description": "Malabsorption: the complete clinical approach to Malabsorption: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical.",
+    "description": "Malabsorption is the impaired digestion and/or absorption of macronutrients (carbohydrates, proteins, fats), micronutrients (vitamins.",
     "updated": "2026-10-15",
     "file": "src/content/notes/gastroenterology-malabsorption.md"
   },
@@ -2328,7 +2328,7 @@
     "unit": "Internal Medicine",
     "group": "Haematology",
     "title": "Haemolytic anaemia",
-    "description": "Haemolytic anaemia: the complete clinical approach to Haemolytic anaemia: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "Haemolytic anaemia is a reduction in haemoglobin concentration caused by premature destruction of red blood cells (RBCs) either within the circulation.",
     "updated": "2026-10-15",
     "file": "src/content/notes/haematology-haemolytic.md"
   },
@@ -2338,7 +2338,7 @@
     "unit": "Internal Medicine",
     "group": "Haematology",
     "title": "Sickle cell disease",
-    "description": "Sickle cell disease: the complete clinical approach to Sickle cell disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "A hereditary hemoglobinopathy caused by a point mutation in the β‑globin gene (HBB) that produces haemoglobin S (HbS). When deoxygenated, HbS polymerises.",
     "updated": "2026-10-15",
     "file": "src/content/notes/haematology-sickle-cell.md"
   },
@@ -2348,7 +2348,7 @@
     "unit": "Internal Medicine",
     "group": "Haematology",
     "title": "Thalassaemia",
-    "description": "Thalassaemia: the complete clinical approach to Thalassaemia: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical.",
+    "description": "Thalassaemia is a hereditary haemoglobinopathy characterised by reduced or absent synthesis of one or more globin chains of adult haemoglobin (Hb A).",
     "updated": "2026-10-15",
     "file": "src/content/notes/haematology-thalassaemia.md"
   },
@@ -2358,7 +2358,7 @@
     "unit": "Internal Medicine",
     "group": "Haematology",
     "title": "Leukaemias",
-    "description": "Leukaemias: the complete clinical approach to Leukaemias: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical causes.",
+    "description": "Leukaemia is a malignant clonal proliferation of hematopoietic stem cells resulting in uncontrolled growth of immature white blood cells (blasts) in the bone.",
     "updated": "2026-10-15",
     "file": "src/content/notes/haematology-leukaemia.md"
   },
@@ -2368,7 +2368,7 @@
     "unit": "Internal Medicine",
     "group": "Haematology",
     "title": "Lymphomas",
-    "description": "Lymphomas: the complete clinical approach to Lymphomas: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical causes.",
+    "description": "Lymphomas are malignant proliferations of lymphoid cells that arise in the lymphoid system (lymph nodes, spleen, thymus, Waldeyer’s ring.",
     "updated": "2026-10-15",
     "file": "src/content/notes/haematology-lymphoma.md"
   },
@@ -2378,7 +2378,7 @@
     "unit": "Internal Medicine",
     "group": "Haematology",
     "title": "Multiple myeloma",
-    "description": "Multiple myeloma: the complete clinical approach to Multiple myeloma: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "Multiple myeloma (MM) is a clonal plasma‑cell malignancy characterised by uncontrolled proliferation of malignant plasma cells in the bone marrow.",
     "updated": "2026-10-15",
     "file": "src/content/notes/haematology-myeloma.md"
   },
@@ -2388,7 +2388,7 @@
     "unit": "Internal Medicine",
     "group": "Haematology",
     "title": "Thrombocytopenia and platelet disorders",
-    "description": "Thrombocytopenia and platelet disorders: the complete clinical approach to Thrombocytopenia and platelet disorders: definition; causes and risk factors in our setting (including HIV, TB.",
+    "description": "Thrombocytopenia: platelet count < 150 × 10⁹/L on peripheral blood film.",
     "updated": "2026-10-15",
     "file": "src/content/notes/haematology-platelets.md"
   },
@@ -2398,7 +2398,7 @@
     "unit": "Internal Medicine",
     "group": "Haematology",
     "title": "Coagulation disorders",
-    "description": "Coagulation disorders: the complete clinical approach to Coagulation disorders: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "description": "A coagulation disorder is any abnormality of the haemostatic system that results in either excessive bleeding (hypocoagulability) or pathological clot.",
     "updated": "2026-10-15",
     "file": "src/content/notes/haematology-coagulation.md"
   },
@@ -2408,7 +2408,7 @@
     "unit": "Internal Medicine",
     "group": "Haematology",
     "title": "Blood transfusion and reactions",
-    "description": "Blood transfusion and reactions: the complete clinical approach to Blood transfusion and reactions: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Blood transfusion is the intravenous administration of whole blood or blood components (red cells, plasma, platelets.",
     "updated": "2026-10-15",
     "file": "src/content/notes/haematology-transfusion.md"
   },
@@ -2418,7 +2418,7 @@
     "unit": "Internal Medicine",
     "group": "Endocrinology",
     "title": "Diabetes mellitus",
-    "description": "Diabetes mellitus: the complete clinical approach to Diabetes mellitus: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "A chronic metabolic disorder characterised by persistent hyperglycaemia resulting from absolute insulin deficiency (type 1).",
     "updated": "2026-10-15",
     "file": "src/content/notes/endocrinology-diabetes.md"
   },
@@ -2428,7 +2428,7 @@
     "unit": "Internal Medicine",
     "group": "Endocrinology",
     "title": "Hypoglycaemia",
-    "description": "Hypoglycaemia: the complete clinical approach to Hypoglycaemia: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical.",
+    "description": "Hypoglycaemia is a plasma glucose concentration low enough to cause neuro‑glycopenic symptoms or signs. In practice.",
     "updated": "2026-10-15",
     "file": "src/content/notes/endocrinology-hypoglycaemia.md"
   },
@@ -2438,7 +2438,7 @@
     "unit": "Internal Medicine",
     "group": "Endocrinology",
     "title": "Hyperthyroidism and hypothyroidism",
-    "description": "Hyperthyroidism and hypothyroidism: the complete clinical approach to Hyperthyroidism and hypothyroidism: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Hyperthyroidism – clinical syndrome caused by excess circulating thyroid hormones (T4, T3) leading to a hypermetabolic state.",
     "updated": "2026-10-15",
     "file": "src/content/notes/endocrinology-thyroid.md"
   },
@@ -2448,7 +2448,7 @@
     "unit": "Internal Medicine",
     "group": "Endocrinology",
     "title": "Thyroid storm and myxoedema coma",
-    "description": "Thyroid storm and myxoedema coma: the complete clinical approach to Thyroid storm and myxoedema coma: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Thyroid storm – an acute, life‑threatening decompensation of hyperthyroidism characterised by multisystem hypermetabolism.",
     "updated": "2026-10-15",
     "file": "src/content/notes/endocrinology-thyroid-emergency.md"
   },
@@ -2458,7 +2458,7 @@
     "unit": "Internal Medicine",
     "group": "Endocrinology",
     "title": "Adrenal insufficiency and Cushing syndrome",
-    "description": "Adrenal insufficiency and Cushing syndrome: the complete clinical approach to Adrenal insufficiency and Cushing syndrome: definition; causes and risk factors in our setting (including HIV.",
+    "description": "Adrenal insufficiency (AI): Inadequate production of glucocorticoids (and often mineralocorticoids) by the adrenal cortex.",
     "updated": "2026-10-15",
     "file": "src/content/notes/endocrinology-adrenal.md"
   },
@@ -2468,7 +2468,7 @@
     "unit": "Internal Medicine",
     "group": "Endocrinology",
     "title": "Calcium and parathyroid disorders",
-    "description": "Calcium and parathyroid disorders: the complete clinical approach to Calcium and parathyroid disorders: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Disorders of calcium homeostasis encompass hypercalcaemia, hypocalcaemia, and parathyroid gland disease (primary.",
     "updated": "2026-10-15",
     "file": "src/content/notes/endocrinology-calcium.md"
   },
@@ -2478,7 +2478,7 @@
     "unit": "Internal Medicine",
     "group": "Endocrinology",
     "title": "Pituitary disorders",
-    "description": "Pituitary disorders: the complete clinical approach to Pituitary disorders: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "A pituitary disorder is any condition that impairs the normal structure or function of the pituitary gland.",
     "updated": "2026-10-15",
     "file": "src/content/notes/endocrinology-pituitary.md"
   },
@@ -2488,7 +2488,7 @@
     "unit": "Internal Medicine",
     "group": "Endocrinology",
     "title": "Obesity and metabolic syndrome",
-    "description": "Obesity and metabolic syndrome: the complete clinical approach to Obesity and metabolic syndrome: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic.",
+    "description": "Obesity: excess body fat that impairs health, usually expressed as a body‑mass index (BMI) ≥ 30 kg/m² in adults; for Kenyan adults BMI ≥ 30 is the cut‑off.",
     "updated": "2026-10-15",
     "file": "src/content/notes/endocrinology-obesity.md"
   },
@@ -2498,7 +2498,7 @@
     "unit": "Internal Medicine",
     "group": "Neurology",
     "title": "Neurological history and examination",
-    "description": "Neurological history and examination: the complete clinical approach to Neurological history and examination: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "A structured clinical process that elicits the patient’s symptom chronology, associated systemic features and risk factors.",
     "updated": "2026-10-15",
     "file": "src/content/notes/neurology-neuro-approach.md"
   },
@@ -2508,7 +2508,7 @@
     "unit": "Internal Medicine",
     "group": "Neurology",
     "title": "Ischaemic and haemorrhagic stroke",
-    "description": "Ischaemic and haemorrhagic stroke: the complete clinical approach to Ischaemic and haemorrhagic stroke: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Ischaemic stroke – sudden neurological deficit lasting >24 h (or until death) caused by an acute interruption of cerebral blood flow due to arterial.",
     "updated": "2026-10-15",
     "file": "src/content/notes/neurology-stroke.md"
   },
@@ -2518,7 +2518,7 @@
     "unit": "Internal Medicine",
     "group": "Neurology",
     "title": "Epilepsy and status epilepticus",
-    "description": "Epilepsy and status epilepticus: the complete clinical approach to Epilepsy and status epilepticus: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Epilepsy – a disorder characterised by ≥2 unprovoked seizures occurring >24 h apart.",
     "updated": "2026-10-15",
     "file": "src/content/notes/neurology-epilepsy.md"
   },
@@ -2528,7 +2528,7 @@
     "unit": "Internal Medicine",
     "group": "Neurology",
     "title": "Peripheral neuropathy and Guillain-Barre syndrome",
-    "description": "Peripheral neuropathy and Guillain-Barre syndrome: the complete clinical approach to Peripheral neuropathy and Guillain-Barre syndrome: definition; causes and risk factors in our setting.",
+    "description": "Peripheral neuropathy – any disorder of the peripheral nerves (motor, sensory or autonomic) that produces dysfunction distal to the spinal cord.",
     "updated": "2026-10-15",
     "file": "src/content/notes/neurology-neuropathy.md"
   },
@@ -2538,7 +2538,7 @@
     "unit": "Internal Medicine",
     "group": "Neurology",
     "title": "Myasthenia gravis",
-    "description": "Myasthenia gravis: the complete clinical approach to Myasthenia gravis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "Myasthenia gravis (MG) is a chronic, autoimmune neuromuscular junction disorder characterised by fluctuating skeletal muscle weakness that worsens with.",
     "updated": "2026-10-15",
     "file": "src/content/notes/neurology-myasthenia.md"
   },
@@ -2548,7 +2548,7 @@
     "unit": "Internal Medicine",
     "group": "Neurology",
     "title": "Parkinson disease",
-    "description": "Parkinson disease: the complete clinical approach to Parkinson disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "Parkinson disease (PD) is a progressive neuro‑degenerative disorder characterised by the loss of dopaminergic neurons in the substantia nigra pars compacta.",
     "updated": "2026-10-15",
     "file": "src/content/notes/neurology-parkinson.md"
   },
@@ -2558,7 +2558,7 @@
     "unit": "Internal Medicine",
     "group": "Neurology",
     "title": "Dementia and delirium",
-    "description": "Dementia and delirium: the complete clinical approach to Dementia and delirium: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "description": "Dementia – a progressive, usually irreversible decline in multiple cognitive domains (memory, language, executive function.",
     "updated": "2026-10-15",
     "file": "src/content/notes/neurology-dementia.md"
   },
@@ -2568,7 +2568,7 @@
     "unit": "Internal Medicine",
     "group": "Neurology",
     "title": "Headache and red flags",
-    "description": "Headache and red flags: the complete clinical approach to Headache and red flags: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "description": "A headache is a pain or discomfort localized to any region of the head, scalp, or neck, with or without associated symptoms (nausea, photophobia.",
     "updated": "2026-10-15",
     "file": "src/content/notes/neurology-headache.md"
   },
@@ -2578,7 +2578,7 @@
     "unit": "Internal Medicine",
     "group": "Neurology",
     "title": "Spinal cord compression",
-    "description": "Spinal cord compression: the complete clinical approach to Spinal cord compression: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell.",
+    "description": "A syndrome in which an extrinsic lesion (tumour, infection, haemorrhage, inflammatory mass, bone fragment, disc material) exerts pressure on the spinal cord.",
     "updated": "2026-10-15",
     "file": "src/content/notes/neurology-cord-compression.md"
   },
@@ -2588,7 +2588,7 @@
     "unit": "Internal Medicine",
     "group": "Neurology",
     "title": "Raised intracranial pressure",
-    "description": "Raised intracranial pressure: the complete clinical approach to Raised intracranial pressure: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic.",
+    "description": "Raised intracranial pressure is a sustained increase in the pressure within the cranial vault above the normal range of 5‑15 mm Hg in adults.",
     "updated": "2026-10-15",
     "file": "src/content/notes/neurology-raised-icp.md"
   },
@@ -2598,7 +2598,7 @@
     "unit": "Internal Medicine",
     "group": "Rheumatology",
     "title": "Rheumatoid arthritis",
-    "description": "Rheumatoid arthritis: the complete clinical approach to Rheumatoid arthritis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "description": "Rheumatoid arthritis (RA) is a chronic, systemic, autoimmune inflammatory arthritis characterised by symmetric synovial joint involvement that leads to.",
     "updated": "2026-10-15",
     "file": "src/content/notes/rheumatology-ra.md"
   },
@@ -2608,7 +2608,7 @@
     "unit": "Internal Medicine",
     "group": "Rheumatology",
     "title": "Systemic lupus erythematosus",
-    "description": "Systemic lupus erythematosus: the complete clinical approach to Systemic lupus erythematosus: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic.",
+    "description": "Systemic lupus erythematosus (SLE) is a chronic, multisystem autoimmune disease characterised by loss of tolerance to nuclear antigens.",
     "updated": "2026-10-15",
     "file": "src/content/notes/rheumatology-sle.md"
   },
@@ -2618,7 +2618,7 @@
     "unit": "Internal Medicine",
     "group": "Rheumatology",
     "title": "Gout and crystal arthropathies",
-    "description": "Gout and crystal arthropathies: the complete clinical approach to Gout and crystal arthropathies: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic.",
+    "description": "Gout is a metabolic disease characterised by deposition of monosodium urate (MSU) crystals in joints, peri‑articular tissues and sometimes kidneys.",
     "updated": "2026-10-15",
     "file": "src/content/notes/rheumatology-gout.md"
   },
@@ -2628,7 +2628,7 @@
     "unit": "Internal Medicine",
     "group": "Rheumatology",
     "title": "Osteoarthritis",
-    "description": "Osteoarthritis: the complete clinical approach to Osteoarthritis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical.",
+    "description": "Osteoarthritis (OA) is a chronic, progressive, degenerative joint disease characterised by loss of articular cartilage, sub‑chondral bone remodelling.",
     "updated": "2026-10-15",
     "file": "src/content/notes/rheumatology-oa.md"
   },
@@ -2638,7 +2638,7 @@
     "unit": "Internal Medicine",
     "group": "Rheumatology",
     "title": "Systemic sclerosis",
-    "description": "Systemic sclerosis: the complete clinical approach to Systemic sclerosis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "Systemic sclerosis (SSc) is a chronic, multisystem autoimmune connective‑tissue disease characterised by progressive fibrosis of skin and internal organs.",
     "updated": "2026-10-15",
     "file": "src/content/notes/rheumatology-sclerosis.md"
   },
@@ -2648,7 +2648,7 @@
     "unit": "Internal Medicine",
     "group": "Rheumatology",
     "title": "Vasculitis",
-    "description": "Vasculitis: the complete clinical approach to Vasculitis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical causes.",
+    "description": "Vasculitis is a heterogeneous group of disorders characterised by inflammation of blood vessel walls, leading to vessel wall damage.",
     "updated": "2026-10-15",
     "file": "src/content/notes/rheumatology-vasculitis.md"
   },
@@ -2658,7 +2658,7 @@
     "unit": "Internal Medicine",
     "group": "Rheumatology",
     "title": "Septic arthritis",
-    "description": "Septic arthritis: the complete clinical approach to Septic arthritis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "Septic arthritis (also called infectious arthritis) is an acute, usually bacterial, invasion of a synovial joint space that provokes intense inflammation.",
     "updated": "2026-10-15",
     "file": "src/content/notes/rheumatology-septic-arthritis.md"
   },
@@ -2668,7 +2668,7 @@
     "unit": "Internal Medicine",
     "group": "Rheumatology",
     "title": "Spondyloarthritis",
-    "description": "Spondyloarthritis: the complete clinical approach to Spondyloarthritis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "Spondyloarthritis (SpA) is a group of inter‑related inflammatory rheumatic diseases that primarily affect the axial skeleton (sacroiliac joints and spine).",
     "updated": "2026-10-15",
     "file": "src/content/notes/rheumatology-spa.md"
   },
@@ -2678,7 +2678,7 @@
     "unit": "Internal Medicine",
     "group": "General internal medicine",
     "title": "Clinical pharmacology and rational prescribing",
-    "description": "Clinical pharmacology and rational prescribing: the complete clinical approach to Clinical pharmacology and rational prescribing: definition; causes and risk factors in our setting.",
+    "description": "Clinical pharmacology is the science of how drugs act in humans, encompassing absorption, distribution, metabolism.",
     "updated": "2026-10-15",
     "file": "src/content/notes/general-pharmacology.md"
   },
@@ -2688,7 +2688,7 @@
     "unit": "Internal Medicine",
     "group": "General internal medicine",
     "title": "Geriatric medicine",
-    "description": "Geriatric medicine: the complete clinical approach to Geriatric medicine: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "description": "Geriatric medicine is the branch of internal medicine that addresses the health care needs of adults aged ≥ 65 years, with emphasis on multimorbidity.",
     "updated": "2026-10-15",
     "file": "src/content/notes/general-geriatrics.md"
   },
@@ -2698,7 +2698,7 @@
     "unit": "Internal Medicine",
     "group": "General internal medicine",
     "title": "Poisoning and adverse drug reactions",
-    "description": "Poisoning and adverse drug reactions: the complete clinical approach to Poisoning and adverse drug reactions: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Poisoning – the harmful effect on the body after exposure to a chemical, drug, plant, animal toxin or environmental agent, whether intentional.",
     "updated": "2026-10-15",
     "file": "src/content/notes/general-poisoning.md"
   },
@@ -2708,7 +2708,7 @@
     "unit": "Internal Medicine",
     "group": "General internal medicine",
     "title": "Anaphylaxis",
-    "description": "Anaphylaxis: the complete clinical approach to Anaphylaxis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical causes.",
+    "description": "A rapid, systemic, IgE‑mediated (or sometimes non‑IgE) hypersensitivity reaction that leads to airway compromise, circulatory collapse, or both.",
     "updated": "2026-10-15",
     "file": "src/content/notes/general-anaphylaxis.md"
   },
@@ -2718,7 +2718,7 @@
     "unit": "Internal Medicine",
     "group": "General internal medicine",
     "title": "Nutrition and vitamin deficiencies",
-    "description": "Nutrition and vitamin deficiencies: the complete clinical approach to Nutrition and vitamin deficiencies: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "description": "Nutrition and vitamin deficiencies refer to states in which intake, absorption, transport, storage or utilisation of macronutrients (protein, carbohydrate.",
     "updated": "2026-10-15",
     "file": "src/content/notes/general-nutrition.md"
   },

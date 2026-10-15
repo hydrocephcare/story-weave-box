@@ -9,6 +9,7 @@ export const CHECK_RULES = `Check for these errors and nothing else:
 - a sign, test, score or eponym that is misnamed or described wrongly;
 - the same fact written two different ways in the same text (for example "> 250" in one place and ">= 250" in another);
 - a multiple-choice question whose marked answer is wrong, or that has two defensible answers, or whose answer is not one of the options;
+- a mnemonic or acronym that is not a real, widely taught one (an invented acronym is a serious error);
 - a cause, table row or line that makes no clinical sense;
 - a missing safety caveat that a student could be hurt by learning without it.
 Do not comment on style, length or formatting. Do not suggest additions that are merely nice to have.

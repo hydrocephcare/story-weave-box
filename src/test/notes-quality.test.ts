@@ -65,3 +65,10 @@ describe("the note renderer", () => {
     expect(mdToHtml("**If it grows *E. coli* what next?**").html).toBe("<p><strong>If it grows <em>E. coli</em> what next?</strong></p>");
   });
 });
+
+describe("note descriptions (shown under the title and in Google)", () => {
+  it("none repeats its own title, runs on from a template, or stops half-way", () => {
+    const bad = list.filter((n) => { const d = String((n as unknown as { description?: string }).description ?? ""); return /the complete clinical approach to/i.test(d) || /\(including\.?$/.test(d.trim()) || d.split(n.title).length > 2; }).map((n) => n.slug);
+    expect(bad).toEqual([]);
+  });
+});

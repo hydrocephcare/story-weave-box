@@ -20,7 +20,7 @@ const registry = JSON.parse(fs.readFileSync("src/data/staticNotes.json", "utf8")
 const list = (Array.isArray(registry) ? registry : registry.notes ?? Object.values(registry)).filter((n) => n.file && fs.existsSync(n.file));
 const db = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : { notes: {}, topics: {} };
 db.notes ??= {}; db.topics ??= {};
-const hash = (t) => crypto.createHash("sha1").update(t).digest("hex").slice(0, 12);
+const hash = (t) => crypto.createHash("sha1").update(t.split("\r").join("")).digest("hex").slice(0, 12);
 
 const todo = list.filter((n) => !only || n.slug === only)
   .map((n) => { const text = fs.readFileSync(n.file, "utf8"); return { n, text, h: hash(text) }; })

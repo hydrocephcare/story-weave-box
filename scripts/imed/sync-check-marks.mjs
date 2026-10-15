@@ -10,7 +10,8 @@ const marks = {};
 for (const n of list) {
   const c = checks.notes?.[n.slug];
   if (!c?.validated || !n.file || !fs.existsSync(n.file)) continue;
-  const h = crypto.createHash("sha1").update(fs.readFileSync(n.file, "utf8")).digest("hex").slice(0, 12);
+  // the same hash on Windows (CRLF files) and on the server (LF files)
+  const h = crypto.createHash("sha1").update(fs.readFileSync(n.file, "utf8").split("\r").join("")).digest("hex").slice(0, 12);
   if (h === c.hash) marks[n.slug] = c.at;
 }
 const out = JSON.stringify({ notes: marks }, null, 1) + "\n";
