@@ -5,8 +5,8 @@ import {
 } from "@/lib/contest-store";
 import type { ContestStage } from "@/lib/contest";
 
-export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage"; args: Record<string, any> }
-export interface AgentContext { now: string; universities: { slug: string; name: string }[]; exams: string[]; contests: { slug: string; title: string; stage: string }[] }
+export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot"; args: Record<string, any> }
+export interface AgentContext { page?: string; problems?: { at: string; what: string }[]; now: string; universities: { slug: string; name: string }[]; exams: string[]; contests: { slug: string; title: string; stage: string }[] }
 export interface PlanItem { action: AgentAction; line: string; danger: boolean; ok: boolean }
 
 const nairobiNow = () => new Intl.DateTimeFormat("en-KE", { dateStyle: "full", timeStyle: "short", timeZone: "Africa/Nairobi" }).format(new Date());
@@ -54,6 +54,9 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
       const c = w.contests.find((x) => x.slug === a.slug);
       return { action, danger: true, ok: Boolean(c), line: c ? `DELETE the contest "${c.title}" (${c.stage}) permanently, with its registrations and results.` : `Delete contest "${a.slug}" — not found, cannot run.` };
     }
+    if (action.tool === "go_to") return { action, danger: false, ok: /^\/admin(\/[a-z0-9-]+)*$/.test(String(a.path)), line: `Open ${a.path}.` };
+    if (action.tool === "set_autopilot_mode") return { action, danger: false, ok: ["approve_access", "daily_digest"].includes(a.key) && ["off", "ask", "auto"].includes(a.mode), line: `Set Autopilot job "${a.key}" to ${a.mode}${a.mode === "auto" ? " (it will act on its own, with an Undo in the log)" : ""}.` };
+    if (action.tool === "run_autopilot") return { action, danger: false, ok: true, line: "Run the Autopilot jobs now." };
     const c = w.contests.find((x) => x.slug === a.slug);
     const okStage = ["concept", "registration", "live", "completed"].includes(a.stage);
     return { action, danger: false, ok: Boolean(c) && okStage, line: c && okStage ? `Move "${c.title}" from ${c.stage} to ${a.stage}.` : `Change stage of "${a.slug}" — not found or invalid stage, cannot run.` };
@@ -63,6 +66,9 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
 /** Runs one confirmed action with the administrator's own login. Returns a sentence saying what happened. */
 export async function runAction(action: AgentAction, w: AgentWorld): Promise<string> {
   const a = action.args || {};
+  if (action.tool === "set_autopilot_mode") { const { error } = await (supabase as any).rpc("admin_agent_set_mode", { p_key: a.key, p_mode: a.mode }); if (error) throw new Error(/schema cache|admin_agent_set_mode/.test(error.message) ? "Run autopilot.sql first." : error.message); return `Autopilot job ${a.key} is now ${a.mode}.`; }
+  if (action.tool === "run_autopilot") { const { data, error } = await (supabase as any).rpc("admin_agent_run"); if (error) throw new Error(/schema cache|admin_agent_run/.test(error.message) ? "Run autopilot.sql first." : error.message); return `Autopilot ran: ${data?.approved ?? 0} approved, ${data?.queued ?? 0} waiting for you.`; }
+  if (action.tool === "go_to") return `Opened ${a.path}.`;
   if (action.tool === "delete_contest") {
     const { error } = await (supabase as any).rpc("admin_delete_contest", { p_slug: String(a.slug) });
     if (error) throw new Error(/admin_delete_contest|schema cache/.test(error.message) ? "Run contest-admin-tools.sql first." : error.message);

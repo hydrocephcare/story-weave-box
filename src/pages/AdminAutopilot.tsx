@@ -2,7 +2,6 @@ import { useCallback, useEffect, useState } from "react";
 import { Bot, Check, Loader2, Play, RotateCcw, X } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { supabase } from "@/integrations/supabase/client";
-import AdminAgent from "@/components/AdminAgent";
 
 type Mode = "off" | "ask" | "auto";
 interface Cap { key: string; title: string; description: string; mode: Mode }
@@ -57,8 +56,6 @@ export default function AdminAutopilot() {
         </p>
       </header>
       {error && <p className="rounded-lg border border-destructive/40 bg-destructive/10 p-3 text-sm">{error}</p>}
-
-      <AdminAgent />
 
       {queue.length > 0 && (
         <section className="rounded-2xl border border-primary/40 bg-primary/5 p-4" aria-label="Waiting for you">

@@ -1,12 +1,16 @@
 import { useEffect, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { AlertTriangle, Check, Loader2, Send, Sparkles, X } from "lucide-react";
+import { recentProblems } from "@/lib/adminProblems";
 import { agentContext, askAgent, describe, loadAgentWorld, runAction, type AgentAction, type AgentWorld, type PlanItem } from "@/lib/adminAgent";
 
 type Turn = { role: "user" | "assistant"; content: string };
-const IDEAS = ["Make a UoN vs MKU contest tomorrow at 8pm using a respiratory exam", "Which contests do I have?", "Delete the contest called test", "Open registration for the newest contest"];
+const IDEAS = ["What can I do on this page?", "Explain the last error and fix it", "Make a UoN vs MKU contest tomorrow at 8pm using a respiratory exam", "Which contests do I have?", "Delete the contest called test", "Open registration for the newest contest"];
 
 /** Admin assistant: you say what you need, it shows exactly what it will do, and nothing runs until you press Yes. */
-export default function AdminAgent() {
+export default function AdminAgent({ compact = false }: { compact?: boolean }) {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
   const [world, setWorld] = useState<AgentWorld | null>(null);
   const [turns, setTurns] = useState<Turn[]>([]);
   const [text, setText] = useState("");
@@ -25,9 +29,13 @@ export default function AdminAgent() {
     const next: Turn[] = [...turns, { role: "user", content: message.trim() }];
     setTurns(next); setText("");
     try {
-      const out = await askAgent(message.trim(), turns, agentContext(world));
+      const out = await askAgent(message.trim(), turns, { ...agentContext(world), page: pathname, problems: recentProblems() });
       setTurns([...next, { role: "assistant", content: out.reply || (out.actions.length ? "Here is what I will do:" : "Done thinking, nothing to do.") }]);
-      if (out.actions.length) setPlan(describe(out.actions, world));
+      // opening a page changes nothing, so it happens straight away; everything else waits for your Yes
+      const nav = out.actions.find((a) => a.tool === "go_to" && /^\/admin(\/[a-z0-9-]+)*$/.test(String(a.args?.path)));
+      if (nav) navigate(String(nav.args.path));
+      const rest = out.actions.filter((a) => a.tool !== "go_to");
+      if (rest.length) setPlan(describe(rest, world));
     } catch (e: any) { setError(e?.message || "Something went wrong."); }
     finally { setBusy(false); }
   }
@@ -44,13 +52,13 @@ export default function AdminAgent() {
 
   const danger = plan?.some((p) => p.danger);
   return (
-    <section className="rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/5 to-card p-4 sm:p-5" aria-label="Admin assistant">
+    <section className={compact ? "flex h-full flex-col p-4" : "rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/5 to-card p-4 sm:p-5"} aria-label="Admin assistant">
       <div className="flex items-center gap-2"><Sparkles className="h-5 w-5 text-primary" /><h2 className="font-serif text-xl font-bold">Admin assistant</h2></div>
       <p className="mt-1 text-sm text-muted-foreground">Tell me what you need in plain words. I will show what I am about to do and wait for your Yes.</p>
 
       {!turns.length && <div className="mt-3 flex flex-wrap gap-2">{IDEAS.map((i) => <button key={i} type="button" onClick={() => void send(i)} disabled={!world || busy} className="rounded-full border px-3 py-1.5 text-xs font-semibold hover:bg-muted disabled:opacity-40">{i}</button>)}</div>}
 
-      <div className="mt-3 max-h-80 space-y-2 overflow-y-auto">
+      <div className={`mt-3 space-y-2 overflow-y-auto ${compact ? "min-h-0 flex-1" : "max-h-80"}`}>
         {turns.map((t, i) => <p key={i} className={`rounded-xl px-3 py-2 text-sm ${t.role === "user" ? "ml-8 bg-primary/10" : "mr-8 bg-muted"}`}>{t.content}</p>)}
         {plan && (
           <div className={`rounded-xl border p-3 ${danger ? "border-destructive/50 bg-destructive/5" : "border-primary/40 bg-primary/5"}`}>
