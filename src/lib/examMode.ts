@@ -14,3 +14,6 @@ export function examOnly(html: string): string {
 }
 
 export const examSectionCount = (html: string) => (html.match(/<h2[\s>]/g) ?? []).length;
+
+/** Whether a section with this heading is kept in exam mode (the contents list uses it too, so it only lists what is shown). */
+export const isExamTitle = (title: string) => KEEP.test(title);

@@ -7,7 +7,7 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { savePlace, scheduleReview } from "@/lib/noteProgress";
 import { pullProgress, pushProgress } from "@/lib/progressSync";
 import { isSaved, toggleSaved } from "@/lib/savedNotes";
-import { examOnly } from "@/lib/examMode";
+import { examOnly, examSectionCount, isExamTitle } from "@/lib/examMode";
 import { openAI } from "@/lib/aiEvents";
 import { topicForNote } from "@/data/imed";
 import { doneTopics, toggleTopic } from "@/lib/imedProgress";
@@ -226,7 +226,7 @@ function StaticNoteView() {
             <nav className="sticky top-24 max-h-[calc(100dvh-7rem)] overflow-y-auto border-l border-border text-[15px]">
               <p className="pl-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">On this page</p>
               <ul className="mt-3 space-y-0.5">
-                {parsed.headings.map((h, i) => {
+                {parsed.headings.filter((h) => !examMode || isExamTitle(h.text)).map((h, i) => {
                   const here = spy.active === h.id;
                   const passed = parsed.headings.findIndex((x) => x.id === spy.active) > i;
                   return (
@@ -303,6 +303,9 @@ function StaticNoteView() {
           {!note.paper && <PharmacologyConnections ids={linked.ids} conditionIds={note.condition ? [note.condition] : []} leave={leave} className="mt-4" />}
 
           {note.paper && text ? <PaperBody text={text} onClick={onBodyClick} /> : (
+            {examMode && !note.paper && (
+              <div role="status" className="mt-6 flex flex-wrap items-center justify-between gap-2 rounded-xl border border-amber-500/40 bg-amber-500/10 px-4 py-2.5 text-sm"><span><b>Exam mode.</b> Showing the {examOnly(linked.html).match(/<h2[s>]/g)?.length ?? 0} sections examiners draw on, out of {examSectionCount(linked.html)}.</span><button type="button" onClick={() => setExamMode(false)} className="font-bold text-primary hover:underline">Show everything</button></div>
+            )}
             <article style={note.paper ? undefined : { fontSize: `${1 + fontStep * 0.0625}em` }} className={`note-body mt-6 ${note.paper ? "" : "note-topic"}`} onClick={onBodyClick} onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && pickOption(e.target as HTMLElement)) e.preventDefault(); }} dangerouslySetInnerHTML={{ __html: examMode && !note.paper ? examOnly(linked.html) : linked.html }} />
           )}
           {!note.paper && <ImedLinks slug={note.slug} />}
