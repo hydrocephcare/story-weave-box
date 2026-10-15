@@ -83,7 +83,7 @@ export default function GlobalSearch() {
   }, [q, year, contentType]);
 
   // the quick answer is asked when the search is submitted, or after a pause in typing: never on every key
-  useEffect(() => { const t = setTimeout(() => setAsked(q.trim()), 1400); return () => clearTimeout(t); }, [q]);
+  useEffect(() => { const t = setTimeout(() => setAsked(q.trim()), 2500); return () => clearTimeout(t); }, [q]);
   const onSubmit = (e?: FormEvent) => { e?.preventDefault(); setAsked(q.trim()); };
   const hasFilters = year || contentType;
   const chip = (on: boolean) => cn("h-9 shrink-0 rounded-full border px-4 text-sm font-semibold transition", on ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/60");

@@ -820,7 +820,7 @@ export default async function handler(req: Request): Promise<Response> {
       if (!contest) return permanentRedirect("/contests");
       title = `${contest.title} | Contest Briefing | OmpathStudy`;
       description = toMetaDescription(contest.subtitle || "Read the published OmpathStudy medical knowledge contest briefing.", "Read the published OmpathStudy medical knowledge contest briefing for medical students worldwide.");
-      ogImage = contest.share_image_url || OG_FALLBACK_IMAGE;
+      ogImage = contest.share_image_url || cardUrl(contest.title, "", "Contest");
       keywords = `OmpathStudy, medical contest Kenya, ${contest.title}, contest briefing, medical students Kenya`;
       type = "article";
       bodyExtra = `<section><h2>Contest briefing</h2><p>${htmlEscape(contest.subtitle || "Published contest briefing.")}</p><p><strong>Subjects:</strong> ${htmlEscape(Array.isArray(contest.subjects) ? contest.subjects.join(", ") : "")}</p><p><strong>Eligible years:</strong> ${htmlEscape(Array.isArray(contest.years) ? contest.years.map((y: unknown) => `Year ${y}`).join(", ") : "")}</p><p><strong>Format:</strong> ${htmlEscape(String(contest.format || ""))}</p><p><strong>Representation:</strong> ${htmlEscape(String(contest.teams || ""))}</p></section>`;
@@ -831,7 +831,7 @@ export default async function handler(req: Request): Promise<Response> {
       if (!contest) return permanentRedirect("/contests");
       title = `${contest.title} | OmpathStudy`;
       description = toMetaDescription(contest.subtitle || "Register for this live medical knowledge contest.", "Register for this OmpathStudy live medical knowledge contest.");
-      ogImage = contest.share_image_url || OG_FALLBACK_IMAGE;
+      ogImage = contest.share_image_url || cardUrl(contest.title, "", "Contest");
       keywords = `OmpathStudy, medical contest Kenya, ${contest.title}, live exam competition`;
       type = "website";
     } else if (section === "topic" && param) {

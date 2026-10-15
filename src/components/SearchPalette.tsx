@@ -56,7 +56,7 @@ export default function SearchPalette() {
     const t = setTimeout(() => {
       setQa({ q: query, text: "", busy: true });
       streamQuickAnswer(query, hitsRef.current, ctl.signal, (text) => setQa({ q: query, text, busy: true })).then((text) => setQa({ q: query, text, busy: false })).catch((e) => { if ((e as Error).name !== "AbortError") setQa(null); });
-    }, 900);
+    }, 2500);
     return () => { clearTimeout(t); ctl.abort(); };
   }, [q, open, searched, loading, hasPass]);
 

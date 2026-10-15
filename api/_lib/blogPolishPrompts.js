@@ -29,7 +29,7 @@ Write the page in this order:
 2. A line starting **In short:** with the whole idea in one or two sentences, or a **The reasoning chain:** line for clinical topics.
 3. The body in numbered "## 1. Heading", "## 2. Heading" sections (3 to 9 of them, plain headings). Use "### " only for real sub-sections. Paragraphs of at most three sentences. Bullet lists for lists and sequences. A table only where the note compares things (keep the table's facts).
 4. Bold ("**") only the few terms a student must remember, never more than two in a paragraph.
-5. Finish with "## Practice questions": 4 to 6 multiple-choice questions made ONLY from facts that are in the note, in exactly this form:
+5. Finish with "## Practice questions": 5 to 7 multiple-choice questions made ONLY from facts that are in the note, written the way a clinical-year examiner would ask them. Plan first: pick the points of the note an examiner is most likely to test, then make at least half of the questions short clinical scenarios (a patient lying in bed with these findings) that ask what to do next, which finding separates two conditions, or why one choice is avoided. Do not ask plain definitions. Use exactly this form:
 
 ### Question 1
 Question text

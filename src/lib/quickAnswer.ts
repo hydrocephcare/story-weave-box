@@ -13,7 +13,7 @@ export const askable = (q: string) => q.trim().length >= 4 && !/^[A-Za-z]{3,4}\s
 /** Streams a short answer (three bullets); `onText` gets the text so far. Throws when nothing came back. */
 async function once(q: string, sources: { title: string; subtitle?: string; snippet?: string }[], signal: AbortSignal, onText: (t: string) => void): Promise<string> {
   const query = q.trim();
-  const body = { question: `Explain "${query}" for a medical student in exactly three short bullet points, about 60 words in all. Start with what it is. Use the site's notes first.`, history: [], sources: sources.slice(0, 5).map((h) => ({ kind: "site", title: h.title, subtitle: h.subtitle, snippet: (h.snippet ?? "").slice(0, 900) })) };
+  const body = { question: `Explain "${query}" for a medical student in exactly three short bullet points, about 60 words in all. Start with what it is. Use the site's notes first. If it is not a medical or health-science term, reply with only the word NOT_MEDICAL.`, history: [], sources: sources.slice(0, 5).map((h) => ({ kind: "site", title: h.title, subtitle: h.subtitle, snippet: (h.snippet ?? "").slice(0, 900) })) };
   const r = await fetch("/api/ai-chat", { method: "POST", signal, headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
   if (!r.ok || !r.body) throw new Error("off");
   const reader = r.body.getReader(); const dec = new TextDecoder();
@@ -26,10 +26,10 @@ async function once(q: string, sources: { title: string; subtitle?: string; snip
     for (const l of lines) {
       const d = l.trim(); if (!d.startsWith("data:")) continue;
       const p = d.slice(5).trim(); if (!p || p === "[DONE]") continue;
-      try { const piece = JSON.parse(p)?.choices?.[0]?.delta?.content; if (piece) { out += piece; onText(out); } } catch { /* partial */ }
+      try { const piece = JSON.parse(p)?.choices?.[0]?.delta?.content; if (piece) { out += piece; if (!"NOT_MEDICAL".startsWith(out.trim().toUpperCase().slice(0, 11))) onText(out); } } catch { /* partial */ }
     }
   }
-  if (!out.trim()) throw new Error("empty");
+  if (!out.trim() || /^NOT_MEDICAL/i.test(out.trim())) throw new Error("not medical");
   spend();
   try { sessionStorage.setItem(`ompath_qa2_${query.toLowerCase()}`, out); } catch { /* ignore */ }
   return out;
@@ -38,7 +38,7 @@ async function once(q: string, sources: { title: string; subtitle?: string; snip
 /** The server tries every key in turn; if the whole request still fails, it is asked once more before giving up. */
 export async function streamQuickAnswer(q: string, sources: { title: string; subtitle?: string; snippet?: string }[], signal: AbortSignal, onText: (t: string) => void): Promise<string> {
   try { return await once(q, sources, signal, onText); } catch (e) {
-    if ((e as Error).name === "AbortError") throw e;
+    if ((e as Error).name === "AbortError" || (e as Error).message === "not medical") throw e;
     await new Promise((r) => setTimeout(r, 1200));
     if (signal.aborted) throw new DOMException("aborted", "AbortError");
     return once(q, sources, signal, onText);
