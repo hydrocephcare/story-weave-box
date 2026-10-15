@@ -5,6 +5,7 @@ import { CONTEST_RULES, FLAGSHIP_CONTEST } from "@/lib/contest";
 import { updateMetaTags } from "@/lib/seo";
 import { loadContestLeaderboard, loadContestPlatform, type ContestRecord, type ContestUniversity, type ContestUniversityResult } from "@/lib/contest-store";
 import ContestCountdown from "@/components/ContestCountdown";
+import ContestPoster from "@/components/ContestPoster";
 
 const STAGE: Record<string, { label: string; tone: string }> = {
   live: { label: "Live now", tone: "bg-red-400 text-[#071315]" },
@@ -71,6 +72,7 @@ export default function Contests() {
             <Link to={`/contests/${slug}/leaderboard`} className="rounded-lg border border-white/15 px-5 py-3 text-sm font-bold text-white/80 transition hover:bg-white/5">Leaderboard</Link>
             <a href={`https://wa.me/?text=${encodeURIComponent(shareText)}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-4 py-3 text-sm font-bold text-white/80 hover:bg-white/5"><MessageCircle className="h-4 w-4" /> Share</a>
             <button type="button" onClick={copy} className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-4 py-3 text-sm font-bold text-white/80 hover:bg-white/5">{copied ? <Check className="h-4 w-4 text-teal-300" /> : <Copy className="h-4 w-4" />} {copied ? "Copied" : "Copy link"}</button>
+            {featured && <ContestPoster contest={featured} universities={universities} />}
           </div>
         </div>
       </section>
