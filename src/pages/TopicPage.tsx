@@ -512,7 +512,10 @@ export default function TopicPage() {
   const manage = aiSections.find((s) => /manage|treat/i.test(s.h));
   const seekAfter = aiSections.length ? Math.max(0, manage ? aiSections.indexOf(manage) : aiSections.length - 1) : -1;
   const hasStudy = Boolean(topic && (topic.sec?.length || topic.src.length || topic.sets.length || topic.imgs.length || topic.qs.length || topic.es.length));
-  const toc = view === "deep" && deep ? [...deep.sections.map((x) => ({ id: `deep-${anchor(x.h)}`, t: x.h })), ...(deep.facts?.length ? [{ id: "deep-memorise", t: "Numbers to memorise" }] : []), ...(deep.vivas?.length || deep.exam.length ? [{ id: "deep-exam", t: "Viva questions" }] : []), ...(deep.mcqs?.length ? [{ id: "deep-mcqs", t: "MCQs" }] : []), ...(deep.cases?.length ? [{ id: "deep-cases", t: "Cases" }] : [])] : [
+  const toc = view === "deep" && deep ? (canRead
+    ? [...deep.sections.map((x) => ({ id: `deep-${anchor(x.h)}`, t: x.h })), ...(deep.facts?.length ? [{ id: "deep-memorise", t: "Numbers to memorise" }] : []), ...(deep.vivas?.length || deep.exam.length ? [{ id: "deep-exam", t: "Viva questions" }] : []), ...(deep.mcqs?.length ? [{ id: "deep-mcqs", t: "MCQs" }] : []), ...(deep.cases?.length ? [{ id: "deep-cases", t: "Cases" }] : [])]
+    : [...deep.sections.slice(0, 1).map((x) => ({ id: `deep-${anchor(x.h)}`, t: x.h })), { id: "deep-locked", t: "Pro: the rest" }]
+  ) : [
     ...(intro.length ? [{ id: "overview", t: "Overview" }] : []),
     ...aiSections.map((s) => ({ id: anchor(s.h), t: s.h })),
     ...wikiSections.map((w) => ({ id: anchor(w.h), t: w.h })),
