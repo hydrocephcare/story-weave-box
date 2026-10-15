@@ -5,6 +5,7 @@ import { Check, ChevronDown, Circle } from "lucide-react";
 import { IMED, isPublished, linksFor } from "@/data/imed";
 import { doneTopics, systemProgress, toggleTopic } from "@/lib/imedProgress";
 import { useAuth } from "@/hooks/useAuth";
+import { completeReview, daysUntil, dueReviews, getExamDate, perDay, setExamDate, unfinished } from "@/lib/noteProgress";
 
 /** /imed: Year 4 Internal Medicine, one folder per system. A tick means the topic is finished: ticked by you, or automatically after you read its note properly. */
 export default function Imed() {
@@ -12,6 +13,14 @@ export default function Imed() {
   const [open, setOpen] = useState<string | null>("respiratory");
   const [tick, setTick] = useState(0);
   const done = useMemo(() => doneTopics(user?.id), [user?.id, tick]); // eslint-disable-line react-hooks/exhaustive-deps
+  const [exam, setExam] = useState(() => getExamDate(user?.id));
+  const [q, setQ] = useState("");
+  const [onlyLeft, setOnlyLeft] = useState(false);
+  const place = useMemo(() => unfinished(user?.id), [user?.id, tick]); // eslint-disable-line react-hooks/exhaustive-deps
+  const due = useMemo(() => dueReviews(user?.id), [user?.id, tick]); // eslint-disable-line react-hooks/exhaustive-deps
+  const left = IMED.flatMap((sys) => sys.topics).filter((t) => isPublished(t) && !done.has(t.id));
+  const rate = perDay(left.length, exam);
+  const countdown = daysUntil(exam);
   const total = IMED.reduce((a, s) => a + s.topics.length, 0);
   const live = IMED.reduce((a, s) => a + s.topics.filter(isPublished).length, 0);
 
@@ -28,10 +37,41 @@ export default function Imed() {
 
       <Link to="/notes/year-4-imed-revision-roadmap" className="mt-5 inline-block font-bold text-primary hover:underline">Exam revision roadmap for Year 4 internal medicine →</Link>
 
-      <div className="mt-8 space-y-3">
+      <section className="mt-6 space-y-3" aria-label="Your study plan">
+        <div className="rounded-2xl border border-border bg-card p-4">
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">Exam planner</p>
+          <div className="mt-2 flex flex-wrap items-center gap-3">
+            <label className="text-sm font-semibold" htmlFor="imed-exam">My exam is on</label>
+            <input id="imed-exam" type="date" value={exam} onChange={(e) => { setExam(e.target.value); setExamDate(user?.id, e.target.value); }} className="h-10 rounded-lg border border-border bg-background px-3 text-sm" />
+          </div>
+          {rate ? <p className="mt-2 text-[15px]"><b>{countdown} days</b> to go and <b>{left.length}</b> topics left: read <b>{rate} topic{rate === 1 ? "" : "s"} a day</b>. Today: {left.slice(0, rate).map((t, i) => <span key={t.id}>{i ? ", " : ""}{t.note ? <Link to={`/notes/${t.note}`} className="font-semibold text-primary hover:underline">{t.name}</Link> : t.name}</span>)}.</p> : <p className="mt-2 text-sm text-muted-foreground">Pick your exam date and the plan works out how many topics to read each day, and which ones come next.</p>}
+        </div>
+        {place.length > 0 && (
+          <div className="rounded-2xl border border-border bg-card p-4">
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">Continue reading</p>
+            <ul className="mt-2 space-y-1.5">{place.map((p) => <li key={p.slug}><Link to={`/notes/${p.slug}`} className="flex items-center justify-between gap-3 text-[15px] font-semibold hover:text-primary"><span className="min-w-0 truncate">{p.title}</span><span className="shrink-0 text-xs font-bold text-muted-foreground">{p.progress}%</span></Link></li>)}</ul>
+          </div>
+        )}
+        {due.length > 0 && (
+          <div className="rounded-2xl border border-amber-500/40 bg-amber-500/5 p-4">
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-amber-700 dark:text-amber-300">Due for a second look</p>
+            <p className="text-sm text-muted-foreground">Notes you finished, coming back after 3, 7 and 21 days so they stay.</p>
+            <ul className="mt-2 space-y-2">{due.slice(0, 5).map((r) => <li key={r.slug} className="flex flex-wrap items-center justify-between gap-2"><Link to={`/notes/${r.slug}`} className="font-semibold hover:text-primary">{r.title}</Link><button type="button" onClick={() => { completeReview(user?.id, r.slug); setTick((x) => x + 1); }} className="rounded-full border border-border px-3 py-1 text-xs font-bold hover:border-primary hover:text-primary">I have reviewed it</button></li>)}</ul>
+          </div>
+        )}
+        <div className="flex flex-wrap items-center gap-3">
+          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Find a topic, e.g. meningitis" aria-label="Find a topic" className="h-11 min-w-0 flex-1 rounded-lg border border-border bg-background px-3 text-sm" />
+          <label className="flex items-center gap-2 text-sm font-semibold"><input type="checkbox" checked={onlyLeft} onChange={(e) => setOnlyLeft(e.target.checked)} /> Only topics I have not finished</label>
+        </div>
+      </section>
+
+      <div className="mt-6 space-y-3">
         {IMED.map((s) => {
           const p = systemProgress(user?.id, s.topics);
-          const isOpen = open === s.id;
+          const filtering = Boolean(q.trim()) || onlyLeft;
+          const shown = s.topics.filter((t) => (!q.trim() || t.name.toLowerCase().includes(q.trim().toLowerCase())) && (!onlyLeft || !done.has(t.id)));
+          if (filtering && shown.length === 0) return null;
+          const isOpen = filtering || open === s.id;
           return (
             <section key={s.id} className="rounded-2xl border border-border bg-card">
               <button type="button" onClick={() => setOpen(isOpen ? null : s.id)} aria-expanded={isOpen} className="flex w-full items-center gap-3 px-4 py-4 text-left sm:px-5">
@@ -44,7 +84,7 @@ export default function Imed() {
               </button>
               {isOpen && (
                 <ul className="divide-y divide-border border-t border-border">
-                  {s.topics.map((t) => {
+                  {(filtering ? shown : s.topics).map((t) => {
                     const ready = isPublished(t);
                     const finished = done.has(t.id);
                     const n = linksFor(t.id).length;

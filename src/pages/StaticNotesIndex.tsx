@@ -8,6 +8,7 @@ import { useMyYear } from "@/hooks/useMyYear";
 import { useAuth } from "@/hooks/useAuth";
 import { allReads } from "@/lib/readLog";
 import { IMED, isPublished } from "@/data/imed";
+import { unfinished } from "@/lib/noteProgress";
 import { getUnitsForYear, unitPath, type Unit } from "@/lib/academic";
 
 /** Past papers are not study notes: they are on /papers. */
@@ -44,6 +45,7 @@ export default function StaticNotesIndex() {
   const pick = (u: string | null) => { setUnit(u); const p = new URLSearchParams(params); p.set("year", String(year)); if (u) p.set("unit", u); else p.delete("unit"); setParams(p, { replace: true }); };
   const switchYear = (y: number) => { setYear(y); setUnit(null); setQ(""); setParams({ year: String(y) }, { replace: true }); };
 
+  const resume = useMemo(() => unfinished(user?.id), [user?.id]);
   const imedWritten = IMED.reduce((a, s) => a + s.topics.filter(isPublished).length, 0);
   const imedTotal = IMED.reduce((a, s) => a + s.topics.length, 0);
 
@@ -83,6 +85,13 @@ export default function StaticNotesIndex() {
       <h1 className="mt-3 font-serif text-3xl font-bold text-foreground sm:text-4xl">Study notes</h1>
       <p className="mt-2 text-sm text-muted-foreground">{NOTES.length} notes, each with a contents list and practice questions. Past papers are on <Link to="/papers" className="font-bold text-primary hover:underline">their own page</Link>.</p>
       <ContentCredit />
+
+      {resume.length > 0 && (
+        <section className="mt-5 rounded-2xl border border-primary/30 bg-primary/5 p-4" aria-label="Continue reading">
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">Continue where you stopped</p>
+          <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">{resume.map((p) => <li key={p.slug}><Link to={`/notes/${p.slug}`} className="flex items-center justify-between gap-3 rounded-lg bg-background px-3 py-2 text-sm font-semibold hover:text-primary"><span className="min-w-0 truncate">{p.title}</span><span className="shrink-0 text-xs font-bold text-muted-foreground">{p.progress}%</span></Link></li>)}</ul>
+        </section>
+      )}
 
       <div className="mt-5 flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Year">
         {YEARS.map((y) => (
