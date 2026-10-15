@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useReadLog } from "@/lib/readLog";
 import ImedLinks from "@/components/ImedLinks";
+import NoteNavCards from "@/components/NoteNavCards";
+import NoteComments from "@/components/NoteComments";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { savePlace, scheduleReview } from "@/lib/noteProgress";
 import { openAI } from "@/lib/aiEvents";
@@ -13,7 +15,7 @@ import PageSummary from "@/components/PageSummary";
 import OutlineLine from "@/components/OutlineLine";
 import HeroAurora from "@/components/HeroAurora";
 import { Link, Navigate, useLocation, useNavigate, useNavigationType, useParams } from "react-router-dom";
-import { Printer, ScanLine } from "lucide-react";
+import { ArrowUp, Check, Printer, ScanLine, Sparkles } from "lucide-react";
 import DriveFileViewer, { type DriveFile } from "@/components/DriveFileViewer";
 import { startDownload } from "@/lib/driveDownload";
 import PaperBody from "@/components/PaperBody";
@@ -193,19 +195,36 @@ function StaticNoteView() {
       <div className={railOn ? "lg:grid lg:grid-cols-[13.5rem_minmax(0,52rem)] lg:gap-12" : ""}>
         {railOn && parsed && (
           <aside className="hidden lg:block print:hidden" aria-label="On this page">
-            <nav className="sticky top-24 max-h-[calc(100dvh-7rem)] overflow-y-auto border-l border-border text-[15px]">
-              <p className="pl-4 text-xs font-bold uppercase tracking-wider text-muted-foreground">On this page</p>
-              <ol className="mt-2">
-                {parsed.headings.map((h) => <li key={h.id}><a href={`#${h.id}`} aria-current={spy.active === h.id ? "location" : undefined} className={`-ml-px block border-l-2 py-1.5 pl-4 leading-snug transition-colors hover:border-primary hover:text-primary ${spy.active === h.id ? "border-primary font-bold text-primary" : "border-transparent text-muted-foreground"}`}>{h.text}</a></li>)}
+            <nav className="sticky top-24 max-h-[calc(100dvh-7rem)] overflow-y-auto rounded-2xl border border-border bg-card/70 p-4 shadow-sm">
+              <div className="flex items-center gap-3">
+                <div className="relative h-11 w-11 shrink-0" role="progressbar" aria-valuenow={spy.progress} aria-valuemin={0} aria-valuemax={100} aria-label="How far down this note you are">
+                  <svg viewBox="0 0 36 36" className="h-11 w-11 -rotate-90"><circle cx="18" cy="18" r="15.5" fill="none" strokeWidth="3" className="stroke-muted" /><circle cx="18" cy="18" r="15.5" fill="none" strokeWidth="3" strokeLinecap="round" className="stroke-primary transition-[stroke-dasharray] duration-300" strokeDasharray={`${(spy.progress / 100) * 97.4} 97.4`} /></svg>
+                  <span className="absolute inset-0 flex items-center justify-center text-[11px] font-extrabold">{finished ? <Check className="h-4 w-4 text-emerald-600" aria-hidden /> : `${spy.progress}%`}</span>
+                </div>
+                <div className="min-w-0"><p className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">On this page</p><p className="truncate text-sm font-bold">{finished ? "Finished" : parsed.headings.findIndex((h) => h.id === spy.active) >= 0 ? `Section ${parsed.headings.findIndex((h) => h.id === spy.active) + 1} of ${parsed.headings.length}` : "Start reading"}</p></div>
+              </div>
+              <ol className="mt-4 space-y-0.5 text-[14px]">
+                {parsed.headings.map((h, i) => {
+                  const here = spy.active === h.id;
+                  const passed = parsed.headings.findIndex((x) => x.id === spy.active) > i;
+                  return (
+                    <li key={h.id}>
+                      <a href={`#${h.id}`} aria-current={here ? "location" : undefined} className={`flex items-start gap-2 rounded-lg px-2 py-1.5 leading-snug transition-colors ${here ? "bg-primary/10 font-bold text-primary" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}>
+                        <span className={`mt-[3px] flex h-4 w-4 shrink-0 items-center justify-center rounded-full text-[9px] ${here ? "bg-primary text-primary-foreground" : passed ? "bg-emerald-500/15 text-emerald-600" : "border border-border"}`}>{passed ? <Check className="h-2.5 w-2.5" aria-hidden /> : here ? "•" : ""}</span>
+                        <span>{h.text.replace(/^\d+\.\s*/, "")}</span>
+                      </a>
+                    </li>
+                  );
+                })}
               </ol>
-              <div className="mt-5 pl-4 pr-1">
-                <div className="flex items-center justify-between text-xs font-bold text-muted-foreground"><span>Reading</span><span>{spy.progress}%</span></div>
-                <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuenow={spy.progress} aria-valuemin={0} aria-valuemax={100} aria-label="How far down this note you are"><div className="h-full rounded-full bg-primary transition-[width] duration-200" style={{ width: `${spy.progress}%` }} /></div>
-                <div className="flex items-center justify-between gap-2" role="group" aria-label="Text size"><span className="text-xs font-bold text-muted-foreground">Text size</span><span className="flex gap-1"><button type="button" onClick={() => setFontStep((n) => Math.max(-2, n - 1))} className="h-8 w-8 rounded-md border border-border text-sm font-bold hover:border-primary hover:text-primary" aria-label="Smaller text">A-</button><button type="button" onClick={() => setFontStep((n) => Math.min(4, n + 1))} className="h-8 w-8 rounded-md border border-border text-sm font-bold hover:border-primary hover:text-primary" aria-label="Larger text">A+</button></span></div>
-                <button type="button" onClick={toggleFinished} aria-pressed={finished} className={`mt-4 flex w-full items-center justify-center gap-2 rounded-lg border px-3 py-2 text-sm font-bold transition-colors ${finished ? "border-emerald-600 bg-emerald-600 text-white" : "border-border hover:border-primary hover:text-primary"}`}>{finished ? "Finished ✓" : "Mark as finished"}</button>
-                <button type="button" onClick={() => openAI(`Quiz me on ${note.title}`)} className="mt-2 flex w-full items-center justify-center gap-2 rounded-lg border border-border px-3 py-2 text-sm font-bold hover:border-primary hover:text-primary">Ask Ompath AI</button>
-                {nextNote && <Link to={`/notes/${nextNote.slug}`} className="mt-2 block rounded-lg bg-primary/10 px-3 py-2 text-sm font-bold text-primary hover:bg-primary/15">Next: {nextNote.title} →</Link>}
-                <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="mt-2 block w-full px-1 text-left text-xs font-bold text-muted-foreground hover:text-primary">↑ Back to top</button>
+              <div className="mt-4 grid grid-cols-2 gap-2 border-t border-border pt-4 text-xs font-bold">
+                <button type="button" onClick={toggleFinished} aria-pressed={finished} className={`flex items-center justify-center gap-1.5 rounded-lg border px-2 py-2 transition-colors ${finished ? "border-emerald-600 bg-emerald-600 text-white" : "border-border hover:border-primary hover:text-primary"}`}><Check className="h-3.5 w-3.5" aria-hidden /> {finished ? "Finished" : "Finish"}</button>
+                <button type="button" onClick={() => openAI(`Quiz me on ${note.title}`)} className="flex items-center justify-center gap-1.5 rounded-lg border border-border px-2 py-2 hover:border-primary hover:text-primary"><Sparkles className="h-3.5 w-3.5" aria-hidden /> Ask AI</button>
+                <div className="flex overflow-hidden rounded-lg border border-border" role="group" aria-label="Text size">
+                  <button type="button" onClick={() => setFontStep((n) => Math.max(-2, n - 1))} className="flex-1 px-2 py-2 hover:bg-muted" aria-label="Smaller text">A-</button>
+                  <button type="button" onClick={() => setFontStep((n) => Math.min(4, n + 1))} className="flex-1 border-l border-border px-2 py-2 hover:bg-muted" aria-label="Larger text">A+</button>
+                </div>
+                <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center justify-center gap-1.5 rounded-lg border border-border px-2 py-2 hover:border-primary hover:text-primary"><ArrowUp className="h-3.5 w-3.5" aria-hidden /> Top</button>
               </div>
             </nav>
           </aside>
@@ -258,6 +277,8 @@ function StaticNoteView() {
             <article style={note.paper ? undefined : { fontSize: `${1 + fontStep * 0.0625}em` }} className={`note-body mt-6 ${note.paper ? "" : "note-topic"}`} onClick={onBodyClick} onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && pickOption(e.target as HTMLElement)) e.preventDefault(); }} dangerouslySetInnerHTML={{ __html: linked.html }} />
           )}
           {!note.paper && <ImedLinks slug={note.slug} />}
+          {!note.paper && <NoteNavCards slug={note.slug} />}
+          {!note.paper && <NoteComments slug={note.slug} title={note.title} />}
 
           <div className="print:hidden"><ContentCredit /></div>
 
