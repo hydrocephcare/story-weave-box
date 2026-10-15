@@ -26,3 +26,5 @@ export function installProblemWatch() {
 }
 
 export const recentProblems = (): Problem[] => seen.slice();
+/** Forget what was shown, so the red number on the Assistant button goes away until something new fails. */
+export const clearProblems = () => { seen.length = 0; };

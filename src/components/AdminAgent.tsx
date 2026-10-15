@@ -5,7 +5,7 @@ import { runSiteHealth } from "@/lib/adminHealth";
 import { runBriefing } from "@/lib/adminBriefing";
 import { downloadDataUrl, makeStatusPoster, type PosterSpec } from "@/lib/statusPoster";
 import { supabase } from "@/integrations/supabase/client";
-import { recentProblems } from "@/lib/adminProblems";
+import { clearProblems, recentProblems, type Problem } from "@/lib/adminProblems";
 import { agentContext, askAgent, describe, loadAgentWorld, runAction, runReadOnly, type ActionResult, type AgentAction, type AgentWorld, type PlanItem } from "@/lib/adminAgent";
 import { deleteChat, listChats, loadChat, saveChat, type ChatMeta } from "@/lib/adminChats";
 import { draftArticle, draftCards, draftMcqs, draftNote, importMcqs, publishDraft, reviseNote, seoChecks, thumbFor, type Draft, type NoteDraft } from "@/lib/adminWriter";
@@ -35,7 +35,7 @@ const posterFor = (d: Draft, url: string, live: boolean): PosterSpec | undefined
 };
 const plain = (md: string) => md.replace(/^#+\s*/gm, "").replace(/[*_`>|]/g, "").replace(/\n{2,}/g, "\n");
 const when = (iso: string) => new Intl.DateTimeFormat("en-KE", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit", timeZone: "Africa/Nairobi" }).format(new Date(iso));
-const btn = "inline-flex min-h-10 items-center justify-center gap-1 rounded-lg px-3 py-2 text-xs font-semibold disabled:opacity-40";
+const btn = "inline-flex min-h-11 items-center justify-center gap-1.5 rounded-xl px-3.5 py-2 text-sm font-semibold disabled:opacity-40";
 
 /** Admin assistant. Questions are answered at once; changes show a preview or confirm card first (or run by themselves when you switch Auto-run on). Every task is saved and remembered. */
 export default function AdminAgent({ compact = false }: { compact?: boolean }) {
@@ -54,6 +54,8 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
   const [attachments, setAttachments] = useState<string[]>([]);
   const [progress, setProgress] = useState(0);
   const [examQuery, setExamQuery] = useState("");
+  const [problems, setProblems] = useState<Problem[]>([]);
+  useEffect(() => { const read = () => setProblems(recentProblems()); read(); const t = window.setInterval(read, 2000); return () => window.clearInterval(t); }, []);
   const [listening, setListening] = useState(false);
   const recognition = useRef<any>(null);
   const [revising, setRevising] = useState<number | null>(null);
@@ -267,14 +269,24 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
           {where === "browser" && <p className="border-t bg-amber-500/10 p-2 text-xs">History is saved in this browser only. Run <strong>RUN-THESE.sql</strong> to keep it on your account.</p>}
         </div>
       )}
-      {world?.memory.length ? <p className="mt-1 text-[11px] text-muted-foreground">I remember {world.memory.length} thing{world.memory.length === 1 ? "" : "s"} you told me.</p> : null}
+      {problems.length > 0 && (
+        <div className="mt-3 shrink-0 rounded-2xl border border-red-500/40 bg-red-500/10 p-3" role="alert">
+          <p className="flex items-center gap-2 text-sm font-bold"><AlertTriangle className="h-4 w-4 text-red-500" /> {problems.length} thing{problems.length === 1 ? "" : "s"} went wrong a moment ago</p>
+          <ul className="mt-2 max-h-28 space-y-1 overflow-y-auto text-[13px] leading-snug text-muted-foreground">{[...new Map(problems.map((p) => [p.what, p])).values()].slice(-5).map((p) => <li key={p.what} className="break-words">• {p.what}</li>)}</ul>
+          <div className="mt-2 flex gap-2">
+            <button type="button" disabled={busy || !world} onClick={() => void send("Explain the last error and fix it")} className={`${btn} flex-1 bg-primary text-primary-foreground`}><Wand2 className="h-4 w-4" /> Explain and fix</button>
+            <button type="button" onClick={() => { clearProblems(); setProblems([]); }} className={`${btn} border`}>Dismiss</button>
+          </div>
+        </div>
+      )}
+      {world?.memory.length ? <p className="mt-1 text-[12px] text-muted-foreground">I remember {world.memory.length} thing{world.memory.length === 1 ? "" : "s"} you told me.</p> : null}
       {!feed.length && <p className="mt-1 text-sm text-muted-foreground">Ask in plain words, or paste notes. {world?.autorun ? "Auto-run is on: I do safe steps myself and show you the result with an Undo." : "Before I change or publish anything I show you a preview and wait for your Yes."}</p>}
 
       {!feed.length && <div className="mt-3 flex flex-wrap gap-2">{IDEAS.map((i) => <button key={i} type="button" onClick={() => (i.startsWith("I will paste") ? setText("Polish these notes and publish them, then make 10 MCQs and flashcards:\n\n") : void send(i))} disabled={!world || busy} className="min-h-9 rounded-full border px-3 py-1.5 text-xs font-semibold hover:bg-muted disabled:opacity-40">{i}</button>)}</div>}
 
       <div className={`mt-3 space-y-2 overflow-y-auto overscroll-contain ${compact ? "min-h-0 flex-1" : "max-h-[32rem]"}`}>
         {feed.map((it, i) => {
-          if (it.kind === "text") return <p key={i} className={`whitespace-pre-line break-words rounded-xl px-3 py-2 text-sm ${it.role === "user" ? "ml-6 bg-primary/10" : "mr-4 bg-muted"}`}>{it.content}</p>;
+          if (it.kind === "text") return <p key={i} className={`whitespace-pre-line break-words rounded-2xl px-4 py-3 text-[15px] leading-relaxed ${it.role === "user" ? "ml-6 bg-primary/10" : "mr-4 bg-muted"}`}>{it.content}</p>;
           if (it.kind === "ask") return (
             <div key={i} className="mr-2 rounded-xl border border-primary/30 bg-card p-3">
               <p className="flex items-start gap-2 text-sm font-semibold"><ListChecks className="mt-0.5 h-4 w-4 shrink-0 text-primary" /> {it.question}</p>
@@ -284,24 +296,27 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
           if (it.kind === "result") {
             const r = it.result;
             return (
-              <div key={i} className={`overflow-hidden rounded-xl border text-sm ${r.partial ? "border-amber-500/50 bg-amber-500/10" : "border-primary/30 bg-primary/10"}`}>
+              <div key={i} className={`overflow-hidden rounded-2xl border text-[15px] leading-relaxed shadow-sm ${r.partial ? "border-amber-500/50 bg-amber-500/10" : "border-primary/30 bg-primary/10"}`}>
                 {r.thumb && <img src={r.thumb} alt="" loading="lazy" className="aspect-[40/21] w-full object-cover" />}
-                <div className="px-3 py-2">
+                <div className="px-4 py-3">
                   <p className="whitespace-pre-line break-words">{r.partial ? <AlertTriangle className="mr-1 inline h-4 w-4 text-amber-600" /> : <Check className="mr-1 inline h-4 w-4 text-primary" />}{r.text}</p>
                   {r.briefing && (
                     <div className="mt-2 space-y-2">
-                      {r.briefing.good.length > 0 && <div className="rounded-lg border border-emerald-500/40 bg-emerald-500/10 p-2"><p className="text-xs font-bold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">Good news</p><ul className="mt-1 space-y-1 text-xs">{r.briefing.good.map((l, li) => <li key={li}>{l}</li>)}</ul></div>}
-                      {r.briefing.watch.length > 0 && <div className="rounded-lg border border-amber-500/40 bg-amber-500/10 p-2"><p className="text-xs font-bold uppercase tracking-wide text-amber-800 dark:text-amber-200">Needs a look</p><ul className="mt-1 space-y-1 text-xs">{r.briefing.watch.map((l, li) => <li key={li}>{l}</li>)}</ul></div>}
+                      {r.briefing.good.length > 0 && <div className="rounded-xl border border-emerald-500/40 bg-emerald-500/10 p-3"><p className="text-[12px] font-bold uppercase tracking-wide text-emerald-700 dark:text-emerald-300">Good news</p><ul className="mt-1.5 space-y-1.5 text-[14px] leading-snug">{r.briefing.good.map((l, li) => <li key={li}>{l}</li>)}</ul></div>}
+                      {r.briefing.watch.length > 0 && <div className="rounded-xl border border-amber-500/40 bg-amber-500/10 p-3"><p className="text-[12px] font-bold uppercase tracking-wide text-amber-800 dark:text-amber-200">Needs a look</p><ul className="mt-1.5 space-y-1.5 text-[14px] leading-snug">{r.briefing.watch.map((l, li) => <li key={li}>{l}</li>)}</ul></div>}
                       <div className="flex flex-wrap gap-2">{r.briefing.suggestions.map((s) => <button key={s.label} type="button" disabled={busy || !world} onClick={() => void send(s.prompt)} className={`${btn} border bg-background hover:bg-muted`}><Wand2 className="h-3.5 w-3.5" /> {s.label}</button>)}</div>
                     </div>
                   )}
                   {r.health && (
                     <div className="mt-2 space-y-2">
-                      <div className="flex items-center gap-3"><div className="relative h-2 flex-1 overflow-hidden rounded-full bg-muted"><div className={`h-full ${r.health.score >= 80 ? "bg-emerald-500" : r.health.score >= 60 ? "bg-amber-500" : "bg-red-500"}`} style={{ width: `${r.health.score}%` }} /></div><span className="text-xs font-bold">{r.health.score}%</span></div>
+                      <div className="flex items-center gap-4 rounded-xl bg-muted/60 p-3">
+                        <div className="relative h-20 w-20 shrink-0"><svg viewBox="0 0 36 36" className="h-20 w-20 -rotate-90"><circle cx="18" cy="18" r="15.5" fill="none" strokeWidth="3.4" className="stroke-muted" /><circle cx="18" cy="18" r="15.5" fill="none" strokeWidth="3.4" strokeLinecap="round" className={r.health.score >= 80 ? "stroke-emerald-500" : r.health.score >= 60 ? "stroke-amber-500" : "stroke-red-500"} strokeDasharray={97.4} strokeDashoffset={97.4 * (1 - r.health.score / 100)} /></svg><span className="absolute inset-0 flex items-center justify-center text-xl font-black">{r.health.score}</span></div>
+                        <div><p className="font-serif text-lg font-bold leading-tight">Site health</p><p className="text-sm text-muted-foreground">{r.health.score >= 80 ? "In good shape." : r.health.score >= 60 ? "A few things to tidy." : "Needs attention."}</p></div>
+                      </div>
                       {r.health.sections.map((sec) => (
-                        <div key={sec.title} className={`rounded-lg border p-2 ${STATUS_STYLE[sec.status]}`}>
-                          <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide"><span className={`h-2 w-2 rounded-full ${STATUS_DOT[sec.status]}`} />{sec.title}</p>
-                          <ul className="mt-1 space-y-0.5 text-xs">{sec.lines.map((l, li) => <li key={li}>{l}</li>)}</ul>
+                        <div key={sec.title} className={`rounded-xl border p-3 ${STATUS_STYLE[sec.status]}`}>
+                          <p className="flex items-center gap-2 text-[12px] font-bold uppercase tracking-wide"><span className={`h-2.5 w-2.5 rounded-full ${STATUS_DOT[sec.status]}`} />{sec.title}</p>
+                          <ul className="mt-1.5 space-y-1 text-[14px] leading-snug">{sec.lines.map((l, li) => <li key={li}>{l}</li>)}</ul>
                         </div>
                       ))}
                       {r.fixes?.length ? <button type="button" disabled={busy || !world} onClick={() => world && setPlan(describe(r.fixes as AgentAction[], world))} className={`${btn} w-full bg-primary text-primary-foreground`}><Wand2 className="h-4 w-4" /> Fix everything I can ({r.fixes.length})</button> : null}
@@ -310,8 +325,8 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
                   {(r.links?.length || r.undo) && (
                     <div className="mt-2 flex flex-wrap gap-2">
                       {r.links?.map((l) => l.external
-                        ? <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" className={`${btn} border bg-background hover:bg-muted`}>{l.label.includes("WhatsApp") ? <MessageCircle className="h-3.5 w-3.5" /> : <ExternalLink className="h-3.5 w-3.5" />} {l.label}</a>
-                        : <Link key={l.label} to={l.href} className={`${btn} border bg-background hover:bg-muted`}>{l.label} →</Link>)}
+                        ? <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" className={`${btn} border bg-background hover:bg-muted`}>{l.label.includes("WhatsApp") ? <MessageCircle className="h-4 w-4" /> : <ExternalLink className="h-4 w-4" />} {l.label}</a>
+                        : <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" className={`${btn} border bg-background hover:bg-muted`}><ExternalLink className="h-4 w-4" /> {l.label}</a>)}
                       {r.poster && <button type="button" onClick={() => void makeStatusPoster(r.poster as PosterSpec).then((u) => downloadDataUrl(u, "ompath-status.png"))} className={`${btn} border bg-background hover:bg-muted`}>📱 Status image</button>}
                       {r.undo && world && <button type="button" disabled={busy} onClick={() => setPlan(describe([r.undo as AgentAction], world))} className={`${btn} border border-destructive/40 bg-background text-destructive hover:bg-destructive/10`}><Undo2 className="h-3.5 w-3.5" /> Undo / remove</button>}
                     </div>
@@ -324,7 +339,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
           return (
             <div key={i} className={`overflow-hidden rounded-xl border bg-card ${gone ? "opacity-70" : "border-primary/40"}`}>
               {isNote(d) && <img src={thumbFor(d.title, "Notes", d.year, d.category.replace(/^Year\s*\d+:\s*/i, ""))} alt="" loading="lazy" className="aspect-[40/21] w-full object-cover" />}
-              <div className="space-y-2 p-3 text-sm">
+              <div className="space-y-3 p-4 text-[15px] leading-relaxed">
                 <p className="text-xs font-bold uppercase tracking-wide text-primary">{isNote(d) ? (d.raw ? "Polished note" : "New note (AI-written: read before publishing)") : d.type === "mcq" ? `${d.questions.length} MCQs` : `${d.cards.length} flashcards`} · preview{it.state !== "ready" && ` · ${it.state}`}</p>
                 {gone ? <p className="font-serif text-lg font-bold leading-tight">{d.title}</p> : (
                   <input value={d.title} onChange={(e) => patchDraft(i, { title: e.target.value })} aria-label="Title" className="w-full rounded-lg border bg-background px-2 py-2 font-serif text-base font-bold" />
@@ -362,7 +377,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
         {plan && (
           <div className={`rounded-xl border p-3 ${danger ? "border-destructive/50 bg-destructive/5" : "border-primary/40 bg-primary/5"}`}>
             <p className="flex items-center gap-2 text-sm font-bold">{danger ? <AlertTriangle className="h-4 w-4 text-destructive" /> : <Check className="h-4 w-4 text-primary" />} {danger ? "Are you sure?" : "Shall I go ahead?"}</p>
-            <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm">{plan.map((p, i) => <li key={i} className={p.ok ? "" : "text-muted-foreground line-through"}>{p.line}</li>)}</ol>
+            <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-[15px] leading-relaxed">{plan.map((p, i) => <li key={i} className={p.ok ? "" : "text-muted-foreground line-through"}>{p.line}</li>)}</ol>
             {world && plan.map((p, i) => p.action.tool === "create_contest" && !p.ok && /no matching exam/.test(p.line) ? (
               <div key={`fix${i}`} className="mt-3 rounded-lg border border-amber-500/50 bg-amber-500/10 p-2.5">
                 <p className="text-xs font-bold">Which exam should the questions come from?</p>
