@@ -8,6 +8,9 @@ import { buildPartPrompts, mergeParts, parseJsonReply } from "../../supabase/fun
 import { slugOf, validName } from "../../supabase/functions/_shared/topicAi.js";
 import type { AiPage } from "@/lib/topics";
 
+/** What the reader chose before the page was written. */
+export type TopicChoices = { level: "year3" | "year4" | "year5"; angles: string[]; setting: "tropical" | "general"; depth: "quick" | "full" };
+
 export type WriteResult = { status: "published"; page: AiPage & { subject?: string }; saved: boolean; slug?: string; name?: string } | { status: "rejected" | "failed" | "busy" | "limit" | "bot" | "paused" };
 
 const DAY_KEY = "ompath_topic_writes";
@@ -66,10 +69,10 @@ const API_DOWN = "ompath_topic_api_down";
 const apiKnownDown = () => { try { return Date.now() - Number(localStorage.getItem(API_DOWN) ?? 0) < 3 * 3600_000; } catch { return false; } };
 
 /** Route 0: the site's own server, which holds the Gemini keys and takes turns between them. */
-async function viaServer(name: string, category: string, context: string, signal?: AbortSignal): Promise<{ status: "published"; page: AiPage & { subject?: string } } | { status: "rejected" | "busy" } | null> {
+async function viaServer(name: string, category: string, context: string, choices?: TopicChoices, signal?: AbortSignal): Promise<{ status: "published"; page: AiPage & { subject?: string } } | { status: "rejected" | "busy" } | null> {
   if (apiKnownDown()) return null;
   try {
-    const r = await fetch("/api/topic-write", { method: "POST", signal, headers: { "content-type": "application/json" }, body: JSON.stringify({ name, category, context: context.slice(0, 3000) }) });
+    const r = await fetch("/api/topic-write", { method: "POST", signal, headers: { "content-type": "application/json" }, body: JSON.stringify({ name, category, context: context.slice(0, 3000), choices }) });
     if (r.status === 503 || r.status === 404 || r.status === 405) { try { localStorage.setItem(API_DOWN, String(Date.now())); } catch { /* ignore */ } return null; }
     const j = (await r.json().catch(() => null)) as { status?: string; page?: AiPage & { subject?: string } } | null;
     if (j?.status === "published" && j.page) return { status: "published", page: j.page };
@@ -79,14 +82,14 @@ async function viaServer(name: string, category: string, context: string, signal
   } catch { return null; }
 }
 
-export async function writeTopicPage({ name, category, context, signal }: { name: string; category: string; context: string; signal?: AbortSignal }): Promise<WriteResult> {
+export async function writeTopicPage({ name, category, context, choices, signal }: { name: string; category: string; context: string; choices?: TopicChoices; signal?: AbortSignal }): Promise<WriteResult> {
   if (!validName(name)) return { status: "failed" };
   if (looksLikeBot()) return { status: "bot" };
   if (writesToday() >= PER_VISITOR_PER_DAY) return { status: "limit" };
   const slug = slugOf(name);
 
   // Route 0: our own server with the Gemini keys
-  const viaApi = await viaServer(name, category, context, signal);
+  const viaApi = await viaServer(name, category, context, choices, signal);
   if (viaApi?.status === "rejected") return { status: "rejected" };
   if (viaApi?.status === "published") {
     countWrite();

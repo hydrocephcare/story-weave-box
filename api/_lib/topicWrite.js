@@ -23,7 +23,7 @@ export default async function handler(req, res) {
   const name = String(body.name ?? "").trim();
   if (!validName(name)) return res.status(400).json({ status: "invalid" });
   try {
-    const input = { name, category: String(body.category ?? "").slice(0, 60), context: String(body.context ?? "").slice(0, 3000), timeoutMs: 45000 };
+    const input = { name, category: String(body.category ?? "").slice(0, 60), context: String(body.context ?? "").slice(0, 3000), choices: body.choices && typeof body.choices === "object" ? body.choices : undefined };
     const page = await generateWithFallback(input, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: keys });
     if (!page.medical) return res.status(200).json({ status: "rejected" });
     return res.status(200).json({ status: "published", page: { ...page, subject: pickSubject(page.subject, `${name} ${body.category ?? ""}`) } });

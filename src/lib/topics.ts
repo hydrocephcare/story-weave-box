@@ -2,7 +2,7 @@
 // The files are built from the notes, MCQs and essays by scripts/topics/build-topics.mjs and served from /topics/.
 import { useCallback, useEffect, useRef, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { writeTopicPage } from "@/lib/topicWriter";
+import { writeTopicPage, aiPaused, looksLikeBot, type TopicChoices } from "@/lib/topicWriter";
 
 export interface TopicIndexItem { s: string; n: string; c: string; y: number[]; d: number; q: number; i: number; a: string[]; ai: number }
 export interface TopicSource { t: string; u: string; k: "note" | "article"; y: number | null; n: string; m: number }
@@ -126,7 +126,7 @@ export const DOMAIN_STYLE: Record<string, { hue: string; label: string }> = {
 // The full page: what the site has (built at deploy time), what AI has already written and saved, and, when neither is enough, asking
 // the server to write it now. The reader never waits on a blank screen: the site's own material is shown at once and the rest slots in.
 
-export type TopicPhase = "loading" | "ready" | "writing" | "unavailable" | "failed" | "rejected" | "missing";
+export type TopicPhase = "loading" | "intake" | "ready" | "writing" | "unavailable" | "failed" | "rejected" | "missing";
 const deslug = (slug: string) => decodeURIComponent(slug).replace(/-/g, " ").replace(/\b([a-z])/g, (m) => m.toUpperCase());
 export const slugFromName = (name: string) => name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
@@ -148,11 +148,11 @@ const REJ = "ompath_topic_rejected";
 const wasRejected = (slug: string) => { try { const m = JSON.parse(localStorage.getItem(REJ) ?? "{}") as Record<string, number>; return Date.now() - (m[slug] ?? 0) < 7 * 86_400_000; } catch { return false; } };
 const markRejected = (slug: string) => { try { const m = JSON.parse(localStorage.getItem(REJ) ?? "{}") as Record<string, number>; m[slug] = Date.now(); localStorage.setItem(REJ, JSON.stringify(m)); } catch { /* ignore */ } };
 
-async function askServer(slug: string, name: string, category: string, context: string): Promise<Ask> {
+async function askServer(slug: string, name: string, category: string, context: string, choices?: TopicChoices): Promise<Ask> {
   if (wasRejected(slug)) return { status: "rejected" };
   const local = readLocal(slug);
   if (local) return { status: "published", page: local };
-  const r = await writeTopicPage({ name, category, context });
+  const r = await writeTopicPage({ name, category, context, choices });
   if (r.status === "published") {
     const finalSlug = r.slug || slug;
     const finalName = r.name || name;
@@ -203,12 +203,14 @@ export function useTopicPage(slug: string) {
   const [redirectTo, setRedirectTo] = useState<string | null>(null);
   const [attempt, setAttempt] = useState(0);
   const [asking, setAsking] = useState(false);
+  const [intake, setIntake] = useState(false);
+  const [chosen, setChosen] = useState<{ slug: string; c: TopicChoices } | null>(null);
   const alive = useRef(true);
   useEffect(() => { alive.current = true; return () => { alive.current = false; }; }, []);
 
   useEffect(() => {
     let on = true;
-    setTopic(null); setPage(null); setPhase("loading"); setFresh(false); setRedirectTo(null);
+    setTopic(null); setPage(null); setPhase("loading"); setFresh(false); setRedirectTo(null); setIntake(false);
     void (async () => {
       try { const to = (JSON.parse(localStorage.getItem("ompath_topic_alias") ?? "{}") as Record<string, string>)[slug]; if (to && to !== slug) { setRedirectTo(to); return; } } catch { /* ignore */ }
       let t = await loadTopic(slug);
@@ -224,7 +226,10 @@ export function useTopicPage(slug: string) {
       const have = stored ?? t?.ai ?? null;
       if (have) { setPage(have); setPhase("ready"); return; }
 
-      // nothing written yet: show what the site has straight away, and write the rest in the background
+      // nothing written yet: ask the reader a few questions first (level, angles, setting, depth), then write the page to match
+      const mine = chosen?.slug === slug ? chosen.c : undefined;
+      if (!mine && !looksLikeBot() && !aiPaused() && !wasRejected(slug) && !recentlyTried(slug)) { setIntake(true); setPhase(t ? "ready" : "intake"); return; }
+      setIntake(false);
       setPhase(t ? "ready" : "writing");
       if (attempt === 0 && recentlyTried(slug)) { setPhase(t ? "ready" : "failed"); return; }
       markTried(slug);
@@ -234,7 +239,7 @@ export function useTopicPage(slug: string) {
       setAsking(true);
       try {
       for (let i = 0; i < 16 && on; i++) {
-        const res = await askServer(slug, name, category, context);
+        const res = await askServer(slug, name, category, context, mine);
         if (!on) return;
         if (res.status === "published" && res.redirect) { setRedirectTo(res.redirect); return; }
         if (res.status === "published") { setPage(res.page); setPhase("ready"); setFresh(Boolean(t)); return; }
@@ -248,9 +253,10 @@ export function useTopicPage(slug: string) {
       } finally { if (on) setAsking(false); }
     })();
     return () => { on = false; };
-  }, [slug, attempt]);
+  }, [slug, attempt, chosen]);
 
   const retry = useCallback(() => { try { const m = JSON.parse(sessionStorage.getItem(TRIED) ?? "{}") as Record<string, number>; delete m[slug]; sessionStorage.setItem(TRIED, JSON.stringify(m)); } catch { /* ignore */ } setAttempt((a) => a + 1); }, [slug]);
   const writing = asking;
-  return { topic, page, phase, fresh, redirectTo, retry, writing, name: topic?.n ?? (page as { title?: string } | null)?.title ?? deslug(slug) };
+  const startWriting = useCallback((c: TopicChoices) => setChosen({ slug, c }), [slug]);
+  return { topic, page, phase, fresh, redirectTo, retry, writing, intake, startWriting, name: topic?.n ?? (page as { title?: string } | null)?.title ?? deslug(slug) };
 }
