@@ -39,7 +39,7 @@ export default function Exams() {
     });
   }, []);
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const selectedYear = searchParams.get("year") || "All";
   const [examSets, setExamSets] = useState<ExamSet[]>([]);
   const [visible, setVisible] = useState(12);
@@ -162,90 +162,87 @@ export default function Exams() {
     return examSets.filter((exam) => getYearFromCategory(exam.category) === selectedYear);
   }, [examSets, selectedYear]);
 
-  const allExams = useMemo(() => [sampleExam, ...filteredExamSets], [filteredExamSets]);
+  const [q, setQ] = useState("");
+  const [unitPick, setUnitPick] = useState<string | null>(null);
+  const yearChips = useMemo(() => [...new Set(examSets.map((e) => getYearFromCategory(e.category)).filter(Boolean) as string[])].sort(), [examSets]);
+  const unitChips = useMemo(() => {
+    const n = new Map<string, number>();
+    for (const e of filteredExamSets) { const u = inferUnit(e); n.set(u, (n.get(u) ?? 0) + 1); }
+    return [...n.entries()].sort((a, b) => b[1] - a[1]).slice(0, 10);
+  }, [filteredExamSets]);
+  const allExams = useMemo(() => {
+    const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
+    const list = filteredExamSets.filter((e) => (!unitPick || inferUnit(e) === unitPick) && needles.every((w) => `${e.title} ${inferUnit(e)}`.toLowerCase().includes(w)));
+    return unitPick || needles.length ? list : [sampleExam, ...list];
+  }, [filteredExamSets, q, unitPick]);
 
+  const chip = (on: boolean) => `shrink-0 rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors ${on ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/60"}`;
   return (
     <div className="min-h-screen bg-background">
-
-      {/* ── Hero — only text changed, no logic ── */}
-      <section className="relative overflow-hidden border-b border-border bg-gradient-to-br from-primary/10 via-background to-accent/10 px-4 py-12 sm:py-16">
-        <div className="mx-auto max-w-5xl">
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary">
-              <Trophy className="h-3.5 w-3.5" /> Unit-Based Weekly Exams
-            </div>
-            <h1 className="mb-3 font-serif text-3xl font-bold text-foreground sm:text-4xl">Exam Center</h1>
-            <p className="mx-auto max-w-2xl text-sm leading-relaxed text-muted-foreground">
-              Timed, proctored MCQ exams drawn from your unit content. {selectedYear === "All" ? "Select a year from the menu to narrow exams." : `Currently viewing ${selectedYear} exams.`}
-            </p>
-          </motion.div>
-
-          {/* Support card — new addition, no logic impact */}
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.12 }}
-            className="mx-auto mt-7 max-w-lg rounded-2xl border border-rose-200 dark:border-rose-900/40 bg-rose-50 dark:bg-rose-950/20 p-4 sm:p-5"
-          >
-            <div className="flex items-start gap-3">
-              <div className="rounded-full bg-rose-100 dark:bg-rose-900/40 p-2 shrink-0 mt-0.5">
-                <Heart className="h-4 w-4 text-rose-500" />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-foreground mb-1">Support Ompath Study</p>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  Each exam is just <strong className="text-foreground">KES {examPrice}</strong>.<span className="hidden sm:inline"> This goes directly toward building weekly exams, expanding the question bank, and keeping Ompath Study free for all health students in Kenya.
-                </span>
-                </p>
-              </div>
-            </div>
-          </motion.div>
+      <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-accent/10 px-4 py-7 sm:py-9">
+        <div className="mx-auto max-w-6xl">
+          <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.16em] text-primary"><Trophy className="h-3.5 w-3.5" aria-hidden /> Timed exams</p>
+          <h1 className="mt-1 font-serif text-3xl font-bold text-foreground sm:text-5xl">Exam Center</h1>
+          <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">Timed multiple-choice exams from your unit content, marked at the end with the answers explained. {loading ? "" : `${examSets.length + 1} exams available.`}</p>
+          <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-700 dark:border-rose-900/40 dark:bg-rose-950/20 dark:text-rose-300"><Heart className="h-3.5 w-3.5" aria-hidden /> Each exam is KES {examPrice}; it keeps Ompath Study free for health students.</p>
           <ContentCredit />
         </div>
       </section>
 
-      {/* ── Exam list — 100% original logic, only subtitle text changed ── */}
-      <section className="mx-auto max-w-6xl space-y-4 px-4 py-8">
-        {loading ? (
-          <div className="flex justify-center py-16">
-            <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
+      <section className="exam-controls mx-auto max-w-6xl px-4 pt-6">
+        <div className="flex gap-2 overflow-x-auto pb-1" role="group" aria-label="Year">
+          <button type="button" onClick={() => setSearchParams({})} aria-pressed={selectedYear === "All"} className={chip(selectedYear === "All")}>All years</button>
+          {yearChips.map((y) => <button key={y} type="button" onClick={() => { setSearchParams({ year: y }); setUnitPick(null); }} aria-pressed={selectedYear === y} className={chip(selectedYear === y)}>{y}</button>)}
+        </div>
+        <div className="mt-3 flex flex-wrap items-center gap-3">
+          <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search exams, e.g. pathology, physiology" aria-label="Search exams" className="max-w-sm" />
+          <span className="text-sm text-muted-foreground">{loading ? "" : `${allExams.length} shown`}</span>
+        </div>
+        {unitChips.length > 1 && (
+          <div className="mt-3 flex gap-2 overflow-x-auto pb-1" role="group" aria-label="Unit">
+            <button type="button" onClick={() => setUnitPick(null)} aria-pressed={!unitPick} className={chip(!unitPick)}>Every unit</button>
+            {unitChips.map(([u, n]) => <button key={u} type="button" onClick={() => setUnitPick(unitPick === u ? null : u)} aria-pressed={unitPick === u} className={chip(unitPick === u)}>{u} <span className="text-xs opacity-70">{n}</span></button>)}
           </div>
+        )}
+      </section>
+
+      <section className="mx-auto max-w-6xl space-y-4 px-4 py-6">
+        {loading ? (
+          <div className="flex justify-center py-16"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" /></div>
         ) : allExams.length === 0 ? (
-          <p className="py-16 text-center text-muted-foreground">No exams available yet.</p>
+          <p className="py-16 text-center text-muted-foreground">No exams match. Try another year or a shorter search.</p>
         ) : (
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          {allExams.slice(0, visible).map((exam) => {
-            const isSample = exam.id === "sample-exam";
-            const unitName = inferUnit(exam);
-            const yearTag = getYearFromCategory(exam.category);
-            return (
-              <div key={exam.id} className="flex flex-col justify-between rounded-xl border border-border bg-card p-4 shadow-sm transition-colors hover:border-primary/40 sm:p-5">
-                <div>
-                  <div className="mb-2 flex flex-wrap items-center gap-1.5">
-                    <span className="rounded-md border border-primary/20 bg-primary/10 px-2 py-0.5 text-[11px] font-bold text-primary">{unitName}</span>
-                    {yearTag && <span className="rounded-md border border-border bg-secondary px-2 py-0.5 text-[10px] font-semibold text-muted-foreground">{yearTag}</span>}
-                    <span className="ml-auto rounded-full border border-border px-2 py-0.5 text-[10px] font-bold text-foreground">FREE</span>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {allExams.slice(0, visible).map((exam) => {
+              const isSample = exam.id === "sample-exam";
+              const unitName = inferUnit(exam);
+              const yearTag = getYearFromCategory(exam.category);
+              return (
+                <article key={exam.id} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md">
+                  <div className="h-1.5 bg-gradient-to-r from-primary via-primary/60 to-violet-400" aria-hidden />
+                  <div className="flex flex-1 flex-col p-4 sm:p-5">
+                    <div className="mb-2 flex flex-wrap items-center gap-1.5">
+                      <span className="rounded-md bg-primary/10 px-2 py-0.5 text-[11px] font-bold text-primary">{unitName}</span>
+                      {yearTag && <span className="rounded-md bg-secondary px-2 py-0.5 text-[11px] font-semibold text-muted-foreground">{yearTag}</span>}
+                    </div>
+                    <h2 className="font-serif text-lg font-bold leading-snug text-foreground">{exam.title}</h2>
+                    <p className="mt-2 flex items-center gap-3 text-xs font-semibold text-muted-foreground"><span className="inline-flex items-center gap-1"><Clock className="h-3.5 w-3.5" aria-hidden /> Timed</span><span className="inline-flex items-center gap-1"><CheckCircle className="h-3.5 w-3.5" aria-hidden /> Marked with answers</span></p>
+                    <div className="mt-auto flex items-center justify-between pt-4">
+                      <span className="rounded-full border border-border px-2.5 py-0.5 text-[11px] font-bold">FREE</span>
+                      <Button size="sm" onClick={() => navigate(isSample ? `/exams/${exam.id}/start` : buildExamPath(exam))} className="gap-1.5">Start exam <ArrowRight className="h-3.5 w-3.5" /></Button>
+                    </div>
                   </div>
-                  <h2 className="font-serif text-base font-bold leading-snug text-foreground">{exam.title}</h2>
-                </div>
-                <div className="mt-4 flex items-center justify-end border-t border-border/60 pt-3">
-                  <Button size="sm" onClick={() => navigate(isSample ? `/exams/${exam.id}/start` : buildExamPath(exam))} className="gap-1.5">
-                    Start exam <ArrowRight className="h-3.5 w-3.5" />
-                  </Button>
-                </div>
-              </div>
-            );
-          })}
+                </article>
+              );
+            })}
           </div>
         )}
         {!loading && allExams.length > visible && (
           <div className="flex justify-center pt-2">
-            <LoadMoreButton onMore={() => setVisible((v) => v + 12)} className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-input bg-background px-4 text-sm font-medium hover:bg-accent">Show more exams ({allExams.length - visible} left)</LoadMoreButton>
+            <LoadMoreButton onMore={() => setVisible((v) => v + 12)} className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-input bg-background px-4 text-sm font-medium hover:bg-accent">Show more exams</LoadMoreButton>
           </div>
         )}
-
       </section>
-
     </div>
   );
 }
