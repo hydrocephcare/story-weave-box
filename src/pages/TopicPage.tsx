@@ -12,7 +12,7 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Check, ClipboardCheck, Link2, Share2, Stethoscope, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { aiPaused, looksLikeBot, type TopicChoices } from "@/lib/topicWriter";
-import { DOMAIN_STYLE, imageCaption, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
+import { DOMAIN_STYLE, imageCaption, isDeepPage, rewriteDeeper, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
 import { useWebMedia } from "@/lib/webMedia";
 import HeroAurora from "@/components/HeroAurora";
 import { Answer } from "@/components/ai/AnswerText";
@@ -172,20 +172,18 @@ function IntakeCard({ name, onStart }: { name: string; onStart: (c: TopicChoices
   const [level, setLevel] = useState<TopicChoices["level"]>("year4");
   const [angles, setAngles] = useState<string[]>(ANGLE_CHOICES.map(([k]) => k));
   const [setting, setSetting] = useState<TopicChoices["setting"]>("tropical");
-  const [depth, setDepth] = useState<TopicChoices["depth"]>("full");
   const chip = (on: boolean) => `rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors ${on ? "border-primary bg-primary text-primary-foreground" : "border-border bg-background text-foreground/80 hover:bg-muted"}`;
   return (
     <section aria-label="Before this page is written" className="rounded-3xl border border-primary/25 bg-primary/5 p-5 sm:p-7">
       <p className="text-xs font-bold uppercase tracking-wider text-primary">Before I write this</p>
       <h2 className="mt-1 font-serif text-2xl font-bold sm:text-3xl">What do you need from “{name}”?</h2>
-      <p className="mt-1 text-[16px] text-muted-foreground">Four quick taps, so the page is built for you and is not a general summary.</p>
+      <p className="mt-1 text-[16px] text-muted-foreground">Three quick taps, so the page is built for you and is not a general summary. Every page is written in full.</p>
       <div className="mt-5 space-y-5">
         <div><p className="text-sm font-bold">Your level</p><div className="mt-2 flex flex-wrap gap-2">{LEVEL_CHOICES.map(([k, l]) => <button key={k} type="button" aria-pressed={level === k} onClick={() => setLevel(k)} className={chip(level === k)}>{l}</button>)}</div></div>
         <div><p className="text-sm font-bold">What examiners may ask (pick any)</p><div className="mt-2 flex flex-wrap gap-2">{ANGLE_CHOICES.map(([k, l]) => { const on = angles.includes(k); return <button key={k} type="button" aria-pressed={on} onClick={() => setAngles((a) => (on ? a.filter((x) => x !== k) : [...a, k]))} className={chip(on)}>{l}</button>; })}</div></div>
         <div><p className="text-sm font-bold">Setting</p><div className="mt-2 flex flex-wrap gap-2">{([["tropical", "East Africa and low-resource hospitals"], ["general", "General, international"]] as const).map(([k, l]) => <button key={k} type="button" aria-pressed={setting === k} onClick={() => setSetting(k)} className={chip(setting === k)}>{l}</button>)}</div></div>
-        <div><p className="text-sm font-bold">How deep</p><div className="mt-2 flex flex-wrap gap-2">{([["full", "Full topic: everything an examiner can ask"], ["quick", "Quick revision"]] as const).map(([k, l]) => <button key={k} type="button" aria-pressed={depth === k} onClick={() => setDepth(k)} className={chip(depth === k)}>{l}</button>)}</div></div>
       </div>
-      <button type="button" onClick={() => onStart({ level, angles, setting, depth })} className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-95"><Sparkles className="h-4 w-4" aria-hidden /> Write my page</button>
+      <button type="button" onClick={() => onStart({ level, angles, setting, depth: "full" })} className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-95"><Sparkles className="h-4 w-4" aria-hidden /> Write my page</button>
       <p className="mt-3 text-sm text-muted-foreground">A full page takes about 30 to 40 seconds. It is saved for everyone once written.</p>
     </section>
   );
@@ -351,6 +349,7 @@ export default function TopicPage() {
         <title>{title}</title>
         <meta name="description" content={desc} />
         <link rel="canonical" href={`${SITE}${topicPath(slug)}`} />
+        {!topic && page && !isDeepPage(page) && <meta name="robots" content="noindex,follow" />}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
         {(topic?.imgs[0] || media?.hero) && <meta property="og:image" content={topic?.imgs[0]?.u ?? media?.hero?.u} />}
@@ -407,6 +406,7 @@ export default function TopicPage() {
               <span className="text-primary">Admin</span>
               <button type="button" className="rounded-lg border border-border bg-background px-3 py-1.5 hover:border-primary/60" onClick={async () => { const r = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").update({ reviewed: !page.reviewed }).eq("slug", slug); setAdminMsg(r.error ? r.error.message : page.reviewed ? "Marked as not reviewed" : "Marked as reviewed"); }}>{page.reviewed ? "Mark not reviewed" : "Mark reviewed"}</button>
               <button type="button" className="rounded-lg border border-border bg-background px-3 py-1.5 hover:border-primary/60" onClick={async () => { if (!window.confirm("Remove this page? It will be written again the next time someone opens it.")) return; const r = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").delete().eq("slug", slug); setAdminMsg(r.error ? r.error.message : "Removed. It will be rewritten on the next visit."); }}>Remove and rewrite</button>
+              {!isDeepPage(page) && <button type="button" className="rounded-lg border border-primary/50 bg-primary/10 px-3 py-1.5 text-primary hover:bg-primary/20" onClick={async () => { setAdminMsg("Writing the deep version, about 40 seconds..."); setAdminMsg(await rewriteDeeper(slug, name, topic?.c ?? "")); }}>Thin page: rewrite deeper</button>}
               {adminMsg && <span className="text-muted-foreground">{adminMsg}</span>}
             </div>
           )}

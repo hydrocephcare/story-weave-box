@@ -19,3 +19,13 @@ describe("topic page depth and the reader's choices", () => {
     expect(cleanChoices({ level: "x", depth: "y" })).toMatchObject({ level: "year4", depth: "full", setting: "tropical" });
   });
 });
+
+import { isDeepPage } from "@/lib/topics";
+describe("deep page gate", () => {
+  it("keeps thin pages out and lets full pages in", () => {
+    const sec = { p: "x", b: ["a", "b", "c", "d", "e"] };
+    expect(isDeepPage({ sections: Array(10).fill(sec), exam: Array(10).fill("q") })).toBe(true);
+    expect(isDeepPage({ sections: Array(5).fill(sec), exam: Array(6).fill("q") })).toBe(false);
+    expect(isDeepPage(null)).toBe(false);
+  });
+});

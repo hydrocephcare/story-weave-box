@@ -260,3 +260,20 @@ export function useTopicPage(slug: string) {
   const startWriting = useCallback((c: TopicChoices) => setChosen({ slug, c }), [slug]);
   return { topic, page, phase, fresh, redirectTo, retry, writing, intake, startWriting, name: topic?.n ?? (page as { title?: string } | null)?.title ?? deslug(slug) };
 }
+
+/** A page is "deep" when it has the sections, tables and examiner questions a student can revise from. Thin pages stay out of Google until they are rewritten. */
+export function isDeepPage(p: { sections?: { b?: unknown[]; t?: unknown[]; p?: string }[]; exam?: unknown[] } | null | undefined): boolean {
+  if (!p) return false;
+  const secs = p.sections ?? [];
+  const points = secs.reduce((n, x) => n + (x.b?.length ?? 0) + (x.t?.length ?? 0) + (x.p ? 1 : 0), 0);
+  return secs.length >= 9 && (p.exam?.length ?? 0) >= 8 && points >= 45;
+}
+
+/** Admin: write the full, deep version now and replace what is saved. */
+export async function rewriteDeeper(slug: string, name: string, category: string): Promise<string> {
+  const r = await writeTopicPage({ name, category, context: "", choices: { level: "year4", angles: [], setting: "tropical", depth: "full" } });
+  if (r.status !== "published") return "The writer is busy or out of credits. Try again in a minute.";
+  const { error } = await (supabase as unknown as { from: (t: string) => { upsert: (v: Record<string, unknown>, o: Record<string, unknown>) => Promise<{ error: { message: string } | null }> } })
+    .from("topic_pages").upsert({ slug, name, category: category || (r.page as { subject?: string }).subject || null, status: "published", content: r.page, reviewed: false, updated_at: new Date().toISOString() }, { onConflict: "slug" });
+  return error ? error.message : "Rewritten. Reload to read it.";
+}
