@@ -31,7 +31,7 @@ One italic orientation line saying what the student will be able to do afterward
 ## Pathophysiology
 (Pathophysiology as short causal steps with arrows.)` },
   { sections: ["Clinical features", "Differential diagnosis", "Investigations", "Diagnosis and severity"], ask: `## Clinical features
-The history questions that matter, then the examination findings and why each occurs.
+The history questions that matter, then how to examine at the bedside step by step (each named sign, how to elicit it and what it means). Use bullet lists here, not tables: the reader prefers bullets for history and examination. Use tables only for the differential diagnosis and the investigations.
 ## Differential diagnosis
 A compact table: condition, what points to it, what separates it from this one.
 ## Investigations
@@ -41,7 +41,7 @@ A compact table: test, what it answers, what a result means.
 Immediate stabilisation first, then definitive treatment, monitoring and follow-up; contraindications and safety.
 ## Complications and prognosis
 ## High-yield exam points
-Bullets: the tricky things examiners ask, such as ${p.traps}.
+Bullets: the key points. Then a section headed exactly "## Tricky questions examiners ask" with 5 to 7 questions in this form, one paragraph each: **Q1.** question text **Answer:** the answer. The tricky things examiners ask include ${p.traps}. Facts must match current guidelines: for example a diagnostic threshold is written the same way everywhere in the note.
 ## Clinical case
 A short case (age, presentation, key findings), then 3 questions with model answers.
 ## Practice questions

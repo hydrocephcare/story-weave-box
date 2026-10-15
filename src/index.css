@@ -426,8 +426,11 @@ body.no-copy img {
 
 /* Printing a revision sheet (must-knows): drop the site chrome. */
 @media print {
-  .no-print, header, nav, footer, [role="banner"] { display: none !important; }
+  /* the site menu and footer are left out of a printout; a page's own title header (the one holding the h1) stays */
+  .no-print, header:not(:has(h1)), nav, footer, [role="banner"] { display: none !important; }
   body { background: #fff !important; }
+  main h1, main h2, main h3, main p, main li, main td, main th, main summary, main figcaption { color: #111 !important; opacity: 1 !important; }
+  .qa-hide > * { display: block !important; }
 }
 
 /* Words a learner searched for, painted inside the opened note (CSS Custom Highlight API). */
