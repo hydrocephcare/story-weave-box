@@ -90,12 +90,12 @@ for (const slug of todo) {
         const r = await askModel(PART_PROMPT(p, part, i, written), { env, plain: true, timeoutMs: 90000, maxTokens: 5000 });
         text = squeeze(clean(r.text));
         // every section asked for must be there, and a table must have rows under its header
-        const have = part.sections.every((s) => new RegExp(`^#{2,3}\\s+${s.split(" ")[0]}`, "im").test(text));
+        const have = part.sections.every((s) => new RegExp(`^#{2,3}\\s+${s.slice(0, 4)}`, "im").test(text));
         // every table needs a header, a separator and at least one row: a table cut off by the answer running out is not accepted
         const runs = text.split("\n").reduce((a, l) => { if (l.trim().startsWith("|")) a[a.length - 1] = (a[a.length - 1] ?? 0) + 1; else if (a[a.length - 1] !== 0) a.push(0); return a; }, [0]).filter((n) => n > 0);
         const tablesOk = (!/table/.test(part.ask) || runs.length >= 1) && runs.every((n) => n >= 3);
         if (have && tablesOk) break;
-        console.log(`  part ${i + 1} attempt ${attempt + 1}: sections ${have ? "ok" : "MISSING " + part.sections.filter((s) => !new RegExp(`^#{2,3}\\s+${s.split(" ")[0]}`, "im").test(text)).join(", ")}; tables ${tablesOk ? "ok" : "bad (" + runs.join(",") + ")"}; ${text.length} chars`);
+        console.log(`  part ${i + 1} attempt ${attempt + 1}: sections ${have ? "ok" : "MISSING " + part.sections.filter((s) => !new RegExp(`^#{2,3}\\s+${s.slice(0, 4)}`, "im").test(text)).join(", ")}; tables ${tablesOk ? "ok" : "bad (" + runs.join(",") + ")"}; ${text.length} chars`);
         text = "";
       }
       if (!text) throw new Error(`part ${i + 1} incomplete`);
@@ -104,8 +104,12 @@ for (const slug of todo) {
     }
     const heads = (md.match(/^## /gm) ?? []).length, qs = (md.match(/^### Question \d/gm) ?? []).length, rows = (md.match(/^\|/gm) ?? []).length;
     // a drug dose is a number with mg/mcg/µg that is not a laboratory value (mg/dL, mg/L)
-    const dose = md.match(/\b\d+(?:\.\d+)?\s?(?:mg|mcg|µg)\b(?!\s?\/\s?(?:d?l|ml|mmol))/i);
-    if (md.length < 7000 || heads < 11 || qs < 4 || rows < 6 || dose) { console.log("rejected (checks):", slug, md.length, heads, qs, rows, dose ? `dose: "${dose[0]}"` : ""); continue; }
+    // doses that slipped in are not kept: the number goes and the sentence says to use the protocol dose, so the note is not thrown away for one figure
+    const DOSE = /\b\d+(?:[.,]\d+)?(?:\s?[-–]\s?\d+(?:[.,]\d+)?)?\s?(?:mg|mcg|µg|ug)(?:\s?\/\s?(?:kg|day|dose|h|hr|hour|24\s?h))*\b(?!\s?\/\s?(?:d?l|ml|mmol))/gi;
+    const doses = md.match(DOSE) ?? [];
+    if (doses.length) md = md.replace(DOSE, "the protocol dose");
+    if (md.length < 7000 || heads < 11 || qs < 4 || rows < 6) { console.log("rejected (checks):", slug, md.length, heads, qs, rows); continue; }
+    if (doses.length) console.log(`  ${slug}: ${doses.length} dose figure(s) replaced`);
     md += `\n\n*Drafted with AI assistance from standard references and reviewed for structure. Check details against your lecture notes and the Kenya MoH guideline.*\n`;
     const file = `src/content/notes/${p.group.toLowerCase().split(/[ ,]/)[0]}-${slug}.md`;
     fs.writeFileSync(file, md);

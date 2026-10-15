@@ -19,7 +19,8 @@ describe("IMED curriculum", () => {
   });
   it("publishes only topics whose note is registered", () => {
     expect(isPublished(topicById("pneumonia")!.topic)).toBe(true);
-    expect(isPublished(topicById("cirrhosis")!.topic)).toBe(false);
+    expect(isPublished({ id: "x", name: "x", note: "no-such-note" })).toBe(false);
+    expect(isPublished({ id: "y", name: "y" })).toBe(false);
   });
 });
 

@@ -2141,5 +2141,585 @@
     "description": "Approach to renal disease: the complete clinical approach to Approach to renal disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle.",
     "updated": "2026-10-15",
     "file": "src/content/notes/renal-renal-approach.md"
+  },
+  {
+    "slug": "electrolytes",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Renal",
+    "title": "Sodium, potassium and calcium disorders",
+    "description": "Sodium, potassium and calcium disorders: the complete clinical approach to Sodium, potassium and calcium disorders: definition; causes and risk factors in our setting (including HIV, TB.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/renal-electrolytes.md"
+  },
+  {
+    "slug": "dialysis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Renal",
+    "title": "Indications for dialysis",
+    "description": "Indications for dialysis: the complete clinical approach to Indications for dialysis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/renal-dialysis.md"
+  },
+  {
+    "slug": "skin-infection",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Infectious disease",
+    "title": "Skin and soft-tissue infections",
+    "description": "Skin and soft-tissue infections: the complete clinical approach to Skin and soft-tissue infections: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/infectious-skin-infection.md"
+  },
+  {
+    "slug": "acid-base",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Renal",
+    "title": "Acid-base disorders",
+    "description": "Acid-base disorders: the complete clinical approach to Acid-base disorders: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/renal-acid-base.md"
+  },
+  {
+    "slug": "uti",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Renal",
+    "title": "Urinary tract infection and pyelonephritis",
+    "description": "Urinary tract infection and pyelonephritis: the complete clinical approach to Urinary tract infection and pyelonephritis: definition; causes and risk factors in our setting (including HIV.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/renal-uti.md"
+  },
+  {
+    "slug": "fluid-balance",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Renal",
+    "title": "Fluid balance",
+    "description": "Fluid balance: the complete clinical approach to Fluid balance: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/renal-fluid-balance.md"
+  },
+  {
+    "slug": "pud",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Gastroenterology and hepatology",
+    "title": "Dyspepsia and peptic ulcer disease",
+    "description": "Dyspepsia and peptic ulcer disease: the complete clinical approach to Dyspepsia and peptic ulcer disease: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/gastroenterology-pud.md"
+  },
+  {
+    "slug": "hep-enceph",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Gastroenterology and hepatology",
+    "title": "Hepatic encephalopathy",
+    "description": "Hepatic encephalopathy: the complete clinical approach to Hepatic encephalopathy: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/gastroenterology-hep-enceph.md"
+  },
+  {
+    "slug": "ibd",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Gastroenterology and hepatology",
+    "title": "Inflammatory bowel disease",
+    "description": "Inflammatory bowel disease: the complete clinical approach to Inflammatory bowel disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/gastroenterology-ibd.md"
+  },
+  {
+    "slug": "hrs",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Gastroenterology and hepatology",
+    "title": "Hepatorenal syndrome",
+    "description": "Hepatorenal syndrome: the complete clinical approach to Hepatorenal syndrome: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/gastroenterology-hrs.md"
+  },
+  {
+    "slug": "iron-deficiency",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Haematology",
+    "title": "Iron-deficiency anaemia",
+    "description": "Iron-deficiency anaemia: the complete clinical approach to Iron-deficiency anaemia: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/haematology-iron-deficiency.md"
+  },
+  {
+    "slug": "megaloblastic",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Haematology",
+    "title": "Megaloblastic anaemia",
+    "description": "Megaloblastic anaemia: the complete clinical approach to Megaloblastic anaemia: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/haematology-megaloblastic.md"
+  },
+  {
+    "slug": "ckd",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Renal",
+    "title": "Chronic kidney disease",
+    "description": "Chronic kidney disease: the complete clinical approach to Chronic kidney disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/renal-ckd.md"
+  },
+  {
+    "slug": "diabetic-kidney",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Renal",
+    "title": "Diabetic kidney disease",
+    "description": "Diabetic kidney disease: the complete clinical approach to Diabetic kidney disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/renal-diabetic-kidney.md"
+  },
+  {
+    "slug": "cirrhosis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Gastroenterology and hepatology",
+    "title": "Chronic liver disease and cirrhosis",
+    "description": "Chronic liver disease and cirrhosis: the complete clinical approach to Chronic liver disease and cirrhosis: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/gastroenterology-cirrhosis.md"
+  },
+  {
+    "slug": "ascites-sbp",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Gastroenterology and hepatology",
+    "title": "Ascites and spontaneous bacterial peritonitis",
+    "description": "Ascites and spontaneous bacterial peritonitis: the complete clinical approach to Ascites and spontaneous bacterial peritonitis: definition; causes and risk factors in our setting (including.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/gastroenterology-ascites-sbp.md"
+  },
+  {
+    "slug": "pancreatitis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Gastroenterology and hepatology",
+    "title": "Acute and chronic pancreatitis",
+    "description": "Acute and chronic pancreatitis: the complete clinical approach to Acute and chronic pancreatitis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/gastroenterology-pancreatitis.md"
+  },
+  {
+    "slug": "malabsorption",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Gastroenterology and hepatology",
+    "title": "Malabsorption",
+    "description": "Malabsorption: the complete clinical approach to Malabsorption: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/gastroenterology-malabsorption.md"
+  },
+  {
+    "slug": "haemolytic",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Haematology",
+    "title": "Haemolytic anaemia",
+    "description": "Haemolytic anaemia: the complete clinical approach to Haemolytic anaemia: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/haematology-haemolytic.md"
+  },
+  {
+    "slug": "sickle-cell",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Haematology",
+    "title": "Sickle cell disease",
+    "description": "Sickle cell disease: the complete clinical approach to Sickle cell disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/haematology-sickle-cell.md"
+  },
+  {
+    "slug": "thalassaemia",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Haematology",
+    "title": "Thalassaemia",
+    "description": "Thalassaemia: the complete clinical approach to Thalassaemia: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/haematology-thalassaemia.md"
+  },
+  {
+    "slug": "leukaemia",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Haematology",
+    "title": "Leukaemias",
+    "description": "Leukaemias: the complete clinical approach to Leukaemias: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical causes.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/haematology-leukaemia.md"
+  },
+  {
+    "slug": "lymphoma",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Haematology",
+    "title": "Lymphomas",
+    "description": "Lymphomas: the complete clinical approach to Lymphomas: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical causes.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/haematology-lymphoma.md"
+  },
+  {
+    "slug": "myeloma",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Haematology",
+    "title": "Multiple myeloma",
+    "description": "Multiple myeloma: the complete clinical approach to Multiple myeloma: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/haematology-myeloma.md"
+  },
+  {
+    "slug": "platelets",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Haematology",
+    "title": "Thrombocytopenia and platelet disorders",
+    "description": "Thrombocytopenia and platelet disorders: the complete clinical approach to Thrombocytopenia and platelet disorders: definition; causes and risk factors in our setting (including HIV, TB.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/haematology-platelets.md"
+  },
+  {
+    "slug": "coagulation",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Haematology",
+    "title": "Coagulation disorders",
+    "description": "Coagulation disorders: the complete clinical approach to Coagulation disorders: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/haematology-coagulation.md"
+  },
+  {
+    "slug": "transfusion",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Haematology",
+    "title": "Blood transfusion and reactions",
+    "description": "Blood transfusion and reactions: the complete clinical approach to Blood transfusion and reactions: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/haematology-transfusion.md"
+  },
+  {
+    "slug": "diabetes",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Endocrinology",
+    "title": "Diabetes mellitus",
+    "description": "Diabetes mellitus: the complete clinical approach to Diabetes mellitus: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/endocrinology-diabetes.md"
+  },
+  {
+    "slug": "hypoglycaemia",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Endocrinology",
+    "title": "Hypoglycaemia",
+    "description": "Hypoglycaemia: the complete clinical approach to Hypoglycaemia: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/endocrinology-hypoglycaemia.md"
+  },
+  {
+    "slug": "thyroid",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Endocrinology",
+    "title": "Hyperthyroidism and hypothyroidism",
+    "description": "Hyperthyroidism and hypothyroidism: the complete clinical approach to Hyperthyroidism and hypothyroidism: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/endocrinology-thyroid.md"
+  },
+  {
+    "slug": "thyroid-emergency",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Endocrinology",
+    "title": "Thyroid storm and myxoedema coma",
+    "description": "Thyroid storm and myxoedema coma: the complete clinical approach to Thyroid storm and myxoedema coma: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/endocrinology-thyroid-emergency.md"
+  },
+  {
+    "slug": "adrenal",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Endocrinology",
+    "title": "Adrenal insufficiency and Cushing syndrome",
+    "description": "Adrenal insufficiency and Cushing syndrome: the complete clinical approach to Adrenal insufficiency and Cushing syndrome: definition; causes and risk factors in our setting (including HIV.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/endocrinology-adrenal.md"
+  },
+  {
+    "slug": "calcium",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Endocrinology",
+    "title": "Calcium and parathyroid disorders",
+    "description": "Calcium and parathyroid disorders: the complete clinical approach to Calcium and parathyroid disorders: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/endocrinology-calcium.md"
+  },
+  {
+    "slug": "pituitary",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Endocrinology",
+    "title": "Pituitary disorders",
+    "description": "Pituitary disorders: the complete clinical approach to Pituitary disorders: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/endocrinology-pituitary.md"
+  },
+  {
+    "slug": "obesity",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Endocrinology",
+    "title": "Obesity and metabolic syndrome",
+    "description": "Obesity and metabolic syndrome: the complete clinical approach to Obesity and metabolic syndrome: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/endocrinology-obesity.md"
+  },
+  {
+    "slug": "neuro-approach",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Neurological history and examination",
+    "description": "Neurological history and examination: the complete clinical approach to Neurological history and examination: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/neurology-neuro-approach.md"
+  },
+  {
+    "slug": "stroke",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Ischaemic and haemorrhagic stroke",
+    "description": "Ischaemic and haemorrhagic stroke: the complete clinical approach to Ischaemic and haemorrhagic stroke: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/neurology-stroke.md"
+  },
+  {
+    "slug": "epilepsy",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Epilepsy and status epilepticus",
+    "description": "Epilepsy and status epilepticus: the complete clinical approach to Epilepsy and status epilepticus: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/neurology-epilepsy.md"
+  },
+  {
+    "slug": "neuropathy",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Peripheral neuropathy and Guillain-Barre syndrome",
+    "description": "Peripheral neuropathy and Guillain-Barre syndrome: the complete clinical approach to Peripheral neuropathy and Guillain-Barre syndrome: definition; causes and risk factors in our setting.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/neurology-neuropathy.md"
+  },
+  {
+    "slug": "myasthenia",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Myasthenia gravis",
+    "description": "Myasthenia gravis: the complete clinical approach to Myasthenia gravis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/neurology-myasthenia.md"
+  },
+  {
+    "slug": "parkinson",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Parkinson disease",
+    "description": "Parkinson disease: the complete clinical approach to Parkinson disease: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/neurology-parkinson.md"
+  },
+  {
+    "slug": "dementia",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Dementia and delirium",
+    "description": "Dementia and delirium: the complete clinical approach to Dementia and delirium: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/neurology-dementia.md"
+  },
+  {
+    "slug": "headache",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Headache and red flags",
+    "description": "Headache and red flags: the complete clinical approach to Headache and red flags: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/neurology-headache.md"
+  },
+  {
+    "slug": "cord-compression",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Spinal cord compression",
+    "description": "Spinal cord compression: the complete clinical approach to Spinal cord compression: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/neurology-cord-compression.md"
+  },
+  {
+    "slug": "raised-icp",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Raised intracranial pressure",
+    "description": "Raised intracranial pressure: the complete clinical approach to Raised intracranial pressure: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/neurology-raised-icp.md"
+  },
+  {
+    "slug": "ra",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Rheumatology",
+    "title": "Rheumatoid arthritis",
+    "description": "Rheumatoid arthritis: the complete clinical approach to Rheumatoid arthritis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/rheumatology-ra.md"
+  },
+  {
+    "slug": "sle",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Rheumatology",
+    "title": "Systemic lupus erythematosus",
+    "description": "Systemic lupus erythematosus: the complete clinical approach to Systemic lupus erythematosus: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/rheumatology-sle.md"
+  },
+  {
+    "slug": "gout",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Rheumatology",
+    "title": "Gout and crystal arthropathies",
+    "description": "Gout and crystal arthropathies: the complete clinical approach to Gout and crystal arthropathies: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/rheumatology-gout.md"
+  },
+  {
+    "slug": "oa",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Rheumatology",
+    "title": "Osteoarthritis",
+    "description": "Osteoarthritis: the complete clinical approach to Osteoarthritis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/rheumatology-oa.md"
+  },
+  {
+    "slug": "sclerosis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Rheumatology",
+    "title": "Systemic sclerosis",
+    "description": "Systemic sclerosis: the complete clinical approach to Systemic sclerosis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/rheumatology-sclerosis.md"
+  },
+  {
+    "slug": "vasculitis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Rheumatology",
+    "title": "Vasculitis",
+    "description": "Vasculitis: the complete clinical approach to Vasculitis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical causes.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/rheumatology-vasculitis.md"
+  },
+  {
+    "slug": "septic-arthritis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Rheumatology",
+    "title": "Septic arthritis",
+    "description": "Septic arthritis: the complete clinical approach to Septic arthritis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/rheumatology-septic-arthritis.md"
+  },
+  {
+    "slug": "spa",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Rheumatology",
+    "title": "Spondyloarthritis",
+    "description": "Spondyloarthritis: the complete clinical approach to Spondyloarthritis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/rheumatology-spa.md"
+  },
+  {
+    "slug": "pharmacology",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "General internal medicine",
+    "title": "Clinical pharmacology and rational prescribing",
+    "description": "Clinical pharmacology and rational prescribing: the complete clinical approach to Clinical pharmacology and rational prescribing: definition; causes and risk factors in our setting.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/general-pharmacology.md"
+  },
+  {
+    "slug": "geriatrics",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "General internal medicine",
+    "title": "Geriatric medicine",
+    "description": "Geriatric medicine: the complete clinical approach to Geriatric medicine: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/general-geriatrics.md"
+  },
+  {
+    "slug": "poisoning",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "General internal medicine",
+    "title": "Poisoning and adverse drug reactions",
+    "description": "Poisoning and adverse drug reactions: the complete clinical approach to Poisoning and adverse drug reactions: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/general-poisoning.md"
+  },
+  {
+    "slug": "anaphylaxis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "General internal medicine",
+    "title": "Anaphylaxis",
+    "description": "Anaphylaxis: the complete clinical approach to Anaphylaxis: definition; causes and risk factors in our setting (including HIV, TB, malaria, rheumatic, sickle cell and other tropical causes.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/general-anaphylaxis.md"
+  },
+  {
+    "slug": "nutrition",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "General internal medicine",
+    "title": "Nutrition and vitamin deficiencies",
+    "description": "Nutrition and vitamin deficiencies: the complete clinical approach to Nutrition and vitamin deficiencies: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/general-nutrition.md"
   }
 ]

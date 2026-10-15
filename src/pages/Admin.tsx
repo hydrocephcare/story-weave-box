@@ -446,6 +446,7 @@ export default function Admin() {
 
   // pages that live at their own address: listed here so they are not hidden
   const pageLinks: { id: string; label: string; icon: React.ElementType }[] = [
+    { id: "route:/admin/duplicates", label: "Repeated pages", icon: Layers },
     { id: "route:/admin/drafts", label: "AI notes to approve", icon: Sparkles },
     { id: "route:/admin/activity", label: "Activity & AI keys", icon: Search },
     { id: "route:/admin/analytics", label: "Visitors", icon: Globe },

@@ -65,6 +65,7 @@ const AdminContentHealth = lazy(() => import("./pages/AdminContentHealth"));
 const AdminPolish = lazy(() => import("./pages/AdminPolish"));
 const Imed = lazy(() => import("./pages/Imed"));
 const MyWeek = lazy(() => import("./pages/MyWeek"));
+const AdminDuplicates = lazy(() => import("./pages/AdminDuplicates"));
 const AdminDrafts = lazy(() => import("./pages/AdminDrafts"));
 const AdminActivity = lazy(() => import("./pages/AdminActivity"));
 const YearTimetable = lazy(() => import("./pages/YearTimetable"));
@@ -219,6 +220,7 @@ const AnimatedRoutes = () => {
             <Route path="/admin/analytics" element={<AdminRoute><AdminAnalytics /></AdminRoute>} />
             <Route path="/admin/tools" element={<AdminRoute><AdminTools /></AdminRoute>} />
             <Route path="/admin/content-health" element={<AdminRoute><AdminContentHealth /></AdminRoute>} />
+            <Route path="/admin/duplicates" element={<AdminRoute><AdminDuplicates /></AdminRoute>} />
             <Route path="/admin/drafts" element={<AdminRoute><AdminDrafts /></AdminRoute>} />
             <Route path="/admin/activity" element={<AdminRoute><AdminActivity /></AdminRoute>} />
             <Route path="/admin/polish" element={<AdminRoute><AdminPolish /></AdminRoute>} />

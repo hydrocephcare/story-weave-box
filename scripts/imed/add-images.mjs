@@ -16,7 +16,12 @@ const ARTICLE = {
   "sepsis-and-septic-shock": "Sepsis", "nephrotic-and-nephritic-syndromes": "Nephrotic syndrome",
   "diabetic-ketoacidosis": "Diabetic ketoacidosis",
   "acs": "Acute coronary syndrome", "endocarditis": "Infective endocarditis", "arrhythmia": "Electrocardiography", "pericardium": "Pericarditis", "cardiomyopathy": "Cardiomyopathy",
-  "pvd": "Peripheral artery disease", "hiv": "HIV/AIDS", "malaria": "Malaria", "meningitis": "Meningitis", "enteric": "Typhoid fever", "amr": "Antimicrobial resistance",
+  "pvd": "Peripheral artery disease",
+  "stroke": "Stroke", "parkinson": "Parkinson's disease", "myasthenia": "Myasthenia gravis", "dementia": "Dementia", "ra": "Rheumatoid arthritis", "sle": "Systemic lupus erythematosus",
+  "gout": "Gout", "oa": "Osteoarthritis", "sclerosis": "Systemic scleroderma", "sickle-cell": "Sickle cell disease", "leukaemia": "Leukemia", "lymphoma": "Lymphoma",
+  "myeloma": "Multiple myeloma", "thalassaemia": "Thalassemia", "haemolytic": "Hemolytic anemia", "iron-deficiency": "Iron-deficiency anemia", "megaloblastic": "Megaloblastic anemia",
+  "cirrhosis": "Cirrhosis", "pancreatitis": "Pancreatitis", "ibd": "Inflammatory bowel disease", "pud": "Peptic ulcer disease", "thyroid": "Hyperthyroidism", "adrenal": "Cushing's syndrome",
+  "ckd": "Chronic kidney disease", "uti": "Urinary tract infection", "anaphylaxis": "Anaphylaxis", "pituitary": "Pituitary adenoma", "vasculitis": "Vasculitis", "spa": "Ankylosing spondylitis", "hiv": "HIV/AIDS", "malaria": "Malaria", "meningitis": "Meningitis", "enteric": "Typhoid fever", "amr": "Antimicrobial resistance",
 };
 const OK = /^(public domain|cc0|cc[ -]by|cc[ -]by[ -]sa|pd)/i;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -43,7 +48,7 @@ for (const n of notes) {
   try {
     const sum = await get(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`);
     const name = decodeURIComponent(String(sum.originalimage?.source ?? "").split("/").pop()?.split("?")[0] ?? "");
-    if (!name || /\.(svg|ogv|webm|gif)$/i.test(name) || /logo|map|flag|diagram of the/i.test(name)) { console.log("skip (no usable picture):", n.slug); continue; }
+    if (!name || /\.(svg|ogv|webm|gif)$/i.test(name) || /logo|map|flag|icon|symbol|circle|chart|graph|diagram of the/i.test(name)) { console.log("skip (no usable picture):", n.slug); continue; }
     const info = await get(`https://commons.wikimedia.org/w/api.php?action=query&titles=File:${encodeURIComponent(name)}&prop=imageinfo&iiprop=extmetadata|size&format=json&origin=*`);
     const page = Object.values(info.query.pages)[0];
     const ii = page.imageinfo?.[0];

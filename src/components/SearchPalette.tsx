@@ -9,13 +9,13 @@ import Highlight from "@/components/Highlight";
 import { HitIcon } from "@/components/HitIcon";
 import { OPEN_SEARCH_EVENT } from "@/lib/searchEvents";
 import { openAI } from "@/lib/aiEvents";
-import { topicPath, useTopicIndex } from "@/lib/topics";
+import { slugFromName, topicPath, useTopicIndex } from "@/lib/topics";
 import { useMyYear } from "@/hooks/useMyYear";
 import { parseQuery } from "@/lib/ompathAiQuery";
 import OmpathMark from "@/components/ai/OmpathMark";
 import { Answer } from "@/components/ai/AnswerText";
 import { useAccess } from "@/lib/access";
-import { askable, cachedAnswer, FREE_PER_DAY, streamQuickAnswer, usedToday } from "@/lib/quickAnswer";
+import { askable } from "@/lib/quickAnswer";
 
 
 const RECENT_KEY = "ompath_recent_searches";
@@ -42,29 +42,15 @@ export default function SearchPalette() {
   const topic = useMemo(() => parseQuery(q).topic || q.trim(), [q]);
   const askAi = useCallback((question: string) => { setOpen(false); setQ(""); window.setTimeout(() => openAI(question), 60); }, []);
 
-  // a short answer under the search box, written after a short pause in typing (never on every key)
-  const { hasPass } = useAccess();
-  const [qa, setQa] = useState<{ q: string; text: string; busy: boolean } | null>(null);
-  const hitsRef = useRef(hits); hitsRef.current = hits;
-  useEffect(() => {
-    const query = q.trim();
-    if (!open || !askable(query) || !searched || loading) { if (!askable(query)) setQa(null); return; }
-    const cached = cachedAnswer(query);
-    if (cached) { setQa({ q: query, text: cached, busy: false }); return; }
-    if (!hasPass && usedToday() >= FREE_PER_DAY) { setQa(null); return; }
-    const ctl = new AbortController();
-    const t = setTimeout(() => {
-      setQa({ q: query, text: "", busy: true });
-      streamQuickAnswer(query, hitsRef.current, ctl.signal, (text) => setQa({ q: query, text, busy: true })).then((text) => setQa({ q: query, text, busy: false })).catch((e) => { if ((e as Error).name !== "AbortError") setQa(null); });
-    }, 2500);
-    return () => { clearTimeout(t); ctl.abort(); };
-  }, [q, open, searched, loading, hasPass]);
 
   const topicHits = useMemo(() => {
     const needle = q.trim().toLowerCase();
     if (needle.length < 3 || !topicIndex) return [];
     return topicIndex.filter((t) => t.n.toLowerCase() === needle || t.a.some((a) => a.toLowerCase() === needle) || t.n.toLowerCase().startsWith(needle)).sort((a, b) => Number(b.ai) - Number(a.ai) || b.d - a.d).slice(0, 2);
   }, [q, topicIndex]);
+
+  // the card under the search box opens the full topic page (written once, then kept); no AI is spent while typing
+  const readMore = askable(q.trim()) && searched && !loading && topicHits.length === 0 && !/(outline|timetable|past papers?|cat|exams?|notes|mcqs?|flashcards?)\s*$/i.test(q.trim());
 
   const shown = useMemo(() => hits.slice(0, 24), [hits]);
   const groups = useMemo(() => groupSiteHits(shown), [shown]);
@@ -165,11 +151,13 @@ export default function SearchPalette() {
               </div>
             </div>
           )}
-          {qa && qa.q === q.trim() && (
-            <div className="mx-3 mb-2 rounded-xl border border-border bg-background p-3" aria-label="Quick answer">
-              <p className="mb-1.5 text-[10px] font-bold uppercase tracking-wider text-primary">Quick answer</p>
-              {qa.text ? <div className="text-sm text-foreground/90"><Answer text={qa.text} /></div> : <div className="space-y-2" role="status" aria-label="Writing the answer"><div className="h-3 w-full animate-pulse rounded bg-muted" /><div className="h-3 w-5/6 animate-pulse rounded bg-muted" /><div className="h-3 w-2/3 animate-pulse rounded bg-muted" /></div>}
-              {qa.text && !qa.busy && <button type="button" onClick={() => { setOpen(false); setQ(""); navigate(`/search?q=${encodeURIComponent(qa.q)}`); }} className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-primary hover:underline">View more: topic page and all notes <ArrowRight className="h-3.5 w-3.5" aria-hidden /></button>}
+          {readMore && (
+            <div className="mx-3 mb-2">
+              <button type="button" onClick={() => { setOpen(false); setQ(""); navigate(topicPath(slugFromName(topic))); }} className="flex w-full items-center gap-3 rounded-xl border border-primary/40 bg-primary/10 px-3 py-3 text-left hover:bg-primary/15">
+                <BookOpen className="h-5 w-5 shrink-0 text-primary" aria-hidden />
+                <span className="min-w-0 flex-1"><span className="block truncate text-sm font-bold text-primary">Read more about “{topic}”</span><span className="block text-[11px] leading-4 text-muted-foreground">The full exam-ready page: causes, examination, investigations, management and the questions examiners ask.</span></span>
+                <ArrowRight className="h-4 w-4 shrink-0 text-primary" aria-hidden />
+              </button>
             </div>
           )}
           {topicHits.length > 0 && (

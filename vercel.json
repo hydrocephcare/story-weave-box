@@ -113,14 +113,44 @@
       "source": "/blog/victory-school-club-membership-system-project-guide",
       "destination": "/blog",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/pleural-effusion-lights-criteria-y4",
+      "destination": "/notes/pleural-effusion",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pneumothorax-clinical-management-y4",
+      "destination": "/notes/pneumothorax",
+      "permanent": true
+    },
+    {
+      "source": "/blog/bronchial-asthma-internal-medicine-y4",
+      "destination": "/notes/asthma",
+      "permanent": true
     }
   ],
   "rewrites": [
-    { "source": "/api/ai-chat", "destination": "/api/ai?task=chat" },
-    { "source": "/api/topic-write", "destination": "/api/ai?task=topic" },
-    { "source": "/api/outline-parse", "destination": "/api/ai?task=outline" },
-    { "source": "/api/page-study", "destination": "/api/ai?task=study" },
-    { "source": "/api/ai-polish", "destination": "/api/ai?task=polish" },
+    {
+      "source": "/api/ai-chat",
+      "destination": "/api/ai?task=chat"
+    },
+    {
+      "source": "/api/topic-write",
+      "destination": "/api/ai?task=topic"
+    },
+    {
+      "source": "/api/outline-parse",
+      "destination": "/api/ai?task=outline"
+    },
+    {
+      "source": "/api/page-study",
+      "destination": "/api/ai?task=study"
+    },
+    {
+      "source": "/api/ai-polish",
+      "destination": "/api/ai?task=polish"
+    },
     {
       "source": "/topics-sitemap.xml",
       "destination": "/api/topics-sitemap"
@@ -456,7 +486,9 @@
     "deploymentEnabled": true
   },
   "functions": {
-    "api/ai.js": { "maxDuration": 60 },
+    "api/ai.js": {
+      "maxDuration": 60
+    },
     "api/student-data.js": {
       "includeFiles": "public/data/**"
     },

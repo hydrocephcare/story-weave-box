@@ -1,0 +1,239 @@
+{
+ "made": "2026-10-15",
+ "groups": [
+  {
+   "keep": {
+    "id": "66ca2809-8db2-484f-a77a-8865020d5a36",
+    "words": 675,
+    "title": "Liver Tumors: Benign and Malignant Overview",
+    "category": "Year 3: Gastrointestinal Pathology",
+    "slug": "liver-tumors-benign-and-malignant-overview"
+   },
+   "hide": [
+    {
+     "id": "27f16853-5416-4b75-aca1-ba875ef90076",
+     "words": 197,
+     "title": "Liver Tumors: Benign, Primary, and Secondary Malignancies Summary",
+     "category": "Year 3: Gastrointestinal Pathology",
+     "slug": "liver-tumors-summary-notes"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "8ec0ec59-4dc5-4ab6-a0f4-57109bea993b",
+    "words": 5676,
+    "title": "Liver Histology & Physiology",
+    "category": "Year 2: Clinical Biochemistry",
+    "slug": "liver-histology-physiology-2"
+   },
+   "hide": [
+    {
+     "id": "e1db3404-ccf9-428a-bd92-161746acb03a",
+     "words": 5425,
+     "title": "Liver Histology & Physiology",
+     "category": "Year 2: Clinical Biochemistry",
+     "slug": "liver-histology-physiology"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "3d70512a-99bf-4d53-aa1b-b75909bcde60",
+    "words": 2726,
+    "title": "Cellular Immunology MCQs",
+    "category": "Year 2: Cellular Immunology",
+    "slug": "cellular-i-mmunology"
+   },
+   "hide": [
+    {
+     "id": "cc1c072a-87cd-4d32-b452-f932bce43cf4",
+     "words": 2004,
+     "title": "Cellular Immunology",
+     "category": "Year 2: Cellular Immunology",
+     "slug": "cellular-i-mmunology-ae60f0"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "af45ea86-def6-4bb0-b221-a98fa1b348ac",
+    "words": 2392,
+    "title": "MBMP2300: Medical Physiology II MCQs",
+    "category": "Year 2: Physiology",
+    "slug": "mbmp2300-medical-physiology-ii-complete-study-guide"
+   },
+   "hide": [
+    {
+     "id": "279d912d-09ef-4b4b-8a1e-7694ce93918c",
+     "words": 2240,
+     "title": "MBMP2300: Medical Physiology II - Complete Study Guide",
+     "category": "Year 2: Physiology",
+     "slug": "mbmp2300-medical-physiology-2-study-guide"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "b144c6eb-9d22-48a0-b811-93c6ddda1786",
+    "words": 1393,
+    "title": "General Pathology",
+    "category": "Year 3: General Pathology",
+    "slug": "general-pathology-disease-mechanisms"
+   },
+   "hide": [
+    {
+     "id": "2675b4b1-ad85-4cc0-8c8e-af597d4cf1f2",
+     "words": 1234,
+     "title": "General Pathology",
+     "category": "Year 3: General Pathology",
+     "slug": "general-pathology-37a7a7"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "4a1d5d14-b428-4586-93c5-133a058c07ee",
+    "words": 2029,
+    "title": "General Pathology I",
+    "category": "Year 3: General Pathology",
+    "slug": "general-pathology-disease-mechanisms-2"
+   },
+   "hide": [
+    {
+     "id": "de831f1b-1680-4561-8c03-cc91ed77b854",
+     "words": 1263,
+     "title": "General Pathology I",
+     "category": "Year 3: General Pathology",
+     "slug": "general-pathology-i-2ca207"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "d195783a-fb87-414c-82d6-8bf1ee361c4f",
+    "words": 1186,
+    "title": "Herpesviruses: HSV-1, HSV-2, VZV, Symptoms, Diagnosis, Tx",
+    "category": "Year 3: Medical Virology",
+    "slug": "herpesviridae-hsv-vzv-overview-2"
+   },
+   "hide": [
+    {
+     "id": "fd646601-7f6e-4e59-a6e2-80269b0b6098",
+     "words": 1167,
+     "title": "Herpesviridae: HSV-1, HSV-2, VZV Pathogenesis, Diagnosis, Treatment",
+     "category": "Year 3: Medical Virology",
+     "slug": "herpesviridae-hsv-vzv-overview"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "6f55be10-d2ec-4dc1-bbe5-7fe8381086b9",
+    "words": 1852,
+    "title": "Master Medical Mycology: MKU Exam Guide for Fungal Diseases",
+    "category": "Year 3: Medical Mycology",
+    "slug": "mku-medical-mycology-exam-guide"
+   },
+   "hide": [
+    {
+     "id": "46131691-6afb-43f5-8c61-2a5bdeb50a46",
+     "words": 1832,
+     "title": "MYCOLOGY MCQs — Complete Bank",
+     "category": "Year 3: Medical Mycology",
+     "slug": "mycology-mcqs-complete-bank"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "7366b6a5-d0a0-4f6a-89e7-69b5dcdcc15f",
+    "words": 2078,
+    "title": "Male Reproductive System Pathology",
+    "category": "Year 3: Male Reproductive and Urinary System Pathology",
+    "slug": "summarythis-document-provides-a-comprehensive-overview-of-male-reproductive-system-pathologies-covering-congenital-malformations-inflammatory-conditions-and-neoplasms-of-the-penis-testis-epididymis-and-prostate-it-details-conditions-such-as-hypospadias-squamous-cell-carcinoma-of-the-penis-cryptorchidism-testicular-torsion-germ-cell-tumors-prostatitis-benign-prostatic-hyperplasia-bph-and-prostate-carcinoma-key-risk-factors-pathogenesis-clinical-features-and-management-strategies-are-discussed-for-each-pathology"
+   },
+   "hide": [
+    {
+     "id": "187bf467-6ef7-471f-8149-7b6382947e24",
+     "words": 2064,
+     "title": "Penile & Testicular Pathologies: Hypospadias, Tumors, Torsion – Male Reproductiv",
+     "category": "Year 3: Male Reproductive and Urinary System Pathology",
+     "slug": "male-reproductive-system-pathologyy"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "3dd714bb-9dee-463a-86da-4947519713c9",
+    "words": 647,
+    "title": "MKU MBChB Year 3 Exams 2026: Timetable, Pathology, Microbiology",
+    "category": "Year 3: Reference",
+    "slug": "mount-kenya-mbchb-year-3-exams"
+   },
+   "hide": [
+    {
+     "id": "6f718a71-1dba-4e1c-be05-7ec825034b7c",
+     "words": 419,
+     "title": "MKU MBChB Year III Exam Timetable: Medicine & Surgery Revision 2026",
+     "category": "Year 3: Reference",
+     "slug": "mku-mbchb-year-3-exam-schedule"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "47529355-9088-408f-8ac7-7dc5840ce74e",
+    "words": 7311,
+    "title": "Immunopathology complete mcqs — Past Paper Questions & Answers",
+    "category": "Year 3: Immunopathology",
+    "slug": "6999320f-immunopathology-complete-mcqs-past-paper"
+   },
+   "hide": [
+    {
+     "id": "954c1551-2d5b-4ad4-b9ef-dc497e6efd99",
+     "words": 5933,
+     "title": "Immunopathology — Past Paper Questions & Answers",
+     "category": "Year 3: Immunopathology",
+     "slug": "0b48dc82-immunopathology-past-paper"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "9edd365a-0f1d-415e-adef-6504e1909b49",
+    "words": 8946,
+    "title": "pathology essays — Past Paper Questions & Answers",
+    "category": "Year 3: General Pathology",
+    "slug": "7a2c699d-pathology-essays-past-paper"
+   },
+   "hide": [
+    {
+     "id": "984e418b-8fcf-4650-adbc-3b3798fe0c59",
+     "words": 8559,
+     "title": "systemic pathology essays — Past Paper Questions & Answers",
+     "category": "Year 3: General Pathology",
+     "slug": "6249adb1-systemic-pathology-essays-past-paper"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "f88e3a8c-69ce-49ea-ae97-e5e9960ab33b",
+    "words": 4022,
+    "title": "Here are all 45 questions, complete with full stems, choices, and answers.",
+    "category": "Pharmacology",
+    "slug": "here-are-all-45-questions-complete-with-full-stems-choices-and-answers"
+   },
+   "hide": [
+    {
+     "id": "8798aa7b-1979-4461-93c9-a82415fe54cd",
+     "words": 4014,
+     "title": "Hematology MCQs",
+     "category": "Year 3 : Hematopathology",
+     "slug": "hematology-mcqs"
+    }
+   ]
+  }
+ ]
+}
