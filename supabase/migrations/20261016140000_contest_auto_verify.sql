@@ -46,3 +46,16 @@ begin
   return new;
 end;
 $$;
+
+-- Admin-only way to save who can enter and whether students are admitted automatically (the browser cannot write to public.contests directly).
+create or replace function public.admin_set_contest_rules(p_contest_id uuid, p_university_ids uuid[], p_auto_verify boolean default null)
+returns void language plpgsql security definer set search_path = '' as $$
+begin
+  if not public.has_role((select auth.uid()), 'admin') then raise exception 'Administrator access required'; end if;
+  update public.contests
+  set university_ids = coalesce(p_university_ids, '{}'), auto_verify = coalesce(p_auto_verify, auto_verify), updated_at = now()
+  where id = p_contest_id;
+end;
+$$;
+revoke all on function public.admin_set_contest_rules(uuid, uuid[], boolean) from public, anon;
+grant execute on function public.admin_set_contest_rules(uuid, uuid[], boolean) to authenticated;
