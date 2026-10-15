@@ -9,9 +9,12 @@ import SideAds from "@/components/SideAds";
 import OutlineLine from "@/components/OutlineLine";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, Check, ClipboardCheck, Link2, Share2, Stethoscope, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X, Zap, Printer, ThumbsUp, ThumbsDown } from "lucide-react";
+import { ArrowLeft, Check, ClipboardCheck, Link2, Share2, Stethoscope, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X, Zap, Printer, ThumbsUp, ThumbsDown, Lock } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { aiPaused, looksLikeBot } from "@/lib/topicWriter";
+import { useAccess } from "@/lib/access";
+import { useFeatures } from "@/lib/features";
+import { openSubscribePrompt } from "@/lib/subscribe-prompt";
 import { DOMAIN_STYLE, imageCaption, writeDeepNotes, type AiPage, type DeepNotes, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
 import { useWebMedia } from "@/lib/webMedia";
 import HeroAurora from "@/components/HeroAurora";
@@ -165,7 +168,7 @@ function Disclaimer({ disease }: { disease: boolean }) {
 
 /** A quiet placeholder while a page is being prepared: no words about how it is made. */
 /** The deep exam notes: shown when they exist; otherwise one button writes them once (builds on the revision page) and saves them for everyone. */
-function DeepView({ slug, name, category, page, deep, onDone }: { slug: string; name: string; category: string; page: AiPage; deep: DeepNotes | null; onDone: (d: DeepNotes) => void }) {
+function DeepView({ slug, name, category, page, deep, onDone, canRead }: { slug: string; name: string; category: string; page: AiPage; deep: DeepNotes | null; onDone: (d: DeepNotes) => void; canRead: boolean }) {
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState("");
   const write = async () => {
@@ -174,6 +177,17 @@ function DeepView({ slug, name, category, page, deep, onDone }: { slug: string; 
     setBusy(false);
     if ("deep" in r) onDone(r.deep); else setErr(r.error === "busy" ? "The writer is busy right now. Try again in a minute." : r.error === "bot" ? "Open this page in a normal browser to write the deep notes." : "The deep notes could not be written just now. Try again in a minute.");
   };
+  const unlock = () => openSubscribePrompt("Deep exam notes are a Pro feature: bedside examination step by step, how to read every test, complicating factors, management step by step, and 10 or more extra examiner questions on every topic.");
+  if (!deep && !canRead) {
+    return (
+      <section id="deep-start" data-deep="1" className="rounded-3xl border border-primary/25 bg-primary/5 p-6 sm:p-8">
+        <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary"><Lock className="h-3.5 w-3.5" aria-hidden /> Pro · Deep exam notes</p>
+        <h2 className="mt-1 font-serif text-2xl font-bold sm:text-3xl">Go deeper on {name}</h2>
+        <p className="mt-2 max-w-[60ch] text-[17px] leading-relaxed text-foreground/80">The revision notes stay free. Pro adds the exam-depth layer: how to examine at the bedside, how to read each test, what complicates it, management step by step, and extra examiner questions.</p>
+        <button type="button" onClick={unlock} className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-95"><Sparkles className="h-4 w-4" aria-hidden /> See Pro</button>
+      </section>
+    );
+  }
   if (!deep) {
     return (
       <section id="deep-start" data-deep="1" className="rounded-3xl border border-primary/25 bg-primary/5 p-6 sm:p-8">
@@ -186,18 +200,28 @@ function DeepView({ slug, name, category, page, deep, onDone }: { slug: string; 
       </section>
     );
   }
+  const shown = canRead ? deep.sections : deep.sections.slice(0, 1);
   return (
     <div>
-      {deep.sections.map((x, i) => (
+      {shown.map((x, i) => (
         <Section key={`${x.h}-${i}`} id={`deep-${anchor(x.h)}`} title={x.h} first={i === 0} deep>
           {x.p && <Paras text={x.p} self={slug} />}
           {x.t && x.t.length > 0 && <TestTable rows={x.t} />}
           {x.b && x.b.length > 0 && <Bullets items={x.b} self={slug} />}
         </Section>
       ))}
-      <Section id="deep-exam" title="More examiner questions" deep>
-        <ol className="space-y-5">{deep.exam.map((q, i) => <ExaminerQuestion key={q} n={i + 1} text={q} />)}</ol>
-      </Section>
+      {canRead ? (
+        <Section id="deep-exam" title="More examiner questions" deep>
+          <ol className="space-y-5">{deep.exam.map((q, i) => <ExaminerQuestion key={q} n={i + 1} text={q} />)}</ol>
+        </Section>
+      ) : (
+        <section id="deep-locked" data-deep="1" className="mt-10 rounded-3xl border border-primary/25 bg-primary/5 p-6 sm:p-8">
+          <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-primary"><Lock className="h-3.5 w-3.5" aria-hidden /> Pro</p>
+          <h2 className="mt-1 font-serif text-2xl font-bold">The rest of the deep notes</h2>
+          <ul className="mt-3 space-y-1.5 text-[17px] text-foreground/80">{deep.sections.slice(1).map((x) => <li key={x.h} className="flex items-start gap-2"><Lock className="mt-1.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" aria-hidden />{x.h}</li>)}<li className="flex items-start gap-2"><Lock className="mt-1.5 h-3.5 w-3.5 shrink-0 text-muted-foreground" aria-hidden />{deep.exam.length} more examiner questions with answers</li></ul>
+          <button type="button" onClick={unlock} className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-95"><Sparkles className="h-4 w-4" aria-hidden /> Unlock with Pro</button>
+        </section>
+      )}
     </div>
   );
 }
@@ -297,6 +321,8 @@ export default function TopicPage() {
   const [deepLocal, setDeepLocal] = useState<DeepNotes | null>(null);
   useEffect(() => { setView("revision"); setDeepLocal(null); }, [slug]);
   const deep = deepLocal ?? page?.deep ?? null;
+  const access = useAccess();
+  const canRead = useFeatures(isAdmin || access.hasPass).can("deepNotes");
   useEffect(() => { if (!fresh) return; setShowFresh(true); const t = setTimeout(() => setShowFresh(false), 9000); return () => clearTimeout(t); }, [fresh]);
   useEffect(() => { document.body.classList.add("has-toc-bar"); return () => document.body.classList.remove("has-toc-bar"); }, []);
   useEffect(() => { if (topic || page) rememberTopic(slug, topic?.n ?? name); }, [slug, topic, page]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -471,7 +497,7 @@ export default function TopicPage() {
                 <button type="button" onClick={() => window.print()} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-4 py-1.5 text-sm font-bold hover:bg-muted"><Printer className="h-4 w-4" aria-hidden /> Print or save as PDF</button>
               </div>
             )}
-            {view === "deep" && page && <DeepView slug={slug} name={name} category={topic?.c ?? ""} page={page} deep={deep} onDone={setDeepLocal} />}
+            {view === "deep" && page && <DeepView slug={slug} name={name} category={topic?.c ?? ""} page={page} deep={deep} onDone={setDeepLocal} canRead={canRead} />}
 
             {intro.length > 0 && (
               <Section id="overview" title="Overview" first>

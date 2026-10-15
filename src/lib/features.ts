@@ -6,6 +6,7 @@ export type Tier = "free" | "pro";
 export interface Feature { key: string; label: string; blurb: string; defaultTier: Tier }
 
 export const FEATURES: Feature[] = [
+  { key: "deepNotes", label: "Deep exam notes", blurb: "On every topic page: bedside examination, how to read each test, confounders, step-by-step management and more examiner questions. Free readers see the first section.", defaultTier: "pro" },
   { key: "unlimitedAi", label: "Unlimited AI questions", blurb: "Free accounts get a daily number of AI answers. Pro has no limit.", defaultTier: "pro" },
   { key: "unlimitedPictures", label: "Unlimited picture questions", blurb: "Anatomy, histology and embryology spot questions with pictures, beyond the daily free set.", defaultTier: "pro" },
   { key: "longQuiz", label: "Practice quizzes of more than 10 questions", blurb: "\"Give me 30 MCQs on physiology\": built from the site's own questions, answers hidden until you submit.", defaultTier: "pro" },

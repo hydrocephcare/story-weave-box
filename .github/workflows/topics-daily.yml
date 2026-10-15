@@ -3,6 +3,7 @@ name: Daily topic pages and AI overviews
 # Every day at 05:00 Nairobi time (02:00 UTC):
 #   1. the topic pages are rebuilt from the notes, MCQs and essays (so new notes show up on their topic pages),
 #   2. every morning 25 more topics get a full page (Groq first, Gemini as the backup; needs the GROQ_API_KEYS and GEMINI_API_KEYS secrets),
+#   2b. up to 12 topics get their deep exam notes (the Pro layer, written ahead of time so nobody waits or spends credits),
 #   3. the new overviews are committed, which redeploys the site and refreshes the sitemap.
 # Run it yourself any time: GitHub > Actions > "Daily topic pages and AI overviews" > Run workflow.
 # AI overviews are saved as "not reviewed" and say so on the page. To mark one as checked by a doctor, set "reviewed": true in src/data/topicAi/<topic>.json.
@@ -15,6 +16,10 @@ on:
         description: "How many topic pages to write this run"
         required: false
         default: "25"
+      deep:
+        description: "How many topics get deep exam notes this run"
+        required: false
+        default: "12"
 
 permissions:
   contents: write
@@ -48,6 +53,12 @@ jobs:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || '25' }} --parallel=3
+
+      - name: Write today's deep exam notes (stops by itself when the AI keys run out)
+        env:
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
+        run: node scripts/topics/deep-fill.mjs ${{ inputs.deep || '12' }}
 
       - name: Write today's page summaries
         env:
