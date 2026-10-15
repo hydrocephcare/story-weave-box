@@ -204,10 +204,8 @@ export default function Navbar() {
       <nav className={`sticky top-0 z-40 border-b border-border bg-[hsl(174,62%,22%)] text-white transition-[transform,opacity] duration-300 ease-out will-change-transform ${hidden ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100 pointer-events-auto"}`}>
         <div className="mx-auto flex max-w-[1680px] items-center justify-between gap-3 px-4 py-2 sm:px-6">
           <Link to="/" className="flex shrink-0 items-center gap-2 text-lg font-bold text-white">
-            <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg">
-              <img src="/brand/ompath-study.svg" alt="Ompath Study logo" width="32" height="32" className="h-full w-full object-contain" decoding="async" />
-            </div>
-            <span className="font-serif">Ompath Study</span>
+            <img src="/brand/mark-dark.png" alt="" width="40" height="40" className="h-10 w-auto object-contain" decoding="async" />
+            <span className="brand-word text-xl leading-none">Ompath<span className="text-[#5eead4]">Study</span></span>
           </Link>
 
           <div className="hidden min-w-0 items-center gap-1 lg:flex">
@@ -246,10 +244,8 @@ export default function Navbar() {
               </SheetTrigger>
               <SheetContent side="left" className="w-72 bg-[hsl(174,62%,16%)] border-r-0 p-0 text-white [&>button]:text-white">
                 <div className="flex items-center gap-2 border-b border-white/10 px-4 py-4">
-                  <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg">
-                    <img src="/brand/ompath-study.svg" alt="Ompath Study logo" width="32" height="32" className="h-full w-full object-contain" decoding="async" />
-                  </div>
-                  <span className="font-serif text-lg font-bold">Ompath Study</span>
+                  <img src="/brand/mark-dark.png" alt="" width="40" height="40" className="h-10 w-auto object-contain" decoding="async" />
+                  <span className="brand-word text-xl leading-none">Ompath<span className="text-[#5eead4]">Study</span></span>
                 </div>
 
                 <div className="flex flex-col overflow-y-auto h-[calc(100%-65px)]">

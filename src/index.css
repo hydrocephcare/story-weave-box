@@ -5,6 +5,9 @@
 /* Google Fonts now load async via <link> in index.html (not a render-blocking
    CSS @import), so first paint is instant with system-ui fallbacks. */
 
+/* The wordmark of the Ompath Study logo: bold geometric sans, two colours. */
+.brand-word { font-family: Poppins, "Source Sans 3", system-ui, sans-serif; font-weight: 700; letter-spacing: -0.015em; }
+
 @layer base {
   :root {
     --background: 0 0% 100%;

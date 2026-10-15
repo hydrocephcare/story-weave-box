@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ArrowRight, BookOpen, Mail, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, Mail, MessageCircle, Phone } from "lucide-react";
 
 const STUDY = [
   { to: "/blog", label: "Study notes" },
@@ -44,9 +44,9 @@ export default function SiteFooter() {
     <footer className="mt-16 border-t border-border bg-muted/30 pb-24 sm:pb-8">
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-8 px-5 py-9 lg:grid-cols-[1.3fr_1fr_1.4fr_1fr] lg:gap-10 lg:py-12">
         <div className="col-span-2 lg:col-span-1">
-          <Link to="/" className="inline-flex items-center gap-2.5 font-serif text-xl font-bold text-foreground">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground"><BookOpen className="h-5 w-5" aria-hidden /></span>
-            Ompath Study
+          <Link to="/" aria-label="Ompath Study" className="inline-flex items-center gap-2.5">
+            <img src="/brand/mark-light.png" alt="" width="44" height="44" className="h-11 w-auto object-contain" decoding="async" />
+            <span className="brand-word text-2xl leading-none text-[#0b2a5b] dark:text-white">Ompath<span className="text-[#0f8f82] dark:text-[#5eead4]">Study</span></span>
           </Link>
           <p className="mt-3 max-w-xs text-[15px] leading-relaxed text-muted-foreground">Free medical notes, past papers, MCQs and a page on every topic.</p>
           <div className="mt-4 flex items-center gap-2">

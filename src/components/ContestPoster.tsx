@@ -14,7 +14,7 @@ function wrap(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): st
   return lines;
 }
 
-function draw(contest: ContestRecord, universities: ContestUniversity[], uniName?: string): HTMLCanvasElement {
+function draw(contest: ContestRecord, universities: ContestUniversity[], uniName: string | undefined, mark: HTMLImageElement | null): HTMLCanvasElement {
   const c = document.createElement("canvas"); c.width = W; c.height = H;
   const ctx = c.getContext("2d")!;
   const bg = ctx.createLinearGradient(0, 0, W, H); bg.addColorStop(0, "#071315"); bg.addColorStop(0.6, "#0b2a2c"); bg.addColorStop(1, "#103c3a");
@@ -24,9 +24,10 @@ function draw(contest: ContestRecord, universities: ContestUniversity[], uniName
   ctx.fillStyle = "#fff"; ctx.textBaseline = "alphabetic";
 
   // brand
-  ctx.fillStyle = "#5eead4"; ctx.beginPath(); ctx.roundRect(80, 90, 84, 84, 20); ctx.fill();
-  ctx.fillStyle = "#071315"; ctx.font = "900 46px Georgia, serif"; ctx.textAlign = "center"; ctx.fillText("O", 122, 148);
-  ctx.textAlign = "left"; ctx.fillStyle = "#fff"; ctx.font = "700 42px Georgia, serif"; ctx.fillText("Ompath Study", 186, 148);
+  let bx = 80;
+  if (mark) { const h = 130, w = h * (mark.naturalWidth / mark.naturalHeight); ctx.drawImage(mark, 80, 70, w, h); bx = 80 + w + 20; }
+  ctx.textAlign = "left"; ctx.fillStyle = "#fff"; ctx.font = "700 60px Poppins, Arial, sans-serif"; ctx.fillText("Ompath", bx, 160);
+  ctx.fillStyle = "#5eead4"; ctx.fillText("Study", bx + ctx.measureText("Ompath").width, 160);
 
   // status chip
   const live = contest.stage === "live", reg = contest.stage === "registration";
@@ -89,8 +90,9 @@ export default function ContestPoster({ contest, universities, university, class
   async function make() {
     setBusy(true);
     try {
-      await document.fonts?.ready;
-      const canvas = draw(contest, universities, university?.abbreviation || university?.name);
+      await document.fonts?.load("700 60px Poppins").catch(() => []);
+      const mark = await new Promise<HTMLImageElement | null>((resolve) => { const im = new Image(); im.onload = () => resolve(im); im.onerror = () => resolve(null); im.src = "/brand/mark-dark.png"; });
+      const canvas = draw(contest, universities, university?.abbreviation || university?.name, mark);
       const url = canvas.toDataURL("image/png"); setPreview(url);
       const a = document.createElement("a"); a.href = url; a.download = `${contest.slug}${university ? `-${university.slug}` : ""}-status.png`; a.click();
     } finally { setBusy(false); }
