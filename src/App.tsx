@@ -216,6 +216,7 @@ const AnimatedRoutes = () => {
             <Route path="/exams" element={<RailLayout><Exams /></RailLayout>} />
             <Route path="/exams/:id/start" element={<ExamStart />} />
             <Route path="/contests" element={<RailLayout><Contests /></RailLayout>} />
+            <Route path="/contests/:slug" element={<ContestBriefing />} />
             <Route path="/contests/:slug/briefing" element={<ContestBriefing />} />
             <Route path="/contests/:slug/register" element={<SignedInRoute><ContestRegistration /></SignedInRoute>} />
             <Route path="/contests/:slug/lobby" element={<SignedInRoute><ContestLobby /></SignedInRoute>} />
