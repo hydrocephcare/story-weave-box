@@ -31,7 +31,7 @@ export default function AdminDuplicates() {
     const { error } = await db.from("articles").update({ published: false, deleted_at: new Date().toISOString() }).eq("id", p.id);
     if (error) setMsg(error.message); else { setState((s) => ({ ...s, [p.id]: "hidden" })); setMsg(`Hidden: ${p.title}`); }
   };
-  const link = (p: Page) => (p.slug ? `/blog/${p.slug}` : `/blog/${p.id}`);
+  const link = (p: Page) => (p.id.startsWith("note:") ? `/notes/${p.slug}` : p.slug ? `/blog/${p.slug}` : `/blog/${p.id}`);
 
   return (
     <main className="mx-auto max-w-3xl px-5 py-10">

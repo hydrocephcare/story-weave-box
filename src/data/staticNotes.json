@@ -2721,5 +2721,35 @@
     "description": "Nutrition and vitamin deficiencies: the complete clinical approach to Nutrition and vitamin deficiencies: definition; causes and risk factors in our setting (including HIV, TB, malaria.",
     "updated": "2026-10-15",
     "file": "src/content/notes/general-nutrition.md"
+  },
+  {
+    "slug": "lymphomas",
+    "year": 3,
+    "unit": "Hematopathology II",
+    "group": "Lymphomas",
+    "title": "Lymphomas: Hodgkin and non-Hodgkin lymphoma",
+    "description": "Lymphomas: Hodgkin versus non-Hodgkin, Reed-Sternberg cells, WHO classification, translocations and viruses, Ann Arbor staging, treatment, complications and practice questions.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/haematopathology-lymphomas.md"
+  },
+  {
+    "slug": "liver-tumours",
+    "year": 3,
+    "unit": "Gastrointestinal Pathology",
+    "group": "Liver",
+    "title": "Liver tumours: benign, primary malignant and metastatic",
+    "description": "Liver tumours: haemangioma, FNH, adenoma, hepatocellular carcinoma, cholangiocarcinoma, angiosarcoma, hepatoblastoma and metastases, with markers, imaging, treatment and practice questions.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/gi-pathology-liver-tumours.md"
+  },
+  {
+    "slug": "amoebiasis",
+    "year": 2,
+    "unit": "Parasitology",
+    "group": "Protozoa",
+    "title": "Amoebiasis: Entamoeba histolytica and the free-living amoebae",
+    "description": "Amoebiasis: life cycle, pathogenesis, dysentery, amoebic liver abscess, diagnosis, treatment in two steps, and the free-living amoebae (Naegleria, Acanthamoeba), with practice questions.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/parasitology-amoebiasis.md"
   }
 ]

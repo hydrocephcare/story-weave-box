@@ -3,19 +3,76 @@
  "groups": [
   {
    "keep": {
-    "id": "66ca2809-8db2-484f-a77a-8865020d5a36",
-    "words": 675,
-    "title": "Liver Tumors: Benign and Malignant Overview",
-    "category": "Year 3: Gastrointestinal Pathology",
-    "slug": "liver-tumors-benign-and-malignant-overview"
+    "id": "note:lymphomas",
+    "words": 2600,
+    "title": "Lymphomas: Hodgkin and non-Hodgkin lymphoma (new full note)",
+    "category": "Year 3 note",
+    "slug": "lymphomas"
    },
    "hide": [
     {
+     "id": "076c3be4-52e9-4c52-ba8c-cfe55d9d4491",
+     "words": 452,
+     "title": "Non-Hodgkin Lymphoma: Classification, Symptoms, Diagnosis, and Treatment",
+     "category": "Year 3: Hematopathology II",
+     "slug": "non-hodgkin-lymphoma"
+    },
+    {
+     "id": "b3645b00-b674-4194-9a4b-e2e4303354d5",
+     "words": 540,
+     "title": "Lymphoma Overview and Classification",
+     "category": "Year 3: Hematopathology II",
+     "slug": "lymphoma-overview-classification"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "note:liver-tumours",
+    "words": 2300,
+    "title": "Liver tumours: benign, primary malignant and metastatic (new full note)",
+    "category": "Year 3 note",
+    "slug": "liver-tumours"
+   },
+   "hide": [
+    {
+     "id": "66ca2809-8db2-484f-a77a-8865020d5a36",
+     "words": 737,
+     "title": "Liver Tumors: Benign and Malignant Overview",
+     "category": "Year 3: Gastrointestinal Pathology",
+     "slug": "liver-tumors-benign-and-malignant-overview"
+    },
+    {
      "id": "27f16853-5416-4b75-aca1-ba875ef90076",
-     "words": 197,
+     "words": 238,
      "title": "Liver Tumors: Benign, Primary, and Secondary Malignancies Summary",
      "category": "Year 3: Gastrointestinal Pathology",
      "slug": "liver-tumors-summary-notes"
+    }
+   ]
+  },
+  {
+   "keep": {
+    "id": "note:amoebiasis",
+    "words": 2700,
+    "title": "Amoebiasis: Entamoeba histolytica and the free-living amoebae (new full note)",
+    "category": "Year 2 note",
+    "slug": "amoebiasis"
+   },
+   "hide": [
+    {
+     "id": "0b5d9a76-352f-488b-8b09-746dec02561d",
+     "words": 519,
+     "title": "Entamoeba histolytica and Amoebiasis: Life Cycle, Pathogenesis, and Treatment",
+     "category": "Year 2: Parasitology",
+     "slug": "entamoeba-histolytica-amoebiasis"
+    },
+    {
+     "id": "171d8bf9-2c00-4049-90ce-4de5a0a7dbf8",
+     "words": 651,
+     "title": "Amebiasis and Pathogenic Free-Living Amebae",
+     "category": "Year 2: Parasitology",
+     "slug": "amebiasis-pathogenic-free-living-amebae-guide"
     }
    ]
   },

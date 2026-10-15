@@ -128,6 +128,36 @@
       "source": "/blog/bronchial-asthma-internal-medicine-y4",
       "destination": "/notes/asthma",
       "permanent": true
+    },
+    {
+      "source": "/blog/non-hodgkin-lymphoma",
+      "destination": "/notes/lymphomas",
+      "permanent": true
+    },
+    {
+      "source": "/blog/lymphoma-overview-classification",
+      "destination": "/notes/lymphomas",
+      "permanent": true
+    },
+    {
+      "source": "/blog/liver-tumors-benign-and-malignant-overview",
+      "destination": "/notes/liver-tumours",
+      "permanent": true
+    },
+    {
+      "source": "/blog/liver-tumors-summary-notes",
+      "destination": "/notes/liver-tumours",
+      "permanent": true
+    },
+    {
+      "source": "/blog/entamoeba-histolytica-amoebiasis",
+      "destination": "/notes/amoebiasis",
+      "permanent": true
+    },
+    {
+      "source": "/blog/amebiasis-pathogenic-free-living-amebae-guide",
+      "destination": "/notes/amoebiasis",
+      "permanent": true
     }
   ],
   "rewrites": [

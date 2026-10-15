@@ -581,3 +581,9 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
 .note-body.note-topic p { margin-top: 1rem; }
 .note-body.note-topic li { margin-top: 0.45rem; }
 @media (max-width: 640px) { .note-body.note-topic h2 { font-size: 1.6rem; margin-top: 2.5rem; } }
+
+/* the note page never grows wider than the screen, whatever the browser zoom or font size: long words wrap and tables shrink or scroll inside their box */
+.note-body.note-topic { overflow-wrap: anywhere; max-width: 100%; min-width: 0; }
+.note-body.note-topic .note-table { max-width: 100%; }
+.note-body.note-topic .note-table table { min-width: 0; }
+.note-body.note-topic img, .note-body.note-topic pre { max-width: 100%; }

@@ -124,7 +124,7 @@ function StaticNoteView() {
   };
 
   return (
-    <div data-ad-anchor className={`mx-auto px-4 py-6 sm:px-6 sm:py-10 ${note.paper ? "max-w-4xl" : "max-w-6xl"}`}>
+    <div data-ad-anchor className={`mx-auto w-full min-w-0 overflow-x-clip px-4 py-6 sm:px-6 sm:py-10 ${note.paper ? "max-w-4xl" : "max-w-[72rem]"}`}>
       <SideAds title={note.title} />
       <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1 text-xs font-semibold text-muted-foreground print:hidden">
         <Link to="/" className="hover:text-primary">Home</Link> ›
@@ -141,7 +141,7 @@ function StaticNoteView() {
         <button type="button" onClick={() => window.print()} className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-1.5 text-xs font-bold text-muted-foreground hover:border-primary/50 hover:text-primary print:hidden"><Printer className="h-3.5 w-3.5" /> Print or save as PDF</button>
       </header>
 
-      <div className={railOn ? "mt-6 lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-12" : ""}>
+      <div className={railOn ? "mt-6 lg:grid lg:grid-cols-[minmax(0,13.75rem)_minmax(0,1fr)] lg:gap-10" : ""}>
         {railOn && parsed && (
           <aside className="hidden lg:block print:hidden" aria-label="On this page">
             <nav className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2">
@@ -152,7 +152,7 @@ function StaticNoteView() {
             </nav>
           </aside>
         )}
-        <div className="min-w-0 max-w-[48rem]">
+        <div className="w-full min-w-0 max-w-3xl">
       {quick && <QuickSummaryDialog summary={quick} />}
 
       {!note.paper && <PageSummary id={`n:${note.slug}`} className="mt-5" />}
