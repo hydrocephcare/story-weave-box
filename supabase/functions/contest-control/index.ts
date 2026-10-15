@@ -75,6 +75,7 @@ serve(async (req) => {
       const ids = Array.isArray(body?.universityIds) ? [...new Set(body.universityIds.map((item: unknown) => String(item)))].slice(0, 200) : [];
       const { error } = await admin.from("contests").update({ university_ids: ids, updated_at: new Date().toISOString() }).eq("id", String(body?.contestId || ""));
       if (error) throw error;
+      if (typeof body?.autoVerify === "boolean") await admin.from("contests").update({ auto_verify: body.autoVerify }).eq("id", String(body?.contestId || "")); // column exists once the auto-verify SQL is installed
       return json({ success: true, count: ids.length });
     }
 
@@ -155,12 +156,14 @@ serve(async (req) => {
       if (!contest || !contest.published || contest.status !== "registration" || (contest.registration_opens_at && new Date(contest.registration_opens_at).getTime() > now) || (contest.registration_closes_at && new Date(contest.registration_closes_at).getTime() <= now)) return json({ error: "Registration is not open" }, 409);
       if (Array.isArray(contest.eligible_years) && contest.eligible_years.length && !contest.eligible_years.includes(studyYear)) return json({ error: "Your study year is not eligible" }, 400);
       const { data: scope } = await admin.from("contests").select("university_ids").eq("id", contestId).maybeSingle(); // absent until the scope SQL is installed
+      const { data: av } = await admin.from("contests").select("auto_verify").eq("id", contestId).maybeSingle(); // absent until the auto-verify SQL is installed
+      const admitNow = av?.auto_verify === true;
       const allowed: string[] = Array.isArray(scope?.university_ids) ? scope.university_ids : [];
       if (allowed.length && !allowed.includes(universityId)) return json({ error: "This contest is not open to that university" }, 400);
       const { count } = await admin.from("contest_registrations").select("id", { count: "exact", head: true }).eq("contest_id", contestId).eq("university_id", universityId).neq("status", "withdrawn");
       if ((count || 0) >= Number(contest.max_participants_per_university || 50)) return json({ error: "This university has reached its participant limit" }, 409);
       if (representation === "university_team" && teamRole === "captain") { const { count: captains } = await admin.from("contest_registrations").select("id", { count: "exact", head: true }).eq("contest_id", contestId).eq("university_id", universityId).ilike("team_name", teamName).eq("team_role", "captain").neq("status", "withdrawn"); if (captains) return json({ error: "This team already has a captain" }, 409); }
-      const { data, error } = await admin.from("contest_registrations").insert({ contest_id: contestId, user_id: user.id, university_id: universityId, study_year: studyYear, representation, team_name: teamName, team_role: teamRole, status: "pending", accepted_rules_at: new Date().toISOString() }).select("id,contest_id,university_id,study_year,representation,status,team_name,team_role").single();
+      const { data, error } = await admin.from("contest_registrations").insert({ contest_id: contestId, user_id: user.id, university_id: universityId, study_year: studyYear, representation, team_name: teamName, team_role: teamRole, status: admitNow ? "verified" : "pending", accepted_rules_at: new Date().toISOString() }).select("id,contest_id,university_id,study_year,representation,status,team_name,team_role").single();
       if (error?.code === "23505") return json({ error: "You are already registered for this contest" }, 409);
       if (error) throw error;
       return json({ success: true, registration: data });

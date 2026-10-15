@@ -404,8 +404,8 @@ export async function setContestUniversityActive(universityId: string, active: b
 }
 
 /** Limit a contest to chosen universities (2, 3, ...). An empty list opens it to every university. */
-export async function setContestUniversityScope(contestId: string, universityIds: string[]) {
-  await contestControl({ action: "set_contest_universities", contestId, universityIds });
+export async function setContestUniversityScope(contestId: string, universityIds: string[], autoVerify?: boolean) {
+  await contestControl({ action: "set_contest_universities", contestId, universityIds, autoVerify });
 }
 
 export async function createSampleContest(title?: string) {
