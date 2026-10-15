@@ -573,3 +573,11 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
 
 /* Article flow: the opening paragraph of a section reads as a lead. */
 .flow > p:first-child { font-size: 1.07em; color: hsl(var(--foreground) / .9); }
+
+/* notes laid out like the topic pages: roomier, bigger section headings, larger text */
+.note-body.note-topic { font-size: 1.0625rem; line-height: 1.85; }
+.note-body.note-topic h2 { font-size: 2rem; margin-top: 3.25rem; padding-bottom: 0; border-bottom: 0; }
+.note-body.note-topic h3 { font-size: 1.25rem; margin-top: 2rem; }
+.note-body.note-topic p { margin-top: 1rem; }
+.note-body.note-topic li { margin-top: 0.45rem; }
+@media (max-width: 640px) { .note-body.note-topic h2 { font-size: 1.6rem; margin-top: 2.5rem; } }

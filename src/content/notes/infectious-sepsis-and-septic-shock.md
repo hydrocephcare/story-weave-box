@@ -13,6 +13,40 @@
 - **Septic shock:** sepsis with **persistent hypotension needing vasopressors to keep the mean arterial pressure at or above 65 mmHg and a lactate above 2 mmol/L despite adequate fluids.**
 - **Bedside screen (qSOFA):** two or more of **respiratory rate 22 or more, altered mentation, systolic blood pressure 100 or less**. It flags patients at risk: it is a warning, not a diagnosis.
 
+## Anatomy and physiology you need
+| System | Key anatomical/physiological feature | Clinical relevance |
+|---|---|---|
+| **Circulation** | Endothelial glycocalyx layer, tight junctions, and shear‑stress‑sensitive mechanoreceptors | Damage to glycocalyx releases syndecan‑1, increases vascular permeability, and promotes micro‑thrombi; explains capillary leak and organ hypoperfusion seen in septic shock. |
+| **Immune system** | Pattern‑recognition receptors (TLRs, NOD‑like receptors) on innate cells; complement cascade (classical, alternative, lectin) | TLR activation by LPS or other PAMPs triggers NF‑κB‑driven cytokine storm; complement activation generates C5a, a potent chemoattractant that drives neutrophil recruitment and further endothelial injury. |
+| **Coagulation** | Endothelial tissue factor (TF) expression, protein C pathway, fibrinolysis | TF exposure initiates extrinsic coagulation; loss of protein C and antithrombin in sepsis shifts balance toward fibrin deposition, explaining DIC and micro‑vascular occlusion. |
+| **Respiratory** | Alveolar‑capillary membrane, surfactant production by type II pneumocytes | Inflammatory cytokines impair surfactant synthesis and increase alveolar permeability, leading to non‑cardiogenic pulmonary oedema (ARDS). |
+| **Renal** | Glomerular filtration barrier (fenestrated endothelium, glomerular basement membrane, podocytes) | Cytokine‑mediated endothelial dysfunction and micro‑thrombi reduce GFR; tubular epithelial cell apoptosis from hypoxia and endotoxin causes acute tubular necrosis. |
+| **Hepatic** | Sinusoidal endothelium, Kupffer cells, hepatic arterial buffer response | Kupffer cells phagocytose bacteria and release cytokines; impaired arterial buffer response reduces hepatic perfusion, contributing to cholestasis and coagulopathy. |
+| **Endocrine** | Adrenal cortex (zona fasciculata) and medulla (chromaffin cells) | Sepsis‑induced cytokines suppress ACTH release and cortisol synthesis, leading to relative adrenal insufficiency; catecholamine surge from sympathetic activation further stresses the system. |
+
+---
+
+## Pathophysiology
+```
+Bacterial/viral infection → PAMPs (LPS, DNA, RNA) → TLR/NOD activation
+   ↓
+NF‑κB translocation → ↑ pro‑inflammatory cytokines (TNF‑α, IL‑1β, IL‑6)
+   ↓
+Endothelial activation → TF expression, glycocalyx shedding, ↑ vascular permeability
+   ↓
+Micro‑thrombi formation (TF‑driven coagulation) + impaired fibrinolysis
+   ↓
+Systemic vasodilatation, capillary leak → ↓ MAP, ↓ tissue perfusion
+   ↓
+Cellular hypoxia, anaerobic metabolism → ↑ lactate
+   ↓
+Organ dysfunction (kidney, lung, liver, CNS) → clinical sepsis
+   ↓
+If MAP <65 mmHg despite fluids → septic shock
+```
+
+---
+
 ## 2. Find the source
 
 | Source | Clues |
@@ -26,6 +60,26 @@
 | **Obstetric and gynaecological** | Septic abortion, puerperal sepsis, pelvic inflammatory disease |
 
 **Think local:** **malaria**, **typhoid**, **TB**, **HIV with opportunistic infection**, **meningitis** and **puerperal sepsis** must be on the list in many settings, and are easily missed when the focus is on bacteria alone.
+
+## Differential diagnosis and how to tell them apart
+
+| Condition | Points that point to it | How to separate it from sepsis |
+|---|---|---|
+| **Early myocardial infarction** | Chest pain, ECG changes, troponin rise | No fever, lactate rise is modest, qSOFA negative unless cardiogenic shock |
+| **Pulmonary embolism** | Sudden dyspnoea, pleuritic chest pain, tachycardia | D‑dimer ↑, CT‑angiogram confirms; lactate usually normal unless massive PE |
+| **Acute pancreatitis** | Epigastric pain radiating to back, elevated amylase/lipase | No infection source, imaging shows pancreatic inflammation; qSOFA may be normal |
+| **Hypovolemic shock (trauma, haemorrhage)** | Hypotension, tachycardia, dry mucosa, low central venous pressure | No inflammatory markers, lactate may rise but CRP/ESR normal; imaging shows bleed |
+| **Adrenal crisis** | Hyperpigmentation, hypotension, hyponatraemia, hyperkalaemia | Low cortisol, normal infection work‑up; response to IV hydrocortisone without antibiotics |
+| **Severe hypoglycaemia** | Altered mentation, sweating, tachycardia | Blood glucose <2.5 mmol/L, normal lactate, no infection source |
+| **Thrombotic thrombocytopenic purpura (TTP)** | Microangiopathic haemolysis, thrombocytopenia, neurological deficits | ADAMTS13 activity <10 %, normal lactate, no infection source |
+| **Systemic lupus erythematosus flare** | Arthralgia, rash, serositis, ANA positivity | Complement consumption, anti‑dsDNA rise, no infectious focus |
+| **Drug reaction (e.g., DRESS)** | Rash, eosinophilia, organ involvement | Temporal relation to drug, eosinophil count ↑, cultures negative |
+
+*Key distinguishing features:*  
+- **Inflammatory markers** (CRP, procalcitonin) rise in sepsis but are usually normal in non‑infectious causes.  
+- **Micro‑organism evidence** (positive cultures, imaging of abscess) confirms sepsis.  
+- **Response to antibiotics**: rapid clinical improvement supports infection; lack of response suggests alternative diagnosis.  
+- **Specific laboratory patterns** (e.g., ADAMTS13, cortisol, troponin) help rule out mimics.
 
 ## 3. Investigate with purpose
 
@@ -75,6 +129,27 @@ Acute kidney injury, ARDS, DIC, liver dysfunction, hypoglycaemia, adrenal insuff
 1. Define sepsis and septic shock using Sepsis-3.
 2. Name the Sepsis Six, and say which parts must happen within an hour.
 3. Why do we take blood cultures before antibiotics, but not delay antibiotics to do so?
+
+## Clinical case  
+A 58‑year‑old man presents to the emergency department with a 3‑day history of fever, productive cough and worsening shortness of breath. On examination he is tachypnoeic (RR = 30 /min), hypotensive (BP = 88/52 mmHg), tachycardic (HR = 112 /min) and confused. Auscultation reveals diffuse crackles bilaterally. A chest X‑ray shows a right lower‑lobe consolidation. Blood tests reveal a lactate of 3.8 mmol/L, a neutrophilic leucocytosis (WBC = 18 × 10⁹/L) and a creatinine of 140 µmol/L. The patient has no known comorbidities and is not on any medication.
+
+### Question 1  
+**What is the most appropriate first‑hour intervention for this patient?**  
+
+**Model answer**  
+The priority is to initiate the Sepsis Six: obtain two sets of blood cultures, give broad‑spectrum IV antibiotics immediately, administer a 30 mL/kg balanced crystalloid bolus, start oxygen to keep SpO₂ > 94 %, check lactate, and insert a urinary catheter to monitor output. Vasopressors are not started until the fluid bolus is completed and the patient remains hypotensive.
+
+### Question 2  
+**Which laboratory value most strongly predicts the need for vasopressor support in septic shock?**  
+
+**Model answer**  
+A lactate > 2 mmol/L that persists after adequate fluid resuscitation is the key marker. Persistent hyperlactatemia indicates ongoing tissue hypoperfusion and is the trigger for initiating noradrenaline to maintain MAP ≥ 65 mmHg.
+
+### Question 3  
+**If the patient’s source of infection is confirmed as a right lower‑lobe pneumonia, what is the single most important step that will improve survival beyond antibiotics and fluids?**  
+
+**Model answer**  
+Early source control—specifically, prompt drainage of any pleural effusion or empyema and removal of any obstructing foreign body—has the greatest impact on mortality. In this case, a thoracentesis or chest tube insertion to evacuate a parapneumonic collection would be the critical intervention.
 
 ## Practice questions
 

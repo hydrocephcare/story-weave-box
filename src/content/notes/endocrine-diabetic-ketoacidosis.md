@@ -16,6 +16,31 @@
 
 **Hyperosmolar hyperglycaemic state (HHS)** is the other emergency: very high glucose (above about 30 mmol/L), **little or no ketosis**, severe dehydration and high osmolality, usually in older type 2 patients, with a gradual onset over days.
 
+## Anatomy and physiology you need
+
+| System | Key anatomical/physiological feature | Clinical relevance in DKA/HHS |
+|---|---|---|
+| **Pancreas** | β‑cells in the islets of Langerhans secrete insulin; α‑cells secrete glucagon. | Loss of insulin and relative glucagon excess drives lipolysis and gluconeogenesis. |
+| **Adrenal medulla** | Releases catecholamines (epinephrine, norepinephrine). | Stress‑induced catecholamines raise hepatic glucose output and inhibit insulin secretion, worsening hyperglycaemia. |
+| **Renal tubules** | Sodium‑glucose cotransporter‑2 (SGLT2) reabsorbs glucose; proximal tubule reabsorbs water via aquaporins. | In DKA, osmotic diuresis overwhelms reabsorption, leading to volume depletion and loss of electrolytes. |
+| **Vascular endothelium** | Endothelial glycocalyx regulates fluid exchange; capillary permeability is increased by inflammatory cytokines. | Inflammatory triggers (infection, sepsis) increase capillary leak, compounding dehydration and hypotension. |
+| **Muscle and adipose tissue** | Intracellular potassium is largely stored in muscle cells; adipocytes store triglycerides. | Acidosis shifts K⁺ out of cells; lipolysis releases free fatty acids that are converted to ketone bodies in the liver. |
+| **Liver** | Hepatocytes convert fatty acids to ketone bodies (acetoacetate, β‑hydroxybutyrate) via β‑oxidation and ketogenesis. | Ketone bodies are the primary acid load in DKA; their accumulation lowers blood pH. |
+| **Brain** | Cerebral glucose uptake is insulin‑independent but sensitive to osmolarity. | Hyperosmolarity in HHS leads to cerebral dehydration; in DKA, cerebral edema risk rises when fluids are over‑replaced. |
+
+---
+
+## Pathophysiology
+
+**Insulin deficiency →** ↑ glucagon → ↑ hepatic gluconeogenesis & glycogenolysis → ↑ blood glucose  
+**↑ glucose →** osmotic diuresis → ↓ intravascular volume → ↑ ADH → water loss → dehydration  
+**Dehydration + insulin deficiency →** ↑ lipolysis in adipose → ↑ free fatty acids → hepatic β‑oxidation → ↑ ketone bodies (acetoacetate, β‑hydroxybutyrate) → ↑ anion gap acidosis  
+**Acidosis →** H⁺ shifts K⁺ out of cells → serum K⁺ may appear normal/high → insulin therapy drives K⁺ intracellularly → risk of hypokalaemia  
+**High glucose + dehydration →** ↑ plasma osmolality → cellular dehydration → altered mental status; in HHS, gradual onset allows cerebral adaptation, whereas in DKA rapid osmotic shifts predispose to cerebral oedema.  
+**Inflammatory cytokines (IL‑6, TNF‑α) from infection →** ↑ vascular permeability + ↑ catecholamines → further vasodilation and capillary leak → worsened hypotension.
+
+---
+
 ## 2. Why it happens
 
 Without insulin the body cannot use glucose, so it **breaks down fat into ketone acids** (acetoacetate, β-hydroxybutyrate). The glucose spills into the urine and pulls water and electrolytes with it (**osmotic diuresis**), so the patient is **dry and short of potassium**, even if the blood potassium looks normal or high.
@@ -32,6 +57,21 @@ Without insulin the body cannot use glucose, so it **breaks down fat into ketone
 ## 4. Presentation
 
 Polyuria, polydipsia, weight loss, **nausea, vomiting and abdominal pain** (can mimic an acute abdomen), **deep sighing "Kussmaul" breathing**, a **fruity (acetone) smell**, dehydration, tachycardia, low blood pressure, drowsiness or coma.
+
+## Differential diagnosis and how to tell them apart
+
+| Condition | Points to it | Distinguishing feature |
+|---|---|---|
+| **Diabetic ketoacidosis (DKA)** | Hyperglycaemia, ketonuria/ketonemia, anion‑gap acidosis, Kussmaul breathing | Presence of ketones and acidosis |
+| **Hyperosmolar hyperglycaemic state (HHS)** | Very high glucose (>30 mmol/L), minimal or no ketosis, high osmolality, gradual onset | Absence of ketones, very high osmolality, slower clinical course |
+| **Lactic acidosis (type A)** | Hypoperfusion, sepsis, shock, high lactate, normal ketones | Elevated lactate, no ketones, often normal glucose |
+| **Renal tubular acidosis (type 1/4)** | Normal or low glucose, metabolic acidosis, normal ketones | Low urine pH (type 1) or hyperkalaemia (type 4), no hyperglycaemia |
+| **Alcoholic ketoacidosis** | History of chronic alcohol use, vomiting, abdominal pain, ketonuria | Normal or low glucose, history of binge drinking |
+| **Starvation ketosis** | Recent prolonged fasting, mild hyperglycaemia, ketonuria | Gradual onset, mild hyperglycaemia, no infection |
+| **Cushing’s syndrome** | Hyperglycaemia, hypertension, weight gain, purple striae | Hypercortisolism signs, normal ketones |
+| **Thyrotoxic crisis** | Fever, tachycardia, hyperglycaemia, metabolic alkalosis | Alkalosis, thyrotoxic features |
+
+*Key clinical clues: presence or absence of ketones, degree of hyperglycaemia, rate of onset, associated infection or endocrine signs.*
 
 ## 5. Investigate with purpose
 
@@ -70,6 +110,21 @@ Restart **subcutaneous insulin** and overlap it with the infusion for at least 3
 1. State the three criteria for DKA.
 2. Why can the serum potassium be high when the body is potassium-depleted, and what happens once insulin starts?
 3. Why do we give fluids before insulin, and why do we add dextrose when the glucose falls?
+
+## Clinical case
+
+A 34‑year‑old woman with newly diagnosed type 1 diabetes presents to the emergency department with 48 h of polyuria, nausea, vomiting and a deep, laboured breathing pattern. She is tachypnoeic, dehydrated, and has a fruity breath odor. Capillary glucose is 30 mmol/L, venous pH 7.08, bicarbonate 9 mmol/L, serum potassium 3.2 mmol/L, and urine ketones are +3. She reports missing her basal insulin dose for the past 24 h and has a low‑grade fever.
+
+### Questions
+
+1. **What is the most appropriate first step in management and why?**  
+   *Answer:* Initiate isotonic saline infusion immediately to correct hypovolaemia and restore perfusion. Fluid resuscitation lowers serum glucose, reduces osmotic diuresis, and improves renal perfusion, which is essential before insulin can be safely started.
+
+2. **Explain the paradoxical serum potassium level in this patient and the subsequent change after insulin therapy.**  
+   *Answer:* In DKA, acidosis drives potassium out of cells, raising the extracellular concentration despite total body depletion. Once insulin is administered, it promotes cellular uptake of potassium, causing a rapid fall in serum potassium and risking arrhythmias if not replaced.
+
+3. **Describe the mechanism by which the patient’s breathing pattern (Kussmaul respiration) helps to correct the acid–base disturbance.**  
+   *Answer:* Kussmaul breathing is a compensatory hyperventilation that increases alveolar CO₂ elimination. By reducing PaCO₂, it raises blood pH (respiratory alkalosis), partially offsetting the metabolic acidosis caused by ketoacids. This respiratory compensation is a key component of the body’s immediate response to DKA.
 
 ## Practice questions
 

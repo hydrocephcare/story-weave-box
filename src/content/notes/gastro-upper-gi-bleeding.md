@@ -8,6 +8,38 @@
 
 **Haematemesis** (vomiting blood, red or "coffee-ground") and **melaena** (black, tarry, foul-smelling stool). Rapid bleeding can give **fresh red blood per rectum** with shock. The bleed is **upper** if it arises above the ligament of Treitz (oesophagus, stomach, duodenum).
 
+## Anatomy and physiology you need  
+| Structure | Clinical relevance in UGIB | Why it matters for assessment or management |
+|---|---|---|
+| **Oesophageal–gastric junction (GEJ) and lower oesophageal sphincter (LES)** | The LES is a high‑pressure zone that normally prevents reflux of gastric contents; its failure can lead to reflux oesophagitis or Mallory‑Weiss tears. | A high‑pressure LES is a protective factor; its incompetence predisposes to erosive disease and can be identified by endoscopy, influencing therapeutic choice (e.g., PPIs). |
+| **Stomach (fundus, body, antrum) and proximal duodenum** | These are the most common sites of peptic ulcer disease; acid secretion from parietal cells and H⁺/K⁺‑ATPase activity drive ulcer formation. | Understanding acid secretion helps explain why PPIs are effective and why H. pylori eradication reduces recurrence. |
+| **Portal venous system (splenic vein, portal vein, hepatic veins)** | Portal hypertension causes varices in the oesophagus and stomach; increased pressure leads to dilated submucosal veins that are fragile and bleed easily. | Knowledge of portal pressure guides the use of vasoactive drugs, the urgency of endoscopy, and the decision for TIPS or balloon tamponade. |
+| **Liver parenchyma and hepatic sinusoids** | Cirrhosis alters coagulation factor synthesis, platelet function, and portal flow, increasing bleeding risk and complicating resuscitation. | Coagulation profile (INR, platelets) must be checked before endoscopy; reversal agents or plasma may be required. |
+| **Gastric mucosal blood supply (right and left gastric arteries, short gastric arteries)** | These vessels supply the gastric fundus where varices form; their size and flow determine the risk of massive bleeding. | Endoscopic band ligation targets these vessels; interventional radiology may embolise them if endoscopy fails. |
+
+---
+
+## Pathophysiology  
+**Peptic ulcer → mucosal injury → bleeding**  
+Peptic ulcer disease  
+→ H. pylori infection or NSAID‑induced COX‑1 inhibition  
+→ ↓ prostaglandin synthesis → ↓ mucosal blood flow, mucus, bicarbonate  
+→ mucosal erosion → exposure of submucosal vessels  
+→ arterial or venous bleeding → haematemesis/melaena  
+
+**Variceal bleeding → portal hypertension → vessel rupture**  
+Cirrhosis → architectural distortion → ↑ resistance to portal flow  
+→ ↑ portal venous pressure → development of portosystemic collaterals (oesophageal, gastric varices)  
+→ fragile variceal walls, high intraluminal pressure  
+→ rupture → massive haematemesis, hypovolaemic shock  
+
+**Mallory‑Weiss tear**  
+Repeated retching → ↑ intra‑abdominal pressure + oesophageal mucosal shear  
+→ longitudinal mucosal laceration at GEJ  
+→ arterial bleeding → brisk haematemesis, often self‑limited  
+
+---
+
 ## 2. Assess severity and resuscitate (ABC first)
 
 - **Shock signs:** pulse above 100, systolic BP below 100, cold peripheries, low urine output, confusion.
@@ -29,6 +61,21 @@
 | **Oesophagitis, cancer, angiodysplasia, Dieulafoy lesion** | Less common |
 
 **Think local:** in many African settings, **bleeding varices from cirrhosis (hepatitis B or schistosomiasis)** are a leading cause, and the management differs from that of an ulcer.
+
+## Differential diagnosis and how to tell them apart  
+
+| Condition | Key clinical points | Distinguishing feature |
+|---|---|---|
+| **Peptic ulcer bleed** | Epigastric pain, NSAID use, H. pylori, alarm features (weight loss, dysphagia) | Pain precedes bleeding; endoscopy shows ulcer with visible vessel |
+| **Oesophageal variceal bleed** | Known cirrhosis, ascites, spider naevi, jaundice, massive, brisk haematemesis, often with shock | Massive, rapid bleeding; endoscopy shows dilated submucosal veins |
+| **Gastric variceal bleed** | Cirrhosis, portal hypertension, haematemesis, often with melena | Endoscopy shows varices in fundus; may be less massive than oesophageal |
+| **Mallory‑Weiss tear** | History of forceful vomiting or retching, then sudden haematemesis | Bleeding starts after retching; endoscopy shows superficial mucosal tear |
+| **Gastritis/erosions** | Alcohol, NSAIDs, stress, no pain, diffuse bleeding | Endoscopy shows diffuse erythema/erosions, no discrete ulcer |
+| **Dieulafoy lesion** | Sudden, massive bleeding, often in antrum, no pain | Endoscopy reveals a single large tortuous vessel with minimal mucosal defect |
+| **Gastric cancer** | Weight loss, dysphagia, anemia, melena | Endoscopy shows ulcerated or mass lesion; biopsy confirms malignancy |
+| **Upper GI malignancy (oesophageal)** | Progressive dysphagia, weight loss, haematemesis | Endoscopy shows friable tumour; biopsy confirms carcinoma |
+
+*Exam‑style tip:* Remember that **portal hypertension** is the hallmark of variceal bleeding; **pain** and **NSAID history** point to ulcer; **retching** points to Mallory‑Weiss; **massive, rapid bleeding** with shock is typical of varices.
 
 ## 4. Investigate with purpose
 
@@ -70,6 +117,54 @@
 1. How do you resuscitate a patient with haematemesis and shock?
 2. Why can the urea be high with a normal creatinine in an upper GI bleed?
 3. How does the management of variceal bleeding differ from an ulcer bleed?
+
+## Complications and prognosis
+
+| Complication | Pathophysiology | Clinical impact | Prognostic implication |
+|---|---|---|---|
+| Re‑bleeding | Inadequate haemostasis, ongoing portal hypertension, or failure of endoscopic therapy | Re‑occurrence of haematemesis or melena, often within 5 days | Increases mortality by 2‑3 fold; predicts need for repeat endoscopy or interventional radiology |
+| Acute liver failure | Massive variceal bleed can precipitate hepatic encephalopathy or coagulopathy | Altered sensorium, jaundice, coagulopathy | Poor prognosis; 30‑day mortality > 30 % if encephalopathy develops |
+| Acute kidney injury | Hypovolaemia, haemoglobinuria, or nephrotoxic drugs | Oliguria, rising creatinine | Associated with 20‑30 % mortality; requires renal replacement therapy in severe cases |
+| Infection (spontaneous bacterial peritonitis) | Bacterial translocation from gut lumen during bleeding | Fever, abdominal pain, ascites | Increases mortality by 15 %; warrants prophylactic antibiotics |
+| Cardiac arrhythmia or myocardial ischaemia | Anaemia‑induced hypoxia, catecholamine surge | Palpitations, chest pain, ECG changes | Can precipitate cardiac arrest; requires ECG monitoring and troponin assessment |
+| Pulmonary aspiration | Vomiting blood with impaired airway reflexes | Pneumonia, ARDS | Requires airway protection and ventilatory support |
+| Portal vein thrombosis | Endoscopic manipulation or prolonged stasis | Abdominal pain, splenomegaly | May necessitate anticoagulation; worsens portal hypertension |
+| Death | Multifactorial: massive bleeding, refractory shock, organ failure | Sudden collapse | Mortality 5‑15 % in high‑risk patients; lower with early vasoactive therapy and endoscopic control |
+
+**Prognostic scoring**  
+- **Glasgow‑Blatchford score** predicts need for intervention; a score ≥ 10 correlates with 30‑day mortality > 10 %.  
+- **Rockall score** (pre‑ and post‑endoscopy) incorporates age, shock, comorbidity, diagnosis, and stigmata of bleeding; a score ≥ 6 indicates high mortality.  
+- **AIMS‑UK score** (age, haemoglobin, urea, systolic BP, shock) is useful for early risk stratification in the ED.
+
+Early identification of high‑risk features (shock, cirrhosis, massive bleeding) guides escalation to intensive care, interventional radiology, or surgery and improves survival.
+
+---
+
+## Clinical case
+
+**Patient:** 58‑year‑old male, chronic alcohol use, presents to the ED with sudden, bright red vomiting and a 2‑hour history of light‑headedness. He is diaphoretic, pulse 120 bpm, systolic BP 78 mmHg, and has a distended abdomen with a palpable splenomegaly. On examination, he is confused and has asterixis. His abdomen is tender in the epigastric region.
+
+**Investigations:**  
+- Hb 8 g/dL (baseline 13 g/dL).  
+- Urea 12 mmol/L, creatinine 110 µmol/L.  
+- INR 1.8.  
+- Liver panel: AST 180 U/L, ALT 95 U/L, bilirubin 35 µmol/L.  
+- ECG: sinus tachycardia, no ischemic changes.  
+
+**Key findings:** massive haematemesis, hypotension, tachycardia, asterixis, splenomegaly, raised INR, and a high urea/creatinine ratio.
+
+### Questions
+
+1. **What is the most likely source of bleeding and why?**  
+   **Answer:** Esophageal varices secondary to portal hypertension from alcoholic cirrhosis. The combination of massive haematemesis, splenomegaly, asterixis, and raised INR points to variceal rupture rather than peptic ulcer disease.
+
+2. **Which immediate pharmacologic intervention should be started and what is its mechanism of action?**  
+   **Answer:** A vasoactive agent such as octreotide or terlipressin. These drugs constrict splanchnic circulation, reducing portal venous inflow and thereby lowering portal pressure to control variceal bleeding.
+
+3. **What is the next definitive step in management and what endoscopic finding would confirm the diagnosis?**  
+   **Answer:** Urgent upper GI endoscopy (within 12 hours). Endoscopy would reveal dilated, tortuous submucosal veins in the lower third of the oesophagus with active spurting or a recent haemorrhagic ulceration of the varix, confirming variceal bleeding.
+
+---
 
 ## Practice questions
 

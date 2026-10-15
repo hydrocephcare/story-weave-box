@@ -6,6 +6,20 @@
 
 A **pleural effusion** is an **abnormal collection of fluid in the pleural space** (between the visceral and parietal pleura). Normally only 5–15 mL of fluid is present.
 
+## Anatomy and physiology you need  
+
+| Structure / Process | Why it matters for pleural effusion | Clinical implication |
+|---|---|---|
+| **Visceral and parietal pleura** – serous membranes covering lung and chest wall, respectively, with a potential space between them. | The pleural space normally contains a thin lubricating film; any imbalance in fluid formation or removal fills this potential space. | Presence of fluid produces dullness, reduced breath sounds and shifts on imaging; localisation (e.g., loculated vs free‑flowing) depends on pleural surface integrity. |
+| **Parietal pleural capillaries (systemic circulation)** – low‑pressure, high‑protein vessels. | Hydrostatic pressure here drives fluid out; increased systemic venous pressure (right‑heart failure, constrictive pericarditis) pushes plasma into the space → transudate. | Bilateral, symmetric effusions are typical; pleural fluid protein/LDH low, pleural‑serum gradients normal. |
+| **Visceral pleural capillaries (pulmonary circulation)** – high‑pressure, low‑protein vessels. | Inflammation or infection raises permeability, allowing protein‑rich exudate to leak into the space. | Unilateral, often associated with pneumonia, TB or malignancy; pleural fluid protein and LDH high, Light’s criteria met. |
+| **Pleural lymphatics (parietal)** – drain fluid and proteins into mediastinal nodes. | Obstruction (malignancy, fibrosis) impairs clearance, causing fluid accumulation despite normal pressures. | Persistent or recurrent effusions despite treatment of systemic causes; may show malignant cells on cytology. |
+| **Pleural‑peritoneal communication (diaphragmatic pores, congenital defects)** – allows ascitic fluid to track into pleural space. | Low oncotic pressure in the abdomen can transmit fluid → hepatic hydrothorax, usually right‑sided. | Large unilateral right effusion in cirrhosis with minimal abdominal distension; fluid is transudate with low protein. |
+| **Pleural pressure dynamics** – negative intrapleural pressure during inspiration, positive during expiration. | Sudden removal of large volumes (>1.5 L) can reverse this gradient, causing rapid re‑expansion of the lung and pulmonary oedema. | Limit aspiration volume, monitor for chest tightness, cough or hypoxia; re‑expansion pulmonary oedema is a procedural complication. |
+| **Pleural elasticity and “meniscus sign”** – surface tension of fluid creates a curved air‑fluid interface on radiograph. | The classic meniscus on chest X‑ray indicates free‑flowing fluid; a straight line suggests loculation or thickened pleura. | Helps differentiate simple effusion from empyema or malignant pleural disease that may require chest tube or thoracoscopy. |
+
+---
+
 ## Mechanisms
 
 - **Increased hydrostatic pressure** (heart failure) → **transudate**.
@@ -36,6 +50,18 @@ A **pleural effusion** is an **abnormal collection of fluid in the pleural space
 
 - **Symptoms:** progressive **dyspnoea**, **pleuritic chest pain** (may disappear as fluid separates the pleura), dry cough; plus symptoms of the cause (fever, weight loss, orthopnoea).
 - **Signs:** **stony dull percussion**, **reduced or absent breath sounds**, **reduced tactile vocal fremitus** over the effusion; **bronchial breathing** at the upper edge; **trachea and mediastinum pushed away** if large; reduced chest expansion.
+
+## Differential diagnosis and how to tell them apart  
+
+| Condition | Key clinical / laboratory pointers | Distinguishing feature vs other pleural effusions |
+|---|---|---|
+| Congestive heart failure | Bilateral dullness, orthopnoea, elevated JVP, BNP high, pleural fluid transudate (protein < 30 g/L, LDH low) | Symmetric effusions, normal pleural glucose, no fever, Light’s criteria negative |
+| Hepatic hydrothorax | Right‑sided effusion in cirrhosis, ascites minimal, low serum albumin, transudate | Right‑dominant, history of portal hypertension, fluid protein very low, pleural‑serum albumin gradient > 1.2 g/dL |
+| Tuberculous pleuritis | Sub‑acute fever, weight loss, HIV risk, lymphocytic predominance, low glucose, ADA high, exudate | Lymphocyte‑rich, ADA > 40 U/L, pleural pH > 7.2 (vs empyema), culture may be negative |
+| Parapneumonic effusion / Empyema | Recent pneumonia, pleuritic pain, fever, neutrophil‑rich fluid, pH < 7.2, pus, glucose low | Neutrophil predominance, pH < 7.2, positive Gram stain/culture, often loculated |
+| Malignant pleural effusion | Known cancer or weight loss, unilateral, bloody or serosanguineous fluid, cytology positive, exudate | Positive malignant cells on cytology, often recurrent, may have pleural thickening on CT |
+| Pulmonary embolism‑related effusion | Sudden dyspnoea, pleuritic pain, tachycardia, D‑dimer ↑, CT pulmonary angiogram positive, exudate with neutrophils, sometimes haemorrhagic | Often small, may be bilateral, fluid may be bloody but without infection; pleural fluid pH usually > 7.2 |
+| Chylothorax | Milky fluid, triglycerides > 110 mg/dL, post‑trauma or lymphoma, exudate | Milky appearance, high triglycerides, lymphocyte‑rich but not TB‑type; negative ADA, normal glucose |
 
 ## Investigations
 
@@ -72,6 +98,44 @@ A **pleural effusion** is an **abnormal collection of fluid in the pleural space
 - **pH below 7.2** needs a **chest drain**.
 - **Lymphocytic, high ADA** effusion in Kenya: **think TB**.
 - Always aspirate under **ultrasound guidance**.
+
+## Clinical case  
+
+**Case vignette**  
+A 68‑year‑old man with known ischaemic cardiomyopathy (EF 30 %) presents with a 2‑week history of worsening dyspnoea on exertion and a dry, pleuritic left‑sided chest pain. He is orthopnoeic, has bilateral ankle oedema and a recent 4 kg weight gain despite diuretic therapy. Examination reveals stony dullness to percussion and absent breath sounds over the left lower zone; the trachea is midline. A bedside ultrasound shows a large anechoic collection with a thin septum.  
+
+**Questions**  
+
+1. **What is the most likely aetiology of the effusion and why?**  
+   *Answer:* Congestive cardiac failure. The patient has classic signs of volume overload, a unilateral left‑sided effusion (common in left‑sided failure), and ultrasound shows a simple transudate‑type fluid.  
+
+2. **Which pleural fluid investigation would best confirm that the effusion is a transudate?**  
+   *Answer:* Measurement of pleural fluid protein and LDH to apply Light’s criteria. A pleural/serum protein ratio < 0.5 and pleural/serum LDH ratio < 0.6 would classify it as a transudate.  
+
+3. **What immediate management step should be performed before any invasive drainage, and what is the physiological rationale?**  
+   *Answer:* Optimize preload reduction with intravenous loop diuretics and monitor urine output. Reducing intravascular volume lowers hydrostatic pressure, decreasing further fluid transudation and minimising the risk of re‑expansion pulmonary oedema if thoracentesis is later performed.  
+
+---
+
+## Tricky questions examiners ask  
+
+**Q1.** A bedridden patient with bilateral dullness, but only the right side shows a blunted costophrenic angle on X‑ray. What is the next investigative step?  
+**Answer:** Perform a bedside thoracic ultrasound on the right side. Ultrasound can differentiate a small effusion from pleural thickening and guides safe thoracentesis; it also detects a contralateral effusion that may be occult on plain film.  
+
+**Q2.** Two patients have pleural fluid protein/serum protein ratios of 0.48 and 0.52 respectively. Which finding separates a transudate from an exudate?  
+**Answer:** The ratio of 0.52 meets Light’s criterion for exudate (≥0.5). The 0.48 ratio remains within transudate range, assuming the other two criteria are negative.  
+
+**Q3.** In a patient with a known malignant pleural effusion, why is routine therapeutic thoracentesis preferred over immediate talc pleurodesis?  
+**Answer:** Repeated aspiration provides symptom relief while allowing assessment of fluid dynamics; pleurodesis is reserved for recurrent, symptomatic effusions after confirming lung re‑expansion and absence of trapped lung, avoiding unnecessary pleural irritation.  
+
+**Q4.** A patient with a parapneumonic effusion has a pleural pH of 7.30 but a fluid glucose of 45 mg/dL. Why might a chest drain still be indicated?  
+**Answer:** Low glucose (<60 mg/dL) suggests high metabolic activity of bacteria or inflammatory cells, indicating a complicated parapneumonic effusion that may progress to empyema despite a pH above 7.2; drainage prevents loculation.  
+
+**Q5.** Why is a large‑bore needle (≥14 G) discouraged for initial diagnostic thoracentesis in a suspected tuberculous effusion?  
+**Answer:** Tuberculous effusions are usually free‑flowing and low‑viscosity; a small‑gauge needle reduces the risk of haemothorax and patient discomfort while still providing adequate sample for ADA, cytology and microbiology.  
+
+**Q6.** A patient on peritoneal dialysis develops a left‑sided pleural effusion. Why should a pleural‑to‑peritoneal fluid creatinine ratio be measured, and what threshold supports a diagnosis of hydrothorax?  
+**Answer:** The ratio distinguishes pleural fluid originating from dialysate (hydrothorax) versus other causes. A pleural/serum creatinine ratio > 1.0 (or pleural/urine creatinine ratio > 0.6) is diagnostic of dialysate translocation across the diaphragm.
 
 ## Pharmacology at a glance
 

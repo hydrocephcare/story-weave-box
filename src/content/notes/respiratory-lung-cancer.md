@@ -9,6 +9,42 @@
 
 **Lung cancer** is a **malignant tumour arising from the bronchial epithelium (bronchogenic carcinoma)**. It is the **leading cause of cancer death worldwide**. Most patients present **late** with advanced disease, which is the main reason for poor survival (5-year survival about 15–20%).
 
+## Anatomy and physiology you need  
+
+| Structure / Function | Why it matters in lung cancer |
+|---|---|
+| **Bronchial tree (trachea → main bronchi → segmental bronchi)** – lined by pseudostratified ciliated columnar epithelium with basal cells that can undergo dysplasia. | Malignant transformation originates in these epithelial cells; central tumours (squamous, small‑cell) arise in larger bronchi where airflow turbulence concentrates carcinogens. |
+| **Alveolar type I & II cells** – type I for gas exchange, type II produce surfactant and act as progenitors. | Peripheral adenocarcinomas often arise from type II cells or bronchioalveolar stem cells; loss of surfactant regulation contributes to tumour‑induced inflammation. |
+| **Pulmonary vasculature (pulmonary arteries, veins, capillaries)** – low‑pressure system for gas exchange. | Tumour angiogenesis (VEGF‑driven) creates abnormal, leaky vessels that facilitate hematogenous spread to brain, bone, adrenal glands. |
+| **Lymphatic drainage (peribronchial, hilar, mediastinal nodes)** – filters interstitial fluid and immune cells. | Lymphatic invasion is the first step of regional spread; nodal status is a key component of TNM staging. |
+| **Pleura (visceral & parietal)** – serous membrane with rich lymphatics. | Invasion produces malignant pleural effusion; pleural seeding is a common route for distant metastasis. |
+| **Nervous supply** – vagus (parasympathetic), recurrent laryngeal nerves, phrenic, sympathetic chain. | Tumour compression or infiltration causes hoarseness (recurrent laryngeal), diaphragmatic paralysis (phrenic), Horner’s syndrome (sympathetic chain) – clues to localisation. |
+| **Respiratory mechanics** – compliance, airway resistance, ventilation‑perfusion (V/Q) matching. | Obstructive tumours raise airway resistance → dyspnoea, atelectasis, V/Q mismatch → hypoxaemia; these physiologic changes explain the clinical picture of breathlessness and cough. |
+
+---
+
+## Pathophysiology  
+
+```
+Carcinogen exposure (smoke, radon, asbestos) → DNA adduct formation → oncogene activation / tumour‑suppressor loss
+        ↓
+Clonal expansion of mutated bronchial epithelial cells → dysplasia → carcinoma in situ → invasive carcinoma
+        ↓
+Tumour angiogenesis (VEGF ↑) + matrix degradation (MMPs) → local invasion of bronchial wall, vessels, pleura
+        ↓
+Lymphatic invasion → hilar/mediastinal nodal spread → N‑stage ↑
+        ↓
+Hematogenous dissemination via abnormal vessels → distant metastases (brain, bone, adrenal)
+        ↓
+Paraneoplastic hormone production (PTHrP, ACTH, ADH, antibodies) → systemic syndromes (hyper‑calcaemia, Cushing, hyponatraemia, Lambert‑Eaton)
+        ↓
+Mass effect (airway obstruction, SVCO, pleural effusion, Pancoast apex involvement) → cough, haemoptysis, dyspnoea, hoarseness, Horner’s syndrome
+        ↓
+Host response (cachexia, inflammatory cytokines) → weight loss, anorexia, fatigue
+```
+
+---
+
 ## Risk factors
 
 - **Smoking** (about **85–90%** of cases; risk rises with pack-years; stopping lowers risk over time).
@@ -44,6 +80,18 @@
   - **Squamous:** **hypercalcaemia** (PTHrP).
   - **Clubbing, hypertrophic pulmonary osteoarthropathy**, thrombophlebitis, dermatomyositis, neuropathy.
 - **Examination:** cachexia, clubbing, cervical and supraclavicular nodes, signs of effusion or collapse, hepatomegaly.
+
+## Differential diagnosis and how to tell them apart  
+
+| Condition | Points that suggest it | Key features that separate it from lung cancer |
+|---|---|---|
+| **Pulmonary tuberculosis** | Chronic cough, night sweats, weight loss; endemic exposure; cavitary lesion in upper lobes | Acid‑fast bacilli on sputum smear / GeneXpert; response to anti‑TB therapy; granulomatous pattern on biopsy, not malignant cells |
+| **Bronchiectasis** | Productive cough with purulent sputum, recurrent infections, CT shows dilated airways | Lack of a discrete mass; airway wall thickening and tram‑track sign; no systemic weight loss unless severe |
+| **Pulmonary embolism** | Acute dyspnoea, pleuritic chest pain, tachycardia; risk factors for thrombosis | CT pulmonary angiography shows filling defects; D‑dimer elevation; no mass on imaging |
+| **Metastatic disease to lung (e.g., breast, renal)** | Known extra‑pulmonary primary; multiple bilateral nodules | Histology shows non‑pulmonary tumour type; immunohistochemistry (e.g., ER/PR, RCC markers) distinguishes from primary lung carcinoma |
+| **Benign lung nodule (hamartoma, granuloma)** | Incidentally found solitary nodule, often calcified or fat‑containing | CT characteristics (popcorn calcification, fat density); stable size over 2 years; biopsy shows benign tissue |
+| **Pneumonia (including atypical)** | Fever, productive cough, lobar consolidation on CXR | Rapid clinical improvement with antibiotics; no mass effect; sputum culture positive |
+| **Mesothelioma (pleural)** | Asbestos exposure, pleural thickening, pleural effusion | Tumour arises from pleura, not lung parenchyma; histology shows mesothelial cells; often bilateral pleural involvement |
 
 ## Investigations
 
@@ -90,6 +138,48 @@
 - **Tissue diagnosis before treatment.**
 - In Kenya, **think TB and cancer** in a chronic cough or haemoptysis.
 - **Stage decides treatment.**
+
+## Clinical case  
+
+**Patient:** 62‑year‑old male, 45 pack‑year smoking history, former miner, presents with a 3‑month history of worsening productive cough and 4 kg weight loss. He reports occasional streaky haemoptysis and new‑onset left‑arm pain radiating to the scapula. Examination shows clubbing, a hard, non‑tender left supraclavicular node, and mild left Horner’s syndrome (ptosis, miosis). Chest X‑ray reveals a 4 cm peripheral mass in the left upper lobe with rib erosion.  
+
+### Questions  
+
+1. **What is the most likely histological subtype and why?**  
+   *Answer:* Adenocarcinoma is most likely. It commonly arises peripherally, is associated with smoking and occupational exposures, and frequently presents with rib invasion and paraneoplastic phenomena such as Horner’s syndrome when located in the apex.  
+
+2. **Outline the minimum investigations required before definitive therapy.**  
+   *Answer:*  
+   - Contrast‑enhanced CT of the chest and upper abdomen for local‑regional staging and to assess mediastinal nodes.  
+   - PET‑CT for metabolic staging of distant sites.  
+   - CT‑guided core biopsy of the peripheral lesion (or VATS wedge) to obtain histology and molecular profiling (EGFR, ALK, ROS1, PD‑L1).  
+   - Brain MRI (or contrast CT) because of the risk of cerebral metastases in adenocarcinoma.  
+   - Baseline blood work: full blood count, renal and liver panels, calcium, sodium, and performance‑status assessment (ECOG).  
+
+3. **If the tumour is staged as T3 N2 M0, what is the standard curative‑intent management plan?**  
+   *Answer:* For a stage IIIA (T3 N2 M0) NSCLC, the guideline‑based approach is multimodal: induction (neoadjuvant) platinum‑based chemotherapy combined with concurrent thoracic radiotherapy, followed by surgical resection (lobectomy with systematic nodal dissection) if the patient remains resectable and fit. Post‑operative adjuvant therapy (chemotherapy ± immunotherapy) is considered based on pathological response and PD‑L1 status.  
+
+---
+
+## Tricky questions examiners ask  
+
+**Q1.** A patient with a central lung mass and hypercalcaemia is found to have a normal serum PTH level. What is the next diagnostic step and why?  
+**Answer:** Measure serum PTH‑related peptide (PTHrP). Squamous cell carcinoma often secretes PTHrP causing humoral hypercalcaemia; a normal PTH with elevated calcium points to a paraneoplastic source, and PTHrP confirms the diagnosis.  
+
+**Q2.** Two patients present with a cough and a 3 cm hilar mass. One has a solitary brain metastasis, the other has none. How does this affect staging?  
+**Answer:** The presence of a brain metastasis upstages the disease to stage IV (M1), irrespective of the size or nodal status of the thoracic tumour. The patient without brain disease may be stage III (depending on nodal involvement).  
+
+**Q3.** A smoker with a new‑onset hoarse voice is found to have left recurrent laryngeal nerve palsy. Which tumour location is most likely and what alternative diagnosis must be excluded in Kenya?  
+**Answer:** A left‑sided apical (Pancoast) tumour compressing the recurrent laryngeal nerve is most likely. In Kenya, pulmonary tuberculosis with mediastinal lymphadenopathy can also cause nerve involvement and must be ruled out with sputum microscopy/culture and possibly GeneXpert.  
+
+**Q4.** Why is surgical resection generally avoided in small‑cell lung cancer, even when the tumour appears localized on imaging?  
+**Answer:** Small‑cell lung cancer is a systemic disease at presentation with early micrometastasis; it is highly chemosensitive but rapidly proliferative. Surgery does not improve survival compared with chemoradiotherapy and exposes the patient to unnecessary operative risk.  
+
+**Q5.** A patient with a peripheral lung nodule is scheduled for bronchoscopy. The examiner asks why this may be suboptimal. What is the correct reasoning?  
+**Answer:** Bronchoscopy yields a low diagnostic yield for peripheral lesions because the airway does not reach the lesion directly. CT‑guided percutaneous biopsy or navigational bronchoscopy provides higher tissue acquisition rates for peripheral tumours.  
+
+**Q6.** In a patient with suspected lung cancer and a concurrent HIV infection, why must the clinician be cautious when interpreting a solitary pulmonary nodule on CT?  
+**Answer:** HIV patients have a higher prevalence of opportunistic infections (e.g., cryptococcosis, fungal nodules) and lymphoma, which can mimic malignancy radiologically. Tissue diagnosis is essential before committing to oncologic therapy, and additional microbiological stains/cultures should be requested on the biopsy specimen.
 
 ## Pharmacology at a glance
 

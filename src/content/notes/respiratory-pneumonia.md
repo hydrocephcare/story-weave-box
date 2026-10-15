@@ -9,6 +9,32 @@
 
 **Pneumonia** is **infection of the lung parenchyma** (alveoli and interstitium) with **consolidation**: the air spaces fill with inflammatory exudate. It is the commonest cause of death from infection worldwide.
 
+## Anatomy and physiology you need  
+
+| Structure / Function | Why it matters for pneumonia |
+|---|---|
+| **Alveolar‑capillary membrane** – thin type I pneumocytes for gas exchange, type II cells produce surfactant | Infection fills alveoli with exudate → loss of surfactant → atelectasis and impaired O₂ diffusion, producing hypoxaemia and dyspnoea. |
+| **Bronchial tree (conducting airways)** – cartilaginous rings, mucociliary escalator, submucosal glands | Pathogens enter via inhalation or aspiration; impaired clearance (e.g., smoking, alcohol) predisposes to colonisation and spread into distal alveoli. |
+| **Pulmonary interstitium** – loose connective tissue, lymphatics, capillaries | Inflammatory oedema expands the interstitium, producing crackles on auscultation and increasing the work of breathing. |
+| **Pleural membranes** – visceral and parietal pleura with potential space | Inflammation can extend to the pleura → pleuritic pain, pleural rub, and effusion/empyema if fluid accumulates. |
+| **Respiratory control centres (medulla, pons)** – chemoreceptor‑driven drive | Hypoxaemia and hypercapnia from alveolar filling trigger tachypnoea; in the elderly the ventilatory response may be blunted, masking severity. |
+| **Immune cells in lung** – alveolar macrophages, neutrophils, complement | Rapid neutrophil influx creates purulent exudate; failure of opsonisation (e.g., splenic dysfunction) predisposes to encapsulated organisms like *Streptococcus pneumoniae*. |
+| **Pulmonary circulation** – low‑pressure, high‑flow system | Inflammation increases vascular permeability → pulmonary oedema; septic emboli can seed additional lobes, explaining multilobar disease. |
+
+---
+
+## Pathophysiology  
+
+**Inhaled/aspirated pathogen** → **Adherence to respiratory epithelium** (via pili, adhesins) → **Evasion of mucociliary clearance** → **Activation of alveolar macrophages** → **Release of cytokines (IL‑1, TNF‑α, IL‑6)** → **Neutrophil chemotaxis** → **Neutrophil‑mediated alveolar damage** → **Protein‑rich exudate fills alveoli (consolidation)** → **Loss of surfactant → atelectasis** → **Ventilation‑perfusion mismatch** → **Hypoxaemia, dyspnoea**.  
+
+Simultaneously: **Capillary leakage** → **Interstitial oedema** → **Fine crackles**; **Pleural irritation** → **Pleuritic chest pain**; **Systemic cytokine spill‑over** → **Fever, rigors, tachycardia**.  
+
+If unchecked: **Septic cascade** → **Systemic inflammatory response syndrome (SIRS)** → **Hypotension, organ dysfunction** → **Septic shock**.  
+
+Complications arise when **exudate becomes loculated** → **Parapneumonic effusion / empyema**, or when **necrosis** → **Lung abscess**, especially with *Staph aureus* or *Klebsiella*.  
+
+---
+
 ## Classification
 
 - **Community-acquired (CAP):** acquired outside hospital or within 48 hours of admission.
@@ -48,6 +74,18 @@ One point each for: **C**onfusion · **U**rea above 7 mmol/L · **R**espiratory 
 
 Also consider oxygen saturation (below 92%), multilobar involvement, comorbidity and social circumstances.
 
+## Differential diagnosis and how to tell them apart  
+
+| Condition | Key clinical / investigation points | Distinguishing feature from pneumonia |
+|---|---|---|
+| **Pulmonary tuberculosis** | Chronic cough >2 weeks, weight loss, night sweats; sputum AFB positive; upper‑lobe infiltrates, cavitation on CXR | Slow progression, constitutional symptoms, positive GeneXpert/AFB; often HIV‑positive |
+| **Pulmonary embolism** | Sudden pleuritic chest pain, tachypnoea, pleural rub; normal or low‑grade fever; CT‑PA shows filling defect | Disproportionate dyspnoea, risk factors (immobility, DVT); D‑dimer elevated, CXR often normal |
+| **Heart failure (pulmonary oedema)** | Orthopnoea, peripheral oedema, elevated JVP; bilateral basal crackles; BNP high; CXR shows Kerley B lines, cardiomegaly | Cardiovascular signs, response to diuretics, no focal consolidation on CXR |
+| **Bronchial asthma exacerbation** | Wheeze, reversible obstruction on spirometry, history of atopy; normal CXR | Predominant wheeze, rapid improvement with bronchodilators, absence of infiltrates |
+| **Acute viral bronchiolitis (children)** | Age <2 y, wheeze, low‑grade fever, diffuse hyperinflation on CXR | Predominant wheeze, no lobar consolidation, viral PCR positive |
+| **Lung cancer with obstructive pneumonia** | Smoking history, weight loss, persistent localized infiltrate; sputum cytology or biopsy positive | Persistent mass on imaging, lack of systemic infection signs, may have hilar enlargement |
+| **Pleural effusion (non‑infective)** | Dullness to percussion, decreased breath sounds, fluid shift on lateral decubitus; thoracentesis non‑purulent | Fluid analysis shows transudate/exudate without neutrophil‑predominant pus; no alveolar infiltrates on CT |
+
 ## Investigations
 
 - **Chest X-ray:** **consolidation** with **air bronchograms**; effusion; cavitation; multilobar.
@@ -84,6 +122,49 @@ Also consider oxygen saturation (below 92%), multilobar involvement, comorbidity
 - **Streptococcus pneumoniae** is the commonest cause. **Staph aureus** follows influenza. **Klebsiella** in alcoholics.
 - **CURB-65** decides where to treat.
 - Failure to improve: always think **TB, empyema, cancer**.
+
+## Clinical case  
+
+**Patient:** 58‑year‑old male, chronic smoker, presents with 3 days of fever, chills, productive cough with rusty sputum, pleuritic chest pain on the right side and dyspnoea at rest.  
+
+**Key findings:**  
+- Temp 38.9 °C, HR 112 bpm, RR 28 /min, BP 118/72 mm Hg, SpO₂ 90 % on room air.  
+- Dullness to percussion, bronchial breath sounds and increased tactile fremitus over the right middle zone.  
+- Chest X‑ray: lobar consolidation of the right middle lobe with air‑bronchograms.  
+- CURB‑65 = 2 (Respiratory rate ≥ 30 ? No, urea not measured, confusion No, BP ≥ 90/60, age ≥ 65 ? No) → moderate severity.  
+
+**Questions**
+
+1. **What is the most likely aetiology and why?**  
+   *Answer:* Streptococcus pneumoniae is the most probable pathogen because it is the commonest cause of lobar pneumonia in adults, especially in smokers, and the presentation (rusty sputum, rapid onset, lobar consolidation) fits the classic pneumococcal picture.
+
+2. **Which initial investigations are mandatory before starting therapy?**  
+   *Answer:* Obtain a sputum sample for Gram stain and culture, a blood culture (since the case is moderate severity), a full blood count, CRP, urea/electrolytes, and a chest radiograph (already done). If the patient were HIV‑positive or had risk factors for atypical organisms, a urinary antigen for Legionella and a rapid influenza test would also be considered.
+
+3. **Outline the empiric antibiotic regimen appropriate for this patient in Kenya.**  
+   *Answer:* For moderate‑severity CAP the recommended empiric therapy is oral amoxicillin plus a macrolide (e.g., clarithromycin) to cover typical and atypical pathogens. If oral intake is unreliable, intravenous amoxicillin‑clavulanate with a macrolide can be used. Adjust once culture results return.
+
+---
+
+## Tricky questions examiners ask  
+
+**Q1.** A patient with community‑acquired pneumonia is tachypnoeic (RR 32) but has a normal blood pressure and no confusion. What is the next step in management?  
+**Answer:** Admit for inpatient care because a CURB‑65 score of 1 (respiratory rate ≥ 30) warrants hospitalisation for close monitoring and early intravenous antibiotics.
+
+**Q2.** Two patients both have lobar consolidation on X‑ray; one has a history of recent influenza, the other does not. How does this influence your choice of antibiotic?  
+**Answer:** In the post‑influenza patient, add coverage for Staphylococcus aureus (including MRSA if risk factors exist) because Staph aureus commonly follows influenza and can cause cavitating pneumonia. The other patient can be managed with standard pneumococcal coverage.
+
+**Q3.** A bedridden elderly patient develops a new infiltrate on chest X‑ray but remains afebrile and has a normal white cell count. Why should you still consider pneumonia?  
+**Answer:** Elderly patients often present with atypical features; lack of fever or leukocytosis does not exclude infection. Clinical suspicion should be guided by new infiltrate plus respiratory symptoms (e.g., increased work of breathing) and treated empirically.
+
+**Q4.** Why is it inappropriate to start a fluoroquinolone as first‑line therapy for a mild CAP case in this setting?  
+**Answer:** Fluoroquinolones are reserved for patients with contraindications to β‑lactams or when resistant organisms are suspected. Using them first‑line promotes resistance, especially in regions with high quinolone‑resistant Gram‑negative prevalence.
+
+**Q5.** A patient with aspiration pneumonia shows right lower‑lobe consolidation and foul‑smelling sputum. Which organism group is most likely, and what additional drug should be added?  
+**Answer:** Anaerobic bacteria from the oral cavity are typical. Metronidazole should be added to the β‑lactam regimen to provide anaerobic coverage.
+
+**Q6.** In a HIV‑positive patient with a CD4 count of 80 cells/µL presenting with dry cough, progressive dyspnoea and bilateral ground‑glass opacities, why is high‑dose co‑trimoxazole preferred over a β‑lactam?  
+**Answer:** The presentation is classic for Pneumocystis jirovecii pneumonia, which does not respond to β‑lactams. Co‑trimoxazole targets the organism’s folate pathway and is the drug of choice; adjunctive steroids are added if hypoxaemia is present.
 
 ## Pharmacology at a glance
 

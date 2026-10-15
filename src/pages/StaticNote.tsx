@@ -91,6 +91,7 @@ function StaticNoteView() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [linked]);
 
+  const railOn = !note?.paper && Boolean(parsed && parsed.headings.length > 2);
   const siblings = useMemo(() => (note ? STATIC_NOTES.filter((n) => n.unit === note.unit && n.group === note.group && n.slug !== note.slug) : []), [note]);
   if (!note) return <Navigate to="/notes" replace />;
 
@@ -123,7 +124,7 @@ function StaticNoteView() {
   };
 
   return (
-    <div data-ad-anchor className="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-10">
+    <div data-ad-anchor className={`mx-auto px-4 py-6 sm:px-6 sm:py-10 ${note.paper ? "max-w-4xl" : "max-w-6xl"}`}>
       <SideAds title={note.title} />
       <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1 text-xs font-semibold text-muted-foreground print:hidden">
         <Link to="/" className="hover:text-primary">Home</Link> ›
@@ -134,11 +135,24 @@ function StaticNoteView() {
         <HeroAurora about={`${note.unit} ${note.title}`} year={note.year} />
         <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">Year {note.year} · {note.unit}</p>
         {note.series && <div className="mt-2 flex flex-wrap items-center gap-2"><span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-primary">{note.series}</span>{note.week && <span className="inline-flex rounded-full border border-border bg-card px-3 py-1 text-[11px] font-bold text-foreground">{note.week}</span>}{(note.slug === "paediatrics-history-taking-and-examination" || note.slug === "paediatrics-growth-and-development") && <Link to={note.slug === "paediatrics-history-taking-and-examination" ? "/course-outlines/paediatrics#pd-t1-01" : "/course-outlines/paediatrics#pd-t1-02"} className="text-xs font-bold text-primary hover:underline">View course outline ↗</Link>}</div>}
-        <h1 className="mt-1 font-serif text-3xl font-bold leading-tight text-foreground sm:text-4xl">{note.title}</h1>
+        <h1 className={`mt-1 font-serif font-bold leading-tight text-foreground ${note.paper ? "text-3xl sm:text-4xl" : "text-4xl sm:text-5xl"}`}>{note.title}</h1>
+        {!note.paper && <p className="mt-2 text-sm font-semibold text-muted-foreground">{note.group ?? note.unit}{text ? ` · ${Math.max(1, Math.round(text.split(/\s+/).length / 210))} min read` : ""}{parsed && parsed.headings.length ? ` · ${parsed.headings.length} sections` : ""}</p>}
         <p className="mt-2 text-sm text-muted-foreground">Updated {new Date(note.updated).toLocaleDateString(undefined, { day: "numeric", month: "long", year: "numeric" })}</p>
         <button type="button" onClick={() => window.print()} className="mt-3 inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-1.5 text-xs font-bold text-muted-foreground hover:border-primary/50 hover:text-primary print:hidden"><Printer className="h-3.5 w-3.5" /> Print or save as PDF</button>
       </header>
 
+      <div className={railOn ? "mt-6 lg:grid lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-12" : ""}>
+        {railOn && parsed && (
+          <aside className="hidden lg:block print:hidden" aria-label="On this page">
+            <nav className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2">
+              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-muted-foreground">On this page</p>
+              <ol className="mt-3 space-y-1.5 border-l border-border">
+                {parsed.headings.map((h) => <li key={h.id}><a href={`#${h.id}`} className="-ml-px block border-l-2 border-transparent py-1 pl-3 text-[13px] font-semibold leading-snug text-muted-foreground hover:border-primary hover:text-primary">{h.text}</a></li>)}
+              </ol>
+            </nav>
+          </aside>
+        )}
+        <div className="min-w-0 max-w-[48rem]">
       {quick && <QuickSummaryDialog summary={quick} />}
 
       {!note.paper && <PageSummary id={`n:${note.slug}`} className="mt-5" />}
@@ -173,7 +187,7 @@ function StaticNoteView() {
       {parsed && linked && (
         <>
           {parsed.headings.length > 2 && (
-            <nav aria-label="In this note" className="mt-6 py-2 print:hidden">
+            <nav aria-label="In this note" className="mt-6 py-2 print:hidden lg:hidden">
               <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">In this note</p>
               <ol className="no-scrollbar mt-2 grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
                 {parsed.headings.map((h) => <li key={h.id}><a href={`#${h.id}`} className="text-foreground hover:text-primary">{h.text}</a></li>)}
@@ -184,7 +198,7 @@ function StaticNoteView() {
           {!note.paper && <PharmacologyConnections ids={linked.ids} conditionIds={note.condition ? [note.condition] : []} leave={leave} className="mt-4" />}
 
           {note.paper && text ? <PaperBody text={text} onClick={onBodyClick} /> : (
-            <article className="note-body mt-6" onClick={onBodyClick} onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && pickOption(e.target as HTMLElement)) e.preventDefault(); }} dangerouslySetInnerHTML={{ __html: linked.html }} />
+            <article className={`note-body mt-6 ${note.paper ? "" : "note-topic"}`} onClick={onBodyClick} onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && pickOption(e.target as HTMLElement)) e.preventDefault(); }} dangerouslySetInnerHTML={{ __html: linked.html }} />
           )}
           {!note.paper && <ImedLinks slug={note.slug} />}
 
@@ -201,6 +215,8 @@ function StaticNoteView() {
           )}
         </>
       )}
+        </div>
+      </div>
     </div>
   );
 }

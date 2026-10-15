@@ -36,6 +36,20 @@
 
 **PE (Wells):** clinical signs of DVT · PE is the most likely diagnosis · HR above 100 · immobilisation or surgery in the last 4 weeks · previous DVT or PE · haemoptysis · malignancy. **Above 4: PE likely**; **4 or below: unlikely**.
 
+## Differential diagnosis and how to tell them apart  
+
+| Condition | Key clinical clues that point toward it | Discriminating features that separate it from DVT/PE |
+|---|---|---|
+| **Cellulitis** | Erythema, warmth, fever, tender induration that spreads rapidly; often preceded by skin breach. | Borders are ill‑defined, no calf‑circumference discrepancy > 3 cm, no palpable cord, systemic signs (high fever, leukocytosis) predominate; ultrasound shows normal compressibility of deep veins. |
+| **Lymphedema** | Chronic, non‑pitting swelling, often bilateral or affecting the foot more than the calf; history of filariasis, cancer surgery, or radiation. | Pitting absent, Stemmer’s sign (inability to pinch skin at base of toe) positive, no acute pain, Doppler ultrasound normal, D‑dimer usually normal. |
+| **Baker (popliteal) cyst** | Posterior knee fullness, pain that worsens with knee extension, occasional rupture causing calf swelling. | Swelling localized to popliteal fossa, palpable fluctuant mass, ultrasound shows cystic lesion, calf circumference may be normal; pain improves with knee flexion. |
+| **Muscle strain/tear** | Acute onset after exertion, localized tenderness over gastrocnemius or soleus, possible bruising. | Pain reproduced on active stretch, no venous distension, calf firmness rather than edema, normal venous compressibility on duplex. |
+| **Superficial thrombophlebitis** | Tender, cord‑like superficial vein, overlying erythema, often after IV cannula or varicose vein. | Involves only superficial veins, no deep‑vein non‑compressibility, D‑dimer may be mildly raised but not to levels seen in DVT, distal pulses intact. |
+| **Popliteal artery aneurysm (or acute arterial occlusion)** | Pulsatile posterior mass, cool limb, diminished distal pulses, possible bruit. | Absent or weak pedal pulses, arterial Doppler shows high‑velocity flow, pain is ischemic (rest pain, pallor) rather than venous heaviness; D‑dimer typically normal. |
+| **Compartment syndrome** | Severe, disproportionate pain, pain on passive stretch, tense swollen calf, paresthesia, possible loss of pulses late. | Pain out of proportion, pain worsens with stretch, neurovascular compromise, normal D‑dimer, urgent compartment pressure measurement; duplex does not show thrombus. |
+
+*Exam tip:* The examiner expects you to first apply a clinical probability tool (Wells), then use a single‑test algorithm (D‑dimer → imaging). When faced with an alternative diagnosis, highlight the “red‑flag” features above that would lower the Wells score or direct you toward a different work‑up pathway.
+
 ## Investigations
 
 - **Unlikely probability:** **D-dimer** (highly sensitive, low specificity; **a negative result excludes VTE**). Raised in infection, cancer, pregnancy, surgery, age.
@@ -78,6 +92,50 @@
 - **Sinus tachycardia is the commonest ECG change in PE.**
 - **Massive PE with shock → thrombolysis.**
 - **Pregnancy → LMWH only.**
+
+## Clinical case  
+
+**Patient:** 58‑year‑old male, recent total hip replacement (3 days ago), now on postoperative day 4.  
+
+**Presentation:** Sudden onset of swelling and tightness in the left calf, described as a “heavy” sensation. The leg is warm, tender on calf palpation, and there is a visible network of superficial veins over the anterior shin. The left calf circumference measured 4 cm larger than the right at 10 cm below the tibial tuberosity. He is afebrile, heart rate 96 bpm, SpO₂ 98 % on room air.  
+
+**Key findings:**  
+- Provoking factor: major orthopaedic surgery → immobilisation, endothelial injury, hypercoagulability.  
+- Clinical probability (Wells for DVT) = 3 points (active cancer = 0, recent immobilisation = 1, calf swelling > 3 cm = 1, pitting oedema = 1, alternative diagnosis less likely = 0) → **“likely”**.  
+- D‑dimer not required because pre‑test probability is high.  
+
+### Questions  
+
+1. **What is the next immediate investigation and why?**  
+   *Answer:* Perform a compression duplex ultrasound of the affected leg. In a patient with a high Wells score, imaging is the definitive test; a non‑compressible femoral or popliteal vein confirms DVT and allows prompt anticoagulation.  
+
+2. **If the ultrasound is negative but clinical suspicion remains, what is the appropriate next step?**  
+   *Answer:* Repeat the duplex scan in 48–72 h or obtain a magnetic resonance venography. Early thrombus may be missed; repeat imaging increases sensitivity and prevents false‑negative results.  
+
+3. **Assuming the duplex confirms an acute proximal DVT, outline the initial management plan.**  
+   *Answer:* Start therapeutic anticoagulation immediately (e.g., a low‑molecular‑weight heparin regimen) while arranging transition to an oral agent (DOAC or warfarin) once the patient is stable. Counsel on early mobilisation, leg elevation, and avoidance of pneumatic compression devices on the affected limb.  
+
+---
+
+## Tricky questions examiners ask  
+
+**Q1.** A bedridden postoperative patient develops unilateral calf swelling and a low‑grade fever. What is the first investigation you would order and why?  
+**Answer:** Compression duplex ultrasound of the leg because the clinical picture gives a high pre‑test probability for DVT; imaging is required before any anticoagulation decision.  
+
+**Q2.** Two patients present with dyspnoea and tachycardia: one has a recent long‑haul flight, the other has a known COPD exacerbation. How does the examiner expect you to differentiate PE from a COPD flare?  
+**Answer:** Use the Wells PE score; a high score (e.g., recent immobilisation, haemoptysis, previous VTE) directs you to D‑dimer or CTPA, whereas a low score suggests the dyspnoea is more likely due to COPD.  
+
+**Q3.** In a patient with confirmed massive PE and hypotension, why is thrombolysis preferred over unfractionated heparin alone?  
+**Answer:** Thrombolysis rapidly lyses the obstructing clot, restores pulmonary perfusion, and reverses shock; heparin only prevents further propagation and does not dissolve the existing embolus quickly enough to relieve haemodynamic collapse.  
+
+**Q4.** A pregnant woman with a new DVT is offered warfarin. Explain why this choice is avoided.  
+**Answer:** Warfarin crosses the placenta and is teratogenic, especially in the first trimester, and can cause fetal bleeding; LMWH is the safe alternative because it does not cross the placenta.  
+
+**Q5.** After 3 months of anticoagulation for a provoked DVT, the patient asks whether they can stop therapy. What factor would make the examiner consider extending treatment?  
+**Answer:** Presence of ongoing risk factors (e.g., active cancer, persistent immobility, or a diagnosed thrombophilia) would favour continuation beyond the standard 3‑month course.  
+
+**Q6.** An elderly patient with a high‑risk PE is contraindicated for thrombolysis due to recent intracranial surgery. What is the next best management option?  
+**Answer:** Consider surgical or catheter‑directed embolectomy, or placement of an inferior vena cava filter if anticoagulation is also contraindicated, to prevent recurrent emboli while avoiding systemic thrombolysis.
 
 ## Pharmacology at a glance
 
