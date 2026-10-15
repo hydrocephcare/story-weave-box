@@ -8,6 +8,7 @@ import { useMyYear } from "@/hooks/useMyYear";
 import { useAuth } from "@/hooks/useAuth";
 import { allReads } from "@/lib/readLog";
 import { IMED, isPublished } from "@/data/imed";
+import { getUnitsForYear, unitPath, type Unit } from "@/lib/academic";
 
 /** Past papers are not study notes: they are on /papers. */
 const NOTES = ALL_NOTES.filter((n) => !n.paper);
@@ -25,6 +26,10 @@ export default function StaticNotesIndex() {
   const [q, setQ] = useState("");
   useEffect(() => { if (fromUrl) setYear(fromUrl); }, [fromUrl]);
   useEffect(() => { updateMetaTags({ title: "Medical Study Notes by Year and Unit | Ompath Study", description: "Study notes organised by year and unit: internal medicine by system, psychiatry, paediatrics, obstetrics and gynaecology, surgery and clinical pharmacology, each with a contents list and practice questions." }); }, []);
+
+  // the year's course units (lectures, notes, MCQs, essays and past papers for each), from the course outline
+  const [courseUnits, setCourseUnits] = useState<Unit[]>([]);
+  useEffect(() => { let on = true; setCourseUnits([]); getUnitsForYear(year).then((u) => { if (on) setCourseUnits(u.filter((x) => x.published !== false)); }).catch(() => undefined); return () => { on = false; }; }, [year]);
 
   const read = useMemo(() => new Set(allReads(user?.id).map((r) => r.p)), [user?.id]);
   const done = (n: StaticNote) => read.has(`/notes/${n.slug}`);
@@ -55,6 +60,23 @@ export default function StaticNotesIndex() {
     </li>
   );
 
+  const courseGrid = courseUnits.length === 0 ? null : (
+    <section aria-label={`Year ${year} course units`}>
+      <h2 className="font-serif text-2xl font-bold">Year {year} course units</h2>
+      <p className="mt-1 text-sm text-muted-foreground">Every unit of the year, with its lectures, notes, MCQs, essays and past papers on one page.</p>
+      <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+        {courseUnits.map((u) => (
+          <li key={u.id}>
+            <Link to={unitPath(year, u.slug)} className="flex h-full items-start gap-3 rounded-xl border border-border bg-card px-4 py-3 transition-colors hover:border-primary/60 hover:bg-primary/5">
+              <span className="min-w-0 flex-1"><span className="block font-semibold leading-snug">{u.name}</span>{u.course_code && <span className="block text-xs text-muted-foreground">{u.course_code}</span>}</span>
+              <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-primary" aria-hidden />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+
   return (
     <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-10">
       <nav aria-label="Breadcrumb" className="text-xs font-semibold text-muted-foreground"><Link to="/" className="hover:text-primary">Home</Link> › <span className="text-foreground">Notes</span></nav>
@@ -83,7 +105,7 @@ export default function StaticNotesIndex() {
           )}
         </section>
       ) : units.length === 0 ? (
-        <p className="mt-8 rounded-lg border border-dashed border-border p-8 text-center text-muted-foreground">Year {year} notes are being added. Past papers and the library already cover it: <Link to={`/library/year-${year}`} className="font-bold text-primary hover:underline">open the Year {year} library</Link>.</p>
+        <div className="mt-6">{courseGrid}</div>
       ) : (
         <>
           <section className="mt-6" aria-label={`Year ${year} units`}>
@@ -114,6 +136,8 @@ export default function StaticNotesIndex() {
               </Link>
             )}
           </section>
+
+          <div className="mt-8">{courseGrid}</div>
 
           {open.length === 0 ? (
             <p className="mt-6 text-sm text-muted-foreground">Choose a unit to see its notes.</p>
