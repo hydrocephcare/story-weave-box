@@ -27,12 +27,15 @@ const TOOLS = `Tools you can plan (use ONLY these; each action is {"tool": "..."
 8. seo_fix         args: { "limit": number }   (rewrites up to 15 weak or missing search descriptions; the old text is kept so it can be undone)
 9. site_stats      args: { "days": number }   (read-only visitors summary)
 10. contest_report args: { "slug": string }   (read-only: registrations per university for one contest)
-11. none: no action, just answer or ask a question.
+11. publish_note   args: { "title": string (optional), "category": string (one from the category list, or ""), "year": 1-6 or null }   (use this when the admin pastes or gives notes/text to polish and publish. The text itself is taken from their message: NEVER repeat it. The browser polishes it and shows a preview they approve.)
+12. make_mcqs      args: { "count": 1-30, "from": "message" | "note", "title": string, "category": string }   (write MCQs from the text in their message, or from the note just polished ("note"); previewed before publishing)
+13. none: no action, just answer or ask a question.
 Admin pages (path = what it is): /admin = main admin; /admin/contests = contests; /admin/contests/new = quick contest builder; /admin/contests/setup = advanced contest setup; /admin/contests/appeals = contest appeals; /admin/autopilot = Autopilot switches and log; /admin/access = book access rules; /admin/analytics = visitors; /admin/activity = searches and AI keys; /admin/comments = comments; /admin/drafts = AI notes to approve; /admin/content-checks = content checks; /admin/content-health = content health; /admin/polish = polished blogs; /admin/duplicates = repeated pages; /admin/thin-topics = deep exam notes; /admin/monetise = monetise; /admin/tools = all admin tools.`;
 
 const system = (ctx) => `You are the Ompath Study admin assistant. You help the site owner run contests. You never run anything yourself: you plan, the owner confirms, then the browser runs it.
 Now (Nairobi time): ${ctx.now}.
 ${TOOLS}
+Note categories on the site: ${(ctx.categories || []).slice(0, 90).join(" | ")}
 Universities (slug = name): ${(ctx.universities || []).map((u) => `${u.slug} = ${u.name}`).join("; ")}
 Exams on the site (use words from these titles): ${(ctx.exams || []).slice(0, 150).join(" | ")}
 The admin is on this page: ${ctx.page || "unknown"}.
@@ -44,7 +47,9 @@ Rules:
 - Only delete what the owner clearly named. If several contests match, ask which.
 - If the admin hit a problem, explain it in plain words first, then plan the closest working alternative (for example a different page or a retry). If it is a missing database file (a message about running SQL), name the file and tell them to run it. Never invent buttons that do not exist.
 - You can help while they navigate: say what the page they are on does and what to do next.
-- Return ONLY JSON: {"reply": "...", "actions": [ ... ]}. "reply" says in one or two sentences what you will do (or asks the question).`;
+- The admin message may be cut off for you when they paste long text; that is fine, the browser has all of it. If they paste notes and say polish/publish, plan publish_note (and make_mcqs with from "note" if they also want questions). If it is not clear what to do with pasted text, ask.
+- To ask the admin a question with buttons, add "ask": {"question": "...", "options": ["short option", ...]} (2 to 5 options) and no actions.
+- Return ONLY JSON: {"reply": "...", "ask": null, "actions": [ ... ]}. "reply" says in one or two sentences what you will do (or asks the question).`;
 
 async function groqJson(msgs, keys) {
   const models = list(process.env.GROQ_CHAT_MODELS || "openai/gpt-oss-120b,openai/gpt-oss-20b");
@@ -75,7 +80,7 @@ async function geminiJson(msgs, keys) {
   return null;
 }
 
-const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "none"]);
+const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "publish_note", "make_mcqs", "none"]);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
@@ -95,5 +100,6 @@ export default async function handler(req, res) {
   let out;
   try { out = JSON.parse(String(raw).replace(/^```(?:json)?|```$/gm, "").trim()); } catch { return res.status(200).json({ reply: String(raw).slice(0, 600), actions: [] }); }
   const actions = (Array.isArray(out.actions) ? out.actions : []).filter((a) => a && KNOWN.has(a.tool) && a.tool !== "none" && (a.args && typeof a.args === "object" ? true : (a.args = {}, true))).slice(0, 5);
-  return res.status(200).json({ reply: String(out.reply ?? "").slice(0, 800), actions });
+  const ask = out.ask && typeof out.ask === "object" && String(out.ask.question || "").trim() && Array.isArray(out.ask.options) ? { question: String(out.ask.question).slice(0, 300), options: out.ask.options.map((o) => String(o).slice(0, 80)).filter(Boolean).slice(0, 5) } : null;
+  return res.status(200).json({ reply: String(out.reply ?? "").slice(0, 800), ask: ask && ask.options.length >= 2 ? ask : null, actions });
 }

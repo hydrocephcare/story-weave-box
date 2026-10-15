@@ -8,8 +8,9 @@ import polish from "./_lib/blogPolish.js";
 import { draft, health } from "./_lib/aiDraft.js";
 import agent from "./_lib/adminAgent.js";
 import seo from "./_lib/adminSeo.js";
+import write from "./_lib/adminWrite.js";
 
-const TASKS = { chat, topic, outline, study, polish, draft, health, agent, seo };
+const TASKS = { chat, topic, outline, study, polish, draft, health, agent, seo, write };
 
 export default async function handler(req, res) {
   const task = String(Array.isArray(req.query?.task) ? req.query.task[0] : req.query?.task ?? "");

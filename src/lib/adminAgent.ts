@@ -4,23 +4,24 @@ import {
   setContestUniversityScope, updateContestStage, updateContestDetails, loadAdminContestRegistrations, type AdminExamPaper, type ContestUniversity,
 } from "@/lib/contest-store";
 import type { ContestStage } from "@/lib/contest";
+import { loadCategories, removeItem } from "@/lib/adminWriter";
 
-export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report"; args: Record<string, any> }
-export interface AgentContext { page?: string; problems?: { at: string; what: string }[]; now: string; universities: { slug: string; name: string }[]; exams: string[]; contests: { slug: string; title: string; stage: string }[] }
+export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item"; args: Record<string, any> }
+export interface AgentContext { categories?: string[]; page?: string; problems?: { at: string; what: string }[]; now: string; universities: { slug: string; name: string }[]; exams: string[]; contests: { slug: string; title: string; stage: string }[] }
 export interface PlanItem { action: AgentAction; line: string; danger: boolean; ok: boolean }
 
 const nairobiNow = () => new Intl.DateTimeFormat("en-KE", { dateStyle: "full", timeStyle: "short", timeZone: "Africa/Nairobi" }).format(new Date());
 const toDate = (local: string) => new Date(`${local}:00+03:00`);
 
-export interface AgentWorld { universities: (ContestUniversity & { active: boolean })[]; papers: AdminExamPaper[]; contests: Awaited<ReturnType<typeof loadAdminContests>> }
+export interface AgentWorld { categories: string[]; universities: (ContestUniversity & { active: boolean })[]; papers: AdminExamPaper[]; contests: Awaited<ReturnType<typeof loadAdminContests>> }
 
 export async function loadAgentWorld(): Promise<AgentWorld> {
-  const [universities, papers, contests] = await Promise.all([loadAllContestUniversities(), loadAdminExamPapers(), loadAdminContests()]);
-  return { universities: universities.filter((u) => u.active), papers, contests };
+  const [universities, papers, contests, categories] = await Promise.all([loadAllContestUniversities(), loadAdminExamPapers(), loadAdminContests(), loadCategories().catch(() => [] as string[])]);
+  return { universities: universities.filter((u) => u.active), papers, contests, categories };
 }
 
 export function agentContext(w: AgentWorld): AgentContext {
-  return { now: nairobiNow(), universities: w.universities.map((u) => ({ slug: u.slug, name: u.name })), exams: w.papers.map((p) => p.title), contests: w.contests.map((c) => ({ slug: c.slug, title: c.title, stage: c.stage })) };
+  return { categories: w.categories, now: nairobiNow(), universities: w.universities.map((u) => ({ slug: u.slug, name: u.name })), exams: w.papers.map((p) => p.title), contests: w.contests.map((c) => ({ slug: c.slug, title: c.title, stage: c.stage })) };
 }
 
 /** Closest exam to the words the assistant gave: most shared words, ties go to the shorter title. */
@@ -57,6 +58,7 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
     if (action.tool === "go_to") return { action, danger: false, ok: /^\/admin(\/[a-z0-9-]+)*$/.test(String(a.path)), line: `Open ${a.path}.` };
     if (action.tool === "set_autopilot_mode") return { action, danger: false, ok: ["approve_access", "daily_digest"].includes(a.key) && ["off", "ask", "auto"].includes(a.mode), line: `Set Autopilot job "${a.key}" to ${a.mode}${a.mode === "auto" ? " (it will act on its own, with an Undo in the log)" : ""}.` };
     if (action.tool === "run_autopilot") return { action, danger: false, ok: true, line: "Run the Autopilot jobs now." };
+    if (action.tool === "remove_item") return { action, danger: true, ok: Boolean(a.id) && ["articles", "mcq_sets"].includes(a.table), line: `Take "${a.title || "this page"}" off the site (it stays in the database, so it can be brought back).` };
     if (action.tool === "seo_fix") return { action, danger: false, ok: true, line: `Rewrite up to ${Math.min(15, Number(a.limit) || 10)} weak search descriptions with AI. The old text is kept so you can undo it.` };
     const c = w.contests.find((x) => x.slug === a.slug);
     const okStage = ["concept", "registration", "live", "completed"].includes(a.stage);
@@ -66,7 +68,7 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
 
 export interface ActionLink { label: string; href: string; external?: boolean }
 /** What happened, plus where to go next. `partial` means it got part of the way and the links continue from there; `undo` is the action that reverses it. */
-export interface ActionResult { text: string; links?: ActionLink[]; undo?: AgentAction; partial?: boolean }
+export interface ActionResult { thumb?: string; text: string; links?: ActionLink[]; undo?: AgentAction; partial?: boolean }
 const SITE = "https://www.ompathstudy.com";
 const wa = (t: string) => `https://wa.me/?text=${encodeURIComponent(t)}`;
 
@@ -77,6 +79,7 @@ export async function runAction(action: AgentAction, w: AgentWorld): Promise<Act
   if (action.tool === "run_autopilot") { const { data, error } = await (supabase as any).rpc("admin_agent_run"); if (error) throw new Error(/schema cache|admin_agent_run/.test(error.message) ? "Run autopilot.sql first." : error.message); return { text: `Autopilot ran: ${data?.approved ?? 0} approved, ${data?.queued ?? 0} waiting for you.`, links: [{ label: "See the log", href: "/admin/autopilot" }] }; }
   if (action.tool === "go_to") return { text: `Opened ${a.path}.` };
   if (action.tool === "seo_fix") return runSeoFix(Number(a.limit) || 10);
+  if (action.tool === "remove_item") { await removeItem(a.table, String(a.id)); return { text: `Took "${a.title || "the page"}" off the site.`, links: [{ label: "Admin home", href: "/admin" }] }; }
   if (action.tool === "delete_contest") {
     const { error } = await (supabase as any).rpc("admin_delete_contest", { p_slug: String(a.slug) });
     if (error) throw new Error(/admin_delete_contest|schema cache/.test(error.message) ? "Delete needs one database file: run contest-admin-tools.sql in the Lovable SQL editor, then ask me again. Until then you can delete it in Advanced setup." : error.message);
@@ -198,12 +201,12 @@ export async function runReadOnly(action: AgentAction, w: AgentWorld): Promise<A
   return null;
 }
 
-export async function askAgent(message: string, history: { role: "user" | "assistant"; content: string }[], context: AgentContext): Promise<{ reply: string; actions: AgentAction[] }> {
+export async function askAgent(message: string, history: { role: "user" | "assistant"; content: string }[], context: AgentContext): Promise<{ reply: string; ask: { question: string; options: string[] } | null; actions: AgentAction[] }> {
   const { data: session } = await supabase.auth.getSession();
   const token = session.session?.access_token;
   if (!token) throw new Error("Log in as an administrator first.");
   const r = await fetch("/api/ai?task=agent", { method: "POST", headers: { "content-type": "application/json", authorization: `Bearer ${token}` }, body: JSON.stringify({ message, history, context }) });
   const j = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(j?.error || "The assistant could not answer.");
-  return { reply: String(j.reply || ""), actions: Array.isArray(j.actions) ? j.actions : [] };
+  return { reply: String(j.reply || ""), ask: j.ask && Array.isArray(j.ask.options) ? { question: String(j.ask.question || ""), options: j.ask.options.map(String) } : null, actions: Array.isArray(j.actions) ? j.actions : [] };
 }
