@@ -44,3 +44,13 @@ suite("admin assistant: more tools", () => {
     expect(send.danger).toBe(true); expect(send.line).toContain("ALL users");
   });
 });
+
+suite("admin assistant: contest without a clear exam", () => {
+  it("cannot run with an empty exam, but runs when told to create it without questions", () => {
+    const base = { title: "UoN vs MKU", universities: ["university-of-nairobi", "mount-kenya-university"], start: "2026-10-17T20:00", minutes: 30 };
+    const missing = plan([{ tool: "create_contest", args: { ...base, exam: "" } }], world)[0];
+    expect(missing.ok).toBe(false); expect(missing.line).toContain("no matching exam");
+    const none = plan([{ tool: "create_contest", args: { ...base, exam: "__none__" } }], world)[0];
+    expect(none.ok).toBe(true); expect(none.line).toContain("no questions yet");
+  });
+});

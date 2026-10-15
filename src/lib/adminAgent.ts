@@ -47,11 +47,12 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
       const all = a.universities === "all";
       const slugs: string[] = Array.isArray(a.universities) ? a.universities : [];
       const unis = slugs.map((s) => w.universities.find((u) => u.slug === s)).filter(Boolean) as ContestUniversity[];
-      const exam = a.exam ? pickExam(w.papers, String(a.exam)) : null;
+      const noQuestions = a.exam === "__none__";
+      const exam = a.exam && !noQuestions ? pickExam(w.papers, String(a.exam)) : null;
       const start = a.start && !Number.isNaN(toDate(String(a.start)).getTime()) ? toDate(String(a.start)) : null;
-      const problems = [!String(a.title || "").trim() && "no title", !all && unis.length < 2 && "needs at least 2 universities", !exam && "no matching exam found", !start && "no valid start time"].filter(Boolean);
+      const problems = [!String(a.title || "").trim() && "no title", !all && unis.length < 2 && "needs at least 2 universities", !exam && !noQuestions && "no matching exam found", !start && "no valid start time"].filter(Boolean);
       const when = start ? new Intl.DateTimeFormat("en-KE", { weekday: "long", day: "numeric", month: "long", hour: "numeric", minute: "2-digit", timeZone: "Africa/Nairobi" }).format(start) : "?";
-      return { action, danger: false, ok: problems.length === 0, line: `Create contest "${a.title}" for ${all ? "all universities" : unis.map((u) => u.abbreviation || u.name).join(" + ")}, Year ${(a.years || [1, 2, 3]).join(", ")}, questions from "${exam?.title ?? "?"}", starting ${when} (EAT) for ${a.minutes || 30} minutes. Registration opens straight away${problems.length ? ` — cannot run: ${problems.join(", ")}` : ""}.` };
+      return { action, danger: false, ok: problems.length === 0, line: `Create contest "${a.title}" for ${all ? "all universities" : unis.map((u) => u.abbreviation || u.name).join(" + ")}, Year ${(a.years || [1, 2, 3]).join(", ")}, ${noQuestions ? "no questions yet (add them later in contest setup)" : `questions from "${exam?.title ?? "?"}"`}, starting ${when} (EAT) for ${a.minutes || 30} minutes. Registration opens straight away${problems.length ? ` — cannot run: ${problems.join(", ")}` : ""}.` };
     }
     if (action.tool === "delete_contest") {
       const c = w.contests.find((x) => x.slug === a.slug);
@@ -150,7 +151,8 @@ export async function runAction(action: AgentAction, w: AgentWorld): Promise<Act
   if (action.tool !== "create_contest") throw new Error("I do not know how to do that.");
   const all = a.universities === "all";
   const ids = all ? [] : (a.universities as string[]).map((s) => w.universities.find((u) => u.slug === s)?.id).filter(Boolean) as string[];
-  const exam = pickExam(w.papers, String(a.exam || "")); if (!exam) throw new Error("No matching exam.");
+  const noQuestions = a.exam === "__none__";
+  const exam = noQuestions ? null : pickExam(w.papers, String(a.exam || "")); if (!exam && !noQuestions) throw new Error("No matching exam.");
   const minutes = Math.max(5, Math.min(240, Number(a.minutes) || 30));
   const startsAt = toDate(String(a.start)).toISOString(), endsAt = new Date(toDate(String(a.start)).getTime() + minutes * 60_000).toISOString();
   const years = (Array.isArray(a.years) && a.years.length ? a.years : [1, 2, 3]).map(Number).filter((y: number) => y >= 1 && y <= 6);
@@ -159,7 +161,7 @@ export async function runAction(action: AgentAction, w: AgentWorld): Promise<Act
     created = await createContest({ title: String(a.title).trim(), subtitle: "", subjects: [], years, format: "One round", registrationOpensAt: new Date().toISOString(), registrationClosesAt: startsAt, startsAt, shareImageUrl: null, published: false });
     at = "setting who can enter"; await setContestUniversityScope(created.id, ids, a.autoAdmit !== false);
     at = "adding the round"; const round = await createContestRound(created.id, "Round 1", minutes * 60);
-    at = "adding the questions"; await importExamPaperToContestRound(round.id, exam.id);
+    if (exam) { at = "adding the questions"; await importExamPaperToContestRound(round.id, exam.id); }
     at = "setting the time"; await configureContestRound({ roundId: round.id, status: "scheduled", startsAt, endsAt, durationSeconds: minutes * 60, tabSwitchLimit: 3, focusLossLimit: 3, autoEliminate: true });
     at = "publishing"; await updateContestDetails(created.id, { title: String(a.title).trim(), subtitle: "", subjects: [], years, format: "One round", registrationOpensAt: new Date().toISOString(), registrationClosesAt: startsAt, startsAt, shareImageUrl: null, published: true });
     at = "opening registration"; await updateContestStage(created.id, "registration");

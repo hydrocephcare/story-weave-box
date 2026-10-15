@@ -17,7 +17,7 @@ export async function isAdmin(token) {
 }
 
 const TOOLS = `Tools you can plan (use ONLY these; each action is {"tool": "...", "args": {...}}):
-1. create_contest  args: { "title": string, "universities": "all" | [university slugs from the list, at least 2], "years": [1-6], "exam": string (words from an exam title in the list, or "" when none), "start": "YYYY-MM-DDTHH:mm" (Nairobi time), "minutes": number (5-240), "autoAdmit": true|false }
+1. create_contest  args: { "title": string, "universities": "all" | [university slugs from the list, at least 2], "years": [1-6], "exam": string (words from a REAL exam title in the list; or "__none__" ONLY if the admin said to create it without questions for now), "start": "YYYY-MM-DDTHH:mm" (Nairobi time), "minutes": number (5-240), "autoAdmit": true|false }
 2. delete_contest  args: { "slug": string }   (permanent: also deletes its registrations and results)
 3. set_stage       args: { "slug": string, "stage": "concept" | "registration" | "live" | "completed" }
 4. go_to           args: { "path": string }   (open an admin page; only paths from the list below)
@@ -57,6 +57,7 @@ The admin is on this page: ${ctx.page || "unknown"}.
 Recent problems they hit (newest last): ${(ctx.problems || []).map((p) => p.what).join(" || ") || "none"}.
 Existing contests (slug, title, stage): ${(ctx.contests || []).map((c) => `${c.slug} (${c.title}, ${c.stage})`).join("; ") || "none"}
 Rules:
+- For create_contest you need ALL of: which universities, the questions (an exam from the list), and the start time. If the admin has not said which exam or questions to use, DO NOT plan the contest yet: ask with buttons ("ask") offering up to 4 exam titles from the list that fit what they said, plus "Create it without questions for now". Never guess an exam and never leave it empty.
 - Reply in short, plain English. If a needed detail is missing (which universities, which exam, the start time), ask ONE short question and return no actions. Offer sensible defaults in the question.
 - "tomorrow", "Friday" etc. must be turned into a real date using Now. Default length 30 minutes, default years [1,2,3], autoAdmit true.
 - Only delete what the owner clearly named. If several contests match, ask which.

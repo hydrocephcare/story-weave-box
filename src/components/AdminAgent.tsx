@@ -53,6 +53,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
   const [error, setError] = useState("");
   const [attachments, setAttachments] = useState<string[]>([]);
   const [progress, setProgress] = useState(0);
+  const [examQuery, setExamQuery] = useState("");
   const [listening, setListening] = useState(false);
   const recognition = useRef<any>(null);
   const [revising, setRevising] = useState<number | null>(null);
@@ -362,6 +363,18 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
           <div className={`rounded-xl border p-3 ${danger ? "border-destructive/50 bg-destructive/5" : "border-primary/40 bg-primary/5"}`}>
             <p className="flex items-center gap-2 text-sm font-bold">{danger ? <AlertTriangle className="h-4 w-4 text-destructive" /> : <Check className="h-4 w-4 text-primary" />} {danger ? "Are you sure?" : "Shall I go ahead?"}</p>
             <ol className="mt-2 list-decimal space-y-1 pl-5 text-sm">{plan.map((p, i) => <li key={i} className={p.ok ? "" : "text-muted-foreground line-through"}>{p.line}</li>)}</ol>
+            {world && plan.map((p, i) => p.action.tool === "create_contest" && !p.ok && /no matching exam/.test(p.line) ? (
+              <div key={`fix${i}`} className="mt-3 rounded-lg border border-amber-500/50 bg-amber-500/10 p-2.5">
+                <p className="text-xs font-bold">Which exam should the questions come from?</p>
+                <input value={examQuery} onChange={(e) => setExamQuery(e.target.value)} placeholder="Search exams, e.g. respiratory" className="mt-2 w-full rounded-lg border bg-background px-3 py-2 text-base sm:text-sm" />
+                <div className="mt-2 max-h-40 space-y-1 overflow-y-auto">
+                  {world.papers.filter((x) => !examQuery.trim() || x.title.toLowerCase().includes(examQuery.trim().toLowerCase())).slice(0, 8).map((x) => (
+                    <button key={x.id} type="button" onClick={() => { setPlan((prev) => prev ? prev.map((q, k) => k === i ? describe([{ ...q.action, args: { ...q.action.args, exam: x.title } } as AgentAction], world)[0] : q) : prev); setExamQuery(""); }} className="block min-h-10 w-full rounded-lg border bg-background px-3 py-2 text-left text-sm hover:bg-muted">{x.title}</button>
+                  ))}
+                </div>
+                <button type="button" onClick={() => setPlan((prev) => prev ? prev.map((q, k) => k === i ? describe([{ ...q.action, args: { ...q.action.args, exam: "__none__" } } as AgentAction], world)[0] : q) : prev)} className="mt-2 text-xs font-semibold text-primary underline">Create it without questions for now</button>
+              </div>
+            ) : null)}
             <div className="mt-3 flex gap-2">
               <button type="button" disabled={busy || !plan.some((p) => p.ok)} onClick={() => void confirm()} className={`${btn} px-4 text-sm font-bold text-white ${danger ? "bg-destructive" : "bg-primary"}`}>{busy && <Loader2 className="h-4 w-4 animate-spin" />} Yes, do it</button>
               <button type="button" disabled={busy} onClick={() => setPlan(null)} className={`${btn} border px-4 text-sm`}><X className="h-4 w-4" /> No</button>
