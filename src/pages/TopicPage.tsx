@@ -11,9 +11,8 @@ import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Check, ClipboardCheck, Link2, Share2, Stethoscope, ChevronDown, ChevronRight, Info, Loader2, RefreshCw, Sparkles, X, Zap, Printer, ThumbsUp, ThumbsDown } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
-import { aiPaused, looksLikeBot, type TopicChoices } from "@/lib/topicWriter";
-import { isExamTitle } from "@/lib/examMode";
-import { DOMAIN_STYLE, imageCaption, isDeepPage, rewriteDeeper, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
+import { aiPaused, looksLikeBot } from "@/lib/topicWriter";
+import { DOMAIN_STYLE, imageCaption, writeDeepNotes, type AiPage, type DeepNotes, rememberTopic, slugFromName, topicPath, useTopicIndex, useTopicPage, type TopicIndexItem, type TopicQuestion } from "@/lib/topics";
 import { useWebMedia } from "@/lib/webMedia";
 import HeroAurora from "@/components/HeroAurora";
 import { Answer } from "@/components/ai/AnswerText";
@@ -27,9 +26,9 @@ const SITE = "https://www.ompathstudy.com";
 const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
 /** One section of the article: a large serif heading and text that flows. No boxes, no rules, no colour bars: space and type do the work. */
-function Section({ id, title, children, first, keep }: { id: string; title: string; children: ReactNode; first?: boolean; keep?: boolean }) {
+function Section({ id, title, children, first, deep }: { id: string; title: string; children: ReactNode; first?: boolean; deep?: boolean }) {
   return (
-    <section id={id} data-keep={keep ? "1" : undefined} className={cn("scroll-mt-28", first ? "pt-1" : "mt-14 sm:mt-20")}>
+    <section id={id} data-deep={deep ? "1" : undefined} className={cn("scroll-mt-28", first ? "pt-1" : "mt-14 sm:mt-20")}>
       <h2 className="font-serif text-[1.85rem] font-bold leading-[1.15] tracking-tight text-foreground sm:text-[2.35rem]">{title}</h2>
       <div className="flow mt-5 max-w-[68ch] space-y-4 text-[17px] leading-[1.75] text-foreground/80 sm:space-y-5 sm:text-[19px] sm:leading-[1.8] [&_strong]:font-semibold [&_strong]:text-foreground">{children}</div>
     </section>
@@ -165,28 +164,41 @@ function Disclaimer({ disease }: { disease: boolean }) {
 }
 
 /** A quiet placeholder while a page is being prepared: no words about how it is made. */
-const ANGLE_CHOICES: [string, string][] = [["bedside", "Bedside: history and examination"], ["medicine", "Internal medicine"], ["surgery", "Surgery"], ["pathology", "Pathology and mechanism"], ["drugs", "Drugs and management"], ["emergency", "Emergency first steps"]];
-const LEVEL_CHOICES: [TopicChoices["level"], string][] = [["year3", "Year 3: the basics"], ["year4", "Year 4: clinical and exams"], ["year5", "Final year: manage the patient"]];
-
-/** Before a page that does not exist yet is written, the student says what they need, so the page is built for that and is not a general summary. */
-function IntakeCard({ name, onStart }: { name: string; onStart: (c: TopicChoices) => void }) {
-  const [level, setLevel] = useState<TopicChoices["level"]>("year4");
-  const [angles, setAngles] = useState<string[]>(ANGLE_CHOICES.map(([k]) => k));
-  const [setting, setSetting] = useState<TopicChoices["setting"]>("tropical");
-  const chip = (on: boolean) => `rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors ${on ? "border-primary bg-primary text-primary-foreground" : "border-border bg-background text-foreground/80 hover:bg-muted"}`;
+/** The deep exam notes: shown when they exist; otherwise one button writes them once (builds on the revision page) and saves them for everyone. */
+function DeepView({ slug, name, category, page, deep, onDone }: { slug: string; name: string; category: string; page: AiPage; deep: DeepNotes | null; onDone: (d: DeepNotes) => void }) {
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+  const write = async () => {
+    setBusy(true); setErr("");
+    const r = await writeDeepNotes(slug, name, category, page);
+    setBusy(false);
+    if ("deep" in r) onDone(r.deep); else setErr(r.error === "busy" ? "The writer is busy right now. Try again in a minute." : r.error === "bot" ? "Open this page in a normal browser to write the deep notes." : "The deep notes could not be written just now. Try again in a minute.");
+  };
+  if (!deep) {
+    return (
+      <section id="deep-start" data-deep="1" className="rounded-3xl border border-primary/25 bg-primary/5 p-6 sm:p-8">
+        <p className="text-xs font-bold uppercase tracking-wider text-primary">Deep exam notes</p>
+        <h2 className="mt-1 font-serif text-2xl font-bold sm:text-3xl">Go deeper on {name}</h2>
+        <p className="mt-2 max-w-[60ch] text-[17px] leading-relaxed text-foreground/80">The revision notes stay short. The deep notes read what the revision page already says, then add what is missing: how to examine at the bedside, how to read each test, complicating factors, step-by-step management, and more examiner questions.</p>
+        <button type="button" onClick={() => void write()} disabled={busy} className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-95 disabled:opacity-60">{busy ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden /> : <Sparkles className="h-4 w-4" aria-hidden />} {busy ? "Writing, about 40 seconds..." : "Write the deep exam notes"}</button>
+        <p className="mt-3 text-sm text-muted-foreground">Written once, then saved for everyone. AI-written and not yet reviewed by a doctor.</p>
+        {err && <p role="alert" className="mt-3 text-sm font-semibold text-red-600">{err}</p>}
+      </section>
+    );
+  }
   return (
-    <section aria-label="Before this page is written" className="rounded-3xl border border-primary/25 bg-primary/5 p-5 sm:p-7">
-      <p className="text-xs font-bold uppercase tracking-wider text-primary">Before I write this</p>
-      <h2 className="mt-1 font-serif text-2xl font-bold sm:text-3xl">What do you need from “{name}”?</h2>
-      <p className="mt-1 text-[16px] text-muted-foreground">Three quick taps, so the page is built for you and is not a general summary. Every page is written in full.</p>
-      <div className="mt-5 space-y-5">
-        <div><p className="text-sm font-bold">Your level</p><div className="mt-2 flex flex-wrap gap-2">{LEVEL_CHOICES.map(([k, l]) => <button key={k} type="button" aria-pressed={level === k} onClick={() => setLevel(k)} className={chip(level === k)}>{l}</button>)}</div></div>
-        <div><p className="text-sm font-bold">What examiners may ask (pick any)</p><div className="mt-2 flex flex-wrap gap-2">{ANGLE_CHOICES.map(([k, l]) => { const on = angles.includes(k); return <button key={k} type="button" aria-pressed={on} onClick={() => setAngles((a) => (on ? a.filter((x) => x !== k) : [...a, k]))} className={chip(on)}>{l}</button>; })}</div></div>
-        <div><p className="text-sm font-bold">Setting</p><div className="mt-2 flex flex-wrap gap-2">{([["tropical", "East Africa and low-resource hospitals"], ["general", "General, international"]] as const).map(([k, l]) => <button key={k} type="button" aria-pressed={setting === k} onClick={() => setSetting(k)} className={chip(setting === k)}>{l}</button>)}</div></div>
-      </div>
-      <button type="button" onClick={() => onStart({ level, angles, setting, depth: "full" })} className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground shadow-sm hover:opacity-95"><Sparkles className="h-4 w-4" aria-hidden /> Write my page</button>
-      <p className="mt-3 text-sm text-muted-foreground">A full page takes about 30 to 40 seconds. It is saved for everyone once written.</p>
-    </section>
+    <div>
+      {deep.sections.map((x, i) => (
+        <Section key={`${x.h}-${i}`} id={`deep-${anchor(x.h)}`} title={x.h} first={i === 0} deep>
+          {x.p && <Paras text={x.p} self={slug} />}
+          {x.t && x.t.length > 0 && <TestTable rows={x.t} />}
+          {x.b && x.b.length > 0 && <Bullets items={x.b} self={slug} />}
+        </Section>
+      ))}
+      <Section id="deep-exam" title="More examiner questions" deep>
+        <ol className="space-y-5">{deep.exam.map((q, i) => <ExaminerQuestion key={q} n={i + 1} text={q} />)}</ol>
+      </Section>
+    </div>
   );
 }
 
@@ -273,7 +285,7 @@ export default function TopicPage() {
   const { slug = "" } = useParams();
   const [shared, setShared] = useState("");
   const navigate = useNavigate();
-  const { topic, page, phase, fresh, redirectTo, retry, writing, intake, startWriting, name } = useTopicPage(slug);
+  const { topic, page, phase, fresh, redirectTo, retry, writing, name } = useTopicPage(slug);
   useReadLog(topic?.n ?? name);
   const [zoom, setZoom] = useState<number | null>(null);
   const [webZoom, setWebZoom] = useState<number | null>(null);
@@ -281,7 +293,10 @@ export default function TopicPage() {
   const { isAdmin } = useAuth();
   const [adminMsg, setAdminMsg] = useState("");
   const [showFresh, setShowFresh] = useState(false);
-  const [quick, setQuick] = useState(false);
+  const [view, setView] = useState<"revision" | "deep">("revision");
+  const [deepLocal, setDeepLocal] = useState<DeepNotes | null>(null);
+  useEffect(() => { setView("revision"); setDeepLocal(null); }, [slug]);
+  const deep = deepLocal ?? page?.deep ?? null;
   useEffect(() => { if (!fresh) return; setShowFresh(true); const t = setTimeout(() => setShowFresh(false), 9000); return () => clearTimeout(t); }, [fresh]);
   useEffect(() => { document.body.classList.add("has-toc-bar"); return () => document.body.classList.remove("has-toc-bar"); }, []);
   useEffect(() => { if (topic || page) rememberTopic(slug, topic?.n ?? name); }, [slug, topic, page]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -331,7 +346,6 @@ export default function TopicPage() {
       <main className="mx-auto max-w-xl px-5 py-16">
         <Helmet><title>{name} | Ompath Study</title><meta name="robots" content="noindex" /></Helmet>
         {phase === "writing" && <Writing name={name} />}
-        {phase === "intake" && <IntakeCard name={name} onStart={startWriting} />}
         {phase === "rejected" && <div className="text-center"><h1 className="font-serif text-2xl font-bold">“{name}” is not on Ompath Study</h1><p className="mt-2 text-sm text-muted-foreground">We only cover medicine and health: diseases, anatomy, physiology, pathology, microbiology, pharmacology, and reproductive and public health.</p></div>}
         {(phase === "failed" || phase === "unavailable" || phase === "missing") && (
           <div className="text-center">
@@ -352,7 +366,7 @@ export default function TopicPage() {
   const manage = aiSections.find((s) => /manage|treat/i.test(s.h));
   const seekAfter = aiSections.length ? Math.max(0, manage ? aiSections.indexOf(manage) : aiSections.length - 1) : -1;
   const hasStudy = Boolean(topic && (topic.sec?.length || topic.src.length || topic.sets.length || topic.imgs.length || topic.qs.length || topic.es.length));
-  const toc = [
+  const toc = view === "deep" && deep ? [...deep.sections.map((x) => ({ id: `deep-${anchor(x.h)}`, t: x.h })), { id: "deep-exam", t: "More examiner questions" }] : [
     ...(intro.length ? [{ id: "overview", t: "Overview" }] : []),
     ...aiSections.map((s) => ({ id: anchor(s.h), t: s.h })),
     ...wikiSections.map((w) => ({ id: anchor(w.h), t: w.h })),
@@ -432,15 +446,13 @@ export default function TopicPage() {
               <span className="text-primary">Admin</span>
               <button type="button" className="rounded-lg border border-border bg-background px-3 py-1.5 hover:border-primary/60" onClick={async () => { const r = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").update({ reviewed: !page.reviewed }).eq("slug", slug); setAdminMsg(r.error ? r.error.message : page.reviewed ? "Marked as not reviewed" : "Marked as reviewed"); }}>{page.reviewed ? "Mark not reviewed" : "Mark reviewed"}</button>
               <button type="button" className="rounded-lg border border-border bg-background px-3 py-1.5 hover:border-primary/60" onClick={async () => { if (!window.confirm("Remove this page? It will be written again the next time someone opens it.")) return; const r = await (supabase as unknown as { from: (t: string) => any }).from("topic_pages").delete().eq("slug", slug); setAdminMsg(r.error ? r.error.message : "Removed. It will be rewritten on the next visit."); }}>Remove and rewrite</button>
-              {!isDeepPage(page) && <button type="button" className="rounded-lg border border-primary/50 bg-primary/10 px-3 py-1.5 text-primary hover:bg-primary/20" onClick={async () => { setAdminMsg("Writing the deep version, about 40 seconds..."); setAdminMsg(await rewriteDeeper(slug, name, topic?.c ?? "")); }}>Thin page: rewrite deeper</button>}
               {adminMsg && <span className="text-muted-foreground">{adminMsg}</span>}
             </div>
           )}
 
           <div className="mt-8 space-y-4">
-            {intake && !writing && <IntakeCard name={name} onStart={startWriting} />}
             {writing && <Writing name={name} />}
-            {!writing && !intake && !page && phase !== "rejected" && !aiPaused() && !looksLikeBot() && !intro.length && (
+            {!writing && !page && phase !== "rejected" && !aiPaused() && !looksLikeBot() && !intro.length && (
               <div className="py-6">
                 <p className="font-serif text-2xl font-bold">This page is taking a moment</p>
                 <p className="mt-1 text-[16px] text-muted-foreground">Tap below to load the full write-up on {name}.</p>
@@ -449,23 +461,27 @@ export default function TopicPage() {
             )}
           </div>
 
-          <div className={cn("mt-6", quick && "quick-mode")}>
+          <div className={cn("mt-6", view === "deep" && "deep-view")}>
             {page && (
               <div className="no-print mb-6 flex flex-wrap items-center gap-2">
-                <button type="button" aria-pressed={quick} onClick={() => setQuick((q) => !q)} className={cn("inline-flex items-center gap-1.5 rounded-full border px-4 py-1.5 text-sm font-bold transition-colors", quick ? "border-primary bg-primary text-primary-foreground" : "border-border bg-background hover:bg-muted")}><Zap className="h-4 w-4" aria-hidden /> {quick ? "Quick revision: tap for the full page" : "Quick revision"}</button>
+                <div role="tablist" aria-label="Which notes" className="inline-flex rounded-full border border-border bg-muted/40 p-1">
+                  <button type="button" role="tab" aria-selected={view === "revision"} onClick={() => setView("revision")} className={cn("rounded-full px-4 py-1.5 text-sm font-bold transition-colors", view === "revision" ? "bg-primary text-primary-foreground" : "text-foreground/70 hover:text-foreground")}>Revision notes</button>
+                  <button type="button" role="tab" aria-selected={view === "deep"} onClick={() => setView("deep")} className={cn("inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm font-bold transition-colors", view === "deep" ? "bg-primary text-primary-foreground" : "text-foreground/70 hover:text-foreground")}><Zap className="h-4 w-4" aria-hidden /> Deep exam notes</button>
+                </div>
                 <button type="button" onClick={() => window.print()} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-4 py-1.5 text-sm font-bold hover:bg-muted"><Printer className="h-4 w-4" aria-hidden /> Print or save as PDF</button>
               </div>
             )}
+            {view === "deep" && page && <DeepView slug={slug} name={name} category={topic?.c ?? ""} page={page} deep={deep} onDone={setDeepLocal} />}
 
             {intro.length > 0 && (
-              <Section id="overview" title="Overview" first keep>
+              <Section id="overview" title="Overview" first>
                 {intro.map((p, i) => <Paras key={i} text={p} self={slug} />)}
               </Section>
             )}
 
             {aiSections.map((s, i) => (
               <div key={`${s.h}-${i}`}>
-                <Section id={anchor(s.h)} title={s.h} first={i === 0} keep={isExamTitle(s.h)}>
+                <Section id={anchor(s.h)} title={s.h} first={i === 0}>
                   {s.p && <Paras text={s.p} self={slug} />}
                   {s.t && s.t.length > 0 && <TestTable rows={s.t} />}
                   {s.b && s.b.length > 0 && <Bullets items={s.b} self={slug} />}
@@ -473,7 +489,7 @@ export default function TopicPage() {
                 {i === Math.floor((aiSections.length - 1) / 2) && <div className="mt-12"><Disclaimer disease={isDisease} /></div>}
                 {/* the warning signs come right after the treatment, where a worried reader needs them */}
                 {i === seekAfter && page?.whenToSeekHelp && page.whenToSeekHelp.length > 0 && (
-                  <section id="seek-help" data-keep="1" className="mt-14 scroll-mt-28 sm:mt-20">
+                  <section id="seek-help" className="mt-14 scroll-mt-28 sm:mt-20">
                     <h2 className="font-serif text-[1.85rem] font-bold leading-[1.15] tracking-tight text-amber-700 dark:text-amber-400 sm:text-[2.35rem]">When to seek help</h2>
                     <p className="mt-3 text-[17px] text-foreground/85">See a doctor or health worker, or go to the nearest hospital, if there is:</p>
                     <div className="mt-4 text-[17px] leading-relaxed"><Bullets items={page.whenToSeekHelp} /></div>
@@ -489,7 +505,7 @@ export default function TopicPage() {
             ))}
 
             {page?.exam && page.exam.length > 0 && (
-              <Section id="examiner" title="Questions an examiner may ask" keep>
+              <Section id="examiner" title="Questions an examiner may ask">
                 <ol className="space-y-5">{page.exam.map((q, i) => <ExaminerQuestion key={q} n={i + 1} text={q} />)}</ol>
                 <p className="text-sm text-muted-foreground">Try answering aloud before you scroll back up.</p>
               </Section>
@@ -518,7 +534,7 @@ export default function TopicPage() {
             )}
 
             {topic?.rx && !aiSections.length && (
-              <Section id="treatment" title="Treatment at a glance" keep>
+              <Section id="treatment" title="Treatment at a glance">
                 <Bullets items={topic.rx.first} />
                 <Link to="/pharmacology?tab=conditions" className="inline-flex items-center gap-1 text-base font-bold text-primary hover:underline">Open the pharmacology guide <ChevronRight className="h-4 w-4" /></Link>
               </Section>

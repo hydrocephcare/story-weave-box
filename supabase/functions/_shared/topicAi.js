@@ -7,9 +7,9 @@ export const DEEP_DISEASE = ["Definition and epidemiology", "Causes and risk fac
 export const KINDS = {
   disease: ["Definition and diagnosis", "Severity and staging", "Causes, most likely first", "How it presents", "Investigations", "Red flags and complications", "Management", "Follow-up and prevention", "Often confused with", "Where results can mislead"],
   anatomy: ["Overview", "Location and structure", "Relations", "Blood supply", "Nerve supply", "Function", "Clinical relevance and injuries", "Exam pearls"],
-  physiology: ["Overview", "How it works", "Regulation", "What goes wrong", "Clinical correlations", "Investigations and how to read them", "Common exam traps", "Exam pearls"],
+  physiology: ["Overview", "How it works", "Regulation", "What goes wrong", "Clinical relevance", "Exam pearls"],
   microbe: ["Overview", "Features of the organism", "Transmission and life cycle", "Disease it causes", "Diagnosis", "Treatment and control", "Exam pearls"],
-  general: ["Overview", "Key concepts", "How it works", "Clinical relevance", "Investigations or applications", "Related conditions", "Common mistakes", "Exam pearls"],
+  general: ["Overview", "Key concepts", "Clinical relevance", "Exam pearls", "Common mistakes"],
 };
 
 /** Which layout a topic gets, from the subject the site filed it under. */
@@ -33,7 +33,7 @@ export function cleanChoices(c) {
     level: pick(c?.level, ["year3", "year4", "year5"], "year4"),
     angles: (Array.isArray(c?.angles) ? c.angles : []).filter((a) => Object.hasOwn(ANGLE_TEXT, a)).slice(0, 6),
     setting: pick(c?.setting, ["tropical", "general"], "tropical"),
-    depth: pick(c?.depth, ["quick", "full"], "full"),
+    depth: pick(c?.depth, ["quick", "full"], "quick"),
   };
 }
 const ANGLE_TEXT = { bedside: "the bedside (history, how to examine, named signs and how to elicit them)", medicine: "internal medicine reasoning", surgery: "surgical angles and when to operate", pathology: "pathology and mechanisms", drugs: "pharmacology (why each drug, why others are avoided, monitoring)", emergency: "emergency first steps" };
@@ -178,8 +178,6 @@ export async function generateTopicPage({ name, category, context, choices, env,
   const m = text.match(/\{[\s\S]*\}/);
   if (!m) throw new Error("no JSON in the reply");
   const page = sanitizePage(JSON.parse(m[0]));
-  // the publishing rule: a full page is only accepted when it is deep (7+ sections, 8+ examiner questions); a thin answer is retried with the next key or provider
-  if (deep && page.medical && (page.sections.length < 7 || page.exam.length < 8)) throw new Error("too thin");
   return page.medical ? { ...page, kind: kindOf(category, name), model, generatedAt: new Date().toISOString().slice(0, 10) } : page;
 }
 
@@ -191,6 +189,44 @@ export async function generateWithFallback(input, env) {
   const groq = String(env.GROQ_API_KEYS ?? "").trim();
   if (groq) { try { return await generateTopicPage({ ...input, timeoutMs: 32000, env: { GROQ_API_KEYS: groq } }); } catch { /* fall back to Gemini */ } }
   return generateTopicPage({ ...input, timeoutMs: groq ? 24000 : input.timeoutMs, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS, GROQ_API_KEYS: groq } });
+}
+
+/** The second layer: deep exam notes that build on the revision page, so the writer is told what is already there and asked for what is missing. */
+export function buildDeepPrompt({ name, category, base }) {
+  const have = (Array.isArray(base?.sections) ? base.sections : []).map((x) => String(x?.h ?? "")).filter(Boolean).join("; ");
+  const points = (Array.isArray(base?.sections) ? base.sections : []).flatMap((x) => [x?.p, ...(Array.isArray(x?.b) ? x.b : [])]).filter(Boolean).map((x) => clip(x, 110)).slice(0, 24).join(" | ");
+  const asked = (Array.isArray(base?.exam) ? base.exam : []).map((x) => clip(String(x).split(" — ")[0], 100)).slice(0, 8).join(" | ");
+  return `You are a clinical reasoning tutor. The site already has a SHORT REVISION page on "${name}" (area: ${category || "medicine"}). Write the DEEP EXAM NOTES that sit behind it, for a Year 4 clinical student in East African and other low-resource hospitals.
+
+The revision page already has these sections: ${have || "(none)"}.
+Points it already makes: ${clip(points, 2600)}
+Examiner questions it already asks: ${clip(asked, 900)}
+
+Do NOT repeat the revision page. First decide what an examiner could ask on "${name}" that the revision page does not answer, then write those sections in depth. Choose the sections that fit this topic from: bedside history and how to examine; how to read each investigation (with calculated indices and diagnostic criteria); severity and staging; complicating and confounding factors; step by step management and monitoring; complications and when to escalate; special groups; where results mislead; look-alike conditions.
+${DEEP_RULES}
+Reply with ONLY one JSON object: {"sections": [{"h": "heading", "p": "short paragraph", "b": ["bullet"], "t": [{"a": "test or item", "b": "the question it answers and what the result means"}]}], "exam": ["10-12 NEW tricky examiner questions that are not in the list above, each followed by ' — ' and the key points of a good answer"]}
+5 to 9 sections. Rules: standard accepted medical knowledge only; leave out anything you are unsure of; no doses, no brand names, no invented statistics. Every bullet under 40 words. Plain words.`;
+}
+
+/** Checks the deep notes with the same safety rules as a page (no doses, no links). Throws when they are too thin to be worth saving. */
+export function sanitizeDeep(raw, name = "this topic") {
+  const page = sanitizePage({ medical: true, summary: `Deep exam notes on ${name}, covering what the revision page leaves out.`, sections: raw?.sections, exam: raw?.exam });
+  if (page.sections.length < 4 || page.exam.length < 6) throw new Error("deep notes too thin");
+  return { sections: page.sections, exam: page.exam };
+}
+
+export async function generateDeepNotes({ name, category, base, env, fetchImpl = fetch, timeoutMs }) {
+  const { text, model } = await askModel(buildDeepPrompt({ name, category, base }), { env, fetchImpl, timeoutMs: timeoutMs ?? 55000, maxTokens: 9000 });
+  const m = text.match(/\{[\s\S]*\}/);
+  if (!m) throw new Error("no JSON in the reply");
+  return { ...sanitizeDeep(JSON.parse(m[0]), name), model, generatedAt: new Date().toISOString().slice(0, 10) };
+}
+
+/** Groq first (free), then Gemini, the same order as the revision page. */
+export async function generateDeepWithFallback(input, env) {
+  const groq = String(env.GROQ_API_KEYS ?? "").trim();
+  if (groq) { try { return await generateDeepNotes({ ...input, timeoutMs: 32000, env: { GROQ_API_KEYS: groq } }); } catch { /* fall back to Gemini */ } }
+  return generateDeepNotes({ ...input, timeoutMs: groq ? 24000 : input.timeoutMs, env: { GEMINI_API_KEYS: env.GEMINI_API_KEYS, GROQ_API_KEYS: groq } });
 }
 
 export const slugOf = (name) => String(name).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");

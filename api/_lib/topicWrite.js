@@ -1,6 +1,6 @@
 // POST /api/topic-write { name, category, context }: writes a topic page with Gemini and returns it. The browser then saves it with the
 // publish_topic_page database function. Keys live only here, in the GEMINI_API_KEYS setting (comma separated); they take turns.
-import { generateWithFallback, validName } from "../../supabase/functions/_shared/topicAi.js";
+import { generateWithFallback, generateDeepWithFallback, validName } from "../../supabase/functions/_shared/topicAi.js";
 import { pickSubject } from "../../supabase/functions/_shared/topicParts.js";
 
 const hits = new Map(); // per visitor, per hour (best effort: a cold start forgets it)
@@ -22,6 +22,16 @@ export default async function handler(req, res) {
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
   const name = String(body.name ?? "").trim();
   if (!validName(name)) return res.status(400).json({ status: "invalid" });
+  if (body.mode === "deep") {
+    // the deep exam notes: a second write that builds on the revision page it is given
+    try {
+      const base = body.base && typeof body.base === "object" ? body.base : {};
+      const deep = await generateDeepWithFallback({ name, category: String(body.category ?? "").slice(0, 60), base }, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: keys });
+      return res.status(200).json({ status: "published", deep });
+    } catch (e) {
+      return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: /429|503/.test(String(e?.message)) ? "busy" : "failed" });
+    }
+  }
   try {
     const input = { name, category: String(body.category ?? "").slice(0, 60), context: String(body.context ?? "").slice(0, 3000), choices: body.choices && typeof body.choices === "object" ? body.choices : undefined };
     const page = await generateWithFallback(input, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: keys });

@@ -2,7 +2,7 @@
 // The files are built from the notes, MCQs and essays by scripts/topics/build-topics.mjs and served from /topics/.
 import { useCallback, useEffect, useRef, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { writeTopicPage, aiPaused, looksLikeBot, type TopicChoices } from "@/lib/topicWriter";
+import { writeTopicPage, looksLikeBot } from "@/lib/topicWriter";
 
 export interface TopicIndexItem { s: string; n: string; c: string; y: number[]; d: number; q: number; i: number; a: string[]; ai: number }
 export interface TopicSource { t: string; u: string; k: "note" | "article"; y: number | null; n: string; m: number }
@@ -25,7 +25,10 @@ export interface AiPage {
   model?: string;
   generatedAt?: string;
   reviewed?: boolean;
+  /** The deep exam notes: written once, on request, from what the revision page lacks. */
+  deep?: DeepNotes;
 }
+export interface DeepNotes { sections: { h: string; p?: string; b?: string[]; t?: { a: string; b: string }[] }[]; exam: string[]; model?: string; generatedAt?: string }
 export interface Topic {
   s: string; n: string; c: string; y: number[]; a: string[]; docs: number;
   lead: TopicSnippet | null; sec?: { h: string; b: string[]; u: string; s: string }[]; src: TopicSource[]; sets: TopicSet[]; snip: TopicSnippet[]; imgs: TopicImage[]; qs: TopicQuestion[]; es: TopicEssay[];
@@ -126,7 +129,7 @@ export const DOMAIN_STYLE: Record<string, { hue: string; label: string }> = {
 // The full page: what the site has (built at deploy time), what AI has already written and saved, and, when neither is enough, asking
 // the server to write it now. The reader never waits on a blank screen: the site's own material is shown at once and the rest slots in.
 
-export type TopicPhase = "loading" | "intake" | "ready" | "writing" | "unavailable" | "failed" | "rejected" | "missing";
+export type TopicPhase = "loading" | "ready" | "writing" | "unavailable" | "failed" | "rejected" | "missing";
 const deslug = (slug: string) => decodeURIComponent(slug).replace(/-/g, " ").replace(/\b([a-z])/g, (m) => m.toUpperCase());
 export const slugFromName = (name: string) => name.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
@@ -148,11 +151,11 @@ const REJ = "ompath_topic_rejected";
 const wasRejected = (slug: string) => { try { const m = JSON.parse(localStorage.getItem(REJ) ?? "{}") as Record<string, number>; return Date.now() - (m[slug] ?? 0) < 7 * 86_400_000; } catch { return false; } };
 const markRejected = (slug: string) => { try { const m = JSON.parse(localStorage.getItem(REJ) ?? "{}") as Record<string, number>; m[slug] = Date.now(); localStorage.setItem(REJ, JSON.stringify(m)); } catch { /* ignore */ } };
 
-async function askServer(slug: string, name: string, category: string, context: string, choices?: TopicChoices): Promise<Ask> {
+async function askServer(slug: string, name: string, category: string, context: string): Promise<Ask> {
   if (wasRejected(slug)) return { status: "rejected" };
   const local = readLocal(slug);
   if (local) return { status: "published", page: local };
-  const r = await writeTopicPage({ name, category, context, choices });
+  const r = await writeTopicPage({ name, category, context });
   if (r.status === "published") {
     const finalSlug = r.slug || slug;
     const finalName = r.name || name;
@@ -203,14 +206,12 @@ export function useTopicPage(slug: string) {
   const [redirectTo, setRedirectTo] = useState<string | null>(null);
   const [attempt, setAttempt] = useState(0);
   const [asking, setAsking] = useState(false);
-  const [intake, setIntake] = useState(false);
-  const [chosen, setChosen] = useState<{ slug: string; c: TopicChoices } | null>(null);
   const alive = useRef(true);
   useEffect(() => { alive.current = true; return () => { alive.current = false; }; }, []);
 
   useEffect(() => {
     let on = true;
-    setTopic(null); setPage(null); setPhase("loading"); setFresh(false); setRedirectTo(null); setIntake(false);
+    setTopic(null); setPage(null); setPhase("loading"); setFresh(false); setRedirectTo(null);
     void (async () => {
       try { const to = (JSON.parse(localStorage.getItem("ompath_topic_alias") ?? "{}") as Record<string, string>)[slug]; if (to && to !== slug) { setRedirectTo(to); return; } } catch { /* ignore */ }
       let t = await loadTopic(slug);
@@ -224,20 +225,9 @@ export function useTopicPage(slug: string) {
       const stored = await loadStoredPage(slug);
       if (!on) return;
       const have = stored ?? t?.ai ?? null;
-      if (have) {
-        setPage(have); setPhase("ready");
-        // a thin page is upgraded once, in the background, the first time a person reads it
-        if (!isDeepPage(have as never) && !looksLikeBot() && !aiPaused() && !recentlyTried(slug)) {
-          markTried(slug);
-          void upgradeThin(slug, t?.n ?? deslug(slug), t?.c ?? "", Boolean(stored)).then((deep) => { if (on && deep) { setPage(deep); setFresh(Boolean(t)); } });
-        }
-        return;
-      }
+      if (have) { setPage(have); setPhase("ready"); return; }
 
-      // nothing written yet: ask the reader a few questions first (level, angles, setting, depth), then write the page to match
-      const mine = chosen?.slug === slug ? chosen.c : undefined;
-      if (!mine && !looksLikeBot() && !aiPaused() && !wasRejected(slug) && !recentlyTried(slug)) { setIntake(true); setPhase(t ? "ready" : "intake"); return; }
-      setIntake(false);
+      // nothing written yet: show what the site has straight away, and write the revision page in the background
       setPhase(t ? "ready" : "writing");
       if (attempt === 0 && recentlyTried(slug)) { setPhase(t ? "ready" : "failed"); return; }
       markTried(slug);
@@ -247,7 +237,7 @@ export function useTopicPage(slug: string) {
       setAsking(true);
       try {
       for (let i = 0; i < 16 && on; i++) {
-        const res = await askServer(slug, name, category, context, mine);
+        const res = await askServer(slug, name, category, context);
         if (!on) return;
         if (res.status === "published" && res.redirect) { setRedirectTo(res.redirect); return; }
         if (res.status === "published") { setPage(res.page); setPhase("ready"); setFresh(Boolean(t)); return; }
@@ -261,39 +251,28 @@ export function useTopicPage(slug: string) {
       } finally { if (on) setAsking(false); }
     })();
     return () => { on = false; };
-  }, [slug, attempt, chosen]);
+  }, [slug, attempt]);
 
   const retry = useCallback(() => { try { const m = JSON.parse(sessionStorage.getItem(TRIED) ?? "{}") as Record<string, number>; delete m[slug]; sessionStorage.setItem(TRIED, JSON.stringify(m)); } catch { /* ignore */ } setAttempt((a) => a + 1); }, [slug]);
   const writing = asking;
-  const startWriting = useCallback((c: TopicChoices) => setChosen({ slug, c }), [slug]);
-  return { topic, page, phase, fresh, redirectTo, retry, writing, intake, startWriting, name: topic?.n ?? (page as { title?: string } | null)?.title ?? deslug(slug) };
-}
-
-/** A page is "deep" when it has the sections, tables and examiner questions a student can revise from. Thin pages stay out of Google until they are rewritten. */
-export function isDeepPage(p: { sections?: { b?: unknown[]; t?: unknown[]; p?: string }[]; exam?: unknown[] } | null | undefined): boolean {
-  if (!p) return false;
-  const secs = p.sections ?? [];
-  return secs.length >= 7 && (p.exam?.length ?? 0) >= 8; // the same rule the database uses before it will replace a page
-}
-
-/** Admin: write the full, deep version now and replace what is saved. */
-export async function rewriteDeeper(slug: string, name: string, category: string): Promise<string> {
-  const r = await writeTopicPage({ name, category, context: "", keepSlug: true, choices: { level: "year4", angles: [], setting: "tropical", depth: "full" } });
-  if (r.status !== "published") return "The writer is busy or out of credits. Try again in a minute.";
-  const { error } = await (supabase as unknown as { from: (t: string) => { upsert: (v: Record<string, unknown>, o: Record<string, unknown>) => Promise<{ error: { message: string } | null }> } })
-    .from("topic_pages").upsert({ slug, name, category: category || (r.page as { subject?: string }).subject || null, status: "published", content: r.page, reviewed: false, updated_at: new Date().toISOString() }, { onConflict: "slug" });
-  return error ? error.message : "Rewritten. Reload to read it.";
+  return { topic, page, phase, fresh, redirectTo, retry, writing, name: topic?.n ?? (page as { title?: string } | null)?.title ?? deslug(slug) };
 }
 
 /**
- * A visitor opened a thin page: write the deep version once, quietly, and keep it. A deep page is final (the database refuses to replace it), so the
- * AI credits for a topic are spent at most once more, and only for pages somebody actually reads. Returns the deep page, or null.
+ * Writes the deep exam notes for a topic, once. The writer is shown the revision page, so it adds what is missing and does not repeat it; the notes are
+ * saved with the page and every later reader gets them without any AI call. Returns the notes, or why it failed.
  */
-export async function upgradeThin(slug: string, name: string, category: string, hasRow: boolean): Promise<AiPage | null> {
+export async function writeDeepNotes(slug: string, name: string, category: string, base: AiPage): Promise<{ deep: DeepNotes } | { error: "busy" | "failed" | "bot" }> {
+  if (looksLikeBot()) return { error: "bot" };
   try {
-    const r = await writeTopicPage({ name, category, context: "", keepSlug: true });
-    if (r.status !== "published" || !isDeepPage(r.page as never)) return null;
-    if (hasRow) { const { data } = await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<{ data: { ok?: boolean } | null }> }).rpc("upgrade_topic_page", { p_slug: slug, p_content: r.page }); if (!data?.ok) writeLocal(slug, r.page); }
-    return r.page;
-  } catch { return null; }
+    const digest = { sections: base.sections.map((x) => ({ h: x.h, p: x.p, b: (x.b ?? []).slice(0, 4) })), exam: base.exam ?? [] };
+    const r = await fetch("/api/topic-write", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ mode: "deep", name, category, base: digest }) });
+    const j = (await r.json().catch(() => null)) as { status?: string; deep?: DeepNotes } | null;
+    if (j?.status === "published" && j.deep) {
+      const clean = { ...base, deep: undefined } as AiPage;
+      try { await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<unknown> }).rpc("save_topic_deep", { p_slug: slug, p_name: name, p_category: category || base.subject || "", p_base: JSON.parse(JSON.stringify(clean)), p_deep: j.deep }); } catch { /* shown anyway; saved next time */ }
+      return { deep: j.deep };
+    }
+    return { error: r.status === 429 || j?.status === "busy" ? "busy" : "failed" };
+  } catch { return { error: "failed" }; }
 }

@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import { rewriteDeeper } from "@/lib/topics";
+import { loadStoredPage, writeDeepNotes } from "@/lib/topics";
 
 type Db = { from: (t: string) => any };
-interface Row { slug: string; name: string; category: string | null; sections: unknown[] | null; exam: unknown[] | null; down: number; up: number }
+interface Row { slug: string; name: string; category: string | null; deepAt: string | null; down: number; up: number }
 
 /**
- * /admin/thin-topics: topic pages written before the deep layout (fewer than 7 sections or 8 examiner questions) and pages students voted down.
- * A thin page is upgraded once, on its own, the first time a student reads it; this list lets you do the most-wanted ones yourself, one tap each.
+ * /admin/thin-topics: every topic page, with whether its deep exam notes exist. Students write them by tapping "Deep exam notes" on a page; here you can
+ * write the ones you want ready now, one tap each. Pages students voted down come first. Writing uses AI credits, once per page.
  */
 export default function AdminThinTopics() {
   const db = supabase as unknown as Db;
@@ -20,37 +20,45 @@ export default function AdminThinTopics() {
   useEffect(() => {
     (async () => {
       const [p, v] = await Promise.all([
-        db.from("topic_pages").select("slug,name,category,sections:content->sections,exam:content->exam").eq("status", "published").limit(2000),
+        db.from("topic_pages").select("slug,name,category,deepAt:content->deep->>generatedAt,hasDeep:content->deep->>model").eq("status", "published").limit(2000),
         db.from("topic_votes").select("slug,vote").limit(20000),
       ]);
       const votes = new Map<string, { up: number; down: number }>();
       for (const x of (v.data ?? []) as { slug: string; vote: number }[]) { const c = votes.get(x.slug) ?? { up: 0, down: 0 }; if (x.vote > 0) c.up++; else c.down++; votes.set(x.slug, c); }
-      const all = ((p.data ?? []) as Omit<Row, "up" | "down">[]).map((r) => ({ ...r, up: votes.get(r.slug)?.up ?? 0, down: votes.get(r.slug)?.down ?? 0 }));
-      setRows(all.filter((r) => (r.sections?.length ?? 0) < 7 || (r.exam?.length ?? 0) < 8 || r.down > 0).sort((a, b) => b.down - a.down || (a.sections?.length ?? 0) - (b.sections?.length ?? 0)));
+      const all = ((p.data ?? []) as (Omit<Row, "up" | "down"> & { hasDeep: string | null })[]).map((r) => ({ ...r, deepAt: r.deepAt ?? r.hasDeep, up: votes.get(r.slug)?.up ?? 0, down: votes.get(r.slug)?.down ?? 0 }));
+      setRows(all.sort((a, b) => Number(Boolean(a.deepAt)) - Number(Boolean(b.deepAt)) || b.down - a.down || a.name.localeCompare(b.name)));
       setBusy(false);
     })();
   }, [db]);
 
-  const upgrade = async (r: Row) => { setMsg((m) => ({ ...m, [r.slug]: "Writing, about 40 seconds..." })); const out = await rewriteDeeper(r.slug, r.name, r.category ?? ""); setMsg((m) => ({ ...m, [r.slug]: out })); };
+  const write = async (r: Row) => {
+    setMsg((m) => ({ ...m, [r.slug]: "Writing, about 40 seconds..." }));
+    const page = await loadStoredPage(r.slug);
+    if (!page) { setMsg((m) => ({ ...m, [r.slug]: "Could not read the page." })); return; }
+    const out = await writeDeepNotes(r.slug, r.name, r.category ?? "", page);
+    if ("deep" in out) { setMsg((m) => ({ ...m, [r.slug]: "Written and saved." })); setRows((all) => all.map((x) => (x.slug === r.slug ? { ...x, deepAt: "now" } : x))); }
+    else setMsg((m) => ({ ...m, [r.slug]: out.error === "busy" ? "The writer is busy. Try again in a minute." : "It could not be written just now." }));
+  };
 
+  const without = rows.filter((r) => !r.deepAt).length;
   return (
     <main className="mx-auto max-w-3xl px-5 py-10">
       <Link to="/admin/tools" className="text-sm font-semibold text-primary hover:underline">← Admin tools</Link>
-      <h1 className="mt-2 font-serif text-4xl font-bold">Thin and voted-down topic pages</h1>
-      <p className="mt-2 text-[16px] text-muted-foreground">{busy ? "Loading…" : `${rows.length} page(s). Each is also upgraded on its own the first time a student reads it, so you only need to do the ones you want fixed now.`} Rewriting uses AI credits.</p>
+      <h1 className="mt-2 font-serif text-4xl font-bold">Deep exam notes</h1>
+      <p className="mt-2 text-[16px] text-muted-foreground">{busy ? "Loading…" : `${rows.length - without} of ${rows.length} topic pages have deep notes.`} Students write them by tapping “Deep exam notes” on a page; write the ones you want ready now here. Each is written once and costs AI credits once.</p>
       {busy ? <Loader2 className="mt-8 h-6 w-6 animate-spin text-primary" /> : (
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border">
           {rows.map((r) => (
             <li key={r.slug} className="flex flex-wrap items-center gap-3 px-4 py-3">
               <div className="min-w-0 flex-1">
                 <Link to={`/topic/${r.slug}`} className="font-semibold hover:underline">{r.name}</Link>
-                <p className="text-sm text-muted-foreground">{r.sections?.length ?? 0} sections · {r.exam?.length ?? 0} questions · 👍 {r.up} · 👎 {r.down}</p>
+                <p className="text-sm text-muted-foreground">{r.deepAt ? "Deep notes ready" : "No deep notes yet"} · 👍 {r.up} · 👎 {r.down}</p>
                 {msg[r.slug] && <p className="text-sm text-primary">{msg[r.slug]}</p>}
               </div>
-              <button type="button" onClick={() => void upgrade(r)} className="rounded-full border border-primary/50 bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary hover:bg-primary/20">Rewrite deeper</button>
+              {!r.deepAt && <button type="button" onClick={() => void write(r)} className="rounded-full border border-primary/50 bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary hover:bg-primary/20">Write deep notes</button>}
             </li>
           ))}
-          {!rows.length && <li className="px-4 py-6 text-muted-foreground">Nothing thin right now.</li>}
+          {!rows.length && <li className="px-4 py-6 text-muted-foreground">No topic pages yet.</li>}
         </ul>
       )}
     </main>
