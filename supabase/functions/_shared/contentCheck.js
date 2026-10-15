@@ -76,18 +76,17 @@ export function chunkText(text, max = 14000) {
 
 /** Checks the whole text (in pieces) with the AI keys in env; returns { validated, high, medium, issues, model }. Throws when no answer could be had. */
 export async function checkContent({ title, kind = "note", text, env, fetchImpl = fetch, timeoutMs = 50000 }) {
-  const all = [];
   let model = "";
-  for (const piece of chunkText(text)) {
-    if (!piece.trim()) continue;
+  const pieces = chunkText(text).filter((p) => p.trim());
+  const results = await Promise.all(pieces.map(async (piece) => {
     const r = await askModel(buildCheckPrompt({ title, kind, text: piece }), { env, fetchImpl, timeoutMs, maxTokens: 3500 });
     model = r.model;
     const json = extractJson(r.text);
     if (!json) throw new Error("no JSON in the reply");
     const found = sanitizeCheck(json).issues.filter((x) => x.severity !== "low");
-    all.push(...(await verifyIssues({ text: piece, issues: found, env, fetchImpl, timeoutMs })));
-  }
-  return { ...sanitizeCheck({ issues: all }), model, at: new Date().toISOString().slice(0, 10) };
+    return verifyIssues({ text: piece, issues: found, env, fetchImpl, timeoutMs });
+  }));
+  return { ...sanitizeCheck({ issues: results.flat() }), model, at: new Date().toISOString().slice(0, 10) };
 }
 
 /** The deep notes as plain text for the cross-check: sections, then viva questions, MCQs, cases, numbers and mistakes. */

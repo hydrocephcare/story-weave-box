@@ -31,7 +31,7 @@ export default async function handler(req, res) {
       const deep = await generateCheckedDeep({ name, category: String(body.category ?? "").slice(0, 60), base, past }, { GROQ_API_KEYS: groq, GEMINI_API_KEYS: keys }, fetch, 50000);
       return res.status(200).json({ status: "published", deep });
     } catch (e) {
-      return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: /429|503/.test(String(e?.message)) ? "busy" : "failed" });
+      return res.status(/429|503/.test(String(e?.message)) ? 429 : 502).json({ status: /429|503/.test(String(e?.message)) ? "busy" : "failed", reason: String(e?.message ?? "").slice(0, 240) });
     }
   }
   try {
