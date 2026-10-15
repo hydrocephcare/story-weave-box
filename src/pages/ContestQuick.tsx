@@ -57,25 +57,27 @@ export default function ContestQuick() {
 
   async function publish() {
     setBusy(true); setError("");
+    let at = "start";
+    const mark = (t: string) => { at = t; setStep(t); };
     try {
       const startsAt = new Date(start).toISOString();
       const endsAt = new Date(new Date(start).getTime() + minutes * 60_000).toISOString();
-      setStep("Creating the contest…");
+      mark("Creating the contest…");
       const created = await createContest({ title: title.trim(), subtitle: "", subjects: [], years, format: "One round", registrationOpensAt: new Date().toISOString(), registrationClosesAt: startsAt, startsAt, shareImageUrl: null, published: true });
-      setStep("Setting who can enter…");
+      mark("Setting who can enter…");
       await setContestUniversityScope(created.id, limited ? chosen : [], autoVerify);
-      setStep("Adding the round…");
+      mark("Adding the round…");
       const round = await createContestRound(created.id, "Round 1", minutes * 60);
-      setStep("Adding the questions…");
+      mark("Adding the questions…");
       if (source === "exam") await importExamPaperToContestRound(round.id, examId);
       else await importContestQuestions(round.id, parsed!.questions);
-      setStep("Setting the time…");
+      mark("Setting the time…");
       await configureContestRound({ roundId: round.id, status: "scheduled", startsAt, endsAt, durationSeconds: minutes * 60, tabSwitchLimit: 3, focusLossLimit: 3, autoEliminate: true });
-      setStep("Opening registration…");
+      mark("Opening registration…");
       await updateContestStage(created.id, "registration");
       const all = await loadAdminContests();
       setDone(all.find((c) => c.id === created.id) ?? null);
-    } catch (e: any) { setError(`${e?.message || "Something went wrong."} (stopped at: ${step || "start"}). Nothing is lost: open the contest list to finish or delete it.`); }
+    } catch (e: any) { setError(`${e?.message || "Something went wrong."} (stopped at: ${at.replace("…", "")}). Nothing is lost: open the contest list to finish or delete it.`); }
     finally { setBusy(false); setStep(""); }
   }
 

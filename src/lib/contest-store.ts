@@ -405,7 +405,11 @@ export async function setContestUniversityActive(universityId: string, active: b
 
 /** Limit a contest to chosen universities (2, 3, ...). An empty list opens it to every university. */
 export async function setContestUniversityScope(contestId: string, universityIds: string[], autoVerify?: boolean) {
-  await contestControl({ action: "set_contest_universities", contestId, universityIds, autoVerify });
+  // a direct update (admin-only through row security): it needs no server function, and the database enforces the rule at registration
+  const patch: Record<string, unknown> = { university_ids: universityIds, updated_at: new Date().toISOString() };
+  if (typeof autoVerify === "boolean") patch.auto_verify = autoVerify;
+  const { error } = await (supabase as any).from("contests").update(patch).eq("id", contestId);
+  if (error) throw new Error(/university_ids|auto_verify/.test(error.message) ? "Run the contest rules SQL first (contest-rules.sql)." : error.message);
 }
 
 export async function createSampleContest(title?: string) {
