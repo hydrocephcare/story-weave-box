@@ -224,7 +224,15 @@ export function useTopicPage(slug: string) {
       const stored = await loadStoredPage(slug);
       if (!on) return;
       const have = stored ?? t?.ai ?? null;
-      if (have) { setPage(have); setPhase("ready"); return; }
+      if (have) {
+        setPage(have); setPhase("ready");
+        // a thin page is upgraded once, in the background, the first time a person reads it
+        if (!isDeepPage(have as never) && !looksLikeBot() && !aiPaused() && !recentlyTried(slug)) {
+          markTried(slug);
+          void upgradeThin(slug, t?.n ?? deslug(slug), t?.c ?? "", Boolean(stored)).then((deep) => { if (on && deep) { setPage(deep); setFresh(Boolean(t)); } });
+        }
+        return;
+      }
 
       // nothing written yet: ask the reader a few questions first (level, angles, setting, depth), then write the page to match
       const mine = chosen?.slug === slug ? chosen.c : undefined;
@@ -265,15 +273,27 @@ export function useTopicPage(slug: string) {
 export function isDeepPage(p: { sections?: { b?: unknown[]; t?: unknown[]; p?: string }[]; exam?: unknown[] } | null | undefined): boolean {
   if (!p) return false;
   const secs = p.sections ?? [];
-  const points = secs.reduce((n, x) => n + (x.b?.length ?? 0) + (x.t?.length ?? 0) + (x.p ? 1 : 0), 0);
-  return secs.length >= 9 && (p.exam?.length ?? 0) >= 8 && points >= 45;
+  return secs.length >= 9 && (p.exam?.length ?? 0) >= 8; // the same rule the database uses before it will replace a page
 }
 
 /** Admin: write the full, deep version now and replace what is saved. */
 export async function rewriteDeeper(slug: string, name: string, category: string): Promise<string> {
-  const r = await writeTopicPage({ name, category, context: "", choices: { level: "year4", angles: [], setting: "tropical", depth: "full" } });
+  const r = await writeTopicPage({ name, category, context: "", keepSlug: true, choices: { level: "year4", angles: [], setting: "tropical", depth: "full" } });
   if (r.status !== "published") return "The writer is busy or out of credits. Try again in a minute.";
   const { error } = await (supabase as unknown as { from: (t: string) => { upsert: (v: Record<string, unknown>, o: Record<string, unknown>) => Promise<{ error: { message: string } | null }> } })
     .from("topic_pages").upsert({ slug, name, category: category || (r.page as { subject?: string }).subject || null, status: "published", content: r.page, reviewed: false, updated_at: new Date().toISOString() }, { onConflict: "slug" });
   return error ? error.message : "Rewritten. Reload to read it.";
+}
+
+/**
+ * A visitor opened a thin page: write the deep version once, quietly, and keep it. A deep page is final (the database refuses to replace it), so the
+ * AI credits for a topic are spent at most once more, and only for pages somebody actually reads. Returns the deep page, or null.
+ */
+export async function upgradeThin(slug: string, name: string, category: string, hasRow: boolean): Promise<AiPage | null> {
+  try {
+    const r = await writeTopicPage({ name, category, context: "", keepSlug: true });
+    if (r.status !== "published" || !isDeepPage(r.page as never)) return null;
+    if (hasRow) { const { data } = await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<{ data: { ok?: boolean } | null }> }).rpc("upgrade_topic_page", { p_slug: slug, p_content: r.page }); if (!data?.ok) writeLocal(slug, r.page); }
+    return r.page;
+  } catch { return null; }
 }

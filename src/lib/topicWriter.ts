@@ -82,7 +82,7 @@ async function viaServer(name: string, category: string, context: string, choice
   } catch { return null; }
 }
 
-export async function writeTopicPage({ name, category, context, choices, signal }: { name: string; category: string; context: string; choices?: TopicChoices; signal?: AbortSignal }): Promise<WriteResult> {
+export async function writeTopicPage({ name, category, context, choices, keepSlug, signal }: { name: string; category: string; context: string; choices?: TopicChoices; keepSlug?: boolean; signal?: AbortSignal }): Promise<WriteResult> {
   if (!validName(name)) return { status: "failed" };
   if (looksLikeBot()) return { status: "bot" };
   if (writesToday() >= PER_VISITOR_PER_DAY) return { status: "limit" };
@@ -95,8 +95,8 @@ export async function writeTopicPage({ name, category, context, choices, signal 
     countWrite();
     // the page is saved under the clean title the writer chose, not under what was typed
     const title = String((viaApi.page as { title?: string }).title ?? "").trim();
-    const cleanName = validName(title) ? title : name;
-    const cleanSlug = slugOf(cleanName) || slug;
+    const cleanName = validName(title) && !keepSlug ? title : name;
+    const cleanSlug = keepSlug ? slug : slugOf(cleanName) || slug;
     const { saved } = await publish(viaApi.page, cleanSlug, cleanName, category);
     return { status: "published", page: viaApi.page, saved, slug: cleanSlug, name: cleanName };
   }
