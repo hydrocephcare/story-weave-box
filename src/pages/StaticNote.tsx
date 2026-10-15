@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useReadLog } from "@/lib/readLog";
+import ImedLinks from "@/components/ImedLinks";
 import StudyTools from "@/components/StudyTools";
 import SideAds from "@/components/SideAds";
 import PageSummary from "@/components/PageSummary";
@@ -185,6 +186,7 @@ function StaticNoteView() {
           {note.paper && text ? <PaperBody text={text} onClick={onBodyClick} /> : (
             <article className="note-body mt-6" onClick={onBodyClick} onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && pickOption(e.target as HTMLElement)) e.preventDefault(); }} dangerouslySetInnerHTML={{ __html: linked.html }} />
           )}
+          {!note.paper && <ImedLinks slug={note.slug} />}
 
           <div className="print:hidden"><ContentCredit /></div>
 

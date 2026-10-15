@@ -2,6 +2,9 @@
 
 *Orientation notes for study. Check local guidelines before prescribing.*
 
+
+![Bronchiectasis. Public domain](https://upload.wikimedia.org/wikipedia/commons/6/65/Bronchiectasis_NHLBI.jpg)
+
 ## Definition
 
 **Bronchiectasis** is **permanent, abnormal dilatation of the bronchi** with chronic inflammation and infection, leading to a clinical syndrome of **chronic productive cough, recurrent chest infections and sometimes haemoptysis**.

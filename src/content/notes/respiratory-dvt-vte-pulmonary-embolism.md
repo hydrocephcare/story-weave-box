@@ -2,6 +2,9 @@
 
 *Orientation notes for study. Doses are typical adult doses: check renal function, interactions and your hospital protocol before prescribing.*
 
+
+![illustration of a pulmonary embolism. Baedr-9439, CC0](https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Pulmonary-embolism.png/960px-Pulmonary-embolism.png)
+
 ## Definitions
 
 - **Deep vein thrombosis (DVT):** a **blood clot in a deep vein**, usually of the **leg** (calf, popliteal, femoral, iliac veins).

@@ -2,6 +2,9 @@
 
 *Orientation notes for study. Doses and stepwise plans follow GINA and BTS/SIGN; check the Kenya MoH asthma guideline and the drugs available at your facility.*
 
+
+![Asthma. BruceBlaus, CC BY-SA 4.0](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Asthma_%28Lungs%29.png/960px-Asthma_%28Lungs%29.png)
+
 ## Definition
 
 **Asthma** is a **chronic inflammatory disorder of the airways** causing **recurrent episodes of wheeze, breathlessness, chest tightness and cough**, with **variable, reversible airflow obstruction** and **bronchial hyper-responsiveness**.

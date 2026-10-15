@@ -2,6 +2,9 @@
 
 *Orientation notes for study. Check local guidelines before prescribing.*
 
+
+![Bronchitis (Acute and Chronic). Public domain](https://upload.wikimedia.org/wikipedia/commons/9/99/Bronchitis.jpg)
+
 ## Definition
 
 **Bronchitis** is **inflammation of the bronchi**. There are two quite different conditions:

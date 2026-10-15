@@ -1931,5 +1931,65 @@
     "description": "Year 4 IMED clinical method: red flags, focused cardiovascular history, bedside examination, first-line investigations and three clinical cases linking heart failure, acute coronary syndrome and infective endocarditis.",
     "updated": "2026-10-15",
     "file": "src/content/notes/cardio-approach-to-cardiovascular-symptoms-and-examination.md"
+  },
+  {
+    "slug": "tuberculosis",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Tuberculosis: pulmonary and extrapulmonary",
+    "description": "Tuberculosis: pulmonary and extrapulmonary: epidemiology and HIV link, primary vs post-primary TB, clinical features, sputum smear, Xpert MTB/RIF, culture, chest X-ray patterns.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/respiratory-tuberculosis.md"
+  },
+  {
+    "slug": "respiratory-failure-and-abg",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Respiratory failure and arterial blood gas interpretation",
+    "description": "Respiratory failure and arterial blood gas interpretation: type 1 vs type 2 failure and the causes of each, acute vs chronic, oxygen therapy and targets, non-invasive ventilation.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/respiratory-respiratory-failure-and-abg.md"
+  },
+  {
+    "slug": "pulmonary-oedema-and-ards",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Pulmonary oedema and ARDS",
+    "description": "Pulmonary oedema and ARDS: cardiogenic vs non-cardiogenic pulmonary oedema, pathophysiology, clinical features and examination, chest X-ray signs, BNP, echocardiography, emergency.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/respiratory-pulmonary-oedema-and-ards.md"
+  },
+  {
+    "slug": "pulmonary-hypertension-and-cor-pulmonale",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Pulmonary hypertension and cor pulmonale",
+    "description": "Pulmonary hypertension and cor pulmonale: definition and the WHO groups of pulmonary hypertension, causes in our setting (chronic lung disease, schistosomiasis, thromboembolism, left heart.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/respiratory-pulmonary-hypertension-and-cor-pulmonale.md"
+  },
+  {
+    "slug": "pneumocystis-pneumonia",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Pneumocystis jirovecii pneumonia (PCP)",
+    "description": "Pneumocystis jirovecii pneumonia (PCP): who gets it and at what CD4 count, the subacute dry cough and exertional dyspnoea with desaturation on exercise, chest X-ray and CT findings, raised.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/respiratory-pneumocystis-pneumonia.md"
+  },
+  {
+    "slug": "approach-to-respiratory-symptoms",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Respiratory",
+    "title": "Approach to respiratory symptoms and the chest examination",
+    "description": "Approach to respiratory symptoms and the chest examination: cough, dyspnoea, haemoptysis, wheeze, chest pain: the history questions that narrow the diagnosis; the full chest examination.",
+    "updated": "2026-10-15",
+    "file": "src/content/notes/respiratory-approach-to-respiratory-symptoms.md"
   }
 ]

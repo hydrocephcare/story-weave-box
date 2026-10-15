@@ -2,6 +2,9 @@
 
 *Orientation notes for study. Treatment is decided by a multidisciplinary team; check current oncology guidelines.*
 
+
+![Lung CA seen on CXR. James Heilman, MD, CC BY-SA 3.0](https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/LungCACXR.PNG/960px-LungCACXR.PNG)
+
 ## Definition and epidemiology
 
 **Lung cancer** is a **malignant tumour arising from the bronchial epithelium (bronchogenic carcinoma)**. It is the **leading cause of cancer death worldwide**. Most patients present **late** with advanced disease, which is the main reason for poor survival (5-year survival about 15–20%).

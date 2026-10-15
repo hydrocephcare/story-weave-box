@@ -63,6 +63,7 @@ const AdminAnalytics = lazy(() => import("./pages/AdminAnalytics"));
 const AdminTools = lazy(() => import("./pages/AdminTools"));
 const AdminContentHealth = lazy(() => import("./pages/AdminContentHealth"));
 const AdminPolish = lazy(() => import("./pages/AdminPolish"));
+const Imed = lazy(() => import("./pages/Imed"));
 const MyWeek = lazy(() => import("./pages/MyWeek"));
 const AdminDrafts = lazy(() => import("./pages/AdminDrafts"));
 const AdminActivity = lazy(() => import("./pages/AdminActivity"));
@@ -156,6 +157,7 @@ const AnimatedRoutes = () => {
             <Route path="/revision-planner" element={<SignedInRoute><RevisionPlanner /></SignedInRoute>} />
             <Route path="/supplementary-revision" element={<Navigate to="/revision-index" replace />} />
             <Route path="/revision-index" element={<RevisionIndex />} />
+            <Route path="/imed" element={<RailLayout><Imed /></RailLayout>} />
             <Route path="/my-week" element={<RailLayout><MyWeek /></RailLayout>} />
             <Route path="/revise" element={<RailLayout><SmartRevision /></RailLayout>} />
             <Route path="/dashboard" element={<Dashboard />} />

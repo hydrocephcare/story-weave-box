@@ -195,6 +195,8 @@ export function mdToHtml(source, { skipTitle = false, questions = false } = {}) 
       while (i < lines.length && /^\s*\|/.test(lines[i])) rows.push(lines[i++]);
       out.push(table(rows)); continue;
     }
+    // a stray line that starts with a bar but is not a table (no separator row under it) is shown as plain text, never left unread
+    if (/^\s*\|/.test(line)) { out.push(`<p>${inline(line.replace(/^\s*\|\s*/, "").replace(/\|/g, " · "))}</p>`); i++; continue; }
     if (questions) {
       const mcq = mcqBlock(lines, i);
       if (mcq) { closeCard(); out.push(mcq[0]); i = mcq[1]; continue; }

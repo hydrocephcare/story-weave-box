@@ -4,6 +4,9 @@
 
 **The reasoning chain:** look at the urine and the blood pressure → name the syndrome (nephrotic or nephritic) → find the cause (primary or secondary, with local causes) → confirm with serology and, if needed, biopsy → treat the cause, control oedema, protect the kidney, prevent complications.
 
+
+![Histopathological image of diabetic glomerulosclerosis with nephrotic syndrome. KGH, CC BY-SA 3.0](https://upload.wikimedia.org/wikipedia/commons/e/ea/Diabetic_glomerulosclerosis_%281%29_HE.jpg)
+
 ## 1. The core difference
 
 | | **Nephrotic syndrome** | **Nephritic syndrome** |

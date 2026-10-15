@@ -2,6 +2,9 @@
 
 *Orientation notes for study. Specialist diagnosis uses a multidisciplinary team; check local guidelines before prescribing.*
 
+
+![Interstitial Lung Diseases. Public domain](https://upload.wikimedia.org/wikipedia/commons/e/eb/End-stage_interstitial_lung_disease_%28honeycomb_lung%29.jpg)
+
 ## Definition
 
 **Interstitial lung diseases (ILD)**, or **diffuse parenchymal lung diseases**, are a **heterogeneous group of more than 200 disorders** that cause **inflammation and/or fibrosis of the lung interstitium** (alveolar walls and the tissue around airways and vessels). They produce a **restrictive** pattern of lung function and **impaired gas exchange**.

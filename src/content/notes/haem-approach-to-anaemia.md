@@ -4,6 +4,9 @@
 
 **The reasoning chain:** confirm anaemia → classify by red cell size (MCV) → decide whether the marrow is making too few cells or the body is losing or destroying them → find the cause (including the local ones: malaria, hookworm, HIV, sickle cell, TB) → treat the cause and replace what is missing.
 
+
+![Human blood from a case of iron deficiency anemia Giemsa stain. Dr Graham Beards, CC BY-SA 3.0](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Iron_deficiency_anemia_blood_film.jpg/960px-Iron_deficiency_anemia_blood_film.jpg)
+
 ## 1. Define
 
 Anaemia is a **haemoglobin below normal for age and sex**: roughly below **13 g/dL in men, 12 g/dL in women, 11 g/dL in pregnancy and young children** (WHO). Symptoms: tiredness, breathlessness, palpitations, headache, pallor, and angina or heart failure when severe.

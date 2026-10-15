@@ -4,6 +4,9 @@
 
 **The reasoning chain:** confirm the diagnosis properly → find out if there is a secondary cause → assess the organs already damaged and the other risks → treat with lifestyle and the right drug combination → set a target → follow up. **Hypertension is silent: the aim of treatment is to prevent stroke, heart attack, heart failure and kidney disease.**
 
+
+![Hypertension. Steven Fruitsmaak, CC BY 3.0](https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Grade_1_hypertension.jpg/960px-Grade_1_hypertension.jpg)
+
 ## 1. Define and confirm
 
 Hypertension is a **sustained** blood pressure of **140/90 mmHg or more** in the clinic, confirmed on **repeat visits** (or **ambulatory 24-hour monitoring at 130/80 or more**, or **home readings of 135/85 or more**). Some guidelines use 130/80 as the threshold for treatment in high-risk patients.

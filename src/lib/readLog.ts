@@ -14,6 +14,11 @@ export function readsThisWeek(uid: string | null | undefined): ReadEntry[] {
   } catch { return []; }
 }
 
+/** Every page this student has really read on this device (not only this week), newest first. */
+export function allReads(uid: string | null | undefined): ReadEntry[] {
+  try { return JSON.parse(localStorage.getItem(keyFor(uid)) ?? "[]") as ReadEntry[]; } catch { return []; }
+}
+
 function record(uid: string | null | undefined, e: ReadEntry) {
   try {
     const all = (JSON.parse(localStorage.getItem(keyFor(uid)) ?? "[]") as ReadEntry[]).filter((x) => x.p !== e.p);

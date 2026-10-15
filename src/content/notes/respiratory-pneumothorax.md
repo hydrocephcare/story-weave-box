@@ -2,6 +2,9 @@
 
 *Orientation notes for study. Check current BTS or local guidelines and follow your hospital protocol.*
 
+
+![Pneumothorax. BruceBlaus, CC BY 3.0](https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Blausen_0742_Pneumothorax.png/960px-Blausen_0742_Pneumothorax.png)
+
 ## Definition
 
 A **pneumothorax** is **air in the pleural space**, which allows the lung to **collapse** away from the chest wall.

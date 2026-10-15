@@ -2,6 +2,9 @@
 
 *Orientation notes for study. Doses and regimens vary with local guidelines (Kenya MoH, hospital protocols): always check before prescribing.*
 
+
+![Chest radiograph of an 88 year old man, about one week after onset of fever, fatigue and mild coughing. Mikael Häggström, M.D., CC0](https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Chest_radiograph_in_influensa_and_H_influenzae%2C_posteroanterior%2C_annotated.jpg/960px-Chest_radiograph_in_influensa_and_H_influenzae%2C_posteroanterior%2C_annotated.jpg)
+
 ## Definition
 
 **Pneumonia** is **infection of the lung parenchyma** (alveoli and interstitium) with **consolidation**: the air spaces fill with inflammatory exudate. It is the commonest cause of death from infection worldwide.

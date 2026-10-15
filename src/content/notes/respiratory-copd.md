@@ -2,6 +2,9 @@
 
 *Orientation notes for study, based on GOLD and NICE. Check the Kenya MoH and your hospital guideline before prescribing.*
 
+
+![Enlarged view of lung tissue showing the difference between healthy lung and COPD. Public domain](https://upload.wikimedia.org/wikipedia/commons/5/59/Copd_versus_healthy_lung.jpg)
+
 ## Definition
 
 **COPD** is a **common, preventable and treatable disease** characterised by **persistent respiratory symptoms and airflow limitation that is not fully reversible**, caused by abnormalities of the airways (**chronic bronchitis, small airways disease**) and/or alveoli (**emphysema**) from significant exposure to noxious particles or gases.

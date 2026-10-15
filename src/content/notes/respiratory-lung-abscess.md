@@ -2,6 +2,9 @@
 
 *Orientation notes for study. Check local guidelines before prescribing.*
 
+
+![Computed tomography CT scan of chest showing bilateral pneumonia with abscesses, effusions, and caverns. Christaras A, CC BY 2.5](https://upload.wikimedia.org/wikipedia/commons/4/46/CT_chest_in_pneumonia_with_abscesses_caverns_and_effusions_d0.jpg)
+
 ## Definition
 
 A **lung abscess** is a **localised area of necrosis of lung parenchyma with a cavity** (usually **2 cm or more**) containing **pus or necrotic debris**, caused by infection. Several small cavities (below 2 cm) in a pneumonic area are **necrotising pneumonia**.

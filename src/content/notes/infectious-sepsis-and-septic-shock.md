@@ -4,6 +4,9 @@
 
 **The reasoning chain:** recognise sepsis early → find the source → give the first hour's care (the "Sepsis Six") → choose antibiotics for the likely organism and local resistance → source control → watch for organ failure.
 
+
+![Patient with severe septic shock and ischemia zones on the skin in microthrombs. Emergency doc, CC BY-SA 4.0](https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Sepsis-Mikrothomben1.JPG/960px-Sepsis-Mikrothomben1.JPG)
+
 ## 1. Definitions (Sepsis-3)
 
 - **Sepsis:** life-threatening **organ dysfunction caused by a dysregulated response to infection**. In practice: suspected infection **plus an acute rise in SOFA score of 2 or more**.
