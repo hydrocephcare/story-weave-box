@@ -593,3 +593,6 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
 @media (min-width: 640px) { .note-body.note-topic { font-size: 1.1875rem; } }
 .note-body.note-topic h2 { font-size: 2.25rem; }
 .note-body.note-topic strong { color: hsl(var(--foreground)); }
+
+/* picture captions stay readable on the dark theme (the picture box is white, so the caption gets the page background, not a see-through grey) */
+.note-body .note-figure figcaption { background: hsl(var(--card)); color: hsl(var(--foreground) / 0.78); font-size: 0.85rem; }
