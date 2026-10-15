@@ -7,6 +7,7 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { savePlace, scheduleReview } from "@/lib/noteProgress";
 import { pullProgress, pushProgress } from "@/lib/progressSync";
 import { isSaved, toggleSaved } from "@/lib/savedNotes";
+import { examOnly } from "@/lib/examMode";
 import { openAI } from "@/lib/aiEvents";
 import { topicForNote } from "@/data/imed";
 import { doneTopics, toggleTopic } from "@/lib/imedProgress";
@@ -105,6 +106,8 @@ function StaticNoteView() {
   const spy = useScrollSpy(parsed ? parsed.headings.map((h) => h.id) : []);
   const [doneTick, setDoneTick] = useState(0);
   const [savedTick, setSavedTick] = useState(0);
+  const [examMode, setExamMode] = useState(() => { try { return localStorage.getItem("ompath_exam_mode") === "1"; } catch { return false; } });
+  useEffect(() => { try { localStorage.setItem("ompath_exam_mode", examMode ? "1" : "0"); } catch { /* ignore */ } }, [examMode]);
   useEffect(() => { void pullProgress(railUser?.id).then(() => setDoneTick((n) => n + 1)); }, [railUser?.id]);
   const [fontStep, setFontStep] = useState(() => { try { return Number(localStorage.getItem("ompath_note_font") ?? 0) || 0; } catch { return 0; } });
   useEffect(() => { try { localStorage.setItem("ompath_note_font", String(fontStep)); } catch { /* ignore */ } }, [fontStep]);
@@ -124,6 +127,25 @@ function StaticNoteView() {
     window.setTimeout(() => { try { pushProgress(railUser?.id, note.slug, { progress: spy.progress, finished: (JSON.parse(localStorage.getItem(finishedKey) ?? "[]") as string[]).includes(note.slug) }); } catch { /* ignore */ } }, 0);
   };
   const saved = (() => { void savedTick; return note ? isSaved(railUser?.id, note.slug) : false; })();
+  useEffect(() => {
+    if (!note || note.paper || !parsed) return;
+    const onKey = (e: KeyboardEvent) => {
+      const t = e.target as HTMLElement | null;
+      if (e.ctrlKey || e.metaKey || e.altKey || (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable))) return;
+      const k = e.key.toLowerCase();
+      const ids = parsed.headings.map((h) => h.id);
+      const at = Math.max(0, ids.indexOf(spy.active));
+      if (k === "j" || k === "k") {
+        const go = ids[Math.max(0, Math.min(ids.length - 1, at + (k === "j" ? 1 : -1)))];
+        document.getElementById(go)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else if (k === "f") toggleFinished();
+      else if (k === "s") { toggleSaved(railUser?.id, note.slug); setSavedTick((n) => n + 1); }
+      else if (k === "e") setExamMode((v) => !v);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [note, parsed, spy.active, railUser?.id]);
   const nextNote = (() => { if (!note) return null; const all = STATIC_NOTES.filter((n) => n.unit === note.unit && n.group === note.group && !n.paper); const i = all.findIndex((n) => n.slug === note.slug); return i >= 0 ? all[i + 1] ?? null : null; })();
   const railOn = !note?.paper && Boolean(parsed && parsed.headings.length > 2);
   const siblings = useMemo(() => (note ? STATIC_NOTES.filter((n) => n.unit === note.unit && n.group === note.group && n.slug !== note.slug) : []), [note]);
@@ -229,6 +251,7 @@ function StaticNoteView() {
                 </div>
                 <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center justify-center gap-1.5 rounded-lg border border-border px-2 py-2 hover:border-primary hover:text-primary"><ArrowUp className="h-3.5 w-3.5" aria-hidden /> Top</button>
               </div>
+              <button type="button" onClick={() => setExamMode((v) => !v)} aria-pressed={examMode} title="Shows only the sections examiners draw on (shortcut: E)" className={`mx-4 mt-2 rounded-lg border px-3 py-2 text-xs font-bold transition-colors ${examMode ? "border-amber-500 bg-amber-500/15 text-amber-700 dark:text-amber-300" : "border-border hover:border-primary hover:text-primary"}`}>{examMode ? "Exam mode on: high-yield only" : "Exam mode: high-yield only"}</button>
               <div className="flex items-center gap-3 px-5 pb-4 pt-3" role="progressbar" aria-valuenow={spy.progress} aria-valuemin={0} aria-valuemax={100} aria-label="How far down this note you are">
                 <div className="relative h-9 w-9 shrink-0">
                   <svg viewBox="0 0 36 36" className="h-9 w-9 -rotate-90"><circle cx="18" cy="18" r="15.5" fill="none" strokeWidth="3.5" className="stroke-muted" /><circle cx="18" cy="18" r="15.5" fill="none" strokeWidth="3.5" strokeLinecap="round" className="stroke-primary transition-[stroke-dasharray] duration-300" strokeDasharray={`${(spy.progress / 100) * 97.4} 97.4`} /></svg>
@@ -284,7 +307,7 @@ function StaticNoteView() {
           {!note.paper && <PharmacologyConnections ids={linked.ids} conditionIds={note.condition ? [note.condition] : []} leave={leave} className="mt-4" />}
 
           {note.paper && text ? <PaperBody text={text} onClick={onBodyClick} /> : (
-            <article style={note.paper ? undefined : { fontSize: `${1 + fontStep * 0.0625}em` }} className={`note-body mt-6 ${note.paper ? "" : "note-topic"}`} onClick={onBodyClick} onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && pickOption(e.target as HTMLElement)) e.preventDefault(); }} dangerouslySetInnerHTML={{ __html: linked.html }} />
+            <article style={note.paper ? undefined : { fontSize: `${1 + fontStep * 0.0625}em` }} className={`note-body mt-6 ${note.paper ? "" : "note-topic"}`} onClick={onBodyClick} onKeyDown={(e) => { if ((e.key === "Enter" || e.key === " ") && pickOption(e.target as HTMLElement)) e.preventDefault(); }} dangerouslySetInnerHTML={{ __html: examMode && !note.paper ? examOnly(linked.html) : linked.html }} />
           )}
           {!note.paper && <ImedLinks slug={note.slug} />}
           {!note.paper && <NoteNavCards slug={note.slug} />}

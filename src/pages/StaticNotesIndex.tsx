@@ -9,6 +9,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { allReads } from "@/lib/readLog";
 import { IMED, isPublished } from "@/data/imed";
 import { unfinished } from "@/lib/noteProgress";
+import DailyQuestion from "@/components/DailyQuestion";
 import { savedNotes } from "@/lib/savedNotes";
 import { getUnitsForYear, unitPath, type Unit } from "@/lib/academic";
 
@@ -48,6 +49,7 @@ export default function StaticNotesIndex() {
 
   const resume = useMemo(() => unfinished(user?.id), [user?.id]);
   const shelf = useMemo(() => savedNotes(user?.id).map((slug) => NOTES.find((n) => n.slug === slug)).filter((n): n is StaticNote => Boolean(n)).slice(0, 6), [user?.id]);
+  const fresh = useMemo(() => [...NOTES].sort((a, b) => b.updated.localeCompare(a.updated)).slice(0, 5), []);
   const imedWritten = IMED.reduce((a, s) => a + s.topics.filter(isPublished).length, 0);
   const imedTotal = IMED.reduce((a, s) => a + s.topics.length, 0);
 
@@ -101,6 +103,13 @@ export default function StaticNotesIndex() {
           <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">{shelf.map((n) => <li key={n.slug}><Link to={`/notes/${n.slug}`} className="block truncate rounded-lg bg-background px-3 py-2 text-sm font-semibold hover:text-primary">{n.title}</Link></li>)}</ul>
         </section>
       )}
+
+      <DailyQuestion className="mt-5" />
+
+      <section className="mt-5" aria-label="New and updated">
+        <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">New and updated</p>
+        <ul className="mt-2 flex gap-2 overflow-x-auto pb-1">{fresh.map((n) => <li key={n.slug} className="shrink-0"><Link to={`/notes/${n.slug}`} className="block max-w-[15rem] rounded-xl border border-border bg-card px-3 py-2 hover:border-primary/60"><span className="block text-[10px] font-bold uppercase tracking-wide text-muted-foreground">Year {n.year} · {n.group ?? n.unit}</span><span className="line-clamp-2 block text-sm font-semibold leading-snug">{n.title}</span></Link></li>)}</ul>
+      </section>
 
       <div className="mt-5 flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Year">
         {YEARS.map((y) => (

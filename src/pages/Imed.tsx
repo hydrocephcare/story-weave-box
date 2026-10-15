@@ -5,6 +5,7 @@ import { Check, ChevronDown, Circle } from "lucide-react";
 import { IMED, isPublished, linksFor } from "@/data/imed";
 import { doneTopics, systemProgress, toggleTopic } from "@/lib/imedProgress";
 import { useAuth } from "@/hooks/useAuth";
+import DailyQuestion from "@/components/DailyQuestion";
 import { completeReview, daysUntil, dueReviews, getExamDate, perDay, setExamDate, unfinished } from "@/lib/noteProgress";
 
 /** /imed: Year 4 Internal Medicine, one folder per system. A tick means the topic is finished: ticked by you, or automatically after you read its note properly. */
@@ -36,6 +37,8 @@ export default function Imed() {
       <p className="mt-2 text-[17px] text-muted-foreground">{live} of {total} topics are written so far; the rest are marked coming soon. Every note ends with the topics it connects to and why. A tick means you finished the topic: it appears by itself after you read a note for a couple of active minutes, or tap the circle.</p>
 
       <Link to="/notes/year-4-imed-revision-roadmap" className="mt-5 inline-block font-bold text-primary hover:underline">Exam revision roadmap for Year 4 internal medicine →</Link>
+
+      <DailyQuestion className="mt-6" />
 
       <section className="mt-6 space-y-3" aria-label="Your study plan">
         <div className="rounded-2xl border border-border bg-card p-4">
