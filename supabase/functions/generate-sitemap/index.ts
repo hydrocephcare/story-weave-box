@@ -118,15 +118,13 @@ function matchesYear(category: string | null | undefined, year: string | null) {
   return new RegExp(`^Year\\s+${year}\\s*:`, "i").test(String(category || ""));
 }
 
-async function fetchAllPublished(sb: any, table: string, select: string, orderColumn = "updated_at") {
+async function fetchAllPublished(sb: any, table: string, select: string, orderColumn = "updated_at", soft = true) {
   const rows: any[] = [];
   const batchSize = 1000;
   for (let from = 0; ; from += batchSize) {
-    const { data, error } = await sb
-      .from(table)
-      .select(select)
-      .eq("published", true)
-      .is("deleted_at", null)
+    let query = sb.from(table).select(select).eq("published", true);
+    if (soft) query = query.is("deleted_at", null);   // contests have no deleted_at column; asking for it failed the whole sitemap
+    const { data, error } = await query
       .order(orderColumn, { ascending: false, nullsFirst: false })
       .range(from, from + batchSize - 1);
     if (error) throw error;
@@ -154,11 +152,11 @@ serve(async (req) => {
 
     const [articles, mcqs, flashcards, stories, essays, contests] = await Promise.all([
       fetchAllPublished(supabase, "articles", "id, title, slug, created_at, updated_at, category, og_image_url, featured_image"),
-      fetchAllPublished(supabase, "mcq_sets", "id, title, slug, og_image_url, created_at, updated_at, category"),
+      fetchAllPublished(supabase, "mcq_sets", "id, title, slug, og_image_url, created_at, updated_at, category, source_type, exam_year"),
       fetchAllPublished(supabase, "flashcard_sets", "id, title, slug, created_at, updated_at, category"),
       fetchAllPublished(supabase, "stories", "id, title, slug, created_at, category, cover_image_url", "created_at"),
       fetchAllPublished(supabase, "essays", "id, title, slug, created_at, updated_at, category"),
-      fetchAllPublished(supabase, "contests", "id, slug, title, subtitle, starts_at, ends_at, published, updated_at, created_at", "updated_at"),
+      fetchAllPublished(supabase, "contests", "id, slug, title, subtitle, starts_at, published, updated_at, created_at", "updated_at", false),
     ]);
 
     const years = new Set<number>([1, 2, 3, 4, 5, 6]);
@@ -251,6 +249,8 @@ serve(async (req) => {
 
     // MCQs
     for (const m of (mcqs || []) as any[]) {
+      // timed exams (weekly, unit exams, past papers) are taken on the exam page and are not listed as practice banks
+      if (/exam/i.test(m.title || "") || /^weekly exam/i.test(m.category || "") || m.source_type === "past_paper" || m.exam_year) continue;
       if (!includeMcqs || !matchesYear(m.category, filter.year)) continue;
       const mcqSlug = cleanPublicSlug(m.slug, m.title, "quiz");
       const path = `/mcqs/${mcqSlug}`;
@@ -334,7 +334,7 @@ serve(async (req) => {
   <url><loc>${DEFAULT_BASE_URL}/year/6</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
 </urlset>`, {
       status: 200,
-      headers: { ...corsHeaders, "Content-Type": "application/xml; charset=utf-8", "Cache-Control": "public, s-maxage=600, stale-while-revalidate=3600" },
+      headers: { ...corsHeaders, "Content-Type": "application/xml; charset=utf-8", "Cache-Control": "public, s-maxage=600, stale-while-revalidate=3600", "x-sitemap-error": String((error as any)?.message || error).replace(/[^ -~]/g, " ").slice(0, 200) },
     });
   }
 });

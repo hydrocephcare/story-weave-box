@@ -151,7 +151,7 @@ serve(async (req) => {
     // 1. which units exist (ids and categories only: tiny), 2. which have had an exam most recently, 3. read the content of the ones that are due
     const [{ data: setRows }, { data: artRows }, { data: past }] = await Promise.all([
       supabase.from("mcq_sets").select("id, category").eq("published", true).is("deleted_at", null),
-      supabase.from("articles").select("id, category").eq("published", true).is("deleted_at", null),
+      supabase.from("articles").select("id, category, updated_at").eq("published", true).is("deleted_at", null),
       supabase.from("mcq_sets").select("category, created_at").like("category", "Weekly Exam:%").order("created_at", { ascending: false }).limit(400),
     ]);
     if ((!setRows || setRows.length === 0) && (!artRows || artRows.length === 0)) {
@@ -167,13 +167,24 @@ serve(async (req) => {
     const lastExam = new Map<string, number>();
     for (const p of (past || []) as any[]) { const u = String(p.category).replace(/^Weekly Exam:\s*/, ""); if (!lastExam.has(u)) lastExam.set(u, Date.parse(p.created_at)); }
     const weekAgo = Date.now() - 6 * 86_400_000;
-    const [{ data: wrongAnswers }, { data: passwordSetting }] = await Promise.all([
+    const [{ data: readRows }, { data: wrongAnswers }, { data: passwordSetting }] = await Promise.all([
+      supabase.from("user_resource_progress").select("resource_id").eq("resource_type", "article").gte("last_opened_at", new Date(Date.now() - 7 * 86_400_000).toISOString()).limit(3000),
       supabase.from("user_answers").select("question_text").eq("is_correct", false).order("created_at", { ascending: false }).limit(300),
       supabase.from("app_settings").select("value").eq("key", "exam_password").maybeSingle(),
     ]);
 
     // Which units get an exam: enough material, none in the past 6 days (unless forced), then ranked by how long the unit has waited, how much
     // material it has and how often students get its questions wrong. Picking rotates through the years so Year 4 and 5 are not starved by Year 3.
+    // what this week's students actually read, and which notes were published or edited this week: both pull their unit up the list
+    const unitOfArticle = new Map<string, string>(), freshByUnit = new Map<string, number>(), readByUnit = new Map<string, number>();
+    for (const r of (artRows || []) as any[]) {
+      const u = normalizeUnitName(r.category || "Uncategorized"); unitOfArticle.set(r.id, u);
+      if (r.updated_at && Date.parse(r.updated_at) > Date.now() - 7 * 86_400_000) freshByUnit.set(u, (freshByUnit.get(u) || 0) + 1);
+    }
+    for (const r of (readRows || []) as any[]) { const u = unitOfArticle.get(r.resource_id); if (u) readByUnit.set(u, (readByUnit.get(u) || 0) + 1); }
+    const madeThisWeek = new Map<number, number>();   // exams already written this week, by year
+    const yearOfUnit = (u: string) => Number(/Year\s*(\d)/i.exec(u)?.[1]) || 0;
+    for (const p of (past || []) as any[]) if (Date.parse(p.created_at) > weekAgo) { const y = yearOfUnit(String(p.category)); madeThisWeek.set(y, (madeThisWeek.get(y) || 0) + 1); }
     const wantYear = Number(body?.year) || 0, wantUnit = body?.unit ? String(body.unit).toLowerCase() : "", force = body?.force === true;
     const yearOf = (u: string) => Number(/Year\s*(\d)/i.exec(u)?.[1]) || 0;
     const wrongText = ((wrongAnswers as any[]) || []).map((a: any) => String(a.question_text || "").toLowerCase());
@@ -182,24 +193,26 @@ serve(async (req) => {
       const words = u.toLowerCase().replace(/year\s*\d\s*:/, "").split(/[^a-z]+/).filter((w) => w.length > 4);
       const weak = words.length ? wrongText.filter((t) => words.some((w) => t.includes(w))).length : 0;
       const waitedDays = Math.min(400, (Date.now() - (lastExam.get(u) ?? 0)) / 86_400_000);
-      return waitedDays + Math.min(material, 60) / 6 + Math.min(weak, 30) * 0.7;
+      return waitedDays + Math.min(material, 60) / 6 + Math.min(weak, 30) * 0.7 + Math.min(freshByUnit.get(u) || 0, 10) * 4 + Math.min(readByUnit.get(u) || 0, 40) * 1.5;
     };
     const ranked = [...new Set([...setIds.keys(), ...artIds.keys()])]
       .filter((u) => (setIds.get(u)?.length || 0) + (artIds.get(u)?.length || 0) >= 3 && (force || (lastExam.get(u) ?? 0) < weekAgo)
         && (!wantYear || yearOf(u) === wantYear) && (!wantUnit || u.toLowerCase().includes(wantUnit)))
       .sort((x, y) => score(y) - score(x));
-    const buckets = new Map<number, string[]>();
-    for (const u of ranked) { const y = yearOf(u); if (!buckets.has(y)) buckets.set(y, []); buckets.get(y)!.push(u); }
-    const units: string[] = [];
-    const order = [...buckets.keys()].sort((a, b) => (b || 9) - (a || 9));   // senior years first: they have the least practice material
-    while (units.length < maxUnits && [...buckets.values()].some((b) => b.length)) for (const y of order) { const next = buckets.get(y)!.shift(); if (next && units.length < maxUnits) units.push(next); }
+    // every year that has material gets an exam before any year gets a second one; inside a year the highest score goes first
+    const units: string[] = [], made = new Map(madeThisWeek), pool = [...ranked];
+    while (units.length < maxUnits && pool.length) {
+      pool.sort((x, y) => (made.get(yearOf(x)) || 0) - (made.get(yearOf(y)) || 0) || score(y) - score(x));
+      const next = pool.shift()!; units.push(next); made.set(yearOf(next), (made.get(yearOf(next)) || 0) + 1);
+    }
     const byUnit = new Map<string, string[]>();
     for (const unit of units) {
       const arr: string[] = []; byUnit.set(unit, arr);
+      // notes first, newest edits at the top (what this week's students read), then a sample of the existing questions
+      const { data: arts } = await supabase.from("articles").select("title, content, updated_at").in("id", (artIds.get(unit) || []).slice(0, 40));
+      (arts || []).sort((x: any, y: any) => Date.parse(y.updated_at || 0) - Date.parse(x.updated_at || 0)).slice(0, 25).forEach((article: any) => arr.push(`[Article] ${article.title}: ${(article.content || "").slice(0, 500)}`));
       const { data: sets } = await supabase.from("mcq_sets").select("title, questions").in("id", (setIds.get(unit) || []).slice(0, 40));
       (sets || []).forEach((set: any) => (Array.isArray(set.questions) ? set.questions : []).slice(0, 12).forEach((q: any) => arr.push(`[MCQ] ${q?.question || ""}`)));
-      const { data: arts } = await supabase.from("articles").select("title, content").in("id", (artIds.get(unit) || []).slice(0, 25));
-      (arts || []).forEach((article: any) => arr.push(`[Article] ${article.title}: ${(article.content || "").slice(0, 500)}`));
     }
 
     const weakTopics = ((wrongAnswers as any[]) || []).map((a: any) => a.question_text).filter(Boolean).slice(0, 80);
