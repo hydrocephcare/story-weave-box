@@ -13,7 +13,7 @@ fs.mkdirSync(outDir, { recursive: true });
 const ANON = fs.readFileSync("scripts/blogs/restructure.mjs", "utf8").match(/ANON = "([^"]+)"/)[1];
 const ask = (prompt, timeoutMs, maxTokens) => askModel(prompt, { env, timeoutMs, maxTokens, plain: true }).then((r) => r.text);
 for (const w of want) {
-  const r = await fetch(`https://lkgfzjwhmfjvntzphbsh.supabase.co/rest/v1/articles?select=id,title,category,content,original_notes&published=eq.true&or=(slug.ilike.*${encodeURIComponent(w)}*,title.ilike.*${encodeURIComponent(w)}*)&limit=1`, { headers: { apikey: ANON, Authorization: `Bearer ${ANON}` } });
+  const r = await fetch(`https://dekyjrfwvavtoivqivno.supabase.co/rest/v1/articles?select=id,title,category,content,original_notes&published=eq.true&or=(slug.ilike.*${encodeURIComponent(w)}*,title.ilike.*${encodeURIComponent(w)}*)&limit=1`, { headers: { apikey: ANON, Authorization: `Bearer ${ANON}` } });
   const a = (await r.json())[0];
   if (!a) { console.log(`no blog for "${w}"`); continue; }
   const t0 = Date.now();

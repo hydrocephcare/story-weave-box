@@ -8,8 +8,8 @@ import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 import { yearOf } from "./blogPolishCore.js";
 import { metaFor, polishArticle, polishStep } from "./blogPolishRun.js";
 
-const SB = process.env.SUPABASE_URL || "https://lkgfzjwhmfjvntzphbsh.supabase.co";
-const ANON = process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrZ2Z6andobWZqdm50enBoYnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3Nzk5MjIsImV4cCI6MjA4NzM1NTkyMn0.a2QY6TxzKNM2AhuuoDkgdKifI3XhSGhYRlhpqZpvAwo"; // the public key every visitor's browser already has
+const SB = process.env.SUPABASE_URL || "https://dekyjrfwvavtoivqivno.supabase.co";
+const ANON = process.env.SUPABASE_ANON_KEY || "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL"; // the public key every visitor's browser already has
 const WRITE_KEY = () => process.env.POLISH_WRITE_KEY || "";
 const DAILY_CAP = Number(process.env.POLISH_DAILY_CAP || 40);
 const hits = new Map(); // per visitor, per hour (best effort)

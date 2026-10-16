@@ -17,8 +17,8 @@ if (!FORCE && new Date() < new Date(START)) { console.log(`Blog tidy-up starts o
 const read = (f) => (fs.existsSync(f) ? fs.readFileSync(f, "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "");
 const env = { GROQ_API_KEYS: [process.env.GROQ_API_KEYS, read(".groq-keys.local")].filter(Boolean).join(","), GEMINI_API_KEYS: [process.env.GEMINI_API_KEYS, read(".gemini-keys.local")].filter(Boolean).join(",") };
 if (!env.GROQ_API_KEYS && !env.GEMINI_API_KEYS) { console.log("No AI keys: nothing to do."); process.exit(0); }
-const SB = "https://lkgfzjwhmfjvntzphbsh.supabase.co";
-const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrZ2Z6andobWZqdm50enBoYnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3Nzk5MjIsImV4cCI6MjA4NzM1NTkyMn0.a2QY6TxzKNM2AhuuoDkgdKifI3XhSGhYRlhpqZpvAwo";
+const SB = "https://dekyjrfwvavtoivqivno.supabase.co";
+const ANON = "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL";
 
 fs.mkdirSync(DIR, { recursive: true });
 const indexFile = path.join(DIR, "index.json");

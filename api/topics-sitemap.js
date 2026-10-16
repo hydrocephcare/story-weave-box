@@ -1,9 +1,9 @@
 // /topics-sitemap.xml: topic pages that were written after the last deploy (so they are in the sitemap the moment they are published).
 // The pages built at deploy time are already in library-sitemap.xml; this lists only the ones published since, from the topic_pages table.
 const SITE = "https://www.ompathstudy.com";
-const DB = "https://lkgfzjwhmfjvntzphbsh.supabase.co";
+const DB = "https://dekyjrfwvavtoivqivno.supabase.co";
 // the public (anon) key the website already ships with; the table only lets readers see published pages
-const KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrZ2Z6andobWZqdm50enBoYnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3Nzk5MjIsImV4cCI6MjA4NzM1NTkyMn0.a2QY6TxzKNM2AhuuoDkgdKifI3XhSGhYRlhpqZpvAwo";
+const KEY = "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL";
 
 export default async function handler(req, res) {
   res.setHeader("Content-Type", "application/xml; charset=utf-8");

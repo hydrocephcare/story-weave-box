@@ -8,7 +8,7 @@ import path from "node:path";
 import { tidy } from "./tidy-rules.mjs";
 
 const DIR = "public/blog-fixes";
-const SB = "https://lkgfzjwhmfjvntzphbsh.supabase.co";
+const SB = "https://dekyjrfwvavtoivqivno.supabase.co";
 const ANON = fs.readFileSync("scripts/blogs/restructure.mjs", "utf8").match(/ANON = "([^"]+)"/)[1];
 const indexFile = path.join(DIR, "index.json"), skippedFile = path.join(DIR, "_skipped.json");
 const index = fs.existsSync(indexFile) ? JSON.parse(fs.readFileSync(indexFile, "utf8")) : {};

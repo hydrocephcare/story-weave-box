@@ -266,12 +266,12 @@ function getSupabaseConfig() {
   const url =
     process.env.VITE_SUPABASE_URL ||
     process.env.SUPABASE_URL ||
-    "https://lkgfzjwhmfjvntzphbsh.supabase.co";
+    "https://dekyjrfwvavtoivqivno.supabase.co";
   const key =
     process.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
     process.env.SUPABASE_PUBLISHABLE_KEY ||
     process.env.SUPABASE_ANON_KEY ||
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrZ2Z6andobWZqdm50enBoYnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3Nzk5MjIsImV4cCI6MjA4NzM1NTkyMn0.a2QY6TxzKNM2AhuuoDkgdKifI3XhSGhYRlhpqZpvAwo";
+    "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL";
   return { url, key };
 }
 

@@ -6,7 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const PROJECTS = {
-  lkgfzjwhmfjvntzphbsh: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxrZ2Z6andobWZqdm50enBoYnNoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE3Nzk5MjIsImV4cCI6MjA4NzM1NTkyMn0.a2QY6TxzKNM2AhuuoDkgdKifI3XhSGhYRlhpqZpvAwo",
+  dekyjrfwvavtoivqivno: "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL",
   dekyjrfwvavtoivqivno: "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL",
 };
 const FILES = /^(books|broken-links|year[1-6]-library)\.json$/;

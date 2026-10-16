@@ -8,7 +8,7 @@ let font;
 const loadFont = () => (font ??= fs.readFileSync(path.join(process.cwd(), "api", "_assets", "inter-700.woff")));
 const one = (v) => (Array.isArray(v) ? v[0] : v);
 
-const ALLOWED = /^https:\/\/(upload\.wikimedia\.org|www\.ompathstudy\.com|ompathstudy\.com|cdn\.ompathstudy\.com|lkgfzjwhmfjvntzphbsh\.supabase\.co)\//;
+const ALLOWED = /^https:\/\/(upload\.wikimedia\.org|www\.ompathstudy\.com|ompathstudy\.com|cdn\.ompathstudy\.com|dekyjrfwvavtoivqivno\.supabase\.co)\//;
 const withTimeout = async (url, ms, init) => { const c = new AbortController(); const t = setTimeout(() => c.abort(), ms); try { return await fetch(url, { ...init, signal: c.signal }); } finally { clearTimeout(t); } };
 
 /** A picture for a topic from the free encyclopaedia's lead image, as a data URI (png or jpeg only: that is what the card can draw). */

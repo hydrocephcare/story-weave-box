@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   try {
     const file = typeof req.query?.file === "string" ? req.query.file : "all.xml";
-    const upstream = await fetch(`https://lkgfzjwhmfjvntzphbsh.supabase.co/functions/v1/generate-sitemap?file=${encodeURIComponent(file)}`, {
+    const upstream = await fetch(`https://dekyjrfwvavtoivqivno.supabase.co/functions/v1/generate-sitemap?file=${encodeURIComponent(file)}`, {
       method: "GET",
       headers: { Accept: "application/xml,text/xml;q=0.9,*/*;q=0.8" },
     });
