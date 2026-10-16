@@ -2,15 +2,18 @@
 // Secrets: GEMINI_API_KEYS (comma separated) or GEMINI_API_KEY, GROQ_API_KEYS or GROQ_API_KEY.
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
 let turn = 0;
+// models that answer on the free plan today (gemini-2.0-flash and llama-3.3 were retired); each model has its own free quota, so a full one is skipped for the next
+const GEMINI_MODELS = ["gemini-3.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash", "gemini-2.5-flash-lite"];
+const GROQ_MODELS = ["openai/gpt-oss-120b", "qwen/qwen3.8-27b", "openai/gpt-oss-20b"];
 
 export async function chatText(env, messages, { temperature = 0.1, maxTokens = 8000, timeoutMs = 25000 } = {}) {
   const gem = list(env.GEMINI_API_KEYS || env.GEMINI_API_KEY), groq = list(env.GROQ_API_KEYS || env.GROQ_API_KEY);
   const tries = [];
-  for (const key of gem) for (const model of ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-2.0-flash"]) tries.push({ url: "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", key, model });
-  for (const key of groq) for (const model of ["openai/gpt-oss-120b", "llama-3.3-70b-versatile", "llama-3.1-8b-instant"]) tries.push({ url: "https://api.groq.com/openai/v1/chat/completions", key, model });
+  for (const key of gem) for (const model of GEMINI_MODELS) tries.push({ url: "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", key, model });
+  for (const key of groq) for (const model of GROQ_MODELS) tries.push({ url: "https://api.groq.com/openai/v1/chat/completions", key, model });
   if (!tries.length) throw new Error("No AI key is set (GEMINI_API_KEYS or GROQ_API_KEYS).");
   const start = gem.length ? turn++ % gem.length : 0; // spread the load over the keys
-  const ordered = [...tries.slice(start * 3), ...tries.slice(0, start * 3)];
+  const ordered = [...tries.slice(start * GEMINI_MODELS.length), ...tries.slice(0, start * GEMINI_MODELS.length)];
   let last = "";
   for (const t of ordered) {
     const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), timeoutMs);

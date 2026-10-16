@@ -4,8 +4,8 @@ const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.tri
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let turn = 0;
 
-const GROQ_MODELS = () => list(process.env.GROQ_CHAT_MODELS || "openai/gpt-oss-120b,llama-3.3-70b-versatile,openai/gpt-oss-20b,llama-3.1-8b-instant");
-const GEMINI_MODELS = () => list(process.env.GEMINI_CHAT_MODELS || "gemini-2.5-flash,gemini-2.5-flash-lite,gemini-2.0-flash");
+const GROQ_MODELS = () => list(process.env.GROQ_CHAT_MODELS || "openai/gpt-oss-120b,qwen/qwen3.8-27b,openai/gpt-oss-20b");
+const GEMINI_MODELS = () => list(process.env.GEMINI_CHAT_MODELS || "gemini-3.5-flash,gemini-flash-lite-latest,gemini-2.5-flash,gemini-2.5-flash-lite");
 
 async function viaGroq(msgs, opt, why) {
   const keys = list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY); if (!keys.length) { why.push("no Groq key"); return null; }

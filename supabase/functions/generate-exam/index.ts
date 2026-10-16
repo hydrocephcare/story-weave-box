@@ -21,7 +21,7 @@ async function generateWithFallback(prompt: string): Promise<string> {
   return await chatText(Deno.env.toObject(), [
     { role: "system", content: "You are a senior medical exam writer. Return ONLY valid JSON, no markdown or code blocks." },
     { role: "user", content: prompt },
-  ], { temperature: 0.4, maxTokens: 8000, timeoutMs: 40000 });
+  ], { temperature: 0.4, maxTokens: 6000, timeoutMs: 45000 });
 }
 
 function parseMcqs(raw: string) {
@@ -210,7 +210,7 @@ serve(async (req) => {
       const arr: string[] = []; byUnit.set(unit, arr);
       // notes first, newest edits at the top (what this week's students read), then a sample of the existing questions
       const { data: arts } = await supabase.from("articles").select("title, content, updated_at").in("id", (artIds.get(unit) || []).slice(0, 40));
-      (arts || []).sort((x: any, y: any) => Date.parse(y.updated_at || 0) - Date.parse(x.updated_at || 0)).slice(0, 25).forEach((article: any) => arr.push(`[Article] ${article.title}: ${(article.content || "").slice(0, 500)}`));
+      (arts || []).sort((x: any, y: any) => Date.parse(y.updated_at || 0) - Date.parse(x.updated_at || 0)).slice(0, 25).forEach((article: any) => arr.push(`[Article] ${article.title}: ${(article.content || "").slice(0, 350)}`));
       const { data: sets } = await supabase.from("mcq_sets").select("title, questions").in("id", (setIds.get(unit) || []).slice(0, 40));
       (sets || []).forEach((set: any) => (Array.isArray(set.questions) ? set.questions : []).slice(0, 12).forEach((q: any) => arr.push(`[MCQ] ${q?.question || ""}`)));
     }
@@ -226,7 +226,7 @@ serve(async (req) => {
     for (const [unit, snippets] of byUnit.entries()) {
       if (snippets.length === 0) continue;
 
-      const context = snippets.slice(0, 80).join("\n");
+      const context = snippets.slice(0, 45).join("\n");
       const weakForUnit = weakTopics.filter((q) => q.toLowerCase().includes(unit.toLowerCase())).slice(0, 20);
       const weakBlock = weakForUnit.length ? `\nPrioritize weak topics:\n${weakForUnit.join("\n")}` : "";
 
