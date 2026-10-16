@@ -42,7 +42,7 @@ function geminiKeys(): string[] {
   return keys;
 }
 
-const MODELS = ["gemini-2.5-flash", "gemini-2.0-flash"];
+const MODELS = ["gemini-2.5-flash", "gemini-3.5-flash"];
 
 async function callVision(prompt: string, images: { mime: string; data: string }[]): Promise<string> {
   // Prefer the OmniRoute combo when configured; send images as OpenAI image_url parts.

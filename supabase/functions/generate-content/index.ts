@@ -251,7 +251,7 @@ async function callAI(messages: any[], geminiKey?: string, allKeys?: string[]): 
   const prompt = `${systemMsg}\n\n${userMsg}`;
 
   const MAX_RETRIES = 2;
-  const MODELS = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.5-flash-lite"];
+  const MODELS = ["gemini-2.5-flash", "gemini-3.5-flash", "gemini-2.5-flash-lite"];
   const REQUEST_TIMEOUT_MS = 45000;
 
   for (const apiKey of keyList) {

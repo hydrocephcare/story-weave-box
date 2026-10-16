@@ -34,7 +34,7 @@ async function ocr(urls: string[]) {
   }
   if (parts.length < 2) return "";
   for (const key of KEYS) {
-    for (const model of ["gemini-2.5-flash", "gemini-2.0-flash"]) {
+    for (const model of ["gemini-2.5-flash", "gemini-3.5-flash"]) {
       try {
         const res = await fetch(
           `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${key}`,

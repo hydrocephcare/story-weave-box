@@ -7,7 +7,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const GEMINI_MODELS = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.5-pro"];
+const GEMINI_MODELS = ["gemini-2.5-flash", "gemini-3.5-flash", "gemini-2.5-pro"];
 const DEFAULT_SITE_URL = "https://ompathstudy.com";
 
 function normalizeBaseUrl(url: string | null | undefined): string {
