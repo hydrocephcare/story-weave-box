@@ -355,7 +355,7 @@ export default function ExamMode({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"
+          className="fixed inset-0 z-[300] flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"
         >
           <motion.div
             initial={{ scale: 0.92 }}
@@ -396,7 +396,7 @@ export default function ExamMode({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"
+          className="fixed inset-0 z-[300] flex items-center justify-center bg-black/60 backdrop-blur-sm px-4"
         >
           <motion.div
             initial={{ scale: 0.92 }}
@@ -470,10 +470,10 @@ export default function ExamMode({
                 </svg>
                 <span className="absolute inset-0 flex flex-col items-center justify-center"><span className="text-4xl font-bold tabular-nums">{pct}%</span><span className="text-xs font-semibold text-muted-foreground">{correctCount} / {total}</span></span>
               </div>
-              <div className="min-w-0 flex-1">
+              <div className="w-full min-w-0 flex-1">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Your result</p>
                 <h2 className="mt-1 font-serif text-3xl font-bold">{verdict}</h2>
-                <p className="mt-1 truncate text-sm text-muted-foreground">{title}</p>
+                <p className="mt-1 text-sm text-muted-foreground">{shortTitle(title, unitName ? `Weekly Exam: ${unitName}` : "")}</p>
                 {studentInfo && <p className="mt-1 text-xs text-muted-foreground">{studentInfo.name} · {studentInfo.university}</p>}
                 <div className="mt-4 grid grid-cols-4 gap-2 text-center">
                   {([[correctCount, "Correct", "text-emerald-600 dark:text-emerald-300"], [wrongIdx.length, "Wrong", "text-rose-600 dark:text-rose-300"], [skippedIdx.length, "Skipped", "text-amber-600 dark:text-amber-300"], [formatTime(elapsed), "Time", "text-foreground"]] as const).map(([n, l, c]) => (
@@ -564,7 +564,7 @@ export default function ExamMode({
   );
 
   return (
-    <div className="exam-container fixed inset-0 z-50 flex flex-col overflow-hidden bg-background">
+    <div className="exam-container fixed inset-0 z-[200] flex flex-col overflow-hidden bg-background">
       {ExitDialog()}
       {SubmitDialog()}
 
@@ -641,7 +641,7 @@ export default function ExamMode({
       </div>
 
       {paletteOpen && (
-        <div className="fixed inset-0 z-[90] flex items-end bg-black/50 lg:hidden" onClick={() => setPaletteOpen(false)}>
+        <div className="fixed inset-0 z-[250] flex items-end bg-black/50 lg:hidden" onClick={() => setPaletteOpen(false)}>
           <div className="max-h-[70vh] w-full overflow-y-auto rounded-t-3xl border border-border bg-card p-5" onClick={(e) => e.stopPropagation()}>
             <div className="mb-3 flex items-center justify-between"><p className="font-serif text-lg font-bold">All questions</p><button type="button" onClick={() => setPaletteOpen(false)} className="rounded-full p-1.5 hover:bg-muted" aria-label="Close"><X className="h-5 w-5" /></button></div>
             {palette}

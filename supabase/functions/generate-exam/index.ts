@@ -162,10 +162,13 @@ serve(async (req) => {
       const weakBlock = weakForUnit.length ? `\nPrioritize weak topics:\n${weakForUnit.join("\n")}` : "";
 
       const mcqPrompt = `Create exactly 35 high-quality MCQs for a ${unit} weekly medical exam.\n\nContent context:\n${context}${weakBlock}\n\nReturn ONLY valid JSON array with schema: {"question":"...","options":["A","B","C","D"],"correct_answer":0,"explanation":"..."}`;
-      let mcqText = "";
-      try { mcqText = await generateWithFallback(mcqPrompt); } catch (e) { skipped.push(`${unit}: ${e instanceof Error ? e.message : e}`); continue; }
-      const examMcqs = parseMcqs(mcqText);
-      if (examMcqs.length === 0) { skipped.push(`${unit}: the writer gave no usable questions (${mcqText.length} characters: ${mcqText.slice(0, 160).replace(/\s+/g, " ")})`); continue; }
+      // 30 questions with one-sentence explanations fit the writer's output limit; an answer that comes back short is tried once more, and a unit that still has fewer than 15 is skipped
+      const compact = `${mcqPrompt.replace("exactly 35", "exactly 30")}\n\nKeep every explanation to ONE sentence of at most 25 words.`;
+      let examMcqs: ReturnType<typeof parseMcqs> = [], lastErr = "";
+      for (let attempt = 0; attempt < 2 && examMcqs.length < 25; attempt++) {
+        try { const got = parseMcqs(await generateWithFallback(compact)); if (got.length > examMcqs.length) examMcqs = got; } catch (e) { lastErr = e instanceof Error ? e.message : String(e); }
+      }
+      if (examMcqs.length < 15) { skipped.push(`${unit}: ${lastErr || `the writer produced only ${examMcqs.length} usable questions`}`); continue; }
 
       const essayPrompt = `Create written exam section for ${unit}. Return ONLY valid JSON:\n{"saqs":[{"question":"...","model_answer":"...","marks":5}],"laqs":[{"question":"...","model_answer":"...","marks":20}]}\n\nRules:\n- exactly 4 SAQs with 5 marks each\n- exactly 1 LAQ with 20 marks`;
       const essayText = await generateWithFallback(essayPrompt).catch(() => "");

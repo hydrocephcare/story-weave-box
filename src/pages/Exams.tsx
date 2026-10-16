@@ -56,7 +56,7 @@ function Card({ row, mcq, featured = false }: { row: CatalogRow; mcq: boolean; f
         {year && <span className="rounded-full border border-border px-2 py-0.5 text-muted-foreground">Y{year}</span>}
       </div>
       <h3 className={`mt-2 font-serif font-bold leading-snug text-foreground ${featured ? "text-2xl" : "text-lg"}`}>{shortTitle(row.title, row.category)}</h3>
-      <p className="mt-1 text-sm text-muted-foreground">{examUnit(row.category)}{row.exam_year ? ` · ${row.exam_year}` : ""}</p>
+      {(examUnit(row.category) !== shortTitle(row.title, row.category) || row.exam_year) && <p className="mt-1 text-sm text-muted-foreground">{[examUnit(row.category) !== shortTitle(row.title, row.category) ? examUnit(row.category) : "", row.exam_year].filter(Boolean).join(" · ")}</p>}
       <div className="mt-auto flex items-center justify-between gap-3 pt-4">
         <span className="inline-flex items-center gap-3 text-xs font-semibold text-muted-foreground">
           <span className="inline-flex items-center gap-1"><ListChecks className="h-3.5 w-3.5" aria-hidden /> {row.question_count} Qs</span>
