@@ -47,6 +47,7 @@ function buildMenu(isAdmin: boolean): Group[] {
       { to: "/books", label: "Books", icon: BookMarked },
     ] },
     { label: "Practice", items: [
+      { to: "/mcqs", label: "MCQs", icon: ListChecks },
       { to: "/exams", label: "Exams", icon: Trophy },
       { to: "/flashcards", label: "Flashcards", icon: GraduationCap },
       { to: "/must-knows", label: "Must-Knows", icon: ListChecks },

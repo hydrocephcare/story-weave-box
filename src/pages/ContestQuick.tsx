@@ -41,7 +41,7 @@ export default function ContestQuick() {
     void Promise.all([loadAllContestUniversities(), loadAdminExamPapers()]).then(([u, p]) => { setUniversities(u.filter((x) => x.active)); setPapers(p); }).catch((e) => setError(e?.message || "Could not load universities and exams."));
   }, [isAdmin]);
 
-  const shown = useMemo(() => { const q = search.trim().toLowerCase(); return (q ? papers.filter((p) => `${p.title} ${p.category}`.toLowerCase().includes(q)) : papers).slice(0, 60); }, [papers, search]);
+  const shown = useMemo(() => { const q = search.trim().toLowerCase(); return (q ? papers.filter((p) => `${p.kind || ""} ${p.title} ${p.category}`.toLowerCase().includes(q)) : papers).slice(0, 60); }, [papers, search]);
   const parsed = useMemo(() => (source === "paste" ? parseContestQuestions(paste) : null), [source, paste]);
   const questionsReady = source === "exam" ? Boolean(examId) : (parsed?.questions.length ?? 0) > 0;
   const problems = [
@@ -130,7 +130,7 @@ export default function ContestQuick() {
         {source === "exam" ? (
           <>
             <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search exams, e.g. anatomy" className={input} />
-            <select size={6} value={examId} onChange={(e) => setExamId(e.target.value)} className={`${input} h-40`}>{shown.map((p) => <option key={p.id} value={p.id}>{p.title}</option>)}</select>
+            <select size={6} value={examId} onChange={(e) => setExamId(e.target.value)} className={`${input} h-40`}>{shown.map((p) => <option key={p.id} value={p.id}>{p.kind ? `[${p.kind}] ` : ""}{p.title} · {p.question_count} Qs</option>)}</select>
             {!shown.length && <p className="mt-2 text-xs text-muted-foreground">No exam matches.</p>}
           </>
         ) : (

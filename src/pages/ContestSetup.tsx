@@ -60,7 +60,7 @@ export default function ContestSetup() {
   const filteredExamPapers = useMemo(() => {
     const query = examSearch.trim().toLowerCase();
     if (!query) return examPapers;
-    return examPapers.filter((paper) => `${paper.title} ${paper.category}`.toLowerCase().includes(query));
+    return examPapers.filter((paper) => `${paper.kind || ""} ${paper.title} ${paper.category}`.toLowerCase().includes(query));
   }, [examPapers, examSearch]);
 
   useEffect(() => {
@@ -293,7 +293,7 @@ export default function ContestSetup() {
         <label className="mt-4 block text-sm font-semibold">Exam paper
           <select value={selectedExamId} onChange={(e) => setSelectedExamId(e.target.value)} className="mt-2 w-full rounded-lg border bg-background px-3 py-3 text-sm font-normal">
             {!filteredExamPapers.length && <option value="">No matching exam papers</option>}
-            {filteredExamPapers.map((paper) => <option key={paper.id} value={paper.id}>{paper.title} · {paper.question_count} questions · {paper.category}</option>)}
+            {filteredExamPapers.map((paper) => <option key={paper.id} value={paper.id}>{paper.kind ? `[${paper.kind}] ` : ""}{paper.title} · {paper.question_count} questions · {paper.category}</option>)}
           </select>
         </label>
         <div className="mt-4 flex flex-wrap items-center gap-3">

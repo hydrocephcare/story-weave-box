@@ -177,23 +177,14 @@ export interface AdminExamPaper {
   category: string;
   slug: string;
   question_count: number;
+  kind?: "Past paper" | "Exam" | "MCQ bank";
 }
 
 export async function loadAdminExamPapers(): Promise<AdminExamPaper[]> {
-  const { data, error } = await (supabase as any).from("mcq_sets")
-    .select("id,title,category,slug,questions")
-    .eq("published", true)
-    .is("deleted_at", null)
-    .order("category")
-    .order("title");
+  // past papers first, then timed exams, then topic question banks; the database counts the questions so none of them are downloaded
+  const { data, error } = await (supabase as any).rpc("admin_exam_papers");
   if (error) throw error;
-  return (data || []).map((paper: any) => ({
-    id: paper.id,
-    title: paper.title,
-    category: paper.category || "Uncategorised",
-    slug: paper.slug,
-    question_count: Array.isArray(paper.questions) ? paper.questions.length : 0,
-  })).filter((paper: AdminExamPaper) => paper.question_count > 0);
+  return ((data || []) as AdminExamPaper[]).filter((paper) => paper.question_count > 0);
 }
 
 export async function importExamPaperToContestRound(roundId: string, examId: string): Promise<{ count: number; title: string }> {

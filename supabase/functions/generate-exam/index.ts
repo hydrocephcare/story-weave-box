@@ -1,6 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
-import { callOmniRoute, omniRouteConfig } from "../_shared/omniroute.ts";
+import { chatText } from "../_shared/aiChat.js";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -17,59 +17,11 @@ function normalizeUnitName(category: string): string {
   return raw;
 }
 
-async function callGeminiFallback(prompt: string): Promise<string> {
-  // Prefer the OmniRoute combo (free providers) when configured; fall back to Gemini keys.
-  const omni = omniRouteConfig();
-  if (omni) {
-    try {
-      return await callOmniRoute(omni, {
-        messages: [
-          { role: "system", content: "You are a senior medical exam writer. Return ONLY valid JSON, no markdown or code blocks." },
-          { role: "user", content: prompt },
-        ],
-      });
-    } catch (e: any) {
-      console.log("OmniRoute unavailable, falling back to Gemini:", e?.message || String(e));
-    }
-  }
-
-  const keys: string[] = [];
-  for (const name of ["GEMINI_API_KEY", "GEMINI_API_KEY_2", "GEMINI_API_KEY_3", "GEMINI_API_KEY_4", "GEMINI_API_KEY_5"]) {
-    const v = Deno.env.get(name);
-    if (v && !keys.includes(v)) keys.push(v);
-  }
-  if (keys.length === 0) throw new Error("No GEMINI_API_KEY configured");
-
-  const models = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-2.5-flash-lite"];
-  for (const apiKey of keys) {
-    for (const model of models) {
-      try {
-        const response = await fetch(
-          `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`,
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              contents: [{ parts: [{ text: `You are a senior medical exam writer. Return ONLY valid JSON, no markdown or code blocks.\n\n${prompt}` }] }],
-            }),
-          }
-        );
-        if (response.ok) {
-          const data = await response.json();
-          const text = data.candidates?.[0]?.content?.parts?.[0]?.text || "";
-          if (text) return text;
-        }
-        if (response.status === 429) continue;
-      } catch (e) {
-        console.error(`Gemini ${model} key ...${apiKey.slice(-4)} failed:`, e);
-      }
-    }
-  }
-  throw new Error("All Gemini keys/models exhausted");
-}
-
 async function generateWithFallback(prompt: string): Promise<string> {
-  return await callGeminiFallback(prompt);
+  return await chatText(Deno.env.toObject(), [
+    { role: "system", content: "You are a senior medical exam writer. Return ONLY valid JSON, no markdown or code blocks." },
+    { role: "user", content: prompt },
+  ], { temperature: 0.4, maxTokens: 8000, timeoutMs: 40000 });
 }
 
 function parseMcqs(raw: string) {
@@ -118,44 +70,62 @@ serve(async (req) => {
   try {
     const supabase = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
 
-    const [{ data: mcqSets }, { data: articles }, { data: wrongAnswers }, { data: passwordSetting }] = await Promise.all([
-      supabase.from("mcq_sets").select("title, questions, category").eq("published", true),
-      supabase.from("articles").select("title, content, category").eq("published", true),
+    // who is calling: the weekly schedule (secret key) or a signed-in administrator
+    const authz = req.headers.get("authorization") || "";
+    const cronOk = !!Deno.env.get("CRON_KEY") && req.headers.get("x-cron-key") === Deno.env.get("CRON_KEY");
+    if (!cronOk) {
+      const token = authz.replace(/^Bearers+/i, "");
+      const { data: u } = token ? await supabase.auth.getUser(token) : { data: null };
+      const { data: isAdmin } = u?.user ? await supabase.rpc("has_role", { _user_id: u.user.id, _role: "admin" }) : { data: false };
+      if (!isAdmin) return new Response(JSON.stringify({ error: "Administrators only." }), { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+    }
+    const body = await req.json().catch(() => ({}));
+    const maxUnits = Math.max(1, Math.min(8, Number(body?.units) || 3));   // a run finishes inside the function's time limit; the next run continues with the units still waiting
+
+    // 1. which units exist (ids and categories only: tiny), 2. which have had an exam most recently, 3. read the content of the ones that are due
+    const [{ data: setRows }, { data: artRows }, { data: past }] = await Promise.all([
+      supabase.from("mcq_sets").select("id, category").eq("published", true).is("deleted_at", null),
+      supabase.from("articles").select("id, category").eq("published", true).is("deleted_at", null),
+      supabase.from("mcq_sets").select("category, created_at").like("category", "Weekly Exam:%").order("created_at", { ascending: false }).limit(400),
+    ]);
+    if ((!setRows || setRows.length === 0) && (!artRows || artRows.length === 0)) {
+      return new Response(JSON.stringify({ error: "No published content to generate exam from" }), { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } });
+    }
+    const setIds = new Map<string, string[]>(), artIds = new Map<string, string[]>();
+    for (const [rows, into] of [[setRows, setIds], [artRows, artIds]] as const) for (const r of (rows || []) as any[]) {
+      const unit = normalizeUnitName(r.category || "Uncategorized");
+      if (unit === "Weekly Exam" || unit === "Uncategorized") continue;
+      if (!into.has(unit)) into.set(unit, []);
+      into.get(unit)!.push(r.id);
+    }
+    const lastExam = new Map<string, number>();
+    for (const p of (past || []) as any[]) { const u = String(p.category).replace(/^Weekly Exam:s*/, ""); if (!lastExam.has(u)) lastExam.set(u, Date.parse(p.created_at)); }
+    const weekAgo = Date.now() - 6 * 86_400_000;
+    const units = [...new Set([...setIds.keys(), ...artIds.keys()])]
+      .filter((u) => (setIds.get(u)?.length || 0) + (artIds.get(u)?.length || 0) >= 3 && (lastExam.get(u) ?? 0) < weekAgo)   // enough material, and no exam in the past 6 days
+      .sort((x, y) => (lastExam.get(x) ?? 0) - (lastExam.get(y) ?? 0))                                                       // never-examined units first, then the longest wait
+      .slice(0, maxUnits);
+
+    const [{ data: wrongAnswers }, { data: passwordSetting }] = await Promise.all([
       supabase.from("user_answers").select("question_text").eq("is_correct", false).order("created_at", { ascending: false }).limit(300),
       supabase.from("app_settings").select("value").eq("key", "exam_password").maybeSingle(),
     ]);
-
-    if ((!mcqSets || mcqSets.length === 0) && (!articles || articles.length === 0)) {
-      return new Response(JSON.stringify({ error: "No published content to generate exam from" }), {
-        status: 400,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+    const byUnit = new Map<string, string[]>();
+    for (const unit of units) {
+      const arr: string[] = []; byUnit.set(unit, arr);
+      const { data: sets } = await supabase.from("mcq_sets").select("title, questions").in("id", (setIds.get(unit) || []).slice(0, 40));
+      (sets || []).forEach((set: any) => (Array.isArray(set.questions) ? set.questions : []).slice(0, 12).forEach((q: any) => arr.push(`[MCQ] ${q?.question || ""}`)));
+      const { data: arts } = await supabase.from("articles").select("title, content").in("id", (artIds.get(unit) || []).slice(0, 25));
+      (arts || []).forEach((article: any) => arr.push(`[Article] ${article.title}: ${(article.content || "").slice(0, 500)}`));
     }
 
-    const byUnit = new Map<string, string[]>();
-
-    (mcqSets || []).forEach((set: any) => {
-      const unit = normalizeUnitName(set.category || "Uncategorized");
-      if (unit === "Weekly Exam" || unit === "Uncategorized") return;
-      if (!byUnit.has(unit)) byUnit.set(unit, []);
-      const arr = byUnit.get(unit)!;
-      const qs = Array.isArray(set.questions) ? set.questions : [];
-      qs.slice(0, 12).forEach((q: any) => arr.push(`[MCQ] ${q?.question || ""}`));
-    });
-
-    (articles || []).forEach((article: any) => {
-      const unit = normalizeUnitName(article.category || "Uncategorized");
-      if (unit === "Weekly Exam" || unit === "Uncategorized") return;
-      if (!byUnit.has(unit)) byUnit.set(unit, []);
-      byUnit.get(unit)!.push(`[Article] ${article.title}: ${(article.content || "").slice(0, 500)}`);
-    });
-
-    const weakTopics = (wrongAnswers || []).map((a: any) => a.question_text).filter(Boolean).slice(0, 80);
+    const weakTopics = ((wrongAnswers as any[]) || []).map((a: any) => a.question_text).filter(Boolean).slice(0, 80);
     const examPassword = passwordSetting?.value || "";
     const now = new Date();
     const dateText = now.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
     const createdExams: any[] = [];
+    const skipped: string[] = [];
 
     for (const [unit, snippets] of byUnit.entries()) {
       if (snippets.length === 0) continue;
@@ -165,12 +135,13 @@ serve(async (req) => {
       const weakBlock = weakForUnit.length ? `\nPrioritize weak topics:\n${weakForUnit.join("\n")}` : "";
 
       const mcqPrompt = `Create exactly 35 high-quality MCQs for a ${unit} weekly medical exam.\n\nContent context:\n${context}${weakBlock}\n\nReturn ONLY valid JSON array with schema: {"question":"...","options":["A","B","C","D"],"correct_answer":0,"explanation":"..."}`;
-      const mcqText = await generateWithFallback(mcqPrompt);
+      let mcqText = "";
+      try { mcqText = await generateWithFallback(mcqPrompt); } catch (e) { skipped.push(`${unit}: ${e instanceof Error ? e.message : e}`); continue; }
       const examMcqs = parseMcqs(mcqText);
-      if (examMcqs.length === 0) continue;
+      if (examMcqs.length === 0) { skipped.push(`${unit}: the writer gave no usable questions (${mcqText.length} characters: ${mcqText.slice(0, 160).replace(/s+/g, " ")})`); continue; }
 
       const essayPrompt = `Create written exam section for ${unit}. Return ONLY valid JSON:\n{"saqs":[{"question":"...","model_answer":"...","marks":5}],"laqs":[{"question":"...","model_answer":"...","marks":20}]}\n\nRules:\n- exactly 4 SAQs with 5 marks each\n- exactly 1 LAQ with 20 marks`;
-      const essayText = await generateWithFallback(essayPrompt);
+      const essayText = await generateWithFallback(essayPrompt).catch(() => "");
       const { saqs, laqs } = parseEssays(essayText);
 
       const examTitle = `Weekly ${unit} Exam - ${dateText}`;
@@ -189,7 +160,7 @@ serve(async (req) => {
         .single();
 
       if (insertError) {
-        console.error("Failed to insert exam for unit", unit, insertError.message);
+        console.error("Failed to insert exam for unit", unit, insertError.message); skipped.push(`${unit}: ${insertError.message}`);
         continue;
       }
 
@@ -205,7 +176,7 @@ serve(async (req) => {
       createdExams.push({ unit, exam_id: inserted.id, title: inserted.title, mcq_count: examMcqs.length, saq_count: saqs.length, laq_count: laqs.length });
     }
 
-    return new Response(JSON.stringify({ success: true, unit_count: createdExams.length, exams: createdExams }), {
+    return new Response(JSON.stringify({ success: true, unit_count: createdExams.length, exams: createdExams, skipped, tried: units, last: Object.fromEntries([...lastExam].slice(0, 6)) }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (e) {
