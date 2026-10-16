@@ -76,6 +76,7 @@ const AdminContentChecks = lazy(() => import("./pages/AdminContentChecks"));
 const AdminAccess = lazy(() => import("./pages/AdminAccess"));
 const AdminComments = lazy(() => import("./pages/AdminComments"));
 const AdminDrafts = lazy(() => import("./pages/AdminDrafts"));
+const AdminPaperFixes = lazy(() => import("./pages/AdminPaperFixes"));
 const AdminActivity = lazy(() => import("./pages/AdminActivity"));
 const YearTimetable = lazy(() => import("./pages/YearTimetable"));
 const UnitPage = lazy(() => import("./pages/UnitPage"));
@@ -239,6 +240,7 @@ const AnimatedRoutes = () => {
             <Route path="/admin/access" element={<AdminPage><AdminAccess /></AdminPage>} />
             <Route path="/admin/comments" element={<AdminPage><AdminComments /></AdminPage>} />
             <Route path="/admin/drafts" element={<AdminPage><AdminDrafts /></AdminPage>} />
+            <Route path="/admin/paper-fixes" element={<AdminPage><AdminPaperFixes /></AdminPage>} />
             <Route path="/admin/activity" element={<AdminPage><AdminActivity /></AdminPage>} />
             <Route path="/admin/polish" element={<AdminPage><AdminPolish /></AdminPage>} />
             <Route path="/admin/outline-sync" element={<AdminPage><AdminOutlineSync /></AdminPage>} />

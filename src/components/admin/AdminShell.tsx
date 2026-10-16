@@ -15,6 +15,7 @@ const GROUPS: AdminNavGroup[] = [
     tab("route:/admin/analytics", "Visitors", BarChart3),
     tab("route:/admin/access", "Book access rules", KeyRound),
     tab("route:/admin/drafts", "AI notes to approve", Sparkles),
+    tab("route:/admin/paper-fixes", "Written papers (AI)", FileText),
     tab("route:/admin/comments", "Comments", Bell),
     tab("route:/admin/duplicates", "Repeated pages", Layers),
     tab("route:/admin/thin-topics", "Deep exam notes", Layers),
