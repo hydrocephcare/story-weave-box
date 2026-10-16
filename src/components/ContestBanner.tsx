@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { ContestRecord, ContestUniversity } from "@/lib/contest-store";
 
 const hue = (s: string) => { let h = 0; for (const ch of s) h = (h * 31 + ch.charCodeAt(0)) % 360; return h; };
@@ -28,18 +29,19 @@ const when = (iso: string | null) => (iso ? new Intl.DateTimeFormat("en-KE", { d
 
 /** The picture for a contest: its uploaded poster, or a generated banner with the competing universities, the years, the date and the Ompath Study mark. */
 export default function ContestBanner({ contest, universities, className = "" }: { contest: ContestRecord; universities: ContestUniversity[]; className?: string }) {
-  if (contest.shareImageUrl) return <img src={contest.shareImageUrl} alt={contest.title} loading="lazy" className={`aspect-[40/21] w-full object-cover ${className}`} />;
+  // an uploaded poster that no longer loads falls back to the generated banner instead of showing a broken image
+  const [broken, setBroken] = useState(false);
+  if (contest.shareImageUrl && !broken) return <img src={contest.shareImageUrl} alt={contest.title} loading="lazy" onError={() => setBroken(true)} className={`aspect-[40/21] w-full object-cover ${className}`} />;
   const chosen = contest.universityIds.length ? universities.filter((u) => contest.universityIds.includes(u.id)) : [];
   const h = hue(contest.slug);
   const shown = chosen.slice(0, 3);
   return (
-    <div className={`relative flex aspect-[40/21] w-full flex-col items-center justify-center overflow-hidden px-4 ${className}`} style={{ background: `linear-gradient(135deg, hsl(${h} 55% 13%), hsl(${(h + 50) % 360} 60% 22%))` }}>
+    <div className={`relative flex min-h-[220px] w-full flex-col overflow-hidden px-4 pb-3 pt-12 ${className}`} style={{ background: `linear-gradient(135deg, hsl(${h} 55% 13%), hsl(${(h + 50) % 360} 60% 22%))` }}>
       <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10 blur-2xl" />
       <div className="absolute -bottom-12 -left-8 h-40 w-40 rounded-full bg-teal-300/15 blur-2xl" />
-      <img src="/brand/mark-dark.png" alt="" className="absolute bottom-2 right-3 h-9 w-auto opacity-90" decoding="async" />
       <YearBadges years={contest.years} className="absolute right-3 top-3 max-w-[45%] justify-end" />
       {shown.length >= 2 ? (
-        <div className="relative mt-6 flex items-center gap-3 sm:gap-5">
+        <div className="relative my-auto flex items-center justify-center gap-3 self-center sm:gap-5">
           {shown.map((u, i) => (
             <div key={u.id} className="flex items-center gap-3 sm:gap-5">
               {i > 0 && <span className="text-xs font-black uppercase tracking-[0.3em] text-white/50">vs</span>}
@@ -48,12 +50,15 @@ export default function ContestBanner({ contest, universities, className = "" }:
           ))}
         </div>
       ) : (
-        <div className="relative mt-7 w-full max-w-[88%] text-center">
+        <div className="relative my-auto w-full max-w-[92%] self-center text-center">
           <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-white/55">{chosen.length ? "Head to head" : "Open to every university"}</p>
-          <p className={`mt-1.5 line-clamp-3 font-serif font-bold leading-tight text-white ${contest.title.length > 40 ? "text-lg sm:text-xl" : contest.title.length > 22 ? "text-xl sm:text-2xl" : "text-2xl sm:text-3xl"}`}>{contest.title}</p>
+          <p className={`mt-1.5 line-clamp-3 font-serif font-bold leading-tight text-white ${contest.title.length > 40 ? "text-base sm:text-lg" : contest.title.length > 22 ? "text-lg sm:text-xl" : "text-xl sm:text-2xl"}`}>{contest.title}</p>
         </div>
       )}
-      {contest.startsAt && <p className="absolute bottom-3 left-3 text-[11px] font-semibold text-white/75">{when(contest.startsAt)} EAT</p>}
+      <div className="relative mt-3 flex items-end justify-between gap-3">
+        <p className="text-[11px] font-semibold text-white/75">{contest.startsAt ? `${when(contest.startsAt)} EAT` : ""}</p>
+        <img src="/brand/mark-dark.png" alt="" className="h-8 w-auto opacity-90" decoding="async" />
+      </div>
     </div>
   );
 }

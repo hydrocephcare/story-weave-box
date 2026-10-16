@@ -2,18 +2,26 @@
 // Secrets: GEMINI_API_KEYS (comma separated) or GEMINI_API_KEY, GROQ_API_KEYS or GROQ_API_KEY.
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
 let turn = 0;
+const cooldown = new Map();
 // models that answer on the free plan today (gemini-2.0-flash and llama-3.3 were retired); each model has its own free quota, so a full one is skipped for the next
 const GEMINI_MODELS = ["gemini-3.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash", "gemini-2.5-flash-lite"];
 const GROQ_MODELS = ["openai/gpt-oss-120b", "qwen/qwen3.8-27b", "openai/gpt-oss-20b"];
 
 export async function chatText(env, messages, { temperature = 0.1, maxTokens = 8000, timeoutMs = 25000 } = {}) {
   const gem = list(env.GEMINI_API_KEYS || env.GEMINI_API_KEY), groq = list(env.GROQ_API_KEYS || env.GROQ_API_KEY);
-  const tries = [];
-  for (const key of gem) for (const model of GEMINI_MODELS) tries.push({ url: "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", key, model });
-  for (const key of groq) for (const model of GROQ_MODELS) tries.push({ url: "https://api.groq.com/openai/v1/chat/completions", key, model });
-  if (!tries.length) throw new Error("No AI key is set (GEMINI_API_KEYS or GROQ_API_KEYS).");
-  const start = gem.length ? turn++ % gem.length : 0; // spread the load over the keys
-  const ordered = [...tries.slice(start * GEMINI_MODELS.length), ...tries.slice(0, start * GEMINI_MODELS.length)];
+  // Gemini and Groq take turns at being first (so Groq's separate free allowance is used and Gemini's lasts longer); inside a provider the keys and models
+  // rotate. A model that just said "quota used up" or "does not exist" is skipped for a while instead of being asked again on every call.
+  const entries = (keys, url, models) => keys.flatMap((key, ki) => models.map((model) => ({ url, key, model, id: model + ":" + ki })));
+  const gemAll = entries(gem, "https://generativelanguage.googleapis.com/v1beta/openai/chat/completions", GEMINI_MODELS);
+  const groqAll = entries(groq, "https://api.groq.com/openai/v1/chat/completions", GROQ_MODELS);
+  if (!gemAll.length && !groqAll.length) throw new Error("No AI key is set (GEMINI_API_KEYS or GROQ_API_KEYS).");
+  const rot = (arr, n, size) => (arr.length ? [...arr.slice((n * size) % arr.length), ...arr.slice(0, (n * size) % arr.length)] : arr);
+  const n = turn++;
+  const groqFirst = n % 2 === 1 || !gemAll.length;
+  const A = rot(groqFirst ? groqAll : gemAll, Math.floor(n / 2), groqFirst ? GROQ_MODELS.length : GEMINI_MODELS.length);
+  const B = rot(groqFirst ? gemAll : groqAll, Math.floor(n / 2), groqFirst ? GEMINI_MODELS.length : GROQ_MODELS.length);
+  const all = [...A, ...B], now = Date.now();
+  const ordered = [...all.filter((t) => (cooldown.get(t.id) || 0) <= now), ...all.filter((t) => (cooldown.get(t.id) || 0) > now)];
   let last = "";
   for (const t of ordered) {
     const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), timeoutMs);
@@ -21,6 +29,7 @@ export async function chatText(env, messages, { temperature = 0.1, maxTokens = 8
       const r = await fetch(t.url, { method: "POST", headers: { Authorization: "Bearer " + t.key, "Content-Type": "application/json" }, body: JSON.stringify({ model: t.model, messages, temperature, max_tokens: maxTokens }), signal: controller.signal });
       if (r.ok) { const text = (await r.json())?.choices?.[0]?.message?.content; if (text) return text; last = t.model + ": empty"; continue; }
       last = t.model + ": " + r.status;
+      if (r.status === 429) cooldown.set(t.id, Date.now() + 60_000); else if (r.status === 404) cooldown.set(t.id, Date.now() + 3_600_000);
     } catch (e) { last = t.model + ": " + String(e?.message ?? e).slice(0, 50); } finally { clearTimeout(timer); }
   }
   throw new Error("All AI providers failed (" + last + ")");
