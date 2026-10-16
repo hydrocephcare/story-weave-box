@@ -5,8 +5,8 @@
  * Signed-in users, writes, counts and anything not on the list below go straight to Supabase, exactly as before. If the cache is unreachable the
  * request falls back to Supabase, so a cache problem can never take the site down.
  */
-const PUBLIC_TABLES = "articles|mcq_sets|flashcard_sets|stories|article_categories|app_settings|topic_pages|resource_topics|study_resources|academic_years|medical_concepts|medical_concept_aliases|concept_relationships|contests|contest_universities|contest_rounds";
-export const PUBLIC_READ = new RegExp(`^/rest/v1/(${PUBLIC_TABLES})\\?`);
+const PUBLIC_TABLES = "articles|mcq_sets|flashcard_sets|stories|article_categories|app_settings|topic_pages|resource_topics|study_resources|academic_years|medical_concepts|medical_concept_aliases|concept_relationships|contests|contest_universities|contest_rounds|rpc/exam_catalog";
+export const PUBLIC_READ = new RegExp(`^/rest/v1/(${PUBLIC_TABLES})(\\?|$)`);
 
 export function makeCachedFetch(baseUrl: string, anonKey: string, real: typeof fetch = (input, init) => fetch(input, init)): typeof fetch {
   const inflight = new Map<string, Promise<Response>>();

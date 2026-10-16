@@ -1,236 +1,211 @@
 import { useEffect, useMemo, useState } from "react";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { ArrowRight, CheckCircle2, Clock, Flame, ListChecks, PlayCircle, Search, Timer, Trophy, X } from "lucide-react";
 import LoadMoreButton from "@/components/LoadMoreButton";
-import { useNavigate, useSearchParams } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Clock, Loader2, Phone, Shield, Sparkles, Trophy, Heart } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
-import { getSetting, getCategoryDisplayName, getYearFromCategory, buildExamPath } from "@/lib/store";
 import { updateMetaTags } from "@/lib/seo";
-import { dedupeResourceSummaries, isPublicMcqSet } from "@/lib/content-policy";
-import ContentCredit from "@/components/ContentCredit";
+import { isPublicMcqSet } from "@/lib/content-policy";
+import { examUnit, examYear, isWeekly, setPath, shortTitle, weeklyDate, type CatalogRow } from "@/lib/examMeta";
 
-interface ExamSet {
-  id: string;
-  title: string;
-  category: string;
-  created_at: string;
-  slug?: string | null;
+const YEARS = [1, 2, 3, 4, 5, 6];
+const DAY = 86_400_000;
+
+type Progress = { pct: number; at: number } | { live: true } | null;
+
+/** What this device remembers about a set: a finished attempt (exam or practice) or an unfinished exam session. */
+function progressOf(id: string, mcq: boolean): Progress {
+  try {
+    const done = localStorage.getItem(mcq ? `mcq_practice_${id}` : `exam_result_${id}`);
+    if (done) { const j = JSON.parse(done); const total = Number(j.total) || 0; if (total) return { pct: Math.round((Number(j.score) / total) * 100), at: Number(j.submittedAt || j.at) || 0 }; }
+    if (!mcq && localStorage.getItem(`exam_session_${id}`)) return { live: true };
+  } catch { /* storage blocked */ }
+  return null;
 }
 
-const UNLOCKED_KEY = "unlocked_exams";
+const myYear = (): number | null => { try { const y = Number(localStorage.getItem("ompath_my_year")); return y >= 1 && y <= 6 ? y : null; } catch { return null; } };
 
-function inferUnit(exam: ExamSet): string {
-  const fromCategory = exam.category?.replace(/^Weekly Exam\s*:?\s*/i, "").trim();
-  if (fromCategory && fromCategory !== "Weekly Exam") return getCategoryDisplayName(fromCategory);
-
-  const titleMatch = exam.title.match(/Weekly\s+(.+?)\s+Exam/i);
-  if (titleMatch?.[1]) return titleMatch[1].trim();
-
-  return "General";
-}
-
-const isExamSet = (e: { title: string; category: string }) => /exam/i.test(e.title) || /^weekly exam/i.test(e.category || "");
-
-/** One page, two lists: /exams holds the timed exams, /mcqs holds the practice question banks (every other published question set). */
-export default function Exams({ mode = "exam" }: { mode?: "exam" | "mcq" }) {
-  const mcqMode = mode === "mcq";
+function useCatalog() {
+  const [rows, setRows] = useState<CatalogRow[] | null>(null);
+  const [failed, setFailed] = useState(false);
   useEffect(() => {
-    updateMetaTags(mcqMode
-      ? { title: "MCQ Question Banks", description: "Practice multiple-choice questions by topic and unit for Kenyan medical and health-science students, with instant answers and explanations." }
-      : { title: "Timed Exams", description: "Timed, proctored medical MCQ exams for Kenyan health students. Unit-based weekly exams with scoring." });
-  }, [mcqMode]);
-  const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const selectedYear = searchParams.get("year") || "All";
-  const [examSets, setExamSets] = useState<ExamSet[]>([]);
-  const [visible, setVisible] = useState(12);
-  const [loading, setLoading] = useState(true);
-  const [examPrice, setExamPrice] = useState(5);
-  const [phoneByExamId, setPhoneByExamId] = useState<Record<string, string>>({});
-  const [paying, setPaying] = useState(false);
-  const [paymentStatus, setPaymentStatus] = useState<"idle" | "pending" | "completed" | "failed">("idle");
-  const [payingForExamId, setPayingForExamId] = useState<string | null>(null);
-  const [unlockedExams, setUnlockedExams] = useState<Set<string>>(new Set());
-
-  useEffect(() => {
-    setLoading(true); setVisible(12); setUnitPick(null);
-    loadExams();
-    getSetting("exam_price").then((price) => {
-      if (price && !isNaN(Number(price))) setExamPrice(Number(price));
+    let live = true;
+    (supabase as any).rpc("exam_catalog", undefined, { get: true }).then(({ data, error }: { data: CatalogRow[] | null; error: unknown }) => {
+      if (!live) return;
+      if (error || !data) { setFailed(true); setRows([]); return; }
+      setRows(data.filter(isPublicMcqSet).filter((r) => r.question_count > 0));
     });
+    return () => { live = false; };
+  }, []);
+  return { rows, failed };
+}
 
-    const saved = localStorage.getItem(UNLOCKED_KEY);
-    if (saved) {
-      try {
-        setUnlockedExams(new Set(JSON.parse(saved)));
-      } catch {
-        setUnlockedExams(new Set());
-      }
-    }
-  }, [mcqMode]);
+function Card({ row, mcq, featured = false }: { row: CatalogRow; mcq: boolean; featured?: boolean }) {
+  const navigate = useNavigate();
+  const [progress] = useState(() => progressOf(row.id, mcq));
+  const weekly = isWeekly(row.title, row.category);
+  const date = weekly ? weeklyDate(row.title) : null;
+  const year = examYear(row.category, row.title);
+  const fresh = weekly && Date.now() - Date.parse(row.created_at) < 8 * DAY;
+  const go = () => navigate(mcq ? `/mcqs/${(row.slug || "").trim() || row.id}` : setPath(row));
+  return (
+    <button type="button" onClick={go} className={`group relative flex w-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-5 text-left transition duration-200 hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-lg hover:shadow-primary/10 active:scale-[.99] ${featured ? "min-h-[190px] sm:p-6" : "min-h-[168px]"}`}>
+      <span aria-hidden className={`absolute inset-y-0 left-0 w-1 ${weekly ? "bg-primary" : row.kind === "past_paper" ? "bg-amber-500" : "bg-sky-500"}`} />
+      <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider">
+        {fresh && <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-primary-foreground"><Flame className="h-3 w-3" aria-hidden /> New</span>}
+        {weekly ? <span className="text-primary">Weekly{date ? ` · ${date}` : ""}</span> : row.kind === "past_paper" ? <span className="text-amber-600 dark:text-amber-400">Past paper</span> : <span className="text-sky-600 dark:text-sky-400">Question bank</span>}
+        {year && <span className="rounded-full border border-border px-2 py-0.5 text-muted-foreground">Y{year}</span>}
+      </div>
+      <h3 className={`mt-2 font-serif font-bold leading-snug text-foreground ${featured ? "text-2xl" : "text-lg"}`}>{shortTitle(row.title, row.category)}</h3>
+      <p className="mt-1 text-sm text-muted-foreground">{examUnit(row.category)}{row.exam_year ? ` · ${row.exam_year}` : ""}</p>
+      <div className="mt-auto flex items-center justify-between gap-3 pt-4">
+        <span className="inline-flex items-center gap-3 text-xs font-semibold text-muted-foreground">
+          <span className="inline-flex items-center gap-1"><ListChecks className="h-3.5 w-3.5" aria-hidden /> {row.question_count} Qs</span>
+          {!mcq && <span className="inline-flex items-center gap-1"><Clock className="h-3.5 w-3.5" aria-hidden /> {row.question_count} min</span>}
+        </span>
+        {progress && "pct" in progress ? (
+          <span className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-bold ${progress.pct >= 50 ? "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300" : "bg-amber-500/15 text-amber-700 dark:text-amber-300"}`}><CheckCircle2 className="h-3.5 w-3.5" aria-hidden /> {progress.pct}%</span>
+        ) : progress && "live" in progress ? (
+          <span className="inline-flex items-center gap-1 rounded-full bg-sky-500/15 px-2.5 py-1 text-xs font-bold text-sky-700 dark:text-sky-300"><PlayCircle className="h-3.5 w-3.5" aria-hidden /> Resume</span>
+        ) : (
+          <span className="inline-flex items-center gap-1 text-sm font-bold text-primary">{mcq ? "Practise" : "Start"} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden /></span>
+        )}
+      </div>
+    </button>
+  );
+}
 
-  const loadExams = async () => {
-    const { data } = await supabase
-      .from("mcq_sets")
-      .select("id,title,slug,category,created_at,updated_at")
-      .eq("published", true)
-      .is("deleted_at", null)
-      .order("updated_at", { ascending: false });
+const Skeleton = () => <div className="h-[168px] animate-pulse rounded-2xl border border-border bg-muted/40" />;
 
-    const usable = ((data || []) as unknown as ExamSet[])
-      .filter(isPublicMcqSet)
-      .filter((e) => isExamSet(e) !== mcqMode);
-
-    setExamSets(dedupeResourceSummaries(usable));
-    setLoading(false);
-  };
-
-  const persistUnlocked = (next: Set<string>) => {
-    setUnlockedExams(next);
-    localStorage.setItem(UNLOCKED_KEY, JSON.stringify([...next]));
-  };
-
-  const pollPayment = (txnId: string, examId: string) => {
-    let attempts = 0;
-    const pollId = setInterval(async () => {
-      attempts += 1;
-      if (attempts > 60) {
-        clearInterval(pollId);
-        setPaymentStatus("failed");
-        setPaying(false);
-        return;
-      }
-
-      try {
-        const { data: result, error } = await supabase.functions.invoke("check-payment", {
-          body: { transaction_id: txnId },
-        });
-        if (error) return;
-
-        if (result.status === "completed") {
-          clearInterval(pollId);
-          setPaymentStatus("completed");
-          setPaying(false);
-          const next = new Set(unlockedExams);
-          next.add(examId);
-          persistUnlocked(next);
-        } else if (result.status === "failed") {
-          clearInterval(pollId);
-          setPaymentStatus("failed");
-          setPaying(false);
-        }
-      } catch {
-        // keep polling
-      }
-    }, 2000);
-  };
-
-  const handlePay = async (exam: ExamSet) => {
-    const phone = (phoneByExamId[exam.id] || "").trim();
-    if (!phone) return;
-
-    setPaying(true);
-    setPaymentStatus("pending");
-    setPayingForExamId(exam.id);
-
-    try {
-      const { data, error } = await supabase.functions.invoke("initiate-payment", {
-        body: {
-          phone,
-          amount: examPrice,
-          package_type: `exam:${inferUnit(exam)}`,
-        },
-      });
-
-      if (error || !data?.success) {
-        throw new Error(data?.error || error?.message || "Payment failed");
-      }
-
-      pollPayment(data.transaction_id, exam.id);
-    } catch {
-      setPaymentStatus("failed");
-      setPaying(false);
-    }
-  };
-
-  const sampleExam: ExamSet = {
-    id: "sample-exam",
-    title: "Sample Pathology Exam",
-    category: "Pathology",
-    created_at: new Date().toISOString(),
-  };
-
-  const filteredExamSets = useMemo(() => {
-    if (selectedYear === "All") return examSets;
-    return examSets.filter((exam) => getYearFromCategory(exam.category) === selectedYear);
-  }, [examSets, selectedYear]);
-
+/** One page, two lists: /exams holds the timed exams (weekly, unit exams, past papers), /mcqs holds the practice question banks. */
+export default function Exams({ mode = "exam" }: { mode?: "exam" | "mcq" }) {
+  const mcq = mode === "mcq";
+  const [params, setParams] = useSearchParams();
+  const { rows, failed } = useCatalog();
   const [q, setQ] = useState("");
-  const [unitPick, setUnitPick] = useState<string | null>(null);
-  const yearChips = useMemo(() => [...new Set(examSets.map((e) => getYearFromCategory(e.category)).filter(Boolean) as string[])].sort(), [examSets]);
-  const unitChips = useMemo(() => {
-    const n = new Map<string, number>();
-    for (const e of filteredExamSets) { const u = inferUnit(e); n.set(u, (n.get(u) ?? 0) + 1); }
-    return [...n.entries()].sort((a, b) => b[1] - a[1]).slice(0, 10);
-  }, [filteredExamSets]);
-  const allExams = useMemo(() => {
-    const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
-    const list = filteredExamSets.filter((e) => (!unitPick || inferUnit(e) === unitPick) && needles.every((w) => `${e.title} ${inferUnit(e)}`.toLowerCase().includes(w)));
-    return unitPick || needles.length || mcqMode ? list : [sampleExam, ...list];
-  }, [filteredExamSets, q, unitPick]);
+  const [type, setType] = useState<"all" | "weekly" | "past_paper">("all");
+  const [unit, setUnit] = useState<string | null>(null);
+  const [visible, setVisible] = useState(18);
+  const year = Number(/(\d)/.exec(params.get("year") || "")?.[1]) || null;
+  const mine = useMemo(myYear, []);
 
-  const chip = (on: boolean) => `shrink-0 rounded-full border px-3.5 py-1.5 text-sm font-semibold transition-colors ${on ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/60"}`;
+  useEffect(() => {
+    updateMetaTags(mcq
+      ? { title: "MCQ Question Banks", description: "Practice multiple-choice questions by topic and unit for Kenyan medical and health-science students, with instant answers and explanations." }
+      : { title: "Exam Center", description: "Timed medical exams for Kenyan health students: a new weekly exam for every unit, unit exams and past papers, scored with answers and explanations." });
+  }, [mcq]);
+  useEffect(() => { setVisible(18); setUnit(null); setType("all"); }, [mcq, year]);
+
+  const pool = useMemo(() => (rows || []).filter((r) => (mcq ? r.kind === "bank" : r.kind !== "bank")), [rows, mcq]);
+  const yearCounts = useMemo(() => { const c: Record<number, number> = {}; for (const r of pool) { const y = examYear(r.category, r.title); if (y) c[y] = (c[y] || 0) + 1; } return c; }, [pool]);
+  const inYear = useMemo(() => (year ? pool.filter((r) => examYear(r.category, r.title) === year) : pool), [pool, year]);
+  const units = useMemo(() => { const n = new Map<string, number>(); for (const r of inYear) { const u = examUnit(r.category); n.set(u, (n.get(u) || 0) + 1); } return [...n.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12); }, [inYear]);
+  const list = useMemo(() => {
+    const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
+    return inYear.filter((r) => (type === "all" || (type === "weekly" ? isWeekly(r.title, r.category) : r.kind === "past_paper")) && (!unit || examUnit(r.category) === unit)
+      && needles.every((w) => `${shortTitle(r.title, r.category)} ${r.title} ${examUnit(r.category)}`.toLowerCase().includes(w)));
+  }, [inYear, q, type, unit]);
+  const thisWeek = useMemo(() => (mcq || q || unit || type !== "all" ? [] : inYear.filter((r) => isWeekly(r.title, r.category) && Date.now() - Date.parse(r.created_at) < 8 * DAY).slice(0, 6)), [inYear, mcq, q, unit, type]);
+  const featuredIds = new Set(thisWeek.map((r) => r.id));
+  const rest = list.filter((r) => !featuredIds.has(r.id));
+  const loading = rows === null;
+
+  const seg = (on: boolean) => `shrink-0 rounded-full px-4 py-2 text-sm font-bold transition-colors ${on ? "bg-primary text-primary-foreground shadow" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`;
+  const setYear = (y: number | null) => { const next = new URLSearchParams(params); if (y) next.set("year", `Year ${y}`); else next.delete("year"); setParams(next, { replace: true }); };
+  const stats = mcq
+    ? [[pool.length, "question banks"], [pool.reduce((n, r) => n + r.question_count, 0), "questions"]]
+    : [[pool.filter((r) => isWeekly(r.title, r.category)).length, "weekly exams"], [pool.length, "exams in all"]];
+
   return (
     <div className="min-h-screen bg-background">
-      <section className="border-b border-border bg-gradient-to-br from-primary/10 via-background to-accent/10 px-4 py-7 sm:py-9">
-        <div className="mx-auto max-w-6xl">
-          <p className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.16em] text-primary"><Trophy className="h-3.5 w-3.5" aria-hidden /> {mcqMode ? "Practice questions" : "Timed exams"}</p>
-          <h1 className="mt-1 font-serif text-3xl font-bold text-foreground sm:text-5xl">{mcqMode ? "MCQ Question Banks" : "Exam Center"}</h1>
-          <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">{mcqMode ? "Practice multiple-choice questions by topic. Each answer comes with its explanation." : "Timed multiple-choice exams from your units. You get your score and the answers at the end."} {loading ? "" : mcqMode ? `${examSets.length} question banks.` : `${examSets.length + 1} exams available.`}</p>
-          <ContentCredit />
+      <section className="relative overflow-hidden border-b border-border bg-[#0b2545] text-white">
+        <div aria-hidden className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-primary/30 blur-3xl" />
+        <div aria-hidden className="pointer-events-none absolute -bottom-32 left-1/3 h-64 w-64 rounded-full bg-sky-400/10 blur-3xl" />
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-4 py-9 sm:py-12 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-2xl">
+            <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-emerald-300">{mcq ? <ListChecks className="h-4 w-4" aria-hidden /> : <Trophy className="h-4 w-4" aria-hidden />} {mcq ? "Practice" : "Timed exams"}</p>
+            <h1 className="mt-2 font-serif text-4xl font-bold leading-tight sm:text-5xl">{mcq ? "MCQ question banks" : "Exam Center"}</h1>
+            <p className="mt-3 text-[15px] leading-relaxed text-white/75">
+              {mcq ? "Pick a topic, answer at your own pace and see the explanation straight away. Nothing to register, nothing is timed."
+                : "A fresh exam for every unit each week, plus unit exams and past papers. Timed, scored, with every answer explained afterwards."}
+            </p>
+          </div>
+          <div className="flex gap-3 text-center">
+            {stats.map(([n, label]) => (
+              <div key={String(label)} className="min-w-[104px] rounded-2xl border border-white/15 bg-white/10 px-4 py-3 backdrop-blur"><p className="text-3xl font-bold tabular-nums">{loading ? "–" : Number(n).toLocaleString()}</p><p className="text-[11px] font-semibold uppercase tracking-wider text-white/65">{label}</p></div>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="exam-controls mx-auto max-w-6xl px-4 pt-6">
-        <div className="flex gap-2 overflow-x-auto pb-1" role="group" aria-label="Year">
-          <button type="button" onClick={() => setSearchParams({})} aria-pressed={selectedYear === "All"} className={chip(selectedYear === "All")}>All years</button>
-          {yearChips.map((y) => <button key={y} type="button" onClick={() => { setSearchParams({ year: y }); setUnitPick(null); }} aria-pressed={selectedYear === y} className={chip(selectedYear === y)}>{y}</button>)}
-        </div>
-        <div className="mt-3 flex flex-wrap items-center gap-3">
-          <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder={mcqMode ? "Search question banks, e.g. cardiology, anatomy" : "Search exams, e.g. pathology, physiology"} aria-label="Search exams" className="max-w-sm" />
-          <span className="text-sm text-muted-foreground">{loading ? "" : `${allExams.length} shown`}</span>
+      <section className="sticky top-14 z-20 border-b border-border bg-background/90 backdrop-blur">
+        <div className="mx-auto max-w-6xl space-y-3 px-4 py-3">
+          <div className="flex items-center gap-1 overflow-x-auto pb-0.5" role="tablist" aria-label="Year">
+            <button type="button" role="tab" aria-selected={!year} onClick={() => setYear(null)} className={seg(!year)}>All years</button>
+            {YEARS.map((y) => (
+              <button key={y} type="button" role="tab" aria-selected={year === y} onClick={() => setYear(y)} className={seg(year === y)}>
+                Year {y}{mine === y ? " ★" : ""}<span className={`ml-1.5 text-xs font-semibold ${year === y ? "text-primary-foreground/80" : "text-muted-foreground/70"}`}>{yearCounts[y] || 0}</span>
+              </button>
+            ))}
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <label className="relative min-w-[220px] flex-1 sm:max-w-sm">
+              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" aria-hidden />
+              <input value={q} onChange={(e) => setQ(e.target.value)} placeholder={mcq ? "Search topics, e.g. cardiology" : "Search units, e.g. pathology"} aria-label="Search" className="h-10 w-full rounded-full border border-input bg-card pl-9 pr-9 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20" />
+              {q && <button type="button" onClick={() => setQ("")} aria-label="Clear search" className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-1 text-muted-foreground hover:bg-muted"><X className="h-3.5 w-3.5" /></button>}
+            </label>
+            {!mcq && (
+              <div className="flex rounded-full border border-border bg-card p-0.5" role="group" aria-label="Type">
+                {([["all", "All"], ["weekly", "Weekly"], ["past_paper", "Past papers"]] as const).map(([k, label]) => <button key={k} type="button" aria-pressed={type === k} onClick={() => setType(k)} className={`rounded-full px-3.5 py-1.5 text-sm font-bold transition-colors ${type === k ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>{label}</button>)}
+              </div>
+            )}
+            <span className="ml-auto text-sm font-semibold text-muted-foreground">{loading ? "" : `${list.length} ${mcq ? "banks" : "exams"}`}</span>
+          </div>
+          {units.length > 1 && (
+            <div className="flex gap-1.5 overflow-x-auto pb-0.5" role="group" aria-label="Unit">
+              {units.map(([u, n]) => <button key={u} type="button" aria-pressed={unit === u} onClick={() => setUnit(unit === u ? null : u)} className={`shrink-0 rounded-full border px-3 py-1 text-xs font-semibold transition-colors ${unit === u ? "border-primary bg-primary/10 text-primary" : "border-border text-muted-foreground hover:border-primary/50 hover:text-foreground"}`}>{u} <span className="opacity-60">{n}</span></button>)}
+            </div>
+          )}
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl space-y-4 px-4 py-6">
+      <main className="mx-auto max-w-6xl space-y-8 px-4 py-7">
         {loading ? (
-          <div className="flex justify-center py-16"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" /></div>
-        ) : allExams.length === 0 ? (
-          <p className="py-16 text-center text-muted-foreground">Nothing matches. Try another year or a shorter search.</p>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">{Array.from({ length: 6 }, (_, i) => <Skeleton key={i} />)}</div>
+        ) : failed ? (
+          <p className="rounded-2xl border border-border bg-card p-8 text-center text-muted-foreground">The list did not load. Check your connection and refresh the page.</p>
         ) : (
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {allExams.slice(0, visible).map((exam) => {
-              const isSample = exam.id === "sample-exam";
-              const unitName = inferUnit(exam);
-              const yearTag = getYearFromCategory(exam.category);
-              return (
-                <article key={exam.id} className="exam-simple flex flex-col rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/50">
-                  <p className="text-xs font-bold uppercase tracking-wider text-primary">{unitName}{yearTag ? ` · ${yearTag}` : ""}</p>
-                  <h2 className="mt-1 font-serif text-lg font-bold leading-snug text-foreground">{exam.title}</h2>
-                  <div className="mt-auto pt-4"><Button size="sm" onClick={() => navigate(isSample ? `/exams/${exam.id}/start` : mcqMode ? `/mcqs/${exam.slug || exam.id}` : buildExamPath(exam))} className="gap-1.5">{mcqMode ? "Practise" : "Start exam"} <ArrowRight className="h-3.5 w-3.5" /></Button></div>
-                </article>
-              );
-            })}
-          </div>
+          <>
+            {thisWeek.length > 0 && (
+              <div>
+                <h2 className="mb-3 flex items-center gap-2 font-serif text-xl font-bold"><Timer className="h-5 w-5 text-primary" aria-hidden /> This week's exams</h2>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">{thisWeek.map((r) => <Card key={r.id} row={r} mcq={mcq} featured />)}</div>
+              </div>
+            )}
+            {rest.length > 0 ? (
+              <div>
+                {thisWeek.length > 0 && <h2 className="mb-3 font-serif text-xl font-bold">All exams</h2>}
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">{rest.slice(0, visible).map((r) => <Card key={r.id} row={r} mcq={mcq} />)}</div>
+                {rest.length > visible && <div className="mt-6 flex justify-center"><LoadMoreButton onMore={() => setVisible((v) => v + 18)} className="inline-flex h-11 items-center justify-center rounded-full border border-input bg-card px-6 text-sm font-bold hover:bg-muted">Show more</LoadMoreButton></div>}
+              </div>
+            ) : thisWeek.length === 0 && (
+              <div className="rounded-3xl border border-dashed border-border bg-card/50 px-6 py-14 text-center">
+                <Trophy className="mx-auto h-9 w-9 text-muted-foreground/60" aria-hidden />
+                <h2 className="mt-3 font-serif text-xl font-bold">{year ? `No ${mcq ? "question banks" : "exams"} for Year ${year} yet` : "Nothing matches"}</h2>
+                <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">{year && !q ? (mcq ? `Year ${year} banks are added as notes are published.` : `New exams are written every Friday from the notes in each unit, so Year ${year} will fill up week by week.`) : "Try a shorter search or clear the filters."}</p>
+                <div className="mt-5 flex flex-wrap justify-center gap-2">
+                  {(year || q || unit || type !== "all") && <button type="button" onClick={() => { setQ(""); setUnit(null); setType("all"); setYear(null); }} className="rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">Clear filters</button>}
+                  <Link to={mcq ? "/exams" : "/mcqs"} className="rounded-full border border-border px-5 py-2 text-sm font-bold hover:bg-muted">{mcq ? "Timed exams" : "Practice question banks"}</Link>
+                  {year && <Link to={`/year/${year}`} className="rounded-full border border-border px-5 py-2 text-sm font-bold hover:bg-muted">Year {year} notes</Link>}
+                </div>
+              </div>
+            )}
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-border bg-card px-5 py-4 text-sm">
+              <p className="text-muted-foreground">{mcq ? "Want the real thing under time pressure?" : "Prefer to practise at your own pace with instant answers?"}</p>
+              <Link to={mcq ? "/exams" : "/mcqs"} className="inline-flex items-center gap-1.5 font-bold text-primary hover:underline">{mcq ? "Go to the Exam Center" : "Open the MCQ banks"} <ArrowRight className="h-4 w-4" aria-hidden /></Link>
+            </div>
+          </>
         )}
-        {!loading && allExams.length > visible && (
-          <div className="flex justify-center pt-2">
-            <LoadMoreButton onMore={() => setVisible((v) => v + 12)} className="inline-flex h-10 items-center justify-center gap-2 rounded-md border border-input bg-background px-4 text-sm font-medium hover:bg-accent">Show more</LoadMoreButton>
-          </div>
-        )}
-      </section>
+      </main>
     </div>
   );
 }

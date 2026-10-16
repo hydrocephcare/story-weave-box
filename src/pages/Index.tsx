@@ -5,7 +5,7 @@ import LoadMoreButton from "@/components/LoadMoreButton";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
-  BookOpen, GraduationCap, Loader2,
+  BookOpen, GraduationCap, Loader2, ListChecks,
   ArrowRight, Trophy, BookMarked, Phone, MessageCircle, Clock, Check, Search, FolderOpen,
 } from "lucide-react";
 import { getAllCategories, getCategoryDisplayName, getYearFromCategory, YEAR_CATEGORIES, buildBlogPath, buildFlashcardPath } from "@/lib/store";
@@ -27,8 +27,9 @@ const staticUnitsFor = (yearLabel: string) => [...new Set(notesForYear(Number(ye
 /* Resource tiles — the Geeky Medics "Explore our resources" block: a small number
    of large, colour-blocked entry points instead of a wall of small links. */
 const RESOURCES = [
-  { to: "/blog", label: "Study Notes & MCQs", desc: "Notes and quiz questions by year & unit", icon: BookOpen, subject: "pathology" },
-  { to: "/exams", label: "Past Papers & CATs", desc: "Timed exam mode, real papers", icon: Trophy, subject: "exam" },
+  { to: "/blog", label: "Study Notes", desc: "Clear notes by year & unit", icon: BookOpen, subject: "pathology" },
+  { to: "/mcqs", label: "MCQ Banks", desc: "Practise with instant answers", icon: ListChecks, subject: "physiology" },
+  { to: "/exams", label: "Exam Center", desc: "A new timed exam every week", icon: Trophy, subject: "exam" },
   { to: "/flashcards", label: "Flashcards", desc: "Rapid recall before the ward", icon: GraduationCap, subject: "anatomy" },
   { to: "/year-4-library", label: "Year 4 Library", desc: "Books, notes & slides to download by department", icon: FolderOpen, subject: "pharmacology" },
 ];
@@ -290,7 +291,7 @@ export default function Index() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4"
+          className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5"
           >
           {(studyYear === 1 || studyYear === 2) && (
             <motion.div variants={tileReveal} className="col-span-2 h-full lg:col-span-4">

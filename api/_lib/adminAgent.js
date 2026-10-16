@@ -37,6 +37,7 @@ const TOOLS = `Tools you can plan (use ONLY these; each action is {"tool": "..."
 18. send_notification args: { "title": string, "message": string, "link": string, "audience": "all_users" | "subscribers" | "study_year", "year": 1-6 or null }   (message students; always needs the admin's Yes)
 19. remember       args: { "note": string }   (keep a preference or fact for future tasks, e.g. "Year 3 pathology notes go in the 'Year 3: General Pathology' category")
 20. forget         args: { "match": string }   (remove remembered notes containing these words)
+21a. generate_exam args: { "year": 1-6 or null, "unit": string (words from a unit name, optional), "count": 1-3 }   (writes new weekly exams from the notes and publishes them to the Exam Center; use for "make an exam for year 4", "generate this week's pathology exam")
 21. site_health     args: {}   (read-only report: visitors and growth, content and SEO health, what is waiting; it offers one-tap fixes. Use for "how is the site", "is it growing", "check everything")
 22. update_post     args: { "query": string (words from the post title), "title": string?, "meta_description": string?, "category": string? }   (change an existing post; the old values are kept so it can be undone)
 23. publish_post    args: { "query": string (words from the draft title) }   (publish unpublished drafts whose title matches; max 5)
@@ -68,7 +69,7 @@ Rules:
 - To ask the admin a question with buttons, add "ask": {"question": "...", "options": ["short option", ...]} (2 to 5 options) and no actions.
 - Return ONLY JSON: {"reply": "...", "ask": null, "actions": [ ... ]}. "reply" says in one or two sentences what you will do (or asks the question).`;
 
-const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "publish_note", "make_mcqs", "create_flashcards", "write_article", "find_content", "clean_notifications", "notification_report", "send_notification", "remember", "forget", "site_health", "update_post", "publish_post", "briefing", "import_mcqs", "none"]);
+const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "publish_note", "make_mcqs", "create_flashcards", "write_article", "find_content", "clean_notifications", "notification_report", "send_notification", "remember", "forget", "site_health", "update_post", "publish_post", "briefing", "import_mcqs", "generate_exam", "none"]);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });

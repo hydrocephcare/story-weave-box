@@ -2,7 +2,7 @@
 // so the same list or article is read from the database once every few minutes instead of once per visit. See src/lib/sbCache.ts.
 const SB = process.env.SUPABASE_URL || "https://dekyjrfwvavtoivqivno.supabase.co";
 const KEY = process.env.SUPABASE_PUBLISHABLE_KEY || "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL";
-const ALLOWED = /^\/rest\/v1\/(articles|mcq_sets|flashcard_sets|stories|article_categories|app_settings|topic_pages|resource_topics|study_resources|academic_years|medical_concepts|medical_concept_aliases|concept_relationships|contests|contest_universities|contest_rounds)\?/;
+const ALLOWED = /^\/rest\/v1\/(articles|mcq_sets|flashcard_sets|stories|article_categories|app_settings|topic_pages|resource_topics|study_resources|academic_years|medical_concepts|medical_concept_aliases|concept_relationships|contests|contest_universities|contest_rounds|rpc\/exam_catalog)(\?|$)/;
 // things that must stay fresh are kept for a minute only
 const SHORT = /^\/rest\/v1\/(contests|contest_universities|contest_rounds|app_settings)\?/;
 

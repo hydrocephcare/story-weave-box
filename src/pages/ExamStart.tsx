@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
-import { ArrowLeft, Clock, Loader2, Shield, Trophy, User, GraduationCap, BookOpen, Check } from "lucide-react";
+import { ArrowLeft, Clock, Loader2, Shield, Trophy, GraduationCap, BookOpen, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
@@ -12,6 +12,8 @@ import StudyControls from "@/components/StudyControls";
 import HelpfulVote from "@/components/HelpfulVote";
 import { sanitizeMcqQuestions } from "@/lib/mcq-normalization";
 import { isPublicMcqSet } from "@/lib/content-policy";
+import { isWeekly, shortTitle, weeklyDate } from "@/lib/examMeta";
+import { useAuth } from "@/hooks/useAuth";
 
 interface ExamSet {
   id: string;
@@ -286,6 +288,16 @@ export default function ExamStart() {
       });
   }, []);
 
+  // a signed-in learner's profile fills the form the first time
+  const { user } = useAuth();
+  useEffect(() => {
+    if (!user || loadCreds()?.name) return;
+    (supabase as any).from("profiles").select("display_name,university,course").eq("user_id", user.id).maybeSingle().then(({ data }: { data: { display_name?: string; university?: string; course?: string } | null }) => {
+      if (!data) return;
+      setStudentInfo((prev) => ({ name: prev.name || data.display_name || "", university: prev.university || data.university || "", course: prev.course || data.course || "" }));
+    });
+  }, [user]);
+
   const allUniversities = useMemo(
     () => [...new Set([...BASE_UNIVERSITIES, ...extraUniversities])].sort(),
     [extraUniversities]
@@ -414,8 +426,25 @@ export default function ExamStart() {
     );
   }
 
+  let previous: number | null = null, resuming = false;
+  try {
+    const r = JSON.parse(localStorage.getItem(`exam_result_${exam.id}`) || "null");
+    if (r && Number(r.total)) previous = Math.round((Number(r.score) / Number(r.total)) * 100);
+    resuming = !!localStorage.getItem(`exam_session_${exam.id}`);
+  } catch { /* storage blocked */ }
+  const weekly = isWeekly(exam.title, exam.category);
+  const dateTxt = weekly ? weeklyDate(exam.title) : null;
+  const fieldCls = "h-11 w-full rounded-xl border border-input bg-background px-3 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20";
+  const ready = !!studentInfo.name.trim() && !!studentInfo.university && !!studentInfo.course;
+  const rules: [typeof Clock, string][] = [
+    [Clock, `${totalMinutes} minutes, one minute a question. The exam submits itself when time runs out.`],
+    [Shield, "Stay on this page. Switching tabs submits the exam."],
+    [Check, "Answer in any order, flag questions to revisit, and review before you submit."],
+    [Trophy, "You get your score and every answer with its explanation straight after."],
+  ];
+
   return (
-    <div className="min-h-screen bg-background px-4 py-8 sm:py-12">
+    <div className="min-h-screen bg-background">
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -428,193 +457,91 @@ export default function ExamStart() {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
       </Helmet>
-      <div className="mx-auto max-w-3xl space-y-6">
-        <Button asChild variant="ghost" size="sm" className="gap-2 text-muted-foreground">
-          <Link to="/exams"><ArrowLeft className="h-4 w-4" /> Back to Exams</Link>
-        </Button>
 
-        <div className="rounded-2xl border border-border bg-gradient-to-br from-primary/10 via-card to-accent/10 p-6 sm:p-8">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-            <Trophy className="h-3.5 w-3.5" /> Ready to start
+      <section className="relative overflow-hidden bg-[#0b2545] text-white">
+        <div aria-hidden className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-primary/30 blur-3xl" />
+        <div className="relative mx-auto max-w-5xl px-4 pb-10 pt-6 sm:pb-14">
+          <Link to="/exams" className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/70 hover:text-white"><ArrowLeft className="h-4 w-4" aria-hidden /> Exam Center</Link>
+          <div className="mt-6 flex flex-wrap items-center gap-2 text-[11px] font-bold uppercase tracking-wider">
+            <span className="rounded-full bg-emerald-400/20 px-2.5 py-1 text-emerald-200">{weekly ? `Weekly exam${dateTxt ? ` · ${dateTxt}` : ""}` : "Timed exam"}</span>
+            <span className="rounded-full bg-white/10 px-2.5 py-1 text-white/80">{unitName}</span>
           </div>
-          <h1 className="font-serif text-2xl font-bold text-foreground sm:text-3xl">{exam.title}</h1>
-          <p className="mt-2 text-sm text-muted-foreground">Unit: {unitName}</p>
-
-          <div className="mt-5">
-            <div className="rounded-xl border border-border bg-card p-3 inline-block">
-              <p className="text-xs text-muted-foreground">Section A — MCQs</p>
-              <p className="text-sm font-semibold text-foreground">{exam.questions.length} questions · {totalMinutes} minutes</p>
-            </div>
+          <h1 className="mt-3 max-w-3xl font-serif text-3xl font-bold leading-tight sm:text-5xl">{shortTitle(exam.title, exam.category)}</h1>
+          <div className="mt-6 flex flex-wrap gap-3">
+            {[[exam.questions.length, "questions"], [totalMinutes, "minutes"], [4, "options each"]].map(([n, l]) => (
+              <div key={String(l)} className="rounded-2xl border border-white/15 bg-white/10 px-5 py-3 backdrop-blur"><p className="text-2xl font-bold tabular-nums">{n}</p><p className="text-[11px] font-semibold uppercase tracking-wider text-white/65">{l}</p></div>
+            ))}
+            {previous && <div className="rounded-2xl border border-white/15 bg-white/10 px-5 py-3 backdrop-blur"><p className="text-2xl font-bold tabular-nums">{previous}%</p><p className="text-[11px] font-semibold uppercase tracking-wider text-white/65">your last score</p></div>}
           </div>
+        </div>
+      </section>
 
-          {exam.id !== "sample-exam" && (
-            <div className="mt-5">
-              <StudyControls resourceType="exam" resourceId={exam.id} title={exam.title} />
-            </div>
-          )}
-
-          <div className="mt-5 rounded-xl border border-border bg-card p-4 text-sm text-muted-foreground">
-            <p className="mb-2 flex items-center gap-2 text-foreground"><Shield className="h-4 w-4 text-primary" /> Exam rules</p>
-            <ul className="list-disc space-y-1 pl-5">
-              <li>Exam opens in full-screen mode.</li>
-              <li>Switching tabs will <strong className="text-foreground">auto-submit</strong> the exam.</li>
-              <li>Time limit: <strong className="text-foreground">{totalMinutes} minutes</strong> — auto-submits when time runs out.</li>
-              <li>Answers are only revealed after <strong className="text-foreground">midnight</strong>.</li>
-              <li>Copy, paste, and right-click are disabled.</li>
+      <div className="mx-auto grid max-w-5xl gap-6 px-4 py-8 lg:grid-cols-[1fr_380px]">
+        <div className="space-y-5">
+          <div className="rounded-3xl border border-border bg-card p-6">
+            <h2 className="flex items-center gap-2 font-serif text-xl font-bold"><Shield className="h-5 w-5 text-primary" aria-hidden /> Before you begin</h2>
+            <ul className="mt-4 space-y-3">
+              {rules.map(([Icon, text]) => <li key={text} className="flex items-start gap-3 text-[15px] leading-snug text-muted-foreground"><span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"><Icon className="h-4 w-4" aria-hidden /></span><span className="pt-1">{text}</span></li>)}
             </ul>
+            <p className="mt-4 rounded-xl bg-muted/60 px-4 py-3 text-sm text-muted-foreground">Charge your device and find a quiet spot. Copying and right-click are switched off during the exam.</p>
           </div>
-
-          {!showForm ? (
-            <div className="mt-6">
-              <Button onClick={() => setShowForm(true)} className="gap-2 sm:min-w-[220px]">
-                <User className="h-4 w-4" /> Register & Start Exam
-              </Button>
-              <p className="mt-2 flex items-center gap-2 text-xs text-muted-foreground">
-                <Clock className="h-3.5 w-3.5" /> Make sure your device is charged and stable.
-              </p>
-            </div>
-          ) : (
-            <div className="mt-6 space-y-4 rounded-xl border border-primary/30 bg-primary/5 p-5">
-              <h3 className="flex items-center gap-2 font-serif text-base font-bold text-foreground">
-                <GraduationCap className="h-5 w-5 text-primary" /> Student Information
-              </h3>
-
-              {wasRestored && (
-                <div className="rounded-lg border border-primary/20 bg-primary/5 px-3 py-2 text-xs text-primary">
-                  Welcome back! Your details were saved from your last exam. Update if needed.
-                </div>
-              )}
-
-              {/* Full Name */}
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-foreground">Full Name *</label>
-                <Input
-                  placeholder="Enter your full name"
-                  value={studentInfo.name}
-                  onChange={(e) => updateField("name", e.target.value)}
-                />
-              </div>
-
-              {/* University */}
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-foreground">University *</label>
-                {!addingUni ? (
-                  <select
-                    value={studentInfo.university}
-                    onChange={(e) => {
-                      if (e.target.value === "__add__") {
-                        setAddingUni(true);
-                      } else {
-                        updateField("university", e.target.value);
-                      }
-                    }}
-                    className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground"
-                  >
-                    <option value="">Select university...</option>
-                    {allUniversities.map((u) => (
-                      <option key={u} value={u}>{u}</option>
-                    ))}
-                    <option value="__add__">+ My university is not listed</option>
-                  </select>
-                ) : (
-                  <div className="space-y-2">
-                    <Input
-                      placeholder="Type your university name"
-                      value={customUniInput}
-                      onChange={(e) => setCustomUniInput(e.target.value)}
-                      onKeyDown={(e) => { if (e.key === "Enter") handleSubmitCustomUni(); }}
-                      autoFocus
-                    />
-                    <p className="text-xs text-muted-foreground">
-                      You can use it now. It will be reviewed by admin and added to the list if approved.
-                    </p>
-                    <div className="flex gap-2">
-                      <Button size="sm" onClick={handleSubmitCustomUni}
-                        disabled={!customUniInput.trim() || submittingUni} className="gap-1">
-                        {submittingUni ? <Loader2 className="h-3 w-3 animate-spin" /> : <Check className="h-3 w-3" />}
-                        Use this
-                      </Button>
-                      <Button size="sm" variant="outline" onClick={() => { setAddingUni(false); setCustomUniInput(""); }}>
-                        Cancel
-                      </Button>
-                    </div>
-                  </div>
-                )}
-                {/* Show selected custom value clearly */}
-                {!addingUni && studentInfo.university && !allUniversities.includes(studentInfo.university) && (
-                  <p className="mt-1 text-xs text-amber-600">
-                    Using: "{studentInfo.university}" (pending admin review)
-                  </p>
-                )}
-              </div>
-
-              {/* Course */}
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-foreground">Course *</label>
-                {!addingCourse ? (
-                  <select
-                    value={studentInfo.course}
-                    onChange={(e) => {
-                      if (e.target.value === "__add__") {
-                        setAddingCourse(true);
-                      } else {
-                        updateField("course", e.target.value);
-                      }
-                    }}
-                    className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground"
-                  >
-                    <option value="">Select your course...</option>
-                    {allCourses.map((c) => (
-                      <option key={c} value={c}>{c}</option>
-                    ))}
-                    <option value="__add__">+ My course is not listed</option>
-                  </select>
-                ) : (
-                  <div className="space-y-2">
-                    <Input
-                      placeholder="Type your course name"
-                      value={customCourseInput}
-                      onChange={(e) => setCustomCourseInput(e.target.value)}
-                      onKeyDown={(e) => { if (e.key === "Enter") handleSubmitCustomCourse(); }}
-                      autoFocus
-                    />
-                    <p className="text-xs text-muted-foreground">
-                      You can use it now. It will be reviewed by admin and added to the list if approved.
-                    </p>
-                    <div className="flex gap-2">
-                      <Button size="sm" onClick={handleSubmitCustomCourse}
-                        disabled={!customCourseInput.trim() || submittingCourse} className="gap-1">
-                        {submittingCourse ? <Loader2 className="h-3 w-3 animate-spin" /> : <Check className="h-3 w-3" />}
-                        Use this
-                      </Button>
-                      <Button size="sm" variant="outline" onClick={() => { setAddingCourse(false); setCustomCourseInput(""); }}>
-                        Cancel
-                      </Button>
-                    </div>
-                  </div>
-                )}
-                {!addingCourse && studentInfo.course && !allCourses.includes(studentInfo.course) && (
-                  <p className="mt-1 text-xs text-amber-600">
-                    Using: "{studentInfo.course}" (pending admin review)
-                  </p>
-                )}
-              </div>
-
-              <div className="flex gap-3 pt-2">
-                <Button
-                  onClick={handleStartExam}
-                  disabled={!studentInfo.name.trim() || !studentInfo.university || !studentInfo.course}
-                  className="gap-2 flex-1"
-                >
-                  <BookOpen className="h-4 w-4" /> Start Exam Now
-                </Button>
-                <Button variant="outline" onClick={() => setShowForm(false)}>Cancel</Button>
-              </div>
-            </div>
-          )}
+          {exam.id !== "sample-exam" && <StudyControls resourceType="exam" resourceId={exam.id} title={exam.title} />}
+          {exam.id !== "sample-exam" && <HelpfulVote resourceType="exam" resourceId={exam.id} />}
         </div>
 
-        {exam.id !== "sample-exam" && <HelpfulVote resourceType="exam" resourceId={exam.id} />}
+        <aside className="lg:sticky lg:top-20 lg:self-start">
+          <div className="rounded-3xl border border-border bg-card p-6 shadow-sm">
+            <h2 className="flex items-center gap-2 font-serif text-xl font-bold"><GraduationCap className="h-5 w-5 text-primary" aria-hidden /> Your details</h2>
+            <p className="mt-1 text-sm text-muted-foreground">{wasRestored ? "Saved from your last exam. Change anything that is out of date." : "Shown with your result. Saved on this device for next time."}</p>
+            <div className="mt-5 space-y-4">
+              <label className="block text-sm font-semibold">Full name
+                <input className={`${fieldCls} mt-1.5 font-normal`} placeholder="As it should appear on your result" value={studentInfo.name} onChange={(e) => updateField("name", e.target.value)} autoComplete="name" />
+              </label>
+              <div>
+                <label className="block text-sm font-semibold" htmlFor="exam-uni">University</label>
+                {!addingUni ? (
+                  <select id="exam-uni" value={studentInfo.university} onChange={(e) => (e.target.value === "__add__" ? setAddingUni(true) : updateField("university", e.target.value))} className={`${fieldCls} mt-1.5 font-normal`}>
+                    <option value="">Select your university</option>
+                    {allUniversities.map((u) => <option key={u} value={u}>{u}</option>)}
+                    {studentInfo.university && !allUniversities.includes(studentInfo.university) && <option value={studentInfo.university}>{studentInfo.university}</option>}
+                    <option value="__add__">+ Not listed</option>
+                  </select>
+                ) : (
+                  <div className="mt-1.5 space-y-2">
+                    <input className={fieldCls} placeholder="Type your university" value={customUniInput} onChange={(e) => setCustomUniInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") handleSubmitCustomUni(); }} autoFocus />
+                    <div className="flex gap-2">
+                      <Button size="sm" onClick={handleSubmitCustomUni} disabled={!customUniInput.trim() || submittingUni} className="gap-1">{submittingUni ? <Loader2 className="h-3 w-3 animate-spin" /> : <Check className="h-3 w-3" />} Use this</Button>
+                      <Button size="sm" variant="outline" onClick={() => { setAddingUni(false); setCustomUniInput(""); }}>Cancel</Button>
+                    </div>
+                  </div>
+                )}
+              </div>
+              <div>
+                <label className="block text-sm font-semibold" htmlFor="exam-course">Course</label>
+                {!addingCourse ? (
+                  <select id="exam-course" value={studentInfo.course} onChange={(e) => (e.target.value === "__add__" ? setAddingCourse(true) : updateField("course", e.target.value))} className={`${fieldCls} mt-1.5 font-normal`}>
+                    <option value="">Select your course</option>
+                    {allCourses.map((c) => <option key={c} value={c}>{c}</option>)}
+                    {studentInfo.course && !allCourses.includes(studentInfo.course) && <option value={studentInfo.course}>{studentInfo.course}</option>}
+                    <option value="__add__">+ Not listed</option>
+                  </select>
+                ) : (
+                  <div className="mt-1.5 space-y-2">
+                    <input className={fieldCls} placeholder="Type your course" value={customCourseInput} onChange={(e) => setCustomCourseInput(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") handleSubmitCustomCourse(); }} autoFocus />
+                    <div className="flex gap-2">
+                      <Button size="sm" onClick={handleSubmitCustomCourse} disabled={!customCourseInput.trim() || submittingCourse} className="gap-1">{submittingCourse ? <Loader2 className="h-3 w-3 animate-spin" /> : <Check className="h-3 w-3" />} Use this</Button>
+                      <Button size="sm" variant="outline" onClick={() => { setAddingCourse(false); setCustomCourseInput(""); }}>Cancel</Button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+            <button type="button" onClick={handleStartExam} disabled={!ready} className="mt-6 flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary text-base font-bold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-45 disabled:shadow-none">
+              <BookOpen className="h-5 w-5" aria-hidden /> {resuming ? "Resume exam" : "Start exam"}
+            </button>
+            <p className="mt-3 text-center text-xs text-muted-foreground">{ready ? `${exam.questions.length} questions · ${totalMinutes} minutes` : "Fill in the three fields to begin."}</p>
+          </div>
+        </aside>
       </div>
     </div>
   );

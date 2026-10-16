@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { BookOpen, Layers, Sparkles } from "lucide-react";
+import { BookOpen, Layers } from "lucide-react";
+import OmpathMark from "@/components/ai/OmpathMark";
 import { STATIC_NOTES } from "@/data/staticNotes";
 import { loadTopicIndex, slugFromName, topicPath, type TopicIndexItem } from "@/lib/topics";
 import { openAI } from "@/lib/aiEvents";
@@ -41,7 +42,7 @@ export default function SearchExtras({ query, year }: { query: string; year?: nu
         </ul>
       )}
       <div className="flex flex-wrap gap-2">
-        <button type="button" onClick={() => openAI(`Explain ${q} for a medical student, then list what an examiner expects.`)} className="inline-flex h-11 items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-5 text-sm font-bold transition hover:bg-primary/15 active:scale-[.97]"><Sparkles className="h-4 w-4 text-primary" aria-hidden /> Ask Ompath AI about “{q.length > 24 ? `${q.slice(0, 24)}…` : q}”</button>
+        <button type="button" onClick={() => openAI(`Explain ${q} for a medical student, then list what an examiner expects.`)} className="inline-flex h-11 items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-5 text-sm font-bold transition hover:bg-primary/15 active:scale-[.97]"><OmpathMark className="h-6 w-6" /> Ask Ompath AI about “{q.length > 24 ? `${q.slice(0, 24)}…` : q}”</button>
         {looksLikeSubject && !found.topics.some((t) => t.s === slug) && <Link to={topicPath(slug)} className="inline-flex h-11 items-center gap-2 rounded-full border border-border px-5 text-sm font-bold transition hover:border-primary/60 active:scale-[.97]"><Layers className="h-4 w-4" aria-hidden /> Open a page on “{q.length > 24 ? `${q.slice(0, 24)}…` : q}”</Link>}
       </div>
     </div>

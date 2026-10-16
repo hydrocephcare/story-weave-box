@@ -1,7 +1,8 @@
+import OmpathMark from "@/components/ai/OmpathMark";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
-import { Sparkles, X } from "lucide-react";
+import { X } from "lucide-react";
 import AdminAgent from "@/components/AdminAgent";
 import { supabase } from "@/integrations/supabase/client";
 import { runAction } from "@/lib/adminAgent";
@@ -44,7 +45,7 @@ export default function AdminCopilot() {
     <>
       {!open && (
         <button type="button" onClick={() => setOpen(true)} aria-label="Open the admin assistant" className="fixed bottom-24 right-4 z-50 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-base font-bold text-primary-foreground shadow-xl ring-1 ring-black/10 hover:brightness-110 sm:bottom-6">
-          <Sparkles className="h-5 w-5" /> Assistant
+          <OmpathMark className="h-7 w-7" /> Assistant
           {problems > 0 && <span className="rounded-full bg-red-500 px-2 text-xs font-black leading-5 text-white" title="Something went wrong a moment ago. Open me to see what and fix it.">{problems}</span>}
         </button>
       )}

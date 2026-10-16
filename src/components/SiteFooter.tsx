@@ -6,6 +6,7 @@ const STUDY = [
   { to: "/blog", label: "Study notes" },
   { to: "/topics", label: "Topics A–Z" },
   { to: "/papers", label: "Past papers" },
+  { to: "/mcqs", label: "MCQ banks" },
   { to: "/exams", label: "Timed exams" },
   { to: "/flashcards", label: "Flashcards" },
   { to: "/review", label: "Daily review" },

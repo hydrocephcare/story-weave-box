@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { BookOpen, CalendarDays, ClipboardList, Flame, ListChecks, Pill, Download, Network, Stethoscope, Target, FileQuestion, FolderOpen, GraduationCap, Hourglass, MapPin, PenLine, Star, Timer, Trophy } from "lucide-react";
 import registry from "@/data/libraries.json";
 import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
 import { buildBlogPath } from "@/lib/store";
 import { getRecentArticles, type RecentArticle } from "@/lib/progress-store";
 import { MBCHB_2026_TRIMESTER_1 } from "@/lib/timetable2026";
@@ -28,6 +29,16 @@ export function useMyYear(preferred?: number | null): [number, (y: number) => vo
     return preferred && preferred >= 1 && preferred <= 6 ? preferred : saved >= 1 && saved <= 6 ? saved : 1;
   });
   useEffect(() => { if (preferred && preferred >= 1 && preferred <= 6) { setYear(preferred); safeSet(MY_YEAR_KEY, String(preferred)); } }, [preferred]);
+  // after signing in, the desk follows the year on the learner's profile (once per account on this device; they can still switch it by hand)
+  const { user } = useAuth();
+  useEffect(() => {
+    if (!user || safeGet("ompath_year_synced") === user.id) return;
+    (supabase as any).from("profiles").select("study_year").eq("user_id", user.id).maybeSingle().then(({ data }: { data: { study_year?: number | string } | null }) => {
+      const y = Number(data?.study_year);
+      safeSet("ompath_year_synced", user.id);
+      if (y >= 1 && y <= 6) { setYear(y); safeSet(MY_YEAR_KEY, String(y)); }
+    });
+  }, [user]);
   return [year, (y) => { setYear(y); safeSet(MY_YEAR_KEY, String(y)); }];
 }
 
@@ -142,6 +153,7 @@ export default function StudyPanel({ year: preferredYear }: { year?: number | nu
   const links = [
     { to: `/timetable/year-${year}`, label: "Timetable", icon: CalendarDays },
     { to: `/books/year-${year}`, label: "Books", icon: BookOpen },
+    { to: `/mcqs?year=${encodeURIComponent(`Year ${year}`)}`, label: "MCQs", icon: ListChecks },
     { to: `/exams?year=${encodeURIComponent(`Year ${year}`)}`, label: "Exams", icon: FileQuestion },
     { to: `/flashcards?year=${encodeURIComponent(`Year ${year}`)}`, label: "Flashcards", icon: GraduationCap },
     { to: "/daily", label: "Daily dose", icon: Flame },

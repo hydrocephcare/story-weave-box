@@ -111,15 +111,32 @@ serve(async (req) => {
     const lastExam = new Map<string, number>();
     for (const p of (past || []) as any[]) { const u = String(p.category).replace(/^Weekly Exam:\s*/, ""); if (!lastExam.has(u)) lastExam.set(u, Date.parse(p.created_at)); }
     const weekAgo = Date.now() - 6 * 86_400_000;
-    const units = [...new Set([...setIds.keys(), ...artIds.keys()])]
-      .filter((u) => (setIds.get(u)?.length || 0) + (artIds.get(u)?.length || 0) >= 3 && (lastExam.get(u) ?? 0) < weekAgo)   // enough material, and no exam in the past 6 days
-      .sort((x, y) => (lastExam.get(x) ?? 0) - (lastExam.get(y) ?? 0))                                                       // never-examined units first, then the longest wait
-      .slice(0, maxUnits);
-
     const [{ data: wrongAnswers }, { data: passwordSetting }] = await Promise.all([
       supabase.from("user_answers").select("question_text").eq("is_correct", false).order("created_at", { ascending: false }).limit(300),
       supabase.from("app_settings").select("value").eq("key", "exam_password").maybeSingle(),
     ]);
+
+    // Which units get an exam: enough material, none in the past 6 days (unless forced), then ranked by how long the unit has waited, how much
+    // material it has and how often students get its questions wrong. Picking rotates through the years so Year 4 and 5 are not starved by Year 3.
+    const wantYear = Number(body?.year) || 0, wantUnit = body?.unit ? String(body.unit).toLowerCase() : "", force = body?.force === true;
+    const yearOf = (u: string) => Number(/Year\s*(\d)/i.exec(u)?.[1]) || 0;
+    const wrongText = ((wrongAnswers as any[]) || []).map((a: any) => String(a.question_text || "").toLowerCase());
+    const score = (u: string) => {
+      const material = (setIds.get(u)?.length || 0) + (artIds.get(u)?.length || 0);
+      const words = u.toLowerCase().replace(/year\s*\d\s*:/, "").split(/[^a-z]+/).filter((w) => w.length > 4);
+      const weak = words.length ? wrongText.filter((t) => words.some((w) => t.includes(w))).length : 0;
+      const waitedDays = Math.min(400, (Date.now() - (lastExam.get(u) ?? 0)) / 86_400_000);
+      return waitedDays + Math.min(material, 60) / 6 + Math.min(weak, 30) * 0.7;
+    };
+    const ranked = [...new Set([...setIds.keys(), ...artIds.keys()])]
+      .filter((u) => (setIds.get(u)?.length || 0) + (artIds.get(u)?.length || 0) >= 3 && (force || (lastExam.get(u) ?? 0) < weekAgo)
+        && (!wantYear || yearOf(u) === wantYear) && (!wantUnit || u.toLowerCase().includes(wantUnit)))
+      .sort((x, y) => score(y) - score(x));
+    const buckets = new Map<number, string[]>();
+    for (const u of ranked) { const y = yearOf(u); if (!buckets.has(y)) buckets.set(y, []); buckets.get(y)!.push(u); }
+    const units: string[] = [];
+    const order = [...buckets.keys()].sort((a, b) => (b || 9) - (a || 9));   // senior years first: they have the least practice material
+    while (units.length < maxUnits && [...buckets.values()].some((b) => b.length)) for (const y of order) { const next = buckets.get(y)!.shift(); if (next && units.length < maxUnits) units.push(next); }
     const byUnit = new Map<string, string[]>();
     for (const unit of units) {
       const arr: string[] = []; byUnit.set(unit, arr);
