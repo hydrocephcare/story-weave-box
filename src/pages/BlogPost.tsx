@@ -1118,6 +1118,19 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
       const isSubQuestion = /\(\s*\d+\s*marks?\s*\)/i.test(optText) || /^(explain|describe|discuss|outline|list|define|state|give|compare|name|what|how|why|differentiate|enumerate|suspected|diagnostic)\b/i.test(optText);
       if (examMode === "essay" || optText.length > 110 || isSubQuestion) {
         pendingChoicesLabel = false;
+        if (isSubQuestion) {
+          const marks = /\(\s*(\d+)\s*marks?\s*\)/i.exec(optText)?.[1];
+          const body = optText.replace(/\s*\(\s*\d+\s*marks?\s*\)\s*\.?\s*$/i, "").trim();
+          els.push(
+            <div key={`part-${i}`} className="not-prose my-2 flex items-start gap-3 rounded-xl border border-border bg-card px-4 py-3">
+              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{label.toLowerCase()}</span>
+              <p className="min-w-0 flex-1 text-base leading-7 text-foreground"><Inline text={body} /></p>
+              {marks && <span className="mt-0.5 shrink-0 rounded-full bg-muted px-2.5 py-1 text-xs font-bold text-muted-foreground">{marks} mark{marks === "1" ? "" : "s"}</span>}
+            </div>
+          );
+          if (explanationMatch?.[2]) pushBullet(explanationMatch[2].trim(), `essay-pt-exp-${i}`);
+          continue;
+        }
         pushBullet(`**${label}.** ${optText}`, `essay-pt-${i}`);
         if (explanationMatch?.[2]) pushBullet(explanationMatch[2].trim(), `essay-pt-exp-${i}`);
         continue;
