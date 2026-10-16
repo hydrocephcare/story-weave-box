@@ -5,14 +5,15 @@ import OmpathMark from "@/components/ai/OmpathMark";
 import { Helmet } from "react-helmet-async";
 import { trackAnswer } from "@/lib/answer-tracker";
 import { openAI } from "@/lib/aiEvents";
-import { isExamLike, resolveMcqSet, type McqSetRow } from "@/lib/mcqSet";
+import { isExamLike, resolveMcqSet, shuffleOptions, type McqSetRow } from "@/lib/mcqSet";
 import { examUnit, examYear, shortTitle } from "@/lib/examMeta";
 
 const LETTERS = "ABCDEF";
+const mixOrder = <T,>(a: T[]): T[] => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 
 /** A question bank as a reading page: every question in one scroll, each answer opens in place with its explanation. */
 function Bank({ set }: { set: McqSetRow }) {
-  const qs = set.questions;
+  const [qs, setQs] = useState(set.questions);   // Reset mixes the questions and their options again, so positions cannot be memorised
   const [picked, setPicked] = useState<Map<number, number>>(new Map());
   const [shown, setShown] = useState<Set<number>>(new Set());   // answers revealed without answering
   const [only, setOnly] = useState<"all" | "missed">("all");
@@ -34,7 +35,7 @@ function Bank({ set }: { set: McqSetRow }) {
     try { localStorage.setItem(`mcq_practice_${set.id}`, JSON.stringify({ score: correct, total: qs.length, at: Date.now() })); } catch { /* storage blocked */ }
   }, [finished, correct, qs.length, set.id]);
 
-  const reset = () => { setPicked(new Map()); setShown(new Set()); setOnly("all"); window.scrollTo({ top: 0, behavior: "smooth" }); };
+  const reset = () => { setQs((cur) => shuffleOptions(mixOrder(cur), String(Math.random()))); setPicked(new Map()); setShown(new Set()); setOnly("all"); window.scrollTo({ top: 0, behavior: "smooth" }); };
   const indices = qs.map((_, i) => i).filter((i) => only === "all" || missed.includes(i));
   const unit = examUnit(set.category), year = examYear(set.category, set.title), title = shortTitle(set.title, set.category);
   const toggleShow = (i: number) => setShown((s) => { const n = new Set(s); if (n.has(i)) n.delete(i); else n.add(i); return n; });

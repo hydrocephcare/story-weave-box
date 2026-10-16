@@ -3,6 +3,7 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Clock, Flame, ListChecks, PlayCircle, Search, Timer, Trophy, X } from "lucide-react";
 import LoadMoreButton from "@/components/LoadMoreButton";
 import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "@/hooks/useAuth";
 import { updateMetaTags } from "@/lib/seo";
 import { isPublicMcqSet } from "@/lib/content-policy";
 import { examUnit, examYear, isWeekly, setPath, shortTitle, weeklyDate, type CatalogRow } from "@/lib/examMeta";
@@ -52,7 +53,7 @@ function Card({ row, mcq, featured = false }: { row: CatalogRow; mcq: boolean; f
       <span aria-hidden className={`absolute inset-y-0 left-0 w-1 ${weekly ? "bg-primary" : row.kind === "past_paper" ? "bg-amber-500" : "bg-sky-500"}`} />
       <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider">
         {fresh && <span className="inline-flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-primary-foreground"><Flame className="h-3 w-3" aria-hidden /> New</span>}
-        {weekly ? <span className="text-primary">Weekly{date ? ` · ${date}` : ""}</span> : row.kind === "past_paper" ? <span className="text-amber-600 dark:text-amber-400">Past paper</span> : <span className="text-sky-600 dark:text-sky-400">Question bank</span>}
+        {weekly ? <span className="text-primary">Weekly{date ? ` · ${date}` : ""}</span> : row.kind === "past_paper" ? <span className="text-amber-600 dark:text-amber-400">Past paper</span> : <span className="text-sky-600 dark:text-sky-400">{mcq ? "Question bank" : "Unit exam"}</span>}
         {year && <span className="rounded-full border border-border px-2 py-0.5 text-muted-foreground">Y{year}</span>}
       </div>
       <h3 className={`mt-2 font-serif font-bold leading-snug text-foreground ${featured ? "text-2xl" : "text-lg"}`}>{shortTitle(row.title, row.category)}</h3>
@@ -84,9 +85,16 @@ export default function Exams({ mode = "exam" }: { mode?: "exam" | "mcq" }) {
   const [q, setQ] = useState("");
   const [type, setType] = useState<"all" | "weekly" | "past_paper">("all");
   const [unit, setUnit] = useState<string | null>(null);
-  const [visible, setVisible] = useState(18);
-  const year = Number(/(\d)/.exec(params.get("year") || "")?.[1]) || null;
-  const mine = useMemo(myYear, []);
+  const [visible, setVisible] = useState(12);
+  const { user } = useAuth();
+  const [profileYear, setProfileYear] = useState<number | null>(myYear);
+  useEffect(() => {
+    if (!user) return;
+    (supabase as any).from("profiles").select("study_year").eq("user_id", user.id).maybeSingle().then(({ data }: { data: { study_year?: number | string } | null }) => { const y = Number(data?.study_year); if (y >= 1 && y <= 6) setProfileYear(y); });
+  }, [user]);
+  const mine = profileYear;
+  const yp = params.get("year");
+  const year = yp === "all" ? null : Number(/([0-9])/.exec(yp || "")?.[1]) || (yp ? null : mine);   // no choice made yet: show the learner's own year
 
   useEffect(() => {
     updateMetaTags(mcq
@@ -110,7 +118,7 @@ export default function Exams({ mode = "exam" }: { mode?: "exam" | "mcq" }) {
   const loading = rows === null;
 
   const seg = (on: boolean) => `shrink-0 rounded-full px-4 py-2 text-sm font-bold transition-colors ${on ? "bg-primary text-primary-foreground shadow" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`;
-  const setYear = (y: number | null) => { const next = new URLSearchParams(params); if (y) next.set("year", `Year ${y}`); else next.delete("year"); setParams(next, { replace: true }); };
+  const setYear = (y: number | null) => { const next = new URLSearchParams(params); next.set("year", y ? `Year ${y}` : "all"); setParams(next, { replace: true }); };
   const stats = mcq
     ? [[pool.length, "question banks"], [pool.reduce((n, r) => n + r.question_count, 0), "questions"]]
     : [[pool.filter((r) => isWeekly(r.title, r.category)).length, "weekly exams"], [pool.length, "exams in all"]];
@@ -137,7 +145,7 @@ export default function Exams({ mode = "exam" }: { mode?: "exam" | "mcq" }) {
         </div>
       </section>
 
-      <section className="sticky top-14 z-20 border-b border-border bg-background/90 backdrop-blur">
+      <section className="border-b border-border bg-background">
         <div className="mx-auto max-w-6xl space-y-3 px-4 py-3">
           <div className="flex items-center gap-1 overflow-x-auto pb-0.5" role="tablist" aria-label="Year">
             <button type="button" role="tab" aria-selected={!year} onClick={() => setYear(null)} className={seg(!year)}>All years</button>
@@ -158,13 +166,14 @@ export default function Exams({ mode = "exam" }: { mode?: "exam" | "mcq" }) {
                 {([["all", "All"], ["weekly", "Weekly"], ["past_paper", "Past papers"]] as const).map(([k, label]) => <button key={k} type="button" aria-pressed={type === k} onClick={() => setType(k)} className={`rounded-full px-3.5 py-1.5 text-sm font-bold transition-colors ${type === k ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>{label}</button>)}
               </div>
             )}
+            {units.length > 1 && (
+              <select value={unit || ""} onChange={(e) => setUnit(e.target.value || null)} aria-label="Unit" className="h-10 max-w-[200px] rounded-full border border-input bg-card px-4 text-sm font-semibold outline-none focus:border-primary">
+                <option value="">All units</option>
+                {units.map(([u, n]) => <option key={u} value={u}>{u} ({n})</option>)}
+              </select>
+            )}
             <span className="ml-auto text-sm font-semibold text-muted-foreground">{loading ? "" : `${list.length} ${mcq ? "banks" : "exams"}`}</span>
           </div>
-          {units.length > 1 && (
-            <div className="flex gap-1.5 overflow-x-auto pb-0.5" role="group" aria-label="Unit">
-              {units.map(([u, n]) => <button key={u} type="button" aria-pressed={unit === u} onClick={() => setUnit(unit === u ? null : u)} className={`shrink-0 rounded-full border px-3 py-1 text-xs font-semibold transition-colors ${unit === u ? "border-primary bg-primary/10 text-primary" : "border-border text-muted-foreground hover:border-primary/50 hover:text-foreground"}`}>{u} <span className="opacity-60">{n}</span></button>)}
-            </div>
-          )}
         </div>
       </section>
 

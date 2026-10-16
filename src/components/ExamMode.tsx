@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
+import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, X, Lightbulb, Clock, AlertTriangle, LogOut, Lock, CheckCircle, Phone, Loader2, Flag, ArrowLeft, ArrowRight, Grid3x3 } from "lucide-react";
 import OmpathMark from "@/components/ai/OmpathMark";
@@ -563,8 +564,9 @@ export default function ExamMode({
     </div>
   );
 
-  return (
-    <div className="exam-container fixed inset-0 z-[200] flex flex-col overflow-hidden bg-background">
+  // drawn straight on the page body, above everything (the AI button, scroll arrow and site banner must not show during an exam)
+  return createPortal(
+    <div style={{ zIndex: 2147483000 }} className="exam-container fixed inset-0 flex flex-col overflow-hidden bg-background">
       {ExitDialog()}
       {SubmitDialog()}
 
@@ -665,7 +667,8 @@ export default function ExamMode({
           </div>
         </div>
       </footer>
-    </div>
+    </div>,
+    document.body,
   );
 }
 

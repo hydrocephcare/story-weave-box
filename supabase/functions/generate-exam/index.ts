@@ -74,6 +74,42 @@ function parseEssays(raw: string) {
   }
 }
 
+type Mcq = { question: string; options: string[]; correct_answer: number; explanation: string };
+type Dispute = { i: number; q: string; key: string; ai: string };
+
+/** A second, independent pass over written questions (the "question doctor"). The reviewer never sees the answer key: it picks its own answer, says whether
+ * the question is complete and unambiguous, writes a missing explanation, and rewrites the options to similar length so the right answer cannot be spotted
+ * by being the longest. strict = new AI-written exams (a question the reviewer disagrees with is dropped); otherwise the stored question is kept and the
+ * disagreement is reported for a human to look at. Questions that are cut off or unanswerable are always taken out. */
+async function reviewQuestions(qs: Mcq[], strict = true): Promise<{ kept: Mcq[]; dropped: number; disputed: Dispute[]; fixed: number }> {
+  const kept: Mcq[] = []; const disputed: Dispute[] = []; let dropped = 0, fixed = 0;
+  for (let i = 0; i < qs.length; i += 12) {
+    const chunk = qs.slice(i, i + 12);
+    const prompt = `You are a strict medical examiner checking multiple-choice questions.\nFor EACH question:\n1. Decide on your own which option is the single best answer (your_answer, index 0-based).\n2. status: "ok", or "incomplete" if the question or an option is cut off, meaningless or missing information, or "ambiguous" if two options could be right or none is.\n3. Rewrite the options so they are similar in length, grammar and level of detail, so the right answer cannot be recognised by being longer or more specific. Keep each option's meaning, the same order, and the same number of options.\n4. If the explanation is missing or empty, write one clear sentence (max 25 words) for "explanation", otherwise leave it "".\nReturn ONLY a JSON array, one object per question: [{"i":0,"your_answer":0,"status":"ok","options":["..."],"explanation":""}]\n\nQuestions:\n${chunk.map((q, k) => `${k}. ${q.question}\n${q.options.map((o, j) => `${"ABCDE"[j]}. ${o}`).join("\n")}\nExplanation: ${q.explanation || "(none)"}`).join("\n\n")}`;
+    let reviewed: any[] | null = null;
+    try {
+      const raw = await chatText(Deno.env.toObject(), [{ role: "system", content: "Return ONLY valid JSON, no markdown." }, { role: "user", content: prompt }], { temperature: 0.1, maxTokens: 8000, timeoutMs: 40000 });
+      const m = raw.match(/\[[\s\S]*\]/); reviewed = m ? JSON.parse(m[0]) : null;
+    } catch { reviewed = null; }
+    if (!Array.isArray(reviewed)) { kept.push(...chunk); continue; }   // the reviewer was unavailable: keep these as written rather than lose them
+    chunk.forEach((q, k) => {
+      const r = reviewed!.find((x: any) => Number(x?.i) === k);
+      if (!r) { kept.push(q); return; }
+      if (r.status === "incomplete") { dropped++; return; }
+      const mismatch = Number(r.your_answer) !== q.correct_answer || r.status === "ambiguous";
+      if (mismatch) {
+        disputed.push({ i: i + k, q: q.question.slice(0, 120), key: q.options[q.correct_answer] || "", ai: q.options[Number(r.your_answer)] || "" });
+        if (strict) { dropped++; return; }
+      }
+      const okOpts = Array.isArray(r.options) && r.options.length === q.options.length && r.options.every((o: any) => typeof o === "string" && o.trim());
+      const explanation = !q.explanation?.trim() && typeof r.explanation === "string" && r.explanation.trim() ? r.explanation.trim() : q.explanation;
+      if (explanation !== q.explanation) fixed++;
+      kept.push({ ...q, options: okOpts && !mismatch ? r.options.map((o: string) => o.trim()) : q.options, explanation });
+    });
+  }
+  return { kept, dropped, disputed, fixed };
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
@@ -90,6 +126,26 @@ serve(async (req) => {
       if (!isAdmin) return new Response(JSON.stringify({ error: "Administrators only." }), { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
     const body = await req.json().catch(() => ({}));
+    if (body?.review) {
+      // check one stored question set that has not been through the reviewer yet (weekly exams first, then everything else)
+      const [{ data: sets }, { data: logged }] = await Promise.all([
+        supabase.from("mcq_sets").select("id, title, category").eq("published", true).is("deleted_at", null).order("created_at", { ascending: false }).limit(1000),
+        supabase.from("mcq_review_log").select("set_id"),
+      ]);
+      const seen = new Set((logged || []).map((r: any) => r.set_id));
+      const pending = (sets || []).filter((r: any) => !seen.has(r.id));
+      const todo = pending.find((r: any) => /^Weekly Exam/i.test(r.category || "")) || pending[0];
+      if (!todo) return new Response(JSON.stringify({ success: true, done: true }), { headers: { ...corsHeaders, "Content-Type": "application/json" } });
+      const { data: full } = await supabase.from("mcq_sets").select("questions").eq("id", todo.id).single();   // only the one set being checked is read
+      const before = (Array.isArray(full?.questions) ? full!.questions : []) as Mcq[];
+      const weekly = /^Weekly Exam/i.test(todo.category || "");
+      const { kept, dropped, disputed, fixed } = await reviewQuestions(before, weekly);
+      if (kept.length >= Math.max(8, Math.floor(before.length * 0.6)) && (dropped || fixed || kept.some((k, i) => JSON.stringify(k.options) !== JSON.stringify(before[i]?.options)))) {
+        await supabase.from("mcq_sets").update({ questions: kept }).eq("id", todo.id);
+      }
+      await supabase.from("mcq_review_log").upsert({ set_id: todo.id, checked: before.length, dropped, disputed });
+      return new Response(JSON.stringify({ success: true, title: todo.title, before: before.length, kept: kept.length, dropped, disputed: disputed.length, fixed, remaining: pending.length - 1 }), { headers: { ...corsHeaders, "Content-Type": "application/json" } });
+    }
     const maxUnits = Math.max(1, Math.min(8, Number(body?.units) || 3));   // a run finishes inside the function's time limit; the next run continues with the units still waiting
 
     // 1. which units exist (ids and categories only: tiny), 2. which have had an exam most recently, 3. read the content of the ones that are due
@@ -163,11 +219,13 @@ serve(async (req) => {
 
       const mcqPrompt = `Create exactly 35 high-quality MCQs for a ${unit} weekly medical exam.\n\nContent context:\n${context}${weakBlock}\n\nReturn ONLY valid JSON array with schema: {"question":"...","options":["A","B","C","D"],"correct_answer":0,"explanation":"..."}`;
       // 30 questions with one-sentence explanations fit the writer's output limit; an answer that comes back short is tried once more, and a unit that still has fewer than 15 is skipped
-      const compact = `${mcqPrompt.replace("exactly 35", "exactly 30")}\n\nKeep every explanation to ONE sentence of at most 25 words.`;
+      const compact = `${mcqPrompt.replace("exactly 35", "exactly 30")}\n\nKeep every explanation to ONE sentence of at most 25 words. All four options must be about the same length and style, and the correct answer must NOT be the longest or the most detailed one. Make the wrong options plausible, and vary which letter is correct.`;
       let examMcqs: ReturnType<typeof parseMcqs> = [], lastErr = "";
       for (let attempt = 0; attempt < 2 && examMcqs.length < 25; attempt++) {
         try { const got = parseMcqs(await generateWithFallback(compact)); if (got.length > examMcqs.length) examMcqs = got; } catch (e) { lastErr = e instanceof Error ? e.message : String(e); }
       }
+      let reviewNote = "";
+      if (examMcqs.length >= 15) { const r = await reviewQuestions(examMcqs, true); if (r.kept.length >= 15) { examMcqs = r.kept; reviewNote = `${r.dropped} dropped by the reviewer`; } }
       if (examMcqs.length < 15) { skipped.push(`${unit}: ${lastErr || `the writer produced only ${examMcqs.length} usable questions`}`); continue; }
 
       const essayPrompt = `Create written exam section for ${unit}. Return ONLY valid JSON:\n{"saqs":[{"question":"...","model_answer":"...","marks":5}],"laqs":[{"question":"...","model_answer":"...","marks":20}]}\n\nRules:\n- exactly 4 SAQs with 5 marks each\n- exactly 1 LAQ with 20 marks`;
@@ -182,7 +240,7 @@ serve(async (req) => {
           title: `${examTitle} (Section A: MCQs)`,
           questions: examMcqs,
           published: true,
-          original_notes: JSON.stringify({ type: "weekly_exam", unit, saqs, laqs, generated_at: now.toISOString() }),
+          original_notes: JSON.stringify({ type: "weekly_exam", unit, saqs, laqs, generated_at: now.toISOString(), reviewed: true }),
           category: `Weekly Exam: ${unit}`,
           access_password: examPassword,
         })
@@ -203,7 +261,7 @@ serve(async (req) => {
         article_id: null,
       });
 
-      createdExams.push({ unit, exam_id: inserted.id, title: inserted.title, mcq_count: examMcqs.length, saq_count: saqs.length, laq_count: laqs.length });
+      createdExams.push({ review: reviewNote, unit, exam_id: inserted.id, title: inserted.title, mcq_count: examMcqs.length, saq_count: saqs.length, laq_count: laqs.length });
     }
 
     return new Response(JSON.stringify({ success: true, unit_count: createdExams.length, exams: createdExams, skipped, tried: units, last: Object.fromEntries([...lastExam].slice(0, 6)) }), {

@@ -23,3 +23,20 @@ describe("exam titles", () => {
     expect(setPath({ id: "1", slug: null, kind: "exam", title: "t" })).toBe("/exams/1/start");
   });
 });
+
+import { shuffleOptions } from "@/lib/mcqSet";
+describe("option shuffling", () => {
+  const q = { question: "q", options: ["alpha", "bravo", "charlie", "delta"], correct_answer: 2 };
+  it("keeps the answer key pointing at the same option", () => {
+    for (const seed of ["a", "b", "c", "d", "e"]) {
+      const [r] = shuffleOptions([q], seed);
+      expect(r.options[r.correct_answer]).toBe("charlie");
+      expect([...r.options].sort()).toEqual(["alpha", "bravo", "charlie", "delta"]);
+    }
+  });
+  it("gives the same order for the same seed and leaves 'all of the above' questions alone", () => {
+    expect(shuffleOptions([q], "x")).toEqual(shuffleOptions([q], "x"));
+    const k = { question: "q", options: ["a1", "b1", "c1", "All of the above"], correct_answer: 3 };
+    expect(shuffleOptions([k], "x")[0]).toEqual(k);
+  });
+});

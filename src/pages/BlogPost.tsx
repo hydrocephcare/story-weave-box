@@ -1114,7 +1114,9 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
       const explanationMatch = rawOption.match(/^([\s\S]*?)\s*(?:Explanation|Rationale)\s*[:：]\s*([\s\S]+)$/i);
       const optText = (explanationMatch?.[1] || rawOption).trim();
       // A long lettered line is prose (an answer point), never an MCQ choice.
-      if (examMode === "essay" || optText.length > 110) {
+      // Parts of a written question ("(a) Explain ... (6 marks)") are sub-questions, not answer choices.
+      const isSubQuestion = /\(\s*\d+\s*marks?\s*\)/i.test(optText) || /^(explain|describe|discuss|outline|list|define|state|give|compare|name|what|how|why|differentiate|enumerate|suspected|diagnostic)\b/i.test(optText);
+      if (examMode === "essay" || optText.length > 110 || isSubQuestion) {
         pendingChoicesLabel = false;
         pushBullet(`**${label}.** ${optText}`, `essay-pt-${i}`);
         if (explanationMatch?.[2]) pushBullet(explanationMatch[2].trim(), `essay-pt-exp-${i}`);

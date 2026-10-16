@@ -13,6 +13,7 @@ import HelpfulVote from "@/components/HelpfulVote";
 import { sanitizeMcqQuestions } from "@/lib/mcq-normalization";
 import { isPublicMcqSet } from "@/lib/content-policy";
 import { isWeekly, shortTitle, weeklyDate } from "@/lib/examMeta";
+import { shuffleOptions } from "@/lib/mcqSet";
 import { useAuth } from "@/hooks/useAuth";
 
 interface ExamSet {
@@ -115,7 +116,7 @@ export default function ExamStart() {
   const [examId, setExamId] = useState<string | null>(directId || (isSampleParam ? "sample-exam" : null));
   const [loading, setLoading] = useState(true);
   const [started, setStarted] = useState(false);
-  const [showForm, setShowForm] = useState(false);
+  const [editing, setEditing] = useState(false);
 
   // Pre-fill from saved credentials
   const [studentInfo, setStudentInfo] = useState<StudentInfo>(() => {
@@ -265,7 +266,7 @@ export default function ExamStart() {
         }
       }
       if (!resolvedId || !data || !isPublicMcqSet(data)) { navigate("/exams", { replace: true }); return; }
-      const questions = cleanExamQuestions(data.questions);
+      const questions = shuffleOptions(cleanExamQuestions(data.questions), resolvedId);
       if (!questions.length) { navigate("/exams", { replace: true }); return; }
       setExamId(resolvedId);
       setExam({ ...(data as unknown as ExamSet), questions });
@@ -291,10 +292,10 @@ export default function ExamStart() {
   // a signed-in learner's profile fills the form the first time
   const { user } = useAuth();
   useEffect(() => {
-    if (!user || loadCreds()?.name) return;
+    if (!user) return;
     (supabase as any).from("profiles").select("display_name,university,course").eq("user_id", user.id).maybeSingle().then(({ data }: { data: { display_name?: string; university?: string; course?: string } | null }) => {
       if (!data) return;
-      setStudentInfo((prev) => ({ name: prev.name || data.display_name || "", university: prev.university || data.university || "", course: prev.course || data.course || "" }));
+      setStudentInfo((prev) => ({ name: data.display_name || prev.name || "", university: data.university || prev.university || "", course: data.course || prev.course || "" }));
     });
   }, [user]);
 
@@ -492,7 +493,15 @@ export default function ExamStart() {
         <aside className="lg:sticky lg:top-20 lg:self-start">
           <div className="rounded-3xl border border-border bg-card p-6 shadow-sm">
             <h2 className="flex items-center gap-2 font-serif text-xl font-bold"><GraduationCap className="h-5 w-5 text-primary" aria-hidden /> Your details</h2>
-            <p className="mt-1 text-sm text-muted-foreground">{wasRestored ? "Saved from your last exam. Change anything that is out of date." : "Shown with your result. Saved on this device for next time."}</p>
+            <p className="mt-1 text-sm text-muted-foreground">{user && ready ? "Taken from your sign-up profile." : wasRestored ? "Saved from your last exam. Change anything that is out of date." : "Shown with your result. Saved on this device for next time."}</p>
+            {user && ready && !editing ? (
+              <div className="mt-5 rounded-2xl border border-border bg-muted/40 p-4">
+                <p className="text-sm font-bold">{studentInfo.name}</p>
+                <p className="mt-0.5 text-sm text-muted-foreground">{studentInfo.university}</p>
+                <p className="text-sm text-muted-foreground">{studentInfo.course}</p>
+                <button type="button" onClick={() => setEditing(true)} className="mt-3 text-sm font-bold text-primary hover:underline">Not you, or out of date? Edit</button>
+              </div>
+            ) : (
             <div className="mt-5 space-y-4">
               <label className="block text-sm font-semibold">Full name
                 <input className={`${fieldCls} mt-1.5 font-normal`} placeholder="As it should appear on your result" value={studentInfo.name} onChange={(e) => updateField("name", e.target.value)} autoComplete="name" />
@@ -536,6 +545,7 @@ export default function ExamStart() {
                 )}
               </div>
             </div>
+            )}
             <button type="button" onClick={handleStartExam} disabled={!ready} className="mt-6 flex h-12 w-full items-center justify-center gap-2 rounded-full bg-primary text-base font-bold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-45 disabled:shadow-none">
               <BookOpen className="h-5 w-5" aria-hidden /> {resuming ? "Resume exam" : "Start exam"}
             </button>

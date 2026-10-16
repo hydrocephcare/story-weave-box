@@ -7,7 +7,7 @@ import type { ContestStage } from "@/lib/contest";
 import type { PosterSpec } from "@/lib/statusPoster";
 import { loadCategories, removeItem } from "@/lib/adminWriter";
 
-export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget" | "site_health" | "update_post" | "publish_post" | "restore_post" | "briefing" | "import_mcqs" | "generate_exam"; args: Record<string, any> }
+export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget" | "site_health" | "update_post" | "publish_post" | "restore_post" | "briefing" | "import_mcqs" | "generate_exam" | "check_questions"; args: Record<string, any> }
 export interface AgentContext { memory?: string[]; autorun?: boolean; categories?: string[]; page?: string; problems?: { at: string; what: string }[]; now: string; universities: { slug: string; name: string }[]; exams: string[]; contests: { slug: string; title: string; stage: string }[] }
 export interface PlanItem { action: AgentAction; line: string; danger: boolean; ok: boolean }
 
@@ -61,6 +61,7 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
     if (action.tool === "go_to") return { action, danger: false, ok: /^\/admin(\/[a-z0-9-]+)*$/.test(String(a.path)), line: `Open ${a.path}.` };
     if (action.tool === "set_autopilot_mode") return { action, danger: false, ok: ["approve_access", "daily_digest"].includes(a.key) && ["off", "ask", "auto"].includes(a.mode), line: `Set Autopilot job "${a.key}" to ${a.mode}${a.mode === "auto" ? " (it will act on its own, with an Undo in the log)" : ""}.` };
     if (action.tool === "run_autopilot") return { action, danger: false, ok: true, line: "Run the Autopilot jobs now." };
+    if (action.tool === "check_questions") return { action, danger: false, ok: true, line: "Have the AI examiner check 3 question sets: it answers every question blind, flags answers that disagree with the key, removes cut-off questions and writes missing explanations." };
     if (action.tool === "generate_exam") return { action, danger: false, ok: true, line: `Write ${Math.max(1, Math.min(3, Number(a.count) || 1))} new weekly exam${(Number(a.count) || 1) > 1 ? "s" : ""}${a.year ? ` for Year ${a.year}` : ""}${a.unit ? ` in "${a.unit}"` : ""}, published straight to the Exam Center (about a minute each).` };
     if (action.tool === "update_post") return { action, danger: false, ok: String(a.query || "").trim().length > 1 && Boolean(a.title || a.meta_description || a.category), line: `Change the post matching "${a.query}": ${[a.title && `title → "${a.title}"`, a.meta_description && "search description", a.category && `category → ${a.category}`].filter(Boolean).join(", ")}. The old values are kept so you can undo.` };
     if (action.tool === "publish_post") return { action, danger: false, ok: String(a.query || "").trim().length > 1, line: `Publish up to 5 unpublished drafts whose title matches "${a.query}".` };
@@ -90,6 +91,19 @@ export async function runAction(action: AgentAction, w: AgentWorld): Promise<Act
   const a = action.args || {};
   if (action.tool === "set_autopilot_mode") { const { error } = await (supabase as any).rpc("admin_agent_set_mode", { p_key: a.key, p_mode: a.mode }); if (error) throw new Error(/schema cache|admin_agent_set_mode/.test(error.message) ? "Run autopilot.sql first." : error.message); return { text: `Autopilot job ${a.key} is now ${a.mode}.`, links: [{ label: "Open Autopilot", href: "/admin/autopilot" }] }; }
   if (action.tool === "run_autopilot") { const { data, error } = await (supabase as any).rpc("admin_agent_run"); if (error) throw new Error(/schema cache|admin_agent_run/.test(error.message) ? "Run autopilot.sql first." : error.message); return { text: `Autopilot ran: ${data?.approved ?? 0} approved, ${data?.queued ?? 0} waiting for you.`, links: [{ label: "See the log", href: "/admin/autopilot" }] }; }
+  if (action.tool === "check_questions") {
+    const lines: string[] = []; let remaining = 0;
+    for (let n = 0; n < 3; n++) {
+      const { data, error } = await supabase.functions.invoke("generate-exam", { body: { review: true } });
+      if (error) throw new Error(error.message);
+      if (data?.done) { lines.push("Every published question set has been checked."); break; }
+      remaining = Number(data?.remaining) || 0;
+      lines.push(`• ${data?.title}: ${data?.before} checked, ${data?.dropped} removed, ${data?.disputed} answer${data?.disputed === 1 ? "" : "s"} to look at, ${data?.fixed} explanations written`);
+    }
+    const { data: dis } = await (supabase as any).from("mcq_review_log").select("disputed").neq("disputed", "[]").limit(200);
+    const total = (dis || []).reduce((n: number, r: any) => n + (r.disputed?.length || 0), 0);
+    return { text: `${lines.join("\n")}${remaining ? `\n${remaining} more sets are checked automatically in the background.` : ""}\n${total} answers across the site are marked "AI disagrees with the key" for you to confirm.` };
+  }
   if (action.tool === "generate_exam") {
     const { data, error } = await supabase.functions.invoke("generate-exam", { body: { units: Math.max(1, Math.min(3, Number(a.count) || 1)), year: Number(a.year) || undefined, unit: a.unit ? String(a.unit) : undefined, force: true } });
     if (error) throw new Error(error.message);
