@@ -46,6 +46,7 @@ const FlashcardStudy = lazy(() => import("./pages/FlashcardStudy"));
 const Exams = lazy(() => import("./pages/Exams"));
 const ExamStart = lazy(() => import("./pages/ExamStart"));
 const McqSet = lazy(() => import("./pages/McqSet"));
+const McqHub = lazy(() => import("./pages/McqHub"));
 const AdminEditor = lazy(() => import("./pages/AdminEditor"));
 const Stories = lazy(() => import("./pages/Stories"));
 const StoryRead = lazy(() => import("./pages/StoryRead"));
@@ -214,7 +215,7 @@ const AnimatedRoutes = () => {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/flashcards" element={<RailLayout><Flashcards /></RailLayout>} />
             <Route path="/flashcards/:id" element={<FlashcardStudy />} />
-            <Route path="/mcqs" element={<RailLayout><Exams mode="mcq" /></RailLayout>} />
+            <Route path="/mcqs" element={<RailLayout><McqHub /></RailLayout>} />
             <Route path="/mcqs/:id" element={<McqSet />} />
             <Route path="/exams" element={<RailLayout><Exams /></RailLayout>} />
             <Route path="/exams/:id/start" element={<ExamStart />} />
