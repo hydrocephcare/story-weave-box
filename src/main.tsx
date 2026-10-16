@@ -61,8 +61,11 @@ if ("serviceWorker" in navigator) {
         `${SUPA}/rest/v1/flashcard_sets?select=id,title,category,slug,created_at,updated_at&published=eq.true&deleted_at=is.null&order=created_at.desc&limit=50`,
         `${SUPA}/rest/v1/stories?select=id,title,category,created_at&published=eq.true&deleted_at=is.null&order=created_at.desc&limit=50`,
       ];
-      // Delay so it doesn't compete with the initial render
-      const warmCache = () => endpoints.forEach((url) => fetch(url, { headers }).catch(() => {}));
+      // Delay so it doesn't compete with the initial render. Once every 12 hours per device is plenty (it used to run on every page load).
+      const warmCache = () => {
+        try { if (Date.now() - Number(localStorage.getItem("ompath_warm_at") || 0) < 12 * 3600_000) return; localStorage.setItem("ompath_warm_at", String(Date.now())); } catch { /* storage blocked: warm anyway */ }
+        endpoints.forEach((url) => fetch(url, { headers }).catch(() => {}));
+      };
       if ("requestIdleCallback" in window) window.requestIdleCallback(warmCache, { timeout: 10000 });
       else setTimeout(warmCache, 8000);
     }).catch(() => {});

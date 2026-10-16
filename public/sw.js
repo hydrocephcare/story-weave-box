@@ -5,7 +5,7 @@
 //  - Database reads: network-first, but if the network is slow (over 3 seconds) and there is a saved copy, the saved copy is shown at once.
 //    An empty answer is never saved, so a database migration cannot blank the site.
 const CACHE_NAME = "ompath-v10";
-const API_CACHE = "ompath-api-v5";
+const API_CACHE = "ompath-api-v6";
 const SLOW_MS = 3000;
 const STATIC_ASSETS = ["/", "/index.html", "/manifest.json"];
 
@@ -34,6 +34,11 @@ self.addEventListener("fetch", (event) => {
     event.respondWith((async () => {
       const cache = await caches.open(API_CACHE);
       const cached = await cache.match(event.request);
+      // a copy under 10 minutes old is used as it is, with no request to Supabase (the free plan limits the data we may read). Signed-in users
+      // (their requests carry a JWT) always check, so an admin sees an edit straight away.
+      const signedIn = /^Bearer eyJ/.test(event.request.headers.get("authorization") || "");
+      const age = cached ? (Date.now() - Date.parse(cached.headers.get("date") || "")) / 1000 : Infinity;
+      if (cached && !signedIn && age >= 0 && age < 600) return cached;
       const network = fetch(event.request).then(async (response) => {
         if (response.ok) {
           const text = await response.clone().text();
