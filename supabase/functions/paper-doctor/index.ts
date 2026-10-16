@@ -30,7 +30,7 @@ the corrected description (first section only, otherwise leave empty)
 ===CONTENT===
 the COMPLETE corrected text of this section, every question included`;
 
-const SEG_MAX = 11000;
+const SEG_MAX = 8000;
 const QUESTION_LINE = /^\s*(?:#+\s*)?Question\s+\d+/i;
 
 /** Cuts a long page into sections of about 11,000 characters, always at the start of a question. */
@@ -78,7 +78,7 @@ serve(async (req) => {
       raw = await chatText(Deno.env.toObject(), [
         { role: "system", content: SYSTEM },
         { role: "user", content: `${seg === 0 ? `TITLE: ${a.title}\nCATEGORY: ${a.category}\nDESCRIPTION: ${a.meta_description || ""}\n\n` : ""}${parts.length > 1 ? `SECTION ${seg + 1} OF ${parts.length}\n` : ""}PAGE:\n${parts[seg]}` },
-      ], { temperature: 0.2, maxTokens: 8000, timeoutMs: 100000 });
+      ], { temperature: 0.2, maxTokens: 4500, timeoutMs: 100000 });
     } catch (e) { await save("skipped", { issues: [`AI unavailable: ${e instanceof Error ? e.message.slice(0, 120) : e}`] }); return json({ success: true, title: a.title, status: "skipped" }); }
 
     const part = (name: string) => {

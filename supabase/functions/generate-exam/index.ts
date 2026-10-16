@@ -21,7 +21,7 @@ async function generateWithFallback(prompt: string): Promise<string> {
   return await chatText(Deno.env.toObject(), [
     { role: "system", content: "You are a senior medical exam writer. Return ONLY valid JSON, no markdown or code blocks." },
     { role: "user", content: prompt },
-  ], { temperature: 0.4, maxTokens: 6000, timeoutMs: 45000 });
+  ], { temperature: 0.4, maxTokens: 4500, timeoutMs: 45000 });
 }
 
 function parseMcqs(raw: string) {
@@ -88,7 +88,7 @@ async function reviewQuestions(qs: Mcq[], strict = true): Promise<{ kept: Mcq[];
     const prompt = `You are a strict medical examiner checking multiple-choice questions.\nFor EACH question:\n1. Decide on your own which option is the single best answer (your_answer, index 0-based).\n2. status: "ok", or "incomplete" if the question or an option is cut off, meaningless or missing information, or "ambiguous" if two options could be right or none is.\n3. Rewrite the options so they are similar in length, grammar and level of detail, so the right answer cannot be recognised by being longer or more specific. Keep each option's meaning, the same order, and the same number of options.\n4. If the explanation is missing or empty, write one clear sentence (max 25 words) for "explanation", otherwise leave it "".\nReturn ONLY a JSON array, one object per question: [{"i":0,"your_answer":0,"status":"ok","options":["..."],"explanation":""}]\n\nQuestions:\n${chunk.map((q, k) => `${k}. ${q.question}\n${q.options.map((o, j) => `${"ABCDE"[j]}. ${o}`).join("\n")}\nExplanation: ${q.explanation || "(none)"}`).join("\n\n")}`;
     let reviewed: any[] | null = null;
     try {
-      const raw = await chatText(Deno.env.toObject(), [{ role: "system", content: "Return ONLY valid JSON, no markdown." }, { role: "user", content: prompt }], { temperature: 0.1, maxTokens: 8000, timeoutMs: 40000 });
+      const raw = await chatText(Deno.env.toObject(), [{ role: "system", content: "Return ONLY valid JSON, no markdown." }, { role: "user", content: prompt }], { temperature: 0.1, maxTokens: 4000, timeoutMs: 40000 });
       const m = raw.match(/\[[\s\S]*\]/); reviewed = m ? JSON.parse(m[0]) : null;
     } catch { reviewed = null; }
     if (!Array.isArray(reviewed)) { kept.push(...chunk); continue; }   // the reviewer was unavailable: keep these as written rather than lose them
@@ -210,7 +210,7 @@ serve(async (req) => {
       const arr: string[] = []; byUnit.set(unit, arr);
       // notes first, newest edits at the top (what this week's students read), then a sample of the existing questions
       const { data: arts } = await supabase.from("articles").select("title, content, updated_at").in("id", (artIds.get(unit) || []).slice(0, 40));
-      (arts || []).sort((x: any, y: any) => Date.parse(y.updated_at || 0) - Date.parse(x.updated_at || 0)).slice(0, 25).forEach((article: any) => arr.push(`[Article] ${article.title}: ${(article.content || "").slice(0, 350)}`));
+      (arts || []).sort((x: any, y: any) => Date.parse(y.updated_at || 0) - Date.parse(x.updated_at || 0)).slice(0, 25).forEach((article: any) => arr.push(`[Article] ${article.title}: ${(article.content || "").slice(0, 300)}`));
       const { data: sets } = await supabase.from("mcq_sets").select("title, questions").in("id", (setIds.get(unit) || []).slice(0, 40));
       (sets || []).forEach((set: any) => (Array.isArray(set.questions) ? set.questions : []).slice(0, 12).forEach((q: any) => arr.push(`[MCQ] ${q?.question || ""}`)));
     }
@@ -226,7 +226,7 @@ serve(async (req) => {
     for (const [unit, snippets] of byUnit.entries()) {
       if (snippets.length === 0) continue;
 
-      const context = snippets.slice(0, 45).join("\n");
+      const context = snippets.slice(0, 30).join("\n");
       const weakForUnit = weakTopics.filter((q) => q.toLowerCase().includes(unit.toLowerCase())).slice(0, 20);
       const weakBlock = weakForUnit.length ? `\nPrioritize weak topics:\n${weakForUnit.join("\n")}` : "";
 
