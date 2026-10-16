@@ -135,6 +135,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   const defaultImage = `${SITE_URL}/og-default.jpg`;
+  // crawlers come back all day: let Vercel answer repeats for 15 minutes instead of reading the database each time
+  res.setHeader("Cache-Control", "public, s-maxage=900, stale-while-revalidate=86400");
 
   try {
     // /blog/:slug

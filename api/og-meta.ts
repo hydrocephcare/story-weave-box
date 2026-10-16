@@ -1074,7 +1074,7 @@ ${explanationLine}
       status: 200,
       headers: {
         "content-type": "text/html; charset=utf-8",
-        "cache-control": "public, max-age=300, stale-while-revalidate=60",
+        "cache-control": "public, max-age=300, s-maxage=900, stale-while-revalidate=86400",
       },
     });
   } catch (err) {
