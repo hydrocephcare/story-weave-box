@@ -25,10 +25,20 @@ async function generateWithFallback(prompt: string): Promise<string> {
 }
 
 function parseMcqs(raw: string) {
-  const match = raw.match(/\[[\s\S]*\]/);
-  if (!match) return [];
+  const start = raw.indexOf("[");
+  if (start < 0) return [];
+  // a long answer can be cut off in the middle of the last question: keep the complete ones
+  const whole = raw.slice(start);
+  let parsed: any = null;
+  try { parsed = JSON.parse(whole.slice(0, whole.lastIndexOf("]") + 1)); } catch {
+    let end = whole.length;
+    for (let tries = 0; tries < 80 && parsed === null; tries++) {
+      const cut = whole.lastIndexOf("}", end - 1);   // close the list after the last complete question
+      if (cut < 0) break;
+      try { parsed = JSON.parse(whole.slice(0, cut + 1) + "]"); } catch { end = cut; }
+    }
+  }
   try {
-    const parsed = JSON.parse(match[0]);
     if (!Array.isArray(parsed)) return [];
     return parsed
       .filter((q: any) => q?.question && Array.isArray(q?.options) && q.options.length >= 4)
@@ -74,7 +84,7 @@ serve(async (req) => {
     const authz = req.headers.get("authorization") || "";
     const cronOk = !!Deno.env.get("CRON_KEY") && req.headers.get("x-cron-key") === Deno.env.get("CRON_KEY");
     if (!cronOk) {
-      const token = authz.replace(/^Bearers+/i, "");
+      const token = authz.replace(/^Bearer\s+/i, "");
       const { data: u } = token ? await supabase.auth.getUser(token) : { data: null };
       const { data: isAdmin } = u?.user ? await supabase.rpc("has_role", { _user_id: u.user.id, _role: "admin" }) : { data: false };
       if (!isAdmin) return new Response(JSON.stringify({ error: "Administrators only." }), { status: 403, headers: { ...corsHeaders, "Content-Type": "application/json" } });
@@ -99,7 +109,7 @@ serve(async (req) => {
       into.get(unit)!.push(r.id);
     }
     const lastExam = new Map<string, number>();
-    for (const p of (past || []) as any[]) { const u = String(p.category).replace(/^Weekly Exam:s*/, ""); if (!lastExam.has(u)) lastExam.set(u, Date.parse(p.created_at)); }
+    for (const p of (past || []) as any[]) { const u = String(p.category).replace(/^Weekly Exam:\s*/, ""); if (!lastExam.has(u)) lastExam.set(u, Date.parse(p.created_at)); }
     const weekAgo = Date.now() - 6 * 86_400_000;
     const units = [...new Set([...setIds.keys(), ...artIds.keys()])]
       .filter((u) => (setIds.get(u)?.length || 0) + (artIds.get(u)?.length || 0) >= 3 && (lastExam.get(u) ?? 0) < weekAgo)   // enough material, and no exam in the past 6 days
@@ -138,7 +148,7 @@ serve(async (req) => {
       let mcqText = "";
       try { mcqText = await generateWithFallback(mcqPrompt); } catch (e) { skipped.push(`${unit}: ${e instanceof Error ? e.message : e}`); continue; }
       const examMcqs = parseMcqs(mcqText);
-      if (examMcqs.length === 0) { skipped.push(`${unit}: the writer gave no usable questions (${mcqText.length} characters: ${mcqText.slice(0, 160).replace(/s+/g, " ")})`); continue; }
+      if (examMcqs.length === 0) { skipped.push(`${unit}: the writer gave no usable questions (${mcqText.length} characters: ${mcqText.slice(0, 160).replace(/\s+/g, " ")})`); continue; }
 
       const essayPrompt = `Create written exam section for ${unit}. Return ONLY valid JSON:\n{"saqs":[{"question":"...","model_answer":"...","marks":5}],"laqs":[{"question":"...","model_answer":"...","marks":20}]}\n\nRules:\n- exactly 4 SAQs with 5 marks each\n- exactly 1 LAQ with 20 marks`;
       const essayText = await generateWithFallback(essayPrompt).catch(() => "");

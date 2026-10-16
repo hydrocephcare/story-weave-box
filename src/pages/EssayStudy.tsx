@@ -30,11 +30,14 @@ export default function EssayStudy() {
   useEffect(() => {
     if (!slug) return;
 
-    supabase
-      .from("essays")
-      .select("*")
-      .eq("slug", slug)
-      .maybeSingle()
+    // public links carry the clean slug; the stored one may end in the id prefix
+    const lookup = async (): Promise<{ data: any }> => {
+      const exact = await supabase.from("essays").select("*").eq("slug", slug).maybeSingle();
+      if (exact.data) return exact;
+      const alt = await supabase.from("essays").select("*").ilike("slug", `${slug.replace(/[%_]/g, "")}-%`).eq("published", true).is("deleted_at", null).limit(5);
+      return { data: (alt.data || []).find((row: any) => /^[0-9a-f]{6,12}$/i.test(String(row.slug).slice(slug.length + 1))) ?? null };
+    };
+    lookup()
       .then(({ data }) => {
         // fallback: if slug not found, try fetching by id (for old links)
         if (!data) {

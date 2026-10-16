@@ -229,6 +229,19 @@ export default function ExamStart() {
           .maybeSingle();
         data = r.data;
         resolvedId = data?.id || null;
+        // Public links use the clean slug (no id suffix), but the stored slug is "<clean slug>-<id prefix>"
+        if (!data) {
+          const alt = await supabase
+            .from("mcq_sets")
+            .select("id, title, category, questions, slug")
+            .ilike("slug", `${rawParam.replace(/[%_]/g, "")}-%`)
+            .eq("published", true)
+            .is("deleted_at", null)
+            .order("created_at", { ascending: false })
+            .limit(5);
+          const hit = (alt.data || []).find((row) => /^[0-9a-f]{6,12}$/i.test(String(row.slug).slice(rawParam.length + 1)));
+          if (hit) { data = hit; resolvedId = hit.id; }
+        }
         // Legacy links are "<title-slug>-<first 6 chars of id>"; match on the id prefix.
         const shortId = !data ? rawParam.match(/-([0-9a-f]{6})$/i)?.[1]?.toLowerCase() : undefined;
         if (shortId) {
