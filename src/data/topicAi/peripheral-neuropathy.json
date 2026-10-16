@@ -1,0 +1,180 @@
+{
+ "medical": true,
+ "title": "Peripheral Neuropathy",
+ "subject": "Medicine",
+ "summary": "Peripheral neuropathy is damage to peripheral nerves causing sensory, motor and autonomic deficits. In low‑resource settings tropical infections, HIV, TB treatment and diabetes are common causes. Diagnosis relies on focused history, bedside examination and targeted investigations.",
+ "aka": [
+  "Peripheral nerve disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Peripheral neuropathy denotes dysfunction of peripheral nerves outside the brain and spinal cord, producing sensory loss, weakness, pain or autonomic change. Diagnosis requires a compatible clinical picture and exclusion of central causes.",
+   "b": [
+    "Sensory: glove‑and‑stocking numbness, burning, tingling",
+    "Motor: distal weakness, foot drop",
+    "Autonomic: orthostatic hypotension, gastroparesis"
+   ],
+   "t": [
+    {
+     "a": "Clinical history",
+     "b": "What is the likely aetiology? – Identifies risk factors (diabetes, HIV, TB drugs, malnutrition, herbal toxins)."
+    },
+    {
+     "a": "Neurological exam (strength, reflexes, sensation)",
+     "b": "Is the pattern length‑dependent? – Confirms peripheral distribution and helps stage severity."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Toronto Clinical Scoring System (TCSS) grades severity from 0 (none) to 19 (severe) using symptoms, reflexes and sensory testing; higher scores predict functional loss and ulcer risk.",
+   "b": [
+    "TCSS 0‑5: mild",
+    "TCSS 6‑11: moderate",
+    "TCSS ≥12: severe"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African hospitals the hierarchy of causes is:",
+   "b": [
+    "1. Diabetes mellitus (type 2, long‑standing)",
+    "2. Isoniazid therapy for TB (often without pyridoxine)",
+    "3. HIV infection and antiretrovirals (stavudine, zidovudine)",
+    "4. Chronic kidney disease (uremia)",
+    "5. Nutritional deficiencies (vitamin B12, thiamine)",
+    "6. Tropical infections (leprosy, malaria, schistosomiasis)",
+    "7. Alcohol excess"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually report progressive distal numbness and burning that starts in the feet and ascends. Weakness may cause gait instability or foot drop. Autonomic symptoms are often overlooked but may include dry skin, constipation or orthostatic dizziness.",
+   "b": [
+    "Symmetrical glove‑and‑stocking sensory loss",
+    "Reduced or absent ankle reflexes",
+    "Positive Romberg sign if proprioception lost",
+    "Foot ulcer risk when loss of protective sensation"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer a specific clinical question; when a test is unavailable, use bedside alternatives.",
+   "t": [
+    {
+     "a": "Fasting blood glucose / HbA1c",
+     "b": "Is diabetes the cause? – Elevated glucose/HbA1c confirms diabetic neuropathy."
+    },
+    {
+     "a": "Serum vitamin B12",
+     "b": "Is a nutritional deficiency present? – Low B12 points to megaloblastic neuropathy."
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Is HIV infection contributing? – Positive test prompts ART review."
+    },
+    {
+     "a": "Renal function (creatinine, urea)",
+     "b": "Is uremic neuropathy likely? – Elevated creatinine supports CKD‑related neuropathy."
+    },
+    {
+     "a": "Nerve conduction study (if available)",
+     "b": "Is the neuropathy demyelinating or axonal? – Slowed conduction velocity suggests demyelination; low amplitude suggests axonal loss."
+    },
+    {
+     "a": "Skin biopsy for intra‑epidermal nerve fibre density (rarely available)",
+     "b": "Confirm small‑fiber loss when symptoms out of proportion to large‑fiber signs."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain features demand urgent evaluation because they signal rapid progression or systemic danger.",
+   "b": [
+    "Rapidly ascending weakness (possible Guillain‑Barré)",
+    "Severe autonomic instability (orthostatic shock, cardiac arrhythmia)",
+    "Unexplained weight loss or fever (infection, malignancy)",
+    "New foot ulcer or gangrene"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide symptomatic and preventive care.",
+   "b": [
+    "Diabetes: optimise glycaemic control; metformin or insulin as per protocol.",
+    "HIV‑related: switch stavudine to tenofovir‑based regimen if possible; continue ART.",
+    "CKD: dialysis optimisation, avoid neurotoxic drugs.",
+    "Nutritional: replace deficient vitamins (B12 injection, thiamine).",
+    "Pain: start duloxetine or gabapentin (avoid tramadol if hepatic disease).",
+    "Foot care: daily inspection, proper footwear, treat ulcers promptly."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review prevents progression and complications.",
+   "b": [
+    "Quarterly TCSS assessment to track severity.",
+    "Annual foot examination for ulcer detection.",
+    "Education on glucose control, avoidance of alcohol, and safe footwear.",
+    "Vaccination against hepatitis B and tetanus in at‑risk patients."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Radiculopathy – nerve root pain radiates, often with dermatomal pattern and positive straight‑leg raise.",
+    "Peripheral vascular disease – claudication improves with rest, pulses reduced, not sensory loss.",
+    "Central spinal cord lesion – presents with level‑specific weakness, hyperreflexia, and sensory level."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal nerve conduction studies early in small‑fiber neuropathy – rely on clinical picture.",
+    "Normal fasting glucose with high HbA1c – post‑prandial spikes cause neuropathy.",
+    "Normal vitamin B12 level but functional deficiency (elevated MMA) – consider testing MMA if suspicion high."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly progressive weakness or respiratory compromise",
+  "Severe autonomic instability (syncope, arrhythmia)",
+  "New foot ulcer with signs of infection"
+ ],
+ "faq": [
+  {
+   "q": "Why does isoniazid cause neuropathy?",
+   "a": "It depletes pyridoxine, a co‑factor for neurotransmitter synthesis, leading to axonal injury."
+  },
+  {
+   "q": "Can a patient have neuropathy with normal reflexes?",
+   "a": "Early small‑fiber neuropathy may spare reflexes; loss appears later."
+  },
+  {
+   "q": "Is duloxetine safe in patients with hepatitis?",
+   "a": "It is metabolised hepatically; avoid if liver enzymes >3 × ULN."
+  }
+ ],
+ "exam": [
+  "A 55‑year‑old diabetic presents with burning feet and a new foot ulcer – what investigations and management steps are essential? — Check HbA1c, foot exam, start pyridoxine if on TB meds, optimise glucose, start duloxetine, arrange podiatry.",
+  "How does the Toronto Clinical Scoring System guide prognosis? — Scores ≥12 predict ulceration and functional loss, prompting intensive foot care and physiotherapy.",
+  "A HIV‑positive man on stavudine reports tingling in his hands – what alternative ART would you consider and why? — Switch to tenofovir‑based regimen; stavudine is neurotoxic and lipodystrophic.",
+  "What bedside sign differentiates peripheral neuropathy from peripheral arterial disease? — Loss of protective sensation with normal pulses suggests neuropathy; diminished pulses suggest arterial disease.",
+  "A patient with CKD stage 5 has glove‑and‑stocking numbness – which lab result supports uremic neuropathy and what is the treatment focus? — Elevated creatinine >5 mg/dL; optimise dialysis and avoid neurotoxic drugs.",
+  "When is urgent referral indicated for a patient with peripheral neuropathy? — Rapidly ascending weakness, autonomic crisis, or infected foot ulcer requiring surgical input.",
+  "Why might nerve conduction studies be normal in a patient with severe pain? — Small‑fiber neuropathy can cause pain without large‑fiber involvement; NCS may be normal."
+ ],
+ "related": [
+  "Diabetic foot disease",
+  "HIV neuropathy",
+  "Tuberculosis treatment complications",
+  "Chronic kidney disease neuropathy",
+  "Guillain‑Barré syndrome",
+  "Peripheral vascular disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-16",
+ "reviewed": false
+}

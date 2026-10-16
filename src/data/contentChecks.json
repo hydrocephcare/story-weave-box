@@ -8,6 +8,42 @@
    "issues": [],
    "model": "openai/gpt-oss-120b",
    "at": "2026-10-15"
+  },
+  "introduction-to-psychiatry": {
+   "hash": "4a07843318b8",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-16"
+  },
+  "classification-of-mental-disorders": {
+   "hash": "b24c4577851b",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "openai/gpt-oss-120b",
+   "at": "2026-10-16"
+  },
+  "introduction-to-psychopathology": {
+   "hash": "c2fe2c02311a",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "openai/gpt-oss-120b",
+   "at": "2026-10-16"
+  },
+  "dictionary-of-psychopathology": {
+   "hash": "e124cc30075c",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "openai/gpt-oss-120b",
+   "at": "2026-10-16"
   }
  },
  "topics": {}

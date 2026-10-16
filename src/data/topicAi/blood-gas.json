@@ -1,0 +1,169 @@
+{
+ "medical": true,
+ "title": "Arterial Blood Gas Interpretation",
+ "subject": "Medicine",
+ "summary": "Arterial blood gas (ABG) analysis reveals oxygenation, ventilation and acid‑base status. In low‑resource settings it guides emergency decisions and identifies respiratory failure, metabolic derangements and their causes.",
+ "aka": [
+  "blood gas analysis",
+  "arterial gas"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ABG measures PaO₂, PaCO₂, pH, HCO₃⁻ and SaO₂ from an arterial sample. It diagnoses hypoxaemia, hypercapnia and acid‑base disorders.",
+   "b": [
+    "PaO₂ < 60 mmHg = hypoxaemia",
+    "PaCO₂ > 45 mmHg = hypercapnia"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Respiratory failure is staged by the degree of hypoxaemia and hypercapnia and by compensatory metabolic changes.",
+   "b": [
+    "Mild: PaO₂ 60‑80 mmHg, PaCO₂ ≤ 45 mmHg",
+    "Moderate: PaO₂ 40‑60 mmHg or PaCO₂ 45‑55 mmHg",
+    "Severe: PaO₂ < 40 mmHg or PaCO₂ > 55 mmHg"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African hospitals the common precipitants of abnormal ABG are infections, chronic lung disease, cardiac failure and tropical diseases.",
+   "b": [
+    "Pneumonia (bacterial, TB, malaria‑related lung injury)",
+    "Acute exacerbation of COPD or asthma",
+    "Septic shock (malaria, typhoid, bacterial sepsis)",
+    "Heart failure (rheumatic, peripartum)",
+    "Sickle‑cell vaso‑occlusive crisis with acute chest syndrome"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have dyspnoea, altered mental status, tachycardia and signs of poor perfusion. Look for cyanosis, use of accessory muscles and altered consciousness.",
+   "b": [
+    "Rapid shallow breathing → hyperventilation → respiratory alkalosis",
+    "Drowsiness → CO₂ retention → respiratory acidosis"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "ABG is the cornerstone; adjunct tests clarify the underlying cause.",
+   "t": [
+    {
+     "a": "Arterial blood gas",
+     "b": "Is there hypoxaemia, hypercapnia or acid‑base disturbance? – Low PaO₂ confirms hypoxaemia; high PaCO₂ confirms ventilatory failure; pH and HCO₃⁻ define the acid‑base pattern."
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "What is the bedside oxygen saturation when ABG is unavailable? – SpO₂ < 90% suggests significant hypoxaemia; use supplemental O₂ while arranging ABG."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "What structural lung or cardiac abnormality may explain the ABG? – Consolidation, effusion or cardiomegaly guide treatment."
+    },
+    {
+     "a": "Full blood count & CRP",
+     "b": "Is infection likely? – Leukocytosis or high CRP supports bacterial pneumonia or sepsis."
+    },
+    {
+     "a": "Urea & electrolytes",
+     "b": "Are there metabolic contributors to acidosis? – Low HCO₃⁻ with normal PaCO₂ points to metabolic acidosis."
+    },
+    {
+     "a": "HIV test",
+     "b": "Does immunosuppression predispose to opportunistic lung infection? – Positive test prompts TB, PCP or fungal work‑up."
+    },
+    {
+     "a": "Blood cultures / sputum Gram stain",
+     "b": "What pathogen is driving sepsis or pneumonia? – Guides targeted antibiotics when resources allow."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncorrected severe hypoxaemia or hypercapnia rapidly leads to cardiac arrest, cerebral injury and multi‑organ failure.",
+   "b": [
+    "PaO₂ < 40 mmHg despite O₂",
+    "PaCO₂ > 55 mmHg with pH < 7.30",
+    "Rapid fall in GCS"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, then correct oxygenation, ventilation and acid‑base balance.",
+   "b": [
+    "Give high‑flow O₂ to raise PaO₂ > 60 mmHg; consider non‑rebreather mask if ventilators unavailable.",
+    "If hypercapnia with pH < 7.30, start bag‑valve‑mask ventilation or CPAP; early referral for mechanical ventilation.",
+    "Treat infection: broad‑spectrum IV antibiotics (e.g., ceftriaxone + metronidazole) for community pneumonia; add anti‑TB drugs if sputum positive.",
+    "For malaria‑related ARDS, give IV artesunate plus supportive O₂.",
+    "Correct metabolic acidosis with IV bicarbonate only if pH < 7.10 and refractory to treating the cause."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Repeat ABG after 30‑60 min of therapy to assess response. Prevent recurrence by immunisation, smoking cessation and chronic disease control.",
+   "b": [
+    "Vaccinate against pneumococcus and influenza.",
+    "Ensure adherence to COPD inhalers and HIV antiretroviral therapy.",
+    "Educate on early presentation for fever, cough or dyspnoea."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic ABG abnormalities but have different management.",
+   "b": [
+    "Anemia – low SaO₂ may be present but PaO₂ is normal; treat with transfusion, not O₂.",
+    "Peripheral cyanosis from cold exposure – normal ABG, no respiratory support needed."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Factors that distort ABG interpretation in low‑resource settings.",
+   "b": [
+    "Sampling from a peripheral artery (e.g., femoral) may give falsely high PaO₂.",
+    "Delayed analysis > 30 min can lower PaO₂ and raise PaCO₂.",
+    "Severe anemia can cause normal PaO₂ but low SaO₂, misleading clinicians to think oxygenation is adequate."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypoxaemia (PaO₂ < 40 mmHg) despite supplemental O₂",
+  "Hypercapnic respiratory failure (PaCO₂ > 55 mmHg with pH < 7.30)",
+  "Rapid decline in consciousness"
+ ],
+ "faq": [
+  {
+   "q": "Why is PaO₂ more reliable than SpO₂ in severe illness?",
+   "a": "SpO₂ plateaus above 90% and can be falsely high with poor peripheral perfusion; PaO₂ directly measures dissolved oxygen."
+  },
+  {
+   "q": "When can a normal ABG be misleading?",
+   "a": "In early sepsis the ABG may be normal while tissue hypoxia is present; lactate and clinical signs are needed."
+  },
+  {
+   "q": "What is the first step if a ventilator is not available?",
+   "a": "Provide bag‑valve‑mask ventilation with 100 % O₂ and consider CPAP using a simple mask and a flow‑generator."
+  }
+ ],
+ "exam": [
+  "A patient with severe malaria presents with dyspnoea and a PaO₂ of 48 mmHg – what immediate intervention is required and why? — Start high‑flow O₂ to raise PaO₂ above 60 mmHg; consider CPAP if O₂ alone fails, because hypoxaemia threatens cerebral oxygenation.",
+  "You obtain an ABG showing pH 7.25, PaCO₂ 58 mmHg, HCO₃⁻ 26 mmEq/L – what is the primary disorder and the next management step? — Primary respiratory acidosis; initiate assisted ventilation (bag‑valve‑mask or CPAP) to lower PaCO₂.",
+  "A child with sickle‑cell disease has a PaO₂ of 55 mmHg and a normal chest X‑ray – which diagnosis should you consider and what treatment follows? — Acute chest syndrome; give broad‑spectrum antibiotics, exchange transfusion if severe, and aggressive O₂ support.",
+  "Why is bicarbonate therapy generally avoided in acute respiratory acidosis? — It does not correct the underlying CO₂ retention and may cause paradoxical intracellular acidosis; ventilation is the definitive treatment.",
+  "How does chronic COPD alter the interpretation of a PaCO₂ of 48 mmHg? — In COPD this may be the patient’s baseline; look for a pH rise or fall to judge acute decompensation.",
+  "A patient on high‑dose diuretics has a low HCO₃⁻ but normal PaCO₂ – what acid‑base disorder does this represent and what electrolyte should you check? — Metabolic acidosis; assess serum potassium and consider renal tubular acidosis.",
+  "What feature on ABG distinguishes a primary metabolic alkalosis from compensation for chronic respiratory acidosis? — Elevated HCO₃⁻ with PaCO₂ proportionally high; the expected compensation ratio is 0.7 mmHg rise in PaCO₂ per 1 mmHg rise in HCO₃⁻.",
+  "When interpreting an ABG taken from a femoral artery, what correction should you apply? — Expect PaO₂ 5‑10 mmHg higher than a true arterial sample; adjust interpretation accordingly."
+ ],
+ "related": [
+  "Respiratory failure",
+  "Acid‑base disorders",
+  "COPD exacerbation",
+  "Septic shock",
+  "Acute chest syndrome",
+  "Malaria severe disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-16",
+ "reviewed": false
+}

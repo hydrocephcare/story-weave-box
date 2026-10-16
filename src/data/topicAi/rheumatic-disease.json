@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "subject": "Medicine",
+ "summary": "Rheumatic diseases encompass autoimmune, inflammatory, and infectious conditions that affect joints, heart, and skin. In East Africa, rheumatic fever and tuberculosis‑associated arthritis are common. Clinical reasoning focuses on history, exam, and pragmatic investigations.",
+ "aka": [
+  "Rheumatic disorders",
+  "Autoimmune arthropathies"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Rheumatic disease refers to any condition where the immune system or infection damages musculoskeletal or cardiovascular tissues. Diagnosis combines clinical criteria, serology, imaging, and response to therapy.",
+   "b": [
+    "Use ACR/EULAR criteria for RA; Jones criteria for rheumatic fever; 2019 SLE classification; TB arthritis requires culture or PCR"
+   ],
+   "t": [
+    {
+     "a": "CRP",
+     "b": "Inflammatory activity – high levels suggest active disease"
+    },
+    {
+     "a": "RF",
+     "b": "Positive in RA – supports diagnosis but not exclusive"
+    },
+    {
+     "a": "ANA",
+     "b": "Positive in SLE – indicates systemic involvement"
+    },
+    {
+     "a": "HLA‑B27",
+     "b": "Suggests ankylosing spondylitis or reactive arthritis"
+    },
+    {
+     "a": "Mantoux/IGRA",
+     "b": "Screen for latent TB before immunosuppression"
+    },
+    {
+     "a": "Synovial fluid analysis",
+     "b": "Excludes septic arthritis – look for crystals, WBC count"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by functional status and organ involvement. Use DAS28 for RA, WHO staging for TB, and SLEDAI for lupus.",
+   "b": [
+    "DAS28 >5.1 = high disease activity; <3.2 = remission"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource areas, infections dominate. HIV, TB, malaria, schistosomiasis, and rheumatic fever are top culprits, followed by genetic autoimmune diseases.",
+   "b": [
+    "HIV infection → immune dysregulation",
+    "TB → granulomatous arthritis",
+    "Rheumatic fever → valvular damage",
+    "Malaria → hemolytic anemia mimicking vasculitis"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with joint pain, swelling, morning stiffness, fever, and systemic signs. Cardiac murmurs, skin rashes, and renal dysfunction may accompany systemic disease.",
+   "b": [
+    "Polyarthritis with symmetrical swelling",
+    "Erythema nodosum in reactive arthritis",
+    "Heart murmur in rheumatic fever"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise tests that are affordable and available. Use clinical scoring when labs are missing.",
+   "b": [
+    "CBC – anemia, leukocytosis",
+    "ESR – non‑specific inflammation"
+   ],
+   "t": [
+    {
+     "a": "Synovial fluid culture",
+     "b": "Rule out septic arthritis – positive culture = infection"
+    },
+    {
+     "a": "X‑ray of affected joints",
+     "b": "Detect erosions in RA or calcifications in TB arthritis"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Assess valvular lesions in rheumatic fever"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent signs include rapidly progressive heart failure, severe pain with fever, haemoptysis, or neurological deficits. Complications: heart failure, renal failure, septic shock.",
+   "b": [
+    "Uncontrolled fever >38.5°C with joint swelling – suspect septic arthritis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then control inflammation. Use drugs that are affordable and have a favourable safety profile.",
+   "b": [
+    "NSAIDs for pain and inflammation",
+    "Hydroxychloroquine for mild RA and SLE – inexpensive"
+   ],
+   "t": [
+    {
+     "a": "Prednisone",
+     "b": "Rapid control of inflammation – avoid if active TB or uncontrolled diabetes"
+    },
+    {
+     "a": "Azathioprine",
+     "b": "Alternative to MTX when MTX unavailable – monitor liver function"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of disease activity, drug toxicity, and comorbidities. Vaccinate against pneumococcus and influenza; counsel on smoking cessation.",
+   "b": [
+    "Monthly DAS28 in RA",
+    "Quarterly renal function in SLE"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Infections such as septic arthritis, gout, and malaria can mimic rheumatic disease.",
+   "b": [
+    "Gout – tophi, sudden monoarthritis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Seronegative RA may have negative RF/anti‑CCP. TB arthritis may show normal CRP. HIV serology can be false‑negative early.",
+   "b": [
+    "Low CRP in TB arthritis – rely on imaging"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly worsening dyspnoea with new murmur",
+  "Severe pain with fever >38.5°C",
+  "Neurological deficits",
+  "Severe anaemia or haemoptysis"
+ ],
+ "faq": [
+  {
+   "q": "Why is NSAID preferred first line in low‑resource settings?",
+   "a": "They control pain, are cheap, and have a known safety profile."
+  },
+  {
+   "q": "What if a patient has both HIV and RA?",
+   "a": "Start antiretroviral therapy first, then consider hydroxychloroquine; avoid MTX until viral load is suppressed."
+  },
+  {
+   "q": "How to differentiate TB arthritis from RA when imaging is limited?",
+   "a": "Look for cold abscesses, sinus tracts, and a history of TB exposure; synovial fluid culture is definitive."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman presents with polyarthritis and a malar rash. What is the next best test? — ANA; positive supports SLE diagnosis.",
+  "A patient with chronic joint pain improves on NSAIDs but develops a new heart murmur. What is the likely diagnosis? — Rheumatic fever; look for ASO titre.",
+  "You have a patient with fever and monoarthritis. Synovial fluid is turbid but cultures are pending. What is the immediate management? — Start empiric antibiotics for septic arthritis.",
+  "A 45‑year‑old man with HIV on ART develops swelling of the knee. What is the most likely cause? — TB arthritis; order X‑ray and GeneXpert.",
+  "Why is prednisone avoided in a patient with active TB? — It suppresses immunity and worsens infection.",
+  "A child has a history of rheumatic fever and now has a new systolic murmur. What is the most appropriate investigation? — Echocardiography to assess valvular damage.",
+  "A patient with RA is on hydroxychloroquine but develops visual disturbances. What is the action? — Stop the drug and refer for ophthalmology.",
+  "You suspect vasculitis in a patient with rash and renal dysfunction. What test confirms it? — ANA and anti‑dsDNA; positive suggests lupus nephritis."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-16",
+ "reviewed": false
+}

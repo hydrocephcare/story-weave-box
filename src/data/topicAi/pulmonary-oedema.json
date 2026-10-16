@@ -1,0 +1,179 @@
+{
+ "medical": true,
+ "title": "Pulmonary Oedema",
+ "subject": "Medicine",
+ "summary": "Pulmonary oedema is fluid accumulation in the lung interstitium and alveoli, most often due to left‑sided heart failure but also from increased permeability or obstruction. It presents with acute dyspnoea, crackles and orthopnoea, and requires rapid assessment and treatment.",
+ "aka": [
+  "Pulmonary edema",
+  "Cardiogenic pulmonary oedema",
+  "Non‑cardiogenic pulmonary oedema"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pulmonary oedema is the presence of excess fluid in the lung interstitium and alveolar spaces, impairing gas exchange. Diagnosis rests on history, bedside examination and simple imaging or biomarkers when available.",
+   "b": [
+    "Rapid onset dyspnoea with orthopnoea",
+    "Bilateral basal crackles on auscultation",
+    "Elevated jugular venous pressure (if cardiogenic)",
+    "CXR: Kerley B lines, perihilar haze, possible cardiomegaly"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Does the image show interstitial fluid or cardiomegaly? → Positive findings support pulmonary oedema; absence does not rule it out in early disease."
+    },
+    {
+     "a": "BNP/NT‑proBNP",
+     "b": "Is the level markedly elevated? → High values favour cardiogenic oedema; normal values suggest non‑cardiogenic causes."
+    },
+    {
+     "a": "Point‑of‑care lung ultrasound (if available)",
+     "b": "Are B‑lines present diffusely? → Multiple B‑lines indicate interstitial fluid; absence makes pulmonary oedema less likely."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical impact and radiographic extent. The widely used West Woods classification (mild, moderate, severe) correlates with oxygen requirement and need for ventilatory support.",
+   "b": [
+    "Mild: dyspnoea on exertion, few crackles, normal SpO₂ at rest",
+    "Moderate: orthopnoea, SpO₂ < 94 % on room air, bilateral crackles to mid‑lung fields",
+    "Severe: respiratory distress, SpO₂ ≤ 90 % despite supplemental O₂, pink frothy sputum"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings, the most common precipitants are cardiogenic, followed by infections and high‑altitude exposure.",
+   "b": [
+    "Cardiogenic: left‑ventricular systolic failure (rheumatic heart disease, ischemic disease), severe hypertension, valvular disease",
+    "Infectious non‑cardiogenic: severe malaria, sepsis, pneumonia with high‑permeability oedema",
+    "Renal failure with fluid overload",
+    "High‑altitude pulmonary oedema (HAPO) in mountainous regions",
+    "Toxins or drug reactions (e.g., snake venom, certain herbal preparations)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually present with sudden breathlessness that worsens when lying flat, accompanied by a dry cough, frothy sputum and a sense of suffocation.",
+   "b": [
+    "Orthopnoea – relief when sitting up",
+    "Paroxysmal nocturnal dyspnoea – awakening with severe breathlessness",
+    "Bibasal crackles, possibly ‘wet’ sounding on auscultation",
+    "Peripheral oedema and raised JVP if cardiac cause"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Focus on bedside tools; advanced tests are added when available.",
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "What is the oxygen saturation? → Low SpO₂ (<94 %) confirms hypoxaemia and guides O₂ therapy."
+    },
+    {
+     "a": "Electrocardiogram",
+     "b": "Are there signs of ischemia or arrhythmia? → Helps identify cardiac precipitant; if unavailable, rely on clinical cardiac signs."
+    },
+    {
+     "a": "Serum creatinine and electrolytes",
+     "b": "Is renal function impaired? → Guides fluid management and diuretic safety."
+    },
+    {
+     "a": "Chest X‑ray (if portable unit present)",
+     "b": "Does it show fluid‑filled alveoli or cardiomegaly? → Supports diagnosis; if unavailable, use clinical picture and ultrasound."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid progression can lead to respiratory failure and cardiac arrest.",
+   "b": [
+    "Severe hypoxaemia (SpO₂ ≤ 85 % despite O₂)",
+    "Altered mental status or agitation",
+    "New onset arrhythmia or hypotension",
+    "Pulmonary haemorrhage or re‑expansion pulmonary oedema after thoracentesis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive measures to off‑load fluid and improve oxygenation.",
+   "b": [
+    "Position upright; give supplemental O₂ to keep SpO₂ ≥ 94 %",
+    "Loop diuretics (e.g., furosemide) intravenously – reduce preload and pulmonary capillary pressure",
+    "If hypertension‑driven, add short‑acting vasodilator (e.g., nitroglycerin) – lowers afterload without causing reflex tachycardia",
+    "Treat infection aggressively with appropriate antibiotics if sepsis suspected",
+    "Avoid non‑steroidal anti‑inflammatories – they impair renal prostaglandin‑mediated diuresis"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute stabilization, address chronic risk factors and arrange regular monitoring.",
+   "b": [
+    "Educate on fluid restriction (≤2 L/day) and low‑salt diet",
+    "Ensure adherence to heart‑failure medicines (ACE‑I/ARB, beta‑blocker) when available",
+    "Screen for anemia, HIV, and renal disease that may worsen fluid balance",
+    "Arrange periodic CXR or ultrasound to detect recurrent fluid"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic pulmonary oedema on exam and imaging.",
+   "b": [
+    "Pneumonia – usually productive cough, focal consolidation on CXR",
+    "Acute respiratory distress syndrome (ARDS) – diffuse infiltrates, often after sepsis, but PaO₂/FiO₂ < 300",
+    "Pulmonary embolism – sudden dyspnoea with pleuritic pain, clear lungs on CXR"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be normal early or falsely abnormal.",
+   "b": [
+    "BNP can be modestly raised in renal failure without cardiac oedema",
+    "Chest X‑ray may be normal in early cardiogenic oedema; rely on ultrasound or clinical signs",
+    "Peripheral oedema may be absent in isolated left‑sided failure"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypoxaemia (SpO₂ ≤ 85 % despite oxygen)",
+  "Sudden loss of consciousness or seizures",
+  "Rapid blood pressure fall or shock"
+ ],
+ "faq": [
+  {
+   "q": "Why does lying flat worsen breathlessness?",
+   "a": "Supine position increases venous return, raising pulmonary capillary pressure and worsening fluid transudation."
+  },
+  {
+   "q": "Can a patient with normal BNP still have pulmonary oedema?",
+   "a": "Yes; renal failure or early cardiogenic oedema may keep BNP within normal limits."
+  },
+  {
+   "q": "When is non‑invasive ventilation indicated?",
+   "a": "When SpO₂ remains < 94 % despite supplemental O₂ and the patient is cooperative, to reduce work of breathing while avoiding intubation."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with rheumatic heart disease presents with sudden dyspnoea and orthopnoea – what immediate bedside steps do you take? — Assess airway, give O₂, place upright, check SpO₂, start IV furosemide if cardiac cause suspected.",
+  "How would you differentiate cardiogenic from non‑cardiogenic pulmonary oedema in a malaria‑endemic region? — Look for JVP elevation, BNP, CXR cardiomegaly; consider malaria history, fever, and high‑permeability signs.",
+  "A patient on diuretics develops worsening renal function – how do you adjust management of pulmonary oedema? — Reduce diuretic dose, monitor electrolytes, consider ultrafiltration or cautious fluid restriction, treat underlying renal cause.",
+  "Why is nitroglycerin preferred over hydralazine for acute hypertensive pulmonary oedema? — Nitroglycerin reduces preload rapidly and improves coronary perfusion; hydralazine mainly lowers afterload and may cause reflex tachycardia.",
+  "What are the key features on lung ultrasound that confirm pulmonary oedema? — Diffuse B‑lines (> 3 per intercostal space), pleural line thickening, and absence of large consolidations.",
+  "When is intubation unavoidable in pulmonary oedema? — Persistent severe hypoxaemia (SpO₂ < 80 % despite maximal O₂), altered mental status, or inability to protect airway.",
+  "Explain why high‑altitude pulmonary oedema presents similarly but requires different treatment. — HAPO is due to hypoxic pulmonary vasoconstriction; descent and supplemental O₂ are primary, diuretics are less effective.",
+  "What red‑flag sign would prompt you to suspect re‑expansion pulmonary oedema after thoracentesis? — Sudden chest pain, cough, and worsening hypoxaemia within minutes of fluid removal."
+ ],
+ "related": [
+  "Heart Failure",
+  "Acute Respiratory Distress Syndrome",
+  "Severe Malaria",
+  "Renal Failure",
+  "High‑Altitude Pulmonary Oedema",
+  "Hypertensive Emergency"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-16",
+ "reviewed": false
+}

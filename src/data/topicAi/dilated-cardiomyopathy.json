@@ -1,0 +1,213 @@
+{
+ "medical": true,
+ "title": "Dilated Cardiomyopathy",
+ "subject": "Pathology",
+ "summary": "Dilated cardiomyopathy (DCM) is a condition where the heart's ventricles become enlarged and weakened, leading to impaired systolic function. It is the most common type of cardiomyopathy and often results in progressive heart failure. Diagnosis relies on clinical presentation, imaging, and exclusion of other causes.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Dilated cardiomyopathy is characterized by ventricular dilation and impaired systolic contraction, typically defined by a left ventricular ejection fraction (LVEF) of less than 40%. All four heart chambers can be dilated, but left ventricular dilation and dysfunction are primary. Diagnosis is made clinically, supported by imaging, and after excluding other causes of ventricular dilation and dysfunction, such as ischemic heart disease or severe valvular disease.",
+   "b": [
+    "Ventricular dilation: Enlargement of one or both ventricles, predominantly the left.",
+    "Systolic dysfunction: Reduced ability of the heart to pump blood, LVEF less than 40%.",
+    "Exclusion of other causes: Ischemic heart disease, severe hypertension, significant valvular disease, and congenital heart disease must be ruled out."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The severity of dilated cardiomyopathy is typically staged using the New York Heart Association (NYHA) functional classification for heart failure, which correlates symptoms with physical activity. This helps guide management and prognosis.",
+   "b": [
+    "NYHA Class I: No limitation of physical activity; ordinary physical activity does not cause undue fatigue, palpitation, or dyspnea.",
+    "NYHA Class II: Slight limitation of physical activity; comfortable at rest, but ordinary physical activity results in fatigue, palpitation, or dyspnea.",
+    "NYHA Class III: Marked limitation of physical activity; comfortable at rest, but less than ordinary activity causes fatigue, palpitation, or dyspnea.",
+    "NYHA Class IV: Unable to carry on any physical activity without discomfort; symptoms of heart failure at rest."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The causes of dilated cardiomyopathy are diverse, ranging from genetic predispositions to environmental factors and infections. In low-resource settings, infectious and nutritional causes are particularly prevalent.",
+   "b": [
+    "Idiopathic: No identifiable cause, often a diagnosis of exclusion.",
+    "Infectious: Viral myocarditis (e.g., Coxsackievirus B, HIV), Chagas disease (Trypanosoma cruzi), bacterial sepsis, tuberculosis.",
+    "Toxic: Alcohol abuse, certain chemotherapeutic agents (e.g., doxorubicin), cocaine, herbal remedies.",
+    "Metabolic/Nutritional: Beriberi (thiamine deficiency), severe selenium deficiency, thyroid disease (hypo- or hyperthyroidism).",
+    "Peripartum cardiomyopathy: Develops in the last month of pregnancy or within five months postpartum.",
+    "Genetic: Familial dilated cardiomyopathy, often inherited in an autosomal dominant pattern, with mutations in genes encoding sarcomeric or cytoskeletal proteins.",
+    "Ischemic: Extensive myocardial infarction leading to remodeling and dilation, though this is often classified as ischemic cardiomyopathy rather than primary DCM.",
+    "Hypertensive: Long-standing uncontrolled hypertension can lead to ventricular remodeling and eventual dilation.",
+    "Rheumatic heart disease: Chronic valvular lesions can lead to ventricular overload and dilation."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with dilated cardiomyopathy typically present with symptoms of progressive heart failure due to the heart's inability to pump blood effectively. The onset can be insidious, with symptoms worsening over time.",
+   "b": [
+    "Dyspnea: Shortness of breath, initially on exertion, progressing to dyspnea at rest.",
+    "Orthopnea: Shortness of breath when lying flat, relieved by sitting up.",
+    "Paroxysmal nocturnal dyspnea: Sudden attacks of shortness of breath that awaken the patient from sleep.",
+    "Fatigue and weakness: Due to reduced cardiac output and poor tissue perfusion.",
+    "Peripheral edema: Swelling in the legs, ankles, and feet due to fluid retention.",
+    "Abdominal distension: Ascites and hepatomegaly from right-sided heart failure.",
+    "Palpitations: Irregular heartbeats due to arrhythmias.",
+    "Chest pain: Atypical, not always anginal, can be due to myocardial stretch.",
+    "Syncope: Fainting spells, especially with exertion, due to reduced cerebral perfusion."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the diagnosis of dilated cardiomyopathy, assess its severity, identify the underlying cause, and rule out other conditions. Availability of tests varies significantly in low-resource settings.",
+   "t": [
+    {
+     "a": "Clinical history and physical examination",
+     "b": "What are the symptoms and signs of heart failure? Progressive dyspnea, fatigue, edema, elevated jugular venous pressure, S3 gallop, displaced apex beat, murmurs of mitral or tricuspid regurgitation (due to annular dilation)."
+    },
+    {
+     "a": "Electrocardiogram (ECG)",
+     "b": "Are there signs of ventricular hypertrophy, conduction abnormalities, or arrhythmias? May show left ventricular hypertrophy, left bundle branch block, atrial fibrillation, or non-specific ST-T wave changes. If unavailable, clinical assessment for arrhythmias (pulse irregularity) and signs of chamber enlargement (displa"
+    },
+    {
+     "a": "Chest X-ray (CXR)",
+     "b": "Is there cardiomegaly or pulmonary congestion? Reveals an enlarged cardiac silhouette (cardiothoracic ratio > 0.5) and signs of pulmonary venous congestion (e.g., Kerley B lines, pleural effusions). If unavailable, careful clinical assessment for crackles, dullness to percussion, and respiratory distress is essential."
+    },
+    {
+     "a": "Echocardiography (Echo)",
+     "b": "What is the heart's structure and function? Confirms ventricular dilation, reduced LVEF (< 40%), and often shows functional mitral or tricuspid regurgitation. This is the cornerstone for diagnosis and severity assessment. If unavailable, clinical signs of heart failure and cardiomegaly on CXR are the primary indicators"
+    },
+    {
+     "a": "Full blood count (FBC)",
+     "b": "Is there anemia contributing to heart failure symptoms, or signs of infection? Anemia can exacerbate heart failure. Leukocytosis may suggest an underlying infection (e.g., myocarditis, sepsis). If unavailable, clinical signs of anemia (pallor) or infection (fever) are used."
+    },
+    {
+     "a": "Renal function tests (Urea, Creatinine, Electrolytes)",
+     "b": "Is there kidney impairment, which can be a complication of heart failure or affect drug choice? Elevated creatinine and urea indicate renal dysfunction. Electrolyte imbalances (e.g., hyponatremia, hyperkalemia) are common in heart failure and with diuretic use. If unavailable, monitor urine output and clinical signs of"
+    },
+    {
+     "a": "Liver function tests (LFTs)",
+     "b": "Is there liver congestion or dysfunction? Elevated liver enzymes (AST, ALT) and bilirubin can indicate hepatic congestion due to right-sided heart failure. If unavailable, clinical assessment for hepatomegaly and jaundice is important."
+    },
+    {
+     "a": "Thyroid function tests (TSH, free T4)",
+     "b": "Is thyroid dysfunction contributing to or causing the cardiomyopathy? Both hyper- and hypothyroidism can cause or worsen heart failure. If unavailable, clinical assessment for signs of thyroid disease (e.g., goiter, tremor, heat/cold intolerance) is crucial."
+    },
+    {
+     "a": "HIV serology",
+     "b": "Is HIV an underlying cause? HIV can directly cause dilated cardiomyopathy. This is a crucial test in endemic areas. If unavailable, consider empirical treatment for opportunistic infections if clinical suspicion is high."
+    },
+    {
+     "a": "Cardiac biomarkers (Troponin, BNP/NT-proBNP)",
+     "b": "Is there ongoing myocardial injury or significant cardiac stretch? Elevated troponin indicates myocardial injury. Elevated BNP/NT-proBNP supports a diagnosis of heart failure and correlates with severity. Often unavailable in low-resource settings; clinical assessment and imaging are prioritized."
+    },
+    {
+     "a": "Endomyocardial biopsy",
+     "b": "What is the specific pathological process, especially in suspected myocarditis or infiltrative diseases? Rarely performed due to invasiveness and limited availability, reserved for specific cases where diagnosis impacts treatment (e.g., giant cell myocarditis). If unavailable, treatment is often empirical based on clin"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Patients with dilated cardiomyopathy are at risk for several life-threatening complications that require urgent medical attention.",
+   "b": [
+    "Acute decompensated heart failure: Sudden worsening of symptoms, often with severe dyspnea, pulmonary edema, and hypotension.",
+    "Ventricular arrhythmias: Ventricular tachycardia or fibrillation, leading to sudden cardiac death.",
+    "Thromboembolism: Due to stasis of blood in dilated chambers, leading to stroke, pulmonary embolism, or peripheral arterial embolism.",
+    "Cardiogenic shock: Profound hypotension and hypoperfusion due to severe pump failure.",
+    "Renal failure: Worsening kidney function due to reduced cardiac output and renal hypoperfusion."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of dilated cardiomyopathy focuses on treating the underlying cause (if identifiable), managing heart failure symptoms, preventing complications, and improving prognosis. Treatment is largely similar to that for chronic heart failure with reduced ejection fraction.",
+   "b": [
+    "Treat the underlying cause: For example, antiretroviral therapy for HIV, anti-parasitic treatment for Chagas disease, thiamine supplementation for beriberi, alcohol cessation for alcoholic cardiomyopathy.",
+    "Diuretics (e.g., Furosemide): To relieve fluid overload and symptoms of congestion (dyspnea, edema). Loop diuretics are preferred for their potency. Monitor electrolytes and renal function.",
+    "ACE inhibitors (e.g., Enalapril, Lisinopril) or Angiotensin Receptor Blockers (ARBs, e.g., Valsartan): To reduce afterload, improve cardiac remodeling, and reduce mortality. Start at low doses and titrate up. Avoid in severe hypotension or bilateral renal artery stenosis.",
+    "Beta-blockers (e.g., Carvedilol, Metoprolol succinate): To reduce heart rate, improve ventricular function, and reduce mortality. Start at very low doses after fluid overload is controlled and titrate slowly. Avoid in acute decompensated heart failure or severe bradycardia.",
+    "Mineralocorticoid Receptor Antagonists (MRAs, e.g., Spironolactone): To reduce mortality and hospitalizations, especially in NYHA Class II-IV patients with LVEF less than 35%. Monitor for hyperkalemia and renal dysfunction. Avoid in severe renal impairment.",
+    "Digoxin: May be considered for symptom control in patients with persistent symptoms despite optimal guideline-directed medical therapy, especially if atrial fibrillation is present. Monitor for toxicity.",
+    "Anticoagulation (e.g., Warfarin): Indicated for patients with atrial fibrillation or a history of thromboembolism. In low-resource settings, careful monitoring of INR is crucial; alternatives like aspirin may be used if INR monitoring is impossible, though less effective for preventing cardioembolic stroke.",
+    "Cardiac rehabilitation: Structured exercise programs and education to improve functional capacity and quality of life.",
+    "Device therapy: Implantable cardioverter-defibrillator (ICD) for primary or secondary prevention of sudden cardiac death in selected patients with very low LVEF. Cardiac resynchronization therapy (CRT) for patients with LVEF less than 35%, wide QRS, and persistent symptoms. These are often unavailable in low-resource settings."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is crucial for monitoring disease progression, adjusting medications, and managing complications. Prevention focuses on addressing modifiable risk factors and treating underlying causes.",
+   "b": [
+    "Regular clinical assessment: Monitor symptoms, vital signs, fluid status, and medication adherence.",
+    "Echocardiography: Periodically to assess LVEF and ventricular dimensions, typically every 6-12 months or as clinically indicated.",
+    "Laboratory tests: Regular monitoring of renal function, electrolytes, and liver function, especially when initiating or titrating medications.",
+    "Lifestyle modifications: Salt and fluid restriction, regular physical activity as tolerated, smoking cessation, and avoidance of alcohol.",
+    "Vaccinations: Influenza and pneumococcal vaccines to prevent respiratory infections that can exacerbate heart failure.",
+    "Family screening: For familial DCM, screening of first-degree relatives with ECG and echocardiography is recommended."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Dilated cardiomyopathy can be confused with other conditions that cause ventricular enlargement or heart failure symptoms. Differentiating these is crucial for appropriate management.",
+   "b": [
+    "Ischemic cardiomyopathy: Ventricular dilation and dysfunction due to extensive coronary artery disease. Differentiated by evidence of significant coronary artery stenosis on angiography or stress testing.",
+    "Hypertensive heart disease: Long-standing uncontrolled hypertension can lead to concentric left ventricular hypertrophy initially, which can eventually progress to dilation. History of hypertension and absence of other DCM causes help differentiate.",
+    "Valvular heart disease: Severe chronic valvular regurgitation (e.g., mitral or aortic regurgitation) can cause ventricular dilation and dysfunction. Echocardiography clearly identifies the primary valvular lesion.",
+    "Restrictive cardiomyopathy: Characterized by impaired ventricular filling due to stiff ventricles, often with preserved systolic function and normal or near-normal ventricular size. Echocardiography shows distinct diastolic dysfunction patterns.",
+    "Pericardial effusion/Constrictive pericarditis: Can cause symptoms of right-sided heart failure and elevated JVP. Echocardiography and other imaging can differentiate pericardial disease from myocardial dysfunction."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain clinical findings or investigation results can be misleading in the context of dilated cardiomyopathy, requiring careful interpretation.",
+   "b": [
+    "Normal LVEF: In early stages or specific forms of cardiomyopathy (e.g., restrictive), LVEF might be preserved, but diastolic dysfunction is present, leading to heart failure with preserved ejection fraction (HFpEF).",
+    "Transient cardiomegaly on CXR: Can be seen in acute conditions like severe anemia or acute volume overload, which may resolve with treatment, unlike chronic DCM.",
+    "Elevated troponin: While indicating myocardial injury, it is not specific to ischemia and can be elevated in severe heart failure due to myocardial stretch or inflammation.",
+    "Normal ECG: Does not rule out dilated cardiomyopathy, especially in early stages. ECG can be normal or show non-specific changes.",
+    "Absence of S3 gallop: An S3 gallop is a classic sign of heart failure but may not always be present, especially in less severe cases or if masked by other sounds."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of shortness of breath or new onset of severe dyspnea at rest",
+  "New or worsening chest pain",
+  "Sudden onset of severe dizziness or fainting spells",
+  "Rapid increase in swelling of legs or abdomen",
+  "New onset of irregular heartbeats or palpitations",
+  "Signs of stroke (sudden weakness on one side, difficulty speaking, vision changes)"
+ ],
+ "faq": [
+  {
+   "q": "Can dilated cardiomyopathy be cured?",
+   "a": "In some cases, especially if an underlying cause like alcohol abuse or a treatable infection is identified and addressed early, the heart function can improve significantly or even normalize. However, for many, it is a chronic progressive condition requiring lifelong management."
+  },
+  {
+   "q": "Is dilated cardiomyopathy hereditary?",
+   "a": "Yes, about 20-35% of dilated cardiomyopathy cases are familial, meaning they are inherited. If a family member has DCM, other first-degree relatives should be screened for the condition."
+  },
+  {
+   "q": "What is the most common cause of dilated cardiomyopathy in East Africa?",
+   "a": "While idiopathic causes are common globally, in East Africa, infectious causes like HIV and Chagas disease (though more prevalent in South America, it exists in some African regions), and peripartum cardiomyopathy are significant contributors. Rheumatic heart disease and severe anemia can also lead to similar presentations."
+  }
+ ],
+ "exam": [
+  "A 35-year-old woman, 3 months postpartum, presents with progressive shortness of breath, orthopnea, and bilateral pitting edema. Her ECG shows sinus tachycardia and non-specific ST-T changes. What is your most likely diagnosis and what immediate investigations would you prioritize in a low-resource setting? — Most likely diagnosis is peripartum cardiomyopathy. Prioritize clinical assessment, chest X-ray for cardiomegaly and pulmonary congestion, and if available, echocardiogr",
+  "You diagnose a patient with dilated cardiomyopathy secondary to chronic alcohol abuse. What is the most critical management step, and what specific advice would you give regarding their lifestyle? — The most critical step is complete and sustained alcohol abstinence. Advise on nutritional support (especially thiamine supplementation), salt and fluid restriction, and adherence to heart failure medications. Emphasize the potential for significant cardiac recovery with abstinenc",
+  "A patient with known dilated cardiomyopathy develops sudden onset of right-sided weakness and difficulty speaking. What is your immediate concern, and how would you manage it given limited resources? — Immediate concern is an acute ischemic stroke due to cardioembolic event. Management involves stabilizing the patient, assessing for neurological deficits, and if possible, considering aspirin or other antiplatelet agents if not already on anticoagulation. Urgent referral for i",
+  "You are managing a patient with dilated cardiomyopathy and severe symptoms, but you only have access to furosemide and enalapril. How would you initiate and monitor these medications, and what are the key risks? — Initiate furosemide to relieve congestion, then start enalapril at a very low dose and titrate slowly. Monitor for hypotension (especially with enalapril), worsening renal function, and electrolyte imbalances (hypokalemia with furosemide, hyperkalemia with enalapril",
+  "A 28-year-old male with HIV presents with progressive dyspnea and fatigue. His CXR shows cardiomegaly. What specific considerations are important in diagnosing and managing his cardiomyopathy? — Consider HIV-associated cardiomyopathy, opportunistic infections (e.g., tuberculous pericarditis, viral myocarditis), and drug-induced cardiomyopathy. Management includes optimizing antiretroviral therapy, treating any identified infections, and standard heart failure therapy. Close m",
+  "What are the key differences between dilated cardiomyopathy and restrictive cardiomyopathy on echocardiography, and why is this distinction clinically important? — DCM shows enlarged ventricles with reduced systolic function (low LVEF), while restrictive cardiomyopathy shows normal or near-normal ventricular size with preserved systolic function but impaired diastolic filling (stiff ventricles). This distinction is crucial because management strategies differ significantly; D",
+  "A patient with dilated cardiomyopathy is prescribed a beta-blocker. Explain to the patient why this medication, which initially might make them feel worse, is beneficial in the long term. — Explain that while beta-blockers might initially cause some fatigue, they work by slowing the heart rate and reducing the heart's workload, which helps the heart muscle recover and pump more efficiently over time. This reduces stress on the heart, prevents further damage, and ultimately im"
+ ],
+ "related": [
+  "Heart Failure with Reduced Ejection Fraction (HFrEF)",
+  "Peripartum Cardiomyopathy",
+  "Myocarditis",
+  "Chagas Disease",
+  "HIV-Associated Cardiomyopathy",
+  "Rheumatic Heart Disease",
+  "Ischemic Cardiomyopathy",
+  "Arrhythmogenic Right Ventricular Cardiomyopathy"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-16",
+ "reviewed": false
+}

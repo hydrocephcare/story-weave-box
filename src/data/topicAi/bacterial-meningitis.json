@@ -1,0 +1,176 @@
+{
+ "medical": true,
+ "title": "Bacterial Meningitis",
+ "subject": "Microbiology & immunology",
+ "summary": "A life‑threatening infection of the leptomeninges presenting with fever, headache, neck stiffness and altered consciousness. Rapid diagnosis and empiric antibiotics are essential, especially in low‑resource settings where delays can be fatal.",
+ "aka": [
+  "Acute bacterial meningitis",
+  "Purulent meningitis"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Bacterial meningitis is an acute purulent infection of the pia and arachnoid mater. It is caused by encapsulated organisms that colonise the nasopharynx and breach the blood‑brain barrier. In East Africa, the most common pathogens are *Streptococcus pneumoniae*, *Neisseria meningitidis* and *Haemophilus influenzae* type b.",
+   "b": [
+    "High mortality if untreated; early empiric therapy saves lives",
+    "Clinical triad: fever, neck stiffness, altered mental status"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "The key virulence factor is the polysaccharide capsule, which prevents phagocytosis and complement activation. IgA proteases aid mucosal attachment, and the bacteria can survive in blood and cross the cerebral capillaries or choroid plexus.",
+   "b": [
+    "Encapsulation → antiphagocytic",
+    "IgA protease → nasopharyngeal colonisation"
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Transmission is via respiratory droplets. Colonisation of the nasopharynx is common; invasive disease occurs when the capsule breaches mucosal barriers and enters the bloodstream.",
+   "b": [
+    "Droplet spread",
+    "Colonisation → invasive disease"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "The infection spreads to the subarachnoid space, causing neutrophilic pleocytosis, increased intracranial pressure and potential cerebral infarction. In low‑resource settings, co‑infections (HIV, malaria, TB) worsen outcomes.",
+   "b": [
+    "Neutrophilic CSF pleocytosis",
+    "Increased ICP",
+    "Risk of seizures and focal deficits"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Clinical suspicion is followed by a lumbar puncture if safe. CSF should be analysed for cell count, protein, glucose and Gram stain. In settings without LP, a rapid antigen test or bedside ultrasound may be used.",
+   "t": [
+    {
+     "a": "Lumbar puncture",
+     "b": "Is CSF neutrophilic and protein‑rich? A neutrophilic pleocytosis with high protein and low glucose confirms bacterial meningitis."
+    },
+    {
+     "a": "Gram stain",
+     "b": "Shows Gram‑positive cocci in chains (pneumococcus) or Gram‑negative diplococci (meningococcus). Positive stain directs empiric therapy."
+    },
+    {
+     "a": "Rapid antigen test",
+     "b": "Detects *N. meningitidis* or *H. influenzae* in CSF; a positive result supports empiric coverage."
+    },
+    {
+     "a": "CT scan",
+     "b": "Rule out mass lesions or increased ICP before LP; a normal scan allows safe LP."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Empiric therapy must cover the most likely organisms and be started immediately after a safe LP or, if unavailable, before LP. Supportive care includes fluid management, seizure control and monitoring for complications.",
+   "t": [
+    {
+     "a": "Ceftriaxone",
+     "b": "Treats *S. pneumoniae* and *N. meningitidis*. It penetrates CSF well and is bactericidal."
+    },
+    {
+     "a": "Ampicillin",
+     "b": "Coverage for Listeria in patients >50 or immunocompromised; not needed in most East African adults."
+    },
+    {
+     "a": "Gentamicin",
+     "b": "Added if local resistance patterns suggest high MIC for ceftriaxone; monitor renal function."
+    },
+    {
+     "a": "Chloramphenicol",
+     "b": "Alternative when ceftriaxone is unavailable; avoid in patients with G6PD deficiency."
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Remember the triad but also look for altered consciousness, seizures or focal deficits, which raise the suspicion of complications. In low‑resource settings, a normal CSF glucose can be misleading if the patient is hypoglycaemic. Always consider HIV and malaria co‑infection.",
+   "b": [
+    "Altered GCS, seizures, focal signs → higher mortality"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Viral meningitis, cerebral malaria, tuberculous meningitis and meningococcal sepsis can mimic bacterial meningitis.",
+   "b": [
+    "Viral meningitis: lymphocytic CSF, milder course"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "CSF glucose may be normal in early disease; a negative Gram stain does not exclude bacteria. In malaria, fever and headache may mask meningitis.",
+   "b": [
+    "Negative Gram stain → still treat empirically"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the cause, then supportive care and monitoring. Avoid drugs that increase intracranial pressure or cause haemorrhage.",
+   "b": [
+    "Avoid high‑dose steroids unless indicated"
+   ]
+  },
+  {
+   "h": "When to seek help",
+   "p": "Any patient with fever, neck stiffness and altered consciousness requires urgent assessment. In low‑resource settings, do not delay LP if the patient is unstable."
+  },
+  {
+   "h": "FAQ",
+   "t": [
+    {
+     "a": "What is the first step if a lumbar puncture cannot be performed?",
+     "b": "Start empiric antibiotics immediately after a safe clinical assessment and consider a CT scan if contraindications exist."
+    },
+    {
+     "a": "Why is ceftriaxone chosen as first‑line?",
+     "b": "It has excellent CSF penetration, a broad spectrum against the most common pathogens and a favourable safety profile."
+    },
+    {
+     "a": "Can malaria cause meningitis?",
+     "b": "Cerebral malaria can present with seizures and altered consciousness but CSF is usually normal; it must be ruled out in endemic areas."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever with neck stiffness and altered consciousness",
+  "Seizures or focal neurological deficits",
+  "Rapid deterioration or high ICP signs"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common pathogen in East Africa?",
+   "a": "Streptococcus pneumoniae"
+  },
+  {
+   "q": "Which test can be done if a lumbar puncture is unsafe?",
+   "a": "CT scan to rule out mass effect"
+  },
+  {
+   "q": "Why avoid chloramphenicol in G6PD deficiency?",
+   "a": "It can precipitate haemolytic anaemia"
+  }
+ ],
+ "exam": [
+  "A 3‑year‑old presents with fever, stiff neck and seizures. What is the next step? — Perform a CT scan if contraindications to LP; start empiric ceftriaxone and ampicillin immediately.",
+  "An adult with suspected meningitis has a normal CSF glucose. What does this suggest? — Early disease or possible malaria; still treat empirically.",
+  "Why is ampicillin added to ceftriaxone in patients over 50? — To cover Listeria monocytogenes, which is more common in the elderly.",
+  "A patient with HIV presents with fever and neck stiffness. Which organism is most likely? — Streptococcus pneumoniae; HIV increases risk of bacterial meningitis.",
+  "What complication is most feared in bacterial meningitis? — Cerebral infarction due to vasculitis; monitor for focal deficits.",
+  "When is dexamethasone indicated in bacterial meningitis? — In children with pneumococcal meningitis to reduce hearing loss."
+ ],
+ "related": [
+  "Neisseria meningitidis",
+  "Streptococcus pneumoniae",
+  "Haemophilus influenzae",
+  "Cerebral malaria",
+  "Tuberculous meningitis"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-16",
+ "reviewed": false
+}

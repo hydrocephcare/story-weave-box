@@ -1,0 +1,231 @@
+{
+ "medical": true,
+ "title": "Cor Pulmonale",
+ "subject": "Pathology",
+ "summary": "Right‑ventricular hypertrophy or dilatation secondary to chronic pulmonary hypertension from lung disease. It is a complication, not a primary cardiac disorder.",
+ "aka": [
+  "Right‑ventricular failure due to lung disease",
+  "Pulmonary hypertension‑induced RV overload"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Cor pulmonale is RV enlargement caused by sustained pulmonary hypertension from chronic lung disease. Diagnosis combines clinical features, imaging, and haemodynamics.",
+   "b": [
+    "Right‑ventricular hypertrophy or dilatation on echo",
+    "Elevated pulmonary artery systolic pressure >35 mmHg"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows enlarged pulmonary arteries, right‑sided heart silhouette; a prominent pulmonary artery trunk suggests pulmonary hypertension."
+    },
+    {
+     "a": "ECG",
+     "b": "Right‑axis deviation, RV hypertrophy voltages, S1Q3T3 pattern; absence of left‑sided changes helps differentiate from left heart disease."
+    },
+    {
+     "a": "Transthoracic Echo",
+     "b": "Measures RV size, tricuspid regurgitant jet velocity; a velocity >3.4 m/s indicates pulmonary artery systolic pressure >50 mmHg."
+    },
+    {
+     "a": "ABG/Oximetry",
+     "b": "Hypoxaemia (PaO2 <60 mmHg) or hypercapnia (PaCO2 >45 mmHg) supports chronic lung disease causing PH."
+    },
+    {
+     "a": "Spirometry",
+     "b": "Shows obstructive pattern (FEV1/FVC <70%) in COPD or restrictive pattern in interstitial disease; severity correlates with PH risk."
+    },
+    {
+     "a": "HIV test/TB screen",
+     "b": "Positive results identify common tropical causes of chronic lung disease that precipitate PH."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by pulmonary artery pressure, RV function, and clinical symptoms. The WHO functional class (I–IV) is commonly used.",
+   "b": [
+    "Class I: asymptomatic",
+    "Class II: mild symptoms",
+    "Class III: marked limitation",
+    "Class IV: symptoms at rest"
+   ],
+   "t": [
+    {
+     "a": "Right‑heart catheterisation",
+     "b": "Gold standard for PA pressure; values >50 mmHg confirm severe PH."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the leading causes are chronic obstructive airway disease, tuberculosis, and HIV‑associated lung disease.",
+   "b": [
+    "Chronic bronchitis/COPD – hypoxic vasoconstriction",
+    "Pulmonary TB – fibrosis and vascular destruction",
+    "HIV – opportunistic infections and chronic lung inflammation"
+   ],
+   "t": [
+    {
+     "a": "Alpha‑1 antitrypsin level",
+     "b": "Screen for early pan‑lobular emphysema in non‑smokers with RV enlargement."
+    },
+    {
+     "a": "Sputum culture",
+     "b": "Detects TB or bacterial colonisation that may worsen lung disease."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often appear cyanotic, overweight, and oedematous – the classic “blue bloater.” Symptoms evolve from dyspnoea to peripheral oedema and right‑sided heart failure.",
+   "b": [
+    "Cyanosis, clubbing, coarse crackles",
+    "Peripheral oedema, raised JVP, hepatomegaly",
+    "Exercise intolerance, orthopnoea"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for jugular venous distension, displaced apex beat, and a loud P2."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are tailored to available resources. When advanced tests are unavailable, clinical judgement and basic imaging guide management.",
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Assesses lung parenchyma, heart size, and vascular markings."
+    },
+    {
+     "a": "ECG",
+     "b": "Identifies RV strain patterns."
+    },
+    {
+     "a": "Echo",
+     "b": "Non‑invasive estimate of pulmonary pressures and RV function."
+    },
+    {
+     "a": "ABG/Oximetry",
+     "b": "Detects hypoxaemia/hypercapnia."
+    },
+    {
+     "a": "Spirometry",
+     "b": "Defines obstructive vs restrictive disease."
+    },
+    {
+     "a": "HIV/TB screening",
+     "b": "Essential in endemic areas."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid deterioration, massive haemoptysis, or sudden cardiac death are red flags requiring urgent care.",
+   "b": [
+    "Sudden worsening of dyspnoea",
+    "Chest pain with ECG changes"
+   ],
+   "t": [
+    {
+     "a": "Chest CT",
+     "b": "Detects massive haemoptysis source or pulmonary embolism."
+    },
+    {
+     "a": "Urgent Echo",
+     "b": "Assesses RV collapse or tamponade."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying lung disease first, then support the RV and manage complications. Drug choice balances efficacy and local availability.",
+   "b": [
+    "Bronchodilators for COPD",
+    "Antitubercular therapy for TB",
+    "Antiretroviral therapy for HIV"
+   ],
+   "t": [
+    {
+     "a": "Diuretics",
+     "b": "Reduce preload and peripheral oedema; avoid over‑diuresis that lowers BP."
+    },
+    {
+     "a": "Oxygen",
+     "b": "Correct hypoxaemia; target SpO2 >90% to reverse hypoxic vasoconstriction."
+    },
+    {
+     "a": "Pulmonary vasodilators (if available)",
+     "b": "Epoprostenol or sildenafil can lower PA pressure but require monitoring for systemic hypotension."
+    },
+    {
+     "a": "Anticoagulation",
+     "b": "Consider if pulmonary embolism is suspected; weigh bleeding risk."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of oxygen saturation, weight, and symptoms. Prevention focuses on treating TB, smoking cessation, and early COPD management.",
+   "b": [
+    "Annual spirometry",
+    "Monthly weight checks",
+    "Vaccination against influenza and pneumococcus"
+   ],
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Track SpO2 trends; a drop >5% warrants review."
+    },
+    {
+     "a": "Clinical review",
+     "b": "Assess for new oedema or dyspnoea."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of breathlessness",
+  "Unexplained haemoptysis",
+  "Chest pain with new ECG changes"
+ ],
+ "faq": [
+  {
+   "q": "Why is oxygen therapy crucial in cor pulmonale?",
+   "a": "It reverses hypoxic pulmonary vasoconstriction, lowering pulmonary pressures and reducing RV strain."
+  },
+  {
+   "q": "Can diuretics worsen cor pulmonale?",
+   "a": "Yes, over‑diuresis can drop systemic blood pressure and impair RV perfusion."
+  },
+  {
+   "q": "What is the most common cause of cor pulmonale in East Africa?",
+   "a": "Chronic obstructive airway disease secondary to biomass smoke exposure and untreated tuberculosis."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order in a patient with suspected cor pulmonale in a district hospital? — Echo to estimate pulmonary pressures and RV size; if unavailable, chest X‑ray and ABG.",
+  "How would you differentiate cor pulmonale from left‑sided heart failure on exam? — Look for jugular venous distension, hepatomegaly, and a displaced apex beat; left‑sided disease shows bibasal crackles and pulmonary oedema.",
+  "Why is oxygen therapy preferred over diuretics as first‑line treatment in hypoxic cor pulmonale? — Oxygen reduces hypoxic vasoconstriction, lowering pulmonary pressures before diuretics address fluid overload.",
+  "What is the significance of a tricuspid regurgitant jet velocity of 3.8 m/s on echo? — Indicates pulmonary artery systolic pressure >50 mmHg, confirming severe pulmonary hypertension.",
+  "In a resource‑limited setting, how would you manage a patient with TB‑related cor pulmonale who cannot afford long‑term diuretics? — Provide short‑course diuretics, ensure TB treatment completion, and use low‑cost oxygen therapy; monitor weight and oedema.",
+  "Why is pulmonary vasodilator therapy avoided in patients with systemic hypotension? — They can worsen systemic blood pressure, compromising RV perfusion and causing shock."
+ ],
+ "related": [
+  "Pulmonary hypertension",
+  "COPD",
+  "Tuberculosis",
+  "HIV‑associated lung disease",
+  "Right‑ventricular failure",
+  "Chronic hypoxaemia",
+  "Biomass smoke exposure",
+  "Antiretroviral therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-16",
+ "reviewed": false
+}

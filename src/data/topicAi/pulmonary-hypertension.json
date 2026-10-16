@@ -1,0 +1,185 @@
+{
+ "medical": true,
+ "title": "Pulmonary Hypertension",
+ "subject": "Pathology",
+ "summary": "Pulmonary hypertension is a haemodynamic disorder with mean pulmonary arterial pressure ≥ 20 mmHg at rest. It results from vascular remodeling, left‑heart disease, lung disease, chronic thrombo‑embolism or multifactorial causes and leads to right‑heart failure.",
+ "aka": [
+  "Elevated pulmonary artery pressure"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "PH is defined by a mean pulmonary arterial pressure (mPAP) ≥ 20 mmHg measured by right‑heart catheterisation (RHC). The diagnosis requires exclusion of acute causes and confirmation of chronic elevation.",
+   "b": [
+    "RHC is the gold standard; echocardiography is the bedside screen.",
+    "mPAP ≥ 20 mmHg, pulmonary capillary wedge pressure ≤ 15 mmHg for pre‑capillary PH."
+   ],
+   "t": [
+    {
+     "a": "Transthoracic echocardiogram",
+     "b": "Does the patient have elevated right‑systolic pressure? A tricuspid regurgitant jet ≥ 3.4 m/s suggests mPAP ≥ 20 mmHg."
+    },
+    {
+     "a": "Right‑heart catheterisation",
+     "b": "What is the exact haemodynamic profile? Confirms mPAP, pulmonary vascular resistance (PVR) and wedge pressure; required before targeted therapy."
+    },
+    {
+     "a": "Chest X‑ray (if available)",
+     "b": "Is there evidence of pulmonary artery enlargement or right‑heart enlargement? Supports PH but is non‑specific."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by WHO functional class (I–IV) and by haemodynamics (PVR, cardiac output). Staging guides therapy intensity.",
+   "b": [
+    "WHO‑FC I: No limitation of ordinary activity.",
+    "WHO‑FC IV: Symptoms at rest, signs of right‑heart failure."
+   ],
+   "t": [
+    {
+     "a": "6‑minute walk test (6MWT)",
+     "b": "How limited is exercise capacity? Distance < 300 m indicates severe disease."
+    },
+    {
+     "a": "NT‑proBNP",
+     "b": "Is right‑ventricular strain present? Levels > 300 pg/mL correlate with worse prognosis."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African settings, the most common contributors are chronic lung disease, left‑heart disease, and infections that affect the pulmonary vasculature.",
+   "b": [
+    "Group 1 (PAH): HIV, connective‑tissue disease, congenital shunts.",
+    "Group 2: Rheumatic mitral stenosis, hypertensive heart disease.",
+    "Group 3: COPD, post‑TB fibrosis, chronic hypoxia from high altitude.",
+    "Group 4: Chronic thrombo‑embolic PH (CTEPH) after untreated VTE.",
+    "Group 5: Schistosomiasis, sickle‑cell disease, herbal toxins."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients develop progressive dyspnoea, fatigue and peripheral oedema. Early disease may show disproportionate dyspnoea compared with spirometry.",
+   "b": [
+    "Exertional dyspnoea out of proportion to lung function.",
+    "Loud P2, right‑sided S3, jugular venous distension.",
+    "Ankle swelling, hepatomegaly in advanced stages."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A stepwise approach uses bedside tools first, then referral for definitive haemodynamic measurement.",
+   "b": [
+    "Echocardiography to estimate pressure and assess right‑ventricular size.",
+    "Chest imaging to look for lung disease or pulmonary artery enlargement.",
+    "Pulmonary function tests (PFTs) to differentiate lung‑ versus heart‑origin."
+   ],
+   "t": [
+    {
+     "a": "Spirometry",
+     "b": "Is there obstructive or restrictive lung disease? Normal FEV1/FVC with low DLCO suggests vascular disease."
+    },
+    {
+     "a": "Ventilation‑perfusion scan (if available)",
+     "b": "Is chronic thrombo‑embolism present? Mismatched perfusion defects point to CTEPH."
+    },
+    {
+     "a": "HIV test",
+     "b": "Is HIV a contributing factor? Positive result moves patient to Group 1 PAH."
+    },
+    {
+     "a": "Schistosoma serology",
+     "b": "Is schistosomiasis present? Positive serology supports Group 5 PH in endemic areas."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled PH rapidly leads to right‑heart failure and death.",
+   "b": [
+    "Sudden worsening dyspnoea with syncope – possible acute decompensation.",
+    "Peripheral cyanosis, hypotension – impending right‑ventricular collapse.",
+    "Recurrent haemoptysis – may signal pulmonary artery rupture."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then add targeted therapy and supportive measures.",
+   "b": [
+    "Oxygen therapy for chronic hypoxia (PaO2 < 55 mmHg or 7.3 kPa).",
+    "Diuretics for right‑sided fluid overload.",
+    "Anticoagulation if CTEPH or recurrent VTE is confirmed.",
+    "Endothelin‑receptor antagonists (e.g., bosentan) for Group 1 PAH – reduce vasoconstriction.",
+    "Phosphodiesterase‑5 inhibitors (e.g., sildenafil) – improve nitric‑oxide pathway.",
+    "Avoid calcium‑channel blockers unless vasoreactivity test is positive."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular clinical review, functional class assessment and repeat echocardiography guide therapy escalation.",
+   "b": [
+    "Clinic review every 3–6 months; earlier if symptoms change.",
+    "Repeat 6MWT and NT‑proBNP to track progression.",
+    "Vaccinate against influenza and pneumococcus to reduce respiratory infections."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Left‑sided heart failure – both cause dyspnoea, but left‑sided failure shows pulmonary crackles and elevated wedge pressure.",
+    "Chronic obstructive pulmonary disease – COPD has obstructive spirometry and smoking history; PH has normal spirometry early.",
+    "Pulmonary embolism – acute onset, pleuritic chest pain, and CT pulmonary angiography differentiate."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal echocardiographic pressure estimate in early disease – RHC may still reveal elevated mPAP.",
+    "Low NT‑proBNP in obese patients – may mask right‑ventricular strain.",
+    "Chest X‑ray may appear normal despite severe PH."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden syncope or near‑syncope",
+  "Rapid increase in leg swelling with abdominal distension",
+  "New chest pain or haemoptysis"
+ ],
+ "faq": [
+  {
+   "q": "Why is right‑heart catheterisation required before starting PAH‑specific drugs?",
+   "a": "It confirms the haemodynamic definition, distinguishes pre‑ from post‑capillary PH and avoids treating left‑heart disease with inappropriate vasodilators."
+  },
+  {
+   "q": "Can long‑term oxygen therapy improve survival?",
+   "a": "Yes, in chronic hypoxic PH it reduces pulmonary vasoconstriction and improves survival when used ≥15 hours daily."
+  },
+  {
+   "q": "Is PH curable in low‑resource settings?",
+   "a": "Cure is rare; control of the underlying cause (e.g., treating HIV, repairing a shunt) and symptom management can markedly improve quality of life."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old woman with HIV presents with exertional dyspnoea; echo shows TR jet 3.6 m/s. What is the next diagnostic step and why? — Right‑heart catheterisation to confirm pre‑capillary PH and guide therapy.",
+  "A patient with rheumatic mitral stenosis develops PH. How does the underlying mechanism differ from PAH? — Elevated left‑atrial pressure raises wedge pressure (post‑capillary PH), so vasodilators are contraindicated.",
+  "In a rural clinic you cannot perform RHC. Which bedside test helps risk‑stratify and what threshold indicates severe disease? — 6‑minute walk distance <300 m suggests severe PH.",
+  "Why is a calcium‑channel blocker not first‑line for most PH patients? — Only a small subset shows acute vasoreactivity; indiscriminate use can cause systemic hypotension.",
+  "A patient on sildenafil develops worsening oedema. What should you do? — Review for right‑heart failure; add diuretic and consider switching to an endothelin‑receptor antagonist.",
+  "How does chronic schistosomiasis cause PH and what specific investigation confirms it? — Egg‑induced portal hypertension leads to pulmonary vascular remodeling; serology or stool microscopy confirms infection.",
+  "What red‑flag symptom mandates immediate hospital admission in PH? — New syncope or rapid progression of right‑sided heart failure signs.",
+  "Explain why anticoagulation is recommended in chronic thrombo‑embolic PH but not in isolated PAH. — CTEPH involves persistent thrombus; anticoagulation prevents further emboli, whereas PAH risk of bleeding outweighs benefit."
+ ],
+ "related": [
+  "Right‑heart failure",
+  "Chronic obstructive pulmonary disease",
+  "Rheumatic heart disease",
+  "HIV‑associated pulmonary arterial hypertension",
+  "Chronic thrombo‑embolic pulmonary hypertension",
+  "Schistosomiasis pulmonary disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-16",
+ "reviewed": false
+}
