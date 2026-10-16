@@ -2,6 +2,7 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 import { brokeredPreviewStorage } from './previewAuthStorage';
+import { makeCachedFetch } from '@/lib/sbCache';
 
 // Public browser credentials. Environment values take precedence, while the
 // fallback keeps direct Vercel/Cloudflare builds connected without uploading
@@ -13,6 +14,8 @@ const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL
 // import { supabase } from "@/integrations/supabase/client";
 
 export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+  // public reads from visitors who are not signed in are cached at the edge (keeps the site inside Supabase's free data limit)
+  global: { fetch: makeCachedFetch(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) },
   auth: {
     storage: brokeredPreviewStorage(),
     persistSession: true,

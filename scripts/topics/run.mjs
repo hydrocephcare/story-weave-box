@@ -5,6 +5,13 @@
 import fs from "node:fs";
 import { spawnSync } from "node:child_process";
 
+// Deploys must not read the whole library from the database (about 70 MB each time: that is what used up the free data limit). The topic pages are rebuilt
+// once a day by the GitHub workflow and committed in public/topics, so a deploy just uses them. Set FORCE_TOPICS=1 to rebuild during a deploy anyway.
+if (process.env.VERCEL && !process.env.FORCE_TOPICS && fs.existsSync("public/topics/index.json")) {
+  console.log("[topics] using the committed topic pages (rebuilt daily by the workflow); no database read during this deploy");
+  process.exit(0);
+}
+
 const r = spawnSync(process.execPath, ["scripts/topics/build-topics.mjs", "--fresh"], { encoding: "utf8", env: { ...process.env }, maxBuffer: 64 * 1024 * 1024 });
 if (r.stdout) process.stdout.write(r.stdout);
 if (r.stderr) process.stderr.write(r.stderr);

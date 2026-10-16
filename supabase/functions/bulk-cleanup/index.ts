@@ -12,7 +12,7 @@ const MAX_MCQ_EXTRACT_CHARS = 32000;
 const OVERSIZED_ARTICLE_CHARS = 130000;
 const CPU_BUDGET_MS = 1600;
 const AI_MAX_CONTENT_CHARS = 18000;
-const AI_MODEL = "google/gemini-3-flash-preview";
+import { chatText } from "../_shared/aiChat.js";
 
 const CATEGORY_KEYWORDS: Record<string, string[]> = {
   "Year 1: Carbohydrate Metabolism and Bioenergetics": ["carbohydrate", "glycolysis", "krebs", "bioenergetics", "atp", "electron transport"],
@@ -572,7 +572,7 @@ Allowed categories:\n${allowedCategories}`,
     },
   ];
 
-  // Prefer the OmniRoute combo (free providers) when configured; fall back to Lovable.
+  // Prefer the OmniRoute combo (free providers) when configured; fall back to Gemini / Groq.
   const omni = omniRouteConfig();
   if (omni) {
     try {
@@ -584,42 +584,17 @@ Allowed categories:\n${allowedCategories}`,
       });
       return extractFirstJsonObject(text);
     } catch (e: any) {
-      console.log("OmniRoute unavailable, falling back to Lovable:", e?.message || String(e));
+      console.log("OmniRoute unavailable, falling back to Gemini/Groq:", e?.message || String(e));
     }
   }
 
-  const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-  if (!LOVABLE_API_KEY) return null;
-
-  const payload = {
-    model: AI_MODEL,
-    messages,
-    temperature: 0.1,
-  };
-
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 25000);
-
+  // the project's own Gemini / Groq keys (the Lovable AI gateway no longer exists)
   try {
-    const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${LOVABLE_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-      signal: controller.signal,
-    });
-
-    if (response.status === 429) throw new Error("Lovable AI rate-limited (429)");
-    if (response.status === 402) throw new Error("Lovable AI credits exhausted (402)");
-    if (!response.ok) throw new Error(`Lovable AI failed (${response.status})`);
-
-    const data = await response.json();
-    const content = data?.choices?.[0]?.message?.content || "";
+    const content = await chatText(Deno.env.toObject(), messages, { temperature: 0.1, maxTokens: 8000, timeoutMs: 25000 });
     return extractFirstJsonObject(content);
-  } finally {
-    clearTimeout(timeout);
+  } catch (e: any) {
+    console.log("AI unavailable:", e?.message || String(e));
+    return null;
   }
 }
 

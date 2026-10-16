@@ -81,33 +81,8 @@ async function callGemini(apiKey: string, prompt: string, maxTokens = 8000): Pro
 }
 
 async function generateArticleImage(prompt: string): Promise<string> {
-  const lovableKey = Deno.env.get("LOVABLE_API_KEY");
-  if (!lovableKey) throw new Error("LOVABLE_API_KEY not set");
-
-  const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${lovableKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: "google/gemini-2.5-flash-image",
-      messages: [{ role: "user", content: prompt }],
-      modalities: ["image", "text"],
-    }),
-  });
-
-  if (!response.ok) {
-    if (response.status === 429) throw new Error("Rate limit reached. Try again in a moment.");
-    if (response.status === 402) throw new Error("AI credits exhausted. Please top up workspace usage.");
-    throw new Error("Failed to generate image");
-  }
-
-  const data = await response.json();
-  const imageUrl = data?.choices?.[0]?.message?.images?.[0]?.image_url?.url;
-  if (!imageUrl) throw new Error("No image returned by Gemini image model");
-
-  return imageUrl;
+  // Gemini's image model with the project's own key (the Lovable AI gateway no longer exists)
+  return await geminiImage(Deno.env.toObject(), prompt);
 }
 
 function json(data: unknown, status = 200) {
@@ -191,6 +166,8 @@ function tagsForYearTwo(title = "", category = ""): string[] {
   const unit = category.replace(/^Year\s*\d+\s*:\s*/i, "");
   return ["Year 2", unit, ...title.toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 5).slice(0, 4)].slice(0, 8);
 }
+import { geminiImage } from "../_shared/aiChat.js";
+
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 

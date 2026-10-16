@@ -38,5 +38,5 @@ scratch/
 articles-backup-*.json
 preview-*.md
 .cache/
-public/topics/
+# public/topics/ is committed: the daily workflow rebuilds it, deploys only use it (saves a 70 MB database read per deploy)
 public/topics-status.json

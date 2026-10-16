@@ -49,6 +49,13 @@ jobs:
       - name: Install
         run: npm ci
 
+      - name: Restore yesterday's reading of the library (so only what changed is read from the database)
+        uses: actions/cache@v4
+        with:
+          path: .cache/topics-corpus.json
+          key: topics-corpus-${{ github.run_id }}
+          restore-keys: topics-corpus-
+
       - name: Rebuild the topic pages
         run: node scripts/topics/build-topics.mjs --fresh
 
@@ -78,12 +85,12 @@ jobs:
 
       - name: Save the new overviews
         run: |
-          if [ -z "$(git status --porcelain src/data/topicAi src/data/pageSummaries.json src/data/contentChecks.json src/data/contentMarks.json)" ]; then
+          if [ -z "$(git status --porcelain public/topics src/data/topicAi src/data/pageSummaries.json src/data/contentChecks.json src/data/contentMarks.json)" ]; then
             echo "No new overviews today."
           else
             git config user.name "ompath-bot"
             git config user.email "ompath-bot@users.noreply.github.com"
-            git add src/data/topicAi src/data/pageSummaries.json src/data/contentChecks.json src/data/contentMarks.json
+            git add -f public/topics src/data/topicAi src/data/pageSummaries.json src/data/contentChecks.json src/data/contentMarks.json
             git commit -m "Daily AI topic overviews"
             git pull --rebase origin main
             git push origin main

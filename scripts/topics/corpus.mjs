@@ -33,13 +33,41 @@ export async function loadPublishedTopicPages() {
   } catch (e) { console.error("topic_pages", String(e)); return []; }
 }
 
+const CACHE = ".cache/topics-corpus.json";
+const COLS = {
+  articles: "id,title,slug,category,content,created_at,updated_at",
+  mcq_sets: "id,title,slug,category,questions,created_at,updated_at",
+  essays: "id,title,slug,category,short_answer_questions,long_answer_questions,created_at,updated_at",
+};
+
+/** Reads only what changed since the cached copy: the ids that are live now (tiny), plus the rows updated since. Reading the whole library costs about 30 MB of the free data limit. */
+async function refresh(table, prevRows, since, live) {
+  const ids = new Set((await all(table, "id", live)).map((r) => r.id));
+  const byId = new Map(prevRows.filter((r) => ids.has(r.id)).map((r) => [r.id, r]));   // drops anything unpublished or deleted since
+  for (const r of await all(table, COLS[table], (q) => live(q).gte("updated_at", since))) byId.set(r.id, r);
+  const missing = [...ids].filter((id) => !byId.has(id));
+  for (let i = 0; i < missing.length; i += 20) {
+    const { data, error } = await sb.from(table).select(COLS[table]).in("id", missing.slice(i, i + 20));
+    if (error) { console.error(table, error.message); break; }
+    for (const r of data) byId.set(r.id, r);
+  }
+  return [...byId.values()].sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
+}
+
 export async function loadCorpus() {
   const live = (q) => q.eq("published", true).is("deleted_at", null);
-  const [articles, mcqs, essays] = await Promise.all([
-    all("articles", "id,title,slug,category,content,created_at,updated_at", live),
-    all("mcq_sets", "id,title,slug,category,questions,created_at", live),
-    all("essays", "id,title,slug,category,short_answer_questions,long_answer_questions,created_at", live),
-  ]);
+  let articles, mcqs, essays;
+  let prev = null;
+  try { if (!process.env.FULL_CORPUS && fs.existsSync(CACHE)) prev = JSON.parse(fs.readFileSync(CACHE, "utf8")); } catch { prev = null; }
+  const ageDays = prev ? (Date.now() - Date.parse(prev.fetchedAt)) / 86_400_000 : Infinity;
+  if (prev && ageDays < 8 && prev.articles?.length > 100) {
+    const since = new Date(Date.parse(prev.fetchedAt) - 3_600_000).toISOString();
+    console.log("[corpus] incremental read since " + since + " (a full read happens when the cache is over 8 days old or FULL_CORPUS=1)");
+    [articles, mcqs, essays] = await Promise.all([refresh("articles", prev.articles, since, live), refresh("mcq_sets", prev.mcqs, since, live), refresh("essays", prev.essays, since, live)]);
+  } else {
+    console.log("[corpus] full read");
+    [articles, mcqs, essays] = await Promise.all([all("articles", COLS.articles, live), all("mcq_sets", COLS.mcq_sets, live), all("essays", COLS.essays, live)]);
+  }
   const notes = JSON.parse(fs.readFileSync("src/data/staticNotes.json", "utf8")).map((n) => ({ ...n, text: fs.existsSync(n.file) ? fs.readFileSync(n.file, "utf8") : "" }));
   return { articles, mcqs, essays, notes, fetchedAt: new Date().toISOString() };
 }
