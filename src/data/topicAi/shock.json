@@ -104,5 +104,435 @@
  "kind": "disease",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic exam to identify shock type and severity.",
+    "b": [
+     "History: onset, precipitating event, bleeding history, recent infections, cardiac symptoms, medication use (NSAIDs, anticoagulants, OCPs), pregnancy, HIV status, TB exposure, malnutrition, alcohol use, comorbidities (diabetes, renal failure).",
+     "Examination: airway, breathing, circulation; check pulse rate, rhythm, volume; assess capillary refill, skin temperature, color, and mottling; evaluate mental status (GCS).",
+     "Inspect abdomen for distension, tenderness, guarding; auscultate bowel sounds; palpate for organomegaly; check for pulsatile masses.",
+     "Check for peripheral edema, JVD, hepatomegaly; auscultate heart for murmurs, gallops; listen for lung crackles or wheeze.",
+     "Perform focused abdominal ultrasound if available to detect free fluid or organ injury."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use laboratory and imaging tests to confirm shock type, guide resuscitation, and monitor response.",
+    "t": [
+     {
+      "a": "CBC",
+      "b": "Detect anemia, leukocytosis or leukopenia; high WBC suggests infection; low hemoglobin indicates bleeding."
+     },
+     {
+      "a": "Serum lactate",
+      "b": "Elevated >2 mmol/L indicates tissue hypoxia; >4 mmol/L suggests severe shock; guides need for vasopressors."
+     },
+     {
+      "a": "Basic metabolic panel (electrolytes, BUN/creatinine)",
+      "b": "Assess renal perfusion; BUN/creatinine rise >1.5× baseline indicates AKI."
+     },
+     {
+      "a": "Arterial blood gas",
+      "b": "Determine PaO2, PaCO2, pH; diagnose hypoxemia, respiratory alkalosis, metabolic acidosis."
+     },
+     {
+      "a": "BNP/NT‑proBNP",
+      "b": "Elevated >300 pg/mL supports cardiogenic shock; helps differentiate from hypovolemic."
+     },
+     {
+      "a": "Coagulation profile (PT/INR, aPTT)",
+      "b": "Identify coagulopathy; prolonged times suggest liver dysfunction or DIC."
+     },
+     {
+      "a": "Liver function tests",
+      "b": "AST/ALT rise indicates hepatic ischemia; bilirubin rise suggests cholestasis."
+     },
+     {
+      "a": "Serum albumin",
+      "b": "Low <2.5 g/dL indicates chronic malnutrition or liver failure; affects fluid resuscitation."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Look for pulmonary edema (cardiogenic), infiltrates (septic), pneumothorax."
+     },
+     {
+      "a": "Focused bedside ultrasound (FAST, cardiac, lung)",
+      "b": "Detect free intraperitoneal fluid, pericardial tamponade, ventricular function, B‑lines."
+     },
+     {
+      "a": "Central venous pressure (if central line placed)",
+      "b": "CVP 8–12 mmHg suggests adequate preload; low CVP indicates hypovolemia."
+     },
+     {
+      "a": "Invasive arterial line",
+      "b": "Continuous MAP monitoring; target MAP >65 mmHg in septic shock."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply recognised criteria to classify shock and guide management intensity.",
+    "b": [
+     "Hypovolemic shock: Clinical signs + hemoglobin <10 g/dL or >30% blood loss; lactate >2 mmol/L.",
+     "Cardiogenic shock: Cardiac arrest, low cardiac output, elevated filling pressures, BNP >300 pg/mL."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate shock from conditions with overlapping features.",
+    "t": [
+     {
+      "a": "Anaphylaxis",
+      "b": "Sudden urticaria, bronchospasm, hypotension; treat with epinephrine, not fluids first."
+     },
+     {
+      "a": "Severe hypoglycaemia",
+      "b": "Altered mental status, seizures; check capillary glucose, treat with glucose."
+     },
+     {
+      "a": "Thrombotic microangiopathy (TTP/HUS)",
+      "b": "Microangiopathic hemolysis, thrombocytopenia, renal failure; look for schistocytes."
+     },
+     {
+      "a": "Adrenal crisis",
+      "b": "Hyponatraemia, hyperkalaemia, hypotension; check cortisol, give hydrocortisone."
+     },
+     {
+      "a": "Massive pulmonary embolism",
+      "b": "Sudden dyspnoea, tachycardia, right‑sided ECG changes; consider thrombolysis."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder of care from airway to advanced support, with drug choices and escalation triggers.",
+    "b": [
+     "1. Secure airway if GCS<8 or impending airway loss",
+     "2. Give high‑flow oxygen or intubate for SpO2<94%",
+     "3. Rapid fluid resuscitation with isotonic crystalloids, reassess MAP",
+     "4. If MAP<65 mmHg after fluids, start norepinephrine infusion",
+     "5. Add inotropes (dobutamine) if cardiogenic shock suspected",
+     "6. Treat underlying cause (control bleeding, relieve tamponade, antibiotics)",
+     "7. Monitor vitals, lactate, urine output hourly",
+     "8. Escalate to ICU when vasopressors >0.1 µg/kg/min or multi‑organ failure develops"
+    ],
+    "t": [
+     {
+      "a": "Norepinephrine",
+      "b": "First‑line vasopressor; increases SVR and MAP, preserves coronary perfusion"
+     },
+     {
+      "a": "Dobutamine",
+      "b": "Improves contractility in cardiogenic shock; avoid if severe tachycardia"
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, interactions and management steps for shock medications.",
+    "b": [
+     "Norepinephrine – tachycardia, arrhythmias, peripheral ischemia; monitor HR and skin perfusion",
+     "Dobutamine – tachycardia, hypertension, arrhythmias; titrate to MAP target",
+     "Ceftriaxone – hepatotoxicity, biliary sludging; avoid in severe liver failure",
+     "Metronidazole – neurotoxicity, seizures; avoid in severe renal impairment",
+     "Tranexamic acid – thrombosis risk; use only if bleeding confirmed"
+    ],
+    "t": [
+     {
+      "a": "Peripheral cyanosis",
+      "b": "Check for inadequate perfusion; consider increasing vasopressor or adding inotrope"
+     },
+     {
+      "a": "Renal dysfunction with diuretics",
+      "b": "Hold diuretics until urine output >0.5 mL/kg/h and creatinine stable"
+     },
+     {
+      "a": "Drug interaction – quinolones + warfarin",
+      "b": "Monitor INR closely and adjust warfarin dose"
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escal",
+    "p": "Recognise and act on life‑threatening sequelae of shock.",
+    "b": [
+     "Acute kidney injury – oliguria <0.5 mL/kg/h, creatinine rise >0.3 mg/dL in 48 h",
+     "Acute liver failure – INR>1.5, bilirubin>2 mg/dL, encephalopathy",
+     "Sepsis‑associated ARDS – PaO2/FiO2<300, bilateral infiltrates",
+     "Cardiac arrhythmias – new VT/VF, treat with ACLS",
+     "Thromboembolism – sudden hypoxia, chest pain, treat with anticoagulation"
+    ],
+    "t": [
+     {
+      "a": "Oliguria",
+      "b": "Initiate renal replacement therapy if refractory to fluids and vasopressors"
+     },
+     {
+      "a": "Encephalopathy",
+      "b": "Check ammonia, consider dialysis if hyperammonemia"
+     },
+     {
+      "a": "Sudden drop in MAP",
+      "b": "Re‑evaluate volume status, vasopressor dose, and source control"
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Factors that alter presentation, investigations and therapy in shock.",
+    "b": [
+     "HIV – opportunistic infections, altered immune response, drug interactions with antiretrovirals",
+     "TB – miliary disease can mimic sepsis, requires prolonged ATT",
+     "Malnutrition – low albumin, impaired drug metabolism",
+     "Pregnancy – increased plasma volume, altered drug pharmacokinetics",
+     "Diabetes – peripheral neuropathy masks pain, ketoacidosis mimics shock",
+     "Herbal remedies – hepatotoxicity, anticoagulant effects",
+     "Alcohol – chronic liver disease, coagulopathy",
+     "Renal failure – altered drug clearance, fluid overload risk",
+     "Liver failure – impaired clotting, drug metabolism",
+     "Elderly – blunted tachycardia, atypical symptoms"
+    ],
+    "t": [
+     {
+      "a": "Low albumin",
+      "b": "Adjust fluid type; consider albumin if severe hypoalbuminemia"
+     },
+     {
+      "a": "Antiretroviral interaction",
+      "b": "Avoid nephrotoxic drugs; monitor creatinine"
+     },
+     {
+      "a": "Pregnancy",
+      "b": "Use only pregnancy‑category C drugs; avoid teratogenic agents"
+     },
+     {
+      "a": "Herbal anticoagulants",
+      "b": "Check INR, consider reversal if bleeding"
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored management for vulnerable populations in low‑resource settings.",
+    "b": [
+     "Children – use weight‑based fluid volumes, avoid high‑dose vasopressors",
+     "Pregnancy – monitor uterine size, avoid teratogenic antibiotics",
+     "Elderly – lower MAP targets, monitor for delirium",
+     "HIV patients – early ART initiation after stabilization",
+     "Low‑resource settings – use lactate point‑of‑care testing, prioritize crystalloids, use affordable vasopressors like dopamine if norepinephrine unavailable"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Shock defined as inadequate oxygen delivery to tissues, MAP <65 mmHg or oxygen delivery <270 mL/min/kg",
+   "Hypovolemic shock: <30 % intravascular volume loss, MAP <65 mmHg, tachycardia >120 bpm",
+   "Cardiogenic shock: LVEF <30 %, pulmonary capillary wedge pressure >15 mmHg, MAP <65 mmHg",
+   "Septic shock: persistent hypotension after fluid resuscitation, lactate >4 mmol/L, vasopressor requirement",
+   "Distributive shock (anaphylaxis, neurogenic): MAP <65 mmHg, warm skin, pulse pressure widened",
+   "Cold, clammy skin indicates peripheral vasoconstriction, low cardiac output",
+   "Oliguria <0.5 mL/kg/h indicates renal hypoperfusion",
+   "Lactate >4 mmol/L predicts mortality >50 %",
+   "Norepinephrine first‑line vasopressor, target MAP 65–70 mmHg",
+   "Dobutamine improves contractility when LVEF <35 % in cardiogenic shock"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the first step in managing a patient with suspected hypovolemic shock?",
+    "a": "Secure airway, give high‑flow oxygen, and start rapid crystalloid infusion while monitoring vitals and urine output.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate cardiogenic from hypovolemic shock on bedside exam?",
+    "a": "Cardiogenic shock shows pulmonary crackles, S3 gallop, and elevated JVP; hypovolemic shock has a flat neck veins and clear lung fields.",
+    "hot": true
+   },
+   {
+    "q": "A patient with septic shock has a lactate of 7.0 mmol/L. What acid‑base disorder is most likely?",
+    "a": "Metabolic acidosis with anion gap >12, often accompanied by compensatory respiratory alkalosis.",
+    "hot": true
+   },
+   {
+    "q": "Why is norepinephrine preferred over dopamine in septic shock?",
+    "a": "Norepinephrine provides potent vasoconstriction with less tachyarrhythmia and is more effective at raising MAP.",
+    "hot": true
+   },
+   {
+    "q": "What is the significance of a split S2 and diastolic murmur in a septic patient?",
+    "a": "Suggests infective endocarditis, which predisposes to septic emboli and worsens shock.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain the pathophysiology of septic shock.",
+    "a": "Endotoxin and cytokine release cause vasodilation, capillary leak, and myocardial depression, leading to low systemic vascular resistance and tissue hypoxia.",
+    "hot": true
+   },
+   {
+    "q": "What bedside sign indicates impending cardiac arrest in shock?",
+    "a": "Weak, thready pulse with MAP <50 mmHg and absent peripheral pulses.",
+    "hot": true
+   },
+   {
+    "q": "Why should you avoid giving large volumes of crystalloids to a patient with cardiogenic shock?",
+    "a": "It increases preload, worsening pulmonary edema and right ventricular strain.",
+    "hot": true
+   },
+   {
+    "q": "What is the target MAP for patients with chronic hypertension in shock?",
+    "a": "Maintain MAP 10 mmHg above baseline to avoid organ hypoperfusion.",
+    "hot": true
+   },
+   {
+    "q": "How do you interpret a serum lactate of 3.5 mmol/L in a patient with shock?",
+    "a": "It indicates moderate tissue hypoxia; repeat lactate after resuscitation to assess response.",
+    "hot": true
+   },
+   {
+    "q": "What is the role of dobutamine in cardiogenic shock?",
+    "a": "Improves myocardial contractility and cardiac output without significantly raising systemic vascular resistance.",
+    "hot": true
+   },
+   {
+    "q": "Why is early goal‑directed therapy important in septic shock?",
+    "a": "It reduces mortality by correcting hypoperfusion, preventing organ failure, and limiting inflammatory damage.",
+    "hot": true
+   },
+   {
+    "q": "What is the most common cause of hypovolemic shock in low‑resource settings?",
+    "a": "Severe gastrointestinal bleeding or dehydration from diarrhoea.",
+    "hot": true
+   },
+   {
+    "q": "How do you assess urine output in a shock patient?",
+    "a": "Measure hourly output; <0.5 mL/kg/h indicates renal hypoperfusion and requires urgent intervention.",
+    "hot": true
+   },
+   {
+    "q": "What is the significance of a cold, clammy skin in shock?",
+    "a": "Reflects peripheral vasoconstriction to preserve core perfusion; indicates low cardiac output state.",
+    "hot": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man with cardiogenic shock has an LVEF of 25 % and pulmonary capillary wedge pressure of 18 mmHg. Which drug is most appropriate?",
+    "o": [
+     "Norepinephrine",
+     "Dobutamine",
+     "Atenolol",
+     "Hydrochlorothiazide"
+    ],
+    "a": 1,
+    "e": "Dobutamine improves contractility in low EF cardiogenic shock"
+   },
+   {
+    "q": "Which laboratory value best indicates ongoing tissue hypoxia in shock?",
+    "o": [
+     "Serum creatinine",
+     "Serum lactate",
+     "BNP",
+     "Hemoglobin"
+    ],
+    "a": 1,
+    "e": "Lactate rises with anaerobic metabolism"
+   },
+   {
+    "q": "A 28‑year‑old woman on OCPs presents with RUQ pain and hypovolemic shock from a ruptured hepatic cyst. Which benign tumour is most likely?",
+    "o": [
+     "Hepatocellular carcinoma",
+     "Hemangioma",
+     "Focal nodular hyperplasia",
+     "Adrenocortical carcinoma"
+    ],
+    "a": 1,
+    "e": "Hemangioma is the most common benign liver tumour that can rupture"
+   },
+   {
+    "q": "Which of the following is NOT a typical sign of cardiogenic shock?",
+    "o": [
+     "Pulmonary crackles",
+     "Clear lung fields",
+     "S3 gallop",
+     "Elevated JVP"
+    ],
+    "a": 1,
+    "e": "Clear lung fields are more typical of hypovolemic shock"
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 38‑year‑old woman presents with sudden severe abdominal pain, hypotension, and tachycardia. CT shows mesenteric ischemia with focal white deposits. She dies 36 h later.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Acute mesenteric ischemia due to arterial embolism leading to fat necrosis"
+     },
+     {
+      "q": "Which histological finding would you expect in the mesentery?",
+      "a": "Enzymatic fat necrosis with chalky white deposits"
+     },
+     {
+      "q": "What is the key management step that could have altered the outcome?",
+      "a": "Early surgical revascularisation or embolectomy within 6 h of symptom onset"
+     }
+    ]
+   },
+   {
+    "v": "A 27‑year‑old man develops septic shock 3 days after a tooth extraction. He has a split S2, diastolic murmur, splinter haemorrhages, and splenomegaly.",
+    "qs": [
+     {
+      "q": "What cardiac condition predisposed him?",
+      "a": "Mitral valve infective endocarditis"
+     },
+     {
+      "q": "Which organism is most likely?",
+      "a": "Streptococcus viridans"
+     },
+     {
+      "q": "What is the first step in management?",
+      "a": "Start empiric broad‑spectrum antibiotics covering streptococci and enterococci"
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming all shock is septic; failing to differentiate cardiogenic vs hypovolemic",
+   "Over‑reliance on MAP alone, ignoring lactate and urine output",
+   "Using dopamine as first‑line vasopressor in septic shock",
+   "Giving large fluid boluses to cardiogenic shock patients",
+   "Misinterpreting cold, clammy skin as hypovolemic rather than low‑output",
+   "Ignoring the need for early antibiotics in septic shock",
+   "Failing to monitor urine output hourly",
+   "Not recognizing the significance of a split S2 in septic patients"
+  ],
+  "exam": [
+   "What is the first step in managing a patient with suspected hypovolemic shock? — Secure airway, give high‑flow oxygen, and start rapid crystalloid infusion while monitoring vitals and urine output.",
+   "How do you differentiate cardiogenic from hypovolemic shock on bedside exam? — Cardiogenic shock shows pulmonary crackles, S3 gallop, and elevated JVP; hypovolemic shock has a flat neck veins and clear lung fields.",
+   "A patient with septic shock has a lactate of 7.0 mmol/L. What acid‑base disorder is most likely? — Metabolic acidosis with anion gap >12, often accompanied by compensatory respiratory alkalosis.",
+   "Why is norepinephrine preferred over dopamine in septic shock? — Norepinephrine provides potent vasoconstriction with less tachyarrhythmia and is more effective at raising MAP.",
+   "What is the significance of a split S2 and diastolic murmur in a septic patient? — Suggests infective endocarditis, which predisposes to septic emboli and worsens shock.",
+   "Explain the pathophysiology of septic shock. — Endotoxin and cytokine release cause vasodilation, capillary leak, and myocardial depression, leading to low systemic vascular resistance and tissue hypoxia.",
+   "What bedside sign indicates impending cardiac arrest in shock? — Weak, thready pulse with MAP <50 mmHg and absent peripheral pulses.",
+   "Why should you avoid giving large volumes of crystalloids to a patient with cardiogenic shock? — It increases preload, worsening pulmonary edema and right ventricular strain.",
+   "What is the target MAP for patients with chronic hypertension in shock? — Maintain MAP 10 mmHg above baseline to avoid organ hypoperfusion.",
+   "How do you interpret a serum lactate of 3.5 mmol/L in a patient with shock? — It indicates moderate tissue hypoxia; repeat lactate after resuscitation to assess response.",
+   "What is the role of dobutamine in cardiogenic shock? — Improves myocardial contractility and cardiac output without significantly raising systemic vascular resistance.",
+   "Why is early goal‑directed therapy important in septic shock? — It reduces mortality by correcting hypoperfusion, preventing organ failure, and limiting inflammatory damage.",
+   "What is the most common cause of hypovolemic shock in low‑resource settings? — Severe gastrointestinal bleeding or dehydration from diarrhoea.",
+   "How do you assess urine output in a shock patient? — Measure hourly output; <0.5 mL/kg/h indicates renal hypoperfusion and requires urgent intervention."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-17",
+  "checked": "2026-10-17",
+  "trimmed": 3
+ }
 }

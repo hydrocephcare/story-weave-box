@@ -1,0 +1,193 @@
+{
+ "medical": true,
+ "title": "Chronic Hepatitis",
+ "subject": "Medicine",
+ "summary": "Chronic hepatitis is persistent liver inflammation, most often due to hepatitis B or C, that can progress to fibrosis, cirrhosis and hepatocellular carcinoma. Diagnosis relies on serology, viral load and liver assessment, while management focuses on antiviral therapy, monitoring and prevention of complications.",
+ "aka": [
+  "chronic viral hepatitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Chronic hepatitis is defined as liver inflammation lasting >6 months, usually confirmed by persistent HBsAg or anti‑HCV antibodies together with elevated ALT/AST or histologic activity.",
+   "b": [
+    "HBsAg positive >6 months → chronic hepatitis B",
+    "Anti‑HCV positive + RNA detectable → chronic hepatitis C"
+   ],
+   "t": [
+    {
+     "a": "HBsAg, anti‑HBc IgG, anti‑HCV",
+     "b": "Is the infection chronic? Positive HBsAg or anti‑HCV with RNA confirms chronic disease"
+    },
+    {
+     "a": "ALT/AST",
+     "b": "Is there active hepatocellular injury? ALT >2× ULN suggests active inflammation"
+    },
+    {
+     "a": "HBV DNA or HCV RNA quantification",
+     "b": "What is viral replication level? High HBV DNA (>20,000 IU/mL) or HCV RNA (>800,000 IU/mL) guides treatment urgency"
+    },
+    {
+     "a": "Transient elastography (FibroScan) or APRI score",
+     "b": "What is fibrosis stage? FibroScan ≥9.5 kPa or APRI ≥1.0 indicates significant fibrosis"
+    },
+    {
+     "a": "Ultrasound ± AFP (if cirrhosis)",
+     "b": "Is there hepatocellular carcinoma? Any focal lesion or AFP >400 ng/mL warrants further imaging"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by fibrosis (METAVIR F0‑F4) and activity (A0‑A3). Cirrhosis (F4) carries risk of decompensation and HCC.",
+   "b": [
+    "F0‑F1: minimal fibrosis – monitor",
+    "F2‑F3: moderate‑advanced fibrosis – consider antiviral therapy",
+    "F4: cirrhosis – start antiviral, screen for HCC, vaccinate against HAV/HBV"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the dominant causes are viral, but co‑factors are common.",
+   "b": [
+    "Hepatitis B (endemic, perinatal or early childhood exposure)",
+    "Hepatitis C (injecting drug use, unsafe medical injections)",
+    "HIV co‑infection (accelerates fibrosis)",
+    "Schistosoma mansoni (hepatic periportal fibrosis)",
+    "Traditional herbal remedies (hepatotoxic alkaloids)",
+    "Alcoholic liver disease (often co‑exists)",
+    "Non‑alcoholic fatty liver disease (rising with urbanisation)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Most patients are asymptomatic; when symptoms appear they are vague and reflect progressive liver injury.",
+   "b": [
+    "Fatigue, anorexia, mild right‑upper‑quadrant discomfort",
+    "Occasional jaundice when bilirubin rises",
+    "Signs of chronic liver disease: spider naevi, palmar erythema, hepatomegaly"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that answer the key clinical questions; when a test is unavailable, use clinical surrogates.",
+   "t": [
+    {
+     "a": "HBsAg, anti‑HBc IgG, anti‑HCV",
+     "b": "Is infection chronic? Positive result confirms chronic hepatitis B or C"
+    },
+    {
+     "a": "HBV DNA or HCV RNA PCR",
+     "b": "What is viral load? Guides need for antiviral therapy; if PCR unavailable, use ALT trend as proxy"
+    },
+    {
+     "a": "ALT/AST",
+     "b": "Is there active inflammation? ALT >2× ULN indicates active disease"
+    },
+    {
+     "a": "Platelet count, INR, albumin",
+     "b": "Is there synthetic dysfunction? Low platelets, INR >1.5, albumin <35 g/L suggest cirrhosis"
+    },
+    {
+     "a": "APRI or FIB‑4 score",
+     "b": "What is fibrosis stage when FibroScan unavailable? APRI ≥1.0 or FIB‑4 ≥3.25 indicates significant fibrosis"
+    },
+    {
+     "a": "Ultrasound ± AFP (every 6 months if cirrhosis)",
+     "b": "Is HCC present? Any focal lesion or AFP >400 ng/mL prompts CT/MRI"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify patients at risk of rapid decompensation or death.",
+   "b": [
+    "Ascites, hepatic encephalopathy, variceal bleeding – decompensated cirrhosis",
+    "Sudden rise in bilirubin >5 mg/dL",
+    "AFP >400 ng/mL or new liver mass – possible HCC",
+    "Coagulopathy (INR >1.5) with bleeding"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying virus, support liver function and prevent complications.",
+   "b": [
+    "Tenofovir or entecavir for chronic hepatitis B – potent, low resistance, safe in renal impairment",
+    "Pegylated interferon‑α or direct‑acting antivirals (sofosbuvir/ledipasvir) for hepatitis C – cure rates >95 %",
+    "Avoid hepatotoxic drugs (e.g., isoniazid without pyridoxine, high‑dose paracetamol)",
+    "Vaccinate against HAV and HBV (if not immune)",
+    "Manage portal hypertension: non‑selective beta‑blockers, endoscopic variceal ligation",
+    "Screen for HCC with ultrasound ± AFP every 6 months in cirrhosis"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Long‑term monitoring prevents progression and detects complications early.",
+   "b": [
+    "HBV DNA every 6–12 months; HCV RNA at end of therapy and 12 weeks after",
+    "ALT/AST and liver panel every 3–6 months",
+    "FibroScan or APRI annually to track fibrosis",
+    "Ultrasound ± AFP every 6 months if F4",
+    "Counselling on safe injection practices, condom use, and avoidance of unregulated herbal medicines"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Alcoholic hepatitis – history of heavy alcohol use, AST:ALT ratio >2",
+    "Non‑alcoholic fatty liver disease – metabolic risk factors, ultrasound steatosis without viral markers",
+    "Autoimmune hepatitis – positive ANA/ASMA, hypergammaglobulinemia"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal ALT does not exclude significant fibrosis; rely on elastography or APRI",
+    "Low HBV DNA in immune‑tolerant phase may still progress; consider age and fibrosis",
+    "AFP can be normal in early HCC; imaging is essential"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "New onset ascites or encephalopathy",
+  "Upper GI bleed (hematemesis, melena)",
+  "Sudden jaundice with bilirubin >5 mg/dL",
+  "Rapidly rising AFP or new liver mass"
+ ],
+ "faq": [
+  {
+   "q": "Why is tenofovir preferred over lamivudine for chronic hepatitis B?",
+   "a": "Tenofovir has a higher barrier to resistance and better viral suppression, especially important in low‑resource settings where monitoring is limited."
+  },
+  {
+   "q": "Can a patient with normal ALT still have cirrhosis?",
+   "a": "Yes; fibrosis can progress silently. Imaging or elastography is needed to assess stage."
+  },
+  {
+   "q": "When is liver biopsy still required?",
+   "a": "When non‑invasive scores are inconclusive and the result will change management, such as distinguishing autoimmune hepatitis from viral disease."
+  }
+ ],
+ "exam": [
+  "A 32‑year‑old man with HBsAg positive for 8 years presents with fatigue. ALT is 45 U/L (ULN 40). What is the next step — assess fibrosis with FibroScan or APRI before deciding on antiviral therapy.",
+  "A patient with chronic hepatitis C is pregnant. Which antiviral is contraindicated and why — ribavirin is avoided because of teratogenicity; defer treatment until postpartum.",
+  "You see a cirrhotic patient with new upper‑GI bleed. What immediate management is required — resuscitate, give IV octreotide, start prophylactic antibiotics, arrange urgent endoscopy.",
+  "A 45‑year‑old with chronic hepatitis B has HBV DNA 100 million IU/mL but normal ALT. How do you justify treatment — high viral load in a patient >30 years old predicts progression; start tenofovir.",
+  "How does schistosomiasis contribute to chronic hepatitis in East Africa — periportal fibrosis from S. mansoni adds to portal hypertension and can mimic viral cirrhosis.",
+  "Explain why AFP alone is insufficient for HCC screening in cirrhosis — AFP can be normal in early HCC; ultrasound provides structural detection.",
+  "A patient on tenofovir develops rising creatinine. What alternative antiviral can be used and why — switch to entecavir, which has less renal toxicity, provided no resistance.",
+  "What lifestyle advice reduces progression of chronic hepatitis — avoid alcohol, maintain healthy weight, vaccinate against HAV/HBV, limit hepatotoxic herbs."
+ ],
+ "related": [
+  "Acute viral hepatitis",
+  "Cirrhosis",
+  "Hepatocellular carcinoma",
+  "Portal hypertension",
+  "Hepatitis B vaccination",
+  "Direct‑acting antivirals for HCV"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-17",
+ "reviewed": false
+}

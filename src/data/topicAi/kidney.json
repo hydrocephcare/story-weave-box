@@ -71,5 +71,370 @@
  "kind": "anatomy",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Clinical assessment targets acute structural injury, nephritic versus nephrotic syndromes, obstructive uropathy, and chronic renal architectural deterioration.",
+    "b": [
+     "History must probe: hematuria (smoky brown suggests glomerular origin; bright red with clots suggests lower tract bleeding), frothy urine indicating heavy proteinuria, oliguria, flank pain, and systemic symptoms like hemoptysis or arthralgia.",
+     "Drug and exposure history: query native herbal remedies, traditional concoctions, non-steroidal anti-inflammatory drugs (NSAIDs), aminoglycosides, tenofovir disoproxil fumarate, and recent contrast agents.",
+     "Inspection: assess volume status via jugular venous pressure, peripheral pitting edema, periorbital edema, pallor from defective erythropoietin production, and excoriations from uremic pruritus.",
+     "Bimanual renal palpation: place one hand posteriorly beneath the 12th rib and anterior hand flat on the abdomen; lift posteriorly while depressing anteriorly during expiration to entrap and ballotte the kidney.",
+     "Ascites examination: elicit shifting dullness by percussing from resonance to flank dullness, rolling the patient toward you, and re-percussing the newly dependent resonant flank.",
+     "Fluid thrill: a palpable vibration transmitted across the abdomen when one flank is tapped while an assistant's hand dampens transmission through abdominal wall fat. Bedside examination cannot establish glomerular filtration rate or etiology."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory evaluation differentiates pre-renal, intrinsic, and post-renal pathology and screens for life-threatening metabolic derangements.",
+    "t": [
+     {
+      "a": "Urine dipstick and microscopy",
+      "b": "Acanthocytes or red blood cell casts confirm glomerulonephritis; broad waxy casts indicate chronic kidney disease; muddy brown granular casts reflect acute tubular necrosis. Heavy proteinuria (3+ to 4+) prompts nephrotic quantification."
+     },
+     {
+      "a": "Serum creatinine and eGFR (CKD-EPI)",
+      "b": "Quantifies filtration deficit; stage G3 is 30-59 mL/min/1.73m², G4 is 15-29 mL/min/1.73m², and G5 is <15 mL/min/1.73m² (kidney failure). When unavailable, monitor serial creatinine and daily urine output volume."
+     },
+     {
+      "a": "Serum potassium and ECG",
+      "b": "Hyperkalemia is the most immediately life-threatening electrolyte derangement in renal failure; ECG reveals peaked T waves, flattened P waves, prolonged PR, and widened QRS complexes preceding sine-wave arrest."
+     },
+     {
+      "a": "Serum phosphate and calcium",
+      "b": "In chronic renal failure, hyperphosphatemia develops because failing kidneys are unable to excrete filtered phosphate loads; this drives secondary hyperparathyroidism and hypocalcemia."
+     },
+     {
+      "a": "Anti-GBM antibodies and kidney biopsy",
+      "b": "In rapidly progressive glomerulonephritis with hemoptysis (Goodpasture syndrome), targets the non-collagenous domain (NC1) of the alpha-3 chain of type IV collagen. Immunofluorescence shows classic linear IgG deposition along the basement membrane."
+     },
+     {
+      "a": "Aldosterone-to-renin ratio (ARR)",
+      "b": "A high aldosterone-to-renin ratio (elevated aldosterone with suppressed plasma renin activity) indicates primary hyperaldosteronism, distinguishing it from secondary hyperreninemic hyperaldosteronism."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Renal disease is staged by structural chronicity, functional filtration decline, and etiology-specific pathophysiologic patterns.",
+    "b": [
+     "KDIGO CKD definition: persistent kidney damage or eGFR <60 mL/min/1.73m² present for >=3 months; staged G1 (>=90) to G5 (<15 mL/min/1.73m²).",
+     "Malignant nephrosclerosis pathology: long-standing or accelerated hypertension manifests as severe left ventricular hypertrophy, shrunken scarred kidneys, and hyperplastic arteriolosclerosis with concentric 'onion-skin' intimal thickening on histopathology.",
+     "Fluid and electrolyte transport: most reabsorbed water in the kidney (approximately 65-70%) occurs isosmotically in the proximal convoluted tubule via constitutive aquaporin-1 channels.",
+     "Allograft immunology: a renal allograft matched for HLA-DR (Class II) avoids primary CD4+ T-cell allorecognition; if no rejection occurs, donor-specific alloantibody generation and cell-mediated cytotoxicity remain quiescent."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Somatic, abdominal, and systemic disorders frequently mimic primary renal parenchymal pathology.",
+    "t": [
+     {
+      "a": "Pre-renal azotemia vs Acute tubular necrosis",
+      "b": "Pre-renal shows BUN/creatinine ratio >20:1, FeNa <1%, urine sodium <20 mEq/L, and hyaline casts; acute tubular necrosis shows ratio <15:1, FeNa >2%, urine sodium >40 mEq/L, and muddy brown casts."
+     },
+     {
+      "a": "Musculoskeletal flank pain vs Renal colic",
+      "b": "Musculoskeletal pain is reproducible by spinal palpation and changes with posture; renal colic is severe, paroxysmal, radiates to the groin, and has costovertebral tenderness with microscopic hematuria."
+     },
+     {
+      "a": "Goodpasture syndrome vs Granulomatosis with polyangiitis (GPA)",
+      "b": "Both present with pulmonary hemorrhage and glomerulonephritis; Goodpasture displays linear IgG on basement membrane and anti-alpha-3(IV) collagen antibodies; GPA displays c-ANCA (anti-PR3) positivity and pauci-immune crescentic necrotizing GN on biopsy."
+     },
+     {
+      "a": "Chronic kidney disease vs Acute kidney injury",
+      "b": "CKD displays small kidneys on ultrasound (<9 cm), normocytic anemia, hyperphosphatemia, and hypocalcemia; AKI typically features normal to enlarged renal size, abrupt creatinine surges, and dynamic urinary sediment changes."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "exam",
+    "p": "High-yield examination cases focusing on pharmacology, pathology, anatomy, and clinical decision-making.",
+    "b": [
+     "Q: In pre-renal acute kidney injury, what is the expected urine sodium value? A: Urine sodium is typically <20 mEq/L due to intact tubular sodium reabsorption.",
+     "Q: What is the most life-threatening electrolyte abnormality encountered in chronic kidney disease? A: Hyperkalemia, which precipitates lethal cardiac conduction blocks and ventricular arrhythmias.",
+     "Q: Why does a patient with advanced chronic renal failure develop hyperphosphatemia? A: The failing kidneys exhibit reduced glomerular filtration and are unable to excrete the daily dietary filtered phosphate load.",
+     "Q: A woman dies of basal ganglia hemorrhage with LVH, scarred kidneys, and concentric arteriolar intimal thickening; what is the diagnosis? A: Malignant (accelerated) hypertension leading to hyperplastic arteriolosclerosis.",
+     "Q: In which segment of the nephron does the majority of water reabsorption take place? A: The proximal convoluted tubule, accounting for approximately 65% to 70% of total reabsorbed water.",
+     "Q: What is the target antigen and immunofluorescence pattern in Goodpasture syndrome? A: The alpha-3 chain of type IV collagen (non-collagenous domain); immunofluorescence demonstrates linear IgG deposition along the glomerular basement membrane.",
+     "Q: How does a fluid thrill examination differ from testing for shifting dullness? A: Shifting dullness maps changing borders of resonance when rolling; a fluid thrill detects a fluid shockwave across the abdomen dampened by an assistant's hand.",
+     "Q: What does a kidney size <9 cm indicate on renal ultrasonography? A: Irreversible chronic kidney disease with parenchymal thinning and fibrosis.",
+     "Q: Which common analgesics must be avoided in patients with an eGFR <30 mL/min/1.73m²? A: Systemic non-steroidal anti-inflammatory drugs such as ibuprofen and naproxen, which inhibit renal prostaglandins and worsen ischemic acute renal failure.",
+     "Q: What endocrine screening result indicates primary hyperaldosteronism? A: A high aldosterone-to-renin ratio (elevated plasma aldosterone accompanied by suppressed plasma renin activity)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Initial stabilization: Address immediate life-threatening issues such as hyperkalemia (e.g., calcium gluconate for cardiac protection, insulin/glucose, salbutamol nebulization, potassium-binding resins) or severe metabolic acidosis (sodium bicarbonate if pH <7.1).",
+     "Fluid management: Optimize intravascular volume. In pre-renal injury, administer intravenous crystalloids (e.g., normal saline) cautiously, monitoring for fluid overload. In established kidney injury, restrict fluids to prevent pulmonary edema.",
+     "Electrolyte correction: Systematically correct abnormalities like hyponatremia, hyperphosphatemia (phosphate binders like calcium acetate or sevelamer carbonate with meals), and hypocalcemia (calcium and vitamin D supplementation).",
+     "Medication review: Discontinue nephrotoxic drugs (e.g., NSAIDs, aminoglycosides, ACE inhibitors/ARBs in acute settings) and adjust dosages of renally excreted medications according to estimated glomerular filtration rate (eGFR).",
+     "Nutritional support: Provide adequate caloric and protein intake, often with dietary restrictions on sodium, potassium, and phosphate to manage electrolyte imbalances and fluid status. Protein restriction may be considered in advanced CKD to reduce uremic symptoms.",
+     "Blood pressure control: Achieve target blood pressure (e.g., <130/80 mmHg for most CKD patients) using agents like ACE inhibitors or ARBs (with careful monitoring of renal function and potassium), calcium channel blockers, or diuretics.",
+     "Anemia management: Treat anemia of CKD with erythropoiesis-stimulating agents (ESAs) and iron supplementation (oral or intravenous) to maintain hemoglobin levels, avoiding overcorrection which can increase cardiovascular risk.",
+     "Bone and mineral disorder management: Beyond phosphate binders and vitamin D, consider calcimimetics (e.g., cinacalcet) for secondary hyperparathyroidism if parathyroid hormone (PTH) levels remain elevated despite other measures.",
+     "Renal replacement therapy (RRT): Initiate dialysis (hemodialysis or peritoneal dialysis) or consider kidney transplantation for end-stage renal disease (ESRD) when conservative measures fail to control uremic symptoms or life-threatening complications arise."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "NSAIDs (e.g., ibuprofen, naproxen): Can cause acute kidney injury by inhibiting prostaglandin synthesis, leading to afferent arteriolar vasoconstriction. Avoid in patients with pre-existing renal impairment or those at risk of AKI. If unavoidable, use for the shortest duration and lowest effective dose, monitoring renal function.",
+     "Aminoglycosides (e.g., gentamicin): Nephrotoxic, causing acute tubular necrosis. Monitor serum creatinine and drug levels closely. Use alternative antibiotics if possible, or extend dosing intervals in renal impairment.",
+     "ACE inhibitors/ARBs (e.g., enalapril, losartan): Can cause a reversible decrease in GFR, especially in bilateral renal artery stenosis or volume depletion, by dilating the efferent arteriole. Monitor renal function and potassium after initiation or dose changes. Discontinue temporarily in AKI.",
+     "Diuretics (e.g., furosemide, hydrochlorothiazide): Can cause volume depletion and electrolyte imbalances (e.g., hypokalemia, hyponatremia), potentially exacerbating AKI. Monitor fluid status and electrolytes; adjust dose or discontinue if severe imbalances occur.",
+     "Contrast media (e.g., for CT scans): Can induce contrast-induced nephropathy (CIN), particularly in patients with pre-existing CKD, diabetes, or volume depletion. Hydrate patients adequately before and after contrast administration; consider N-acetylcysteine, though its benefit is debated. Use iso-osmolar contrast if available.",
+     "Metformin: Accumulates in renal failure, increasing the risk of lactic acidosis. Discontinue if eGFR falls below 30 mL/min/1.73m² and use with caution if eGFR is between 30-45 mL/min/1.73m².",
+     "Potassium-sparing diuretics (e.g., spironolactone, amiloride): Can cause hyperkalemia, especially in renal impairment or when combined with ACE inhibitors/ARBs. Monitor serum potassium closely; avoid in advanced CKD.",
+     "Herbal remedies and traditional medicines: Many traditional remedies are nephrotoxic or interact with conventional medications. Always inquire about their use and advise caution, as their composition and effects are often unknown or unregulated."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Hyperkalemia: Serum potassium >6.0 mmol/L, especially with ECG changes (peaked T waves, widened QRS), requires immediate medical intervention (calcium gluconate, insulin/glucose, salbutamol) and urgent escalation to consider dialysis.",
+     "Severe metabolic acidosis: Persistent acidosis (pH <7.1) despite bicarbonate supplementation, or with severe symptoms (Kussmaul breathing), indicates a need for urgent RRT.",
+     "Pulmonary edema: Fluid overload leading to respiratory distress and hypoxemia, unresponsive to diuretics, necessitates urgent RRT to remove excess fluid.",
+     "Uremic encephalopathy: Altered mental status, seizures, or coma due to accumulation of uremic toxins. This is a strong indication for urgent initiation of dialysis.",
+     "Uremic pericarditis: Inflammation of the pericardium due to uremia, presenting with chest pain, friction rub, or signs of tamponade. Requires urgent dialysis.",
+     "Uncontrolled hypertension: Blood pressure refractory to multiple antihypertensive agents, particularly if associated with end-organ damage, may require RRT for fluid and blood pressure control.",
+     "Severe bleeding diathesis: Uremic platelet dysfunction can lead to significant bleeding. If severe and unresponsive to desmopressin or other measures, dialysis may be needed.",
+     "Progressive decline in renal function: If eGFR continues to fall despite optimal medical management, or if CKD progresses rapidly, referral to a nephrologist for consideration of RRT planning is essential."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV: HIV-associated nephropathy (HIVAN) can cause rapid progression to ESRD. Antiretroviral drugs can also be nephrotoxic. Co-management with an HIV specialist is crucial, and drug dosages must be adjusted for renal function.",
+     "TB: Renal tuberculosis can cause sterile pyuria and progressive kidney damage. Anti-TB drugs can be nephrotoxic, requiring careful monitoring and dose adjustment. TB can also cause adrenal insufficiency, affecting electrolyte balance.",
+     "Malnutrition: Common in advanced CKD, exacerbating uremic symptoms and increasing mortality. Requires careful nutritional assessment and support, balancing protein intake with electrolyte restrictions.",
+     "Pregnancy: Renal physiology changes significantly in pregnancy. Pre-existing CKD increases risks for both mother and fetus (pre-eclampsia, preterm birth). Specific drug choices and monitoring are needed. Acute kidney injury in pregnancy can be due to pre-eclampsia, HELLP syndrome, or septic abortion.",
+     "Diabetes: The leading cause of CKD (diabetic nephropathy). Poor glycemic control accelerates kidney damage. Diabetic patients are also at higher risk for AKI and contrast-induced nephropathy. Strict blood pressure and glycemic control are paramount.",
+     "Drugs and herbal remedies: Many over-the-counter medications, traditional remedies, and prescribed drugs can cause or worsen kidney injury. A thorough medication history, including herbal use, is vital. Patients often do not disclose herbal use unless specifically asked.",
+     "Alcohol: Chronic heavy alcohol use can contribute to hypertension, liver disease (which impacts renal function via hepatorenal syndrome), and malnutrition, all indirectly affecting kidney health.",
+     "Kidney or liver failure: Co-existing liver failure (e.g., hepatorenal syndrome) significantly complicates kidney management, often requiring specific interventions like terlipressin and albumin. Renal failure itself affects drug metabolism and excretion, necessitating careful drug selection and dosing.",
+     "Age extremes: Children and the elderly have different physiological responses to kidney injury and different drug pharmacokinetics. Dosing must be carefully adjusted. The elderly are more susceptible to AKI due to polypharmacy, comorbidities, and reduced renal reserve."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: Congenital anomalies of the kidney and urinary tract (CAKUT) are common causes of CKD. Management requires careful attention to growth and development, nutrition, and psychological support. Dosing of medications is weight-based, and long-term implications for future health are significant.",
+     "Pregnancy: Pre-existing CKD increases the risk of pre-eclampsia, preterm delivery, and fetal growth restriction. Close monitoring of blood pressure, proteinuria, and renal function is essential. Nephrotoxic drugs must be avoided. Dialysis may be required if severe renal failure develops, with specific considerations for fetal well-being.",
+     "The elderly: Have reduced renal reserve and multiple comorbidities, making them highly susceptible to AKI and drug-induced nephrotoxicity. Polypharmacy is common. GFR estimation formulas may overestimate renal function. Management focuses on minimizing nephrotoxic exposures and managing comorbidities.",
+     "People with HIV: At increased risk for HIV-associated nephropathy (HIVAN), immune complex kidney disease, and drug-induced nephrotoxicity from antiretroviral therapy. Close monitoring of renal function and proteinuria is crucial. Co-management with HIV specialists is essential for optimal outcomes.",
+     "Low-resource settings: Access to diagnostic tools (e.g., advanced imaging, specialized labs) and treatment options (e.g., dialysis, transplantation) is often limited. Emphasis is placed on early detection, prevention of progression, and conservative management of complications. Cost-effective interventions and community-based care are vital. Challenges include late presentation"
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Renal blood flow: 1-1.2 L/min (20-25% of cardiac output)",
+   "Kidney size: 10-12 cm length, 5-7 cm width, 3-4 cm thickness",
+   "Normal GFR: >90 mL/min/1.73m²",
+   "CKD Stage 3: GFR 30-59 mL/min/1.73m²",
+   "CKD Stage 4: GFR 15-29 mL/min/1.73m²",
+   "CKD Stage 5: GFR <15 mL/min/1.73m² or on dialysis",
+   "Urine sodium in pre-renal AKI: <20 mEq/L",
+   "Urine sodium in intrinsic AKI: >40 mEq/L",
+   "Normal serum phosphate: 2.5-4.5 mg/dL",
+   "Normal serum potassium: 3.5-5.0 mEq/L"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What are the key differences in the anatomical relations of the right and left kidneys?",
+    "a": "The right kidney is typically slightly lower due to the liver. Anteriorly, the right kidney relates to the liver, duodenum, and right colic flexure, while the left kidney relates to the spleen, stomach, pancreas, jejunum, and left colic flexure. Posteriorly, both relate to the diaphragm, psoas major, quadratus lumborum, and transversus abdominis muscles, as well as subcostal, iliohypogastric, and ilioinguinal nerves.",
+    "hot": true
+   },
+   {
+    "q": "Describe the arterial supply to the kidney, including its segmental nature.",
+    "a": "The renal artery, a direct branch of the abdominal aorta, typically divides into five segmental arteries (apical, upper anterior, middle anterior, lower, and posterior) before entering the renal hilum. These segmental arteries are end arteries, meaning they do not anastomose significantly, which forms the basis for surgical renal segmentation.",
+    "hot": true
+   },
+   {
+    "q": "Outline the lymphatic drainage of the kidneys.",
+    "a": "The lymphatic vessels of the kidneys follow the renal arteries and drain into the lateral aortic (para-aortic) lymph nodes. These nodes are located at the level of the renal artery origin, between L1 and L2 vertebrae.",
+    "hot": true
+   },
+   {
+    "q": "What is the significance of accessory renal arteries?",
+    "a": "Accessory renal arteries are common anatomical variations, occurring in about 30% of individuals. They can arise from the aorta above or below the main renal artery and often supply the poles of the kidney. Their presence is crucial in surgical procedures like nephrectomy or kidney transplantation, as they can complicate vascular anastomoses and lead to renal ischemia if not identified.",
+    "hot": true
+   },
+   {
+    "q": "In chronic kidney disease, which electrolyte abnormality is most life-threatening?",
+    "a": "Hyperkalemia is the most life-threatening electrolyte abnormality in chronic kidney disease due to its potential to cause fatal cardiac arrhythmias.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient with chronic renal failure develops hyperphosphatemia. This is because the failing kidneys are unable to ---",
+    "a": "A patient with chronic renal failure develops hyperphosphatemia because the failing kidneys are unable to adequately excrete phosphate. This leads to increased serum phosphate levels, which can contribute to secondary hyperparathyroidism and renal osteodystrophy.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Most reabsorbed water in the kidney occurs in the ---",
+    "a": "Most reabsorbed water in the kidney occurs in the proximal convoluted tubule. Approximately 65-70% of filtered water is reabsorbed here, largely driven by the reabsorption of solutes like sodium.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient presents with rapidly progressive glomerulonephritis and hemoptysis, raising suspicion for Goodpasture syndrome. Identify the specific antigen targeted in this condition and describe the characteristic immunofluorescence findings.",
+    "a": "In Goodpasture syndrome, the specific antigen targeted is the alpha-3 chain of type IV collagen, found in the glomerular and alveolar basement membranes. Characteristic immunofluorescence findings show a linear deposition of IgG along the glomerular basement membrane.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the renal fascia (Gerota's fascia) and its clinical significance?",
+    "a": "The renal fascia is a fibrous connective tissue capsule that encloses the kidney and adrenal gland, separating them from surrounding fat. It helps anchor the kidney to the posterior abdominal wall and provides a barrier against the spread of infection or hemorrhage from the kidney to adjacent structures."
+   },
+   {
+    "q": "Explain the concept of renal segments and their surgical relevance.",
+    "a": "Renal segments are distinct areas of the kidney supplied by individual segmental arteries, which are end arteries. This anatomical arrangement allows for segmental nephrectomy, where a diseased segment can be removed while preserving the rest of the kidney, minimizing blood loss."
+   },
+   {
+    "q": "How does the venous drainage of the kidneys differ on the right and left sides?",
+    "a": "The left renal vein is longer than the right, passing anterior to the aorta and posterior to the superior mesenteric artery before draining into the inferior vena cava (IVC). It also receives the left gonadal vein and the left suprarenal vein. The right renal vein is shorter and drains directly into the IVC."
+   },
+   {
+    "q": "What are the common causes of hydronephrosis and how is it diagnosed?",
+    "a": "Common causes of hydronephrosis include kidney stones, strictures, tumors, benign prostatic hyperplasia, and congenital anomalies. It is typically diagnosed by renal ultrasound, which shows dilation of the renal pelvis and calyces. CT scans can further delineate the cause and extent of obstruction."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 52-year-old man with chronic kidney disease receives a renal allograft matched by tissue typing for HLA-DR (Class II) antigens. He does not develop rejection; his serum creatinine remains normal. Which immunologic abnormality is most likely to be absent in this patient?",
+    "o": [
+     "Antibodies against donor HLA-DR antigens",
+     "T-cell mediated cytotoxicity against donor cells",
+     "Complement activation against donor endothelium",
+     "B-cell activation against donor major histocompatibility complex"
+    ],
+    "a": 0,
+    "e": "Matching for HLA-DR (Class II) antigens significantly reduces the likelihood of developing antibodies against these specific donor antigens, which are crucial for indirect allorecognition and antibody-mediated rejection.",
+    "past": true
+   },
+   {
+    "q": "Which of the following structures is NOT typically found anterior to the left kidney?",
+    "o": [
+     "Spleen",
+     "Pancreas",
+     "Duodenum",
+     "Stomach"
+    ],
+    "a": 2,
+    "e": "The duodenum (specifically its second part) is typically anterior to the right kidney, while the spleen, pancreas, and stomach are anterior relations of the left kidney."
+   },
+   {
+    "q": "A patient presents with severe flank pain radiating to the groin, hematuria, and nausea. On examination, costovertebral angle tenderness is positive. Which investigation would be most appropriate initially to confirm the diagnosis in a low-resource setting?",
+    "o": [
+     "CT KUB (Kidney, Ureter, Bladder)",
+     "Intravenous Urography (IVU)",
+     "Renal Ultrasound",
+     "Magnetic Resonance Urography (MRU)"
+    ],
+    "a": 2,
+    "e": "Renal ultrasound is readily available, non-invasive, and effective in detecting hydronephrosis and many renal stones, making it the most appropriate initial investigation in a low-resource setting for suspected nephrolithiasis."
+   },
+   {
+    "q": "Which of the following statements regarding the renal capsule is correct?",
+    "o": [
+     "It is composed of adipose tissue and provides cushioning.",
+     "It is a dense, fibrous layer that protects the kidney from trauma and infection.",
+     "It contains the majority of the nephrons and renal corpuscles.",
+     "It is continuous with the renal pelvis and ureter."
+    ],
+    "a": 1,
+    "e": "The renal capsule is a tough, fibrous outer layer that directly covers the kidney, offering protection against physical injury and the spread of infection."
+   },
+   {
+    "q": "A patient with chronic kidney disease (CKD) is found to have a GFR of 25 mL/min/1.73m². According to KDIGO guidelines, what stage of CKD is this patient in?",
+    "o": [
+     "Stage 2",
+     "Stage 3a",
+     "Stage 3b",
+     "Stage 4"
+    ],
+    "a": 3,
+    "e": "KDIGO guidelines define CKD Stage 4 as a GFR between 15 and 29 mL/min/1.73m²."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 35-year-old male presents with acute onset severe, colicky right flank pain radiating to his right groin. He reports nausea and has vomited once. On examination, he is restless, and his right costovertebral angle is tender. Urinalysis shows microscopic hematuria.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "The most likely diagnosis is acute renal colic due to nephrolithiasis (kidney stone)."
+     },
+     {
+      "q": "What initial imaging investigation would you recommend in a low-resource setting, and what would you expect to find?",
+      "a": "In a low-resource setting, a renal ultrasound would be the initial investigation. I would expect to find hydronephrosis (dilation of the renal pelvis and calyces) and potentially visualize the stone if it is large enough or located in the renal pelvis or vesicoureteric junction."
+     },
+     {
+      "q": "Besides pain relief, what immediate management steps would you consider?",
+      "a": "Immediate management includes adequate hydration (oral or intravenous fluids) to encourage stone passage, antiemetics for nausea/vomiting, and monitoring for signs of infection or worsening obstruction. Referral to a urologist would be considered if there are signs of infection, intractable pain, or complete obstruction."
+     }
+    ]
+   },
+   {
+    "v": "A 68-year-old woman with a history of poorly controlled hypertension and diabetes presents with increasing fatigue, generalized weakness, and swelling in her ankles. Her blood pressure is 160/95 mmHg. Laboratory results show serum creatinine 3.5 mg/dL (baseline 1.0 mg/dL a year ago), eGFR 20 mL/min/1.73m², hemoglobin 9.8 g/dL, and serum potassium 5.8 mEq/L.",
+    "qs": [
+     {
+      "q": "What is the most likely underlying kidney condition?",
+      "a": "The most likely underlying kidney condition is chronic kidney disease (CKD), likely secondary to long-standing hypertension and diabetic nephropathy, now presenting as an acute-on-chronic kidney injury or progression to advanced CKD."
+     },
+     {
+      "q": "Based on her eGFR, what stage of CKD is she in, and what are the immediate concerns regarding her electrolyte abnormalities?",
+      "a": "With an eGFR of 20 mL/min/1.73m², she is in CKD Stage 4. The immediate concern regarding her electrolyte abnormalities is hyperkalemia (serum potassium 5.8 mEq/L), which can lead to life-threatening cardiac arrhythmias."
+     },
+     {
+      "q": "What initial management steps would you take for her hyperkalemia?",
+      "a": "Initial management for hyperkalemia would include stabilizing the cardiac membrane with intravenous calcium gluconate (if ECG changes are present), shifting potassium intracellularly with insulin and dextrose or salbutamol, and removing potassium from the body using loop diuretics or potassium binders. Dietary potassium restriction is also important."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the adrenal gland with part of the kidney; they are separate organs within the renal fascia.",
+   "Incorrectly stating that renal size >10 cm suggests malignancy; small kidneys (<9 cm) indicate chronic disease, large kidneys can be due to hydronephrosis or polycystic kidney disease.",
+   "Misinterpreting costovertebral angle dullness as a sign of renal stones; dullness suggests enlargement or fluid, while tenderness (Murphy's punch sign) is relevant for inflammation.",
+   "Incorrectly describing fluid thrill technique; it is a palpable vibration transmitted across the abdomen when one flank is tapped, not percussion after shifting dullness.",
+   "Failing to differentiate between the renal pelvis and the ureter; the pelvis is the dilated proximal portion, and the ureter begins at its narrowing.",
+   "Overlooking accessory renal arteries in surgical planning, which can lead to complications like ischemia or hemorrhage.",
+   "Incorrectly stating that an elevated renin-aldosterone ratio indicates primary hyperaldosteronism; a low renin with a high aldosterone (high aldosterone-to-renin ratio) is characteristic.",
+   "Combining GFR stages (e.g., <30 mL/min/1.73m² for stage 4/5) instead of using precise KDIGO definitions (G4: 15-29, G5: <15)."
+  ],
+  "exam": [
+   "What are the key differences in the anatomical relations of the right and left kidneys? — The right kidney is typically slightly lower due to the liver. Anteriorly, the right kidney relates to the liver, duodenum, and right colic flexure, while the left kidney relates to the spleen, stomach, pancreas, jejunum, and left colic flexure. Posteriorly, both relate to the diaphragm, psoas major, quadratus lumborum, and transversus abdominis muscles, as well as subcostal, iliohypogastric, and ilioinguinal nerves.",
+   "Describe the arterial supply to the kidney, including its segmental nature. — The renal artery, a direct branch of the abdominal aorta, typically divides into five segmental arteries (apical, upper anterior, middle anterior, lower, and posterior) before entering the renal hilum. These segmental arteries are end arteries, meaning they do not anastomose significantly, which forms the basis for surgical renal segmentation.",
+   "Outline the lymphatic drainage of the kidneys. — The lymphatic vessels of the kidneys follow the renal arteries and drain into the lateral aortic (para-aortic) lymph nodes. These nodes are located at the level of the renal artery origin, between L1 and L2 vertebrae.",
+   "What is the significance of accessory renal arteries? — Accessory renal arteries are common anatomical variations, occurring in about 30% of individuals. They can arise from the aorta above or below the main renal artery and often supply the poles of the kidney. Their presence is crucial in surgical procedures like nephrectomy or kidney transplantation, as they can complicate vascular anastomoses and lead to renal ischemia if not identified.",
+   "In chronic kidney disease, which electrolyte abnormality is most life-threatening? — Hyperkalemia is the most life-threatening electrolyte abnormality in chronic kidney disease due to its potential to cause fatal cardiac arrhythmias.",
+   "A patient with chronic renal failure develops hyperphosphatemia. This is because the failing kidneys are unable to --- — A patient with chronic renal failure develops hyperphosphatemia because the failing kidneys are unable to adequately excrete phosphate. This leads to increased serum phosphate levels, which can contribute to secondary hyperparathyroidism and renal osteodystrophy.",
+   "Most reabsorbed water in the kidney occurs in the --- — Most reabsorbed water in the kidney occurs in the proximal convoluted tubule. Approximately 65-70% of filtered water is reabsorbed here, largely driven by the reabsorption of solutes like sodium.",
+   "A patient presents with rapidly progressive glomerulonephritis and hemoptysis, raising suspicion for Goodpasture syndrome. Identify the specific antigen targeted in this condition and describe the characteristic immunofluorescence findings. — In Goodpasture syndrome, the specific antigen targeted is the alpha-3 chain of type IV collagen, found in the glomerular and alveolar basement membranes. Characteristic immunofluorescence findings show a linear deposition of IgG along the glomerular basement membrane.",
+   "What is the renal fascia (Gerota's fascia) and its clinical significance? — The renal fascia is a fibrous connective tissue capsule that encloses the kidney and adrenal gland, separating them from surrounding fat. It helps anchor the kidney to the posterior abdominal wall and provides a barrier against the spread of infection or hemorrhage from the kidney to adjacent structures.",
+   "Explain the concept of renal segments and their surgical relevance. — Renal segments are distinct areas of the kidney supplied by individual segmental arteries, which are end arteries. This anatomical arrangement allows for segmental nephrectomy, where a diseased segment can be removed while preserving the rest of the kidney, minimizing blood loss.",
+   "How does the venous drainage of the kidneys differ on the right and left sides? — The left renal vein is longer than the right, passing anterior to the aorta and posterior to the superior mesenteric artery before draining into the inferior vena cava (IVC). It also receives the left gonadal vein and the left suprarenal vein. The right renal vein is shorter and drains directly into the IVC.",
+   "What are the common causes of hydronephrosis and how is it diagnosed? — Common causes of hydronephrosis include kidney stones, strictures, tumors, benign prostatic hyperplasia, and congenital anomalies. It is typically diagnosed by renal ultrasound, which shows dilation of the renal pelvis and calyces. CT scans can further delineate the cause and extent of obstruction."
+  ],
+  "model": "gemini-3.8-flash",
+  "generatedAt": "2026-10-17",
+  "checked": "2026-10-17",
+  "trimmed": 8
+ }
 }

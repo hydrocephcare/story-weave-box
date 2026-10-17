@@ -1,0 +1,169 @@
+{
+ "medical": true,
+ "title": "Basement Membrane Pathology",
+ "subject": "Pathology",
+ "summary": "The basement membrane (BM) is a thin extracellular sheet that supports epithelia and endothelium. Damage or thickening of BM underlies key lung and kidney diseases, altering gas exchange and filtration. Recognising BM involvement guides diagnosis and targeted therapy.",
+ "aka": [
+  "basal lamina"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The basement membrane is a specialised extracellular matrix composed of type IV collagen, laminin, nidogen and proteoglycans. It separates epithelial or endothelial cells from underlying connective tissue and provides structural support and selective permeability.",
+   "b": [
+    "In the lung it forms the alveolar‑capillary barrier with type I pneumocytes and capillary endothelium.",
+    "In the kidney it is the middle layer of the glomerular filtration barrier."
+   ],
+   "t": [
+    {
+     "a": "Histology (light or electron microscopy)",
+     "b": "Confirms BM thickening or disruption; essential for diagnosing pulmonary fibrosis, Goodpasture syndrome, membranous nephropathy."
+    },
+    {
+     "a": "Anti‑GBM antibody test",
+     "b": "Detects circulating antibodies that target the glomerular BM; a positive result supports anti‑GBM disease."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "BM injury is staged by the extent of structural change and functional loss, often using disease‑specific criteria.",
+   "b": [
+    "Pulmonary fibrosis: mild (≤10 % of lung volume), moderate (10‑30 %), severe (>30 %).",
+    "Anti‑GBM disease: renal involvement graded by eGFR (≥30 ml/min/1.73 m² mild, 15‑29 moderate, <15 severe)."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, infectious and immune‑mediated processes dominate BM damage.",
+   "b": [
+    "Autoimmune anti‑GBM disease (Goodpasture syndrome).",
+    "Infectious pulmonary fibrosis (post‑TB, post‑parasitic).",
+    "Chronic exposure to silica or asbestos (occupational).",
+    "Malaria‑associated renal microvascular injury.",
+    "HIV‑associated collapsing glomerulopathy."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical features reflect the organ involved and the degree of barrier disruption.",
+   "b": [
+    "Lung: progressive dyspnoea on exertion, dry cough, hypoxaemia, reduced DLCO.",
+    "Kidney: hematuria (microscopic or gross), proteinuria, rising creatinine, oliguria in severe cases."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Targeted tests confirm BM pathology and assess functional impact.",
+   "t": [
+    {
+     "a": "Chest X‑ray / CT scan",
+     "b": "Shows interstitial infiltrates or honey‑comb pattern; thickened BM appears as reticular opacities."
+    },
+    {
+     "a": "DLCO measurement",
+     "b": "Quantifies diffusion impairment; a low DLCO indicates BM thickening in the alveolar‑capillary membrane."
+    },
+    {
+     "a": "Urinalysis with microscopy",
+     "b": "Detects dysmorphic red cells and protein; suggests glomerular BM injury."
+    },
+    {
+     "a": "Serum creatinine & eGFR",
+     "b": "Assesses renal filtration loss; falling eGFR signals worsening BM damage."
+    },
+    {
+     "a": "Renal biopsy (if available)",
+     "b": "Directly visualises BM thickening, immune deposits; guides specific therapy."
+    },
+    {
+     "a": "Anti‑GBM antibody ELISA (if unavailable)",
+     "b": "Use clinical picture (rapidly progressive glomerulonephritis + pulmonary haemorrhage) to start empiric therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition prevents irreversible organ loss.",
+   "b": [
+    "Rapid rise in creatinine >30 % within 48 h.",
+    "Severe hypoxaemia (SpO₂ <85 %) despite oxygen.",
+    "Pulmonary haemorrhage (hemoptysis with anemia).",
+    "Progressive dyspnoea limiting daily activities."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, protect the BM, and support organ function.",
+   "b": [
+    "Anti‑GBM disease: high‑dose IV methylprednisolone, cyclophosphamide, and plasma exchange to remove antibodies.",
+    "Pulmonary fibrosis: antifibrotic agents (pirfenidone or nintedanib) where available; otherwise optimise oxygen and treat infections.",
+    "TB‑related fibrosis: complete anti‑TB regimen plus steroids if active inflammation persists.",
+    "Supportive renal care: avoid nephrotoxins, manage fluid balance, consider dialysis when eGFR <15 ml/min/1.73 m²."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring detects progression early.",
+   "b": [
+    "Lung: repeat DLCO and imaging every 6‑12 months.",
+    "Kidney: monthly creatinine/eGFR, urine protein quantification.",
+    "Vaccinate against influenza and pneumococcus to reduce secondary infections.",
+    "Educate patients on avoiding silica, asbestos, and nephrotoxic drugs."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Pulmonary oedema – both cause dyspnoea but oedema shows rapid fluid shift, crackles, and normal DLCO.",
+    "IgA nephropathy – presents with hematuria but lacks anti‑GBM antibodies and BM thickening on biopsy."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal chest X‑ray early in pulmonary fibrosis; rely on DLCO and CT if suspicion high.",
+    "Negative anti‑GBM ELISA early in disease; repeat if clinical picture fits."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly falling renal function, pulmonary haemorrhage, or severe hypoxaemia requiring high‑flow oxygen."
+ ],
+ "faq": [
+  {
+   "q": "Why does a low DLCO suggest basement membrane disease?",
+   "a": "DLCO measures gas diffusion across the alveolar‑capillary membrane; thickening of the BM reduces diffusion, lowering DLCO."
+  },
+  {
+   "q": "Can anti‑GBM disease present without lung involvement?",
+   "a": "Yes; isolated renal anti‑GBM disease occurs, but clinicians should still assess for subclinical pulmonary injury."
+  },
+  {
+   "q": "What is the role of plasma exchange in anti‑GBM disease?",
+   "a": "It rapidly removes circulating antibodies, limiting further BM damage while immunosuppression takes effect."
+  }
+ ],
+ "exam": [
+  "A patient with rapidly rising creatinine and hemoptysis – what is the next immediate investigation and why? — Order anti‑GBM antibody test and chest imaging; they confirm Goodpasture syndrome, guiding urgent plasma exchange.",
+  "How does thickening of the alveolar‑capillary basement membrane affect DLCO? — It increases diffusion distance, reducing DLCO and causing exertional hypoxaemia.",
+  "What distinguishes pulmonary fibrosis from pulmonary oedema on bedside examination? — Fibrosis shows fine bibasal crackles and a low DLCO; oedema shows rapid fluid shift, egophony, and normal DLCO.",
+  "Why is cyclophosphamide preferred over azathioprine in acute anti‑GBM disease? — Cyclophosphamide provides stronger immunosuppression needed for rapid antibody suppression; azathioprine is slower acting.",
+  "In a low‑resource setting without CT, how would you suspect BM‑related pulmonary fibrosis? — Rely on progressive dyspnoea, reduced DLCO, and characteristic reticular pattern on chest X‑ray.",
+  "What are the red‑flag renal values indicating need for dialysis in BM injury? — eGFR <15 ml/min/1.73 m² or creatinine >500 µmol/L with oliguria.",
+  "Explain why anti‑GBM antibodies are pathogenic rather than merely a marker. — They bind directly to the glomerular and alveolar BM, activating complement and causing necrotising inflammation.",
+  "How would you counsel a patient with occupational silica exposure to prevent BM damage? — Use protective masks, improve ventilation, and undergo regular lung function testing to detect early fibrosis."
+ ],
+ "related": [
+  "Alveolar‑capillary membrane",
+  "Glomerular filtration barrier",
+  "Pulmonary fibrosis",
+  "Anti‑GBM disease",
+  "Nephrotic syndrome",
+  "Silicosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-17",
+ "reviewed": false
+}

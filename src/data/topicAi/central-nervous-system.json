@@ -1,0 +1,153 @@
+{
+ "medical": true,
+ "title": "Central Nervous System in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "The CNS is the brain and spinal cord, the control centre for all body functions. In low‑resource settings, infections, malnutrition and trauma are the main threats. Rapid bedside assessment and targeted investigations guide life‑saving treatment.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The CNS comprises the brain, spinal cord and meninges. Diagnosis starts with a focused history and examination, then uses simple imaging or CSF studies when available.",
+   "b": [
+    "History of fever, seizures, altered consciousness",
+    "Neuro‑deficits, papilledema, neck stiffness"
+   ],
+   "t": [
+    {
+     "a": "Lumbar puncture",
+     "b": "Rule out meningitis or TB meningitis – CSF opening pressure, cell count, protein, glucose, Gram stain, culture, Xpert MTB/RIF"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by level of consciousness and focal deficits. The Glasgow Coma Scale (GCS) is the most useful tool in children.",
+   "b": [
+    "GCS 13‑15: mild",
+    "GCS 9‑12: moderate",
+    "GCS 3‑8: severe"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, infections dominate. Malnutrition, HIV, malaria and trauma also contribute.",
+   "b": [
+    "Bacterial meningitis (Streptococcus pneumoniae, Haemophilus influenzae)",
+    "Tuberculous meningitis",
+    "Cryptococcal meningitis (HIV)",
+    "Malaria‑associated cerebral malaria",
+    "Traumatic brain injury",
+    "Sickle‑cell crises"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with age and cause. Common features include fever, seizures, vomiting, lethargy and focal neuro‑signs.",
+   "b": [
+    "Seizure type: generalized tonic‑clonic, focal, febrile",
+    "Headache, neck stiffness, photophobia",
+    "Altered sensorium, vomiting, papilledema"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use the simplest tests that answer a specific clinical question. When a test is unavailable, use clinical judgment and supportive care.",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "High WBC suggests bacterial infection; low Hb may indicate anaemia complicating CNS disease"
+    },
+    {
+     "a": "Rapid malaria test",
+     "b": "Positive test warrants immediate artesunate"
+    },
+    {
+     "a": "Xpert MTB/RIF on CSF",
+     "b": "Positive result starts anti‑TB therapy"
+    },
+    {
+     "a": "CT scan (if available)",
+     "b": "Normal CT allows safe LP; abnormal CT requires neurosurgical input"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs predict poor outcome or need urgent intervention.",
+   "b": [
+    "Severe headache with papilledema – raised intracranial pressure",
+    "Seizure >5 minutes – status epilepticus",
+    "Focal deficits – possible stroke or abscess",
+    "Unexplained bleeding – consider haemorrhagic stroke"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, support vital functions and monitor for complications. Drug choice favours safety and availability.",
+   "b": [
+    "Empiric antibiotics for bacterial meningitis: ceftriaxone + ampicillin (or cefotaxime + ampicillin)",
+    "Anti‑TB therapy: isoniazid, rifampicin, pyrazinamide, ethambutol",
+    "Antifungals for cryptococcal meningitis: amphotericin B + flucytosine (if available)",
+    "Antimalarials: artesunate for cerebral malaria",
+    "Supportive care: maintain airway, oxygen, fluids, glucose, seizure control with phenobarbitone or phenytoin"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Early discharge planning, vaccination and community education reduce recurrence.",
+   "b": [
+    "Ensure completion of full anti‑TB course",
+    "Vaccinate against Hib and pneumococcus",
+    "Educate caregivers on early signs of meningitis",
+    "Screen for HIV and provide ART"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic CNS disease; recognising differences is key.",
+   "b": [
+    "Febrile seizures – isolated seizure, no focal deficits",
+    "Sepsis with encephalopathy – diffuse, no focal signs",
+    "Traumatic brain injury – history of injury, focal deficits"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some investigations may give false negatives or positives in low‑resource settings.",
+   "b": [
+    "CSF glucose can be normal in TB meningitis if glucose is low systemically",
+    "Xpert MTB/RIF may miss paucibacillary TB",
+    "Rapid malaria tests may miss low parasitaemia"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe headache with papilledema",
+  "Seizure lasting >5 minutes",
+  "Unexplained vomiting with lethargy",
+  "Focal neurological deficit",
+  "Sudden loss of consciousness"
+ ],
+ "faq": [
+  {
+   "q": "Why is a lumbar puncture contraindicated in raised intracranial pressure?",
+   "a": "It can cause brain herniation by suddenly lowering CSF pressure."
+  },
+  {
+   "q": "What is the first drug to give in suspected bacterial meningitis?",
+   "a": "Empiric ceftriaxone (or cefotaxime) plus ampicillin to cover common organisms."
+  },
+  {
+   "q": "How do you differentiate tuberculous meningitis from bacterial meningitis clinically?",
+   "a": "TB meningitis is slower, with chronic fever, cranial nerve palsies and a lymphocytic CSF; bacterial meningitis is acute with neutrophilic CSF and high opening pressure."
+  }
+ ],
+ "exam": [
+  "A 6‑year‑old presents with fever, vomiting and a stiff neck. What is the first investigation you would do and why? — LP after normal CT to rule out meningitis, but only if no signs of raised ICP. A child with altered consciousness and a positive malaria rapid test. What is the next step? — Immediate artesunate and supportive care; do not delay for imaging. A 3‑year‑old with seizures and a history of sickle cell disease. What is the most likely cause and first treatment? — Acu"
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-17",
+ "reviewed": false
+}

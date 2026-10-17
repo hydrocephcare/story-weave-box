@@ -1,0 +1,196 @@
+{
+ "medical": true,
+ "title": "Intracranial Pressure",
+ "subject": "Medicine",
+ "summary": "Raised intracranial pressure (ICP) is a life‑threatening emergency that can arise from infections, trauma, tumour or hydrocephalus. Rapid recognition and treatment prevent brain herniation and death.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ICP is the pressure within the skull, normally 5–15 mmHg. It is measured indirectly by lumbar puncture opening pressure or directly with an intraparenchymal probe when available.",
+   "b": [
+    "Normal range 5–15 mmHg",
+    "Elevated >20 mmHg is dangerous"
+   ],
+   "t": [
+    {
+     "a": "Lumbar puncture opening pressure",
+     "b": "Is the patient in a supine position? If >250 mmH₂O (≈20 mmHg) it indicates raised ICP"
+    },
+    {
+     "a": "CT/MRI",
+     "b": "Detects mass lesions, haemorrhage or hydrocephalus that raise ICP"
+    },
+    {
+     "a": "Bedside fundoscopy",
+     "b": "Papilloedema suggests chronic raised ICP; absence does not rule out acute elevation"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Brain Trauma Foundation grading uses GCS and imaging to stage severity. In low‑resource settings, a pragmatic approach uses GCS, pupillary reaction and CT findings.",
+   "b": [
+    "GCS 13–15 mild",
+    "GCS 9–12 moderate",
+    "GCS <9 severe"
+   ],
+   "t": [
+    {
+     "a": "GCS",
+     "b": "Assesses consciousness; <9 signals need for urgent ICP control"
+    },
+    {
+     "a": "Pupillary reaction",
+     "b": "Unequal or sluggish pupils suggest herniation risk"
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the commonest causes are infectious meningitis, cerebral malaria, traumatic brain injury, and space‑occupying lesions such as tuberculoma.",
+   "b": [
+    "Infectious meningitis (bacterial, tubercular, fungal)",
+    "Cerebral malaria with cerebral oedema",
+    "Traumatic brain injury",
+    "Hydrocephalus (communicating or obstructive)",
+    "Space‑occupying lesions (tumour, abscess)"
+   ],
+   "t": [
+    {
+     "a": "CSF culture",
+     "b": "Identifies bacterial or fungal meningitis; guides antibiotics"
+    },
+    {
+     "a": "Peripheral blood smear",
+     "b": "Detects malarial parasites; malaria can raise ICP"
+    },
+    {
+     "a": "Ultrasound of optic nerve sheath",
+     "b": "Non‑invasive estimate of ICP when CT unavailable"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may have headache, vomiting, altered consciousness, seizures, and focal deficits. Classic signs include papilloedema, fixed dilated pupils and irregular breathing patterns.",
+   "b": [
+    "Cushing’s triad – hypertension, bradycardia, irregular respirations"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise rapid, low‑cost tests that guide urgent therapy. When advanced imaging is unavailable, clinical judgement and bedside tools are essential.",
+   "b": [
+    "Coagulation profile – before surgery or lumbar puncture"
+   ],
+   "t": [
+    {
+     "a": "CT head",
+     "b": "Detects haemorrhage, mass effect, midline shift; a shift >5 mm is urgent"
+    },
+    {
+     "a": "Lumbar puncture opening pressure",
+     "b": ">250 mmH₂O indicates raised ICP; normal <200 mmH₂O"
+    },
+    {
+     "a": "Optic nerve sheath diameter >5.5 mm on ultrasound",
+     "b": "Suggests raised ICP when CT not available"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Signs of impending herniation require immediate action. Complications include herniation syndromes, hydrocephalus, seizures, and death.",
+   "b": [
+    "Seizures that are refractory to first‑line drugs"
+   ],
+   "t": [
+    {
+     "a": "Pupillary assessment",
+     "b": "Unequal or sluggish pupils predict herniation risk"
+    },
+    {
+     "a": "Respiratory pattern",
+     "b": "Irregular respirations (Cheyne-Stokes) suggest raised ICP"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then control ICP with medical and, if needed, surgical measures. In low‑resource settings, focus on drugs that are safe, cheap and available.",
+   "b": [
+    "Monitor ICP – invasive probe if available, otherwise serial fundoscopy and clinical exam"
+   ],
+   "t": [
+    {
+     "a": "Mannitol 20%",
+     "b": "Raises serum osmolality to draw water out of brain; avoid if renal failure"
+    },
+    {
+     "a": "Hypertonic saline 3%",
+     "b": "Increases plasma osmolality; preferred when renal function is compromised"
+    },
+    {
+     "a": "Dexamethasone",
+     "b": "Reduces oedema in bacterial meningitis and tumours; avoid in viral meningitis"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute control, monitor for recurrence, manage underlying disease, and counsel on prevention of trauma and infections.",
+   "b": [
+    "Regular eye exams for patients with chronic ICP"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Raised ICP shares features with metabolic encephalopathy, stroke, and seizures. Distinguish by imaging, CSF analysis and clinical context.",
+   "b": [
+    "Seizure disorder – normal ICP, normal imaging, but seizures may mimic raised ICP"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may give false negatives or positives in low‑resource settings. Be aware of limitations and confirm with clinical picture.",
+   "b": [
+    "Optic nerve sheath ultrasound is operator dependent; normal reading does not exclude raised ICP"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden loss of consciousness",
+  "Fixed dilated pupil",
+  "Cushing’s triad",
+  "Severe refractory vomiting",
+  "Uncontrolled seizures"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of raised ICP in East Africa?",
+   "a": "Bacterial meningitis, especially pneumococcal and meningococcal, followed by cerebral malaria and traumatic brain injury."
+  },
+  {
+   "q": "Why is hypertonic saline preferred over mannitol in renal failure?",
+   "a": "It raises plasma osmolality without increasing renal solute load, reducing the risk of renal injury."
+  },
+  {
+   "q": "Can seizures be a sign of raised ICP?",
+   "a": "Yes, focal or generalized seizures often occur when ICP rises, especially in meningitis or tumour."
+  }
+ ],
+ "exam": [
+  "What is the first step in a patient with suspected raised ICP who has a CT scan showing a midline shift of 6 mm? — Immediate surgical decompression; explain the urgency and the risk of herniation.",
+  "A 25‑year‑old man with meningitis presents with a fixed dilated pupil. What drug should be avoided and why? — Avoid sedatives that lower blood pressure; they can worsen cerebral perfusion pressure.",
+  "During a ward round, a patient has vomiting and a GCS of 10. What bedside test can you perform to assess ICP if CT is unavailable? — Optic nerve sheath ultrasound; explain the normal vs abnormal diameter.",
+  "A patient with cerebral malaria has seizures and a normal CT. What is the most likely cause of raised ICP and the first treatment? — Cytotoxic oedema from malaria; give hyperosmolar therapy (mannitol or hypertonic saline).",
+  "Why is dexamethasone contraindicated in viral meningitis but used in bacterial meningitis? — It reduces inflammation and oedema in bacterial meningitis but may worsen viral infection by dampening immune response.",
+  "A patient with a brain tumour is on phenobarbitone for seizures. What complication should you monitor for in the context of raised ICP? — Phenobarbitone can lower blood pressure and worsen cerebral perfusion; monitor BP and ICP closely."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-17",
+ "reviewed": false
+}

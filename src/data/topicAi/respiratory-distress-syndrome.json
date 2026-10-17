@@ -1,0 +1,163 @@
+{
+ "medical": true,
+ "title": "Respiratory Distress Syndrome in Newborns",
+ "subject": "Paediatrics",
+ "summary": "A life‑threatening condition of premature infants caused by surfactant deficiency, leading to alveolar collapse and hypoxaemia. Rapid recognition and supportive care are essential.",
+ "aka": [
+  "Neonatal Respiratory Distress",
+  "Hyaline Membrane Disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "RDS is a diffuse alveolar injury due to insufficient surfactant, most common in babies <34 weeks gestation. Diagnosis is clinical plus chest radiograph showing ground‑glass opacity, air bronchograms and reticulogranular pattern.",
+   "b": [
+    "Prematurity <34 weeks",
+    "Early onset cyanosis",
+    "Grunting, tachypnoea, nasal flaring"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows diffuse reticulogranular pattern and air bronchograms – confirms alveolar collapse"
+    },
+    {
+     "a": "Blood gas",
+     "b": "PaO2 <50 mmHg on room air – indicates hypoxaemia"
+    },
+    {
+     "a": "Lung ultrasound",
+     "b": "B‑lines >3 per zone – suggests interstitial fluid from surfactant deficiency"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the Oxygenation Index (OI) and the need for respiratory support. The INSURE protocol (Intubate, Surfactant, Extubate) is used for moderate cases.",
+   "b": [
+    "OI <10 – mild, OI 10–20 – moderate, OI >20 – severe"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is surfactant deficiency in preterm lungs. Secondary contributors include maternal diabetes, chorioamnionitis, and perinatal asphyxia.",
+   "b": [
+    "Surfactant deficiency",
+    "Maternal diabetes",
+    "Intrauterine infection",
+    "Perinatal hypoxia"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Within minutes of birth, the infant shows tachypnoea, nasal flaring, grunting, cyanosis, and retractions. Oxygen requirement rises quickly.",
+   "b": [
+    "Grunting >30 breaths/min",
+    "Nasal flaring",
+    "Retractions of intercostal spaces",
+    "Cyanosis at rest"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations confirm diagnosis and rule out mimics. In low‑resource settings, clinical assessment and chest X‑ray are key.",
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Detects classic RDS pattern – absence of cardiomegaly rules out cardiac failure"
+    },
+    {
+     "a": "Blood gas",
+     "b": "Shows hypoxaemia and respiratory acidosis – guides oxygen titration"
+    },
+    {
+     "a": "Lung ultrasound",
+     "b": "Rapid bedside tool; B‑lines indicate interstitial fluid; absence of pleural effusion excludes effusion"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe hypoxaemia, persistent high OI, or sudden deterioration suggest complications such as pneumothorax, pulmonary haemorrhage, or infection.",
+   "b": [
+    "Pneumothorax – sudden worsening of breath sounds and hypoxia",
+    "Pulmonary haemorrhage – frothy secretions",
+    "Sepsis – fever, lethargy, rising CRP"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying surfactant deficiency with exogenous surfactant, provide gentle ventilation, and monitor oxygenation. Avoid high tidal volumes and excessive oxygen.",
+   "b": [
+    "Give surfactant within 2 hours of birth – improves compliance"
+   ],
+   "t": [
+    {
+     "a": "Surfactant",
+     "b": "Restores surface tension, prevents alveolar collapse – chosen for rapid effect"
+    },
+    {
+     "a": "Continuous Positive Airway Pressure (CPAP)",
+     "b": "Maintains alveolar recruitment – preferred over intubation when feasible"
+    },
+    {
+     "a": "Avoid high FiO2 >0.6",
+     "b": "Prevents oxygen toxicity and retinopathy of prematurity"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Post‑discharge monitoring for feeding, growth, and neurodevelopment is essential. Prevention focuses on antenatal steroids and delaying delivery when possible.",
+   "b": [
+    "Antenatal steroids 24–48h before birth – reduces RDS incidence"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pneumonia, congenital diaphragmatic hernia, and meconium aspiration can mimic RDS but have distinct features.",
+   "b": [
+    "Pneumonia – fever, leukocytosis, lobar consolidation"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Chest X‑ray may appear normal in very early RDS; lung ultrasound may miss small pneumothoraces.",
+   "b": [
+    "Early RDS – chest X‑ray may be clear for first 30 min"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of respiratory effort",
+  "Persistent OI >20 despite support",
+  "New onset of pneumothorax signs"
+ ],
+ "faq": [
+  {
+   "q": "Why is antenatal steroid therapy recommended for preterm labour?",
+   "a": "It accelerates fetal lung maturation and reduces surfactant deficiency, lowering RDS risk."
+  },
+  {
+   "q": "What is the main difference between RDS and pneumonia in a newborn?",
+   "a": "RDS shows diffuse ground‑glass pattern without focal consolidation; pneumonia has lobar consolidation and often fever."
+  },
+  {
+   "q": "When is intubation unavoidable in RDS?",
+   "a": "When FiO2 >0.6 or OI >20 despite CPAP, indicating severe hypoxaemia."
+  }
+ ],
+ "exam": [
+  "What is the first step in managing a preterm infant with suspected RDS? — Give antenatal steroids if possible; start CPAP and monitor OI.",
+  "How would you differentiate RDS from congenital diaphragmatic hernia on bedside exam? — Look for bowel sounds in the chest and asymmetry of breath sounds.",
+  "Why is high tidal volume ventilation avoided in RDS? — It causes volutrauma and worsens alveolar collapse.",
+  "What is the rationale for early surfactant administration? — It restores surface tension, improves compliance, and reduces mortality.",
+  "When should you consider a pneumothorax in a baby with RDS? — Sudden drop in oxygenation, hyperresonance, absent breath sounds on one side.",
+  "Why is oxygen toxicity a concern in preterm infants? — Excessive FiO2 can damage retinal and pulmonary tissues, leading to retinopathy and bronchopulmonary dysplasia."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-17",
+ "reviewed": false
+}

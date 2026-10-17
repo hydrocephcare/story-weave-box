@@ -152,5 +152,305 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classify inflammation by cause, location and systemic involvement, using recognised criteria to guide treatment.",
+    "b": [
+     "Acute local inflammation: redness, warmth, swelling, pain, loss of function; usually <48 hrs.",
+     "Chronic inflammation: persistent >4 weeks, often with fibrosis, scarring or granuloma formation.",
+     "Severe systemic inflammation (sepsis): SOFA score increase ≥2, organ dysfunction, hypotension, tachypnoea.",
+     "Compartment syndrome: rising pain out of proportion, tense swelling, loss of pulses, sensory loss; requires urgent decompression."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate inflammatory processes from mimickers by key clinical and investigative clues.",
+    "b": [
+     "Cellulitis vs. erysipelas: erysipelas has well‑demarcated borders, high fever, lymphangitis; cellulitis is diffuse.",
+     "Deep vein thrombosis vs. cellulitis: pain is more posterior, swelling is pitting, Homan’s sign may be positive, DVT shows positive duplex ultrasound.",
+     "Autoimmune flare vs. infection: serology (ANA, RF) positive, chronic symptoms, absence of fever.",
+     "Drug reaction vs. infection: rash is widespread, may be itchy, no systemic signs of infection."
+    ],
+    "t": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat the underlying cause first, then control inflammation, monitor response, and refer if deterioration occurs.",
+    "b": [
+     "1. Immediate assessment of airway, breathing, circulation; give oxygen if SpO2 <94%.",
+     "2. Identify source: culture, imaging, serology; start empiric antibiotics for suspected bacterial infection (e.g., ceftriaxone + metronidazole for abdominal source).",
+     "3. Give NSAIDs (e.g., ibuprofen) for pain and fever unless contraindicated; consider corticosteroids if severe systemic inflammation or autoimmune flare.",
+     "4. Hydrate with isotonic fluids; monitor urine output and electrolytes.",
+     "5. Monitor vital signs, temperature, white cell count, CRP/ESR daily; repeat imaging if clinical change.",
+     "6. Escalate: add broad‑spectrum coverage if septic shock signs, or switch to targeted therapy once culture results available.",
+     "7. Refer to specialist (infectious disease, rheumatology, surgery) if organ failure, uncontrolled pain, or lack of improvement within 48–72 h."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise common adverse effects and interactions of anti‑inflammatory and antimicrobial agents and act promptly.",
+    "b": [
+     "1. NSAIDs: risk of GI ulceration, renal impairment; give proton‑pump inhibitor if risk factors present.",
+     "2. Corticosteroids: hyperglycaemia, hypertension, infection risk; monitor blood glucose and blood pressure, taper slowly.",
+     "3. Antibiotics: Clostridioides difficile with broad‑spectrum agents; monitor stool for diarrhoea, consider probiotics.",
+     "4. Antifungals (e.g., fluconazole): hepatotoxicity; check LFTs before and during therapy.",
+     "5. Drug interactions: NSAIDs + ACE inhibitors increase renal risk; avoid concurrent use or monitor renal function.",
+     "6. Herbal remedies: St. John’s wort can reduce serum levels of many antibiotics; counsel patients to avoid."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "Identify early signs of severe complications and act before irreversible damage.",
+    "b": [
+     "2. Abscess formation: localized swelling, fluctuance, pain out of proportion; CT or ultrasound guided drainage.",
+     "3. Organ dysfunction: acute kidney injury (rise in creatinine >0.3 mg/dL in 48 h), hepatic failure (↑bilirubin >2 mg/dL), respiratory failure (PaO2/FiO2 <300).",
+     "4. Coagulopathy: prolonged PT/INR >1.5, thrombocytopenia <100,000; consider fresh frozen plasma or platelet transfusion.",
+     "5. Allergic reactions to drugs: urticaria, angioedema; administer antihistamine and corticosteroid, stop offending drug."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Adjust assessment and treatment in the presence of comorbidities and demographic variables.",
+    "b": [
+     "1. HIV: higher risk of opportunistic infections; use broader empiric coverage, monitor CD4, consider ART initiation.",
+     "2. TB: consider latent or active TB; add isoniazid/rifampicin if suspicion high.",
+     "3. Malnutrition: impaired wound healing, altered drug metabolism; supplement protein, monitor drug levels.",
+     "4. Pregnancy: avoid teratogenic drugs (e.g., fluoroquinolones), use penicillins or macrolides; adjust dosing for renal changes.",
+     "5. Diabetes: hyperglycaemia worsens infection; monitor glucose, use insulin as needed.",
+     "6. Herbal remedies: garlic, ginkgo may increase bleeding risk with NSAIDs; counsel to discontinue.",
+     "7. Alcohol: hepatotoxicity with antifungals; monitor LFTs, consider alternative agents.",
+     "8. Renal or hepatic failure: dose adjust or avoid nephrotoxic/ hepatotoxic drugs; use lactulose for hepatic encephalopathy if present.",
+     "9. Age extremes: elderly have higher sensitivity to NSAIDs, steroids; children require weight‑based dosing and careful monitoring."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor management to children, pregnancy, elderly, HIV patients, and low‑resource settings.",
+    "b": [
+     "1. Children: use weight‑based dosing, avoid NSAIDs in infants <6 months, prefer paracetamol for fever.",
+     "2. Pregnancy: use penicillins, cephalosporins, macrolides; avoid NSAIDs after 20 weeks, avoid tetracyclines.",
+     "3. Elderly: start low, go slow with NSAIDs, monitor renal function, avoid polypharmacy.",
+     "4. HIV patients: consider drug–drug interactions with antiretrovirals, monitor for drug resistance, use cotrimoxazole prophylaxis if indicated.",
+     "5. Low‑resource settings: use WHO essential medicines list, rely on clinical assessment when labs unavailable, use oral rehydration for dehydration, consider empirical broad‑spectrum antibiotics when culture facilities limited."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside, investigations, management, complications and special considerations.",
+    "t": [
+     {
+      "a": "Which laboratory value defines a high SOFA score in sepsis?",
+      "b": "An acute increase in SOFA score of ≥2 points, indicating organ dysfunction."
+     },
+     {
+      "a": "When should you add corticosteroids to the treatment of an inflammatory flare?",
+      "b": "When systemic inflammation is severe, or in autoimmune flare unresponsive to NSAIDs, to reduce cytokine storm."
+     },
+     {
+      "a": "What is the first step if a patient with suspected septic shock is hypotensive?",
+      "b": "Start intravenous fluids, give broad‑spectrum antibiotics, and administer vasopressors if MAP <65 mmHg."
+     },
+     {
+      "a": "Why should NSAIDs be avoided in a patient with chronic kidney disease?",
+      "b": "They reduce prostaglandin‑mediated renal perfusion, risking further kidney injury."
+     },
+     {
+      "a": "Which drug class is contraindicated in pregnancy after 20 weeks?",
+      "b": "NSAIDs, due to risk of premature ductus arteriosus closure."
+     },
+     {
+      "a": "How do you differentiate an abscess from cellulitis on examination?",
+      "b": "Abscess shows fluctuance, localized pain, and may have a fluctuant mass; cellulitis is diffuse erythema without fluctuation."
+     },
+     {
+      "a": "What is the management of a child with fever and suspected meningitis in a low‑resource setting?",
+      "b": "Empiric ceftriaxone and ampicillin, plus supportive care; lumbar puncture if safe."
+     },
+     {
+      "a": "Which herbal remedy can increase bleeding risk when combined with NSAIDs?",
+      "b": "Ginkgo biloba, as it inhibits platelet aggregation."
+     },
+     {
+      "a": "When should a patient with chronic inflammation be referred to rheumatology?",
+      "b": "If symptoms persist >4 weeks despite standard therapy or if there is multi‑organ involvement."
+     }
+    ],
+    "b": []
+   }
+  ],
+  "facts": [],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What are the cardinal signs of inflammation and their physiological basis?",
+    "a": "Redness from vasodilation; heat from increased blood flow; swelling from increased vascular permeability; pain from mediators stimulating nociceptors; loss of function from tissue damage and edema.",
+    "hot": true
+   },
+   {
+    "q": "How would you differentiate a localized inflammatory process from a systemic inflammatory response?",
+    "a": "Localized: pain, redness, swelling at one site; systemic: fever, tachycardia, tachypnea, leukocytosis, organ dysfunction. Check vital signs and look for multi‑organ signs.",
+    "hot": true
+   },
+   {
+    "q": "Why is the serum‑ascites albumin gradient (SAAG) useful?",
+    "a": "SAAG ≥1.1 g/dL indicates portal hypertension; <1.1 g/dL suggests other causes of ascites."
+   },
+   {
+    "q": "What is the first step in managing a patient with suspected bacterial cellulitis?",
+    "a": "Start empiric antibiotics covering Staph aureus and Streptococcus pyogenes; consider clindamycin or cefazolin.",
+    "hot": true
+   },
+   {
+    "q": "Why is corticosteroid therapy avoided in septic shock?",
+    "a": "Steroids can worsen immunosuppression and mask fever, delaying diagnosis; only used in refractory shock after trials."
+   },
+   {
+    "q": "How do you differentiate between acute and chronic inflammation histologically?",
+    "a": "Acute: neutrophils, edema; chronic: lymphocytes, plasma cells, macrophages, fibrosis."
+   },
+   {
+    "q": "What is the significance of a high ESR in a patient with HIV?",
+    "a": "May reflect chronic infection or inflammation; interpret with CRP and clinical context; high ESR alone is non‑specific."
+   },
+   {
+    "q": "What is the role of IL‑6 in acute inflammation?",
+    "a": "Stimulates hepatic CRP production, drives fever, activates B cells, and promotes neutrophil release."
+   },
+   {
+    "q": "What is the best initial imaging for suspected appendicitis in a pregnant woman?",
+    "a": "Ultrasound first; if inconclusive, MRI without gadolinium."
+   },
+   {
+    "q": "What is the most common cause of chronic interdigital tinea pedis?",
+    "a": "Trichophyton rubrum; presents with white flaky patches, itching, fissures.",
+    "past": true
+   },
+   {
+    "q": "Which enzyme is used to assess cardiovascular disease risk and is associated with inflammation?",
+    "a": "High‑sensitivity C‑reactive protein (hs‑CRP)."
+   },
+   {
+    "q": "After a breach of anatomical barriers, how does the coagulation system aid immune defense?",
+    "a": "Fibrin clot traps pathogens; thrombin activates platelets and leukocytes, enhancing inflammation."
+   },
+   {
+    "q": "What histologic pattern on liver biopsy suggests alcoholic hepatitis?",
+    "a": "Mallory bodies, neutrophilic infiltration, hepatocyte necrosis, and perivenular fibrosis."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old man with fever, tachycardia, and hypotension is found to have a SOFA score increase of 3 points. What is the most appropriate diagnosis?",
+    "o": [
+     "Sepsis",
+     "Septic shock",
+     "Severe sepsis",
+     "Systemic inflammatory response syndrome"
+    ],
+    "a": 0,
+    "e": "Sepsis is defined by a SOFA increase ≥2; this patient meets that criterion."
+   },
+   {
+    "q": "Which mediator is NOT a chemical mediator of acute inflammation?",
+    "o": [
+     "Histamine",
+     "Prostaglandin E2",
+     "Interferon‑γ",
+     "Platelet‑activating factor"
+    ],
+    "a": 2,
+    "e": "Interferon‑γ is a cytokine involved in chronic inflammation, not a primary chemical mediator of acute inflammation."
+   },
+   {
+    "q": "Which of the following is the characteristic cell of chronic inflammation?",
+    "o": [
+     "Neutrophils",
+     "Eosinophils",
+     "Macrophages",
+     "Basophils"
+    ],
+    "a": 2,
+    "e": "Macrophages are the hallmark of chronic inflammation."
+   },
+   {
+    "q": "A patient with HIV has a BAL showing pink foamy exudate with little inflammation. Which organism is most likely seen on GMS stain?",
+    "o": [
+     "Cryptosporidium",
+     "Pneumocystis jirovecii",
+     "Aspergillus fumigatus",
+     "Histoplasma capsulatum"
+    ],
+    "a": 1,
+    "e": "Pneumocystis jirovecii produces foamy exudate; GMS shows cysts.",
+    "past": true
+   },
+   {
+    "q": "Which enzyme is associated with inflammation and atherosclerosis and used to assess cardiovascular disease risk?",
+    "o": [
+     "LDL cholesterol",
+     "CRP",
+     "C‑terminal telopeptide",
+     "Homocysteine"
+    ],
+    "a": 1,
+    "e": "High‑sensitivity CRP is a marker of inflammation linked to atherosclerosis."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 26‑year‑old man presents with itchy, white, flaky patches between his toe webs and on the soles, with inflammation and fissures. He reports no systemic symptoms.",
+    "qs": [
+     {
+      "q": "What is the most likely causative organism?",
+      "a": "Trichophyton rubrum, the most common cause of interdigital tinea pedis."
+     },
+     {
+      "q": "What is the first‑line treatment?",
+      "a": "Topical terbinafine or clotrimazole for 2–4 weeks."
+     },
+     {
+      "q": "What complication should you counsel him about if left untreated?",
+      "a": "Spread to the nails (onychomycosis) and potential secondary bacterial infection."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming a high ESR alone confirms infection in HIV patients; ESR is non‑specific.",
+   "Treating all fever in a patient with gallstones as cholecystitis; asymptomatic stones need no surgery.",
+   "Misinterpreting a positive shift in dullness as fluid when actually due to splenomegaly.",
+   "Overlooking the need for a SOFA score in sepsis diagnosis; using SIRS alone is outdated.",
+   "Prescribing steroids in septic shock without evidence of refractory shock; steroids can worsen outcomes.",
+   "Confusing neutrophils with eosinophils in chronic inflammation; eosinophils are more typical of allergic reactions.",
+   "Assuming all foamy exudate in BAL is due to Pneumocystis; other organisms can produce similar findings."
+  ],
+  "exam": [
+   "What are the cardinal signs of inflammation and their physiological basis? — Redness from vasodilation; heat from increased blood flow; swelling from increased vascular permeability; pain from mediators stimulating nociceptors; loss of function from tissue damage and edema.",
+   "How would you differentiate a localized inflammatory process from a systemic inflammatory response? — Localized: pain, redness, swelling at one site; systemic: fever, tachycardia, tachypnea, leukocytosis, organ dysfunction. Check vital signs and look for multi‑organ signs.",
+   "Why is the serum‑ascites albumin gradient (SAAG) useful? — SAAG ≥1.1 g/dL indicates portal hypertension; <1.1 g/dL suggests other causes of ascites.",
+   "What is the first step in managing a patient with suspected bacterial cellulitis? — Start empiric antibiotics covering Staph aureus and Streptococcus pyogenes; consider clindamycin or cefazolin.",
+   "Why is corticosteroid therapy avoided in septic shock? — Steroids can worsen immunosuppression and mask fever, delaying diagnosis; only used in refractory shock after trials.",
+   "How do you differentiate between acute and chronic inflammation histologically? — Acute: neutrophils, edema; chronic: lymphocytes, plasma cells, macrophages, fibrosis.",
+   "What is the significance of a high ESR in a patient with HIV? — May reflect chronic infection or inflammation; interpret with CRP and clinical context; high ESR alone is non‑specific.",
+   "What is the role of IL‑6 in acute inflammation? — Stimulates hepatic CRP production, drives fever, activates B cells, and promotes neutrophil release.",
+   "What is the best initial imaging for suspected appendicitis in a pregnant woman? — Ultrasound first; if inconclusive, MRI without gadolinium.",
+   "What is the most common cause of chronic interdigital tinea pedis? — Trichophyton rubrum; presents with white flaky patches, itching, fissures.",
+   "Which enzyme is used to assess cardiovascular disease risk and is associated with inflammation? — High‑sensitivity C‑reactive protein (hs‑CRP).",
+   "After a breach of anatomical barriers, how does the coagulation system aid immune defense? — Fibrin clot traps pathogens; thrombin activates platelets and leukocytes, enhancing inflammation.",
+   "What histologic pattern on liver biopsy suggests alcoholic hepatitis? — Mallory bodies, neutrophilic infiltration, hepatocyte necrosis, and perivenular fibrosis."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-17",
+  "checked": "2026-10-17",
+  "trimmed": 4
+ }
 }

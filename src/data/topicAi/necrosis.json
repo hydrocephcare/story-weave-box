@@ -115,5 +115,395 @@
  "kind": "disease",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic physical exam allow rapid identification of necrotic tissue, its extent and complications, especially where imaging is limited.",
+    "b": [
+     "Onset and progression of pain – sudden severe pain suggests acute ischemia or infection; gradual dull ache suggests chronic gangrene.",
+     "History of trauma, surgery, burns, or immobilisation that could compromise blood supply.",
+     "Risk factors: diabetes, peripheral arterial disease, smoking, HIV, malnutrition, sickle‑cell disease, or recent intravenous drug use.",
+     "Systemic symptoms – fever, chills, malaise, or signs of sepsis indicating secondary infection.",
+     "Medication history – recent clindamycin, steroids, or vasoconstrictors that may precipitate necrosis.",
+     "Pregnancy or recent childbirth – consider obstetric‑related compartment syndromes."
+    ],
+    "t": [
+     {
+      "a": "Inspection",
+      "b": "Looks for discoloration, skin loss, bullae, or gas bubbles; a black, dry area suggests dry gangrene, while wet, foul‑smelling tissue suggests wet gangrene. Cannot determine depth of necrosis."
+     },
+     {
+      "a": "Palpation for tenderness and firmness",
+      "b": "Tender, firm tissue indicates early ischemia; a soft, mushy feel suggests liquefactive necrosis. Cannot differentiate bacterial from sterile necrosis."
+     },
+     {
+      "a": "Capillary refill test",
+      "b": "Press nail bed for 5 seconds; refill >2 seconds suggests impaired perfusion. Does not quantify the amount of necrotic tissue."
+     },
+     {
+      "a": "Percussion for crepitus",
+      "b": "Tapping over gas‑producing infection yields crackling; positive result points to gas gangrene. Cannot rule out non‑gas‑forming infections."
+     },
+     {
+      "a": "Passive range‑of‑motion and compartment check",
+      "b": "Pain on passive stretch with tense compartments indicates compartment syndrome needing urgent fasciotomy. Does not assess necrosis beyond the compartment."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and bedside imaging guide the aetiology, extent and systemic impact of necrosis; alternatives are provided for low‑resource settings.",
+    "b": [
+     "Full blood count – leukocytosis (>12 ×10⁹/L) supports infection; anemia may reflect chronic loss.",
+     "Serum creatine kinase – >1000 U/L indicates muscle necrosis (e.g., rhabdomyolysis).",
+     "Blood cultures – positive growth confirms bacteremia; negative cultures do not exclude localized infection.",
+     "Ultrasound (if available) – hypoechoic, poorly defined area indicates liquefaction; absent flow on Doppler suggests arterial occlusion.",
+     "Plain radiograph – subcutaneous gas shadows confirm gas gangrene; calcifications may indicate chronic fat necrosis.",
+     "Serum electrolytes – hyperkalaemia (>5.5 mmol/L) signals massive cell lysis; monitor for renal failure."
+    ],
+    "t": [
+     {
+      "a": "CBC with differential",
+      "b": "Answers: Is there a systemic inflammatory response? Neutrophil count >7 ×10⁹/L supports bacterial infection; lymphocytosis may suggest viral or TB necrosis."
+     },
+     {
+      "a": "Serum CK",
+      "b": "Answers: Is muscle involved? CK >1000 U/L points to rhabdomyolysis‑related necrosis; normal CK suggests non‑muscular tissue."
+     },
+     {
+      "a": "Blood cultures (2 sets)",
+      "b": "Answers: Is there bacteremia? Growth of Clostridium spp. confirms gas gangrene; no growth does not exclude localized infection."
+     },
+     {
+      "a": "Doppler ultrasound",
+      "b": "Answers: Is arterial flow absent? No flow in a limb artery confirms critical ischemia; presence of flow does not exclude superficial necrosis."
+     },
+     {
+      "a": "Plain X‑ray of the affected area",
+      "b": "Answers: Is gas present? Radiolucent streaks indicate gas‑forming infection; calcified fat necrosis appears as dense nodules."
+     },
+     {
+      "a": "Serum electrolytes and renal function",
+      "b": "Answers: Is there systemic toxicity? K⁺ >5.5 mmol/L or creatinine rise >1.5 mg/dL signals need for renal protection."
+     },
+     {
+      "a": "If imaging unavailable – clinical compartment pressure measurement with a handheld manometer",
+      "b": "Answers: Is compartment pressure >30 mmHg? Confirms compartment syndrome requiring fasciotomy."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification combines aetiology, depth and systemic impact; it guides urgency of intervention.",
+    "b": [
+     "Aetiologic type – ischemic (dry gangrene), infectious (wet/gas gangrene), traumatic, or metabolic (fat necrosis).",
+     "Depth – superficial skin necrosis, full‑thickness skin, subcutaneous, muscle, or bone involvement.",
+     "Extent – limited (<5 cm), moderate (5–15 cm), extensive (>15 cm) or circumferential.",
+     "Systemic severity – presence of sepsis (SIRS criteria), acute kidney injury, or hyperkalaemia.",
+     "Stage 1 (early) – viable tissue with marginal necrosis, pain out of proportion, normal pulses.",
+     "Stage 2 (established) – demarcated necrotic area, loss of sensation, possible crepitus.",
+     "Stage 3 (advanced) – wet gangrene, systemic toxicity, rising inflammatory markers.",
+     "Stage 4 (critical) – multi‑organ failure, refractory shock, requiring intensive care."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several disorders mimic necrosis clinically or radiologically; careful history, exam and targeted tests separate them.",
+    "t": [
+     {
+      "a": "Cellulitis",
+      "b": "Points: Redness, warmth, tender swelling without clear demarcation; no loss of sensation. Separate by lack of tissue loss on inspection and normal capillary refill."
+     },
+     {
+      "a": "Deep vein thrombosis with venous stasis ulcer",
+      "b": "Points: Chronic ulcer with edema, varicose veins, pain improves with elevation. Duplex ultrasound shows venous obstruction, not arterial occlusion."
+     },
+     {
+      "a": "Necrotizing fasciitis",
+      "b": "Points: Rapid progression, severe pain, bullae, systemic toxicity; crepitus may be absent. CT shows fascial thickening; surgical exploration confirms fascial necrosis."
+     },
+     {
+      "a": "Calciphylaxis (in renal failure)",
+      "b": "Points: Painful purpuric plaques, often in adipose tissue, with normal pulses. Skin biopsy shows calcium deposition, not bacterial invasion."
+     },
+     {
+      "a": "Mucormycosis (in diabetics)",
+      "b": "Points: Black eschar on nasal or facial tissue, rapid tissue loss, often in ketoacidosis. KOH prep shows broad, non‑septate hyphae; culture differentiates from bacterial gangrene."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder ensures rapid stabilization, definitive therapy, and timely escalation in necrotic tissue or organ injury.",
+    "b": [
+     "1. Immediate assessment of airway, breathing, circulation and pain control; avoid nephrotoxic analgesics in renal compromise.",
+     "2. Stop any causative antibiotics (e.g., clindamycin) and start first‑line therapy for C. difficile: oral vancomycin or fidaxomicin.",
+     "3. Initiate broad‑spectrum intravenous antibiotics covering gram‑positive, gram‑negative and anaerobes (e.g., piperacillin‑tazobactam, clindamycin if no C. difficile).",
+     "4. Provide aggressive intravenous fluids to maintain perfusion and prevent acute kidney injury from released intracellular proteins.",
+     "5. Monitor vital signs, urine output, serum lactate and renal function; repeat every 4–6 hours.",
+     "6. If gas gangrene or extensive tissue loss is suspected, arrange emergency surgical debridement and consider hyperbaric oxygen if available.",
+     "7. Escalate to intensive care if hemodynamic instability, rising lactate, or multi‑organ failure develops; refer to tertiary centre if advanced imaging or specialist input is required."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise key adverse reactions and interactions to avoid worsening necrosis or organ failure.",
+    "b": [
+     "1. Vancomycin: nephrotoxicity and ototoxicity; monitor serum levels and renal function, avoid concurrent nephrotoxins.",
+     "2. Fidaxomicin: rare hepatotoxicity; monitor liver enzymes, especially in pre‑existing liver disease.",
+     "3. Piperacillin‑tazobactam: risk of Clostridium difficile; use prophylactic probiotics if prolonged.",
+     "4. Clindamycin: high risk of C. difficile; discontinue immediately if infection suspected.",
+     "5. NSAIDs: avoid in renal impairment or when high fluid loss is present; use acetaminophen or opioids instead.",
+     "6. Antifungals (e.g., amphotericin B): monitor electrolytes and renal function; consider lipid formulations in renal failure.",
+     "7. Interaction with herbal remedies (e.g., St. John’s wort) that induce CYP enzymes can reduce antibiotic levels; counsel patients to stop."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of complications dictates timely escalation and prevents irreversible damage.",
+    "b": [
+     "1. Systemic inflammatory response syndrome (SIRS) – rising temperature, tachycardia, tachypnea, leukocytosis; start broad‑spectrum antibiotics and consider ICU admission.",
+     "2. Septic shock – hypotension unresponsive to fluids; initiate vasopressors, source control, and consider early goal‑directed therapy.",
+     "3. Acute kidney injury – oliguria, rising creatinine; hold nephrotoxic drugs, start renal replacement if indicated.",
+     "4. Gas gangrene – crepitus, rapid tissue destruction; emergency debridement and hyperbaric oxygen if available.",
+     "5. Myocardial ischemia – chest pain, ECG changes; refer to cardiology and consider reperfusion therapy.",
+     "6. Pulmonary embolism – sudden dyspnea, hypoxia; start anticoagulation after imaging confirmation."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "These factors alter presentation, diagnostics and treatment efficacy.",
+    "b": [
+     "1. HIV – higher risk of opportunistic infections; use antiretroviral therapy and monitor CD4 counts.",
+     "2. TB – can mimic caseous necrosis; perform sputum AFB and GeneXpert before initiating anti‑TB drugs.",
+     "3. Malnutrition – impaired wound healing; provide high‑protein diet and vitamin supplementation.",
+     "4. Pregnancy – avoid teratogenic antibiotics; use penicillins or cephalosporins, monitor fetal growth.",
+     "5. Diabetes – increased infection risk; control glucose, monitor for ketoacidosis.",
+     "6. Herbal remedies (e.g., garlic, ginseng) – potential drug interactions; ask about use and adjust dosing.",
+     "7. Alcohol – hepatotoxicity; avoid hepatotoxic drugs, monitor liver enzymes.",
+     "8. Renal or hepatic failure – dose adjustments required; avoid nephrotoxic or hepatotoxic agents.",
+     "9. Age extremes – elderly have reduced drug clearance; children require weight‑based dosing and careful monitoring."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches for vulnerable populations in low‑resource settings.",
+    "b": [
+     "1. Children – use weight‑based dosing, avoid NSAIDs, monitor for signs of dehydration; consider oral rehydration solutions.",
+     "2. Pregnancy – prefer penicillins/cephalosporins; avoid clindamycin if C. difficile risk is high; monitor fetal wellbeing.",
+     "3. Elderly – reduce polypharmacy, monitor for falls, adjust fluid management to avoid overload.",
+     "4. People with HIV – ensure ART adherence, monitor for drug‑drug interactions, consider prophylaxis for opportunistic infections.",
+     "5. Low‑resource settings – use affordable first‑line agents, rely on clinical assessment when imaging is unavailable, train staff in early surgical debridement."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Coagulative necrosis preserves tissue architecture for 2–3 days; seen in myocardial infarction and renal infarcts.",
+   "Liquefactive necrosis results in a liquid viscous mass; typical of brain abscesses and acute pancreatitis.",
+   "Caseous necrosis is ‘cheese‑like’ and characteristic of tuberculous granulomas.",
+   "Fat necrosis occurs when pancreatic lipase releases fatty acids that form calcium soaps; seen in acute pancreatitis and trauma.",
+   "Fibrinoid necrosis is immune‑mediated deposition of antigen‑antibody complexes in vessel walls; seen in malignant hypertension and systemic lupus erythematosus.",
+   "Pyknosis is nuclear shrinkage with increased basophilia; karyorrhexis is fragmentation; karyolysis is chromatin fading due to DNAse activity.",
+   "Loss of membrane integrity releases lactate dehydrogenase (LDH) and potassium; LDH > 500 IU/L suggests significant necrosis.",
+   "Cytoplasmic eosinophilia increases when RNA is lost and proteins denature; a glassy homogeneous appearance is typical of necrotic cells.",
+   "In the hepatic acinus, zone 3 (centrilobular) is most hypoxic and most susceptible to ischemic or toxic injury.",
+   "Clindamycin is a high‑risk drug for Clostridioides difficile colitis; it must be stopped immediately if infection is suspected."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the most likely infectious agent in a 25‑year‑old with lymphocytic myocarditis and focal myocyte necrosis?",
+    "a": "Enterovirus, most commonly Coxsackie B virus, is the classic cause of lymphocytic myocarditis with focal necrosis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Identify the tumour most likely to present as a 10 cm right ventricular mass with haemorrhage and necrosis.",
+    "a": "A primary cardiac sarcoma, such as a malignant rhabdomyosarcoma, often shows central haemorrhage and necrosis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 3 mm tumour shows central necrosis. What does this suggest about its biology?",
+    "a": "Central necrosis in a small tumour indicates rapid growth outpacing its blood supply, suggesting aggressive behaviour.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 16‑year‑old with a large ovarian mass containing immature neural tissue and necrosis: diagnosis?",
+    "a": "A malignant teratoma (teratoma with malignant transformation) often contains immature neural elements and necrosis.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Why is fat necrosis of the breast clinically important?",
+    "a": "It can mimic malignancy on imaging and may indicate underlying pancreatitis or trauma; it also causes pain and palpable masses.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Define coagulative necrosis.",
+    "a": "Coagulative necrosis is the preservation of tissue architecture with eosinophilic cytoplasm and pyknotic nuclei, typical of infarcts in solid organs.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "When is liquefactive necrosis typical?",
+    "a": "It occurs in abscesses, brain infarcts, and acute pancreatitis where enzymes digest tissue into a liquid mass.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Where is caseous necrosis most characteristically seen?",
+    "a": "In tuberculous granulomas, especially in the lungs and lymph nodes.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "List three common causes of centrilobular (zone 3) necrosis in acute liver injury.",
+    "a": "Acetaminophen overdose, ischemia (shock), and viral hepatitis (e.g., hepatitis B).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the affected zone in centrilobular necrosis and its oxygenation status?",
+    "a": "Zone 3, the most hypoxic zone adjacent to the central vein, is most susceptible to toxic and ischemic injury.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What bedside sign would you look for to detect gas gangrene?",
+    "a": "Crepitus over the affected limb; it indicates gas‑producing bacteria and requires emergency debridement.",
+    "hot": true
+   },
+   {
+    "q": "Why should NSAIDs be avoided in a patient with necrotic tissue and renal dysfunction?",
+    "a": "NSAIDs reduce renal perfusion and can precipitate acute kidney injury, worsening electrolyte imbalance from necrosis."
+   },
+   {
+    "q": "How would you differentiate coagulative from liquefactive necrosis on histology?",
+    "a": "Coagulative shows preserved architecture with eosinophilic cytoplasm; liquefactive shows a liquid mass with loss of cellular detail."
+   },
+   {
+    "q": "What is the first step in managing a patient with suspected Clostridioides difficile colitis?",
+    "a": "Stop clindamycin immediately and start oral vancomycin or fidaxomicin as first‑line therapy."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which type of necrosis is most likely in a brain abscess?",
+    "o": [
+     "Coagulative",
+     "Liquefactive",
+     "Caseous",
+     "Fibrinoid"
+    ],
+    "a": 1,
+    "e": "Brain abscesses undergo liquefactive necrosis due to enzymatic digestion."
+   },
+   {
+    "q": "A patient with necrotic tissue develops sudden hypotension and fever. What is the most likely complication?",
+    "o": [
+     "Septic shock",
+     "Pulmonary embolism",
+     "Deep vein thrombosis",
+     "Hypocalcaemia"
+    ],
+    "a": 0,
+    "e": "Secondary bacterial infection can lead to septic shock."
+   },
+   {
+    "q": "Which drug is contraindicated in a patient with necrotic tissue and renal impairment?",
+    "o": [
+     "Paracetamol",
+     "NSAIDs",
+     "Opioids",
+     "Antibiotics"
+    ],
+    "a": 1,
+    "e": "NSAIDs reduce renal perfusion and worsen renal injury."
+   },
+   {
+    "q": "Which laboratory marker is most specific for cell membrane rupture?",
+    "o": [
+     "AST",
+     "LDH",
+     "CK",
+     "Creatinine"
+    ],
+    "a": 1,
+    "e": "LDH is released when the plasma membrane is compromised."
+   },
+   {
+    "q": "A 16‑year‑old presents with a solid ovarian mass with immature neural tissue and necrosis. Which tumour is most likely?",
+    "o": [
+     "Granulosa cell tumour",
+     "Teratoma with malignant transformation",
+     "Ovarian cystadenoma",
+     "Krukenberg tumour"
+    ],
+    "a": 1,
+    "e": "Malignant teratoma often contains immature neural tissue and necrosis.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 30‑year‑old man presents with sudden onset of chest pain radiating to the left arm, diaphoresis, and nausea. ECG shows ST‑segment elevation in leads II, III, and aVF. Serum troponin is 12 ng/mL. He is taken to the cath lab where a thrombus is found in the right coronary artery.",
+    "qs": [
+     {
+      "q": "What type of necrosis is most likely in the affected myocardium?",
+      "a": "Coagulative necrosis, as infarction preserves architecture for several days."
+     },
+     {
+      "q": "What bedside sign would you look for to assess for potential compartment syndrome?",
+      "a": "Loss of sensation or pain out of proportion to exam, tense swelling, and diminished pulses."
+     },
+     {
+      "q": "What is the first pharmacologic step after reperfusion?",
+      "a": "Administer antiplatelet therapy (e.g., aspirin) and a P2Y12 inhibitor to prevent re‑thrombosis."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming all necrosis is liquefactive; failing to recognise coagulative pattern in infarcts.",
+   "Misidentifying caseous necrosis as fibrinoid; they are distinct histological patterns.",
+   "Overlooking the need to stop clindamycin in suspected C. difficile colitis.",
+   "Treating necrotic tissue with NSAIDs without considering renal function.",
+   "Confusing pyknosis with karyorrhexis; they represent different stages of nuclear fragmentation.",
+   "Failing to recognise that centrilobular necrosis indicates zone 3 injury and suggests toxic or ischemic causes.",
+   "Assuming all abdominal pain with necrosis is due to pancreatitis; other causes like mesenteric ischemia exist.",
+   "Misinterpreting LDH elevation as solely due to necrosis without considering hemolysis or liver disease."
+  ],
+  "exam": [
+   "What is the most likely infectious agent in a 25‑year‑old with lymphocytic myocarditis and focal myocyte necrosis? — Enterovirus, most commonly Coxsackie B virus, is the classic cause of lymphocytic myocarditis with focal necrosis.",
+   "Identify the tumour most likely to present as a 10 cm right ventricular mass with haemorrhage and necrosis. — A primary cardiac sarcoma, such as a malignant rhabdomyosarcoma, often shows central haemorrhage and necrosis.",
+   "A 3 mm tumour shows central necrosis. What does this suggest about its biology? — Central necrosis in a small tumour indicates rapid growth outpacing its blood supply, suggesting aggressive behaviour.",
+   "A 16‑year‑old with a large ovarian mass containing immature neural tissue and necrosis: diagnosis? — A malignant teratoma (teratoma with malignant transformation) often contains immature neural elements and necrosis.",
+   "Why is fat necrosis of the breast clinically important? — It can mimic malignancy on imaging and may indicate underlying pancreatitis or trauma; it also causes pain and palpable masses.",
+   "Define coagulative necrosis. — Coagulative necrosis is the preservation of tissue architecture with eosinophilic cytoplasm and pyknotic nuclei, typical of infarcts in solid organs.",
+   "When is liquefactive necrosis typical? — It occurs in abscesses, brain infarcts, and acute pancreatitis where enzymes digest tissue into a liquid mass.",
+   "Where is caseous necrosis most characteristically seen? — In tuberculous granulomas, especially in the lungs and lymph nodes.",
+   "List three common causes of centrilobular (zone 3) necrosis in acute liver injury. — Acetaminophen overdose, ischemia (shock), and viral hepatitis (e.g., hepatitis B).",
+   "What is the affected zone in centrilobular necrosis and its oxygenation status? — Zone 3, the most hypoxic zone adjacent to the central vein, is most susceptible to toxic and ischemic injury.",
+   "What bedside sign would you look for to detect gas gangrene? — Crepitus over the affected limb; it indicates gas‑producing bacteria and requires emergency debridement.",
+   "Why should NSAIDs be avoided in a patient with necrotic tissue and renal dysfunction? — NSAIDs reduce renal perfusion and can precipitate acute kidney injury, worsening electrolyte imbalance from necrosis.",
+   "How would you differentiate coagulative from liquefactive necrosis on histology? — Coagulative shows preserved architecture with eosinophilic cytoplasm; liquefactive shows a liquid mass with loss of cellular detail.",
+   "What is the first step in managing a patient with suspected Clostridioides difficile colitis? — Stop clindamycin immediately and start oral vancomycin or fidaxomicin as first‑line therapy."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-17",
+  "checked": "2026-10-17",
+  "trimmed": 2
+ }
 }

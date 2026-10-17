@@ -44,6 +44,85 @@
    "issues": [],
    "model": "openai/gpt-oss-120b",
    "at": "2026-10-16"
+  },
+  "fundamentals-of-psychopathology": {
+   "hash": "1d393c031508",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-17"
+  },
+  "introduction-to-psychopharmacology": {
+   "hash": "ed867aa63f0f",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-17"
+  },
+  "psychological-therapies-and-non-pharmacological-interventions": {
+   "hash": "efeb700b36f5",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-17"
+  },
+  "psychiatry-mku-curriculum-year-4": {
+   "hash": "1da6fb520086",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-17"
+  },
+  "biopsychosocial-formulation": {
+   "hash": "164ee0219e08",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-17"
+  },
+  "psychiatry-sociology-anthropology-psychology": {
+   "hash": "606a97211eb2",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-17"
+  },
+  "thinkers-or-emotional-thinkers": {
+   "hash": "bae54791e89c",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-17"
+  },
+  "bipolar-and-related-disorders": {
+   "hash": "8847228595f8",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Section 6: Clinical features of a major depressive episode",
+     "problem": "The text states that 'psychotic depression' is a feature that points toward bipolar rather than unipolar depression, but psychotic depression can occur in both unipolar and bipolar depression.",
+     "fix": "Features that point toward bipolar rather than unipolar depression include early age of onset, many episodes, atypical features, psychomotor retardation, postpartum episodes, family history of bipolar disorder, and a history of antidepressant-induced switch or poor response to antidepressants."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-17"
   }
  },
  "topics": {}

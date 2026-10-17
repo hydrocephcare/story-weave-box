@@ -64,5 +64,438 @@
  "kind": "physiology",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Key History Questions:",
+     "Neurological symptoms: tingling, numbness (especially in hands/feet), gait disturbance, memory problems, mood changes.",
+     "Gastrointestinal symptoms: sore tongue, loss of appetite, diarrhoea, constipation, weight loss.",
+     "Haematological symptoms: fatigue, shortness of breath (especially on exertion), palpitations, pallor.",
+     "Dietary history: strict vegetarian/vegan diet, poor intake, recent significant weight loss.",
+     "Past medical history: history of gastric surgery, Crohn's disease, coeliac disease, pernicious anaemia.",
+     "Examination:",
+     "General appearance: Pallor, jaundice (mild).",
+     "Mouth: Glossitis (sore, red, smooth tongue).",
+     "Neurological: Assess gait, Romberg's test (proprioception/balance), vibration sense (tuning fork on bony prominences), proprioception (joint position sense), reflexes (may be exaggerated or diminished).",
+     "Skin: Assess for pallor.",
+     "What a bedside test cannot tell you: The specific cause of deficiency or the extent of neurological damage."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "t": [
+     {
+      "a": "Full Blood Count (FBC)",
+      "b": "Screens for anaemia. A low haemoglobin and haematocrit indicate anaemia. MCV (Mean Corpuscular Volume) is typically elevated (macrocytic anaemia, MCV > 100 fL) in B12 deficiency, though can be normal or even low if iron deficiency coexists."
+     },
+     {
+      "a": "Serum Vitamin B12 Level",
+      "b": "Assesses circulating B12. Low levels (<150 pmol/L) suggest deficiency. However, levels can be falsely normal in myeloproliferative disorders or liver disease, and borderline levels require further investigation. A level of 150-300 pmol/L is equivocal."
+     },
+     {
+      "a": "Serum Folate Level",
+      "b": "Assesses folate status. Low levels (<7 nmol/L) suggest deficiency. Recent dietary intake can normalise serum folate despite tissue deficiency. A level of 7-15 nmol/L is equivocal."
+     },
+     {
+      "a": "Red Cell Folate",
+      "b": "More reliable indicator of folate status than serum folate as it reflects longer-term intake. Low levels (<340 nmol/L) indicate deficiency."
+     },
+     {
+      "a": "Methylmalonic Acid (MMA) and Homocysteine",
+      "b": "MMA is elevated in B12 deficiency (due to impaired conversion to succinyl CoA). Homocysteine is elevated in both B12 and folate deficiency. Elevated MMA is specific for B12 deficiency. Elevated homocysteine alone suggests folate deficiency."
+     },
+     {
+      "a": "Intrinsic Factor Antibodies (IF Ab) and Parietal Cell Antibodies (PCA)",
+      "b": "Help diagnose pernicious anaemia. IF Ab are highly specific for pernicious anaemia. PCA are less specific but present in ~90% of pernicious anaemia patients and ~30% of other autoimmune conditions."
+     },
+     {
+      "a": "Peripheral Blood Smear",
+      "b": "May show hypersegmented neutrophils (more than 5 lobes) and macro-ovalocytes, characteristic of megaloblastic anaemia."
+     },
+     {
+      "a": "If tests unavailable:",
+      "b": "Empirical treatment with B12 and folate may be initiated based on strong clinical suspicion, particularly if neurological signs are present, but this should be followed by investigation once the patient is stable. Red cell folate is preferred over serum folate if available."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "Diagnosis is based on a combination of clinical presentation and laboratory findings.",
+     "Megaloblastic anaemia: Characterised by macrocytosis (high MCV) on FBC and hypersegmented neutrophils on peripheral smear.",
+     "Vitamin B12 deficiency: Confirmed by low serum B12 levels (<150 pmol/L) and/or elevated MMA. Neurological symptoms may be present even with normal or borderline B12 levels.",
+     "Folate deficiency: Confirmed by low red cell folate (<340 nmol/L) or serum folate (<7 nmol/L) with elevated homocysteine.",
+     "Pernicious Anaemia: Diagnosed by the presence of IF antibodies, often in conjunction with B12 deficiency and macrocytic anaemia.",
+     "Subacute Combined Degeneration (SCD) of the Spinal Cord: A severe neurological complication of B12 deficiency. Diagnosis is clinical, supported by MRI findings of posterior and lateral column demyelination. Severity is graded clinically based on neurological deficits."
+    ]
+   },
+   {
+    "h": "Look-alike conditions",
+    "t": [
+     {
+      "a": "Iron Deficiency Anaemia",
+      "b": "Presents with anaemia, fatigue, pallor. Differentiated by a low MCV (microcytic anaemia) on FBC, normal B12/folate levels, and low serum ferritin."
+     },
+     {
+      "a": "Myelodysplastic Syndromes (MDS)",
+      "b": "Can present with macrocytic anaemia and cytopenias. Differentiated by bone marrow biopsy showing dysplastic changes in haematopoietic precursors. Serum B12 may be falsely elevated."
+     },
+     {
+      "a": "Alcoholic Neuropathy",
+      "b": "Can cause peripheral neuropathy with sensory and motor symptoms. Differentiated by a history of significant alcohol intake and normal B12/folate levels. May coexist with B12 deficiency."
+     },
+     {
+      "a": "Other causes of macrocytosis (e.g., liver disease, hypothyroidism, certain drugs)",
+      "b": "Differentiated by specific investigations for these conditions and normal B12/folate levels. Liver disease can cause falsely normal B12 levels."
+     },
+     {
+      "a": "Folate Deficiency",
+      "b": "Presents with megaloblastic anaemia and glossitis. Differentiated by normal B12 levels and elevated homocysteine, but normal MMA. Red cell folate is typically low."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Management of vitamin deficiencies prioritises immediate stabilization, preventing neurological harm, replacing targeted micronutrients, and managing underlying absorptive or metabolic causes.",
+    "b": [
+     "1. First, secure airway, breathing, and circulation; if suspected Wernicke encephalopathy, give intravenous thiamine immediately before any intravenous glucose to avoid precipitating acute brainstem and diencephalic metabolic failure.",
+     "2. In macrocytic anaemia, confirm serum cobalamin status or treat empirically with parenteral hydroxocobalamin alongside folate; never administer folic acid alone because it can precipitate or aggravate irreversible subacute combined degeneration of the spinal cord.",
+     "3. Address active bleeding or coagulopathy: give parenteral phytomenadione (vitamin K1) to restore functional hepatic synthesis of factors II, VII, IX, and X; use fresh frozen plasma or prothrombin complex concentrate if life-threatening haemorrhage occurs.",
+     "4. Initiate definitive replacement: use intramuscular hydroxocobalamin for pernicious anaemia or terminal ileal disease, high-dose oral vitamin D3 (cholecalciferol) with elemental calcium for rickets or osteomalacia, and therapeutic oral vitamin A for xerophthalmia.",
+     "5. Provide oral nicotinamide for pellagra, pyridoxine (vitamin B6) for peripheral neuropathy, and ascorbic acid (vitamin C) for scurvy, ensuring clean protein-energy intake alongside replacement.",
+     "6. Monitor functional recovery: check reticulocyte response at 7 to 10 days in megaloblastic anaemia, tracking international normalized ratio (INR) in coagulopathy, and watching serum potassium closely during initial cobalamin therapy.",
+     "7. Escalate and refer to a specialist centre if neurological deficits progress despite intramuscular cobalamin, if corneal ulceration threatens perforation, or if malabsorption persists despite adherence to oral replacement."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Nutritional therapies and antagonist medications carry important metabolic interactions and toxicities that require structured clinical actions.",
+    "b": [
+     "High-dose parenteral thiamine can rarely cause anaphylaxis: keep resuscitation facilities ready and infuse slowly.",
+     "Parenteral vitamin K1 carries a risk of anaphylactoid reactions if pushed rapidly via intravenous route: dilute adequately and infuse slowly.",
+     "Water-soluble vitamin megadoses: prolonged pyridoxine (vitamin B6) excess paradoxically triggers sensory axonal neuropathy; stop supplements immediately upon onset of ataxia or paresthesias."
+    ],
+    "t": [
+     {
+      "a": "Intravenous cobalamin initiation",
+      "b": "Rapid erythropoiesis drives potassium intracellularly, causing lethal hypokalaemia; monitor serum potassium and replace promptly if low."
+     },
+     {
+      "a": "Folic acid monotherapy in unruled B12 deficiency",
+      "b": "Corrects haematologic indices while precipitating irreversible subacute combined degeneration; always co-administer cobalamin until B12 deficiency is excluded."
+     },
+     {
+      "a": "Isoniazid therapy",
+      "b": "Competitively inhibits pyridoxal phosphate synthesis, provoking severe sensory peripheral neuropathy; co-prescribe prophylactic oral pyridoxine in all patients."
+     },
+     {
+      "a": "Warfarin therapy",
+      "b": "Inhibits vitamin K epoxide reductase; excessive dietary vitamin K blunts anticoagulation, whereas acute deficiency or antibiotics elevate INR dangerously; titrate carefully."
+     },
+     {
+      "a": "Excessive vitamin A therapy",
+      "b": "Causes acute raised intracranial pressure, hepatotoxicity, and severe teratogenicity; avoid high doses in pregnancy and stop at signs of bulging fontanelle or papilloedema."
+     },
+     {
+      "a": "Excessive vitamin D therapy",
+      "b": "Induces hypercalcaemia, nephrocalcinosis, and cardiac dysrhythmias; monitor serum calcium and stop calcium and vitamin D supplements if elevated."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Failure to identify or treat vitamin deficits rapidly leads to irreversible neurological deficits, visual loss, or fatal haemorrhage requiring escalation.",
+    "b": [
+     "Subacute combined degeneration of the spinal cord: presenting with bilateral dorsal column loss (vibration, proprioception) and lateral corticospinal tract signs; escalate immediately for high-frequency parenteral hydroxocobalamin to prevent permanent paraplegia.",
+     "Wernicke-Korsakoff syndrome: presenting with acute confusion, bilateral lateral rectus palsy or nystagmus, and gait ataxia; requires emergency high-dose parenteral thiamine before any carbohydrate load.",
+     "Corneal ulceration and keratomalacia from severe vitamin A deficiency: rapidly leads to corneal perforation and permanent blindness; escalate for emergency systemic vitamin A and urgent ophthalmology referral.",
+     "Severe scurvy: manifests with subperiosteal hematomas, hemarthrosis, perifollicular haemorrhages, corkscrew hairs, and poor wound healing; escalate to high-dose oral or parenteral ascorbic acid.",
+     "Refractory coagulopathy: persistent prolonged prothrombin time (PT) despite parenteral vitamin K suggests severe intrinsic liver parenchymal dysfunction rather than simple biliary malabsorption; refer to specialist medical or surgical units."
+    ],
+    "t": [
+     {
+      "a": "Prolonged PT with normal aPTT",
+      "b": "Indicates isolated factor VII depletion, characteristic of early or mild vitamin K deficiency; escalate to oral or parenteral vitamin K1."
+     },
+     {
+      "a": "Prolonged PT and prolonged aPTT",
+      "b": "Reflects severe depletion of shared vitamin K-dependent factors (II, IX, X); give parenteral phytomenadione and monitor closely for major bleeding."
+     },
+     {
+      "a": "Hypocalcaemic tetany and seizures",
+      "b": "Severe vitamin D deficiency with impaired calcium mobilization; give urgent intravenous calcium gluconate followed by therapeutic cholecalciferol."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Systemic illnesses, lifestyle factors, and physiological extremes fundamentally alter vitamin demand, metabolism, and clinical presentations.",
+    "b": [
+     "HIV and TB: widespread enteropathy and chronic inflammation blunt micronutrient absorption; isoniazid directly antagonises pyridoxine (vitamin B6), necessitating routine prophylactic pyridoxine to prevent debilitating peripheral neuropathy.",
+     "Severe acute malnutrition (SAM): blunt mucosal atrophy impairs fat and water-soluble vitamin uptake; refeeding without adequate micronutrient coverage risks refeeding syndrome with precipitous hypophosphataemia and acute thiamine depletion.",
+     "Pregnancy: elevated maternal-foetal requirements increase susceptibility to folate deficiency (neural tube defects) and physiological dilution lowers plasma cobalamin levels; high doses of preformed vitamin A are teratogenic and strictly contraindicated.",
+     "Alcohol dependence: causes poor dietary intake, impaired intestinal thiamine transporter expression, and defective hepatic storage, vastly increasing vulnerability to Wernicke encephalopathy, dry beriberi, and wet beriberi (high-output cardiac failure).",
+     "Kidney failure: loss of renal 1-alpha-hydroxylase stops the conversion of 25-hydroxyvitamin D to active 1,25-dihydroxyvitamin D, causing renal osteodystrophy requiring active 1-alpha-hydroxylated or calcitriol analogues.",
+     "Chronic liver disease and cholestasis: bile salt deficiency impairs emulsification and absorption of fat-soluble vitamins (A, D, E, K); liver failure prevents hepatic synthesis of clotting factors despite normal vitamin K stores.",
+     "Age extremes: neonates have poor placental transfer and sterile intestines causing vitamin K deficiency bleeding; elderly individuals frequently develop food-cobalamin malabsorption due to atrophic gastritis, hypochlorhydria, and polypharmacy like metformin or proton pump inhibitors."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Specific vulnerable populations require tailored assessment and distinct prophylactic or therapeutic approaches.",
+    "b": [
+     "Neonates: naturally born with low vitamin K stores and minimal intestinal bacterial synthesis; require routine parenteral phytomenadione at birth to prevent catastrophic vitamin K deficiency bleeding, including late-onset intracranial haemorrhage.",
+     "Children with measles: measles depletes hepatic vitamin A reserves rapidly; routine therapeutic high-dose oral vitamin A on two consecutive days reduces mortality and prevents devastating corneal ulceration and xerophthalmia.",
+     "Strict vegans and their infants: complete avoidance of animal products causes nutritional B12 deficiency; exclusively breastfed infants of untreated vegan mothers risk severe developmental regression, hypotonia, and microcephaly unless supplemented.",
+     "Patients in low-resource settings: limited dietary diversity exposes populations to endemic pellagra (maize-based diets low in tryptophan and niacin) and beriberi (polished white rice diets); syndromic community diagnosis and empirical treatment are essential.",
+     "Post-bariatric and ileal resection patients: loss of gastric intrinsic factor production or terminal ileal mucosal absorption causes lifelong B12 deficiency; requires routine prophylactic lifelong intramuscular hydroxocobalamin replacement."
+    ]
+   },
+   {
+    "h": "Exam Questions",
+    "p": "High-yield past paper and bedside reasoning scenarios designed to consolidate critical clinical management concepts.",
+    "b": [
+     "1. Vitamin B12 absorption in the terminal ileum strictly requires which gastric transport glycoprotein? Answer: Intrinsic factor (produced by gastric parietal cells).",
+     "2. Which vitamin is essential for the gamma-carboxylation and synthesis of coagulation factors II, VII, IX, and X? Answer: Vitamin K (phytomenadione/menaquinone).",
+     "3. What is the most common cause of vitamin B12 deficiency in Western countries? Answer: Food-cobalamin malabsorption (frequently due to atrophic gastritis) and pernicious anaemia.",
+     "4. Which feature is NOT a typical presentation of vitamin B12 deficiency: macrocytic anaemia, sensory ataxia, spasticity, or isolated motor anterior horn cell disease? Answer: Isolated motor anterior horn cell disease (B12 affects dorsal and lateral columns).",
+     "5. Defective gastric parietal cells lead to malabsorption of which vitamin? Answer: Vitamin B12 (cobalamin).",
+     "6. Name the water-soluble vitamins commonly assessed in clinical medicine. Answer: Vitamin C (ascorbic acid) and the B-complex vitamins (thiamine, riboflavin, niacin, pantothenic acid, pyridoxine, biotin, folate, cobalamin).",
+     "7. Deficiency of which vitamin is the primary preventable cause of night blindness and corneal xerophthalmia in children? Answer: Vitamin A (retinol).",
+     "8. A chronic liver disease patient develops pruritus, pale stools, dark urine, and post-mortem bile retention: what is the clinical term? Answer: Cholestasis (obstructive jaundice).",
+     "9. A malnourished patient is admitted in stupor; why must intravenous thiamine precede glucose administration? Answer: Glucose metabolism uses thiamine as a cofactor; unsupplemented carbohydrate loading triggers acute Wernicke encephalopathy.",
+     "10. Why is giving folic acid alone hazardous in uninvestigated megaloblastic anaemia? Answer: It corrects haematological indices but precipitates or worsens irreversible subacute combined degeneration of the spinal cord.",
+     "11. A jaundiced patient has a prolonged prothrombin time but normal aPTT; which factor deficiency is responsible? Answer: Factor VII deficiency (the shortest half-life factor in the extrinsic pathway, reflecting early vitamin K deficiency).",
+     "12. What examination finding distinguishes subacute combined degeneration of the cord from peripheral neuropathy? Answer: Presence of upper motor neuron signs (extensor plantar responses, spasticity, hyperreflexia) combined with dorsal column sensory loss."
+    ]
+   }
+  ],
+  "facts": [
+   "Normal serum B12: 200-900 pg/mL",
+   "Normal serum folate: 2.7-17.0 ng/mL",
+   "Normal 25-hydroxyvitamin D: 30-100 ng/mL",
+   "Vitamin K dependent coagulation factors: II, VII, IX, X",
+   "Intrinsic factor is a glycoprotein produced by gastric parietal cells.",
+   "Homocysteine and methylmalonic acid (MMA) are elevated in B12 deficiency.",
+   "Red cell folate reflects long-term folate status."
+  ],
+  "mnemonics": [
+   {
+    "n": "DDD",
+    "t": "Triad of Pellagra (Vitamin B3 deficiency): Dermatitis, Diarrhea, Dementia."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Vitamin B12 absorption in the terminal ileum strictly requires a transport glycoprotein known as",
+    "a": "Intrinsic factor. It binds to B12 in the stomach and protects it from degradation, facilitating its absorption in the terminal ileum.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which vitamin is essential for synthesis of coagulation factors?",
+    "a": "Vitamin K. It is a co-factor for gamma-carboxylation of glutamic acid residues on coagulation factors II, VII, IX, and X, as well as proteins C and S.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Most common cause of vitamin B12 deficiency in Western countries?",
+    "a": "Food-cobalamin malabsorption (often due to atrophic gastritis) and pernicious anaemia. Strict veganism is a less common cause.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Defective parietal cells cause malabsorption of which vitamin?",
+    "a": "Vitamin B12. Parietal cells produce intrinsic factor, which is essential for B12 absorption.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Deficiency of which vitamin is the main cause of night blindness?",
+    "a": "Vitamin A. It is a component of rhodopsin, a pigment in the retinal rods responsible for vision in low light.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the clinical term for significant bile retention, and which vitamin deficiencies would you anticipate in such a patient?",
+    "a": "Cholestasis. This condition impairs the absorption of fat-soluble vitamins (A, D, E, K) due to reduced bile salt availability.",
+    "past": true
+   },
+   {
+    "q": "Why is it dangerous to give folic acid alone in suspected B12 deficiency before confirming the diagnosis?",
+    "a": "Giving folic acid alone can correct the megaloblastic anemia but will not address the neurological damage of B12 deficiency. This can lead to the precipitation or worsening of irreversible subacute combined degeneration of the spinal cord."
+   },
+   {
+    "q": "How do you differentiate between an early/mild vitamin K deficiency and a more severe deficiency based on coagulation tests?",
+    "a": "An early or mild vitamin K deficiency typically presents with an isolated prolonged Prothrombin Time (PT) and a normal Activated Partial Thromboplastin Time (aPTT), due to factor VII having the shortest half-life. A more severe deficiency will prolong both PT and aPTT as factors II, IX, and X become depleted."
+   },
+   {
+    "q": "Which is a water-soluble vitamin?",
+    "a": "Vitamin C (ascorbic acid) or any of the B-complex vitamins (e.g., Thiamine B1, Riboflavin B2, Niacin B3, Pyridoxine B6, Folate B9, Cobalamin B12).",
+    "past": true
+   },
+   {
+    "q": "A patient presents with peripheral neuropathy and megaloblastic anemia. What investigations would you order to differentiate between B12 and folate deficiency?",
+    "a": "Order serum B12, serum folate, red cell folate, homocysteine, and methylmalonic acid (MMA) levels. Elevated MMA is specific to B12 deficiency, while homocysteine is elevated in both."
+   },
+   {
+    "q": "Describe the key physical examination findings in a patient with severe Vitamin C deficiency (scurvy).",
+    "a": "Findings include perifollicular hyperkeratosis with corkscrew hairs, swollen and bleeding gums, petechiae, ecchymoses, impaired wound healing, and joint pain due to haemarthrosis."
+   },
+   {
+    "q": "What are the common causes of Vitamin D deficiency in low-resource settings?",
+    "a": "Limited sun exposure (e.g., cultural practices, indoor occupations), inadequate dietary intake, malabsorption syndromes (e.g., chronic diarrhea, HIV enteropathy), and chronic kidney or liver disease."
+   },
+   {
+    "q": "How does chronic liver disease affect vitamin metabolism and why?",
+    "a": "Chronic liver disease impairs the storage of fat-soluble vitamins (A, D, E, K) and the hydroxylation of vitamin D. It also affects the synthesis of transport proteins for various vitamins and can lead to cholestasis, further impairing fat-soluble vitamin absorption."
+   },
+   {
+    "q": "What are the neurological features of Vitamin B12 deficiency?",
+    "a": "These include peripheral neuropathy (paresthesias, numbness), ataxia, impaired proprioception and vibratory sense (subacute combined degeneration of the spinal cord), cognitive impairment, and psychiatric symptoms."
+   },
+   {
+    "q": "What is the role of Vitamin E in the body and what are the clinical signs of its deficiency?",
+    "a": "Vitamin E is a potent antioxidant, protecting cell membranes from oxidative damage. Deficiency is rare but can cause neurological symptoms like ataxia, peripheral neuropathy, muscle weakness, and retinopathy."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "NOT a typical feature of vitamin B12 deficiency?",
+    "o": [
+     "Peripheral neuropathy",
+     "Megaloblastic anemia",
+     "Elevated methylmalonic acid",
+     "Microcytic anemia"
+    ],
+    "a": 3,
+    "e": "Vitamin B12 deficiency causes megaloblastic (macrocytic) anemia, not microcytic anemia.",
+    "past": true
+   },
+   {
+    "q": "A 65-year-old patient presents with a history of chronic alcoholism, confusion, ophthalmoplegia, and ataxia. Which vitamin deficiency is most likely?",
+    "o": [
+     "Vitamin B1 (Thiamine)",
+     "Vitamin B3 (Niacin)",
+     "Vitamin B6 (Pyridoxine)",
+     "Vitamin B12 (Cobalamin)"
+    ],
+    "a": 0,
+    "e": "The triad of confusion, ophthalmoplegia, and ataxia in an alcoholic patient is characteristic of Wernicke-Korsakoff syndrome, caused by Thiamine (B1) deficiency."
+   },
+   {
+    "q": "A 4-year-old child in a rural setting presents with bowed legs, delayed motor milestones, and widening of the wrist epiphyses. Which vitamin deficiency is the most probable cause?",
+    "o": [
+     "Vitamin A",
+     "Vitamin C",
+     "Vitamin D",
+     "Vitamin K"
+    ],
+    "a": 2,
+    "e": "The clinical presentation is classic for rickets, which is caused by Vitamin D deficiency leading to defective bone mineralization in children."
+   },
+   {
+    "q": "A patient with chronic diarrhea and a photosensitive rash on sun-exposed areas also reports memory problems. Which vitamin deficiency is suggested by these symptoms?",
+    "o": [
+     "Vitamin B1 (Thiamine)",
+     "Vitamin B2 (Riboflavin)",
+     "Vitamin B3 (Niacin)",
+     "Vitamin B6 (Pyridoxine)"
+    ],
+    "a": 2,
+    "e": "The 'DDD' triad (Dermatitis, Diarrhea, Dementia) is characteristic of Pellagra, caused by Niacin (Vitamin B3) deficiency."
+   },
+   {
+    "q": "Which vitamin is essential for synthesis of several coagulation factors?",
+    "o": [
+     "Vitamin A",
+     "Vitamin B12",
+     "Vitamin C",
+     "Vitamin K"
+    ],
+    "a": 3,
+    "e": "Vitamin K is a co-factor for the gamma-carboxylation of coagulation factors II, VII, IX, and X.",
+    "past": true
+   },
+   {
+    "q": "A patient on long-term broad-spectrum antibiotics develops easy bruising and prolonged bleeding after minor trauma. Which vitamin deficiency is most likely?",
+    "o": [
+     "Vitamin A",
+     "Vitamin B12",
+     "Vitamin K",
+     "Vitamin C"
+    ],
+    "a": 2,
+    "e": "Long-term broad-spectrum antibiotics can reduce gut flora, which are a significant source of Vitamin K, leading to deficiency and impaired coagulation."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 55-year-old woman presents to the clinic with a 6-month history of increasing fatigue, shortness of breath, and numbness and tingling in her feet. On examination, she has pallor, a smooth tongue, and reduced vibratory sensation in her lower limbs. Her blood tests show macrocytic anemia.",
+    "qs": [
+     {
+      "q": "What is the most likely vitamin deficiency?",
+      "a": "Vitamin B12 deficiency, given the macrocytic anemia, neurological symptoms (numbness, tingling, reduced vibratory sensation), and glossitis (smooth tongue)."
+     },
+     {
+      "q": "What specific blood tests would you order to confirm the diagnosis and identify the cause?",
+      "a": "Serum B12, serum folate, red cell folate, homocysteine, and methylmalonic acid (MMA) levels. Additionally, intrinsic factor antibodies and parietal cell antibodies to investigate for pernicious anemia."
+     },
+     {
+      "q": "What is the critical safety consideration before initiating treatment?",
+      "a": "It is crucial to rule out concomitant folate deficiency or to administer both B12 and folate if B12 deficiency is confirmed, especially if neurological symptoms are present. Giving folate alone in B12 deficiency can worsen neurological damage."
+     }
+    ]
+   },
+   {
+    "v": "A 3-year-old child from a remote village presents with poor growth, bone pain, and difficulty walking. On examination, there is frontal bossing, rachitic rosary, and bowing of the tibiae. The child's diet consists mainly of maize porridge and limited exposure to sunlight.",
+    "qs": [
+     {
+      "q": "What is the most probable diagnosis?",
+      "a": "Rickets, due to Vitamin D deficiency. The clinical signs (frontal bossing, rachitic rosary, bowed legs) are classic for defective bone mineralization in a growing child."
+     },
+     {
+      "q": "What investigations would confirm this diagnosis?",
+      "a": "Serum 25-hydroxyvitamin D (the best indicator of vitamin D status), serum calcium, phosphate, alkaline phosphatase (ALP), and parathyroid hormone (PTH). X-rays of long bones would show characteristic metaphyseal changes."
+     },
+     {
+      "q": "Outline the management strategy for this child in a low-resource setting.",
+      "a": "Management involves high-dose oral Vitamin D supplementation, calcium supplementation, and encouraging safe sun exposure. Nutritional counseling to include Vitamin D and calcium-rich foods (if available) is also important. Monitoring of symptoms and biochemical markers is essential."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Prescribing folic acid alone for megaloblastic anemia without ruling out B12 deficiency, risking irreversible neurological damage.",
+   "Confusing 25-hydroxyvitamin D with 1,25-dihydroxyvitamin D for assessing nutritional vitamin D status.",
+   "Attributing all prolonged PT to severe vitamin K deficiency, overlooking isolated factor VII deficiency in early stages.",
+   "Failing to consider food-cobalamin malabsorption or pernicious anemia as the most common causes of B12 deficiency in Western populations.",
+   "Not checking red cell folate for long-term folate status, as serum folate can be falsely normalized by recent intake.",
+   "Overlooking malabsorption syndromes (e.g., celiac disease, chronic pancreatitis, HIV enteropathy) as causes of multiple vitamin deficiencies.",
+   "Not considering drug interactions (e.g., anticonvulsants with folate, isoniazid with B6) when evaluating vitamin deficiencies.",
+   "Misinterpreting the 'DDD' triad as a general skin condition rather than specifically linking it to Pellagra (B3 deficiency)."
+  ],
+  "exam": [
+   "Vitamin B12 absorption in the terminal ileum strictly requires a transport glycoprotein known as — Intrinsic factor. It binds to B12 in the stomach and protects it from degradation, facilitating its absorption in the terminal ileum.",
+   "Which vitamin is essential for synthesis of coagulation factors? — Vitamin K. It is a co-factor for gamma-carboxylation of glutamic acid residues on coagulation factors II, VII, IX, and X, as well as proteins C and S.",
+   "Most common cause of vitamin B12 deficiency in Western countries? — Food-cobalamin malabsorption (often due to atrophic gastritis) and pernicious anaemia. Strict veganism is a less common cause.",
+   "Defective parietal cells cause malabsorption of which vitamin? — Vitamin B12. Parietal cells produce intrinsic factor, which is essential for B12 absorption.",
+   "Deficiency of which vitamin is the main cause of night blindness? — Vitamin A. It is a component of rhodopsin, a pigment in the retinal rods responsible for vision in low light.",
+   "What is the clinical term for significant bile retention, and which vitamin deficiencies would you anticipate in such a patient? — Cholestasis. This condition impairs the absorption of fat-soluble vitamins (A, D, E, K) due to reduced bile salt availability.",
+   "Why is it dangerous to give folic acid alone in suspected B12 deficiency before confirming the diagnosis? — Giving folic acid alone can correct the megaloblastic anemia but will not address the neurological damage of B12 deficiency. This can lead to the precipitation or worsening of irreversible subacute combined degeneration of the spinal cord.",
+   "How do you differentiate between an early/mild vitamin K deficiency and a more severe deficiency based on coagulation tests? — An early or mild vitamin K deficiency typically presents with an isolated prolonged Prothrombin Time (PT) and a normal Activated Partial Thromboplastin Time (aPTT), due to factor VII having the shortest half-life. A more severe deficiency will prolong both PT and aPTT as factors II, IX, and X become depleted.",
+   "Which is a water-soluble vitamin? — Vitamin C (ascorbic acid) or any of the B-complex vitamins (e.g., Thiamine B1, Riboflavin B2, Niacin B3, Pyridoxine B6, Folate B9, Cobalamin B12).",
+   "A patient presents with peripheral neuropathy and megaloblastic anemia. What investigations would you order to differentiate between B12 and folate deficiency? — Order serum B12, serum folate, red cell folate, homocysteine, and methylmalonic acid (MMA) levels. Elevated MMA is specific to B12 deficiency, while homocysteine is elevated in both.",
+   "Describe the key physical examination findings in a patient with severe Vitamin C deficiency (scurvy). — Findings include perifollicular hyperkeratosis with corkscrew hairs, swollen and bleeding gums, petechiae, ecchymoses, impaired wound healing, and joint pain due to haemarthrosis.",
+   "What are the common causes of Vitamin D deficiency in low-resource settings? — Limited sun exposure (e.g., cultural practices, indoor occupations), inadequate dietary intake, malabsorption syndromes (e.g., chronic diarrhea, HIV enteropathy), and chronic kidney or liver disease.",
+   "How does chronic liver disease affect vitamin metabolism and why? — Chronic liver disease impairs the storage of fat-soluble vitamins (A, D, E, K) and the hydroxylation of vitamin D. It also affects the synthesis of transport proteins for various vitamins and can lead to cholestasis, further impairing fat-soluble vitamin absorption.",
+   "What are the neurological features of Vitamin B12 deficiency? — These include peripheral neuropathy (paresthesias, numbness), ataxia, impaired proprioception and vibratory sense (subacute combined degeneration of the spinal cord), cognitive impairment, and psychiatric symptoms."
+  ],
+  "model": "gemini-2.5-flash-lite",
+  "generatedAt": "2026-10-17",
+  "checked": "2026-10-17"
+ }
 }

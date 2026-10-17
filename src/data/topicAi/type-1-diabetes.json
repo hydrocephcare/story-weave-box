@@ -1,0 +1,194 @@
+{
+ "medical": true,
+ "title": "Type 1 Diabetes Mellitus",
+ "subject": "Medicine",
+ "summary": "Type 1 diabetes is an autoimmune destruction of pancreatic beta cells causing absolute insulin deficiency. Diagnosis relies on hyperglycaemia and low C‑peptide. Management centres on lifelong insulin replacement and monitoring for acute and chronic complications.",
+ "aka": [
+  "T1DM",
+  "Insulin‑dependent diabetes"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "An autoimmune disease where >80% of beta cells are destroyed, leading to absolute insulin deficiency. Diagnosis requires documented hyperglycaemia plus evidence of beta‑cell failure.",
+   "b": [
+    "Random plasma glucose ≥11.1 mmol/L with classic symptoms",
+    "Fasting plasma glucose ≥7.0 mmol/L on two occasions",
+    "2‑hour OGTT glucose ≥11.1 mmol/L",
+    "Low or undetectable C‑peptide in the presence of hyperglycaemia"
+   ],
+   "t": [
+    {
+     "a": "Random plasma glucose",
+     "b": "Does the patient meet the hyperglycaemia threshold? ≥11.1 mmol/L confirms diabetes in symptomatic patients."
+    },
+    {
+     "a": "C‑peptide level",
+     "b": "Is there endogenous insulin production? Low/undetectable C‑peptide supports type 1 over type 2."
+    },
+    {
+     "a": "Islet autoantibodies (GAD65, IA‑2, ZnT8)",
+     "b": "Do autoantibodies confirm autoimmune aetiology? Positive result strengthens type 1 diagnosis, especially in atypical age."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by glycaemic control (HbA1c) and presence of acute complications (DKA, hypoglycaemia). No formal staging system, but clinicians use risk categories.",
+   "b": [
+    "HbA1c <7 % – good control",
+    "HbA1c 7–9 % – moderate control",
+    "HbA1c >9 % – poor control, high complication risk"
+   ],
+   "t": [
+    {
+     "a": "HbA1c",
+     "b": "What is the average glucose over 2–3 months? Guides intensity of insulin regimen and predicts microvascular risk."
+    },
+    {
+     "a": "Blood ketones (urine or capillary)",
+     "b": "Is the patient in ketoacidosis? Positive ketones with acidosis indicate DKA, an emergency."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Autoimmune destruction is primary; in low‑resource settings, viral infections (e.g., enterovirus), malnutrition, and certain medications can precipitate or unmask the disease.",
+   "b": [
+    "Autoimmune beta‑cell attack (GAD65, IA‑2 antibodies)",
+    "Enteroviral infection (coxsackie B) – common trigger in Africa",
+    "Iatrogenic beta‑cell loss (e.g., chronic streptozotocin exposure)",
+    "Concurrent HIV infection – may accelerate beta‑cell loss"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Classic triad of polyuria, polydipsia, and weight loss; in children, may present with DKA. In low‑resource settings, presentation is often delayed, with severe dehydration and altered mental status.",
+   "b": [
+    "Polyuria with nocturia",
+    "Polydipsia, dry mouth",
+    "Unexplained weight loss despite normal intake",
+    "Fatigue, blurred vision",
+    "DKA: abdominal pain, vomiting, Kussmaul breathing, fruity breath"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Focus on confirming diagnosis, assessing control, and detecting complications. When a test is unavailable, use clinical proxies.",
+   "t": [
+    {
+     "a": "Point‑of‑care glucose",
+     "b": "Is the patient hyperglycaemic now? Guides immediate insulin dosing."
+    },
+    {
+     "a": "Urine dipstick for glucose and ketones",
+     "b": "Is there glucosuria and ketonuria? Supports diagnosis and flags DKA risk."
+    },
+    {
+     "a": "Serum electrolytes and arterial blood gas",
+     "b": "Is there metabolic acidosis with anion‑gap elevation? Confirms DKA."
+    },
+    {
+     "a": "HbA1c (if laboratory unavailable, use fructosamine)",
+     "b": "What is long‑term control? Fructosamine reflects 2‑3 weeks of glucose."
+    },
+    {
+     "a": "Retinal examination (direct ophthalmoscope)",
+     "b": "Are there early diabetic retinopathy changes? Detects microvascular disease."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Acute: DKA, severe hypoglycaemia. Chronic: retinopathy, nephropathy, neuropathy, cardiovascular disease. In low‑resource hospitals, infection and delayed presentation increase mortality.",
+   "b": [
+    "DKA: vomiting, abdominal pain, rapid breathing, altered consciousness",
+    "Severe hypoglycaemia: seizures, loss of consciousness",
+    "Progressive visual loss – possible retinopathy",
+    "Proteinuria – early nephropathy",
+    "Peripheral neuropathy – burning feet, loss of sensation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Insulin replacement is mandatory; regimen chosen to match lifestyle and resource availability. Education, monitoring, and treatment of emergencies are essential.",
+   "b": [
+    "Basal‑bolus insulin (long‑acting + rapid‑acting) – mimics physiologic secretion",
+    "Premixed insulin (70/30) – useful where multiple daily injections are difficult",
+    "Avoid sulfonylureas – they require endogenous insulin",
+    "Treat DKA with IV regular insulin, fluids, and electrolyte correction",
+    "Educate on sick‑day rules and hypoglycaemia recognition"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review every 3 months for HbA1c, blood pressure, lipids, and foot exam. Prevent complications with tight control, vaccination, and lifestyle advice.",
+   "b": [
+    "HbA1c every 3 months; target <7 %",
+    "Blood pressure <130/80 mmHg",
+    "Annual retinal screening",
+    "Urine microalbumin annually",
+    "Foot inspection at each visit"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that share polyuria/polydipsia or hyperglycaemia.",
+   "b": [
+    "Type 2 diabetes – differs by insulin resistance and preserved C‑peptide early",
+    "Diabetes insipidus – polyuria/polydipsia without hyperglycaemia",
+    "Hyperglycaemic hyperosmolar state – occurs in type 2, no significant ketosis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may be falsely normal early in disease or altered by co‑existing conditions.",
+   "b": [
+    "C‑peptide may be detectable early in the honeymoon phase, misleading toward type 2",
+    "Urine glucose can be negative if renal threshold is high (e.g., chronic kidney disease)",
+    "HbA1c may be falsely low in anaemia or recent blood loss"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Altered mental status, seizures or coma – possible DKA or severe hypoglycaemia",
+  "Persistent vomiting with dehydration – risk of DKA progression",
+  "Chest pain or dyspnoea – possible cardiac ischemia in poorly controlled diabetes"
+ ],
+ "faq": [
+  {
+   "q": "Why is C‑peptide measured?",
+   "a": "It reflects endogenous insulin production; low levels confirm absolute insulin deficiency."
+  },
+  {
+   "q": "Can type 1 diabetes present in adulthood?",
+   "a": "Yes, latent autoimmune diabetes of adults (LADA) is a slower‑progressing form but still requires insulin."
+  },
+  {
+   "q": "What is the ‘honeymoon phase’?",
+   "a": "A temporary period after diagnosis when residual beta‑cells produce some insulin, lowering insulin needs."
+  }
+ ],
+ "exam": [
+  "A 12‑year‑old presents with polyuria, weight loss and a random glucose of 13 mmol/L – what are the next two investigations and why? — Check C‑peptide to confirm insulin deficiency and autoantibodies to support autoimmune aetiology.",
+  "A patient with known type 1 diabetes arrives unconscious, breathes deeply and smells of acetone – what is your immediate management? — Recognise DKA; start IV fluids, give regular insulin infusion, monitor electrolytes and treat acidosis.",
+  "Why is a sulfonylurea contraindicated in type 1 diabetes? — It stimulates endogenous insulin which these patients lack, offering no benefit and risking hypoglycaemia.",
+  "How would you differentiate type 1 diabetes from diabetes insipidus in a low‑resource setting? — Measure plasma glucose; hyperglycaemia points to diabetes mellitus, normal glucose with dilute urine suggests diabetes insipidus.",
+  "A pregnant woman with type 1 diabetes has an HbA1c of 8 % – what target should you aim for and why? — Aim for <6.5 % to reduce fetal macrosomia and congenital anomalies, balancing maternal hypoglycaemia risk.",
+  "What are the key components of sick‑day rules for a child with type 1 diabetes? — Continue basal insulin, check glucose every 4 h, treat >15 mmol/L with correction dose, treat <4 mmol/L with rapid carbohydrate, seek care if ketones appear.",
+  "Explain why retinopathy screening should start 5 years after diagnosis in children. — Microvascular damage accumulates over time; early detection allows laser treatment before vision loss.",
+  "In a patient with HIV on antiretroviral therapy, how might type 1 diabetes presentation differ? — HIV can accelerate beta‑cell loss and mask symptoms; drug interactions may affect insulin absorption."
+ ],
+ "related": [
+  "Diabetic ketoacidosis",
+  "Type 2 diabetes mellitus",
+  "Diabetes insipidus",
+  "Autoimmune endocrine disorders",
+  "Hypoglycaemia management",
+  "Retinopathy screening"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-17",
+ "reviewed": false
+}

@@ -116,5 +116,432 @@
  "kind": "disease",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Bedside evaluation differentiates self-limiting acute viral hepatitis from fulminant hepatic failure, decompensated cirrhosis, or toxic liver injury requiring urgent stabilization and etiology-directed workup.",
+    "b": [
+     "Ask about the onset and timeline: acute viral hepatitis symptoms classically last 2 to 8 weeks, whereas persistence beyond 6 months defines chronic infection.",
+     "Screen for exposure routes: blood transfusions, scarification, unsafe injections, unprotected sexual intercourse, occupational needle-sticks (HBV, HCV, HDV), and untreated drinking water or undercooked meat (HAV, HEV).",
+     "Take a meticulous drug history: query paracetamol doses, anti-tuberculosis therapy (rifampicin, isoniazid, pyrazinamide), antiretrovirals, native herbal mixtures, and traditional preparations.",
+     "Quantify alcohol intake: clarify duration and daily units to evaluate for acute alcoholic steatohepatitis.",
+     "Review systemic flags: inquire about pruritus, bleeding tendencies (epistaxis, gum bleeding), changes in sleep-wake cycles, progressive abdominal swelling, dark urine, or pale clay-colored stools.",
+     "Inspection: examine sclera under natural daylight for jaundice. Inspect the trunk for spider naevi (in superior vena cava territory) and palmar erythema, both signifying hyperestrogenism from chronic synthetic dysfunction.",
+     "Palpation: assess liver span; acute viral hepatitis produces a soft, smooth, tender hepatomegaly, whereas alcoholic hepatitis or cirrhosis typically yields a firm, nodular, or shrunken liver edge.",
+     "Ascites assessment: inspect for flank bulging. Percuss outward from the midline to map flank dullness. Elicit shifting dullness by rolling the patient laterally, causing dependent fluid to shift dullness downward and resonance upward.",
+     "Assess fluid thrill: have an assistant stabilize the abdominal midline with the ulnar border of their hand; tap one flank while palpating the contralateral flank to detect fluid shockwaves in massive ascites.",
+     "Asterixis (flapping tremor): have the patient outstretch their arms, hyperextend their wrists, and separate their fingers with eyes closed for 30 seconds. Sudden, irregular lapses in posture confirm metabolic asterixis from hepatic encephalopathy.",
+     "Bedside limitations: physical examination cannot reliably quantify hepatic fibrosis, determine viral replication kinetics, or rule out spontaneous bacterial peritonitis without paracentesis."
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Diagnostic evaluation establishes liver synthetic compromise, inflammatory activity, underlying viral etiology, and secondary complications using stepwise laboratory, bedside, and imaging modalities.",
+    "t": [
+     {
+      "a": "Serum transaminases (ALT and AST)",
+      "b": "Measures hepatocyte injury. Acute viral hepatitis typically yields marked elevations (>1000 IU/L) with ALT > AST. An AST/ALT ratio >2 suggests alcoholic hepatitis due to pyridoxal-5-phosphate deficiency suppressing ALT."
+     },
+     {
+      "a": "Prothrombin Time / INR",
+      "b": "Best dynamic marker of liver synthetic function. Prolongation unresponsive to parenteral vitamin K indicates acute liver failure or severe end-stage parenchymal loss."
+     },
+     {
+      "a": "Serum Bilirubin (Total and Conjugated)",
+      "b": "Confirms hepatocellular jaundice or cholestasis. Conjugated fraction >50% reflects impaired biliary excretion or intrahepatic cholestasis; rapid deepening marks decompensation."
+     },
+     {
+      "a": "Hepatitis B Serology Panel",
+      "b": "HBsAg confirms active infection. Anti-HBc IgM signifies acute infection or acute flare. Anti-HBc IgG denotes past exposure. Anti-HBs indicates recovery or vaccine immunity. Isolated Anti-HBc IgM defines the window period."
+     },
+     {
+      "a": "Hepatitis D Serology (Anti-HDV)",
+      "b": "Identifies HDV coinfection (simultaneous acute HBV/HDV) or superinfection (acute HDV on chronic HBsAg carriage). Superinfection carries high risk of rapid cirrhosis."
+     },
+     {
+      "a": "HCV Antibody and HCV RNA",
+      "b": "Anti-HCV indicates past or current exposure. HCV RNA PCR confirms active replication; persistence for > 6 months confirms chronic hepatitis C. If viral load unavailable, repeat antibody testing in 6 months."
+     },
+     {
+      "a": "HEV Serology (Anti-HEV IgM)",
+      "b": "Most reliable diagnostic test for acute Hepatitis E. Essential in acute hepatitis during pregnancy, where HEV carries high mortality from acute liver failure."
+     },
+     {
+      "a": "Serum-Ascites Albumin Gradient (SAAG)",
+      "b": "Calculated as serum albumin minus ascitic fluid albumin. A value ≥ 1.1 g/dL indicates portal hypertension (cirrhosis, alcoholic hepatitis, portal vein thrombosis); < 1.1 g/dL indicates peritoneal causes."
+     },
+     {
+      "a": "Diagnostic Paracentesis (Cell Count and Differential)",
+      "b": "Ascitic neutrophil count ≥ 250 cells/mm³ confirms spontaneous bacterial peritonitis regardless of culture status, mandating immediate broad-spectrum intravenous antibiotic therapy."
+     },
+     {
+      "a": "Abdominal Ultrasound",
+      "b": "Evaluates liver size, parenchymal coarseness, surface nodularity, splenomegaly, portal vein diameter (>13 mm suggests portal hypertension), and excludes biliary obstruction or focal hepatocellular carcinoma."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Staging liver disease establishes acute versus chronic duration, stratifies the risk of progression, and flags life-threatening hepatic decompensation.",
+    "b": [
+     "Acute Hepatitis: clinical illness with jaundice, transaminases >10 times upper limit of normal, and symptom duration under 6 months; over 95% of immunocompetent adults resolve acute HBV spontaneously.",
+     "Acute Liver Failure (Fulminant): acute liver injury with severe coagulopathy (INR ≥ 1.5) and hepatic encephalopathy developing in a patient without pre-existing cirrhosis within 26 weeks of onset.",
+     "Window Period in HBV: the interval between the clearance of HBsAg and the emergence of Anti-HBs; isolated Anti-HBc IgM is the sole serological marker of acute infection during this phase.",
+     "Chronic Hepatitis: persistence of viral replication (HBsAg or HCV RNA) and necroinflammatory changes for > 6 months. Chronicity rates differ: HCV reaches 75% to 85%, whereas adult-acquired HBV chronicity is <5% (but >90% in neonates).",
+     "Pathogenesis and Histology of Cirrhosis: chronic injury causes hepatic stellate cell activation into collagen-secreting myofibroblasts, resulting in diffuse bridging fibrosis, regenerative nodule formation, and architectural distortion disrupting portal blood flow.",
+     "Alcoholic Hepatitis Histology: ballooning degeneration of hepatocytes, predominantly neutrophilic infiltration surrounding dying hepatocytes, pericellular 'chicken-wire' fibrosis, and intracytoplasmic Mallory-Denk bodies (damaged keratin filaments).",
+     "Molecular Oncogenesis: HBV integrates into the host genome and produces the HBx protein, which inactivates the tumor suppressor p53. Normal p53 arrests the cell cycle at G1/S for DNA repair or triggers apoptosis; its inactivation permits unregulated proliferation and hepatocellular carcinoma.",
+     "West Haven Criteria for Hepatic Encephalopathy: Grade 1 (mild confusion, altered sleep); Grade 2 (lethargy, asterixis present); Grade 3 (somnolence to stupor, responsive to verbal stimuli); Grade 4 (coma, unresponsive to pain).",
+     "Child-Pugh Classification: grades cirrhosis severity using Total Bilirubin, Serum Albumin, INR, Ascites, and Hepatic Encephalopathy (Class A: 5-6 points; Class B: 7-9 points; Class C: 10-15 points)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Several infectious, biliary, and drug-related entities mimic the presentation of viral hepatitis, requiring early differentiation to direct specific therapy.",
+    "t": [
+     {
+      "a": "Drug-Induced Liver Injury (e.g., Anti-TB, Paracetamol)",
+      "b": "Points to it: Temporal relationship with newly introduced agents; paracetamol produces massive transaminase spikes with early synthetic failure. Separate it: Negative viral serologies, cessation of agent leads to improvement."
+     },
+     {
+      "a": "Severe Malaria",
+      "b": "Points to it: High fever, rigors, splenomegaly, hemolytic jaundice, high endemic transmission. Separate it: Unconjugated hyperbilirubinemia, normal or mildly elevated transaminases, positive malaria blood smear or rapid diagnostic test."
+     },
+     {
+      "a": "Acute Cholangitis",
+      "b": "Points to it: Charcot's triad (RUQ pain, jaundice, fever) and Reynolds' pentad (plus shock and altered mentation). Separate it: Marked alkaline phosphatase elevation, dilated biliary ducts on ultrasound, marked neutrophilic leukocytosis."
+     },
+     {
+      "a": "Yellow Fever",
+      "b": "Points to it: Endemic hemorrhagic fever, severe backache, prostration, Faget sign (bradycardia with high fever), mucosal bleeding. Separate it: Specific Yellow Fever IgM or RT-PCR, marked early coagulopathy."
+     },
+     {
+      "a": "Acute Alcoholic Hepatitis",
+      "b": "Points to it: Heavy alcohol history, tender hepatomegaly, jaundice, low-grade fever, leukocytosis. Separate it: AST/ALT ratio >2 (AST rarely >500 IU/L), elevated gamma-glutamyl transferase (GGT), rapid response to abstinence."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Initial Assessment and Supportive Care: For acute hepatitis, the primary focus is supportive. Ensure adequate hydration and nutrition, often with high-calorie intake to support liver regeneration. Avoid alcohol and hepatotoxic substances (e.g., paracetamol in high doses, certain herbal remedies).",
+     "Specific Antiviral Therapy for Hepatitis B: For chronic Hepatitis B, nucleoside/nucleotide analogues such as Tenofovir or Entecavir are used to suppress viral replication, reduce liver inflammation, and prevent progression to cirrhosis or hepatocellular carcinoma. Treatment is indicated based on viral load, ALT levels, and histological evidence of liver damage.",
+     "Specific Antiviral Therapy for Hepatitis C: Direct-acting antivirals (DAAs) are the cornerstone of chronic Hepatitis C management. These regimens, often combinations of drugs like Sofosbuvir, Ledipasvir, Velpatasvir, or Glecaprevir/Pibrentasvir, aim for a sustained virologic response (SVR), effectively eradicating the virus in most patients. The choice of DAA regimen depends on",
+     "Autoimmune Hepatitis Management: Immunosuppressive agents, primarily corticosteroids (e.g., Prednisolone), are used to reduce immune-mediated liver damage. Azathioprine is often added as a steroid-sparing agent to maintain remission and reduce long-term steroid side effects. Regular monitoring of liver function tests and drug side effects is crucial.",
+     "Monitoring and Follow-up: Regular monitoring of liver function tests (ALT, AST, bilirubin, albumin, INR), viral load (for HBV/HCV), and serological markers is essential to assess treatment response and disease progression. For chronic hepatitis, screening for hepatocellular carcinoma with ultrasound and alpha-fetoprotein every 6 months is recommended, especially in patients wit",
+     "When to Escalate or Refer: Refer to a gastroenterologist or hepatologist for acute liver failure, decompensated cirrhosis (ascites, encephalopathy, variceal bleeding), suspicion of hepatocellular carcinoma, or if initial management fails to achieve desired outcomes. Patients requiring liver transplantation should be referred to a specialized center."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "Nucleoside/Nucleotide Analogues (e.g., Tenofovir, Entecavir for HBV): Potential side effects include renal impairment (especially Tenofovir), bone demineralization, and lactic acidosis (rare). Monitor renal function (creatinine, eGFR) and bone density periodically. Switch to an alternative if significant renal decline or bone issues arise.",
+     "Corticosteroids (e.g., Prednisolone for Autoimmune Hepatitis): Long-term use carries risks of hyperglycemia, hypertension, osteoporosis, cataracts, and increased susceptibility to infections. Monitor blood glucose, blood pressure, and bone density. Consider calcium and vitamin D supplementation and bisphosphonates for osteoporosis prevention.",
+     "Azathioprine (for Autoimmune Hepatitis): Can cause bone marrow suppression (leukopenia, thrombocytopenia), pancreatitis, and hepatotoxicity. Monitor complete blood count (CBC) and liver function tests regularly. Dose adjustments or discontinuation may be necessary if significant adverse effects occur.",
+     "Rifampicin and Isoniazid (for TB): Known to cause drug-induced hepatitis. Monitor liver function tests closely, especially during the initial phase of treatment. If transaminases rise significantly (e.g., >3-5 times upper limit of normal with symptoms, or >5 times without symptoms), consider temporary cessation or modification of the anti-TB regimen under specialist guidance."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "Fulminant Hepatic Failure: Characterized by severe acute liver injury with encephalopathy and coagulopathy within 8 weeks of symptom onset in a patient without pre-existing liver disease. This is a medical emergency requiring immediate referral to a tertiary center for potential liver transplantation. Inspect the outstretched, dorsiflexed hands for asterixis (flapping tremor), ",
+     "Decompensated Cirrhosis: Manifests as ascites, hepatic encephalopathy, variceal bleeding, or spontaneous bacterial peritonitis. Ascites is detected by inspection (abdominal distension), flank dullness on percussion, shifting dullness, and a fluid thrill. Hepatic encephalopathy requires urgent assessment and management (e.g., lactulose, rifaximin). Variceal bleeding is a life-th",
+     "Hepatocellular Carcinoma (HCC): A common complication of chronic viral hepatitis (HBV, HCV) and cirrhosis. Screen high-risk patients every 6 months with abdominal ultrasound and alpha-fetoprotein. Any suspicious lesion or rising alpha-fetoprotein warrants further investigation with dynamic contrast-enhanced imaging (CT or MRI) and specialist referral.",
+     "Coagulopathy: Indicated by prolonged prothrombin time/INR, easy bruising, mucosal bleeding, or prolonged oozing from injection sites. This reflects impaired liver synthetic function. Administer Vitamin K if deficiency is suspected, but fresh frozen plasma may be needed for active bleeding or before invasive procedures.",
+     "Renal Impairment (Hepatorenal Syndrome): A serious complication of advanced liver disease, characterized by progressive renal failure in the absence of other causes of kidney injury. Requires urgent specialist management, often involving vasoconstrictors (e.g., terlipressin) and albumin, and consideration for liver transplantation.",
+     "Spontaneous Bacterial Peritonitis (SBP): Infection of ascitic fluid without an obvious source. Suspect in patients with ascites and fever, abdominal pain, or worsening encephalopathy. Diagnose by ascitic fluid paracentesis (polymorphonuclear cell count ≥ 250 cells/mm³). Treat with broad-spectrum antibiotics (e.g., Cefotaxime) and albumin."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV Co-infection: HIV can accelerate the progression of chronic viral hepatitis (HBV, HCV) and complicate treatment choices due to drug-drug interactions between antiretrovirals and hepatitis medications. Close monitoring of liver function and careful selection of drug regimens are crucial. Immunosuppression from HIV can also alter the serological response to HBV/HCV.",
+     "Tuberculosis (TB) Co-infection: Anti-TB drugs (especially Rifampicin, Isoniazid, Pyrazinamide) are hepatotoxic, posing a significant challenge in patients with pre-existing liver disease or viral hepatitis. Liver function tests must be monitored frequently, and drug regimens may need modification or close supervision by a specialist.",
+     "Malnutrition: Common in advanced liver disease and can worsen outcomes. It impairs immune function, delays recovery, and contributes to sarcopenia. Nutritional support, including high-calorie, protein-rich diets and sometimes enteral or parenteral feeding, is vital.",
+     "Pregnancy: Management of hepatitis in pregnancy requires careful consideration to balance maternal and fetal safety. Vertical transmission of HBV can be prevented by maternal antiviral therapy in the third trimester and infant immunoprophylaxis at birth. HCV treatment is generally deferred until after delivery. Drug choices must be safe for pregnancy.",
+     "Diabetes Mellitus: Often co-exists with chronic liver disease, particularly non-alcoholic fatty liver disease (NAFLD) and HCV. Diabetes can accelerate liver fibrosis and increase the risk of HCC. Glycemic control is important, but some antidiabetic medications may require dose adjustment in liver impairment.",
+     "Alcohol Consumption: Even moderate alcohol intake can significantly worsen liver injury in patients with viral hepatitis or other liver diseases, accelerating fibrosis and increasing the risk of decompensation and HCC. Complete abstinence from alcohol is strongly advised.",
+     "Kidney Failure: Can complicate drug metabolism and excretion, requiring dose adjustments for many hepatitis medications (e.g., Tenofovir). Hepatorenal syndrome is a severe complication of advanced liver disease, where kidney failure develops in the absence of primary renal pathology.",
+     "Age Extremes: Children and the elderly may have different disease courses and drug responses. Neonates exposed to HBV require immunoprophylaxis. Elderly patients may have multiple comorbidities and polypharmacy, increasing the risk of drug interactions and adverse effects. Liver regeneration capacity may also be reduced in the elderly."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: Acute hepatitis is often milder in children. HBV vertical transmission is a major concern; infants born to HBsAg-positive mothers require HBV vaccine and hepatitis B immunoglobulin (HBIG) at birth. Chronic HBV and HCV treatment in children follows specific guidelines, often with lower thresholds for treatment initiation and age-appropriate drug formulations.",
+     "Pregnancy: Hepatitis B screening is routine in antenatal care. HBsAg-positive mothers with high viral loads (HBV DNA > 200,000 IU/mL) may receive Tenofovir in the third trimester to reduce vertical transmission risk. HCV treatment is generally deferred post-partum. Close monitoring of liver function is essential.",
+     "The Elderly: May present with atypical symptoms, making diagnosis challenging. Co-morbidities and polypharmacy increase the risk of drug-drug interactions and adverse effects from hepatitis medications. Renal function often declines with age, necessitating careful dose adjustments, especially for drugs like Tenofovir. Prognosis can be worse due to reduced liver reserve.",
+     "People with HIV: Co-infection with HBV and HCV is common due to shared transmission routes. HIV accelerates liver disease progression. Antiretroviral therapy and hepatitis treatment must be carefully coordinated to avoid drug interactions and overlapping toxicities. Close monitoring of both viral loads and liver function is paramount.",
+     "Low-Resource Settings: Challenges include limited access to diagnostic tests (e.g., HBV DNA, HCV RNA, genotyping), expensive antiviral medications (especially DAAs), and lack of specialized hepatology services. Prevention strategies (vaccination, safe injection practices, blood screening) are critical. Simplified treatment algorithms and generic drug availability are essential "
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Hepatitis A: IgM anti-HAV positive indicates acute infection.",
+   "Hepatitis B: HBsAg positive indicates active infection (acute or chronic).",
+   "Hepatitis B: Anti-HBc IgM positive indicates recent (acute) infection.",
+   "Hepatitis B: Anti-HBc IgG positive indicates past or chronic infection.",
+   "Hepatitis B: Anti-HBs positive indicates immunity (vaccination or recovery).",
+   "Hepatitis C: HCV RNA positive indicates active viral replication.",
+   "Chronic Hepatitis C: HCV RNA positive for > 6 months.",
+   "Alcoholic Hepatitis: AST/ALT ratio > 2:1.",
+   "Serum-Ascites Albumin Gradient (SAAG): >= 1.1 g/dL indicates portal hypertension."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "A 62-year-old man with chronic hepatitis B develops hepatocellular carcinoma. Molecular studies reveal inactivation of p53. Which of the following best describes the normal role of p53 in preventing tumor development?",
+    "a": "p53 is a tumour suppressor gene that induces cell cycle arrest, apoptosis, or DNA repair in response to cellular stress, thus preventing the propagation of mutations that can lead to cancer.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What are the potential complications of chronic Hepatitis B infection?",
+    "a": "Chronic Hepatitis B can lead to cirrhosis, liver failure, and hepatocellular carcinoma (HCC). It can also cause extrahepatic manifestations like glomerulonephritis or polyarteritis nodosa.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient's Hepatitis B virus (HBV) serology reveals positive Anti-HBc IgM, but negative HBsAg and Anti-HBs. a) Interpret these serological findings. b) Explain what is meant by the 'window period' in HBV infection and why it is important.",
+    "a": "a) This pattern suggests a recent acute HBV infection, likely in the 'window period' where HBsAg has become undetectable but anti-HBs has not yet risen. b) The window period is the time between the disappearance of HBsAg and the appearance of anti-HBs. Anti-HBc IgM is the only marker detectable during this phase, indicating recent infection.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Interpret a serological profile showing HBsAg negative, Anti-HBc positive, and Anti-HBs positive.",
+    "a": "This profile indicates past Hepatitis B infection with recovery and immunity. The individual is protected against future infection.",
+    "hot": true
+   },
+   {
+    "q": "How would you assess a patient for ascites at the bedside?",
+    "a": "Inspect for abdominal distension. Palpate for fluid wave. Percuss for flank dullness, then shifting dullness by turning the patient to the side; fluid will cause dullness in the dependent flank.",
+    "hot": true
+   },
+   {
+    "q": "What is the Serum-Ascites Albumin Gradient (SAAG) and how is it calculated?",
+    "a": "SAAG is the difference between serum albumin and ascitic fluid albumin. It helps differentiate causes of ascites. SAAG = Serum Albumin - Ascitic Albumin. A SAAG of >= 1.1 g/dL suggests portal hypertension.",
+    "hot": true
+   },
+   {
+    "q": "Discuss the histological features and pathogenesis of cirrhosis. Furthermore, compare and contrast the characteristics of chronic Hepatitis B (HBV) and Hepatitis C (HCV) viral infections, including their chronicity rates.",
+    "a": "Cirrhosis involves diffuse fibrosis and nodule formation, disrupting liver architecture. HBV is a DNA virus with variable chronicity (lower in adults, higher in infants), often treated with antivirals. HCV is an RNA virus with a high chronicity rate (>80%), curable with direct-acting antivirals.",
+    "past": true
+   },
+   {
+    "q": "Describe two distinct histologic patterns of hepatic injury characteristic of alcoholic hepatitis, and identify the specific cellular inclusions typically observed in this condition.",
+    "a": "Histologic patterns include steatosis (fatty change), lobular inflammation with neutrophils, and hepatocyte ballooning. Mallory bodies (hyaline inclusions) are characteristic, along with perivenular fibrosis.",
+    "past": true
+   },
+   {
+    "q": "Which hepatitis types can be prevented by vaccination?",
+    "a": "Hepatitis A and Hepatitis B can be prevented by vaccination. There is no vaccine for Hepatitis C, D, or E.",
+    "past": true
+   },
+   {
+    "q": "How is Hepatitis D transmitted?",
+    "a": "Hepatitis D is transmitted via parenteral and sexual routes, similar to Hepatitis B. It requires coinfection with Hepatitis B virus (HBV) to replicate.",
+    "past": true
+   },
+   {
+    "q": "What is the most reliable test for Hepatitis E diagnosis in the acute phase?",
+    "a": "The most reliable test for acute Hepatitis E is the detection of IgM anti-HEV antibodies. However, in resource-limited settings, diagnosis may rely on clinical suspicion and epidemiological factors.",
+    "past": true
+   },
+   {
+    "q": "Explain the significance of the AST/ALT ratio in alcoholic hepatitis.",
+    "a": "In alcoholic hepatitis, the AST/ALT ratio is typically greater than 2:1. This is because alcohol directly damages mitochondria, leading to a greater release of AST (which is also found in mitochondria) than ALT.",
+    "past": true
+   },
+   {
+    "q": "What are the key clinical features of acute viral hepatitis?",
+    "a": "Symptoms include prodromal malaise, anorexia, nausea, vomiting, and abdominal pain, followed by the icteric phase with jaundice, dark urine (bilirubinuria), pale stools, and pruritus."
+   },
+   {
+    "q": "How is Hepatitis B transmitted?",
+    "a": "Hepatitis B is transmitted through parenteral (blood/body fluids), sexual, and perinatal routes. This includes sharing needles, unprotected sex, and from mother to child during birth.",
+    "past": true
+   },
+   {
+    "q": "What is the usual duration of acute hepatitis?",
+    "a": "Acute viral hepatitis typically lasts for a few weeks to a few months. Most cases of acute Hepatitis A and B in immunocompetent adults resolve spontaneously within 3-6 months.",
+    "past": true
+   },
+   {
+    "q": "What is the management for uncomplicated acute Hepatitis B in an immunocompetent adult?",
+    "a": "Uncomplicated acute Hepatitis B is self-limiting in over 95% of cases and requires only supportive care, including hydration, nutrition, and avoidance of hepatotoxins like alcohol. Antiviral therapy is reserved for severe or fulminant cases.",
+    "past": true
+   },
+   {
+    "q": "What are the extra-hepatic manifestations of chronic Hepatitis C infection?",
+    "a": "Extra-hepatic manifestations of chronic HCV include cryoglobulinemia, glomerulonephritis, lichen planus, Sjögren's syndrome, and increased risk of diabetes mellitus and B-cell lymphomas."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 35-year-old woman presents with jaundice, fatigue, and RUQ pain. Her serology shows HBsAg positive, Anti-HBc IgM positive, Anti-HBc IgG positive, and Anti-HBs negative. What is the most likely diagnosis?",
+    "o": [
+     "Past Hepatitis B infection",
+     "Acute Hepatitis B infection",
+     "Chronic Hepatitis B infection",
+     "Immunity to Hepatitis B"
+    ],
+    "a": 1,
+    "e": "The presence of HBsAg and Anti-HBc IgM indicates active, recent Hepatitis B infection."
+   },
+   {
+    "q": "Which of the following hepatitis viruses is most likely to cause chronic infection?",
+    "o": [
+     "Hepatitis A",
+     "Hepatitis B",
+     "Hepatitis C",
+     "Hepatitis E"
+    ],
+    "a": 2,
+    "e": "Hepatitis C has a high rate of chronicity, affecting over 80% of infected individuals."
+   },
+   {
+    "q": "A patient with known cirrhosis has developed ascites. A diagnostic paracentesis is performed. The ascitic fluid shows a serum albumin of 3.5 g/dL and an ascitic fluid albumin of 1.0 g/dL. What is the SAAG and what does it indicate?",
+    "o": [
+     "SAAG = 2.5 g/dL, indicating non-portal hypertensive ascites",
+     "SAAG = 2.5 g/dL, indicating portal hypertensive ascites",
+     "SAAG = 4.5 g/dL, indicating non-portal hypertensive ascites",
+     "SAAG = 4.5 g/dL, indicating portal hypertensive ascites"
+    ],
+    "a": 1,
+    "e": "The SAAG is calculated as 3.5 - 1.0 = 2.5 g/dL. A SAAG >= 1.1 g/dL indicates ascites due to portal hypertension."
+   },
+   {
+    "q": "A patient with alcoholic liver disease has jaundice and right upper quadrant pain. Laboratory tests reveal ALT 50 U/L, AST 150 U/L, and bilirubin 4 mg/dL. Which finding is most suggestive of alcoholic hepatitis?",
+    "o": [
+     "ALT > AST",
+     "AST/ALT ratio < 1",
+     "AST/ALT ratio > 2",
+     "Normal AST and ALT levels"
+    ],
+    "a": 2,
+    "e": "An AST/ALT ratio greater than 2:1 is characteristic of alcoholic hepatitis due to direct mitochondrial damage by alcohol."
+   },
+   {
+    "q": "Which of the following is a common cause of drug-induced hepatitis in the context of TB treatment in East Africa?",
+    "o": [
+     "Paracetamol",
+     "Isoniazid",
+     "Aspirin",
+     "Amoxicillin"
+    ],
+    "a": 1,
+    "e": "Isoniazid is a well-known cause of drug-induced hepatitis, especially when used in combination therapy for tuberculosis."
+   },
+   {
+    "q": "A patient presents with altered mental status, flapping tremors (asterixis), and jaundice. This constellation of signs is most indicative of:",
+    "o": [
+     "Acute kidney injury",
+     "Hepatic encephalopathy",
+     "Sepsis",
+     "Electrolyte imbalance"
+    ],
+    "a": 1,
+    "e": "Asterixis (flapping tremor) and altered mental status in a jaundiced patient are classic signs of hepatic encephalopathy."
+   },
+   {
+    "q": "Which hepatitis virus is transmitted via the fecal-oral route and typically causes acute, self-limiting illness?",
+    "o": [
+     "Hepatitis B",
+     "Hepatitis C",
+     "Hepatitis D",
+     "Hepatitis E"
+    ],
+    "a": 3,
+    "e": "Hepatitis E is primarily transmitted via the fecal-oral route and usually causes acute, self-limiting hepatitis, particularly in adults."
+   },
+   {
+    "q": "A pregnant woman is found to be HBsAg positive during antenatal screening. What is the primary concern regarding transmission?",
+    "o": [
+     "Fecal-oral transmission to her fetus",
+     "Sexual transmission to her partner",
+     "Perinatal transmission to her newborn",
+     "Transmission through breastfeeding"
+    ],
+    "a": 2,
+    "e": "HBsAg positive mothers are at high risk of transmitting Hepatitis B to their newborns during delivery (perinatal transmission)."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 45-year-old man presents with a 2-week history of fatigue, nausea, and jaundice. He reports dark urine and pale stools. He works as a healthcare worker and denies alcohol use. His serology shows: HBsAg negative, Anti-HBc IgM positive, Anti-HBc IgG positive, Anti-HBs negative, Anti-HAV IgM positive.",
+    "qs": [
+     {
+      "q": "Interpret the serological findings.",
+      "a": "The patient has acute Hepatitis A (positive Anti-HAV IgM) and is in the window period of acute Hepatitis B (positive Anti-HBc IgM, negative HBsAg and Anti-HBs)."
+     },
+     {
+      "q": "What is the most likely mode of transmission for his Hepatitis A infection?",
+      "a": "Hepatitis A is transmitted via the fecal-oral route, likely through contaminated food or water."
+     },
+     {
+      "q": "What advice would you give him regarding his Hepatitis B infection?",
+      "a": "He needs close monitoring of HBV serology. He will likely develop anti-HBs antibodies and recover, gaining immunity. He should avoid activities that could transmit HBV until HBsAg is negative and anti-HBs is positive."
+     }
+    ]
+   },
+   {
+    "v": "A 50-year-old woman with a history of intravenous drug use presents with fatigue and jaundice. She has a known diagnosis of chronic Hepatitis C. Her liver function tests show ALT 300 U/L, AST 280 U/L, Bilirubin 5 mg/dL, Albumin 3.0 g/dL. She has mild pitting edema in her lower legs.",
+    "qs": [
+     {
+      "q": "What are the immediate management priorities for this patient?",
+      "a": "The priorities are to assess the severity of liver disease (e.g., using MELD score if available), manage symptoms (nausea, pruritus), ensure adequate nutrition, and avoid hepatotoxins. Initiate treatment for chronic Hepatitis C if indicated and feasible."
+     },
+     {
+      "q": "What is the significance of her low albumin and edema?",
+      "a": "Low albumin indicates impaired synthetic function of the liver. Edema suggests fluid retention, potentially due to hypoalbuminemia and/or portal hypertension, indicating decompensated cirrhosis."
+     },
+     {
+      "q": "What is the definition of chronic Hepatitis C infection?",
+      "a": "Chronic Hepatitis C is defined by the persistence of HCV RNA for more than 6 months."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the 'window period' of Hepatitis B with past infection; Anti-HBc IgM is key for recent infection.",
+   "Incorrectly calculating the SAAG (serum albumin minus ascitic fluid albumin) or misinterpreting its significance.",
+   "Assuming all acute hepatitis is viral; not considering drug-induced or autoimmune causes.",
+   "Over-treating uncomplicated acute Hepatitis B with antivirals instead of supportive care.",
+   "Confusing the transmission routes of different hepatitis viruses (e.g., fecal-oral vs. parenteral).",
+   "Not recognizing the importance of screening pregnant women for HBsAg to prevent perinatal transmission.",
+   "Misinterpreting Hepatitis B serology patterns (e.g., HBsAg negative, Anti-HBc positive, Anti-HBs positive means immunity, not active infection).",
+   "Describing asterixis as a sign elicited by auscultation rather than physical examination of the hands."
+  ],
+  "exam": [
+   "A 62-year-old man with chronic hepatitis B develops hepatocellular carcinoma. Molecular studies reveal inactivation of p53. Which of the following best describes the normal role of p53 in preventing tumor development? — p53 is a tumour suppressor gene that induces cell cycle arrest, apoptosis, or DNA repair in response to cellular stress, thus preventing the propagation of mutations that can lead to cancer.",
+   "What are the potential complications of chronic Hepatitis B infection? — Chronic Hepatitis B can lead to cirrhosis, liver failure, and hepatocellular carcinoma (HCC). It can also cause extrahepatic manifestations like glomerulonephritis or polyarteritis nodosa.",
+   "A patient's Hepatitis B virus (HBV) serology reveals positive Anti-HBc IgM, but negative HBsAg and Anti-HBs. a) Interpret these serological findings. b) Explain what is meant by the 'window period' in HBV infection and why it is important. — a) This pattern suggests a recent acute HBV infection, likely in the 'window period' where HBsAg has become undetectable but anti-HBs has not yet risen. b) The window period is the time between the disappearance of HBsAg and the appearance of anti-HBs. Anti-HBc IgM is the only marker detectable during this phase, indicating recent infection.",
+   "Interpret a serological profile showing HBsAg negative, Anti-HBc positive, and Anti-HBs positive. — This profile indicates past Hepatitis B infection with recovery and immunity. The individual is protected against future infection.",
+   "How would you assess a patient for ascites at the bedside? — Inspect for abdominal distension. Palpate for fluid wave. Percuss for flank dullness, then shifting dullness by turning the patient to the side; fluid will cause dullness in the dependent flank.",
+   "What is the Serum-Ascites Albumin Gradient (SAAG) and how is it calculated? — SAAG is the difference between serum albumin and ascitic fluid albumin. It helps differentiate causes of ascites. SAAG = Serum Albumin - Ascitic Albumin. A SAAG of >= 1.1 g/dL suggests portal hypertension.",
+   "Discuss the histological features and pathogenesis of cirrhosis. Furthermore, compare and contrast the characteristics of chronic Hepatitis B (HBV) and Hepatitis C (HCV) viral infections, including their chronicity rates. — Cirrhosis involves diffuse fibrosis and nodule formation, disrupting liver architecture. HBV is a DNA virus with variable chronicity (lower in adults, higher in infants), often treated with antivirals. HCV is an RNA virus with a high chronicity rate (>80%), curable with direct-acting antivirals.",
+   "Describe two distinct histologic patterns of hepatic injury characteristic of alcoholic hepatitis, and identify the specific cellular inclusions typically observed in this condition. — Histologic patterns include steatosis (fatty change), lobular inflammation with neutrophils, and hepatocyte ballooning. Mallory bodies (hyaline inclusions) are characteristic, along with perivenular fibrosis.",
+   "Which hepatitis types can be prevented by vaccination? — Hepatitis A and Hepatitis B can be prevented by vaccination. There is no vaccine for Hepatitis C, D, or E.",
+   "How is Hepatitis D transmitted? — Hepatitis D is transmitted via parenteral and sexual routes, similar to Hepatitis B. It requires coinfection with Hepatitis B virus (HBV) to replicate.",
+   "What is the most reliable test for Hepatitis E diagnosis in the acute phase? — The most reliable test for acute Hepatitis E is the detection of IgM anti-HEV antibodies. However, in resource-limited settings, diagnosis may rely on clinical suspicion and epidemiological factors.",
+   "Explain the significance of the AST/ALT ratio in alcoholic hepatitis. — In alcoholic hepatitis, the AST/ALT ratio is typically greater than 2:1. This is because alcohol directly damages mitochondria, leading to a greater release of AST (which is also found in mitochondria) than ALT.",
+   "What are the key clinical features of acute viral hepatitis? — Symptoms include prodromal malaise, anorexia, nausea, vomiting, and abdominal pain, followed by the icteric phase with jaundice, dark urine (bilirubinuria), pale stools, and pruritus.",
+   "How is Hepatitis B transmitted? — Hepatitis B is transmitted through parenteral (blood/body fluids), sexual, and perinatal routes. This includes sharing needles, unprotected sex, and from mother to child during birth."
+  ],
+  "model": "gemini-3.8-flash",
+  "generatedAt": "2026-10-17",
+  "checked": "2026-10-17",
+  "trimmed": 2
+ }
 }

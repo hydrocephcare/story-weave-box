@@ -81,5 +81,490 @@
  "kind": "anatomy",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect focused cardiac history and perform a systematic physical exam, noting that many findings are non‑specific and must be interpreted in context.",
+    "b": [
+     "History: 1) Onset, character, radiation of chest pain; 2) Dyspnoea pattern, orthopnoea, PND; 3) Palpitations, syncope, presyncope; 4) Edema, abdominal fullness, weight change; 5) Precipitating factors (exercise, lying flat, fever); 6) Past cardiac disease, rheumatic fever, congenital heart disease; 7) Medication, alcohol, smoking, pregnancy; 8) Systemic illnesses (HIV, TB, diab",
+     "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
+    ],
+    "t": []
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a tiered approach, prioritising tests that are available and have clear diagnostic thresholds; when unavailable, rely on clinical judgment and alternative modalities.",
+    "b": [
+     "ECG – first line for chest pain and arrhythmia; look for ST changes, Q waves, arrhythmias. A new Q wave in V1‑V4 suggests anterior MI."
+    ],
+    "t": [
+     {
+      "a": "Chest X‑ray",
+      "b": "Shows cardiac silhouette size, pulmonary vascular congestion, pleural effusion. A cardiothoracic ratio >0.5 suggests cardiomegaly."
+     },
+     {
+      "a": "Transthoracic echocardiography",
+      "b": "Answers: chamber size, wall thickness, ejection fraction, valve function, pulmonary artery pressure (via TR velocity). EF <40% indicates systolic failure; TR velocity >3.4 m/s suggests pulmonary hypertension."
+     },
+     {
+      "a": "Right heart catheterisation",
+      "b": "Direct measurement of mean pulmonary artery pressure (mPAP). mPAP >20 mmHg at rest defines pulmonary hypertension per ESC/ERS 2022. Pulmonary capillary wedge pressure >15 mmHg indicates left heart disease."
+     },
+     {
+      "a": "BNP/NT‑proBNP",
+      "b": "Elevated BNP >100 pg/mL (or NT‑proBNP >300 pg/mL) supports heart failure diagnosis; levels >1000 pg/mL correlate with severe HF."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG)",
+      "b": "SAAG ≥1.1 g/dL indicates portal hypertension; <1.1 g/dL suggests non‑portal causes of ascites."
+     },
+     {
+      "a": "Pulmonary function tests",
+      "b": "Rule out COPD/asthma; FEV1/FVC <70% indicates obstructive disease."
+     },
+     {
+      "a": "CT pulmonary angiography",
+      "b": "Detects pulmonary embolism; absence of embolus with clinical suspicion may favour heart failure."
+     },
+     {
+      "a": "Laboratory panel",
+      "b": "CBC, electrolytes, renal function, liver enzymes, hepatitis serology; abnormal LFTs may mimic cardiac symptoms."
+     },
+     {
+      "a": "When tests unavailable",
+      "b": "Use bedside ultrasound for cardiac function; use portable ECG; rely on clinical scoring systems (e.g., Framingham, Wells) to estimate probability."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply current guideline criteria to classify heart disease severity and guide management.",
+    "b": [
+     "Heart failure with reduced EF (HFrEF): EF <40%; 1) NYHA class I‑IV; 2) BNP >100 pg/mL; 3) LVEF <40% on echo."
+    ],
+    "t": [
+     {
+      "a": "Pulmonary hypertension classification",
+      "b": "WHO Group 1 (PAH): mPAP >20 mmHg, PAWP ≤15 mmHg, PVR >3 WU; Group 2 (left heart disease): PAWP >15 mmHg; Group 3 (lung disease): hypoxia; Group 4 (chronic thromboembolic); Group 5 (miscellaneous)."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate cardiac causes from mimics using key distinguishing features.",
+    "b": [
+     "Pulmonary embolism – sudden dyspnoea, pleuritic chest pain, tachycardia; CT angiography confirms; ECG may show S1Q3T3 pattern."
+    ],
+    "t": [
+     {
+      "a": "Pericardial tamponade",
+      "b": "Beck's triad: hypotension, muffled heart sounds, JVD; pulsus paradoxus >10 mmHg; echo shows pericardial effusion with diastolic collapse."
+     },
+     {
+      "a": "Aortic dissection",
+      "b": "Severe tearing chest pain radiating to back; CT angiography confirms; ECG may show ST elevation in aVR."
+     },
+     {
+      "a": "Severe COPD exacerbation",
+      "b": "Wheezing, prolonged expiratory phase; ABG shows hypoxia; spirometry shows FEV1/FVC <70%."
+     },
+     {
+      "a": "Hepatic congestion from right HF",
+      "b": "Right‑sided S3, hepatomegaly, ascites; liver enzymes mildly raised; imaging shows enlarged liver."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat heart failure and its complications in a structured ladder, prioritising haemodynamic stability, definitive therapy, monitoring and escalation.",
+    "b": [
+     "1. Immediate assessment of airway, breathing and circulation; secure airway if respiratory failure.",
+     "2. Start intravenous loop diuretics (e.g., furosemide) to relieve pulmonary congestion; avoid diuretics only if TACO suspected – they are first‑line.",
+     "3. If pulmonary hypertension present, initiate pulmonary vasodilator (e.g., inhaled nitric oxide) and consider endothelin receptor antagonist if chronic.",
+     "4. Provide inotropes (dobutamine or milrinone) for low output states; avoid if severe hypotension.",
+     "5. Monitor urine output, JVP, oxygen saturation and serial ECGs; adjust diuretics to maintain euvolemia.",
+     "6. Escalate to mechanical support (intra‑aortic balloon pump or ECMO) if refractory shock or arrhythmia.",
+     "7. Refer to cardiology or transplant centre when surgical valve repair, LVAD or transplant is indicated."
+    ],
+    "t": [
+     {
+      "a": "Airway",
+      "b": "Assess for obstruction; intubate if SpO2 <90% or altered mental status."
+     },
+     {
+      "a": "Breathing",
+      "b": "Give oxygen to keep SpO2 >94%; use CPAP if pulmonary edema persists."
+     },
+     {
+      "a": "Circulation",
+      "b": "Check pulse, BP, JVP; start vasopressor if systolic <90 mmHg."
+     },
+     {
+      "a": "Diuretics",
+      "b": "Use IV loop diuretics to remove excess fluid; avoid if TACO suspected but treat with diuretics first."
+     },
+     {
+      "a": "Inotropes",
+      "b": "Dobutamine improves CO; avoid in severe hypotension."
+     },
+     {
+      "a": "Mechanical support",
+      "b": "IABP lowers LV afterload; ECMO for refractory cardiogenic shock."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise key adverse effects, interactions and management steps for common heart failure drugs.",
+    "b": [
+     "Loop diuretics cause electrolyte loss; replace potassium and magnesium and monitor serum levels.",
+     "ACE inhibitors/ARBs can precipitate hyperkalaemia; check potassium and creatinine before each dose.",
+     "Beta‑blockers may worsen bradycardia; titrate slowly and avoid in severe hypotension.",
+     "Digoxin toxicity presents with nausea, visual changes; monitor serum levels and renal function.",
+     "Statins may cause myopathy; advise patients to report muscle pain and check CK if symptomatic.",
+     "NSAIDs raise BP and worsen renal function; avoid in advanced heart failure."
+    ],
+    "t": [
+     {
+      "a": "Electrolyte monitoring",
+      "b": "Check K+, Mg2+, Ca2+ every 2–3 days when starting or increasing diuretics."
+     },
+     {
+      "a": "Renal function",
+      "b": "Check serum creatinine and eGFR before ACEI/ARB initiation; hold if >30% rise."
+     },
+     {
+      "a": "Digoxin levels",
+      "b": "Maintain serum level 0.5–1.0 ng/mL; adjust for renal impairment."
+     },
+     {
+      "a": "Drug interactions",
+      "b": "Avoid NSAIDs with ACEI/ARB; avoid CYP3A4 inhibitors with statins."
+     },
+     {
+      "a": "Adverse effect signs",
+      "b": "Nausea, vomiting, visual disturbances = digoxin; muscle pain = statin; hypotension = beta‑blocker."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Identify red flags that require urgent escalation or specialist referral.",
+    "b": [
+     "Cardiogenic shock – persistent hypotension despite fluids and inotropes.",
+     "Pulmonary edema unresponsive to diuretics – consider mechanical ventilation or IABP.",
+     "Severe arrhythmias (VT/VF) – immediate defibrillation and antiarrhythmic therapy.",
+     "Acute kidney injury – stop nephrotoxic drugs and consider dialysis.",
+     "Worsening liver function – evaluate for congestive hepatopathy and adjust diuretics."
+    ],
+    "t": [
+     {
+      "a": "Shock",
+      "b": "Systolic BP <90 mmHg, cold extremities, oliguria; refer to ICU."
+     },
+     {
+      "a": "Pulmonary edema",
+      "b": "Unresponsive to diuretics; intubate and consider IABP."
+     },
+     {
+      "a": "Arrhythmia",
+      "b": "VT/VF – defibrillate; SVT – adenosine or beta‑blocker."
+     },
+     {
+      "a": "AKI",
+      "b": "Rise in creatinine >50% from baseline; hold ACEI/ARB."
+     },
+     {
+      "a": "Liver injury",
+      "b": "Elevated transaminases >5× ULN; assess for congestion."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Adjust assessment and management in the presence of comorbidities common in low‑resource settings.",
+    "b": [
+     "HIV – opportunistic infections can mimic heart failure; use CD4 count to guide therapy.",
+     "TB – miliary disease may cause pericardial effusion; treat with anti‑TB drugs and consider pericardiocentesis.",
+     "Malnutrition – low albumin reduces drug binding; monitor drug levels.",
+     "Diabetes – glycaemic control affects fluid balance; avoid nephrotoxic drugs.",
+     "Herbal remedies – some contain quinine or diuretics; review for interactions.",
+     "Alcohol – chronic use worsens cardiomyopathy; counsel cessation.",
+     "Renal failure – dose adjust diuretics and ACEI/ARB; avoid NSAIDs.",
+     "Liver failure – reduce statins and ACEI/ARB; monitor transaminases.",
+     "Elderly – frailty increases sensitivity to diuretics; monitor electrolytes closely."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor management for children, pregnancy, elderly, HIV patients and low‑resource settings.",
+    "b": [
+     "Children – use age‑appropriate dosing; monitor growth and developmental milestones.",
+     "Pregnancy – avoid ACEI/ARB in 2nd/3rd trimester; use labetalol or methyldopa for hypertension.",
+     "Elderly – start low dose, titrate slowly; watch for orthostatic hypotension.",
+     "HIV – consider drug–drug interactions with antiretrovirals; monitor CD4 and viral load.",
+     "Low‑resource – prioritize affordable diuretics, use clinical signs when labs unavailable; use point‑of‑care ultrasound for pericardial effusion."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Mean pulmonary arterial pressure >20 mmHg at rest defines pulmonary hypertension (ESC/ERS 2022).",
+   "Right atrial pressure >10 mmHg suggests right‑sided failure.",
+   "Transudative pleural effusion: pleural fluid protein/serum protein ≤0.5 and LDH ratio ≤0.6.",
+   "Cardiac output normal range 4.0–8.0 L/min; low output <4.0 L/min indicates pump failure.",
+   "Left ventricular wall thickness >12 mm on echo is abnormal hypertrophy.",
+   "Tricuspid regurgitation jet velocity >2.8 m/s suggests severe regurgitation.",
+   "Serum‑ascites albumin gradient (SAAG) ≥1.1 g/dL indicates portal hypertension.",
+   "TACO (transfusion‑associated circulatory overload) is treated first‑line with IV loop diuretics.",
+   "Pulmonary regurgitation produces an early diastolic decrescendo murmur, not holosystolic.",
+   "Down syndrome: ~40–50% have congenital heart disease, most commonly AV septal defect."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define the diagnostic threshold for pulmonary hypertension according to the 2022 ESC/ERS guidelines.",
+    "a": "Mean pulmonary arterial pressure >20 mmHg at rest measured by right‑heart catheterisation.",
+    "hot": true
+   },
+   {
+    "q": "What bedside test distinguishes transudate from exudate when laboratory analysis is unavailable?",
+    "a": "Pleural fluid appearance and gross protein content; a clear, watery fluid with low protein suggests transudate.",
+    "hot": true
+   },
+   {
+    "q": "Explain why intravenous loop diuretics are the first‑line treatment for TACO.",
+    "a": "They rapidly mobilise excess intravascular volume, reducing pulmonary capillary pressure and relieving pulmonary oedema.",
+    "hot": true
+   },
+   {
+    "q": "How do you elicit a right‑sided S3 and what does it indicate?",
+    "a": "Place the bell at the lower left sternal border during rapid filling; a low‑frequency sound indicates volume overload of the right ventricle."
+   },
+   {
+    "q": "Why is pulmonary regurgitation an early diastolic murmur and not holosystolic?",
+    "a": "Regurgitation occurs when the pulmonary valve fails to close during diastole, producing a decrescendo sound after S2."
+   },
+   {
+    "q": "Interpret a pleural fluid analysis: protein 2.1 g/dL, serum protein 7.0 g/dL, LDH fluid 88 U/L, serum LDH 300 U/L.",
+    "a": "Fluid/serum protein ratio 0.30 and LDH ratio 0.29 – both below transudate cut‑offs; this is a transudative effusion, most likely due to heart failure.",
+    "past": true
+   },
+   {
+    "q": "A transplant patient’s sputum shows oval budding yeasts with pseudohyphae. What is the significance?",
+    "a": "Findings are characteristic of Candida species; in a transplant recipient they indicate opportunistic infection requiring antifungal therapy.",
+    "past": true
+   },
+   {
+    "q": "What is the most likely type of pleural effusion in a right‑sided heart failure patient?",
+    "a": "Transudative effusion due to increased hydrostatic pressure in the systemic circulation.",
+    "past": true
+   },
+   {
+    "q": "A 16‑year‑old with a left chest stab wound is hypotensive, lungs clear, heart sounds faint. What is the most useful immediate treatment?",
+    "a": "Emergency pericardiocentesis to relieve cardiac tamponade.",
+    "past": true
+   },
+   {
+    "q": "During the second unit of packed red cells a patient develops dyspnoea, hypertension and raised JVP with pulmonary oedema on CXR. What complication is this?",
+    "a": "Transfusion‑associated circulatory overload (TACO).",
+    "past": true
+   },
+   {
+    "q": "What percentage of individuals with Down syndrome have congenital heart disease?",
+    "a": "Approximately 40–50 % of patients, most commonly atrioventricular septal defect.",
+    "past": true
+   },
+   {
+    "q": "A 72‑year‑old with LVH, small scarred kidneys and concentric arteriolar thickening dies of basal ganglia bleed. What underlying condition is most likely?",
+    "a": "Chronic hypertension leading to hypertensive heart disease and renal arteriolosclerosis.",
+    "past": true
+   },
+   {
+    "q": "After 10 years a porcine bioprosthetic valve fails. What pathologic change is expected?",
+    "a": "Structural valve degeneration with calcification and leaflet thickening.",
+    "past": true
+   },
+   {
+    "q": "Which hepatic acinar zone is most vulnerable to congestion from severe right‑heart failure and why?",
+    "a": "Zone 3 (centrilobular) because it receives the least oxygenated blood and is closest to the central vein where congestion occurs.",
+    "past": true
+   },
+   {
+    "q": "In right‑heart failure, why is zone 1 relatively spared compared with zone 3?",
+    "a": "Zone 1 receives blood directly from the hepatic artery and portal vein with higher oxygen tension, so it is less affected by venous congestion."
+   },
+   {
+    "q": "List three key history questions for a patient with suspected right‑sided heart failure.",
+    "a": "1) Peripheral oedema onset and progression; 2) Abdominal fullness or ascites; 3) History of left‑sided failure or pulmonary hypertension."
+   },
+   {
+    "q": "Describe how to perform and interpret the hepatojugular reflux test.",
+    "a": "Apply firm pressure over the liver for 10 seconds; a rise >3 cm in JVP that persists indicates impaired right‑ventricular filling."
+   },
+   {
+    "q": "What is the role of bedside ultrasound in acute right‑heart failure?",
+    "a": "Rapid assessment of IVC size and collapsibility, right‑ventricular dilation, and pleural effusions to guide fluid management."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old man with chronic heart failure presents with a right‑sided pleural effusion. Which of the following fluid analyses confirms a transudate?",
+    "o": [
+     "Pleural fluid protein 4.0 g/dL, serum protein 6.0 g/dL",
+     "Pleural fluid LDH 250 U/L, serum LDH 300 U/L",
+     "Pleural fluid/serum protein ratio 0.3 and LDH ratio 0.29",
+     "Pleural fluid glucose 30 mg/dL"
+    ],
+    "a": 2,
+    "e": "Both ratios are below transudate cut‑offs (≤0.5 protein, ≤0.6 LDH).",
+    "past": true
+   },
+   {
+    "q": "Which murmur is characteristic of pulmonary regurgitation?",
+    "o": [
+     "Holosystolic murmur at left lower sternal border",
+     "Early diastolic decrescendo murmur best heard at left upper sternal border",
+     "Mid‑systolic click followed by murmur",
+     "Continuous machinery murmur"
+    ],
+    "a": 1,
+    "e": "Pulmonary regurgitation produces an early diastolic decrescendo sound."
+   },
+   {
+    "q": "A patient develops dyspnoea, hypertension and raised JVP during a second unit of blood. Which immediate therapy is most appropriate?",
+    "o": [
+     "Administer IV methylprednisolone",
+     "Start IV loop diuretic",
+     "Give antihistamine and epinephrine",
+     "Pause transfusion and give platelets"
+    ],
+    "a": 1,
+    "e": "TACO is managed with rapid IV loop diuretics.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is the correct definition of pulmonary hypertension per 2022 guidelines?",
+    "o": [
+     "Mean PAP ≥25 mmHg at rest",
+     "Mean PAP >20 mmHg at rest",
+     "Systolic PAP >35 mmHg on echo",
+     "Pulmonary artery wedge pressure >15 mmHg"
+    ],
+    "a": 1,
+    "e": "2022 ESC/ERS lowered the threshold to >20 mmHg."
+   },
+   {
+    "q": "A 16‑year‑old with a left chest stab wound is hypotensive, lungs clear, heart sounds faint. Which bedside maneuver is most likely to improve his condition immediately?",
+    "o": [
+     "Needle thoracostomy",
+     "Pericardiocentesis",
+     "Chest tube insertion",
+     "Rapid fluid bolus"
+    ],
+    "a": 1,
+    "e": "Faint heart sounds with clear lungs suggest tamponade; pericardiocentesis relieves it.",
+    "past": true
+   },
+   {
+    "q": "In right‑heart failure, which hepatic zone shows the highest risk of necrosis due to hypoxia?",
+    "o": [
+     "Zone 1 (periportal)",
+     "Zone 2 (mid‑acinar)",
+     "Zone 3 (centrilobular)",
+     "All zones equally"
+    ],
+    "a": 2,
+    "e": "Zone 3 is furthest from oxygen‑rich blood and most affected by congestion."
+   },
+   {
+    "q": "Which of the following statements about bioprosthetic valve degeneration is correct after 10 years?",
+    "o": [
+     "Calcification is the primary cause of failure",
+     "Structural degeneration is rare before 20 years",
+     "Mechanical valves degenerate similarly",
+     "Degeneration is unrelated to patient age"
+    ],
+    "a": 0,
+    "e": "Calcific and fibrotic changes are the main mechanisms of bioprosthetic failure."
+   },
+   {
+    "q": "What proportion of Down‑syndrome individuals have congenital heart disease?",
+    "o": [
+     "10–15 %",
+     "20–30 %",
+     "40–50 %",
+     "70–80 %"
+    ],
+    "a": 2,
+    "e": "Approximately 40–50 % have CHD, most often AV septal defect.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 58‑year‑old man presents with progressive dyspnoea, peripheral oedema and a loud P2. Echo shows right‑ventricular dilation, tricuspid regurgitation jet velocity 3.2 m/s, and estimated systolic PAP 55 mmHg.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Pulmonary hypertension secondary to left‑sided heart disease."
+     },
+     {
+      "q": "Which bedside test would confirm elevated right‑sided pressures?",
+      "a": "Hepatojugular reflux – a sustained rise in JVP with abdominal pressure."
+     }
+    ]
+   },
+   {
+    "v": "A 22‑year‑old woman with no prior cardiac history presents with sudden syncope during exertion. Examination reveals a harsh systolic murmur at the left upper sternal border radiating to the back. CT angiography shows a large pulmonary embolus.",
+    "qs": [
+     {
+      "q": "How does the murmur relate to her presentation?",
+      "a": "Acute right‑ventricular pressure overload produces a functional tricuspid regurgitation murmur."
+     },
+     {
+      "q": "What immediate investigation confirms right‑heart strain?",
+      "a": "Elevated troponin and BNP together with right‑ventricular dilation on bedside echocardiography."
+     },
+     {
+      "q": "What acute management should be initiated?",
+      "a": "Systemic thrombolysis (if no contraindication) or catheter‑directed thrombectomy, plus oxygen and fluids cautiously."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing the transudate/exudate protein and LDH ratios; always apply ≤0.5 and ≤0.6 cut‑offs respectively.",
+   "Assuming diuretics are contraindicated in TACO – they are the primary treatment.",
+   "Labeling pulmonary regurgitation as holosystolic; it is an early diastolic murmur.",
+   "Using the outdated ≥25 mmHg threshold for pulmonary hypertension.",
+   "Neglecting to assess hepatojugular reflux when right‑sided failure is suspected.",
+   "Relying solely on pleural fluid appearance without calculating ratios.",
+   "Over‑interpreting a mild tricuspid regurgitation jet as severe without quantitative assessment.",
+   "Failing to consider HIV or malnutrition as modifiers of cardiac presentation in low‑resource settings."
+  ],
+  "exam": [
+   "Define the diagnostic threshold for pulmonary hypertension according to the 2022 ESC/ERS guidelines. — Mean pulmonary arterial pressure >20 mmHg at rest measured by right‑heart catheterisation.",
+   "What bedside test distinguishes transudate from exudate when laboratory analysis is unavailable? — Pleural fluid appearance and gross protein content; a clear, watery fluid with low protein suggests transudate.",
+   "Explain why intravenous loop diuretics are the first‑line treatment for TACO. — They rapidly mobilise excess intravascular volume, reducing pulmonary capillary pressure and relieving pulmonary oedema.",
+   "How do you elicit a right‑sided S3 and what does it indicate? — Place the bell at the lower left sternal border during rapid filling; a low‑frequency sound indicates volume overload of the right ventricle.",
+   "Why is pulmonary regurgitation an early diastolic murmur and not holosystolic? — Regurgitation occurs when the pulmonary valve fails to close during diastole, producing a decrescendo sound after S2.",
+   "Interpret a pleural fluid analysis: protein 2.1 g/dL, serum protein 7.0 g/dL, LDH fluid 88 U/L, serum LDH 300 U/L. — Fluid/serum protein ratio 0.30 and LDH ratio 0.29 – both below transudate cut‑offs; this is a transudative effusion, most likely due to heart failure.",
+   "A transplant patient’s sputum shows oval budding yeasts with pseudohyphae. What is the significance? — Findings are characteristic of Candida species; in a transplant recipient they indicate opportunistic infection requiring antifungal therapy.",
+   "What is the most likely type of pleural effusion in a right‑sided heart failure patient? — Transudative effusion due to increased hydrostatic pressure in the systemic circulation.",
+   "A 16‑year‑old with a left chest stab wound is hypotensive, lungs clear, heart sounds faint. What is the most useful immediate treatment? — Emergency pericardiocentesis to relieve cardiac tamponade.",
+   "During the second unit of packed red cells a patient develops dyspnoea, hypertension and raised JVP with pulmonary oedema on CXR. What complication is this? — Transfusion‑associated circulatory overload (TACO).",
+   "What percentage of individuals with Down syndrome have congenital heart disease? — Approximately 40–50 % of patients, most commonly atrioventricular septal defect.",
+   "A 72‑year‑old with LVH, small scarred kidneys and concentric arteriolar thickening dies of basal ganglia bleed. What underlying condition is most likely? — Chronic hypertension leading to hypertensive heart disease and renal arteriolosclerosis.",
+   "After 10 years a porcine bioprosthetic valve fails. What pathologic change is expected? — Structural valve degeneration with calcification and leaflet thickening.",
+   "Which hepatic acinar zone is most vulnerable to congestion from severe right‑heart failure and why? — Zone 3 (centrilobular) because it receives the least oxygenated blood and is closest to the central vein where congestion occurs."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-17",
+  "checked": "2026-10-17",
+  "trimmed": 3
+ }
 }

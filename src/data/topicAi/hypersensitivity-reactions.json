@@ -1,0 +1,142 @@
+{
+ "medical": true,
+ "title": "Hypersensitivity Reactions",
+ "subject": "Medicine",
+ "summary": "Exaggerated immune responses that damage tissue. Clinicians must identify type, severity and trigger, then stop the inciting agent and give appropriate supportive care.",
+ "aka": [
+  "Allergy",
+  "Immune reaction"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hypersensitivity reactions are immune‐mediated tissue injuries classified into four types (I–IV). Diagnosis is clinical, supported by history, examination and selective tests.",
+   "b": [
+    "Type I: IgE‑mediated, immediate; Type II: antibody‑mediated cytotoxic; Type III: immune‑complex; Type IV: T‑cell mediated delayed"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the extent of systemic involvement and risk of death. The Brighton Collaboration criteria for anaphylaxis are useful in low‑resource settings.",
+   "b": [
+    "Mild: localized urticaria or pruritus; Moderate: bronchospasm, hypotension, or facial swelling; Severe: anaphylaxis with shock, respiratory arrest or multi‑organ failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, common triggers include antimalarials, cotrimoxazole, antiretrovirals, herbal remedies, and infections such as malaria, TB and schistosomiasis.",
+   "b": [
+    "Drug reactions (cotrimoxazole, antimalarials, antiretrovirals); infections (malaria, TB, schistosomiasis); herbal preparations; food allergens; insect bites"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation depends on type. Type I is rapid, with urticaria, angioedema and anaphylaxis. Type II shows cytopenias or hemolysis. Type III presents with fever, arthralgia, and glomerulonephritis. Type IV is delayed skin reaction or granulomatous disease.",
+   "b": [
+    "Type I: hives, wheeze, hypotension within minutes; Type II: pallor, jaundice, anemia; Type III: fever, rash, arthralgia, renal dysfunction; Type IV: erythema, induration, fever after 24–72h"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use the simplest tests that answer a specific question. When unavailable, clinical judgment prevails.",
+   "t": [
+    {
+     "a": "Skin prick test",
+     "b": "Detects IgE to specific allergens; positive if wheal >3mm after 15min – useful for Type I"
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Identifies eosinophilia (Type I), anemia or thrombocytopenia (Type II), or leukocytosis (Type III/IV) – abnormal values guide urgency"
+    },
+    {
+     "a": "Serum IgE",
+     "b": "Elevated in IgE‑mediated reactions – supports diagnosis when skin testing is not possible"
+    },
+    {
+     "a": "Complement levels (C3, C4)",
+     "b": "Low in immune‑complex disease – suggests Type III"
+    },
+    {
+     "a": "Drug‑specific IgG/IgM (if available)",
+     "b": "Positive indicates cytotoxic antibody mediated injury – Type II"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of life‑threatening features is vital. Complications include shock, organ failure, and delayed autoimmune sequelae.",
+   "b": [
+    "Hypotension <90/60 mmHg; tachycardia >120/min; wheeze or stridor; altered mental status; oliguria; rash with systemic spread; severe cytopenias"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Stop the offending agent, then give organ‑specific supportive care. Drug choice is guided by safety and availability.",
+   "b": [
+    "Antihistamine (H1 blocker) – blocks histamine release; corticosteroid – reduces inflammation and prevents biphasic reaction; epinephrine – first‑line for anaphylaxis; IV fluids – treat hypotension; oxygen – for respiratory compromise"
+   ],
+   "t": [
+    {
+     "a": "IV fluids",
+     "b": "Crystalloid 20ml/kg bolus to restore preload in shock"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Patients should receive education on avoidance, carry emergency medication, and have a written action plan.",
+   "b": [
+    "Avoid known trigger; use alternative drugs; carry epinephrine auto‑injector; document reaction in medical record; refer to allergy clinic if available"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic hypersensitivity but have different pathophysiology.",
+   "b": [
+    "Drug toxicity (e.g., paracetamol overdose); sepsis; viral exanthem; urticarial vasculitis; autoimmune hemolytic anemia"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some investigations may be falsely normal early or due to concurrent disease.",
+   "b": [
+    "IgE may be normal in non‑IgE mediated reactions; eosinophilia may be absent in severe anaphylaxis; complement may be normal in early immune‑complex disease"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Anaphylaxis with hypotension, wheeze, or altered consciousness; severe cytopenias or hemolysis; sudden renal failure; unexplained shock"
+ ],
+ "faq": [
+  {
+   "q": "Why is cotrimoxazole contraindicated in severe hypersensitivity?",
+   "a": "It can trigger life‑threatening anaphylaxis and severe cutaneous reactions; stopping it immediately is mandatory."
+  },
+  {
+   "q": "Can a patient with a mild urticarial reaction develop anaphylaxis later?",
+   "a": "Yes, biphasic reactions occur; monitor for at least 4–6 hours after resolution."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old HIV patient on cotrimoxazole develops fever, rash and hemolysis – what is the likely type and first step? — Type II cytotoxic; stop cotrimoxazole immediately and give supportive care.",
+  "A child presents with wheeze and hypotension 10 minutes after a bee sting – what is the immediate management? — Intramuscular epinephrine, oxygen, IV fluids.",
+  "A patient with chronic urticaria has no response to antihistamines; what is the next diagnostic step? — Skin prick testing or serum IgE if available.",
+  "A 45‑year‑old woman develops fever, arthralgia and a palpable purpura 48h after starting a new antibiotic – what is the most likely type? — Type III immune complex; check complement levels.",
+  "A patient with suspected drug reaction has eosinophilia and acute kidney injury – what is the most probable mechanism? — Type II cytotoxic or Type III; consider drug‑induced lupus.",
+  "A rural clinician has no access to skin testing; a patient has a history of anaphylaxis to penicillin – what should the clinician do? — Avoid penicillin, use alternative antibiotics, and provide an epinephrine auto‑injector.",
+  "A patient with a history of severe allergic reaction to a herbal remedy presents with facial swelling – what is the most appropriate first action? — Stop the herb, give antihistamine and consider epinephrine if airway compromise."
+ ],
+ "related": [
+  "Drug Allergy",
+  "Anaphylaxis",
+  "Immune Complex Disease",
+  "Delayed Hypersensitivity",
+  "Allergic Bronchopulmonary Aspergillosis",
+  "Autoimmune Hemolytic Anemia",
+  "Severe Cutaneous Adverse Reaction"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-17",
+ "reviewed": false
+}

@@ -1,0 +1,181 @@
+{
+ "medical": true,
+ "title": "Mitral Valve Disease",
+ "subject": "Medicine",
+ "summary": "The mitral valve, located between the left atrium and left ventricle, is crucial for unidirectional blood flow. Dysfunction can lead to stenosis (narrowing) or regurgitation (leakage), impairing cardiac output and causing symptoms like dyspnoea. Rheumatic heart disease is a common cause in low-resource settings.",
+ "aka": [
+  "Bicuspid valve",
+  "Left atrioventricular valve"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Mitral valve disease encompasses conditions where the mitral valve does not function correctly, leading to either obstruction of blood flow (stenosis) or backflow (regurgitation). Diagnosis is primarily clinical, based on characteristic heart murmurs and symptoms, confirmed by echocardiography.",
+   "b": [
+    "Mitral Stenosis: Narrowing of the mitral valve orifice, impeding blood flow from the left atrium to the left ventricle.",
+    "Mitral Regurgitation: Incomplete closure of the mitral valve, allowing blood to flow backward into the left atrium during systole.",
+    "Mitral Valve Prolapse (MVP): Displacement of one or both mitral valve leaflets into the left atrium during systole, often causing regurgitation."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity of mitral valve disease is assessed based on symptoms, physical examination findings, and echocardiographic parameters, which quantify the degree of stenosis or regurgitation and their impact on cardiac function and pulmonary pressures. Patients often remain asymptomatic until significant valve dysfunction occurs.",
+   "b": [
+    "Mitral Stenosis: Symptomatic when mitral valve area is less than 2 cm² (normal is 4-6 cm²).",
+    "Mitral Regurgitation: Graded from mild to severe based on regurgitant volume, effective regurgitant orifice area, and left ventricular size/function.",
+    "Mitral Valve Prolapse: Often asymptomatic, but severity is determined by the degree of leaflet prolapse and associated regurgitation."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The etiology of mitral valve disease varies significantly, with rheumatic heart disease being the predominant cause of mitral stenosis and a common cause of regurgitation in low-resource settings. Other causes include degenerative changes, infections, and ischemic events.",
+   "b": [
+    "Rheumatic Heart Disease: Most common cause of mitral stenosis and a significant cause of mitral regurgitation, especially in younger populations in East Africa. Results from untreated Group A Streptococcus infection.",
+    "Degenerative (Myxomatous) Disease: Common cause of mitral regurgitation and mitral valve prolapse, particularly in older patients.",
+    "Infective Endocarditis: Can cause acute mitral regurgitation due to leaflet destruction or rupture of chordae tendineae.",
+    "Ischemic Heart Disease: Papillary muscle dysfunction or rupture following myocardial infarction can lead to acute or chronic mitral regurgitation.",
+    "Congenital Abnormalities: Rare, but can include cleft mitral valve or parachute mitral valve.",
+    "Connective Tissue Disorders: Marfan syndrome, Ehlers-Danlos syndrome can cause mitral valve prolapse and regurgitation.",
+    "Cardiomyopathies: Dilated cardiomyopathy can lead to functional mitral regurgitation due to annular dilation."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinical presentation depends on the specific valve lesion, its severity, and the rapidity of onset. Symptoms often relate to reduced cardiac output and pulmonary congestion. A thorough history and physical examination are crucial for initial assessment.",
+   "b": [
+    "Mitral Stenosis: Dyspnoea on exertion, orthopnoea, paroxysmal nocturnal dyspnoea, fatigue, hemoptysis. Auscultation reveals a loud S1, opening snap, and a low-pitched diastolic rumble.",
+    "Mitral Regurgitation: Acute presentation can include pulmonary edema and cardiogenic shock. Chronic presentation involves exertional dyspnoea, fatigue, palpitations. Auscultation reveals a holosystolic murmur radiating to the axilla.",
+    "Mitral Valve Prolapse: Often asymptomatic. May present with atypical chest pain, palpitations, dyspnoea, or syncope. Auscultation may reveal a mid-systolic click followed by a late systolic murmur."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the diagnosis, assess severity, identify etiology, and evaluate cardiac function. Echocardiography is the cornerstone, but other tests provide complementary information.",
+   "t": [
+    {
+     "a": "Clinical History and Physical Exam",
+     "b": "What are the patient's symptoms and signs? Presence of characteristic murmurs, signs of heart failure, and risk factors (e.g., rheumatic fever history) guide initial suspicion. If unavailable, careful auscultation and palpation are paramount."
+    },
+    {
+     "a": "Electrocardiogram (ECG)",
+     "b": "Are there signs of atrial enlargement, ventricular hypertrophy, or arrhythmias (e.g., atrial fibrillation)? Left atrial enlargement in mitral stenosis, left ventricular hypertrophy in severe mitral regurgitation."
+    },
+    {
+     "a": "Chest X-ray (CXR)",
+     "b": "Are there signs of pulmonary congestion, cardiomegaly, or left atrial enlargement? Can show pulmonary venous congestion, Kerley B lines, or an enlarged cardiac silhouette. If unavailable, clinical signs of pulmonary edema (rales) are key."
+    },
+    {
+     "a": "Transthoracic Echocardiography (TTE)",
+     "b": "What is the valve morphology, severity of stenosis or regurgitation, and impact on cardiac chambers and pulmonary pressures? Quantifies mitral valve area, assesses leaflet motion, identifies prolapse, measures regurgitant jet, and estimates pulmonary artery pressure. This is the definitive non-invasive test. If unavail"
+    },
+    {
+     "a": "Transesophageal Echocardiography (TEE)",
+     "b": "Is there a need for more detailed valve assessment, especially for surgical planning or to rule out endocarditis? Provides superior imaging of valve structures and vegetations, useful when TTE is inconclusive."
+    },
+    {
+     "a": "Cardiac Catheterization",
+     "b": "What are the precise hemodynamic pressures and gradients across the valve, and is there coexisting coronary artery disease? Invasive, usually reserved for discrepancies or before intervention, especially if TTE is unavailable or inconclusive and surgery is considered."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Patients with mitral valve disease are at risk for several serious complications, some of which require urgent intervention. Recognizing these 'red flags' is critical for timely management.",
+   "b": [
+    "Acute Pulmonary Edema: Sudden onset of severe dyspnoea, orthopnoea, and frothy sputum, often due to acute severe mitral regurgitation or decompensated mitral stenosis.",
+    "Atrial Fibrillation: Common, especially in mitral stenosis, increasing risk of systemic embolization (e.g., stroke).",
+    "Systemic Embolism: Thrombi forming in the left atrium (especially with atrial fibrillation) can dislodge and cause stroke or peripheral ischemia.",
+    "Infective Endocarditis: Risk of bacterial infection on damaged valve leaflets, leading to vegetations and potential embolization or valve destruction.",
+    "Right Heart Failure: Chronic pulmonary hypertension from severe mitral valve disease can lead to right ventricular dysfunction and systemic congestion.",
+    "Sudden Cardiac Death: Rare, but can occur in severe mitral valve prolapse with complex arrhythmias."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management strategies depend on the type and severity of mitral valve disease, patient symptoms, and the presence of complications. It ranges from medical therapy to surgical or percutaneous interventions.",
+   "b": [
+    "Medical Therapy: Diuretics for congestion, beta-blockers or calcium channel blockers for heart rate control (especially in atrial fibrillation), anticoagulation for atrial fibrillation (e.g., warfarin, if available and monitored).",
+    "Rheumatic Fever Prophylaxis: For patients with rheumatic heart disease, long-term penicillin prophylaxis is crucial to prevent recurrence and progression.",
+    "Endocarditis Prophylaxis: Generally not recommended for routine dental procedures unless the patient has a prosthetic valve or prior endocarditis.",
+    "Intervention for Mitral Stenosis: Percutaneous mitral commissurotomy (balloon valvuloplasty) is preferred for suitable candidates. Surgical mitral valve repair or replacement is an alternative.",
+    "Intervention for Mitral Regurgitation: Surgical mitral valve repair is generally preferred over replacement when feasible, especially for degenerative disease. Replacement is considered for severe regurgitation with symptoms or ventricular dysfunction.",
+    "Intervention for Mitral Valve Prolapse: Surgery is indicated for severe mitral regurgitation causing symptoms or ventricular dysfunction."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up is essential to monitor disease progression, assess treatment effectiveness, and manage complications. Prevention focuses on addressing underlying causes, particularly rheumatic fever.",
+   "b": [
+    "Regular Clinical Assessment: Periodic physical exams and symptom review to detect changes.",
+    "Echocardiographic Surveillance: Repeat echocardiograms at intervals determined by disease severity and stability.",
+    "Rheumatic Fever Prevention: Primary prevention involves prompt treatment of streptococcal pharyngitis. Secondary prevention involves long-term antibiotic prophylaxis for those with a history of rheumatic fever.",
+    "Lifestyle Modifications: Healthy diet, regular exercise (as tolerated), smoking cessation, and blood pressure control."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Distinguishing mitral valve disease from other cardiac conditions with similar symptoms or murmurs is important for accurate diagnosis and management.",
+   "b": [
+    "Aortic Stenosis: Can cause exertional dyspnoea and a systolic murmur, but the murmur is typically crescendo-decrescendo, heard best at the right upper sternal border, and radiates to the carotids. Mitral regurgitation has a holosystolic murmur radiating to the axilla.",
+    "Hypertrophic Obstructive Cardiomyopathy (HOCM): Presents with exertional dyspnoea and a systolic murmur. The murmur of HOCM increases with Valsalva maneuver, unlike most other murmurs. Echocardiography shows asymmetric septal hypertrophy and systolic anterior motion (SAM) of the mitral valve.",
+    "Tricuspid Regurgitation: Can cause a holosystolic murmur, but it is typically heard best at the left lower sternal border and increases with inspiration (Carvallo's sign).",
+    "Atrial Septal Defect (ASD): Can cause a fixed split S2 and a systolic murmur, but this is due to increased flow across the pulmonary valve, not mitral valve pathology."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting findings in mitral valve disease requires clinical correlation, as some results can be misleading or influenced by other factors.",
+   "b": [
+    "Asymptomatic Severe Disease: Patients, especially with chronic mitral regurgitation, can have severe disease with significant ventricular dysfunction but minimal symptoms, leading to delayed diagnosis.",
+    "Normal ECG/CXR: Early or mild disease may not show significant changes on ECG or CXR, requiring echocardiography for diagnosis.",
+    "Functional Mitral Regurgitation: Regurgitation can be secondary to left ventricular dilation (e.g., in dilated cardiomyopathy or ischemic heart disease) rather than primary valve pathology. Treating the underlying ventricular dysfunction is key.",
+    "Straight Back Syndrome: Loss of normal thoracic kyphosis can cause a systolic murmur and mid-systolic click, mimicking mitral valve prolapse, but without actual valve pathology.",
+    "Valsalva Maneuver: Can decrease the intensity of most murmurs, but increases the murmur of hypertrophic obstructive cardiomyopathy and can change the timing of the click/murmur in mitral valve prolapse."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of shortness of breath, especially at rest or lying flat",
+  "New onset of chest pain or severe palpitations",
+  "Fainting spells or dizziness",
+  "Signs of stroke, such as sudden weakness, numbness, or difficulty speaking",
+  "Fever with new or worsening heart murmur"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of mitral stenosis in East Africa?",
+   "a": "Rheumatic heart disease is the most common cause of mitral stenosis in East Africa, resulting from recurrent episodes of rheumatic fever."
+  },
+  {
+   "q": "Why is echocardiography so important for mitral valve disease?",
+   "a": "Echocardiography is crucial because it directly visualizes the valve, quantifies the severity of stenosis or regurgitation, assesses cardiac chamber sizes and function, and estimates pulmonary pressures, guiding management decisions."
+  },
+  {
+   "q": "Can mitral valve prolapse be dangerous?",
+   "a": "While often benign and asymptomatic, severe mitral valve prolapse can lead to significant mitral regurgitation, increasing the risk of heart failure, infective endocarditis, or, rarely, sudden cardiac death due to arrhythmias."
+  }
+ ],
+ "exam": [
+  "A 25-year-old woman presents with progressive dyspnoea and palpitations. On examination, you hear a loud S1, an opening snap, and a low-pitched diastolic rumble. What is your most likely diagnosis, what is the underlying pathology in this setting, and what urgent investigation would you request? — Most likely diagnosis is mitral stenosis. In East Africa, the underlying pathology is almost certainly rheumatic heart disease. The urgent investigation would be a transthoracic ech",
+  "You are on a ward round and a patient with known severe mitral regurgitation suddenly develops acute shortness of breath and frothy sputum. What is your immediate differential diagnosis and what are your first three management steps? — Immediate differential includes acute pulmonary edema due to decompensated mitral regurgitation. First three management steps: sit the patient upright, administer high-flow oxygen, and give intravenous diuretics (e.g., furosemide).",
+  "A 40-year-old man with a history of rheumatic fever is found to have atrial fibrillation. Why is anticoagulation crucial in this patient, and what specific agent would you consider in a low-resource setting? — Anticoagulation is crucial to prevent systemic embolization, particularly stroke, which is a high risk with atrial fibrillation in the context of rheumatic mitral valve disease. In a low-resource setting, warfarin is the most commonly available and effective agent, requ",
+  "Describe the key auscultatory findings that differentiate mitral regurgitation from aortic stenosis. — Mitral regurgitation typically presents with a holosystolic murmur, heard best at the apex, radiating to the axilla. Aortic stenosis presents with a crescendo-decrescendo systolic murmur, heard best at the right upper sternal border, radiating to the carotids.",
+  "A patient with mitral valve prolapse has a mid-systolic click and a late systolic murmur. How would the Valsalva maneuver affect these findings, and why? — The Valsalva maneuver reduces venous return, decreasing left ventricular volume. This causes the mitral valve leaflets to prolapse earlier in systole, moving the mid-systolic click and the onset of the late systolic murmur earlier in systole.",
+  "You suspect infective endocarditis in a patient with a new mitral regurgitation murmur and fever. Your hospital does not have TEE. What are the key clinical and basic laboratory findings you would look for to support your suspicion, and what is your next step? — Key findings: persistent fever, new or worsening murmur, signs of peripheral emboli (splinter hemorrhages, Janeway lesions, Osler's nodes, Roth spots), positive blood cultures (if available). Next step: Start empiric ",
+  "A patient with severe mitral stenosis is being considered for percutaneous mitral commissurotomy. What are two absolute contraindications to this procedure? — Two absolute contraindications are the presence of left atrial thrombus (risk of systemic embolization) and severe mitral regurgitation (as the procedure could worsen regurgitation)."
+ ],
+ "related": [
+  "Rheumatic Heart Disease",
+  "Infective Endocarditis",
+  "Aortic Valve Disease",
+  "Heart Failure",
+  "Atrial Fibrillation",
+  "Echocardiography",
+  "Pulmonary Hypertension",
+  "Cardiac Auscultation"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-17",
+ "reviewed": false
+}

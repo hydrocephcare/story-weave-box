@@ -1,0 +1,178 @@
+{
+ "medical": true,
+ "title": "Blood Cells Overview",
+ "subject": "Medicine",
+ "summary": "Blood cells include red cells, white cells, and platelets, each with distinct functions and clinical relevance. Understanding their production, normal ranges, and common abnormalities guides diagnosis and management in low‑resource settings.",
+ "aka": [
+  "RBCs",
+  "WBCs",
+  "Platelets",
+  "Hematologic cells"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Blood cells are the cellular components of blood: erythrocytes carry oxygen, leukocytes defend against infection, and thrombocytes enable clotting. Diagnosis starts with a complete blood count (CBC) and peripheral smear.",
+   "b": [
+    "CBC provides total and differential counts, hemoglobin, hematocrit, and platelet number.",
+    "Peripheral smear evaluates cell morphology and identifies abnormal forms."
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "What is the overall cellular composition? – Shows anemia, leukocytosis, leukopenia, thrombocytopenia or thrombocytosis."
+    },
+    {
+     "a": "Peripheral smear",
+     "b": "What do the cells look like? – Detects sickle cells, malaria parasites, blasts, or platelet clumping."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Abnormalities are graded by severity thresholds used in WHO and local guidelines, which guide urgency of treatment.",
+   "b": [
+    "Severe anemia: hemoglobin <7 g/dL (or <5 g/dL in children).",
+    "Leukocytosis: WBC >11 ×10⁹/L; leukopenia: <4 ×10⁹/L.",
+    "Thrombocytopenia: platelets <50 ×10⁹/L; severe <20 ×10⁹/L."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals, the most common etiologies differ by cell line.",
+   "b": [
+    "Anemia – malaria, hookworm, sickle cell disease, nutritional iron deficiency, HIV‑related marrow suppression.",
+    "Leukocytosis – bacterial sepsis, malaria, tuberculosis, HIV, acute leukemia.",
+    "Leukopenia – advanced HIV, severe malaria, aplastic anemia, chemotherapy.",
+    "Thrombocytopenia – malaria, dengue, HIV, sepsis, drug‑induced immune thrombocytopenia."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may present with nonspecific systemic symptoms or signs directly related to the affected cell line.",
+   "b": [
+    "Anemia – fatigue, pallor, tachycardia, dyspnoea on exertion, splenomegaly in sickle cell.",
+    "Leukocytosis – fever, chills, localized infection signs, lymphadenopathy.",
+    "Leukopenia – recurrent infections, oral thrush, weight loss.",
+    "Thrombocytopenia – easy bruising, petechiae, mucosal bleeding, prolonged bleeding after minor cuts."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Beyond the CBC, targeted tests clarify cause, especially when advanced labs are unavailable.",
+   "b": [
+    "Rapid malaria test when anemia or thrombocytopenia is unexplained.",
+    "HIV rapid test for cytopenias in high‑prevalence settings.",
+    "Stool microscopy for helminths if iron‑deficiency anemia suspected."
+   ],
+   "t": [
+    {
+     "a": "Rapid malaria test",
+     "b": "Is malaria causing cytopenia? – Positive test supports malaria‑induced anemia or thrombocytopenia."
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Is HIV contributing to marrow suppression? – Positive result prompts antiretroviral therapy and prophylaxis."
+    },
+    {
+     "a": "Peripheral smear for malaria parasites",
+     "b": "Are parasites present in red cells? – Detects Plasmodium species; guides antimalarial choice."
+    },
+    {
+     "a": "Serum ferritin (if available)",
+     "b": "Is iron deficiency present? – Low ferritin confirms iron‑deficiency anemia; if unavailable, use clinical clues and response to iron."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain blood‑cell abnormalities can rapidly become life‑threatening.",
+   "b": [
+    "Hemoglobin <5 g/dL with cardiac failure – risk of sudden decompensation.",
+    "WBC >30 ×10⁹/L with blasts – suspect acute leukemia, urgent referral.",
+    "Platelets <20 ×10⁹/L with active bleeding – risk of intracranial hemorrhage."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care tailored to the cell line.",
+   "b": [
+    "Anemia – treat malaria with ACT, give oral iron for deficiency, consider folic acid in sickle cell, transfuse packed RBCs only if hemoglobin <7 g/dL or symptomatic.",
+    "Leukocytosis – start empiric antibiotics for sepsis, antimalarials if malaria confirmed, refer for oncology if blasts dominate.",
+    "Leukopenia – start cotrimoxazole prophylaxis in HIV, treat opportunistic infections, avoid neutropenic‑danger drugs.",
+    "Thrombocytopenia – treat malaria, give tranexamic acid for mucosal bleeding, consider platelet transfusion if <20 ×10⁹/L with active bleed."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring and preventive measures reduce recurrence.",
+   "b": [
+    "Repeat CBC after treatment of malaria or infection to confirm recovery.",
+    "Iron supplementation for at least 3 months after correction of deficiency.",
+    "Vaccinate against pneumococcus and Haemophilus influenzae in splenectomised or sickle‑cell patients.",
+    "Educate on insect‑net use and prompt malaria testing."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Similar presentations can mislead clinicians.",
+   "b": [
+    "Anemia vs. chronic heart failure – both cause dyspnoea; check hemoglobin and cardiac exam.",
+    "Leukocytosis vs. leukemoid reaction – differentiate by smear (presence of blasts) and infection markers.",
+    "Thrombocytopenia vs. platelet function defect – bleeding time normal in pure thrombocytopenia."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory artefacts are common in low‑resource settings.",
+   "b": [
+    "Cold agglutinins can falsely lower RBC count; warm the sample before analysis.",
+    "Platelet clumping on EDTA tubes may give spuriously low platelet count; repeat with citrate.",
+    "Leukocyte differential may miss blasts if smear not examined promptly."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe anemia with chest pain or syncope",
+  "WBC >30 ×10⁹/L with blasts on smear",
+  "Platelets <20 ×10⁹/L with active intracranial bleed"
+ ],
+ "faq": [
+  {
+   "q": "Why is malaria a common cause of low platelets?",
+   "a": "Parasite sequestration and immune‑mediated destruction reduce platelet survival."
+  },
+  {
+   "q": "Can iron deficiency cause leukocytosis?",
+   "a": "No; leukocytosis usually reflects infection or inflammation, not iron status."
+  },
+  {
+   "q": "When is a blood transfusion indicated for anemia in this setting?",
+   "a": "When hemoglobin is below 7 g/dL or the patient has cardiac compromise, severe dyspnoea, or is pregnant."
+  }
+ ],
+ "exam": [
+  "A 6‑year‑old with sickle cell disease presents with sudden chest pain and hemoglobin 6 g/dL — discuss immediate management and why transfusion thresholds differ in sickle cell.",
+  "A febrile adult with WBC 15 ×10⁹/L and a peripheral smear showing many neutrophils – how do you distinguish bacterial sepsis from a leukemoid reaction?",
+  "A pregnant woman at 28 weeks has platelets 45 ×10⁹/L and mild bruising – outline investigation steps and safe management options.",
+  "A patient with known HIV presents with hemoglobin 8 g/dL, MCV 110 fL – what are the likely causes and how would you prioritize investigations?",
+  "In a malaria‑endemic area, a child has anemia and thrombocytopenia – which rapid tests would you order first and why?",
+  "You receive a CBC showing platelets 30 ×10⁹/L but the patient has no bleeding – what laboratory artefact should you consider and how would you confirm?",
+  "A patient on antiretroviral therapy develops leukopenia – which drugs are most likely responsible and what alternative regimen would you suggest?",
+  "During a blood bank shortage, you must decide which patients receive packed RBCs – list the clinical criteria that prioritize transfusion."
+ ],
+ "related": [
+  "Malaria and hematology",
+  "Sickle cell disease",
+  "HIV‑related cytopenias",
+  "Nutritional anemia",
+  "Acute leukemia",
+  "Dengue hemorrhagic fever",
+  "Sepsis and blood counts",
+  "Platelet disorders"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-17",
+ "reviewed": false
+}

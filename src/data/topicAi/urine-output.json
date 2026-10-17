@@ -1,0 +1,157 @@
+{
+ "medical": true,
+ "title": "Urine Output Assessment",
+ "subject": "Medicine",
+ "summary": "Urine output reflects kidney perfusion and function. In low‑resource settings clinicians must integrate bedside fluid balance, simple tests and common tropical diseases to diagnose and manage oliguria or polyuria.",
+ "aka": [
+  "urine output monitoring"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Urine output is the volume of urine excreted per hour. Oliguria is <0.5 ml/kg/hour for ≥6 hours; anuria is <0.1 ml/kg/hour. Polyuria is >3 ml/kg/hour. Diagnosis relies on accurate measurement (catheter or timed collection) and correlation with fluid balance.",
+   "b": [
+    "Measure weight of collection bag or use calibrated container.",
+    "Record input and output every shift.",
+    "Consider baseline creatinine if available."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "KDIGO stages acute kidney injury (AKI) by urine output: Stage 1 <0.5 ml/kg/h for 6–12 h, Stage 2 <0.5 ml/kg/h for ≥12 h, Stage 3 <0.3 ml/kg/h for ≥24 h or anuria ≥12 h.",
+   "b": [
+    "Stage 1: early warning, reversible if cause corrected.",
+    "Stage 2: moderate injury, risk of electrolyte derangement.",
+    "Stage 3: severe injury, consider renal replacement if refractory."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Think in three categories: pre‑renal (hypovolaemia, sepsis, heart failure), intrinsic renal (acute tubular necrosis, malaria‑related hemolysis, HIV‑associated nephropathy, schistosomiasis), post‑renal (obstruction, prostatic hypertrophy). In East Africa, malaria, severe bacterial sepsis, and dehydration from diarrhoea are common pre‑renal triggers.",
+   "b": [
+    "Pre‑renal: volume loss, hypotension, low cardiac output.",
+    "Intrinsic: infection‑related ATN, sickle‑cell vaso‑occlusion, drug nephrotoxicity.",
+    "Post‑renal: obstructive stones, uterine compression in late pregnancy."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may report decreased voiding, dark concentrated urine, or anuria. Look for signs of hypoperfusion (cold extremities, delayed capillary refill), edema, hypertension, or pulmonary crackles depending on the underlying cause.",
+   "b": [
+    "Oliguria with dry mucous membranes → volume depletion.",
+    "Oliguria with peripheral edema → heart failure or nephrotic syndrome.",
+    "Anuria with suprapubic fullness → obstruction."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings prioritize bedside tools and basic labs; use clinical reasoning when advanced tests are unavailable.",
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Is kidney function falling? A rise ≥26.5 µmol/L (0.3 mg/dL) in 48 h confirms AKI."
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Detects protein, blood, glucose, leukocytes; casts suggest intrinsic disease."
+    },
+    {
+     "a": "Point‑of‑care ultrasound",
+     "b": "Assesses bladder volume (obstruction) and renal size; if unavailable, rely on bladder palpation."
+    },
+    {
+     "a": "Full blood count & malaria rapid test",
+     "b": "Identify sepsis or malaria as pre‑renal causes; treat promptly."
+    },
+    {
+     "a": "Serum electrolytes (K+, Na+, HCO3‑)",
+     "b": "Guide fluid and drug therapy; hyperkalaemia signals severe AKI."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncorrected oliguria can rapidly progress to severe AKI, hyperkalaemia, metabolic acidosis, and volume overload with pulmonary oedema.",
+   "b": [
+    "Persistent anuria >12 h.",
+    "Rising creatinine with hyperkalaemia >5.5 mmol/L.",
+    "New onset pulmonary crackles or severe hypertension."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "First treat the underlying cause, then optimise perfusion and monitor output. Avoid nephrotoxic drugs and correct electrolyte disturbances.",
+   "b": [
+    "Pre‑renal: cautious isotonic fluid bolus (e.g., Ringer's lactate 20 ml/kg) if no pulmonary oedema.",
+    "Intrinsic: treat malaria, sepsis, or HIV‑related nephropathy; stop offending drugs.",
+    "Post‑renal: catheterise bladder or relieve obstruction surgically."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑measure urine output every hour for the first 24 h, then every shift. Educate patients on adequate hydration, malaria prophylaxis, and avoiding NSAIDs.",
+   "b": [
+    "Document daily fluid balance.",
+    "Repeat creatinine after 48 h to assess trend.",
+    "Vaccinate against hepatitis B and provide antiretroviral adherence support."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Low urine output is not always AKI; differentiate from chronic kidney disease (stable low output, long‑standing hypertension) and from diuretic‑induced polyuria.",
+   "b": [
+    "CKD: gradual decline, often with small kidneys on exam.",
+    "Diuretic excess: high output with normal electrolytes."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Serum creatinine may be normal in early AKI if muscle mass is low; urine dipstick can be falsely negative for blood after high‑dose vitamin C.",
+   "b": [
+    "Rely on trends, not single values.",
+    "Correlate clinical picture with labs."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Anuria >12 h",
+  "Rapid rise in creatinine with hyperkalaemia",
+  "Pulmonary oedema or severe hypertension"
+ ],
+ "faq": [
+  {
+   "q": "Why is urine output a better early marker than creatinine?",
+   "a": "Output falls before GFR drops enough to raise serum creatinine, especially in low‑muscle‑mass patients."
+  },
+  {
+   "q": "Can malaria cause intrinsic AKI?",
+   "a": "Yes; severe falciparum malaria can cause hemolysis and acute tubular necrosis."
+  },
+  {
+   "q": "What if I cannot measure urine volume accurately?",
+   "a": "Estimate by counting voids and using bedside bladder palpation; document fluid balance and watch for clinical signs."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman with HIV presents with leg swelling and oliguria – what is your immediate management and why? — Assess volume status, give a cautious fluid bolus if hypovolaemic, stop nephrotoxic drugs, order malaria test and creatinine; treat underlying infection.",
+  "How does KDIGO stage AKI based on urine output, and what does each stage imply for monitoring? — Stage 1 <0.5 ml/kg/h 6–12 h (hourly monitoring), Stage 2 <0.5 ml/kg/h ≥12 h (consider electrolytes), Stage 3 <0.3 ml/kg/h ≥24 h or anuria ≥12 h (prepare for dialysis).",
+  "A patient on high‑dose ibuprofen develops oliguria – which drug class should be avoided and what alternative analgesic is safer? — Avoid NSAIDs; use acetaminophen (paracetamol) if liver function permits.",
+  "You suspect post‑renal obstruction but ultrasound is unavailable – how do you confirm and relieve the obstruction at the bedside? — Perform bladder scan with a portable device or palpate a full bladder; insert a Foley catheter to drain urine.",
+  "Why might serum creatinine be normal in early AKI in a malnourished patient, and how would you still detect kidney injury? — Low muscle mass reduces creatinine generation; rely on urine output trends and urine dipstick for casts.",
+  "In a malaria‑endemic area, a child presents with fever, dehydration and oliguria – what investigations are essential and what treatment steps follow? — Perform malaria rapid test, measure creatinine, check electrolytes; give IV artesunate, cautious fluid resuscitation, monitor output hourly.",
+  "What are the red‑flag electrolyte abnormalities in oliguria and how should they be managed without dialysis? — Hyperkalaemia >5.5 mmol/L (give calcium gluconate, insulin‑glucose, potassium binders) and metabolic acidosis (IV bicarbonate if pH <7.2).",
+  "How does you differentiate pre‑renal from intrinsic AKI using bedside findings? — Pre‑renal: dry mucosa, low CVP, rapid response to fluids; Intrinsic: muddy brown casts, persistent oliguria despite fluids, associated infection or toxin exposure."
+ ],
+ "related": [
+  "Acute Kidney Injury",
+  "Fluid Balance",
+  "Malaria and Renal Complications",
+  "Sepsis Management",
+  "Electrolyte Disorders",
+  "Nephrotoxic Drugs"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-17",
+ "reviewed": false
+}

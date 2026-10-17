@@ -127,5 +127,445 @@
  "kind": "disease",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic examination to identify hypertension, its causes and complications, while recognising red‑flags and confounders.",
+    "b": [
+     "History: age, sex, family history, weight, diet, alcohol, smoking, drug use, pregnancy, diabetes, renal disease, headaches, visual changes, chest pain, palpitations, syncope, oedema, urinary symptoms",
+     "Ask about medication adherence, side effects, and recent blood pressure readings",
+     "Examination: vital signs (BP in both arms, heart rate, respiratory rate, temperature), BMI, waist circumference",
+     "Inspect for stigmata of secondary causes: facial plethora, acne, hirsutism, striae, clubbing, cyanosis",
+     "Inspect for signs of end‑organ damage: pallor, cyanosis, oedema, skin changes, nail changes",
+     "Assess for orthostatic hypotension: measure BP supine and standing",
+     "Cardiovascular: inspect jugular venous pressure, auscultate heart sounds (murmurs, gallops), palpate carotid pulses, check for carotid bruit",
+     "Pulmonary: inspect chest shape, auscultate for crackles or wheeze",
+     "Abdominal: inspect for distension, palpate for organomegaly, perform shifting dullness and fluid thrill for ascites",
+     "Neurological: assess cranial nerves, motor strength, reflexes, gait, fundoscopy for hypertensive retinopathy",
+     "Ophthalmic: look for papilledema, arteriolar narrowing, flame haemorrhages",
+     "Bedside tests: 12‑lead ECG for LVH, arrhythmia; point‑of‑care urine dipstick for proteinuria; bedside ultrasound for cardiac function if available"
+    ],
+    "t": [
+     {
+      "a": "Orthostatic BP",
+      "b": "Detects autonomic dysfunction; a drop >20/10 mmHg indicates orthostatic hypotension"
+     },
+     {
+      "a": "12‑lead ECG",
+      "b": "Identifies LVH (Sokolow‑Lyon ≥35 mm), arrhythmias, ischemia"
+     },
+     {
+      "a": "Urine dipstick",
+      "b": "Proteinuria >1+ suggests renal involvement"
+     },
+     {
+      "a": "Bedside ultrasound",
+      "b": "Assesses ejection fraction, wall motion, pericardial effusion"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "When a test is unavailable, rely on clinical assessment, repeat office BP, and use point‑of‑care devices. For secondary hypertension, consider a basic metabolic panel, fasting glucose, and thyroid function tests.",
+    "b": [
+     "Blood pressure measurement: confirm with 24‑hour ambulatory or home monitoring; ≥140/90 mmHg defines hypertension"
+    ],
+    "t": [
+     {
+      "a": "Office BP",
+      "b": "Single reading ≥140/90 mmHg; repeat readings needed"
+     },
+     {
+      "a": "24‑hour ambulatory BP",
+      "b": "Average daytime ≥135/85 mmHg or nighttime ≥120/70 mmHg confirms diagnosis"
+     },
+     {
+      "a": "Office BP with masked hypertension",
+      "b": "Elevated office BP but normal ambulatory BP indicates white coat effect"
+     },
+     {
+      "a": "Serum creatinine and eGFR",
+      "b": "eGFR <60 ml/min/1.73 m² indicates CKD; monitor for progression"
+     },
+     {
+      "a": "Serum electrolytes",
+      "b": "Hyponatraemia or hyperkalaemia may suggest renal tubular dysfunction or ACEi/ARB use"
+     },
+     {
+      "a": "Lipid profile",
+      "b": "Total cholesterol >5.2 mmol/L or LDL >3.4 mmol/L warrants statin therapy"
+     },
+     {
+      "a": "HbA1c",
+      "b": "≥48 mmol/mol indicates diabetes; screen all hypertensives"
+     },
+     {
+      "a": "ECG",
+      "b": "LVH criteria (Sokolow‑Lyon ≥35 mm), atrial fibrillation, ischemic changes"
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Detect cardiomegaly, pulmonary oedema, aortic dilatation"
+     },
+     {
+      "a": "Carotid Doppler",
+      "b": "≥50% stenosis warrants referral for endarterectomy"
+     },
+     {
+      "a": "Renal ultrasound",
+      "b": "Detect renal artery stenosis, cysts, or obstruction"
+     },
+     {
+      "a": "Echocardiography",
+      "b": "Assess LV mass, ejection fraction, valvular disease; LVH >115 g/m² in men or >95 g/m² in women is abnormal"
+     },
+     {
+      "a": "Fundoscopy",
+      "b": "Grade hypertensive retinopathy (Keith‑Wagener) to predict target organ damage"
+     },
+     {
+      "a": "CRP/ESR",
+      "b": "Rule out secondary causes such as systemic vasculitis"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Severity of target organ damage is graded by LV mass index, eGFR, albuminuria, retinopathy grade, and presence of cerebrovascular events.",
+    "b": [
+     "Stage 1: 140–159/90–99 mmHg; Stage 2: ≥160/≥100 mmHg; Stage 3: ≥180/≥110 mmHg"
+    ],
+    "t": [
+     {
+      "a": "ACC/AHA 2017 criteria",
+      "b": "Defines hypertension as ≥130/80 mmHg; stage 1 130–139/80–89, stage 2 ≥140/≥90"
+     },
+     {
+      "a": "JNC 8 criteria",
+      "b": "Defines hypertension as ≥140/90 mmHg; stage 1 140–159/90–99, stage 2 ≥160/≥100"
+     },
+     {
+      "a": "KDIGO CKD guidelines",
+      "b": "Hypertension in CKD: target <130/80 mmHg"
+     },
+     {
+      "a": "Hypertensive urgency vs emergency",
+      "b": "Urgency: severe BP >180/110 mmHg without acute organ damage; emergency: same BP with acute organ damage"
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Differentiate hypertension from conditions that mimic its presentation or cause secondary hypertension.",
+    "b": [
+     "White coat hypertension: normal ambulatory BP; treat only if target organ damage present"
+    ],
+    "t": [
+     {
+      "a": "Pheochromocytoma",
+      "b": "Paroxysmal headaches, sweating, tachycardia; confirm with plasma free metanephrines"
+     },
+     {
+      "a": "Renal artery stenosis",
+      "b": "Unilateral flank pain, refractory hypertension; confirm with duplex US or CT angiography"
+     },
+     {
+      "a": "Cushing syndrome",
+      "b": "Central obesity, purple striae, hypertension; confirm with dexamethasone suppression test"
+     },
+     {
+      "a": "Primary aldosteronism",
+      "b": "Hypertension with hypokalaemia; confirm with aldosterone‑renin ratio"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder for treating hypertension, from first‑line lifestyle measures to escalation and referral.",
+    "b": [
+     "1. Confirm diagnosis with repeat office readings or ambulatory monitoring.",
+     "2. Initiate lifestyle modification: salt <5g/day, weight loss, exercise, alcohol moderation, smoking cessation.",
+     "3. Start first‑line pharmacotherapy: ACE inhibitor or ARB, or thiazide‑like diuretic, or calcium‑channel blocker, depending on comorbidity.",
+     "4. Monitor BP, renal function, electrolytes, and adherence weekly to 4 weeks, then every 3 months.",
+     "5. If target not reached, add a second agent from a different class; consider diuretic if volume overload.",
+     "6. Escalate to specialist referral if resistant (>3 drugs), secondary cause suspected, or organ damage evident."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, interactions and management actions for common antihypertensives.",
+    "b": [
+     "ACE inhibitors: cough, hyperkalaemia, angioedema – discontinue if severe.",
+     "ARBs: hyperkalaemia, renal dysfunction – monitor serum potassium and creatinine.",
+     "Thiazide diuretics: hyponatraemia, hypokalaemia, gout – correct electrolytes, advise low‑purine diet.",
+     "Calcium‑channel blockers: peripheral oedema, constipation, flushing – dose adjustment, add diuretic if oedema.",
+     "Beta‑blockers: bradycardia, fatigue, bronchospasm – avoid in asthma, monitor pulse.",
+     "Alpha‑blockers: postural hypotension, reflex tachycardia – advise slow position changes."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalat",
+    "p": "When to recognise organ damage or emergencies and the immediate actions required.",
+    "b": [
+     "Hypertensive emergency: SBP >180 or DBP >120 with acute organ injury – urgent IV therapy, ICU transfer.",
+     "Hypertensive urgency: severe BP >180/120 without organ damage – outpatient IV or oral therapy, close follow‑up.",
+     "Left ventricular hypertrophy: ECG changes, echo – add ACE/ARB for regression.",
+     "Renal impairment: rising creatinine or proteinuria – adjust drugs, consider nephrology.",
+     "Stroke: sudden focal deficit – CT scan, thrombolysis if eligible, BP control to 140/90.",
+     "Aortic dissection: sudden tearing pain, widened mediastinum – emergent surgical consult."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions that alter presentation, investigations or treatment of hypertension.",
+    "b": [
+     "HIV: protease inhibitors raise BP; monitor renal function; avoid nephrotoxic drugs.",
+     "TB: rifampicin induces CYP3A4, reducing ACE/ARB levels – consider higher dose or alternative.",
+     "Malnutrition: low sodium intake may mask hypertension; assess serum albumin.",
+     "Pregnancy: ACE/ARB contraindicated; use labetalol or nifedipine; monitor fetal growth.",
+     "Diabetes: ACE/ARB preferred for renal protection; avoid sulfonylureas with beta‑blockers.",
+     "Herbal remedies: kava, licorice can raise BP – inquire about use.",
+     "Alcohol: chronic use causes volume expansion – advise abstinence; monitor liver function.",
+     "Kidney failure: avoid ACE/ARB if creatinine >3 mg/dL; use diuretics and avoid NSAIDs.",
+     "Liver failure: avoid ACE/ARB; use diuretics with caution; monitor potassium.",
+     "Elderly: orthostatic BP drop common – assess postural BP; adjust dosing."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored management for children, pregnancy, elderly, HIV patients and low‑resource settings.",
+    "b": [
+     "Children: start with low‑dose ACE/ARB or thiazide; monitor growth and renal function.",
+     "Pregnancy: first‑line labetalol, nifedipine, or hydralazine; avoid ACE/ARB; monitor fetal growth.",
+     "Elderly: prefer thiazide or calcium‑channel blocker; watch for orthostatic hypotension and dehydration.",
+     "HIV patients: avoid drug interactions with antiretrovirals; monitor renal function; consider ACE/ARB for nephroprotection.",
+     "Low‑resource settings: use affordable thiazide or ACE/ARB; rely on home BP monitoring; prioritize lifestyle changes; use community health workers for follow‑up."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "BP ≥140/90 mmHg defines hypertension; ≥130/80 mmHg for diabetes or CKD",
+   "Stage 1: 140‑159/90‑99 mmHg; Stage 2: ≥160/100 mmHg",
+   "Target BP <130/80 mmHg in most patients; <140/90 mmHg in elderly >80 yr",
+   "ACE‑I/ARB, thiazide‑type diuretic, calcium‑channel blocker are first‑line agents",
+   "Low‑dose thiazide (chlorthalidone or indapamide) preferred for volume‑dependent hypertension",
+   "White‑coat hypertension prevalence ≈15 %; confirm with ambulatory BP monitoring",
+   "Renal artery stenosis suspicion: resistant hypertension, abrupt ACE‑I rise in creatinine, abdominal bruit",
+   "Pregnancy: labetalol, methyldopa, nifedipine; ACE‑I/ARB strictly contraindicated",
+   "Target‑organ damage assessment: ECG for LVH, urine albumin‑creatinine ratio, fundus exam, eGFR",
+   "Hypertensive emergency: BP >180/120 mmHg with acute organ injury; treat with IV nitroprusside, labetalol or nicardipine"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define hypertension and give the current blood pressure thresholds for diagnosis and staging.",
+    "a": "Hypertension is persistently elevated arterial pressure; diagnosis ≥140/90 mmHg. Stage 1 140‑159/90‑99 mmHg, Stage 2 ≥160/100 mmHg.",
+    "hot": true
+   },
+   {
+    "q": "What bedside history questions are essential when evaluating a new hypertensive patient?",
+    "a": "Duration, symptoms, medication adherence, salt intake, alcohol, smoking, family history, pregnancy, comorbidities (diabetes, CKD, CVD).",
+    "hot": true
+   },
+   {
+    "q": "Describe the step‑by‑step physical examination for hypertension, including key signs and their interpretation.",
+    "a": "Measure BP in both arms, seated after 5 min rest; inspect for carotid bruits, abdominal bruit, peripheral pulses; auscultate heart for LVH S4; check for papilledema; note edema. Positive bruits suggest renovascular disease; S4 indicates LVH.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate white‑coat hypertension from true hypertension?",
+    "a": "Obtain repeated clinic readings and confirm with 24‑hour ambulatory BP monitoring; white‑coat shows normal out‑of‑clinic values.",
+    "hot": true
+   },
+   {
+    "q": "When is secondary hypertension most likely and which investigations should be ordered?",
+    "a": "Suspect if onset <30 yr, resistant to ≥3 drugs, abrupt onset, or associated with hypokalemia; order renal ultrasound, plasma renin/aldosterone, urinary catecholamines, thyroid function, sleep study."
+   },
+   {
+    "q": "Explain why ACE inhibitors are contraindicated in pregnancy and what alternatives are safe.",
+    "a": "ACE‑I/ARBs cause fetal renal dysplasia and skull ossification defects; safe alternatives are labetalol, methyldopa, or nifedipine."
+   },
+   {
+    "q": "What is the management of hypertensive emergency with acute pulmonary edema?",
+    "a": "Immediate IV nitroprusside or labetalol to lower MAP by ≤25 % in the first hour, plus oxygen, diuretics, and ICU monitoring."
+   },
+   {
+    "q": "Why should beta‑blockers not be first‑line in uncomplicated hypertension?",
+    "a": "They are less effective at preventing stroke and have no proven mortality benefit compared with thiazides, ACE‑I/ARBs, or CCBs."
+   },
+   {
+    "q": "How to distinguish hypertensive retinopathy grade III from grade IV?",
+    "a": "Grade III shows flame‑shaped hemorrhages and cotton‑wool spots; Grade IV adds papilledema."
+   },
+   {
+    "q": "A 17‑year‑old short girl with webbed neck, upper‑extremity hypertension, diminished lower pulses, rib notching – likely cardiovascular abnormality?",
+    "a": "Coarctation of the aorta.",
+    "past": true
+   },
+   {
+    "q": "If untreated hypertension persists, which cellular alteration is most likely in the heart?",
+    "a": "Concentric left‑ventricular hypertrophy due to pressure overload.",
+    "past": true
+   },
+   {
+    "q": "A 58‑year‑old man with postoperative DVT, subsequent MCA stroke, pulmonary hypertension, normal troponin – likely echo lesion?",
+    "a": "Patent foramen ovale with right‑to‑left shunt (paradoxical embolus).",
+    "past": true
+   },
+   {
+    "q": "Which statement about portal hypertension is incorrect?",
+    "a": "Portal hypertension always presents with ascites early – this is false; ascites appears later.",
+    "past": true
+   },
+   {
+    "q": "In pulmonary hypertension, plexiform lesions are characteristic of which type?",
+    "a": "Idiopathic (primary) pulmonary arterial hypertension.",
+    "past": true
+   },
+   {
+    "q": "BMPR‑2 mutation in primary pulmonary hypertension leads to what pathophysiological change?",
+    "a": "Excessive proliferation of pulmonary arterial smooth‑muscle cells causing vascular remodeling.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old man with diabetes presents with BP 148/92 mmHg. Which is the most appropriate initial drug?",
+    "o": [
+     "Amlodipine",
+     "Hydrochlorothiazide",
+     "Lisinopril",
+     "Metoprolol"
+    ],
+    "a": 2,
+    "e": "ACE‑I (lisinopril) provides renal protection in diabetes and is first‑line."
+   },
+   {
+    "q": "Which of the following is NOT a typical feature of secondary hypertension?",
+    "o": [
+     "Onset before age 30",
+     "Resistant to three drugs",
+     "Marked hypokalemia",
+     "Uniform response to lifestyle change"
+    ],
+    "a": 3,
+    "e": "Lifestyle changes affect primary hypertension; secondary forms often persist despite them."
+   },
+   {
+    "q": "A patient on ACE‑I becomes pregnant. What is the next step?",
+    "o": [
+     "Continue ACE‑I, monitor fetus",
+     "Switch to labetalol",
+     "Add spironolactone",
+     "Switch to thiazide diuretic"
+    ],
+    "a": 1,
+    "e": "ACE‑I are contraindicated; labetalol is safe in pregnancy."
+   },
+   {
+    "q": "Which investigation is most useful to confirm renovascular hypertension?",
+    "o": [
+     "Renal ultrasound",
+     "CT angiography of renal arteries",
+     "Serum aldosterone",
+     "24‑hour urine catecholamines"
+    ],
+    "a": 1,
+    "e": "CT angiography provides detailed arterial anatomy for renal artery stenosis."
+   },
+   {
+    "q": "In a hypertensive emergency with encephalopathy, the preferred IV agent is:",
+    "o": [
+     "Sodium nitroprusside",
+     "Oral nifedipine",
+     "IV labetalol",
+     "IV hydralazine"
+    ],
+    "a": 2,
+    "e": "IV labetalol reduces BP quickly and also lowers heart rate, suitable for encephalopathy."
+   },
+   {
+    "q": "Which sign on fundoscopic exam indicates malignant hypertension?",
+    "o": [
+     "Arteriolar narrowing",
+     "Cotton‑wool spots",
+     "Flame‑shaped hemorrhages",
+     "Papilledema"
+    ],
+    "a": 3,
+    "e": "Papilledema is a hallmark of malignant hypertension."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 48‑year‑old male farmer presents with headache, dizziness, and BP 165/105 mmHg. No past history. Physical exam shows a harsh systolic murmur radiating to the carotids and an S4 gallop. Urine dipstick shows 1+ protein. ECG shows LVH.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Essential hypertension with target‑organ involvement (LVH, proteinuria)."
+     },
+     {
+      "q": "What immediate investigations should be ordered?",
+      "a": "Baseline labs (CBC, electrolytes, renal function, fasting glucose, lipid profile), urine albumin‑creatinine ratio, ECG, echocardiogram, fundoscopic exam."
+     },
+     {
+      "q": "Outline the first‑line pharmacologic regimen for this patient.",
+      "a": "Start a thiazide‑type diuretic (chlorthalidone) plus either an ACE‑I/ARB or a calcium‑channel blocker; choose based on comorbidities and availability."
+     }
+    ]
+   },
+   {
+    "v": "A 30‑year‑old pregnant woman at 20 weeks gestation presents with BP 158/100 mmHg, no proteinuria. She is otherwise well.",
+    "qs": [
+     {
+      "q": "How should her hypertension be classified?",
+      "a": "Chronic hypertension in pregnancy (pre‑existing or before 20 weeks)."
+     },
+     {
+      "q": "What antihypertensive agents are safe in pregnancy?",
+      "a": "Labetalol, methyldopa, or nifedipine; avoid ACE‑I/ARBs."
+     },
+     {
+      "q": "What monitoring is required for mother and fetus?",
+      "a": "Frequent BP checks, urine protein surveillance, fetal growth ultrasounds, and assessment for pre‑eclampsia signs."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Prescribing ACE‑I/ARBs in pregnancy without recognizing contraindication",
+   "Assuming all hypertensive patients need three drugs from the start",
+   "Confusing white‑coat hypertension with true hypertension and overtreating",
+   "Using beta‑blockers as first‑line in uncomplicated hypertension",
+   "Neglecting to assess for secondary causes in young or resistant patients",
+   "Failing to measure BP in both arms and missing a significant inter‑arm difference"
+  ],
+  "exam": [
+   "Define hypertension and give the current blood pressure thresholds for diagnosis and staging. — Hypertension is persistently elevated arterial pressure; diagnosis ≥140/90 mmHg. Stage 1 140‑159/90‑99 mmHg, Stage 2 ≥160/100 mmHg.",
+   "What bedside history questions are essential when evaluating a new hypertensive patient? — Duration, symptoms, medication adherence, salt intake, alcohol, smoking, family history, pregnancy, comorbidities (diabetes, CKD, CVD).",
+   "Describe the step‑by‑step physical examination for hypertension, including key signs and their interpretation. — Measure BP in both arms, seated after 5 min rest; inspect for carotid bruits, abdominal bruit, peripheral pulses; auscultate heart for LVH S4; check for papilledema; note edema. Positive bruits suggest renovascular disease; S4 indicates LVH.",
+   "How do you differentiate white‑coat hypertension from true hypertension? — Obtain repeated clinic readings and confirm with 24‑hour ambulatory BP monitoring; white‑coat shows normal out‑of‑clinic values.",
+   "When is secondary hypertension most likely and which investigations should be ordered? — Suspect if onset <30 yr, resistant to ≥3 drugs, abrupt onset, or associated with hypokalemia; order renal ultrasound, plasma renin/aldosterone, urinary catecholamines, thyroid function, sleep study.",
+   "Explain why ACE inhibitors are contraindicated in pregnancy and what alternatives are safe. — ACE‑I/ARBs cause fetal renal dysplasia and skull ossification defects; safe alternatives are labetalol, methyldopa, or nifedipine.",
+   "What is the management of hypertensive emergency with acute pulmonary edema? — Immediate IV nitroprusside or labetalol to lower MAP by ≤25 % in the first hour, plus oxygen, diuretics, and ICU monitoring.",
+   "Why should beta‑blockers not be first‑line in uncomplicated hypertension? — They are less effective at preventing stroke and have no proven mortality benefit compared with thiazides, ACE‑I/ARBs, or CCBs.",
+   "How to distinguish hypertensive retinopathy grade III from grade IV? — Grade III shows flame‑shaped hemorrhages and cotton‑wool spots; Grade IV adds papilledema.",
+   "A 17‑year‑old short girl with webbed neck, upper‑extremity hypertension, diminished lower pulses, rib notching – likely cardiovascular abnormality? — Coarctation of the aorta.",
+   "If untreated hypertension persists, which cellular alteration is most likely in the heart? — Concentric left‑ventricular hypertrophy due to pressure overload.",
+   "A 58‑year‑old man with postoperative DVT, subsequent MCA stroke, pulmonary hypertension, normal troponin – likely echo lesion? — Patent foramen ovale with right‑to‑left shunt (paradoxical embolus).",
+   "Which statement about portal hypertension is incorrect? — Portal hypertension always presents with ascites early – this is false; ascites appears later.",
+   "In pulmonary hypertension, plexiform lesions are characteristic of which type? — Idiopathic (primary) pulmonary arterial hypertension."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-17",
+  "checked": "2026-10-17",
+  "trimmed": 3
+ }
 }

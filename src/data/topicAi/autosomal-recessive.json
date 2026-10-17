@@ -1,0 +1,210 @@
+{
+ "medical": true,
+ "title": "Autosomal Recessive Disorders in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "Autosomal recessive (AR) inheritance means both alleles must be mutated for disease. In low‑resource settings, consanguinity, endemic infections and limited testing shape diagnosis and management.",
+ "aka": [
+  "Recessive",
+  "Homozygous"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "AR disorders arise when a child inherits two pathogenic variants. Diagnosis relies on clinical suspicion, family history, and confirmatory tests such as genetic panels or biochemical assays.",
+   "b": [
+    "Consanguinity increases risk",
+    "Sibling or parental disease history"
+   ],
+   "t": [
+    {
+     "a": "Targeted gene panel",
+     "b": "Identifies pathogenic variants; positive result confirms AR inheritance"
+    },
+    {
+     "a": "Metabolic screen (e.g., tandem mass spectrometry)",
+     "b": "Detects abnormal metabolites; a pattern suggests a specific AR metabolic disease"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by organ involvement and functional impact. For many metabolic disorders, the Wilson‑Bennett or MIM criteria are used; for haemoglobinopathies, the WHO severity scale applies.",
+   "b": [
+    "Mild: asymptomatic or single organ involvement",
+    "Moderate: progressive organ dysfunction",
+    "Severe: multisystem failure or early death"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the top AR causes are sickle cell disease, β‑thalassemia, cystic fibrosis, congenital adrenal hyperplasia, and lysosomal storage disorders. Infections such as malaria can unmask or worsen these conditions.",
+   "b": [
+    "Sickle cell disease (HBB mutations)",
+    "β‑thalassemia (HBB promoter mutations)",
+    "Cystic fibrosis (CFTR mutations)",
+    "Congenital adrenal hyperplasia (CYP21A2)",
+    "Gaucher disease (GBA)"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin electrophoresis",
+     "b": "Detects abnormal hemoglobin variants; confirms sickle cell or thalassemia"
+    },
+    {
+     "a": "17‑α‑hydroxyprogesterone",
+     "b": "Elevated in congenital adrenal hyperplasia; indicates enzyme deficiency"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with organ system. Common clues include failure to thrive, recurrent infections, jaundice, bone pain, and easy bruising. A detailed history of consanguinity and family disease is essential.",
+   "b": [
+    "Failure to thrive and growth retardation",
+    "Recurrent chest or ear infections",
+    "Jaundice or hepatosplenomegaly",
+    "Bone pain or fractures"
+   ],
+   "t": [
+    {
+     "a": "Physical exam for splenomegaly",
+     "b": "Palpable spleen >2 cm below costal margin suggests hemolytic anemia or storage disease"
+    },
+    {
+     "a": "Skin examination for hyperpigmentation",
+     "b": "May indicate chronic hemolysis or iron overload"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Start with basic labs; use point‑of‑care tests where possible. When advanced tests are unavailable, clinical criteria guide management.",
+   "b": [
+    "CBC with smear",
+    "Reticulocyte count",
+    "Liver function tests",
+    "Serum ferritin"
+   ],
+   "t": [
+    {
+     "a": "CBC with smear",
+     "b": "Differentiates microcytic anemia (thalassemia) from normocytic (sickle cell) and identifies target cells"
+    },
+    {
+     "a": "Serum ferritin",
+     "b": "Elevated in iron overload; supports diagnosis of haemochromatosis or transfusion‑related iron overload"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent signs include severe anemia, hypoxia, acute chest syndrome, or liver failure. Complications such as stroke, organ failure, or infections can be fatal if untreated.",
+   "b": [
+    "Severe pallor and tachycardia",
+    "Respiratory distress",
+    "Acute abdominal pain with vomiting"
+   ],
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "Low SpO2 (<90%) indicates hypoxia; urgent intervention needed"
+    },
+    {
+     "a": "Liver ultrasound",
+     "b": "Detects hepatomegaly or cirrhosis; guides management of storage diseases"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying defect, provide supportive care, and monitor for complications. Drug choice balances efficacy, availability, and safety in low‑resource settings.",
+   "b": [
+    "Hydroxyurea for sickle cell to reduce crises",
+    "Glucocorticoids for adrenal insufficiency",
+    "Enzyme replacement for lysosomal storage when available"
+   ],
+   "t": [
+    {
+     "a": "Hydroxyurea",
+     "b": "Increases fetal hemoglobin; reduces vaso‑occlusive episodes"
+    },
+    {
+     "a": "Hydrocortisone",
+     "b": "Treats adrenal crisis; replaces deficient cortisol"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of organ function, vaccination, and genetic counselling are key. Prevention focuses on reducing consanguinity and early newborn screening.",
+   "b": [
+    "Annual CBC and liver function",
+    "Vaccination against pneumococcus and meningococcus",
+    "Prenatal genetic counselling"
+   ],
+   "t": [
+    {
+     "a": "Newborn screening for sickle cell",
+     "b": "Early detection allows prophylaxis with penicillin and vaccination"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Many AR disorders mimic common infections or nutritional deficiencies. Distinguish by specific laboratory patterns and family history.",
+   "b": [
+    "Iron deficiency anemia vs. thalassemia",
+    "Cystic fibrosis vs. pneumonia",
+    "Hemolytic anemia vs. malaria"
+   ],
+   "t": [
+    {
+     "a": "Peripheral smear",
+     "b": "Target cells suggest thalassemia; schistocytes suggest hemolysis"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low‑resource labs may give false negatives; for example, ferritin can be normal in early iron overload. Clinical context is essential.",
+   "b": [
+    "Serum ferritin may be normal early in haemochromatosis",
+    "Hemoglobin electrophoresis may miss rare variants"
+   ],
+   "t": [
+    {
+     "a": "Repeat testing",
+     "b": "If clinical suspicion remains high, repeat the test or use a different method"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe anemia with tachycardia",
+  "Respiratory distress",
+  "Acute abdominal pain",
+  "Unexplained jaundice"
+ ],
+ "faq": [
+  {
+   "q": "How do I differentiate sickle cell from malaria in a febrile child?",
+   "a": "Look for sickle cells on smear, persistent anemia, and a history of vaso‑occlusive crises; malaria shows parasites and may have splenomegaly but not sickle cells."
+  },
+  {
+   "q": "What is the first step if a child has suspected cystic fibrosis but no sweat chloride machine?",
+   "a": "Use clinical criteria: recurrent pneumonia, failure to thrive, and a positive newborn screen if available; refer for genetic testing if possible."
+  },
+  {
+   "q": "Why is hydroxyurea preferred over transfusion in sickle cell?",
+   "a": "It reduces crises, is cheaper, and avoids iron overload and alloimmunisation; transfusion is reserved for acute severe cases."
+  }
+ ],
+ "exam": [
+  "A 6‑month‑old boy from a consanguineous family presents with failure to thrive and pallor. What is the most likely diagnosis and first test? — Sickle cell disease; hemoglobin electrophoresis. A child with recurrent chest infections and nasal polyps is found to have a positive sweat chloride test. What is the next step? — Confirm CFTR mutation; start pancreatic enzyme replacement. A 10‑year‑old girl with easy bruising and splenomegaly has normal ferritin. What should you suspe"
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-17",
+ "reviewed": false
+}
