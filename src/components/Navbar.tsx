@@ -203,10 +203,10 @@ export default function Navbar() {
   return (
     <>
       <nav className={`sticky top-0 z-40 border-b border-border bg-[hsl(174,62%,22%)] text-white transition-[transform,opacity] duration-300 ease-out will-change-transform ${hidden ? "-translate-y-full opacity-0 pointer-events-none" : "translate-y-0 opacity-100 pointer-events-auto"}`}>
-        <div className="mx-auto flex max-w-[1680px] items-center justify-between gap-3 px-4 py-2 sm:px-6">
-          <Link to="/" className="flex shrink-0 items-center gap-2 text-lg font-bold text-white">
-            <img src="/brand/mark-dark.png" alt="" width="40" height="40" className="h-10 w-auto object-contain" decoding="async" />
-            <span className="brand-word text-xl leading-none">Ompath<span className="text-[#5eead4]">Study</span></span>
+        <div className="mx-auto flex w-full max-w-[1680px] min-w-0 items-center justify-between gap-2 px-3 py-2 sm:gap-3 sm:px-6">
+          <Link to="/" className="flex min-w-0 shrink items-center gap-1.5 text-lg font-bold text-white sm:shrink-0 sm:gap-2">
+            <img src="/brand/mark-dark.png" alt="" width="40" height="40" className="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10" decoding="async" />
+            <span className="brand-word truncate text-lg leading-none sm:text-xl">Ompath<span className="text-[#5eead4]">Study</span></span>
           </Link>
 
           <div className="hidden min-w-0 items-center gap-1 lg:flex">
@@ -233,13 +233,13 @@ export default function Navbar() {
             <ThemeToggle />
           </div>
 
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex shrink-0 items-center gap-1 lg:hidden sm:gap-2">
             <HeaderSearch variant="desktop" />
             <NotificationsBell />
             <ThemeToggle />
             <Sheet open={sidebarOpen} onOpenChange={setSidebarOpen}>
               <SheetTrigger asChild>
-                <button className="p-1 text-white" aria-label="Open menu">
+                <button className="shrink-0 rounded-md p-1.5 text-white" aria-label="Open menu">
                   <Menu className="h-5 w-5" />
                 </button>
               </SheetTrigger>
