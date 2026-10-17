@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { getSetting } from "@/lib/store";
 import { useAuth } from "@/hooks/useAuth";
 
 export interface AccessPlan {
@@ -29,8 +28,8 @@ export const DEFAULT_PLANS: AccessPlan[] = [
 
 export const DEFAULT_SETTINGS: PaymentSettings = {
   price: 0,
-  revealPrice: 5,
-  freeRatio: 0.25,
+  revealPrice: 0,
+  freeRatio: 1,
   downloadEnabled: true,
   plans: DEFAULT_PLANS,
 };
@@ -57,33 +56,17 @@ async function accountFields(): Promise<{ email?: string; user_id?: string }> {
 }
 
 export async function loadPaymentSettings(force = false): Promise<PaymentSettings> {
-  if (!force && settingsCache && Date.now() - settingsCache.at < 5 * 60_000) return settingsCache.value;
-  try {
-    const [priceRaw, revealPriceRaw, ratioRaw, downloadRaw, plansRaw] = await Promise.all([
-      getSetting("access_price_kes"),
-      getSetting("reveal_price_kes"),
-      getSetting("paywall_free_ratio"),
-      getSetting("pdf_download_enabled"),
-      getSetting("access_plans"),
-    ]);
-    let plans = DEFAULT_PLANS;
-    try {
-      const parsed = JSON.parse(plansRaw || "[]");
-      if (Array.isArray(parsed) && parsed.length) plans = parsed as AccessPlan[];
-    } catch { /* keep defaults */ }
-    const ratio = Number(ratioRaw);
-    const value: PaymentSettings = {
-      price: priceRaw === "" ? 0 : Math.max(0, Number(priceRaw) || 0),
-      revealPrice: revealPriceRaw === "" ? 5 : Math.max(0, Number(revealPriceRaw) || 0),
-      freeRatio: Number.isFinite(ratio) && ratio > 0 && ratio < 1 ? ratio : 0.25,
-      downloadEnabled: (downloadRaw || "true") !== "false",
-      plans,
-    };
-    settingsCache = { at: Date.now(), value };
-    return value;
-  } catch {
-    return DEFAULT_SETTINGS;
-  }
+  // OmpathStudy is free for every learner. Do not let old database settings restore a paywall.
+  if (!force && settingsCache) return settingsCache.value;
+  const value: PaymentSettings = {
+    price: 0,
+    revealPrice: 0,
+    freeRatio: 1,
+    downloadEnabled: true,
+    plans: DEFAULT_PLANS.map((plan) => ({ ...plan, price: 0 })),
+  };
+  settingsCache = { at: Date.now(), value };
+  return value;
 }
 
 export interface AccessPass {
@@ -282,7 +265,7 @@ export function useAccess() {
     unlocked: isFree || hasPass || ownerAccess,
     /** Reveal is free only when admin sets Reveal price to 0; otherwise subscription required. */
     canReveal: revealIsFree || hasPass,
-    canDownload: ownerAccess || ((settings?.downloadEnabled ?? true) && !!pass?.allow_download),
+    canDownload: true,
     applyPass: (p: AccessPass) => setPass(p),
     signOutPass: () => { clearPass(); setPass(null); },
     refresh,

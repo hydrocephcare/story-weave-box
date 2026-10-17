@@ -1,5 +1,3 @@
-import { useEffect, useRef } from "react";
-
 /**
  * Tiny global bus for the subscription prompt. Any locked control (a Reveal
  * button, a download button) can ask for the modal without prop plumbing.
@@ -22,8 +20,8 @@ export function clearOverlays() {
   }
 }
 
-export function openSubscribePrompt(reason?: string) {
-  window.dispatchEvent(new CustomEvent(EVENT, { detail: { reason } }));
+export function openSubscribePrompt(_reason?: string) {
+  // Subscriptions are disabled; no learner should be interrupted by a paywall.
 }
 
 export function onSubscribePrompt(handler: (reason?: string) => void) {
@@ -40,36 +38,7 @@ function isSnoozed(): boolean {
   try { return Number(localStorage.getItem(SNOOZE_KEY) || 0) > Date.now(); } catch { return false; }
 }
 
-/**
- * Scroll-driven nudge: while a guest reads a paper with MCQs, open the
- * subscription prompt each time they pass another chunk of the page.
- * Capped, spaced out in time, and silenced after "maybe later".
- */
-export function useScrollSubscribePrompt(active: boolean, opts?: { every?: number; max?: number; gapMs?: number }) {
-  const step = opts?.every ?? 0.28;
-  const max = opts?.max ?? 3;
-  const gapMs = opts?.gapMs ?? 45_000;
-  const shown = useRef(0);
-  const lastAt = useRef(0);
-  const nextAt = useRef(step);
-
-  useEffect(() => {
-    if (!active) return;
-    lastAt.current = Date.now();
-    const onScroll = () => {
-      if (shown.current >= max || isSnoozed()) return;
-      const doc = document.documentElement;
-      const max_scroll = doc.scrollHeight - window.innerHeight;
-      if (max_scroll < 400) return;
-      const progress = window.scrollY / max_scroll;
-      if (progress < nextAt.current) return;
-      if (Date.now() - lastAt.current < gapMs) return;
-      shown.current += 1;
-      lastAt.current = Date.now();
-      nextAt.current = Math.min(0.95, progress + step);
-      openSubscribePrompt("Subscribe to reveal the verified answers on this paper.");
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [active, step, max, gapMs]);
+/** Kept as a no-op for older callers; subscription prompts are disabled. */
+export function useScrollSubscribePrompt(_active: boolean, _opts?: { every?: number; max?: number; gapMs?: number }) {
+  // Intentionally disabled: all OmpathStudy content and features are free.
 }

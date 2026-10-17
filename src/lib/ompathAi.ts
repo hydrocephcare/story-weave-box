@@ -300,7 +300,7 @@ export function extractiveAnswer(r: Retrieval): string {
 
 // ---------- daily allowance (the model costs money, so guests get a fair daily number of questions) ----------
 const USAGE_KEY = "ompath_ai_usage";
-export const FREE_DAILY_QUESTIONS = 8;
+export const FREE_DAILY_QUESTIONS = Number.MAX_SAFE_INTEGER;
 const today = () => new Date().toISOString().slice(0, 10);
 export function questionsUsedToday(): number {
   try { const v = JSON.parse(localStorage.getItem(USAGE_KEY) ?? "null"); return v?.day === today() ? Number(v.n) || 0 : 0; } catch { return 0; }
@@ -311,7 +311,7 @@ export function countQuestion() {
 
 // ---------- picture questions (images cost bandwidth, so free accounts get a daily number) ----------
 const PIC_KEY = "ompath_ai_pictures";
-export const FREE_DAILY_PICTURES = 15;
+export const FREE_DAILY_PICTURES = Number.MAX_SAFE_INTEGER;
 export function picturesUsedToday(): number {
   try { const v = JSON.parse(localStorage.getItem(PIC_KEY) ?? "null"); return v?.day === today() ? Number(v.n) || 0 : 0; } catch { return 0; }
 }
@@ -321,7 +321,7 @@ export function countPictures(n: number) {
 
 // ---------- free answers (the first batch of each subject is free every day) ----------
 const REVEAL_KEY = "ompath_ai_reveals";
-export const FREE_REVEALS_PER_SUBJECT = 5;
+export const FREE_REVEALS_PER_SUBJECT = Number.MAX_SAFE_INTEGER;
 type RevealLog = { day: string; ids: Record<string, string[]> };
 function readReveals(): RevealLog {
   try { const v = JSON.parse(localStorage.getItem(REVEAL_KEY) ?? "null") as RevealLog | null; if (v?.day === today() && v.ids) return v; } catch { /* none */ }

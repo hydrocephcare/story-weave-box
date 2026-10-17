@@ -1,5 +1,4 @@
-// Which features are free for everyone and which are for Pro (subscribers). The admin can flip any of them in Admin > Site manager > Features,
-// and it takes effect for every visitor at once. Each feature has a sensible default, so nothing needs setting up.
+// All learner-facing OmpathStudy features are free. Subscription tiers are intentionally disabled.
 import { useSiteConfig, type SiteConfig } from "@/lib/siteConfig";
 
 export type Tier = "free" | "pro";
@@ -17,16 +16,16 @@ export const FEATURES: Feature[] = [
   { key: "review", label: "Review: weak topics, bookmarks and progress", blurb: "Shows what you keep missing, what you saved, what you read, and what to do next.", defaultTier: "pro" },
 ];
 
-export const tierOf = (key: string, cfg: Pick<SiteConfig, "proFeatures">): Tier => cfg.proFeatures?.[key] ?? FEATURES.find((f) => f.key === key)?.defaultTier ?? "free";
+export const tierOf = (_key: string, _cfg: Pick<SiteConfig, "proFeatures">): Tier => "free";
 
-/** True when this person may use the feature: it is free for everyone, or they are Pro (a subscriber or an admin). */
-export const featureAllowed = (key: string, cfg: Pick<SiteConfig, "proFeatures">, isPro: boolean): boolean => tierOf(key, cfg) === "free" || isPro;
+/** All features are available to every learner; no subscription is required. */
+export const featureAllowed = (_key: string, _cfg: Pick<SiteConfig, "proFeatures">, _isPro: boolean): boolean => true;
 
 export function useFeatures(isPro: boolean) {
   const cfg = useSiteConfig();
   return {
     can: (key: string) => featureAllowed(key, cfg, isPro),
     /** Pro-only right now (so the UI can show a small "Pro" tag). */
-    isProOnly: (key: string) => tierOf(key, cfg) === "pro",
+    isProOnly: (_key: string) => false,
   };
 }
