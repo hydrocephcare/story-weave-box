@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { useVisitCounter } from "@/lib/analytics";
 import RouteAurora from "@/components/RouteAurora";
 import RailLayout from "@/components/RailLayout";
@@ -10,7 +10,6 @@ import AIGate from "@/components/ai/AIGate";
 import AIPill from "@/components/ai/AIPill";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ContestStrip from "@/components/ContestStrip";
-import AdminCopilot from "@/components/AdminCopilot";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -39,6 +38,15 @@ const Brand = lazy(() => import("./pages/Brand"));
 const NewNotes = lazy(() => import("./pages/NewNotes"));
 const RecentlyAdded = lazy(() => import("./pages/RecentlyAdded"));
 const Timetable2026 = lazy(() => import("./pages/Timetable2026"));
+const AdminCopilot = lazy(() => import("@/components/AdminCopilot"));
+
+/** The admin assistant (about 90 KB with its tools) is only fetched once someone opens an admin page, never for ordinary readers. */
+function AdminCopilotGate() {
+  const { pathname } = useLocation();
+  const [started, setStarted] = useState(false);
+  useEffect(() => { if (pathname.startsWith("/admin")) setStarted(true); }, [pathname]);
+  return started ? <Suspense fallback={null}><AdminCopilot /></Suspense> : null;
+}
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Flashcards = lazy(() => import("./pages/Flashcards"));
@@ -318,7 +326,7 @@ const App = () => (
             <AIPill />
             <Navbar />
             <AnimatedRoutes />
-            <AdminCopilot />
+            <AdminCopilotGate />
             <SiteFooter />
           </BrowserRouter>
         </TooltipProvider>
