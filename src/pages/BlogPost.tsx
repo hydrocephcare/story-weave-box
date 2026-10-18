@@ -1295,20 +1295,20 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
     if (plan.length) {
       const readText = lines.join(" ");
       const out: React.ReactNode[] = [];
-      const placed = new Set<number>();
+      const todo = plan.map((b) => ({ ...b }));
+      const keyOf = (el: React.ReactNode) => String((el as { key?: string | null })?.key ?? "");
+      const isHeading = (k: string) => /^(h2|h3|plain-heading|bl|sl)-/.test(k);
+      let lastWasPause = false;
       els.forEach((el, idx) => {
+        const next = todo[0];
+        // a pause goes in front of a new section (never in the middle of a list), or, failing that, between two plain paragraphs
+        if (next && idx >= next.at && !lastWasPause && (isHeading(keyOf(el)) || (idx >= next.at + 6 && /^p-/.test(keyOf(el)) && /^p-/.test(keyOf(els[idx - 1]))))) {
+          todo.shift();
+          const upto = Math.round(lines.length * (idx / els.length));
+          out.push(<ReadingBreak key={`pause-${idx}`} kind={next.kind} articleId={articleId} category={category} title={title} readText={lines.slice(Math.max(0, upto - 60), upto).join(" ") || readText.slice(0, 1800)} />);
+          lastWasPause = true;
+        } else lastWasPause = false;
         out.push(el);
-        const hit = plan.find((b) => b.at === idx && !placed.has(b.at));
-        const key = String((el as { key?: string | null })?.key ?? "");
-        if (hit && !/^(h2|h3|plain-heading|bl|sl)-/.test(key)) {
-          placed.add(hit.at);
-          const upto = Math.round(lines.length * ((idx + 1) / els.length));
-          out.push(<ReadingBreak key={`pause-${hit.at}`} kind={hit.kind} articleId={articleId} category={category} title={title} readText={lines.slice(Math.max(0, upto - 60), upto).join(" ") || readText.slice(0, 1800)} />);
-        } else if (hit) {
-          // it fell right after a heading: try the next piece instead
-          const next = plan.find((b) => b === hit);
-          if (next) (next as { at: number }).at = idx + 1;
-        }
       });
       return <ProgressiveList items={out} />;
     }

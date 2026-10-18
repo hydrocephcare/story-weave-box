@@ -128,6 +128,9 @@ const ReadingBreak = memo(function ReadingBreak({ kind, articleId, category, tit
   const [open, setOpen] = useState<Note | null>(null);
   const { affiliates } = useMonetise();
   const keys = useMemo(() => words(`${title} ${readText.slice(-1800)}`).slice(0, 40), [title, readText]);
+  const titleKeys = useMemo(() => words(title).slice(0, 6), [title]);
+  /** A question belongs here only if it names the subject of the note, or shares at least two words with what was just read. */
+  const onTopic = (text: string) => overlap(text, titleKeys) >= 1 || overlap(text, keys) >= 2;
   const books = useMemo(() => affiliatesFor(affiliates, `${title} ${readText.slice(0, 4000)}`), [affiliates, title, readText]);
 
   useEffect(() => {
@@ -140,11 +143,13 @@ const ReadingBreak = memo(function ReadingBreak({ kind, articleId, category, tit
           if (k === "quiz") {
             const { data } = await (supabase as any).from("mcq_sets").select("questions").eq("published", true).eq("category", category).is("deleted_at", null).limit(4);
             const all: Mcq[] = ((data || []) as { questions: Mcq[] }[]).flatMap((r) => (Array.isArray(r.questions) ? r.questions : [])).filter((q) => q?.question && Array.isArray(q.options) && q.options.length >= 4 && Number.isInteger(q.correct_answer));
-            if (all.length >= 3) { if (live) setState({ kind: k, mcq: pick(all, (q) => `${q.question} ${q.options.join(" ")}`, keys, 3) }); return; }
+            const rel = all.filter((q) => onTopic(`${q.question} ${q.options.join(" ")}`));
+            if (rel.length >= 2) { if (live) setState({ kind: k, mcq: pick(rel, (q) => `${q.question} ${q.options.join(" ")}`, keys, 3) }); return; }
           } else if (k === "cards") {
             const { data } = await (supabase as any).from("flashcard_sets").select("cards").eq("published", true).eq("category", category).limit(4);
             const all: Card[] = ((data || []) as { cards: Card[] }[]).flatMap((r) => (Array.isArray(r.cards) ? r.cards : [])).filter((c) => c?.question && c?.answer);
-            if (all.length >= 3) { if (live) setState({ kind: k, cards: pick(all, (c) => `${c.question} ${c.answer}`, keys, 4) }); return; }
+            const rel = all.filter((c) => onTopic(`${c.question} ${c.answer}`));
+            if (rel.length >= 2) { if (live) setState({ kind: k, cards: pick(rel, (c) => `${c.question} ${c.answer}`, keys, 4) }); return; }
           } else if (k === "read") {
             const { data } = await (supabase as any).from("articles").select("id, title, meta_description").eq("published", true).eq("category", category).is("deleted_at", null).neq("id", articleId).limit(12);
             const notes = ((data || []) as Note[]).filter((n) => !/mcq|question|exam|paper|quiz|bank/i.test(n.title));
