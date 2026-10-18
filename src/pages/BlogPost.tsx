@@ -1874,7 +1874,17 @@ export default function BlogPost() {
   }, [article]);
 
   if (loading) {
-    return <div className="flex min-h-[65vh] items-center justify-center"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" /></div>;
+    // a page-shaped placeholder, tall enough that the footer is below the screen, so nothing jumps when the note arrives
+    return (
+      <div className="mx-auto min-h-[120vh] max-w-3xl px-4 py-8" aria-busy="true" aria-label="Loading the note">
+        <div className="h-3 w-40 animate-pulse rounded bg-muted" />
+        <div className="mt-4 h-9 w-11/12 animate-pulse rounded bg-muted" />
+        <div className="mt-2 h-9 w-2/3 animate-pulse rounded bg-muted" />
+        <div className="mt-8 space-y-3">
+          {Array.from({ length: 14 }, (_, i) => <div key={i} className="h-4 animate-pulse rounded bg-muted" style={{ width: `${96 - ((i * 37) % 28)}%` }} />)}
+        </div>
+      </div>
+    );
   }
 
   if (notFound || !article) {
