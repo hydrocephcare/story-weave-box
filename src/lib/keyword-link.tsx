@@ -58,6 +58,9 @@ export function isUsefulTerm(term: string): boolean {
     // concepts (or have a strongly medical scientific suffix).
     return HIGH_VALUE_SET.has(term.toLowerCase()) || /(?:itis|osis|oma|emia|uria|pathy|plasm|cyte|virus|coccus|mycin)$/i.test(term);
   }
+  // headings like "Clinical Significance" or "The heme" are ordinary words, not subjects worth a link
+  const generic = /^(clinical|significance|definition|causes?|management|treatment|features?|diagnosis|investigations?|introduction|overview|summary|types?|classification|mechanisms?|importance|relevance|testing|methods?|general|key|points?|notes?|laboratory|inter|intra)$/i;
+  if (/^the\s/i.test(term) || words.every((word) => generic.test(word) || word.length <= 3)) return false;
   const meaningful = words.filter(word => word.length > 3 && !banned.test(word));
   return meaningful.length > 0;
 }

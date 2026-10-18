@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Check, Loader2, RotateCcw, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -17,6 +17,8 @@ export default function AdminPaperFixes() {
   const [msg, setMsg] = useState("");
   const [open, setOpen] = useState<string | null>(null);
   const [running, setRunning] = useState(false);
+  const [params] = useSearchParams();
+  const wanted = params.get("open");   // opened from an article's "Tidy with AI": show that proposal first
 
   const load = useCallback(async () => {
     setBusy(true);
@@ -24,12 +26,19 @@ export default function AdminPaperFixes() {
       db.from("paper_fixes").select("id,article_id,status,issues,old_title,new_title,new_description,old_content,new_content,created_at").eq("status", tab).order("created_at", { ascending: false }).limit(60),
       db.from("paper_fixes").select("status"),
     ]);
-    if (list.error) setMsg(list.error.message); else { setRows(list.data ?? []); setMsg(""); }
+    if (list.error) setMsg(list.error.message);
+    else {
+      const data = (list.data ?? []) as Fix[];
+      data.sort((a, b) => Number(b.article_id === wanted) - Number(a.article_id === wanted));
+      setRows(data); setMsg("");
+      const hit = data.find((f) => f.article_id === wanted);
+      if (hit) setOpen(hit.id);
+    }
     const c: Record<string, number> = {};
     for (const r of all.data ?? []) c[r.status] = (c[r.status] || 0) + 1;
     setCounts(c);
     setBusy(false);
-  }, [db, tab]);
+  }, [db, tab, wanted]);
   useEffect(() => { void load(); }, [load]);
 
   const decide = async (f: Fix, status: string) => {

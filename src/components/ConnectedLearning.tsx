@@ -51,7 +51,7 @@ export default function ConnectedLearning({ target, compact = false, className =
   if (!has) return compact ? <p className={`text-[11px] text-muted-foreground ${className}`}>No connections found yet.</p> : null;
 
   return (
-    <section className={`rounded-2xl border border-primary/25 bg-primary/5 p-3 sm:p-4 ${className}`} aria-label="Connected learning">
+    <section className={`border-t border-border pt-4 ${className}`} aria-label="Connected learning">
       <div className="mb-2 flex flex-wrap items-center gap-2">
         <h3 className="flex items-center gap-1.5 text-sm font-bold text-foreground"><Network className="h-4 w-4 text-primary" /> Connected learning</h3>
         {rel.systems.map((s) => {

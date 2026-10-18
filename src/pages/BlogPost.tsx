@@ -782,7 +782,9 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
   const flushList = () => {
     if (!listBuf) return;
     // the "Key points" list at the top of a note is shown as a highlighted card, so a student on a phone sees the essentials first
-    els.push(<ul key={`list-${els.length}`} className={keyCard ? "mb-6 space-y-2 rounded-2xl border border-primary/25 bg-primary/[0.05] p-4 sm:p-5" : "mb-5 space-y-2 pl-1"}>{listBuf.items}</ul>);
+    // (only the one list right under the heading, with a rule down its side instead of a box; the flag used to stay on for the rest of the page, which boxed every list)
+    els.push(<ul key={`list-${els.length}`} className={keyCard ? "mb-6 space-y-2 border-l-[3px] border-primary/50 pl-4" : "mb-5 space-y-2 pl-1"}>{listBuf.items}</ul>);
+    keyCard = false;
     listBuf = null;
   };
   const flushTable = () => {
@@ -1122,10 +1124,10 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
           const marks = /\(\s*(\d+)\s*marks?\s*\)/i.exec(optText)?.[1];
           const body = optText.replace(/\s*\(\s*\d+\s*marks?\s*\)\s*\.?\s*$/i, "").trim();
           els.push(
-            <div key={`part-${i}`} className="not-prose my-2 flex items-start gap-3 rounded-xl border border-border bg-card px-4 py-3">
-              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{label.toLowerCase()}</span>
+            <div key={`part-${i}`} className="not-prose my-1.5 flex items-baseline gap-3">
+              <span className="w-5 shrink-0 text-[15px] font-bold text-primary">({label.toLowerCase()})</span>
               <p className="min-w-0 flex-1 text-base leading-7 text-foreground"><Inline text={body} /></p>
-              {marks && <span className="mt-0.5 shrink-0 rounded-full bg-muted px-2.5 py-1 text-xs font-bold text-muted-foreground">{marks} mark{marks === "1" ? "" : "s"}</span>}
+              {marks && <span className="shrink-0 text-xs font-semibold text-muted-foreground">[{marks} mark{marks === "1" ? "" : "s"}]</span>}
             </div>
           );
           if (explanationMatch?.[2]) pushBullet(explanationMatch[2].trim(), `essay-pt-exp-${i}`);
@@ -1152,8 +1154,8 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
       // page reads as revision points instead of a wall of chipped rows.
       flushList(); underSubheading = false;
       els.push(
-        <div key={`subq-${i}`} className="not-prose my-2.5 grid grid-cols-[2rem_minmax(0,1fr)] items-start gap-x-3 rounded-lg border border-border/70 bg-card px-3 py-3 sm:grid-cols-[2rem_minmax(0,1fr)_auto]">
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-xs font-bold text-primary">{label}</span>
+        <div key={`subq-${i}`} className="not-prose my-1.5 grid grid-cols-[2rem_minmax(0,1fr)] items-baseline gap-x-3 sm:grid-cols-[2rem_minmax(0,1fr)_auto]">
+          <span className="text-[15px] font-bold text-primary">({String(label).toLowerCase()})</span>
           <p className="min-w-0 pt-1 text-[15px] font-medium leading-relaxed text-foreground"><Inline text={subText} /></p>
           {marksMatch && <span className="col-start-2 mt-1 whitespace-nowrap text-xs font-semibold text-muted-foreground sm:col-start-3 sm:row-start-1 sm:mt-1.5">{marksMatch[1]}</span>}
         </div>
@@ -1193,7 +1195,7 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
       flushList(); underSubheading = false;
       if (inPractice) pqs.push({ number: qa[1], question: qa[2], answer: qa[3] });
       else els.push(
-        <div key={`qa-${i}`} className="mb-3 rounded-lg border border-border p-4">
+        <div key={`qa-${i}`} className="mb-4 border-l-[3px] border-border pl-4">
           <p className="text-sm font-medium text-foreground">{qa[1]}. <Inline text={qa[2]} /></p>
           <p className="mt-1.5 text-sm text-primary font-medium">→ <Inline text={qa[3]} /></p>
         </div>
@@ -1424,6 +1426,35 @@ export default function BlogPost() {
     }
   };
 
+  // Tidy with AI: the paper doctor works through the page one section at a time (so the screen never freezes on a long page), shows which section it is on,
+  // and files its proposal in "Written papers" to compare and approve. Nothing on the live page changes until then.
+  const [aiNote, setAiNote] = useState("");
+  const runTidy = async () => {
+    if (!article) return;
+    setActionLoading("format");
+    try {
+      let status = "working";
+      for (let n = 0; n < 20 && status === "working"; n++) {
+        setAiNote(n === 0 ? "Reading the page…" : `Tidying section ${n + 1}…`);
+        const { data, error } = await supabase.functions.invoke("paper-doctor", { body: { article_id: article.id, force: n === 0 } });
+        if (error) throw new Error(error.message);
+        if (data?.error) throw new Error(data.error);
+        status = String(data?.status || "");
+        if (status === "working" && data?.of) setAiNote(`Tidied section ${data.section} of ${data.of}…`);
+      }
+      if (status === "pending") {
+        toast({ title: "A tidy version is ready", description: "Opening it so you can compare before it goes live." });
+        navigate(`/admin/paper-fixes?open=${article.id}`);
+      } else if (status === "clean") toast({ title: "Nothing to change", description: "The AI found this page already tidy." });
+      else throw new Error("The AI could not finish this page. Try again in a minute.");
+    } catch (err: any) {
+      toast({ title: "Tidy failed", description: err?.message, variant: "destructive" });
+    } finally {
+      setActionLoading(null);
+      setAiNote("");
+    }
+  };
+
   const runGeminiUpgrade = async (type: "format" | "expand") => {
     if (!article) return;
     setActionLoading(type);
@@ -1431,6 +1462,10 @@ export default function BlogPost() {
       const { data, error } = await supabase.functions.invoke("content-upgrade", { body: { action: "upgrade", id: article.id, type } });
       if (error) throw new Error(error.message);
       if (!data?.improved_content) throw new Error("No upgraded content returned");
+      // a reply shorter than the page means the AI was cut off or dropped text: never replace the page with it
+      if (String(data.improved_content).length < article.content.length * 0.9) throw new Error("The AI's answer was shorter than the page, so it was not applied. Nothing changed.");
+      // keep the old text so this can be put back from Written papers
+      await (supabase as any).from("paper_fixes").upsert({ article_id: article.id, status: "approved", old_title: article.title, new_title: article.title, old_content: article.content, new_content: data.improved_content, first_content: article.content, issues: [type === "expand" ? "Expanded with Gemini" : "Reformatted with Gemini"], pass: 2, decided_at: new Date().toISOString() }, { onConflict: "article_id" });
       const { error: applyError } = await supabase.functions.invoke("content-upgrade", {
         body: { action: "apply", id: article.id, content: data.improved_content, title: article.title },
       });
@@ -1886,6 +1921,7 @@ export default function BlogPost() {
         <div className="border-b-2 border-primary/30 bg-primary/5">
           <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-2 px-5 py-3">
             <span className="mr-1 text-xs font-bold uppercase tracking-wider text-primary">Admin</span>
+            {aiNote && <span className="text-xs font-semibold text-muted-foreground" role="status">{aiNote}</span>}
 
             <Button size="sm" className="h-8 gap-1.5 text-xs bg-primary hover:bg-primary/90" disabled={!!actionLoading} onClick={runDirectMigrate}>
               {actionLoading === "fix" ? <Loader2 className="h-3 w-3 animate-spin" /> : <GitMerge className="h-3 w-3" />}
@@ -1902,7 +1938,7 @@ export default function BlogPost() {
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start">
-                <DropdownMenuItem onClick={() => runGeminiUpgrade("format")}>Improve article formatting</DropdownMenuItem>
+                <DropdownMenuItem onClick={runTidy}>Tidy with AI (preview first)</DropdownMenuItem>
                 <DropdownMenuItem onClick={() => runGeminiUpgrade("expand")}>Expand article details</DropdownMenuItem>
                 <DropdownMenuItem onClick={runGenerateCoverImage}><ImagePlus className="mr-2 h-3.5 w-3.5" />Generate article image</DropdownMenuItem>
                 <DropdownMenuItem onClick={runTitleAndSubtitleCleanup}>Update title + subtitles only</DropdownMenuItem>
@@ -1965,7 +2001,7 @@ export default function BlogPost() {
             </aside>
           )}
 
-          <article id="section-top" className={slideDeck ? "min-w-0" : "min-w-0 rounded-2xl border border-border/70 bg-card px-4 py-5 shadow-sm sm:px-8 sm:py-8 lg:max-w-[94ch] lg:px-10"}>
+          <article id="section-top" className={slideDeck ? "min-w-0" : "min-w-0 px-1 py-3 sm:px-4 sm:py-6 lg:max-w-[94ch] lg:px-6"}>
             <Countdown data={(article as any).countdown} />
             <PasswordGate
               enabled={(article as any).password_protected}
@@ -2060,7 +2096,7 @@ export default function BlogPost() {
             </div>
 
             {(essaySaqs.length > 0 || essayLaqs.length > 0) && (
-              <section className="mt-12 rounded-xl border border-border bg-card p-5 sm:p-6">
+              <section className="mt-12 border-t border-border pt-6">
                 <div className="flex items-center gap-2 mb-4">
                   <HelpCircle className="h-4 w-4 text-primary" />
                   <h2 className="font-serif text-xl font-bold text-foreground">Practice Essay Questions</h2>
@@ -2104,7 +2140,7 @@ export default function BlogPost() {
             <SponsorLine className="mt-8" />
 
             {hasRelated && (
-              <div className="mt-12 rounded-lg border border-border p-5">
+              <div className="mt-12 border-t border-border pt-6">
                 <div className="flex items-center gap-2 mb-4">
                   <FileText className="h-4 w-4 text-primary" />
                   <h3 className="font-semibold text-foreground">Continue Learning</h3>
@@ -2118,7 +2154,7 @@ export default function BlogPost() {
                           <Link key={f.id} to={buildFlashcardPath(f)} className="flex items-center gap-3 rounded-lg border border-border p-3 hover:border-primary/40 hover:bg-muted/30 transition-colors">
                             <GraduationCap className="h-4 w-4 text-primary shrink-0" />
                             <span className="truncate text-sm font-medium text-foreground">{f.title}</span>
-                            <span className="ml-auto text-xs text-muted-foreground">{(f.cards as any[])?.length || 0} cards</span>
+                            {(f.cards as any[])?.length > 0 && <span className="ml-auto text-xs text-muted-foreground">{(f.cards as any[]).length} cards</span>}
                           </Link>
                         ))}
                       </div>
@@ -2129,10 +2165,10 @@ export default function BlogPost() {
                       <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">MCQ Quizzes</p>
                       <div className="space-y-1.5">
                         {related.mcqs.map((m: any) => (
-                          <Link key={m.id} to={buildMcqPath(m)} className="flex items-center gap-3 rounded-lg border border-border p-3 hover:border-primary/40 hover:bg-muted/30 transition-colors">
+                          <Link key={m.id} to={buildMcqPath(m)} className="flex items-center gap-3 rounded-lg p-2.5 hover:bg-muted/40 transition-colors">
                             <ListChecks className="h-4 w-4 text-primary shrink-0" />
                             <span className="truncate text-sm font-medium text-foreground">{m.title}</span>
-                            <span className="ml-auto text-xs text-muted-foreground">{(m.questions as any[])?.length || 0} Qs</span>
+                            {m.question_count > 0 && <span className="ml-auto text-xs text-muted-foreground">{m.question_count} Qs</span>}
                           </Link>
                         ))}
                       </div>
@@ -2187,7 +2223,7 @@ function RelatedMarquee({ articles }: { articles: any[] }) {
   const list = [...articles.slice(0, 12), ...articles.slice(0, 12)];
   return (
     <div
-      className="group relative -mx-5 overflow-x-auto overflow-y-hidden"
+      className="group relative -mx-5 overflow-x-auto overflow-y-hidden [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       onTouchStart={() => setPaused(true)}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}

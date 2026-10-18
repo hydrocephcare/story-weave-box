@@ -22,21 +22,27 @@ export function useSearchHighlight(term: string | null, selector: string, ready:
     const terms = term ? queryTerms(term) : [];
     if (!root || !terms.length) { rangesRef.current = []; setCount(0); return; }
     const phrase = term!.trim().toLowerCase();
-    const re = new RegExp(`(${[phrase.length > 3 ? esc(phrase) : "", ...terms.map(esc)].filter(Boolean).join("|")})`, "gi");
-    const ranges: Range[] = [];
-    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-      acceptNode: (n) => (n.parentElement && /^(SCRIPT|STYLE|NOSCRIPT)$/.test(n.parentElement.tagName) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
-    });
-    for (let n = walker.nextNode(); n && ranges.length < 400; n = walker.nextNode()) {
-      const text = n.nodeValue ?? "";
-      re.lastIndex = 0;
-      for (let m = re.exec(text); m; m = re.exec(text)) {
-        if (!m[0]) { re.lastIndex++; continue; }
-        const r = document.createRange();
-        r.setStart(n, m.index); r.setEnd(n, m.index + m[0].length);
-        ranges.push(r);
+    const find = (re: RegExp) => {
+      const found: Range[] = [];
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+        acceptNode: (n) => (n.parentElement && /^(SCRIPT|STYLE|NOSCRIPT)$/.test(n.parentElement.tagName) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
+      });
+      for (let n = walker.nextNode(); n && found.length < 400; n = walker.nextNode()) {
+        const text = n.nodeValue ?? "";
+        re.lastIndex = 0;
+        for (let m = re.exec(text); m; m = re.exec(text)) {
+          if (!m[0]) { re.lastIndex++; continue; }
+          const r = document.createRange();
+          r.setStart(n, m.index); r.setEnd(n, m.index + m[0].length);
+          found.push(r);
+        }
       }
-    }
+      return found;
+    };
+    // a searched phrase ("clinical biochemistry") is marked as a phrase; its single words are marked only when the phrase never appears
+    // (marking every "clinical" on the page made the whole note look broken)
+    let ranges: Range[] = phrase.includes(" ") && phrase.length > 3 ? find(new RegExp(`(${esc(phrase)})`, "gi")) : [];
+    if (!ranges.length) ranges = find(new RegExp(`(${[phrase.length > 3 ? esc(phrase) : "", ...terms.map(esc)].filter(Boolean).join("|")})`, "gi"));
     rangesRef.current = ranges;
     setCount(ranges.length);
     setVersion((v) => v + 1);

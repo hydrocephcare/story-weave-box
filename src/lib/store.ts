@@ -1118,10 +1118,16 @@ export async function getRelatedContent(category: string, excludeArticleId?: str
           .eq("article_id", excludeArticleId)
       : Promise.resolve({ data: [] as any[] }),
   ]);
+  // the list above does not carry the questions themselves, so the counts come from the cached catalogue (it used to show "0 Qs" for every bank)
+  let counts = new Map<string, number>();
+  if ((mcqs || []).length) {
+    const cat = await (supabase as any).rpc("exam_catalog", undefined, { get: true });
+    if (!cat.error && Array.isArray(cat.data)) counts = new Map((cat.data as { id: string; question_count: number }[]).map((r) => [r.id, r.question_count]));
+  }
   return {
     articles: (articles || []).filter((a: any) => a.id !== excludeArticleId && isPublicStudyArticle(a)),
     flashcards: flashcards || [],
-    mcqs: dedupeResourceSummaries((mcqs || []).filter(isPublicMcqSet)),
+    mcqs: dedupeResourceSummaries((mcqs || []).filter(isPublicMcqSet)).map((m: any) => ({ ...m, question_count: counts.get(m.id) ?? 0 })),
     essays: (essays || []).filter(hasEssayContent),
   };
 }

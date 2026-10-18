@@ -8,17 +8,26 @@ import { chatText } from "../_shared/aiChat.js";
 const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-cron-key" };
 const json = (o: unknown, status = 200) => new Response(JSON.stringify(o), { status, headers: { ...cors, "Content-Type": "application/json" } });
 
-const SYSTEM = `You tidy written exam papers for a free medical study website used by Kenyan medical students.
-You are given one page, or one section of a long page.
+const SYSTEM = `You tidy written exam papers for a free medical study website used by Kenyan medical students. The text was pasted or scanned from Word and PDF files, so its structure is often damaged.
+You are given one page, or one section of a long page. Return the same material, cleanly structured.
+
+Page format to produce:
+- Each question starts with a line "Question N" (numbered in order), then ONE line with the full question, then its answer.
+- If the question has lettered parts, put them on their own lines like "A. Interpret the results. (4 marks)", then a blank line, then "Answer:" and the model answer with each part's answer starting on its own line with the same letter.
+- If the answer is a set of points, write them as plain bullet lines ("- ...") or short paragraphs. Never put labels and text in separate pieces, and never glue two items on one line.
+
+What to repair:
+1. MISSING QUESTIONS. Many answers appear with no question above them (a heading such as "Definition" or "Types of ..." followed by answer points). Work out the question the answer is clearly responding to and write it as a complete exam question with its marks if the author gave them (for example "Explain non-shivering thermogenesis. (5 marks)"). Mention each restored question in the issues as "Restored question: ...". If you cannot tell what is asked, keep the text and write "Question N" with "(question not recorded)".
+2. FUSED TEXT. Separate glued words and lists: "Preparation for CollectionPatient instructions" becomes "Preparation for Collection: Patient instructions"; "a) ... cancerb) ... tumorsc) ..." becomes separate a), b), c) lines. Remove stray symbols such as "****", "---", and loose "o" bullets; join sentences that were cut in half. Fix "e g." to "e.g." and split-up abbreviations ("RB Cs" -> "RBCs", "NSAI Ds" -> "NSAIDs", "AT Pase" -> "ATPase").
+3. COVER LINES. Put the exam cover details (programme, unit code, unit title, examination year, department, time) on one short line each, with nothing glued together. Drop "good luck" lines.
+4. TOPIC FRAGMENTS. If a question is only a fragment such as "Liver function tests." make it a full instruction ("Discuss liver function tests.").
+5. DUPLICATES. If the same topic is answered more than once, KEEP every copy (never delete) but list "Repeated topic: ..." in the issues.
 
 Rules:
-- Keep EVERY medical fact, number and model answer the author wrote. Never change a fact. Do not add doses or numbers you are not certain of.
-- The page format is: a line "Question N", then the question, then lettered parts on their own lines like "A. Interpret the results. (4 marks)", then a blank line, then "Answer:" followed by the model answer, with each part's answer starting on its own line with the same letter ("A. ...", "B. ...").
-- If the question text is only a topic fragment such as "Liver function tests." turn it into a complete instruction such as "Discuss liver function tests." or "Write short notes on liver function tests." If it is already a full question, leave it alone.
-- Make part letters and answer letters consistent (A. B. C., never a mix of A. and (b)). Put marks in brackets at the end of each part, only where the author gave them.
-- If a part has no model answer, write a short accurate textbook answer and say so in the issues. If you are not sure of a fact, say "Check your textbook for ..." instead of guessing.
-- If the title or description calls the page an "MCQ Bank" but the questions are written (short or long answer), correct the title and description to say so (for example "Short Answer Questions"). Titles stay under 70 characters, the description is 120 to 155 characters of plain English. Only do this when you are given the title (first section).
-- If this is a true multiple-choice bank, or is already clean and consistent, answer with the single line NO_CHANGE and nothing else.
+- Keep EVERY medical fact, number and model answer the author wrote. Never change a fact. Do not add doses or numbers you are not certain of. If a part has no model answer, write a short accurate textbook answer and say so in the issues; if you are not sure of a fact write "Check your textbook for ..." instead of guessing.
+- Do not shorten the content: the corrected text must contain all the original information.
+- If the title or description calls the page an "MCQ Bank" but the questions are written, correct them (titles under 70 characters, the description 120 to 155 characters of plain English). Only do this when you are given the title (first section).
+- If this is a true multiple-choice bank that is already tidy, answer with the single line NO_CHANGE and nothing else.
 
 Otherwise answer in exactly this layout (no JSON, no code fences):
 ===ISSUES===
@@ -69,9 +78,9 @@ serve(async (req) => {
     const original = String(a.content).replace(/\r\n/g, "\n");
     const parts = sections(original);
     const { data: prev } = await supabase.from("paper_fixes").select("*").eq("article_id", a.id).maybeSingle();
-    const resume = prev?.status === "working" ? prev : null;
+    const resume = !body?.force && prev?.status === "working" && prev.pass >= 2 ? prev : null;   // a half-done run from the first pass starts again with the stricter instructions
     const seg = resume ? Math.min(resume.seg, parts.length - 1) : 0;
-    const save = (status: string, extra: Record<string, unknown> = {}) => supabase.from("paper_fixes").upsert({ article_id: a.id, status, old_title: a.title, ...extra }, { onConflict: "article_id" });
+    const save = (status: string, extra: Record<string, unknown> = {}) => supabase.from("paper_fixes").upsert({ article_id: a.id, status, old_title: a.title, pass: 2, first_content: prev?.first_content ?? prev?.old_content ?? a.content, ...extra }, { onConflict: "article_id" });
 
     let raw = "";
     try {

@@ -112,6 +112,8 @@ export function inferArticleLayout(title = "", contentKind = "", content = ""): 
   if (/aponeurosis|image[ -]?(?:spot|bank)|spot[ -]?(?:exam|bank|atlas)|visual[ -]?bank/i.test(all)) return "visual";
   const essay = /\bSAQs?\b|\bLAQs?\b|short[- ]answer|long[- ]answer|essay|written[- ]question/i.test(all);
   const mcq = /\bMCQs?\b|multiple[- ]choice|quiz/i.test(labels) || /(?:^|\n)\s*[A-E][.)]\s+\S/im.test(content);
+  // A paper titled SAQ / LAQ / essay is written questions: lettered lines (A. B. C.) in it are answer points, not choices, unless the title itself says MCQ
+  if (essay && !/\bMCQs?\b|multiple[- ]choice|quiz/i.test(labels)) return "essay";
   if (essay && mcq) return "mixed";
   if (essay) return "essay";
   if (mcq) return "mcq";
@@ -684,10 +686,15 @@ export function preprocessContent(raw: string): string {
       .replace(/^say\s*:?>\s*"?/i, "")
       // Add missing sentence spacing without corrupting decimal section numbers
       // such as "1.0 Introduction" into "1. 0 Introduction".
-      .replace(/([:;!?])(?=\S)|\.(?=[A-Za-z])/g, "$1 ")
-      .replace(/([a-z)])(?=[A-Z][a-z])/g, "$1 ")
-      .replace(/([A-Z]{2,})(?=[A-Z][a-z])/g, "$1 ")
-      .replace(/([A-Z]{3,})(?=[a-z]{3,})/g, "$1 ")
+      // (Each rule only adds a space where two words or sentences were glued together. The old versions also deleted the dot in "e.g.",
+      // split "RBCs" / "NSAIDs" / "ATPase" into "RB Cs" / "NSAI Ds" / "AT Pase", and turned "2:1" into "2: 1".)
+      .replace(/(\S)\*{4}(?=\S)/g, "$1** **")                                   // "**Label****Next**" -> two bold pieces
+      .replace(/\*{4}/g, "**")
+      .replace(/([^\s*([“"':;,—–/-])\*\*(?=[A-Za-z0-9])/g, "$1** ")              // a closing ** glued to the next word: "**Label**Text"
+      .replace(/([A-Za-z)\]][:;!?])(?=[A-Z][a-z])/g, "$1 ")                      // "Definition:Collection"
+      .replace(/([a-z)])\.(?=[A-Z][a-z])/g, "$1. ")                              // "done.Next sentence"
+      .replace(/([a-z]{3,})(?=[A-Z][a-z]{2,})/g, "$1 ")                          // "CollectionPatient"
+      .replace(/([A-Z]{2,})(?=[A-Z][a-z]{4,})/g, "$1 ")                          // "DNAReplication"
       .replace(/([^\s])(?=(?:Explanation|Rationale)\s*[:：])/gi, "$1 ")
       .replace(/\s*(?:->|=>|⟶|⟹)\s*/g, " → ")
       .replace(/([a-z])(?=(?:Think of|The most|Every reaction|Almost always|This is why|If someone|There are|ABO incompatibility)\b)/g, "$1 ");
