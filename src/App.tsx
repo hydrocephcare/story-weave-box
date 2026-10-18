@@ -158,7 +158,7 @@ const AnimatedRoutes = () => {
   useVisitCounter();
   return (
     <RouteErrorBoundary key={location.pathname}>
-      <main className="relative isolate min-h-[65vh]">
+      <main className="relative isolate min-h-[100svh]">
         <RouteAurora />
         <Suspense fallback={<RouteLoader />}>
           <Routes location={location}>
