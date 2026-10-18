@@ -21,7 +21,26 @@ export function splitLeakedAnswer(text: string): { text: string; answer: string 
 export function cleanMetaTitle(article: Article): string {
   const rawSrc = (article.title?.trim() || article.meta_title?.trim() || "Study Notes");
   const raw = decodeEntities(rawSrc).replace(/^#+\s*/, "").replace(/\s+/g, " ").trim();
-  return raw.length <= 60 ? raw : `${raw.slice(0, 57).trimEnd()}...`;
+  return shortenTitle(raw, 60);
+}
+
+/**
+ * A search-result title that fits (about 60 characters) without a chopped word or a trailing "...": the part number ("Part 3 of 5") is kept but shortened to "Part 3",
+ * source tags such as "Past Paper" or "MCQ Bank" go first, and the cut falls at a separator or a word boundary.
+ */
+export function shortenTitle(raw: string, max = 60): string {
+  if (raw.length <= max) return raw;
+  let t = raw;
+  let part = "";
+  t = t.replace(/\s*[—–-]?\s*\(?\bPart\s+(\d+)\s+of\s+\d+\)?\s*/i, (_m, n) => { part = ` · Part ${n}`; return " "; }).replace(/\s+/g, " ").trim();
+  const room = max - part.length;
+  if (t.length > room) t = t.replace(/\s*[—–-]\s*(?:Past Paper|MCQ Bank|CAT|Notes|Revision Notes|Study Notes)\s*$/i, "").trim();
+  if (t.length > room) {
+    const cut = t.slice(0, room);
+    const sep = Math.max(cut.lastIndexOf(" — "), cut.lastIndexOf(" – "), cut.lastIndexOf(": "), cut.lastIndexOf(" - "));
+    t = (sep >= room * 0.5 ? cut.slice(0, sep) : cut.replace(/\s+\S*$/, "")).replace(/[\s,;:(—–-]+$/, "");
+  }
+  return `${t}${part}`;
 }
 
 export function cleanMetaDescription(article: Article): string {
