@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { AccessPlan, DEFAULT_PLANS, loadPaymentSettings } from "@/lib/access";
 import { DEFAULT_SITE_SETTINGS, loadSiteSettings } from "@/lib/site-settings";
 import { toast } from "@/hooks/use-toast";
+import { setSubscriptionMode, useSubscriptionMode } from "@/lib/subscriptionMode";
 
 /** Admin panel: site paywall, Reveal access, PDF downloads and subscription plans. */
 export default function PaymentSettingsAdmin() {
@@ -20,6 +21,16 @@ export default function PaymentSettingsAdmin() {
   const [guestSlideView, setGuestSlideView] = useState<"all" | "half">("all");
   const [redacted, setRedacted] = useState(DEFAULT_SITE_SETTINGS.redactedNames.join(", "));
   const [showCounts, setShowCounts] = useState(false);
+  const subsOn = useSubscriptionMode();
+  const [switching, setSwitching] = useState(false);
+  const flip = async (next: boolean) => {
+    setSwitching(true);
+    try {
+      await setSubscriptionMode(next, next);
+      toast({ title: next ? "Subscriptions are on" : "Subscriptions are off", description: next ? "Original prices, plans, Pro features and free limits restored. Reload this panel to see the values." : "Everything is free for everyone." });
+    } catch (e) { toast({ title: "Could not switch", description: e instanceof Error ? e.message : "", variant: "destructive" }); }
+    setSwitching(false);
+  };
 
   useEffect(() => {
     Promise.all([
@@ -101,6 +112,14 @@ export default function PaymentSettingsAdmin() {
         <p className="text-sm text-muted-foreground">
           Questions stay free to read. Reveal answers and PDF handouts can be controlled separately below.
         </p>
+      </div>
+
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border pb-4">
+        <div className="min-w-0">
+          <p className="text-sm font-bold text-foreground">Subscriptions are {subsOn ? "ON" : "OFF"}</p>
+          <p className="text-xs text-muted-foreground">{subsOn ? "Reveal, Pro features, daily limits and the subscribe prompts follow the settings below." : "Everything is free for everyone. Switching on restores the original defaults: Reveal KSh 5, 25% of locked pages free, Aponerosis KSh 150 (90 days), Annual KSh 400, Pro features."}</p>
+        </div>
+        <button type="button" disabled={switching} onClick={() => flip(!subsOn)} className="rounded-full bg-primary px-4 py-2 text-xs font-bold text-primary-foreground disabled:opacity-60">{switching ? "Saving…" : subsOn ? "Switch off" : "Switch on with defaults"}</button>
       </div>
 
       <div className="rounded-xl border border-border bg-card p-5">

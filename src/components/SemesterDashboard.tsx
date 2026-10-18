@@ -58,6 +58,39 @@ function shortResourceType(kind: UnitResource["kind"]) {
   return "Resource";
 }
 
+/** One day of a rotation grid: each slot on its own line with the time on the left, so it reads on a phone instead of one long compressed paragraph. */
+function slotsOf(text: string): { time: string; what: string }[] {
+  return String(text || "").split(/\s*·\s*/).filter(Boolean).map((part) => {
+    const m = part.match(/^(\d{1,2}(?::\d{2})?\s*[–-]\s*\d{1,2}(?::\d{2})?)\s+(.*)$/);
+    return m ? { time: m[1].replace(/\s+/g, ""), what: m[2] } : { time: "", what: part };
+  });
+}
+
+function TimetableDay({ row }: { row: { day: string; group1: string; group2: string } }) {
+  const same = row.group1.trim() === row.group2.trim();
+  const groups = same ? [{ label: "Both groups", text: row.group1 }] : [{ label: "Group 1", text: row.group1 }, { label: "Group 2", text: row.group2 }];
+  return (
+    <section>
+      <h4 className="text-sm font-bold text-foreground">{row.day}</h4>
+      <div className="mt-1 space-y-2">
+        {groups.map((g) => (
+          <div key={g.label}>
+            <p className="text-[10px] font-bold uppercase tracking-wider text-primary">{g.label}</p>
+            <ul className="mt-0.5">
+              {slotsOf(g.text).map((x, i) => (
+                <li key={i} className="grid grid-cols-[4.5rem_1fr] gap-2 py-0.5 text-[13px] leading-snug">
+                  <span className="tabular-nums text-muted-foreground">{x.time}</span>
+                  <span className="min-w-0 break-words text-foreground">{x.what}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function SemesterDashboard() {
   const { user } = useAuth();
   const [studyYear, setStudyYear] = useState<number | null>(null);
@@ -299,7 +332,7 @@ export default function SemesterDashboard() {
                     </div>
                   </div>
 
-                  <div className="rounded-2xl border border-border bg-background p-5">
+                  <div className="border-t border-border pt-5">
                     <div className="flex items-center gap-2">
                       <Clock3 className="h-5 w-5 text-primary" />
                       <div>
@@ -307,24 +340,22 @@ export default function SemesterDashboard() {
                         <h3 className="mt-1 font-serif text-lg font-bold">Group 1 / Group 2</h3>
                       </div>
                     </div>
-                    <div className="mt-4 space-y-2">
+                    <div className="mt-3 divide-y divide-border">
                       {YEAR_4_ROTATION_GRIDS.map((grid, index) => (
-                        <details key={grid.label} open={index === 0} className="rounded-xl border border-border bg-card p-3">
-                          <summary className="cursor-pointer text-xs font-bold text-foreground">{grid.label}</summary>
-                          <div className="mt-3 space-y-2">
-                            {grid.slots.map((row) => (
-                              <div key={row.day} className="rounded-lg border border-border bg-background p-3">
-                                <p className="text-[11px] font-bold text-foreground">{row.day}</p>
-                                <p className="mt-1 text-[10px] leading-relaxed text-muted-foreground"><strong>G1:</strong> {row.group1}</p>
-                                <p className="mt-1 text-[10px] leading-relaxed text-muted-foreground"><strong>G2:</strong> {row.group2}</p>
-                              </div>
-                            ))}
+                        <details key={grid.label} open={index === 0} className="group py-2">
+                          <summary className="flex cursor-pointer list-none items-center justify-between py-1 text-sm font-bold text-foreground">
+                            {grid.label}
+                            <span className="text-xs font-semibold text-primary group-open:hidden">Show</span>
+                            <span className="hidden text-xs font-semibold text-muted-foreground group-open:inline">Hide</span>
+                          </summary>
+                          <div className="mt-2 space-y-4">
+                            {grid.slots.map((row) => <TimetableDay key={row.day} row={row} />)}
                           </div>
                         </details>
                       ))}
                     </div>
-                    <p className="mt-3 text-[10px] leading-relaxed text-muted-foreground">
-                      The official timetable contains multiple rotation grids. Ompath keeps all published grids visible because the student's individual rotation/group is not stored in the Ompath profile; no rotation is guessed.
+                    <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground">
+                      The official timetable has several rotation grids. All are shown because your own rotation and group are not stored in your profile, so none is guessed.
                     </p>
                   </div>
                 </div>

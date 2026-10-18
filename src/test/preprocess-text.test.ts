@@ -19,3 +19,11 @@ describe("preprocessContent keeps real text intact", () => {
     expect(run("Proteinuria and ProteinuriaEspecially when persistent")).toContain("Proteinuria Especially");
   });
 });
+
+describe("typed backslash-n from imports", () => {
+  it("turns a typed backslash-n into a real paragraph break and keeps the question number", () => {
+    const out = preprocessContent("e. Diagnostic laparotomy\\n\\nShort answer Questions\\n\\nQuestion 1.\\nA. List the causes");
+    expect(out).not.toContain("\\n");
+    expect(out).toContain("Question 1.");
+  });
+});

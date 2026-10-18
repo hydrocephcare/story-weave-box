@@ -8,6 +8,7 @@
 //            ─► passages   (best paragraphs of the top notes, scored by how many topic words they hold)
 //            ─► answer     (model, streamed, grounded on those passages)  /  fallback (passages shown as the answer)
 import { supabase } from "@/integrations/supabase/client";
+import { onSubscriptionMode, subscriptionsOn } from "@/lib/subscriptionMode";
 import { SUPABASE_PUBLISHABLE_KEY, SUPABASE_URL } from "@/lib/supabase-config";
 import { siteSearch, type SiteHit } from "@/lib/siteSearch";
 import { PAPER_NOTES, STATIC_NOTES, loadStaticNoteText, type StaticNote } from "@/data/staticNotes";
@@ -300,7 +301,7 @@ export function extractiveAnswer(r: Retrieval): string {
 
 // ---------- daily allowance (the model costs money, so guests get a fair daily number of questions) ----------
 const USAGE_KEY = "ompath_ai_usage";
-export const FREE_DAILY_QUESTIONS = Number.MAX_SAFE_INTEGER;
+export let FREE_DAILY_QUESTIONS = Number.MAX_SAFE_INTEGER;
 const today = () => new Date().toISOString().slice(0, 10);
 export function questionsUsedToday(): number {
   try { const v = JSON.parse(localStorage.getItem(USAGE_KEY) ?? "null"); return v?.day === today() ? Number(v.n) || 0 : 0; } catch { return 0; }
@@ -311,7 +312,7 @@ export function countQuestion() {
 
 // ---------- picture questions (images cost bandwidth, so free accounts get a daily number) ----------
 const PIC_KEY = "ompath_ai_pictures";
-export const FREE_DAILY_PICTURES = Number.MAX_SAFE_INTEGER;
+export let FREE_DAILY_PICTURES = Number.MAX_SAFE_INTEGER;
 export function picturesUsedToday(): number {
   try { const v = JSON.parse(localStorage.getItem(PIC_KEY) ?? "null"); return v?.day === today() ? Number(v.n) || 0 : 0; } catch { return 0; }
 }
@@ -321,7 +322,7 @@ export function countPictures(n: number) {
 
 // ---------- free answers (the first batch of each subject is free every day) ----------
 const REVEAL_KEY = "ompath_ai_reveals";
-export const FREE_REVEALS_PER_SUBJECT = Number.MAX_SAFE_INTEGER;
+export let FREE_REVEALS_PER_SUBJECT = Number.MAX_SAFE_INTEGER;
 type RevealLog = { day: string; ids: Record<string, string[]> };
 function readReveals(): RevealLog {
   try { const v = JSON.parse(localStorage.getItem(REVEAL_KEY) ?? "null") as RevealLog | null; if (v?.day === today() && v.ids) return v; } catch { /* none */ }
@@ -338,3 +339,12 @@ export function spendFreeReveal(subject: string, id: string): boolean {
   try { localStorage.setItem(REVEAL_KEY, JSON.stringify(log)); } catch { /* storage blocked */ }
   return true;
 }
+
+// Free daily allowances only apply while subscriptions are switched on in Admin; otherwise everything is unlimited.
+const applyAllowances = (on: boolean) => {
+  FREE_DAILY_QUESTIONS = on ? 8 : Number.MAX_SAFE_INTEGER;
+  FREE_DAILY_PICTURES = on ? 15 : Number.MAX_SAFE_INTEGER;
+  FREE_REVEALS_PER_SUBJECT = on ? 5 : Number.MAX_SAFE_INTEGER;
+};
+applyAllowances(subscriptionsOn());
+onSubscriptionMode(applyAllowances);

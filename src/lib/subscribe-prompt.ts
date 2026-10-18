@@ -1,3 +1,6 @@
+import { useEffect, useRef } from "react";
+import { subscriptionsOn } from "@/lib/subscriptionMode";
+
 /**
  * Tiny global bus for the subscription prompt. Any locked control (a Reveal
  * button, a download button) can ask for the modal without prop plumbing.
@@ -38,7 +41,35 @@ function isSnoozed(): boolean {
   try { return Number(localStorage.getItem(SNOOZE_KEY) || 0) > Date.now(); } catch { return false; }
 }
 
-/** Kept as a no-op for older callers; subscription prompts are disabled. */
-export function useScrollSubscribePrompt(_active: boolean, _opts?: { every?: number; max?: number; gapMs?: number }) {
-  // Intentionally disabled: all OmpathStudy content and features are free.
+/**
+ * Scroll-driven nudge: while a guest reads a paper with MCQs, open the subscription prompt each time they pass another chunk of the page.
+ * Capped, spaced out in time, silenced after "maybe later", and never shown while subscriptions are off.
+ */
+export function useScrollSubscribePrompt(active: boolean, opts?: { every?: number; max?: number; gapMs?: number }) {
+  const step = opts?.every ?? 0.28;
+  const max = opts?.max ?? 3;
+  const gapMs = opts?.gapMs ?? 45_000;
+  const shown = useRef(0);
+  const lastAt = useRef(0);
+  const nextAt = useRef(step);
+
+  useEffect(() => {
+    if (!active) return;
+    lastAt.current = Date.now();
+    const onScroll = () => {
+      if (!subscriptionsOn() || shown.current >= max || isSnoozed()) return;
+      const doc = document.documentElement;
+      const maxScroll = doc.scrollHeight - window.innerHeight;
+      if (maxScroll < 400) return;
+      const progress = window.scrollY / maxScroll;
+      if (progress < nextAt.current) return;
+      if (Date.now() - lastAt.current < gapMs) return;
+      shown.current += 1;
+      lastAt.current = Date.now();
+      nextAt.current = Math.min(0.95, progress + step);
+      openSubscribePrompt("Subscribe to reveal the verified answers on this paper.");
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [active, step, max, gapMs]);
 }

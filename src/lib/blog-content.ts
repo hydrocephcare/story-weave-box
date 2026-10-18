@@ -608,7 +608,8 @@ export function preprocessContent(raw: string): string {
   // punctuation cleanup can turn its URL into visible text. The alt text can
   // itself contain an imported line break, so normalise that while preserving
   // the image URL byte-for-byte.
-  const decodedSource = decodeEntities(raw);
+  // imports sometimes leave a typed backslash-n where a line break belonged
+  const decodedSource = decodeEntities(raw).replace(/\\r\\n|\\n/g, "\n");
   const decoded = decodedSource.replace(
     /!\[([\s\S]*?)\]\((https?:\/\/[^\s)]+)\)/g,
     (match, alt: string, url: string, offset: number, source: string) => {
@@ -736,7 +737,7 @@ export function preprocessContent(raw: string): string {
     if (/^-\s*$/.test(t)) continue;
     if (/^[-*_]{3,}$/.test(t)) { out.push(""); continue; }
     if (/^\d+$/.test(t)) continue;
-    if (/^-?\s*.+\s\d+\.$/.test(t) && !t.includes("→") && !t.startsWith("|")) continue;
+    if (/^-?\s*.+\s\d+\.$/.test(t) && !/^(?:Question|Q)\s*\d+/i.test(t) && !t.includes("→") && !t.startsWith("|")) continue;
 
     if (/^#{1,6}\s*/.test(t)) {
       const hashes = t.match(/^#{1,6}/)?.[0] || "##";

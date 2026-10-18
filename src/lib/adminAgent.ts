@@ -7,7 +7,7 @@ import type { ContestStage } from "@/lib/contest";
 import type { PosterSpec } from "@/lib/statusPoster";
 import { loadCategories, removeItem } from "@/lib/adminWriter";
 
-export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget" | "site_health" | "update_post" | "publish_post" | "restore_post" | "briefing" | "import_mcqs" | "generate_exam" | "check_questions" | "pending_summary" | "approve_paper_fixes" | "approve_drafts" | "job_control"; args: Record<string, any> }
+export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget" | "site_health" | "update_post" | "publish_post" | "restore_post" | "briefing" | "import_mcqs" | "generate_exam" | "check_questions" | "pending_summary" | "approve_paper_fixes" | "approve_drafts" | "job_control" | "set_subscriptions"; args: Record<string, any> }
 export interface AgentContext { memory?: string[]; autorun?: boolean; categories?: string[]; page?: string; problems?: { at: string; what: string }[]; now: string; universities: { slug: string; name: string }[]; exams: string[]; contests: { slug: string; title: string; stage: string }[] }
 export interface PlanItem { action: AgentAction; line: string; danger: boolean; ok: boolean }
 
@@ -63,6 +63,7 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
     if (action.tool === "run_autopilot") return { action, danger: false, ok: true, line: "Run the Autopilot jobs now." };
     if (action.tool === "approve_paper_fixes") return { action, danger: false, ok: true, line: `Approve ${a.count === "all" || !Number(a.count) ? "all" : a.count} pending written-paper changes from the AI paper doctor and update those pages (the old text is kept, so any page can be put back).` };
     if (action.tool === "approve_drafts") return { action, danger: false, ok: true, line: `Publish ${a.count === "all" || !Number(a.count) ? "all" : a.count} pending AI note drafts.` };
+    if (action.tool === "set_subscriptions") return { action, danger: true, ok: ["on", "off"].includes(a.mode), line: a.mode === "on" ? "Switch subscriptions ON with the original defaults: Reveal KSh 5, 25% of locked pages free, plans Aponerosis KSh 150 / 90 days and Annual KSh 400, Pro features, daily free allowances." : "Switch subscriptions OFF: everything free for everyone." };
     if (action.tool === "job_control") return { action, danger: false, ok: ["weekly-exams", "review-questions", "paper-doctor"].includes(a.job) && ["pause", "resume", "every"].includes(a.action), line: `${a.action === "every" ? `Run ${a.job} every ${a.minutes} minutes` : `${a.action === "pause" ? "Pause" : "Resume"} ${a.job}`}.` };
     if (action.tool === "check_questions") return { action, danger: false, ok: true, line: "Have the AI examiner check 3 question sets: it answers every question blind, flags answers that disagree with the key, removes cut-off questions and writes missing explanations." };
     if (action.tool === "generate_exam") return { action, danger: false, ok: true, line: `Write ${Math.max(1, Math.min(3, Number(a.count) || 1))} new weekly exam${(Number(a.count) || 1) > 1 ? "s" : ""}${a.year ? ` for Year ${a.year}` : ""}${a.unit ? ` in "${a.unit}"` : ""}, published straight to the Exam Center (about a minute each).` };
@@ -123,6 +124,11 @@ export async function runAction(action: AgentAction, w: AgentWorld): Promise<Act
       } catch (e) { failed.push(`${d.title}: ${(e as Error).message}`); }
     }
     return { text: `Published ${ok} of ${(data || []).length} AI note drafts.${failed.length ? ` ${failed.length} failed (${failed[0]}).` : ""}`, links: [{ label: "AI notes", href: "/admin/drafts" }] };
+  }
+  if (action.tool === "set_subscriptions") {
+    const { setSubscriptionMode } = await import("@/lib/subscriptionMode");
+    await setSubscriptionMode(a.mode === "on", a.mode === "on");
+    return { text: a.mode === "on" ? "Subscriptions are ON with the original defaults. Change prices in Admin > Payments." : "Subscriptions are OFF: everything is free.", links: [{ label: "Payments", href: "/admin" }] };
   }
   if (action.tool === "job_control") {
     const { data, error } = await (supabase as any).rpc("admin_job_control", { p_job: String(a.job), p_action: String(a.action), p_minutes: a.minutes ? Number(a.minutes) : null });

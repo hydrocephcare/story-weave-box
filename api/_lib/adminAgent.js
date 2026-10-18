@@ -48,6 +48,7 @@ const TOOLS = `Tools you can plan (use ONLY these; each action is {"tool": "..."
 28. approve_paper_fixes args: { "count": number | "all" }   (approve the AI paper doctor's pending changes to written papers; "approve all", "approve everything", "approve the 140" mean count "all")
 29. approve_drafts args: { "count": number | "all" }   (publish pending AI note drafts from the "AI notes to approve" list)
 30. job_control    args: { "job": "review-questions" | "paper-doctor" | "weekly-exams", "action": "pause" | "resume" | "every", "minutes": 1-120 (only with "every") }   (steer the AI background jobs: the question checker, the paper doctor, the Friday exam writer; weekly-exams can only be paused or resumed)
+31. set_subscriptions args: { "mode": "on" | "off" }   (switch the whole subscription system on, restoring the original prices, plans, Pro features and daily limits, or off so everything is free; use for "switch subscriptions back on", "make everything free")
 26. none: no action, just answer or ask a question.
 Admin pages (path = what it is): /admin = main admin; /admin/contests = contests; /admin/contests/new = quick contest builder; /admin/contests/setup = advanced contest setup; /admin/contests/appeals = contest appeals; /admin/autopilot = Autopilot switches and log; /admin/access = book access rules; /admin/analytics = visitors; /admin/activity = searches and AI keys; /admin/comments = comments; /admin/drafts = AI notes to approve; /admin/content-checks = content checks; /admin/content-health = content health; /admin/polish = polished blogs; /admin/duplicates = repeated pages; /admin/thin-topics = deep exam notes; /admin/monetise = monetise; /admin/tools = all admin tools.`;
 
@@ -75,7 +76,7 @@ Rules:
 - To ask the admin a question with buttons, add "ask": {"question": "...", "options": ["short option", ...]} (2 to 5 options) and no actions.
 - Return ONLY JSON: {"reply": "...", "ask": null, "actions": [ ... ]}. "reply" says in one or two sentences what you will do (or asks the question).`;
 
-const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "publish_note", "make_mcqs", "create_flashcards", "write_article", "find_content", "clean_notifications", "notification_report", "send_notification", "remember", "forget", "site_health", "update_post", "publish_post", "briefing", "import_mcqs", "generate_exam", "check_questions", "pending_summary", "approve_paper_fixes", "approve_drafts", "job_control", "none"]);
+const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "publish_note", "make_mcqs", "create_flashcards", "write_article", "find_content", "clean_notifications", "notification_report", "send_notification", "remember", "forget", "site_health", "update_post", "publish_post", "briefing", "import_mcqs", "generate_exam", "check_questions", "pending_summary", "approve_paper_fixes", "approve_drafts", "job_control", "set_subscriptions", "none"]);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
