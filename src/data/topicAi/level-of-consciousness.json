@@ -1,0 +1,242 @@
+{
+ "medical": true,
+ "title": "Level of Consciousness",
+ "subject": "Medicine",
+ "summary": "Assessment of consciousness guides emergency care, identifies life‑threatening causes, and directs investigations. In low‑resource settings, bedside tools and simple labs are key.",
+ "aka": [
+  "AVPU",
+  "West‑Haven",
+  "Glasgow Coma Scale"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Level of consciousness (LOC) is the degree of alertness and responsiveness to stimuli. It is quantified by bedside scales such as AVPU (Alert, Voice, Pain, Unresponsive) or GCS (Glasgow Coma Scale).",
+   "b": [
+    "AVPU: A=alert, V=responds to voice, P=responds to pain, U=unresponsive",
+    "GCS: eye opening, verbal response, motor response; score 3–15"
+   ],
+   "t": [
+    {
+     "a": "AVPU",
+     "b": "Is the patient responsive to voice or pain? A score of V or P indicates a depressed LOC."
+    },
+    {
+     "a": "GCS",
+     "b": "What is the lowest score? A score ≤8 signals severe impairment and requires urgent airway protection."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by the chosen scale. In low‑resource settings, AVPU is often used for rapid triage, while GCS provides finer gradation for surgical or neurological cases.",
+   "b": [
+    "AVPU: A=normal, V/P=moderate, U=severe",
+    "GCS: 13–15=mild, 9–12=moderate, 3–8=severe"
+   ],
+   "t": [
+    {
+     "a": "West‑Haven grade",
+     "b": "What grade correlates with mortality risk in hepatic encephalopathy? Grade 3–4 indicates high risk."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the top causes of altered LOC are infections, metabolic derangements, and toxins. Prioritise life‑threatening conditions first.",
+   "b": [
+    "Infections: malaria (severe), meningitis (bacterial), HIV encephalopathy, TB meningitis",
+    "Metabolic: hypoglycaemia, hyponatraemia, hyperkalaemia, hepatic encephalopathy",
+    "Toxins: antimalarials, herbal preparations, alcohol",
+    "Sepsis with shock: weak pulse, cold extremities, delayed capillary refill"
+   ],
+   "t": [
+    {
+     "a": "Finger‑stick glucose",
+     "b": "Is the patient hypoglycaemic? A reading <3.5 mmol/L warrants immediate dextrose."
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Does hyponatraemia (<125 mmol/L) explain confusion? Correcting sodium is urgent."
+    },
+    {
+     "a": "Blood cultures",
+     "b": "Are bacteria present? Positive cultures guide antibiotic choice."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients may appear drowsy, disoriented, or unresponsive. Behavioural changes, speech abnormalities, and motor responses are key clues.",
+   "b": [
+    "Drowsiness: slow response to stimuli",
+    "Disorientation: wrong date, place, or person",
+    "Unresponsive: no reaction to pain"
+   ],
+   "t": [
+    {
+     "a": "Pupil size/reactivity",
+     "b": "What does a fixed, dilated pupil suggest? Possible brain‑stem involvement or raised ICP."
+    },
+    {
+     "a": "Seizure activity",
+     "b": "Does the patient have tonic‑clonic movements? Seizures can be a presenting sign of encephalitis or metabolic crisis."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use simple, bedside‑friendly tests first; reserve advanced imaging for when available.",
+   "b": [
+    "Finger‑stick glucose",
+    "Serum electrolytes",
+    "Full blood count",
+    "Liver function tests",
+    "Blood cultures"
+   ],
+   "t": [
+    {
+     "a": "Finger‑stick glucose",
+     "b": "Is the patient hypoglycaemic? A reading <3.5 mmol/L means give 10% dextrose IV."
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Is hyponatraemia present? <125 mmol/L indicates urgent correction."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Does a low haemoglobin (<7 g/dL) explain altered LOC? Consider transfusion."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Is bilirubin >50 µmol/L with encephalopathy? Suggests hepatic failure."
+    },
+    {
+     "a": "Blood cultures",
+     "b": "Positive cultures confirm bacterial sepsis; start empiric antibiotics."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain findings mandate immediate action to prevent irreversible damage.",
+   "b": [
+    "Unresponsive to pain",
+    "Severe hypotension (SBP <90 mmHg)",
+    "Fixed dilated pupils",
+    "Seizure activity",
+    "Rapidly worsening LOC"
+   ],
+   "t": [
+    {
+     "a": "Capillary refill",
+     "b": "Is it >3 seconds? Indicates shock and requires fluid resuscitation."
+    },
+    {
+     "a": "Blood pressure",
+     "b": "SBP <90 mmHg signals hypotensive shock; start IV fluids and vasopressors if needed."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, secure the airway, and monitor vital signs. Drug choices reflect local availability and safety.",
+   "b": [
+    "Airway protection: intubation if GCS ≤8 or inability to protect airway",
+    "Fluid resuscitation: isotonic crystalloids for shock",
+    "Antibiotics: empiric ceftriaxone + ampicillin for meningitis",
+    "Glucose: 10% dextrose for hypoglycaemia",
+    "Sodium correction: hypertonic saline for severe hyponatraemia"
+   ],
+   "t": [
+    {
+     "a": "Ceftriaxone",
+     "b": "Why avoid aminoglycosides first? They are nephrotoxic and may worsen neurological status."
+    },
+    {
+     "a": "Dextrose 10%",
+     "b": "Why not 5%? 10% provides rapid rise in blood glucose."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑assess LOC after treatment, monitor for recurrence, and educate on infection prevention.",
+   "b": [
+    "Repeat GCS every 30 minutes until stable",
+    "Check glucose and electrolytes hourly",
+    "Educate caregivers on malaria prophylaxis and safe herbal use"
+   ],
+   "t": [
+    {
+     "a": "Repeat GCS",
+     "b": "What indicates improvement? An increase of ≥2 points suggests effective treatment."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Certain metabolic or toxic states mimic severe neurological disease.",
+   "b": [
+    "Hypoglycaemia vs. meningitis",
+    "Hyponatraemia vs. hepatic encephalopathy",
+    "Alcohol intoxication vs. seizure disorder"
+   ],
+   "t": [
+    {
+     "a": "Serum osmolality",
+     "b": "Is it low (<280 mOsm/kg) indicating hyponatraemia?"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests may be falsely normal or abnormal in resource‑limited settings.",
+   "b": [
+    "Glucose meter error in hyperglycaemia",
+    "Delayed culture growth in TB meningitis",
+    "Low haemoglobin may be masked by haemoconcentration in dehydration"
+   ],
+   "t": [
+    {
+     "a": "Finger‑stick glucose",
+     "b": "Why might it be falsely low? Hemolysis or high ketones can interfere."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sepsis with shock",
+  "Unresponsive to pain",
+  "Fixed dilated pupils",
+  "Rapidly deteriorating LOC",
+  "Seizure activity"
+ ],
+ "faq": [
+  {
+   "q": "What is the quickest bedside tool for triage?",
+   "a": "AVPU; it allows rapid identification of patients needing urgent airway or fluid resuscitation."
+  },
+  {
+   "q": "When is intubation mandatory?",
+   "a": "If GCS ≤8, inability to protect airway, or severe hypoxia."
+  },
+  {
+   "q": "Which drug is first for suspected meningitis?",
+   "a": "Empiric ceftriaxone plus ampicillin; covers common bacterial pathogens in the region."
+  }
+ ],
+ "exam": [
+  "A 24‑year‑old man presents with confusion and fever. What is the first test you order? — Finger‑stick glucose to rule out hypoglycaemia, then full blood count and cultures.",
+  "You find a patient with GCS 6 and a fixed dilated pupil. What is the next step? — Secure airway with rapid sequence intubation and start IV fluids.",
+  "A patient with malaria has altered LOC. Which complication is most likely? — Severe cerebral malaria causing cerebral oedema.",
+  "You suspect hepatic encephalopathy but the patient is also on herbal medication. How do you differentiate? — Check serum ammonia and review herbal ingredients for hepatotoxicity.",
+  "A child with seizures is now drowsy. Which electrolyte disturbance should you check? — Hyponatraemia; correct with hypertonic saline.",
+  "You have a patient with septic shock and altered LOC. Which drug should you avoid due to neurotoxicity? — Aminoglycosides."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-18",
+ "reviewed": false
+}

@@ -1,0 +1,182 @@
+{
+ "medical": true,
+ "title": "Von Willebrand Disease",
+ "subject": "Pathology",
+ "summary": "Von Willebrand disease (VWD) is the commonest inherited bleeding disorder caused by quantitative or qualitative defects of von Willebrand factor. It impairs platelet adhesion and reduces factor VIII levels, leading to mucocutaneous bleeding.",
+ "aka": [
+  "von Willebrand factor deficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "VWD is a hereditary or acquired deficiency/defect of von Willebrand factor (VWF), a plasma protein that links platelets to subendothelial collagen and stabilises factor VIII.",
+   "b": [
+    "Low VWF antigen or activity confirms the diagnosis",
+    "Ristocetin co‑factor activity assesses functional VWF"
+   ],
+   "t": [
+    {
+     "a": "VWF antigen",
+     "b": "Is VWF quantity normal? Low levels indicate quantitative defect (type 1 or 3)"
+    },
+    {
+     "a": "Ristocetin co‑factor assay",
+     "b": "Is VWF functional? Reduced activity points to qualitative defect (type 2)"
+    },
+    {
+     "a": "Factor VIII activity",
+     "b": "Does VWF deficiency affect factor VIII? Low FVIII supports VWD, especially type 2N"
+    },
+    {
+     "a": "Platelet function analyzer (PFA‑100)",
+     "b": "Does platelet adhesion improve with added VWF? Prolonged closure time supports VWD when other causes excluded"
+    },
+    {
+     "a": "Multimer analysis (if available)",
+     "b": "Which VWF multimer pattern is present? Distinguishes type 2 subtypes"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by VWF antigen/activity levels and clinical bleeding score (e.g., ISTH‑BAT).",
+   "b": [
+    "Mild: >30 % VWF, bleeding only after surgery or trauma",
+    "Moderate: 10‑30 % VWF, spontaneous mucosal bleeds",
+    "Severe: <10 % VWF, frequent spontaneous bleeds, hemarthroses"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are inherited; acquired forms are seen with conditions common in low‑resource settings.",
+   "b": [
+    "Inherited autosomal dominant type 1 (partial quantitative deficiency)",
+    "Inherited autosomal recessive type 3 (near‑absent VWF)",
+    "Type 2A/2B/2M/2N – qualitative defects",
+    "Acquired VWD secondary to: severe liver disease, uremia, hypothyroidism, disseminated malignancy, HIV, malaria, sickle‑cell disease, herbal remedies containing coumarins"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Bleeding is usually mucocutaneous and proportional to VWF loss.",
+   "b": [
+    "Epistaxis, gum bleeding, menorrhagia, easy bruising",
+    "Prolonged bleeding after circumcision, tooth extraction, or surgery",
+    "Rarely, hemarthroses in severe type 3"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Start with bedside screening, then targeted laboratory tests; adapt when sophisticated assays are unavailable.",
+   "b": [
+    "Bleeding history using a standardized bleeding assessment tool",
+    "Basic coagulation screen (PT, aPTT) – aPTT may be prolonged in severe VWD due to low FVIII"
+   ],
+   "t": [
+    {
+     "a": "aPTT",
+     "b": "Is factor VIII low enough to affect clotting time? Prolonged aPTT supports severe VWD or factor VIII deficiency"
+    },
+    {
+     "a": "Platelet count and morphology",
+     "b": "Are platelets normal? Normal count rules out thrombocytopenia as primary cause"
+    },
+    {
+     "a": "VWF antigen / ristocetin co‑factor (if local lab can run)",
+     "b": "Confirms quantitative vs qualitative defect"
+    },
+    {
+     "a": "If VWF tests unavailable",
+     "b": "What bedside clues help? Severe mucosal bleeding with normal platelet count and PT, plus prolonged aPTT, points toward VWD"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncontrolled bleeding can be fatal, especially in pregnancy, surgery, or trauma.",
+   "b": [
+    "Intracranial hemorrhage after head injury",
+    "Severe postpartum hemorrhage",
+    "Life‑threatening gastrointestinal bleed"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, replace VWF, and use adjuncts to support haemostasis.",
+   "b": [
+    "Desmopressin (DDAVP) for type 1 and most type 2A/2M – releases endothelial VWF; avoid in severe cardiac disease or hyponatraemia risk",
+    "VWF‑containing concentrate (e.g., Humate‑P) for type 3, type 2B, or DDAVP non‑responders",
+    "Tranexamic acid for mucosal bleeding when fibrinolysis contributes",
+    "Avoid aspirin, NSAIDs and other antiplatelet agents",
+    "Treat associated conditions (e.g., antiretroviral therapy for HIV, antimalarials for malaria) that may worsen acquired VWD"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular reassessment of bleeding score and VWF levels guides prophylaxis, especially before surgery or childbirth.",
+   "b": [
+    "Repeat VWF testing after DDAVP trial to document response",
+    "Plan prophylactic DDAVP or concentrate before elective procedures",
+    "Educate patients on avoiding NSAIDs and reporting new bleeding",
+    "Vaccinate against hepatitis B to reduce liver‑related acquired VWD"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Platelet function disorders (e.g., Glanzmann thrombasthenia) – normal VWF, abnormal aggregation",
+    "Hemophilia A – isolated low factor VIII, normal VWF",
+    "Acquired coagulopathy from liver disease – prolonged PT/INR, low multiple factors"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Ristocetin co‑factor may be normal in mild type 1 if assay sensitivity low",
+    "aPTT can be normal in mild VWD despite low VWF",
+    "Pregnancy raises VWF levels, masking deficiency"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Uncontrolled epistaxis or oral bleeding despite local measures",
+  "Signs of internal bleeding (abdominal pain, faintness, drop in haemoglobin)",
+  "Severe postpartum haemorrhage or bleeding after surgery"
+ ],
+ "faq": [
+  {
+   "q": "Why does DDAVP not work in type 2B VWD?",
+   "a": "DDAVP releases VWF that has increased affinity for platelet GPIb, causing platelet aggregation and thrombocytopenia in type 2B."
+  },
+  {
+   "q": "Can VWD be acquired?",
+   "a": "Yes, conditions such as severe liver disease, uremia, HIV, malaria, and certain herbal medicines can lower VWF levels or function."
+  },
+  {
+   "q": "What is the role of tranexamic acid in VWD?",
+   "a": "It inhibits fibrinolysis, helping control mucosal bleeds when VWF replacement is not immediately available."
+  }
+ ],
+ "exam": [
+  "A 22‑year‑old woman presents with menorrhagia and easy bruising; PT normal, aPTT mildly prolonged. What is the next diagnostic step and why? — Order VWF antigen and ristocetin co‑factor to differentiate VWD from factor VIII deficiency.",
+  "During a caesarean section a patient with known VWD type 1 develops sudden oozing despite DDAVP given pre‑operatively. What should you do next? — Give VWF‑containing concentrate because she is a DDAVP non‑responder or has exhausted stored VWF.",
+  "A malaria‑endemic region reports increased bleeding after minor trauma. Which acquired cause should be considered and how would you confirm it? — Acquired VWD secondary to malaria; check VWF antigen/activity; if unavailable, treat malaria and observe bleeding response.",
+  "Why is desmopressin contraindicated in a patient with severe cardiac disease? — DDAVP can cause fluid retention and hyponatraemia, precipitating heart failure.",
+  "A child with severe bleeding has normal platelet count and PT, but aPTT is >45 s. Which disorder is most likely and what confirmatory test is required? — Severe VWD (type 3) or hemophilia A; measure factor VIII activity and VWF antigen to distinguish.",
+  "Explain how you would differentiate VWD type 2A from type 2B using laboratory tests. — Multimer analysis shows loss of high‑molecular‑weight multimers in 2A; platelet count falls after ristocetin in 2B, indicating increased platelet binding.",
+  "A patient on long‑term NSAIDs develops epistaxis; labs show normal VWF. What is the most likely explanation? — NSAID‑induced platelet dysfunction; VWF studies are normal, so treat by stopping NSAIDs and using topical haemostatic measures.",
+  "During pre‑operative assessment you find a low VWF level but the patient reports no bleeding history. How do you proceed? — Repeat testing to confirm; if persistent low VWF, classify as low‑grade VWD and arrange prophylaxis only for high‑risk procedures."
+ ],
+ "related": [
+  "Hemophilia A",
+  "Platelet function disorders",
+  "Acquired coagulopathy",
+  "Pregnancy‑related haemostatic changes",
+  "Desmopressin pharmacology",
+  "Tranexamic acid"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-18",
+ "reviewed": false
+}

@@ -1,0 +1,254 @@
+{
+ "medical": true,
+ "title": "Primary Sclerosing Cholangitis",
+ "subject": "Pathology",
+ "summary": "A chronic, immune‑mediated inflammation of intra‑ and extrahepatic bile ducts leading to fibrosis and strictures. It is closely linked to ulcerative colitis and presents with cholestatic liver biochemistry and pruritus.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Primary sclerosing cholangitis (PSC) is a progressive cholestatic liver disease characterised by multifocal inflammation and fibrosis of the biliary tree. Diagnosis requires cholestatic biochemistry, characteristic cholangiographic changes and exclusion of other causes.",
+   "b": [
+    "Cholestatic pattern: ↑alkaline phosphatase >2× ULN, ↑γ‑GT, mild ↑bilirubin",
+    "Imaging: MRCP or ERCP shows beaded, strictured ducts; ultrasound may show ductal dilatation",
+    "Histology: onion‑skin fibrosis, periductal inflammation; liver biopsy is supportive but not mandatory"
+   ],
+   "t": [
+    {
+     "a": "Serum alkaline phosphatase",
+     "b": "Is the patient cholestatic? A level >2× upper limit suggests cholestasis."
+    },
+    {
+     "a": "MRCP",
+     "b": "Shows beaded appearance of bile ducts; confirms PSC when typical."
+    },
+    {
+     "a": "Liver biopsy",
+     "b": "Provides histologic confirmation of periductal fibrosis; useful if imaging is inconclusive."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging is based on Mayo Risk Score and imaging severity. Early disease may be asymptomatic; advanced disease leads to cirrhosis and portal hypertension.",
+   "b": [
+    "Mayo Score: age, bilirubin, AST, albumin, INR; higher score predicts mortality."
+   ],
+   "t": [
+    {
+     "a": "Mayo Risk Score",
+     "b": "Predicts 5‑year survival; a score >3 indicates high risk."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "PSC is idiopathic but strongly associated with ulcerative colitis and other autoimmune conditions. In low‑resource settings, infections such as hepatitis B, schistosomiasis, and herbal hepatotoxins may mimic or exacerbate PSC.",
+   "b": [
+    "Ulcerative colitis (most common comorbidity)",
+    "Rheumatologic diseases (ankylosing spondylitis)",
+    "Infections (HBV, schistosomiasis)",
+    "Herbal remedies (traditional liver tonics)"
+   ],
+   "t": [
+    {
+     "a": "Hepatitis B serology",
+     "b": "Rules out viral hepatitis as cause of cholestasis."
+    },
+    {
+     "a": "Schistosoma antibody",
+     "b": "Detects schistosomal infection that can cause biliary strictures."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often report pruritus, fatigue, and painless jaundice. Physical exam may reveal jaundice, hepatomegaly, and rarely, palpable gallbladder. In advanced stages, splenomegaly and ascites appear.",
+   "b": [
+    "Pruritus (often severe, worse at night)",
+    "Painless jaundice",
+    "Fatigue",
+    "Hepatomegaly"
+   ],
+   "t": [
+    {
+     "a": "Pruritus severity",
+     "b": "Assesses impact on quality of life; guides need for bile acid sequestrants."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "A stepwise approach is essential, prioritising tests that are affordable in low‑resource settings.",
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Detects anemia or thrombocytopenia indicating portal hypertension."
+    },
+    {
+     "a": "Liver function tests",
+     "b": "Confirm cholestatic pattern; rising bilirubin suggests progression."
+    },
+    {
+     "a": "Serum IgG4",
+     "b": "Rules out IgG4‑related cholangitis, which mimics PSC."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "Initial imaging to assess ductal dilatation and exclude gallstones."
+    },
+    {
+     "a": "MRCP",
+     "b": "Gold standard for ductal morphology; if unavailable, ERCP can be used."
+    },
+    {
+     "a": "Hepatitis serology (HBV, HCV)",
+     "b": "Excludes viral hepatitis."
+    },
+    {
+     "a": "Autoimmune markers (ANA, ASMA)",
+     "b": "Support diagnosis of associated autoimmune disease."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of complications prevents morbidity. Watch for signs of cirrhosis, cholangiocarcinoma, and portal hypertension.",
+   "b": [
+    "Portal hypertension: ascites, variceal bleeding, splenomegaly",
+    "Cholangiocarcinoma: new jaundice, weight loss, abdominal pain",
+    "Severe pruritus unresponsive to therapy"
+   ],
+   "t": [
+    {
+     "a": "Upper GI endoscopy",
+     "b": "Detects esophageal varices; bleeding is a medical emergency."
+    },
+    {
+     "a": "CT abdomen",
+     "b": "Identifies mass lesions suggestive of cholangiocarcinoma."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treatment focuses on symptom control, surveillance, and addressing underlying causes. No curative medical therapy exists; liver transplantation is definitive for end‑stage disease.",
+   "b": [
+    "Bile acid sequestrants (cholestyramine) for pruritus"
+   ],
+   "t": [
+    {
+     "a": "Cholestyramine",
+     "b": "Reduces pruritus by binding bile acids in the gut."
+    },
+    {
+     "a": "Ursodeoxycholic acid",
+     "b": "May improve liver biochemistry; use cautiously due to limited evidence."
+    },
+    {
+     "a": "Antibiotics for cholangitis",
+     "b": "Treat bacterial infection of strictured ducts."
+    },
+    {
+     "a": "Statins",
+     "b": "Potentially slow fibrosis; avoid if liver enzymes are markedly elevated."
+    },
+    {
+     "a": "Transplant referral",
+     "b": "Indicated when bilirubin >2 mg/dL, MELD >15, or complications arise."
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of liver function, imaging, and cancer surveillance is mandatory. Prevention focuses on treating associated UC and avoiding hepatotoxic substances.",
+   "b": [
+    "LFTs every 3–6 months"
+   ],
+   "t": [
+    {
+     "a": "MRCP",
+     "b": "Repeat annually to monitor ductal changes."
+    },
+    {
+     "a": "CEA and CA 19-9",
+     "b": "Screen for cholangiocarcinoma; elevated levels warrant further imaging."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential includes IgG4‑related cholangitis, secondary sclerosing cholangitis (post‑infectious, post‑surgical), and biliary atresia in children.",
+   "b": [
+    "IgG4‑related cholangitis: high IgG4, responds to steroids"
+   ],
+   "t": [
+    {
+     "a": "IgG4 level",
+     "b": "High levels suggest IgG4‑related disease rather than PSC."
+    },
+    {
+     "a": "Response to steroids",
+     "b": "Steroid responsiveness indicates IgG4 disease."
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may appear normal early or be affected by concurrent conditions.",
+   "b": [
+    "Alkaline phosphatase can be normal in early disease"
+   ],
+   "t": [
+    {
+     "a": "Alkaline phosphatase",
+     "b": "A normal level does not exclude PSC if clinical suspicion is high."
+    },
+    {
+     "a": "Ultrasound",
+     "b": "May miss small strictures; MRCP is more sensitive."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening jaundice, severe abdominal pain, haematemesis, new ascites, or unexplained weight loss"
+ ],
+ "faq": [
+  {
+   "q": "Can PSC be cured?",
+   "a": "No, but liver transplantation can restore liver function."
+  },
+  {
+   "q": "Is PSC related to hepatitis B?",
+   "a": "HBV can cause cholestasis but is a separate entity; PSC is autoimmune."
+  },
+  {
+   "q": "What is the best imaging test?",
+   "a": "MRCP is preferred; ERCP is used if therapeutic intervention is needed."
+  }
+ ],
+ "exam": [
+  "What is the most specific imaging finding for PSC? — Beaded, strictured intra‑ and extrahepatic ducts on MRCP.",
+  "How would you differentiate PSC from IgG4‑related cholangitis? — High serum IgG4 and steroid response favour IgG4 disease.",
+  "A patient with PSC develops sudden jaundice and weight loss. What is the next step? — Perform CT abdomen to rule out cholangiocarcinoma.",
+  "What drug is first‑line for pruritus in PSC? — Cholestyramine, a bile acid sequestrant.",
+  "When is liver transplantation indicated in PSC? — Bilirubin >2 mg/dL, MELD >15, or complications like variceal bleeding.",
+  "Why is ursodeoxycholic acid used cautiously in PSC? — Limited evidence of benefit and potential for worsening liver enzymes.",
+  "What surveillance test is recommended annually for cholangiocarcinoma in PSC? — MRCP and CA 19‑9/CEA monitoring."
+ ],
+ "related": [
+  "Ulcerative colitis",
+  "Cholangiocarcinoma",
+  "Biliary atresia",
+  "IgG4‑related cholangitis",
+  "Liver transplantation",
+  "Autoimmune hepatitis",
+  "Hepatitis B",
+  "Schistosomiasis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-18",
+ "reviewed": false
+}

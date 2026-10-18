@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Extracellular Fluid Balance",
+ "subject": "Pathology",
+ "summary": "Extracellular fluid (ECF) volume and composition are tightly regulated by sodium, water, and acid‑base mechanisms. Disruption leads to oedema, dehydration, or electrolyte disturbances that are common in low‑resource settings.",
+ "aka": [
+  "extracellular volume"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ECF comprises plasma and interstitial fluid that bathes cells. Clinically we assess volume (hypovolaemia, euvolaemia, hypervolaemia) and composition (electrolytes, acid‑base).",
+   "b": [
+    "Hypovolaemia: low blood pressure, tachycardia, dry mucous membranes.",
+    "Hypervolaemia: peripheral oedema, raised JVP, ascites."
+   ],
+   "t": [
+    {
+     "a": "Physical exam (BP, HR, skin turgor, JVP, peripheral oedema)",
+     "b": "Detects volume status; low BP + tachycardia suggests hypovolaemia, raised JVP + pitting oedema suggests hypervolaemia."
+    },
+    {
+     "a": "Serum electrolytes (Na+, K+, Cl-)",
+     "b": "Shows sodium concentration; hyponatraemia points to excess free water, hypernatraemia to water loss."
+    },
+    {
+     "a": "Serum creatinine & urea",
+     "b": "Assesses renal contribution to volume changes; high urea/creatinine with low urine output suggests renal hypovolaemia."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical impact and laboratory derangement.",
+   "b": [
+    "Mild: asymptomatic or only mild tachycardia.",
+    "Moderate: symptomatic hypotension, oliguria, or moderate oedema.",
+    "Severe: shock, pulmonary oedema, or refractory electrolyte imbalance."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals the common drivers of ECF disturbance are infections, diarrhoeal disease, and limited access to safe fluids.",
+   "b": [
+    "Hypovolaemia – acute diarrhoea (cholera, shigella), vomiting (malaria, gastroenteritis), haemorrhage (trauma, postpartum).",
+    "Hypervolaemia – severe malaria with capillary leak, nephrotic syndrome (post‑streptococcal), chronic heart failure (rheumatic heart disease).",
+    "Electrolyte shifts – severe burns, sickle‑cell vaso‑occlusive crisis, antimalarial drug‑induced hyponatraemia."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with signs that reflect the direction of fluid shift.",
+   "b": [
+    "Hypovolaemia: orthostatic dizziness, dry tongue, sunken eyes, decreased skin turgor.",
+    "Hypervolaemia: pitting peripheral oedema, ascites, crackles in lung bases, raised JVP.",
+    "Electrolyte imbalance: muscle cramps (hypokalaemia), confusion (hypernatraemia)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm volume status, identify the aetiology, and guide therapy.",
+   "t": [
+    {
+     "a": "Urine sodium concentration",
+     "b": "Distinguishes renal vs extrarenal sodium loss; low urine Na (<20 mmol/L) suggests extrarenal loss (diarrhoea), high urine Na (>40 mmol/L) suggests renal loss (diuretics, renal disease)."
+    },
+    {
+     "a": "Serum osmolality",
+     "b": "Helps classify hyponatraemia; low osmolality with high urine Na points to SIADH, low osmolality with low urine Na points to volume depletion."
+    },
+    {
+     "a": "Point‑of‑care ultrasound (if available)",
+     "b": "Detects IVC collapsibility (hypovolaemia) or pleural effusion/pulmonary oedema (hypervolaemia). If unavailable, rely on clinical signs."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Uncorrected ECF derangements can rapidly become fatal.",
+   "b": [
+    "Severe hypovolaemia → shock, acute kidney injury, myocardial ischaemia.",
+    "Severe hypervolaemia → pulmonary oedema, respiratory failure, hepatic congestion.",
+    "Rapid electrolyte shifts → cardiac arrhythmias, seizures."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then correct volume and electrolyte abnormalities.",
+   "b": [
+    "Hypovolaemia: isotonic saline bolus 20 mL/kg (if IV access possible); oral rehydration solution (ORS) for mild cases.",
+    "Hypervolaemia: restrict sodium intake, give loop diuretics (e.g., furosemide) unless contraindicated by severe dehydration.",
+    "Hyponatraemia: give hypertonic saline only if neurological symptoms; otherwise limit free water.",
+    "Hypernatraemia: give gradual hypotonic fluids (5 % dextrose) to avoid cerebral oedema."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑assess volume status after each intervention and educate on safe fluid practices.",
+   "b": [
+    "Daily weight and input‑output chart for chronic heart failure or renal disease.",
+    "Teach ORS preparation for diarrhoeal illnesses.",
+    "Screen for underlying chronic disease (e.g., HIV, TB) that predisposes to fluid shifts."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic ECF disturbances.",
+   "b": [
+    "Dehydration vs. diabetes insipidus – both cause polyuria, but DI has low urine osmolality despite normal volume.",
+    "Pulmonary oedema vs. severe pneumonia – both cause crackles; oedema improves with diuretics, pneumonia with antibiotics."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Lab values may be deceptive in certain settings.",
+   "b": [
+    "Serum sodium may appear normal in mixed hypo‑ and hyper‑natremia; interpret with clinical picture.",
+    "Urine sodium can be falsely low in patients on recent diuretics; ask medication history."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Unresponsive patient with suspected severe hyponatraemia or hypernatraemia",
+  "Shock unresponsive to initial fluid bolus",
+  "Rapidly worsening pulmonary oedema causing respiratory distress"
+ ],
+ "faq": [
+  {
+   "q": "Why does sodium drive extracellular fluid volume?",
+   "a": "Sodium determines plasma osmolality; water follows sodium, so retaining sodium expands ECF."
+  },
+  {
+   "q": "Can a patient be both dehydrated and have peripheral oedema?",
+   "a": "Yes, in conditions like severe protein loss (nephrotic syndrome) where intravascular volume is low but interstitial fluid accumulates."
+  },
+  {
+   "q": "What is the first bedside step in a patient with suspected hypovolaemia?",
+   "a": "Assess orthostatic vitals and skin turgor; start isotonic fluid bolus if shock is evident."
+  }
+ ],
+ "exam": [
+  "A 6‑year‑old with severe diarrhoea presents with sunken eyes and a capillary refill >3 seconds — discuss immediate management and how you would confirm hypovolaemia without labs.",
+  "A patient with known rheumatic heart disease develops sudden breathlessness and bilateral crackles — differentiate pulmonary oedema from pneumonia and outline the first therapeutic action.",
+  "In a malaria patient you note a rising JVP and pitting oedema of the ankles — explain the pathophysiology of capillary leak and list two investigations you would order if ultrasound is unavailable.",
+  "A postpartum woman presents with hypotension, tachycardia, and a large abdominal girth — what are the key causes of extracellular fluid expansion in this setting and how would you prioritize treatment?",
+  "A patient on chronic diuretics shows hyponatraemia with low serum osmolality — what question would you ask to distinguish SIADH from volume depletion?",
+  "You receive a lab report showing normal serum sodium but the patient has marked peripheral oedema — what potential laboratory pitfall should you consider and what bedside test can clarify the picture?"
+ ],
+ "related": [
+  "Fluid and Electrolyte Disorders",
+  "Acid‑Base Balance",
+  "Renal Failure",
+  "Heart Failure",
+  "Malaria‑Associated Capillary Leak",
+  "Diarrhoeal Dehydration"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-18",
+ "reviewed": false
+}

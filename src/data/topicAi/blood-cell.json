@@ -174,5 +174,533 @@
  "kind": "disease",
  "model": "openai/gpt-oss-120b",
  "generatedAt": "2026-10-17",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "b": [
+     "Key history questions focus on symptoms related to anaemia (fatigue, dyspnoea, palpitations), bleeding (bruising, epistaxis, haematuria, melena), or infection (fever, rigors, cough, dysuria, recurrent infections).",
+     "Ask about recent travel, diet, medications (including traditional remedies), alcohol intake, and any history of blood disorders or chronic diseases like HIV or malaria.",
+     "Inquire about family history of blood disorders, jaundice, or early deaths, which might suggest inherited conditions like sickle cell disease or thalassaemia.",
+     "Assess for symptoms suggestive of specific causes: weight loss and night sweats (TB, malignancy), joint pain (sickle cell crisis, inflammatory conditions), or neurological symptoms (B12 deficiency)."
+    ],
+    "t": [
+     {
+      "a": "Pallor (conjunctival, palmar, nail beds)",
+      "b": "Elicited by pulling down the lower eyelids, observing the palms, and checking the nail beds. Suggests anaemia. Its absence does not rule out significant anaemia, especially in darker skin tones or if the patient is dehydrated."
+     },
+     {
+      "a": "Jaundice",
+      "b": "Observe the sclera for yellowing. Indicates elevated bilirubin, often seen in haemolytic anaemias or liver disease. Bedside assessment cannot differentiate between conjugated and unconjugated hyperbilirubinaemia."
+     },
+     {
+      "a": "Splenomegaly",
+      "b": "Palpate the left upper quadrant from the right iliac fossa upwards, asking the patient to take a deep breath. An enlarged spleen can be felt in conditions like malaria, sickle cell disease, leukaemias, and lymphomas. Size and consistency are important clues."
+     },
+     {
+      "a": "Hepatomegaly",
+      "b": "Palpate the right upper quadrant from the right iliac fossa upwards, asking the patient to take a deep breath. An enlarged liver can be seen in various anaemias (e.g., megaloblastic) and infiltrative diseases."
+     },
+     {
+      "a": "Petechiae and Purpura",
+      "b": "Inspect the skin, particularly the lower limbs, for small red spots (petechiae) or larger purplish bruises (purpura). Suggests thrombocytopenia or platelet dysfunction. Cannot determine the underlying cause or severity without further tests."
+     },
+     {
+      "a": "Lymphadenopathy",
+      "b": "Palpate lymph node chains (cervical, axillary, inguinal). Enlarged nodes can indicate infection (e.g., TB, HIV), leukaemia, or lymphoma. Location, size, consistency, and mobility are key features."
+     },
+     {
+      "a": "Heart rate and rhythm",
+      "b": "Assess for tachycardia, which is common in anaemia due to compensatory mechanisms. Irregular rhythms may suggest cardiac complications or electrolyte imbalances."
+     },
+     {
+      "a": "Signs of infection",
+      "b": "Look for fever, localised signs of infection (e.g., chest signs, urinary symptoms), or oral thrush (in leukopenia or immunosuppression). Bedside assessment cannot identify the specific pathogen."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "b": [
+     "The Complete Blood Count (CBC) is the cornerstone, providing haemoglobin, haematocrit, red blood cell count, white blood cell count with differential, and platelet count. Essential for initial assessment and monitoring.",
+     "Red blood cell indices (MCV, MCH, MCHC) help classify anaemia by size and haemoglobin content: microcytic (MCV <80 fL), normocytic (MCV 80-100 fL), and macrocytic (MCV >100 fL).",
+     "Peripheral blood smear is crucial for morphology assessment: hypochromia and microcytosis suggest iron deficiency or thalassaemia; macro-ovalocytes and hypersegmented neutrophils suggest B12/folate deficiency; schistocytes indicate microangiopathic haemolytic anaemia; sickle cells are pathognomonic.",
+     "Reticulocyte count assesses bone marrow response: high count indicates peripheral destruction or blood loss (haemolysis, bleeding); low count suggests marrow failure (aplastic anaemia, deficiency states, infiltration).",
+     "In low-resource settings, rapid diagnostic tests (RDTs) for malaria are vital for unexplained anaemia and thrombocytopenia. HIV RDTs are essential in endemic areas.",
+     "Stool microscopy for ova and parasites is indicated if hookworm infestation is suspected as a cause of iron deficiency anaemia.",
+     "Bone marrow aspiration and biopsy are reserved for complex cases where peripheral blood findings are inconclusive or to diagnose primary marrow disorders like leukaemia or aplastic anaemia.",
+     "Liver function tests (LFTs) and renal function tests (RFTs) are important as liver and kidney disease can affect blood cell production and survival, and vice versa."
+    ],
+    "t": [
+     {
+      "a": "Complete Blood Count (CBC)",
+      "b": "Provides Hb, Hct, RBC, WBC (with differential), Platelets. Low Hb/Hct = anaemia. High WBC = leukocytosis (infection, inflammation, leukaemia). Low WBC = leukopenia (viral infection, marrow suppression, autoimmune). Low platelets = thrombocytopenia (malaria, dengue, sepsis, ITP, DIC)."
+     },
+     {
+      "a": "Red Cell Indices (MCV, MCH, MCHC)",
+      "b": "MCV (Mean Corpuscular Volume): <80 fL = microcytic (iron deficiency, thalassaemia); 80-100 fL = normocytic (acute blood loss, haemolysis, chronic disease); >100 fL = macrocytic (B12/folate deficiency, liver disease, myelodysplasia). MCH/MCHC reflect haemoglobin content."
+     },
+     {
+      "a": "Reticulocyte Count",
+      "b": "Measures immature red blood cells. High count (>2-3%) indicates bone marrow is responding to anaemia (e.g., haemolysis, blood loss). Low count (<1%) suggests inadequate marrow production (e.g., deficiency, aplasia, infiltration)."
+     },
+     {
+      "a": "Peripheral Blood Smear",
+      "b": "Morphology: microcytic/hypochromic (iron deficiency, thalassaemia); macro-ovalocytes/hypersegmented neutrophils (B12/folate def); schistocytes (MAHA); sickle cells (SCD); target cells (liver disease, thalassaemia); spherocytes (hereditary spherocytosis, AIHA)."
+     },
+     {
+      "a": "Malaria Rapid Diagnostic Test (RDT)",
+      "b": "Detects malaria antigens. Positive result confirms malaria, a common cause of anaemia and thrombocytopenia in endemic areas. Negative result does not exclude malaria if parasitaemia is low."
+     },
+     {
+      "a": "HIV Rapid Test",
+      "b": "Detects HIV antibodies. Essential in high-prevalence areas for unexplained cytopenias, as HIV directly affects bone marrow and increases susceptibility to opportunistic infections causing blood dyscrasias."
+     },
+     {
+      "a": "Serum Ferritin",
+      "b": "Reflects total body iron stores. Low ferritin (<15-30 mcg/L) strongly suggests iron deficiency. High ferritin can be seen in inflammation, infection, liver disease, or haemochromatosis, making interpretation complex."
+     },
+     {
+      "a": "Serum Bilirubin",
+      "b": "Elevated total bilirubin suggests haemolysis or liver dysfunction. If predominantly unconjugated, points to haemolysis or Gilbert's syndrome. If conjugated is high, suggests biliary obstruction or liver disease. Bedside tests cannot differentiate."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "b": [
+     "Diagnosis relies on a combination of clinical presentation, peripheral blood morphology, and specific laboratory investigations. Classification often follows the affected cell line (anaemia, leukocytosis/leukopenia, thrombocytopenia).",
+     "Anaemia severity is graded by haemoglobin levels: Mild (Hb 10-12 g/dL), Moderate (Hb 7-10 g/dL), Severe (<7 g/dL). In pregnancy, thresholds are lower (e.g., <11 g/dL).",
+     "Leukocytosis is generally defined as WBC >11 × 10⁹/L, with marked leukocytosis (>30 × 10⁹/L) raising concern for leukaemia or severe infection. Leukopenia is WBC <4 × 10⁹/L.",
+     "Thrombocytopenia is defined as platelets <150 × 10⁹/L. Severe thrombocytopenia (<20 × 10⁹/L) carries a high risk of spontaneous bleeding.",
+     "Specific diagnostic criteria exist for conditions like sickle cell disease (Hb electrophoresis), thalassaemia (Hb electrophoresis, genetic testing), and leukaemias (bone marrow morphology and immunophenotyping).",
+     "In low-resource settings, diagnosis often relies on clinical suspicion and basic tests due to limited availability of advanced investigations. For example, malaria RDT and peripheral smear are key.",
+     "Staging is relevant for haematological malignancies (e.g., Ann Arbor for lymphoma, FAB for leukaemia) and chronic conditions like HIV (CD4 counts).",
+     "Severity assessment guides urgency: severe anaemia with symptoms requires urgent transfusion; profound leukopenia with fever needs prompt broad-spectrum antibiotics; severe thrombocytopenia requires platelet support and investigation for cause."
+    ],
+    "t": [
+     {
+      "a": "Anaemia Classification (WHO)",
+      "b": "Mild: Hb 10-12 g/dL. Moderate: Hb 7-10 g/dL. Severe: Hb <7 g/dL. These thresholds guide transfusion decisions and urgency of investigation/management."
+     },
+     {
+      "a": "Iron Deficiency Anaemia",
+      "b": "Diagnosis: Microcytic hypochromic anaemia (low MCV, MCH, MCHC), low serum ferritin, low serum iron, high TIBC. Confirmed by response to iron therapy."
+     },
+     {
+      "a": "Vitamin B12/Folate Deficiency Anaemia",
+      "b": "Diagnosis: Macrocytic anaemia (high MCV), ovalocytes, hypersegmented neutrophils on smear. Low serum B12/folate levels confirm. Neurological symptoms may be present even with normal Hb."
+     },
+     {
+      "a": "Sickle Cell Disease",
+      "b": "Diagnosis: Clinical features (vaso-occlusive crises, anaemia, organ damage), peripheral smear (sickle cells), Hb electrophoresis showing HbS. Severity varies greatly."
+     },
+     {
+      "a": "Malaria",
+      "b": "Diagnosis: Fever, chills, anaemia, thrombocytopenia. Confirmed by malaria RDT or peripheral blood smear showing Plasmodium parasites. Multiple species exist, affecting severity and treatment."
+     },
+     {
+      "a": "Acute Leukaemia",
+      "b": "Diagnosis: Profound anaemia, leukocytosis (often with blasts) or leukopenia, thrombocytopenia. Bone marrow biopsy showing >20% blasts is diagnostic. Requires urgent referral."
+     },
+     {
+      "a": "Thrombocytopenia Classification",
+      "b": "Mild: 100-150 × 10⁹/L. Moderate: 50-100 × 10⁹/L. Severe: <50 × 10⁹/L. Very severe/life-threatening: <10-20 × 10⁹/L, risk of spontaneous bleeding."
+     },
+     {
+      "a": "HIV-associated Cytopenias",
+      "b": "Diagnosis: Cytopenias (anaemia, leukopenia, thrombocytopenia) in a patient with known HIV or suggestive symptoms. Often multifactorial (direct viral effect, opportunistic infections, drug toxicity). CD4 count is important for staging and management."
+     }
+    ]
+   },
+   {
+    "h": "Look-alike conditions",
+    "b": [
+     "Distinguishing between different causes of anaemia, particularly microcytic anaemia, is critical. Iron deficiency anaemia and thalassaemia trait can present similarly but have different management implications.",
+     "Leukocytosis can be reactive (infection, inflammation) or neoplastic (leukaemia). The peripheral smear and clinical context are key differentiators.",
+     "Thrombocytopenia can be immune-mediated (ITP, drug-induced) or non-immune (malaria, dengue, DIC, marrow failure). History of drug exposure, presence of purpura/bleeding, and other CBC findings are important.",
+     "The distinction between acute blood loss anaemia and haemolytic anaemia can be challenging if the cause of bleeding is not obvious. Reticulocyte count is helpful.",
+     "Megaloblastic anaemia due to B12 or folate deficiency must be differentiated from other causes of macrocytosis, such as liver disease or myelodysplastic syndromes."
+    ],
+    "t": [
+     {
+      "a": "Iron Deficiency Anaemia vs. Thalassaemia Trait",
+      "b": "Both cause microcytic, hypochromic anaemia. Thalassaemia trait usually has normal or elevated red cell count, normal or high ferritin, and normal response to iron. Iron deficiency has low ferritin and responds to iron."
+     },
+     {
+      "a": "Reactive Leukocytosis vs. Leukaemia",
+      "b": "Reactive leukocytosis typically shows mature neutrophils, often with a left shift, and is associated with infection/inflammation. Leukaemia shows immature blasts in the peripheral blood and bone marrow, often with pancytopenia or marked leukocytosis."
+     },
+     {
+      "a": "Immune Thrombocytopenia (ITP) vs. Malaria/Dengue",
+      "b": "ITP: isolated thrombocytopenia, often normal WBC/Hb. Malaria/Dengue: often accompanied by fever, anaemia, leukopenia (dengue), or other specific signs. Malaria RDT is crucial. Dengue serology may be needed."
+     },
+     {
+      "a": "Acute Blood Loss Anaemia vs. Haemolytic Anaemia",
+      "b": "Both can present with normocytic anaemia. Acute blood loss: history of bleeding, low reticulocyte count initially. Haemolytic anaemia: high reticulocyte count, elevated bilirubin, LDH, possibly spherocytes/schistocytes on smear."
+     },
+     {
+      "a": "Megaloblastic Anaemia vs. Myelodysplastic Syndrome (MDS)",
+      "b": "Both can cause macrocytosis and cytopenias. Megaloblastic: ovalocytes, hypersegmented neutrophils, low B12/folate. MDS: dysplastic changes in multiple cell lines, often normal B12/folate, may have ring sideroblasts."
+     },
+     {
+      "a": "Sepsis-induced Thrombocytopenia vs. DIC",
+      "b": "Sepsis: Thrombocytopenia common, often with leukocytosis. DIC: Thrombocytopenia with prolonged PT/aPTT, elevated D-dimer, fragmented RBCs (schistocytes) on smear, and signs of widespread clotting/bleeding."
+     },
+     {
+      "a": "Nutritional Anaemia vs. Anaemia of Chronic Disease",
+      "b": "Nutritional (iron/B12/folate): specific indices (MCV, ferritin, B12/folate) are key. ACD: often normocytic/mildly microcytic, low serum iron, normal/high ferritin, impaired iron utilization."
+     },
+     {
+      "a": "Viral Leukopenia vs. Aplastic Anaemia",
+      "b": "Viral: often transient, may have other viral symptoms. Aplastic anaemia: profound pancytopenia (low Hb, WBC, platelets), low reticulocytes, hypocellular bone marrow. Usually insidious onset."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "Initial stabilization: Address immediate life threats. For severe anemia (Hb < 7 g/dL or symptomatic), consider blood transfusion. For severe thrombocytopenia (<20 x 10⁹/L) with bleeding, platelet transfusion may be needed. For severe leukopenia with signs of infection, broad-spectrum antibiotics are crucial.",
+     "Identify and treat the underlying cause: This is paramount. For malaria, use antimalarials. For hookworm, use anthelmintics. For nutritional deficiencies, provide iron, folate, or B12 supplements. For HIV, initiate or optimize antiretroviral therapy (ART). For sepsis, identify and treat the source.",
+     "Supportive care: Ensure adequate hydration and nutrition. For anemia, monitor fluid balance carefully to avoid overload. For leukopenia, implement infection control measures.",
+     "Monitoring: Regularly review CBC to assess response to treatment. Monitor vital signs and clinical status for improvement or deterioration. For specific conditions, monitor relevant markers (e.g., viral load for HIV, parasite count for malaria).",
+     "Escalation and referral: Urgent referral is needed for suspected acute leukemia (WBC >30 x 10⁹/L with blasts), severe symptomatic anemia unresponsive to initial measures, or life-threatening bleeding due to thrombocytopenia. Consider referral for complex cases or when local resources are insufficient."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "t": [
+     {
+      "a": "Antiretroviral Therapy (ART)",
+      "b": "Can cause myelosuppression (leukopenia, anemia, thrombocytopenia), particularly with zidovudine, stavudine, and lamivudine. Monitor CBC regularly. If significant cytopenia occurs, consider dose reduction or switching to alternative agents. Watch for drug interactions with other medications."
+     },
+     {
+      "a": "Antimalarials",
+      "b": "Some can cause transient cytopenias. For example, pyrimethamine can cause folate deficiency leading to megaloblastic anemia. Monitor CBC. Ensure adequate folate supplementation if using such drugs long-term."
+     },
+     {
+      "a": "Antibiotics",
+      "b": "Certain antibiotics, like trimethoprim-sulfamethoxazole (co-trimoxazole), can cause bone marrow suppression. Monitor CBC. Consider folate supplementation. Some antibiotics can also cause immune-mediated thrombocytopenia."
+     },
+     {
+      "a": "Chemotherapy",
+      "b": "Induces significant myelosuppression. This is an expected side effect. Management involves supportive care, growth factors, and dose adjustments based on nadir counts. Prophylactic antibiotics and antifungals are often necessary."
+     },
+     {
+      "a": "Herbal remedies and traditional medicines",
+      "b": "Can be unpredictable and may interact with conventional treatments or cause direct toxicity leading to cytopenias. Advise patients to disclose all remedies used. If a specific remedy is suspected, discontinue it and monitor blood counts."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "HIV infection: Advanced HIV can cause direct bone marrow suppression, opportunistic infections affecting the marrow, or drug-induced cytopenias from ART. This can manifest as anemia, leukopenia, or thrombocytopenia. ART adherence is crucial.",
+     "Tuberculosis (TB): Can infiltrate the bone marrow, causing pancytopenia or isolated cytopenias. TB can also be exacerbated by immunosuppression. Diagnosis may require bone marrow biopsy. Treatment of TB is essential.",
+     "Malnutrition: Iron deficiency, folate deficiency, and vitamin B12 deficiency are common causes of anemia, particularly in low-resource settings. Protein-energy malnutrition can also affect overall bone marrow function.",
+     "Pregnancy: Physiological changes can alter blood counts. Nutritional deficiencies are common. Gestational thrombocytopenia is usually mild and resolves post-partum. Preeclampsia can cause thrombocytopenia. Monitor closely.",
+     "Alcohol abuse: Chronic alcohol use can suppress bone marrow, leading to macrocytic anemia and leukopenia. It can also impair nutrient absorption, worsening deficiencies.",
+     "Renal failure: Can cause anemia of chronic disease and impaired erythropoietin production. Dialysis can lead to folate deficiency. Monitor renal function and EPO levels.",
+     "Liver failure: Can affect platelet production and survival, leading to thrombocytopenia. Coagulation factor deficiencies can complicate bleeding.",
+     "Age extremes: Neonates and the elderly have different baseline blood counts and are more susceptible to complications. Elderly patients may have comorbidities affecting blood cell production or survival."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "Children: Anemia is common, with nutritional deficiencies, malaria, and sickle cell disease being major causes. Leukocytosis is often due to infection. Thrombocytopenia can be caused by severe infections like malaria and dengue. Monitor growth and development.",
+     "Pregnancy: Physiological anemia is common. Iron and folate supplementation are essential. Gestational thrombocytopenia is usually benign. Severe thrombocytopenia requires investigation for causes like preeclampsia or immune thrombocytopenia.",
+     "Elderly: More prone to nutritional deficiencies, myelodysplastic syndromes, and drug-induced cytopenias. Consider comorbidities and polypharmacy. Response to treatment may be slower.",
+     "People with HIV: Cytopenias are common due to the virus itself, opportunistic infections, or ART. Regular CBC monitoring is vital. Optimize ART and manage opportunistic infections promptly.",
+     "Low-resource settings: Malaria, hookworm, nutritional deficiencies, and HIV are prevalent causes of cytopenias. Diagnostic facilities may be limited, requiring reliance on clinical signs, basic tests (e.g., rapid malaria tests, peripheral smears), and empirical treatment. Blood transfusion services may be constrained."
+    ]
+   },
+   {
+    "h": "exam",
+    "t": [
+     {
+      "a": "A 35-year-old woman presents with fatigue and shortness of breath. Her Hb is 6.5 g/dL, MCV is 60 fL. What are the immedi",
+      "b": "Immediate priorities include assessing for signs of heart failure and oxygenation, and considering blood transfusion if symptomatic or Hb is critically low. The most likely cause in this setting is severe iron deficiency anemia, possibly exacerbated by hookworm or malaria."
+     },
+     {
+      "a": "A child with a known history of sickle cell disease presents with fever, cough, and a WBC count of 25 x 10⁹/L. What is t",
+      "b": "The primary concern is overwhelming post-splenectomy infection (if asplenic) or severe bacterial pneumonia. Investigations should include chest X-ray, blood cultures, sputum microscopy (if possible), and possibly a lumbar puncture if meningitis is suspected."
+     },
+     {
+      "a": "A patient on ART for HIV develops a platelet count of 30 x 10⁹/L and petechiae. What are the differential diagnoses and ",
+      "b": "Differential diagnoses include HIV-associated thrombocytopenia, drug-induced thrombocytopenia (from ART or other medications), and opportunistic infections. Initial steps involve reviewing ART regimen, checking for other causes of bleeding, and considering a trial of steroids or IVIg if severe."
+     },
+     {
+      "a": "You are managing a patient with severe anemia (Hb 5 g/dL) and signs of heart failure. What are the risks of blood transf",
+      "b": "The main risk is fluid overload, which can precipitate or worsen heart failure, leading to pulmonary edema. Careful monitoring of fluid balance, slow transfusion rates, and possibly diuretics are essential."
+     },
+     {
+      "a": "A peripheral smear shows macro-ovalocytes and hypersegmented neutrophils. What are the likely causes of this morphology,",
+      "b": "This morphology suggests megaloblastic anemia. Likely causes include Vitamin B12 deficiency or folate deficiency. Investigations would include serum B12 and folate levels, and possibly a bone marrow aspirate if diagnosis remains unclear."
+     },
+     {
+      "a": "A patient with known TB presents with pancytopenia. How might TB be causing this, and what specific investigations are i",
+      "b": "TB can infiltrate the bone marrow, causing myelosuppression. Investigations should include a bone marrow aspirate and biopsy to look for granulomas and acid-fast bacilli, and sputum/urine/blood cultures for M. tuberculosis."
+     },
+     {
+      "a": "What are the key differences in managing anemia in pregnancy compared to non-pregnant adults?",
+      "b": "In pregnancy, nutritional causes (iron, folate) are more common and require specific supplementation. Gestational thrombocytopenia needs to be distinguished from pathological causes. Blood transfusion carries higher risks due to fluid shifts."
+     },
+     {
+      "a": "A patient with severe leukopenia (WBC 1 x 10⁹/L) and fever is admitted. What is the immediate management approach?",
+      "b": "Immediate management involves broad-spectrum intravenous antibiotics, blood cultures, and supportive care. Neutropenic precautions should be implemented. Consider granulocyte colony-stimulating factors (G-CSF) if indicated."
+     },
+     {
+      "a": "How does chronic alcohol abuse affect blood cell counts, and what are the management implications?",
+      "b": "Alcohol can cause macrocytic anemia and leukopenia through direct marrow toxicity and impaired nutrition. Management involves alcohol cessation, nutritional support (folate, B12), and monitoring blood counts. Bone marrow recovery can be slow."
+     },
+     {
+      "a": "You encounter a patient with unexplained thrombocytopenia and a normal coagulation profile. What are the next steps in i",
+      "b": "Next steps include a detailed drug history, checking for recent viral infections (malaria, dengue, HIV), peripheral smear review for platelet clumping or other abnormalities, and possibly an autoimmune workup (e.g., anti-platelet antibodies) if indicated."
+     },
+     {
+      "a": "What are the specific challenges in managing blood cell disorders in a very low-resource setting?",
+      "b": "Challenges include limited access to diagnostic tests (CBC, peripheral smear, specific assays), scarcity of blood products for transfusion, lack of advanced treatments (e.g., growth factors, specific immunosuppressants), and high prevalence of infectious causes."
+     },
+     {
+      "a": "A 70-year-old patient presents with fatigue and a new diagnosis of anemia (Hb 9 g/dL) with a normal MCV. What are the ke",
+      "b": "Differential diagnoses include anemia of chronic disease (inflammation, infection, malignancy), early B12/folate deficiency (can present with normal MCV initially), renal impairment, and myelodysplastic syndromes. Further workup is needed."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Shelf life of 'opened' RBC unit (open system) at 1-6°C is 24 hours.",
+   "Universal red blood cell donor is O negative.",
+   "Universal red blood cell recipient is AB positive.",
+   "Hemoglobin <7 g/dL in adults (or <5 g/dL in children) is severe anemia.",
+   "Platelet count <20 x 10^9/L is severe thrombocytopenia.",
+   "Normal WBC count is 4-11 x 10^9/L.",
+   "Normal platelet count is 150-450 x 10^9/L.",
+   "Microcytic hypochromic anemia suggests iron deficiency.",
+   "Eosinophils are primarily responsible for defense against parasitic infections."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "An abnormal, sustained pathological increase in circulating red blood cell mass is clinically termed?",
+    "a": "Polycythemia. This can be primary (e.g., polycythemia vera) or secondary (e.g., chronic hypoxia).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "The primary biochemical function of hemoglobin in red blood cells is the transport of?",
+    "a": "Oxygen. Hemoglobin binds oxygen in the lungs and releases it in the tissues, facilitated by its heme iron.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the shelf life of a unit of Red Blood Cells that has been 'opened' by entering the system for washing or aliquoting in an open system, if stored at 1-6°C?",
+    "a": "24 hours. This reduced shelf life is due to the increased risk of bacterial contamination once the sterile barrier is breached.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which blood type is considered the universal donor for red blood cells?",
+    "a": "O negative. These red blood cells lack A, B, and Rh antigens, making them less likely to trigger an immune response in recipients of any blood type.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which blood type is considered the universal recipient for red blood cells?",
+    "a": "AB positive. Individuals with AB positive blood have A, B, and Rh antigens, and therefore do not produce antibodies against these antigens, allowing them to receive red blood cells from any ABO/Rh type.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which antigen is present on the surface of red blood cells in Type B blood?",
+    "a": "B antigen. Individuals with Type B blood also have anti-A antibodies in their plasma.",
+    "past": true
+   },
+   {
+    "q": "A 28-year-old woman presents with fatigue and pallor. Complete blood count shows low haemoglobin level and peripheral blood film shows microcytic hypochromic red blood cells. What is the most likely diagnosis?",
+    "a": "Iron deficiency anemia. This is a common cause of anemia in women of reproductive age, often due to menstrual blood loss or inadequate dietary intake. Microcytic hypochromic morphology is characteristic.",
+    "past": true
+   },
+   {
+    "q": "Which blood cell type is primarily responsible for defence against parasitic infections?",
+    "a": "Eosinophils. They release granules containing enzymes and toxins that are effective against parasites, and also play a role in allergic reactions.",
+    "past": true
+   },
+   {
+    "q": "Outline the complete pathway of bilirubin metabolism, from the breakdown of aging red blood cells to its final excretion products in stool and urine.",
+    "a": "Aging RBCs are phagocytosed by macrophages, releasing heme. Heme is converted to biliverdin, then to unconjugated bilirubin (UCB). UCB binds to albumin and travels to the liver, where it is conjugated with glucuronic acid by UDP-glucuronyltransferase to form conjugated bilirubin (CB). CB is excreted into bile, then into the intestines. In the gut, bacteria convert CB to urobilinogen. Some urobilinogen is reabsorbed and excreted in urine, while most is oxidized to stercobilin, which gives stool its brown color.",
+    "past": true
+   },
+   {
+    "q": "Outline the metabolic pathway of bilirubin from aging red blood cells to its excretion. Additionally, define kernicterus and state which type of bilirubin is involved in its pathology.",
+    "a": "Pathway: Aging RBCs -> Heme -> Biliverdin -> Unconjugated Bilirubin (UCB) -> Liver (conjugation) -> Conjugated Bilirubin (CB) -> Bile -> Intestines -> Urobilinogen -> Stercobilin (stool) / Urobilin (urine). Kernicterus is a rare neurological syndrome in infants caused by severe unconjugated hyperbilirubinemia, where UCB crosses the blood-brain barrier and deposits in brain tissue, causing irreversible damage. Unconjugated bilirubin is involved.",
+    "past": true
+   },
+   {
+    "q": "Outline the major steps in the normal metabolism and excretion of bilirubin, starting from aging red blood cells and concluding with its final products in stool and urine.",
+    "a": "1. Heme breakdown: Hemoglobin from senescent RBCs is broken down into heme and globin. Heme is converted to biliverdin, then to unconjugated bilirubin (UCB). 2. Transport: UCB binds to albumin and is transported to the liver. 3. Hepatic uptake and conjugation: In the liver, UCB is taken up by hepatocytes and conjugated with glucuronic acid by UDP-glucuronyltransferase to form conjugated bilirubin (CB). 4. Biliary excretion: CB is actively secreted into the bile canaliculi and then into the small intestine. 5. Intestinal metabolism: In the colon, bacterial enzymes deconjugate CB and convert it to urobilinogen. 6. Excretion: Most urobilinogen is oxidized to stercobilin and excreted in stool (g",
+    "past": true
+   },
+   {
+    "q": "Outline the major steps in bilirubin metabolism, starting from the breakdown of aging red blood cells and culminating in its excretion.",
+    "a": "1. Heme from senescent red blood cells is converted to unconjugated bilirubin (UCB) in reticuloendothelial cells. 2. UCB is transported to the liver bound to albumin. 3. In the liver, UCB is conjugated to conjugated bilirubin (CB) by glucuronyl transferase. 4. CB is excreted into bile and then into the intestine. 5. Intestinal bacteria convert CB to urobilinogen. 6. Urobilinogen is either excreted in stool as stercobilin or reabsorbed and excreted in urine as urobilin.",
+    "past": true
+   },
+   {
+    "q": "A patient with known HIV presents with hemoglobin 8 g/dL, MCV 110 fL – what are the likely causes and initial investigations?",
+    "a": "Likely causes of macrocytic anemia (MCV >100 fL) in HIV include antiretroviral therapy (especially zidovudine), B12 or folate deficiency (due to malabsorption or poor diet), chronic disease anemia, or myelodysplastic syndromes. Initial investigations should include serum B12 and folate levels, reticulocyte count, and review of current medications."
+   },
+   {
+    "q": "In a malaria-endemic area, a child has anemia and thrombocytopenia – which rapid tests would you order?",
+    "a": "Rapid malaria diagnostic test (RDT) for Plasmodium falciparum and other species, and an HIV rapid test. Malaria is a common cause of both anemia and thrombocytopenia in endemic areas, and HIV can cause cytopenias and increase susceptibility to infections."
+   },
+   {
+    "q": "You receive a CBC showing platelets 30 ×10⁹/L but the patient has no bleeding – what laboratory artifact could explain this?",
+    "a": "Pseudothrombocytopenia due to EDTA-dependent platelet agglutination. This occurs when platelets clump together in the presence of EDTA anticoagulant, leading to an artificially low automated count. A peripheral blood smear should be reviewed to confirm platelet morphology and estimate count, or a sample collected in citrate can be used."
+   },
+   {
+    "q": "A patient on antiretroviral therapy develops leukopenia – which drugs are most likely responsible and what is your initial management?",
+    "a": "Zidovudine (AZT) is a common cause of myelosuppression, including leukopenia and anemia. Other drugs like ganciclovir (if used for CMV) can also cause it. Initial management involves reviewing the drug regimen, considering dose reduction or switching to an alternative ART if clinically appropriate, and monitoring the CBC closely. Exclude opportunistic infections."
+   },
+   {
+    "q": "During a blood bank shortage, you must decide which patients receive packed RBCs – list your priorities.",
+    "a": "Priorities include patients with acute, life-threatening hemorrhage (e.g., trauma, GI bleed), severe symptomatic anemia (Hb <7 g/dL with symptoms like cardiac failure, altered mental status), or those requiring transfusion for urgent surgery. Prioritize based on clinical stability, risk of decompensation, and potential for immediate benefit."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 6-year-old with sickle cell disease presents with sudden chest pain and hemoglobin 6 g/dL. Which of the following is the most appropriate immediate management step?",
+    "o": [
+     "Administer oral iron supplements.",
+     "Order a peripheral blood smear for malaria parasites.",
+     "Initiate broad-spectrum antibiotics and consider exchange transfusion.",
+     "Schedule for elective splenectomy."
+    ],
+    "a": 2,
+    "e": "Sudden chest pain and low hemoglobin in sickle cell disease suggest acute chest syndrome, a medical emergency requiring urgent antibiotics for presumed infection and potentially exchange transfusion for severe anemia and vaso-occlusion."
+   },
+   {
+    "q": "A febrile adult with WBC 15 ×10⁹/L and a peripheral smear showing many neutrophils. How do you distinguish bacterial sepsis from a severe inflammatory response without infection?",
+    "o": [
+     "Rely solely on the absolute neutrophil count.",
+     "Assess for clinical signs of systemic inflammatory response syndrome (SIRS) and organ dysfunction, and measure C-reactive protein (CRP) or procalcitonin.",
+     "Perform a bone marrow biopsy immediately.",
+     "Administer empiric antibiotics and observe for 24 hours."
+    ],
+    "a": 1,
+    "e": "While neutrophilia indicates inflammation, distinguishing sepsis requires correlating with clinical signs of SIRS (fever, tachycardia, tachypnea) and organ dysfunction, along with inflammatory markers like CRP or procalcitonin, which are elevated in sepsis."
+   },
+   {
+    "q": "A pregnant woman at 28 weeks has platelets 45 ×10⁹/L and mild bruising. Which investigation steps are most appropriate?",
+    "o": [
+     "Immediately transfuse platelets.",
+     "Recheck CBC with a citrate tube and perform a peripheral blood smear to rule out pseudothrombocytopenia.",
+     "Start high-dose corticosteroids empirically.",
+     "Induce labor due to severe thrombocytopenia."
+    ],
+    "a": 1,
+    "e": "Pseudothrombocytopenia is common in pregnancy. Rechecking with a citrate tube and reviewing the peripheral smear are crucial to confirm true thrombocytopenia before initiating invasive management or treatment."
+   },
+   {
+    "q": "Which of the following conditions is most likely to cause a normocytic, normochromic anemia in a patient with chronic kidney disease?",
+    "o": [
+     "Iron deficiency anemia.",
+     "Vitamin B12 deficiency.",
+     "Anemia of chronic disease.",
+     "Acute blood loss."
+    ],
+    "a": 2,
+    "e": "Anemia of chronic disease is very common in chronic kidney disease due to reduced erythropoietin production and inflammation, typically presenting as normocytic, normochromic anemia."
+   },
+   {
+    "q": "A patient presents with recurrent infections, oral thrush, and weight loss. CBC shows leukopenia, predominantly lymphopenia. Which of the following is the most likely underlying condition in an East African setting?",
+    "o": [
+     "Aplastic anemia.",
+     "Acute leukemia.",
+     "Advanced HIV infection.",
+     "Drug-induced myelosuppression."
+    ],
+    "a": 2,
+    "e": "Recurrent infections, oral thrush, weight loss, and lymphopenia are classic signs of advanced HIV infection, which is highly prevalent in East Africa."
+   },
+   {
+    "q": "A patient on isoniazid, rifampicin, pyrazinamide, and ethambutol for tuberculosis develops a new onset of severe anemia with a positive direct Coombs test. Which drug is the most likely cause?",
+    "o": [
+     "Isoniazid.",
+     "Rifampicin.",
+     "Pyrazinamide.",
+     "Ethambutol."
+    ],
+    "a": 1,
+    "e": "Rifampicin is known to cause drug-induced immune hemolytic anemia, often characterized by a positive direct Coombs test."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 35-year-old male presents to a rural clinic in Western Kenya with a 2-week history of progressive fatigue, generalized body weakness, and occasional dizziness. He also reports dark urine for the past 3 days. On examination, he is pale, jaundiced, and has mild splenomegaly. His rapid malaria test is negative. A CBC shows Hb 5.8 g/dL, MCV 92 fL, MCH 31 pg, WBC 7.5 x 10^9/L, Platelets 250 x 10^9/L. The peripheral smear shows spherocytes and polychromasia.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis based on the clinical picture and laboratory findings?",
+      "a": "The most likely diagnosis is autoimmune hemolytic anemia (AIHA). The combination of anemia, jaundice, dark urine (hemoglobinuria), splenomegaly, normocytic/normochromic indices, spherocytes, and polychromasia strongly points to hemolysis. The negative malaria test rules out a common cause of hemolysis in this region."
+     },
+     {
+      "q": "What immediate investigation would you order to confirm your diagnosis?",
+      "a": "A direct Coombs test (Direct Antiglobulin Test - DAT) is crucial to confirm AIHA. A positive DAT indicates antibodies or complement components coating the patient's red blood cells."
+     },
+     {
+      "q": "Outline the initial management steps for this patient in a low-resource setting.",
+      "a": "1. Stabilize the patient: If symptomatic with Hb <7 g/dL, consider urgent blood transfusion (cross-match carefully due to potential for autoantibodies). 2. Immunosuppression: Start high-dose corticosteroids (e.g., oral prednisone) as the first-line treatment. 3. Folic acid supplementation: To support erythropoiesis due to increased red cell turnover. 4. Monitor: Closely monitor hemoglobin, reticulocyte count, and bilirubin levels. 5. Consider referral: If no response to steroids or if severe, consider referral to a higher-level facility for further management (e.g., IVIG, rituximab, splenectom"
+     }
+    ]
+   },
+   {
+    "v": "A 5-year-old child is brought to the emergency department with a 3-day history of fever, lethargy, and refusal to eat. The mother reports the child has been on antibiotics for a presumed chest infection for 2 days without improvement. On examination, the child is febrile (39.5°C), pale, and has petechiae on the trunk and limbs. There is no lymphadenopathy or hepatosplenomegaly. A CBC shows Hb 8.0 g/dL, WBC 2.0 x 10^9/L (neutrophils 15%, lymphocytes 80%, monocytes 5%), and Platelets 15 x 10^9/L. A rapid malaria test is negative.",
+    "qs": [
+     {
+      "q": "What are the significant abnormalities in the CBC, and what do they suggest?",
+      "a": "The CBC shows pancytopenia (anemia, leukopenia, and severe thrombocytopenia). The leukopenia is predominantly neutropenia (absolute neutrophil count is very low), indicating impaired immune defense. The severe thrombocytopenia explains the petechiae and increases bleeding risk. This combination suggests bone marrow failure or severe systemic illness affecting multiple cell lines."
+     },
+     {
+      "q": "Given the findings, what is the most urgent concern for this child, and what immediate action is required?",
+      "a": "The most urgent concerns are severe neutropenia (high risk of overwhelming infection) and severe thrombocytopenia (high risk of spontaneous bleeding, especially intracranial hemorrhage). Immediate actions include: 1. Broad-spectrum IV antibiotics for presumed sepsis (febrile neutropenia). 2. Platelet transfusion if active bleeding or very low count (<10 x 10^9/L). 3. Strict infection control measures. 4. Urgent referral for bone marrow aspiration and biopsy to investigate the cause of pancytopenia (e.g., aplastic anemia, acute leukemia, severe viral infection)."
+     },
+     {
+      "q": "What differential diagnoses should be considered for pancytopenia in a child in this setting?",
+      "a": "Differential diagnoses include: 1. Aplastic anemia. 2. Acute leukemia (though no blasts mentioned, it must be ruled out). 3. Severe viral infections (e.g., HIV, parvovirus B19, Epstein-Barr virus). 4. Overwhelming sepsis. 5. Drug-induced myelosuppression (less likely given history). 6. Myelodysplastic syndromes (less common in children but possible). 7. Visceral leishmaniasis (Kala-azar) in endemic areas."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing microcytic hypochromic anemia solely with iron deficiency without considering thalassemia or anemia of chronic disease (though less common presentation).",
+   "Failing to consider pseudothrombocytopenia when a low platelet count is reported without bleeding symptoms.",
+   "Not ordering a peripheral blood smear to confirm automated CBC findings, especially for abnormal cell morphology or platelet clumping.",
+   "Attributing all cytopenias in an HIV-positive patient solely to HIV without considering drug-induced causes or opportunistic infections.",
+   "Overlooking the importance of a direct Coombs test in suspected hemolytic anemia.",
+   "Delaying urgent management (e.g., antibiotics for febrile neutropenia, transfusion for severe symptomatic anemia) while awaiting definitive diagnostic tests.",
+   "Not considering the local epidemiology (e.g., malaria, HIV, helminths) when interpreting blood cell abnormalities in East African settings.",
+   "Misinterpreting the significance of specific cell types, e.g., assuming eosinophilia is always due to parasites without considering allergies or drug reactions."
+  ],
+  "exam": [
+   "An abnormal, sustained pathological increase in circulating red blood cell mass is clinically termed? — Polycythemia. This can be primary (e.g., polycythemia vera) or secondary (e.g., chronic hypoxia).",
+   "The primary biochemical function of hemoglobin in red blood cells is the transport of? — Oxygen. Hemoglobin binds oxygen in the lungs and releases it in the tissues, facilitated by its heme iron.",
+   "What is the shelf life of a unit of Red Blood Cells that has been 'opened' by entering the system for washing or aliquoting in an open system, if stored at 1-6°C? — 24 hours. This reduced shelf life is due to the increased risk of bacterial contamination once the sterile barrier is breached.",
+   "Which blood type is considered the universal donor for red blood cells? — O negative. These red blood cells lack A, B, and Rh antigens, making them less likely to trigger an immune response in recipients of any blood type.",
+   "Which blood type is considered the universal recipient for red blood cells? — AB positive. Individuals with AB positive blood have A, B, and Rh antigens, and therefore do not produce antibodies against these antigens, allowing them to receive red blood cells from any ABO/Rh type.",
+   "Which antigen is present on the surface of red blood cells in Type B blood? — B antigen. Individuals with Type B blood also have anti-A antibodies in their plasma.",
+   "A 28-year-old woman presents with fatigue and pallor. Complete blood count shows low haemoglobin level and peripheral blood film shows microcytic hypochromic red blood cells. What is the most likely diagnosis? — Iron deficiency anemia. This is a common cause of anemia in women of reproductive age, often due to menstrual blood loss or inadequate dietary intake. Microcytic hypochromic morphology is characteristic.",
+   "Which blood cell type is primarily responsible for defence against parasitic infections? — Eosinophils. They release granules containing enzymes and toxins that are effective against parasites, and also play a role in allergic reactions.",
+   "Outline the complete pathway of bilirubin metabolism, from the breakdown of aging red blood cells to its final excretion products in stool and urine. — Aging RBCs are phagocytosed by macrophages, releasing heme. Heme is converted to biliverdin, then to unconjugated bilirubin (UCB). UCB binds to albumin and travels to the liver, where it is conjugated with glucuronic acid by UDP-glucuronyltransferase to form conjugated bilirubin (CB). CB is excreted into bile, then into the intestines. In the gut, bacteria convert CB to urobilinogen. Some urobilinogen is reabsorbed and excreted in urine, while most is oxidized to stercobilin, which gives stool its brown color.",
+   "Outline the metabolic pathway of bilirubin from aging red blood cells to its excretion. Additionally, define kernicterus and state which type of bilirubin is involved in its pathology. — Pathway: Aging RBCs -> Heme -> Biliverdin -> Unconjugated Bilirubin (UCB) -> Liver (conjugation) -> Conjugated Bilirubin (CB) -> Bile -> Intestines -> Urobilinogen -> Stercobilin (stool) / Urobilin (urine). Kernicterus is a rare neurological syndrome in infants caused by severe unconjugated hyperbilirubinemia, where UCB crosses the blood-brain barrier and deposits in brain tissue, causing irreversible damage. Unconjugated bilirubin is involved.",
+   "Outline the major steps in the normal metabolism and excretion of bilirubin, starting from aging red blood cells and concluding with its final products in stool and urine. — 1. Heme breakdown: Hemoglobin from senescent RBCs is broken down into heme and globin. Heme is converted to biliverdin, then to unconjugated bilirubin (UCB). 2. Transport: UCB binds to albumin and is transported to the liver. 3. Hepatic uptake and conjugation: In the liver, UCB is taken up by hepatocytes and conjugated with glucuronic acid by UDP-glucuronyltransferase to form conjugated bilirubin (CB). 4. Biliary excretion: CB is actively secreted into the bile canaliculi and then into the small intestine. 5. Intestinal metabolism: In the colon, bacterial enzymes deconjugate CB and convert it to urobilinogen. 6. Excretion: Most urobilinogen is oxidized to stercobilin and excreted in stool (g",
+   "Outline the major steps in bilirubin metabolism, starting from the breakdown of aging red blood cells and culminating in its excretion. — 1. Heme from senescent red blood cells is converted to unconjugated bilirubin (UCB) in reticuloendothelial cells. 2. UCB is transported to the liver bound to albumin. 3. In the liver, UCB is conjugated to conjugated bilirubin (CB) by glucuronyl transferase. 4. CB is excreted into bile and then into the intestine. 5. Intestinal bacteria convert CB to urobilinogen. 6. Urobilinogen is either excreted in stool as stercobilin or reabsorbed and excreted in urine as urobilin.",
+   "A patient with known HIV presents with hemoglobin 8 g/dL, MCV 110 fL – what are the likely causes and initial investigations? — Likely causes of macrocytic anemia (MCV >100 fL) in HIV include antiretroviral therapy (especially zidovudine), B12 or folate deficiency (due to malabsorption or poor diet), chronic disease anemia, or myelodysplastic syndromes. Initial investigations should include serum B12 and folate levels, reticulocyte count, and review of current medications.",
+   "In a malaria-endemic area, a child has anemia and thrombocytopenia – which rapid tests would you order? — Rapid malaria diagnostic test (RDT) for Plasmodium falciparum and other species, and an HIV rapid test. Malaria is a common cause of both anemia and thrombocytopenia in endemic areas, and HIV can cause cytopenias and increase susceptibility to infections."
+  ],
+  "model": "gemini-2.5-flash-lite",
+  "generatedAt": "2026-10-18",
+  "checked": "2026-10-18"
+ }
 }

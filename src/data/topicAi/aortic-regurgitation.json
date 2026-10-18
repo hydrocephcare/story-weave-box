@@ -1,0 +1,233 @@
+{
+ "medical": true,
+ "title": "Aortic Regurgitation",
+ "subject": "Medicine",
+ "summary": "Aortic regurgitation is a back‑flow of blood from the aorta into the left ventricle during diastole, leading to volume overload and eventual heart failure. It is common in low‑resource settings due to rheumatic fever and infections.",
+ "aka": [
+  "Aortic insufficiency"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Aortic regurgitation (AR) is diastolic back‑flow across a diseased aortic valve. Diagnosis relies on history, exam, and simple investigations available in low‑resource hospitals.",
+   "b": [
+    "Early diastolic decrescendo murmur at left sternal border",
+    "Wide pulse pressure, water‑hammer pulse",
+    "Corrigan’s sign (carotid pulsation)"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "Shows wide pulse pressure; >60 mmHg difference suggests significant AR"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Confirms valve morphology, regurgitant fraction, LV size; if unavailable, use Doppler of carotid pulse"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows enlarged cardiac silhouette, pulmonary venous congestion if left‑sided failure"
+    },
+    {
+     "a": "ECG",
+     "b": "May show left ventricular hypertrophy or atrial enlargement"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by regurgitant fraction and LV response. The most used system is the American Heart Association (AHA) stages A–D.",
+   "b": [
+    "Stage A: asymptomatic, mild regurgitation, normal LV size",
+    "Stage B: asymptomatic, moderate regurgitation, LV dilation",
+    "Stage C: symptomatic, severe regurgitation, LV dysfunction",
+    "Stage D: refractory heart failure, end‑stage"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, rheumatic heart disease and infections dominate. Other causes include congenital bicuspid valve, syphilis, and trauma.",
+   "b": [
+    "Rheumatic fever (post‑streptococcal)",
+    "Bicuspid aortic valve",
+    "Syphilitic aortitis",
+    "Aortic dissection",
+    "Trauma",
+    "Infective endocarditis (Streptococcus viridans, Staph aureus)"
+   ],
+   "t": [
+    {
+     "a": "Syphilis serology",
+     "b": "Positive treponemal test indicates syphilitic aortitis"
+    },
+    {
+     "a": "Streptococcal throat culture",
+     "b": "History of untreated sore throat suggests rheumatic fever"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often report exertional dyspnea, palpitations, and a feeling of rapid heartbeats. Physical signs include a high‑pitched early diastolic murmur and wide pulse pressure.",
+   "b": [
+    "Exertional dyspnea",
+    "Palpitations",
+    "Chest pain (rare)",
+    "Leg swelling if severe"
+   ],
+   "t": [
+    {
+     "a": "Cardiac auscultation",
+     "b": "Detects early diastolic murmur; absence of murmur does not rule out AR"
+    },
+    {
+     "a": "Peripheral pulses",
+     "b": "Water‑hammer pulse indicates high stroke volume and low diastolic pressure"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use the simplest tests first; if unavailable, rely on clinical judgment.",
+   "b": [
+    "Blood pressure",
+    "Chest X‑ray",
+    "Echocardiography"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure",
+     "b": "Wide pulse pressure (>60 mmHg) suggests significant AR"
+    },
+    {
+     "a": "ECG",
+     "b": "Left ventricular hypertrophy or atrial enlargement may be present"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Cardiomegaly or pulmonary congestion indicates advanced disease"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Gold standard; shows valve morphology, regurgitant fraction, LV size and function"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed if signs of acute decompensation or endocarditis appear.",
+   "b": [
+    "Acute pulmonary oedema",
+    "Rapidly rising LV end‑diastolic pressure",
+    "Fever, new murmur, embolic phenomena"
+   ],
+   "t": [
+    {
+     "a": "Blood cultures",
+     "b": "Positive in infective endocarditis; guides antibiotic choice"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Detects vegetations or rapid valve destruction"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, control volume overload, and monitor LV function. Surgery is definitive but often unavailable.",
+   "b": [
+    "Antibiotics for endocarditis (e.g., ampicillin + gentamicin)",
+    "Beta‑blockers to reduce heart rate and improve diastolic filling",
+    "Loop diuretics for pulmonary congestion",
+    "ACE inhibitors or ARBs for LV remodeling"
+   ],
+   "t": [
+    {
+     "a": "Beta‑blocker",
+     "b": "Reduces heart rate, increases diastolic time, lowers LV filling pressure"
+    },
+    {
+     "a": "Loop diuretic",
+     "b": "Relieves pulmonary congestion; monitor electrolytes"
+    },
+    {
+     "a": "ACE inhibitor",
+     "b": "Improves LV remodeling; avoid if renal dysfunction"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of LV size and function is essential. Prevention focuses on rheumatic fever control and infection management.",
+   "b": [
+    "Annual echocardiography if available",
+    "Prophylactic penicillin for rheumatic fever",
+    "Vaccination against streptococcal pharyngitis",
+    "Prompt treatment of infections"
+   ],
+   "t": [
+    {
+     "a": "Echocardiography",
+     "b": "Detects progression; repeat every 6–12 months in moderate cases"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Other causes of wide pulse pressure and diastolic murmurs can mimic AR.",
+   "b": [
+    "Mitral regurgitation (high‑pitched early diastolic murmur, but heard best at apex)",
+    "Aortic stenosis (systolic murmur, not diastolic)",
+    "Hypertrophic cardiomyopathy (systolic murmur)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain tests may appear normal early in disease or be affected by comorbidities.",
+   "b": [
+    "Normal ECG in mild AR",
+    "Normal chest X‑ray in early disease",
+    "Echocardiography may underestimate regurgitant fraction if Doppler angle is poor"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Acute pulmonary oedema",
+  "Rapidly worsening dyspnea",
+  "New fever or embolic events",
+  "Sudden drop in blood pressure"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of AR in East Africa?",
+   "a": "Rheumatic heart disease due to untreated streptococcal pharyngitis."
+  },
+  {
+   "q": "How do you differentiate AR from mitral regurgitation on exam?",
+   "a": "AR murmur is early diastolic, heard best at left sternal border; MR is early diastolic, best at apex."
+  },
+  {
+   "q": "Why are beta‑blockers preferred in AR?",
+   "a": "They slow the heart, increasing diastolic filling time and reducing regurgitant volume."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order in a patient with suspected AR in a low‑resource setting? — Blood pressure to assess pulse pressure, then ECG, chest X‑ray, and echocardiography if available.",
+  "A patient with AR presents with exertional dyspnea and a high‑pitched diastolic murmur. Which sign is most specific for AR? — Wide pulse pressure (water‑hammer pulse).",
+  "You suspect infective endocarditis in a patient with AR. Which antibiotic regimen is most appropriate? — Penicillin G plus gentamicin for streptococcal endocarditis.",
+  "A 45‑year‑old patient with AR has a sudden drop in blood pressure and pulmonary oedema. What is the most urgent management step? — Immediate diuretics and vasodilators to reduce preload and afterload.",
+  "Which pharmacologic agent is contraindicated in AR with renal dysfunction? — ACE inhibitors (risk of hyperkalaemia and worsening renal function).",
+  "A patient with AR has a normal ECG and chest X‑ray. What is the next best step to confirm severity? — Echocardiography to quantify regurgitant fraction and LV size."
+ ],
+ "related": [
+  "Rheumatic heart disease",
+  "Infective endocarditis",
+  "Left ventricular hypertrophy",
+  "Hypertension",
+  "Aortic stenosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-18",
+ "reviewed": false
+}

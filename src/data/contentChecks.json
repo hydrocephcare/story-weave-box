@@ -123,6 +123,73 @@
    ],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-10-17"
+  },
+  "pneumonia": {
+   "hash": "137fad200293",
+   "validated": false,
+   "high": 2,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Q1. A patient with community‑acquired pneumonia is tachypnoeic (RR 32) but has a normal blood pressure and no confusion. What is the next st",
+     "problem": "The CURB-65 score calculation is incorrect for inpatient admission criteria.",
+     "fix": "A CURB-65 score of 2 or more warrants hospitalisation. A score of 1 (respiratory rate ≥ 30) does not automatically require inpatient admission; it suggests consideration for hospital admission or close outpatient management."
+    },
+    {
+     "severity": "high",
+     "where": "Q5. A patient with aspiration pneumonia shows right lower‑lobe consolidation and foul‑smelling sputum. Which organism group is most likely,",
+     "problem": "Metronidazole is not routinely recommended as an add-on for aspiration pneumonia in current guidelines unless there is evidence of empyema or lung abscess.",
+     "fix": "For aspiration pneumonia, amoxicillin-clavulanate is often sufficient, or a combination of a beta-lactam (e.g., amoxicillin) with a beta-lactamase inhibitor (e.g., clavulanate) or clindamycin, which covers anaerobes without needing metronidazole as an add-on."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-18"
+  },
+  "pleural-effusion": {
+   "hash": "da6d35e11d1e",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-18"
+  },
+  "pneumothorax": {
+   "hash": "99a5d4254516",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-18"
+  },
+  "asthma": {
+   "hash": "39132f4b2d52",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-18"
+  },
+  "bronchitis": {
+   "hash": "6bb225ec7697",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-18"
+  },
+  "copd": {
+   "hash": "ab66780768d7",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-18"
   }
  },
  "topics": {}

@@ -1,0 +1,175 @@
+{
+ "medical": true,
+ "title": "Pulmonary Tuberculosis",
+ "subject": "Medicine",
+ "summary": "Pulmonary TB is a chronic infection of the lung by Mycobacterium tuberculosis, presenting with constitutional symptoms and upper‑lobe cavitation. Diagnosis relies on sputum microscopy, GeneXpert, and chest radiography, especially where resources are limited.",
+ "aka": [
+  "Pulmonary TB"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pulmonary tuberculosis is an active infection of the lung by Mycobacterium tuberculosis. In low‑resource settings the diagnosis is made by a combination of clinical features, sputum smear microscopy, GeneXpert MTB/RIF, and chest radiography.",
+   "b": [
+    "Active infection of lung tissue by M. tuberculosis",
+    "Requires evidence of bacilli or molecular detection"
+   ],
+   "t": [
+    {
+     "a": "Sputum smear microscopy",
+     "b": "Detects acid‑fast bacilli; a positive result confirms active disease"
+    },
+    {
+     "a": "GeneXpert MTB/RIF",
+     "b": "Detects MTB DNA and rifampicin resistance; a positive result confirms active disease and guides resistance management"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows upper‑lobe infiltrates or cavities; a typical pattern supports the diagnosis when microscopy is negative"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the extent of radiographic disease and presence of complications. The WHO 2023 staging classifies patients as:",
+   "b": [
+    "Stage 1 – mild disease, no cavitation, <50% lung involvement",
+    "Stage 2 – moderate disease, cavitation, 50–75% involvement",
+    "Stage 3 – severe disease, extensive cavitation, >75% involvement or haemoptysis"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is infection with Mycobacterium tuberculosis. In East Africa, co‑infection with HIV, malnutrition, and exposure to crowded living conditions are common predisposing factors.",
+   "b": [
+    "HIV infection – increases risk of reactivation",
+    "Malnutrition – impairs immunity",
+    "Crowded housing – facilitates airborne spread"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with a chronic productive cough, night sweats, weight loss, and low‑grade fever. Haemoptysis and chest pain occur in advanced disease.",
+   "b": [
+    "Cough >2 weeks, often productive",
+    "Night sweats and weight loss",
+    "Upper‑lobe chest pain or haemoptysis in cavitary disease"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are tailored to resource availability. When a test is unavailable, clinical judgement and empirical treatment are guided by epidemiology.",
+   "t": [
+    {
+     "a": "Sputum smear microscopy",
+     "b": "Answers whether acid‑fast bacilli are present; a positive result confirms active TB"
+    },
+    {
+     "a": "GeneXpert MTB/RIF",
+     "b": "Answers if MTB DNA is present and if rifampicin resistance exists; a positive result confirms TB and informs drug choice"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Answers if there are upper‑lobe infiltrates or cavities; a typical pattern supports TB diagnosis"
+    },
+    {
+     "a": "Mantoux test",
+     "b": "Answers if there is prior exposure; a positive test alone does not confirm active disease"
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Answers if anaemia or leukocytosis is present; non‑specific but useful for baseline"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications that require urgent attention include massive haemoptysis, respiratory failure, and paradoxical worsening after therapy initiation.",
+   "b": [
+    "Massive haemoptysis – requires airway protection and possible embolisation",
+    "Respiratory failure – needs oxygen and possible ventilation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows WHO guidelines: a 6‑month regimen of isoniazid, rifampicin, pyrazinamide, and ethambutol for the first 2 months, then isoniazid and rifampicin for 4 months. HIV co‑infection mandates ART initiation after 2 weeks of TB therapy.",
+   "b": [
+    "Isoniazid – bactericidal against actively dividing bacilli",
+    "Rifampicin – broad bactericidal activity and prevents resistance",
+    "Pyrazinamide – effective in acidic intracellular environments",
+    "Ethambutol – prevents resistance when drug‑sensitive strain is unknown"
+   ],
+   "t": [
+    {
+     "a": "Drug‑resistance testing",
+     "b": "Answers if the strain is resistant to first‑line drugs; a positive result changes the regimen to second‑line agents"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Patients are monitored for treatment adherence, drug toxicity, and sputum conversion. Prevention includes BCG vaccination, infection control measures, and IPT for contacts.",
+   "b": [
+    "Monthly clinic visits to assess adherence and side effects",
+    "Sputum smear at 2 months to confirm conversion",
+    "BCG vaccination at birth reduces severe disease in children"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Pulmonary TB can mimic bacterial pneumonia, lung cancer, and fungal infections.",
+   "b": [
+    "Bacterial pneumonia – usually acute onset, lobar consolidation on X‑ray",
+    "Lung cancer – weight loss but often older age and smoking history",
+    "Fungal infections – may present with cavitation but often in immunocompromised patients"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Sputum smear can be falsely negative in early disease or in patients with low bacterial load. Chest X‑ray findings may overlap with other granulomatous diseases.",
+   "b": [
+    "Low bacillary load – smear negative but culture positive"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Massive haemoptysis",
+  "Respiratory distress",
+  "Unexplained weight loss >10% in 3 months"
+ ],
+ "faq": [
+  {
+   "q": "Why is GeneXpert preferred over smear in low‑resource settings?",
+   "a": "It detects MTB DNA and rifampicin resistance quickly, guiding treatment when smear is negative or unavailable."
+  },
+  {
+   "q": "What is the first line drug regimen for TB?",
+   "a": "Isoniazid, rifampicin, pyrazinamide, and ethambutol for 2 months, then isoniazid and rifampicin for 4 months."
+  },
+  {
+   "q": "How do you manage a patient with TB and HIV?",
+   "a": "Start ART after 2 weeks of TB therapy to avoid immune reconstitution inflammatory syndrome."
+  }
+ ],
+ "exam": [
+  "What is the most appropriate next step if a patient with chronic cough has a negative sputum smear but a typical upper‑lobe cavity on X‑ray? — Perform GeneXpert to confirm TB and assess rifampicin resistance.",
+  "How would you differentiate pulmonary TB from bacterial pneumonia on chest X‑ray? — TB shows upper‑lobe infiltrates or cavities; bacterial pneumonia shows lobar consolidation.",
+  "Why is pyrazinamide omitted in patients with renal failure? — It is renally excreted and can accumulate, causing toxicity.",
+  "What is the significance of a positive Mantoux test in a patient with suspected TB? — It indicates prior exposure but does not confirm active disease.",
+  "When is it safe to stop isoniazid in a patient with latent TB infection? — After 6–9 months of therapy if the patient remains asymptomatic and negative for drug resistance.",
+  "Why should rifampicin be avoided in patients taking antiretroviral therapy with efavirenz? — Rifampicin induces CYP450 enzymes, reducing efavirenz levels and risking virologic failure."
+ ],
+ "related": [
+  "HIV‑associated tuberculosis",
+  "Pulmonary aspergillosis",
+  "Lung cancer",
+  "Bacterial pneumonia",
+  "Fungal infections",
+  "BCG vaccination",
+  "Drug‑resistant tuberculosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-18",
+ "reviewed": false
+}

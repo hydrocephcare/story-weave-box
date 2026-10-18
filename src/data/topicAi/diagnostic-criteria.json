@@ -1,0 +1,158 @@
+{
+ "medical": true,
+ "title": "Diagnostic Criteria in Clinical Medicine",
+ "subject": "Medicine",
+ "summary": "Diagnostic criteria are structured rules that combine history, examination, and investigations to confirm a disease. They help clinicians apply consistent reasoning, especially where resources are limited.",
+ "aka": [
+  "Diagnostic Guidelines",
+  "Case Definition"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Diagnostic criteria are a set of required and optional findings that together confirm a disease. They translate vague clinical impressions into reproducible decisions.",
+   "b": [
+    "Require a minimum number of core features (e.g., symptom + test)",
+    "Include optional supportive items that increase certainty",
+    "Are often tiered (possible, probable, definite)"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Many conditions have recognised severity scores that guide treatment intensity and prognosis.",
+   "b": [
+    "Use objective thresholds (e.g., NYHA class for heart failure)",
+    "Stage often reflects organ damage or functional loss"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the most common aetiologies in low‑resource East African settings before rarer causes.",
+   "b": [
+    "Infectious: HIV, TB, malaria, hepatitis B, schistosomiasis",
+    "Non‑infectious: hypertension, sickle‑cell disease, rheumatic heart disease, herbal nephrotoxins"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical presentation combines a cardinal symptom, a pattern of physical signs, and a contextual clue (e.g., endemic disease, recent travel).",
+   "b": [
+    "Chest pain that worsens on inspiration suggests pericarditis",
+    "Fever with night sweats in a TB‑endemic area raises suspicion of disseminated TB"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Select tests that directly answer a diagnostic question; if unavailable, use bedside alternatives.",
+   "t": [
+    {
+     "a": "ECG",
+     "b": "Does the patient have ischaemic changes? New ST‑elevation, ST‑depression, T‑wave inversion or pathological Q waves support myocardial infarction."
+    },
+    {
+     "a": "Troponin assay",
+     "b": "Is there myocardial injury? A rise/fall with at least one value above the 99th percentile confirms injury."
+    },
+    {
+     "a": "Chest X‑ray (or bedside ultrasound if X‑ray unavailable)",
+     "b": "Is there a pericardial effusion? Fluid appears as an anechoic space behind the heart on ultrasound; on X‑ray, a globular cardiac silhouette suggests effusion."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is there eosinophilia or leukocytosis? Elevated eosinophils may point to parasitic infection; neutrophilia supports bacterial sepsis."
+    },
+    {
+     "a": "Rapid malaria test",
+     "b": "Is malaria present? Positive test confirms Plasmodium infection, guiding antimalarial therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise features that signal imminent deterioration and require urgent action.",
+   "b": [
+    "Persistent hypotension despite fluids – suggests cardiogenic shock",
+    "New neurological deficit – possible embolic complication",
+    "Rapidly rising troponin with chest pain – evolving myocardial infarction"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide organ‑specific support. Choose drugs that are effective, affordable, and safe in low‑resource settings.",
+   "b": [
+    "Antibiotics for bacterial infection (e.g., amoxicillin for streptococcal pharyngitis) – chosen for oral availability and low cost",
+    "Antimalarials (artesunate or artemether‑lumefantrine) – first‑line for Plasmodium falciparum; avoid quinine unless severe because of toxicity",
+    "Aspirin for acute coronary syndrome – antiplatelet effect; avoid in active bleeding or severe asthma",
+    "Loop diuretics for decompensated heart failure – reduce preload; avoid in severe renal impairment"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Plan repeat assessment to confirm resolution and prevent recurrence.",
+   "b": [
+    "Re‑measure troponin after 6 hours if initial rise is borderline",
+    "Schedule echocardiography when feasible to assess residual wall motion",
+    "Vaccinate against hepatitis B and provide insecticide‑treated nets to reduce malaria re‑infection"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that share key features can mislead if not systematically differentiated.",
+   "b": [
+    "Pericarditis vs. myocardial infarction – both cause chest pain, but pericarditis has a friction rub and diffuse ST‑elevation without reciprocal changes",
+    "Pulmonary embolism vs. pneumonia – both cause dyspnoea and fever; PE lacks productive cough and shows clear lung fields on X‑ray"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Be aware of false‑negative or false‑positive findings in low‑resource settings.",
+   "b": [
+    "Troponin may be normal early in myocardial infarction; repeat after 3–6 hours",
+    "Rapid malaria test can be negative in low‑parasitaemia; confirm with microscopy if suspicion remains"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden collapse or loss of consciousness",
+  "Severe chest pain with diaphoresis",
+  "Unexplained high fever with altered mental status"
+ ],
+ "faq": [
+  {
+   "q": "Why are diagnostic criteria needed instead of a single test?",
+   "a": "Because no single test is perfectly sensitive or specific; combining findings improves accuracy and reduces misdiagnosis."
+  },
+  {
+   "q": "What if the recommended test is not available?",
+   "a": "Use bedside alternatives (e.g., clinical scoring, point‑of‑care ultrasound) and treat presumptively if the pre‑test probability is high."
+  },
+  {
+   "q": "How often should criteria be re‑evaluated?",
+   "a": "Whenever the patient’s condition changes or new information (test result, response to therapy) becomes available."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old farmer presents with sharp chest pain that improves when sitting forward. What is the next diagnostic step and why? — Look for a pericardial friction rub and obtain an ECG; diffuse ST‑elevation with PR depression confirms pericarditis.",
+  "A patient with known HIV has a fever, night sweats, and a new systolic murmur. Which two diagnostic criteria would you prioritize? — Blood cultures for infective endocarditis and echocardiography to detect vegetations; both are core criteria.",
+  "You have a patient with suspected myocardial infarction but troponin is normal. How do you proceed? — Repeat troponin after 3–6 hours and obtain a repeat ECG; early infarction may not yet show enzyme rise.",
+  "In a malaria‑endemic area, a child has fever and anaemia but the rapid test is negative. What is your next step? — Perform microscopy or PCR if available; treat empirically if clinical suspicion remains high.",
+  "A woman with rheumatic heart disease presents with worsening dyspnoea. Which severity staging tool guides management? — Use NYHA functional classification; class III–IV indicates need for diuretics and possible referral for surgery.",
+  "Why is aspirin avoided in a patient with active gastrointestinal bleeding presenting with chest pain? — Aspirin impairs platelet aggregation, worsening bleeding; alternative antiplatelet agents with less GI effect may be considered.",
+  "What red‑flag sign would prompt immediate transfer to a higher‑level facility in a patient with suspected pericardial tamponade? — Rapidly falling blood pressure with pulsus paradoxus indicates impending circulatory collapse.",
+  "How does herbal nephrotoxicity mimic acute kidney injury from sepsis, and how would you differentiate? — Both cause rising creatinine; history of traditional medicine use and absence of systemic infection signs point to toxin‑induced injury."
+ ],
+ "related": [
+  "Acute Myocardial Infarction",
+  "Acute Pericarditis",
+  "Sepsis Diagnostic Criteria",
+  "Heart Failure Staging",
+  "Malaria Diagnosis",
+  "Tuberculosis Clinical Diagnosis",
+  "Anaphylaxis Criteria",
+  "Chronic Kidney Disease Assessment"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-18",
+ "reviewed": false
+}
