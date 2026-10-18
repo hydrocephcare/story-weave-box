@@ -102,5 +102,299 @@
  "kind": "disease",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides clinicians from initial stabilization to definitive therapy, monitoring, escalation and referral, with drug classes chosen for disease subtype and resource setting.",
+    "b": [
+     "1. Confirm diagnosis with excisional node biopsy; send tissue for histology, immunophenotype (CD markers), and cytogenetics.",
+     "2. Baseline staging: full blood count, LDH, ESR, hepatitis B/C screen, HIV test, chest‑abdomen‑pelvis CT (or PET where available), bone‑marrow aspirate if indicated.",
+     "3. First‑line systemic therapy: ABVD (adriamycin, bleomycin, vinblastine, dacarbazine) for classical Hodgkin lymphoma; CHOP (cyclophosphamide, doxorubicin, vincristine, prednisolone) for aggressive B‑cell NHL; add rituximab for CD20‑positive disease.",
+     "4. Supportive care: anti‑emetics, growth‑factor (filgrastim) for high‑risk neutropenia, prophylactic antiviral/antifungal if CD4 < 200, allopurinol or rasburicase plus aggressive IV hydration for tumor‑lysis risk.",
+     "5. Monitoring: CBC, renal & liver panels, electrolytes twice weekly during induction; repeat imaging after 2–3 cycles to assess response.",
+     "6. Escalate if: persistent fever >38 °C with neutrophils <0.5 × 10⁹/L, rising LDH, or new organ compromise – start broad‑spectrum IV antibiotics within 1 hour and consider ICU transfer.",
+     "7. Refer early for: refractory disease after 2 lines, bulky mediastinal mass causing SVC syndrome, or eligibility for autologous stem‑cell transplant."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key toxicities of lymphoma regimens and practical mitigation strategies.",
+    "b": [
+     "Alkylating agents (cyclophosphamide, ifosfamide): cause myelosuppression and hemorrhagic cystitis – give mesna with ifosfamide, ensure adequate hydration, monitor urine colour.",
+     "Anthracyclines (doxorubicin, epirubicin): risk of cumulative cardiotoxicity – baseline echocardiogram, avoid if LVEF < 50 %, limit total dose, consider liposomal formulation in cardiac disease.",
+     "Vincristine: peripheral neuropathy – assess for wrist/foot drop each visit, dose‑reduce or substitute if grade ≥ 2 neuropathy.",
+     "Rituximab: infusion reactions and hepatitis B reactivation – pre‑medicate with antihistamine and acetaminophen, screen HBV, give antiviral prophylaxis if HBsAg positive.",
+     "Prednisolone: hyperglycaemia, mood change, infection risk – monitor glucose, counsel on sleep hygiene, give stress‑dose steroids if adrenal insufficiency suspected."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise life‑threatening events early and act according to evidence‑based pathways.",
+    "b": [
+     "Tumour lysis syndrome: rising uric acid > 450 µmol/L, potassium > 6.0 mmol/L, phosphate > 2.0 mmol/L, calcium < 2.0 mmol/L – intensify IV hydration, give rasburicase if high‑risk, correct electrolytes, involve nephrology.",
+     "Neutropenic sepsis: temperature >38 °C with ANC <0.5 × 10⁹/L – start piperacillin‑tazobactam or meropenem within 1 hour, obtain cultures, add antifungal after 48 h if no response.",
+     "Superior vena cava syndrome: facial swelling, distended neck veins, dyspnoea – give high‑dose steroids, arrange urgent radiotherapy or stenting, admit to high‑dependency unit.",
+     "Hypercalcaemia of malignancy: corrected calcium >2.75 mmol/L – IV saline, bisphosphonate (zoledronic acid), monitor cardiac rhythm, treat underlying lymphoma."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities that modify presentation, investigations and therapy.",
+    "b": [
+     "HIV: higher incidence of aggressive NHL, often EBV‑positive; CD4 count guides prophylaxis, avoid bleomycin if pulmonary disease, consider dose‑adjusted EPOCH.",
+     "Tuberculosis: mediastinal nodes may mimic lymphoma; obtain GeneXpert on aspirate, treat TB before or concurrently with chemotherapy, watch for drug‑interaction with rifampicin (induces CYP450).",
+     "Malnutrition: low albumin <30 g/L predicts poor tolerance – give high‑calorie oral supplements, correct electrolytes before chemo, monitor for re‑feeding syndrome.",
+     "Pregnancy: avoid radiographic staging unless essential; use ultrasound and MRI without gadolinium; prefer ABVD (bleomycin safe) in 2nd/3rd trimester, postpone rituximab until postpartum.",
+     "Diabetes: steroids raise glucose – check fasting glucose daily, adjust insulin, avoid high‑dose dexamethasone if possible.",
+     "Alcohol excess: worsens hepatotoxicity of cyclophosphamide and anthracyclines – counsel abstinence, monitor liver enzymes.",
+     "Renal failure: dose‑reduce cyclophosphamide, avoid ifosfamide, use rasburicase instead of allopurinol, adjust all renally cleared drugs.",
+     "Liver failure: avoid high‑dose anthracyclines, use liposomal doxorubicin, monitor bilirubin and transaminases weekly."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches for vulnerable populations and low‑resource environments.",
+    "b": [
+     "Pregnancy: prioritize maternal survival; use ABVD, defer radiotherapy until postpartum; give fetal ultrasound each trimester, avoid teratogenic agents (e.g., methotrexate).",
+     "Elderly (>70 y): assess frailty (Fried criteria), prefer attenuated CHOP (mini‑CHOP) or bendamustine‑rituximab, avoid bleomycin if pulmonary reserve reduced.",
+     "People with HIV: start antiretroviral therapy before chemo if CD4 > 200, use prophylaxis for PCP, monitor for drug‑drug interactions (e.g., protease inhibitors with vincristine).",
+     "Low‑resource settings: use CHOP without rituximab if unavailable, rely on ultrasound and plain radiographs for staging, send biopsy slides to regional centre for immunophenotyping, use oral allopurinol and oral hydration for tumor‑lysis prevention."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Ann Arbor Stage IIIS A: disease on both sides of diaphragm, involving spleen, without B-symptoms.",
+   "B symptoms: fever >38°C, drenching night sweats, weight loss >10% in 6 months.",
+   "Tumor Lysis Syndrome: aggressive IV hydration, allopurinol or rasburicase, frequent electrolyte/renal function monitoring.",
+   "Neutropenic Sepsis: prompt broad-spectrum IV antibiotics within one hour, blood cultures.",
+   "Burkitt Lymphoma and Infectious Mononucleosis are both associated with Epstein-Barr Virus (EBV).",
+   "Most common subtype of B-cell Non-Hodgkin Lymphoma (NHL) is Diffuse Large B-cell Lymphoma (DLBCL).",
+   "Approximately 85-90% of Non-Hodgkin Lymphomas are of B-cell origin.",
+   "Mantle Cell Lymphoma translocation: t(11;14)(q13;q32) leading to cyclin D1 overexpression.",
+   "Follicular Lymphoma translocation: t(14;18)(q32;q21) leading to BCL-2 overexpression.",
+   "Gastric MALT lymphoma is strongly associated with Helicobacter pylori infection."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Both Burkitt's lymphoma and infectious mononucleosis are caused by what virus?",
+    "a": "Both Burkitt's lymphoma and infectious mononucleosis are caused by the Epstein-Barr Virus (EBV). EBV is a gammaherpesvirus that infects B lymphocytes.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "The anti-apoptotic effect of BCL-2 overexpression, as seen in follicular lymphoma, occurs due to which mechanism?",
+    "a": "BCL-2 is an anti-apoptotic protein. Its overexpression prevents programmed cell death (apoptosis) in lymphocytes, leading to their accumulation and uncontrolled proliferation, characteristic of follicular lymphoma.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the most common subtype of B-cell Non-Hodgkin Lymphoma (NHL)?",
+    "a": "The most common subtype of B-cell Non-Hodgkin Lymphoma (NHL) is Diffuse Large B-cell Lymphoma (DLBCL). It is an aggressive lymphoma that can arise de novo or from transformation of an indolent lymphoma.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Probable cause of Burkitt's lymphoma?",
+    "a": "Burkitt's lymphoma is strongly associated with Epstein-Barr Virus (EBV) infection, particularly in endemic regions (e.g., East Africa). It is also characterized by a c-MYC gene translocation, most commonly t(8;14).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A patient with Hodgkin lymphoma has disease on both sides of the diaphragm involving multiple lymph node groups and the spleen, with no systemic symptoms. What is his Ann Arbor stage and what does the absence of systemic symptoms signify?",
+    "a": "The Ann Arbor stage is IIIS A. 'III' indicates disease on both sides of the diaphragm. 'S' indicates splenic involvement. 'A' signifies the absence of systemic 'B' symptoms (fever, night sweats, weight loss).",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What percentage of Non-Hodgkin Lymphomas are of B-cell origin?",
+    "a": "Approximately 85-90% of Non-Hodgkin Lymphomas are of B-cell origin. The remaining percentage are typically T-cell or NK-cell lymphomas.",
+    "past": true
+   },
+   {
+    "q": "Which translocation is required for the diagnosis of Mantle Cell Lymphoma?",
+    "a": "The translocation required for the diagnosis of Mantle Cell Lymphoma is t(11;14)(q13;q32). This translocation leads to the overexpression of cyclin D1, which promotes cell cycle progression.",
+    "past": true
+   },
+   {
+    "q": "A 68-year-old male presents with new-onset, painless cervical lymphadenopathy. Biopsy confirms Non-Hodgkin Lymphoma (NHL). Briefly outline the primary cellular origins of NHL and their approximate percentages.",
+    "a": "The primary cellular origins of NHL are B-cells (approximately 85-90%) and T-cells/NK-cells (approximately 10-15%). B-cell lymphomas include DLBCL, Follicular Lymphoma, and CLL/SLL, while T-cell lymphomas are more diverse and often aggressive.",
+    "past": true
+   },
+   {
+    "q": "Differentiate between low-grade (indolent) and high-grade (aggressive) Non-Hodgkin Lymphoma in terms of their typical disease course, curability, and urgency of treatment.",
+    "a": "Low-grade lymphomas (e.g., Follicular Lymphoma) have a slow, indolent course, are often incurable but manageable for many years, and treatment may be deferred ('watch and wait'). High-grade lymphomas (e.g., DLBCL) have a rapid, aggressive course, are potentially curable with intensive chemotherapy, and require urgent treatment.",
+    "past": true
+   },
+   {
+    "q": "Identify the characteristic chromosomal translocation and the associated oncogene overexpression found in Follicular Lymphoma and Mantle Cell Lymphoma.",
+    "a": "Follicular Lymphoma is characterized by t(14;18)(q32;q21) leading to BCL-2 overexpression. Mantle Cell Lymphoma is characterized by t(11;14)(q13;q32) leading to cyclin D1 overexpression.",
+    "past": true
+   },
+   {
+    "q": "A patient presents with gastric MALT lymphoma. Identify the specific infectious agent strongly associated with its pathogenesis. Name another infectious association for Adult T-cell leukaemia/lymphoma.",
+    "a": "Gastric MALT lymphoma is strongly associated with Helicobacter pylori infection. Adult T-cell leukaemia/lymphoma is associated with Human T-lymphotropic virus type 1 (HTLV-1).",
+    "past": true
+   },
+   {
+    "q": "What are the key history questions to ask a patient presenting with lymphadenopathy suspected to be lymphoma?",
+    "a": "Key questions include: duration and progression of swelling, presence of B-symptoms (fever, night sweats, weight loss), pain associated with nodes (usually painless), alcohol-induced pain, exposure to infections (TB, HIV), travel history, and any other systemic symptoms like fatigue, pruritus, or cough."
+   },
+   {
+    "q": "Describe the physical examination steps for a patient with suspected lymphoma.",
+    "a": "Systematic palpation of all lymph node regions (cervical, supraclavicular, axillary, epitrochlear, inguinal) noting size, consistency, tenderness, and mobility. Examine for hepatosplenomegaly, skin lesions, and signs of superior vena cava obstruction (facial plethora, distended neck veins)."
+   },
+   {
+    "q": "What is the role of a bone marrow biopsy in lymphoma staging and diagnosis?",
+    "a": "A bone marrow biopsy is crucial for detecting bone marrow involvement, which upstages the disease and impacts treatment. It helps differentiate between lymphomas and other hematological malignancies and assesses the extent of disease spread."
+   },
+   {
+    "q": "How does HIV infection complicate the diagnosis and management of lymphoma?",
+    "a": "HIV patients have a higher incidence of aggressive NHLs, particularly DLBCL and Burkitt lymphoma. Diagnosis can be challenging due to other opportunistic infections causing lymphadenopathy. Management requires careful consideration of drug interactions with antiretrovirals and increased risk of treatment-related toxicities."
+   },
+   {
+    "q": "What is the significance of lactate dehydrogenase (LDH) levels in lymphoma?",
+    "a": "Elevated LDH levels are a common prognostic marker in many lymphomas, especially aggressive NHLs. It reflects high tumor burden and rapid cell turnover, indicating a more aggressive disease and often correlating with poorer prognosis."
+   },
+   {
+    "q": "Outline the initial management steps for a patient presenting with suspected superior vena cava (SVC) obstruction due to lymphoma.",
+    "a": "Initial management includes urgent referral to oncology, elevation of the head of the bed, oxygen therapy, and corticosteroids (e.g., dexamethasone) to reduce tumor bulk and inflammation. Definitive treatment involves chemotherapy and/or radiotherapy."
+   },
+   {
+    "q": "When is a 'watch and wait' approach appropriate for lymphoma, and for which subtypes?",
+    "a": "A 'watch and wait' approach is appropriate for asymptomatic patients with low-grade, indolent lymphomas, such as Follicular Lymphoma (Stage I or II, non-bulky) or Small Lymphocytic Lymphoma (SLL). It avoids early treatment toxicity without compromising survival."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "Which of the following is the most appropriate initial management step for a patient with suspected Tumor Lysis Syndrome following chemotherapy for high-grade lymphoma?",
+    "o": [
+     "Administer broad-spectrum antibiotics immediately.",
+     "Initiate aggressive intravenous hydration and allopurinol.",
+     "Perform an urgent bone marrow biopsy.",
+     "Start corticosteroids to reduce tumor burden."
+    ],
+    "a": 1,
+    "e": "Aggressive intravenous hydration and allopurinol (or rasburicase for high-risk) are crucial to prevent and manage hyperuricemia and other electrolyte abnormalities associated with Tumor Lysis Syndrome."
+   },
+   {
+    "q": "A 55-year-old female with a history of HIV presents with rapidly enlarging, extranodal abdominal mass. Biopsy reveals a high-grade B-cell lymphoma. Which of the following lymphoma subtypes is most commonly associated with HIV infection?",
+    "o": [
+     "Follicular Lymphoma",
+     "Mantle Cell Lymphoma",
+     "Burkitt Lymphoma",
+     "Chronic Lymphocytic Leukemia"
+    ],
+    "a": 2,
+    "e": "Burkitt Lymphoma and Diffuse Large B-cell Lymphoma are the most common high-grade lymphomas seen in HIV-infected individuals."
+   },
+   {
+    "q": "A 70-year-old male presents with painless, generalized lymphadenopathy and splenomegaly. Blood tests show lymphocytosis. Biopsy of a lymph node reveals small, mature lymphocytes with a 'starry sky' appearance. Which of the following is the most likely diagnosis?",
+    "o": [
+     "Follicular Lymphoma",
+     "Burkitt Lymphoma",
+     "Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma",
+     "Diffuse Large B-cell Lymphoma"
+    ],
+    "a": 1,
+    "e": "The 'starry sky' appearance on histopathology, characterized by scattered macrophages amidst a sea of proliferating lymphocytes, is a classic feature of Burkitt Lymphoma."
+   },
+   {
+    "q": "Which of the following infectious agents is strongly associated with the pathogenesis of gastric MALT lymphoma?",
+    "o": [
+     "Epstein-Barr Virus (EBV)",
+     "Human T-lymphotropic virus type 1 (HTLV-1)",
+     "Helicobacter pylori",
+     "Human Immunodeficiency Virus (HIV)"
+    ],
+    "a": 2,
+    "e": "Helicobacter pylori infection is a well-established cause of chronic gastritis that can lead to the development of gastric MALT lymphoma.",
+    "past": true
+   },
+   {
+    "q": "A patient with Hodgkin lymphoma has disease limited to a single lymph node region (cervical) with intermittent fever and night sweats. What is the correct Ann Arbor stage?",
+    "o": [
+     "Stage IA",
+     "Stage IB",
+     "Stage IIA",
+     "Stage IIB"
+    ],
+    "a": 1,
+    "e": "Disease limited to a single lymph node region is Stage I. The presence of B-symptoms (fever, night sweats) designates it as 'B', hence Stage IB."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 35-year-old female presents to the clinic in rural Kenya with a 4-month history of a progressively enlarging, painless mass in her neck. She also reports significant weight loss (estimated 8kg over 3 months), drenching night sweats requiring her to change clothes, and intermittent fevers. On examination, there is a firm, non-tender, matted cervical lymph node mass measuring approximately 6x4 cm. She also has palpable, non-tender axillary lymph nodes bilaterally. Her spleen is palpable 3 cm below the costal margin. HIV test is negative. A lymph node excisional biopsy is performed.",
+    "qs": [
+     {
+      "q": "Based on the clinical presentation, what is the most likely type of lymphoma (Hodgkin vs. Non-Hodgkin) and why?",
+      "a": "Given the painless lymphadenopathy, B-symptoms (weight loss, night sweats, fever), and palpable splenomegaly, Hodgkin Lymphoma is more likely. While NHL can present similarly, the classic B-symptoms and predictable nodal spread are more characteristic of HL."
+     },
+     {
+      "q": "What is the provisional Ann Arbor stage for this patient, assuming the biopsy confirms lymphoma and imaging shows no other extranodal involvement?",
+      "a": "The provisional Ann Arbor stage is IIIB. 'III' because there is disease on both sides of the diaphragm (cervical/axillary nodes and splenomegaly). 'S' for splenic involvement. 'B' due to the presence of B-symptoms (weight loss, night sweats, fever)."
+     },
+     {
+      "q": "In a low-resource setting where PET-CT is unavailable, what alternative imaging modalities would be crucial for comprehensive staging?",
+      "a": "In a low-resource setting, a CT scan of the neck, chest, abdomen, and pelvis would be crucial for comprehensive staging. A bone marrow biopsy is also essential to assess for marrow involvement. Ultrasound can be used to assess peripheral nodes and organomegaly."
+     }
+    ]
+   },
+   {
+    "v": "A 5-year-old boy from a rural village presents with a rapidly growing, large jaw swelling that developed over 3 weeks. He also has abdominal distension. His mother reports he has been generally unwell and has lost appetite. On examination, there is a firm, non-tender mass involving the mandible, and a large, non-tender, mobile abdominal mass. There are no palpable peripheral lymph nodes. Blood tests show elevated LDH.",
+    "qs": [
+     {
+      "q": "What is the most probable diagnosis given the patient's age, presentation, and geographical context?",
+      "a": "The most probable diagnosis is Endemic Burkitt Lymphoma. This is suggested by the young age, rapid growth of a jaw mass, abdominal involvement, and elevated LDH, all common in endemic regions of East Africa."
+     },
+     {
+      "q": "What specific chromosomal abnormality would you expect to find on genetic analysis of the tumor cells?",
+      "a": "You would expect to find a c-MYC gene translocation, most commonly t(8;14), which is characteristic of Burkitt Lymphoma. This translocation leads to overexpression of the c-MYC oncogene."
+     },
+     {
+      "q": "Outline the urgency and general approach to management for this patient.",
+      "a": "This is an oncologic emergency requiring urgent, intensive, multi-agent chemotherapy. Burkitt Lymphoma is highly aggressive but also highly curable with appropriate treatment. Pre-phase chemotherapy and aggressive supportive care, including prophylaxis for Tumor Lysis Syndrome, are critical due to the high tumor burden and rapid cell turnover."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Incorrectly stating that B symptoms upstage disease to 'A' vs 'B'. The presence of B symptoms indicates 'B' classification, while absence indicates 'A'.",
+   "Confusing Ann Arbor staging components, particularly omitting 'E' for extralymphatic involvement or 'S' for splenic involvement when applicable.",
+   "Underestimating the urgency of treatment for high-grade lymphomas like Burkitt Lymphoma, suggesting a 'watch and wait' approach.",
+   "Failing to mention rasburicase as an alternative to allopurinol for high-risk Tumor Lysis Syndrome, especially in patients with pre-existing hyperuricemia.",
+   "Not recognizing the specific infectious associations for certain lymphomas, such as H. pylori for gastric MALT or EBV for Burkitt Lymphoma.",
+   "Incorrectly identifying the characteristic translocations for Follicular Lymphoma and Mantle Cell Lymphoma, or the oncogenes involved.",
+   "Describing neutropenic sepsis management without emphasizing the critical 'within one hour' antibiotic administration and blood cultures.",
+   "Overlooking the importance of excisional biopsy over FNA for definitive diagnosis, especially in Hodgkin Lymphoma, due to the need for tissue architecture."
+  ],
+  "exam": [
+   "Both Burkitt's lymphoma and infectious mononucleosis are caused by what virus? — Both Burkitt's lymphoma and infectious mononucleosis are caused by the Epstein-Barr Virus (EBV). EBV is a gammaherpesvirus that infects B lymphocytes.",
+   "The anti-apoptotic effect of BCL-2 overexpression, as seen in follicular lymphoma, occurs due to which mechanism? — BCL-2 is an anti-apoptotic protein. Its overexpression prevents programmed cell death (apoptosis) in lymphocytes, leading to their accumulation and uncontrolled proliferation, characteristic of follicular lymphoma.",
+   "What is the most common subtype of B-cell Non-Hodgkin Lymphoma (NHL)? — The most common subtype of B-cell Non-Hodgkin Lymphoma (NHL) is Diffuse Large B-cell Lymphoma (DLBCL). It is an aggressive lymphoma that can arise de novo or from transformation of an indolent lymphoma.",
+   "Probable cause of Burkitt's lymphoma? — Burkitt's lymphoma is strongly associated with Epstein-Barr Virus (EBV) infection, particularly in endemic regions (e.g., East Africa). It is also characterized by a c-MYC gene translocation, most commonly t(8;14).",
+   "A patient with Hodgkin lymphoma has disease on both sides of the diaphragm involving multiple lymph node groups and the spleen, with no systemic symptoms. What is his Ann Arbor stage and what does the absence of systemic symptoms signify? — The Ann Arbor stage is IIIS A. 'III' indicates disease on both sides of the diaphragm. 'S' indicates splenic involvement. 'A' signifies the absence of systemic 'B' symptoms (fever, night sweats, weight loss).",
+   "What percentage of Non-Hodgkin Lymphomas are of B-cell origin? — Approximately 85-90% of Non-Hodgkin Lymphomas are of B-cell origin. The remaining percentage are typically T-cell or NK-cell lymphomas.",
+   "Which translocation is required for the diagnosis of Mantle Cell Lymphoma? — The translocation required for the diagnosis of Mantle Cell Lymphoma is t(11;14)(q13;q32). This translocation leads to the overexpression of cyclin D1, which promotes cell cycle progression.",
+   "A 68-year-old male presents with new-onset, painless cervical lymphadenopathy. Biopsy confirms Non-Hodgkin Lymphoma (NHL). Briefly outline the primary cellular origins of NHL and their approximate percentages. — The primary cellular origins of NHL are B-cells (approximately 85-90%) and T-cells/NK-cells (approximately 10-15%). B-cell lymphomas include DLBCL, Follicular Lymphoma, and CLL/SLL, while T-cell lymphomas are more diverse and often aggressive.",
+   "Differentiate between low-grade (indolent) and high-grade (aggressive) Non-Hodgkin Lymphoma in terms of their typical disease course, curability, and urgency of treatment. — Low-grade lymphomas (e.g., Follicular Lymphoma) have a slow, indolent course, are often incurable but manageable for many years, and treatment may be deferred ('watch and wait'). High-grade lymphomas (e.g., DLBCL) have a rapid, aggressive course, are potentially curable with intensive chemotherapy, and require urgent treatment.",
+   "Identify the characteristic chromosomal translocation and the associated oncogene overexpression found in Follicular Lymphoma and Mantle Cell Lymphoma. — Follicular Lymphoma is characterized by t(14;18)(q32;q21) leading to BCL-2 overexpression. Mantle Cell Lymphoma is characterized by t(11;14)(q13;q32) leading to cyclin D1 overexpression.",
+   "A patient presents with gastric MALT lymphoma. Identify the specific infectious agent strongly associated with its pathogenesis. Name another infectious association for Adult T-cell leukaemia/lymphoma. — Gastric MALT lymphoma is strongly associated with Helicobacter pylori infection. Adult T-cell leukaemia/lymphoma is associated with Human T-lymphotropic virus type 1 (HTLV-1).",
+   "What are the key history questions to ask a patient presenting with lymphadenopathy suspected to be lymphoma? — Key questions include: duration and progression of swelling, presence of B-symptoms (fever, night sweats, weight loss), pain associated with nodes (usually painless), alcohol-induced pain, exposure to infections (TB, HIV), travel history, and any other systemic symptoms like fatigue, pruritus, or cough.",
+   "Describe the physical examination steps for a patient with suspected lymphoma. — Systematic palpation of all lymph node regions (cervical, supraclavicular, axillary, epitrochlear, inguinal) noting size, consistency, tenderness, and mobility. Examine for hepatosplenomegaly, skin lesions, and signs of superior vena cava obstruction (facial plethora, distended neck veins).",
+   "What is the role of a bone marrow biopsy in lymphoma staging and diagnosis? — A bone marrow biopsy is crucial for detecting bone marrow involvement, which upstages the disease and impacts treatment. It helps differentiate between lymphomas and other hematological malignancies and assesses the extent of disease spread."
+  ],
+  "model": "gemini-3.8-flash",
+  "generatedAt": "2026-10-18",
+  "checked": "2026-10-18",
+  "trimmed": 2
+ }
 }

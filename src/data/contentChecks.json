@@ -190,6 +190,15 @@
    "issues": [],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-10-18"
+  },
+  "bronchiectasis": {
+   "hash": "a7d57f35dea7",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-18"
   }
  },
  "topics": {}

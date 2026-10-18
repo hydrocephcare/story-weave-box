@@ -1,0 +1,136 @@
+{
+ "medical": true,
+ "title": "Lower Limb Anatomy",
+ "subject": "Anatomy",
+ "summary": "The lower limb consists of the hip, thigh, leg and foot, each with specific bones, muscles, vessels and nerves. Understanding its layout guides diagnosis of common tropical injuries and systemic disease manifestations.",
+ "aka": [
+  "Lower Extremity"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The lower limb supports locomotion, weight bearing and venous return. It is divided into the gluteal region, thigh, leg and foot, each with distinct compartments.",
+   "b": [
+    "Four major regions: hip, thigh, leg, foot",
+    "Three bony columns: femur, tibia/fibula, foot bones",
+    "Two neurovascular bundles run anterior and posterior"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The pelvis forms the hip joint; the femur is the longest bone, articulating proximally with the acetabulum and distally with the tibia and patella. The tibia bears most weight; the fibula provides lateral stability. The foot has 26 bones arranged in tarsal, metatarsal and phalangeal groups.",
+   "b": [
+    "Hip joint: ball‑and‑socket, high mobility",
+    "Knee joint: hinge with menisci, prone to ligament injury",
+    "Ankle joint: mortise, vulnerable to sprain and infection"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Anteriorly the thigh lies against the abdominal wall; posteriorly the gluteal muscles cover the sciatic notch. In the leg, the deep posterior compartment lies against the tibia, while the anterior compartment is superficial.",
+   "b": [
+    "Sciatic nerve exits pelvis via greater sciatic foramen",
+    "Popliteal fossa contains tibial and common peroneal nerves"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "Arterial flow follows the external iliac → femoral → popliteal → anterior/posterior tibial arteries. Venous return uses deep veins (femoral, popliteal) and superficial veins (great saphenous).",
+   "b": [
+    "Deep veins are prone to thrombosis in immobility",
+    "Great saphenous varicosities are common in low‑resource settings"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The lumbar plexus (L1‑L4) gives the femoral and obturator nerves; the sacral plexus (L4‑S3) gives the sciatic, tibial and common peroneal nerves. Sensory loss follows these distributions.",
+   "b": [
+    "Femoral nerve: anterior thigh sensation, knee extension",
+    "Sciatic nerve: posterior thigh, leg and foot motor and sensory"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "Muscles generate hip flexion/extension, knee stability, ankle plantar‑flexion and dorsiflexion, and foot grip. Efficient venous return relies on calf muscle pump, crucial where compression stockings are unavailable.",
+   "b": [
+    "Quadriceps extend knee; weakness leads to gait instability",
+    "Gastrocnemius pumps blood; thrombosis risk rises with immobility"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "In low‑resource hospitals, common problems include traumatic fractures, compartment syndrome, cellulitis, diabetic foot infection, and venous thrombo‑embolism. Tropical infections (e.g., Buruli ulcer) may involve the skin and underlying fascia.",
+   "b": [
+    "Fracture of femur: pain, deformity, absent distal pulses if vascular injury",
+    "Compartment syndrome: pain out of proportion, tense swelling, paresthesia",
+    "Diabetic foot ulcer: peripheral neuropathy, poor healing, risk of osteomyelitis"
+   ],
+   "t": [
+    {
+     "a": "Plain radiograph",
+     "b": "Does the bone show a fracture or dislocation? Positive shows cortical breach; if unavailable, rely on clinical deformity and neurovascular exam"
+    },
+    {
+     "a": "Creatine kinase",
+     "b": "Is there muscle necrosis suggesting compartment syndrome? Markedly elevated (>1000 IU/L) supports diagnosis; if unavailable, use serial compartment pressure measurement"
+    },
+    {
+     "a": "Ankle‑brachial index",
+     "b": "Is arterial flow compromised in a foot ulcer? <0.9 indicates peripheral arterial disease; if Doppler unavailable, assess pulses and capillary refill"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "A systematic exam starts with inspection, palpation, range of motion and neurovascular assessment. Look for swelling patterns, skin changes and gait abnormalities.",
+   "b": [
+    "Inspect for asymmetry, bruising, ulceration",
+    "Palpate pulses (dorsalis pedis, posterior tibial) and temperature",
+    "Test sensation in the distribution of the femoral, saphenous and peroneal nerves"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Rapidly expanding swelling with pain out of proportion (possible compartment syndrome)",
+  "Absent distal pulses after trauma (vascular injury)",
+  "Severe foot ulcer with systemic signs (possible sepsis)"
+ ],
+ "faq": [
+  {
+   "q": "Why does calf swelling suggest deep vein thrombosis?",
+   "a": "Venous obstruction raises hydrostatic pressure, causing unilateral edema and pain, especially after immobilisation."
+  },
+  {
+   "q": "How can a diabetic foot ulcer become osteomyelitis?",
+   "a": "Chronic ulcer allows bacteria to invade bone; probing to bone and a positive X‑ray or MRI confirm infection."
+  },
+  {
+   "q": "What bedside test helps detect compartment syndrome?",
+   "a": "Pain on passive stretch of the muscles within the compartment is a key clinical clue."
+  }
+ ],
+ "exam": [
+  "A patient with a mid‑shaft femur fracture presents with absent dorsalis pedis pulse – what is your immediate priority? — Assess vascular integrity, apply a temporary splint, arrange urgent vascular imaging or surgical exploration.",
+  "How does a diabetic foot ulcer differ from a simple skin abrasion in terms of investigation? — Look for neuropathy, probe to bone, obtain plain X‑ray; simple abrasions lack deep tissue involvement.",
+  "A 25‑year‑old farmer presents with painful swelling of the anterior leg after a wooden splinter; what condition must you exclude and how? — Exclude compartment syndrome; assess pain on passive stretch and consider compartment pressure measurement.",
+  "Why is the ankle‑brachial index important before planning a bypass for a chronic ulcer? — It quantifies arterial disease; <0.9 indicates significant stenosis requiring revascularisation.",
+  "In a patient with suspected deep vein thrombosis but no Doppler, what clinical tool can you use? — Use the Wells score to estimate pre‑test probability and decide on empirical anticoagulation.",
+  "What feature distinguishes a Buruli ulcer from a typical bacterial cellulitis on the lower limb? — Necrotic ulcer with undermined edges and painless base; culture often negative, PCR for Mycobacterium ulcerans is definitive.",
+  "A child with sickle cell disease presents with sudden leg pain and swelling; what is the most likely diagnosis and first step? — Acute vaso‑occlusive crisis with possible leg infarction; provide analgesia, hydration and assess for compartment syndrome.",
+  "Why should non‑steroidal anti‑inflammatory drugs be avoided in a patient with a recent lower‑limb fracture? — NSAIDs may impair bone healing and increase bleeding risk."
+ ],
+ "related": [
+  "Hip Joint",
+  "Knee Joint",
+  "Ankle Joint",
+  "Peripheral Vascular Disease",
+  "Diabetic Foot",
+  "Compartment Syndrome",
+  "Deep Vein Thrombosis",
+  "Buruli Ulcer"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-18",
+ "reviewed": false
+}

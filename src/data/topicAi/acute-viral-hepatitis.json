@@ -1,0 +1,219 @@
+{
+ "medical": true,
+ "title": "Acute Viral Hepatitis",
+ "subject": "Pathology",
+ "summary": "Acute viral hepatitis is sudden hepatocyte injury from hepatitis viruses, presenting with jaundice, malaise and marked transaminase rise. In low‑resource settings, clinical acumen and basic labs guide management.",
+ "aka": [
+  "HAV, HBV, HCV, HEV"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute viral hepatitis is a sudden, often self‑limited inflammation of the liver caused by hepatitis A, B, C or E viruses. Diagnosis rests on a clinical picture plus a marked rise in ALT/AST (usually >1000 U/L) and serology for the specific virus.",
+   "b": [
+    "High ALT/AST >1000 U/L",
+    "Positive IgM anti‑HAV or IgM anti‑HEV",
+    "HBsAg or anti‑HBV core IgM for acute HBV",
+    "Anti‑HCV RNA for acute HCV"
+   ],
+   "t": [
+    {
+     "a": "ALT/AST",
+     "b": "Degree of hepatocellular injury – >1000 U/L suggests acute viral hepatitis"
+    },
+    {
+     "a": "Total bilirubin",
+     "b": "Mixed hyperbilirubinemia with unconjugated >70 µmol/L supports viral cause"
+    },
+    {
+     "a": "Serology (IgM anti‑HAV, anti‑HEV, anti‑HBc IgM, HBsAg, anti‑HCV RNA)",
+     "b": "Identifies the specific virus and distinguishes acute from chronic infection"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is gauged by the Roussel Uclaf Causality Assessment (RUCAM) for drug‑induced hepatitis and the Child‑Pugh score for liver failure. In acute viral hepatitis, the key danger is fulminant hepatic failure.",
+   "b": [
+    "Mild: ALT/AST 1000–5000 U/L, no encephalopathy",
+    "Moderate: ALT/AST >5000 U/L, mild encephalopathy",
+    "Severe: encephalopathy grade II–IV, INR >1.5, bilirubin >200 µmol/L"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the most common causes are hepatitis A and E, followed by hepatitis B. Hepatitis C is less frequent but rising. Coinfections with HIV or malaria can worsen outcomes.",
+   "b": [
+    "Hepatitis A – fecal‑oral, outbreaks in poor sanitation",
+    "Hepatitis E – similar route, high mortality in pregnancy",
+    "Hepatitis B – perinatal or sexual transmission",
+    "Hepatitis C – blood transfusion, unsafe injections",
+    "Coinfections – HIV, malaria, schistosomiasis"
+   ],
+   "t": [
+    {
+     "a": "HIV test",
+     "b": "Rule out immunosuppression that may alter course"
+    },
+    {
+     "a": "Malaria smear",
+     "b": "Exclude malaria‑induced jaundice"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients report fatigue, anorexia, nausea, right upper quadrant discomfort and dark urine. Jaundice appears after a week. Hepatic encephalopathy may develop if failure ensues.",
+   "b": [
+    "Malaise, anorexia, nausea",
+    "Right upper quadrant pain",
+    "Dark urine, pale stools",
+    "Jaundice (skin, sclera)",
+    "Encephalopathy (confusion, tremor)"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Look for icterus, hepatomegaly, ascites, caput medusae"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Basic labs are essential. In resource‑poor settings, ALT/AST, bilirubin, INR, and a simple viral serology panel guide care. Imaging is reserved for complications.",
+   "b": [
+    "CBC – look for cytopenias",
+    "LFTs – ALT/AST, bilirubin, ALP",
+    "Coagulation – INR, PT",
+    "Serology – IgM anti‑HAV, anti‑HEV, HBsAg, anti‑HBc IgM, anti‑HCV RNA"
+   ],
+   "t": [
+    {
+     "a": "ALT/AST",
+     "b": "Magnitude of hepatocellular injury – >1000 U/L suggests acute viral hepatitis"
+    },
+    {
+     "a": "INR",
+     "b": "Coagulopathy indicates liver synthetic failure"
+    },
+    {
+     "a": "Serology",
+     "b": "Identifies the virus and guides prognosis"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Fulminant hepatic failure, acute liver failure, encephalopathy, coagulopathy, hypoglycaemia, and bleeding are life‑threatening. Early recognition is vital.",
+   "b": [
+    "Encephalopathy grade II–IV",
+    "INR >1.5",
+    "Bilirubin >200 µmol/L",
+    "Hypoglycaemia <2.5 mmol/L",
+    "Bleeding diathesis"
+   ],
+   "t": [
+    {
+     "a": "Glucose",
+     "b": "Hypoglycaemia indicates impaired gluconeogenesis"
+    },
+    {
+     "a": "Platelets",
+     "b": "Thrombocytopenia may signal portal hypertension"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Supportive care is the mainstay. Treat complications, avoid hepatotoxic drugs, and consider antiviral therapy for HBV if indicated. Monitor liver function and encephalopathy closely.",
+   "b": [
+    "Hydration and electrolytes",
+    "Avoid NSAIDs, acetaminophen, herbal hepatotoxins",
+    "N-acetylcysteine in early acute liver failure",
+    "Liver‑supportive measures (albumin, vitamin K)",
+    "Transfer to higher centre if fulminant failure"
+   ],
+   "t": [
+    {
+     "a": "N-acetylcysteine",
+     "b": "Improves survival in early acute liver failure – used if available"
+    },
+    {
+     "a": "Vitamin K",
+     "b": "Corrects coagulopathy"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Patients should be re‑tested for serology to confirm clearance, counsel on safe food and water, and vaccinate against hepatitis A and B if not immune.",
+   "b": [
+    "Repeat serology at 6–12 weeks",
+    "Vaccination for HAV and HBV",
+    "Counsel on hand hygiene, safe water",
+    "Screen household contacts for HBV"
+   ],
+   "t": [
+    {
+     "a": "HBsAg",
+     "b": "Negative at 6 months confirms clearance"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Drug‑induced liver injury, ischemic hepatitis, autoimmune hepatitis, and malaria‑associated jaundice can mimic acute viral hepatitis.",
+   "b": [
+    "Drug‑induced hepatitis – history of new meds",
+    "Ischemic hepatitis – hypotension, cardiac failure",
+    "Autoimmune hepatitis – ANA, SMA positive",
+    "Malaria – positive blood smear"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Early serology may be negative; ALT/AST can be normal in mild cases; co‑infection can mask typical patterns.",
+   "b": [
+    "IgM anti‑HAV may be negative in first week",
+    "ALT/AST <1000 U/L in mild disease",
+    "HBsAg may be negative early in acute HBV"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Encephalopathy, INR >1.5, bilirubin >200 µmol/L, hypoglycaemia <2.5 mmol/L"
+ ],
+ "faq": [
+  {
+   "q": "Why is ALT higher than AST in acute viral hepatitis?",
+   "a": "Viruses cause direct hepatocyte necrosis, releasing ALT, which is more liver‑specific than AST."
+  },
+  {
+   "q": "Can I give acetaminophen to a patient with jaundice?",
+   "a": "No – acetaminophen is hepatotoxic; avoid it in any liver injury."
+  },
+  {
+   "q": "When is antiviral therapy indicated for HBV?",
+   "a": "If ALT >10× ULN, HBeAg positive, or evidence of cirrhosis; otherwise supportive care."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order in a patient with suspected acute viral hepatitis? — ALT/AST to gauge hepatocellular injury; if >1000 U/L, proceed with serology.",
+  "How would you differentiate acute viral hepatitis from drug‑induced liver injury? — History of new medications, pattern of transaminases, and presence of eosinophilia.",
+  "What is the most appropriate management for a patient with acute hepatitis B and an INR of 1.8? — Supportive care, avoid hepatotoxic drugs, consider N‑acetylcysteine if early failure, and arrange transfer.",
+  "Why is N‑acetylcysteine used in acute liver failure? — It replenishes glutathione and improves microcirculation, reducing mortality.",
+  "What red flag would prompt immediate transfer to a higher centre? — Encephalopathy grade II or higher, INR >1.5, bilirubin >200 µmol/L.",
+  "Which vaccine is most important for preventing acute viral hepatitis in this setting? — Hepatitis A and B vaccines; HAV for food/water safety, HBV for perinatal and sexual transmission.",
+  "How would you counsel a patient who has recovered from acute hepatitis A about future risk? — They are immune for life; no further vaccination needed, but maintain good hygiene."
+ ],
+ "related": [
+  "Hepatitis B management",
+  "Fulminant hepatic failure",
+  "Drug‑induced liver injury",
+  "Malaria‑associated jaundice"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-18",
+ "reviewed": false
+}

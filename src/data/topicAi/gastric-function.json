@@ -1,0 +1,126 @@
+{
+ "medical": true,
+ "title": "Gastric Physiology and Function",
+ "subject": "Physiology",
+ "summary": "The stomach secretes acid and enzymes to digest food and protect against pathogens. Its function is regulated by nerves and hormones, and impaired function can lead to various gastrointestinal disorders.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The stomach is a J-shaped organ that receives food from the oesophagus, mixes it with digestive juices, and empties its contents into the small intestine. It plays a crucial role in digestion and nutrient absorption."
+  },
+  {
+   "h": "How it works",
+   "p": "The stomach lining contains glands that secrete gastric juice, a mixture of hydrochloric acid (HCl), pepsinogen, mucus, and intrinsic factor. HCl creates an acidic environment (pH 1.5-3.5) optimal for pepsin activity and kills ingested microbes. Pepsinogen is converted to pepsin, an enzyme that begins protein digestion. Mucus protects the stomach lining from acid and pepsin. Intrinsic factor is essential for vitamin B12 absorption.",
+   "b": [
+    "Mechanical digestion through churning.",
+    "Chemical digestion of proteins.",
+    "Sterilisation of ingested food."
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Gastric function is regulated by the nervous system (vagus nerve) and hormones. The cephalic phase (sight, smell, taste of food) stimulates secretion. The gastric phase (food in stomach) triggers further secretion via local reflexes and gastrin release. The intestinal phase (food in duodenum) inhibits gastric secretion.",
+   "b": [
+    "Vagus nerve stimulates acid and pepsin secretion.",
+    "Gastrin promotes acid secretion.",
+    "Secretin and CCK inhibit gastric emptying and secretion."
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Impaired gastric function can manifest as hypochlorhydria (low acid), achlorhydria (no acid), or hyperchlorhydria (high acid). This can result from infections (e.g., Helicobacter pylori), autoimmune conditions (pernicious anaemia), chronic gastritis, or Zollinger-Ellison syndrome. Reduced acid can impair digestion and increase infection risk, while excess acid can damage the mucosa.",
+   "b": [
+    "Reduced acid: malabsorption, increased infection risk.",
+    "Increased acid: peptic ulcer disease, gastritis.",
+    "Motility disorders: gastroparesis, delayed emptying."
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Understanding gastric function is vital for diagnosing and managing conditions like peptic ulcer disease, gastritis, malabsorption syndromes (e.g., vitamin B12 deficiency), and gastro-oesophageal reflux disease. In low-resource settings, infections like H. pylori and parasitic infestations are common causes of gastric complaints.",
+   "t": [
+    {
+     "a": "History taking",
+     "b": "What symptoms suggest a gastric problem? (e.g., dyspepsia, nausea, vomiting, weight loss, bleeding)"
+    },
+    {
+     "a": "Physical examination",
+     "b": "What signs might be present? (e.g., epigastric tenderness, signs of anaemia, dehydration)"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Examiners will assess your understanding of how gastric secretions and motility are regulated, and how disruptions lead to common clinical problems.",
+   "t": [
+    {
+     "a": "Gastric acid secretion",
+     "b": "What is the role of HCl? — Kills microbes, denatures proteins, activates pepsinogen."
+    },
+    {
+     "a": "Pepsin function",
+     "b": "What does pepsin do? — Initiates protein digestion."
+    },
+    {
+     "a": "Mucosal protection",
+     "b": "How is the stomach lining protected? — Mucus layer, bicarbonate secretion, rapid cell turnover."
+    },
+    {
+     "a": "Regulation of secretion",
+     "b": "What stimulates gastric acid? — Vagus nerve (acetylcholine), gastrin, histamine."
+    },
+    {
+     "a": "H. pylori infection",
+     "b": "How does H. pylori affect gastric function? — Causes inflammation, reduces acid in some cases, increases risk of ulcers and cancer."
+    },
+    {
+     "a": "Pernicious anaemia",
+     "b": "What is the link between pernicious anaemia and gastric function? — Autoimmune destruction of parietal cells leads to achlorhydria and B12 malabsorption."
+    },
+    {
+     "a": "Gastric emptying",
+     "b": "What factors affect gastric emptying? — Volume, composition of meal, hormones (CCK), neural input."
+    },
+    {
+     "a": "Clinical scenario",
+     "b": "A patient presents with epigastric pain relieved by food. What is the likely diagnosis and why? — Duodenal ulcer. Acid production is high, food buffers acid temporarily."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Vomiting blood (haematemesis)",
+  "Passing black, tarry stools (melaena)",
+  "Severe, persistent abdominal pain",
+  "Signs of shock (hypotension, tachycardia, pallor)"
+ ],
+ "faq": [
+  {
+   "q": "What is the main function of stomach acid?",
+   "a": "To kill ingested microorganisms and create an optimal pH for pepsin to digest proteins."
+  },
+  {
+   "q": "What is intrinsic factor and why is it important?",
+   "a": "Intrinsic factor is secreted by parietal cells and is essential for the absorption of vitamin B12 in the ileum."
+  },
+  {
+   "q": "How can H. pylori affect gastric function?",
+   "a": "H. pylori infection causes chronic inflammation (gastritis), which can impair acid secretion and increase the risk of peptic ulcers and gastric cancer."
+  }
+ ],
+ "exam": [],
+ "related": [
+  "Peptic Ulcer Disease",
+  "Gastritis",
+  "Gastro-oesophageal Reflux Disease (GERD)",
+  "Helicobacter pylori infection",
+  "Malabsorption Syndromes",
+  "Gastric Motility Disorders",
+  "Pernicious Anaemia"
+ ],
+ "kind": "physiology",
+ "model": "gemini-2.5-flash-lite",
+ "generatedAt": "2026-10-18",
+ "reviewed": false
+}

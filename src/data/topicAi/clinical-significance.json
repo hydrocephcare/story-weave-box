@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "title": "Clinical Significance in Microbiology",
+ "subject": "Microbiology & immunology",
+ "summary": "Clinicians must link laboratory findings to patient management, prioritising local disease burden and resource constraints. This page guides ward‑round reasoning and exam preparation.",
+ "aka": [
+  "Clinical relevance"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Clinical significance is the bridge between a test result and its impact on patient care. In low‑resource settings, the focus is on tests that change management and diseases that are common and potentially fatal.",
+   "b": [
+    "Interpret results in context",
+    "Prioritise tests that alter treatment",
+    "Consider local epidemiology"
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "Microbial tests are interpreted by understanding the organism’s biology, resistance patterns and typical host response. In East Africa, malaria, TB, HIV, and bacterial sepsis dominate.",
+   "b": [
+    "Know endemic pathogens",
+    "Recognise resistance trends",
+    "Assess host immunity"
+   ],
+   "t": [
+    {
+     "a": "Peripheral smear",
+     "b": "Positive indicates Plasmodium falciparum or vivax; negative does not rule out early infection"
+    },
+    {
+     "a": "GeneXpert MTB/RIF",
+     "b": "Positive = start ATT; rifampicin resistance = add second‑line drugs"
+    }
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Understanding transmission informs infection control and public health measures. For example, schistosomiasis requires snail control, while HIV needs condom promotion.",
+   "b": [
+    "Vector control",
+    "Barrier methods",
+    "Environmental sanitation"
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "The clinical significance of a pathogen is judged by morbidity, mortality and treatment complexity. Severe sepsis, meningitis, and drug‑resistant TB are high‑priority.",
+   "b": [
+    "Severe sepsis – high mortality",
+    "Meningitis – risk of neurological sequelae",
+    "Drug‑resistant TB – prolonged treatment"
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnostic criteria combine clinical features, laboratory tests and imaging. In resource‑poor settings, algorithms rely on simple, affordable tests.",
+   "b": [
+    "Use WHO guidelines",
+    "Apply clinical scoring systems",
+    "Rely on point‑of‑care tests"
+   ],
+   "t": [
+    {
+     "a": "Rapid diagnostic test (RDT) for malaria",
+     "b": "Positive = treat with artemisinin‑based combination; negative + fever = consider bacterial sepsis"
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Management starts with treating the underlying cause, followed by supportive care. Drug choice reflects efficacy, safety, and local resistance.",
+   "b": [
+    "First‑line antimalarials: artemisinin‑based combos",
+    "Second‑line for TB: fluoroquinolones",
+    "Supportive: fluids, oxygen"
+   ],
+   "t": [
+    {
+     "a": "Artemisinin‑based combination therapy (ACT)",
+     "b": "Avoids monotherapy to prevent resistance"
+    },
+    {
+     "a": "Isoniazid + Rifampicin",
+     "b": "Avoids when resistance suspected"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Examiners test reasoning: what to do next, why a drug is chosen, and how to recognise complications. Focus on bedside decision‑making.",
+   "b": [
+    "Ask about travel history",
+    "Check for signs of shock",
+    "Use WHO danger signs"
+   ],
+   "t": [
+    {
+     "a": "Shock index (HR/SBP)",
+     "b": "Shock index >0.9 = urgent fluid therapy"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnosis is crucial. For example, malaria can mimic typhoid fever; bacterial meningitis can resemble viral meningitis.",
+   "b": [
+    "Malaria vs typhoid",
+    "Bacterial vs viral meningitis"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Some tests have false negatives or positives. Malaria RDTs may miss low parasitaemia; CRP can be elevated in non‑infectious inflammation.",
+   "b": [
+    "Low parasitaemia – negative RDT",
+    "CRP in autoimmune disease – false positive"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe sepsis with hypotension",
+  "Uncontrolled bleeding",
+  "Unresponsive to initial therapy"
+ ],
+ "faq": [
+  {
+   "q": "Why is a negative malaria RDT not always reassuring?",
+   "a": "Low parasitaemia or early infection can give false negatives; repeat testing or microscopy is needed."
+  },
+  {
+   "q": "What is the significance of a high CRP in a febrile patient?",
+   "a": "It suggests bacterial infection and supports starting antibiotics, but must be interpreted with clinical context."
+  },
+  {
+   "q": "When should I suspect drug‑resistant TB?",
+   "a": "History of previous TB treatment, poor adherence, or a positive GeneXpert with rifampicin resistance."
+  }
+ ],
+ "exam": [
+  "A 5‑year‑old presents with fever and splenomegaly – what is the next step? — Obtain a peripheral smear for malaria; if negative, consider typhoid or malaria relapse.",
+  "A patient with suspected sepsis has a shock index of 1.2 – what is the immediate management? — Start fluid resuscitation and broad‑spectrum antibiotics.",
+  "Why is artemisinin‑based combination therapy preferred over chloroquine in East Africa? — High chloroquine resistance; ACTs are effective and reduce mortality.",
+  "A patient on rifampicin develops a rash – what is the likely cause and management? — Drug‑induced hypersensitivity; discontinue rifampicin and start alternative ATT.",
+  "What is the clinical significance of a positive GeneXpert MTB/RIF with rifampicin resistance? — Indicates multidrug‑resistant TB; requires second‑line drugs and longer treatment.",
+  "Why is a high CRP not sufficient to diagnose bacterial meningitis? — CRP can be elevated in viral infections; lumbar puncture is required for definitive diagnosis.",
+  "A patient with HIV presents with fever and weight loss – what is the first diagnostic test? — Start with a CD4 count and viral load; consider TB and opportunistic infections."
+ ],
+ "related": [
+  "Malaria",
+  "Tuberculosis",
+  "Sepsis",
+  "Bacterial meningitis",
+  "Drug‑resistant infections",
+  "Point‑of‑care diagnostics",
+  "Infection control",
+  "Antimicrobial stewardship"
+ ],
+ "kind": "microbe",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-18",
+ "reviewed": false
+}

@@ -1,0 +1,208 @@
+{
+ "medical": true,
+ "title": "Lung Tumours: Pathology and Clinical Approach",
+ "subject": "Pathology",
+ "summary": "Lung tumours, predominantly carcinomas, are a leading cause of cancer death globally. They are strongly linked to smoking and present with various respiratory and systemic symptoms. Early diagnosis and appropriate staging are crucial for effective management.",
+ "aka": [
+  "Lung cancer",
+  "Bronchogenic carcinoma"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Lung tumours are abnormal growths of cells within the lung parenchyma. The vast majority (90-95%) are malignant carcinomas, arising from the bronchial epithelium. Diagnosis relies on histological confirmation from biopsy or cytology.",
+   "b": [
+    "Primary lung cancers are broadly classified into small cell lung carcinoma (SCLC) and non-small cell lung carcinoma (NSCLC).",
+    "NSCLC includes adenocarcinoma, squamous cell carcinoma, and large cell carcinoma.",
+    "Adenocarcinoma is the most common type, often found peripherally and in non-smokers.",
+    "Squamous cell carcinoma is typically central, associated with smoking, and may cause cavitation.",
+    "SCLC is highly aggressive, often metastasizes early, and is strongly linked to smoking."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging determines the extent of the cancer and guides treatment. NSCLC uses the TNM (Tumour, Node, Metastasis) system, while SCLC is often staged as limited or extensive disease.",
+   "b": [
+    "T (Tumour): Describes the size and local invasion of the primary tumour.",
+    "N (Nodes): Indicates the presence and location of regional lymph node involvement.",
+    "M (Metastasis): Denotes the presence or absence of distant metastases.",
+    "Limited SCLC: Confined to one hemithorax and regional lymph nodes, treatable with a single radiation field.",
+    "Extensive SCLC: Spread beyond limited disease, often involving distant sites."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Smoking is the predominant risk factor for lung cancer, accounting for approximately 80% of cases. Other environmental and occupational exposures also contribute.",
+   "b": [
+    "Cigarette smoking: Dose-dependent risk, includes passive smoking.",
+    "Asbestos exposure: Strong link to mesothelioma (pleural tumour) and lung adenocarcinoma, especially in lower lobes.",
+    "Radon gas: Naturally occurring radioactive gas, a significant cause in non-smokers.",
+    "Ionizing radiation: Therapeutic radiation for other cancers, occupational exposure.",
+    "Industrial carcinogens: Nickel, chromium, arsenic, polycyclic aromatic hydrocarbons.",
+    "Air pollution: Outdoor and indoor (e.g., biomass fuel smoke) pollution.",
+    "Genetic predisposition: Family history can increase risk."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms of lung tumours are varied and depend on the tumour's location, size, and presence of metastasis. Early stages are often asymptomatic.",
+   "b": [
+    "Persistent cough: Most common symptom, often changing in character.",
+    "Haemoptysis: Coughing up blood, can be a late sign.",
+    "Dyspnoea: Shortness of breath due to airway obstruction, pleural effusion, or parenchymal involvement.",
+    "Chest pain: Localized, often pleuritic, or dull and persistent.",
+    "Weight loss and fatigue: Common systemic symptoms.",
+    "Recurrent infections: Post-obstructive pneumonia.",
+    "Hoarseness: Due to recurrent laryngeal nerve involvement.",
+    "Superior vena cava syndrome: Facial swelling, dilated neck veins, dyspnoea.",
+    "Horner's syndrome: Ptosis, miosis, anhidrosis due to apical (Pancoast) tumour affecting sympathetic chain.",
+    "Paraneoplastic syndromes: SIADH (small cell), hypercalcaemia (squamous cell), Cushing's syndrome (small cell)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm diagnosis, determine tumour type, and stage the disease. Availability of advanced imaging and biopsy techniques varies in low-resource settings.",
+   "t": [
+    {
+     "a": "Chest X-ray (CXR)",
+     "b": "Screens for lung abnormalities (masses, effusions, atelectasis). A suspicious mass or infiltrate warrants further investigation. May miss small lesions."
+    },
+    {
+     "a": "Sputum cytology",
+     "b": "Identifies malignant cells in sputum, especially for central tumours. Positive result suggests malignancy, but sensitivity is low. Negative does not rule out cancer."
+    },
+    {
+     "a": "CT scan of chest (with contrast)",
+     "b": "Characterizes lung lesions, assesses lymph node involvement, and detects pleural/pericardial effusions. Essential for staging. If unavailable, CXR and clinical assessment guide next steps."
+    },
+    {
+     "a": "Bronchoscopy with biopsy/washings",
+     "b": "Visualizes airways, obtains tissue for histological diagnosis, especially for central lesions. Confirms tumour type. If unavailable, percutaneous biopsy or surgical biopsy may be considered if feasible."
+    },
+    {
+     "a": "CT-guided percutaneous needle biopsy",
+     "b": "Obtains tissue for histological diagnosis from peripheral lesions. Confirms tumour type. Requires CT guidance and expertise."
+    },
+    {
+     "a": "Pleural fluid cytology",
+     "b": "Identifies malignant cells in pleural effusion. Positive confirms metastatic disease. Negative does not rule out malignancy."
+    },
+    {
+     "a": "Full blood count (FBC)",
+     "b": "Checks for anaemia (chronic disease, bleeding), thrombocytosis (paraneoplastic), or leukocytosis (infection). Abnormalities may suggest systemic impact."
+    },
+    {
+     "a": "Liver and renal function tests",
+     "b": "Assesses organ function and detects distant metastases. Abnormalities may indicate spread or paraneoplastic effects."
+    },
+    {
+     "a": "Bone scan or PET-CT (if available)",
+     "b": "Detects bone metastases or distant metastases more broadly. Essential for accurate staging in NSCLC. If unavailable, clinical suspicion and targeted imaging (e.g., X-ray of painful bone) are used."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs and symptoms indicate advanced disease or urgent complications requiring immediate attention.",
+   "b": [
+    "Sudden onset severe dyspnoea: May indicate large pleural effusion, superior vena cava obstruction, or massive haemoptysis.",
+    "Massive haemoptysis: Life-threatening airway obstruction and blood loss.",
+    "Neurological deficits: Suggests brain metastases or paraneoplastic neurological syndromes.",
+    "Superior vena cava syndrome: Requires urgent management to relieve obstruction.",
+    "Spinal cord compression: Due to vertebral metastases, causing neurological deficits and pain.",
+    "Pathological fractures: Due to bone metastases, causing severe pain and immobility."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management depends on the tumour type, stage, patient's performance status, and available resources. The goal is cure for early-stage disease and palliation for advanced disease.",
+   "b": [
+    "Surgery: Primary treatment for early-stage NSCLC (lobectomy, pneumonectomy). Not typically used for SCLC.",
+    "Radiotherapy: Used for localized disease (curative or palliative), often combined with chemotherapy for SCLC.",
+    "Chemotherapy: Systemic treatment for SCLC (often first-line) and advanced NSCLC. Common agents include platinum-based drugs (cisplatin, carboplatin).",
+    "Targeted therapy: For NSCLC with specific genetic mutations (e.g., EGFR, ALK). Requires molecular testing, often unavailable in low-resource settings.",
+    "Immunotherapy: For advanced NSCLC, enhances the body's immune response against cancer. Requires specific drugs and monitoring.",
+    "Palliative care: Essential for symptom control (pain, dyspnoea, cough) and improving quality of life at all stages.",
+    "Nutritional support: To combat cachexia and maintain strength.",
+    "Psychological support: For patients and families coping with a cancer diagnosis."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow-up monitors for recurrence and manages treatment side effects. Prevention focuses on reducing exposure to risk factors.",
+   "b": [
+    "Regular clinical review and imaging (CXR, CT) to detect recurrence or new primary tumours.",
+    "Smoking cessation: The most effective preventive measure.",
+    "Avoidance of occupational carcinogens: Use of protective equipment.",
+    "Radon mitigation in homes: Where radon levels are high.",
+    "Vaccination against influenza and pneumococcus: To prevent respiratory infections in vulnerable patients."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Lung tumours can mimic other common respiratory conditions, making differential diagnosis challenging.",
+   "b": [
+    "Tuberculosis (TB): Presents with chronic cough, weight loss, haemoptysis, and cavitating lesions on CXR. Endemic in East Africa, often co-exists with HIV.",
+    "Pneumonia: Persistent or recurrent pneumonia, especially in the same lobe, should raise suspicion for an underlying tumour.",
+    "Lung abscess: Can present with cough, fever, and cavitating lesion, but usually has purulent sputum and responds to antibiotics.",
+    "Fungal infections: Especially in immunocompromised individuals, can cause lung nodules or infiltrates.",
+    "Bronchiectasis: Chronic cough with sputum, but usually without a discrete mass."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting investigation results requires clinical correlation, as some findings can be ambiguous or falsely reassuring.",
+   "b": [
+    "Negative sputum cytology: Does not rule out lung cancer, especially for peripheral tumours.",
+    "Normal CXR: Small tumours can be missed, particularly in early stages.",
+    "Negative biopsy: May be due to sampling error, especially in necrotic or highly fibrotic lesions. Repeat biopsy or alternative biopsy method may be needed.",
+    "Elevated inflammatory markers: Can be due to infection or paraneoplastic inflammation, not specific to cancer.",
+    "Clinical improvement with antibiotics: May mask an underlying tumour if the improvement is partial or temporary, especially in post-obstructive pneumonia."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden onset of severe shortness of breath",
+  "Coughing up large amounts of blood (massive haemoptysis)",
+  "New weakness or numbness in limbs, or sudden severe headache",
+  "Sudden swelling of the face, neck, or arms",
+  "Severe, uncontrolled pain"
+ ],
+ "faq": [
+  {
+   "q": "Is lung cancer always caused by smoking?",
+   "a": "No, while smoking is the leading cause, about 10-15% of lung cancers occur in non-smokers due to factors like radon, asbestos, air pollution, or genetics."
+  },
+  {
+   "q": "What is a Pancoast tumour?",
+   "a": "A Pancoast tumour is an apical lung tumour (at the top of the lung) that can invade the brachial plexus, sympathetic chain, and ribs, causing shoulder pain and Horner's syndrome."
+  },
+  {
+   "q": "Can lung cancer be cured?",
+   "a": "Yes, lung cancer can be cured, especially when diagnosed at an early stage and treated with surgery, often combined with chemotherapy or radiotherapy. Advanced stages are usually managed with palliative intent."
+  }
+ ],
+ "exam": [
+  "A 60-year-old male presents with a 3-month history of persistent cough, weight loss, and new-onset hoarseness. He has a 40-pack-year smoking history. What is your immediate differential diagnosis and what are the first three investigations you would order in a low-resource setting? — Differential: Lung cancer (highly likely), TB, chronic bronchitis. Investigations: Chest X-ray, sputum for AFB and cytology, full blood count and ESR.",
+  "You identify a suspicious lung mass on CXR. What is the next crucial step to confirm the diagnosis and why is it important to determine the histological type? — Next step: Obtain tissue for histological diagnosis (e.g., bronchoscopy with biopsy or CT-guided biopsy). Importance: Histological type (SCLC vs. NSCLC, and specific NSCLC subtype) dictates treatment strategy (e.g., surgery for early NSCLC, chemotherapy/radiotherapy for SCLC).",
+  "A patient with known lung cancer develops facial swelling, dilated neck veins, and dyspnoea. What is this syndrome, and what is its immediate management? — Syndrome: Superior vena cava (SVC) syndrome. Immediate management: Elevate head of bed, oxygen, diuretics (if fluid overloaded), corticosteroids to reduce oedema, and urgent referral for radiotherapy or stenting to relieve obstruction.",
+  "Discuss the challenges of lung cancer diagnosis and management in East African hospitals, considering resource limitations. — Challenges: Limited access to advanced imaging (CT, PET-CT), pathology services (immunohistochemistry, molecular testing), and specialized treatments (targeted therapy, immunotherapy, advanced surgical techniques). Late presentation due to lack of screening and awareness. High prevalence of TB can mimic lung cancer.",
+  "A patient with small cell lung cancer develops confusion and hyponatraemia. What paraneoplastic syndrome is most likely, and how would you manage it? — Syndrome: Syndrome of Inappropriate Antidiuretic Hormone (SIADH). Management: Fluid restriction, hypertonic saline (if severe symptomatic hyponatraemia), and treatment of the underlying SCLC.",
+  "Why is smoking cessation the single most important intervention in lung cancer prevention and management? — Prevention: Significantly reduces the risk of developing lung cancer. Management: Improves prognosis, reduces treatment complications, and lowers the risk of developing a second primary lung cancer.",
+  "A patient with a peripheral lung lesion has a negative sputum cytology. What does this mean, and what would be your next step? — Meaning: Negative sputum cytology does not rule out lung cancer, especially for peripheral lesions which are less likely to shed cells into the central airways. Next step: Proceed with more invasive tissue sampling, such as a CT-guided percutaneous needle biopsy, to obtain a definitive diagnosis."
+ ],
+ "related": [
+  "Tuberculosis",
+  "Pleural effusion",
+  "Superior vena cava syndrome",
+  "Paraneoplastic syndromes",
+  "Smoking cessation",
+  "Thoracic surgery",
+  "Radiotherapy principles",
+  "Chemotherapy principles"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-18",
+ "reviewed": false
+}
