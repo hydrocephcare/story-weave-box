@@ -152,8 +152,11 @@ const ReadingBreak = memo(function ReadingBreak({ kind, articleId, category, tit
             const rel = all.filter((c) => onTopic(`${c.question} ${c.answer}`));
             if (rel.length >= 2) { if (live) setState({ kind: k, cards: pick(rel, (c) => `${c.question} ${c.answer}`, keys, 4) }); return; }
           } else if (k === "read") {
-            const { data } = await (supabase as any).from("articles").select("id, title, meta_description").eq("published", true).eq("category", category).is("deleted_at", null).neq("id", articleId).limit(12);
-            const notes = ((data || []) as Note[]).filter((n) => !/mcq|question|exam|paper|quiz|bank/i.test(n.title));
+            if (!titleKeys.length) continue;
+            // other notes on the same subject, anywhere on the site (a related note, not just the same shelf)
+            const filter = titleKeys.slice(0, 3).map((w) => `title.ilike.%${w.replace(/[%,()]/g, "")}%`).join(",");
+            const { data } = await (supabase as any).from("articles").select("id, title, meta_description").eq("published", true).is("deleted_at", null).neq("id", articleId).or(filter).limit(12);
+            const notes = ((data || []) as Note[]).filter((n) => !/mcq|question|exam|paper|quiz|bank|saq|past/i.test(n.title) && onTopic(n.title));
             if (notes.length) { if (live) setState({ kind: k, notes: pick(notes, (n) => `${n.title} ${n.meta_description || ""}`, keys, 2) }); return; }
           } else if (k === "books" && books.length) { if (live) setState({ kind: k }); return; }
         } catch { /* try the next kind */ }
