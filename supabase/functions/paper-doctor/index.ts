@@ -67,7 +67,8 @@ const needsAnswers = (text: string) => {
   const mcqPart = text.split(/\n\s*(?:#+\s*)?\**\s*(?:short answer|essay|long answer|saq|laq)/i)[0];
   const questions = (mcqPart.match(/(?:^|\n)\s*\(?a[.)]\s+\S/gi) || []).length;
   const answers = (mcqPart.match(/answer\s*[:：]/gi) || []).length;
-  return questions >= 6 && answers < questions * 0.4;
+  const written = (mcqPart.match(/\(\s*\d+\s*marks?\s*\)/gi) || []).length;   // a written paper is tidied, not turned into an answer key
+  return questions >= 6 && answers < questions * 0.4 && written < 3;
 };
 const MCQ_LINE = /^\s*(?:#+\s*)?(?:Question\s+)?\d{1,3}[.)]\s+\S/i;
 
