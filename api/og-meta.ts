@@ -1,3 +1,4 @@
+import { topicTitle } from "../src/lib/topicMeta.js";
 export const config = {
   runtime: "edge",
 };
@@ -840,7 +841,7 @@ export default async function handler(req: Request): Promise<Response> {
       const row = rows?.[0];
       if (row) {
         const c = row.content || {};
-        title = `${row.name}: overview, causes, management and practice questions | Ompath Study`;
+        title = topicTitle(row.name, row.category);
         description = toMetaDescription(c.summary || `Everything on ${row.name} from Ompath Study.`, `Notes, images and practice questions on ${row.name}.`);
         ogImage = cardUrl(row.name, row.category, "Topic", c.summary || "");
         keywords = `${row.name}, ${row.category || "medicine"}, medical students, Ompath Study, study notes, MCQs`;

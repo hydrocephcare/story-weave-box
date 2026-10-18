@@ -25,7 +25,7 @@ try {
   const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   const setTag = (html, re, tag) => (re.test(html) ? html.replace(re, tag) : html.replace("</head>", `    ${tag}\n  </head>`));
 
-  function render({ title, description, path: pagePath, image, keywords, body, jsonLd }) {
+  function render({ title, description, path: pagePath, image, keywords, body, jsonLd, noindex = false }) {
     const url = `${site}${pagePath}`;
     const img = `${site}${image}`;
     let html = template;
@@ -47,6 +47,7 @@ try {
       `<meta property="og:image:alt" content="${esc(title)}" />`,
       `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, "\\u003c")}</script>`,
     ].join("\n    ");
+    if (noindex) html = setTag(html, /<meta name="robots"[^>]*>/, `<meta name="robots" content="noindex,follow" />`);
     html = html.replace("</head>", `    ${extra}\n  </head>`);
     html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
     return html;
@@ -61,12 +62,12 @@ try {
   // Only the books are for verified MKU students: they are not written out as public pages and are not in the sitemap.
   // Timetables are listed for Google, but the app asks for the student sign-in before showing them.
   const MKU_ONLY = /^\/books(\/|$)/;
-  const write = (urlPath, html, lastmod) => {
+  const write = (urlPath, html, lastmod, inSitemap = true) => {
     if (MKU_ONLY.test(urlPath)) return;
     const dir = path.join(dist, urlPath.replace(/^\//, ""));
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, "index.html"), html);
-    written.push({ urlPath, lastmod });
+    if (inSitemap) written.push({ urlPath, lastmod });
   };
 
   // ---------------- library folders ----------------

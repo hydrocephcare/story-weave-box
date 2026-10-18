@@ -1,5 +1,7 @@
 // Writes a plain HTML copy of every topic page at build time, so Google reads the full text and WhatsApp shows the right preview
 // (neither runs the app). Called from scripts/library/prerender.mjs; the app takes over in the browser.
+import { isJunkTopic, topicTitle } from "../../src/lib/topicMeta.js";
+
 export function prerenderTopics({ fs, path, root, esc, shell, crumbs, write, render }) {
   const dir = path.join(root, "public/topics");
   if (!fs.existsSync(path.join(dir, "index.json"))) return 0;
@@ -12,7 +14,9 @@ export function prerenderTopics({ fs, path, root, esc, shell, crumbs, write, ren
     const file = path.join(dir, `${it.s}.json`);
     if (!fs.existsSync(file)) continue;
     const t = JSON.parse(fs.readFileSync(file, "utf8"));
-    const title = `${t.n}: overview, causes, management and practice questions | Ompath Study`;
+    const title = topicTitle(t.n, t.c);
+    // only a topic with its own written page is offered to search engines; a page built from note fragments, or a phrase that is not a subject, stays out until it has one
+    const indexable = !!t.ai && !isJunkTopic(t.n);
     // the page's own definition when there is one; otherwise a clear line (a sentence lifted from an exam question makes a poor preview)
     const description = (t.ai?.summary || `${t.n}: a clear overview with causes, tests, management, pictures and practice questions. Free from Ompath Study.`).slice(0, 158);
     const path1 = `/topic/${t.s}`;
@@ -38,12 +42,12 @@ export function prerenderTopics({ fs, path, root, esc, shell, crumbs, write, ren
       { "@context": "https://schema.org", "@type": "WebPage", name: title, url: `https://www.ompathstudy.com${path1}`, about: { "@type": "MedicalEntity", name: t.n }, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: "https://www.ompathstudy.com" } },
       ...(faq.length ? [{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq }] : []),
     ];
-    write(path1, render({ title, description, path: path1, image: `/api/note-card?title=${encodeURIComponent(t.n)}&unit=${encodeURIComponent(t.c || "Medicine")}&kind=Topic&pic=wiki&blurb=${encodeURIComponent(String(description || '').replace(/\s+/g, ' ').slice(0, 150))}`, keywords: [t.n, ...(t.a ?? []), `${t.n} notes`, `${t.n} MCQs`, `${t.n} medical students`], body: shell(parts.join("")), jsonLd }), today);
+    write(path1, render({ title, description, path: path1, image: `/api/note-card?title=${encodeURIComponent(t.n)}&unit=${encodeURIComponent(t.c || "Medicine")}&kind=Topic&pic=wiki&blurb=${encodeURIComponent(String(description || '').replace(/\s+/g, ' ').slice(0, 150))}`, keywords: [t.n, ...(t.a ?? []), `${t.n} notes`, `${t.n} MCQs`, `${t.n} medical students`], body: shell(parts.join("")), jsonLd, noindex: !indexable }), today, indexable);
     n++;
   }
   // the A to Z page
   const byDomain = new Map();
-  for (const it of index) { if (!byDomain.has(it.c)) byDomain.set(it.c, []); byDomain.get(it.c).push(it); }
+  for (const it of index) { if (isJunkTopic(it.n)) continue; if (!byDomain.has(it.c)) byDomain.set(it.c, []); byDomain.get(it.c).push(it); }
   const body = shell(
     crumbs([["Home", "/"], ["Topics", null]]) + `<h1>Every topic, one page</h1><p>One page for every subject in the library: notes, images and practice questions on diseases, anatomy, physiology, pathology, microbiology and pharmacology.</p>` +
     [...byDomain.entries()].map(([d, items]) => `<h2>${esc(d)}</h2>${li(items.slice().sort((a, b) => a.n.localeCompare(b.n)).map((i) => link(`/topic/${i.s}`, i.n)))}`).join(""),

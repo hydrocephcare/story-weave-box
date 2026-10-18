@@ -1,3 +1,4 @@
+import { isJunkTopic, topicTitle } from "@/lib/topicMeta";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useReadLog } from "@/lib/readLog";
 import SaveTopicButton from "@/components/SaveTopicButton";
@@ -479,7 +480,7 @@ export default function TopicPage() {
     const url = `${SITE}${topicPath(slug)}`;
     const faq = [...(page?.faq ?? []).map((f) => ({ q: f.q, a: f.a })), ...(topic?.qs ?? []).filter((q) => q.e).slice(0, 3).map((q) => ({ q: q.q, a: `${q.o[q.a]}. ${q.e}` }))].slice(0, 6);
     return [
-      { "@context": "https://schema.org", "@type": "MedicalWebPage", name: `${name}: overview, causes, management and practice questions`, url, about: { "@type": "MedicalEntity", name }, description: summary || undefined, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: SITE }, audience: { "@type": "Audience", audienceType: "Medical students" } },
+      { "@context": "https://schema.org", "@type": "MedicalWebPage", name: topicTitle(name, topic?.c).replace(" | Ompath Study", ""), url, about: { "@type": "MedicalEntity", name }, description: summary || undefined, isPartOf: { "@type": "WebSite", name: "Ompath Study", url: SITE }, audience: { "@type": "Audience", audienceType: "Medical students" } },
       { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: SITE }, { "@type": "ListItem", position: 2, name: "Topics", item: `${SITE}/topics` }, { "@type": "ListItem", position: 3, name, item: url }] },
       ...(faq.length ? [{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }] : []),
     ];
@@ -530,7 +531,9 @@ export default function TopicPage() {
     ...(hasStudy ? [{ id: "material", t: "Study material" }] : []),
     ...(related.length ? [{ id: "related", t: "Related topics" }] : []),
   ];
-  const title = `${name}: overview, causes, management and practice questions | Ompath Study`;
+  const title = topicTitle(name, topic?.c);
+  // a page that has no written overview yet, or a phrase that is not a subject, is kept out of search results until it has real content
+  const indexable = !!page && !isJunkTopic(name);
   const desc = (summary || `Everything on ${name} from Ompath Study: notes, images, practice questions and related topics.`).slice(0, 155);
   const aka = [...new Set([...(topic?.a ?? []), ...(page?.aka ?? [])])].slice(0, 6);
   const firstNote = topic?.src[0];
@@ -541,6 +544,7 @@ export default function TopicPage() {
         <title>{title}</title>
         <meta name="description" content={desc} />
         <link rel="canonical" href={`${SITE}${topicPath(slug)}`} />
+        {!indexable && <meta name="robots" content="noindex,follow" />}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
         {(topic?.imgs[0] || media?.hero) && <meta property="og:image" content={topic?.imgs[0]?.u ?? media?.hero?.u} />}

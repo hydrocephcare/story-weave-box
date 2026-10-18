@@ -12,7 +12,7 @@ import { drugHref } from "@/lib/noteLinks";
 import { setNoteReturn } from "@/lib/noteReturn";
 
 export type LinkEntry = { term: string; path: string; lower: string; target: string; category?: string | null; quality: number };
-interface Ctx { entries: LinkEntry[]; used: Set<string>; usedTargets: Set<string>; currentPath: string | null; currentCategory: string | null; currentTitle: string | null }
+interface Ctx { entries: LinkEntry[]; used: Set<string>; usedTargets: Set<string>; currentPath: string | null; currentCategory: string | null; currentTitle: string | null; trie?: TrieNode }
 const KeywordLinkContext = createContext<Ctx | null>(null);
 let cache: LinkEntry[] | null = null;
 let cachePromise: Promise<LinkEntry[]> | null = null;
@@ -157,17 +157,22 @@ export function KeywordLinkProvider({ currentPath, currentCategory, currentTitle
 export function linkifyText(text: string, ctx: Ctx | null, keyPrefix = "k"): ReactNode {
   if (!ctx || !ctx.entries.length || !text) return text;
   const { entries, used, usedTargets, currentPath, currentCategory } = ctx;
-  const pool = entries
-    .filter((e) => !used.has(e.lower) && e.path !== currentPath && (!usedTargets.has(e.path) || e.quality >= 12))
-    .sort((a, b) => Number(b.category === currentCategory) - Number(a.category === currentCategory) || b.quality - a.quality || b.term.length - a.term.length)
-    .slice(0, 5000);
-  const trie = buildLinkTrie(pool);
+  if (!ctx.trie) {
+    const pool = entries
+      .filter((e) => e.path !== currentPath)
+      .sort((a, b) => Number(b.category === currentCategory) - Number(a.category === currentCategory) || b.quality - a.quality || b.term.length - a.term.length)
+      .slice(0, 5000);
+    ctx.trie = buildLinkTrie(pool);
+  }
+  const trie = ctx.trie;
+  // what is already linked on this page is skipped as the text is scanned
+  const accept = (e: LinkEntry) => !used.has(e.lower) && (!usedTargets.has(e.path) || e.quality >= 12);
 
   const out: ReactNode[] = [];
   let rest = text;
   let i = 0;
   while (true) {
-    const found = findBestMatch(rest, trie);
+    const found = findBestMatch(rest, trie, accept);
     if (!found) {
       out.push(rest);
       break;
@@ -269,7 +274,7 @@ export interface LinkMatch {
  * highest-priority whole-word match in `trie`. Matches must sit on word
  * boundaries on both sides, mirroring the previous regex-free boundary check.
  */
-export function findBestMatch(text: string, trie: TrieNode): LinkMatch | null {
+export function findBestMatch(text: string, trie: TrieNode, accept?: (e: LinkEntry) => boolean): LinkMatch | null {
   const lower = text.toLowerCase();
   for (let start = 0; start < lower.length; start++) {
     if (isWordChar(lower[start - 1])) continue;
@@ -279,7 +284,7 @@ export function findBestMatch(text: string, trie: TrieNode): LinkMatch | null {
       const next = node.children.get(lower[end]);
       if (!next) break;
       node = next;
-      if (node.entry && !isWordChar(lower[end + 1])) best = { entry: node.entry, end: end + 1 };
+      if (node.entry && !isWordChar(lower[end + 1]) && (!accept || accept(node.entry))) best = { entry: node.entry, end: end + 1 };
     }
     if (best) return { entry: best.entry, index: start, matched: text.slice(start, best.end) };
   }
