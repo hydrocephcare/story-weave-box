@@ -39,23 +39,56 @@ the corrected description (first section only, otherwise leave empty)
 ===CONTENT===
 the COMPLETE corrected text of this section, every question included`;
 
+const SYSTEM_MCQ = `You complete multiple-choice question pages for a free medical study website used by Kenyan medical students. The text was pasted or scanned from Word and PDF files: the questions and options are there, but the ANSWERS ARE MISSING.
+You are given one page, or one section of a long page. Return the same material with an answer added to every question you can answer with confidence.
+
+Format to produce, for each question:
+- keep the question line and its options exactly as written (fix only obvious scan damage such as a stray symbol in front of an option letter, or an option letter written as a number)
+- directly after the last option add two lines:
+**Answer:** C. the full text of the correct option
+**Explanation:** one or two sentences saying why it is right and why the most tempting wrong option is not
+
+Rules:
+- Only answer when you are confident the answer is correct by standard medical teaching. If a question is cut off, has fewer than two options, or you are not sure, leave it exactly as it was and list it in the issues as "Question N not answered: reason".
+- Never change what a question asks. Never add or remove questions. Keep the numbering.
+- "All of the above" and "except" questions: read them carefully.
+Answer in exactly this layout (no JSON, no code fences):
+===ISSUES===
+- one short line per thing you changed or skipped (for example "Added answers to 18 questions")
+===TITLE===
+(leave empty)
+===DESCRIPTION===
+(leave empty)
+===CONTENT===
+the COMPLETE text of this section with the answers added, every question included`;
+
+/** A page of options with no answers anywhere: it needs an answer key, not a tidy-up. */
+const needsAnswers = (text: string) => {
+  const mcqPart = text.split(/\n\s*(?:#+\s*)?\**\s*(?:short answer|essay|long answer|saq|laq)/i)[0];
+  const questions = (mcqPart.match(/(?:^|\n)\s*\(?a[.)]\s+\S/gi) || []).length;
+  const answers = (mcqPart.match(/answer\s*[:：]/gi) || []).length;
+  return questions >= 6 && answers < questions * 0.4;
+};
+const MCQ_LINE = /^\s*(?:#+\s*)?(?:Question\s+)?\d{1,3}[.)]\s+\S/i;
+
 const SEG_MAX = 8000;
 const QUESTION_LINE = /^\s*(?:#+\s*)?Question\s+\d+/i;
 
 /** Cuts a long page into sections of about 11,000 characters, always at the start of a question. */
-function sections(text: string): string[] {
-  if (text.length <= SEG_MAX + 2000) return [text];
+function sections(text: string, mcq = false): string[] {
+  const max = mcq ? 5500 : SEG_MAX;
+  if (text.length <= max + 1500) return [text];
   const lines = text.split("\n"), out: string[] = [];
   let cur = "";
   for (const line of lines) {
-    if (cur.length >= SEG_MAX && QUESTION_LINE.test(line)) { out.push(cur); cur = ""; }
-    else if (cur.length >= SEG_MAX * 1.5 && line.trim() === "") { out.push(cur); cur = ""; }
+    if (cur.length >= max && (mcq ? MCQ_LINE : QUESTION_LINE).test(line)) { out.push(cur); cur = ""; }
+    else if (cur.length >= max * 1.5 && line.trim() === "") { out.push(cur); cur = ""; }
     cur += line + "\n";
   }
   if (cur.trim()) out.push(cur);
   return out;
 }
-const countQuestions = (s: string) => s.split("\n").filter((l) => QUESTION_LINE.test(l)).length;
+const countQuestions = (s: string, mcq = false) => s.split("\n").filter((l) => (mcq ? MCQ_LINE : QUESTION_LINE).test(l)).length;
 
 serve(async (req) => {
   if (req.method === "OPTIONS") return new Response(null, { headers: cors });
@@ -76,16 +109,18 @@ serve(async (req) => {
     if (error || !a) return json({ error: error?.message || "not found" }, 500);
 
     const original = String(a.content).replace(/\r\n/g, "\n");
-    const parts = sections(original);
+    const answerMode = needsAnswers(original) || (body?.mode === "answers");
+    const level = answerMode ? 3 : 2;
+    const parts = sections(original, answerMode);
     const { data: prev } = await supabase.from("paper_fixes").select("*").eq("article_id", a.id).maybeSingle();
-    const resume = !body?.force && prev?.status === "working" && prev.pass >= 2 ? prev : null;   // a half-done run from the first pass starts again with the stricter instructions
+    const resume = !body?.force && prev?.status === "working" && prev.pass >= level ? prev : null;   // a half-done run from the first pass starts again with the stricter instructions
     const seg = resume ? Math.min(resume.seg, parts.length - 1) : 0;
-    const save = (status: string, extra: Record<string, unknown> = {}) => supabase.from("paper_fixes").upsert({ article_id: a.id, status, old_title: a.title, pass: 2, first_content: prev?.first_content ?? prev?.old_content ?? a.content, ...extra }, { onConflict: "article_id" });
+    const save = (status: string, extra: Record<string, unknown> = {}) => supabase.from("paper_fixes").upsert({ article_id: a.id, status, old_title: a.title, pass: level, first_content: prev?.first_content ?? prev?.old_content ?? a.content, ...extra }, { onConflict: "article_id" });
 
     let raw = "";
     try {
       raw = await chatText(Deno.env.toObject(), [
-        { role: "system", content: SYSTEM },
+        { role: "system", content: answerMode ? SYSTEM_MCQ : SYSTEM },
         { role: "user", content: `${seg === 0 ? `TITLE: ${a.title}\nCATEGORY: ${a.category}\nDESCRIPTION: ${a.meta_description || ""}\n\n` : ""}${parts.length > 1 ? `SECTION ${seg + 1} OF ${parts.length}\n` : ""}PAGE:\n${parts[seg]}` },
       ], { temperature: 0.2, maxTokens: 4500, timeoutMs: 100000 });
     } catch (e) { await save("skipped", { issues: [`AI unavailable: ${e instanceof Error ? e.message.slice(0, 120) : e}`] }); return json({ success: true, title: a.title, status: "skipped" }); }
@@ -103,7 +138,7 @@ serve(async (req) => {
       segText = part("CONTENT").replace(/^```(?:markdown)?\n?/, "").replace(/\n?```$/, "");
       segIssues = part("ISSUES").split("\n").map((x) => x.replace(/^[-*\s]+/, "").trim()).filter(Boolean).map((x) => x.slice(0, 200));
       // refuse a rewrite of this section that lost questions or came back cut short
-      if (segText.length < parts[seg].length * 0.75 || countQuestions(segText) < countQuestions(parts[seg])) { segText = parts[seg]; segIssues = ["Part of the AI's rewrite came back incomplete, so that section was left as it is."]; }
+      if (segText.length < parts[seg].length * 0.75 || countQuestions(segText, answerMode) < countQuestions(parts[seg], answerMode)) { segText = parts[seg]; segIssues = ["Part of the AI's rewrite came back incomplete, so that section was left as it is."]; }
     }
 
     const doneText = (resume?.new_content ? String(resume.new_content) : "") + (resume?.new_content ? "\n" : "") + segText.replace(/\n+$/, "");

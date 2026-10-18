@@ -6,6 +6,7 @@ import AdSlot from "@/components/AdSlot";
 import SideAds from "@/components/SideAds";
 import { isPaperTitle, tileColors, usableImage } from "@/lib/blogImage";
 import BooksForPage from "@/components/BooksForPage";
+import ReadingBreak, { planBreaks, ProgressiveList } from "@/components/ReadingBreak";
 import SponsorLine from "@/components/SponsorLine";
 import StudyTools from "@/components/StudyTools";
 import PageSummary from "@/components/PageSummary";
@@ -1287,7 +1288,32 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
   }
 
   flushList(); flushTable(); flushFlow(); flushPractice();
-  return <div>{els}</div>;
+  // Plain study notes get a short pause or two between paragraphs (a quick check, flashcards, a related note or a book). Never on papers, question banks or exams.
+  const isStudyNote = !examMode && !/\b(mcqs?|questions?|exam|papers?|quiz|saq|osce|answers?)\b/i.test(`${title} ${contentKind}`) && !/\*\*Answer:\*\*/.test(lines.join("\n").slice(0, 60000));
+  if (isStudyNote && articleId) {
+    const plan = planBreaks(articleId, els.length, true);
+    if (plan.length) {
+      const readText = lines.join(" ");
+      const out: React.ReactNode[] = [];
+      const placed = new Set<number>();
+      els.forEach((el, idx) => {
+        out.push(el);
+        const hit = plan.find((b) => b.at === idx && !placed.has(b.at));
+        const key = String((el as { key?: string | null })?.key ?? "");
+        if (hit && !/^(h2|h3|plain-heading|bl|sl)-/.test(key)) {
+          placed.add(hit.at);
+          const upto = Math.round(lines.length * ((idx + 1) / els.length));
+          out.push(<ReadingBreak key={`pause-${hit.at}`} kind={hit.kind} articleId={articleId} category={category} title={title} readText={lines.slice(Math.max(0, upto - 60), upto).join(" ") || readText.slice(0, 1800)} />);
+        } else if (hit) {
+          // it fell right after a heading: try the next piece instead
+          const next = plan.find((b) => b === hit);
+          if (next) (next as { at: number }).at = idx + 1;
+        }
+      });
+      return <ProgressiveList items={out} />;
+    }
+  }
+  return <ProgressiveList items={els} />;
 });
 
 /* ─── Question jump grid for question banks without headings ─── */
@@ -1350,6 +1376,9 @@ export default function BlogPost() {
   const [actionLoading, setActionLoading] = useState<string | null>(null);
   const [related, setRelated] = useState<{ articles: any[]; flashcards: any[]; mcqs: any[]; essays: any[] }>({ articles: [], flashcards: [], mcqs: [], essays: [] });
   const [activeSection, setActiveSection] = useState("");
+  // long notes are shown in slices; the contents list is watched again once the last slice is in
+  const [noteReady, setNoteReady] = useState(0);
+  useEffect(() => { const f = () => setNoteReady((n) => n + 1); window.addEventListener("ompath:note-ready", f); return () => window.removeEventListener("ompath:note-ready", f); }, []);
   const [previewOpen, setPreviewOpen] = useState(false);
   useReadLog(article?.title);
   const [polishNote, setPolishNote] = useState(""); // shown while the AI is making the page cleaner
@@ -1753,7 +1782,7 @@ export default function BlogPost() {
       if (el) observer.observe(el);
     });
     return () => observer.disconnect();
-  }, [toc, loading]);
+  }, [toc, loading, noteReady]);
 
   useEffect(() => {
     if (!article) return;
@@ -1996,6 +2025,7 @@ export default function BlogPost() {
               <div className="space-y-4 pr-1">
                 {toc.length > 0 ? <SidebarToc items={toc} activeId={activeSection} /> : <QuestionIndex />}
                 <ConnectedLearning target={{ id: `note:${article.id}`, title: article.title, where: article.category, year: Number((yearName || "").match(/[1-6]/)?.[0]) || null }} />
+                <BooksForPage compact className="mt-5 border-t border-border pt-4" text={`${article.title} ${(article.content || "").slice(0, 4000)}`} />
                 <div className="xl:hidden"><StudyPanel year={Number(/Year\s*([1-6])/i.exec(yearName || "")?.[1]) || null} /></div>
               </div>
             </aside>
