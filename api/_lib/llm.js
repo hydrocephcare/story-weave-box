@@ -3,6 +3,10 @@
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 let turn = 0;
+// a model that just said "quota used up" (429) or "does not exist" (404) is skipped for a while, so one bad model does not slow every request
+const cool = new Map();
+const cooled = (id) => (cool.get(id) || 0) > Date.now();
+const noteFail = (id, status) => { if (status === 429) cool.set(id, Date.now() + 60_000); else if (status === 404) cool.set(id, Date.now() + 3_600_000); };
 
 const GROQ_MODELS = () => list(process.env.GROQ_CHAT_MODELS || "openai/gpt-oss-120b,qwen/qwen3.8-27b,openai/gpt-oss-20b");
 const GEMINI_MODELS = () => list(process.env.GEMINI_CHAT_MODELS || "gemini-3.5-flash,gemini-flash-lite-latest,gemini-2.5-flash,gemini-2.5-flash-lite");
@@ -10,7 +14,11 @@ const GEMINI_MODELS = () => list(process.env.GEMINI_CHAT_MODELS || "gemini-3.5-f
 async function viaGroq(msgs, opt, why) {
   const keys = list(process.env.GROQ_API_KEYS || process.env.GROQ_API_KEY); if (!keys.length) { why.push("no Groq key"); return null; }
   const start = turn++ % keys.length;
-  for (let i = 0; i < keys.length; i++) for (const model of GROQ_MODELS()) {
+  const tooBig = new Set();   // a request that is too large for a model is too large on every key: do not repeat it
+  const models = opt.fast ? ["openai/gpt-oss-20b", ...GROQ_MODELS().filter((m) => m !== "openai/gpt-oss-20b")] : GROQ_MODELS();
+  for (let i = 0; i < keys.length; i++) for (const model of models) {
+    const cid = `groq:${model}:${(start + i) % keys.length}`;
+    if (tooBig.has(model) || cooled(cid)) continue;
     for (const json of [true, false]) {
       try {
         const body = { model, messages: msgs, temperature: opt.temperature ?? 0.3, max_tokens: opt.maxTokens ?? 4000, ...(json ? { response_format: { type: "json_object" } } : {}) };
@@ -19,6 +27,7 @@ async function viaGroq(msgs, opt, why) {
         const detail = (await r.text().catch(() => "")).slice(0, 140);
         why.push(`${model}: ${r.status}${r.status === 429 ? " rate limit" : r.status === 413 ? " too large" : ""}`);
         if (r.status === 400 && json) continue;  // this model did not accept JSON mode: try it plain
+        if (r.status === 413) tooBig.add(model); else noteFail(cid, r.status);
         void detail; break;
       } catch (e) { why.push(`${model}: ${String(e?.message ?? e).slice(0, 60)}`); break; }
     }
@@ -32,10 +41,12 @@ async function viaGemini(msgs, opt, why) {
   const contents = msgs.slice(1).map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.content }] }));
   const start = turn++ % keys.length;
   for (let i = 0; i < keys.length; i++) for (const model of GEMINI_MODELS()) {
+    const cid = `gemini:${model}:${(start + i) % keys.length}`;
+    if (cooled(cid)) continue;
     try {
       const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, { method: "POST", headers: { "content-type": "application/json", "x-goog-api-key": keys[(start + i) % keys.length] }, body: JSON.stringify({ systemInstruction: { parts: [{ text: system }] }, contents, generationConfig: { responseMimeType: "application/json", temperature: opt.temperature ?? 0.3, maxOutputTokens: opt.maxTokens ?? 8000 } }) });
       if (r.ok) { const t = (await r.json())?.candidates?.[0]?.content?.parts?.map((p) => p.text ?? "").join(""); if (t?.trim()) return t; why.push(`${model}: empty answer`); continue; }
-      why.push(`${model}: ${r.status}${r.status === 429 ? " rate limit" : ""}`);
+      why.push(`${model}: ${r.status}${r.status === 429 ? " rate limit" : ""}`); noteFail(cid, r.status);
     } catch (e) { why.push(`${model}: ${String(e?.message ?? e).slice(0, 60)}`); }
   }
   return null;

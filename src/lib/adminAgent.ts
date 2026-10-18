@@ -7,7 +7,7 @@ import type { ContestStage } from "@/lib/contest";
 import type { PosterSpec } from "@/lib/statusPoster";
 import { loadCategories, removeItem } from "@/lib/adminWriter";
 
-export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget" | "site_health" | "update_post" | "publish_post" | "restore_post" | "briefing" | "import_mcqs" | "generate_exam" | "check_questions"; args: Record<string, any> }
+export interface AgentAction { tool: "create_contest" | "delete_contest" | "set_stage" | "go_to" | "set_autopilot_mode" | "run_autopilot" | "seo_scan" | "seo_fix" | "site_stats" | "contest_report" | "publish_note" | "make_mcqs" | "remove_item" | "create_flashcards" | "write_article" | "find_content" | "clean_notifications" | "notification_report" | "send_notification" | "remember" | "forget" | "site_health" | "update_post" | "publish_post" | "restore_post" | "briefing" | "import_mcqs" | "generate_exam" | "check_questions" | "pending_summary" | "approve_paper_fixes" | "approve_drafts" | "job_control"; args: Record<string, any> }
 export interface AgentContext { memory?: string[]; autorun?: boolean; categories?: string[]; page?: string; problems?: { at: string; what: string }[]; now: string; universities: { slug: string; name: string }[]; exams: string[]; contests: { slug: string; title: string; stage: string }[] }
 export interface PlanItem { action: AgentAction; line: string; danger: boolean; ok: boolean }
 
@@ -61,6 +61,9 @@ export function describe(actions: AgentAction[], w: AgentWorld): PlanItem[] {
     if (action.tool === "go_to") return { action, danger: false, ok: /^\/admin(\/[a-z0-9-]+)*$/.test(String(a.path)), line: `Open ${a.path}.` };
     if (action.tool === "set_autopilot_mode") return { action, danger: false, ok: ["approve_access", "daily_digest"].includes(a.key) && ["off", "ask", "auto"].includes(a.mode), line: `Set Autopilot job "${a.key}" to ${a.mode}${a.mode === "auto" ? " (it will act on its own, with an Undo in the log)" : ""}.` };
     if (action.tool === "run_autopilot") return { action, danger: false, ok: true, line: "Run the Autopilot jobs now." };
+    if (action.tool === "approve_paper_fixes") return { action, danger: false, ok: true, line: `Approve ${a.count === "all" || !Number(a.count) ? "all" : a.count} pending written-paper changes from the AI paper doctor and update those pages (the old text is kept, so any page can be put back).` };
+    if (action.tool === "approve_drafts") return { action, danger: false, ok: true, line: `Publish ${a.count === "all" || !Number(a.count) ? "all" : a.count} pending AI note drafts.` };
+    if (action.tool === "job_control") return { action, danger: false, ok: ["weekly-exams", "review-questions", "paper-doctor"].includes(a.job) && ["pause", "resume", "every"].includes(a.action), line: `${a.action === "every" ? `Run ${a.job} every ${a.minutes} minutes` : `${a.action === "pause" ? "Pause" : "Resume"} ${a.job}`}.` };
     if (action.tool === "check_questions") return { action, danger: false, ok: true, line: "Have the AI examiner check 3 question sets: it answers every question blind, flags answers that disagree with the key, removes cut-off questions and writes missing explanations." };
     if (action.tool === "generate_exam") return { action, danger: false, ok: true, line: `Write ${Math.max(1, Math.min(3, Number(a.count) || 1))} new weekly exam${(Number(a.count) || 1) > 1 ? "s" : ""}${a.year ? ` for Year ${a.year}` : ""}${a.unit ? ` in "${a.unit}"` : ""}, published straight to the Exam Center (about a minute each).` };
     if (action.tool === "update_post") return { action, danger: false, ok: String(a.query || "").trim().length > 1 && Boolean(a.title || a.meta_description || a.category), line: `Change the post matching "${a.query}": ${[a.title && `title → "${a.title}"`, a.meta_description && "search description", a.category && `category → ${a.category}`].filter(Boolean).join(", ")}. The old values are kept so you can undo.` };
@@ -91,6 +94,41 @@ export async function runAction(action: AgentAction, w: AgentWorld): Promise<Act
   const a = action.args || {};
   if (action.tool === "set_autopilot_mode") { const { error } = await (supabase as any).rpc("admin_agent_set_mode", { p_key: a.key, p_mode: a.mode }); if (error) throw new Error(/schema cache|admin_agent_set_mode/.test(error.message) ? "Run autopilot.sql first." : error.message); return { text: `Autopilot job ${a.key} is now ${a.mode}.`, links: [{ label: "Open Autopilot", href: "/admin/autopilot" }] }; }
   if (action.tool === "run_autopilot") { const { data, error } = await (supabase as any).rpc("admin_agent_run"); if (error) throw new Error(/schema cache|admin_agent_run/.test(error.message) ? "Run autopilot.sql first." : error.message); return { text: `Autopilot ran: ${data?.approved ?? 0} approved, ${data?.queued ?? 0} waiting for you.`, links: [{ label: "See the log", href: "/admin/autopilot" }] }; }
+  if (action.tool === "approve_paper_fixes") {
+    const db = supabase as any;
+    const want = a.count === "all" || !Number(a.count) ? 500 : Math.max(1, Math.min(500, Number(a.count)));
+    const { data, error } = await db.from("paper_fixes").select("id,article_id,old_title,new_title,new_description,new_content").eq("status", "pending").order("created_at", { ascending: true }).limit(want);
+    if (error) throw new Error(error.message);
+    let ok = 0; const failed: string[] = [];
+    for (const f of data || []) {
+      const { error: ue } = await db.from("articles").update({ title: f.new_title || f.old_title, content: f.new_content, meta_description: f.new_description, updated_at: new Date().toISOString() }).eq("id", f.article_id);
+      if (ue) { failed.push(`${f.old_title}: ${ue.message}`); continue; }
+      await db.from("paper_fixes").update({ status: "approved", decided_at: new Date().toISOString() }).eq("id", f.id);
+      ok++;
+    }
+    return { text: `Approved ${ok} of ${(data || []).length} written-paper changes.${failed.length ? ` ${failed.length} failed (${failed[0]}).` : ""} The old text is kept: open Written papers, Approved, to put any page back.`, links: [{ label: "Written papers", href: "/admin/paper-fixes" }] };
+  }
+  if (action.tool === "approve_drafts") {
+    const db = supabase as any;
+    const want = a.count === "all" || !Number(a.count) ? 100 : Math.max(1, Math.min(100, Number(a.count)));
+    const { data, error } = await db.from("ai_drafts").select("id,title,content,year").eq("status", "pending").order("asked", { ascending: false }).limit(want);
+    if (error) throw new Error(error.message);
+    const { saveArticle } = await import("@/lib/store");
+    let ok = 0; const failed: string[] = [];
+    for (const d of data || []) {
+      try {
+        const art = await saveArticle({ title: d.title, content: d.content, created_at: new Date().toISOString(), published: true, original_notes: "", category: `Year ${d.year ?? 4}: ${d.title}` } as any);
+        await db.from("ai_drafts").update({ status: "approved", article_id: art.id, decided_at: new Date().toISOString() }).eq("id", d.id);
+        ok++;
+      } catch (e) { failed.push(`${d.title}: ${(e as Error).message}`); }
+    }
+    return { text: `Published ${ok} of ${(data || []).length} AI note drafts.${failed.length ? ` ${failed.length} failed (${failed[0]}).` : ""}`, links: [{ label: "AI notes", href: "/admin/drafts" }] };
+  }
+  if (action.tool === "job_control") {
+    const { data, error } = await (supabase as any).rpc("admin_job_control", { p_job: String(a.job), p_action: String(a.action), p_minutes: a.minutes ? Number(a.minutes) : null });
+    if (error) throw new Error(error.message);
+    return { text: `${a.job} is now ${data}.` };
+  }
   if (action.tool === "check_questions") {
     const lines: string[] = []; let remaining = 0;
     for (let n = 0; n < 3; n++) {
@@ -281,6 +319,24 @@ export async function runReadOnly(action: AgentAction, w: AgentWorld): Promise<A
     const by: Record<string, number> = {}; for (const r of data || []) by[r.email_status] = (by[r.email_status] || 0) + 1;
     const errs = [...new Set((data || []).filter((r: any) => r.email_error).map((r: any) => String(r.email_error).slice(0, 80)))].slice(0, 3);
     return { text: `Last ${data?.length ?? 0} notifications: ${Object.entries(by).map(([k, v]) => `${v} ${k}`).join(", ") || "none"}.${errs.length ? `\nEmail errors seen: ${errs.join(" | ")}` : ""}${by.failed ? "\nFailures usually mean the email service key is missing or a mailbox rejected it; in-site notifications still arrived." : ""}`, links: [{ label: "Notifications", href: "/admin#notifications" }] };
+  }
+  if (action.tool === "pending_summary") {
+    const db = supabase as any;
+    const [fixes, drafts, disputes, jobs] = await Promise.all([
+      db.from("paper_fixes").select("status"),
+      db.from("ai_drafts").select("id", { count: "exact", head: true }).eq("status", "pending"),
+      db.from("mcq_review_log").select("disputed").neq("disputed", "[]").limit(300),
+      db.rpc("admin_background_jobs"),
+    ]);
+    const by: Record<string, number> = {}; for (const r of fixes.data || []) by[r.status] = (by[r.status] || 0) + 1;
+    const disputed = (disputes.data || []).reduce((n: number, r: any) => n + (r.disputed?.length || 0), 0);
+    const jobLines = (jobs.data || []).map((j: any) => `${j.job}: ${j.active ? `runs ${j.schedule}` : "paused"}${j.waiting ? `, ${j.waiting} waiting` : ""}`);
+    return { text: [
+      `Written-paper changes waiting for approval: ${by.pending || 0} (approved ${by.approved || 0}, already fine ${by.clean || 0}).`,
+      `AI note drafts waiting: ${drafts.count ?? 0}.`,
+      `Answers where the AI examiner disagrees with the key: ${disputed}.`,
+      jobLines.length ? `Background jobs: ${jobLines.join(" | ")}.` : "",
+    ].filter(Boolean).join("\n"), links: [{ label: "Written papers", href: "/admin/paper-fixes" }, { label: "AI notes", href: "/admin/drafts" }] };
   }
   if (action.tool === "site_stats") {
     const { data, error } = await (supabase as any).rpc("admin_site_stats", { p_days: Math.max(1, Math.min(90, Number(a.days) || 7)) });

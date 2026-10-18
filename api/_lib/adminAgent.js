@@ -44,22 +44,27 @@ const TOOLS = `Tools you can plan (use ONLY these; each action is {"tool": "..."
 23. publish_post    args: { "query": string (words from the draft title) }   (publish unpublished drafts whose title matches; max 5)
 24. briefing        args: {}   (read-only: today's briefing: visitors, what to celebrate, what needs a look, suggestions)
 25. import_mcqs    args: { "title": string, "category": string }   (the pasted text already CONTAINS MCQs (with or without answers): structure them exactly as written and publish them as an MCQ set; previewed first)
+27. pending_summary args: {}   (read-only: how many written-paper changes, AI note drafts and disputed answers are waiting, and the state of the AI background jobs. Use for "what is pending", "how many drafts", "what is waiting for me")
+28. approve_paper_fixes args: { "count": number | "all" }   (approve the AI paper doctor's pending changes to written papers; "approve all", "approve everything", "approve the 140" mean count "all")
+29. approve_drafts args: { "count": number | "all" }   (publish pending AI note drafts from the "AI notes to approve" list)
+30. job_control    args: { "job": "review-questions" | "paper-doctor" | "weekly-exams", "action": "pause" | "resume" | "every", "minutes": 1-120 (only with "every") }   (steer the AI background jobs: the question checker, the paper doctor, the Friday exam writer; weekly-exams can only be paused or resumed)
 26. none: no action, just answer or ask a question.
 Admin pages (path = what it is): /admin = main admin; /admin/contests = contests; /admin/contests/new = quick contest builder; /admin/contests/setup = advanced contest setup; /admin/contests/appeals = contest appeals; /admin/autopilot = Autopilot switches and log; /admin/access = book access rules; /admin/analytics = visitors; /admin/activity = searches and AI keys; /admin/comments = comments; /admin/drafts = AI notes to approve; /admin/content-checks = content checks; /admin/content-health = content health; /admin/polish = polished blogs; /admin/duplicates = repeated pages; /admin/thin-topics = deep exam notes; /admin/monetise = monetise; /admin/tools = all admin tools.`;
 
-const system = (ctx) => `You are the Ompath Study admin assistant. You help the site owner run contests. You never run anything yourself: you plan, the owner confirms, then the browser runs it.
+const system = (ctx) => `You are the Ompath Study admin assistant. You help the site owner run the whole site: contests, notes, MCQs and exams, SEO, approvals and the AI background jobs. You never run anything yourself: you plan, the owner confirms, then the browser runs it.
 Now (Nairobi time): ${ctx.now}.
 ${TOOLS}
 Things the admin asked you to remember (use them): ${(ctx.memory || []).join(" | ") || "nothing yet"}.
 Auto-run is ${ctx.autorun ? "ON: safe steps run without a confirm card, so never ask 'shall I go ahead' for them" : "OFF: every change is confirmed by the admin"}.
-Note categories on the site: ${(ctx.categories || []).slice(0, 90).join(" | ")}
+Note categories on the site: ${(ctx.categories || []).slice(0, 40).join(" | ")}
 Universities (slug = name): ${(ctx.universities || []).map((u) => `${u.slug} = ${u.name}`).join("; ")}
-Exams on the site (use words from these titles): ${(ctx.exams || []).slice(0, 150).join(" | ")}
+Exams on the site (use words from these titles): ${(ctx.exams || []).slice(0, 50).map((t) => String(t).slice(0, 60)).join(" | ")}
 The admin is on this page: ${ctx.page || "unknown"}.
 Recent problems they hit (newest last): ${(ctx.problems || []).map((p) => p.what).join(" || ") || "none"}.
 Existing contests (slug, title, stage): ${(ctx.contests || []).map((c) => `${c.slug} (${c.title}, ${c.stage})`).join("; ") || "none"}
 Rules:
 - For create_contest you need ALL of: which universities, the questions (an exam from the list), and the start time. If the admin has not said which exam or questions to use, DO NOT plan the contest yet: ask with buttons ("ask") offering up to 4 exam titles from the list that fit what they said, plus "Create it without questions for now". Never guess an exam and never leave it empty.
+- "approve all", "approve everything", "publish all pending" refer to the pending written-paper changes (approve_paper_fixes with count "all") unless the admin clearly means AI note drafts (approve_drafts). If unsure how many are pending, plan pending_summary first. Never plan publish_post with an empty query.
 - Reply in short, plain English. If a needed detail is missing (which universities, which exam, the start time), ask ONE short question and return no actions. Offer sensible defaults in the question.
 - "tomorrow", "Friday" etc. must be turned into a real date using Now. Default length 30 minutes, default years [1,2,3], autoAdmit true.
 - Only delete what the owner clearly named. If several contests match, ask which.
@@ -70,7 +75,7 @@ Rules:
 - To ask the admin a question with buttons, add "ask": {"question": "...", "options": ["short option", ...]} (2 to 5 options) and no actions.
 - Return ONLY JSON: {"reply": "...", "ask": null, "actions": [ ... ]}. "reply" says in one or two sentences what you will do (or asks the question).`;
 
-const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "publish_note", "make_mcqs", "create_flashcards", "write_article", "find_content", "clean_notifications", "notification_report", "send_notification", "remember", "forget", "site_health", "update_post", "publish_post", "briefing", "import_mcqs", "generate_exam", "check_questions", "none"]);
+const KNOWN = new Set(["create_contest", "delete_contest", "set_stage", "go_to", "set_autopilot_mode", "run_autopilot", "seo_scan", "seo_fix", "site_stats", "contest_report", "publish_note", "make_mcqs", "create_flashcards", "write_article", "find_content", "clean_notifications", "notification_report", "send_notification", "remember", "forget", "site_health", "update_post", "publish_post", "briefing", "import_mcqs", "generate_exam", "check_questions", "pending_summary", "approve_paper_fixes", "approve_drafts", "job_control", "none"]);
 
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "POST only" });
@@ -83,12 +88,12 @@ export default async function handler(req, res) {
   const msgs = [{ role: "system", content: system(ctx) }];
   for (const h of (Array.isArray(body.history) ? body.history : []).slice(-8)) if (h && (h.role === "user" || h.role === "assistant")) msgs.push({ role: h.role, content: String(h.content ?? "").slice(0, 1500) });
   msgs.push({ role: "user", content: message });
-  const got = await askJson(msgs, { prefer: "groq", temperature: 0.1, maxTokens: 1800 });
+  const got = await askJson(msgs, { prefer: "groq", fast: true, temperature: 0.1, maxTokens: 1500 });
   if (got.error) return res.status(502).json({ error: got.error });
   const raw = got.text;
   let out;
   try { out = JSON.parse(String(raw).replace(/^```(?:json)?|```$/gm, "").trim()); } catch { return res.status(200).json({ reply: String(raw).slice(0, 600), actions: [] }); }
-  const actions = (Array.isArray(out.actions) ? out.actions : []).filter((a) => a && KNOWN.has(a.tool) && a.tool !== "none" && (a.args && typeof a.args === "object" ? true : (a.args = {}, true))).slice(0, 5);
+  const actions = (Array.isArray(out.actions) ? out.actions : []).filter((a) => a && KNOWN.has(a.tool) && a.tool !== "none" && (a.args && typeof a.args === "object" ? true : (a.args = {}, true))).filter((a) => !((a.tool === "publish_post" || a.tool === "update_post") && !String(a.args?.query || "").trim())).slice(0, 5);
   const ask = out.ask && typeof out.ask === "object" && String(out.ask.question || "").trim() && Array.isArray(out.ask.options) ? { question: String(out.ask.question).slice(0, 300), options: out.ask.options.map((o) => String(o).slice(0, 80)).filter(Boolean).slice(0, 5) } : null;
   return res.status(200).json({ reply: String(out.reply ?? "").slice(0, 800), ask: ask && ask.options.length >= 2 ? ask : null, actions });
 }

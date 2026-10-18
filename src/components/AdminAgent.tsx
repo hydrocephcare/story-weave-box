@@ -17,7 +17,7 @@ type Item =
   | { kind: "result"; result: ActionResult }
   | { kind: "ask"; question: string; options: string[]; answered?: string }
   | { kind: "draft"; draft: Draft; state: DraftState; fresh?: boolean };
-const READ_ONLY = new Set(["seo_scan", "site_stats", "contest_report", "find_content", "notification_report", "site_health", "briefing"]);
+const READ_ONLY = new Set(["pending_summary", "seo_scan", "site_stats", "contest_report", "find_content", "notification_report", "site_health", "briefing"]);
 const WHAT_TO_DO = ["Polish it and publish as a note", "Polish it, add more content, and publish", "These are MCQs: publish them", "Make 10 MCQs from it and publish", "Make flashcards from it and publish"];
 const LONG_PASTE = 400; // a paste longer than this becomes an attachment, like in ChatGPT, so you can type your instruction beside it
 const STATUS_STYLE = { good: "border-emerald-500/40 bg-emerald-500/10", warn: "border-amber-500/40 bg-amber-500/10", bad: "border-red-500/40 bg-red-500/10" } as const;
