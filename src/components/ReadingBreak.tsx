@@ -170,7 +170,7 @@ const ReadingBreak = memo(function ReadingBreak({ kind, articleId, category, tit
   const ready = state;
   const k = ready ? ready.kind : kind;
   return (
-    <div ref={ref} className="not-prose my-8 border-y border-border py-4" style={state === null ? { minHeight: 150 } : undefined} data-reading-break={k}>
+    <div ref={ref} className={`not-prose my-8 border-y border-border py-4 ${ready ? "animate-in fade-in slide-in-from-bottom-2 duration-500" : ""}`} style={state === null ? { minHeight: 150 } : undefined} data-reading-break={k}>
       {ready && (
         <>
           <div className="flex items-start justify-between gap-3">

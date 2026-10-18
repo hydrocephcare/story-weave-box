@@ -32,8 +32,8 @@ const ADS: Record<string, (title: string) => Ad> = {
 const SLOTS: string[][] = [["ai", "flash", "app"], ["review", "exams", "pharm"], ["papers", "topics", "quiz"], ["share", "quiz", "ai"]];
 
 const MOTION = `
-  @keyframes ad-in { from { opacity: 0; transform: translateX(var(--from, 40px)) scale(.94); filter: blur(6px) } to { opacity: 1; transform: none; filter: none } }
-  @keyframes ad-out { from { opacity: 1; transform: none } to { opacity: 0; transform: translateY(10px) scale(.96); filter: blur(5px) } }
+  @keyframes ad-in { from { opacity: 0; transform: translateX(var(--from, 40px)) scale(.94); } to { opacity: 1; transform: none } }
+  @keyframes ad-out { from { opacity: 1; transform: none } to { opacity: 0; transform: translateY(10px) scale(.96); } }
   @keyframes ad-float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
   @keyframes ad-wiggle { 0%,84%,100% { rotate: 0deg } 87% { rotate: -1.8deg } 90% { rotate: 1.8deg } 93% { rotate: -1.1deg } 96% { rotate: .6deg } }
   @keyframes ad-drift-a { 0%,100% { transform: translate(0,0) scale(1) } 50% { transform: translate(34px,22px) scale(1.25) } }
@@ -43,16 +43,17 @@ const MOTION = `
   .ad-wrap.fluid { width: 100%; }
   .ad { position: relative; overflow: hidden; isolation: isolate; border-radius: 1.5rem; padding: 1.25rem; color: #fff; text-align: left; display: block; width: 100%;
     background: radial-gradient(120% 90% at 0% 0%, var(--c1), transparent 60%), radial-gradient(120% 100% at 100% 100%, var(--c3), transparent 62%), linear-gradient(135deg, var(--c2), var(--c1));
-    box-shadow: 0 14px 34px -14px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.14); transition: filter .2s; }
+    box-shadow: 0 14px 34px -14px rgba(0,0,0,.45), inset 0 0 0 1px rgba(255,255,255,.14); transition: filter .2s; will-change: transform, opacity; contain: paint; }
   .ad[data-state="in"] { animation: ad-in .75s cubic-bezier(.2,.8,.2,1) both; }
-  .ad[data-state="show"] { animation: ad-float 5s ease-in-out infinite, ad-wiggle 8s ease-in-out infinite; }
+  .ad[data-state="show"] { animation: ad-float 6s ease-in-out infinite; }
   .ad[data-state="out"] { animation: ad-out .6s ease-in both; }
   .ad:hover { filter: brightness(1.1); animation-play-state: paused; }
-  .ad .blob { position: absolute; border-radius: 9999px; filter: blur(22px); opacity: .55; z-index: -1; }
-  .ad .b1 { width: 120px; height: 120px; right: -30px; top: -34px; background: var(--c3); animation: ad-drift-a 9s ease-in-out infinite; }
-  .ad .b2 { width: 100px; height: 100px; left: -26px; bottom: -30px; background: var(--c2); animation: ad-drift-b 11s ease-in-out infinite; }
+  .ad .blob { position: absolute; border-radius: 9999px; opacity: .5; z-index: -1; will-change: transform; }
+  .ad .b1 { width: 120px; height: 120px; right: -30px; top: -34px; background: radial-gradient(circle, var(--c3) 0%, transparent 68%); animation: ad-drift-a 9s ease-in-out infinite; }
+  .ad .b2 { width: 100px; height: 100px; left: -26px; bottom: -30px; background: radial-gradient(circle, var(--c2) 0%, transparent 68%); animation: ad-drift-b 11s ease-in-out infinite; }
   .ad .shine { position: absolute; inset: 0; z-index: -1; background: linear-gradient(100deg, transparent 35%, rgba(255,255,255,.28) 50%, transparent 65%); animation: ad-shine 5.5s ease-in-out infinite; }
   .ad .glyph { position: absolute; right: -10px; bottom: -12px; width: 6.5rem; height: 6.5rem; opacity: .16; rotate: -14deg; z-index: -1; }
+  body[data-scrolling="1"] .ad, body[data-scrolling="1"] .ad .blob, body[data-scrolling="1"] .ad .shine { animation-play-state: paused; }
   @media (prefers-reduced-motion: reduce) { .ad, .ad .blob, .ad .shine { animation: none !important } }
 `;
 
@@ -118,6 +119,13 @@ function useDesktop(minWidth: number) {
 const crawler = () => typeof navigator === "undefined" || /bot|crawl|spider|headless|lighthouse/i.test(navigator.userAgent);
 
 export default function SideAds({ title, mode = "gutters" }: { title: string; mode?: "rail" | "gutters" }) {
+  // while the page is being scrolled the ads' idle motion pauses, so scrolling and reading stay smooth
+  useEffect(() => {
+    let t = 0;
+    const on = () => { document.body.dataset.scrolling = "1"; window.clearTimeout(t); t = window.setTimeout(() => { delete document.body.dataset.scrolling; }, 180); };
+    window.addEventListener("scroll", on, { passive: true });
+    return () => { window.removeEventListener("scroll", on); window.clearTimeout(t); delete document.body.dataset.scrolling; };
+  }, []);
   const { hasPass, loading } = useAccess();
   const desktop = useDesktop(mode === "rail" ? 1280 : 1500);
   const [room, setRoom] = useState<{ left: number | null; right: number | null; on: boolean }>({ left: null, right: null, on: false });
