@@ -17,6 +17,7 @@ interface Card { question: string; answer: string }
 interface Note { id: string; title: string; meta_description: string | null }
 
 const STOP = new Set("about after again also because before between could during every other should their there these those through under which while would with from have this that into than then them what when where will your".split(" "));
+const GENERIC = new Set("community acquired disease diseases syndrome management notes introduction overview clinical general common basic principles approach practice study guide lecture chapter summary revision questions types".split(" "));
 const words = (text: string) => [...new Set(text.toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/\s+/).filter((w) => w.length > 4 && !STOP.has(w)))];
 const overlap = (text: string, keys: string[]) => { const t = text.toLowerCase(); return keys.reduce((n, k) => n + (t.includes(k) ? 1 : 0), 0); };
 /** Best matches for what was just read, with a little randomness so a returning reader does not see the same thing twice. */
@@ -128,9 +129,9 @@ const ReadingBreak = memo(function ReadingBreak({ kind, articleId, category, tit
   const [open, setOpen] = useState<Note | null>(null);
   const { affiliates } = useMonetise();
   const keys = useMemo(() => words(`${title} ${readText.slice(-1800)}`).slice(0, 40), [title, readText]);
-  const titleKeys = useMemo(() => words(title).slice(0, 6), [title]);
+  const titleKeys = useMemo(() => words(title).filter((w) => !GENERIC.has(w)).slice(0, 6), [title]);
   /** A question belongs here only if it names the subject of the note, or shares at least two words with what was just read. */
-  const onTopic = (text: string) => overlap(text, titleKeys) >= 1 || overlap(text, keys) >= 2;
+  const onTopic = (text: string) => titleKeys.length ? overlap(text, titleKeys) >= 1 : overlap(text, keys) >= 3;
   const books = useMemo(() => affiliatesFor(affiliates, `${title} ${readText.slice(0, 4000)}`), [affiliates, title, readText]);
 
   useEffect(() => {
