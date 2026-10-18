@@ -1024,3 +1024,24 @@ export function looksLikeUpcomingMcqOptions(lines: string[], idx: number): boole
   }
   return false;
 }
+
+/**
+ * Some papers alternate: multiple-choice, essays, multiple-choice again. For reading, all the multiple-choice sections come first and the written ones after.
+ * Only markdown section headings count, and a page that is already in that order (or has no clear sections) is returned untouched.
+ */
+export function groupQuestionSections(content: string): string {
+  const lines = content.split("\n");
+  const kindOf = (line: string): "M" | "E" | null => {
+    if (!/^#{1,4}\s/.test(line)) return null;
+    if (/\b(multiple[- ]choice|mcqs?|section a)\b/i.test(line)) return "M";
+    if (/\b(short answer|long answer|essay|saqs?|laqs?|section [bc])\b/i.test(line)) return "E";
+    return null;
+  };
+  const starts: { at: number; k: "M" | "E" }[] = [];
+  lines.forEach((l, i) => { const k = kindOf(l); if (k) starts.push({ at: i, k }); });
+  const seq = starts.map((s) => s.k).join("");
+  if (!/E.*M/.test(seq)) return content;
+  const head = lines.slice(0, starts[0].at);
+  const blocks = starts.map((s, n) => ({ k: s.k, text: lines.slice(s.at, n + 1 < starts.length ? starts[n + 1].at : lines.length) }));
+  return [...head, ...blocks.filter((b) => b.k === "M").flatMap((b) => b.text), ...blocks.filter((b) => b.k === "E").flatMap((b) => b.text)].join("\n");
+}

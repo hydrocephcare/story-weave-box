@@ -62,6 +62,7 @@ import {
   isDuplicateArticleHeading,
   type TocItem, extractToc, answerKeyByQuestion, parseConsolidatedAnswerKey,
   mergeAnswerKeys, looksLikeUpcomingMcqOptions,
+  groupQuestionSections,
 } from "@/lib/blog-content";
 
 /**
@@ -757,7 +758,7 @@ const ArticleContent = memo(function ArticleContent(props: ArticleContentProps) 
 });
 const ArticleLines = memo(function ArticleLines({ content, articleId, category, title = "", contentKind = "" }: { content: string; articleId: string; category: string; title?: string; contentKind?: string }) {
   _sec = 0;
-  const lines = preprocessContent(content).split("\n");
+  const lines = groupQuestionSections(preprocessContent(content)).split("\n");
   // Explicit "Answer:" lines and bold-marked options win; a consolidated
   // "1 D, 2 C, …" key at the end of the document (common in handwritten CAT
   // scans) only fills in whatever neither of those could answer.
