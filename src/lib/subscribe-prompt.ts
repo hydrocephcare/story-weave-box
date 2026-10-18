@@ -23,8 +23,9 @@ export function clearOverlays() {
   }
 }
 
-export function openSubscribePrompt(_reason?: string) {
-  // Subscriptions are disabled; no learner should be interrupted by a paywall.
+export function openSubscribePrompt(reason?: string) {
+  if (!subscriptionsOn()) return; // subscriptions are switched off in Admin: no paywall
+  window.dispatchEvent(new CustomEvent(EVENT, { detail: { reason } }));
 }
 
 export function onSubscribePrompt(handler: (reason?: string) => void) {
