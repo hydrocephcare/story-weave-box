@@ -609,7 +609,8 @@ export function preprocessContent(raw: string): string {
   // itself contain an imported line break, so normalise that while preserving
   // the image URL byte-for-byte.
   // imports sometimes leave a typed backslash-n where a line break belonged
-  const decodedSource = decodeEntities(raw).replace(/\\r\\n|\\n/g, "\n");
+  // PDF copies put invisible zero-width characters around every space ("Home​ ​IV​ ​therapy"), which breaks wrapping and word matching: drop them and close the gaps
+  const decodedSource = decodeEntities(raw).replace(/[​-‍⁠﻿]/g, "").replace(/(\S)[^\S\n]{2,}/g, "$1 ").replace(/\\r\\n|\\n/g, "\n");
   const decoded = decodedSource.replace(
     /!\[([\s\S]*?)\]\((https?:\/\/[^\s)]+)\)/g,
     (match, alt: string, url: string, offset: number, source: string) => {

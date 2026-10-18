@@ -27,3 +27,10 @@ describe("typed backslash-n from imports", () => {
     expect(out).toContain("Question 1.");
   });
 });
+
+describe("zero-width characters from PDF copies", () => {
+  it("removes them and keeps single spaces", () => {
+    const out = preprocessContent("Home​ ​IV​ ​therapy in the past 30 days.");
+    expect(out).toBe("Home IV therapy in the past 30 days.");
+  });
+});
