@@ -17,7 +17,7 @@ interface Card { question: string; answer: string }
 interface Note { id: string; title: string; meta_description: string | null }
 
 const STOP = new Set("about after again also because before between could during every other should their there these those through under which while would with from have this that into than then them what when where will your".split(" "));
-const GENERIC = new Set("community acquired disease diseases syndrome management notes introduction overview clinical general common basic principles approach practice study guide lecture chapter summary revision questions types".split(" "));
+const GENERIC = new Set("acute chronic complications lecture slide slides update paediatric paediatrics medicine surgery community acquired disease diseases syndrome management notes introduction overview clinical general common basic principles approach practice study guide lecture chapter summary revision questions types".split(" "));
 const words = (text: string) => [...new Set(text.toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/\s+/).filter((w) => w.length > 4 && !STOP.has(w)))];
 const overlap = (text: string, keys: string[]) => { const t = text.toLowerCase(); return keys.reduce((n, k) => n + (t.includes(k) ? 1 : 0), 0); };
 /** Best matches for what was just read, with a little randomness so a returning reader does not see the same thing twice. */
