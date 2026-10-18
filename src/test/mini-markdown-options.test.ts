@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-// @ts-expect-error plain JS module
 import { inlineOptions, mdToHtml } from "@/lib/miniMarkdown.js";
 
 describe("options written on one line", () => {
