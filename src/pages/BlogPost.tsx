@@ -38,7 +38,7 @@ import { KeywordLinkProvider, useKeywordLinks, linkifyText } from "@/lib/keyword
 import { slugify, useHashFlash } from "@/lib/deep-link";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { markArticleVisited } from "@/lib/progress-store";
+import { saveNotePosition, trackNoteOpen } from "@/lib/readingTrail";
 import { parseSlideDeck, SlideDeckView, SlidePreviewModal } from "@/components/SlideDeck";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
@@ -1409,6 +1409,32 @@ export default function BlogPost() {
     else navigate("/blog");
   };
 
+  // The reading trail: remember this note (here and in the account), keep track of how far down the reader is, and honour "resume where I was" links (?at=0.42).
+  const trailUserId = user?.id ?? null;
+  useEffect(() => {
+    if (!article?.id) return;
+    const id = article.id;
+    void trackNoteOpen(trailUserId, { id, title: article.title, category: article.category || "" });
+    let last = 0, timer = 0;
+    const fraction = () => { const max = document.documentElement.scrollHeight - window.innerHeight; return max > 400 ? window.scrollY / max : 0; };
+    const save = () => { const f = fraction(); if (Math.abs(f - last) >= 0.03) { last = f; void saveNotePosition(trailUserId, id, f); } };
+    const onScroll = () => { window.clearTimeout(timer); timer = window.setTimeout(save, 2500); };
+    const onHide = () => { if (document.visibilityState === "hidden") save(); };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    document.addEventListener("visibilitychange", onHide);
+    window.addEventListener("pagehide", save);
+    const at = Number(new URLSearchParams(location.search).get("at"));
+    let go = 0, done = false;
+    const resume = () => {
+      if (done || !(at > 0.02 && at <= 1)) return;
+      done = true;
+      window.setTimeout(() => { const max = document.documentElement.scrollHeight - window.innerHeight; window.scrollTo({ top: max * at, behavior: "auto" }); last = at; }, 150);
+    };
+    if (at > 0.02) { window.addEventListener("ompath:note-ready", resume, { once: true }); go = window.setTimeout(resume, 2500); }
+    return () => { save(); window.clearTimeout(timer); window.clearTimeout(go); window.removeEventListener("scroll", onScroll); document.removeEventListener("visibilitychange", onHide); window.removeEventListener("pagehide", save); window.removeEventListener("ompath:note-ready", resume); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [article?.id, trailUserId]);
+
   useLayoutEffect(() => {
     let isReload = false;
     try {
@@ -1733,7 +1759,6 @@ export default function BlogPost() {
         }
         const canonicalPath = buildBlogPath(a);
         if (location.pathname !== canonicalPath) navigate(`${canonicalPath}${location.hash || ""}`, { replace: true });
-        markArticleVisited({ id: a.id, title: a.title, category: a.category, visitedAt: Date.now() });
         if (a.category) getRelatedContent(a.category, a.id).then(setRelated);
       })
       .catch(() => {

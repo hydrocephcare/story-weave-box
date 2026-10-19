@@ -228,7 +228,7 @@ export function planBreaks(articleId: string, count: number, hasBooks: boolean):
  */
 export function ProgressiveList({ items, first = 24, slice = 20 }: { items: React.ReactNode[]; first?: number; slice?: number }) {
   // a link to a heading further down, or a search highlight, needs the whole page to exist
-  const needsAll = () => typeof window !== "undefined" && (!!window.location.hash || /[?&](q|highlight|hl)=/.test(window.location.search));
+  const needsAll = () => typeof window !== "undefined" && (!!window.location.hash || /[?&](q|highlight|hl|at)=/.test(window.location.search));
   const [shown, setShown] = useState(() => (needsAll() ? items.length : Math.min(items.length, first)));
   useEffect(() => {
     const all = () => setShown(items.length);

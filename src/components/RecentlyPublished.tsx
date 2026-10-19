@@ -62,7 +62,7 @@ export default function RecentlyPublished({ year, limit = 8, className }: { year
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">{year ? "For your year" : "Fresh on the site"}</p>
           <h2 className="mt-1 font-serif text-2xl font-bold sm:text-3xl">{year ? `New in Year ${year}` : "Recently published"}</h2>
         </div>
-        <Link to="/new-notes" className="inline-flex shrink-0 items-center gap-1 text-sm font-bold text-primary hover:underline">See all new <ArrowRight className="h-4 w-4" aria-hidden /></Link>
+        <Link to={year ? `/recent?year=${year}` : "/recent"} className="inline-flex shrink-0 items-center gap-1 text-sm font-bold text-primary hover:underline">See all new <ArrowRight className="h-4 w-4" aria-hidden /></Link>
       </div>
       <ul className="mt-5 space-y-1">
         {rows.map((r) => {

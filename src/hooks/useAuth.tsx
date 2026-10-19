@@ -2,6 +2,7 @@ import { useState, useEffect, createContext, useContext, useCallback } from "rea
 import { supabase } from "@/integrations/supabase/client";
 import type { User, Session } from "@supabase/supabase-js";
 import { syncLocalProgress } from "@/lib/study";
+import { syncTrailToAccount } from "@/lib/readingTrail";
 import { wipePersonalData } from "@/lib/signOutCleanup";
 
 interface AuthContextType {
@@ -49,6 +50,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         // background work and must not delay every page navigation/login.
         await checkAdmin(nextSession.user.id);
         void syncLocalProgress(nextSession.user.id).catch(() => undefined);
+        void syncTrailToAccount(nextSession.user.id).catch(() => undefined);
       }
       else {
         setIsAdmin(false);

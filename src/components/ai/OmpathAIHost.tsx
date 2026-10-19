@@ -179,7 +179,7 @@ export default function OmpathAIHost() {
   useEffect(() => { window.dispatchEvent(new CustomEvent(AI_STATE_EVENT, { detail: open })); }, [open]);
   const [trending, setTrending] = useState<string[]>([]);
   const quickLinks = useMemo<[string, string][]>(() => [
-    ["Timetable", `/timetable/year-${myYear ?? 1}`], ["Recently added", "/recent"], ["Latest notes", "/new-notes"], ["Past papers", "/papers"],
+    ["Timetable", `/timetable/year-${myYear ?? 1}`], ["Recently added", "/recent"], ["Latest notes", "/recent"], ["Past papers", "/papers"],
     ...((myYear ?? 0) >= 3 ? ([["Clinical cases", "/clinical"], ["OSCE", "/clinical/osce"], ["Pharmacology", "/pharmacology"], ["Must-knows", "/must-knows"]] as [string, string][]) : []),
     ["Flashcards", "/flashcards"], ["MCQs", "/mcqs"], ["Library", "/books"], ["Stories", "/stories"],
   ], [myYear]);
@@ -365,7 +365,7 @@ export default function OmpathAIHost() {
       const fallback = retrieval ? extractiveAnswer(retrieval) : local?.answer ?? "Ompath AI could not reach the notes just now, so here is where to look. Try again in a minute.";
       const searchLink = { label: "Search the site", href: `/search?q=${encodeURIComponent(parseQuery(text).topic || text)}` };
       void reportAiFailure(retrieval ? "answer" : "search", text, e, retrieval ? (retrieval.passages.length ? "Matching passages shown" : retrieval.hits.length ? "Matching notes shown" : "Search link shown") : local ? "Site guide shown" : "Quick links shown");
-      aiStore.patchTurn(sessionId, id, { answer: fallback, links: local?.links ?? [searchLink, { label: "Latest notes", href: "/new-notes" }, { label: "Past papers", href: "/papers" }], followUps: local?.followUps });
+      aiStore.patchTurn(sessionId, id, { answer: fallback, links: local?.links ?? [searchLink, { label: "Latest notes", href: "/recent" }, { label: "Past papers", href: "/papers" }], followUps: local?.followUps });
       aiStore.flush();
     } finally { setBusy(false); abort.current = null; }
   }

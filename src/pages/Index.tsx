@@ -12,6 +12,7 @@ import { getAllCategories, getCategoryDisplayName, getYearFromCategory, YEAR_CAT
 import { buildStoryPath, updateMetaTags } from "@/lib/seo";
 import { supabase } from "@/integrations/supabase/client";
 import { getRecentArticles, type RecentArticle } from "@/lib/progress-store";
+import ContinueReading from "@/components/ContinueReading";
 import { getSubjectKey, subjectColor } from "@/components/subjectTheme";
 import { useAuth } from "@/hooks/useAuth";
 import SemesterDashboard from "@/components/SemesterDashboard";
@@ -350,32 +351,8 @@ export default function Index() {
 
       <section className="band-surface">
       <div className="mx-auto max-w-6xl px-5 py-10 sm:py-14">
-        {/* Last Read */}
-        {lastRead.length > 0 && (
-          <div className="mb-10">
-            <div className="flex items-center gap-2 mb-3">
-              <Clock className="h-4 w-4 text-primary" />
-              <h2 className="font-serif text-xl font-bold text-foreground">Continue Reading</h2>
-            </div>
-            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-              {lastRead.slice(0, 3).map(ra => {
-                const cleanTitle = (ra.title || "")
-                  .replace(/^(?:[\p{Extended_Pictographic}\u2600-\u27BF]|\uFE0F)+/gu, "")
-                  .trim();
-                return (
-                  <Link key={ra.id} to={buildBlogPath(ra)}
-                    className="group flex items-start gap-3 rounded-xl border border-border bg-card px-4 py-3 transition-all hover:shadow-sm hover:border-primary/20">
-                    <BookOpen className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    <div className="min-w-0 flex-1">
-                      <p className="text-sm font-medium text-foreground line-clamp-2 group-hover:text-primary transition-colors">{cleanTitle}</p>
-                      <p className="mt-0.5 text-[11px] text-muted-foreground truncate">{ra.category}</p>
-                    </div>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        )}
+        {/* Continue reading: follows the account across devices */}
+        <ContinueReading className="mb-10" />
 
         {/* Browse by Year */}
         <motion.div

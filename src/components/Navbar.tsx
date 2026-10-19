@@ -43,7 +43,7 @@ function buildMenu(isAdmin: boolean): Group[] {
       { to: "/topics", label: "Topics A–Z", icon: Network },
       { to: "/pharmacology", label: "Pharmacology", icon: Pill },
       { to: "/papers", label: "Past papers", icon: ListChecks },
-      { to: "/new-notes", label: "Latest notes", icon: BookMarked },
+      { to: "/recent", label: "Latest notes", icon: BookMarked },
       { to: "/books", label: "Books", icon: BookMarked },
     ] },
     { label: "Practice", items: [

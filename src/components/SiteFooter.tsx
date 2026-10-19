@@ -71,7 +71,7 @@ export default function SiteFooter() {
               <li key={n.slug} className={i >= 3 ? "hidden sm:block" : undefined}><Link to={`/notes/${n.slug}`} className="group flex items-baseline gap-2 py-1 text-[15px] leading-snug text-muted-foreground hover:text-primary"><span className="shrink-0 rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-bold text-primary">Y{n.year}</span><span className="min-w-0 truncate">{n.title}</span></Link></li>
             ))}
           </ul>
-          <Link to="/new-notes" className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">See everything new <ArrowRight className="h-4 w-4" aria-hidden /></Link>
+          <Link to="/recent" className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">See everything new <ArrowRight className="h-4 w-4" aria-hidden /></Link>
         </div>
 
         <nav aria-label="Company" className="order-3 lg:order-none">
