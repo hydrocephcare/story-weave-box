@@ -387,7 +387,7 @@ export default function Index() {
               {yearGroups.map((group) => (
                 <motion.div key={group.year} variants={tileReveal} className="h-full">
                 <Link
-                  to={group.categories.length ? `/blog?year=${encodeURIComponent(group.year)}` : `/year/${group.year.replace(/\D/g, "")}`}
+                  to={`/year/${group.year.replace(/\D/g, "")}`}
                   className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[var(--shadow-card-hover)]"
                 >
                   <div className="flex items-baseline justify-between border-b border-border px-5 py-4">
