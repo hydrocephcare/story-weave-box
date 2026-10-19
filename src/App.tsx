@@ -53,6 +53,7 @@ const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Flashcards = lazy(() => import("./pages/Flashcards"));
 const FlashcardStudy = lazy(() => import("./pages/FlashcardStudy"));
+const GeneratedFlashcardStudy = lazy(() => import("./pages/GeneratedFlashcardStudy"));
 const Exams = lazy(() => import("./pages/Exams"));
 const ExamStart = lazy(() => import("./pages/ExamStart"));
 const McqSet = lazy(() => import("./pages/McqSet"));
