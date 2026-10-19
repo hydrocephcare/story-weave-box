@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 import ShareButtons from "@/components/ShareButtons";
 import ArticleComments from "@/components/ArticleComments";
-import { Countdown, HtmlEmbed, VimeoEmbed, PasswordGate, ContentToc, ReadingTimeBadge } from "@/components/ContentExtras";
+import { Countdown, HtmlEmbed, VimeoEmbed, PasswordGate, ContentToc } from "@/components/ContentExtras";
 import { motion, AnimatePresence } from "framer-motion";
 import { getArticleBySlugOrId, getPublishedArticleSummaries, getRelatedContent, getCategoryDisplayName, getYearFromCategory, buildBlogPath, buildMcqPath, buildFlashcardPath, type Article } from "@/lib/store";
 import { extractFirstImageFromContent, SITE_URL, stripRichText, readableSummary, updateMetaTags } from "@/lib/seo";
