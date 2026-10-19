@@ -26,6 +26,25 @@ export function useMyYear(): { year: number | null; ready: boolean } {
   return { year, ready };
 }
 
+const ALL_KEY = "ompath_all_years";
+const ALL_EVENT = "ompath:all-years";
+const readAll = (): boolean => { try { return localStorage.getItem(ALL_KEY) === "1"; } catch { return false; } };
+
+/** "All years" mode: a student who picked a year normally sees only that year; this switch (in the menu) lets them browse every year. Remembered on this device. */
+export function useAllYears(): [boolean, (v: boolean) => void] {
+  const [all, setAll] = useState(readAll);
+  useEffect(() => { const on = () => setAll(readAll()); window.addEventListener(ALL_EVENT, on); window.addEventListener("storage", on); return () => { window.removeEventListener(ALL_EVENT, on); window.removeEventListener("storage", on); }; }, []);
+  const set = (v: boolean) => { try { localStorage.setItem(ALL_KEY, v ? "1" : "0"); } catch { /* storage blocked */ } setAll(v); window.dispatchEvent(new Event(ALL_EVENT)); };
+  return [all, set];
+}
+
+/** The year the pages should be limited to: the student's own year, or null for "all years" mode and for people who never chose one. */
+export function useScopedYear(): { year: number | null; myYear: number | null; allYears: boolean; ready: boolean } {
+  const { year, ready } = useMyYear();
+  const [allYears] = useAllYears();
+  return { year: allYears ? null : year, myYear: year, allYears, ready };
+}
+
 /** The year a note or exam belongs to, from its category ("Year 4: Internal Medicine"), or null when it is for everyone. */
 export const yearOfCategory = (category: string | null | undefined): number | null => {
   const m = String(category ?? "").match(/\byear\s*([1-6])\b/i);

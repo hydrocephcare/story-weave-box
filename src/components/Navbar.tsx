@@ -6,6 +6,7 @@ import ThemeToggle from "./ThemeToggle";
 import NotificationsBell from "./NotificationsBell";
 import HeaderSearch from "./HeaderSearch";
 import { useAuth } from "@/hooks/useAuth";
+import { useAllYears, useMyYear } from "@/hooks/useMyYear";
 
 const YEAR_OPTIONS = [1, 2, 3, 4, 5, 6] as const;
 const STORAGE_KEY = "nav_year_filter";
@@ -36,10 +37,10 @@ type Leaf = { to: string; label: string; icon: typeof Home; children?: { to: str
 type Group = { label: string; items: Leaf[] };
 
 /** The whole menu as a tree: hover a heading for its list, hover an item with an arrow for its own list. On phones the same tree folds open in the side menu. */
-function buildMenu(isAdmin: boolean): Group[] {
+function buildMenu(isAdmin: boolean, years: readonly number[] = YEAR_OPTIONS): Group[] {
   const groups: Group[] = [
     { label: "Study", items: [
-      { to: "/blog", label: "Notes", icon: BookOpen, children: [{ to: "/blog", label: "All notes" }, ...YEAR_OPTIONS.map((y) => ({ to: `/year/${y}`, label: `Year ${y}` }))] },
+      { to: "/blog", label: "Notes", icon: BookOpen, children: [{ to: "/blog", label: "All notes" }, ...years.map((y) => ({ to: `/year/${y}`, label: `Year ${y}` }))] },
       { to: "/topics", label: "Topics A–Z", icon: Network },
       { to: "/pharmacology", label: "Pharmacology", icon: Pill },
       { to: "/papers", label: "Past papers", icon: ListChecks },
@@ -122,7 +123,11 @@ export default function Navbar() {
   const [expandedYear, setExpandedYear] = useState<number | null>(null);
   const [hidden, setHidden] = useState(false);
 
-  const menu = useMemo(() => buildMenu(isAdmin), [isAdmin]);
+  const { year: myYear } = useMyYear();
+  const [allYears, setAllYears] = useAllYears();
+  // a student with a chosen year sees only that year in the menu, unless "All years" is switched on
+  const scopedYear = myYear && !allYears ? myYear : null;
+  const menu = useMemo(() => buildMenu(isAdmin, scopedYear ? [scopedYear] : YEAR_OPTIONS), [isAdmin, scopedYear]);
 
   const isExamPage = /^\/exams\/[^/]+\/start/.test(location.pathname);
 
@@ -211,7 +216,7 @@ export default function Navbar() {
 
           <div className="hidden min-w-0 items-center gap-1 lg:flex">
             <div className="mr-2 flex items-center gap-0.5 rounded-lg bg-white/10 p-0.5">
-              {YEAR_OPTIONS.map((yr) => (
+              {(scopedYear ? [scopedYear] : YEAR_OPTIONS).map((yr) => (
                 <button
                   key={yr}
                   onClick={() => selectYear(activeYear === yr ? null : yr)}
@@ -224,6 +229,11 @@ export default function Navbar() {
                   Y{yr}
                 </button>
               ))}
+              {myYear && (
+                <button type="button" onClick={() => setAllYears(!allYears)} className="ml-0.5 rounded-md px-2 py-1 text-[11px] font-semibold text-white/80 underline-offset-2 hover:bg-white/10 hover:text-white hover:underline" title={allYears ? `Show only Year ${myYear}` : "Browse every year"}>
+                  {allYears ? `Only Y${myYear}` : "All years"}
+                </button>
+              )}
             </div>
 
             <HeaderSearch variant="desktop" />
@@ -269,9 +279,9 @@ export default function Navbar() {
                   </div>
 
                   <div className="border-b border-white/10 px-3 py-3">
-                    <p className="mb-2 px-1 text-[10px] font-bold uppercase tracking-wider text-white/40">Academic years</p>
-                    <div className="grid grid-cols-6 gap-1.5">
-                      {YEAR_OPTIONS.map((yr) => (
+                    <p className="mb-2 px-1 text-[10px] font-bold uppercase tracking-wider text-white/40">{scopedYear ? "Your year" : "Academic years"}</p>
+                    <div className={scopedYear ? "grid grid-cols-1 gap-1.5" : "grid grid-cols-6 gap-1.5"}>
+                      {(scopedYear ? [scopedYear] : YEAR_OPTIONS).map((yr) => (
                         <Link
                           key={yr}
                           to={`/year/${yr}`}
@@ -279,10 +289,15 @@ export default function Navbar() {
                           aria-label={`Year ${yr}`}
                           className={`rounded-lg py-2 text-center text-sm font-bold transition-colors ${activeYear === yr ? "bg-white/20 text-white" : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"}`}
                         >
-                          {yr}
+                          {scopedYear ? `Year ${yr}` : yr}
                         </Link>
                       ))}
                     </div>
+                    {myYear && (
+                      <button type="button" onClick={() => setAllYears(!allYears)} className="mt-2 w-full rounded-lg bg-white/5 py-2 text-center text-xs font-bold text-white/80 hover:bg-white/10">
+                        {allYears ? `Show only Year ${myYear}` : "Browse all years"}
+                      </button>
+                    )}
                   </div>
 
                 </div>

@@ -1,3 +1,4 @@
+import { useAllYears } from "@/hooks/useMyYear";
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Clock, Flame, ListChecks, PlayCircle, Search, Timer, Trophy, X } from "lucide-react";
@@ -92,7 +93,8 @@ export default function Exams({ mode = "exam" }: { mode?: "exam" | "mcq" }) {
     if (!user) return;
     (supabase as any).from("profiles").select("study_year").eq("user_id", user.id).maybeSingle().then(({ data }: { data: { study_year?: number | string } | null }) => { const y = Number(data?.study_year); if (y >= 1 && y <= 6) setProfileYear(y); });
   }, [user]);
-  const mine = profileYear;
+  const [allYearsMode] = useAllYears();
+  const mine = allYearsMode ? null : profileYear;
   const yp = params.get("year");
   const year = mine ?? (yp === "all" ? null : Number(/([0-9])/.exec(yp || "")?.[1]) || (yp ? null : mine));   // no choice made yet: show the learner's own year
 

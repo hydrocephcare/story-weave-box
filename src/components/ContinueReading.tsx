@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { BookOpen, Check } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
-import { loadTrail, type TrailItem } from "@/lib/readingTrail";
+import { loadReadIds, loadTrail, type TrailItem } from "@/lib/readingTrail";
 import { buildBlogPath } from "@/lib/store";
 
 const clean = (t: string) => t.replace(/^(?:[\p{Extended_Pictographic}☀-➿]|️)+/gu, "").replace(/\s*[—–-]\s*Notes$/i, "").trim();
@@ -19,17 +19,26 @@ const ago = (t: number) => {
 const linkFor = (i: TrailItem) => `${buildBlogPath({ id: i.id, title: i.title, slug: i.slug, category: i.category } as never)}${i.at > 0.05 && i.at < 0.95 ? `?at=${i.at.toFixed(3)}` : ""}`;
 
 /** "Continue reading": the note you were in the middle of, with a bar and a link that opens it at the same spot, then what you read before. Follows your account across devices. */
-export default function ContinueReading({ className = "", year }: { className?: string; year?: number }) {
+export default function ContinueReading({ className = "", year, noteIds, unread }: { className?: string; year?: number; /** limit the list to these notes (a unit) */ noteIds?: Set<string>; /** this unit's notes, to list the ones not read yet */ unread?: { id: string; title: string; to: string }[] }) {
   const { user, loading } = useAuth();
   const [trail, setTrail] = useState<TrailItem[] | null>(null);
+  const [readIds, setReadIds] = useState<Set<string>>(new Set());
   useEffect(() => {
     if (loading) return;
     let on = true;
-    loadTrail(user?.id ?? null, year ? 30 : 8).then((t) => { if (on) setTrail(year ? t.filter((i) => new RegExp(`^Year\\s*${year}\\b`, "i").test(i.category)).slice(0, 8) : t); });
+    loadTrail(user?.id ?? null, year || noteIds ? 200 : 8).then((t) => { if (on) setTrail(noteIds ? t.filter((i) => noteIds.has(i.id)).slice(0, 8) : year ? t.filter((i) => new RegExp(`^Year\\s*${year}\\b`, "i").test(i.category)).slice(0, 8) : t); });
+    if (unread) void loadReadIds(user?.id ?? null).then((r) => { if (on) setReadIds(r); });
     return () => { on = false; };
   }, [user?.id, loading, year]);
 
-  if (!trail || trail.length === 0) return null;
+  const notRead = (unread ?? []).filter((n) => !readIds.has(n.id)).slice(0, 5);
+  if (!trail || (trail.length === 0 && notRead.length === 0)) return null;
+  if (trail.length === 0) return (
+    <section className={className} aria-label="Not read yet">
+      <h2 className="font-serif text-xl font-bold text-foreground">Start reading</h2>
+      <ul className="mt-1 divide-y divide-border">{notRead.map((n) => <li key={n.id}><Link to={n.to} className="flex items-center gap-2.5 py-2.5 text-sm hover:text-primary"><BookOpen className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden /><span className="min-w-0 flex-1 truncate font-medium text-foreground">{clean(n.title)}</span></Link></li>)}</ul>
+    </section>
+  );
   const current = trail.find((t) => !t.done) ?? trail[0];
   const rest = trail.filter((t) => t.id !== current.id).slice(0, 5);
 
@@ -64,6 +73,12 @@ export default function ContinueReading({ className = "", year }: { className?: 
               </li>
             ))}
           </ul>
+        </div>
+      )}
+      {notRead.length > 0 && (
+        <div className="mt-4">
+          <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">Not read yet</p>
+          <ul className="mt-1 divide-y divide-border">{notRead.filter((n) => n.id !== current.id).map((n) => <li key={n.id}><Link to={n.to} className="flex items-center gap-2.5 py-2 text-sm hover:text-primary"><BookOpen className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden /><span className="min-w-0 flex-1 truncate font-medium text-foreground">{clean(n.title)}</span></Link></li>)}</ul>
         </div>
       )}
     </section>

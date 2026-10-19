@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet-async";
 import { BookOpen, Check, FileQuestion, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { buildBlogPath, buildMcqPath, getCategoryDisplayName, getPublishedArticleSummaries } from "@/lib/store";
-import { useMyYear, yearOfCategory } from "@/hooks/useMyYear";
+import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
 import LoadMoreButton from "@/components/LoadMoreButton";
 import { STATIC_NOTES } from "@/data/staticNotes";
 
@@ -19,7 +19,7 @@ const ago = (t: number) => { const m = Math.max(1, Math.round((Date.now() - t) /
 
 /** /recent: everything added to the site lately, newest first, for your year by default. */
 export default function RecentlyAdded() {
-  const { year: myYear } = useMyYear();
+  const { year: myYear } = useScopedYear();
   const [items, setItems] = useState<Item[] | null>(null);
   const [pick, setPick] = useState<number | "all" | null>(null);
   const [type, setType] = useState<"all" | "note" | "mcq">("all");

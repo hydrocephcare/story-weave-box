@@ -18,6 +18,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "@/hooks/use-toast";
 import { getCourseOutlineForUnit } from "@/data/courseOutlines";
 import Year4CurriculumNotes from "@/components/Year4CurriculumNotes";
+import ContinueReading from "@/components/ContinueReading";
 
 const TABS = ["Overview", "Syllabus", "Notes", "Questions", "CATs", "Past Papers", "Flashcards", "Exams"] as const;
 
@@ -253,6 +254,7 @@ export default function UnitPage() {
         </TabsList>
 
         <TabsContent value="Overview" className="mt-4 space-y-5">
+          <ContinueReading noteIds={new Set(notes.map((r) => r.id))} unread={notes.map((r) => ({ id: r.id, title: r.title, to: resourcePath(r) }))} />
           {featured && (
             <section className="rounded-2xl border border-primary/30 bg-primary/5 p-5">
               <p className="text-xs font-semibold uppercase tracking-wide text-primary">Start here</p>

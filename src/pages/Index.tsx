@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import TaughtThisWeek from "@/components/TaughtThisWeek";
-import { useMyYear as useHomeYear } from "@/hooks/useMyYear";
+import { useScopedYear as useHomeYear } from "@/hooks/useMyYear";
 import LoadMoreButton from "@/components/LoadMoreButton";
 import { Link, useNavigate } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";

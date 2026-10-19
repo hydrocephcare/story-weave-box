@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Mail, MessageCircle, Phone } from "lucide-react";
-import { useMyYear } from "@/hooks/useMyYear";
+import { useScopedYear } from "@/hooks/useMyYear";
 
 const STUDY = [
   { to: "/blog", label: "Study notes" },
@@ -26,7 +26,7 @@ const COMPANY = [
 
 /** The foot of every page: who we are, where to go, what is new, how to reach us. */
 export default function SiteFooter() {
-  const { year: myYearFooter } = useMyYear();
+  const { year: myYearFooter } = useScopedYear();
   const location = useLocation();
   // the list of notes is loaded after the page has painted, so the footer never slows the first view
   const [recent, setRecent] = useState<{ slug: string; year: number; title: string }[]>([]);

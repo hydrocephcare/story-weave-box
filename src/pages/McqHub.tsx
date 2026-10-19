@@ -5,7 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { updateMetaTags } from "@/lib/seo";
 import { isPublicMcqSet } from "@/lib/content-policy";
 import { examUnit, examYear, shortTitle, type CatalogRow } from "@/lib/examMeta";
-import { useMyYear } from "@/hooks/useMyYear";
+import { useScopedYear } from "@/hooks/useMyYear";
 
 const YEARS = [1, 2, 3, 4, 5, 6];
 
@@ -20,7 +20,7 @@ export default function McqHub() {
   const [params, setParams] = useSearchParams();
   const [rows, setRows] = useState<CatalogRow[] | null>(null);
   const [q, setQ] = useState("");
-  const { year: myYear } = useMyYear();
+  const { year: myYear } = useScopedYear();
   // a student who has chosen a year sees that year's banks only; everyone else can browse any year
   const year = myYear ?? (Number(/(\d)/.exec(params.get("year") || "")?.[1]) || null);
   const unit = params.get("unit");
