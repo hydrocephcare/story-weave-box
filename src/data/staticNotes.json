@@ -2787,9 +2787,21 @@
     "year": 4,
     "unit": "Internal Medicine",
     "group": "Neurology",
-    "title": "Stroke, Seizures, Epilepsy and Status Epilepticus",
-    "description": "Combined Year 4 clinical notes: ischaemic and haemorrhagic stroke, lesion localisation, investigations and acute management; seizure classification, causes, epilepsy assessment, investigations, status epilepticus and emergency treatment, with medical diagrams and CAT questions.",
+    "title": "Stroke and Cerebrovascular Disease (Part 1 of 2)",
+    "description": "Year 4 clinical notes on ischaemic and haemorrhagic stroke, lesion localisation, investigations, emergency and definitive management, complications, cases and CAT questions. Continue to Part 2 for seizures, epilepsy and status epilepticus.",
     "updated": "2026-10-19",
-    "file": "src/content/notes/neurology-stroke-seizures-epilepsy.md"
+    "file": "src/content/notes/neurology-stroke-seizures-epilepsy.md",
+    "series": "Stroke & Seizures · Part 1 of 2"
+  },
+  {
+    "slug": "seizures-epilepsy-status-epilepticus",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Seizures, Epilepsy and Status Epilepticus (Part 2 of 2)",
+    "description": "Year 4 clinical notes on seizure classification, causes, clinical assessment, investigations, epilepsy diagnosis and treatment, status epilepticus, emergency management, cases and CAT questions.",
+    "updated": "2026-10-19",
+    "file": "src/content/notes/seizures-epilepsy-status-epilepticus.md",
+    "series": "Stroke & Seizures · Part 2 of 2"
   }
 ]
