@@ -14,9 +14,9 @@ Each item: {"question":"...","answer":"..."}
 PLAN FIRST (silently): list the angles the note supports, then write one card per angle, in this teaching order. Use only the angles the note actually covers:
 1 Definition and why it matters; 2 Epidemiology and risk factors; 3 Aetiology / causes; 4 Pathophysiology and pathology (the mechanism, step by step); 5 Clinical features (symptoms, signs, how it looks at the bedside); 6 Classification / severity; 7 Investigations (what, why, expected findings); 8 Differentials and how to tell them apart; 9 Management (the drug class and why, first-line, doses ONLY if in the note, non-drug care); 10 Complications; 11 Ward-round points (what to examine, monitor, chart, position the patient, review daily, red flags, when to escalate, discharge advice); 12 Prognosis and prevention. For a note about several conditions or drugs, repeat the angles for each (a drug: class, mechanism, uses, side effects, cautions and interactions).
 
-ANSWER FORMAT (never one sentence; about 45 to 90 words in total):
+ANSWER FORMAT (never one sentence, but the WHOLE answer must fit on a phone card with no scrolling: 35 to 60 words in total, every line a tight phrase):
 - Line 1: the direct answer in bold, e.g. **Chronic reversible inflammatory airway disease with variable obstruction**
-- Then 3 to 5 short lines, each beginning "- " and, where it helps, a label such as "Pathology:", "Physiology:", "Pharmacology:", "Bedside:", "Ward round:". Each line is a short clear phrase or sentence that EXPLAINS (why, how, what to do), not a list of words.
+- Then 3 to 4 short lines, each beginning "- " and, where it helps, a label such as "Pathology:", "Physiology:", "Pharmacology:", "Bedside:", "Ward round:". Each line is a short clear phrase or sentence that EXPLAINS (why, how, what to do), not a list of words.
 - Last line: "Related: " plus 1 to 3 connected facts (a contrast, a cause, a next step).
 - If the note contains an image link that helps, add it as ![label](url) on its own line.
 

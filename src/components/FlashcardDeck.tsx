@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, EyeOff, Flame, Star, Type, Undo2, Volume2 } from "lucide-react";
 import { DAILY_GOAL, bury, buriedKeys, doneToday, getScale, recordReview, setScale, speak, starredKeys, streak, toggleStar } from "@/lib/deckStats";
@@ -44,6 +44,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
   const [all, setAll] = useState(false);
   const [mcq, setMcq] = useState<string | null>(null);
   const [noMore, setNoMore] = useState(false);
+  const ansRef = useRef<HTMLDivElement>(null);
   const [scale, setScaleState] = useState(() => getScale());
   const [stars, setStars] = useState<Set<string>>(() => starredKeys());
   const drag = useRef<{ x: number; y: number; t: number; active: boolean; horiz: boolean | null }>({ x: 0, y: 0, t: 0, active: false, horiz: null });
@@ -72,6 +73,12 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
   const st = card && states ? states[cardKey(card.setId, card.idx)] : undefined;
 
   useEffect(() => { setFlipped(false); }, [ci]);
+  // the whole answer is always on the card: the text shrinks until it fits, so there is never anything to scroll
+  useLayoutEffect(() => {
+    const el = ansRef.current; if (!el) return;
+    let z = scale; (el.style as CSSStyleDeclaration & { zoom: string }).zoom = String(z);
+    while (el.scrollHeight > el.clientHeight + 1 && z > 0.5) { z = Math.round((z - 0.04) * 100) / 100; (el.style as CSSStyleDeclaration & { zoom: string }).zoom = String(z); }
+  }, [ci, flipped, scale, card?.answer]);
 
   const rate = useCallback((r: Rating) => {
     if (!queue || !queue.length || !card || !states) return;
@@ -237,7 +244,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
               </div>
               <div className={`${face} border-primary/30`} style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Answer</p>
-                <div style={{ zoom: scale }} className="mt-2 flex flex-1 flex-col gap-2 overflow-y-auto pr-1 text-left [&>*:first-child]:mt-auto [&>*:last-child]:mb-auto text-[18px] leading-relaxed text-foreground sm:text-[19px] [&_strong]:font-bold [&_strong]:text-primary [&_img]:mx-auto [&_img]:my-2 [&_img]:max-h-[40dvh] [&_img]:rounded-xl [&_li]:my-1 [&_li]:text-[17px] [&_li]:leading-snug [&_p]:text-[17px] [&_p]:leading-snug">{renderFlashcardMarkdown(card?.answer || "", ctx)}</div>
+                <div ref={ansRef} className="mt-2 flex flex-1 flex-col gap-2 overflow-hidden pr-1 text-left [&>*:first-child]:mt-auto [&>*:last-child]:mb-auto text-[18px] leading-relaxed text-foreground sm:text-[19px] [&_strong]:font-bold [&_strong]:text-primary [&_img]:mx-auto [&_img]:my-2 [&_img]:max-h-[40dvh] [&_img]:rounded-xl [&_li]:my-1 [&_li]:text-[17px] [&_li]:leading-snug [&_p]:text-[17px] [&_p]:leading-snug">{renderFlashcardMarkdown(card?.answer || "", ctx)}</div>
               </div>
             </div>
           </div>
