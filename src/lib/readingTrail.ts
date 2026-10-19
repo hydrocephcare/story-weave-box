@@ -47,7 +47,14 @@ export async function saveNotePosition(userId: string | null, id: string, at: nu
   writePositions(p);
   if (!userId) return;
   const patch: Record<string, unknown> = { user_id: userId, resource_type: "article", resource_id: id, last_opened_at: new Date().toISOString(), progress_percent: Math.round(f * 100), last_position: String(Math.round(f * 1000) / 1000) };
-  try { await db.from("user_resource_progress").upsert(patch, { onConflict: "user_id,resource_type,resource_id" }); } catch { /* ignore */ }
+  try {
+    // reading a note to the end counts as studied, unless the reader marked it "difficult" or "revisit" themselves
+    if (f >= 0.9) {
+      const { data: cur } = await db.from("user_resource_progress").select("status").eq("user_id", userId).eq("resource_type", "article").eq("resource_id", id).maybeSingle();
+      if (!cur?.status || cur.status === "in_progress" || cur.status === "not_started") { patch.status = "completed"; patch.completed_at = new Date().toISOString(); }
+    }
+    await db.from("user_resource_progress").upsert(patch, { onConflict: "user_id,resource_type,resource_id" });
+  } catch { /* ignore */ }
 }
 
 export function localPosition(id: string): number {

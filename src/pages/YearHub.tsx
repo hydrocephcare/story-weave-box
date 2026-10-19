@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import TaughtThisWeek from "@/components/TaughtThisWeek";
 import HeroAurora from "@/components/HeroAurora";
 import ContinueReading from "@/components/ContinueReading";
+import { loadTrail } from "@/lib/readingTrail";
+import { getAllCategories } from "@/lib/store";
 import RecentlyPublished from "@/components/RecentlyPublished";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { ArrowRight, BookMarked, ChevronDown, ChevronRight, CalendarDays, BookOpen, ClipboardCheck, Clock, FileQuestion, FolderOpen, GraduationCap, Images, ListChecks, Pill, Flame, Stethoscope, Trophy } from "lucide-react";
@@ -78,9 +80,22 @@ export default function YearHub() {
   const [recentLoading, setRecentLoading] = useState(true);
   const [canonicalUnits, setCanonicalUnits] = useState<Unit[]>([]);
   const [unitsLoading, setUnitsLoading] = useState(true);
+  const [unitStats, setUnitStats] = useState<Map<string, { total: number; read: number }>>(new Map());
 
   const yearLabel = isValidYear ? `Year ${parsedYear}` : "";
   const units = isValidYear ? (YEAR_CATEGORIES[yearLabel] || []) : [];
+  useEffect(() => {
+    if (!isValidYear) return;
+    let on = true;
+    void Promise.all([getAllCategories().catch(() => []), loadTrail(user?.id ?? null, 300).catch(() => [])]).then(([cats, trail]) => {
+      if (!on) return;
+      const m = new Map<string, { total: number; read: number }>();
+      for (const c of cats as { name: string; articles: number }[]) if (c.name.startsWith(yearLabel + ":")) m.set(c.name, { total: c.articles, read: 0 });
+      for (const t of trail) if (t.done) { const e = m.get(t.category); if (e) e.read += 1; }
+      setUnitStats(m);
+    });
+    return () => { on = false; };
+  }, [isValidYear, yearLabel, user?.id]);
   const hasAponeurosis = parsedYear === 1 || parsedYear === 2;
 
   useEffect(() => {
@@ -237,7 +252,9 @@ export default function YearHub() {
               {(canonicalUnits.length ? canonicalUnits : units.map((name) => ({ id: name, name, slug: "", legacy_category: `${yearLabel}: ${name}` } as Unit))).map((unit) => (
                 <li key={unit.id} className="border-b border-border">
                   <Link to={unit.slug ? unitPath(parsedYear, unit.slug) : `/blog?year=${encodeURIComponent(yearLabel)}&unit=${encodeURIComponent(unit.legacy_category || "")}`} className="flex items-center justify-between gap-2 py-3 text-[15px] font-semibold text-foreground hover:text-primary">
-                    <span className="min-w-0 truncate">{unit.name}</span><ArrowRight className="h-4 w-4 shrink-0 text-primary/60" aria-hidden />
+                    <span className="min-w-0 flex-1 truncate">{unit.name}</span>
+                    {(() => { const st = unitStats.get(unit.legacy_category || `${yearLabel}: ${unit.name}`); return st && st.total > 0 ? <span className="shrink-0 text-[11px] font-medium tabular-nums text-muted-foreground">{st.read}/{st.total} read</span> : null; })()}
+                    <ArrowRight className="h-4 w-4 shrink-0 text-primary/60" aria-hidden />
                   </Link>
                 </li>
               ))}
