@@ -149,6 +149,9 @@ function StaticNoteView() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [note, parsed, spy.active, railUser?.id]);
   const nextNote = (() => { if (!note) return null; const all = STATIC_NOTES.filter((n) => n.unit === note.unit && n.group === note.group && !n.paper); const i = all.findIndex((n) => n.slug === note.slug); return i >= 0 ? all[i + 1] ?? null : null; })();
+  const isStrokeSeizureSeries = note?.slug === "stroke-seizures-epilepsy" || note?.slug === "seizures-epilepsy-status-epilepticus";
+  const seriesPrevious = note?.slug === "seizures-epilepsy-status-epilepticus" ? findStaticNote("stroke-seizures-epilepsy") : null;
+  const seriesNext = note?.slug === "stroke-seizures-epilepsy" ? findStaticNote("seizures-epilepsy-status-epilepticus") : null;
   const railOn = !note?.paper && Boolean(parsed && parsed.headings.length > 2);
   const siblings = useMemo(() => (note ? STATIC_NOTES.filter((n) => n.unit === note.unit && n.group === note.group && n.slug !== note.slug) : []), [note]);
   if (!note) return <Navigate to="/notes" replace />;
@@ -322,6 +325,18 @@ function StaticNoteView() {
           <div className="print:hidden"><ContentCredit /></div>
 
           {text && <NoteTopics text={text} title={`${note.title} ${note.group ?? ""}`} className="mt-8" />}
+
+          {isStrokeSeizureSeries && (
+            <nav aria-label="Continue the stroke and seizures series" className="mt-10 rounded-2xl border border-primary/25 bg-primary/5 p-5 print:hidden">
+              <p className="text-[11px] font-bold uppercase tracking-wider text-primary">Continue this neurology series</p>
+              <p className="mt-1 font-serif text-lg font-bold text-foreground">{seriesNext ? "Part 1 complete? Continue to Part 2" : "You are reading Part 2 of 2"}</p>
+              <p className="mt-1 text-sm text-muted-foreground">{seriesNext ? "Next: Seizures, Epilepsy and Status Epilepticus — classification, assessment and emergency management." : "This is the final part. You can return to the stroke notes at any time."}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {seriesPrevious && <Link to={`/notes/${seriesPrevious.slug}`} className="inline-flex min-h-11 items-center rounded-lg border border-border bg-background px-4 py-2 text-sm font-bold text-foreground hover:border-primary/50">← Previous: Stroke</Link>}
+                {seriesNext && <Link to={`/notes/${seriesNext.slug}`} className="inline-flex min-h-11 items-center rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground hover:opacity-90">Next: Seizures and Epilepsy →</Link>}
+              </div>
+            </nav>
+          )}
 
           {siblings.length > 0 && (
             <nav aria-label="More notes" className="mt-10 rounded-xl border border-border bg-card p-4 print:hidden">
