@@ -8,16 +8,33 @@ import { cleanTopicTitle } from "../_shared/topicTitle.js";
 const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-cron-key" };
 const json = (o: unknown, status = 200) => new Response(JSON.stringify(o), { status, headers: { ...cors, "Content-Type": "application/json" } });
 
-const SYSTEM = `You write revision flashcards for Kenyan medical students from ONE study note. Return ONLY a JSON array, no markdown.
+const SYSTEM = `You write revision flashcards for Kenyan medical students from ONE study note, as a good clinician-teacher would: every card is a compact summary of one ANGLE of the subject, never a single trivia line. Return ONLY a JSON array, no markdown fences.
 Each item: {"question":"...","answer":"..."}
-Rules:
-- One idea per card. The question asks for ONE thing (a definition, a cause, a feature, a number, a next step).
-- The answer has three parts, in this order: (1) the direct answer in bold on its own line, e.g. **Dihydropyridine calcium-channel blocker**; (2) 2 to 4 bullet lines starting with "- " that EXPLAIN it (why, how, what it means clinically), each a short clear sentence; (3) one last line starting "Related: " naming 1 to 3 linked facts the student should connect (a cause, a contrast, a next step, a similar drug or condition). Never answer with a single sentence. If a picture would help and the note contains an image link, add it as ![label](url) on its own line.
-- For drugs write cards that drill: "Class of X?", "Mechanism of X?", "Main uses of X?", "Key side effects of X?", "Contraindications of X?" so the facts can be rehearsed one at a time.
-- Use only facts that are in the note. Never invent doses, numbers or criteria.
-- Cover the whole note in the order it is taught: definition, causes or risk factors, features, investigations, management, complications.
-- Questions must stand alone (name the condition; never say "the note", "above" or "this").
-- No duplicate cards.`;
+
+PLAN FIRST (silently): list the angles the note supports, then write one card per angle, in this teaching order. Use only the angles the note actually covers:
+1 Definition and why it matters; 2 Epidemiology and risk factors; 3 Aetiology / causes; 4 Pathophysiology and pathology (the mechanism, step by step); 5 Clinical features (symptoms, signs, how it looks at the bedside); 6 Classification / severity; 7 Investigations (what, why, expected findings); 8 Differentials and how to tell them apart; 9 Management (the drug class and why, first-line, doses ONLY if in the note, non-drug care); 10 Complications; 11 Ward-round points (what to examine, monitor, chart, position the patient, review daily, red flags, when to escalate, discharge advice); 12 Prognosis and prevention. For a note about several conditions or drugs, repeat the angles for each (a drug: class, mechanism, uses, side effects, cautions and interactions).
+
+ANSWER FORMAT (never one sentence; about 45 to 90 words in total):
+- Line 1: the direct answer in bold, e.g. **Chronic reversible inflammatory airway disease with variable obstruction**
+- Then 3 to 5 short lines, each beginning "- " and, where it helps, a label such as "Pathology:", "Physiology:", "Pharmacology:", "Bedside:", "Ward round:". Each line is a short clear phrase or sentence that EXPLAINS (why, how, what to do), not a list of words.
+- Last line: "Related: " plus 1 to 3 connected facts (a contrast, a cause, a next step).
+- If the note contains an image link that helps, add it as ![label](url) on its own line.
+
+NO REPETITION: each fact appears in exactly ONE card. Before writing a card, check that its angle and its facts are not already in an earlier card; if the angle is covered, skip it. A later card may name an earlier idea only in its "Related:" line, never re-explain it. Questions must be different from each other in what they ask.
+Use only facts that are in the note; never invent numbers, doses or criteria. Questions must stand alone (name the condition; never say "the note", "above" or "this") and ask for ONE angle, e.g. "Asthma: what happens in the airway (pathophysiology)?".`;
+
+/** Drops a card whose question and answer share most of their words with a card already kept (the same fact asked twice). */
+function dedupe<T extends { question: string; answer: string }>(cards: T[]): T[] {
+  const bag = (t: string) => new Set(t.toLowerCase().replace(/[^a-z0-9s]/g, " ").split(/s+/).filter((w) => w.length > 3));
+  const kept: { c: T; q: Set<string>; a: Set<string> }[] = [];
+  const sim = (x: Set<string>, y: Set<string>) => { if (!x.size || !y.size) return 0; let n = 0; for (const w of x) if (y.has(w)) n++; return n / Math.min(x.size, y.size); };
+  for (const c of cards) {
+    const q = bag(c.question), a = bag(c.answer);
+    if (kept.some((k) => sim(q, k.q) > 0.8 || sim(a, k.a) > 0.6)) continue;
+    kept.push({ c, q, a });
+  }
+  return kept.map((k) => k.c);
+}
 
 function parse(raw: string) {
   const start = raw.indexOf("[");
@@ -67,7 +84,7 @@ serve(async (req) => {
     if (error || !a) return json({ error: error?.message || "not found" }, 500);
 
     const text = String(a.content).replace(/\r\n/g, "\n").replace(/!\[[^\]]*\]\([^)]*\)/g, "").slice(0, 10000);
-    const count = Math.max(12, Math.min(30, Math.round(text.length / 330)));
+    const count = Math.max(10, Math.min(22, Math.round(text.length / 450)));
     let cards: ReturnType<typeof parse> = [];
     let lastErr = "";
     for (let attempt = 0; attempt < 2 && cards.length < Math.max(8, Math.floor(count * 0.6)); attempt++) {
@@ -75,8 +92,8 @@ serve(async (req) => {
         const raw = await chatText(Deno.env.toObject(), [
           { role: "system", content: SYSTEM },
           { role: "user", content: `Write ${count} flashcards from this note.\nTITLE: ${a.title}\nSUBJECT: ${a.category}\n\n${text}` },
-        ], { temperature: 0.35, maxTokens: 4200, timeoutMs: 70000 });
-        const got = parse(raw);
+        ], { temperature: 0.35, maxTokens: 7000, timeoutMs: 70000 });
+        const got = dedupe(parse(raw));
         if (got.length > cards.length) cards = got;
       } catch (e) { lastErr = e instanceof Error ? e.message.slice(0, 120) : String(e); }
     }

@@ -237,7 +237,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
               </div>
               <div className={`${face} border-primary/30`} style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Answer</p>
-                <div style={{ zoom: scale }} className="mt-2 flex flex-1 flex-col justify-center gap-2 overflow-y-auto pr-1 text-left text-[18px] leading-relaxed text-foreground sm:text-[19px] [&_strong]:font-serif [&_strong]:text-[22px] [&_strong]:font-bold [&_strong]:text-primary [&_img]:mx-auto [&_img]:my-2 [&_img]:max-h-[40dvh] [&_img]:rounded-xl [&_li]:my-1 [&_li]:text-[17px] [&_li]:leading-snug [&_p]:text-[17px] [&_p]:leading-snug">{renderFlashcardMarkdown(card?.answer || "", ctx)}</div>
+                <div style={{ zoom: scale }} className="mt-2 flex flex-1 flex-col gap-2 overflow-y-auto pr-1 text-left [&>*:first-child]:mt-auto [&>*:last-child]:mb-auto text-[18px] leading-relaxed text-foreground sm:text-[19px] [&_strong]:font-bold [&_strong]:text-primary [&_img]:mx-auto [&_img]:my-2 [&_img]:max-h-[40dvh] [&_img]:rounded-xl [&_li]:my-1 [&_li]:text-[17px] [&_li]:leading-snug [&_p]:text-[17px] [&_p]:leading-snug">{renderFlashcardMarkdown(card?.answer || "", ctx)}</div>
               </div>
             </div>
           </div>
