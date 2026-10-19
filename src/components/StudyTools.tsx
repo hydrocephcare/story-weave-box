@@ -5,6 +5,7 @@ import { Check, ClipboardCheck, FileText, Image as ImageIcon, Layers, Loader2, X
 import { openAI } from "@/lib/aiEvents";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { generatedFlashcardPath, saveGeneratedFlashcardDeck } from "@/lib/generatedFlashcards";
+import { requestDeck } from "@/lib/myDecks";
 import { useAccess } from "@/lib/access";
 import { useAuth } from "@/hooks/useAuth";
 import { openSubscribePrompt } from "@/lib/subscribe-prompt";
@@ -41,7 +42,7 @@ async function call(mode: "cards" | "quiz" | "essays", title: string, text: stri
 }
 
 /** Three things to do with the page you are reading: turn it into flashcards for daily review, quiz yourself on it, or listen to it. */
-export default function StudyTools({ title, path, text, className = "", pictures = false }: { title: string; path: string; text: string; className?: string; pictures?: boolean }) {
+export default function StudyTools({ title, path, text, className = "", pictures = false, articleId }: { title: string; path: string; text: string; className?: string; pictures?: boolean; articleId?: string }) {
   const [busy, setBusy] = useState<"" | "cards" | "quiz" | "essays">("");
   const { hasPass } = useAccess();
   const { isAdmin } = useAuth();
@@ -67,6 +68,15 @@ export default function StudyTools({ title, path, text, className = "", pictures
     if (!allowed("cards")) return;
     setBusy("cards"); setNote(null); setReviewPath(null);
     try {
+      // a note on the site gets a real deck: the same flashcard system as every other deck (spaced repetition, synced to the account, listed under Flashcards)
+      if (articleId) {
+        const real = await requestDeck(articleId);
+        if (real) {
+          spendOne("cards");
+          if (alive.current) { setReviewPath(real); setNote({ ok: true, text: "Your flashcards for this note are ready." }); }
+          return;
+        }
+      }
       const { cards } = await call("cards", title, text);
       const deck = saveGeneratedFlashcardDeck(title, path, cards);
       spendOne("cards");

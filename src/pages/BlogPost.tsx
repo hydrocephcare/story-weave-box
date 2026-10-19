@@ -476,7 +476,7 @@ function InArticleRelated({ articles }: { articles: any[] }) {
 }
 
 /* ─── Classic magazine-style article hero ─── */
-function ClassicHero(props: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
+function ClassicHero(props: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
   return <ClassicHeroInner {...props} />;
 }
 
@@ -513,8 +513,8 @@ async function findClosestArticle(slugOrParam: string): Promise<{ id: string; ti
 
 /* ─── Classic hero: cinematic image with title + description overlaid ─── */
 function ClassicHeroInner({
-  title, image, imageHint, date, unit, shareUrl, description: rawDescription, category, summaryId, studyText, studyPath, minutes,
-}: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
+  title, image, imageHint, date, unit, shareUrl, description: rawDescription, category, summaryId, studyText, studyPath, articleId, minutes,
+}: { imageHint?: string; minutes?: number; studyText?: string; studyPath?: string; articleId?: string; summaryId?: string; title: string; image: string; date: string; unit: string; shareUrl: string; description: string; category?: string }) {
   const specificImage = image && !isGenericThumbnail(image) ? image : "";
   const topicImage = useTopicThumbnailInfo(title, category, !specificImage, imageHint || null);
   const heroImage = specificImage || topicImage?.url || "";
@@ -537,7 +537,7 @@ function ClassicHeroInner({
         <h1 id={slugify(title)} className="mt-2 scroll-mt-20 font-serif text-[2rem] font-bold leading-[1.1] tracking-tight text-foreground sm:text-[2.8rem] lg:text-[3.3rem]">{title}</h1>
         {description && <p className="mt-4 max-w-[68ch] text-[17px] leading-relaxed text-foreground/75 sm:text-xl sm:leading-relaxed">{description}</p>}
         {summaryId && <PageSummary id={summaryId} className="mt-5" />}
-        {studyText && studyText.length > 600 && studyPath && <StudyTools className="mt-5" title={title} path={studyPath} text={studyText} />}
+        {studyText && studyText.length > 600 && studyPath && <StudyTools className="mt-5" title={title} path={studyPath} text={studyText} articleId={articleId} />}
         <OutlineLine title={title} year={yearOfCategory(category)} className="mt-4 max-w-[68ch]" />
         <p className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-medium text-foreground/75">
           <span className="inline-flex items-center gap-1.5"><Check className="h-4 w-4 text-emerald-500" aria-hidden /> Updated {date}</span>
@@ -2097,6 +2097,7 @@ export default function BlogPost() {
             <ClassicHero
               minutes={Math.max(1, Math.round((article.content || "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").split(/\s+/).length / 210))}
               summaryId={article.slug ? `a:${article.slug}` : undefined}
+              articleId={article.id}
               studyPath={buildBlogPath(article)}
               studyText={(article.content || "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/<[^>]+>/g, " ").slice(0, 6000)}
               title={decodeEntities(article.title || "").replace(/^#+\s*/, "").replace(/\s+/g, " ").trim() || cleanMetaTitle(article)}
