@@ -13,6 +13,7 @@ import { buildStoryPath, updateMetaTags } from "@/lib/seo";
 import { supabase } from "@/integrations/supabase/client";
 import { getRecentArticles, type RecentArticle } from "@/lib/progress-store";
 import ContinueReading from "@/components/ContinueReading";
+import YourUnits from "@/components/YourUnits";
 import { getSubjectKey, subjectColor } from "@/components/subjectTheme";
 import { useAuth } from "@/hooks/useAuth";
 import SemesterDashboard from "@/components/SemesterDashboard";
@@ -272,9 +273,9 @@ export default function Index() {
 
       <SemesterDashboard />
 
-      <RecentlyPublished className="pt-10" limit={8} />
+      <RecentlyPublished className="pt-10" limit={8} year={homeYear ?? undefined} />
 
-      <RecentNotes />
+      {!homeYear && <RecentNotes />}
 
       {/* ── Resource tiles ── */}
       <section className="mx-auto max-w-6xl px-5 py-10 sm:py-14">
@@ -354,6 +355,8 @@ export default function Index() {
         {/* Continue reading: follows the account across devices */}
         <ContinueReading className="mb-10" />
 
+        {homeYear ? <YourUnits year={homeYear} className="mb-10" /> : (
+          <>
         {/* Browse by Year */}
         <motion.div
           variants={sectionReveal}
@@ -424,9 +427,11 @@ export default function Index() {
           )}
         </motion.div>
 
+          </>
+        )}
+
         {/* New in the student's own year (the site-wide list is the one at the top) */}
         {homeYear && <TaughtThisWeek year={homeYear} className="mb-10" />}
-        {homeYear && <RecentlyPublished className="px-0" year={homeYear} limit={6} />}
       </div>
       </section>
 

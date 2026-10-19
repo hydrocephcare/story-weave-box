@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { updateMetaTags } from "@/lib/seo";
 import { isPublicMcqSet } from "@/lib/content-policy";
 import { examUnit, examYear, shortTitle, type CatalogRow } from "@/lib/examMeta";
+import { useMyYear } from "@/hooks/useMyYear";
 
 const YEARS = [1, 2, 3, 4, 5, 6];
 
@@ -19,7 +20,9 @@ export default function McqHub() {
   const [params, setParams] = useSearchParams();
   const [rows, setRows] = useState<CatalogRow[] | null>(null);
   const [q, setQ] = useState("");
-  const year = Number(/(\d)/.exec(params.get("year") || "")?.[1]) || null;
+  const { year: myYear } = useMyYear();
+  // a student who has chosen a year sees that year's banks only; everyone else can browse any year
+  const year = myYear ?? (Number(/(\d)/.exec(params.get("year") || "")?.[1]) || null);
   const unit = params.get("unit");
 
   useEffect(() => {
@@ -65,7 +68,7 @@ export default function McqHub() {
             <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search a topic, e.g. cardiology" aria-label="Search MCQs" className="h-11 w-full rounded-xl border border-input bg-card pl-10 pr-9 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
             {q && <button type="button" onClick={() => setQ("")} aria-label="Clear" className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-1 text-muted-foreground hover:bg-muted"><X className="h-3.5 w-3.5" /></button>}
           </label>
-          <div className="mt-5 flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Year">
+          <div className={`mt-5 flex gap-2 overflow-x-auto pb-1 ${myYear ? "hidden" : ""}`} role="tablist" aria-label="Year">
             <button type="button" role="tab" aria-selected={!year} onClick={() => go({ year: null })} className={`shrink-0 rounded-full border px-4 py-1.5 text-sm font-bold ${!year ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/50"}`}>All years</button>
             {YEARS.map((y) => <button key={y} type="button" role="tab" aria-selected={year === y} onClick={() => go({ year: y })} className={`shrink-0 rounded-full border px-4 py-1.5 text-sm font-bold ${year === y ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/50"}`}>Year {y} <span className="opacity-60">{yearCount(y)}</span></button>)}
           </div>

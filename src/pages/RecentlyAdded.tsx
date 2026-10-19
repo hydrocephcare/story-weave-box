@@ -50,7 +50,7 @@ export default function RecentlyAdded() {
     return () => { on = false; };
   }, []);
 
-  const year = pick ?? urlYear ?? myYear ?? "all";
+  const year = myYear ?? pick ?? urlYear ?? "all";
   const years = useMemo(() => [...new Set((items ?? []).map((i) => yearOfCategory(i.category)).filter((y): y is number => y !== null))].sort(), [items]);
   const filtered = useMemo(() => (items ?? []).filter((i) => (type === "all" || i.kind === type) && (year === "all" || yearOfCategory(i.category) === year || yearOfCategory(i.category) === null) && (!unit || getCategoryDisplayName(i.category) === unit) && (!unreadOnly || i.kind !== "note" || !read.has(i.id))), [items, type, year, unit, unreadOnly, read]);
   const units = useMemo(() => { const m = new Map<string, number>(); for (const i of items ?? []) if (year === "all" || yearOfCategory(i.category) === year) m.set(getCategoryDisplayName(i.category), (m.get(getCategoryDisplayName(i.category)) ?? 0) + 1); return [...m.entries()].sort((a, b) => b[1] - a[1]).slice(0, 14).map(([n]) => n); }, [items, year]);
@@ -65,7 +65,7 @@ export default function RecentlyAdded() {
       <h1 className="mt-1 font-serif text-3xl font-bold sm:text-4xl">Recently added</h1>
       <p className="mt-2 max-w-xl text-sm text-muted-foreground">New notes and MCQs, newest first. It opens on your own year; switch to see the others.</p>
 
-      <div className="mt-5 flex flex-wrap gap-1.5" role="group" aria-label="Year">
+      <div className={`mt-5 flex flex-wrap gap-1.5 ${myYear ? "hidden" : ""}`} role="group" aria-label="Year">
         {years.map((y) => <button key={y} type="button" onClick={() => { setPick(y); setShown(40); }} aria-pressed={year === y} className={chip(year === y)}>Year {y}{y === myYear ? " · yours" : ""}</button>)}
         <button type="button" onClick={() => { setPick("all"); setShown(40); }} aria-pressed={year === "all"} className={chip(year === "all")}>All years</button>
       </div>

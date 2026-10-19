@@ -94,7 +94,7 @@ export default function Exams({ mode = "exam" }: { mode?: "exam" | "mcq" }) {
   }, [user]);
   const mine = profileYear;
   const yp = params.get("year");
-  const year = yp === "all" ? null : Number(/([0-9])/.exec(yp || "")?.[1]) || (yp ? null : mine);   // no choice made yet: show the learner's own year
+  const year = mine ?? (yp === "all" ? null : Number(/([0-9])/.exec(yp || "")?.[1]) || (yp ? null : mine));   // no choice made yet: show the learner's own year
 
   useEffect(() => {
     updateMetaTags(mcq
@@ -147,7 +147,7 @@ export default function Exams({ mode = "exam" }: { mode?: "exam" | "mcq" }) {
 
       <section className="border-b border-border bg-background">
         <div className="mx-auto max-w-6xl space-y-3 px-4 py-3">
-          <div className="flex items-center gap-1 overflow-x-auto pb-0.5" role="tablist" aria-label="Year">
+          <div className={`flex items-center gap-1 overflow-x-auto pb-0.5 ${mine ? "hidden" : ""}`} role="tablist" aria-label="Year">
             <button type="button" role="tab" aria-selected={!year} onClick={() => setYear(null)} className={seg(!year)}>All years</button>
             {YEARS.map((y) => (
               <button key={y} type="button" role="tab" aria-selected={year === y} onClick={() => setYear(y)} className={seg(year === y)}>

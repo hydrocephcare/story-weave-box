@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Mail, MessageCircle, Phone } from "lucide-react";
+import { useMyYear } from "@/hooks/useMyYear";
 
 const STUDY = [
   { to: "/blog", label: "Study notes" },
@@ -25,6 +26,7 @@ const COMPANY = [
 
 /** The foot of every page: who we are, where to go, what is new, how to reach us. */
 export default function SiteFooter() {
+  const { year: myYearFooter } = useMyYear();
   const location = useLocation();
   // the list of notes is loaded after the page has painted, so the footer never slows the first view
   const [recent, setRecent] = useState<{ slug: string; year: number; title: string }[]>([]);
@@ -60,14 +62,14 @@ export default function SiteFooter() {
         <nav aria-label="Study" className="order-2 lg:order-none">
           <p className={head}>Study</p>
           <ul className="mt-3">{STUDY.map((l) => <li key={l.to}><Link to={l.to} className={link}>{l.label}</Link></li>)}</ul>
-          <p className={`${head} mt-6`}>By year</p>
-          <ul className="mt-3 flex flex-wrap gap-2">{[1, 2, 3, 4, 5, 6].map((y) => <li key={y}><Link to={`/year/${y}`} className="inline-flex h-9 min-w-9 items-center justify-center rounded-lg border border-border bg-background px-2.5 text-sm font-bold text-foreground/80 hover:border-primary/60 hover:text-primary">Y{y}</Link></li>)}</ul>
+          {!myYearFooter && <p className={`${head} mt-6`}>By year</p>}
+          <ul className={`mt-3 flex flex-wrap gap-2 ${myYearFooter ? "hidden" : ""}`}>{[1, 2, 3, 4, 5, 6].map((y) => <li key={y}><Link to={`/year/${y}`} className="inline-flex h-9 min-w-9 items-center justify-center rounded-lg border border-border bg-background px-2.5 text-sm font-bold text-foreground/80 hover:border-primary/60 hover:text-primary">Y{y}</Link></li>)}</ul>
         </nav>
 
         <div className="order-4 col-span-2 lg:order-none lg:col-span-1">
           <p className={head}>Recently added</p>
           <ul className="mt-3 space-y-0.5">
-            {recent.map((n, i) => (
+            {recent.filter((n) => !myYearFooter || n.year === myYearFooter).map((n, i) => (
               <li key={n.slug} className={i >= 3 ? "hidden sm:block" : undefined}><Link to={`/notes/${n.slug}`} className="group flex items-baseline gap-2 py-1 text-[15px] leading-snug text-muted-foreground hover:text-primary"><span className="shrink-0 rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-bold text-primary">Y{n.year}</span><span className="min-w-0 truncate">{n.title}</span></Link></li>
             ))}
           </ul>
