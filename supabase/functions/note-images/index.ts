@@ -64,44 +64,55 @@ serve(async (req) => {
     if (body?.article_id) {
       const { data } = await supabase.from("articles").select("id,title,category,content").eq("id", body.article_id).maybeSingle(); a = data;
     } else {
-      const { data: tried } = await supabase.from("note_image_runs").select("article_id");
-      const skip = new Set((tried ?? []).map((t: { article_id: string }) => t.article_id));
+      // a note is left alone once it was done; one whose check could not run (the AI was busy, added = -1) is tried again after three hours
+      const { data: tried } = await supabase.from("note_image_runs").select("article_id,added,tried_at");
+      const skip = new Set((tried ?? []).filter((t: { added: number; tried_at: string }) => t.added >= 0 || Date.now() - new Date(t.tried_at).getTime() < 3 * 3600_000).map((t: { article_id: string }) => t.article_id));
       const { data: rows } = await supabase.from("articles").select("id,title,category,content").eq("published", true).is("deleted_at", null)
         .not("content", "like", "%upload.wikimedia.org%").not("title", "ilike", "%mcq%").not("title", "ilike", "%question%").not("title", "ilike", "%exam%").not("title", "ilike", "%paper%").not("title", "ilike", "%quiz%")
         .order("created_at", { ascending: false }).limit(60);
-      a = (rows ?? []).find((r: { id: string; content: string }) => !skip.has(r.id) && String(r.content).length > 3000 && (String(r.content).match(/^##\s/gm) || []).length >= 3) ?? null;
+      a = (rows ?? []).find((r: { id: string; content: string }) => !skip.has(r.id) && String(r.content).length > 3000 && (String(r.content).match(/^#{2,3}\s/gm) || []).length >= 4) ?? null;
     }
     if (!a) return json({ success: true, done: true });
 
     const lines = String(a.content).replace(/\r\n/g, "\n").split("\n");
     const head = cleanTopicTitle(a.title).split(/[:—–]/)[0].trim();
     const titleKeys = words(head);
-    const heads = lines.map((l, i) => ({ i, h: (l.match(/^##\s+(.+?)\s*$/) || [])[1] })).filter((x) => x.h && !/^(references?|summary|key points?|quick revision|further reading|questions?|mcqs?|exam|practice|take-?home)/i.test(x.h));
-    const stride = Math.max(1, Math.floor(heads.length / 4));
+    const GENERIC = new Set("definition definitions causes cause features clinical investigations investigation treatment complications prognosis prevention diagnosis history examination general principles factors other points common screening tests drugs summary introduction overview classification types management approach evaluation".split(" "));
+    // a section gets a picture only when its heading names something specific (a condition, structure, chart or sign), searched on its own
+    const heads = lines.map((l, i) => ({ i, h: ((l.match(/^#{2,4}\s+(?:\d+[.)]\s*)?(.+?)\s*$/) || [])[1] || "").replace(/\*+/g, "") }))
+      .filter((x) => x.h && x.i > 3 && !/^(references?|common exam|key points?|exam|questions?|mcqs?)/i.test(x.h))
+      .map((x) => ({ ...x, keys: words(x.h).filter((w) => !GENERIC.has(w)) })).filter((x) => x.keys.length > 0);
     const picked: { i: number; line: string; why: string }[] = [];
     const used = new Set<string>();
-    for (const sec of heads.filter((_, n) => n % stride === 0).slice(0, 5)) {
-      const secKeys = words(sec.h);
-      const q = `${head} ${sec.h}`.replace(/[^A-Za-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
-      const cands = (await commons(q)).concat(await commons(head.replace(/[^A-Za-z0-9 ]/g, " "))).filter((c, k, arr) => arr.findIndex((x) => x.url === c.url) === k && !used.has(c.url));
-      // keep a picture only if its own title/description names the note's subject AND something from the section
-      const ok = cands.filter((c) => { const hay = `${c.title} ${c.about}`.toLowerCase(); const t = titleKeys.filter((w) => hay.includes(w)).length; const s = secKeys.filter((w) => hay.includes(w)).length; return t >= 1 && (s >= 1 || titleKeys.length === 0 || t >= 2); }).slice(0, 6);
+    let aiDown = false;
+    const trace: string[] = [];
+    let tries = 0;
+    for (const sec of heads.slice(0, 16)) {
+      if (tries++ >= 12) break;
+      if (picked.length >= 5) break;
+      const secKeys = sec.keys.length > 2 ? [...sec.keys].sort((x, y) => y.length - x.length).slice(0, 2) : sec.keys; // a long heading is searched by its two most specific words
+      const q = secKeys.join(" ");
+      const cands = (await commons(q)).filter((c, k, arr) => arr.findIndex((x) => x.url === c.url) === k && !used.has(c.url));
+      // the picture's own title/description must name what the heading is about (all of its key words when there are one or two)
+      const need = secKeys.length;
+      const ok = cands.filter((c) => { const hay = `${c.title} ${c.about}`.toLowerCase(); return secKeys.filter((w) => hay.includes(w)).length >= need; }).slice(0, 6);
+      trace.push(`${sec.h}: ${cands.length} found, ${ok.length} named it`);
       if (!ok.length) continue;
       let pickIdx = -1;
       try {
-        const raw = await chatText(Deno.env.toObject(), [{ role: "user", content: `A medical study note "${a.title}" has a section "${sec.h}". Which ONE picture below is clearly and directly about the subject of that section (a diagram, chart, clinical photo or scan a student would expect to see there)? Reject anything off-topic, generic, a different condition, or doubtful. Answer ONLY with the number, or -1.\n${ok.map((c, k) => `${k}. ${c.title} — ${c.about}`).join("\n")}` }], { temperature: 0, maxTokens: 20, timeoutMs: 25000, manual: !cronOk });
-        const m = raw.match(/-?\d+/); pickIdx = m ? Number(m[0]) : -1;
-      } catch { pickIdx = -1; }
+        const raw = await chatText(Deno.env.toObject(), [{ role: "user", content: `A medical study note "${a.title}" has a section headed "${sec.h}". Which ONE picture below is clearly and directly about the subject of that section (a diagram, chart, clinical photo or scan a student would expect to see there)? Reject anything off-topic, generic, a different condition, or doubtful. Answer ONLY with the number, or -1.\n${ok.map((c, k) => `${k}. ${c.title} — ${c.about}`).join("\n")}` }], { temperature: 0, maxTokens: 20, timeoutMs: 25000, manual: !cronOk });
+        const m = raw.match(/-?\d+/); pickIdx = m ? Number(m[0]) : -1; trace.push(`  AI said ${raw.slice(0, 20)}`);
+      } catch (e) { aiDown = true; pickIdx = -1; trace.push(`  AI failed ${String(e).slice(0, 80)}`); }
       const c = ok[pickIdx]; if (!c) continue;
       used.add(c.url);
-      const cap = `${c.about || c.title} (${c.credit}, ${c.licence}, Wikimedia Commons)`.replace(/[\[\]()\n]/g, " ").replace(/\s+/g, " ").slice(0, 200);
-      picked.push({ i: sec.i, line: `![${cap}](${c.url})`, why: c.title });
+      const cap = `${c.title}  · ${c.credit}, ${c.licence}, Wikimedia Commons`.replace(/[\[\]()\n]/g, " ").replace(/\s+/g, " ").slice(0, 200);
+      picked.push({ i: sec.i, line: `![${cap}](${c.url.split("?")[0]})`, why: c.title });
     }
     let added = 0;
     for (const p of picked.sort((x, y) => y.i - x.i)) if (insertAfterFirstPara(lines, p.i, p.line)) added++;
     if (added) await supabase.from("articles").update({ content: lines.join("\n") }).eq("id", a.id);
-    await supabase.from("note_image_runs").upsert({ article_id: a.id, added, tried_at: new Date().toISOString() });
-    return json({ success: true, title: a.title, added, pictures: picked.map((p) => p.why) });
+    await supabase.from("note_image_runs").upsert({ article_id: a.id, added: added === 0 && aiDown ? -1 : added, tried_at: new Date().toISOString() });
+    return json({ success: true, title: a.title, added, pictures: picked.map((p) => p.why), trace });
   } catch (e) {
     return json({ error: e instanceof Error ? e.message : "Unknown error" }, 500);
   }
