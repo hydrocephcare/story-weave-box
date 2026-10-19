@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Flame, Star, Undo2 } from "lucide-react";
-import { DAILY_GOAL, doneToday, recordReview, starredKeys, streak, toggleStar } from "@/lib/deckStats";
+import { ArrowLeft, EyeOff, Flame, Star, Type, Undo2, Volume2 } from "lucide-react";
+import { DAILY_GOAL, bury, buriedKeys, doneToday, getScale, recordReview, setScale, speak, starredKeys, streak, toggleStar } from "@/lib/deckStats";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { setProgress } from "@/lib/study";
@@ -44,6 +44,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
   const [all, setAll] = useState(false);
   const [mcq, setMcq] = useState<string | null>(null);
   const [noMore, setNoMore] = useState(false);
+  const [scale, setScaleState] = useState(() => getScale());
   const [stars, setStars] = useState<Set<string>>(() => starredKeys());
   const drag = useRef<{ x: number; y: number; t: number; active: boolean; horiz: boolean | null }>({ x: 0, y: 0, t: 0, active: false, horiz: null });
 
@@ -55,7 +56,8 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
       setStates(m);
       const cs = base;
       const key = (ci: number) => cardKey(cs[ci].setId, cs[ci].idx);
-      const idxs = cs.map((_, i) => i);
+      const hid = buriedKeys();
+      const idxs = cs.map((_, i) => i).filter((i) => !hid.has(cardKey(cs[i].setId, cs[i].idx)));
       const due = idxs.filter((i) => isDue(m[key(i)])).sort((a, b) => m[key(a)].due - m[key(b)].due);
       const fresh = idxs.filter((i) => !m[key(i)]);
       const q = mode === "today" || !all ? [...due, ...fresh] : idxs;
@@ -118,6 +120,8 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
     setAdding(false);
   }, [states, adding, category]);
 
+  const hide = useCallback(() => { if (!card || !queue) return; bury(cardKey(card.setId, card.idx)); setQueue(queue.slice(1)); }, [card, queue]);
+
   const skip = useCallback(() => { if (!queue || queue.length < 2) return; setLeaving(true); window.setTimeout(() => { setQueue((q) => (q ? [...q.slice(1), q[0]] : q)); setLeaving(false); setDx(0); }, 160); }, [queue]);
 
   useEffect(() => {
@@ -162,6 +166,11 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
     if (!d.horiz && Date.now() - d.t < 400 && Math.abs(mx) < 8) setFlipped((f) => !f);
   };
 
+  const counts = useMemo(() => {
+    let n = 0, l = 0, d = 0;
+    for (const i of queue ?? []) { const x = states?.[cardKey(cards[i].setId, cards[i].idx)]; if (!x) n++; else if (x.reps === 0) l++; else d++; }
+    return { n, l, d };
+  }, [queue, states, cards]);
   const name = mode === "today" ? "Today's flashcards" : topicName(title);
   const nextDue = useMemo(() => {
     if (!states) return null;
@@ -178,7 +187,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
         <p className="truncate text-xs text-muted-foreground">{mode === "today" ? "Due cards and a few new ones" : `${category.replace(/^Year\s*\d\s*:\s*/i, "")} · ${cards.length} cards`}</p>
       </div>
       {streak() > 0 && <span className="inline-flex items-center gap-1 text-sm font-bold text-orange-500" title="Days in a row"><Flame className="h-4 w-4" aria-hidden />{streak()}</span>}
-      <span className="text-sm font-bold tabular-nums text-muted-foreground">{queue ? `${queue.length} left` : ""}</span>
+      <span className="flex items-center gap-2 text-sm font-bold tabular-nums" title="New · Learning · To review"><span className="text-sky-500">{counts.n}</span><span className="text-rose-500">{counts.l}</span><span className="text-emerald-600">{counts.d}</span></span>
       <button type="button" onClick={undo} disabled={!history.length} aria-label="Undo the last answer" className="rounded-full p-2 text-muted-foreground hover:bg-muted hover:text-foreground disabled:opacity-30"><Undo2 className="h-4 w-4" /></button>
     </div>
   );
@@ -218,23 +227,28 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
     <div className="flex min-h-[calc(100dvh-9rem)] flex-col">
       {header}{bar}
       <div className="relative mt-3 flex flex-1 items-stretch justify-center" style={{ minHeight: "min(58dvh, 30rem)" }}>
-        <div className="w-full max-w-md select-none" style={{ perspective: "1400px" }}>
+        <div className="w-full max-w-md select-none sm:max-w-xl" style={{ perspective: "1400px" }}>
           <div className="relative h-full min-h-[min(58dvh,30rem)] w-full cursor-pointer" style={style} onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp} role="button" tabIndex={0} aria-label={flipped ? "Answer. Tap to see the question." : "Question. Tap to see the answer."}>
             <div className="absolute inset-0 transition-transform duration-500 [transform-style:preserve-3d]" style={{ transform: flipped ? "rotateY(180deg)" : "none" }}>
               <div className={face} style={{ backfaceVisibility: "hidden" }}>
                 <div className="flex items-center justify-between"><p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Question · {learningNote}</p>{card && <button type="button" aria-label={stars.has(cardKey(card.setId, card.idx)) ? "Remove star" : "Star this card to revise it again"} onPointerDown={(e) => e.stopPropagation()} onPointerUp={(e) => e.stopPropagation()} onClick={(e) => { e.stopPropagation(); const k = cardKey(card.setId, card.idx); toggleStar(k); setStars(starredKeys()); }} className="-mr-1 rounded-full p-1.5"><Star className={`h-5 w-5 ${stars.has(cardKey(card.setId, card.idx)) ? "fill-amber-400 text-amber-400" : "text-muted-foreground"}`} /></button>}</div>
-                <div className="flex flex-1 flex-col items-center justify-center gap-3 overflow-y-auto py-4 text-center font-serif text-[26px] font-semibold leading-snug text-foreground sm:text-[28px] [&_img]:mx-auto [&_img]:max-h-[40dvh] [&_img]:rounded-xl [&_p]:text-center [&_p]:leading-snug">{renderFlashcardMarkdown(card?.question || "", ctx)}</div>
-                <p className="text-center text-xs text-muted-foreground">Tap to flip · swipe left to skip · swipe right to undo</p>
+                <div style={{ zoom: scale }} className="flex flex-1 flex-col items-center justify-center gap-3 overflow-y-auto py-4 text-center font-serif text-[26px] font-semibold leading-snug text-foreground sm:text-[28px] [&_img]:mx-auto [&_img]:max-h-[40dvh] [&_img]:rounded-xl [&_p]:text-center [&_p]:leading-snug">{renderFlashcardMarkdown(card?.question || "", ctx)}</div>
+                <p className="text-center text-xs text-muted-foreground">Tap to flip · swipe left to skip · swipe right to undo · keys 1–4 rate</p>
               </div>
               <div className={`${face} border-primary/30`} style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Answer</p>
-                <div className="mt-2 flex flex-1 flex-col justify-center gap-2 overflow-y-auto pr-1 text-left text-[18px] leading-relaxed text-foreground sm:text-[19px] [&_strong]:font-serif [&_strong]:text-[22px] [&_strong]:font-bold [&_strong]:text-primary [&_img]:mx-auto [&_img]:my-2 [&_img]:max-h-[40dvh] [&_img]:rounded-xl [&_li]:my-1 [&_li]:text-[17px] [&_li]:leading-snug [&_p]:text-[17px] [&_p]:leading-snug">{renderFlashcardMarkdown(card?.answer || "", ctx)}</div>
+                <div style={{ zoom: scale }} className="mt-2 flex flex-1 flex-col justify-center gap-2 overflow-y-auto pr-1 text-left text-[18px] leading-relaxed text-foreground sm:text-[19px] [&_strong]:font-serif [&_strong]:text-[22px] [&_strong]:font-bold [&_strong]:text-primary [&_img]:mx-auto [&_img]:my-2 [&_img]:max-h-[40dvh] [&_img]:rounded-xl [&_li]:my-1 [&_li]:text-[17px] [&_li]:leading-snug [&_p]:text-[17px] [&_p]:leading-snug">{renderFlashcardMarkdown(card?.answer || "", ctx)}</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-4 w-full max-w-md pb-2">
+      <div className="mx-auto mt-2 flex w-full max-w-md sm:max-w-xl items-center justify-center gap-1 text-muted-foreground">
+        <button type="button" onClick={() => speak(flipped ? card?.answer || "" : card?.question || "")} aria-label="Read aloud" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><Volume2 className="h-4 w-4" /></button>
+        <button type="button" onClick={() => { const n = scale >= 1.3 ? 0.9 : scale >= 1.1 ? 1.3 : 1.15; setScale(n); setScaleState(n); }} aria-label="Change text size" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><Type className="h-4 w-4" /></button>
+        <button type="button" onClick={hide} aria-label="Never show this card again" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><EyeOff className="h-4 w-4" /></button>
+      </div>
+      <div className="sticky bottom-0 z-10 mx-auto mt-2 w-full max-w-md sm:max-w-xl bg-background/95 pb-3 pt-1 backdrop-blur">
         {!flipped ? (
           <button type="button" onClick={() => setFlipped(true)} className="w-full rounded-full bg-primary py-4 text-base font-bold text-primary-foreground">Show answer</button>
         ) : (

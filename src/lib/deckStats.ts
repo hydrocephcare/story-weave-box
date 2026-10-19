@@ -23,3 +23,11 @@ export function toggleStar(key: string): boolean {
   const s = starredKeys(); const on = !s.has(key); if (on) s.add(key); else s.delete(key);
   write("deck-stars", [...s]); return on;
 }
+
+export const buriedKeys = () => new Set(read<string[]>("deck-buried", []));
+export function bury(key: string) { const s = buriedKeys(); s.add(key); write("deck-buried", [...s]); }
+export const getScale = () => read<number>("deck-scale", 1);
+export const setScale = (n: number) => write("deck-scale", n);
+export function speak(text: string) {
+  try { const u = new SpeechSynthesisUtterance(text.replace(/[*_#>`!\[\]()-]/g, " ").replace(/\s+/g, " ")); u.lang = "en-GB"; u.rate = 0.95; window.speechSynthesis.cancel(); window.speechSynthesis.speak(u); } catch { /* no speech */ }
+}
