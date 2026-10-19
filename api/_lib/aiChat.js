@@ -7,7 +7,8 @@ const dead = new Map(); // key+model -> until
 const isDead = (id) => (dead.get(id) ?? 0) > Date.now();
 const kill = (id, ms = 45_000) => dead.set(id, Date.now() + ms);
 
-const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
+// the last key is the one kept for manual use: people waiting on an answer here try it first, and the scheduled jobs never use it
+const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))].reverse();
 
 const PERSONA = `You are Ompath AI, the study assistant of Ompath Study, a medical study site used by medical and clinical students in many countries, including low-resource hospitals.
 How you answer:

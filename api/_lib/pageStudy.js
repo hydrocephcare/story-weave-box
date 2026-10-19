@@ -7,10 +7,12 @@ const LIMIT = 40; // per visitor per hour (best effort)
 
 const RULES = `Use only what the page says plus standard textbook medicine. No drug doses, no brand names. Plain words for a medical student.`;
 const PROMPTS = {
-  cards: (title, text) => `Create 12 high-yield medical flashcards from this study page: "${title}".
+  cards: (title, text) => `Create 14 high-yield medical flashcards from this study page: "${title}".
 ${RULES}
-Use concise questions but give useful, multi-point answers (usually 2–5 short sentences, up to 90 words when needed). Do not reduce every answer to a one-line definition. The back should explain the clinically important facts and relationships, not just name one fact.
-For a disease or clinical condition, cover the applicable areas across the deck: definition/classification; causes and risk factors; pathophysiology (show cause → mechanism → effect); clinical features and red flags; differential diagnoses; investigations and interpretation; management priorities; relevant pharmacology (drug class, mechanism, indications, major cautions/adverse effects; no doses); complications/prognosis; prevention or follow-up. Use separate cards for distinct areas rather than cramming everything onto one card. Adapt the areas to the topic: for a drug, focus on class, mechanism, uses, contraindications, adverse effects and monitoring; for anatomy/physiology, focus on structure, function, mechanisms and clinical correlations; for a symptom, focus on causes, approach, red flags, differential and work-up. Keep all cards grounded in the page plus standard textbook medicine, avoid invented specifics, and do not force irrelevant headings.
+Each card summarises ONE angle of a subject, so the answer is never one sentence, but the WHOLE answer must fit on a phone card with no scrolling: 35 to 60 words.
+Answer format: line 1 is the direct answer in bold (**like this**); then 3 to 4 short lines starting with "- ", labelled where useful (Pathology:, Physiology:, Pharmacology:, Bedside:, Ward round:) that EXPLAIN why and how; the last line starts "Related: " and names 1 to 3 connected facts.
+Angles, in teaching order (use only those the page supports; for several conditions or drugs repeat them for each): definition and why it matters; risk factors and causes; pathophysiology and pathology (cause, mechanism, effect); clinical features and red flags; classification or severity; investigations and what they show; differentials; management and pharmacology (class and why, no doses); complications; ward-round points (examine, monitor, position, review, escalate, discharge advice); prognosis and prevention. For a drug: class, mechanism, uses, adverse effects, cautions, monitoring.
+NO REPETITION: each fact appears in exactly one card; a later card may only mention an earlier idea in its Related line. Questions must name the subject and ask for one angle. Stay grounded in the page plus standard textbook medicine; never invent specifics.
 Return ONLY JSON: {"cards":[{"q":"...","a":"..."}]}
 
 PAGE:
@@ -54,6 +56,17 @@ export default async function handler(req, res) {
   hits.set(ip, [...mine, now]); if (hits.size > 5000) hits.clear();
 
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
+  if (body.mode === "spell") {
+    // a misspelt medical term: the correctly spelt terms the student most likely meant
+    const typed = String(body.query ?? "").replace(/[^A-Za-z0-9 -',./]/g, " ").trim().slice(0, 80);
+    if (typed.length < 3) return res.status(200).json({ suggestions: [] });
+    try {
+      const { text: out } = await ask(`A medical student typed this into a search box and may have misspelt it: "${typed}". Give up to 5 correctly spelt medical terms (diseases, drugs, anatomy, procedures, signs) it most likely means, most likely first. If it is not medical or you cannot tell, return an empty list. Return ONLY JSON: {"suggestions":["..."]}`, env, 300);
+      const j = JSON.parse(out.match(/{[sS]*}/)[0]);
+      const list = (Array.isArray(j.suggestions) ? j.suggestions : []).map((x) => String(x).trim()).filter((x) => /^[A-Za-z][A-Za-z0-9 '-,./()]{2,60}$/.test(x)).slice(0, 5);
+      return res.status(200).json({ suggestions: list });
+    } catch { return res.status(200).json({ suggestions: [] }); }
+  }
   const mode = body.mode === "quiz" ? "quiz" : body.mode === "essays" ? "essays" : "cards";
   const title = String(body.title ?? "").slice(0, 140);
   const text = String(body.text ?? "").replace(/\s+/g, " ").trim().slice(0, 5500);

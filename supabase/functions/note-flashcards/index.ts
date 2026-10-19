@@ -98,7 +98,7 @@ serve(async (req) => {
         const raw = await chatText(Deno.env.toObject(), [
           { role: "system", content: SYSTEM },
           { role: "user", content: `Write ${count} flashcards from this note.\nTITLE: ${a.title}\nSUBJECT: ${a.category}\n\n${text}` },
-        ], { temperature: 0.35, maxTokens: 7000, timeoutMs: 70000 });
+        ], { temperature: 0.35, maxTokens: 7000, timeoutMs: 70000, manual: !cronOk });
         const got = dedupe(parse(raw));
         if (got.length > cards.length) cards = got;
       } catch (e) { lastErr = e instanceof Error ? e.message.slice(0, 120) : String(e); }

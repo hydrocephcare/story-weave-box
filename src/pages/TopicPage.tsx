@@ -28,6 +28,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { buildBlogPath } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { openAI } from "@/lib/aiEvents";
+import DidYouMean from "@/components/DidYouMean";
 
 const SITE = "https://www.ompathstudy.com";
 const anchor = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -496,7 +497,7 @@ export default function TopicPage() {
       <main className="mx-auto max-w-xl px-5 py-16">
         <Helmet><title>{name} | Ompath Study</title><meta name="robots" content="noindex" /></Helmet>
         {phase === "writing" && <Writing name={name} />}
-        {phase === "rejected" && <div className="text-center"><h1 className="font-serif text-2xl font-bold">“{name}” is not on Ompath Study</h1><p className="mt-2 text-sm text-muted-foreground">We only cover medicine and health: diseases, anatomy, physiology, pathology, microbiology, pharmacology, and reproductive and public health.</p></div>}
+        {phase === "rejected" && <div className="text-center"><h1 className="font-serif text-2xl font-bold">“{name}” is not on Ompath Study</h1><p className="mt-2 text-sm text-muted-foreground">We only cover medicine and health: diseases, anatomy, physiology, pathology, microbiology, pharmacology, and reproductive and public health.</p><DidYouMean query={name} className="mt-6 text-left" /></div>}
         {(phase === "failed" || phase === "unavailable" || phase === "missing") && (
           <div className="text-center">
             <h1 className="font-serif text-2xl font-bold">We could not build the page on “{name}” just now</h1>
@@ -504,6 +505,7 @@ export default function TopicPage() {
             <button type="button" onClick={retry} className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground"><RefreshCw className="h-4 w-4" /> Try again</button>
           </div>
         )}
+        {(phase === "failed" || phase === "unavailable" || phase === "missing") && <DidYouMean query={name} className="mt-8 text-left" />}
         {(phase === "failed" || phase === "unavailable" || phase === "missing") && <NotesAbout name={name} />}
         <p className="mt-6 flex justify-center gap-2"><Link to={`/search?q=${encodeURIComponent(name)}`} className="rounded-lg border border-border px-4 py-2 text-sm font-bold">Search for “{name}”</Link><Link to="/topics" className="rounded-lg border border-border px-4 py-2 text-sm font-bold">All topics</Link></p>
       </main>

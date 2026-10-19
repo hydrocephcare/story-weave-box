@@ -6,6 +6,7 @@ import { Search, Shuffle, X } from "lucide-react";
 import { recentTopics, slugFromName, topicPath, useTopicIndex, type TopicIndexItem } from "@/lib/topics";
 import { cn } from "@/lib/utils";
 
+import DidYouMean from "@/components/DidYouMean";
 const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const POPULAR = ["Hypertension", "Diabetes mellitus", "Pneumonia", "Heart failure", "Tuberculosis", "Malaria", "Asthma", "Anaemia"];
 const letterOf = (n: string) => { const c = n.trim().charAt(0).toUpperCase(); return /[A-Z]/.test(c) ? c : "#"; };
@@ -158,7 +159,8 @@ export default function TopicsIndex() {
         {items && list.length === 0 && (
           <div className="mt-10 max-w-xl">
             <p className="font-serif text-2xl font-bold">Looking for “{q}”?</p>
-            <p className="mt-2 text-base text-muted-foreground">Open its page to read the overview, causes, tests and management, or search the notes for it.</p>
+            <DidYouMean query={q} className="mt-4" />
+            <p className="mt-4 text-base text-muted-foreground">Open its page to read the overview, causes, tests and management, or search the notes for it.</p>
             <div className="mt-5 flex flex-wrap gap-3">
               {slugFromName(q).length >= 3 && <Link to={topicPath(slugFromName(q))} className="rounded-full bg-primary px-6 py-3 text-base font-bold text-primary-foreground">Open the page on {q}</Link>}
               <Link to={`/search?q=${encodeURIComponent(q)}`} className="rounded-full border border-border px-6 py-3 text-base font-bold hover:border-primary/60">Search the whole site</Link>

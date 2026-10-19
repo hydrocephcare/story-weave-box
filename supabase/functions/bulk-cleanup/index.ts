@@ -590,7 +590,7 @@ Allowed categories:\n${allowedCategories}`,
 
   // the project's own Gemini / Groq keys (the Lovable AI gateway no longer exists)
   try {
-    const content = await chatText(Deno.env.toObject(), messages, { temperature: 0.1, maxTokens: 8000, timeoutMs: 25000 });
+    const content = await chatText(Deno.env.toObject(), messages, { temperature: 0.1, maxTokens: 8000, timeoutMs: 25000, manual: true });
     return extractFirstJsonObject(content);
   } catch (e: any) {
     console.log("AI unavailable:", e?.message || String(e));

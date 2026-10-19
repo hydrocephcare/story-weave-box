@@ -7,8 +7,14 @@ const cooldown = new Map();
 const GEMINI_MODELS = ["gemini-3.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash", "gemini-2.5-flash-lite"];
 const GROQ_MODELS = ["openai/gpt-oss-120b", "qwen/qwen3.8-27b", "openai/gpt-oss-20b"];
 
-export async function chatText(env, messages, { temperature = 0.1, maxTokens = 8000, timeoutMs = 25000 } = {}) {
-  const gem = list(env.GEMINI_API_KEYS || env.GEMINI_API_KEY), groq = list(env.GROQ_API_KEYS || env.GROQ_API_KEY);
+/**
+ * The LAST key of each provider is kept for manual use (an admin or a reader pressing a button). Scheduled jobs (the default) never touch it, so a busy
+ * schedule cannot use up the key a person is waiting on. A manual call tries that key first and then the others. With a single key there is nothing to hold back.
+ */
+const split = (keys, manual) => (keys.length < 2 ? keys : manual ? [keys[keys.length - 1], ...keys.slice(0, -1)] : keys.slice(0, -1));
+
+export async function chatText(env, messages, { temperature = 0.1, maxTokens = 8000, timeoutMs = 25000, manual = false } = {}) {
+  const gem = split(list(env.GEMINI_API_KEYS || env.GEMINI_API_KEY), manual), groq = split(list(env.GROQ_API_KEYS || env.GROQ_API_KEY), manual);
   // Gemini and Groq take turns at being first (so Groq's separate free allowance is used and Gemini's lasts longer); inside a provider the keys and models
   // rotate. A model that just said "quota used up" or "does not exist" is skipped for a while instead of being asked again on every call.
   const entries = (keys, url, models) => keys.flatMap((key, ki) => models.map((model) => ({ url, key, model, id: model + ":" + ki })));
