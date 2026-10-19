@@ -7,9 +7,10 @@ const LIMIT = 40; // per visitor per hour (best effort)
 
 const RULES = `Use only what the page says plus standard textbook medicine. No drug doses, no brand names. Plain words for a medical student.`;
 const PROMPTS = {
-  cards: (title, text) => `Make 8 flashcards from this study page: "${title}".
+  cards: (title, text) => `Create 12 high-yield medical flashcards from this study page: "${title}".
 ${RULES}
-Each card tests one fact or one piece of reasoning. The question is short; the answer is one or two short sentences (under 35 words).
+Use concise questions but give useful, multi-point answers (usually 2–5 short sentences, up to 90 words when needed). Do not reduce every answer to a one-line definition. The back should explain the clinically important facts and relationships, not just name one fact.
+For a disease or clinical condition, cover the applicable areas across the deck: definition/classification; causes and risk factors; pathophysiology (show cause → mechanism → effect); clinical features and red flags; differential diagnoses; investigations and interpretation; management priorities; relevant pharmacology (drug class, mechanism, indications, major cautions/adverse effects; no doses); complications/prognosis; prevention or follow-up. Use separate cards for distinct areas rather than cramming everything onto one card. Adapt the areas to the topic: for a drug, focus on class, mechanism, uses, contraindications, adverse effects and monitoring; for anatomy/physiology, focus on structure, function, mechanisms and clinical correlations; for a symptom, focus on causes, approach, red flags, differential and work-up. Keep all cards grounded in the page plus standard textbook medicine, avoid invented specifics, and do not force irrelevant headings.
 Return ONLY JSON: {"cards":[{"q":"...","a":"..."}]}
 
 PAGE:
@@ -58,10 +59,10 @@ export default async function handler(req, res) {
   const text = String(body.text ?? "").replace(/\s+/g, " ").trim().slice(0, 5500);
   if (text.length < 200) return res.status(400).json({ error: "There is not enough text on this page yet." });
   try {
-    const { text: out } = await ask(PROMPTS[mode](title, text), env, mode === "essays" ? 3400 : 1800);
+    const { text: out } = await ask(PROMPTS[mode](title, text), env, mode === "essays" ? 3400 : mode === "cards" ? 3600 : 1800);
     const j = JSON.parse(out.match(/\{[\s\S]*\}/)[0]);
     if (mode === "cards") {
-      const cards = (Array.isArray(j.cards) ? j.cards : []).map((c) => ({ q: String(c?.q ?? "").trim().slice(0, 220), a: String(c?.a ?? "").trim().slice(0, 320) })).filter((c) => c.q.length > 8 && c.a.length > 4).slice(0, 10);
+      const cards = (Array.isArray(j.cards) ? j.cards : []).map((c) => ({ q: String(c?.q ?? "").trim().slice(0, 220), a: String(c?.a ?? "").trim().slice(0, 900) })).filter((c) => c.q.length > 8 && c.a.length > 4).slice(0, 16);
       if (cards.length < 3) throw new Error("few");
       return res.status(200).json({ cards });
     }
