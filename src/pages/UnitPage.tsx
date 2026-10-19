@@ -18,6 +18,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "@/hooks/use-toast";
 import { getCourseOutlineForUnit } from "@/data/courseOutlines";
 import Year4CurriculumNotes from "@/components/Year4CurriculumNotes";
+import ReadingBall from "@/components/ReadingBall";
 
 const TABS = ["Overview", "Syllabus", "Notes", "Questions", "CATs", "Past Papers", "Flashcards", "Exams"] as const;
 
@@ -52,6 +53,7 @@ export default function UnitPage() {
   const { yearNumber, unitSlug } = useParams();
   const year = Number(yearNumber);
   const { user } = useAuth();
+  const [tab, setTab] = useState<string>("Overview");
   const [unit, setUnit] = useState<Unit | null>(null);
   const [topics, setTopics] = useState<SyllabusTopic[]>([]);
   const [resources, setResources] = useState<UnitResource[]>([]);
@@ -172,6 +174,7 @@ export default function UnitPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-5 py-8 sm:py-10">
+      <ReadingBall scope={`${unit.name} · Year ${year}`} notes={notes.map((r) => ({ id: r.id, title: r.title, to: resourcePath(r) }))} />
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -244,7 +247,7 @@ export default function UnitPage() {
         )}
       </header>
 
-      <Tabs defaultValue="Overview" className="mt-6">
+      <Tabs value={tab} onValueChange={setTab} className="mt-6">
         <TabsList className="flex h-auto w-full flex-wrap justify-start gap-1">
           {TABS.map((t) => (
             <TabsTrigger key={t} value={t} className="min-h-[40px] text-xs sm:text-sm">{t}</TabsTrigger>
@@ -279,6 +282,26 @@ export default function UnitPage() {
               <p className="mt-2 whitespace-pre-line text-sm text-muted-foreground">{unit.exam_information}</p>
             </section>
           )}
+
+          {([
+            ["Question banks", byType["MCQ Bank"] || [], "Questions"],
+            ["Flashcards", byType["Flashcards"] || [], "Flashcards"],
+            ["Timed exams", byType["Timed Exam"] || [], "Exams"],
+            ["Past papers", byType["Past Paper"] || [], "Past Papers"],
+            ["CATs", byType["CAT"] || [], "CATs"],
+          ] as [string, UnitResource[], string][]).filter(([, list]) => list.length > 0).map(([label, list, target]) => (
+            <section key={label} aria-label={label}>
+              <div className="flex items-baseline justify-between gap-3">
+                <h2 className="font-serif text-lg font-bold text-foreground">{label} <span className="text-sm font-semibold text-muted-foreground">· {list.length}</span></h2>
+                <button type="button" onClick={() => { setTab(target); window.scrollTo({ top: 0, behavior: "smooth" }); }} className="text-xs font-bold text-primary hover:underline">See all {list.length} →</button>
+              </div>
+              <ul className="mt-1 divide-y divide-border border-y border-border">
+                {[...list].sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: "base", numeric: true })).slice(0, 6).map((r) => (
+                  <li key={`${r.kind}-${r.id}`}><Link to={resourcePath(r)} className="flex items-center justify-between gap-3 py-2.5 text-[15px] font-medium text-foreground hover:text-primary"><span className="min-w-0 truncate">{r.title.replace(/\s*[:—–-]?\s*(MCQs?|Flashcards)$/i, "")}</span><span className="shrink-0 text-xs text-primary/70">Open →</span></Link></li>
+                ))}
+              </ul>
+            </section>
+          ))}
 
           <section className="rounded-2xl border border-border bg-card p-5">
             <h2 className="font-serif text-lg font-bold text-foreground">Recommended study order</h2>
