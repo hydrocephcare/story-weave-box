@@ -1415,10 +1415,23 @@ export default function BlogPost() {
     if (!article?.id) return;
     const id = article.id;
     void trackNoteOpen(trailUserId, { id, title: article.title, category: article.category || "" });
-    let last = 0, timer = 0;
+    let last = 0, timer = 0, sec = 0, lastTouch = Date.now(), tick = 0;
+    const words = String(article.content || "").split(/\s+/).length;
+    // a proper read takes about a third of the note's reading time at least (never less than 40 seconds, never more than 8 minutes)
+    const needSec = Math.max(40, Math.min(480, Math.round((words / 230) * 60 * 0.33)));
+    const touch = () => { lastTouch = Date.now(); };
     const fraction = () => { const max = document.documentElement.scrollHeight - window.innerHeight; return max > 400 ? window.scrollY / max : 0; };
-    const save = () => { const f = fraction(); if (Math.abs(f - last) >= 0.03) { last = f; void saveNotePosition(trailUserId, id, f); } };
-    const onScroll = () => { window.clearTimeout(timer); timer = window.setTimeout(save, 2500); };
+    const save = () => {
+      const f = fraction();
+      if (Math.abs(f - last) >= 0.03 || f >= 0.9) {
+        last = f;
+        void saveNotePosition(trailUserId, id, f, sec, needSec).then((became) => { if (became) { window.dispatchEvent(new CustomEvent("ompath:note-read", { detail: { id, title: article.title } })); } });
+      }
+    };
+    const onScroll = () => { touch(); window.clearTimeout(timer); timer = window.setTimeout(save, 2500); };
+    // seconds of real attention: the tab is open and the reader moved, touched or typed in the last 25 seconds
+    tick = window.setInterval(() => { if (document.visibilityState === "visible" && Date.now() - lastTouch < 25000) { sec += 1; if (sec % 20 === 0) save(); } }, 1000);
+    window.addEventListener("touchstart", touch, { passive: true }); window.addEventListener("pointerdown", touch, { passive: true }); window.addEventListener("keydown", touch);
     const onHide = () => { if (document.visibilityState === "hidden") save(); };
     window.addEventListener("scroll", onScroll, { passive: true });
     document.addEventListener("visibilitychange", onHide);
@@ -1431,7 +1444,7 @@ export default function BlogPost() {
       window.setTimeout(() => { const max = document.documentElement.scrollHeight - window.innerHeight; window.scrollTo({ top: max * at, behavior: "auto" }); last = at; }, 150);
     };
     if (at > 0.02) { window.addEventListener("ompath:note-ready", resume, { once: true }); go = window.setTimeout(resume, 2500); }
-    return () => { save(); window.clearTimeout(timer); window.clearTimeout(go); window.removeEventListener("scroll", onScroll); document.removeEventListener("visibilitychange", onHide); window.removeEventListener("pagehide", save); window.removeEventListener("ompath:note-ready", resume); };
+    return () => { save(); window.clearTimeout(timer); window.clearInterval(tick); window.removeEventListener("touchstart", touch); window.removeEventListener("pointerdown", touch); window.removeEventListener("keydown", touch); window.clearTimeout(go); window.removeEventListener("scroll", onScroll); document.removeEventListener("visibilitychange", onHide); window.removeEventListener("pagehide", save); window.removeEventListener("ompath:note-ready", resume); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [article?.id, trailUserId]);
 

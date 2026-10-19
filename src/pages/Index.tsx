@@ -14,6 +14,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { getRecentArticles, type RecentArticle } from "@/lib/progress-store";
 import ContinueReading from "@/components/ContinueReading";
 import YourUnits from "@/components/YourUnits";
+import MyDecksCard from "@/components/MyDecksCard";
 import { getSubjectKey, subjectColor } from "@/components/subjectTheme";
 import { useAuth } from "@/hooks/useAuth";
 import SemesterDashboard from "@/components/SemesterDashboard";
@@ -354,6 +355,7 @@ export default function Index() {
       <div className="mx-auto max-w-6xl px-5 py-10 sm:py-14">
         {/* Continue reading: follows the account across devices */}
         <ContinueReading className="mb-10" />
+        <MyDecksCard className="mb-10" />
 
         {homeYear ? <YourUnits year={homeYear} className="mb-10" /> : (
           <>

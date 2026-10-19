@@ -3,6 +3,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { chatText } from "../_shared/aiChat.js";
+import { cleanTopicTitle } from "../_shared/topicTitle.js";
 
 const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-cron-key" };
 const json = (o: unknown, status = 200) => new Response(JSON.stringify(o), { status, headers: { ...cors, "Content-Type": "application/json" } });
@@ -102,11 +103,11 @@ serve(async (req) => {
         await supabase.from("mcq_sets").insert({ title: `${a.title} (questions pending)`, category: a.category, questions: [], published: false, source_reference: a.id, source_type: "note_generated", original_notes: JSON.stringify({ failed: lastErr || "too few usable questions", at: new Date().toISOString() }) });
         return json({ success: true, title: a.title, status: "skipped", why: lastErr || `only ${questions.length} usable` });
       }
-      const title = `${String(a.title).slice(0, 80)}: MCQs`;
+      const title = `${cleanTopicTitle(a.title)}: MCQs`;
       const slug = `${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70)}-${String(a.id).replace(/-/g, "").slice(0, 8)}`;
       const { error: insErr } = await supabase.from("mcq_sets").insert({
         title, slug, category: a.category, questions, published: true, source_reference: a.id, source_type: "note_generated",
-        meta_description: `${questions.length} practice MCQs with explanations on ${String(a.title).slice(0, 70)}, written from the Ompath Study notes.`,
+        meta_description: `${questions.length} practice MCQs with explanations on ${cleanTopicTitle(a.title)}, written from the Ompath Study notes.`,
         original_notes: JSON.stringify({ type: "note_mcqs", article_id: a.id, generated_at: new Date().toISOString(), topped: questions.length >= 24 }),
       });
       if (insErr) return json({ error: insErr.message }, 500);

@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { getRecentArticles, markArticleVisited, type RecentArticle } from "@/lib/progress-store";
 
 const db = supabase as unknown as { from: (t: string) => any };
-const POS_KEY = "progress:positions";   // note id -> { at: 0..1, t: ms }
+const POS_KEY = "progress:positions";   // note id -> { at: 0..1, t: ms, sec: seconds really spent reading, done: read properly }
 
 export interface TrailItem {
   id: string;
@@ -17,10 +17,11 @@ export interface TrailItem {
   done: boolean;
 }
 
-function readPositions(): Record<string, { at: number; t: number }> {
+type Pos = { at: number; t: number; sec?: number; done?: boolean };
+function readPositions(): Record<string, Pos> {
   try { return JSON.parse(localStorage.getItem(POS_KEY) || "{}"); } catch { return {}; }
 }
-function writePositions(p: Record<string, { at: number; t: number }>) {
+function writePositions(p: Record<string, Pos>) {
   try {
     const keep = Object.entries(p).sort((a, b) => b[1].t - a[1].t).slice(0, 200);
     localStorage.setItem(POS_KEY, JSON.stringify(Object.fromEntries(keep)));
@@ -39,22 +40,30 @@ export async function trackNoteOpen(userId: string | null, a: { id: string; titl
   } catch { /* offline: the local copy still has it */ }
 }
 
-/** Saves how far down a note the reader is (cheap: called a few times a minute at most). A note read to the end counts as read. */
-export async function saveNotePosition(userId: string | null, id: string, at: number) {
+/**
+ * Saves how far down a note the reader is and how long they really spent on it. A note counts as READ only when they got to the end AND spent
+ * a fair share of the time it takes to read (scrolling past in a few seconds does not count). Returns true the first time a note becomes read.
+ */
+export async function saveNotePosition(userId: string | null, id: string, at: number, sec = 0, needSec = 0): Promise<boolean> {
   const f = Math.max(0, Math.min(1, at));
   const p = readPositions();
-  p[id] = { at: f, t: Date.now() };
+  const before = p[id];
+  const seconds = Math.max(sec, before?.sec ?? 0);
+  const done = !!before?.done || (f >= 0.9 && seconds >= needSec);
+  const becameRead = done && !before?.done;
+  p[id] = { at: Math.max(f, before?.at ?? 0), t: Date.now(), sec: seconds, done };
   writePositions(p);
-  if (!userId) return;
-  const patch: Record<string, unknown> = { user_id: userId, resource_type: "article", resource_id: id, last_opened_at: new Date().toISOString(), progress_percent: Math.round(f * 100), last_position: String(Math.round(f * 1000) / 1000) };
+  if (!userId) return becameRead;
+  const patch: Record<string, unknown> = { user_id: userId, resource_type: "article", resource_id: id, last_opened_at: new Date().toISOString(), progress_percent: Math.round(p[id].at * 100), last_position: String(Math.round(f * 1000) / 1000) };
   try {
-    // reading a note to the end counts as studied, unless the reader marked it "difficult" or "revisit" themselves
-    if (f >= 0.9) {
+    if (done) {
+      // reading properly counts as studied, unless the reader marked it "difficult" or "revisit" themselves
       const { data: cur } = await db.from("user_resource_progress").select("status").eq("user_id", userId).eq("resource_type", "article").eq("resource_id", id).maybeSingle();
       if (!cur?.status || cur.status === "in_progress" || cur.status === "not_started") { patch.status = "completed"; patch.completed_at = new Date().toISOString(); }
     }
     await db.from("user_resource_progress").upsert(patch, { onConflict: "user_id,resource_type,resource_id" });
   } catch { /* ignore */ }
+  return becameRead;
 }
 
 export function localPosition(id: string): number {
@@ -66,7 +75,7 @@ export async function loadTrail(userId: string | null, limit = 12): Promise<Trai
   const items = new Map<string, TrailItem>();
   const local = getRecentArticles();
   const pos = readPositions();
-  for (const r of local as RecentArticle[]) items.set(r.id, { id: r.id, title: r.title, category: r.category, slug: null, openedAt: r.visitedAt, at: pos[r.id]?.at ?? 0, done: (pos[r.id]?.at ?? 0) >= 0.9 });
+  for (const r of local as RecentArticle[]) items.set(r.id, { id: r.id, title: r.title, category: r.category, slug: null, openedAt: r.visitedAt, at: pos[r.id]?.at ?? 0, done: !!pos[r.id]?.done });
   if (userId) {
     try {
       const { data } = await db.from("user_resource_progress").select("resource_id, status, progress_percent, last_opened_at").eq("user_id", userId).eq("resource_type", "article").order("last_opened_at", { ascending: false }).limit(60);
@@ -75,7 +84,7 @@ export async function loadTrail(userId: string | null, limit = 12): Promise<Trai
         const prev = items.get(r.resource_id);
         const opened = Date.parse(r.last_opened_at) || 0;
         const at = Math.max(prev?.at ?? 0, (r.progress_percent ?? 0) / 100);
-        items.set(r.resource_id, { id: r.resource_id, title: prev?.title ?? "", category: prev?.category ?? "", slug: prev?.slug ?? null, openedAt: Math.max(prev?.openedAt ?? 0, opened), at, done: r.status === "completed" || at >= 0.9 || !!prev?.done });
+        items.set(r.resource_id, { id: r.resource_id, title: prev?.title ?? "", category: prev?.category ?? "", slug: prev?.slug ?? null, openedAt: Math.max(prev?.openedAt ?? 0, opened), at, done: r.status === "completed" || !!prev?.done });
       }
     } catch { /* fall back to the local trail */ }
   }
@@ -96,11 +105,11 @@ export async function loadTrail(userId: string | null, limit = 12): Promise<Trai
 /** The ids of every note the account has finished or mostly read, for ticks and unit progress. */
 export async function loadReadIds(userId: string | null): Promise<Set<string>> {
   const out = new Set<string>();
-  for (const [id, p] of Object.entries(readPositions())) if (p.at >= 0.8) out.add(id);
+  for (const [id, p] of Object.entries(readPositions())) if (p.done) out.add(id);
   if (userId) {
     try {
       const { data } = await db.from("user_resource_progress").select("resource_id, status, progress_percent").eq("user_id", userId).eq("resource_type", "article").limit(2000);
-      for (const r of (data || []) as { resource_id: string; status: string; progress_percent: number | null }[]) if (r.status === "completed" || (r.progress_percent ?? 0) >= 80) out.add(r.resource_id);
+      for (const r of (data || []) as { resource_id: string; status: string; progress_percent: number | null }[]) if (r.status === "completed") out.add(r.resource_id);
     } catch { /* local only */ }
   }
   return out;

@@ -8,6 +8,8 @@ import { useSiteConfig } from "@/lib/siteConfig";
 import { useMyYear, yearOfCategory } from "@/hooks/useMyYear";
 import { STATIC_NOTES } from "@/data/staticNotes";
 import { buildMcqPath, buildBlogPath } from "@/lib/store";
+import { useMyDecks } from "@/lib/myDecks";
+import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
 
 interface Notice { id: string; kind: "exam" | "note" | "contest" | "notice" | "request" | "message"; /** the year this is for; empty = everyone */ year?: number | null; title: string; to: string; at: number; /** an admin request that has not been looked at yet */ unseen?: boolean }
 interface AccessRequest { user_id: string; email: string | null; entered_text: string | null; created_at: string; admin_seen: boolean }
@@ -56,6 +58,9 @@ export default function NotificationsBell() {
   const { isAdmin, user } = useAuth();
   const { year: myYear } = useMyYear();
   const [messages, setMessages] = useState<Notice[]>([]);
+  // flashcard decks made for the notes this reader has finished, for the last few days
+  const myDecks = useMyDecks();
+  const deckNotes = useMemo<Notice[]>(() => (myDecks ?? []).filter((d) => Date.now() - Date.parse(d.created_at) < 5 * 86_400_000).slice(0, 5).map((d) => ({ id: `deck:${d.id}`, kind: "message" as const, title: `Flashcards ready: ${cleanTopicTitle(d.title.replace(/\s*[:—–-]?\s*Flashcards?$/i, ""))}`, to: d.path, at: Date.parse(d.created_at) })), [myDecks]);
   const ref = useRef<HTMLDivElement>(null);
   const { announcement: a } = useSiteConfig();
 
@@ -102,8 +107,8 @@ export default function NotificationsBell() {
     // new notes and exams are for signed-in students, and only for their own year (items for every year are shown when the year is not known yet)
     const mine = !user ? [] : (["exam", "note"] as const).flatMap((k) => items.filter((n) => n.kind === k && (!myYear || !n.year || n.year === myYear)).slice(0, 6));
     const rest = !user ? [] : items.filter((n) => n.kind === "contest");
-    return [...asks, ...notice, ...messages, ...mine, ...rest].sort((x, y) => (x.kind === "request" ? -1 : y.kind === "request" ? 1 : y.at - x.at)).filter((n) => n.kind === "request" || !dismissed.includes(n.id));
-  }, [a.enabled, a.text, a.link, items, requests, dismissed, user, myYear, messages]);
+    return [...asks, ...notice, ...messages, ...deckNotes, ...mine, ...rest].sort((x, y) => (x.kind === "request" ? -1 : y.kind === "request" ? 1 : y.at - x.at)).filter((n) => n.kind === "request" || !dismissed.includes(n.id));
+  }, [a.enabled, a.text, a.link, items, requests, dismissed, user, myYear, messages, deckNotes]);
   const unread = all.filter((n) => (n.kind === "request" ? n.unseen : n.at > seen && n.kind !== "notice")).length;
 
   const markAllSeen = () => {

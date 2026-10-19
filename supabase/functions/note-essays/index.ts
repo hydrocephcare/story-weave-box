@@ -3,6 +3,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { chatText } from "../_shared/aiChat.js";
+import { cleanTopicTitle } from "../_shared/topicTitle.js";
 
 const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-cron-key" };
 const json = (o: unknown, status = 200) => new Response(JSON.stringify(o), { status, headers: { ...cors, "Content-Type": "application/json" } });
@@ -80,7 +81,7 @@ serve(async (req) => {
       await supabase.from("essays").insert({ title: `${a.title} (essay questions pending)`, category: a.category, article_id: a.id, short_answer_questions: [], long_answer_questions: [], published: false, meta_description: err || "too few usable questions" });
       return json({ success: true, status: "skipped", why: err || "too few usable questions" });
     }
-    const title = `${String(a.title).slice(0, 80)}: Essay Questions`;
+    const title = `${cleanTopicTitle(a.title)}: Essay questions`;
     const slug = `${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70)}-${String(a.id).replace(/-/g, "").slice(0, 8)}`;
     const { error: insErr } = await supabase.from("essays").insert({ title, slug, category: a.category, article_id: a.id, short_answer_questions: saqs, long_answer_questions: laqs, published: true, meta_description: `${saqs.length + laqs.length} essay questions with point-form model answers on ${String(a.title).slice(0, 70)}.` });
     if (insErr) return json({ error: insErr.message }, 500);

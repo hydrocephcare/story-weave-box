@@ -3,6 +3,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { chatText } from "../_shared/aiChat.js";
+import { cleanTopicTitle } from "../_shared/topicTitle.js";
 
 const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-cron-key" };
 const json = (o: unknown, status = 200) => new Response(JSON.stringify(o), { status, headers: { ...cors, "Content-Type": "application/json" } });
@@ -42,13 +43,21 @@ serve(async (req) => {
   try {
     const supabase = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
     const cronOk = !!Deno.env.get("CRON_KEY") && req.headers.get("x-cron-key") === Deno.env.get("CRON_KEY");
+    const body = await req.json().catch(() => ({}));
+    let readerOnly = false;   // a signed-in student who has just finished a note may ask for that one note's deck, nothing else
     if (!cronOk) {
       const token = (req.headers.get("authorization") || "").replace(/^Bearer\s+/i, "");
       const { data: u } = token ? await supabase.auth.getUser(token) : { data: null };
       const { data: ok } = u?.user ? await supabase.rpc("has_role", { _user_id: u.user.id, _role: "admin" }) : { data: false };
-      if (!ok) return json({ error: "Administrators only." }, 403);
+      if (!ok) {
+        if (!u?.user || !/^[0-9a-f-]{36}$/i.test(String(body?.article_id || ""))) return json({ error: "Administrators only." }, 403);
+        readerOnly = true;
+      }
     }
-    const body = await req.json().catch(() => ({}));
+    if (readerOnly) {
+      const { data: have } = await supabase.from("flashcard_sets").select("id").eq("source_reference", body.article_id).is("deleted_at", null).limit(1);
+      if (have && have.length) return json({ success: true, status: "exists" });
+    }
     const { data: ids } = await supabase.rpc("note_flashcard_candidates", { n: 1 });
     const id = body?.article_id || (Array.isArray(ids) ? (ids[0]?.id ?? ids[0]) : null);
     if (!id) return json({ success: true, done: true });
@@ -73,7 +82,7 @@ serve(async (req) => {
       await supabase.from("flashcard_sets").insert({ title: `${a.title} (cards pending)`, category: a.category, cards: [], published: false, source_reference: a.id, source_type: "note_generated", original_notes: JSON.stringify({ failed: lastErr || "too few usable cards", at: new Date().toISOString() }) });
       return json({ success: true, title: a.title, status: "skipped", why: lastErr || `only ${cards.length} usable` });
     }
-    const title = `${String(a.title).slice(0, 80)}: Flashcards`;
+    const title = `${cleanTopicTitle(a.title)}: Flashcards`;
     const base = title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70);
     let slug = base;
     for (let n = 2; n < 30; n++) {
@@ -83,7 +92,7 @@ serve(async (req) => {
     }
     const { error: insErr } = await supabase.from("flashcard_sets").insert({
       title, slug, category: a.category, cards, published: true, source_reference: a.id, source_type: "note_generated",
-      meta_description: `${cards.length} flashcards to revise ${String(a.title).slice(0, 70)}, written from the Ompath Study notes.`,
+      meta_description: `${cards.length} flashcards to revise ${cleanTopicTitle(a.title)}, written from the Ompath Study notes.`,
       original_notes: JSON.stringify({ type: "note_flashcards", article_id: a.id, generated_at: new Date().toISOString() }),
     });
     if (insErr) return json({ error: insErr.message }, 500);

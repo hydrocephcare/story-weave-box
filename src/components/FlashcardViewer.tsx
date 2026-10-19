@@ -12,7 +12,7 @@ interface Props {
 const STORAGE_KEY = "flashcard_progress_";
 
 /* ── Inline formatter: bold / italic + auto interlinking ── */
-function renderInline(text: string, keyPrefix = "i", ctx?: any) {
+export function renderInline(text: string, keyPrefix = "i", ctx?: any) {
   const parts = text.split(/(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`)/g);
   return parts.map((p, i) => {
     if (p.startsWith("**") && p.endsWith("**"))
@@ -26,7 +26,7 @@ function renderInline(text: string, keyPrefix = "i", ctx?: any) {
 }
 
 /* ── Markdown block renderer for flashcard answers ── */
-function renderFlashcardMarkdown(raw: string, ctx?: any) {
+export function renderFlashcardMarkdown(raw: string, ctx?: any) {
   if (!raw) return null;
 
   let text = raw

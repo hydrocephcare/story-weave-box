@@ -3,7 +3,7 @@ import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 import { ArrowLeft, Loader2, Layers } from "lucide-react";
 import { getFlashcardSetBySlugOrId, getCategoryDisplayName, buildFlashcardPath, type FlashcardSet } from "@/lib/store";
 import { Button } from "@/components/ui/button";
-import FlashcardViewer from "@/components/FlashcardViewer";
+import FlashcardDeck from "@/components/FlashcardDeck";
 import ShareButtons from "@/components/ShareButtons";
 import StudyControls from "@/components/StudyControls";
 import HelpfulVote from "@/components/HelpfulVote";
@@ -76,65 +76,23 @@ export default function FlashcardStudy() {
 
 function FlashcardStudyInner({ set }: { set: FlashcardSet }) {
   const unitName = getCategoryDisplayName(set.category);
-  const heroTitle = set.meta_title?.trim() || set.title;
-  const heroDesc = set.meta_description?.trim() || `Study ${set.cards.length} interactive flashcards for ${set.title}.`;
-  const date = new Date(set.updated_at || set.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-  const reviewer = "";
-  const topicThumb = useTopicThumbnail(set.title, set.category, !set.og_image_url);
-  const heroImage = set.og_image_url || topicThumb || "";
   const shareUrl = `${SITE_URL}${buildFlashcardPath(set)}`;
+  const date = new Date(set.updated_at || set.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+  const shortTitle = set.title.replace(/\s*[:—–-]?\s*Flashcards?$/i, "");
 
   return (
-    <div className="mx-auto max-w-4xl px-5 py-8 sm:px-6 sm:py-10">
-      <Button asChild variant="ghost" size="sm" className="mb-4 gap-2 text-muted-foreground">
-        <Link to="/flashcards"><ArrowLeft className="h-4 w-4" /> Back to Flashcards</Link>
-      </Button>
-
-      {/* Article-style hero */}
-      <header className="mb-8 -mx-5 sm:mx-0">
-        <div className="relative overflow-hidden sm:rounded-2xl bg-neutral-900 shadow-lg ring-1 ring-black/5">
-          {heroImage ? (
-            <div className="relative aspect-[4/5] sm:aspect-[16/10] w-full">
-              <div aria-hidden className="absolute inset-0 scale-110 bg-cover bg-center blur-2xl opacity-70" style={{ backgroundImage: `url(${heroImage})` }} />
-              <img src={heroImage} alt={heroTitle} loading="eager" className="absolute inset-0 h-full w-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/10" />
-              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8">
-                {unitName && unitName !== "Uncategorized" && (
-                  <span className="inline-flex items-center gap-1.5 mb-3 rounded-full bg-primary/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary-foreground">
-                    <Layers className="h-3 w-3" /> {unitName}
-                  </span>
-                )}
-                <h1 className="font-serif text-3xl font-bold leading-[1.1] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] sm:text-5xl">{heroTitle}</h1>
-                <p className="mt-3 max-w-prose font-serif text-sm sm:text-lg text-white/90 leading-relaxed line-clamp-3">{heroDesc}</p>
-                <ReviewedBadge reviewer={reviewer} date={date} onDark count={set.cards.length} />
-              </div>
-            </div>
-          ) : (
-            <div className="px-5 py-10 sm:px-10 sm:py-14 bg-gradient-to-br from-primary/15 via-background to-primary/5">
-              {unitName && unitName !== "Uncategorized" && (
-                <span className="inline-flex items-center gap-1.5 mb-3 rounded-full bg-primary/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
-                  <Layers className="h-3 w-3" /> {unitName}
-                </span>
-              )}
-              <h1 className="font-serif text-3xl font-bold leading-tight text-foreground sm:text-5xl">{heroTitle}</h1>
-              <p className="mt-3 max-w-prose font-serif text-base text-muted-foreground leading-relaxed">{heroDesc}</p>
-              <ReviewedBadge reviewer={reviewer} date={date} count={set.cards.length} />
-            </div>
-          )}
-        </div>
-        <ShareButtons url={shareUrl} title={heroTitle} description={heroDesc} variant="full" className="mt-5 px-5 sm:px-0" />
-        <div className="mt-4 px-5 sm:px-0">
-          <StudyControls resourceType="flashcard" resourceId={set.id} title={heroTitle} />
-        </div>
-      </header>
-
+    <div className="mx-auto max-w-xl px-3 pb-16 pt-1 sm:px-6">
+      {/* the deck is the first thing on the page: nothing to scroll past */}
       <KeywordLinkProvider currentPath={buildFlashcardPath(set)} currentTitle={set.title}>
-        <FlashcardViewer cards={set.cards} title={set.title} setId={set.id} />
+        <FlashcardDeck setId={set.id} title={set.title} cards={set.cards} category={set.category} />
       </KeywordLinkProvider>
 
-      <div className="mt-8">
-        <HelpfulVote resourceType="flashcard" resourceId={set.id} />
-      </div>
+      <section className="mt-10 border-t border-border pt-6">
+        <p className="text-sm text-muted-foreground">{set.cards.length} cards{unitName && unitName !== "Uncategorized" ? ` · ${unitName}` : ""} · updated {date}</p>
+        <div className="mt-4"><StudyControls resourceType="flashcard" resourceId={set.id} title={shortTitle} /></div>
+        <ShareButtons url={shareUrl} title={shortTitle} description={`Flashcards: ${shortTitle}`} variant="full" className="mt-5" />
+        <div className="mt-6"><HelpfulVote resourceType="flashcard" resourceId={set.id} /></div>
+      </section>
     </div>
   );
 }

@@ -60,3 +60,17 @@ describe("reading trail", () => {
     expect(upserts.at(-1).v[0].user_id).toBe("u9");
   });
 });
+
+describe("a note counts as read only when the reader really spent time on it", () => {
+  it("scrolling to the end in a few seconds is not a read", async () => {
+    const became = await saveNotePosition(null, "fast", 0.97, 8, 90);
+    expect(became).toBe(false);
+    expect((await loadReadIds(null)).has("fast")).toBe(false);
+  });
+  it("reaching the end after enough time is a read, and says so only once", async () => {
+    await saveNotePosition(null, "slow", 0.5, 70, 90);
+    expect(await saveNotePosition(null, "slow", 0.95, 95, 90)).toBe(true);
+    expect(await saveNotePosition(null, "slow", 0.99, 120, 90)).toBe(false);
+    expect((await loadReadIds(null)).has("slow")).toBe(true);
+  });
+});

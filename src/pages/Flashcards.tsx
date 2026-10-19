@@ -1,163 +1,111 @@
-import { useState, useEffect, useMemo, useRef } from "react";
-import LoadMoreButton from "@/components/LoadMoreButton";
-import { Link, useSearchParams } from "react-router-dom";
-import { GraduationCap, Calendar, Layers, ChevronDown, RotateCcw } from "lucide-react";
-import { getPublishedFlashcardSets, getCategoryDisplayName, getYearFromCategory, buildFlashcardPath, type FlashcardSet } from "@/lib/store";
-import { getVisitedFlashcardIds } from "@/lib/progress-store";
+import { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Check, Layers, Search, X } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { buildFlashcardPath, getCategoryDisplayName } from "@/lib/store";
 import { updateMetaTags } from "@/lib/seo";
-import CategoryTabs from "@/components/CategoryTabs";
-import ContentCredit from "@/components/ContentCredit";
+import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
+import { useMyDecks } from "@/lib/myDecks";
+import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
 
-const INITIAL_VISIBLE = 12;
-const LOAD_MORE_STEP = 12;
+interface Row { id: string; title: string; slug: string | null; category: string; created_at: string; card_count: number; source_reference: string | null }
 
+const name = (t: string) => cleanTopicTitle(String(t).replace(/\s*[:—–-]?\s*Flashcards?$/i, ""));
+const progressOf = (id: string): { pos: number; known: number; total: number } | null => {
+  try { const s = JSON.parse(localStorage.getItem(`deck:${id}`) || "null"); return s && Array.isArray(s.order) ? { pos: s.pos, known: (s.known || []).length, total: s.order.length } : null; } catch { return null; }
+};
+
+/** Flashcards: first the decks for what you have read, then your year's decks by unit, flat and quick to scan. */
 export default function Flashcards() {
-  useEffect(() => {
-    updateMetaTags({
-      title: "Flashcard Sets",
-      description: "Interactive medical flashcards generated from Kenyan medical notes. Study smarter with unit-based flashcard sets.",
-    });
-  }, []);
-  const [sets, setSets] = useState<FlashcardSet[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [visitedIds, setVisitedIds] = useState<Set<string>>(new Set());
-  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
-  const [searchParams] = useSearchParams();
-  const selectedYear = searchParams.get("year") || "All";
+  const { year } = useScopedYear();
+  const mine = useMyDecks();
+  const [rows, setRows] = useState<Row[] | null>(null);
+  const [unit, setUnit] = useState("");
+  const [q, setQ] = useState("");
+  const [shown, setShown] = useState(40);
 
   useEffect(() => {
-    getPublishedFlashcardSets().then(setSets).finally(() => setLoading(false));
-    setVisitedIds(getVisitedFlashcardIds());
+    updateMetaTags({ title: "Flashcards", description: "Flashcards made from the Ompath Study notes: flip, swipe and revise by unit. A deck is made for every note you read." });
+    let on = true;
+    void Promise.resolve((supabase as any).rpc("flashcard_catalog")).then(({ data }: { data: Row[] | null }) => { if (on) setRows(data ?? []); }, () => { if (on) setRows([]); });
+    return () => { on = false; };
   }, []);
 
-  useEffect(() => {
-    setSelectedCategory(null);
-    setVisibleCount(INITIAL_VISIBLE);
-  }, [selectedYear]);
+  const inYear = useMemo(() => (rows ?? []).filter((r) => !year || yearOfCategory(r.category) === year || yearOfCategory(r.category) === null), [rows, year]);
+  const units = useMemo(() => { const m = new Map<string, number>(); for (const r of inYear) { const u = getCategoryDisplayName(r.category); m.set(u, (m.get(u) ?? 0) + 1); } return [...m.entries()].sort((a, b) => b[1] - a[1]).slice(0, 16).map(([n]) => n); }, [inYear]);
+  const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
+  const list = useMemo(() => inYear
+    .filter((r) => (!unit || getCategoryDisplayName(r.category) === unit) && needles.every((w) => `${name(r.title)} ${getCategoryDisplayName(r.category)}`.toLowerCase().includes(w)))
+    .sort((a, b) => getCategoryDisplayName(a.category).localeCompare(getCategoryDisplayName(b.category)) || name(a.title).localeCompare(name(b.title), undefined, { sensitivity: "base", numeric: true })), [inYear, unit, q]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Scroll results into view when the category filter changes, instead of
-  // leaving the user wherever they were scrolled with a different grid underneath.
-  const resultsAnchorRef = useRef<HTMLDivElement>(null);
-  const isFirstFilterRender = useRef(true);
-  useEffect(() => {
-    if (isFirstFilterRender.current) {
-      isFirstFilterRender.current = false;
-      return;
-    }
-    const id = window.setTimeout(() => {
-      resultsAnchorRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 60);
-    return () => window.clearTimeout(id);
-  }, [selectedCategory]);
+  const groups = useMemo(() => {
+    const m = new Map<string, Row[]>();
+    for (const r of list.slice(0, shown)) { const u = getCategoryDisplayName(r.category); (m.get(u) ?? m.set(u, []).get(u)!).push(r); }
+    return [...m.entries()];
+  }, [list, shown]);
 
-  const yearScopedSets = useMemo(() => {
-    if (selectedYear === "All") return sets;
-    return sets.filter((s) => getYearFromCategory(s.category) === selectedYear);
-  }, [sets, selectedYear]);
-
-  const categories = useMemo(
-    () => [...new Set(yearScopedSets.map((s) => s.category).filter((c) => c && c !== "Uncategorized"))],
-    [yearScopedSets],
-  );
-
-  const categoryCounts = useMemo(
-    () => Object.fromEntries(categories.map((c) => [c, yearScopedSets.filter((s) => s.category === c).length])),
-    [categories, yearScopedSets],
-  );
-
-  const filtered = selectedCategory ? yearScopedSets.filter((s) => s.category === selectedCategory) : yearScopedSets;
-
-  if (loading) {
+  const row = (r: { id: string; title: string; slug: string | null; category: string; card_count?: number }) => {
+    const p = progressOf(r.id);
+    const done = p && p.total > 0 && p.pos >= p.total && p.known >= p.total;
     return (
-      <div className="mx-auto max-w-5xl px-5 py-10 sm:px-6 sm:py-12">
-        <div className="mb-7">
-          <div className="h-9 w-36 animate-pulse rounded-lg bg-muted" />
-          <div className="mt-2 h-4 w-60 animate-pulse rounded bg-muted" />
-        </div>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {[1,2,3,4,5,6].map(i => (
-            <div key={i} className="rounded-xl border border-border bg-card p-6 space-y-3">
-              <div className="h-10 w-10 animate-pulse rounded-lg bg-muted" />
-              <div className="h-4 w-3/4 animate-pulse rounded bg-muted" />
-              <div className="h-3 w-1/2 animate-pulse rounded bg-muted" />
-            </div>
-          ))}
-        </div>
-      </div>
+      <li key={r.id}>
+        <Link to={buildFlashcardPath({ id: r.id, title: r.title, slug: r.slug })} className="group flex items-center gap-3 py-3">
+          <Layers className="h-5 w-5 shrink-0 text-primary" aria-hidden />
+          <span className="min-w-0 flex-1">
+            <span className="block truncate text-[16px] font-semibold text-foreground group-hover:text-primary">{name(r.title)}</span>
+            <span className="block truncate text-xs text-muted-foreground">{getCategoryDisplayName(r.category)}{r.card_count ? ` · ${r.card_count} cards` : ""}{p && p.pos > 0 && !done ? ` · card ${Math.min(p.pos + 1, p.total)} of ${p.total}` : ""}</span>
+          </span>
+          {done ? <Check className="h-4 w-4 shrink-0 text-emerald-500" aria-label="Finished" /> : <ArrowRight className="h-4 w-4 shrink-0 text-primary/50 transition-transform group-hover:translate-x-0.5" aria-hidden />}
+        </Link>
+      </li>
     );
-  }
+  };
 
   return (
-    <div className="mx-auto max-w-5xl px-5 py-10 sm:px-6 sm:py-12">
-      <div className="mb-7">
-        <h1 className="mb-1 font-serif text-3xl font-bold text-foreground sm:text-4xl">Flashcards</h1>
-        <p className="text-sm text-muted-foreground sm:text-base">
-          {selectedYear === "All" ? "Interactive study sets generated from notes" : `${selectedYear} flashcard sets`}
-        </p>
-      </div>
+    <div className="mx-auto max-w-3xl px-4 pb-20 pt-8 sm:px-6 sm:pt-12">
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Ompath Study</p>
+      <h1 className="mt-1 font-serif text-3xl font-bold sm:text-4xl">Flashcards</h1>
+      <p className="mt-2 max-w-xl text-sm text-muted-foreground">Tap a card to flip it, swipe for the next one. A deck is made for every note you read, and it appears here for you.</p>
 
-      <ContentCredit />
-      <div ref={resultsAnchorRef}>
-        <CategoryTabs
-          categories={categories}
-          counts={categoryCounts}
-          totalCount={yearScopedSets.length}
-          selected={selectedCategory}
-          onChange={(c) => { setSelectedCategory(c); setVisibleCount(INITIAL_VISIBLE); }}
-        />
-      </div>
-
-      {filtered.length === 0 ? (
-        <div className="rounded-xl border border-border bg-card p-12 text-center">
-          <GraduationCap className="mx-auto mb-4 h-10 w-10 text-muted-foreground" />
-          <p className="text-muted-foreground">No flashcard sets found for this selection.</p>
-        </div>
-      ) : (
-        <>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {filtered.slice(0, visibleCount).map((s) => (
-              <div key={s.id}>
-                <Link
-                  to={buildFlashcardPath(s)}
-                  className="group relative block h-full rounded-xl border border-border bg-card p-5 sm:p-6 transition-shadow hover:[box-shadow:var(--shadow-card-hover)]"
-                  style={{ boxShadow: "var(--shadow-card)" }}
-                >
-                  {visitedIds.has(s.id) && (
-                    <div className="absolute right-3 top-3">
-                      <span className="inline-flex items-center gap-1 rounded-full border border-primary/25 bg-primary/10 px-2 py-0.5 text-[10px] font-semibold text-primary">
-                        <RotateCcw className="h-2.5 w-2.5" />
-                        Continue
-                      </span>
-                    </div>
-                  )}
-                  <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-accent/20 text-accent sm:mb-4 sm:h-10 sm:w-10">
-                    <Layers className="h-4 w-4 sm:h-5 sm:w-5" />
-                  </div>
-                  {s.category && s.category !== "Uncategorized" && (
-                    <span className="mb-2 inline-block rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary">
-                      {getCategoryDisplayName(s.category)}
-                    </span>
-                  )}
-                  <h3 className="mb-2 line-clamp-2 font-serif text-sm font-bold text-foreground transition-colors group-hover:text-primary sm:text-base">
-                    {s.title}
-                  </h3>
-                  <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                    <span className="flex items-center gap-1"><Layers className="h-3 w-3" /> {s.cards.length} cards</span>
-                    <span className="flex items-center gap-1"><Calendar className="h-3 w-3" />{new Date(s.created_at).toLocaleDateString()}</span>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-          {filtered.length > visibleCount && (
-            <LoadMoreButton onMore={() => setVisibleCount(prev => prev + LOAD_MORE_STEP)} className="mx-auto mt-6 flex items-center gap-2 rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-muted">
-              Load more ({filtered.length - visibleCount} remaining)
-              <ChevronDown className="h-4 w-4" />
-            </LoadMoreButton>
-          )}
-        </>
+      {mine && mine.length > 0 && (
+        <section className="mt-7" aria-label="From what you read">
+          <h2 className="font-serif text-xl font-bold">From what you read</h2>
+          <p className="text-xs text-muted-foreground">Decks for the notes you have finished, newest first.</p>
+          <ul className="mt-1 divide-y divide-border border-y border-border">{mine.slice(0, 6).map((d) => row({ ...d, card_count: (rows ?? []).find((r) => r.id === d.id)?.card_count }))}</ul>
+        </section>
       )}
+
+      <section className="mt-9" aria-label="All decks">
+        <div className="flex items-baseline justify-between gap-3">
+          <h2 className="font-serif text-xl font-bold">{year ? `Year ${year} decks` : "All decks"}</h2>
+          <span className="text-xs text-muted-foreground">{rows ? `${list.length} deck${list.length === 1 ? "" : "s"}` : ""}</span>
+        </div>
+        <label className="relative mt-3 block">
+          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" aria-hidden />
+          <input value={q} onChange={(e) => { setQ(e.target.value); setShown(40); }} placeholder="Search a topic, e.g. asthma" aria-label="Search flashcards" className="h-11 w-full rounded-xl border border-input bg-background pl-10 pr-9 text-sm outline-none focus:border-primary" />
+          {q && <button type="button" onClick={() => setQ("")} aria-label="Clear" className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-1 text-muted-foreground hover:bg-muted"><X className="h-3.5 w-3.5" /></button>}
+        </label>
+        {units.length > 1 && (
+          <div className="mt-3 flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Unit">
+            <button type="button" role="tab" aria-selected={!unit} onClick={() => { setUnit(""); setShown(40); }} className={`shrink-0 rounded-full px-3.5 py-1.5 text-xs font-bold ${!unit ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:text-foreground"}`}>All units</button>
+            {units.map((u) => <button key={u} type="button" role="tab" aria-selected={unit === u} onClick={() => { setUnit(u); setShown(40); }} className={`shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-xs font-bold ${unit === u ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:text-foreground"}`}>{u}</button>)}
+          </div>
+        )}
+
+        {rows === null ? <div className="mt-6 space-y-3" aria-busy="true">{Array.from({ length: 6 }, (_, i) => <div key={i} className="h-12 animate-pulse rounded bg-muted" />)}</div>
+          : list.length === 0 ? <p className="mt-10 text-center text-sm text-muted-foreground">No decks here yet. A deck is made for each note, a few every minute.</p>
+          : (
+            <div className="mt-4 space-y-6">
+              {groups.map(([u, items]) => (
+                <div key={u}>
+                  <h3 className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">{u} · {items.length}</h3>
+                  <ul className="mt-1 divide-y divide-border border-y border-border">{items.map((r) => row(r))}</ul>
+                </div>
+              ))}
+              {list.length > shown && <button type="button" onClick={() => setShown((n) => n + 40)} className="mx-auto block rounded-full px-6 py-2.5 text-sm font-bold text-primary hover:underline">Show more ({list.length - shown} left)</button>}
+            </div>
+          )}
+      </section>
     </div>
   );
 }
