@@ -18,7 +18,6 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "@/hooks/use-toast";
 import { getCourseOutlineForUnit } from "@/data/courseOutlines";
 import Year4CurriculumNotes from "@/components/Year4CurriculumNotes";
-import ReadingBall from "@/components/ReadingBall";
 
 const TABS = ["Overview", "Syllabus", "Notes", "Questions", "CATs", "Past Papers", "Flashcards", "Exams"] as const;
 
@@ -174,7 +173,6 @@ export default function UnitPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-5 py-8 sm:py-10">
-      <ReadingBall scope={`${unit.name} · Year ${year}`} notes={notes.map((r) => ({ id: r.id, title: r.title, to: resourcePath(r) }))} />
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />

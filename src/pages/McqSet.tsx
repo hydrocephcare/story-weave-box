@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { ChevronRight, Eye, EyeOff, Loader2, RotateCcw } from "lucide-react";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import OmpathMark from "@/components/ai/OmpathMark";
 import { Helmet } from "react-helmet-async";
 import { trackAnswer } from "@/lib/answer-tracker";
@@ -22,6 +23,7 @@ function Bank({ set }: { set: McqSetRow }) {
   const [solved, setSolved] = useState<Set<number>>(new Set());               // answered correctly (on any try)
   const [shown, setShown] = useState<Set<number>>(new Set());                 // answer revealed without solving
   const [only, setOnly] = useState<"all" | "missed">("all");
+  const [panelOpen, setPanelOpen] = useState(false);
 
   const pick = useCallback((i: number, oi: number) => {
     if (solved.has(i) || shown.has(i) || (wrong.get(i) ?? []).includes(oi)) return;
@@ -52,8 +54,38 @@ function Bank({ set }: { set: McqSetRow }) {
   const reveal = (i: number) => setShown((s) => new Set(s).add(i));
   const allShown = shown.size === qs.length;
 
+  const progress = (
+    <div>
+          <div className="flex items-baseline justify-between"><p className="text-xs font-bold uppercase tracking-[0.14em] text-muted-foreground">Progress</p><p className="text-sm font-bold tabular-nums">{answered}/{qs.length}</p></div>
+          <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-muted"><div className="h-full rounded-full bg-primary transition-all duration-500" style={{ width: `${(answered / qs.length) * 100}%` }} /></div>
+          <p className="mt-2 text-sm text-muted-foreground">{tried ? <><strong className={pct >= 60 ? "text-emerald-600 dark:text-emerald-300" : "text-amber-600 dark:text-amber-300"}>{pct}%</strong> right first time</> : "Not started"}</p>
+          <div className="mt-3 grid grid-cols-8 gap-1 lg:grid-cols-5">
+            {qs.map((q, i) => {
+              const f = first.get(i);
+              const cls = !done.has(i) ? ((wrong.get(i) ?? []).length ? "text-rose-500" : "text-muted-foreground hover:text-foreground") : f === q.correct_answer ? "bg-emerald-500 text-white" : "bg-rose-500 text-white";
+              return <a key={i} href={`#q${i + 1}`} onClick={() => setPanelOpen(false)} className={`flex h-8 items-center justify-center rounded-md text-xs font-bold ${cls}`}>{i + 1}</a>;
+            })}
+          </div>
+          <div className="mt-4 flex gap-4 text-xs font-bold">
+            <button type="button" onClick={() => setShown(allShown ? new Set() : new Set(qs.map((_, i) => i)))} className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground">{allShown ? <EyeOff className="h-3.5 w-3.5" aria-hidden /> : <Eye className="h-3.5 w-3.5" aria-hidden />} {allShown ? "Hide all" : "Reveal all"}</button>
+            <button type="button" onClick={reset} className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground"><RotateCcw className="h-3.5 w-3.5" aria-hidden /> Start over</button>
+          </div>
+    </div>
+  );
+  const tone = !tried ? "bg-muted text-foreground" : pct >= 70 ? "bg-emerald-500 text-white" : pct >= 40 ? "bg-amber-500 text-white" : "bg-rose-500 text-white";
+
   return (
     <div className="mx-auto max-w-5xl px-4 pb-24 pt-6 sm:pt-8">
+      {/* phone: progress lives in a tab on the left edge; tap it to slide the panel out (no block above the questions) */}
+      <button type="button" onClick={() => setPanelOpen(true)} aria-label={`Progress: ${answered} of ${qs.length} answered. Tap for details.`} className={`fixed left-0 top-1/2 z-40 -translate-y-1/2 rounded-r-xl px-1.5 py-3 text-[11px] font-extrabold tabular-nums shadow-md lg:hidden ${tone}`} style={{ writingMode: "vertical-rl" }}>
+        {answered}/{qs.length}{tried ? ` · ${pct}%` : ""}
+      </button>
+      <Sheet open={panelOpen} onOpenChange={setPanelOpen}>
+        <SheetContent side="left" className="w-[85vw] max-w-xs overflow-y-auto">
+          <SheetHeader className="text-left"><SheetTitle className="font-serif">Your progress</SheetTitle><SheetDescription>{title}</SheetDescription></SheetHeader>
+          <div className="mt-4">{progress}</div>
+        </SheetContent>
+      </Sheet>
       <nav className="flex flex-wrap items-center gap-1 text-sm font-semibold text-muted-foreground" aria-label="Breadcrumb">
         <Link to="/mcqs" className="hover:text-foreground">MCQ Library</Link>
         {year && <><ChevronRight className="h-3.5 w-3.5" aria-hidden /><Link to={`/mcqs?year=Year ${year}`} className="hover:text-foreground">Year {year}</Link></>}
@@ -63,21 +95,8 @@ function Bank({ set }: { set: McqSetRow }) {
       <p className="mt-2 text-[15px] text-muted-foreground">{qs.length} questions · pick an answer; if it is wrong you can try again · nothing is timed</p>
 
       <div className="mt-6 grid gap-8 lg:grid-cols-[200px_1fr]">
-        <aside className="lg:sticky lg:top-20 lg:self-start">
-          <div className="flex items-baseline justify-between"><p className="text-xs font-bold uppercase tracking-[0.14em] text-muted-foreground">Progress</p><p className="text-sm font-bold tabular-nums">{answered}/{qs.length}</p></div>
-          <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-muted"><div className="h-full rounded-full bg-primary transition-all duration-500" style={{ width: `${(answered / qs.length) * 100}%` }} /></div>
-          <p className="mt-2 text-sm text-muted-foreground">{tried ? <><strong className={pct >= 60 ? "text-emerald-600 dark:text-emerald-300" : "text-amber-600 dark:text-amber-300"}>{pct}%</strong> right first time</> : "Not started"}</p>
-          <div className="mt-3 grid grid-cols-8 gap-1 lg:grid-cols-5">
-            {qs.map((q, i) => {
-              const f = first.get(i);
-              const cls = !done.has(i) ? ((wrong.get(i) ?? []).length ? "text-rose-500" : "text-muted-foreground hover:text-foreground") : f === q.correct_answer ? "bg-emerald-500 text-white" : "bg-rose-500 text-white";
-              return <a key={i} href={`#q${i + 1}`} className={`flex h-8 items-center justify-center rounded-md text-xs font-bold ${cls}`}>{i + 1}</a>;
-            })}
-          </div>
-          <div className="mt-4 flex gap-4 text-xs font-bold">
-            <button type="button" onClick={() => setShown(allShown ? new Set() : new Set(qs.map((_, i) => i)))} className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground">{allShown ? <EyeOff className="h-3.5 w-3.5" aria-hidden /> : <Eye className="h-3.5 w-3.5" aria-hidden />} {allShown ? "Hide all" : "Reveal all"}</button>
-            <button type="button" onClick={reset} className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground"><RotateCcw className="h-3.5 w-3.5" aria-hidden /> Start over</button>
-          </div>
+        <aside className="hidden lg:sticky lg:top-20 lg:block lg:self-start">
+          {progress}
         </aside>
 
         <div className="min-w-0">
