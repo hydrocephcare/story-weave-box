@@ -199,6 +199,111 @@
    "issues": [],
    "model": "gemini-3.8-flash",
    "at": "2026-10-18"
+  },
+  "lung-abscess": {
+   "hash": "5b2a00cdfb99",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-19"
+  },
+  "interstitial-lung-disease": {
+   "hash": "c7f8db7a5fe4",
+   "validated": false,
+   "high": 1,
+   "medium": 0,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "works as a stone‑cutter... No occupational exposure to asbestos, no recent drug changes... IPF",
+     "problem": "The clinical case states the patient works as a stone-cutter but diagnoses idiopathic pulmonary fibrosis (IPF), ignoring significant silica exposure which causes silicosis and precludes an 'idiopathic' diagnosis.",
+     "fix": "Remove the stone-cutter occupation or clarify that occupational and environmental exposure histories (including silica) were negative before diagnosing IPF."
+    }
+   ],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-19"
+  },
+  "occupational-lung-disease": {
+   "hash": "6aeceb80a52e",
+   "validated": false,
+   "high": 1,
+   "medium": 2,
+   "issues": [
+    {
+     "severity": "high",
+     "where": "Positive test + compatible CXR → silico‑TB; warrants chemoprophylaxis",
+     "problem": "Compatible chest X-ray findings alongside a positive IGRA/TST in a symptomatic patient indicate active tuberculosis (silico-TB), which requires full multidrug anti-TB treatment, not chemoprophylaxis.",
+     "fix": "Positive test + compatible CXR/symptoms indicates active silico-TB requiring full anti-TB therapy; chemoprophylaxis (TPT) is reserved for latent TB without active disease."
+    },
+    {
+     "severity": "medium",
+     "where": "Progressive massive fibrosis (PMF): Coalescence of nodules → dense collagenous mass, usually in upper zones (silica, coal) or lower zones (a",
+     "problem": "Progressive massive fibrosis (PMF) refers specifically to large confluent fibrotic masses in silicosis or coal workers' pneumoconiosis (characteristically upper zones), not asbestosis.",
+     "fix": "Remove the reference to asbestos causing PMF, as PMF is a complication of coal workers' pneumoconiosis and silicosis, while advanced asbestosis produces diffuse interstitial pulmonary fibrosis and honeycombing predominantly in the lower zones."
+    },
+    {
+     "severity": "medium",
+     "where": "stone‑cutting with use of asbestos‑containing cutting fluids",
+     "problem": "Cutting fluids (coolants/lubricants) do not contain asbestos; stone-cutting generates silica exposure, making this clinical mechanism fabricated.",
+     "fix": "Attribute asbestos exposure to realistic historical sources such as insulation, construction materials, or friction products rather than cutting fluids."
+    }
+   ],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-19"
+  },
+  "dvt-vte-pulmonary-embolism": {
+   "hash": "27a229d77f64",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-19"
+  },
+  "lung-cancer": {
+   "hash": "ddc2cb079a97",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-19"
+  },
+  "obstetrics-rh2-junior-clerkship-cat-october-2022": {
+   "hash": "fd61f299d4c6",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-19"
+  },
+  "papers-obstetrics-rh1-cat-mcq-and-saq": {
+   "hash": "6996f6dd805a",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Question 3. Outline the components of a birth plan, point 5",
+     "problem": "Identifying a specific blood donor is not a standard or recommended component of a birth plan in most guidelines, as blood banks and emergency services are expected to provide blood.",
+     "fix": "Instead of identifying a specific blood donor, the birth plan should focus on awareness of potential complications like haemorrhage and the availability of emergency services, including blood transfusion facilities."
+    }
+   ],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-19"
+  },
+  "papers-obstetrics-rh1-cat-november-2018": {
+   "hash": "0a55bdf481b0",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-19"
   }
  },
  "topics": {}

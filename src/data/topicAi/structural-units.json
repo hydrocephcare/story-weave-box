@@ -1,0 +1,124 @@
+{
+ "medical": true,
+ "title": "Structural Units in Biochemistry and Genetics",
+ "subject": "Biochemistry & genetics",
+ "summary": "Structural units are the basic building blocks of cellular and tissue architecture, from nucleosomes to spectrin tetramers and liver lobules. Understanding their composition and dysfunction helps diagnose and manage common tropical diseases.",
+ "aka": [
+  "Spectrin tetramer",
+  "Lobule",
+  "Acinus",
+  "Nucleosome"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Structural units are defined arrangements of macromolecules that give cells and organs their shape and mechanical properties. They range from the nucleosome in chromatin to the spectrin tetramer that supports red cell membranes, to the hexagonal lobule of the liver.",
+   "b": [
+    "Nucleosome: DNA wrapped around histone octamer",
+    "Spectrin tetramer: α‑β heterodimers forming a flexible lattice",
+    "Liver lobule: hexagonal unit with central vein and portal triad"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Each unit is assembled by specific protein–protein or protein–DNA interactions. The nucleosome compacts DNA; spectrin tetramers provide shear resistance; the lobule organizes hepatic microcirculation.",
+   "b": [
+    "DNA–histone binding creates 147 bp nucleosome core",
+    "α‑β spectrin dimerization via CH1/CH2 domains",
+    "Portal triad supplies bile, arterial and portal blood to acinus"
+   ],
+   "t": [
+    {
+     "a": "Peripheral blood smear",
+     "b": "Assess red cell morphology; spherocytes suggest spectrin defect"
+    },
+    {
+     "a": "Liver ultrasound",
+     "b": "Detect lobular architecture changes; focal lesions may alter lobule shape"
+    }
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Assembly is controlled by chaperones, post‑translational modifications and gene expression. Mutations or deficiencies in these regulators lead to structural instability.",
+   "b": [
+    "Heat shock proteins assist spectrin folding",
+    "Histone acetylation modulates nucleosome accessibility",
+    "Cytokines influence hepatocyte proliferation within lobules"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Defects in structural units manifest as mechanical fragility, impaired DNA packaging, or altered organ perfusion. Tropical infections can target these units directly or indirectly.",
+   "b": [
+    "Sickle cell disease: β‑globin mutation alters hemoglobin, causing rigid cells",
+    "Malaria: parasite invades erythrocytes, disrupting spectrin network",
+    "Schistosomiasis: egg deposition damages hepatic lobules"
+   ],
+   "t": [
+    {
+     "a": "Hemoglobin electrophoresis",
+     "b": "Identify sickle hemoglobin S; confirms hemoglobinopathy"
+    },
+    {
+     "a": "Serum ferritin",
+     "b": "Elevated in chronic inflammation; may mask iron deficiency"
+    }
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Recognising structural unit pathology guides diagnosis, treatment choice and prognosis. In low‑resource settings, bedside clues and simple tests are vital.",
+   "b": [
+    "Red cell shape on smear indicates spectrin or membrane protein defects",
+    "Liver function tests plus ultrasound suggest lobular damage"
+   ],
+   "t": [
+    {
+     "a": "Complete blood count",
+     "b": "Low MCV may hint at thalassemia; high RDW suggests anisocytosis"
+    },
+    {
+     "a": "AST/ALT ratio",
+     "b": "High ratio (>2) points to alcoholic liver disease; low ratio suggests viral hepatitis"
+    }
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Examiners test integration of structural knowledge with clinical scenarios. Focus on diagnostic criteria, differential diagnosis, and first‑line management.",
+   "b": [
+    "Ask about family history for hereditary hemolytic anemias",
+    "Use the Coombs test to differentiate immune vs non‑immune hemolysis",
+    "Remember that schistosomiasis can cause portal hypertension via fibrotic lobule changes"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe haemolysis with jaundice and hypotension",
+  "Unexplained ascites or splenomegaly in a patient with liver disease",
+  "Sudden drop in hemoglobin with evidence of intravascular rupture"
+ ],
+ "faq": [
+  {
+   "q": "What is a spectrin tetramer?",
+   "a": "A flexible lattice formed by two α‑β heterodimers that stabilises the red cell membrane."
+  },
+  {
+   "q": "How does a nucleosome affect gene expression?",
+   "a": "DNA wrapped around histones limits access to transcription factors; acetylation loosens this structure."
+  },
+  {
+   "q": "Why does malaria damage the spectrin network?",
+   "a": "The parasite remodels the host cell, inserting proteins that disrupt spectrin‑actin interactions, making the cell rigid and prone to splenic clearance."
+  }
+ ],
+ "exam": [
+  "A 25‑year‑old man with chronic jaundice and splenomegaly presents with sudden haemolysis. What is the most likely underlying structural defect? — Sickle cell disease (β‑globin mutation) or hereditary spherocytosis (spectrin defect); differentiate by family history and smear. A 30‑year‑old woman in a malaria endemic area has fever, anemia and a positive peripheral smear for ring forms. What structural change in the red cell facilitates parasite invasion? — Disruption of the sp"
+ ],
+ "related": [],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-19",
+ "reviewed": false
+}

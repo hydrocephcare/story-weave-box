@@ -1,0 +1,183 @@
+{
+ "medical": true,
+ "title": "Acute Lymphoblastic Leukaemia",
+ "subject": "Pathology",
+ "summary": "ALL is a rapid proliferation of immature lymphoid precursors in bone marrow and blood. Diagnosis relies on morphology, immunophenotype and cytogenetics. Prompt recognition and risk‑adapted therapy improve survival, even in low‑resource settings.",
+ "aka": [
+  "Acute Lymphoid Leukaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute lymphoblastic leukaemia is a clonal expansion of lymphoblasts that replaces normal haematopoiesis. Diagnosis requires ≥20 % lymphoblasts on peripheral smear or marrow, TdT positivity and lineage‑specific markers (CD19, CD10, CD34).",
+   "b": [
+    "≥20 % lymphoblasts on bone‑marrow aspirate",
+    "TdT⁺ confirms lymphoid origin",
+    "Immunophenotype distinguishes B‑ALL (CD19, CD10) from T‑ALL (cCD3, CD7)"
+   ],
+   "t": [
+    {
+     "a": "Peripheral smear",
+     "b": "Does the patient have circulating blasts? → Presence of blasts suggests leukaemia; absence does not exclude marrow disease."
+    },
+    {
+     "a": "Bone‑marrow aspirate",
+     "b": "What is the blast percentage? → ≥20 % confirms acute leukaemia; lower percentages require repeat or flow cytometry."
+    },
+    {
+     "a": "Flow cytometry",
+     "b": "Which lineage markers are present? → CD19/CD10 = B‑ALL; cCD3/CD7 = T‑ALL; guides therapy."
+    },
+    {
+     "a": "Cytogenetics / FISH",
+     "b": "Are favourable or high‑risk chromosomal abnormalities present? → t(12;21) favourable; Ph‑like or KMT2A rearrangement high‑risk."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Risk stratification combines age, white‑cell count, cytogenetics and early treatment response (MRD). This determines intensity of chemotherapy.",
+   "b": [
+    "Age < 1 yr or > 10 yr = higher risk",
+    "WBC > 50 × 10⁹/L at presentation = higher risk",
+    "MRD > 0.01 % after induction = high risk"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are de novo, but several exposures increase risk, especially in East Africa.",
+   "b": [
+    "Prior exposure to ionising radiation",
+    "Chronic infection with HIV or EBV",
+    "Inherited syndromes (Down, Fanconi anaemia)",
+    "Environmental pesticides"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with marrow failure, organ infiltration and systemic symptoms.",
+   "b": [
+    "Fatigue, pallor, easy bruising – anaemia & thrombocytopenia",
+    "Fever, neutropenia – infection risk",
+    "Bone pain, especially long bones – marrow expansion",
+    "Lymphadenopathy, hepatosplenomegaly – extramedullary disease"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource hospitals, use a stepwise approach: start with smear, then marrow, then immunophenotype if available.",
+   "b": [
+    "CBC with differential – looks for anemia, thrombocytopenia, blasts",
+    "Peripheral smear – quick clue of blasts",
+    "Bone‑marrow aspirate – definitive blast count",
+    "Flow cytometry – if available, confirms lineage"
+   ],
+   "t": [
+    {
+     "a": "CBC",
+     "b": "Is there anaemia, thrombocytopenia or leukocytosis? → Abnormal counts support marrow infiltration."
+    },
+    {
+     "a": "Peripheral smear",
+     "b": "Are blasts seen? → Presence directs urgent referral; if absent, still consider marrow exam."
+    },
+    {
+     "a": "Bone‑marrow aspirate",
+     "b": "What is the blast percentage and morphology? → ≥20 % confirms ALL; also allows cytogenetics."
+    },
+    {
+     "a": "Flow cytometry (if unavailable)",
+     "b": "What lineage markers are present? → Use morphology and clinical picture to start provisional therapy; send sample to referral lab."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from tumour burden and treatment‑related toxicity.",
+   "b": [
+    "Leukostasis (WBC > 100 × 10⁹/L) – respiratory or neurologic compromise",
+    "Tumour lysis syndrome – hyperuricaemia, renal failure",
+    "Severe neutropenic sepsis – fever with ANC < 0.5 × 10⁹/L",
+    "Intracranial haemorrhage – thrombocytopenia < 20 × 10⁹/L"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Therapy follows a risk‑adapted protocol: induction, consolidation, maintenance, plus supportive care.",
+   "b": [
+    "Induction: steroids (prednisone), vincristine, L‑asparaginase, anthracycline – aims for remission",
+    "Supportive: prophylactic antibiotics, antifungals, tumour‑lysis prophylaxis (allopurinol or rasburicase if available), transfusion thresholds",
+    "Avoid: high‑dose cyclophosphamide in patients with hepatic dysfunction; avoid unnecessary NSAIDs when renal function is impaired"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Long‑term monitoring focuses on remission status, late effects and secondary malignancies.",
+   "b": [
+    "MRD assessment after each phase – guides intensification",
+    "Annual cardiac echo if anthracyclines used",
+    "Vaccination updates after immune reconstitution",
+    "Counselling on fertility preservation where feasible"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that can mimic ALL clinically or on smear.",
+   "b": [
+    "Acute myeloid leukaemia – myeloblasts, MPO⁺, CD33⁺",
+    "Severe aplastic anaemia – pancytopenia without blasts",
+    "Infectious mononucleosis – lymphocytosis, atypical lymphocytes"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain findings may be falsely reassuring or alarming.",
+   "b": [
+    "Low peripheral blast count does not exclude marrow disease – always perform aspirate if suspicion remains",
+    "Hyperleukocytosis may be absent in T‑ALL despite high tumour burden",
+    "TdT negativity can occur in early T‑ALL; rely on full immunophenotype"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden respiratory distress or neurological change (leukostasis)",
+  "Fever with neutropenia (ANC < 0.5 × 10⁹/L)",
+  "Severe bleeding or platelet count < 20 × 10⁹/L"
+ ],
+ "faq": [
+  {
+   "q": "Why is L‑asparaginase essential in ALL therapy?",
+   "a": "Leukaemic lymphoblasts cannot synthesize asparagine; the drug depletes plasma asparagine, starving the tumour while sparing normal cells."
+  },
+  {
+   "q": "What does a high white‑cell count at presentation indicate?",
+   "a": "It is a poor prognostic factor, reflecting high tumour burden and increasing risk of leukostasis."
+  },
+  {
+   "q": "Can ALL be cured in low‑resource settings?",
+   "a": "Yes, with adapted protocols, early referral, supportive care and adherence to risk‑stratified chemotherapy."
+  }
+ ],
+ "exam": [
+  "A 7‑year‑old presents with bone pain, bruising and a WBC of 70 × 10⁹/L. What is your immediate management and why? — Recognise leukostasis risk; start hydration, uric‑acid prophylaxis, and urgent induction while arranging transfer for intensive care.",
+  "How does flow cytometry differentiate ALL from AML, and why is this distinction critical? — CD19/CD10 (B‑ALL) or cCD3 (T‑ALL) vs MPO/CD33 (AML); guides chemotherapy regimen and prognosis.",
+  "A patient on induction develops rising creatinine and hyperuricaemia. What complication is likely and how do you treat it? — Tumour lysis syndrome; give aggressive IV fluids, allopurinol or rasburicase, and correct electrolytes.",
+  "Why would you avoid high‑dose cyclophosphamide in a patient with hepatitis B positivity? — Cyclophosphamide is hepatotoxic and can reactivate HBV, increasing liver failure risk.",
+  "What are the key cytogenetic abnormalities that move a patient into a high‑risk ALL group? — Philadelphia chromosome (t‑9;22), KMT2A (MLL) rearrangements, hypodiploidy; they mandate intensified therapy or targeted TKIs.",
+  "Explain how you would assess treatment response after induction in a setting without MRD testing. — Use repeat marrow morphology to confirm <5 % blasts; clinical remission (resolution of cytopenias) supports response.",
+  "A child with ALL develops a new scalp lesion. Which condition should you suspect and what is the next step? — Extramedullary disease (chloroma/leukaemia cutis); obtain biopsy and stage with imaging.",
+  "What red‑flag symptom in an ALL patient mandates immediate transfer to a higher‑level centre? — Acute respiratory distress or neurologic decline suggest leukostasis requiring ICU support."
+ ],
+ "related": [
+  "Acute Myeloid Leukaemia",
+  "Chronic Myeloid Leukaemia",
+  "Tumour Lysis Syndrome",
+  "Pediatric Oncology Protocols",
+  "HIV‑Associated Haematological Malignancies",
+  "Bone Marrow Transplantation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-19",
+ "reviewed": false
+}

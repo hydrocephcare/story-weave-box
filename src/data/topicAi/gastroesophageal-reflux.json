@@ -1,0 +1,175 @@
+{
+ "medical": true,
+ "title": "Pediatric Gastroesophageal Reflux",
+ "subject": "Paediatrics",
+ "summary": "Gastroesophageal reflux (GER) is the passage of gastric contents into the esophagus, common in infants and children. When symptoms are frequent or cause complications, it is termed gastroesophageal reflux disease (GERD). Diagnosis relies on history, targeted examination and selective investigations, especially where resources are limited.",
+ "aka": [
+  "GERD",
+  "acid reflux"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "GER is physiologic; GERD is pathologic when reflux leads to troublesome symptoms or complications. Diagnosis is clinical, using the Rome IV criteria adapted for children.",
+   "b": [
+    "Frequent regurgitation or vomiting (≥2/week) plus one or more of: irritability, feeding refusal, poor weight gain, cough, wheeze, or esophagitis.",
+    "Symptoms must be present for at least 4 weeks."
+   ],
+   "t": [
+    {
+     "a": "Trial of proton‑pump inhibitor (PPI) for 4–8 weeks",
+     "b": "Does the child improve with acid suppression? – Positive response supports acid‑mediated GERD; lack of response suggests alternative diagnosis."
+    },
+    {
+     "a": "Upper GI endoscopy (if available)",
+     "b": "Detects esophagitis, strictures, or eosinophilic esophagitis – presence confirms mucosal injury; normal findings do not exclude functional GERD."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom frequency and impact on growth or complications.",
+   "b": [
+    "Mild: occasional regurgitation, no growth impact.",
+    "Moderate: daily symptoms, mild weight loss or poor weight gain.",
+    "Severe: failure to thrive, recurrent pneumonia, esophagitis, or strictures."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are idiopathic, but several factors increase reflux risk, especially in low‑resource settings.",
+   "b": [
+    "Infancy: immature lower esophageal sphincter, liquid diet, supine position.",
+    "Neurological impairment (cerebral palsy, hydrocephalus).",
+    "Obesity – increased intra‑abdominal pressure.",
+    "Chronic cough from TB or recurrent lower‑respiratory infection.",
+    "Medications: anticholinergics, theophylline, certain antibiotics.",
+    "Helicobacter pylori infection – may alter gastric acidity.",
+    "Herbal remedies containing irritant oils."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with age and severity.",
+   "b": [
+    "Infants: regurgitation, irritability, arching, poor weight gain.",
+    "Toddlers: vomiting, chronic cough, wheeze, refusal to eat.",
+    "Older children: heartburn, chest pain, dysphagia, nocturnal cough.",
+    "Complications: esophagitis, stricture, Barrett’s metaplasia (rare), aspiration pneumonia."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are guided by severity, red‑flags, and resource availability.",
+   "b": [
+    "Basic labs (CBC, electrolytes) to assess nutrition and rule out anemia.",
+    "Chest X‑ray if respiratory symptoms – look for infiltrates suggesting aspiration."
+   ],
+   "t": [
+    {
+     "a": "pH‑impedance study (if available)",
+     "b": "Quantifies acid and non‑acid reflux episodes – abnormal acid exposure confirms GERD."
+    },
+    {
+     "a": "Barium swallow",
+     "b": "Shows anatomical obstruction or hiatal hernia – normal study does not exclude GERD."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "These findings require urgent referral or specialist input.",
+   "b": [
+    "Failure to thrive despite adequate calories.",
+    "Recurrent aspiration pneumonia.",
+    "Hematemesis or melena.",
+    "Persistent vomiting with dehydration.",
+    "Esophageal stricture or ulceration on endoscopy."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management follows a step‑wise approach: lifestyle, pharmacology, then surgery if needed.",
+   "b": [
+    "Positioning: keep infant upright for ≥30 min after feeds; elevate head of bed 30° in older children.",
+    "Thickened feeds (rice cereal) for infants – reduces reflux volume.",
+    "Weight control in overweight children.",
+    "Proton‑pump inhibitors (e.g., omeprazole) – chosen for potent acid suppression; avoid in children <1 yr unless severe.",
+    "H2‑receptor antagonists (e.g., ranitidine) – alternative where PPIs unavailable; less effective.",
+    "Avoid pro‑kinetics (cisapride) – withdrawn in many countries for cardiac toxicity.",
+    "Surgical fundoplication – reserved for refractory disease or complications."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review ensures symptom control and monitors growth.",
+   "b": [
+    "Re‑assess weight and height at each visit.",
+    "Review medication response after 4–8 weeks; taper if symptoms resolve.",
+    "Educate caregivers on feeding techniques and avoidance of trigger foods (citrus, chocolate, caffeine).",
+    "Vaccinate against respiratory infections to reduce cough‑related reflux."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic GERD symptoms.",
+   "b": [
+    "Eosinophilic esophagitis – presents with dysphagia and food impaction; endoscopy shows eosinophils.",
+    "Pyloric stenosis – projectile vomiting in 3‑6 weeks; palpable olive mass.",
+    "Cow’s milk protein allergy – vomiting, eczema, blood in stool; improves with elimination diet.",
+    "Peptic ulcer disease – epigastric pain, melena; endoscopy shows ulcer."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Normal pH‑impedance does not rule out non‑acid reflux.",
+    "Negative endoscopy does not exclude functional GERD.",
+    "Chest X‑ray may miss early aspiration; clinical suspicion remains key."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Failure to thrive despite adequate nutrition",
+  "Recurrent aspiration pneumonia",
+  "Hematemesis or melena",
+  "Severe dehydration from vomiting"
+ ],
+ "faq": [
+  {
+   "q": "Why is GER common in infants?",
+   "a": "The lower esophageal sphincter is immature and infants spend much time lying flat, allowing gastric contents to flow back."
+  },
+  {
+   "q": "When should a PPI be started?",
+   "a": "When symptoms are frequent, affect growth, or there is evidence of esophagitis, after a trial of non‑pharmacologic measures."
+  },
+  {
+   "q": "Can GER cause respiratory problems?",
+   "a": "Yes, refluxed acid can be aspirated, triggering cough, wheeze, or recurrent pneumonia."
+  }
+ ],
+ "exam": [
+  "A 4‑month‑old infant presents with daily regurgitation and poor weight gain – what are the next three steps in assessment? — Take a detailed feeding history, perform growth measurements, and trial a positioning/feeding modification before ordering investigations.",
+  "How does the Rome IV criteria help differentiate physiologic GER from GERD in children? — It requires symptom frequency and impact on health, providing a standardized threshold for pathologic disease.",
+  "An 8‑year‑old with chronic cough and occasional heartburn has a normal chest X‑ray; what further test would you consider and why? — A pH‑impedance study to detect acid and non‑acid reflux episodes that may explain cough.",
+  "Why are PPIs preferred over H2 blockers for severe pediatric GERD? — PPIs provide more consistent acid suppression and promote healing of esophagitis; H2 blockers have tachyphylaxis and are less effective.",
+  "A child on a PPI develops recurrent respiratory infections; what alternative management could you use? — Reinforce non‑pharmacologic measures (upright positioning, thickened feeds) and consider stepping down to an H2 blocker if symptoms allow.",
+  "What red‑flag symptom would prompt immediate referral to a pediatric gastroenterologist? — Failure to thrive despite adequate caloric intake or evidence of esophageal stricture on endoscopy.",
+  "Explain why cisapride is avoided in pediatric GERD despite its pro‑kinetic effect. — It has been linked to QT prolongation and fatal arrhythmias, leading to withdrawal from most markets.",
+  "How would you differentiate GERD from eosinophilic esophagitis in a school‑aged child with dysphagia? — Perform endoscopy with biopsies; eosinophilic esophagitis shows >15 eosinophils/HPF, while GERD shows inflammatory changes without eosinophilia."
+ ],
+ "related": [
+  "Eosinophilic esophagitis",
+  "Pyloric stenosis",
+  "Cow’s milk protein allergy",
+  "Barrett’s esophagus",
+  "Aspiration pneumonia",
+  "Pediatric nutrition"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-19",
+ "reviewed": false
+}

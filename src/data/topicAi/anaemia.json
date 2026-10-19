@@ -201,5 +201,321 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Look‑alike conditions",
+    "p": "Certain disorders mimic anaemia or share overlapping features; distinguishing them is critical for appropriate management.",
+    "t": [
+     {
+      "a": "Iron deficiency anaemia",
+      "b": "Microcytic, hypochromic, low ferritin, high TIBC, low TS. Look for dietary deficiency, menorrhagia."
+     },
+     {
+      "a": "Beta‑thalassaemia trait",
+      "b": "Microcytic, normal ferritin, normal TIBC, elevated HbA2 >3.5%, HbS >50% for disease. Look for target cells, family history."
+     },
+     {
+      "a": "Sickle cell disease",
+      "b": "Microcytic or normocytic, HbS >50%, painful crises, dactylitis. Look for vaso‑occlusive pain, splenomegaly early."
+     },
+     {
+      "a": "Aplastic anaemia",
+      "b": "Normocytic, pancytopenia, hypocellular marrow, low retic. Look for viral prodrome, exposure to drugs, aplastic crisis."
+     },
+     {
+      "a": "Autoimmune haemolytic anaemia",
+      "b": "Normocytic, high retic, positive Coombs, elevated LDH, low haptoglobin. Look for rash, arthralgia."
+     },
+     {
+      "a": "Malaria‑induced haemolysis",
+      "b": "Normocytic or microcytic, high retic, parasitemia on smear, jaundice. Look for fever, travel history."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures rapid stabilisation, identification of cause and safe definitive therapy while avoiding unnecessary interventions.",
+    "b": [
+     "1. Immediate stabilisation: place patient supine, give high‑flow oxygen, monitor pulse oximetry, cardiac rhythm and blood pressure.",
+     "2. Assess severity: if Hb <70 g/L or symptomatic (angina, syncope, heart failure) arrange urgent blood transfusion with cross‑matched, leucodepleted packed red cells.",
+     "3. Identify reversible loss: stop active bleeding, treat acute malaria or severe hookworm infection, correct coagulopathy.",
+     "4. Targeted aetiology treatment: iron supplementation for iron deficiency, folic acid for folate deficiency, vitamin B12 for B12 deficiency, erythropoiesis‑stimulating agents for anaemia of chronic disease when indicated.",
+     "5. Monitor response: repeat full blood count and reticulocyte count 3–5 days after therapy; watch for transfusion reactions, iron overload or worsening renal function.",
+     "6. Escalate or refer: if Hb fails to rise >2 g/dL in 7 days, if marrow failure suspected, or if patient deteriorates, refer to haematology for bone‑marrow biopsy and possible immunosuppressive therapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents iatrogenic harm and guides prompt corrective actions.",
+    "b": [
+     "Oral ferrous sulphate: common gastrointestinal irritation; give with food or switch to ferrous gluconate if intolerance persists.",
+     "Parenteral iron (iron dextran, ferric carboxymaltose): risk of anaphylaxis; monitor vitals for 30 minutes, have adrenaline ready.",
+     "Vitamin B12 intramuscular cyanocobalamin: rare allergic reaction; observe for 15 minutes after injection.",
+     "Erythropoiesis‑stimulating agents (ESA): raise risk of hypertension and thromboembolism; check blood pressure weekly and avoid in uncontrolled hypertension.",
+     "Folic acid: generally safe; high doses may mask B12 deficiency, so assess B12 status before long‑term high‑dose use."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications may arise from the anaemia itself or from its treatment; early recognition triggers escalation.",
+    "b": [
+     "Cardiac decompensation: new tachycardia, dyspnoea, peripheral oedema; obtain ECG, chest X‑ray and consider urgent transfusion.",
+     "Ischaemic chest pain: treat as acute coronary syndrome, give aspirin, nitrates and arrange cardiology review.",
+     "Severe infection after transfusion: fever, chills, hypotension; stop transfusion, give antipyretics, consider septic work‑up.",
+     "Iron overload (ferritin >1000 µg/L) from repeated parenteral iron: switch to oral iron or chelation if symptomatic.",
+     "Neurological decline in B12 deficiency: persistent paraesthesia despite supplementation; evaluate for irreversible subacute combined degeneration."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions modify presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV: chronic inflammation causes anaemia of chronic disease; CD4 count guides need for ESA versus treating opportunistic infections.",
+     "TB: marrow suppression and iron sequestration; obtain sputum microscopy, start anti‑TB therapy before iron repletion.",
+     "Malnutrition: simultaneous deficiencies of iron, folate and B12; give broad‑spectrum micronutrient replacement, monitor for re‑feeding syndrome.",
+     "Diabetes: renal insufficiency reduces erythropoietin; consider ESA if eGFR <30 mL/min/1.73 m² and Hb <10 g/dL.",
+     "Herbal remedies (e.g., phytates, tannins): impair iron absorption; advise spacing iron dose 2 hours after meals and avoidance of such herbs.",
+     "Alcoholic liver disease: macrocytosis, folate deficiency, and coagulopathy; give folic acid, avoid parenteral iron if ferritin is high due to inflammation.",
+     "Renal failure: reduced erythropoietin and iron utilisation; use ESA with intravenous iron after confirming iron deficiency."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring assessment and therapy to vulnerable populations improves outcomes in low‑resource settings.",
+    "b": [
+     "Children: use age‑specific Hb thresholds; give iron syrup for infants, monitor growth, and screen for sickle cell disease with Hb electrophoresis.",
+     "Elderly: higher prevalence of chronic disease; start low‑dose ESA only after ruling out occult malignancy, watch for hypertension.",
+     "People with HIV: treat opportunistic infections first, start antiretroviral therapy, use leucodepleted blood, and consider ESA if anaemia persists.",
+     "Low‑resource settings: when ferritin unavailable, use transferrin saturation <20 % or peripheral smear microcytosis to infer iron deficiency; use oral iron and dietary counselling; rely on clinical severity for transfusion decisions."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "WHO anaemia cut‑offs: Hb <130 g/L men, <120 g/L non‑pregnant women, <110 g/L pregnant women.",
+   "Severe anaemia defined as Hb <70 g/L; moderate 70‑99 g/L; mild 100‑119 g/L (women) or 100‑129 g/L (men).",
+   "Ferritin <15 µg/L confirms iron deficiency in a healthy adult; <30 µg/L if inflammation present.",
+   "Serum folate deficiency: <7 nmol/L (or <3 ng/mL).",
+   "Reticulocyte count <2.5 % indicates hypoproliferative anaemia.",
+   "HbA2 >3.5 % suggests β‑thalassaemia trait.",
+   "HbS >50 % (without recent transfusion) indicates sickle cell disease; 30‑40 % suggests trait.",
+   "Leucodepleted blood is recommended in aplastic anaemia to reduce allo‑immunisation and febrile reactions."
+  ],
+  "mnemonics": [
+   {
+    "n": "MCHC",
+    "t": "Mean Corpuscular Haemoglobin Concentration – low in iron deficiency, normal in B12/folate deficiency."
+   },
+   {
+    "n": "TACO",
+    "t": "Transfusion‑Associated Circulatory Overload – watch for dyspnoea, hypertension, pulmonary oedema after large volume transfusion."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define anaemia and give the WHO haemoglobin thresholds for adults.",
+    "a": "Anaemia is a reduction in red cell mass or haemoglobin. WHO thresholds: Hb <130 g/L men, <120 g/L non‑pregnant women, <110 g/L pregnant women.",
+    "hot": true
+   },
+   {
+    "q": "What bedside history questions help differentiate iron deficiency from chronic disease anaemia?",
+    "a": "Ask about menstrual loss, gastrointestinal bleeding, diet low in iron, chronic infections (TB, HIV), inflammatory conditions, and recent weight loss.",
+    "hot": true
+   },
+   {
+    "q": "How do you perform a peripheral smear examination for haemolysis and what findings are key?",
+    "a": "Examine smear for schistocytes, spherocytes, bite cells, or sickle cells; presence of schistocytes suggests microangiopathic haemolysis, spherocytes point to immune haemolysis."
+   },
+   {
+    "q": "Why is leucodepleted blood indicated in aplastic anaemia?",
+    "a": "Leucodepletion reduces allo‑immunisation, febrile non‑hemolytic reactions and transmission of leukocyte‑borne viruses, important in immunocompromised patients.",
+    "hot": true
+   },
+   {
+    "q": "What is the first step in managing a patient with Hb 65 g/L presenting with chest pain?",
+    "a": "Stabilise haemodynamics, give supplemental oxygen, urgent cardiac monitoring and consider packed red cell transfusion while evaluating for myocardial ischaemia.",
+    "hot": true
+   },
+   {
+    "q": "How can you differentiate thalassaemia trait from iron deficiency using red cell indices?",
+    "a": "Both have low MCV, but thalassaemia shows normal/high ferritin, elevated HbA2 >3.5 %, and red cell distribution width (RDW) usually normal; iron deficiency has low ferritin and high RDW."
+   },
+   {
+    "q": "What prophylactic vaccine is started at 2 months for infants with sickle cell disease to prevent pneumococcal sepsis?",
+    "a": "Pneumococcal conjugate vaccine (PCV13) given at 2, 4 and 6 months, with booster at 12‑15 months.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What is the fundamental defect in all cases of aplastic anaemia?",
+    "a": "Failure of hematopoietic stem cells leading to pancytopenia with a hypocellular fatty marrow.",
+    "past": true
+   },
+   {
+    "q": "Which cancer susceptibility gene is identical to FANCD1 in Fanconi anaemia?",
+    "a": "BRCA2 (FANCD1) is the same gene, linking DNA repair defects to cancer risk.",
+    "past": true
+   },
+   {
+    "q": "Describe the classic physical findings of acquired aplastic anaemia regarding liver, spleen and lymph nodes.",
+    "a": "Typically a soft, non‑enlarged liver, no splenomegaly, and no peripheral lymphadenopathy.",
+    "past": true
+   },
+   {
+    "q": "Which immunological mechanism predominates in idiopathic acquired aplastic anaemia?",
+    "a": "T‑cell mediated destruction of hematopoietic stem cells, often via cytokines such as IFN‑γ and TNF‑α.",
+    "past": true
+   },
+   {
+    "q": "What bone‑marrow trephine findings confirm aplastic anaemia?",
+    "a": "Marked hypocellularity (<25 % cellularity) with fatty infiltration and absent abnormal infiltrates.",
+    "past": true
+   },
+   {
+    "q": "Which diagnostic exclusion must be performed before labeling pancytopenia as aplastic anaemia?",
+    "a": "Exclude parvovirus B19 infection, myelodysplastic syndrome, leukemia, and vitamin B12/folate deficiency with appropriate serology and marrow studies.",
+    "past": true
+   },
+   {
+    "q": "When should a patient with severe anaemia be referred for urgent transfusion versus oral iron?",
+    "a": "Transfusion is indicated for Hb <70 g/L, symptomatic cardiac compromise, or pregnancy >20 weeks with Hb <90 g/L; oral iron is for mild‑moderate iron deficiency without severe symptoms.",
+    "hot": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 28‑year‑old woman with heavy menstrual bleeding has Hb 112 g/L, MCV 78 fL, ferritin 10 µg/L. Which is the most appropriate next step?",
+    "o": [
+     "Start oral ferrous sulfate",
+     "Give packed red cells",
+     "Order bone‑marrow biopsy",
+     "Check thyroid function"
+    ],
+    "a": 0,
+    "e": "Low ferritin confirms iron deficiency; oral iron is first‑line."
+   },
+   {
+    "q": "A 45‑year‑old man with HIV presents with Hb 68 g/L, reticulocyte count 1 %, normal MCV, ferritin 200 µg/L. Which mechanism is most likely?",
+    "o": [
+     "Iron deficiency",
+     "Chronic disease",
+     "Hemolysis",
+     "Bone‑marrow infiltration"
+    ],
+    "a": 1,
+    "e": "Normocytic anaemia with normal retics and adequate ferritin fits anaemia of chronic disease."
+   },
+   {
+    "q": "Which of the following is NOT a red‑flag sign of severe anaemia?",
+    "o": [
+     "Angina on exertion",
+     "Isolated mild tachycardia",
+     "Syncope",
+     "New onset heart failure"
+    ],
+    "a": 1,
+    "e": "Mild tachycardia alone is physiological; the others indicate tissue hypoxia."
+   },
+   {
+    "q": "A child with sickle cell disease is 3 months old. Which prophylactic measure should be started now?",
+    "o": [
+     "Penicillin V prophylaxis",
+     "PCV13 vaccine",
+     "Hydroxyurea",
+     "Iron supplementation"
+    ],
+    "a": 0,
+    "e": "Penicillin prophylaxis from 2 months reduces pneumococcal sepsis risk."
+   },
+   {
+    "q": "In a patient with suspected aplastic anaemia, which marrow finding would exclude the diagnosis?",
+    "o": [
+     "Cellularity 10 % with fatty infiltration",
+     "Presence of blasts >20 %",
+     "Absence of megakaryocytes",
+     "Increased reticulin fibrosis"
+    ],
+    "a": 1,
+    "e": "Blasts >20 % suggest acute leukemia, not aplastic anaemia."
+   },
+   {
+    "q": "Which laboratory result best supports a diagnosis of β‑thalassaemia trait?",
+    "o": [
+     "Ferritin 8 µg/L",
+     "HbA2 4.2 %",
+     "Serum iron 12 µmol/L",
+     "MCHC 34 g/dL"
+    ],
+    "a": 1,
+    "e": "HbA2 >3.5 % is characteristic of β‑thalassaemia trait."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 32‑year‑old pregnant woman (28 weeks) presents with fatigue, pallor, and Hb 88 g/L. MCV 72 fL, ferritin 12 µg/L.",
+    "qs": [
+     {
+      "q": "What is the most likely cause of her anaemia?",
+      "a": "Iron deficiency secondary to increased maternal demand and possible menstrual loss."
+     },
+     {
+      "q": "Which red‑flag would prompt immediate referral for transfusion?",
+      "a": "Development of chest pain, dyspnoea at rest, or systolic BP <90 mmHg indicating cardiovascular compromise."
+     }
+    ]
+   },
+   {
+    "v": "A 10‑year‑old boy with known sickle cell disease presents with fever, abdominal pain, and a new left upper quadrant mass. Hb 78 g/L, retic 12 %, spleen palpable 5 cm below costal margin.",
+    "qs": [
+     {
+      "q": "What is the most likely complication?",
+      "a": "Acute splenic sequestration causing rapid drop in Hb and splenomegaly."
+     },
+     {
+      "q": "What immediate management steps are required?",
+      "a": "Stabilise with IV fluids, urgent blood transfusion to raise Hb, and consider splenectomy if recurrent."
+     },
+     {
+      "q": "Which prophylactic measure should have been started at 2 months of age?",
+      "a": "Penicillin prophylaxis to prevent pneumococcal sepsis."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing leucodepleted blood as contraindicated; it is actually recommended to reduce allo‑immunisation.",
+   "Using ferritin <30 µg/L as the sole iron deficiency cut‑off; correct threshold is <15 µg/L (or <30 µg/L with inflammation).",
+   "Stating HbS >10 % confirms sickle cell disease; the correct diagnostic level is >50 % in the absence of recent transfusion.",
+   "Assuming mild tachycardia alone is a red‑flag; it is a normal physiological response unless accompanied by other signs.",
+   "Interpreting HbA2 ‘normal values’ as elevated; HbA2 >3.5 % is the abnormal finding indicating β‑thalassaemia trait.",
+   "Prescribing iron for anaemia of chronic disease without confirming iron deficiency; iron can worsen infection‑related inflammation."
+  ],
+  "exam": [
+   "Define anaemia and give the WHO haemoglobin thresholds for adults. — Anaemia is a reduction in red cell mass or haemoglobin. WHO thresholds: Hb <130 g/L men, <120 g/L non‑pregnant women, <110 g/L pregnant women.",
+   "What bedside history questions help differentiate iron deficiency from chronic disease anaemia? — Ask about menstrual loss, gastrointestinal bleeding, diet low in iron, chronic infections (TB, HIV), inflammatory conditions, and recent weight loss.",
+   "How do you perform a peripheral smear examination for haemolysis and what findings are key? — Examine smear for schistocytes, spherocytes, bite cells, or sickle cells; presence of schistocytes suggests microangiopathic haemolysis, spherocytes point to immune haemolysis.",
+   "Why is leucodepleted blood indicated in aplastic anaemia? — Leucodepletion reduces allo‑immunisation, febrile non‑hemolytic reactions and transmission of leukocyte‑borne viruses, important in immunocompromised patients.",
+   "What is the first step in managing a patient with Hb 65 g/L presenting with chest pain? — Stabilise haemodynamics, give supplemental oxygen, urgent cardiac monitoring and consider packed red cell transfusion while evaluating for myocardial ischaemia.",
+   "How can you differentiate thalassaemia trait from iron deficiency using red cell indices? — Both have low MCV, but thalassaemia shows normal/high ferritin, elevated HbA2 >3.5 %, and red cell distribution width (RDW) usually normal; iron deficiency has low ferritin and high RDW.",
+   "What prophylactic vaccine is started at 2 months for infants with sickle cell disease to prevent pneumococcal sepsis? — Pneumococcal conjugate vaccine (PCV13) given at 2, 4 and 6 months, with booster at 12‑15 months.",
+   "What is the fundamental defect in all cases of aplastic anaemia? — Failure of hematopoietic stem cells leading to pancytopenia with a hypocellular fatty marrow.",
+   "Which cancer susceptibility gene is identical to FANCD1 in Fanconi anaemia? — BRCA2 (FANCD1) is the same gene, linking DNA repair defects to cancer risk.",
+   "Describe the classic physical findings of acquired aplastic anaemia regarding liver, spleen and lymph nodes. — Typically a soft, non‑enlarged liver, no splenomegaly, and no peripheral lymphadenopathy.",
+   "Which immunological mechanism predominates in idiopathic acquired aplastic anaemia? — T‑cell mediated destruction of hematopoietic stem cells, often via cytokines such as IFN‑γ and TNF‑α.",
+   "What bone‑marrow trephine findings confirm aplastic anaemia? — Marked hypocellularity (<25 % cellularity) with fatty infiltration and absent abnormal infiltrates.",
+   "Which diagnostic exclusion must be performed before labeling pancytopenia as aplastic anaemia? — Exclude parvovirus B19 infection, myelodysplastic syndrome, leukemia, and vitamin B12/folate deficiency with appropriate serology and marrow studies.",
+   "When should a patient with severe anaemia be referred for urgent transfusion versus oral iron? — Transfusion is indicated for Hb <70 g/L, symptomatic cardiac compromise, or pregnancy >20 weeks with Hb <90 g/L; oral iron is for mild‑moderate iron deficiency without severe symptoms."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-19",
+  "checked": "2026-10-19",
+  "trimmed": 1
+ }
 }

@@ -1,0 +1,249 @@
+{
+ "medical": true,
+ "title": "Acute Glomerulonephritis in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "Acute glomerulonephritis (AGN) is an immune‑mediated inflammation of the glomerulus, often following infection. It presents with haematuria, oedema and hypertension, and requires prompt assessment of renal function and underlying cause.",
+ "aka": [
+  "Post‑streptococcal GN",
+  "Acute post‑infectious GN"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "AGN is characterised by sudden onset of glomerular inflammation, usually immune‑complex mediated. Diagnosis rests on clinical features, urinalysis, renal function and, where available, serology.",
+   "b": [
+    "Haematuria (cola‑red urine), proteinuria, oedema, hypertension"
+   ],
+   "t": [
+    {
+     "a": "Urinalysis",
+     "b": "Detects red cell casts and proteinuria – confirms glomerular source"
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Shows rise in GFR; a rise >50% from baseline suggests significant injury"
+    },
+    {
+     "a": "ASO titre or anti‑DNase B",
+     "b": "Positive in post‑streptococcal AGN; supports diagnosis when clinical picture fits"
+    },
+    {
+     "a": "Complement C3",
+     "b": "Low in post‑streptococcal AGN; normal in other forms"
+    },
+    {
+     "a": "Urine microscopy",
+     "b": "Red cell casts indicate glomerular bleeding"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Staging guides monitoring and urgency of intervention. The KDIGO acute kidney injury stages are used, with Stage 3 requiring urgent review.",
+   "b": [
+    "Stage 1: Cr 1.5–1.9× baseline or ≥0.3 mg/dL rise",
+    "Stage 2: Cr 2.0–2.9× baseline",
+    "Stage 3: Cr ≥3.0× baseline or Cr ≥4 mg/dL or need for dialysis"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, infections dominate. The hierarchy starts with streptococcal pharyngitis or impetigo, then moves to other bacterial, viral and parasitic triggers.",
+   "b": [
+    "Streptococcus pyogenes (pharyngitis, impetigo)",
+    "Streptococcus pneumoniae",
+    "Staphylococcus aureus",
+    "HIV infection",
+    "Malaria (severe anaemia can precipitate AGN)",
+    "Schistosomiasis (S. haematobium)",
+    "Sickle cell disease (hyperfiltration injury)",
+    "Rheumatic heart disease (secondary infection)"
+   ],
+   "t": [
+    {
+     "a": "Rapid strep test",
+     "b": "Confirms streptococcal throat infection – first step if pharyngitis suspected"
+    },
+    {
+     "a": "Skin culture",
+     "b": "Identifies streptococcal impetigo source"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Screen if risk factors present – HIV can trigger immune complex GN"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children often appear suddenly ill with dark urine and swelling. Blood pressure is frequently high, and the child may be irritable or lethargic.",
+   "b": [
+    "Coloured urine (cola‑red)",
+    "Periorbital or pedal oedema",
+    "Hypertension (≥95th percentile for age)",
+    "Reduced urine output"
+   ],
+   "t": [
+    {
+     "a": "Blood pressure measurement",
+     "b": "Detects hypertension; a systolic >95th percentile is a red flag"
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Rapidly identifies proteinuria and haematuria"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Tests should answer the ‘who, what, where, why’ of the renal insult. In low‑resource settings, prioritize bedside tests and simple labs.",
+   "b": [
+    "Urine dipstick",
+    "Serum creatinine",
+    "ASO titre"
+   ],
+   "t": [
+    {
+     "a": "Urine dipstick",
+     "b": "Answers: Is there haematuria or proteinuria? A positive red cell count confirms glomerular bleeding"
+    },
+    {
+     "a": "Serum creatinine",
+     "b": "Answers: Is renal function impaired? A rise >50% from baseline indicates significant injury"
+    },
+    {
+     "a": "ASO titre",
+     "b": "Answers: Is there recent streptococcal infection? A titre >200 IU/mL supports post‑streptococcal AGN"
+    },
+    {
+     "a": "Complement C3",
+     "b": "Answers: Is complement consumed? Low C3 suggests post‑streptococcal AGN"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Early recognition of life‑threatening complications is vital. Watch for rapidly rising creatinine, pulmonary oedema, severe hypertension and seizures.",
+   "b": [
+    "Acute kidney injury (Stage 3)",
+    "Pulmonary oedema",
+    "Hypertensive encephalopathy",
+    "Severe anaemia"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "A rise to ≥4 mg/dL or need for dialysis signals imminent failure"
+    },
+    {
+     "a": "Blood pressure",
+     "b": "Systolic >180 mmHg or diastolic >110 mmHg warrants emergency management"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying trigger, control hypertension, and support renal function. Avoid nephrotoxic drugs and monitor fluid balance closely.",
+   "b": [
+    "Antibiotics for streptococcal infection (penicillin V or amoxicillin) – first line"
+   ],
+   "t": [
+    {
+     "a": "Hydrochlorothiazide",
+     "b": "Answers: How to lower blood pressure? It reduces volume and is safe in AGN"
+    },
+    {
+     "a": "Furosemide",
+     "b": "Answers: How to manage oedema? It promotes diuresis but avoid over‑diuresis"
+    },
+    {
+     "a": "Avoid NSAIDs",
+     "b": "Answers: Why? They reduce renal perfusion and worsen injury"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular monitoring of blood pressure, urine output and renal function is essential. Prevention focuses on early treatment of infections and vaccination where available.",
+   "b": [
+    "Monthly BP checks for 6 months",
+    "Urine dipstick every 2 weeks until normal",
+    "Vaccination against streptococcal disease (if available)"
+   ],
+   "t": [
+    {
+     "a": "Serum creatinine",
+     "b": "Answers: Is renal function improving? A decline toward baseline indicates recovery"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnosis includes acute tubular necrosis, post‑renal obstruction and systemic vasculitis.",
+   "b": [
+    "Acute tubular necrosis – no haematuria, more oliguria"
+   ],
+   "t": [
+    {
+     "a": "Urine microscopy",
+     "b": "Answers: Are there red cell casts? Their presence favours AGN"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low complement can be normal in some infections; ASO titres may be elevated in asymptomatic carriers. Clinical correlation is mandatory.",
+   "b": [
+    "ASO titre may remain high for months post‑infection"
+   ],
+   "t": [
+    {
+     "a": "ASO titre",
+     "b": "Answers: Does a high titre confirm AGN? No – it only indicates recent streptococcal exposure"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden oliguria or anuria",
+  "Severe hypertension (SBP >180 mmHg)",
+  "Pulmonary oedema",
+  "Seizures",
+  "Rapid rise in serum creatinine to ≥4 mg/dL"
+ ],
+ "faq": [
+  {
+   "q": "Why is hypertension common in AGN?",
+   "a": "Immune complex deposition increases vascular permeability and activates renin‑angiotensin system, raising blood pressure."
+  },
+  {
+   "q": "Can AGN resolve without treatment?",
+   "a": "Mild cases may recover spontaneously, but untreated severe AGN often leads to chronic kidney disease."
+  },
+  {
+   "q": "What is the role of steroids in AGN?",
+   "a": "Steroids are reserved for rapidly progressive GN or lupus nephritis; they are not routinely used in post‑streptococcal AGN."
+  }
+ ],
+ "exam": [
+  "What is the first investigation you would order in a child with suspected AGN and why? — Urine dipstick to confirm haematuria and proteinuria, the hallmark of glomerular injury.",
+  "How would you differentiate AGN from acute tubular necrosis on bedside exam? — Presence of red cell casts on microscopy suggests AGN, whereas ATN shows muddy brown granular casts.",
+  "A child with AGN develops severe hypertension. What is the first drug you would give and why? — Hydrochlorothiazide; it lowers BP by diuresis and is safe in renal disease.",
+  "Why is NSAID use contraindicated in AGN? — NSAIDs reduce prostaglandin‑mediated vasodilation of afferent arterioles, worsening renal perfusion.",
+  "What is the significance of a low C3 complement level in a child with haematuria? — It indicates complement consumption typical of post‑streptococcal AGN.",
+  "When would you consider dialysis in a child with AGN? — If serum creatinine rises to ≥4 mg/dL, oliguria persists, or fluid overload causes pulmonary oedema.",
+  "How does schistosomiasis lead to AGN in endemic areas? — Chronic S. haematobium infection causes immune complex deposition in the glomerulus, triggering inflammation.",
+  "What is the most common trigger of AGN in low‑resource settings? — Streptococcal pharyngitis or impetigo."
+ ],
+ "related": [
+  "Post‑streptococcal glomerulonephritis",
+  "Acute tubular necrosis",
+  "Hypertensive nephropathy",
+  "Lupus nephritis",
+  "Rheumatic heart disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-19",
+ "reviewed": false
+}

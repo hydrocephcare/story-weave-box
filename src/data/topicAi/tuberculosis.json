@@ -158,5 +158,440 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam identify pulmonary TB, extrapulmonary sites and red flags while recognising the limits of bedside testing.",
+    "b": [
+     "Duration of cough > 2 weeks, sputum character, haemoptysis, night sweats, fever, weight loss, anorexia",
+     "Previous TB or treatment, known drug‑resistance, HIV status, diabetes, pregnancy, malnutrition",
+     "Contact with TB case, crowded living conditions, incarceration, travel to high‑incidence area",
+     "Vaccination history (BCG scar), prior BCG may affect TST",
+     "Medication history – especially rifampicin in contraceptives or warfarin"
+    ],
+    "t": [
+     {
+      "a": "Inspection of chest",
+      "b": "Look for cachexia, clubbing, chest wall deformity, visible pulsations; a positive finding suggests chronic disease but cannot confirm TB"
+     },
+     {
+      "a": "Palpation for tracheal deviation and tactile fremitus",
+      "b": "Increased fremitus over consolidation; absent or reduced fremitus over pleural effusion – bedside clue only"
+     },
+     {
+      "a": "Percussion of lung fields",
+      "b": "Dullness suggests consolidation or effusion; hyperresonance suggests pneumothorax – does not differentiate cause"
+     },
+     {
+      "a": "Auscultation",
+      "b": "Crackles, bronchial breath sounds, pleural rub; findings support pathology but are not specific for TB"
+     },
+     {
+      "a": "Lymph node examination (cervical, supraclavicular)",
+      "b": "Firm, non‑tender nodes may indicate TB lymphadenitis; cannot exclude other infections or malignancy"
+     },
+     {
+      "a": "Abdominal exam for ascites or hepatomegaly",
+      "b": "Shifting dullness indicates fluid; TB peritonitis possible but requires further testing; bedside test cannot identify organism"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Each test answers a specific clinical question; interpretation follows WHO and national guidelines, with alternatives when resources are limited.",
+    "b": [
+     "Sputum microscopy (Ziehl‑Neelsen) – detects acid‑fast bacilli; two samples required; any positive slide confirms pulmonary TB",
+     "Xpert MTB/RIF (GeneXpert) – answers presence of M. tuberculosis and rifampicin resistance; Ct value < 28 suggests high bacillary load",
+     "Chest X‑ray – answers radiological pattern; upper‑lobe infiltrates, cavitation, hilar adenopathy indicate active disease; miliary pattern suggests disseminated TB",
+     "Culture (solid or liquid) – gold standard for diagnosis and drug‑susceptibility; growth time 2‑8 weeks; positive culture confirms TB",
+     "Interferon‑γ release assay (IGRA) – answers latent infection in BCG‑vaccinated; positive result indicates immune sensitisation, not active disease",
+     "Tuberculin skin test (TST) – induration ≥ 10 mm in persons without risk factors is positive; < 5 mm negative; intermediate values need clinical correlation",
+     "Full blood count – looks for anemia, lymphocytosis; non‑specific but supports chronic infection",
+     "Liver function tests – baseline before hepatotoxic drugs; elevations > 3 × ULN may require regimen modification",
+     "HIV test – answers co‑infection status; positive result changes treatment duration and prophylaxis",
+     "Urine LAM (lateral flow) – for HIV‑positive patients with CD4 < 200; positive line indicates disseminated TB when microscopy negative"
+    ],
+    "t": [
+     {
+      "a": "When Xpert unavailable",
+      "b": "Use sputum smear plus clinical‑radiological algorithm; treat empirically if high suspicion and risk factors"
+     },
+     {
+      "a": "If culture not possible",
+      "b": "Rely on smear, Xpert, and radiology; consider treatment trial after multidisciplinary review"
+     },
+     {
+      "a": "If IGRA/TST unavailable",
+      "b": "Base latent TB decision on exposure history, BCG status, and risk factors"
+     },
+     {
+      "a": "If chest X‑ray unavailable",
+      "b": "Use bedside lung exam and symptom duration; refer for imaging if possible before starting therapy"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification integrates microbiology, radiology and clinical status to guide therapy length and need for adjunctive measures.",
+    "b": [
+     "Confirmed pulmonary TB: positive sputum smear or Xpert, or culture, with compatible clinical/radiological picture",
+     "Probable pulmonary TB: smear‑negative, Xpert negative but typical symptoms, radiology and response to trial therapy",
+     "Extrapulmonary TB: site‑specific criteria (e.g., lymph node biopsy showing granulomas, pleural fluid ADA > 40 U/L)",
+     "Severity grading (WHO): 1) No danger signs – outpatient regimen; 2) Presence of danger signs (e.g., respiratory rate > 30, inability to eat, severe weight loss) – consider inpatient care",
+     "Staging for HIV‑co‑infected: CD4 < 200 cells/µL – start antiretroviral therapy 2 weeks after TB therapy; CD4 ≥ 200 – start ART within 8 weeks",
+     "Drug‑resistance classification: MDR‑TB (resistant to isoniazid + rifampicin); XDR‑TB (MDR‑TB + fluoroquinolone resistance + resistance to bedaquiline or linezolid)",
+     "Miliary TB: disseminated radiographic pattern, often with systemic symptoms; treat as severe disease with possible inpatient monitoring"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic TB clinically or radiologically; targeted history, exam and focused tests separate them.",
+    "b": [
+     "Bacterial pneumonia – acute onset, high fever, lobar consolidation; sputum Gram stain positive, rapid response to antibiotics",
+     "Lung cancer – weight loss, chronic cough, hemoptysis; chest X‑ray shows mass, often central; sputum cytology or biopsy required",
+     "Sarcoidosis – non‑caseating granulomas, bilateral hilar lymphadenopathy; ACE level elevated, biopsy non‑caseating; lacks systemic TB symptoms",
+     "Fungal infections (e.g., histoplasmosis) – endemic exposure, similar radiology; fungal cultures or antigen tests differentiate",
+     "Pneumoconiosis – occupational exposure, nodular opacities; history of dust exposure key; no microbiological evidence of TB"
+    ],
+    "t": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder guides clinicians from initial stabilization to definitive therapy and escalation, ensuring safe care in low‑resource settings.",
+    "b": [
+     "First: confirm diagnosis with two sputum AFB smears or GeneXpert; isolate patient and start contact tracing.",
+     "Second: begin standard 4‑drug regimen (isoniazid, rifampicin, pyrazinamide, ethambutol) for 2 months; give pyridoxine to prevent neuropathy.",
+     "Third: monitor liver enzymes, visual acuity, and peripheral nerves at baseline and monthly; assess adherence with directly observed therapy.",
+     "Fourth: after 2 months, continue isoniazid and rifampicin for 4 months; extend to 7 months if smear‑positive at 2 months or if disease is severe.",
+     "Fifth: refer to specialist if treatment failure, drug‑resistant pattern, severe adverse reaction, or clinical deterioration."
+    ],
+    "t": [
+     {
+      "a": "Isolation",
+      "b": "Place patient in a well‑ventilated area; use surgical mask for cough control."
+     },
+     {
+      "a": "Directly observed therapy (DOT)",
+      "b": "Ensures adherence; use community health worker when clinic visits are impractical."
+     },
+     {
+      "a": "Baseline investigations",
+      "b": "Liver function tests, renal function, HIV test, pregnancy test if applicable."
+     },
+     {
+      "a": "Escalation criteria",
+      "b": "Persistent positive smear at 2 months, worsening radiograph, or new extrapulmonary sites → send sputum for culture and drug‑susceptibility testing."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects of first‑line agents and common drug interactions; rapid actions prevent morbidity.",
+    "b": [
+     "Rifampicin: hepatotoxicity, orange body fluids – monitor LFTs; induces CYP enzymes, reduces warfarin, oral contraceptives, and some antiretrovirals; consider alternative contraception.",
+     "Pyrazinamide: hyperuricemia and hepatotoxicity – check uric acid if gouty symptoms; stop if ALT >5 × ULN or severe arthralgia.",
+     "Ethambutol: optic neuritis – baseline visual acuity and colour vision, repeat monthly; discontinue if acuity falls >2 lines.",
+     "Drug‑resistant TB: avoid fluoroquinolones if QT prolongation; monitor ECG when using bedaquiline or delamanid."
+    ],
+    "t": [
+     {
+      "a": "Rifampicin‑warfarin interaction",
+      "b": "Rifampicin induces metabolism, lowering INR; increase warfarin dose or switch to alternative anticoagulant."
+     },
+     {
+      "a": "Rifampicin‑contraceptive failure",
+      "b": "Induction reduces hormonal levels; advise barrier methods or switch to non‑hormonal contraception."
+     },
+     {
+      "a": "Isoniazid‑pyridoxine prophylaxis",
+      "b": "Prevents neuropathy; give to all patients, higher dose in diabetics or malnourished."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognize severe outcomes early; timely referral improves survival in low‑resource hospitals.",
+    "b": [
+     "Miliary TB: fever, weight loss, diffuse infiltrates; obtain chest X‑ray; start full regimen and refer for inpatient care.",
+     "Pleural effusion or empyema: dyspnoea, dullness to percussion; perform thoracentesis; if loculated, refer for chest tube drainage.",
+     "Respiratory failure: SpO₂ < 90 % on room air, tachypnoea; provide oxygen, consider ICU transfer.",
+     "Drug‑resistant TB: persistent smear positivity after 2 months or known contact with MDR/XDR case; send sputum for culture and DST, start second‑line regimen under specialist guidance.",
+     "Severe hepatotoxicity: ALT/AST > 5 × ULN with symptoms; stop all hepatotoxic drugs, monitor, and restart with modified regimen after recovery."
+    ],
+    "t": [
+     {
+      "a": "Persistent positive smear at 2 months",
+      "b": "Indicates possible resistance; obtain culture and DST, consider adding fluoroquinolone."
+     },
+     {
+      "a": "Neurological signs",
+      "b": "If meningitis suspected, add high‑dose isoniazid, rifampicin, pyrazinamide, ethambutol, and steroids; refer urgently."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities and contextual factors modify presentation, investigations, and therapy choices.",
+    "b": [
+     "HIV co‑infection: lower CD4, atypical radiograph, higher smear‑negative rates; start antiretroviral therapy 2 weeks after TB treatment, avoid drug interactions with rifampicin.",
+     "Malnutrition: worsened immunity, increased drug toxicity; give nutritional supplementation and pyridoxine.",
+     "Pregnancy: avoid streptomycin; isoniazid, rifampicin, ethambutol are safe; monitor liver function closely.",
+     "Diabetes: higher risk of treatment failure; monitor glucose, consider extending continuation phase.",
+     "Renal failure: ethambutol and pyrazinamide require dose adjustment; monitor renal function.",
+     "Alcoholism: potentiates hepatotoxicity; counsel abstinence, monitor LFTs.",
+     "Herbal remedies (e.g., St. John’s wort): induce CYP enzymes, reduce rifampicin levels; advise discontinuation."
+    ],
+    "t": [
+     {
+      "a": "Pregnancy‑streptomycin contraindication",
+      "b": "Avoid due to ototoxicity to fetus; use alternative regimen."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches for vulnerable populations ensure efficacy while minimizing harm.",
+    "b": [
+     "Children (<15 y): use paediatric fixed‑dose combinations; add pyridoxine; monitor growth and development; avoid streptomycin unless necessary.",
+     "Pregnant women: give isoniazid, rifampicin, ethambutol; add pyridoxine; defer pyrazinamide only if local policy restricts; monitor hepatic enzymes.",
+     "Elderly: higher baseline liver disease; start with standard regimen but monitor LFTs monthly; assess for polypharmacy interactions.",
+     "People with HIV: start TB therapy first, then ART after 2 weeks; use efavirenz‑based regimen to avoid rifampicin interaction with protease inhibitors.",
+     "Low‑resource settings: use GeneXpert if available; otherwise rely on two sputum smears and chest X‑ray; employ community health workers for DOT and contact tracing."
+    ],
+    "t": [
+     {
+      "a": "Paediatric dosing",
+      "b": "Fixed‑dose combinations provide weight‑based dosing; ensure adherence with caregiver education."
+     },
+     {
+      "a": "ART timing",
+      "b": "Initiate ART 2 weeks after TB treatment to reduce immune reconstitution inflammatory syndrome risk."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Two sputum samples are examined for AFB using Ziehl‑Neelsen stain",
+   "RIPE = Rifampicin, Isoniazid, Pyrazinamide, Ethambutol – first‑line regimen for 2‑month intensive phase",
+   "XDR‑TB = MDR‑TB plus resistance to any fluoroquinolone and at least one Group A drug (bedaquiline or linezolid)",
+   "TST induration ≥10 mm is positive in persons with no known risk factors",
+   "Miliary TB is diagnosed when chest X‑ray shows diffuse millet‑seed nodules and systemic symptoms are present",
+   "HIV co‑infection increases risk of progression to active TB by >20‑fold",
+   "A positive GeneXpert MTB/RIF result confirms TB and detects rifampicin resistance in ≤2 hours",
+   "Treatment success target ≥85 % for new pulmonary TB cases in low‑resource settings"
+  ],
+  "mnemonics": [
+   {
+    "n": "RIPE",
+    "t": "Rifampicin, Isoniazid, Pyrazinamide, Ethambutol – core drugs for intensive phase"
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What is the first bedside investigation for a patient with suspected pulmonary TB?",
+    "a": "Two sputum samples for AFB smear and GeneXpert; this provides microbiological confirmation and rifampicin resistance status.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate smear‑negative pulmonary TB from other chronic cough causes?",
+    "a": "Combine clinical picture, chest X‑ray suggestive lesions, and a positive GeneXpert or culture; smear negativity alone is insufficient.",
+    "hot": true
+   },
+   {
+    "q": "When should you start empirical TB treatment in a HIV‑positive patient?",
+    "a": "If they have persistent cough >2 weeks, weight loss, fever, and a chest X‑ray compatible with TB, despite negative smears, especially CD4 <200 cells/µL.",
+    "hot": true
+   },
+   {
+    "q": "Why is rifampicin contraindicated with warfarin?",
+    "a": "Rifampicin induces hepatic CYP enzymes, increasing warfarin metabolism and lowering INR, leading to sub‑therapeutic anticoagulation.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "What proportion of infected individuals develop active TB in their lifetime?",
+    "a": "Approximately 5‑10 % of those infected will develop active disease, most within the first 2 years.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which organ is the most common site of TB disease?",
+    "a": "The lungs account for >80 % of all TB cases, making pulmonary TB the predominant form.",
+    "past": true
+   },
+   {
+    "q": "When does granuloma formation typically occur after primary infection?",
+    "a": "Cell‑mediated immunity peaks around 2‑8 weeks, leading to granuloma formation and the Ghon complex.",
+    "past": true
+   },
+   {
+    "q": "What is the minimum TST induration considered positive in a low‑risk adult?",
+    "a": "An induration of 10 mm or more is positive in individuals without known risk factors.",
+    "past": true
+   },
+   {
+    "q": "How would you classify pulmonary TB by person for epidemiology?",
+    "a": "By HIV status (positive/negative), by treatment history (new vs retreatment), and by age group (children <15, adults 15‑64, elderly ≥65).",
+    "past": true
+   },
+   {
+    "q": "Why is it important to classify TB epidemiologically?",
+    "a": "It guides resource allocation, identifies high‑risk groups, monitors drug‑resistance trends, evaluates control programmes, and informs public‑health interventions.",
+    "past": true
+   },
+   {
+    "q": "What bedside sign suggests pleural effusion in TB?",
+    "a": "Dullness to percussion at the lung base with decreased tactile fremitus; shifting dullness confirms fluid movement."
+   },
+   {
+    "q": "How do you interpret a GeneXpert result that is MTB detected, rifampicin resistant?",
+    "a": "Diagnose rifampicin‑resistant TB; initiate MDR‑TB regimen pending full DST results."
+   },
+   {
+    "q": "What is the role of corticosteroids in TB meningitis?",
+    "a": "Adjunctive dexamethasone reduces mortality and neurological complications by dampening inflammatory response."
+   },
+   {
+    "q": "When is surgical referral indicated in pulmonary TB?",
+    "a": "Persistent massive haemoptysis, bronchiectasis with recurrent infections, or localized cavitary disease not responding to therapy."
+   },
+   {
+    "q": "What is the recommended duration of continuation phase for drug‑susceptible TB?",
+    "a": "Four months of isoniazid and rifampicin after the two‑month intensive phase, unless extended by clinician judgment."
+   },
+   {
+    "q": "How does pregnancy alter TB management?",
+    "a": "Use standard first‑line drugs (rifampicin, isoniazid, ethambutol); avoid streptomycin due to ototoxicity to the fetus."
+   },
+   {
+    "q": "What is the impact of malnutrition on TB treatment outcomes?",
+    "a": "Malnutrition worsens drug absorption, increases relapse risk, and is associated with higher mortality; nutritional support is essential."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old man with HIV (CD4 150) presents with a 3‑week cough, weight loss, and a chest X‑ray showing upper‑lobe infiltrates. Sputum smear is negative. Which next step is most appropriate?",
+    "o": [
+     "Start empirical TB treatment immediately",
+     "Repeat sputum smear twice more",
+     "Obtain GeneXpert on sputum",
+     "Wait for culture results"
+    ],
+    "a": 2,
+    "e": "GeneXpert provides rapid detection and rifampicin resistance, crucial in HIV patients with smear‑negative disease"
+   },
+   {
+    "q": "A patient on RIPE therapy develops orange urine and a rash after 2 weeks. Which drug is most likely responsible?",
+    "o": [
+     "Rifampicin",
+     "Isoniazid",
+     "Pyrazinamide",
+     "Ethambutol"
+    ],
+    "a": 0,
+    "e": "Rifampicin causes orange discoloration of body fluids and can cause hypersensitivity rash"
+   },
+   {
+    "q": "In a low‑resource clinic without GeneXpert, how should smear‑negative pulmonary TB be diagnosed?",
+    "o": [
+     "Rely solely on clinical symptoms",
+     "Use chest X‑ray plus two negative smears and start treatment if high suspicion",
+     "Wait for culture results",
+     "Treat as bacterial pneumonia first"
+    ],
+    "a": 1,
+    "e": "Diagnosis combines compatible clinical/radiological features with two negative smears; treatment is started when suspicion is high"
+   },
+   {
+    "q": "Which TST induration size is considered positive in a person with no TB risk factors?",
+    "o": [
+     "5 mm",
+     "10 mm",
+     "15 mm",
+     "20 mm"
+    ],
+    "a": 1,
+    "e": "≥10 mm is the cut‑off for low‑risk individuals",
+    "past": true
+   },
+   {
+    "q": "A pregnant woman is diagnosed with drug‑susceptible TB. Which drug should be avoided?",
+    "o": [
+     "Rifampicin",
+     "Isoniazid",
+     "Ethambutol",
+     "Streptomycin"
+    ],
+    "a": 3,
+    "e": "Streptomycin is ototoxic to the fetus and is contraindicated in pregnancy"
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old male farmer presents with a 2‑month history of productive cough, night sweats, and 6 kg weight loss. HIV test negative. Chest X‑ray shows cavitary lesion in the right upper lobe. Two sputum samples are AFB‑positive. He is started on RIPE.",
+    "qs": [
+     {
+      "q": "What is the next step after initiating therapy?",
+      "a": "Baseline liver function tests and counseling on drug side‑effects; arrange follow‑up sputum smear at 2 months."
+     },
+     {
+      "q": "At 2‑month review, sputum smear is still positive. What does this indicate?",
+      "a": "Possible slow response or drug resistance; obtain GeneXpert or culture for DST and consider adherence issues."
+     },
+     {
+      "q": "Which complication should you monitor for in this patient?",
+      "a": "Development of a bronchopleural fistula or hemoptysis due to cavitary disease; assess for worsening dyspnea."
+     }
+    ]
+   },
+   {
+    "v": "A 6‑year‑old child from a rural clinic presents with low‑grade fever, abdominal distension, and a palpable supraclavicular lymph node. Mantoux induration is 12 mm. Chest X‑ray is normal. Ultrasound shows ascites with high SAAG. GeneXpert on ascitic fluid is positive for MTB.",
+    "qs": [
+     {
+      "q": "What is the classification of this TB presentation?",
+      "a": "Extrapulmonary TB – abdominal (peritoneal) TB with lymph node involvement."
+     },
+     {
+      "q": "What is the initial treatment regimen for this child?",
+      "a": "Standard pediatric RIPE dosing for 2 months intensive phase followed by 4 months continuation with isoniazid and rifampicin."
+     },
+     {
+      "q": "What additional management is required for the ascites?",
+      "a": "Therapeutic paracentesis if symptomatic and start anti‑TB therapy; monitor for fluid re‑accumulation."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Listing three sputum samples for AFB smear – WHO now recommends two samples",
+   "Defining XDR‑TB without mentioning fluoroquinolone and Group A drug resistance",
+   "Stating TST ≥15 mm is positive for low‑risk adults – correct cut‑off is 10 mm",
+   "Claiming smear‑negative TB is diagnosed solely by negative smears – requires clinical and radiological correlation",
+   "Prescribing streptomycin in pregnancy – it is contraindicated due to fetal ototoxicity",
+   "Omitting the need for baseline liver function tests before starting RIPE"
+  ],
+  "exam": [
+   "What is the first bedside investigation for a patient with suspected pulmonary TB? — Two sputum samples for AFB smear and GeneXpert; this provides microbiological confirmation and rifampicin resistance status.",
+   "How do you differentiate smear‑negative pulmonary TB from other chronic cough causes? — Combine clinical picture, chest X‑ray suggestive lesions, and a positive GeneXpert or culture; smear negativity alone is insufficient.",
+   "When should you start empirical TB treatment in a HIV‑positive patient? — If they have persistent cough >2 weeks, weight loss, fever, and a chest X‑ray compatible with TB, despite negative smears, especially CD4 <200 cells/µL.",
+   "Why is rifampicin contraindicated with warfarin? — Rifampicin induces hepatic CYP enzymes, increasing warfarin metabolism and lowering INR, leading to sub‑therapeutic anticoagulation.",
+   "What proportion of infected individuals develop active TB in their lifetime? — Approximately 5‑10 % of those infected will develop active disease, most within the first 2 years.",
+   "Which organ is the most common site of TB disease? — The lungs account for >80 % of all TB cases, making pulmonary TB the predominant form.",
+   "When does granuloma formation typically occur after primary infection? — Cell‑mediated immunity peaks around 2‑8 weeks, leading to granuloma formation and the Ghon complex.",
+   "What is the minimum TST induration considered positive in a low‑risk adult? — An induration of 10 mm or more is positive in individuals without known risk factors.",
+   "How would you classify pulmonary TB by person for epidemiology? — By HIV status (positive/negative), by treatment history (new vs retreatment), and by age group (children <15, adults 15‑64, elderly ≥65).",
+   "Why is it important to classify TB epidemiologically? — It guides resource allocation, identifies high‑risk groups, monitors drug‑resistance trends, evaluates control programmes, and informs public‑health interventions.",
+   "What bedside sign suggests pleural effusion in TB? — Dullness to percussion at the lung base with decreased tactile fremitus; shifting dullness confirms fluid movement.",
+   "How do you interpret a GeneXpert result that is MTB detected, rifampicin resistant? — Diagnose rifampicin‑resistant TB; initiate MDR‑TB regimen pending full DST results.",
+   "What is the role of corticosteroids in TB meningitis? — Adjunctive dexamethasone reduces mortality and neurological complications by dampening inflammatory response.",
+   "When is surgical referral indicated in pulmonary TB? — Persistent massive haemoptysis, bronchiectasis with recurrent infections, or localized cavitary disease not responding to therapy."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-19",
+  "checked": "2026-10-19",
+  "trimmed": 1
+ }
 }

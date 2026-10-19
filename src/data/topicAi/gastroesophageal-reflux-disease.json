@@ -1,0 +1,186 @@
+{
+ "medical": true,
+ "title": "Pediatric Gastroesophageal Reflux Disease",
+ "subject": "Paediatrics",
+ "summary": "GERD is the most common esophageal disorder in children, caused by frequent retrograde flow of gastric contents. Diagnosis relies on clinical features and selective testing, with severity staged by symptom frequency and complications.",
+ "aka": [
+  "GERD",
+  "Gastro‑oesophageal reflux disease"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "GERD is pathological gastro‑oesophageal reflux that causes troublesome symptoms or complications. Diagnosis is clinical; objective testing is reserved for atypical or refractory cases.",
+   "b": [
+    "Reflux of gastric contents ≥ twice weekly with associated distress",
+    "Complications such as oesophagitis, stricture, or failure to thrive"
+   ],
+   "t": [
+    {
+     "a": "Trial of proton‑pump inhibitor (PPI) for 4–8 weeks",
+     "b": "Does the child improve? A positive response supports GERD when endoscopy is unavailable"
+    },
+    {
+     "a": "Upper GI endoscopy with biopsy",
+     "b": "Is there erosive oesophagitis or Barrett’s? Presence confirms mucosal damage; absence does not exclude GERD"
+    },
+    {
+     "a": "24‑hour pH‑impedance study (if available)",
+     "b": "What is the acid exposure time? >6 % of recording time indicates abnormal reflux"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom frequency, impact on growth, and presence of complications.",
+   "b": [
+    "Mild: occasional regurgitation, no growth impact",
+    "Moderate: daily symptoms, weight‑for‑age <‑2 SD or recurrent cough",
+    "Severe: failure to thrive, oesophagitis, stricture, or respiratory complications"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Most cases are functional, but several conditions increase reflux risk, especially in low‑resource settings.",
+   "b": [
+    "Infantile feeding immaturity (most common)",
+    "Neurological impairment (cerebral palsy, seizures)",
+    "Obesity (in older children)",
+    "Chronic lung disease (e.g., bronchopulmonary dysplasia)",
+    "HIV infection – delayed gastric emptying",
+    "Tuberculosis mediastinal lymphadenitis – external compression",
+    "Helicobacter pylori infection – altered gastric motility"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with age; younger infants cannot verbalise discomfort.",
+   "b": [
+    "Infants: frequent regurgitation, irritability, poor weight gain, arching of back",
+    "Toddlers: chronic cough, wheeze, recurrent otitis media, refusal to eat",
+    "School‑age: heartburn, retrosternal pain, dysphagia, nocturnal vomiting"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are guided by red‑flag features or failure to respond to empiric therapy.",
+   "b": [
+    "Baseline CBC, electrolytes – look for anemia or dehydration",
+    "Chest X‑ray – assess for aspiration pneumonia when respiratory symptoms dominate"
+   ],
+   "t": [
+    {
+     "a": "Upper GI endoscopy",
+     "b": "Is there mucosal injury? Erosive changes confirm severe disease; biopsies rule out eosinophilic oesophagitis"
+    },
+    {
+     "a": "24‑hour pH‑impedance (if present)",
+     "b": "What is the acid exposure? >6 % supports pathological reflux; normal study suggests functional vomiting"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Identify features that demand urgent evaluation.",
+   "b": [
+    "Failure to thrive despite adequate calories",
+    "Oesophageal stricture or ulceration",
+    "Recurrent aspiration pneumonia",
+    "Hematemesis or melena",
+    "Severe chest pain mimicking cardiac disease"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat underlying contributors, then use pharmacologic and non‑pharmacologic measures.",
+   "b": [
+    "Positioning: keep infant upright ≥30 min after feeds",
+    "Thickened feeds (rice cereal) for infants – reduces reflux volume",
+    "Weight optimisation in overweight children",
+    "Avoidance of tobacco smoke and herbal irritants"
+   ],
+   "t": [
+    {
+     "a": "Proton‑pump inhibitor (e.g., omeprazole)",
+     "b": "When is a PPI indicated? Persistent symptoms after lifestyle measures; reduces acid exposure and promotes healing"
+    },
+    {
+     "a": "H2‑receptor antagonist (e.g., ranitidine)",
+     "b": "When is an H2 blocker used? Mild/moderate disease or as step‑down after PPI; less potent acid suppression"
+    },
+    {
+     "a": "Prokinetic (e.g., metoclopramide)",
+     "b": "When is a prokinetic added? Documented delayed gastric emptying; improves gastric motility"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular review ensures symptom control, growth, and detection of complications.",
+   "b": [
+    "Re‑assess weight and growth every 4–6 weeks until stable",
+    "Repeat endoscopy only if alarm symptoms develop",
+    "Educate caregivers on feeding techniques and avoidance of triggers"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnoses share vomiting or cough but differ in pathophysiology.",
+   "b": [
+    "Eosinophilic oesophagitis – allergic inflammation, often with food triggers",
+    "Pyloric stenosis – projectile vomiting in 3–6 week infants, palpable olive mass",
+    "Gastroenteritis – acute diarrhoea, fever, short‑duration vomiting"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain investigations may be falsely reassuring.",
+   "b": [
+    "Normal pH study does not exclude non‑acid reflux; impedance needed for full picture",
+    "Absence of erosive changes on endoscopy does not rule out symptomatic GERD"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe weight loss or failure to thrive",
+  "Recurrent aspiration pneumonia",
+  "Bleeding from the gastrointestinal tract",
+  "Persistent vomiting with dehydration"
+ ],
+ "faq": [
+  {
+   "q": "Why is GERD common in infants?",
+   "a": "Infants have a short, immature oesophagus and a predominantly liquid diet, which predisposes to frequent reflux."
+  },
+  {
+   "q": "Can a therapeutic trial replace endoscopy?",
+   "a": "In low‑resource settings a 4‑week PPI trial is acceptable when alarm features are absent; lack of response prompts further testing."
+  },
+  {
+   "q": "When should surgery be considered?",
+   "a": "If symptoms persist despite maximal medical therapy, or if complications such as stricture or severe respiratory disease develop."
+  }
+ ],
+ "exam": [
+  "A 6‑month‑old presents with daily regurgitation and weight‑for‑age −3 SD. What is your next step — assess growth, start a PPI trial, and arrange feeding modification before endoscopy.",
+  "A child on long‑term PPI develops recurrent respiratory infections. Explain why this may be related — acid suppression can alter gastric flora and increase aspiration risk.",
+  "How does eosinophilic oesophagitis differ from GERD on endoscopy — GERD shows erosive changes; eosinophilic oesophagitis shows rings, furrows, and eosinophil‑rich infiltrate.",
+  "A toddler with HIV presents with chronic cough and vomiting. Which additional cause should you consider — mediastinal TB lymphadenitis causing extrinsic oesophageal compression.",
+  "Why are prokinetics not first‑line in infants with GERD — they have limited evidence, risk extrapyramidal effects, and are reserved for documented delayed gastric emptying.",
+  "Describe the positioning strategy for an infant with GERD — keep upright ≥30 minutes after each feed and avoid supine sleep for the first 6 months.",
+  "What red‑flag symptom mandates urgent endoscopy — haematemesis or melena indicating possible ulceration.",
+  "Explain why a normal 24‑hour pH study does not exclude GERD — non‑acid reflux can still cause symptoms; impedance testing is required for detection."
+ ],
+ "related": [
+  "Eosinophilic oesophagitis",
+  "Pyloric stenosis",
+  "Aspiration pneumonia",
+  "Feeding difficulties in infants",
+  "Pediatric obesity",
+  "HIV‑related gastrointestinal disease"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-19",
+ "reviewed": false
+}

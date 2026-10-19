@@ -190,5 +190,436 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic exam differentiate left‑ and right‑sided failure, identify precipitating factors and reveal red‑flags that require urgent action.",
+    "b": [
+     "Onset, duration and progression of dyspnoea; orthopnoea and paroxysmal nocturnal dyspnoea.",
+     "Peripheral oedema, weight gain, abdominal fullness, early satiety, and calf swelling.",
+     "Exercise tolerance (NYHA class), recent infections, medication changes, alcohol intake, and illicit drug use.",
+     "Past cardiac history: hypertension, rheumatic fever, myocardial infarction, cardiomyopathy, arrhythmia.",
+     "Comorbidities common in low‑resource settings: HIV, TB, anemia, pregnancy, chronic kidney disease.",
+     "Medication review: NSAIDs, calcium‑channel blockers, herbal remedies that may worsen fluid retention."
+    ],
+    "t": [
+     {
+      "a": "JVP assessment",
+      "b": "Elevated JVP (>3 cm above the sternal angle) indicates systemic venous congestion; a normal JVP does not exclude right‑sided failure."
+     },
+     {
+      "a": "Lung auscultation",
+      "b": "Bibasal crackles indicate pulmonary congestion; absence does not exclude early left‑sided failure."
+     },
+     {
+      "a": "Peripheral oedema grading",
+      "b": "pitting >1 cm after 5 seconds confirms fluid overload; mild pitting may be missed in early disease."
+     },
+     {
+      "a": "Abdominal exam for ascites",
+      "b": "Shifting dullness (fluid shifts to dependent flank when patient turns) confirms moderate‑large ascites; cannot quantify volume."
+     },
+     {
+      "a": "Hepatomegaly palpation",
+      "b": "Liver edge >2 cm below costal margin suggests congestion; may be absent in early right‑sided failure."
+     },
+     {
+      "a": "Peripheral perfusion check",
+      "b": "Cool extremities and delayed capillary refill point to low‑output state; normal temperature does not exclude compensated failure."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select tests that answer key diagnostic questions; interpret results with local resource limits in mind.",
+    "b": [
+     "What is the cardiac functional status? – Echocardiography (EF, chamber size, valve disease).",
+     "Is there volume overload? – Chest X‑ray (pulmonary congestion, cardiomegaly) and bedside ultrasound for IVC size.",
+     "Are there reversible precipitants? – Full blood count, renal function, electrolytes, fasting glucose, HIV test, sputum for TB if indicated.",
+     "Is there hepatic congestion? – Liver function tests; AST/ALT modestly raised, bilirubin ↑, alkaline phosphatase ↑."
+    ],
+    "t": [
+     {
+      "a": "BNP/NT‑proBNP",
+      "b": "Answers whether heart failure is present; NT‑proBNP ≥300 pg/mL (acute) or ≥125 pg/mL (chronic) is positive. Renal impairment raises levels; interpret with caution."
+     },
+     {
+      "a": "Echocardiography",
+      "b": "Provides EF, wall motion, valve lesions, diastolic function. EF ≤40 % defines HFrEF; EF 41‑49 % is HFmrEF; EF ≥50 % is HFpEF. If unavailable, use bedside cardiac ultrasound for gross EF estimate."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Shows cardiomegaly (CTR >0.5), pulmonary venous congestion, Kerley B lines. Normal film does not exclude early HF."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG)",
+      "b": "SAAG ≥1.1 g/dL indicates portal hypertension from right‑sided failure; <1.1 g/dL suggests peritoneal disease."
+     },
+     {
+      "a": "Renal function panel",
+      "b": "Elevated creatinine (>1.5 mg/dL) signals cardiorenal syndrome; adjust diuretic dosing and avoid nephrotoxic drugs."
+     },
+     {
+      "a": "HIV test",
+      "b": "Positive result prompts assessment for HIV‑associated cardiomyopathy and drug interactions with ACE‑I/ARNI."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Combine clinical criteria with objective measurements to classify heart failure for prognosis and therapy.",
+    "b": [
+     "Diagnosis requires typical symptoms, signs, and objective evidence of cardiac dysfunction (EF, BNP, or imaging).",
+     "NYHA functional class I‑IV grades symptom limitation.",
+     "ACC/AHA stages A‑D describe disease progression from risk factors to refractory end‑stage disease.",
+     "HFrEF: EF ≤40 %; HFpEF: EF ≥50 % with evidence of diastolic dysfunction; HFmrEF: EF 41‑49 %.",
+     "High‑risk features: systolic BP <90 mmHg, renal failure (eGFR <30 mL/min), persistent NYHA III‑IV despite optimal therapy."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑cardiac diseases mimic heart failure; careful history, exam and targeted tests separate them.",
+    "b": [
+     "Chronic obstructive pulmonary disease exacerbation – cough, wheeze, hyperinflated chest, normal JVP; ABG shows hypercapnia."
+    ],
+    "t": [
+     {
+      "a": "Pulmonary embolism",
+      "b": "Sudden dyspnoea, pleuritic chest pain, tachycardia; CT pulmonary angiography positive, D‑dimer elevated. JVP may be raised but lung exam usually clear."
+     },
+     {
+      "a": "Nephrotic syndrome",
+      "b": "Generalized oedema, hypoalbuminaemia, proteinuria >3.5 g/24 h; BNP may be modestly raised but urine protein distinguishes."
+     },
+     {
+      "a": "Liver cirrhosis with ascites",
+      "b": "History of alcohol use, spider naevi, low albumin; SAAG >1.1 g/dL but ultrasound shows small liver, splenomegaly, not cardiac enlargement."
+     },
+     {
+      "a": "Anemia‑related high‑output failure",
+      "b": "Severe anemia (Hb <7 g/dL) causes tachycardia, bounding pulses; BNP may be normal; correction of anemia improves symptoms."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A pragmatic ladder for low‑resource settings that moves from stabilisation to disease‑modifying therapy, with clear triggers for escalation or referral.",
+    "b": [
+     "1. Immediate stabilisation: oxygen to keep SpO2 ≥ 94 %, upright positioning, and loop diuretic (e.g., furosemide) to relieve congestion.",
+     "2. Identify precipitant: treat infection, correct anaemia, optimise blood pressure, stop offending drugs (e.g., non‑dihydropyridine calcium‑channel blockers).",
+     "3. Initiate disease‑modifying drugs: ACE inhibitor or ARB, plus beta‑blocker (carvedilol, bisoprolol, or metoprolol succinate) once euvolemic; add mineralocorticoid receptor antagonist if eGFR >30 mL/min/1.73 m² and K⁺ <5.0 mmol/L.",
+     "4. Monitor daily weight, urine output, blood pressure, heart rate, and symptoms; adjust diuretic dose based on weight change ≥2 kg/day.",
+     "5. Escalate to intravenous diuretics, inotropes (dobutamine) or vasodilators (nitroglycerin) for refractory congestion or low output; consider transfer to higher‑level facility.",
+     "6. Refer for device therapy (ICD, CRT) or advanced therapies (LVAD, transplant) when LVEF ≤35 % despite optimal medical therapy and NYHA III–IV symptoms."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, drug‑drug interactions and practical actions for the core heart‑failure regimen.",
+    "b": [
+     "ACE inhibitor/ARB: watch for cough, hyperkalaemia, rising creatinine >30 %; if K⁺ >5.5 mmol/L or creatinine rise >30 %, reduce dose or switch class.",
+     "Beta‑blocker: may cause bradycardia <50 bpm, worsening fatigue; start low, uptitrate every 2 weeks, and hold if symptomatic hypotension or acute decompensation.",
+     "Mineralocorticoid antagonist: risk of hyperkalaemia and renal impairment; check K⁺ and creatinine within 1 week of initiation, avoid if K⁺ >5.0 mmol/L.",
+     "Loop diuretic: can cause electrolyte loss (hypokalaemia, hyponatraemia) and ototoxicity at high IV doses; supplement potassium if needed, monitor hearing if high‑dose IV used.",
+     "Digoxin (if used for rate control in atrial fibrillation): narrow therapeutic window; check level if renal function falls, avoid concomitant quinidine or verapamil."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise life‑threatening sequelae and the thresholds that demand urgent intervention or referral.",
+    "b": [
+     "Pulmonary oedema: sudden dyspnoea, crackles, pink frothy sputum; give high‑flow oxygen, IV nitroglycerin, and rapid‑acting loop diuretic; call for critical‑care support.",
+     "Cardiogenic shock: SBP <90 mmHg, cool extremities, oliguria; start inotrope (dobutamine or milrinone) and consider vasopressor (norepinephrine); urgent transfer.",
+     "Renal worsening: rise in creatinine >0.3 mg/dL in 48 h; reassess diuretic dose, ensure adequate perfusion, consider nephrology input.",
+     "Arrhythmia precipitating decompensation (e.g., rapid AF): rate control with beta‑blocker or digoxin; if haemodynamically unstable, electrical cardioversion."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Conditions common in low‑resource settings that modify presentation, investigations, or therapy.",
+    "b": [
+     "HIV: may cause myocarditis, pericardial effusion, and drug interactions (e.g., protease inhibitors increase statin levels); monitor CD4 and adjust ART if nephrotoxic.",
+     "Tuberculosis: pericardial TB can mimic right‑sided failure; obtain pleural/pericardial fluid analysis; treat TB before adding steroids.",
+     "Malnutrition: low albumin raises BNP false‑negative risk; rely more on clinical congestion and ultrasound lung B‑lines.",
+     "Pregnancy: avoid ACE inhibitors/ARBs and MRAs; use hydralazine‑nitrate combo and beta‑blocker; monitor for supine hypotension.",
+     "Diabetes: higher risk of renal dysfunction; prefer SGLT2 inhibitor if eGFR ≥30 mL/min/1.73 m², monitor glucose and ketones.",
+     "Alcohol: chronic use causes dilated cardiomyopathy; counsel abstinence, monitor liver enzymes, avoid acetaminophen overdose.",
+     "Herbal remedies (e.g., traditional plant extracts): may contain unknown cardiotoxins or interact with warfarin; ask specifically and discontinue if unsafe.",
+     "Renal or hepatic failure: adjust diuretic intensity, avoid MRAs in severe hepatic dysfunction, use lower‑dose ACE inhibitor if creatinine clearance 30‑50 mL/min."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approach for populations with distinct physiological or resource constraints.",
+    "b": [
+     "Children: most common cause is congenital heart disease; use age‑appropriate ACE inhibitor (e.g., enalapril) and beta‑blocker; diuretics dosed per weight; avoid adult dosing formulas.",
+     "Pregnancy: replace ACE‑I/ARB with hydralazine‑isosorbide dinitrate; beta‑blocker (labetalol) safe; monitor fetal growth and maternal blood pressure closely.",
+     "Elderly (>75 y): start all drugs at half usual dose, titrate slowly; watch for orthostatic hypotension, renal decline, and polypharmacy interactions.",
+     "People with HIV: prioritize drugs with minimal CYP450 interaction with ART; consider SGLT2 inhibitor if renal function permits; screen for opportunistic infections.",
+     "Low‑resource settings: use clinical scoring (e.g., NYHA) and bedside ultrasound for congestion; if BNP unavailable, rely on JVP, lung crackles, and peripheral edema; prioritize generic ACE‑I, loop diuretic, and beta‑blocker."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "NYHA class I–IV defines functional limitation; I=none, II=ordinary activity, III=less than ordinary, IV=at rest",
+   "LVEF ≤40% defines HFrEF; >50% HFpEF; 40‑49% borderline",
+   "BNP ≥100 pg/mL or NT‑proBNP ≥300 pg/mL supports acute HF diagnosis",
+   "ACE‑I/ARB/ARNI, β‑blocker, mineralocorticoid antagonist are core HFrEF drugs",
+   "Loop diuretic dose escalation is first step in decompensation; add thiazide if diuretic resistance",
+   "Sodium‑glucose cotransporter‑2 inhibitor improves mortality in HFrEF regardless of diabetes",
+   "Hypertension and non‑ischemic cardiomyopathy together cause >70% of HF in sub‑Saharan Africa",
+   "High‑output HF causes include severe anemia, thyrotoxicosis, AV fistula, beriberi",
+   "Elevated JVP >3 cm above sternal angle, hepato‑jugular reflux, and peripheral edema indicate right‑sided congestion"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define the three hemodynamic profiles of heart failure (low‑output, high‑output, mixed) and give a typical cause for each.",
+    "a": "Low‑output: reduced cardiac output (e.g., ischemic cardiomyopathy). High‑output: excess demand despite normal output (e.g., severe anemia, thyrotoxicosis). Mixed: combined pressure and volume overload (e.g., severe mitral regurgitation).",
+    "hot": true
+   },
+   {
+    "q": "What bedside test distinguishes pulmonary edema from COPD exacerbation?",
+    "a": "Listen for bibasal crackles, assess for S3, and check for orthopnea; absence of wheeze and presence of rapid fluid clearance after diuretics favors pulmonary edema.",
+    "hot": true
+   },
+   {
+    "q": "How do you perform a hepato‑jugular reflux test and what does a positive result indicate?",
+    "a": "Press firmly over the liver for 10 seconds while observing JVP; a rise ≥3 cm that persists after release indicates impaired right‑ventricular filling and right‑sided HF.",
+    "hot": true
+   },
+   {
+    "q": "Why is diltiazem avoided in HFrEF?",
+    "a": "It is a non‑dihydropyridine calcium‑channel blocker with negative inotropic effect, which can worsen systolic dysfunction.",
+    "hot": true
+   },
+   {
+    "q": "What is the primary physiological consequence of prolonged sympathetic activation in HF?",
+    "a": "Down‑regulation of β‑receptors and progressive myocardial remodeling leading to worsening contractility and arrhythmia risk.",
+    "hot": true
+   },
+   {
+    "q": "Which hormone drives sodium and water retention in severe HF?",
+    "a": "Aldosterone, released via the renin‑angiotensin‑aldosterone system, promotes renal sodium reabsorption.",
+    "hot": true
+   },
+   {
+    "q": "What is the most common primary cause of heart failure in East Africa?",
+    "a": "Hypertension‑related cardiomyopathy, followed by non‑ischemic dilated cardiomyopathy.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Identify the cause of high‑output HF listed in the notes.",
+    "a": "Severe anemia (e.g., sickle‑cell disease or iron‑deficiency).",
+    "past": true
+   },
+   {
+    "q": "Explain the inappropriate workload mechanism causing volume overload HF.",
+    "a": "Regurgitant lesions (e.g., mitral regurgitation) increase left‑atrial volume, leading to eccentric LV remodeling and volume overload.",
+    "past": true
+   },
+   {
+    "q": "What percentage of HF patients die within five years according to the text?",
+    "a": "Approximately 50 % mortality at five years.",
+    "past": true
+   },
+   {
+    "q": "What microscopic feature is expected in a four‑chamber dilated heart at autopsy?",
+    "a": "Myocyte hypertrophy with interstitial fibrosis and occasional myocyte dropout (replacement fibrosis).",
+    "past": true
+   },
+   {
+    "q": "Which hepatic acinar zone is most vulnerable in right‑sided HF and why?",
+    "a": "Zone 3 (centrilobular) suffers hypoxia from reduced hepatic venous outflow and congestion, leading to centrilobular necrosis.",
+    "past": true
+   },
+   {
+    "q": "What bedside history questions are essential in suspected HF?",
+    "a": "Onset/duration of dyspnea, orthopnea, PND, leg swelling, weight change, medication adherence, alcohol use, recent infections, and comorbidities (HTN, diabetes, HIV)."
+   },
+   {
+    "q": "When BNP is unavailable, what alternative supports HF diagnosis?",
+    "a": "Clinical scoring (e.g., Framingham criteria) combined with chest X‑ray showing cardiomegaly or pulmonary congestion."
+   },
+   {
+    "q": "Why is spironolactone contraindicated when serum potassium >5.0 mmol/L?",
+    "a": "Risk of life‑threatening hyperkalaemia due to reduced renal excretion."
+   },
+   {
+    "q": "How do you differentiate constrictive pericarditis from restrictive cardiomyopathy at the bedside?",
+    "a": "Pericardial knock, rapid y‑descents, and discordance of LV/RV pressures on respiration favor constriction; absence of pericardial calcification and normal pericardial thickness favor restrictive cardiomyopathy."
+   },
+   {
+    "q": "What is the next step after a patient with acute decompensated HF fails to diurese with high‑dose loop diuretics?",
+    "a": "Add a thiazide‑type diuretic (e.g., metolazone) or consider ultrafiltration if renal function permits."
+   },
+   {
+    "q": "When should an HF patient be referred for advanced therapy (e.g., transplant or LVAD)?",
+    "a": "Refractory NYHA III–IV symptoms despite optimal GDMT, LVEF < 25 % and frequent hospitalisations, or progressive end‑organ dysfunction."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 58‑year‑old woman presents with dyspnea on exertion, orthopnea, and peripheral edema. Her BP is 150/90 mmHg, HR 88 bpm, LVEF 35 %. Which medication should be added first to her regimen of furosemide and ACE‑I?",
+    "o": [
+     "Carvedilol",
+     "Amlodipine",
+     "Digoxin",
+     "Hydralazine"
+    ],
+    "a": 0,
+    "e": "β‑blocker improves mortality in HFrEF and is first‑line after ACE‑I tolerance."
+   },
+   {
+    "q": "Which laboratory result most strongly suggests high‑output heart failure?",
+    "o": [
+     "BNP 1500 pg/mL",
+     "Hemoglobin 7 g/dL",
+     "Serum ferritin 800 µg/L",
+     "Thyroid‑stimulating hormone 0.1 µIU/mL"
+    ],
+    "a": 1,
+    "e": "Severe anemia creates a high‑output state; other values are markers but not causative.",
+    "past": true
+   },
+   {
+    "q": "A patient with chronic HF and eGFR 25 mL/min/1.73 m² is being considered for aldosterone antagonist therapy. What is the safest approach?",
+    "o": [
+     "Start spironolactone, monitor K+ weekly",
+     "Avoid spironolactone, risk of hyperkalaemia",
+     "Use low‑dose eplerenone with potassium binders",
+     "Give hydralazine‑nitrate instead"
+    ],
+    "a": 1,
+    "e": "Renal function <30 mL/min markedly raises hyperkalaemia risk; aldosterone antagonists are contraindicated."
+   },
+   {
+    "q": "Which sign is NOT reliable for assessing volume status in HF when the patient is on chronic diuretics?",
+    "o": [
+     "Jugular venous pressure",
+     "Peripheral edema",
+     "Weight change",
+     "Urine sodium concentration"
+    ],
+    "a": 3,
+    "e": "Urine sodium is highly variable with diuretics and not a reliable bedside volume indicator."
+   },
+   {
+    "q": "In a low‑resource setting without echocardiography, which bedside finding best predicts reduced ejection fraction?",
+    "o": [
+     "S3 gallop",
+     "Elevated JVP",
+     "Bibasal crackles",
+     "Peripheral edema"
+    ],
+    "a": 0,
+    "e": "An S3 is strongly associated with systolic dysfunction."
+   },
+   {
+    "q": "Which condition is a classic cause of high‑output HF that is especially prevalent in sub‑Saharan Africa?",
+    "o": [
+     "Rheumatic mitral stenosis",
+     "Severe anemia from schistosomiasis",
+     "Hypertensive cardiomyopathy",
+     "Ischaemic heart disease"
+    ],
+    "a": 1,
+    "e": "Severe anemia, often secondary to schistosomiasis, drives high‑output failure in the region.",
+    "past": true
+   },
+   {
+    "q": "A patient with acute decompensated HF receives IV nitroglycerin. Which effect is most desirable?",
+    "o": [
+     "Increase preload only",
+     "Decrease afterload only",
+     "Both preload reduction and afterload reduction",
+     "Increase heart rate"
+    ],
+    "a": 2,
+    "e": "IV nitroglycerin reduces both preload and afterload, improving cardiac output and relieving congestion."
+   },
+   {
+    "q": "Which of the following is NOT a contraindication to β‑blocker use in HF?",
+    "o": [
+     "Severe asthma",
+     "Second‑degree AV block without pacemaker",
+     "Acute decompensated HF",
+     "Bradycardia <50 bpm"
+    ],
+    "a": 2,
+    "e": "β‑blockers are started after stabilising acute decompensation; they are contraindicated in the other listed conditions."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 46‑year‑old man presents with progressive dyspnea, orthopnea, and 3 kg weight gain over 2 weeks. BP 160/95 mmHg, HR 92 bpm, JVP 5 cm above sternal angle, bilateral basal crackles, pitting edema to knees. Labs: BNP 850 pg/mL, creatinine 1.4 mg/dL, K+ 4.6 mmol/L. ECG shows left‑bundle branch block. Echo unavailable.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis and NYHA class?",
+      "a": "Decompensated left‑sided HF, NYHA class III (symptoms with less than ordinary activity)."
+     },
+     {
+      "q": "If the patient cannot tolerate ACE‑I, what alternative GDMT should be started?",
+      "a": "Introduce an ARNI (sacubitril/valsartan) or, if unavailable, an ARB, combined with a β‑blocker and mineralocorticoid antagonist."
+     }
+    ]
+   },
+   {
+    "v": "A 62‑year‑old woman with known rheumatic mitral stenosis presents with worsening peripheral edema, abdominal distension, and early satiety. Examination: JVP 8 cm, hepato‑jugular reflux positive, ascites with shifting dullness, clear lungs. Labs: normal BNP, mild anemia, serum albumin 2.8 g/dL. No echocardiogram available.",
+    "qs": [
+     {
+      "q": "What type of heart failure is she most likely experiencing and why?",
+      "a": "Right‑sided (systemic) congestion due to chronic left‑sided pressure overload from mitral stenosis, leading to isolated right‑heart failure signs."
+     },
+     {
+      "q": "Which bedside test helps differentiate hepatic congestion from primary liver disease?",
+      "a": "Assess for hepato‑jugular reflux; a positive test indicates cardiac origin of hepatic congestion."
+     },
+     {
+      "q": "What is the next best therapeutic step in a low‑resource setting?",
+      "a": "Aggressive diuresis with IV loop diuretic, sodium restriction, and consider referral for percutaneous mitral balloon valvotomy if feasible."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Prescribing diltiazem or other non‑dihydropyridine CCBs in HFrEF, assuming they are safe for rate control",
+   "Interpreting a high BNP as always diagnostic without considering renal impairment, which can falsely elevate levels",
+   "Assuming hypertension is rare in African HF; it is the leading cause and must be aggressively treated",
+   "Neglecting to add an aldosterone antagonist when NYHA II–IV and potassium/eGFR allow, missing mortality benefit",
+   "Using digoxin as first‑line therapy in all HF patients; it has limited mortality benefit and is reserved for symptom control or atrial fibrillation",
+   "Failing to assess for high‑output causes (severe anemia, thyrotoxicosis) when patients have warm extremities and low systemic vascular resistance",
+   "Over‑relying on chest X‑ray alone to rule out HF; pulmonary edema may be absent early",
+   "Skipping the hepato‑jugular reflux test, thereby missing right‑sided congestion in patients with predominant systemic signs"
+  ],
+  "exam": [
+   "Define the three hemodynamic profiles of heart failure (low‑output, high‑output, mixed) and give a typical cause for each. — Low‑output: reduced cardiac output (e.g., ischemic cardiomyopathy). High‑output: excess demand despite normal output (e.g., severe anemia, thyrotoxicosis). Mixed: combined pressure and volume overload (e.g., severe mitral regurgitation).",
+   "What bedside test distinguishes pulmonary edema from COPD exacerbation? — Listen for bibasal crackles, assess for S3, and check for orthopnea; absence of wheeze and presence of rapid fluid clearance after diuretics favors pulmonary edema.",
+   "How do you perform a hepato‑jugular reflux test and what does a positive result indicate? — Press firmly over the liver for 10 seconds while observing JVP; a rise ≥3 cm that persists after release indicates impaired right‑ventricular filling and right‑sided HF.",
+   "Why is diltiazem avoided in HFrEF? — It is a non‑dihydropyridine calcium‑channel blocker with negative inotropic effect, which can worsen systolic dysfunction.",
+   "What is the primary physiological consequence of prolonged sympathetic activation in HF? — Down‑regulation of β‑receptors and progressive myocardial remodeling leading to worsening contractility and arrhythmia risk.",
+   "Which hormone drives sodium and water retention in severe HF? — Aldosterone, released via the renin‑angiotensin‑aldosterone system, promotes renal sodium reabsorption.",
+   "What is the most common primary cause of heart failure in East Africa? — Hypertension‑related cardiomyopathy, followed by non‑ischemic dilated cardiomyopathy.",
+   "Identify the cause of high‑output HF listed in the notes. — Severe anemia (e.g., sickle‑cell disease or iron‑deficiency).",
+   "Explain the inappropriate workload mechanism causing volume overload HF. — Regurgitant lesions (e.g., mitral regurgitation) increase left‑atrial volume, leading to eccentric LV remodeling and volume overload.",
+   "What percentage of HF patients die within five years according to the text? — Approximately 50 % mortality at five years.",
+   "What microscopic feature is expected in a four‑chamber dilated heart at autopsy? — Myocyte hypertrophy with interstitial fibrosis and occasional myocyte dropout (replacement fibrosis).",
+   "Which hepatic acinar zone is most vulnerable in right‑sided HF and why? — Zone 3 (centrilobular) suffers hypoxia from reduced hepatic venous outflow and congestion, leading to centrilobular necrosis.",
+   "What bedside history questions are essential in suspected HF? — Onset/duration of dyspnea, orthopnea, PND, leg swelling, weight change, medication adherence, alcohol use, recent infections, and comorbidities (HTN, diabetes, HIV).",
+   "When BNP is unavailable, what alternative supports HF diagnosis? — Clinical scoring (e.g., Framingham criteria) combined with chest X‑ray showing cardiomegaly or pulmonary congestion."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-19",
+  "checked": "2026-10-19",
+  "trimmed": 5
+ }
 }

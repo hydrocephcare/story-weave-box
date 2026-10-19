@@ -1,0 +1,217 @@
+{
+ "medical": true,
+ "title": "Sickle Cell Anaemia in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "A haemoglobinopathy causing chronic haemolysis and vaso‑occlusive crises. In low‑resource settings, diagnosis relies on clinical suspicion, simple haemoglobin electrophoresis, and point‑of‑care tests. Management focuses on infection prevention, pain control, and early recognition of complications.",
+ "aka": [
+  "Sickle Cell Disease",
+  "HbS anaemia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Sickle cell anaemia (HbSS) is a homozygous mutation (Glu→Val at β‑6) leading to polymerisation of deoxygenated HbS. Diagnosis is confirmed by haemoglobin electrophoresis or point‑of‑care HbS test. In resource‑poor settings, a positive HbS strip plus a history of pain crises and anaemia is often sufficient.",
+   "b": [
+    "Homozygous HbS mutation",
+    "Polymerisation of HbS",
+    "Chronic haemolysis"
+   ],
+   "t": [
+    {
+     "a": "HbS strip test",
+     "b": "Detects presence of HbS – positive indicates sickle cell trait or disease; in a child with anaemia and pain crises, a positive result confirms disease."
+    },
+    {
+     "a": "Haemoglobin electrophoresis",
+     "b": "Separates HbA, HbS, HbF; HbSS shows >90% HbS, no HbA. Confirms diagnosis when available."
+    },
+    {
+     "a": "Peripheral smear",
+     "b": "Shows sickled erythrocytes, target cells, and anisopoikilocytosis – supports diagnosis when electrophoresis is unavailable."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by frequency of crises and organ damage. The WHO Sickle Cell Disease Severity Score (0–10) considers pain episodes, transfusions, and complications. In practice, classify as mild (few crises, no organ damage), moderate (regular crises, some organ involvement), or severe (frequent crises, multi‑organ disease).",
+   "b": [
+    "Mild: <2 crises/yr, no organ damage",
+    "Moderate: 2–5 crises/yr, some organ involvement",
+    "Severe: >5 crises/yr, multi‑organ disease"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is the β‑globin gene mutation. In East Africa, secondary contributors include malaria, HIV, and malnutrition, which exacerbate anaemia and trigger crises.",
+   "b": [
+    "β‑globin Glu→Val mutation",
+    "Malaria infection",
+    "HIV infection",
+    "Malnutrition"
+   ],
+   "t": [
+    {
+     "a": "Malaria rapid diagnostic test",
+     "b": "Positive malaria can precipitate a crisis; treat promptly to prevent haemolysis."
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "HIV increases infection risk; antiretroviral therapy reduces morbidity."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical features are episodic pain crises, anaemia, splenomegaly (early), dactylitis in infants, and growth retardation. In low‑resource settings, infections and dehydration often mimic or trigger crises.",
+   "b": [
+    "Painful vaso‑occlusive crises",
+    "Anemia (Hb 7–10 g/dL)",
+    "Splenomegaly early, autosplenectomy later",
+    "Dactylitis in <2 years",
+    "Growth delay"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Baseline investigations include full blood count, reticulocyte count, LDH, bilirubin, and CRP. When available, HbF level and iron studies guide therapy.",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Assesses anaemia severity and reticulocytosis – high retics suggest haemolysis."
+    },
+    {
+     "a": "LDH",
+     "b": "Elevated LDH indicates haemolysis; normal LDH may suggest other anaemias."
+    },
+    {
+     "a": "Bilirubin",
+     "b": "Indirect hyperbilirubinaemia confirms haemolysis."
+    },
+    {
+     "a": "CRP",
+     "b": "Elevated CRP points to infection as a trigger."
+    },
+    {
+     "a": "HbF level",
+     "b": "High HbF (>30%) is protective; low HbF predicts severe disease."
+    },
+    {
+     "a": "Iron studies",
+     "b": "Rule out iron deficiency which can worsen anaemia."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent complications include acute chest syndrome, stroke, splenic sequestration, and severe infection. Red flags are sudden severe pain, fever >38.5°C, vomiting, lethargy, or neurological deficits.",
+   "b": [
+    "Acute chest syndrome – chest pain, hypoxia",
+    "Stroke – sudden weakness, seizures",
+    "Splenic sequestration – rapid splenomegaly, drop in Hb",
+    "Severe infection – high fever, sepsis"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the trigger first (infection, dehydration, hypoxia). Provide analgesia (paracetamol, NSAIDs, opioids if available), hydration, and oxygen. Long‑term care includes hydroxyurea (if available), penicillin prophylaxis, and vaccinations. Avoid drugs that precipitate sickling (e.g., high‑dose aspirin in children).",
+   "b": [
+    "Treat infection with appropriate antibiotics"
+   ],
+   "t": [
+    {
+     "a": "Hydroxyurea",
+     "b": "Increases HbF, reduces crises; monitor CBC and liver function."
+    },
+    {
+     "a": "Penicillin prophylaxis",
+     "b": "Reduces pneumococcal infections; give until age 5 or until splenic function is adequate."
+    },
+    {
+     "a": "Vaccinations",
+     "b": "PCV, Hib, influenza, and hepatitis B – prevent infections that trigger crises."
+    },
+    {
+     "a": "Analgesia",
+     "b": "Paracetamol first; NSAIDs if no renal impairment; opioids for severe pain if available."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular clinic visits for growth monitoring, transfusion thresholds (Hb <6 g/dL in crisis), and hydroxyurea compliance. Counsel on hydration, avoiding extreme temperatures, and early infection treatment.",
+   "b": [
+    "Growth charts",
+    "Transfusion threshold Hb 6 g/dL"
+   ],
+   "t": [
+    {
+     "a": "Transfusion",
+     "b": "Indicated in severe anaemia, hypoxia, or before major surgery."
+    },
+    {
+     "a": "Vaccination schedule",
+     "b": "Ensure up‑to‑date immunisations to prevent infections."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Beta‑thalassaemia major, hereditary spherocytosis, and autoimmune haemolytic anaemia can mimic sickle cell anaemia. Distinguish by electrophoresis and smear morphology.",
+   "b": [
+    "Beta‑thalassaemia – absence of HbS, presence of HbA2"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "HbS strip may be negative in heterozygotes; malaria parasitaemia can be missed if parasite density is low. Splenomegaly may be absent in autosplenectomy, leading to missed diagnosis of severe disease.",
+   "b": [
+    "HbS strip false negative in trait"
+   ],
+   "t": [
+    {
+     "a": "Peripheral smear",
+     "b": "Target cells may be mistaken for other anaemias; look for sickled cells."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe chest pain with hypoxia",
+  "Rapid drop in haemoglobin with splenomegaly",
+  "New neurological deficits",
+  "High fever >38.5°C with lethargy"
+ ],
+ "faq": [
+  {
+   "q": "Why is hydroxyurea preferred in sickle cell anaemia?",
+   "a": "It raises HbF, reducing sickling and crises."
+  },
+  {
+   "q": "What is the first step in a painful crisis?",
+   "a": "Assess for infection, dehydration, and hypoxia; treat those first."
+  },
+  {
+   "q": "How do you differentiate dactylitis from osteomyelitis?",
+   "a": "Dactylitis is transient swelling of hands/feet with normal X‑ray; osteomyelitis shows focal pain, fever, and abnormal imaging."
+  }
+ ],
+ "exam": [
+  "What is the most appropriate first‑line analgesic for a 6‑year‑old with a vaso‑occlusive crisis? — Paracetamol; NSAIDs if no renal impairment; opioids only if severe pain.",
+  "A 3‑year‑old presents with swelling of both feet and fever. How would you distinguish dactylitis from osteomyelitis? — Dactylitis: transient, bilateral, normal X‑ray; osteomyelitis: focal, unilateral, abnormal imaging.",
+  "You have a child with Hb 5.5 g/dL during a crisis. What is the transfusion threshold? — Transfuse to raise Hb above 6 g/dL.",
+  "A child with sickle cell anaemia develops sudden chest pain and hypoxia. What is the likely complication and immediate management? — Acute chest syndrome; give oxygen, analgesia, antibiotics, and consider transfusion.",
+  "Why is penicillin prophylaxis stopped after age 5 in sickle cell patients? — Splenic function usually returns; risk of penicillin allergy increases.",
+  "You are in a rural clinic with no electrophoresis. How would you confirm sickle cell disease in a child with anaemia and pain crises? — Positive HbS strip plus clinical picture confirms diagnosis."
+ ],
+ "related": [
+  "Sickle Cell Trait",
+  "Sickle Cell Pain Crisis",
+  "Acute Chest Syndrome",
+  "Splenic Sequestration",
+  "Hydroxyurea Therapy"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-19",
+ "reviewed": false
+}

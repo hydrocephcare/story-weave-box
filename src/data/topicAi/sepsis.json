@@ -120,5 +120,434 @@
  "kind": "disease",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: History and How to Examine",
+    "p": "A focused history and systematic examination allow rapid identification of infection source, organ dysfunction and severity, while recognising red‑flags that demand immediate action.",
+    "b": [
+     "Onset and progression: sudden vs gradual, any recent trauma, surgery, childbirth, or invasive procedure.",
+     "Exposure history: recent travel, sick contacts, animal bites, water exposure, HIV/TB risk, malaria endemic area.",
+     "Comorbidities: diabetes, chronic kidney disease, liver cirrhosis, HIV, malnutrition, pregnancy, immunosuppressive drugs or herbal remedies.",
+     "Medication review: recent antibiotics, steroids, NSAIDs, anticoagulants, diuretics.",
+     "Vaccination status: pneumococcal, influenza, meningococcal, hepatitis B.",
+     "Fluid balance: recent vomiting, diarrhoea, polyuria, oliguria, fluid intake.",
+     "Neurological symptoms: confusion, seizures, meningismus, focal deficits.",
+     "Skin/soft‑tissue clues: cellulitis, abscess, necrotic lesions, petechiae, purpura fulminans."
+    ],
+    "t": [
+     {
+      "a": "General appearance",
+      "b": "Assess level of distress, mental status and perfusion; a sick, lethargic patient with mottled skin suggests severe sepsis."
+     },
+     {
+      "a": "Temperature",
+      "b": "Measure orally/axillary; fever >38.3 °C or hypothermia <36 °C supports infection and systemic response."
+     },
+     {
+      "a": "Heart rate and rhythm",
+      "b": "Tachycardia >90 bpm is a qSOFA criterion; irregular rhythm may indicate underlying cardiac disease."
+     },
+     {
+      "a": "Blood pressure (manual or automated)",
+      "b": "Systolic ≤100 mmHg fulfills qSOFA; persistent hypotension after 30 mL/kg fluids defines septic shock."
+     },
+     {
+      "a": "Respiratory rate",
+      "b": "Rate ≥22 /min is a qSOFA element; also indicates possible respiratory failure."
+     },
+     {
+      "a": "Capillary refill time (CRT)",
+      "b": "Press fingertip for 5 seconds; refill >2 seconds suggests peripheral hypoperfusion. CRT cannot quantify cardiac output."
+     },
+     {
+      "a": "Urine output (catheter or bedside collection)",
+      "b": "<0.5 mL/kg/h indicates acute kidney injury; bedside dipstick cannot differentiate pre‑renal from intrinsic causes."
+     },
+     {
+      "a": "Skin examination",
+      "b": "Look for rash, petechiae, purpura, ecchymoses, or source lesions; presence of purpura fulminans points to DIC, but skin alone cannot confirm coagulopathy."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and How to Read Them",
+    "p": "Laboratory and point‑of‑care tests answer key questions about infection, organ dysfunction and severity; when a test is unavailable, clinical surrogates guide management.",
+    "b": [
+     "Blood cultures (2–3 sets) – answer: pathogen identification; if unavailable, start empiric broad‑spectrum antibiotics after drawing any available specimen.",
+     "Serum lactate – answer: tissue hypoperfusion; >2 mmol/L suggests early shock, >4 mmol/L signals high mortality; repeat at 2–4 h to assess clearance.",
+     "Full blood count – answer: leukocytosis >12 ×10⁹/L or leukopenia <4 ×10⁹/L, thrombocytopenia <150 ×10⁹/L; trends guide DIC suspicion.",
+     "Renal panel (creatinine, urea) – answer: acute kidney injury; rise in creatinine ≥0.3 mg/dL within 48 h meets KDIGO criteria.",
+     "Liver enzymes, bilirubin – answer: hepatic dysfunction; bilirubin >2 mg/dL contributes to SOFA hepatic score.",
+     "Coagulation profile (PT/INR, aPTT, fibrinogen, D‑dimer) – answer: DIC; INR >1.5, fibrinogen <150 mg/dL, D‑dimer markedly elevated support diagnosis.",
+     "Arterial blood gas – answer: respiratory failure and acid‑base status; PaO₂/FiO₂ <300 mmHg defines ARDS, not SpO₂/FiO₂.",
+     "Chest X‑ray – answer: pulmonary source or ARDS pattern; bilateral infiltrates with PaO₂/FiO₂ <300 mmHg confirm ARDS.",
+     "Urinalysis and urine culture – answer: urinary source; presence of nitrites, leukocyte esterase, or >10⁵ CFU/mL indicates infection.",
+     "Point‑of‑care ultrasound (POCUS) – answer: assess fluid status, cardiac function, and source (e.g., abscess); cannot replace formal echocardiography for valve vegetations."
+    ],
+    "t": [
+     {
+      "a": "Serum lactate",
+      "b": "Elevated >2 mmol/L indicates hypoperfusion; >4 mmol/L after adequate fluids signals refractory shock; if lactate unavailable, use capillary refill >2 seconds and mental status as surrogates."
+     },
+     {
+      "a": "Procalcitonin (if available)",
+      "b": "Levels >0.5 ng/mL support bacterial infection; low levels (<0.1 ng/mL) argue against sepsis but do not rule it out."
+     },
+     {
+      "a": "Serum albumin",
+      "b": "Low <30 g/L worsens oncotic pressure and predicts poorer outcomes; not diagnostic but guides fluid strategy."
+     },
+     {
+      "a": "Blood gas with lactate",
+      "b": "Base excess <‑6 mmol/L or pH <7.35 indicates metabolic acidosis; combined with lactate guides resuscitation intensity."
+     },
+     {
+      "a": "Urine microscopy",
+      "b": "WBC casts suggest pyelonephritis; absence does not exclude early infection."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, Staging and Severity",
+    "p": "Sepsis is identified by infection plus organ dysfunction; severity is graded by SOFA, qSOFA and presence of shock.",
+    "b": [
+     "Infection confirmed or strongly suspected clinically or microbiologically.",
+     "Acute change in SOFA score ≥2 points from baseline indicates sepsis.",
+     "qSOFA ≥2 (respiratory rate ≥22/min, altered mentation, systolic BP ≤100 mmHg) signals high risk of poor outcomes.",
+     "Septic shock: persistent hypotension requiring vasopressors to maintain MAP ≥65 mmHg after 30 mL/kg crystalloid, plus serum lactate >2 mmol/L.",
+     "Organ dysfunction domains in SOFA: respiratory (PaO₂/FiO₂), coagulation (platelets), liver (bilirubin), cardiovascular (MAP/vasopressors), CNS (Glasgow Coma Scale), renal (creatinine or urine output)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑Alike Conditions",
+    "p": "Several non‑infectious states mimic sepsis; careful history, exam and targeted tests separate them.",
+    "b": [
+     "Acute pancreatitis – severe epigastric pain, lipase >3× upper limit, imaging shows inflamed pancreas; no infectious source.",
+     "Heat stroke – hyperthermia >40 °C, recent exertion, altered mental status, CK >1000 U/L, no infection focus.",
+     "Thyroid storm – fever, tachycardia, atrial fibrillation, elevated free T₃/T₄, suppressed TSH; treat endocrine, not antibiotics.",
+     "Anaphylaxis – sudden hypotension, urticaria, wheeze after allergen exposure; tryptase may be elevated, not infectious."
+    ],
+    "t": [
+     {
+      "a": "Acute pancreatitis",
+      "b": "Key points: severe abdominal pain, lipase >3× ULN, CT pancreas edema; differentiate by lack of infection signs and normal lactate early."
+     },
+     {
+      "a": "Heat stroke",
+      "b": "Key points: recent high‑temperature exposure, core temp >40 °C, CK rise, normal white count; treat cooling, not antibiotics."
+     },
+     {
+      "a": "Thyroid storm",
+      "b": "Key points: known hyperthyroidism, precipitating stress, high free T₃/T₄, tachyarrhythmia; infection work‑up may be negative."
+     },
+     {
+      "a": "Anaphylaxis",
+      "b": "Key points: rapid onset after allergen, skin flushing, bronchospasm, hypotension; serum tryptase may help, cultures negative."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures rapid restoration of perfusion, source control and organ support while avoiding harmful delays.",
+    "b": [
+     "1. Immediate airway, breathing, oxygen (target SpO₂ 90‑94%) and circulation assessment.",
+     "2. Obtain blood cultures (two sets) and any other relevant specimens before antibiotics.",
+     "3. Give broad‑spectrum IV antibiotics covering likely pathogens; de‑escalate when cultures return.",
+     "5. If MAP <65 mmHg after fluids, start norepinephrine infusion; add vasopressin or epinephrine if needed.",
+     "6. Source control: drainage, debridement or device removal as soon as feasible, ideally within 6 hours for high‑risk sources.",
+     "7. Monitor lactate, urine output, mental status, skin perfusion and SOFA score every 2‑4 hours.",
+     "8. Escalate to ICU or tertiary centre if refractory hypotension, lactate >4 mmol/L after resuscitation, or multiorgan failure develops."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse effects early prevents secondary injury and guides safe continuation of therapy.",
+    "b": [
+     "Beta‑lactam antibiotics: may cause rash or transient liver enzyme rise; stop if severe hypersensitivity.",
+     "Vancomycin: watch for nephrotoxicity; ensure adequate hydration and avoid concurrent nephrotoxins.",
+     "Aminoglycosides: ototoxicity and nephrotoxicity; monitor serum creatinine and auditory function, discontinue if worsening.",
+     "Fluoroquinolones: tendinopathy and QT prolongation; avoid in patients with arrhythmia or concurrent QT‑prolonging drugs.",
+     "Norepinephrine: peripheral ischemia at high doses; rotate to vasopressin if signs of digit necrosis appear.",
+     "Hydrocortisone (stress dose): hyperglycaemia and secondary infection; monitor glucose and limit duration to 7 days."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Sepsis can progress rapidly; early recognition of organ dysfunction triggers escalation.",
+    "b": [
+     "Acute kidney injury (urine <0.5 mL/kg/h for 6 h) – start renal replacement therapy discussion.",
+     "New onset arrhythmia or myocardial ischemia – involve cardiology and consider inotropic support.",
+     "Severe coagulopathy (INR >1.5, platelets <50 ×10⁹/L) with bleeding – give plasma, platelets, consider factor concentrates."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Comorbidities and local factors modify presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV: higher risk of opportunistic pathogens; broaden empiric coverage to include fungi and mycobacteria; monitor CD4 and viral load.",
+     "TB: consider concurrent anti‑TB therapy if pulmonary infiltrates are chronic; avoid rifampicin with some protease inhibitors.",
+     "Malnutrition: reduced plasma protein alters drug binding; avoid high loading doses of hydrophilic antibiotics without level monitoring.",
+     "Pregnancy: prefer beta‑lactams and macrolides; avoid fluoroquinolones and tetracyclines; adjust fluid balance for uteroplacental perfusion.",
+     "Herbal remedies: possible CYP450 induction or inhibition; ask specifically and adjust antibiotic choices accordingly.",
+     "Alcohol use: may cause baseline liver dysfunction; avoid hepatotoxic drugs and monitor transaminases.",
+     "Renal failure: dose‑adjust antibiotics cleared renally; use renal‑sparing vasopressors and consider early dialysis."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring sepsis care to vulnerable populations improves outcomes in low‑resource environments.",
+    "b": [
+     "Pregnancy: maintain MAP >65 mmHg and uterine perfusion; give ceftriaxone or ampicillin‑sulbactam; avoid teratogenic drugs; position left lateral decubitus.",
+     "Elderly: lower physiological reserve; start fluids more cautiously (10‑20 mL/kg) and watch for pulmonary edema; consider polypharmacy interactions.",
+     "People with HIV: include coverage for Pneumocystis jirovecii (trimethoprim‑sulfamethoxazole) if CD4 <200; monitor for immune reconstitution inflammatory syndrome after ART initiation.",
+     "Low‑resource settings: use readily available crystalloids (normal saline if balanced not available); prioritize early antibiotics and source control; use clinical lactate strips if lab unavailable; consider point‑of‑care ultrasound for fluid status."
+    ],
+    "t": []
+   }
+  ],
+  "facts": [
+   "Sepsis: life‑threatening organ dysfunction from a dysregulated host response to infection (SSC 2021).",
+   "qSOFA positive if ≥2: RR ≥22/min, altered mentation, SBP ≤100 mmHg.",
+   "SOFA increase ≥2 points indicates sepsis‑related organ dysfunction.",
+   "Serum lactate ≥2 mmol/L suggests tissue hypoperfusion; ≥4 mmol/L signals high mortality.",
+   "Thrombocytopenia defined as platelet count <150 ×10⁹/L.",
+   "Acute kidney injury: urine output <0.5 mL/kg/h for ≥6 h.",
+   "Balanced crystalloid 30 mL/kg bolus given rapidly, then reassess over first 3 h.",
+   "Vasopressor (norepinephrine) started if MAP <65 mmHg after adequate fluids.",
+   "Broad‑spectrum IV antibiotics within 1 h after cultures, then de‑escalate."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define sepsis according to the Surviving Sepsis Campaign 2021.",
+    "a": "Life‑threatening organ dysfunction caused by a dysregulated host response to infection, identified by a SOFA score increase of ≥2 points.",
+    "hot": true
+   },
+   {
+    "q": "What are the three components of qSOFA and their cut‑offs?",
+    "a": "Respiratory rate ≥22/min, altered mentation, systolic BP ≤100 mmHg; ≥2 points predicts poor outcomes.",
+    "hot": true
+   },
+   {
+    "q": "When should lactate be measured and what threshold prompts aggressive resuscitation?",
+    "a": "Measure on presentation; lactate ≥2 mmol/L warrants early fluid resuscitation, ≥4 mmol/L signals high risk and need for reassessment.",
+    "hot": true
+   },
+   {
+    "q": "Explain why a balanced crystalloid is preferred over normal saline in initial resuscitation.",
+    "a": "Balanced solutions have lower chloride, reducing risk of hyperchloremic metabolic acidosis and renal vasoconstriction."
+   },
+   {
+    "q": "A patient remains hypotensive after 30 mL/kg fluids. What is the next step?",
+    "a": "Start norepinephrine to maintain MAP ≥65 mmHg; add vasopressin or epinephrine if needed.",
+    "hot": true
+   },
+   {
+    "q": "What is the recommended timing for source control in sepsis?",
+    "a": "As soon as possible, ideally within the first 6 h for life‑threatening sources; no fixed 12‑h rule."
+   },
+   {
+    "q": "Why must blood cultures be obtained before antibiotics, and what if cultures are unavailable?",
+    "a": "To identify pathogen and guide de‑escalation; if unavailable, give empiric broad‑spectrum antibiotics promptly."
+   },
+   {
+    "q": "Differentiate septic shock from severe sepsis.",
+    "a": "Septic shock includes persistent hypotension requiring vasopressors to keep MAP ≥65 mmHg despite adequate fluids, plus lactate ≥2 mmol/L.",
+    "hot": true
+   },
+   {
+    "q": "What are the hallmark histologic findings of the acute phase of ARDS?",
+    "a": "Diffuse alveolar damage with hyaline membranes lining alveolar walls, interstitial edema, and neutrophilic infiltration."
+   },
+   {
+    "q": "Outline the clinical triad of Acute Lung Injury/ARDS.",
+    "a": "Acute onset, bilateral infiltrates on chest imaging, and PaO₂/FiO₂ ≤300 mmHg (or SpO₂/FiO₂ ≤315) with no cardiac failure."
+   },
+   {
+    "q": "A neonate with early‑onset sepsis often presents with which clinical feature compared to late‑onset?",
+    "a": "Respiratory distress (tachypnea, grunting) is more common in early‑onset sepsis.",
+    "past": true
+   },
+   {
+    "q": "What is the gold standard for diagnosing neonatal sepsis historically?",
+    "a": "Positive blood culture obtained before antibiotics.",
+    "past": true
+   },
+   {
+    "q": "Within what timeframe do most newborns with early‑onset sepsis present?",
+    "a": "Within the first 72 hours of life, most within 24 hours.",
+    "past": true
+   },
+   {
+    "q": "How is late‑onset neonatal sepsis typically acquired?",
+    "a": "Mostly via horizontal transmission from the hospital environment or caregivers, often with coagulase‑negative staphylococci.",
+    "past": true
+   },
+   {
+    "q": "Which cellular immunity defect predisposes neonates to sepsis?",
+    "a": "Impaired neutrophil chemotaxis and reduced complement activity.",
+    "past": true
+   },
+   {
+    "q": "Identify a specific risk factor for early‑onset neonatal sepsis.",
+    "a": "Maternal chorioamnionitis or prolonged rupture of membranes (>18 h).",
+    "past": true
+   },
+   {
+    "q": "What factor increases risk of late‑onset neonatal sepsis?",
+    "a": "Prolonged NICU stay with invasive devices (central lines, ventilators).",
+    "past": true
+   },
+   {
+    "q": "Why should high loading doses of hydrophilic antibiotics not be routinely used in malnourished patients?",
+    "a": "Malnutrition alters volume of distribution but does not uniformly require higher doses; dosing should be weight‑based and monitored."
+   },
+   {
+    "q": "In a patient with HIV and sepsis, what additional investigation is essential?",
+    "a": "CD4 count and viral load to gauge immunosuppression and anticipate opportunistic pathogens."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old woman with community‑acquired pneumonia presents with RR 24/min, SBP 95 mmHg, and altered mentation. Which bedside tool best predicts her risk of death?",
+    "o": [
+     "Full SOFA score",
+     "qSOFA",
+     "APACHE II",
+     "SIRS criteria"
+    ],
+    "a": 1,
+    "e": "qSOFA (≥2 points) is validated for rapid bedside risk stratification."
+   },
+   {
+    "q": "Which of the following is the most appropriate initial fluid for a septic adult in a low‑resource setting?",
+    "o": [
+     "5% dextrose",
+     "Normal saline 0.9%",
+     "Balanced crystalloid (e.g., Ringer's lactate)",
+     "Albumin 5%"
+    ],
+    "a": 2,
+    "e": "Balanced crystalloids reduce chloride load and are recommended when available."
+   },
+   {
+    "q": "A newborn 2 days old develops fever, lethargy, and a positive blood culture for Group B Streptococcus. Which risk factor most likely contributed?",
+    "o": [
+     "Maternal urinary tract infection",
+     "Maternal chorioamnionitis",
+     "Prolonged NICU stay",
+     "Breastfeeding"
+    ],
+    "a": 1,
+    "e": "Maternal chorioamnionitis is a classic risk for early‑onset GBS sepsis.",
+    "past": true
+   },
+   {
+    "q": "In septic shock, after 30 mL/kg fluids the MAP is 58 mmHg. Which vasopressor is first‑line according to SSC?",
+    "o": [
+     "Dopamine",
+     "Epinephrine",
+     "Norepinephrine",
+     "Phenylephrine"
+    ],
+    "a": 2,
+    "e": "Norepinephrine is the preferred initial vasopressor to raise MAP."
+   },
+   {
+    "q": "Which histologic feature distinguishes the acute phase of ARDS from pulmonary edema of cardiac origin?",
+    "o": [
+     "Alveolar hemorrhage",
+     "Hyaline membranes",
+     "Pleural effusion",
+     "Lymphocytic infiltrate"
+    ],
+    "a": 1,
+    "e": "Hyaline membranes are characteristic of diffuse alveolar damage in ARDS."
+   },
+   {
+    "q": "A pregnant woman at 30 weeks gestation develops sepsis. Which antimicrobial class should be avoided?",
+    "o": [
+     "Third‑generation cephalosporins",
+     "Carbapenems",
+     "Fluoroquinolones",
+     "Aminoglycosides"
+    ],
+    "a": 2,
+    "e": "Fluoroquinolones are contraindicated in pregnancy due to fetal cartilage toxicity."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 68‑year‑old man with diabetes presents with fever, cough, and confusion. RR 28/min, SBP 92 mmHg, lactate 3.5 mmol/L. Chest X‑ray shows bilateral infiltrates. Blood cultures pending.",
+    "qs": [
+     {
+      "q": "What is the immediate management priority?",
+      "a": "Secure airway, give high‑flow oxygen to keep SpO₂ 90‑94%, start 30 mL/kg balanced crystalloid bolus, and draw blood cultures before antibiotics."
+     },
+     {
+      "q": "Which vasopressor and target MAP should be used if hypotension persists?",
+      "a": "Start norepinephrine, titrate to maintain MAP ≥65 mmHg."
+     },
+     {
+      "q": "What is the most likely cause of his respiratory failure?",
+      "a": "Sepsis‑induced ARDS (acute diffuse alveolar damage with PaO₂/FiO₂ likely <300)."
+     }
+    ]
+   },
+   {
+    "v": "A 3‑day‑old neonate born at 32 weeks gestation develops temperature instability, apnea, and mottled skin. Maternal history: prolonged rupture of membranes. Blood culture grows Escherichia coli.",
+    "qs": [
+     {
+      "q": "Classify the type of neonatal sepsis and its typical source.",
+      "a": "Early‑onset sepsis, usually acquired vertically from maternal genital tract."
+     },
+     {
+      "q": "What is the first‑line antimicrobial regimen in this setting?",
+      "a": "Empiric ampicillin plus an aminoglycoside (e.g., gentamicin) pending sensitivities."
+     },
+     {
+      "q": "Which bedside sign helps differentiate septic shock from simple sepsis in this infant?",
+      "a": "Capillary refill >2 seconds with mottled skin and urine output <1 mL/kg/h indicates shock."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Stating capillary refill >2 s as a strict ‘>2 s’ without noting the clinical threshold of ‘more than 2 seconds’.",
+   "Using <100 ×10⁹/L as the definition of thrombocytopenia; the correct cut‑off is <150 ×10⁹/L.",
+   "Citing bedside bleeding time as a surrogate for PT; PT must be measured directly or inferred from clinical bleeding and platelet count.",
+   "Relying on SpO₂/FiO₂ ≤315 as a validated respiratory criterion; use clinical signs or PaO₂/FiO₂ when ABG unavailable.",
+   "Recommending a rigid 30 mL/kg bolus within the first hour; guidelines allow administration over the first 3 h with frequent reassessment.",
+   "Suggesting source control only within 12 h; urgent sources (e.g., intra‑abdominal abscess) require intervention as soon as possible, often within 6 h.",
+   "Prescribing higher loading doses of hydrophilic antibiotics for malnutrition without weight‑based calculation.",
+   "Targeting SpO₂ ≥94% in sepsis; the safe target is 90‑94% to avoid hyperoxia."
+  ],
+  "exam": [
+   "Define sepsis according to the Surviving Sepsis Campaign 2021. — Life‑threatening organ dysfunction caused by a dysregulated host response to infection, identified by a SOFA score increase of ≥2 points.",
+   "What are the three components of qSOFA and their cut‑offs? — Respiratory rate ≥22/min, altered mentation, systolic BP ≤100 mmHg; ≥2 points predicts poor outcomes.",
+   "When should lactate be measured and what threshold prompts aggressive resuscitation? — Measure on presentation; lactate ≥2 mmol/L warrants early fluid resuscitation, ≥4 mmol/L signals high risk and need for reassessment.",
+   "Explain why a balanced crystalloid is preferred over normal saline in initial resuscitation. — Balanced solutions have lower chloride, reducing risk of hyperchloremic metabolic acidosis and renal vasoconstriction.",
+   "A patient remains hypotensive after 30 mL/kg fluids. What is the next step? — Start norepinephrine to maintain MAP ≥65 mmHg; add vasopressin or epinephrine if needed.",
+   "What is the recommended timing for source control in sepsis? — As soon as possible, ideally within the first 6 h for life‑threatening sources; no fixed 12‑h rule.",
+   "Why must blood cultures be obtained before antibiotics, and what if cultures are unavailable? — To identify pathogen and guide de‑escalation; if unavailable, give empiric broad‑spectrum antibiotics promptly.",
+   "Differentiate septic shock from severe sepsis. — Septic shock includes persistent hypotension requiring vasopressors to keep MAP ≥65 mmHg despite adequate fluids, plus lactate ≥2 mmol/L.",
+   "What are the hallmark histologic findings of the acute phase of ARDS? — Diffuse alveolar damage with hyaline membranes lining alveolar walls, interstitial edema, and neutrophilic infiltration.",
+   "Outline the clinical triad of Acute Lung Injury/ARDS. — Acute onset, bilateral infiltrates on chest imaging, and PaO₂/FiO₂ ≤300 mmHg (or SpO₂/FiO₂ ≤315) with no cardiac failure.",
+   "A neonate with early‑onset sepsis often presents with which clinical feature compared to late‑onset? — Respiratory distress (tachypnea, grunting) is more common in early‑onset sepsis.",
+   "What is the gold standard for diagnosing neonatal sepsis historically? — Positive blood culture obtained before antibiotics.",
+   "Within what timeframe do most newborns with early‑onset sepsis present? — Within the first 72 hours of life, most within 24 hours.",
+   "How is late‑onset neonatal sepsis typically acquired? — Mostly via horizontal transmission from the hospital environment or caregivers, often with coagulase‑negative staphylococci."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-19",
+  "checked": "2026-10-19",
+  "trimmed": 9
+ }
 }

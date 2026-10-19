@@ -1,0 +1,161 @@
+{
+ "medical": true,
+ "title": "Jugular Venous Pressure",
+ "subject": "Medicine",
+ "summary": "JVP reflects right atrial pressure and helps differentiate cardiac from non‑cardiac causes of dyspnoea. It is assessed bedside and guides urgent management in low‑resource settings.",
+ "aka": [
+  "Central Venous Pressure (CVP)",
+  "Jugular Venous Distension"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "JVP is the visible pulsation of the internal jugular vein, measured as the vertical distance from the sternal angle to the highest point of the jugular pulse, with the patient at 45° elevation.",
+   "b": [
+    "Normal JVP < 3–4 cm above sternal angle",
+    "Measured in cm H2O"
+   ],
+   "t": [
+    {
+     "a": "Visual inspection of jugular pulse",
+     "b": "Assesses right atrial pressure; a prominent x‑descent and absent y‑descent suggests tamponade or severe right heart failure"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "JVP is staged by height: 0–3 cm = normal; 3–5 cm = mild elevation; 5–7 cm = moderate; >7 cm = severe, indicating significant right‑heart strain or fluid overload.",
+   "b": [
+    "Stage correlates with clinical severity and need for urgent intervention"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East Africa, the top causes are:",
+   "b": [
+    "Congestive heart failure (especially rheumatic mitral stenosis leading to pulmonary hypertension)",
+    "Cardiac tamponade (post‑trauma or pericarditis)",
+    "Right‑heart failure from pulmonary embolism or chronic lung disease",
+    "Severe dehydration with compensatory fluid shifts",
+    "Sickle cell crisis with splenic sequestration"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows cardiomegaly or pleural effusion; absence of lung infiltrates supports cardiac origin"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Detects pericardial effusion, ventricular function, and valvular disease; often unavailable, so clinical judgement is key"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients with raised JVP often report dyspnoea, orthopnoea, or swelling of the neck veins. On examination, the jugular pulse is visible, often with a prominent x‑descent and blunted y‑descent.",
+   "b": [
+    "Muffled heart sounds may accompany tamponade"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Use bedside tools first; advanced tests are adjuncts.",
+   "t": [
+    {
+     "a": "Bedside ultrasound",
+     "b": "Quickly identifies pericardial effusion; useful when echo is unavailable"
+    },
+    {
+     "a": "ECG",
+     "b": "Shows electrical alternans or low voltage in tamponade; arrhythmias in right‑heart strain"
+    },
+    {
+     "a": "Laboratory tests",
+     "b": "CBC for anemia or infection; CRP/ESR for pericarditis; HIV, hepatitis B serology for endemic infections"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Raised JVP with hypotension, muffled heart sounds, and tachycardia is Beck’s triad for cardiac tamponade—an emergency.",
+   "b": [
+    "Pulmonary embolism can present with sudden JVP rise and chest pain"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then support haemodynamics.",
+   "b": [
+    "If tamponade: urgent pericardiocentesis; avoid fluid bolus which worsens tamponade"
+   ],
+   "t": [
+    {
+     "a": "Diuretics (e.g., furosemide)",
+     "b": "Reduce preload in heart failure; avoid in hypovolaemia"
+    },
+    {
+     "a": "Inotropes (e.g., dobutamine)",
+     "b": "Improve right‑ventricular contractility; use cautiously in tachycardia"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Monitor JVP serially to gauge response to therapy; educate patients on fluid restriction and adherence to cardiac medications.",
+   "b": [
+    "Regular follow‑up in cardiac clinic"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Jugular venous distension can be mistaken for carotid pulse or thyroid swelling.",
+   "b": [
+    "Carotid pulse is palpable but not visible as a wave; thyroid enlargement is firm and non‑pulsatile"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "In supine patients or with severe obesity, JVP may appear normal despite high right‑atrial pressure.",
+   "b": [
+    "Fluid overload may be masked by peripheral oedema alone"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Cardiac tamponade",
+  "Acute right‑heart failure",
+  "Severe pulmonary embolism"
+ ],
+ "faq": [
+  {
+   "q": "Why is JVP measured at 45°?",
+   "a": "This angle aligns the jugular vein with the horizontal plane, allowing accurate vertical distance measurement."
+  },
+  {
+   "q": "Can I estimate JVP in a lying patient?",
+   "a": "No; the measurement is unreliable unless the patient is semi‑recumbent."
+  },
+  {
+   "q": "What if I cannot see the jugular pulse?",
+   "a": "Check the external jugular or use ultrasound; absence of a visible pulse may indicate low preload or severe hypotension."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old man with sudden chest pain and dyspnoea has a raised JVP, muffled heart sounds, and hypotension — what is the most urgent intervention? — Immediate pericardiocentesis to relieve tamponade.",
+  "In a patient with chronic heart failure, JVP rises to 6 cm. What bedside test would confirm fluid overload if an echocardiogram is unavailable? — Bedside ultrasound to detect pleural effusion and assess ventricular size.",
+  "A patient presents with raised JVP and tachycardia but clear lungs. Which diagnosis is most likely? — Right‑heart failure secondary to pulmonary hypertension or pulmonary embolism.",
+  "You observe a prominent x‑descent and absent y‑descent in the jugular pulse. What does this indicate? — Early ventricular filling is obstructed, suggestive of tamponade or severe right‑heart failure.",
+  "When measuring JVP, why should you avoid a fluid bolus in a hypotensive patient with raised JVP? — It can worsen tamponade by increasing intrapericardial pressure.",
+  "A patient with HIV presents with fever, night sweats, and raised JVP. What infection should you consider? — Tuberculous pericarditis."
+ ],
+ "related": [
+  "Right‑Heart Failure",
+  "Cardiac Tamponade",
+  "Pulmonary Embolism",
+  "Congestive Heart Failure"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-19",
+ "reviewed": false
+}

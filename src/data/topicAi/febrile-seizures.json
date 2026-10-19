@@ -1,0 +1,122 @@
+{
+ "medical": true,
+ "title": "Febrile Seizures",
+ "subject": "Paediatrics",
+ "summary": "A brief generalized tonic‑clonic event in a child 6 months‑5 years with fever and an obvious source, resolving quickly and not indicating epilepsy.",
+ "aka": [
+  "Fever‑associated seizures"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "A febrile seizure is a brief generalized tonic‑clonic event in a child 6 months‑5 years with fever, no prior epilepsy, and an identifiable source of infection.",
+   "b": [
+    "Occurs in 2–4 % of children",
+    "Shorter than 15 min",
+    "No focal features"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "All febrile seizures are considered simple unless they are prolonged, focal, or recur within 24 h. No formal staging beyond these criteria."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings the leading infections are respiratory tract infections, malaria, and diarrhoeal disease. Other contributors include HIV, TB, and sickle cell crises.",
+   "b": [
+    "Upper respiratory infection",
+    "Malaria",
+    "Diarrhoea"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The child has a sudden loss of consciousness, stiffening of limbs, and possible frothing at the mouth. The event lasts less than 15 min and the child recovers fully.",
+   "b": [
+    "Generalized tonic‑clonic activity",
+    "No post‑ictal confusion"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are guided by clinical suspicion of a serious underlying infection or metabolic disturbance."
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Seizure lasting >15 min, focal features, or recurrence within 24 h warrants urgent evaluation for meningitis, encephalitis, or metabolic crisis.",
+   "b": [
+    "Status epilepticus",
+    "Bacterial meningitis",
+    "Severe hypoglycaemia"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying infection, provide supportive care, and monitor for recurrence. Antipyretics are used to reduce fever but are not seizure prophylaxis.",
+   "b": [
+    "Give paracetamol or ibuprofen for fever",
+    "Administer antimalarial if malaria confirmed",
+    "Start antibiotics if bacterial infection suspected"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Educate caregivers about fever management, vaccination, and when to seek care. No routine prophylaxis is recommended for simple febrile seizures.",
+   "b": [
+    "Ensure immunisations up to date",
+    "Teach safe antipyretic use",
+    "Advise prompt treatment of infections"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Seizures due to meningitis, encephalitis, hypoglycaemia, or epilepsy may mimic febrile seizures but differ in duration, focality, and recurrence.",
+   "b": [
+    "Bacterial meningitis",
+    "Hypoglycaemic seizures",
+    "Epilepsy"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal CSF in early bacterial meningitis can occur; repeat lumbar puncture may be needed. Malaria parasitemia can be low in early infection.",
+   "b": [
+    "False‑negative malaria rapid test in low parasitaemia"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Seizure lasting >15 min",
+  "Focal neurological signs",
+  "Repeated seizures within 24 h",
+  "Signs of meningitis (neck stiffness, bulging fontanelle)",
+  "Hypoglycaemia symptoms"
+ ],
+ "faq": [
+  {
+   "q": "Do febrile seizures increase the risk of epilepsy?",
+   "a": "A single simple febrile seizure does not increase epilepsy risk; recurrence raises the risk modestly."
+  },
+  {
+   "q": "Can antipyretics prevent febrile seizures?",
+   "a": "No; antipyretics reduce fever but do not prevent seizures."
+  },
+  {
+   "q": "What is the best first‑line antipyretic in low‑resource settings?",
+   "a": "Paracetamol is preferred due to safety and availability."
+  }
+ ],
+ "exam": [
+  "A 3‑year‑old presents with a brief generalized seizure during a fever; what is the next best step? — Assess for meningitis: check neck stiffness, perform lumbar puncture if indicated.",
+  "How would you differentiate a simple febrile seizure from a focal seizure? — Simple seizures are brief (<15 min), generalized, and non‑recurrent; focal seizures have focal onset, may last longer, and can recur.",
+  "Why is a rapid malaria test important in this setting? — Malaria can precipitate seizures; a positive test directs antimalarial therapy.",
+  "What is the management of a seizure lasting 20 min in a febrile child? — Treat as status epilepticus: give benzodiazepine, then antiepileptic if needed, and investigate for underlying cause.",
+  "When is an EEG indicated after a febrile seizure? — If the child has recurrent seizures or atypical features, to rule out epilepsy.",
+  "Why should you avoid giving phenobarbital as prophylaxis for simple febrile seizures? — It has no proven benefit and carries risk of sedation and hepatotoxicity."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-19",
+ "reviewed": false
+}

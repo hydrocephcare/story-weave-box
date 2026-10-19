@@ -117,5 +117,483 @@
  "kind": "disease",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused trauma history and a systematic head‑to‑toe exam allow rapid identification of life‑threatening injuries while recognising the limits of bedside assessment.",
+    "b": [
+     "Mechanism: blunt vs penetrating, height, speed, vehicle intrusion, ejection, seat‑belt or restraint use.",
+     "Time since injury and any pre‑hospital interventions (airway, fluids, tourniquet).",
+     "Chief complaints: pain location, loss of consciousness, visual changes, numbness, bleeding, vomiting.",
+     "Past medical history: anticoagulant/antiplatelet use, hemophilia, liver disease, pregnancy, HIV, chronic kidney disease.",
+     "Allergies, medications, immunisation status (tetanus).",
+     "Alcohol or drug use that may mask neurologic assessment."
+    ],
+    "t": [
+     {
+      "a": "Airway patency (jaw thrust, chin lift)",
+      "b": "Confirms airway is open; inability to produce air sounds suggests obstruction, not pneumothorax."
+     },
+     {
+      "a": "Cervical spine palpation and log roll",
+      "b": "Detects tenderness or step‑off; a positive finding mandates continued immobilisation."
+     },
+     {
+      "a": "Breathing – chest rise symmetry, auscultation for breath sounds",
+      "b": "Absent unilateral breath sounds with tracheal deviation suggests tension pneumothorax; normal breath sounds do not exclude internal bleeding."
+     },
+     {
+      "a": "Circulation – radial pulse, capillary refill, skin temperature, blood pressure",
+      "b": "Capillary refill >3 s, cold clammy skin, SBP 70‑90 mmHg indicates Class III shock; bedside pulse does not quantify volume loss."
+     },
+     {
+      "a": "Disability – Glasgow Coma Scale, pupil size/reactivity",
+      "b": "GCS ≤8 mandates airway protection; asymmetric pupils point to raised intracranial pressure."
+     },
+     {
+      "a": "Exposure – inspection for external bleeding, deformities, burns, bruising",
+      "b": "Visible expanding haematoma or open fracture signals uncontrolled hemorrhage; skin colour alone cannot rule out internal bleeding."
+     },
+     {
+      "a": "Focused abdominal exam (FAST probe placement)",
+      "b": "Positive free‑fluid echo in Morison’s pouch or splenorenal recess indicates intra‑abdominal bleeding; a negative FAST does not exclude retroperitoneal injury."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Investigations complement the primary survey, confirm diagnoses, and guide definitive management. In low‑resource settings, alternatives and decision‑trees are essential.",
+    "b": [
+     "FAST – answers presence of intraperitoneal fluid; anechoic area >1 cm in dependent view is positive.",
+     "Chest X‑ray – answers pneumothorax, hemothorax, rib fractures; mediastinal shift or >2 cm air‑space suggests tension, but clinical signs remain primary.",
+     "Pelvic X‑ray – answers pelvic ring stability; widened symphysis >2 cm or displaced sacral fracture indicates major hemorrhage source.",
+     "CT head (when available) – answers intracranial bleed, contusion, skull fracture; hyperdense crescent = sub‑dural, hyperdense biconvex = epidural.",
+     "Serum lactate – answers tissue hypoperfusion; >2 mmol/L suggests ongoing shock.",
+     "Base excess – answers metabolic acidosis; ≤‑6 mmol/L indicates severe hypoperfusion.",
+     "Complete blood count – answers anemia and ongoing bleed; falling hemoglobin >1 g/dL over 6 h signals uncontrolled hemorrhage.",
+     "Blood type and cross‑match – answers transfusion compatibility; O‑negative for females of child‑bearing age if uncross‑matched blood needed."
+    ],
+    "t": [
+     {
+      "a": "FAST",
+      "b": "Detects free fluid; positive if anechoic area >1 cm in Morison’s pouch, splenorenal or pelvis. If unavailable, rely on serial abdominal exams and hemoglobin trends."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Identifies pneumothorax, hemothorax, rib fractures. Tension pneumothorax diagnosis remains clinical; X‑ray may be normal early."
+     },
+     {
+      "a": "Pelvic X‑ray",
+      "b": "Shows pelvic ring disruption; widened symphysis >2 cm or vertical shear pattern predicts massive hemorrhage."
+     },
+     {
+      "a": "CT head",
+      "b": "Answers intracranial pathology; hyperdense lens‑shaped bleed = epidural, crescent = sub‑dural. If CT unavailable, monitor GCS, pupils, and consider transfer."
+     },
+     {
+      "a": "Serum lactate",
+      "b": "Elevated >2 mmol/L indicates hypoperfusion; falling trend after resuscitation signals improvement."
+     },
+     {
+      "a": "Base excess",
+      "b": "Base excess ≤‑6 mmol/L reflects severe metabolic acidosis; guide need for aggressive volume and perfusion restoration."
+     },
+     {
+      "a": "CBC (hemoglobin)",
+      "b": "Drop >1 g/dL within 6 h suggests ongoing bleed; triggers massive transfusion protocol."
+     },
+     {
+      "a": "Blood type & cross‑match",
+      "b": "Provides compatible blood; if cross‑match unavailable, give low‑titer O‑negative for women of child‑bearing age, O‑positive for others."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification systems translate clinical and investigational data into actionable stages, guiding resuscitation intensity and referral.",
+    "b": [
+     "ATLS shock classes: I (SBP ≥ 90 mmHg, HR < 100), II (SBP 90‑100 mmHg, HR 100‑120), III (SBP 70‑90 mmHg, HR > 120), IV (SBP < 70 mmHg, HR > 140).",
+     "Injury Severity Score (ISS) – sum of squares of the three most severely injured body regions; ISS ≥ 16 denotes major trauma.",
+     "Hypothermia severity – core temperature < 35 °C worsens coagulopathy; < 32 °C requires active re‑warming before definitive surgery.",
+     "Acidosis severity – base excess ≤‑6 mmol/L or lactate > 2 mmol/L signals need for rapid hemorrhage control."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑traumatic or less‑obvious injuries mimic common trauma findings; distinguishing them prevents mis‑management.",
+    "t": [
+     {
+      "a": "Tension pneumothorax vs. massive hemothorax",
+      "b": "Both cause unilateral breath‑sound loss and hypotension. Tension shows tracheal deviation, hyper‑resonance, and rapid decompensation; hemothorax yields dullness to percussion and fluid level on X‑ray."
+     },
+     {
+      "a": "Pericardial tamponade vs. severe hypovolemia",
+      "b": "Tamponade presents with Beck’s triad (hypotension, muffled heart sounds, JVD) and pulsus paradoxus; hypovolemia lacks JVD and muffled sounds."
+     },
+     {
+      "a": "Spinal cord injury vs. peripheral nerve injury",
+      "b": "Spinal injury causes level‑specific motor and sensory loss with preserved reflexes above lesion; peripheral nerve injury follows a dermatomal pattern and often has altered reflexes distal to lesion."
+     },
+     {
+      "a": "Acute abdomen from hollow‑viscus injury vs. paralytic ileus",
+      "b": "Hollow‑viscus perforation gives peritoneal signs, guarding, and free air on X‑ray; paralytic ileus shows diffuse tympany without guarding and no free air."
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic ladder guides trauma care from immediate life‑saving actions to definitive repair, continuous monitoring and timely escalation.",
+    "b": [
+     "1. Secure airway with cervical spine protection; use rapid sequence intubation if GCS ≤8 or airway compromise.",
+     "2. Control external hemorrhage with direct pressure, tourniquets, and apply a pelvic binder for suspected pelvic fracture.",
+     "3. Initiate permissive hypotension (SBP 80‑90 mmHg) until bleeding control, unless traumatic brain injury suspected – then maintain MAP ≥ 65 mmHg.",
+     "6. Perform FAST; if positive and unstable, proceed to emergency laparotomy or thoracotomy.",
+     "7. Obtain definitive imaging (CT) once hemodynamically stable; plan operative repair of fractures, vascular injuries or organ lacerations.",
+     "8. Continuously monitor vitals, urine output, lactate, base deficit, and coagulation profile; correct coagulopathy with plasma, cryoprecipitate or fibrinogen concentrate as indicated.",
+     "9. Escalate to senior trauma surgeon or transfer to higher‑level centre if bleeding persists, complex spinal injury, or need for specialised neuro‑critical care.",
+     "10. Document all interventions and hand over using standardized trauma hand‑over protocol."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents iatrogenic harm during resuscitation.",
+    "b": [
+     "Crystalloid bolus – large volumes dilute clotting factors and raise serum glucose; avoid glucose‑containing solutions in diabetic trauma patients.",
+     "Blood products – risk of transfusion‑related acute lung injury (TRALI); stop transfusion if sudden hypoxia, fever, and pulmonary infiltrates appear.",
+     "Vasopressors (e.g., norepinephrine) – can worsen peripheral ischemia; use only after adequate volume resuscitation and target MAP ≥ 65 mmHg.",
+     "Opioids – cause respiratory depression and hypotension; titrate to pain, monitor respiratory rate, and have naloxone ready."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of evolving problems guides timely referral or surgical intervention.",
+    "b": [
+     "Uncontrolled hemorrhage – expanding haematoma, falling haemoglobin >1 g/dL, or persistent tachycardia despite transfusion; call for immediate operative control.",
+     "Coagulopathy – INR >1.5, aPTT >35 s, fibrinogen <1.5 g/L; give plasma, cryoprecipitate, or fibrinogen concentrate and reassess.",
+     "Hypothermia (<35 °C) – worsens coagulopathy; apply active warming blankets and warm fluids.",
+     "Compartment syndrome – pain out of proportion, tense swelling, pain on passive stretch; perform fasciotomy urgently.",
+     "ARDS – worsening PaO₂/FiO₂ <200, bilateral infiltrates; initiate low‑tidal‑volume ventilation, consider prone positioning, and involve critical‑care team."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities modify presentation, laboratory interpretation and therapeutic choices.",
+    "b": [
+     "HIV – may have baseline thrombocytopenia; monitor platelet count, avoid excessive blood loss, and consider prophylactic antibiotics for open injuries.",
+     "TB – pulmonary involvement can mimic pneumothorax; obtain chest X‑ray and sputum if respiratory distress unexplained.",
+     "Malnutrition – low albumin reduces oncotic pressure, exaggerating third‑spacing; give albumin cautiously after volume resuscitation.",
+     "Pregnancy – physiological tachycardia and lower MAP; maintain SBP ≥ 90 mmHg, protect uterus during abdominal exam, give Rh‑negative blood if Rh‑negative.",
+     "Diabetes – hyperglycaemia worsens infection risk; use balanced crystalloids, monitor glucose, avoid high‑glucose fluids.",
+     "Alcohol intoxication – masks neurologic assessment; repeat GCS after sobriety, consider withdrawal prophylaxis.",
+     "Renal failure – reduced clearance of tranexamic acid and opioids; adjust doses, monitor for seizures and respiratory depression.",
+     "Liver failure – impaired synthesis of clotting factors; correct INR with plasma, avoid excessive crystalloid that may worsen ascites."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring trauma care to vulnerable populations ensures equity and safety in low‑resource environments.",
+    "b": [
+     "Children – use weight‑based fluid resuscitation, avoid large‑volume crystalloid boluses; maintain SBP ≥ 70 mmHg + (2 × age).",
+     "Pregnant women – left lateral tilt to relieve aortocaval compression; limit radiation, use ultrasound first, give tetanus prophylaxis.",
+     "Elderly – lower physiologic reserve; target MAP ≥ 65 mmHg, watch for atypical presentations (e.g., normal BP with shock).",
+     "People with HIV – higher infection risk; give broad‑spectrum antibiotics early for open injuries, monitor CD4 if known.",
+     "Low‑resource settings – prioritize clinical assessment, use portable ultrasound for FAST, employ manual compression and improvised tourniquets, and transfer when surgical capability lacking."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "List the primary survey steps and explain why cervical spine protection is maintained until fracture excluded."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "Interpret a FAST result: positive for pericardial fluid versus intra‑abdominal fluid and next management."
+     },
+     {
+      "a": "Exam question 3",
+      "b": "Describe the indications, timing and contraindications for tranexamic acid in trauma."
+     },
+     {
+      "a": "Exam question 4",
+      "b": "Identify the laboratory thresholds that define trauma‑induced coagulopathy and the products used to correct each."
+     },
+     {
+      "a": "Exam question 5",
+      "b": "Explain how to recognise and manage compartment syndrome in a lower‑limb fracture."
+     },
+     {
+      "a": "Exam question 6",
+      "b": "Discuss modifications to resuscitation in a pregnant trauma patient with a SBP of 85 mmHg."
+     },
+     {
+      "a": "Exam question 7",
+      "b": "Outline the steps for massive‑transfusion protocol when blood is only available up to 21 days old."
+     },
+     {
+      "a": "Exam question 8",
+      "b": "What bedside signs differentiate airway obstruction from tension pneumothorax?"
+     },
+     {
+      "a": "Exam question 9",
+      "b": "How does chronic alcohol use alter GCS assessment and subsequent imaging decisions?"
+     },
+     {
+      "a": "Exam question 10",
+      "b": "When should a trauma patient be transferred to a higher‑level centre in a low‑resource hospital?"
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Shock stage III: SBP 70-90 mmHg, HR >120 bpm, cool clammy skin, capillary refill >3 s",
+   "Uncontrolled hemorrhage: falling hemoglobin >1 g/dL or expanding hematoma",
+   "Coagulopathy of trauma: INR >1.5 or aPTT >35 s, fibrinogen <2 g/L",
+   "Maximum age of stored red cells for massive transfusion: 21 days (prefer <7 days)",
+   "FAST positive: free fluid in Morison's pouch, splenorenal recess, pelvis, pericardium",
+   "CT head indication: GCS ≤8, signs of skull fracture, focal neuro deficit, anticoagulation",
+   "Hypothermia threshold worsening coagulopathy: core temperature <35°C",
+   "MAP target in trauma: ≥65 mmHg (adjust for age and comorbidities)",
+   "Tension pneumothorax diagnosis: clinical (hypotension, distended neck veins, tracheal deviation, absent breath sounds) not radiographic alone"
+  ],
+  "mnemonics": [
+   {
+    "n": "ABCDE",
+    "t": "Airway, Breathing, Circulation, Disability, Exposure – systematic primary survey"
+   },
+   {
+    "n": "MIST",
+    "t": "Mechanism, Injuries, Signs, Treatment – pre‑hospital handover"
+   }
+  ],
+  "vivas": [
+   {
+    "q": "What is the first action after a trauma patient arrives with suspected cervical spine injury?",
+    "a": "Apply a rigid cervical collar and maintain manual in‑line stabilization while assessing airway.",
+    "hot": true
+   },
+   {
+    "q": "Define a tension pneumothorax and how it differs from a simple pneumothorax.",
+    "a": "Tension pneumothorax is a clinical emergency with progressive intrathoracic pressure causing hypotension, distended neck veins and mediastinal shift; simple pneumothorax lacks hemodynamic compromise.",
+    "hot": true
+   },
+   {
+    "q": "When is a FAST scan indicated and what does a positive result mean?",
+    "a": "Indicated in unstable blunt or penetrating trauma; positive means free intraperitoneal or pericardial fluid suggesting bleeding requiring operative or interventional control.",
+    "hot": true
+   },
+   {
+    "q": "What are the contraindications to tranexamic acid in trauma?",
+    "a": "Active thromboembolic disease, known seizure disorder, severe renal impairment (creatinine >2 mg/dL) without dose adjustment, and within 3 h of injury only.",
+    "hot": true
+   },
+   {
+    "q": "Explain the ‘lethal triad’ and how to prevent it during resuscitation.",
+    "a": "Hypothermia, acidosis, coagulopathy; prevent by warming patient, limiting crystalloid, early blood products, and using TXA within 3 h.",
+    "hot": true
+   },
+   {
+    "q": "A patient with head trauma cannot recognize familiar faces but has normal visual acuity. Which cortical lobe is likely injured?",
+    "a": "The right fusiform gyrus of the temporal lobe (prosopagnosia).",
+    "past": true
+   },
+   {
+    "q": "What is the maximum recommended age of stored blood for massive transfusion?",
+    "a": "Stored red cells should be less than 21 days old; fresher units (<7 days) are preferred for optimal oxygen delivery.",
+    "past": true
+   },
+   {
+    "q": "A 15‑year‑old presents with tachycardia, cool extremities, capillary refill >3 s, and low BP after trauma. What shock stage is this?",
+    "a": "Shock stage III as defined by ATLS criteria.",
+    "past": true
+   },
+   {
+    "q": "Describe the classic histology of an old breast fat necrosis lesion after blunt trauma.",
+    "a": "Necrotic adipocytes surrounded by foamy macrophages, multinucleated giant cells and fibrosis.",
+    "past": true
+   },
+   {
+    "q": "What finding on brain pathology indicates an old contusion?",
+    "a": "Gliosis with hemosiderin‑laden macrophages in the cortical/subcortical region.",
+    "past": true
+   },
+   {
+    "q": "What is the most common presentation of a traumatic aortic injury?",
+    "a": "Chest or back pain with a widened mediastinum on X‑ray; may present with hypotension if rupture occurs.",
+    "past": true
+   },
+   {
+    "q": "Outline the early cellular events of diffuse alveolar damage in ARDS after trauma.",
+    "a": "Alveolar epithelial and endothelial injury, neutrophil infiltration, release of cytokines (TNF‑α, IL‑1), increased permeability leading to hyaline membrane formation."
+   },
+   {
+    "q": "Why should needle thoracostomy not be performed routinely after intubation?",
+    "a": "Because tension pneumothorax must be clinically evident; blind decompression can cause injury if not present."
+   },
+   {
+    "q": "When is CT head mandatory before starting anticoagulation in head‑injured patients?",
+    "a": "When there is a high‑risk feature: GCS ≤8, anticoagulant use, skull fracture, focal deficit, or neurological deterioration."
+   },
+   {
+    "q": "How do you differentiate a flail chest from simple rib fractures on exam?",
+    "a": "Flail chest shows paradoxical chest wall movement during respiration; simple fractures do not cause paradoxical motion."
+   },
+   {
+    "q": "What MAP should be targeted in an elderly trauma patient?",
+    "a": "Maintain MAP ≥65 mmHg, recognizing lower physiologic reserve; avoid excessive hypertension."
+   },
+   {
+    "q": "What are the key steps in managing a patient with massive hemorrhage in low‑resource settings?",
+    "a": "Apply direct pressure, tourniquets, early TXA, permissive hypotension, and use whole blood or low‑titer O‑negative if typed blood unavailable."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 30‑year‑old male with blunt abdominal trauma is hypotensive (BP 80/50) and FAST is positive in Morison's pouch. What is the next best step?",
+    "o": [
+     "Immediate CT abdomen",
+     "Diagnostic peritoneal lavage",
+     "Emergency laparotomy",
+     "Observe and give crystalloid"
+    ],
+    "a": 2,
+    "e": "Hemodynamic instability with positive FAST mandates urgent laparotomy."
+   },
+   {
+    "q": "Which of the following is NOT a clinical sign of tension pneumothorax?",
+    "o": [
+     "Tracheal deviation away from the affected side",
+     "Hyperresonance on percussion",
+     "Bilateral equal breath sounds",
+     "Distended neck veins"
+    ],
+    "a": 2,
+    "e": "Bilateral equal breath sounds are not typical; one side is usually absent."
+   },
+   {
+    "q": "Which laboratory value most directly indicates ongoing coagulopathy in trauma?",
+    "o": [
+     "Platelet count 150,000/µL",
+     "INR 1.2",
+     "Fibrinogen 3.5 g/L",
+     "INR 1.6"
+    ],
+    "a": 3,
+    "e": "INR >1.5 defines trauma‑induced coagulopathy."
+   },
+   {
+    "q": "A 45‑year‑old woman with a seat‑belt injury develops a firm breast mass weeks later. Histology shows necrotic fat cells with fibrosis. What is the most likely diagnosis?",
+    "o": [
+     "Phyllodes tumor",
+     "Fat necrosis",
+     "Invasive ductal carcinoma",
+     "Fibroadenoma"
+    ],
+    "a": 1,
+    "e": "Fat necrosis follows blunt trauma and shows necrotic adipocytes with fibrosis.",
+    "past": true
+   },
+   {
+    "q": "Which of the following is the correct indication for CT angiography of the chest in blunt trauma?",
+    "o": [
+     "Any chest pain",
+     "Widened mediastinum on X‑ray",
+     "Stable patient with rib fractures",
+     "All of the above"
+    ],
+    "a": 1,
+    "e": "A widened mediastinum suggests possible aortic injury, prompting CTA."
+   },
+   {
+    "q": "In a patient with severe trauma, which of the following is the optimal target core temperature to prevent hypothermia‑related coagulopathy?",
+    "o": [
+     "33°C",
+     "35°C",
+     "37°C",
+     "39°C"
+    ],
+    "a": 2,
+    "e": "Maintaining normothermia (≥37°C) avoids worsening coagulopathy."
+   },
+   {
+    "q": "A 55‑year‑old man with trauma receives a massive transfusion. Which blood product should be given first to correct severe anemia if type‑specific blood is unavailable?",
+    "o": [
+     "Group O‑negative whole blood",
+     "Group O‑positive packed RBCs",
+     "Group AB plasma",
+     "Group A platelets"
+    ],
+    "a": 0,
+    "e": "Group O‑negative whole blood provides RBCs, plasma, and platelets without typing."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 22‑year‑old male is hit by a motorbike. On arrival: GCS 13, BP 85/55 mmHg, HR 130 bpm, cool clammy skin, capillary refill 4 s. FAST shows fluid in the pelvis. No obvious external bleeding.",
+    "qs": [
+     {
+      "q": "What is the most likely class of shock and why?",
+      "a": "Class III hemorrhagic shock – SBP 70‑90 mmHg, HR >120, cool skin, prolonged capillary refill, and falling hemoglobin."
+     },
+     {
+      "q": "If CT is unavailable, how would you confirm intra‑abdominal bleeding?",
+      "a": "Proceed to urgent exploratory laparotomy based on hemodynamic instability and positive FAST."
+     }
+    ]
+   },
+   {
+    "v": "A 38‑year‑old pregnant woman (30 weeks) is involved in a low‑speed MVC. She is alert, BP 110/70 mmHg, HR 95 bpm. She complains of mild abdominal pain. FAST is negative. Cervical collar in place.",
+    "qs": [
+     {
+      "q": "What modifications to the primary survey are required for pregnancy?",
+      "a": "Left lateral tilt to relieve aortocaval compression, maintain MAP ≥65 mmHg, and monitor fetal heart rate if possible."
+     },
+     {
+      "q": "When is CT imaging justified in this patient?",
+      "a": "If there are high‑risk features (e.g., placental abruption signs, worsening vitals, or fetal distress); otherwise use ultrasound."
+     },
+     {
+      "q": "How should blood products be administered if massive hemorrhage occurs?",
+      "a": "Use O‑negative or low‑titer O‑positive red cells, give Rh‑negative plasma if the mother is Rh‑negative, and consider Rhogam postpartum."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing absent breath sounds with airway obstruction; absent sounds may indicate pneumothorax.",
+   "Relying on chest X‑ray alone to diagnose tension pneumothorax; it is a clinical diagnosis.",
+   "Giving tranexamic acid after 3 hours post‑injury or in patients with active thromboembolism without dose adjustment.",
+   "Using a hemoglobin drop of 2 g/dL as the sole trigger for massive transfusion; smaller drops can be significant.",
+   "Targeting MAP ≥75 mmHg in all elderly trauma patients regardless of comorbidities.",
+   "Assuming CT head is required for any GCS <13 before anticoagulation; criteria are more specific.",
+   "Neglecting to maintain cervical spine immobilization until fracture is excluded.",
+   "Administering old stored blood (>21 days) for massive transfusion, which may impair oxygen delivery."
+  ],
+  "exam": [
+   "What is the first action after a trauma patient arrives with suspected cervical spine injury? — Apply a rigid cervical collar and maintain manual in‑line stabilization while assessing airway.",
+   "Define a tension pneumothorax and how it differs from a simple pneumothorax. — Tension pneumothorax is a clinical emergency with progressive intrathoracic pressure causing hypotension, distended neck veins and mediastinal shift; simple pneumothorax lacks hemodynamic compromise.",
+   "When is a FAST scan indicated and what does a positive result mean? — Indicated in unstable blunt or penetrating trauma; positive means free intraperitoneal or pericardial fluid suggesting bleeding requiring operative or interventional control.",
+   "What are the contraindications to tranexamic acid in trauma? — Active thromboembolic disease, known seizure disorder, severe renal impairment (creatinine >2 mg/dL) without dose adjustment, and within 3 h of injury only.",
+   "Explain the ‘lethal triad’ and how to prevent it during resuscitation. — Hypothermia, acidosis, coagulopathy; prevent by warming patient, limiting crystalloid, early blood products, and using TXA within 3 h.",
+   "A patient with head trauma cannot recognize familiar faces but has normal visual acuity. Which cortical lobe is likely injured? — The right fusiform gyrus of the temporal lobe (prosopagnosia).",
+   "What is the maximum recommended age of stored blood for massive transfusion? — Stored red cells should be less than 21 days old; fresher units (<7 days) are preferred for optimal oxygen delivery.",
+   "A 15‑year‑old presents with tachycardia, cool extremities, capillary refill >3 s, and low BP after trauma. What shock stage is this? — Shock stage III as defined by ATLS criteria.",
+   "Describe the classic histology of an old breast fat necrosis lesion after blunt trauma. — Necrotic adipocytes surrounded by foamy macrophages, multinucleated giant cells and fibrosis.",
+   "What finding on brain pathology indicates an old contusion? — Gliosis with hemosiderin‑laden macrophages in the cortical/subcortical region.",
+   "What is the most common presentation of a traumatic aortic injury? — Chest or back pain with a widened mediastinum on X‑ray; may present with hypotension if rupture occurs.",
+   "Outline the early cellular events of diffuse alveolar damage in ARDS after trauma. — Alveolar epithelial and endothelial injury, neutrophil infiltration, release of cytokines (TNF‑α, IL‑1), increased permeability leading to hyaline membrane formation.",
+   "Why should needle thoracostomy not be performed routinely after intubation? — Because tension pneumothorax must be clinically evident; blind decompression can cause injury if not present.",
+   "When is CT head mandatory before starting anticoagulation in head‑injured patients? — When there is a high‑risk feature: GCS ≤8, anticoagulant use, skull fracture, focal deficit, or neurological deterioration."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-19",
+  "checked": "2026-10-19",
+  "trimmed": 8
+ }
 }

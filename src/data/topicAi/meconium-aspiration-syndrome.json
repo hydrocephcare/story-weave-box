@@ -1,0 +1,220 @@
+{
+ "medical": true,
+ "title": "Meconium Aspiration Syndrome",
+ "subject": "Paediatrics",
+ "summary": "A term infant with meconium‐contaminated fluid develops respiratory distress, hypoxaemia and sometimes persistent pulmonary hypertension. Early recognition and supportive care are key.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "MAS is the inhalation of meconium into the lungs during labour, causing airway obstruction, chemical pneumonitis and hypoxaemia. Diagnosis is clinical, supported by chest radiograph showing patchy infiltrates and a history of meconium staining.",
+   "b": [
+    "Term infant",
+    "Meconium stained amniotic fluid",
+    "Respiratory distress within minutes of birth"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows diffuse ground‑glass or patchy infiltrates; confirms pulmonary involvement and rules out congenital diaphragmatic hernia."
+    },
+    {
+     "a": "Arterial blood gas",
+     "b": "Assesses oxygenation; PaO2 < 50 mmHg or PaCO2 > 60 mmHg indicates severe hypoxaemia."
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Detects SpO2 < 90% on room air; guides need for oxygen or ventilation."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Greenfield staging classifies MAS into mild, moderate and severe based on clinical and radiographic findings.",
+   "b": [
+    "Mild: mild tachypnoea, SpO2 90–95%",
+    "Moderate: tachypnoea, SpO2 85–90%, chest X‑ray infiltrates",
+    "Severe: severe distress, SpO2 < 85%, need for ventilation or PPHN"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is meconium passage into the amniotic fluid, usually after fetal distress. In low‑resource settings, prematurity, maternal infection and delayed cord clamping can worsen outcomes.",
+   "b": [
+    "Fetal distress (e.g., prolonged labour, fetal heart rate decelerations)",
+    "Meconium passage into amniotic fluid",
+    "Maternal infection (e.g., malaria, HIV)"
+   ],
+   "t": [
+    {
+     "a": "Maternal malaria test",
+     "b": "Rule out malaria as a cause of fetal distress; positive result suggests need for antimalarial treatment."
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Positive maternal HIV increases risk of prematurity and neonatal infection; informs prophylaxis."
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Within minutes of birth the infant shows tachypnoea, grunting, cyanosis and sometimes a characteristic greenish sputum. The chest may be hyperinflated or show air trapping.",
+   "b": [
+    "Tachypnoea > 60/min",
+    "Grunting, nasal flaring",
+    "Cyanosis, SpO2 < 90%",
+    "Greenish sputum"
+   ],
+   "t": [
+    {
+     "a": "Respiratory rate",
+     "b": "Tachypnoea > 60/min indicates respiratory distress."
+    },
+    {
+     "a": "SpO2",
+     "b": "SpO2 < 90% on room air signals need for oxygen."
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "In low‑resource settings, focus on bedside tests. Full blood count, CRP and cultures are useful if infection is suspected.",
+   "t": [
+    {
+     "a": "Full blood count",
+     "b": "Detects neutropenia or thrombocytopenia, which may indicate sepsis."
+    },
+    {
+     "a": "CRP",
+     "b": "Elevated CRP supports bacterial infection; normal CRP suggests non‑infectious MAS."
+    },
+    {
+     "a": "Blood culture",
+     "b": "Positive culture guides antibiotic choice; negative culture does not rule out infection."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "PPHN, pneumothorax, sepsis and bronchopulmonary dysplasia are serious complications. Watch for worsening hypoxaemia, persistent tachypnoea and abnormal chest sounds.",
+   "b": [
+    "PPHN: sudden drop in SpO2 despite oxygen",
+    "Pneumothorax: sudden respiratory distress, hyperresonance",
+    "Sepsis: fever, lethargy, abnormal blood counts"
+   ],
+   "t": [
+    {
+     "a": "Chest auscultation",
+     "b": "Detects wheeze, crackles or absent breath sounds; guides need for imaging."
+    },
+    {
+     "a": "Oxygen saturation trend",
+     "b": "Rapid decline suggests PPHN or pneumothorax."
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide respiratory support and monitor for complications. Avoid drugs that worsen pulmonary hypertension.",
+   "b": [
+    "Give oxygen to maintain SpO2 > 90%",
+    "If severe, intubate and ventilate with low tidal volume",
+    "Use inhaled nitric oxide if available for PPHN"
+   ],
+   "t": [
+    {
+     "a": "Inhaled nitric oxide",
+     "b": "Reduces pulmonary vascular resistance in PPHN; avoid if not available."
+    },
+    {
+     "a": "Surfactant therapy",
+     "b": "Consider if surfactant deficiency is suspected; not routinely used in MAS."
+    },
+    {
+     "a": "Antibiotics",
+     "b": "Start empiric broad‑spectrum if sepsis suspected; avoid aminoglycosides if renal function is impaired."
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor for chronic lung disease and neurodevelopment. Prevention focuses on early detection of fetal distress and prompt delivery.",
+   "b": [
+    "Early obstetric monitoring",
+    "Avoid prolonged labour",
+    "Prompt neonatal resuscitation"
+   ],
+   "t": [
+    {
+     "a": "Neonatal resuscitation guidelines",
+     "b": "Ensure airway patency and suctioning of meconium before ventilation."
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Bronchopulmonary dysplasia, congenital diaphragmatic hernia and sepsis can mimic MAS.",
+   "b": [
+    "Congenital diaphragmatic hernia: bowel loops in chest on X‑ray",
+    "Sepsis: fever, abnormal blood counts",
+    "Bronchopulmonary dysplasia: chronic cough, wheeze"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A normal chest X‑ray early on may miss MAS; delayed imaging can show infiltrates later. Pulse oximetry may be falsely normal if probe is on a dark skin tone.",
+   "b": [
+    "Early X‑ray may be normal",
+    "Pulse oximetry probe placement"
+   ],
+   "t": [
+    {
+     "a": "Repeat chest X‑ray",
+     "b": "If clinical suspicion remains high despite normal initial X‑ray."
+    },
+    {
+     "a": "Re‑position pulse oximeter",
+     "b": "Ensure accurate SpO2 reading."
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe respiratory distress with SpO2 < 85% despite oxygen",
+  "Sudden worsening of breathing or cyanosis",
+  "Signs of pneumothorax or PPHN"
+ ],
+ "faq": [
+  {
+   "q": "Why is suctioning of meconium done before ventilation?",
+   "a": "It removes thick meconium from the airway, reducing obstruction and preventing aspiration into lower airways."
+  },
+  {
+   "q": "When is inhaled nitric oxide indicated?",
+   "a": "In persistent pulmonary hypertension of the newborn that does not improve with oxygen and ventilation."
+  },
+  {
+   "q": "What is the main difference between MAS and sepsis?",
+   "a": "MAS presents immediately after birth with respiratory distress; sepsis may develop later and is associated with fever and abnormal blood counts."
+  }
+ ],
+ "exam": [
+  "What is the first step in managing a term infant with suspected MAS? — Suction airway, give oxygen, assess SpO2.",
+  "How would you differentiate MAS from congenital diaphragmatic hernia on chest X‑ray? — Look for bowel loops in chest.",
+  "Why is surfactant therapy not routinely used in MAS? — MAS is not primarily a surfactant deficiency; surfactant is reserved for RDS.",
+  "When is inhaled nitric oxide indicated in MAS? — Persistent hypoxaemia with PPHN despite oxygen and ventilation.",
+  "What red flag would prompt immediate intubation? — SpO2 < 85% despite 100% oxygen or sudden drop in SpO2.",
+  "Why avoid aminoglycosides in a neonate with MAS? — They can cause nephrotoxicity and ototoxicity; use alternatives if renal function is compromised."
+ ],
+ "related": [
+  "Persistent Pulmonary Hypertension of the Newborn",
+  "Bronchopulmonary Dysplasia",
+  "Congenital Diaphragmatic Hernia",
+  "Neonatal Sepsis",
+  "Neonatal Resuscitation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-19",
+ "reviewed": false
+}

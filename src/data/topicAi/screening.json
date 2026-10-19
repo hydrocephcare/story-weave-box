@@ -191,5 +191,492 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: History and How to Examine",
+    "p": "A focused history and systematic physical exam identify asymptomatic individuals at risk and detect early disease signs that guide further testing.",
+    "b": [
+     "Age, sex, ethnicity and occupation (risk groups for endemic infections, hereditary conditions).",
+     "Family history of hereditary disorders (e.g., sickle cell, thalassaemia, FAP).",
+     "Exposure history: tobacco, alcohol, occupational hazards, radiation, endemic infections (TB, HIV, hepatitis).",
+     "Vaccination and previous screening attendance (to assess coverage and gaps).",
+     "Pregnancy status, menstrual history and contraceptive use (relevant for cervical, breast, and anemia screening).",
+     "Symptoms that may be subtle: unexplained weight loss, fatigue, night sweats, visual changes, urinary changes."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Detects pallor, jaundice, lymphadenopathy, skin lesions; positive pallor suggests anemia, jaundice suggests hepatic or hemolytic disease; cannot quantify severity."
+     },
+     {
+      "a": "Conjunctival and palmar pallor",
+      "b": "Bedside anemia screen; presence indicates possible iron‑deficiency or chronic disease anemia; cannot differentiate cause without labs."
+     },
+     {
+      "a": "Abdominal palpation for organomegaly",
+      "b": "Assesses liver, spleen, kidney size; enlarged liver/spleen may indicate chronic infection or storage disease; cannot determine etiology."
+     },
+     {
+      "a": "Digital rectal examination (DRE) for occult blood",
+      "b": "Screens for lower GI bleeding; positive occult blood warrants FOBT or colonoscopy; cannot grade lesion size."
+     },
+     {
+      "a": "Neck examination for thyroid enlargement",
+      "b": "Detects goitre suggesting iodine deficiency or thyroid disease; cannot assess functional status without TSH/FT4."
+     },
+     {
+      "a": "Cervical visual inspection with acetic acid (VIA)",
+      "b": "Low‑resource cervical cancer screen; acetowhite areas indicate possible precancerous changes; cannot replace histology for definitive diagnosis."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and How to Read Them",
+    "p": "Laboratory and imaging tests confirm or exclude disease, quantify risk, and guide management. When a test is unavailable, use clinical algorithms or alternative affordable tests.",
+    "b": [
+     "Complete blood count (CBC) – answers presence of anemia, leukocytosis, thrombocytopenia; hemoglobin <12 g/dL in women or <13 g/dL in men confirms anemia."
+    ],
+    "t": [
+     {
+      "a": "Hemoglobin concentration",
+      "b": "Detects anemia; values <12 g/dL (women) or <13 g/dL (men) are abnormal; severity graded by WHO cut‑offs."
+     },
+     {
+      "a": "Serum ferritin",
+      "b": "Assesses iron stores; <15 µg/L indicates iron‑deficiency anemia; >300 µg/L suggests inflammation or overload."
+     },
+     {
+      "a": "Fasting blood glucose or HbA1c",
+      "b": "Screens for diabetes; HbA1c ≥6.5 % or fasting glucose ≥126 mg/dL diagnostic; values 5.7‑6.4 % indicate pre‑diabetes."
+     },
+     {
+      "a": "Urine dipstick for protein and glucose",
+      "b": "Detects early renal disease and diabetes; ≥1+ protein warrants urine albumin‑creatinine ratio; ≥1+ glucose suggests hyperglycaemia."
+     },
+     {
+      "a": "Rapid plasma reagin (RPR) or VDRL",
+      "b": "Nontreponemal syphilis screen; titres ≥1:8 considered active infection; requires confirmatory treponemal test."
+     },
+     {
+      "a": "Pap smear (conventional or liquid‑based cytology)",
+      "b": "Cervical cancer screen; ASC‑US, LSIL, HSIL categories guide colposcopy; negative result means low risk for 3‑5 years."
+     },
+     {
+      "a": "Fecal occult blood test (FOBT) – guaiac or immunochemical",
+      "b": "Colorectal cancer screen; any positive result mandates colonoscopy; negative result reduces risk but does not exclude adenomas."
+     },
+     {
+      "a": "Abdominal ultrasound",
+      "b": "First‑line imaging for liver, gallbladder, kidney; detects cysts, masses, ascites; cannot characterise lesion histology."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG)",
+      "b": "Differentiates portal hypertension (SAAG ≥1.1 g/dL) from non‑portal causes; requires serum and ascitic albumin."
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Screen for TB, pneumonia, cardiac silhouette; infiltrates suggest infection, enlarged heart suggests heart failure."
+     },
+     {
+      "a": "TSH on newborn heel‑prick",
+      "b": "Newborn congenital hypothyroidism screen; TSH ≥10 mIU/L prompts repeat testing; ≥20 mIU/L warrants immediate treatment."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, Staging and Severity",
+    "p": "Screen‑detected conditions are classified using disease‑specific criteria that determine prognosis and treatment urgency.",
+    "b": [
+     "Cervical intra‑epithelial neoplasia (CIN) – CIN 1 (low‑grade), CIN 2/3 (high‑grade); management escalates with grade.",
+     "Hypertension (screened by BP): Stage 1 (140‑159/90‑99 mmHg), Stage 2 (≥160/≥100 mmHg)."
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑Alike Conditions",
+    "p": "Several diseases mimic each other on screening; careful history, targeted tests and context separate them.",
+    "b": [
+     "Iron‑deficiency anemia vs anaemia of chronic disease – differentiate by ferritin (low vs normal/high) and CRP."
+    ],
+    "t": [
+     {
+      "a": "Iron‑deficiency anemia",
+      "b": "Low ferritin, high TIBC, microcytic hypochromic smear; treat with iron supplementation."
+     },
+     {
+      "a": "Anaemia of chronic disease",
+      "b": "Normal/high ferritin, low TIBC, normocytic or mildly microcytic; treat underlying inflammation."
+     },
+     {
+      "a": "Hereditary spherocytosis vs autoimmune hemolytic anaemia",
+      "b": "Positive osmotic fragility test or EMA binding for HS; DAT positive for AIHA."
+     },
+     {
+      "a": "FAP vs attenuated FAP vs MUTYH‑associated polyposis",
+      "b": "Number of polyps, age of onset, APC mutation testing; MUTYH requires biallelic testing."
+     },
+     {
+      "a": "TB pleural effusion vs malignant effusion",
+      "b": "High ADA (>40 U/L) and lymphocytic predominance suggest TB; cytology positive for malignant cells confirms cancer."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured approach ensures that a positive screen leads to timely diagnosis, safe treatment and appropriate follow‑up while avoiding unnecessary interventions.",
+    "b": [
+     "First contact: confirm positive screen with a diagnostic test that meets sensitivity and specificity thresholds for the condition.",
+     "If diagnosis confirmed, assess disease stage and patient comorbidities before choosing definitive therapy.",
+     "Choose treatment class based on evidence: e.g., curative surgery for localized cancer, oral antivirals for chronic viral infections, or prophylactic antibiotics for high‑risk bacterial colonisation.",
+     "Monitor response with repeat screening or disease‑specific markers at intervals defined by guidelines (usually 6‑12 months).",
+     "Escalate or refer when: disease progresses despite therapy, complications develop, or specialist resources (e.g., endoscopy, genetics) are required."
+    ],
+    "t": [
+     {
+      "a": "Diagnostic confirmation",
+      "b": "Use gold‑standard test (e.g., colonoscopy for colorectal lesions, PCR for viral load) to rule out false‑positive screen."
+     },
+     {
+      "a": "Definitive treatment selection",
+      "b": "Select drug class with proven benefit; avoid agents with known poor efficacy or high toxicity in the screened population."
+     },
+     {
+      "a": "Monitoring schedule",
+      "b": "Repeat the screening test or disease‑specific marker at the guideline‑recommended interval to detect recurrence or progression."
+     },
+     {
+      "a": "Escalation criteria",
+      "b": "New symptoms, worsening test values, or development of complications trigger specialist referral."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents harm and maintains the benefit of screening‑driven therapy.",
+    "b": [
+     "Antivirals (e.g., nucleoside analogues) may cause renal tubular dysfunction; monitor serum creatinine and adjust dose if creatinine rises.",
+     "Hormonal chemoprevention (e.g., tamoxifen) can increase thrombo‑embolism risk; assess for prior clotting disorders and advise on mobility.",
+     "Broad‑spectrum antibiotics used for prophylaxis can select resistant organisms; limit duration and review culture results.",
+     "Immunomodulators (e.g., interferon) may precipitate depression; screen mental health baseline and provide counseling resources."
+    ],
+    "t": [
+     {
+      "a": "Thrombotic risk",
+      "b": "Hold hormonal agents if patient develops leg swelling, chest pain, or recent surgery; consider anticoagulation."
+     },
+     {
+      "a": "Resistance development",
+      "b": "Switch to narrow‑spectrum agent once pathogen identified; discontinue prophylaxis if no longer indicated."
+     },
+     {
+      "a": "Neuropsychiatric side‑effects",
+      "b": "Refer for psychiatric evaluation; consider dose reduction or alternative therapy."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications may arise from the disease uncovered by screening or from its treatment; early recognition guides timely escalation.",
+    "b": [
+     "Bleeding after colonoscopic polypectomy: assess hemodynamics, apply endoscopic hemostasis, and admit if persistent.",
+     "Severe anemia from occult gastrointestinal bleeding: transfuse if hemoglobin <7 g/dL or symptomatic, and arrange urgent endoscopy.",
+     "Progression to invasive cancer despite early detection: refer to oncology for multimodal therapy."
+    ],
+    "t": [
+     {
+      "a": "Hemodynamic instability",
+      "b": "Immediate IV fluids, blood products, and surgical consult."
+     },
+     {
+      "a": "Persistent abnormal labs",
+      "b": "Escalate to specialist for further imaging or biopsy."
+     },
+     {
+      "a": "Drug toxicity threshold",
+      "b": "Discontinue offending agent and switch to alternative regimen."
+     },
+     {
+      "a": "Failure of curative treatment",
+      "b": "Consider clinical trial enrollment or palliative care referral."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑existing conditions can mask, mimic, or alter the performance of screening tests and affect treatment choices.",
+    "b": [
+     "HIV infection may lower CD4 count, reducing sensitivity of tuberculin skin test; use interferon‑γ release assay instead.",
+     "Malnutrition blunts skin‑fold thickness measurements; rely on biochemical markers for micronutrient deficiency screening.",
+     "Pregnancy changes hormone levels, affecting thyroid screening cut‑offs; use trimester‑specific reference ranges.",
+     "Diabetes can cause false‑positive urine protein screening; confirm with albumin‑creatinine ratio."
+    ],
+    "t": [
+     {
+      "a": "HIV effect on TB screen",
+      "b": "Replace TST with IGRA; interpret IGRA positivity regardless of CD4 count."
+     },
+     {
+      "a": "Malnutrition impact",
+      "b": "If anthropometry unavailable, use serum albumin and pre‑albumin as surrogate."
+     },
+     {
+      "a": "Diabetes urine screening",
+      "b": "Confirm proteinuria with quantitative albumin measurement before initiating nephroprotective therapy."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring screening pathways and management to vulnerable populations ensures equity and effectiveness in low‑resource settings.",
+    "b": [
+     "Children: use age‑appropriate tests (e.g., heel‑prick for newborn metabolic disorders, visual acuity charts for amblyopia).",
+     "Pregnancy: prioritize non‑radiating modalities (ultrasound) and avoid teratogenic drugs; schedule cervical cytology after first trimester if needed.",
+     "Elderly: adjust cut‑offs for renal function, use frailty scores to decide on invasive diagnostics.",
+     "People with HIV: integrate opportunistic infection screens (e.g., cryptococcal antigen) with routine HIV care.",
+     "Low‑resource hospitals: employ point‑of‑care rapid tests, task‑shift screening to trained nurses, and use syndromic algorithms when confirmatory labs are unavailable."
+    ],
+    "t": [
+     {
+      "a": "Pediatric screening adaptation",
+      "b": "Interpret results using pediatric reference ranges; refer abnormal findings to pediatric specialist."
+     },
+     {
+      "a": "Pregnancy‑safe investigations",
+      "b": "Choose ultrasound over CT; avoid iodinated contrast unless life‑threatening."
+     },
+     {
+      "a": "HIV integrated screening",
+      "b": "Combine CD4 count, viral load, and opportunistic infection screens in a single visit."
+     },
+     {
+      "a": "Resource‑limited strategy",
+      "b": "When PCR unavailable, use antigen‑based rapid test and confirm positives with referral lab."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Sensitivity = TP/(TP+FN) and specificity = TN/(TN+FP)",
+   "Positive predictive value = TP/(TP+FP) varies with prevalence",
+   "Lead‑time bias inflates apparent survival without real benefit",
+   "Length‑time bias favours detection of indolent disease",
+   "WHO criteria for a screening test: disease importance, detectable pre‑clinical phase, safe test, effective treatment, cost‑effective",
+   "Acceptable cut‑off for cervical cytology ASCUS → repeat test; HSIL → colposcopy",
+   "Fasting blood glucose ≥126 mg/dL or HbA1c ≥6.5 % for diabetes screening in adults"
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define a screening programme and its primary public‑health purpose.",
+    "a": "A systematic effort to identify asymptomatic individuals with a disease or risk factor so that early intervention can reduce morbidity and mortality.",
+    "hot": true
+   },
+   {
+    "q": "What are the three essential criteria a disease must meet to be suitable for screening?",
+    "a": "High prevalence or serious impact, a detectable latent phase, and an effective, acceptable treatment for early disease.",
+    "hot": true
+   },
+   {
+    "q": "Explain why a highly sensitive test is preferred for initial screening.",
+    "a": "It minimises false‑negatives, ensuring most cases are detected; missed cases could progress unchecked.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a cervical cytology result of ASCUS in a 30‑year‑old woman.",
+    "a": "Atypical squamous cells of undetermined significance; repeat cytology in 12 months or HPV testing per local protocol.",
+    "past": true
+   },
+   {
+    "q": "Why is over‑diagnosis a concern in breast cancer mammography screening?",
+    "a": "Detects indolent tumours that would never cause symptoms, leading to unnecessary treatment and anxiety."
+   },
+   {
+    "q": "Differentiate between opportunistic and universal screening with an example.",
+    "a": "Opportunistic: HIV test offered during antenatal visit; Universal: newborn heel‑prick for PKU offered to all infants."
+   },
+   {
+    "q": "What bedside sign is most reliable for anemia screening in low‑resource settings?",
+    "a": "Conjunctival pallor; assess inner eyelid for pale mucous membrane, correlates with moderate‑severe anaemia."
+   },
+   {
+    "q": "List two major harms of screening programmes.",
+    "a": "False‑positive results causing anxiety and unnecessary investigations; false‑negatives giving false reassurance and delayed treatment."
+   },
+   {
+    "q": "How does HIV infection affect interpretation of a positive TB skin test in screening?",
+    "a": "HIV reduces delayed‑type hypersensitivity, increasing false‑negative rates; consider interferon‑gamma release assay instead."
+   },
+   {
+    "q": "What is the next step after a positive fecal occult blood test in an asymptomatic 55‑year‑old?",
+    "a": "Arrange colonoscopy to identify source of bleeding and assess for neoplasia."
+   },
+   {
+    "q": "Why is 5‑fluorouracil not used as first‑line treatment for cervical dysplasia?",
+    "a": "Cervical dysplasia is managed by excisional (LEEP) or ablative (cryotherapy) methods; 5‑FU is not standard."
+   },
+   {
+    "q": "State the correct lifetime cancer risk for familial adenomatous polyposis (FAP).",
+    "a": "Nearly 100 % lifetime risk, usually manifesting by age 40‑50 if untreated, not 100 % by age 30.",
+    "past": true
+   },
+   {
+    "q": "Which bedside test is inappropriate for anemia screening: capillary refill time or conjunctival pallor?",
+    "a": "Capillary refill time; it assesses perfusion, not haemoglobin concentration.",
+    "past": true
+   },
+   {
+    "q": "Interpret a newborn TSH of 12 mIU/L on heel‑prick.",
+    "a": "Above the repeat‑testing threshold (≥10 mIU/L); requires confirmatory serum TSH and possible treatment."
+   },
+   {
+    "q": "What is the key advantage of liquid‑based cytology over conventional smear for cervical screening?",
+    "a": "Provides a uniform cell suspension, reducing obscuring material and improving detection of abnormal cells.",
+    "past": true
+   },
+   {
+    "q": "Explain why a positive syphilis nontreponemal test (VDRL) is used for monitoring therapy.",
+    "a": "Titres fall with successful treatment; quantitative changes reflect disease activity, unlike treponemal tests which remain positive.",
+    "past": true
+   },
+   {
+    "q": "Identify the gene most commonly mutated in familial adenomatous polyposis.",
+    "a": "APC gene mutation on chromosome 5q21.",
+    "past": true
+   },
+   {
+    "q": "Which imaging modality is primary for non‑invasive screening of hydrocephalus in infants?",
+    "a": "Transcranial ultrasound through the fontanelle.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 45‑year‑old woman undergoes routine cervical screening. Cytology shows HSIL. What is the appropriate next step?",
+    "o": [
+     "Repeat cytology in 12 months",
+     "Immediate colposcopic examination",
+     "HPV vaccination",
+     "Observe and repeat in 5 years"
+    ],
+    "a": 1,
+    "e": "HSIL warrants prompt colposcopy to evaluate for high‑grade lesions.",
+    "past": true
+   },
+   {
+    "q": "A newborn screening heel‑prick shows TSH 22 mIU/L. Which action is correct?",
+    "o": [
+     "Repeat test in 2 weeks",
+     "Start levothyroxine immediately",
+     "Arrange confirmatory serum TSH and consider treatment",
+     "No action needed"
+    ],
+    "a": 2,
+    "e": "TSH ≥10 mIU/L requires confirmatory testing; treatment decisions follow serum results."
+   },
+   {
+    "q": "Which of the following is NOT a criterion for an ideal screening test?",
+    "o": [
+     "High sensitivity",
+     "High specificity",
+     "Low cost",
+     "Detects disease after symptoms appear"
+    ],
+    "a": 3,
+    "e": "Screening aims to detect disease before symptoms, not after."
+   },
+   {
+    "q": "A 30‑year‑old man has a positive fecal immunochemical test. Which investigation should follow?",
+    "o": [
+     "CT abdomen",
+     "Colonoscopy",
+     "Upper GI endoscopy",
+     "Abdominal ultrasound"
+    ],
+    "a": 1,
+    "e": "Positive FIT requires colonoscopy to locate colorectal pathology."
+   },
+   {
+    "q": "In a low‑resource clinic, which sign is most reliable for detecting moderate anaemia?",
+    "o": [
+     "Capillary refill time",
+     "Tongue pallor",
+     "Blood pressure measurement",
+     "Heart rate"
+    ],
+    "a": 1,
+    "e": "Tongue pallor is a bedside indicator of anaemia; capillary refill assesses perfusion."
+   },
+   {
+    "q": "Which test is used for screening and monitoring syphilis therapy?",
+    "o": [
+     "TPPA",
+     "FTA‑ABS",
+     "VDRL",
+     "Dark‑field microscopy"
+    ],
+    "a": 2,
+    "e": "VDRL (a nontreponemal test) titres fall with effective treatment, useful for monitoring.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old woman, asymptomatic, attends a routine health check. Her fasting glucose is 130 mg/dL, HbA1c 6.8 %, and BMI 32 kg/m².",
+    "qs": [
+     {
+      "q": "What is the interpretation of these results?",
+      "a": "Both fasting glucose ≥126 mg/dL and HbA1c ≥6.5 % meet diagnostic criteria for type 2 diabetes; she requires confirmation and management."
+     },
+     {
+      "q": "What immediate management steps should be taken?",
+      "a": "Counsel on lifestyle modification, arrange repeat confirmatory testing, and refer for diabetes education; consider initiating metformin if confirmed."
+     },
+     {
+      "q": "Which screening tests should be offered now?",
+      "a": "Baseline retinal exam, urine albumin‑creatinine ratio, lipid profile, and blood pressure measurement for diabetic complications."
+     }
+    ]
+   },
+   {
+    "v": "A 2‑month‑old infant presents for routine newborn screening follow‑up. Heel‑prick TSH returned 11 mIU/L. The infant is otherwise well.",
+    "qs": [
+     {
+      "q": "What is the next appropriate investigation?",
+      "a": "Obtain a serum TSH and free T4 to confirm congenital hypothyroidism before initiating therapy."
+     },
+     {
+      "q": "If serum TSH is 15 mIU/L with normal free T4, what is the management?",
+      "a": "Start low‑dose levothyroxine promptly to prevent neurodevelopmental delay; monitor TSH and T4 regularly."
+     },
+     {
+      "q": "What long‑term follow‑up is required for this child?",
+      "a": "Regular growth and developmental assessments, periodic thyroid function tests, and dose adjustments of levothyroxine as the child grows."
+     }
+    ]
+   }
+  ],
+  "mistakes": [],
+  "exam": [
+   "Define a screening programme and its primary public‑health purpose. — A systematic effort to identify asymptomatic individuals with a disease or risk factor so that early intervention can reduce morbidity and mortality.",
+   "What are the three essential criteria a disease must meet to be suitable for screening? — High prevalence or serious impact, a detectable latent phase, and an effective, acceptable treatment for early disease.",
+   "Explain why a highly sensitive test is preferred for initial screening. — It minimises false‑negatives, ensuring most cases are detected; missed cases could progress unchecked.",
+   "Interpret a cervical cytology result of ASCUS in a 30‑year‑old woman. — Atypical squamous cells of undetermined significance; repeat cytology in 12 months or HPV testing per local protocol.",
+   "Why is over‑diagnosis a concern in breast cancer mammography screening? — Detects indolent tumours that would never cause symptoms, leading to unnecessary treatment and anxiety.",
+   "Differentiate between opportunistic and universal screening with an example. — Opportunistic: HIV test offered during antenatal visit; Universal: newborn heel‑prick for PKU offered to all infants.",
+   "What bedside sign is most reliable for anemia screening in low‑resource settings? — Conjunctival pallor; assess inner eyelid for pale mucous membrane, correlates with moderate‑severe anaemia.",
+   "List two major harms of screening programmes. — False‑positive results causing anxiety and unnecessary investigations; false‑negatives giving false reassurance and delayed treatment.",
+   "How does HIV infection affect interpretation of a positive TB skin test in screening? — HIV reduces delayed‑type hypersensitivity, increasing false‑negative rates; consider interferon‑gamma release assay instead.",
+   "What is the next step after a positive fecal occult blood test in an asymptomatic 55‑year‑old? — Arrange colonoscopy to identify source of bleeding and assess for neoplasia.",
+   "Why is 5‑fluorouracil not used as first‑line treatment for cervical dysplasia? — Cervical dysplasia is managed by excisional (LEEP) or ablative (cryotherapy) methods; 5‑FU is not standard.",
+   "State the correct lifetime cancer risk for familial adenomatous polyposis (FAP). — Nearly 100 % lifetime risk, usually manifesting by age 40‑50 if untreated, not 100 % by age 30.",
+   "Which bedside test is inappropriate for anemia screening: capillary refill time or conjunctival pallor? — Capillary refill time; it assesses perfusion, not haemoglobin concentration.",
+   "Interpret a newborn TSH of 12 mIU/L on heel‑prick. — Above the repeat‑testing threshold (≥10 mIU/L); requires confirmatory serum TSH and possible treatment."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-19",
+  "checked": "2026-10-19",
+  "trimmed": 11
+ }
 }

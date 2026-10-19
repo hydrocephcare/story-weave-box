@@ -1,0 +1,151 @@
+{
+ "medical": true,
+ "title": "Aspiration Syndromes",
+ "subject": "Paediatrics",
+ "summary": "Aspiration syndromes encompass a spectrum of respiratory complications from inhaled material. Clinical reasoning focuses on identifying the aspirate type, assessing severity, and tailoring urgent supportive care in low‑resource settings.",
+ "aka": [
+  "Aspiration",
+  "Pulmonary Aspiration",
+  "Aspiration Pneumonitis"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Aspiration occurs when foreign material enters the lower airways, causing inflammation, obstruction or infection. Diagnosis is clinical, supported by imaging and, where available, microbiology.",
+   "b": [
+    "History of choking, coughing, or sudden respiratory distress"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows infiltrates or atelectasis; a unilateral dense opacity suggests lobar collapse, while diffuse ground‑glass indicates aspiration pneumonitis."
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Hypoxaemia (SpO2 <90%) indicates significant airway compromise."
+    },
+    {
+     "a": "Sputum Gram stain",
+     "b": "Identifies bacterial colonisation in aspirated material; a positive result supports secondary infection."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is staged by respiratory compromise and oxygen requirement. In low‑resource settings, a simple clinical score based on respiratory rate, cyanosis and work of breathing is useful.",
+   "b": [
+    "Severe: severe tachypnoea, nasal flaring, SpO2 <88% despite oxygen, or apnea"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The aspirate type dictates management. Common causes in East Africa include meconium in neonates, food or liquid in children, and mucus or blood in adults.",
+   "b": [
+    "Blood aspiration (trauma, haemorrhage)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation ranges from sudden coughing fits to progressive hypoxaemia. Key signs include sudden onset of wheeze, stridor, or cyanosis, often following a choking episode.",
+   "b": [
+    "Respiratory distress with tachypnoea"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are guided by availability. In low‑resource settings, focus on bedside tests and simple imaging.",
+   "b": [
+    "Chest X‑ray"
+   ],
+   "t": [
+    {
+     "a": "Arterial blood gas",
+     "b": "Assesses PaO2 and PaCO2; a PaO2 <60 mmHg indicates severe hypoxaemia."
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Detects infiltrates, atelectasis or pneumothorax; a unilateral dense opacity suggests lobar collapse."
+    },
+    {
+     "a": "Sputum Gram stain",
+     "b": "Identifies bacterial infection; a positive result supports antibiotic therapy."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent deterioration can lead to respiratory failure, pneumothorax, or sepsis. Watch for sudden desaturation, worsening tachypnoea, or new chest pain.",
+   "b": [
+    "Signs of sepsis (fever, tachycardia, hypotension)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide airway support, and monitor closely. In low‑resource settings, prioritize oxygen, suction, and empirical antibiotics.",
+   "b": [
+    "Prepare for intubation if airway fails"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After stabilization, assess for underlying swallowing disorders or airway anomalies. Educate caregivers on safe feeding practices and early recognition of choking.",
+   "b": [
+    "Schedule follow‑up chest X‑ray if persistent infiltrates"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Aspiration can mimic bronchiolitis, pneumonia, or asthma. Distinguish by history of choking, unilateral infiltrates, and response to suction.",
+   "b": [
+    "Asthma – reversible wheeze, no sudden onset"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal chest X‑ray does not exclude aspiration; early infiltrates may be subtle. Pulse oximetry can be falsely normal if supplemental oxygen is given.",
+   "b": [
+    "Oxygen therapy can mask hypoxaemia on pulse oximetry"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden severe desaturation despite oxygen",
+  "Apnea or severe respiratory distress",
+  "New chest pain or haemoptysis",
+  "Signs of sepsis"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step if a child is choking on food?",
+   "a": "Clear the airway with suction or back blows; if the child cannot cough, call for emergency help."
+  },
+  {
+   "q": "Which antibiotic is preferred for aspiration pneumonia in a child?",
+   "a": "A broad‑spectrum combination such as ampicillin plus gentamicin covers common oral flora."
+  },
+  {
+   "q": "How can you differentiate aspiration pneumonia from bronchiolitis?",
+   "a": "Aspiration often follows choking, shows unilateral infiltrates, and improves with suction; bronchiolitis is viral, bilateral, and improves with supportive care."
+  }
+ ],
+ "exam": [
+  "What is the most urgent intervention in a child with sudden choking and cyanosis? — Clear airway with suction or Heimlich manoeuvre, then call for help.",
+  "How would you differentiate aspiration pneumonitis from bacterial pneumonia on chest X‑ray? — Look for unilateral dense opacity or atelectasis versus bilateral infiltrates.",
+  "Why is empirical antibiotic therapy started in aspiration pneumonia even if the aspirate is sterile? — To cover potential bacterial colonisation from oral flora.",
+  "What red flag would prompt immediate intubation in a patient with aspiration? — Sudden drop in SpO2 below 88% despite oxygen, or worsening respiratory effort.",
+  "Which low‑resource investigation can help confirm aspiration if a chest X‑ray is unavailable? — Pulse oximetry and clinical observation of cough and wheeze.",
+  "Why is bronchodilator therapy considered in aspiration with wheeze? — It relieves bronchospasm caused by inflammatory mediators in the airway.",
+  "When is a chest X‑ray unnecessary in a suspected aspiration case? — If the child is stable, SpO2 >92% on room air, and no signs of severe distress."
+ ],
+ "related": [
+  "Meconium Aspiration Syndrome",
+  "Aspiration Pneumonitis",
+  "Pulmonary Embolism",
+  "Bronchiolitis",
+  "Asthma Exacerbation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-19",
+ "reviewed": false
+}

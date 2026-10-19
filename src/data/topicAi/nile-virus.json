@@ -1,0 +1,146 @@
+{
+ "medical": true,
+ "title": "West Nile Virus Infection",
+ "subject": "Microbiology & immunology",
+ "summary": "West Nile virus (WNV) is a flavivirus primarily transmitted by Culex mosquitoes, causing a range of illness from asymptomatic infection to severe neuroinvasive disease. Birds are the main reservoir host. Clinical suspicion is key in endemic areas, especially during peak transmission seasons.",
+ "aka": [],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "West Nile virus is a single-stranded RNA virus belonging to the Flaviviridae family, genus Flavivirus. It is a zoonotic arbovirus, meaning it is transmitted to humans by arthropod vectors, primarily mosquitoes. While most human infections are asymptomatic or mild, WNV can cause severe neuroinvasive disease, including encephalitis, meningitis, and acute flaccid paralysis, particularly in the elderly and immunocompromised individuals. The virus is endemic in many parts of the world, with seasonal peaks in temperate regions.",
+   "b": [
+    "First identified in Uganda in 1937.",
+    "Major cause of arboviral meningoencephalitis globally.",
+    "No specific antiviral treatment or vaccine for humans currently available."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "West Nile virus is an enveloped, positive-sense, single-stranded RNA virus. Its genome encodes a single polyprotein that is cleaved into three structural proteins (capsid, premembrane/membrane, envelope) and seven non-structural proteins. The envelope protein is crucial for viral entry into host cells and is the primary target for neutralizing antibodies.",
+   "b": [
+    "Belongs to the Japanese encephalitis virus serocomplex.",
+    "Genetically diverse with multiple lineages identified.",
+    "Can replicate in a wide range of vertebrate and invertebrate hosts."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "The primary transmission cycle involves mosquitoes (mainly Culex species) and birds. Birds serve as amplifying hosts, developing high viral loads that can infect feeding mosquitoes. Humans and other mammals (e.g., horses) are incidental or dead-end hosts, meaning they do not typically develop high enough viremia to transmit the virus back to mosquitoes. Transovarial transmission in mosquitoes (adults emerge already infected) can also occur, maintaining the virus in mosquito populations.",
+   "b": [
+    "Main vector: Culex mosquitoes (e.g., C. pipiens, C. quinquefasciatus, C. tarsalis).",
+    "Reservoir hosts: Various bird species.",
+    "Human-to-human transmission is rare but can occur via blood transfusion, organ transplantation, and rarely, from mother to child during pregnancy or breastfeeding.",
+    "Peak transmission in temperate regions typically occurs during summer and fall."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "The clinical spectrum of WNV infection ranges from asymptomatic infection (approximately 80% of cases) to severe neuroinvasive disease. The incubation period is typically 2-14 days. Clinicians in East Africa should consider WNV in patients presenting with febrile illness and neurological symptoms, especially during mosquito season, and differentiate it from other endemic causes of meningoencephalitis like malaria, bacterial meningitis, and other arboviruses.",
+   "b": [
+    "West Nile Fever: Mild, self-limiting febrile illness with headache, myalgia, arthralgia, rash, and gastrointestinal symptoms.",
+    "Neuroinvasive Disease (less than 1% of infected individuals):",
+    "West Nile Encephalitis: Fever, altered mental status, seizures, focal neurological deficits, movement disorders (e.g., tremor, myoclonus).",
+    "West Nile Meningitis: Fever, headache, stiff neck, photophobia.",
+    "West Nile Acute Flaccid Paralysis: Sudden onset of limb weakness, often asymmetric, without sensory loss, mimicking poliomyelitis.",
+    "Risk factors for severe disease: Age over 50, immunocompromised status (e.g., HIV, transplant recipients), underlying medical conditions (e.g., diabetes, hypertension)."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis of WNV infection relies on detecting WNV-specific antibodies or viral RNA in patient samples. In low-resource settings, clinical suspicion based on symptoms and epidemiological context is paramount, as advanced diagnostic tests may not be readily available. Lumbar puncture is crucial for suspected neuroinvasive disease.",
+   "t": [
+    {
+     "a": "Lumbar Puncture (CSF analysis)",
+     "b": "Answers: Is there evidence of CNS inflammation? What is the cell count and protein level? Means: For WNV meningitis/encephalitis, CSF typically shows lymphocytic pleocytosis (50-500 cells/µL), mildly elevated protein, and normal glucose. This helps differentiate from bacterial meningitis (neutrophilic pleocytosis, low "
+    },
+    {
+     "a": "WNV IgM antibody in CSF",
+     "b": "Answers: Is there active WNV infection in the central nervous system? Means: A positive result is highly suggestive of neuroinvasive WNV disease. This is the gold standard for CNS diagnosis. If unavailable, consider sending serum for IgM."
+    },
+    {
+     "a": "WNV IgM antibody in serum",
+     "b": "Answers: Is there recent WNV infection? Means: A positive result indicates recent WNV infection. Can be positive in both West Nile fever and neuroinvasive disease. May be the only test available in some settings."
+    },
+    {
+     "a": "WNV IgG antibody in serum",
+     "b": "Answers: Is there past WNV exposure? Means: A positive result indicates past infection or vaccination (if applicable). Not useful for acute diagnosis."
+    },
+    {
+     "a": "Reverse Transcription-Polymerase Chain Reaction (RT-PCR) for WNV RNA in CSF or serum",
+     "b": "Answers: Is there active viral replication? Means: A positive result confirms active WNV infection. Less sensitive than IgM in CSF for neuroinvasive disease, as viremia is often transient and low by the time neurological symptoms appear. Useful in immunocompromised patients who may have delayed antibody responses. If u"
+    },
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Answers: Are there non-specific signs of infection or complications? Means: May show leukopenia or lymphopenia, but often non-specific. Helps rule out other causes of febrile illness."
+    },
+    {
+     "a": "Blood smear for malaria parasites",
+     "b": "Answers: Is malaria a co-infection or alternative diagnosis? Means: Essential in endemic areas to rule out malaria, which can present with similar febrile and neurological symptoms."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "There is no specific antiviral treatment for WNV infection. Management is primarily supportive, focusing on alleviating symptoms and managing complications. Prevention is key, especially in areas with high mosquito activity. Public health measures and personal protection are crucial to reduce transmission.",
+   "b": [
+    "Supportive care: Hydration, antipyretics for fever, analgesics for pain.",
+    "Hospitalization: For patients with neuroinvasive disease, requiring close monitoring, intravenous fluids, and management of complications like seizures, respiratory failure, and electrolyte imbalances.",
+    "Rehabilitation: For patients with acute flaccid paralysis or other persistent neurological deficits.",
+    "Mosquito control: Larvicides, adulticides, elimination of breeding sites (e.g., standing water).",
+    "Personal protection: Insect repellents (e.g., DEET), wearing long sleeves and pants, using bed nets, avoiding outdoor activities during peak mosquito biting hours (dawn and dusk).",
+    "Blood product screening: To prevent transfusion-related transmission in endemic areas."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "When encountering a patient with suspected WNV, think broadly about other causes of febrile illness and neurological symptoms common in your region. Remember that WNV is a diagnosis of exclusion in many settings, and ruling out treatable conditions is paramount. Always consider the patient's age and immune status when assessing severity and prognosis."
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe headache",
+  "High fever (over 38.5°C)",
+  "Stiff neck",
+  "Confusion or disorientation",
+  "Seizures",
+  "Muscle weakness or paralysis",
+  "Difficulty walking or speaking"
+ ],
+ "faq": [
+  {
+   "q": "Can West Nile virus be transmitted directly from person to person?",
+   "a": "Direct person-to-person transmission is extremely rare. It can occur through blood transfusions, organ transplantation, and rarely from mother to child during pregnancy or breastfeeding, but not through casual contact."
+  },
+  {
+   "q": "Are there any vaccines available for West Nile virus?",
+   "a": "Currently, there is no licensed human vaccine for West Nile virus. Vaccines are available for horses to prevent WNV disease in that species."
+  },
+  {
+   "q": "What is the most common outcome of West Nile virus infection?",
+   "a": "The vast majority (about 80%) of people infected with West Nile virus remain asymptomatic and never develop any symptoms. About 20% develop West Nile fever, a mild illness."
+  }
+ ],
+ "exam": [
+  "A 70-year-old patient presents with fever, headache, and new-onset confusion during the rainy season. What are your immediate differential diagnoses in an East African setting, and how would you prioritize your initial investigations? — Prioritize treatable causes: Cerebral malaria (thick and thin blood smear), bacterial meningitis (lumbar puncture for CSF analysis, empiric antibiotics), viral encephalitis (consider WNV, HSV, enteroviruses). Initial investigations: FBC, elect",
+  "You suspect West Nile encephalitis. What specific CSF findings would support your diagnosis, and what would be your next diagnostic step if WNV IgM is unavailable? — CSF would typically show lymphocytic pleocytosis, mildly elevated protein, and normal glucose. If WNV IgM is unavailable, send serum for WNV IgM and IgG. Consider empirical treatment for bacterial meningitis until ruled out, and supportive care for viral encephalitis.",
+  "A patient with confirmed WNV neuroinvasive disease develops respiratory distress. What is the likely cause, and how would you manage it? — Acute flaccid paralysis affecting respiratory muscles (diaphragm, intercostals). Management involves close respiratory monitoring, potentially intubation and mechanical ventilation, and supportive care.",
+  "What are the key differences in CSF findings between West Nile meningitis and bacterial meningitis? — WNV meningitis typically shows lymphocytic pleocytosis, mildly elevated protein, and normal glucose. Bacterial meningitis typically shows neutrophilic pleocytosis, significantly elevated protein, and low glucose.",
+  "An immunocompromised patient (e.g., HIV positive) presents with WNV symptoms. How might their presentation or diagnostic workup differ from an immunocompetent individual? — Immunocompromised patients may have a more severe or prolonged course, atypical presentations, and potentially delayed or absent antibody responses. PCR for WNV RNA in CSF and serum may be more useful than IgM serology in these cases.",
+  "What public health advice would you give to a community in an endemic area to prevent West Nile virus transmission? — Emphasize mosquito bite prevention: use insect repellents, wear long clothing, use bed nets, avoid outdoor activity at dawn/dusk. Promote mosquito breeding site reduction: eliminate standing water, clean gutters, cover water storage containers.",
+  "A patient presents with acute onset asymmetric limb weakness without sensory loss, following a febrile illness. What WNV-related syndrome should you consider, and what other conditions mimic this presentation? — West Nile Acute Flaccid Paralysis. Other mimics include Guillain-Barré syndrome, poliomyelitis (rare in many areas), transverse myelitis, and other viral myelitis.",
+  "Why are birds considered amplifying hosts for West Nile virus, while humans are considered dead-end hosts? — Birds develop high levels of viremia (virus in their blood) sufficient to infect feeding mosquitoes, thus amplifying the virus in the environment. Humans, and most other mammals, develop lower and transient viremia, which is usually insufficient to infect mosquitoes, making them dead-end hosts in the transmission cycle."
+ ],
+ "related": [
+  "Dengue fever",
+  "Zika virus infection",
+  "Chikungunya fever",
+  "Japanese encephalitis",
+  "Malaria",
+  "Bacterial meningitis",
+  "Viral meningitis",
+  "Guillain-Barré syndrome"
+ ],
+ "kind": "microbe",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-19",
+ "reviewed": false
+}

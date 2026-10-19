@@ -123,5 +123,500 @@
  "kind": "disease",
  "model": "gemini-2.5-flash-lite",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic physical exam are essential to identify the cause of a patient’s presenting problem and to detect life‑threatening signs that demand urgent action.",
+    "b": [
+     "Onset, duration and progression of symptoms (acute vs chronic).",
+     "Associated systemic features – fever, weight loss, night sweats, fatigue.",
+     "Risk factors – HIV, TB exposure, alcohol use, hepatitis, malnutrition, pregnancy, recent travel or trauma.",
+     "Medication, herbal remedies and drug use that may affect organ function.",
+     "Family history of hereditary disorders or malignancy.",
+     "Social determinants – living conditions, access to clean water, nutrition status."
+    ],
+    "t": [
+     {
+      "a": "General inspection",
+      "b": "Observe posture, gait, skin colour, jaundice, spider angiomas, edema; positive findings suggest systemic disease or shock but cannot quantify severity."
+     },
+     {
+      "a": "Palpation for organomegaly",
+      "b": "Feel liver, spleen, kidneys; a liver edge >2 cm below costal margin suggests hepatomegaly; cannot differentiate fatty liver from infiltrative disease."
+     },
+     {
+      "a": "Percussion for ascites – shifting dullness",
+      "b": "Patient supine, percuss flanks; dullness shifts when patient turns – indicates free fluid; cannot measure volume precisely."
+     },
+     {
+      "a": "Fluid thrill (ballottement)",
+      "b": "Tap one flank while feeling opposite flank; a palpable wave confirms ascites; does not differentiate exudate from transudate."
+     },
+     {
+      "a": "Auscultation for breath sounds",
+      "b": "Listen for crackles, wheeze, pleural rub; crackles suggest pulmonary edema or infection; auscultation cannot replace chest radiography for infiltrates."
+     },
+     {
+      "a": "Neurological quick screen",
+      "b": "Assess level of consciousness, pupil size/reactivity, motor strength; focal deficits point to structural brain lesion; bedside exam cannot locate lesion precisely."
+     },
+     {
+      "a": "Peripheral perfusion assessment",
+      "b": "Check capillary refill, skin temperature, mottling; prolonged refill (>3 s) indicates shock; does not identify cause of shock."
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Laboratory and imaging studies complement bedside findings, help confirm a diagnosis, stage disease and guide therapy, especially when resources are limited.",
+    "b": [
+     "Complete blood count – anemia defined as Hb <12 g/dL (non‑pregnant women) or <13 g/dL (men).",
+     "Serum creatinine – elevated if >1.2 mg/dL in women or >1.4 mg/dL in men; indicates renal impairment.",
+     "Liver function panel – AST/ALT, bilirubin, albumin; AST/ALT >2 × ULN suggests hepatocellular injury.",
+     "Serum‑ascites albumin gradient (SAAG) – serum albumin minus ascitic albumin; ≥1.1 g/dL indicates portal hypertension, <1.1 g/dL suggests peritoneal disease.",
+     "Chest X‑ray – looks for infiltrates, effusion, cardiomegaly; cannot replace CT for pulmonary embolism.",
+     "Ultrasound abdomen – assesses organ size, ascites, splenomegaly; limited in detecting early fibrosis.",
+     "HIV rapid test – positive result warrants confirmatory ELISA; a negative test does not rule out acute infection within 3 weeks."
+    ],
+    "t": [
+     {
+      "a": "CBC with differential",
+      "b": "Answers whether anemia, leukocytosis or thrombocytopenia are present; neutrophil count >10 × 10⁹/L suggests bacterial infection; if unavailable, use clinical signs of infection."
+     },
+     {
+      "a": "Serum electrolytes and renal function",
+      "b": "Detects electrolyte disturbances and renal failure; creatinine >1.4 mg/dL (men) or >1.2 mg/dL (women) signals impaired clearance; if lab unavailable, assess urine output and fluid status."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient",
+      "b": "Distinguishes portal hypertension (SAAG ≥ 1.1 g/dL) from peritoneal carcinomatosis or infection (SAAG < 1.1 g/dL); if albumin not measurable, rely on clinical context and imaging."
+     },
+     {
+      "a": "Rapid plasma reagin (RPR) for syphilis",
+      "b": "Screens for treponemal infection causing rash or neurologic signs; a reactive test requires confirmatory treponemal assay; if unavailable, treat empirically in high‑risk settings."
+     },
+     {
+      "a": "Point‑of‑care ultrasound (POCUS)",
+      "b": "Answers presence of free fluid, cardiac contractility, IVC collapsibility; a collapsed IVC suggests hypovolemia; if ultrasound not available, use clinical volume assessment."
+     },
+     {
+      "a": "Chest radiography",
+      "b": "Detects pneumonia, pleural effusion, cardiomegaly; a silhouette sign indicates lobar consolidation; if X‑ray unavailable, rely on auscultation and oxygen saturation."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Using bedside and investigational data, apply recognized classification systems to define disease stage and severity, which direct management priorities.",
+    "b": [
+     "Childhood malnutrition – WHO growth standards: weight‑for‑height Z‑score < ‑3 defines severe acute malnutrition.",
+     "Cirrhosis – Child‑Pugh score: bilirubin > 3 mg/dL, albumin < 2.8 g/dL, INR > 1.7, ascites, encephalopathy; ≥10 points = Class C (severe).",
+     "Septic shock – Sepsis‑3: SOFA increase ≥ 2 plus hypotension requiring vasopressors to maintain MAP ≥ 65 mmHg.",
+     "Acute kidney injury – KDIGO: increase in serum creatinine ≥0.3 mg/dL within 48 h or ≥1.5 × baseline; stage 1‑3 based on magnitude.",
+     "HIV disease – WHO clinical staging: Stage 3 includes chronic diarrhoea, severe bacterial infections; Stage 4 includes Kaposi sarcoma, cryptococcal meningitis.",
+     "Pregnancy‑associated hypertension – severe features: BP ≥ 160/110 mmHg, platelets < 100 × 10⁹/L, creatinine > 1.1 mg/dL; indicates pre‑eclampsia with severe features."
+    ],
+    "t": [
+     {
+      "a": "Childhood spasticity – ankle‑gastrocnemius contracture",
+      "b": "Positive ankle‑knee‑heel test; indicates equinus deformity; does not predict future motor function."
+     },
+     {
+      "a": "Exaggerated lumbar lordosis in toddlers",
+      "b": "Reflects immature abdominal musculature and relative weakness; not a pathological finding."
+     },
+     {
+      "a": "Monoblastic AML – gingival hypertrophy",
+      "b": "Prominent, painless gingival enlargement; suggests monocytic differentiation; does not replace bone‑marrow confirmation."
+     },
+     {
+      "a": "Groin examination – inguinal lymph node palpation",
+      "b": "Firm, non‑tender nodes >1 cm suggest pathology; cannot differentiate lymphoma from infection without biopsy."
+     },
+     {
+      "a": "Cardiogenic shock – cold, clammy skin with narrow pulse pressure",
+      "b": "Pulse pressure <30 mmHg and mottled extremities; indicates low cardiac output; does not identify infarct location."
+     },
+     {
+      "a": "Hodgkin lymphoma – painless cervical lymphadenopathy with “rubbery” consistency",
+      "b": "Firm, mobile nodes; suggests Hodgkin disease; cannot replace excisional biopsy."
+     },
+     {
+      "a": "Focal seizure – post‑ictal focal neurological deficit",
+      "b": "Transient weakness or aphasia after seizure; points to structural lesion; bedside exam cannot locate lesion."
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several diseases mimic each other clinically; careful attention to distinguishing features prevents misdiagnosis.",
+    "b": [
+     "Ascites vs. large ovarian cyst – shifting dullness present in ascites, absent in cyst; ultrasound differentiates.",
+     "Hepatomegaly vs. right‑sided pleural effusion – percussion dullness extends upward in effusion; liver edge palpable in hepatomegaly.",
+     "Spastic ankle contracture vs. clubfoot – clubfoot shows fixed inversion and adduction; spastic contracture is dynamic with stretch‑reflex."
+    ],
+    "t": [
+     {
+      "a": "Portal hypertension vs. peritoneal carcinomatosis",
+      "b": "SAAG ≥ 1.1 g/dL points to portal hypertension; SAAG < 1.1 g/dL suggests peritoneal disease; imaging and cytology confirm."
+     },
+     {
+      "a": "Septic shock vs. hypovolemic shock",
+      "b": "Septic shock often has warm extremities early, elevated lactate; hypovolemic shock shows cold extremities, low CVP; bedside capillary refill and lactate help separate."
+     },
+     {
+      "a": "Acute monoblastic AML vs. acute lymphoblastic leukemia",
+      "b": "Monoblastic AML shows gingival hypertrophy and high monocyte count; ALL presents with lymphoblasts on smear; flow cytometry differentiates."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach ensures that immediate threats are addressed, definitive therapy is instituted, and the patient is monitored for response or deterioration.",
+    "b": [
+     "1. Stabilise airway, breathing, circulation; give high‑flow oxygen and IV crystalloid if hypotensive.",
+     "2. Identify the primary pathology (e.g., sepsis, shock, acute abdomen) and start empiric therapy based on likely organisms or cause.",
+     "3. Choose drug classes: broad‑spectrum antibiotics for suspected infection, inotropes for cardiogenic shock, diuretics for volume overload, antihypertensives for severe hypertension.",
+     "4. Avoid drugs that worsen organ dysfunction: avoid NSAIDs in renal failure, avoid beta‑blockers in acute decompensated heart failure, avoid hepatotoxic agents in liver disease.",
+     "5. Monitor vital signs, urine output, mental status, and relevant labs every 4‑6 h; adjust therapy according to trends.",
+     "6. Escalate to intensive care or refer if MAP <65 mmHg despite fluids, worsening acidosis, refractory hypoxia, or new organ failure.",
+     "7. Document response and plan step‑down therapy or discharge when stable and underlying cause controlled."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognising adverse effects early prevents progression to severe toxicity and guides safe continuation or substitution of therapy.",
+    "b": [
+     "Aminoglycosides – nephrotoxicity; monitor serum creatinine daily, discontinue if rise >0.5 mg/dL.",
+     "Fluoroquinolones – tendinopathy; advise patients to avoid sudden loading of tendons and stop drug if pain develops.",
+     "Loop diuretics – electrolyte loss; replace potassium and magnesium, watch for hypotension.",
+     "Beta‑blockers – bradycardia; if heart rate <50 bpm with symptoms, reduce dose or switch.",
+     "Corticosteroids – hyperglycaemia; check capillary glucose q8h, start insulin if >180 mg/dL.",
+     "Paracetamol – hepatotoxicity; avoid if ALT/AST >3 × ULN or if chronic alcohol use >40 g/day."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Complications may arise from the disease itself or from treatment; early detection triggers escalation.",
+    "b": [
+     "Progressive hypotension despite fluids → start vasopressors and consider ICU transfer.",
+     "New onset arrhythmia in shock → obtain ECG, correct electrolytes, treat underlying cause.",
+     "Worsening renal function (creatinine rise >0.3 mg/dL in 48 h) → stop nephrotoxic drugs, optimise perfusion.",
+     "Persistent fever >38.5 °C after 48 h of antibiotics → reassess source, obtain cultures, broaden coverage.",
+     "Development of hepatic encephalopathy in cirrhosis → start lactulose, consider rifaximin, admit to high‑dependency unit."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbid conditions can mask or mimic signs, alter laboratory thresholds, and influence drug choice.",
+    "b": [
+     "HIV – opportunistic infections may present with atypical skin lesions; CD4 count guides prophylaxis.",
+     "TB – pleural effusion may be lymphocytic; use GeneXpert if sputum unavailable.",
+     "Malnutrition – low albumin reduces SAAG reliability; rely on clinical fluid wave.",
+     "Pregnancy – physiological anemia (Hb <11 g/dL) is normal; avoid teratogenic drugs such as ACE inhibitors.",
+     "Diabetes – hyperglycaemia blunts infection signs; check capillary glucose frequently.",
+     "Alcohol – chronic use raises GGT and AST; avoid acetaminophen >2 g/day.",
+     "Renal failure – adjust dosing of renally cleared antibiotics; avoid contrast unless essential.",
+     "Elderly – reduced skin turgor may be misleading for dehydration; use orthostatic vitals."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailoring examination and management to vulnerable populations improves accuracy and safety.",
+    "b": [
+     "Children – use age‑appropriate vitals; assess capillary refill, fontanelle tension, and growth charts.",
+     "Pregnancy – place patient left‑lateral, use fetal doppler when indicated, avoid radiation.",
+     "Elderly – start with slow, gentle palpation; watch for frailty‑related bruising.",
+     "People with HIV – screen for Kaposi sarcoma, oral thrush, and consider drug‑drug interactions with antiretrovirals.",
+     "Low‑resource settings – rely on bedside tests (e.g., fluid thrill, bedside ultrasound) when labs unavailable; use clinical scoring systems such as qSOFA."
+    ],
+    "t": [
+     {
+      "a": "Exam question 1",
+      "b": "Describe how to elicit shifting dullness for ascites and interpret a positive result."
+     },
+     {
+      "a": "Exam question 2",
+      "b": "List the key bedside signs of cardiogenic shock and the first pharmacologic step."
+     },
+     {
+      "a": "Exam question 3",
+      "b": "Explain why the serum‑ascites albumin gradient >1.1 g/dL indicates portal hypertension."
+     },
+     {
+      "a": "Exam question 4",
+      "b": "Identify the adverse effect of loop diuretics most likely to cause arrhythmia and how to prevent it."
+     },
+     {
+      "a": "Exam question 5",
+      "b": "Discuss how chronic alcohol use changes the interpretation of liver function tests."
+     },
+     {
+      "a": "Exam question 6",
+      "b": "When should a patient with worsening renal function be referred to nephrology?"
+     },
+     {
+      "a": "Exam question 7",
+      "b": "What modification is required for antibiotic choice in a pregnant woman with sepsis?"
+     },
+     {
+      "a": "Exam question 8",
+      "b": "How does HIV infection alter the presentation of peritoneal TB on physical exam?"
+     },
+     {
+      "a": "Exam question 9",
+      "b": "Outline the step‑wise management of a child with suspected cerebral palsy presenting with spastic ankle."
+     },
+     {
+      "a": "Exam question 10",
+      "b": "State the criteria for escalating care in a patient with septic shock despite fluid resuscitation."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Hemoglobin <12 g/dL (non‑pregnant women) or <11 g/dL (pregnant) indicates anemia.",
+   "Creatinine >1.2 mg/dL (women) or >1.4 mg/dL (men) indicates impaired renal function.",
+   "Spleen palpable >2 cm below left costal margin is splenomegaly.",
+   "Ascites: shifting dullness positive when fluid shifts to dependent flank on lying supine.",
+   "Bouchard nodes >2 cm on finger joints suggest osteoarthritis.",
+   "Kussmaul sign: JVD increases on inspiration indicates constrictive pericarditis.",
+   "Bouchard nodes >2 cm on finger joints suggest osteoarthritis.",
+   "Bouchard nodes >2 cm on finger joints suggest osteoarthritis."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the diagnostic cut‑off for anemia in a non‑pregnant woman?",
+    "a": "Hemoglobin <12 g/dL.",
+    "hot": true
+   },
+   {
+    "q": "How do you elicit shifting dullness and what does a positive test mean?",
+    "a": "Lay patient supine, compare flanks; dullness on dependent side indicates fluid. Positive means ascites.",
+    "hot": true
+   },
+   {
+    "q": "What is Blumberg’s sign and what does it indicate?",
+    "a": "Rebound tenderness; indicates peritoneal irritation, can be localized or generalized.",
+    "hot": true
+   },
+   {
+    "q": "How would you differentiate a focal seizure from a generalized seizure on exam?",
+    "a": "Look for unilateral post‑ictal weakness, focal motor activity, or asymmetrical eye deviation."
+   },
+   {
+    "q": "What is the most characteristic physical finding in Hodgkin lymphoma?",
+    "a": "Painless, rubbery cervical lymphadenopathy."
+   },
+   {
+    "q": "What is the key sign of cardiogenic shock in a patient with ACS?",
+    "a": "Cold, clammy extremities, hypotension, tachycardia, altered mental status."
+   },
+   {
+    "q": "Why is a spider angioma considered a sign of chronic liver disease?",
+    "a": "It reflects hepatic arteriovenous shunting and hyperestrogenemia."
+   },
+   {
+    "q": "What is the significance of a positive Kussmaul sign?",
+    "a": "Suggests constrictive pericarditis or right heart failure; JVD rises on inspiration."
+   },
+   {
+    "q": "What is the most common upper limb deformity in cerebral palsy?",
+    "a": "Adducted shoulder with internal rotation and elbow flexion contracture."
+   },
+   {
+    "q": "What is the most appropriate next step when a patient has a positive fluid thrill?",
+    "a": "Confirm ascites with ultrasound; consider paracentesis if indicated."
+   },
+   {
+    "q": "Why is a positive Murphy’s sign not specific to cholecystitis?",
+    "a": "It can also be present in biliary colic or hepatitis; requires imaging for confirmation."
+   },
+   {
+    "q": "How would you assess the groin area in a patient with suspected hernia?",
+    "a": "Inspect for bulge, palpate for reducibility, check for cough impulse, and assess for tenderness."
+   },
+   {
+    "q": "What is the significance of a positive Romberg test?",
+    "a": "Suggests proprioceptive or vestibular dysfunction; indicates possible peripheral neuropathy or cerebellar disease."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 55‑year‑old man with chronic alcohol use presents with abdominal distension, confusion, and easy bruising. Which sign is most characteristic of chronic liver disease?",
+    "o": [
+     "Spider angioma",
+     "Tachycardia",
+     "Hypertension",
+     "Severe cough"
+    ],
+    "a": 0,
+    "e": "Spider angiomas are a classic cutaneous sign of chronic liver disease.",
+    "past": true
+   },
+   {
+    "q": "A child with spasticity affecting the ankle and gastrocnemius muscles will most likely show which physical finding?",
+    "o": [
+     "Equinus gait",
+     "Hyperreflexia at knee",
+     "Absent ankle reflex",
+     "Tendon hammer sign"
+    ],
+    "a": 0,
+    "e": "Equinus gait results from tight calf muscles.",
+    "past": true
+   },
+   {
+    "q": "During a 16‑month‑old toddler’s exam, exaggerated lumbar lordosis and protruding abdomen are due to?",
+    "o": [
+     "Increased intra‑abdominal pressure",
+     "Spinal muscular atrophy",
+     "Congenital diaphragmatic hernia",
+     "Cerebral palsy"
+    ],
+    "a": 0,
+    "e": "Increased intra‑abdominal pressure from a large abdominal mass causes lumbar lordosis and protrusion.",
+    "past": true
+   },
+   {
+    "q": "Which finding is characteristic of acute monoblastic leukemia (AML)?",
+    "o": [
+     "Painless lymphadenopathy",
+     "Skin rash",
+     "Pallor and petechiae",
+     "Severe abdominal pain"
+    ],
+    "a": 2,
+    "e": "Pallor and petechiae reflect pancytopenia in AML.",
+    "past": true
+   },
+   {
+    "q": "Which physical examination component is specifically recommended when assessing the groin area?",
+    "o": [
+     "Inspection for bulge",
+     "Palpation of femoral pulse",
+     "Assessment of knee extension",
+     "Evaluation of ankle reflex"
+    ],
+    "a": 0,
+    "e": "Inspection for a bulge detects hernias.",
+    "past": true
+   },
+   {
+    "q": "During the physical examination of a child with cerebral palsy, which upper limb deformity pattern is typically observed?",
+    "o": [
+     "Adducted shoulder with internal rotation",
+     "Elbow hyperextension",
+     "Finger flexion contracture",
+     "Abducted shoulder with external rotation"
+    ],
+    "a": 0,
+    "e": "Adducted shoulder with internal rotation is common in spastic CP.",
+    "past": true
+   },
+   {
+    "q": "On physical examination of a patient with cardiogenic shock secondary to ACS, which finding is most likely?",
+    "o": [
+     "Warm extremities",
+     "Hypertension",
+     "Cold clammy skin",
+     "Pulsus paradoxus"
+    ],
+    "a": 2,
+    "e": "Cold, clammy skin is a hallmark of shock.",
+    "past": true
+   },
+   {
+    "q": "Which clinical finding is characteristically observed upon physical examination of a patient with Hodgkin lymphoma?",
+    "o": [
+     "Painless cervical lymphadenopathy",
+     "Severe abdominal pain",
+     "Jaundice",
+     "Rash"
+    ],
+    "a": 0,
+    "e": "Painless, rubbery cervical nodes are classic.",
+    "past": true
+   },
+   {
+    "q": "During the physical examination of a child presenting with a seizure, which finding particularly points toward a symptomatic or focal seizure etiology?",
+    "o": [
+     "Generalized tonic‑clonic activity",
+     "Unilateral post‑ictal weakness",
+     "Bilateral tremor",
+     "Severe headache"
+    ],
+    "a": 1,
+    "e": "Unilateral weakness suggests focal involvement.",
+    "past": true
+   },
+   {
+    "q": "A 55‑year‑old male with chronic alcohol abuse presents with abdominal distension, disorientation, and easy bruising. Which sign is most likely?",
+    "o": [
+     "Spider angiomas",
+     "Palmar erythema",
+     "Scleral icterus",
+     "All of the above"
+    ],
+    "a": 3,
+    "e": "All listed signs are common in chronic liver disease.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 45‑year‑old woman presents with sudden onset of severe epigastric pain radiating to the back, nausea, and vomiting. On exam she is tachycardic, hypotensive, and has a tender epigastrium with guarding.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Acute pancreatitis."
+     },
+     {
+      "q": "Which bedside test would you perform next?",
+      "a": "Check serum amylase/lipase; consider abdominal ultrasound if gallstones suspected."
+     },
+     {
+      "q": "What is the first step in management?",
+      "a": "Resuscitate with IV fluids, analgesia, and monitor vitals."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming anemia cut‑off is <13 g/dL for all women; correct is <12 g/dL.",
+   "Misinterpreting Blumberg’s sign as only generalized peritonitis; it can be localized.",
+   "Failing to perform shifting dullness before fluid thrill for ascites.",
+   "Overlooking spider angiomas as a sign of chronic liver disease.",
+   "Confusing Kussmaul sign with normal JVD changes during inspiration.",
+   "Not checking for cough impulse when evaluating groin hernias.",
+   "Assuming all equinus gait is due to spasticity; could be Achilles tendon contracture.",
+   "Mislabeling Swan‑song bruit as a cardiac murmur instead of portal hypertension sign."
+  ],
+  "exam": [
+   "What is the diagnostic cut‑off for anemia in a non‑pregnant woman? — Hemoglobin <12 g/dL.",
+   "How do you elicit shifting dullness and what does a positive test mean? — Lay patient supine, compare flanks; dullness on dependent side indicates fluid. Positive means ascites.",
+   "What is Blumberg’s sign and what does it indicate? — Rebound tenderness; indicates peritoneal irritation, can be localized or generalized.",
+   "How would you differentiate a focal seizure from a generalized seizure on exam? — Look for unilateral post‑ictal weakness, focal motor activity, or asymmetrical eye deviation.",
+   "What is the most characteristic physical finding in Hodgkin lymphoma? — Painless, rubbery cervical lymphadenopathy.",
+   "What is the key sign of cardiogenic shock in a patient with ACS? — Cold, clammy extremities, hypotension, tachycardia, altered mental status.",
+   "Why is a spider angioma considered a sign of chronic liver disease? — It reflects hepatic arteriovenous shunting and hyperestrogenemia.",
+   "What is the significance of a positive Kussmaul sign? — Suggests constrictive pericarditis or right heart failure; JVD rises on inspiration.",
+   "What is the most common upper limb deformity in cerebral palsy? — Adducted shoulder with internal rotation and elbow flexion contracture.",
+   "What is the most appropriate next step when a patient has a positive fluid thrill? — Confirm ascites with ultrasound; consider paracentesis if indicated.",
+   "Why is a positive Murphy’s sign not specific to cholecystitis? — It can also be present in biliary colic or hepatitis; requires imaging for confirmation.",
+   "How would you assess the groin area in a patient with suspected hernia? — Inspect for bulge, palpate for reducibility, check for cough impulse, and assess for tenderness.",
+   "What is the significance of a positive Romberg test? — Suggests proprioceptive or vestibular dysfunction; indicates possible peripheral neuropathy or cerebellar disease."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-19",
+  "checked": "2026-10-19",
+  "trimmed": 7
+ }
 }

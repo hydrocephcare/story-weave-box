@@ -1,0 +1,186 @@
+{
+ "medical": true,
+ "title": "Status Epilepticus",
+ "subject": "Medicine",
+ "summary": "Status epilepticus (SE) is a life‑threatening emergency defined by a seizure lasting ≥5 minutes or recurrent seizures without regaining consciousness. Prompt recognition, rapid treatment, and identification of reversible causes are essential, especially in low‑resource settings.",
+ "aka": [
+  "convulsive status epilepticus",
+  "non‑convulsive status epilepticus"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "SE is a seizure that persists for ≥5 minutes or a series of seizures without full recovery of consciousness between episodes. Diagnosis is clinical; EEG is required only when seizures are subtle or non‑convulsive.",
+   "b": [
+    "≥5 min continuous seizure = SE",
+    "Recurrent seizures without return to baseline consciousness = SE",
+    "If EEG unavailable, treat as SE when clinical suspicion high"
+   ],
+   "t": [
+    {
+     "a": "Clinical observation",
+     "b": "Is the seizure ongoing ≥5 min or are there repeated seizures without full recovery? → Confirms SE; start emergency treatment"
+    },
+    {
+     "a": "EEG (if available)",
+     "b": "Is there ongoing epileptiform activity despite clinical improvement? → Detects non‑convulsive SE; guides continuation of therapy"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The widely used three‑stage model (Berkow) guides urgency: Stage 1 (early, <5 min), Stage 2 (established, 5–30 min), Stage 3 (refractory, >30 min or failure of first‑line drugs).",
+   "b": [
+    "Stage 1: early, may self‑terminate",
+    "Stage 2: established, requires benzodiazepine",
+    "Stage 3: refractory, needs second‑line agents and intensive care"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify and treat reversible precipitants. In East African low‑resource hospitals the common triggers differ from high‑income settings.",
+   "b": [
+    "Acute CNS infection (malaria, bacterial meningitis, cerebral TB)",
+    "Metabolic derangements (hypoglycaemia, hyponatraemia, renal failure)",
+    "Withdrawal or overdose of sedatives/alcohol",
+    "Stroke or intracerebral haemorrhage",
+    "HIV‑related opportunistic infections (cryptococcal meningitis)",
+    "Febrile illness in children (malaria, bacterial sepsis)",
+    "Herbal or traditional medicines with pro‑convulsant compounds"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Convulsive SE shows continuous tonic‑clonic activity; non‑convulsive SE may appear as altered mental status, coma, or subtle automatisms. Look for autonomic instability and post‑ictal fatigue.",
+   "b": [
+    "Generalised tonic‑clonic movements, loss of eye contact",
+    "Persistent staring, subtle automatisms → non‑convulsive SE",
+    "Autonomic signs: tachycardia, hypertension, diaphoresis",
+    "Possible respiratory compromise"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise rapid bedside tests; advanced imaging is secondary if resources allow.",
+   "t": [
+    {
+     "a": "Finger‑stick glucose",
+     "b": "Is hypoglycaemia present? → Treat immediately; rule out metabolic trigger"
+    },
+    {
+     "a": "Serum electrolytes (Na+, K+, Ca++)",
+     "b": "Are there severe derangements? → Correct electrolytes to stop seizures"
+    },
+    {
+     "a": "Full blood count & malaria rapid test",
+     "b": "Is malaria or severe infection likely? → Initiate antimalarial or antibiotics"
+    },
+    {
+     "a": "Renal function (creatinine, urea)",
+     "b": "Is renal failure present? → Adjust drug dosing, consider uremic encephalopathy"
+    },
+    {
+     "a": "Lumbar puncture (if no contraindication)",
+     "b": "Is meningitis/encephalitis present? → Start empiric antimicrobial therapy"
+    },
+    {
+     "a": "EEG (if available)",
+     "b": "Is there ongoing epileptiform activity despite clinical improvement? → Diagnose non‑convulsive SE"
+    },
+    {
+     "a": "CT head (if available)",
+     "b": "Is there a structural lesion (stroke, bleed) needing neurosurgical input? → Guide further management"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prolonged seizures cause neuronal injury, systemic hypoxia, and multi‑organ failure.",
+   "b": [
+    "Cardiac arrhythmia or arrest",
+    "Respiratory depression requiring ventilation",
+    "Aspiration pneumonia",
+    "Rhabdomyolysis and acute kidney injury",
+    "Cerebral edema and herniation"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the emergency first, then the underlying cause. Use drugs that are widely available in low‑resource settings.",
+   "b": [
+    "Airway, breathing, circulation – give oxygen, protect airway, consider bag‑mask ventilation",
+    "Refractory SE: consider continuous infusion of midazolam or propofol in ICU; if unavailable, repeat phenobarbital dosing",
+    "Treat identified cause (e.g., antimalarial, antibiotics, correct electrolytes, glucose)",
+    "Avoid flumazenil – may precipitate seizures; avoid high‑dose barbiturates in children with febrile SE due to poorer outcomes"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After seizure control, assess for epilepsy, optimise chronic anti‑epileptic therapy, and address modifiable risk factors.",
+   "b": [
+    "Arrange neurology follow‑up within 1 week",
+    "Educate caregivers on fever control in children, adherence to AEDs, and avoidance of known triggers",
+    "Screen for HIV, TB, and malaria in recurrent cases",
+    "Consider long‑term AED selection based on availability (e.g., carbamazepine, valproate) and comorbidities"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Complex partial seizures – may have automatisms but retain awareness",
+    "Psychogenic non‑epileptic attacks – no EEG changes, often precipitated by stress",
+    "Post‑ictal paralysis (Todd’s paresis) – weakness after seizure, not ongoing seizure activity"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Normal glucose does not rule out hypoglycaemia if sample delayed; repeat if suspicion high",
+    "Serum electrolytes may be falsely normal in severe dehydration; assess clinical volume status",
+    "EEG may be normal early in non‑convulsive SE; repeat if clinical picture unchanged"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Seizure lasting >5 minutes",
+  "Recurrent seizures without regaining consciousness",
+  "Respiratory compromise or airway obstruction",
+  "Signs of shock, severe hypertension, or cardiac arrhythmia"
+ ],
+ "faq": [
+  {
+   "q": "Why is the 5‑minute cut‑off used for status epilepticus?",
+   "a": "Seizures lasting ≥5 minutes are unlikely to stop spontaneously and are associated with increasing neuronal injury."
+  },
+  {
+   "q": "Can status epilepticus be non‑convulsive?",
+   "a": "Yes; it may present as altered consciousness or subtle automatisms and requires EEG for confirmation."
+  },
+  {
+   "q": "What is the first drug to give in a low‑resource setting?",
+   "a": "A fast‑acting benzodiazepine such as IV/IM diazepam because it is inexpensive, widely available, and effective."
+  }
+ ],
+ "exam": [
+  "A child presents with fever and a 7‑minute tonic‑clonic seizure – what are the immediate steps and why? — Assess airway, give oxygen, give IM diazepam, check glucose, start antimalarial if malaria endemic; rapid control prevents neuronal injury.",
+  "A patient on phenobarbital for epilepsy develops status epilepticus – which drug class should you avoid and why? — Avoid additional barbiturates because of cumulative respiratory depression and sedation.",
+  "How does you differentiate convulsive status epilepticus from a psychogenic non‑epileptic attack in a resource‑limited ward? — Look for sustained rhythmic movements, lack of responsiveness, autonomic changes; EEG (if possible) will show epileptiform activity in SE.",
+  "What reversible metabolic cause is most common in malnourished children with SE and how do you treat it? — Hypoglycaemia; give 10 % dextrose bolus followed by infusion.",
+  "A patient with known HIV presents with new‑onset SE – which infections should be high on your list and what empiric therapy is appropriate? — Consider cryptococcal meningitis, cerebral toxoplasmosis, TB meningitis; start broad‑spectrum antibiotics, antifungal (fluconazole if available), and antitubercular therapy after lumbar puncture if safe.",
+  "Why is flumazenil contraindicated in benzodiazepine‑induced SE? — It can precipitate seizures by removing the protective GABAergic effect.",
+  "In a setting without EEG, how do you decide when to stop second‑line therapy? — Continue until the patient regains consciousness and has no clinical seizure activity for at least 30 minutes.",
+  "What are the key complications to monitor for during the first 24 hours of refractory SE? — Respiratory failure, aspiration pneumonia, cardiac arrhythmia, rhabdomyolysis, acute kidney injury, and cerebral edema."
+ ],
+ "related": [
+  "Acute symptomatic seizures",
+  "Febrile seizures",
+  "Epilepsy",
+  "Neuro‑infection (malaria, meningitis)",
+  "Electrolyte disturbances",
+  "Intensive care monitoring"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-19",
+ "reviewed": false
+}
