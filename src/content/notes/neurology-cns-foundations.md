@@ -80,6 +80,10 @@ Clinical correlations:
 
 ### CSF production and circulation
 
+![Cerebrospinal fluid circulation](https://commons.wikimedia.org/wiki/Special:FilePath/CSF_circulation.png)
+
+*Diagram: CSF circulation and outflow. Source: Wikimedia Commons, CSF circulation.png (CC BY 4.0).* 
+
 CSF is produced mainly by the choroid plexuses in the ventricles.
 
 **Flow:** lateral ventricles → interventricular foramina (of Monro) → third ventricle → cerebral aqueduct → fourth ventricle → apertures of Magendie and Luschka → subarachnoid space → absorption mainly through arachnoid granulations into venous blood.
