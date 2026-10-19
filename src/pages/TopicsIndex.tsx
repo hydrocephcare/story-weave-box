@@ -62,7 +62,7 @@ export default function TopicsIndex() {
   // Offer real topic pages as the learner types, including common spelling mistakes.
   const suggestions = useMemo(() => {
     if (needle.length < 3 || !items?.length) return [];
-    const words = needle.split(/\\s+/).filter((w) => w.length >= 3);
+    const words = needle.split(/\s+/).filter((w) => w.length >= 3);
     return items.map((t) => {
       const names = [t.n, ...t.a].map((name) => name.toLowerCase());
       let score = 0;
@@ -82,7 +82,7 @@ export default function TopicsIndex() {
       const exact = names.some((name) => name === needle) ? 100 : names.some((name) => name.startsWith(needle)) ? 20 : 0;
       return { topic: t, score: score + exact, matched };
     }).filter((x) => x.matched > 0)
-      .sort((a, b) => b.score - a.score || b.topic.d - a.topic.d || a.topic.n.localeCompare(b.topic.n))
+      .sort((a, b) => b.matched - a.matched || b.score - a.score || b.topic.d - a.topic.d || a.topic.n.localeCompare(b.topic.n))
       .slice(0, 6)
       .map((x) => x.topic);
   }, [items, needle]);
