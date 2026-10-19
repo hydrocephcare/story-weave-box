@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Undo2 } from "lucide-react";
+import { ArrowLeft, Flame, Star, Undo2 } from "lucide-react";
+import { DAILY_GOAL, doneToday, recordReview, starredKeys, streak, toggleStar } from "@/lib/deckStats";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { setProgress } from "@/lib/study";
@@ -43,6 +44,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
   const [all, setAll] = useState(false);
   const [mcq, setMcq] = useState<string | null>(null);
   const [noMore, setNoMore] = useState(false);
+  const [stars, setStars] = useState<Set<string>>(() => starredKeys());
   const drag = useRef<{ x: number; y: number; t: number; active: boolean; horiz: boolean | null }>({ x: 0, y: 0, t: 0, active: false, horiz: null });
 
   // load this reader's card states, then build the queue: cards due now, then new ones (or everything when asked)
@@ -79,6 +81,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
     const gap = requeueGap(r, next);
     const rest = queue.slice(1);
     const q = gap > 0 ? [...rest.slice(0, gap), ci, ...rest.slice(gap)] : rest;
+    recordReview();
     setHistory((h) => [...h.slice(-30), { ci, prev, was: queue }]);
     setStats((s) => ({ done: s.done + 1, again: s.again + (r === "again" ? 1 : 0) }));
     setQueue(q);
@@ -174,6 +177,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
         <p className="truncate font-serif text-[18px] font-bold leading-tight text-foreground">{name}</p>
         <p className="truncate text-xs text-muted-foreground">{mode === "today" ? "Due cards and a few new ones" : `${category.replace(/^Year\s*\d\s*:\s*/i, "")} · ${cards.length} cards`}</p>
       </div>
+      {streak() > 0 && <span className="inline-flex items-center gap-1 text-sm font-bold text-orange-500" title="Days in a row"><Flame className="h-4 w-4" aria-hidden />{streak()}</span>}
       <span className="text-sm font-bold tabular-nums text-muted-foreground">{queue ? `${queue.length} left` : ""}</span>
       <button type="button" onClick={undo} disabled={!history.length} aria-label="Undo the last answer" className="rounded-full p-2 text-muted-foreground hover:bg-muted hover:text-foreground disabled:opacity-30"><Undo2 className="h-4 w-4" /></button>
     </div>
@@ -189,6 +193,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
         {header}{bar}
         <div className="flex flex-1 flex-col items-center justify-center px-4 py-10 text-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{stats.done ? "Session complete" : "All caught up"}</p>
+          <p className="mt-1 text-xs font-semibold text-muted-foreground">{doneToday()} of {DAILY_GOAL} cards today{streak() > 0 ? ` · ${streak()} day streak` : ""}</p>
           {stats.done > 0 ? <p className="mt-2 font-serif text-5xl font-bold tabular-nums">{stats.done}<span className="text-2xl text-muted-foreground"> cards</span></p> : <p className="mt-2 font-serif text-3xl font-bold">Nothing due right now</p>}
           <p className="mt-2 max-w-xs text-[15px] text-muted-foreground">
             {sure !== null ? `${sure}% without needing "Again". ` : ""}{nextDue ? `Your next cards are due ${when(nextDue)}. Coming back then is what makes them stick.` : "Come back tomorrow for the next ones."}
@@ -217,7 +222,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
           <div className="relative h-full min-h-[min(58dvh,30rem)] w-full cursor-pointer" style={style} onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp} role="button" tabIndex={0} aria-label={flipped ? "Answer. Tap to see the question." : "Question. Tap to see the answer."}>
             <div className="absolute inset-0 transition-transform duration-500 [transform-style:preserve-3d]" style={{ transform: flipped ? "rotateY(180deg)" : "none" }}>
               <div className={face} style={{ backfaceVisibility: "hidden" }}>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Question · {learningNote}</p>
+                <div className="flex items-center justify-between"><p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Question · {learningNote}</p>{card && <button type="button" aria-label={stars.has(cardKey(card.setId, card.idx)) ? "Remove star" : "Star this card to revise it again"} onPointerDown={(e) => e.stopPropagation()} onPointerUp={(e) => e.stopPropagation()} onClick={(e) => { e.stopPropagation(); const k = cardKey(card.setId, card.idx); toggleStar(k); setStars(starredKeys()); }} className="-mr-1 rounded-full p-1.5"><Star className={`h-5 w-5 ${stars.has(cardKey(card.setId, card.idx)) ? "fill-amber-400 text-amber-400" : "text-muted-foreground"}`} /></button>}</div>
                 <div className="flex flex-1 flex-col items-center justify-center gap-3 overflow-y-auto py-4 text-center font-serif text-[26px] font-semibold leading-snug text-foreground sm:text-[28px] [&_img]:mx-auto [&_img]:max-h-[40dvh] [&_img]:rounded-xl [&_p]:text-center [&_p]:leading-snug">{renderFlashcardMarkdown(card?.question || "", ctx)}</div>
                 <p className="text-center text-xs text-muted-foreground">Tap to flip · swipe left to skip · swipe right to undo</p>
               </div>

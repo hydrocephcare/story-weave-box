@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import { starredKeys } from "@/lib/deckStats";
 import { Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
@@ -15,14 +16,16 @@ const NEW_PER_DAY = 10, MAX_DUE = 40;
 export default function FlashcardsToday() {
   const { user, loading } = useAuth();
   const [cards, setCards] = useState<DeckCard[] | null>(null);
+  const starred = useSearchParams()[0].get("starred") === "1";
   useEffect(() => { updateMetaTags({ title: "Today's flashcards", description: "The flashcards due for you today, scheduled so that you remember them." }); }, []);
   useEffect(() => {
     if (loading) return;
     let on = true;
     void (async () => {
       const states = await loadStates(user?.id ?? null);
-      const dueKeys = Object.entries(states).filter(([, s]) => isDue(s)).sort((a, b) => a[1].due - b[1].due).slice(0, MAX_DUE).map(([k]) => k);
-      const mine = await loadMyDecks(user?.id ?? null, 12);
+      const stars = starredKeys();
+      const dueKeys = starred ? [...stars].slice(0, 60) : Object.entries(states).filter(([, s]) => isDue(s)).sort((a, b) => a[1].due - b[1].due).slice(0, MAX_DUE).map(([k]) => k);
+      const mine = starred ? [] : await loadMyDecks(user?.id ?? null, 12);
       const setIds = [...new Set([...dueKeys.map((k) => k.split(":")[0]), ...mine.map((d) => d.id)])].slice(0, 24);
       if (!setIds.length) { if (on) setCards([]); return; }
       const { data } = await (supabase as any).from("flashcard_sets").select("id,title,cards").in("id", setIds);
@@ -39,7 +42,7 @@ export default function FlashcardsToday() {
       if (on) setCards(out);
     })();
     return () => { on = false; };
-  }, [user?.id, loading]);
+  }, [user?.id, loading, starred]);
 
   if (cards === null) return <div className="flex justify-center py-24"><Loader2 className="h-6 w-6 animate-spin text-muted-foreground" aria-label="Loading" /></div>;
   if (cards.length === 0) {
@@ -54,7 +57,7 @@ export default function FlashcardsToday() {
   return (
     <div className="mx-auto max-w-xl px-3 pb-16 pt-1 sm:px-6">
       <KeywordLinkProvider currentPath="/flashcards/today" currentTitle="Today's flashcards">
-        <FlashcardDeck cards={cards} title="Today's flashcards" category="" mode="today" />
+        <FlashcardDeck cards={cards} title={starred ? "Starred cards" : "Today's flashcards"} category="" mode="today" />
       </KeywordLinkProvider>
     </div>
   );

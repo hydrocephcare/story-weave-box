@@ -6,6 +6,7 @@ import { buildFlashcardPath, getCategoryDisplayName } from "@/lib/store";
 import { updateMetaTags } from "@/lib/seo";
 import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
 import { useDueCount, useMyDecks } from "@/lib/myDecks";
+import { DAILY_GOAL, doneToday, starredKeys, streak } from "@/lib/deckStats";
 import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
 
 interface Row { id: string; title: string; slug: string | null; category: string; created_at: string; card_count: number; source_reference: string | null }
@@ -72,6 +73,8 @@ export default function Flashcards() {
         <span><span className="block text-xs font-bold uppercase tracking-[0.16em] opacity-80">Today</span><span className="block text-lg font-bold">{due > 0 ? `${due} card${due === 1 ? "" : "s"} due` : "Daily flashcards"}</span><span className="block text-xs opacity-80">Spaced so you remember them: the cards you miss come back sooner.</span></span>
         <ArrowRight className="h-5 w-5 shrink-0" aria-hidden />
       </Link>
+
+      <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted-foreground"><span><b className="text-foreground">{doneToday()}</b> / {DAILY_GOAL} cards today</span>{streak() > 0 && <span><b className="text-orange-500">{streak()}</b> day streak</span>}{starredKeys().size > 0 && <Link to="/flashcards/today?starred=1" className="font-bold text-primary hover:underline">Revise {starredKeys().size} starred</Link>}</p>
 
       {mine && mine.length > 0 && (
         <section className="mt-7" aria-label="From what you read">
