@@ -10,6 +10,21 @@ const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const POPULAR = ["Hypertension", "Diabetes mellitus", "Pneumonia", "Heart failure", "Tuberculosis", "Malaria", "Asthma", "Anaemia"];
 const letterOf = (n: string) => { const c = n.trim().charAt(0).toUpperCase(); return /[A-Z]/.test(c) ? c : "#"; };
 
+/** Small edit-distance helper for typo-tolerant topic suggestions while typing. */
+function editDistance(a: string, b: string): number {
+  const prev = Array.from({ length: b.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    let diagonal = prev[0];
+    prev[0] = i;
+    for (let j = 1; j <= b.length; j++) {
+      const above = prev[j];
+      prev[j] = Math.min(prev[j] + 1, prev[j - 1] + 1, diagonal + (a[i - 1] === b[j - 1] ? 0 : 1));
+      diagonal = above;
+    }
+  }
+  return prev[b.length];
+}
+
 /** /topics: an A to Z directory of every subject, in plain columns like a textbook index. Search, pick a subject, or jump to a letter. */
 export default function TopicsIndex() {
   const items = useTopicIndex();
@@ -44,6 +59,34 @@ export default function TopicsIndex() {
   const surprise = () => { const pool = items ?? []; if (pool.length) navigate(topicPath(pool[Math.floor(Math.random() * pool.length)].s)); };
   const popular = useMemo(() => POPULAR.map((n) => (items ?? []).find((t) => t.n.toLowerCase() === n.toLowerCase())).filter(Boolean) as TopicIndexItem[], [items]);
 
+  // Offer real topic pages as the learner types, including common spelling mistakes.
+  const suggestions = useMemo(() => {
+    if (needle.length < 3 || !items?.length) return [];
+    const words = needle.split(/\\s+/).filter((w) => w.length >= 3);
+    return items.map((t) => {
+      const names = [t.n, ...t.a].map((name) => name.toLowerCase());
+      let score = 0;
+      let matched = 0;
+      for (const word of words) {
+        let best = 0;
+        for (const name of names) {
+          if (name.includes(word)) { best = Math.max(best, 4 + word.length / 20); continue; }
+          for (const candidate of name.split(/[^a-z0-9]+/).filter((w) => w.length >= 3)) {
+            const distance = editDistance(word, candidate);
+            const limit = word.length >= 7 ? 2 : word.length >= 4 ? 1 : 0;
+            if (distance <= limit) best = Math.max(best, 2 + (word.length - distance) / Math.max(word.length, candidate.length));
+          }
+        }
+        if (best > 0) { matched++; score += best; }
+      }
+      const exact = names.some((name) => name === needle) ? 100 : names.some((name) => name.startsWith(needle)) ? 20 : 0;
+      return { topic: t, score: score + exact, matched };
+    }).filter((x) => x.matched > 0)
+      .sort((a, b) => b.score - a.score || b.topic.d - a.topic.d || a.topic.n.localeCompare(b.topic.n))
+      .slice(0, 6)
+      .map((x) => x.topic);
+  }, [items, needle]);
+
   return (
     <main className="pb-20">
       <Helmet>
@@ -64,6 +107,21 @@ export default function TopicsIndex() {
             <input value={q} onChange={(e) => set("q", e.target.value)} placeholder="Search a topic, e.g. nephrotic syndrome" className="h-14 w-full rounded-full border border-border bg-background pl-13 pr-12 text-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/40" style={{ paddingLeft: "3.25rem" }} />
             {q && <button type="button" onClick={() => set("q", "")} aria-label="Clear search" className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full p-1.5 text-muted-foreground hover:bg-muted"><X className="h-4 w-4" /></button>}
           </label>
+
+          {needle.length >= 3 && suggestions.length > 0 && (
+            <div className="mt-2 max-w-2xl overflow-hidden rounded-2xl border border-border bg-background shadow-lg" role="listbox" aria-label="Suggested topics">
+              <p className="px-4 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Suggested topics</p>
+              {suggestions.map((t) => (
+                <Link key={t.s} role="option" aria-selected="false" to={topicPath(t.s)} onClick={() => set("q", t.n)} className="flex items-center justify-between gap-3 px-4 py-3 text-left hover:bg-muted/70 focus:bg-muted/70 focus:outline-none">
+                  <span className="min-w-0">
+                    <span className="block font-semibold text-foreground">{t.n}</span>
+                    {t.a.length > 0 && <span className="block truncate text-xs text-muted-foreground">{t.a.slice(0, 3).join(", ")}</span>}
+                  </span>
+                  <span className="shrink-0 text-xs text-muted-foreground">{t.c}</span>
+                </Link>
+              ))}
+            </div>
+          )}
 
           {!q && popular.length > 0 && (
             <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-2 text-sm">
