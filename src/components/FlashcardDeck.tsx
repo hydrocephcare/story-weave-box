@@ -157,7 +157,7 @@ export default function FlashcardDeck({ setId, title, cards, category }: { setId
                 <div className="flex flex-1 items-center justify-center overflow-y-auto py-4 text-center font-serif text-[22px] font-semibold leading-snug text-foreground sm:text-2xl">{renderInline(card?.question || "", "q", ctx)}</div>
                 <p className="text-center text-xs text-muted-foreground">Tap to flip · swipe for the next card</p>
               </div>
-              <div className={`${face} bg-primary/[0.04]`} style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
+              <div className={`${face} border-primary/30`} style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
                 <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary">Answer</p>
                 <div className="mt-2 flex-1 overflow-y-auto pr-1 text-[15px] leading-relaxed text-foreground/90 sm:text-base">{renderFlashcardMarkdown(card?.answer || "", ctx)}</div>
               </div>
