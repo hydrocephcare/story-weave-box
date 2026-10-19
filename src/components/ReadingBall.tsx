@@ -39,7 +39,7 @@ export default function ReadingBall({ scope, notes }: { scope: string; notes: Ba
   return (
     <>
       <button type="button" onClick={() => setOpen(true)} aria-label={`Your progress in ${scope}: ${pct}% read. Tap to see more.`}
-        className="fixed bottom-28 left-3 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-background shadow-lg ring-1 ring-border"
+        className="fixed bottom-44 left-3 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-background shadow-lg ring-1 ring-border"
         style={{ background: `conic-gradient(hsl(var(--primary)) ${pct * 3.6}deg, hsl(var(--muted)) 0deg)` }}>
         <span className="flex h-11 w-11 flex-col items-center justify-center rounded-full bg-background leading-none">
           <span className="text-[13px] font-extrabold tabular-nums text-foreground">{pct}%</span>
