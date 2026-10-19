@@ -78,7 +78,13 @@ serve(async (req) => {
       if (have && have.length) return json({ success: true, status: "exists" });
     }
     const { data: ids } = await supabase.rpc("note_flashcard_candidates", { n: 1 });
-    const id = body?.article_id || (Array.isArray(ids) ? (ids[0]?.id ?? ids[0]) : null);
+    let id = body?.article_id || (Array.isArray(ids) ? (ids[0]?.id ?? ids[0]) : null);
+    // nothing new to write: bring an older deck up to the richer format, in place (its cards are replaced, the deck is kept)
+    let upgrade: { id: string } | null = null;
+    if (!id && cronOk) {
+      const { data: old } = await supabase.from("flashcard_sets").select("id, source_reference").eq("source_type", "note_generated").eq("published", true).is("deleted_at", null).not("original_notes", "like", "%\"v\":2%").limit(1);
+      if (old && old[0]?.source_reference) { id = old[0].source_reference; upgrade = { id: old[0].id }; }
+    }
     if (!id) return json({ success: true, done: true });
     const { data: a, error } = await supabase.from("articles").select("id, title, category, content").eq("id", id).single();
     if (error || !a) return json({ error: error?.message || "not found" }, 500);
@@ -97,9 +103,17 @@ serve(async (req) => {
         if (got.length > cards.length) cards = got;
       } catch (e) { lastErr = e instanceof Error ? e.message.slice(0, 120) : String(e); }
     }
+    if (cards.length < 8 && upgrade) {
+      await supabase.from("flashcard_sets").update({ original_notes: JSON.stringify({ type: "note_flashcards", v: 2, kept: true, at: new Date().toISOString() }) }).eq("id", upgrade.id);
+      return json({ success: true, status: "upgrade skipped", why: lastErr });
+    }
     if (cards.length < 8) {
       await supabase.from("flashcard_sets").insert({ title: `${a.title} (cards pending)`, category: a.category, cards: [], published: false, source_reference: a.id, source_type: "note_generated", original_notes: JSON.stringify({ failed: lastErr || "too few usable cards", at: new Date().toISOString() }) });
       return json({ success: true, title: a.title, status: "skipped", why: lastErr || `only ${cards.length} usable` });
+    }
+    if (upgrade) {
+      await supabase.from("flashcard_sets").update({ cards, original_notes: JSON.stringify({ type: "note_flashcards", v: 2, article_id: a.id, generated_at: new Date().toISOString() }), meta_description: `${cards.length} flashcards to revise ${cleanTopicTitle(a.title)}, written from the Ompath Study notes.` }).eq("id", upgrade.id);
+      return json({ success: true, title: a.title, cards: cards.length, upgraded: true });
     }
     const title = `${cleanTopicTitle(a.title)}: Flashcards`;
     const base = title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70);
@@ -112,7 +126,7 @@ serve(async (req) => {
     const { error: insErr } = await supabase.from("flashcard_sets").insert({
       title, slug, category: a.category, cards, published: true, source_reference: a.id, source_type: "note_generated",
       meta_description: `${cards.length} flashcards to revise ${cleanTopicTitle(a.title)}, written from the Ompath Study notes.`,
-      original_notes: JSON.stringify({ type: "note_flashcards", article_id: a.id, generated_at: new Date().toISOString() }),
+      original_notes: JSON.stringify({ type: "note_flashcards", v: 2, article_id: a.id, generated_at: new Date().toISOString() }),
     });
     if (insErr) return json({ error: insErr.message }, 500);
     return json({ success: true, title: a.title, cards: cards.length });
