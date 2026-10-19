@@ -8,6 +8,8 @@ import { examUnit, examYear, shortTitle, type CatalogRow } from "@/lib/examMeta"
 
 const YEARS = [1, 2, 3, 4, 5, 6];
 
+/** One naming rule for banks: "Topic: MCQs". The list shows the topic, sorted A to Z within its unit. */
+const topicOf = (title: string, category: string) => shortTitle(title, category).replace(/\s*[:—–-]?\s*MCQs?$/i, "").trim();
 const done = (id: string): number | null => {
   try { const j = JSON.parse(localStorage.getItem(`mcq_practice_${id}`) || "null"); return j && Number(j.total) ? Math.round((Number(j.score) / Number(j.total)) * 100) : null; } catch { return null; }
 };
@@ -42,7 +44,7 @@ export default function McqHub() {
     return [...m.entries()].sort((a, b) => b[1].questions - a[1].questions);
   }, [inYear]);
   const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
-  const list = useMemo(() => inYear.filter((r) => (needles.length || unit) && (!unit || examUnit(r.category) === unit) && needles.every((w) => `${r.title} ${examUnit(r.category)}`.toLowerCase().includes(w))), [inYear, unit, q]);
+  const list = useMemo(() => inYear.filter((r) => (needles.length || unit) && (!unit || examUnit(r.category) === unit) && needles.every((w) => `${r.title} ${examUnit(r.category)}`.toLowerCase().includes(w))).sort((a, b) => topicOf(a.title, a.category).localeCompare(topicOf(b.title, b.category), undefined, { sensitivity: "base", numeric: true })), [inYear, unit, q]);
   const yearCount = (y: number) => all.filter((r) => examYear(r.category, r.title) === y).length;
   const loading = rows === null;
   const showList = needles.length > 0 || !!unit;
@@ -76,17 +78,17 @@ export default function McqHub() {
         ) : showList ? (
           <div>
             {unit && <button type="button" onClick={() => go({ unit: null })} className="mb-4 inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:underline"><ArrowLeft className="h-4 w-4" aria-hidden /> All units</button>}
-            <p className="mb-3 text-sm font-semibold text-muted-foreground">{list.length} question bank{list.length === 1 ? "" : "s"}</p>
+            <p className="mb-3 text-sm font-semibold text-muted-foreground">{list.length} question bank{list.length === 1 ? "" : "s"} · A to Z</p>
             {list.length === 0 ? <p className="rounded-2xl border border-dashed border-border p-10 text-center text-muted-foreground">Nothing matches. Try a shorter search.</p> : (
-              <ul className="divide-y divide-border overflow-hidden rounded-2xl border border-border bg-card">
+              <ul className="divide-y divide-border border-y border-border">
                 {list.map((r) => {
                   const score = done(r.id); const y = examYear(r.category, r.title);
                   return (
                     <li key={r.id}>
-                      <Link to={`/mcqs/${(r.slug || "").trim() || r.id}`} className="group flex items-center gap-4 px-5 py-4 transition-colors hover:bg-primary/5">
-                        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary"><ListChecks className="h-5 w-5" aria-hidden /></span>
+                      <Link to={`/mcqs/${(r.slug || "").trim() || r.id}`} className="group flex items-center gap-4 px-1 py-4 transition-colors hover:bg-primary/5">
+                        <ListChecks className="h-5 w-5 shrink-0 text-primary" aria-hidden />
                         <span className="min-w-0 flex-1">
-                          <span className="block truncate font-serif text-[17px] font-bold">{shortTitle(r.title, r.category)}</span>
+                          <span className="block truncate font-serif text-[17px] font-bold">{topicOf(r.title, r.category)}</span>
                           <span className="block truncate text-sm text-muted-foreground">{[examUnit(r.category), y ? `Year ${y}` : "", `${r.question_count} questions`].filter(Boolean).join(" · ")}</span>
                         </span>
                         {score !== null && <span className="shrink-0 rounded-full bg-emerald-500/15 px-2.5 py-1 text-xs font-bold text-emerald-700 dark:text-emerald-300">{score}%</span>}
@@ -106,10 +108,10 @@ export default function McqHub() {
             <button type="button" onClick={() => go({ year: null })} className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-bold text-primary-foreground">See all years</button>
           </div>
         ) : (
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-x-10 sm:grid-cols-2">
             {folders.map(([name, f]) => (
-              <button key={name} type="button" onClick={() => go({ unit: name })} className="group flex items-start gap-4 rounded-2xl border border-border bg-card p-5 text-left transition hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-md">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary"><FolderOpen className="h-6 w-6" aria-hidden /></span>
+              <button key={name} type="button" onClick={() => go({ unit: name })} className="group flex items-start gap-4 border-b border-border py-4 text-left transition hover:text-primary">
+                <FolderOpen className="mt-0.5 h-6 w-6 shrink-0 text-primary" aria-hidden />
                 <span className="min-w-0"><span className="block font-serif text-lg font-bold leading-snug">{name}</span><span className="mt-1 block text-sm text-muted-foreground">{f.banks} bank{f.banks === 1 ? "" : "s"} · {f.questions} questions</span></span>
               </button>
             ))}
