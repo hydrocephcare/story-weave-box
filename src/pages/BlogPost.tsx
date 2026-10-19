@@ -2109,13 +2109,9 @@ export default function BlogPost() {
               category={article.category}
             />
 
-            {(article as any).reading_time_minutes ? (
-              <div className="mb-2"><ReadingTimeBadge minutes={(article as any).reading_time_minutes} /></div>
-            ) : null}
+            <SourceAttribution article={article} />
 
             <div className="not-prose mb-5"><StudyControls resourceType="article" resourceId={article.id} title={cleanMetaTitle(article)} /></div>
-
-            <SourceAttribution article={article} />
 
             <HtmlEmbed data={(article as any).html_embed} position="top" />
             <VimeoEmbed url={(article as any).html_embed?.vimeo_url} />
