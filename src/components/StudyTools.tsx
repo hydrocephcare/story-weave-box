@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Check, ClipboardCheck, FileText, Image as ImageIcon, Layers, Loader2, X } from "lucide-react";
 import { openAI } from "@/lib/aiEvents";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
-import { srs } from "@/lib/srs";
+import { generatedFlashcardPath, saveGeneratedFlashcardDeck } from "@/lib/generatedFlashcards";
 import { useAccess } from "@/lib/access";
 import { useAuth } from "@/hooks/useAuth";
 import { openSubscribePrompt } from "@/lib/subscribe-prompt";
@@ -55,6 +55,7 @@ export default function StudyTools({ title, path, text, className = "", pictures
     return false;
   };
   const [note, setNote] = useState<{ ok: boolean; text: string } | null>(null);
+  const [reviewPath, setReviewPath] = useState<string | null>(null);
   const [quiz, setQuiz] = useState<Q[] | null>(null);
   const [picked, setPicked] = useState<Record<number, number>>({});
   const alive = useRef(true);
@@ -64,12 +65,15 @@ export default function StudyTools({ title, path, text, className = "", pictures
 
   const makeCards = async () => {
     if (!allowed("cards")) return;
-    setBusy("cards"); setNote(null);
+    setBusy("cards"); setNote(null); setReviewPath(null);
     try {
       const { cards } = await call("cards", title, text);
+      const deck = saveGeneratedFlashcardDeck(title, path, cards);
       spendOne("cards");
-      const n = srs.add(cards, { title, path });
-      if (alive.current) setNote({ ok: true, text: n ? `${n} flashcards added to your daily review.` : "These cards are already in your review." });
+      if (alive.current) {
+        setReviewPath(generatedFlashcardPath(deck.id));
+        setNote({ ok: true, text: `${deck.cards.length} flashcards ready in the standard flashcard reviewer.` });
+      }
     } catch (e) { if (alive.current) setNote({ ok: false, text: (e as Error).message }); } finally { if (alive.current) setBusy(""); }
   };
   const makeEssays = async () => {
@@ -94,7 +98,7 @@ export default function StudyTools({ title, path, text, className = "", pictures
         {pictures && <button type="button" className={btn} onClick={() => openAI(`Give me anatomy spot questions on ${title}`)}><ImageIcon className="h-4 w-4 text-primary" aria-hidden /> Picture questions</button>}
         <ListenControl text={text} path={path} btnClass={btn} />
       </div>
-      {note && <p className={cn("mt-3 text-sm font-semibold", note.ok ? "text-primary" : "text-destructive")} role="status">{note.text} {note.ok && <Link to="/review" className="underline">Review now</Link>}</p>}
+      {note && <p className={cn("mt-3 text-sm font-semibold", note.ok ? "text-primary" : "text-destructive")} role="status">{note.text} {note.ok && <Link to={reviewPath || "/flashcards"} className="underline">Review now</Link>}</p>}
 
       <Dialog open={Boolean(essays)} onOpenChange={(o) => !o && setEssays(null)}>
         <DialogContent className="max-h-[90dvh] overflow-y-auto sm:max-w-2xl">
