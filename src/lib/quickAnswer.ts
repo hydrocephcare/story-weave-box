@@ -13,7 +13,7 @@ export const askable = (q: string) => q.trim().length >= 4 && !/^[A-Za-z]{3,4}\s
 /** Streams a short answer (three bullets); `onText` gets the text so far. Throws when nothing came back. */
 async function once(q: string, sources: { title: string; subtitle?: string; snippet?: string }[], signal: AbortSignal, onText: (t: string) => void): Promise<string> {
   const query = q.trim();
-  const body = { question: `Explain "${query}" for a medical student in exactly three short bullet points, about 60 words in all. Start with what it is. Use the site's notes first. If it is not a medical or health-science term, reply with only the word NOT_MEDICAL.`, history: [], sources: sources.slice(0, 5).map((h) => ({ kind: "site", title: h.title, subtitle: h.subtitle, snippet: (h.snippet ?? "").slice(0, 900) })) };
+  const body = { question: `Explain "${query}" for a medical student in exactly three short bullet points, about 60 words in all. Start with what it is. Use the site's notes first. If a word appears misspelled, infer and answer the most likely intended medical term, especially when any part of the query is clearly medical. Only reply with NOT_MEDICAL when the query is clearly unrelated to medicine or health even after correcting likely typos.`, history: [], sources: sources.slice(0, 5).map((h) => ({ kind: "site", title: h.title, subtitle: h.subtitle, snippet: (h.snippet ?? "").slice(0, 900) })) };
   const r = await fetch("/api/ai-chat", { method: "POST", signal, headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
   if (!r.ok || !r.body) throw new Error("off");
   const reader = r.body.getReader(); const dec = new TextDecoder();
