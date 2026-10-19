@@ -1,96 +1,123 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Check, ChevronLeft, ChevronRight, RotateCcw, Shuffle, X } from "lucide-react";
+import { ArrowLeft, Undo2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { setProgress } from "@/lib/study";
 import { useKeywordLinks } from "@/lib/keyword-link";
-import { renderFlashcardMarkdown, renderInline } from "@/components/FlashcardViewer";
+import { renderFlashcardMarkdown } from "@/components/FlashcardViewer";
 import { buildMcqPath } from "@/lib/store";
+import { cardKey, isDue, label, loadStates, requeueGap, saveState, schedule, type CardState, type Rating } from "@/lib/deckSrs";
 import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
 
-type Card = { question: string; answer: string };
-type Saved = { order: number[]; pos: number; known: number[]; learning: number[] };
-const KEY = "deck:";
+export interface DeckCard { question: string; answer: string; setId: string; idx: number }
 
 const topicName = (t: string) => cleanTopicTitle(String(t).replace(/\s*[:—–-]?\s*(Flashcards?|Cards)$/i, ""));
-const load = (id: string, n: number): Saved => {
-  try { const s = JSON.parse(localStorage.getItem(KEY + id) || "null") as Saved | null; if (s && Array.isArray(s.order) && s.order.length === n) return s; } catch { /* none */ }
-  return { order: Array.from({ length: n }, (_, i) => i), pos: 0, known: [], learning: [] };
-};
+const BTN: { r: Rating; text: string; cls: string }[] = [
+  { r: "again", text: "Again", cls: "bg-rose-500/15 text-rose-700 dark:text-rose-300" },
+  { r: "hard", text: "Hard", cls: "bg-amber-500/15 text-amber-700 dark:text-amber-300" },
+  { r: "good", text: "Good", cls: "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300" },
+  { r: "easy", text: "Easy", cls: "bg-sky-500/15 text-sky-700 dark:text-sky-300" },
+];
 
 /**
- * The flashcard deck, built for a phone held in one hand: the card is on screen straight away, tap it to flip, swipe it left for the next card and
- * right for the previous one, and say whether you knew it. Progress is remembered per deck; the end screen offers the cards you are still learning.
+ * The flashcard deck, built for a phone held in one hand and for real memorising: the card is on screen at once, tap to flip, then say how well you knew it
+ * (Again, Hard, Good, Easy). Cards you miss come back in this session; cards you know come back after longer and longer gaps, and the ones due today
+ * are the ones you are shown. Swipe left to put a card back at the end, swipe right to undo your last answer.
  */
-export default function FlashcardDeck({ setId, title, cards, category }: { setId: string; title: string; cards: Card[]; category: string }) {
+export default function FlashcardDeck({ cards, title, category, mode = "deck", mcqSource }: { cards: DeckCard[]; title: string; category: string; mode?: "deck" | "today"; mcqSource?: string | null }) {
   const { user } = useAuth();
   const ctx = useKeywordLinks();
-  const [st, setSt] = useState<Saved>(() => load(setId, cards.length));
+  const [states, setStates] = useState<Record<string, CardState> | null>(null);
+  const [queue, setQueue] = useState<number[] | null>(null);
+  const [total, setTotal] = useState(0);
   const [flipped, setFlipped] = useState(false);
   const [dx, setDx] = useState(0);
-  const [leaving, setLeaving] = useState<0 | 1 | -1>(0);
-  const drag = useRef<{ x: number; y: number; t: number; active: boolean; horiz: boolean | null }>({ x: 0, y: 0, t: 0, active: false, horiz: null });
+  const [leaving, setLeaving] = useState(false);
+  const [history, setHistory] = useState<{ ci: number; prev: CardState | undefined; was: number[] }[]>([]);
+  const [stats, setStats] = useState({ done: 0, again: 0 });
+  const [all, setAll] = useState(false);
   const [mcq, setMcq] = useState<string | null>(null);
+  const drag = useRef<{ x: number; y: number; t: number; active: boolean; horiz: boolean | null }>({ x: 0, y: 0, t: 0, active: false, horiz: null });
 
-  const total = st.order.length;
-  const finished = st.pos >= total;
-  const idx = st.order[Math.min(st.pos, total - 1)];
-  const card = cards[idx];
-  const name = topicName(title);
+  // load this reader's card states, then build the queue: cards due now, then new ones (or everything when asked)
+  useEffect(() => {
+    let on = true;
+    void loadStates(user?.id ?? null).then((m) => {
+      if (!on) return;
+      setStates(m);
+      const key = (ci: number) => cardKey(cards[ci].setId, cards[ci].idx);
+      const idxs = cards.map((_, i) => i);
+      const due = idxs.filter((i) => isDue(m[key(i)])).sort((a, b) => m[key(a)].due - m[key(b)].due);
+      const fresh = idxs.filter((i) => !m[key(i)]);
+      const q = mode === "today" || !all ? [...due, ...fresh] : idxs;
+      setQueue(q); setTotal(q.length); setHistory([]); setStats({ done: 0, again: 0 }); setFlipped(false);
+    });
+    return () => { on = false; };
+  }, [user?.id, cards, all, mode]);
 
-  useEffect(() => { try { localStorage.setItem(KEY + setId, JSON.stringify(st)); } catch { /* storage blocked */ } }, [st, setId]);
-  useEffect(() => { setFlipped(false); }, [st.pos]);
+  const finished = queue !== null && queue.length === 0;
+  const ci = queue && queue.length ? queue[0] : -1;
+  const card = ci >= 0 ? cards[ci] : null;
+  const st = card && states ? states[cardKey(card.setId, card.idx)] : undefined;
 
-  const go = useCallback((dir: 1 | -1) => {
-    if (leaving) return;
-    if (dir === 1 && st.pos >= total) return;
-    if (dir === -1 && st.pos === 0) return;
-    setLeaving(dir);
-    window.setTimeout(() => { setSt((s) => ({ ...s, pos: Math.max(0, Math.min(total, s.pos + dir)) })); setLeaving(0); setDx(0); }, 160);
-  }, [leaving, st.pos, total]);
+  useEffect(() => { setFlipped(false); }, [ci]);
 
-  const verdict = useCallback((knew: boolean) => {
-    if (finished) return;
-    setSt((s) => ({ ...s, known: knew ? [...new Set([...s.known, idx])] : s.known.filter((i) => i !== idx), learning: knew ? s.learning.filter((i) => i !== idx) : [...new Set([...s.learning, idx])] }));
-    go(1);
-  }, [finished, idx, go]);
+  const rate = useCallback((r: Rating) => {
+    if (!queue || !queue.length || !card || !states) return;
+    const prev = states[cardKey(card.setId, card.idx)];
+    const next = schedule(prev, r);
+    const key = cardKey(card.setId, card.idx);
+    setStates({ ...states, [key]: next });
+    void saveState(user?.id ?? null, card.setId, card.idx, next);
+    const gap = requeueGap(r, next);
+    const rest = queue.slice(1);
+    const q = gap > 0 ? [...rest.slice(0, gap), ci, ...rest.slice(gap)] : rest;
+    setHistory((h) => [...h.slice(-30), { ci, prev, was: queue }]);
+    setStats((s) => ({ done: s.done + 1, again: s.again + (r === "again" ? 1 : 0) }));
+    setQueue(q);
+  }, [queue, card, states, ci, user?.id]);
 
-  const restart = (only?: number[]) => {
-    const order = only ? [...only].sort(() => Math.random() - 0.5) : Array.from({ length: cards.length }, (_, i) => i);
-    setSt({ order, pos: 0, known: only ? st.known.filter((i) => !only.includes(i)) : [], learning: [] });
-  };
-  const shuffle = () => setSt((s) => ({ ...s, order: [...s.order].sort(() => Math.random() - 0.5), pos: 0 }));
+  const undo = useCallback(() => {
+    const last = history[history.length - 1];
+    if (!last || !states) return;
+    const c = cards[last.ci]; const key = cardKey(c.setId, c.idx);
+    const next = { ...states };
+    if (last.prev) next[key] = last.prev; else delete next[key];
+    setStates(next);
+    if (last.prev) void saveState(user?.id ?? null, c.setId, c.idx, last.prev);
+    setQueue(last.was); setHistory((h) => h.slice(0, -1)); setStats((s) => ({ done: Math.max(0, s.done - 1), again: s.again }));
+  }, [history, states, cards, user?.id]);
 
-  // keyboard
+  const skip = useCallback(() => { if (!queue || queue.length < 2) return; setLeaving(true); window.setTimeout(() => { setQueue((q) => (q ? [...q.slice(1), q[0]] : q)); setLeaving(false); setDx(0); }, 160); }, [queue]);
+
   useEffect(() => {
     const on = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLElement && /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
-      if (e.key === "ArrowRight") go(1);
-      else if (e.key === "ArrowLeft") go(-1);
-      else if (e.key === " " || e.key === "Enter") { e.preventDefault(); setFlipped((f) => !f); }
-      else if (e.key === "1") verdict(false);
-      else if (e.key === "2") verdict(true);
+      if (e.key === " " || e.key === "Enter") { e.preventDefault(); setFlipped((f) => !f); }
+      else if (flipped && e.key === "1") rate("again");
+      else if (flipped && e.key === "2") rate("hard");
+      else if (flipped && e.key === "3") rate("good");
+      else if (flipped && e.key === "4") rate("easy");
+      else if (e.key === "ArrowLeft") undo();
+      else if (e.key === "ArrowRight") skip();
     };
     window.addEventListener("keydown", on);
     return () => window.removeEventListener("keydown", on);
-  }, [go, verdict]);
+  }, [flipped, rate, undo, skip]);
 
-  // when the deck is finished: record it in the account and find the matching MCQ bank
+  // finished: record in the account and find the matching MCQ bank
   useEffect(() => {
-    if (!finished) return;
-    void setProgress(user?.id ?? null, "flashcard", setId, { status: st.learning.length ? "in_progress" : "completed", progress_percent: Math.round((st.known.length / Math.max(1, cards.length)) * 100) }).catch(() => undefined);
-    void (async () => {
+    if (!finished || !cards.length) return;
+    if (mode === "deck") void setProgress(user?.id ?? null, "flashcard", cards[0].setId, { status: "completed", progress_percent: 100 }).catch(() => undefined);
+    if (mcqSource) void (async () => {
       try {
-        const { data: fs } = await (supabase as any).from("flashcard_sets").select("source_reference").eq("id", setId).maybeSingle();
-        if (!fs?.source_reference) return;
-        const { data: m } = await (supabase as any).from("mcq_sets").select("id,title,slug").eq("source_reference", fs.source_reference).eq("published", true).is("deleted_at", null).limit(1);
+        const { data: m } = await (supabase as any).from("mcq_sets").select("id,title,slug").eq("source_reference", mcqSource).eq("published", true).is("deleted_at", null).limit(1);
         if (m && m[0]) setMcq(buildMcqPath(m[0]));
       } catch { /* optional */ }
     })();
   }, [finished]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // swipe
   const onDown = (e: React.PointerEvent) => { drag.current = { x: e.clientX, y: e.clientY, t: Date.now(), active: true, horiz: null }; };
   const onMove = (e: React.PointerEvent) => {
     const d = drag.current; if (!d.active) return;
@@ -101,75 +128,92 @@ export default function FlashcardDeck({ setId, title, cards, category }: { setId
   const onUp = (e: React.PointerEvent) => {
     const d = drag.current; if (!d.active) return; d.active = false;
     const mx = e.clientX - d.x;
-    if (d.horiz && Math.abs(mx) > 70) { go(mx < 0 ? 1 : -1); return; }
+    if (d.horiz && Math.abs(mx) > 70) { if (mx < 0) skip(); else { undo(); setDx(0); } return; }
     setDx(0);
     if (!d.horiz && Date.now() - d.t < 400 && Math.abs(mx) < 8) setFlipped((f) => !f);
   };
 
-  const learningLeft = st.learning.length;
-  const seg = useMemo(() => st.order.map((ci, p) => (st.known.includes(ci) ? "bg-emerald-500" : st.learning.includes(ci) ? "bg-amber-500" : p === st.pos ? "bg-primary" : "bg-muted")), [st]);
+  const name = mode === "today" ? "Today's flashcards" : topicName(title);
+  const nextDue = useMemo(() => {
+    if (!states) return null;
+    const dues = cards.map((c) => states[cardKey(c.setId, c.idx)]?.due).filter((d): d is number => !!d && d > Date.now());
+    return dues.length ? Math.min(...dues) : null;
+  }, [states, cards, finished]); // eslint-disable-line react-hooks/exhaustive-deps
+  const when = (t: number) => { const h = (t - Date.now()) / 3_600_000; return h < 1 ? "within the hour" : h < 24 ? `in ${Math.round(h)} hours` : `in ${Math.round(h / 24)} day${Math.round(h / 24) === 1 ? "" : "s"}`; };
 
   const header = (
     <div className="flex items-center gap-2 pb-2 pt-1">
       <Link to="/flashcards" aria-label="Back to flashcards" className="-ml-1 rounded-full p-2 text-muted-foreground hover:bg-muted hover:text-foreground"><ArrowLeft className="h-5 w-5" /></Link>
       <div className="min-w-0 flex-1">
-        <p className="truncate font-serif text-[17px] font-bold leading-tight text-foreground">{name}</p>
-        <p className="truncate text-[11px] text-muted-foreground">{category.replace(/^Year\s*\d\s*:\s*/i, "")} · {cards.length} cards</p>
+        <p className="truncate font-serif text-[18px] font-bold leading-tight text-foreground">{name}</p>
+        <p className="truncate text-xs text-muted-foreground">{mode === "today" ? "Due cards and a few new ones" : `${category.replace(/^Year\s*\d\s*:\s*/i, "")} · ${cards.length} cards`}</p>
       </div>
-      <span className="text-sm font-bold tabular-nums text-muted-foreground">{Math.min(st.pos + 1, total)}<span className="font-normal">/{total}</span></span>
-      <button type="button" onClick={shuffle} aria-label="Shuffle the cards" className="rounded-full p-2 text-muted-foreground hover:bg-muted hover:text-foreground"><Shuffle className="h-4 w-4" /></button>
-      <button type="button" onClick={() => restart()} aria-label="Start again" className="rounded-full p-2 text-muted-foreground hover:bg-muted hover:text-foreground"><RotateCcw className="h-4 w-4" /></button>
+      <span className="text-sm font-bold tabular-nums text-muted-foreground">{queue ? `${queue.length} left` : ""}</span>
+      <button type="button" onClick={undo} disabled={!history.length} aria-label="Undo the last answer" className="rounded-full p-2 text-muted-foreground hover:bg-muted hover:text-foreground disabled:opacity-30"><Undo2 className="h-4 w-4" /></button>
     </div>
   );
-  const bar = <div className="flex gap-[2px]" aria-hidden>{seg.map((c, i) => <span key={i} className={`h-1 flex-1 rounded-full ${c}`} />)}</div>;
+  const bar = <div className="h-1 overflow-hidden rounded-full bg-muted" aria-hidden><div className="h-full rounded-full bg-primary transition-all duration-300" style={{ width: `${total ? Math.min(100, (stats.done / (stats.done + (queue?.length ?? 0) || 1)) * 100) : 0}%` }} /></div>;
+
+  if (queue === null) return <div className="flex min-h-[60dvh] items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-2 border-primary border-t-transparent" aria-label="Loading" /></div>;
 
   if (finished) {
-    const knew = st.known.length;
+    const sure = stats.done > 0 ? Math.round(((stats.done - stats.again) / stats.done) * 100) : null;
     return (
       <div className="flex min-h-[calc(100dvh-9rem)] flex-col">
         {header}{bar}
         <div className="flex flex-1 flex-col items-center justify-center px-4 py-10 text-center">
-          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">Deck complete</p>
-          <p className="mt-2 font-serif text-5xl font-bold tabular-nums">{knew}<span className="text-2xl text-muted-foreground"> / {cards.length}</span></p>
-          <p className="mt-1 text-sm text-muted-foreground">{learningLeft ? `${learningLeft} still to learn` : "You knew every card. Come back in a few days to keep it fresh."}</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{stats.done ? "Session complete" : "All caught up"}</p>
+          {stats.done > 0 ? <p className="mt-2 font-serif text-5xl font-bold tabular-nums">{stats.done}<span className="text-2xl text-muted-foreground"> cards</span></p> : <p className="mt-2 font-serif text-3xl font-bold">Nothing due right now</p>}
+          <p className="mt-2 max-w-xs text-[15px] text-muted-foreground">
+            {sure !== null ? `${sure}% without needing "Again". ` : ""}{nextDue ? `Your next cards are due ${when(nextDue)}. Coming back then is what makes them stick.` : "Come back tomorrow for the next ones."}
+          </p>
           <div className="mt-6 flex w-full max-w-xs flex-col gap-2">
-            {learningLeft > 0 && <button type="button" onClick={() => restart(st.learning)} className="rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground">Review the {learningLeft} I am still learning</button>}
-            {mcq && <Link to={mcq} className="rounded-full border border-border px-5 py-3 text-sm font-bold text-foreground hover:bg-muted">Test yourself with the MCQs</Link>}
-            <button type="button" onClick={() => restart()} className="px-5 py-3 text-sm font-bold text-primary hover:underline">Start again</button>
+            {mode === "deck" && <button type="button" onClick={() => setAll(true)} className="rounded-full border border-border px-5 py-3 text-sm font-bold hover:bg-muted">Study every card anyway</button>}
+            {mode === "deck" && mcq && <Link to={mcq} className="rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground">Test yourself with the MCQs</Link>}
+            <Link to="/flashcards" className="px-5 py-3 text-sm font-bold text-primary hover:underline">More decks</Link>
           </div>
         </div>
       </div>
     );
   }
 
-  const style: React.CSSProperties = { transform: `translateX(${leaving ? leaving * -140 : dx}px) rotate(${(leaving ? leaving * -8 : dx / 18)}deg)`, opacity: leaving ? 0 : 1 - Math.min(0.35, Math.abs(dx) / 500), transition: drag.current.active && !leaving ? "none" : "transform 160ms ease-out, opacity 160ms ease-out", touchAction: "pan-y" };
+  const style: React.CSSProperties = { transform: `translateX(${leaving ? -140 : dx}px) rotate(${leaving ? -8 : dx / 18}deg)`, opacity: leaving ? 0 : 1 - Math.min(0.35, Math.abs(dx) / 500), transition: drag.current.active && !leaving ? "none" : "transform 160ms ease-out, opacity 160ms ease-out", touchAction: "pan-y" };
   const face = "absolute inset-0 flex flex-col overflow-hidden rounded-3xl border border-border bg-card p-5 shadow-[0_18px_40px_-22px_rgba(0,0,0,0.45)] sm:p-7";
+  const learningNote = st && st.reps === 0 && st.lapses > 0 ? "Learning again" : st ? `Seen ${st.reps}×` : "New card";
 
   return (
     <div className="flex min-h-[calc(100dvh-9rem)] flex-col">
       {header}{bar}
-      <div className="relative mt-3 flex flex-1 items-stretch justify-center" style={{ minHeight: "min(60dvh, 30rem)" }}>
+      <div className="relative mt-3 flex flex-1 items-stretch justify-center" style={{ minHeight: "min(58dvh, 30rem)" }}>
         <div className="w-full max-w-md select-none" style={{ perspective: "1400px" }}>
-          <div className="relative h-full min-h-[min(60dvh,30rem)] w-full cursor-pointer" style={style} onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp} role="button" tabIndex={0} aria-label={flipped ? "Answer. Tap to see the question." : "Question. Tap to see the answer."}>
+          <div className="relative h-full min-h-[min(58dvh,30rem)] w-full cursor-pointer" style={style} onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp} role="button" tabIndex={0} aria-label={flipped ? "Answer. Tap to see the question." : "Question. Tap to see the answer."}>
             <div className="absolute inset-0 transition-transform duration-500 [transform-style:preserve-3d]" style={{ transform: flipped ? "rotateY(180deg)" : "none" }}>
               <div className={face} style={{ backfaceVisibility: "hidden" }}>
-                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary">Question</p>
-                <div className="flex flex-1 items-center justify-center overflow-y-auto py-4 text-center font-serif text-[22px] font-semibold leading-snug text-foreground sm:text-2xl">{renderInline(card?.question || "", "q", ctx)}</div>
-                <p className="text-center text-xs text-muted-foreground">Tap to flip · swipe for the next card</p>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Question · {learningNote}</p>
+                <div className="flex flex-1 flex-col items-center justify-center gap-3 overflow-y-auto py-4 text-center font-serif text-[26px] font-semibold leading-snug text-foreground sm:text-[28px] [&_img]:mx-auto [&_img]:max-h-[40dvh] [&_img]:rounded-xl [&_p]:text-center [&_p]:leading-snug">{renderFlashcardMarkdown(card?.question || "", ctx)}</div>
+                <p className="text-center text-xs text-muted-foreground">Tap to flip · swipe left to skip · swipe right to undo</p>
               </div>
               <div className={`${face} border-primary/30`} style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
-                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary">Answer</p>
-                <div className="mt-2 flex-1 overflow-y-auto pr-1 text-[15px] leading-relaxed text-foreground/90 sm:text-base">{renderFlashcardMarkdown(card?.answer || "", ctx)}</div>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Answer</p>
+                <div className="mt-2 flex-1 overflow-y-auto pr-1 text-[19px] leading-relaxed text-foreground sm:text-xl [&_img]:mx-auto [&_img]:my-2 [&_img]:max-h-[46dvh] [&_img]:rounded-xl [&_li]:text-[19px] [&_li]:leading-snug [&_p]:text-[19px]">{renderFlashcardMarkdown(card?.answer || "", ctx)}</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-4 grid w-full max-w-md grid-cols-[auto_1fr_1fr_auto] items-center gap-2 pb-2">
-        <button type="button" onClick={() => go(-1)} disabled={st.pos === 0} aria-label="Previous card" className="rounded-full p-3 text-muted-foreground hover:bg-muted disabled:opacity-30"><ChevronLeft className="h-5 w-5" /></button>
-        <button type="button" onClick={() => verdict(false)} className="inline-flex items-center justify-center gap-1.5 rounded-full bg-amber-500/15 py-3 text-sm font-bold text-amber-700 dark:text-amber-300"><X className="h-4 w-4" /> Still learning</button>
-        <button type="button" onClick={() => verdict(true)} className="inline-flex items-center justify-center gap-1.5 rounded-full bg-emerald-500/15 py-3 text-sm font-bold text-emerald-700 dark:text-emerald-300"><Check className="h-4 w-4" /> Got it</button>
-        <button type="button" onClick={() => go(1)} aria-label="Next card" className="rounded-full p-3 text-muted-foreground hover:bg-muted"><ChevronRight className="h-5 w-5" /></button>
+      <div className="mx-auto mt-4 w-full max-w-md pb-2">
+        {!flipped ? (
+          <button type="button" onClick={() => setFlipped(true)} className="w-full rounded-full bg-primary py-4 text-base font-bold text-primary-foreground">Show answer</button>
+        ) : (
+          <div className="grid grid-cols-4 gap-2">
+            {BTN.map((b) => (
+              <button key={b.r} type="button" onClick={() => rate(b.r)} className={`flex flex-col items-center rounded-2xl px-1 py-2.5 ${b.cls}`}>
+                <span className="text-[15px] font-bold">{b.text}</span>
+                <span className="mt-0.5 text-[11px] font-semibold opacity-75">{label(st, b.r)}</span>
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

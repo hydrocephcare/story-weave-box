@@ -36,7 +36,8 @@ export function renderFlashcardMarkdown(raw: string, ctx?: any) {
     .replace(/\s(?=→\s)/g, "\n")
     .trim();
 
-  const lines = text.split("\n").map((l) => l.trim()).filter(Boolean);
+  // an image on its own line, or inside a line, becomes a picture (anatomy, histology, slides)
+  const lines = text.split("\n").flatMap((l) => l.split(/(!\[[^\]]*\]\([^)\s]+\))/)).map((l) => l.trim()).filter(Boolean);
   const out: React.ReactNode[] = [];
   let listBuf: { ordered: boolean; items: string[] } | null = null;
 
@@ -73,6 +74,8 @@ export function renderFlashcardMarkdown(raw: string, ctx?: any) {
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
+    const imgm = line.match(/^!\[([^\]]*)\]\(([^)\s]+)\)$/);
+    if (imgm) { flushList(); out.push(<img key={`img-${i}`} src={imgm[2]} alt={imgm[1] || "Picture"} loading="lazy" decoding="async" className="max-w-full rounded-lg object-contain" />); continue; }
     const ord = line.match(/^(\d{1,2})[.)]\s+(.+)$/);
     if (ord) {
       if (!listBuf || !listBuf.ordered) { flushList(); listBuf = { ordered: true, items: [] }; }

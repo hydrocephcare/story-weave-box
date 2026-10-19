@@ -5,7 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { buildFlashcardPath, getCategoryDisplayName } from "@/lib/store";
 import { updateMetaTags } from "@/lib/seo";
 import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
-import { useMyDecks } from "@/lib/myDecks";
+import { useDueCount, useMyDecks } from "@/lib/myDecks";
 import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
 
 interface Row { id: string; title: string; slug: string | null; category: string; created_at: string; card_count: number; source_reference: string | null }
@@ -19,6 +19,7 @@ const progressOf = (id: string): { pos: number; known: number; total: number } |
 export default function Flashcards() {
   const { year } = useScopedYear();
   const mine = useMyDecks();
+  const due = useDueCount();
   const [rows, setRows] = useState<Row[] | null>(null);
   const [unit, setUnit] = useState("");
   const [q, setQ] = useState("");
@@ -66,6 +67,11 @@ export default function Flashcards() {
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Ompath Study</p>
       <h1 className="mt-1 font-serif text-3xl font-bold sm:text-4xl">Flashcards</h1>
       <p className="mt-2 max-w-xl text-sm text-muted-foreground">Tap a card to flip it, swipe for the next one. A deck is made for every note you read, and it appears here for you.</p>
+
+      <Link to="/flashcards/today" className="mt-5 flex items-center justify-between gap-3 rounded-2xl bg-primary px-5 py-4 text-primary-foreground">
+        <span><span className="block text-xs font-bold uppercase tracking-[0.16em] opacity-80">Today</span><span className="block text-lg font-bold">{due > 0 ? `${due} card${due === 1 ? "" : "s"} due` : "Daily flashcards"}</span><span className="block text-xs opacity-80">Spaced so you remember them: the cards you miss come back sooner.</span></span>
+        <ArrowRight className="h-5 w-5 shrink-0" aria-hidden />
+      </Link>
 
       {mine && mine.length > 0 && (
         <section className="mt-7" aria-label="From what you read">

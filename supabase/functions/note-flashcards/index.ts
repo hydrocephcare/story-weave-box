@@ -11,7 +11,9 @@ const json = (o: unknown, status = 200) => new Response(JSON.stringify(o), { sta
 const SYSTEM = `You write revision flashcards for Kenyan medical students from ONE study note. Return ONLY a JSON array, no markdown.
 Each item: {"question":"...","answer":"..."}
 Rules:
-- One idea per card. The question asks for ONE thing (a definition, a cause, a feature, a number, a next step); the answer is short (one line, or at most 4 short bullet points written with "- ").
+- One idea per card. The question asks for ONE thing (a definition, a cause, a feature, a number, a next step).
+- The answer is POINTED and SHORT: 2 to 4 bullet lines, each starting with "- " and no longer than 10 words. No sentences that wander. If a picture would help and the note contains an image link, you may add it as ![label](url) on its own line.
+- For drugs write cards that drill: "Class of X?", "Mechanism of X?", "Main uses of X?", "Key side effects of X?", "Contraindications of X?" so the facts can be rehearsed one at a time.
 - Use only facts that are in the note. Never invent doses, numbers or criteria.
 - Cover the whole note in the order it is taught: definition, causes or risk factors, features, investigations, management, complications.
 - Questions must stand alone (name the condition; never say "the note", "above" or "this").

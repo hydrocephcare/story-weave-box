@@ -39,6 +39,7 @@ const Brand = lazy(() => import("./pages/Brand"));
 const NewNotes = lazy(() => import("./pages/NewNotes"));
 const RecentlyAdded = lazy(() => import("./pages/RecentlyAdded"));
 const Timetable2026 = lazy(() => import("./pages/Timetable2026"));
+const FlashcardsToday = lazy(() => import("./pages/FlashcardsToday"));
 const AdminCopilot = lazy(() => import("@/components/AdminCopilot"));
 
 /** The admin assistant (about 90 KB with its tools) is only fetched once someone opens an admin page, never for ordinary readers. */
@@ -224,6 +225,7 @@ const AnimatedRoutes = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/flashcards" element={<RailLayout><Flashcards /></RailLayout>} />
+            <Route path="/flashcards/today" element={<FlashcardsToday />} />
             <Route path="/flashcards/:id" element={<FlashcardStudy />} />
             <Route path="/mcqs" element={<RailLayout><McqHub /></RailLayout>} />
             <Route path="/mcqs/:id" element={<McqSet />} />

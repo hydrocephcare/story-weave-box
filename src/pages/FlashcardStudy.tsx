@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useParams, Link, useLocation, useNavigate } from "react-router-dom";
 import { ArrowLeft, Loader2, Layers } from "lucide-react";
 import { getFlashcardSetBySlugOrId, getCategoryDisplayName, buildFlashcardPath, type FlashcardSet } from "@/lib/store";
@@ -79,12 +79,13 @@ function FlashcardStudyInner({ set }: { set: FlashcardSet }) {
   const shareUrl = `${SITE_URL}${buildFlashcardPath(set)}`;
   const date = new Date(set.updated_at || set.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
   const shortTitle = set.title.replace(/\s*[:—–-]?\s*Flashcards?$/i, "");
+  const cards = useMemo(() => set.cards.map((c, idx) => ({ question: c.question, answer: c.answer, setId: set.id, idx })), [set]);
 
   return (
     <div className="mx-auto max-w-xl px-3 pb-16 pt-1 sm:px-6">
       {/* the deck is the first thing on the page: nothing to scroll past */}
       <KeywordLinkProvider currentPath={buildFlashcardPath(set)} currentTitle={set.title}>
-        <FlashcardDeck setId={set.id} title={set.title} cards={set.cards} category={set.category} />
+        <FlashcardDeck cards={cards} title={set.title} category={set.category} mcqSource={(set as unknown as { source_reference?: string | null }).source_reference ?? null} />
       </KeywordLinkProvider>
 
       <section className="mt-10 border-t border-border pt-6">

@@ -939,7 +939,7 @@ export async function getFlashcardSets(): Promise<FlashcardSet[]> {
   return (data || []) as unknown as FlashcardSet[];
 }
 
-const FLASHCARD_DETAIL_COLUMNS = "id,title,cards,created_at,updated_at,published,original_notes,category,is_raw,slug";
+const FLASHCARD_DETAIL_COLUMNS = "id,title,cards,created_at,updated_at,published,original_notes,category,is_raw,slug,source_reference";
 
 export async function getPublishedFlashcardSets(): Promise<FlashcardSet[]> {
   const { data, error } = await supabase
