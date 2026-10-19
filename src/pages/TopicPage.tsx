@@ -25,6 +25,7 @@ import { Answer } from "@/components/ai/AnswerText";
 import { rebalanceMcqAnswerLetters } from "@/lib/store";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
+import { buildBlogPath } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { openAI } from "@/lib/aiEvents";
 
@@ -503,6 +504,7 @@ export default function TopicPage() {
             <button type="button" onClick={retry} className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground"><RefreshCw className="h-4 w-4" /> Try again</button>
           </div>
         )}
+        {(phase === "failed" || phase === "unavailable" || phase === "missing") && <NotesAbout name={name} />}
         <p className="mt-6 flex justify-center gap-2"><Link to={`/search?q=${encodeURIComponent(name)}`} className="rounded-lg border border-border px-4 py-2 text-sm font-bold">Search for “{name}”</Link><Link to="/topics" className="rounded-lg border border-border px-4 py-2 text-sm font-bold">All topics</Link></p>
       </main>
     );
@@ -808,5 +810,31 @@ export default function TopicPage() {
         </div>
       )}
     </main>
+  );
+}
+
+/** While a topic page cannot be built, the notes on this site that are about the same thing, so the reader is never left with an error alone. */
+function NotesAbout({ name }: { name: string }) {
+  const [rows, setRows] = useState<{ id: string; title: string; slug: string | null; category: string }[] | null>(null);
+  useEffect(() => {
+    let on = true;
+    const words = name.toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((w) => w.length >= 3).slice(0, 3);
+    if (!words.length) { setRows([]); return; }
+    const filter = words.map((w) => `title.ilike.%${w}%`).join(",");
+    void Promise.resolve((supabase as any).from("articles").select("id,title,slug,category").eq("published", true).is("deleted_at", null).or(filter).limit(40)).then(({ data }: { data: { id: string; title: string; slug: string | null; category: string }[] | null }) => {
+      if (!on) return;
+      const score = (t: string) => words.filter((w) => t.toLowerCase().includes(w)).length;
+      setRows((data ?? []).filter((r) => !/mcq|question|exam|paper|quiz|bank/i.test(r.title)).sort((a, b) => score(b.title) - score(a.title)).slice(0, 8));
+    }, () => { if (on) setRows([]); });
+    return () => { on = false; };
+  }, [name]);
+  if (!rows || rows.length === 0) return null;
+  return (
+    <section className="mt-8" aria-label={`Notes about ${name}`}>
+      <h2 className="font-serif text-lg font-bold">Notes on this site about “{name}”</h2>
+      <ul className="mt-1 divide-y divide-border border-y border-border text-left">
+        {rows.map((r) => <li key={r.id}><Link to={buildBlogPath(r)} className="block py-2.5 text-[15px] font-semibold text-foreground hover:text-primary">{r.title}<span className="block text-xs font-normal text-muted-foreground">{r.category}</span></Link></li>)}
+      </ul>
+    </section>
   );
 }
