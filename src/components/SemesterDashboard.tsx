@@ -179,9 +179,9 @@ export default function SemesterDashboard() {
   const year4 = studyYear === 4;
 
   return (
-    <section className="border-b border-border bg-muted/25">
-      <div className="mx-auto max-w-6xl px-5 py-8 sm:py-10">
-        <div className="rounded-3xl border border-border bg-card p-5 shadow-sm sm:p-7">
+    <section className="w-full min-w-0 overflow-x-clip border-b border-border bg-muted/25">
+      <div className="mx-auto w-full min-w-0 max-w-6xl px-3 py-6 sm:px-5 sm:py-10">
+        <div className="w-full min-w-0 rounded-3xl border border-border bg-card p-3 shadow-sm sm:p-7">
           <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
             <div>
               <div className="flex flex-wrap items-center gap-2 text-[11px] font-bold uppercase tracking-[0.15em] text-primary">
@@ -255,8 +255,8 @@ export default function SemesterDashboard() {
 
               <div className="mt-7 grid gap-4 lg:grid-cols-[1.2fr,0.8fr]">
                 <div className="rounded-2xl border border-border bg-background p-5">
-                  <div className="flex items-center justify-between gap-3">
-                    <div>
+                  <div className="flex min-w-0 items-start justify-between gap-3">
+                    <div className="min-w-0 flex-1">
                       <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">Teaching team</p>
                       <h3 className="mt-1 font-serif text-lg font-bold">Lecturers on the official timetable</h3>
                     </div>
@@ -274,8 +274,8 @@ export default function SemesterDashboard() {
                   </p>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-background p-5">
-                  <div className="flex items-center gap-2">
+                <div className="min-w-0 rounded-2xl border border-border bg-background p-3 sm:p-5">
+                  <div className="flex min-w-0 items-center gap-2">
                     <BookOpen className="h-5 w-5 text-primary" />
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-primary">Where you are</p>
@@ -283,9 +283,9 @@ export default function SemesterDashboard() {
                     </div>
                   </div>
                   <div className="mt-4">
-                    <div className="flex items-end justify-between">
-                      <span className="text-sm text-muted-foreground">{startedCount} started of {allResources.length || 0} available resources</span>
-                      <span className="font-serif text-2xl font-bold">{completionPercent}%</span>
+                    <div className="flex min-w-0 flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+                      <span className="min-w-0 break-words text-sm text-muted-foreground">{startedCount} started of {allResources.length || 0} available resources</span>
+                      <span className="shrink-0 font-serif text-2xl font-bold">{completionPercent}%</span>
                     </div>
                     <div className="mt-2 h-2 overflow-hidden rounded-full bg-muted">
                       <div className="h-full rounded-full bg-primary" style={{ width: `${completionPercent}%` }} />
@@ -294,7 +294,7 @@ export default function SemesterDashboard() {
                   {recentRead.length ? (
                     <div className="mt-5 space-y-2">
                       {recentRead.map(({ resource, progress: p }) => (
-                        <Link key={`${resource.kind}-${resource.id}`} to={resource.kind === "article" ? buildBlogPath(resource) : resource.kind === "flashcard" ? buildFlashcardPath(resource) : buildMcqPath(resource)} className="flex items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-primary/40">
+                        <Link key={`${resource.kind}-${resource.id}`} to={resource.kind === "article" ? buildBlogPath(resource) : resource.kind === "flashcard" ? buildFlashcardPath(resource) : buildMcqPath(resource)} className="flex min-w-0 items-center gap-3 rounded-xl border border-border bg-card p-3 hover:border-primary/40">
                           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                             {p.status === "completed" ? <CheckCircle2 className="h-4 w-4" /> : <BookOpen className="h-4 w-4" />}
                           </span>
