@@ -227,6 +227,7 @@ const AnimatedRoutes = () => {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/flashcards" element={<RailLayout><Flashcards /></RailLayout>} />
             <Route path="/flashcards/today" element={<FlashcardsToday />} />
+            <Route path="/generated-flashcards/:id" element={<GeneratedFlashcardStudy />} />
             <Route path="/flashcards/:id" element={<FlashcardStudy />} />
             <Route path="/mcqs" element={<RailLayout><McqHub /></RailLayout>} />
             <Route path="/mcqs/:id" element={<McqSet />} />
