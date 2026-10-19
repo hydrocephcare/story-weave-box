@@ -251,6 +251,7 @@ serve(async (req) => {
         .from("mcq_sets")
         .insert({
           title: `${examTitle} (Section A: MCQs)`,
+          slug: `${`${examTitle} section a mcqs`.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70)}-${Math.random().toString(16).slice(2, 10)}`,
           questions: examMcqs,
           published: true,
           original_notes: JSON.stringify({ type: "weekly_exam", unit, saqs, laqs, generated_at: now.toISOString(), reviewed: true }),

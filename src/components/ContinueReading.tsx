@@ -19,15 +19,15 @@ const ago = (t: number) => {
 const linkFor = (i: TrailItem) => `${buildBlogPath({ id: i.id, title: i.title, slug: i.slug, category: i.category } as never)}${i.at > 0.05 && i.at < 0.95 ? `?at=${i.at.toFixed(3)}` : ""}`;
 
 /** "Continue reading": the note you were in the middle of, with a bar and a link that opens it at the same spot, then what you read before. Follows your account across devices. */
-export default function ContinueReading({ className = "" }: { className?: string }) {
+export default function ContinueReading({ className = "", year }: { className?: string; year?: number }) {
   const { user, loading } = useAuth();
   const [trail, setTrail] = useState<TrailItem[] | null>(null);
   useEffect(() => {
     if (loading) return;
     let on = true;
-    loadTrail(user?.id ?? null, 8).then((t) => { if (on) setTrail(t); });
+    loadTrail(user?.id ?? null, year ? 30 : 8).then((t) => { if (on) setTrail(year ? t.filter((i) => new RegExp(`^Year\\s*${year}\\b`, "i").test(i.category)).slice(0, 8) : t); });
     return () => { on = false; };
-  }, [user?.id, loading]);
+  }, [user?.id, loading, year]);
 
   if (!trail || trail.length === 0) return null;
   const current = trail.find((t) => !t.done) ?? trail[0];

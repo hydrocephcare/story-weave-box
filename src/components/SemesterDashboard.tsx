@@ -94,6 +94,8 @@ function TimetableDay({ row }: { row: { day: string; group1: string; group2: str
 export default function SemesterDashboard() {
   const { user } = useAuth();
   const [studyYear, setStudyYear] = useState<number | null>(null);
+  const [gridIdx, setGridIdx] = useState(0);
+  const [wholeWeek, setWholeWeek] = useState(false);
   const [displayName, setDisplayName] = useState("");
   const [bundles, setBundles] = useState<UnitBundle[]>([]);
   const [progress, setProgress] = useState<ResourceProgress[]>([]);
@@ -340,19 +342,23 @@ export default function SemesterDashboard() {
                         <h3 className="mt-1 font-serif text-lg font-bold">Group 1 / Group 2</h3>
                       </div>
                     </div>
-                    <div className="mt-3 divide-y divide-border">
-                      {YEAR_4_ROTATION_GRIDS.map((grid, index) => (
-                        <details key={grid.label} open={index === 0} className="group py-2">
-                          <summary className="flex cursor-pointer list-none items-center justify-between py-1 text-sm font-bold text-foreground">
-                            {grid.label}
-                            <span className="text-xs font-semibold text-primary group-open:hidden">Show</span>
-                            <span className="hidden text-xs font-semibold text-muted-foreground group-open:inline">Hide</span>
-                          </summary>
-                          <div className="mt-2 space-y-4">
-                            {grid.slots.map((row) => <TimetableDay key={row.day} row={row} />)}
-                          </div>
-                        </details>
-                      ))}
+                    <div className="mt-3">
+                      <label className="flex items-center gap-2 text-xs font-semibold text-muted-foreground">
+                        Rotation grid
+                        <select value={gridIdx} onChange={(e) => setGridIdx(Number(e.target.value))} className="rounded-md border border-border bg-background px-2 py-1 text-xs font-bold text-foreground">
+                          {YEAR_4_ROTATION_GRIDS.map((g, i) => <option key={g.label} value={i}>{g.label.replace("Published rotation grid", "Grid")}</option>)}
+                        </select>
+                      </label>
+                      <div className="mt-3 space-y-4">
+                        {(() => {
+                          const grid = YEAR_4_ROTATION_GRIDS[gridIdx] ?? YEAR_4_ROTATION_GRIDS[0];
+                          const today = new Date().toLocaleDateString("en-GB", { weekday: "long" });
+                          const todays = grid.slots.filter((r) => r.day.toLowerCase().startsWith(today.toLowerCase()));
+                          const rows = wholeWeek || todays.length === 0 ? grid.slots : todays;
+                          return rows.map((row) => <TimetableDay key={row.day} row={row} />);
+                        })()}
+                      </div>
+                      <button type="button" onClick={() => setWholeWeek((v) => !v)} className="mt-3 text-xs font-bold text-primary hover:underline">{wholeWeek ? "Show only today" : "Show the whole week"}</button>
                     </div>
                     <p className="mt-3 text-[11px] leading-relaxed text-muted-foreground">
                       The official timetable has several rotation grids. All are shown because your own rotation and group are not stored in your profile, so none is guessed.

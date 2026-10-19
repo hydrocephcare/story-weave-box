@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import TaughtThisWeek from "@/components/TaughtThisWeek";
 import HeroAurora from "@/components/HeroAurora";
+import ContinueReading from "@/components/ContinueReading";
 import RecentlyPublished from "@/components/RecentlyPublished";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { ArrowRight, BookMarked, ChevronDown, ChevronRight, CalendarDays, BookOpen, ClipboardCheck, Clock, FileQuestion, FolderOpen, GraduationCap, Images, ListChecks, Pill, Flame, Stethoscope, Trophy } from "lucide-react";
@@ -225,7 +226,30 @@ export default function YearHub() {
         </nav>
       </header>
 
-      {notesForYear(parsedYear).length > 0 && (
+      {parsedYear !== 3 && parsedYear !== 2 && (
+        <section className="mt-8" aria-label={`Units in ${yearLabel}`}>
+          <h2 className="font-serif text-2xl font-bold text-foreground">Units</h2>
+          <p className="mt-0.5 text-sm text-muted-foreground">Open a unit for its notes, question banks, flashcards and past papers.</p>
+          {unitsLoading ? (
+            <div className="mt-3 flex flex-wrap gap-2" aria-hidden="true">{Array.from({ length: 8 }).map((_, i) => <Skeleton key={i} className="h-7 w-24 rounded-lg" />)}</div>
+          ) : (
+            <ul className="mt-2 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
+              {(canonicalUnits.length ? canonicalUnits : units.map((name) => ({ id: name, name, slug: "", legacy_category: `${yearLabel}: ${name}` } as Unit))).map((unit) => (
+                <li key={unit.id} className="border-b border-border">
+                  <Link to={unit.slug ? unitPath(parsedYear, unit.slug) : `/blog?year=${encodeURIComponent(yearLabel)}&unit=${encodeURIComponent(unit.legacy_category || "")}`} className="flex items-center justify-between gap-2 py-3 text-[15px] font-semibold text-foreground hover:text-primary">
+                    <span className="min-w-0 truncate">{unit.name}</span><ArrowRight className="h-4 w-4 shrink-0 text-primary/60" aria-hidden />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      )}
+
+      <ContinueReading year={parsedYear} className="mt-8" />
+
+
+      {notesForYear(parsedYear).length > 0 && (parsedYear === 2 || parsedYear === 3 || (!canonicalUnits.length && !units.length)) && (
         <section className="year-unit-folders mt-8" aria-label={`Study notes for ${yearLabel}`}>
           <div className="mb-3 flex items-end justify-between gap-2">
             <h2 className="flex items-center gap-2 font-serif text-2xl font-bold text-foreground"><BookOpen className="h-5 w-5 text-primary" /> Study notes by unit</h2>
@@ -247,6 +271,10 @@ export default function YearHub() {
           </ul>
           {parsedYear === 4 && <Link to="/imed" className="mt-3 flex items-center justify-between gap-3 rounded-2xl border border-primary/40 bg-primary/5 p-4 hover:bg-primary/10"><span><span className="block font-serif text-lg font-bold">Internal medicine, system by system</span><span className="block text-sm text-muted-foreground">Every topic with ticks, an exam planner and the question of the day.</span></span><ChevronDown className="h-5 w-5 -rotate-90 text-primary" aria-hidden /></Link>}
         </section>
+      )}
+
+      {notesForYear(parsedYear).length > 0 && parsedYear !== 2 && parsedYear !== 3 && (canonicalUnits.length > 0 || units.length > 0) && (
+        <p className="mt-6 text-sm"><Link to={`/notes?year=${parsedYear}`} className="font-bold text-primary hover:underline">Curated lecture notes for {yearLabel} →</Link>{parsedYear === 4 && <Link to="/imed" className="ml-4 font-bold text-primary hover:underline">Internal Medicine course →</Link>}</p>
       )}
 
       <TaughtThisWeek year={parsedYear} className="mt-8" />
@@ -309,68 +337,6 @@ export default function YearHub() {
         </Link>
       )}
 
-      {parsedYear !== 3 && parsedYear !== 2 && <div className="mt-6 rounded-2xl border border-border bg-card p-5">
-        <div className="mb-3 flex items-center gap-2">
-          <BookMarked className="h-4 w-4 text-primary" />
-          <h2 className="font-serif text-lg font-bold text-foreground">Units in {yearLabel}</h2>
-        </div>
-        {unitsLoading ? (
-          <div className="flex flex-wrap gap-2" aria-hidden="true">
-            {Array.from({ length: 8 }).map((_, i) => <Skeleton key={i} className="h-7 w-24 rounded-lg" />)}
-          </div>
-        ) : (
-          <div className="flex flex-wrap gap-2">
-            {(canonicalUnits.length ? canonicalUnits : units.map(name => ({ id:name, name, slug:"", legacy_category:`${yearLabel}: ${name}` } as Unit))).map((unit) => (
-              <Link key={unit.id} to={unit.slug ? unitPath(parsedYear, unit.slug) : `/blog?year=${encodeURIComponent(yearLabel)}&unit=${encodeURIComponent(unit.legacy_category || "")}`} className="rounded-lg border border-border bg-background px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary">
-                {unit.name}
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>}
-
-      {recentLoading && (
-        <div className="mt-6 rounded-2xl border border-border bg-card p-5" aria-hidden="true">
-          <Skeleton className="mb-3 h-5 w-48" />
-          <div className="space-y-2">
-            <Skeleton className="h-8 w-full" />
-            <Skeleton className="h-8 w-full" />
-            <Skeleton className="h-8 w-full" />
-          </div>
-        </div>
-      )}
-
-      {!recentLoading && recent.length > 0 && (
-        <div className="mt-6 rounded-2xl border border-border bg-card p-5">
-          <div className="mb-3 flex items-center gap-2">
-            <Clock className="h-4 w-4 text-primary" />
-            <h2 className="font-serif text-lg font-bold text-foreground">Recently Added in {yearLabel}</h2>
-          </div>
-          <div className="space-y-1">
-            {recent.map(a => (
-              <Link
-                key={a.id}
-                to={buildBlogPath(a)}
-                state={{ from: `${location.pathname}${location.search}` }}
-                className="group flex items-start gap-3 rounded-lg px-2 py-2 transition-colors hover:bg-muted/40"
-              >
-                <BookOpen className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" />
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-sm font-medium text-foreground transition-colors group-hover:text-primary">{a.title}</p>
-                  <p className="text-[11px] text-muted-foreground">{getCategoryDisplayName(a.category)} · {timeAgo(a.updated_at || a.created_at)}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <Link
-            to={`/blog?year=${encodeURIComponent(yearLabel)}`}
-            className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline"
-          >
-            View all {yearLabel} articles
-            <ArrowRight className="h-3 w-3" />
-          </Link>
-        </div>
-      )}
     </div>
   );
 }
