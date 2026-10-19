@@ -1,6 +1,8 @@
 import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { BookMarked, BookOpen, ChevronRight, Layers, ListChecks, RotateCw, X } from "lucide-react";
+import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import { buildFlashcardPath } from "@/lib/store";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { mdToHtml } from "@/lib/miniMarkdown";
 import { affiliatesFor, useMonetise } from "@/lib/monetise";
@@ -76,7 +78,7 @@ function Quiz({ questions }: { questions: Mcq[] }) {
   );
 }
 
-function Flash({ cards }: { cards: Card[] }) {
+function Flash({ cards, deck }: { cards: Card[]; deck?: string }) {
   const [i, setI] = useState(0);
   const [flip, setFlip] = useState(false);
   const c = cards[i];
@@ -85,13 +87,14 @@ function Flash({ cards }: { cards: Card[] }) {
     <div className="mt-2">
       <button type="button" onClick={() => setFlip((f) => !f)} className="block w-full border-l-[3px] border-primary/50 py-1 pl-3 text-left" aria-label={flip ? "Show the question" : "Show the answer"}>
         {!flip ? <p className="text-[15px] font-semibold leading-snug text-foreground">{c.question}</p>
-          : <div className="note-body text-[14px] leading-relaxed text-foreground" dangerouslySetInnerHTML={{ __html: mdToHtml(c.answer, { skipTitle: true }) }} />}
+          : <div className="note-body text-[14px] leading-relaxed text-foreground" dangerouslySetInnerHTML={{ __html: mdToHtml(c.answer, { skipTitle: true }).html }} />}
       </button>
       <div className="mt-2 flex items-center gap-4 text-sm font-semibold">
         <button type="button" onClick={() => setFlip((f) => !f)} className="inline-flex items-center gap-1 text-primary hover:underline"><RotateCw className="h-3.5 w-3.5" />{flip ? "Show question" : "Show answer"}</button>
         <button type="button" onClick={() => { setFlip(false); setI((n) => n + 1); }} className="inline-flex items-center gap-1 text-primary hover:underline">{i + 1 < cards.length ? "Next card" : "Done"}<ChevronRight className="h-4 w-4" /></button>
         <span className="ml-auto text-xs font-normal text-muted-foreground">{i + 1} of {cards.length}</span>
       </div>
+      {deck && <Link to={deck} className="mt-2 inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">Study the whole deck with spaced repetition <ChevronRight className="h-4 w-4" /></Link>}
     </div>
   );
 }
@@ -102,7 +105,7 @@ function NotePopup({ note, onClose }: { note: Note | null; onClose: () => void }
     if (!note) { setHtml(null); return; }
     let live = true;
     (supabase as any).from("articles").select("content").eq("id", note.id).maybeSingle().then(({ data }: { data: { content?: string } | null }) => {
-      if (live) setHtml(mdToHtml(String(data?.content || "").slice(0, 14000), { skipTitle: true }));
+      if (live) setHtml(mdToHtml(String(data?.content || "").slice(0, 14000), { skipTitle: true }).html);
     });
     return () => { live = false; };
   }, [note]);
@@ -125,7 +128,7 @@ interface Props { kind: BreakKind; articleId: string; category: string; title: s
 const ReadingBreak = memo(function ReadingBreak({ kind, articleId, category, title, readText }: Props) {
   const { ref, near } = useNearScreen<HTMLDivElement>();
   const [closed, setClosed] = useState(false);
-  const [state, setState] = useState<{ kind: BreakKind; mcq?: Mcq[]; cards?: Card[]; notes?: Note[] } | "none" | null>(null);
+  const [state, setState] = useState<{ kind: BreakKind; mcq?: Mcq[]; cards?: Card[]; notes?: Note[]; deck?: string } | "none" | null>(null);
   const [open, setOpen] = useState<Note | null>(null);
   const { affiliates } = useMonetise();
   const keys = useMemo(() => words(`${title} ${readText.slice(-1800)}`).slice(0, 40), [title, readText]);
@@ -147,6 +150,11 @@ const ReadingBreak = memo(function ReadingBreak({ kind, articleId, category, tit
             const rel = all.filter((q) => onTopic(`${q.question} ${q.options.join(" ")}`));
             if (rel.length >= 2) { if (live) setState({ kind: k, mcq: pick(rel, (q) => `${q.question} ${q.options.join(" ")}`, keys, 3) }); return; }
           } else if (k === "cards") {
+            // the deck made from THIS note comes first; otherwise cards of the same unit that are about the same subject
+            const own = await (supabase as any).from("flashcard_sets").select("id,title,slug,cards").eq("source_reference", articleId).eq("published", true).is("deleted_at", null).limit(1);
+            const mine = own.data && own.data[0];
+            const mc: Card[] = mine && Array.isArray(mine.cards) ? mine.cards.filter((c: Card) => c?.question && c?.answer) : [];
+            if (mc.length >= 3) { if (live) setState({ kind: k, cards: mc.slice().sort(() => Math.random() - 0.5).slice(0, 5), deck: buildFlashcardPath(mine) }); return; }
             const { data } = await (supabase as any).from("flashcard_sets").select("cards").eq("published", true).eq("category", category).limit(4);
             const all: Card[] = ((data || []) as { cards: Card[] }[]).flatMap((r) => (Array.isArray(r.cards) ? r.cards : [])).filter((c) => c?.question && c?.answer);
             const rel = all.filter((c) => onTopic(`${c.question} ${c.answer}`));
@@ -175,13 +183,13 @@ const ReadingBreak = memo(function ReadingBreak({ kind, articleId, category, tit
         <>
           <div className="flex items-start justify-between gap-3">
             {k === "quiz" && <Label icon={ListChecks}>Quick check on what you just read</Label>}
-            {k === "cards" && <Label icon={Layers}>Flip and recall</Label>}
+            {k === "cards" && <Label icon={Layers}>{ready.deck ? "Flashcards on this topic" : "Flip and recall"}</Label>}
             {k === "read" && <Label icon={BookOpen}>Worth a read next to this</Label>}
             {k === "books" && <Label icon={BookMarked}>To read next</Label>}
             <button type="button" onClick={() => setClosed(true)} aria-label="Close and keep reading" className="-mr-1 -mt-1 rounded-full p-1.5 text-muted-foreground hover:bg-muted hover:text-foreground"><X className="h-4 w-4" /></button>
           </div>
           {k === "quiz" && ready.mcq && <Quiz questions={ready.mcq} />}
-          {k === "cards" && ready.cards && <Flash cards={ready.cards} />}
+          {k === "cards" && ready.cards && <Flash cards={ready.cards} deck={ready.deck} />}
           {k === "read" && ready.notes && (
             <ul className="mt-2 space-y-2">
               {ready.notes.map((n) => (

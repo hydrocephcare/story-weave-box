@@ -14,10 +14,10 @@ export interface DeckCard { question: string; answer: string; setId: string; idx
 
 const topicName = (t: string) => cleanTopicTitle(String(t).replace(/\s*[:—–-]?\s*(Flashcards?|Cards)$/i, ""));
 const BTN: { r: Rating; text: string; cls: string }[] = [
-  { r: "again", text: "Again", cls: "bg-rose-500/15 text-rose-700 dark:text-rose-300" },
-  { r: "hard", text: "Hard", cls: "bg-amber-500/15 text-amber-700 dark:text-amber-300" },
-  { r: "good", text: "Good", cls: "bg-emerald-500/15 text-emerald-700 dark:text-emerald-300" },
-  { r: "easy", text: "Easy", cls: "bg-sky-500/15 text-sky-700 dark:text-sky-300" },
+  { r: "again", text: "Again", cls: "bg-muted text-foreground hover:bg-muted/70" },
+  { r: "hard", text: "Hard", cls: "bg-muted text-foreground hover:bg-muted/70" },
+  { r: "good", text: "Good", cls: "bg-primary text-primary-foreground hover:opacity-90" },
+  { r: "easy", text: "Easy", cls: "border border-primary/40 text-primary hover:bg-primary/10" },
 ];
 
 /**
@@ -25,8 +25,12 @@ const BTN: { r: Rating; text: string; cls: string }[] = [
  * (Again, Hard, Good, Easy). Cards you miss come back in this session; cards you know come back after longer and longer gaps, and the ones due today
  * are the ones you are shown. Swipe left to put a card back at the end, swipe right to undo your last answer.
  */
-export default function FlashcardDeck({ cards, title, category, mode = "deck", mcqSource }: { cards: DeckCard[]; title: string; category: string; mode?: "deck" | "today"; mcqSource?: string | null }) {
+export default function FlashcardDeck({ cards: base, title, category, mode = "deck", mcqSource }: { cards: DeckCard[]; title: string; category: string; mode?: "deck" | "today"; mcqSource?: string | null }) {
   const { user } = useAuth();
+  const [extra, setExtra] = useState<DeckCard[]>([]);
+  const [adding, setAdding] = useState(false);
+  const cards = useMemo(() => [...base, ...extra], [base, extra]);
+  const cardsRef = useRef(cards); cardsRef.current = cards;
   const ctx = useKeywordLinks();
   const [states, setStates] = useState<Record<string, CardState> | null>(null);
   const [queue, setQueue] = useState<number[] | null>(null);
@@ -38,6 +42,7 @@ export default function FlashcardDeck({ cards, title, category, mode = "deck", m
   const [stats, setStats] = useState({ done: 0, again: 0 });
   const [all, setAll] = useState(false);
   const [mcq, setMcq] = useState<string | null>(null);
+  const [noMore, setNoMore] = useState(false);
   const drag = useRef<{ x: number; y: number; t: number; active: boolean; horiz: boolean | null }>({ x: 0, y: 0, t: 0, active: false, horiz: null });
 
   // load this reader's card states, then build the queue: cards due now, then new ones (or everything when asked)
@@ -46,15 +51,16 @@ export default function FlashcardDeck({ cards, title, category, mode = "deck", m
     void loadStates(user?.id ?? null).then((m) => {
       if (!on) return;
       setStates(m);
-      const key = (ci: number) => cardKey(cards[ci].setId, cards[ci].idx);
-      const idxs = cards.map((_, i) => i);
+      const cs = base;
+      const key = (ci: number) => cardKey(cs[ci].setId, cs[ci].idx);
+      const idxs = cs.map((_, i) => i);
       const due = idxs.filter((i) => isDue(m[key(i)])).sort((a, b) => m[key(a)].due - m[key(b)].due);
       const fresh = idxs.filter((i) => !m[key(i)]);
       const q = mode === "today" || !all ? [...due, ...fresh] : idxs;
       setQueue(q); setTotal(q.length); setHistory([]); setStats({ done: 0, again: 0 }); setFlipped(false);
     });
     return () => { on = false; };
-  }, [user?.id, cards, all, mode]);
+  }, [user?.id, base, all, mode]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const finished = queue !== null && queue.length === 0;
   const ci = queue && queue.length ? queue[0] : -1;
@@ -88,6 +94,26 @@ export default function FlashcardDeck({ cards, title, category, mode = "deck", m
     if (last.prev) void saveState(user?.id ?? null, c.setId, c.idx, last.prev);
     setQueue(last.was); setHistory((h) => h.slice(0, -1)); setStats((s) => ({ done: Math.max(0, s.done - 1), again: s.again }));
   }, [history, states, cards, user?.id]);
+
+  /** After a session: up to 20 more cards from other decks of the same unit that this reader has not seen yet. */
+  const addMore = useCallback(async () => {
+    if (!states || adding) return;
+    setAdding(true);
+    try {
+      const have = new Set(cardsRef.current.map((c) => c.setId));
+      const { data } = await (supabase as any).from("flashcard_sets").select("id,cards").eq("category", category).eq("published", true).is("deleted_at", null).limit(40);
+      const sets = ((data || []) as { id: string; cards: { question: string; answer: string }[] }[]).filter((r) => !have.has(r.id) && Array.isArray(r.cards)).sort(() => Math.random() - 0.5);
+      const more: DeckCard[] = [];
+      for (const r of sets) { r.cards.forEach((c, idx) => { if (more.length < 20 && c?.question && c?.answer && !states[cardKey(r.id, idx)]) more.push({ question: c.question, answer: c.answer, setId: r.id, idx }); }); if (more.length >= 20) break; }
+      if (more.length) {
+        const start = cardsRef.current.length;
+        cardsRef.current = [...cardsRef.current, ...more];
+        setExtra((e) => [...e, ...more]);
+        setQueue(more.map((_, i) => start + i)); setTotal(more.length); setStats({ done: 0, again: 0 }); setHistory([]); setFlipped(false);
+      } else setNoMore(true);
+    } catch { setNoMore(true); }
+    setAdding(false);
+  }, [states, adding, category]);
 
   const skip = useCallback(() => { if (!queue || queue.length < 2) return; setLeaving(true); window.setTimeout(() => { setQueue((q) => (q ? [...q.slice(1), q[0]] : q)); setLeaving(false); setDx(0); }, 160); }, [queue]);
 
@@ -168,6 +194,8 @@ export default function FlashcardDeck({ cards, title, category, mode = "deck", m
             {sure !== null ? `${sure}% without needing "Again". ` : ""}{nextDue ? `Your next cards are due ${when(nextDue)}. Coming back then is what makes them stick.` : "Come back tomorrow for the next ones."}
           </p>
           <div className="mt-6 flex w-full max-w-xs flex-col gap-2">
+            {mode === "deck" && stats.done > 0 && !noMore && <button type="button" onClick={() => void addMore()} disabled={adding} className="rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground disabled:opacity-60">{adding ? "Finding cards…" : "Add 20 more cards"}</button>}
+            {mode === "deck" && noMore && <p className="text-xs text-muted-foreground">No unseen cards left in this unit yet.</p>}
             {mode === "deck" && <button type="button" onClick={() => setAll(true)} className="rounded-full border border-border px-5 py-3 text-sm font-bold hover:bg-muted">Study every card anyway</button>}
             {mode === "deck" && mcq && <Link to={mcq} className="rounded-full bg-primary px-5 py-3 text-sm font-bold text-primary-foreground">Test yourself with the MCQs</Link>}
             <Link to="/flashcards" className="px-5 py-3 text-sm font-bold text-primary hover:underline">More decks</Link>
@@ -195,7 +223,7 @@ export default function FlashcardDeck({ cards, title, category, mode = "deck", m
               </div>
               <div className={`${face} border-primary/30`} style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}>
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Answer</p>
-                <div className="mt-2 flex-1 overflow-y-auto pr-1 text-[19px] leading-relaxed text-foreground sm:text-xl [&_img]:mx-auto [&_img]:my-2 [&_img]:max-h-[46dvh] [&_img]:rounded-xl [&_li]:text-[19px] [&_li]:leading-snug [&_p]:text-[19px]">{renderFlashcardMarkdown(card?.answer || "", ctx)}</div>
+                <div className="mt-2 flex flex-1 flex-col justify-center gap-2 overflow-y-auto pr-1 text-left text-[18px] leading-relaxed text-foreground sm:text-[19px] [&_strong]:font-serif [&_strong]:text-[22px] [&_strong]:font-bold [&_strong]:text-primary [&_img]:mx-auto [&_img]:my-2 [&_img]:max-h-[40dvh] [&_img]:rounded-xl [&_li]:my-1 [&_li]:text-[17px] [&_li]:leading-snug [&_p]:text-[17px] [&_p]:leading-snug">{renderFlashcardMarkdown(card?.answer || "", ctx)}</div>
               </div>
             </div>
           </div>
@@ -205,11 +233,11 @@ export default function FlashcardDeck({ cards, title, category, mode = "deck", m
         {!flipped ? (
           <button type="button" onClick={() => setFlipped(true)} className="w-full rounded-full bg-primary py-4 text-base font-bold text-primary-foreground">Show answer</button>
         ) : (
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-4 gap-2" role="group" aria-label="How well did you know it?">
             {BTN.map((b) => (
-              <button key={b.r} type="button" onClick={() => rate(b.r)} className={`flex flex-col items-center rounded-2xl px-1 py-2.5 ${b.cls}`}>
+              <button key={b.r} type="button" onClick={() => rate(b.r)} className={`flex flex-col items-center rounded-xl px-1 py-3 transition-colors ${b.cls}`}>
                 <span className="text-[15px] font-bold">{b.text}</span>
-                <span className="mt-0.5 text-[11px] font-semibold opacity-75">{label(st, b.r)}</span>
+                <span className="mt-0.5 text-[11px] font-medium opacity-70">{label(st, b.r)}</span>
               </button>
             ))}
           </div>
