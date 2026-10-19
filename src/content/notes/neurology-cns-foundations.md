@@ -14,6 +14,10 @@ The **central nervous system (CNS)** consists of the brain and spinal cord. It r
 
 ## 2. Main structures of the brain
 
+![Lobes of the brain, brainstem and cerebellum](https://commons.wikimedia.org/wiki/Special:FilePath/Brainlobes.svg)
+
+*Diagram: Cerebral lobes, brainstem and cerebellum. Source: Wikimedia Commons, Brainlobes.svg (public domain).* 
+
 ### Cerebrum
 
 The cerebrum has two hemispheres connected by the corpus callosum. The cerebral cortex supports voluntary movement, sensation, language, memory, planning and behaviour.
@@ -54,6 +58,11 @@ Brainstem lesions may cause cranial nerve abnormalities with limb weakness, alte
 - **Basal ganglia:** regulate movement selection and control. Parkinson disease is associated with loss of dopaminergic neurons in the substantia nigra and altered basal ganglia circuits; Huntington disease commonly causes chorea and progressive cognitive and psychiatric changes.
 
 ## 3. Meninges and cerebrospinal fluid (CSF)
+
+![The three meningeal layers](https://commons.wikimedia.org/wiki/Special:FilePath/Meninges-en.svg)
+
+*Diagram: Dura mater, arachnoid mater and pia mater. Source: Wikimedia Commons, Meninges-en.svg (CC BY-SA 3.0).* 
+
 
 The brain and spinal cord are covered by three meninges:
 
