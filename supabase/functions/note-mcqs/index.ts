@@ -54,43 +54,92 @@ serve(async (req) => {
       if (!ok) return json({ error: "Administrators only." }, 403);
     }
     const body = await req.json().catch(() => ({}));
-    const { data: ids } = await supabase.rpc("note_mcq_candidates", { n: 1 });
-    const id = body?.article_id || (Array.isArray(ids) ? (ids[0]?.id ?? ids[0]) : null);
-    if (!id) return json({ success: true, done: true });
-    const { data: a, error } = await supabase.from("articles").select("id, title, category, content").eq("id", id).single();
-    if (error || !a) return json({ error: error?.message || "not found" }, 500);
+    const env = Deno.env.toObject();
 
-    const text = String(a.content).replace(/\r\n/g, "\n").replace(/!\[[^\]]*\]\([^)]*\)/g, "").slice(0, 9000);
-    const count = text.length > 6000 ? 12 : text.length > 3500 ? 10 : 8;
-    let questions: ReturnType<typeof parse> = [];
-    let lastErr = "";
-    for (let attempt = 0; attempt < 2 && questions.length < Math.min(6, count); attempt++) {
-      try {
-        const raw = await chatText(Deno.env.toObject(), [
-          { role: "system", content: SYSTEM },
-          { role: "user", content: `Write exactly ${count} questions from this note.\nTITLE: ${a.title}\nSUBJECT: ${a.category}\n\n${text}` },
-        ], { temperature: 0.4, maxTokens: 4000, timeoutMs: 60000 });
-        const got = parse(raw);
-        if (got.length > questions.length) questions = got;
-      } catch (e) { lastErr = e instanceof Error ? e.message.slice(0, 120) : String(e); }
+    /** One call to the writer: `count` questions from `text`, never repeating the stems in `avoid`. */
+    const generate = async (a: { title: string; category: string }, text: string, count: number, avoid: string[] = []) => {
+      const avoidBlock = avoid.length ? `\n\nDo NOT repeat or rephrase any of these existing questions:\n${avoid.slice(0, 40).map((q) => `- ${q.slice(0, 120)}`).join("\n")}` : "";
+      let best: ReturnType<typeof parse> = [];
+      let err = "";
+      for (let attempt = 0; attempt < 2 && best.length < Math.min(count, Math.max(6, Math.floor(count * 0.7))); attempt++) {
+        try {
+          const raw = await chatText(env, [
+            { role: "system", content: SYSTEM },
+            { role: "user", content: `Write exactly ${count} questions from this note.\nTITLE: ${a.title}\nSUBJECT: ${a.category}\n\n${text}${avoidBlock}` },
+          ], { temperature: 0.45, maxTokens: 4200, timeoutMs: 70000 });
+          const got = parse(raw);
+          if (got.length > best.length) best = got;
+        } catch (e) { err = e instanceof Error ? e.message.slice(0, 120) : String(e); }
+      }
+      return { questions: best, err };
+    };
+    const clean = (t: string) => String(t).replace(/\r\n/g, "\n").replace(/!\[[^\]]*\]\([^)]*\)/g, "");
+    // a bank is meant to hold about 30 questions: two calls (first half and second half of the note) when the note is long enough
+    const plan = (len: number) => Math.max(12, Math.min(30, Math.round(len / 250)));
+    const notAlreadyAsked = (qs: ReturnType<typeof parse>, have: string[]) => {
+      const seen = new Set(have.map((q) => q.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 60)));
+      return qs.filter((q) => { const k = q.question.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 60); if (seen.has(k)) return false; seen.add(k); return true; });
+    };
+
+    // 1) a note with no bank yet gets a new bank
+    const { data: ids } = body?.mode === "topup" ? { data: null } : await supabase.rpc("note_mcq_candidates", { n: 1 });
+    const id = body?.article_id || (Array.isArray(ids) ? (ids[0]?.id ?? ids[0]) : null);
+    if (id) {
+      const { data: a, error } = await supabase.from("articles").select("id, title, category, content").eq("id", id).single();
+      if (error || !a) return json({ error: error?.message || "not found" }, 500);
+      const full = clean(a.content);
+      const total = plan(Math.min(full.length, 12000));
+      const halves = total > 16 ? [full.slice(0, 6000), full.slice(6000, 12000) || full.slice(0, 6000)] : [full.slice(0, 9000)];
+      let questions: ReturnType<typeof parse> = [];
+      let lastErr = "";
+      for (const part of halves) {
+        const r = await generate(a, part, Math.ceil(total / halves.length), questions.map((q) => q.question));
+        lastErr = r.err || lastErr;
+        questions = [...questions, ...notAlreadyAsked(r.questions, questions.map((q) => q.question))];
+      }
+      if (questions.length < 8) {
+        // remember the miss so the same note is not retried every minute: an unpublished placeholder keeps it out of the queue
+        await supabase.from("mcq_sets").insert({ title: `${a.title} (questions pending)`, category: a.category, questions: [], published: false, source_reference: a.id, source_type: "note_generated", original_notes: JSON.stringify({ failed: lastErr || "too few usable questions", at: new Date().toISOString() }) });
+        return json({ success: true, title: a.title, status: "skipped", why: lastErr || `only ${questions.length} usable` });
+      }
+      const title = `${String(a.title).slice(0, 80)}: MCQs`;
+      const slug = `${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 70)}-${String(a.id).replace(/-/g, "").slice(0, 8)}`;
+      const { error: insErr } = await supabase.from("mcq_sets").insert({
+        title, slug, category: a.category, questions, published: true, source_reference: a.id, source_type: "note_generated",
+        meta_description: `${questions.length} practice MCQs with explanations on ${String(a.title).slice(0, 70)}, written from the Ompath Study notes.`,
+        original_notes: JSON.stringify({ type: "note_mcqs", article_id: a.id, generated_at: new Date().toISOString(), topped: questions.length >= 24 }),
+      });
+      if (insErr) return json({ error: insErr.message }, 500);
+      return json({ success: true, title: a.title, questions: questions.length });
     }
-    if (questions.length < 6) {
-      // remember the miss so the same note is not retried every minute: an unpublished placeholder keeps it out of the queue
-      await supabase.from("mcq_sets").insert({ title: `${a.title} (questions pending)`, category: a.category, questions: [], published: false, source_reference: a.id, source_type: "note_generated", original_notes: JSON.stringify({ failed: lastErr || "too few usable questions", at: new Date().toISOString() }) });
-      return json({ success: true, title: a.title, status: "skipped", why: lastErr || `only ${questions.length} usable` });
-    }
-    const { error: insErr } = await supabase.from("mcq_sets").insert({
-      title: `${String(a.title).slice(0, 80)}: MCQs`,
-      category: a.category,
-      questions,
-      published: true,
-      source_reference: a.id,
-      source_type: "note_generated",
-      meta_description: `${questions.length} practice MCQs with explanations on ${String(a.title).slice(0, 70)}, written from the Ompath Study notes.`,
-      original_notes: JSON.stringify({ type: "note_mcqs", article_id: a.id, generated_at: new Date().toISOString() }),
-    });
-    if (insErr) return json({ error: insErr.message }, 500);
-    return json({ success: true, title: a.title, questions: questions.length });
+
+    // 2) no new notes waiting: top up an existing short bank towards 30 questions
+    const { data: tops } = await supabase.rpc("note_mcq_topup_candidates", { n: 1 });
+    const topId = body?.set_id || (Array.isArray(tops) ? (tops[0]?.id ?? tops[0]) : null);
+    if (!topId) return json({ success: true, done: true });
+    const { data: set } = await supabase.from("mcq_sets").select("id, title, category, questions, source_reference, original_notes").eq("id", topId).single();
+    if (!set) return json({ error: "bank not found" }, 500);
+    const mark = async (extra: Record<string, unknown>) => {
+      let meta: Record<string, unknown> = {};
+      try { meta = JSON.parse(String(set.original_notes || "{}")); } catch { /* keep empty */ }
+      await supabase.from("mcq_sets").update({ original_notes: JSON.stringify({ ...meta, topped: true, ...extra }) }).eq("id", set.id);
+    };
+    const { data: src } = await supabase.from("articles").select("title, category, content").eq("id", set.source_reference).maybeSingle();
+    const have: any[] = Array.isArray(set.questions) ? set.questions : [];
+    if (!src) { await mark({ topup_note: "source note missing" }); return json({ success: true, status: "no source" }); }
+    const full = clean(src.content);
+    const need = Math.max(0, Math.min(30, plan(Math.min(full.length, 12000))) - have.length);
+    if (need < 4) { await mark({ topup_note: "note too short for more" }); return json({ success: true, title: set.title, status: "already enough" }); }
+    // use the part of the note the first round probably used least: the second half when the bank is short, otherwise the whole note
+    const part = full.length > 6000 ? full.slice(Math.floor(full.length * 0.35), Math.floor(full.length * 0.35) + 8000) : full;
+    const r = await generate(src, part, Math.min(need, 18), have.map((q) => q.question));
+    const extra = notAlreadyAsked(r.questions, have.map((q) => q.question));
+    if (extra.length < 3) { await mark({ topup_note: r.err || "no new usable questions" }); return json({ success: true, title: set.title, status: "topup skipped" }); }
+    const merged = [...have, ...extra].slice(0, 36);
+    await supabase.from("mcq_sets").update({ questions: merged, meta_description: `${merged.length} practice MCQs with explanations on ${String(src.title).slice(0, 70)}, written from the Ompath Study notes.`, updated_at: new Date().toISOString() }).eq("id", set.id);
+    await mark({ topup_note: `added ${extra.length}` });
+    await supabase.from("mcq_review_log").delete().eq("set_id", set.id);   // the question doctor looks at the enlarged bank again
+    return json({ success: true, title: set.title, status: "topped up", questions: merged.length });
   } catch (e) {
     return json({ error: e instanceof Error ? e.message : "Unknown error" }, 500);
   }
