@@ -2493,6 +2493,16 @@
     "file": "src/content/notes/endocrinology-obesity.md"
   },
   {
+    "slug": "cns-foundations",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Central Nervous System (CNS): Foundations",
+    "description": "Year 4 IMED foundations: brain structures, meninges and CSF, neurons, motor and sensory pathways, UMN versus LMN lesions, cranial nerves, neurological examination, GCS, investigations and emergency principles, with CAT practice questions.",
+    "updated": "2026-10-19",
+    "file": "src/content/notes/neurology-cns-foundations.md"
+  },
+  {
     "slug": "neuro-approach",
     "year": 4,
     "unit": "Internal Medicine",
