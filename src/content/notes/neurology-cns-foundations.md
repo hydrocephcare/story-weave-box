@@ -14,7 +14,7 @@ The **central nervous system (CNS)** consists of the brain and spinal cord. It r
 
 ## 2. Main structures of the brain
 
-![Lobes of the brain, brainstem and cerebellum](https://commons.wikimedia.org/wiki/Special:FilePath/Brainlobes.svg)
+![Lobes of the brain, brainstem and cerebellum](https://upload.wikimedia.org/wikipedia/commons/9/9f/Brainlobes.svg)
 
 *Diagram: Cerebral lobes, brainstem and cerebellum. Source: Wikimedia Commons, Brainlobes.svg (public domain).* 
 
@@ -59,7 +59,7 @@ Brainstem lesions may cause cranial nerve abnormalities with limb weakness, alte
 
 ## 3. Meninges and cerebrospinal fluid (CSF)
 
-![The three meningeal layers](https://commons.wikimedia.org/wiki/Special:FilePath/Meninges-en.svg)
+![The three meningeal layers](https://upload.wikimedia.org/wikipedia/commons/8/8e/Meninges-en.svg)
 
 *Diagram: Dura mater, arachnoid mater and pia mater. Source: Wikimedia Commons, Meninges-en.svg (CC BY-SA 3.0).* 
 
@@ -80,7 +80,7 @@ Clinical correlations:
 
 ### CSF production and circulation
 
-![Cerebrospinal fluid circulation](https://commons.wikimedia.org/wiki/Special:FilePath/CSF_circulation.png)
+![Cerebrospinal fluid circulation](https://upload.wikimedia.org/wikipedia/commons/a/ae/CSF_circulation.png)
 
 *Diagram: CSF circulation and outflow. Source: Wikimedia Commons, CSF circulation.png (CC BY 4.0).* 
 
