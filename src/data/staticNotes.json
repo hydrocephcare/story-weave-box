@@ -2781,5 +2781,15 @@
     "description": "Which group presents which topic on Thursday 22 October 2026 (psychopathology and psychotic disorders), with the notes to start from.",
     "updated": "2026-10-15",
     "file": "src/content/notes/psychiatry-group-assignments-2026.md"
+  },
+  {
+    "slug": "stroke-seizures-epilepsy",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Neurology",
+    "title": "Stroke, Seizures, Epilepsy and Status Epilepticus",
+    "description": "Combined Year 4 clinical notes: ischaemic and haemorrhagic stroke, lesion localisation, investigations and acute management; seizure classification, causes, epilepsy assessment, investigations, status epilepticus and emergency treatment, with medical diagrams and CAT questions.",
+    "updated": "2026-10-19",
+    "file": "src/content/notes/neurology-stroke-seizures-epilepsy.md"
   }
 ]
