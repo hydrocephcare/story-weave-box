@@ -31,3 +31,9 @@ export const setScale = (n: number) => write("deck-scale", n);
 export function speak(text: string) {
   try { const u = new SpeechSynthesisUtterance(text.replace(/[*_#>`!\[\]()-]/g, " ").replace(/\s+/g, " ")); u.lang = "en-GB"; u.rate = 0.95; window.speechSynthesis.cancel(); window.speechSynthesis.speak(u); } catch { /* no speech */ }
 }
+
+/** Cards done on each of the last `n` days, oldest first. */
+export function lastDays(n = 7): { label: string; count: number }[] {
+  const m = read<Record<string, number>>("deck-daily", {});
+  return Array.from({ length: n }, (_, i) => { const t = Date.now() - (n - 1 - i) * DAY; return { label: new Date(t).toLocaleDateString("en-GB", { weekday: "short" }).slice(0, 2), count: m[dayKey(t)] || 0 }; });
+}

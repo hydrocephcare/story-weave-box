@@ -6,7 +6,7 @@ import { buildFlashcardPath, getCategoryDisplayName } from "@/lib/store";
 import { updateMetaTags } from "@/lib/seo";
 import { useScopedYear, yearOfCategory } from "@/hooks/useMyYear";
 import { useDueCount, useMyDecks } from "@/lib/myDecks";
-import { DAILY_GOAL, doneToday, starredKeys, streak } from "@/lib/deckStats";
+import { DAILY_GOAL, doneToday, lastDays, starredKeys, streak } from "@/lib/deckStats";
 import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
 
 interface Row { id: string; title: string; slug: string | null; category: string; created_at: string; card_count: number; source_reference: string | null }
@@ -75,6 +75,12 @@ export default function Flashcards() {
       </Link>
 
       <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm text-muted-foreground"><span><b className="text-foreground">{doneToday()}</b> / {DAILY_GOAL} cards today</span>{streak() > 0 && <span><b className="text-orange-500">{streak()}</b> day streak</span>}{starredKeys().size > 0 && <Link to="/flashcards/today?starred=1" className="font-bold text-primary hover:underline">Revise {starredKeys().size} starred</Link>}</p>
+
+      {lastDays().some((d) => d.count > 0) && (
+        <div className="mt-4 flex h-16 items-end gap-2" aria-label="Cards studied in the last 7 days">
+          {lastDays().map((d, i, a) => { const max = Math.max(DAILY_GOAL, ...a.map((x) => x.count)); return <div key={i} className="flex flex-1 flex-col items-center gap-1"><div className="w-full rounded-t bg-primary/70" style={{ height: `${Math.max(d.count ? 6 : 2, (d.count / max) * 40)}px`, opacity: d.count ? 1 : 0.3 }} title={`${d.count} cards`} /><span className="text-[10px] font-semibold text-muted-foreground">{d.label}</span></div>; })}
+        </div>
+      )}
 
       {mine && mine.length > 0 && (
         <section className="mt-7" aria-label="From what you read">
