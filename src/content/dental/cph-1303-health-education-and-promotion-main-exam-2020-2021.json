@@ -1,0 +1,118 @@
+{
+ "slug": "cph-1303-health-education-and-promotion-main-exam-2020-2021",
+ "title": "Health Education and Promotion (CPH 1303 & DPH 1318): Main Exam, Thur 8th April 2021 8.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health",
+ "programme": "Diploma in Community Health",
+ "examTitle": "University Examination 2020 / 2021",
+ "unitCode": "CPH 1303 & DPH 1318",
+ "unitTitle": "Health Education and Promotion",
+ "date": "Thur 8th April 2021 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "1. This paper has two parts: Section 'A' AND Section 'B' 2. Section 'A' has ONE question which is COMPULSORY and carries 30 Marks. 3. Section 'B' has three questions of which you are required to attempt TWO. 4. The Two questions in Section 'B' Carries a Total of 40 Marks.",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Public health education"
+      },
+      {
+       "l": "b",
+       "text": "Health education"
+      },
+      {
+       "l": "c",
+       "text": "Promotion"
+      }
+     ],
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain two aims of health education.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Highlight four key principles of health promotion.",
+     "marks": 8
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe extended parallel process model",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "State three terms use for communication and health education activities."
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "p",
+     "text": "(6 Marks)"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "State six areas where health education and promotion take place.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Outline six fundamental conditions and resources needed for good health.",
+     "marks": 6
+    },
+    {
+     "t": "h",
+     "text": "SECTION B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Discuss components of communication.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Discuss the principles of health education.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

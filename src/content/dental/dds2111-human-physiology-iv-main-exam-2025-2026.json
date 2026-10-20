@@ -1,0 +1,142 @@
+{
+ "slug": "dds2111-human-physiology-iv-main-exam-2025-2026",
+ "title": "Human Physiology IV (DDS2111/DMP2104): Main Exam, Thur 26th March, 2026 11.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Clinical Medicine",
+ "department": "Department of Clinical Sciences",
+ "programme": "Diploma in Community Oral Health / diploma in Dental Technology",
+ "examTitle": "University Examination 2025 / 2026",
+ "unitCode": "DDS2111/DMP2104",
+ "unitTitle": "Human Physiology IV",
+ "date": "Thur 26th March, 2026 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A: SHORT ANSWER ESSAY QUESTIONS",
+     "marks": 30
+    },
+    {
+     "t": "p",
+     "text": "Answer ALL questions. Each question carries 6 Marks."
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Outline the roles of melanin and keratin in the skin.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "State the structural organization of the skin, naming its major layers and one function of each.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Outline six functions of the skin that contribute to maintaining normal body physiology.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "State six differences between normal body temperature and fever in terms of physiological regulation.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Identify six types of general sensory receptors and state the stimulus detected by each.",
+     "marks": 6
+    },
+    {
+     "t": "h",
+     "text": "SECTION B: LONG ANSWER ESSAY QUESTIONS",
+     "marks": 40
+    },
+    {
+     "t": "p",
+     "text": "Answer Question ONE and any other ONE question. (Each question carries 20 Marks.)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Discuss the physiology of body temperature regulation and the clinical consequences of abnormal temperature states. In your answer:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain how heat is produced in the human body.",
+       "marks": 6
+      }
+     ]
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Discuss the physiology of body temperature regulation and the clinical consequences of abnormal temperature states. In your answer:",
+     "parts": [
+      {
+       "l": "b",
+       "text": "Describe the mechanisms by which heat is lost.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Discuss the clinical consequences of fever, hypothermia, and hyperthermia",
+       "marks": 4
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain the physiology of the visual and auditory systems. In your answer:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the visual pathway from the retina to the visual cortex.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the role of the cochlea in hearing.",
+       "marks": 10
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe the physiology of taste, smell, and oral sensation. In your answer:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the physiology of taste and smell.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the role of oral sensory receptors (pain, temperature, pressure, tooth sensation) in oral health practice.",
+       "marks": 10
+      }
+     ]
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

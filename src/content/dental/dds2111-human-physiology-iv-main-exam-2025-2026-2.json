@@ -1,0 +1,94 @@
+{
+ "slug": "dds2111-human-physiology-iv-main-exam-2025-2026-2",
+ "title": "Human Physiology IV (DDS2111/DMP2104): Main Exam, Tue 21st July, 2026 8.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Clinical Medicine",
+ "department": "Department of Clinical Sciences",
+ "programme": "Diploma in Community Oral Health (dcoh May25) / Diploma in Dental Technology",
+ "examTitle": "University Examination 2025 / 2026",
+ "unitCode": "DDS2111/DMP2104",
+ "unitTitle": "Human Physiology IV",
+ "date": "Tue 21st July, 2026 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A: SHORT ANSWER ESSAY QUESTIONS (30 MARKS)",
+     "marks": 30
+    },
+    {
+     "t": "p",
+     "text": "ANSWER ALL QUESTIONS. EACH QUESTION CARRIES 6 MARKS."
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "State six functions of the epidermis and dermis that are important in maintaining body integrity.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Highlight six roles of sweat glands in maintaining normal body temperature and skin health.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Outline six physiological processes involved in heat production within the human body.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Identify six causes of abnormal body temperature.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "State six types of sensations that can be felt in the oral and facial regions.",
+     "marks": 6
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION B: LONG ANSWER ESSAY QUESTIONS (40 MARKS)",
+     "marks": 40
+    },
+    {
+     "t": "p",
+     "text": "Answer Question ONE and any other ONE question (Each question carries 20 Marks.)"
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 3,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION B: LONG ANSWER ESSAY QUESTIONS (40 MARKS)",
+     "marks": 40
+    },
+    {
+     "t": "p",
+     "text": "Answer Question ONE and any other ONE question (Each question carries 20 Marks.)"
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

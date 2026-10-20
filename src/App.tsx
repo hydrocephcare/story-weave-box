@@ -21,6 +21,7 @@ import ReadNotifier from "@/components/ReadNotifier";
 import ImageLightbox from "@/components/ImageLightbox";
 import AccountSync from "@/components/AccountSync";
 import SelectionAsk from "@/components/SelectionAsk";
+import TrackWatcher from "@/components/TrackWatcher";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -106,6 +107,9 @@ const ClinicalPractice = lazy(() => import("./pages/ClinicalPractice"));
 const ClinicalLab = lazy(() => import("./pages/ClinicalLab"));
 const Pharmacology = lazy(() => import("./pages/Pharmacology"));
 const PharmQuiz = lazy(() => import("./pages/PharmQuiz"));
+const DentalHome = lazy(() => import("./pages/dental/DentalHome"));
+const DentalPapers = lazy(() => import("./pages/dental/DentalPapers"));
+const DentalPaperPage = lazy(() => import("./pages/dental/DentalPaperPage"));
 const MustKnows = lazy(() => import("./pages/MustKnows"));
 const DailyDose = lazy(() => import("./pages/DailyDose"));
 const Books = lazy(() => import("./pages/Books"));
@@ -254,6 +258,9 @@ const AnimatedRoutes = () => {
             <Route path="/clinical/counsel" element={<ClinicalLab />} />
             <Route path="/clinical/counsel/:id" element={<ClinicalLab />} />
             <Route path="/clinical/mistakes" element={<ClinicalLab />} />
+            <Route path="/dental" element={<DentalHome />} />
+            <Route path="/dental/papers" element={<DentalPapers />} />
+            <Route path="/dental/papers/:slug" element={<DentalPaperPage />} />
             <Route path="/pharmacology/quiz" element={<PharmQuiz />} />
             <Route path="/pharmacology" element={<Pharmacology />} />
             <Route path="/pharmacology/drug/:id" element={<Pharmacology />} />
@@ -379,6 +386,7 @@ const App = () => (
             <ImageLightbox />
             <AccountSync />
             <SelectionAsk />
+            <TrackWatcher />
             <AiFailureWatcher />
             <AIGate />
             <AIPill />

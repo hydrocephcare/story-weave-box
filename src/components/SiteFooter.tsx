@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Mail, MessageCircle, Phone } from "lucide-react";
 import { useScopedYear } from "@/hooks/useMyYear";
+import { useTrack } from "@/lib/courseTrack";
 
 const STUDY = [
   { to: "/blog", label: "Study notes" },
@@ -13,6 +14,10 @@ const STUDY = [
   { to: "/review", label: "Daily review" },
   { to: "/pharmacology", label: "Pharmacology guide" },
   { to: "/books", label: "Books" },
+];
+const DENTAL_STUDY = [
+  { to: "/dental", label: "Dental home" },
+  { to: "/dental/papers", label: "Past papers" },
 ];
 const COMPANY = [
   { to: "/about-us", label: "About Ompath Study" },
@@ -27,6 +32,7 @@ const COMPANY = [
 /** The foot of every page: who we are, where to go, what is new, how to reach us. */
 export default function SiteFooter() {
   const { year: myYearFooter } = useScopedYear();
+  const dental = useTrack() === "dental";
   const location = useLocation();
   // the list of notes is loaded after the page has painted, so the footer never slows the first view
   const [recent, setRecent] = useState<{ slug: string; year: number; title: string }[]>([]);
@@ -61,12 +67,12 @@ export default function SiteFooter() {
 
         <nav aria-label="Study" className="order-2 lg:order-none">
           <p className={head}>Study</p>
-          <ul className="mt-3">{STUDY.map((l) => <li key={l.to}><Link to={l.to} className={link}>{l.label}</Link></li>)}</ul>
+          <ul className="mt-3">{(dental ? DENTAL_STUDY : STUDY).map((l) => <li key={l.to}><Link to={l.to} className={link}>{l.label}</Link></li>)}</ul>
           {!myYearFooter && <p className={`${head} mt-6`}>By year</p>}
-          <ul className={`mt-3 flex flex-wrap gap-2 ${myYearFooter ? "hidden" : ""}`}>{[1, 2, 3, 4, 5, 6].map((y) => <li key={y}><Link to={`/year/${y}`} className="inline-flex h-9 min-w-9 items-center justify-center rounded-lg border border-border bg-background px-2.5 text-sm font-bold text-foreground/80 hover:border-primary/60 hover:text-primary">Y{y}</Link></li>)}</ul>
+          <ul className={`mt-3 flex flex-wrap gap-2 ${myYearFooter || dental ? "hidden" : ""}`}>{[1, 2, 3, 4, 5, 6].map((y) => <li key={y}><Link to={`/year/${y}`} className="inline-flex h-9 min-w-9 items-center justify-center rounded-lg border border-border bg-background px-2.5 text-sm font-bold text-foreground/80 hover:border-primary/60 hover:text-primary">Y{y}</Link></li>)}</ul>
         </nav>
 
-        <div className="order-4 col-span-2 lg:order-none lg:col-span-1">
+        {!dental && <div className="order-4 col-span-2 lg:order-none lg:col-span-1">
           <p className={head}>Recently added</p>
           <ul className="mt-3 space-y-0.5">
             {recent.filter((n) => !myYearFooter || n.year === myYearFooter).map((n, i) => (
@@ -74,7 +80,7 @@ export default function SiteFooter() {
             ))}
           </ul>
           <Link to="/recent" className="mt-3 inline-flex items-center gap-1 text-sm font-bold text-primary hover:underline">See everything new <ArrowRight className="h-4 w-4" aria-hidden /></Link>
-        </div>
+        </div>}
 
         <nav aria-label="Company" className="order-3 lg:order-none">
           <p className={head}>Ompath Study</p>

@@ -1,0 +1,51 @@
+{
+ "slug": "dds2111-human-physiology-iv-main-exam-2024-2025",
+ "title": "Human Physiology IV (DDS2111/DMP2104): Main Exam, Tue 25th Mar, 2025 8.00am",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2024 / 2025",
+ "unitCode": "DDS2111/DMP2104",
+ "unitTitle": "Human Physiology IV",
+ "date": "Tue 25th Mar, 2025 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ATTEMPT ALL QUESTIONS IN SECTIONS A AND B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "p",
+     "text": "ATTEMPT ALL QUESTIONS IN SECTIONS A AND B"
+    },
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Identify common skin appendages.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "What are heat cramps?",
+     "marks": 2
+    },
+    {
+     "t": "h",
+     "text": "Section B",
+     "marks": 40
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

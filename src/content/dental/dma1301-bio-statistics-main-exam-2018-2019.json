@@ -1,0 +1,92 @@
+{
+ "slug": "dma1301-bio-statistics-main-exam-2018-2019",
+ "title": "Bio Statistics (DMA1301): Main Exam, Fri 29th March, 2019 8.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Physical and Mathematical Sciences",
+ "programme": "Diploma in Animal Health / dental Health / community Health",
+ "examTitle": "University Examination 2018 / 2019",
+ "unitCode": "DMA1301",
+ "unitTitle": "Bio Statistics",
+ "date": "Fri 29th March, 2019 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "a) Explain the following sampling methods i) Quota ii) Simple random iii) Stratified (6 Marks)\nb) With the aid of sketches differentiate between the following terms as used in statistics i) Positive and negative skew ii) Positive and negative correlation (6 Marks)\nc) A random sample of 12 components has a mean weight of 50 gm and standard deviation of 9 gm. Determine the population mean with a 95% confidence. (4 Marks)\nd) 10 % of components produced by a machine are defective. Determine the probability that in a random sample of 8 components at most two will be defective. (4 Marks)\ne) The distribution of lifetimes of component are as shown"
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "p",
+     "text": "Lifetime 700-709 710-719 720-729 730-739 740-749 750-759 760-769"
+    },
+    {
+     "t": "p",
+     "text": "frequency 3 7 15 38 41 35 21"
+    },
+    {
+     "t": "p",
+     "text": "Determine i) Median ii) Mode (6 Marks)"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "a) The data shows the height of 80 malnourished kids in Kiambu county height 10-15 15-20 20-25 25-30 30-35 35-40 40-45 Number of kids 5 x 17 20 y 16 4 Given that the median wage is Ksh 27,000 i) Values of x and y ii) Interquartile range (7 Marks)\nb) The following distribution represent marks scored by 210 students in bio statistics test marks Number of students 20-29 21 30-39 31 40-49 39 50-59 51 60-69 29 70-79 24 80-89 15 Determine i) Mean mark ii) Standard deviation iii) Interquartile range iv) Mode (13 Marks)"
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 3,
+   "items": [
+    {
+     "t": "q",
+     "n": "3",
+     "text": "a) The cost incurred in maintaining a drug production plant for a period of 8 years is shown Age of plant | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 Cost Ksh 000 | 3 | 5 | 9 | 12 | 14 | 15 | 20 | 28 i) Calculate The Pearson product moment correlation coefficient ii) Interpret the result (10 Marks)\na) Obtain the least squares equation for the data below: x | 4.0 | 4.4 | 4.8 | 4.2 | 5.0 | 5.4 | 5.2 | 5.6 | 5.8 | 6.2 y | 50 | 64 | 66 | 70 | 76 | 82 | 86 | 90 | 94 | 96 (9 Marks)"
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 4,
+   "items": [
+    {
+     "t": "q",
+     "n": "4",
+     "text": "a) Explain the following terms as used in statistics i) Point estimate ii) Interval estimate (4 Marks)\nb) In MKU 30% of the students use credit cards. If 12 students are selected at random, determine the probability that i) Exactly two student use credit cards ii) At least ten student use credit cards iii) At most two student use credit cards (8 Marks)\nc) The diameters of artificial insemination tubes manufactured in a factory are normally distributed with a mean of 70mm and standard deviation of 8mm. Determine i) Probability that a tube chosen at random will have a diameter between 74mm and 80mm. ii) Proportion of test tubes which have more than 68mm as their diameters."
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 3,
+   "items": [
+    {
+     "t": "p",
+     "text": "Compute i) Mean. ii) Variance. iii) Standard deviation. (4 Marks) (4 Marks) (2 Marks)"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "a) Compute quartile deviation from the following data; ci | 10-20 | 20-30 | 30-40 | 40-50 | 50-60 | 60-70 | 80-90 f | 12 | 19 | 5 | 10 | 9 | 6 | 6 (10 Marks)\nb) at an agricultural show 10 high bred bulls were ranked by a qualified judge and by a trainee judge their ranking were given as shown in the table below; Bulls | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 Qualifed Judge | 2 | 4 | 7 | 8 | 10 | 1 | 5 | 9 | 3 |  (missing entry) Trainee Judge | 1 | 3 | 9 | 10 | 7 | 2 | 4 | 8 | 5 | (missing entry) Calculate the spearman's rank Correlation coefficient. (10 Marks)",
+     "marks": 10
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": false,
+ "note": "Duplicate QUESTION FOUR headings and inconsistent page numbering (pages 3‑5 all show footer \"Paper One\" with page 3). Possible missing or mis‑labelled content after page 5."
+}

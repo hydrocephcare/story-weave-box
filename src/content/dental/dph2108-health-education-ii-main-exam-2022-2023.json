@@ -1,0 +1,71 @@
+{
+ "slug": "dph2108-health-education-ii-main-exam-2022-2023",
+ "title": "Health Education II (DPH2108): Main Exam, Mon 27th March, 2023 2.00pm",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health, Epidemiology & Biostatistics",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2022 / 2023",
+ "unitCode": "DPH2108",
+ "unitTitle": "Health Education II",
+ "date": "Mon 27th March, 2023 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "1. This paper has two parts: Section 'A' AND Section 'B'\n2. Section 'A' is COMPULSORY and carries 40 Marks.\n3. Section 'B' has three questions of which you are required to attempt TWO.",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Community",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Illness",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Health",
+       "marks": 2
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Highlight the principles of health education.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "State the factors that suggest the communities are active in participation",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Explain components of communication.",
+     "marks": 6
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": false,
+ "note": "Only page 1 provided; Section B pages are missing."
+}

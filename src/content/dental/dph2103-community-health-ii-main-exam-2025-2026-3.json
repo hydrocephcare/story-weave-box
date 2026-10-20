@@ -1,0 +1,69 @@
+{
+ "slug": "dph2103-community-health-ii-main-exam-2025-2026-3",
+ "title": "Community Health II (DPH2103): Main Exam, Tue 31st March, 2026",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health, Epidemiology and Biostatistics",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2025 / 2026",
+ "unitCode": "DPH2103",
+ "unitTitle": "Community Health II",
+ "date": "Tue 31st March, 2026",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 40
+    },
+    {
+     "t": "p",
+     "text": "ANSWER ALL QUESTIONS. EACH QUESTION CARRIES 5 MARKS"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define professionalism in community health practice and state FOUR characteristics of a professional health worker."
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Define Primary Health Care (PHC) and state FOUR key features of PHC."
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "State FIVE principles of Primary Health Care."
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "List FIVE strategies used in the implementation of Primary Health Care programmes."
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "State FIVE roles of the community in the implementation of Primary Health Care programmes."
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Identify FIVE major determinants of health that influence the health status of a community."
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "State FIVE roles of a Health Records and Information Officer in Primary Health Care programmes."
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

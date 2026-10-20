@@ -1,0 +1,129 @@
+{
+ "slug": "dwh201-health-education-and-promotion-main-exam-2018-2019",
+ "title": "Health Education and Promotion (DWH201): Main Exam, The 2nd April, 2019 8.06am",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health",
+ "programme": "Diploma in Community Health",
+ "examTitle": "University Examination 2018 / 2019",
+ "unitCode": "DWH201",
+ "unitTitle": "Health Education and Promotion",
+ "date": "The 2nd April, 2019 8.06am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY TWO QUESTIONS FROM SECTION B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A: 40 MARKS",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms used in health promotion.",
+     "marks": 5,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Health promotion",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Public health education"
+      },
+      {
+       "l": "c",
+       "text": "Health education"
+      },
+      {
+       "l": "d",
+       "text": "Communication"
+      },
+      {
+       "l": "e",
+       "text": "Health (WHO, 1948)"
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Describe FOUR fundamental conditions and resources needed for good health.",
+     "marks": 8
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Explain the THREE basic strategies for health promotion according to Ottawa charter.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "As a health educator name any FIVE of your roles.",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Describe TWO approaches for health education.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Name FIVE significance of studying health education and promotion.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Highlight THREE targets of health education.",
+     "marks": 3
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Enumerate FOUR barriers to effective communication.",
+     "marks": 4
+    },
+    {
+     "t": "h",
+     "text": "SECTION B:"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Discuss the FIVE key principles of Ottawa charter of 1986 of health promotion.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Discuss the components of communication in health education.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "11",
+     "text": "Discuss any FIVE aims of health education and promotion.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

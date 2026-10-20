@@ -1,0 +1,82 @@
+{
+ "slug": "dds1305-human-anatomy-iv-main-exam-2018-2019",
+ "title": "Human Anatomy IV (DDS1305): Main Exam, Tue 27th November, 2018 11.00am",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Science",
+ "programme": "Ddt / Dcoh",
+ "examTitle": "University Examination 2018 / 2019",
+ "unitCode": "DDS1305",
+ "unitTitle": "Human Anatomy IV",
+ "date": "Tue 27th November, 2018 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "p",
+     "text": "Answer ALL questions in section A and answer ANY Other Two questions from Section B"
+    },
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Write notes on principles of child development.",
+     "marks": 10
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain the changes after birth of a child*",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Outline functions of amniotic fluid.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "State abnormalities of umbilical cord",
+     "marks": 3
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Name two types of cell division.",
+     "marks": 2
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Give stages of tooth development.",
+     "marks": 5
+    },
+    {
+     "t": "h",
+     "text": "Section B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Explain the functions of placenta.",
+     "marks": 20
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": false,
+ "note": "Section B appears incomplete; only question 7 (20 marks) present out of expected 40 marks."
+}

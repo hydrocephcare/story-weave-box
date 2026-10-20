@@ -1,3 +1,4 @@
+import { useTrack, type Track } from "@/lib/courseTrack";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BookOpen, GraduationCap, Home, LayoutDashboard, Network, Stethoscope, Menu, Trophy, ChevronRight, UserRound, Target, Database, Smartphone, ListChecks, Pill, Flame, ChevronDown, ChevronLeft, BookMarked, PenLine } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -37,7 +38,16 @@ type Leaf = { to: string; label: string; icon: typeof Home; children?: { to: str
 type Group = { label: string; items: Leaf[] };
 
 /** The whole menu as a tree: hover a heading for its list, hover an item with an arrow for its own list. On phones the same tree folds open in the side menu. */
-function buildMenu(isAdmin: boolean, years: readonly number[] = YEAR_OPTIONS): Group[] {
+function buildMenu(isAdmin: boolean, years: readonly number[] = YEAR_OPTIONS, track: Track = "medicine"): Group[] {
+  // the dental section is a separate site: its own short menu, none of the medical menus
+  if (track === "dental") {
+    const more: Leaf[] = [{ to: "/account", label: "Account", icon: UserRound }];
+    if (isAdmin) more.push({ to: "/admin", label: "Admin", icon: Database });
+    return [
+      { label: "Dental", items: [{ to: "/dental", label: "Dental home", icon: Home }, { to: "/dental/papers", label: "Past papers", icon: ListChecks }] },
+      { label: "More", items: more },
+    ];
+  }
   const groups: Group[] = [
     { label: "Study", items: [
       { to: "/blog", label: "Notes", icon: BookOpen, children: [{ to: "/blog", label: "All notes" }, ...years.map((y) => ({ to: `/year/${y}`, label: `Year ${y}` }))] },
@@ -127,7 +137,8 @@ export default function Navbar() {
   const [allYears, setAllYears] = useAllYears();
   // a student with a chosen year sees only that year in the menu, unless "All years" is switched on
   const scopedYear = myYear && !allYears ? myYear : null;
-  const menu = useMemo(() => buildMenu(isAdmin, scopedYear ? [scopedYear] : YEAR_OPTIONS), [isAdmin, scopedYear]);
+  const track = useTrack();
+  const menu = useMemo(() => buildMenu(isAdmin, scopedYear ? [scopedYear] : YEAR_OPTIONS, track), [isAdmin, scopedYear, track]);
 
   const isExamPage = /^\/exams\/[^/]+\/start/.test(location.pathname);
 

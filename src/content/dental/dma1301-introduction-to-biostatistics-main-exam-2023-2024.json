@@ -1,0 +1,110 @@
+{
+ "slug": "dma1301-introduction-to-biostatistics-main-exam-2023-2024",
+ "title": "Introduction to Biostatistics (DMA1301): Main Exam, Wed 27th March, 2024 8.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Science",
+ "department": "Department of Natural Sciences",
+ "programme": "Diploma in Dental Technology",
+ "examTitle": "University Examination 2023 / 2024",
+ "unitCode": "DMA1301",
+ "unitTitle": "Introduction to Biostatistics",
+ "date": "Wed 27th March, 2024 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTION IN SECTION A AND ANY OTHER TWO QUESTIONS IN SECTION B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Distinguish population and sample as used in statistics.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Distinguish between ordinal and nominal scale of measurement as used in statistics giving example of each.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Explain three limitations of using secondary data.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Explain the following terms as applied in statistics.",
+     "marks": 6,
+     "parts": [
+      {
+       "l": "i",
+       "text": "Random sampling"
+      },
+      {
+       "l": "ii",
+       "text": "Stratified sampling",
+       "marks": 6
+      },
+      {
+       "l": "iii",
+       "text": "Cluster sampling",
+       "marks": 6
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "The Marks obtained by nutrition students in a mathematics test are shown in the frequency distribution table below; Marks 20-29 30-39 40-49 50-59 60-69 70-79 80-89 90-99 students 4 14 18 28 18 8 6 4"
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Determine;",
+     "marks": 10,
+     "parts": [
+      {
+       "l": "i",
+       "text": "Mean."
+      },
+      {
+       "l": "ii",
+       "text": "Median."
+      },
+      {
+       "l": "iii",
+       "text": "Third and seventh percentile.",
+       "marks": 10
+      }
+     ]
+    },
+    {
+     "t": "h",
+     "text": "QUESTION TWO"
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 3,
+   "items": [],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

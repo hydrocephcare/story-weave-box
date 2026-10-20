@@ -1,0 +1,127 @@
+{
+ "slug": "dph-2103-community-health-ii-main-exam-2020-2021",
+ "title": "Community Health II (DPH 2103): Main Exam, Thur 1st April 2021 2.00pm",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department Community Health",
+ "programme": "Diploma in Clinical Medicine, Diploma in Health Record and Information Technology, Diploma in Community Oral Health",
+ "examTitle": "University Examination 2020 / 2021",
+ "unitCode": "DPH 2103",
+ "unitTitle": "Community Health II",
+ "date": "Thur 1st April 2021 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Explain the meaning of the following terms used in epidemiology.",
+     "marks": 5,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Quarantine"
+      },
+      {
+       "l": "b",
+       "text": "Isolation"
+      },
+      {
+       "l": "c",
+       "text": "Surveillance"
+      },
+      {
+       "l": "d",
+       "text": "Vaccination"
+      },
+      {
+       "l": "e",
+       "text": "Epidemic"
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Describe the Differences between clinical focus (clinician) and epidemiological focus (epidemiologist).",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe the uses of epidemiology.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "If you want to know the number of people in your ward who are properly using latrines, which method of data collection would be appropriate? And why?",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "5",
+     "text": "As an [illegible]miologist explain the relationship between environment, host and the agent.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Outline the Common Characteristics of Communicable Diseases.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Illustrate the 5W's of descriptive epidemiology.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Explain how you would control rodents a village community.",
+     "marks": 5
+    },
+    {
+     "t": "h",
+     "text": "SECTION B"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "You have been posted to Naivasha Sub-County as a Sub-County Epidemiologist. A group of Community Health students have come to your office and their supervisor requests you to share your knowledge and experience in disease outbreak investigations. Highlight the main procedures of conducting a disease outbreak investigation.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Explain the difference between Community diagnosis and Clinical diagnosis.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "11",
+     "text": "Using examples explain at least FIVE types of Non-Probability Sampling.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

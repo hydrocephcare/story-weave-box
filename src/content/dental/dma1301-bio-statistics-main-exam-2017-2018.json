@@ -1,0 +1,101 @@
+{
+ "slug": "dma1301-bio-statistics-main-exam-2017-2018",
+ "title": "Bio Statistics (DMA1301): Main Exam, Monday 19th Nov, 2018 11.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Physics and Applied Science",
+ "department": "Department of Physical and Mathematical Sciences",
+ "programme": "Diploma in Annual Health / diploma",
+ "examTitle": "University Examination 2017 / 2018",
+ "unitCode": "DMA1301",
+ "unitTitle": "Bio Statistics",
+ "date": "Monday 19th Nov, 2018 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "Paper Two",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "QUESTION ONE",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Given the data 27.9, 34.7, 54.4, 18.92, 47.6, 39.68. Determine the i. Mean ii. Median",
+       "marks": 3
+      },
+      {
+       "l": "b",
+       "text": "Determine the geometric mean of the following data 3, 5, 6, 6, 7, 10, 12",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "State two advantages and two disadvantages of scatter diagrams in studying correlation.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Arrange the following data in the form of stem and leaf diagram 2.97, 3.81, 2.54, 2.01, 3.49, 3.09, 1.99, 2.31, 2.22.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "A company manufactures a device which contains three components A, B and C. The device fails if any of these components fail and the company offers to its customers a full money back warranty if the product fails within one year. The company has assessed the probabilities of each of the components lasting at least a year as 0.98, 0.99 and 0.95 for A,B and C respectively. The three components within a single device are considered to be independent. Consider a single device chosen at random. Calculate the probability that all three components will last for at least 5 years; the device will be returned for a refund.",
+       "marks": 5
+      },
+      {
+       "l": "f",
+       "text": "Plot a scatter plot for this data X | 68 | 64 | 75 | 50 | 64 | 80 | 75 | 40 | 55 | 64 y | 62 | 58 | 68 | 45 | 81 | 60 | 68 | 48 | 50 | 5",
+       "marks": 5
+      },
+      {
+       "l": "g",
+       "text": "The A random sample of 12 components has a mean weight of 50 grams and standard deviation of 9 grams, determine the 95% confidence interval for the population mean.",
+       "marks": 5
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "QUESTION TWO",
+     "parts": [
+      {
+       "l": "a",
+       "text": "The table shows the frequency distribution of 100 items Class | 0-20 | 20-40 | 40-60 | 60-80 | 80-100 frequency | 12 | a | b | c | 18 Given that the median and the mode are equal and are 50 determine the missing frequencies",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Given the data below Class | 0-9 | 10-19 | 20-29 | 30-39 | 40-49 | 50-59 Frequency | 1 | 3 | 8 | 12 | 9 | 2 Determine i. Mean ii. Standard deviation iii. Modal class",
+       "marks": 10
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "QUESTION THREE",
+     "parts": [
+      {
+       "l": "a",
+       "text": "From the following bivariate data, you are required to: Find the regression line and predict Y if x = 20 x | 4 | 12 | 8 | 6 | 4 | 4 | 16 | 8 y | 14 | 4 | 2 | 2 | 4 | 6 | 4 | 12",
+       "marks": 11
+      }
+     ]
+    }
+   ],
+   "footer": "Paper Two"
+  },
+  {
+   "n": 2,
+   "items": [],
+   "footer": "Paper Two"
+  }
+ ],
+ "complete": true
+}

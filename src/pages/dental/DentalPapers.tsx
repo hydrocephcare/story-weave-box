@@ -1,0 +1,67 @@
+import { useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { ArrowRight, FileText, Search, X } from "lucide-react";
+import { PAPER_INDEX, paperPath, type PaperMeta } from "@/lib/dentalPapers";
+
+/** /dental/papers: every dental past paper, grouped by unit, newest first, with a search. */
+export default function DentalPapers() {
+  const [params] = useSearchParams();
+  const [q, setQ] = useState(() => params.get("q") ?? "");
+  const [group, setGroup] = useState("");
+  const groupNames = useMemo(() => [...new Set(PAPER_INDEX.map((p) => p.group))], []);
+  const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
+  const list = useMemo(() => PAPER_INDEX.filter((p) => (!group || p.group === group) && needles.every((w) => `${p.title} ${p.unitCode} ${p.unitTitle} ${p.date} ${p.programme} ${p.sitting}`.toLowerCase().includes(w))), [q, group]); // eslint-disable-line react-hooks/exhaustive-deps
+  const groups = useMemo(() => {
+    const m = new Map<string, PaperMeta[]>();
+    for (const p of list) (m.get(p.unitTitle) ?? m.set(p.unitTitle, []).get(p.unitTitle)!).push(p);
+    for (const rows of m.values()) rows.sort((a, b) => String(b.year).localeCompare(String(a.year)));
+    return [...m.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+  }, [list]);
+
+  return (
+    <main className="mx-auto max-w-3xl px-4 pb-24 pt-8 sm:px-6 sm:pt-12">
+      <Helmet>
+        <title>Dental past papers: Mount Kenya University Dental Sciences | Ompath Study</title>
+        <meta name="description" content="Dental Sciences past papers typed out to read and practise: human physiology, anatomy, oral health and more, by unit, with the paper laid out as it was printed." />
+        <link rel="canonical" href="https://www.ompathstudy.com/dental/papers" />
+      </Helmet>
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Dental</p>
+      <h1 className="mt-1 font-serif text-3xl font-bold sm:text-4xl">Past papers</h1>
+      <p className="mt-2 text-sm text-muted-foreground">{PAPER_INDEX.length} paper{PAPER_INDEX.length === 1 ? "" : "s"}. Open one to read its questions, or use the Paper view button to see it as it was printed.</p>
+      <label className="relative mt-5 block">
+        <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" aria-hidden />
+        <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search a unit, code or year, e.g. physiology 2022" aria-label="Search dental past papers" className="h-11 w-full rounded-xl border border-input bg-background pl-10 pr-9 text-sm outline-none focus:border-primary" />
+        {q && <button type="button" onClick={() => setQ("")} aria-label="Clear" className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-1 text-muted-foreground hover:bg-muted"><X className="h-3.5 w-3.5" /></button>}
+      </label>
+      {groupNames.length > 1 && (
+        <div className="mt-3 flex gap-2 overflow-x-auto pb-1" role="tablist" aria-label="Department">
+          {["", ...groupNames].map((g) => <button key={g || "all"} type="button" role="tab" aria-selected={group === g} onClick={() => setGroup(g)} className={`shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-xs font-bold ${group === g ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:text-foreground"}`}>{g || "All"}</button>)}
+        </div>
+      )}
+      {groups.length === 0 ? <p className="mt-12 text-center text-sm text-muted-foreground">No papers match that.</p> : (
+        <div className="mt-6 space-y-8">
+          {groups.map(([unit, rows]) => (
+            <section key={unit}>
+              <h2 className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">{unit} · {rows.length}</h2>
+              <ul className="mt-1 divide-y divide-border border-y border-border">
+                {rows.map((p) => (
+                  <li key={p.slug}>
+                    <Link to={paperPath(p.slug)} className="group flex items-center gap-3 py-3.5">
+                      <FileText className="h-5 w-5 shrink-0 text-primary" aria-hidden />
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-[16px] font-semibold group-hover:text-primary">{p.sitting || "Exam"}{p.date ? ` · ${p.date}` : ""}</span>
+                        <span className="block truncate text-xs text-muted-foreground">{p.unitCode} · {p.programme} · {p.questions} questions{p.complete ? "" : " · partly readable"}</span>
+                      </span>
+                      <ArrowRight className="h-4 w-4 shrink-0 text-primary/50 transition-transform group-hover:translate-x-0.5" aria-hidden />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
+      )}
+    </main>
+  );
+}

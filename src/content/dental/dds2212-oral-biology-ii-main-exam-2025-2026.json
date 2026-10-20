@@ -1,0 +1,81 @@
+{
+ "slug": "dds2212-oral-biology-ii-main-exam-2025-2026",
+ "title": "Oral Biology II (DDS2212): Main Exam, Tue 24th March, 2026",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2025 / 2026",
+ "unitCode": "DDS2212",
+ "unitTitle": "Oral Biology II",
+ "date": "Tue 24th March, 2026",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ATTEMPT ALL QUESTIONS IN SECTION A AND ANY OTHER TWO (2) IN SECTION B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Explain FOUR (4) the functions of calcium in the body.",
+     "marks": 8
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Identify factors influencing mineralization of teeth.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Outline FIVE (5) age changes in the enamel.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Explain uses of Fluoride in dentistry.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Describe THREE (3) phases of deglutition.",
+     "marks": 9
+    },
+    {
+     "t": "h",
+     "text": "SECTION B"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Discuss chemical composition of teeth.",
+     "marks": 20
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain hormones which have influence on soft and hard tissues of oral cavity.",
+     "marks": 20
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss different types of oral defense mechanisms in the oral cavity.",
+     "marks": 20
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

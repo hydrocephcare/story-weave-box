@@ -1,0 +1,114 @@
+{
+ "slug": "cph2301-community-health-ii-main-exam-2018-2019",
+ "title": "Community Health II (CPH2301): Main Exam, Tuesday 20th November, 2018 2.00pm",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Environmental Health",
+ "programme": "Certificate in Health Records and Information Technology",
+ "examTitle": "University Examination 2018 / 2019",
+ "unitCode": "CPH2301",
+ "unitTitle": "Community Health II",
+ "date": "Tuesday 20th November, 2018 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTION IN SECTION A AND ANY TWO IN SECTION B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "p",
+     "text": "INSTRUCTIONS"
+    },
+    {
+     "t": "p",
+     "text": "ANSWER ALL QUESTION IN SECTION A AND ANY TWO IN SECTION B"
+    },
+    {
+     "t": "h",
+     "text": "SECTION A:",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Outline five Components of maternal child health.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Describe the Criteria of mother child health.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Illustrate Maternity Cycle.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe the components of antenatal care.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Just five High Risk Mothers in Maternal child health.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Describe the factors affecting health seeking behavior in the community.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Illustrate the factors influencing family size in Kenya.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Identify any five determinants of disease.",
+     "marks": 5
+    },
+    {
+     "t": "h",
+     "text": "SECTION B"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Discuss the major child health problems.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Discuss the purpose of conducting community diagnosis.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "11",
+     "text": "Enumerate and discuss responsibilities individuals and local authorities in controlling endemic diseases.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

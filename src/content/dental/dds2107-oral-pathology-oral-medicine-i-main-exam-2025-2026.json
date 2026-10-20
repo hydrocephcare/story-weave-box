@@ -1,0 +1,54 @@
+{
+ "slug": "dds2107-oral-pathology-oral-medicine-i-main-exam-2025-2026",
+ "title": "Oral Pathology / oral Medicine I (DDS2107): Main Exam, Tue 14th July, 2026 11.00am",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2025 / 2026",
+ "unitCode": "DDS2107",
+ "unitTitle": "Oral Pathology / oral Medicine I",
+ "date": "Tue 14th July, 2026 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ATTEMPT ALL QUESTIONS IN SECTION A AND ANY OTHER TWO (2) IN SECTION B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "The condition characterised by unilateral enlargement of one side of the face due to overgrowth of hard and soft tissues is called: (1 Mark)",
+     "marks": 1
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "A small mandible is referred to as: (1 Mark)",
+     "marks": 1
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "The congenital anomaly characterised by the absence of the clavicles and delayed closure of the fontanelles is: (1 Mark)",
+     "marks": 1
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "The visible yellow spots on the buccal mucosa near the commissures that represent ectopic sebaceous glands are called: (1 Mark)",
+     "marks": 1
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": false,
+ "note": "Section B missing"
+}

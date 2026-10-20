@@ -1,0 +1,115 @@
+{
+ "slug": "cph1303-health-education-and-promotion-main-exam-2022-2023",
+ "title": "Health Education and Promotion (CPH1303): Main Exam, Thur 23rd March, 2023 11.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health, Epidemiology & Biostatistics",
+ "programme": "Certificate in Community Health",
+ "examTitle": "University Examination 2022 / 2023",
+ "unitCode": "CPH1303",
+ "unitTitle": "Health Education and Promotion",
+ "date": "Thur 23rd March, 2023 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "p",
+     "text": "INSTRUCTIONS"
+    },
+    {
+     "t": "p",
+     "text": "a) THIS PAPER HAS TWO PARTS: SECTION 'A' AND SECTION 'B'"
+    },
+    {
+     "t": "p",
+     "text": "b) SECTION 'A' HAS ONE QUESTION WHICH IS COMPULSORY AND CARRIES 40 MARKS."
+    },
+    {
+     "t": "p",
+     "text": "c) SECTION 'B' HAS THREE QUESTIONS OF WHICH YOU ARE REQUIRED TO ATTEMPT TWO."
+    },
+    {
+     "t": "h",
+     "text": "SECTION A (40 MARKS)",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Health (WHO, 1948)",
+       "marks": 2.5
+      },
+      {
+       "l": "b",
+       "text": "Health education",
+       "marks": 2.5
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Identify five priority areas for health promotion",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Explain the basic strategies for health promotion",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [],
+   "footer": "Paper One"
+  },
+  {
+   "n": 3,
+   "items": [],
+   "footer": "Paper One"
+  },
+  {
+   "n": 4,
+   "items": [],
+   "footer": "Paper One"
+  },
+  {
+   "n": 5,
+   "items": [],
+   "footer": "Paper One"
+  },
+  {
+   "n": 6,
+   "items": [],
+   "footer": "Paper One"
+  },
+  {
+   "n": 7,
+   "items": [],
+   "footer": "Paper One"
+  },
+  {
+   "n": 8,
+   "items": [],
+   "footer": "Paper One"
+  },
+  {
+   "n": 9,
+   "items": [],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

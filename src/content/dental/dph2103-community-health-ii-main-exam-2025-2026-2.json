@@ -1,0 +1,86 @@
+{
+ "slug": "dph2103-community-health-ii-main-exam-2025-2026-2",
+ "title": "Community Health II (DPH2103): Main Exam, Mon 20th July, 2026 11.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Environmental Health and Health System Management",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2025 / 2026",
+ "unitCode": "DPH2103",
+ "unitTitle": "Community Health II",
+ "date": "Mon 20th July, 2026 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms;",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Culture.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Immunity.",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Morbidity.",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "Epidemic.",
+       "marks": 2
+      },
+      {
+       "l": "e",
+       "text": "Quarantine.",
+       "marks": 2
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "State five causes of Infant Mortality.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Explain five activities of an epidemiologist.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Differentiate between morbidity rates and mortality rates.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Differentiate between prevalence rate and incidence rate. Providing a practical example for each.",
+     "marks": 6
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true
+}

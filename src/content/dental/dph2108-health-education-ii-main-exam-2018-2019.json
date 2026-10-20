@@ -1,0 +1,77 @@
+{
+ "slug": "dph2108-health-education-ii-main-exam-2018-2019",
+ "title": "Health Education II (DPH2108): Main Exam, Tue 2nd April, 2019 11.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2018 / 2019",
+ "unitCode": "DPH2108",
+ "unitTitle": "Health Education II",
+ "date": "Tue 2nd April, 2019 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY TWO QUESTIONS FROM SECTION B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "p",
+     "text": "ANSWER ALL QUESTIONS IN SECTION A AND ANY TWO QUESTIONS FROM SECTION B"
+    },
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 40
+    },
+    {
+     "t": "p",
+     "text": "Question One"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Audio visual aids"
+      },
+      {
+       "l": "b",
+       "text": "Health promotion"
+      },
+      {
+       "l": "c",
+       "text": "Group dynamics"
+      },
+      {
+       "l": "d",
+       "text": "Teaching methods"
+      },
+      {
+       "l": "e",
+       "text": "Problem solving process"
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain briefly how to boost the element of sound judgment in creativity",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Highlight FIVE advantages of problem solving process",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

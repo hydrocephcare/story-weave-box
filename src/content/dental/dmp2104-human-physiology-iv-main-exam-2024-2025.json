@@ -1,0 +1,77 @@
+{
+ "slug": "dmp2104-human-physiology-iv-main-exam-2024-2025",
+ "title": "Human Physiology IV (DMP2104): Main Exam, Tue 11th November, 2025 8:00am",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2024 / 2025",
+ "unitCode": "DMP2104",
+ "unitTitle": "Human Physiology IV",
+ "date": "Tue 11th November, 2025 8:00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY TWO IN SECTION B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Identify the four (4) main types of cells which comprise the epidermis",
+     "marks": 8
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain specialized senses in the human body",
+     "marks": 8
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Outline biological functions of Melanin in the human body",
+     "marks": 7
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Give the functions of sebaceous glands",
+     "marks": 7
+    },
+    {
+     "t": "h",
+     "text": "SECTION B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Discuss the mechanism of heat loss from the human body",
+     "marks": 20
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain the role of hypothalamus in regulating body temperatures",
+     "marks": 20
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe the functions of sensory system",
+     "marks": 20
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

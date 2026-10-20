@@ -1,0 +1,130 @@
+{
+ "slug": "dds2111-human-physiology-iv-main-exam-2017-2018",
+ "title": "Human Physiology IV (DDS2111): Main Exam, November 2017",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Community Oral Health / diploma in Dental Health",
+ "examTitle": "University Examination 2017 / 2018",
+ "unitCode": "DDS2111",
+ "unitTitle": "Human Physiology IV",
+ "date": "November 2017",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO IN SECTION B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms:",
+     "marks": 5,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Thermo regulation"
+      },
+      {
+       "l": "b",
+       "text": "Fever"
+      },
+      {
+       "l": "c",
+       "text": "Taste buds"
+      },
+      {
+       "l": "d",
+       "text": "Hyperpyrexia"
+      },
+      {
+       "l": "e",
+       "text": "Metabolic Rate",
+       "marks": 5
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Draw a well labeled diagram showing taste zone.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Classify hypothermia.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Briefly explain how shivering takes place in heat production.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Explain the function of olfactory cilia of the nose.",
+     "marks": 3
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Draw a well labeled diagram showing parts of the skin.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Write short notes on apocrine sweat glands.",
+     "marks": 4
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Briefly explain two parts of the ear, indicating their function.",
+     "marks": 4
+    },
+    {
+     "t": "h",
+     "text": "SECTION B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Discuss functions of the skin.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Body temperature regulation occurs in two way; heat production and heat loss, disc",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Explain the skin appendages.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

@@ -1,0 +1,132 @@
+{
+ "slug": "dph1201-health-education-i-main-exam-2018-2019",
+ "title": "Health Education I (DPH1201): Main Exam, Tue 2nd April, 2018 8.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2018 / 2019",
+ "unitCode": "DPH1201",
+ "unitTitle": "Health Education I",
+ "date": "Tue 2nd April, 2018 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY TWO QUESTIONS FROM SECTION B",
+ "paperLabel": "Paper Three",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A: 40 MARKS",
+     "marks": 40
+    },
+    {
+     "t": "p",
+     "text": "Question One"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms used in health education:",
+     "marks": 5,
+     "parts": [
+      {
+       "l": "a",
+       "text": "perception"
+      },
+      {
+       "l": "b",
+       "text": "health belief model"
+      },
+      {
+       "l": "c",
+       "text": "motivation"
+      },
+      {
+       "l": "d",
+       "text": "pedagogy"
+      },
+      {
+       "l": "e",
+       "text": "Health education."
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain briefly the objectives of health education and give example of each.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Johari's window is a tool used in communication. Explain FIVE importance of it.",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper Three"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Behaviorism learning theory is commonly used in dental health program. Define this theory and give examples in relation with dental health.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Highlight FIVE reasons why adult learn.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Briefly explain FIVE characteristics of effective health communication.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "State and explain FIVE principles of giving effective feedback.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Explain general characteristics of adult learners.",
+     "marks": 5
+    },
+    {
+     "t": "h",
+     "text": "SECTION B:"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Heath belief model is mostly used in health promotion program. It is one of the key pillar in behaviour change with a well labeled diagram, discuss the health belief model",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Mount Kenya University, community oral health students were asked to carry out a dental check-up at Juja primary school, they were asked to use an educational design. Discuss educational design.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "11",
+     "text": "Principles of health education are used in carrying out effective health program. Discuss these principles.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper Three"
+  }
+ ],
+ "complete": true
+}

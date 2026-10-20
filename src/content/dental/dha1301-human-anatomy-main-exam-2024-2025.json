@@ -1,0 +1,59 @@
+{
+ "slug": "dha1301-human-anatomy-main-exam-2024-2025",
+ "title": "Human Anatomy (DHA1301): Main Exam, Mon 24th March, 2025 2.00pm",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Dental Technology",
+ "examTitle": "University Examination 2024 / 2025",
+ "unitCode": "DHA1301",
+ "unitTitle": "Human Anatomy",
+ "date": "Mon 24th March, 2025 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Write notes on pulmonary circulation.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Identify two (2) basic types of cells present in the nervous system",
+     "marks": 2
+    },
+    {
+     "t": "h",
+     "text": "SECTION B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Explain the four (4) major divisions of the nervous system.",
+     "marks": 20
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": false,
+ "note": "Paper appears incomplete; after question 6 part b the paper ends abruptly."
+}

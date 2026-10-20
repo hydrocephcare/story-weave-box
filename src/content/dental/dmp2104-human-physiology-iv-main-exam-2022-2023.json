@@ -1,0 +1,47 @@
+{
+ "slug": "dmp2104-human-physiology-iv-main-exam-2022-2023",
+ "title": "Human Physiology IV (DMP2104): Main Exam, Mon 14th Nov, 2022 11.00am",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2022 / 2023",
+ "unitCode": "DMP2104",
+ "unitTitle": "Human Physiology IV",
+ "date": "Mon 14th Nov, 2022 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ATTEMPT ALL QUESTIONS IN SECTIONS A AND B.",
+ "paperLabel": "Paper Two",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "h",
+     "text": "Section B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss salivary components and their functions",
+     "marks": 20
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Explain the roles of Hydrochloric Acid (HCl) in the stomach",
+     "marks": 20
+    }
+   ],
+   "footer": "Paper Two"
+  }
+ ],
+ "complete": true
+}

@@ -1,0 +1,105 @@
+{
+ "slug": "cph2302-community-health-ii-main-exam-2021-2022",
+ "title": "Community Health II (CPH2302): Main Exam, Mon 18th July, 2022 11.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health",
+ "programme": "Certificate in Health Record and Information Technology",
+ "examTitle": "University Examination 2021 / 2022",
+ "unitCode": "CPH2302",
+ "unitTitle": "Community Health II",
+ "date": "Mon 18th July, 2022 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTION IN SECTION A AND ANY OTHER TWO FROM SECTION",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Give two reasons why community fails to participate in Immunization programmes.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Immunization is useful in disease prevention and have saved many lives. What other factors affects the general immunity of a person?",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Illustrate the factors influencing family size in Kenya.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Using examples describe the principles of managing communicable diseases.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Outline FIVE possible causes of missed opportunities in immunization.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Enumerate FIVE ways by which Health Education can be used in the promotion of health.",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Describe the linkage between the community and the health facility and sustainability.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Explain the classification categories of communicable diseases.",
+     "marks": 5
+    },
+    {
+     "t": "h",
+     "text": "SECTION B"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Community Health Volunteers form a basic workforce of community strategy in the provision of level one services. Identify any five roles they play.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Basic health services should be available to everyone in Kenya the Kenyan constitution. They should be provided at the dispensaries and health centres. Outline the components of such basic health services that should be available in your area of work.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "11",
+     "text": "Using a diagram illustrate the ideal number of visits and minimum visits periods of maternal care during pregnancy.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

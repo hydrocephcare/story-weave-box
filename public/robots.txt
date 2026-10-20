@@ -9,3 +9,4 @@ Disallow: /contests/*/certificate/
 
 Sitemap: https://www.ompathstudy.com/sitemap.xml
 Sitemap: https://www.ompathstudy.com/library-sitemap.xml
+Sitemap: https://www.ompathstudy.com/dental-sitemap.xml

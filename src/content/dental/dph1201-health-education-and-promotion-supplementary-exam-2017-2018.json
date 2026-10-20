@@ -1,0 +1,107 @@
+{
+ "slug": "dph1201-health-education-and-promotion-supplementary-exam-2017-2018",
+ "title": "Health Education and Promotion (DPH1201): Supplementary Exam, August, 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health",
+ "programme": "Diploma in Community Health and HIV Management",
+ "examTitle": "University Examination 2017 / 2018",
+ "unitCode": "DPH1201",
+ "unitTitle": "Health Education and Promotion",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY TWO QUESTIONS IN SECTION B",
+ "paperLabel": "Paper Two",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A: 40 MARKS",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Distinguish between health education and health promotion.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Briefly outline the characteristics of adult learners.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Outline the various methods that are used to organize a community for a health education program.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Briefly describe the six principles of planning in health education.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Briefly outline the resources that may be required to carry out a health promotion program.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Outline the steps undertaken in the learning process.",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper Two"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "7",
+     "text": "List and briefly describe the four main categories of barriers to learning.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Outline the steps that may be taken while preparing for an organized health talk.",
+     "marks": 5
+    },
+    {
+     "t": "h",
+     "text": "SECTION B: 30 MARKS",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "List and briefly describe the various methods used in health education.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Describe the principles of community participation as applied in health promotion.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "11",
+     "text": "List and describe the principles of communication.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper Two"
+  }
+ ],
+ "complete": true
+}

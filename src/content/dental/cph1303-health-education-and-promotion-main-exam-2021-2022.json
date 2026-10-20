@@ -1,0 +1,59 @@
+{
+ "slug": "cph1303-health-education-and-promotion-main-exam-2021-2022",
+ "title": "Health Education and Promotion (CPH1303 & DPH1318): Main Exam, Wed 30th March, 2021 8.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health, Epidemiology and Biostatistics",
+ "programme": "Diploma in Community Health",
+ "examTitle": "University Examination 2021 / 2022",
+ "unitCode": "CPH1303 & DPH1318",
+ "unitTitle": "Health Education and Promotion",
+ "date": "Wed 30th March, 2021 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 40
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss Components of communication.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss the principles of health education.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

@@ -1,0 +1,116 @@
+{
+ "slug": "dma1301-introduction-to-biostatistics-main-exam-2022-2023",
+ "title": "Introduction to Biostatistics (DMA1301): Main Exam, Wed 19th July, 2023 11.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health, Epidemiology & Biostatistics",
+ "programme": "Diploma in Ddt & Dch",
+ "examTitle": "University Examination 2022 / 2023",
+ "unitCode": "DMA1301",
+ "unitTitle": "Introduction to Biostatistics",
+ "date": "Wed 19th July, 2023 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO IN SECTION B.",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A:"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "standard deviation",
+       "marks": 2.5
+      },
+      {
+       "l": "b",
+       "text": "Randomization",
+       "marks": 2.5
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain five sources of statistical data",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "State importance of diagrammatic representation",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Explain three statistical methods.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "State the uses of statistics.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Highlight how ungrouped data can be presented.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Describe descriptive statistics.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Explain the difference between the statistics and research.",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION 1"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Critic on five measures of central tendency.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Discuss methods of data collection techniques.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "11",
+     "text": "Discuss types use in probability techniques.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

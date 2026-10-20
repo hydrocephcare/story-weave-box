@@ -1,3 +1,4 @@
+import { useTrack } from "@/lib/courseTrack";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Trophy, X } from "lucide-react";
@@ -6,7 +7,7 @@ import { loadContestPlatform, sortContests, type ContestRecord } from "@/lib/con
 const seenKey = (c: ContestRecord) => `ompath_contest_strip_${c.slug}_${c.stage}`;
 
 /** Slim site-wide banner for a contest that is open for registration or running now. Hidden on contest pages and once dismissed. */
-export default function ContestStrip() {
+function ContestStripInner() {
   const { pathname } = useLocation();
   const [contest, setContest] = useState<ContestRecord | null>(null);
   const [, force] = useState(0);
@@ -35,4 +36,9 @@ export default function ContestStrip() {
       </div>
     </div>
   );
+}
+
+/** The medical contest banner: not shown in the dental section. */
+export default function ContestStrip() {
+  return useTrack() === "dental" ? null : <ContestStripInner />;
 }

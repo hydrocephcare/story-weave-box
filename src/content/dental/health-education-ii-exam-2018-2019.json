@@ -1,0 +1,170 @@
+{
+ "slug": "health-education-ii-exam-2018-2019",
+ "title": "Health Education II: Exam, Thurs 22nd November, 2018 2.00pm",
+ "university": "Moi University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2018 / 2019",
+ "unitCode": "",
+ "unitTitle": "Health Education II",
+ "date": "Thurs 22nd November, 2018 2.00pm",
+ "sitting": "Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "p",
+     "text": "Answer ALL questions in section A and answer ANY Other Two questions from Section B"
+    },
+    {
+     "t": "h",
+     "text": "SECTION A: 50 MARKS",
+     "marks": 50
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following:",
+     "marks": 5,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Credibility"
+      },
+      {
+       "l": "b",
+       "text": "Leadership styles"
+      },
+      {
+       "l": "c",
+       "text": "Group task"
+      },
+      {
+       "l": "d",
+       "text": "Audio and visual aids"
+      },
+      {
+       "l": "e",
+       "text": "Problems"
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain five principles for selecting audio visual aids.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Highlight five teaching methods.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Briefly explain how to be in credible in health care practice.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Explain five objectives of school health education.",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Differentiate between formal and informal groups citing examples in each.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Explain Laissez faire type of leadership style.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Briefly explain five disadvantages of audio visual aids.",
+     "marks": 5
+    },
+    {
+     "t": "h",
+     "text": "SECTION B: 30 MARKS",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Opinion leaders plays a major role in our health education programs;",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define an opinion leader.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Explain types of opinion leader.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Discuss six characteristics of opinion leader.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Explain three roles played by opinion leaders.",
+       "marks": 3
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Problem solving techniques is used tackle issues affecting a dental health program;",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define problem solving.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Discuss four major principles of problem solving.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Explain the formulation of alternative collection action used in problem solving.",
+       "marks": 5
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "11",
+     "text": "Credibility is an important element for one to be a good leader or health practitioner in health education. Discuss five positive steps to boost credibility.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

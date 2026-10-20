@@ -1,0 +1,97 @@
+{
+ "slug": "dds2112-human-anatomy-iv-main-exam-2017-2018",
+ "title": "Human Anatomy IV (DDS2112): Main Exam, Thur 2nd Aug, 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Dental Technology",
+ "examTitle": "University Examination 2017 / 2018",
+ "unitCode": "DDS2112",
+ "unitTitle": "Human Anatomy IV",
+ "date": "Thur 2nd Aug, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer all questions",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms;",
+     "marks": 12,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Embryo blast"
+      },
+      {
+       "l": "b",
+       "text": "Meiosis"
+      },
+      {
+       "l": "c",
+       "text": "Trophoblast"
+      },
+      {
+       "l": "d",
+       "text": "Zona pellucida"
+      },
+      {
+       "l": "e",
+       "text": "Cleavage"
+      },
+      {
+       "l": "f",
+       "text": "Morula"
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Briefly explain how blastocyst is formed",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Explain the stages of cleavage",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Briefly explain how hypoblast and epiblast is formed",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Explain the first stage of embryonic development in cell division.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Explain the process of gastrulation",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Briefly explain the mitotic(M) phase in cell cycle.",
+     "marks": 3
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

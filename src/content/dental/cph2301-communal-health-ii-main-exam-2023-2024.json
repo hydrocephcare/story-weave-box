@@ -1,0 +1,105 @@
+{
+ "slug": "cph2301-communal-health-ii-main-exam-2023-2024",
+ "title": "Communal Health II (CPH2301): Main Exam, Mon 25th March, 2024",
+ "university": "Mount Kenya University",
+ "school": "Schools of Public Health",
+ "department": "Department of Communal Health, Epidemiology and Biostatistics",
+ "programme": "Certificate in Health Recognition and Information Technology",
+ "examTitle": "University Examination 2023 / 2024",
+ "unitCode": "CPH2301",
+ "unitTitle": "Communal Health II",
+ "date": "Mon 25th March, 2024",
+ "sitting": "Main Exam",
+ "duration": "2 Hrs",
+ "instructions": "ANSWER ALL QUESTION IN SECTION A AND ANY OTHER TWO FROM SECTION",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Give two reasons why community fails to participate in immunization programmes.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Name five factors that affects the general immunity of a person.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Illustrate the factors influencing disease occurrence in Kenya.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Using examples describe the principles of managing communicable diseases.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Outline FIVE possible causes of missed opportunities in immunization.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Enumerate FIVE ways by which Health Education can be used in the promotion of health.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Describe the linkage between the community and the health facility and sustainability.",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Explain the classification categories of communicable diseases.",
+     "marks": 5
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Community Health Volunteers form a basic workforce of community strategy in the provision of level one services. Discuss any five roles they play.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Discuss any three disease frequency measures and give its properties and uses.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "11",
+     "text": "Giving an illustration discuss disease determinants.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

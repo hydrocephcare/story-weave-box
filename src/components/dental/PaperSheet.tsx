@@ -1,0 +1,78 @@
+import type { DentalPaper, PaperItem } from "@/lib/dentalPapers";
+
+/** A drawn crest (not the university's own logo): a shield, an open book and a star, in the colours of a university letterhead. */
+function Crest({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 72" className={className} role="img" aria-label="University crest">
+      <path d="M32 3 7 11v22c0 17 11 30 25 36 14-6 25-19 25-36V11Z" fill="none" stroke="currentColor" strokeWidth="2.4" />
+      <path d="M32 3v66M7 28h50" stroke="currentColor" strokeWidth="1.2" opacity=".55" />
+      <path d="M17 44c5-3 10-3 15 0 5-3 10-3 15 0v-9c-5-3-10-3-15 0-5-3-10-3-15 0Z" fill="currentColor" opacity=".85" />
+      <path d="m32 13 1.9 4.2 4.6.4-3.5 3 1 4.5-4-2.4-4 2.4 1-4.5-3.5-3 4.6-.4Z" fill="currentColor" />
+    </svg>
+  );
+}
+
+const up = (s: string) => s.toUpperCase();
+
+function Marks({ m }: { m?: number }) {
+  if (!m) return null;
+  return <span className="ml-3 shrink-0 whitespace-nowrap italic text-neutral-600">({m} Marks)</span>;
+}
+
+function Item({ it }: { it: PaperItem }) {
+  if (it.t === "h") return <p className="mt-5 text-[15px] font-bold uppercase tracking-wide text-neutral-900">{it.text}{it.marks ? ` (${it.marks} MARKS)` : ""}</p>;
+  if (it.t === "p") return <p className="mt-2 text-[14.5px] leading-relaxed text-neutral-800">{it.text}</p>;
+  return (
+    <div className="mt-3 text-[14.5px] leading-relaxed text-neutral-900">
+      <div className="flex items-baseline justify-between">
+        <p className="min-w-0 flex-1"><span className="mr-2 font-semibold">{it.n ? `${it.n}.` : ""}</span>{it.text}</p>
+        {!it.parts?.length && <Marks m={it.marks} />}
+      </div>
+      {it.parts && it.parts.length > 0 && (
+        <ol className="mt-1 space-y-1 pl-7">
+          {it.parts.map((p, i) => (
+            <li key={i} className="flex items-baseline justify-between"><p className="min-w-0 flex-1"><span className="mr-2">{p.l ? `${p.l})` : "•"}</span>{p.text}</p><Marks m={p.marks} /></li>
+          ))}
+        </ol>
+      )}
+    </div>
+  );
+}
+
+/**
+ * The paper as it was handed out: letterhead with a crest and the university's name, the examination title, school, department, programme, unit and date block,
+ * the instructions, then the questions page by page with the page footer. Everything is typed text, set the way the printed paper is set.
+ */
+export default function PaperSheet({ paper }: { paper: DentalPaper }) {
+  return (
+    <div className="space-y-6">
+      {paper.pages.map((pg, idx) => (
+        <article key={pg.n} className="mx-auto w-full max-w-[44rem] bg-white px-7 py-9 text-neutral-900 shadow-[0_6px_24px_-8px_rgba(0,0,0,0.35)] sm:px-14 sm:py-12" style={{ fontFamily: "'Times New Roman', Times, 'Libre Baskerville', Georgia, serif", minHeight: "min(1100px, 150vw)" }} aria-label={`Page ${pg.n}`}>
+          {idx === 0 && (
+            <header className="text-center">
+              <div className="flex items-center justify-center gap-4 text-neutral-700">
+                <Crest className="h-14 w-12 shrink-0 text-neutral-700 sm:h-16 sm:w-14" />
+                <p className="text-[26px] leading-none tracking-wide text-neutral-500 sm:text-[32px]">{paper.university}</p>
+              </div>
+              <p className="mt-6 text-[15px] font-semibold tracking-wide">{up(paper.examTitle)}</p>
+              {paper.school && <p className="mt-3 text-[14.5px] font-semibold tracking-wide">{up(paper.school)}</p>}
+              {paper.department && <p className="mt-1 text-[14.5px] font-semibold tracking-wide">{up(paper.department)}</p>}
+              {paper.programme && <p className="mt-5 text-[14.5px] font-semibold tracking-wide">{up(paper.programme)}</p>}
+              <p className="mt-5 text-[14px] font-semibold">
+                {paper.unitCode && <span>UNIT CODE: {up(paper.unitCode)}</span>}{paper.unitCode && paper.unitTitle && <span className="mx-3" />}{paper.unitTitle && <span>UNIT TITLE: {up(paper.unitTitle)}</span>}
+              </p>
+              <div className="mt-3 flex flex-wrap justify-between gap-x-4 border-b border-neutral-300 pb-2 text-[13.5px] font-semibold">
+                <span>{paper.date ? `DATE: ${up(paper.date)}` : ""}</span><span>{up(paper.sitting)}</span><span>{paper.duration ? `TIME: ${up(paper.duration)}` : ""}</span>
+              </div>
+              {paper.instructions && <p className="mt-4 text-left text-[14px] font-semibold uppercase leading-snug">INSTRUCTIONS: {paper.instructions}</p>}
+            </header>
+          )}
+          <div>{pg.items.map((it, k) => <Item key={k} it={it} />)}</div>
+          <footer className="mt-10 flex items-center justify-between border-t border-neutral-300 pt-2 text-[12.5px] italic text-neutral-600">
+            <span>{pg.footer || paper.paperLabel || ""}</span><span>Page {pg.n}</span>
+          </footer>
+        </article>
+      ))}
+    </div>
+  );
+}

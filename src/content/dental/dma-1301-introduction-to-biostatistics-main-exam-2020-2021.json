@@ -1,0 +1,122 @@
+{
+ "slug": "dma-1301-introduction-to-biostatistics-main-exam-2020-2021",
+ "title": "Introduction to Biostatistics (DMA 1301): Main Exam, Thur 8th April 2021 2.00 Pm",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health",
+ "programme": "Diploma in Ddt & Dcoh",
+ "examTitle": "University Examination 2020 / 2021",
+ "unitCode": "DMA 1301",
+ "unitTitle": "Introduction to Biostatistics",
+ "date": "Thur 8th April 2021 2.00 Pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Probability",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Mode",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Nominal",
+       "marks": 2
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain how ungroup data can be presented",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "State two methods of data collection",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Explain two types of hypothesis",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "The exam grades of 7 students are given below. 70, 66, 72, 96, 46, 90, 50 Find",
+     "parts": [
+      {
+       "l": "a",
+       "text": "the mean",
+       "marks": 2.5
+      },
+      {
+       "l": "b",
+       "text": "the sample standard deviation",
+       "marks": 2.5
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Explain two types of sampling data",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Describe measures of dispersion",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Discuss two methods of data sampling",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Critic on five measures of central tendency",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss various methods of presenting data",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

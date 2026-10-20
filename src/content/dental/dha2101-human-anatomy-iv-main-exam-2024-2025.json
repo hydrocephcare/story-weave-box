@@ -1,0 +1,77 @@
+{
+ "slug": "dha2101-human-anatomy-iv-main-exam-2024-2025",
+ "title": "Human Anatomy IV (DHA2101): Main Exam, Tue 11th Nov, 2025 2.00pm",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Dental Technology",
+ "examTitle": "University Examination 2024 / 2025",
+ "unitCode": "DHA2101",
+ "unitTitle": "Human Anatomy IV",
+ "date": "Tue 11th Nov, 2025 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY TWO IN SECTION B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Explain the general principles of embryology",
+     "marks": 8
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Differentiate between mitosis and meiosis in cell division",
+     "marks": 8
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Identify key steps in fertilization",
+     "marks": 7
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Outline the development of epidermis in the human body",
+     "marks": 7
+    },
+    {
+     "t": "h",
+     "text": "SECTION B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Explain the development process of connective tissues in the human body",
+     "marks": 20
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Write notes on the stages of development of cartilage",
+     "marks": 20
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss the functions of amniotic fluid in embryonic development",
+     "marks": 20
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

@@ -1,0 +1,136 @@
+{
+ "slug": "dph1318-health-education-and-promotion-main-exam-2022-2023",
+ "title": "Health Education and Promotion (DPH1318): Main Exam, Tue 25th July, 2023 2.00pm",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health, Epidemiology & Biostatistics",
+ "programme": "Diploma in Community Health",
+ "examTitle": "University Examination 2022 / 2023",
+ "unitCode": "DPH1318",
+ "unitTitle": "Health Education and Promotion",
+ "date": "Tue 25th July, 2023 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ATTEMPT ALL THE QUESTIONS",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "p",
+     "text": "ATTEMPT ALL THE QUESTIONS"
+    },
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terminologies.",
+     "marks": 10,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Health:"
+      },
+      {
+       "l": "b",
+       "text": "Public health education:"
+      },
+      {
+       "l": "c",
+       "text": "Health promotion:"
+      },
+      {
+       "l": "d",
+       "text": "Mental health:"
+      },
+      {
+       "l": "e",
+       "text": "Disease"
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Identify FIVE key principles of health promotion according to the Ottawa Charter of 1986.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Highlight FIVE conditions that should be met for physical health to be said to exist.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe the two approaches applied to health education.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Describe the targets for health education programmes and activities.",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION B"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Explain the following as areas of priority areas in health education promotion.",
+     "marks": 15,
+     "parts": [
+      {
+       "l": "a",
+       "text": "To build healthy public policy."
+      },
+      {
+       "l": "b",
+       "text": "To create supportive environment."
+      },
+      {
+       "l": "c",
+       "text": "To strengthen community action."
+      },
+      {
+       "l": "d",
+       "text": "To develop personal skills."
+      },
+      {
+       "l": "e",
+       "text": "To reorient health services."
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Explain in details the components involved in the communication process.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Explain the phrase Information, Education and Communication (IEC) as applied in Health education activities.",
+     "marks": 10
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

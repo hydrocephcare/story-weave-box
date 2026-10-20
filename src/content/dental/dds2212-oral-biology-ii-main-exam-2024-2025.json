@@ -1,0 +1,83 @@
+{
+ "slug": "dds2212-oral-biology-ii-main-exam-2024-2025",
+ "title": "Oral Biology II (DDS2212): Main Exam, Wed 20th Nov, 2024 8.00am",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2024 / 2025",
+ "unitCode": "DDS2212",
+ "unitTitle": "Oral Biology II",
+ "date": "Wed 20th Nov, 2024 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ATTEMPT ALL QUESTIONS IN SECTIONS A AND B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A : 30 MARKS",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Explain the chemical composition of enamel and dentin.",
+     "marks": 10
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Outline the factors which increase the absorption of calcium intake.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Identify clinical significance of dental plaque.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Outline the various theories of dental caries formation.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "State the properties of saliva in the oral cavity.",
+     "marks": 4
+    },
+    {
+     "t": "h",
+     "text": "SECTION B : 40 MARKS",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Discuss the age changes in the following dental tissues:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Dentin",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Pulp",
+       "marks": 10
+      }
+     ]
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": false,
+ "note": "Missing pages after page 1"
+}

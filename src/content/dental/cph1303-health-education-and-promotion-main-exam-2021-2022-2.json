@@ -1,0 +1,138 @@
+{
+ "slug": "cph1303-health-education-and-promotion-main-exam-2021-2022-2",
+ "title": "Health Education and Promotion (CPH1303): Main Exam, Tue 12th July, 2022 8.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health",
+ "programme": "Certificate in Community Health",
+ "examTitle": "University Examination 2021 / 2022",
+ "unitCode": "CPH1303",
+ "unitTitle": "Health Education and Promotion",
+ "date": "Tue 12th July, 2022 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "p",
+     "text": "INSTRUCTIONS"
+    },
+    {
+     "t": "p",
+     "text": "This paper has two parts: Section 'A' AND Section 'B'."
+    },
+    {
+     "t": "p",
+     "text": "Section 'A' has ONE question which is COMPULSORY and carries 40 Marks."
+    },
+    {
+     "t": "p",
+     "text": "Section 'B' has three questions of which you are required to attempt TWO."
+    },
+    {
+     "t": "p",
+     "text": "The Two questions in Section 'B' Carries a Total of 30 Marks."
+    },
+    {
+     "t": "h",
+     "text": "SECTION A: (40 MARKS)",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Health.",
+       "marks": 2.5
+      },
+      {
+       "l": "b",
+       "text": "Health education.",
+       "marks": 2.5
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Identified priorities for health promotion.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Explain the basic strategies for health promotion.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe extended parallel process model.",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Explain key principles of health promotion.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "State two aims of health education.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Highlight roles of health educator.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Outline fundamental conditions and resources needed for good health.",
+     "marks": 5
+    },
+    {
+     "t": "h",
+     "text": "SECTION B: (30 MARKS)",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Discuss components of communication.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Discuss areas for priority action identified in Ottawa Charter 1987.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "11",
+     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

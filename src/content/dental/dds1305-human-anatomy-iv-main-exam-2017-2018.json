@@ -1,0 +1,155 @@
+{
+ "slug": "dds1305-human-anatomy-iv-main-exam-2017-2018",
+ "title": "Human Anatomy IV (DDS1305): Main Exam, November 2017",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Community Oral Health / diploma in Dental Health",
+ "examTitle": "University Examination 2017 / 2018",
+ "unitCode": "DDS1305",
+ "unitTitle": "Human Anatomy IV",
+ "date": "November 2017",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "Paper Two",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "p",
+     "text": "ANSWER ALL QUESTIONS"
+    },
+    {
+     "t": "h",
+     "text": "SECTION A (30 MARKS)",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms;",
+     "marks": 10,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Mitosis"
+      },
+      {
+       "l": "b",
+       "text": "Gastrulation"
+      },
+      {
+       "l": "c",
+       "text": "Zygote"
+      },
+      {
+       "l": "d",
+       "text": "Cleavage"
+      },
+      {
+       "l": "e",
+       "text": "Notochord"
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Draw a well labeled diagram of a blastocyte.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Development of circulatory system occurs in the mesoderm which differentiates into blood islands.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define blood islands",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Explain the derivatives of blood islands",
+       "marks": 4
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Briefly explain two parts of cell cycle.",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Explain four organs that are present in fetal membrane.",
+     "marks": 8
+    }
+   ],
+   "footer": "Paper Two"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Briefly differentiate between cell division and cell cycle.",
+     "marks": 2
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Explain briefly on;",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Early cleavage"
+      },
+      {
+       "l": "b",
+       "text": "Late cleavage",
+       "marks": 4
+      }
+     ],
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Explain the function of vitelline membrane.",
+     "marks": 1
+    },
+    {
+     "t": "h",
+     "text": "SECTION B: (30 MARKS) ANSWER ANY TWO QUESTIONS",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Discuss on cell cycle.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss formation of tubes.",
+     "marks": 15
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss stages of embryogenesis.",
+     "marks": 15
+    }
+   ],
+   "footer": "Paper Two"
+  }
+ ],
+ "complete": true
+}

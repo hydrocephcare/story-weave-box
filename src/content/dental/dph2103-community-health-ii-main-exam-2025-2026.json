@@ -1,0 +1,86 @@
+{
+ "slug": "dph2103-community-health-ii-main-exam-2025-2026",
+ "title": "Community Health II (DPH2103): Main Exam, Thur 23rd July, 2026 11.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Environmental Health and Health Systems Management",
+ "programme": "Diploma in Health Records and Information Management",
+ "examTitle": "University Examination 2025 / 2026",
+ "unitCode": "DPH2103",
+ "unitTitle": "Community Health II",
+ "date": "Thur 23rd July, 2026 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "p",
+     "text": "ANSWER ALL QUESTIONS IN SECTION A."
+    },
+    {
+     "t": "p",
+     "text": "ANSWER ANY TWO QUESTIONS IN SECTION B."
+    },
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "State three methods used for communicable disease control.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain the chain of infection, and state why breaking it is important?",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Explain the role of community participation in disease control programmes.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe five nutritional requirements during pregnancy.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Explain the significance of antenatal care in reducing maternal mortality.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Name five methods of solid waste disposal used in communities.",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "What is disease eradication, and how does it differ from disease elimination?",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Define an epidemic and distinguish it from a pandemic.",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}
