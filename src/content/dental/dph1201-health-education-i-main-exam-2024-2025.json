@@ -1,25 +1,25 @@
 {
  "slug": "dph1201-health-education-i-main-exam-2024-2025",
- "title": "Health Education I (DPH1201): Main Exam, Tue 19th Nov, 2024 11.00am",
+ "title": "Health Education I (DPH1201): Main Exam, Fri 4th March, 2025 8.00am",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health, Epidemiology & Biostatistics",
- "programme": "Diploma in Community Oral Health",
+ "programme": "Diploma in Oral Community Health",
  "examTitle": "University Examination 2024 / 2025",
  "unitCode": "DPH1201",
  "unitTitle": "Health Education I",
- "date": "Tue 19th Nov, 2024 11.00am",
+ "date": "Fri 4th March, 2025 8.00am",
  "sitting": "Main Exam",
  "duration": "2 Hours",
- "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND TWO QUESTIONS IN SECTION B",
- "paperLabel": "Paper One",
+ "instructions": "",
+ "paperLabel": "",
  "pages": [
   {
    "n": 1,
    "items": [
     {
      "t": "h",
-     "text": "SECTION A",
+     "text": "Section A",
      "marks": 40
     },
     {
@@ -29,17 +29,12 @@
      "parts": [
       {
        "l": "a",
-       "text": "Health education",
-       "marks": 2
-      },
-      {
-       "l": "b",
        "text": "Public health education",
        "marks": 2
       },
       {
-       "l": "c",
-       "text": "Health promotion",
+       "l": "b",
+       "text": "Health education",
        "marks": 2
       }
      ]
@@ -47,67 +42,93 @@
     {
      "t": "q",
      "n": "2",
-     "text": "Explain key principles of health promotion.",
+     "text": "Explain two aims of health education.",
      "marks": 6
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Describe the health belief model",
-     "marks": 4
+     "text": "Highlight four key principles of health promotion.",
+     "marks": 6
     },
     {
      "t": "q",
      "n": "4",
-     "text": "Explain any three aims of health education.",
+     "text": "Describe extended parallel process model",
      "marks": 6
     },
     {
      "t": "q",
      "n": "5",
-     "text": "Describe areas where health education and promotion takes place.",
+     "text": "State three terms use for communication and health education activities.",
      "marks": 6
     },
     {
      "t": "q",
      "n": "6",
-     "text": "Explain fundamental conditions and resources needed for good health.",
+     "text": "State six areas where health education and promotion take place.",
      "marks": 6
     },
     {
      "t": "q",
      "n": "7",
-     "text": "Explain any three forms of non-verbal communication",
+     "text": "Outline six fundamental conditions and resources needed for good health.",
      "marks": 6
     }
    ],
-   "footer": "Paper One"
+   "footer": "Page"
   },
   {
    "n": 2,
    "items": [
     {
      "t": "h",
-     "text": "SECTION B",
+     "text": "Section B",
      "marks": 30
     },
     {
      "t": "q",
      "n": "8",
-     "text": "Discuss any five significance of studying health education."
+     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion."
     },
     {
      "t": "q",
      "n": "9",
-     "text": "Discuss the components of communication."
+     "text": "Discuss the Components of communication."
     },
     {
      "t": "q",
      "n": "10",
-     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion."
+     "text": "Discuss the principles of health education."
     }
    ],
-   "footer": "Paper One"
+   "footer": "Page"
+  },
+  {
+   "n": 3,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section B",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion."
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Discuss the Components of communication."
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Discuss the principles of health education."
+    }
+   ],
+   "footer": "Page"
   }
  ],
  "complete": true

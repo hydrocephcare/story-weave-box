@@ -1,0 +1,114 @@
+{
+ "slug": "dph1201-health-education-i-main-exam-2024-2025-2",
+ "title": "Health Education I (DPH1201): Main Exam, Tue 19th Nov, 2024 11.00am",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health, Epidemiology & Biostatistics",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2024 / 2025",
+ "unitCode": "DPH1201",
+ "unitTitle": "Health Education I",
+ "date": "Tue 19th Nov, 2024 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND TWO QUESTIONS IN SECTION B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Health education",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Public health education",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Health promotion",
+       "marks": 2
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain key principles of health promotion.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe the health belief model",
+     "marks": 4
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Explain any three aims of health education.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Describe areas where health education and promotion takes place.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Explain fundamental conditions and resources needed for good health.",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Explain any three forms of non-verbal communication",
+     "marks": 6
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION B",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Discuss any five significance of studying health education."
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Discuss the components of communication."
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion."
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

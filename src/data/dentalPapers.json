@@ -1,9 +1,9 @@
 [
  {
-  "slug": "dha1301-human-anatomy-main-exam-2024-2025",
-  "title": "Human Anatomy (DHA1301): Main Exam, Mon 24th March, 2025 2.00pm",
+  "slug": "dha1301-human-anatomy-iv-main-exam-2024-2025",
+  "title": "Human Anatomy IV (DHA1301): Main Exam, Mon 24th March, 2025 2.00pm",
   "unitCode": "DHA1301",
-  "unitTitle": "Human Anatomy",
+  "unitTitle": "Human Anatomy IV",
   "programme": "Diploma in Dental Technology",
   "date": "Mon 24th March, 2025 2.00pm",
   "year": "2024/2025",
@@ -75,21 +75,6 @@
   "group": "Dental Sciences"
  },
  {
-  "slug": "dds2111-human-physiology-main-exam-2023-2024",
-  "title": "Human Physiology (DDS2111): Main Exam, Mon 15th July, 2024 11.00am",
-  "unitCode": "DDS2111",
-  "unitTitle": "Human Physiology",
-  "programme": "Diploma in Community Oral Health",
-  "date": "Mon 15th July, 2024 11.00am",
-  "year": "2023/2024",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Sciences"
- },
- {
   "slug": "dds2111-human-physiology-iv-main-exam-2024-2025",
   "title": "Human Physiology IV (DDS2111/DMP2104): Main Exam, Tue 25th Mar, 2025 8.00am",
   "unitCode": "DDS2111/DMP2104",
@@ -115,6 +100,21 @@
   "sitting": "Main Exam",
   "duration": "2 Hours",
   "questions": 7,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Dental Sciences"
+ },
+ {
+  "slug": "dds2111-human-physiology-iv-main-exam-2023-2024",
+  "title": "Human Physiology IV (DDS2111): Main Exam, Mon 15th July, 2024 11.00am",
+  "unitCode": "DDS2111",
+  "unitTitle": "Human Physiology IV",
+  "programme": "Diploma in Community Oral Health",
+  "date": "Mon 15th July, 2024 11.00am",
+  "year": "2023/2024",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Sciences"
@@ -180,10 +180,10 @@
   "group": "Dental Sciences"
  },
  {
-  "slug": "dds2107-oral-pathology-oral-medicine-i-main-exam-2025-2026",
-  "title": "Oral Pathology / oral Medicine I (DDS2107): Main Exam, Tue 14th July, 2026 11.00am",
+  "slug": "dds2107-oral-pathology-and-oral-medicine-i-main-exam-2025-2026",
+  "title": "Oral Pathology and Oral Medicine I (DDS2107): Main Exam, Tue 14th July, 2026 11.00am",
   "unitCode": "DDS2107",
-  "unitTitle": "Oral Pathology / oral Medicine I",
+  "unitTitle": "Oral Pathology and Oral Medicine I",
   "programme": "Diploma in Community Oral Health",
   "date": "Tue 14th July, 2026 11.00am",
   "year": "2025/2026",
@@ -225,21 +225,6 @@
   "group": "Clinical Sciences"
  },
  {
-  "slug": "cph2301-communal-health-ii-main-exam-2023-2024",
-  "title": "Communal Health II (CPH2301): Main Exam, Mon 25th March, 2024",
-  "unitCode": "CPH2301",
-  "unitTitle": "Communal Health II",
-  "programme": "Certificate in Health Recognition and Information Technology",
-  "date": "Mon 25th March, 2024",
-  "year": "2023/2024",
-  "sitting": "Main Exam",
-  "duration": "2 Hrs",
-  "questions": 11,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Community Health and Biostatistics"
- },
- {
   "slug": "dph2103-community-health-ii-main-exam-2025-2026-3",
   "title": "Community Health II (DPH2103): Main Exam, Tue 31st March, 2026",
   "unitCode": "DPH2103",
@@ -251,6 +236,21 @@
   "duration": "2 Hours",
   "questions": 7,
   "complete": false,
+  "university": "Mount Kenya University",
+  "group": "Community Health and Biostatistics"
+ },
+ {
+  "slug": "cph2301-community-health-ii-main-exam-2023-2024",
+  "title": "Community Health II (CPH2301): Main Exam, Mon 25th March, 2024",
+  "unitCode": "CPH2301",
+  "unitTitle": "Community Health II",
+  "programme": "Certificate in Health Recognition and Information Technology",
+  "date": "Mon 25th March, 2024",
+  "year": "2023/2024",
+  "sitting": "Main Exam",
+  "duration": "2 Hrs",
+  "questions": 11,
+  "complete": true,
   "university": "Mount Kenya University",
   "group": "Community Health and Biostatistics"
  },
@@ -300,9 +300,9 @@
   "group": "Community Health and Biostatistics"
  },
  {
-  "slug": "dph-2103-community-health-ii-main-exam-2020-2021",
-  "title": "Community Health II (DPH 2103): Main Exam, Thur 1st April 2021 2.00pm",
-  "unitCode": "DPH 2103",
+  "slug": "dph2103-community-health-ii-main-exam-2020-2021",
+  "title": "Community Health II (DPH2103): Main Exam, Thur 1st April 2021 2.00pm",
+  "unitCode": "DPH2103",
   "unitTitle": "Community Health II",
   "programme": "Diploma in Clinical Medicine, Diploma in Health Record and Information Technology, Diploma in Community Oral Health",
   "date": "Thur 1st April 2021 2.00pm",
@@ -326,21 +326,6 @@
   "duration": "2 Hours",
   "questions": 4,
   "complete": false,
-  "university": "Mount Kenya University",
-  "group": "Community Health and Biostatistics"
- },
- {
-  "slug": "dph1201-health-education-1-main-exam-2024-2025",
-  "title": "Health Education 1 (DPH1201): Main Exam, Fri 4th March, 2025 8.00am",
-  "unitCode": "DPH1201",
-  "unitTitle": "Health Education 1",
-  "programme": "Diploma in Oral Community Health",
-  "date": "Fri 4th March, 2025 8.00am",
-  "year": "2024/2025",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 13,
-  "complete": true,
   "university": "Mount Kenya University",
   "group": "Community Health and Biostatistics"
  },
@@ -435,9 +420,9 @@
   "group": "Community Health and Biostatistics"
  },
  {
-  "slug": "cph-1303-health-education-and-promotion-main-exam-2020-2021",
-  "title": "Health Education and Promotion (CPH 1303 & DPH 1318): Main Exam, Thur 8th April 2021 8.00am",
-  "unitCode": "CPH 1303 & DPH 1318",
+  "slug": "cph1303-health-education-and-promotion-main-exam-2020-2021",
+  "title": "Health Education and Promotion (CPH1303 & DPH1318): Main Exam, Thur 8th April 2021 8.00am",
+  "unitCode": "CPH1303 & DPH1318",
   "unitTitle": "Health Education and Promotion",
   "programme": "Diploma in Community Health",
   "date": "Thur 8th April 2021 8.00am",
@@ -495,7 +480,7 @@
   "group": "Community Health and Biostatistics"
  },
  {
-  "slug": "dph1201-health-education-i-main-exam-2024-2025",
+  "slug": "dph1201-health-education-i-main-exam-2024-2025-2",
   "title": "Health Education I (DPH1201): Main Exam, Tue 19th Nov, 2024 11.00am",
   "unitCode": "DPH1201",
   "unitTitle": "Health Education I",
@@ -505,6 +490,21 @@
   "sitting": "Main Exam",
   "duration": "2 Hours",
   "questions": 10,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Community Health and Biostatistics"
+ },
+ {
+  "slug": "dph1201-health-education-i-main-exam-2024-2025",
+  "title": "Health Education I (DPH1201): Main Exam, Fri 4th March, 2025 8.00am",
+  "unitCode": "DPH1201",
+  "unitTitle": "Health Education I",
+  "programme": "Diploma in Oral Community Health",
+  "date": "Fri 4th March, 2025 8.00am",
+  "year": "2024/2025",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 13,
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community Health and Biostatistics"
@@ -600,9 +600,9 @@
   "group": "Community Health and Biostatistics"
  },
  {
-  "slug": "dma-1301-introduction-to-biostatistics-main-exam-2020-2021",
-  "title": "Introduction to Biostatistics (DMA 1301): Main Exam, Thur 8th April 2021 2.00 Pm",
-  "unitCode": "DMA 1301",
+  "slug": "dma1301-introduction-to-biostatistics-main-exam-2020-2021",
+  "title": "Introduction to Biostatistics (DMA1301): Main Exam, Thur 8th April 2021 2.00 Pm",
+  "unitCode": "DMA1301",
   "unitTitle": "Introduction to Biostatistics",
   "programme": "Diploma in Ddt & Dcoh",
   "date": "Thur 8th April 2021 2.00 Pm",
@@ -675,36 +675,6 @@
   "group": "Environmental Health"
  },
  {
-  "slug": "dma1301-bio-statistics-main-exam-2018-2019",
-  "title": "Bio Statistics (DMA1301): Main Exam, Fri 29th March, 2019 8.00am",
-  "unitCode": "DMA1301",
-  "unitTitle": "Bio Statistics",
-  "programme": "Diploma in Animal Health / dental Health / community Health",
-  "date": "Fri 29th March, 2019 8.00am",
-  "year": "2018/2019",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": false,
-  "university": "Mount Kenya University",
-  "group": "Natural Sciences"
- },
- {
-  "slug": "dma1301-bio-statistics-main-exam-2017-2018",
-  "title": "Bio Statistics (DMA1301): Main Exam, Monday 19th Nov, 2018 11.00am",
-  "unitCode": "DMA1301",
-  "unitTitle": "Bio Statistics",
-  "programme": "Diploma in Annual Health / diploma",
-  "date": "Monday 19th Nov, 2018 11.00am",
-  "year": "2017/2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 3,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Natural Sciences"
- },
- {
   "slug": "dma1301-introduction-to-biostatistics-main-exam-2023-2024",
   "title": "Introduction to Biostatistics (DMA1301): Main Exam, Wed 27th March, 2024 8.00am",
   "unitCode": "DMA1301",
@@ -720,10 +690,40 @@
   "group": "Natural Sciences"
  },
  {
-  "slug": "dph2108-health-education-b-main-exam-2026",
-  "title": "Health Education B (DPH2108): Main Exam, Fri 27th March, 2026 11.00am",
+  "slug": "dma1301-introduction-to-biostatistics-main-exam-2018-2019",
+  "title": "Introduction to Biostatistics (DMA1301): Main Exam, Fri 29th March, 2019 8.00am",
+  "unitCode": "DMA1301",
+  "unitTitle": "Introduction to Biostatistics",
+  "programme": "Diploma in Animal Health / dental Health / community Health",
+  "date": "Fri 29th March, 2019 8.00am",
+  "year": "2018/2019",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": false,
+  "university": "Mount Kenya University",
+  "group": "Natural Sciences"
+ },
+ {
+  "slug": "dma1301-introduction-to-biostatistics-main-exam-2017-2018",
+  "title": "Introduction to Biostatistics (DMA1301): Main Exam, Monday 19th Nov, 2018 11.00am",
+  "unitCode": "DMA1301",
+  "unitTitle": "Introduction to Biostatistics",
+  "programme": "Diploma in Annual Health / diploma",
+  "date": "Monday 19th Nov, 2018 11.00am",
+  "year": "2017/2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 3,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Natural Sciences"
+ },
+ {
+  "slug": "dph2108-health-education-ii-main-exam-2026",
+  "title": "Health Education II (DPH2108): Main Exam, Fri 27th March, 2026 11.00am",
   "unitCode": "DPH2108",
-  "unitTitle": "Health Education B",
+  "unitTitle": "Health Education II",
   "programme": "Diploma in Community Oral Health",
   "date": "Fri 27th March, 2026 11.00am",
   "year": "2026",
@@ -735,10 +735,10 @@
   "group": "Nutrition and Dietetics"
  },
  {
-  "slug": "dma-1301-biostatistics-main-exam-2017-2018",
-  "title": "Biostatistics (DMA 1301): Main Exam, Wed 28th July, 2021 11.00am",
-  "unitCode": "DMA 1301",
-  "unitTitle": "Biostatistics",
+  "slug": "dma1301-introduction-to-biostatistics-main-exam-2017-2018-2",
+  "title": "Introduction to Biostatistics (DMA1301): Main Exam, Wed 28th July, 2021 11.00am",
+  "unitCode": "DMA1301",
+  "unitTitle": "Introduction to Biostatistics",
   "programme": "Diploma in Dental Technology",
   "date": "Wed 28th July, 2021 11.00am",
   "year": "2017/2018",
