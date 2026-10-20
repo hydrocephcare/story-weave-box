@@ -36,3 +36,14 @@ alter table public.paper_seo enable row level security;
 drop policy if exists "seo is public" on public.paper_seo;
 create policy "seo is public" on public.paper_seo for select using (true);
 grant select on public.paper_seo to anon, authenticated;
+
+-- practice papers "like this one", written once per paper by the paper-similar function
+create table if not exists public.paper_similar (
+  slug text primary key,
+  questions jsonb not null,
+  created_at timestamptz not null default now()
+);
+alter table public.paper_similar enable row level security;
+drop policy if exists "similar papers are public" on public.paper_similar;
+create policy "similar papers are public" on public.paper_similar for select using (true);
+grant select on public.paper_similar to anon, authenticated;

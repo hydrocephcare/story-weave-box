@@ -28,7 +28,7 @@
     {
      "t": "q",
      "n": "1",
-     "text": "Define the following terms as used in community health. (5 Marks)",
+     "text": "Define the following terms as used in community health.",
      "parts": [
       {
        "l": "i",
@@ -50,24 +50,25 @@
        "l": "v",
        "text": "Community participation."
       }
-     ]
+     ],
+     "marks": 5
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Outline the guiding principles in the implementation of the community health strategy. (5 Marks)",
+     "text": "Outline the guiding principles in the implementation of the community health strategy.",
      "marks": 5
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Describe the main constitutional articles that have implications on community health. (5 Marks)",
+     "text": "Describe the main constitutional articles that have implications on community health.",
      "marks": 5
     },
     {
      "t": "q",
      "n": "4",
-     "text": "Highlight the key PHC elements under the Alma-Ata declaration. (5 Marks)",
+     "text": "Highlight the key PHC elements under the Alma-Ata declaration.",
      "marks": 5
     }
    ],

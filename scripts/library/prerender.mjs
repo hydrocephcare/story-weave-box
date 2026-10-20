@@ -258,6 +258,14 @@ try {
     write(meta.path, render({ title: meta.title, description: meta.description, path: meta.path, image: meta.ogImage, keywords: meta.keywords, body, jsonLd: { "@context": "https://schema.org", "@type": "Event", name: meta.title, description: meta.description, url: `${site}${meta.path}`, startDate: "2026-09-07", endDate: "2026-12-04", location: { "@type": "Place", name: "Mount Kenya University School of Medicine" }, organizer: { "@type": "Organization", name: "Mount Kenya University" } } }), undefined);
   }
 
+  // ---------------- dental section (its own sitemaps, not part of library-sitemap.xml) ----------------
+  try {
+    const { prerenderDental } = await import("../dental/prerender-dental.mjs");
+    console.log(`dental pages: ${await prerenderDental({ fs, path, root, esc, shell, crumbs, write, render })}`);
+  } catch (err) {
+    console.warn("[prerender-library] dental skipped:", err instanceof Error ? err.message : err);
+  }
+
   // ---------------- topic pages (one per subject, built by scripts/topics/build-topics.mjs) ----------------
   const topicPages = prerenderTopics({ fs, path, root, esc, shell, crumbs, write, render });
   console.log(`topic pages: ${topicPages}`);

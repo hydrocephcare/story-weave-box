@@ -36,6 +36,11 @@ export default function DentalHome() {
           ))}
         </div>
       </section>
+      <section className="mt-12" aria-label="Programmes">
+        <h2 className="font-serif text-xl font-bold">Find your programme</h2>
+        <p className="mt-1 flex flex-wrap gap-x-5 gap-y-2">{[...new Set(PAPER_INDEX.flatMap((p) => p.programmes))].sort().map((x) => <Link key={x} to={`/dental/papers?programme=${encodeURIComponent(x)}`} className="text-[15px] font-semibold text-primary hover:underline">{x}</Link>)}</p>
+        <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm"><span className="font-bold text-muted-foreground">By year</span>{[...new Set(PAPER_INDEX.map((p) => p.year).filter(Boolean))].sort().reverse().map((y) => <Link key={y} to={`/dental/papers?year=${y}`} className="font-semibold text-primary hover:underline">{y}</Link>)}</p>
+      </section>
       {recent.length > 0 && (
         <section className="mt-12" aria-label="Latest papers">
           <h2 className="font-serif text-xl font-bold">Latest papers</h2>

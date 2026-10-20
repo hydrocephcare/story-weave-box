@@ -43,7 +43,8 @@
     {
      "t": "q",
      "n": "2",
-     "text": "a) The data shows the height of 80 malnourished kids in Kiambu county height 10-15 15-20 20-25 25-30 30-35 35-40 40-45 Number of kids 5 x 17 20 y 16 4 Given that the median wage is Ksh 27,000 i) Values of x and y ii) Interquartile range (7 Marks)\nb) The following distribution represent marks scored by 210 students in bio statistics test marks Number of students 20-29 21 30-39 31 40-49 39 50-59 51 60-69 29 70-79 24 80-89 15 Determine i) Mean mark ii) Standard deviation iii) Interquartile range iv) Mode (13 Marks)"
+     "text": "a) The data shows the height of 80 malnourished kids in Kiambu county height 10-15 15-20 20-25 25-30 30-35 35-40 40-45 Number of kids 5 x 17 20 y 16 4 Given that the median wage is Ksh 27,000 i) Values of x and y ii) Interquartile range (7 Marks)\nb) The following distribution represent marks scored by 210 students in bio statistics test marks Number of students 20-29 21 30-39 31 40-49 39 50-59 51 60-69 29 70-79 24 80-89 15 Determine i) Mean mark ii) Standard deviation iii) Interquartile range iv) Mode",
+     "marks": 13
     }
    ],
    "footer": "Paper One"
@@ -54,7 +55,8 @@
     {
      "t": "q",
      "n": "3",
-     "text": "a) The cost incurred in maintaining a drug production plant for a period of 8 years is shown Age of plant | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 Cost Ksh 000 | 3 | 5 | 9 | 12 | 14 | 15 | 20 | 28 i) Calculate The Pearson product moment correlation coefficient ii) Interpret the result (10 Marks)\na) Obtain the least squares equation for the data below: x | 4.0 | 4.4 | 4.8 | 4.2 | 5.0 | 5.4 | 5.2 | 5.6 | 5.8 | 6.2 y | 50 | 64 | 66 | 70 | 76 | 82 | 86 | 90 | 94 | 96 (9 Marks)"
+     "text": "a) The cost incurred in maintaining a drug production plant for a period of 8 years is shown Age of plant | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 Cost Ksh 000 | 3 | 5 | 9 | 12 | 14 | 15 | 20 | 28 i) Calculate The Pearson product moment correlation coefficient ii) Interpret the result (10 Marks)\na) Obtain the least squares equation for the data below: x | 4.0 | 4.4 | 4.8 | 4.2 | 5.0 | 5.4 | 5.2 | 5.6 | 5.8 | 6.2 y | 50 | 64 | 66 | 70 | 76 | 82 | 86 | 90 | 94 | 96",
+     "marks": 9
     }
    ],
    "footer": "Paper One"
@@ -80,7 +82,8 @@
     {
      "t": "q",
      "n": "5",
-     "text": "a) Compute quartile deviation from the following data; ci | 10-20 | 20-30 | 30-40 | 40-50 | 50-60 | 60-70 | 80-90 f | 12 | 19 | 5 | 10 | 9 | 6 | 6 (10 Marks)\nb) at an agricultural show 10 high bred bulls were ranked by a qualified judge and by a trainee judge their ranking were given as shown in the table below; Bulls | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 Qualifed Judge | 2 | 4 | 7 | 8 | 10 | 1 | 5 | 9 | 3 |  (missing entry) Trainee Judge | 1 | 3 | 9 | 10 | 7 | 2 | 4 | 8 | 5 | (missing entry) Calculate the spearman's rank Correlation coefficient. (10 Marks)"
+     "text": "a) Compute quartile deviation from the following data; ci | 10-20 | 20-30 | 30-40 | 40-50 | 50-60 | 60-70 | 80-90 f | 12 | 19 | 5 | 10 | 9 | 6 | 6 (10 Marks)\nb) at an agricultural show 10 high bred bulls were ranked by a qualified judge and by a trainee judge their ranking were given as shown in the table below; Bulls | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 Qualifed Judge | 2 | 4 | 7 | 8 | 10 | 1 | 5 | 9 | 3 |  (missing entry) Trainee Judge | 1 | 3 | 9 | 10 | 7 | 2 | 4 | 8 | 5 | (missing entry) Calculate the spearman's rank Correlation coefficient.",
+     "marks": 10
     }
    ],
    "footer": "Paper One"

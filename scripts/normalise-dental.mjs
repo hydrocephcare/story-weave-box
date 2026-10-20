@@ -48,6 +48,9 @@ export function normalisePaper(p) {
   p.title = `${p.unitTitle}: ${p.sitting || "Exam"}${d.label ? `, ${d.label}` : ""}`;
   p.programmes = programmesOf(p.programme);
   const cat = categoryOf(p.unitTitle); p.categorySlug = cat.slug; p.category = cat.name; p.unitSlug = slugify(p.unitTitle);
+  // "(5 Marks)" typed at the end of a question belongs in the marks, not in the wording
+  const stripMarks = (o) => { const m = String(o.text || "").match(/\s*\(\s*(\d+(?:\.\d+)?)\s*marks?\s*\)\s*\.?\s*$/i); if (m) { o.text = o.text.slice(0, m.index).trim(); if (o.marks == null) o.marks = Number(m[1]); } for (const c of o.parts || []) stripMarks(c); };
+  for (const it of p.pages.flatMap((pg) => pg.items)) if (it.t === "q") stripMarks(it);
   // question numbers must run on within a section (the scan sometimes repeats or restarts them)
   let last = null;
   for (const it of p.pages.flatMap((pg) => pg.items)) {

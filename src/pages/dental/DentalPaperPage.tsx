@@ -1,8 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Check, ChevronRight, Eye, EyeOff, FileText, Menu, X } from "lucide-react";
+import { Check, ChevronRight, ClipboardCheck, Eye, EyeOff, FileText, Layers, Menu, Shuffle, Sparkles, X } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
+import HeroAurora from "@/components/HeroAurora";
+import DentalAnswer from "@/components/dental/DentalAnswer";
+import DentalCards from "@/components/dental/DentalCards";
+import DentalSimilar from "@/components/dental/DentalSimilar";
+import { openAI } from "@/lib/aiEvents";
 import PaperSheet from "@/components/dental/PaperSheet";
 import { loadAnswers, loadSeo, type PaperSeo } from "@/lib/dentalAnswers";
 import { answerUnits } from "@/lib/dentalKeys";
@@ -14,17 +19,7 @@ type Rating = "got" | "missed";
 const plain = (md: string) => md.replace(/\*\*/g, "").replace(/^\s*[-•*]\s+/gm, "").replace(/\s*\n\s*/g, ". ").replace(/\.\.+/g, ".").trim();
 const marksLabel = (m?: number | null) => (m ? <span className="shrink-0 text-sm font-semibold text-muted-foreground">{m} mark{m === 1 ? "" : "s"}</span> : null);
 
-/** A model answer: lines starting with "- " become bullets, **bold** is kept. */
-function Answer({ text }: { text: string }) {
-  const bold = (t: string) => t.split(/(\*\*[^*]+\*\*)/g).map((x, i) => (x.startsWith("**") && x.endsWith("**") ? <strong key={i}>{x.slice(2, -2)}</strong> : x));
-  const bullet = /^\s*[-•*]\s+/;
-  return (
-    <div className="mt-2 space-y-1.5 border-l-2 border-emerald-500/60 pl-4 text-[15.5px] leading-relaxed">
-      <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-emerald-600 dark:text-emerald-400">Model answer</p>
-      {text.replace(/\\n/g, "\n").split("\n").filter((l) => l.trim()).map((l, i) => (bullet.test(l) ? <p key={i} className="flex gap-2"><span className="text-primary">•</span><span>{bold(l.replace(bullet, ""))}</span></p> : <p key={i} className="font-semibold">{bold(l)}</p>))}
-    </div>
-  );
-}
+const Answer = DentalAnswer;
 
 function SubParts({ parts }: { parts?: PaperPart[] }) {
   if (!parts?.length) return null;
@@ -55,6 +50,8 @@ function AnswerArea({ k, answers, test, shown, toggle, ratings, rate }: { k: str
 }
 
 /** One dental past paper, set out question by question with each answer straight under it, plus a button that shows the paper as it was printed. */
+const pill = "inline-flex h-11 items-center gap-2 rounded-full border border-border bg-background px-5 text-sm font-bold transition hover:border-primary/60 hover:bg-primary/5 active:scale-[.97]";
+
 export default function DentalPaperPage() {
   const { slug = "" } = useParams();
   const [paper, setPaper] = useState<DentalPaper | null | undefined>(undefined);
@@ -64,6 +61,8 @@ export default function DentalPaperPage() {
   const [test, setTest] = useState(false);
   const [shown, setShown] = useState<Set<string>>(new Set());
   const [ratings, setRatings] = useState<Record<string, Rating>>({});
+  const [cardsOpen, setCardsOpen] = useState(false);
+  const [simOpen, setSimOpen] = useState(false);
   useEffect(() => {
     let on = true; setPaper(undefined); setAnswers({}); setSeo(null); setShown(new Set()); setTest(false);
     try { setRatings(JSON.parse(localStorage.getItem(`dental_study_${slug}`) || "{}")); } catch { setRatings({}); }
@@ -103,12 +102,13 @@ export default function DentalPaperPage() {
 
   const QuestionRow = (it: PaperItem, i: number) => {
     const us = answerUnits(it);
-    const area = (k: string) => <AnswerArea k={k} answers={answers} test={test} shown={shown} toggle={toggle} ratings={ratings} rate={rate} />;
+    const txt = (k: string) => units.find((u) => u.key === k)?.text ?? "";
+    const area = (k: string) => <><AnswerArea k={k} answers={answers} test={test} shown={shown} toggle={toggle} ratings={ratings} rate={rate} /><button type="button" onClick={() => openAI(`Help me answer this ${paper.unitTitle} exam question in points: ${txt(k)}`)} className="mt-1.5 inline-flex items-center gap-1 text-xs font-bold text-muted-foreground hover:text-primary"><Sparkles className="h-3 w-3" aria-hidden />Ask AI</button></>;
     return (
       <li key={i} id={`q${it.n}`} className="mt-8 list-none scroll-mt-20">
         <div className="flex items-baseline justify-between gap-3">
           <p className="min-w-0 flex-1 text-[17px] leading-relaxed"><span className="mr-2 font-serif text-lg font-bold text-primary">{it.n}.</span>{it.text}</p>
-          {!it.parts?.length && marksLabel(it.marks)}
+          {marksLabel(it.marks)}
         </div>
         {!it.parts?.length ? area(us[0].key) : (
           <div className="mt-3 space-y-5 border-l-2 border-primary/25 pl-4">
@@ -136,21 +136,32 @@ export default function DentalPaperPage() {
         <meta name="twitter:card" content="summary" /><meta name="twitter:title" content={paper.title} /><meta name="twitter:description" content={desc.slice(0, 200)} />
         <script type="application/ld+json">{JSON.stringify(ld)}</script>
       </Helmet>
-      <main className="mx-auto max-w-3xl px-5 pb-28 pt-8 sm:px-6 sm:pt-12">
-        <nav className="flex flex-wrap items-center gap-1 text-xs text-muted-foreground" aria-label="Breadcrumb">
-          <Link to="/dental" className="hover:text-foreground">Dental</Link><ChevronRight className="h-3 w-3" />
-          <Link to={`/dental/category/${catSlug}`} className="hover:text-foreground">{paper.category || "Past papers"}</Link><ChevronRight className="h-3 w-3" />
-          <Link to={`/dental/units/${paper.unitSlug}`} className="truncate text-foreground hover:underline">{paper.unitTitle}</Link>
-        </nav>
-        <p className="mt-5 text-xs font-bold uppercase tracking-[0.2em] text-primary">{paper.university} · {paper.department || paper.school}</p>
-        <h1 className="mt-1 font-serif text-3xl font-bold leading-tight sm:text-4xl">{paper.unitTitle}</h1>
-        <p className="mt-1 text-lg font-semibold text-muted-foreground">{paper.sitting || "Exam"}{when ? ` · ${when}` : ""}</p>
-        {(paper.programmes?.length ? paper.programmes : [paper.programme]).filter(Boolean).length > 0 && <p className="mt-2 text-[15px] text-muted-foreground">{(paper.programmes?.length ? paper.programmes : [paper.programme]).join(" · ")}</p>}
+      <header className="topic-hero relative isolate overflow-hidden border-b border-border/60">
+        <HeroAurora about={`${paper.unitTitle} ${paper.category ?? ""}`} />
+        <div className="mx-auto max-w-4xl px-5 pb-8 pt-8 sm:pb-12 sm:pt-12">
+          <nav className="flex flex-wrap items-center gap-1 text-xs font-semibold text-muted-foreground" aria-label="Breadcrumb">
+            <Link to="/dental" className="hover:text-primary">Dental</Link><ChevronRight className="h-3 w-3" />
+            <Link to={`/dental/category/${catSlug}`} className="hover:text-primary">{paper.category || "Past papers"}</Link><ChevronRight className="h-3 w-3" />
+            <Link to={`/dental/units/${paper.unitSlug}`} className="text-foreground hover:text-primary">{paper.unitTitle}</Link>
+          </nav>
+          <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{paper.university} · {paper.department || paper.school}</p>
+          <h1 className="mt-2 max-w-3xl font-serif text-4xl font-bold leading-[1.08] text-foreground sm:text-6xl">{paper.unitTitle}</h1>
+          <p className="mt-3 text-sm font-semibold text-muted-foreground">{paper.sitting || "Exam"}{when ? ` · ${when}` : ""} · {q} questions{marks ? ` · ${marks} marks` : ""}{paper.duration ? ` · ${paper.duration}` : ""}</p>
+          {(paper.programmes?.length ? paper.programmes : [paper.programme]).filter(Boolean).join(" · ") ? <p className="mt-4 max-w-3xl text-lg leading-[1.6] text-foreground/85 sm:text-xl">{(paper.programmes?.length ? paper.programmes : [paper.programme]).filter(Boolean).join(" · ")}</p> : null}
+          {seo?.topics?.length ? <p className="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-sm"><span className="font-bold text-muted-foreground">Topics:</span>{seo.topics.map((t) => <span key={t} className="font-semibold text-primary">{t}</span>)}</p> : null}
+          <div className="mt-6 flex flex-wrap gap-2">
+            <button type="button" onClick={() => setCardsOpen(true)} className={pill}><Layers className="h-4 w-4 text-primary" aria-hidden />Flashcards</button>
+            <button type="button" onClick={() => { setTest(true); document.getElementById("paper-body")?.scrollIntoView({ behavior: "smooth" }); }} className={pill}><ClipboardCheck className="h-4 w-4 text-primary" aria-hidden />Test myself</button>
+            <button type="button" onClick={() => setSimOpen(true)} className={pill}><Shuffle className="h-4 w-4 text-primary" aria-hidden />Practice paper like this</button>
+            <button type="button" onClick={() => openAI(`Quiz me on ${paper.unitTitle} like this past paper`)} className={pill}><Sparkles className="h-4 w-4 text-primary" aria-hidden />Ask AI</button>
+          </div>
+        </div>
+      </header>
+      <main id="paper-body" className="mx-auto max-w-3xl px-5 pb-28 pt-8 sm:px-6">
         <dl className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 border-y border-border py-4 text-sm sm:grid-cols-4">
           {[["Unit code", paper.unitCode], ["Sitting", paper.sitting], ["Time", paper.duration], ["Questions", `${q}${marks ? ` · ${marks} marks` : ""}`]].filter(([, v]) => v).map(([k, v]) => <div key={k}><dt className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{k}</dt><dd className="mt-0.5 font-semibold">{v}</dd></div>)}
         </dl>
         {paper.instructions && <p className="mt-5 text-[14px] font-semibold uppercase leading-snug text-muted-foreground">Instructions: {paper.instructions}</p>}
-        {seo?.topics?.length ? <p className="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-sm"><span className="font-bold text-muted-foreground">Topics:</span>{seo.topics.map((t) => <span key={t} className="font-semibold text-primary">{t}</span>)}</p> : null}
         {!paper.complete && <p className="mt-4 text-sm text-amber-600 dark:text-amber-400">{paper.note || "Part of this paper was not readable in the scan, so some questions may be missing."}</p>}
 
         <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
@@ -160,7 +171,7 @@ export default function DentalPaperPage() {
           <span className="font-semibold text-emerald-600 dark:text-emerald-400">{ready} of {units.length} answers ready</span>
           {test && rated.length > 0 && <span className="text-muted-foreground">Self-check: {rated.filter((r) => r === "got").length} got it · {rated.filter((r) => r === "missed").length} missed</span>}
         </div>
-        {nav.length > 3 && <p className="mt-4 flex flex-wrap items-center gap-1.5 text-sm" aria-label="Jump to a question"><span className="mr-1 font-bold text-muted-foreground">Jump to</span>{nav.map((it, i) => <a key={i} href={`#q${it.n}`} className="rounded-full bg-muted px-2.5 py-0.5 font-bold text-muted-foreground hover:text-foreground">{it.n}</a>)}</p>}
+        {nav.length > 3 && <nav aria-label="In this paper" className="mt-6"><p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">In this paper</p><ol className="mt-2 space-y-1 text-[15px]">{nav.map((it, k) => <li key={k}><a href={`#q${it.n}`} className="text-muted-foreground hover:text-primary"><span className="mr-2 font-bold text-primary">{it.n}.</span>{(it.text || it.parts?.[0]?.text || "").slice(0, 90)}</a></li>)}</ol></nav>}
 
         <ul className="mt-2">{items.map((it, i) => it.t === "h" ? <h2 key={i} className="mt-10 border-b border-border pb-1 text-[13px] font-bold uppercase tracking-[0.12em] text-primary">{it.text}{it.marks ? ` · ${it.marks} marks` : ""}</h2> : it.t === "p" ? <p key={i} className="mt-3 text-[15px] italic text-muted-foreground">{it.text}</p> : QuestionRow(it, i))}</ul>
         {ready < units.length && <p className="mt-10 text-sm text-muted-foreground">The remaining answers are being written and will appear here as they are ready.</p>}
@@ -176,6 +187,8 @@ export default function DentalPaperPage() {
       <button type="button" onClick={() => setView(true)} aria-label="See this paper as it was printed" className="fixed right-0 top-1/2 z-40 flex -translate-y-1/2 flex-col items-center gap-1 rounded-l-2xl bg-primary px-2.5 py-3 text-primary-foreground shadow-lg">
         <Menu className="h-5 w-5" /><span className="text-[10px] font-bold uppercase tracking-wider [writing-mode:vertical-rl]">Paper view</span>
       </button>
+      <DentalCards open={cardsOpen} onOpenChange={setCardsOpen} cards={units.filter((u) => answers[u.key]).map((u) => ({ key: u.key, front: u.text, back: answers[u.key] }))} ratings={ratings} rate={rate} />
+      <DentalSimilar open={simOpen} onOpenChange={setSimOpen} slug={paper.slug} unit={paper.unitTitle} />
       <Sheet open={view} onOpenChange={setView}>
         <SheetContent side="bottom" className="flex h-[94dvh] flex-col gap-0 rounded-t-3xl bg-neutral-200 p-0 dark:bg-neutral-800">
           <SheetTitle className="sr-only">{paper.title} as printed</SheetTitle>

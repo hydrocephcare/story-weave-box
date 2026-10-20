@@ -9,9 +9,13 @@ export default function DentalPapers() {
   const [params] = useSearchParams();
   const [q, setQ] = useState(() => params.get("q") ?? "");
   const [group, setGroup] = useState("");
+  const [year, setYear] = useState(() => params.get("year") ?? "");
+  const [prog, setProg] = useState(() => params.get("programme") ?? "");
+  const years = useMemo(() => [...new Set(PAPER_INDEX.map((p) => p.year).filter(Boolean))].sort().reverse(), []);
+  const progs = useMemo(() => [...new Set(PAPER_INDEX.flatMap((p) => p.programmes))].sort(), []);
   const groupNames = useMemo(() => [...new Set(PAPER_INDEX.map((p) => p.group))], []);
   const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
-  const list = useMemo(() => PAPER_INDEX.filter((p) => (!group || p.group === group) && needles.every((w) => `${p.title} ${p.unitCode} ${p.unitTitle} ${p.date} ${p.programme} ${p.sitting}`.toLowerCase().includes(w))), [q, group]); // eslint-disable-line react-hooks/exhaustive-deps
+  const list = useMemo(() => PAPER_INDEX.filter((p) => (!group || p.group === group) && (!year || p.year === year) && (!prog || p.programmes.includes(prog)) && needles.every((w) => `${p.title} ${p.unitCode} ${p.unitTitle} ${p.date} ${p.programme} ${p.sitting}`.toLowerCase().includes(w))), [q, group, year, prog]); // eslint-disable-line react-hooks/exhaustive-deps
   const groups = useMemo(() => {
     const m = new Map<string, PaperMeta[]>();
     for (const p of list) (m.get(p.unitTitle) ?? m.set(p.unitTitle, []).get(p.unitTitle)!).push(p);
@@ -39,6 +43,11 @@ export default function DentalPapers() {
           {["", ...groupNames].map((g) => <button key={g || "all"} type="button" role="tab" aria-selected={group === g} onClick={() => setGroup(g)} className={`shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-xs font-bold ${group === g ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground hover:text-foreground"}`}>{g || "All"}</button>)}
         </div>
       )}
+      <div className="mt-3 flex flex-wrap gap-3 text-sm">
+        <select value={year} onChange={(e) => setYear(e.target.value)} aria-label="Year" className="h-10 rounded-full border border-input bg-background px-4 font-semibold"><option value="">Any year</option>{years.map((y) => <option key={y} value={y}>{y}</option>)}</select>
+        <select value={prog} onChange={(e) => setProg(e.target.value)} aria-label="Programme" className="h-10 max-w-full rounded-full border border-input bg-background px-4 font-semibold"><option value="">Any programme</option>{progs.map((x) => <option key={x} value={x}>{x}</option>)}</select>
+        {(year || prog || group || q) && <button type="button" onClick={() => { setYear(""); setProg(""); setGroup(""); setQ(""); }} className="font-bold text-primary hover:underline">Clear filters</button>}
+      </div>
       {groups.length === 0 ? <p className="mt-12 text-center text-sm text-muted-foreground">No papers match that.</p> : (
         <div className="mt-6 space-y-8">
           {groups.map(([unit, rows]) => (
