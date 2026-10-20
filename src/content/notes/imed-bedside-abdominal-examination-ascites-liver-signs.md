@@ -179,3 +179,26 @@ Only state findings you actually assessed; adjust the wording to the examination
 - [Shifting dullness teaching illustration](https://www.slideserve.com/elani/medical-abdomen-powerpoint-ppt-presentation)
 
 **Next topic:** CNS examination — mental status, cranial nerves, tone, power, reflexes, sensation, coordination, gait and meningeal signs.
+## 13. Additional abdominal signs and special tests
+
+These manoeuvres are selected according to the history and suspected diagnosis; do not perform every special test routinely or force a painful movement.
+
+### Organ palpation
+- **Liver:** start in the right lower abdomen and move upward toward the right costal margin while the patient inspires. Describe how far the edge is below the costal margin, tenderness, surface and consistency where assessable.
+- **Spleen:** begin in the right iliac fossa and palpate diagonally toward the left costal margin during inspiration. An enlarged spleen may descend toward the right lower abdomen; a palpable notch can help distinguish it from other masses.
+- **Kidneys:** bimanual ballotment may help feel an enlarged kidney. Assess renal angle tenderness by gentle percussion if kidney infection or stone is suspected.
+- **Aorta:** in an appropriate patient, assess for an expansile pulsation; do not repeatedly or forcefully palpate a suspected abdominal aortic aneurysm.
+
+### Common named signs
+- **Murphy sign:** ask the patient to breathe out, palpate under the right costal margin, then ask them to breathe in. Inspiratory arrest due to pain can support acute cholecystitis.
+- **McBurney-point tenderness:** tenderness in the right lower quadrant near the classic appendiceal point can support appendicitis but is not diagnostic by itself.
+- **Rovsing sign:** left lower quadrant palpation provoking right lower quadrant pain may support appendicitis.
+- **Psoas and obturator signs:** selected movements that provoke pain may support irritation near the appendix; sensitivity is limited.
+- **Renal angle tenderness:** may occur in pyelonephritis or renal/ureteric disease, but is not specific.
+- **Rebound tenderness/guarding:** may indicate peritoneal irritation. Avoid repeatedly eliciting rebound; urgent clinical assessment is needed if peritonitis is suspected.
+
+### Chronic liver disease: signs to know
+Inspect for jaundice, spider naevi, palmar erythema, bruising, muscle wasting, gynaecomastia, testicular atrophy where appropriate, parotid enlargement, leukonychia, and abdominal wall veins/caput medusae. These signs are variably present and not individually diagnostic. Look also for splenomegaly, ascites and peripheral oedema. Asterixis suggests a metabolic/toxic encephalopathy and is not specific to hepatic disease.
+
+### Abdominal presentation: a fuller template
+“The abdomen is [flat/distended], with [scars/veins/striae] and the umbilicus ___. Bowel sounds are ___. Percussion is ___, with liver span approximately ___ cm by percussion. The abdomen is [soft/guarded] and [non-tender/tender at ___]. I can/cannot palpate the liver or spleen; there are [no/present] masses. Shifting dullness is [negative/positive] and a fluid thrill is [negative/positive] if tested. There is [no/present] peripheral oedema or other signs of chronic liver disease.” Adapt this to what you actually examined and your local OSCE checklist.
