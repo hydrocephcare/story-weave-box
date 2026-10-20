@@ -101,7 +101,7 @@ export function ArticleNav({ id, category, createdAt }: { id: string; category: 
         const me = createdAt ? { created_at: createdAt } : (await db.from("articles").select("created_at").eq("id", id).maybeSingle()).data;
         if (!me?.created_at) return;
         const [p, n] = await Promise.all([base().lt("created_at", me.created_at).order("created_at", { ascending: false }).limit(1), base().gt("created_at", me.created_at).order("created_at", { ascending: true }).limit(1)]);
-        const t = (r: { id: string; title: string; slug: string | null; category: string } | undefined): NavTarget | null => (r ? { title: cleanTopicTitle(r.title), sub: r.category.replace(/^Years*ds*:s*/i, ""), to: buildBlogPath(r) } : null);
+        const t = (r: { id: string; title: string; slug: string | null; category: string } | undefined): NavTarget | null => (r ? { title: cleanTopicTitle(r.title), sub: r.category.replace(/^Year\s*\d\s*:\s*/i, ""), to: buildBlogPath(r) } : null);
         if (on) setPair({ prev: t(p.data?.[0]), next: t(n.data?.[0]) });
       } catch { /* no neighbours */ }
     })();

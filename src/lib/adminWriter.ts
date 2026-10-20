@@ -64,9 +64,35 @@ export const thumbFor = (title: string, kind: string, year?: number | null, unit
 
 export interface Published { id: string; href: string; url: string; thumb: string; title: string; table: "articles" | "mcq_sets" | "flashcard_sets"; published: boolean }
 
+/** A long note reads badly: it is cut at its headings into parts of about 8,000 characters, one subject at a time. */
+export function splitLongNote(content: string, max = 11000, target = 8000): string[] {
+  if (content.length <= max) return [content];
+  const lines = content.replace(/\r\n/g, "\n").split("\n");
+  const sections: string[] = []; let cur: string[] = [];
+  for (const l of lines) { if (/^#{2,3}\s/.test(l) && cur.join("\n").length > 1500) { sections.push(cur.join("\n")); cur = []; } cur.push(l); }
+  if (cur.length) sections.push(cur.join("\n"));
+  const parts: string[] = []; let acc = "";
+  for (const sec of sections) { if (acc && (acc + "\n" + sec).length > target) { parts.push(acc); acc = sec; } else acc = acc ? acc + "\n" + sec : sec; }
+  if (acc) { if (parts.length && acc.length < 2500) parts[parts.length - 1] += "\n" + acc; else parts.push(acc); }
+  return parts;
+}
+
 /** Saves with the same function the editor uses, so slug, tags, search description and share picture are filled in the same way. */
 export async function publishDraft(d: Draft, publish: boolean): Promise<Published> {
   if (d.type === "note") {
+    const parts = splitLongNote(d.content);
+    if (parts.length > 1) {
+      // one subject at a time: each part is its own note, published in order so the previous/next links follow the series
+      let first: Published | null = null;
+      for (let i = 0; i < parts.length; i++) {
+        const lead = i === 0 ? "" : `## ${d.title}: part ${i + 1} of ${parts.length}\n\n`;
+        const tail = i < parts.length - 1 ? `\n\n**Next: part ${i + 2} of ${parts.length}** continues with the next topic in this series.` : "";
+        const title = `${d.title} (part ${i + 1} of ${parts.length})`;
+        const saved = await saveArticle({ title, content: lead + parts[i] + tail, published: publish, original_notes: i === 0 ? d.raw : "", category: d.category || "", is_raw: false, meta_title: d.meta_title, meta_description: d.meta_description, tags: d.tags } as any);
+        if (!first) { const href = buildBlogPath(saved); first = { id: saved.id, href, url: SITE + href, thumb: thumbFor(title, "Notes", d.year, d.category.replace(/^Year\s*\d+:\s*/i, "")), title: `${title} and ${parts.length - 1} more part${parts.length > 2 ? "s" : ""}`, table: "articles", published: publish }; }
+      }
+      return first!;
+    }
     const saved = await saveArticle({
       title: d.title, content: d.content, published: publish, original_notes: d.raw, category: d.category || "", is_raw: false,
       meta_title: d.meta_title, meta_description: d.meta_description, tags: d.tags,

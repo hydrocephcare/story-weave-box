@@ -25,7 +25,7 @@ Use only facts that are in the note; never invent numbers, doses or criteria. Qu
 
 /** Drops a card whose question and answer share most of their words with a card already kept (the same fact asked twice). */
 function dedupe<T extends { question: string; answer: string }>(cards: T[]): T[] {
-  const bag = (t: string) => new Set(t.toLowerCase().replace(/[^a-z0-9s]/g, " ").split(/s+/).filter((w) => w.length > 3));
+  const bag = (t: string) => new Set(t.toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((w) => w.length > 3));
   const kept: { c: T; q: Set<string>; a: Set<string> }[] = [];
   const sim = (x: Set<string>, y: Set<string>) => { if (!x.size || !y.size) return 0; let n = 0; for (const w of x) if (y.has(w)) n++; return n / Math.min(x.size, y.size); };
   for (const c of cards) {

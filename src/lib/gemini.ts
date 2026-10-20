@@ -40,7 +40,7 @@ export async function generateFlashcards(
 /** The right answer must not sit in a predictable place: options are shuffled (unless they refer to each other, like "All of the above"). */
 export function shuffleOptions<T extends { options: string[]; correct_answer: number }>(q: T): T {
   const o = q.options || [];
-  if (o.length < 3 || o.some((x) => /(all|none|both|neither).*(above|these|options?)|[a-e]s*(and|&|,)s*[a-e]/i.test(x))) return q;
+  if (o.length < 3 || o.some((x) => /\b(all|none|both|neither)\b.*\b(above|these|options?)\b|^\s*[a-e]\s*(and|&|,)\s*[a-e]\s*$/i.test(x))) return q;
   const idx = o.map((_, i) => i);
   for (let i = idx.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [idx[i], idx[j]] = [idx[j], idx[i]]; }
   return { ...q, options: idx.map((i) => o[i]), correct_answer: idx.indexOf(q.correct_answer) };
