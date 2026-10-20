@@ -446,25 +446,20 @@ export default function Admin() {
 
   // pages that live at their own address: listed here so they are not hidden
   const pageLinks: { id: string; label: string; icon: React.ElementType }[] = [
-    { id: "route:/admin/duplicates", label: "Repeated pages", icon: Layers },
     { id: "route:/admin/comments", label: "Comments", icon: Bell },
     { id: "route:/admin/drafts", label: "AI notes to approve", icon: Sparkles },
     { id: "route:/admin/autopilot", label: "Autopilot", icon: Bot },
     { id: "route:/admin/activity", label: "Activity & AI keys", icon: Search },
     { id: "route:/admin/analytics", label: "Visitors", icon: Globe },
-    { id: "route:/admin/polish", label: "Polished blogs", icon: Wrench },
-    { id: "route:/admin/content-health", label: "Content health", icon: AlertTriangle },
     { id: "route:/admin/monetise", label: "Monetise", icon: Settings },
-    { id: "route:/admin/outline-sync", label: "Course outline sync", icon: Layers },
     { id: "route:/admin/study-system", label: "Study system", icon: BookOpen },
     { id: "route:/admin/contests", label: "Contests", icon: ListChecks },
-    { id: "route:/admin/tools", label: "All admin tools", icon: Settings },
   ];
   const tabGroups = [
     { label: "Open next", items: pageLinks as unknown as typeof tabs },
     { label: "Content", items: tabs.filter(t => ["create","unedited","editor","articles","categories","flashcards","mcqs","stories","exams","corrections"].includes(t.id)) },
-    { label: "Tools", items: tabs.filter(t => ["meta-manager","upgrade","cleanup","seo","note-quality","ai-questions"].includes(t.id)) },
-    { label: "Data", items: tabs.filter(t => ["raw","import"].includes(t.id)) },
+    { label: "Tools", items: tabs.filter(t => ["seo","note-quality","ai-questions"].includes(t.id)) },
+    { label: "Data", items: tabs.filter(t => ["import"].includes(t.id)) },
     { label: "System", items: tabs.filter(t => ["institutions","payments","notifications","students","google-drive","ai-health","site-manager","settings"].includes(t.id)) },
   ];
 

@@ -51,9 +51,11 @@ async function wikiLead(subject: string, keys: string[]): Promise<{ url: string;
     const url: string = String(pg.thumbnail?.source || "").replace("https://thumb.wikimedia.org", "https://upload.wikimedia.org").split("?")[0];
     if (!url || !/\/wikipedia\/commons\//.test(url) || /[()\s\]]/.test(url) || BAD.test(url)) continue;
     const t = title.toLowerCase();
-    if (!keys.length || !keys.every((k) => t.includes(k))) continue;
+    // the article's title must carry the subject: all of its key words, or its most specific (longest) one
+    const longest = [...keys].sort((x, y) => y.length - x.length)[0];
+    if (!keys.length || !(keys.every((k) => t.includes(k)) || (longest && longest.length >= 7 && t.includes(longest)))) continue;
     const desc = String(pg.terms?.description?.[0] || "");
-    if (!/disease|disorder|syndrome|condition|medical|anatom|organ|bone|muscle|artery|vein|nerve|gland|cell|tissue|infection|cancer|tumou?r|drug|medication|procedure|test|symptom|sign|hormone|virus|bacteri|parasite|vitamin|protein|enzyme|growth|development/i.test(desc)) continue;
+    if (!MEDICAL.test(desc)) continue;
     return { url, title, caption: `${title} · Image from the Wikipedia article, Wikimedia Commons`.replace(/[\[\]()\n]/g, " ") };
   }
   return null;
@@ -64,9 +66,11 @@ const MEDICAL = /disease|disorder|syndrome|condition|medical|medicine|anatom|org
 /** Wikipedia articles whose title is exactly one of the terms (redirects followed): the lead picture of an article about exactly that subject, free licence only. */
 async function wikiExact(terms: string[]): Promise<Map<string, { url: string; title: string }>> {
   const out = new Map<string, { url: string; title: string }>();
-  for (let i = 0; i < terms.length; i += 40) {
-    const chunk = terms.slice(i, i + 40);
-    const p = new URLSearchParams({ action: "query", format: "json", redirects: "1", titles: chunk.join("|"), prop: "pageimages|pageterms", piprop: "thumbnail", pithumbsize: "900", wbptterms: "description" });
+  const sentence = (t: string) => t.charAt(0).toUpperCase() + t.slice(1).toLowerCase();
+  for (let i = 0; i < terms.length; i += 24) {
+    const chunk = terms.slice(i, i + 24);
+    const lookups = [...new Set(chunk.flatMap((t) => [t, sentence(t)]))];   // Wikipedia titles are case-sensitive after the first letter: "Fluid and electrolyte disorders"
+    const p = new URLSearchParams({ action: "query", format: "json", redirects: "1", titles: lookups.join("|"), prop: "pageimages|pageterms", piprop: "thumbnail", pithumbsize: "900", wbptterms: "description" });
     const r = await fetch(`https://en.wikipedia.org/w/api.php?${p}`, { headers: { "User-Agent": "OmpathStudy/1.0 (https://www.ompathstudy.com)" } });
     if (!r.ok) continue;
     const q = (await r.json())?.query ?? {};
@@ -75,12 +79,15 @@ async function wikiExact(terms: string[]): Promise<Map<string, { url: string; ti
     for (const n of q.redirects ?? []) alias.set(n.from, n.to);
     const byTitle = new Map<string, any>(Object.values(q.pages ?? {}).map((pg: any) => [pg.title, pg]));
     for (const t of chunk) {
-      let to = t; for (let k = 0; k < 3 && alias.has(to); k++) to = alias.get(to)!;
-      const pg = byTitle.get(to);
-      const url: string = String(pg?.thumbnail?.source || "").replace("https://thumb.wikimedia.org", "https://upload.wikimedia.org").split("?")[0];
-      if (!pg || !url || !/\/wikipedia\/commons\//.test(url) || /[()\s\]]/.test(url) || BAD.test(url)) continue;
-      if (!MEDICAL.test(String(pg.terms?.description?.[0] || ""))) continue;
-      out.set(t, { url, title: pg.title });
+      for (const want of [t, sentence(t)]) {
+        let to = want; for (let k = 0; k < 3 && alias.has(to); k++) to = alias.get(to)!;
+        const pg = byTitle.get(to);
+        const url: string = String(pg?.thumbnail?.source || "").replace("https://thumb.wikimedia.org", "https://upload.wikimedia.org").split("?")[0];
+        if (!pg || !url || !/\/wikipedia\/commons\//.test(url) || /[()\s\]]/.test(url) || BAD.test(url)) continue;
+        if (!MEDICAL.test(String(pg.terms?.description?.[0] || ""))) continue;
+        out.set(t, { url, title: pg.title });
+        break;
+      }
     }
   }
   return out;
@@ -127,7 +134,7 @@ serve(async (req) => {
     const lines = String(a.content).replace(/\r\n/g, "\n").split("\n");
     const head = cleanTopicTitle(a.title).split(/[:—–]/)[0].trim();
     const titleKeys = words(head);
-    const GENERIC = new Set("definition definitions causes cause features clinical investigations investigation treatment complications prognosis prevention diagnosis history examination general principles factors other points common screening tests drugs summary introduction overview classification types management approach evaluation".split(" "));
+    const GENERIC = new Set("slide slides definition definitions causes cause features clinical investigations investigation treatment complications prognosis prevention diagnosis history examination general principles factors other points common screening tests drugs summary introduction overview classification types management approach evaluation".split(" "));
     // a section gets a picture only when its heading names something specific (a condition, structure, chart or sign), searched on its own
     const heads = lines.map((l, i) => ({ i, h: ((l.match(/^#{2,4}\s+(?:\d+[.)]\s*)?(.+?)\s*$/) || [])[1] || "").replace(/\*+/g, "") }))
       .filter((x) => x.h && x.i > 3 && !/^(references?|common exam|key points?|exam|questions?|mcqs?)/i.test(x.h))
@@ -144,8 +151,8 @@ serve(async (req) => {
       const add = (term: string, lineNo: number) => {
         const t = term.replace(/\(.*?\)/g, " ").replace(/[^A-Za-z0-9' -]/g, " ").replace(/\s+/g, " ").trim();
         const n = t.split(" ").length;
-        if (t.length < 4 || n > 4 || GENERIC.has(t.toLowerCase()) || /^(part|section|table|figure|note|key|why|what|how|when|signs?|causes?|red flags?)\b/i.test(t)) return;
-        const sec = secOf(lineNo); if (!sec || sec.i < 3) return;
+        if (t.length < 4 || n > 4 || GENERIC.has(t.toLowerCase()) || /^(part|section|slide|table|figure|note|key|why|what|how|when|signs?|causes?|red flags?)\b/i.test(t)) return;
+        const sec = secOf(lineNo); if (!sec || sec.i < 1) return;
         if (!cand.some((c) => c.term.toLowerCase() === t.toLowerCase())) cand.push({ term: t.charAt(0).toUpperCase() + t.slice(1), sec: sec.i });
       };
       lines.forEach((l, i) => {
@@ -153,6 +160,10 @@ serve(async (req) => {
         if (hm) { const h = hm[1].replace(/\*+/g, ""); add(h.split(/[:—–(]/)[0], i); h.split(/\s*(?:,| and | or |\/)\s*/).forEach((s2) => add(s2, i)); }
         else for (const b of l.matchAll(/\*\*([^*]{3,40})\*\*/g)) add(b[1].replace(/[:.]$/, ""), i);
       });
+      // the note's own subject (a slide-deck title such as "3b hemochromatosis.pptx-wk11" is cleaned to "Hemochromatosis"), first in line, in the first section
+      const titleTerm = head.replace(/^\s*\d+\s*[a-z]?\s*[.):-]?\s+/i, "").replace(/\.(pptx?|pdf|docx?).*$/i, "").replace(/[-_ ]wk\s*\d+.*$/i, "").trim();
+      const firstSec = allHeads.find((h) => h.i >= 1);
+      if (titleTerm && firstSec) { const before = cand.length; add(titleTerm, firstSec.i); if (cand.length > before) { const t0 = cand.pop()!; cand.unshift(t0); } }
       const found = await wikiExact(cand.map((c) => c.term).slice(0, 120));
       const takenSec = new Set<number>();
       for (const c of cand) {
@@ -186,11 +197,12 @@ serve(async (req) => {
       picked.push({ i: sec.i, line: `![${cap}](${c.url.split("?")[0]})`, why: c.title });
     }
     // no section had a picture it could be sure of: use the lead picture of the Wikipedia article on the note's subject, so no note is left without one
-    if (!picked.length && !aiDown) {
+    if (!picked.length) {
       try {
-        const lead = await wikiLead(head, titleKeys);
+        const subject = head.replace(/^\s*\d+\s*[a-z]?\s*[.):-]?\s+/i, "").replace(/\.(pptx?|pdf|docx?).*$/i, "").replace(/[-_ ]wk\s*\d+.*$/i, "").trim() || head;
+        const lead = await wikiLead(subject, words(subject));
         if (lead) {
-          const first = lines.findIndex((l, i) => i > 2 && /^#{2,4}\s/.test(l));
+          const first = lines.findIndex((l, i) => i >= 1 && /^#{2,4}\s/.test(l));
           if (first > 0) { picked.push({ i: first, line: `![${lead.caption}](${lead.url})`, why: `Wikipedia: ${lead.title}` }); trace.push(`lead picture: ${lead.title}`); }
         }
       } catch { /* no lead picture */ }
