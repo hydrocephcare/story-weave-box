@@ -17,7 +17,11 @@ export const slugify = (s) => String(s).toLowerCase().replace(/&/g, "and").repla
 function inline(text) {
   let t = esc(text);
   // [text](/path) is an in-site link (class note-link, so the note page can remember where you were);
-  // [text](https://...) opens in a new tab. Only those two forms are allowed.
+  // Markdown images must be handled before links, otherwise ![alt](url) becomes a broken text/link.
+  // Restrict remote images to HTTPS so notes cannot load insecure mixed-content resources.
+  t = t.replace(/!\[([^\]]*)\]\((https:\/\/[^)\s]+)\)/g, (_, alt, src) =>
+    `<img class="note-inline-image" src="${src}" alt="${alt}" loading="lazy" decoding="async" referrerpolicy="no-referrer" />`);
+  // [text](https://...) opens in a new tab.
   t = t.replace(/\[([^\]]+)\]\((\/[^)\s]*|https?:\/\/[^)\s]+)\)/g, (_, label, href) => (href.startsWith("/")
     ? `<a class="note-link" href="${href}">${label}</a>`
     : `<a href="${href}" target="_blank" rel="noopener noreferrer">${label}</a>`));
@@ -216,9 +220,9 @@ export function mdToHtml(source, { skipTitle = false, questions = false } = {}) 
       if (questions && level <= 3 && CARD_HEADING.test(h[2].replace(/\*+/g, "").replace(/^\d+\.\s*/, "").trim())) { out.push('<div class="note-card">'); card = true; }
       i++; continue;
     }
-    // a picture on its own line: ![caption and credit](https://upload.wikimedia.org/...). Only Wikimedia hosts are allowed.
-    const pic = line.match(/^!\[([^\]]*)\]\((https:\/\/upload\.wikimedia\.org\/[^)\s]+)\)\s*$/);
-    if (pic) { out.push(`<figure class="note-figure"><img src="${esc(pic[2])}" alt="${esc(pic[1])}" loading="lazy" decoding="async" /><figcaption>${esc(pic[1])}</figcaption></figure>`); i++; continue; }
+    // A standalone Markdown image: accept HTTPS image URLs from trusted note sources, not just Wikimedia.
+    const pic = line.match(/^!\[([^\]]*)\]\((https:\/\/[^)\s]+)\)\s*$/);
+    if (pic) { out.push(`<figure class="note-figure"><img src="${esc(pic[2])}" alt="${esc(pic[1])}" loading="lazy" decoding="async" referrerpolicy="no-referrer" /><figcaption>${esc(pic[1])}</figcaption></figure>`); i++; continue; }
     if (/^-{3,}\s*$/.test(line)) { out.push("<hr />"); i++; continue; }
     if (/^>\s?/.test(line)) {
       const quoted = [];
