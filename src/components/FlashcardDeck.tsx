@@ -263,7 +263,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
         <button type="button" onClick={() => { const n = scale >= 1.3 ? 0.9 : scale >= 1.1 ? 1.3 : 1.15; setScale(n); setScaleState(n); }} aria-label="Change text size" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><Type className="h-4 w-4" /></button>
         <button type="button" onClick={hide} aria-label="Never show this card again" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><EyeOff className="h-4 w-4" /></button>
       </div>
-      {mcq && <Link to={mcq} className="mx-auto mt-1 block w-full max-w-md text-center text-sm font-bold text-primary hover:underline sm:max-w-xl">Test yourself: 30 MCQs on this topic →</Link>}
+      {mcq && <Link to={mcq} className="mx-auto mt-1 block w-full max-w-md text-center text-sm font-bold text-primary hover:underline sm:max-w-xl">Test yourself with MCQs on this topic →</Link>}
       <div className="sticky bottom-0 z-10 mx-auto mt-2 w-full max-w-md sm:max-w-xl bg-background/95 pb-3 pt-1 backdrop-blur">
         {!flipped ? (
           <button type="button" onClick={() => setFlipped(true)} className="w-full rounded-full bg-primary py-4 text-base font-bold text-primary-foreground">Show answer</button>
