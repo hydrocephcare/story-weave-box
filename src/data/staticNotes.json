@@ -2803,5 +2803,35 @@
     "updated": "2026-10-19",
     "file": "src/content/notes/seizures-epilepsy-status-epilepticus.md",
     "series": "Stroke & Seizures · Part 2 of 2"
+  },
+  {
+    "slug": "imed-bedside-cardiovascular-examination-and-murmurs",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Bedside Clinical Skills",
+    "title": "Bedside Cardiovascular Examination and Heart Murmurs",
+    "description": "Year 4 MBChB bedside guide to S1/S2, systole and diastole, regurgitation versus stenosis, five auscultation areas, common murmurs, cardiovascular examination, rheumatic carditis and how to present findings.",
+    "updated": "2026-10-20",
+    "file": "src/content/notes/imed-bedside-cardiovascular-examination-and-murmurs.md"
+  },
+  {
+    "slug": "imed-bedside-respiratory-examination",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Bedside Clinical Skills",
+    "title": "Bedside Respiratory Examination and Chest Findings",
+    "description": "Year 4 MBChB IPPA examination sequence, inspection, palpation, chest expansion, tactile fremitus, percussion notes, breath sounds, added sounds, consolidation versus effusion versus pneumothorax, and OSCE presentation.",
+    "updated": "2026-10-20",
+    "file": "src/content/notes/imed-bedside-respiratory-examination.md"
+  },
+  {
+    "slug": "imed-bedside-abdominal-examination-ascites-liver-signs",
+    "year": 4,
+    "unit": "Internal Medicine",
+    "group": "Bedside Clinical Skills",
+    "title": "Bedside Abdominal Examination: Ascites, Liver Span and Asterixis",
+    "description": "Year 4 MBChB abdominal examination sequence, inspection, auscultation, percussion, palpation, shifting dullness, fluid thrill, liver span measurement, asterixis, oedema and heart failure signs.",
+    "updated": "2026-10-20",
+    "file": "src/content/notes/imed-bedside-abdominal-examination-ascites-liver-signs.md"
   }
 ]
