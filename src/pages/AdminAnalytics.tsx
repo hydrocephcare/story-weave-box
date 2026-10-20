@@ -14,7 +14,7 @@ interface Stats {
   devices: { device: string; visitors: number }[];
   returning: number;
 }
-const PERIODS = [{ k: "week", label: "This week", days: 7 }, { k: "month", label: "This month", days: 30 }, { k: "year", label: "This year", days: 365 }] as const;
+const PERIODS = [{ k: "today", label: "Today", days: 1 }, { k: "week", label: "This week", days: 7 }, { k: "month", label: "This month", days: 30 }, { k: "year", label: "This year", days: 365 }] as const;
 const n = (x: number) => x.toLocaleString("en-US");
 
 /** Admin: who is on the site now, how many used it each day, and a picture of the numbers to share. */

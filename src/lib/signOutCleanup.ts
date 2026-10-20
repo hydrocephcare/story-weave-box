@@ -2,6 +2,7 @@
 // Otherwise the next person on a shared phone or laptop would see the previous student's chats. The student's own copy is untouched: chats are
 // kept on their account (and come back when they sign in again). Daily free-use counters stay, so signing out does not reset the free limits.
 import { aiStore } from "@/lib/ompathAiStore";
+import { wipeLocalState } from "@/lib/accountSync";
 
 const LOCAL_KEYS = [
   "ompath_ai_sessions_v2", "ompath_ai_active", "ompath_ai_deleted", "ompath_ai_cache_v1",
@@ -15,6 +16,7 @@ const SESSION_KEYS = ["ompath_ai_resume", "ompath_flow_reminder", "ompath_flow_p
 export function wipePersonalData() {
   aiStore.reset();
   try { LOCAL_KEYS.forEach((k) => localStorage.removeItem(k)); } catch { /* storage blocked */ }
+  wipeLocalState(); // reading positions, card habits, practice scores: the next person on this device starts clean
   try { SESSION_KEYS.forEach((k) => sessionStorage.removeItem(k)); } catch { /* storage blocked */ }
   for (const e of ["ompath:university", "ompath:review", "ompath:signed-out"]) window.dispatchEvent(new Event(e));
 }
