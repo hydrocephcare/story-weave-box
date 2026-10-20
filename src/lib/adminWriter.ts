@@ -1,3 +1,4 @@
+import { shuffleOptions } from "@/lib/gemini";
 import { supabase } from "@/integrations/supabase/client";
 import { buildBlogPath, buildFlashcardPath, buildMcqPath, saveArticle, saveFlashcardSet, saveMcqSet, deleteMcqSet } from "@/lib/store";
 
@@ -49,12 +50,33 @@ export async function draftNote(raw: string, hint: { title?: string; category?: 
     return { ...first, content: [first.content, ...rest].join("\n\n"), raw };
   }
   const out = await call<Omit<NoteDraft, "type" | "raw">>({ mode: "note", text: raw, title: hint.title, category: hint.category, categories, enrich: Boolean(hint.enrich) });
-  return { type: "note", ...out, category: hint.category && categories.includes(hint.category) ? hint.category : out.category, year: hint.year ?? out.year, title: (hint.title || out.title || "Study notes").trim(), raw };
+  const category = hint.category && categories.includes(hint.category) ? hint.category : guessCategory(`${hint.title || ""} ${raw}`, categories) || out.category;
+  return { type: "note", ...out, category, year: hint.year ?? out.year, title: (hint.title || out.title || "Study notes").trim(), raw };
+}
+
+const UNIT_STOP = new Set(["basic", "clinical", "general", "applied", "introduction", "year", "unit", "medicine", "internal"]);
+/**
+ * The unit a pasted note belongs to, read from what the text says about itself ("... Pharmacology Notes", "Anatomy of the ..."): the unit whose own words
+ * appear most in the opening of the text, the same year first. Returns "" when nothing in the opening names a unit, so the writer's own choice stands.
+ */
+export function guessCategory(text: string, categories: string[]): string {
+  const head = text.slice(0, 600).toLowerCase();
+  const year = head.match(/year\s*([1-6])/)?.[1];
+  let best = "", bestScore = 0;
+  for (const c of categories) {
+    const name = c.replace(/^year\s*\d\s*:\s*/i, "").toLowerCase();
+    const words = name.split(/[^a-z]+/).filter((w) => w.length > 4 && !UNIT_STOP.has(w));
+    let score = words.reduce((n, w) => n + (head.includes(w.replace(/s$/, "")) ? 1 : 0), 0);
+    if (!score) continue;
+    if (year && new RegExp(`^year\\s*${year}\\b`, "i").test(c)) score += 0.5;
+    if (score > bestScore) { best = c; bestScore = score; }
+  }
+  return best;
 }
 
 export async function draftMcqs(text: string, count: number, title: string, category: string): Promise<McqDraft> {
   const out = await call<{ questions: McqDraft["questions"] }>({ mode: "mcq", text, count, title });
-  return { type: "mcq", title: title || "MCQ practice", category, questions: out.questions, source: text.slice(0, 200) };
+  return { type: "mcq", title: title || "MCQ practice", category, questions: out.questions.map(shuffleOptions), source: text.slice(0, 200) };
 }
 
 /** The pasted text already holds MCQs: keep them exactly as written, with their answers, and make them ready to publish. */

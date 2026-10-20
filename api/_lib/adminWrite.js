@@ -17,6 +17,7 @@ Return ONLY JSON: {"title": "clear title, max 70 characters", "category": "...",
 
 const MCQ = (n) => `You write single-best-answer multiple-choice questions for medical students, from the text you are given ONLY.
 Write exactly ${n} questions. Each has 4 distinct options with one clearly correct answer, tests understanding (not trivia about wording), and a 1 to 2 sentence explanation that says why the answer is right. Do not use "all of the above" or "none of the above". Do not invent facts that are not in the text.
+Make them DIFFICULT: at least two thirds are short clinical scenarios (a patient, findings, then "what is the best next step / most likely diagnosis / mechanism / drug") or reasoning questions (why, what happens if), not "what is X". All four options must be plausible and about the same length, so the right one cannot be guessed from its length or wording. Cover different parts of the text, and never ask the same fact twice.
 Return ONLY JSON: {"questions":[{"question":"...","options":["...","...","...","..."],"correct_answer":0,"explanation":"..."}]}  (correct_answer is the index 0-3 of the right option; vary it across questions).`;
 
 const MCQ_IMPORT = `The text contains multiple-choice questions written by a lecturer or student (possibly messy: numbering, A/B/C/D or a/b/c, "Answer: B", a star or tick on the right option, or no answers at all).
@@ -24,7 +25,7 @@ Structure every question EXACTLY as written: keep the wording, keep the options 
 Return ONLY JSON: {"questions":[{"question":"...","options":["...","...","...","..."],"correct_answer":0,"explanation":"..."}]} (2 to 6 options are allowed; correct_answer is the 0-based index).`;
 
 const CARDS = (n) => `You write flashcards for medical students from the text you are given ONLY.
-Write up to ${n} cards. Each card tests ONE fact or one piece of reasoning: a short question on the front, and an answer of one or two short sentences (under 35 words) on the back. No yes/no questions, no "what is the name of the chapter", no invented facts.
+Write up to ${n} cards. Each card is a compact summary of ONE angle of the subject (definition, mechanism or pathophysiology, uses, adverse effects, cautions and interactions, management, ward-round points), never a single trivia line. The answer is: line 1 the direct answer in bold (**like this**); then 3 to 4 short lines starting with "- " that explain why or how; the last line starts "Related: " and names 1 to 3 connected facts. The whole answer is 35 to 60 words so it fits on a phone card without scrolling. Each fact appears on exactly one card. No yes/no questions, no invented facts.
 Return ONLY JSON: {"cards":[{"question":"...","answer":"..."}]}`;
 
 const ARTICLE = (cats) => `You write a new study note for a free website used by medical students, from the TOPIC the admin names.
@@ -75,17 +76,22 @@ export default async function handler(req, res) {
     return res.status(200).json({ questions: qs.slice(0, count), dropped: Math.max(0, (out.questions?.length || 0) - qs.length) });
   }
   if (mode === "cards") {
-    const cards = (Array.isArray(out.cards) ? out.cards : []).map((c) => ({ question: String(c?.question ?? "").trim(), answer: String(c?.answer ?? "").trim() })).filter((c) => c.question.length > 6 && c.answer.length > 2 && c.answer.length < 400);
+    const cards = (Array.isArray(out.cards) ? out.cards : []).map((c) => ({ question: String(c?.question ?? "").trim(), answer: String(c?.answer ?? "").trim() })).filter((c) => c.question.length > 6 && c.answer.length > 2 && c.answer.length < 800);
     if (!cards.length) return res.status(502).json({ error: "The writer could not make usable flashcards from that text." });
     return res.status(200).json({ cards: cards.slice(0, count) });
   }
-  const content = String(out.content ?? "").trim();
+  // pictures that came with the paste (links from ChatGPT or another site) expire or are not ours to show: only the site's own picture hosts stay,
+  // and the note gets relevant, credited pictures from the picture job a few minutes after it is published
+  const OWN = /^https:\/\/(upload\.wikimedia\.org|commons\.wikimedia\.org|res\.cloudinary\.com|cdn\.ompathstudy\.com)\//;
+  const content = String(out.content ?? "").replace(/^!\[[^\]]*\]\((https?:\/\/[^)\s]+)\)[ \t]*$/gm, (m, url) => (OWN.test(url) ? m : "")).replace(/\n{3,}/g, "\n\n").trim();
+  // a search description ends at a word, not in the middle of one
+  const clip = (t, n) => { const s = String(t ?? "").trim(); if (s.length <= n) return s; const cut = s.slice(0, n); const at = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf(" ")); return (at > n * 0.6 ? cut.slice(0, at) : cut).replace(/[\s,;:]+$/, "") + (at > n * 0.6 && cut.lastIndexOf(". ") === at ? "." : ""); };
   if (content.length < 80) return res.status(502).json({ error: "The writer returned too little. Try again." });
-  if (mode === "revise") return res.status(200).json({ content, meta_description: String(out.meta_description ?? "").trim().slice(0, 160) });
+  if (mode === "revise") return res.status(200).json({ content, meta_description: clip(out.meta_description, 160) });
   const category = cats.includes(String(out.category)) ? String(out.category) : "";
   return res.status(200).json({
     title: String(out.title ?? "").trim().slice(0, 100), category, year: Number.isInteger(Number(out.year)) ? Number(out.year) : null,
-    meta_title: String(out.meta_title ?? "").trim().slice(0, 60), meta_description: String(out.meta_description ?? "").trim().slice(0, 160),
+    meta_title: clip(out.meta_title, 60), meta_description: clip(out.meta_description, 160),
     tags: (Array.isArray(out.tags) ? out.tags : []).map((t) => String(t).toLowerCase().trim()).filter(Boolean).slice(0, 8), content,
   });
 }

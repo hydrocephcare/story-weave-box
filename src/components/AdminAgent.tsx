@@ -224,8 +224,8 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
           if (a.tool === "publish_note") { d = await draftNote(source, { title: a.args?.title, category: a.args?.category, year: a.args?.year ?? null, enrich: Boolean(a.args?.enrich) }, world.categories); lastNote = d; }
           else if (a.tool === "import_mcqs") d = await importMcqs(source, String(a.args?.title || "MCQ practice"), String(a.args?.category || ""));
           else if (a.tool === "write_article") { d = await draftArticle(String(a.args?.topic || raw), { category: a.args?.category, year: a.args?.year ?? null }, world.categories); lastNote = d as NoteDraft; }
-          else if (a.tool === "make_mcqs") d = await draftMcqs(base, Number(a.args?.count) || 10, String(a.args?.title || (noteTitle ? `MCQs: ${noteTitle}` : "MCQ practice")), String(a.args?.category || lastNote?.category || ""));
-          else d = await draftCards(base, Number(a.args?.count) || 15, String(a.args?.title || (noteTitle ? `Flashcards: ${noteTitle}` : "Flashcards")), String(a.args?.category || lastNote?.category || ""));
+          else if (a.tool === "make_mcqs") d = await draftMcqs(base, Number(a.args?.count) || 30, String(a.args?.title || (noteTitle ? `MCQs: ${noteTitle}` : "MCQ practice")), String(lastNote?.category || a.args?.category || ""));
+          else d = await draftCards(base, Number(a.args?.count) || 15, String(a.args?.title || (noteTitle ? `Flashcards: ${noteTitle}` : "Flashcards")), String(lastNote?.category || a.args?.category || ""));
           drafts.push(d); add.push({ kind: "draft", draft: d, state: "ready", fresh: true });
         } catch (e: any) { add.push({ kind: "text", role: "assistant", content: `I could not write that: ${e?.message || "error"}` }); }
       }
