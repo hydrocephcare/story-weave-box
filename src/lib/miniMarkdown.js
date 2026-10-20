@@ -72,7 +72,7 @@ function parseList(lines, start, indent) {
 function table(rows) {
   // Split only on unescaped pipes; a leading/trailing pipe is optional in Markdown.
   const cells = (r) => {
-    let line = r.trim().replace(/^\\|/, "").replace(/\\|$/, "");
+    let line = r.trim().replace(/^\|/, "").replace(/\|$/, "");
     const out = [];
     let cell = "";
     let escaped = false;
@@ -251,7 +251,7 @@ export function mdToHtml(source, { skipTitle = false, questions = false } = {}) 
       while (i < lines.length && /^>\s?/.test(lines[i])) quoted.push(lines[i++].replace(/^>\s?/, ""));
       out.push(`<blockquote><p>${inline(quoted.join(" "))}</p></blockquote>`); continue;
     }
-    const separatorRow = (value) => /^\\s*\\|?\\s*:?-{3,}:?\\s*(?:\\|\\s*:?-{3,}:?\\s*)+\\|?\\s*$/.test(value ?? "");
+    const separatorRow = (value) => /^\s*\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?\s*$/.test(value ?? "");
     const hasTableSeparator = separatorRow(lines[i + 1]);
     if (hasTableSeparator && line.includes("|")) {
       const rows = [];
@@ -259,7 +259,7 @@ export function mdToHtml(source, { skipTitle = false, questions = false } = {}) 
       if (rows.length >= 2) { out.push(table(rows)); continue; }
     }
     // A pipe-led non-table line should remain readable as prose.
-    if (/^\\s*\\|/.test(line)) { out.push(`<p>${inline(line.replace(/^\\s*\\|\\s*/, "").replace(/\\|/g, " · "))}</p>`); i++; continue; }
+    if (/^\s*\|/.test(line)) { out.push(`<p>${inline(line.replace(/^\s*\|\s*/, "").replace(/\|/g, " · "))}</p>`); i++; continue; }
     if (questions) {
       const mcq = mcqBlock(lines, i);
       if (mcq) { closeCard(); out.push(mcq[0]); i = mcq[1]; continue; }
