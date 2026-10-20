@@ -1,5 +1,5 @@
 import SafeTextarea from "@/components/SafeTextarea";
-import { listen as listenRecall } from "@/lib/voiceRecall";
+import { listen as listenRecall, recordSpeech, recordingSupported, transcribe } from "@/lib/voiceRecall";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ArrowUp, Bookmark, BookOpen, Check, Copy, ExternalLink, History, FilePlus2, Loader2, MessageSquarePlus, Search, Square, Mic, LineChart, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
@@ -205,6 +205,15 @@ export default function OmpathAIHost() {
     if (!SpeechRec || listening) return;
     const base = q.trim() ? `${q.trim()} ` : "";
     setListening(true);
+    // recorded and written down by Whisper (hears medical words and accents well); the browser's own recogniser is the fallback
+    if (recordingSupported()) {
+      recordSpeech({ quietMs: 2000, waitMs: 10000, maxMs: 60000, onEnd: async (clip) => {
+        if (!clip) { setListening(false); return; }
+        try { const text = await transcribe(clip, "Medical terminology."); if (text.trim()) setQ(base + text.trim()); setListening(false); }
+        catch { setListening(false); }
+      } });
+      return;
+    }
     const l = listenRecall({ lang: "en-US", quietMs: 2200, waitMs: 10000, maxMs: 60000, onText: (t) => setQ(base + t), onEnd: (t) => { if (t) setQ(base + t); setListening(false); } });
     if (!l) setListening(false);
   };

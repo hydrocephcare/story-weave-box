@@ -85,3 +85,82 @@ export function matchPercent(answer: string, said: string, alts: string[] = []):
   }
   return Math.round((hit / keys.length) * 100);
 }
+
+// ---------------------------------------------------------------------------------------------------------------------------------------------------
+// Accurate voice: record the sound, notice when you start and stop talking, and have Whisper (on the server) write down what was said. It hears medical words
+// and accents far better than the browser's own recogniser, and works the same in every browser that can record.
+
+export const recordingSupported = (): boolean => typeof window !== "undefined" && Boolean(navigator.mediaDevices?.getUserMedia) && typeof MediaRecorder !== "undefined";
+
+export type RecordEnd = "silence" | "nothing" | "stopped" | "denied" | "error";
+export interface Recording { stop: () => void }
+
+/**
+ * Records the microphone until you stop talking. `onLevel` (0 to 1) shows that you are being heard; `onSpeech` fires once when talking starts.
+ * `onEnd` gets the recorded clip (null when nothing was said) and why it ended.
+ */
+export function recordSpeech(opts: { quietMs?: number; waitMs?: number; maxMs?: number; onLevel?: (v: number) => void; onSpeech?: () => void; onEnd: (clip: { blob: Blob; mime: string } | null, why: RecordEnd) => void }): Recording {
+  let finished = false, stream: MediaStream | null = null, rec: MediaRecorder | null = null, ctx: AudioContext | null = null, timer = 0, cap = 0;
+  const chunks: Blob[] = [];
+  let spoke = false, speechAt = 0, lastLoud = 0, floor = 0.01, frames = 0, loud = 0;
+  const startedAt = Date.now();
+  let why: RecordEnd = "silence";
+  const cleanup = () => {
+    window.clearInterval(timer); window.clearTimeout(cap);
+    try { stream?.getTracks().forEach((t) => t.stop()); } catch { /* none */ }
+    try { void ctx?.close(); } catch { /* none */ }
+  };
+  const end = (reason: RecordEnd) => {
+    if (finished) return; finished = true; why = reason;
+    window.clearInterval(timer); window.clearTimeout(cap);
+    if (rec && rec.state !== "inactive") { try { rec.stop(); } catch { cleanup(); opts.onEnd(null, "error"); } } else { cleanup(); opts.onEnd(null, reason); }
+  };
+  void (async () => {
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true } });
+    } catch (e) { finished = true; opts.onEnd(null, (e as { name?: string })?.name === "NotAllowedError" ? "denied" : "error"); return; }
+    if (finished) { cleanup(); return; }
+    const mime = ["audio/webm;codecs=opus", "audio/webm", "audio/mp4", "audio/ogg;codecs=opus"].find((m) => { try { return MediaRecorder.isTypeSupported(m); } catch { return false; } }) || "";
+    try { rec = mime ? new MediaRecorder(stream, { mimeType: mime }) : new MediaRecorder(stream); } catch { cleanup(); finished = true; opts.onEnd(null, "error"); return; }
+    rec.ondataavailable = (e) => { if (e.data && e.data.size) chunks.push(e.data); };
+    rec.onstop = () => {
+      cleanup();
+      const type = rec?.mimeType || mime || "audio/webm";
+      const blob = new Blob(chunks, { type });
+      opts.onEnd(spoke && blob.size > 1500 ? { blob, mime: type } : null, spoke ? why : why === "stopped" ? "stopped" : "nothing");
+    };
+    rec.start(250);
+    // listen to the level: speech is a clear rise above the room's own noise
+    try {
+      const AC = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+      ctx = new AC!();
+      const src = ctx.createMediaStreamSource(stream);
+      const an = ctx.createAnalyser(); an.fftSize = 1024; src.connect(an);
+      const buf = new Uint8Array(an.fftSize);
+      timer = window.setInterval(() => {
+        an.getByteTimeDomainData(buf);
+        let sum = 0; for (let i = 0; i < buf.length; i++) { const v = (buf[i] - 128) / 128; sum += v * v; }
+        const rms = Math.sqrt(sum / buf.length);
+        frames++;
+        if (frames <= 8) floor = (floor * (frames - 1) + rms) / frames;   // the room's own noise, measured in the first moments
+        const thr = Math.max(0.02, Math.min(floor, 0.025) * 3.2);   // capped, so talking from the very first moment is still heard
+        opts.onLevel?.(Math.min(1, rms / (thr * 3)));
+        const now = Date.now();
+        if (rms > thr) { loud++; if (loud >= 2) { lastLoud = now; if (!spoke) { spoke = true; speechAt = now; opts.onSpeech?.(); } } } else loud = 0;
+        if (spoke && now - lastLoud > (opts.quietMs ?? 1700) && now - speechAt > 700) end("silence");
+        else if (!spoke && now - startedAt > (opts.waitMs ?? 9000)) end("nothing");
+      }, 50);
+    } catch { /* no level meter: the length limit still ends the recording */ }
+    cap = window.setTimeout(() => end(spoke ? "silence" : "nothing"), opts.maxMs ?? 45000);
+  })();
+  return { stop: () => end("stopped") };
+}
+
+/** Sends a clip to the server and returns the words. `hint` (the card's question and key words) helps it hear medical terms. */
+export async function transcribe(clip: { blob: Blob; mime: string }, hint: string): Promise<string> {
+  const audio: string = await new Promise((res, rej) => { const fr = new FileReader(); fr.onload = () => res(String(fr.result).split(",")[1] || ""); fr.onerror = () => rej(new Error("read")); fr.readAsDataURL(clip.blob); });
+  const r = await fetch("/api/ai?task=transcribe", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ audio, mime: clip.mime, hint }), signal: AbortSignal.timeout(30000) });
+  const j = (await r.json().catch(() => ({}))) as { text?: string; error?: string };
+  if (!r.ok) throw new Error(j.error || "The voice service could not answer.");
+  return String(j.text || "");
+}

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import { Link } from "react-router-dom";
 import { ArrowLeft, Eye, EyeOff, Flame, Keyboard, Mic, Sparkles, Star, Type, Undo2, Volume2 } from "lucide-react";
 import SafeTextarea from "@/components/SafeTextarea";
-import { listen, matchPercent, recallSupported, sayAloud, stopAloud } from "@/lib/voiceRecall";
+import { listen, matchPercent, recallSupported, recordSpeech, recordingSupported, sayAloud, stopAloud, transcribe } from "@/lib/voiceRecall";
 import { openAI } from "@/lib/aiEvents";
 import { DAILY_GOAL, bury, buriedKeys, doneToday, getScale, recordReview, setScale, speak, starredKeys, streak, toggleStar } from "@/lib/deckStats";
 import { supabase } from "@/integrations/supabase/client";
@@ -85,39 +85,70 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
   const [recall, setRecall] = useState<Recall>(() => { try { const m = localStorage.getItem("deck-mode"); return m === "type" || m === "speak" ? m : localStorage.getItem("deck-typed") === "1" ? "type" : "think"; } catch { return "think"; } });
   const [typed, setTyped] = useState("");
   const [alts, setAlts] = useState<string[]>([]);
-  const [voice, setVoice] = useState<"idle" | "listening" | "nothing" | "denied">("idle");
+  const [voice, setVoice] = useState<"idle" | "listening" | "transcribing" | "nothing" | "denied" | "error">("idle");
   const [voiceOk, setVoiceOk] = useState(false);          // the microphone has been allowed once, so the next cards can start listening by themselves
+  const [heardYou, setHeardYou] = useState(false);        // talking has been detected in this recording
+  const [level, setLevel] = useState(0);                  // how loud you are, 0 to 1, so you can see that the phone hears you
+  const [aiDown, setAiDown] = useState(false);            // the accurate voice service failed: the browser's own recogniser is used instead
   const [autoFlip, setAutoFlip] = useState(() => { try { return localStorage.getItem("deck-autoflip") !== "0"; } catch { return true; } });
   const [readAloud, setReadAloud] = useState(() => { try { return localStorage.getItem("deck-readaloud") === "1"; } catch { return false; } });
+  const flippedRef = useRef(false); flippedRef.current = flipped;
+  const typedRef = useRef(""); typedRef.current = typed;
   const listenRef = useRef<{ stop: () => void } | null>(null);
   const listenId = useRef(0);
   const flipTimer = useRef(0);
   const keep = (k: string, v: string) => { try { localStorage.setItem(k, v); } catch { /* blocked */ } };
-  const stopListening = useCallback(() => { listenId.current++; window.clearTimeout(flipTimer.current); try { listenRef.current?.stop(); } catch { /* none */ } listenRef.current = null; }, []);
+  const accurate = recordingSupported() && !aiDown;       // record and let Whisper write it down (hears medical words and accents well)
+  const canSpeak = accurate || recallSupported();
+  const stopListening = useCallback(() => { listenId.current++; window.clearTimeout(flipTimer.current); try { listenRef.current?.stop(); } catch { /* none */ } listenRef.current = null; setLevel(0); }, []);
+  const cardHint = card ? `${card.question.replace(/[*]+/g, " ").slice(0, 300)} Medical terminology.` : "";
   const startListening = useCallback(() => {
-    if (!recallSupported()) return;
+    if (!canSpeak) return;
     stopAloud(); stopListening();
     const id = ++listenId.current;
-    setVoice("listening"); setTyped(""); setAlts([]);
+    setVoice("listening"); setTyped(""); setAlts([]); setHeardYou(false);
+    const done = (text: string, a: string[]) => { setAlts(a); setVoice("idle"); setVoiceOk(true); setTyped(text); if (autoFlip) flipTimer.current = window.setTimeout(() => setFlipped(true), 450); };
+    if (accurate) {
+      listenRef.current = recordSpeech({
+        quietMs: 1800,
+        onLevel: (v) => { if (id === listenId.current) setLevel(v); },
+        onSpeech: () => { if (id === listenId.current) setHeardYou(true); },
+        onEnd: async (clip, why) => {
+          if (id !== listenId.current) return;
+          listenRef.current = null; setLevel(0);
+          if (why === "denied") { setVoice("denied"); return; }
+          if (why === "error") { setAiDown(true); setVoice("error"); return; }
+          if (!clip) { setVoice(why === "stopped" ? "idle" : "nothing"); return; }
+          setVoice("transcribing");
+          try {
+            const text = await transcribe(clip, cardHint);
+            if (id !== listenId.current) return;
+            if (!text.trim()) { setVoice("nothing"); return; }
+            done(text.trim(), []);
+          } catch { if (id === listenId.current) { setAiDown(true); setVoice("error"); } }
+        },
+      });
+      return;
+    }
     listenRef.current = listen({
-      onText: (t) => { if (id === listenId.current) setTyped(t); },
+      onText: (t) => { if (id === listenId.current) { setTyped(t); if (t) setHeardYou(true); } },
       onEnd: (text, a, why) => {
         if (id !== listenId.current) return;
-        listenRef.current = null; setAlts(a);
+        listenRef.current = null;
         if (why === "denied") { setVoice("denied"); return; }
         if (!text) { setVoice(why === "stopped" ? "idle" : "nothing"); return; }
-        setVoice("idle"); setVoiceOk(true); setTyped(text);
-        if (autoFlip) flipTimer.current = window.setTimeout(() => setFlipped(true), 450);
+        done(text, a);
       },
     });
     if (!listenRef.current) setVoice("idle");
-  }, [autoFlip, stopListening]);
+  }, [autoFlip, stopListening, accurate, canSpeak, cardHint]);
   useEffect(() => { stopListening(); stopAloud(); setFlipped(false); setTyped(""); setAlts([]); setVoice("idle"); }, [ci, stopListening]);
   useEffect(() => () => { stopListening(); stopAloud(); }, [stopListening]);
   // speak mode: once the microphone is allowed, every new card starts listening by itself
   useEffect(() => {
-    if (recall !== "speak" || !voiceOk || flipped || !card || !recallSupported()) return;
-    const t = window.setTimeout(() => startListening(), 600);
+    if (recall !== "speak" || !voiceOk || flipped || !card || !canSpeak) return;
+    // not when the card has already been answered (the answer is on screen, or something was already heard for it)
+    const t = window.setTimeout(() => { if (!flippedRef.current && !typedRef.current) startListening(); }, 600);
     return () => window.clearTimeout(t);
   }, [ci, recall, voiceOk]); // eslint-disable-line react-hooks/exhaustive-deps
   // switching away from speaking, or flipping the card, ends the listening; the answer can be read aloud
@@ -324,16 +355,16 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
             {recall === "type" && <SafeTextarea value={typed} onValueChange={setTyped} onKeyDown={(e) => e.stopPropagation()} rows={2} placeholder="Type what you remember, then show the answer" className="mb-2 w-full resize-none rounded-xl border border-input bg-background px-3 py-2 text-[16px] outline-none focus:border-primary" />}
             {recall === "speak" && (
               <div className="mb-2 text-center">
-                {!recallSupported() ? <p className="py-2 text-sm text-muted-foreground">Voice recall needs Chrome or Edge on this device. Use Type, or just flip the card.</p> : (
+                {!canSpeak ? <p className="py-2 text-sm text-muted-foreground">Voice recall needs Chrome or Edge on this device. Use Type, or just flip the card.</p> : (
                   <>
                     <div className="flex items-center justify-center gap-3">
-                      <button type="button" onClick={() => (voice === "listening" ? (stopListening(), setVoice("idle")) : startListening())} aria-label={voice === "listening" ? "Stop listening" : "Start speaking"} className={`relative flex h-16 w-16 items-center justify-center rounded-full ${voice === "listening" ? "bg-rose-500 text-white" : "bg-primary text-primary-foreground"}`}>
-                        {voice === "listening" && <span className="absolute inset-0 animate-ping rounded-full bg-rose-500/40" aria-hidden />}
+                      <button type="button" onClick={() => (voice === "listening" ? (stopListening(), setVoice("idle")) : startListening())} aria-label={voice === "listening" ? "Stop listening" : "Start speaking"} disabled={voice === "transcribing"} className={`relative flex h-16 w-16 items-center justify-center rounded-full ${voice === "listening" ? "bg-rose-500 text-white" : "bg-primary text-primary-foreground"}`}>
+                        {voice === "listening" && <span className="absolute inset-0 rounded-full bg-rose-500/40 transition-transform duration-75" style={{ transform: `scale(${1 + level * 0.6})` }} aria-hidden />}
                         <Mic className="relative h-7 w-7" />
                       </button>
                     </div>
                     <p className="mt-2 min-h-[2.5rem] px-2 text-sm leading-snug text-foreground/85">
-                      {voice === "listening" ? (typed ? `“${typed}”` : "Listening… say what you remember") : voice === "nothing" ? "I did not hear anything. Tap the microphone to try again." : voice === "denied" ? "Allow the microphone for this site in your browser, then tap again." : typed ? `“${typed}”` : voiceOk ? "Starting the microphone…" : "Tap the microphone and say what you remember"}
+                      {voice === "listening" ? (typed ? `“${typed}”` : heardYou ? "Hearing you…" : "Listening… say what you remember") : voice === "transcribing" ? "Writing down what you said…" : voice === "nothing" ? "I did not hear anything. Tap the microphone and speak a little closer." : voice === "denied" ? "Allow the microphone for this site in your browser, then tap again." : voice === "error" ? "The voice service did not answer. Tap the microphone to try again with your browser's own voice." : typed ? `“${typed}”` : voiceOk ? "Starting the microphone…" : "Tap the microphone and say what you remember"}
                     </p>
                     <div className="mt-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
                       <label className="inline-flex items-center gap-1.5"><input type="checkbox" checked={autoFlip} onChange={(e) => { setAutoFlip(e.target.checked); keep("deck-autoflip", e.target.checked ? "1" : "0"); }} /> Flip when I stop</label>
