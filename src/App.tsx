@@ -18,6 +18,8 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-route
 import { ThemeProvider } from "next-themes";
 import { AuthProvider } from "@/hooks/useAuth";
 import ReadNotifier from "@/components/ReadNotifier";
+import ImageLightbox from "@/components/ImageLightbox";
+import AccountSync from "@/components/AccountSync";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -150,11 +152,55 @@ const queryClient = new QueryClient({
   },
 });
 
-const RouteLoader = () => (
-  <div className="flex min-h-[60vh] items-center justify-center">
-    <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
-  </div>
-);
+const RouteLoader = () => {
+  const [takingTooLong, setTakingTooLong] = useState(false);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setTakingTooLong(true), 12000);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  const recover = async () => {
+    try {
+      // Remove stale app caches and unregister the old worker before requesting a clean page.
+      if ("serviceWorker" in navigator) {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(registrations.map((registration) => registration.unregister()));
+      }
+      if ("caches" in window) {
+        const keys = await caches.keys();
+        await Promise.all(keys.map((key) => caches.delete(key)));
+      }
+    } catch (error) {
+      console.warn("[ompath] cache recovery was incomplete", error);
+    } finally {
+      window.location.reload();
+    }
+  };
+
+  return (
+    <div className="flex min-h-[60vh] flex-col items-center justify-center gap-3 px-5 text-center">
+      {!takingTooLong ? (
+        <>
+          <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
+          <p className="text-sm text-muted-foreground">Loading your study page…</p>
+        </>
+      ) : (
+        <div role="status" className="max-w-sm">
+          <h2 className="font-serif text-lg font-semibold text-foreground">This page is taking longer than expected</h2>
+          <p className="mt-2 text-sm text-muted-foreground">A saved app version may be out of date. Reload with a clean cache to try again.</p>
+          <button
+            type="button"
+            onClick={recover}
+            className="mt-4 inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 font-semibold text-primary-foreground"
+          >
+            <Loader2 className="h-4 w-4" /> Reload and repair
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -327,6 +373,8 @@ const App = () => (
             <UpdateNotifier />
             <ReminderWatcher />
             <ReadNotifier />
+            <ImageLightbox />
+            <AccountSync />
             <AiFailureWatcher />
             <AIGate />
             <AIPill />

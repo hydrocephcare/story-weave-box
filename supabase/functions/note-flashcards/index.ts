@@ -25,7 +25,7 @@ Use only facts that are in the note; never invent numbers, doses or criteria. Qu
 
 /** Drops a card whose question and answer share most of their words with a card already kept (the same fact asked twice). */
 function dedupe<T extends { question: string; answer: string }>(cards: T[]): T[] {
-  const bag = (t: string) => new Set(t.toLowerCase().replace(/[^a-z0-9s]/g, " ").split(/s+/).filter((w) => w.length > 3));
+  const bag = (t: string) => new Set(t.toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((w) => w.length > 3));
   const kept: { c: T; q: Set<string>; a: Set<string> }[] = [];
   const sim = (x: Set<string>, y: Set<string>) => { if (!x.size || !y.size) return 0; let n = 0; for (const w of x) if (y.has(w)) n++; return n / Math.min(x.size, y.size); };
   for (const c of cards) {
@@ -104,7 +104,8 @@ serve(async (req) => {
       } catch (e) { lastErr = e instanceof Error ? e.message.slice(0, 120) : String(e); }
     }
     if (cards.length < 8 && upgrade) {
-      await supabase.from("flashcard_sets").update({ original_notes: JSON.stringify({ type: "note_flashcards", v: 2, kept: true, at: new Date().toISOString() }) }).eq("id", upgrade.id);
+      // the deck is kept as it is only when the AI answered but gave too little; when the AI was simply busy, it is tried again later
+      if (!lastErr) await supabase.from("flashcard_sets").update({ original_notes: JSON.stringify({ type: "note_flashcards", v: 2, kept: true, at: new Date().toISOString() }) }).eq("id", upgrade.id);
       return json({ success: true, status: "upgrade skipped", why: lastErr });
     }
     if (cards.length < 8) {

@@ -58,12 +58,12 @@ export default async function handler(req, res) {
   const body = typeof req.body === "string" ? JSON.parse(req.body || "{}") : req.body || {};
   if (body.mode === "spell") {
     // a misspelt medical term: the correctly spelt terms the student most likely meant
-    const typed = String(body.query ?? "").replace(/[^A-Za-z0-9 -',./]/g, " ").trim().slice(0, 80);
+    const typed = String(body.query ?? "").replace(/[^A-Za-z0-9 '\-,./]/g, " ").trim().slice(0, 80);
     if (typed.length < 3) return res.status(200).json({ suggestions: [] });
     try {
       const { text: out } = await ask(`A medical student typed this into a search box and may have misspelt it: "${typed}". Give up to 5 correctly spelt medical terms (diseases, drugs, anatomy, procedures, signs) it most likely means, most likely first. If it is not medical or you cannot tell, return an empty list. Return ONLY JSON: {"suggestions":["..."]}`, env, 300);
-      const j = JSON.parse(out.match(/{[sS]*}/)[0]);
-      const list = (Array.isArray(j.suggestions) ? j.suggestions : []).map((x) => String(x).trim()).filter((x) => /^[A-Za-z][A-Za-z0-9 '-,./()]{2,60}$/.test(x)).slice(0, 5);
+      const j = JSON.parse(out.match(/\{[\s\S]*\}/)[0]);
+      const list = (Array.isArray(j.suggestions) ? j.suggestions : []).map((x) => String(x).trim()).filter((x) => /^[A-Za-z][A-Za-z0-9 '\-,./()]{2,60}$/.test(x)).slice(0, 5);
       return res.status(200).json({ suggestions: list });
     } catch { return res.status(200).json({ suggestions: [] }); }
   }

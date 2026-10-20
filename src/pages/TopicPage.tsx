@@ -365,8 +365,16 @@ function HelpfulVote({ slug }: { slug: string }) {
 }
 
 function Writing({ name }: { name: string }) {
+  // while the page is being written, the free pictures of the subject are already shown, so the wait is not blank
+  const media = useWebMedia(name);
+  const pics = [media?.hero, ...(media?.more ?? [])].filter(Boolean).slice(0, 3) as { u: string; title: string; credit: string; licence: string }[];
   return (
     <div role="status" aria-live="polite" aria-label={`Loading ${name}`} className="space-y-8">
+      {pics.length > 0 && (
+        <div className="flex gap-3 overflow-x-auto pb-1">
+          {pics.map((p) => <figure key={p.u} className="w-56 shrink-0"><img src={p.u} alt={p.title} loading="lazy" className="h-36 w-full rounded-xl object-cover" /><figcaption className="mt-1 line-clamp-2 text-[11px] leading-snug text-muted-foreground">{p.title} · {p.credit}, {p.licence}</figcaption></figure>)}
+        </div>
+      )}
       {[0, 1, 2].map((i) => (
         <div key={i} aria-hidden><div className="h-1 w-12 rounded-full bg-primary/40" /><div className="mt-4 h-8 w-2/5 animate-pulse rounded bg-foreground/10" /><div className="mt-5 space-y-3"><div className="h-4 w-full animate-pulse rounded bg-foreground/10" /><div className="h-4 w-11/12 animate-pulse rounded bg-foreground/10" /><div className="h-4 w-4/5 animate-pulse rounded bg-foreground/10" /></div></div>
       ))}

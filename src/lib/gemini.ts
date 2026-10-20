@@ -37,9 +37,18 @@ export async function generateFlashcards(
   return data;
 }
 
+/** The right answer must not sit in a predictable place: options are shuffled (unless they refer to each other, like "All of the above"). */
+export function shuffleOptions<T extends { options: string[]; correct_answer: number }>(q: T): T {
+  const o = q.options || [];
+  if (o.length < 3 || o.some((x) => /\b(all|none|both|neither)\b.*\b(above|these|options?)\b|^\s*[a-e]\s*(and|&|,)\s*[a-e]\s*$/i.test(x))) return q;
+  const idx = o.map((_, i) => i);
+  for (let i = idx.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [idx[i], idx[j]] = [idx[j], idx[i]]; }
+  return { ...q, options: idx.map((i) => o[i]), correct_answer: idx.indexOf(q.correct_answer) };
+}
+
 export async function generateMcqs(
   notes: string,
-  count: number = 15
+  count: number = 30
 ): Promise<{ question: string; options: string[]; correct_answer: number; explanation?: string }[]> {
   const { geminiKey, geminiKeys } = await getGeminiKeys();
   const { data, error } = await supabase.functions.invoke('generate-content', {
@@ -47,7 +56,7 @@ export async function generateMcqs(
   });
   if (error) throw new Error(error.message || "Failed to generate MCQs");
   if (data?.error) throw new Error(data.error);
-  return data;
+  return Array.isArray(data) ? data.map(shuffleOptions) : data;
 }
 
 export async function autoCategorizе(notes: string): Promise<string> {

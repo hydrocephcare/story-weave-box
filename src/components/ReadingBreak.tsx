@@ -3,6 +3,7 @@ import { BookMarked, BookOpen, ChevronRight, Layers, ListChecks, RotateCw, X } f
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { buildFlashcardPath } from "@/lib/store";
+import { pharmCards, pharmMcqs } from "@/lib/pharmDrill";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { mdToHtml } from "@/lib/miniMarkdown";
 import { affiliatesFor, useMonetise } from "@/lib/monetise";
@@ -12,7 +13,7 @@ import { affiliatesFor, useMonetise } from "@/lib/monetise";
  * It is chosen from what the student has read so far, loads only when it is about to scroll into view (the space is held so the page never jumps),
  * and can be closed with one tap. No box: a thin rule and plain text, like the rest of the note.
  */
-export type BreakKind = "quiz" | "cards" | "read" | "books";
+export type BreakKind = "quiz" | "cards" | "pharm" | "read" | "books";
 
 interface Mcq { question: string; options: string[]; correct_answer: number; explanation?: string }
 interface Card { question: string; answer: string }
@@ -140,15 +141,22 @@ const ReadingBreak = memo(function ReadingBreak({ kind, articleId, category, tit
   useEffect(() => {
     if (!near || state !== null || closed) return;
     let live = true;
-    const order: BreakKind[] = [kind, ...(["quiz", "cards", "read", "books"] as BreakKind[]).filter((k) => k !== kind)];
+    const order: BreakKind[] = [kind, ...(["quiz", "cards", "pharm", "read", "books"] as BreakKind[]).filter((k) => k !== kind)];
     (async () => {
       for (const k of order) {
         try {
-          if (k === "quiz") {
+          if (k === "pharm") {
+            const q = pharmMcqs(`${title} ${readText}`, 3);
+            if (q.length >= 2) { if (live) setState({ kind: k, mcq: q }); return; }
+          } else if (k === "quiz") {
+            // the questions made from THIS note come first (the hardest-looking five: longest stems), then the unit's
+            const own = await (supabase as any).from("mcq_sets").select("questions").eq("source_reference", articleId).eq("published", true).is("deleted_at", null).limit(1);
+            const ownQs: Mcq[] = ((own.data?.[0]?.questions ?? []) as Mcq[]).filter((q) => q?.question && Array.isArray(q.options) && q.options.length >= 4 && Number.isInteger(q.correct_answer));
+            if (ownQs.length >= 5) { const hard = ownQs.map((q) => ({ q, w: q.question.length + (q.explanation?.length ?? 0) * 0.5 + Math.random() * 60 })).sort((a, b) => b.w - a.w).slice(0, 5).map((x) => x.q); if (live) setState({ kind: k, mcq: hard }); return; }
             const { data } = await (supabase as any).from("mcq_sets").select("questions").eq("published", true).eq("category", category).is("deleted_at", null).limit(4);
             const all: Mcq[] = ((data || []) as { questions: Mcq[] }[]).flatMap((r) => (Array.isArray(r.questions) ? r.questions : [])).filter((q) => q?.question && Array.isArray(q.options) && q.options.length >= 4 && Number.isInteger(q.correct_answer));
             const rel = all.filter((q) => onTopic(`${q.question} ${q.options.join(" ")}`));
-            if (rel.length >= 2) { if (live) setState({ kind: k, mcq: pick(rel, (q) => `${q.question} ${q.options.join(" ")}`, keys, 3) }); return; }
+            if (rel.length >= 2) { if (live) setState({ kind: k, mcq: pick(rel, (q) => `${q.question} ${q.options.join(" ")}`, keys, 5) }); return; }
           } else if (k === "cards") {
             // the deck made from THIS note comes first; otherwise cards of the same unit that are about the same subject
             const own = await (supabase as any).from("flashcard_sets").select("id,title,slug,cards").eq("source_reference", articleId).eq("published", true).is("deleted_at", null).limit(1);
@@ -182,13 +190,14 @@ const ReadingBreak = memo(function ReadingBreak({ kind, articleId, category, tit
       {ready && (
         <>
           <div className="flex items-start justify-between gap-3">
-            {k === "quiz" && <Label icon={ListChecks}>Quick check on what you just read</Label>}
+            {k === "quiz" && <Label icon={ListChecks}>Test yourself on what you just read</Label>}
+            {k === "pharm" && <Label icon={ListChecks}>Pharmacology you must know</Label>}
             {k === "cards" && <Label icon={Layers}>{ready.deck ? "Flashcards on this topic" : "Flip and recall"}</Label>}
             {k === "read" && <Label icon={BookOpen}>Worth a read next to this</Label>}
             {k === "books" && <Label icon={BookMarked}>To read next</Label>}
             <button type="button" onClick={() => setClosed(true)} aria-label="Close and keep reading" className="-mr-1 -mt-1 rounded-full p-1.5 text-muted-foreground hover:bg-muted hover:text-foreground"><X className="h-4 w-4" /></button>
           </div>
-          {k === "quiz" && ready.mcq && <Quiz questions={ready.mcq} />}
+          {(k === "quiz" || k === "pharm") && ready.mcq && <Quiz questions={ready.mcq} />}
           {k === "cards" && ready.cards && <Flash cards={ready.cards} deck={ready.deck} />}
           {k === "read" && ready.notes && (
             <ul className="mt-2 space-y-2">
@@ -220,13 +229,13 @@ export default ReadingBreak;
 
 /** Where to put the pauses among `count` top-level pieces of a note, and which kind goes where. Stable for one note (the same note always gets the same plan). */
 export function planBreaks(articleId: string, count: number, hasBooks: boolean): { at: number; kind: BreakKind }[] {
-  if (count < 18) return [];
+  if (count < 10) return [];
   let h = 0;
   for (const ch of articleId) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
   const jitter = (n: number) => ((h >>> n) % 7) - 3;               // a few paragraphs either way, so the pauses do not sit at the same spot on every note
-  const kinds: BreakKind[] = ["quiz", "cards", "read", ...(hasBooks ? (["books"] as BreakKind[]) : [])];
+  const kinds: BreakKind[] = ["quiz", "cards", "pharm", "quiz", "cards", "read", ...(hasBooks ? (["books"] as BreakKind[]) : [])];
   const turn = h % kinds.length;
-  const stops = count >= 60 ? [0.28, 0.55, 0.82] : count >= 32 ? [0.4, 0.75] : [0.55];
+  const stops = count >= 60 ? [0.25, 0.5, 0.78] : count >= 28 ? [0.35, 0.7] : [0.5];
   return stops.map((p, n) => ({ at: Math.max(6, Math.min(count - 4, Math.round(count * p) + jitter(n * 3))), kind: kinds[(turn + n) % kinds.length] }));
 }
 
@@ -262,6 +271,66 @@ export function ProgressiveList({ items, first = 24, slice = 20 }: { items: Reac
           <div className="h-4 w-11/12 animate-pulse rounded bg-muted" /><div className="h-4 w-full animate-pulse rounded bg-muted" /><div className="h-4 w-4/5 animate-pulse rounded bg-muted" />
         </div>
       )}
+    </div>
+  );
+}
+
+/**
+ * A long note is read one part at a time ("Part 2 of 4"), cut at its headings, instead of one endless page. Every part stays in the page (hidden until
+ * its turn), so a link to a heading further down opens the part that holds it, and nothing is lost to search.
+ */
+export function PartedList({ items, size = 40 }: { items: React.ReactNode[]; size?: number }) {
+  const keyOf = (el: React.ReactNode) => String((el as { key?: string | null })?.key ?? "");
+  const parts = useMemo(() => {
+    const out: React.ReactNode[][] = []; let cur: React.ReactNode[] = [];
+    items.forEach((el) => {
+      if (cur.length >= size && /^(h2|h3|plain-heading|bl|sl)-/.test(keyOf(el))) { out.push(cur); cur = []; }
+      cur.push(el);
+    });
+    if (cur.length) out.push(cur);
+    if (out.length > 1 && out[out.length - 1].length < size / 3) { const tail = out.pop()!; out[out.length - 1].push(...tail); }
+    return out;
+  }, [items, size]);
+  const [part, setPart] = useState(0);
+  const top = useRef<HTMLDivElement>(null);
+  const go = (n: number) => { setPart(Math.max(0, Math.min(parts.length - 1, n))); window.setTimeout(() => top.current?.scrollIntoView({ block: "start", behavior: "auto" }), 30); };
+
+  // a link to a heading opens the part that holds it
+  useEffect(() => {
+    const open = (id: string) => {
+      const el = id ? document.getElementById(decodeURIComponent(id)) : null;
+      const holder = el?.closest("[data-part]") as HTMLElement | null;
+      if (!holder) return;
+      const n = Number(holder.dataset.part);
+      if (n !== part) { setPart(n); window.setTimeout(() => document.getElementById(decodeURIComponent(id))?.scrollIntoView({ block: "start" }), 60); }
+    };
+    const onHash = () => open(window.location.hash.slice(1));
+    const onClick = (e: Event) => { const a = (e.target as HTMLElement | null)?.closest?.('a[href^="#"]') as HTMLAnchorElement | null; if (a) open(a.getAttribute("href")!.slice(1)); };
+    onHash();
+    window.addEventListener("hashchange", onHash);
+    document.addEventListener("click", onClick, true);
+    return () => { window.removeEventListener("hashchange", onHash); document.removeEventListener("click", onClick, true); };
+  }, [part, parts.length]);
+
+  if (parts.length < 2) return <ProgressiveList items={items} />;
+  const bar = (
+    <nav className="my-6 flex items-center justify-between gap-3 border-y border-border py-3 print:hidden" aria-label="Parts of this note" data-no-swipe>
+      <button type="button" onClick={() => go(part - 1)} disabled={part === 0} className="rounded-full px-4 py-2 text-sm font-bold text-primary hover:bg-primary/10 disabled:opacity-30">← Previous</button>
+      <label className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
+        <span>Part</span>
+        <select value={part} onChange={(e) => go(Number(e.target.value))} className="rounded-md border border-border bg-background px-2 py-1 text-foreground">
+          {parts.map((_, i) => <option key={i} value={i}>{i + 1}</option>)}
+        </select>
+        <span>of {parts.length}</span>
+      </label>
+      <button type="button" onClick={() => go(part + 1)} disabled={part === parts.length - 1} className="rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground disabled:opacity-30">Next part →</button>
+    </nav>
+  );
+  return (
+    <div ref={top}>
+      {bar}
+      {parts.map((p, i) => <div key={i} data-part={i} hidden={i !== part}><ProgressiveList items={p} first={i === 0 ? 24 : 10} /></div>)}
+      {bar}
     </div>
   );
 }

@@ -5,6 +5,8 @@ import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/
 import { enrichPeek, loadPeek, topicPeek, useTopicPeekSlug, type Peek } from "@/lib/topicPeek";
 import { setNoteReturn } from "@/lib/noteReturn";
 import { pageForPeek } from "@/lib/topics";
+import { supabase } from "@/integrations/supabase/client";
+import { buildBlogPath } from "@/lib/store";
 
 /**
  * The quick-read panel (mounted once, in App). It slides up on a phone and in from the side on a computer.
@@ -152,7 +154,7 @@ export default function TopicPeekHost() {
               )}
               {!peek.summary && !peek.points.length && (filling
                 ? <div className="mt-5 space-y-3" role="status" aria-label="Loading" aria-live="polite">{[0, 1, 2, 3].map((i) => <div key={i} className="h-4 animate-pulse rounded bg-foreground/10" style={{ width: `${96 - i * 9}%` }} />)}<div className="h-20 animate-pulse rounded-xl bg-foreground/10" /></div>
-                : <p className="mt-4 text-[15px] text-muted-foreground">Open the full page to read about {peek.name}.</p>)}
+                : <><p className="mt-4 text-[15px] text-muted-foreground">Open the full page to read about {peek.name}.</p><PeekNotes name={peek.name} onPick={(path) => { topicPeek.close(); navigate(path); }} /></>)}
             </>
           ) : (
             <div aria-busy="true"><div className="h-4 w-24 animate-pulse rounded bg-muted" /><div className="mt-3 h-8 w-2/3 animate-pulse rounded bg-muted" /><div className="mt-6 h-24 animate-pulse rounded-2xl bg-muted" /><div className="mt-4 h-16 animate-pulse rounded-xl bg-muted" /></div>
@@ -163,5 +165,31 @@ export default function TopicPeekHost() {
         </div>
       </SheetContent>
     </Sheet>
+  );
+}
+
+/** When there is no written summary yet: the notes on this site that are about the same subject, so the panel is never empty. */
+function PeekNotes({ name, onPick }: { name: string; onPick: (path: string) => void }) {
+  const [rows, setRows] = useState<{ id: string; title: string; slug: string | null; category: string }[]>([]);
+  useEffect(() => {
+    let on = true;
+    const words = name.toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(" ").filter((w) => w.length >= 3).slice(0, 3);
+    if (!words.length) return;
+    const filter = words.map((w) => `title.ilike.%${w}%`).join(",");
+    void Promise.resolve((supabase as any).from("articles").select("id,title,slug,category").eq("published", true).is("deleted_at", null).or(filter).limit(30)).then(({ data }: { data: { id: string; title: string; slug: string | null; category: string }[] | null }) => {
+      if (!on) return;
+      const score = (t: string) => words.filter((w) => t.toLowerCase().includes(w)).length;
+      setRows((data ?? []).filter((r) => !/mcq|question|exam|paper|quiz|bank/i.test(r.title)).sort((a, b) => score(b.title) - score(a.title)).slice(0, 5));
+    }, () => undefined);
+    return () => { on = false; };
+  }, [name]);
+  if (!rows.length) return null;
+  return (
+    <div className="mt-5">
+      <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-primary">Notes on this site</p>
+      <ul className="mt-1 divide-y divide-border border-y border-border">
+        {rows.map((r) => <li key={r.id}><button type="button" onClick={() => onPick(buildBlogPath(r))} className="block w-full py-3 text-left text-[15px] font-semibold text-foreground hover:text-primary">{r.title}<span className="block text-xs font-normal text-muted-foreground">{r.category}</span></button></li>)}
+      </ul>
+    </div>
   );
 }

@@ -1,5 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { buildBlogPath } from "@/lib/store";
+import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { STATIC_NOTES, findStaticNote, loadStaticNoteText, type StaticNote } from "@/data/staticNotes";
 import { IMED, isPublished, topicForNote } from "@/data/imed";
@@ -31,30 +34,78 @@ function useThumb(slug: string | undefined) {
   return src;
 }
 
-function Card({ note, dir }: { note: StaticNote; dir: "prev" | "next" }) {
-  const src = useThumb(note.slug);
-  const Icon = dir === "prev" ? ArrowLeft : ArrowRight;
-  return (
-    <Link to={`/notes/${note.slug}`} className={`group flex overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-md ${dir === "next" ? "sm:flex-row-reverse sm:text-right" : ""}`}>
-      <span className="relative h-auto w-28 shrink-0 overflow-hidden bg-gradient-to-br from-primary/25 via-primary/10 to-violet-400/20 sm:w-36">
-        {src ? <img src={src} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" /> : <span className="absolute inset-0 flex items-center justify-center font-serif text-4xl font-bold text-primary/40">{note.title.slice(0, 1)}</span>}
-      </span>
-      <span className="min-w-0 flex-1 p-4">
-        <span className={`flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-primary ${dir === "next" ? "sm:justify-end" : ""}`}>{dir === "prev" && <Icon className="h-3.5 w-3.5" aria-hidden />}{dir === "prev" ? "Previous" : "Up next"}{dir === "next" && <Icon className="h-3.5 w-3.5" aria-hidden />}</span>
-        <span className="mt-1 line-clamp-2 block font-serif text-lg font-bold leading-snug group-hover:text-primary">{note.title}</span>
-        <span className="mt-1 line-clamp-2 block text-[13px] leading-5 text-muted-foreground">{note.group ?? note.unit}</span>
+export interface NavTarget { title: string; sub?: string; to: string }
+
+/** Swipe left for the next note, right for the previous one (only for a clear horizontal swipe that does not start in a table, code block or picture). */
+function useSwipeNav(prev: NavTarget | null, next: NavTarget | null) {
+  const navigate = useNavigate();
+  useEffect(() => {
+    let sx = 0, sy = 0, t0 = 0, ok = false;
+    const down = (e: TouchEvent) => {
+      const el = e.target as HTMLElement | null;
+      ok = !!el && !el.closest("table, pre, code, input, textarea, [data-no-swipe], .overflow-x-auto, img, [role=dialog]") && e.touches.length === 1;
+      sx = e.touches[0].clientX; sy = e.touches[0].clientY; t0 = Date.now();
+    };
+    const up = (e: TouchEvent) => {
+      if (!ok) return; ok = false;
+      const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+      if (Date.now() - t0 > 700 || Math.abs(dx) < 110 || Math.abs(dy) > Math.abs(dx) * 0.5) return;
+      const go = dx < 0 ? next : prev;
+      if (go) navigate(go.to);
+    };
+    document.addEventListener("touchstart", down, { passive: true });
+    document.addEventListener("touchend", up, { passive: true });
+    return () => { document.removeEventListener("touchstart", down); document.removeEventListener("touchend", up); };
+  }, [prev, next, navigate]);
+}
+
+/** Previous and next as two plain, large rows (no boxes), with the swipe gesture behind them. */
+export function NoteNav({ prev, next }: { prev: NavTarget | null; next: NavTarget | null }) {
+  useSwipeNav(prev, next);
+  if (!prev && !next) return null;
+  const row = (t: NavTarget, dir: "prev" | "next") => (
+    <Link to={t.to} className={`group flex items-center gap-3 py-4 ${dir === "next" ? "flex-row-reverse text-right" : ""}`}>
+      {dir === "prev" ? <ArrowLeft className="h-5 w-5 shrink-0 text-primary" aria-hidden /> : <ArrowRight className="h-5 w-5 shrink-0 text-primary" aria-hidden />}
+      <span className="min-w-0 flex-1">
+        <span className="block text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{dir === "prev" ? "Previous" : "Next"}</span>
+        <span className="mt-0.5 line-clamp-2 block font-serif text-[17px] font-bold leading-snug group-hover:text-primary">{t.title}</span>
+        {t.sub && <span className="mt-0.5 block truncate text-xs text-muted-foreground">{t.sub}</span>}
       </span>
     </Link>
   );
-}
-
-export default function NoteNavCards({ slug }: { slug: string }) {
-  const { prev, next } = useMemo(() => neighbours(slug), [slug]);
-  if (!prev && !next) return null;
   return (
-    <nav aria-label="Previous and next note" className="mt-12 grid gap-3 sm:grid-cols-2 print:hidden">
-      {prev ? <Card note={prev} dir="prev" /> : <span className="hidden sm:block" />}
-      {next ? <Card note={next} dir="next" /> : null}
+    <nav aria-label="Previous and next note" className="mt-12 divide-y divide-border border-y border-border print:hidden">
+      {next && row(next, "next")}
+      {prev && row(prev, "prev")}
+      <p className="py-2 text-center text-[11px] text-muted-foreground sm:hidden">Swipe left for the next note, right for the previous</p>
     </nav>
   );
+}
+
+/** For the notes in the library (the static notes). */
+export default function NoteNavCards({ slug }: { slug: string }) {
+  const { prev, next } = useMemo(() => neighbours(slug), [slug]);
+  const t = (n: StaticNote | null): NavTarget | null => (n ? { title: n.title, sub: n.group ?? n.unit, to: `/notes/${n.slug}` } : null);
+  return <NoteNav prev={t(prev)} next={t(next)} />;
+}
+
+/** For the notes of the blog: the note before and after this one in the same unit, oldest first, so a series reads in order. */
+export function ArticleNav({ id, category, createdAt }: { id: string; category: string; createdAt?: string | null }) {
+  const [pair, setPair] = useState<{ prev: NavTarget | null; next: NavTarget | null }>({ prev: null, next: null });
+  useEffect(() => {
+    let on = true;
+    void (async () => {
+      try {
+        const db = supabase as any;
+        const base = () => db.from("articles").select("id,title,slug,category,created_at").eq("published", true).is("deleted_at", null).eq("category", category).not("title", "ilike", "%mcq%").not("title", "ilike", "%past paper%").not("title", "ilike", "%exam%");
+        const me = createdAt ? { created_at: createdAt } : (await db.from("articles").select("created_at").eq("id", id).maybeSingle()).data;
+        if (!me?.created_at) return;
+        const [p, n] = await Promise.all([base().lt("created_at", me.created_at).order("created_at", { ascending: false }).limit(1), base().gt("created_at", me.created_at).order("created_at", { ascending: true }).limit(1)]);
+        const t = (r: { id: string; title: string; slug: string | null; category: string } | undefined): NavTarget | null => (r ? { title: cleanTopicTitle(r.title), sub: r.category.replace(/^Year\s*\d\s*:\s*/i, ""), to: buildBlogPath(r) } : null);
+        if (on) setPair({ prev: t(p.data?.[0]), next: t(n.data?.[0]) });
+      } catch { /* no neighbours */ }
+    })();
+    return () => { on = false; };
+  }, [id, category, createdAt]);
+  return <NoteNav prev={pair.prev} next={pair.next} />;
 }

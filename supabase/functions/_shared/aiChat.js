@@ -14,7 +14,10 @@ const GROQ_MODELS = ["openai/gpt-oss-120b", "qwen/qwen3.8-27b", "openai/gpt-oss-
 const split = (keys, manual) => (keys.length < 2 ? keys : manual ? [keys[keys.length - 1], ...keys.slice(0, -1)] : keys.slice(0, -1));
 
 export async function chatText(env, messages, { temperature = 0.1, maxTokens = 8000, timeoutMs = 25000, manual = false } = {}) {
-  const gem = split(list(env.GEMINI_API_KEYS || env.GEMINI_API_KEY), manual), groq = split(list(env.GROQ_API_KEYS || env.GROQ_API_KEY), manual);
+  // GROQ_API_KEYS_EXTRA: more Groq keys for the scheduled jobs; they go in front of the last key, which stays the one kept for manual use
+  const groqBase = list(env.GROQ_API_KEYS || env.GROQ_API_KEY), groqExtra = list(env.GROQ_API_KEYS_EXTRA).filter((k) => !groqBase.includes(k));
+  const groqKeys = groqBase.length ? [...groqBase.slice(0, -1), ...groqExtra, groqBase[groqBase.length - 1]] : groqExtra;
+  const gem = split(list(env.GEMINI_API_KEYS || env.GEMINI_API_KEY), manual), groq = split(groqKeys, manual);
   // Gemini and Groq take turns at being first (so Groq's separate free allowance is used and Gemini's lasts longer); inside a provider the keys and models
   // rotate. A model that just said "quota used up" or "does not exist" is skipped for a while instead of being asked again on every call.
   const entries = (keys, url, models) => keys.flatMap((key, ki) => models.map((model) => ({ url, key, model, id: model + ":" + ki })));
@@ -28,17 +31,17 @@ export async function chatText(env, messages, { temperature = 0.1, maxTokens = 8
   const B = rot(groqFirst ? gemAll : groqAll, Math.floor(n / 2), groqFirst ? GEMINI_MODELS.length : GROQ_MODELS.length);
   const all = [...A, ...B], now = Date.now();
   const ordered = [...all.filter((t) => (cooldown.get(t.id) || 0) <= now), ...all.filter((t) => (cooldown.get(t.id) || 0) > now)];
-  let last = "";
+  let last = ""; const tried = [];
   for (const t of ordered) {
     const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), timeoutMs);
     try {
       const r = await fetch(t.url, { method: "POST", headers: { Authorization: "Bearer " + t.key, "Content-Type": "application/json" }, body: JSON.stringify({ model: t.model, messages, temperature, max_tokens: maxTokens }), signal: controller.signal });
-      if (r.ok) { const text = (await r.json())?.choices?.[0]?.message?.content; if (text) return text; last = t.model + ": empty"; continue; }
-      last = t.model + ": " + r.status;
+      if (r.ok) { const text = (await r.json())?.choices?.[0]?.message?.content; if (text) return text; last = t.model + ": empty"; tried.push(last); continue; }
+      last = t.model + ": " + r.status; tried.push(last);
       if (r.status === 429) cooldown.set(t.id, Date.now() + 60_000); else if (r.status === 404) cooldown.set(t.id, Date.now() + 3_600_000);
-    } catch (e) { last = t.model + ": " + String(e?.message ?? e).slice(0, 50); } finally { clearTimeout(timer); }
+    } catch (e) { last = t.model + ": " + String(e?.message ?? e).slice(0, 50); tried.push(last); } finally { clearTimeout(timer); }
   }
-  throw new Error("All AI providers failed (" + last + ")");
+  throw new Error("All AI providers failed (" + [...new Set(tried)].slice(-8).join("; ") + (tried.length ? "" : last) + ")");
 }
 
 /** One picture from Gemini's image model; returns a data URL. */
