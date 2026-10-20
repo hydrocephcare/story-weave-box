@@ -80,7 +80,7 @@ export default function Admin() {
   const [loadingType, setLoadingType] = useState<string | null>(null);
   const [category, setCategory] = useState("");
   const [cardCount, setCardCount] = useState(20);
-  const [mcqCount, setMcqCount] = useState(15);
+  const [mcqCount, setMcqCount] = useState(30);
   const [customCategories, setCustomCategories] = useState<ArticleCategory[]>([]);
 
   useEffect(() => {
@@ -539,7 +539,7 @@ export default function Admin() {
             <div className="rounded-lg border border-border bg-card p-3">
               <label className="mb-2 block text-sm font-medium text-foreground">MCQs (5-100)</label>
               <div className="flex items-center gap-2">
-                <Input type="number" min={5} max={100} value={mcqCount} onChange={(e) => setMcqCount(clampRequestedCount(Number(e.target.value) || 15))} className="w-24" />
+                <Input type="number" min={5} max={100} value={mcqCount} onChange={(e) => setMcqCount(clampRequestedCount(Number(e.target.value) || 30))} className="w-24" />
                 <div className="flex flex-wrap gap-1">
                   {[10, 15, 20, 30, 50, 80, 100].map((n) => (
                     <button key={n} onClick={() => setMcqCount(n)} className={`rounded-md px-2 py-1 text-xs font-medium transition-colors ${mcqCount === n ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground hover:text-foreground"}`}>{n}</button>

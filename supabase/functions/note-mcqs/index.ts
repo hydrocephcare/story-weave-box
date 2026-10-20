@@ -18,6 +18,13 @@ Rules:
 - The explanation is two sentences at most: why the answer is right and why the likeliest wrong option is not.
 - No "all of the above" or "none of the above". Do not mention "the note" or "the text" in a question.`;
 
+/** The right answer must not sit in a predictable place (the model likes B and C, and makes the right option the longest): shuffle the options. */
+function mix(options: string[], correct: number) {
+  const idx = options.map((_, i) => i);
+  for (let i = idx.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [idx[i], idx[j]] = [idx[j], idx[i]]; }
+  return { options: idx.map((i) => options[i]), correct_answer: idx.indexOf(correct) };
+}
+
 function parse(raw: string) {
   const start = raw.indexOf("[");
   if (start < 0) return [];
@@ -36,8 +43,7 @@ function parse(raw: string) {
     .filter((q: any) => q?.question && Array.isArray(q?.options) && q.options.length >= 4 && Number.isInteger(q.correct_answer) && q.correct_answer >= 0 && q.correct_answer <= 3)
     .map((q: any) => ({
       question: String(q.question).trim(),
-      options: q.options.slice(0, 4).map((o: any) => String(o).trim()),
-      correct_answer: q.correct_answer,
+      ...mix(q.options.slice(0, 4).map((o: any) => String(o).trim()), q.correct_answer),
       explanation: q.explanation ? String(q.explanation).trim() : "",
     }))
     .filter((q: any) => q.options.every((o: string) => o.length > 0) && new Set(q.options.map((o: string) => o.toLowerCase())).size === 4 && !/all of the above|none of the above/i.test(q.options.join(" ")));

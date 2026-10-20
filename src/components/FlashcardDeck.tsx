@@ -9,6 +9,7 @@ import { useKeywordLinks } from "@/lib/keyword-link";
 import { renderFlashcardMarkdown } from "@/components/FlashcardViewer";
 import { buildMcqPath } from "@/lib/store";
 import { cardKey, isDue, label, loadStates, requeueGap, saveState, schedule, type CardState, type Rating } from "@/lib/deckSrs";
+import { pharmCards } from "@/lib/pharmDrill";
 import { cleanTopicTitle } from "../../supabase/functions/_shared/topicTitle.js";
 
 export interface DeckCard { question: string; answer: string; setId: string; idx: number }
@@ -30,7 +31,9 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
   const { user } = useAuth();
   const [extra, setExtra] = useState<DeckCard[]>([]);
   const [adding, setAdding] = useState(false);
-  const cards = useMemo(() => [...base, ...extra], [base, extra]);
+  // after every ten cards of a deck comes one pharmacology card (a drug you must know), so drug facts are rehearsed all the time
+  const pharm = useMemo<DeckCard[]>(() => (mode === "deck" && base.length >= 8 && !/pharmac/i.test(category) ? pharmCards(`${title} ${base.map((c) => c.question).join(" ")}`, Math.floor(base.length / 10) + 1).map((c, i) => ({ ...c, setId: "pharm", idx: i })) : []), [base, mode, category, title]);
+  const cards = useMemo(() => [...base, ...pharm, ...extra], [base, pharm, extra]);
   const cardsRef = useRef(cards); cardsRef.current = cards;
   const ctx = useKeywordLinks();
   const [states, setStates] = useState<Record<string, CardState> | null>(null);
@@ -61,11 +64,12 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
       const idxs = cs.map((_, i) => i).filter((i) => !hid.has(cardKey(cs[i].setId, cs[i].idx)));
       const due = idxs.filter((i) => isDue(m[key(i)])).sort((a, b) => m[key(a)].due - m[key(b)].due);
       const fresh = idxs.filter((i) => !m[key(i)]);
-      const q = mode === "today" || !all ? [...due, ...fresh] : idxs;
+      let q = mode === "today" || !all ? [...due, ...fresh] : idxs;
+      if (pharm.length) { const withPharm: number[] = []; q.forEach((i, n) => { withPharm.push(i); if ((n + 1) % 10 === 0 && pharm[Math.floor(n / 10)]) withPharm.push(base.length + Math.floor(n / 10)); }); q = withPharm; }
       setQueue(q); setTotal(q.length); setHistory([]); setStats({ done: 0, again: 0 }); setFlipped(false);
     });
     return () => { on = false; };
-  }, [user?.id, base, all, mode]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [user?.id, base, all, mode, pharm]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const finished = queue !== null && queue.length === 0;
   const ci = queue && queue.length ? queue[0] : -1;
@@ -86,7 +90,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
     const next = schedule(prev, r);
     const key = cardKey(card.setId, card.idx);
     setStates({ ...states, [key]: next });
-    void saveState(user?.id ?? null, card.setId, card.idx, next);
+    if (card.setId !== "pharm") void saveState(user?.id ?? null, card.setId, card.idx, next);
     const gap = requeueGap(r, next);
     const rest = queue.slice(1);
     const q = gap > 0 ? [...rest.slice(0, gap), ci, ...rest.slice(gap)] : rest;

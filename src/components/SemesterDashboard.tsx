@@ -156,7 +156,9 @@ export default function SemesterDashboard() {
   const allResources = useMemo(() => bundles.flatMap((b) => b.resources), [bundles]);
   const completedCount = allResources.filter((r) => progressMap.get(`${r.kind}:${r.id}`)?.status === "completed").length;
   const startedCount = allResources.filter((r) => progressMap.has(`${r.kind}:${r.id}`)).length;
-  const completionPercent = allResources.length ? Math.round((completedCount / allResources.length) * 100) : 0;
+  // reading counts as it happens: a finished note is whole, a note you are part-way through counts for the part you got to
+  const share = (r: { kind: string; id: string }) => { const p = progressMap.get(`${r.kind}:${r.id}`); return !p ? 0 : p.status === "completed" ? 1 : Math.min(0.95, Math.max(0.05, (p.progress_percent || 0) / 100)); };
+  const completionPercent = allResources.length ? Math.round((allResources.reduce((n, r) => n + share(r), 0) / allResources.length) * 100) : 0;
 
   const recentRead = useMemo(() => {
     const rows = allResources
@@ -209,7 +211,7 @@ export default function SemesterDashboard() {
               </div>
               <div className="rounded-2xl border border-border bg-background px-4 py-3 text-center">
                 <p className="font-serif text-xl font-bold">{completionPercent}%</p>
-                <p className="text-[10px] font-bold uppercase tracking-wide text-muted-foreground">Read progress</p>
+                <p className="text-[10px] font-bold uppercase tracking-wide text-muted-foreground">Read progress · {startedCount} started</p>
               </div>
             </div>
           </div>
@@ -224,7 +226,7 @@ export default function SemesterDashboard() {
                 {semesterUnits.map(({ unit, resources }) => {
                   const completed = resources.filter((r) => progressMap.get(`${r.kind}:${r.id}`)?.status === "completed").length;
                   const started = resources.filter((r) => progressMap.has(`${r.kind}:${r.id}`)).length;
-                  const pct = resources.length ? Math.round((completed / resources.length) * 100) : 0;
+                  const pct = resources.length ? Math.round((resources.reduce((n, r) => n + share(r), 0) / resources.length) * 100) : 0;
                   const status = pct === 100 && resources.length ? "Completed" : started ? "In progress" : "Not started";
                   return (
                     <Link
