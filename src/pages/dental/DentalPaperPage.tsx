@@ -103,7 +103,7 @@ export default function DentalPaperPage() {
   const QuestionRow = (it: PaperItem, i: number) => {
     const us = answerUnits(it);
     const txt = (k: string) => units.find((u) => u.key === k)?.text ?? "";
-    const area = (k: string) => <><AnswerArea k={k} answers={answers} test={test} shown={shown} toggle={toggle} ratings={ratings} rate={rate} /><button type="button" onClick={() => openAI(`Help me answer this ${paper.unitTitle} exam question in points: ${txt(k)}`)} className="mt-1.5 inline-flex items-center gap-1 text-xs font-bold text-muted-foreground hover:text-primary"><Sparkles className="h-3 w-3" aria-hidden />Ask AI</button></>;
+    const area = (k: string, ask = true) => <><AnswerArea k={k} answers={answers} test={test} shown={shown} toggle={toggle} ratings={ratings} rate={rate} />{(ask || answers[k]) && <button type="button" onClick={() => openAI(`Help me answer this ${paper.unitTitle} exam question in points: ${txt(k)}`)} className="mt-1.5 inline-flex items-center gap-1 text-xs font-bold text-muted-foreground hover:text-primary"><Sparkles className="h-3 w-3" aria-hidden />Ask AI</button>}</>;
     return (
       <li key={i} id={`q${it.n}`} className="mt-8 list-none scroll-mt-20">
         <div className="flex items-baseline justify-between gap-3">
@@ -116,7 +116,7 @@ export default function DentalPaperPage() {
               <div key={j}>
                 <div className="flex items-baseline justify-between gap-3 text-[16.5px] leading-relaxed"><p className="min-w-0 flex-1"><span className="mr-1.5 font-semibold text-primary">{p.l ? `${p.l})` : "•"}</span>{p.text}</p>{marksLabel(p.marks)}</div>
                 <SubParts parts={p.parts} />
-                {us[j] && area(us[j].key)}
+                {us[j] && area(us[j].key, false)}
               </div>
             ))}
           </div>
