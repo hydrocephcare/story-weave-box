@@ -70,7 +70,21 @@ function parseList(lines, start, indent) {
 }
 
 function table(rows) {
-  const cells = (r) => r.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
+  // Split only on unescaped pipes; a leading/trailing pipe is optional in Markdown.
+  const cells = (r) => {
+    let line = r.trim().replace(/^\\|/, "").replace(/\\|$/, "");
+    const out = [];
+    let cell = "";
+    let escaped = false;
+    for (const ch of line) {
+      if (ch === "|" && !escaped) { out.push(cell.trim()); cell = ""; }
+      else if (ch === "\\" && !escaped) { cell += ch; escaped = true; continue; }
+      else { cell += ch; }
+      escaped = false;
+    }
+    out.push(cell.trim());
+    return out;
+  };
   const head = cells(rows[0]);
   const body = rows.slice(2).map(cells).filter((r) => r.some((cell) => cell.length));
   const columns = head.length;
@@ -78,9 +92,9 @@ function table(rows) {
   const th = head.map((cell, i) => `<th scope="col" style="text-align:${alignments[i] || "left"}">${inline(cell)}</th>`).join("");
   const tr = body.map((row) => `<tr>${head.map((label, i) => {
     const value = row[i] ?? "";
-    return `<td data-label="${esc(label.replace(/<[^>]*>/g, ""))}" style="text-align:${alignments[i] || "left"}">${inline(value)}</td>`;
+    return `<td style="text-align:${alignments[i] || "left"}">${inline(value)}</td>`;
   }).join("")}</tr>`).join("");
-  const hint = columns > 3 ? '<p class="note-table-hint" aria-hidden="true">Swipe sideways to compare all columns</p>' : "";
+  const hint = '<p class="note-table-hint" aria-hidden="true">Swipe horizontally to view all columns</p>';
   return `<div class="note-table${columns > 3 ? " note-table-wide" : " note-table-compact"}" data-columns="${columns}" role="region" aria-label="Data table" tabindex="0">${hint}<table><thead><tr>${th}</tr></thead><tbody>${tr}</tbody></table></div>`;
 }
 
@@ -237,13 +251,15 @@ export function mdToHtml(source, { skipTitle = false, questions = false } = {}) 
       while (i < lines.length && /^>\s?/.test(lines[i])) quoted.push(lines[i++].replace(/^>\s?/, ""));
       out.push(`<blockquote><p>${inline(quoted.join(" "))}</p></blockquote>`); continue;
     }
-    if (/^\s*\|/.test(line) && /^\s*\|[\s:|-]+\|\s*$/.test(lines[i + 1] ?? "")) {
+    const separatorRow = (value) => /^\\s*\\|?\\s*:?-{3,}:?\\s*(?:\\|\\s*:?-{3,}:?\\s*)+\\|?\\s*$/.test(value ?? "");
+    const hasTableSeparator = separatorRow(lines[i + 1]);
+    if (hasTableSeparator && line.includes("|")) {
       const rows = [];
-      while (i < lines.length && /^\s*\|/.test(lines[i])) rows.push(lines[i++]);
-      out.push(table(rows)); continue;
+      while (i < lines.length && lines[i].includes("|") && lines[i].trim()) rows.push(lines[i++]);
+      if (rows.length >= 2) { out.push(table(rows)); continue; }
     }
-    // a stray line that starts with a bar but is not a table (no separator row under it) is shown as plain text, never left unread
-    if (/^\s*\|/.test(line)) { out.push(`<p>${inline(line.replace(/^\s*\|\s*/, "").replace(/\|/g, " · "))}</p>`); i++; continue; }
+    // A pipe-led non-table line should remain readable as prose.
+    if (/^\\s*\\|/.test(line)) { out.push(`<p>${inline(line.replace(/^\\s*\\|\\s*/, "").replace(/\\|/g, " · "))}</p>`); i++; continue; }
     if (questions) {
       const mcq = mcqBlock(lines, i);
       if (mcq) { closeCard(); out.push(mcq[0]); i = mcq[1]; continue; }
