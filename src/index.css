@@ -617,3 +617,4 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
   nav, aside, footer, .no-print, [role="dialog"] { display: none !important; }
   body { background: #fff !important; color: #000 !important; }
 }
+.note-body .note-figure img, main figure img { cursor: zoom-in; }

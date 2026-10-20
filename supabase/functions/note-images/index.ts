@@ -38,6 +38,28 @@ async function commons(query: string): Promise<Pic[]> {
   return out;
 }
 
+/** The lead picture of the Wikipedia article that is exactly about the subject, only when it is a free picture held on Commons. */
+async function wikiLead(subject: string, keys: string[]): Promise<{ url: string; title: string; caption: string } | null> {
+  const q = subject.replace(/[^A-Za-z0-9 ]/g, " ").replace(/s+/g, " ").trim();
+  if (!q) return null;
+  const p = new URLSearchParams({ action: "query", format: "json", generator: "search", gsrsearch: q, gsrlimit: "4", prop: "pageimages|pageterms", piprop: "thumbnail", pithumbsize: "900", wbptterms: "description" });
+  const r = await fetch(`https://en.wikipedia.org/w/api.php?${p}`, { headers: { "User-Agent": "OmpathStudy/1.0 (https://www.ompathstudy.com)" } });
+  if (!r.ok) return null;
+  const pages = Object.values(((await r.json())?.query?.pages ?? {}) as Record<string, any>).sort((a: any, b: any) => (a.index ?? 9) - (b.index ?? 9));
+  for (const pg of pages) {
+    const title = String(pg.title || "");
+    const url: string = String(pg.thumbnail?.source || "").replace("https://thumb.wikimedia.org", "https://upload.wikimedia.org").split("?")[0];
+    if (!url || !//wikipedia/commons//.test(url) || /[()s]]/.test(url) || BAD.test(url)) continue;
+    const t = title.toLowerCase();
+    if (!keys.length || !keys.every((k) => t.includes(k))) continue;
+    const desc = String(pg.terms?.description?.[0] || "");
+    if (!/disease|disorder|syndrome|condition|medical|anatom|organ|bone|muscle|artery|vein|nerve|gland|cell|tissue|infection|cancer|tumou?r|drug|medication|procedure|test|symptom|sign|hormone|virus|bacteri|parasite|vitamin|protein|enzyme|growth|development/i.test(desc)) continue;
+    return { url, title, caption: `${title} · Image from the Wikipedia article, Wikimedia Commons`.replace(/[[]()
+]/g, " ") };
+  }
+  return null;
+}
+
 /** The first paragraph after a heading ends at the next blank line; the picture goes right after it. */
 function insertAfterFirstPara(lines: string[], headingIdx: number, imgLine: string): boolean {
   let i = headingIdx + 1;
@@ -107,6 +129,16 @@ serve(async (req) => {
       used.add(c.url);
       const cap = `${c.title}  · ${c.credit}, ${c.licence}, Wikimedia Commons`.replace(/[\[\]()\n]/g, " ").replace(/\s+/g, " ").slice(0, 200);
       picked.push({ i: sec.i, line: `![${cap}](${c.url.split("?")[0]})`, why: c.title });
+    }
+    // no section had a picture it could be sure of: use the lead picture of the Wikipedia article on the note's subject, so no note is left without one
+    if (!picked.length && !aiDown) {
+      try {
+        const lead = await wikiLead(head, titleKeys);
+        if (lead) {
+          const first = lines.findIndex((l, i) => i > 2 && /^#{2,4}s/.test(l));
+          if (first > 0) { picked.push({ i: first, line: `![${lead.caption}](${lead.url})`, why: `Wikipedia: ${lead.title}` }); trace.push(`lead picture: ${lead.title}`); }
+        }
+      } catch { /* no lead picture */ }
     }
     let added = 0;
     for (const p of picked.sort((x, y) => y.i - x.i)) if (insertAfterFirstPara(lines, p.i, p.line)) added++;

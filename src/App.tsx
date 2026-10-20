@@ -18,6 +18,7 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-route
 import { ThemeProvider } from "next-themes";
 import { AuthProvider } from "@/hooks/useAuth";
 import ReadNotifier from "@/components/ReadNotifier";
+import ImageLightbox from "@/components/ImageLightbox";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -371,6 +372,7 @@ const App = () => (
             <UpdateNotifier />
             <ReminderWatcher />
             <ReadNotifier />
+            <ImageLightbox />
             <AiFailureWatcher />
             <AIGate />
             <AIPill />
