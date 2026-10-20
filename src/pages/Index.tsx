@@ -24,6 +24,7 @@ import RecentNotes from "@/components/RecentNotes";
 import RecentlyPublished from "@/components/RecentlyPublished";
 import HomeStories from "@/components/HomeStories";
 import ContestPromo from "@/components/ContestPromo";
+import CoursePicker from "@/components/CoursePicker";
 import { notesForYear } from "@/data/staticNotes";
 
 /** Units that have notes shipped with the site, so a year is never shown as empty when it has notes. */
@@ -271,6 +272,8 @@ export default function Index() {
           </motion.div>
         </motion.div>
       </section>
+
+      {!user && <CoursePicker />}
 
       <ContestPromo />
 

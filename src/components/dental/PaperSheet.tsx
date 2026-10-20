@@ -1,17 +1,5 @@
 import type { DentalPaper, PaperItem } from "@/lib/dentalPapers";
 
-/** A drawn crest (not the university's own logo): a shield, an open book and a star, in the colours of a university letterhead. */
-function Crest({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 64 72" className={className} role="img" aria-label="University crest">
-      <path d="M32 3 7 11v22c0 17 11 30 25 36 14-6 25-19 25-36V11Z" fill="none" stroke="currentColor" strokeWidth="2.4" />
-      <path d="M32 3v66M7 28h50" stroke="currentColor" strokeWidth="1.2" opacity=".55" />
-      <path d="M17 44c5-3 10-3 15 0 5-3 10-3 15 0v-9c-5-3-10-3-15 0-5-3-10-3-15 0Z" fill="currentColor" opacity=".85" />
-      <path d="m32 13 1.9 4.2 4.6.4-3.5 3 1 4.5-4-2.4-4 2.4 1-4.5-3.5-3 4.6-.4Z" fill="currentColor" />
-    </svg>
-  );
-}
-
 const up = (s: string) => s.toUpperCase();
 
 function Marks({ m }: { m?: number }) {
@@ -50,10 +38,7 @@ export default function PaperSheet({ paper }: { paper: DentalPaper }) {
         <article key={pg.n} className="mx-auto w-full max-w-[44rem] bg-white px-7 py-9 text-neutral-900 shadow-[0_6px_24px_-8px_rgba(0,0,0,0.35)] sm:px-14 sm:py-12" style={{ fontFamily: "'Times New Roman', Times, 'Libre Baskerville', Georgia, serif", minHeight: "min(1100px, 150vw)" }} aria-label={`Page ${pg.n}`}>
           {idx === 0 && (
             <header className="text-center">
-              <div className="flex items-center justify-center gap-4 text-neutral-700">
-                <Crest className="h-14 w-12 shrink-0 text-neutral-700 sm:h-16 sm:w-14" />
-                <p className="text-[26px] leading-none tracking-wide text-neutral-500 sm:text-[32px]">{paper.university}</p>
-              </div>
+              <img src="/dental/letterhead.png" alt={paper.university} width={920} height={165} className="mx-auto h-auto w-full max-w-[34rem]" />
               <p className="mt-6 text-[15px] font-semibold tracking-wide">{up(paper.examTitle)}</p>
               {paper.school && <p className="mt-3 text-[14.5px] font-semibold tracking-wide">{up(paper.school)}</p>}
               {paper.department && <p className="mt-1 text-[14.5px] font-semibold tracking-wide">{up(paper.department)}</p>}

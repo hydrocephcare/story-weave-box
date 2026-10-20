@@ -1,14 +1,26 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ChevronRight, FileText, Menu } from "lucide-react";
+import { ChevronRight, Eye, EyeOff, FileText, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
 import PaperSheet from "@/components/dental/PaperSheet";
+import { loadAnswers, questionKey } from "@/lib/dentalAnswers";
 import { loadPaper, questionCount, totalMarks, type DentalPaper, type PaperItem } from "@/lib/dentalPapers";
 
 const SITE = "https://www.ompathstudy.com";
 
-function Question({ it }: { it: PaperItem }) {
+/** A model answer: lines starting with "- " become bullets, **bold** is kept. */
+function Answer({ text }: { text: string }) {
+  const bold = (t: string) => t.split(/(\*\*[^*]+\*\*)/g).map((x, i) => (x.startsWith("**") && x.endsWith("**") ? <strong key={i}>{x.slice(2, -2)}</strong> : x));
+  const bullet = /^\s*[-•*]\s+/;
+  return (
+    <div className="mt-3 space-y-1.5 border-l-2 border-emerald-500/60 pl-4 text-[15.5px] leading-relaxed">
+      {text.split("\n").filter((l) => l.trim()).map((l, i) => (bullet.test(l) ? <p key={i} className="flex gap-2"><span className="text-primary">•</span><span>{bold(l.replace(bullet, ""))}</span></p> : <p key={i} className="font-semibold">{bold(l)}</p>))}
+    </div>
+  );
+}
+
+function Question({ it, answer, open, onToggle }: { it: PaperItem; answer?: string; open: boolean; onToggle: () => void }) {
   if (it.t === "h") return <h3 className="mt-8 border-b border-border pb-1 text-[13px] font-bold uppercase tracking-[0.12em] text-primary">{it.text}{it.marks ? ` · ${it.marks} marks` : ""}</h3>;
   if (it.t === "p") return <p className="mt-3 text-[15px] italic text-muted-foreground">{it.text}</p>;
   return (
@@ -24,6 +36,8 @@ function Question({ it }: { it: PaperItem }) {
           ))}
         </ol>
       )}
+      {answer && <button type="button" onClick={onToggle} aria-expanded={open} className="mt-2 inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:underline">{open ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}{open ? "Hide answer" : "Show answer"}</button>}
+      {answer && open && <Answer text={answer} />}
     </li>
   );
 }
@@ -33,12 +47,17 @@ export default function DentalPaperPage() {
   const { slug = "" } = useParams();
   const [paper, setPaper] = useState<DentalPaper | null | undefined>(undefined);
   const [view, setView] = useState(false);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [shown, setShown] = useState<Set<string>>(new Set());
+  useEffect(() => { let on = true; setAnswers({}); setShown(new Set()); void loadAnswers(slug).then((a) => { if (on) setAnswers(a); }); return () => { on = false; }; }, [slug]);
   useEffect(() => { let on = true; setPaper(undefined); void loadPaper(slug).then((p) => { if (on) setPaper(p); }).catch(() => { if (on) setPaper(null); }); return () => { on = false; }; }, [slug]);
 
   if (paper === undefined) return <div className="mx-auto max-w-3xl px-5 py-16" aria-busy="true"><div className="h-8 w-2/3 animate-pulse rounded bg-muted" /><div className="mt-6 space-y-3">{[0, 1, 2, 3].map((i) => <div key={i} className="h-5 animate-pulse rounded bg-muted" />)}</div></div>;
   if (paper === null) return <div className="mx-auto max-w-xl px-5 py-20 text-center"><h1 className="font-serif text-3xl font-bold">Paper not found</h1><Link to="/dental/papers" className="mt-5 inline-block font-bold text-primary hover:underline">All dental past papers →</Link></div>;
 
   const q = questionCount(paper), marks = totalMarks(paper);
+  const keys = paper.pages.flatMap((pg) => pg.items).filter((it) => it.t === "q").map(questionKey);
+  const ready = keys.filter((k) => answers[k]).length;
   const heading = `${paper.unitTitle}${paper.sitting ? `: ${paper.sitting}` : ""}${paper.date ? `, ${paper.date}` : ""}`;
   const desc = `${paper.university} ${paper.department || paper.school} past paper: ${paper.unitTitle} (${paper.unitCode}), ${paper.sitting || "exam"}${paper.date ? `, ${paper.date}` : ""}. ${q} questions${marks ? `, ${marks} marks` : ""}, typed out to read and practise.`.replace(/\s+/g, " ");
   const url = `${SITE}/dental/papers/${paper.slug}`;
@@ -66,11 +85,12 @@ export default function DentalPaperPage() {
         {paper.instructions && <p className="mt-5 rounded-lg bg-muted/50 px-4 py-3 text-[14px] font-semibold uppercase leading-snug">Instructions: {paper.instructions}</p>}
         {!paper.complete && <p className="mt-4 text-sm text-amber-600 dark:text-amber-400">{paper.note || "Part of this paper was not readable in the scan, so some questions may be missing."}</p>}
 
-        <ul className="mt-2">{paper.pages.flatMap((pg) => pg.items).map((it, i) => <Question key={i} it={it} />)}</ul>
+        {ready > 0 && <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm"><span className="font-semibold text-emerald-600 dark:text-emerald-400">{ready} of {q} answers ready</span><button type="button" onClick={() => setShown(shown.size >= ready ? new Set() : new Set(keys.filter((k) => answers[k])))} className="font-bold text-primary hover:underline">{shown.size >= ready ? "Hide all answers" : "Show all answers"}</button></div>}
+        <ul className="mt-2">{paper.pages.flatMap((pg) => pg.items).map((it, i) => { const k = it.t === "q" ? questionKey(it) : ""; return <Question key={i} it={it} answer={k ? answers[k] : undefined} open={shown.has(k)} onToggle={() => setShown((p) => { const n = new Set(p); if (n.has(k)) n.delete(k); else n.add(k); return n; })} />; })}</ul>
 
         <section className="mt-12 border-t border-border pt-6">
           <h2 className="font-serif text-xl font-bold">Model answers</h2>
-          <p className="mt-1 text-[15px] text-muted-foreground">Answers to this paper, written in marks-sized points, are on the way.</p>
+          <p className="mt-1 text-[15px] text-muted-foreground">{ready >= q ? "Every question above has a model answer: tap Show answer under it." : ready > 0 ? "Model answers are being added in batches. The ones ready have a Show answer button under the question." : "Answers to this paper, written in marks-sized points, are on the way."}</p>
         </section>
         <p className="mt-10"><Link to="/dental/papers" className="font-bold text-primary hover:underline">← All dental past papers</Link></p>
       </main>

@@ -25,15 +25,16 @@ export default function TrackWatcher() {
         } catch { /* keep what is known */ }
       })();
     } else if (/^\/dental(\/|$)/.test(pathname)) setTrack("dental");
+    else if (pathname === "/") setTrack("medicine"); // a guest on the home page sees both courses and picks
     return () => { on = false; };
   }, [user?.id, loading, pathname]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
-    const go = () => { if (pathname === "/" && getTrack() === "dental") navigate("/dental", { replace: true }); };
+    const go = () => { if (pathname === "/" && user && getTrack() === "dental") navigate("/dental", { replace: true }); };
     go();
     window.addEventListener("ompath:track", go);
     return () => window.removeEventListener("ompath:track", go);
-  }, [pathname, navigate]);
+  }, [pathname, navigate, user?.id]);
 
   return null;
 }
