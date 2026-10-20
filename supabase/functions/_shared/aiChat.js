@@ -14,7 +14,10 @@ const GROQ_MODELS = ["openai/gpt-oss-120b", "qwen/qwen3.8-27b", "openai/gpt-oss-
 const split = (keys, manual) => (keys.length < 2 ? keys : manual ? [keys[keys.length - 1], ...keys.slice(0, -1)] : keys.slice(0, -1));
 
 export async function chatText(env, messages, { temperature = 0.1, maxTokens = 8000, timeoutMs = 25000, manual = false } = {}) {
-  const gem = split(list(env.GEMINI_API_KEYS || env.GEMINI_API_KEY), manual), groq = split(list(env.GROQ_API_KEYS || env.GROQ_API_KEY), manual);
+  // GROQ_API_KEYS_EXTRA: more Groq keys for the scheduled jobs; they go in front of the last key, which stays the one kept for manual use
+  const groqBase = list(env.GROQ_API_KEYS || env.GROQ_API_KEY), groqExtra = list(env.GROQ_API_KEYS_EXTRA).filter((k) => !groqBase.includes(k));
+  const groqAll = groqBase.length ? [...groqBase.slice(0, -1), ...groqExtra, groqBase[groqBase.length - 1]] : groqExtra;
+  const gem = split(list(env.GEMINI_API_KEYS || env.GEMINI_API_KEY), manual), groq = split(groqAll, manual);
   // Gemini and Groq take turns at being first (so Groq's separate free allowance is used and Gemini's lasts longer); inside a provider the keys and models
   // rotate. A model that just said "quota used up" or "does not exist" is skipped for a while instead of being asked again on every call.
   const entries = (keys, url, models) => keys.flatMap((key, ki) => models.map((model) => ({ url, key, model, id: model + ":" + ki })));
