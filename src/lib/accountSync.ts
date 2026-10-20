@@ -3,7 +3,7 @@
 // schedule already live in their own tables. A different person on the same browser never inherits them (see signOutCleanup).
 import { supabase } from "@/integrations/supabase/client";
 
-const EXACT = ["deck-daily", "deck-stars", "deck-buried", "deck-scale", "ompath_all_years", "ompath_milestones", "ompath_note_font", "ompath_notes_view", "ompath_notes_sort"];
+const EXACT = ["ompath_books_saved", "ompath_books_recent", "ompath_books_read", "ompath_saved_files", "ompath_recent_files", "ompath_recent_topics", "ompath_recent_searches", "deck-daily", "deck-stars", "deck-buried", "deck-scale", "ompath_all_years", "ompath_milestones", "ompath_note_font", "ompath_notes_view", "ompath_notes_sort"];
 const PREFIX = ["mcq_practice_", "exam_result_", "ompath_weak_"];
 export const PERSONAL_PREFIXES = ["deck-", "deck:", "mcq_practice_", "exam_result_", "ompath_weak_", "progress:", "ompath_state_"];
 
@@ -78,7 +78,7 @@ export function startAccountSync(userId: string): () => void {
 /** Removes the personal habits kept in this browser (used when a different person signs in, and on sign-out). */
 export function wipeLocalState() {
   try {
-    for (const k of Object.keys(localStorage)) if (PERSONAL_PREFIXES.some((p) => k.startsWith(p)) || k === "ompath_all_years" || k === "ompath_milestones") localStorage.removeItem(k);
+    for (const k of Object.keys(localStorage)) if (PERSONAL_PREFIXES.some((p) => k.startsWith(p)) || isSynced(k)) localStorage.removeItem(k);
   } catch { /* blocked */ }
   lastPushed = {};
 }

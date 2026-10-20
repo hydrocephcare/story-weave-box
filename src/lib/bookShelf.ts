@@ -15,6 +15,8 @@ const listeners = new Set<() => void>();
 const emit = () => listeners.forEach((l) => l());
 const subscribe = (l: () => void) => { listeners.add(l); return () => { listeners.delete(l); }; };
 const snapshot = () => state;
+// the account's copy arrives after sign-in, and is cleared when someone signs out
+if (typeof window !== "undefined") for (const ev of ["ompath:state-synced", "ompath:signed-out"]) window.addEventListener(ev, () => { state = { saved: read<ShelfBook[]>(SAVED, []), recent: read<ShelfBook[]>(RECENT, []), read: new Set<string>(read<string[]>(READ, [])) }; emit(); });
 
 export function toggleSavedBook(b: ShelfBook) {
   const has = state.saved.some((x) => x.id === b.id);

@@ -253,9 +253,9 @@
 
   .article-reader th,
   .article-reader td {
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     word-break: normal;
-    hyphens: auto;
+    hyphens: manual;
   }
 
   @media (max-width: 640px) {
@@ -267,8 +267,8 @@
     .article-reader .article-data-table th,
     .article-reader .article-data-table td {
       padding: 0.72rem 0.7rem;
-      overflow-wrap: anywhere;
-      word-break: break-word;
+      overflow-wrap: break-word;
+      word-break: normal;
       line-height: 1.45;
     }
     .article-reader .article-data-table th {
@@ -534,8 +534,8 @@ body.no-copy img {
   border-bottom: 1px solid hsl(var(--border) / 0.8);
   border-right: 1px solid hsl(var(--border) / 0.55);
   vertical-align: top;
-  overflow-wrap: anywhere;
-  hyphens: auto;
+  overflow-wrap: break-word;
+  hyphens: manual;
 }
 .note-body .note-table th:last-child,
 .note-body .note-table td:last-child { border-right: 0; }
@@ -685,7 +685,7 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
 @media (max-width: 640px) { .note-body.note-topic h2 { font-size: 1.6rem; margin-top: 2.5rem; } }
 
 /* Keep the article itself within the viewport; the table wrapper owns any horizontal scrolling. */
-.note-body.note-topic { overflow-wrap: anywhere; max-width: 100%; min-width: 0; }
+.note-body.note-topic { overflow-wrap: break-word; max-width: 100%; min-width: 0; }
 .note-body.note-topic .note-table { max-width: 100%; min-width: 0; }
 .note-body.note-topic img, .note-body.note-topic pre { max-width: 100%; }
 

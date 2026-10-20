@@ -17,6 +17,46 @@ interface Stats {
 const PERIODS = [{ k: "today", label: "Today", days: 1 }, { k: "week", label: "This week", days: 7 }, { k: "month", label: "This month", days: 30 }, { k: "year", label: "This year", days: 365 }] as const;
 const n = (x: number) => x.toLocaleString("en-US");
 
+async function fetchStats(days: number): Promise<Stats | null> {
+  const { data, error } = await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<{ data: Stats | null; error: unknown }> }).rpc("admin_site_stats", { p_days: days });
+  return error ? null : data;
+}
+
+/** One shareable picture for one period (today, this week, this month, this year), drawn from that period's own numbers. */
+function ShareCard({ period }: { period: (typeof PERIODS)[number] }) {
+  const canvas = useRef<HTMLCanvasElement | null>(null);
+  const [ready, setReady] = useState(false);
+  useEffect(() => {
+    let on = true;
+    void fetchStats(period.days).then((st) => {
+      if (!on || !st || !canvas.current) return;
+      const a = new Date(`${st.since}T00:00:00`), b = new Date();
+      const f = (d: Date) => d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
+      drawStatsCard(canvas.current, { label: period.label, range: period.days === 1 ? f(b) : `${f(a)} to ${f(b)}`, visitors: st.totals.visitors, members: st.totals.members, views: st.totals.views, returning: st.returning, daily: st.daily });
+      setReady(true);
+    });
+    return () => { on = false; };
+  }, [period]);
+  const blob = () => new Promise<Blob | null>((res) => canvas.current?.toBlob((x) => res(x), "image/png"));
+  const download = async () => { const x = await blob(); if (!x) return; const el = document.createElement("a"); el.href = URL.createObjectURL(x); el.download = `ompath-study-${period.k}.png`; el.click(); setTimeout(() => URL.revokeObjectURL(el.href), 2000); };
+  const share = async () => {
+    const x = await blob(); if (!x) return;
+    const file = new File([x], `ompath-study-${period.k}.png`, { type: "image/png" });
+    try { if (navigator.canShare?.({ files: [file] })) { await navigator.share({ files: [file], title: "Ompath Study", text: `${period.label} on Ompath Study` }); return; } } catch { return; }
+    void download();
+  };
+  return (
+    <figure>
+      <figcaption className="mb-2 text-sm font-bold uppercase tracking-[0.14em] text-primary">{period.label}</figcaption>
+      <canvas ref={canvas} className={cn("w-full max-w-sm rounded-2xl shadow-lg transition-opacity", ready ? "opacity-100" : "opacity-30")} aria-label={`Picture for ${period.label.toLowerCase()}`} />
+      <div className="mt-3 flex flex-wrap gap-2">
+        <button type="button" onClick={download} disabled={!ready} className="inline-flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-bold text-primary-foreground disabled:opacity-40"><Download className="h-4 w-4" aria-hidden /> Download</button>
+        <button type="button" onClick={share} disabled={!ready} className="inline-flex h-11 items-center gap-2 rounded-full border border-border px-5 text-sm font-bold hover:border-primary/60 disabled:opacity-40"><Share2 className="h-4 w-4" aria-hidden /> Share</button>
+      </div>
+    </figure>
+  );
+}
+
 /** Admin: who is on the site now, how many used it each day, and a picture of the numbers to share. */
 export default function AdminAnalytics() {
   const [period, setPeriod] = useState<(typeof PERIODS)[number]>(PERIODS[0]);
@@ -58,7 +98,7 @@ export default function AdminAnalytics() {
 
   const maxDay = Math.max(1, ...(stats?.daily.map((d) => d.visitors) ?? [1]));
   return (
-    <main className="mx-auto max-w-4xl px-5 py-10">
+    <main className="mx-auto min-w-0 max-w-4xl px-1 py-4 sm:px-5 sm:py-10">
       <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Admin</p>
       <h1 className="mt-1 font-serif text-4xl font-bold">Visitors</h1>
 
@@ -93,24 +133,24 @@ export default function AdminAnalytics() {
           <section className="mt-10" aria-label="Each day">
             <h2 className="font-serif text-2xl font-bold">Each day</h2>
             {stats.daily.length === 0 ? <p className="mt-3 text-muted-foreground">No visits counted yet.</p> : (
-              <div className="mt-4 flex h-40 items-end gap-[3px]" role="img" aria-label="Visitors per day">
-                {stats.daily.map((d) => <div key={d.day} title={`${d.day}: ${d.visitors} visitors`} className="min-w-[3px] flex-1 rounded-t bg-primary/80 hover:bg-primary" style={{ height: `${Math.max(3, (d.visitors / maxDay) * 100)}%` }} />)}
+              stats.daily.length === 1 ? <p className="mt-3 text-[15px] text-muted-foreground">{n(stats.daily[0].visitors)} visitors today. Pick “This week” to see each day side by side.</p> : (
+              <div className="mt-4 flex h-44 items-end justify-center gap-1 sm:gap-[3px]" role="img" aria-label="Visitors per day">
+                {stats.daily.map((d) => <div key={d.day} title={`${d.day}: ${d.visitors} visitors`} className="flex h-full max-w-14 flex-1 flex-col justify-end"><span className="mb-1 text-center text-[10px] font-semibold text-muted-foreground">{stats.daily.length <= 14 ? d.visitors : ""}</span><div className="min-w-[3px] rounded-t bg-primary/80 hover:bg-primary" style={{ height: `${Math.max(3, (d.visitors / maxDay) * 85)}%` }} /></div>)}
               </div>
+              )
             )}
           </section>
 
           <div className="mt-10 grid gap-10 sm:grid-cols-2">
-            <section aria-label="Busiest pages"><h2 className="font-serif text-2xl font-bold">Busiest pages</h2><ul className="mt-3 space-y-2">{stats.top.map((t) => <li key={t.path} className="flex items-baseline justify-between gap-3 text-[15px]"><span className="min-w-0 truncate font-medium">{t.path}</span><span className="shrink-0 text-muted-foreground">{n(t.views)}</span></li>)}</ul></section>
-            <section aria-label="Devices"><h2 className="font-serif text-2xl font-bold">Devices</h2><ul className="mt-3 space-y-2">{stats.devices.map((t) => <li key={t.device} className="flex items-baseline justify-between text-[15px] capitalize"><span>{t.device}</span><span className="text-muted-foreground">{n(t.visitors)}</span></li>)}</ul></section>
+            <section aria-label="Busiest pages" className="min-w-0"><h2 className="font-serif text-2xl font-bold">Busiest pages</h2><ul className="mt-3 space-y-2">{stats.top.map((t) => <li key={t.path} className="flex items-baseline justify-between gap-3 text-[15px]"><span className="min-w-0 truncate font-medium">{t.path}</span><span className="shrink-0 text-muted-foreground">{n(t.views)}</span></li>)}</ul></section>
+            <section aria-label="Devices" className="min-w-0"><h2 className="font-serif text-2xl font-bold">Devices</h2><ul className="mt-3 space-y-2">{stats.devices.map((t) => <li key={t.device} className="flex items-baseline justify-between text-[15px] capitalize"><span>{t.device}</span><span className="text-muted-foreground">{n(t.visitors)}</span></li>)}</ul></section>
           </div>
 
-          <section className="mt-12" aria-label="Picture to share">
-            <h2 className="font-serif text-2xl font-bold">A picture to share</h2>
-            <p className="mt-1 text-[15px] text-muted-foreground">Made from the numbers above for {period.label.toLowerCase()}. Download it, or send it straight to WhatsApp.</p>
-            <canvas ref={canvas} className="mt-4 w-full max-w-sm rounded-2xl shadow-lg" aria-label="Preview of the picture" />
-            <div className="mt-4 flex flex-wrap gap-3">
-              <button type="button" onClick={download} className="inline-flex h-12 items-center gap-2 rounded-full bg-primary px-6 font-bold text-primary-foreground"><Download className="h-4 w-4" aria-hidden /> Download</button>
-              <button type="button" onClick={share} className="inline-flex h-12 items-center gap-2 rounded-full border border-border px-6 font-bold hover:border-primary/60"><Share2 className="h-4 w-4" aria-hidden /> Share</button>
+          <section className="mt-12" aria-label="Pictures to share">
+            <h2 className="font-serif text-2xl font-bold">Pictures to share</h2>
+            <p className="mt-1 text-[15px] text-muted-foreground">One for today, this week, this month and this year, made from the live numbers. Download one, or send it straight to WhatsApp.</p>
+            <div className="mt-5 grid gap-8 sm:grid-cols-2">
+              {PERIODS.map((p) => <ShareCard key={p.k} period={p} />)}
             </div>
           </section>
         </>

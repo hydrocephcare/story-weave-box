@@ -72,13 +72,13 @@ function parseList(lines, start, indent) {
 function table(rows) {
   // Split only on unescaped pipes; a leading/trailing pipe is optional in Markdown.
   const cells = (r) => {
-    let line = r.trim().replace(/^\\|/, "").replace(/\\|$/, "");
+    let line = r.trim().replace(/^\|/, "").replace(/\|$/, "");
     const out = [];
     let cell = "";
     let escaped = false;
     for (const ch of line) {
       if (ch === "|" && !escaped) { out.push(cell.trim()); cell = ""; }
-      else if (ch === "\\\\" && !escaped) { cell += ch; escaped = true; continue; }
+      else if (ch === "\\" && !escaped) { cell += ch; escaped = true; continue; }
       else { cell += ch; }
       escaped = false;
     }

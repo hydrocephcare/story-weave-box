@@ -74,6 +74,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
   const end = useRef<HTMLDivElement>(null);
   const loaded = useRef(false);
   const saveTimer = useRef<number | null>(null);
+  const lastSource = useRef("");
 
   const refreshChats = useCallback(async () => { const r = await listChats(); setChats(r.chats); setWhere(r.where); return r; }, []);
   const reloadWorld = useCallback(async () => { try { const w = await loadAgentWorld(); setWorld(w); return w; } catch (e: any) { setError(e?.message || "Could not load your site data."); return null; } }, []);
@@ -122,7 +123,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
       : i.kind === "result" ? { role: "assistant", content: `[Done] ${i.result.text}` }
         : i.kind === "draft" ? { role: "assistant", content: `[Preview ${i.state}] ${i.draft.type}: "${i.draft.title}"` } : null).filter(Boolean).slice(-14) as { role: "user" | "assistant"; content: string }[];
   const push = (...items: Item[]) => setFeed((f) => [...f, ...items]);
-  const newTask = () => { setFeed([]); setChatId(null); setPlan(null); setError(""); setShowHistory(false); };
+  const newTask = () => { lastSource.current = ""; try { sessionStorage.removeItem("ompath_agent_source"); } catch { /* blocked */ } setFeed([]); setChatId(null); setPlan(null); setError(""); setShowHistory(false); };
   const openChat = async (id: string) => { setChatId(id); setFeed((await loadChat(id)) as Item[]); setPlan(null); setShowHistory(false); };
 
   async function toggleAuto() {
@@ -179,7 +180,10 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
       return;
     }
     const raw = typed;
-    const source = att || raw; // the text the writing jobs work on
+    // the pasted text stays with the task: when you answer a question of mine ("which unit?") the text is still what gets published
+    if (att) { lastSource.current = att; try { sessionStorage.setItem("ompath_agent_source", att.slice(0, 200000)); } catch { /* storage blocked */ } }
+    const carried = lastSource.current || (() => { try { return sessionStorage.getItem("ompath_agent_source") || ""; } catch { return ""; } })();
+    const source = att || (raw.length < 300 && carried ? carried : raw); // the text the writing jobs work on
     const intent = att ? `${raw} [pasted text attached: ${att.length} characters, beginning "${att.slice(0, 160).replace(/\s+/g, " ")}"]` : raw;
     setBusy(true); setError(""); setPlan(null);
     const sent = history();
@@ -307,6 +311,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
           <ul className="mt-2 max-h-28 space-y-1 overflow-y-auto text-[13px] leading-snug text-muted-foreground">{[...new Map(problems.map((p) => [p.what, p])).values()].slice(-5).map((p) => <li key={p.what} className="break-words">• {p.what}</li>)}</ul>
           <div className="mt-2 flex gap-2">
             <button type="button" disabled={busy || !world} onClick={() => void send("Explain the last error and fix it")} className={`${btn} flex-1 bg-primary text-primary-foreground`}><Wand2 className="h-4 w-4" /> Explain and fix</button>
+            {problems.some((p) => /few lines of text/i.test(p.what)) && <button type="button" disabled={busy || !world} onClick={() => { clearProblems(); setProblems([]); void send("Polish it and publish as a note"); }} className={`${btn} border border-primary text-primary`}>Publish my pasted text</button>}
             <button type="button" onClick={() => { clearProblems(); setProblems([]); }} className={`${btn} border`}>Dismiss</button>
           </div>
         </div>

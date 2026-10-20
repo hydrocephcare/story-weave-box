@@ -28,6 +28,8 @@ if (typeof window !== "undefined") {
   window.addEventListener("storage", (e) => {
     if (e.key === SAVED_KEY || e.key === RECENT_KEY) { state = { saved: read(SAVED_KEY), recent: read(RECENT_KEY) }; emit(); }
   });
+  // the account's copy arrives after sign-in, and is cleared when someone signs out
+  for (const ev of ["ompath:state-synced", "ompath:signed-out"]) window.addEventListener(ev, () => { state = { saved: read(SAVED_KEY), recent: read(RECENT_KEY) }; emit(); });
 }
 
 const toItem = (file: DriveFile, where?: string): ShelfItem => ({ id: file[0], name: file[1], kind: file[2], where, at: Date.now() });

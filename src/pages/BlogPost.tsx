@@ -164,7 +164,7 @@ function TableBlock({ lines }: { lines: string[] }) {
     <div className="not-prose my-6 overflow-hidden border-y border-border bg-card sm:rounded-lg sm:border">
       <div className="overflow-x-auto">
       <table className="article-data-table min-w-full border-collapse text-sm"
-style={{ minWidth: colCount <= 2 ? "420px" : "560px" }} data-columns={colCount}>
+style={{ minWidth: colCount <= 2 ? "420px" : `${Math.max(560, colCount * 140)}px` }} data-columns={colCount}>
         <colgroup>
           {Array.from({ length: colCount }).map((_, i) => <col key={i} />)}
         </colgroup>
