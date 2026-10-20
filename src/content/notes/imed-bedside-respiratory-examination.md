@@ -137,3 +137,22 @@ Urgently escalate severe respiratory distress, cyanosis, altered consciousness, 
 - [K2 International: Chest assessment illustration](https://www.k2i-eoc.com/patient-assessment/chest-assessment)
 
 **Next:** [Abdominal Examination, Ascites and Liver Signs](/notes/imed-bedside-abdominal-examination-ascites-liver-signs).
+## 10. Extra respiratory examination details
+
+### Vocal resonance and the “voice tests”
+After listening to ordinary breath sounds, you may compare voice transmission if the findings are unclear:
+- **Vocal resonance:** ask the patient to say “ninety-nine” while listening over matching areas.
+- **Bronchophony:** spoken words sound abnormally clear.
+- **Whispering pectoriloquy:** whispered words are unusually distinct.
+- **Egophony:** an “ee” sound takes on an “ay”-like quality.
+These can support consolidation or occur near the upper border of pleural fluid; they must be interpreted with percussion, breath sounds and imaging.
+
+### Breath sounds: the practical answer
+When asked “What did you hear?”, report air entry first, then the sound type, then added sounds and location. For example: “Air entry is equal bilaterally, with vesicular breath sounds and no added sounds.” Or: “Air entry is reduced at the right base, with stony dull percussion and reduced vocal resonance; this pattern suggests a pleural effusion.”
+
+### Additional signs to recognise
+- **Kussmaul breathing** is deep, laboured breathing often associated with severe metabolic acidosis; it is not a specific lung diagnosis.
+- **Cheyne–Stokes respiration** is cyclic waxing and waning depth with periods of apnoea and may occur in heart failure or neurological disease.
+- **Central cyanosis** is best assessed at the tongue/oral mucosa; peripheral cyanosis can affect extremities and may reflect poor perfusion or cold.
+- **Clubbing** is assessed by nail-bed angle and the Schamroth window, but it is not specific to one disease.
+- **Tracheal deviation** and severe acute dyspnoea require prompt clinical interpretation; suspected tension pneumothorax is an emergency.
