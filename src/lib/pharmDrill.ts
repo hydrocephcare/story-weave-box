@@ -21,13 +21,18 @@ export function pickDrugs(text: string, n: number): PDrug[] {
   return out;
 }
 
-const others = (d: PDrug, pool: PDrug[]) => shuffle(pool.filter((x) => x.id !== d.id));
+// drugs of the same group first: the wrong options a student could really confuse with the right one
+const others = (d: PDrug, pool: PDrug[]) => { const rest = pool.filter((x) => x.id !== d.id); return [...shuffle(rest.filter((x) => x.group === d.group)), ...shuffle(rest.filter((x) => x.group !== d.group))]; };
 
 /** One multiple-choice question about a drug; the kind rotates so the stems and the answers do not look alike. */
 export function drugMcq(d: PDrug, kind: number): PharmMcq | null {
   const pool = ALL_PDRUGS;
   const mk = (question: string, right: string, wrong: string[], explanation: string): PharmMcq | null => {
-    const opts = [...new Set(wrong.map((w) => short(w, 90)).filter((w) => w && w.toLowerCase() !== right.toLowerCase()))].slice(0, 3);
+    // wrong options as long as the right one (within a few words), so length gives nothing away; same-group drugs come first
+    const target = short(right, 90).length;
+    const pool2 = [...new Set(wrong.map((w) => short(w, 90)).filter((w) => w && w.toLowerCase() !== right.toLowerCase()))];
+    const near = pool2.slice(0, 14).sort((a, b) => Math.abs(a.length - target) - Math.abs(b.length - target));
+    const opts = shuffle(near.slice(0, 6)).slice(0, 3);
     if (opts.length < 3) return null;
     const options = shuffle([short(right, 90), ...opts]);
     return { question, options, correct_answer: options.indexOf(short(right, 90)), explanation };
