@@ -156,3 +156,55 @@ When asked “What did you hear?”, report air entry first, then the sound type
 - **Central cyanosis** is best assessed at the tongue/oral mucosa; peripheral cyanosis can affect extremities and may reflect poor perfusion or cold.
 - **Clubbing** is assessed by nail-bed angle and the Schamroth window, but it is not specific to one disease.
 - **Tracheal deviation** and severe acute dyspnoea require prompt clinical interpretation; suspected tension pneumothorax is an emergency.
+
+
+## 11. The first 60 seconds at the bedside: how to start
+
+This opening sequence applies to most adult clinical examinations. Follow your school's checklist if it differs.
+
+1. **Prepare:** check the task, gather a stethoscope, watch/clock and other required equipment; clean your hands.
+2. **Introduce yourself:** “Good morning. My name is ___. I am a medical student.”
+3. **Identify the patient:** confirm their name and another identifier according to ward policy.
+4. **Explain and consent:** “I have been asked to examine your breathing and chest. This will involve looking, feeling, tapping and listening to your chest. Is that alright?”
+5. **Privacy and comfort:** ask about pain, obtain a chaperone if indicated, expose the chest only as needed, and keep the patient warm and covered elsewhere.
+6. **Position:** usually sitting upright for a respiratory examination. Examine the front, sides and back.
+7. **Look before touching:** assess the patient from the end of the bed and check observations, especially respiratory rate and oxygen saturation.
+
+If the patient looks acutely unwell, assess airway, breathing and circulation, call for help and treat urgent problems before completing a routine OSCE sequence.
+
+## 12. What to inspect on the hands, nails, face and mouth
+
+A respiratory examination often begins with general inspection and the hands, then the face and neck. These signs are clues; none should be interpreted in isolation.
+
+### Hands and nails
+- **Clubbing:** bulbous fingertips, increased nail curvature and loss of the normal nail-bed angle; may occur with lung cancer, bronchiectasis, lung abscess or interstitial lung disease, among other causes. It is not typical of uncomplicated COPD.
+- **Peripheral cyanosis:** bluish fingers may reflect poor peripheral perfusion or cold; check the overall patient and central sites.
+- **Nicotine staining:** may suggest smoking exposure but does not prove current smoking.
+- **Asterixis (flapping tremor):** with arms extended and wrists dorsiflexed, brief lapses of posture may occur in hypercapnia, hepatic encephalopathy, uraemia or other metabolic states.
+- **Fine tremor, warm hands or sweating:** may be relevant to medication effects, anxiety or systemic illness; interpret in context.
+- **Pulse:** assess rate and rhythm if included in the station.
+
+### Face, lips and mouth
+- **Central cyanosis:** inspect the tongue and oral mucosa, not just the lips. Its absence does not exclude hypoxaemia; use pulse oximetry and the clinical picture.
+- **Pallor:** inspect the conjunctivae and oral mucosa for possible anaemia.
+- **Pursed-lip breathing:** can be seen in obstructive lung disease.
+- **Horner syndrome:** ptosis and a small pupil on one side may be relevant in selected apical lung lesions, but requires proper assessment.
+- **Mouth and voice:** note oral hygiene, sputum if present, ability to speak full sentences, hoarseness and signs of inhaled-steroid use such as oral candidiasis when relevant.
+- **Neck:** assess tracheal position, cervical/supraclavicular lymph nodes and JVP where indicated.
+
+### Hair and general appearance
+Hair changes are not a core diagnostic test for respiratory disease. Note cachexia, muscle wasting, nutritional state and general hygiene/appearance where relevant. Do not spend time listing incidental hair findings while missing distress, respiratory rate, oxygen saturation or chest movement.
+
+## 13. Exactly what to do in a complete respiratory OSCE
+
+After the opening and general inspection:
+
+1. **Inspect** respiratory effort, rate, chest shape, symmetry, scars, drains and devices.
+2. **Palpate** tracheal position, chest expansion and tactile vocal fremitus where taught.
+3. **Percuss** comparable areas on both sides, moving systematically from apices to bases and avoiding bone/scapula where possible.
+4. **Auscultate** matching areas on both sides, including the posterior and lateral chest. Ask the patient to breathe through an open mouth a little deeper than usual; pause if dizzy.
+5. **Compare side-to-side at the same level.** Do not listen only to the anterior chest. Posterior and lower-lateral lung fields contain substantial lung tissue and may reveal basal disease or effusion.
+6. **Complete as appropriate:** vocal resonance, oxygen saturation, peak flow or other targeted tests only when relevant and within the station's instructions.
+7. **Thank the patient, help them cover and reposition, clean hands, and report findings.**
+
+A safe normal summary is: “The patient is comfortable at rest. Respiratory rate is ___ per minute and oxygen saturation is ___ on ___. The trachea is central, chest expansion is symmetrical, percussion is resonant bilaterally, and vesicular breath sounds with equal air entry are heard throughout, with no added sounds.” Fill blanks only with measured findings and do not claim you examined a region you did not examine.
