@@ -161,9 +161,13 @@ serve(async (req) => {
         else for (const b of l.matchAll(/\*\*([^*]{3,40})\*\*/g)) add(b[1].replace(/[:.]$/, ""), i);
       });
       // the note's own subject (a slide-deck title such as "3b hemochromatosis.pptx-wk11" is cleaned to "Hemochromatosis"), first in line, in the first section
-      const titleTerm = head.replace(/^\s*\d+\s*[a-z]?\s*[.):-]?\s+/i, "").replace(/\.(pptx?|pdf|docx?).*$/i, "").replace(/[-_ ]wk\s*\d+.*$/i, "").trim();
+      const titleTerm = head.replace(/^\s*(?:wk|week)\s*\d+\s*/i, "").replace(/^\s*\d+\s*[a-z]?\s*[.):-]?\s*/i, "").replace(/\.(pptx?|pdf|docx?).*$/i, "").replace(/[-_ ]wk\s*\d+.*$/i, "").replace(/\s*[-(]\s*\d+\s*\)?\s*$/, "").replace(/\b(presentation|made easy|update on|approach to|interpretation of|introduction to|overview of|revision|notes?)\b/gi, " ").replace(/\s+/g, " ").trim();
       const firstSec = allHeads.find((h) => h.i >= 1);
-      if (titleTerm && firstSec) { const before = cand.length; add(titleTerm, firstSec.i); if (cand.length > before) { const t0 = cand.pop()!; cand.unshift(t0); } }
+      if (titleTerm && firstSec) {
+        // the whole subject first, then its parts ("Cholera and bacillary dysentery" is two subjects)
+        const parts = [titleTerm, ...titleTerm.split(/\s*(?:,|&|\band\b|\bor\b|\/)\s*/)].filter((x, k, arr) => x && arr.indexOf(x) === k).reverse();
+        for (const part of parts) { const before = cand.length; add(part, firstSec.i); if (cand.length > before) { const t0 = cand.pop()!; cand.unshift(t0); } }
+      }
       const found = await wikiExact(cand.map((c) => c.term).slice(0, 120));
       const takenSec = new Set<number>();
       for (const c of cand) {
