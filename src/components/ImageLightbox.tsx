@@ -19,7 +19,7 @@ export default function ImageLightbox() {
       const el = e.target as HTMLElement | null;
       if (!el || el.tagName !== "IMG") return;
       const img = el as HTMLImageElement;
-      if (img.closest("a, button, nav, header, footer, [data-nozoom]") || !img.closest("main, article, .note-body")) return;
+      if (img.closest("a, button, nav, footer, [data-nozoom]") || !img.closest("main, article, .note-body")) return;
       const r = img.getBoundingClientRect();
       if (r.width < 160 || r.height < 90) return;
       const fig = img.closest("figure");
