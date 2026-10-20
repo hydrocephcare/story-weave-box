@@ -289,9 +289,9 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
   return (
     <div className="flex min-h-[calc(100dvh-9rem)] flex-col">
       {header}{bar}
-      <div className="relative mt-3 flex flex-1 items-stretch justify-center" style={{ minHeight: "min(58dvh, 30rem)" }}>
+      <div className="relative mt-3 flex flex-1 items-stretch justify-center" style={{ minHeight: (recall === "think" || flipped) ? "min(58dvh, 30rem)" : "min(40dvh, 21rem)" }}>
         <div className="w-full max-w-md select-none sm:max-w-xl" style={{ perspective: "1400px" }}>
-          <div className="relative h-full min-h-[min(58dvh,30rem)] w-full cursor-pointer" style={style} onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp} role="button" tabIndex={0} aria-label={flipped ? "Answer. Tap to see the question." : "Question. Tap to see the answer."}>
+          <div className="relative h-full w-full cursor-pointer" style={{ ...style, minHeight: (recall === "think" || flipped) ? "min(58dvh, 30rem)" : "min(40dvh, 21rem)" }} onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp} role="button" tabIndex={0} aria-label={flipped ? "Answer. Tap to see the question." : "Question. Tap to see the answer."}>
             <div className="absolute inset-0 transition-transform duration-500 [transform-style:preserve-3d]" style={{ transform: flipped ? "rotateY(180deg)" : "none" }}>
               <div className={face} style={{ backfaceVisibility: "hidden" }}>
                 <div className="flex items-center justify-between"><p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">Question · {learningNote}</p>{card && <button type="button" aria-label={stars.has(cardKey(card.setId, card.idx)) ? "Remove star" : "Star this card to revise it again"} onPointerDown={(e) => e.stopPropagation()} onPointerUp={(e) => e.stopPropagation()} onClick={(e) => { e.stopPropagation(); const k = cardKey(card.setId, card.idx); toggleStar(k); setStars(starredKeys()); }} className="-mr-1 rounded-full p-1.5"><Star className={`h-5 w-5 ${stars.has(cardKey(card.setId, card.idx)) ? "fill-amber-400 text-amber-400" : "text-muted-foreground"}`} /></button>}</div>
