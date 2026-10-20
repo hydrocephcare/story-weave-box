@@ -161,3 +161,24 @@ Example: “There is a high-pitched, blowing, early-diastolic murmur best heard 
 - [Merck Manual: Cardiac auscultation](https://www.merckmanuals.com/professional/cardiovascular-disorders/approach-to-the-cardiac-patient/cardiac-auscultation)
 
 **Next:** [Respiratory Examination and Chest Findings](/notes/imed-bedside-respiratory-examination).
+
+## 11. Extra bedside details that examiners commonly expect
+
+### Pulse: what to describe
+Count the rate (typically 60–100 beats/min in a resting adult), assess rhythm, volume and character, and compare both radial pulses when indicated. Check for radio-radial delay and, when clinically indicated, radio-femoral delay. A collapsing pulse can occur in significant aortic regurgitation; a slow-rising pulse can occur in aortic stenosis. These are clues, not diagnoses. Measure blood pressure and consider both arms when appropriate.
+
+### JVP: the simple principle
+The jugular venous pressure estimates right atrial pressure. Examine with the patient reclined around 45 degrees, head turned slightly away, using tangential light to identify the internal jugular venous pulsation. It is normally assessed vertically above the sternal angle; use your school's accepted measurement method and reference point. The venous waveform is usually not palpable and changes with posture and respiration, unlike the carotid pulse. A raised JVP may occur in right heart failure, fluid overload, tamponade or constrictive pericarditis; interpret with the rest of the examination.
+
+### Apex beat, heaves and thrills
+The apex beat is the most lateral/inferior palpable impulse from the left ventricle. Locate it with the patient at 45 degrees and, if not felt, consider the left lateral position. A displaced or diffuse apex can suggest enlargement. A **heave** is a sustained lifting impulse, which may reflect ventricular hypertrophy. A **thrill** is a palpable murmur vibration. Do not confuse a thrill (palpable) with a murmur (heard).
+
+### Added heart sounds
+- **S3:** occurs just after S2 in early diastole. It can be physiological in children, young adults and pregnancy, but in an older adult may suggest volume overload or heart failure.
+- **S4:** occurs just before S1, during atrial contraction, and may indicate a stiff ventricle; it is absent in atrial fibrillation.
+- **Opening snap:** may occur after S2 in mitral stenosis.
+- **Ejection click:** may occur with some abnormal semilunar valves.
+Listen with the diaphragm and bell as appropriate, and describe what you hear rather than forcing a diagnosis.
+
+### A complete presentation
+“On cardiovascular examination, the patient is [comfortable/distressed]. The pulse is ___ beats/min, [regular/irregular], with ___ volume; blood pressure is ___. JVP is ___. The apex beat is ___. Heart sounds S1 and S2 are ___. There is [no murmur / a murmur described by timing, character, site and radiation]. The lung bases show ___, and there is [no/present] peripheral oedema or hepatomegaly.” Only include observations you actually assessed.
