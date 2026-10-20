@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { callOmniRoute, omniRouteConfig } from "../_shared/omniroute.ts";
+import { chatText } from "../_shared/aiChat.js";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -221,6 +222,12 @@ function parseEssayOutput(raw: string) {
 }
 
 async function callAI(messages: any[], geminiKey?: string, allKeys?: string[]): Promise<string> {
+  // the project's own Groq and Gemini keys first (the key kept for manual use goes first, since an admin is waiting); the keys saved in Settings are the fallback below
+  try {
+    return await chatText(Deno.env.toObject(), messages, { temperature: 0.2, maxTokens: 8000, timeoutMs: 60000, manual: true });
+  } catch (e: any) {
+    console.log("project keys unavailable, trying the Settings keys:", e?.message || String(e));
+  }
   // Prefer the OmniRoute combo (free providers) when configured; fall back to Gemini keys.
   const omni = omniRouteConfig();
   if (omni) {

@@ -127,9 +127,11 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
 
   async function toggleAuto() {
     if (!world) return;
-    const { error: e } = await (supabase as any).rpc("admin_agent_set_mode", { p_key: "assistant_autorun", p_mode: world.autorun ? "ask" : "auto" });
-    if (e) setError(/schema cache|admin_agent_set_mode/.test(e.message) ? "Run RUN-THESE.sql first, then Auto-run can be switched on." : e.message);
-    await reloadWorld();
+    // the switch moves at once; the save happens behind it and the switch goes back only if it fails
+    const was = world.autorun;
+    setWorld({ ...world, autorun: !was });
+    const { error: e } = await (supabase as any).rpc("admin_agent_set_mode", { p_key: "assistant_autorun", p_mode: was ? "ask" : "auto" });
+    if (e) { setWorld((w) => (w ? { ...w, autorun: was } : w)); setError(e.message); }
   }
 
   /** Runs safe steps now; anything risky waits in a confirm card. */
@@ -177,7 +179,9 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
       const add: Item[] = [];
       if (out.reply) add.push({ kind: "text", role: "assistant", content: out.reply });
       if (out.ask) add.push({ kind: "ask", question: out.ask.question, options: out.ask.options });
-      const nav = out.actions.find((a) => a.tool === "go_to" && /^\/admin(\/[a-z0-9-]+)*$/.test(String(a.args?.path)));
+      // the assistant does the work itself; it only opens a page when you ask to be taken there
+      const wantsNav = /\b(open|go to|take me|navigate|show me the page|bring me)\b/i.test(raw);
+      const nav = !wantsNav ? undefined : out.actions.find((a) => a.tool === "go_to" && /^\/admin(\/[a-z0-9-]+)*$/.test(String(a.args?.path)));
       if (nav) navigate(String(nav.args.path));
       for (const a of out.actions.filter((x) => READ_ONLY.has(x.tool))) {
         try { const r = a.tool === "site_health" ? await runSiteHealth() : a.tool === "briefing" ? await runBriefing() : await runReadOnly(a as AgentAction, world); if (r) add.push({ kind: "result", result: r }); }

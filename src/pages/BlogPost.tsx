@@ -2001,63 +2001,30 @@ export default function BlogPost() {
             <span className="mr-1 text-xs font-bold uppercase tracking-wider text-primary">Admin</span>
             {aiNote && <span className="text-xs font-semibold text-muted-foreground" role="status">{aiNote}</span>}
 
-            <Button size="sm" className="h-8 gap-1.5 text-xs bg-primary hover:bg-primary/90" disabled={!!actionLoading} onClick={runDirectMigrate}>
-              {actionLoading === "fix" ? <Loader2 className="h-3 w-3 animate-spin" /> : <GitMerge className="h-3 w-3" />}
-              Migrate to MCQs
-            </Button>
-
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button size="sm" variant="outline" className="h-8 gap-1.5 text-xs border-primary/30" disabled={!!actionLoading}>
-                  {actionLoading === "format" || actionLoading === "expand" || actionLoading === "titles" || actionLoading === "saq" || actionLoading === "image"
-                    ? <Loader2 className="h-3 w-3 animate-spin" />
-                    : <Sparkles className="h-3 w-3 text-primary" />}
-                  Gemini
+                <Button size="sm" className="h-8 gap-1.5 text-xs bg-primary hover:bg-primary/90" disabled={!!actionLoading}>
+                  {actionLoading ? <Loader2 className="h-3 w-3 animate-spin" /> : <Sparkles className="h-3 w-3" />}
+                  AI tools
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start">
-                <DropdownMenuItem onClick={runTidy}>Tidy with AI (preview first)</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => runGeminiUpgrade("expand")}>Expand article details</DropdownMenuItem>
-                <DropdownMenuItem onClick={runGenerateCoverImage}><ImagePlus className="mr-2 h-3.5 w-3.5" />Generate article image</DropdownMenuItem>
-                <DropdownMenuItem onClick={runTitleAndSubtitleCleanup}>Update title + subtitles only</DropdownMenuItem>
-                <DropdownMenuItem onClick={runGenerateSaqs}>Generate SAQs at article end</DropdownMenuItem>
+                <DropdownMenuItem onClick={runTidy}>Tidy this note (preview first)</DropdownMenuItem>
                 <DropdownMenuItem onClick={async () => {
                   if (!article) return;
-                  setActionLoading("seo");
+                  setActionLoading("image");
                   try {
-                    const { data, error } = await supabase.functions.invoke("content-upgrade", { body: { action: "generate_seo_single", id: article.id } });
+                    const { data, error } = await supabase.functions.invoke("note-images", { body: { article_id: article.id } });
                     if (error) throw new Error(error.message);
                     if (data?.error) throw new Error(data.error);
-                    toast({ title: "SEO metadata generated", description: `Title: ${data?.seo?.meta_title || ""}` });
+                    toast({ title: data?.added ? `${data.added} relevant picture${data.added === 1 ? "" : "s"} added` : "No picture was clearly relevant", description: data?.pictures?.join(", ") });
                     await reloadCurrentArticle(article.id);
                   } catch (err: any) {
-                    toast({ title: "SEO generation failed", description: err?.message, variant: "destructive" });
+                    toast({ title: "Could not add pictures", description: err?.message, variant: "destructive" });
                   } finally { setActionLoading(null); }
-                }}>Generate SEO metadata</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button size="sm" variant="outline" className="h-8 text-xs gap-1.5 border-primary/30" disabled={!!actionLoading}>
-                  <GitMerge className="h-3 w-3" /> More Migrate
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start">
-                <DropdownMenuItem onClick={() => runCleanupFix({ migrate_mcqs: true }, "Migrated to MCQs")}>To MCQs (with delete)</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => runCleanupFix({ migrate_essays: true }, "Migrated to Essays")}>To Essays</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => runCleanupFix({ move_to_raw: true }, "Moved to Raw")}>Move to Raw (unpublish)</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button size="sm" variant="outline" className="h-8 text-xs gap-1.5 border-primary/30" disabled={!!actionLoading}>
-                  <Settings2 className="h-3 w-3" /> Change
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start">
-                <DropdownMenuItem onClick={() => runCleanupFix({ fix_formatting: true, clean_emojis: true, clean_mku: true }, "Cleaned formatting")}>Clean formatting</DropdownMenuItem>
+                }}><ImagePlus className="mr-2 h-3.5 w-3.5" />Add relevant pictures</DropdownMenuItem>
+                <DropdownMenuItem onClick={runGenerateSaqs}>Add short-answer questions at the end</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => runCleanupFix({ move_to_raw: true }, "Moved to Raw")}>Unpublish (move to Raw)</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
