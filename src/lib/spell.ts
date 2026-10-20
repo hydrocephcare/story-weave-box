@@ -3,7 +3,7 @@ import { topicPath, type TopicIndexItem } from "@/lib/topics";
 
 export interface Suggestion { name: string; path: string; sub?: string }
 
-function distance(a: string, b: string): number {
+export function distance(a: string, b: string): number {
   const prev = Array.from({ length: b.length + 1 }, (_, i) => i);
   for (let i = 1; i <= a.length; i++) {
     let diag = prev[0]; prev[0] = i;

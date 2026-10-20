@@ -1,3 +1,4 @@
+import SafeTextarea from "@/components/SafeTextarea";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import OmpathMark from "@/components/ai/OmpathMark";
@@ -480,8 +481,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
         </div>
       )}
       <form className="flex items-end gap-2 p-2" onSubmit={(e) => { e.preventDefault(); void send(text); }}>
-        <textarea value={text} onChange={(e) => {
-          const v = e.target.value;
+        <SafeTextarea value={text} onValueChange={(v) => {
           // some phone keyboards insert a pasted block as typing (no paste event): a big sudden jump becomes an attachment too
           if (v.length - text.length > LONG_PASTE) {
             let p = 0; while (p < text.length && text[p] === v[p]) p++;

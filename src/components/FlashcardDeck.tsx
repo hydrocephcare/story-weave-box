@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, EyeOff, Flame, Keyboard, Sparkles, Star, Type, Undo2, Volume2 } from "lucide-react";
+import { ArrowLeft, Eye, EyeOff, Flame, Keyboard, Mic, Sparkles, Star, Type, Undo2, Volume2 } from "lucide-react";
+import SafeTextarea from "@/components/SafeTextarea";
+import { listen, matchPercent, recallSupported, sayAloud, stopAloud } from "@/lib/voiceRecall";
 import { openAI } from "@/lib/aiEvents";
 import { DAILY_GOAL, bury, buriedKeys, doneToday, getScale, recordReview, setScale, speak, starredKeys, streak, toggleStar } from "@/lib/deckStats";
 import { supabase } from "@/integrations/supabase/client";
@@ -77,19 +79,51 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
   const card = ci >= 0 ? cards[ci] : null;
   const st = card && states ? states[cardKey(card.setId, card.idx)] : undefined;
 
-  useEffect(() => { setFlipped(false); setTyped(""); }, [ci]);
-  // type-your-answer mode: what you wrote is compared with the key words of the answer, and the rating that fits is suggested (you still choose)
-  const [typing, setTyping] = useState(() => { try { return localStorage.getItem("deck-typed") === "1"; } catch { return false; } });
+  // How you recall: just think, type what you remember, or say it aloud. What you wrote or said is compared with the key words of the answer, and the rating
+  // that fits is suggested (you still choose). Speaking listens by itself, notices when you stop, and flips the card.
+  type Recall = "think" | "type" | "speak";
+  const [recall, setRecall] = useState<Recall>(() => { try { const m = localStorage.getItem("deck-mode"); return m === "type" || m === "speak" ? m : localStorage.getItem("deck-typed") === "1" ? "type" : "think"; } catch { return "think"; } });
   const [typed, setTyped] = useState("");
-  const match = (() => {
-    if (!typing || !typed.trim() || !card) return null;
-    const bold = /[*][*]([^*]+)[*][*]/.exec(card.answer)?.[1] ?? card.answer.split("\n")[0];
-    const keys = [...new Set(bold.toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/\s+/).filter((w) => w.length > 3))];
-    if (!keys.length) return null;
-    const said = typed.toLowerCase();
-    const hit = keys.filter((w) => said.includes(w.slice(0, Math.max(4, w.length - 2)))).length;
-    return Math.round((hit / keys.length) * 100);
-  })();
+  const [alts, setAlts] = useState<string[]>([]);
+  const [voice, setVoice] = useState<"idle" | "listening" | "nothing" | "denied">("idle");
+  const [voiceOk, setVoiceOk] = useState(false);          // the microphone has been allowed once, so the next cards can start listening by themselves
+  const [autoFlip, setAutoFlip] = useState(() => { try { return localStorage.getItem("deck-autoflip") !== "0"; } catch { return true; } });
+  const [readAloud, setReadAloud] = useState(() => { try { return localStorage.getItem("deck-readaloud") === "1"; } catch { return false; } });
+  const listenRef = useRef<{ stop: () => void } | null>(null);
+  const listenId = useRef(0);
+  const flipTimer = useRef(0);
+  const keep = (k: string, v: string) => { try { localStorage.setItem(k, v); } catch { /* blocked */ } };
+  const stopListening = useCallback(() => { listenId.current++; window.clearTimeout(flipTimer.current); try { listenRef.current?.stop(); } catch { /* none */ } listenRef.current = null; }, []);
+  const startListening = useCallback(() => {
+    if (!recallSupported()) return;
+    stopAloud(); stopListening();
+    const id = ++listenId.current;
+    setVoice("listening"); setTyped(""); setAlts([]);
+    listenRef.current = listen({
+      onText: (t) => { if (id === listenId.current) setTyped(t); },
+      onEnd: (text, a, why) => {
+        if (id !== listenId.current) return;
+        listenRef.current = null; setAlts(a);
+        if (why === "denied") { setVoice("denied"); return; }
+        if (!text) { setVoice(why === "stopped" ? "idle" : "nothing"); return; }
+        setVoice("idle"); setVoiceOk(true); setTyped(text);
+        if (autoFlip) flipTimer.current = window.setTimeout(() => setFlipped(true), 450);
+      },
+    });
+    if (!listenRef.current) setVoice("idle");
+  }, [autoFlip, stopListening]);
+  useEffect(() => { stopListening(); stopAloud(); setFlipped(false); setTyped(""); setAlts([]); setVoice("idle"); }, [ci, stopListening]);
+  useEffect(() => () => { stopListening(); stopAloud(); }, [stopListening]);
+  // speak mode: once the microphone is allowed, every new card starts listening by itself
+  useEffect(() => {
+    if (recall !== "speak" || !voiceOk || flipped || !card || !recallSupported()) return;
+    const t = window.setTimeout(() => startListening(), 600);
+    return () => window.clearTimeout(t);
+  }, [ci, recall, voiceOk]); // eslint-disable-line react-hooks/exhaustive-deps
+  // switching away from speaking, or flipping the card, ends the listening; the answer can be read aloud
+  useEffect(() => { if (recall !== "speak" || flipped) stopListening(); }, [recall, flipped, stopListening]);
+  useEffect(() => { if (recall === "speak" && flipped && readAloud && card) sayAloud(card.answer); }, [flipped]); // eslint-disable-line react-hooks/exhaustive-deps
+  const match = recall !== "think" && typed.trim() && card ? matchPercent(card.answer, typed, alts) : null;
   const suggest: Rating | null = match === null ? null : match >= 70 ? "good" : match >= 40 ? "hard" : "again";
   // the whole answer is always on the card: the text shrinks until it fits, so there is never anything to scroll
   useLayoutEffect(() => {
@@ -276,19 +310,49 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
         <button type="button" onClick={() => speak(flipped ? card?.answer || "" : card?.question || "")} aria-label="Read aloud" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><Volume2 className="h-4 w-4" /></button>
         <button type="button" onClick={() => { const n = scale >= 1.3 ? 0.9 : scale >= 1.1 ? 1.3 : 1.15; setScale(n); setScaleState(n); }} aria-label="Change text size" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><Type className="h-4 w-4" /></button>
         <button type="button" onClick={() => card && openAI(`Explain this to me simply, with the mechanism and a clinical example: ${card.question.replace(/[*]+/g, "")}`)} aria-label="Ask Ompath AI to explain this card" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><Sparkles className="h-4 w-4" /></button>
-        <button type="button" onClick={() => { const n = !typing; setTyping(n); try { localStorage.setItem("deck-typed", n ? "1" : "0"); } catch { /* blocked */ } }} aria-pressed={typing} aria-label="Type your answer before flipping" className={`rounded-full p-2 hover:bg-muted hover:text-foreground ${typing ? "bg-primary/15 text-primary" : ""}`}><Keyboard className="h-4 w-4" /></button>
+        <span className="mx-1 inline-flex rounded-full bg-muted p-0.5" role="group" aria-label="How you recall">
+          {([["think", Eye, "Think it through"], ["type", Keyboard, "Type what you remember"], ["speak", Mic, "Say what you remember"]] as const).map(([m, Icon, label]) => (
+            <button key={m} type="button" aria-pressed={recall === m} aria-label={label} title={label} onClick={() => { setRecall(m); keep("deck-mode", m); setTyped(""); setAlts([]); setVoice("idle"); }} className={`rounded-full p-1.5 ${recall === m ? "bg-primary text-primary-foreground" : "hover:text-foreground"}`}><Icon className="h-4 w-4" /></button>
+          ))}
+        </span>
         <button type="button" onClick={hide} aria-label="Never show this card again" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><EyeOff className="h-4 w-4" /></button>
       </div>
       {mcq && <Link to={mcq} className="mx-auto mt-1 block w-full max-w-md text-center text-sm font-bold text-primary hover:underline sm:max-w-xl">Test yourself with MCQs on this topic →</Link>}
       <div className="sticky bottom-0 z-10 mx-auto mt-2 w-full max-w-md sm:max-w-xl bg-background/95 pb-3 pt-1 backdrop-blur">
         {!flipped ? (
           <>
-            {typing && <textarea value={typed} onChange={(e) => setTyped(e.target.value)} onKeyDown={(e) => e.stopPropagation()} rows={2} placeholder="Type what you remember, then show the answer" className="mb-2 w-full resize-none rounded-xl border border-input bg-background px-3 py-2 text-[16px] outline-none focus:border-primary" />}
-            <button type="button" onClick={() => setFlipped(true)} className="w-full rounded-full bg-primary py-4 text-base font-bold text-primary-foreground">Show answer</button>
+            {recall === "type" && <SafeTextarea value={typed} onValueChange={setTyped} onKeyDown={(e) => e.stopPropagation()} rows={2} placeholder="Type what you remember, then show the answer" className="mb-2 w-full resize-none rounded-xl border border-input bg-background px-3 py-2 text-[16px] outline-none focus:border-primary" />}
+            {recall === "speak" && (
+              <div className="mb-2 text-center">
+                {!recallSupported() ? <p className="py-2 text-sm text-muted-foreground">Voice recall needs Chrome or Edge on this device. Use Type, or just flip the card.</p> : (
+                  <>
+                    <div className="flex items-center justify-center gap-3">
+                      <button type="button" onClick={() => (voice === "listening" ? (stopListening(), setVoice("idle")) : startListening())} aria-label={voice === "listening" ? "Stop listening" : "Start speaking"} className={`relative flex h-16 w-16 items-center justify-center rounded-full ${voice === "listening" ? "bg-rose-500 text-white" : "bg-primary text-primary-foreground"}`}>
+                        {voice === "listening" && <span className="absolute inset-0 animate-ping rounded-full bg-rose-500/40" aria-hidden />}
+                        <Mic className="relative h-7 w-7" />
+                      </button>
+                    </div>
+                    <p className="mt-2 min-h-[2.5rem] px-2 text-sm leading-snug text-foreground/85">
+                      {voice === "listening" ? (typed ? `“${typed}”` : "Listening… say what you remember") : voice === "nothing" ? "I did not hear anything. Tap the microphone to try again." : voice === "denied" ? "Allow the microphone for this site in your browser, then tap again." : typed ? `“${typed}”` : voiceOk ? "Starting the microphone…" : "Tap the microphone and say what you remember"}
+                    </p>
+                    <div className="mt-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-muted-foreground">
+                      <label className="inline-flex items-center gap-1.5"><input type="checkbox" checked={autoFlip} onChange={(e) => { setAutoFlip(e.target.checked); keep("deck-autoflip", e.target.checked ? "1" : "0"); }} /> Flip when I stop</label>
+                      <label className="inline-flex items-center gap-1.5"><input type="checkbox" checked={readAloud} onChange={(e) => { setReadAloud(e.target.checked); keep("deck-readaloud", e.target.checked ? "1" : "0"); }} /> Read the answer aloud</label>
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
+            <button type="button" onClick={() => setFlipped(true)} className={`w-full rounded-full py-4 text-base font-bold ${recall === "speak" && voice === "listening" ? "bg-muted text-foreground" : "bg-primary text-primary-foreground"}`}>{recall === "speak" && typed && voice !== "listening" ? "Flip now" : "Show answer"}</button>
           </>
         ) : (
           <>
-          {match !== null && <p className="mb-1.5 text-center text-xs font-semibold text-muted-foreground">You matched {match}% of the key words{suggest ? ` · suggested: ${suggest === "again" ? "Again" : suggest === "hard" ? "Hard" : "Good"}` : ""}</p>}
+          {match !== null && (
+            <div className="mb-2 text-center">
+              <p className="line-clamp-2 text-sm italic leading-snug text-foreground/80">You {recall === "speak" ? "said" : "wrote"}: “{typed}”</p>
+              <p className="mt-0.5 text-xs font-semibold text-muted-foreground">You matched {match}% of the key words{suggest ? ` · suggested: ${suggest === "again" ? "Again" : suggest === "hard" ? "Hard" : "Good"}` : ""}</p>
+            </div>
+          )}
           <div className="grid grid-cols-4 gap-2" role="group" aria-label="How well did you know it?">
             {BTN.map((b) => (
               <button key={b.r} type="button" onClick={() => rate(b.r)} className={`flex flex-col items-center rounded-xl px-1 py-3 transition-colors ${b.cls} ${suggest === b.r ? "ring-2 ring-primary ring-offset-2 ring-offset-background" : ""}`}>

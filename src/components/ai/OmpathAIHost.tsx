@@ -1,3 +1,5 @@
+import SafeTextarea from "@/components/SafeTextarea";
+import { listen as listenRecall } from "@/lib/voiceRecall";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { ArrowUp, Bookmark, BookOpen, Check, Copy, ExternalLink, History, FilePlus2, Loader2, MessageSquarePlus, Search, Square, Mic, LineChart, RefreshCw, Share2, Zap, ThumbsDown, ThumbsUp, Trash2, X } from "lucide-react";
@@ -198,15 +200,13 @@ export default function OmpathAIHost() {
   // Speak instead of typing (Chrome, Edge and Safari; the button is hidden where it is not supported).
   const [listening, setListening] = useState(false);
   const SpeechRec = typeof window !== "undefined" ? ((window as unknown as { SpeechRecognition?: new () => any; webkitSpeechRecognition?: new () => any }).SpeechRecognition ?? (window as unknown as { webkitSpeechRecognition?: new () => any }).webkitSpeechRecognition) : undefined; // eslint-disable-line @typescript-eslint/no-explicit-any
+  // voice typing: the shared listener ignores the repeated sentences some phones send, and ends by itself when you stop talking
   const listen = () => {
     if (!SpeechRec || listening) return;
-    const rec = new SpeechRec();
-    rec.lang = "en-KE"; rec.interimResults = true; rec.maxAlternatives = 1;
-    rec.onresult = (e: any) => { setQ(Array.from(e.results as ArrayLike<any>).map((r) => r[0].transcript).join(" ")); }; // eslint-disable-line @typescript-eslint/no-explicit-any
-    rec.onend = () => setListening(false);
-    rec.onerror = () => setListening(false);
+    const base = q.trim() ? `${q.trim()} ` : "";
     setListening(true);
-    try { rec.start(); } catch { setListening(false); }
+    const l = listenRecall({ lang: "en-US", quietMs: 2200, waitMs: 10000, maxMs: 60000, onText: (t) => setQ(base + t), onEnd: (t) => { if (t) setQ(base + t); setListening(false); } });
+    if (!l) setListening(false);
   };
 
   // the subscription prompt needs the whole screen: step aside, and leave the "Back to Ompath AI" button so nothing is lost
@@ -593,7 +593,7 @@ export default function OmpathAIHost() {
                 </div>
               )}
               <form onSubmit={(e) => { e.preventDefault(); void ask(q); }} className="flex items-end gap-1.5 rounded-2xl border border-border bg-card p-1.5 transition-shadow focus-within:border-primary/60 focus-within:shadow-[0_0_0_3px_hsl(var(--primary)/0.18)]">
-                <textarea ref={inputRef} value={q} onChange={(e) => { setQ(e.target.value); e.target.style.height = "auto"; e.target.style.height = `${Math.min(e.target.scrollHeight, 144)}px`; }} onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void ask(q); } }} rows={1} placeholder="Ask Ompath AI…" aria-label="Ask Ompath AI" enterKeyHint="send" autoComplete="off" autoCorrect="on" className="block max-h-36 min-h-[44px] min-w-0 flex-1 resize-none overflow-y-auto bg-transparent px-2 py-[10px] text-base leading-6 outline-none placeholder:text-muted-foreground" />
+                <SafeTextarea ref={inputRef} value={q} onValueChange={(v) => { setQ(v); const el = inputRef.current; if (el) { el.style.height = "auto"; el.style.height = `${Math.min(el.scrollHeight, 144)}px`; } }} onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); void ask(q); } }} rows={1} placeholder="Ask Ompath AI…" aria-label="Ask Ompath AI" enterKeyHint="send" autoComplete="off" autoCorrect="on" className="block max-h-36 min-h-[44px] min-w-0 flex-1 resize-none overflow-y-auto bg-transparent px-2 py-[10px] text-base leading-6 outline-none placeholder:text-muted-foreground" />
                 {SpeechRec && !busy && <button type="button" onClick={listen} aria-label={listening ? "Listening" : "Speak your question"} className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${listening ? "animate-pulse bg-destructive/15 text-destructive" : "text-muted-foreground hover:bg-muted"}`}><Mic className="h-5 w-5" /></button>}
                 {busy ? <button type="button" onClick={() => abort.current?.abort()} aria-label="Stop" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-muted"><Square className="h-4 w-4" /></button>
                   : <button type="submit" disabled={q.trim().length < 2} aria-label="Ask" className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground disabled:opacity-40"><ArrowUp className="h-5 w-5" /></button>}
