@@ -70,7 +70,7 @@ function parseList(lines, start, indent) {
 }
 
 function table(rows) {
-  const cells = (r) => r.trim().replace(/^\\||\\|$/g, "").split("|").map((c) => c.trim());
+  const cells = (r) => r.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
   const head = cells(rows[0]);
   const body = rows.slice(2).map(cells).filter((r) => r.some((cell) => cell.length));
   const columns = head.length;
