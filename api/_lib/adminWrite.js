@@ -2,6 +2,7 @@
 // the browser shows it to the admin and saves it with the admin's own login after they press Publish.
 import { isAdmin } from "./adminAgent.js";
 import { askJson } from "./llm.js";
+import { hardenBatch, weakness } from "../../supabase/functions/_shared/mcqHarden.js";
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
 
 const ENRICH = `
@@ -73,6 +74,11 @@ export default async function handler(req, res) {
       correct_answer: Number(q?.correct_answer), explanation: String(q?.explanation ?? "").trim(),
     })).filter((q) => q.question.length > 10 && q.options.length === 4 && new Set(q.options.map((o) => o.toLowerCase())).size === 4 && q.options.every(Boolean) && Number.isInteger(q.correct_answer) && q.correct_answer >= 0 && q.correct_answer <= 3);
     if (!qs.length) return res.status(502).json({ error: "The writer could not make usable questions from that text." });
+    // an answer that gives itself away (the longest option, "always" in a wrong option) is rewritten before the admin sees it
+    try {
+      const weakIdx = qs.map((q, i) => (weakness(q).filter((w) => w !== "recall").length ? i : -1)).filter((i) => i >= 0).slice(0, 10);
+      if (weakIdx.length) { const fixed = await hardenBatch(process.env, weakIdx.map((i) => qs[i]), { subject: String(body.title || ""), manual: true }); weakIdx.forEach((i, k) => { if (fixed[k]) qs[i] = fixed[k]; }); }
+    } catch { /* the questions are kept as written */ }
     return res.status(200).json({ questions: qs.slice(0, count), dropped: Math.max(0, (out.questions?.length || 0) - qs.length) });
   }
   if (mode === "cards") {

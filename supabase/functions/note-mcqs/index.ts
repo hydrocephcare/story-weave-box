@@ -3,6 +3,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { chatText } from "../_shared/aiChat.js";
+import { hardenBatch, weakness } from "../_shared/mcqHarden.js";
 import { cleanTopicTitle } from "../_shared/topicTitle.js";
 
 const cors = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-cron-key" };
@@ -12,7 +13,8 @@ const SYSTEM = `You write single-best-answer multiple-choice questions for Kenya
 Each item: {"question":"...","options":["...","...","...","..."],"correct_answer":0,"explanation":"..."}
 Rules:
 - Use only facts that are in the note. Never invent doses, numbers or criteria.
-- Test understanding (mechanism, diagnosis, next best step, key feature), not trivia. Prefer short clinical vignettes when the note allows.
+- Make them HARD. At least two thirds are short clinical scenarios (age, presentation, one or two findings) that end in a precise question: most likely diagnosis, mechanism, drug of choice, best next step, most likely finding. The rest are reasoning questions. Never a bare "What is X?".
+- The three wrong options are believable alternatives a student could really confuse with the right answer (neighbouring diagnoses, other drugs of the same class, the step before or after), written in the same form as the right one, never absurd, never containing always, never, only, all or none.
 - Exactly four options, one clearly best answer, the three wrong options plausible. All options about the same length; the correct one must NOT be the longest or most detailed. Spread the correct answer across positions 0 to 3.
 - correct_answer is the 0-based index of the right option.
 - The explanation is two sentences at most: why the answer is right and why the likeliest wrong option is not.
@@ -78,6 +80,11 @@ serve(async (req) => {
           if (got.length > best.length) best = got;
         } catch (e) { err = e instanceof Error ? e.message.slice(0, 120) : String(e); }
       }
+      // an answer that gives itself away (the longest option, an absolute word in a wrong option) is rewritten before it is saved
+      try {
+        const weakIdx = best.map((q, i) => (weakness(q).filter((w: string) => w !== "recall").length ? i : -1)).filter((i) => i >= 0).slice(0, 8);
+        if (weakIdx.length) { const fixed = await hardenBatch(env, weakIdx.map((i) => best[i]), { subject: `${a.title} (${a.category})` }); weakIdx.forEach((i, k) => { if (fixed[k]) best[i] = { ...fixed[k] } as any; }); }
+      } catch { /* the questions are kept as written */ }
       return { questions: best, err };
     };
     const clean = (t: string) => String(t).replace(/\r\n/g, "\n").replace(/!\[[^\]]*\]\([^)]*\)/g, "");
