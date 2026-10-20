@@ -4,7 +4,7 @@
 
 > **The main idea:** a murmur is an extra, usually blowing, whooshing or rumbling sound caused by turbulent blood flow. It is not the same thing as S1 or S2. First identify the normal heart sounds; then decide whether a murmur is present and when it occurs.
 
-![Five cardiac auscultation areas and common murmurs](https://pbs.twimg.com/media/FVd1_LHWIAEbD0-.jpg)
+![Heart auscultation areas showing aortic, pulmonary, Erb's point, tricuspid and mitral listening areas — public-domain diagram](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_1000/v1792483037/ompathstudy-clinical-skills-heart-auscultation-areas.svg)
 
 *Illustration: heart auscultation areas and common murmurs. Source: Osmosis educational graphic, [original post](https://x.com/OsmosisMed/status/1537827529217695744). Use the diagram as a location guide; the written explanations below explain the physiology.*
 
@@ -69,7 +69,7 @@ This is a learning guide, not a substitute for supervised examination. Murmurs v
 
 The stethoscope does **not** sit directly over each valve's anatomical location. These are **listening areas**, where sound from each valve is transmitted most clearly.
 
-![Heart auscultation diagram](https://upload.medbullets.com/topic/108089/images/082817vldcardiacheartauscultation.jpg)
+![Heart anatomy showing the chambers, valves and great vessels — Wikimedia Commons](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_1000/v1792483044/ompathstudy-clinical-skills-heart-anatomy.svg)
 
 *Illustration: auscultation areas. Source: [Medbullets heart auscultation diagram](https://www.medbullets.com/).*
 
@@ -88,6 +88,9 @@ Use the mnemonic **“APE To Man”**:
 Because the **best listening point is not the same as the physical location of the valve**. Aortic regurgitation is often best heard along the *left sternal edge* (including Erb’s point), especially with the patient sitting forward at end-expiration. The aortic area on the right upper sternal edge is a standard area for aortic stenosis and for systematically listening to the aortic valve, but it is not the only place to listen for aortic valve disease.
 
 ## 7. How to perform a basic cardiovascular examination
+
+![Heart anatomy showing chambers, valves and major vessels — Wikimedia Commons](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_1000/v1792483044/ompathstudy-clinical-skills-heart-anatomy.svg)
+
 
 Explain the examination, obtain consent, wash hands, position the patient at about 45 degrees, expose the chest appropriately while maintaining dignity, and ensure good lighting.
 
