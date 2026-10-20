@@ -134,7 +134,7 @@ serve(async (req) => {
       try {
         const lead = await wikiLead(head, titleKeys);
         if (lead) {
-          const first = lines.findIndex((l, i) => i > 2 && /^#{2,4}s/.test(l));
+          const first = lines.findIndex((l, i) => i > 2 && /^#{2,4}\s/.test(l));
           if (first > 0) { picked.push({ i: first, line: `![${lead.caption}](${lead.url})`, why: `Wikipedia: ${lead.title}` }); trace.push(`lead picture: ${lead.title}`); }
         }
       } catch { /* no lead picture */ }
