@@ -59,6 +59,33 @@ async function wikiLead(subject: string, keys: string[]): Promise<{ url: string;
   return null;
 }
 
+const MEDICAL = /disease|disorder|syndrome|condition|medical|medicine|anatom|organ|bone|muscle|artery|vein|nerve|gland|cell|tissue|infect|cancer|tumou?r|drug|medication|procedure|test|symptom|sign|hormone|virus|bacteri|parasite|vitamin|protein|enzyme|growth|development|brain|heart|lung|kidney|liver|skin|blood|newborn|infant|child|body|surgery|therapy|deficien|fracture|injury|ulcer|inflammation|paralysis|palsy|autism|chart|scale|reflex|milestone/i;
+
+/** Wikipedia articles whose title is exactly one of the terms (redirects followed): the lead picture of an article about exactly that subject, free licence only. */
+async function wikiExact(terms: string[]): Promise<Map<string, { url: string; title: string }>> {
+  const out = new Map<string, { url: string; title: string }>();
+  for (let i = 0; i < terms.length; i += 40) {
+    const chunk = terms.slice(i, i + 40);
+    const p = new URLSearchParams({ action: "query", format: "json", redirects: "1", titles: chunk.join("|"), prop: "pageimages|pageterms", piprop: "thumbnail", pithumbsize: "900", wbptterms: "description" });
+    const r = await fetch(`https://en.wikipedia.org/w/api.php?${p}`, { headers: { "User-Agent": "OmpathStudy/1.0 (https://www.ompathstudy.com)" } });
+    if (!r.ok) continue;
+    const q = (await r.json())?.query ?? {};
+    const alias = new Map<string, string>();
+    for (const n of q.normalized ?? []) alias.set(n.from, n.to);
+    for (const n of q.redirects ?? []) alias.set(n.from, n.to);
+    const byTitle = new Map<string, any>(Object.values(q.pages ?? {}).map((pg: any) => [pg.title, pg]));
+    for (const t of chunk) {
+      let to = t; for (let k = 0; k < 3 && alias.has(to); k++) to = alias.get(to)!;
+      const pg = byTitle.get(to);
+      const url: string = String(pg?.thumbnail?.source || "").replace("https://thumb.wikimedia.org", "https://upload.wikimedia.org").split("?")[0];
+      if (!pg || !url || !/\/wikipedia\/commons\//.test(url) || /[()\s\]]/.test(url) || BAD.test(url)) continue;
+      if (!MEDICAL.test(String(pg.terms?.description?.[0] || ""))) continue;
+      out.set(t, { url, title: pg.title });
+    }
+  }
+  return out;
+}
+
 /** The first paragraph after a heading ends at the next blank line; the picture goes right after it. */
 function insertAfterFirstPara(lines: string[], headingIdx: number, imgLine: string): boolean {
   let i = headingIdx + 1;
@@ -91,7 +118,9 @@ serve(async (req) => {
       const { data: rows } = await supabase.from("articles").select("id,title,category,content").eq("published", true).is("deleted_at", null)
         .not("content", "like", "%upload.wikimedia.org%").not("title", "ilike", "%mcq%").not("title", "ilike", "%question%").not("title", "ilike", "%exam%").not("title", "ilike", "%paper%").not("title", "ilike", "%quiz%")
         .order("created_at", { ascending: false }).limit(60);
-      a = (rows ?? []).find((r: { id: string; content: string }) => !skip.has(r.id) && String(r.content).length > 3000 && (String(r.content).match(/^#{2,3}\s/gm) || []).length >= 4) ?? null;
+      // newest first; one of the first few at random, so several runs in the same minute do not take the same note
+      const todo = (rows ?? []).filter((r: { id: string; content: string }) => !skip.has(r.id) && String(r.content).length > 3000 && (String(r.content).match(/^#{2,3}\s/gm) || []).length >= 4);
+      a = todo.length ? todo[Math.floor(Math.random() * Math.min(5, todo.length))] : null;
     }
     if (!a) return json({ success: true, done: true });
 
@@ -107,8 +136,35 @@ serve(async (req) => {
     const used = new Set<string>();
     let aiDown = false;
     const trace: string[] = [];
+    // pass 1, no guessing: a heading or a bold term that is exactly the name of a Wikipedia article gets that article's own lead picture (placed in the section it came from)
+    try {
+      const allHeads = lines.map((l, i) => ({ i, h: ((l.match(/^#{2,4}\s+(?:\d+[.)]\s*)?(.+?)\s*$/) || [])[1] || "").replace(/\*+/g, "") })).filter((x) => x.h);
+      const secOf = (lineNo: number) => { let best = allHeads[0]; for (const h of allHeads) { if (h.i <= lineNo) best = h; else break; } return best; };
+      const cand: { term: string; sec: number }[] = [];
+      const add = (term: string, lineNo: number) => {
+        const t = term.replace(/\(.*?\)/g, " ").replace(/[^A-Za-z0-9' -]/g, " ").replace(/\s+/g, " ").trim();
+        const n = t.split(" ").length;
+        if (t.length < 4 || n > 4 || GENERIC.has(t.toLowerCase()) || /^(part|section|table|figure|note|key|why|what|how|when|signs?|causes?|red flags?)\b/i.test(t)) return;
+        const sec = secOf(lineNo); if (!sec || sec.i < 3) return;
+        if (!cand.some((c) => c.term.toLowerCase() === t.toLowerCase())) cand.push({ term: t.charAt(0).toUpperCase() + t.slice(1), sec: sec.i });
+      };
+      lines.forEach((l, i) => {
+        const hm = l.match(/^#{2,4}\s+(?:\d+[.)]\s*)?(.+?)\s*$/);
+        if (hm) { const h = hm[1].replace(/\*+/g, ""); add(h.split(/[:—–(]/)[0], i); h.split(/\s*(?:,| and | or |\/)\s*/).forEach((s2) => add(s2, i)); }
+        else for (const b of l.matchAll(/\*\*([^*]{3,40})\*\*/g)) add(b[1].replace(/[:.]$/, ""), i);
+      });
+      const found = await wikiExact(cand.map((c) => c.term).slice(0, 120));
+      const takenSec = new Set<number>();
+      for (const c of cand) {
+        const f = found.get(c.term); if (!f || used.has(f.url) || takenSec.has(c.sec) || picked.length >= 6) continue;
+        used.add(f.url); takenSec.add(c.sec);
+        const cap = `${f.title} · Image from the Wikipedia article, Wikimedia Commons`.replace(/[\[\]()\n]/g, " ").replace(/\s+/g, " ");
+        picked.push({ i: c.sec, line: `![${cap}](${f.url})`, why: `Wikipedia: ${f.title}` });
+        trace.push(`exact: ${c.term}`);
+      }
+    } catch (e) { trace.push(`exact pass failed ${String(e).slice(0, 60)}`); }
     let tries = 0;
-    for (const sec of heads.slice(0, 16)) {
+    for (const sec of heads.slice(0, picked.length >= 3 ? 0 : 16)) {
       if (tries++ >= 12) break;
       if (picked.length >= 5) break;
       const secKeys = sec.keys.length > 2 ? [...sec.keys].sort((x, y) => y.length - x.length).slice(0, 2) : sec.keys; // a long heading is searched by its two most specific words

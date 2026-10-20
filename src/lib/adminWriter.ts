@@ -11,7 +11,9 @@ const SITE = "https://www.ompathstudy.com";
 async function call<T>(body: Record<string, unknown>): Promise<T> {
   const { data: session } = await supabase.auth.getSession();
   const token = session.session?.access_token; if (!token) throw new Error("Log in as an administrator first.");
-  const r = await fetch("/api/ai?task=write", { method: "POST", headers: { "content-type": "application/json", authorization: `Bearer ${token}` }, body: JSON.stringify(body) });
+  let r: Response;
+  try { r = await fetch("/api/ai?task=write", { method: "POST", signal: AbortSignal.timeout(120_000), headers: { "content-type": "application/json", authorization: `Bearer ${token}` }, body: JSON.stringify(body) }); }
+  catch { throw new Error("The writer took too long. Please try again."); }
   const j = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(j?.error || "The writer could not answer.");
   return j as T;
@@ -25,7 +27,27 @@ export async function loadCategories(): Promise<string[]> {
   return [...count].sort((a, b) => b[1] - a[1]).map(([c]) => c);
 }
 
+/** Pasted text longer than the writer can take in one go is cut at paragraph breaks into pieces of about 9,000 characters, so none of it is lost. */
+function chunkText(raw: string, size = 9000): string[] {
+  const paras = raw.replace(/\r\n/g, "\n").split(/\n{2,}/);
+  const out: string[] = []; let cur = "";
+  for (const p of paras) { if (cur && cur.length + p.length > size) { out.push(cur); cur = p; } else cur = cur ? `${cur}\n\n${p}` : p; }
+  if (cur) out.push(cur);
+  return out;
+}
+
 export async function draftNote(raw: string, hint: { title?: string; category?: string; year?: number | null; enrich?: boolean }, categories: string[]): Promise<NoteDraft> {
+  if (raw.length > 12000) {
+    // a long paste: each piece is polished on its own (the first one decides the title and unit), then joined; publishing then splits it into short parts
+    const pieces = chunkText(raw);
+    const first = await draftNote(pieces[0], hint, categories);
+    const rest: string[] = [];
+    for (const piece of pieces.slice(1)) {
+      const next = await call<Omit<NoteDraft, "type" | "raw">>({ mode: "note", text: piece, title: `${first.title} (continued)`, category: first.category, categories, enrich: false });
+      rest.push(next.content.replace(/^#\s+.*\n+/, ""));
+    }
+    return { ...first, content: [first.content, ...rest].join("\n\n"), raw };
+  }
   const out = await call<Omit<NoteDraft, "type" | "raw">>({ mode: "note", text: raw, title: hint.title, category: hint.category, categories, enrich: Boolean(hint.enrich) });
   return { type: "note", ...out, category: hint.category && categories.includes(hint.category) ? hint.category : out.category, year: hint.year ?? out.year, title: (hint.title || out.title || "Study notes").trim(), raw };
 }

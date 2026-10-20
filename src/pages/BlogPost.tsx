@@ -7,7 +7,7 @@ import SideAds from "@/components/SideAds";
 import { isPaperTitle, tileColors, usableImage } from "@/lib/blogImage";
 import BooksForPage from "@/components/BooksForPage";
 import { ArticleNav } from "@/components/NoteNavCards";
-import ReadingBreak, { planBreaks, ProgressiveList } from "@/components/ReadingBreak";
+import ReadingBreak, { PartedList, planBreaks, ProgressiveList } from "@/components/ReadingBreak";
 import SponsorLine from "@/components/SponsorLine";
 import StudyTools from "@/components/StudyTools";
 import PageSummary from "@/components/PageSummary";
@@ -757,6 +757,9 @@ const ArticleContent = memo(function ArticleContent(props: ArticleContentProps) 
     </>
   );
 });
+/** A search or highlight link needs the whole note on screen, so the parts are not used for it. */
+const hasSearchTerm = () => typeof window !== "undefined" && /[?&](q|highlight|hl|at)=/.test(window.location.search);
+
 const ArticleLines = memo(function ArticleLines({ content, articleId, category, title = "", contentKind = "" }: { content: string; articleId: string; category: string; title?: string; contentKind?: string }) {
   _sec = 0;
   const lines = groupQuestionSections(preprocessContent(content)).split("\n");
@@ -1312,10 +1315,10 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
         } else lastWasPause = false;
         out.push(el);
       });
-      return <ProgressiveList items={out} />;
+      return els.length >= 90 && !hasSearchTerm() ? <PartedList items={out} /> : <ProgressiveList items={out} />;
     }
   }
-  return <ProgressiveList items={els} />;
+  return els.length >= 90 && isStudyNote && !hasSearchTerm() ? <PartedList items={els} /> : <ProgressiveList items={els} />;
 });
 
 /* ─── Question jump grid for question banks without headings ─── */

@@ -99,11 +99,13 @@ export function inferSchool(article: ArticleLike): string {
 export function inferExamType(article: ArticleLike): string {
   const explicit = (article?.exam_type || "").trim();
   if (explicit) return explicit;
-  const hay = articleHaystack(article);
+  // only the title and unit decide this: a study note that merely lists "common exam questions" is not an exam paper
+  const hay = `${article?.title || ""} ${article?.category || ""}`;
+  const isNote = /\bnotes?\b/i.test(String(article?.title || ""));
   if (/\bCAT\b|continuous\s+assessment/i.test(hay)) return "CAT";
-  if (/\bMCQs?\b|multiple\s+choice/i.test(hay)) return "MCQ Paper";
-  if (/\bessay\s+questions?|SAQ|short\s+answer|long\s+answer/i.test(hay)) return "Essay Paper";
-  if (/\bpaper\s*[12]\b|exam/i.test(hay)) return "Exam Paper";
+  if (!isNote && /\bMCQs?\b|multiple\s+choice/i.test(hay)) return "MCQ Paper";
+  if (!isNote && /\bessay\s+questions?|SAQ|short\s+answer|long\s+answer/i.test(hay)) return "Essay Paper";
+  if (!isNote && /\bpaper\s*[12]\b|\bexam(ination)?s?\b/i.test(hay)) return "Exam Paper";
   return "";
 }
 

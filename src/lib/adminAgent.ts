@@ -364,7 +364,9 @@ export async function askAgent(message: string, history: { role: "user" | "assis
   const { data: session } = await supabase.auth.getSession();
   const token = session.session?.access_token;
   if (!token) throw new Error("Log in as an administrator first.");
-  const r = await fetch("/api/ai?task=agent", { method: "POST", headers: { "content-type": "application/json", authorization: `Bearer ${token}` }, body: JSON.stringify({ message, history, context }) });
+  let r: Response;
+  try { r = await fetch("/api/ai?task=agent", { method: "POST", signal: AbortSignal.timeout(60_000), headers: { "content-type": "application/json", authorization: `Bearer ${token}` }, body: JSON.stringify({ message, history, context }) }); }
+  catch { throw new Error("The assistant took too long to answer. Please send it again."); }
   const j = await r.json().catch(() => ({}));
   if (!r.ok) throw new Error(j?.error || "The assistant could not answer.");
   return { reply: String(j.reply || ""), ask: j.ask && Array.isArray(j.ask.options) ? { question: String(j.ask.question || ""), options: j.ask.options.map(String) } : null, actions: Array.isArray(j.actions) ? j.actions : [] };

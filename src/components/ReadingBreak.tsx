@@ -274,3 +274,63 @@ export function ProgressiveList({ items, first = 24, slice = 20 }: { items: Reac
     </div>
   );
 }
+
+/**
+ * A long note is read one part at a time ("Part 2 of 4"), cut at its headings, instead of one endless page. Every part stays in the page (hidden until
+ * its turn), so a link to a heading further down opens the part that holds it, and nothing is lost to search.
+ */
+export function PartedList({ items, size = 40 }: { items: React.ReactNode[]; size?: number }) {
+  const keyOf = (el: React.ReactNode) => String((el as { key?: string | null })?.key ?? "");
+  const parts = useMemo(() => {
+    const out: React.ReactNode[][] = []; let cur: React.ReactNode[] = [];
+    items.forEach((el) => {
+      if (cur.length >= size && /^(h2|h3|plain-heading|bl|sl)-/.test(keyOf(el))) { out.push(cur); cur = []; }
+      cur.push(el);
+    });
+    if (cur.length) out.push(cur);
+    if (out.length > 1 && out[out.length - 1].length < size / 3) { const tail = out.pop()!; out[out.length - 1].push(...tail); }
+    return out;
+  }, [items, size]);
+  const [part, setPart] = useState(0);
+  const top = useRef<HTMLDivElement>(null);
+  const go = (n: number) => { setPart(Math.max(0, Math.min(parts.length - 1, n))); window.setTimeout(() => top.current?.scrollIntoView({ block: "start", behavior: "auto" }), 30); };
+
+  // a link to a heading opens the part that holds it
+  useEffect(() => {
+    const open = (id: string) => {
+      const el = id ? document.getElementById(decodeURIComponent(id)) : null;
+      const holder = el?.closest("[data-part]") as HTMLElement | null;
+      if (!holder) return;
+      const n = Number(holder.dataset.part);
+      if (n !== part) { setPart(n); window.setTimeout(() => document.getElementById(decodeURIComponent(id))?.scrollIntoView({ block: "start" }), 60); }
+    };
+    const onHash = () => open(window.location.hash.slice(1));
+    const onClick = (e: Event) => { const a = (e.target as HTMLElement | null)?.closest?.('a[href^="#"]') as HTMLAnchorElement | null; if (a) open(a.getAttribute("href")!.slice(1)); };
+    onHash();
+    window.addEventListener("hashchange", onHash);
+    document.addEventListener("click", onClick, true);
+    return () => { window.removeEventListener("hashchange", onHash); document.removeEventListener("click", onClick, true); };
+  }, [part, parts.length]);
+
+  if (parts.length < 2) return <ProgressiveList items={items} />;
+  const bar = (
+    <nav className="my-6 flex items-center justify-between gap-3 border-y border-border py-3 print:hidden" aria-label="Parts of this note" data-no-swipe>
+      <button type="button" onClick={() => go(part - 1)} disabled={part === 0} className="rounded-full px-4 py-2 text-sm font-bold text-primary hover:bg-primary/10 disabled:opacity-30">← Previous</button>
+      <label className="flex items-center gap-2 text-sm font-semibold text-muted-foreground">
+        <span>Part</span>
+        <select value={part} onChange={(e) => go(Number(e.target.value))} className="rounded-md border border-border bg-background px-2 py-1 text-foreground">
+          {parts.map((_, i) => <option key={i} value={i}>{i + 1}</option>)}
+        </select>
+        <span>of {parts.length}</span>
+      </label>
+      <button type="button" onClick={() => go(part + 1)} disabled={part === parts.length - 1} className="rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground disabled:opacity-30">Next part →</button>
+    </nav>
+  );
+  return (
+    <div ref={top}>
+      {bar}
+      {parts.map((p, i) => <div key={i} data-part={i} hidden={i !== part}><ProgressiveList items={p} first={i === 0 ? 24 : 10} /></div>)}
+      {bar}
+    </div>
+  );
+}

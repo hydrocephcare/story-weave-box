@@ -153,7 +153,17 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
     if (listening) { recognition.current?.stop(); return; }
     const r = new SR(); r.lang = "en-KE"; r.interimResults = true; r.continuous = true;
     const base = text ? `${text} ` : "";
-    r.onresult = (e: any) => { let t = ""; for (let i = 0; i < e.results.length; i++) t += e.results[i][0].transcript; setText(base + t); };
+    // only new results are read (some phones repeat the whole sentence in every result, which printed "whatwhatwhat"); a final result that already contains what was kept replaces it
+    let kept = "";
+    r.onresult = (e: any) => {
+      let interim = "";
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        const res = e.results[i]; const said = String(res[0].transcript || "").trim();
+        if (res.isFinal) { if (said.startsWith(kept)) kept = said; else if (!kept.endsWith(said)) kept = `${kept} ${said}`.trim(); } else interim = said;
+      }
+      const live = interim && interim.startsWith(kept) ? interim : `${kept} ${interim}`.trim();
+      setText(base + live);
+    };
     r.onerror = (e: any) => { setListening(false); if (e.error === "not-allowed") setError("Allow the microphone for this site, then try again."); };
     r.onend = () => setListening(false);
     recognition.current = r; setListening(true); r.start();
