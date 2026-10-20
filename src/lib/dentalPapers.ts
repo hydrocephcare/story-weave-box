@@ -1,7 +1,7 @@
 // Dental past papers: typed up from scanned papers (the scans themselves are never published). Each paper is a small JSON file under src/content/dental, and
 // src/data/dentalPapers.json lists them. Questions come first; model answers are added later, paper by paper.
 
-export interface PaperPart { l: string; text: string; marks?: number }
+export interface PaperPart { l: string; text: string; marks?: number; parts?: PaperPart[] }
 export interface PaperItem {
   /** h = section heading, q = a numbered question, p = a plain line (instruction, note) */
   t: "h" | "q" | "p";
@@ -14,6 +14,11 @@ export interface PaperPage { n: number; items: PaperItem[]; footer?: string }
 export interface DentalPaper {
   slug: string;
   title: string;
+  dateLabel?: string;
+  category?: string;
+  categorySlug?: string;
+  unitSlug?: string;
+  programmes?: string[];
   university: string;
   school: string;
   department: string;
@@ -30,7 +35,7 @@ export interface DentalPaper {
   complete: boolean;
   note?: string;
 }
-export interface PaperMeta { slug: string; title: string; unitCode: string; unitTitle: string; programme: string; date: string; year: string; sitting: string; duration: string; questions: number; complete: boolean; university: string; group: string }
+export interface PaperMeta { unitSlug: string; categorySlug: string; programmes: string[]; dateISO: string; slug: string; title: string; unitCode: string; unitTitle: string; programme: string; date: string; year: string; sitting: string; duration: string; questions: number; complete: boolean; university: string; group: string }
 
 import index from "@/data/dentalPapers.json";
 export const PAPER_INDEX = index as PaperMeta[];
@@ -39,5 +44,10 @@ const files = import.meta.glob("../content/dental/*.json", { import: "default" }
 export const loadPaper = async (slug: string): Promise<DentalPaper | null> => { const f = files[`../content/dental/${slug}.json`]; return f ? f() : null; };
 
 export const questionCount = (p: DentalPaper) => p.pages.reduce((n, pg) => n + pg.items.filter((i) => i.t === "q").length, 0);
-export const totalMarks = (p: DentalPaper) => p.pages.reduce((n, pg) => n + pg.items.reduce((m, i) => m + (i.t !== "q" ? 0 : i.parts?.length ? i.parts.reduce((x, q) => x + (q.marks ?? 0), 0) + (i.marks ?? 0) : i.marks ?? 0), 0), 0);
+const partMarks = (parts?: PaperPart[]): number => (parts ?? []).reduce((n, p) => n + (p.marks ?? 0) + partMarks(p.parts), 0);
+export const totalMarks = (p: DentalPaper) => p.pages.reduce((n, pg) => n + pg.items.reduce((m, i) => m + (i.t !== "q" ? 0 : partMarks(i.parts) + (i.marks ?? 0)), 0), 0);
+
+/** The subject categories, units and programmes found in the published papers (for the browse pages and menus). */
+export const CATEGORY_LIST = Array.from(new Map(PAPER_INDEX.map((p) => [p.categorySlug, p.group])).entries()).map(([slug, name]) => ({ slug, name, papers: PAPER_INDEX.filter((x) => x.categorySlug === slug).length, units: Array.from(new Map(PAPER_INDEX.filter((x) => x.categorySlug === slug).map((x) => [x.unitSlug, x.unitTitle])).entries()).map(([us, ut]) => ({ slug: us, title: ut, papers: PAPER_INDEX.filter((x) => x.unitSlug === us).length })) }));
+export const categoryBlurb: Record<string, string> = { "basic-dental-sciences": "Anatomy, physiology, oral biology and oral pathology for dental students.", "community-and-public-health": "Community health, health education and promotion, and primary health care.", "biostatistics-and-research": "Biostatistics, research methods and data analysis for health students.", "other-units": "More units from the same colleges." };
 export const paperPath = (slug: string) => `/dental/papers/${slug}`;

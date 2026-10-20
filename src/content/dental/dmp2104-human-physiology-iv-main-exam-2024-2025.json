@@ -1,6 +1,6 @@
 {
  "slug": "dmp2104-human-physiology-iv-main-exam-2024-2025",
- "title": "Human Physiology IV (DMP2104): Main Exam, Tue 11th November, 2025 8:00am",
+ "title": "Human Physiology IV: Main Exam, 11 November 2025",
  "university": "Mount Kenya University",
  "school": "Medical School",
  "department": "Department of Dental Sciences",
@@ -70,5 +70,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2025-11-11",
+ "dateLabel": "11 November 2025",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "human-physiology-iv"
 }

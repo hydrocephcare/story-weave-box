@@ -1,6 +1,6 @@
 {
  "slug": "dma1301-introduction-to-biostatistics-main-exam-2017-2018",
- "title": "Introduction to Biostatistics (DMA1301): Main Exam, Monday 19th Nov, 2018 11.00am",
+ "title": "Introduction to Biostatistics: Main Exam, 19 November 2018",
  "university": "Mount Kenya University",
  "school": "School of Physics and Applied Science",
  "department": "Department of Physical and Mathematical Sciences",
@@ -97,5 +97,13 @@
    "footer": "Paper Two"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2018-11-19",
+ "dateLabel": "19 November 2018",
+ "programmes": [
+  "Diploma in Animal Health"
+ ],
+ "categorySlug": "biostatistics-and-research",
+ "category": "Biostatistics and Research",
+ "unitSlug": "introduction-to-biostatistics"
 }

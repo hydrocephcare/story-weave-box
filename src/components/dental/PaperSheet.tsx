@@ -1,10 +1,21 @@
-import type { DentalPaper, PaperItem } from "@/lib/dentalPapers";
+import type { DentalPaper, PaperItem, PaperPart } from "@/lib/dentalPapers";
 
 const up = (s: string) => s.toUpperCase();
 
 function Marks({ m }: { m?: number }) {
   if (!m) return null;
   return <span className="ml-3 shrink-0 whitespace-nowrap italic text-neutral-600">({m} Marks)</span>;
+}
+
+function Parts({ parts }: { parts?: PaperPart[] }) {
+  if (!parts?.length) return null;
+  return (
+    <ol className="mt-1 space-y-1 pl-7">
+      {parts.map((p, i) => (
+        <li key={i}><div className="flex items-baseline justify-between"><p className="min-w-0 flex-1"><span className="mr-2">{p.l ? `${p.l})` : "•"}</span>{p.text}</p><Marks m={p.marks} /></div><Parts parts={p.parts} /></li>
+      ))}
+    </ol>
+  );
 }
 
 function Item({ it }: { it: PaperItem }) {
@@ -16,13 +27,7 @@ function Item({ it }: { it: PaperItem }) {
         <p className="min-w-0 flex-1"><span className="mr-2 font-semibold">{it.n ? `${it.n}.` : ""}</span>{it.text}</p>
         {!it.parts?.length && <Marks m={it.marks} />}
       </div>
-      {it.parts && it.parts.length > 0 && (
-        <ol className="mt-1 space-y-1 pl-7">
-          {it.parts.map((p, i) => (
-            <li key={i} className="flex items-baseline justify-between"><p className="min-w-0 flex-1"><span className="mr-2">{p.l ? `${p.l})` : "•"}</span>{p.text}</p><Marks m={p.marks} /></li>
-          ))}
-        </ol>
-      )}
+      <Parts parts={it.parts} />
     </div>
   );
 }

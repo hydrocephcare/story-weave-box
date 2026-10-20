@@ -1,6 +1,6 @@
 {
  "slug": "dph1201-health-education-i-main-exam-2017-2018",
- "title": "Health Education I (DPH1201): Main Exam, Wed 1st August, 2018",
+ "title": "Health Education I: Main Exam, 1 August 2018",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health",
@@ -179,5 +179,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2018-08-01",
+ "dateLabel": "1 August 2018",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "health-education-i"
 }

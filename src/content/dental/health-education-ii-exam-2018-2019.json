@@ -1,6 +1,6 @@
 {
  "slug": "health-education-ii-exam-2018-2019",
- "title": "Health Education II: Exam, Thurs 22nd November, 2018 2.00pm",
+ "title": "Health Education II: Exam, 22 November 2018",
  "university": "Moi University",
  "school": "School of Public Health",
  "department": "Department of Community Health",
@@ -150,5 +150,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2018-11-22",
+ "dateLabel": "22 November 2018",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "health-education-ii"
 }

@@ -1,6 +1,6 @@
 {
  "slug": "cph2302-community-health-ii-main-exam-2021-2022",
- "title": "Community Health II (CPH2302): Main Exam, Mon 18th July, 2022 11.00am",
+ "title": "Community Health II: Main Exam, 18 July 2022",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health",
@@ -101,5 +101,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2022-07-18",
+ "dateLabel": "18 July 2022",
+ "programmes": [
+  "Certificate in Health Records and Information Technology"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "community-health-ii"
 }

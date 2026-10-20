@@ -1,6 +1,6 @@
 {
  "slug": "dph2103-community-health-ii-main-exam-2025-2026-3",
- "title": "Community Health II (DPH2103): Main Exam, Tue 31st March, 2026",
+ "title": "Community Health II: Main Exam, 31 March 2026",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health, Epidemiology and Biostatistics",
@@ -66,5 +66,13 @@
   }
  ],
  "complete": false,
- "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing.",
+ "dateISO": "2026-03-31",
+ "dateLabel": "31 March 2026",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "community-health-ii"
 }

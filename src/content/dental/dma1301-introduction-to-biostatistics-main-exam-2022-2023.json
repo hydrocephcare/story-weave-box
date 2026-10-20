@@ -1,6 +1,6 @@
 {
  "slug": "dma1301-introduction-to-biostatistics-main-exam-2022-2023",
- "title": "Introduction to Biostatistics (DMA1301): Main Exam, Wed 19th July, 2023 11.00am",
+ "title": "Introduction to Biostatistics: Main Exam, 19 July 2023",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health, Epidemiology & Biostatistics",
@@ -112,5 +112,14 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2023-07-19",
+ "dateLabel": "19 July 2023",
+ "programmes": [
+  "Diploma in Dental Technology",
+  "Diploma in Community Health"
+ ],
+ "categorySlug": "biostatistics-and-research",
+ "category": "Biostatistics and Research",
+ "unitSlug": "introduction-to-biostatistics"
 }

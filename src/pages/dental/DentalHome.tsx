@@ -3,20 +3,18 @@ import { useAuth } from "@/hooks/useAuth";
 import { setTrack } from "@/lib/courseTrack";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, FileText } from "lucide-react";
-import { PAPER_INDEX, paperPath } from "@/lib/dentalPapers";
+import { CATEGORY_LIST, PAPER_INDEX, paperPath } from "@/lib/dentalPapers";
 
 /** /dental: the home of the dental section. It is its own part of the site, with its own menu, pages and sitemap. */
 export default function DentalHome() {
   const { user } = useAuth();
   const navigate = useNavigate();
-  const units = new Map<string, number>();
-  for (const p of PAPER_INDEX) units.set(p.unitTitle, (units.get(p.unitTitle) ?? 0) + 1);
-  const recent = [...PAPER_INDEX].sort((a, b) => String(b.year).localeCompare(String(a.year))).slice(0, 6);
+  const recent = [...PAPER_INDEX].sort((a, b) => String(b.dateISO).localeCompare(String(a.dateISO))).slice(0, 6);
   return (
     <main className="mx-auto max-w-3xl px-4 pb-24 pt-10 sm:px-6 sm:pt-16">
       <Helmet>
         <title>Dental students: past papers and notes | Ompath Study</title>
-        <meta name="description" content="Ompath Study for dental students: Dental Sciences past papers typed out by unit and year, with notes, questions and answers on the way." />
+        <meta name="description" content="Ompath Study for dental students: Dental, oral health and community health past papers by subject, unit and year, set out question by question with model answers." />
         <link rel="canonical" href="https://www.ompathstudy.com/dental" />
       </Helmet>
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Ompath Study · Dental</p>
@@ -25,16 +23,19 @@ export default function DentalHome() {
       <div className="mt-6 flex flex-wrap gap-3">
         <Link to="/dental/papers" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground">Open past papers <ArrowRight className="h-4 w-4" /></Link>
       </div>
-      {units.size > 0 && (
-        <section className="mt-12" aria-label="Units">
-          <h2 className="font-serif text-xl font-bold">Units</h2>
-          <ul className="mt-1 divide-y divide-border border-y border-border">
-            {[...units.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([u, n]) => (
-              <li key={u}><Link to={`/dental/papers?q=${encodeURIComponent(u)}`} className="flex items-center justify-between py-3 text-[16px] font-semibold hover:text-primary"><span>{u}</span><span className="text-sm font-normal text-muted-foreground">{n} paper{n === 1 ? "" : "s"}</span></Link></li>
-            ))}
-          </ul>
-        </section>
-      )}
+      <section className="mt-12" aria-label="Subjects">
+        <h2 className="font-serif text-xl font-bold">Browse by subject</h2>
+        <div className="mt-3 space-y-8">
+          {CATEGORY_LIST.map((c) => (
+            <div key={c.slug}>
+              <div className="flex items-baseline justify-between gap-3"><h3 className="text-[15px] font-bold"><Link to={`/dental/category/${c.slug}`} className="hover:text-primary">{c.name}</Link></h3><span className="text-xs text-muted-foreground">{c.papers} papers</span></div>
+              <ul className="mt-1 divide-y divide-border border-y border-border">
+                {c.units.map((u) => <li key={u.slug}><Link to={`/dental/units/${u.slug}`} className="flex items-center justify-between py-3 text-[16px] font-semibold hover:text-primary"><span>{u.title}</span><span className="text-sm font-normal text-muted-foreground">{u.papers} paper{u.papers === 1 ? "" : "s"}</span></Link></li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
       {recent.length > 0 && (
         <section className="mt-12" aria-label="Latest papers">
           <h2 className="font-serif text-xl font-bold">Latest papers</h2>

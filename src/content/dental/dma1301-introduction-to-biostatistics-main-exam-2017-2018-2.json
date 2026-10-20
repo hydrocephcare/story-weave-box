@@ -1,6 +1,6 @@
 {
  "slug": "dma1301-introduction-to-biostatistics-main-exam-2017-2018-2",
- "title": "Introduction to Biostatistics (DMA1301): Main Exam, Wed 28th July, 2021 11.00am",
+ "title": "Introduction to Biostatistics: Main Exam, 28 July 2021",
  "university": "University Examinations 2020 / 2021",
  "school": "School of Pure and Applied Sciences",
  "department": "Department of Biological Sciences",
@@ -77,7 +77,7 @@
    "items": [
     {
      "t": "q",
-     "n": "1",
+     "n": "2",
      "text": "QUESTION ONE (continued)",
      "parts": [
       {
@@ -94,7 +94,7 @@
     },
     {
      "t": "q",
-     "n": "2",
+     "n": "3",
      "text": "QUESTION TWO",
      "parts": [
       {
@@ -114,5 +114,13 @@
   }
  ],
  "complete": false,
- "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing.",
+ "dateISO": "2021-07-28",
+ "dateLabel": "28 July 2021",
+ "programmes": [
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "biostatistics-and-research",
+ "category": "Biostatistics and Research",
+ "unitSlug": "introduction-to-biostatistics"
 }

@@ -1,6 +1,6 @@
 {
  "slug": "dds2111-human-physiology-iv-main-exam-2025-2026",
- "title": "Human Physiology IV (DDS2111/DMP2104): Main Exam, Thur 26th March, 2026 11.00am",
+ "title": "Human Physiology IV: Main Exam, 26 March 2026",
  "university": "Mount Kenya University",
  "school": "School of Clinical Medicine",
  "department": "Department of Clinical Sciences",
@@ -84,7 +84,7 @@
    "items": [
     {
      "t": "q",
-     "n": "1",
+     "n": "2",
      "text": "Discuss the physiology of body temperature regulation and the clinical consequences of abnormal temperature states. In your answer:",
      "parts": [
       {
@@ -99,7 +99,7 @@
     },
     {
      "t": "q",
-     "n": "2",
+     "n": "3",
      "text": "Explain the physiology of the visual and auditory systems. In your answer:",
      "parts": [
       {
@@ -114,7 +114,7 @@
     },
     {
      "t": "q",
-     "n": "3",
+     "n": "4",
      "text": "Describe the physiology of taste, smell, and oral sensation. In your answer:",
      "parts": [
       {
@@ -131,5 +131,14 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2026-03-26",
+ "dateLabel": "26 March 2026",
+ "programmes": [
+  "Diploma in Community Oral Health",
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "human-physiology-iv"
 }

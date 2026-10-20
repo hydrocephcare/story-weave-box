@@ -1,6 +1,6 @@
 {
  "slug": "dph2108-health-education-ii-main-exam-2018-2019",
- "title": "Health Education II (DPH2108): Main Exam, Tue 2nd April, 2019 11.00am",
+ "title": "Health Education II: Main Exam, 2 April 2019",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health",
@@ -71,5 +71,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2019-04-02",
+ "dateLabel": "2 April 2019",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "health-education-ii"
 }

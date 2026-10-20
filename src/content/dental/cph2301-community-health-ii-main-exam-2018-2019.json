@@ -1,6 +1,6 @@
 {
  "slug": "cph2301-community-health-ii-main-exam-2018-2019",
- "title": "Community Health II (CPH2301): Main Exam, Tuesday 20th November, 2018 2.00pm",
+ "title": "Community Health II: Main Exam, 20 November 2018",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Environmental Health",
@@ -110,5 +110,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2018-11-20",
+ "dateLabel": "20 November 2018",
+ "programmes": [
+  "Certificate in Health Records and Information Technology"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "community-health-ii"
 }

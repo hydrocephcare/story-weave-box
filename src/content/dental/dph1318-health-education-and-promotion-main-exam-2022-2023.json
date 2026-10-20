@@ -1,6 +1,6 @@
 {
  "slug": "dph1318-health-education-and-promotion-main-exam-2022-2023",
- "title": "Health Education and Promotion (DPH1318): Main Exam, Tue 25th July, 2023 2.00pm",
+ "title": "Health Education and Promotion: Main Exam, 25 July 2023",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health, Epidemiology & Biostatistics",
@@ -132,5 +132,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2023-07-25",
+ "dateLabel": "25 July 2023",
+ "programmes": [
+  "Diploma in Community Health"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "health-education-and-promotion"
 }

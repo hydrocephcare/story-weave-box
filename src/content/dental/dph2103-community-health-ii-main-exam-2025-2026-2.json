@@ -1,6 +1,6 @@
 {
  "slug": "dph2103-community-health-ii-main-exam-2025-2026-2",
- "title": "Community Health II (DPH2103): Main Exam, Mon 20th July, 2026 11.00am",
+ "title": "Community Health II: Main Exam, 20 July 2026",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Environmental Health and Health System Management",
@@ -82,5 +82,13 @@
    "footer": ""
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2026-07-20",
+ "dateLabel": "20 July 2026",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "community-health-ii"
 }

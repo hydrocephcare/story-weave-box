@@ -1,6 +1,6 @@
 {
  "slug": "dph2108-health-education-ii-main-exam-2026",
- "title": "Health Education II (DPH2108): Main Exam, Fri 27th March, 2026 11.00am",
+ "title": "Health Education II: Main Exam, 27 March 2026",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Nutrition and Dietetics",
@@ -99,5 +99,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2026-03-27",
+ "dateLabel": "27 March 2026",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "health-education-ii"
 }

@@ -1,6 +1,6 @@
 {
  "slug": "dfh2103-community-health-ii-main-exam-2018-2019",
- "title": "Community Health II (DFH2103): Main Exam, Fri 29th March, 2019 2.00pm",
+ "title": "Community Health II: Main Exam, 29 March 2019",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health",
@@ -90,5 +90,14 @@
   }
  ],
  "complete": false,
- "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing.",
+ "dateISO": "2019-03-29",
+ "dateLabel": "29 March 2019",
+ "programmes": [
+  "Diploma in Health Records and Information Technology",
+  "Certificate in Health Records and Information Technology"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "community-health-ii"
 }

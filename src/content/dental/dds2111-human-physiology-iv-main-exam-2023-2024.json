@@ -1,6 +1,6 @@
 {
  "slug": "dds2111-human-physiology-iv-main-exam-2023-2024",
- "title": "Human Physiology IV (DDS2111): Main Exam, Mon 15th July, 2024 11.00am",
+ "title": "Human Physiology IV: Main Exam, 15 July 2024",
  "university": "Mount Kenya University",
  "school": "Medical School",
  "department": "Department of Dental Sciences",
@@ -116,5 +116,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2024-07-15",
+ "dateLabel": "15 July 2024",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "human-physiology-iv"
 }

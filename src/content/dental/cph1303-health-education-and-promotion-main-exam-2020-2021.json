@@ -1,6 +1,6 @@
 {
  "slug": "cph1303-health-education-and-promotion-main-exam-2020-2021",
- "title": "Health Education and Promotion (CPH1303 & DPH1318): Main Exam, Thur 8th April 2021 8.00am",
+ "title": "Health Education and Promotion: Main Exam, 8 April 2021",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health",
@@ -105,5 +105,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2021-04-08",
+ "dateLabel": "8 April 2021",
+ "programmes": [
+  "Diploma in Community Health"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "health-education-and-promotion"
 }

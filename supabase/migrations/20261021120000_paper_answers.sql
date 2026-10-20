@@ -20,3 +20,19 @@ create or replace function public.paper_answer_miss(_slug text, _qkey text) retu
   update public.paper_answers set tries = tries + 1 where slug = _slug and qkey = _qkey and answer is null;
 $$;
 revoke all on function public.paper_answer_miss(text, text) from public, anon, authenticated;
+
+alter table public.paper_answers add column if not exists seen_at timestamptz;
+
+-- AI-written search snippets for each paper (description, keywords, topics), filled in by the same function
+create table if not exists public.paper_seo (
+  slug text primary key,
+  description text not null,
+  keywords text[] not null default '{}',
+  topics text[] not null default '{}',
+  tries int not null default 0,
+  updated_at timestamptz not null default now()
+);
+alter table public.paper_seo enable row level security;
+drop policy if exists "seo is public" on public.paper_seo;
+create policy "seo is public" on public.paper_seo for select using (true);
+grant select on public.paper_seo to anon, authenticated;

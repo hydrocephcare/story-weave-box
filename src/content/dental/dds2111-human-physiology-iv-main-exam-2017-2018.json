@@ -1,6 +1,6 @@
 {
  "slug": "dds2111-human-physiology-iv-main-exam-2017-2018",
- "title": "Human Physiology IV (DDS2111): Main Exam, November 2017",
+ "title": "Human Physiology IV: Main Exam, November 2017",
  "university": "Mount Kenya University",
  "school": "Medical School",
  "department": "Department of Dental Sciences",
@@ -114,5 +114,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2017-11",
+ "dateLabel": "November 2017",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "human-physiology-iv"
 }

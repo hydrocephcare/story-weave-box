@@ -110,6 +110,8 @@ const PharmQuiz = lazy(() => import("./pages/PharmQuiz"));
 const DentalHome = lazy(() => import("./pages/dental/DentalHome"));
 const DentalPapers = lazy(() => import("./pages/dental/DentalPapers"));
 const DentalPaperPage = lazy(() => import("./pages/dental/DentalPaperPage"));
+const DentalCategory = lazy(() => import("./pages/dental/DentalHub").then((m) => ({ default: m.DentalCategory })));
+const DentalUnit = lazy(() => import("./pages/dental/DentalHub").then((m) => ({ default: m.DentalUnit })));
 const MustKnows = lazy(() => import("./pages/MustKnows"));
 const DailyDose = lazy(() => import("./pages/DailyDose"));
 const Books = lazy(() => import("./pages/Books"));
@@ -261,6 +263,8 @@ const AnimatedRoutes = () => {
             <Route path="/dental" element={<DentalHome />} />
             <Route path="/dental/papers" element={<DentalPapers />} />
             <Route path="/dental/papers/:slug" element={<DentalPaperPage />} />
+            <Route path="/dental/category/:cat" element={<DentalCategory />} />
+            <Route path="/dental/units/:unit" element={<DentalUnit />} />
             <Route path="/pharmacology/quiz" element={<PharmQuiz />} />
             <Route path="/pharmacology" element={<Pharmacology />} />
             <Route path="/pharmacology/drug/:id" element={<Pharmacology />} />

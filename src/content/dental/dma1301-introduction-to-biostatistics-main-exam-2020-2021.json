@@ -1,6 +1,6 @@
 {
  "slug": "dma1301-introduction-to-biostatistics-main-exam-2020-2021",
- "title": "Introduction to Biostatistics (DMA1301): Main Exam, Thur 8th April 2021 2.00 Pm",
+ "title": "Introduction to Biostatistics: Main Exam, 8 April 2021",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health",
@@ -118,5 +118,14 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2021-04-08",
+ "dateLabel": "8 April 2021",
+ "programmes": [
+  "Diploma in Community Oral Health",
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "biostatistics-and-research",
+ "category": "Biostatistics and Research",
+ "unitSlug": "introduction-to-biostatistics"
 }

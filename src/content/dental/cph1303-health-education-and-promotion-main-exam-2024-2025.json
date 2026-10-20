@@ -1,6 +1,6 @@
 {
  "slug": "cph1303-health-education-and-promotion-main-exam-2024-2025",
- "title": "Health Education and Promotion (CPH1303): Main Exam, Mon 25th Nov, 2024 2.00pm",
+ "title": "Health Education and Promotion: Main Exam, 25 November 2024",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health, Epidemiology & Biostatistics",
@@ -92,5 +92,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2024-11-25",
+ "dateLabel": "25 November 2024",
+ "programmes": [
+  "Certificate in Community Health"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "health-education-and-promotion"
 }

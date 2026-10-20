@@ -1,6 +1,6 @@
 {
  "slug": "dds2107-oral-pathology-and-oral-medicine-i-main-exam-2025-2026",
- "title": "Oral Pathology and Oral Medicine I (DDS2107): Main Exam, Tue 14th July, 2026 11.00am",
+ "title": "Oral Pathology and Oral Medicine I: Main Exam, 14 July 2026",
  "university": "Mount Kenya University",
  "school": "Medical School",
  "department": "Department of Dental Sciences",
@@ -50,5 +50,13 @@
   }
  ],
  "complete": false,
- "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing.",
+ "dateISO": "2026-07-14",
+ "dateLabel": "14 July 2026",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "oral-pathology-and-oral-medicine-i"
 }

@@ -1,6 +1,6 @@
 {
  "slug": "dds2212-oral-biology-ii-main-exam-2024-2025",
- "title": "Oral Biology II (DDS2212): Main Exam, Wed 20th Nov, 2024 8.00am",
+ "title": "Oral Biology II: Main Exam, 20 November 2024",
  "university": "Mount Kenya University",
  "school": "Medical School",
  "department": "Department of Dental Sciences",
@@ -101,5 +101,13 @@
   }
  ],
  "complete": false,
- "note": "Missing pages after page 1"
+ "note": "Missing pages after page 1",
+ "dateISO": "2024-11-20",
+ "dateLabel": "20 November 2024",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "oral-biology-ii"
 }

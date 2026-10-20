@@ -1,6 +1,6 @@
 {
  "slug": "dma1301-introduction-to-biostatistics-main-exam-2018-2019",
- "title": "Introduction to Biostatistics (DMA1301): Main Exam, Fri 29th March, 2019 8.00am",
+ "title": "Introduction to Biostatistics: Main Exam, 29 March 2019",
  "university": "Mount Kenya University",
  "school": "School of Pure and Applied Sciences",
  "department": "Department of Physical and Mathematical Sciences",
@@ -79,7 +79,7 @@
     },
     {
      "t": "q",
-     "n": "4",
+     "n": "5",
      "text": "a) Compute quartile deviation from the following data; ci | 10-20 | 20-30 | 30-40 | 40-50 | 50-60 | 60-70 | 80-90 f | 12 | 19 | 5 | 10 | 9 | 6 | 6 (10 Marks)\nb) at an agricultural show 10 high bred bulls were ranked by a qualified judge and by a trainee judge their ranking were given as shown in the table below; Bulls | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 Qualifed Judge | 2 | 4 | 7 | 8 | 10 | 1 | 5 | 9 | 3 |  (missing entry) Trainee Judge | 1 | 3 | 9 | 10 | 7 | 2 | 4 | 8 | 5 | (missing entry) Calculate the spearman's rank Correlation coefficient. (10 Marks)"
     }
    ],
@@ -87,5 +87,15 @@
   }
  ],
  "complete": false,
- "note": "Duplicate QUESTION FOUR headings and inconsistent page numbering (pages 3‑5 all show footer \"Paper One\" with page 3). Possible missing or mis‑labelled content after page 5."
+ "note": "Duplicate QUESTION FOUR headings and inconsistent page numbering (pages 3‑5 all show footer \"Paper One\" with page 3). Possible missing or mis‑labelled content after page 5.",
+ "dateISO": "2019-03-29",
+ "dateLabel": "29 March 2019",
+ "programmes": [
+  "Diploma in Community Oral Health",
+  "Diploma in Community Health",
+  "Diploma in Animal Health"
+ ],
+ "categorySlug": "biostatistics-and-research",
+ "category": "Biostatistics and Research",
+ "unitSlug": "introduction-to-biostatistics"
 }

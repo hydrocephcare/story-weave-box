@@ -1,6 +1,6 @@
 {
  "slug": "dph1201-health-education-i-main-exam-2024-2025",
- "title": "Health Education I (DPH1201): Main Exam, Fri 4th March, 2025 8.00am",
+ "title": "Health Education I: Main Exam, 4 March 2025",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health, Epidemiology & Biostatistics",
@@ -131,5 +131,14 @@
    "footer": "Page"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2025-03-04",
+ "dateLabel": "4 March 2025",
+ "programmes": [
+  "Diploma in Community Oral Health",
+  "Diploma in Community Health"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "health-education-i"
 }

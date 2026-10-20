@@ -1,6 +1,6 @@
 {
  "slug": "dds1305-human-anatomy-iv-main-exam-2018-2019",
- "title": "Human Anatomy IV (DDS1305): Main Exam, Tue 27th November, 2018 11.00am",
+ "title": "Human Anatomy IV: Main Exam, 27 November 2018",
  "university": "Mount Kenya University",
  "school": "Medical School",
  "department": "Department of Dental Science",
@@ -77,5 +77,14 @@
   }
  ],
  "complete": false,
- "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing.",
+ "dateISO": "2018-11-27",
+ "dateLabel": "27 November 2018",
+ "programmes": [
+  "Diploma in Community Oral Health",
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "human-anatomy-iv"
 }

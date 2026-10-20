@@ -1,6 +1,6 @@
 {
  "slug": "dph2108-health-education-ii-main-exam-2022-2023",
- "title": "Health Education II (DPH2108): Main Exam, Mon 27th March, 2023 2.00pm",
+ "title": "Health Education II: Main Exam, 27 March 2023",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health, Epidemiology & Biostatistics",
@@ -61,5 +61,13 @@
   }
  ],
  "complete": false,
- "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing.",
+ "dateISO": "2023-03-27",
+ "dateLabel": "27 March 2023",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "health-education-ii"
 }

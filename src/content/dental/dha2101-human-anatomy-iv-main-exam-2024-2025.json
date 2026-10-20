@@ -1,6 +1,6 @@
 {
  "slug": "dha2101-human-anatomy-iv-main-exam-2024-2025",
- "title": "Human Anatomy IV (DHA2101): Main Exam, Tue 11th Nov, 2025 2.00pm",
+ "title": "Human Anatomy IV: Main Exam, 11 November 2025",
  "university": "Mount Kenya University",
  "school": "Medical School",
  "department": "Department of Dental Sciences",
@@ -71,5 +71,13 @@
   }
  ],
  "complete": false,
- "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing.",
+ "dateISO": "2025-11-11",
+ "dateLabel": "11 November 2025",
+ "programmes": [
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "human-anatomy-iv"
 }

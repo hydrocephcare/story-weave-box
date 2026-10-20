@@ -1,6 +1,6 @@
 {
  "slug": "dds2112-human-anatomy-iv-main-exam-2017-2018",
- "title": "Human Anatomy IV (DDS2112): Main Exam, Thur 2nd Aug, 2018",
+ "title": "Human Anatomy IV: Main Exam, 2 August 2018",
  "university": "Mount Kenya University",
  "school": "Medical School",
  "department": "Department of Dental Sciences",
@@ -94,5 +94,13 @@
   }
  ],
  "complete": false,
- "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing.",
+ "dateISO": "2018-08-02",
+ "dateLabel": "2 August 2018",
+ "programmes": [
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "human-anatomy-iv"
 }

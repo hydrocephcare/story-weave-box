@@ -1,6 +1,6 @@
 {
  "slug": "cph2301-community-health-ii-main-exam-2023-2024",
- "title": "Community Health II (CPH2301): Main Exam, Mon 25th March, 2024",
+ "title": "Community Health II: Main Exam, 25 March 2024",
  "university": "Mount Kenya University",
  "school": "Schools of Public Health",
  "department": "Department of Communal Health, Epidemiology and Biostatistics",
@@ -101,5 +101,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2024-03-25",
+ "dateLabel": "25 March 2024",
+ "programmes": [
+  "Certificate in Health Records and Information Technology"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "community-health-ii"
 }

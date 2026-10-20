@@ -1,6 +1,6 @@
 {
  "slug": "dds1305-human-anatomy-iv-main-exam-2017-2018",
- "title": "Human Anatomy IV (DDS1305): Main Exam, November 2017",
+ "title": "Human Anatomy IV: Main Exam, November 2017",
  "university": "Mount Kenya University",
  "school": "Medical School",
  "department": "Department of Dental Sciences",
@@ -138,5 +138,13 @@
    "footer": "Paper Two"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2017-11",
+ "dateLabel": "November 2017",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "human-anatomy-iv"
 }

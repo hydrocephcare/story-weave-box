@@ -1,6 +1,6 @@
 {
  "slug": "dph1318-health-education-and-promotion-main-exam-2025-2026",
- "title": "Health Education and Promotion (DPH1318): Main Exam, Wed 12th Nov, 2025 2.00pm",
+ "title": "Health Education and Promotion: Main Exam, 12 November 2025",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health and Biostatistics",
@@ -110,5 +110,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2025-11-12",
+ "dateLabel": "12 November 2025",
+ "programmes": [
+  "Diploma in Community Development"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "health-education-and-promotion"
 }

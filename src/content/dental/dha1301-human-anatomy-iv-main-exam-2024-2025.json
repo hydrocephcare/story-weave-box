@@ -1,6 +1,6 @@
 {
  "slug": "dha1301-human-anatomy-iv-main-exam-2024-2025",
- "title": "Human Anatomy IV (DHA1301): Main Exam, Mon 24th March, 2025 2.00pm",
+ "title": "Human Anatomy IV: Main Exam, 24 March 2025",
  "university": "Mount Kenya University",
  "school": "Medical School",
  "department": "Department of Dental Sciences",
@@ -104,5 +104,13 @@
   }
  ],
  "complete": false,
- "note": "Paper appears incomplete; after question 6 part b the paper ends abruptly."
+ "note": "Paper appears incomplete; after question 6 part b the paper ends abruptly.",
+ "dateISO": "2025-03-24",
+ "dateLabel": "24 March 2025",
+ "programmes": [
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "human-anatomy-iv"
 }

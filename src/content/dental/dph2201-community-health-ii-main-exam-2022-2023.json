@@ -1,6 +1,6 @@
 {
  "slug": "dph2201-community-health-ii-main-exam-2022-2023",
- "title": "Community Health II (DPH2201): Main Exam, Thur 20th July, 2023",
+ "title": "Community Health II: Main Exam, 20 July 2023",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health, Epidemiology & Biostatistics",
@@ -105,5 +105,13 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2023-07-20",
+ "dateLabel": "20 July 2023",
+ "programmes": [
+  "Diploma in Health Records and Information Technology"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "community-health-ii"
 }

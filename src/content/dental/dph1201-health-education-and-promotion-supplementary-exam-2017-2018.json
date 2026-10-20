@@ -1,6 +1,6 @@
 {
  "slug": "dph1201-health-education-and-promotion-supplementary-exam-2017-2018",
- "title": "Health Education and Promotion (DPH1201): Supplementary Exam, August, 2018",
+ "title": "Health Education and Promotion: Supplementary Exam, August 2018",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
  "department": "Department of Community Health",
@@ -100,5 +100,13 @@
    "footer": "Paper Two"
   }
  ],
- "complete": true
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Diploma in Community Health and HIV Management"
+ ],
+ "categorySlug": "community-and-public-health",
+ "category": "Community and Public Health",
+ "unitSlug": "health-education-and-promotion"
 }
