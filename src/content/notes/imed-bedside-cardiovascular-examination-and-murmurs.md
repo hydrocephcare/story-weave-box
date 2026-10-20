@@ -89,8 +89,6 @@ Because the **best listening point is not the same as the physical location of t
 
 ## 7. How to perform a basic cardiovascular examination
 
-![Heart anatomy showing chambers, valves and major vessels — Wikimedia Commons](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_1000/v1792483044/ompathstudy-clinical-skills-heart-anatomy.svg)
-
 
 Explain the examination, obtain consent, wash hands, position the patient at about 45 degrees, expose the chest appropriately while maintaining dignity, and ensure good lighting.
 
