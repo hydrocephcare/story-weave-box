@@ -490,7 +490,7 @@ body.no-copy img {
 .note-body .note-table th, .note-body .note-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid hsl(var(--border)); vertical-align: top; }
 .note-body .note-table tr:last-child td { border-bottom: 0; }
 
-/* Responsive Markdown tables: keep genuine table semantics at every screen size. */
+/* Responsive Markdown tables: preserve columns and keep the key column pinned while scrolling. */
 .note-body .note-table {
   display: block;
   width: 100%;
@@ -501,7 +501,7 @@ body.no-copy img {
   overscroll-behavior-x: contain;
   -webkit-overflow-scrolling: touch;
   border: 1px solid hsl(var(--border));
-  border-radius: 0.75rem;
+  border-radius: 0.8rem;
   background: hsl(var(--card));
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--muted-foreground) / 0.45) transparent;
@@ -512,18 +512,18 @@ body.no-copy img {
 }
 .note-body .note-table table {
   width: 100%;
-  min-width: 32rem;
+  min-width: 34rem;
+  table-layout: auto;
   border-collapse: separate;
   border-spacing: 0;
   font-size: 0.94rem;
   line-height: 1.55;
 }
-.note-body .note-table-compact table { min-width: 0; }
-.note-body .note-table-wide table { min-width: 42rem; width: max-content; }
+.note-body .note-table-wide table { min-width: 44rem; width: max-content; }
 .note-body .note-table th {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background: hsl(var(--muted));
   color: hsl(var(--foreground));
   text-align: left;
@@ -541,8 +541,25 @@ body.no-copy img {
 }
 .note-body .note-table th:last-child,
 .note-body .note-table td:last-child { border-right: 0; }
-.note-body .note-table tbody tr:nth-child(even) td { background: hsl(var(--muted) / 0.3); }
+/* Keep the row label visible as the reader moves across comparison columns. */
+.note-body .note-table th:first-child,
+.note-body .note-table td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  min-width: 8.5rem;
+  max-width: 13rem;
+  background: hsl(var(--card));
+  box-shadow: 3px 0 7px hsl(var(--foreground) / 0.08);
+}
+.note-body .note-table th:first-child {
+  z-index: 4;
+  background: hsl(var(--muted));
+}
+.note-body .note-table tbody tr:nth-child(even) td { background: hsl(var(--muted) / 0.28); }
+.note-body .note-table tbody tr:nth-child(even) td:first-child { background: hsl(var(--muted)); }
 .note-body .note-table tbody tr:hover td { background: hsl(var(--primary) / 0.06); }
+.note-body .note-table tbody tr:hover td:first-child { background: hsl(var(--muted)); }
 .note-body .note-table tr:last-child td { border-bottom: 0; }
 .note-body .note-table-hint {
   display: none;
@@ -555,12 +572,13 @@ body.no-copy img {
   line-height: 1.4;
 }
 @media (max-width: 640px) {
-  .note-body .note-table { margin: 0.9rem 0 1.2rem; border-radius: 0.65rem; }
-  .note-body .note-table table { font-size: 0.86rem; line-height: 1.5; }
+  .note-body .note-table { margin: 0.9rem 0 1.2rem; border-radius: 0.7rem; }
+  .note-body .note-table table { min-width: 34rem; font-size: 0.86rem; line-height: 1.5; }
+  .note-body .note-table-wide table { min-width: 42rem; width: max-content; }
   .note-body .note-table th,
-  .note-body .note-table td { padding: 0.65rem 0.7rem; }
-  .note-body .note-table-compact table { min-width: 100%; table-layout: auto; }
-  .note-body .note-table-wide table { min-width: 38rem; width: max-content; table-layout: auto; }
+  .note-body .note-table td { padding: 0.65rem 0.75rem; }
+  .note-body .note-table th:first-child,
+  .note-body .note-table td:first-child { min-width: 8rem; max-width: 10rem; }
   .note-body .note-table-hint { display: block; }
 }
 @media print {
