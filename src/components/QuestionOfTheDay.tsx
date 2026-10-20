@@ -20,14 +20,16 @@ export default function QuestionOfTheDay({ className = "" }: { className?: strin
     void (async () => {
       try {
         const day = Math.floor((Date.now() + 3 * 3_600_000) / 86_400_000);
-        const base = () => { let q = (supabase as any).from("mcq_sets").select("id,title,slug,questions", { count: "exact" }).eq("published", true).is("deleted_at", null).eq("source_type", "note_generated"); if (year) q = q.like("category", `Year ${year}:%`); return q; };
-        const head = await base().range(0, 0);
-        const n = Number(head.count || 0); if (!n) return;
+        let idq = (supabase as any).from("mcq_sets").select("id").eq("published", true).is("deleted_at", null).eq("source_type", "note_generated").order("id", { ascending: true }).limit(700);
+        if (year) idq = idq.like("category", `Year ${year}:%`);
+        const { data: ids } = await idq;
+        const list: { id: string }[] = ids ?? []; if (!list.length) return;
         // a few tries, so a bank with nothing suitable does not leave the home page without a question
-        for (let t = 0; t < 4; t++) {
-          const { data } = await base().range(((day * 31 + t * 7) % n), ((day * 31 + t * 7) % n));
-          const set = data?.[0]; if (!set || !Array.isArray(set.questions)) continue;
-          const ok: Q[] = (set.questions as Q[]).filter((x) => x?.question && Array.isArray(x.options) && x.options.length === 4 && Number.isInteger(x.correct_answer) && !/!\[|figure|image|shown/i.test(x.question) && !weakness(x).length);
+        for (let t = 0; t < 5; t++) {
+          const id = list[(day * 31 + t * 7) % list.length].id;
+          const { data } = await (supabase as any).from("mcq_sets").select("id,title,slug,questions").eq("id", id).maybeSingle();
+          const set = data; if (!set || !Array.isArray(set.questions)) continue;
+          const ok: Q[] = (set.questions as Q[]).filter((x) => x?.question && Array.isArray(x.options) && x.options.length === 4 && Number.isInteger(x.correct_answer) && !/!\[|figure|image|shown/i.test(x.question) && !weakness(x).filter((w: string) => w !== "recall").length);
           if (ok.length) { const q = ok[(day * 13) % ok.length]; if (on) setPick({ q, path: buildMcqPath(set), title: String(set.title).replace(/:?\s*MCQs?$/i, "") }); return; }
         }
       } catch { /* the home page does without it */ }
