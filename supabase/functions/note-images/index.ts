@@ -40,7 +40,7 @@ async function commons(query: string): Promise<Pic[]> {
 
 /** The lead picture of the Wikipedia article that is exactly about the subject, only when it is a free picture held on Commons. */
 async function wikiLead(subject: string, keys: string[]): Promise<{ url: string; title: string; caption: string } | null> {
-  const q = subject.replace(/[^A-Za-z0-9 ]/g, " ").replace(/s+/g, " ").trim();
+  const q = subject.replace(/[^A-Za-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
   if (!q) return null;
   const p = new URLSearchParams({ action: "query", format: "json", generator: "search", gsrsearch: q, gsrlimit: "4", prop: "pageimages|pageterms", piprop: "thumbnail", pithumbsize: "900", wbptterms: "description" });
   const r = await fetch(`https://en.wikipedia.org/w/api.php?${p}`, { headers: { "User-Agent": "OmpathStudy/1.0 (https://www.ompathstudy.com)" } });
@@ -49,13 +49,12 @@ async function wikiLead(subject: string, keys: string[]): Promise<{ url: string;
   for (const pg of pages) {
     const title = String(pg.title || "");
     const url: string = String(pg.thumbnail?.source || "").replace("https://thumb.wikimedia.org", "https://upload.wikimedia.org").split("?")[0];
-    if (!url || !//wikipedia/commons//.test(url) || /[()s]]/.test(url) || BAD.test(url)) continue;
+    if (!url || !/\/wikipedia\/commons\//.test(url) || /[()\s\]]/.test(url) || BAD.test(url)) continue;
     const t = title.toLowerCase();
     if (!keys.length || !keys.every((k) => t.includes(k))) continue;
     const desc = String(pg.terms?.description?.[0] || "");
     if (!/disease|disorder|syndrome|condition|medical|anatom|organ|bone|muscle|artery|vein|nerve|gland|cell|tissue|infection|cancer|tumou?r|drug|medication|procedure|test|symptom|sign|hormone|virus|bacteri|parasite|vitamin|protein|enzyme|growth|development/i.test(desc)) continue;
-    return { url, title, caption: `${title} · Image from the Wikipedia article, Wikimedia Commons`.replace(/[[]()
-]/g, " ") };
+    return { url, title, caption: `${title} · Image from the Wikipedia article, Wikimedia Commons`.replace(/[\[\]()\n]/g, " ") };
   }
   return null;
 }
