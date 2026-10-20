@@ -7,7 +7,7 @@ import DentalCards, { type DentalCard } from "@/components/dental/DentalCards";
 import { PAPER_INDEX, paperPath } from "@/lib/dentalPapers";
 import { DONE, SAVED, getList, setRatings, getRatings, studyStats, type Rating } from "@/lib/dentalStore";
 
-const show = (q: string) => q.replace(/\n?ANSWER THIS PART ONLY:\s*/g, " ").replace(/^Question \d*:\s*/, "").replace(/\s+/g, " ").trim();
+const show = (q: string) => q.replace(/\n?ANSWER THIS PART ONLY:\s*/g, " ").replace(/^Question \d*:\s*/, "").replace(/\(see the part\)\s*/g, "").replace(/\s+/g, " ").trim();
 const title = (slug: string) => { const p = PAPER_INDEX.find((x) => x.slug === slug); return p ? `${p.unitTitle} · ${p.date}` : slug; };
 
 /** What a returning student sees on the dental home: today's question, their progress, saved papers, the questions they missed, and the topics across all papers. */

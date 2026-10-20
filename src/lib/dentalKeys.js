@@ -15,6 +15,6 @@ export function answerUnits(q) {
   if (!q.parts?.length) return [{ key: hash(norm(stem)), label: "", marks: q.marks || null, prompt: `${q.n ? q.n + ". " : ""}${stem}` }];
   return q.parts.map((p) => ({
     key: hash(norm(stem + (p.l || "") + p.text)), label: p.l || "", marks: (p.marks || 0) + sumMarks(p.parts) || null,
-    prompt: `Question ${q.n || ""}: ${stem || "(see the part)"}\nANSWER THIS PART ONLY: ${p.l ? p.l + ") " : ""}${p.text}${p.marks ? ` (${p.marks} marks)` : ""}${p.parts?.length ? "\n" + lines(p.parts) : ""}`,
+    prompt: `Question ${q.n || ""}: ${stem}\nANSWER THIS PART ONLY: ${p.l ? p.l + ") " : ""}${p.text}${p.marks ? ` (${p.marks} marks)` : ""}${p.parts?.length ? "\n" + lines(p.parts) : ""}`,
   }));
 }

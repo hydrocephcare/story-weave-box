@@ -20,7 +20,8 @@ const tool = "inline-flex items-center gap-1.5 font-bold text-muted-foreground h
 
 const plain = (md: string) => md.replace(/\*\*/g, "").replace(/^\s*[-•*]\s+/gm, "").replace(/\s*\n\s*/g, ". ").replace(/\.\.+/g, ".").trim();
 const marksLabel = (m?: number | null) => (m ? <span className="shrink-0 text-sm font-semibold text-muted-foreground">{m} mark{m === 1 ? "" : "s"}</span> : null);
-const clock = (s: number) => `${Math.floor(s / 3600)}:${String(Math.floor((s % 3600) / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
+const clip = (t: string, n = 90) => (t.length <= n ? t : `${t.slice(0, n).replace(/\s+\S*$/, "")}…`);
+const clock =(s: number) => `${Math.floor(s / 3600)}:${String(Math.floor((s % 3600) / 60)).padStart(2, "0")}:${String(s % 60).padStart(2, "0")}`;
 const seconds = (duration: string) => { const m = /(\d+(?:\.\d+)?)\s*h/i.exec(duration || ""); return Math.round((m ? Number(m[1]) : 2) * 3600); };
 
 function SubParts({ parts }: { parts?: PaperPart[] }) {
@@ -197,7 +198,7 @@ export default function DentalPaperPage() {
             : <span className={`inline-flex items-center gap-1.5 font-bold ${left === 0 ? "text-rose-600" : "text-foreground"}`}><Timer className="h-4 w-4" aria-hidden />{left === 0 ? "Time is up" : clock(left)}<button type="button" onClick={() => setLeft(null)} className="ml-1 text-xs font-bold text-muted-foreground hover:text-foreground">stop</button></span>)}
           {test && rated.length > 0 && <span className="text-muted-foreground">Self-check: {rated.filter((r) => r === "got").length} got it · {rated.filter((r) => r === "missed").length} missed</span>}
         </div>
-        {nav.length > 3 && <nav aria-label="In this paper" className="mt-6"><p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">In this paper</p><ol className="mt-2 space-y-1 text-[15px]">{nav.map((it, k) => <li key={k}><a href={`#${it.id ?? `q${it.n}`}`} className="text-muted-foreground hover:text-primary"><span className="mr-2 font-bold text-primary">{it.n}.</span>{(it.text || it.parts?.[0]?.text || "").slice(0, 90)}</a></li>)}</ol></nav>}
+        {nav.length > 3 && <nav aria-label="In this paper" className="mt-6"><p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">In this paper</p><ol className="mt-2 space-y-1 text-[15px]">{nav.map((it, k) => <li key={k}><a href={`#${it.id ?? `q${it.n}`}`} className="text-muted-foreground hover:text-primary"><span className="mr-2 font-bold text-primary">{it.n}.</span>{clip(it.text || it.parts?.[0]?.text || "")}</a></li>)}</ol></nav>}
 
         <div style={{ zoom }}>
           <ul className="mt-2">{items.map((it, i) => it.t === "h" ? <h2 key={i} className="mt-10 border-b border-border pb-1 text-[13px] font-bold uppercase tracking-[0.12em] text-primary">{it.text}{it.marks ? ` · ${it.marks} marks` : ""}</h2> : it.t === "p" ? <p key={i} className="mt-3 text-[15px] italic text-muted-foreground">{it.text}</p> : QuestionRow(it, i))}</ul>

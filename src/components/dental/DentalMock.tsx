@@ -5,7 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import DentalAnswer from "@/components/dental/DentalAnswer";
 
 interface Row { question: string; answer: string; marks: number | null }
-const show = (q: string) => q.replace(/\n?ANSWER THIS PART ONLY:\s*/g, " ").replace(/^Question \d*:\s*/, "").replace(/\s+/g, " ").trim();
+const show = (q: string) => q.replace(/\n?ANSWER THIS PART ONLY:\s*/g, " ").replace(/^Question \d*:\s*/, "").replace(/\(see the part\)\s*/g, "").replace(/\s+/g, " ").trim();
 const pick = <T,>(a: T[], n: number) => [...a].sort(() => Math.random() - 0.5).slice(0, n);
 
 /** A mock exam for a unit: questions drawn at random from all of its past papers, answers hidden until you tap. Only questions that already have a model answer are drawn. */
