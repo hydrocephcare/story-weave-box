@@ -25,25 +25,29 @@
      "t": "q",
      "n": "1",
      "text": "The condition characterised by unilateral enlargement of one side of the face due to overgrowth of hard and soft tissues is called:",
-     "marks": 1
+     "marks": 1,
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
      "text": "A small mandible is referred to as:",
-     "marks": 1
+     "marks": 1,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "The congenital anomaly characterised by the absence of the clavicles and delayed closure of the fontanelles is:",
-     "marks": 1
+     "marks": 1,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "The visible yellow spots on the buccal mucosa near the commissures that represent ectopic sebaceous glands are called:",
-     "marks": 1
+     "marks": 1,
+     "id": "q4"
     }
    ],
    "footer": "Paper One"

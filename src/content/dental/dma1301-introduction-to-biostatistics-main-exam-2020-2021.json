@@ -37,25 +37,29 @@
        "text": "Nominal",
        "marks": 2
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Explain how ungroup data can be presented",
-     "marks": 5
+     "text": "Explain how ungrouped data can be presented",
+     "marks": 5,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "State two methods of data collection",
-     "marks": 5
+     "marks": 5,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "Explain two types of hypothesis",
-     "marks": 5
+     "marks": 5,
+     "id": "q4"
     },
     {
      "t": "q",
@@ -72,19 +76,22 @@
        "text": "the sample standard deviation",
        "marks": 2.5
       }
-     ]
+     ],
+     "id": "q5"
     },
     {
      "t": "q",
      "n": "6",
      "text": "Explain two types of sampling data",
-     "marks": 5
+     "marks": 5,
+     "id": "q6"
     },
     {
      "t": "q",
      "n": "7",
      "text": "Describe measures of dispersion",
-     "marks": 5
+     "marks": 5,
+     "id": "q7"
     }
    ],
    "footer": "Paper One"
@@ -94,25 +101,28 @@
    "items": [
     {
      "t": "h",
-     "text": "SECTION"
+     "text": "SECTION B"
     },
     {
      "t": "q",
      "n": "1",
      "text": "Discuss two methods of data sampling",
-     "marks": 15
+     "marks": 15,
+     "id": "s1-q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Critic on five measures of central tendency",
-     "marks": 15
+     "text": "Critique five measures of central tendency",
+     "marks": 15,
+     "id": "s1-q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Discuss various methods of presenting data",
-     "marks": 15
+     "marks": 15,
+     "id": "s1-q3"
     }
    ],
    "footer": "Paper One"

@@ -3,7 +3,7 @@
  "title": "Health Education and Promotion: Main Exam, 25 July 2023",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
- "department": "Department of Community Health, Epidemiology & Biostatistics",
+ "department": "Department of Community Health, Epidemiology and Biostatistics",
  "programme": "Diploma in Community Health",
  "examTitle": "University Examination 2022 / 2023",
  "unitCode": "DPH1318",
@@ -52,31 +52,36 @@
        "l": "e",
        "text": "Disease"
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
      "text": "Identify FIVE key principles of health promotion according to the Ottawa Charter of 1986.",
-     "marks": 5
+     "marks": 5,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Highlight FIVE conditions that should be met for physical health to be said to exist.",
-     "marks": 5
+     "marks": 5,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "Describe the two approaches applied to health education.",
-     "marks": 5
+     "marks": 5,
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
      "text": "Describe the targets for health education programmes and activities.",
-     "marks": 5
+     "marks": 5,
+     "id": "q5"
     }
    ],
    "footer": "Paper One"
@@ -114,19 +119,22 @@
        "l": "e",
        "text": "To reorient health services."
       }
-     ]
+     ],
+     "id": "q6"
     },
     {
      "t": "q",
      "n": "7",
      "text": "Explain in details the components involved in the communication process.",
-     "marks": 15
+     "marks": 15,
+     "id": "q7"
     },
     {
      "t": "q",
      "n": "8",
      "text": "Explain the phrase Information, Education and Communication (IEC) as applied in Health education activities.",
-     "marks": 10
+     "marks": 10,
+     "id": "q8"
     }
    ],
    "footer": "Paper One"

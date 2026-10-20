@@ -62,7 +62,7 @@
       },
       {
        "l": "e",
-       "text": "State three terms use for communication and health education activities."
+       "text": "State three terms used for communication and health education activities."
       },
       {
        "l": "f",
@@ -72,7 +72,8 @@
        "l": "g",
        "text": "Outline six fundamental conditions and resources needed for good health."
       }
-     ]
+     ],
+     "id": "q1"
     }
    ],
    "footer": "Paper One"
@@ -88,17 +89,20 @@
     {
      "t": "q",
      "n": "2",
-     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion."
+     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion.",
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Discuss Components of communication."
+     "text": "Discuss Components of communication.",
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
-     "text": "Discuss the principles of health education."
+     "text": "Discuss the principles of health education.",
+     "id": "q4"
     }
    ],
    "footer": "Paper One"

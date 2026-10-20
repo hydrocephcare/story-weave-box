@@ -51,15 +51,72 @@ export function normalisePaper(p) {
   // "(5 Marks)" typed at the end of a question belongs in the marks, not in the wording
   const stripMarks = (o) => { const m = String(o.text || "").match(/\s*\(\s*(\d+(?:\.\d+)?)\s*marks?\s*\)\s*\.?\s*$/i); if (m) { o.text = o.text.slice(0, m.index).trim(); if (o.marks == null) o.marks = Number(m[1]); } for (const c of o.parts || []) stripMarks(c); };
   for (const it of p.pages.flatMap((pg) => pg.items)) if (it.t === "q") stripMarks(it);
-  // question numbers must run on within a section (the scan sometimes repeats or restarts them)
-  let last = null;
-  for (const it of p.pages.flatMap((pg) => pg.items)) {
-    if (it.t === "h") { last = null; continue; }
-    if (it.t !== "q") continue;
-    const n = parseInt(it.n, 10);
-    if (!Number.isFinite(n) || (last !== null && n <= last)) it.n = String(last === null ? 1 : last + 1);
-    last = parseInt(it.n, 10);
+  // ---- typos left by the scanner (exact wording only; safe to run again) ----
+  const FIXES = [
+    ["State three terms use for", "State three terms used for"], ["Identified priorities for health promotion", "Identify priorities for health promotion"],
+    ["Just five High Risk Mothers in Maternal child health", "List five high-risk mothers in maternal child health"], ["of a child*", "of a child."],
+    ["blastocyte", "blastocyst"], ["Embryo blast", "Embryoblast"], ["factors that affects the general immunity", "factors that affect the general immunity"],
+    ["other factors affects the general immunity", "other factors affect the general immunity"], ["ungroup data", "ungrouped data"], ["Critic on five", "Critique five"],
+    ["Discuss types use in probability", "Discuss types used in probability"], ["in Kenya the Kenyan constitution", "in Kenya under the Kenyan constitution"],
+    ["As an [illegible]miologist", "As an epidemiologist"], ["control rodents a village community", "control rodents in a village community"], ["Heath belief model", "Health belief model"],
+    ["difference between the statistics and research", "difference between statistics and research"], ["The A random sample", "A random sample"], ["Qualifed Judge", "Qualified Judge"],
+    ["distributed with M and a standard deviation Ω", "distributed with mean μ and standard deviation σ"], ["(missing entry)", "[not readable in the scan]"], ["conditions/ diseases", "conditions/diseases"],
+    ["Opinion leaders plays", "Opinion leaders play"], ["Problem solving techniques is used tackle", "Problem-solving techniques are used to tackle"], ["how to be in credible", "how to be credible"],
+    ["(SECTION 40) ANSWER ALL QUESTION", "(40 MARKS) ANSWER ALL QUESTIONS"], ["Describe the Differences between", "Describe the differences between"],
+  ];
+  const fix = (t) => { let x = String(t ?? ""); for (const [from, to] of FIXES) x = x.split(from).join(to); return x; };
+  const WORDS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8 };
+  const norm = (t) => String(t || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const sig = (it) => norm(it.text) + (it.parts || []).map((x) => norm(x.text) + (x.parts || []).map((y) => norm(y.text)).join("")).join("");
+  const walk = (o, fn) => { fn(o); for (const c of o.parts || []) walk(c, fn); };
+  for (const pg of p.pages) for (const it of pg.items) { walk(it, (o) => { o.text = fix(o.text); }); if (it.t === "h") { const h = it.text.trim().toUpperCase(); if (h === "SECTION" || h === "SECTION 1") it.text = "SECTION B"; } }
+
+  // ---- structure: work on one flat list of items, then put it back on the pages ----
+  let flat = p.pages.flatMap((pg) => pg.items.map((it) => ({ it, pg })));
+  // a section heading that appears twice means the same page was read twice: keep the later block
+  { const seen = new Map(); flat.forEach(({ it }, i) => { if (it.t === "h") { const k = norm(it.text); if (seen.has(k)) { const from = seen.get(k); let to = i; flat = flat.filter((_, j) => j < from || j >= to); return; } seen.set(k, i); } }); }
+  // identical questions (the same page read twice)
+  { const seen = new Set(); flat = flat.filter(({ it }) => { if (it.t !== "q") return true; const k = sig(it); if (!k || !seen.has(k)) { seen.add(k); return true; } return false; }); }
+  // "QUESTION ONE (continued)": its parts belong to the question before it
+  for (let i = flat.length - 1; i > 0; i--) { const it = flat[i].it; if (it.t === "q" && /^QUESTION \w+ \(continued\)/i.test(it.text || "")) { const prev = flat.slice(0, i).reverse().find((x) => x.it.t === "q"); if (prev) { prev.it.parts = [...(prev.it.parts || []), ...(it.parts || [])]; flat.splice(i, 1); } } }
+  // "QUESTION TWO" as the wording of a question is just its number
+  for (const { it } of flat) if (it.t === "q") { const m = /^QUESTION (\w+)$/i.exec(it.text || ""); if (m) { if (WORDS[m[1].toLowerCase()]) it.n = String(WORDS[m[1].toLowerCase()]); it.text = ""; } }
+  // consecutive questions with the same opening wording are one question with parts
+  for (let i = flat.length - 1; i > 0; i--) { const a2 = flat[i - 1].it, b2 = flat[i].it; if (a2.t === "q" && b2.t === "q" && a2.text && a2.text === b2.text && a2.parts?.length && b2.parts?.length) { a2.parts = [...a2.parts, ...b2.parts]; flat.splice(i, 1); } }
+  // "Determine;" on its own after a question that set the data belongs to that question
+  for (let i = flat.length - 1; i > 0; i--) { const b2 = flat[i].it, a2 = flat[i - 1].it; if (b2.t === "q" && a2.t === "q" && /^(determine|calculate|find)\s*[;:.]?$/i.test(b2.text || "") && !a2.parts?.length && b2.parts?.length) { a2.parts = [{ l: "", text: b2.text.trim(), parts: b2.parts }]; flat.splice(i, 1); } }
+  // lettered parts typed into one block of text: split them out
+  for (const { it } of flat) if (it.t === "q" && !it.parts?.length && /\n\s*[a-z]\)\s/.test(it.text || "")) {
+    const segs = it.text.split(/\n(?=\s*[a-z]\)\s)/).map((x) => x.trim()).filter(Boolean);
+    const lettered = segs.map((x) => /^([a-z])\)\s*([\s\S]*)$/.exec(x));
+    const stem = lettered[0] ? "" : segs.shift();
+    const parts = (lettered[0] ? segs : segs).map((x) => { const m = /^([a-z])\)\s*([\s\S]*)$/.exec(x); return m ? { l: m[1], text: m[2].trim() } : { l: "", text: x }; });
+    if (parts.length > 1) { it.text = stem; it.parts = parts; stripMarks(it); }
   }
+  // parts labelled "a i", "a ii": sub-parts of a
+  for (const { it } of flat) if (it.t === "q" && it.parts?.some((x) => /^[a-z] [ivx]+$/.test(x.l || ""))) {
+    const out = [];
+    for (const x of it.parts) { const m = /^([a-z]) ([ivx]+)$/.exec(x.l || ""); if (!m) { out.push(x); continue; } let g = out.find((y) => y.l === m[1] && y._g); if (!g) { g = { l: m[1], text: "", parts: [], _g: true }; out.push(g); } g.parts.push({ ...x, l: m[2] }); }
+    it.parts = out.map((x) => { const { _g, ...rest } = x; return rest; });
+  }
+  // roman numerals (i, ii, iii...) typed straight after a lettered part are that part's sub-parts
+  for (const { it } of flat) if (it.t === "q" && it.parts?.length > 2) {
+    const ps = it.parts; const out = []; let i = 0;
+    while (i < ps.length) {
+      const x = ps[i];
+      if (x.l === "i" && ps[i + 1]?.l === "ii" && out.length && !out[out.length - 1].parts?.length) { const host = out[out.length - 1]; host.parts = []; while (i < ps.length && /^(i|ii|iii|iv|v|vi|vii|viii)$/.test(ps[i].l || "")) host.parts.push(ps[i++]); continue; }
+      out.push(x); i++;
+    }
+    it.parts = out;
+  }
+  // a section that ends up with no questions loses its heading
+  flat = flat.filter(({ it }, i) => { if (it.t !== "h") return true; const nx = flat[i + 1]; return nx && nx.it.t !== "h"; });
+  // numbering runs on within a section (the printed number of the first question is kept); ids are unique inside the paper
+  { let last = null; for (const { it } of flat) { if (it.t === "h") { last = null; continue; } if (it.t !== "q") continue; const n = parseInt(it.n, 10); it.n = String(last === null ? (Number.isFinite(n) ? n : 1) : last + 1); last = parseInt(it.n, 10); } }
+  { const used = new Set(); let sec = 0; for (const { it } of flat) { if (it.t === "h") { sec++; continue; } if (it.t !== "q") continue; let id = "q" + it.n; if (used.has(id)) id = "s" + sec + "-q" + it.n; used.add(id); it.id = id; } }
+  for (const pg of p.pages) pg.items = flat.filter((x) => x.pg === pg).map((x) => x.it);
+  // department names written several ways on the scans
+  p.department = String(p.department || "").replace(/Communal/g, "Community").replace(/ & /g, " and ").replace(/^Department Community/, "Department of Community").replace(/Dental Science$/, "Dental Sciences").replace(/Community Health Epidemiology/, "Community Health, Epidemiology");
   return p;
 }
 

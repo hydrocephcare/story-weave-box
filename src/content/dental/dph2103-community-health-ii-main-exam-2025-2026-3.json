@@ -29,37 +29,44 @@
     {
      "t": "q",
      "n": "1",
-     "text": "Define professionalism in community health practice and state FOUR characteristics of a professional health worker."
+     "text": "Define professionalism in community health practice and state FOUR characteristics of a professional health worker.",
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Define Primary Health Care (PHC) and state FOUR key features of PHC."
+     "text": "Define Primary Health Care (PHC) and state FOUR key features of PHC.",
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "State FIVE principles of Primary Health Care."
+     "text": "State FIVE principles of Primary Health Care.",
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
-     "text": "List FIVE strategies used in the implementation of Primary Health Care programmes."
+     "text": "List FIVE strategies used in the implementation of Primary Health Care programmes.",
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
-     "text": "State FIVE roles of the community in the implementation of Primary Health Care programmes."
+     "text": "State FIVE roles of the community in the implementation of Primary Health Care programmes.",
+     "id": "q5"
     },
     {
      "t": "q",
      "n": "6",
-     "text": "Identify FIVE major determinants of health that influence the health status of a community."
+     "text": "Identify FIVE major determinants of health that influence the health status of a community.",
+     "id": "q6"
     },
     {
      "t": "q",
      "n": "7",
-     "text": "State FIVE roles of a Health Records and Information Officer in Primary Health Care programmes."
+     "text": "State FIVE roles of a Health Records and Information Officer in Primary Health Care programmes.",
+     "id": "q7"
     }
    ],
    "footer": "Paper One"

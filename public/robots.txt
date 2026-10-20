@@ -6,6 +6,12 @@ Disallow: /contests/*/lobby
 Disallow: /contests/*/round/
 Disallow: /contests/*/progress
 Disallow: /contests/*/certificate/
+# filtered or tool views of a page that already has its own canonical address: no need to crawl them (Search Console: Alternate page with proper canonical tag)
+Disallow: /*?file=
+Disallow: /*&file=
+Disallow: /*?write=
+Disallow: /*?tab=
+Disallow: /*?trim=
 
 Sitemap: https://www.ompathstudy.com/sitemap.xml
 Sitemap: https://www.ompathstudy.com/library-sitemap.xml

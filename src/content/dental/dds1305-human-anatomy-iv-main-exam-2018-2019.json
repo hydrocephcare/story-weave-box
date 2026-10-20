@@ -3,7 +3,7 @@
  "title": "Human Anatomy IV: Main Exam, 27 November 2018",
  "university": "Mount Kenya University",
  "school": "Medical School",
- "department": "Department of Dental Science",
+ "department": "Department of Dental Sciences",
  "programme": "Ddt / Dcoh",
  "examTitle": "University Examination 2018 / 2019",
  "unitCode": "DDS1305",
@@ -30,37 +30,43 @@
      "t": "q",
      "n": "1",
      "text": "Write notes on principles of child development.",
-     "marks": 10
+     "marks": 10,
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Explain the changes after birth of a child*",
-     "marks": 5
+     "text": "Explain the changes after birth of a child.",
+     "marks": 5,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Outline functions of amniotic fluid.",
-     "marks": 5
+     "marks": 5,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "State abnormalities of umbilical cord",
-     "marks": 3
+     "marks": 3,
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
      "text": "Name two types of cell division.",
-     "marks": 2
+     "marks": 2,
+     "id": "q5"
     },
     {
      "t": "q",
      "n": "6",
      "text": "Give stages of tooth development.",
-     "marks": 5
+     "marks": 5,
+     "id": "q6"
     },
     {
      "t": "h",
@@ -70,7 +76,8 @@
     {
      "t": "q",
      "n": "7",
-     "text": "Explain the functions of placenta."
+     "text": "Explain the functions of placenta.",
+     "id": "q7"
     }
    ],
    "footer": "Paper One"

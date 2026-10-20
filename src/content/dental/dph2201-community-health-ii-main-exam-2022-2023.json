@@ -3,7 +3,7 @@
  "title": "Community Health II: Main Exam, 20 July 2023",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
- "department": "Department of Community Health, Epidemiology & Biostatistics",
+ "department": "Department of Community Health, Epidemiology and Biostatistics",
  "programme": "Diploma in Health Records and Information Technology",
  "examTitle": "University Examination 2022 / 2023",
  "unitCode": "DPH2201",
@@ -43,37 +43,44 @@
        "l": "c",
        "text": "Primary health care"
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Explain the infection prevention and control principles (ipc)."
+     "text": "Explain the infection prevention and control principles (ipc).",
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Describe the ozone depletion process and anticipated consequences."
+     "text": "Describe the ozone depletion process and anticipated consequences.",
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
-     "text": "Elaborate on any three events following immunization."
+     "text": "Elaborate on any three events following immunization.",
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
-     "text": "Describe three reasons for studying community health."
+     "text": "Describe three reasons for studying community health.",
+     "id": "q5"
     },
     {
      "t": "q",
      "n": "6",
-     "text": "Name four challenges faced during implementation of community health program"
+     "text": "Name four challenges faced during implementation of community health program",
+     "id": "q6"
     },
     {
      "t": "q",
      "n": "7",
-     "text": "Explain any three types of vaccines used in Kenya with relevant examples."
+     "text": "Explain any three types of vaccines used in Kenya with relevant examples.",
+     "id": "q7"
     }
    ],
    "footer": "Paper One"
@@ -89,17 +96,20 @@
     {
      "t": "q",
      "n": "8",
-     "text": "Discuss on the steps applied when investigating disease outbreak."
+     "text": "Discuss on the steps applied when investigating disease outbreak.",
+     "id": "q8"
     },
     {
      "t": "q",
      "n": "9",
-     "text": "Discuss any five determinants of health."
+     "text": "Discuss any five determinants of health.",
+     "id": "q9"
     },
     {
      "t": "q",
      "n": "10",
-     "text": "Discuss any five principles of primary health care."
+     "text": "Discuss any five principles of primary health care.",
+     "id": "q10"
     }
    ],
    "footer": "Paper One"

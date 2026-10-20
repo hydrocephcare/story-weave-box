@@ -30,31 +30,36 @@
      "t": "q",
      "n": "1",
      "text": "Outline the roles of melanin and keratin in the skin.",
-     "marks": 6
+     "marks": 6,
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
      "text": "State the structural organization of the skin, naming its major layers and one function of each.",
-     "marks": 6
+     "marks": 6,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Outline six functions of the skin that contribute to maintaining normal body physiology.",
-     "marks": 6
+     "marks": 6,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "State six differences between normal body temperature and fever in terms of physiological regulation.",
-     "marks": 6
+     "marks": 6,
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
      "text": "Identify six types of general sensory receptors and state the stimulus detected by each.",
-     "marks": 6
+     "marks": 6,
+     "id": "q5"
     },
     {
      "t": "h",
@@ -73,8 +78,17 @@
       {
        "l": "a",
        "text": "Explain how heat is produced in the human body."
+      },
+      {
+       "l": "b",
+       "text": "Describe the mechanisms by which heat is lost."
+      },
+      {
+       "l": "c",
+       "text": "Discuss the clinical consequences of fever, hypothermia, and hyperthermia"
       }
-     ]
+     ],
+     "id": "s2-q1"
     }
    ],
    "footer": "Paper One"
@@ -85,21 +99,6 @@
     {
      "t": "q",
      "n": "2",
-     "text": "Discuss the physiology of body temperature regulation and the clinical consequences of abnormal temperature states. In your answer:",
-     "parts": [
-      {
-       "l": "b",
-       "text": "Describe the mechanisms by which heat is lost."
-      },
-      {
-       "l": "c",
-       "text": "Discuss the clinical consequences of fever, hypothermia, and hyperthermia"
-      }
-     ]
-    },
-    {
-     "t": "q",
-     "n": "3",
      "text": "Explain the physiology of the visual and auditory systems. In your answer:",
      "parts": [
       {
@@ -110,11 +109,12 @@
        "l": "b",
        "text": "Explain the role of the cochlea in hearing."
       }
-     ]
+     ],
+     "id": "s2-q2"
     },
     {
      "t": "q",
-     "n": "4",
+     "n": "3",
      "text": "Describe the physiology of taste, smell, and oral sensation. In your answer:",
      "parts": [
       {
@@ -125,7 +125,8 @@
        "l": "b",
        "text": "Discuss the role of oral sensory receptors (pain, temperature, pressure, tooth sensation) in oral health practice."
       }
-     ]
+     ],
+     "id": "s2-q3"
     }
    ],
    "footer": "Paper One"

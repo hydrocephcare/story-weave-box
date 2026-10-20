@@ -3,7 +3,7 @@
  "title": "Health Education I: Main Exam, 19 November 2024",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
- "department": "Department of Community Health, Epidemiology & Biostatistics",
+ "department": "Department of Community Health, Epidemiology and Biostatistics",
  "programme": "Diploma in Community Oral Health",
  "examTitle": "University Examination 2024 / 2025",
  "unitCode": "DPH1201",
@@ -42,43 +42,50 @@
        "text": "Health promotion",
        "marks": 2
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
      "text": "Explain key principles of health promotion.",
-     "marks": 6
+     "marks": 6,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Describe the health belief model",
-     "marks": 4
+     "marks": 4,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "Explain any three aims of health education.",
-     "marks": 6
+     "marks": 6,
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
      "text": "Describe areas where health education and promotion takes place.",
-     "marks": 6
+     "marks": 6,
+     "id": "q5"
     },
     {
      "t": "q",
      "n": "6",
      "text": "Explain fundamental conditions and resources needed for good health.",
-     "marks": 6
+     "marks": 6,
+     "id": "q6"
     },
     {
      "t": "q",
      "n": "7",
      "text": "Explain any three forms of non-verbal communication",
-     "marks": 6
+     "marks": 6,
+     "id": "q7"
     }
    ],
    "footer": "Paper One"
@@ -94,17 +101,20 @@
     {
      "t": "q",
      "n": "8",
-     "text": "Discuss any five significance of studying health education."
+     "text": "Discuss any five significance of studying health education.",
+     "id": "q8"
     },
     {
      "t": "q",
      "n": "9",
-     "text": "Discuss the components of communication."
+     "text": "Discuss the components of communication.",
+     "id": "q9"
     },
     {
      "t": "q",
      "n": "10",
-     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion."
+     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion.",
+     "id": "q10"
     }
    ],
    "footer": "Paper One"

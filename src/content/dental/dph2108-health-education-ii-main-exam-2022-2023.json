@@ -3,7 +3,7 @@
  "title": "Health Education II: Main Exam, 27 March 2023",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
- "department": "Department of Community Health, Epidemiology & Biostatistics",
+ "department": "Department of Community Health, Epidemiology and Biostatistics",
  "programme": "Diploma in Community Oral Health",
  "examTitle": "University Examination 2022 / 2023",
  "unitCode": "DPH2108",
@@ -39,22 +39,26 @@
        "l": "c",
        "text": "Health"
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Highlight the principles of health education."
+     "text": "Highlight the principles of health education.",
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "State the factors that suggest the communities are active in participation"
+     "text": "State the factors that suggest the communities are active in participation",
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
-     "text": "Explain components of communication."
+     "text": "Explain components of communication.",
+     "id": "q4"
     }
    ],
    "footer": "Paper One"

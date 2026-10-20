@@ -3,7 +3,7 @@
  "title": "Health Education and Promotion: Main Exam, 23 March 2023",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
- "department": "Department of Community Health, Epidemiology & Biostatistics",
+ "department": "Department of Community Health, Epidemiology and Biostatistics",
  "programme": "Certificate in Community Health",
  "examTitle": "University Examination 2022 / 2023",
  "unitCode": "CPH1303",
@@ -51,17 +51,20 @@
        "l": "b",
        "text": "Health education"
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Identify five priority areas for health promotion"
+     "text": "Identify five priority areas for health promotion",
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Explain the basic strategies for health promotion"
+     "text": "Explain the basic strategies for health promotion",
+     "id": "q3"
     }
    ],
    "footer": "Paper One"

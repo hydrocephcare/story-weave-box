@@ -25,19 +25,22 @@
      "t": "q",
      "n": "1",
      "text": "Distinguish population and sample as used in statistics.",
-     "marks": 4
+     "marks": 4,
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
      "text": "Distinguish between ordinal and nominal scale of measurement as used in statistics giving example of each.",
-     "marks": 4
+     "marks": 4,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Explain three limitations of using secondary data.",
-     "marks": 6
+     "marks": 6,
+     "id": "q3"
     },
     {
      "t": "q",
@@ -58,12 +61,34 @@
        "text": "Cluster sampling",
        "marks": 6
       }
-     ]
+     ],
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
-     "text": "The Marks obtained by nutrition students in a mathematics test are shown in the frequency distribution table below; Marks 20-29 30-39 40-49 50-59 60-69 70-79 80-89 90-99 students 4 14 18 28 18 8 6 4"
+     "text": "The Marks obtained by nutrition students in a mathematics test are shown in the frequency distribution table below; Marks 20-29 30-39 40-49 50-59 60-69 70-79 80-89 90-99 students 4 14 18 28 18 8 6 4",
+     "parts": [
+      {
+       "l": "",
+       "text": "Determine;",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Mean."
+        },
+        {
+         "l": "ii",
+         "text": "Median."
+        },
+        {
+         "l": "iii",
+         "text": "Third and seventh percentile."
+        }
+       ]
+      }
+     ],
+     "id": "q5"
     }
    ],
    "footer": "Paper One"
@@ -71,26 +96,6 @@
   {
    "n": 2,
    "items": [
-    {
-     "t": "q",
-     "n": "6",
-     "text": "Determine;",
-     "marks": 10,
-     "parts": [
-      {
-       "l": "i",
-       "text": "Mean."
-      },
-      {
-       "l": "ii",
-       "text": "Median."
-      },
-      {
-       "l": "iii",
-       "text": "Third and seventh percentile."
-      }
-     ]
-    },
     {
      "t": "h",
      "text": "QUESTION TWO"
@@ -107,10 +112,11 @@
       },
       {
        "l": "b",
-       "text": "The height of football players in various teams was measured and found to have been distributed with M and a standard deviation Ω A random sample of 100 students was taken and 95% confidence interval for the population mean was found to be between 160 cm and 170cm. i) Estimate the sample mean. ii) Estimate the standard deviation. 99% confidence interval for the population mean.",
+       "text": "The height of football players in various teams was measured and found to have been distributed with mean μ and standard deviation σ A random sample of 100 students was taken and 95% confidence interval for the population mean was found to be between 160 cm and 170cm. i) Estimate the sample mean. ii) Estimate the standard deviation. 99% confidence interval for the population mean.",
        "marks": 10
       }
-     ]
+     ],
+     "id": "s2-q2"
     }
    ],
    "footer": "Paper One"

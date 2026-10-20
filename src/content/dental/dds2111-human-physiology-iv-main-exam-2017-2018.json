@@ -47,37 +47,44 @@
        "l": "e",
        "text": "Metabolic Rate"
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Draw a well labeled diagram showing taste zone."
+     "text": "Draw a well labeled diagram showing taste zone.",
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Classify hypothermia."
+     "text": "Classify hypothermia.",
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
-     "text": "Briefly explain how shivering takes place in heat production."
+     "text": "Briefly explain how shivering takes place in heat production.",
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
-     "text": "Explain the function of olfactory cilia of the nose."
+     "text": "Explain the function of olfactory cilia of the nose.",
+     "id": "q5"
     },
     {
      "t": "q",
      "n": "6",
-     "text": "Draw a well labeled diagram showing parts of the skin."
+     "text": "Draw a well labeled diagram showing parts of the skin.",
+     "id": "q6"
     },
     {
      "t": "q",
      "n": "7",
-     "text": "Write short notes on apocrine sweat glands."
+     "text": "Write short notes on apocrine sweat glands.",
+     "id": "q7"
     }
    ],
    "footer": "Paper One"
@@ -88,7 +95,8 @@
     {
      "t": "q",
      "n": "8",
-     "text": "Briefly explain two parts of the ear, indicating their function."
+     "text": "Briefly explain two parts of the ear, indicating their function.",
+     "id": "q8"
     },
     {
      "t": "h",
@@ -98,17 +106,20 @@
     {
      "t": "q",
      "n": "1",
-     "text": "Discuss functions of the skin."
+     "text": "Discuss functions of the skin.",
+     "id": "s2-q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Body temperature regulation occurs in two way; heat production and heat loss, disc"
+     "text": "Body temperature regulation occurs in two way; heat production and heat loss, disc",
+     "id": "s2-q2"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Explain the skin appendages."
+     "text": "Explain the skin appendages.",
+     "id": "s2-q3"
     }
    ],
    "footer": "Paper One"

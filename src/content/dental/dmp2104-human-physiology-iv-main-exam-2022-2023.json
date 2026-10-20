@@ -28,14 +28,20 @@
      "text": "",
      "parts": [
       {
-       "l": "a i",
-       "text": "Write short notes on major salivary glands in the oral cavity.",
-       "marks": 5
-      },
-      {
-       "l": "a ii",
-       "text": "State the functions of saliva in the oral cavity.",
-       "marks": 5
+       "l": "a",
+       "text": "",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Write short notes on major salivary glands in the oral cavity.",
+         "marks": 5
+        },
+        {
+         "l": "ii",
+         "text": "State the functions of saliva in the oral cavity.",
+         "marks": 5
+        }
+       ]
       },
       {
        "l": "b",
@@ -57,7 +63,8 @@
        "text": "State the composition of saliva",
        "marks": 4
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "h",
@@ -68,13 +75,15 @@
      "t": "q",
      "n": "2",
      "text": "Discuss salivary components and their functions",
-     "marks": 20
+     "marks": 20,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Explain the roles of Hydrochloric Acid (HCl) in the stomach",
-     "marks": 20
+     "marks": 20,
+     "id": "q3"
     }
    ],
    "footer": "Paper Two"

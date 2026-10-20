@@ -35,7 +35,8 @@
        "l": "b",
        "text": "Outline four (4) main types of cells that comprise the epidermis."
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
@@ -50,7 +51,8 @@
        "l": "b",
        "text": "State the functions of human sweat glands."
       }
-     ]
+     ],
+     "id": "q2"
     },
     {
      "t": "q",
@@ -65,7 +67,8 @@
        "l": "b",
        "text": "Explain the benefits of melanin in the human body."
       }
-     ]
+     ],
+     "id": "q3"
     }
    ],
    "footer": "Paper One"
@@ -93,7 +96,8 @@
        "text": "Briefly discuss adverse effects of hypothermia.",
        "marks": 10
       }
-     ]
+     ],
+     "id": "q4"
     },
     {
      "t": "q",
@@ -110,7 +114,8 @@
        "text": "Describe the physiology of dental pain.",
        "marks": 15
       }
-     ]
+     ],
+     "id": "q5"
     }
    ],
    "footer": "Paper One"

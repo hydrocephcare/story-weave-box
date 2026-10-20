@@ -6,6 +6,8 @@ export interface PaperItem {
   /** h = section heading, q = a numbered question, p = a plain line (instruction, note) */
   t: "h" | "q" | "p";
   n?: string;
+  /** unique anchor inside the paper (a question number can repeat across sections) */
+  id?: string;
   text: string;
   marks?: number;
   parts?: PaperPart[];

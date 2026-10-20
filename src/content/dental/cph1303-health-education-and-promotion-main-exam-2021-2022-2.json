@@ -57,25 +57,29 @@
        "text": "Health education.",
        "marks": 2.5
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Identified priorities for health promotion.",
-     "marks": 5
+     "text": "Identify priorities for health promotion.",
+     "marks": 5,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Explain the basic strategies for health promotion.",
-     "marks": 5
+     "marks": 5,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "Describe extended parallel process model.",
-     "marks": 5
+     "marks": 5,
+     "id": "q4"
     }
    ],
    "footer": "Paper One"
@@ -87,25 +91,29 @@
      "t": "q",
      "n": "5",
      "text": "Explain key principles of health promotion.",
-     "marks": 5
+     "marks": 5,
+     "id": "q5"
     },
     {
      "t": "q",
      "n": "6",
      "text": "State two aims of health education.",
-     "marks": 5
+     "marks": 5,
+     "id": "q6"
     },
     {
      "t": "q",
      "n": "7",
      "text": "Highlight roles of health educator.",
-     "marks": 5
+     "marks": 5,
+     "id": "q7"
     },
     {
      "t": "q",
      "n": "8",
      "text": "Outline fundamental conditions and resources needed for good health.",
-     "marks": 5
+     "marks": 5,
+     "id": "q8"
     },
     {
      "t": "h",
@@ -115,17 +123,20 @@
     {
      "t": "q",
      "n": "9",
-     "text": "Discuss components of communication."
+     "text": "Discuss components of communication.",
+     "id": "q9"
     },
     {
      "t": "q",
      "n": "10",
-     "text": "Discuss areas for priority action identified in Ottawa Charter 1987."
+     "text": "Discuss areas for priority action identified in Ottawa Charter 1987.",
+     "id": "q10"
     },
     {
      "t": "q",
      "n": "11",
-     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion."
+     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion.",
+     "id": "q11"
     }
    ],
    "footer": "Paper One"

@@ -20,7 +20,34 @@
     {
      "t": "q",
      "n": "1",
-     "text": "a) Explain the following sampling methods i) Quota ii) Simple random iii) Stratified (6 Marks)\nb) With the aid of sketches differentiate between the following terms as used in statistics i) Positive and negative skew ii) Positive and negative correlation (6 Marks)\nc) A random sample of 12 components has a mean weight of 50 gm and standard deviation of 9 gm. Determine the population mean with a 95% confidence. (4 Marks)\nd) 10 % of components produced by a machine are defective. Determine the probability that in a random sample of 8 components at most two will be defective. (4 Marks)\ne) The distribution of lifetimes of component are as shown"
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following sampling methods i) Quota ii) Simple random iii) Stratified",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "With the aid of sketches differentiate between the following terms as used in statistics i) Positive and negative skew ii) Positive and negative correlation",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "A random sample of 12 components has a mean weight of 50 gm and standard deviation of 9 gm. Determine the population mean with a 95% confidence.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "10 % of components produced by a machine are defective. Determine the probability that in a random sample of 8 components at most two will be defective.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "The distribution of lifetimes of component are as shown"
+      }
+     ],
+     "id": "q1"
     }
    ],
    "footer": "Paper One"
@@ -43,8 +70,20 @@
     {
      "t": "q",
      "n": "2",
-     "text": "a) The data shows the height of 80 malnourished kids in Kiambu county height 10-15 15-20 20-25 25-30 30-35 35-40 40-45 Number of kids 5 x 17 20 y 16 4 Given that the median wage is Ksh 27,000 i) Values of x and y ii) Interquartile range (7 Marks)\nb) The following distribution represent marks scored by 210 students in bio statistics test marks Number of students 20-29 21 30-39 31 40-49 39 50-59 51 60-69 29 70-79 24 80-89 15 Determine i) Mean mark ii) Standard deviation iii) Interquartile range iv) Mode",
-     "marks": 13
+     "text": "",
+     "marks": 13,
+     "parts": [
+      {
+       "l": "a",
+       "text": "The data shows the height of 80 malnourished kids in Kiambu county height 10-15 15-20 20-25 25-30 30-35 35-40 40-45 Number of kids 5 x 17 20 y 16 4 Given that the median wage is Ksh 27,000 i) Values of x and y ii) Interquartile range",
+       "marks": 7
+      },
+      {
+       "l": "b",
+       "text": "The following distribution represent marks scored by 210 students in bio statistics test marks Number of students 20-29 21 30-39 31 40-49 39 50-59 51 60-69 29 70-79 24 80-89 15 Determine i) Mean mark ii) Standard deviation iii) Interquartile range iv) Mode"
+      }
+     ],
+     "id": "q2"
     }
    ],
    "footer": "Paper One"
@@ -55,8 +94,20 @@
     {
      "t": "q",
      "n": "3",
-     "text": "a) The cost incurred in maintaining a drug production plant for a period of 8 years is shown Age of plant | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 Cost Ksh 000 | 3 | 5 | 9 | 12 | 14 | 15 | 20 | 28 i) Calculate The Pearson product moment correlation coefficient ii) Interpret the result (10 Marks)\na) Obtain the least squares equation for the data below: x | 4.0 | 4.4 | 4.8 | 4.2 | 5.0 | 5.4 | 5.2 | 5.6 | 5.8 | 6.2 y | 50 | 64 | 66 | 70 | 76 | 82 | 86 | 90 | 94 | 96",
-     "marks": 9
+     "text": "",
+     "marks": 9,
+     "parts": [
+      {
+       "l": "a",
+       "text": "The cost incurred in maintaining a drug production plant for a period of 8 years is shown Age of plant | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 Cost Ksh 000 | 3 | 5 | 9 | 12 | 14 | 15 | 20 | 28 i) Calculate The Pearson product moment correlation coefficient ii) Interpret the result",
+       "marks": 10
+      },
+      {
+       "l": "a",
+       "text": "Obtain the least squares equation for the data below: x | 4.0 | 4.4 | 4.8 | 4.2 | 5.0 | 5.4 | 5.2 | 5.6 | 5.8 | 6.2 y | 50 | 64 | 66 | 70 | 76 | 82 | 86 | 90 | 94 | 96"
+      }
+     ],
+     "id": "q3"
     }
    ],
    "footer": "Paper One"
@@ -67,7 +118,24 @@
     {
      "t": "q",
      "n": "4",
-     "text": "a) Explain the following terms as used in statistics i) Point estimate ii) Interval estimate (4 Marks)\nb) In MKU 30% of the students use credit cards. If 12 students are selected at random, determine the probability that i) Exactly two student use credit cards ii) At least ten student use credit cards iii) At most two student use credit cards (8 Marks)\nc) The diameters of artificial insemination tubes manufactured in a factory are normally distributed with a mean of 70mm and standard deviation of 8mm. Determine i) Probability that a tube chosen at random will have a diameter between 74mm and 80mm. ii) Proportion of test tubes which have more than 68mm as their diameters."
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following terms as used in statistics i) Point estimate ii) Interval estimate",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "In MKU 30% of the students use credit cards. If 12 students are selected at random, determine the probability that i) Exactly two student use credit cards ii) At least ten student use credit cards iii) At most two student use credit cards",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "The diameters of artificial insemination tubes manufactured in a factory are normally distributed with a mean of 70mm and standard deviation of 8mm. Determine i) Probability that a tube chosen at random will have a diameter between 74mm and 80mm. ii) Proportion of test tubes which have more than 68mm as their diameters."
+      }
+     ],
+     "id": "q4"
     }
    ],
    "footer": "Paper One"
@@ -82,8 +150,20 @@
     {
      "t": "q",
      "n": "5",
-     "text": "a) Compute quartile deviation from the following data; ci | 10-20 | 20-30 | 30-40 | 40-50 | 50-60 | 60-70 | 80-90 f | 12 | 19 | 5 | 10 | 9 | 6 | 6 (10 Marks)\nb) at an agricultural show 10 high bred bulls were ranked by a qualified judge and by a trainee judge their ranking were given as shown in the table below; Bulls | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 Qualifed Judge | 2 | 4 | 7 | 8 | 10 | 1 | 5 | 9 | 3 |  (missing entry) Trainee Judge | 1 | 3 | 9 | 10 | 7 | 2 | 4 | 8 | 5 | (missing entry) Calculate the spearman's rank Correlation coefficient.",
-     "marks": 10
+     "text": "",
+     "marks": 10,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Compute quartile deviation from the following data; ci | 10-20 | 20-30 | 30-40 | 40-50 | 50-60 | 60-70 | 80-90 f | 12 | 19 | 5 | 10 | 9 | 6 | 6",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "at an agricultural show 10 high bred bulls were ranked by a qualified judge and by a trainee judge their ranking were given as shown in the table below; Bulls | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 Qualified Judge | 2 | 4 | 7 | 8 | 10 | 1 | 5 | 9 | 3 |  [not readable in the scan] Trainee Judge | 1 | 3 | 9 | 10 | 7 | 2 | 4 | 8 | 5 | [not readable in the scan] Calculate the spearman's rank Correlation coefficient."
+      }
+     ],
+     "id": "q5"
     }
    ],
    "footer": "Paper One"

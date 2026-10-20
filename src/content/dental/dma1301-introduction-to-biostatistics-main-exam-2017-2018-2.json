@@ -20,7 +20,7 @@
     {
      "t": "q",
      "n": "1",
-     "text": "QUESTION ONE",
+     "text": "",
      "parts": [
       {
        "l": "a",
@@ -45,41 +45,30 @@
       {
        "l": "e",
        "text": "Using the following values 40, 50, 60, 70,80,90,100,60,65,72 Calculate;",
-       "marks": null
+       "marks": null,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Mean",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Mode",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Median",
+         "marks": 2
+        },
+        {
+         "l": "iv",
+         "text": "Mean absolute deviation",
+         "marks": 4
+        }
+       ]
       },
-      {
-       "l": "i",
-       "text": "Mean",
-       "marks": 2
-      },
-      {
-       "l": "ii",
-       "text": "Mode",
-       "marks": 2
-      },
-      {
-       "l": "iii",
-       "text": "Median",
-       "marks": 2
-      },
-      {
-       "l": "iv",
-       "text": "Mean absolute deviation",
-       "marks": 4
-      }
-     ]
-    }
-   ],
-   "footer": ""
-  },
-  {
-   "n": 2,
-   "items": [
-    {
-     "t": "q",
-     "n": "2",
-     "text": "QUESTION ONE (continued)",
-     "parts": [
       {
        "l": "f",
        "text": "A machine produces the following number of defects in each successive period of five minutes: 14 21 24 22 27 24 26 5 12 22 23 21 22 28 16 23 23 25 24 5",
@@ -90,19 +79,27 @@
        "text": "Construct a frequency distribution from these data using seven class intervals of equal width.",
        "marks": null
       }
-     ]
-    },
+     ],
+     "id": "q1"
+    }
+   ],
+   "footer": ""
+  },
+  {
+   "n": 2,
+   "items": [
     {
      "t": "q",
-     "n": "3",
-     "text": "QUESTION TWO",
+     "n": "2",
+     "text": "",
      "parts": [
       {
        "l": "a",
        "text": "The following data pertain to Marks obtained by 120 students of class level in biostatistics. Marks 30 - 39 40 - 49 50 - 59 60 - 69 70 - 79 80 - 89 Number of students 1 11 12 43 11 3 Calculate (i) the mean (ii) the median (iii) Mode (iv) the Interquartile deviation (v) standard deviation",
        "marks": null
       }
-     ]
+     ],
+     "id": "q2"
     }
    ],
    "footer": ""

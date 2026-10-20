@@ -25,31 +25,36 @@
      "t": "q",
      "n": "1",
      "text": "Explain FOUR (4) the functions of calcium in the body.",
-     "marks": 8
+     "marks": 8,
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
      "text": "Identify factors influencing mineralization of teeth.",
-     "marks": 4
+     "marks": 4,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Outline FIVE (5) age changes in the enamel.",
-     "marks": 5
+     "marks": 5,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "Explain uses of Fluoride in dentistry.",
-     "marks": 4
+     "marks": 4,
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
      "text": "Describe THREE (3) phases of deglutition.",
-     "marks": 9
+     "marks": 9,
+     "id": "q5"
     },
     {
      "t": "h",
@@ -59,19 +64,22 @@
      "t": "q",
      "n": "1",
      "text": "Discuss chemical composition of teeth.",
-     "marks": 20
+     "marks": 20,
+     "id": "s2-q1"
     },
     {
      "t": "q",
      "n": "2",
      "text": "Explain hormones which have influence on soft and hard tissues of oral cavity.",
-     "marks": 20
+     "marks": 20,
+     "id": "s2-q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Discuss different types of oral defense mechanisms in the oral cavity.",
-     "marks": 20
+     "marks": 20,
+     "id": "s2-q3"
     }
    ],
    "footer": "Paper One"

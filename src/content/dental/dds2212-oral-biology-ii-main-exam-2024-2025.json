@@ -26,31 +26,36 @@
      "t": "q",
      "n": "1",
      "text": "Explain the chemical composition of enamel and dentin.",
-     "marks": 10
+     "marks": 10,
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
      "text": "Outline the factors which increase the absorption of calcium intake.",
-     "marks": 6
+     "marks": 6,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Identify clinical significance of dental plaque.",
-     "marks": 6
+     "marks": 6,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "Outline the various theories of dental caries formation.",
-     "marks": 4
+     "marks": 4,
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
      "text": "State the properties of saliva in the oral cavity.",
-     "marks": 4
+     "marks": 4,
+     "id": "q5"
     },
     {
      "t": "h",
@@ -72,7 +77,8 @@
        "text": "Pulp",
        "marks": 10
       }
-     ]
+     ],
+     "id": "q6"
     },
     {
      "t": "q",
@@ -94,7 +100,8 @@
        "text": "Explain the risk factors of dental caries.",
        "marks": 10
       }
-     ]
+     ],
+     "id": "q7"
     }
    ],
    "footer": "Paper One"

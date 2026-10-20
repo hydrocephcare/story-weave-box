@@ -41,7 +41,8 @@
        "text": "Outline four (4) main types of cells that comprise the epidermis.",
        "marks": 4
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
@@ -58,19 +59,22 @@
        "text": "State the functions of human sweat glands.",
        "marks": 4
       }
-     ]
+     ],
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Identify common skin appendages.",
-     "marks": 5
+     "marks": 5,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "What are heat cramps?",
-     "marks": 2
+     "marks": 2,
+     "id": "q4"
     },
     {
      "t": "h",
@@ -92,7 +96,8 @@
        "text": "Explain the functions of melanin in the body.",
        "marks": 14
       }
-     ]
+     ],
+     "id": "q5"
     },
     {
      "t": "q",
@@ -109,7 +114,8 @@
        "text": "Describe the functions of the skin.",
        "marks": 15
       }
-     ]
+     ],
+     "id": "q6"
     }
    ],
    "footer": "Paper One"

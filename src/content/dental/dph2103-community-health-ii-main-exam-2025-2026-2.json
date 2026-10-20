@@ -52,31 +52,36 @@
        "text": "Quarantine.",
        "marks": 2
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
      "text": "State five causes of Infant Mortality.",
-     "marks": 5
+     "marks": 5,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Explain five activities of an epidemiologist.",
-     "marks": 5
+     "marks": 5,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "Differentiate between morbidity rates and mortality rates.",
-     "marks": 4
+     "marks": 4,
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
      "text": "Differentiate between prevalence rate and incidence rate. Providing a practical example for each.",
-     "marks": 6
+     "marks": 6,
+     "id": "q5"
     }
    ],
    "footer": ""

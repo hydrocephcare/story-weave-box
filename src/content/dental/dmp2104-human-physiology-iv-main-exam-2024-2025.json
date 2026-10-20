@@ -26,25 +26,29 @@
      "t": "q",
      "n": "1",
      "text": "Identify the four (4) main types of cells which comprise the epidermis",
-     "marks": 8
+     "marks": 8,
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
      "text": "Explain specialized senses in the human body",
-     "marks": 8
+     "marks": 8,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Outline biological functions of Melanin in the human body",
-     "marks": 7
+     "marks": 7,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "Give the functions of sebaceous glands",
-     "marks": 7
+     "marks": 7,
+     "id": "q4"
     },
     {
      "t": "h",
@@ -54,17 +58,20 @@
     {
      "t": "q",
      "n": "1",
-     "text": "Discuss the mechanism of heat loss from the human body"
+     "text": "Discuss the mechanism of heat loss from the human body",
+     "id": "s2-q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Explain the role of hypothalamus in regulating body temperatures"
+     "text": "Explain the role of hypothalamus in regulating body temperatures",
+     "id": "s2-q2"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Describe the functions of sensory system"
+     "text": "Describe the functions of sensory system",
+     "id": "s2-q3"
     }
    ],
    "footer": "Paper One"

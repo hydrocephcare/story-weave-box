@@ -40,7 +40,7 @@ export default function DentalSearch() {
           ))}
           {qHits.length > 0 && <li className="px-4 pb-1 pt-3 text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Questions</li>}
           {qHits.map((r, i) => { const p = PAPER_INDEX.find((x) => x.slug === r[0]); return (
-            <li key={`${r[0]}-${r[1]}-${i}`}><button type="button" onClick={() => { setOpen(false); navigate(`${paperPath(r[0])}#q${r[1]}`); }} className={row}><MessageSquareText className="h-5 w-5 shrink-0 text-primary" aria-hidden /><span className="min-w-0 flex-1"><span className="line-clamp-2 text-sm font-semibold">{r[2]}</span><span className="block truncate text-xs text-muted-foreground">{p ? `${p.unitTitle} · ${p.date}` : r[0]} · Q{r[1]}</span></span></button></li>
+            <li key={`${r[0]}-${r[1]}-${i}`}><button type="button" onClick={() => { setOpen(false); navigate(`${paperPath(r[0])}#${r[1]}`); }} className={row}><MessageSquareText className="h-5 w-5 shrink-0 text-primary" aria-hidden /><span className="min-w-0 flex-1"><span className="line-clamp-2 text-sm font-semibold">{r[2]}</span><span className="block truncate text-xs text-muted-foreground">{p ? `${p.unitTitle} · ${p.date}` : r[0]} · {r[1].replace(/^s\d+-q|^q/, "Q")}</span></span></button></li>
           ); })}
         </ul>
       </DialogContent>

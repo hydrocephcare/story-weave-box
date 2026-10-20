@@ -51,25 +51,29 @@
        "text": "Community participation."
       }
      ],
-     "marks": 5
+     "marks": 5,
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
      "text": "Outline the guiding principles in the implementation of the community health strategy.",
-     "marks": 5
+     "marks": 5,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Describe the main constitutional articles that have implications on community health.",
-     "marks": 5
+     "marks": 5,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "Highlight the key PHC elements under the Alma-Ata declaration.",
-     "marks": 5
+     "marks": 5,
+     "id": "q4"
     }
    ],
    "footer": "Paper One"

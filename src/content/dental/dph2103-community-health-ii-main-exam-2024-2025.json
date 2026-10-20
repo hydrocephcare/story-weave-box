@@ -39,32 +39,38 @@
        "l": "c",
        "text": "Community health"
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Name any three indicators used in assessing community health."
+     "text": "Name any three indicators used in assessing community health.",
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "List four aims of primary health care."
+     "text": "List four aims of primary health care.",
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
-     "text": "Explain any three principles of managing communicable diseases."
+     "text": "Explain any three principles of managing communicable diseases.",
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
-     "text": "Describe three principles of PHC according to Alma Ata Declaration-WHO 1978."
+     "text": "Describe three principles of PHC according to Alma Ata Declaration-WHO 1978.",
+     "id": "q5"
     },
     {
      "t": "q",
      "n": "6",
-     "text": "Elaborate any four elements of primary health care."
+     "text": "Elaborate any four elements of primary health care.",
+     "id": "q6"
     }
    ],
    "footer": "Paper One"

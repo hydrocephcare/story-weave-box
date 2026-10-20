@@ -3,7 +3,7 @@
  "title": "Community Health II: Main Exam, 22 March 2024",
  "university": "Mount Kenya University",
  "school": "School of Public Health",
- "department": "Department of Community Health Epidemiology and Biostatistics",
+ "department": "Department of Community Health, Epidemiology and Biostatistics",
  "programme": "Diploma in Health Records and Information Technology",
  "examTitle": "University Examination 2023 / 2024",
  "unitCode": "DPH2103",
@@ -52,37 +52,43 @@
        "text": "Primary Health Care.",
        "marks": 2
       }
-     ]
+     ],
+     "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "List five common conditions/ diseases affecting most communities.",
-     "marks": 5
+     "text": "List five common conditions/diseases affecting most communities.",
+     "marks": 5,
+     "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
      "text": "Explain the importance of individual birth plan.",
-     "marks": 5
+     "marks": 5,
+     "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
      "text": "State five differences between growth and Development.",
-     "marks": 5
+     "marks": 5,
+     "id": "q4"
     },
     {
      "t": "q",
      "n": "5",
      "text": "State advantages of family planning.",
-     "marks": 5
+     "marks": 5,
+     "id": "q5"
     },
     {
      "t": "q",
      "n": "6",
      "text": "Describe community financing in primary health care.",
-     "marks": 5
+     "marks": 5,
+     "id": "q6"
     }
    ],
    "footer": "Paper One"
@@ -93,13 +99,15 @@
     {
      "t": "q",
      "n": "7",
-     "text": "Significance of communicable diseases in developing countries"
+     "text": "Significance of communicable diseases in developing countries",
+     "id": "q7"
     },
     {
      "t": "q",
      "n": "8",
      "text": "Name 5 principles governing implementation of Primary health care.",
-     "marks": 5
+     "marks": 5,
+     "id": "q8"
     },
     {
      "t": "h",
@@ -109,12 +117,14 @@
     {
      "t": "q",
      "n": "1",
-     "text": "Explain ten things a CHV encourages women to do to avoid problems in pregnancy."
+     "text": "Explain ten things a CHV encourages women to do to avoid problems in pregnancy.",
+     "id": "s2-q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Fundamentals of primary health care are basic rules or beliefs that are essential to the existence, development or success of primary health care as a health professional. Describe the fundamentals of PHC?"
+     "text": "Fundamentals of primary health care are basic rules or beliefs that are essential to the existence, development or success of primary health care as a health professional. Describe the fundamentals of PHC?",
+     "id": "s2-q2"
     },
     {
      "t": "q",
@@ -133,7 +143,8 @@
        "l": "c",
        "text": "Control of endemic diseases."
       }
-     ]
+     ],
+     "id": "s2-q3"
     }
    ],
    "footer": "Paper One"
