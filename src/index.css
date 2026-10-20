@@ -591,7 +591,11 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
 /* the note page never grows wider than the screen, whatever the browser zoom or font size: long words wrap and tables shrink or scroll inside their box */
 .note-body.note-topic { overflow-wrap: anywhere; max-width: 100%; min-width: 0; }
 .note-body.note-topic .note-table { max-width: 100%; }
-.note-body.note-topic .note-table table { min-width: 0; }
+/* table cells wrap only between words (never mid-word on a phone); a wide table scrolls sideways inside its box */
+.note-body.note-topic .note-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.note-body.note-topic .note-table table { min-width: 0; width: max(100%, 34rem); }
+.note-body.note-topic .note-table th, .note-body.note-topic .note-table td { overflow-wrap: normal; word-break: normal; hyphens: manual; min-width: 7rem; }
+@media (max-width: 640px) { .note-body.note-topic .note-table table { font-size: 0.95rem; } .note-body.note-topic .note-table th, .note-body.note-topic .note-table td { padding: 0.55rem 0.65rem; } }
 .note-body.note-topic img, .note-body.note-topic pre { max-width: 100%; }
 
 /* note text sized like the topic pages */
