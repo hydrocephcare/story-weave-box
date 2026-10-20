@@ -490,7 +490,7 @@ body.no-copy img {
 .note-body .note-table th, .note-body .note-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid hsl(var(--border)); vertical-align: top; }
 .note-body .note-table tr:last-child td { border-bottom: 0; }
 
-/* Responsive Markdown tables: preserve columns and keep the key column pinned while scrolling. */
+/* Adaptive Markdown tables: compact data fits; dense comparisons scroll inside their own frame. */
 .note-body .note-table {
   display: block;
   width: 100%;
@@ -506,19 +506,17 @@ body.no-copy img {
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--muted-foreground) / 0.45) transparent;
 }
-.note-body .note-table:focus-visible {
-  outline: 2px solid hsl(var(--primary));
-  outline-offset: 3px;
-}
+.note-body .note-table:focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 3px; }
 .note-body .note-table table {
   width: 100%;
-  min-width: 34rem;
+  min-width: 0;
   table-layout: auto;
   border-collapse: separate;
   border-spacing: 0;
   font-size: 0.94rem;
   line-height: 1.55;
 }
+.note-body .note-table-fit table { min-width: 100%; }
 .note-body .note-table-wide table { min-width: 44rem; width: max-content; }
 .note-body .note-table th {
   position: sticky;
@@ -541,28 +539,23 @@ body.no-copy img {
 }
 .note-body .note-table th:last-child,
 .note-body .note-table td:last-child { border-right: 0; }
-/* Keep the row label visible as the reader moves across comparison columns. */
-.note-body .note-table th:first-child,
-.note-body .note-table td:first-child {
+/* The first column stays pinned only when a table is wide enough to scroll. */
+.note-body .note-table-wide th:first-child,
+.note-body .note-table-wide td:first-child {
   position: sticky;
   left: 0;
   z-index: 3;
-  min-width: 8.5rem;
+  min-width: 8rem;
   max-width: 13rem;
   background: hsl(var(--card));
   box-shadow: 3px 0 7px hsl(var(--foreground) / 0.08);
 }
-.note-body .note-table th:first-child {
-  z-index: 4;
-  background: hsl(var(--muted));
-}
-.note-body .note-table tbody tr:nth-child(even) td { background: hsl(var(--muted) / 0.28); }
-.note-body .note-table tbody tr:nth-child(even) td:first-child { background: hsl(var(--muted)); }
+.note-body .note-table-wide th:first-child { z-index: 4; background: hsl(var(--muted)); }
+.note-body .note-table-wide tbody tr:nth-child(even) td { background: hsl(var(--muted) / 0.28); }
+.note-body .note-table-wide tbody tr:nth-child(even) td:first-child { background: hsl(var(--muted)); }
 .note-body .note-table tbody tr:hover td { background: hsl(var(--primary) / 0.06); }
-.note-body .note-table tbody tr:hover td:first-child { background: hsl(var(--muted)); }
 .note-body .note-table tr:last-child td { border-bottom: 0; }
 .note-body .note-table-hint {
-  display: none;
   margin: 0;
   padding: 0.45rem 0.75rem;
   color: hsl(var(--muted-foreground));
@@ -573,13 +566,13 @@ body.no-copy img {
 }
 @media (max-width: 640px) {
   .note-body .note-table { margin: 0.9rem 0 1.2rem; border-radius: 0.7rem; }
-  .note-body .note-table table { min-width: 34rem; font-size: 0.86rem; line-height: 1.5; }
+  .note-body .note-table table { font-size: 0.86rem; line-height: 1.5; }
+  .note-body .note-table-fit table { min-width: 100%; }
   .note-body .note-table-wide table { min-width: 42rem; width: max-content; }
   .note-body .note-table th,
   .note-body .note-table td { padding: 0.65rem 0.75rem; }
-  .note-body .note-table th:first-child,
-  .note-body .note-table td:first-child { min-width: 8rem; max-width: 10rem; }
-  .note-body .note-table-hint { display: block; }
+  .note-body .note-table-wide th:first-child,
+  .note-body .note-table-wide td:first-child { min-width: 7.5rem; max-width: 10rem; }
 }
 @media print {
   .note-body { font-size: 11pt; }
