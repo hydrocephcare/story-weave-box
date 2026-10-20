@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, EyeOff, Flame, Star, Type, Undo2, Volume2 } from "lucide-react";
+import { ArrowLeft, EyeOff, Flame, Sparkles, Star, Type, Undo2, Volume2 } from "lucide-react";
+import { openAI } from "@/lib/aiEvents";
 import { DAILY_GOAL, bury, buriedKeys, doneToday, getScale, recordReview, setScale, speak, starredKeys, streak, toggleStar } from "@/lib/deckStats";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
@@ -261,6 +262,7 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
       <div className="mx-auto mt-2 flex w-full max-w-md sm:max-w-xl items-center justify-center gap-1 text-muted-foreground">
         <button type="button" onClick={() => speak(flipped ? card?.answer || "" : card?.question || "")} aria-label="Read aloud" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><Volume2 className="h-4 w-4" /></button>
         <button type="button" onClick={() => { const n = scale >= 1.3 ? 0.9 : scale >= 1.1 ? 1.3 : 1.15; setScale(n); setScaleState(n); }} aria-label="Change text size" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><Type className="h-4 w-4" /></button>
+        <button type="button" onClick={() => card && openAI(`Explain this to me simply, with the mechanism and a clinical example: ${card.question.replace(/[*]+/g, "")}`)} aria-label="Ask Ompath AI to explain this card" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><Sparkles className="h-4 w-4" /></button>
         <button type="button" onClick={hide} aria-label="Never show this card again" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><EyeOff className="h-4 w-4" /></button>
       </div>
       {mcq && <Link to={mcq} className="mx-auto mt-1 block w-full max-w-md text-center text-sm font-bold text-primary hover:underline sm:max-w-xl">Test yourself with MCQs on this topic →</Link>}
