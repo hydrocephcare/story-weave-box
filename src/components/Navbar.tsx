@@ -51,6 +51,7 @@ function buildMenu(isAdmin: boolean, years: readonly number[] = YEAR_OPTIONS): G
       { to: "/exams", label: "Exams", icon: Trophy },
       { to: "/flashcards", label: "Flashcards", icon: GraduationCap },
       { to: "/flashcards/today", label: "Daily review", icon: Flame },
+      { to: "/pharmacology/quiz", label: "Drug quiz", icon: Pill },
       { to: "/must-knows", label: "Must-Knows", icon: ListChecks },
       { to: "/clinical", label: "Clinical Sim", icon: Stethoscope },
       { to: "/daily", label: "Daily Dose", icon: Flame },

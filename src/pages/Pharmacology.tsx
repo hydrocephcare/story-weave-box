@@ -123,6 +123,7 @@ export default function Pharmacology() {
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">Start from the patient, not the textbook: what to give for common conditions, how cancer drugs work and what they do to the body, which combinations are dangerous, and {ALL_PDRUGS.length} drug cards with questions after each.</p>
           <div className="mt-4 flex flex-wrap gap-2">
             <Link to="/pharmacology?tab=practice&drill=mixed" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground"><Sparkles className="h-4 w-4" /> 10-question mixed round</Link>
+            <Link to="/pharmacology/quiz" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-bold hover:border-primary/50"><Sparkles className="h-4 w-4 text-primary" /> Drug quiz by group</Link>
             <Link to="/pharmacology?tab=cancer" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-bold hover:border-primary/50"><Target className="h-4 w-4 text-primary" /> Cancer drugs</Link>
             <Link to="/pharmacology?tab=conditions" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-bold hover:border-primary/50"><Stethoscope className="h-4 w-4 text-primary" /> Common conditions</Link>
           </div>

@@ -104,6 +104,7 @@ const ClinicalCase = lazy(() => import("./pages/ClinicalCase"));
 const ClinicalPractice = lazy(() => import("./pages/ClinicalPractice"));
 const ClinicalLab = lazy(() => import("./pages/ClinicalLab"));
 const Pharmacology = lazy(() => import("./pages/Pharmacology"));
+const PharmQuiz = lazy(() => import("./pages/PharmQuiz"));
 const MustKnows = lazy(() => import("./pages/MustKnows"));
 const DailyDose = lazy(() => import("./pages/DailyDose"));
 const Books = lazy(() => import("./pages/Books"));
@@ -252,6 +253,7 @@ const AnimatedRoutes = () => {
             <Route path="/clinical/counsel" element={<ClinicalLab />} />
             <Route path="/clinical/counsel/:id" element={<ClinicalLab />} />
             <Route path="/clinical/mistakes" element={<ClinicalLab />} />
+            <Route path="/pharmacology/quiz" element={<PharmQuiz />} />
             <Route path="/pharmacology" element={<Pharmacology />} />
             <Route path="/pharmacology/drug/:id" element={<Pharmacology />} />
             <Route path="/must-knows" element={<MustKnows />} />

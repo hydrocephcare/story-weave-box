@@ -15,6 +15,7 @@ import { getRecentArticles, type RecentArticle } from "@/lib/progress-store";
 import ContinueReading from "@/components/ContinueReading";
 import YourUnits from "@/components/YourUnits";
 import MyDecksCard from "@/components/MyDecksCard";
+import DrugOfTheDay from "@/components/DrugOfTheDay";
 import { getSubjectKey, subjectColor } from "@/components/subjectTheme";
 import { useAuth } from "@/hooks/useAuth";
 import SemesterDashboard from "@/components/SemesterDashboard";
@@ -356,6 +357,7 @@ export default function Index() {
         {/* Continue reading: follows the account across devices */}
         <ContinueReading className="mb-10" />
         <MyDecksCard className="mb-10" />
+        <DrugOfTheDay className="mb-10" />
 
         {homeYear ? <YourUnits year={homeYear} className="mb-10" /> : (
           <>
