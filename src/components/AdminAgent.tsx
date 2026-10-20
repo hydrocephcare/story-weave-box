@@ -67,6 +67,16 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
   const [examQuery, setExamQuery] = useState("");
   const [problems, setProblems] = useState<Problem[]>([]);
   useEffect(() => { const read = () => setProblems(recentProblems()); read(); const t = window.setInterval(read, 2000); return () => window.clearInterval(t); }, []);
+  // Auto-run on: a new problem is looked at and fixed by the assistant without being asked (once per distinct problem, at most three in a row)
+  const autoFixed = useRef<Set<string>>(new Set());
+  useEffect(() => {
+    if (!world?.autorun || busy || !problems.length || autoFixed.current.size >= 3) return;
+    const fresh = problems.find((p) => !autoFixed.current.has(p.what));
+    if (!fresh) return;
+    autoFixed.current.add(fresh.what);
+    void send("Explain the last error and fix it");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [problems, world?.autorun, busy]);
   const [listening, setListening] = useState(false);
   const recognition = useRef<any>(null);
   const [revising, setRevising] = useState<number | null>(null);
@@ -183,7 +193,7 @@ export default function AdminAgent({ compact = false }: { compact?: boolean }) {
     // the pasted text stays with the task: when you answer a question of mine ("which unit?") the text is still what gets published
     if (att) { lastSource.current = att; try { sessionStorage.setItem("ompath_agent_source", att.slice(0, 200000)); } catch { /* storage blocked */ } }
     const carried = lastSource.current || (() => { try { return sessionStorage.getItem("ompath_agent_source") || ""; } catch { return ""; } })();
-    const source = att || (raw.length < 300 && carried ? carried : raw); // the text the writing jobs work on
+    const source = att || (raw.length < 300 && carried && !/explain the last error/i.test(raw) ? carried : raw); // the text the writing jobs work on
     const intent = att ? `${raw} [pasted text attached: ${att.length} characters, beginning "${att.slice(0, 160).replace(/\s+/g, " ")}"]` : raw;
     setBusy(true); setError(""); setPlan(null);
     const sent = history();
