@@ -72,8 +72,7 @@
      "parts": [
       {
        "l": "a",
-       "text": "Explain how heat is produced in the human body.",
-       "marks": 6
+       "text": "Explain how heat is produced in the human body."
       }
      ]
     }
@@ -90,13 +89,11 @@
      "parts": [
       {
        "l": "b",
-       "text": "Describe the mechanisms by which heat is lost.",
-       "marks": 4
+       "text": "Describe the mechanisms by which heat is lost."
       },
       {
        "l": "c",
-       "text": "Discuss the clinical consequences of fever, hypothermia, and hyperthermia",
-       "marks": 4
+       "text": "Discuss the clinical consequences of fever, hypothermia, and hyperthermia"
       }
      ]
     },
@@ -107,13 +104,11 @@
      "parts": [
       {
        "l": "a",
-       "text": "Describe the visual pathway from the retina to the visual cortex.",
-       "marks": 10
+       "text": "Describe the visual pathway from the retina to the visual cortex."
       },
       {
        "l": "b",
-       "text": "Explain the role of the cochlea in hearing.",
-       "marks": 10
+       "text": "Explain the role of the cochlea in hearing."
       }
      ]
     },
@@ -124,13 +119,11 @@
      "parts": [
       {
        "l": "a",
-       "text": "Explain the physiology of taste and smell.",
-       "marks": 10
+       "text": "Explain the physiology of taste and smell."
       },
       {
        "l": "b",
-       "text": "Discuss the role of oral sensory receptors (pain, temperature, pressure, tooth sensation) in oral health practice.",
-       "marks": 10
+       "text": "Discuss the role of oral sensory receptors (pain, temperature, pressure, tooth sensation) in oral health practice."
       }
      ]
     }

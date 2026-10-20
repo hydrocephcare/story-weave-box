@@ -70,6 +70,75 @@
     {
      "t": "p",
      "text": "Answer Question ONE and any other ONE question (Each question carries 20 Marks.)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "State the normal body temperatures and explain the role of the hypothalamus in regulating body temperature."
+      },
+      {
+       "l": "b",
+       "text": "Define fever and describe any four signs or changes that occur during fever."
+      },
+      {
+       "l": "i",
+       "text": "Excessive heat on the body"
+      },
+      {
+       "l": "ii",
+       "text": "Excessive cold on the body"
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe how the eye enables a person to see."
+      },
+      {
+       "l": "b",
+       "text": "Explain how sound is transmitted from the ear to the brain for hearing to occur."
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the physiology of taste and smell."
+      },
+      {
+       "l": "b",
+       "text": "Explain the importance of the following sensory receptors in the skin:"
+      },
+      {
+       "l": "i",
+       "text": "Pressure receptors"
+      },
+      {
+       "l": "ii",
+       "text": "Temperature receptors"
+      },
+      {
+       "l": "iii",
+       "text": "Pain receptors"
+      },
+      {
+       "l": "iv",
+       "text": "Touch sensory receptors"
+      }
+     ]
     }
    ],
    "footer": "Paper One"
@@ -85,6 +154,79 @@
     {
      "t": "p",
      "text": "Answer Question ONE and any other ONE question (Each question carries 20 Marks.)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "State the normal body temperature and explain the role of the hypothalamus in regulating body temperature."
+      },
+      {
+       "l": "b",
+       "text": "Define fever and describe any four signs or changes that occur during fever."
+      },
+      {
+       "l": "c",
+       "text": "Explain the effects of:"
+      },
+      {
+       "l": "i",
+       "text": "Excessive heat on the body."
+      },
+      {
+       "l": "ii",
+       "text": "Excessive cold on the body."
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe how the eye enables a person to see."
+      },
+      {
+       "l": "b",
+       "text": "Explain how sound is transmitted from the ear to the brain for hearing to occur."
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the physiology of taste and smell."
+      },
+      {
+       "l": "b",
+       "text": "Explain the importance of the following sensory receptors in the oral cavity:"
+      },
+      {
+       "l": "i",
+       "text": "Pressure receptors"
+      },
+      {
+       "l": "ii",
+       "text": "Temperature receptors"
+      },
+      {
+       "l": "iii",
+       "text": "Pain receptors"
+      },
+      {
+       "l": "iv",
+       "text": "Tooth sensory receptors"
+      }
+     ]
     }
    ],
    "footer": "Paper One"

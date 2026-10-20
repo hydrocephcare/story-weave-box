@@ -1,0 +1,94 @@
+{
+ "slug": "dfh2103-community-health-ii-main-exam-2018-2019",
+ "title": "Community Health II (DFH2103): Main Exam, Fri 29th March, 2019 2.00pm",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Community Health",
+ "programme": "Diploma / certificate in Health Record and Information Technology",
+ "examTitle": "University Examination 2018 / 2019",
+ "unitCode": "DFH2103",
+ "unitTitle": "Community Health II",
+ "date": "Fri 29th March, 2019 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B.",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "p",
+     "text": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B."
+    },
+    {
+     "t": "h",
+     "text": "SECTION A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define the following terms as used in community health. (5 Marks)",
+     "parts": [
+      {
+       "l": "i",
+       "text": "Advocacy."
+      },
+      {
+       "l": "ii",
+       "text": "Primary Health Care."
+      },
+      {
+       "l": "iii",
+       "text": "Social determinants of health."
+      },
+      {
+       "l": "iv",
+       "text": "Burden of disease."
+      },
+      {
+       "l": "v",
+       "text": "Community participation."
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Outline the guiding principles in the implementation of the community health strategy. (5 Marks)",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe the main constitutional articles that have implications on community health. (5 Marks)",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Highlight the key PHC elements under the Alma-Ata declaration. (5 Marks)",
+     "marks": 5
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [],
+   "footer": "Paper One"
+  },
+  {
+   "n": 3,
+   "items": [],
+   "footer": "Paper One"
+  },
+  {
+   "n": 4,
+   "items": [],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": false,
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
+}

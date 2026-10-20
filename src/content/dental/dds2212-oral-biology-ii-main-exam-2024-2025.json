@@ -73,6 +73,28 @@
        "marks": 10
       }
      ]
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Classify dental caries according to the rate of progression.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Outline G.V.Black's dental caries classification.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Explain the risk factors of dental caries.",
+       "marks": 10
+      }
+     ]
     }
    ],
    "footer": "Paper One"

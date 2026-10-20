@@ -24,6 +24,40 @@
     },
     {
      "t": "q",
+     "n": "1",
+     "parts": [
+      {
+       "l": "a",
+       "text": "List the principles of development in experimental embryology.",
+       "marks": 9
+      },
+      {
+       "l": "b",
+       "text": "State the process of fertilization.",
+       "marks": 4
+      }
+     ],
+     "text": ""
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Give factors that are likely to cause osteoporosis.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Identify four (4) stages of a cell division cycle.",
+       "marks": 4
+      }
+     ],
+     "text": ""
+    },
+    {
+     "t": "q",
      "n": "3",
      "text": "Write notes on pulmonary circulation.",
      "marks": 5
@@ -42,15 +76,30 @@
     {
      "t": "q",
      "n": "5",
-     "text": "Explain the four (4) major divisions of the nervous system.",
-     "marks": 20
+     "text": "Explain the four (4) major divisions of the nervous system."
     }
    ],
    "footer": "Paper One"
   },
   {
    "n": 2,
-   "items": [],
+   "items": [
+    {
+     "t": "q",
+     "n": "6",
+     "parts": [
+      {
+       "l": "a",
+       "text": "State the structure and functions of the cartilage."
+      },
+      {
+       "l": "b",
+       "text": "Elaborate on the eukaryotic cells replication process via mitosis."
+      }
+     ],
+     "text": ""
+    }
+   ],
    "footer": "Paper One"
   }
  ],

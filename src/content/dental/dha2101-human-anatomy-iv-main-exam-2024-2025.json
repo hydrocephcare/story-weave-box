@@ -54,24 +54,22 @@
     {
      "t": "q",
      "n": "1",
-     "text": "Explain the development process of connective tissues in the human body",
-     "marks": 20
+     "text": "Explain the development process of connective tissues in the human body"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Write notes on the stages of development of cartilage",
-     "marks": 20
+     "text": "Write notes on the stages of development of cartilage"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Discuss the functions of amniotic fluid in embryonic development",
-     "marks": 20
+     "text": "Discuss the functions of amniotic fluid in embryonic development"
     }
    ],
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": false,
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
 }

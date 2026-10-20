@@ -1,0 +1,120 @@
+{
+ "slug": "dds2111-human-physiology-main-exam-2023-2024",
+ "title": "Human Physiology (DDS2111): Main Exam, Mon 15th July, 2024 11.00am",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2023 / 2024",
+ "unitCode": "DDS2111",
+ "unitTitle": "Human Physiology",
+ "date": "Mon 15th July, 2024 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO IN SECTION B.",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "The skin is composed of three (3) layers. Describe these layers."
+      },
+      {
+       "l": "b",
+       "text": "Outline four (4) main types of cells that comprise the epidermis."
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the main types of human sweat glands."
+      },
+      {
+       "l": "b",
+       "text": "State the functions of human sweat glands."
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Match the following items in columns A to B"
+      },
+      {
+       "l": "b",
+       "text": "Explain the benefits of melanin in the human body."
+      }
+     ]
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain mechanisms of heat loss in the human body.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Briefly discuss adverse effects of hypothermia.",
+       "marks": 10
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Outline major senses of the human body.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Describe the physiology of dental pain.",
+       "marks": 15
+      }
+     ]
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true
+}

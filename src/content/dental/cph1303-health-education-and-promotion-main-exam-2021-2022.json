@@ -21,6 +21,58 @@
      "t": "h",
      "text": "Section A",
      "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terms:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Public health education",
+         "marks": 2.5
+        },
+        {
+         "l": "ii",
+         "text": "Health education",
+         "marks": 2.5
+        },
+        {
+         "l": "iii",
+         "text": "Promotion",
+         "marks": 2.5
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain two aims of health education"
+      },
+      {
+       "l": "c",
+       "text": "Highlight four key principles of health promotion"
+      },
+      {
+       "l": "d",
+       "text": "Describe extended parallel process model"
+      },
+      {
+       "l": "e",
+       "text": "State three terms use for communication and health education activities."
+      },
+      {
+       "l": "f",
+       "text": "State six areas where health education and promotion take place."
+      },
+      {
+       "l": "g",
+       "text": "Outline six fundamental conditions and resources needed for good health."
+      }
+     ]
     }
    ],
    "footer": "Paper One"
@@ -36,20 +88,17 @@
     {
      "t": "q",
      "n": "2",
-     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion.",
-     "marks": 15
+     "text": "Discuss in detail the Jakarta Declaration five priorities for health promotion."
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Discuss Components of communication.",
-     "marks": 15
+     "text": "Discuss Components of communication."
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Discuss the principles of health education.",
-     "marks": 15
+     "text": "Discuss the principles of health education."
     }
    ],
    "footer": "Paper One"

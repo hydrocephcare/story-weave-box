@@ -1,11 +1,14 @@
 import { Suspense, lazy, useEffect, useState } from "react";
 import { OPEN_SEARCH_EVENT } from "@/lib/searchEvents";
+import { useTrack } from "@/lib/courseTrack";
 
 const Palette = lazy(() => import("@/components/SearchPalette"));
+const DentalSearch = lazy(() => import("@/components/dental/DentalSearch"));
 
 /** Keeps the search window (and all the search code behind it) out of the first download: it loads the first time search is opened. */
 export default function SearchGate() {
   const [loaded, setLoaded] = useState(false);
+  const track = useTrack();
   useEffect(() => {
     if (loaded) return;
     let pending: string | null = null;
@@ -19,5 +22,5 @@ export default function SearchGate() {
       if (pending !== null) (window as unknown as { __ompathSearchPending?: string }).__ompathSearchPending = pending;
     };
   }, [loaded]);
-  return loaded ? <Suspense fallback={null}><Palette /></Suspense> : null;
+  return loaded ? <Suspense fallback={null}>{track === "dental" ? <DentalSearch /> : <Palette />}</Suspense> : null;
 }

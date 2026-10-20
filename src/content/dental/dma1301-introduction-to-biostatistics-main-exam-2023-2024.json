@@ -51,8 +51,7 @@
       },
       {
        "l": "ii",
-       "text": "Stratified sampling",
-       "marks": 6
+       "text": "Stratified sampling"
       },
       {
        "l": "iii",
@@ -88,14 +87,30 @@
       },
       {
        "l": "iii",
-       "text": "Third and seventh percentile.",
-       "marks": 10
+       "text": "Third and seventh percentile."
       }
      ]
     },
     {
      "t": "h",
      "text": "QUESTION TWO"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "An examination of 11 applicants for an accountant post was taken by a finance company. the Marks obtained by the applicant in the reasoning and aptitude test are given below. Calculate spearman's rank correlation coefficient. applicant A B C D E F G H I J K Reasoning test 20 50 28 25 70 90 76 45 30 19 26 Aptitude test 30 60 50 40 85 90 56 82 42 31 49",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "The height of football players in various teams was measured and found to have been distributed with M and a standard deviation Ω A random sample of 100 students was taken and 95% confidence interval for the population mean was found to be between 160 cm and 170cm. i) Estimate the sample mean. ii) Estimate the standard deviation. 99% confidence interval for the population mean.",
+       "marks": 10
+      }
+     ]
     }
    ],
    "footer": "Paper One"

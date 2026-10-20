@@ -65,5 +65,6 @@
    "footer": "Paper One"
   }
  ],
- "complete": true
+ "complete": false,
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
 }

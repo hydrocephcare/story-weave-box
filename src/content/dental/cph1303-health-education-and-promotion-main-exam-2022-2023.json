@@ -45,27 +45,23 @@
      "parts": [
       {
        "l": "a",
-       "text": "Health (WHO, 1948)",
-       "marks": 2.5
+       "text": "Health (WHO, 1948)"
       },
       {
        "l": "b",
-       "text": "Health education",
-       "marks": 2.5
+       "text": "Health education"
       }
      ]
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Identify five priority areas for health promotion",
-     "marks": 5
+     "text": "Identify five priority areas for health promotion"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Explain the basic strategies for health promotion",
-     "marks": 5
+     "text": "Explain the basic strategies for health promotion"
     }
    ],
    "footer": "Paper One"

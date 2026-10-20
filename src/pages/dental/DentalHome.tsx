@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { setTrack } from "@/lib/courseTrack";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, FileText } from "lucide-react";
 import { PAPER_INDEX, paperPath } from "@/lib/dentalPapers";
 
 /** /dental: the home of the dental section. It is its own part of the site, with its own menu, pages and sitemap. */
 export default function DentalHome() {
+  const { user } = useAuth();
+  const navigate = useNavigate();
   const units = new Map<string, number>();
   for (const p of PAPER_INDEX) units.set(p.unitTitle, (units.get(p.unitTitle) ?? 0) + 1);
   const recent = [...PAPER_INDEX].sort((a, b) => String(b.year).localeCompare(String(a.year))).slice(0, 6);
@@ -41,6 +45,9 @@ export default function DentalHome() {
           </ul>
         </section>
       )}
+      <p className="mt-14 text-sm text-muted-foreground">
+        {user ? <>Not a dental student? <Link to="/account" className="font-bold text-primary hover:underline">Change your course</Link>.</> : <>Studying medicine? <button type="button" onClick={() => { setTrack("medicine"); navigate("/"); }} className="font-bold text-primary hover:underline">Go to the MBChB site</button>.</>}
+      </p>
     </main>
   );
 }

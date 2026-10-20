@@ -9,7 +9,7 @@
   "year": "2024/2025",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 3,
+  "questions": 6,
   "complete": false,
   "university": "Mount Kenya University",
   "group": "Dental Sciences"
@@ -25,7 +25,7 @@
   "sitting": "Main Exam",
   "duration": "2 Hours",
   "questions": 7,
-  "complete": true,
+  "complete": false,
   "university": "Mount Kenya University",
   "group": "Dental Sciences"
  },
@@ -70,6 +70,21 @@
   "sitting": "Main Exam",
   "duration": "2 Hours",
   "questions": 7,
+  "complete": false,
+  "university": "Mount Kenya University",
+  "group": "Dental Sciences"
+ },
+ {
+  "slug": "dds2111-human-physiology-main-exam-2023-2024",
+  "title": "Human Physiology (DDS2111): Main Exam, Mon 15th July, 2024 11.00am",
+  "unitCode": "DDS2111",
+  "unitTitle": "Human Physiology",
+  "programme": "Diploma in Community Oral Health",
+  "date": "Mon 15th July, 2024 11.00am",
+  "year": "2023/2024",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Sciences"
@@ -84,7 +99,7 @@
   "year": "2024/2025",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 2,
+  "questions": 6,
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Sciences"
@@ -114,7 +129,7 @@
   "year": "2022/2023",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 2,
+  "questions": 3,
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Sciences"
@@ -159,7 +174,7 @@
   "year": "2024/2025",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 6,
+  "questions": 7,
   "complete": false,
   "university": "Mount Kenya University",
   "group": "Dental Sciences"
@@ -189,7 +204,7 @@
   "year": "2025/2026",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 5,
+  "questions": 11,
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Clinical Sciences"
@@ -235,7 +250,7 @@
   "sitting": "Main Exam",
   "duration": "2 Hours",
   "questions": 7,
-  "complete": true,
+  "complete": false,
   "university": "Mount Kenya University",
   "group": "Community Health and Biostatistics"
  },
@@ -296,6 +311,21 @@
   "duration": "2 Hours",
   "questions": 11,
   "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Community Health and Biostatistics"
+ },
+ {
+  "slug": "dfh2103-community-health-ii-main-exam-2018-2019",
+  "title": "Community Health II (DFH2103): Main Exam, Fri 29th March, 2019 2.00pm",
+  "unitCode": "DFH2103",
+  "unitTitle": "Community Health II",
+  "programme": "Diploma / certificate in Health Record and Information Technology",
+  "date": "Fri 29th March, 2019 2.00pm",
+  "year": "2018/2019",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 4,
+  "complete": false,
   "university": "Mount Kenya University",
   "group": "Community Health and Biostatistics"
  },
@@ -399,7 +429,7 @@
   "year": "2021/2022",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 3,
+  "questions": 4,
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community Health and Biostatistics"
@@ -684,7 +714,7 @@
   "year": "2023/2024",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 6,
+  "questions": 7,
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Natural Sciences"
@@ -703,5 +733,20 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Nutrition and Dietetics"
+ },
+ {
+  "slug": "dma-1301-biostatistics-main-exam-2017-2018",
+  "title": "Biostatistics (DMA 1301): Main Exam, Wed 28th July, 2021 11.00am",
+  "unitCode": "DMA 1301",
+  "unitTitle": "Biostatistics",
+  "programme": "Diploma in Dental Technology",
+  "date": "Wed 28th July, 2021 11.00am",
+  "year": "2017/2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 3,
+  "complete": false,
+  "university": "University Examinations 2020 / 2021",
+  "group": "Other units"
  }
 ]

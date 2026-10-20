@@ -13,6 +13,7 @@ export const COUNTRIES = ["Kenya", "Uganda", "Tanzania", "Rwanda", "Nigeria", "G
 export const COURSES = [
   "MBChB / MBBS / MD — Medicine & Surgery",
   "BDS — Dental Surgery",
+  "Diploma — Dental Health / Community Oral Health",
   "BSc Nursing",
   "BSc Clinical Medicine",
   "BSc Pharmacy",

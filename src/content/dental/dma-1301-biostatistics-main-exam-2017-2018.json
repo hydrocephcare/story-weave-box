@@ -1,0 +1,118 @@
+{
+ "slug": "dma-1301-biostatistics-main-exam-2017-2018",
+ "title": "Biostatistics (DMA 1301): Main Exam, Wed 28th July, 2021 11.00am",
+ "university": "University Examinations 2020 / 2021",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Biological Sciences",
+ "programme": "Diploma in Dental Technology",
+ "examTitle": "University Examination 2017 / 2018",
+ "unitCode": "DMA 1301",
+ "unitTitle": "Biostatistics",
+ "date": "Wed 28th July, 2021 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "QUESTION ONE",
+     "parts": [
+      {
+       "l": "a",
+       "text": "State five types of probability sampling techniques.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Explain the importance of biostatistics to Health studies.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Explain different types of modes.",
+       "marks": 3
+      },
+      {
+       "l": "d",
+       "text": "Distinguish between standard deviation and variance.",
+       "marks": 2
+      },
+      {
+       "l": "e",
+       "text": "Using the following values 40, 50, 60, 70,80,90,100,60,65,72 Calculate;",
+       "marks": null
+      },
+      {
+       "l": "i",
+       "text": "Mean",
+       "marks": 2
+      },
+      {
+       "l": "ii",
+       "text": "Mode",
+       "marks": 2
+      },
+      {
+       "l": "iii",
+       "text": "Median",
+       "marks": 2
+      },
+      {
+       "l": "iv",
+       "text": "Mean absolute deviation",
+       "marks": 4
+      }
+     ]
+    }
+   ],
+   "footer": ""
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "QUESTION ONE (continued)",
+     "parts": [
+      {
+       "l": "f",
+       "text": "A machine produces the following number of defects in each successive period of five minutes: 14 21 24 22 27 24 26 5 12 22 23 21 22 28 16 23 23 25 24 5",
+       "marks": null
+      },
+      {
+       "l": "g",
+       "text": "Construct a frequency distribution from these data using seven class intervals of equal width.",
+       "marks": null
+      }
+     ]
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "QUESTION TWO",
+     "parts": [
+      {
+       "l": "a",
+       "text": "The following data pertain to Marks obtained by 120 students of class level in biostatistics. Marks 30 - 39 40 - 49 50 - 59 60 - 69 70 - 79 80 - 89 Number of students 1 11 12 43 11 3 Calculate (i) the mean (ii) the median (iii) Mode (iv) the Interquartile deviation (v) standard deviation",
+       "marks": null
+      }
+     ]
+    }
+   ],
+   "footer": ""
+  },
+  {
+   "n": 3,
+   "items": [],
+   "footer": ""
+  }
+ ],
+ "complete": false,
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
+}

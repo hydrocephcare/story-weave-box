@@ -26,7 +26,6 @@
      "t": "q",
      "n": "1",
      "text": "Define the following terms:",
-     "marks": 5,
      "parts": [
       {
        "l": "a",
@@ -46,46 +45,39 @@
       },
       {
        "l": "e",
-       "text": "Metabolic Rate",
-       "marks": 5
+       "text": "Metabolic Rate"
       }
      ]
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Draw a well labeled diagram showing taste zone.",
-     "marks": 4
+     "text": "Draw a well labeled diagram showing taste zone."
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Classify hypothermia.",
-     "marks": 4
+     "text": "Classify hypothermia."
     },
     {
      "t": "q",
      "n": "4",
-     "text": "Briefly explain how shivering takes place in heat production.",
-     "marks": 4
+     "text": "Briefly explain how shivering takes place in heat production."
     },
     {
      "t": "q",
      "n": "5",
-     "text": "Explain the function of olfactory cilia of the nose.",
-     "marks": 3
+     "text": "Explain the function of olfactory cilia of the nose."
     },
     {
      "t": "q",
      "n": "6",
-     "text": "Draw a well labeled diagram showing parts of the skin.",
-     "marks": 4
+     "text": "Draw a well labeled diagram showing parts of the skin."
     },
     {
      "t": "q",
      "n": "7",
-     "text": "Write short notes on apocrine sweat glands.",
-     "marks": 4
+     "text": "Write short notes on apocrine sweat glands."
     }
    ],
    "footer": "Paper One"
@@ -96,8 +88,7 @@
     {
      "t": "q",
      "n": "8",
-     "text": "Briefly explain two parts of the ear, indicating their function.",
-     "marks": 4
+     "text": "Briefly explain two parts of the ear, indicating their function."
     },
     {
      "t": "h",
@@ -107,20 +98,17 @@
     {
      "t": "q",
      "n": "1",
-     "text": "Discuss functions of the skin.",
-     "marks": 15
+     "text": "Discuss functions of the skin."
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Body temperature regulation occurs in two way; heat production and heat loss, disc",
-     "marks": 15
+     "text": "Body temperature regulation occurs in two way; heat production and heat loss, disc"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "Explain the skin appendages.",
-     "marks": 15
+     "text": "Explain the skin appendages."
     }
    ],
    "footer": "Paper One"

@@ -39,5 +39,5 @@ const files = import.meta.glob("../content/dental/*.json", { import: "default" }
 export const loadPaper = async (slug: string): Promise<DentalPaper | null> => { const f = files[`../content/dental/${slug}.json`]; return f ? f() : null; };
 
 export const questionCount = (p: DentalPaper) => p.pages.reduce((n, pg) => n + pg.items.filter((i) => i.t === "q").length, 0);
-export const totalMarks = (p: DentalPaper) => p.pages.reduce((n, pg) => n + pg.items.reduce((m, i) => m + (i.marks ?? i.parts?.reduce((x, q) => x + (q.marks ?? 0), 0) ?? 0), 0), 0);
+export const totalMarks = (p: DentalPaper) => p.pages.reduce((n, pg) => n + pg.items.reduce((m, i) => m + (i.t !== "q" ? 0 : i.parts?.length ? i.parts.reduce((x, q) => x + (q.marks ?? 0), 0) + (i.marks ?? 0) : i.marks ?? 0), 0), 0);
 export const paperPath = (slug: string) => `/dental/papers/${slug}`;

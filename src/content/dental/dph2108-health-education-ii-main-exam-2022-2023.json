@@ -29,43 +29,37 @@
      "parts": [
       {
        "l": "a",
-       "text": "Community",
-       "marks": 2
+       "text": "Community"
       },
       {
        "l": "b",
-       "text": "Illness",
-       "marks": 2
+       "text": "Illness"
       },
       {
        "l": "c",
-       "text": "Health",
-       "marks": 2
+       "text": "Health"
       }
      ]
     },
     {
      "t": "q",
      "n": "2",
-     "text": "Highlight the principles of health education.",
-     "marks": 6
+     "text": "Highlight the principles of health education."
     },
     {
      "t": "q",
      "n": "3",
-     "text": "State the factors that suggest the communities are active in participation",
-     "marks": 6
+     "text": "State the factors that suggest the communities are active in participation"
     },
     {
      "t": "q",
      "n": "4",
-     "text": "Explain components of communication.",
-     "marks": 6
+     "text": "Explain components of communication."
     }
    ],
    "footer": "Paper One"
   }
  ],
  "complete": false,
- "note": "Only page 1 provided; Section B pages are missing."
+ "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing."
 }
