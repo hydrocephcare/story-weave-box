@@ -6,6 +6,7 @@ import AdSlot from "@/components/AdSlot";
 import SideAds from "@/components/SideAds";
 import { isPaperTitle, tileColors, usableImage } from "@/lib/blogImage";
 import BooksForPage from "@/components/BooksForPage";
+import { ArticleNav } from "@/components/NoteNavCards";
 import ReadingBreak, { planBreaks, ProgressiveList } from "@/components/ReadingBreak";
 import SponsorLine from "@/components/SponsorLine";
 import StudyTools from "@/components/StudyTools";
@@ -2234,6 +2235,7 @@ export default function BlogPost() {
               </section>
             )}
 
+            {!slideDeck && <ArticleNav id={article.id} category={article.category} createdAt={(article as any).created_at} />}
             {(article as any).comments_enabled !== false && <ArticleComments articleId={article.id} />}
             </PasswordGate>
           </article>
