@@ -34,13 +34,13 @@ window.addEventListener("vite:preloadError", (e) => {
 });
 window.addEventListener("error", (e) => {
   const msg = String((e as ErrorEvent).message || "");
-  if (/dynamically imported module|Importing a module script failed|ChunkLoadError/i.test(msg)) {
+  if (/dynamically imported module|Importing a module script failed|ChunkLoadError|Failed to load module script|MIME type|Unable to preload CSS/i.test(msg)) {
     tryReloadOnce("error:" + msg.slice(0, 80));
   }
 });
 window.addEventListener("unhandledrejection", (e) => {
   const msg = String((e as PromiseRejectionEvent).reason?.message || (e as PromiseRejectionEvent).reason || "");
-  if (/dynamically imported module|Importing a module script failed|ChunkLoadError/i.test(msg)) {
+  if (/dynamically imported module|Importing a module script failed|ChunkLoadError|Failed to load module script|MIME type|Unable to preload CSS/i.test(msg)) {
     tryReloadOnce("rejection:" + msg.slice(0, 80));
   }
 });

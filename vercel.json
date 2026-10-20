@@ -530,7 +530,7 @@
       "destination": "/api/og-meta?path=/contests/:slug/round/:path*"
     },
     {
-      "source": "/(.*)",
+      "source": "/((?!assets/).*)",
       "destination": "/index.html"
     }
   ],

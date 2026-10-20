@@ -1,10 +1,10 @@
-// OmpathStudy Service Worker - v9.
+// OmpathStudy Service Worker - v11.
 //  - Pages: network-first, so a deploy is picked up at once; the cached copy is only for offline.
 //  - Built files in /assets/: cache-first. Their names contain a fingerprint of their content, so a cached file is never out of date,
 //    and a returning student gets the whole app from their phone instead of downloading it again.
 //  - Database reads: network-first, but if the network is slow (over 3 seconds) and there is a saved copy, the saved copy is shown at once.
 //    An empty answer is never saved, so a database migration cannot blank the site.
-const CACHE_NAME = "ompath-v10";
+const CACHE_NAME = "ompath-v11"; // bumped: drops caches that held an HTML page under a /assets/ script name (white screen)
 const API_CACHE = "ompath-api-v6";
 const SLOW_MS = 3000;
 const STATIC_ASSETS = ["/", "/index.html", "/manifest.json"];
@@ -21,7 +21,9 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-const keep = (cacheName, request, response) => { if (response && response.ok) { const copy = response.clone(); caches.open(cacheName).then((c) => c.put(request, copy)).catch(() => undefined); } return response; };
+// A missing build file used to come back as the HTML app page with status 200; caching that under a .js/.css name broke the site for good.
+const isHtml = (response) => (response.headers.get("content-type") || "").includes("text/html");
+const keep = (cacheName, request, response) => { if (response && response.ok && (request.mode === "navigate" || !isHtml(response))) { const copy = response.clone(); caches.open(cacheName).then((c) => c.put(request, copy)).catch(() => undefined); } return response; };
 
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
@@ -67,7 +69,7 @@ self.addEventListener("fetch", (event) => {
   // Fingerprinted app files: cache-first
   if (url.origin === self.location.origin && url.pathname.startsWith("/assets/")) {
     event.respondWith(
-      caches.match(event.request).then((cached) => cached || fetch(event.request).then((response) => keep(CACHE_NAME, event.request, response)).catch(() => new Response("", { status: 503 })))
+      caches.match(event.request).then((cached) => (cached && !isHtml(cached) ? cached : fetch(event.request).then((response) => keep(CACHE_NAME, event.request, response))))
     );
     return;
   }

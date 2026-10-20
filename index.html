@@ -4,6 +4,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // If the app's own script or stylesheet fails to load (stale cache after a deploy), the page stays white.
+      // Clear the offline cache and reload once, before the app code (which has its own recovery) ever runs.
+      window.addEventListener("error", function (e) {
+        var t = e.target;
+        if (!t || !(t.tagName === "SCRIPT" || t.tagName === "LINK") || !/\/assets\//.test(t.src || t.href || "")) return;
+        try {
+          if (Date.now() - Number(sessionStorage.getItem("__boot_reload_at__") || 0) < 15000) return;
+          sessionStorage.setItem("__boot_reload_at__", String(Date.now()));
+        } catch (_) {}
+        var reload = function () { location.reload(); };
+        var jobs = [];
+        if (window.caches) jobs.push(caches.keys().then(function (k) { return Promise.all(k.map(function (n) { return caches.delete(n); })); }));
+        if (navigator.serviceWorker) jobs.push(navigator.serviceWorker.getRegistrations().then(function (r) { return Promise.all(r.map(function (x) { return x.unregister(); })); }));
+        Promise.all(jobs).then(reload, reload);
+      }, true);
+    </script>
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
     <title>OmpathStudy | Medical Notes, MCQs & Exams</title>
