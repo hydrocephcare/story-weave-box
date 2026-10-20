@@ -3,7 +3,7 @@
 // scenarios with wrong options that are real alternatives of the same kind and the same length; a rewrite is accepted only if it still tests the same fact.
 import { chatText } from "./aiChat.js";
 
-const ABSOLUTE = /\b(always|never|only|all|none|completely|entirely|must|cannot|invariably|exclusively|solely)\b/i;
+const ABSOLUTE = /\b(always|never|only|completely|entirely|invariably|exclusively|solely)\b/i;
 const SCENARIO = /(year[- ]old|presents|presented|brought|complains|admitted|examination|on examination|history of|found to)/i;
 const words = (t) => new Set(String(t).toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/\s+/).filter((w) => w.length > 3));
 
@@ -22,7 +22,7 @@ export function weakness(q) {
   if (stem.length < 70 && /^(what|which)\b/i.test(stem.trim()) && !SCENARIO.test(stem)) why.push("recall");
   // the right option repeats most of the stem's own words (a giveaway)
   const sw = words(stem), cw = words(o[q.correct_answer]);
-  if (cw.size >= 3) { let n = 0; for (const w of cw) if (sw.has(w)) n++; if (n / cw.size >= 0.6) why.push("echo"); }
+  if (cw.size >= 3) { let n = 0; for (const w of cw) if (sw.has(w)) n++; if (n / cw.size >= 0.75) why.push("echo"); }
   return why;
 }
 
@@ -41,11 +41,12 @@ Return ONLY JSON: {"items":[{"i":0,"question":"...","options":["...","...","..."
 const lengthsOk = (opts, ci) => {
   const lens = opts.map((x) => x.length), c = lens[ci];
   const others = lens.filter((_, i) => i !== ci);
-  return c <= Math.max(...others) * 1.12 + 4 && c >= Math.min(...others) * 0.6;
+  return c <= Math.max(...others) * 1.2 + 4 && c >= Math.min(...others) * 0.55;
 };
 
 /** Rewrites the given weak questions in one request. Returns an array the same length as `qs`: the better question, or null where the rewrite was not good enough. */
-export async function hardenBatch(env, qs, { subject = "", manual = false } = {}) {
+export async function hardenBatch(env, qs, { subject = "", manual = false, stats = {} } = {}) {
+  const no = (why) => { stats[why] = (stats[why] || 0) + 1; };
   if (!qs.length) return [];
   const body = qs.map((q, i) => `#${i}\nQUESTION: ${q.question}\nOPTIONS: ${q.options.map((o, k) => `${String.fromCharCode(65 + k)}) ${o}`).join(" | ")}\nCORRECT: ${String.fromCharCode(65 + q.correct_answer)}\nEXPLANATION: ${q.explanation || ""}`).join("\n\n");
   const raw = await chatText(env, [{ role: "system", content: SYSTEM }, { role: "user", content: `Subject: ${subject}\n\n${body}` }], { temperature: 0.5, maxTokens: 6000, timeoutMs: 80000, manual });
@@ -55,25 +56,27 @@ export async function hardenBatch(env, qs, { subject = "", manual = false } = {}
   const out = qs.map(() => null);
   for (const it of items) {
     const i = Number(it?.i);
-    if (!Number.isInteger(i) || i < 0 || i >= qs.length) continue;
+    if (!Number.isInteger(i) || i < 0 || i >= qs.length) { no("badIndex"); continue; }
     const old = qs[i];
     const options = Array.isArray(it.options) ? it.options.map((x) => String(x).trim()) : [];
     const ci = Number(it.correct_answer);
-    if (options.length !== 4 || options.some((x) => !x) || !Number.isInteger(ci) || ci < 0 || ci > 3) continue;
-    if (new Set(options.map((x) => x.toLowerCase())).size !== 4 || options.some((x) => /all of the above|none of the above/i.test(x))) continue;
-    if (!lengthsOk(options, ci)) continue;
+    if (options.length !== 4 || options.some((x) => !x) || !Number.isInteger(ci) || ci < 0 || ci > 3) { no("shape"); continue; }
+    if (new Set(options.map((x) => x.toLowerCase())).size !== 4 || options.some((x) => /all of the above|none of the above/i.test(x))) { no("dupOrAll"); continue; }
+    if (!lengthsOk(options, ci)) { no("length"); continue; }
     // the same fact: the new right option must share enough words with the old right option (or the old explanation)
     const oldWords = words(`${old.options[old.correct_answer]}`), newWords = words(options[ci]);
     let shared = 0; for (const w of oldWords) if (newWords.has(w)) shared++;
     const ratio = oldWords.size ? shared / Math.min(oldWords.size, Math.max(newWords.size, 1)) : 0;
     const exp = words(`${old.explanation || ""} ${old.question}`); let inExp = 0; for (const w of newWords) if (exp.has(w)) inExp++;
-    if (ratio < 0.34 && !(newWords.size && inExp / newWords.size >= 0.5)) continue;
+    if (ratio < 0.34 && !(newWords.size && inExp / newWords.size >= 0.5)) { no("otherFact"); continue; }
     // the right answer must not sit in a predictable place
     const idx = [0, 1, 2, 3];
     for (let k = 3; k > 0; k--) { const j = Math.floor(Math.random() * (k + 1)); [idx[k], idx[j]] = [idx[j], idx[k]]; }
     const cand = { ...old, question: String(it.question || "").trim(), options: idx.map((k) => options[k]), correct_answer: idx.indexOf(ci), explanation: String(it.explanation || old.explanation || "").trim() };
-    if (cand.question.length < 20 || weakness(cand).filter((w) => w !== "recall").length) continue;
-    out[i] = cand;
+    if (cand.question.length < 20) { no("shortStem"); continue; }
+    const wk = weakness(cand).filter((w) => w !== "recall");
+    if (wk.length) { no("stillWeak:" + wk.join("+")); continue; }
+    no("accepted"); out[i] = cand;
   }
   return out;
 }
