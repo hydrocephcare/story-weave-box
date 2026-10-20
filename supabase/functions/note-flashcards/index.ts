@@ -104,7 +104,8 @@ serve(async (req) => {
       } catch (e) { lastErr = e instanceof Error ? e.message.slice(0, 120) : String(e); }
     }
     if (cards.length < 8 && upgrade) {
-      await supabase.from("flashcard_sets").update({ original_notes: JSON.stringify({ type: "note_flashcards", v: 2, kept: true, at: new Date().toISOString() }) }).eq("id", upgrade.id);
+      // the deck is kept as it is only when the AI answered but gave too little; when the AI was simply busy, it is tried again later
+      if (!lastErr) await supabase.from("flashcard_sets").update({ original_notes: JSON.stringify({ type: "note_flashcards", v: 2, kept: true, at: new Date().toISOString() }) }).eq("id", upgrade.id);
       return json({ success: true, status: "upgrade skipped", why: lastErr });
     }
     if (cards.length < 8) {
