@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggle from "./ThemeToggle";
 import NotificationsBell from "./NotificationsBell";
 import HeaderSearch from "./HeaderSearch";
+import TrackSwitch from "./TrackSwitch";
 import { useAuth } from "@/hooks/useAuth";
 import { useAllYears, useMyYear } from "@/hooks/useMyYear";
 
@@ -248,6 +249,7 @@ export default function Navbar() {
             </div>
 
             <HeaderSearch variant="desktop" />
+            <TrackSwitch />
 
             {menu.map((g, i) => <HoverMenu key={g.label} group={g} isActive={isActive} last={i === menu.length - 1} />)}
             <NotificationsBell />
@@ -272,6 +274,7 @@ export default function Navbar() {
 
                 <div className="flex flex-col overflow-y-auto h-[calc(100%-65px)]">
                   <div className="border-b border-white/10 px-3 py-3">
+                    <TrackSwitch className="mb-3" onSwitch={() => setSidebarOpen(false)} />
                     <HeaderSearch variant="mobile" onNavigate={() => setSidebarOpen(false)} />
                   </div>
 

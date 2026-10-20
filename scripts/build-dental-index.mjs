@@ -22,6 +22,10 @@ const index = papers.map((p) => ({
 })).sort((a, b) => order.indexOf(a.categorySlug) - order.indexOf(b.categorySlug) || a.unitTitle.localeCompare(b.unitTitle) || String(b.dateISO).localeCompare(String(a.dateISO)));
 fs.writeFileSync(path.join(root, "src/data/dentalPapers.json"), JSON.stringify(index, null, 1) + "\n");
 
+// every question's wording, for searching inside the papers: [slug, question number, text]
+const flat = (parts, stem) => (parts || []).flatMap((x) => [`${stem} ${x.l ? x.l + ") " : ""}${x.text}`.trim(), ...flat(x.parts, "")]);
+const qtext = papers.flatMap((p) => p.pages.flatMap((pg) => pg.items).filter((i) => i.t === "q").map((i) => [p.slug, i.n, [i.text, ...flat(i.parts, "")].join(" ").replace(/\s+/g, " ").trim().slice(0, 260)]));
+fs.writeFileSync(path.join(root, "src/data/dentalQuestions.json"), JSON.stringify(qtext));
 const today = new Date().toISOString().slice(0, 10);
 const urlset = (urls) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${u.loc}</loc><lastmod>${today}</lastmod><changefreq>${u.freq || "monthly"}</changefreq><priority>${u.pri || "0.6"}</priority></url>`).join("\n")}\n</urlset>\n`;
 const out = (name, body) => fs.writeFileSync(path.join(root, "public", name), body);

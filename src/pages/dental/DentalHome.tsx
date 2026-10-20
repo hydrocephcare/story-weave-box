@@ -3,6 +3,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { setTrack } from "@/lib/courseTrack";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, FileText } from "lucide-react";
+import DentalHomeExtras from "@/components/dental/DentalHomeExtras";
 import { CATEGORY_LIST, PAPER_INDEX, paperPath } from "@/lib/dentalPapers";
 
 /** /dental: the home of the dental section. It is its own part of the site, with its own menu, pages and sitemap. */
@@ -23,6 +24,8 @@ export default function DentalHome() {
       <div className="mt-6 flex flex-wrap gap-3">
         <Link to="/dental/papers" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground">Open past papers <ArrowRight className="h-4 w-4" /></Link>
       </div>
+      <DentalHomeExtras />
+
       <section className="mt-12" aria-label="Subjects">
         <h2 className="font-serif text-xl font-bold">Browse by subject</h2>
         <div className="mt-3 space-y-8">

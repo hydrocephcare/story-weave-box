@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, ChevronRight, FileText } from "lucide-react";
 import { CATEGORY_LIST, PAPER_INDEX, categoryBlurb, paperPath } from "@/lib/dentalPapers";
 import { repeatedQuestions, type Repeat } from "@/lib/dentalRepeats";
+import { bridgeFor } from "@/lib/dentalBridge";
+import DentalMock from "@/components/dental/DentalMock";
 
 const SITE = "https://www.ompathstudy.com";
 
@@ -57,6 +59,7 @@ export function DentalUnit() {
   const { unit = "" } = useParams();
   const rows = PAPER_INDEX.filter((p) => p.unitSlug === unit);
   const [repeats, setRepeats] = useState<Repeat[] | null>(null);
+  const [mock, setMock] = useState(false);
   useEffect(() => { let on = true; setRepeats(null); if (rows.length > 1) void repeatedQuestions(unit).then((r) => { if (on) setRepeats(r); }); return () => { on = false; }; }, [unit]); // eslint-disable-line react-hooks/exhaustive-deps
   if (!rows.length) return <div className="mx-auto max-w-xl px-5 py-20 text-center"><h1 className="font-serif text-3xl font-bold">Unit not found</h1><Link to="/dental/papers" className="mt-5 inline-block font-bold text-primary hover:underline">All dental past papers →</Link></div>;
   const first = rows[0]; const cat = CATEGORY_LIST.find((c) => c.slug === first.categorySlug);
@@ -76,6 +79,9 @@ export function DentalUnit() {
       <h1 className="mt-1 font-serif text-3xl font-bold sm:text-4xl">{first.unitTitle}</h1>
       <p className="mt-2 text-[15px] text-muted-foreground">{rows.length} past paper{rows.length === 1 ? "" : "s"}{years.length ? ` · ${years[0]}${years.length > 1 ? ` to ${years[years.length - 1]}` : ""}` : ""} · {programmes.join(" · ")}</p>
 
+      <p className="mt-5"><button type="button" onClick={() => setMock(true)} className="inline-flex h-11 items-center rounded-full bg-primary px-6 text-sm font-bold text-primary-foreground">Build a mock exam from this unit</button></p>
+      <DentalMock open={mock} onOpenChange={setMock} unit={first.unitTitle} />
+
       {repeats && repeats.length > 0 && (
         <section className="mt-10" aria-label="Questions that keep coming back">
           <h2 className="font-serif text-xl font-bold">Questions that keep coming back</h2>
@@ -90,6 +96,12 @@ export function DentalUnit() {
           </ol>
         </section>
       )}
+
+      <section className="mt-10" aria-label="Related MBChB notes">
+        <h2 className="font-serif text-xl font-bold">Same ground in the MBChB library</h2>
+        <p className="mt-1 text-sm text-muted-foreground">Medicine and dentistry share this science. These MBChB notes cover it too.</p>
+        <ul className="mt-2 divide-y divide-border border-y border-border">{bridgeFor(first.unitTitle).map((b) => <li key={b.to}><Link to={b.to} className="flex items-center justify-between py-3 text-[16px] font-semibold hover:text-primary"><span>{b.label}</span><ArrowRight className="h-4 w-4 text-primary/50" aria-hidden /></Link></li>)}</ul>
+      </section>
 
       <section className="mt-10" aria-label="Papers">
         <h2 className="font-serif text-xl font-bold">All papers</h2>

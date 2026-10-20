@@ -14,10 +14,13 @@ const STUDY = [
   { to: "/review", label: "Daily review" },
   { to: "/pharmacology", label: "Pharmacology guide" },
   { to: "/books", label: "Books" },
+  { to: "/dental", label: "Dental & allied health papers" },
 ];
 const DENTAL_STUDY = [
   { to: "/dental", label: "Dental home" },
   { to: "/dental/papers", label: "Past papers" },
+  { to: "/library/year-1/oral-biology-and-dental-bds", label: "MBChB notes: oral biology" },
+  { to: "/topics", label: "Topics A–Z (MBChB)" },
 ];
 const COMPANY = [
   { to: "/about-us", label: "About Ompath Study" },

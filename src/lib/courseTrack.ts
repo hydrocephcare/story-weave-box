@@ -29,3 +29,12 @@ export function useTrack(): Track {
   }, []);
   return t;
 }
+
+const MANUAL = "ompath_track_manual";
+/** True once the student has picked a course with the switch on this device: from then on the profile no longer overrides it. */
+export const isManualTrack = (): boolean => { try { return localStorage.getItem(MANUAL) === "1"; } catch { return false; } };
+/** The student's own pick (the switch): remembered, and it wins over the profile course. */
+export function chooseTrack(t: Track) {
+  try { localStorage.setItem(MANUAL, "1"); } catch { /* blocked */ }
+  setTrack(t);
+}

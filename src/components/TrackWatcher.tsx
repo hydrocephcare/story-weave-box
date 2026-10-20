@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
-import { getTrack, setTrack, trackFromCourse } from "@/lib/courseTrack";
+import { getTrack, isManualTrack, setTrack, trackFromCourse } from "@/lib/courseTrack";
 
 /**
  * Keeps the site on the right track. A signed-in student's profile course decides (BDS or dental diplomas go to the dental section, everything else is
@@ -16,7 +16,8 @@ export default function TrackWatcher() {
   useEffect(() => {
     if (loading) return;
     let on = true;
-    if (user) {
+    if (user && isManualTrack()) { /* the student picked a course with the switch: keep it */ }
+    else if (user) {
       void (async () => {
         try {
           const { data } = await (supabase as any).from("profiles").select("course").eq("user_id", user.id).maybeSingle();
