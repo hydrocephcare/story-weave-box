@@ -1294,6 +1294,8 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
 
   flushList(); flushTable(); flushFlow(); flushPractice();
   // Plain study notes get a short pause or two between paragraphs (a quick check, flashcards, a related note or a book). Never on papers, question banks or exams.
+  // a note of more than about 9,000 characters is read one part at a time
+  const longNote = els.length >= 36 && lines.join(" ").length > 9000;
   const isStudyNote = !examMode && !/\b(mcqs?|questions?|exam|papers?|quiz|saq|osce|answers?)\b/i.test(`${title} ${contentKind}`) && !/\*\*Answer:\*\*/.test(lines.join("\n").slice(0, 60000));
   if (isStudyNote && articleId) {
     const plan = planBreaks(articleId, els.length, true);
@@ -1315,10 +1317,10 @@ const ArticleLines = memo(function ArticleLines({ content, articleId, category, 
         } else lastWasPause = false;
         out.push(el);
       });
-      return els.length >= 90 && !hasSearchTerm() ? <PartedList items={out} /> : <ProgressiveList items={out} />;
+      return longNote && !hasSearchTerm() ? <PartedList items={out} size={32} /> : <ProgressiveList items={out} />;
     }
   }
-  return els.length >= 90 && isStudyNote && !hasSearchTerm() ? <PartedList items={els} /> : <ProgressiveList items={els} />;
+  return longNote && isStudyNote && !hasSearchTerm() ? <PartedList items={els} size={32} /> : <ProgressiveList items={els} />;
 });
 
 /* ─── Question jump grid for question banks without headings ─── */
