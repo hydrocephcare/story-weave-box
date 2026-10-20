@@ -72,13 +72,13 @@ function parseList(lines, start, indent) {
 function table(rows) {
   // Split only on unescaped pipes; a leading/trailing pipe is optional in Markdown.
   const cells = (r) => {
-    let line = r.trim().replace(/^\|/, "").replace(/\|$/, "");
+    let line = r.trim().replace(/^\\|/, "").replace(/\\|$/, "");
     const out = [];
     let cell = "";
     let escaped = false;
     for (const ch of line) {
       if (ch === "|" && !escaped) { out.push(cell.trim()); cell = ""; }
-      else if (ch === "\\" && !escaped) { cell += ch; escaped = true; continue; }
+      else if (ch === "\\\\" && !escaped) { cell += ch; escaped = true; continue; }
       else { cell += ch; }
       escaped = false;
     }
@@ -89,13 +89,20 @@ function table(rows) {
   const body = rows.slice(2).map(cells).filter((r) => r.some((cell) => cell.length));
   const columns = head.length;
   const alignments = cells(rows[1]).map((cell) => cell.startsWith(":") && cell.endsWith(":") ? "center" : cell.endsWith(":") ? "right" : "left");
+  const allRows = [head, ...body];
+  const columnLengths = head.map((_, index) => Math.max(...allRows.map((row) => (row[index] ?? "").replace(/<[^>]*>/g, "").length), 0));
+  const longestCell = Math.max(0, ...allRows.flat().map((cell) => cell.replace(/<[^>]*>/g, "").length));
+  const meanCellLength = body.length && columns ? body.flat().reduce((sum, cell) => sum + cell.length, 0) / (body.length * columns) : 0;
+  // Fit short tables to the viewport; reserve scrolling for genuinely wide or text-heavy data.
+  const needsScroll = columns > 3 || (columns >= 3 && (longestCell > 72 || meanCellLength > 34));
+  const tableClass = needsScroll ? "note-table-wide" : "note-table-fit";
   const th = head.map((cell, i) => `<th scope="col" style="text-align:${alignments[i] || "left"}">${inline(cell)}</th>`).join("");
   const tr = body.map((row) => `<tr>${head.map((label, i) => {
     const value = row[i] ?? "";
     return `<td style="text-align:${alignments[i] || "left"}">${inline(value)}</td>`;
   }).join("")}</tr>`).join("");
-  const hint = '<p class="note-table-hint" aria-hidden="true">Swipe horizontally to view all columns</p>';
-  return `<div class="note-table${columns > 3 ? " note-table-wide" : " note-table-compact"}" data-columns="${columns}" role="region" aria-label="Data table" tabindex="0">${hint}<table><thead><tr>${th}</tr></thead><tbody>${tr}</tbody></table></div>`;
+  const hint = needsScroll ? '<p class="note-table-hint" aria-hidden="true">Swipe horizontally to compare columns</p>' : "";
+  return `<div class="note-table ${tableClass}" data-columns="${columns}" role="region" aria-label="Data table" tabindex="0">${hint}<table><thead><tr>${th}</tr></thead><tbody>${tr}</tbody></table></div>`;
 }
 
 // ---------- practice questions ----------
