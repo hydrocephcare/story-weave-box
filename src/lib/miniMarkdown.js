@@ -70,10 +70,18 @@ function parseList(lines, start, indent) {
 }
 
 function table(rows) {
-  const cells = (r) => r.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
+  const cells = (r) => r.trim().replace(/^\\||\\|$/g, "").split("|").map((c) => c.trim());
   const head = cells(rows[0]);
-  const body = rows.slice(2).map(cells);
-  return `<div class="note-table"><table><thead><tr>${head.map((c) => `<th>${inline(c)}</th>`).join("")}</tr></thead><tbody>${body.map((r) => `<tr>${r.map((c) => `<td>${inline(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  const body = rows.slice(2).map(cells).filter((r) => r.some((cell) => cell.length));
+  const columns = head.length;
+  const alignments = cells(rows[1]).map((cell) => cell.startsWith(":") && cell.endsWith(":") ? "center" : cell.endsWith(":") ? "right" : "left");
+  const th = head.map((cell, i) => `<th scope="col" style="text-align:${alignments[i] || "left"}">${inline(cell)}</th>`).join("");
+  const tr = body.map((row) => `<tr>${head.map((label, i) => {
+    const value = row[i] ?? "";
+    return `<td data-label="${esc(label.replace(/<[^>]*>/g, ""))}" style="text-align:${alignments[i] || "left"}">${inline(value)}</td>`;
+  }).join("")}</tr>`).join("");
+  const hint = columns > 3 ? '<p class="note-table-hint" aria-hidden="true">Swipe sideways to compare all columns</p>' : "";
+  return `<div class="note-table${columns > 3 ? " note-table-wide" : " note-table-compact"}" data-columns="${columns}" role="region" aria-label="Data table" tabindex="0">${hint}<table><thead><tr>${th}</tr></thead><tbody>${tr}</tbody></table></div>`;
 }
 
 // ---------- practice questions ----------
