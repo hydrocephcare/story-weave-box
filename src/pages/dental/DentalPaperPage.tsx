@@ -21,7 +21,7 @@ function Answer({ text }: { text: string }) {
   return (
     <div className="mt-2 space-y-1.5 border-l-2 border-emerald-500/60 pl-4 text-[15.5px] leading-relaxed">
       <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-emerald-600 dark:text-emerald-400">Model answer</p>
-      {text.split("\n").filter((l) => l.trim()).map((l, i) => (bullet.test(l) ? <p key={i} className="flex gap-2"><span className="text-primary">•</span><span>{bold(l.replace(bullet, ""))}</span></p> : <p key={i} className="font-semibold">{bold(l)}</p>))}
+      {text.replace(/\\n/g, "\n").split("\n").filter((l) => l.trim()).map((l, i) => (bullet.test(l) ? <p key={i} className="flex gap-2"><span className="text-primary">•</span><span>{bold(l.replace(bullet, ""))}</span></p> : <p key={i} className="font-semibold">{bold(l)}</p>))}
     </div>
   );
 }
@@ -82,7 +82,9 @@ export default function DentalPaperPage() {
   if (paper === undefined) return <div className="mx-auto max-w-3xl px-5 py-16" aria-busy="true"><div className="h-8 w-2/3 animate-pulse rounded bg-muted" /><div className="mt-6 space-y-3">{[0, 1, 2, 3].map((i) => <div key={i} className="h-5 animate-pulse rounded bg-muted" />)}</div></div>;
   if (paper === null) return <div className="mx-auto max-w-xl px-5 py-20 text-center"><h1 className="font-serif text-3xl font-bold">Paper not found</h1><Link to="/dental/papers" className="mt-5 inline-block font-bold text-primary hover:underline">All dental past papers →</Link></div>;
 
-  const q = questionCount(paper), marks = totalMarks(paper);
+  // the paper's total is the sum of its section totals when printed; adding up the per-question marks would undercount where those are hidden
+  const sectionMarks = items.filter((it) => it.t === "h").reduce((n, it) => n + (it.marks ?? 0), 0);
+  const q = questionCount(paper), marks = sectionMarks || totalMarks(paper);
   const meta = PAPER_INDEX.find((p) => p.slug === paper.slug);
   const when = paper.dateLabel || paper.date;
   const catSlug = paper.categorySlug || meta?.categorySlug || "other-units";

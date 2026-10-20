@@ -17,7 +17,7 @@ Rules:
 - "Draw a labelled diagram": describe what the diagram shows and list the labels to include.
 - Calculations: show the working briefly. Use standard textbook facts only. Never invent figures, doses or references you are not sure of.`;
 
-const MODELS = ["openai/gpt-oss-120b", "llama-3.3-70b-versatile"];
+const MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"];
 
 async function ask(key: string, model: string, user: string) {
   const body: Record<string, unknown> = { model, temperature: 0.3, max_tokens: 7000, response_format: { type: "json_object" }, messages: [{ role: "system", content: SYSTEM }, { role: "user", content: user }] };
@@ -47,7 +47,7 @@ async function seoStep(sb: any, key: string) {
     const meta = slug.replace(/-/g, " ");
     const user = `PAPER: ${unit} (${meta}). Mount Kenya University past paper.\nQUESTIONS:\n${(qs ?? []).map((q: any) => String(q.question).slice(0, 220)).join("\n")}`;
     const r = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", headers: { Authorization: "Bearer " + key, "Content-Type": "application/json" }, signal: AbortSignal.timeout(60000),
-      body: JSON.stringify({ model: "llama-3.3-70b-versatile", temperature: 0.3, max_tokens: 500, response_format: { type: "json_object" }, messages: [{ role: "system", content: SEO_SYSTEM }, { role: "user", content: user }] }) });
+      body: JSON.stringify({ model: "openai/gpt-oss-20b", reasoning_effort: "low", temperature: 0.3, max_tokens: 1200, response_format: { type: "json_object" }, messages: [{ role: "system", content: SEO_SYSTEM }, { role: "user", content: user }] }) });
     if (!r.ok) return "limited";
     const j = JSON.parse((await r.json()).choices?.[0]?.message?.content || "{}");
     const description = String(j.description || "").replace(/\s+/g, " ").trim().slice(0, 170);
@@ -70,7 +70,7 @@ serve(async (req) => {
     const { data: first } = await sb.from("paper_answers").select("slug").is("answer", null).lt("tries", 4).order("slug").order("idx").limit(1);
     if (!first?.length) return json({ success: true, status: "all answered", seo });
     const slug = first[0].slug;
-    const { data: rows } = await sb.from("paper_answers").select("qkey, unit, marks, question").eq("slug", slug).is("answer", null).lt("tries", 4).order("idx").limit(8);
+    const { data: rows } = await sb.from("paper_answers").select("qkey, unit, marks, question").eq("slug", slug).is("answer", null).lt("tries", 4).order("idx").limit(6);
     if (!rows?.length) return json({ success: true, status: "none" });
     const prompt = `UNIT: ${rows[0].unit}\n\n` + rows.map((r) => `ID ${r.qkey}${r.marks ? ` (${r.marks} marks)` : ""}:\n${r.question}`).join("\n\n");
     let answers: { id: string; answer: string }[] = [], err = "";
