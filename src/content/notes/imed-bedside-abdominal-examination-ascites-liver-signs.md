@@ -4,6 +4,11 @@
 
 ## 1. The abdominal examination sequence
 
+![Abdominal organs and their approximate anatomical positions — Wikimedia Commons](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_900/v1792483067/ompathstudy-clinical-skills-abdominal-organs.svg)
+
+![Illustration of abdominal examination techniques — Armanjain011, GFDL](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_900/v1792483087/ompathstudy-clinical-skills-abdominal-examination.jpg)
+
+
 For the abdomen, use:
 
 **Inspection → Auscultation → Percussion → Palpation.**
@@ -50,7 +55,7 @@ Percussion findings depend on technique, body habitus, bowel gas and the amount 
 
 **Ascites** means abnormal accumulation of free fluid in the peritoneal cavity. Common causes include cirrhosis/portal hypertension, malignancy, heart failure, tuberculosis and other inflammatory or systemic conditions. The physical examination detects larger volumes better than small ones.
 
-![Shifting dullness and fluid thrill tests for ascites](https://image1.slideserve.com/3343788/shifting-dullness-l.jpg)
+![Shifting dullness test: percuss for flank dullness, turn the patient, then repeat — Wolfmankurd, GFDL](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_900/v1792483075/ompathstudy-clinical-skills-shifting-dullness.png)
 
 *Illustration of shifting dullness. Source: [Medical Abdomen teaching slide](https://www.slideserve.com/elani/medical-abdomen-powerpoint-ppt-presentation). The diagrams below describe how to perform the tests at the bedside.*
 
