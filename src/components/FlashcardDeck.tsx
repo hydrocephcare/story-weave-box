@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, EyeOff, Flame, Sparkles, Star, Type, Undo2, Volume2 } from "lucide-react";
+import { ArrowLeft, EyeOff, Flame, Keyboard, Sparkles, Star, Type, Undo2, Volume2 } from "lucide-react";
 import { openAI } from "@/lib/aiEvents";
 import { DAILY_GOAL, bury, buriedKeys, doneToday, getScale, recordReview, setScale, speak, starredKeys, streak, toggleStar } from "@/lib/deckStats";
 import { supabase } from "@/integrations/supabase/client";
@@ -77,7 +77,20 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
   const card = ci >= 0 ? cards[ci] : null;
   const st = card && states ? states[cardKey(card.setId, card.idx)] : undefined;
 
-  useEffect(() => { setFlipped(false); }, [ci]);
+  useEffect(() => { setFlipped(false); setTyped(""); }, [ci]);
+  // type-your-answer mode: what you wrote is compared with the key words of the answer, and the rating that fits is suggested (you still choose)
+  const [typing, setTyping] = useState(() => { try { return localStorage.getItem("deck-typed") === "1"; } catch { return false; } });
+  const [typed, setTyped] = useState("");
+  const match = (() => {
+    if (!typing || !typed.trim() || !card) return null;
+    const bold = /[*][*]([^*]+)[*][*]/.exec(card.answer)?.[1] ?? card.answer.split("\n")[0];
+    const keys = [...new Set(bold.toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/\s+/).filter((w) => w.length > 3))];
+    if (!keys.length) return null;
+    const said = typed.toLowerCase();
+    const hit = keys.filter((w) => said.includes(w.slice(0, Math.max(4, w.length - 2)))).length;
+    return Math.round((hit / keys.length) * 100);
+  })();
+  const suggest: Rating | null = match === null ? null : match >= 70 ? "good" : match >= 40 ? "hard" : "again";
   // the whole answer is always on the card: the text shrinks until it fits, so there is never anything to scroll
   useLayoutEffect(() => {
     const el = ansRef.current; if (!el) return;
@@ -263,21 +276,28 @@ export default function FlashcardDeck({ cards: base, title, category, mode = "de
         <button type="button" onClick={() => speak(flipped ? card?.answer || "" : card?.question || "")} aria-label="Read aloud" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><Volume2 className="h-4 w-4" /></button>
         <button type="button" onClick={() => { const n = scale >= 1.3 ? 0.9 : scale >= 1.1 ? 1.3 : 1.15; setScale(n); setScaleState(n); }} aria-label="Change text size" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><Type className="h-4 w-4" /></button>
         <button type="button" onClick={() => card && openAI(`Explain this to me simply, with the mechanism and a clinical example: ${card.question.replace(/[*]+/g, "")}`)} aria-label="Ask Ompath AI to explain this card" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><Sparkles className="h-4 w-4" /></button>
+        <button type="button" onClick={() => { const n = !typing; setTyping(n); try { localStorage.setItem("deck-typed", n ? "1" : "0"); } catch { /* blocked */ } }} aria-pressed={typing} aria-label="Type your answer before flipping" className={`rounded-full p-2 hover:bg-muted hover:text-foreground ${typing ? "bg-primary/15 text-primary" : ""}`}><Keyboard className="h-4 w-4" /></button>
         <button type="button" onClick={hide} aria-label="Never show this card again" className="rounded-full p-2 hover:bg-muted hover:text-foreground"><EyeOff className="h-4 w-4" /></button>
       </div>
       {mcq && <Link to={mcq} className="mx-auto mt-1 block w-full max-w-md text-center text-sm font-bold text-primary hover:underline sm:max-w-xl">Test yourself with MCQs on this topic →</Link>}
       <div className="sticky bottom-0 z-10 mx-auto mt-2 w-full max-w-md sm:max-w-xl bg-background/95 pb-3 pt-1 backdrop-blur">
         {!flipped ? (
-          <button type="button" onClick={() => setFlipped(true)} className="w-full rounded-full bg-primary py-4 text-base font-bold text-primary-foreground">Show answer</button>
+          <>
+            {typing && <textarea value={typed} onChange={(e) => setTyped(e.target.value)} onKeyDown={(e) => e.stopPropagation()} rows={2} placeholder="Type what you remember, then show the answer" className="mb-2 w-full resize-none rounded-xl border border-input bg-background px-3 py-2 text-[16px] outline-none focus:border-primary" />}
+            <button type="button" onClick={() => setFlipped(true)} className="w-full rounded-full bg-primary py-4 text-base font-bold text-primary-foreground">Show answer</button>
+          </>
         ) : (
+          <>
+          {match !== null && <p className="mb-1.5 text-center text-xs font-semibold text-muted-foreground">You matched {match}% of the key words{suggest ? ` · suggested: ${suggest === "again" ? "Again" : suggest === "hard" ? "Hard" : "Good"}` : ""}</p>}
           <div className="grid grid-cols-4 gap-2" role="group" aria-label="How well did you know it?">
             {BTN.map((b) => (
-              <button key={b.r} type="button" onClick={() => rate(b.r)} className={`flex flex-col items-center rounded-xl px-1 py-3 transition-colors ${b.cls}`}>
+              <button key={b.r} type="button" onClick={() => rate(b.r)} className={`flex flex-col items-center rounded-xl px-1 py-3 transition-colors ${b.cls} ${suggest === b.r ? "ring-2 ring-primary ring-offset-2 ring-offset-background" : ""}`}>
                 <span className="text-[15px] font-bold">{b.text}</span>
                 <span className="mt-0.5 text-[11px] font-medium opacity-70">{label(st, b.r)}</span>
               </button>
             ))}
           </div>
+          </>
         )}
       </div>
     </div>

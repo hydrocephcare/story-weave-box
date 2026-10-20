@@ -20,6 +20,7 @@ import { AuthProvider } from "@/hooks/useAuth";
 import ReadNotifier from "@/components/ReadNotifier";
 import ImageLightbox from "@/components/ImageLightbox";
 import AccountSync from "@/components/AccountSync";
+import SelectionAsk from "@/components/SelectionAsk";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -377,6 +378,7 @@ const App = () => (
             <ReadNotifier />
             <ImageLightbox />
             <AccountSync />
+            <SelectionAsk />
             <AiFailureWatcher />
             <AIGate />
             <AIPill />
