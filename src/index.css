@@ -441,6 +441,17 @@ body.no-copy img {
 ::highlight(search-hit-current) { background-color: #fb923c; color: #000; }
 
 /* Notes that ship with the site (/notes/<slug>). Own styles: the typography plugin is not enabled in this project. */
+
+/* Markdown illustrations inside study notes: responsive, stable layout, and no horizontal overflow. */
+.note-body .note-figure { margin: 1.25rem auto; width: 100%; max-width: 48rem; }
+.note-body .note-figure img,
+.note-body img.note-inline-image { display: block; max-width: 100%; height: auto; object-fit: contain; border-radius: 0.75rem; }
+.note-body .note-figure img { width: 100%; max-height: 32rem; background: hsl(var(--muted)); }
+.note-body .note-figure figcaption { margin-top: 0.4rem; color: hsl(var(--muted-foreground)); font-size: 0.78rem; line-height: 1.45; text-align: center; }
+.note-body img.note-inline-image { margin: 0.5rem auto; }
+.note-body .note-figure img:not([src]),
+.note-body .note-figure img[src=""] { display: none; }
+
 .note-body { font-size: 1rem; line-height: 1.75; color: hsl(var(--foreground)); }
 .note-body > * + * { margin-top: 0.9rem; }
 .note-body h1, .note-body h2, .note-body h3, .note-body h4 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; line-height: 1.25; scroll-margin-top: 6rem; }
