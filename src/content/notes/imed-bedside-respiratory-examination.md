@@ -10,7 +10,7 @@ For the **respiratory system**, use:
 
 This is different from the abdomen, where auscultation is generally performed before percussion and palpation. The reason is that manipulating the abdomen can alter bowel sounds; chest examination has no equivalent reason to delay palpation or percussion.
 
-![Lung examination: inspection, palpation, percussion and auscultation](https://images.squarespace-cdn.com/content/v1/658210ebb6b1817ad03fc143/85ba411d-cc08-4c9c-a8ba-852d2b6ddd86/656191564_1351452163677785_4360470302532010894_n.jpg)
+![Lung auscultation areas on the front of the chest — Põnn, CC BY 2.5](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_1000/v1792483052/ompathstudy-clinical-skills-lung-auscultation-areas.svg)
 
 *Illustration of the IPPA sequence. Source: [K2 International chest assessment](https://www.k2i-eoc.com/patient-assessment/chest-assessment). Use it alongside the steps below.*
 
@@ -73,6 +73,9 @@ Percussion alone cannot diagnose the condition. Combine it with chest expansion,
 These are classic patterns; real patients may not show every feature.
 
 ## 5. Auscultation — what do I listen for?
+
+![Surface anatomy of the lungs helps you understand where to inspect, percuss and auscultate — Ashashyou, CC BY-SA 3.0](https://res.cloudinary.com/l4wbzpfr/image/upload/f_auto,q_auto,w_900/v1792483061/ompathstudy-clinical-skills-lung-surface-anatomy.jpg)
+
 
 Ask the patient to breathe slowly and deeply through an open mouth. Use the diaphragm of the stethoscope directly on the skin. Listen to a full in-and-out breath at each location and compare equivalent areas side-to-side. Listen over the anterior, lateral and posterior chest, including the lung bases.
 
