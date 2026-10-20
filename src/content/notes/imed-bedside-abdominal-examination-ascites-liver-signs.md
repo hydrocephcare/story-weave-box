@@ -202,3 +202,31 @@ Inspect for jaundice, spider naevi, palmar erythema, bruising, muscle wasting, g
 
 ### Abdominal presentation: a fuller template
 “The abdomen is [flat/distended], with [scars/veins/striae] and the umbilicus ___. Bowel sounds are ___. Percussion is ___, with liver span approximately ___ cm by percussion. The abdomen is [soft/guarded] and [non-tender/tender at ___]. I can/cannot palpate the liver or spleen; there are [no/present] masses. Shifting dullness is [negative/positive] and a fluid thrill is [negative/positive] if tested. There is [no/present] peripheral oedema or other signs of chronic liver disease.” Adapt this to what you actually examined and your local OSCE checklist.
+
+
+## 14. Bowel sounds and abdominal bruits: what exactly do you listen for?
+
+### Bowel sounds and peristalsis
+Yes—intestinal movement, together with movement of gas and fluid, produces sounds heard through a stethoscope. These are called **bowel sounds**. They are intermittent, so do not expect a continuous sound at every moment.
+
+1. Use the diaphragm of the stethoscope on the abdomen, commonly beginning in the right lower quadrant.
+2. Listen across the abdomen as required by your school's checklist. Avoid pressing so hard that you cause discomfort.
+3. Describe bowel sounds as present/normal, increased, reduced or absent only after listening for an adequate period according to local guidance.
+4. **Borborygmi** means loud rumbling/gurgling. High-pitched frequent sounds may occur in some cases of early obstruction; reduced sounds can occur with ileus or severe illness. These patterns are not sufficiently reliable to diagnose a condition by themselves.
+
+**Exam wording:** “Bowel sounds are present and audible.” If clearly abnormal, describe what you actually hear and interpret it with pain, vomiting, distension, bowel function and the rest of the examination. Do not claim “absent” after a few seconds of listening.
+
+### Vascular bruits in the abdomen
+A **bruit** is a blowing or whooshing sound due to turbulent blood flow. Auscultate with the diaphragm over the relevant artery when indicated:
+
+- **Aorta:** midline upper abdomen.
+- **Renal arteries:** upper abdomen, to either side of the midline, above/near the umbilicus.
+- **Iliac arteries:** lower abdomen, toward the right and left iliac vessels.
+- **Femoral arteries:** groin, over each femoral artery.
+
+The exact listening point varies with anatomy and teaching technique. These are targeted vascular manoeuvres, not a substitute for the routine abdominal examination. A renal artery bruit can raise suspicion of renal artery stenosis, particularly with resistant hypertension, but neither its presence nor absence confirms or excludes the diagnosis. An abdominal bruit may have other causes and needs clinical correlation.
+
+**Anatomy check:** renal arteries supply the kidneys and arise from the abdominal aorta. The abdominal aorta divides into the common iliac arteries, which then divide into internal and external iliac arteries. The internal iliac arteries mainly supply the pelvis; they are not the renal arteries.
+
+### The abdominal sequence to remember
+**IAPP = Inspection → Auscultation → Percussion → Palpation.** In a routine exam, listen before tapping or pressing. Bowel sounds are part of abdominal examination; vascular bruits are a targeted abdominal/peripheral vascular assessment. In a full bedside assessment, do not forget observations and the general appearance of the patient.
