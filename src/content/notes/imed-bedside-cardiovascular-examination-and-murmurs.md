@@ -182,3 +182,30 @@ Listen with the diaphragm and bell as appropriate, and describe what you hear ra
 
 ### A complete presentation
 “On cardiovascular examination, the patient is [comfortable/distressed]. The pulse is ___ beats/min, [regular/irregular], with ___ volume; blood pressure is ___. JVP is ___. The apex beat is ___. Heart sounds S1 and S2 are ___. There is [no murmur / a murmur described by timing, character, site and radiation]. The lung bases show ___, and there is [no/present] peripheral oedema or hepatomegaly.” Only include observations you actually assessed.
+
+
+## 12. Starting the cardiovascular OSCE and general inspection
+
+Use the same professional opening as other examinations: clean hands; introduce yourself; confirm the patient's identity; explain the examination and obtain consent; ask about pain; position the patient at approximately 45 degrees; expose the chest appropriately while maintaining dignity. If the patient is acutely unwell, assess ABCs and call for help rather than continuing a routine exam.
+
+### General inspection, hands, nails, face and mouth
+- **General appearance:** breathlessness, pallor, cyanosis, sweating, cachexia, oxygen, mobility aids and signs of distress.
+- **Hands/nails:** peripheral temperature and perfusion, capillary refill, clubbing, splinter haemorrhages, nicotine staining, palmar erythema and signs of anaemia. Osler nodes are tender; Janeway lesions are classically painless. These infective-endocarditis signs may be absent and are not diagnostic alone.
+- **Pulse:** rate, rhythm, volume and character; compare radial pulses and assess radio-radial/radio-femoral delay if indicated.
+- **Face/mouth:** conjunctival pallor, central cyanosis (look at the tongue/oral mucosa), xanthelasma and dental/oral health where relevant.
+- **Neck:** JVP at about 45 degrees; assess carotid pulse only when appropriate and one side at a time. Never palpate both carotids simultaneously.
+- **Precordium:** inspect for scars, deformity, devices and visible pulsations before palpation and auscultation.
+
+### A reliable sequence
+General inspection → hands and pulse/BP → face → JVP and neck → precordium (inspect, palpate apex/heaves/thrills, auscultate all areas) → lungs for crackles → ankles/sacrum for oedema → abdomen for hepatomegaly/ascites when indicated. Local OSCE sequences can vary; state what you did and do not invent findings.
+
+### Vascular bruits: where they fit
+A **bruit** is a blowing/whooshing sound from turbulent blood flow. It differs from a heart murmur mainly by the site and context; both are sounds of turbulent flow.
+
+- **Carotid bruit:** listen over each carotid artery separately when indicated, with the patient comfortable. Avoid pressing hard with the stethoscope and do not auscultate both sides simultaneously.
+- **Abdominal aortic bruit:** listen over the midline upper abdomen.
+- **Renal artery bruits:** listen in the upper abdomen, slightly to the right and left of the midline, above/near the umbilicus along the renal artery course. A bruit may raise suspicion of renal artery stenosis in a patient with resistant hypertension, but absence does not exclude it and presence does not prove it.
+- **Iliac bruits:** listen lower in the abdomen toward the right and left iliac vessels if peripheral arterial disease is suspected. Anatomically, the common iliac arteries divide into internal and external iliac arteries; do not call these renal arteries.
+- **Femoral bruits:** listen in the groin over each femoral artery if indicated.
+
+A bruit is not routinely required in every basic cardiac station. Follow the examiner's instruction and the clinical indication; if the task is a full cardiovascular/peripheral vascular examination, know where it belongs.
