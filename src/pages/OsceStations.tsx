@@ -17,10 +17,17 @@ export default function OsceStations() {
         <meta name="description" content="Seven Internal Medicine OSCE photograph and imaging stations for MBChB finals: Winterbottom's sign, pleural effusion, caput medusae, clubbing, nephritic urine, pitting oedema and ring-enhancing lesion, each with model answers." />
         <link rel="canonical" href="https://www.ompathstudy.com/clinical/osce-stations" />
       </Helmet>
-      <nav className="text-xs font-semibold text-muted-foreground"><Link to="/clinical/osce" className="hover:text-primary">OSCE</Link> / Internal Medicine stations</nav>
-      <h1 className="mt-3 font-serif text-4xl font-bold">Internal Medicine OSCE stations</h1>
-      <p className="mt-2 text-muted-foreground">Seven past photograph and imaging stations for MBChB finals. Read the case, look at the picture, answer in your head, then reveal each model answer.</p>
-      <ol className="mt-4 flex flex-wrap gap-2 text-sm">{(STATIONS as Station[]).map((s) => <li key={s.n}><a href={`#station-${s.n}`} className="rounded-full border border-border px-3 py-1 font-semibold hover:text-primary">{s.n}. {s.title}</a></li>)}</ol>
+      <header className="topic-hero relative isolate overflow-hidden border-b border-border/60">
+        <div className="mx-auto max-w-3xl px-5 pb-10 pt-8 sm:px-6">
+          <nav className="text-xs font-semibold text-muted-foreground"><Link to="/clinical/osce" className="hover:text-primary">OSCE</Link> / Internal Medicine stations</nav>
+          <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">MKU Year 4 MBChB · Finals revision</p>
+          <h1 className="mt-2 font-serif text-4xl font-bold leading-[1.08] sm:text-6xl">Internal Medicine OSCE stations</h1>
+          <p className="mt-3 text-lg leading-relaxed text-foreground/85">Seven past photograph and imaging stations, {(STATIONS as Station[]).reduce((n, s) => n + s.qs.length, 0)} questions in all. Read the case, study the picture, answer in your head, then reveal each model answer.</p>
+          <ol className="mt-5 flex flex-wrap gap-2 text-sm">{(STATIONS as Station[]).map((s) => <li key={s.n}><a href={`#station-${s.n}`} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background/80 px-3.5 py-1.5 font-semibold hover:text-primary"><span className="font-bold text-primary">{s.n}</span>{s.title}</a></li>)}</ol>
+          <p className="mt-4 text-sm font-bold"><button type="button" onClick={() => setOpen(new Set((STATIONS as Station[]).flatMap((s) => s.qs.map((_, i) => `${s.n}-${i}`))))} className="text-primary hover:underline">Show all answers</button><button type="button" onClick={() => setOpen(new Set())} className="ml-4 text-muted-foreground hover:underline">Hide all</button></p>
+        </div>
+      </header>
+      <main className="mx-auto max-w-3xl px-5 pb-24 sm:px-6">
       {(STATIONS as Station[]).map((s) => (
         <section key={s.n} id={`station-${s.n}`} className="mt-14 scroll-mt-20 border-t border-border pt-8">
           <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">Station {s.n}</p>
@@ -37,6 +44,7 @@ export default function OsceStations() {
           {s.note && <p className="mt-4 rounded-md border-l-4 border-red-500 bg-red-50 p-3 text-sm dark:bg-red-950/20"><strong>Examiner note:</strong> {s.note}</p>}
         </section>
       ))}
+      </main>
     </div>
   );
 }
