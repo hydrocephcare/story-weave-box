@@ -93,14 +93,14 @@ export default function StaticNotesIndex() {
       {resume.length > 0 && (
         <section className="mt-5 rounded-2xl border border-primary/30 bg-primary/5 p-4" aria-label="Continue reading">
           <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">Continue where you stopped</p>
-          <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">{resume.map((p) => <li key={p.slug}><Link to={`/notes/${p.slug}`} className="flex items-center justify-between gap-3 rounded-lg bg-background px-3 py-2 text-sm font-semibold hover:text-primary"><span className="min-w-0 truncate">{p.title}</span><span className="shrink-0 text-xs font-bold text-muted-foreground">{p.progress}%</span></Link></li>)}</ul>
+          <ul className="mt-2 grid min-w-0 gap-1.5 sm:grid-cols-2">{resume.map((p) => <li key={p.slug} className="min-w-0"><Link to={`/notes/${p.slug}`} className="flex w-full min-w-0 items-start justify-between gap-3 rounded-lg bg-background px-3 py-2 text-sm font-semibold hover:text-primary"><span className="min-w-0 flex-1 break-words [overflow-wrap:anywhere]">{p.title}</span><span className="shrink-0 pt-0.5 text-xs font-bold text-muted-foreground">{p.progress}%</span></Link></li>)}</ul>
         </section>
       )}
 
       {shelf.length > 0 && (
         <section className="mt-5 rounded-2xl border border-border bg-card p-4" aria-label="Saved for later">
           <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary">Saved for later</p>
-          <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">{shelf.map((n) => <li key={n.slug}><Link to={`/notes/${n.slug}`} className="block truncate rounded-lg bg-background px-3 py-2 text-sm font-semibold hover:text-primary">{n.title}</Link></li>)}</ul>
+          <ul className="mt-2 grid min-w-0 gap-1.5 sm:grid-cols-2">{shelf.map((n) => <li key={n.slug} className="min-w-0"><Link to={`/notes/${n.slug}`} className="block w-full min-w-0 break-words rounded-lg bg-background px-3 py-2 text-sm font-semibold hover:text-primary [overflow-wrap:anywhere]">{n.title}</Link></li>)}</ul>
         </section>
       )}
 
