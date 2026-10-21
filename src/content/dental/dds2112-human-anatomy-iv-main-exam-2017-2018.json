@@ -98,10 +98,40 @@
     }
    ],
    "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION B: Answer Two Questions Only"
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Discuss the development of fetal membranes and associated factors.",
+     "marks": 15,
+     "id": "q8"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Discuss fertilization",
+     "marks": 15,
+     "id": "q9"
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Discuss the development of skin and the appendages.",
+     "marks": 15,
+     "id": "q10"
+    }
+   ],
+   "footer": "Paper One"
   }
  ],
- "complete": false,
- "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing.",
+ "complete": true,
  "dateISO": "2018-08-02",
  "dateLabel": "2 August 2018",
  "programmes": [

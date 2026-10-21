@@ -19,42 +19,273 @@
    "items": [
     {
      "t": "h",
-     "text": "SECTION A"
+     "text": "SECTION A",
+     "marks": 30
     },
     {
      "t": "q",
      "n": "1",
-     "text": "The condition characterised by unilateral enlargement of one side of the face due to overgrowth of hard and soft tissues is called:",
+     "text": "The condition characterised by unilateral enlargement of one side of the face due to overgrowth of hard and soft tissues is called:\nA. Micrognathia\nB. Macrognathia\nC. Hemifacial hypertrophy\nD. Cleidocranial dysostosis",
      "marks": 1,
      "id": "q1"
     },
     {
      "t": "q",
      "n": "2",
-     "text": "A small mandible is referred to as:",
+     "text": "A small mandible is referred to as:\nA. Micrognathia\nB. Macrognathia\nC. Prognathism\nD. Retrognathia",
      "marks": 1,
      "id": "q2"
     },
     {
      "t": "q",
      "n": "3",
-     "text": "The congenital anomaly characterised by the absence of the clavicles and delayed closure of the fontanelles is:",
+     "text": "The congenital anomaly characterised by the absence of the clavicles and delayed closure of the fontanelles is:\nA. Cleft lip\nB. Micrognathia\nC. Cleidocranial dysostosis\nD. Hemifacial hypertrophy",
      "marks": 1,
      "id": "q3"
     },
     {
      "t": "q",
      "n": "4",
-     "text": "The visible yellow spots on the buccal mucosa near the commissures that represent ectopic sebaceous glands are called:",
+     "text": "The visible yellow spots on the buccal mucosa near the commissures that represent ectopic sebaceous glands are called:\nA. Fordyce's spots\nB. Leukoplakia\nC. Erythroplakia\nD. Lichen planus",
      "marks": 1,
      "id": "q4"
     }
    ],
    "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "5",
+     "text": "The fissured tongue condition characterised by multiple grooves on the dorsal surface is called:\nA. Median rhomboid glossitis\nB. Fissural tongue\nC. Hairy tongue\nD. Cleft tongue",
+     "marks": 1,
+     "id": "q5"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "A hereditary condition affecting enamel formation resulting in abnormal enamel that is soft, rough, or pitted is called:\nA. Dentinogenesis imperfecta\nB. Amelogenesis imperfecta\nC. Enamel hypoplasia\nD. Dental fluorosis",
+     "marks": 1,
+     "id": "q6"
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "The most common supernumerary tooth found between the maxillary central incisors is the:\nA. Paramolar\nB. Distomolar\nC. Mesiodens\nD. Supplemental lateral incisor",
+     "marks": 1,
+     "id": "q7"
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "A tooth that appears excessively large in size is described as:\nA. Microdontia\nB. Macrodontia\nC. Fusion\nD. Gemination",
+     "marks": 1,
+     "id": "q8"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "The developmental anomaly where a tooth has an abnormally long pulp chamber extending into the root is called:\nA. Talon cusp\nB. Dilaceration\nC. Taurodontism\nD. Odontome",
+     "marks": 1,
+     "id": "q9"
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "An extra cusp projecting from the lingual surface of an anterior tooth is called:\nA. Talon cusp\nB. Cusp of Carabelli\nC. Dens invaginatus\nD. Dens evaginatus",
+     "marks": 1,
+     "id": "q10"
+    },
+    {
+     "t": "q",
+     "n": "11",
+     "text": "The pathological wearing away of tooth structure due to tooth-to-tooth contact is called:\nA. Abrasion\nB. Attrition\nC. Erosion\nD. Abfraction",
+     "marks": 1,
+     "id": "q11"
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 3,
+   "items": [
+    {
+     "t": "q",
+     "n": "12",
+     "text": "The loss of tooth structure caused by chemical dissolution (acid) not involving bacteria is called:\nA. Attrition\nB. Abrasion\nC. Erosion\nD. Abfraction",
+     "marks": 1,
+     "id": "q12"
+    },
+    {
+     "t": "q",
+     "n": "13",
+     "text": "Excessive deposition of cementum on the root surface is called:\nA. Hypercementosis\nB. Cemental resorption\nC. Cementoblastoma\nD. Cemental hypoplasia",
+     "marks": 1,
+     "id": "q13"
+    },
+    {
+     "t": "q",
+     "n": "14",
+     "text": "The most common fungal infection of the oral cavity is:\nA. Herpes simplex\nB. Actinomycosis\nC. Candidosis\nD. Tuberculosis",
+     "marks": 1,
+     "id": "q14"
+    },
+    {
+     "t": "q",
+     "n": "15",
+     "text": "The causative organism of syphilis is:\nA. Mycobacterium tuberculosis\nB. Treponema pallidum\nC. Streptococcus pyogenes\nD. Candida albicans",
+     "marks": 1,
+     "id": "q15"
+    },
+    {
+     "t": "q",
+     "n": "16",
+     "text": "A rapidly spreading, life-threatening infection involving the submandibular, sublingual, and submental spaces bilaterally is called:\nA. Acute necrotising gingivitis\nB. Ludwig's angina\nC. Tuberculosis\nD. Actinomycosis",
+     "marks": 1,
+     "id": "q16"
+    },
+    {
+     "t": "q",
+     "n": "17",
+     "text": "The virus that causes chickenpox and shingles is:\nA. Herpes simplex virus type 1\nB. Herpes simplex virus type 2\nC. Varicella-zoster virus\nD. Coxsackie virus",
+     "marks": 1,
+     "id": "q17"
+    },
+    {
+     "t": "q",
+     "n": "18",
+     "text": "The absence of a salivary gland is called:\nA. Atresia\nB. Agenesis\nC. Aberrant tissue\nD. Sialolithiasis",
+     "marks": 1,
+     "id": "q18"
+    },
+    {
+     "t": "q",
+     "n": "19",
+     "text": "The presence of a stone (calculus) within a salivary gland duct is called:\nA. Sialadenitis\nB. Sialolithiasis\nC. Ranula\nD. Mucocele",
+     "marks": 1,
+     "id": "q19"
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 4,
+   "items": [
+    {
+     "t": "q",
+     "n": "20",
+     "text": "A bluish, translucent swelling in the floor of the mouth caused by obstruction of the sublingual gland duct is called:\nA. Mucocele\nB. Ranula\nC. Sialocele\nD. Haemangioma",
+     "marks": 1,
+     "id": "q20"
+    },
+    {
+     "t": "q",
+     "n": "21",
+     "text": "The autoimmune disorder characterised by dry mouth (xerostomia) and dry eyes (keratoconjunctivitis sicca) is:\nA. Sicca syndrome\nB. Lupus erythematosus\nC. Scleroderma\nD. Pemphigus vulgaris",
+     "marks": 1,
+     "id": "q21"
+    },
+    {
+     "t": "q",
+     "n": "22",
+     "text": "A recurrent, painful, round ulcer with a yellow-grey centre and red halo, usually lasting 7-14 days, is called:\nA. Herpetiform ulcer\nB. Major aphthous ulcer\nC. Minor aphthous ulcer\nD. Traumatic ulcer",
+     "marks": 1,
+     "id": "q22"
+    },
+    {
+     "t": "q",
+     "n": "23",
+     "text": "The definition of an ulcer is:\nA. A raised solid lesion\nB. A fluid-filled blister\nC. A break in the epithelial continuity\nD. A flat pigmented area",
+     "marks": 1,
+     "id": "q23"
+    },
+    {
+     "t": "q",
+     "n": "24",
+     "text": "The condition where a tooth is bent or angulated due to trauma during root development is called:\nA. Gemination\nB. Fusion\nC. Dilaceration\nD. Concrescence",
+     "marks": 1,
+     "id": "q24"
+    },
+    {
+     "t": "q",
+     "n": "25",
+     "text": "The union of two adjacent tooth germs resulting in a single large tooth is called:\nA. Gemination\nB. Fusion\nC. Concrescence\nD. Dens invaginatus",
+     "marks": 1,
+     "id": "q25"
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 5,
+   "items": [
+    {
+     "t": "q",
+     "n": "26",
+     "text": "The most common site for a mucocele is:\nA. Upper lip\nB. Lower lip\nC. Palate\nD. Floor of mouth",
+     "marks": 1,
+     "id": "q26"
+    },
+    {
+     "t": "q",
+     "n": "27",
+     "text": "The congenital condition characterised by a short lingual frenulum restricting tongue movement is called:\nA. Cleft tongue\nB. Ankyloglossia\nC. Microglossia\nD. Macroglossia",
+     "marks": 1,
+     "id": "q27"
+    },
+    {
+     "t": "q",
+     "n": "28",
+     "text": "The reddish, smooth, depapillated area on the midline of the dorsal tongue is called:\nA. Hairy tongue\nB. Geographic tongue\nC. Median rhomboid glossitis\nD. Fissured tongue",
+     "marks": 1,
+     "id": "q28"
+    },
+    {
+     "t": "q",
+     "n": "29",
+     "text": "Tetracycline staining of teeth occurs when the drug is taken during:\nA. Adulthood\nB. Tooth development\nC. After tooth eruption\nD. Old age",
+     "marks": 1,
+     "id": "q29"
+    },
+    {
+     "t": "q",
+     "n": "30",
+     "text": "Acute necrotising gingivitis (ANG) is also known as:\nA. Trench mouth\nB. Thrush\nC. Herpes simplex\nD. Angular cheilitis",
+     "marks": 1,
+     "id": "q30"
+    },
+    {
+     "t": "h",
+     "text": "SECTION B"
+    },
+    {
+     "t": "q",
+     "n": "31",
+     "text": "Discuss the developmental abnormalities affecting the dental hard tissues.",
+     "marks": 20,
+     "id": "q31"
+    },
+    {
+     "t": "q",
+     "n": "32",
+     "text": "Discuss the common infections of the oral cavity.",
+     "marks": 20,
+     "id": "q32"
+    },
+    {
+     "t": "q",
+     "n": "33",
+     "text": "Discuss salivary gland diseases and oral ulcerations.",
+     "marks": 20,
+     "id": "q33"
+    }
+   ],
+   "footer": "Paper One"
   }
  ],
- "complete": false,
- "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing.",
+ "complete": true,
  "dateISO": "2026-07-14",
  "dateLabel": "14 July 2026",
  "programmes": [

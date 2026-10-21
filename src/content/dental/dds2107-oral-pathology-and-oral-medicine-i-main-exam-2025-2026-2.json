@@ -1,0 +1,91 @@
+{
+ "slug": "dds2107-oral-pathology-and-oral-medicine-i-main-exam-2025-2026-2",
+ "title": "Oral Pathology and Oral Medicine I: Main Exam, 10 November 2025",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Dental Technology",
+ "examTitle": "University Examination 2025 / 2026",
+ "unitCode": "DDS2107",
+ "unitTitle": "Oral Pathology and Oral Medicine I",
+ "date": "Mon 10th Nov, 2025 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ATTEMPT ALL QUESTIONS IN SECTION A AND ANY TWO IN SECTION B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Explain the process of describing a pathological condition.",
+     "marks": 8,
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain the etiology of developmental abnormalities of the face and oral cavity.",
+     "marks": 8,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Differentiate between hyperplasia and hypertrophy of oral cavity tissues.",
+     "marks": 7,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Outline the results from failure of fusion of facial processes.",
+     "marks": 7,
+     "id": "q4"
+    },
+    {
+     "t": "h",
+     "text": "SECTION B"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Discuss the classification and clinical significance of oral ulcers.",
+     "marks": 20,
+     "id": "q5"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Explain the four (4) types and clinical features of periodontal diseases.",
+     "marks": 20,
+     "id": "q6"
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Explain the general factors affecting structural defects of teeth.",
+     "marks": 20,
+     "id": "q7"
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true,
+ "dateISO": "2025-11-10",
+ "dateLabel": "10 November 2025",
+ "programmes": [
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "oral-pathology-and-oral-medicine-i"
+}

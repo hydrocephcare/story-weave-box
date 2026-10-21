@@ -1,0 +1,111 @@
+{
+ "slug": "dds2107-oral-pathology-and-oral-medicine-i-special-exam-2020-2021",
+ "title": "Oral Pathology and Oral Medicine I: Special Exam, 26 July 2021",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2020 / 2021",
+ "unitCode": "DDS2107",
+ "unitTitle": "Oral Pathology and Oral Medicine I",
+ "date": "Mon 26th July, 2021 11.00am",
+ "sitting": "Special Exam",
+ "duration": "2 Hours",
+ "instructions": "Attempt ALL questions in Section A and any TWO (2) in Section B.",
+ "paperLabel": "Paper Two",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Explain classification of cleft lip.",
+     "marks": 10,
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Differentiate between hyperdontia and hypodontia.",
+     "marks": 6,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Outline types of abrasion.",
+     "marks": 3,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe amelogenesis imperfecta.",
+     "marks": 4,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "State clinical features of Ludwig's angina.",
+     "marks": 5,
+     "id": "q5"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "What is herpetic gingivostomatitis?",
+     "marks": 2,
+     "id": "q6"
+    },
+    {
+     "t": "h",
+     "text": "SECTION B"
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Discuss pathological attrition.",
+     "marks": 20,
+     "id": "q7"
+    }
+   ],
+   "footer": "Paper Two"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Write notes on hypercementosis.",
+     "marks": 20,
+     "id": "q8"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Explain the effects of cleft lip and palate.",
+     "marks": 20,
+     "id": "q9"
+    }
+   ],
+   "footer": "Paper Two"
+  }
+ ],
+ "complete": true,
+ "dateISO": "2021-07-26",
+ "dateLabel": "26 July 2021",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "oral-pathology-and-oral-medicine-i"
+}

@@ -24,7 +24,7 @@ function Item({ it }: { it: PaperItem }) {
   return (
     <div className="mt-3 text-[14.5px] leading-relaxed text-neutral-900">
       <div className="flex items-baseline justify-between">
-        <p className="min-w-0 flex-1"><span className="mr-2 font-semibold">{it.n ? `${it.n}.` : ""}</span>{it.text}</p>
+        <p className="min-w-0 flex-1 whitespace-pre-line"><span className="mr-2 font-semibold">{it.n ? `${it.n}.` : ""}</span>{it.text}</p>
         {!it.parts?.length && <Marks m={it.marks} />}
       </div>
       <Parts parts={it.parts} />

@@ -123,7 +123,7 @@ export default function DentalPaperPage() {
     return (
       <li key={i} id={it.id ?? `q${it.n}`} className="mt-8 list-none scroll-mt-20">
         <div className="flex items-baseline justify-between gap-3">
-          <p className="min-w-0 flex-1 text-[17px] leading-relaxed"><span className="mr-2 font-serif text-lg font-bold text-primary">{it.n}.</span>{it.text}</p>
+          <p className="min-w-0 flex-1 whitespace-pre-line text-[17px] leading-relaxed"><span className="mr-2 font-serif text-lg font-bold text-primary">{it.n}.</span>{it.text}</p>
           {marksLabel(it.marks)}
         </div>
         {!it.parts?.length ? area(us[0].key) : (

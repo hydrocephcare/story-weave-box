@@ -77,8 +77,7 @@
    "footer": "Paper One"
   }
  ],
- "complete": false,
- "note": "Some pages of this paper could not be read from the scan yet, so questions may be missing.",
+ "complete": true,
  "dateISO": "2025-11-11",
  "dateLabel": "11 November 2025",
  "programmes": [

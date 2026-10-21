@@ -1,0 +1,131 @@
+{
+ "slug": "dds2107-oral-pathology-and-oral-medicine-i-main-exam-2024-2025",
+ "title": "Oral Pathology and Oral Medicine I: Main Exam, 24 March 2025",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Diploma in Community Oral Health",
+ "examTitle": "University Examination 2024 / 2025",
+ "unitCode": "DDS2107",
+ "unitTitle": "Oral Pathology and Oral Medicine I",
+ "date": "Mon 24th March, 2025 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ATTEMPT ALL QUESTIONS IN SECTIONS A AND B",
+ "paperLabel": "Paper One",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "SECTION A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the process of describing a pathological condition.",
+       "marks": 9
+      },
+      {
+       "l": "b",
+       "text": "Identify four (4) classes of classification of cleft lip.",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the social effects of cleft lip and palate.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Define tooth germination and give its clinical significance.",
+       "marks": 4
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Differentiate between concrescence and dilaceration of teeth.",
+     "marks": 5,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "What are the conditions associated with hypodontia?",
+     "marks": 2,
+     "id": "q4"
+    },
+    {
+     "t": "h",
+     "text": "SECTION B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Explain the general factors which enhance structural defects of teeth.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": "Paper One"
+  },
+  {
+   "n": 2,
+   "items": [
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Discuss Ludwig's angina under the following headings:",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "i",
+       "text": "Predisposing factors"
+      },
+      {
+       "l": "ii",
+       "text": "Clinical presentations"
+      },
+      {
+       "l": "iii",
+       "text": "Management"
+      },
+      {
+       "l": "iv",
+       "text": "Complications"
+      }
+     ],
+     "id": "q6"
+    }
+   ],
+   "footer": "Paper One"
+  }
+ ],
+ "complete": true,
+ "dateISO": "2025-03-24",
+ "dateLabel": "24 March 2025",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "oral-pathology-and-oral-medicine-i"
+}

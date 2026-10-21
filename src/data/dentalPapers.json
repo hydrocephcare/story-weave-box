@@ -1,5 +1,27 @@
 [
  {
+  "slug": "dha1301-human-anatomy-iv-main-exam-2025-2026",
+  "title": "Human Anatomy IV: Main Exam, 23 March 2026",
+  "unitCode": "DHA1301",
+  "unitTitle": "Human Anatomy IV",
+  "unitSlug": "human-anatomy-iv",
+  "programme": "Diploma in Community Oral Health · Diploma in Dental Technology",
+  "programmes": [
+   "Diploma in Community Oral Health",
+   "Diploma in Dental Technology"
+  ],
+  "date": "23 March 2026",
+  "dateISO": "2026-03-23",
+  "year": "2026",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 8,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Basic Dental Sciences",
+  "categorySlug": "basic-dental-sciences"
+ },
+ {
   "slug": "dha2101-human-anatomy-iv-main-exam-2024-2025",
   "title": "Human Anatomy IV: Main Exam, 11 November 2025",
   "unitCode": "DHA2101",
@@ -15,7 +37,7 @@
   "sitting": "Main Exam",
   "duration": "2 Hours",
   "questions": 7,
-  "complete": false,
+  "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
   "categorySlug": "basic-dental-sciences"
@@ -78,8 +100,8 @@
   "year": "2018",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 7,
-  "complete": false,
+  "questions": 10,
+  "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
   "categorySlug": "basic-dental-sciences"
@@ -311,8 +333,71 @@
   "year": "2026",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 4,
-  "complete": false,
+  "questions": 33,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Basic Dental Sciences",
+  "categorySlug": "basic-dental-sciences"
+ },
+ {
+  "slug": "dds2107-oral-pathology-and-oral-medicine-i-main-exam-2025-2026-2",
+  "title": "Oral Pathology and Oral Medicine I: Main Exam, 10 November 2025",
+  "unitCode": "DDS2107",
+  "unitTitle": "Oral Pathology and Oral Medicine I",
+  "unitSlug": "oral-pathology-and-oral-medicine-i",
+  "programme": "Diploma in Dental Technology",
+  "programmes": [
+   "Diploma in Dental Technology"
+  ],
+  "date": "10 November 2025",
+  "dateISO": "2025-11-10",
+  "year": "2025",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 7,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Basic Dental Sciences",
+  "categorySlug": "basic-dental-sciences"
+ },
+ {
+  "slug": "dds2107-oral-pathology-and-oral-medicine-i-main-exam-2024-2025",
+  "title": "Oral Pathology and Oral Medicine I: Main Exam, 24 March 2025",
+  "unitCode": "DDS2107",
+  "unitTitle": "Oral Pathology and Oral Medicine I",
+  "unitSlug": "oral-pathology-and-oral-medicine-i",
+  "programme": "Diploma in Community Oral Health",
+  "programmes": [
+   "Diploma in Community Oral Health"
+  ],
+  "date": "24 March 2025",
+  "dateISO": "2025-03-24",
+  "year": "2025",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 6,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Basic Dental Sciences",
+  "categorySlug": "basic-dental-sciences"
+ },
+ {
+  "slug": "dds2107-oral-pathology-and-oral-medicine-i-special-exam-2020-2021",
+  "title": "Oral Pathology and Oral Medicine I: Special Exam, 26 July 2021",
+  "unitCode": "DDS2107",
+  "unitTitle": "Oral Pathology and Oral Medicine I",
+  "unitSlug": "oral-pathology-and-oral-medicine-i",
+  "programme": "Diploma in Community Oral Health",
+  "programmes": [
+   "Diploma in Community Oral Health"
+  ],
+  "date": "26 July 2021",
+  "dateISO": "2021-07-26",
+  "year": "2021",
+  "sitting": "Special Exam",
+  "duration": "2 Hours",
+  "questions": 9,
+  "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
   "categorySlug": "basic-dental-sciences"
@@ -375,7 +460,7 @@
   "sitting": "Main Exam",
   "duration": "2 Hours",
   "questions": 7,
-  "complete": false,
+  "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
   "categorySlug": "community-and-public-health"
