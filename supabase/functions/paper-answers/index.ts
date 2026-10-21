@@ -71,7 +71,7 @@ serve(async (req) => {
     const lane = Number((await req.json().catch(() => ({}))).lane ?? 0) || 0;
     const { data: rows } = await sb.from("paper_answers").select("slug, qkey, unit, marks, question").is("answer", null).lt("tries", 4).order("slug").order("idx").range(lane * 8, lane * 8 + 7);
     if (!rows?.length) return json({ success: true, status: "all answered", seo });
-    const prompt = rows.map((r, i) => `ID ${i + 1} (${r.unit}${r.marks ? `, ${r.marks} marks` : ""}):\n${r.question}`).join("\n\n");
+    const prompt = rows.map((r, i) => `ID ${i + 1} (${r.unit}${r.marks ? `, ${r.marks} marks: write at least ${Math.min(Math.max(Number(r.marks), 2), 18)} and at most ${Math.min(Math.max(Number(r.marks), 2), 18) + 3} separate "- " points` : ""}):\n${r.question}`).join("\n\n");
     let answers: { id: string; answer: string }[] = [], err = "";
     // this job's own key first, then the shared extra keys when it is rate-limited
     const extra = (Deno.env.get("GROQ_API_KEYS_EXTRA") || "").split(",").map((k) => k.trim()).filter(Boolean);
