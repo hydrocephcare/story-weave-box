@@ -46,7 +46,13 @@ export default function RecentlyPublished({ year, limit = 8, className }: { year
 
   const rows = useMemo(() => {
     const own: Row[] = STATIC_NOTES.map((n, i) => ({ key: `s:${n.slug}`, title: n.title, to: `/notes/${n.slug}`, kind: n.paper ? "Past paper" as const : "Note" as const, year: n.year, unit: n.unit, at: Date.parse(n.updated) + i * 1000 })).filter((r) => Number.isFinite(r.at));
-    return [...own, ...db]
+    // GitHub-published clinical resources are static app routes, not Supabase articles.
+    // Register them here so they appear in Recently published even when no database row exists.
+    const clinicalReleases: Row[] = [
+      { key: "release:imed-osce-2019", title: "Internal Medicine OSCEs 2019", to: "/clinical/osce-2019", kind: "Topic", year: 4, unit: "Internal Medicine · OSCEs", at: Date.parse("2026-10-21T14:25:23Z") },
+      { key: "release:imed-osce-stations", title: "Internal Medicine picture stations", to: "/clinical/osce-stations", kind: "Topic", year: 4, unit: "Internal Medicine · Clinical images", at: Date.parse("2026-10-21T13:04:27Z") },
+    ];
+    return [...own, ...db, ...clinicalReleases]
       .filter((r) => (year ? r.year === year : true))
       .filter((r) => r.kind !== "Past paper" || !/question bank/i.test(r.title))
       .sort((a, b) => b.at - a.at)
