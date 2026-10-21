@@ -49,7 +49,7 @@ try {
     ].join("\n    ");
     if (noindex) html = setTag(html, /<meta name="robots"[^>]*>/, `<meta name="robots" content="noindex,follow" />`);
     html = html.replace("</head>", `    ${extra}\n  </head>`);
-    html = html.replace('<div id="root"></div>', `<div id="root">${body}</div>`);
+    html = html.replace('<div id="root"><div class="boot-loader" aria-hidden="true"></div></div>', `<div id="root"><div class="boot-loader" aria-hidden="true"></div><div class="prerendered">${body}</div></div>`);
     return html;
   }
 
