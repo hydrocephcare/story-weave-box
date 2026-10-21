@@ -1,0 +1,220 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3221-network-operating-systems-main-exam-2017-2018",
+ "title": "Network Operating Systems: Main Exam, 25 April 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT3221",
+ "unitTitle": "Network Operating Systems",
+ "date": "25th April 2018 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE IN SECTION A AND ANY OTHER TWO QUESTIONS IN SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is multiprogramming?",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Define the term inter-process communication.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Define the following as used in computer operating systems.",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Process"
+        },
+        {
+         "l": "ii",
+         "text": "Program"
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "Differentiate unbounded buffer and bounded buffer.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Why do programmers prefer remote procedure call and distributed shared memory over message passing?",
+       "marks": 3
+      },
+      {
+       "l": "f",
+       "text": "Can a system detect that some of its processes are starving? If you answer \"yes\", explain how it can. If you answer \"no\", explain how the system can deal with the starvation problem.",
+       "marks": 4
+      },
+      {
+       "l": "g",
+       "text": "Explain what paging is.",
+       "marks": 5
+      },
+      {
+       "l": "h",
+       "text": "Discuss the reasons for operating system cooperating processes.",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain why inter-process communication can be either synchronous or asynchronous messaging.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Differentiate between independent and cooperative processes.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Differentiate stateful and stateless servers.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "In a multi-process system, deadlock is an unwanted situation that arises in a shared resource environment, where a process indefinitely waits for a resource that is held by another process. Briefly discuss two ways in which this situation can be prevented or avoided.",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the term network operating systems.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Explain the three basic features provided by the operating system.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Discuss any four services offered by network operating systems.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "How does a remote procedure call work?",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Discuss distributed shared memory (DSM).",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Explain any TWO reasons why Linux is usually preferred in network administration rather than the Windows operating system.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "How are the following transparencies ensured in a distributed application?",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Naming transparency",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Replication transparency",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Structure transparency",
+         "marks": 2
+        }
+       ]
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the distributed file system.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Explain why a distributed file system is a service offered by a server to clients.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Network operating systems provide three basic mechanisms to support the services offered by the OS. Clearly explain these mechanisms.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-04-25",
+ "dateLabel": "25 April 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "network-operating-systems"
+}

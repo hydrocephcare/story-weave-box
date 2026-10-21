@@ -1,0 +1,141 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bec2204-life-skills-in-ecs-main-exam-2017-2018",
+ "title": "Life Skills in Ecs: Main Exam, 8 August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Education",
+ "department": "Department of Early Childhood Studies",
+ "programme": "Bachelor of Education in Early Childhood",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BEC2204",
+ "unitTitle": "Life Skills in Ecs",
+ "date": "Wed 8th August, 2018 7.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO QUESTIONS IN SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Outline four life skills in the first category (life skills of understanding and living with self).",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Identify three educational benefits of life skills.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Distinguish between self-respect and self-efficacy.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Mention six steps in esteem building.",
+       "marks": 6
+      },
+      {
+       "l": "e",
+       "text": "Describe the three types of behaviour.",
+       "marks": 6
+      },
+      {
+       "l": "f",
+       "text": "Discuss three categories of non-verbal communication."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "i) Define critical thinking. ii) Identify the seven core critical thinking skills.",
+       "marks": 7
+      },
+      {
+       "l": "b",
+       "text": "Discuss the five-stage negotiation process.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss five classic creative methods.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Describe any five positive attitudes for creativity.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Identify the origins of low self-esteem.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the role of a pre-primary day school in inculcating behaviour in children.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Discuss the strategies of managing emotions a guest counsellor is likely to recommend to the managers of pre-primary/day care centres at a Bidii sub-county workshop organized by the newly elected member of parliament.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-08-08",
+ "dateLabel": "8 August 2018",
+ "programmes": [
+  "Bachelor of Education in Early Childhood"
+ ],
+ "categorySlug": "other-units",
+ "category": "Other Units",
+ "unitSlug": "life-skills-in-ecs"
+}

@@ -1,0 +1,163 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4217-total-quality-management-main-exam-2017-2018",
+ "title": "Total Quality Management: Main Exam, 13 August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "BBIT / bscit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4217",
+ "unitTitle": "Total Quality Management",
+ "date": "Mon 13th August 2018 2:00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the benchmarking process.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Outline the dimensions of quality in both the production and service sectors.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "What are the barriers to TQM implementation? How are they eliminated?",
+       "marks": 8
+      },
+      {
+       "l": "d",
+       "text": "Define quality for the following products using the principles of TQM.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "A university"
+        },
+        {
+         "l": "ii",
+         "text": "An exercise facility"
+        },
+        {
+         "l": "iii",
+         "text": "Spaghetti sauce"
+        },
+        {
+         "l": "iv",
+         "text": "Toothpaste"
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Software quality is defined as conformance to explicitly stated functional and non-functional requirements. Explain the software quality factors.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Quality management is currently cutting across other areas of management in several organizations. Discuss the relationship between quality management and other management disciplines.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the merits and demerits of business process re-engineering (BPR).",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the skills to develop in a Six Sigma organization.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Customer satisfaction is determined by a number of issues. Explain the determinants of customer satisfaction.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "One of the principles that guide the success of total quality management is process improvement. Explain tools that can be used for process improvement.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Customer focus is an organization's orientation towards satisfying the needs of potential and actual customers. Discuss the goals of customer focus.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the various types of software testing that can be used to assure stakeholders of software quality.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-08-13",
+ "dateLabel": "13 August 2018",
+ "programmes": [
+  "BBIT",
+  "BSCIT"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "total-quality-management"
+}

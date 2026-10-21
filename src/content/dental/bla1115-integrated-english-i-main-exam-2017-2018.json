@@ -1,0 +1,124 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bla1115-integrated-english-i-main-exam-2017-2018",
+ "title": "Integrated English I: Main Exam, 11 April 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Languages and Humanities",
+ "programme": "Bachelor of Education (arts)",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BLA1115",
+ "unitTitle": "Integrated English I",
+ "date": "11th April 2018, 4.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly describe the following in relation to language.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Interjections"
+        },
+        {
+         "l": "ii",
+         "text": "Declarative and interrogative sentences"
+        },
+        {
+         "l": "iii",
+         "text": "Clause"
+        },
+        {
+         "l": "iv",
+         "text": "Morpheme"
+        },
+        {
+         "l": "v",
+         "text": "Determiner"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "State three functions of auxiliary verbs.",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "With examples, show the difference between regular and irregular verbs.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "State and explain 3 types of sentences, giving examples in each case.",
+       "marks": 12
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Using examples, analyse any five types of adverbs.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "State and explain various causes of spelling errors in English.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Discuss both the structural and the functional types of sentences.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the various types of verbs.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the various types of pronouns.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-04-11",
+ "dateLabel": "11 April 2018",
+ "programmes": [
+  "Bachelor of Education (arts)"
+ ],
+ "categorySlug": "other-units",
+ "category": "Other Units",
+ "unitSlug": "integrated-english-i"
+}

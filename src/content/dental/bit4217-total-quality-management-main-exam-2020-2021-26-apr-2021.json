@@ -1,0 +1,207 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4217-total-quality-management-main-exam-2020-2021-26-apr-2021",
+ "title": "Total Quality Management: Main Exam, 26 April 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "Bachelor of Business Information Technology / bachelor of Science in Information Technology",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BIT4217",
+ "unitTitle": "Total Quality Management",
+ "date": "Mon 26th April, 2021 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A (COMPULSORY)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "TQM is an enhancement to the traditional way of doing business. It is the art of managing the whole to achieve excellence. Outline FIVE obstacles associated with TQM implementation.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Explain the concepts of Six Sigma.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Empowering people in the organization is an essential element of TQM. Explain the role of education and training in this respect.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Define the following terms.",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Quality control"
+        },
+        {
+         "l": "ii",
+         "text": "Quality assurance"
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "An author on quality has proposed the statement that quality is the only issue for organizational survival. Discuss the statement in the light of the challenges facing organizations today.",
+       "marks": 5
+      },
+      {
+       "l": "f",
+       "text": "Outline SIX qualities needed for a leader to be effective.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "As a quality assurance director in your organization, explain to your team the key stages that should be followed when implementing a business process re-engineering (BPR) programme.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "The main issue in building customer satisfaction is to acquire satisfied customers. Describe any FIVE methods that can be used to identify customer satisfaction.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Explain the importance of using quality circles in quality improvement initiatives.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Explain the benchmarking process and reasons to benchmark.",
+       "marks": 2
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly explain four types of process benchmarking with examples.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Giving appropriate examples, analyse any four of the perspectives of quality according to Garvin (1984).",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Outline the objectives of TQM.",
+       "marks": 4
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Outline the FIVE (5) major benefits of total quality management to the organization.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Quality control is a process employed to ensure a certain level of quality in a product or service. Outline the objectives of quality control.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Your competitor was awarded ISO 9000 certification recently. Explain to your line manager what ISO 9000 is and what benefits your organization can enjoy from getting that certification.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "A defence contractor manufactures rifles for the military. The military has exacting quality standards that the contractor must meet. The military is very pleased with the quality of the products provided by the contractor. However, the contractor is experiencing high quality-related costs. Discuss the reasons for the contractor's high quality-related costs.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Describe the following terms as applied in quality process planning.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Brainstorming"
+        },
+        {
+         "l": "ii",
+         "text": "Pareto analysis"
+        },
+        {
+         "l": "iii",
+         "text": "Ishikawa diagrams"
+        },
+        {
+         "l": "iv",
+         "text": "Checklists"
+        },
+        {
+         "l": "v",
+         "text": "Flow chart"
+        }
+       ]
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-04-26",
+ "dateLabel": "26 April 2021",
+ "programmes": [
+  "Bachelor of Business Information Technology",
+  "bachelor of Science in Information Technology"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "total-quality-management"
+}

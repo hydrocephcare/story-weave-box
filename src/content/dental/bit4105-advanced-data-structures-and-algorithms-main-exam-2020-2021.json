@@ -1,0 +1,216 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4105-advanced-data-structures-and-algorithms-main-exam-2020-2021",
+ "title": "Advanced Data Structures and Algorithms: Main Exam, 20 August 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BIT4105",
+ "unitTitle": "Advanced Data Structures and Algorithms",
+ "date": "Fri 20th Aug, 2021 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the term data structures.",
+       "marks": 1
+      },
+      {
+       "l": "b",
+       "text": "Differentiate between data abstraction and data types.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Discuss why the study of data structures is important.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Differentiate between Θ-notation (same order) and O-notation (upper bound) in the analysis of algorithms.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Describe algorithm analysis and name two interpretations of the upper bound.",
+       "marks": 6
+      },
+      {
+       "l": "f",
+       "text": "Differentiate between a singly linked list and a doubly linked list.",
+       "marks": 4
+      },
+      {
+       "l": "g",
+       "text": "Describe any THREE application areas of graphs.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe algorithm analysis and name two interpretations of the upper bound.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Briefly describe any three steps for solving algorithm design questions.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Describe any two functions that are found in any greedy algorithm.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Describe the concept of the queue ADT and write algorithms to implement the initialization, enqueue and dequeue operations on a queue.",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the difference between Kruskal's algorithm and Prim's algorithm.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Describe depth-first search in algorithms.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Describe any four application areas of graph theory.",
+       "marks": 8
+      },
+      {
+       "l": "d",
+       "text": "Define the following terms as used in the analysis of algorithms.",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Euler circuit"
+        },
+        {
+         "l": "ii",
+         "text": "Complete graph"
+        }
+       ]
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the structure of a greedy algorithm.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Using an example, write an algorithm that illustrates the following time complexities.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "O(n)"
+        },
+        {
+         "l": "ii",
+         "text": "O(n²)"
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "Discuss two main areas of application for breadth-first search.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Discuss the searching problem and state any two searching approaches.",
+       "marks": 4
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using a real life situation, explain how the activity selection problem can be useful. Use pseudo code to explain your answer.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Explain the difference between a forward edge and a back edge in a graph algorithm.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Differentiate between a recursive algorithm and a recursive procedure.",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "Design a car renting system, including reserving a car, checking in and checking out. Consider all the cases: reserve a car, then check out successfully; reserve a car, but the car is sold out before you check out.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-08-20",
+ "dateLabel": "20 August 2021",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "advanced-data-structures-and-algorithms"
+}

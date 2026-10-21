@@ -1,0 +1,266 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4202-artificial-intelligence-main-exam-2017-2018",
+ "title": "Artificial Intelligence: Main Exam, 17 April 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Business Information Technology / information Technology",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4202",
+ "unitTitle": "Artificial Intelligence",
+ "date": "17th April 2018 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the working of each of the following search techniques.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Depth-first search",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "Breadth-first search",
+         "marks": 3
+        },
+        {
+         "l": "iii",
+         "text": "Heuristic search",
+         "marks": 3
+        },
+        {
+         "l": "iv",
+         "text": "Generate-and-test",
+         "marks": 3
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Why are natural-language processing systems so difficult to develop?",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Explain what you understand by the following task domains and name two tasks that fall under each.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Formal tasks",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Expert tasks",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Mundane tasks",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "What is an artificial intelligence technique? Name and explain two AI techniques that you know.",
+       "marks": 6
+      },
+      {
+       "l": "e",
+       "text": "Explain the following conditions in relation to both basic and steepest-ascent hill climbing.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "A local maximum",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "A plateau",
+         "marks": 2
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Terminal node",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "Initial state",
+         "marks": 3
+        },
+        {
+         "l": "iii",
+         "text": "Search space",
+         "marks": 3
+        },
+        {
+         "l": "iv",
+         "text": "Goal node",
+         "marks": 3
+        },
+        {
+         "l": "v",
+         "text": "Solution path",
+         "marks": 3
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "State 2 disadvantages of depth-first search and breadth-first search.",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "Name any 2 assumptions that have been made about artificial intelligence.",
+       "marks": 2
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Knowledge does possess some less desirable properties. Name four of these properties.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Name four ways by which knowledge that is used in any AI technique should be represented.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "What is the widely used criterion for determining the success of an AI system? Explain the working of this criterion.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "The following are some of the properties that a good system used for representing knowledge in a particular domain should possess. Explain them.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Inferential adequacy",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Inferential efficiency",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Acquisitional efficiency",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Define the term knowledge representation.",
+       "marks": 2
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "i) What is an expert system shell and how is it used? ii) What is the function of the inference engine in expert systems? iii) Why is the prototyping approach used in expert system development? iv) Why is knowledge sometimes difficult to extract from experts? v) Describe briefly the four primary phases of building an expert system."
+      },
+      {
+       "l": "b",
+       "text": "What makes Lisp and Prolog the most widely used languages for developing AI programs?"
+      },
+      {
+       "l": "c",
+       "text": "What is first order logic?"
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "According to your knowledge of programming languages, what other programming language would you consider suitable for writing AI programs? Give supporting reasons for your answer.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "State any four social implications of AI.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "What advances do you think need to be made in order for the Turing test to be passed?",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Give 5 examples on usage of first order logic.",
+       "marks": 5
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-04-17",
+ "dateLabel": "17 April 2018",
+ "programmes": [
+  "Bachelor of Business Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "artificial-intelligence"
+}

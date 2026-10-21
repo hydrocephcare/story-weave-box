@@ -1,0 +1,145 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3105-management-information-systems-main-exam-2017-2018-15-aug-2018",
+ "title": "Management Information Systems: Main Exam, 15 August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bscit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT3105",
+ "unitTitle": "Management Information Systems",
+ "date": "Wed 15th August, 2018 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define a system.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "What is an information system?",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Differentiate between information and data.",
+       "marks": 3
+      },
+      {
+       "l": "d",
+       "text": "Why are information systems important?",
+       "marks": 3
+      },
+      {
+       "l": "e",
+       "text": "What are some of the services offered by the information technology infrastructure?",
+       "marks": 5
+      },
+      {
+       "l": "f",
+       "text": "State 5 challenges that management faces while creating and managing an infrastructure.",
+       "marks": 5
+      },
+      {
+       "l": "g",
+       "text": "With the aid of a flow chart, explain the relationship between the different [part of this line is cut off in the scan] of an organization.",
+       "marks": 5
+      },
+      {
+       "l": "h",
+       "text": "Briefly describe the management opportunities, challenges and solutions when dealing with information systems.",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the three levels of management that information systems serve, with their respective roles.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Michael Porter's five forces model analysis is a framework for industry analysis and business strategy development. It draws upon industrial organization (IO) economics to derive five forces that determine the competitive intensity and therefore attractiveness of a market. Discuss.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Information technology involves setting out the plans and the underlying principles of those plans within that organization. Among the elements of the plan that provide guidance toward plan achievement, such plans typically incorporate information on goals and objectives as well as on tracking the realization of those goals through specifications for performance measures. With the aid of appropriate examples, discuss Nolan's model, highlighting the key points of each stage.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the IT planning stages.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Information systems are vulnerable to technical, organizational and environmental threats from internal and external sources. Discuss.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Information technology can promote various degrees of organizational change. Discuss 3 changes with a wider impact to the organization.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Elaborate on the steps taken when performing an effective business process re-engineering, indicating the key success factors in the process.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-08-15",
+ "dateLabel": "15 August 2018",
+ "programmes": [
+  "BBIT",
+  "BSCIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "management-information-systems"
+}

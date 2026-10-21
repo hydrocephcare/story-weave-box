@@ -1,0 +1,187 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4217-total-quality-management-main-exam-2021-2022",
+ "title": "Total Quality Management: Main Exam, 7 December 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2021/2022",
+ "unitCode": "BIT4217",
+ "unitTitle": "Total Quality Management",
+ "date": "Tue 7th Dec, 2021 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is total quality management?",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "What is quality control?",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Explain the objectives of quality control in a software development organization.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "List any five goals of a customer focus in software development that may improve the quality of the products.",
+       "marks": 5
+      },
+      {
+       "l": "e",
+       "text": "Explain how employees' participation in organizational activities can improve the quality of the final product.",
+       "marks": 6
+      },
+      {
+       "l": "f",
+       "text": "Explain any two TQM workforce factors that are applicable to an organization.",
+       "marks": 6
+      },
+      {
+       "l": "g",
+       "text": "What are some factors that a successful implementation of ISO standards in an organization may depend on?",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the product life cycle assurance procedures that are necessary within the TQC policy and programmes.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "What are some of the obstacles that may hinder employees' involvement in organizational activities so as to achieve quality?",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain the stages that product designers follow during new product design and development.",
+       "marks": 8
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain any four benefits an organization can get by adopting TQM.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Explain any four attributes that make up customer experience.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Explain the key roles that Six Sigma identifies for its successful implementation in an organization.",
+       "marks": 8
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the evolution of TQM.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Explain any two ways that an organization can put in place to improve the product design and quality.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain the following methods of quality control as used in organizations.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Computer-aided quality control (CAQC)",
+         "marks": 6
+        },
+        {
+         "l": "ii",
+         "text": "Manual inspection",
+         "marks": 4
+        }
+       ]
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "List down the elements of TQM that can be applied to an organization so as to achieve high quality products.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Explain any two sources of variation that may exist in a production process leading to defects and lack of consistency.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain any five customer experience strategies that may be applied in an organization to improve the quality of the final product.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-12-07",
+ "dateLabel": "7 December 2021",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "total-quality-management"
+}

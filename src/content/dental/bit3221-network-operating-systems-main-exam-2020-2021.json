@@ -1,0 +1,214 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3221-network-operating-systems-main-exam-2020-2021",
+ "title": "Network Operating Systems: Main Exam, 21 April 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "BBIT / bit",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BIT3221",
+ "unitTitle": "Network Operating Systems",
+ "date": "Wed 21st April 2021 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE (COMPULSORY) AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "The Virtual Campus at MKU offers distance learning courses in various disciplines. The management is planning to move the Virtual Campus from MKU Towers to Alumni Plaza, where employees supporting the programmes will be supplied with desktop computers. A dedicated computer room with high performance will be installed in order to provide services to students and staff who may access them either over the internet or over the university network. A network operating system will also be installed.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain any FOUR distinct features of a network operating system and explain how each would be implemented in the Virtual Campus network.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Explain any FOUR reasons why the MKU management may prefer Linux in network administration as opposed to the Windows operating system.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "The university management has proposed to upgrade the network to a distributed processing system. Write short notes on why this is or is not a good idea.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Explain the meaning of the terms below in the context of the above network.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Active Directory",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Dynamic Host Configuration Protocol",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "You have been appointed by the MKU management to administer this network. Highlight the main duties that this role would entail.",
+       "marks": 6
+      },
+      {
+       "l": "f",
+       "text": "Briefly explain the steps that you would undertake while installing the NOS and setting up the above network.",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the difference between a workgroup and a domain environment.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Highlight the factors that would be considered in choosing a network operating system.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Outline four characteristics and two potential problems of a peer-to-peer environment.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Discuss the importance of AppleShare.",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "You are in charge of computing, networks, and IT in a small company with 20 employees. The company uses PC-based networked computers and most of the employees have laptops solely for company business use.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What steps would a network administrator be required to undertake to ensure that the resources are secure?",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "The management has proposed to upgrade the network to a distributed processing system. Write short notes on why this is or is not a good idea.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "If the management adopts the above idea, highlight and explain six aspects of the system that would achieve transparency.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "You have been appointed by the company management to administer this network. Highlight the main duties that this role would entail.",
+       "marks": 6
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following system architectures and how they differ from one another.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Client/server"
+        },
+        {
+         "l": "ii",
+         "text": "Multi-tier/vertical distribution client-server models"
+        },
+        {
+         "l": "iii",
+         "text": "Peer-to-peer client-server models"
+        },
+        {
+         "l": "iv",
+         "text": "Horizontal distribution client-server models"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain any FOUR challenges associated with implementing network operating systems in a client's work environment.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain what a distributed deadlock is and how it is mitigated in current systems.",
+       "marks": 6
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain how the following services are achieved through a network operating system.",
+       "marks": 8,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Object and brokerage service"
+        },
+        {
+         "l": "ii",
+         "text": "Directory and naming service"
+        },
+        {
+         "l": "iii",
+         "text": "Time and synchronization service"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Discuss 6 distinct features of the Windows Server network operating system.",
+       "marks": 12
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-04-21",
+ "dateLabel": "21 April 2021",
+ "programmes": [
+  "BBIT",
+  "BIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "network-operating-systems"
+}

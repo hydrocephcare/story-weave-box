@@ -1,0 +1,134 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bse3208-introduction-to-kenyan-sign-language-main-exam-2018-2019",
+ "title": "Introduction to Kenyan Sign Language: Main Exam, 12 April 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Special Needs Education",
+ "programme": "Bachelor of Education in Special Needs",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BSE3208",
+ "unitTitle": "Introduction to Kenyan Sign Language",
+ "date": "Fri 12th April, 2019 7.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain what Kenyan Sign Language is.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Outline the three approaches in oralism.",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "State two models in bilingual education.",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "Describe what total communication is.",
+       "marks": 3
+      },
+      {
+       "l": "e",
+       "text": "Identify the two types of manual alphabets used in the world today.",
+       "marks": 2
+      },
+      {
+       "l": "f",
+       "text": "Explain the following terms as used in Kenyan Sign Language.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Sign language",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Mimicry",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Body language",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "g",
+       "text": "Explain how cued speech is used in communication with the deaf.",
+       "marks": 4
+      },
+      {
+       "l": "h",
+       "text": "Identify the two types of manual skills.",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "State the four elements of a sign. j) Describe how speed of movement affects the meaning of a sign.",
+         "marks": 2
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss factors one should observe in order to finger spell and read finger-spelled letters properly.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Using appropriate examples, discuss different handshapes in Kenyan Sign Language.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Using appropriate examples, discuss different places of articulation in Kenyan Sign Language.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Explain the four features used to mark plural and singular.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2019-04-12",
+ "dateLabel": "12 April 2019",
+ "programmes": [
+  "Bachelor of Education in Special Needs"
+ ],
+ "categorySlug": "law-and-social-sciences",
+ "category": "Law and Social Sciences",
+ "unitSlug": "introduction-to-kenyan-sign-language"
+}

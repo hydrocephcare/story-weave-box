@@ -1,0 +1,144 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bjl3201-communication-research-main-exam-2017-2018",
+ "title": "Communication Research: Main Exam, 17 August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Journalism and Mass Communication",
+ "programme": "Bachelor of Arts in Mass Media and Communication",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BJL3201",
+ "unitTitle": "Communication Research",
+ "date": "Fri 17th August, 2018 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following concepts.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Intuition",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "Science",
+         "marks": 3
+        },
+        {
+         "l": "iii",
+         "text": "Evaluation research",
+         "marks": 3
+        },
+        {
+         "l": "iv",
+         "text": "Hypothesis",
+         "marks": 3
+        },
+        {
+         "l": "v",
+         "text": "Secondary sources of literature",
+         "marks": 3
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain types of relationships among variables.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Describe the procedure you will follow when sampling using random sampling.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Focus group discussion is one of the methods used in data collection as an instrument among qualitative researchers.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe four contexts where the use of focus group discussion is appropriate.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Describe the steps in conducting a focus group discussion.",
+       "marks": 12
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss the various parts of a research proposal.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Discuss five sources of knowledge.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Discuss the following types of research methods.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Descriptive research",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Causal comparative research",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Survey research",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Historical research",
+       "marks": 5
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-08-17",
+ "dateLabel": "17 August 2018",
+ "programmes": [
+  "Bachelor of Arts in Mass Media and Communication"
+ ],
+ "categorySlug": "media-and-communication",
+ "category": "Media and Communication",
+ "unitSlug": "communication-research"
+}

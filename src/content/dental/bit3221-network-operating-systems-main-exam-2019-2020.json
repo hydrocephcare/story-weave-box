@@ -1,0 +1,207 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3221-network-operating-systems-main-exam-2019-2020",
+ "title": "Network Operating Systems: Main Exam, 10 December 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit / bscit",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BIT3221",
+ "unitTitle": "Network Operating Systems",
+ "date": "Tue 10th December, 2019 2:00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Give three requirements that must be fulfilled in the enforcement of security in a distributed environment.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Explain three typical services provided by a network operating system.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Briefly discuss the kernel architecture.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Differentiate between two types of multitasking.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "What are some of the services provided by most operating systems that use the TCP/IP protocol for network communications?",
+       "marks": 6
+      },
+      {
+       "l": "f",
+       "text": "In what ways can a network administrator use the NOS?",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the four vital functions of the NOS.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Distinguish between stateless and stateful servers.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain any three communication protocols used in remote procedure calls.",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What are the benefits of placing the API service and all networking services outside the kernel?",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Describe the following terms as used in network operating systems.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Windows 2000 Server",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "Active Directory",
+         "marks": 3
+        },
+        {
+         "l": "iii",
+         "text": "Dynamic Host Configuration Protocol",
+         "marks": 4
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "Name and explain four design principles considered useful for better performance.",
+       "marks": 8
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss three guiding principles when designing a distributed operating system to achieve [the end of this line is cut off in the scan].",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Explain the following terms.",
+       "marks": 9,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Fault avoidance"
+        },
+        {
+         "l": "ii",
+         "text": "Fault tolerance"
+        },
+        {
+         "l": "iii",
+         "text": "Byzantine failure"
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "Outline the salient features of the following set of network (or distributed) operating systems that either are in operation or have significant contributions to the state of the art.",
+       "marks": 5,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Amoeba"
+        },
+        {
+         "l": "ii",
+         "text": "Clouds"
+        }
+       ]
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "In buffering, synchronous and asynchronous communication correspond respectively to no buffer and a buffer with unbounded capacity. Briefly describe the forms of buffering.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "To turn from traditional computer systems with some networking facilities added on to systems designed with the intention of being distributed, distributed system designers are faced with some design issues. Explain any four issues that distributed system designers are faced with.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Using appropriate diagrams, explain any three distributed system architectures.",
+       "marks": 6
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2019-12-10",
+ "dateLabel": "10 December 2019",
+ "programmes": [
+  "BIT",
+  "BBIT",
+  "BSCIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "network-operating-systems"
+}

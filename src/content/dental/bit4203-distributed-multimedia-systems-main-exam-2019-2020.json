@@ -1,0 +1,164 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4203-distributed-multimedia-systems-main-exam-2019-2020",
+ "title": "Distributed Multimedia Systems: Main Exam, 20 December 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bis / bit",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BIT4203",
+ "unitTitle": "Distributed Multimedia Systems",
+ "date": "Friday 20th December, 2019 11:00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO. USE ILLUSTRATIONS WHERE NECESSARY. THE LAST PAGE OF THE ORIGINAL SCAN IS MISSING, SO QUESTIONS MARKED [PREDICTED] WERE WRITTEN TO COMPLETE THE PAPER AND ARE NOT FROM THE PRINTED PAPER.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Being creative in a multimedia system design is a big plus. Why is this so?"
+      },
+      {
+       "l": "b",
+       "text": "Multimedia delivery mechanisms are very crucial to consider when deciding how to deliver multimedia content. Explain four reasons why."
+      },
+      {
+       "l": "c",
+       "text": "Optical character recognition software has many features. Explain any three of them."
+      },
+      {
+       "l": "d",
+       "text": "A multimedia system has many characteristics. Briefly explain any four of them."
+      },
+      {
+       "l": "e",
+       "text": "What are the six forces driving communications that facilitate multimedia?"
+      },
+      {
+       "l": "f",
+       "text": "i) Differentiate between hypertext and hypermedia. ii) Using an example, explain what a multimedia application is."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "i) Explain the term multimedia streaming. ii) Explain two different types of multimedia streaming."
+      },
+      {
+       "l": "b",
+       "text": "A client-centred project life cycle is preferred in multimedia production. Discuss the project-centred life cycle."
+      },
+      {
+       "l": "c",
+       "text": "Briefly explain four applications of a multimedia system."
+      },
+      {
+       "l": "d",
+       "text": "Differentiate between EDF and SCAN-EDF scheduling."
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "A temporal relationship between many forms of media (for example video and audio) exists and they experience two types of problems. Explain any two problems experienced.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Enumerate any five features of painting/drawing programs in multimedia studio design.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "There are a number of utilities that are useful for multimedia design. Briefly explain any three.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "What are any five main features of image editing programs?",
+       "marks": 5
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the terms aspect ratio, authoring software, AVI, bitmap and CODEC."
+      },
+      {
+       "l": "b",
+       "text": "[Predicted] Explain the stages of multimedia application development."
+      },
+      {
+       "l": "c",
+       "text": "[Predicted] Describe the general user interface design issues for multimedia systems."
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "[Predicted] Describe any five activities carried out in digital sound recording and editing."
+      },
+      {
+       "l": "b",
+       "text": "[Predicted] Explain the difference between lossy and lossless compression, giving an example of each."
+      },
+      {
+       "l": "c",
+       "text": "[Predicted] Describe any five multimedia connecting devices."
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2019-12-20",
+ "dateLabel": "20 December 2019",
+ "programmes": [
+  "BBIT",
+  "BIS",
+  "BIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "distributed-multimedia-systems"
+}

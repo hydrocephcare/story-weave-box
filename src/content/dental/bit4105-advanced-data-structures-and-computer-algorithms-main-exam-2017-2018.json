@@ -1,0 +1,230 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4105-advanced-data-structures-and-computer-algorithms-main-exam-2017-2018",
+ "title": "Advanced Data Structures and Computer Algorithms: Main Exam, 20 April 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "Bachelor of Information Technology and Bachelor of Business Information Technology",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4105",
+ "unitTitle": "Advanced Data Structures and Computer Algorithms",
+ "date": "20th April, 2018 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 MARKS"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terms.",
+       "marks": 5,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Algorithm"
+        },
+        {
+         "l": "ii",
+         "text": "Tree"
+        },
+        {
+         "l": "iii",
+         "text": "Binary tree"
+        },
+        {
+         "l": "iv",
+         "text": "Linked list"
+        },
+        {
+         "l": "v",
+         "text": "Stack"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain the four ways of representing an algorithm using suitable examples.",
+       "marks": 15
+      },
+      {
+       "l": "c",
+       "text": "Using examples, explain the three types of proof and cite the situation where each can be used.",
+       "marks": 10
+      },
+      {
+       "l": "d",
+       "text": "Write a C program to show the implementation of a stack.",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Consider the directed graph with vertices v0 to v6 printed in the original paper.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "In what order are the vertices visited for a depth-first search that starts at v0?"
+        },
+        {
+         "l": "ii",
+         "text": "In what order are the vertices visited for a breadth-first search that starts at v0?"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Draw a directed graph with five vertices and seven edges. Exactly one of the edges should be a loop, and do not have any multiple edges.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain how the breadth-first and depth-first searching algorithms function.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Using suitable examples, explain how the following graph traversing algorithms work: shortest paths, Euler and Hamilton cycles.",
+       "marks": 15
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the operations that can be done on each of the following data structure elements.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Queue operations"
+        },
+        {
+         "l": "ii",
+         "text": "Stack operations"
+        },
+        {
+         "l": "iii",
+         "text": "Tree operations"
+        },
+        {
+         "l": "iv",
+         "text": "List operations"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Given the following list of numbers 4, 6, 8, 12, 56, 23, 58, 19, show the operation of inserting the following numbers into the list at the specified position.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "30 at position 8 in the list"
+        },
+        {
+         "l": "ii",
+         "text": "10 at position 6 in the list"
+        },
+        {
+         "l": "iii",
+         "text": "Suppose the above list was a queue, what would be the mode of operation for the above structure?"
+        },
+        {
+         "l": "iv",
+         "text": "Show the algorithm for the above operations."
+        }
+       ]
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following terms.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Spanning tree"
+        },
+        {
+         "l": "ii",
+         "text": "Asymptotic notation (the symbol is unreadable in the scan)"
+        },
+        {
+         "l": "iii",
+         "text": "Preconditioning"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "i) What are the main differences between divide and conquer and dynamic programming? ii) What is the basic approach in solving a problem using dynamic programming?",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Write down the characteristics of greedy algorithms.",
+       "marks": 5
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-04-20",
+ "dateLabel": "20 April 2018",
+ "programmes": [
+  "Bachelor of Information Technology and Bachelor of Business Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "advanced-data-structures-and-computer-algorithms"
+}

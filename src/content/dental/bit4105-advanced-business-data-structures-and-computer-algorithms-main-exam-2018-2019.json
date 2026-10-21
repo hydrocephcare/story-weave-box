@@ -1,0 +1,217 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4105-advanced-business-data-structures-and-computer-algorithms-main-exam-2018-2019",
+ "title": "Advanced Business Data Structures and Computer Algorithms: Main Exam, 23 August 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BIT4105",
+ "unitTitle": "Advanced Business Data Structures and Computer Algorithms",
+ "date": "Fri 23rd Aug, 2019 2:00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "QUESTION ONE IS COMPULSORY. ANSWER ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "COMPULSORY",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the term algorithm."
+      },
+      {
+       "l": "b",
+       "text": "Explain any three categories of algorithms."
+      },
+      {
+       "l": "c",
+       "text": "Explain three performance factors to consider when choosing an algorithm to use."
+      },
+      {
+       "l": "d",
+       "text": "Using examples, differentiate between a local optimal solution and a global optimal solution of an algorithm."
+      },
+      {
+       "l": "e",
+       "text": "In reference to the greedy algorithm, explain the following concepts.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "A candidate set"
+        },
+        {
+         "l": "ii",
+         "text": "An objective function"
+        },
+        {
+         "l": "iii",
+         "text": "A solution function"
+        }
+       ]
+      },
+      {
+       "l": "f",
+       "text": "Explain two advantages of the greedy algorithm."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "With the help of illustrative diagrams, explain the difference between a binary search tree (BST) and a heap tree.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Using the N-Queens puzzle game, explain the backtracking algorithm.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "With the help of a relevant diagram, explain the Big-Omega (Ω) notation and its relevance in representing algorithm performance.",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "With relevant examples, discuss the following divide and conquer techniques.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Merge sort",
+         "marks": 6
+        },
+        {
+         "l": "ii",
+         "text": "Max-min problem",
+         "marks": 6
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain the following backtracking function syntax.",
+       "marks": 8,
+       "parts": [
+        {
+         "l": "i",
+         "text": "reject(P,c)"
+        },
+        {
+         "l": "ii",
+         "text": "accept(P,c)"
+        },
+        {
+         "l": "iii",
+         "text": "first(P,c)"
+        },
+        {
+         "l": "iv",
+         "text": "output(P,c)"
+        }
+       ]
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following functions as a measure of computing operation performance.",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "f(n)"
+        },
+        {
+         "l": "ii",
+         "text": "g(n²)"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain three benefits of studying algorithm analysis in computer science.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "The space complexity of an algorithm is expressed as S(P) = C + SP(I). Explain.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Explain the travelling salesman problem.",
+       "marks": 6
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Quick sort is similar to merge sort in using the divide and conquer technique. Explain these techniques and show how each of the algorithms utilizes the divide and conquer technique.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "State the differences between the quick sort and merge sort algorithms.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Merge sort has a running time in the order of O(n log2 n) on average. Explain this statement.",
+       "marks": 6
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2019-08-23",
+ "dateLabel": "23 August 2019",
+ "programmes": [
+  "BBIT",
+  "BIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "advanced-business-data-structures-and-computer-algorithms"
+}

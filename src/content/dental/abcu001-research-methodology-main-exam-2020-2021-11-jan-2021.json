@@ -1,0 +1,120 @@
+{
+ "source": "mkupaperhub",
+ "slug": "abcu001-research-methodology-main-exam-2020-2021-11-jan-2021",
+ "title": "Research Methodology: Main Exam, 11 January 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Engineering, Energy, and the Built Environment",
+ "department": "Department of Energy and Environmental Engineering",
+ "programme": "Bachelor of Science Real Estate Management",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "ABCU001",
+ "unitTitle": "Research Methodology",
+ "date": "Mon 11th Jan 2021 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ATTEMPT ALL QUESTIONS IN SECTION A AND ANY OTHER TWO QUESTIONS IN SECTION B. CALCULATORS AND TABLES MAY BE USED. DO NOT WRITE ANYWHERE ON THIS QUESTION PAPER.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 MARKS"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the key features of the scientific method in research.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Briefly discuss the motivation and importance of research.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Discuss the meaning and importance of research design.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B 40 MARKS"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the various sampling designs, indicating their advantages and disadvantages.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Distinguish between research methods and research methodology and explain the categories of research techniques.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the contents of a research plan.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the techniques of defining a research problem.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the design features of exploratory studies as distinguished from those of descriptive studies.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the various methods of data collection in research.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-01-11",
+ "dateLabel": "11 January 2021",
+ "programmes": [
+  "Bachelor of Science Real Estate Management"
+ ],
+ "categorySlug": "biostatistics-and-research",
+ "category": "Biostatistics and Research",
+ "unitSlug": "research-methodology"
+}

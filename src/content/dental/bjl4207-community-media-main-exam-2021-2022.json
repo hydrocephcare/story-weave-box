@@ -1,0 +1,97 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bjl4207-community-media-main-exam-2021-2022",
+ "title": "Community Media: Main Exam, 9 December 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Journalism and Mass Communication",
+ "programme": "Bachelor of Arts in Mass Media and Communication",
+ "examTitle": "University Examination 2021/2022",
+ "unitCode": "BJL4207",
+ "unitTitle": "Community Media",
+ "date": "Thur 9th Dec, 2021 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Examine the three schools of thought under which Kenyan media functioned before the amendment of the Kenya Information and Communications Act in 2009 to define the three tiers of broadcasting that exist today.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss how sustainable development can be achieved through community radio.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Compare community media with other classifications of media.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Sustainability of any community media will require partnerships with community participants that plan, design and implement sustainable solutions to community problems through dialogue, knowledge sharing and capacity building activities. To realize this, it will require a needs assessment for the community. Examine how one can go about mapping/profiling a hypothetical community radio set to begin operation in your rural area.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "The political will to create, nurture, and guide community media and an enabling legal environment are fundamental to long-term sustainability. Examine the need for an enabling environment for community media (what it means, components involved, challenges faced and how this can be achieved).",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "The number of organizations seeking funding is increasing and the pool of funds is shrinking. Over the past few years, community organizations have begun turning to new ways of generating income.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Examine the various ways through which community media institutions raise revenue.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain two business models that may be used by non-profit making organizations/community media.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Research is needed at all stages of community radio development and operations. The research design and data gathered will depend on the current stage of development and what kind of information is needed. Discuss.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-12-09",
+ "dateLabel": "9 December 2021",
+ "programmes": [
+  "Bachelor of Arts in Mass Media and Communication"
+ ],
+ "categorySlug": "media-and-communication",
+ "category": "Media and Communication",
+ "unitSlug": "community-media"
+}

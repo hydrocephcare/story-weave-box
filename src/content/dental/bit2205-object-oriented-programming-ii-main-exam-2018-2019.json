@@ -1,0 +1,186 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit2205-object-oriented-programming-ii-main-exam-2018-2019",
+ "title": "Object Oriented Programming II: Main Exam, 20 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Science in Information Technology / bachelor of Business Information Technology",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BIT2205",
+ "unitTitle": "Object Oriented Programming II",
+ "date": "Thur 20th Dec 2018 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B. THE LAST PAGE OF THE ORIGINAL SCAN IS MISSING, SO QUESTIONS MARKED [PREDICTED] WERE WRITTEN TO COMPLETE THE PAPER AND ARE NOT FROM THE PRINTED PAPER.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following.",
+       "marks": 8,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Applet"
+        },
+        {
+         "l": "ii",
+         "text": "Swing"
+        },
+        {
+         "l": "iii",
+         "text": "Layout manager"
+        },
+        {
+         "l": "iv",
+         "text": "Inheritance"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain the difference between a textField and a textArea.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Write a code snippet to add five cities to a JList named lstCities.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Explain three user interface design principles.",
+       "marks": 6
+      },
+      {
+       "l": "e",
+       "text": "Explain the role of the following methods. Use an example to show how they are implemented.",
+       "marks": 8,
+       "parts": [
+        {
+         "l": "i",
+         "text": "fillRect()"
+        },
+        {
+         "l": "ii",
+         "text": "setColor()"
+        },
+        {
+         "l": "iii",
+         "text": "setLayout()"
+        },
+        {
+         "l": "iv",
+         "text": "drawString()"
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Examine five types of user interfaces in designing systems.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Using a well-labelled diagram, explain the JDBC architecture.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss three layout managers used to draw a GUI in Java.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Write Java code that displays the following: a window with two radio buttons labelled Male and Female (Male selected) and a button labelled click; when the button is clicked, a message dialog reading \"You are male\" with an OK button is shown.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain five differences between Swing and AWT in Java.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "[Predicted] Write Java code that displays a login form with a username field, a password field and a Login button, and shows a message dialog when the button is clicked.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "[Predicted] Explain the life cycle of a Java applet.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "[Predicted] Write a Java program that uses JDBC to connect to a database and display the records of a table.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-12-20",
+ "dateLabel": "20 December 2018",
+ "programmes": [
+  "Bachelor of Science in Information Technology",
+  "bachelor of Business Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "object-oriented-programming-ii"
+}

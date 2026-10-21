@@ -1,0 +1,253 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit2103-hardware-and-software-installation-and-support-main-exam-2020-2021",
+ "title": "Hardware and Software Installation and Support: Main Exam, 22 January 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "Bachelor of Business Information Technology / bachelor of Science in Information Technology",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BIT2103",
+ "unitTitle": "Hardware and Software Installation and Support",
+ "date": "Fri 22nd Jan 2021 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "COMPULSORY",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define an operating system and exemplify five main functions of an operating system.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Name and discuss four main components of an operating system.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Give the system requirements for installing both Windows 8 and Mac OS X.",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "Differentiate between the following types of hard disks.",
+       "marks": 8,
+       "parts": [
+        {
+         "l": "i",
+         "text": "SATA"
+        },
+        {
+         "l": "ii",
+         "text": "IDE"
+        },
+        {
+         "l": "iii",
+         "text": "Basic"
+        },
+        {
+         "l": "iv",
+         "text": "Dynamic"
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Define a driver as used in computing.",
+       "marks": 2
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss five different types of cables that are used in computers today.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Differentiate NTFS from FAT and state the advantages NTFS has over FAT.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Discuss the requirements for software installation over the network.",
+       "marks": 3
+      },
+      {
+       "l": "d",
+       "text": "Highlight the procedure(s) that can be followed in resolving a hardware conflict in a computer.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Define disk formatting and differentiate quick format from a normal format.",
+       "marks": 3
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Basic hard disks can be divided into several partitions. Name and briefly discuss the partitions that can be created in a basic disk.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Briefly highlight the steps required in order to check the speed of a computer's processor.",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "Define the following terms as used in computers.",
+       "marks": 12,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Check disk"
+        },
+        {
+         "l": "ii",
+         "text": "Disk cleanup"
+        },
+        {
+         "l": "iii",
+         "text": "Disk defragmentation"
+        },
+        {
+         "l": "iv",
+         "text": "CMOS"
+        },
+        {
+         "l": "v",
+         "text": "Front side bus"
+        },
+        {
+         "l": "vi",
+         "text": "Access time"
+        }
+       ]
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the concept of virtual memory and how it is achieved in a computer.",
+       "marks": 3
+      },
+      {
+       "l": "b",
+       "text": "Windows 7 supports dynamic storage, which is a standard that creates a single partition including the entire disk(s). Briefly discuss dynamic disks with examples and state the differences between the different types.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Electrostatic discharge (ESD) can cause permanent damage to electrical components. State three precautions one can take to prevent ESD damage while installing computer components.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Explain the role of RAM in improving the performance of a computer.",
+       "marks": 3
+      },
+      {
+       "l": "e",
+       "text": "Explain the configuration that needs to be made in order to make two hard drives that are connected by the same data cable to the motherboard work properly.",
+       "marks": 2
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Differentiate between primary and secondary storage as applied in computers, giving two examples in each case.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Describe the following types of computer ports.",
+       "marks": 8,
+       "parts": [
+        {
+         "l": "i",
+         "text": "USB port"
+        },
+        {
+         "l": "ii",
+         "text": "AGP port"
+        },
+        {
+         "l": "iii",
+         "text": "FireWire port"
+        },
+        {
+         "l": "iv",
+         "text": "LPT port"
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "Define hardware compatibility list in relation to operating system installation in a computer.",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "List and briefly discuss any three types of expansion slots found in computer systems.",
+       "marks": 6
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-01-22",
+ "dateLabel": "22 January 2021",
+ "programmes": [
+  "Bachelor of Business Information Technology",
+  "bachelor of Science in Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "hardware-and-software-installation-and-support"
+}

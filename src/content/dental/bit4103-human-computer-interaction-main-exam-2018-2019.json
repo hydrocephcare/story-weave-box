@@ -1,0 +1,164 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4103-human-computer-interaction-main-exam-2018-2019",
+ "title": "Human Computer Interaction: Main Exam, 17 April 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BIT4103",
+ "unitTitle": "Human Computer Interaction",
+ "date": "Wed 17th April, 2019 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following concepts as applied in HCI.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Usability"
+        },
+        {
+         "l": "ii",
+         "text": "User-centred design"
+        },
+        {
+         "l": "iii",
+         "text": "Direct manipulation"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "The user interface (UI) is a conduit between human and computer interaction: the space where a user will interact with a computer or machine to complete tasks. Discuss common characteristics of graphical user interfaces (GUI) as applied in computer technology.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "In order to achieve effective HCI, fundamental principles have been established over the years by experts, among them flexibility. Examine the main elements of flexibility in enhancing system usability.",
+       "marks": 8
+      },
+      {
+       "l": "d",
+       "text": "Prototyping is one approach in systems development that can be applied to achieve effective human computer interaction. Discuss essential requirements for prototyping tools.",
+       "marks": 8
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B (ANSWER ANY 2 QUESTIONS)"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "As part of a user-centred focus, explain various techniques for customizing software to optimize human computer interaction.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "As the field of HCI continues to grow, developers have innovated many techniques for enhancing system usability. Discuss the resource implications of a sophisticated HCI.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "The user interface is one of the most critical components in HCI. As a systems expert, examine the effects of a poor user interface in computer-based information systems.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Learnability is one of the key principles in HCI and system usability. Discuss the factors that may affect the ease of learning software on the part of the user.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Examine the ergonomics aspects that are mainly associated with the use of computer-based information systems.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "As a system developer, it is important to consider the needs of different types of users. Discuss the benefits and limitations that come with integrating sounds in a system interface.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "A user interface can either be generic or specialized depending on targeted users and technical scope. Discuss the advantages and limitations of having a common user interface for different generic application programs in an organization.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Evaluate the advantages and disadvantages of using a command-driven interface as compared to other types of interfaces that are common today.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2019-04-17",
+ "dateLabel": "17 April 2019",
+ "programmes": [
+  "BBIT",
+  "BIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "human-computer-interaction"
+}

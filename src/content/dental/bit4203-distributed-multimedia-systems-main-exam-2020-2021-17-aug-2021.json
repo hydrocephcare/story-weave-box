@@ -1,0 +1,206 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4203-distributed-multimedia-systems-main-exam-2020-2021-17-aug-2021",
+ "title": "Distributed Multimedia Systems: Main Exam, 17 August 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BIT4203",
+ "unitTitle": "Distributed Multimedia Systems",
+ "date": "Tue 17th Aug, 2021 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "COMPULSORY",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the three key parameters to consider when evaluating a compression system.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Distinguish between the following.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Multimedia and multimedia systems"
+        },
+        {
+         "l": "ii",
+         "text": "Discrete and continuous media"
+        },
+        {
+         "l": "iii",
+         "text": "Analog and digital signals"
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "Describe five desirable features for a distributed multimedia system.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Briefly discuss four elements of multimedia.",
+       "marks": 8
+      },
+      {
+       "l": "e",
+       "text": "What are the main issues the user interface designer should keep in mind when he wants to design effective human-computer interaction?",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain how one can use the three types of text in multimedia.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Briefly describe 5 technical and content design considerations in multimedia information systems.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Describe 4 hardware devices used in virtual environments, clearly explaining the function of each.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Describe principles of animation.",
+       "marks": 5
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is synchronization? Explain three basic synchronization issues.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "What is compression? Distinguish between lossy and lossless compression.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "How does communication bandwidth affect the selection and format of multimedia content?",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "With the advancing technology, for a company to introduce multimedia computing, a large number of new requirements on distributed systems are required. Briefly explain any three requirements of distributed multimedia applications.",
+       "marks": 6
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Compare digital audio and MIDI.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Mention three real-time video compression algorithms.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "What are the benefits of multimedia distributed systems to an organization?",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Outline any four different software that can be used for recording and editing audio.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Distinguish between kinematics and morphing.",
+       "marks": 2
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the various types of connecting devices.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "What is an authoring system?",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Distinguish between source, entropy and hybrid coding as used in multimedia systems.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "With use of an example, describe the repetitive sequence suppression form of lossless compression algorithms.",
+       "marks": 5
+      },
+      {
+       "l": "e",
+       "text": "Explain the meaning of human interface-application QoS.",
+       "marks": 3
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-08-17",
+ "dateLabel": "17 August 2021",
+ "programmes": [
+  "BBIT",
+  "BIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "distributed-multimedia-systems"
+}

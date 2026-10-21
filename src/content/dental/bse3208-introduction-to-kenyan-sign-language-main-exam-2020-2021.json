@@ -1,0 +1,129 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bse3208-introduction-to-kenyan-sign-language-main-exam-2020-2021",
+ "title": "Introduction to Kenyan Sign Language: Main Exam, 19 August 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Education",
+ "department": "Department of Special Needs Education",
+ "programme": "Bachelor of Education in Special Needs Education",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BSE3208",
+ "unitTitle": "Introduction to Kenyan Sign Language",
+ "date": "Thur 19th Aug, 2021 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain your understanding of Kenyan Sign Language.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "State three approaches in oralism.",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "Differentiate signed English and signed exact English.",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "Describe the following models in bilingual education.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Transitional model",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "Maintenance model",
+         "marks": 3
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "State two types of manual alphabets.",
+       "marks": 2
+      },
+      {
+       "l": "f",
+       "text": "Identify the two types of manual skills.",
+       "marks": 2
+      },
+      {
+       "l": "g",
+       "text": "Identify the four elements of a sign.",
+       "marks": 4
+      },
+      {
+       "l": "h",
+       "text": "Giving relevant examples, explain what is meant by cued speech.",
+       "marks": 7,
+       "parts": [
+        {
+         "l": "i",
+         "text": "State two types of sign language. j) Explain how you sign the word MOTHER.",
+         "marks": 3
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss factors one should observe in order to finger spell and read finger-spelled letters.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Explain the four features used to mark plural and singular in Kenyan Sign Language.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Using relevant illustrations, discuss what is meant by body language.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Change the following sentences into Kenyan Sign Language. i) This man is old. ii) This car is on the road. iii) Show me the book. iv) Who killed the snake? v) I love bananas.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-08-19",
+ "dateLabel": "19 August 2021",
+ "programmes": [
+  "Bachelor of Education in Special Needs Education"
+ ],
+ "categorySlug": "law-and-social-sciences",
+ "category": "Law and Social Sciences",
+ "unitSlug": "introduction-to-kenyan-sign-language"
+}

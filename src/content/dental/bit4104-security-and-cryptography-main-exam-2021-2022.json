@@ -1,0 +1,245 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4104-security-and-cryptography-main-exam-2021-2022",
+ "title": "Security and Cryptography: Main Exam, 18 December 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "BIT / bbit / bis",
+ "examTitle": "University Examination 2021/2022",
+ "unitCode": "BIT4104",
+ "unitTitle": "Security and Cryptography",
+ "date": "Wed 18th Dec, 2021 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following cryptography concepts.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Hash function",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Cryptosystem",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Cryptanalysis",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain three essential components for a successful attack.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Explain three common network-based threats.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Explain two major categories of encryption.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Explain the following terms.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Integrity of a system",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Remote attack",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "White hat hacker",
+         "marks": 2
+        },
+        {
+         "l": "iv",
+         "text": "SQL injection",
+         "marks": 2
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "With the help of examples, explain how the following types of web application attacks are executed. Suggest suitable remediation measures.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Input validation attack",
+         "marks": 4
+        },
+        {
+         "l": "ii",
+         "text": "Cross-site scripting attack",
+         "marks": 4
+        },
+        {
+         "l": "iii",
+         "text": "SQL injection attack",
+         "marks": 4
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Discuss four common network-based threats.",
+       "marks": 8
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "With examples, differentiate between stream ciphers and block ciphers.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Explain the meaning of a digital certificate.",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Discuss the key components of a digital certificate.",
+       "marks": 12
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using examples, discuss the following techniques of password cracking.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Dictionary attack",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "Brute force attack",
+         "marks": 3
+        },
+        {
+         "l": "iii",
+         "text": "Rule-based attack",
+         "marks": 3
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain three non-electronic techniques for obtaining user login credentials.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Explain how a packet sniffing attack works.",
+       "marks": 5
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following types of attacks on cryptography systems.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Known cipher attack"
+        },
+        {
+         "l": "ii",
+         "text": "Known plaintext attack"
+        },
+        {
+         "l": "iii",
+         "text": "Chosen plaintext attack"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Define the term checksum and explain why hashing functions are one-way functions.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Define policy, standards and practices and demonstrate how you can use them in the management of information systems at an institution of your choice.",
+       "marks": 8
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-12-18",
+ "dateLabel": "18 December 2021",
+ "programmes": [
+  "BIT",
+  "BBIT",
+  "BIS"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "security-and-cryptography"
+}

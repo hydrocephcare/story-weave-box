@@ -1,0 +1,171 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4204-electronic-commerce-exam-2020-2021",
+ "title": "Electronic Commerce: Exam, April 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Business Information Technology / information Technology",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BIT4204",
+ "unitTitle": "Electronic Commerce",
+ "date": "April 2021",
+ "sitting": "Exam",
+ "duration": "2 Hours",
+ "instructions": "ATTEMPT QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "What do you understand by the term e-commerce and explain its three key features?",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Examine the role of the internet in e-commerce and state three reasons why the internet is viewed as special.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Enumerate the many advantages that make an organization develop a website.",
+       "marks": 9
+      },
+      {
+       "l": "d",
+       "text": "Identify and explain the drivers/factors for using the internet for business.",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Citing examples, discuss the eight main models for e-commerce.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Examine the benefits that consumers derive from e-commerce.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "E-mail contributes extensively in e-commerce. Explain its defining features.",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using relevant examples, explain the following terms as used in e-commerce and e-marketing.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Virtual shop",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Mobile commerce",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Affiliate",
+         "marks": 2
+        },
+        {
+         "l": "iv",
+         "text": "B2A",
+         "marks": 2
+        },
+        {
+         "l": "v",
+         "text": "Infomediary",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Using a table, distinguish the benefits of e-commerce for companies and those for customers. Justify your answer.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss at least eight internet business models. Justify your answers by highlighting the impact caused by each of the business models on the Kenyan economy.",
+       "marks": 12
+      },
+      {
+       "l": "b",
+       "text": "Propose ways that institutions of learning may use to forge customer loyalty in a competitive market.",
+       "marks": 8
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Citing examples, discuss the negative impacts of e-commerce on society.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "By use of a table, state the classification of distribution channel models that retailers use to sell their products.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-04",
+ "dateLabel": "April 2021",
+ "programmes": [
+  "Bachelor of Business Information Technology"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "electronic-commerce"
+}
