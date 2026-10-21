@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { usePaywall, isPaid, markPaid } from "@/lib/answersPaywall";
 import FIGS from "@/data/paperFigures.json";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -66,6 +67,10 @@ export default function DentalPaperPage() {
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [seo, setSeo] = useState<PaperSeo | null>(null);
   const [test, setTest] = useState(true);
+  const pay = usePaywall();
+  const [payOpen, setPayOpen] = useState(false);
+  const [code, setCode] = useState("");
+  const locked = pay.enabled && !isPaid();
   const [shown, setShown] = useState<Set<string>>(new Set());
   const [ratings, setRatingsState] = useState<Record<string, Rating | undefined>>({});
   const [cardsOpen, setCardsOpen] = useState(false);
@@ -88,7 +93,7 @@ export default function DentalPaperPage() {
     return () => clearInterval(t);
   }, [left === null, left === 0]); // eslint-disable-line react-hooks/exhaustive-deps
   const rate = (k: string, r: Rating) => setRatingsState((p) => { const n = { ...p, [k]: p[k] === r ? undefined : r }; setRatings(slug, n); return n; });
-  const toggle = (k: string) => setShown((p) => { const n = new Set(p); if (n.has(k)) n.delete(k); else n.add(k); return n; });
+  const toggle = (k: string) => locked ? setPayOpen(true) : setShown((p) => { const n = new Set(p); if (n.has(k)) n.delete(k); else n.add(k); return n; });
   const share = async () => { const data = { title: paper?.title ?? "Past paper", url: `${SITE}/${S}/papers/${slug}` }; try { if (navigator.share) await navigator.share(data); else await navigator.clipboard.writeText(data.url); } catch { /* cancelled */ } };
 
   const items = useMemo(() => (paper ? paper.pages.flatMap((pg) => pg.items) : []), [paper]);
@@ -162,7 +167,7 @@ export default function DentalPaperPage() {
         <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={paper.title} /><meta name="twitter:description" content={desc.slice(0, 200)} />
         <script type="application/ld+json">{JSON.stringify(ld)}</script>
       </Helmet>
-      <header className="topic-hero relative isolate overflow-hidden border-b border-border/60">
+      <header className="topic-hero relative isolate overflow-hidden border-b border-border/60 print:hidden">
         <HeroAurora about={`${paper.unitTitle} ${paper.category ?? ""}`} />
         <div className="mx-auto max-w-4xl px-5 pb-8 pt-8 sm:pb-12 sm:pt-12">
           <nav className="flex flex-wrap items-center gap-1 text-xs font-semibold text-muted-foreground" aria-label="Breadcrumb">
@@ -183,7 +188,7 @@ export default function DentalPaperPage() {
           </div>
         </div>
       </header>
-      <main id="paper-body" className="mx-auto max-w-3xl px-5 pb-28 pt-8 sm:px-6">
+      <main id="paper-body" className="mx-auto max-w-3xl select-none px-5 pb-28 pt-8 sm:px-6 print:hidden" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
         <dl className="grid grid-cols-2 gap-x-6 gap-y-3 border-y border-border py-4 text-sm sm:grid-cols-4">
           {[["Unit code", paper.unitCode], ["Sitting", paper.sitting], ["Time", paper.duration], ["Questions", `${q}${marks ? ` · ${marks} marks` : ""}`]].filter(([, v]) => v).map(([k, v]) => <div key={k}><dt className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{k}</dt><dd className="mt-0.5 font-semibold">{v}</dd></div>)}
         </dl>
@@ -200,7 +205,7 @@ export default function DentalPaperPage() {
 
         <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm print:hidden">
           <div className="inline-flex overflow-hidden rounded-full border border-border" role="tablist" aria-label="How to study">
-            {[["Read with answers", false], ["Test myself", true]].map(([label, v]) => <button key={String(label)} type="button" role="tab" aria-selected={test === v} onClick={() => setTest(v as boolean)} className={`px-4 py-1.5 font-bold ${test === v ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>{label}</button>)}
+            {[["Read with answers", false], ["Test myself", true]].map(([label, v]) => <button key={String(label)} type="button" role="tab" aria-selected={test === v} onClick={() => (!v && locked ? setPayOpen(true) : setTest(v as boolean))} className={`px-4 py-1.5 font-bold ${test === v ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}>{label}</button>)}
           </div>
           <span className="font-semibold text-emerald-600 dark:text-emerald-400">{ready} of {units.length} answers ready</span>
           {test && (left === null
@@ -239,6 +244,24 @@ export default function DentalPaperPage() {
           <div className="min-h-0 flex-1 overflow-y-auto px-2 pb-10 sm:px-6"><PaperSheet paper={paper} /></div>
         </SheetContent>
       </Sheet>
+
+      {/* what Print gives: the paper as it was printed, with the Ompath Study watermark on every page */}
+      <div className="hidden print:block">
+        <div aria-hidden className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center"><span className="-rotate-[30deg] select-none whitespace-nowrap text-[88px] font-black uppercase tracking-widest text-black/[0.07]">Ompath Study</span></div>
+        <div className="relative z-10"><PaperSheet paper={paper} /><p className="mt-6 text-center text-[11px] text-neutral-500">ompathstudy.com · past papers with model answers</p></div>
+      </div>
+      {payOpen && (
+        <div className="fixed inset-0 z-[80] flex items-center justify-center bg-black/50 p-4 print:hidden" role="dialog" aria-modal="true" aria-label="Unlock answers" onClick={() => setPayOpen(false)}>
+          <div className="w-full max-w-sm rounded-2xl bg-background p-6 shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <h2 className="font-serif text-2xl font-bold">Unlock model answers</h2>
+            <p className="mt-2 text-sm text-muted-foreground">{pay.message || "Questions are free to read. Model answers are for subscribers."}</p>
+            {pay.price ? <p className="mt-3 text-lg font-bold text-primary">{pay.price}</p> : null}
+            {pay.payLink ? <a href={pay.payLink} target="_blank" rel="noopener noreferrer" className="mt-4 block rounded-full bg-primary px-5 py-2.5 text-center text-sm font-bold text-primary-foreground">Pay now</a> : null}
+            <div className="mt-4 flex gap-2"><input value={code} onChange={(e) => setCode(e.target.value)} placeholder="Unlock code" className="min-w-0 flex-1 rounded-lg border border-border bg-background px-3 py-2 text-sm" /><button type="button" onClick={() => { if (pay.code && code.trim() === pay.code) { markPaid(); setPayOpen(false); setTest(false); } }} className="rounded-lg border border-border px-4 text-sm font-bold">Unlock</button></div>
+            <button type="button" onClick={() => setPayOpen(false)} className="mt-4 w-full text-center text-sm font-semibold text-muted-foreground">Not now</button>
+          </div>
+        </div>
+      )}
     </>
   );
 }
