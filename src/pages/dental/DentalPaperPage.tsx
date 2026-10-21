@@ -184,6 +184,7 @@ export default function DentalPaperPage() {
             <button type="button" onClick={() => setCardsOpen(true)} className={pill}><Layers className="h-4 w-4 text-primary" aria-hidden />Flashcards</button>
             <button type="button" onClick={() => { setTest(true); document.getElementById("paper-body")?.scrollIntoView({ behavior: "smooth" }); }} className={pill}><ClipboardCheck className="h-4 w-4 text-primary" aria-hidden />Test myself</button>
             <button type="button" onClick={() => setSimOpen(true)} className={pill}><Shuffle className="h-4 w-4 text-primary" aria-hidden />Practice paper like this</button>
+            <button type="button" onClick={() => window.print()} className={pill}><Printer className="h-4 w-4 text-primary" aria-hidden />Print</button>
             <button type="button" onClick={() => openAI(`Quiz me on ${paper.unitTitle} like this past paper`)} className={pill}><Sparkles className="h-4 w-4 text-primary" aria-hidden />Ask AI</button>
           </div>
         </div>
@@ -241,7 +242,7 @@ export default function DentalPaperPage() {
           <SheetTitle className="sr-only">{paper.title} as printed</SheetTitle>
           <SheetDescription className="sr-only">The paper laid out the way it was printed: letterhead, details, instructions and questions, page by page.</SheetDescription>
           <div className="flex shrink-0 items-center gap-2 px-5 pb-2 pt-5 pr-14"><FileText className="h-4 w-4 text-primary" /><p className="truncate text-sm font-bold">{paper.unitTitle} · as printed</p></div>
-          <div className="min-h-0 flex-1 overflow-y-auto px-2 pb-10 sm:px-6"><PaperSheet paper={paper} /></div>
+          <div className="relative min-h-0 flex-1 select-none overflow-y-auto px-2 pb-10 sm:px-6" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()} onDragStart={(e) => e.preventDefault()}><div aria-hidden className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center overflow-hidden"><span className="-rotate-[30deg] select-none whitespace-nowrap text-[64px] font-black uppercase tracking-widest text-black/[0.06] dark:text-white/[0.07]">Ompath Study</span></div><PaperSheet paper={paper} /></div>
         </SheetContent>
       </Sheet>
 
