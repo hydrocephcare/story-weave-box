@@ -1,0 +1,155 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bds1204-prosthetics-ii-main-exam-2018-2019-2",
+ "title": "Prosthetics II: Main Exam, 17 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Public Health",
+ "department": "Department of Dental Sciences",
+ "programme": "Bachelor of Science in Dental Technology",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BDS1204",
+ "unitTitle": "Prosthetics II",
+ "date": "Mon 17th Dec 2018 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A (COMPULSORY) AND ANY OTHER TWO QUESTIONS IN SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 MARKS"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "What are the factors that determine the shade selection in artificial teeth.",
+     "marks": 4,
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Define festooning of a denture.",
+     "marks": 2,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Give the importance of working up of a denture.",
+     "marks": 4,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "State two contra indications of relining.",
+     "marks": 2,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Explain what resilient on soft timing materials of a denture are.",
+     "marks": 2,
+     "id": "q5"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Define rebasing as applied in prosthetics.",
+     "marks": 2,
+     "id": "q6"
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Write down four indications of rebasing.",
+     "marks": 4,
+     "id": "q7"
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "State two errors that could arise by setting lower anserior teeth more lingual in a class II Jew relationship.",
+     "marks": 2,
+     "id": "q8"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "What is the importance of denture identification?",
+     "marks": 4,
+     "id": "q9"
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Give four requirements of a denture identification.",
+     "marks": 4,
+     "id": "q10"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Discuss aesthetical considerations in teeth selection during complete denture fabrication.",
+     "marks": 20,
+     "id": "s2-q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the laboratory procedure of rebasing using flasking method.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "What are the problems, causes and the solutions associated with the flasking method of rebasing.",
+       "marks": 10
+      }
+     ],
+     "id": "s2-q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What are soft linens? Write down the uses of tissue conditioners.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Explain the composition of tissue conditioners and the properties that make them effective.",
+       "marks": 12
+      }
+     ],
+     "id": "s2-q3"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-17",
+ "dateLabel": "17 December 2018",
+ "programmes": [
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "dental-technology",
+ "category": "Dental Technology",
+ "unitSlug": "prosthetics-ii"
+}

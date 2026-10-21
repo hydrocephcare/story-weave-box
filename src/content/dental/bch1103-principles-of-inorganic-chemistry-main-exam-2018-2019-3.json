@@ -1,0 +1,200 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bch1103-principles-of-inorganic-chemistry-main-exam-2018-2019-3",
+ "title": "Principles of Inorganic Chemistry: Main Exam, 16 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Physical and Mathematical Sciences",
+ "programme": "BND / beet",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BCH1103",
+ "unitTitle": "Principles of Inorganic Chemistry",
+ "date": "Sun 16th Dec, 2018 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer ALL the questions in section A and any other TWO questions in section B Useful information Periodic table is at the last page C = 2.998 x 108m/s h = 6.6262 x 10 -34Js",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 Marks"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following terms as applied in chemistry",
+       "marks": 8,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Ionization energy"
+        },
+        {
+         "l": "ii",
+         "text": "Atomic orbital"
+        },
+        {
+         "l": "iii",
+         "text": "Nuclear charge"
+        },
+        {
+         "l": "iv",
+         "text": "Radioactive decay"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain why the nucleus is assumed to contain virtually all the mass of an atom.",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Rutherford atomic model was one of the earliest theories of atomic structure. Explain any two major conclusions of his theory.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Briefly explain the following rules/principles concerning electronic configuration",
+       "marks": 2,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Hund's rule",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Pauli's Exclusion principle"
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Using the s, p, d notation, write down the electronic configuration for the following atoms (Refer to the Periodic table attached for atomic numbers)",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Calcium",
+         "marks": 1
+        },
+        {
+         "l": "ii",
+         "text": "Tin",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Cadmium",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "f",
+       "text": "Calculate the effective nuclear charge for the outermost electron in a copper atom.",
+       "marks": 2
+      },
+      {
+       "l": "g",
+       "text": "Calculate the pH of 0.1M solution of hydrochloric acid.",
+       "marks": 2
+      },
+      {
+       "l": "h",
+       "text": "Balance the following redox reaction. MnO4-(aq) + Br-(aq) Mn2+ + Br2(aq) (aq)",
+       "marks": 3
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B 40 Marks"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "2. a) Explain why the ionic radius of anions are generally higher than those of cations. b) State and explain the trend of the following parameters across a period of the periodic table (Periodic trend) i) Atomic radii ii) Ionization energy iii) Electron affinity c) Explain the term `Electronegativity' d) The 1st, 2nd, 3rdand 4th ionization energies of aluminium ere 577, 1815, 2740 and 11590kJ/mol. Calculate the effective nuclear charge of the outermost electron being removed in each of the successive ionizations and use it to explain the variation (trend) in the successive ionization energies. Explain also why 4th ionization energy is extra ordinarily high",
+     "marks": 6,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "3. a) Describe the four quantum numbers and their major properties. b) i) Explain the term `half-life' as used in radioactivity ii) The half-life of a radioactive element is 30 days. Calculate the time required for its activity measured with G. M counter to drop from 4800 counts per minute to 300 counts per minute. c) Draw the lewis structures of the following compounds i) NH3 iii) CO32- d) Suggest the structures of the following compounds i) CH4 ii) C2H4",
+     "marks": 3,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Acids and bases have been defined differently by various theories. Briefly, explain the terms acids and bases using the following theories",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Arrhenius theory",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "Bronsted- Lowry theory",
+         "marks": 3
+        },
+        {
+         "l": "iii",
+         "text": "Lewis theory",
+         "marks": 3
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Using methane, CH4 describe the sp3 hybridization. Support your answer using diagram(s).",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Using relevant examples, clearly explain the following theories.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Valence-shell electron pair repulsion (VSEPR) theory",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "Valence bond (VBT) theory Appendix 1: Periodic table",
+         "marks": 4
+        }
+       ]
+      }
+     ],
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-16",
+ "dateLabel": "16 December 2018",
+ "programmes": [
+  "BND",
+  "BEET"
+ ],
+ "categorySlug": "science-and-engineering",
+ "category": "Science and Engineering",
+ "unitSlug": "principles-of-inorganic-chemistry"
+}

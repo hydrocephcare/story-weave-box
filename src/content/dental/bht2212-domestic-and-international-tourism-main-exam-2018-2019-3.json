@@ -1,0 +1,119 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bht2212-domestic-and-international-tourism-main-exam-2018-2019-3",
+ "title": "Domestic and International Tourism: Main Exam, 20 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Hospitality, Travel and Tourism Management",
+ "department": "Department of Travel and Tourism Management",
+ "programme": "Bachelor of Science in Travel and Tourism Management",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BHT2212",
+ "unitTitle": "Domestic and International Tourism",
+ "date": "Thur 20th Dec 2018 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO IN",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following terms as used in domestic and international tourism:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Domestic tourism.",
+         "marks": 1
+        },
+        {
+         "l": "ii",
+         "text": "International tourism",
+         "marks": 1
+        },
+        {
+         "l": "iii",
+         "text": "Inbound tourism",
+         "marks": 1
+        },
+        {
+         "l": "iv",
+         "text": "Outbound tourism",
+         "marks": 1
+        },
+        {
+         "l": "v",
+         "text": "Tourist product",
+         "marks": 1
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain any Five factors to be considered for both domestic and international tourism performance in Kenya.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Explain any Three benefits of embracing domestic tourism in any country's travel industry.",
+       "marks": 15
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B",
+     "marks": 20
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explore the various challenges engulfing both domestic and Page 1 international tourism.",
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Provide a comparative analysis to distinguish between domestic and international tourism",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "State and explain any FIVE setbacks imposed to the tourism industry in Kenya courtesy of prevalence of seasonality phenomena.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Determine any FOUR reasons why many marketing organizations focus on international tourism rather than domestic tourism in Kenya.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-20",
+ "dateLabel": "20 December 2018",
+ "programmes": [
+  "Bachelor of Science in Travel and Tourism Management"
+ ],
+ "categorySlug": "hospitality-and-tourism",
+ "category": "Hospitality and Tourism",
+ "unitSlug": "domestic-and-international-tourism"
+}

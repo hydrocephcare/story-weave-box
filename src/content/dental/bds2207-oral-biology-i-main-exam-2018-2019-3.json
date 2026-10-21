@@ -1,0 +1,102 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bds2207-oral-biology-i-main-exam-2018-2019-3",
+ "title": "Oral Biology I: Main Exam, 9 December 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Bachelor of Science in Community Oral Health",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BDS2207",
+ "unitTitle": "Oral Biology I",
+ "date": "Sun 9th December, 2018 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer ALL questions in section A and one question in section B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A (EACH QUESTION CARRIES 6 MAKRS)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Outline the blood supply ad lymphatic drainage of the tongue.",
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Define the boundaries of the oral cavity.",
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Outline the eruption sequences and timing of primary dentition.",
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Name the main muscles of mastication indicting their actions.",
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Outline the basic structure of dentine.",
+     "id": "q5"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Outline development of the mandible.",
+     "id": "q6"
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Write short notes on composition and functions of saliva.",
+     "id": "q7"
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Outline development of the tongue.",
+     "id": "q8"
+    },
+    {
+     "t": "h",
+     "text": "Section B ANSWER ONE QUESTION. EACH QUESTION CARRIES 22"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Describe the stages of tooth formation.",
+     "id": "q9"
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Describe the development of the face highlighting associated malformations.",
+     "id": "q10"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-09",
+ "dateLabel": "9 December 2018",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "oral-biology-i"
+}

@@ -1,0 +1,95 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bds3102-crown-and-bridge-iii-main-exam-2018-2019-2",
+ "title": "Crown and Bridge III: Main Exam, 13 December 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Bachelor of Science in Dental Technology",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BDS3102",
+ "unitTitle": "Crown and Bridge III",
+ "date": "Thur 13th December, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A (ANSWER ALL QUESTIONS)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Write short notes on connector design."
+      },
+      {
+       "l": "b",
+       "text": "Write short notes on mechanical bonding."
+      },
+      {
+       "l": "c",
+       "text": "State for uses of a solder."
+      },
+      {
+       "l": "d",
+       "text": "Outline five soldering defects."
+      },
+      {
+       "l": "e",
+       "text": "State the requirements of a filler material."
+      },
+      {
+       "l": "f",
+       "text": "Briefly explain chemical bonding in metal ceramic fabrication."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss the causes, presentation and possible solutions for defects for metal substructure for crown and bridge.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss general principles in metal ceramic fabrication.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Discuss factors affecting body strength.",
+     "marks": 20,
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-13",
+ "dateLabel": "13 December 2018",
+ "programmes": [
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "dental-technology",
+ "category": "Dental Technology",
+ "unitSlug": "crown-and-bridge-iii"
+}

@@ -1,0 +1,93 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bht3202-housekeeping-and-laundry-operations-main-exam-2018-2019-2",
+ "title": "Housekeeping and Laundry Operations: Main Exam, 11 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Hospitality Travel and Tourism Management",
+ "department": "Department of Travel and Tourism Management",
+ "programme": "Bachelor of Science in Hospitality Management",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BHT3202",
+ "unitTitle": "Housekeeping and Laundry Operations",
+ "date": "Tue 11th December, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer ALL questions in section A and answer ANY Other Two questions from Section B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Electronic key cards have a unique lock combination. Explain the advantages of the card key.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Establish the aims of a housekeeping department.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "An establishment can hire linen as hiring services are always available. Analyse any five advantages of hiring linen.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "For maximum cooperation the housekeeping department should coordinate with other departments. Evaluate departments that the housekeeping should coordinate with.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Evaluate the personal attributes of a good housekeeping staff.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Examine any ten points to consider when choosing cleaning equipment.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Analyze the process of laundering articles.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-11",
+ "dateLabel": "11 December 2018",
+ "programmes": [
+  "Bachelor of Science in Hospitality Management"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "housekeeping-and-laundry-operations"
+}

@@ -1,0 +1,115 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bht1209-survival-techniques-main-exam-2018-2019-2",
+ "title": "Survival Techniques: Main Exam, 13 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Hospitality, Travel and Tourism Management",
+ "department": "Department of Travel and Tourism Management",
+ "programme": "Bachelor of Science in Hospitality Management",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BHT1209",
+ "unitTitle": "Survival Techniques",
+ "date": "Thur 13th December, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer ALL questions in section A and answer ANY TWO questions from",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 MARKS (COMPULSORY)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explore any five survival skills that a tour guide must have in order to operate professionally in travel sector.",
+       "marks": 15
+      },
+      {
+       "l": "b",
+       "text": "Explain the significance of the following in survival skills within the tourism sector in Kenya.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Communication skills",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "First aid skills",
+         "marks": 3
+        },
+        {
+         "l": "iii",
+         "text": "Mechanical skills",
+         "marks": 3
+        },
+        {
+         "l": "iv",
+         "text": "Map reading and interpretation skills",
+         "marks": 3
+        },
+        {
+         "l": "v",
+         "text": "Observation skills",
+         "marks": 3
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain any four camping equipment necessary for a tour.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Supposing you loose track and your lost in the wilderness with clients. Explain how you will ensure your guests are safe till you get rescue services the next day.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe the process of giving first aid to the following: i) Dislocation ii) Snake bite iii) Choking iv) Drowning",
+     "marks": 5,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Describe the current issues emanating from the acquisition of survival techniques skills by todays tour guide travel sector.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-13",
+ "dateLabel": "13 December 2018",
+ "programmes": [
+  "Bachelor of Science in Hospitality Management"
+ ],
+ "categorySlug": "hospitality-and-tourism",
+ "category": "Hospitality and Tourism",
+ "unitSlug": "survival-techniques"
+}

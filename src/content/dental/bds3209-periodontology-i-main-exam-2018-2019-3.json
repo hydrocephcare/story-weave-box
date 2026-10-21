@@ -1,0 +1,87 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bds3209-periodontology-i-main-exam-2018-2019-3",
+ "title": "Periodontology I: Main Exam, 11 December 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Bachelor of Science in Community Oral Health",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BDS3209",
+ "unitTitle": "Periodontology I",
+ "date": "Tue 11th December, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Outline the functions of the periodontium."
+      },
+      {
+       "l": "b",
+       "text": "Briefly discuss local plaque retentive factors."
+      },
+      {
+       "l": "c",
+       "text": "Outline the differences between normal and diseased periodontium."
+      },
+      {
+       "l": "d",
+       "text": "Briefly describe the formation and composition of dental plaque."
+      },
+      {
+       "l": "e",
+       "text": "Enumerate factors influencing the distribution of periodontal disease."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "In details discuss the role of systemic diseases in the etiology of periodontal disease.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss clinical presentation, diagnosis, treatment planning and management of chronic periodontitis.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Discuss methods that can be used to give Oral Education on periodontal disease.",
+     "marks": 20,
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-11",
+ "dateLabel": "11 December 2018",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "dental-technology",
+ "category": "Dental Technology",
+ "unitSlug": "periodontology-i"
+}
