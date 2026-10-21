@@ -40,7 +40,7 @@ export default function PaperSheet({ paper }: { paper: DentalPaper }) {
   return (
     <div className="space-y-6">
       {paper.pages.map((pg, idx) => (
-        <article key={pg.n} className="mx-auto w-full max-w-[44rem] bg-white px-7 py-9 text-neutral-900 shadow-[0_6px_24px_-8px_rgba(0,0,0,0.35)] sm:px-14 sm:py-12" style={{ fontFamily: "'Times New Roman', Times, 'Libre Baskerville', Georgia, serif", minHeight: "min(1100px, 150vw)" }} aria-label={`Page ${pg.n}`}>
+        <article key={pg.n} className="paper-sheet mx-auto w-full max-w-[44rem] bg-white px-7 py-9 text-neutral-900 shadow-[0_6px_24px_-8px_rgba(0,0,0,0.35)] sm:px-14 sm:py-12" style={{ fontFamily: "'Times New Roman', Times, 'Libre Baskerville', Georgia, serif", minHeight: "min(1100px, 150vw)" }} aria-label={`Page ${pg.n}`}>
           {idx === 0 && (
             <header className="text-center">
               <img src="/dental/letterhead.png" alt={paper.university} width={920} height={165} loading="eager" decoding="sync" className="mx-auto h-auto w-full max-w-[34rem]" />

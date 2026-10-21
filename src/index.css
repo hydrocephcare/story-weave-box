@@ -714,3 +714,17 @@ a.topic-link:hover, a.topic-link:focus-visible { background: linear-gradient(tra
 }
 .note-body .note-figure img, main figure img { cursor: zoom-in; }
 ::highlight(user-mark) { background-color: #fef08a; color: #000; }
+
+/* Printed past papers: an A4 sheet that reads like the real paper */
+@page { size: A4; margin: 18mm 16mm 20mm; }
+@media print {
+  .paper-sheet { box-shadow: none !important; max-width: none !important; min-height: 0 !important; padding: 0 !important; margin: 0 0 0 !important; font-size: 12pt; line-height: 1.55; color: #000 !important; background: #fff !important; break-after: page; }
+  .paper-sheet:last-child { break-after: auto; }
+  .paper-sheet header { margin-bottom: 8mm; }
+  .paper-sheet img { max-width: 100% !important; height: auto; break-inside: avoid; }
+  .paper-sheet p, .paper-sheet li, .paper-sheet figure { break-inside: avoid; orphans: 3; widows: 3; }
+  .paper-sheet footer { margin-top: 10mm; }
+  body { background: #fff !important; }
+}
+/* the on-screen preview: pages sit on a grey desk */
+[aria-label$="as printed"] .paper-sheet, .paper-sheet { font-size: 15.5px; line-height: 1.6; }
