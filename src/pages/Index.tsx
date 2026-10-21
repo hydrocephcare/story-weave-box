@@ -283,6 +283,36 @@ export default function Index() {
 
       {!homeYear && <RecentNotes />}
 
+      {/* Newly published clinical OSCE resources: surfaced on the homepage so students can find them. */}
+      <section className="mx-auto max-w-6xl px-5 pt-8 sm:pt-10">
+        <div className="mb-5 flex items-end justify-between gap-4">
+          <div>
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">New clinical revision</p>
+            <h2 className="mt-1 font-serif text-xl font-bold text-foreground sm:text-2xl">Internal Medicine OSCE practice</h2>
+            <p className="mt-1 max-w-2xl text-sm text-muted-foreground">Past stations, clinical images and model answers for ward-based and exam revision.</p>
+          </div>
+          <Link to="/clinical/osce-2019" className="hidden shrink-0 text-sm font-semibold text-primary hover:underline sm:inline-flex sm:items-center sm:gap-1">Start practising <ArrowRight className="h-4 w-4" /></Link>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <Link to="/clinical/osce-2019" className="group flex h-full gap-4 rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-[var(--shadow-card-hover)] sm:p-5">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary"><BookOpen className="h-6 w-6" /></span>
+            <span className="min-w-0 flex-1">
+              <span className="flex items-start justify-between gap-3"><span className="font-serif text-lg font-bold text-foreground">Internal Medicine OSCEs 2019</span><ArrowRight className="mt-1 h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-1" /></span>
+              <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">36 stations with clinical photographs, X-rays, ECGs, system filters and revealable model answers.</span>
+              <span className="mt-3 inline-flex rounded-full bg-primary/10 px-2.5 py-1 text-[11px] font-bold text-primary">Past questions · Images · Answers</span>
+            </span>
+          </Link>
+          <Link to="/clinical/osce-stations" className="group flex h-full gap-4 rounded-2xl border border-border bg-card p-4 transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-[var(--shadow-card-hover)] sm:p-5">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-700 dark:text-emerald-300"><ListChecks className="h-6 w-6" /></span>
+            <span className="min-w-0 flex-1">
+              <span className="flex items-start justify-between gap-3"><span className="font-serif text-lg font-bold text-foreground">Internal Medicine picture stations</span><ArrowRight className="mt-1 h-4 w-4 shrink-0 text-primary transition-transform group-hover:translate-x-1" /></span>
+              <span className="mt-1 block text-sm leading-relaxed text-muted-foreground">Seven focused clinical-sign and imaging stations covering pleural effusion, clubbing, oedema, renal findings and more.</span>
+              <span className="mt-3 inline-flex rounded-full bg-emerald-500/10 px-2.5 py-1 text-[11px] font-bold text-emerald-700 dark:text-emerald-300">Clinical images · Short stations</span>
+            </span>
+          </Link>
+        </div>
+      </section>
+
       {/* ── Resource tiles ── */}
       <section className="mx-auto max-w-6xl px-5 py-10 sm:py-14">
         <motion.div
