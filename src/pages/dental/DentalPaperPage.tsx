@@ -1,5 +1,7 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { usePaywall, isPaid, markPaid } from "@/lib/answersPaywall";
+import SearchHighlightBar from "@/components/SearchHighlightBar";
+import { Highlighter, Search } from "lucide-react";
 import FIGS from "@/data/paperFigures.json";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -69,6 +71,10 @@ export default function DentalPaperPage() {
   const [test, setTest] = useState(true);
   const pay = usePaywall();
   const [payOpen, setPayOpen] = useState(false);
+  const [find, setFind] = useState("");
+  const marks = useRef<Range[]>([]);
+  const highlightSelection = () => { const sel = window.getSelection(); const body = document.getElementById("paper-body"); if (!sel || sel.isCollapsed || !body || !body.contains(sel.anchorNode)) return; marks.current.push(sel.getRangeAt(0).cloneRange()); const reg = (CSS as unknown as { highlights?: Map<string, unknown> }).highlights; const H = (window as unknown as { Highlight?: new (...r: Range[]) => unknown }).Highlight; if (reg && H) reg.set("user-mark", new H(...marks.current)); sel.removeAllRanges(); };
+  const clearMarks = () => { marks.current = []; (CSS as unknown as { highlights?: Map<string, unknown> }).highlights?.delete("user-mark"); };
   const [code, setCode] = useState("");
   const locked = pay.enabled && !isPaid();
   const [shown, setShown] = useState<Set<string>>(new Set());
@@ -189,7 +195,7 @@ export default function DentalPaperPage() {
           </div>
         </div>
       </header>
-      <main id="paper-body" className="mx-auto max-w-3xl select-none px-5 pb-28 pt-8 sm:px-6 print:hidden" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
+      <main id="paper-body" className="mx-auto max-w-3xl px-5 pb-28 pt-8 sm:px-6 print:hidden" onCopy={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}>
         <dl className="grid grid-cols-2 gap-x-6 gap-y-3 border-y border-border py-4 text-sm sm:grid-cols-4">
           {[["Unit code", paper.unitCode], ["Sitting", paper.sitting], ["Time", paper.duration], ["Questions", `${q}${marks ? ` · ${marks} marks` : ""}`]].filter(([, v]) => v).map(([k, v]) => <div key={k}><dt className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{k}</dt><dd className="mt-0.5 font-semibold">{v}</dd></div>)}
         </dl>
@@ -201,6 +207,9 @@ export default function DentalPaperPage() {
           <button type="button" onClick={() => setDone(toggleList(DONE, paper.slug))} aria-pressed={done} className={`${tool} ${done ? "text-emerald-600" : ""}`}><CheckCheck className="h-4 w-4" aria-hidden />{done ? "Done" : "Mark as done"}</button>
           <button type="button" onClick={share} className={tool}><Share2 className="h-4 w-4" aria-hidden />Share</button>
           <button type="button" onClick={() => window.print()} className={tool}><Printer className="h-4 w-4" aria-hidden />Print</button>
+          <button type="button" onClick={highlightSelection} className={tool} title="Select some text, then press this"><Highlighter className="h-4 w-4" aria-hidden />Highlight</button>
+          <button type="button" onClick={clearMarks} className={tool}>Clear highlights</button>
+          <label className="flex items-center gap-1.5 rounded-full border border-border px-3 py-1"><Search className="h-4 w-4 text-muted-foreground" aria-hidden /><input value={find} onChange={(e) => setFind(e.target.value)} placeholder="Find a word" aria-label="Find a word in this paper" className="w-28 bg-transparent text-sm outline-none" /></label>
           <span className="inline-flex overflow-hidden rounded-md" role="group" aria-label="Text size"><button type="button" onClick={() => setZoom((z) => Math.max(0.85, +(z - 0.1).toFixed(2)))} className="px-2 font-bold text-muted-foreground hover:text-primary" aria-label="Smaller text">A-</button><button type="button" onClick={() => setZoom((z) => Math.min(1.5, +(z + 0.1).toFixed(2)))} className="px-2 font-bold text-muted-foreground hover:text-primary" aria-label="Larger text">A+</button></span>
         </p>
 
@@ -251,6 +260,7 @@ export default function DentalPaperPage() {
         <div aria-hidden className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center"><span className="-rotate-[30deg] select-none whitespace-nowrap text-[88px] font-black uppercase tracking-widest text-black/[0.07]">Ompath Study</span></div>
         <div className="relative z-10"><PaperSheet paper={paper} /><p className="mt-6 text-center text-[11px] text-neutral-500">ompathstudy.com · past papers with model answers</p></div>
       </div>
+      <SearchHighlightBar term={find.trim().length > 1 ? find.trim() : null} ready={Boolean(paper)} selector="#paper-body" />
       {payOpen && (
         <div className="fixed inset-0 z-[80] flex items-center justify-center bg-black/50 p-4 print:hidden" role="dialog" aria-modal="true" aria-label="Unlock answers" onClick={() => setPayOpen(false)}>
           <div className="w-full max-w-sm rounded-2xl bg-background p-6 shadow-2xl" onClick={(e) => e.stopPropagation()}>
