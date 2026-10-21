@@ -1,0 +1,124 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4103-human-computer-interaction-supplementary-exam-2017-2018",
+ "title": "Human Computer Interaction: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Business Information Technology / information / a Technology --_",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4103",
+ "unitTitle": "Human Computer Interaction",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Examine the ergonomics aspects that are mainly associated with use of . computer based information systems.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss common characteristics of graphical user Interfaces (GUI) as applied in computer technology.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Discuss the techniques you would apply as a system developer to achieve an effective screen design.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B (Answer any 2 questions)"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "|",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Assess the advantages of considering software learnability in the context of system usability.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Examine the key requirements /rules in enabling effective user interface design the factors that may.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Assess how a well-designed direct manipulation interfaces can promote user experience.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the main functionalities for usability testing tools.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the effects of ignoring computer human interface in systems developments.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Examine the factors that a developer would consider when designing a screen layout for a database application that is characterized by forms for massive data entry. Paper Two oes",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Bachelor of Business Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "human-computer-interaction"
+}

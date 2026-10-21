@@ -1,0 +1,149 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3206-ict-project-management-supplementary-exam-2019-2020",
+ "title": "ICT Project Management: Supplementary Exam, August 2020",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Business Information Technology / Bachelor of Information Technology",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BIT3206",
+ "unitTitle": "ICT Project Management",
+ "date": "August 2020",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "List the five main characteristics of a project. @ @ e e @",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Define software quality",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Briefly explain the four phases of a typical project management life cycle.",
+       "marks": 8
+      },
+      {
+       "l": "d",
+       "text": "Discuss the factors that contribute to project success and failure. ) List the steps involved in designing a questionnaire.",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain three Basic Tools of Quality that help in performing an ICT Project Quality Control.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Critically evaluate how the Program Evaluation and Review Technique (PERT) can be used for project time management.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Explain how Project risk transfer can benefit an organization.",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly discuss the phases of software development.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Scope management in an ICT Project impacts on the Quality of the Project product. Identify and briefly explain the Scope Management aspects that affect project quality in an ICT project.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "For a project to be successful, the project manager has to deal effectively with any problems that might arise during the life cycle of a project. Required;",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Identify five common problems that a project manager might have to resolve and explain the impact that each of these problems would have on the project, if not managed effectively.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the Inputs to the Procurement planning of |CT Project Management. e = * (�% Marks)"
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain of expert judgment as an estimation method and give its limitation.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "As a undergraduate student, you intent to come up with a research proposal as one of the graduation requirements. You propose to develop a new web= search algorithm, and then implement it using Java, and finally conduct some experimental validation of the algorithm in the lab using 80 of our 160 fourth year students as subjects. The experiment simply compares whether the new algorithm is more efficient than Google web search algorithm. Develop a rough but reasonable budget estimate for this project.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "A schedule is also required for the same project in (b) above. Develop a realistic schedule for this project.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Assuming you use the waterfall model for programming of the software project in (c) above, what are some of the deliverables you expect to get at each milestone?",
+       "marks": 5
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2020-08",
+ "dateLabel": "August 2020",
+ "programmes": [
+  "Bachelor of Business Information Technology",
+  "Bachelor of Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "ict-project-management"
+}

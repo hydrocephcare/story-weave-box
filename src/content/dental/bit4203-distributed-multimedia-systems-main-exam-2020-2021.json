@@ -1,0 +1,147 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4203-distributed-multimedia-systems-main-exam-2020-2021",
+ "title": "Distributed Multimedia Systems: Main Exam, 77 August 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BIT4203",
+ "unitTitle": "Distributed Multimedia Systems",
+ "date": "Tuesday 177 August 2021 11:00am Mainexam",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using a well labeled diagram describe document architecture and its elements"
+      },
+      {
+       "l": "b",
+       "text": "Elaborate on (3) types and uses of hypertext.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Differentiate between hypertext and hypermedia.                                 ~",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Highlight (5) features of drawing and painting packages.",
+       "marks": 5
+      },
+      {
+       "l": "e",
+       "text": "Describe briefly the effective human computer interaction in multimedia systems,"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe why a good user interface is important to multimedia systems."
+      },
+      {
+       "l": "b",
+       "text": "Discuss collaborative computing in multimedia systems."
+      },
+      {
+       "l": "c",
+       "text": "Discuss the application sharing approach in multimedia systems."
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe basis synchronization issues in multimedia systems, pica kiss ie bear torre ewane SUT ANAT UTRS Tae na RNR Me eg Low We \\"
+      },
+      {
+       "l": "b",
+       "text": "Outline the (5) main facets of multimedia. (S Marks)"
+      },
+      {
+       "l": "c",
+       "text": "Outline (5) sources of images in multimedia."
+      },
+      {
+       "l": "d",
+       "text": "Describe public information display (PIDS) in details."
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using a well labelled diagram, discuss hypertext, hypermedia and multimedia relaship."
+      },
+      {
+       "l": "b",
+       "text": "Discuss the stages of multimedia application development, �) Describe the general user interface cesign issues, (5 mks)",
+       "marks": 6
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "(10 mks)",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe any (5) activities carried out in digital sound record editing.                                                                           (5 mks)"
+      },
+      {
+       "l": "b",
+       "text": "Discuss the desirable features of an image editing software.                                                                                       (5 mks)"
+      },
+      {
+       "l": "c",
+       "text": "Descie any (5) multimedia connecting devices, a = mason -- ca e t e"
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2021-08-77",
+ "dateLabel": "77 August 2021",
+ "programmes": [
+  "BBIT",
+  "BIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "distributed-multimedia-systems"
+}

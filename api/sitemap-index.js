@@ -32,6 +32,7 @@ ${sections.map((file) => `  <sitemap>\n    <loc>https://www.ompathstudy.com/site
   <sitemap>
     <loc>https://www.ompathstudy.com/topics-sitemap.xml</loc>
   </sitemap>
+${["dental", "it", "business", "hospitality", "social", "science"].map((name) => `  <sitemap>\n    <loc>https://www.ompathstudy.com/${name}-sitemap.xml</loc>\n  </sitemap>`).join("\n")}
 </sitemapindex>`;
 
   res.setHeader("Content-Type", "application/xml; charset=utf-8");

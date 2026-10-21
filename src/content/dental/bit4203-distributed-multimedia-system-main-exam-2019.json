@@ -1,0 +1,112 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4203-distributed-multimedia-system-main-exam-2019",
+ "title": "Distributed Multimedia System: Main Exam, December 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bis / bit",
+ "examTitle": "University Examination",
+ "unitCode": "BIT4203",
+ "unitTitle": "Distributed Multimedia System",
+ "date": "December 2019",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO USE ILLUSTRATIONS WHERE NECESSARY",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "[30 MARKS]",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Being creative ina Multimedia System design is a big plus. Why is this so? [3 Marks]"
+      },
+      {
+       "l": "b",
+       "text": "Multimedia delivery mechanisms are very crucial to consider when deciding how to deliver. Multimedia content. Explain four reasons why? [4 Marks]"
+      },
+      {
+       "l": "c",
+       "text": "Optical Character Recognition Software has many features explain any three of them, [4 Marks]"
+      },
+      {
+       "l": "d",
+       "text": "A Multimedia system has many characteristics. Briefly explain any four of them. -- [8 Marks] e, What are the six Forces Driving Communications that Facilitate Multimedia? [6 Marks] f. i) Differentiate between Hypertext and Hypermedia. [2 Marks] ii) Using an example, explain what a Multimedia application is? [3 Marks]"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "[20 Marks] [2 Marks]",
+     "parts": [
+      {
+       "l": "a",
+       "text": "i) Explain the term Multimedia Streaming. li) Explain two different types of Multimedia streaming. [4 Marks]"
+      },
+      {
+       "l": "b",
+       "text": "Client centered Project Life Cycle is preferred in Multimedia Production. Discuss the Project Centered Life Cycle. [6 Marks]"
+      },
+      {
+       "l": "c",
+       "text": "Briefly explain four applications of a Multimedia system.'    [4 Marks]"
+      },
+      {
+       "l": "d",
+       "text": "Differentiate between EDF and SCAN-EDF Scheduling.            [4 Marks]"
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "[20 Marks]",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Temporal relationship between many forms of media (e.g. Video and Audio) exists and they experience two types of problems. Explain any two problems experienced. �.~ [4 Marks]"
+      },
+      {
+       "l": "b",
+       "text": "Enumerate any five features of Painting/Drawing Programs in Multimedia studios design. [5 Marks]"
+      },
+      {
+       "l": "c",
+       "text": "There are a number of utilities that are useful for Multimedia designs. Briefly explain any three. [6 Marks]"
+      },
+      {
+       "l": "d",
+       "text": "What are any five main features of image editing programs?    [5 Marks]"
+      },
+      {
+       "l": "a",
+       "text": "Explain the terms; Aspect ratio, Authoring Software, AVI, Bitmap and CODEC. Pessnopysmepe heir dering ererewpacr ties ee rncne ed EDEN TAS TLE YRC RL LO I TS OLN TST STE RG TE TO Rey _ Paper One . . . . 2"
+      }
+     ],
+     "id": "q3"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2019-12",
+ "dateLabel": "December 2019",
+ "programmes": [
+  "BBIT",
+  "BIS",
+  "BIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "distributed-multimedia-system"
+}

@@ -1,0 +1,77 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3105-management-information-systiems-main-exam-2018",
+ "title": "Management Information Systiems: Main Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "| __ , School of Computing and Informatics |",
+ "department": ": Department of Information Technology",
+ "programme": "BBIT / bsc IT",
+ "examTitle": "University Examination",
+ "unitCode": "BIT3105",
+ "unitTitle": "Management Information Systiems",
+ "date": "Wed 15tm August, 2018 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QU ESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "$ `",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define a system"
+      },
+      {
+       "l": "b",
+       "text": "What is an information system?                                (2 vars) wd"
+      },
+      {
+       "l": "c",
+       "text": "Differentiate between information and Data      :      |"
+      },
+      {
+       "l": "d",
+       "text": "Why is information systems important? Bis | ) What are some of the services. offered by-``the Information tec hnolog: infrastructure? ae 3' (5 Mtks) f) State 5 Challenges that Management `ace while creating and Managing a U infrastructure. : (5 Ma g) With the aid of a flow chart explain the relationship between different an organization. : Paper Tthree h) Briefly describe the Management Opportunities, Challenges, a ! dealing with information systems. : and Solutions when"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "| - respective roles a} Describe the three leveis of managem , e _ nt that Information systems serve with their : me b} Michael Porter's five forces business strategy de model analysis v i e s l a op f m r e a n m t e . wo I r t k d f r o a r w industry analysis and -f0 derive s upon industrial organization five forces that (10) economics determine attractiveness of a market. Discuss ; the competitive intensity and therefore .",
+     "marks": 10,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": ". those plans within that organizat Information technology involves setting out the plans and the underlying principies of ion. Among the elemen Sluidance toward plan achievement, ts of the plan that provide such plans goals and objectives a typically incorporate information Shecifica s w t e i l on l s as for on p t e r r a f c o k r i m n a g nc th e e m r e e a a s li u z r a e tion of t on hose goals through s. Giscuss the Nolan's model highl With i t g h h e tin a g i t d he of Ke a y p p p o r i o n p t r s ia of te ea e ch xa s m t p a l ge e . s =",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the IT planning `Stages. ; D}) information systems are vulnerable to technical, organizational, -and `environmental threats from internal and external sources. Discuss . z : STION FIVE :. Discuss 3 Information technolocgayn promote c v h a a r n i g ou e s s d w e i g t r h e a es wi o d f e o r rg i a m n p i a zational change, ct to the Organization. : gineering \"sborate on the Steps taken when perfo in r d m i i c n a g ti a ng n t E h f e fe k c e t y iv s e uc B c u e s s i s ness Process factors in the process, S AAD RUUDA NINES LAcontONIEY\" TaLg E ONS OAS eM eR R MULT ESI AE e OEE co sism Ne CE Laer oh es s Ea A urcreraea seeds mover giateas Any"
+      }
+     ],
+     "id": "q3"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BBIT"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "management-information-systiems"
+}

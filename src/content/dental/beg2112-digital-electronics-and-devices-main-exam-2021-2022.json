@@ -1,0 +1,145 @@
+{
+ "source": "mkupaperhub",
+ "slug": "beg2112-digital-electronics-and-devices-main-exam-2021-2022",
+ "title": "Digital Electronics and Devices: Main Exam, August 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Engineering, Energy, and the Built Environment",
+ "department": "Department of Electrical and Electronics Engineering",
+ "programme": "BIT / bbit / beds / enh",
+ "examTitle": "University Examination 2021/2022",
+ "unitCode": "BEG2112",
+ "unitTitle": "Digital Electronics and Devices",
+ "date": "Monday 25tm August, 2021 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Convert the following numbers to decimal. I. -- 101102 il. 1001000010012 iil. EFABCis iv. 270.548 V. 35616"
+      },
+      {
+       "l": "b",
+       "text": "Determine the 8-bit two's complement of the following numbers. i. -1106, ii. ---1710,"
+      },
+      {
+       "l": "c",
+       "text": "Consider the expression below: ABCD + ABCD + ABCD + ABCD + ABCD + ABCD + ABCD o ott et oo Libor ee Vi 00 odo 40,0 SN eT Ee LT TR AR Le TTT Paper Two Page 1 i. Map the following standard SOP expression on a Karnaugh map. ii. Use aKarnaugh map to minimize the above expression. iii. | Draw the circuit diagram for the simplified expression."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Determine the logic function F implemented by the circuit shown in Figure below. `A . )> a",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Simplify the Boolean expressions: � * 1- AB+ A(B+C)> B(B= C). 2- [AB(C + BD) - AB]C 3- ABC + ABC -- ABC + ABC + ABC",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Convert the decimal numbers 250 and 777 to octal numbers. Paper Two Page 2"
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Realize a 2-to-4 decoder using NAND gates."
+      },
+      {
+       "l": "b",
+       "text": "Use a 4-to-1 multiplexer and logic gates to implement the function: F(A, B,C, D) = 5\" m(3,4,5, 6, 7, 9, 10, 12, 14, 15)"
+      },
+      {
+       "l": "c",
+       "text": "Determine the logic function G implemented by the circuit shown in Figure below. p.D"
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is the largest number that can be represented in 16-bit binary numeration system? ~ . .",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Develop a logic circuit with four input variables that will only produce a 1 output when exactly three input variables are 1s and draw the truth table.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Show the proof for the following i A+AB=A+B i. (A+B)(A+C)=A+BC S EN SE L NT ITS ST SERIES Paper Two Page 3",
+       "marks": 6
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Use NAND gates to implement each of the following expressions.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Use NOR gates to implement each of the following expressions. - X SAB (bea",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Draw the Complete logic circuit for a full adder. a ee a Na Ae ee AR A OI ELL VEE TTT SRN ee ene eran aa ree tere Paper Two Page 4",
+       "marks": 4
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2021-08",
+ "dateLabel": "August 2021",
+ "programmes": [
+  "BIT",
+  "BBIT",
+  "BEDS",
+  "ENH"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "digital-electronics-and-devices"
+}
