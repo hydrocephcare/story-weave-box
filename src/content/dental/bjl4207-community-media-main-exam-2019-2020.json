@@ -1,0 +1,129 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bjl4207-community-media-main-exam-2019-2020",
+ "title": "Community Media: Main Exam, 9 December 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Journalism and Mass Communication",
+ "programme": "Bachelor of Arts in Mass Media and Communication",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BJL4207",
+ "unitTitle": "Community Media",
+ "date": "Monday 9th December, 2019 8:00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Radio has emerged as the most popular mass medium in Kenya. With examples, explain the characteristics of community radio.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Community radio is for, by and of the people. Discuss this statement.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Highlight and briefly elaborate on 5 laws that guide community media journalists.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Elaborate on 5 principles of community broadcasting.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the future of community media in Africa.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Using a community media of your choice, explain how media can be used in:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Escalation of violence.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "A tool for peace.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Show your understanding of the term 'media freedom' in reference to community media.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the effects of community media on mainstream media.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain how technology has enhanced the growth of community media.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Elaborate on some of the mistakes made by community media.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2019-12-09",
+ "dateLabel": "9 December 2019",
+ "programmes": [
+  "Bachelor of Arts in Mass Media and Communication"
+ ],
+ "categorySlug": "media-and-communication",
+ "category": "Media and Communication",
+ "unitSlug": "community-media"
+}

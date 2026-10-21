@@ -1,0 +1,169 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bep1104-introduction-to-educational-psychology-main-exam-2019-2020",
+ "title": "Introduction to Educational Psychology: Main Exam, 9 December 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Education",
+ "department": "Department of Educational Psychology and Technology",
+ "programme": "Bachelor of Education",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BEP1104",
+ "unitTitle": "Introduction to Educational Psychology",
+ "date": "Mon 9th December, 2019 2:00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ATTEMPT QUESTION ONE AND ANY OTHER TWO.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Differentiate between proactive and retroactive inhibition.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Explain the teacher's role as a facilitator.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Identify important learner characteristics in the teaching-learning process.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Explain the following concepts.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Reinforcement"
+        },
+        {
+         "l": "ii",
+         "text": "Extinction"
+        },
+        {
+         "l": "iii",
+         "text": "Learning"
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Highlight four indicators of a problematic class.",
+       "marks": 4
+      },
+      {
+       "l": "f",
+       "text": "Differentiate between short-term and long-term memory.",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Show the relevance of Abraham Maslow's theory to a teacher.",
+       "marks": 12
+      },
+      {
+       "l": "b",
+       "text": "Explain how a teacher can help a learner improve memory.",
+       "marks": 8
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Assess important teacher characteristics for effective teaching.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Differentiate between the following concepts in personality development.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Castration anxiety"
+        },
+        {
+         "l": "ii",
+         "text": "Penis envy"
+        }
+       ]
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the benefits of the scientific approach to teaching.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss five problem behaviours in class.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Show the relevance of classical conditioning theory in teaching and learning.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the negative effects of punishment.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2019-12-09",
+ "dateLabel": "9 December 2019",
+ "programmes": [
+  "Bachelor of Education"
+ ],
+ "categorySlug": "education",
+ "category": "Education",
+ "unitSlug": "introduction-to-educational-psychology"
+}

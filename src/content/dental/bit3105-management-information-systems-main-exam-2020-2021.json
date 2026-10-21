@@ -1,0 +1,141 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3105-management-information-systems-main-exam-2020-2021",
+ "title": "Management Information Systems: Main Exam, 14 January 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "Bachelor of Science in Information Technology / bachelor of Business Information Technology",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BIT3105",
+ "unitTitle": "Management Information Systems",
+ "date": "Thur 14th Jan 2021 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the 4 basic functional areas in a business organization that can leverage modern information systems, and indicate the relevant business process.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Transaction processing systems are essential enterprise systems at the lower level of management. Describe the limitations of transaction processing systems.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Examine the key opportunities emerging from the proliferation of information systems in the modern world that is characterized by the convergence of the Internet and digital technology.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Explain 3 key techniques for protecting organizational data from internal security threats within the context of web and mobile-based systems.",
+       "marks": 6
+      },
+      {
+       "l": "e",
+       "text": "Evaluate the manifestation and implications of intellectual property rights as a critical ethical issue in the context of modern digital technologies.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Examine the factors that would guide an organization on whether to re-engineer an existing system instead of developing a new information system.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Evaluate the benefits of management information systems within the context of multinational business firms.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "One of the key reasons for the rising interest in information technology by business organizations today is to promote the achievement of organizations' strategic objectives. Relate the application of information systems to strategic business objectives.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Examine the benefits and limitations of decision support systems and clarify the levels of management they support.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Analyse the key components of information technology infrastructure and provide relevant examples.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "With special reference to developing countries like Kenya, evaluate the challenges that characterize managing IT infrastructure.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "As an ICT expert, analyse the ways in which web-based information systems are influencing business firms and organizations in the 21st century.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Examine various methods and technologies that can be applied to protect against denial of service attacks for information systems.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-01-14",
+ "dateLabel": "14 January 2021",
+ "programmes": [
+  "Bachelor of Science in Information Technology",
+  "bachelor of Business Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "management-information-systems"
+}

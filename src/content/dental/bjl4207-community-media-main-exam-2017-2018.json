@@ -1,0 +1,91 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bjl4207-community-media-main-exam-2017-2018",
+ "title": "Community Media: Main Exam, 20 April 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Journalism and Mass Communication",
+ "programme": "Bachelor of Arts in Mass Media and Communication",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BJL4207",
+ "unitTitle": "Community Media",
+ "date": "20th April, 2018 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Name five community radios in Kenya.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "List any five sources of financial support to community media.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Describe any five advantages of community radio.",
+       "marks": 10
+      },
+      {
+       "l": "d",
+       "text": "Discuss any five challenges of running a community-owned media.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain the main differences between community media and commercial media in terms of ownership and management.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Community media has distinct characteristics that make it stand out from the rest of the forms of media. Describe any five of these characteristics.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Assess the impact of community media in today's society.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Describe any ten ways through which community media helps promote democracy and champion human rights in Africa.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-04-20",
+ "dateLabel": "20 April 2018",
+ "programmes": [
+  "Bachelor of Arts in Mass Media and Communication"
+ ],
+ "categorySlug": "media-and-communication",
+ "category": "Media and Communication",
+ "unitSlug": "community-media"
+}

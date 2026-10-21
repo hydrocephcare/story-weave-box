@@ -1,0 +1,207 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4105-advanced-business-data-structures-and-algorithms-main-exam-2019-2020",
+ "title": "Advanced Business Data Structures and Algorithms: Main Exam, 16 December 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Business Information Technology / bachelor of Science in Information Technology",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BIT4105",
+ "unitTitle": "Advanced Business Data Structures and Algorithms",
+ "date": "Mon 16th December, 2019 8:00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS. USE ILLUSTRATIONS WHERE NECESSARY.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Giving an example in each case, differentiate between linear data structures and non-linear data structures.",
+       "marks": 3
+      },
+      {
+       "l": "b",
+       "text": "Define a stack and state two of its applications. Show how you would check the stack-full and stack-empty conditions.",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "Using a suitable illustration, define a linked list and state two of its applications.",
+       "marks": 3
+      },
+      {
+       "l": "d",
+       "text": "Describe Prim's minimum spanning tree algorithm.",
+       "marks": 3
+      },
+      {
+       "l": "e",
+       "text": "Explain the difference between dynamic programming and the divide and conquer method.",
+       "marks": 2
+      },
+      {
+       "l": "f",
+       "text": "Define a graph data structure and explain the meaning of the terms topological sorting and graph traversing.",
+       "marks": 4
+      },
+      {
+       "l": "g",
+       "text": "Calculate the maximum number of nodes at level 5 of a binary tree and the maximum number of nodes in a binary tree of depth 3.",
+       "marks": 4
+      },
+      {
+       "l": "h",
+       "text": "How much memory in bytes is required to store two 3-dimensional matrices M(20,10,5) and N(8,15,11), where each element requires 16 bits for storage?",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Prove by induction that the sum of k for k = 0 to n equals n(n+1)/2.",
+         "marks": 4
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the term algorithm and distinguish it from the term order of an algorithm.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Describe five features of a good algorithm.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Outline the steps needed in designing and analysing algorithms to perform computational problems.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Explain, giving two examples in each case, the difference between stable sorting and unstable sorting algorithms.",
+       "marks": 4
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe in detail the divide and conquer approach. Explain the pros and cons of this approach.",
+       "marks": 7
+      },
+      {
+       "l": "b",
+       "text": "Describe in detail the merge sort algorithm and the type of problems it is designed to solve.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Use the merge sort algorithm to sort the following data: 4, 1, 8, 2, 10, 6, 9, 3.",
+       "marks": 7
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe in detail the greedy algorithm and its main components.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Discuss two areas of application of the greedy algorithm and state two examples where it fails to find solutions.",
+       "marks": 7
+      },
+      {
+       "l": "c",
+       "text": "Describe the knapsack problem, distinguishing between the 0/1 and fractional versions of the problem.",
+       "marks": 7
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Write brief notes on the following methods.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Aggregate method"
+        },
+        {
+         "l": "ii",
+         "text": "Accounting method"
+        },
+        {
+         "l": "iii",
+         "text": "Potential method"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Giving relevant examples, distinguish between optimal problems and decision problems.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "With the aid of a suitably labelled diagram, describe the n-queens problem and its algorithm.",
+       "marks": 8
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2019-12-16",
+ "dateLabel": "16 December 2019",
+ "programmes": [
+  "Bachelor of Business Information Technology",
+  "bachelor of Science in Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "advanced-business-data-structures-and-algorithms"
+}

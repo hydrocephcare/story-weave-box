@@ -1,0 +1,149 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bha1202-human-anatomy-and-physiology-ii-main-exam-2018-2019",
+ "title": "Human Anatomy and Physiology II: Main Exam, 10 December 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Human Anatomy",
+ "programme": "Bachelor of Science in Health Records / Dental Science",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BHA1202",
+ "unitTitle": "Human Anatomy and Physiology II",
+ "date": "Mon 10th December, 2018 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "SECTION I: ANSWER ALL QUESTIONS. EACH QUESTION CARRIES 6 MARKS. SECTION II: ANSWER ONE QUESTION. EACH QUESTION CARRIES 22 MARKS.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A Short answer questions (6 marks each)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "List the functions of the skeletal system.",
+     "marks": 6,
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Name three areas of the body where lymph nodes aggregate and list the functions of the lymphatic system.",
+     "marks": 6,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Name the lobes of the pituitary gland, indicating the hormones they produce.",
+     "marks": 6,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Draw a well-labelled diagram of the stomach and name its functions.",
+     "marks": 6,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Name the parts of the male urethra and explain why cystitis is more common in females than in males.",
+     "marks": 6,
+     "id": "q5"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Give one function of each of the following cranial nerves: optic, oculomotor, glossopharyngeal, facial, olfactory, trigeminal.",
+     "marks": 6,
+     "id": "q6"
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Give three functions of muscles and name the three types of body muscles.",
+     "marks": 6,
+     "id": "q7"
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "Name the cells of the nervous system and state one function of each.",
+     "marks": 6,
+     "id": "q8"
+    },
+    {
+     "t": "h",
+     "text": "Section B Essay questions (answer one question, 22 marks)"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Discuss the nervous system under the following headings.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Draw a labelled diagram of a multipolar neuron.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Name three functions of the nervous system.",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "Explain how an activated sympathetic nervous system affects other body systems.",
+       "marks": 13
+      }
+     ],
+     "id": "q9"
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "Discuss the lymphatic system under the following headings.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe how lymph is formed.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Name five areas of the body where lymph nodes aggregate.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "List the functions of the lymphatic system.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Outline the flow of lymph from the hand to the right atrium.",
+       "marks": 6
+      }
+     ],
+     "id": "q10"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-10",
+ "dateLabel": "10 December 2018",
+ "programmes": [
+  "Diploma in Health Records and Information Technology"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "human-anatomy-and-physiology-ii"
+}

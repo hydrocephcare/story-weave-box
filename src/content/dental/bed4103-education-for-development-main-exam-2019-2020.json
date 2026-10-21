@@ -1,0 +1,144 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bed4103-education-for-development-main-exam-2019-2020",
+ "title": "Education for Development: Main Exam, 10 December 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Social and Development Studies",
+ "programme": "Bachelor of Development Studies",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BED4103",
+ "unitTitle": "Education for Development",
+ "date": "Tuesday 10th December, 2019 11:00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Distinguish between the following terminologies.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Education vs development",
+         "marks": 4
+        },
+        {
+         "l": "ii",
+         "text": "Teaching vs knowledge",
+         "marks": 4
+        },
+        {
+         "l": "iii",
+         "text": "Training vs skills",
+         "marks": 4
+        },
+        {
+         "l": "iv",
+         "text": "Literacy vs capacity building",
+         "marks": 4
+        },
+        {
+         "l": "v",
+         "text": "Formal vs non-formal education",
+         "marks": 4
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "List the main characteristics of formal education.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Citing relevant examples, differentiate between traditional and modern education.",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the measures that have been proposed as ways of tapping financial resources for education.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "What are some of the problems faced in accessing education in Kenya?",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define unemployment and describe some of its causes in Kenya.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the main objectives of the World Declaration on Education for All (EFA).",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the key challenges that have faced Kenya's free primary education.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the challenges facing the implementation and operation of adult literacy and education in Kenya.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Discuss the key theories that show the relationship between education and development.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2019-12-10",
+ "dateLabel": "10 December 2019",
+ "programmes": [
+  "Bachelor of Development Studies"
+ ],
+ "categorySlug": "education",
+ "category": "Education",
+ "unitSlug": "education-for-development"
+}

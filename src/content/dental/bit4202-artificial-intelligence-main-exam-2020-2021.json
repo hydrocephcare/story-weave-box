@@ -1,0 +1,227 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4202-artificial-intelligence-main-exam-2020-2021",
+ "title": "Artificial Intelligence: Main Exam, 16 August 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BIT4202",
+ "unitTitle": "Artificial Intelligence",
+ "date": "Mon 16th Aug, 2021 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly describe supervised machine learning, with an example.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Briefly describe the breadth-first search algorithm.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain the following search conditions in relation to searching as a problem-solving technique.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Current state"
+        },
+        {
+         "l": "ii",
+         "text": "Goal state"
+        },
+        {
+         "l": "iii",
+         "text": "The solution"
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "Define the following terms.",
+       "marks": 2,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Intelligence"
+        },
+        {
+         "l": "ii",
+         "text": "Artificial intelligence"
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Briefly explain a rational agent.",
+       "marks": 2
+      },
+      {
+       "l": "f",
+       "text": "State two advantages of breadth-first search.",
+       "marks": 4
+      },
+      {
+       "l": "g",
+       "text": "State two advantages of depth-first search.",
+       "marks": 4
+      },
+      {
+       "l": "h",
+       "text": "Explain the connection between the universal and existential quantifiers: \"Everyone likes ice cream\" is equivalent to \"there is no one who does not like ice cream\".",
+       "marks": 2,
+       "parts": [
+        {
+         "l": "i",
+         "text": "State the difference between logic programming and PROLOG.",
+         "marks": 4
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the four properties of knowledge representation.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Define procedural and declarative knowledge.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Describe structured knowledge representation.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Briefly describe fuzzy logic.",
+       "marks": 4
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly describe conditional probability.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Define an expert system.",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "What are the most important aspects of expert systems?",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "State and explain various characteristics of expert systems.",
+       "marks": 10
+      },
+      {
+       "l": "e",
+       "text": "State the role of a domain expert.",
+       "marks": 2
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe an expert system shell.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Discuss any four application areas of an expert system.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "By use of a diagram, illustrate an agent.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "List the criteria to measure the performance of different search strategies.",
+       "marks": 4
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the guidelines that are considered while planning for knowledge acquisition.",
+       "marks": 12
+      },
+      {
+       "l": "b",
+       "text": "What are the components of well-defined problems?",
+       "marks": 8
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-08-16",
+ "dateLabel": "16 August 2021",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "artificial-intelligence"
+}

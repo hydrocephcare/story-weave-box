@@ -1,0 +1,152 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bed1109-economic-development-i-main-exam-2020-2021",
+ "title": "Economic Development I: Main Exam, 20 August 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Business and Economics",
+ "department": "Department of Economics",
+ "programme": "BECF / becs / bsfs / bec",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BED1109",
+ "unitTitle": "Economic Development I",
+ "date": "Fri 20th Aug, 2021 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Differentiate between the following.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Economic growth and economic development",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "GDP and GNP",
+         "marks": 3
+        },
+        {
+         "l": "iii",
+         "text": "Urban unemployment and urban dualism",
+         "marks": 3
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "State and explain five roles of the state in economic development.",
+       "marks": 7
+      },
+      {
+       "l": "c",
+       "text": "State and explain five ways of economic integration.",
+       "marks": 7
+      },
+      {
+       "l": "d",
+       "text": "Discuss the role of globalization and trade in development.",
+       "marks": 7
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss how income distribution changes in the process of economic development.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the consequences of unemployment in developing countries."
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss factors contributing to high levels of unemployment in developing countries.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the five stages of economic growth as pointed out by Rostow's theory of economic development.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the process of agricultural transformation in the process of economic development.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Outline the contribution of agriculture in the process of economic development.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain and comment on the usefulness of Gross Domestic Product (GDP) as a measure of the economic well-being of a country.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the concept of sustainable development.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2021-08-20",
+ "dateLabel": "20 August 2021",
+ "programmes": [
+  "BECF",
+  "BECS",
+  "BSFS",
+  "BEC"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "economic-development-i"
+}

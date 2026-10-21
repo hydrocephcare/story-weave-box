@@ -1,0 +1,149 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit1103-foundation-of-knowledge-management-supplementary-exam-2017-2018",
+ "title": "Foundation of Knowledge Management: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT1103",
+ "unitTitle": "Foundation of Knowledge Management",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "State two challenges facing tacit knowledge transfer.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "State four factors affecting tacit knowledge transfer.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "State the common methods of acquiring knowledge and the role they play in knowledge management.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Differentiate between tacit and explicit knowledge.",
+       "marks": 8
+      },
+      {
+       "l": "e",
+       "text": "Make clear distinction between Knowledge Discovery and Detection.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the knowledge business.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Describe the knowledge conversion process.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the extent to which Mount Kenya University has embraced ICTs in knowledge management.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain, using examples, the various ICT applications in knowledge management.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "With the help of a diagram, discuss the DIKW pyramid.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "What are the existing forms of knowledge?",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "With examples, discuss Nonaka's theory of knowledge conversion.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Using illustrations, discuss the extent to which Mount Kenya University has adopted the practice of knowledge management.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "foundation-of-knowledge-management"
+}

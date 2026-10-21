@@ -1,0 +1,113 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bds3101-cobalt-chrome-iii-supplementary-exam-2017-2018",
+ "title": "Cobalt Chrome III: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Bachelor of Science in Dental Technology",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BDS3101",
+ "unitTitle": "Cobalt Chrome III",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY TWO QUESTIONS IN SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following mechanical principles applicable in removable prosthodontics.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Snowshoe principle.",
+         "marks": 5
+        },
+        {
+         "l": "ii",
+         "text": "Class 1 lever principle.",
+         "marks": 5
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Describe the following principles applicable in major connector design.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "L-bar principle.",
+         "marks": 6
+        },
+        {
+         "l": "ii",
+         "text": "Circular configuration.",
+         "marks": 6
+        },
+        {
+         "l": "iii",
+         "text": "Strut configuration.",
+         "marks": 4
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "Give four types of indirect retainers.",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B (ANSWER ANY TWO QUESTIONS)"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Describe the factors which may affect the effectiveness of indirect retention.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe Kennedy's classification of removable partial dentures and indicate their fulcrum lines.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe three clasp configurations which may be applied when designing partial dentures.",
+     "marks": 20,
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "dental-technology",
+ "category": "Dental Technology",
+ "unitSlug": "cobalt-chrome-iii"
+}

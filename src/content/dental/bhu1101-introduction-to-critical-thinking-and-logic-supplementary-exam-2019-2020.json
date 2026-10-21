@@ -1,0 +1,100 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bhu1101-introduction-to-critical-thinking-and-logic-supplementary-exam-2019-2020",
+ "title": "Introduction to Critical Thinking and Logic: Supplementary Exam, 14 December 2020",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Languages and Humanities",
+ "programme": "Bachelor of Education (arts)",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BHU1101",
+ "unitTitle": "Introduction to Critical Thinking and Logic",
+ "date": "Mon 14th Dec 2020 8.00am",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Define and explain the following terms.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Critical thinking and creative thinking.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Definition.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Fallacy.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Argument.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Proposition.",
+       "marks": 4
+      },
+      {
+       "l": "f",
+       "text": "Explain the relevance of logic in life.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Evaluate how critical thinking is valuable to an individual.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe any four theories of truth.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Elucidate between inductive and deductive arguments.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Argue on how 21st century success is determined by inducing critical thinking skills.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2020-12-14",
+ "dateLabel": "14 December 2020",
+ "programmes": [
+  "Bachelor of Education (arts)"
+ ],
+ "categorySlug": "law-and-social-sciences",
+ "category": "Law and Social Sciences",
+ "unitSlug": "introduction-to-critical-thinking-and-logic"
+}

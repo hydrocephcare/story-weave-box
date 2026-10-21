@@ -1,0 +1,235 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4205-network-programming-supplementary-exam-2017-2018",
+ "title": "Network Programming: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Business Information Technology / information Technology",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4205",
+ "unitTitle": "Network Programming",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "With the aid of an example, explain the concept of templates as used in programming.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Outline a brief history of the Unix operating system.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "What ports do the following services use?",
+       "marks": 5,
+       "parts": [
+        {
+         "l": "i",
+         "text": "File Transfer Protocol"
+        },
+        {
+         "l": "ii",
+         "text": "Simple Mail Transfer Protocol"
+        },
+        {
+         "l": "iii",
+         "text": "Domain Name System"
+        },
+        {
+         "l": "iv",
+         "text": "Hypertext Transfer Protocol Secure"
+        },
+        {
+         "l": "v",
+         "text": "Telnet"
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "Briefly describe the five sockets functions/system calls below.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "socket()"
+        },
+        {
+         "l": "ii",
+         "text": "bind()"
+        },
+        {
+         "l": "iii",
+         "text": "connect()"
+        },
+        {
+         "l": "iv",
+         "text": "listen()"
+        },
+        {
+         "l": "v",
+         "text": "accept()"
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Explain the boss/worker thread model, giving an example as used in the context of pthreads.",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly explain the concepts of circuits and packets as used in network communications, stating the major advantage and disadvantage for each one of them.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Give a brief description of the OSI model with the aid of a diagram.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define synchronization as used in the context of pthreads.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Explain two methods of implementing thread synchronization.",
+       "marks": 16
+      },
+      {
+       "l": "c",
+       "text": "How are pthreads created?",
+       "marks": 2
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define inheritance and multiple inheritance as used in object oriented programming.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "With the aid of program segments, explain an implementation of inheritance.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Information hiding and protection are two techniques that are used to implement encapsulation of an object. Briefly explain these two concepts.",
+       "marks": 6
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "List five UNIX distributions.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "UNIX is a multitasking operating system, as well as being multiuser. Briefly explain these 2 concepts.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "With the aid of a diagram, explain the UNIX file system.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "What do the following commands do in UNIX?",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "# rmdir mystuff"
+        },
+        {
+         "l": "ii",
+         "text": "# passwd wjohn"
+        },
+        {
+         "l": "iii",
+         "text": "# pwd"
+        },
+        {
+         "l": "iv",
+         "text": "# cd /usr/mine"
+        },
+        {
+         "l": "v",
+         "text": "# ls"
+        },
+        {
+         "l": "vi",
+         "text": "# vi file1"
+        }
+       ]
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Bachelor of Business Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "network-programming"
+}

@@ -1,0 +1,152 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bed4103-education-and-development-main-exam-2017-2018",
+ "title": "Education and Development: Main Exam, 26 April 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Social and Development Studies",
+ "programme": "Bachelor of Development Studies",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BED4103",
+ "unitTitle": "Education and Development",
+ "date": "26th April 2018 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO QUESTIONS IN SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terms.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Economic development",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Education",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Literacy level",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain how education brings about change in the way people live.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Explain why education is an important indicator for measuring development.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Identify the factors that promote problems of access and inequality in education.",
+       "marks": 6
+      },
+      {
+       "l": "e",
+       "text": "Highlight any three aims of Kenya's education system and their effects on Kenya's economic development.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain why education is considered a social instrument for developing human capital in a nation.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the reasons behind financing of education for work in agriculture and industry.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the contributions of non-formal and vocational education in promoting development in education.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Highlight Kenya's policy of vocational education in economic development.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "The worldwide declaration on Education for All (EFA) is a worthwhile course. Discuss this statement with regard to the positive and negative effects of EFA.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explore some elements of African indigenous education that you think would be relevant to modern education.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "The kind of education system in any given society reflects its society's influence. Citing relevant examples, discuss.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-04-26",
+ "dateLabel": "26 April 2018",
+ "programmes": [
+  "Bachelor of Development Studies"
+ ],
+ "categorySlug": "education",
+ "category": "Education",
+ "unitSlug": "education-and-development"
+}

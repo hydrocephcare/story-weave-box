@@ -1,0 +1,191 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bby1103-cell-biology-and-genetics-main-exam-2024-2025-23-apr-2025",
+ "title": "Cell Biology and Genetics: Main Exam, 23 April 2025",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Natural Sciences",
+ "programme": "Bachelor of Education Science",
+ "examTitle": "University Examination 2024/2025",
+ "unitCode": "BBY1103",
+ "unitTitle": "Cell Biology and Genetics",
+ "date": "Wed 23rd April, 2025 2:00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL THE QUESTIONS IN SECTION A AND ONLY TWO QUESTIONS IN SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the contrast light microscope.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Outline cell theory.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "What is a karyotype?",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "Distinguish between plant and animal cells.",
+       "marks": 5
+      },
+      {
+       "l": "e",
+       "text": "What are the advantages and disadvantages of using a light microscope?",
+       "marks": 3
+      },
+      {
+       "l": "f",
+       "text": "Define the following terminologies as used in cell biology.",
+       "marks": 5,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Magnification"
+        },
+        {
+         "l": "ii",
+         "text": "Hypertonic solution"
+        },
+        {
+         "l": "iii",
+         "text": "Haploid"
+        },
+        {
+         "l": "iv",
+         "text": "Monohybrid cross"
+        },
+        {
+         "l": "v",
+         "text": "Cytology"
+        }
+       ]
+      },
+      {
+       "l": "g",
+       "text": "The sequence of a strand of DNA is ATTGCCGTCG. If this strand serves as the template for DNA synthesis, what will be the sequence of the newly synthesized strand?",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B ANSWER ONLY ONE QUESTION IN THIS SECTION"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss in detail the classification of mutations.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Discuss in detail the process of mitosis.",
+       "marks": 12
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "On the basis of Mendel's observations, predict the results from the following crosses with peas. Clearly show your workings.",
+       "marks": 16,
+       "parts": [
+        {
+         "l": "i",
+         "text": "A tall (dominant and homozygous) variety crossed with a dwarf variety"
+        },
+        {
+         "l": "ii",
+         "text": "The progeny of (i) self-fertilized"
+        },
+        {
+         "l": "iii",
+         "text": "The progeny from (i) crossed with the original tall parent"
+        },
+        {
+         "l": "iv",
+         "text": "The progeny of (i) crossed with the original dwarf parent"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Describe in detail the process of phagocytosis.",
+       "marks": 4
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly describe factors affecting the rate of diffusion.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Distinguish between open channel protein and gated channel protein.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain reasons why Mendel selected a garden pea to conduct his experiments.",
+       "marks": 3
+      },
+      {
+       "l": "d",
+       "text": "Draw a well-labelled diagram of a eukaryotic cell.",
+       "marks": 7
+      }
+     ],
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2025-04-23",
+ "dateLabel": "23 April 2025",
+ "programmes": [
+  "Bachelor of Education Science"
+ ],
+ "categorySlug": "science-and-engineering",
+ "category": "Science and Engineering",
+ "unitSlug": "cell-biology-and-genetics"
+}

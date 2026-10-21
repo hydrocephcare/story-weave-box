@@ -1,0 +1,108 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bhu1101-critical-thinking-and-logic-main-exam-2019-2020",
+ "title": "Critical Thinking and Logic: Main Exam, 4 December 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Languages and Humanities",
+ "programme": "Bachelor of Education",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BHU1101",
+ "unitTitle": "Critical Thinking and Logic",
+ "date": "Wed 4th December, 2019 4:00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terms as used in critical thinking and logic.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Culture-based fallacy"
+        },
+        {
+         "l": "ii",
+         "text": "Formal logic"
+        },
+        {
+         "l": "iii",
+         "text": "Moral wrongs"
+        },
+        {
+         "l": "iv",
+         "text": "Fair-mindedness"
+        },
+        {
+         "l": "v",
+         "text": "Consensus theory of truth"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain any five qualities of a good argument.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Giving an example in each case, identify four principles of logic.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain any five theories of moral reasoning.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss any four challenges of culture-based fallacies to national development.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "All horses are animals; some dogs are not horses; therefore some dogs are not animals. What kind of syllogism is this? Identify four aspects of where this kind of statement may fit.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Discuss a solution to each of any five barriers to creativity in Kenya.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2019-12-04",
+ "dateLabel": "4 December 2019",
+ "programmes": [
+  "Bachelor of Education"
+ ],
+ "categorySlug": "law-and-social-sciences",
+ "category": "Law and Social Sciences",
+ "unitSlug": "critical-thinking-and-logic"
+}

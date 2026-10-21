@@ -1,0 +1,134 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bed3216-conflict-resolution-and-management-main-exam-2021-2022",
+ "title": "Conflict Resolution and Management: Main Exam, 9 December 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Social and Development Studies",
+ "programme": "Bachelor of Social Work and Administration",
+ "examTitle": "University Examination 2021/2022",
+ "unitCode": "BED3216",
+ "unitTitle": "Conflict Resolution and Management",
+ "date": "Thur 9th Dec, 2021 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain, giving examples, the term conflict.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Discuss four levels of conflict, giving an example in each case.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Explain the 'win-win' approach as applied to conflict resolution.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Define negotiation. What are the advantages and disadvantages of negotiation?",
+       "marks": 6
+      },
+      {
+       "l": "e",
+       "text": "Distinguish between mediation and arbitration.",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the methods used in solving conflicts in a workplace.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "What is the importance of community cohesion?",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "List and explain the traditional approaches to conflict resolution.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Discuss the legal and ethical practices which should be observed while resolving conflicts.",
+       "marks": 12
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain what an intractable conflict is, giving an example.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Discuss the underlying causes of intractable conflicts.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Discuss the challenges parties encounter while reaching an agreement.",
+       "marks": 8
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Discuss the causes and effects of frequent conflict witnessed in Kenya.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-12-09",
+ "dateLabel": "9 December 2021",
+ "programmes": [
+  "Bachelor of Social Work and Administration"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "conflict-resolution-and-management"
+}

@@ -1,0 +1,156 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bjl4207-community-media-main-exam-2018-2019",
+ "title": "Community Media: Main Exam, 24 April 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Journalism and Mass Communication",
+ "programme": "Bachelor of Arts in Mass Media and Communication",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BJL4207",
+ "unitTitle": "Community Media",
+ "date": "Wed 24th April, 2019 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following concepts.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Community media",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Community interest",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Community participation",
+         "marks": 2
+        },
+        {
+         "l": "iv",
+         "text": "Participatory video",
+         "marks": 2
+        },
+        {
+         "l": "v",
+         "text": "Inclusion",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Describe five features of community radio.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Using a four-point criteria, differentiate between community and commercial media.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Compared to all other mass media, radio has emerged as the most popular mass medium in Africa. In a five-point argument, justify this assertion.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Identify and describe five key principles of community broadcasting.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "With relevant examples from Africa, discuss five positive impacts of community media.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain five challenges facing community media in developing countries.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the step-by-step process of setting up a community radio.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain five qualities of a good community media manager.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Name and describe five personnel involved in a community media.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Using a diagram, describe the organization structure of a community media.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2019-04-24",
+ "dateLabel": "24 April 2019",
+ "programmes": [
+  "Bachelor of Arts in Mass Media and Communication"
+ ],
+ "categorySlug": "media-and-communication",
+ "category": "Media and Communication",
+ "unitSlug": "community-media"
+}

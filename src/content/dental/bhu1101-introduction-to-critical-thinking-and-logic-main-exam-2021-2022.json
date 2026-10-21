@@ -1,0 +1,101 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bhu1101-introduction-to-critical-thinking-and-logic-main-exam-2021-2022",
+ "title": "Introduction to Critical Thinking and Logic: Main Exam, 31 December 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Languages and Humanities",
+ "programme": "All Bachelors",
+ "examTitle": "University Examination 2021/2022",
+ "unitCode": "BHU1101",
+ "unitTitle": "Introduction to Critical Thinking and Logic",
+ "date": "Fri 31st Dec, 2021 4:00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain what you understand by creative thinking and elaborate on the characteristics of a creative person.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Giving one example for each, distinguish between a valid argument and a sound argument.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "What do you understand by major, minor and middle terms of a syllogism?",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "What do you understand by definition? Using examples, discuss any four types of definitions.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Using the traditional square of opposition, show the relationship between the various categories of propositions.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Construct syllogisms for the following mood and figure.",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "AAA"
+      },
+      {
+       "l": "b",
+       "text": "AOO"
+      },
+      {
+       "l": "c",
+       "text": "EII"
+      },
+      {
+       "l": "d",
+       "text": "EIO"
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Identify the three categories of fallacies, and use two examples from each to explain these categories.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2021-12-31",
+ "dateLabel": "31 December 2021",
+ "programmes": [],
+ "categorySlug": "law-and-social-sciences",
+ "category": "Law and Social Sciences",
+ "unitSlug": "introduction-to-critical-thinking-and-logic"
+}

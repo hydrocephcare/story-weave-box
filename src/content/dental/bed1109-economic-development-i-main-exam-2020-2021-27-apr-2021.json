@@ -1,0 +1,160 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bed1109-economic-development-i-main-exam-2020-2021-27-apr-2021",
+ "title": "Economic Development I: Main Exam, 27 April 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Business and Economics",
+ "department": "Department of Economics",
+ "programme": "BECF / becs / bsis / bec",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BED1109",
+ "unitTitle": "Economic Development I",
+ "date": "Tue 27th April, 2021 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following terms as used in international trade.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Economic integration"
+        },
+        {
+         "l": "ii",
+         "text": "Free trade area"
+        },
+        {
+         "l": "iii",
+         "text": "Customs union"
+        },
+        {
+         "l": "iv",
+         "text": "Common market"
+        },
+        {
+         "l": "v",
+         "text": "Common monetary system"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Discuss the various strategies of development in developing countries.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Discuss the objectives of economic development.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Discuss the obstacles to industrial development in developing countries.",
+       "marks": 8
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the term regional integration, stating the importance of such integration.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the possible causes of underdevelopment, especially in Africa.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the assumptions of the Lewis model, referred to as the two-sector model.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Critically examine the Lewis model of economic growth.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using Kenya as an example, is the government making efforts towards poverty reduction in the country? Discuss.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Describe policy options to combat income inequality and poverty.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain fully the meaning of monetary policy and the instruments of monetary policy.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the structure and the functions of the World Bank and the International Monetary Fund.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-04-27",
+ "dateLabel": "27 April 2021",
+ "programmes": [
+  "BECF",
+  "BECS",
+  "BSIS",
+  "BEC"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "economic-development-i"
+}

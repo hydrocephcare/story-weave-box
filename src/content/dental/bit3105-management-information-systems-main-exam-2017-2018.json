@@ -1,0 +1,160 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3105-management-information-systems-main-exam-2017-2018",
+ "title": "Management Information Systems: Main Exam, 20 April 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT3105",
+ "unitTitle": "Management Information Systems",
+ "date": "20th April, 2018 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO IN SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A COMPULSORY",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following terms.",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Information security and control"
+        },
+        {
+         "l": "ii",
+         "text": "Strategic objective"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain the key characteristics of decision support systems.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Explain the term connectivity as a component of a computer system and examine its benefits.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "In reference to the viewpoint that employees are the greatest concern in information systems security, explain the methods and technologies that can be applied to protect firms against such security threats.",
+       "marks": 8
+      },
+      {
+       "l": "e",
+       "text": "Analyse the key characteristics of transaction processing systems.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B (ANSWER ANY 2 QUESTIONS)"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Examine the key components of information technology (IT) infrastructure.",
+       "marks": 12
+      },
+      {
+       "l": "b",
+       "text": "Evaluate the challenges that a firm may experience in the management of IT infrastructure.",
+       "marks": 8
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "In reference to the perspective that \"cyber security is not a concern of the IT department; it is a board issue\":",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Examine to what extent and how this perspective would be deemed relevant and efficient.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Evaluate the ethical and social aspects facing organizations as they seek to curb cyber-crime and enhance organizational productivity.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the 4 basic functional areas in a business organization that can leverage information systems, and indicate the relevant business processes.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Evaluate the manifestation and implications of intellectual property rights as a critical ethical issue in the context of modern technologies.",
+       "marks": 12
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Examine the main activities in information systems strategic planning.",
+       "marks": 12
+      },
+      {
+       "l": "b",
+       "text": "Explain the adoption and implementation of information systems from the perspective of organizational change.",
+       "marks": 8
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-04-20",
+ "dateLabel": "20 April 2018",
+ "programmes": [
+  "BBIT",
+  "BIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "management-information-systems"
+}

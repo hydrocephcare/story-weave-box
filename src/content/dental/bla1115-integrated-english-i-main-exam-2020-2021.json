@@ -1,0 +1,126 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bla1115-integrated-english-i-main-exam-2020-2021",
+ "title": "Integrated English I: Main Exam, 18 August 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Languages and Humanities",
+ "programme": "Bachelor of Education in Early Childhood Studies",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BLA1115",
+ "unitTitle": "Integrated English I",
+ "date": "Wed 18th Aug, 2021 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using relevant examples, highlight three types of sentence.",
+       "marks": 3
+      },
+      {
+       "l": "b",
+       "text": "With clear examples, highlight types of conjunctions.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Give four examples of collective nouns.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "What kinds of relationships do prepositions establish in sentence construction?",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Give any four types of nouns.",
+       "marks": 4
+      },
+      {
+       "l": "f",
+       "text": "The sentences below are ungrammatical. Underline the error and rewrite the sentences correctly.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Either cars or a bus are useful for the trip.",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "The voters with the candidate was disappointed.",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "A cup of tea or glass of milk is good for you.",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "g",
+       "text": "Differentiate subject and predicate and provide a relevant example.",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Write four sentences for each pattern below. i) S.V.O. ii) S.V.A. iii) S.V.O.O. iv) S.V.O.C. v) S.V.O.A.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Identify and explain any five types of phrases using relevant examples.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Using relevant examples, differentiate inflectional and derivational morphemes.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Write short notes on the following. i) Free and bound morphemes. ii) Stem, root and base. iii) Open and closed words. iv) Allomorph.",
+     "marks": 2,
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-08-18",
+ "dateLabel": "18 August 2021",
+ "programmes": [
+  "Bachelor of Education in Early Childhood Studies"
+ ],
+ "categorySlug": "other-units",
+ "category": "Other Units",
+ "unitSlug": "integrated-english-i"
+}

@@ -1,0 +1,227 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit1106-introduction-to-computer-applications-supplementary-exam-2017-2018",
+ "title": "Introduction to Computer Applications: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit / beds",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT1106",
+ "unitTitle": "Introduction to Computer Applications",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS. DO NOT WRITE ON THIS QUESTION PAPER. SWITCH OFF YOUR CELL PHONE(S).",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "(TOTAL 30 MARKS)",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the information and communication technology (ICT) infrastructure that you may have seen being used by tellers in a computerized supermarket and how it is used.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Supposing you were assigned to work in a modern radio station, what kind of computer input devices and output devices would you expect to find there?",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "If you intend to buy a computer, explain how you would decide which computer system to purchase, what software to install inside it and what peripheral devices it should have.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Explain the importance of system software to a computer system.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Explain what you understand by the term application software.",
+       "marks": 2
+      },
+      {
+       "l": "f",
+       "text": "Explain the steps you would take to do the following using the Windows operating system.",
+       "marks": 5,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Start a program"
+        },
+        {
+         "l": "ii",
+         "text": "Open a document that was used recently"
+        },
+        {
+         "l": "iii",
+         "text": "Delete a file or folder permanently"
+        },
+        {
+         "l": "iv",
+         "text": "Search for a file or folder saved on the computer"
+        },
+        {
+         "l": "v",
+         "text": "Switch off the computer properly"
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "(TOTAL 20 MARKS)",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Distinguish between the Internet and the World Wide Web (WWW).",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "What are the hardware conditions and software requirements that you need in order to connect your computer to the Internet?",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Explain three (3) advantages and three (3) disadvantages of using email.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Define the following terms.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Browser"
+        },
+        {
+         "l": "ii",
+         "text": "Internet Service Provider"
+        },
+        {
+         "l": "iii",
+         "text": "Website"
+        }
+       ]
+      },
+      {
+       "l": "a",
+       "text": "Briefly explain your understanding of the following types of programming languages.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Machine language"
+        },
+        {
+         "l": "ii",
+         "text": "Assembly language"
+        },
+        {
+         "l": "iii",
+         "text": "High level language"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Describe the process of creating a new PowerPoint presentation. What is the extension of a PowerPoint presentation?",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain what is meant by a relational database management system (RDBMS).",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Explain the following terms.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Field"
+        },
+        {
+         "l": "ii",
+         "text": "Record"
+        },
+        {
+         "l": "iii",
+         "text": "Database"
+        }
+       ]
+      },
+      {
+       "l": "a",
+       "text": "Distinguish between application software and system software used in computers.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Explain four (4) advantages and three (3) disadvantages of off-the-shelf application software.",
+       "marks": 7
+      },
+      {
+       "l": "c",
+       "text": "What are the three (3) disadvantages of home-grown application software?",
+       "marks": 3
+      },
+      {
+       "l": "d",
+       "text": "What are the six (6) concepts on which a graphical user interface (GUI) is based?",
+       "marks": 6
+      },
+      {
+       "l": "a",
+       "text": "Describe any four (4) general activities undertaken in a traditional office.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Explain four strategies that an organization can use to attain a paperless status.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "What six (6) features are included in a good word processor?",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Explain any six (6) capabilities of MS-Excel.",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BBIT",
+  "BIT",
+  "BEDS"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "introduction-to-computer-applications"
+}

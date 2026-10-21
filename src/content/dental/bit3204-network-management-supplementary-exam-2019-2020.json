@@ -1,0 +1,252 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3204-network-management-supplementary-exam-2019-2020",
+ "title": "Network Management: Supplementary Exam, 14 December 2020",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "Bachelor of Business Information Technology / bachelor of Science in Information Technology",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BIT3204",
+ "unitTitle": "Network Management",
+ "date": "Mon 14th Dec 2020 2.00pm",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the characteristics of the following transmission media.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Optical media"
+        },
+        {
+         "l": "ii",
+         "text": "Coaxial cable"
+        },
+        {
+         "l": "iii",
+         "text": "Twisted pair cable"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Describe four tools that can be used for network security.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Define backup and explain its importance to an organization.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Describe the use of a DHCP server in a network.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Differentiate between connection-oriented and connectionless protocols.",
+       "marks": 4
+      },
+      {
+       "l": "f",
+       "text": "List four functional areas of network management.",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Differentiate between the following terms and commands used in computer networks.",
+       "marks": 8,
+       "parts": [
+        {
+         "l": "i",
+         "text": "ipconfig /all and ping localhost"
+        },
+        {
+         "l": "ii",
+         "text": "DHCP and DNS"
+        },
+        {
+         "l": "iii",
+         "text": "OSI and TCP/IP models"
+        },
+        {
+         "l": "iv",
+         "text": "tracert and hostname"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Name and explain any three fundamental network design goals.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Describe three layers of the network hierarchical model.",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terms.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Network management system"
+        },
+        {
+         "l": "ii",
+         "text": "Network provisioning"
+        },
+        {
+         "l": "iii",
+         "text": "Network node"
+        },
+        {
+         "l": "iv",
+         "text": "Network design"
+        },
+        {
+         "l": "v",
+         "text": "Network address translation"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Differentiate between static IP addressing and dynamic IP addressing.",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "What are the major advantages of STP over UTP?",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "State four factors to consider when designing a physical network.",
+       "marks": 4
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "You are tasked to document a baseline for the network performance level in a company you are working for. Explain in detail five network monitoring tools you would use to perform this task.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss at least three protocols at the internet layer of the TCP/IP protocol suite, highlighting their significance to the stack.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Explain in detail the significance of the twisting in twisted-pair cable.",
+       "marks": 3
+      },
+      {
+       "l": "d",
+       "text": "Define the term routable protocols.",
+       "marks": 1
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terminologies as used in computer networks.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Protocol"
+        },
+        {
+         "l": "ii",
+         "text": "Packet"
+        },
+        {
+         "l": "iii",
+         "text": "Datagram"
+        },
+        {
+         "l": "iv",
+         "text": "Port"
+        },
+        {
+         "l": "v",
+         "text": "IP address"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Describe how a node connected on a network will acquire IP configuration automatically.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain any two most likely causes of bottlenecks in a network.",
+       "marks": 6
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2020-12-14",
+ "dateLabel": "14 December 2020",
+ "programmes": [
+  "Bachelor of Business Information Technology",
+  "bachelor of Science in Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "network-management"
+}

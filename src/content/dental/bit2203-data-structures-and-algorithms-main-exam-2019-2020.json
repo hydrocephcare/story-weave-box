@@ -1,0 +1,255 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit2203-data-structures-and-algorithms-main-exam-2019-2020",
+ "title": "Data Structures and Algorithms: Main Exam, December 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Science in Information Technology / bachelor of Business Information Technology",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BIT2203",
+ "unitTitle": "Data Structures and Algorithms",
+ "date": "December, 2019",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the term algorithm.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Outline four characteristics of a good algorithm.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain the function of the following ADT primitives. Write the relevant syntax.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Enqueue()",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Push()",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "IndexOf()",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "One of the applications of stacks in computing is to evaluate a postfix expression. From the given expression 5+4*6-3:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Convert the expression into a postfix expression.",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Using the stack ADT, show how the expression will be evaluated.",
+         "marks": 4
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "A queue is implemented using an ADT list to present its items. Discuss the efficiency of the queue insertion and deletion operations when the ADT list implementation is:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Array based"
+        },
+        {
+         "l": "ii",
+         "text": "Pointer based",
+         "marks": 6
+        }
+       ]
+      },
+      {
+       "l": "f",
+       "text": "Outline four possible applications of the ADT queue in computing.",
+       "marks": 4
+      },
+      {
+       "l": "g",
+       "text": "In the context of arrays, explain the term index. Show an example.",
+       "marks": 2
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using examples, differentiate between a binary tree and a general tree.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Write a two-dimensional array to explain the concept of row major order.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Explain two types of complexities studied in data structures.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Given the algebraic expression (a-b/c)+d*e:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Convert it into a postfix expression.",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "Generate a binary tree from the expression.",
+         "marks": 3
+        }
+       ]
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Give three reasons why you would choose a linked list over an array.",
+       "marks": 3
+      },
+      {
+       "l": "b",
+       "text": "Name and explain three input cases and the effect on the running time of an algorithm.",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "Describe the concept and motivation of a circular queue. Use an illustration.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "In terms of computational complexity, using big O, explain the cost of:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Inserting an element at the end of an array list.",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "Inserting an element at the end of a linked list.",
+         "marks": 3
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Write down the algorithm for inserting a new element into a stack.",
+       "marks": 3
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the term \"algorithm analysis\". Explain two important quantitative metrics of interest in algorithm analysis.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Sort the array 30, 20, 6, 15, 8, 3, 4 using the insertion sort algorithm.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Explain three characteristics of the ADT linked list.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Using an illustrative diagram, show how a new element is added in between other elements in a linked list.",
+       "marks": 4
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain two data types used to implement ADTs.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Perform pre-order, in-order and post-order traversal on the following tree. The root is D, with left child E and right child Z. E has a left child K, and K has a right child P. Z has a left child C and a right child M. C has a left child B and a right child F.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Discuss five benefits of studying data structures and algorithms by software developers.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2019-12",
+ "dateLabel": "December 2019",
+ "programmes": [
+  "Bachelor of Science in Information Technology",
+  "bachelor of Business Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "data-structures-and-algorithms"
+}

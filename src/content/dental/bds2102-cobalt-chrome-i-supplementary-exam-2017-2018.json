@@ -1,0 +1,117 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bds2102-cobalt-chrome-i-supplementary-exam-2017-2018",
+ "title": "Cobalt Chrome I: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Bachelor of Science in Dental Technology",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BDS2102",
+ "unitTitle": "Cobalt Chrome I",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY TWO QUESTIONS IN SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe three types of clasps according to design.",
+       "marks": 3
+      },
+      {
+       "l": "b",
+       "text": "Explain four design specifications of maxillary major connectors.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Give four components of a metallic denture.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Outline three requirements of a major connector.",
+       "marks": 3
+      },
+      {
+       "l": "e",
+       "text": "Appraise metallic dentures.",
+       "marks": 5
+      },
+      {
+       "l": "f",
+       "text": "Explain five physical changes associated with tooth loss.",
+       "marks": 10
+      },
+      {
+       "l": "g",
+       "text": "Name one type of mandibular major connector.",
+       "marks": 1
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B (ANSWER ANY TWO QUESTIONS)"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using illustrations, describe four types of rests.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Describe five types of maxillary major connectors.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe Kennedy classification of partial dentures.",
+     "marks": 10,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe the procedure of taking an alginate impression of a patient until you obtain a study cast.",
+     "marks": 20,
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "dental-technology",
+ "category": "Dental Technology",
+ "unitSlug": "cobalt-chrome-i"
+}

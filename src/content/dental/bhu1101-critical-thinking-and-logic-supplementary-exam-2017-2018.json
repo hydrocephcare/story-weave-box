@@ -1,0 +1,90 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bhu1101-critical-thinking-and-logic-supplementary-exam-2017-2018",
+ "title": "Critical Thinking and Logic: Supplementary Exam, 31 August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Languages and Humanities",
+ "programme": "Bachelor of Education",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BHU1101",
+ "unitTitle": "Critical Thinking and Logic",
+ "date": "Fri 31st August 2018 1.00pm",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Differentiate between critical thinking and creative thinking.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "List any four informal fallacies.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain the four branches of philosophy.",
+       "marks": 8
+      },
+      {
+       "l": "d",
+       "text": "Analyse the importance of critical thinking and logic in social integration.",
+       "marks": 12
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss the major steps in problem solving.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Explain any four theories of truth.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Differentiate between deductive and inductive reasoning.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "What is the relevance of critical thinking to an individual and the society?",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08-31",
+ "dateLabel": "31 August 2018",
+ "programmes": [
+  "Bachelor of Education"
+ ],
+ "categorySlug": "law-and-social-sciences",
+ "category": "Law and Social Sciences",
+ "unitSlug": "critical-thinking-and-logic"
+}

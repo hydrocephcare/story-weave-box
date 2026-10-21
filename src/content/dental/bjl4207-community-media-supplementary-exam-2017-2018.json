@@ -1,0 +1,124 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bjl4207-community-media-supplementary-exam-2017-2018",
+ "title": "Community Media: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Journalism and Mass Communication",
+ "programme": "Bachelor of Arts in Mass Media and Communication",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BJL4207",
+ "unitTitle": "Community Media",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain five features of community radio.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "While striving to attain Vision 2030, Kenya hopes to employ a number of development strategies, among these being community media.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Outline the importance of community media, with reference to radio, as a strategy for rural development.",
+         "marks": 10
+        },
+        {
+         "l": "ii",
+         "text": "What are the possible obstacles that stand in the way of community media at the initial formulation stages as well as during operation?",
+         "marks": 10
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the process of setting up a community radio.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Examine any five objectives of a community radio.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain any five principles of community broadcasting.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Describe how sustainability is seen as a development strategy in community media.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe any five qualities of a good community radio manager.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Examine the basic structure of a community radio station.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Assess any ten contributions of technology to community media.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Bachelor of Arts in Mass Media and Communication"
+ ],
+ "categorySlug": "media-and-communication",
+ "category": "Media and Communication",
+ "unitSlug": "community-media"
+}

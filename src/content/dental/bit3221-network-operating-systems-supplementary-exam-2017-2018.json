@@ -1,0 +1,219 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3221-network-operating-systems-supplementary-exam-2017-2018",
+ "title": "Network Operating Systems: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT3221",
+ "unitTitle": "Network Operating Systems",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE IN SECTION A AND ANY OTHER TWO QUESTIONS IN SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "A distributed operating system has added complexity, which is required to ensure proper co-ordination among the sites, and is its major disadvantage. This increased complexity takes various forms. Explain.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Software development cost"
+        },
+        {
+         "l": "ii",
+         "text": "Greater potential for bugs"
+        },
+        {
+         "l": "iii",
+         "text": "Increased processing overhead"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Give the advantages of distributed file systems.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Discuss the importance of object orientation in distributed operating systems.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Explain the following.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Distributed parallel processing systems"
+        },
+        {
+         "l": "ii",
+         "text": "Distributed mutual exclusion"
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Describe two reasons why each of the following techniques should be implemented in a system.",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Replication"
+        },
+        {
+         "l": "ii",
+         "text": "Caching"
+        }
+       ]
+      },
+      {
+       "l": "f",
+       "text": "Differentiate stateful and stateless servers.",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the major steps of a remote procedure call in a distributed system.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Can a system detect that some of its processes are starving? If you answer \"yes\", explain how it can. If you answer \"no\", explain how the system can deal with the starvation problem.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "In a multi-process system, deadlock is an unwanted situation that arises in a shared resource environment, where a process indefinitely waits for a resource that is held by another process. Briefly discuss two ways in which this situation can be prevented or avoided.",
+       "marks": 8
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss any three features of a good distributed file system.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Distributed operating systems are network operating systems with significantly more integration between the autonomous operating system running on each machine. The distributed operating system is hence able to provide services that are beyond the capability of network operating systems. Explain any three additional facilities that the DOS has.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Describe briefly FOUR types of transparencies in distributed systems.",
+       "marks": 8
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly discuss the object and brokerage service and the group communication service.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Explain why inter-process communication can be either synchronous or asynchronous messaging.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "A NOS is software that runs on a server and enables the server to manage data, users, groups, security, applications and other networking functions. What are the main features that one considers while selecting a NOS?",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Discuss the distributed shared memory (DSM).",
+       "marks": 6
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the role of the kernel in operating systems.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Explain what paging is.",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "Define the term network operating systems.",
+       "marks": 3
+      },
+      {
+       "l": "d",
+       "text": "Discuss the characteristics of distributed operating systems.",
+       "marks": 12
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "network-operating-systems"
+}

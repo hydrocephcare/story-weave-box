@@ -1,0 +1,176 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bby1103-cell-biology-and-genetics-main-exam-2024-2025-18-aug-2025",
+ "title": "Cell Biology and Genetics: Main Exam, 18 August 2025",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Natural Sciences",
+ "programme": "BEDS / bsne / beda",
+ "examTitle": "University Examination 2024/2025",
+ "unitCode": "BBY1103",
+ "unitTitle": "Cell Biology and Genetics",
+ "date": "Mon 18th August, 2025 2:00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL THE QUESTIONS IN SECTION A AND ONLY TWO IN SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Explain the following terms as used in biology.",
+     "marks": 5,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Cytology"
+      },
+      {
+       "l": "b",
+       "text": "Pili"
+      },
+      {
+       "l": "c",
+       "text": "Chloroplast"
+      },
+      {
+       "l": "d",
+       "text": "Brownian movement"
+      },
+      {
+       "l": "e",
+       "text": "Solute"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Differentiate between prokaryotic and eukaryotic cells.",
+     "marks": 4,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "By use of a well-labelled diagram, illustrate a mitochondrion.",
+     "marks": 5,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe prophase I of the first meiotic division.",
+     "marks": 5,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Describe complete dominance in genetics.",
+     "marks": 2,
+     "id": "q5"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Explain aneuploidy in humans.",
+     "marks": 4,
+     "id": "q6"
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Explain the importance of meiosis in living organisms.",
+     "marks": 5,
+     "id": "q7"
+    },
+    {
+     "t": "h",
+     "text": "Section B ANSWER ANY TWO QUESTIONS"
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "A child of a marriage between a woman of blood group A and a man of blood group B had blood group O.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What are multiple alleles?",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Give the genotype of each of the parents above.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "What other blood groups may children of these parents have? Illustrate your answer.",
+       "marks": 14
+      }
+     ],
+     "id": "q8"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe in detail the THREE Mendel's principles of inheritance.",
+       "marks": 15
+      },
+      {
+       "l": "b",
+       "text": "Discuss factors affecting the rate of diffusion.",
+       "marks": 5
+      }
+     ],
+     "id": "q9"
+    },
+    {
+     "t": "q",
+     "n": "10",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the parts of a light microscope, explaining in detail the function of each part.",
+       "marks": 15
+      },
+      {
+       "l": "b",
+       "text": "Discuss the advantages and disadvantages of a light microscope.",
+       "marks": 5
+      }
+     ],
+     "id": "q10"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2025-08-18",
+ "dateLabel": "18 August 2025",
+ "programmes": [
+  "BEDS",
+  "BSNE",
+  "BEDA"
+ ],
+ "categorySlug": "science-and-engineering",
+ "category": "Science and Engineering",
+ "unitSlug": "cell-biology-and-genetics"
+}

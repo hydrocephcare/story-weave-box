@@ -1,0 +1,310 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3204-network-management-main-exam-2021-2022",
+ "title": "Network Management: Main Exam, 6 December 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "Bachelor of Business Information Technology / bachelor of Science in Information Technology",
+ "examTitle": "University Examination 2021/2022",
+ "unitCode": "BIT3204",
+ "unitTitle": "Network Management",
+ "date": "Mon 6th Dec, 2021 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ATTEMPT QUESTION ONE AND ANY OTHER TWO QUESTIONS.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "COMPULSORY",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain three LAN topologies, using diagrams wherever appropriate.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Explain the following network topology models.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Hierarchical model"
+        },
+        {
+         "l": "ii",
+         "text": "Redundant models"
+        },
+        {
+         "l": "iii",
+         "text": "Secure models"
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "Briefly explain the following LAN hardware.",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Router"
+        },
+        {
+         "l": "ii",
+         "text": "Switch"
+        },
+        {
+         "l": "iii",
+         "text": "Firewall"
+        },
+        {
+         "l": "iv",
+         "text": "Ethernet or NIC card"
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "Describe the seven (7) ordered layers of the model, giving examples of applications applicable at each layer.",
+       "marks": 7
+      },
+      {
+       "l": "e",
+       "text": "Briefly explain the meaning and use of the following applications.",
+       "marks": 3,
+       "parts": [
+        {
+         "l": "i",
+         "text": "DHCP"
+        },
+        {
+         "l": "ii",
+         "text": "DNS"
+        },
+        {
+         "l": "iii",
+         "text": "NAT"
+        }
+       ]
+      },
+      {
+       "l": "f",
+       "text": "State 2 advantages and 2 disadvantages of the following media.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Fibre optic",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Microwaves",
+         "marks": 2
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "(OPTIONAL, 20 MARKS)",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is the difference between the following terms?",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Internet and intranet",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "LAN and WAN",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Switch and a hub",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "In capturing a customer's design objectives, what are the 3 most vital points to be covered?",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "Briefly explain the 4 areas of a customer's technical requirements in the design of a network.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Briefly explain the 7 steps of designing a network.",
+       "marks": 7
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Outline the TCP/IP layer model."
+      },
+      {
+       "l": "b",
+       "text": "In WAN design, what do you understand by the term 'Quality of Service'?"
+      },
+      {
+       "l": "c",
+       "text": "Outline the 4 steps of a WAN design."
+      },
+      {
+       "l": "d",
+       "text": "Explain the below 3 basic WAN technology categories.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Leased line"
+        },
+        {
+         "l": "ii",
+         "text": "Circuit switched"
+        },
+        {
+         "l": "iii",
+         "text": "Packet switched"
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Outline 4 benefits of using hierarchical models for designing your network."
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the SNMP protocol.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Explain the 5 types of network management processes.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "State 4 tools or products that can be used for network management.",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "In a hierarchical network design, explain the layers below and outline their characteristics.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Core layer",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Distribution layer",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Access layer",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Explain the 4 types of redundant models in network designs.",
+       "marks": 4
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the importance of the following local policies.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Account lockout policy"
+        },
+        {
+         "l": "ii",
+         "text": "Auditing"
+        },
+        {
+         "l": "iii",
+         "text": "Password policy"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain the importance of the distributed file system.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Discuss three reasons why companies outsource IT resources.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "List four tasks you would consider to outsource as the systems administrator of MKU University.",
+       "marks": 4
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2021-12-06",
+ "dateLabel": "6 December 2021",
+ "programmes": [
+  "Bachelor of Business Information Technology",
+  "bachelor of Science in Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "network-management"
+}

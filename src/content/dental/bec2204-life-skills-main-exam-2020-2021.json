@@ -1,0 +1,147 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bec2204-life-skills-main-exam-2020-2021",
+ "title": "Life Skills: Main Exam, 24 July 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Education",
+ "department": "Department of Early Childhood Studies",
+ "programme": "Bachelor of Education in Early Childhood / School BASED (dibel)",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BEC2204",
+ "unitTitle": "Life Skills",
+ "date": "Sat 24th July, 2021 7.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS FROM SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the social benefits of life skills education.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Using appropriate examples, discuss the resources you can use to teach life skills education to children.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "State the ways of achieving effective communication.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "As a teacher, explain how you can help your learners to solve their problems.",
+       "marks": 6
+      },
+      {
+       "l": "e",
+       "text": "Highlight the tips for improving one's interpersonal skills.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the characteristics that are manifested by a person with high self-esteem.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the sources of conflicts among people.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "As a teacher, examine how you can facilitate a positive self-concept in the pupils.",
+       "marks": 14
+      },
+      {
+       "l": "b",
+       "text": "Examine the functions of anger.",
+       "marks": 6
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the conflict management strategies.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Describe the forms of non-verbal communication.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Analyse the agents of socialization.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Give reasons why people do not express feelings.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2021-07-24",
+ "dateLabel": "24 July 2021",
+ "programmes": [
+  "Bachelor of Education in Early Childhood"
+ ],
+ "categorySlug": "other-units",
+ "category": "Other Units",
+ "unitSlug": "life-skills"
+}

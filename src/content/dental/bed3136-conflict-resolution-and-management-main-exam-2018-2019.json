@@ -1,0 +1,119 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bed3136-conflict-resolution-and-management-main-exam-2018-2019",
+ "title": "Conflict Resolution and Management: Main Exam, 5 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Social and Development Studies",
+ "programme": "Bachelor of Development Studies / bachelor of Education",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BED3136",
+ "unitTitle": "Conflict Resolution and Management",
+ "date": "Wed 5th December, 2018 10.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "List four possible arenas where conflict occurs.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain various forms of reconciliation.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Explain the role of women in conflict.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Debate for and against conflict in an organization.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the concept of social policy.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the benefits of coalitions.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Enumerate the purpose of conflict resolution.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Explain the reasons why young boys are cooperated into war.",
+       "marks": 12
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the major causes of conflict at a family level.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explore the elements that are important in the mediation process.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-05",
+ "dateLabel": "5 December 2018",
+ "programmes": [
+  "Bachelor of Development Studies",
+  "bachelor of Education"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "conflict-resolution-and-management"
+}

@@ -1,0 +1,152 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bed4101-development-administration-main-exam-2018-2019-apr-2019",
+ "title": "Development Administration: Main Exam, 16 April 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Social and Development Studies",
+ "programme": "Bachelor of Development Studies",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BED4101",
+ "unitTitle": "Development Administration",
+ "date": "Tue 16th April 2019",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using relevant examples, demonstrate your understanding of the following terms.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Globalization"
+        },
+        {
+         "l": "ii",
+         "text": "Structural adjustment programs"
+        },
+        {
+         "l": "iii",
+         "text": "Systems theory"
+        },
+        {
+         "l": "iv",
+         "text": "Governance"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Describe three characteristics of an efficient public administration.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Discuss the limitations of liberalization.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Describe the various types of budgets used in public financial management.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain what you understand by local government area.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Discuss the pre-conditions required for structural adjustment programs.",
+       "marks": 15
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the characteristics of systems theory.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Discuss elements of scientific management.",
+       "marks": 15
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the types of government.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Management is a key component in public administration. Discuss management coordination mechanisms suggested by Mintzberg.",
+       "marks": 15
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the steps involved in the process model as one of the public policy models.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the characteristics of bureaucratic states.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2019-04-16",
+ "dateLabel": "16 April 2019",
+ "programmes": [
+  "Bachelor of Development Studies"
+ ],
+ "categorySlug": "law-and-social-sciences",
+ "category": "Law and Social Sciences",
+ "unitSlug": "development-administration"
+}

@@ -1,0 +1,191 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3204-network-management-main-exam-2018-2019-22-aug-2019",
+ "title": "Network Management: Main Exam, 22 August 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BIT3204",
+ "unitTitle": "Network Management",
+ "date": "Thur 22nd Aug, 2019 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE (COMPULSORY) AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the value of carefully choosing a network topology.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Explain the meaning of the following in relation to networking.",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Subnetting"
+        },
+        {
+         "l": "ii",
+         "text": "Subnet mask"
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "The two-level internet address structure specifies that IP addressing be done in two parts. Explain the parts.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Given the following IP address, 204.67.118.54, explain which class the IP address belongs to.",
+       "marks": 3
+      },
+      {
+       "l": "e",
+       "text": "Outline any three (3) network management standards.",
+       "marks": 3
+      },
+      {
+       "l": "f",
+       "text": "Identify and explain one primary function of the two sublayers of the OSI data link layer.",
+       "marks": 4
+      },
+      {
+       "l": "g",
+       "text": "A network's topology affects its capabilities. Describe the hierarchical model and give four (4) advantages of implementing it.",
+       "marks": 4
+      },
+      {
+       "l": "h",
+       "text": "You have an IP of 156.233.42.56 with a subnet mask of 7 bits. Determine the possible number of hosts and subnets. Show your workings.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain network management and highlight the typical activities involved.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "In a given network, many devices share the same piece of network media, and devices vie for time on the cable through a process called media access. Discuss the three (3) media access methods.",
+       "marks": 16
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Over the past few years, the internet has experienced two major scaling issues as it has struggled to provide continuous and uninterrupted growth. Outline these issues.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Explain the meaning of classful addressing in the context of IP addressing.",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Network requirements translate into four (4) primary network design goals. Explain each.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "According to the International Organization for Standardization, the network management process consists of five (5) main areas. Discuss each.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain any three (3) reasons that may compel a network engineer to opt for a wireless network implementation in place of a cabled network implementation.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Describe any four (4) network status monitoring tools.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Explain fault management in the context of networking and hence describe the steps involved in it.",
+       "marks": 8
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain any four (4) reasons that may lead to subnetting or segmenting of a network.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Discuss any four (4) features of the TCP/IP protocol that make it the most suitable protocol for communication over the internet.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Describe any five (5) goals that you need to establish before undertaking a network design.",
+       "marks": 8
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2019-08-22",
+ "dateLabel": "22 August 2019",
+ "programmes": [
+  "BBIT",
+  "BIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "network-management"
+}

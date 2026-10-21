@@ -1,0 +1,105 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bed4101-development-administration-main-exam-2017-2018",
+ "title": "Development Administration: Main Exam, 24 April 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Social and Development Studies",
+ "programme": "Bachelor of Development Studies",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BED4101",
+ "unitTitle": "Development Administration",
+ "date": "24th April, 2018 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO QUESTIONS IN SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Distinguish between development of administration and administration of development.",
+     "marks": 6,
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Distinguish between colonial and post-colonial approaches to development and its administration.",
+     "marks": 8,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Briefly explain some of the obstacles to development administration in developing countries.",
+     "marks": 10,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "What are the key features of Max Weber's view of administration?",
+     "marks": 8,
+     "id": "q4"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Explain and distinguish the role of the following in the administration of development projects and programmes. i) Legislature ii) Executive iii) Judiciary",
+     "marks": 20,
+     "id": "q5"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "With reference to a development project, explain and distinguish between the concept of management and the concept of administration.",
+     "marks": 20,
+     "id": "q6"
+    },
+    {
+     "t": "q",
+     "n": "7",
+     "text": "Citing examples, explain the role of non-governmental organizations in the administration of development projects and programmes.",
+     "marks": 20,
+     "id": "q7"
+    },
+    {
+     "t": "q",
+     "n": "8",
+     "text": "According to Irma Adelman, countries can be categorized in terms of development into Low Group, Intermediate Group and High Group. Explain the socio-economic characteristics of these categories and the role of government in promoting development in each of these categories.",
+     "marks": 20,
+     "id": "q8"
+    },
+    {
+     "t": "q",
+     "n": "9",
+     "text": "Compare and contrast Classical, Modern and Post-Modern theories of public administration.",
+     "marks": 20,
+     "id": "q9"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-04-24",
+ "dateLabel": "24 April 2018",
+ "programmes": [
+  "Bachelor of Development Studies"
+ ],
+ "categorySlug": "law-and-social-sciences",
+ "category": "Law and Social Sciences",
+ "unitSlug": "development-administration"
+}

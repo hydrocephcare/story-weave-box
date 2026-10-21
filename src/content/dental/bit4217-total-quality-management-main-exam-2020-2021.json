@@ -1,0 +1,146 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4217-total-quality-management-main-exam-2020-2021",
+ "title": "Total Quality Management: Main Exam, 22 January 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "Bachelor of Business Information Technology / bachelor of Science in Information Technology",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BIT4217",
+ "unitTitle": "Total Quality Management",
+ "date": "Fri 22nd Jan 2021 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the key phases of evolution in relation to developments in quality management.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Evaluate the importance of quality in the modern world.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Analyse the determinants of customer satisfaction.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Employee involvement is one of the key principles that influence the success of TQM programmes. Extrapolate.",
+       "marks": 6
+      },
+      {
+       "l": "e",
+       "text": "Examine the various types of costs associated with internal failure costs.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Analyse the concept of cost of quality, explaining its dimensions, and provide relevant examples.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Examine the common steps involved in the implementation of TQM programmes.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Evaluate the factors that can influence the successful implementation of a Six Sigma programme.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Analyse the elements of variation in quality of products in a typical manufacturing industry.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Benchmarking is a key approach in TQM. Discuss the various types of benchmarking that are applicable to business organizations.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Examine the limitations associated with business process re-engineering (BPR) as one of the current approaches in TQM.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Many organizations in Kenya are seeking ISO 9001 certification. Discuss the potential benefits such an organization may derive from certification.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Assess the benefits of using control charts.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "hand": true,
+ "dateISO": "2021-01-22",
+ "dateLabel": "22 January 2021",
+ "programmes": [
+  "Bachelor of Business Information Technology",
+  "bachelor of Science in Information Technology"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "total-quality-management"
+}

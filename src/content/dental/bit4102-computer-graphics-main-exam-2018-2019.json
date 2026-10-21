@@ -1,0 +1,161 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4102-computer-graphics-main-exam-2018-2019",
+ "title": "Computer Graphics: Main Exam, 10 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit / bis",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BIT4102",
+ "unitTitle": "Computer Graphics",
+ "date": "Mon 10th Dec, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the role of Graphical User Interface in adoption of computer usage.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Discuss the two methods used to generate colour on a raster scan system.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Explain how light sources can be classified and give an example in each category.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Using an illustration only, show the general three-dimensional viewing pipeline and the coordinates used in it.",
+       "marks": 5
+      },
+      {
+       "l": "e",
+       "text": "Show the output of the following monochrome image file: 4,4,1010101010101010",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "List the three distinct differences between the 2D and 3D viewing pipelines.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Outline ALL parameters that can be used to measure the performance of computer monitors.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Define the term clipping and explain how to achieve polygon clipping.",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Distinguish between boundary representation and space-partitioning representation as they apply to object modelling.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Outline the advantages of the CRT screen.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "In memory mapping, differentiate between peeking and poking.",
+       "marks": 8
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "List the steps of Bresenham's line drawing algorithm, including all the formulae for calculating the decision parameters.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Identify the OpenGL routines that can be used to create a rectangle.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Identify and describe the two methods used in inside-outside testing of fill areas.",
+       "marks": 8
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Identify two algorithms that may be used to generate pixels for a line element.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Differentiate between the Digital Differential Analyzer line drawing algorithm and Bresenham's line drawing algorithm.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Discuss any two types of line clipping algorithms.",
+       "marks": 8
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-10",
+ "dateLabel": "10 December 2018",
+ "programmes": [
+  "BBIT",
+  "BIT",
+  "BIS"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "computer-graphics"
+}
