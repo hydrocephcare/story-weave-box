@@ -59,7 +59,7 @@ export default function DentalPaperPage() {
   const [view, setView] = useState(false);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [seo, setSeo] = useState<PaperSeo | null>(null);
-  const [test, setTest] = useState(false);
+  const [test, setTest] = useState(true);
   const [shown, setShown] = useState<Set<string>>(new Set());
   const [ratings, setRatingsState] = useState<Record<string, Rating | undefined>>({});
   const [cardsOpen, setCardsOpen] = useState(false);
@@ -69,7 +69,7 @@ export default function DentalPaperPage() {
   const [zoom, setZoom] = useState(1);
   const [left, setLeft] = useState<number | null>(null);
   useEffect(() => {
-    let on = true; setPaper(undefined); setAnswers({}); setSeo(null); setShown(new Set()); setTest(false); setLeft(null);
+    let on = true; setPaper(undefined); setAnswers({}); setSeo(null); setShown(new Set()); setTest(true); setLeft(null);
     setRatingsState(getRatings(slug)); setSaved(inList(SAVED, slug)); setDone(inList(DONE, slug));
     void loadPaper(slug).then((p) => { if (on) setPaper(p); }).catch(() => { if (on) setPaper(null); });
     void loadAnswers(slug).then((a) => { if (on) setAnswers(a); });
