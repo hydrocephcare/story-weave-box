@@ -90,6 +90,7 @@ const AdminThinTopics = lazy(() => import("./pages/AdminThinTopics"));
 const AdminContentChecks = lazy(() => import("./pages/AdminContentChecks"));
 const AdminAccess = lazy(() => import("./pages/AdminAccess"));
 const OsceStations = lazy(() => import("./pages/OsceStations"));
+const OsceBank2019 = lazy(() => import("./pages/OsceBank2019"));
 const AdminPaywall = lazy(() => import("./pages/AdminPaywall"));
 const AdminComments = lazy(() => import("./pages/AdminComments"));
 const AdminDrafts = lazy(() => import("./pages/AdminDrafts"));
@@ -259,6 +260,7 @@ const AnimatedRoutes = () => {
             <Route path="/clinical/findings" element={<ClinicalLab />} />
             <Route path="/clinical/quiz" element={<ClinicalLab />} />
             <Route path="/clinical/tools" element={<ClinicalLab />} />
+            <Route path="/clinical/osce-2019" element={<OsceBank2019 />} />
             <Route path="/clinical/osce-stations" element={<OsceStations />} />
             <Route path="/clinical/osce" element={<ClinicalLab />} />
             <Route path="/clinical/counsel" element={<ClinicalLab />} />
