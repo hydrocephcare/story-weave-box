@@ -13,7 +13,7 @@ const fmt = (s: string) => s.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g).map((p, i) => p
 export default function OsceBank2019() {
   const [open, setOpen] = useState<Set<string>>(new Set());
   const [group, setGroup] = useState<string>("all");
-  const shown = useMemo(() => ALL.filter((s) => group === "all" || s.g === group), [group]);
+  const shown = useMemo(() => { const l = ALL.filter((s) => group === "all" || s.g === group); return [...l.filter((s) => !s.figs.length), ...l.filter((s) => s.figs.length)]; }, [group]);
   const total = ALL.reduce((n, s) => n + s.qs.length, 0);
   const flip = (k: string) => setOpen((p) => { const n = new Set(p); if (n.has(k)) n.delete(k); else n.add(k); return n; });
   const pill = "rounded-full border px-3.5 py-1.5 text-sm font-semibold";
@@ -39,10 +39,11 @@ export default function OsceBank2019() {
       <main className="mx-auto max-w-3xl px-5 pb-24 sm:px-6">
         {shown.map((s, n) => (
           <section key={s.id} id={s.id} className="mt-14 scroll-mt-20 border-t border-border pt-8">
+            {(n === 0 || (s.figs.length > 0 && !shown[n - 1].figs.length)) && <h2 className="mb-6 font-serif text-2xl font-bold text-primary">{s.figs.length ? "Picture questions" : "Written questions"}</h2>}
             <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{s.g} · Station {ALL.indexOf(s) + 1}</p>
             <h2 className="font-serif text-3xl font-bold">{s.title}</h2>
             <p className="text-sm font-semibold text-muted-foreground">{s.tag}</p>
-            <p className="mt-4 rounded-r-lg border-l-4 border-amber-400 bg-amber-50 p-4 text-[16.5px] italic leading-relaxed text-neutral-800 dark:bg-amber-950/30 dark:text-amber-100">{s.case}</p>
+            <p className="mt-4 rounded-r-lg border-l-4 border-primary bg-muted/60 p-4 text-[16.5px] italic leading-relaxed text-foreground">{s.case}</p>
             {s.figs.length > 0 && (
               <div className="mt-4 flex flex-wrap justify-center gap-3">
                 {s.figs.map(([f, cap]) => <figure key={f} className="text-center"><img src={`/osce/y19/${f}.jpg`} alt={cap} loading={n < 2 ? "eager" : "lazy"} className="mx-auto max-h-80 w-auto max-w-full rounded-xl border border-border bg-white shadow-sm" /><figcaption className="mt-1 text-xs text-muted-foreground">{cap}</figcaption></figure>)}
@@ -52,9 +53,9 @@ export default function OsceBank2019() {
               <div key={k} className="mt-5">
                 <p className="flex gap-3 text-[17px] font-semibold leading-snug"><span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">{i + 1}</span><span>{q.q}{q.m ? <span className="ml-2 whitespace-nowrap text-sm font-bold text-muted-foreground">({q.m} marks)</span> : null}</span></p>
                 <button type="button" onClick={() => flip(k)} aria-expanded={open.has(k)} className="ml-10 mt-2 text-sm font-bold text-primary hover:underline">{open.has(k) ? "Hide model answer" : "Show model answer"}</button>
-                {open.has(k) && <ul className="ml-10 mt-2 list-disc space-y-1.5 rounded-xl border border-emerald-600/30 bg-emerald-50 py-4 pl-8 pr-4 text-[15.5px] leading-relaxed dark:bg-emerald-950/20">{q.a.map((x, j) => <li key={j}>{fmt(x)}</li>)}</ul>}
+                {open.has(k) && <ul className="ml-10 mt-2 list-disc space-y-1.5 rounded-xl border border-border bg-card py-4 pl-8 pr-4 text-[15.5px] leading-relaxed ">{q.a.map((x, j) => <li key={j}>{fmt(x)}</li>)}</ul>}
               </div>); })}
-            {s.note && <p className="mt-4 rounded-md border-l-4 border-red-500 bg-red-50 p-3 text-sm dark:bg-red-950/20"><strong>Note:</strong> {s.note}</p>}
+            {s.note && <p className="mt-4 rounded-md border-l-4 border-primary bg-muted/60 p-3 text-sm"><strong>Note:</strong> {s.note}</p>}
           </section>
         ))}
       </main>

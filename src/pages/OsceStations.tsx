@@ -33,15 +33,15 @@ export default function OsceStations() {
           <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary">Station {s.n}</p>
           <h2 className="font-serif text-3xl font-bold">{s.title}</h2>
           <p className="text-sm font-semibold text-muted-foreground">{s.tag}</p>
-          <p className="mt-4 rounded-r-lg border-l-4 border-amber-400 bg-amber-50 p-4 text-[16.5px] italic leading-relaxed text-neutral-800 dark:bg-amber-950/30 dark:text-amber-100">{s.case}</p>
+          <p className="mt-4 rounded-r-lg border-l-4 border-primary bg-muted/60 p-4 text-[16.5px] italic leading-relaxed text-foreground">{s.case}</p>
           <figure className="mt-4 text-center"><img src={`/osce/station-${s.n}.jpg`} alt={s.fig} loading="lazy" className="mx-auto max-h-[28rem] w-auto max-w-full rounded-xl border border-border shadow-sm" /><figcaption className="mt-1 text-xs text-muted-foreground">Fig {s.n}. {s.fig}</figcaption></figure>
           {s.qs.map((q, i) => { const k = `${s.n}-${i}`; return (
             <div key={k} className="mt-5">
               <p className="flex gap-3 text-[17px] font-semibold leading-snug"><span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">{i + 1}</span><span>{q.q}</span></p>
               <button type="button" onClick={() => flip(k)} aria-expanded={open.has(k)} className="ml-10 mt-2 text-sm font-bold text-primary hover:underline">{open.has(k) ? "Hide model answer" : "Show model answer"}</button>
-              {open.has(k) && <ul className="ml-10 mt-2 list-disc space-y-1.5 rounded-xl border border-emerald-600/30 bg-emerald-50 py-4 pl-8 pr-4 text-[15.5px] leading-relaxed dark:bg-emerald-950/20">{q.a.map((x, j) => <li key={j}>{fmt(x)}</li>)}</ul>}
+              {open.has(k) && <ul className="ml-10 mt-2 list-disc space-y-1.5 rounded-xl border border-border bg-card py-4 pl-8 pr-4 text-[15.5px] leading-relaxed ">{q.a.map((x, j) => <li key={j}>{fmt(x)}</li>)}</ul>}
             </div>); })}
-          {s.note && <p className="mt-4 rounded-md border-l-4 border-red-500 bg-red-50 p-3 text-sm dark:bg-red-950/20"><strong>Examiner note:</strong> {s.note}</p>}
+          {s.note && <p className="mt-4 rounded-md border-l-4 border-primary bg-muted/60 p-3 text-sm"><strong>Examiner note:</strong> {s.note}</p>}
         </section>
       ))}
       </main>
