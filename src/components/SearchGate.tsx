@@ -22,5 +22,5 @@ export default function SearchGate() {
       if (pending !== null) (window as unknown as { __ompathSearchPending?: string }).__ompathSearchPending = pending;
     };
   }, [loaded]);
-  return loaded ? <Suspense fallback={null}>{track === "dental" ? <DentalSearch /> : <Palette />}</Suspense> : null;
+  return loaded ? <Suspense fallback={null}>{track !== "medicine" ? <DentalSearch /> : <Palette />}</Suspense> : null;
 }

@@ -37,7 +37,7 @@ export interface DentalPaper {
   complete: boolean;
   note?: string;
 }
-export interface PaperMeta { unitSlug: string; categorySlug: string; programmes: string[]; dateISO: string; slug: string; title: string; unitCode: string; unitTitle: string; programme: string; date: string; year: string; sitting: string; duration: string; questions: number; complete: boolean; university: string; group: string }
+export interface PaperMeta { section: string; unitSlug: string; categorySlug: string; programmes: string[]; dateISO: string; slug: string; title: string; unitCode: string; unitTitle: string; programme: string; date: string; year: string; sitting: string; duration: string; questions: number; complete: boolean; university: string; group: string }
 
 import index from "@/data/dentalPapers.json";
 import cats from "@/data/dentalCategories.json";
@@ -53,4 +53,8 @@ export const totalMarks = (p: DentalPaper) => p.pages.reduce((n, pg) => n + pg.i
 /** The subject categories, units and programmes found in the published papers (for the browse pages and menus). */
 export const CATEGORY_LIST = Array.from(new Map(PAPER_INDEX.map((p) => [p.categorySlug, p.group])).entries()).map(([slug, name]) => ({ slug, name, papers: PAPER_INDEX.filter((x) => x.categorySlug === slug).length, units: Array.from(new Map(PAPER_INDEX.filter((x) => x.categorySlug === slug).map((x) => [x.unitSlug, x.unitTitle])).entries()).map(([us, ut]) => ({ slug: us, title: ut, papers: PAPER_INDEX.filter((x) => x.unitSlug === us).length })) }));
 export const categoryBlurb: Record<string, string> = Object.fromEntries((cats as { slug: string; blurb: string }[]).map((c) => [c.slug, c.blurb]));
-export const paperPath = (slug: string) => `/dental/papers/${slug}`;
+const SECTION_OF = new Map(PAPER_INDEX.map((p) => [p.slug, p.section]));
+/** Every address in the papers area starts with the paper's own section: /dental, /it, /business, /hospitality, /social or /science. */
+export const paperPath = (slug: string) => `/${SECTION_OF.get(slug) ?? "dental"}/papers/${slug}`;
+export const unitPath = (section: string, unitSlug: string) => `/${section}/units/${unitSlug}`;
+export const categoryPath = (section: string, cat: string) => `/${section}/category/${cat}`;

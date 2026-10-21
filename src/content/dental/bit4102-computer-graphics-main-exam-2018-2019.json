@@ -1,0 +1,150 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4102-computer-graphics-main-exam-2018-2019",
+ "title": "Computer Graphics: Main Exam, August 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BIT4102",
+ "unitTitle": "Computer Graphics",
+ "date": "Tue 27tm Aug, 2019 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss FIVE application areas of Computer Graphics today.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "What is scan conversion?",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Discuss the following output primitives attributes. a. Open polylines b. Polygons",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Discuss OpenGL rendering pipeline.                      _",
+       "marks": 8
+      },
+      {
+       "l": "e",
+       "text": "Outline three graphics transformations for 2D objects.  (6 Maris)"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss five graphics output primitives and their properties.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Outline how the symmetry of a circle improves the speed of circle drawing algorithms. . Paper one page one",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "What are the advantages and disadvantages of ray tracing over other rendering methods?",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Using appropriate illustrations, describe the construction of the cathode ray Tube.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Write down any FOUR properties of an ideal line.          --",
+       "marks": 4
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": ";",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Write down the steps in the DDA line drawing algorithm. `P) Given a point cloud, polygon, or sampled parametric curve, for whit purposes do we apply transformations? c) Write TWO advantages and TWO disadvantages of plasma panel displays. Fi"
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "List any SIX desirable attributes of an ideal graphics file format.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Identify and give a brief description of TWO basic approaches to fill a polygon.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "State Lambert's Law.",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "OpenGL is a state machine. Discuss. Paper one _ page one",
+       "marks": 6
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2019-08",
+ "dateLabel": "August 2019",
+ "programmes": [
+  "BBIT",
+  "BIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "computer-graphics"
+}

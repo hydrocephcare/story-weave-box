@@ -1,0 +1,145 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4217-total-quality-management-main-exam-2021-2022",
+ "title": "Total Quality Management: Main Exam, December 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / Enterprise Computing",
+ "programme": "BIT / BBIT",
+ "examTitle": "University Examination 2021/2022",
+ "unitCode": "BIT4217",
+ "unitTitle": "Total Quality Management",
+ "date": "Tue 7\" Dec, 2021 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is total quality management."
+      },
+      {
+       "l": "b",
+       "text": "What is quality control?"
+      },
+      {
+       "l": "c",
+       "text": "Explain the objectives of quality control in a software development organization. : @"
+      },
+      {
+       "l": "d",
+       "text": "List any five goals of a customer focusin software development that may improve the quality of the products. : S Marks)"
+      },
+      {
+       "l": "e",
+       "text": "Explain how employee's participation in organizational activities can improve the quality of the final product. \"A \""
+      },
+      {
+       "l": "f",
+       "text": "Explain any two TQM work force factors that are applicaile to an organization."
+      },
+      {
+       "l": "g",
+       "text": "What are some factors that a successful implementation of ISO standards in an organization may depend on? ;"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the product life cycle assurance procedures that are necessary within the TQC policy and programmes. { Z",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "What are some of the obstacles that may hinder employee's involvement in organizational activities so as to achieve quality?",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain the stages that product designers follow during a new product design and development. /Question Three a) Explain any four benefits an organization can get by a adopting TQM. b) Explain any four attributes that make up customer experience. c) Explain the key roles that Six Sigma identifies with, for its successful implementation in an organization. |",
+       "marks": 8
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discus the evolution of TQM."
+      },
+      {
+       "l": "b",
+       "text": "Explain any two ways that an organization can put in place to improve the product design and quality."
+      },
+      {
+       "l": "c",
+       "text": "Explain the following methods of quality control as used in organizations",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Computer aided quality control (CAQC). il) manual inspection"
+        }
+       ]
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "List down the elements of TQM that can be applied to an organization so as to achieve high quality products.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Explain any two sources of variation that may exist in production process leading to defects and lack of consistency.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain any five customer experience Strategies that may be applied in an organization to improve the quality of the final product. SPREE A TAT cL SORTA Te Ad CTITE TN AEB ESET EA a a Paper Two Page 2",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2021-12",
+ "dateLabel": "December 2021",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "total-quality-management"
+}

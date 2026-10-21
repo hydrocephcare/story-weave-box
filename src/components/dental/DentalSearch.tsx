@@ -3,13 +3,18 @@ import { useNavigate } from "react-router-dom";
 import { FileText, MessageSquareText, Search } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { OPEN_SEARCH_EVENT } from "@/lib/searchEvents";
-import { PAPER_INDEX, paperPath } from "@/lib/dentalPapers";
+import { PAPER_INDEX as ALL_INDEX, paperPath } from "@/lib/dentalPapers";
+import { useTrack } from "@/lib/courseTrack";
 
 type QRow = [string, string, string];
 
 /** Search for dental students: the papers (by unit, code, year, programme) and the wording of every question inside them. */
 export default function DentalSearch() {
   const navigate = useNavigate();
+  const track = useTrack();
+  // the search covers the section you are in: Dental searches dental papers, IT searches IT papers...
+  const PAPER_INDEX = useMemo(() => ALL_INDEX.filter((p) => p.section === track), [track]);
+  const inSection = useMemo(() => new Set(PAPER_INDEX.map((p) => p.slug)), [PAPER_INDEX]);
   const [open, setOpen] = useState(false);
   const [q, setQ] = useState("");
   const [rows, setRows] = useState<QRow[]>([]);
@@ -25,14 +30,14 @@ export default function DentalSearch() {
   useEffect(() => { if (open && !rows.length) void import("@/data/dentalQuestions.json").then((m) => setRows(m.default as QRow[])); }, [open, rows.length]);
   const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
   const hits = useMemo(() => (needles.length ? PAPER_INDEX.filter((p) => needles.every((w) => `${p.title} ${p.unitCode} ${p.unitTitle} ${p.date} ${p.programme} ${p.group}`.toLowerCase().includes(w))).slice(0, 12) : PAPER_INDEX.slice(0, 8)), [q]); // eslint-disable-line react-hooks/exhaustive-deps
-  const qHits = useMemo(() => (needles.length && needles.join("").length > 2 ? rows.filter((r) => needles.every((w) => r[2].toLowerCase().includes(w))).slice(0, 15) : []), [q, rows]); // eslint-disable-line react-hooks/exhaustive-deps
+  const qHits = useMemo(() => (needles.length && needles.join("").length > 2 ? rows.filter((r) => inSection.has(r[0]) && needles.every((w) => r[2].toLowerCase().includes(w))).slice(0, 15) : []), [q, rows, inSection]); // eslint-disable-line react-hooks/exhaustive-deps
   const row = "flex w-full items-center gap-3 px-4 py-2.5 text-left hover:bg-primary/10";
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="top-[12%] max-w-xl translate-y-0 gap-0 p-0 sm:rounded-2xl">
-        <DialogTitle className="sr-only">Search dental past papers</DialogTitle>
-        <DialogDescription className="sr-only">Search the dental past papers by unit, code or year, or search inside the questions.</DialogDescription>
-        <div className="flex items-center gap-3 border-b border-border px-4"><Search className="h-5 w-5 shrink-0 text-muted-foreground" /><input autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search a unit, year, or a question…" aria-label="Search dental past papers" className="h-14 min-w-0 flex-1 bg-transparent text-base outline-none placeholder:text-muted-foreground" /></div>
+        <DialogTitle className="sr-only">Search past papers</DialogTitle>
+        <DialogDescription className="sr-only">Search the past papers by unit, code or year, or search inside the questions.</DialogDescription>
+        <div className="flex items-center gap-3 border-b border-border px-4"><Search className="h-5 w-5 shrink-0 text-muted-foreground" /><input autoFocus value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search a unit, year, or a question…" aria-label="Search past papers" className="h-14 min-w-0 flex-1 bg-transparent text-base outline-none placeholder:text-muted-foreground" /></div>
         <ul className="max-h-[60dvh] overflow-y-auto py-1">
           {hits.length === 0 && qHits.length === 0 && <li className="px-4 py-8 text-center text-sm text-muted-foreground">Nothing matches that.</li>}
           {hits.map((p) => (

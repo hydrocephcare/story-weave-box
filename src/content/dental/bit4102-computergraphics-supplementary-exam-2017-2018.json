@@ -1,0 +1,128 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4102-computergraphics-supplementary-exam-2017-2018",
+ "title": "Computergraphics: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department Ofinformation Technology",
+ "programme": "Bachelor of Business Information Technology / Information / Technology",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4102",
+ "unitTitle": "Computergraphics",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A ANDANY OTHER TWO FROM SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the term Computer animation,"
+      },
+      {
+       "l": "b",
+       "text": "List down four main aclvantages of ink jet printers?"
+      },
+      {
+       "l": "c",
+       "text": "Consider three different raster systems with resolutions of 600 x 400, 1200 x- 1000 and 2500 x 2000. i. . What size is frame buffer (in bytes) for each of these systems to store 16 bits per pixel? li. How much storage (in bytesi)s required for each system if 12 bits per pixel are to be stored? Eeingsonanitica oneERAN SPER NSN ANTE RORY SESAI oon tea Ore MSE AAR LCD RCRAee ATLL UN ocaulatrnnen sates eee SereinenyCESSES IOTIeet LET weno PN A a ae Ges Rehr cates et erate to] Paper Two Page 1"
+      },
+      {
+       "l": "d",
+       "text": "List and briefly explain at least three important applications of computer graphics?"
+      },
+      {
+       "l": "e",
+       "text": "List down the hardware and software that are used in computer graphics. | - -- Define the following terms.as used in computer graphics . i. Rasterization ii. persistence"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly explain with a suitable diagram a graphic display device and explain its components.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Explain the differences between a general graphics system designed for a programmer and one designed for a specific application, such as architectural design? ;",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Using the Digital Differential Analyze line drawing algorithm scan convert a line starting at point (10,10) and ends and (18,16)",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "What is Aspect Ratio?                                       (2 Marixs)"
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "`a. Explain the merits and demerits of OLED display. b. Consider a raster system with the resolution of 1024 x 768 pixels and the color palette Calls for 65,536 colors. What is the minimum amount of video RAM that the computer must have to support the above-mentioned resolution and number of colors? c. Explain the main functions used in-an Autodesk Maya. d. Outline FOUR types of images * Peet peers necttel es Utne an boone ReMi nee eEeIASE ieecteISOSeIReSSSeEnS A imaT S m cUee a oRre s Mons ee ieelNe te L ete] Paper Two Page 2",
+     "marks": 4,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "(, 4 Define the term transformation and explain the main transformation types. b. Explain the following terms as used in computer graphics. (i) Animation ; (ii) Computer Aided Design (iii) Video adapter Card c. Differentiate between pillarboxing ancl letterboxing d. Using Bresenham's line drawing algorithm scan convert a line starting at point (0,0) and ends at (8,6)",
+     "marks": 4,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "With suitable diagram show the graphic pipelining process."
+      },
+      {
+       "l": "b",
+       "text": "Discuss the main features of computer graphics."
+      },
+      {
+       "l": "c",
+       "text": "Consider two raster systems with the resolutions of 640 x 480 and 1280 x 1024. i. How many pixels could be accessed per second in each of these systems by a display controller that refreshes the screen at a rate of 60 frames per second? ii. What is the access time per pixel in each system? | Seoneryt Ciba St st PeeNea foe , ipaftv eemreerr are bi oust tT een cere tad TtPe Paper Two \"Page 3"
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Bachelor of Business Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "computergraphics"
+}

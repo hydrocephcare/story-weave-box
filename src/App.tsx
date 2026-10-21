@@ -107,6 +107,7 @@ const ClinicalPractice = lazy(() => import("./pages/ClinicalPractice"));
 const ClinicalLab = lazy(() => import("./pages/ClinicalLab"));
 const Pharmacology = lazy(() => import("./pages/Pharmacology"));
 const PharmQuiz = lazy(() => import("./pages/PharmQuiz"));
+import { SECTIONS } from "@/lib/sections";
 const DentalHome = lazy(() => import("./pages/dental/DentalHome"));
 const DentalPapers = lazy(() => import("./pages/dental/DentalPapers"));
 const DentalPaperPage = lazy(() => import("./pages/dental/DentalPaperPage"));
@@ -260,11 +261,13 @@ const AnimatedRoutes = () => {
             <Route path="/clinical/counsel" element={<ClinicalLab />} />
             <Route path="/clinical/counsel/:id" element={<ClinicalLab />} />
             <Route path="/clinical/mistakes" element={<ClinicalLab />} />
-            <Route path="/dental" element={<DentalHome />} />
-            <Route path="/dental/papers" element={<DentalPapers />} />
-            <Route path="/dental/papers/:slug" element={<DentalPaperPage />} />
-            <Route path="/dental/category/:cat" element={<DentalCategory />} />
-            <Route path="/dental/units/:unit" element={<DentalUnit />} />
+            {SECTIONS.flatMap((sec) => [
+              <Route key={`${sec.slug}-home`} path={`/${sec.slug}`} element={<DentalHome />} />,
+              <Route key={`${sec.slug}-papers`} path={`/${sec.slug}/papers`} element={<DentalPapers />} />,
+              <Route key={`${sec.slug}-paper`} path={`/${sec.slug}/papers/:slug`} element={<DentalPaperPage />} />,
+              <Route key={`${sec.slug}-cat`} path={`/${sec.slug}/category/:cat`} element={<DentalCategory />} />,
+              <Route key={`${sec.slug}-unit`} path={`/${sec.slug}/units/:unit`} element={<DentalUnit />} />,
+            ])}
             <Route path="/pharmacology/quiz" element={<PharmQuiz />} />
             <Route path="/pharmacology" element={<Pharmacology />} />
             <Route path="/pharmacology/drug/:id" element={<Pharmacology />} />

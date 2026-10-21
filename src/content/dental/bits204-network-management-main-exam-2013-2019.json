@@ -1,0 +1,105 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bits204-network-management-main-exam-2013-2019",
+ "title": "Network Management: Main Exam, December 2018",
+ "university": "Mount Kenya University",
+ "school": "\"school of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Science in Information Technology / bachelor of / Business in Informationtechnology",
+ "examTitle": "University Examination 2013/2019",
+ "unitCode": "BITS204",
+ "unitTitle": "Network Management",
+ "date": "Mon 177! Dec 2018 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SeGrIOn A AND ANY OTHER TWO FROM",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the difference between static.and dynamic IP addresses. ae - -b) Differentiate between the following terros giving examples: i. IPV4 and IPV6 Addressing schernes. ii. Guided and unguided transmission media. c) You are a NetworkEngineer for an organization-with two hundred- network users. The organization has offices pecanin three buildings. Answer the following questions:",
+       "marks": 8,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Which class of Private IPs will you implement? Sora ae we : Page 1� iv. Discuss two strategies adopted to enhance security of wireless networks. v. Identify two-challenges of sueh-a network - @ Marks)",
+         "marks": 2
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "You finally have a consulting project you've been waiting for: A customer is~building-a new office and `has asked `you to design their entire local area network (LAN), as their present infrastructure is outdated and has ports failing by the day. As a consultant Identify factors that you need to consider when designing the physical local area network. _b) For the address 192.168.10.0 /26 cdeterraine the following i. The subnet mask ii. Number of subnets iii, Hosts per subnet iv. Valid subnets v. Valid hosts on each subnet vi. Broadcast address for each subnet",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly explain the meaning and use of the following applications? i - DEICP. hi} BINS, ili) NAT. ;",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Network Operating systems are said to be multi-user and multi-tasking. Differentiate these two terms. .",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "How does a network operating system differ from a standalone operating system? .",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Explain howa firewall works to enforce a security policy.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "You are network administrator in an organization. How will you know that the network has been broken into? What will you do? Paper one Or a ee NN aE ON NO EN ee a eM COOLS",
+       "marks": 2
+      }
+     ],
+     "id": "q3"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12",
+ "dateLabel": "December 2018",
+ "programmes": [
+  "Bachelor of Science in Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "network-management"
+}

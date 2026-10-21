@@ -1,47 +1,5 @@
 [
  {
-  "slug": "bds2201-cobalt-chrome-ii-main-exam-2018-2019-2",
-  "title": "Cobalt Chrome II: Main Exam, 11 December 2018",
-  "unitCode": "BDS2201",
-  "unitTitle": "Cobalt Chrome II",
-  "unitSlug": "cobalt-chrome-ii",
-  "programme": "Diploma in Dental Technology",
-  "programmes": [
-   "Diploma in Dental Technology"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds2201-cobalt-chrome-ii-main-exam-2018-2019-3",
-  "title": "Cobalt Chrome II: Main Exam, 11 December 2018",
-  "unitCode": "BDS2201",
-  "unitTitle": "Cobalt Chrome II",
-  "unitSlug": "cobalt-chrome-ii",
-  "programme": "Diploma in Dental Technology",
-  "programmes": [
-   "Diploma in Dental Technology"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
   "slug": "bds2201-cobalt-chrome-ii-main-exam-2018-2019",
   "title": "Cobalt Chrome II: Main Exam, 11 December 2018",
   "unitCode": "BDS2201",
@@ -60,49 +18,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds3102-crown-and-bridge-iii-main-exam-2018-2019-2",
-  "title": "Crown and Bridge III: Main Exam, 13 December 2018",
-  "unitCode": "BDS3102",
-  "unitTitle": "Crown and Bridge III",
-  "unitSlug": "crown-and-bridge-iii",
-  "programme": "Diploma in Dental Technology",
-  "programmes": [
-   "Diploma in Dental Technology"
-  ],
-  "date": "13 December 2018",
-  "dateISO": "2018-12-13",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 4,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds3102-crown-and-bridge-iii-main-exam-2018-2019-3",
-  "title": "Crown and Bridge III: Main Exam, 13 December 2018",
-  "unitCode": "BDS3102",
-  "unitTitle": "Crown and Bridge III",
-  "unitSlug": "crown-and-bridge-iii",
-  "programme": "Diploma in Dental Technology",
-  "programmes": [
-   "Diploma in Dental Technology"
-  ],
-  "date": "13 December 2018",
-  "dateISO": "2018-12-13",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 4,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
+  "categorySlug": "dental-technology",
+  "section": "dental"
  },
  {
   "slug": "bds3102-crown-and-bridge-iii-main-exam-2018-2019",
@@ -123,7 +40,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Technology",
-  "categorySlug": "dental-technology"
+  "categorySlug": "dental-technology",
+  "section": "dental"
  },
  {
   "slug": "bds1101-dental-materials-i-supplementary-exam-2017-2018",
@@ -144,49 +62,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds2204-dental-materials-iv-main-exam-2018-2019-2",
-  "title": "Dental Materials IV: Main Exam, 9 December 2018",
-  "unitCode": "BDS2204",
-  "unitTitle": "Dental Materials IV",
-  "unitSlug": "dental-materials-iv",
-  "programme": "Diploma in Dental Technology",
-  "programmes": [
-   "Diploma in Dental Technology"
-  ],
-  "date": "9 December 2018",
-  "dateISO": "2018-12-09",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 12,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds2204-dental-materials-iv-main-exam-2018-2019-3",
-  "title": "Dental Materials IV: Main Exam, 9 December 2018",
-  "unitCode": "BDS2204",
-  "unitTitle": "Dental Materials IV",
-  "unitSlug": "dental-materials-iv",
-  "programme": "Diploma in Dental Technology",
-  "programmes": [
-   "Diploma in Dental Technology"
-  ],
-  "date": "9 December 2018",
-  "dateISO": "2018-12-09",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 12,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
+  "categorySlug": "dental-technology",
+  "section": "dental"
  },
  {
   "slug": "bds2204-dental-materials-iv-main-exam-2018-2019",
@@ -207,7 +84,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Technology",
-  "categorySlug": "dental-technology"
+  "categorySlug": "dental-technology",
+  "section": "dental"
  },
  {
   "slug": "bds3103-dental-materials-v-supplementary-exam-2017-2018",
@@ -228,49 +106,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds2205-orthodontics-ii-main-exam-2018-2019-2",
-  "title": "Orthodontics II: Main Exam, 14 December 2018",
-  "unitCode": "BDS2205",
-  "unitTitle": "Orthodontics II",
-  "unitSlug": "orthodontics-ii",
-  "programme": "Diploma in Dental Technology",
-  "programmes": [
-   "Diploma in Dental Technology"
-  ],
-  "date": "14 December 2018",
-  "dateISO": "2018-12-14",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 4,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds2205-orthodontics-ii-main-exam-2018-2019-3",
-  "title": "Orthodontics II: Main Exam, 14 December 2018",
-  "unitCode": "BDS2205",
-  "unitTitle": "Orthodontics II",
-  "unitSlug": "orthodontics-ii",
-  "programme": "Diploma in Dental Technology",
-  "programmes": [
-   "Diploma in Dental Technology"
-  ],
-  "date": "14 December 2018",
-  "dateISO": "2018-12-14",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 4,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
+  "categorySlug": "dental-technology",
+  "section": "dental"
  },
  {
   "slug": "bds2205-orthodontics-ii-main-exam-2018-2019",
@@ -291,51 +128,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds3113-paedodontics-i-main-exam-2018-2019-2",
-  "title": "Paedodontics I: Main Exam, 20 December 2018",
-  "unitCode": "BDS3113",
-  "unitTitle": "Paedodontics I",
-  "unitSlug": "paedodontics-i",
-  "programme": "BSCOH · BSCDT",
-  "programmes": [
-   "BSCOH",
-   "BSCDT"
-  ],
-  "date": "20 December 2018",
-  "dateISO": "2018-12-20",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 3,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds3113-paedodontics-i-main-exam-2018-2019-3",
-  "title": "Paedodontics I: Main Exam, 20 December 2018",
-  "unitCode": "BDS3113",
-  "unitTitle": "Paedodontics I",
-  "unitSlug": "paedodontics-i",
-  "programme": "BSCOH · BSCDT",
-  "programmes": [
-   "BSCOH",
-   "BSCDT"
-  ],
-  "date": "20 December 2018",
-  "dateISO": "2018-12-20",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 3,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
+  "categorySlug": "dental-technology",
+  "section": "dental"
  },
  {
   "slug": "bds3113-paedodontics-i-main-exam-2018-2019",
@@ -357,49 +151,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds3209-periodontology-i-main-exam-2018-2019-2",
-  "title": "Periodontology I: Main Exam, 11 December 2018",
-  "unitCode": "BDS3209",
-  "unitTitle": "Periodontology I",
-  "unitSlug": "periodontology-i",
-  "programme": "Diploma in Community Oral Health",
-  "programmes": [
-   "Diploma in Community Oral Health"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 4,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds3209-periodontology-i-main-exam-2018-2019-3",
-  "title": "Periodontology I: Main Exam, 11 December 2018",
-  "unitCode": "BDS3209",
-  "unitTitle": "Periodontology I",
-  "unitSlug": "periodontology-i",
-  "programme": "Diploma in Community Oral Health",
-  "programmes": [
-   "Diploma in Community Oral Health"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 4,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
+  "categorySlug": "dental-technology",
+  "section": "dental"
  },
  {
   "slug": "bds3209-periodontology-i-main-exam-2018-2019",
@@ -420,49 +173,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds1204-prosthetics-ii-main-exam-2018-2019-2",
-  "title": "Prosthetics II: Main Exam, 17 December 2018",
-  "unitCode": "BDS1204",
-  "unitTitle": "Prosthetics II",
-  "unitSlug": "prosthetics-ii",
-  "programme": "Diploma in Dental Technology",
-  "programmes": [
-   "Diploma in Dental Technology"
-  ],
-  "date": "17 December 2018",
-  "dateISO": "2018-12-17",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 13,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds1204-prosthetics-ii-main-exam-2018-2019-3",
-  "title": "Prosthetics II: Main Exam, 17 December 2018",
-  "unitCode": "BDS1204",
-  "unitTitle": "Prosthetics II",
-  "unitSlug": "prosthetics-ii",
-  "programme": "Diploma in Dental Technology",
-  "programmes": [
-   "Diploma in Dental Technology"
-  ],
-  "date": "17 December 2018",
-  "dateISO": "2018-12-17",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 13,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
+  "categorySlug": "dental-technology",
+  "section": "dental"
  },
  {
   "slug": "bds1204-prosthetics-ii-main-exam-2018-2019",
@@ -483,49 +195,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds2106-prosthetics-iii-main-exam-2018-2019-2",
-  "title": "Prosthetics III: Main Exam, 18 December 2018",
-  "unitCode": "BDS2106",
-  "unitTitle": "Prosthetics III",
-  "unitSlug": "prosthetics-iii",
-  "programme": "BSCDT",
-  "programmes": [
-   "BSCDT"
-  ],
-  "date": "18 December 2018",
-  "dateISO": "2018-12-18",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 9,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bds2106-prosthetics-iii-main-exam-2018-2019-3",
-  "title": "Prosthetics III: Main Exam, 18 December 2018",
-  "unitCode": "BDS2106",
-  "unitTitle": "Prosthetics III",
-  "unitSlug": "prosthetics-iii",
-  "programme": "BSCDT",
-  "programmes": [
-   "BSCDT"
-  ],
-  "date": "18 December 2018",
-  "dateISO": "2018-12-18",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 9,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Dental Technology",
-  "categorySlug": "dental-technology"
+  "categorySlug": "dental-technology",
+  "section": "dental"
  },
  {
   "slug": "bds2106-prosthetics-iii-main-exam-2018-2019",
@@ -546,49 +217,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Dental Technology",
-  "categorySlug": "dental-technology"
- },
- {
-  "slug": "bha1201-human-anatomy-ii-main-exam-2018-2019-2",
-  "title": "Human Anatomy II: Main Exam, 19 December 2018",
-  "unitCode": "BHA1201",
-  "unitTitle": "Human Anatomy II",
-  "unitSlug": "human-anatomy-ii",
-  "programme": "Diploma in Community Oral Health",
-  "programmes": [
-   "Diploma in Community Oral Health"
-  ],
-  "date": "19 December 2018",
-  "dateISO": "2018-12-19",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 10,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
- },
- {
-  "slug": "bha1201-human-anatomy-ii-main-exam-2018-2019-3",
-  "title": "Human Anatomy II: Main Exam, 19 December 2018",
-  "unitCode": "BHA1201",
-  "unitTitle": "Human Anatomy II",
-  "unitSlug": "human-anatomy-ii",
-  "programme": "Diploma in Community Oral Health",
-  "programmes": [
-   "Diploma in Community Oral Health"
-  ],
-  "date": "19 December 2018",
-  "dateISO": "2018-12-19",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 10,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "dental-technology",
+  "section": "dental"
  },
  {
   "slug": "bha1201-human-anatomy-ii-main-exam-2018-2019",
@@ -609,7 +239,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dha1301-human-anatomy-iv-main-exam-2025-2026",
@@ -631,7 +262,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dha2101-human-anatomy-iv-main-exam-2024-2025",
@@ -652,7 +284,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dha1301-human-anatomy-iv-main-exam-2024-2025",
@@ -673,7 +306,8 @@
   "complete": false,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds1305-human-anatomy-iv-main-exam-2018-2019",
@@ -695,7 +329,8 @@
   "complete": false,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds2112-human-anatomy-iv-main-exam-2017-2018",
@@ -716,7 +351,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds1305-human-anatomy-iv-main-exam-2017-2018",
@@ -737,7 +373,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds2111-human-physiology-iv-main-exam-2025-2026-2",
@@ -759,7 +396,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds2111-human-physiology-iv-main-exam-2025-2026",
@@ -781,7 +419,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dmp2104-human-physiology-iv-main-exam-2024-2025",
@@ -802,7 +441,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds2111-human-physiology-iv-main-exam-2024-2025",
@@ -823,7 +463,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds2111-human-physiology-iv-main-exam-2023-2024",
@@ -844,7 +485,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dmp2104-human-physiology-iv-main-exam-2022-2023",
@@ -865,7 +507,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds2111-human-physiology-iv-main-exam-2017-2018",
@@ -886,49 +529,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
- },
- {
-  "slug": "bds2207-oral-biology-i-main-exam-2018-2019-2",
-  "title": "Oral Biology I: Main Exam, 9 December 2018",
-  "unitCode": "BDS2207",
-  "unitTitle": "Oral Biology I",
-  "unitSlug": "oral-biology-i",
-  "programme": "Diploma in Community Oral Health",
-  "programmes": [
-   "Diploma in Community Oral Health"
-  ],
-  "date": "9 December 2018",
-  "dateISO": "2018-12-09",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 10,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
- },
- {
-  "slug": "bds2207-oral-biology-i-main-exam-2018-2019-3",
-  "title": "Oral Biology I: Main Exam, 9 December 2018",
-  "unitCode": "BDS2207",
-  "unitTitle": "Oral Biology I",
-  "unitSlug": "oral-biology-i",
-  "programme": "Diploma in Community Oral Health",
-  "programmes": [
-   "Diploma in Community Oral Health"
-  ],
-  "date": "9 December 2018",
-  "dateISO": "2018-12-09",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 10,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "bds2207-oral-biology-i-main-exam-2018-2019",
@@ -949,7 +551,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds2212-oral-biology-ii-main-exam-2025-2026",
@@ -970,7 +573,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds2212-oral-biology-ii-main-exam-2024-2025",
@@ -991,7 +595,8 @@
   "complete": false,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "bds3107-oral-biology-ii-main-exam-2018-2019",
@@ -1012,7 +617,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "bds3207-oral-biology-iii-supplementary-exam-2017-2018",
@@ -1033,7 +639,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds2107-oral-pathology-and-oral-medicine-i-main-exam-2025-2026",
@@ -1054,7 +661,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds2107-oral-pathology-and-oral-medicine-i-main-exam-2025-2026-2",
@@ -1075,7 +683,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds2107-oral-pathology-and-oral-medicine-i-main-exam-2024-2025",
@@ -1096,7 +705,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dds2107-oral-pathology-and-oral-medicine-i-special-exam-2020-2021",
@@ -1117,49 +727,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
- },
- {
-  "slug": "bds3208-oral-pathology-i-main-exam-2018-2019-2",
-  "title": "Oral Pathology I: Main Exam, 17 December 2018",
-  "unitCode": "BDS3208",
-  "unitTitle": "Oral Pathology I",
-  "unitSlug": "oral-pathology-i",
-  "programme": "Diploma in Community Oral Health",
-  "programmes": [
-   "Diploma in Community Oral Health"
-  ],
-  "date": "17 December 2018",
-  "dateISO": "2018-12-17",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 9,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
- },
- {
-  "slug": "bds3208-oral-pathology-i-main-exam-2018-2019-3",
-  "title": "Oral Pathology I: Main Exam, 17 December 2018",
-  "unitCode": "BDS3208",
-  "unitTitle": "Oral Pathology I",
-  "unitSlug": "oral-pathology-i",
-  "programme": "Diploma in Community Oral Health",
-  "programmes": [
-   "Diploma in Community Oral Health"
-  ],
-  "date": "17 December 2018",
-  "dateISO": "2018-12-17",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 9,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "bds3208-oral-pathology-i-main-exam-2018-2019",
@@ -1180,7 +749,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Basic Dental Sciences",
-  "categorySlug": "basic-dental-sciences"
+  "categorySlug": "basic-dental-sciences",
+  "section": "dental"
  },
  {
   "slug": "dph2103-community-health-ii-main-exam-2025-2026",
@@ -1201,7 +771,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph2103-community-health-ii-main-exam-2025-2026-2",
@@ -1222,7 +793,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph2103-community-health-ii-main-exam-2025-2026-3",
@@ -1243,7 +815,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph2103-community-health-ii-main-exam-2024-2025",
@@ -1264,7 +837,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "cph2301-community-health-ii-main-exam-2023-2024",
@@ -1285,7 +859,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph2103-community-health-ii-main-exam-2023-2024",
@@ -1306,7 +881,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph2201-community-health-ii-main-exam-2022-2023",
@@ -1327,7 +903,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "cph2302-community-health-ii-main-exam-2021-2022",
@@ -1348,7 +925,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph2103-community-health-ii-main-exam-2020-2021",
@@ -1371,7 +949,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dfh2103-community-health-ii-main-exam-2018-2019",
@@ -1393,7 +972,8 @@
   "complete": false,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "cph2301-community-health-ii-main-exam-2018-2019",
@@ -1414,49 +994,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
- },
- {
-  "slug": "bch4236-environmental-chemistry-main-exam-2018-2019-2",
-  "title": "Environmental Chemistry: Main Exam, 5 December 2018",
-  "unitCode": "BCH4236",
-  "unitTitle": "Environmental Chemistry",
-  "unitSlug": "environmental-chemistry",
-  "programme": "Bachelor of Education (science)",
-  "programmes": [
-   "Bachelor of Education (science)"
-  ],
-  "date": "5 December 2018",
-  "dateISO": "2018-12-05",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 3,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
- },
- {
-  "slug": "bch4236-environmental-chemistry-main-exam-2018-2019-3",
-  "title": "Environmental Chemistry: Main Exam, 5 December 2018",
-  "unitCode": "BCH4236",
-  "unitTitle": "Environmental Chemistry",
-  "unitSlug": "environmental-chemistry",
-  "programme": "Bachelor of Education (science)",
-  "programmes": [
-   "Bachelor of Education (science)"
-  ],
-  "date": "5 December 2018",
-  "dateISO": "2018-12-05",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 3,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "bch4236-environmental-chemistry-main-exam-2018-2019",
@@ -1477,7 +1016,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph1318-health-education-and-promotion-main-exam-2025-2026",
@@ -1498,7 +1038,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "cph1303-health-education-and-promotion-main-exam-2024-2025",
@@ -1519,7 +1060,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph1318-health-education-and-promotion-main-exam-2022-2023",
@@ -1540,7 +1082,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "cph1303-health-education-and-promotion-main-exam-2022-2023",
@@ -1561,7 +1104,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "cph1303-health-education-and-promotion-main-exam-2021-2022-2",
@@ -1582,7 +1126,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "cph1303-health-education-and-promotion-main-exam-2020-2021",
@@ -1603,7 +1148,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "cph1303-health-education-and-promotion-main-exam-2021-2022",
@@ -1624,7 +1170,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dwh201-health-education-and-promotion-main-exam-2018-2019",
@@ -1645,7 +1192,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph1201-health-education-and-promotion-supplementary-exam-2017-2018",
@@ -1666,7 +1214,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph2108-health-education-and-promotion-supplementary-exam-2017-2018",
@@ -1687,7 +1236,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph1201-health-education-i-main-exam-2024-2025",
@@ -1709,7 +1259,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph1201-health-education-i-main-exam-2024-2025-2",
@@ -1730,7 +1281,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph1201-health-education-i-main-exam-2017-2018",
@@ -1751,7 +1303,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph1201-health-education-i-main-exam-2018-2019",
@@ -1772,7 +1325,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph2108-health-education-ii-main-exam-2026",
@@ -1793,7 +1347,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph2108-health-education-ii-main-exam-2022-2023",
@@ -1814,7 +1369,8 @@
   "complete": false,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dph2108-health-education-ii-main-exam-2018-2019",
@@ -1835,7 +1391,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "health-education-ii-exam-2018-2019",
@@ -1856,7 +1413,8 @@
   "complete": true,
   "university": "Moi University",
   "group": "Community and Public Health",
-  "categorySlug": "community-and-public-health"
+  "categorySlug": "community-and-public-health",
+  "section": "dental"
  },
  {
   "slug": "dma1301-introduction-to-biostatistics-main-exam-2023-2024",
@@ -1877,7 +1435,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Biostatistics and Research",
-  "categorySlug": "biostatistics-and-research"
+  "categorySlug": "biostatistics-and-research",
+  "section": "dental"
  },
  {
   "slug": "dma1301-introduction-to-biostatistics-main-exam-2022-2023",
@@ -1899,7 +1458,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Biostatistics and Research",
-  "categorySlug": "biostatistics-and-research"
+  "categorySlug": "biostatistics-and-research",
+  "section": "dental"
  },
  {
   "slug": "dma1301-introduction-to-biostatistics-main-exam-2017-2018-2",
@@ -1920,7 +1480,8 @@
   "complete": false,
   "university": "University Examinations 2020 / 2021",
   "group": "Biostatistics and Research",
-  "categorySlug": "biostatistics-and-research"
+  "categorySlug": "biostatistics-and-research",
+  "section": "dental"
  },
  {
   "slug": "dma1301-introduction-to-biostatistics-main-exam-2020-2021",
@@ -1942,7 +1503,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Biostatistics and Research",
-  "categorySlug": "biostatistics-and-research"
+  "categorySlug": "biostatistics-and-research",
+  "section": "dental"
  },
  {
   "slug": "dma1301-introduction-to-biostatistics-main-exam-2018-2019",
@@ -1965,7 +1527,8 @@
   "complete": false,
   "university": "Mount Kenya University",
   "group": "Biostatistics and Research",
-  "categorySlug": "biostatistics-and-research"
+  "categorySlug": "biostatistics-and-research",
+  "section": "dental"
  },
  {
   "slug": "dma1301-introduction-to-biostatistics-main-exam-2017-2018",
@@ -1986,7 +1549,513 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Biostatistics and Research",
-  "categorySlug": "biostatistics-and-research"
+  "categorySlug": "biostatistics-and-research",
+  "section": "dental"
+ },
+ {
+  "slug": "bht2109-airfare-and-ticketing-supplementary-exam-2017-2018",
+  "title": "Airfare and Ticketing: Supplementary Exam, August 2018",
+  "unitCode": "BHT2109",
+  "unitTitle": "Airfare and Ticketing",
+  "unitSlug": "airfare-and-ticketing",
+  "programme": "Bachelor of Travel and Tourism Management",
+  "programmes": [
+   "Bachelor of Travel and Tourism Management"
+  ],
+  "date": "August 2018",
+  "dateISO": "2018-08",
+  "year": "2018",
+  "sitting": "Supplementary Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht2212-domestic-and-international-tourism-main-exam-2018-2019",
+  "title": "Domestic and International Tourism: Main Exam, 20 December 2018",
+  "unitCode": "BHT2212",
+  "unitTitle": "Domestic and International Tourism",
+  "unitSlug": "domestic-and-international-tourism",
+  "programme": "Bachelor of Science in Travel and Tourism Management",
+  "programmes": [
+   "Bachelor of Science in Travel and Tourism Management"
+  ],
+  "date": "20 December 2018",
+  "dateISO": "2018-12-20",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht1108-east-africa-flora-and-fauna-main-exam-2018-2019",
+  "title": "East Africa Flora and Fauna: Main Exam, 14 December 2018",
+  "unitCode": "BHT1108",
+  "unitTitle": "East Africa Flora and Fauna",
+  "unitSlug": "east-africa-flora-and-fauna",
+  "programme": "Bachelor of Science in Travel and Tourism Management",
+  "programmes": [
+   "Bachelor of Science in Travel and Tourism Management"
+  ],
+  "date": "14 December 2018",
+  "dateISO": "2018-12-14",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht4101-food-and-beverage-control-main-exam-2018-2019",
+  "title": "Food and Beverage Control: Main Exam, 13 December 2018",
+  "unitCode": "BHT4101",
+  "unitTitle": "Food and Beverage Control",
+  "unitSlug": "food-and-beverage-control",
+  "programme": "Bachelor of Science in Hospitality Management",
+  "programmes": [
+   "Bachelor of Science in Hospitality Management"
+  ],
+  "date": "13 December 2018",
+  "dateISO": "2018-12-13",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht1102-food-and-beverage-service-theory-i-main-exam-2018-2019",
+  "title": "Food and Beverage Service Theory I: Main Exam, December 2018",
+  "unitCode": "BHT1102",
+  "unitTitle": "Food and Beverage Service Theory I",
+  "unitSlug": "food-and-beverage-service-theory-i",
+  "programme": "Bachelor of Science in Hospitality Management",
+  "programmes": [
+   "Bachelor of Science in Hospitality Management"
+  ],
+  "date": "December 2018",
+  "dateISO": "2018-12",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht1101-food-production-theory-i-main-exam-2018-2019",
+  "title": "Food Production Theory I: Main Exam, 14 December 2018",
+  "unitCode": "BHT1101",
+  "unitTitle": "Food Production Theory I",
+  "unitSlug": "food-production-theory-i",
+  "programme": "Bachelor of Science in Hospitality Management",
+  "programmes": [
+   "Bachelor of Science in Hospitality Management"
+  ],
+  "date": "14 December 2018",
+  "dateISO": "2018-12-14",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht2201-front-office-operations-ii-main-exam-2018-2019",
+  "title": "Front Office Operations II: Main Exam, 11 December 2018",
+  "unitCode": "BHT2201",
+  "unitTitle": "Front Office Operations II",
+  "unitSlug": "front-office-operations-ii",
+  "programme": "Bachelor of Science in Hospitality Management",
+  "programmes": [
+   "Bachelor of Science in Hospitality Management"
+  ],
+  "date": "11 December 2018",
+  "dateISO": "2018-12-11",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht2202-hospitality-information-system-main-exam-2018-2019",
+  "title": "Hospitality Information System: Main Exam, December 2018",
+  "unitCode": "BHT2202",
+  "unitTitle": "Hospitality Information System",
+  "unitSlug": "hospitality-information-system",
+  "programme": "Bachelor of Science in Hospitality Management",
+  "programmes": [
+   "Bachelor of Science in Hospitality Management"
+  ],
+  "date": "December 2018",
+  "dateISO": "2018-12",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht3202-housekeeping-and-laundry-operations-main-exam-2018-2019",
+  "title": "Housekeeping and Laundry Operations: Main Exam, 11 December 2018",
+  "unitCode": "BHT3202",
+  "unitTitle": "Housekeeping and Laundry Operations",
+  "unitSlug": "housekeeping-and-laundry-operations",
+  "programme": "Bachelor of Science in Hospitality Management",
+  "programmes": [
+   "Bachelor of Science in Hospitality Management"
+  ],
+  "date": "11 December 2018",
+  "dateISO": "2018-12-11",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht1103-introduction-to-hospitality-and-tourism-main-exam-2018-2019",
+  "title": "Introduction to Hospitality and Tourism: Main Exam, 14 December 2018",
+  "unitCode": "BHT1103",
+  "unitTitle": "Introduction to Hospitality and Tourism",
+  "unitSlug": "introduction-to-hospitality-and-tourism",
+  "programme": "Bachelor of Science in Hospitality Management",
+  "programmes": [
+   "Bachelor of Science in Hospitality Management"
+  ],
+  "date": "14 December 2018",
+  "dateISO": "2018-12-14",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht1103-introduction-to-hospitality-and-tourism-main-exam-2018-2019-2",
+  "title": "Introduction to Hospitality and Tourism: Main Exam, 11 December 2018",
+  "unitCode": "BHT1103",
+  "unitTitle": "Introduction to Hospitality and Tourism",
+  "unitSlug": "introduction-to-hospitality-and-tourism",
+  "programme": "Bachelor of Science in Hospitality Management",
+  "programmes": [
+   "Bachelor of Science in Hospitality Management"
+  ],
+  "date": "11 December 2018",
+  "dateISO": "2018-12-11",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht4208-legal-aspects-in-hospitality-and-tourism-main-exam-2018-2019",
+  "title": "Legal Aspects in Hospitality and Tourism: Main Exam, 13 December 2018",
+  "unitCode": "BHT4208",
+  "unitTitle": "Legal Aspects in Hospitality and Tourism",
+  "unitSlug": "legal-aspects-in-hospitality-and-tourism",
+  "programme": "Bacheor of Science in Hospitality Management / bachelor of / Science in Travel and Tourism Management",
+  "programmes": [],
+  "date": "13 December 2018",
+  "dateISO": "2018-12-13",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht1209-survival-techniques-main-exam-2018-2019",
+  "title": "Survival Techniques: Main Exam, 13 December 2018",
+  "unitCode": "BHT1209",
+  "unitTitle": "Survival Techniques",
+  "unitSlug": "survival-techniques",
+  "programme": "Bachelor of Science in Hospitality Management",
+  "programmes": [
+   "Bachelor of Science in Hospitality Management"
+  ],
+  "date": "13 December 2018",
+  "dateISO": "2018-12-13",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht3205-sustainable-tourism-main-exam-2018-2019",
+  "title": "Sustainable Tourism: Main Exam, December 2018",
+  "unitCode": "BHT3205",
+  "unitTitle": "Sustainable Tourism",
+  "unitSlug": "sustainable-tourism",
+  "programme": "Bachelor of Science in Hospitality Management",
+  "programmes": [
+   "Bachelor of Science in Hospitality Management"
+  ],
+  "date": "December 2018",
+  "dateISO": "2018-12",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht2213-tourism-product-development-supplementary-exam-2017-2018",
+  "title": "Tourism Product Development: Supplementary Exam, August 2018",
+  "unitCode": "BHT2213",
+  "unitTitle": "Tourism Product Development",
+  "unitSlug": "tourism-product-development",
+  "programme": "Bachelor of Travel and Tourism Management",
+  "programmes": [
+   "Bachelor of Travel and Tourism Management"
+  ],
+  "date": "August 2018",
+  "dateISO": "2018-08",
+  "year": "2018",
+  "sitting": "Supplementary Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht1107-travel-agency-operations-main-exam-2018-2019",
+  "title": "Travel Agency Operations: Main Exam, 17 December 2018",
+  "unitCode": "BHT1107",
+  "unitTitle": "Travel Agency Operations",
+  "unitSlug": "travel-agency-operations",
+  "programme": "Bachelor of Science in Hospitality Management",
+  "programmes": [
+   "Bachelor of Science in Hospitality Management"
+  ],
+  "date": "17 December 2018",
+  "dateISO": "2018-12-17",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bht1205-world-geography-and-touristic-destination-main-exam-2018-2019",
+  "title": "World Geography and Touristic Destination: Main Exam, 18 December 2018",
+  "unitCode": "BHT1205",
+  "unitTitle": "World Geography and Touristic Destination",
+  "unitSlug": "world-geography-and-touristic-destination",
+  "programme": "Bachelor of Science in Travel and Tourism Management",
+  "programmes": [
+   "Bachelor of Science in Travel and Tourism Management"
+  ],
+  "date": "18 December 2018",
+  "dateISO": "2018-12-18",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Hospitality and Tourism",
+  "categorySlug": "hospitality-and-tourism",
+  "section": "hospitality"
+ },
+ {
+  "slug": "bit4105-advanced-business-data-structures-and-computer-main-exam-2018-2019",
+  "title": "Advanced Business Data Structures and Computer: Main Exam, 23 August 2019",
+  "unitCode": "BIT4105",
+  "unitTitle": "Advanced Business Data Structures and Computer",
+  "unitSlug": "advanced-business-data-structures-and-computer",
+  "programme": "BBIT · BIT",
+  "programmes": [
+   "BBIT",
+   "BIT"
+  ],
+  "date": "23 August 2019",
+  "dateISO": "2019-08-23",
+  "year": "2019",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit4105-advanced-data-structures-main-exam-2017-2018",
+  "title": "Advanced Data Structures: Main Exam, April 2018",
+  "unitCode": "BIT4105",
+  "unitTitle": "Advanced Data Structures",
+  "unitSlug": "advanced-data-structures",
+  "programme": "Olo Gvienterp Rise Eg / - Bachelor of Information Technology and Bachelor of Business / Information Technology",
+  "programmes": [],
+  "date": "April 2018",
+  "dateISO": "2018-04",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 4,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit4105-advanced-data-structures-and-algorithms-main-exam-2020-2021",
+  "title": "Advanced Data Structures and Algorithms: Main Exam, 4 August 2021",
+  "unitCode": "BIT4105",
+  "unitTitle": "Advanced Data Structures and Algorithms",
+  "unitSlug": "advanced-data-structures-and-algorithms",
+  "programme": "BIT · BBIT",
+  "programmes": [
+   "BIT",
+   "BBIT"
+  ],
+  "date": "4 August 2021",
+  "dateISO": "2021-08-04",
+  "year": "2021",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bita202-artificial-intelligence-main-exam-2020-2021",
+  "title": "Artificial Intelligence: Main Exam, August 2021",
+  "unitCode": "BITA202",
+  "unitTitle": "Artificial Intelligence",
+  "unitSlug": "artificial-intelligence",
+  "programme": "BIT · BBIT",
+  "programmes": [
+   "BIT",
+   "BBIT"
+  ],
+  "date": "August 2021",
+  "dateISO": "2021-08",
+  "year": "2021",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit4202-artificial-intelligence-main-exam-2019-2020",
+  "title": "Artificial Intelligence: Main Exam, December 2019",
+  "unitCode": "BIT4202",
+  "unitTitle": "Artificial Intelligence",
+  "unitSlug": "artificial-intelligence",
+  "programme": "Bachelor of Science in Information Technology",
+  "programmes": [
+   "Bachelor of Science in Information Technology"
+  ],
+  "date": "December 2019",
+  "dateISO": "2019-12",
+  "year": "2019",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit4202-artificial-intelligence-main-exam-2017-2018",
+  "title": "Artificial Intelligence: Main Exam, April 2018",
+  "unitCode": "BIT4202",
+  "unitTitle": "Artificial Intelligence",
+  "unitSlug": "artificial-intelligence",
+  "programme": "Bachelor of Business Information Technology",
+  "programmes": [
+   "Bachelor of Business Information Technology"
+  ],
+  "date": "April 2018",
+  "dateISO": "2018-04",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 4,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit3108-automation-of-information-centres-supplementary-exam-2017-2018",
@@ -2009,7 +2078,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit1101-computer-architecture-supplementary-exam-2017-2018",
@@ -2032,7 +2102,55 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit4102-computer-graphics-main-exam-2021",
+  "title": "Computer Graphics: Main Exam, December 2021",
+  "unitCode": "BIT4102",
+  "unitTitle": "Computer Graphics",
+  "unitSlug": "computer-graphics",
+  "programme": "BSCIT · BBIT · IBSCIS",
+  "programmes": [
+   "BSCIT",
+   "BBIT",
+   "IBSCIS"
+  ],
+  "date": "December 2021",
+  "dateISO": "2021-12",
+  "year": "2021",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 4,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit4102-computer-graphics-main-exam-2018-2019",
+  "title": "Computer Graphics: Main Exam, August 2019",
+  "unitCode": "BIT4102",
+  "unitTitle": "Computer Graphics",
+  "unitSlug": "computer-graphics",
+  "programme": "BBIT · BIT",
+  "programmes": [
+   "BBIT",
+   "BIT"
+  ],
+  "date": "August 2019",
+  "dateISO": "2019-08",
+  "year": "2019",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit3133-computer-iii-spreadsheets-supplementary-exam-2017-2018",
@@ -2055,7 +2173,30 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit4102-computergraphics-supplementary-exam-2017-2018",
+  "title": "Computergraphics: Supplementary Exam, August 2018",
+  "unitCode": "BIT4102",
+  "unitTitle": "Computergraphics",
+  "unitSlug": "computergraphics",
+  "programme": "Bachelor of Business Information Technology",
+  "programmes": [
+   "Bachelor of Business Information Technology"
+  ],
+  "date": "August 2018",
+  "dateISO": "2018-08",
+  "year": "2018",
+  "sitting": "Supplementary Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit3107-database-systems-ii-supplementary-exam-2017-2018",
@@ -2077,7 +2218,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit3218-dessimination-of-information-supplementary-exam-2017-2018",
@@ -2100,7 +2242,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit4207-distributed-database-supplementary-exam-2017-2018",
@@ -2122,7 +2265,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit4209-distributed-system-supplementary-exam-2017-2018",
@@ -2143,7 +2287,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit3115-establishing-and-managing-community-ict-centres-supplementary-exam-2017-2018",
@@ -2165,7 +2310,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit2102-fundamentals-of-internet-supplementary-exam-2017-2018",
@@ -2187,7 +2333,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit3219-geographical-sources-of-information-and-services-supplementary-exam-2017-2018",
@@ -2210,28 +2357,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
- },
- {
-  "slug": "bht2202-hospitality-information-system-main-exam-2018-2019",
-  "title": "Hospitality Information System: Main Exam, December 2018",
-  "unitCode": "BHT2202",
-  "unitTitle": "Hospitality Information System",
-  "unitSlug": "hospitality-information-system",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "December 2018",
-  "dateISO": "2018-12",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit4206-ict-in-business-and-society-supplementary-exam-2017-2018",
@@ -2254,7 +2381,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit4110-information-consulting-supplementary-exam-2017-2018",
@@ -2276,7 +2404,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit1204-information-in-society-exam-2017-2018",
@@ -2298,7 +2427,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit3220-information-literacy-supplementary-exam-2017-2018",
@@ -2321,7 +2451,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit1205-internet-and-information-main-exam-2017-2018",
@@ -2343,7 +2474,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit1106-introduction-to-computer-applications-supplementary-exam-2017-2018",
@@ -2366,7 +2498,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit1102-introduction-to-computer-programming-and-algorithms-supplementary-exam-2017-2018",
@@ -2388,7 +2521,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit1202-introduction-to-web-design-and-development-supplementary-exam-2017-2018",
@@ -2410,7 +2544,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit4107-mobile-application-development-supplementary-exam-2017-2018",
@@ -2431,7 +2566,190 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit3204-network-main-exam-2020-2021",
+  "title": "Network: Main Exam, April 2021",
+  "unitCode": "BIT3204",
+  "unitTitle": "Network",
+  "unitSlug": "network",
+  "programme": "BBIT · BIT",
+  "programmes": [
+   "BBIT",
+   "BIT"
+  ],
+  "date": "April 2021",
+  "dateISO": "2021-04",
+  "year": "2021",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit3204-network-management-main-exam-2020-2021",
+  "title": "Network Management: Main Exam, January 2021",
+  "unitCode": "BIT3204",
+  "unitTitle": "Network Management",
+  "unitSlug": "network-management",
+  "programme": "BBIT · BSCIS",
+  "programmes": [
+   "BBIT",
+   "BSCIS"
+  ],
+  "date": "January 2021",
+  "dateISO": "2021-01",
+  "year": "2021",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 4,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit3204-network-management-main-exam-2019-2020",
+  "title": "Network Management: Main Exam, December 2020",
+  "unitCode": "BIT3204",
+  "unitTitle": "Network Management",
+  "unitSlug": "network-management",
+  "programme": "Bachelor of Business in Information Technology",
+  "programmes": [
+   "Bachelor of Business in Information Technology"
+  ],
+  "date": "December 2020",
+  "dateISO": "2020-12",
+  "year": "2020",
+  "sitting": "Main Exam",
+  "duration": "",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit3204-network-management-main-exam-2018-2019-3",
+  "title": "Network Management: Main Exam, 22 August 2019",
+  "unitCode": "BIT3204",
+  "unitTitle": "Network Management",
+  "unitSlug": "network-management",
+  "programme": "BBIT · BIT",
+  "programmes": [
+   "BBIT",
+   "BIT"
+  ],
+  "date": "22 August 2019",
+  "dateISO": "2019-08-22",
+  "year": "2019",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit3204-network-management-main-exam-2018-2019-2",
+  "title": "Network Management: Main Exam, April 2019",
+  "unitCode": "BIT3204",
+  "unitTitle": "Network Management",
+  "unitSlug": "network-management",
+  "programme": "Bachelor of Science in Information Technology",
+  "programmes": [
+   "Bachelor of Science in Information Technology"
+  ],
+  "date": "April 2019",
+  "dateISO": "2019-04",
+  "year": "2019",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 4,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit3204-network-management-main-exam-2018-2019",
+  "title": "Network Management: Main Exam, December 2018",
+  "unitCode": "BIT3204",
+  "unitTitle": "Network Management",
+  "unitSlug": "network-management",
+  "programme": "BBIT · BIT · BIS",
+  "programmes": [
+   "BBIT",
+   "BIT",
+   "BIS"
+  ],
+  "date": "December 2018",
+  "dateISO": "2018-12",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bits204-network-management-main-exam-2013-2019",
+  "title": "Network Management: Main Exam, December 2018",
+  "unitCode": "BITS204",
+  "unitTitle": "Network Management",
+  "unitSlug": "network-management",
+  "programme": "Bachelor of Science in Information Technology",
+  "programmes": [
+   "Bachelor of Science in Information Technology"
+  ],
+  "date": "December 2018",
+  "dateISO": "2018-12",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 3,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit3204-network-management-supplementary-exam-2017-2018",
+  "title": "Network Management: Supplementary Exam, August 2018",
+  "unitCode": "BIT3204",
+  "unitTitle": "Network Management",
+  "unitSlug": "network-management",
+  "programme": "BBIT · BIT",
+  "programmes": [
+   "BBIT",
+   "BIT"
+  ],
+  "date": "August 2018",
+  "dateISO": "2018-08",
+  "year": "2018",
+  "sitting": "Supplementary Exam",
+  "duration": "2 Hours",
+  "questions": 4,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit4205-network-programming-supplementary-exam-2017-2018",
@@ -2452,7 +2770,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit3106-object-oriented-programming-main-exam-2017-2018",
@@ -2474,7 +2793,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit3106-object-oriented-programming-i-supplementary-exam-2017-2018",
@@ -2497,7 +2817,53 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit4104-security-and-cryptography-main-exam-2019",
+  "title": "Security and Cryptography: Main Exam, August 2019",
+  "unitCode": "BIT4104",
+  "unitTitle": "Security and Cryptography",
+  "unitSlug": "security-and-cryptography",
+  "programme": "BBITI · BIT",
+  "programmes": [
+   "BBITI",
+   "BIT"
+  ],
+  "date": "August 2019",
+  "dateISO": "2019-08",
+  "year": "2019",
+  "sitting": "Main Exam",
+  "duration": "2hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
+ },
+ {
+  "slug": "bit4104-security-and-cryptography-main-exam-2017-2041",
+  "title": "Security and Cryptography: Main Exam, August 2018",
+  "unitCode": "BIT4104",
+  "unitTitle": "Security and Cryptography",
+  "unitSlug": "security-and-cryptography",
+  "programme": "BBIT",
+  "programmes": [
+   "BBIT"
+  ],
+  "date": "August 2018",
+  "dateISO": "2018-08",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 4,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "IT and Computing",
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit4104-security-and-cryptography-supplementary-exam-2017-2018",
@@ -2519,7 +2885,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit1208-structured-programming-supplementary-exam-2017-2018",
@@ -2541,7 +2908,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "IT and Computing",
-  "categorySlug": "it-and-computing"
+  "categorySlug": "it-and-computing",
+  "section": "it"
  },
  {
   "slug": "bit4101-business-data-mining-and-ware-housing-supplementary-exam-2017-2018",
@@ -2562,7 +2930,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
   "slug": "bit2202-business-system-analysis-and-design-supplementary-exam-2017-2018",
@@ -2585,32 +2954,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
- },
- {
-  "slug": "bed1109-economic-development-main-exam-2018-2019-2",
-  "title": "Economic Development: Main Exam, August 2019",
-  "unitCode": "BED1109",
-  "unitTitle": "Economic Development",
-  "unitSlug": "economic-development",
-  "programme": "BEC · BECF · BECS · BBM · BCOM",
-  "programmes": [
-   "BEC",
-   "BECF",
-   "BECS",
-   "BBM",
-   "BCOM"
-  ],
-  "date": "August 2019",
-  "dateISO": "2019-08",
-  "year": "2019",
-  "sitting": "Main Exam",
-  "duration": "",
-  "questions": 4,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
   "slug": "bed1109-economic-development-main-exam-2018-2019",
@@ -2635,31 +2980,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
- },
- {
-  "slug": "bed1109-economic-develo-ment-1-main-exam-2020-2021-2",
-  "title": "Economic Develo�ment 1: Main Exam, 74 April 2021",
-  "unitCode": "BED1109",
-  "unitTitle": "Economic Develo�ment 1",
-  "unitSlug": "economic-develo-ment-1",
-  "programme": "BECF · BECS · BSFS · BEC",
-  "programmes": [
-   "BECF",
-   "BECS",
-   "BSFS",
-   "BEC"
-  ],
-  "date": "74 April 2021",
-  "dateISO": "2021-04-74",
-  "year": "2021",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 4,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
   "slug": "bed1109-economic-develo-ment-1-main-exam-2020-2021",
@@ -2683,7 +3005,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
   "slug": "bit4204-electronic-commerce-supplementary-exam-2017-2018",
@@ -2704,7 +3027,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
   "slug": "bit3216-electronic-records-management-supplementary-exam-2017-2018",
@@ -2727,133 +3051,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
- },
- {
-  "slug": "bht2201-front-office-operations-ii-main-exam-2018-2019-2",
-  "title": "Front Office Operations II: Main Exam, 11 December 2018",
-  "unitCode": "BHT2201",
-  "unitTitle": "Front Office Operations II",
-  "unitSlug": "front-office-operations-ii",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
- },
- {
-  "slug": "bht2201-front-office-operations-ii-main-exam-2018-2019-3",
-  "title": "Front Office Operations II: Main Exam, 11 December 2018",
-  "unitCode": "BHT2201",
-  "unitTitle": "Front Office Operations II",
-  "unitSlug": "front-office-operations-ii",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
- },
- {
-  "slug": "bht2201-front-office-operations-ii-main-exam-2018-2019",
-  "title": "Front Office Operations II: Main Exam, 11 December 2018",
-  "unitCode": "BHT2201",
-  "unitTitle": "Front Office Operations II",
-  "unitSlug": "front-office-operations-ii",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
- },
- {
-  "slug": "bht3202-housekeeping-and-laundry-operations-main-exam-2018-2019-2",
-  "title": "Housekeeping and Laundry Operations: Main Exam, 11 December 2018",
-  "unitCode": "BHT3202",
-  "unitTitle": "Housekeeping and Laundry Operations",
-  "unitSlug": "housekeeping-and-laundry-operations",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
- },
- {
-  "slug": "bht3202-housekeeping-and-laundry-operations-main-exam-2018-2019-3",
-  "title": "Housekeeping and Laundry Operations: Main Exam, 11 December 2018",
-  "unitCode": "BHT3202",
-  "unitTitle": "Housekeeping and Laundry Operations",
-  "unitSlug": "housekeeping-and-laundry-operations",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
- },
- {
-  "slug": "bht3202-housekeeping-and-laundry-operations-main-exam-2018-2019",
-  "title": "Housekeeping and Laundry Operations: Main Exam, 11 December 2018",
-  "unitCode": "BHT3202",
-  "unitTitle": "Housekeeping and Laundry Operations",
-  "unitSlug": "housekeeping-and-laundry-operations",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
   "slug": "bit3212-introduction-to-logistics-fundamentals-and-processes-supplementary-exam-2017-2018",
@@ -2875,7 +3074,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
   "slug": "bit3217-management-of-registries-supplementary-exam-2017-2018",
@@ -2898,7 +3098,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
   "slug": "bit2108-organization-of-knowledge-cataloguing-supplementary-exam-2017-2018",
@@ -2919,7 +3120,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
   "slug": "bit2109-organization-of-knowledge-classification-supplementary-exam-2017-2018",
@@ -2941,49 +3143,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
- },
- {
-  "slug": "bht4103-service-qualtiy-management-main-exam-2018-2019-2",
-  "title": "Service Qualtiy Management: Main Exam, 20 December 2018",
-  "unitCode": "BHT4103",
-  "unitTitle": "Service Qualtiy Management",
-  "unitSlug": "service-qualtiy-management",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "20 December 2018",
-  "dateISO": "2018-12-20",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
- },
- {
-  "slug": "bht4103-service-qualtiy-management-main-exam-2018-2019-3",
-  "title": "Service Qualtiy Management: Main Exam, 20 December 2018",
-  "unitCode": "BHT4103",
-  "unitTitle": "Service Qualtiy Management",
-  "unitSlug": "service-qualtiy-management",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "20 December 2018",
-  "dateISO": "2018-12-20",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
   "slug": "bht4103-service-qualtiy-management-main-exam-2018-2019",
@@ -3004,20 +3165,67 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
-  "slug": "bht1208-tour-operations-main-exam-2018-2019-2",
-  "title": "Tour Operations: Main Exam, 17 December 2018",
-  "unitCode": "BHT1208",
-  "unitTitle": "Tour Operations",
-  "unitSlug": "tour-operations",
-  "programme": "Bachelor of Science in Hospitality Management",
+  "slug": "bit4217-total-quality-management-main-exam-2021-2022",
+  "title": "Total Quality Management: Main Exam, December 2021",
+  "unitCode": "BIT4217",
+  "unitTitle": "Total Quality Management",
+  "unitSlug": "total-quality-management",
+  "programme": "BIT · BBIT",
   "programmes": [
-   "Bachelor of Science in Hospitality Management"
+   "BIT",
+   "BBIT"
   ],
-  "date": "17 December 2018",
-  "dateISO": "2018-12-17",
+  "date": "December 2021",
+  "dateISO": "2021-12",
+  "year": "2021",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 4,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Business and Economics",
+  "categorySlug": "business-and-economics",
+  "section": "business"
+ },
+ {
+  "slug": "bit4217-total-quality-management-main-exam-2020-2021",
+  "title": "Total Quality Management: Main Exam, April 2021",
+  "unitCode": "BIT4217",
+  "unitTitle": "Total Quality Management",
+  "unitSlug": "total-quality-management",
+  "programme": "Bachelor of Business Information Technology",
+  "programmes": [
+   "Bachelor of Business Information Technology"
+  ],
+  "date": "April 2021",
+  "dateISO": "2021-04",
+  "year": "2021",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Business and Economics",
+  "categorySlug": "business-and-economics",
+  "section": "business"
+ },
+ {
+  "slug": "bit4217-total-quality-management-main-exam-2017-2014",
+  "title": "Total Quality Management: Main Exam, August 2018",
+  "unitCode": "BIT4217",
+  "unitTitle": "Total Quality Management",
+  "unitSlug": "total-quality-management",
+  "programme": "BBIT · BSCIT",
+  "programmes": [
+   "BBIT",
+   "BSCIT"
+  ],
+  "date": "August 2018",
+  "dateISO": "2018-08",
   "year": "2018",
   "sitting": "Main Exam",
   "duration": "2 Hours",
@@ -3025,20 +3233,21 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
-  "slug": "bht1208-tour-operations-main-exam-2018-2019-3",
-  "title": "Tour Operations: Main Exam, 17 December 2018",
-  "unitCode": "BHT1208",
-  "unitTitle": "Tour Operations",
-  "unitSlug": "tour-operations",
-  "programme": "Bachelor of Science in Hospitality Management",
+  "slug": "bit4217-total-quality-management-in-it-main-exam-2017-2018",
+  "title": "Total Quality Management in IT: Main Exam, August 2018",
+  "unitCode": "BIT4217",
+  "unitTitle": "Total Quality Management in IT",
+  "unitSlug": "total-quality-management-in-it",
+  "programme": "BBIT",
   "programmes": [
-   "Bachelor of Science in Hospitality Management"
+   "BBIT"
   ],
-  "date": "17 December 2018",
-  "dateISO": "2018-12-17",
+  "date": "August 2018",
+  "dateISO": "2018-08",
   "year": "2018",
   "sitting": "Main Exam",
   "duration": "2 Hours",
@@ -3046,7 +3255,31 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
+ },
+ {
+  "slug": "bit4217-total-quality-management-for-it-main-exam-2018-2019",
+  "title": "Total Quality Management' for IT: Main Exam, 21 December 2018",
+  "unitCode": "BIT4217",
+  "unitTitle": "Total Quality Management' for IT",
+  "unitSlug": "total-quality-management-for-it",
+  "programme": "BBIT · BIT",
+  "programmes": [
+   "BBIT",
+   "BIT"
+  ],
+  "date": "21 December 2018",
+  "dateISO": "2018-12-21",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Business and Economics",
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
   "slug": "bht1208-tour-operations-main-exam-2018-2019",
@@ -3067,715 +3300,118 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "categorySlug": "business-and-economics",
+  "section": "business"
  },
  {
-  "slug": "bht1107-travel-agency-operations-main-exam-2018-2019-2",
-  "title": "Travel Agency Operations: Main Exam, 17 December 2018",
-  "unitCode": "BHT1107",
-  "unitTitle": "Travel Agency Operations",
-  "unitSlug": "travel-agency-operations",
-  "programme": "Bachelor of Science in Hospitality Management",
+  "slug": "bjl2201-advertising-main-exam-2019-2020",
+  "title": "Advertising: Main Exam, December 2019",
+  "unitCode": "BJL2201",
+  "unitTitle": "Advertising",
+  "unitSlug": "advertising",
+  "programme": "Bachelor of Art in Mass Media and Communication",
   "programmes": [
-   "Bachelor of Science in Hospitality Management"
+   "Bachelor of Art in Mass Media and Communication"
   ],
-  "date": "17 December 2018",
-  "dateISO": "2018-12-17",
-  "year": "2018",
+  "date": "December 2019",
+  "dateISO": "2019-12",
+  "year": "2019",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 5,
+  "questions": 4,
   "complete": true,
   "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
+  "group": "Media and Communication",
+  "categorySlug": "media-and-communication",
+  "section": "science"
  },
  {
-  "slug": "bht1107-travel-agency-operations-main-exam-2018-2019-3",
-  "title": "Travel Agency Operations: Main Exam, 17 December 2018",
-  "unitCode": "BHT1107",
-  "unitTitle": "Travel Agency Operations",
-  "unitSlug": "travel-agency-operations",
-  "programme": "Bachelor of Science in Hospitality Management",
+  "slug": "bjl2201-advertising-main-exam-2017-2018",
+  "title": "Advertising: Main Exam, August 2018",
+  "unitCode": "BJL2201",
+  "unitTitle": "Advertising",
+  "unitSlug": "advertising",
+  "programme": "Bachelor of Arts in Mass Media and Communication",
   "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "17 December 2018",
-  "dateISO": "2018-12-17",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
- },
- {
-  "slug": "bht1107-travel-agency-operations-main-exam-2018-2019",
-  "title": "Travel Agency Operations: Main Exam, 17 December 2018",
-  "unitCode": "BHT1107",
-  "unitTitle": "Travel Agency Operations",
-  "unitSlug": "travel-agency-operations",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "17 December 2018",
-  "dateISO": "2018-12-17",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Business and Economics",
-  "categorySlug": "business-and-economics"
- },
- {
-  "slug": "bht2109-airfare-and-ticketing-supplementary-exam-2017-2018",
-  "title": "Airfare and Ticketing: Supplementary Exam, August 2018",
-  "unitCode": "BHT2109",
-  "unitTitle": "Airfare and Ticketing",
-  "unitSlug": "airfare-and-ticketing",
-  "programme": "Bachelor of Travel and Tourism Management",
-  "programmes": [
-   "Bachelor of Travel and Tourism Management"
+   "Bachelor of Arts in Mass Media and Communication"
   ],
   "date": "August 2018",
   "dateISO": "2018-08",
   "year": "2018",
-  "sitting": "Supplementary Exam",
+  "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 5,
+  "questions": 3,
   "complete": true,
   "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
+  "group": "Media and Communication",
+  "categorySlug": "media-and-communication",
+  "section": "science"
  },
  {
-  "slug": "bht2212-domestic-and-international-tourism-main-exam-2018-2019-2",
-  "title": "Domestic and International Tourism: Main Exam, 20 December 2018",
-  "unitCode": "BHT2212",
-  "unitTitle": "Domestic and International Tourism",
-  "unitSlug": "domestic-and-international-tourism",
-  "programme": "Bachelor of Science in Travel and Tourism Management",
+  "slug": "bjl3201-communication-research-main-exam-2020-2021",
+  "title": "Communication Research: Main Exam, January 2021",
+  "unitCode": "BJL3201",
+  "unitTitle": "Communication Research",
+  "unitSlug": "communication-research",
+  "programme": "Bachelor of Mass Media and Communication",
   "programmes": [
-   "Bachelor of Science in Travel and Tourism Management"
+   "Bachelor of Mass Media and Communication"
   ],
-  "date": "20 December 2018",
-  "dateISO": "2018-12-20",
-  "year": "2018",
+  "date": "January 2021",
+  "dateISO": "2021-01",
+  "year": "2021",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 5,
+  "questions": 4,
   "complete": true,
   "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
+  "group": "Media and Communication",
+  "categorySlug": "media-and-communication",
+  "section": "science"
  },
  {
-  "slug": "bht2212-domestic-and-international-tourism-main-exam-2018-2019-3",
-  "title": "Domestic and International Tourism: Main Exam, 20 December 2018",
-  "unitCode": "BHT2212",
-  "unitTitle": "Domestic and International Tourism",
-  "unitSlug": "domestic-and-international-tourism",
-  "programme": "Bachelor of Science in Travel and Tourism Management",
+  "slug": "bjl3201-communication-research-main-exam-2017-2018",
+  "title": "Communication Research: Main Exam, August 2018",
+  "unitCode": "BJL3201",
+  "unitTitle": "Communication Research",
+  "unitSlug": "communication-research",
+  "programme": "Bachelor of Arts in Mass Media and Communication",
   "programmes": [
-   "Bachelor of Science in Travel and Tourism Management"
-  ],
-  "date": "20 December 2018",
-  "dateISO": "2018-12-20",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht2212-domestic-and-international-tourism-main-exam-2018-2019",
-  "title": "Domestic and International Tourism: Main Exam, 20 December 2018",
-  "unitCode": "BHT2212",
-  "unitTitle": "Domestic and International Tourism",
-  "unitSlug": "domestic-and-international-tourism",
-  "programme": "Bachelor of Science in Travel and Tourism Management",
-  "programmes": [
-   "Bachelor of Science in Travel and Tourism Management"
-  ],
-  "date": "20 December 2018",
-  "dateISO": "2018-12-20",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1108-east-africa-flora-and-fauna-main-exam-2018-2019-2",
-  "title": "East Africa Flora and Fauna: Main Exam, 14 December 2018",
-  "unitCode": "BHT1108",
-  "unitTitle": "East Africa Flora and Fauna",
-  "unitSlug": "east-africa-flora-and-fauna",
-  "programme": "Bachelor of Science in Travel and Tourism Management",
-  "programmes": [
-   "Bachelor of Science in Travel and Tourism Management"
-  ],
-  "date": "14 December 2018",
-  "dateISO": "2018-12-14",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1108-east-africa-flora-and-fauna-main-exam-2018-2019-3",
-  "title": "East Africa Flora and Fauna: Main Exam, 14 December 2018",
-  "unitCode": "BHT1108",
-  "unitTitle": "East Africa Flora and Fauna",
-  "unitSlug": "east-africa-flora-and-fauna",
-  "programme": "Bachelor of Science in Travel and Tourism Management",
-  "programmes": [
-   "Bachelor of Science in Travel and Tourism Management"
-  ],
-  "date": "14 December 2018",
-  "dateISO": "2018-12-14",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1108-east-africa-flora-and-fauna-main-exam-2018-2019",
-  "title": "East Africa Flora and Fauna: Main Exam, 14 December 2018",
-  "unitCode": "BHT1108",
-  "unitTitle": "East Africa Flora and Fauna",
-  "unitSlug": "east-africa-flora-and-fauna",
-  "programme": "Bachelor of Science in Travel and Tourism Management",
-  "programmes": [
-   "Bachelor of Science in Travel and Tourism Management"
-  ],
-  "date": "14 December 2018",
-  "dateISO": "2018-12-14",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht4101-food-and-beverage-control-main-exam-2018-2019-2",
-  "title": "Food and Beverage Control: Main Exam, 13 December 2018",
-  "unitCode": "BHT4101",
-  "unitTitle": "Food and Beverage Control",
-  "unitSlug": "food-and-beverage-control",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "13 December 2018",
-  "dateISO": "2018-12-13",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht4101-food-and-beverage-control-main-exam-2018-2019-3",
-  "title": "Food and Beverage Control: Main Exam, 13 December 2018",
-  "unitCode": "BHT4101",
-  "unitTitle": "Food and Beverage Control",
-  "unitSlug": "food-and-beverage-control",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "13 December 2018",
-  "dateISO": "2018-12-13",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht4101-food-and-beverage-control-main-exam-2018-2019",
-  "title": "Food and Beverage Control: Main Exam, 13 December 2018",
-  "unitCode": "BHT4101",
-  "unitTitle": "Food and Beverage Control",
-  "unitSlug": "food-and-beverage-control",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "13 December 2018",
-  "dateISO": "2018-12-13",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1102-food-and-beverage-service-theory-i-main-exam-2018-2019",
-  "title": "Food and Beverage Service Theory I: Main Exam, December 2018",
-  "unitCode": "BHT1102",
-  "unitTitle": "Food and Beverage Service Theory I",
-  "unitSlug": "food-and-beverage-service-theory-i",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "December 2018",
-  "dateISO": "2018-12",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1101-food-production-theory-i-main-exam-2018-2019-2",
-  "title": "Food Production Theory I: Main Exam, 14 December 2018",
-  "unitCode": "BHT1101",
-  "unitTitle": "Food Production Theory I",
-  "unitSlug": "food-production-theory-i",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "14 December 2018",
-  "dateISO": "2018-12-14",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1101-food-production-theory-i-main-exam-2018-2019-3",
-  "title": "Food Production Theory I: Main Exam, 14 December 2018",
-  "unitCode": "BHT1101",
-  "unitTitle": "Food Production Theory I",
-  "unitSlug": "food-production-theory-i",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "14 December 2018",
-  "dateISO": "2018-12-14",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1101-food-production-theory-i-main-exam-2018-2019",
-  "title": "Food Production Theory I: Main Exam, 14 December 2018",
-  "unitCode": "BHT1101",
-  "unitTitle": "Food Production Theory I",
-  "unitSlug": "food-production-theory-i",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "14 December 2018",
-  "dateISO": "2018-12-14",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1103-introduction-to-hospitality-and-tourism-main-exam-2018-2019-3",
-  "title": "Introduction to Hospitality and Tourism: Main Exam, 14 December 2018",
-  "unitCode": "BHT1103",
-  "unitTitle": "Introduction to Hospitality and Tourism",
-  "unitSlug": "introduction-to-hospitality-and-tourism",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "14 December 2018",
-  "dateISO": "2018-12-14",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1103-introduction-to-hospitality-and-tourism-main-exam-2018-2019-5",
-  "title": "Introduction to Hospitality and Tourism: Main Exam, 14 December 2018",
-  "unitCode": "BHT1103",
-  "unitTitle": "Introduction to Hospitality and Tourism",
-  "unitSlug": "introduction-to-hospitality-and-tourism",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "14 December 2018",
-  "dateISO": "2018-12-14",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1103-introduction-to-hospitality-and-tourism-main-exam-2018-2019",
-  "title": "Introduction to Hospitality and Tourism: Main Exam, 14 December 2018",
-  "unitCode": "BHT1103",
-  "unitTitle": "Introduction to Hospitality and Tourism",
-  "unitSlug": "introduction-to-hospitality-and-tourism",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "14 December 2018",
-  "dateISO": "2018-12-14",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1103-introduction-to-hospitality-and-tourism-main-exam-2018-2019-2",
-  "title": "Introduction to Hospitality and Tourism: Main Exam, 11 December 2018",
-  "unitCode": "BHT1103",
-  "unitTitle": "Introduction to Hospitality and Tourism",
-  "unitSlug": "introduction-to-hospitality-and-tourism",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1103-introduction-to-hospitality-and-tourism-main-exam-2018-2019-4",
-  "title": "Introduction to Hospitality and Tourism: Main Exam, 11 December 2018",
-  "unitCode": "BHT1103",
-  "unitTitle": "Introduction to Hospitality and Tourism",
-  "unitSlug": "introduction-to-hospitality-and-tourism",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1103-introduction-to-hospitality-and-tourism-main-exam-2018-2019-6",
-  "title": "Introduction to Hospitality and Tourism: Main Exam, 11 December 2018",
-  "unitCode": "BHT1103",
-  "unitTitle": "Introduction to Hospitality and Tourism",
-  "unitSlug": "introduction-to-hospitality-and-tourism",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "11 December 2018",
-  "dateISO": "2018-12-11",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht4208-legal-aspects-in-hospitality-and-tourism-main-exam-2018-2019-2",
-  "title": "Legal Aspects in Hospitality and Tourism: Main Exam, 13 December 2018",
-  "unitCode": "BHT4208",
-  "unitTitle": "Legal Aspects in Hospitality and Tourism",
-  "unitSlug": "legal-aspects-in-hospitality-and-tourism",
-  "programme": "Bacheor of Science in Hospitality Management / bachelor of / Science in Travel and Tourism Management",
-  "programmes": [],
-  "date": "13 December 2018",
-  "dateISO": "2018-12-13",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht4208-legal-aspects-in-hospitality-and-tourism-main-exam-2018-2019-3",
-  "title": "Legal Aspects in Hospitality and Tourism: Main Exam, 13 December 2018",
-  "unitCode": "BHT4208",
-  "unitTitle": "Legal Aspects in Hospitality and Tourism",
-  "unitSlug": "legal-aspects-in-hospitality-and-tourism",
-  "programme": "Bacheor of Science in Hospitality Management / bachelor of / Science in Travel and Tourism Management",
-  "programmes": [],
-  "date": "13 December 2018",
-  "dateISO": "2018-12-13",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht4208-legal-aspects-in-hospitality-and-tourism-main-exam-2018-2019",
-  "title": "Legal Aspects in Hospitality and Tourism: Main Exam, 13 December 2018",
-  "unitCode": "BHT4208",
-  "unitTitle": "Legal Aspects in Hospitality and Tourism",
-  "unitSlug": "legal-aspects-in-hospitality-and-tourism",
-  "programme": "Bacheor of Science in Hospitality Management / bachelor of / Science in Travel and Tourism Management",
-  "programmes": [],
-  "date": "13 December 2018",
-  "dateISO": "2018-12-13",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1209-survival-techniques-main-exam-2018-2019-2",
-  "title": "Survival Techniques: Main Exam, 13 December 2018",
-  "unitCode": "BHT1209",
-  "unitTitle": "Survival Techniques",
-  "unitSlug": "survival-techniques",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "13 December 2018",
-  "dateISO": "2018-12-13",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1209-survival-techniques-main-exam-2018-2019-3",
-  "title": "Survival Techniques: Main Exam, 13 December 2018",
-  "unitCode": "BHT1209",
-  "unitTitle": "Survival Techniques",
-  "unitSlug": "survival-techniques",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "13 December 2018",
-  "dateISO": "2018-12-13",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1209-survival-techniques-main-exam-2018-2019",
-  "title": "Survival Techniques: Main Exam, 13 December 2018",
-  "unitCode": "BHT1209",
-  "unitTitle": "Survival Techniques",
-  "unitSlug": "survival-techniques",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "13 December 2018",
-  "dateISO": "2018-12-13",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht3205-sustainable-tourism-main-exam-2018-2019",
-  "title": "Sustainable Tourism: Main Exam, December 2018",
-  "unitCode": "BHT3205",
-  "unitTitle": "Sustainable Tourism",
-  "unitSlug": "sustainable-tourism",
-  "programme": "Bachelor of Science in Hospitality Management",
-  "programmes": [
-   "Bachelor of Science in Hospitality Management"
-  ],
-  "date": "December 2018",
-  "dateISO": "2018-12",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht2213-tourism-product-development-supplementary-exam-2017-2018",
-  "title": "Tourism Product Development: Supplementary Exam, August 2018",
-  "unitCode": "BHT2213",
-  "unitTitle": "Tourism Product Development",
-  "unitSlug": "tourism-product-development",
-  "programme": "Bachelor of Travel and Tourism Management",
-  "programmes": [
-   "Bachelor of Travel and Tourism Management"
+   "Bachelor of Arts in Mass Media and Communication"
   ],
   "date": "August 2018",
   "dateISO": "2018-08",
   "year": "2018",
-  "sitting": "Supplementary Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1205-world-geography-and-touristic-destination-main-exam-2018-2019-2",
-  "title": "World Geography and Touristic Destination: Main Exam, 18 December 2018",
-  "unitCode": "BHT1205",
-  "unitTitle": "World Geography and Touristic Destination",
-  "unitSlug": "world-geography-and-touristic-destination",
-  "programme": "Bachelor of Science in Travel and Tourism Management",
-  "programmes": [
-   "Bachelor of Science in Travel and Tourism Management"
-  ],
-  "date": "18 December 2018",
-  "dateISO": "2018-12-18",
-  "year": "2018",
   "sitting": "Main Exam",
   "duration": "2 Hours",
   "questions": 5,
   "complete": true,
   "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
+  "group": "Media and Communication",
+  "categorySlug": "media-and-communication",
+  "section": "science"
  },
  {
-  "slug": "bht1205-world-geography-and-touristic-destination-main-exam-2018-2019-3",
-  "title": "World Geography and Touristic Destination: Main Exam, 18 December 2018",
-  "unitCode": "BHT1205",
-  "unitTitle": "World Geography and Touristic Destination",
-  "unitSlug": "world-geography-and-touristic-destination",
-  "programme": "Bachelor of Science in Travel and Tourism Management",
+  "slug": "bjl4207-community-media-main-exam-2021-2022",
+  "title": "Community Media: Main Exam, December 2021",
+  "unitCode": "BJL4207",
+  "unitTitle": "Community Media",
+  "unitSlug": "community-media",
+  "programme": "Bachelor of Arts in Mass Media and Communication",
   "programmes": [
-   "Bachelor of Science in Travel and Tourism Management"
+   "Bachelor of Arts in Mass Media and Communication"
   ],
-  "date": "18 December 2018",
-  "dateISO": "2018-12-18",
-  "year": "2018",
+  "date": "December 2021",
+  "dateISO": "2021-12",
+  "year": "2021",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
+  "questions": 2,
+  "complete": false,
   "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
- },
- {
-  "slug": "bht1205-world-geography-and-touristic-destination-main-exam-2018-2019",
-  "title": "World Geography and Touristic Destination: Main Exam, 18 December 2018",
-  "unitCode": "BHT1205",
-  "unitTitle": "World Geography and Touristic Destination",
-  "unitSlug": "world-geography-and-touristic-destination",
-  "programme": "Bachelor of Science in Travel and Tourism Management",
-  "programmes": [
-   "Bachelor of Science in Travel and Tourism Management"
-  ],
-  "date": "18 December 2018",
-  "dateISO": "2018-12-18",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Hospitality and Tourism",
-  "categorySlug": "hospitality-and-tourism"
+  "group": "Media and Communication",
+  "categorySlug": "media-and-communication",
+  "section": "science"
  },
  {
   "slug": "bit2105-collection-development-supplementary-exam-2017-2018",
@@ -3797,28 +3433,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Law and Social Sciences",
-  "categorySlug": "law-and-social-sciences"
- },
- {
-  "slug": "bed3216-conflict-resolution-and-main-exam-2021-2022-2",
-  "title": "Conflict Resolution &: Main Exam, 4 December 2021",
-  "unitCode": "BED3216",
-  "unitTitle": "Conflict Resolution &",
-  "unitSlug": "conflict-resolution-and",
-  "programme": "Bachelor of Social Work and Administration",
-  "programmes": [
-   "Bachelor of Social Work and Administration"
-  ],
-  "date": "4 December 2021",
-  "dateISO": "2021-12-04",
-  "year": "2021",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 4,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Law and Social Sciences",
-  "categorySlug": "law-and-social-sciences"
+  "categorySlug": "law-and-social-sciences",
+  "section": "social"
  },
  {
   "slug": "bed3216-conflict-resolution-and-main-exam-2021-2022",
@@ -3839,7 +3455,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Law and Social Sciences",
-  "categorySlug": "law-and-social-sciences"
+  "categorySlug": "law-and-social-sciences",
+  "section": "social"
  },
  {
   "slug": "bhiu1101-critical-thinking-and-logic-exam-2019",
@@ -3860,7 +3477,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Law and Social Sciences",
-  "categorySlug": "law-and-social-sciences"
+  "categorySlug": "law-and-social-sciences",
+  "section": "social"
  },
  {
   "slug": "bit2106-information-and-law-supplementary-exam-2017-2018",
@@ -3882,53 +3500,74 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Law and Social Sciences",
-  "categorySlug": "law-and-social-sciences"
+  "categorySlug": "law-and-social-sciences",
+  "section": "social"
  },
  {
-  "slug": "bby1103-cell-biology-and-genetics-main-exam-2024-2025-2",
-  "title": "Cell Biology and Genetics: Main Exam, 4 August 2025",
-  "unitCode": "BBY1103",
-  "unitTitle": "Cell Biology and Genetics",
-  "unitSlug": "cell-biology-and-genetics",
-  "programme": "BEDS · BSNE · BEDA",
+  "slug": "bse3208-introduction-to-kenyan-sign-language-main-exam-2020-2021",
+  "title": "Introduction to Kenyan Sign Language: Main Exam, 4 August 2021",
+  "unitCode": "BSE3208",
+  "unitTitle": "Introduction to Kenyan Sign Language",
+  "unitSlug": "introduction-to-kenyan-sign-language",
+  "programme": "Bachelor of Education in Special Needs Education",
   "programmes": [
-   "BEDS",
-   "BSNE",
-   "BEDA"
+   "Bachelor of Education in Special Needs Education"
   ],
-  "date": "4 August 2025",
-  "dateISO": "2025-08-04",
-  "year": "2025",
+  "date": "4 August 2021",
+  "dateISO": "2021-08-04",
+  "year": "2021",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 22,
+  "questions": 3,
   "complete": true,
   "university": "Mount Kenya University",
-  "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
+  "group": "Law and Social Sciences",
+  "categorySlug": "law-and-social-sciences",
+  "section": "social"
  },
  {
-  "slug": "bby1103-cell-biology-and-genetics-main-exam-2024-2025-3",
-  "title": "Cell Biology and Genetics: Main Exam, 4 August 2025",
-  "unitCode": "BBY1103",
-  "unitTitle": "Cell Biology and Genetics",
-  "unitSlug": "cell-biology-and-genetics",
-  "programme": "BEDS · BSNE · BEDA",
+  "slug": "bse3208-introduction-to-kenyan-sign-language-main-exam-2018-2019",
+  "title": "Introduction to Kenyan Sign Language: Main Exam, April 2019",
+  "unitCode": "BSE3208",
+  "unitTitle": "Introduction to Kenyan Sign Language",
+  "unitSlug": "introduction-to-kenyan-sign-language",
+  "programme": "Bachelor of Education in Special Needs",
   "programmes": [
-   "BEDS",
-   "BSNE",
-   "BEDA"
+   "Bachelor of Education in Special Needs"
   ],
-  "date": "4 August 2025",
-  "dateISO": "2025-08-04",
-  "year": "2025",
+  "date": "April 2019",
+  "dateISO": "2019-04",
+  "year": "2019",
   "sitting": "Main Exam",
   "duration": "2 Hours",
-  "questions": 22,
+  "questions": 4,
   "complete": true,
   "university": "Mount Kenya University",
-  "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
+  "group": "Law and Social Sciences",
+  "categorySlug": "law-and-social-sciences",
+  "section": "social"
+ },
+ {
+  "slug": "bse3208-introduction-to-kenyan-sign-language-and-total-main-exam-2018-2019",
+  "title": "Introduction to Kenyan Sign Language and Total: Main Exam, August 2019",
+  "unitCode": "BSE3208",
+  "unitTitle": "Introduction to Kenyan Sign Language and Total",
+  "unitSlug": "introduction-to-kenyan-sign-language-and-total",
+  "programme": "Bachelor of Education in Special Needs",
+  "programmes": [
+   "Bachelor of Education in Special Needs"
+  ],
+  "date": "August 2019",
+  "dateISO": "2019-08",
+  "year": "2019",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 2,
+  "complete": false,
+  "university": "Mount Kenya University",
+  "group": "Law and Social Sciences",
+  "categorySlug": "law-and-social-sciences",
+  "section": "social"
  },
  {
   "slug": "bby1103-cell-biology-and-genetics-main-exam-2024-2025",
@@ -3951,49 +3590,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
- },
- {
-  "slug": "bby1103-cell-biology-and-genetics-main-exam-2018-2019-2",
-  "title": "Cell Biology and Genetics: Main Exam, 19 December 2018",
-  "unitCode": "BBY1103",
-  "unitTitle": "Cell Biology and Genetics",
-  "unitSlug": "cell-biology-and-genetics",
-  "programme": "Bachelor of Education Science",
-  "programmes": [
-   "Bachelor of Education Science"
-  ],
-  "date": "19 December 2018",
-  "dateISO": "2018-12-19",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 4,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
- },
- {
-  "slug": "bby1103-cell-biology-and-genetics-main-exam-2018-2019-3",
-  "title": "Cell Biology and Genetics: Main Exam, 19 December 2018",
-  "unitCode": "BBY1103",
-  "unitTitle": "Cell Biology and Genetics",
-  "unitSlug": "cell-biology-and-genetics",
-  "programme": "Bachelor of Education Science",
-  "programmes": [
-   "Bachelor of Education Science"
-  ],
-  "date": "19 December 2018",
-  "dateISO": "2018-12-19",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 4,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
+  "categorySlug": "science-and-engineering",
+  "section": "science"
  },
  {
   "slug": "bby1103-cell-biology-and-genetics-main-exam-2018-2019",
@@ -4014,49 +3612,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
- },
- {
-  "slug": "bch2202-chemical-thermodynamics-main-exam-2018-2019-2",
-  "title": "Chemical Thermodynamics: Main Exam, 3 December 2018",
-  "unitCode": "BCH2202",
-  "unitTitle": "Chemical Thermodynamics",
-  "unitSlug": "chemical-thermodynamics",
-  "programme": "Bachelor of Education Science",
-  "programmes": [
-   "Bachelor of Education Science"
-  ],
-  "date": "3 December 2018",
-  "dateISO": "2018-12-03",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 3,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
- },
- {
-  "slug": "bch2202-chemical-thermodynamics-main-exam-2018-2019-3",
-  "title": "Chemical Thermodynamics: Main Exam, 3 December 2018",
-  "unitCode": "BCH2202",
-  "unitTitle": "Chemical Thermodynamics",
-  "unitSlug": "chemical-thermodynamics",
-  "programme": "Bachelor of Education Science",
-  "programmes": [
-   "Bachelor of Education Science"
-  ],
-  "date": "3 December 2018",
-  "dateISO": "2018-12-03",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 3,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
+  "categorySlug": "science-and-engineering",
+  "section": "science"
  },
  {
   "slug": "bch2202-chemical-thermodynamics-main-exam-2018-2019",
@@ -4077,7 +3634,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
+  "categorySlug": "science-and-engineering",
+  "section": "science"
  },
  {
   "slug": "bch3203-chemistry-of-aromatic-compounds-supplementary-exam-2017-2018",
@@ -4098,7 +3656,30 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
+  "categorySlug": "science-and-engineering",
+  "section": "science"
+ },
+ {
+  "slug": "bma1106-foundation-mathematics-main-exam-2018-2019",
+  "title": "Foundation Mathematics: Main Exam, December 2018",
+  "unitCode": "BMA1106",
+  "unitTitle": "Foundation Mathematics",
+  "unitSlug": "foundation-mathematics",
+  "programme": "Bachelor of Information Technology and Bachelor of",
+  "programmes": [
+   "Bachelor of Information Technology and Bachelor of"
+  ],
+  "date": "December 2018",
+  "dateISO": "2018-12",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 3,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Science and Engineering",
+  "categorySlug": "science-and-engineering",
+  "section": "science"
  },
  {
   "slug": "bit3112-indexing-abstracting-and-thesaurus-construction-supplementary-exam-2017-2018",
@@ -4120,29 +3701,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
- },
- {
-  "slug": "bch1103-principles-of-inorganic-chemistry-main-exam-2018-2019-3",
-  "title": "Principles of Inorganic Chemistry: Main Exam, 16 December 2018",
-  "unitCode": "BCH1103",
-  "unitTitle": "Principles of Inorganic Chemistry",
-  "unitSlug": "principles-of-inorganic-chemistry",
-  "programme": "BND · BEET",
-  "programmes": [
-   "BND",
-   "BEET"
-  ],
-  "date": "16 December 2018",
-  "dateISO": "2018-12-16",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 4,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
+  "categorySlug": "science-and-engineering",
+  "section": "science"
  },
  {
   "slug": "bch1103-principles-of-inorganic-chemistry-main-exam-2018-2019",
@@ -4164,7 +3724,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
+  "categorySlug": "science-and-engineering",
+  "section": "science"
  },
  {
   "slug": "bit2211-social-science-information-sources-and-service-supplementary-exam-2017-2018",
@@ -4186,7 +3747,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Science and Engineering",
-  "categorySlug": "science-and-engineering"
+  "categorySlug": "science-and-engineering",
+  "section": "science"
  },
  {
   "slug": "bch3103-comparative-of-s-and-p-block-letters-supplementary-exam-2017-2018",
@@ -4207,7 +3769,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Other Units",
-  "categorySlug": "other-units"
+  "categorySlug": "other-units",
+  "section": "science"
  },
  {
   "slug": "bch4102-comparative-study-of-trasition-elements-supplementary-exam-2017-2018",
@@ -4228,53 +3791,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Other Units",
-  "categorySlug": "other-units"
- },
- {
-  "slug": "bcm1203-first-aid-and-emergency-response-main-exam-2020-2021-2",
-  "title": "First Aid and Emergency Response: Main Exam, 14 January 2021",
-  "unitCode": "BCM1203",
-  "unitTitle": "First Aid and Emergency Response",
-  "unitSlug": "first-aid-and-emergency-response",
-  "programme": "Diploma in Community Oral Health · Diploma in Community Health · Diploma in Clinical Medicine",
-  "programmes": [
-   "Diploma in Community Oral Health",
-   "Diploma in Community Health",
-   "Diploma in Clinical Medicine"
-  ],
-  "date": "14 January 2021",
-  "dateISO": "2021-01-14",
-  "year": "2021",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 11,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Other Units",
-  "categorySlug": "other-units"
- },
- {
-  "slug": "bcm1203-first-aid-and-emergency-response-main-exam-2020-2021-3",
-  "title": "First Aid and Emergency Response: Main Exam, 14 January 2021",
-  "unitCode": "BCM1203",
-  "unitTitle": "First Aid and Emergency Response",
-  "unitSlug": "first-aid-and-emergency-response",
-  "programme": "Diploma in Community Oral Health · Diploma in Community Health · Diploma in Clinical Medicine",
-  "programmes": [
-   "Diploma in Community Oral Health",
-   "Diploma in Community Health",
-   "Diploma in Clinical Medicine"
-  ],
-  "date": "14 January 2021",
-  "dateISO": "2021-01-14",
-  "year": "2021",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 11,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Other Units",
-  "categorySlug": "other-units"
+  "categorySlug": "other-units",
+  "section": "science"
  },
  {
   "slug": "bcm1203-first-aid-and-emergency-response-main-exam-2020-2021",
@@ -4297,7 +3815,95 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Other Units",
-  "categorySlug": "other-units"
+  "categorySlug": "other-units",
+  "section": "science"
+ },
+ {
+  "slug": "bla1115-integrated-english-exam-2017-2018",
+  "title": "Integrated English |: Exam, April 2018",
+  "unitCode": "BLA1115",
+  "unitTitle": "Integrated English |",
+  "unitSlug": "integrated-english",
+  "programme": "",
+  "programmes": [],
+  "date": "April 2018",
+  "dateISO": "2018-04",
+  "year": "2018",
+  "sitting": "Exam",
+  "duration": "2 Hours",
+  "questions": 4,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Other Units",
+  "categorySlug": "other-units",
+  "section": "science"
+ },
+ {
+  "slug": "bla1115-integrated-english-i-main-exam-2020-2021",
+  "title": "Integrated English I: Main Exam, August 2021",
+  "unitCode": "BLA1115",
+  "unitTitle": "Integrated English I",
+  "unitSlug": "integrated-english-i",
+  "programme": "BECD · BEPO",
+  "programmes": [
+   "BECD",
+   "BEPO"
+  ],
+  "date": "August 2021",
+  "dateISO": "2021-08",
+  "year": "2021",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 3,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Other Units",
+  "categorySlug": "other-units",
+  "section": "science"
+ },
+ {
+  "slug": "bla1115-integrated-english-i-main-exam-2018-2019",
+  "title": "Integrated English I: Main Exam, 57 December 2018",
+  "unitCode": "BLA1115",
+  "unitTitle": "Integrated English I",
+  "unitSlug": "integrated-english-i",
+  "programme": "Bachelor of Education .",
+  "programmes": [
+   "Bachelor of Education ."
+  ],
+  "date": "57 December 2018",
+  "dateISO": "2018-12-57",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 5,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Other Units",
+  "categorySlug": "other-units",
+  "section": "science"
+ },
+ {
+  "slug": "bec2204-lifeskills-in-ecs-main-exam-2017-2018",
+  "title": "Lifeskills in Ecs: Main Exam, August 2018",
+  "unitCode": "BEC2204",
+  "unitTitle": "Lifeskills in Ecs",
+  "unitSlug": "lifeskills-in-ecs",
+  "programme": "Bachelor of Education in Early Childhood",
+  "programmes": [
+   "Bachelor of Education in Early Childhood"
+  ],
+  "date": "August 2018",
+  "dateISO": "2018-08",
+  "year": "2018",
+  "sitting": "Main Exam",
+  "duration": "2 Hours",
+  "questions": 3,
+  "complete": true,
+  "university": "Mount Kenya University",
+  "group": "Other Units",
+  "categorySlug": "other-units",
+  "section": "science"
  },
  {
   "slug": "bma2103-linear-algeba-i-supplementary-exam-2017-2018",
@@ -4323,7 +3929,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Other Units",
-  "categorySlug": "other-units"
+  "categorySlug": "other-units",
+  "section": "science"
  },
  {
   "slug": "bma2108-ordinary-differential-equation-i-main-exam-2018-2019-2",
@@ -4348,99 +3955,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Other Units",
-  "categorySlug": "other-units"
- },
- {
-  "slug": "bma2108-ordinary-differential-equation-i-main-exam-2018-2019-4",
-  "title": "Ordinary Differential Equation I: Main Exam, 17 December 2018",
-  "unitCode": "BMA2108",
-  "unitTitle": "Ordinary Differential Equation I",
-  "unitSlug": "ordinary-differential-equation-i",
-  "programme": "BAS · BEDS · BEDA · BSS · BPEP",
-  "programmes": [
-   "BAS",
-   "BEDS",
-   "BEDA",
-   "BSS",
-   "BPEP"
-  ],
-  "date": "17 December 2018",
-  "dateISO": "2018-12-17",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Other Units",
-  "categorySlug": "other-units"
- },
- {
-  "slug": "bma2108-ordinary-differential-equation-i-main-exam-2018-2019-6",
-  "title": "Ordinary Differential Equation I: Main Exam, 17 December 2018",
-  "unitCode": "BMA2108",
-  "unitTitle": "Ordinary Differential Equation I",
-  "unitSlug": "ordinary-differential-equation-i",
-  "programme": "BAS · BEDS · BEDA · BSS · BPEP",
-  "programmes": [
-   "BAS",
-   "BEDS",
-   "BEDA",
-   "BSS",
-   "BPEP"
-  ],
-  "date": "17 December 2018",
-  "dateISO": "2018-12-17",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Other Units",
-  "categorySlug": "other-units"
- },
- {
-  "slug": "bma2108-ordinary-differential-equation-i-main-exam-2018-2019-3",
-  "title": "Ordinary Differential Equation I: Main Exam, 3 December 2018",
-  "unitCode": "BMA2108",
-  "unitTitle": "Ordinary Differential Equation I",
-  "unitSlug": "ordinary-differential-equation-i",
-  "programme": "Bachelor of Education (science)",
-  "programmes": [
-   "Bachelor of Education (science)"
-  ],
-  "date": "3 December 2018",
-  "dateISO": "2018-12-03",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Other Units",
-  "categorySlug": "other-units"
- },
- {
-  "slug": "bma2108-ordinary-differential-equation-i-main-exam-2018-2019-5",
-  "title": "Ordinary Differential Equation I: Main Exam, 3 December 2018",
-  "unitCode": "BMA2108",
-  "unitTitle": "Ordinary Differential Equation I",
-  "unitSlug": "ordinary-differential-equation-i",
-  "programme": "Bachelor of Education (science)",
-  "programmes": [
-   "Bachelor of Education (science)"
-  ],
-  "date": "3 December 2018",
-  "dateISO": "2018-12-03",
-  "year": "2018",
-  "sitting": "Main Exam",
-  "duration": "2 Hours",
-  "questions": 5,
-  "complete": true,
-  "university": "Mount Kenya University",
-  "group": "Other Units",
-  "categorySlug": "other-units"
+  "categorySlug": "other-units",
+  "section": "science"
  },
  {
   "slug": "bma2108-ordinary-differential-equation-i-main-exam-2018-2019",
@@ -4461,7 +3977,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Other Units",
-  "categorySlug": "other-units"
+  "categorySlug": "other-units",
+  "section": "science"
  },
  {
   "slug": "bma2108-ordinary-differential-equations-i-supplementary-exam-2017-2018",
@@ -4480,7 +3997,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Other Units",
-  "categorySlug": "other-units"
+  "categorySlug": "other-units",
+  "section": "science"
  },
  {
   "slug": "bch2207-theory-of-spectroscopic-methods-main-exam-2018-2019",
@@ -4501,7 +4019,8 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Other Units",
-  "categorySlug": "other-units"
+  "categorySlug": "other-units",
+  "section": "science"
  },
  {
   "slug": "bch2207-theory-of-spectroscopic-methods-supplementary-exam-2017-2018",
@@ -4522,6 +4041,7 @@
   "complete": true,
   "university": "Mount Kenya University",
   "group": "Other Units",
-  "categorySlug": "other-units"
+  "categorySlug": "other-units",
+  "section": "science"
  }
 ]

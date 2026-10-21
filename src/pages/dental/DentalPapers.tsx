@@ -2,12 +2,15 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, FileText, Search, X } from "lucide-react";
-import { PAPER_INDEX, paperPath, type PaperMeta } from "@/lib/dentalPapers";
+import { PAPER_INDEX as ALL_INDEX, paperPath, type PaperMeta } from "@/lib/dentalPapers";
+import { useSection } from "@/lib/sections";
 import { supabase } from "@/integrations/supabase/client";
 
-/** /dental/papers: every dental past paper, grouped by unit, newest first, with a search. */
+/** /<section>/papers: every past paper of the section, grouped by unit, newest first, with a search. */
 export default function DentalPapers() {
   const [params] = useSearchParams();
+  const sec = useSection();
+  const PAPER_INDEX = useMemo(() => ALL_INDEX.filter((p) => p.section === sec.slug), [sec.slug]);
   const [q, setQ] = useState(() => params.get("q") ?? "");
   const [group, setGroup] = useState("");
   const [year, setYear] = useState(() => params.get("year") ?? "");
@@ -39,9 +42,9 @@ export default function DentalPapers() {
   return (
     <main className="mx-auto max-w-3xl px-4 pb-24 pt-8 sm:px-6 sm:pt-12">
       <Helmet>
-        <title>Dental past papers: Mount Kenya University Dental Sciences | Ompath Study</title>
+        <title>{`All ${sec.name} past papers with answers | Ompath Study`}</title>
         <meta name="description" content="Dental Sciences past papers typed out to read and practise: human physiology, anatomy, oral health and more, by unit, with the paper laid out as it was printed." />
-        <link rel="canonical" href="https://www.ompathstudy.com/dental/papers" />
+        <link rel="canonical" href={`https://www.ompathstudy.com/${sec.slug}/papers`} />
       </Helmet>
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Dental</p>
       <h1 className="mt-1 font-serif text-3xl font-bold sm:text-4xl">Past papers</h1>

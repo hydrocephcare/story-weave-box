@@ -1,0 +1,120 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bma1106-foundation-mathematics-main-exam-2018-2019",
+ "title": "Foundation Mathematics: Main Exam, December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Physical and Mathematical Sciences",
+ "programme": "Bachelor of Information Technology and Bachelor of / Business Information Technology",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BMA1106",
+ "unitTitle": "Foundation Mathematics",
+ "date": "December 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "{30 marks)",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following terms as used in set theory ; * i Power set * � . is ll. Null sets lil. Universal set iv. Disjoint sets V. Infinite sets",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Given the following sets determine the sets defined by the given operations; A={e, f,g,2@,k,m},B = {e,@i.n}C = {g,%i, } i. {AuB} ii. {AuBuC} ill. | P{ALBoC} | iv. {AnrAc} v. [{AcB}u{ArC} |",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Using the first principle to evaluate f'x if f(x)= 3x2+2x+3 (S Marks) 24",
+       "marks": 3
+      },
+      {
+       "l": "d",
+       "text": "Evaluate f(x) for f(x) =Inx** x3- x",
+       "marks": 5
+      },
+      {
+       "l": "e",
+       "text": "Solve for x in the equation below 10*=e2*- 1,"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Evaluate f 2xcos3x dx"
+      },
+      {
+       "l": "b",
+       "text": "In a class of 48 students 18 students take Chemistry,27 takes Physics and 30 students takes Biology.13 students takes both Physics and Biology while 14 students takes both Chemistry and Physics.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Present the above information on a venn diagram ul) How many students takes Biology only iil) If Chemistry and Physics are taught by the same teacher how many papers did he mark at the end of the term"
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "The area ofa rectangular piece of land is given by In(e*x3).Calculate the value ofx that will give the maximum area."
+      },
+      {
+       "l": "d",
+       "text": "A hockey team is to be selected from a group of 7 men and 9 women. Ifa team is made of 5 men and 6 women, calculate how many ways the selection can be done _ . -"
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "2",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Evaluate |, & x? dx 2 5 -4"
+      },
+      {
+       "l": "b",
+       "text": "Find the inverse of A given that A=[4 6 ---- 6] 48 4"
+      },
+      {
+       "l": "c",
+       "text": "Differentiate between an injective function from a surjective function."
+      },
+      {
+       "l": "d",
+       "text": "A farmer is to fence the three sides of his paddock using 4000m long mesh wire .Calculate the area he can enclose"
+      }
+     ],
+     "id": "q3"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12",
+ "dateLabel": "December 2018",
+ "programmes": [
+  "Bachelor of Information Technology and Bachelor of"
+ ],
+ "categorySlug": "science-and-engineering",
+ "category": "Science and Engineering",
+ "unitSlug": "foundation-mathematics"
+}

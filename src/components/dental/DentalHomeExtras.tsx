@@ -4,14 +4,17 @@ import { Bookmark, CheckCheck, Eye, EyeOff, Layers } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import DentalAnswer from "@/components/dental/DentalAnswer";
 import DentalCards, { type DentalCard } from "@/components/dental/DentalCards";
-import { PAPER_INDEX, paperPath } from "@/lib/dentalPapers";
+import { PAPER_INDEX as ALL_INDEX, paperPath } from "@/lib/dentalPapers";
+import { useSection } from "@/lib/sections";
 import { DONE, SAVED, getList, setRatings, getRatings, studyStats, type Rating } from "@/lib/dentalStore";
 
 const show = (q: string) => q.replace(/\n?ANSWER THIS PART ONLY:\s*/g, " ").replace(/^Question \d*:\s*/, "").replace(/\(see the part\)\s*/g, "").replace(/\s+/g, " ").trim();
-const title = (slug: string) => { const p = PAPER_INDEX.find((x) => x.slug === slug); return p ? `${p.unitTitle} · ${p.date}` : slug; };
+const title = (slug: string) => { const p = ALL_INDEX.find((x) => x.slug === slug); return p ? `${p.unitTitle} · ${p.date}` : slug; };
 
 /** What a returning student sees on the dental home: today's question, their progress, saved papers, the questions they missed, and the topics across all papers. */
 export default function DentalHomeExtras() {
+  const sec = useSection();
+  const PAPER_INDEX = ALL_INDEX.filter((p) => p.section === sec.slug);
   const [tick, setTick] = useState(0);
   const [daily, setDaily] = useState<{ question: string; answer: string } | null>(null);
   const [dailyOpen, setDailyOpen] = useState(false);
@@ -27,17 +30,19 @@ export default function DentalHomeExtras() {
     let on = true;
     void (async () => {
       try {
-        const { data } = await (supabase as any).from("paper_answers").select("question, answer").not("answer", "is", null).limit(300);
-        const rows = ((data ?? []) as { question: string; answer: string }[]).filter((r) => r.question.length < 220);
+        const { data } = await (supabase as any).from("paper_answers").select("slug, question, answer").not("answer", "is", null).limit(300);
+        const mine = new Set(PAPER_INDEX.map((p) => p.slug));
+        const rows = ((data ?? []) as { slug: string; question: string; answer: string }[]).filter((r) => mine.has(r.slug) && r.question.length < 220);
         if (on && rows.length) setDaily(rows[Math.floor(Date.now() / 86400000) % rows.length]);
-        const t = await (supabase as any).from("paper_seo").select("topics");
-        const all = ((t.data ?? []) as { topics: string[] }[]).flatMap((r) => r.topics ?? []);
+        const t = await (supabase as any).from("paper_seo").select("slug, topics");
+        const mineT = new Set(PAPER_INDEX.map((p) => p.slug));
+        const all = ((t.data ?? []) as { slug: string; topics: string[] }[]).filter((r) => mineT.has(r.slug)).flatMap((r) => r.topics ?? []);
         const count = new Map<string, number>(); for (const x of all) count.set(x, (count.get(x) ?? 0) + 1);
         if (on) setTopics([...count.entries()].sort((a, b) => b[1] - a[1]).slice(0, 18).map(([x]) => x));
       } catch { /* the page works without these */ }
     })();
     return () => { on = false; };
-  }, []);
+  }, [sec.slug]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const review = async () => {
     const out: DentalCard[] = [];
@@ -78,7 +83,7 @@ export default function DentalHomeExtras() {
       {topics.length > 0 && (
         <section className="mt-10" aria-label="Topics">
           <h2 className="font-serif text-xl font-bold">Topics across the papers</h2>
-          <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5 text-[15px]">{topics.map((t) => <Link key={t} to={`/dental/papers?q=${encodeURIComponent(t)}`} className="font-semibold text-primary hover:underline">{t}</Link>)}</p>
+          <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5 text-[15px]">{topics.map((t) => <Link key={t} to={`/${sec.slug}/papers?q=${encodeURIComponent(t)}`} className="font-semibold text-primary hover:underline">{t}</Link>)}</p>
         </section>
       )}
       <DentalCards open={cardsOpen} onOpenChange={setCardsOpen} cards={cards} ratings={{}} rate={rateReview} />

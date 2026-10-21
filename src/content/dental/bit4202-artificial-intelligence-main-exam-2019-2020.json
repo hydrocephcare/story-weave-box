@@ -1,0 +1,183 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4202-artificial-intelligence-main-exam-2019-2020",
+ "title": "Artificial Intelligence: Main Exam, December 2019",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Science in Information Technology / Regular.",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BIT4202",
+ "unitTitle": "Artificial Intelligence",
+ "date": "December 2019",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO -. FROM SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "(COMPULSORY)",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the concept of bounded rationality as used in artificial intelligence. , .",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "List and explain four basic symbols used on first order logic. Give an example in each case. ;",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Define an intelligent agent. =~",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "Outline the goal, percepts, sensors, effectors, action and environment for a medical diagnosis agent.",
+       "marks": 6
+      },
+      {
+       "l": "e",
+       "text": "Differentiate between supervised learning and unsupervised learning. Eee ayess Navy pens rea itis eerie tFALLS ed RSet TON S iaS a ee Peace eR PL net ne e e a terne ape oars N einLe keR r eCM PEKCaeet NeaeeN) aac ce en :",
+       "marks": 4
+      },
+      {
+       "l": "f",
+       "text": "Explain briefly the difference between the following environment types, :",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Accessible and inaccessible il) Deterministic and non-deterministic"
+        }
+       ]
+      },
+      {
+       "l": "g",
+       "text": "Discuss the methods of reasoning listed below:                        :",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Induction"
+        },
+        {
+         "l": "ii",
+         "text": "Deduction ili) Abduction iv) Analogy"
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B (Answer any TWO Questions) �",
+     "marks": 6
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss SIX branches of Artificial Intelligence,-"
+      },
+      {
+       "l": "b",
+       "text": "Explain FIVE elements used in defining a search problem. ; c) Using a valid example, discuss the following heuristic search method detail",
+       "marks": 5,
+       "parts": [
+        {
+         "l": "i",
+         "text": "A* search algorithm"
+        },
+        {
+         "l": "ii",
+         "text": "Greedy search                                         :",
+         "marks": 9
+        }
+       ]
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using an example of a reasoning scenario, differentiate between Modus Ponens and Modus Tollens reasoning techniques. ; .",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "List and explain how an Agent is different from other software.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Discuss the following Uninformed search rethods(Blind) \" -- iy Depth-first search ii) Breadth-first search \" iii) Iteractive deepening search",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Discuss the problem solving techniques in Al Riki consi aie erro ieee gegen RE IR V SEIT O Tn eee tr mee me eee: PaperOne . ae"
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "_a) Define business intelligence. b) Discuss the mobile agent architecture with the help of a diagram c) Differentiate between deductive inference and inductive inference. d) Translate the English statements below to predicate logic. i) You can fool some of the people all of the time. ii) You can fool all of the people some of the time. iii) All purple mushrooms are poisonous, iIvV) No purple mushroom is poisonous.",
+     "marks": 8,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe a good search solution. e b) Discuss the application of Al to E-commerce. c) Describe FIVE characteristics of an Intelligent Agent. d) For each of the following propositions, construct a truth table and state whether the proposition is valid or satisfiable.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "(pV nq) sq li) (pV q)=>(pAq) ili) (p= q) (nq > 7p) iv) (p > q) => (q =p) m . ERRATIC SEL Meee eH EOL a STN OT RT NLT LTS TET Te SEY ET E tenerae s ser al wag tn res e sent E PACA oie intent enn tearmerrenteeeeny"
+        }
+       ]
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2019-12",
+ "dateLabel": "December 2019",
+ "programmes": [
+  "Bachelor of Science in Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "artificial-intelligence"
+}

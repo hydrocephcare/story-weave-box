@@ -8,6 +8,7 @@ import NotificationsBell from "./NotificationsBell";
 import HeaderSearch from "./HeaderSearch";
 import TrackSwitch from "./TrackSwitch";
 import paperCategories from "@/data/dentalCategories.json";
+import { SECTIONS } from "@/lib/sections";
 import { useAuth } from "@/hooks/useAuth";
 import { useAllYears, useMyYear } from "@/hooks/useMyYear";
 
@@ -42,12 +43,14 @@ type Group = { label: string; items: Leaf[] };
 /** The whole menu as a tree: hover a heading for its list, hover an item with an arrow for its own list. On phones the same tree folds open in the side menu. */
 function buildMenu(isAdmin: boolean, years: readonly number[] = YEAR_OPTIONS, track: Track = "medicine"): Group[] {
   // the dental section is a separate site: its own short menu, none of the medical menus
-  if (track === "dental") {
+  if (track !== "medicine") {
+    const sec = SECTIONS.find((s) => s.slug === track) ?? SECTIONS[0];
+    const cats = (paperCategories as { slug: string; name: string }[]).filter((c) => sec.categories.includes(c.slug) && c.slug !== "other-units");
     const more: Leaf[] = [{ to: "/account", label: "Account", icon: UserRound }];
     if (isAdmin) more.push({ to: "/admin", label: "Admin", icon: Database });
     return [
-      { label: "Papers", items: [{ to: "/dental", label: "Papers home", icon: Home }, { to: "/dental/papers", label: "All past papers", icon: ListChecks }] },
-      { label: "Subjects", items: (paperCategories as { slug: string; name: string }[]).filter((c) => c.slug !== "other-units").map((c) => ({ to: `/dental/category/${c.slug}`, label: c.name, icon: BookOpen })) },
+      { label: sec.name, items: [{ to: `/${sec.slug}`, label: `${sec.name} home`, icon: Home }, { to: `/${sec.slug}/papers`, label: "All past papers", icon: ListChecks }] },
+      ...(cats.length > 1 ? [{ label: "Subjects", items: cats.map((c) => ({ to: `/${sec.slug}/category/${c.slug}`, label: c.name, icon: BookOpen })) }] : []),
       { label: "More", items: more },
     ];
   }

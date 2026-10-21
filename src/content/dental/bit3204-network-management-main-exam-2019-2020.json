@@ -1,0 +1,126 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3204-network-management-main-exam-2019-2020",
+ "title": "Network Management: Main Exam, December 2020",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / Enterprise Computing",
+ "programme": "Bachelor of Business in Information Technology / bachelor of / Science and Technology",
+ "examTitle": "University Examination 2019/2020",
+ "unitCode": "BIT3204",
+ "unitTitle": "Network Management",
+ "date": "December 2020",
+ "sitting": "Main Exam",
+ "duration": "",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO. (6 Marks)",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the characteristic of the HeMieettransrnission media a. Optical media . b. Coaxial cable c. Twisted pair cable"
+      },
+      {
+       "l": "b",
+       "text": "Describe four tools that can be used for network security cs) Define backup and explain its importance to an organization d) Describe the use of DHCP server in a network e) Differentiate between connection oriented and connectionless protocols f) List four functional areas of network management -- [s--ei--s-- mi--c EatE ert Esth peremeet,ars c SISA ACR Mh re ev Et a a ey oa te RL Slee ee Nr a eee er eachah amen Or ese et",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Differentiate between the following terms and commands used in computer networks Ipconfig/all and ping localhost DHCP and DNS OSI and TCP/IP models iv. Tracert and hostname -",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Name and Explain any three fundamental network design goals",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Describe three layers of network hierarchical model                                                                                                  -",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terms i. Network management system ii. | Network provisioning iii. Network node iv. Network Design v. | Network Address Translation"
+      },
+      {
+       "l": "b",
+       "text": "Differentiate between static IP-addressing and dynamic IP- addressing - Cc) What are the major advantages of STP over UTP? d) State four factors to consider when designing a physical network."
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "You are tasked to document a baseline for the network performance level ina company you are working for. Explain in cletail five network monitoring tools you would use to perform this task. Discuss at least three protocols at the internet layer of TCP/IP protocol suite highlighting their significance to the stack. ; Explain in detail the significance of the twisting in twisted-pair cable. Define the term routable protocols. � ~ Le SR Se reper ne te Bt poy re nth cen 7, RoN Ae S\"3 wt acct runes Nie tatarelatLiinteee.rs warble te Sheets ete ee erate aaeao SETS arin rer anita a ratte mera orersiea at aie A E orme mc rene nae ene a e mteynean glens Paper One Page 2",
+       "marks": 1
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 10,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terminologies as used in computer networks. . Protocol li. Packet ii, Datagram iv. Port Vv. IP address."
+      },
+      {
+       "l": "b",
+       "text": "Describe howa node conn a e ut c o t m e a d ti o c n all a y. network will acquire IP Configuration",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain any two most likely causes of bottlenecks in a network.",
+       "marks": 6
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2020-12",
+ "dateLabel": "December 2020",
+ "programmes": [
+  "Bachelor of Business in Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "network-management"
+}

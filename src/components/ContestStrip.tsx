@@ -40,5 +40,5 @@ function ContestStripInner() {
 
 /** The medical contest banner: not shown in the dental section. */
 export default function ContestStrip() {
-  return useTrack() === "dental" ? null : <ContestStripInner />;
+  return useTrack() !== "medicine" ? null : <ContestStripInner />;
 }

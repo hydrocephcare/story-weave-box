@@ -1,0 +1,100 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bla1115-integrated-english-exam-2017-2018",
+ "title": "Integrated English |: Exam, April 2018",
+ "university": "Mount Kenya University",
+ "school": "",
+ "department": "",
+ "programme": "",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BLA1115",
+ "unitTitle": "Integrated English |",
+ "date": "April 2018",
+ "sitting": "Exam",
+ "duration": "2 Hours",
+ "instructions": "> ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly describe the following in relation to language.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Interjections."
+        },
+        {
+         "l": "ii",
+         "text": "| Declarative and interrogative sentences."
+        },
+        {
+         "l": "iii",
+         "text": "Clause."
+        },
+        {
+         "l": "iv",
+         "text": "| Morpheme."
+        },
+        {
+         "l": "v",
+         "text": "Determiner."
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "State three functions of auxiliary verbs. -c) With examples, show the difference between regular and irregular verbs. d) State and explain 3 types of sentences giving examples in each case. :"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Using examples, analyze any five types of adverbs. - Question Three Steie and explain various causes of spelling errors in English.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss both the structural and the functional types of sentences.",
+     "marks": 10,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the various types of verbs."
+      },
+      {
+       "l": "b",
+       "text": "Discuss the various types of pronouns."
+      }
+     ],
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-04",
+ "dateLabel": "April 2018",
+ "programmes": [],
+ "categorySlug": "other-units",
+ "category": "Other Units",
+ "unitSlug": "integrated-english"
+}

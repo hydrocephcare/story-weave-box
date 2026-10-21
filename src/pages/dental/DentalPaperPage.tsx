@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Bookmark, Check, CheckCheck, ChevronRight, ClipboardCheck, Eye, EyeOff, FileText, Layers, Menu, Printer, Share2, Shuffle, Sparkles, Timer, X } from "lucide-react";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
@@ -12,6 +12,7 @@ import { openAI } from "@/lib/aiEvents";
 import { loadAnswers, loadSeo, type PaperSeo } from "@/lib/dentalAnswers";
 import { answerUnits } from "@/lib/dentalKeys";
 import { DONE, SAVED, getRatings, inList, setRatings, toggleList, type Rating } from "@/lib/dentalStore";
+import { SECTIONS, useSection } from "@/lib/sections";
 import { PAPER_INDEX, loadPaper, paperPath, questionCount, totalMarks, type DentalPaper, type PaperItem, type PaperPart } from "@/lib/dentalPapers";
 
 const SITE = "https://www.ompathstudy.com";
@@ -55,6 +56,10 @@ function AnswerArea({ k, text, answers, test, shown, toggle, ratings, rate, ask 
 /** One dental past paper, set out question by question with each answer straight under it, plus a button that shows the paper as it was printed. */
 export default function DentalPaperPage() {
   const { slug = "" } = useParams();
+  const urlSec = useSection();
+  const metaTop = PAPER_INDEX.find((p) => p.slug === slug);
+  const S = metaTop?.section ?? urlSec.slug;
+  const secName = SECTIONS.find((x) => x.slug === S)?.name ?? "Papers";
   const [paper, setPaper] = useState<DentalPaper | null | undefined>(undefined);
   const [view, setView] = useState(false);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -83,14 +88,15 @@ export default function DentalPaperPage() {
   }, [left === null, left === 0]); // eslint-disable-line react-hooks/exhaustive-deps
   const rate = (k: string, r: Rating) => setRatingsState((p) => { const n = { ...p, [k]: p[k] === r ? undefined : r }; setRatings(slug, n); return n; });
   const toggle = (k: string) => setShown((p) => { const n = new Set(p); if (n.has(k)) n.delete(k); else n.add(k); return n; });
-  const share = async () => { const data = { title: paper?.title ?? "Dental past paper", url: `${SITE}/dental/papers/${slug}` }; try { if (navigator.share) await navigator.share(data); else await navigator.clipboard.writeText(data.url); } catch { /* cancelled */ } };
+  const share = async () => { const data = { title: paper?.title ?? "Past paper", url: `${SITE}/${S}/papers/${slug}` }; try { if (navigator.share) await navigator.share(data); else await navigator.clipboard.writeText(data.url); } catch { /* cancelled */ } };
 
   const items = useMemo(() => (paper ? paper.pages.flatMap((pg) => pg.items) : []), [paper]);
   const units = useMemo(() => items.filter((it) => it.t === "q").flatMap((it) => answerUnits(it).map((u, i) => ({ ...u, text: it.parts?.length ? `${it.text} ${it.parts[i]?.l ?? ""}) ${it.parts[i]?.text ?? ""}`.replace(/\s+/g, " ").trim() : it.text }))), [items]);
   const ready = units.filter((u) => answers[u.key]).length;
 
+  if (metaTop && metaTop.section !== urlSec.slug) return <Navigate to={paperPath(slug)} replace />;
   if (paper === undefined) return <div className="mx-auto max-w-3xl px-5 py-16" aria-busy="true"><div className="h-8 w-2/3 animate-pulse rounded bg-muted" /><div className="mt-6 space-y-3">{[0, 1, 2, 3].map((i) => <div key={i} className="h-5 animate-pulse rounded bg-muted" />)}</div></div>;
-  if (paper === null) return <div className="mx-auto max-w-xl px-5 py-20 text-center"><h1 className="font-serif text-3xl font-bold">Paper not found</h1><Link to="/dental/papers" className="mt-5 inline-block font-bold text-primary hover:underline">All dental past papers →</Link></div>;
+  if (paper === null) return <div className="mx-auto max-w-xl px-5 py-20 text-center"><h1 className="font-serif text-3xl font-bold">Paper not found</h1><Link to={`/${S}/papers`} className="mt-5 inline-block font-bold text-primary hover:underline">All dental past papers →</Link></div>;
 
   // the paper's total is the sum of its section totals when printed; adding up the per-question marks would undercount where those are hidden
   const sectionMarks = items.filter((it) => it.t === "h").reduce((n, it) => n + (it.marks ?? 0), 0);
@@ -104,9 +110,9 @@ export default function DentalPaperPage() {
   const newer = at > 0 ? unitPapers[at - 1] : null, older = at >= 0 && at < unitPapers.length - 1 ? unitPapers[at + 1] : null;
   const progs = (paper.programmes?.length ? paper.programmes : [paper.programme]).filter(Boolean).join(" · ");
   const desc = (seo?.description || `${paper.unitTitle} (${paper.unitCode}) ${paper.sitting || "exam"} past paper from ${paper.university}${when ? `, ${when}` : ""}: ${q} questions${marks ? `, ${marks} marks` : ""}, set out question by question with model answers.`).replace(/\s+/g, " ");
-  const url = `${SITE}/dental/papers/${paper.slug}`;
+  const url = `${SITE}/${S}/papers/${paper.slug}`;
   const graph: unknown[] = [
-    { "@type": "BreadcrumbList", itemListElement: [["Dental", `${SITE}/dental`], [paper.category || "Past papers", `${SITE}/dental/category/${catSlug}`], [paper.unitTitle, `${SITE}/dental/units/${paper.unitSlug}`], [paper.title, url]].map(([name, item], i) => ({ "@type": "ListItem", position: i + 1, name, item })) },
+    { "@type": "BreadcrumbList", itemListElement: [[secName, `${SITE}/${S}`], [paper.category || "Past papers", `${SITE}/${S}/category/${catSlug}`], [paper.unitTitle, `${SITE}/${S}/units/${paper.unitSlug}`], [paper.title, url]].map(([name, item], i) => ({ "@type": "ListItem", position: i + 1, name, item })) },
     { "@type": "LearningResource", name: paper.title, description: desc, educationalLevel: progs, inLanguage: "en", learningResourceType: "Exam paper", keywords: seo?.keywords?.join(", "), about: seo?.topics, isAccessibleForFree: true, publisher: { "@type": "Organization", name: "Ompath Study", url: SITE }, url },
   ];
   const faq = units.filter((u) => answers[u.key]).slice(0, 10).map((u) => ({ "@type": "Question", name: u.text.slice(0, 300), acceptedAnswer: { "@type": "Answer", text: plain(answers[u.key]).slice(0, 700) } }));
@@ -148,23 +154,23 @@ export default function DentalPaperPage() {
         <meta name="description" content={desc.slice(0, 300)} />
         {seo?.keywords?.length ? <meta name="keywords" content={seo.keywords.join(", ")} /> : null}
         <link rel="canonical" href={url} />
-        <meta property="og:site_name" content="Ompath Study" /><meta property="og:title" content={`${paper.title} | Past paper with answers`} /><meta property="og:description" content={desc.slice(0, 200)} /><meta property="og:type" content="article" /><meta property="og:url" content={url} />
-        <meta name="twitter:card" content="summary" /><meta name="twitter:title" content={paper.title} /><meta name="twitter:description" content={desc.slice(0, 200)} />
+        <meta property="og:site_name" content="Ompath Study" /><meta property="og:title" content={`${paper.title} | Past paper with answers`} /><meta property="og:description" content={desc.slice(0, 200)} /><meta property="og:type" content="article" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:url" content={url} /><meta property="og:image" content={`${SITE}/api/note-card?title=${encodeURIComponent(paper.unitTitle)}&unit=${encodeURIComponent(`${paper.sitting || "Exam"} · ${when}`)}&kind=Past%20paper%20with%20answers`} /><meta name="twitter:image" content={`${SITE}/api/note-card?title=${encodeURIComponent(paper.unitTitle)}&unit=${encodeURIComponent(`${paper.sitting || "Exam"} · ${when}`)}&kind=Past%20paper%20with%20answers`} />
+        <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={paper.title} /><meta name="twitter:description" content={desc.slice(0, 200)} />
         <script type="application/ld+json">{JSON.stringify(ld)}</script>
       </Helmet>
       <header className="topic-hero relative isolate overflow-hidden border-b border-border/60">
         <HeroAurora about={`${paper.unitTitle} ${paper.category ?? ""}`} />
         <div className="mx-auto max-w-4xl px-5 pb-8 pt-8 sm:pb-12 sm:pt-12">
           <nav className="flex flex-wrap items-center gap-1 text-xs font-semibold text-muted-foreground" aria-label="Breadcrumb">
-            <Link to="/dental" className="hover:text-primary">Dental</Link><ChevronRight className="h-3 w-3" />
-            <Link to={`/dental/category/${catSlug}`} className="hover:text-primary">{paper.category || "Past papers"}</Link><ChevronRight className="h-3 w-3" />
-            <Link to={`/dental/units/${paper.unitSlug}`} className="text-foreground hover:text-primary">{paper.unitTitle}</Link>
+            <Link to={`/${S}`} className="hover:text-primary">{secName}</Link><ChevronRight className="h-3 w-3" />
+            <Link to={`/${S}/category/${catSlug}`} className="hover:text-primary">{paper.category || "Past papers"}</Link><ChevronRight className="h-3 w-3" />
+            <Link to={`/${S}/units/${paper.unitSlug}`} className="text-foreground hover:text-primary">{paper.unitTitle}</Link>
           </nav>
           <p className="mt-6 text-[11px] font-bold uppercase tracking-[0.16em] text-primary">{paper.university} · {paper.department || paper.school}</p>
           <h1 className="mt-2 max-w-3xl font-serif text-4xl font-bold leading-[1.08] text-foreground sm:text-6xl">{paper.unitTitle}</h1>
           <p className="mt-3 text-sm font-semibold text-muted-foreground">{paper.sitting || "Exam"}{when ? ` · ${when}` : ""} · {q} questions{marks ? ` · ${marks} marks` : ""}{paper.duration ? ` · ${paper.duration}` : ""}</p>
           {progs ? <p className="mt-4 max-w-3xl text-lg leading-[1.6] text-foreground/85 sm:text-xl">{progs}</p> : null}
-          {seo?.topics?.length ? <p className="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-sm"><span className="font-bold text-muted-foreground">Topics:</span>{seo.topics.map((t) => <Link key={t} to={`/dental/papers?q=${encodeURIComponent(t)}`} className="font-semibold text-primary hover:underline">{t}</Link>)}</p> : null}
+          {seo?.topics?.length ? <p className="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-sm"><span className="font-bold text-muted-foreground">Topics:</span>{seo.topics.map((t) => <Link key={t} to={`/${S}/papers?q=${encodeURIComponent(t)}`} className="font-semibold text-primary hover:underline">{t}</Link>)}</p> : null}
           <div className="mt-6 flex flex-wrap gap-2">
             <button type="button" onClick={() => setCardsOpen(true)} className={pill}><Layers className="h-4 w-4 text-primary" aria-hidden />Flashcards</button>
             <button type="button" onClick={() => { setTest(true); document.getElementById("paper-body")?.scrollIntoView({ behavior: "smooth" }); }} className={pill}><ClipboardCheck className="h-4 w-4 text-primary" aria-hidden />Test myself</button>
@@ -205,15 +211,15 @@ export default function DentalPaperPage() {
         </div>
         {ready < units.length && <p className="mt-10 text-sm text-muted-foreground">The remaining answers are being written and will appear here as they are ready.</p>}
 
-        {seo?.keywords?.length ? <section className="mt-10 print:hidden"><h2 className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Related searches</h2><p className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">{seo.keywords.slice(0, 8).map((k) => <Link key={k} to={`/dental/papers?q=${encodeURIComponent(k)}`} className="font-semibold text-primary hover:underline">{k}</Link>)}</p></section> : null}
+        {seo?.keywords?.length ? <section className="mt-10 print:hidden"><h2 className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">Related searches</h2><p className="mt-2 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">{seo.keywords.slice(0, 8).map((k) => <Link key={k} to={`/${S}/papers?q=${encodeURIComponent(k)}`} className="font-semibold text-primary hover:underline">{k}</Link>)}</p></section> : null}
 
         <section className="mt-12 border-t border-border pt-6">
           <h2 className="font-serif text-xl font-bold">More {paper.unitTitle}</h2>
-          <Link to={`/dental/units/${paper.unitSlug}`} className="mt-1 inline-block font-bold text-primary hover:underline">Questions that keep coming back in this unit →</Link>
+          <Link to={`/${S}/units/${paper.unitSlug}`} className="mt-1 inline-block font-bold text-primary hover:underline">Questions that keep coming back in this unit →</Link>
           {related.length > 0 && <ul className="mt-3 divide-y divide-border border-y border-border">{related.map((p) => <li key={p.slug}><Link to={paperPath(p.slug)} className="flex items-center justify-between gap-3 py-3 text-[15px] font-semibold hover:text-primary"><span>{p.sitting || "Exam"} · {p.date}</span><span className="text-xs font-normal text-muted-foreground">{p.questions} questions</span></Link></li>)}</ul>}
           {(newer || older) && <p className="mt-4 flex justify-between gap-4 text-sm font-bold print:hidden">{older ? <Link to={paperPath(older.slug)} className="text-primary hover:underline">← Older: {older.date}</Link> : <span />}{newer ? <Link to={paperPath(newer.slug)} className="text-primary hover:underline">Newer: {newer.date} →</Link> : <span />}</p>}
         </section>
-        <p className="mt-8"><Link to="/dental/papers" className="font-bold text-primary hover:underline">← All dental past papers</Link></p>
+        <p className="mt-8"><Link to={`/${S}/papers`} className="font-bold text-primary hover:underline">← All {secName} past papers</Link></p>
       </main>
 
       <button type="button" onClick={() => setView(true)} aria-label="See this paper as it was printed" className="fixed right-0 top-1/2 z-40 flex -translate-y-1/2 flex-col items-center gap-1 rounded-l-2xl bg-primary px-2.5 py-3 text-primary-foreground shadow-lg print:hidden">

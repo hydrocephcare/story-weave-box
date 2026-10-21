@@ -2,14 +2,15 @@
 // by the section they came in through). The dental track never shows medical menus and the medical track never shows dental ones.
 import { useEffect, useState } from "react";
 
-export type Track = "medicine" | "dental";
+export type Track = "medicine" | "dental" | "it" | "business" | "hospitality" | "social" | "science";
+export const TRACKS: Track[] = ["medicine", "dental", "it", "business", "hospitality", "social", "science"];
 const KEY = "ompath_track";
 
 /** Which track a profile's course belongs to. */
-export const trackFromCourse = (course: string | null | undefined): Track => (/dental|\bbds\b|oral health/i.test(String(course ?? "")) ? "dental" : "medicine");
+export const trackFromCourse = (course: string | null | undefined): Track => { const c = String(course ?? ""); return /dental|\bbds\b|oral health/i.test(c) ? "dental" : /information technology|computer|\bbit\b|bbit|software/i.test(c) ? "it" : /business|commerce|accounting|finance|economics|\bbcom\b|procurement|marketing/i.test(c) ? "business" : /hospitality|tourism|travel/i.test(c) ? "hospitality" : "medicine"; };
 
 export function getTrack(): Track {
-  try { return localStorage.getItem(KEY) === "dental" ? "dental" : "medicine"; } catch { return "medicine"; }
+  try { const v = localStorage.getItem(KEY) as Track | null; return v && TRACKS.includes(v) ? v : "medicine"; } catch { return "medicine"; }
 }
 
 export function setTrack(t: Track) {

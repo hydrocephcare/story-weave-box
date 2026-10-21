@@ -1,0 +1,106 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4104-security-and-cryptography-main-exam-2017-2041",
+ "title": "Security and Cryptography: Main Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bsc IT",
+ "examTitle": "University Examination 2017/2041",
+ "unitCode": "BIT4104",
+ "unitTitle": "Security and Cryptography",
+ "date": "Thur 23�\" August, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss Biometrics as the most strong form of access control. Support your answer with an example of three types of Biometrics.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Define the fallowing terms in relation to computer systems security(:6 Marks) i. Confidentiality ii. Integrity iti. Non-repudiation C) Briefly discuss SSL in relation to data security. d) As a computer security expert for MKU S n t a a m te e t t h w r o ee po s t a e f n e ti g a u l ar t d hr m e e a a ts su t r o e M s I . S ) List five qualities of an efficient cryptosystem. f) Define three security protocols that provide security to data in addition to facilitation of data and infermation exchange. g) Expand the following acronyms: Paper one oe hrc ter ag z Page 1 i. Backdoor ii. Cracker iii. Salt h) List four properties that can be used in an authentication system to vet the authorised system users.",
+       "marks": 4
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Asa security expert in Yahoo, discuss the need to implement digital signature in emails correspondences.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "In relation to a) above suggest alternative mitigations measures to ensure security of emails.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "You have been asked to do a risk assessment on all Airtel-Money resources suggest area where the risk assessment would concentrate and why? 6) Discuss the best passwords management practices in securing a system. c) Differentiate between the following authorised system. i, Centralised and decentralised. ii. Implicit and Explicit.",
+       "marks": 5
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "You have been hired as IT human firewall trainer to Excel Ltd. due to loopholes exploited by criminals to penetrate in their systems. Briefly discuss the training areas to bank employees to curb social engineering.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain in details how you would handle a cyber-attack incidence in the Hospital setup with bearing in mind that the information collected and stored in your organisation is highly confidential. (am SS TORT | Paper one _ Page a) Discuss the various access control measures and suggest various suitable implernentation areas for each, b) State 5 limitations of implementing a firewall in a system _",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Explain the importance of sound software testing in relation to reduction of systems vulnerability Covina ese : spoteemnnw cwtnttee wen on ene roc . as sahiiiestinis setit ree eser pe ep e emme eetn Paper one memes sigs",
+       "marks": 5
+      }
+     ],
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "security-and-cryptography"
+}

@@ -1,0 +1,149 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3204-network-management-main-exam-2018-2019",
+ "title": "Network Management: Main Exam, December 2018",
+ "university": "Mount Kenya University",
+ "school": "",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit / bis",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BIT3204",
+ "unitTitle": "Network Management",
+ "date": "December 2018",
+ "sitting": "Main Exam",
+ "duration": "",
+ "instructions": "> Attempt Question ONE and ANY other TWO Questions.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terms as used in Computer Networks i. Attenuation li. Bandwidth",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Distinguish between the following as used in Networks design i. Ring topology and a Star topology. ii. Intranet and Extranet",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Explain the purpose of the following protocols: i. Dynamic Host Configuration protocol (DHCP) i. Simple Network Management Protocol (SNMP) Paper One Page 1",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "With reference to the steps of network development distinguish between a logical topology and a physical topology",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "What are Denial of service attacks?.",
+       "marks": 2
+      },
+      {
+       "l": "f",
+       "text": "i) Why is it important to do site survey when planning for a network upgrade. : ii) Describe any three areas you would look at when conducting a site survey.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe any four business factors that influence network developrnent and expansion. _",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Computer networks can be classified as New or Existing networks. State any two questions for each case (New and Existing) you would ask the owner of the network before designing the network or upgrading their network. ' \"",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Discuss the four fundamental design goals that are considered by a network designer during the design phase of network development.",
+       "marks": 8
+      },
+      {
+       "l": "d",
+       "text": "Distinguish between logical addressing and physical addressing and state which layer of the OSI model each operates at?",
+       "marks": 4
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "A router is one of the primary devices used in Wide area networks: i. State two factors to consider before purchasing a router. ii. List the core function of a router iii. Differentiate between Dynamic and Static Routing",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "To provide adequate protection of network resources, the procedures and technologies that you deploy need to guarantee three things, Confidentiality, Integrity and Availability (CIA), briefly explain what each of these terms mean. D Reaiua sterr emana nautsascV areca uel r ean meeaiet tu tam partner pnin ees ease Basha DE etar SE es tatege hAySPoC NUAps on c er S/R e ee e ee nnn",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "What do you understand by the term Virtual LAN (VLAN)? Identify three . advantages one would get in implementing VLAN in an organization. (S Marks)"
+      },
+      {
+       "l": "d",
+       "text": "Explain the type of information delivered in response to an IPCONFIG/ALL. command request.",
+       "marks": 3
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "One of the major components of any Local area network (LAN) is the Network Operating System NOS: i. Define the term Network operating system (NOS) ii. List any four functions of a network operating system wos) iii. State ie three Network Operating Systems (NOS). iv. Discuss four factors will you consider before choosing a network operating system _ b) State the function of the following LAN devices: i. Switch - ii. | Network Interface card (NIC) . c) State which layer of the OSI model the two LAN Devices in question c above belong to. d) Outline the main function of the Network Address Translation (NAT)",
+       "marks": 2
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "ma) List any four benefits of the Active Directory \"%b) Distinguish between Private IP address and Public IP address c) Outline any three tools or applications used in securing a computer network . d) Explain any three considerations to make when buying local area network/ (LAN) devices. (6. Marks) Rd ittormetrammrsirccoseess est i IEA REE OT peteatctr tetsu L Lia Ld pi eo eageeemt eMRMS ERATESr a GN SLATE EITE OAR EON ee CAT NM SeEeggMaAaaR oaeERNR aYR nE M at R tit rR ene A coneR s rLe tEatean irneenm eceme N tasaEeAaEE Hed i a Paper One ;",
+     "marks": 6,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12",
+ "dateLabel": "December 2018",
+ "programmes": [
+  "BBIT",
+  "BIT",
+  "BIS"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "network-management"
+}

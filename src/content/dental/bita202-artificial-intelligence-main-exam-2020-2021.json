@@ -1,0 +1,200 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bita202-artificial-intelligence-main-exam-2020-2021",
+ "title": "Artificial Intelligence: Main Exam, August 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / BBIT",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BITA202",
+ "unitTitle": "Artificial Intelligence",
+ "date": "Mon 16tm Aug, 2021 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly describe supervised machine learning, with example."
+      },
+      {
+       "l": "b",
+       "text": "Briefly describe Breadth-First Search Algorithm?"
+      },
+      {
+       "l": "c",
+       "text": "Explain the following search conditions in relation to the searching as a problem solving technique",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Current state"
+        },
+        {
+         "l": "ii",
+         "text": "Goal state:"
+        },
+        {
+         "l": "iii",
+         "text": "The solution"
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "Define the following terms i",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Intelligence"
+        },
+        {
+         "l": "ii",
+         "text": "Artificial intelligence"
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Briefly explain rational agent? Oy PEST Peron Pare ek ee TTT eSAP PPM PPLE SRC ar PTS A Lee Se EM a EYLoee Li Paper One Page.1"
+      },
+      {
+       "l": "f",
+       "text": "State two advantages of Breadth First Search?"
+      },
+      {
+       "l": "g",
+       "text": "State two advantages of Depth First Search?"
+      },
+      {
+       "l": "h",
+       "text": "Explain the connection between V and 3 \"Everyone likes icecream\" is equivalent\", \"there is no one who does not like ice cream\" �",
+       "parts": [
+        {
+         "l": "i",
+         "text": "State the difference between Logic programming and PROLOG."
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the four properties for knowledge representation?"
+      },
+      {
+       "l": "b",
+       "text": "Define procedural and declarative knowledge"
+      },
+      {
+       "l": "c",
+       "text": "Describe structured knowledge representation?"
+      },
+      {
+       "l": "d",
+       "text": "Briefly describe fuzzy logic"
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "|",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly describe conditional probability"
+      },
+      {
+       "l": "b",
+       "text": "Define an expert system"
+      },
+      {
+       "l": "c",
+       "text": "What are the most important aspects of expert systems?"
+      },
+      {
+       "l": "d",
+       "text": "State and explain various characteristics of expert systems?  oe"
+      },
+      {
+       "l": "e",
+       "text": "State the role of a domain expert"
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe an expert system shell? OCIS Pee rT | Paper One Page 2"
+      },
+      {
+       "l": "b",
+       "text": "Discuss any four application areas of an expert system."
+      },
+      {
+       "l": "c",
+       "text": "By use of a diagram illustrate an agent                   --"
+      },
+      {
+       "l": "d",
+       "text": "List the criteria to measure the performance of different search strategies."
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the guidelines that are considered while planning for . knowledge Acquisition.",
+       "marks": 12
+      },
+      {
+       "l": "b",
+       "text": "What are the components of well-defined problems? Paper One Page 3",
+       "marks": 8
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2021-08",
+ "dateLabel": "August 2021",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "artificial-intelligence"
+}

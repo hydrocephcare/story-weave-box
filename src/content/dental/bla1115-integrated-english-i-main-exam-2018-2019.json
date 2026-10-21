@@ -1,0 +1,130 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bla1115-integrated-english-i-main-exam-2018-2019",
+ "title": "Integrated English I: Main Exam, 57 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Languages and Humanities",
+ "programme": "Bachelor of Education .",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BLA1115",
+ "unitTitle": "Integrated English I",
+ "date": "Wed 57 December, 2018 1.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer question ONE and any other TWO questions",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Distinguish the following terms by illustrating your answer:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Simple subordinators and complex subordinators."
+        },
+        {
+         "l": "ii",
+         "text": "Inflectional and derivational morphemes",
+         "marks": 4
+        },
+        {
+         "l": "iii",
+         "text": "| Noun phrase and verb phrase",
+         "marks": 4
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Highlight any five functions of an adjectival phrase.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Discuss two structural and two functional types of sentences. :",
+       "marks": 8
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss the prepositional phrase and its functions,",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss and explain any five nelling errors and their remedies. Paper One . Page i",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "dighlight any five functions of a noun phrase giving examples.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is a morpheme?      _",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "State the three criteria's that are clearly met by a morpheme.",
+       "marks": 9
+      },
+      {
+       "l": "c",
+       "text": "With examples discuss the following:-",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Prefix",
+         "marks": 9
+        },
+        {
+         "l": "ii",
+         "text": "Infix"
+        },
+        {
+         "l": "iii",
+         "text": "Suffix SS Se TE Oe BELG NIE TST ST SN SOESIEN YE RIESE SSRIS AR NES ET OEY SOT Paper One Page 2"
+        }
+       ]
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-57",
+ "dateLabel": "57 December 2018",
+ "programmes": [
+  "Bachelor of Education ."
+ ],
+ "categorySlug": "other-units",
+ "category": "Other Units",
+ "unitSlug": "integrated-english-i"
+}

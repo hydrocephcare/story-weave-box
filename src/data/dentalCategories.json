@@ -20,6 +20,11 @@
   "blurb": "Biostatistics, research methods and data analysis for health students."
  },
  {
+  "slug": "hospitality-and-tourism",
+  "name": "Hospitality and Tourism",
+  "blurb": "Hospitality, tourism, travel, catering and events units."
+ },
+ {
   "slug": "it-and-computing",
   "name": "IT and Computing",
   "blurb": "Programming, databases, networks, systems, software and the other information technology units."
@@ -33,11 +38,6 @@
   "slug": "education",
   "name": "Education",
   "blurb": "Teaching, curriculum, guidance and counselling, and the other education units."
- },
- {
-  "slug": "hospitality-and-tourism",
-  "name": "Hospitality and Tourism",
-  "blurb": "Hospitality, tourism, travel, catering and events units."
  },
  {
   "slug": "media-and-communication",

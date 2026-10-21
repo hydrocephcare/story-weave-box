@@ -70,7 +70,7 @@ serve(async (req) => {
     const { data: first } = await sb.from("paper_answers").select("slug").is("answer", null).lt("tries", 4).order("slug").order("idx").limit(1);
     if (!first?.length) return json({ success: true, status: "all answered", seo });
     const slug = first[0].slug;
-    const { data: rows } = await sb.from("paper_answers").select("qkey, unit, marks, question").eq("slug", slug).is("answer", null).lt("tries", 4).order("idx").limit(6);
+    const { data: rows } = await sb.from("paper_answers").select("qkey, unit, marks, question").eq("slug", slug).is("answer", null).lt("tries", 4).order("idx").limit(8);
     if (!rows?.length) return json({ success: true, status: "none" });
     const prompt = `UNIT: ${rows[0].unit}\n\n` + rows.map((r) => `ID ${r.qkey}${r.marks ? ` (${r.marks} marks)` : ""}:\n${r.question}`).join("\n\n");
     let answers: { id: string; answer: string }[] = [], err = "";

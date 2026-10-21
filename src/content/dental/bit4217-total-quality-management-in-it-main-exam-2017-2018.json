@@ -1,0 +1,148 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4217-total-quality-management-in-it-main-exam-2017-2018",
+ "title": "Total Quality Management in IT: Main Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bsc IT",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4217",
+ "unitTitle": "Total Quality Management in IT",
+ "date": "Fri 24tm August, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUEST F I R ON O S M I S N E S C E T C I T O I N ON B. A A . ND ANY OTHER TWO",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": ":",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Quality management is an important concept in strategic planning and a component of strategy. Explain. a _",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Examine the dimensions of service quality.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Process improvement is one of the key principles that influence success of TQM programs, extrapolate. |",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Evaluate various techniques that organizations can apply to identify customer expectat ions.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B (Answer any 2 questions)"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss how poor service can affect organizational performance.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Critically examine'why TQM has been considered as burdensome to _ organizations by some professiona!-",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Examine the limitations associated with benchmarking. _",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Analyze the main steps in the functioning of control charts as an instrument for quality management in the organization.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the fundamental principles of business process re-engineering (BPR)",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Analyze the concept of process management in the context of of Six sigma progamme implementation.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the key stages in the supplier development.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Examine the drivers of business process re-engineering (BPR) in business organizations. 4",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BBIT"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "total-quality-management-in-it"
+}

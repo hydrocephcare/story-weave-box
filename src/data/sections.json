@@ -1,0 +1,8 @@
+[
+  { "slug": "dental", "name": "Dental", "title": "Dental, oral health and community health", "blurb": "Dental technology, oral biology, community health and biostatistics past papers with model answers.", "categories": ["dental-technology", "basic-dental-sciences", "community-and-public-health", "biostatistics-and-research"] },
+  { "slug": "it", "name": "IT", "title": "Information technology and computing", "blurb": "Programming, databases, networks, systems and the other IT and computing past papers with model answers.", "categories": ["it-and-computing"] },
+  { "slug": "business", "name": "Business", "title": "Business, commerce and economics", "blurb": "Accounting, finance, marketing, management and economics past papers with model answers.", "categories": ["business-and-economics"] },
+  { "slug": "hospitality", "name": "Hospitality", "title": "Hospitality and tourism", "blurb": "Hospitality, tourism, travel, catering and events past papers with model answers.", "categories": ["hospitality-and-tourism"] },
+  { "slug": "social", "name": "Social Sciences and Law", "title": "Social sciences, law and education", "blurb": "Law, development studies, sociology, psychology and education past papers with model answers.", "categories": ["law-and-social-sciences", "education"] },
+  { "slug": "science", "name": "Science and Engineering", "title": "Science, engineering and more", "blurb": "Mathematics, chemistry, biology, engineering and other science past papers with model answers.", "categories": ["science-and-engineering", "health-sciences-and-pharmacy", "other-units"] }
+]

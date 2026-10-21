@@ -1,0 +1,151 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4102-computer-graphics-main-exam-2021",
+ "title": "Computer Graphics: Main Exam, December 2021",
+ "university": "Mount Kenya University",
+ "school": ". School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "BSCIT / bbit / ibscis",
+ "examTitle": "University Examination",
+ "unitCode": "BIT4102",
+ "unitTitle": "Computer Graphics",
+ "date": "Fri17tm Dec, 2021 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Deiine the following terms. | il) Computer graphics iil) Scalar iil) - Point ivl) Line",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "List four input devices of multimedia..    ,",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Briefly explain the term scan conversion.                .",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "Define refresh frame buffer.",
+       "marks": 2
+      },
+      {
+       "l": "e",
+       "text": "What is the quadric surfaces?",
+       "marks": 1,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Difference between CMY and HSV color models. | : 4 Marks) g) Explain the advantages of electrostatic plotters in computer graphics. rn) Define Keyframe systems as used in computer graphics. i) Briefly eethe basic aesrendering oe (i 3 be Paper is Page 1",
+         "marks": 2
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Distinguish between Greyscale frarne buffer and pseudo-color frame buffer.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "State two advantages and two disadvantages of each of the two opposite shape. represeniation.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Enumerate two advantages and two disaclvantages of motion capture.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "List four major elements of computer graphics.",
+       "marks": 4
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "\" e) Narne and explain essential application of computer-graphic? f) Differentiate between clipping and clipping window. g) What are the advantages of electrostatic plotters? h) Differentiate between lossy and lossless compression algorithms.",
+     "marks": 5,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Differentiate between parallel projections from perspective projection.",
+       "marks": 3
+      },
+      {
+       "l": "b",
+       "text": "What are the hardware devices used for computer graphics?",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Write brief notes on the following graphic file format. il) GIF iil) JPEG iil) TIFF ivl) MPEG vl) SVG",
+       "marks": 10
+      },
+      {
+       "l": "d",
+       "text": "Explain the two basic techniques used for producing color displays on a CRT. \"QUESTION FIVE a) Discuss the color lookup table as used in computer graphics. b) Briefly explain the basic graphics rendering pipeline. c) List /name two line drawing algorithms. Q Marks) d) Define polygon clipping. -- I EEO UT PRIS FIST I LTS LN EE TL INSEE Ks Bap ip ren IER}IC ceaN TARR em Page 2",
+       "marks": 2
+      },
+      {
+       "l": "e",
+       "text": "Write 2D and 3D scaling mairix.",
+       "marks": 2,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Explain with diagram the techniques of Raster Scan Display. 7 m LeU tig Magra vow nT ORAS Pe RUA RLS etyrsalee SE I TE TE =Paper Twoe SR TS TEMAS : Page 3 .",
+         "marks": 5
+        }
+       ]
+      }
+     ],
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2021-12",
+ "dateLabel": "December 2021",
+ "programmes": [
+  "BSCIT",
+  "BBIT",
+  "IBSCIS"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "computer-graphics"
+}

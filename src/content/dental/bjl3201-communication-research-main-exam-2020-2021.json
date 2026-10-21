@@ -1,0 +1,152 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bjl3201-communication-research-main-exam-2020-2021",
+ "title": "Communication Research: Main Exam, January 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Social Sciences",
+ "department": "Department of Journalism and Mass Communication",
+ "programme": "Bachelor of Mass Media and Communication",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BJL3201",
+ "unitTitle": "Communication Research",
+ "date": "Fri 22%? Jan 2021 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Differentiate between the following sets of concepts:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Conceptualization and operationalization"
+        },
+        {
+         "l": "ii",
+         "text": "Reliability and validity |"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Both pure and social sciences follow research process based on scientific method. Draw and describe a basic scientific method process framework."
+      },
+      {
+       "l": "c",
+       "text": "The eventual outcome of a research process is a research report. Briefly describe what goes into each part of a research report's outline."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Variables must clearly be defined to assure accurate measurement.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Distinguish between the following types of variables:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Independent and dependent variables                            ;",
+         "marks": 4
+        },
+        {
+         "l": "ii",
+         "text": "Control and intervening variables",
+         "marks": 12
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Discuss three types of relationships among variables \" QUESTION THREE Ekai's research topic states: \"the effectiveness of fear appealsfrom the Kenya's Ministry of Health daily Covid- 19 briefings.\" He develops his argument from the media reports portraying that Kenyansseem Not to be quite keenin heeding the ministry of health messages about this disease. The researcher intends to collect data' from-the general public. The research has three objectives :(1) To find out whether Kenyans can identify the fear appealsin the messages; (2)to explore success of the . fear appeal messages;(3) to explore failures of the fear appeal messages, On the basis of the topic and objectives, a) identify five ethical issues Ekai is likely to encounter b) Propose remedy for each of the ethical issue",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "State two popular types of questions usedin a research questionnaire",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "elect one of the types questionsin (a)above and:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "-- Justify three advantages",
+         "marks": 6
+        },
+        {
+         "l": "ii",
+         "text": "Justify three disadvantages",
+         "marks": 6
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "Provide six guidelines to questionnaire questions construction ~",
+       "marks": 6
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Sampling methods can be classified into two broad categories: probability and nonprobability methods. :",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain four probability sampling techniques \"b) Describe the procedure used when sampling using the following techniques:",
+       "marks": 8,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Snowball sampling",
+         "marks": 6
+        },
+        {
+         "l": "ii",
+         "text": "Purposive sampling",
+         "marks": 6
+        }
+       ]
+      }
+     ],
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2021-01",
+ "dateLabel": "January 2021",
+ "programmes": [
+  "Bachelor of Mass Media and Communication"
+ ],
+ "categorySlug": "media-and-communication",
+ "category": "Media and Communication",
+ "unitSlug": "communication-research"
+}

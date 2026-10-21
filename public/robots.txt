@@ -16,3 +16,8 @@ Disallow: /*?trim=
 Sitemap: https://www.ompathstudy.com/sitemap.xml
 Sitemap: https://www.ompathstudy.com/library-sitemap.xml
 Sitemap: https://www.ompathstudy.com/dental-sitemap.xml
+Sitemap: https://www.ompathstudy.com/it-sitemap.xml
+Sitemap: https://www.ompathstudy.com/business-sitemap.xml
+Sitemap: https://www.ompathstudy.com/hospitality-sitemap.xml
+Sitemap: https://www.ompathstudy.com/social-sitemap.xml
+Sitemap: https://www.ompathstudy.com/science-sitemap.xml
