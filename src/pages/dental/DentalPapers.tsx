@@ -1,8 +1,9 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, FileText, Search, X } from "lucide-react";
 import { PAPER_INDEX, paperPath, type PaperMeta } from "@/lib/dentalPapers";
+import { supabase } from "@/integrations/supabase/client";
 
 /** /dental/papers: every dental past paper, grouped by unit, newest first, with a search. */
 export default function DentalPapers() {
@@ -15,7 +16,19 @@ export default function DentalPapers() {
   const progs = useMemo(() => [...new Set(PAPER_INDEX.flatMap((p) => p.programmes))].sort(), []);
   const groupNames = useMemo(() => [...new Set(PAPER_INDEX.map((p) => p.group))], []);
   const needles = q.toLowerCase().split(/\s+/).filter(Boolean);
-  const list = useMemo(() => PAPER_INDEX.filter((p) => (!group || p.group === group) && (!year || p.year === year) && (!prog || p.programmes.includes(prog)) && needles.every((w) => `${p.title} ${p.unitCode} ${p.unitTitle} ${p.date} ${p.programme} ${p.sitting}`.toLowerCase().includes(w))), [q, group, year, prog]); // eslint-disable-line react-hooks/exhaustive-deps
+  // what a paper is about, beyond its title: its AI-written topics and keywords, and the wording of its questions (so topic and keyword links always find the paper)
+  const [about, setAbout] = useState<Record<string, string>>({});
+  useEffect(() => {
+    let on = true;
+    void (async () => {
+      const out: Record<string, string> = {};
+      try { const m = await import("@/data/dentalQuestions.json"); for (const r of m.default as [string, string, string][]) out[r[0]] = `${out[r[0]] ?? ""} ${r[2]}`.toLowerCase(); } catch { /* titles only */ }
+      try { const { data } = await (supabase as any).from("paper_seo").select("slug, description, keywords, topics"); for (const r of (data ?? []) as { slug: string; description: string; keywords: string[]; topics: string[] }[]) out[r.slug] = `${out[r.slug] ?? ""} ${r.description} ${(r.keywords ?? []).join(" ")} ${(r.topics ?? []).join(" ")}`.toLowerCase(); } catch { /* titles only */ }
+      if (on) setAbout(out);
+    })();
+    return () => { on = false; };
+  }, []);
+  const list = useMemo(() => PAPER_INDEX.filter((p) => (!group || p.group === group) && (!year || p.year === year) && (!prog || p.programmes.includes(prog)) && needles.every((w) => `${p.title} ${p.unitCode} ${p.unitTitle} ${p.date} ${p.programme} ${p.sitting}`.toLowerCase().includes(w) || (about[p.slug] ?? "").includes(w))), [q, group, year, prog, about]); // eslint-disable-line react-hooks/exhaustive-deps
   const groups = useMemo(() => {
     const m = new Map<string, PaperMeta[]>();
     for (const p of list) (m.get(p.unitTitle) ?? m.set(p.unitTitle, []).get(p.unitTitle)!).push(p);

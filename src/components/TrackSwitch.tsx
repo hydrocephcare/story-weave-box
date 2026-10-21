@@ -1,3 +1,4 @@
+import { startTransition } from "react";
 import { useNavigate } from "react-router-dom";
 import { chooseTrack, useTrack, type Track } from "@/lib/courseTrack";
 
@@ -5,7 +6,8 @@ import { chooseTrack, useTrack, type Track } from "@/lib/courseTrack";
 export default function TrackSwitch({ className = "", dark = true, onSwitch }: { className?: string; dark?: boolean; onSwitch?: () => void }) {
   const track = useTrack();
   const navigate = useNavigate();
-  const go = (t: Track) => { if (t === track) return; chooseTrack(t); navigate(t === "dental" ? "/dental" : "/"); onSwitch?.(); };
+  // the menu and the page change in one transition: the old page stays on screen until the new one is ready, so nothing flashes or bounces back
+  const go = (t: Track) => { if (t === track) return; startTransition(() => { chooseTrack(t); navigate(t === "dental" ? "/dental" : "/"); }); onSwitch?.(); };
   const on = dark ? "bg-white text-[#0b3b36]" : "bg-primary text-primary-foreground";
   const off = dark ? "text-white/75 hover:text-white" : "text-muted-foreground hover:text-foreground";
   return (
