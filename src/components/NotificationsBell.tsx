@@ -36,6 +36,10 @@ async function load(): Promise<Notice[]> {
     ...((exams.data ?? []) as { id: string; title: string; slug: string | null; category: string | null; created_at: string }[]).map((r) => ({ id: `exam:${r.id}`, kind: "exam" as const, year: yearOfCategory(r.category), title: r.title, to: buildMcqPath(r), at: Date.parse(r.created_at) })),
     ...((notes.data ?? []) as { id: string; title: string; slug: string | null; category: string | null; created_at: string }[]).map((r) => ({ id: `note:${r.id}`, kind: "note" as const, year: yearOfCategory(r.category), title: r.title, to: buildBlogPath(r), at: Date.parse(r.created_at) })),
     ...STATIC_NOTES.filter((n) => !n.paper).map((n) => ({ id: `static:${n.slug}`, kind: "note" as const, year: n.year, title: n.title, to: `/notes/${n.slug}`, at: Date.parse(n.updated) })),
+    // Static clinical pages live in the app router, not in the Supabase articles table.
+    // Add them explicitly so signed-in students see the new OSCE resources in the bell.
+    { id: "release:imed-osce-2019", kind: "note" as const, year: 4, title: "New: Internal Medicine OSCEs 2019 — 36 stations with images and model answers", to: "/clinical/osce-2019", at: Date.parse("2026-10-21T14:25:23Z") },
+    { id: "release:imed-osce-stations", kind: "note" as const, year: 4, title: "New: Internal Medicine picture stations — 7 clinical image stations", to: "/clinical/osce-stations", at: Date.parse("2026-10-21T13:04:27Z") },
     ...contests.contests.filter((c) => !/closed|archived|complete|cancel/i.test(String(c.stage))).slice(0, 3).map((c) => ({ id: `contest:${c.id}`, kind: "contest" as const, title: c.title, to: `/contests/${c.slug}`, at: Date.parse(c.startsAt ?? "") || Date.now() - 86_400_000 })),
   ].filter((n) => Number.isFinite(n.at) && Date.now() - n.at < WEEKS).sort((a, b) => b.at - a.at);
   memo = { at: Date.now(), items };
