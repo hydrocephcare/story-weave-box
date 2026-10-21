@@ -19,16 +19,12 @@
    "n": 1,
    "items": [
     {
-     "t": "q",
-     "n": "1",
-     "text": "Answer All Questions In Section A and any other Two In Section B",
-     "id": "q1"
+     "t": "p",
+     "text": "Answer All Questions In Section A and any other Two In Section B"
     },
     {
-     "t": "q",
-     "n": "2",
-     "text": "No reference materials allowed",
-     "id": "q2"
+     "t": "p",
+     "text": "No reference materials allowed"
     },
     {
      "t": "h",
@@ -70,7 +66,7 @@
        "marks": 5
       }
      ],
-     "id": "s1-q1"
+     "id": "q1"
     },
     {
      "t": "h",
@@ -97,7 +93,7 @@
        "marks": 6
       }
      ],
-     "id": "s2-q2"
+     "id": "q2"
     },
     {
      "t": "q",

@@ -98,6 +98,12 @@ export function normalisePaper(p) {
   { const seen = new Set(); flat = flat.filter(({ it }) => { if (it.t !== "q") return true; const k = sig(it); if (!k || !seen.has(k)) { seen.add(k); return true; } return false; }); }
   // "QUESTION ONE (continued)": its parts belong to the question before it
   for (let i = flat.length - 1; i > 0; i--) { const it = flat[i].it; if (it.t === "q" && /^QUESTION \w+ \(continued\)/i.test(it.text || "")) { const prev = flat.slice(0, i).reverse().find((x) => x.it.t === "q"); if (prev) { prev.it.parts = [...(prev.it.parts || []), ...(it.parts || [])]; flat.splice(i, 1); } } }
+  // numbered instructions ("1. Answer all questions...", "2. No reference materials allowed") are notes, not questions
+  for (const { it } of flat) if (it.t === "q" && !it.parts?.length && /^(answer\b|no reference|attempt\b|this paper\b|do not\b|candidates\b|and any other|any other two)/i.test(String(it.text || "").trim())) { it.t = "p"; delete it.n; delete it.marks; delete it.id; }
+  // placeholder text left in a typed paper ("INSERT TERMS") or a line that belongs to a different paper: dropped, with any question left empty by it
+  { const junk = (t) => /insert terms|political advertising/i.test(String(t || ""));
+    for (const { it } of flat) if (it.t === "q" && it.parts?.length) it.parts = it.parts.filter((x) => !junk(x.text) && !(x.parts || []).some((y) => junk(y.text)));
+    flat = flat.filter(({ it }) => !(it.t === "q" && (junk(it.text) || (!String(it.text || "").trim() && !(it.parts || []).length)))); }
   // "QUESTION TWO" as the wording of a question is just its number
   for (const { it } of flat) if (it.t === "q") { const m = /^QUESTION (\w+)$/i.exec(it.text || ""); if (m) { if (WORDS[m[1].toLowerCase()]) it.n = String(WORDS[m[1].toLowerCase()]); it.text = ""; } }
   // consecutive questions with the same opening wording are one question with parts

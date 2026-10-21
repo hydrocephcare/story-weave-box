@@ -19,10 +19,8 @@
    "n": 1,
    "items": [
     {
-     "t": "q",
-     "n": "1",
-     "text": "AND ANY OTHER TWO QUESTIONS IN SECTION B",
-     "id": "q1"
+     "t": "p",
+     "text": "AND ANY OTHER TWO QUESTIONS IN SECTION B"
     },
     {
      "t": "h",
@@ -64,7 +62,7 @@
        "text": "Explain the following file organization methods. i. Heap File Organization ii. Sequential File Organization iii. Hash File Organization iv. Clustered File Organization"
       }
      ],
-     "id": "s1-q1"
+     "id": "q1"
     },
     {
      "t": "h",
