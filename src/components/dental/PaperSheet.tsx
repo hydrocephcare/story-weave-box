@@ -43,7 +43,7 @@ export default function PaperSheet({ paper }: { paper: DentalPaper }) {
         <article key={pg.n} className="mx-auto w-full max-w-[44rem] bg-white px-7 py-9 text-neutral-900 shadow-[0_6px_24px_-8px_rgba(0,0,0,0.35)] sm:px-14 sm:py-12" style={{ fontFamily: "'Times New Roman', Times, 'Libre Baskerville', Georgia, serif", minHeight: "min(1100px, 150vw)" }} aria-label={`Page ${pg.n}`}>
           {idx === 0 && (
             <header className="text-center">
-              <img src="/dental/letterhead.png" alt={paper.university} width={920} height={165} className="mx-auto h-auto w-full max-w-[34rem]" />
+              <img src="/dental/letterhead.png" alt={paper.university} width={920} height={165} loading="eager" decoding="sync" className="mx-auto h-auto w-full max-w-[34rem]" />
               <p className="mt-6 text-[15px] font-semibold tracking-wide">{up(paper.examTitle)}</p>
               {paper.school && <p className="mt-3 text-[14.5px] font-semibold tracking-wide">{up(paper.school)}</p>}
               {paper.department && <p className="mt-1 text-[14.5px] font-semibold tracking-wide">{up(paper.department)}</p>}

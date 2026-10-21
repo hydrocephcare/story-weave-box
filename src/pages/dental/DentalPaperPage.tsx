@@ -247,7 +247,7 @@ export default function DentalPaperPage() {
       </Sheet>
 
       {/* what Print gives: the paper as it was printed, with the Ompath Study watermark on every page */}
-      <div className="hidden print:block">
+      <div className="hidden print:block [-webkit-print-color-adjust:exact] [print-color-adjust:exact]">
         <div aria-hidden className="pointer-events-none fixed inset-0 z-0 flex items-center justify-center"><span className="-rotate-[30deg] select-none whitespace-nowrap text-[88px] font-black uppercase tracking-widest text-black/[0.07]">Ompath Study</span></div>
         <div className="relative z-10"><PaperSheet paper={paper} /><p className="mt-6 text-center text-[11px] text-neutral-500">ompathstudy.com · past papers with model answers</p></div>
       </div>
