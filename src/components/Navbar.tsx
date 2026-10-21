@@ -7,6 +7,7 @@ import ThemeToggle from "./ThemeToggle";
 import NotificationsBell from "./NotificationsBell";
 import HeaderSearch from "./HeaderSearch";
 import TrackSwitch from "./TrackSwitch";
+import paperCategories from "@/data/dentalCategories.json";
 import { useAuth } from "@/hooks/useAuth";
 import { useAllYears, useMyYear } from "@/hooks/useMyYear";
 
@@ -45,7 +46,8 @@ function buildMenu(isAdmin: boolean, years: readonly number[] = YEAR_OPTIONS, tr
     const more: Leaf[] = [{ to: "/account", label: "Account", icon: UserRound }];
     if (isAdmin) more.push({ to: "/admin", label: "Admin", icon: Database });
     return [
-      { label: "Dental", items: [{ to: "/dental", label: "Dental home", icon: Home }, { to: "/dental/papers", label: "Past papers", icon: ListChecks }] },
+      { label: "Papers", items: [{ to: "/dental", label: "Papers home", icon: Home }, { to: "/dental/papers", label: "All past papers", icon: ListChecks }] },
+      { label: "Subjects", items: (paperCategories as { slug: string; name: string }[]).filter((c) => c.slug !== "other-units").map((c) => ({ to: `/dental/category/${c.slug}`, label: c.name, icon: BookOpen })) },
       { label: "More", items: more },
     ];
   }

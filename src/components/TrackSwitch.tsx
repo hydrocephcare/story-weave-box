@@ -12,7 +12,7 @@ export default function TrackSwitch({ className = "", dark = true, onSwitch }: {
   const off = dark ? "text-white/75 hover:text-white" : "text-muted-foreground hover:text-foreground";
   return (
     <div role="group" aria-label="Course" className={`inline-flex overflow-hidden rounded-full border ${dark ? "border-white/25" : "border-border"} text-xs font-bold ${className}`}>
-      {([["medicine", "MBChB"], ["dental", "Dental"]] as [Track, string][]).map(([t, label]) => <button key={t} type="button" aria-pressed={track === t} onClick={() => go(t)} className={`px-3 py-1.5 transition-colors ${track === t ? on : off}`}>{label}</button>)}
+      {([["medicine", "MBChB"], ["dental", "Dental & more"]] as [Track, string][]).map(([t, label]) => <button key={t} type="button" aria-pressed={track === t} onClick={() => go(t)} className={`px-3 py-1.5 transition-colors ${track === t ? on : off}`}>{label}</button>)}
     </div>
   );
 }
