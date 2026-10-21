@@ -24,6 +24,8 @@ export default function DentalHome() {
       <div className="mt-6 flex flex-wrap gap-3">
         <Link to="/dental/papers" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground">Open past papers <ArrowRight className="h-4 w-4" /></Link>
       </div>
+      <nav className="mt-6 flex flex-wrap gap-2" aria-label="Subjects">{CATEGORY_LIST.filter((c) => c.slug !== "other-units").map((c) => <Link key={c.slug} to={`/dental/category/${c.slug}`} className="rounded-full border border-border px-3.5 py-1.5 text-sm font-bold hover:border-primary/60 hover:text-primary">{c.name} <span className="font-normal text-muted-foreground">{c.papers}</span></Link>)}</nav>
+
       <DentalHomeExtras />
 
       <section className="mt-12" aria-label="Subjects">
