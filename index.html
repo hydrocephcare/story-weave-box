@@ -48,5 +48,6 @@
   <body>
     <div id="root"><div class="boot-loader" aria-hidden="true"></div></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <script id="bootwatch">setTimeout(function(){var l=document.querySelector(".boot-loader");if(l&&!sessionStorage.getItem("boot_retry")){sessionStorage.setItem("boot_retry","1");if(window.caches){caches.keys().then(function(k){return Promise.all(k.map(function(x){return caches.delete(x)}))}).finally(function(){location.reload()})}else location.reload()}},9000);</script>
+</body>
 </html>

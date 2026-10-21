@@ -72,9 +72,9 @@ export default function DentalPaperPage() {
   const pay = usePaywall();
   const [payOpen, setPayOpen] = useState(false);
   const [find, setFind] = useState("");
-  const marks = useRef<Range[]>([]);
-  const highlightSelection = () => { const sel = window.getSelection(); const body = document.getElementById("paper-body"); if (!sel || sel.isCollapsed || !body || !body.contains(sel.anchorNode)) return; marks.current.push(sel.getRangeAt(0).cloneRange()); const reg = (CSS as unknown as { highlights?: Map<string, unknown> }).highlights; const H = (window as unknown as { Highlight?: new (...r: Range[]) => unknown }).Highlight; if (reg && H) reg.set("user-mark", new H(...marks.current)); sel.removeAllRanges(); };
-  const clearMarks = () => { marks.current = []; (CSS as unknown as { highlights?: Map<string, unknown> }).highlights?.delete("user-mark"); };
+  const userMarks = useRef<Range[]>([]);
+  const highlightSelection = () => { const sel = window.getSelection(); const body = document.getElementById("paper-body"); if (!sel || sel.isCollapsed || !body || !body.contains(sel.anchorNode)) return; userMarks.current.push(sel.getRangeAt(0).cloneRange()); const reg = (CSS as unknown as { highlights?: Map<string, unknown> }).highlights; const H = (window as unknown as { Highlight?: new (...r: Range[]) => unknown }).Highlight; if (reg && H) reg.set("user-mark", new H(...userMarks.current)); sel.removeAllRanges(); };
+  const clearMarks = () => { userMarks.current = []; (CSS as unknown as { highlights?: Map<string, unknown> }).highlights?.delete("user-mark"); };
   const [code, setCode] = useState("");
   const locked = pay.enabled && !isPaid();
   const [shown, setShown] = useState<Set<string>>(new Set());
