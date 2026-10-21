@@ -1,0 +1,109 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bch1103-principles-of-inorganic-chemistry-main-exam-2018-2019-2",
+ "title": "Principles of Inorganic Chemistry: Main Exam, 6 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Physical and Mathematical Sciences",
+ "programme": "Bachelor of Education",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BCH1103",
+ "unitTitle": "Principles of Inorganic Chemistry",
+ "date": "Thur 6th Dec, 2018 4.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer all the questions in section 1 and any two questions in section 2 Important information Speed of light c = 3.00 x 108 m/s Planck's constant h = 6.626 x 10-34 J.s RH =-2.179 X 10-18 J SECTION 1 Questions 1 (1 Mark)",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "State Boyles Law"
+      },
+      {
+       "l": "b",
+       "text": "Write the short hand electronic configuration of Cu"
+      },
+      {
+       "l": "c",
+       "text": "Rubidium has two naturally occurring isotopes, 85 Rb (relative mass 84.9118 amu) and 87 Rb (relative mass 86.9092 amu). If rubidium has an average atomic mass of 85.47 amu, what is the abundance of each isotope (in percent)?"
+      },
+      {
+       "l": "d",
+       "text": "i) Write 2 failures (limitations) of Bohr atomic theory ii) Draw the diagram of a dxy orbital iii) Draw a diagram of the px , py and pz orbital"
+      },
+      {
+       "l": "e",
+       "text": "i) What is the frequency of violet light having a wavelength of 4000 �? Converting � into cm. 1 � = 10�8 cm ii) Calculate the pOH of a solution made ny dissolving 0.400 g of NaOH in 250 mL of water iii) Calculate the energy in Joules for a photon that a frequency of 9.55 � 10 14 Hz. iv) Define Lewis acid"
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "i) What is the [H +] of a solution of HCl whose pH = 1.0 ii) A new element, Tyserium (Ty), has recently been discovered and consists of two isotopes. One isotope has a mass of 331 g/mol and is 35.0 % abundant. The other isotope is 337 g/mol and is 65.0 % abundant. What is the mass of Ty as it appears on the periodic table?"
+      },
+      {
+       "l": "b",
+       "text": "i) Write the short hand electronic configuration of Cr ii) Write the ground state electron configuration for the Mn3+ ion (Atomic number Mn = 25)"
+      },
+      {
+       "l": "c",
+       "text": "Calculate the pH of O.IM CH3COOH given that, Ka for acetic acid is 1.8 � 10 -5 Acetic acid ionizes in solution according to equation; CH3COOH CH3COO + H - +"
+      },
+      {
+       "l": "d",
+       "text": "i) 63 + Determine the number of neutrons and electrons for 29Cu ii) Write two failures (limitations) of Bohr atomic theory d) i) Define frequency and give its unit(s). ii) Determine the frequency of light whose wavelength is 434 nm Questions 4 a) Draw the Lewis structures for the following molecules. Include the electron pair geometry",
+       "parts": [
+        {
+         "l": "i",
+         "text": "H2O"
+        },
+        {
+         "l": "ii",
+         "text": "NH3"
+        },
+        {
+         "l": "iii",
+         "text": "NO3-"
+        },
+        {
+         "l": "iv",
+         "text": "H3O+ b) What is the energy change of a hydrogen atom when it moves from energy level n = 4 to energy level n = 1? Is radiation emitted or absorbed? What is the wavelength for this change? c) Calculate the pH of 1.0M NaOH d) i) Calculate the frequency in Hertz for a photon that has a wavelength 6.50 � 10 -7 m . Show all workings."
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "The diagram below represents the hydrogen spectrum in terms of frequency On the diagram, label the three series of a hydrogen spectrum e) i) Write a balance chemical equation for the reaction between silver nitrate solution and magnesium chloride solution"
+      }
+     ],
+     "id": "q3"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": false,
+ "note": "Only part of this paper could be read, so some questions may be missing.",
+ "dateISO": "2018-12-06",
+ "dateLabel": "6 December 2018",
+ "programmes": [
+  "Bachelor of Education"
+ ],
+ "categorySlug": "science-and-engineering",
+ "category": "Science and Engineering",
+ "unitSlug": "principles-of-inorganic-chemistry"
+}

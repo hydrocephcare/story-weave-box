@@ -1,0 +1,117 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit2211-social-science-information-sources-and-service-supplementary-exam-2017-2018",
+ "title": "Social Science Information Sources and Service: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT2211",
+ "unitTitle": "Social Science Information Sources and Service",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A COMPULSORY",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain FIVE qualities of a good social science librarian.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Describe anthropology as a branch of social science.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Using relevant examples discuss various information centers where social scientist can search and retrieve information.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B ANSWER ANY TWO QUESTIONS (EACH CARRY 20 MARKS)"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Elimu Social Science Library wants to hire a librarian. Describe some of the qualifications you will advise them to consider when hiring.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe any FIVE social science reference sources.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Internet is a useful information source for social scientists. Briefly discuss.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly analyze various uses of encyclopedias in the area of social sciences.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain what makes a good bibliography in social sciences.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Current awareness is a service that keeps end-users updated on new information and developments in their fields of interest. Discuss various techniques a library can use to provide current awareness services.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "science-and-engineering",
+ "category": "Science and Engineering",
+ "unitSlug": "social-science-information-sources-and-service"
+}

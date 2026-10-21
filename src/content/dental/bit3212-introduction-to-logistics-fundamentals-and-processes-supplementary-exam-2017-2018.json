@@ -1,0 +1,130 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3212-introduction-to-logistics-fundamentals-and-processes-supplementary-exam-2017-2018",
+ "title": "Introduction to Logistics Fundamentals and Processes: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / BBIT",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT3212",
+ "unitTitle": "Introduction to Logistics Fundamentals and Processes",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL THE QUESTIONS ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discus how you would use the E-Logistics to Integrate the Supply Chain.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "What is the role of social media in logistics?",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "With Porter's Value Chain in mind, discus the Fundamental activities in a supply chain.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What are the fundamental logistics cost drivers that determine the cost of meeting customer requirements?",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Trace the history of the development of political advertising from print to the internet.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What do you understand by the Simulation model of warehouse?",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discus five types of warehouse management systems.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discus any five kinds of information that must appear on the Commercial Invoice.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the Basic steps and documents involved in a typical export transaction.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What are the best practices in transportation operations and supply chain management?",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "With examples where necessary, discus the Product Life Cycle, Demand Uncertainty and Inventory.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "introduction-to-logistics-fundamentals-and-processes"
+}

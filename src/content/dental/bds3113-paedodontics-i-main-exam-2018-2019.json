@@ -1,0 +1,60 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bds3113-paedodontics-i-main-exam-2018-2019",
+ "title": "Paedodontics I: Main Exam, 20 December 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "BSCOH / bscdt",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BDS3113",
+ "unitTitle": "Paedodontics I",
+ "date": "Thur 20th Dec 2018 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer ALL questions in section A and answer ANY TWO questions from",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section B ANSWER ANY TWO QUESTIONS"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Discuss strategies that can be put in place towards prevention of oral diseases in children.",
+     "marks": 20,
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "In details describe developmental anomalities of both dentitions outlining the management of these anomalities.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss the cause of dental pain in children and methods that can be used to control the pain.",
+     "marks": 20,
+     "id": "q3"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-20",
+ "dateLabel": "20 December 2018",
+ "programmes": [
+  "BSCOH",
+  "BSCDT"
+ ],
+ "categorySlug": "dental-technology",
+ "category": "Dental Technology",
+ "unitSlug": "paedodontics-i"
+}

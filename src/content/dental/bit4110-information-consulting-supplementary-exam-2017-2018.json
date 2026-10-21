@@ -1,0 +1,143 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4110-information-consulting-supplementary-exam-2017-2018",
+ "title": "Information Consulting: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / BBIT",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4110",
+ "unitTitle": "Information Consulting",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO IN SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss 5 reasons why this unit is relevant for information professionals.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain five consulting skill sets needed for Success as a Consultant.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Explain five basic reasons as to why one should use a consultant.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the four Ps to be considered by a library and information consultant to balance the marketing strategy .",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain five reasons for marketing library services.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the advantages of using Site visits and Program observation as a method of data collection.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Highlight some of the disadvantages of using Focus Groups as a method of data collection.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define Organizational planning in information consultancy.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Explain 8 benefits of organizational planning.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Discuss the Evolution of strategic planning from the 1900s to the 2000s.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Highlight Ten Principal ways in which consultants are used.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss five areas of strategy consulting expertise.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "information-consulting"
+}

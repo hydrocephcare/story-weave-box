@@ -22,6 +22,7 @@ const index = papers.map((p) => ({
 })).sort((a, b) => order.indexOf(a.categorySlug) - order.indexOf(b.categorySlug) || a.unitTitle.localeCompare(b.unitTitle) || String(b.dateISO).localeCompare(String(a.dateISO)));
 fs.writeFileSync(path.join(root, "src/data/dentalPapers.json"), JSON.stringify(index, null, 1) + "\n");
 
+fs.writeFileSync(path.join(root, "src/data/dentalCategories.json"), JSON.stringify([...CATEGORIES.map((c) => ({ slug: c.slug, name: c.name, blurb: c.blurb })), { slug: "other-units", name: "Other Units", blurb: "More units from the same colleges." }], null, 1) + "\n");
 // every question's wording, for searching inside the papers: [slug, question number, text]
 const flat = (parts, stem) => (parts || []).flatMap((x) => [`${stem} ${x.l ? x.l + ") " : ""}${x.text}`.trim(), ...flat(x.parts, "")]);
 const qtext = papers.flatMap((p) => p.pages.flatMap((pg) => pg.items).filter((i) => i.t === "q").map((i) => [p.slug, i.id || ("q" + i.n), [i.text, ...flat(i.parts, "")].join(" ").replace(/\s+/g, " ").trim().slice(0, 260)]));

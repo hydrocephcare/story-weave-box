@@ -1,0 +1,109 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bht2202-hospitality-information-system-main-exam-2018-2019",
+ "title": "Hospitality Information System: Main Exam, December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Hospitality Travel and Tourism Management",
+ "department": "Department of Travel and Tourism Management",
+ "programme": "Bachelor of Science in Hospitality Management",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BHT2202",
+ "unitTitle": "Hospitality Information System",
+ "date": "December 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer ALL questions in section A and answer ANY Other Two questions from Section B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 MARKS (COMPULSORY)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the roles of hospitality information systems to both the management operation and customer satisfaction.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Describe the significance of electronic mail in the operation of hospitality and tourism business.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Housekeeping software increases the efficiency of cleaning and servicing of rooms. Explain the main features of this software.",
+       "marks": 10
+      },
+      {
+       "l": "d",
+       "text": "Explain any five roles of reservation systems.",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B 40 MARKS"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss five functions of reservation modules.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Mailing list is one of the most valuable asset of any restaurant. It gives you the opportunity to tell every existing and potential customer about promotions, seasonal events and any other news worth the target market. Examine ideas that you may need to include in order to build your list.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain five functions of property management system.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Discuss component of back 0f the house restaurant system and their application in hospitality operation.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Discuss the functions of inventory management softwares.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12",
+ "dateLabel": "December 2018",
+ "programmes": [
+  "Bachelor of Science in Hospitality Management"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "hospitality-information-system"
+}

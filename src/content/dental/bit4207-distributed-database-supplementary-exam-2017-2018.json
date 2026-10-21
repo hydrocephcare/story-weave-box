@@ -1,0 +1,168 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4207-distributed-database-supplementary-exam-2017-2018",
+ "title": "Distributed Database: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / BBIT",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4207",
+ "unitTitle": "Distributed Database",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following terms as used in the database concurrency transactions",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Deletion anomaly."
+        },
+        {
+         "l": "ii",
+         "text": "Update anomaly."
+        },
+        {
+         "l": "iii",
+         "text": "Insertion anomaly.",
+         "marks": 6
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Using a diagram, discuss the architecture of a distributed DBMS architecture.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Describe any five characteristics of a distributed databases systems.",
+       "marks": 10
+      },
+      {
+       "l": "d",
+       "text": "Explain three design issues that come with distributed database design.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain FOUR advantages of distributed databases."
+      },
+      {
+       "l": "b",
+       "text": "Using examples explain the differences between Horizontal and vertical fragmentation ."
+      },
+      {
+       "l": "c",
+       "text": "Describe the purpose of transaction logs."
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the term transaction log as used in DDBMS."
+      },
+      {
+       "l": "b",
+       "text": "Recovery in a distributed DBMS is more complicated than in a centralized DBMS. Explain"
+      },
+      {
+       "l": "c",
+       "text": "Explain the additional functions that a DDBMS have over a Centralized DBMS."
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly discuss the rules that one has to satisfy when performing fragmentation.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "By use of simple examples, write appropriate SQL statements to explain the concepts of left inner join and right outer join.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Describe any Five database security threats giving the mechanism against each.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain any three issues that have to be considered in query optimization.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Explain the Two ways for the Local Recovery Management uses to deal with update/write operations",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Describe the description for a database administrator at MKU.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Explain Two Phase Commit Protocol (2PC).",
+       "marks": 4
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "distributed-database"
+}

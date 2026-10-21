@@ -1,0 +1,153 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bma2108-ordinary-differential-equation-i-main-exam-2018-2019",
+ "title": "Ordinary Differential Equation I: Main Exam, 3 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Physical and Mathematical Sciences",
+ "programme": "Bachelor of Education (science)",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BMA2108",
+ "unitTitle": "Ordinary Differential Equation I",
+ "date": "Mon 3rd Dec, 2018 4.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "30marks",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define a differential equation."
+      },
+      {
+       "l": "b",
+       "text": "Differentiate between homogenous and non homogenous differential equation."
+      },
+      {
+       "l": "c",
+       "text": "Determine the general solution of",
+       "parts": [
+        {
+         "l": "i",
+         "text": "= 12 - 43"
+        },
+        {
+         "l": "ii",
+         "text": "5 + 2 = 3"
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "Solve the differential equation 2t( - ) = 5 given when t=1"
+      },
+      {
+       "l": "e",
+       "text": "Solve ( (4D4 -4D3-23D2+12D+36)y =0"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define a differential equation"
+      },
+      {
+       "l": "b",
+       "text": "Find the general solution of the differential equation = 3 + 2"
+      },
+      {
+       "l": "c",
+       "text": "Find the particular solution of the differential equation 5 + 2 = 3 given the boundary conditions y=12/5 when x=2"
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Determine the particular solution of 1= (2-2) given the boundary conditions that y =1 when x = 21/6",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Find the curve which satisfies the equation xy=(1+x2) and passes through the point (0, 1).",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Determine particular solution of = 2{3-2} given t=0 and =0",
+       "marks": 5
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Find the differential equation that satisfies the equation = (1 + 2) and passes through the points (0,1)",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Show that the solution of the equation + 1 = - is given by = 3-2 2 when x=1 and y=1",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Given the Equation 2 2 2 - - 3 = 53/2 , Use the D operator method to solve the differential equation and find the particular solution y =2 when x =0 and = 3",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Solve 7( - ) = 2(2 + 6 - 52)",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-03",
+ "dateLabel": "3 December 2018",
+ "programmes": [
+  "Bachelor of Education (science)"
+ ],
+ "categorySlug": "other-units",
+ "category": "Other Units",
+ "unitSlug": "ordinary-differential-equation-i"
+}

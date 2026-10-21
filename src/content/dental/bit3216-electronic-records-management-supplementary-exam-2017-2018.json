@@ -1,0 +1,127 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3216-electronic-records-management-supplementary-exam-2017-2018",
+ "title": "Electronic Records Management: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / BBIT / BIS",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT3216",
+ "unitTitle": "Electronic Records Management",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A, AND ANY OTHER TWO FROM SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 10
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terms:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "INSERT TERMS"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Discuss five advantages of electronic records management compared to paper records?",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Explain the demerits of electronic records in an organization?",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss ten factors to consider when planning for a digitization programme for a university registry.",
+       "marks": 20
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe five best practices that record managers must be aware of when managing electronic records.",
+       "marks": 20
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define a records policy?",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Highlight the purpose of a records policy?",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "Discuss the components of a good records management policy.",
+       "marks": 10
+      },
+      {
+       "l": "d",
+       "text": "Explain the five steps involved in development of a records management policy.",
+       "marks": 5
+      }
+     ],
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT",
+  "BIS"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "electronic-records-management"
+}

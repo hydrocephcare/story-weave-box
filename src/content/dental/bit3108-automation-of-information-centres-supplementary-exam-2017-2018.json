@@ -1,0 +1,109 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3108-automation-of-information-centres-supplementary-exam-2017-2018",
+ "title": "Automation of Information Centres: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit / bscis",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT3108",
+ "unitTitle": "Automation of Information Centres",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A, AND ANY OTHER TWO FROM SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the steps involved in library automation process.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Discuss five factors to consider when selecting a suitable software for library / Information centre automation.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Highlight five common flaws of automation plans that lead to failed system implementation.",
+       "marks": 10
+      },
+      {
+       "l": "d",
+       "text": "Highlight five disadvantages for using open source software for library automation.",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B 40 MARKS"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "20 MARKS",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss five functions of interlibrary loan system in an information centre",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss five core aspects for the rationale of automating libraries in Kenya",
+       "marks": 10
+      },
+      {
+       "l": "a",
+       "text": "Discuss five critical points that one needs to look out for during system demonstration by vendors.",
+       "marks": 15
+      },
+      {
+       "l": "b",
+       "text": "Describe how to conduct a cost benefit analysis for automation of an information centre",
+       "marks": 10
+      },
+      {
+       "l": "a",
+       "text": "Discuss the criteria used for evaluating information systems."
+      },
+      {
+       "l": "b",
+       "text": "Explain the major types of system maintenance."
+      }
+     ],
+     "id": "q2"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT",
+  "BSCIS"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "automation-of-information-centres"
+}

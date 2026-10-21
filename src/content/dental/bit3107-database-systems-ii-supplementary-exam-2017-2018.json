@@ -1,0 +1,128 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3107-database-systems-ii-supplementary-exam-2017-2018",
+ "title": "Database Systems II: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT3107",
+ "unitTitle": "Database Systems II",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "THE PAPER CONSISTS OF TWO SECTIONS A AND B. DO",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "AND ANY OTHER TWO QUESTIONS IN SECTION B",
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section A ANSWER ALL QUESTIONS"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following terms briefly: i. attribute, ii. domain, iii. entity, iv. relationship, v. entity set, vi. relationship set, vii. participation constraint, viii. overlap constraint, ix. covering constraint, x. weak entity set"
+      },
+      {
+       "l": "b",
+       "text": "Discuss the properties of a transaction."
+      },
+      {
+       "l": "c",
+       "text": "Explain the following terms as used in entity sets i. Strong entity set ii. Weak entity set."
+      },
+      {
+       "l": "d",
+       "text": "In Relational models explain the following representation.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "author (Books)   author (Articles)"
+        },
+        {
+         "l": "ii",
+         "text": "author = 'tutorialspoint'(Books  Articles)"
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Explain the following file organization methods. i. Heap File Organization ii. Sequential File Organization iii. Hash File Organization iv. Clustered File Organization"
+      }
+     ],
+     "id": "s1-q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B (ANSWER ANY THREE QUESTIONS IN THIS SECTION)"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following as used in relational databases i. Structure of Relational Databases ii. Relationship set. iii. Multivalued attributes iv. Generalization and Specialization in ER models"
+      },
+      {
+       "l": "b",
+       "text": "If a database design is not perfect, it may contain anomalies, which are like a bad dream for any database administrator. Managing a database with anomalies is next to impossible. Explain the following anomalies in databases. i. Update anomalies ii. Deletion anomalies iii. Insert anomalies"
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Computer Sciences Department frequent fliers have been complaining to Dane County Airport officials about the poor organization at the airport. As a result, the officials decided that all information related to the airport should be organized using a DBMS, and you have been hired to design the database. Your first task is to organize the information about all the airplanes stationed and maintained at the airport. The relevant information is as follows: i) Every airplane has a registration number, and each airplane is of a specific model. ii) The airport accommodates a number of airplane models, and each model is identified by a model number (e.g., DC-10) and has a capacity and a weight. iii) A number of technicians work at the airport. You need to store the name, SSN,address, phone number, and salary of each technician. iv) Each technician is an expert on one or more plane model(s), and his or her expertise may overlap with that of other technicians. This information about technicians must also be recorded. v) Traffic controllers must have an annual medical examination. For each traffic controller, you must store the date of the most recent exam. vi) All airport employees (including technicians) belong to a union. You must store the union membership number of each employee. vii) You can assume that each employee is uniquely identified by a social security number. viii) The airport has a number of tests that are used periodically to ensure that airplanes are still airworthy. Each test has a Federal Aviation Administration (FAA) test number, a name, and a maximum possible score. ix) The FAA requires the airport to keep track of each time a given airplane is tested by a given technician using a given test. For each testing event, the information needed is the date, the number of hours the technician spent doing the test, and the score the airplane received on the test.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Draw an ER diagram for the airport database. Be sure to indicate the various attributes of each entity and relationship set; also specify the key and participation constraints for each relationship set. Specify any necessary overlap and covering constraints as well."
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Consider an invoice below Invoice No._____________________ Date ___________________ Customer ________________________ Delivery to ______________ Address _________________________________________________ Product Code Description Quantity Price Amount Thank you. Amount____________ Served by__________",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Add other necessary attributes to the entities and Normalize it to third normal form.",
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "database-systems-ii"
+}

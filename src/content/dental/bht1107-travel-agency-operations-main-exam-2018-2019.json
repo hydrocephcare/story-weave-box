@@ -1,0 +1,121 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bht1107-travel-agency-operations-main-exam-2018-2019",
+ "title": "Travel Agency Operations: Main Exam, 17 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Hospitality, Travel and Tourism Management",
+ "department": "Department of Travel and Tourism Management",
+ "programme": "Bachelor of Science in Hospitality Management",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BHT1107",
+ "unitTitle": "Travel Agency Operations",
+ "date": "Mon 17th Dec 2018 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer ALL questions in section A and answer ANY TWO questions from",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 MARKS (COMPULSORY)",
+     "marks": 5
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain Travel agency operation."
+      },
+      {
+       "l": "b",
+       "text": "Discuss on the five major functions of a travel agency.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Explain on two major differences between a travel Agent and a tour Operator.",
+       "marks": 10
+      },
+      {
+       "l": "d",
+       "text": "Outline five importance of online Travel Agency.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain any five major types of Travel agencies in a certain touristic destination.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss any five factors to consider in setting up a travel agency.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Assuming you work in a certain travel agency company in Mombasa county as a travel agent or tour operator, discuss on the five major services you would provide for your clients/tourists to aid travel.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the meaning of integration as used in travel agency operations.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Discuss any five benefits of integration for a travel agency.",
+       "marks": 15
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Determine in five points the reservation process in a travel agency company.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-17",
+ "dateLabel": "17 December 2018",
+ "programmes": [
+  "Bachelor of Science in Hospitality Management"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "travel-agency-operations"
+}

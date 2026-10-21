@@ -1,0 +1,108 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bds1101-dental-materials-i-supplementary-exam-2017-2018",
+ "title": "Dental Materials I: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Bachelor Ofscience in Dental Technology",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BDS1101",
+ "unitTitle": "Dental Materials I",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "(5 Marks) ANSWER ALL QUESTIONS IN SECTION A. (5 Marks) (5 Marks)",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe how to test the following in gypsum products;",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Initial setting."
+        },
+        {
+         "l": "ii",
+         "text": "Final setting."
+        },
+        {
+         "l": "iii",
+         "text": "Setting time."
+        },
+        {
+         "l": "iv",
+         "text": "Loss of gloss."
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Illustrate the stress - strain curve showing the slope of modulus of elasticity."
+      },
+      {
+       "l": "c",
+       "text": "Outline four factors which may influence setting mechanism of calcium sulphate hemihydrates."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B (ANSWER ANY TWO QUESTIONS)"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Describe the process of manufacturing dental stone from gypsum rock.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain five physical properties applicable to dental materials.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the rationale of studying dental materials.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe five non-metallic denture base materials.",
+     "marks": 20,
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "dental-technology",
+ "category": "Dental Technology",
+ "unitSlug": "dental-materials-i"
+}

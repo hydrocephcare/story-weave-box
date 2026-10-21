@@ -1,0 +1,139 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bht2109-airfare-and-ticketing-supplementary-exam-2017-2018",
+ "title": "Airfare and Ticketing: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Hospitality Travel and Tourism Management",
+ "department": "Department of Hospitality Management",
+ "programme": "Bachelor of Travel and Tourism Management",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BHT2109",
+ "unitTitle": "Airfare and Ticketing",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A COMPULSORY"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define ticketing in air transportation and its importance."
+      },
+      {
+       "l": "b",
+       "text": "Explain the purpose of a miscellaneous charge order."
+      },
+      {
+       "l": "c",
+       "text": "Discus the importance of worldwide fare rules in the airline industry."
+      },
+      {
+       "l": "d",
+       "text": "Outline and explain five importance of billing settlement plans in air transportation."
+      },
+      {
+       "l": "e",
+       "text": "Identify the THREE section of an aircraft."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B ANSWER ANY TWO QUESTIONS",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using specific examples, describe the various types of documents required in air transportation.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Define the following terms and explain how they can be affect fare construction.",
+       "marks": 10,
+       "parts": [
+        {
+         "l": "i",
+         "text": "General Rules"
+        },
+        {
+         "l": "ii",
+         "text": "Transfers"
+        },
+        {
+         "l": "iii",
+         "text": "Stop overs"
+        },
+        {
+         "l": "iv",
+         "text": "Intermediate stop over"
+        }
+       ]
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss on the roles of AIFA in air transportation facilitating travel.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Discuss on the issues related to Arrival formalities at a destination.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain what airfares are and describe the main types of airfares used in air travel.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain how airfare coding is done.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Bachelor of Travel and Tourism Management"
+ ],
+ "categorySlug": "hospitality-and-tourism",
+ "category": "Hospitality and Tourism",
+ "unitSlug": "airfare-and-ticketing"
+}

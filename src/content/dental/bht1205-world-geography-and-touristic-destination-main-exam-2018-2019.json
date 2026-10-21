@@ -1,0 +1,138 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bht1205-world-geography-and-touristic-destination-main-exam-2018-2019",
+ "title": "World Geography and Touristic Destination: Main Exam, 18 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Hospitality, Travel and Tourism Management",
+ "department": "Department of Travel and Tourism Management",
+ "programme": "Bachelor of Science in Travel and Tourism Management",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BHT1205",
+ "unitTitle": "World Geography and Touristic Destination",
+ "date": "Tue 18th Dec 2018 11.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO IN",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain relationship between Geography and tourism.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "What do you understand with the following terms?",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Nodes"
+        },
+        {
+         "l": "ii",
+         "text": "transportation",
+         "marks": 5
+        },
+        {
+         "l": "iii",
+         "text": "demand",
+         "marks": 4
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "List down countries where you find the following:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Mt. Everest"
+        },
+        {
+         "l": "ii",
+         "text": "Jaj Mahal"
+        },
+        {
+         "l": "iii",
+         "text": "Great Barrier Reef"
+        },
+        {
+         "l": "iv",
+         "text": "Ngorongoro crater"
+        },
+        {
+         "l": "v",
+         "text": "Statue of Liberty"
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "Explain THREE major geographical components"
+      },
+      {
+       "l": "e",
+       "text": "List FOUR elements of transport."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss importance of climate on tourism.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe FOUR factors influencing the growth of travel and tourism.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Compare transport system in developed world and developing world.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Determine trends in travel and tourism geographer.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-18",
+ "dateLabel": "18 December 2018",
+ "programmes": [
+  "Bachelor of Science in Travel and Tourism Management"
+ ],
+ "categorySlug": "hospitality-and-tourism",
+ "category": "Hospitality and Tourism",
+ "unitSlug": "world-geography-and-touristic-destination"
+}

@@ -1,0 +1,261 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit1208-structured-programming-supplementary-exam-2017-2018",
+ "title": "Structured Programming: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT1208",
+ "unitTitle": "Structured Programming",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A COMPULSORY",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain why the use of comments in C programs is generally considered to be good programming practice.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Briefly describe: i. abort() ii. rand() iii. qsort() iv. abs()",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain what an data type is and list the examples of data types.",
+       "marks": 3
+      },
+      {
+       "l": "d",
+       "text": "Describe the importance of C standard library.",
+       "marks": 2
+      },
+      {
+       "l": "e",
+       "text": "Illustrate using a C code whether how a pointers is defined and assigned values .",
+       "marks": 3
+      },
+      {
+       "l": "f",
+       "text": "Explain how a structure different from a union?",
+       "marks": 4
+      },
+      {
+       "l": "g",
+       "text": "The straight line method of computing the yearly turnover of a company is given by: Turnover = Sales - Expenses No. of Months Write a Program to determine the Profit per month when the sales, months of operation and the annual expenditure is availed.",
+       "marks": 5
+      },
+      {
+       "l": "h",
+       "text": "An election is contested by 8 candidates. The candidate are numbered are 1 to 8 and the voting is done by marking the candidate number on the ballot paper. Write a program to enable voting for the 8 candidates by clicking a radio button. No one should be allowed to vote for more than 1 candidate. Write a code to facilitate the above.",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B (20 MARKS EACH QUESTION)"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe three types of errors encountered in C programming. Give example in each category.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Given that if (day = =1) printf(\"Monday\"); else if(point = =2) printf(\"Tue\"); else if(point = =3) printf(\"Wednesday\"); else printf(\"Its not Sunday Yet\"); Rewrite the above program in switch case form",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Illustrate the usage of sizeof() operator",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "Define storage class. Explain how any two of storage classes are used in C.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Convert the following expression in c language. (y4*5)-(x4) R= 3x3 + x",
+       "marks": 4
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "With a valid example, give the relationship between the following terms.",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "An operator"
+        },
+        {
+         "l": "ii",
+         "text": "An operand."
+        },
+        {
+         "l": "iii",
+         "text": "An expression"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "What is operator precedence?",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "A programmer encountered the following error messages on compiling a program:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Stack overflow"
+        },
+        {
+         "l": "ii",
+         "text": "Statement missing Kindly explain how to debug the above errors?",
+         "marks": 5
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "Give three features of a structure.",
+       "marks": 3
+      },
+      {
+       "l": "e",
+       "text": "Give the meaning of the following declarations;",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "char Fname[16];"
+        },
+        {
+         "l": "ii",
+         "text": "int num_emp;"
+        },
+        {
+         "l": "iii",
+         "text": "double intake, BBIT;"
+        },
+        {
+         "l": "iv",
+         "text": "char response;"
+        }
+       ]
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "",
+       "marks": 2,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Define the term Operator."
+        },
+        {
+         "l": "ii",
+         "text": "Describe with examples, four relational operators",
+         "marks": 6
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Write a function to calculate volume of a Cylinder. The function accepts two arguments representing the radius and height.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Explain three types of escape sequences. Illustrate in a program to show their usage in C language.",
+       "marks": 6
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the four basic data types in C while giving the memory requirement and format specifier for each data type.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Declare a pointer to an array",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Using an array, write a program that prompts the user to input his bio data for the date/month/year of birth compute the age based on current year. The program should display the Year of Birth, age, birthday in terms of dd/mm/yy and a birthday congratulation message on the eventual date.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "structured-programming"
+}

@@ -1,0 +1,67 @@
+[
+ {
+  "slug": "dental-technology",
+  "name": "Dental Technology",
+  "blurb": "Dental materials, prosthetics, orthodontics, crown and bridge, periodontology and the other dental technology units."
+ },
+ {
+  "slug": "basic-dental-sciences",
+  "name": "Basic Dental Sciences",
+  "blurb": "Anatomy, physiology, oral biology and oral pathology for dental students."
+ },
+ {
+  "slug": "community-and-public-health",
+  "name": "Community and Public Health",
+  "blurb": "Community health, health education and promotion, epidemiology and primary health care."
+ },
+ {
+  "slug": "biostatistics-and-research",
+  "name": "Biostatistics and Research",
+  "blurb": "Biostatistics, research methods and data analysis for health students."
+ },
+ {
+  "slug": "it-and-computing",
+  "name": "IT and Computing",
+  "blurb": "Programming, databases, networks, systems, software and the other information technology units."
+ },
+ {
+  "slug": "business-and-economics",
+  "name": "Business and Economics",
+  "blurb": "Accounting, finance, marketing, management, economics, entrepreneurship and the other business units."
+ },
+ {
+  "slug": "education",
+  "name": "Education",
+  "blurb": "Teaching, curriculum, guidance and counselling, and the other education units."
+ },
+ {
+  "slug": "hospitality-and-tourism",
+  "name": "Hospitality and Tourism",
+  "blurb": "Hospitality, tourism, travel, catering and events units."
+ },
+ {
+  "slug": "media-and-communication",
+  "name": "Media and Communication",
+  "blurb": "Journalism, media studies, public relations, communication and writing units."
+ },
+ {
+  "slug": "law-and-social-sciences",
+  "name": "Law and Social Sciences",
+  "blurb": "Law, sociology, psychology, development studies, governance and the other social science units."
+ },
+ {
+  "slug": "health-sciences-and-pharmacy",
+  "name": "Health Sciences and Pharmacy",
+  "blurb": "Pharmacy, clinical medicine, nursing, pathology, microbiology and other health science units."
+ },
+ {
+  "slug": "science-and-engineering",
+  "name": "Science and Engineering",
+  "blurb": "Mathematics, physics, chemistry, biology, engineering and the other science units."
+ },
+ {
+  "slug": "other-units",
+  "name": "Other Units",
+  "blurb": "More units from the same colleges."
+ }
+]

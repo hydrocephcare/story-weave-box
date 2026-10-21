@@ -14,13 +14,13 @@ export default function DentalHome() {
   return (
     <main className="mx-auto max-w-3xl px-4 pb-24 pt-10 sm:px-6 sm:pt-16">
       <Helmet>
-        <title>Dental students: past papers and notes | Ompath Study</title>
+        <title>Dental, health and university past papers | Ompath Study</title>
         <meta name="description" content="Ompath Study for dental students: Dental, oral health and community health past papers by subject, unit and year, set out question by question with model answers." />
         <link rel="canonical" href="https://www.ompathstudy.com/dental" />
       </Helmet>
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">Ompath Study · Dental</p>
-      <h1 className="mt-2 font-serif text-4xl font-bold leading-tight sm:text-5xl">Dental Sciences, in one place</h1>
-      <p className="mt-4 max-w-xl text-[17px] leading-relaxed text-muted-foreground">Past papers typed out by unit and year, so you can read, search and practise them. Notes, MCQs and model answers are added unit by unit.</p>
+      <h1 className="mt-2 font-serif text-4xl font-bold leading-tight sm:text-5xl">Past papers, in one place</h1>
+      <p className="mt-4 max-w-xl text-[17px] leading-relaxed text-muted-foreground">Dental, health, IT, business and more: Mount Kenya University past papers typed out by subject, unit and year, with model answers, so you can read, search and practise them.</p>
       <div className="mt-6 flex flex-wrap gap-3">
         <Link to="/dental/papers" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-bold text-primary-foreground">Open past papers <ArrowRight className="h-4 w-4" /></Link>
       </div>

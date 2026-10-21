@@ -1,0 +1,255 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit1202-introduction-to-web-design-main-exam-2024-2025",
+ "title": "Introduction to Web Design: Main Exam, 21 August 2025",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "BSCIT / bbit / bit / bsccs",
+ "examTitle": "University Examination 2024/2025",
+ "unitCode": "BIT1202",
+ "unitTitle": "Introduction to Web Design",
+ "date": "Thur 21st Aug, 2025 2.00pm",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following technologies in the field of web development",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "HTML"
+        },
+        {
+         "l": "ii",
+         "text": "HTTP"
+        },
+        {
+         "l": "iii",
+         "text": "FTP"
+        },
+        {
+         "l": "iv",
+         "text": "Browser"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Identify any four elements used in writing HTML Paper Three Page 1",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Create a simple webpage that can be used to display the records of students as shown in the table below. The Marks of the students should be bold and centered. NAME MATHEMATICS ENGLISH KISWAHILI SCIENCE RAMON 80 65 90 100 OMBUI 75 70 95 95 NGURE 70 75 90 85 ACHIENG 65 80 95 75",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Create a simple web page that displays the following:",
+       "marks": 8
+      },
+      {
+       "l": "e",
+       "text": "Create the color table below using appropriate HTML code RED+BLUE RED GREEN BLUE",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using a suitable example, explain the difference between CSS and HTML Paper Three Page 2",
+       "marks": 3
+      },
+      {
+       "l": "b",
+       "text": "Consider the output below and use it to answer question that follows � Coffee list shown above. � Tea � Black tea � Green tea � Milk Write HTML code that would display the",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Outline with clear examples HTML tags that can be used to display the following items on a web page",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Image",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "Link",
+         "marks": 3
+        },
+        {
+         "l": "iii",
+         "text": "Heading of a page",
+         "marks": 3
+        },
+        {
+         "l": "iv",
+         "text": "Paragraph",
+         "marks": 3
+        }
+       ]
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Give the HTML elements for creating the following content.",
+       "marks": 12,
+       "parts": [
+        {
+         "l": "i",
+         "text": "An image (logo.jpg) used as a link to an external website(www.mku.ac.ke)"
+        },
+        {
+         "l": "ii",
+         "text": "A thin black horizontal line that runs half the width of display"
+        },
+        {
+         "l": "iii",
+         "text": "Merge two data cells within the same row"
+        },
+        {
+         "l": "iv",
+         "text": "Give a row in the table the same background colour"
+        },
+        {
+         "l": "v",
+         "text": "Fix the width of a column in table to 200 pixels"
+        },
+        {
+         "l": "vi",
+         "text": "Make the table fill the entire display of the computer"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Write short notes on the following:",
+       "marks": 8,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Web designing vs.web development"
+        },
+        {
+         "l": "ii",
+         "text": "Server side vs.client-side scripting"
+        },
+        {
+         "l": "iii",
+         "text": "Front-end vs.back-end designing iv. HTML vs XML Paper Three Page 3"
+        }
+       ]
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using examples, explain the following in relation to CSS",
+       "parts": [
+        {
+         "l": "i",
+         "text": "The class selector"
+        },
+        {
+         "l": "ii",
+         "text": "The id selector"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain the functions of any four members of the ISO-OSI suite"
+      },
+      {
+       "l": "c",
+       "text": "A form is an object in the document object model. Discuss at least four elements (objects) under the for object and possible use of each object during web development"
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "As the project manager you are required to develop a website. Explain the process that this website project would entail from inception to completion.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "State five types of tags used in HTML",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "When talking about responsive web design, what are the differences between the mobile first and the desktop first approaches? Where does each excel and what are some of the issues it leads to? Paper Three Page 4",
+       "marks": 5
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2025-08-21",
+ "dateLabel": "21 August 2025",
+ "programmes": [
+  "BSCIT",
+  "BBIT",
+  "BIT",
+  "BSCCS"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "introduction-to-web-design"
+}

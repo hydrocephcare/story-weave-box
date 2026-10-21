@@ -1,0 +1,148 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bma2103-linear-algeba-i-supplementary-exam-2017-2018",
+ "title": "Linear Algeba I: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Physical and Mathematical Sciences",
+ "programme": "BAS / beds / beda / bss / bpep / bsic",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BMA2103",
+ "unitTitle": "Linear Algeba I",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer questions one and any other two questions. 1 2 0 1 (3 Marks)",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Determine the rank of: A 2 6 3 3 3 10 6 5 4x1 2x2 8",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Use Gaus-Jordan method to solve; 12x1 6x2 24"
+      },
+      {
+       "l": "c",
+       "text": "Find the angle between a  2i  4 j  4kandb  12i  6 j  4k",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Given that; a 2i j 2k b 2i j 4k c 2i 2 j 3k Find:",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "3a  2b  4c",
+         "marks": 4
+        },
+        {
+         "l": "ii",
+         "text": "3a  2b  4c"
+        },
+        {
+         "l": "iii",
+         "text": "Unit vector parallel to 3a  2b  4c"
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Define linear transformation"
+      },
+      {
+       "l": "f",
+       "text": "Determine the inverse of A 2 3 4 1 3 4 1 1",
+       "marks": 5
+      },
+      {
+       "l": "g",
+       "text": "Reduce: A 1 1 3 1 4 3 11 2 1 4 0",
+       "marks": 12
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Given the matrix; B 4 2 6 3 2 5 Determine: i) A matrix C which contains all cofactors of A. ii) Adjoint of cofactors of A iii) Determinant of A iv) Inverse of A b) Find the equation of a line through points p=(6,8,2) and Q(4,14,12) c) Show that the set of vectors, u1 2,1,1;u2 1,3,1 and u3 1, 2, 3 are linearly independent.",
+     "marks": 3,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Use Cramers rule to solve the following system of linear equations 3x y z 7 x 3y z 8 x y 3z 5 b) Find the point of intersection of the lines. l1 x 3 y 1 z 3 45 l2 x 1 y 1 z 4 4 7 4 c) Determine whether or not the following form a basis for the vector spaceIR3. (2,2,4), (2,4,0), (10,6,8) 2x1 2x2 x3 3",
+     "marks": 5,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Use Gauss-Jordan method to solve. 3x1 x2 x3 7 x1 3x2 2x3 0 b) Given that A 2 4 andB 2 6 determine 4A + 3B 6 3 8 9 c) Show that the following vectors are linearly dependent V1 4, 2, 2;v2 2,6, 2 and v3 10, 2, 2 d) i) Define linear combination of a vector over a field K. ii) For what values of K will the vectors u 2, 4, k in 3 be a linear combination of the vectors v 3,0, 2 and w 2, 1, 5 e) Show that the vectors a 4i 2 j 2k;b 2i 2 j 2k and c 2i 4 j 4k can form sides of a right angled triangle.",
+     "marks": 4,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "b x a is the area of a parallelogram with sides b and a . Prove.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Find the coordinates of the intersection of the line, x 2 y 3 z 3 and the 2 3 6 plane 3x 4 3z 6",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Find the value of r for which the following matrix is singular. 2 3 4 r 2 10",
+       "marks": 2
+      },
+      {
+       "l": "d",
+       "text": "If A 2 1 4 , B 2 0 , find AB 2 3 9 1 3",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Show that vector addition is associative under addition."
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BAS",
+  "BEDS",
+  "BEDA",
+  "BSS",
+  "BPEP",
+  "BSIC"
+ ],
+ "categorySlug": "other-units",
+ "category": "Other Units",
+ "unitSlug": "linear-algeba-i"
+}

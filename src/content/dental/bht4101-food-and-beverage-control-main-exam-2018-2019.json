@@ -1,0 +1,142 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bht4101-food-and-beverage-control-main-exam-2018-2019",
+ "title": "Food and Beverage Control: Main Exam, 13 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Hospitality, Travel and Tourism Management",
+ "department": "Department of Travel and Tourism Management",
+ "programme": "Bachelor of Science in Hospitality Management",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BHT4101",
+ "unitTitle": "Food and Beverage Control",
+ "date": "Thur 13th December, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer ALL questions in section A and answer ANY TWO questions from",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 MARKS (COMPULSORY)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "i) Identify the key elements of cost in food and beverage department. ii) Explain what you understand by break-even-point. iii) In reference to fundamentals of control, one of the phases is operation phase. List down the key steps involved in the operation phase. iv) On a particular day, there were five (5) waiters on duty, five hundred guest were served. Calculate the productivity of these waiters. v) Explain the unique challenges associated with food and beverage control. vi) Differentiate between purchasing by contract/tender and purchasing by `cash and carry'. vii) in a twenty-eight-day trading period the cost of food consumed was Ksh.300,000. The opening stock on day 1 was Ksh.80,000 and the closing stock on day 28 was Ksh.70,000. Calculate the rate of stock turnover for his period.",
+     "marks": 3,
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Mount Kenya University staff cafeteria had a total food cost of Ksh 200,000 and sales worth Ksh 1,000,000 for the month of November 2018. Calculate the food cost percentage for this period and comment on the same.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Identify the storage temperatures for the following food items.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Wheat flour",
+         "marks": 1
+        },
+        {
+         "l": "ii",
+         "text": "Milk",
+         "marks": 1
+        },
+        {
+         "l": "iii",
+         "text": "Double cream",
+         "marks": 1
+        },
+        {
+         "l": "iv",
+         "text": "Apples",
+         "marks": 1
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "In reference to revenue control, explain the various threats to food and beverage revenue in a hotel.",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "The food and beverage control system forms a foundation for a successful food and beverage department. Explain this assertion, citing practical examples in food and beverage industry.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "An effective food and beverage control system heavily relies on standards. Explain the key standards normally applicable to food and beverage control.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Information technology and improved infrastructure in Kenya has led to shrinking of the store space and associated manpower in Kenyan hotel industry. With the aid of practical examples in the Kenyan hotel industry, argue for or against this assertion.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "For a food and beverage operation to work effectively and efficiently, the food and beverage control section should be well staffed, with people who have clear skills and knowledge. Discuss.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the key procedures in cashiering.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Derive the cost of food consumed in general Kago restaurant from the data below: Ksh Opening stock 100,000 Closing stock 50,000 Purchases 200,000 Stewards sales 20,000 Cooking liquor 10,000 Food to bar 5000",
+       "marks": 5
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-13",
+ "dateLabel": "13 December 2018",
+ "programmes": [
+  "Bachelor of Science in Hospitality Management"
+ ],
+ "categorySlug": "hospitality-and-tourism",
+ "category": "Hospitality and Tourism",
+ "unitSlug": "food-and-beverage-control"
+}

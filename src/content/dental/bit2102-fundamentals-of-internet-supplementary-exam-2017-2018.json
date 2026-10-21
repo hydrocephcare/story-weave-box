@@ -1,0 +1,140 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit2102-fundamentals-of-internet-supplementary-exam-2017-2018",
+ "title": "Fundamentals of Internet: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT2102",
+ "unitTitle": "Fundamentals of Internet",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "List the TWO primary responsibilities of the IP."
+      },
+      {
+       "l": "b",
+       "text": "What is IP Addressing and define dotted decimal notation."
+      },
+      {
+       "l": "c",
+       "text": "Differentiate between the network number and the host number."
+      },
+      {
+       "l": "d",
+       "text": "Briefly explain services provided by internet."
+      },
+      {
+       "l": "e",
+       "text": "Give FOUR MIME headers that can be added to the original SMTP header section to define the transformation parameters."
+      },
+      {
+       "l": "f",
+       "text": "Define the following terms: MTU, SNMP, and DNS."
+      },
+      {
+       "l": "g",
+       "text": "What are the functions of Uniform Resource Identifier (URI) and state its two types."
+      },
+      {
+       "l": "h",
+       "text": "What is the function of internet protocol (IP)?"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "By giving an example give the structure of a function in php"
+      },
+      {
+       "l": "b",
+       "text": "A starting company has asked you to create an HTML document that allows their new customers to join membership. Your document should contain a form with the following: i. Text field for a name ii. Textarea for address and comments iii. Checkbox to what the customers liked in the company iv. Radio buttons showing how the customers new the company v. List box that enables customers to select the services they need . vi. Submit and select buttons."
+      },
+      {
+       "l": "c",
+       "text": "Explain the following Internet protocols i. BOOTP ii. RARP iii. ICMP"
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly discuss the importance of the HTTP protocol with relevance to the WWW",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Write short notes on the IMAGE and IMAGEMAP tags give an example.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "With a neat diagram discuss the client/server model of the Internet network hierarchy",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Write short notes about the paragraph, header, hyperlink, bold tags.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Describe how a text file can be opened and different modes used to read/write to/from the file, file can be closed and check the end of file with an example program.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "fundamentals-of-internet"
+}

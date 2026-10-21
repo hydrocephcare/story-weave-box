@@ -1,0 +1,145 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3218-dessimination-of-information-supplementary-exam-2017-2018",
+ "title": "Dessimination of Information: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit / beds",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT3218",
+ "unitTitle": "Dessimination of Information",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer question 1 (compulsory) and any other 2 questions. Dissemination of information (2 Marks)",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is information dissemination?"
+      },
+      {
+       "l": "b",
+       "text": "State reasons why libraries undertake dissemination of information and its relevance.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "State any three reasons why evaluation is relevant to an information manager.",
+       "marks": 3
+      },
+      {
+       "l": "d",
+       "text": "List down five limitations of a general bibliography as a tool of collection development.",
+       "marks": 5
+      },
+      {
+       "l": "e",
+       "text": "Explain the meaning of Reference Services.",
+       "marks": 2
+      },
+      {
+       "l": "f",
+       "text": "What are the advantages of selective dissemination of information (SDI) Process. a) Explain clearly Five types of Bibliographic services offered in a Documentation center and state the relevance of each.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the role of computers in the selective dissemination of information(SDI) Process.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "State the problems involved in the provision of user education.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 10,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Highlight Four major types of bibliographic sources."
+      },
+      {
+       "l": "b",
+       "text": "Discuss four major methods of providing Current awareness Service in an information center.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the methods used to disseminate information and the role of computers and other information technology in the entire process.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the methods used in the provision of current awareness services.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the importance of reference sources in an information center.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Write short notes on the reference service, reference process, reference work and reference interview.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BBIT",
+  "BIT",
+  "BEDS"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "dessimination-of-information"
+}

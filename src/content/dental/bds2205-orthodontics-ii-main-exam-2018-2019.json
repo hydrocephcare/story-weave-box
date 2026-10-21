@@ -1,0 +1,117 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bds2205-orthodontics-ii-main-exam-2018-2019",
+ "title": "Orthodontics II: Main Exam, 14 December 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Bachelor of Science in Dental Technology",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BDS2205",
+ "unitTitle": "Orthodontics II",
+ "date": "Fri 14th Dec, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer ALL questions in section A and answer ANY TWO questions from",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A ANSWER ALL THE QUESTIONS"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Outline two requirements of an orthodontic spring.",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Explain five factors which may affect anchorage in removable orthodontics.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Give four types of retentive components in removal orthodontics.",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "Outline four types of active components in removal orthodontic appliances.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Enumerate five advantages of removable orthodontic appliances.",
+       "marks": 5
+      },
+      {
+       "l": "f",
+       "text": "Give five requirements for an ideal clasp for use in orthodontic appliances.",
+       "marks": 5
+      },
+      {
+       "l": "g",
+       "text": "Outline five modifications of the Adam's clasp.",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B ANSWER ANY TWO QUESTIONS"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Describe the procedure of trimming a mandibular and a maxillary orthodontic models.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "After receiving impressions, describe the procedure of fabricating an orthodontic appliance with Adam's clasps and a labial bow.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain disadvantages of orthodontic appliances.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Compare functional and fixed orthodontic appliances.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-14",
+ "dateLabel": "14 December 2018",
+ "programmes": [
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "dental-technology",
+ "category": "Dental Technology",
+ "unitSlug": "orthodontics-ii"
+}

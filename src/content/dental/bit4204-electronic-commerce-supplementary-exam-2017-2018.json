@@ -1,0 +1,132 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4204-electronic-commerce-supplementary-exam-2017-2018",
+ "title": "Electronic Commerce: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Business Information Technology / information / Technology",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4204",
+ "unitTitle": "Electronic Commerce",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terms as used in ecommerce. i. Spyware ii. Mobile portals iii. Ebusiness iv. E-cheque v. Electronic store fronts",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Discuss any five business models in use in business today",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Discuss the advantages of electronic payment systems over traditional payment systems",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Identify and explain five types of ebusiness transactions giving relevant example",
+       "marks": 5
+      },
+      {
+       "l": "e",
+       "text": "Ecommerce relies entirely on the internet, in relation to this statement, identify and explain five requirements to achieve internet connection in any organization.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "internet marketing has gained a lot of popularity today, discuss five major reasons for this a) Identify and explain any five online advertising methods",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Several technologies exist that ensure that an organization's network boundaries are Secure from attacks. Discuss,",
+       "marks": 12
+      },
+      {
+       "l": "b",
+       "text": "A number of factors come into play in determining whether a particular method of e- payment achieves critical mass. discuss any five of these factors according to Evans and Schmalensee 2005.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the three types of payment cards used online."
+      },
+      {
+       "l": "b",
+       "text": "Discuss why it is difficult to stop ecommerce crimes."
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss giving relevant examples any five methods e-payment systems,",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain why Mpesa has become a very common form of e-payment in Kenya?",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Bachelor of Business Information Technology"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "electronic-commerce"
+}

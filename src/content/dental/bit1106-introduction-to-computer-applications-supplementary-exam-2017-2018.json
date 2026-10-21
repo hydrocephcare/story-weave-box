@@ -1,0 +1,121 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit1106-introduction-to-computer-applications-supplementary-exam-2017-2018",
+ "title": "Introduction to Computer Applications: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit / beds",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT1106",
+ "unitTitle": "Introduction to Computer Applications",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "(i) Answer question ONE and any other TWO questions (ii) Do not write on this question paper (iii) Switch off your cell phone(s)",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "(Total 30 Marks) (i) Describe the information and communication technology (ICT) infrastructure that you may have seen being used by tellers in a computerized supermarket and how it is used. (ii) Supposing you were assigned to work in a modern radio station, what kind of computer input devices and output devices would you expect to find there? (iii) If you intend to buy a computer, explain how you would decide which computer system to be purchased, what software to install inside it and what peripheral devices it should have? (iv) Explain the importance of system software to a computer system. (v) Explain what you understand by the term application software. (vi) Explain the steps you would take to do the following using the Windows operating system:",
+     "marks": 5,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Start a program"
+      },
+      {
+       "l": "b",
+       "text": "Open a document that was used recently"
+      },
+      {
+       "l": "c",
+       "text": "Delete a file or folder permanently"
+      },
+      {
+       "l": "d",
+       "text": "Search for a file or folder saved on the computer"
+      },
+      {
+       "l": "e",
+       "text": "Switch off the computer properly"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "(Total 20 Marks) (i) Distinguish between the Internet and The World Wide Web (www). (ii) What are the hardware conditions and software requirements that you need in order to connect your computer to the Internet? (iii) Explain three (3) advantages and three (3) disadvantages of using email. (iv) Define the following terms",
+     "marks": 6,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Browser"
+      },
+      {
+       "l": "b",
+       "text": "Internet Service Provider"
+      },
+      {
+       "l": "c",
+       "text": "Website"
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "(Total 20 Marks) (i) Briefly explain your understanding of the following types of programming languages:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Machine language"
+      },
+      {
+       "l": "b",
+       "text": "Assembly language"
+      },
+      {
+       "l": "c",
+       "text": "High level language (ii) Describe the process of creating a new PowerPoint presentation. What is the extension of a PowerPoint presentation? (iii)Explain what is meant by a relational database management system (RDBMS)? (iv)Explain the following terms: (a) Field (b) Record (c) Database",
+       "marks": 6
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "(Total 20 Marks) (i) Distinguish between application software and system software used in computers. (ii) Explain four (4) advantages and three (3) disadvantages of off-the-shelf application software. (iii) What are the three (3) disadvantages of home-grown application software? (iv) What are the six (6) concepts on which a Graphical User interface (GUI) is based?",
+     "marks": 6,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "(Total 20 Marks) (i) Describe any four (4) general activities undertaken in a traditional office. (ii) Explain four strategies that an organization can use to attain a paperless status. (iii)What six (6) features are included in a good word processor? (iv) Explain any six (6) capabilities of MS-Excel.",
+     "marks": 6,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BBIT",
+  "BIT",
+  "BEDS"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "introduction-to-computer-applications"
+}

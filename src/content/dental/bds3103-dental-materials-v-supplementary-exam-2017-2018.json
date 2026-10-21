@@ -1,0 +1,95 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bds3103-dental-materials-v-supplementary-exam-2017-2018",
+ "title": "Dental Materials V: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Bachelor Ofscience in Dental Technology",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BDS3103",
+ "unitTitle": "Dental Materials V",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Outline six ideal requirements of a dental flux."
+      },
+      {
+       "l": "b",
+       "text": "Explain the function of antiflux."
+      },
+      {
+       "l": "c",
+       "text": "Outline five types of corrosion in dentistry."
+      },
+      {
+       "l": "d",
+       "text": "Explain four variables which may affect corrosion."
+      },
+      {
+       "l": "e",
+       "text": "Outline three classifications of stainless steel."
+      },
+      {
+       "l": "f",
+       "text": "Give four uses of stainless steel in dentistry."
+      },
+      {
+       "l": "g",
+       "text": "Describe the composition of Cobalt Chromium alloy."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B (ANSWER ANY TWO QUESTIONS)",
+     "marks": 20
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain how to prevent corrosion in dental restorations.",
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe how to extract Titanium using magnesium reduction method.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Appraise use of Titanium and its alloys in dentistry.",
+     "marks": 20,
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Diploma in Dental Technology"
+ ],
+ "categorySlug": "dental-technology",
+ "category": "Dental Technology",
+ "unitSlug": "dental-materials-v"
+}

@@ -1,0 +1,117 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit1204-information-in-society-exam-2017-2018",
+ "title": "Information in Society: Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT1204",
+ "unitTitle": "Information in Society",
+ "date": "August, 2018",
+ "sitting": "Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A COMPULSORY",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain any FIVE issues that were of concern in The Second World Summit on the Knowledge Society, held in September 2009.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the differences between scholarly information resources and popular information resources.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Explain FIVE benefits of joining a professional association.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B ANSWER ANY TWO QUESTIONS (EACH CARRY 20 MARKS)"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss some of the factors journalists should observe in order to ensure honest and fair reporting and interpretation of information.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain FIVE functions of Kenya National Library Services Board as stipulated in Kenya Library Services Board Act (CAP 225).",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe various elements covered by Public Archives and documentation service Act- Cap 19 of the laws of Kenya.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the role the media plays in the society.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain FIVE unique characteristics of information.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Discuss the case for or against freedom of information vs privacy of information in the government of Kenya.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "information-in-society"
+}

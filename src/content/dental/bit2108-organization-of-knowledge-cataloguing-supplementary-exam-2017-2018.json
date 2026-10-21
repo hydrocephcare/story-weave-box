@@ -1,0 +1,142 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit2108-organization-of-knowledge-cataloguing-supplementary-exam-2017-2018",
+ "title": "Organization of Knowledge Cataloguing: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIS",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT2108",
+ "unitTitle": "Organization of Knowledge Cataloguing",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terms:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Universal Bibliographic Control"
+        },
+        {
+         "l": "ii",
+         "text": "Standardization"
+        },
+        {
+         "l": "iii",
+         "text": "Circulation systems"
+        },
+        {
+         "l": "iv",
+         "text": "Library management system"
+        },
+        {
+         "l": "v",
+         "text": "Online Public Access Catalogue"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Describe the activities involved in the description information materials."
+      },
+      {
+       "l": "c",
+       "text": "Discuss the efforts that have led to the establishing of International standards."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the elements involved in both subject and descriptive cataloguing.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the ways in which MARC is used and the advantages it brings to the organization of information.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe the development of descriptive cataloguing standards and indicate how they are used by libraries/information centres",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the different types of catalogue arrangements found in a library/information centres"
+      },
+      {
+       "l": "b",
+       "text": "Discuss FIVE application of Information Technology in the different functions of an information organization"
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain six benefits of computerized cataloguing"
+      },
+      {
+       "l": "b",
+       "text": "Describe four challenges facing online cataloguing systems"
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIS"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "organization-of-knowledge-cataloguing"
+}

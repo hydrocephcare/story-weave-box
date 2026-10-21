@@ -1,0 +1,109 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bma3201-operations-research-main-exam-2020-2021",
+ "title": "Operations Research: Main Exam, 16 August 2021",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Physical and Mathematical Sciences",
+ "programme": "Bachelor of Scifnce in Statistics",
+ "examTitle": "University Examination 2020/2021",
+ "unitCode": "BMA3201",
+ "unitTitle": "Operations Research",
+ "date": "Mon 16th August 2021",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "e Answer Question One and ANY Other Two Questions � All workings MUST be clearly shown",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly describe what you understand by the following terms used in theory of games; i. Play ii. Strategy iii. Mixed strategy"
+      },
+      {
+       "l": "b",
+       "text": "Determine an initial feasible solution to the following transportation problem - using the row minima method: To Availability. Ls From 2 Ce ee ie 4| 8 P16 8 4| 6 (aa Demand |7 | 12 [17 SESE CS Re eeTO IE N entre eaE ten rg S eee ee ein Lester eSeerperoymspoerrm S emea yE eor resE aetrospS ae SST . ENT EAN Paper One AIT AMOALLANTE aakcl Page:] \\ ~�) Inabank, 20 customers on average, are serverd by a cashier.in an hour. service time has an exponential distribution, whiat is the probability that: fs It will take more than 10 minutes to serve a .customey. (3 Ma li. | A customer shall be free within 4 minutes (4 Mark d) Acompany uses $ 10,000 worth of an item during the year. Then ordering costs are $ 25 per order and carrying charges are 12.5% of the average In ventory value. Find the economic order quantity, number of orders per year, time peniod per order and total cost. e) Draw a network for the following project and number the events according to Fulkerson's rule: A is the start event and K is the end event 7. A precedes event B J is the successor event to F, Cand D are successor events to B, D is the preceding event to G E and F occur after event G E precedes F, C restraints the occurrence of G and G precedes H, H precedes J and K succeeds J, F restraints the occurrence of H"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "34) Briefly explain three causes of poor inventory control. : b) A company plans to consume 700 pieces annually of a particular-component. Past records indicate that its purchasing department spent $12,500 for placing 15,000. purchase orders, The average inventory was valued at $50,000 and the total storage cost was $7,500, which included wages, rent, taxes, insurance etc. related to store department. The company borrows capital at 10 per cent a year. If the cost of the component is Rs. 12 and lot size is 10, determine the; _ i. Purchase price/year ii. Purchase expenses/year iii. Storage expenses/year iv. Capital cost /year v. Total cost/year : LosinRee eS ican SSL ETO Pere met eI Ere AYSAIS ASE: ATR TILT ig LTS,hy reelsiepsllyeeeUDALL easomes ESET UIT Paper One ee",
+     "marks": 14,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define a queue and explain the various queue disciplines"
+      },
+      {
+       "l": "b",
+       "text": "Explain the terms ba/king and queue discipline C) Customers arrive at a one window drive-in bank according to a Poisson distribution with mean 10 per hour, Service time per customer is exponential with mean 5 minutes, The space in front of the window, including that for serviced car can accommodate a maximum of three cars. Other cars can wait outside this space, |. What is the probability that an arriving customer can drive directly to the space in front of the window? il. What is the probability that an arriving customer will have to wait outside the indicated space? ii. | How long is an arriving customer expected to wait before starting service? ."
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is meant by PERT?",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Explain the rules of network construction",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "The R and D department is planning to bid on a large project for the development of a new communication system for commercial planes. The accompanying table shows the activities, times and sequences required. -- - Activity Immediate Predecessor Time (Weeks) | B A 2 C A 4. D A 4 a E B 6 E GD 6 G D, F 2 ne etc H D ere I EG) Fl 5 Paper One Leary! poreets vertie| age 3",
+       "marks": 12
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain important characteristics of situations to which linear programming method can be successfully applied. Assume a suitable example. A. firrn manufactures three products A, 8B and GC Time to manufacture product A is twice that for Band thrice that for Cand if the entire labour is engaged in making product A, 7,600 units of this product can be produced. These products are to be produced in the ratio 3:4:5. There is demand for at least 300, 250 and 200 units of products A, Band Cand the profit earned per unit is sh. 90 sh, 40 and sh, 30 respectively, Table Raw Requirement per unit of product Total material availability (kg) > (kg) A B C Q 5,000 6 5 2 \"6,000 4 7 3 Formulate the problem as a linear programming problem. Paper One eet ESE Ta RE UY Ree Feu te eer ces reyIP ie Salle aia ahaa a}"
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2021-08-16",
+ "dateLabel": "16 August 2021",
+ "programmes": [
+  "Bachelor of Scifnce in Statistics"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "operations-research"
+}

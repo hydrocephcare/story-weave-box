@@ -1,0 +1,190 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4209-distributed-system-supplementary-exam-2017-2018",
+ "title": "Distributed System: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Business Information Technology / information / Technology",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4209",
+ "unitTitle": "Distributed System",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Answer All Questions In Section A and any other Two In Section B",
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "No reference materials allowed",
+     "id": "q2"
+    },
+    {
+     "t": "h",
+     "text": "Section A (COMPULSORY - 30 MARKS)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is a scalable system",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "Explain the following terms i. Portable programming language ii. Load balancing iii. Interface Definition Language",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Differentiate a Centralized systems Versus Distributed Systems",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "What is the Role of middleware in a distributed system To enhance the distribution transparency that is missing in network operating systems",
+       "marks": 3
+      },
+      {
+       "l": "e",
+       "text": "Explain transaction ACID properties and give importance of each property.",
+       "marks": 8
+      },
+      {
+       "l": "f",
+       "text": "Briefly discuss the term Concurrency.",
+       "marks": 5
+      }
+     ],
+     "id": "s1-q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is a Distributed system",
+       "marks": 2
+      },
+      {
+       "l": "b",
+       "text": "A particular bank has branches in major towns of the Kenya i.e. Nairobi, Nakuru, Eldoret, Kisumu, Kakamega and Mombasa. Each branch uses a computer for the management of its information, but the branches are not currently linked together. The bank wants to integrate the branches (nodes) using a computer network and it has two options - to design either; a centralized system or a distributed system. You are required to advice the company's IT director (who is not conversant with distributed systems) about the following; I. Explain to director three benefits that the users will be expected to observe when the company implements a distributed system as compared to a centralized system II. Describe to him two reasons as to why they should implement each of the following techniques in the system. i. Replication ii. Caching",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "Describe two example of a distributed system you know. Show how it satisfies the main requirements of a well-designed distributed system.",
+       "marks": 6
+      }
+     ],
+     "id": "s2-q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Differences between shared nothing Parallel System and Distributed system",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Explain the Advantages of Replication in distributed systems",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Explain the meaning of each of the following terms as used in distributed systems - fault tolerance, openness, reliability, scalability and transparency.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain what Distributed File System (DFS) mean?",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Explain the major steps of a Remote Procedure Call in a distributed system.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Describe briefly FOUR types of transparencies in distributed systems.",
+       "marks": 8
+      },
+      {
+       "l": "d",
+       "text": "Why do you think transparency is important to user/programmer of a distributed system? Describe two advantages.",
+       "marks": 4
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is distributed file system?"
+      },
+      {
+       "l": "b",
+       "text": "Describe the mutual exclusion algorithm in distributed systems."
+      },
+      {
+       "l": "c",
+       "text": "What is the difference between a distributed file system, clustered file system and a network file system?"
+      },
+      {
+       "l": "d",
+       "text": "The need to distribute a system is often derived from non-functional requirements. The explain three non-functional requirements that typically lead to the adoption of distributed system architecture"
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Bachelor of Business Information Technology"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "distributed-system"
+}

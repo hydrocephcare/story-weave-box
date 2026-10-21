@@ -1,0 +1,121 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3217-management-of-registries-supplementary-exam-2017-2018",
+ "title": "Management of Registries: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / BBIT / BIS",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT3217",
+ "unitTitle": "Management of Registries",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A, AND ANY OTHER TWO FROM SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 MARKS"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain five information dissemination functions performed by registry officers in a registry.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain five reasons for evaluating information resources in a registry.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Describe five problems encountered during evaluation of information services and systems in most registries in Kenya.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B 40 MARKS Page 1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss five factors you would consider in choosing a file classification system.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss five factors you should consider when selecting a media format for library information resources.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Management of registries involves the application of business management principles. Discuss five principles of management which are applicable to a university registry administration.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the merits of adopting standards in records management within an organization. Standards:",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain five aspects to consider when planning for evaluation of information resources and sources.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss five factors to consider when choosing a filing system.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT",
+  "BIS"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "management-of-registries"
+}

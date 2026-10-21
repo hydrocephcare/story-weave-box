@@ -1,0 +1,110 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bds3107-oral-biology-ii-main-exam-2018-2019",
+ "title": "Oral Biology II: Main Exam, December 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Bachelor of Science in Community Oral Health",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BDS3107",
+ "unitTitle": "Oral Biology II",
+ "date": "December, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer ALL questions in section A and answer ANY Other Two questions from Section B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 marks"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Describe various bone cells and their roles.",
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Describe the process of fracture healing.",
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Short notes on composition of dentine.",
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe basic functional unit of bone.",
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Outline causes and presenting features of rickets.",
+     "id": "q5"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Describe various forms of bone formation.",
+     "id": "q6"
+    },
+    {
+     "t": "h",
+     "text": "Section B 40 marks"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Describe the functions of the following in bone metabolism.",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Parathyroid hormone"
+      },
+      {
+       "l": "b",
+       "text": "Vitamin D"
+      },
+      {
+       "l": "c",
+       "text": "Calcitonin"
+      }
+     ],
+     "id": "s2-q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Briefly describe age changes in enamel, dentine and the pulp.",
+     "id": "s2-q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Describe composition and functions of saliva.",
+     "id": "s2-q3"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12",
+ "dateLabel": "December 2018",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "oral-biology-ii"
+}

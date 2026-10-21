@@ -1,0 +1,176 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bma2108-ordinary-differential-equations-i-supplementary-exam-2017-2018",
+ "title": "Ordinary Differential Equations I: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Physical Science",
+ "programme": "BAS, BED (science), BED (arts), BSNE",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BMA2108",
+ "unitTitle": "Ordinary Differential Equations I",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "TO CANDIDATES ANSWER ALL QUESTIONS IN SECTION A AND ANY TWO IN SECTION B",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "i) Find the general solutions of = 52 + 3 ii) find the particular solutions satisfying the given boundary conditions 2 + 2 = 5 when y = 4 and x = 2"
+      },
+      {
+       "l": "b",
+       "text": "Classify each of the following equation stating whether it is o.d.e or not",
+       "parts": [
+        {
+         "l": "i",
+         "text": "the order"
+        },
+        {
+         "l": "ii",
+         "text": "degree"
+        },
+        {
+         "l": "iii",
+         "text": "dependent variables"
+        },
+        {
+         "l": "iv",
+         "text": "independent variables 3 3 - 3 2 2 + 3 - = 3 2 2 ( 3) - 2 + = 0"
+        }
+       ]
+      },
+      {
+       "l": "c",
+       "text": "Define the term differential equations"
+      },
+      {
+       "l": "d",
+       "text": "Find the curve which satisfies the equation 2 = 2 + 1, which passes through the point (1,2)"
+      },
+      {
+       "l": "e",
+       "text": "find the general solution to the equation + (2 + 2) = 0"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B ANSWER ANY TWO QUESTIONS"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Solve the differential equation + = 3-"
+      },
+      {
+       "l": "b",
+       "text": "Solve the second order differential equation 2 2 - 4 = 0 given that =1, x=0 and 0 as +"
+      },
+      {
+       "l": "c",
+       "text": "Find the general solution for the differential equation 2 + 2 = 0"
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "By use of integrating factor solve the equation + 5 = -2"
+      },
+      {
+       "l": "b",
+       "text": "Solve the following second order differential equations 2 2 - - 3 = 0"
+      },
+      {
+       "l": "c",
+       "text": "Solve the following differential equations + = 2"
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Solve the ordinary differential equation 3(y - 4x2) dx + x dy=0",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Solve the following equation + 1 = 3 +1",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Using the method of separating the variables solve the differential equation (1 + 2) - 2 = 0",
+       "marks": 5
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Solve the equation  + 2 = 0 where a is a constant by letting  =",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Show that the equation2 2 - - 2 = 0 has two linearly independent solutions of the form",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "Solve the differential equation ( + 1)  = (2 + 1)",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "An electric current contains inductance L and resistance R connected to a constant voltage source E. The current I is given by the differential equation E-L = , where L and R are constants. Find the current in terms of time t given that t=0, i=0",
+       "marks": 8
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [],
+ "categorySlug": "other-units",
+ "category": "Other Units",
+ "unitSlug": "ordinary-differential-equations-i"
+}

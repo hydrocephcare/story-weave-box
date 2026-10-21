@@ -1,0 +1,209 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit1101-computer-architecture-supplementary-exam-2017-2018",
+ "title": "Computer Architecture: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit / beds",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT1101",
+ "unitTitle": "Computer Architecture",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the use of registers in the CPU."
+      },
+      {
+       "l": "b",
+       "text": "Name the two major components of the Central Processing Unit (processor) and briefly describe what each does."
+      },
+      {
+       "l": "c",
+       "text": "Differentiate between RAM and ROM"
+      },
+      {
+       "l": "d",
+       "text": "Convert the following into decimal showing your working:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "110111"
+        },
+        {
+         "l": "ii",
+         "text": "101101"
+        }
+       ]
+      },
+      {
+       "l": "e",
+       "text": "Convert the following into binary showing your working:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "54"
+        },
+        {
+         "l": "ii",
+         "text": "83"
+        }
+       ]
+      },
+      {
+       "l": "f",
+       "text": "List four of the conditions an ALU tests for"
+      },
+      {
+       "l": "g",
+       "text": "What is a computer bus? State three types of computer buses"
+      },
+      {
+       "l": "h",
+       "text": "Computers have evolved through many generations over the years. State and explain the five generations the computers have evolved through."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Computers rely on accurate data input in order to provide reliable outputs. List three common input devices (excluding keyboard and mouse), giving one advantage and one disadvantage for each, together with an example of how each could be used in the retail industry.",
+       "marks": 12
+      },
+      {
+       "l": "b",
+       "text": "Input and output devices usually connect to a PC via \"ports\". List the names of four different ports found on modern computers, together with a type of device usually associated with each port.",
+       "marks": 8
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "own personal The Managing Director of Tegemea Sacco wants to assemble his computer:",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Outline the major components of system unit he needs to acquire."
+      },
+      {
+       "l": "b",
+       "text": "Advise him on the basic input and output devices he needs to buy."
+      },
+      {
+       "l": "c",
+       "text": "He realizes that he needed to watch television and listen to radio on the same machine. Identify the type of card and slot where he needs to plug it."
+      },
+      {
+       "l": "d",
+       "text": "Later he bought a digital camera. Advise him on which port he needs to connect it to."
+      },
+      {
+       "l": "e",
+       "text": "Explain the two major types of software he needs to install in the computer. Give two examples."
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe how data is organised in a magnetic disk drive. Clarify your answer using a clearly labeled sketch.",
+       "marks": 12
+      },
+      {
+       "l": "b",
+       "text": "Disk performance is greatly dependent upon access time, the time required to directly access data on the disk. Describe the three major factors on which access time depends.",
+       "marks": 6
+      },
+      {
+       "l": "c",
+       "text": "How can physical access time be improved?",
+       "marks": 2
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the difference between serial and parallel data transmission, and describe an example of a hardware device or communication channel that uses each method.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Expand the following abbreviations and give a brief description of each term:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "CPU"
+        },
+        {
+         "l": "ii",
+         "text": "ALU"
+        },
+        {
+         "l": "iii",
+         "text": "ASCII"
+        },
+        {
+         "l": "iv",
+         "text": "CMOS"
+        },
+        {
+         "l": "v",
+         "text": "GHz"
+        },
+        {
+         "l": "vi",
+         "text": "BIT",
+         "marks": 12
+        }
+       ]
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BBIT",
+  "BIT",
+  "BEDS"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "computer-architecture"
+}

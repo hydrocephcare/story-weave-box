@@ -1,0 +1,116 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4104-security-and-cryptography-supplementary-exam-2017-2018",
+ "title": "Security and Cryptography: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / BBIT",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4104",
+ "unitTitle": "Security and Cryptography",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY TWO QUESTIONS IN SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Unlike the username and password authentication mechanism that uses \"what you know\" concept, address-based authentication uses \"where you are\". Give a detailed description of the address-based authentication mechanism.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Describe the role of MDCs and explain the following varieties of MDC as used in hash functions.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Explain the following types of access controls showing where each is applicable.",
+       "marks": 5
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the concept of a PKI n key distribution and describe the functional roles of a PKI.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the role of certificate authentication in e-commerce.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "What is social engineering? Briefly discuss approaches in social engineering that could be exploited by criminals to penetrate in our systems and how they can be defeated.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the risks to the protected internal network as a result of a DMZ",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Write short notes on the use of the following Encryption technique; i. DNSSEC,",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Summarize the following Internet security models; i. IPv4/IPv6 encapsulation headers in IPSec ii. Cryptographically Generated Address (CGA) iii. IP Security (IPsec)10",
+       "marks": 15
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "security-and-cryptography"
+}

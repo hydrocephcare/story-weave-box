@@ -40,6 +40,7 @@ export interface DentalPaper {
 export interface PaperMeta { unitSlug: string; categorySlug: string; programmes: string[]; dateISO: string; slug: string; title: string; unitCode: string; unitTitle: string; programme: string; date: string; year: string; sitting: string; duration: string; questions: number; complete: boolean; university: string; group: string }
 
 import index from "@/data/dentalPapers.json";
+import cats from "@/data/dentalCategories.json";
 export const PAPER_INDEX = index as PaperMeta[];
 
 const files = import.meta.glob("../content/dental/*.json", { import: "default" }) as Record<string, () => Promise<DentalPaper>>;
@@ -51,5 +52,5 @@ export const totalMarks = (p: DentalPaper) => p.pages.reduce((n, pg) => n + pg.i
 
 /** The subject categories, units and programmes found in the published papers (for the browse pages and menus). */
 export const CATEGORY_LIST = Array.from(new Map(PAPER_INDEX.map((p) => [p.categorySlug, p.group])).entries()).map(([slug, name]) => ({ slug, name, papers: PAPER_INDEX.filter((x) => x.categorySlug === slug).length, units: Array.from(new Map(PAPER_INDEX.filter((x) => x.categorySlug === slug).map((x) => [x.unitSlug, x.unitTitle])).entries()).map(([us, ut]) => ({ slug: us, title: ut, papers: PAPER_INDEX.filter((x) => x.unitSlug === us).length })) }));
-export const categoryBlurb: Record<string, string> = { "basic-dental-sciences": "Anatomy, physiology, oral biology and oral pathology for dental students.", "community-and-public-health": "Community health, health education and promotion, and primary health care.", "biostatistics-and-research": "Biostatistics, research methods and data analysis for health students.", "other-units": "More units from the same colleges." };
+export const categoryBlurb: Record<string, string> = Object.fromEntries((cats as { slug: string; blurb: string }[]).map((c) => [c.slug, c.blurb]));
 export const paperPath = (slug: string) => `/dental/papers/${slug}`;

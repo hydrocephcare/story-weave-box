@@ -1,0 +1,90 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bht2201-front-office-operations-ii-main-exam-2018-2019",
+ "title": "Front Office Operations II: Main Exam, 11 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Hospitality Travel and Tourism Management",
+ "department": "Department of Travel and Tourism Management",
+ "programme": "Bachelor of Science in Hospitality Management",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BHT2201",
+ "unitTitle": "Front Office Operations II",
+ "date": "Tue 11th December, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer question one and any other two questions",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the stages of the guest cycle.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain any five hotel tariffs.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "State any five potential sources of criminal activities in a hotel.",
+       "marks": 5
+      },
+      {
+       "l": "d",
+       "text": "Identify any five importance of a strong key control system in a hotel.",
+       "marks": 5
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Interdepartmental communication is an important factor for effective front office operations: Citing any five departments, explain this observation.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Satisfactory handling of guest complaints can be achieved through a quick response. Explain any five elements that help achieve this.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "The role of a night auditing is a key aspect of effective front office management. Explain any five night audit reports.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Citing and five aspects, explain the significance of computerization and consequent inter-dependence of the front office with other hotel departments.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-11",
+ "dateLabel": "11 December 2018",
+ "programmes": [
+  "Bachelor of Science in Hospitality Management"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "front-office-operations-ii"
+}

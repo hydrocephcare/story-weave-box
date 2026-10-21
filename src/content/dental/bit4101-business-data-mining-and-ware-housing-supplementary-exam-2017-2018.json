@@ -1,0 +1,255 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4101-business-data-mining-and-ware-housing-supplementary-exam-2017-2018",
+ "title": "Business Data Mining and Ware Housing: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "Bachelor of Business Information Technology / information / Technology",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4101",
+ "unitTitle": "Business Data Mining and Ware Housing",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer question one and any other two (3 Marks) (3 Marks)",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the following major components of a data warehouse:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Summarized data"
+        },
+        {
+         "l": "ii",
+         "text": "Operational systems of record"
+        },
+        {
+         "l": "iii",
+         "text": "Integration program"
+        },
+        {
+         "l": "iv",
+         "text": "Current detail"
+        },
+        {
+         "l": "v",
+         "text": "Metadata"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Describe the architecture of a data warehouse by a diagram and brief explanation of function of the components."
+      },
+      {
+       "l": "c",
+       "text": "Explain three uses of materialized views"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following essential analytic function concepts in data warehousing",
+       "marks": 12,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Processing order"
+        },
+        {
+         "l": "ii",
+         "text": "Result set partition"
+        },
+        {
+         "l": "iii",
+         "text": "Window"
+        },
+        {
+         "l": "iv",
+         "text": "Current row"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Explain the function and objective of ETL in data warehouse",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Outline the structure of SQL definition of a select query to extract data into a flat file (you may use an example)",
+       "marks": 6
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the function of transformation in data warehouse"
+      },
+      {
+       "l": "b",
+       "text": "Outline the multistage transformation in data warehouse"
+      },
+      {
+       "l": "c",
+       "text": "What do you understand by the term data warehouse"
+      },
+      {
+       "l": "d",
+       "text": "Briefly explain the following characteristics of data warehouse:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Subject-oriented"
+        },
+        {
+         "l": "ii",
+         "text": "Integrated"
+        },
+        {
+         "l": "iii",
+         "text": "Non- volatile"
+        },
+        {
+         "l": "iv",
+         "text": "Time variant"
+        }
+       ]
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "A university wishes to perform an enrolment analysis",
+       "parts": [
+        {
+         "l": "i",
+         "text": "identify any two dimensions for the required analysis",
+         "marks": 4
+        },
+        {
+         "l": "ii",
+         "text": "Give a conceptual design of a dimensional hierarchy for one of the identified dimensions",
+         "marks": 6
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Differentiate between a data warehouse and data mart",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Briefly explain the following data warehouse testing life cycle",
+       "marks": 8,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Unit testing                                                     Page 2"
+        },
+        {
+         "l": "ii",
+         "text": "System testing"
+        },
+        {
+         "l": "iii",
+         "text": "Regression testing"
+        },
+        {
+         "l": "iv",
+         "text": "Integration testing"
+        }
+       ]
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly discuss the following data mining trends in terms of technologies and methods:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Ubiquitous data mining",
+         "marks": 3
+        },
+        {
+         "l": "ii",
+         "text": "Multimedia data mining",
+         "marks": 3
+        },
+        {
+         "l": "iii",
+         "text": "Hypertext and hypermedia",
+         "marks": 3
+        },
+        {
+         "l": "iv",
+         "text": "Spatial and Geographic Data Mining",
+         "marks": 3
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Outline the multistage transformation in data warehouse",
+       "marks": 8
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Bachelor of Business Information Technology"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "business-data-mining-and-ware-housing"
+}

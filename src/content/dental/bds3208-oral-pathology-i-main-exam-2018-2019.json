@@ -1,0 +1,96 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bds3208-oral-pathology-i-main-exam-2018-2019",
+ "title": "Oral Pathology I: Main Exam, 17 December 2018",
+ "university": "Mount Kenya University",
+ "school": "Medical School",
+ "department": "Department of Dental Sciences",
+ "programme": "Bachelor of Science in Community Oral Health",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BDS3208",
+ "unitTitle": "Oral Pathology I",
+ "date": "Mon 17th Dec 2018 8.00am",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 marks"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "List features of hereditary ectodermal dysplasia.",
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Describe features of amelogenesis imperfect.",
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "List features of Pierre Robbins syndrome.",
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe and classify odontomes.",
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Describe the following dental malformations; germination, fusion and dilacerations.",
+     "id": "q5"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "List causes of intrinsic tooth discolouration.",
+     "id": "q6"
+    },
+    {
+     "t": "h",
+     "text": "Section B 40 marks"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Classify candidiasis, causes and management of oral candidiasis.",
+     "id": "s2-q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Classify salivary gland tumours.",
+     "id": "s2-q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Define sialodenitis, classification aetiology, presentation and management.",
+     "id": "s2-q3"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-17",
+ "dateLabel": "17 December 2018",
+ "programmes": [
+  "Diploma in Community Oral Health"
+ ],
+ "categorySlug": "basic-dental-sciences",
+ "category": "Basic Dental Sciences",
+ "unitSlug": "oral-pathology-i"
+}

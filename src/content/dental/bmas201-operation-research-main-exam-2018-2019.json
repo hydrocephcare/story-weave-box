@@ -1,0 +1,170 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bmas201-operation-research-main-exam-2018-2019",
+ "title": "Operation Research: Main Exam, December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Physical and Mathematical Sciences",
+ "programme": "BIT / becf / becs / bsfs / bas / becf / bec / bbm / bcom",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BMAS201",
+ "unitTitle": "Operation Research",
+ "date": "December 2018",
+ "sitting": "Main Exam",
+ "duration": "",
+ "instructions": "UNIT CODE: BMAS201 UNIT TITLE: OPERATION RESEARCH MON 107! DEC, 2018 MAIN EXAM 11:00AM 2 HOURS ' Instructions:! e! Answer Question One (COMPULSORY) and ANY other TWO questions -- � Show all your workings",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terms as used in linear programming:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Feasible solution"
+        },
+        {
+         "l": "ii",
+         "text": "Transportation problem | ili) Assignment problem `"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Discuss three oases inn the transportation model"
+      },
+      {
+       "l": "c",
+       "text": "The following represents activities of a network. Activity |Preceding Activity |Duration Days A ~ 4 B A eae? C A a) D ; A 6 E C Gee Sv Ee 7a TED A YN, IT LO eTTUTTTEO. ERTL A BRYN SPT TENSES Paper Three ; Page 1 G E 5 H B,F 11 G,H ( J C 4 K D 3 L Lid ks 4 Reguired:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Draw the network diagram and find the critical path li) Calculate the floats of the network in question ."
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "On an average, 6 customers reach a telephone booth every hour to make calls. Determine the probability that exactly 4 customers will reach in 30 - minute period, assuming that the arrivals follow Poisson distribution. ~"
+      },
+      {
+       "l": "e",
+       "text": "A stockist purchases an item at the rate of Kshs. 40 per piece from a manufacturer. 2,000units of the item are required per year. What should be the order quantity per order if the cost per order is Kshs. 15 and the inventory charges per year are Kshs. 0,2?"
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Arrival rate of telephone calls at a telephone both are according to a Poisson distribution with an average time of 9 minutes between two consecutive arrivals. The length of the telephone callis assumed to be ex<ponentially distributed with mean 3 minutes.",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Determine the probability that the person arriving at the booth will have to wait.",
+       "marks": 3
+      },
+      {
+       "l": "b",
+       "text": "Find the average queue length that is formed from time to time",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "The telephone company will install a second booth when convinced that an arrival would expect to have to wait at least four minu,w9 for the phone. Find the increase in flow rate of arrivals which will imstify-`e@'sedond booth. . SS I RT A ESR 8 TL VY A A OS SIERRA ORE ERA TSN Fs NONE HN sh es un semen \\ Paper Three. Page 2",
+       "marks": 4
+      },
+      {
+       "l": "d",
+       "text": "What is the probability that an arrival `vill have to wait for more than 10 minutes before the phone is free?",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "What is the probability that he will have to wait for more than 10 minutes before the phone is available and the call is also complete?",
+       "marks": 4
+      },
+      {
+       "l": "f",
+       "text": "Find the fraction of a day that the phone will be in use",
+       "marks": 2
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "What do you understand by zero-sum and nonzero-sum games?",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "For what value of/, the game with the following payoff matrix is strictly determinable? PlayerB Bl B2 B3 Player Al A 6 2 A A2. -l A -7 apo A3 -2 4 A",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Explain the assumptions underlying game theory",
+       "marks": 8
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Briefly explain the following terms as used in network analysis",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Activity                                                   (2 Marl:s)"
+        },
+        {
+         "l": "ii",
+         "text": "Node ili) Dummy activity SO ----E------eoerrr------ TT AARC RIEY EIN TES RY ANE A TRL RC ORAL TRAIT\" Paper Three Page 3 The following tasks are to be completed cn vehicles at a service station in Nairobi Kenya. TAS. DESCRIPTION PRECEDING TIME A , TASKS (Seconds) ~ - OO B Driver arrives and stops A 10 S Driver selects brands of oil and petrol B 100 D Fill petrol tank Cand L ele) 1D F Prepare bill D 50 G A 20 H Receive payment F 20 Wash wind screen A 100 a] Polish wind screen Check tyre pressure H 90 K Inflate tyre � A 20 L Open bonnet K 80 M N Check oil requirement Band L 20 O K 30 P Fill oil K 30 R Add distilled water to battery 10 Fill radiator M:N, P DOK, stn, Close bonnet E, G, J, Q Driver departs from forecourt Required \" ie Draw critical path network ils Find the total float, independent float and free float for each activity ESTION FIVE Write short notes on: if Classification of inventories iL. Benefits of inventory control A stockist has to supply 400 units of a product every Monday to his customers. He gets the product at Kshs. 50 per unit from the marufacturer. The cost of ordering and transportatfiroonm the manufacturer is Kshs. 75 per order. The cost of carrying inventory is 7.5% per year of the cost of the product. Find: i. � The economic lot size i, The total optimal cost (Including the capital cost), iii. The total weekly profit if the item is sold for Kshs. 55 per Unit, Paper Three A S PNG S OS TR EMT AIN AOE EIL YT OU APS RS SS O AT TPP PM SERN TIL PERE BATT � ATO XRe SOPOT IOND BUTE: Av SPORBATEAM 71810357 Beata LRA NORRIE ESOT TRSIS a Page 4 DO IETS SATE NOI) EPL"
+        }
+       ]
+      }
+     ],
+     "id": "q4"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12",
+ "dateLabel": "December 2018",
+ "programmes": [
+  "BIT",
+  "BECF",
+  "BECS",
+  "BSFS",
+  "BAS",
+  "BEC",
+  "BBM",
+  "BCOM"
+ ],
+ "categorySlug": "other-units",
+ "category": "Other Units",
+ "unitSlug": "operation-research"
+}

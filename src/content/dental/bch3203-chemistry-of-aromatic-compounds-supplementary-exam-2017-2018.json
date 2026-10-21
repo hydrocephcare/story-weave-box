@@ -1,0 +1,166 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bch3203-chemistry-of-aromatic-compounds-supplementary-exam-2017-2018",
+ "title": "Chemistry of Aromatic Compounds: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Pure and Applied Sciences",
+ "department": "Department of Physical Sciences and Mathematics",
+ "programme": "Bachelor of Education",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BCH3203",
+ "unitTitle": "Chemistry of Aromatic Compounds",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ONLY ONE QUESTION IN",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "State the four features required for a compound to be aromatic.",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Write a mechanism for the reaction below. +Cl AlCl3",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Name the compounds below. OCH2 ii)",
+       "marks": 4,
+       "parts": [
+        {
+         "l": "i",
+         "text": "SO3H Br iii) iv)"
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "Place each of the following groups in correct category in the table below. -NR3, -OR, -F, -COR, -OH, -NO2, -CH3, -CN ACTIVATORS DEACTIVATORS Strong Moderate Weak Weak Moderate Strong"
+      },
+      {
+       "l": "e",
+       "text": "Draw structures of the following compounds.",
+       "marks": 5,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Phenanthrene"
+        },
+        {
+         "l": "ii",
+         "text": "Anthracene"
+        },
+        {
+         "l": "iii",
+         "text": "Aniline"
+        },
+        {
+         "l": "iv",
+         "text": "Furan"
+        },
+        {
+         "l": "v",
+         "text": "2-bromo-4-nitrophenol"
+        }
+       ]
+      },
+      {
+       "l": "f",
+       "text": "Identify all reagents and intermediates in the conversion below. Cl O Cl + O O Page 2",
+       "marks": 8
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Write a mechanism for the reaction. H2SO4/HNO3 NO2",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Identify the reagents marked A to H in the conversions below. O A SO3H B+C D Br E+F G+H Cl",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "State two uses of benzene."
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Name and draw structures of the compounds marked as A to C. Na,C2HOH Reflux 78oC A Na/C5H11OH Reflux 78oC B H2 C Ni or Pt or Pd",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "The scheme below shows how naphthalene in converted to a carboxylic acid. Identify all the reagents A to F and the condition marked G. A B C NO2 NH2 D and G E F CO2H CN N2+Cl-",
+       "marks": 7
+      },
+      {
+       "l": "c",
+       "text": "Predict the products of the reaction below. 1. Br2, AlBr3 2. Fuming H2SO4 3. HNO3,H2SO4 A"
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Dilute H2SO4 Zn/HCl",
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "HNO3,H2SO4  B",
+     "id": "q5"
+    },
+    {
+     "t": "q",
+     "n": "6",
+     "text": "Cl2,AlCl3 4. a) For each of the compounds below determine with reasons if it is aromatic or not. O ii) iii) + i) N iii) S iv) b) Name the compounds below. i) SO3H ii) OH iii) Page 5 O c) Identify and name the intermediated marked A to C in the equation below. H2/Ni A+B H2/Ni C High pressure",
+     "marks": 4,
+     "id": "q6"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Bachelor of Education"
+ ],
+ "categorySlug": "science-and-engineering",
+ "category": "Science and Engineering",
+ "unitSlug": "chemistry-of-aromatic-compounds"
+}

@@ -1,0 +1,142 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4206-ict-in-business-and-society-supplementary-exam-2017-2018",
+ "title": "ICT in Business and Society: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / BBIT / BIS",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4206",
+ "unitTitle": "ICT in Business and Society",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Distinguish between Information technology and information technology infrastructure.",
+       "marks": 3
+      },
+      {
+       "l": "b",
+       "text": "Describe the relevance of enterprise software application in an organizational set up.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Examine how an organization can benefit from a supply management systems.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Describe the 3 elements of an organization.",
+       "marks": 4
+      },
+      {
+       "l": "e",
+       "text": "Evaluate the factors you would consider when planning for a new information system.",
+       "marks": 6
+      },
+      {
+       "l": "f",
+       "text": "f) Describe the 3 legal elements of intellectual property.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss information technology and ways in which it has impacted on the society",
+       "marks": 12
+      },
+      {
+       "l": "b",
+       "text": "Analyze the key features of Management Information Systems.",
+       "marks": 8
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Critically examine how an organization can gain competitive advantage through information systems. a) Discuss the key challenges to intellectual property rights.",
+       "marks": 8
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the four pillars of professionalism in information systems managements.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Evaluate major security threats/concerns to information systems.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "a) Discuss various tools and technologies that can be applied to help firms protect against information systems security threats.",
+       "marks": 12
+      },
+      {
+       "l": "b",
+       "text": "Evaluate the major causes of information systems failure in business organizations.",
+       "marks": 8
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT",
+  "BIS"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "ict-in-business-and-society"
+}

@@ -1,0 +1,169 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3106-object-oriented-programming-main-exam-2017-2018",
+ "title": "Object Oriented Programming: Main Exam, April 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT3106",
+ "unitTitle": "Object Oriented Programming",
+ "date": "April, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer question One and any other Two questions.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "Compulsory",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the following features of object oriented programing languages. i. Object ii. Abstraction"
+      },
+      {
+       "l": "b",
+       "text": "Why is C++ regarded as superset of C language?"
+      },
+      {
+       "l": "c",
+       "text": "Explain the following Object Oriented programming concepts. i. State ii. Encapsulation iii. Message Passing iv. Class v. Inheritance ."
+      },
+      {
+       "l": "d",
+       "text": "State four advantages of object oriented languages over the other languages."
+      },
+      {
+       "l": "e",
+       "text": "Consider the following Employee details. Employee Number Full Names Department Gender Age Monthly Salary The required operations (methods) are: Register new Employee, Display Employee Details Required:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Design the class diagram for the Employee."
+        },
+        {
+         "l": "ii",
+         "text": "Implement the class program to register new employees and print out the employee details."
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the term array."
+      },
+      {
+       "l": "b",
+       "text": "Explain three core features of arrays."
+      },
+      {
+       "l": "c",
+       "text": "Using examples differentiate between one dimensional and two dimensional arrays. Show how each type is declared and initialized."
+      },
+      {
+       "l": "d",
+       "text": "Write a program to declare and initialize two integer variables, compare them and print out the larger value on the screen. ."
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "With help of sample code, explain the concept method overloading in Object Oriented Programming.",
+       "marks": 6
+      },
+      {
+       "l": "b",
+       "text": "Write a program is required to calculate net pay for a casual work. The user inputs the number of days worked and daily pay using keyboard input. A tax of 16% is deducted from the payable amount. Write a complete program that computes the payable amount, tax deducted and the net pay and display the results.",
+       "marks": 8
+      },
+      {
+       "l": "c",
+       "text": "Explain the difference between local and global variables. Use example code.",
+       "marks": 6
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Design a class program for a Student. The class consist the following member variables: Student ID, Student Names, Course and Semester fee. The methods include: getStudentDetails (for capturing the student details using keyboard) and displayStudentDetails (for printing the student details on the screen). The class contains one object Mystudent.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the constructor.",
+       "marks": 2
+      },
+      {
+       "l": "c",
+       "text": "Write a program to demonstrate how constructors are declared and used in OO programming.",
+       "marks": 8
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "A program is required to compute grades for student performance in OOP II. The user inputs the Marks scored in the unit to get the grade. The grading system is as follows: Marks Grade 0 - 39 Fail 40 - <50 Pass 50 - < 60 Average 60 - < 70 Credit 70 - 100 Distinction Any other input Invalid score Using if Statement implement the above program.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Give three characteristics of a good user interface.",
+       "marks": 3
+      },
+      {
+       "l": "c",
+       "text": "Using examples codes, discuss three types of loops used in programming.",
+       "marks": 9
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-04",
+ "dateLabel": "April 2018",
+ "programmes": [
+  "BBIT",
+  "BIT"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "object-oriented-programming"
+}

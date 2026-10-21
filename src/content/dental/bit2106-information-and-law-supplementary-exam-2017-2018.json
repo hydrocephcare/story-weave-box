@@ -1,0 +1,127 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit2106-information-and-law-supplementary-exam-2017-2018",
+ "title": "Information and Law: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT2106",
+ "unitTitle": "Information and Law",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe part one of the official secrets act"
+      },
+      {
+       "l": "b",
+       "text": "Describe the law governing media in Kenya"
+      },
+      {
+       "l": "c",
+       "text": "Explain the main functions of the media council of Kenya."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the basic principles of freedom of information as expounded by the United Nations",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the Book and newspaper act",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the consequences of censorship on freedom of access to information",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Describe the composition and functions of parliament.",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 10,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the history of parliament in Kenya"
+      },
+      {
+       "l": "b",
+       "text": "Discuss the pillars of judicial systems in Kenya",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 10,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the sections of legal deposit law",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Define Censorship and explain the reasons for censorship."
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BBIT",
+  "BIT"
+ ],
+ "categorySlug": "law-and-social-sciences",
+ "category": "Law and Social Sciences",
+ "unitSlug": "information-and-law"
+}

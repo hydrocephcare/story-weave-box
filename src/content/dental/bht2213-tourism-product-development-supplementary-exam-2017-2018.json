@@ -1,0 +1,93 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bht2213-tourism-product-development-supplementary-exam-2017-2018",
+ "title": "Tourism Product Development: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Hospitality Travel and Tourism Management",
+ "department": "Department of Hospitality Management",
+ "programme": "Bachelor of Travel and Tourism Management",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BHT2213",
+ "unitTitle": "Tourism Product Development",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A COMPULSORY"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Identify the management and co-ordination priorities, which a destination ought to pursue.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Enumerate challenges associated with tourism product development among growing economics like Kenya.",
+       "marks": 10
+      },
+      {
+       "l": "c",
+       "text": "Describe the elements of the tourism product.",
+       "marks": 10
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B ANSWER ANY TWO QUESTIONS"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Changing market conditions require changes of tourism products. Describe, the new or reshaped tourism product development trends at the global level.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss the fundamental issues affecting global tourism product development and marketing planning.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Describe the application of the destination life cycle expounding on adaptability of tourism products beyond seasons.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Using an illustration discuss the application and implication of destination lifecycle which describes how a destination undergoes a cycle of evolution.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Bachelor of Travel and Tourism Management"
+ ],
+ "categorySlug": "hospitality-and-tourism",
+ "category": "Hospitality and Tourism",
+ "unitSlug": "tourism-product-development"
+}

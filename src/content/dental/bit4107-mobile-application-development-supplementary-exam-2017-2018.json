@@ -1,0 +1,149 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit4107-mobile-application-development-supplementary-exam-2017-2018",
+ "title": "Mobile Application Development: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology / enterprise Computing",
+ "programme": "Bachelor of Information Technology and Bachelor of Business / Information Technology",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT4107",
+ "unitTitle": "Mobile Application Development",
+ "date": "August 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "marks": 30,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Differentiate between 2G and 3G mobile communications",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "Discuss the key components in android architecture",
+       "marks": 7
+      },
+      {
+       "l": "c",
+       "text": "Write the code to receiver a broadcast in your application",
+       "marks": 7
+      },
+      {
+       "l": "d",
+       "text": "Discuss the key characteristics of Mobile Information Device Profile.",
+       "marks": 6
+      },
+      {
+       "l": "e",
+       "text": "Write a J2ME application to display \"hello world\" on a mobile screen",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define Mobile communication and explain its salient characteristics.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the constraints of developing MIDlets.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using J2ME code exam differentiate between for and a do while loop.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss Connected Device Configuration (CDC).",
+       "marks": 10
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Using J2ME code exam differentiate between if...else if..else and if else conditional statements",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the Anatomy of MIDP Applications",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Write a J2ME mobile application that that uses the scanner class to capture your name, age, county and mobile inputs from the keyboard and display them on the screen.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Discuss the Connected Limited Device Configuration (CLDC).",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "Bachelor of Information Technology and Bachelor of Business"
+ ],
+ "categorySlug": "it-and-computing",
+ "category": "IT and Computing",
+ "unitSlug": "mobile-application-development"
+}

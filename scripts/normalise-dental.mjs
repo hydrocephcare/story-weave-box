@@ -30,15 +30,29 @@ export function programmesOf(raw) {
   if (/community development/i.test(s)) add("Community Development");
   if (/clinical medicine/i.test(s)) add("Clinical Medicine");
   if (/animal|annual health/i.test(s)) add("Animal Health");
-  return out.size ? [...out] : s.trim() ? [s.trim()] : [];
+  if (out.size) return [...out];
+  // other programmes (IT, business, hospitality...): the course names as printed, split where several are listed, with timetable words dropped
+  const cleaned = s.replace(/\b(weekend|regular|virtual|varsity|evening|grp\s*\d+|group\s*\d+)\b/gi, " ").replace(/\s+/g, " ").trim();
+  const tokens = cleaned.split(/\s*\/\s*/).map((x) => x.trim()).filter(Boolean).map((x) => (/^[A-Za-z]{2,6}$/.test(x) ? x.toUpperCase() : x));
+  return [...new Set(tokens)].filter((x) => /^[A-Z]{2,6}$/.test(x) || (/^(Bachelor|Diploma|Certificate|BSc|Master)/i.test(x) && x.split(" ").length >= 3));
 }
 
 export const CATEGORIES = [
+  { slug: "dental-technology", name: "Dental Technology", blurb: "Dental materials, prosthetics, orthodontics, crown and bridge, periodontology and the other dental technology units.", match: /dental materials|prosthe|orthodon|periodon|paedodon|cobalt|crown and bridge|endodon|dental technology|dental laboratory|oral surgery|conservative dent/i },
   { slug: "basic-dental-sciences", name: "Basic Dental Sciences", blurb: "Anatomy, physiology, oral biology and oral pathology for dental students.", match: /anatomy|physiology|oral biology|oral pathology|oral medicine|dental materials|histology|embryology/i },
   { slug: "community-and-public-health", name: "Community and Public Health", blurb: "Community health, health education and promotion, epidemiology and primary health care.", match: /community health|health education|health promotion|epidemiolog|public health|primary health|environmental|nutrition/i },
-  { slug: "biostatistics-and-research", name: "Biostatistics and Research", blurb: "Biostatistics, research methods and data analysis for health students.", match: /biostat|statistic|research|informatics/i },
+  { slug: "biostatistics-and-research", name: "Biostatistics and Research", blurb: "Biostatistics, research methods and data analysis for health students.", match: /biostat|research method|informatics/i },
+  { slug: "it-and-computing", name: "IT and Computing", blurb: "Programming, databases, networks, systems, software and the other information technology units.", match: /comput|programming|database|network|software|web |information system|information technology|data structure|algorithm|operating system|(^|[^a-z])ict([^a-z]|$)|cyber|e-commerce|multimedia|artificial|machine learning|internet|mobile|java|python|digital|systems analysis|systems design|graphics|cloud|security|telecom|electronics|logic design|e-learning|data communication|object oriented/i },
+  { slug: "business-and-economics", name: "Business and Economics", blurb: "Accounting, finance, marketing, management, economics, entrepreneurship and the other business units.", match: /account|financ|marketing|econom|management|business|entrepreneur|human resource|procurement|supply chain|audit|tax|banking|insurance|investment|commerce|strategic|leadership|operations|organi[sz]ation|project|logistic|purchasing|sales/i },
+  { slug: "education", name: "Education", blurb: "Teaching, curriculum, guidance and counselling, and the other education units.", match: /education|teaching|curriculum|pedagog|instruction|guidance|counsel|special needs|assessment|classroom/i },
+  { slug: "hospitality-and-tourism", name: "Hospitality and Tourism", blurb: "Hospitality, tourism, travel, catering and events units.", match: /hospitality|tourism|travel|hotel|catering|food and beverage|front office|housekeeping|events|restaurant/i },
+  { slug: "media-and-communication", name: "Media and Communication", blurb: "Journalism, media studies, public relations, communication and writing units.", match: /media|journalism|communication|broadcast|public relations|film|photograph|advertis|writing|reporting/i },
+  { slug: "law-and-social-sciences", name: "Law and Social Sciences", blurb: "Law, sociology, psychology, development studies, governance and the other social science units.", match: /law|legal|constitution|criminolog|sociolog|psycholog|political|international relations|conflict|development|governance|human rights|public administration|gender|peace|social work|anthropolog|philosoph|ethic|religio|theolog|kiswahili|language|literature|critical thinking|community media/i },
+  { slug: "health-sciences-and-pharmacy", name: "Health Sciences and Pharmacy", blurb: "Pharmacy, clinical medicine, nursing, pathology, microbiology and other health science units.", match: /pharm|nurs|clinical|patholog|microbio|biochem|medic|surgery|paediatric|obstetric|radiolog|laborator|immunolog|health|therapy|dental/i },
+  { slug: "science-and-engineering", name: "Science and Engineering", blurb: "Mathematics, physics, chemistry, biology, engineering and the other science units.", match: /physics|chemistry|biolog|mathemat|calculus|algebra|engineering|surveying|construction|building|electric|mechanic|civil|geolog|agricultur|statistic|quantity|thermodynamic|material|science/i },
 ];
-export const categoryOf = (unitTitle) => CATEGORIES.find((c) => c.match.test(unitTitle)) ?? { slug: "other-units", name: "Other Units", blurb: "More units from the same colleges." };
+const BY_CODE = { BIT: "it-and-computing", BBIT: "it-and-computing", BCS: "it-and-computing", BSE: "it-and-computing", BAF: "business-and-economics", BBM: "business-and-economics", BMK: "business-and-economics", BHR: "business-and-economics", BPS: "business-and-economics", BED: "education", BHT: "hospitality-and-tourism", BJM: "media-and-communication", BMM: "media-and-communication", BMC: "media-and-communication", BCL: "law-and-social-sciences", BSS: "law-and-social-sciences", BDS: "dental-technology", BHA: "basic-dental-sciences", PHA: "health-sciences-and-pharmacy", BPH: "health-sciences-and-pharmacy", BNS: "health-sciences-and-pharmacy", BEG: "science-and-engineering", BSC: "science-and-engineering" };
+export const categoryOf = (unitTitle, code = "") => CATEGORIES.find((c) => c.match.test(unitTitle)) ?? CATEGORIES.find((c) => c.slug === BY_CODE[String(code).replace(/[^A-Za-z].*$/, "").toUpperCase()]) ?? { slug: "other-units", name: "Other Units", blurb: "More units from the same colleges." };
 
 export const slugify = (s) => String(s).toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 
@@ -47,7 +61,7 @@ export function normalisePaper(p) {
   p.dateISO = d.iso; p.dateLabel = d.label;
   p.title = `${p.unitTitle}: ${p.sitting || "Exam"}${d.label ? `, ${d.label}` : ""}`;
   p.programmes = programmesOf(p.programme);
-  const cat = categoryOf(p.unitTitle); p.categorySlug = cat.slug; p.category = cat.name; p.unitSlug = slugify(p.unitTitle);
+  const cat = categoryOf(p.unitTitle, p.unitCode); p.categorySlug = cat.slug; p.category = cat.name; p.unitSlug = slugify(p.unitTitle);
   // "(5 Marks)" typed at the end of a question belongs in the marks, not in the wording
   const stripMarks = (o) => { const m = String(o.text || "").match(/\s*\(\s*(\d+(?:\.\d+)?)\s*marks?\s*\)\s*\.?\s*$/i); if (m) { o.text = o.text.slice(0, m.index).trim(); if (o.marks == null) o.marks = Number(m[1]); } for (const c of o.parts || []) stripMarks(c); };
   for (const it of p.pages.flatMap((pg) => pg.items)) if (it.t === "q") stripMarks(it);
@@ -73,8 +87,13 @@ export function normalisePaper(p) {
 
   // ---- structure: work on one flat list of items, then put it back on the pages ----
   let flat = p.pages.flatMap((pg) => pg.items.map((it) => ({ it, pg })));
-  // a section heading that appears twice means the same page was read twice: keep the later block
-  { const seen = new Map(); flat.forEach(({ it }, i) => { if (it.t === "h") { const k = norm(it.text); if (seen.has(k)) { const from = seen.get(k); let to = i; flat = flat.filter((_, j) => j < from || j >= to); return; } seen.set(k, i); } }); }
+  // a section heading that appears twice in a scanned paper means the same page was read twice: keep the later block (typed PDFs are left alone)
+  if (p.source !== "mkupaperhub") {
+    for (let again = true; again;) {
+      again = false; const seen = new Map();
+      for (let i = 0; i < flat.length; i++) { const it = flat[i].it; if (it.t !== "h") continue; const k = norm(it.text); if (seen.has(k)) { const from = seen.get(k); flat = flat.filter((_, j) => j < from || j >= i); again = true; break; } seen.set(k, i); }
+    }
+  }
   // identical questions (the same page read twice)
   { const seen = new Set(); flat = flat.filter(({ it }) => { if (it.t !== "q") return true; const k = sig(it); if (!k || !seen.has(k)) { seen.add(k); return true; } return false; }); }
   // "QUESTION ONE (continued)": its parts belong to the question before it

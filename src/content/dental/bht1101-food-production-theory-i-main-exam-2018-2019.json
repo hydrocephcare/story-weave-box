@@ -1,0 +1,136 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bht1101-food-production-theory-i-main-exam-2018-2019",
+ "title": "Food Production Theory I: Main Exam, 14 December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Hospitality, Travel and Tourism Management",
+ "department": "Department of Hospitality Management",
+ "programme": "Bachelor of Science in Hospitality Management",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BHT1101",
+ "unitTitle": "Food Production Theory I",
+ "date": "Fri 14th Dec, 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer ALL questions in section A and answer ANY TWO questions from",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 MARKS (COMPULSORY)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain five main positions in the kitchen of a standard hotel.",
+       "marks": 5
+      },
+      {
+       "l": "b",
+       "text": "Citing at least two relevant examples, identify five categories of kitchen equipment.",
+       "marks": 5
+      },
+      {
+       "l": "c",
+       "text": "Describe the following forms of heat transfer to food.",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Radiation",
+         "marks": 2
+        },
+        {
+         "l": "ii",
+         "text": "Conduction",
+         "marks": 2
+        },
+        {
+         "l": "iii",
+         "text": "Convection",
+         "marks": 2
+        }
+       ]
+      },
+      {
+       "l": "d",
+       "text": "Explain at least five details of a standardized recipe.",
+       "marks": 5
+      },
+      {
+       "l": "e",
+       "text": "Differentiate between a static and cycle menu. Give example.",
+       "marks": 3
+      },
+      {
+       "l": "f",
+       "text": "Explain how three kinds of roux differ from one another.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss four basic methods which you can use to control pest in a kitchen food store.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Sammy is a newly recruited chef in a four star hotel. He is seeking for your advice on factors to consider when planning a menu. Discuss at least five factors.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Examine the procedure for making brown stock.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "As a chef of a three star hotel, analyse to your juniors five environmental factors that lead to multiplication of bacteria in the kitchen.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain the features of a good kitchen structure.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12-14",
+ "dateLabel": "14 December 2018",
+ "programmes": [
+  "Bachelor of Science in Hospitality Management"
+ ],
+ "categorySlug": "hospitality-and-tourism",
+ "category": "Hospitality and Tourism",
+ "unitSlug": "food-production-theory-i"
+}

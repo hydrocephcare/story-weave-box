@@ -1,0 +1,142 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit2109-organization-of-knowledge-classification-supplementary-exam-2017-2018",
+ "title": "Organization of Knowledge Classification: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BBIT / bit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT2109",
+ "unitTitle": "Organization of Knowledge Classification",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Define the following terms:",
+       "parts": [
+        {
+         "l": "i",
+         "text": "Superimposed classes"
+        },
+        {
+         "l": "ii",
+         "text": "Knowledge Classification"
+        },
+        {
+         "l": "iii",
+         "text": "Author Numbers"
+        },
+        {
+         "l": "iv",
+         "text": "Call Numbers"
+        },
+        {
+         "l": "v",
+         "text": "Faceted classification"
+        }
+       ]
+      },
+      {
+       "l": "b",
+       "text": "Describe FIVE purpose and uses of classification."
+      },
+      {
+       "l": "c",
+       "text": "Explain the relationship between the classes."
+      },
+      {
+       "l": "d",
+       "text": "Explain the difference between descriptive abstracts and Informative abstracts."
+      },
+      {
+       "l": "e",
+       "text": "Explain the most reliable method of determining subject content in a work."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "marks": 20,
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the features of traditional classification schemes and how they are used.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Describe the FOUR criteria for a successful classification scheme",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Discuss the Merits and Demerits of Library of Congress Classification Scheme.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe the purpose of abstracts:"
+      },
+      {
+       "l": "b",
+       "text": "Explain the merits and demerits of using controlled and uncontrolled languages in indexing."
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Discuss the 10 main Classes of DDC and how would you use them.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BBIT",
+  "BIT"
+ ],
+ "categorySlug": "business-and-economics",
+ "category": "Business and Economics",
+ "unitSlug": "organization-of-knowledge-classification"
+}

@@ -1,0 +1,157 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit3112-indexing-abstracting-and-thesaurus-construction-supplementary-exam-2017-2018",
+ "title": "Indexing, Abstracting and Thesaurus Construction: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT3112",
+ "unitTitle": "Indexing, Abstracting and Thesaurus Construction",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER QUESTION ONE AND ANY OTHER TWO QUESTIONS",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Distinguish between indexing and abstracting",
+       "marks": 4
+      },
+      {
+       "l": "b",
+       "text": "State four reasons for updating a thesaurus.",
+       "marks": 4
+      },
+      {
+       "l": "c",
+       "text": "Explain SIX attributes that makes a good thesaurus.",
+       "marks": 6
+      },
+      {
+       "l": "d",
+       "text": "Explain SIX advantages of computerized",
+       "marks": 6
+      },
+      {
+       "l": "e",
+       "text": "List four characteristics of information retrieval tools.",
+       "marks": 4
+      },
+      {
+       "l": "f",
+       "text": "Define the following terms:",
+       "marks": 6,
+       "parts": [
+        {
+         "l": "i",
+         "text": "Information organization and retrieval,"
+        },
+        {
+         "l": "ii",
+         "text": "Indexing"
+        },
+        {
+         "l": "iii",
+         "text": "Thesaurus"
+        }
+       ]
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "With respect to retrieval of information, explain the steps involved in the indexing process.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "List and Explain FIVE qualities of a good indexing language.",
+       "marks": 10
+      }
+     ],
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain FOUR advantages of citation indexes.",
+       "marks": 8
+      },
+      {
+       "l": "b",
+       "text": "Describe the procedure for using a printed thesaurus in retrieval of information in a library.",
+       "marks": 12
+      }
+     ],
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Describe FOUR information retrieval tools."
+      },
+      {
+       "l": "b",
+       "text": "Name and explain SIX advantages of computerized indexing."
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "List and explain four methods used in organizing information materials in a library.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain 5 attributes that makes a good thesaurus.",
+       "marks": 10
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "science-and-engineering",
+ "category": "Science and Engineering",
+ "unitSlug": "indexing-abstracting-and-thesaurus-construction"
+}

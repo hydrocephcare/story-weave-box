@@ -1,0 +1,105 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bht3205-sustainable-tourism-main-exam-2018-2019",
+ "title": "Sustainable Tourism: Main Exam, December 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Hospitality, Travel and Tourism Management",
+ "department": "Department of Travel and Tourism Management",
+ "programme": "Bachelor of Science in Hospitality Management",
+ "examTitle": "University Examination 2018/2019",
+ "unitCode": "BHT3205",
+ "unitTitle": "Sustainable Tourism",
+ "date": "December 2018",
+ "sitting": "Main Exam",
+ "duration": "2 Hours",
+ "instructions": "Answer ALL questions in section A and answer ANY TWO questions from",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A 30 MARKS (COMPULSORY)"
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Explain the concept of sustainable tourism in Kenya.",
+       "marks": 12
+      },
+      {
+       "l": "b",
+       "text": "Describe the four (4) principles of sustainable tourism.",
+       "marks": 12
+      },
+      {
+       "l": "c",
+       "text": "State any six (6) key issues in sustainable tourism policy.",
+       "marks": 6
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B",
+     "marks": 40
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Explain any four (4) SDG's and their benefits within the tourism industry especially in planning.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Kenya's Coastal region receives the highest number of tourists almost throughout the year. Explore any five (5) sustainable tourism strategies that the region can deploy to reduce its negative impacts on the resources.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "Critic the concept of sustainability in the tourism sector today.",
+     "marks": 20,
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "In a diagram explain the triple-bottom-line sustainability.",
+       "marks": 15
+      },
+      {
+       "l": "b",
+       "text": "Mention any five (5) tools of sustainable tourism.",
+       "marks": 5
+      }
+     ],
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-12",
+ "dateLabel": "December 2018",
+ "programmes": [
+  "Bachelor of Science in Hospitality Management"
+ ],
+ "categorySlug": "hospitality-and-tourism",
+ "category": "Hospitality and Tourism",
+ "unitSlug": "sustainable-tourism"
+}

@@ -1,0 +1,103 @@
+{
+ "source": "mkupaperhub",
+ "slug": "bit2105-collection-development-supplementary-exam-2017-2018",
+ "title": "Collection Development: Supplementary Exam, August 2018",
+ "university": "Mount Kenya University",
+ "school": "School of Computing and Informatics",
+ "department": "Department of Information Technology",
+ "programme": "BIT / bbit",
+ "examTitle": "University Examination 2017/2018",
+ "unitCode": "BIT2105",
+ "unitTitle": "Collection Development",
+ "date": "August, 2018",
+ "sitting": "Supplementary Exam",
+ "duration": "2 Hours",
+ "instructions": "ANSWER ALL QUESTIONS IN SECTION A AND ANY OTHER TWO FROM SECTION B.",
+ "paperLabel": "",
+ "pages": [
+  {
+   "n": 1,
+   "items": [
+    {
+     "t": "h",
+     "text": "Section A COMPULSORY",
+     "marks": 30
+    },
+    {
+     "t": "q",
+     "n": "1",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss the importance of budgeting in collection development."
+      },
+      {
+       "l": "b",
+       "text": "Explain FIVE benefits of a collection development policy in a resource center."
+      },
+      {
+       "l": "c",
+       "text": "Explain some of the benefits of a weeding a resource center's collection."
+      }
+     ],
+     "id": "q1"
+    },
+    {
+     "t": "h",
+     "text": "Section B ANSWER ANY TWO QUESTIONS (EACH CARRY 20 MARKS)"
+    },
+    {
+     "t": "q",
+     "n": "2",
+     "text": "Discuss the merits and demerits of electronic collection in a library or a resource center.",
+     "marks": 20,
+     "id": "q2"
+    },
+    {
+     "t": "q",
+     "n": "3",
+     "text": "Outline the various elements of a collection development policy.",
+     "marks": 20,
+     "id": "q3"
+    },
+    {
+     "t": "q",
+     "n": "4",
+     "text": "",
+     "parts": [
+      {
+       "l": "a",
+       "text": "Discuss some of the factors you will consider when selecting information materials for a resource center.",
+       "marks": 10
+      },
+      {
+       "l": "b",
+       "text": "Explain different methods resource centers can use to acquire information materials.",
+       "marks": 10
+      }
+     ],
+     "id": "q4"
+    },
+    {
+     "t": "q",
+     "n": "5",
+     "text": "Automation has been a feature of acquisitions for a long time now, mainly in the form of automated acquisition systems. Discuss the merits of automated acquisition systems.",
+     "marks": 20,
+     "id": "q5"
+    }
+   ],
+   "footer": ""
+  }
+ ],
+ "complete": true,
+ "dateISO": "2018-08",
+ "dateLabel": "August 2018",
+ "programmes": [
+  "BIT",
+  "BBIT"
+ ],
+ "categorySlug": "law-and-social-sciences",
+ "category": "Law and Social Sciences",
+ "unitSlug": "collection-development"
+}
