@@ -22,7 +22,7 @@ const MODELS = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"];
 async function ask(key: string, model: string, user: string) {
   const body: Record<string, unknown> = { model, temperature: 0.3, max_tokens: 7000, response_format: { type: "json_object" }, messages: [{ role: "system", content: SYSTEM }, { role: "user", content: user }] };
   if (model.includes("gpt-oss")) body.reasoning_effort = "low";
-  const r = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", headers: { Authorization: "Bearer " + key, "Content-Type": "application/json" }, body: JSON.stringify(body), signal: AbortSignal.timeout(110000) });
+  const r = await fetch("https://api.groq.com/openai/v1/chat/completions", { method: "POST", headers: { Authorization: "Bearer " + key, "Content-Type": "application/json" }, body: JSON.stringify(body), signal: AbortSignal.timeout(55000) });
   if (!r.ok) throw new Error(`${model} ${r.status}`);
   const t = (await r.json()).choices?.[0]?.message?.content || "";
   const v = JSON.parse(t);
@@ -73,7 +73,9 @@ serve(async (req) => {
     if (!rows?.length) return json({ success: true, status: "all answered", seo });
     const prompt = rows.map((r, i) => `ID ${i + 1} (${r.unit}${r.marks ? `, ${r.marks} marks` : ""}):\n${r.question}`).join("\n\n");
     let answers: { id: string; answer: string }[] = [], err = "";
-    for (const m of MODELS) { try { answers = await ask(key, m, prompt); if (answers.length) break; } catch (e) { err = e instanceof Error ? e.message : String(e); } }
+    // this job's own key first, then the shared extra keys when it is rate-limited
+    const extra = (Deno.env.get("GROQ_API_KEYS_EXTRA") || "").split(",").map((k) => k.trim()).filter(Boolean);
+    outer: for (const k of [key, ...extra]) for (const m of MODELS) { try { answers = await ask(k, m, prompt); if (answers.length) { err = ""; break outer; } } catch (e) { err = e instanceof Error ? e.message : String(e); } }
     const good = new Map(answers.filter((a) => a && typeof a.answer === "string" && a.answer.trim().length > 15).map((a) => [String(a.id), a.answer.split("\\n").join("\n").trim()]));
     let saved = 0;
     for (let i = 0; i < rows.length; i++) {
