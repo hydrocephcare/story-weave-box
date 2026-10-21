@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import FIGS from "@/data/paperFigures.json";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Bookmark, Check, CheckCheck, ChevronRight, ClipboardCheck, Eye, EyeOff, FileText, Layers, Menu, Printer, Share2, Shuffle, Sparkles, Timer, X } from "lucide-react";
@@ -122,6 +123,7 @@ export default function DentalPaperPage() {
   const nav = items.filter((it) => it.t === "q");
   const askAbout = (qText: string, a: string) => openAI(`I read this answer but I do not understand it. Explain it simply, step by step, for a dental or community health student.\n\nQuestion (${paper.unitTitle}): ${qText}\n\nAnswer: ${plain(a)}`);
 
+  const figOf = (k: string) => { const g = (FIGS as Record<string, Record<string, string[]>>)[paper.slug]?.[k]; return g ? <figure className="mt-2"><img src={g[0]} alt={g[1]} loading="lazy" className="max-h-80 w-auto max-w-full rounded-md border border-border bg-white" /><figcaption className="mt-1 text-xs text-muted-foreground">{g[1]}</figcaption></figure> : null; };
   const QuestionRow = (it: PaperItem, i: number) => {
     const us = answerUnits(it);
     const txt = (k: string) => units.find((u) => u.key === k)?.text ?? "";
@@ -132,12 +134,14 @@ export default function DentalPaperPage() {
           <p className="min-w-0 flex-1 whitespace-pre-line text-[17px] leading-relaxed"><span className="mr-2 font-serif text-lg font-bold text-primary">{it.n}.</span>{it.text}</p>
           {marksLabel(it.marks)}
         </div>
+        {figOf(it.n ?? "")}
         {!it.parts?.length ? area(us[0].key) : (
           <div className="mt-3 space-y-5 border-l-2 border-primary/25 pl-4">
             {it.parts.map((p, j) => (
               <div key={j}>
                 <div className="flex items-baseline justify-between gap-3 text-[16.5px] leading-relaxed"><p className="min-w-0 flex-1"><span className="mr-1.5 font-semibold text-primary">{p.l ? `${p.l})` : "•"}</span>{p.text}</p>{marksLabel(p.marks)}</div>
                 <SubParts parts={p.parts} />
+                {figOf(`${it.n}${p.l}`)}
                 {us[j] && area(us[j].key)}
               </div>
             ))}
