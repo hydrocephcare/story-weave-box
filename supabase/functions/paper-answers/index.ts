@@ -67,21 +67,21 @@ serve(async (req) => {
     if (!key) return json({ error: "No key set." }, 500);
     const sb = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
     const seo = await seoStep(sb, key);
-    const { data: first } = await sb.from("paper_answers").select("slug").is("answer", null).lt("tries", 4).order("slug").order("idx").limit(1);
-    if (!first?.length) return json({ success: true, status: "all answered", seo });
-    const slug = first[0].slug;
-    const { data: rows } = await sb.from("paper_answers").select("qkey, unit, marks, question").eq("slug", slug).is("answer", null).lt("tries", 4).order("idx").limit(8);
-    if (!rows?.length) return json({ success: true, status: "none" });
-    const prompt = `UNIT: ${rows[0].unit}\n\n` + rows.map((r) => `ID ${r.qkey}${r.marks ? ` (${r.marks} marks)` : ""}:\n${r.question}`).join("\n\n");
+    // the next unanswered questions from any paper (lanes take different stretches so they do not collide)
+    const lane = Number((await req.json().catch(() => ({}))).lane ?? 0) || 0;
+    const { data: rows } = await sb.from("paper_answers").select("slug, qkey, unit, marks, question").is("answer", null).lt("tries", 4).order("slug").order("idx").range(lane * 8, lane * 8 + 7);
+    if (!rows?.length) return json({ success: true, status: "all answered", seo });
+    const prompt = rows.map((r, i) => `ID ${i + 1} (${r.unit}${r.marks ? `, ${r.marks} marks` : ""}):\n${r.question}`).join("\n\n");
     let answers: { id: string; answer: string }[] = [], err = "";
     for (const m of MODELS) { try { answers = await ask(key, m, prompt); if (answers.length) break; } catch (e) { err = e instanceof Error ? e.message : String(e); } }
-    const good = new Map(answers.filter((a) => a && typeof a.answer === "string" && a.answer.trim().length > 15).map((a) => [String(a.id), a.answer.replace(/\\n/g, "\n").trim()]));
+    const good = new Map(answers.filter((a) => a && typeof a.answer === "string" && a.answer.trim().length > 15).map((a) => [String(a.id), a.answer.split("\\n").join("\n").trim()]));
     let saved = 0;
-    for (const r of rows) {
-      const a = good.get(r.qkey);
-      if (a) { await sb.from("paper_answers").update({ answer: a, answered_at: new Date().toISOString() }).eq("slug", slug).eq("qkey", r.qkey); saved++; }
-      else if (!err) await sb.rpc("paper_answer_miss", { _slug: slug, _qkey: r.qkey });
+    for (let i = 0; i < rows.length; i++) {
+      const r = rows[i]; const a = good.get(String(i + 1));
+      if (a) { await sb.from("paper_answers").update({ answer: a, answered_at: new Date().toISOString() }).eq("slug", r.slug).eq("qkey", r.qkey).is("answer", null); saved++; }
+      else if (!err) await sb.rpc("paper_answer_miss", { _slug: r.slug, _qkey: r.qkey });
     }
+    const slug = rows[0].slug;
     return json({ success: true, seo, slug, saved, of: rows.length, ...(err && !saved ? { limited: err } : {}) });
   } catch (e) { return json({ success: false, error: e instanceof Error ? e.message.slice(0, 200) : "error" }, 500); }
 });
