@@ -196,3 +196,251 @@ Proceed to **hypertension and hypertensive emergencies**, then heart failure, ac
 
 **Q6.** A patient with chronic kidney disease and hypertension has peripheral oedema, a displaced apex, and an S3. The examiner asks why a high BNP alone would not be sufficient to stage heart failure in this patient.  
 **Answer:** Renal impairment reduces BNP clearance, leading to falsely elevated levels; therefore, BNP must be interpreted alongside clinical signs, echocardiographic assessment of ejection fraction, and renal function to accurately stage heart failure.
+
+---
+
+## CVS bedside viva: examiner questions with answers
+
+Use this as active recall: read the question, answer aloud, then select **Click to view answer**. These are revision answers for a Year 4 IMED bedside examination; interpret findings in the context of the patient.
+
+### A. Cardiovascular history
+
+<details><summary><strong>1. What are the main symptoms of cardiovascular disease?</strong></summary>
+
+Chest pain, dyspnoea, orthopnoea, paroxysmal nocturnal dyspnoea (PND), palpitations, syncope or presyncope, fatigue, and peripheral oedema. Ask about onset, duration, progression, triggers, associated symptoms and relevant risk factors.
+</details>
+
+<details><summary><strong>2. How do you assess chest pain?</strong></summary>
+
+Clarify site, onset, character, radiation, severity, duration, aggravating and relieving factors, and associated symptoms. Ask about exertion, sweating, nausea, dyspnoea and syncope. Acute severe or ongoing pain may represent an emergency.
+</details>
+
+<details><summary><strong>3. Differentiate orthopnoea from PND.</strong></summary>
+
+Orthopnoea is breathlessness soon after lying flat, relieved by sitting or standing. PND is an episode of breathlessness that wakes the patient from sleep, typically after one or more hours, and improves on sitting upright. Both can occur in heart failure.
+</details>
+
+<details><summary><strong>4. What is the NYHA classification?</strong></summary>
+
+Class I: no limitation of ordinary physical activity. Class II: slight limitation; ordinary activity causes symptoms. Class III: marked limitation; less-than-ordinary activity causes symptoms. Class IV: symptoms at rest or inability to perform physical activity without discomfort.
+</details>
+
+<details><summary><strong>5. Which cardiovascular risk factors should you ask about?</strong></summary>
+
+Hypertension, diabetes, dyslipidaemia, smoking, obesity, physical inactivity, kidney disease, family history of premature cardiovascular disease, previous cardiovascular events and relevant alcohol or drug use. Ask about medication adherence.
+</details>
+
+### B. General examination, pulse and blood pressure
+
+<details><summary><strong>6. What do you inspect from the end of the bed?</strong></summary>
+
+Assess general appearance, respiratory distress, position, consciousness, nutritional state, visible cyanosis or pallor, oxygen delivery, monitoring equipment and signs of fluid overload. Check observations and assess stability before proceeding.
+</details>
+
+<details><summary><strong>7. What are the characteristics of the pulse?</strong></summary>
+
+Rate, rhythm, volume, character, equality between sides, and vessel-wall condition. Also assess radio-radial and radio-femoral delays when indicated.
+</details>
+
+<details><summary><strong>8. What is a normal adult resting pulse rate?</strong></summary>
+
+Usually 60–100 beats/min in a resting adult. Interpret it alongside symptoms, rhythm, medications, fitness, temperature and haemodynamic status.
+</details>
+
+<details><summary><strong>9. What is a collapsing pulse, and what can cause it?</strong></summary>
+
+A pulse that rises briskly and then collapses rapidly. It may occur with aortic regurgitation and other high-output or wide-pulse-pressure states, such as a patent ductus arteriosus. Confirm the finding and interpret it with the rest of the examination.
+</details>
+
+<details><summary><strong>10. What is a slow-rising pulse associated with?</strong></summary>
+
+A delayed, small-volume carotid upstroke is classically associated with significant aortic stenosis because blood leaves the left ventricle through a narrowed valve.
+</details>
+
+<details><summary><strong>11. What does an irregularly irregular pulse suggest?</strong></summary>
+
+A rhythm with no predictable pattern, classically atrial fibrillation. Confirm with a 12-lead ECG; do not diagnose the rhythm from pulse examination alone.
+</details>
+
+<details><summary><strong>12. What is pulse deficit?</strong></summary>
+
+A difference between the apical heart rate and the peripheral pulse rate because some cardiac contractions do not generate a palpable peripheral pulse. It may occur in atrial fibrillation or frequent ectopic beats.
+</details>
+
+<details><summary><strong>13. What is radio-femoral delay?</strong></summary>
+
+The femoral pulse is delayed relative to the radial pulse. It suggests aortic coarctation or another cause of impaired flow between the upper and lower body; assess blood pressure in both arms and legs where appropriate.
+</details>
+
+<details><summary><strong>14. What is pulse pressure, and what affects it?</strong></summary>
+
+Pulse pressure = systolic blood pressure minus diastolic blood pressure. A wide pulse pressure may occur in aortic regurgitation or arterial stiffness; a narrow pulse pressure may occur with reduced stroke volume, including severe heart failure or shock. Interpret it with the full clinical picture.
+</details>
+
+<details><summary><strong>15. How do you assess postural hypotension?</strong></summary>
+
+Measure blood pressure and pulse after the patient has rested supine, then repeat after standing when safe, commonly at 1 and 3 minutes. A fall of at least 20 mmHg systolic or 10 mmHg diastolic within 3 minutes supports orthostatic hypotension. Assist patients at risk of falling.
+</details>
+
+### C. JVP and venous pressure
+
+<details><summary><strong>16. What is the JVP?</strong></summary>
+
+The jugular venous pressure is a bedside estimate of right atrial pressure, assessed from the internal jugular venous pulsation. It helps assess systemic venous congestion and cardiac filling pressures.
+</details>
+
+<details><summary><strong>17. How do you examine the JVP?</strong></summary>
+
+Position the patient at about 30–45 degrees and adjust the angle until the venous pulsation is visible. Use tangential light, identify the highest point of the internal jugular venous pulsation, and measure its vertical height above the sternal angle. Add approximately 5 cm to estimate pressure above the right atrium.
+</details>
+
+<details><summary><strong>18. How do you distinguish the JVP from the carotid pulse?</strong></summary>
+
+The JVP is usually not palpable, has a biphasic waveform, varies with posture and respiration, and can be altered by gentle abdominal pressure. The carotid pulse is palpable, has a single brisk outward impulse and is less affected by posture. Never press on both carotid arteries.
+</details>
+
+<details><summary><strong>19. What causes a raised JVP?</strong></summary>
+
+Right-sided heart failure, fluid overload, pulmonary hypertension, tricuspid valve disease, cardiac tamponade and constrictive pericarditis are important causes. A raised JVP indicates elevated right atrial pressure, not one specific diagnosis.
+</details>
+
+<details><summary><strong>20. What is hepatojugular reflux?</strong></summary>
+
+A sustained rise in JVP during firm, sustained pressure over the abdomen, usually the right upper quadrant. It suggests limited right-heart ability to accommodate increased venous return and may support right-sided heart failure.
+</details>
+
+<details><summary><strong>21. What is Kussmaul's sign?</strong></summary>
+
+A rise or failure of the JVP to fall during inspiration. It can occur in constrictive pericarditis, restrictive cardiomyopathy and right ventricular infarction, among other conditions.
+</details>
+
+<details><summary><strong>22. What do prominent V waves in the JVP suggest?</strong></summary>
+
+Large systolic V waves classically suggest tricuspid regurgitation, because blood flows back into the right atrium during right ventricular systole.
+</details>
+
+### D. Precordium and heart sounds
+
+<details><summary><strong>23. Where is the normal adult apex beat?</strong></summary>
+
+Usually in the left 5th intercostal space near the midclavicular line. The position can vary with body habitus, pregnancy and thoracic anatomy.
+</details>
+
+<details><summary><strong>24. What does a displaced apex beat suggest?</strong></summary>
+
+A laterally and/or inferiorly displaced apex may indicate left ventricular enlargement, often due to chronic volume or pressure overload. Consider other causes such as mediastinal shift.
+</details>
+
+<details><summary><strong>25. What is a heaving apex beat?</strong></summary>
+
+A sustained, forceful impulse that may suggest left ventricular pressure overload and hypertrophy, for example from longstanding hypertension or aortic stenosis.
+</details>
+
+<details><summary><strong>26. What is a parasternal heave?</strong></summary>
+
+A palpable lift at the left sternal edge, often indicating right ventricular hypertrophy or enlargement, as may occur with pulmonary hypertension.
+</details>
+
+<details><summary><strong>27. What is a thrill?</strong></summary>
+
+A palpable vibration caused by turbulent blood flow, often associated with a loud murmur. Describe its location and correlate it with auscultation.
+</details>
+
+<details><summary><strong>28. What are S1 and S2?</strong></summary>
+
+S1 is mainly closure of the mitral and tricuspid valves and marks the beginning of ventricular systole. S2 is closure of the aortic and pulmonary valves and marks the end of systole.
+</details>
+
+<details><summary><strong>29. What are S3 and S4?</strong></summary>
+
+S3 occurs early in diastole during rapid ventricular filling; in adults it may indicate volume overload or heart failure, although it can be physiological in younger people. S4 occurs late in diastole due to atrial contraction against a stiff ventricle; it may occur with ventricular hypertrophy or ischaemia and is absent in atrial fibrillation.
+</details>
+
+<details><summary><strong>30. How do you describe a murmur?</strong></summary>
+
+State timing (systolic, diastolic or continuous), site of maximum intensity, radiation, intensity/grade, pitch, quality, shape, and response to posture or manoeuvres. Also describe associated heart sounds and peripheral signs.
+</details>
+
+<details><summary><strong>31. What are the four main cardiac auscultation areas?</strong></summary>
+
+Aortic: 2nd right intercostal space at the sternal edge. Pulmonary: 2nd left intercostal space. Tricuspid: lower left sternal edge. Mitral: apex, usually near the 5th left intercostal space at the midclavicular line. These are listening areas, not exact surface projections of every valve.
+</details>
+
+### E. Common valvular lesions
+
+<details><summary><strong>32. Describe the murmur of aortic stenosis.</strong></summary>
+
+A harsh crescendo–decrescendo ejection systolic murmur, loudest at the right 2nd intercostal space and often radiating to the carotids. A slow-rising carotid pulse and reduced A2 may accompany severe disease.
+</details>
+
+<details><summary><strong>33. Describe the murmur of mitral regurgitation.</strong></summary>
+
+A high-pitched pansystolic murmur loudest at the apex and typically radiating to the axilla. The apex may be displaced and hyperdynamic if there is left ventricular volume overload.
+</details>
+
+<details><summary><strong>34. Describe the murmur of mitral stenosis.</strong></summary>
+
+A low-pitched mid-diastolic rumble best heard at the apex with the bell, with the patient in the left lateral position. An opening snap may be present when the valve remains mobile. Rheumatic heart disease is an important cause in Kenya.
+</details>
+
+<details><summary><strong>35. Describe the murmur of aortic regurgitation.</strong></summary>
+
+An early diastolic, high-pitched, decrescendo murmur, often best heard along the left sternal edge with the patient sitting forward at end-expiration. A wide pulse pressure or collapsing pulse may coexist.
+</details>
+
+<details><summary><strong>36. What is a pericardial friction rub?</strong></summary>
+
+A superficial, scratchy or grating sound caused by inflamed pericardial layers rubbing together. It may have up to three components and is often best heard with the patient leaning forward. Its presence supports pericarditis, but absence does not exclude it.
+</details>
+
+### F. Peripheral signs and clinical cases
+
+<details><summary><strong>37. Why do you examine the lungs in a CVS examination?</strong></summary>
+
+Left-sided heart failure can raise pulmonary venous pressure, causing basal crackles, and in more severe cases pulmonary oedema. Reduced breath sounds may indicate pleural effusions. Lung signs should be interpreted with the history and other findings.
+</details>
+
+<details><summary><strong>38. Why examine the abdomen and lower limbs?</strong></summary>
+
+Hepatomegaly, ascites and dependent oedema may indicate systemic venous congestion from right-sided heart failure. Peripheral pulses and limb temperature help assess arterial perfusion and peripheral vascular disease.
+</details>
+
+<details><summary><strong>39. A patient has orthopnoea, raised JVP, bilateral ankle oedema and bibasal crackles. What is your working diagnosis?</strong></summary>
+
+Heart failure with systemic and pulmonary congestion is a leading diagnosis. Assess haemodynamic stability, oxygen saturation and precipitating causes, then investigate with ECG, chest radiograph, blood tests and echocardiography as available.
+</details>
+
+<details><summary><strong>40. A patient has exertional syncope, chest pain and a systolic murmur radiating to the carotids. What is likely?</strong></summary>
+
+Aortic stenosis is a key diagnosis. Urgently assess the patient, obtain ECG and echocardiography, and seek senior review. Exertional syncope in suspected severe aortic stenosis is a red flag.
+</details>
+
+<details><summary><strong>41. A patient has fever, a new murmur and splinter haemorrhages. What should you suspect?</strong></summary>
+
+Suspect infective endocarditis. Obtain multiple sets of blood cultures before antibiotics when this can be done promptly and safely, arrange echocardiography and urgent senior assessment. Do not delay emergency treatment in an unstable patient.
+</details>
+
+<details><summary><strong>42. What is the difference between Osler nodes and Janeway lesions?</strong></summary>
+
+Osler nodes are classically tender nodules on fingers or toes; Janeway lesions are classically painless erythematous or haemorrhagic macules on palms or soles. Both may occur in infective endocarditis, but neither sign alone confirms the diagnosis.
+</details>
+
+<details><summary><strong>43. How would you summarise a CVS examination to the examiner?</strong></summary>
+
+Give a concise synthesis: general condition and observations; pulse and blood pressure; JVP; apex and other precordial findings; heart sounds and murmur characteristics; lung bases; abdominal and peripheral signs. Then state the leading diagnosis, supporting findings, important differentials and investigations needed.
+</details>
+
+<details><summary><strong>44. What investigations commonly support a cardiovascular assessment?</strong></summary>
+
+Choose tests based on the clinical question: 12-lead ECG, echocardiography, chest radiograph, full blood count, renal function and electrolytes, glucose/lipids where relevant, troponin for suspected acute myocardial injury, and natriuretic peptides where available for suspected heart failure. Suspected endocarditis requires blood cultures and echocardiography.
+</details>
+
+### Normal values: quick recall
+
+- **Resting adult pulse:** usually 60–100 beats/min.
+- **JVP:** commonly considered normal when the top of the venous column is no more than about 3–4 cm above the sternal angle, with technique and reference convention stated.
+- **Apex beat:** usually 5th left intercostal space near the midclavicular line.
+- **Pulse pressure:** systolic minus diastolic blood pressure.
+- **Orthostatic hypotension:** sustained fall of at least 20 mmHg systolic or 10 mmHg diastolic within 3 minutes of standing.
+
+*Educational revision material only. Use local clinical protocols and senior supervision for real patient assessment and management.*
