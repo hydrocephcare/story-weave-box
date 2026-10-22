@@ -191,7 +191,7 @@ function recallBlock(lines, i) {
   let j = i + 1;
   while (j < lines.length && !lines[j].trim()) j++;
   const body = [];
-  while (j < lines.length && !questionStart(lines[j]) && !isBlock(lines[j]) && !/^\*\*\s*(?:Question\s*|Q)?\d/.test(lines[j].trim())) {
+  while (j < lines.length && !questionStart(lines[j]) && (!isBlock(lines[j]) || /^\s*\|/.test(lines[j])) && !/^\*\*\s*(?:Question\s*|Q)?\d/.test(lines[j].trim())) {
     if (!lines[j].trim()) {
       const next = nextNonBlank(lines, j + 1);
       if (next >= lines.length || questionStart(lines[next]) || isBlock(lines[next]) || /^\*\*\s*(?:Question\s*|Q)?\d/.test(lines[next].trim())) break;
