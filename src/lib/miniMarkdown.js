@@ -185,21 +185,29 @@ function recallBlock(lines, i) {
   const t = lines[i].trim();
   const m = t.match(Q_BOLD);
   if (!m) return null;
-  let j = i + 1;
-  const body = [];
-  while (j < lines.length && lines[j].trim() && !questionStart(lines[j]) && !isBlock(lines[j]) && !/^\*\*\s*(?:Question\s*|Q)?\d/.test(lines[j].trim())) body.push(lines[j++]);
-  // bullets that follow after a blank line belong to the same answer
-  if (body.length && j < lines.length) {
-    let k = nextNonBlank(lines, j);
-    if (k > j && k < lines.length && LIST.test(lines[k]) && !questionStart(lines[k])) { while (k < lines.length && (LIST.test(lines[k]) || /^\s+\S/.test(lines[k]))) body.push(lines[k++]); j = k; }
-  }
-  if (!body.length) return null;
-  const first = body[0].trim().match(MODEL);
-  if (first) body[0] = first[1] || "";
-  const inner = mdToHtml(body.filter((l, idx) => idx > 0 || l.trim()).join("\n")).html;
-  return [`<details class="qa qa-recall"><summary><span class="qa-n">${esc(m[1])}</span><span class="qa-q">${inline(m[2].replace(/\*\*/g, ""))}</span><span class="qa-show">Click to view answer</span></summary><div class="qa-a">${inner}</div></details>`, j];
-}
 
+  // Notes commonly put a blank line between the question and its answer.
+  // Skip that separator, then collect the answer until the next question or heading.
+  let j = i + 1;
+  while (j < lines.length && !lines[j].trim()) j++;
+  const body = [];
+  while (j < lines.length && !questionStart(lines[j]) && !isBlock(lines[j]) && !/^\\*\\*\\s*(?:Question\\s*|Q)?\\d/.test(lines[j].trim())) {
+    if (!lines[j].trim()) {
+      const next = nextNonBlank(lines, j + 1);
+      if (next >= lines.length || questionStart(lines[next]) || isBlock(lines[next]) || /^\\*\\*\\s*(?:Question\\s*|Q)?\\d/.test(lines[next].trim())) break;
+      body.push(\"\");
+      j++;
+      continue;
+    }
+    body.push(lines[j++]);
+  }
+  if (!body.some((line) => line.trim())) return null;
+  const first = body.findIndex((line) => line.trim());
+  const model = body[first].trim().match(MODEL);
+  if (model) body[first] = model[1] || \"\";
+  const inner = mdToHtml(body.join(\"\\n\")).html;
+  return [\"<details class=\\\"qa qa-recall\\\"><summary><span class=\\\"qa-n\\\">\" + esc(m[1]) + \"</span><span class=\\\"qa-q\\\">\" + inline(m[2].replace(/\\\\*\\\\*/g, \"\")) + \"</span><span class=\\\"qa-show\\\">Click to view answer</span></summary><div class=\\\"qa-a\\\">\" + inner + \"</div></details>\", j];
+}
 const CALLOUT = /^\*\*(core rule|remember|key point|key points|exam tip|high yield|high-yield|red flag|red flags|safety|important|mnemonic|clinical pearl|pearl|tip|warning|note)\b[^*]*\*\*/i;
 const CARD_HEADING = /^(key points?|learning objectives?|objectives?|at a glance|high[- ]yield( points)?|summary)$/i;
 
