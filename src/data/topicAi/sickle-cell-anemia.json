@@ -1,0 +1,118 @@
+{
+ "medical": true,
+ "title": "Sickle Cell Anemia",
+ "subject": "Biochemistry & genetics",
+ "summary": "Sickle cell anemia is a homozygous β‑globin mutation (βs/βs) causing HbS >80% of total hemoglobin. The valine‑for‑glutamic‑acid substitution makes red cells sickle, leading to chronic hemolysis, vaso‑occlusion and multi‑system complications.",
+ "aka": [
+  "HbSS",
+  "Sickle cell disease (homozygous)"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "A single point mutation (GAG → GTG) in the β‑globin gene replaces glutamic acid with valine at codon 6. Homozygous individuals produce mostly HbS, which polymerises when deoxygenated, distorting red cells.",
+   "b": [
+    "Autosomal recessive inheritance",
+    "Prevalence high in East Africa, especially among Nilotic and Bantu groups",
+    "Chronic hemolytic anemia with episodic vaso‑occlusive crises"
+   ]
+  },
+  {
+   "h": "How it works",
+   "p": "Normal hemoglobin (HbA) remains soluble in both oxygenated and deoxygenated states. HbS polymerises when deoxygenated, causing red cells to become rigid, sticky and sickle‑shaped, impairing microvascular flow.",
+   "b": [
+    "Polymerisation threshold reached when HbS >30% and oxygen tension falls",
+    "Sickled cells have reduced deformability and increased adhesion to endothelium",
+    "Rapid removal by spleen → hemolysis"
+   ]
+  },
+  {
+   "h": "Regulation",
+   "p": "Erythropoiesis is driven by hypoxia‑induced erythropoietin; chronic hemolysis stimulates marrow expansion, leading to bone pain and skeletal changes.",
+   "b": [
+    "Elevated reticulocyte count (>5%) reflects marrow response",
+    "Increased fetal hemoglobin (HbF) mitigates sickling; hydroxyurea raises HbF"
+   ]
+  },
+  {
+   "h": "What goes wrong",
+   "p": "Polymerised HbS deforms red cells, causing hemolysis and vaso‑occlusion. Repeated infarctions damage organs; splenic autoinfarction leads to functional asplenia and infection risk.",
+   "b": [
+    "Acute chest syndrome, stroke, splenic sequestration, priapism",
+    "Secondary iron overload from transfusions",
+    "Increased susceptibility to encapsulated bacteria"
+   ]
+  },
+  {
+   "h": "Clinical relevance",
+   "p": "Patients present with chronic anemia, jaundice, and painful crises. In low‑resource settings, malaria, HIV, TB and limited transfusion services worsen outcomes.",
+   "b": [
+    "Pain crisis triggered by dehydration, infection, cold, high altitude",
+    "Severe anemia (Hb <7 g/dL) may need transfusion",
+    "Splenic sequestration: sudden splenomegaly, drop in Hb >2 g/dL"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Hemoglobin electrophoresis / HPLC",
+     "b": "Confirms diagnosis; HbS >80% indicates homozygous disease"
+    },
+    {
+     "a": "Complete blood count",
+     "b": "Shows normocytic anemia, reticulocytosis; if unavailable, peripheral smear with sickle cells is supportive"
+    },
+    {
+     "a": "Serum bilirubin (indirect)",
+     "b": "Elevated in chronic hemolysis; helps differentiate from hepatic jaundice"
+    },
+    {
+     "a": "Chest X‑ray (if acute chest syndrome suspected)",
+     "b": "Detects new infiltrates; if radiology not available, rely on fever, cough, hypoxia"
+    },
+    {
+     "a": "Transcranial Doppler ultrasound (children)",
+     "b": "Screens for stroke risk; if unavailable, use clinical risk factors (previous stroke, severe anemia)"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat acute crises, prevent complications, and modify disease biology.",
+   "b": [
+    "Hydration and analgesia for vaso‑occlusive pain; avoid NSAIDs if renal risk",
+    "Oxygen for hypoxia; simple transfusion for Hb <7 g/dL or acute chest syndrome",
+    "Hydroxyurea (if available) to raise HbF and reduce crises",
+    "Penicillin prophylaxis and pneumococcal vaccination for asplenic patients",
+    "Iron chelation (e.g., deferasirox) for transfusion‑related iron overload"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that cause hemolytic anemia or painful crises.",
+   "b": [
+    "G6PD deficiency – episodic hemolysis after oxidative stress, no sickle cells",
+    "Thalassemia major – microcytic anemia, target cells, not sickling",
+    "Sickle‑cell trait (HbAS) – usually asymptomatic, occasional hematuria"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Laboratory and clinical findings that may be falsely reassuring.",
+   "b": [
+    "Low HbS percentage in a recent transfusion may mask underlying disease",
+    "Mild reticulocytosis can be missed if smear not examined",
+    "Normal chest X‑ray early in acute chest syndrome"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [],
+ "exam": [],
+ "related": [],
+ "kind": "physiology",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

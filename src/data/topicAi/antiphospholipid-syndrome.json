@@ -1,0 +1,205 @@
+{
+ "medical": true,
+ "title": "Antiphospholipid Syndrome",
+ "subject": "Medicine",
+ "summary": "Antiphospholipid Syndrome (APS) is an autoimmune disorder characterized by recurrent blood clots (thrombosis) and/or pregnancy complications, associated with specific antiphospholipid antibodies. It can affect both arteries and veins, leading to a wide range of clinical manifestations. Early recognition and management are crucial to prevent serious complications.",
+ "aka": [
+  "Hughes Syndrome"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Antiphospholipid Syndrome (APS) is an autoimmune condition defined by recurrent arterial and/or venous thrombosis, pregnancy morbidity (such as fetal loss), and persistently positive antiphospholipid antibodies. Diagnosis requires at least one clinical criterion and one laboratory criterion, confirmed on two occasions 12 weeks apart.",
+   "b": [
+    "Clinical criteria: Vascular thrombosis (arterial, venous, or small vessel) or pregnancy morbidity (unexplained fetal death after 10 weeks, premature birth before 34 weeks due to eclampsia/preeclampsia/placental insufficiency, or three or more unexplained consecutive spontaneous abortions before 10 weeks).",
+    "Laboratory criteria: Presence of lupus anticoagulant, anticardiolipin antibodies (IgG or IgM, medium or high titre), or anti-β2 glycoprotein I antibodies (IgG or IgM, medium or high titre)."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "APS severity is not formally staged like cancer, but rather assessed by the type and frequency of thrombotic events, the organs involved, and the presence of catastrophic APS (CAPS). CAPS is a rare but life-threatening form involving widespread microthrombosis affecting multiple organs simultaneously.",
+   "b": [
+    "Mild: Single thrombotic event, easily managed with anticoagulation.",
+    "Moderate: Recurrent events, or involvement of critical organs (e.g., stroke, pulmonary embolism).",
+    "Severe: Catastrophic APS (CAPS) with multi-organ failure due to widespread microthrombosis, requiring intensive care.",
+    "Pregnancy-related: Recurrent fetal loss or severe pregnancy complications."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "APS can be primary (idiopathic) or secondary, associated with other autoimmune diseases. The underlying mechanism involves antiphospholipid antibodies promoting a prothrombotic state.",
+   "b": [
+    "Primary APS: Occurs without an identifiable underlying autoimmune disease.",
+    "Secondary APS: Associated with systemic lupus erythematosus (SLE) in 30-40% of cases, making it the most common secondary cause.",
+    "Other autoimmune conditions: Sjogren's syndrome, systemic sclerosis, rheumatoid arthritis.",
+    "Infections: HIV, hepatitis C, syphilis, malaria can sometimes induce transient antiphospholipid antibodies, but rarely persistent APS.",
+    "Medications: Certain drugs (e.g., phenothiazines, procainamide) can induce antiphospholipid antibodies, usually transiently."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "The clinical presentation of APS is highly variable, reflecting the widespread potential for thrombosis in any vascular bed. Symptoms depend on the location and extent of the blood clots.",
+   "b": [
+    "Deep vein thrombosis (DVT): Swelling, pain, redness in a limb (most commonly legs).",
+    "Pulmonary embolism (PE): Sudden shortness of breath, chest pain, cough, sometimes hemoptysis.",
+    "Stroke or transient ischemic attack (TIA): Sudden weakness, numbness, speech difficulties, vision changes.",
+    "Recurrent miscarriages or stillbirths: Unexplained fetal loss, especially in the second or third trimester.",
+    "Thrombocytopenia: Easy bruising, petechiae, bleeding (paradoxical despite prothrombotic state).",
+    "Livedo reticularis: Lacy, purplish discoloration of the skin, often on extremities.",
+    "Cardiac valve disease: Thickening or vegetations on heart valves, particularly mitral and aortic.",
+    "Renal involvement: Renal artery stenosis, microthrombotic nephropathy leading to hypertension or kidney failure.",
+    "Catastrophic APS (CAPS): Rapidly progressive multi-organ failure (e.g., acute respiratory distress, renal failure, neurological deficits, skin necrosis)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the presence of antiphospholipid antibodies and assess for thrombotic events or organ damage. Availability of specific antibody tests may be limited in low-resource settings, necessitating reliance on clinical suspicion and supportive evidence.",
+   "t": [
+    {
+     "a": "Lupus Anticoagulant (LA) test (e.g., dRVVT, aPTT mixing studies)",
+     "b": "Detects antibodies that interfere with phospholipid-dependent coagulation tests, prolonging clotting times. A prolonged clotting time that corrects with added phospholipid but not with normal plasma suggests LA. If unavailable, clinical suspicion and other antibody tests are crucial."
+    },
+    {
+     "a": "Anticardiolipin antibodies (aCL) IgG and IgM",
+     "b": "Measures antibodies against cardiolipin, a phospholipid. High or medium titre (over 40 GPL or MPL units, or above 99th percentile) is diagnostic. If unavailable, consider sending samples to a central lab or relying on LA and anti-β2 glycoprotein I if possible."
+    },
+    {
+     "a": "Anti-β2 glycoprotein I (anti-β2GPI) antibodies IgG and IgM",
+     "b": "Measures antibodies against β2 glycoprotein I, a plasma protein that binds to phospholipids. High or medium titre (above 99th percentile) is diagnostic. As with aCL, consider central lab if local testing is not available."
+    },
+    {
+     "a": "Complete Blood Count (CBC)",
+     "b": "Checks for thrombocytopenia (platelet count less than 100 x 10^9/L), which is common in APS. Also assesses for anemia or other cytopenias that might suggest underlying SLE."
+    },
+    {
+     "a": "Erythrocyte Sedimentation Rate (ESR) and C-Reactive Protein (CRP)",
+     "b": "General inflammatory markers. May be elevated, especially if associated with SLE or during acute thrombotic events, but are non-specific for APS."
+    },
+    {
+     "a": "Renal function tests (urea, creatinine, electrolytes)",
+     "b": "Assesses for kidney involvement, which can occur due to renal artery thrombosis or microthrombotic nephropathy. Elevated creatinine indicates kidney dysfunction."
+    },
+    {
+     "a": "Urinalysis",
+     "b": "Checks for proteinuria or hematuria, suggesting kidney damage. Proteinuria can be a sign of APS nephropathy or preeclampsia in pregnancy."
+    },
+    {
+     "a": "Doppler ultrasound (e.g., venous duplex of legs)",
+     "b": "Confirms the presence of DVT by visualizing thrombi in veins. Essential for diagnosing DVT when clinical suspicion is high and other imaging is unavailable."
+    },
+    {
+     "a": "Chest X-ray (CXR)",
+     "b": "May show signs of pulmonary embolism (e.g., Westermark sign, Hampton hump, although often normal) or rule out other causes of respiratory symptoms. Useful as a first-line imaging in resource-limited settings."
+    },
+    {
+     "a": "Electrocardiogram (ECG)",
+     "b": "Assesses for cardiac arrhythmias or signs of right heart strain in pulmonary embolism. Can also detect signs of myocardial ischemia if coronary thrombosis is suspected."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognizing red flags is crucial for prompt intervention, as APS can lead to severe and life-threatening complications, particularly catastrophic APS (CAPS).",
+   "b": [
+    "Sudden onset of neurological deficits (e.g., weakness, speech changes): Suggests stroke or TIA.",
+    "Acute shortness of breath, chest pain, hemoptysis: Indicates pulmonary embolism.",
+    "Severe, unexplained abdominal pain: May be mesenteric ischemia due to arterial thrombosis.",
+    "Rapidly worsening multi-organ dysfunction (e.g., acute kidney failure, respiratory distress, altered mental status, skin necrosis): Highly suspicious for Catastrophic APS (CAPS).",
+    "Recurrent fetal loss or severe preeclampsia/eclampsia: Indicates significant pregnancy-related APS.",
+    "Unexplained persistent thrombocytopenia: Can be a manifestation of APS, increasing bleeding risk despite prothrombotic state."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management of APS focuses on preventing recurrent thrombotic events and managing pregnancy complications. Anticoagulation is the cornerstone of treatment.",
+   "b": [
+    "Acute thrombosis: Initiate therapeutic anticoagulation immediately. Unfractionated heparin (UFH) or low molecular weight heparin (LMWH) are preferred initially, especially in severe cases or during pregnancy.",
+    "Long-term prevention: Warfarin is the mainstay for secondary prevention of thrombosis, targeting an International Normalized Ratio (INR) of 2.0-3.0 for venous thrombosis and 2.5-3.5 for arterial thrombosis or recurrent events despite INR 2.0-3.0. Regular INR monitoring is essential.",
+    "Pregnancy-related APS: Low-dose aspirin (LDA) combined with prophylactic or therapeutic LMWH is used to prevent pregnancy complications. Warfarin is contraindicated in pregnancy due to teratogenicity.",
+    "Catastrophic APS (CAPS): Requires aggressive multi-modal therapy including high-dose corticosteroids, plasma exchange, intravenous immunoglobulins (IVIG), and full anticoagulation.",
+    "Supportive care: Manage underlying conditions (e.g., hypertension, diabetes), address organ damage, and provide symptomatic relief.",
+    "Avoidance of risk factors: Counsel patients to avoid smoking, oral contraceptives (estrogen-containing), and prolonged immobility."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Lifelong follow-up is essential for patients with APS to monitor for recurrent events, manage anticoagulation, and address potential complications. Patient education is key for adherence and recognizing warning signs.",
+   "b": [
+    "Regular clinical review: Monitor for new thrombotic events, bleeding complications, and side effects of anticoagulation.",
+    "INR monitoring: For patients on warfarin, frequent INR checks are crucial to maintain therapeutic range. In low-resource settings, this may be challenging, requiring careful patient education on diet and drug interactions.",
+    "Pregnancy planning: Women with APS require pre-conception counseling and close monitoring throughout pregnancy by a multidisciplinary team.",
+    "Risk factor modification: Emphasize lifestyle changes such as smoking cessation, weight management, and regular physical activity.",
+    "Vaccinations: Ensure up-to-date vaccinations, especially for infections that can trigger APS flares.",
+    "Avoidance of estrogen-containing contraceptives: These increase thrombotic risk in APS patients."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions can mimic aspects of APS, making accurate diagnosis challenging. Distinguishing APS from these look-alikes is important for appropriate management.",
+   "b": [
+    "Systemic Lupus Erythematosus (SLE): Many patients with APS also have SLE, but APS can occur independently. SLE has broader systemic manifestations (e.g., malar rash, arthritis, serositis) not directly explained by thrombosis.",
+    "Disseminated Intravascular Coagulation (DIC): DIC involves widespread activation of coagulation and fibrinolysis, leading to both thrombosis and bleeding, often triggered by severe sepsis, trauma, or malignancy. APS primarily causes thrombosis.",
+    "Thrombotic Thrombocytopenic Purpura (TTP): TTP involves microangiopathic hemolytic anemia, thrombocytopenia, renal failure, neurological symptoms, and fever, due to ADAMTS13 deficiency. While both involve microthrombosis, TTP has specific diagnostic markers.",
+    "Inherited thrombophilias (e.g., Factor V Leiden, Prothrombin gene mutation): These also cause recurrent thrombosis but lack the autoimmune antibody profile of APS.",
+    "Other causes of recurrent miscarriage: Chromosomal abnormalities, uterine anomalies, endocrine disorders (e.g., uncontrolled diabetes, thyroid dysfunction) can also cause recurrent pregnancy loss."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpreting laboratory results for APS requires careful consideration, as certain factors can lead to false positives or negatives, especially in resource-limited settings.",
+   "b": [
+    "Transient antiphospholipid antibodies: Infections (e.g., syphilis, HIV, malaria) and certain medications can cause temporary positive antibody tests. Diagnosis of APS requires persistent positivity on two occasions 12 weeks apart.",
+    "Anticoagulation interfering with LA testing: Patients already on anticoagulants (especially warfarin or direct oral anticoagulants) may have prolonged clotting times, making LA interpretation difficult. Samples should ideally be taken before starting anticoagulation or after a washout period.",
+    "Low titre antibodies: Low positive titres of aCL or anti-β2GPI antibodies are generally not considered diagnostic for APS in the absence of clinical criteria.",
+    "Lack of standardized assays: Variability in laboratory assays for antiphospholipid antibodies can lead to inconsistent results between different labs.",
+    "Thrombocytopenia: While a feature of APS, severe thrombocytopenia can also be due to other causes (e.g., malaria, HIV, nutritional deficiencies) common in low-resource settings, requiring careful differential diagnosis."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden weakness or numbness on one side of the body",
+  "Sudden difficulty speaking or understanding speech",
+  "Acute shortness of breath or chest pain",
+  "Severe, unexplained abdominal pain",
+  "Rapidly worsening confusion or altered mental status",
+  "New onset of severe headache with neurological symptoms",
+  "Unexplained bleeding or severe bruising"
+ ],
+ "faq": [
+  {
+   "q": "Can APS be cured?",
+   "a": "No, APS is a chronic autoimmune condition. Management focuses on preventing blood clots and complications, usually requiring lifelong anticoagulation."
+  },
+  {
+   "q": "Is APS hereditary?",
+   "a": "While there may be a genetic predisposition to autoimmune diseases, APS itself is not directly inherited in a simple Mendelian pattern. Family members may have a slightly increased risk of autoimmune conditions."
+  },
+  {
+   "q": "Can I get pregnant if I have APS?",
+   "a": "Yes, with careful planning and close medical supervision. Specific treatments (low-dose aspirin and heparin) are used during pregnancy to reduce the risk of complications like miscarriage or preeclampsia."
+  }
+ ],
+ "exam": [
+  "A 30-year-old woman presents with her third consecutive miscarriage at 8 weeks gestation. She also reports a history of a DVT in her left leg two years ago. What is your initial diagnostic approach and what specific laboratory tests would you request, considering a low-resource setting? — Focus on clinical criteria (recurrent fetal loss, prior DVT) and request lupus anticoagulant, anticardiolipin antibodies (IgG/IgM), and anti-β2 glycoprotein I antibodies (IgG/IgM), emphasizi",
+  "You diagnose a patient with primary APS after a provoked DVT. What is your long-term management plan for preventing recurrent thrombosis, and what specific considerations would you have regarding warfarin use in a rural East African setting? — Lifelong warfarin with an INR target of 2.0-3.0. Discuss challenges of INR monitoring (access to labs, cost, patient education on diet/drug interactions), importance of consistent dosing, and potential alternatives if warfarin is not fe",
+  "A patient with known APS on warfarin presents with acute onset of right-sided weakness and slurred speech. What is your immediate priority, and how would you manage their anticoagulation in this acute setting? — Immediate priority is to rule out acute stroke (ischemic vs. hemorrhagic). Assess ABCs. Obtain urgent head CT. Reverse warfarin rapidly with Vitamin K and/or prothrombin complex concentrate (PCC) if hemorrhagic stroke is suspected or confirmed, or if INR is suprathera",
+  "Describe the key differences in presentation and management between Catastrophic Antiphospholipid Syndrome (CAPS) and severe sepsis with Disseminated Intravascular Coagulation (DIC). — CAPS involves widespread microthrombosis leading to multi-organ failure, often without a clear infectious trigger, and requires specific APS treatments (steroids, plasma exchange, IVIG, anticoagulation). DIC is typically triggered by severe infection/trauma, involves both thrombosis and bleedin",
+  "A pregnant woman with a history of APS is on low-dose aspirin and LMWH. She develops severe preeclampsia at 30 weeks gestation. How does APS contribute to preeclampsia, and what are the immediate management steps for her and the fetus? — APS contributes to preeclampsia through placental microthrombosis and ischemia. Immediate steps include close maternal and fetal monitoring, blood pressure control, magnesium sulfate for seizure prophylaxis, and consideration of delivery if m",
+  "What are the common pitfalls in diagnosing Antiphospholipid Syndrome, particularly in a setting where advanced laboratory tests may be limited? — Misinterpreting transient antibody positivity (need for repeat testing), difficulty with LA testing on anticoagulated patients, reliance on low-titre antibodies, and confusing APS manifestations with other common conditions (e.g., malaria-induced thrombocytopenia, other causes of stroke or DVT). Emphasize clinical correlation and pe",
+  "Discuss the role of non-pharmacological interventions and lifestyle modifications in the long-term management of a patient with Antiphospholipid Syndrome. — Smoking cessation, avoidance of estrogen-containing contraceptives, regular exercise, maintaining a healthy weight, managing co-morbidities like hypertension and diabetes. These reduce overall thrombotic risk and improve general health, complementing anticoagulation."
+ ],
+ "related": [
+  "Systemic Lupus Erythematosus",
+  "Deep Vein Thrombosis",
+  "Pulmonary Embolism",
+  "Stroke",
+  "Recurrent Pregnancy Loss",
+  "Thrombocytopenia",
+  "Catastrophic Antiphospholipid Syndrome",
+  "Warfarin Anticoagulation"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

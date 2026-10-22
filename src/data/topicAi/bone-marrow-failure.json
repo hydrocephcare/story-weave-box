@@ -1,0 +1,173 @@
+{
+ "medical": true,
+ "title": "Bone Marrow Failure",
+ "subject": "Medicine",
+ "summary": "Bone marrow failure is a spectrum of disorders where the marrow cannot produce adequate blood cells, leading to pancytopenia. In low‑resource settings, infections, nutritional deficiencies and inherited syndromes are common causes. Prompt recognition and supportive care are essential.",
+ "aka": [
+  "Aplastic anemia",
+  "Pancytopenia",
+  "Marrow failure"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Bone marrow failure refers to inadequate production of one or more blood cell lines, most often presenting as pancytopenia. Diagnosis requires a CBC with differential, reticulocyte count, peripheral smear, and a bone marrow aspirate/biopsy when feasible.",
+   "b": [
+    "Pancytopenia: Hb <10 g/dL, ANC <1.5×10⁹/L, PLT <100×10⁹/L",
+    "Reticulocyte <1% in anemia suggests marrow failure",
+    "Peripheral smear: hypocellular marrow, dysplasia, or blasts"
+   ],
+   "t": [
+    {
+     "a": "Peripheral smear",
+     "b": "Shows cell morphology; absence of blasts and dysplasia supports aplastic anemia"
+    },
+    {
+     "a": "Reticulocyte count",
+     "b": "Low reticulocytes in anemia indicate inadequate marrow response"
+    },
+    {
+     "a": "Bone marrow aspirate/biopsy",
+     "b": "Confirms hypocellularity, fibrosis, or dysplasia; essential if infection or malignancy suspected"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Camitta scale classifies aplastic anemia severity: mild (platelets 50–100×10⁹/L), moderate (20–50×10⁹/L), severe (<20×10⁹/L) or very severe (<10×10⁹/L).",
+   "b": [
+    "Mild: manageable with transfusions"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, the leading causes are infectious (HIV, TB, malaria), nutritional (vitamin B12/folate deficiency), herbal toxins, and inherited syndromes.",
+   "b": [
+    "Infections: HIV, TB, malaria",
+    "Nutritional: B12/folate, iron",
+    "Herbal: Aristolochic acid, pyrrolizidine alkaloids",
+    "Inherited: Diamond‑Blackfan, Fanconi",
+    "Drug‑induced: chloramphenicol, zidovudine"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients often report fatigue, easy bruising, infections, or bleeding. Physical exam may reveal pallor, petechiae, mucosal bleeding, and splenomegaly if hypersplenism is present.",
+   "b": [
+    "Splenomegaly (if hypersplenism)"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritize tests that are affordable and informative. When a test is unavailable, use clinical judgment and supportive measures.",
+   "t": [
+    {
+     "a": "CBC with differential",
+     "b": "Low Hb, ANC, PLT"
+    },
+    {
+     "a": "Reticulocyte count",
+     "b": "<1% suggests failure"
+    },
+    {
+     "a": "Peripheral smear",
+     "b": "Dysplasia or blasts raise suspicion of MDS/AML"
+    },
+    {
+     "a": "Serology for HIV, hepatitis B/C",
+     "b": "Positive indicates need for antiretroviral or antiviral therapy"
+    },
+    {
+     "a": "Iron studies (serum ferritin, transferrin saturation)",
+     "b": "Low ferritin, high TIBC"
+    },
+    {
+     "a": "Vitamin B12/folate",
+     "b": "Low levels confirm deficiency"
+    },
+    {
+     "a": "Bone marrow aspirate/biopsy",
+     "b": "Shows hypocellularity, fibrosis, dysplasia"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include severe neutropenia (<0.5×10⁹/L), massive bleeding, or rapid deterioration. Complications can be infectious, hemorrhagic, or malignant transformation.",
+   "b": [
+    "Chronic failure → risk of myelodysplastic syndrome or AML"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care. In resource‑limited settings, transfusions and broad‑spectrum antibiotics are mainstays.",
+   "b": [
+    "Monitor CBC weekly until stable"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular CBCs every 4–6 weeks, monitor for infections, and counsel on avoiding herbal toxins. Vaccinate against hepatitis B and pneumococcus.",
+   "b": [
+    "Educate on safe food handling to prevent malaria"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Aplastic anemia can mimic severe infections, nutritional deficiencies, and myelodysplastic syndrome.",
+   "b": [
+    "Sickle cell crisis (anemia with thrombocytopenia)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low reticulocytes may be falsely normal in early marrow failure; iron studies can be altered by inflammation; B12/folate may be normal if deficiency is recent.",
+   "b": [
+    "Recent B12/folate deficiency → serum levels may lag behind clinical picture"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe neutropenia (ANC <0.5×10⁹/L)",
+  "Spontaneous bleeding or massive bruising",
+  "Rapid drop in any blood count",
+  "High fever with neutropenia"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of aplastic anemia in East Africa?",
+   "a": "Infections such as HIV, TB, and malaria are the leading causes, followed by herbal toxins and nutritional deficiencies."
+  },
+  {
+   "q": "Can a patient with aplastic anemia develop leukemia?",
+   "a": "Yes, chronic marrow failure increases the risk of myelodysplastic syndrome and acute myeloid leukemia."
+  },
+  {
+   "q": "Why is platelet transfusion avoided in low‑resource settings?",
+   "a": "Platelets are scarce and expensive; transfusion is reserved for active bleeding or counts <20×10⁹/L to avoid unnecessary use."
+  }
+ ],
+ "exam": [
+  "A 28‑year‑old woman presents with fatigue, petechiae, and fever. CBC shows Hb 8 g/dL, ANC 0.8×10⁹/L, PLT 15×10⁹/L. What is the next best step? — Start broad‑spectrum antibiotics for neutropenic fever and arrange transfusion if bleeding.",
+  "A patient with known HIV develops pancytopenia. Which drug is most likely responsible? — Zidovudine (AZT) is a common myelosuppressive antiretroviral.",
+  "A child with Diamond‑Blackfan anemia requires treatment. Which therapy is preferred? — Transfusions and erythropoietin; consider stem‑cell transplant if refractory.",
+  "You suspect aplastic anemia but the peripheral smear shows dysplastic megakaryocytes. What is the differential? — Myelodysplastic syndrome versus aplastic anemia with dysplasia.",
+  "A patient with severe neutropenia develops a sore throat. What is the most appropriate antibiotic? — Empiric coverage with a fluoroquinolone or cephalosporin for neutropenic fever.",
+  "A 45‑year‑old man with chronic hepatitis B presents with pancytopenia. Which investigation helps differentiate marrow failure from hypersplenism? — Splenic ultrasound to assess splenomegaly; a large spleen suggests sequestration rather than marrow failure.",
+  "A patient with aplastic anemia is being considered for immunosuppression. Which drug combination is standard in low‑resource settings? — Anti‑thymocyte globulin plus cyclosporine."
+ ],
+ "related": [
+  "Aplastic anemia",
+  "Myelodysplastic syndrome",
+  "Fanconi anemia",
+  "Severe combined immunodeficiency",
+  "Hereditary spherocytosis",
+  "Iron deficiency anemia",
+  "Vitamin B12 deficiency",
+  "Stem‑cell transplantation"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

@@ -1,0 +1,210 @@
+{
+ "medical": true,
+ "title": "Increased Intracranial Pressure in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "ICP is a life‑threatening state where brain pressure rises above 20 mmHg. In low‑resource settings it is often secondary to infections, trauma or hydrocephalus. Rapid recognition and decompression are essential.",
+ "aka": [
+  "Raised ICP"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "ICP is the pressure within the skull, normally 5–15 mmHg. In children, a sustained pressure >20 mmHg is considered raised and requires urgent action.",
+   "b": [
+    "Normal ICP 5–15 mmHg",
+    "Raised ICP >20 mmHg"
+   ],
+   "t": [
+    {
+     "a": "Clinical assessment",
+     "b": "Papilloedema, vomiting, lethargy, cranial nerve palsy, fixed dilated pupil"
+    },
+    {
+     "a": "Fundoscopy",
+     "b": "Optic disc swelling from increased venous pressure"
+    },
+    {
+     "a": "CT scan",
+     "b": "Rapidly identify mass, haemorrhage or hydrocephalus when available"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The Marshall or Rotterdam CT score is used where CT is available. In its absence, clinical staging (mild, moderate, severe) guides urgency.",
+   "b": [
+    "Mild – vomiting, mild lethargy",
+    "Moderate – papilloedema, cranial nerve palsy",
+    "Severe – fixed pupil, seizures, coma"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the top causes are infections, trauma and hydrocephalus. HIV, TB meningitis, malaria cerebral involvement, and post‑operative complications are common.",
+   "b": [
+    "Infectious meningitis (TB, bacterial, fungal)",
+    "Traumatic brain injury",
+    "Hydrocephalus (communicating or obstructive)",
+    "Post‑operative swelling",
+    "Sickle cell crises with cerebral infarction"
+   ],
+   "t": [
+    {
+     "a": "Lumbar puncture",
+     "b": "Raised ICP; consider CSF diversion"
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Supportive for infection but not diagnostic of ICP"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children may be subtle; look for vomiting, headache, lethargy, papilloedema, cranial nerve palsies, seizures and altered consciousness.",
+   "b": [
+    "Vomiting (often bilious)",
+    "Lethargy or irritability",
+    "Papilloedema on fundoscopy",
+    "Fixed dilated pupil",
+    "Seizures"
+   ],
+   "t": [
+    {
+     "a": "Glasgow Coma Scale",
+     "b": "Severe brain injury, need for airway protection"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise bedside tests; use CT if available. In low‑resource settings, lumbar puncture and fundoscopy are key.",
+   "b": [
+    "Fundoscopy – look for papilloedema"
+   ],
+   "t": [
+    {
+     "a": "Lumbar puncture",
+     "b": "Raised ICP; consider CSF diversion"
+    },
+    {
+     "a": "CT scan",
+     "b": "Midline shift, effacement of ventricles, cisterns"
+    },
+    {
+     "a": "Blood tests",
+     "b": "Identify underlying infection"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Rapid deterioration, fixed pupil, seizures, or worsening consciousness require immediate surgical consultation.",
+   "b": [
+    "Fixed dilated pupil",
+    "Seizure activity",
+    "Sudden loss of consciousness"
+   ],
+   "t": [
+    {
+     "a": "Headache with vomiting",
+     "b": "Possible herniation or acute bleed"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, control ICP, and monitor. Avoid drugs that raise ICP or cause bleeding.",
+   "b": [
+    "Decompressive craniectomy or burr hole for hydrocephalus"
+   ],
+   "t": [
+    {
+     "a": "Mannitol",
+     "b": "Osmotic diuretic to reduce brain water"
+    },
+    {
+     "a": "Dexamethasone",
+     "b": "Severe bacterial meningitis or tuberculous meningitis with raised ICP"
+    },
+    {
+     "a": "Avoid NSAIDs",
+     "b": "Risk of bleeding and impaired renal function"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular fundoscopy, monitor for signs of rebound ICP, and treat infections early. Vaccination against Hib, pneumococcus and meningococcus reduces meningitis.",
+   "b": [
+    "Vaccination schedules"
+   ],
+   "t": [
+    {
+     "a": "Repeat fundoscopy",
+     "b": "ICP has decreased"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Raised ICP can mimic severe dehydration, meningitis without ICP, or post‑operative pain.",
+   "b": [
+    "Severe dehydration – may cause lethargy but no papilloedema"
+   ],
+   "t": [
+    {
+     "a": "Meningitis",
+     "b": "Meningitis has neck stiffness, fever, CSF pleocytosis; ICP may or may not be present"
+    }
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Normal CT does not exclude raised ICP; papilloedema may be delayed. Lumbar puncture opening pressure can be falsely low if performed after vomiting.",
+   "b": [
+    "CT may miss small haemorrhage"
+   ],
+   "t": [
+    {
+     "a": "Lumbar puncture",
+     "b": "Patient has already vomited or is in shock"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fixed dilated pupil",
+  "Seizure activity",
+  "Sudden loss of consciousness",
+  "Rapidly worsening headache or vomiting"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of raised ICP in children in East Africa?",
+   "a": "Infectious meningitis, especially tuberculous or bacterial, is the leading cause."
+  },
+  {
+   "q": "Can dehydration cause raised ICP?",
+   "a": "No; dehydration usually lowers ICP, but it can mimic lethargy and vomiting."
+  },
+  {
+   "q": "When is a CT scan mandatory?",
+   "a": "When a mass, haemorrhage or hydrocephalus is suspected and the child is deteriorating."
+  }
+ ],
+ "exam": [
+  "What is the first step in a child with suspected raised ICP? — Assess airway, breathing, circulation; check pupils; obtain fundoscopy; consider urgent CT if available.",
+  "How would you differentiate raised ICP from severe dehydration? — Dehydration shows dry mucosa, sunken eyes, no papilloedema; raised ICP shows papilloedema, vomiting, cranial nerve palsy.",
+  "Why is dexamethasone used in tuberculous meningitis with raised ICP? — It reduces meningeal inflammation and cerebral oedema, lowering ICP.",
+  "What is the danger of giving NSAIDs to a child with raised ICP? — They can impair platelet function and increase bleeding risk, worsening intracranial haemorrhage.",
+  "When is a lumbar puncture contraindicated in suspected raised ICP? — Fixed dilated pupil or signs of herniation; risk of herniation during LP.",
+  "What is the significance of an opening pressure >250 mmH₂O? — It confirms raised ICP and may necessitate CSF diversion.",
+  "How do you manage a child with hydrocephalus and raised ICP in a setting without neurosurgery? — Start acetazolamide, consider external ventricular drain if available, and arrange transfer if possible."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

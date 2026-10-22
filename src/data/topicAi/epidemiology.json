@@ -149,5 +149,462 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Focused history and systematic physical exam reveal the distribution, determinants and impact of health conditions in low‑resource settings. Use open questions, then targeted probes, and perform step‑wise bedside tests that are feasible without advanced equipment.",
+    "b": [
+     "Ask about onset, duration and pattern of symptoms; recent travel, occupation, water source and sanitation; vaccination status; known contacts with similar illness; HIV, TB or malaria history; nutrition, pregnancy and chronic diseases; medication, herbal use and alcohol.",
+     "Inspect for skin lesions, pallor, jaundice, edema, wasting or stunting; note crowding, housing conditions and vector breeding sites.",
+     "Palpate for organomegaly, lymphadenopathy, tenderness, ascites (fluid thrill, shifting dullness) and assess capillary refill.",
+     "Measure temperature, pulse, respiratory rate, blood pressure and oxygen saturation; record weight and height for BMI.",
+     "Perform simple bedside tests: respiratory rate for pneumonia risk, rapid malaria test for febrile illness, urine dipstick for protein/glucose, and WHO clinical staging for HIV.",
+     "A positive fluid thrill suggests free fluid in the abdomen but cannot differentiate transudate from exudate; shifting dullness confirms fluid presence but not its etiology.",
+     "Bedside signs cannot replace laboratory confirmation of infection, anemia severity, or renal function."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use readily available tests to answer key epidemiological questions; interpret results with standard cut‑offs and know alternatives when resources are limited.",
+    "t": [
+     {
+      "a": "Rapid diagnostic test (RDT) for malaria",
+      "b": "Confirms Plasmodium infection in febrile patients; a positive line indicates antigen presence; if unavailable, use thick and thin smear microscopy."
+     },
+     {
+      "a": "Hemoglobin concentration (Hb)",
+      "b": "Assesses anemia prevalence; Hb <12 g/dL in women or <13 g/dL in men defines anemia; severe anemia <7 g/dL warrants transfusion."
+     },
+     {
+      "a": "Serum creatinine",
+      "b": "Evaluates renal function; creatinine >1.5 mg/dL suggests impaired clearance, affecting drug dosing and mortality risk."
+     },
+     {
+      "a": "Urine dipstick for protein",
+      "b": "Detects proteinuria as a marker of renal disease; +1 (30 mg/dL) or higher indicates abnormal; if unavailable, use 24‑hour urine collection when possible."
+     },
+     {
+      "a": "HIV rapid antibody test",
+      "b": "Identifies HIV infection; two positive rapid tests confirm diagnosis; if unavailable, refer for ELISA/Western blot."
+     },
+     {
+      "a": "Chest X‑ray (portable if possible)",
+      "b": "Detects pneumonia, TB cavitation or pleural effusion; infiltrates in one or more zones suggest pneumonia; cavitary lesions point to TB."
+     },
+     {
+      "a": "Serum‑ascites albumin gradient (SAAG)",
+      "b": "Distinguishes portal hypertension (SAAG ≥1.1 g/dL) from peritoneal disease (SAAG <1.1 g/dL); if albumin measurement unavailable, use clinical context."
+     },
+     {
+      "a": "Stool microscopy for ova and parasites",
+      "b": "Identifies intestinal parasites; presence of cysts or trophozoites confirms infection; if microscopy unavailable, use antigen detection kits for Giardia or Entamoeba."
+     },
+     {
+      "a": "Blood culture",
+      "b": "Detects bacteremia; growth of pathogenic organisms confirms sepsis; if no incubator, prioritize patients with high fever and hypotension for referral."
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Epidemiological classification relies on standard criteria that can be applied at the bedside and with basic laboratory support.",
+    "b": [
+     "Incidence: new cases per 1 000 population per year; calculate by dividing new case count by at‑risk population, multiply by 1 000.",
+     "Prevalence: total cases per 1 000 population at a point in time; sum existing and new cases, divide by total population, multiply by 1 000.",
+     "Case fatality rate (CFR): deaths among diagnosed cases; deaths ÷ diagnosed cases × 100 %.",
+     "Disability‑adjusted life years (DALYs): years of life lost + years lived with disability; use WHO life tables and disease‑specific disability weights.",
+     "Severity grading for malaria (WHO): uncomplicated vs severe (e.g., cerebral involvement, severe anemia Hb <5 g/dL, renal failure, hypoglycaemia).",
+     "TB classification: pulmonary vs extrapulmonary; drug‑sensitive vs multidrug‑resistant based on sputum microscopy and GeneXpert.",
+     "HIV clinical staging (WHO): Stage 1 (asymptomatic) to Stage 4 (AIDS‑defining illnesses)."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several common diseases mimic each other in low‑resource settings; careful history, targeted exam and selective testing separate them.",
+    "t": [
+     {
+      "a": "Typhoid fever vs malaria",
+      "b": "Both cause fever and malaise; typhoid often has stepwise rise, abdominal pain, rose spots; malaria shows periodic chills, anemia, positive RDT. Blood culture confirms typhoid; RDT or smear confirms malaria."
+     },
+     {
+      "a": "Pneumonia vs pulmonary TB",
+      "b": "Pneumonia presents with acute fever, productive cough, focal crackles, rapid X‑ray infiltrates; TB shows chronic cough >2 weeks, weight loss, night sweats, cavitary lesions on X‑ray. Sputum GeneXpert distinguishes TB."
+     },
+     {
+      "a": "HIV‑related oral thrush vs candidiasis from antibiotics",
+      "b": "Oral thrush in HIV often extensive, painful, with systemic signs; antibiotic‑related candidiasis is localized, follows recent broad‑spectrum use. CD4 count and HIV test differentiate."
+     },
+     {
+      "a": "Ascites from portal hypertension vs peritoneal carcinomatosis",
+      "b": "High SAAG (≥1.1 g/dL) points to portal hypertension; low SAAG (<1.1 g/dL) suggests peritoneal disease. Ultrasound (if available) shows liver cirrhosis vs nodular peritoneal thickening."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A clear ladder of actions ensures timely care and avoids delays. Each step is justified by evidence and tailored to low‑resource settings.",
+    "b": [
+     "1. Immediate assessment of airway, breathing, circulation and shock status; give oxygen and IV access.",
+     "2. Confirm diagnosis with point‑of‑care tests (rapid malaria, HIV, syphilis, hemoglobin).",
+     "3. Start empiric treatment: first‑line antimalarials for confirmed malaria, broad‑spectrum antibiotics for suspected bacterial infection.",
+     "4. Provide supportive care: fluids, antipyretics, analgesia, and nutritional support.",
+     "5. Monitor vital signs, urine output, and clinical response every 4–6 hours.",
+     "6. Escalate to definitive therapy (e.g., specific antibiotics, antiretroviral initiation) once culture or PCR results are available.",
+     "7. Refer to higher‑level facility if patient deteriorates, requires intensive care, or has complications such as organ failure."
+    ],
+    "t": [
+     {
+      "a": "Avoid",
+      "b": "Do not delay antibiotics in suspected sepsis; do not use quinine alone for severe malaria without artesunate."
+     },
+     {
+      "a": "Definitive",
+      "b": "Use artemisinin‑based combination therapy for malaria; use ceftriaxone or amoxicillin for community‑acquired pneumonia."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Recognise common adverse effects and interactions to prevent treatment failure and toxicity.",
+    "b": [
+     "Antimalarials: monitor for nausea, visual disturbances, and haemolysis in G6PD deficiency; avoid in pregnancy first trimester.",
+     "Antibiotics: watch for allergic rash, C. difficile colitis, and renal toxicity; avoid nephrotoxic combinations.",
+     "Antiretrovirals: monitor for hepatotoxicity, lipodystrophy, and drug‑drug interactions with herbal remedies.",
+     "Analgesics: avoid NSAIDs in renal impairment; use acetaminophen cautiously in liver disease."
+    ],
+    "t": [
+     {
+      "a": "Interaction",
+      "b": "Azithromycin + rifampicin reduces azithromycin levels; use alternative antibiotics."
+     },
+     {
+      "a": "Monitoring",
+      "b": "Check liver enzymes weekly in patients on antiretrovirals or hepatotoxic drugs."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of complications allows timely transfer and advanced care.",
+    "b": [
+     "Severe anaemia: look for tachycardia, pallor, and low oxygen saturation; transfuse if Hb <7 g/dL or symptomatic.",
+     "Severe malaria: monitor for cerebral involvement, pulmonary oedema, and metabolic acidosis; refer if GCS <13.",
+     "Sepsis: identify organ dysfunction (renal, hepatic, respiratory); start ICU care if any failure occurs.",
+     "Drug toxicity: watch for visual changes with chloroquine, rash with antibiotics; stop offending drug."
+    ],
+    "t": [
+     {
+      "a": "Escalate",
+      "b": "Refer when patient shows altered mental status, hypotension unresponsive to fluids, or respiratory failure."
+     },
+     {
+      "a": "Prevent",
+      "b": "Use prophylactic antimalarials in high‑risk areas to reduce severe cases."
+     }
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "These factors alter presentation, test interpretation, and treatment choice.",
+    "b": [
+     "HIV: increases risk of opportunistic infections; use cotrimoxazole prophylaxis; adjust drug doses for renal function.",
+     "TB: co‑infection can mask symptoms; use sputum microscopy and chest X‑ray; avoid rifampicin with certain antiretrovirals.",
+     "Malnutrition: reduces drug metabolism; dose adjustments may be needed; provide therapeutic feeds.",
+     "Pregnancy: avoid teratogenic drugs; use chloroquine for malaria; monitor fetal growth.",
+     "Diabetes: predisposes to infections; monitor blood glucose; adjust insulin with antibiotics.",
+     "Herbal remedies: may contain quinine or hepatotoxic compounds; inquire about use.",
+     "Alcohol: increases liver injury risk; avoid hepatotoxic drugs.",
+     "Kidney/liver failure: adjust drug clearance; avoid nephrotoxic or hepatotoxic agents.",
+     "Age extremes: children need weight‑based dosing; elderly need lower doses and monitor for polypharmacy."
+    ],
+    "t": [
+     {
+      "a": "Interpretation",
+      "b": "In G6PD deficiency, avoid primaquine; in renal failure, use ceftriaxone instead of cefotaxime."
+     },
+     {
+      "a": "Adjustment",
+      "b": "Reduce antimalarial dose by 50% in severe renal impairment."
+     }
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches ensure equity and effectiveness across diverse populations.",
+    "b": [
+     "Children: use age‑appropriate dosing, monitor growth, and provide vitamin supplementation.",
+     "Pregnancy: use safe antimalarials, avoid teratogenic antibiotics, and monitor fetal wellbeing.",
+     "Elderly: reduce polypharmacy, monitor for falls, and adjust for comorbidities.",
+     "HIV patients: start ART early, monitor for drug interactions, and provide prophylaxis.",
+     "Low‑resource settings: prioritize affordable diagnostics, use fixed‑dose combinations, and train community health workers."
+    ],
+    "t": [
+     {
+      "a": "Guideline",
+      "b": "Follow WHO essential medicines list for drug selection in all groups."
+     },
+     {
+      "a": "Education",
+      "b": "Teach caregivers about symptom recognition and when to seek higher care."
+     }
+    ]
+   }
+  ],
+  "facts": [
+   "Incidence = new cases per 1,000 population per year; used to track outbreaks.",
+   "Prevalence = total cases per 1,000 population at a point in time; high prevalence may indicate chronic disease.",
+   "Case Fatality Rate = deaths among diagnosed cases ÷ total diagnosed cases × 100%; indicates severity.",
+   "DALY = years of life lost + years lived with disability; 1 DALY = 1 lost healthy year.",
+   "YPLL = sum of (standard life expectancy – age at death) for each premature death; highlights impact on young adults.",
+   "Basic reproductive number (R0) >1 means infection will spread in a susceptible population.",
+   "Standard WHO cut‑off for hypertension prevalence: ≥140/90 mmHg in adults.",
+   "WHO target for TB treatment success: ≥85% of notified cases.",
+   "HIV prevalence in Kenya (2023) ≈ 4.5% among adults 15–49 years.",
+   "Most common Hepatitis C genotype in Kenya is genotype 1a."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define incidence and explain its importance in outbreak investigation.",
+    "a": "Incidence is the number of new cases of a disease in a defined population during a specific time period; it shows the speed of spread and helps assess control measures.",
+    "hot": true
+   },
+   {
+    "q": "What bedside question helps identify a potential outbreak of diarrhoea in a village?",
+    "a": "Ask about recent changes in water source, sanitation, or food consumption within the last 2 weeks.",
+    "hot": true
+   },
+   {
+    "q": "How do you differentiate an endemic from an epidemic using surveillance data?",
+    "a": "Endemic shows stable, expected case numbers over time; epidemic shows a sudden rise above the expected baseline.",
+    "hot": true
+   },
+   {
+    "q": "Interpret a case‑fatality rate of 25% for a new meningitis outbreak.",
+    "a": "One quarter of diagnosed patients die, indicating high severity and need for urgent treatment and preventive measures.",
+    "hot": true
+   },
+   {
+    "q": "Why is the basic reproductive number (R0) not useful for chronic non‑communicable diseases?",
+    "a": "R0 measures transmission of infectious agents; chronic diseases are not spread person‑to‑person.",
+    "hot": true
+   },
+   {
+    "q": "Which determinant is most relevant when studying malaria in a rural Kenyan district?",
+    "a": "Environmental factor – presence of Anopheles breeding sites such as stagnant water."
+   },
+   {
+    "q": "What is the primary limitation of cross‑sectional studies in epidemiology?",
+    "a": "They assess prevalence at one point and cannot establish temporal causality."
+   },
+   {
+    "q": "Explain why a high DALY burden for road traffic injuries in Kenya matters for policy.",
+    "a": "It shows large loss of productive years, justifying investment in road safety and emergency services."
+   },
+   {
+    "q": "How would you calculate the prevalence of hypertension in a clinic of 800 adults if 120 have BP ≥140/90?",
+    "a": "Prevalence = (120 ÷ 800) × 1,000 = 150 per 1,000 population."
+   },
+   {
+    "q": "What does a YPLL of 1.2 million years for HIV in Kenya indicate?",
+    "a": "Premature deaths are causing a massive loss of potential productive life, highlighting need for early ART."
+   },
+   {
+    "q": "Which statement about asymptomatic carriers of Entamoeba histolytica is correct?",
+    "a": "They shed cysts in stool, sustaining transmission in the community without showing disease.",
+    "past": true
+   },
+   {
+    "q": "Identify the secondary host in the analytical epidemiology triad of malaria.",
+    "a": "The mosquito (Anopheles) acts as the vector, the secondary host transmitting the parasite to humans.",
+    "past": true
+   },
+   {
+    "q": "What is the frequency of bilateral involvement in lobular carcinoma in situ (LCIS)?",
+    "a": "Bilateral LCIS occurs in about 10‑15% of cases.",
+    "past": true
+   },
+   {
+    "q": "Most common Hepatitis C genotype in Kenya?",
+    "a": "Genotype 1a is the predominant strain.",
+    "past": true
+   },
+   {
+    "q": "Correct statement about candidiasis epidemiology?",
+    "a": "Oral thrush is highly prevalent in AIDS and other immunosuppressed patients.",
+    "past": true
+   },
+   {
+    "q": "When reviewing birth asphyxia data, which indicator best reflects its burden?",
+    "a": "Incidence per 1,000 live births of Apgar score <4 at 5 minutes."
+   },
+   {
+    "q": "In acute bacterial meningitis beyond the neonatal period, which pathogen is most common in Kenya?",
+    "a": "Streptococcus pneumoniae is the leading cause."
+   },
+   {
+    "q": "Name one confounding factor that can inflate the apparent association between malaria and anemia in epidemiologic studies.",
+    "a": "Co‑existing helminth infections causing chronic blood loss."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A rural clinic reports a sudden rise from 5 to 20 cases of watery diarrhoea per week. Which term best describes this pattern?",
+    "o": [
+     "Endemic",
+     "Epidemic",
+     "Pandemic",
+     "Outbreak"
+    ],
+    "a": 1,
+    "e": "An increase above the expected baseline in a limited area is an epidemic (or outbreak)."
+   },
+   {
+    "q": "In a cross‑sectional survey of 2,000 adults, 300 have diabetes. What is the prevalence per 1,000?",
+    "o": [
+     "150",
+     "300",
+     "75",
+     "200"
+    ],
+    "a": 0,
+    "e": "Prevalence = (300/2000)*1000 = 150 per 1,000."
+   },
+   {
+    "q": "Which determinant most directly influences the basic reproductive number (R0) for malaria?",
+    "o": [
+     "Host genetics",
+     "Vector density",
+     "Health‑seeking behaviour",
+     "Socio‑economic status"
+    ],
+    "a": 1,
+    "e": "Vector density determines how many bites occur, directly affecting R0."
+   },
+   {
+    "q": "A study reports a case‑fatality rate of 40% for severe malaria. Which interpretation is correct?",
+    "o": [
+     "40% of the population died",
+     "40% of diagnosed cases died",
+     "40% of all deaths were due to malaria",
+     "40% of patients recovered"
+    ],
+    "a": 1,
+    "e": "CFR is deaths among diagnosed cases; 40% of those diagnosed died."
+   },
+   {
+    "q": "Which of the following is NOT a typical environmental determinant of diarrhoeal disease?",
+    "o": [
+     "Contaminated water",
+     "Poor sanitation",
+     "High altitude",
+     "Inadequate food storage"
+    ],
+    "a": 2,
+    "e": "High altitude does not directly cause diarrhoea; the others are environmental risk factors."
+   },
+   {
+    "q": "In Kenya, the most common genotype of Hepatitis C is:",
+    "o": [
+     "Genotype 2",
+     "Genotype 3",
+     "Genotype 1a",
+     "Genotype 4"
+    ],
+    "a": 2,
+    "e": "Genotype 1a predominates in Kenyan populations.",
+    "past": true
+   },
+   {
+    "q": "Which measure combines mortality and morbidity into a single metric?",
+    "o": [
+     "Incidence",
+     "Prevalence",
+     "DALY",
+     "YPLL"
+    ],
+    "a": 2,
+    "e": "DALY (Disability‑Adjusted Life Years) merges years lost to death and disability."
+   },
+   {
+    "q": "A 30‑year‑old woman with HIV has a CD4 count of 150 cells/µL. Which epidemiologic factor most increases her risk of oral candidiasis?",
+    "o": [
+     "Low CD4 count",
+     "High viral load",
+     "Recent ART initiation",
+     "Age"
+    ],
+    "a": 0,
+    "e": "Severe immunosuppression (CD4 <200) predisposes to candidiasis.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 28‑year‑old male farmer from western Kenya presents with 3 days of fever, chills, and headache. He reports recent heavy rains and standing water near his home. Examination shows splenomegaly. Rapid malaria test is positive for Plasmodium falciparum.",
+    "qs": [
+     {
+      "q": "What is the most appropriate next step in management?",
+      "a": "Start first‑line ACT (artemisinin‑based combination therapy) promptly; do not wait for microscopy."
+     },
+     {
+      "q": "Which epidemiologic determinant most contributed to his infection?",
+      "a": "Environmental factor – increased vector breeding sites from standing water."
+     },
+     {
+      "q": "How would you calculate the incidence of malaria in his village if 25 new cases occurred among 1,200 residents over 2 months?",
+      "a": "Incidence = (25 ÷ 1,200) × 1,000 = 21 per 1,000 population per 2 months; extrapolate to annual rate if needed."
+     }
+    ]
+   },
+   {
+    "v": "A 4‑year‑old child is brought to the district hospital with sudden onset of high fever, neck stiffness, and vomiting. CSF shows neutrophilic pleocytosis, low glucose, and high protein. Gram stain reveals Gram‑positive diplococci.",
+    "qs": [
+     {
+      "q": "Identify the most likely pathogen and its epidemiologic significance in Kenya.",
+      "a": "Streptococcus pneumoniae; it is the leading cause of bacterial meningitis in children beyond the neonatal period."
+     },
+     {
+      "q": "Which bedside sign helps differentiate meningitis from encephalitis?",
+      "a": "Positive Kernig’s sign (pain on passive knee extension with hip flexed) suggests meningeal irritation."
+     },
+     {
+      "q": "What confounding factor could mask the true incidence of bacterial meningitis in this setting?",
+      "a": "Prior antibiotic use before lumbar puncture can yield false‑negative cultures, under‑estimating incidence."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing prevalence with incidence; prevalence reflects existing cases, not new ones.",
+   "Using case‑fatality rate as a measure of disease severity without accounting for under‑diagnosis.",
+   "Assuming R0 applies to non‑communicable diseases; it is only for transmissible agents.",
+   "Neglecting to adjust incidence for population growth when comparing over years.",
+   "Interpreting a negative rapid malaria test as rule‑out without considering parasite density limits.",
+   "Over‑relying on cross‑sectional data to infer causation between exposure and disease.",
+   "Failing to consider asymptomatic carriers when planning control measures for enteric infections.",
+   "Ignoring confounding variables such as HIV status when analysing malaria‑related anemia."
+  ],
+  "exam": [
+   "Define incidence and explain its importance in outbreak investigation. — Incidence is the number of new cases of a disease in a defined population during a specific time period; it shows the speed of spread and helps assess control measures.",
+   "What bedside question helps identify a potential outbreak of diarrhoea in a village? — Ask about recent changes in water source, sanitation, or food consumption within the last 2 weeks.",
+   "How do you differentiate an endemic from an epidemic using surveillance data? — Endemic shows stable, expected case numbers over time; epidemic shows a sudden rise above the expected baseline.",
+   "Interpret a case‑fatality rate of 25% for a new meningitis outbreak. — One quarter of diagnosed patients die, indicating high severity and need for urgent treatment and preventive measures.",
+   "Why is the basic reproductive number (R0) not useful for chronic non‑communicable diseases? — R0 measures transmission of infectious agents; chronic diseases are not spread person‑to‑person.",
+   "Which determinant is most relevant when studying malaria in a rural Kenyan district? — Environmental factor – presence of Anopheles breeding sites such as stagnant water.",
+   "What is the primary limitation of cross‑sectional studies in epidemiology? — They assess prevalence at one point and cannot establish temporal causality.",
+   "Explain why a high DALY burden for road traffic injuries in Kenya matters for policy. — It shows large loss of productive years, justifying investment in road safety and emergency services.",
+   "How would you calculate the prevalence of hypertension in a clinic of 800 adults if 120 have BP ≥140/90? — Prevalence = (120 ÷ 800) × 1,000 = 150 per 1,000 population.",
+   "What does a YPLL of 1.2 million years for HIV in Kenya indicate? — Premature deaths are causing a massive loss of potential productive life, highlighting need for early ART.",
+   "Which statement about asymptomatic carriers of Entamoeba histolytica is correct? — They shed cysts in stool, sustaining transmission in the community without showing disease.",
+   "Identify the secondary host in the analytical epidemiology triad of malaria. — The mosquito (Anopheles) acts as the vector, the secondary host transmitting the parasite to humans.",
+   "What is the frequency of bilateral involvement in lobular carcinoma in situ (LCIS)? — Bilateral LCIS occurs in about 10‑15% of cases.",
+   "Most common Hepatitis C genotype in Kenya? — Genotype 1a is the predominant strain."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-22",
+  "checked": "2026-10-22"
+ }
 }

@@ -1,0 +1,147 @@
+{
+ "medical": true,
+ "title": "Upper Limb Anatomy",
+ "subject": "Anatomy",
+ "summary": "The upper limb includes the shoulder girdle, arm, forearm and hand, supplied by the brachial plexus and major vessels. Understanding its layout guides diagnosis of trauma, neurovascular injury and common tropical conditions.",
+ "aka": [
+  "Upper Extremity",
+  "Brachium"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "The upper limb enables manipulation, posture and locomotion of the hand. It is organized into proximal (shoulder girdle, arm) and distal (forearm, hand) units, each with distinct neurovascular patterns.",
+   "b": [
+    "Four regions: shoulder girdle, arm, forearm, hand",
+    "Key bones: scapula, clavicle, humerus, radius, ulna, carpals, metacarpals, phalanges",
+    "Clinical relevance: injuries often involve multiple structures simultaneously"
+   ]
+  },
+  {
+   "h": "Location and structure",
+   "p": "The shoulder girdle (clavicle and scapula) anchors the limb to the trunk. The humerus forms the arm; the radius and ulna form the forearm; the hand consists of 27 bones.",
+   "b": [
+    "Glenoid fossa articulates with humeral head (ball‑and‑socket)",
+    "Elbow joint: humeroulnar (hinge) and radioulnar (pivot)",
+    "Carpometacarpal joint of thumb allows opposition"
+   ]
+  },
+  {
+   "h": "Relations",
+   "p": "Muscles, vessels and nerves lie in defined compartments. The axilla houses the brachial plexus, axillary artery and lymph nodes, while the forearm compartments separate flexors (anterior) from extensors (posterior).",
+   "b": [
+    "Anterior compartment: flexor digitorum superficialis, median nerve",
+    "Posterior compartment: extensor carpi radialis, radial nerve",
+    "First dorsal interosseous lies between metacarpals 1 and 2"
+   ]
+  },
+  {
+   "h": "Blood supply",
+   "p": "The subclavian artery becomes the axillary artery at the lateral border of the first rib, then the brachial artery down the arm, dividing into radial and ulnar arteries at the elbow.",
+   "b": [
+    "Axillary artery: 1st, 2nd, 3rd parts give off thoraco‑acromial, lateral thoracic, subscapular, posterior circumflex humeral arteries",
+    "Brachial artery: profunda brachii supplies posterior arm",
+    "Radial artery: supplies lateral forearm and hand; ulnar artery supplies medial hand"
+   ]
+  },
+  {
+   "h": "Nerve supply",
+   "p": "The brachial plexus (C5‑T1) forms five major trunks that give rise to the major peripheral nerves of the limb: musculocutaneous, axillary, radial, median and ulnar.",
+   "b": [
+    "Musculocutaneous: flexes elbow, sensory to lateral forearm",
+    "Axillary: deltoid and teres minor motor, lateral shoulder sensation",
+    "Radial: wrist/ finger extension, dorsal hand sensation",
+    "Median: thenar muscles, flexion of wrist and fingers, palmar thumb‑side sensation",
+    "Ulnar: intrinsic hand muscles, medial hand sensation"
+   ]
+  },
+  {
+   "h": "Function",
+   "p": "The upper limb provides gross power (shoulder, elbow) and fine dexterity (wrist, hand). Coordination of agonist‑antagonist pairs and proprioceptive feedback from muscle spindles and joint receptors allow precise movements.",
+   "b": [
+    "Shoulder abduction (deltoid) vs adduction (pectoralis major)",
+    "Elbow flexion (biceps) vs extension (triceps)",
+    "Wrist flexion (flexor carpi radialis) vs extension (extensor carpi ulnaris)",
+    "Finger opposition (thenar muscles) enables grasp"
+   ]
+  },
+  {
+   "h": "Clinical relevance and injuries",
+   "p": "Trauma, infections and tropical diseases often present with neurovascular compromise. Recognising patterns of loss helps localise lesions and plan urgent care.",
+   "b": [
+    "Fracture of surgical neck of humerus → axillary nerve palsy (deltoid weakness, loss of lateral shoulder sensation)",
+    "Mid‑shaft humeral fracture → radial nerve injury (wrist drop, loss of sensation over dorsum of hand)",
+    "Forearm compartment syndrome (often after crush injury or severe malaria) → pain out of proportion, tense compartments, loss of distal pulses; urgent fasciotomy needed",
+    "Tuberculous osteomyelitis of the humerus (common in low‑resource settings) → chronic pain, swelling, sinus formation",
+    "Herbal poultice‑induced cellulitis → rapid swelling, erythema, systemic signs; consider Staphylococcus aureus or atypical mycobacteria"
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "A systematic bedside exam starts proximally and proceeds distally, integrating motor, sensory and vascular checks.",
+   "b": [
+    "Inspect for deformity, swelling, skin changes",
+    "Palpate bony landmarks (acromion, humeral epicondyles) for tenderness",
+    "Assess shoulder range (abduction, external rotation) – deltoid and rotator cuff function",
+    "Test elbow flexion/extension – biceps/triceps strength",
+    "Wrist and finger movements – radial, median, ulnar nerve integrity",
+    "Sensory testing: pinprick over lateral forearm (musculocutaneous), dorsum of hand (radial), palmar thumb side (median), medial hand (ulnar)",
+    "Vascular: radial pulse, capillary refill, compare bilateral blood pressure"
+   ],
+   "t": [
+    {
+     "a": "Radial pulse palpation",
+     "b": "Is arterial flow to the hand adequate? Absence suggests brachial or radial artery injury; if unavailable, assess capillary refill and skin colour"
+    },
+    {
+     "a": "Hoffmann’s sign",
+     "b": "Is there upper motor neuron involvement? Positive sign suggests cervical cord compression or central lesion"
+    },
+    {
+     "a": "Compartment pressure measurement",
+     "b": "Does the forearm have compartment syndrome? Pressure >30 mmHg warrants fasciotomy; if a manometer is unavailable, rely on clinical signs (pain, tense swelling, loss of pulses)"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Absent radial pulse with expanding forearm swelling",
+  "Progressive neurological deficit (e.g., worsening hand weakness) after trauma",
+  "Signs of systemic infection (fever, tachycardia) with a limb wound"
+ ],
+ "faq": [
+  {
+   "q": "Why does a mid‑shaft humeral fracture often cause wrist drop?",
+   "a": "The radial nerve runs in the spiral groove of the humerus; fracture can damage it, leading to loss of wrist and finger extension."
+  },
+  {
+   "q": "What is the first step in suspected compartment syndrome of the forearm?",
+   "a": "Remove any constrictive dressings and assess pain with passive stretch; if severe, arrange urgent fasciotomy."
+  },
+  {
+   "q": "How can you differentiate axillary nerve injury from deltoid muscle tear?",
+   "a": "Axillary nerve injury causes loss of sensation over the lateral shoulder and inability to abduct beyond 15°, while a pure muscle tear may retain sensation."
+  }
+ ],
+ "exam": [
+  "A patient presents with a fractured surgical neck of humerus; which nerve is most likely injured and what clinical signs confirm it? — Look for deltoid weakness and loss of lateral shoulder sensation (axillary nerve).",
+  "During a malaria epidemic, a child develops painful swelling of the forearm after a fall; what emergency diagnosis must you consider and how do you confirm it without a pressure monitor? — Forearm compartment syndrome; diagnose by tense swelling, pain on passive stretch, and loss of distal pulses.",
+  "A farmer with chronic cough and weight loss has a painless swelling over the proximal humerus; what tropical infection should be high on your list and what investigation is essential? — Tuberculous osteomyelitis; obtain X‑ray and, if possible, a GeneXpert or acid‑fast smear of aspirate.",
+  "You examine a patient with wrist drop; the radial pulse is present. Which level of nerve injury is most likely and why? — Injury to the radial nerve distal to the brachial artery, often at the spiral groove, sparing vascular supply.",
+  "A patient with sickle cell disease presents with sudden hand pain and swelling; what vaso‑occlusive complication should you suspect and what immediate management is required? — Hand‑foot syndrome (dactylitis); give analgesia, hydration, and consider exchange transfusion if severe.",
+  "During a routine exam you find a positive Hoffmann’s sign in a 45‑year‑old with neck pain; what central lesion does this suggest and what imaging is indicated? — Cervical cord compression; order MRI of the cervical spine.",
+  "A child with a deep laceration on the forearm is brought from a rural clinic lacking cultures; what empirical antibiotics cover common pathogens and why avoid aminoglycosides? — Use a first‑generation cephalosporin (e.g., cefazolin) for Staphylococcus; avoid aminoglycosides due to nephrotoxicity and limited efficacy against gram‑positive skin flora.",
+  "In a patient with a humeral fracture, you note loss of sensation over the medial hand; which nerve is injured and what functional deficit will develop? — Ulnar nerve injury; loss of intrinsic hand muscle function leading to claw hand."
+ ],
+ "related": [
+  "Shoulder Girdle Anatomy",
+  "Brachial Plexus Injuries",
+  "Forearm Compartment Syndrome",
+  "Upper Limb Fracture Management",
+  "Peripheral Nerve Examination"
+ ],
+ "kind": "anatomy",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "title": "Allergic and Infectious Rhinitis",
+ "subject": "Medicine",
+ "summary": "Rhinitis is inflammation of the nasal mucosa that may be allergic, infectious, or mixed. In low‑resource settings the clinician must rely on history, simple exam and targeted tests to differentiate causes and prevent complications.",
+ "aka": [
+  "rhinitis",
+  "nasal inflammation",
+  "hay fever (allergic)"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Rhinitis is defined as symptomatic inflammation of the nasal mucosa lasting >10 minutes and characterised by rhinorrhoea, congestion, sneezing or itching. Diagnosis is clinical, supported by symptom pattern and simple bedside tests.",
+   "b": [
+    "Allergic rhinitis: intermittent or persistent symptoms with clear triggers (dust, pollen, pets).",
+    "Infectious rhinitis: recent upper‑respiratory infection, purulent discharge, fever.",
+    "Mixed rhinitis: coexistence of allergic background and superimposed infection."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by symptom impact on daily life (ARIA classification).",
+   "b": [
+    "Mild: symptoms do not interfere with sleep, work or school.",
+    "Moderate‑severe: symptoms cause sleep disturbance, reduced concentration, or impaired daily activities."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Identify the most probable aetiology before ordering investigations.",
+   "b": [
+    "Allergic: dust‑mite, pollen, animal dander, mould – common in urban and peri‑urban homes.",
+    "Viral infection: rhinovirus, influenza, RSV – most frequent cause of acute rhinitis.",
+    "Bacterial superinfection: Staphylococcus aureus, Streptococcus pneumoniae – suggested by purulent discharge >10 days.",
+    "Occupational irritants: smoke, chemicals, herbal remedies.",
+    "Systemic diseases: HIV (nasal opportunistic infections), TB (nasal cavity involvement), sickle‑cell vaso‑occlusion causing mucosal edema."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Typical history and exam findings guide the differential.",
+   "b": [
+    "Allergic: itchy nose, watery rhinorrhoea, sneezing, pale/edematous turbinates, clear discharge.",
+    "Infectious: sore throat, fever, malaise, purulent or coloured discharge, erythematous turbinates.",
+    "Mixed: combination of the above, often with a history of atopy."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Nasal smear for eosinophils",
+     "b": "Is the inflammation allergic? → >5 % eosinophils supports allergic rhinitis."
+    },
+    {
+     "a": "Rapid antigen test for influenza/RSV (if available)",
+     "b": "Is a viral infection present? → Positive test directs supportive care, avoids unnecessary antibiotics."
+    },
+    {
+     "a": "Full blood count",
+     "b": "Is there bacterial infection or eosinophilia? → Neutrophilia suggests bacterial superinfection; eosinophilia supports allergy."
+    },
+    {
+     "a": "Nasal endoscopy (if feasible)",
+     "b": "Are there polyps, fungal debris or TB lesions? → Visualises structural disease; absence of equipment → rely on exam and history."
+    },
+    {
+     "a": "HIV test (if risk factors present)",
+     "b": "Is immunosuppression contributing? → Positive test prompts opportunistic infection work‑up."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Recognise features that demand urgent referral.",
+   "b": [
+    "Persistent unilateral purulent discharge >2 weeks → possible bacterial sinusitis or neoplasm.",
+    "Severe facial pain, swelling, fever → orbital cellulitis or cavernous sinus thrombosis.",
+    "Nasal bleeding with anaemia, or epistaxis refractory to compression → coagulopathy or vascular lesion.",
+    "Signs of systemic infection in HIV or TB patients."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, relieve symptoms and prevent recurrence.",
+   "b": [
+    "Allergic rhinitis: intranasal corticosteroid spray (first‑line), oral antihistamine for breakthrough symptoms, allergen avoidance.",
+    "Infectious rhinitis: supportive care (hydration, saline irrigation); antibiotics only if bacterial superinfection suspected (purulent discharge >10 days, fever, rising WBC).",
+    "Mixed rhinitis: combine above; consider short course oral steroids if severe edema.",
+    "Avoid NSAIDs in patients with nasal polyps and asthma due to risk of aspirin‑exacerbated respiratory disease."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Ensure control and monitor for complications.",
+   "b": [
+    "Re‑evaluate after 2–4 weeks; adjust intranasal steroid dose if symptoms persist.",
+    "Educate on dust‑mite control: pillow covers, washing bedding at 60 °C, reducing indoor humidity.",
+    "Vaccinate against influenza and pneumococcus in high‑risk patients.",
+    "Screen for asthma in persistent allergic rhinitis."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic rhinitis.",
+   "b": [
+    "Acute sinusitis – pain over sinuses, worse when leaning forward.",
+    "Nasal polyposis – bilateral pale masses causing obstruction, often with asthma.",
+    "Non‑allergic rhinitis (vasomotor) – triggered by temperature changes, strong odors, no eosinophilia."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls.",
+   "b": [
+    "Normal CBC does not exclude early bacterial infection; rely on clinical course.",
+    "Negative viral rapid test does not rule out infection; consider incubation period.",
+    "Eosinophil count may be low in chronic allergic rhinitis on steroids."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe facial swelling, visual changes, or high fever – possible orbital cellulitis.",
+  "Unilateral nasal mass with epistaxis – rule out malignancy.",
+  "Rapid deterioration in an HIV‑positive patient."
+ ],
+ "faq": [
+  {
+   "q": "Can allergic rhinitis become chronic sinusitis?",
+   "a": "Yes; persistent mucosal edema can obstruct sinus drainage, leading to secondary bacterial sinusitis."
+  },
+  {
+   "q": "Why are intranasal steroids preferred over oral antihistamines?",
+   "a": "They act locally on the inflamed mucosa, reduce congestion and are effective for both intermittent and persistent disease."
+  },
+  {
+   "q": "When should antibiotics be given for rhinitis?",
+   "a": "Only when there is clear evidence of bacterial superinfection: purulent discharge >10 days, fever, or rising neutrophil count."
+  }
+ ],
+ "exam": [
+  "A 12‑year‑old with year‑round sneezing, itchy eyes and pale turbinates – which medication is first‑line and why? — Intranasal corticosteroid; it targets mucosal inflammation and works regardless of trigger exposure.",
+  "A patient presents with 7‑day history of sore throat, clear rhinorrhoea, and low‑grade fever; nasal smear shows 2 % eosinophils. What is the most likely diagnosis? — Viral rhinitis; low eosinophils and systemic viral symptoms point to infection.",
+  "You suspect bacterial superinfection in a patient with rhinitis lasting 12 days, purulent discharge and neutrophilia. What is your next step? — Start a short course of amoxicillin (or appropriate local antibiotic) after confirming no contraindications.",
+  "A patient with known asthma reports worsening nasal congestion after taking ibuprofen. What condition should you consider and how does it affect management? — Aspirin‑exacerbated respiratory disease; avoid NSAIDs and use leukotriene receptor antagonist if needed.",
+  "In a low‑resource clinic, a rapid influenza test is unavailable. How would you decide whether to give antiviral therapy? — Base decision on epidemiologic season, typical symptoms, and risk factors (e.g., pregnancy, HIV) rather than a test.",
+  "A HIV‑positive adult presents with chronic nasal crusting and foul odour. Which opportunistic infection is most likely and what investigation would you order? — Rhinosporidiosis or fungal sinusitis; obtain nasal swab for fungal culture and consider CT if available.",
+  "During follow‑up, a patient’s symptoms persist despite intranasal steroids. What next therapeutic option is appropriate? — Add a short course of oral antihistamine or consider a leukotriene receptor antagonist; assess adherence and technique first.",
+  "What red‑flag symptom in rhinitis warrants immediate referral to ENT? — Unilateral persistent purulent discharge with epistaxis or facial pain, suggesting neoplasm or invasive infection."
+ ],
+ "related": [
+  "Asthma",
+  "Chronic sinusitis",
+  "Nasal polyposis",
+  "Aspirin‑exacerbated respiratory disease",
+  "Upper respiratory tract infection",
+  "Allergic conjunctivitis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

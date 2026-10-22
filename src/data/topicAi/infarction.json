@@ -116,5 +116,362 @@
  "kind": "disease",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "Collect a focused history and perform a systematic exam to localise and gauge the severity of infarction, recognising that bedside signs are suggestive but not definitive.",
+    "b": [
+     "History: 1) Onset, character, and duration of pain; 2) Radiation or associated symptoms (dyspnoea, syncope, neurological deficits); 3) Past cardiac or cerebrovascular disease; 4) Risk factors (hypertension, diabetes, smoking, atrial fibrillation, hyperlipidaemia); 5) Recent trauma or surgery; 6) Medication use (anticoagulants, antiplatelets); 7) Alcohol, herbal or illicit drug ",
+     "Examination: 1) Inspection of chest for pallor, cyanosis, jugular venous distension; 2) Auscultation for heart murmurs, rubs, gallops, and lung crackles; 3) Palpation of peripheral pulses, capillary refill, skin temperature; 4) Neurological exam for focal deficits, speech, and gait; 5) Abdominal exam for tenderness, guarding, rebound, and organomegaly; 6) Extremity exam for cya"
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Use a structured table to link each test to its clinical question, interpretation, and next steps, noting what to do when resources are limited."
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Apply recognised criteria and grading systems to classify infarction type, extent, and prognosis.",
+    "b": [
+     "STEMI: ST elevation >1 mm in ≥2 contiguous leads or new LBBB; requires reperfusion within 90 min.",
+     "NSTEMI/UA: Elevated troponin with non‑ST elevation; managed medically or with early invasive strategy.",
+     "Heart failure: New‑onset dyspnoea, orthopnoea, pulmonary rales, elevated BNP/NT‑proBNP.",
+     "Pulmonary embolism: Acute dyspnoea, pleuritic chest pain, tachycardia; confirmed by CT angiography or V/Q scan.",
+     "Cerebral infarction: Sudden focal neurological deficit; confirmed by CT/MRI; classified by TOAST criteria (large‑vessel, cardioembolic, small‑artery, other, undetermined).",
+     "Severity scales: Killip class for MI (I–IV), NIHSS for stroke, PESI for PE.",
+     "Staging of myocardial infarction: 0–24 h (hyperacute), 1–3 days (acute), 3–7 days (subacute), >7 days (chronic)."
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Use a comparison table to differentiate infarction from mimics, focusing on key distinguishing features.",
+    "t": [
+     {
+      "a": "Myocardial infarction",
+      "b": "Chest pain >20 min, ST changes, troponin rise; absent in pericarditis."
+     },
+     {
+      "a": "Pericarditis",
+      "b": "Sharp chest pain relieved by sitting up, diffuse ST elevation, PR depression; troponin usually normal."
+     },
+     {
+      "a": "Pulmonary embolism",
+      "b": "Sudden dyspnoea, pleuritic pain, tachycardia, hypoxia; CT angiography shows filling defect."
+     },
+     {
+      "a": "Aortic dissection",
+      "b": "Severe tearing chest pain radiating to back, pulse deficit, widened mediastinum on CXR; CT angiography confirms."
+     },
+     {
+      "a": "Stroke mimics (migraine, seizure, hypoglycaemia)",
+      "b": "Transient neurological deficits, normal imaging, reversible with glucose correction or abortive therapy."
+     },
+     {
+      "a": "Septic infarction",
+      "b": "Fever, leukocytosis, positive cultures; imaging shows gas or abscess; treat with antibiotics."
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A structured ladder for infarction care, prioritising rapid reperfusion, stabilisation, monitoring and escalation, with clear drug choices and contraindications.",
+    "t": [
+     {
+      "a": "Aspirin",
+      "b": "Blocks COX‑1, reduces platelet aggregation, first‑line antiplatelet."
+     },
+     {
+      "a": "Clopidogrel",
+      "b": "P2Y12 inhibitor, prevents further platelet aggregation."
+     },
+     {
+      "a": "Unfractionated heparin",
+      "b": "Inhibits thrombin and factor Xa, reduces clot extension."
+     },
+     {
+      "a": "Morphine",
+      "b": "Analgesic, reduces sympathetic surge; monitor for hypotension."
+     },
+     {
+      "a": "Tenecteplase",
+      "b": "Fibrin‑specific thrombolytic, easier dosing than alteplase."
+     }
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key adverse effects, interactions and management actions for drugs used in infarction.",
+    "b": [
+     "Aspirin: GI bleeding – give proton‑pump inhibitor if risk factors; avoid NSAIDs.",
+     "Clopidogrel: bleeding – stop if major bleed; check CYP2C19 genotype if poor response.",
+     "Heparin: thrombocytopenia – monitor platelets, stop if <50,000.",
+     "Morphine: hypotension – reduce dose, give fluids; monitor BP.",
+     "Tenecteplase: bleeding – avoid in recent surgery, uncontrolled hypertension; monitor for haemorrhage."
+    ],
+    "t": [
+     {
+      "a": "Bleeding",
+      "b": "Stop drug, give reversal agents (protamine for heparin), transfuse if needed."
+     },
+     {
+      "a": "Thrombocytopenia",
+      "b": "Hold heparin, consider platelet transfusion if life‑threatening bleed."
+     },
+     {
+      "a": "Drug interactions",
+      "b": "Avoid NSAIDs with aspirin; avoid CYP2C19 inhibitors with clopidogrel."
+     }
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Recognise early signs of major complications and thresholds for urgent referral or intervention.",
+    "b": [
+     "Cardiogenic shock: systolic BP <90 mmHg, oliguria, cool extremities – immediate ICU transfer, consider inotropes.",
+     "Arrhythmias: ventricular tachycardia or fibrillation – defibrillate, give amiodarone.",
+     "Heart failure: pulmonary oedema, rales, S3 gallop – start diuretics, refer if refractory.",
+     "Re‑occlusion: recurrent chest pain, rising troponin – urgent angiography.",
+     "Bleeding: haemorrhagic stroke, GI bleed – stop anticoagulants, reverse if possible."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Factors that alter presentation, diagnostics or treatment in low‑resource settings.",
+    "b": [
+     "HIV: higher risk of septic infarcts, consider TB co‑infection; use ART‑compatible drugs.",
+     "TB: miliary spread can mimic infarction; use sputum PCR.",
+     "Malnutrition: low albumin, higher bleeding risk; adjust anticoagulation.",
+     "Pregnancy: increased clotting tendency, avoid thrombolytics, use low‑molecular‑weight heparin.",
+     "Diabetes: silent ischemia, monitor glucose, use insulin infusion.",
+     "Herbal remedies: garlic, ginkgo – increase bleeding, avoid with antiplatelets.",
+     "Alcohol: chronic use → cardiomyopathy, adjust beta‑blockers.",
+     "Renal failure: dose adjust heparin, avoid nephrotoxic drugs.",
+     "Liver failure: impaired drug metabolism, avoid NSAIDs.",
+     "Elderly: frailty, polypharmacy, monitor for falls, adjust doses."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches for children, pregnancy, elderly, HIV patients and low‑resource settings.",
+    "b": [
+     "Children: use weight‑based dosing, avoid aspirin in viral illness, monitor for Reye’s syndrome.",
+     "Pregnancy: use low‑molecular‑weight heparin, avoid thrombolytics, monitor fetal wellbeing.",
+     "Elderly: start with lower antiplatelet doses, monitor renal function, avoid high‑dose morphine.",
+     "HIV: ensure ART adherence, monitor drug interactions, consider opportunistic infections.",
+     "Low‑resource settings: use streptokinase if unavailable, rely on clinical ECG, use oral anticoagulants when IV not feasible, prioritize early reperfusion."
+    ],
+    "t": [
+     {
+      "a": "Streptokinase",
+      "b": "Alternative fibrinolytic when tenecteplase unavailable; monitor for anaphylaxis."
+     },
+     {
+      "a": "Oral anticoagulants",
+      "b": "When IV not possible, use warfarin with INR monitoring, adjust for diet."
+     }
+    ]
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside, investigations, management, complications and special factors.",
+    "b": [
+     "1. What bedside sign indicates pulmonary embolism in a patient with sudden dyspnoea?",
+     "2. How would you interpret a troponin I of 1.5 ng/mL in the context of a 12‑hour ECG showing ST elevation?",
+     "3. Which drug should be avoided in a patient with a history of peptic ulcer disease?",
+     "4. What is the first step if a patient develops hypotension after morphine administration?",
+     "5. In a 70‑year‑old with renal failure, which anticoagulant is preferred for acute MI?",
+     "6. How does pregnancy alter the choice of antiplatelet therapy?",
+     "7. What is the threshold systolic BP that warrants ICU transfer for cardiogenic shock?",
+     "8. Which laboratory test differentiates septic from haemorrhagic infarction?",
+     "9. What is the recommended management of a patient with HIV on protease inhibitors who develops an MI?",
+     "10. In a low‑resource setting, which fibrinolytic agent is most commonly used and why?"
+    ]
+   }
+  ],
+  "facts": [
+   "White (anemic) infarcts occur in end‑arterial organs (heart, kidney, spleen) and are wedge‑shaped.",
+   "Red (hemorrhagic) infarcts occur in dual‑circulation organs (lung, liver) or venous occlusion.",
+   "Septic infarcts result from embolised vegetations or secondary infection of necrotic tissue.",
+   "Coagulative necrosis dominates; brain shows liquefactive necrosis.",
+   "Neuronal death irreversible after 3–4 min of ischemia; myocardial cells after 20–30 min.",
+   "LDH‑5 is most specific for myocardial infarction; rises 12–24 h, peaks 48 h, returns to baseline by 7 days.",
+   "CK‑MB peaks 24 h, normal < 5 U/L; troponin I/T peaks 4–6 h, remains elevated > 7 days.",
+   "Pulmonary emboli arise 70 % from deep veins of lower limbs; 30 % from pelvic veins.",
+   "Reperfusion within 12 h of symptom onset reduces infarct size by ~30 %."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "What is the most common source of arterial emboli causing a middle cerebral artery infarct?",
+    "a": "Atrial fibrillation leading to left atrial thrombus.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Which LDH isoenzyme is most specific for myocardial infarction?",
+    "a": "LDH‑5; it rises 12–24 h, peaks 48 h, and normalises by 7 days.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Describe the histological evolution of a myocardial infarct from 24 h to 8 weeks.",
+    "a": "24–48 h: coagulative necrosis, edema, neutrophils. 3–7 days: macrophages, granulation tissue. 2–4 weeks: collagen deposition, scar formation. 8 weeks: mature fibrous scar.",
+    "hot": true
+   },
+   {
+    "q": "Why is thrombolysis avoided in a patient with a recent intracranial haemorrhage?",
+    "a": "Risk of haemorrhagic transformation is high; contraindicates fibrinolytic therapy.",
+    "hot": true
+   },
+   {
+    "q": "How would you differentiate a pulmonary infarct from a pulmonary embolism on imaging?",
+    "a": "Infarct shows wedge‑shaped peripheral opacity with pleural effusion; embolism shows filling defect in pulmonary artery without parenchymal change."
+   },
+   {
+    "q": "What bedside sign indicates acute mesenteric ischemia?",
+    "a": "Sudden, severe abdominal pain out of proportion to physical findings; guarding and rigidity may be absent early."
+   },
+   {
+    "q": "Which drug class should be avoided in a patient with a recent intracranial bleed?",
+    "a": "Anticoagulants (warfarin, DOACs) and antiplatelets (aspirin, clopidogrel)."
+   },
+   {
+    "q": "What is the gold standard enzyme for diagnosing myocardial infarction and its peak time?",
+    "a": "Troponin I/T; peaks 4–6 h after onset, remains elevated >7 days.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Explain the significance of a CK‑MB level of 12 U/L in a patient with chest pain.",
+    "a": "Normal <5 U/L; 12 U/L suggests myocardial injury but not definitive; repeat in 6 h and assess troponin."
+   },
+   {
+    "q": "Why is a low serum‑ascites albumin gradient (SAAG) significant in a patient with ascites?",
+    "a": "SAAG <1.1 g/dL indicates non‑portal hypertension causes (e.g., peritoneal carcinomatosis)."
+   },
+   {
+    "q": "Which cell type dominates the infiltrate during the subacute phase (2–3 weeks) of a cerebral infarct?",
+    "a": "Macrophages (activated microglia) dominate the inflammatory infiltrate."
+   },
+   {
+    "q": "Outline the standard medical therapies used and those excluded in the acute management of myocardial infarction.",
+    "a": "Use aspirin, clopidogrel, heparin, beta‑blocker, ACE‑inhibitor, statin; avoid thrombolytics if contraindicated, avoid NSAIDs if renal dysfunction."
+   },
+   {
+    "q": "A 70‑year‑old collapses from a massive pulmonary embolism. From which anatomical location do most emboli arise?",
+    "a": "Deep veins of the lower limbs.",
+    "past": true
+   },
+   {
+    "q": "What percentage of the pulmonary vasculature is typically occluded in a massive pulmonary embolism?",
+    "a": ">50 % of the pulmonary arterial bed.",
+    "past": true
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 64‑year‑old man with prior MI presents with progressive dyspnoea and leg oedema. Echo shows LVEF 35%. Which is the most appropriate next step?",
+    "o": [
+     "Start ACE‑inhibitor",
+     "Begin diuretic therapy",
+     "Order cardiac MRI",
+     "Refer for coronary angiography"
+    ],
+    "a": 0,
+    "e": "ACE‑inhibitor improves survival in reduced EF.",
+    "past": true
+   },
+   {
+    "q": "Which LDH isoenzyme is most elevated in pulmonary infarction?",
+    "o": [
+     "LDH‑1",
+     "LDH‑2",
+     "LDH‑3",
+     "LDH‑5"
+    ],
+    "a": 2,
+    "e": "LDH‑3 is predominant in lung tissue.",
+    "past": true
+   },
+   {
+    "q": "A patient with chest pain has CK‑MB 4 U/L. What is the next best step?",
+    "o": [
+     "Discharge patient",
+     "Order repeat CK‑MB in 6 h",
+     "Start anticoagulation",
+     "Give aspirin"
+    ],
+    "a": 1,
+    "e": "Repeat CK‑MB to detect rising trend."
+   },
+   {
+    "q": "Which drug is contraindicated in a patient with recent intracranial haemorrhage?",
+    "o": [
+     "Aspirin",
+     "Heparin",
+     "Tenecteplase",
+     "Clopidogrel"
+    ],
+    "a": 2,
+    "e": "Tenecteplase is a fibrinolytic; contraindicated."
+   },
+   {
+    "q": "A 55‑year‑old presents with sudden severe abdominal pain and guarding. Which imaging is most useful?",
+    "o": [
+     "Abdominal X‑ray",
+     "CT angiography",
+     "Ultrasound",
+     "MRI"
+    ],
+    "a": 1,
+    "e": "CT angiography detects mesenteric ischemia."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 58‑year‑old woman presents with sudden onset left arm weakness and slurred speech. She has a history of hypertension and atrial fibrillation. On examination, she has left hemiplegia and right facial droop.",
+    "qs": [
+     {
+      "q": "What is the most likely diagnosis?",
+      "a": "Acute ischemic stroke involving the left middle cerebral artery territory."
+     },
+     {
+      "q": "Which imaging study is indicated first?",
+      "a": "Non‑contrast CT head to rule out haemorrhage, followed by CT angiography if no bleed."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Assuming CK‑MB alone diagnoses MI; troponin is required.",
+   "Confusing LDH‑5 with LDH‑1; LDH‑5 is cardiac specific.",
+   "Overlooking the need for reperfusion within 12 h; delays increase mortality.",
+   "Failing to recognise that aspirin is contraindicated in recent intracranial haemorrhage.",
+   "Misinterpreting a wedge‑shaped opacity as pneumonia instead of pulmonary infarct.",
+   "Not differentiating neutrophil‑rich infiltrate (early infarct) from macrophage‑rich (subacute).",
+   "Assuming all infarcts are white; neglecting red infarcts in lungs.",
+   "Treating all patients with anticoagulation regardless of bleeding risk."
+  ],
+  "exam": [
+   "What is the most common source of arterial emboli causing a middle cerebral artery infarct? — Atrial fibrillation leading to left atrial thrombus.",
+   "Which LDH isoenzyme is most specific for myocardial infarction? — LDH‑5; it rises 12–24 h, peaks 48 h, and normalises by 7 days.",
+   "Describe the histological evolution of a myocardial infarct from 24 h to 8 weeks. — 24–48 h: coagulative necrosis, edema, neutrophils. 3–7 days: macrophages, granulation tissue. 2–4 weeks: collagen deposition, scar formation. 8 weeks: mature fibrous scar.",
+   "Why is thrombolysis avoided in a patient with a recent intracranial haemorrhage? — Risk of haemorrhagic transformation is high; contraindicates fibrinolytic therapy.",
+   "How would you differentiate a pulmonary infarct from a pulmonary embolism on imaging? — Infarct shows wedge‑shaped peripheral opacity with pleural effusion; embolism shows filling defect in pulmonary artery without parenchymal change.",
+   "What bedside sign indicates acute mesenteric ischemia? — Sudden, severe abdominal pain out of proportion to physical findings; guarding and rigidity may be absent early.",
+   "Which drug class should be avoided in a patient with a recent intracranial bleed? — Anticoagulants (warfarin, DOACs) and antiplatelets (aspirin, clopidogrel).",
+   "What is the gold standard enzyme for diagnosing myocardial infarction and its peak time? — Troponin I/T; peaks 4–6 h after onset, remains elevated >7 days.",
+   "Explain the significance of a CK‑MB level of 12 U/L in a patient with chest pain. — Normal <5 U/L; 12 U/L suggests myocardial injury but not definitive; repeat in 6 h and assess troponin.",
+   "Why is a low serum‑ascites albumin gradient (SAAG) significant in a patient with ascites? — SAAG <1.1 g/dL indicates non‑portal hypertension causes (e.g., peritoneal carcinomatosis).",
+   "Which cell type dominates the infiltrate during the subacute phase (2–3 weeks) of a cerebral infarct? — Macrophages (activated microglia) dominate the inflammatory infiltrate.",
+   "Outline the standard medical therapies used and those excluded in the acute management of myocardial infarction. — Use aspirin, clopidogrel, heparin, beta‑blocker, ACE‑inhibitor, statin; avoid thrombolytics if contraindicated, avoid NSAIDs if renal dysfunction.",
+   "A 70‑year‑old collapses from a massive pulmonary embolism. From which anatomical location do most emboli arise? — Deep veins of the lower limbs.",
+   "What percentage of the pulmonary vasculature is typically occluded in a massive pulmonary embolism? — >50 % of the pulmonary arterial bed."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-22",
+  "checked": "2026-10-22"
+ }
 }

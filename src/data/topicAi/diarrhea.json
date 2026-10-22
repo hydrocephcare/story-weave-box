@@ -1,0 +1,155 @@
+{
+ "medical": true,
+ "title": "Acute Diarrhea in Children",
+ "subject": "Paediatrics",
+ "summary": "Acute diarrhoea is a common, potentially life‑threatening problem in low‑resource settings. Assessment focuses on severity, dehydration risk and likely aetiology, guiding rehydration, antimicrobial use and prevention.",
+ "aka": [
+  "acute gastroenteritis",
+  "watery stools"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Three or more loose stools in 24 h, with or without vomiting, lasting less than 14 days. Diagnosis is clinical; stool microscopy or rapid antigen tests help identify pathogens when available.",
+   "b": [
+    "Duration < 14 days → acute; ≥ 14 days → chronic",
+    "Assess stool frequency, consistency, blood, mucus"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Use the WHO Integrated Management of Childhood Illness (IMCI) dehydration classification: no dehydration, some dehydration, severe dehydration.",
+   "b": [
+    "Some dehydration: ≥ 2 signs (e.g., sunken eyes, skin pinch > 2 s)",
+    "Severe dehydration: ≥ 3 signs (e.g., lethargy, weak pulse, < 5 kg weight loss)"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa, infectious agents dominate, but non‑infectious causes are also common.",
+   "b": [
+    "Viral: rotavirus, norovirus (most common under 5 y)",
+    "Bacterial: enterotoxigenic E. coli, Shigella, Salmonella, Campylobacter",
+    "Parasitic: Giardia, Cryptosporidium (especially in HIV)",
+    "Non‑infectious: lactose intolerance, cow‑milk protein allergy, malnutrition, antibiotics, herbal remedies"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Frequent watery stools, possible vomiting, abdominal cramps, fever (more common with bacterial infection), and signs of dehydration.",
+   "b": [
+    "Watery, non‑bloody stools → viral or toxin‑mediated",
+    "Bloody, mucoid stools → invasive bacteria or dysentery",
+    "High fever > 38.5 °C → bacterial infection"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Stool microscopy with rapid antigen (rotavirus, adenovirus)",
+     "b": "Identifies viral aetiology → guides against unnecessary antibiotics"
+    },
+    {
+     "a": "Stool culture (if lab available)",
+     "b": "Detects bacterial pathogens → allows targeted antibiotics"
+    },
+    {
+     "a": "Serum electrolytes and creatinine (if severe dehydration suspected)",
+     "b": "Assesses electrolyte loss and renal function → informs rehydration plan"
+    },
+    {
+     "a": "HIV rapid test (high‑risk child)",
+     "b": "Detects immunosuppression → prompts investigation for opportunistic parasites"
+    },
+    {
+     "a": "If no lab: clinical dehydration assessment only",
+     "b": "Proceed with WHO rehydration protocol based on signs"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from severe dehydration, electrolyte imbalance, and invasive infection.",
+   "b": [
+    "Persistent vomiting > 24 h",
+    "Blood in stool or stool with mucus",
+    "Lethargy, seizures, or altered consciousness",
+    "Weight loss > 10 % in 2 weeks"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Rehydration is priority; treat the cause when identified; monitor and prevent recurrence.",
+   "b": [
+    "Plan A: ORS 75 ml/kg over 4 h for some dehydration",
+    "Plan B: IV Ringer’s lactate 100 ml/kg over 3 h for severe dehydration",
+    "Antibiotics only for dysentery (e.g., ciprofloxacin) or confirmed bacterial infection; avoid in viral cases",
+    "Probiotics (Lactobacillus rhamnosus GG) may shorten viral diarrhoea"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Re‑assess hydration status after 4 h of therapy; educate caregivers on ORS preparation, hand hygiene, safe water, and exclusive breastfeeding.",
+   "b": [
+    "Return if stools persist > 5 days or child becomes lethargic",
+    "Vaccinate against rotavirus where available",
+    "Promote use of safe water sources and latrines"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic diarrhoea but need different management.",
+   "b": [
+    "Acute gastro‑oesophageal reflux (vomiting‑dominant)",
+    "Intussusception (colicky pain, red‑currant jelly stool)",
+    "Celiac disease (chronic, malabsorptive diarrhoea)"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Interpretation pitfalls in low‑resource settings.",
+   "b": [
+    "Negative stool culture does not rule out bacterial infection if antibiotics were given before sampling",
+    "Normal serum sodium can be misleading in mixed dehydration; assess clinical signs"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Lethargy or unconsciousness",
+  "No urine output for > 6 h",
+  "Persistent vomiting preventing oral intake",
+  "Blood or mucus in stool with fever"
+ ],
+ "faq": [
+  {
+   "q": "When should I give antibiotics for diarrhoea?",
+   "a": "Only when there is dysentery (blood/mucus), a confirmed bacterial pathogen, or a high‑risk immunocompromised child; otherwise use supportive care."
+  },
+  {
+   "q": "Why is zinc recommended for all children with diarrhoea?",
+   "a": "Zinc shortens the course, reduces stool volume and prevents future episodes by enhancing gut mucosal immunity."
+  }
+ ],
+ "exam": [
+  "What are the three WHO signs that define severe dehydration? — Sunken eyes, lethargy/unconsciousness, weak rapid pulse, and > 5 % weight loss.",
+  "A 2‑year‑old presents with 8 watery stools/24 h, no fever, and two dehydration signs. What is your immediate management? — Start Plan A ORS 75 ml/kg over 4 h; give zinc; monitor vitals.",
+  "How would you differentiate viral from bacterial diarrhoea clinically? — Viral: no blood/mucus, low fever; Bacterial: bloody/mucoid stool, high fever, abdominal tenderness.",
+  "Why is it unsafe to give ciprofloxacin to a child with suspected rotavirus infection? — No bacterial target; risk of tendon toxicity and unnecessary resistance.",
+  "In a child with HIV presenting with chronic watery diarrhoea, which parasite is most likely and what test is feasible? — Cryptosporidium; stool acid‑fast stain or rapid antigen if available.",
+  "Explain the rationale for using Plan B IV fluids instead of ORS in severe dehydration. — Rapid volume replacement needed; ORS absorption may be too slow and risk worsening hypovolemia.",
+  "What preventive measures would you advise a mother in a rural setting to reduce diarrhoea episodes? — Exclusive breastfeeding, hand washing with soap, safe water storage, rotavirus vaccination, and zinc supplementation during illness.",
+  "A child’s serum sodium is 135 mmol/L but shows two WHO dehydration signs. How do you interpret this? — Sodium may be normal in mixed dehydration; rely on clinical signs to guide rehydration."
+ ],
+ "related": [
+  "Acute Gastroenteritis",
+  "Dehydration in Children",
+  "Rotavirus Infection",
+  "Intussusception",
+  "Malnutrition and Diarrhoea"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

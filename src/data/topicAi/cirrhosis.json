@@ -104,5 +104,399 @@
  "kind": "disease",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A thorough history and physical examination are crucial for assessing the severity of cirrhosis, identifying potential complications, and guiding further investigations, especially in resource-limited settings where advanced diagnostics may be scarce.",
+    "b": [
+     "Ask about the duration and quantity of alcohol intake, including any recent cessation or increase, as this is a common cause of micronodular cirrhosis.",
+     "Inquire about past medical history of viral hepatitis (B or C), autoimmune conditions, or metabolic disorders like diabetes, which are significant etiologic factors.",
+     "Elicit symptoms of decompensation such as increasing abdominal girth (ascites), yellowing of eyes/skin (jaundice), confusion or personality changes (encephalopathy), or gastrointestinal bleeding (varices).",
+     "Ask about medications, including herbal remedies, as some can exacerbate liver injury or interact with cirrhosis management.",
+     "Assess for symptoms of malnutrition, such as weight loss, muscle wasting, and fatigue, which are common in advanced cirrhosis.",
+     "Inspect for spider angiomata: multiple radial, pulsatile vascular lesions on the face, neck, and upper chest that blanch with pressure, indicating hyperestrogenism due to impaired liver metabolism.",
+     "Examine for palmar erythema: redness of the thenar and hypothenar eminences, also due to hyperestrogenism.",
+     "Look for jaundice: yellow discoloration of the sclera and skin, indicating hyperbilirubinemia due to impaired bilirubin conjugation and excretion.",
+     "Palpate for splenomegaly: an enlarged spleen, often palpable below the left costal margin, a key sign of portal hypertension.",
+     "Assess for ascites: inspect for abdominal distension, then percuss for flank dullness (dullness in the flanks that shifts with patient position), shifting dullness (dullness moves to the dependent flank when the patient turns), and a fluid thrill (a wave transmitted across the abdomen when one flank is tapped while the other is palpated). A bedside examination cannot quantify t",
+     "Check for asterixis (flapping tremor): ask the patient to extend their arms with wrists dorsiflexed and fingers spread; a rhythmic, involuntary flapping motion of the hands indicates hepatic encephalopathy. This sign is non-specific and can be seen in other metabolic encephalopathies.",
+     "Examine for gynecomastia: bilateral breast enlargement in men, caused by increased estrogen-to-androgen ratio due to impaired hepatic metabolism of sex hormones. This is a classic sign of chronic liver failure."
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Investigations aim to confirm the diagnosis of cirrhosis, determine its etiology, assess severity, and identify complications. In low-resource settings, prioritize tests that are readily available and provide critical information for management.",
+    "t": [
+     {
+      "a": "Full Blood Count (FBC)",
+      "b": "Answers: Is there anemia, thrombocytopenia, or leukopenia? How to read: Anemia (low hemoglobin) can be due to chronic disease, variceal bleeding, or hypersplenism. Thrombocytopenia (platelet count <150,000/µL) and leukopenia (low white blood cell count) often indicate hypersplenism secondary to portal hypertension. Wha"
+     },
+     {
+      "a": "Liver Function Tests (LFTs)",
+      "b": "Answers: What is the synthetic function and cholestasis status? How to read: Elevated bilirubin (total and direct) indicates impaired excretion. Low albumin (<3.5 g/dL) signifies reduced hepatic synthesis, correlating with disease severity. Elevated AST and ALT may be mildly to moderately high, but often normalize in e"
+     },
+     {
+      "a": "Prothrombin Time (PT) / International Normalized Ratio (INR)",
+      "b": "Answers: What is the liver's synthetic capacity for coagulation factors? How to read: Prolonged PT or elevated INR (>1.2) indicates impaired synthesis of clotting factors (II, VII, IX, X) by the liver, reflecting poor synthetic function and increased bleeding risk. What to do if unavailable: Rely on clinical signs of b"
+     },
+     {
+      "a": "Renal Function Tests (RFTs) / Electrolytes",
+      "b": "Answers: Is there kidney impairment or electrolyte imbalance? How to read: Elevated creatinine and urea indicate renal dysfunction, potentially hepatorenal syndrome. Hyponatremia (<135 mmol/L) is common due to dilutional effects from fluid overload and impaired free water excretion. Hyperkalemia or hypokalemia can occu"
+     },
+     {
+      "a": "Abdominal Ultrasound with Doppler",
+      "b": "Answers: What is the liver morphology, presence of ascites, splenomegaly, and portal vein patency? How to read: Liver may appear nodular, shrunken, or heterogeneous. Presence of ascites, splenomegaly (>12 cm), and dilated portal vein (>13 mm) with reduced flow velocity or thrombosis are key findings. Can also screen fo"
+     },
+     {
+      "a": "Diagnostic Paracentesis (Ascitic Fluid Analysis)",
+      "b": "Answers: What is the cause of ascites and is there infection? How to read: Serum-ascites albumin gradient (SAAG) of 1.1 g/dL or more indicates portal hypertension. Cell count with differential: polymorphonuclear (PMN) count of 250 cells/mm³ or more suggests spontaneous bacterial peritonitis (SBP). Culture identifies sp"
+     },
+     {
+      "a": "Viral Hepatitis Serology (HBsAg, anti-HCV)",
+      "b": "Answers: Is chronic viral hepatitis the underlying cause? How to read: Positive HBsAg indicates chronic Hepatitis B. Positive anti-HCV indicates past or current Hepatitis C infection (confirm with HCV RNA). What to do if unavailable: Treat empirically for complications of cirrhosis regardless of etiology; consider clin"
+     },
+     {
+      "a": "Alpha-fetoprotein (AFP)",
+      "b": "Answers: Is there suspicion for hepatocellular carcinoma (HCC)? How to read: Elevated AFP (>20 ng/mL, with higher levels being more concerning) in a cirrhotic patient raises suspicion for HCC, especially when combined with imaging findings. What to do if unavailable: Rely solely on abdominal ultrasound for HCC screenin"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "The diagnosis of cirrhosis is often clinical, supported by imaging and laboratory findings. Staging and severity assessment are crucial for prognosis and guiding management, particularly for determining eligibility for liver transplantation.",
+    "b": [
+     "Clinical diagnosis of cirrhosis is based on a combination of physical signs (e.g., ascites, jaundice, spider angiomata, splenomegaly), laboratory abnormalities (e.g., low albumin, prolonged INR, thrombocytopenia), and imaging findings (e.g., nodular liver, portal hypertension).",
+     "Liver biopsy is the gold standard for definitive diagnosis, showing diffuse fibrosis and regenerative nodules, but is often not required if clinical, laboratory, and imaging findings are conclusive. It is particularly useful for determining the etiology.",
+     "The Child-Pugh score (also known as Child-Turcotte-Pugh score) is widely used for assessing the severity of cirrhosis and predicting prognosis, especially in patients undergoing surgery or with variceal bleeding. It classifies patients into three classes (A, B, C) based on five parameters: total bilirubin, serum albumin, INR, presence of ascites, and presence of hepatic encepha",
+     "Child-Pugh Class A: 5-6 points, well-compensated disease, 1-year survival 100%, 2-year survival 85%.",
+     "Child-Pugh Class B: 7-9 points, significant functional compromise, 1-year survival 80%, 2-year survival 60%.",
+     "Child-Pugh Class C: 10-15 points, decompensated disease, 1-year survival 45%, 2-year survival 35%.",
+     "The Model for End-Stage Liver Disease (MELD) score is used to predict 3-month mortality and prioritize patients for liver transplantation. It incorporates serum creatinine, total bilirubin, and INR. A higher MELD score indicates more severe disease and higher mortality risk. The MELD-Na score also includes serum sodium, providing a more accurate prediction.",
+     "Micronodular cirrhosis (<3 mm nodules) is classically associated with alcoholic liver disease, while macronodular cirrhosis (>3 mm nodules) is more common in post-viral hepatitis or cryptogenic cirrhosis. This distinction is often made on liver biopsy."
+    ]
+   },
+   {
+    "h": "Look-alike conditions",
+    "p": "Several conditions can mimic aspects of cirrhosis, making accurate differentiation crucial for appropriate management. Careful history, examination, and targeted investigations are key.",
+    "t": [
+     {
+      "a": "Congestive Heart Failure (Right-sided)",
+      "b": "Points to it: Peripheral edema, ascites, hepatomegaly, elevated jugular venous pressure (JVP). How to separate it: JVP is typically normal or low in cirrhosis. Liver function tests in CHF may show mild transaminitis and elevated bilirubin due to congestion, but albumin and INR are usually normal. Echocardiography will "
+     },
+     {
+      "a": "Nephrotic Syndrome",
+      "b": "Points to it: Severe peripheral edema, ascites, hypoalbuminemia. How to separate it: No stigmata of chronic liver disease (e.g., spider angiomata, palmar erythema). Liver function tests are usually normal. Urinalysis will show heavy proteinuria (>3.5 g/day), which is the hallmark of nephrotic syndrome. SAAG in nephroti"
+     },
+     {
+      "a": "Budd-Chiari Syndrome",
+      "b": "Points to it: Acute onset of ascites, abdominal pain, hepatomegaly, often in a patient with a prothrombotic state. How to separate it: Doppler ultrasound is diagnostic, showing obstruction of hepatic venous outflow. Liver function tests may be acutely deranged, but stigmata of chronic liver disease are usually absent u"
+     },
+     {
+      "a": "Malignancy (e.g., Peritoneal Carcinomatosis)",
+      "b": "Points to it: Ascites, weight loss, abdominal pain, sometimes hepatomegaly. How to separate it: SAAG in malignant ascites is typically less than 1.1 g/dL. Ascitic fluid cytology will show malignant cells. Stigmata of chronic liver disease are usually absent. Imaging may reveal primary tumor or peritoneal nodules."
+     },
+     {
+      "a": "Severe Acute Hepatitis",
+      "b": "Points to it: Jaundice, malaise, nausea, vomiting, highly elevated transaminases. How to separate it: Acute onset of symptoms. Liver biopsy (if performed) would show acute inflammation and necrosis without significant fibrosis or regenerative nodules. Stigmata of chronic liver disease are absent. Liver synthetic functi"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "b": [
+     "**First things first: Stabilize acute decompensation.** Address immediate life-threatening issues such as variceal bleeding (endoscopic band ligation or sclerotherapy, vasoactive drugs like octreotide), spontaneous bacterial peritonitis (empiric broad-spectrum antibiotics), or severe hepatic encephalopathy (lactulose, rifaximin).",
+     "**Eliminate the underlying cause:** For alcoholic liver disease, complete and sustained alcohol abstinence is paramount. For chronic viral hepatitis B or C, initiate appropriate antiviral therapy to halt disease progression and potentially reverse fibrosis. Manage non-alcoholic steatohepatitis (NASH) with lifestyle modifications including weight loss, dietary changes, and exerc",
+     "**Manage fluid retention (ascites and edema):** Restrict dietary sodium to less than 2 grams per day. Initiate diuretics, typically a combination of a potassium-sparing diuretic (e.g., spironolactone) and a loop diuretic (e.g., furosemide), with careful monitoring of electrolytes and renal function. Large volume paracentesis may be required for refractory ascites, followed by a",
+     "**Prevent and manage portal hypertension complications:** Non-selective beta-blockers (e.g., propranolol, carvedilol) are used to reduce portal pressure and prevent first variceal bleed or re-bleeding. Regular endoscopic surveillance is crucial to identify and treat esophageal varices. Transjugular intrahepatic portosystemic shunt (TIPS) may be considered for refractory ascites",
+     "**Address hepatic encephalopathy:** Lactulose is the first-line treatment to reduce ammonia absorption by promoting its excretion in the stool and acidifying the colonic contents. Rifaximin, a non-absorbable antibiotic, can be added to reduce ammonia-producing bacteria in the gut. Identify and treat precipitating factors such as infection, gastrointestinal bleeding, or electrol",
+     "**Nutritional support:** Malnutrition is common in cirrhosis. Provide adequate caloric and protein intake, often with frequent small meals. Supplementation with fat-soluble vitamins (A, D, E, K) may be necessary. Avoid protein restriction unless in severe, refractory hepatic encephalopathy.",
+     "**Screen for hepatocellular carcinoma (HCC):** Perform abdominal ultrasound and alpha-fetoprotein (AFP) testing every six months in patients with cirrhosis, regardless of etiology, to detect HCC at an early, treatable stage.",
+     "**Vaccinations:** Ensure vaccination against Hepatitis A and B (if not already immune or infected), pneumococcal disease, and influenza to prevent additional insults and infections that can precipitate decompensation.",
+     "**When to escalate or refer:** Refer for liver transplantation assessment if the patient develops decompensated cirrhosis (ascites, encephalopathy, variceal bleeding, jaundice) or has a high MELD (Model for End-Stage Liver Disease) score. Urgent referral is needed for acute decompensation or suspected HCC."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "b": [
+     "**Diuretics (Spironolactone, Furosemide):** Can cause electrolyte imbalances (hyponatremia, hypokalemia with furosemide; hyperkalemia with spironolactone), renal dysfunction, and dehydration. Monitor serum electrolytes and creatinine regularly; adjust doses or stop if severe imbalances or acute kidney injury occurs.",
+     "**Non-selective beta-blockers (Propranolol, Carvedilol):** May cause bradycardia, hypotension, and worsen fatigue. Can mask signs of hypoglycemia in diabetic patients. Avoid in patients with severe asthma or COPD. Monitor heart rate and blood pressure; reduce dose if symptomatic bradycardia or hypotension.",
+     "**Lactulose:** Common side effects include abdominal bloating, flatulence, and diarrhea. Excessive diarrhea can lead to dehydration and electrolyte disturbances. Adjust dose to achieve 2-3 soft bowel movements daily; monitor electrolytes.",
+     "**Rifaximin:** Generally well-tolerated with minimal systemic absorption. Rare side effects include nausea, abdominal pain, and peripheral edema. No specific action usually required unless severe symptoms.",
+     "**NSAIDs (Non-steroidal anti-inflammatory drugs):** Absolutely contraindicated in cirrhosis as they can precipitate acute kidney injury (hepatorenal syndrome) and increase the risk of gastrointestinal bleeding. Advise patients to avoid all NSAIDs.",
+     "**Opioids and Sedatives (e.g., benzodiazepines):** Should be used with extreme caution or avoided in patients with cirrhosis, especially those with hepatic encephalopathy, as they can worsen neurological function and precipitate coma. If necessary, use the lowest effective dose for the shortest duration.",
+     "**Acetaminophen (Paracetamol):** While generally safer than NSAIDs, high doses can be hepatotoxic. Advise patients to adhere strictly to recommended maximum daily doses (typically 2 grams/day in stable cirrhosis) and avoid combination products containing acetaminophen.",
+     "**Herbal remedies and traditional medicines:** Many can be hepatotoxic or interact with prescribed medications. Advise patients to disclose all herbal and traditional remedies they are using and to avoid unproven treatments due to potential harm."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "b": [
+     "**Esophageal Variceal Bleeding:** Presents as hematemesis or melena. This is a medical emergency requiring immediate resuscitation, urgent endoscopy for band ligation or sclerotherapy, and vasoactive drugs (e.g., octreotide).",
+     "**Spontaneous Bacterial Peritonitis (SBP):** Suspect in patients with ascites and new-onset fever, abdominal pain, worsening ascites, or unexplained encephalopathy. Diagnose with ascitic fluid analysis (PMN count ≥ 250 cells/mm³). Requires urgent empiric broad-spectrum antibiotics.",
+     "**Hepatic Encephalopathy (HE):** Manifests as altered mental status, confusion, asterixis, and can progress to coma. Precipitated by infection, GI bleeding, electrolyte imbalance, or constipation. Requires urgent treatment with lactulose and identification/correction of precipitating factors.",
+     "**Hepatorenal Syndrome (HRS):** Characterized by progressive renal failure in the absence of other causes of kidney injury, often triggered by SBP or over-diuresis. Requires urgent management with albumin, vasoconstrictors (e.g., terlipressin), and consideration for liver transplantation.",
+     "**Hepatocellular Carcinoma (HCC):** Suspect with new-onset jaundice, unexplained weight loss, worsening ascites, or rising alpha-fetoprotein (AFP) levels. Requires urgent imaging (CT/MRI) and referral to a hepatobiliary surgeon or oncologist.",
+     "**Ascites Refractory to Diuretics:** Persistent or recurrent ascites despite maximal diuretic therapy and sodium restriction. May require serial large volume paracentesis with albumin cover, or consideration for TIPS.",
+     "**Coagulopathy and Bleeding:** Due to impaired synthesis of clotting factors. Patients are at increased risk of bleeding, even without varices. Monitor INR and platelet count; administer vitamin K or fresh frozen plasma if active bleeding or before invasive procedures.",
+     "**Infections (other than SBP):** Patients with cirrhosis are immunocompromised and prone to various infections (e.g., pneumonia, UTIs). Any fever or signs of infection warrant prompt investigation and aggressive antibiotic therapy."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "b": [
+     "**HIV:** Co-infection with HIV and viral hepatitis (HBV/HCV) accelerates liver disease progression. Antiretroviral therapy (ART) can have hepatotoxic side effects, requiring careful drug selection and monitoring. Immunosuppression from HIV increases the risk of infections, including SBP.",
+     "**Tuberculosis (TB):** TB can affect the liver, mimicking or worsening cirrhosis. Anti-TB drugs can be hepatotoxic, necessitating careful monitoring of liver function tests and dose adjustments. Diagnosis of TB can be challenging in cirrhotic patients.",
+     "**Malnutrition:** Very common in cirrhosis due to anorexia, malabsorption, and altered metabolism. Worsens prognosis and increases susceptibility to complications. Requires aggressive nutritional support, often with frequent small meals and specific supplements.",
+     "**Pregnancy:** Cirrhosis in pregnancy is rare but high-risk. Portal hypertension can lead to variceal bleeding, and liver decompensation can occur. Management requires close collaboration between hepatologists, obstetricians, and neonatologists. Some medications used in cirrhosis are contraindicated in pregnancy.",
+     "**Diabetes:** Common comorbidity, especially in NASH-related cirrhosis. Poor glycemic control can worsen liver damage. Some oral hypoglycemic agents are contraindicated or require dose adjustment in liver failure. Insulin is often preferred.",
+     "**Drugs and herbal remedies:** Many prescription and over-the-counter drugs, as well as herbal remedies, can be hepatotoxic or interact with medications used in cirrhosis. A thorough medication history is crucial, and patients should be advised to avoid unproven remedies.",
+     "**Alcohol:** Continued alcohol consumption in alcoholic cirrhosis leads to rapid progression of liver damage and increased mortality. Complete abstinence is the most critical intervention for these patients.",
+     "**Kidney failure (Hepatorenal Syndrome):** A severe complication of advanced cirrhosis, characterized by functional renal failure. Differentiating HRS from other causes of kidney injury (e.g., acute tubular necrosis) is crucial for appropriate management. Prognosis is poor without liver transplantation.",
+     "**Age extremes:** Elderly patients may have multiple comorbidities, polypharmacy, and reduced physiological reserve, making management more complex. Children with cirrhosis often have congenital or genetic etiologies, and their management focuses on growth, development, and preparing for transplantation."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "b": [
+     "**Children:** Cirrhosis in children is often due to biliary atresia, alpha-1 antitrypsin deficiency, or metabolic disorders. Management focuses on optimizing nutrition for growth and development, managing portal hypertension, and early referral for liver transplantation. Prognosis is highly dependent on the underlying cause and timely intervention.",
+     "**Pregnancy:** Cirrhosis significantly increases maternal and fetal risks, including variceal bleeding, pre-eclampsia, and preterm birth. Close monitoring for complications is essential. Some medications for cirrhosis (e.g., spironolactone, terlipressin) may be contraindicated or require careful consideration during pregnancy. Elective delivery may be planned.",
+     "**The Elderly:** Older patients with cirrhosis often have more comorbidities, polypharmacy, and a higher risk of complications like infections and renal dysfunction. Their physiological reserve is reduced, making them more vulnerable to decompensation. Management requires careful consideration of drug interactions and potential adverse effects, with a focus on quality of life.",
+     "**People with HIV:** Co-infection with HIV and viral hepatitis (HBV/HCV) is common and accelerates liver disease progression. Antiretroviral therapy (ART) regimens need careful selection to minimize hepatotoxicity and drug interactions. Immunosuppression from HIV increases the risk of opportunistic infections, which can precipitate liver decompensation.",
+     "**Low-resource settings:** Diagnosis and management are often challenged by limited access to diagnostic tools (e.g., endoscopy, advanced imaging, viral load testing), essential medications (e.g., antivirals, albumin), and specialized care (e.g., liver transplantation). Focus shifts to affordable symptomatic management, prevention of common complications, and public health inte"
+    ]
+   }
+  ],
+  "facts": [
+   "SAAG >= 1.1 g/dL indicates portal hypertension as the cause of ascites.",
+   "Ascitic fluid neutrophil count >= 250 cells/mm³ is diagnostic of SBP.",
+   "Child-Pugh score components: bilirubin, albumin, INR, ascites, encephalopathy.",
+   "MELD score incorporates bilirubin, creatinine, INR, and sodium.",
+   "Prophylactic antibiotics for SBP: norfloxacin or ciprofloxacin.",
+   "Non-selective beta-blockers reduce portal pressure by 20% or to <12 mmHg.",
+   "Alpha-fetoprotein (AFP) > 200 ng/mL is highly suspicious for HCC.",
+   "Sodium restriction for ascites: <2 grams per day.",
+   "Lactulose dose titrated to 2-3 soft stools daily for hepatic encephalopathy."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define liver cirrhosis and describe its basic pathophysiology regarding blood flow and biochemical functions.",
+    "a": "Liver cirrhosis is a diffuse process characterized by fibrosis and the formation of regenerative nodules, leading to architectural distortion of the liver. Pathophysiologically, this disrupts normal hepatic blood flow, increasing resistance to portal venous flow and causing portal hypertension. Biochemically, the damaged hepatocytes lose their synthetic (e.g., albumin, clotting factors) and metabolic (e.g., detoxification of ammonia, bilirubin conjugation) functions, leading to systemic manifestations.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "List and explain the pathological features observed in liver cirrhosis.",
+    "a": "Pathological features include diffuse fibrosis, characterized by deposition of extracellular matrix proteins, forming fibrous septa. These septa encircle regenerating hepatocytes, forming regenerative nodules that distort the normal lobular architecture. There is also evidence of hepatocyte necrosis and inflammation, contributing to the ongoing fibrotic process. Micronodular cirrhosis has nodules <3mm, while macronodular has nodules >3mm.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Outline the clinical presentation of advanced liver cirrhosis.",
+    "a": "Advanced cirrhosis presents with signs of liver synthetic dysfunction and portal hypertension. This includes jaundice, ascites, peripheral edema, and hepatic encephalopathy (confusion, asterixis). Stigmata of chronic liver disease like palmar erythema, spider angiomata, gynecomastia, and testicular atrophy may also be present. Patients often report fatigue, weight loss, and easy bruising.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "Discuss the comprehensive management and specific etiology-based treatments for liver cirrhosis and its major complications.",
+    "a": "Comprehensive management involves treating the underlying cause (e.g., antivirals for hepatitis B/C, alcohol abstinence for alcoholic liver disease). General measures include nutritional support, avoiding hepatotoxic drugs, and vaccination. Complications are managed specifically: diuretics and sodium restriction for ascites, lactulose/rifaximin for encephalopathy, non-selective beta-blockers/endoscopic variceal ligation for varices, and antibiotics for SBP. Liver transplantation is the definitive treatment for decompensated disease.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 60-year-old patient with decompensated cirrhosis and massive ascites requires biliary decompression for malignant stricture. Why does severe ascites represent a major contraindication for percutaneous transhepatic biliary drainage (PTBD)?",
+    "a": "Severe ascites is a major contraindication for PTBD because it significantly increases the risk of bile leakage into the peritoneal cavity following puncture, leading to bile peritonitis. The ascitic fluid also makes it technically challenging to stabilize the catheter and maintain its position, increasing the risk of dislodgement and further complications.",
+    "hot": true,
+    "past": true
+   },
+   {
+    "q": "A 62-year-old man with decompensated cirrhosis, severe ascites, and malignant obstructive jaundice is evaluated for percutaneous transhepatic biliary drainage. What is the primary risk associated with performing this procedure in this patient?",
+    "a": "The primary risk is bile peritonitis due to leakage of bile into the ascitic fluid after the transhepatic puncture. This is exacerbated by the presence of severe ascites, which prevents adequate sealing of the liver capsule around the drainage catheter, and the underlying coagulopathy often seen in decompensated cirrhosis.",
+    "past": true
+   },
+   {
+    "q": "Micronodular cirrhosis (<3 mm nodules) is classically associated with which etiologic factor?",
+    "a": "Micronodular cirrhosis is classically associated with chronic alcohol abuse. Other causes include chronic biliary obstruction and hemochromatosis. Over time, micronodular cirrhosis can progress to macronodular cirrhosis.",
+    "past": true
+   },
+   {
+    "q": "A 52-year-old chronic alcoholic with advanced cirrhosis develops progressive confusion and asterixis. Neuropathological examination of his brain reveals large, pale nuclei with intranuclear glycogen droplets in astrocytes. What is the significance of these findings?",
+    "a": "These findings are characteristic of Alzheimer type II astrocytes, which are pathognomonic for hepatic encephalopathy. They represent a morphological change in astrocytes due to chronic exposure to high levels of ammonia and other neurotoxins, indicating severe metabolic dysfunction in the brain secondary to liver failure.",
+    "past": true
+   },
+   {
+    "q": "A patient with long-standing alcoholic cirrhosis is admitted with massive abdominal distension, shifting dullness, and peripheral edema. Laboratory results show hypoalbuminemia and portal hypertension, activating the renin-angiotensin-aldosterone system. Explain the pathophysiology of these findings.",
+    "a": "Portal hypertension leads to splanchnic vasodilation, causing effective arterial hypovolemia. This activates the renin-angiotensin-aldosterone system (RAAS) and sympathetic nervous system, leading to renal sodium and water retention. Hypoalbuminemia reduces plasma oncotic pressure. Together, these factors promote fluid extravasation into the peritoneal cavity (ascites) and interstitial spaces (edema).",
+    "past": true
+   },
+   {
+    "q": "A patient with cirrhosis presents with multiple radial, pulsatile vascular lesions on the face and upper chest that blanch with pressure. What is the underlying pathophysiology of these lesions?",
+    "a": "These lesions are spider angiomata (spider nevi). Their pathophysiology is related to hyperestrogenism due to impaired hepatic metabolism of estrogens. Estrogens cause arteriolar dilation, leading to the characteristic central arteriole with radiating capillaries that blanch on pressure.",
+    "past": true
+   },
+   {
+    "q": "A clinical examination of a patient with chronic liver cirrhosis reveals multiple pulsatile, radiating subcutaneous arterioles emanating from a central arteriole on the face and trunk that blanch with direct pressure. What is the name of this physical sign and its significance?",
+    "a": "This is a spider angioma or spider nevus. It is a stigmata of chronic liver disease, particularly cirrhosis, and indicates hyperestrogenism due to the liver's inability to metabolize estrogens effectively. While often benign, a sudden increase in their number can suggest worsening liver function.",
+    "past": true
+   },
+   {
+    "q": "A 60-year-old man with chronic liver failure is evaluated for bilateral breast enlargement. Why is liver cirrhosis considered the most important cause of gynecomastia in adult men?",
+    "a": "Liver cirrhosis is a major cause of gynecomastia in adult men due to impaired hepatic metabolism of estrogens and androgens. The damaged liver cannot effectively inactivate estrogens, leading to elevated circulating estrogen levels. Simultaneously, there is often reduced hepatic synthesis of sex hormone-binding globulin (SHBG), which can alter the free testosterone-to-estrogen ratio, favoring estrogenic effects and stimulating breast tissue growth.",
+    "past": true
+   },
+   {
+    "q": "How do you elicit and interpret shifting dullness for ascites?",
+    "a": "With the patient supine, percuss from the umbilical region laterally towards the flank. Mark the point where resonance changes to dullness. Then, ask the patient to turn onto their side (e.g., left lateral decubitus). After a few moments, re-percuss the previously dull flank. If the dullness has shifted to the new dependent flank and the previously dull area is now resonant, it indicates the presence of at least 1-1.5 liters of free fluid."
+   },
+   {
+    "q": "What is the significance of a high serum-ascites albumin gradient (SAAG) in a patient with ascites?",
+    "a": "A SAAG of 1.1 g/dL or greater indicates that the ascites is due to portal hypertension. This occurs because the high hydrostatic pressure in the portal system forces protein-poor fluid into the peritoneal cavity. Common causes include cirrhosis, heart failure, and Budd-Chiari syndrome."
+   },
+   {
+    "q": "A patient with cirrhosis develops sudden onset fever, abdominal pain, and worsening ascites. What is your immediate next step in management?",
+    "a": "The immediate next step is to perform a diagnostic paracentesis to obtain ascitic fluid for analysis, specifically cell count and differential, protein, and culture. This is crucial to rule out spontaneous bacterial peritonitis (SBP), which is a life-threatening complication requiring prompt antibiotic treatment.",
+    "hot": true
+   },
+   {
+    "q": "Why is it important to avoid sedatives in a patient with hepatic encephalopathy?",
+    "a": "Sedatives, particularly benzodiazepines, can worsen hepatic encephalopathy by depressing the central nervous system, leading to increased confusion, somnolence, and respiratory depression. They can also mask the signs of worsening encephalopathy, making it harder to monitor the patient's neurological status."
+   },
+   {
+    "q": "What are the common causes of cirrhosis in East African settings, and how do they influence management?",
+    "a": "Common causes include chronic viral hepatitis B and C, alcoholic liver disease, and schistosomiasis. Management is influenced by these etiologies: antivirals for hepatitis B/C, alcohol abstinence counseling, and praziquantel for schistosomiasis. Screening for HCC is particularly important in chronic hepatitis B patients, even without advanced cirrhosis."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 58-year-old man with known alcoholic cirrhosis presents with increasing confusion, disorientation, and a flapping tremor. His current medications include spironolactone and furosemide. Which of the following is the most appropriate initial management step?",
+    "o": [
+     "Administer intravenous albumin.",
+     "Start oral lactulose.",
+     "Increase diuretic doses.",
+     "Perform a diagnostic paracentesis."
+    ],
+    "a": 1,
+    "e": "The patient's presentation is consistent with hepatic encephalopathy, for which lactulose is the first-line treatment to reduce ammonia absorption."
+   },
+   {
+    "q": "A 45-year-old woman with chronic hepatitis C cirrhosis develops new-onset jaundice, right upper quadrant pain, and unexplained weight loss. Her alpha-fetoprotein (AFP) level is significantly elevated. What is the most likely diagnosis?",
+    "o": [
+     "Spontaneous bacterial peritonitis.",
+     "Acute cholecystitis.",
+     "Hepatocellular carcinoma.",
+     "Hepatic encephalopathy."
+    ],
+    "a": 2,
+    "e": "New-onset jaundice, RUQ pain, weight loss, and elevated AFP in a cirrhotic patient are highly suggestive of hepatocellular carcinoma."
+   },
+   {
+    "q": "A patient with cirrhosis and ascites undergoes a diagnostic paracentesis. The ascitic fluid analysis reveals a neutrophil count of 300 cells/mm³. What is the most appropriate next step in management?",
+    "o": [
+     "Continue current management and monitor.",
+     "Initiate prophylactic antibiotics.",
+     "Start empiric broad-spectrum antibiotics.",
+     "Refer for liver transplantation assessment."
+    ],
+    "a": 2,
+    "e": "An ascitic fluid neutrophil count of >= 250 cells/mm³ is diagnostic of SBP, requiring immediate empiric broad-spectrum antibiotics."
+   },
+   {
+    "q": "Which of the following physical examination findings is most indicative of portal hypertension in a patient with cirrhosis?",
+    "o": [
+     "Palmar erythema.",
+     "Spider angiomata.",
+     "Splenomegaly.",
+     "Gynecomastia."
+    ],
+    "a": 2,
+    "e": "Splenomegaly is a direct consequence of portal hypertension, as increased pressure in the splenic vein leads to congestion and enlargement of the spleen."
+   },
+   {
+    "q": "A 65-year-old man with decompensated cirrhosis presents with decreased urine output and rising creatinine. His blood pressure is 85/50 mmHg. What is the most likely diagnosis?",
+    "o": [
+     "Acute tubular necrosis.",
+     "Pre-renal azotemia.",
+     "Hepatorenal syndrome.",
+     "Urinary tract infection."
+    ],
+    "a": 2,
+    "e": "Decreased urine output, rising creatinine, and hypotension in a patient with decompensated cirrhosis are classic features of hepatorenal syndrome, a severe complication of advanced liver disease."
+   },
+   {
+    "q": "A patient with long-standing alcoholic cirrhosis is admitted with massive abdominal distension, shifting dullness, and peripheral edema. Laboratory results show hypoalbuminemia and portal hypertension, activating the renin-angiotensin-aldosterone system. Which of the following is the primary mechanism leading to ascites in this patient?",
+    "o": [
+     "Increased hepatic synthesis of albumin.",
+     "Decreased portal venous pressure.",
+     "Increased hydrostatic pressure in the splanchnic circulation.",
+     "Reduced renal sodium and water retention."
+    ],
+    "a": 2,
+    "e": "Portal hypertension leads to increased hydrostatic pressure in the splanchnic capillaries, forcing fluid into the peritoneal cavity, which is the primary driver of ascites formation.",
+    "past": true
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 48-year-old male with a history of chronic hepatitis B presents with progressive abdominal distension, yellow discoloration of eyes, and generalized weakness for the past 3 months. On examination, he has jaundice, spider angiomata on his chest, palmar erythema, and massive ascites with shifting dullness. His abdomen is non-tender. Laboratory tests show Hb 10.2 g/dL, WBC 6.5 x 10^9/L, Platelets 80 x 10^9/L. Liver function tests: Total Bilirubin 85 µmol/L (normal <21), Albumin 25 g/L (normal 35-50), INR 1.8 (normal 0.8-1.2). Creatinine 90 µmol/L.",
+    "qs": [
+     {
+      "q": "Based on the clinical and laboratory findings, what is the most likely diagnosis and what is his Child-Pugh score?",
+      "a": "The most likely diagnosis is decompensated liver cirrhosis due to chronic hepatitis B. His Child-Pugh score is calculated as follows: Bilirubin (85 µmol/L) = 3 points; Albumin (25 g/L) = 3 points; INR (1.8) = 2 points; Ascites (massive) = 3 points; Encephalopathy (none mentioned) = 1 point. Total score = 12 points, which is Child-Pugh Class C."
+     },
+     {
+      "q": "What two immediate investigations would you perform to assess for potential complications?",
+      "a": "1. Upper endoscopy: To screen for esophageal varices, which are a major complication of portal hypertension and carry a high risk of bleeding. 2. Abdominal ultrasound with Doppler: To assess liver morphology, look for hepatocellular carcinoma, evaluate portal vein patency, and quantify ascites."
+     }
+    ]
+   },
+   {
+    "v": "A 60-year-old female with a history of non-alcoholic steatohepatitis (NASH) related cirrhosis is admitted with increasing abdominal pain, fever (38.5°C), and worsening confusion over the past 24 hours. She has known ascites. On examination, she is jaundiced, disoriented, has asterixis, and diffuse abdominal tenderness with guarding. Her blood pressure is 90/60 mmHg. Laboratory tests show WBC 14.0 x 10^9/L, Creatinine 150 µmol/L (baseline 80 µmol/L).",
+    "qs": [
+     {
+      "q": "What are the two most likely acute complications she is experiencing?",
+      "a": "She is most likely experiencing Spontaneous Bacterial Peritonitis (SBP) given the fever, abdominal pain, tenderness, and worsening ascites. The worsening confusion and asterixis indicate hepatic encephalopathy, which can be precipitated or exacerbated by SBP."
+     },
+     {
+      "q": "What is the most crucial immediate diagnostic procedure you would perform?",
+      "a": "An immediate diagnostic paracentesis is crucial. Ascitic fluid should be sent for cell count and differential (especially neutrophil count), Gram stain, culture, and protein/albumin levels. This will confirm SBP if the neutrophil count is >= 250 cells/mm³."
+     },
+     {
+      "q": "Outline the immediate management steps for these complications.",
+      "a": "For SBP: Start empiric broad-spectrum antibiotics (e.g., third-generation cephalosporin like ceftriaxone) immediately after paracentesis, without waiting for culture results. Administer intravenous albumin (1.5g/kg on day 1, 1g/kg on day 3) to prevent hepatorenal syndrome. For hepatic encephalopathy: Administer oral lactulose, titrated to achieve 2-3 soft bowel movements daily, and consider rifaximin. Address precipitating factors like infection (SBP) and gastrointestinal bleeding."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Failing to perform a diagnostic paracentesis in a cirrhotic patient with new-onset or worsening ascites and fever/abdominal pain.",
+   "Not recognizing the signs of hepatic encephalopathy (e.g., asterixis, subtle personality changes) and attributing them solely to sedation or other neurological causes.",
+   "Prescribing sedatives (e.g., benzodiazepines) to patients with hepatic encephalopathy, which can worsen their neurological status.",
+   "Missing hepatocellular carcinoma by not adhering to regular screening protocols (ultrasound and AFP) in high-risk patients.",
+   "Incorrectly calculating the SAAG or misinterpreting its significance, leading to incorrect diagnosis of ascites etiology.",
+   "Over-diuresing patients with ascites, leading to electrolyte imbalances (hyponatremia, hypokalemia) or precipitating hepatorenal syndrome.",
+   "Not considering underlying etiologies like viral hepatitis or alcohol abuse in management, focusing only on symptomatic treatment.",
+   "Failing to provide adequate nutritional support, leading to sarcopenia and worsening prognosis in cirrhotic patients."
+  ],
+  "exam": [
+   "Define liver cirrhosis and describe its basic pathophysiology regarding blood flow and biochemical functions. — Liver cirrhosis is a diffuse process characterized by fibrosis and the formation of regenerative nodules, leading to architectural distortion of the liver. Pathophysiologically, this disrupts normal hepatic blood flow, increasing resistance to portal venous flow and causing portal hypertension. Biochemically, the damaged hepatocytes lose their synthetic (e.g., albumin, clotting factors) and metabolic (e.g., detoxification of ammonia, bilirubin conjugation) functions, leading to systemic manifestations.",
+   "List and explain the pathological features observed in liver cirrhosis. — Pathological features include diffuse fibrosis, characterized by deposition of extracellular matrix proteins, forming fibrous septa. These septa encircle regenerating hepatocytes, forming regenerative nodules that distort the normal lobular architecture. There is also evidence of hepatocyte necrosis and inflammation, contributing to the ongoing fibrotic process. Micronodular cirrhosis has nodules <3mm, while macronodular has nodules >3mm.",
+   "Outline the clinical presentation of advanced liver cirrhosis. — Advanced cirrhosis presents with signs of liver synthetic dysfunction and portal hypertension. This includes jaundice, ascites, peripheral edema, and hepatic encephalopathy (confusion, asterixis). Stigmata of chronic liver disease like palmar erythema, spider angiomata, gynecomastia, and testicular atrophy may also be present. Patients often report fatigue, weight loss, and easy bruising.",
+   "Discuss the comprehensive management and specific etiology-based treatments for liver cirrhosis and its major complications. — Comprehensive management involves treating the underlying cause (e.g., antivirals for hepatitis B/C, alcohol abstinence for alcoholic liver disease). General measures include nutritional support, avoiding hepatotoxic drugs, and vaccination. Complications are managed specifically: diuretics and sodium restriction for ascites, lactulose/rifaximin for encephalopathy, non-selective beta-blockers/endoscopic variceal ligation for varices, and antibiotics for SBP. Liver transplantation is the definitive treatment for decompensated disease.",
+   "A 60-year-old patient with decompensated cirrhosis and massive ascites requires biliary decompression for malignant stricture. Why does severe ascites represent a major contraindication for percutaneous transhepatic biliary drainage (PTBD)? — Severe ascites is a major contraindication for PTBD because it significantly increases the risk of bile leakage into the peritoneal cavity following puncture, leading to bile peritonitis. The ascitic fluid also makes it technically challenging to stabilize the catheter and maintain its position, increasing the risk of dislodgement and further complications.",
+   "A 62-year-old man with decompensated cirrhosis, severe ascites, and malignant obstructive jaundice is evaluated for percutaneous transhepatic biliary drainage. What is the primary risk associated with performing this procedure in this patient? — The primary risk is bile peritonitis due to leakage of bile into the ascitic fluid after the transhepatic puncture. This is exacerbated by the presence of severe ascites, which prevents adequate sealing of the liver capsule around the drainage catheter, and the underlying coagulopathy often seen in decompensated cirrhosis.",
+   "Micronodular cirrhosis (<3 mm nodules) is classically associated with which etiologic factor? — Micronodular cirrhosis is classically associated with chronic alcohol abuse. Other causes include chronic biliary obstruction and hemochromatosis. Over time, micronodular cirrhosis can progress to macronodular cirrhosis.",
+   "A 52-year-old chronic alcoholic with advanced cirrhosis develops progressive confusion and asterixis. Neuropathological examination of his brain reveals large, pale nuclei with intranuclear glycogen droplets in astrocytes. What is the significance of these findings? — These findings are characteristic of Alzheimer type II astrocytes, which are pathognomonic for hepatic encephalopathy. They represent a morphological change in astrocytes due to chronic exposure to high levels of ammonia and other neurotoxins, indicating severe metabolic dysfunction in the brain secondary to liver failure.",
+   "A patient with long-standing alcoholic cirrhosis is admitted with massive abdominal distension, shifting dullness, and peripheral edema. Laboratory results show hypoalbuminemia and portal hypertension, activating the renin-angiotensin-aldosterone system. Explain the pathophysiology of these findings. — Portal hypertension leads to splanchnic vasodilation, causing effective arterial hypovolemia. This activates the renin-angiotensin-aldosterone system (RAAS) and sympathetic nervous system, leading to renal sodium and water retention. Hypoalbuminemia reduces plasma oncotic pressure. Together, these factors promote fluid extravasation into the peritoneal cavity (ascites) and interstitial spaces (edema).",
+   "A patient with cirrhosis presents with multiple radial, pulsatile vascular lesions on the face and upper chest that blanch with pressure. What is the underlying pathophysiology of these lesions? — These lesions are spider angiomata (spider nevi). Their pathophysiology is related to hyperestrogenism due to impaired hepatic metabolism of estrogens. Estrogens cause arteriolar dilation, leading to the characteristic central arteriole with radiating capillaries that blanch on pressure.",
+   "A clinical examination of a patient with chronic liver cirrhosis reveals multiple pulsatile, radiating subcutaneous arterioles emanating from a central arteriole on the face and trunk that blanch with direct pressure. What is the name of this physical sign and its significance? — This is a spider angioma or spider nevus. It is a stigmata of chronic liver disease, particularly cirrhosis, and indicates hyperestrogenism due to the liver's inability to metabolize estrogens effectively. While often benign, a sudden increase in their number can suggest worsening liver function.",
+   "A 60-year-old man with chronic liver failure is evaluated for bilateral breast enlargement. Why is liver cirrhosis considered the most important cause of gynecomastia in adult men? — Liver cirrhosis is a major cause of gynecomastia in adult men due to impaired hepatic metabolism of estrogens and androgens. The damaged liver cannot effectively inactivate estrogens, leading to elevated circulating estrogen levels. Simultaneously, there is often reduced hepatic synthesis of sex hormone-binding globulin (SHBG), which can alter the free testosterone-to-estrogen ratio, favoring estrogenic effects and stimulating breast tissue growth.",
+   "How do you elicit and interpret shifting dullness for ascites? — With the patient supine, percuss from the umbilical region laterally towards the flank. Mark the point where resonance changes to dullness. Then, ask the patient to turn onto their side (e.g., left lateral decubitus). After a few moments, re-percuss the previously dull flank. If the dullness has shifted to the new dependent flank and the previously dull area is now resonant, it indicates the presence of at least 1-1.5 liters of free fluid.",
+   "What is the significance of a high serum-ascites albumin gradient (SAAG) in a patient with ascites? — A SAAG of 1.1 g/dL or greater indicates that the ascites is due to portal hypertension. This occurs because the high hydrostatic pressure in the portal system forces protein-poor fluid into the peritoneal cavity. Common causes include cirrhosis, heart failure, and Budd-Chiari syndrome."
+  ],
+  "model": "gemini-2.5-flash",
+  "generatedAt": "2026-10-22",
+  "checked": "2026-10-22"
+ }
 }

@@ -1,0 +1,146 @@
+{
+ "medical": true,
+ "title": "Cold Chain in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "The cold chain is the system that keeps vaccines at 2–8 °C from manufacture to administration, ensuring potency and safety. Failure can render vaccines ineffective and risk outbreaks.",
+ "aka": [
+  "Vaccine Storage System",
+  "Vaccine Cold Chain"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The cold chain is a temperature‑controlled supply chain that maintains vaccines between 2–8 °C (some at –20 °C) from production to the point of use. It is not a disease but a public‑health infrastructure."
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Cold chain failure is graded by duration and temperature excursion: brief (<24 h) at 10–20 °C may be acceptable; prolonged or repeated >20 °C exposure usually renders the vaccine non‑potent."
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common causes in low‑resource settings include power cuts, faulty refrigerators, lack of temperature monitoring, and delays in transport. Herbal or traditional remedies are irrelevant here.",
+   "b": [
+    "Power outages",
+    "Faulty refrigeration",
+    "Inadequate temperature logs",
+    "Transport delays"
+   ],
+   "t": [
+    {
+     "a": "Temperature log",
+     "b": "Shows if vaccine stayed within 2–8 °C; a spike >20 °C indicates potential loss of potency"
+    },
+    {
+     "a": "Vaccine potency test (if available)",
+     "b": "Assesses whether the vaccine still elicits an immune response; a negative result means discard"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Clinically, a cold chain breach shows up as a higher incidence of vaccine‑preventable diseases (e.g., measles, diphtheria) in a district, or a sudden rise in adverse events post‑vaccination."
+  },
+  {
+   "h": "Investigations",
+   "p": "Check temperature records, vaccine vial status, and local disease surveillance data. If a vaccine lot is suspected to be compromised, perform a potency assay if resources allow.",
+   "t": [
+    {
+     "a": "Temperature log review",
+     "b": "Determines if the vaccine stayed within the required range"
+    },
+    {
+     "a": "Potency assay",
+     "b": "Confirms vaccine effectiveness; a negative result means discard"
+    },
+    {
+     "a": "Epidemiological surveillance",
+     "b": "Detects outbreaks that may signal cold chain failure"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Red flags: sudden increase in vaccine‑preventable disease cases, unexplained adverse events, or a batch of vaccines that were stored >40 °C for >24 h. Complications include outbreaks and loss of public trust."
+  },
+  {
+   "h": "Management",
+   "p": "Immediate actions: discard any vaccine exposed to >40 °C for >24 h or open multidose vials not used within 14 days. Reinstate a functioning cold chain: repair or replace equipment, retrain staff, and ensure continuous temperature monitoring. Use backup power sources such as generators or solar panels.",
+   "b": [
+    "Discard compromised vaccines",
+    "Repair/replace refrigeration",
+    "Re‑train staff on temperature monitoring",
+    "Use backup power"
+   ],
+   "t": [
+    {
+     "a": "Cold chain audit",
+     "b": "Assesses equipment, logs, and staff compliance; a poor audit score triggers corrective action"
+    }
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular audits, temperature alarms, and community education on vaccine importance are key. Maintain a buffer stock of functional refrigerators and establish a rapid response team for power failures.",
+   "b": [
+    "Routine audits",
+    "Temperature alarms",
+    "Community education",
+    "Rapid response team"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Cold chain is often mistaken for the vaccine itself or for general storage guidelines. It is a logistical system, not a medical condition.",
+   "b": [
+    "Vaccine potency",
+    "General storage guidelines"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "A temperature log may show acceptable ranges if the thermometer is faulty, leading to false confidence. Potency assays may be unavailable, so clinical outcomes must be monitored.",
+   "b": [
+    "Faulty thermometers",
+    "Lack of potency testing"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden rise in vaccine‑preventable disease cases",
+  "Adverse events after vaccination",
+  "Vaccine exposure to >40 °C for >24 h"
+ ],
+ "faq": [
+  {
+   "q": "What is the acceptable temperature range for most vaccines?",
+   "a": "2–8 °C, with some requiring –20 °C."
+  },
+  {
+   "q": "How long can a vaccine stay outside the cold chain before it becomes unsafe?",
+   "a": "If exposed to >20 °C for more than 24 h, potency is usually lost; >40 °C for >24 h mandates discard."
+  },
+  {
+   "q": "What should be done with an open multidose vial not used within 14 days?",
+   "a": "Discard it according to policy."
+  }
+ ],
+ "exam": [
+  "A child develops measles after a routine vaccination; what is the most likely explanation? — Cold chain breach leading to loss of vaccine potency; check temperature logs and local disease surveillance.",
+  "During a power outage, a vaccine refrigerator stops cooling. What is the first step? — Record the temperature excursion, assess vaccine viability, and use backup power or relocate vaccines.",
+  "A batch of vaccines was stored at 25 °C for 48 h. What should the ward do? — Discard the batch as it has exceeded the acceptable temperature excursion.",
+  "You notice a spike to 35 °C in the temperature log. What does this indicate? — Potential loss of potency; investigate the cause and consider discarding affected doses.",
+  "A vaccine vial was opened but only one dose was used. What is the policy? — Discard the remaining doses after 14 days or if the vial is not used within that period.",
+  "You are preparing for a ward round in a rural clinic. What key point about the cold chain should you emphasize? — Continuous temperature monitoring and immediate action on any deviation to prevent outbreaks."
+ ],
+ "related": [
+  "Vaccine Potency",
+  "Immunisation Schedule",
+  "Epidemiology of Vaccine‑Preventable Diseases",
+  "Health Systems Strengthening",
+  "Surveillance of Vaccine‑Preventable Diseases"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

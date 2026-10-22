@@ -1,0 +1,175 @@
+{
+ "medical": true,
+ "title": "Pancreatic Acinar Zones",
+ "subject": "Pathology",
+ "summary": "Acinar zones describe the functional regions of the pancreatic exocrine tissue and their relevance in disease. Understanding zonal injury helps clinicians localise pathology, anticipate complications and choose appropriate investigations in low‑resource settings.",
+ "aka": [
+  "Acinar region",
+  "Pancreatic exocrine zones"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "The pancreas is divided into head, body and tail, each containing acinar cells that secrete digestive enzymes. Zonal injury refers to focal damage limited to one or more of these regions, often seen in pancreatitis, trauma or neoplasia.",
+   "b": [
+    "Acinar zones are identified by imaging (ultrasound/CT) or intra‑operative inspection.",
+    "Clinical suspicion arises from epigastric pain radiating to the back, vomiting and elevated pancreatic enzymes."
+   ],
+   "t": [
+    {
+     "a": "Abdominal ultrasound",
+     "b": "Detects focal enlargement or hypoechoic areas in specific zones; useful where CT is unavailable."
+    },
+    {
+     "a": "Serum amylase/lipase",
+     "b": "Confirms exocrine pancreatic injury; markedly raised (>3× ULN) supports acute zonal pancreatitis."
+    },
+    {
+     "a": "Contrast‑enhanced CT (if available)",
+     "b": "Maps zone‑specific necrosis or fluid collections; guides management."
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Acinar zone injury is staged like acute pancreatitis using the Revised Atlanta Classification, focusing on the extent of necrosis and systemic response.",
+   "b": [
+    "Mild: zone‑limited inflammation, no organ failure.",
+    "Moderately severe: transient organ failure or peripancreatic fluid collections.",
+    "Severe: persistent organ failure >48 h or extensive necrosis across multiple zones."
+   ],
+   "t": [
+    {
+     "a": "Modified Marshall score",
+     "b": "Assesses organ failure; a score ≥2 in any system indicates severe disease."
+    }
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East African hospitals, the common precipitants of zonal pancreatic injury are:",
+   "b": [
+    "Gallstone obstruction (most frequent cause of focal head zone pancreatitis).",
+    "Alcohol excess (often involves body and tail).",
+    "Infectious agents: HIV‑related opportunistic infections, severe malaria, or hepatitis B‑associated cholangitis.",
+    "Trauma (blunt abdominal injury affecting tail).",
+    "Herbal or traditional medicines causing direct toxic injury."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients present with acute epigastric pain radiating to the back, nausea, and sometimes a palpable tender mass if the tail is involved.",
+   "b": [
+    "Head zone: pain may be more central, possible jaundice if bile duct compressed.",
+    "Body zone: diffuse epigastric pain, early vomiting.",
+    "Tail zone: left upper quadrant tenderness, possible splenic flexure irritation."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise bedside tools; reserve advanced imaging for when it will change management.",
+   "b": [
+    "Focused history on alcohol, gallstones, recent infections, trauma, and herbal intake.",
+    "Physical exam: epigastric tenderness, guarding, signs of peritonitis."
+   ],
+   "t": [
+    {
+     "a": "Point‑of‑care ultrasound (POCUS)",
+     "b": "Answers whether there is a fluid collection or enlarged pancreas in a specific zone; if unavailable, rely on clinical assessment."
+    },
+    {
+     "a": "Serum electrolytes and renal function",
+     "b": "Detects organ dysfunction that defines severity."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Complications arise from necrosis, infection or systemic inflammatory response.",
+   "b": [
+    "Persistent hypotension or shock.",
+    "Respiratory failure needing oxygen or ventilation.",
+    "Renal failure (creatinine rise).",
+    "Infected pancreatic necrosis (fever, leukocytosis)."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first, then provide supportive care tailored to the affected zone.",
+   "b": [
+    "Gallstone removal (ERCP or surgical exploration) for head‑zone obstruction.",
+    "Stop alcohol and give abstinence counseling.",
+    "Empiric broad‑spectrum antibiotics (e.g., ceftriaxone + metronidazole) only if infection suspected; avoid routine use.",
+    "Fluid resuscitation with crystalloids (goal: maintain urine output >0.5 mL/kg/h).",
+    "Analgesia with paracetamol or low‑dose opioids; avoid NSAIDs if renal risk."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "After acute resolution, monitor for chronic changes and educate on risk reduction.",
+   "b": [
+    "Repeat ultrasound at 4–6 weeks to assess for pseudocyst formation.",
+    "Vaccinate against hepatitis B and counsel on safe herbal use.",
+    "Encourage moderate alcohol intake or abstinence; treat gallstones electively if asymptomatic."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that mimic zonal pancreatic injury:",
+   "b": [
+    "Peptic ulcer perforation (sudden severe pain, free air on X‑ray).",
+    "Acute cholecystitis (right upper quadrant pain, Murphy’s sign).",
+    "Splenic infarct (left upper quadrant pain, tender spleen)."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Pitfalls in interpreting investigations:",
+   "b": [
+    "Serum amylase may be normal in isolated tail necrosis; rely on imaging.",
+    "Ultrasound can miss deep pancreatic lesions in obese patients; consider CT if available.",
+    "Leukocytosis may be absent in immunocompromised HIV patients despite infection."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Persistent hypotension despite fluids",
+  "New onset respiratory distress",
+  "Fever >38 °C with rising white cell count after 48 h"
+ ],
+ "faq": [
+  {
+   "q": "Why does jaundice occur with head‑zone pancreatitis?",
+   "a": "The inflamed head compresses the common bile duct, obstructing bilirubin flow."
+  },
+  {
+   "q": "Can a normal amylase rule out pancreatic injury?",
+   "a": "No; focal tail necrosis may have normal enzymes, so imaging is essential if suspicion remains."
+  },
+  {
+   "q": "When is surgery indicated for zonal pancreatic disease?",
+   "a": "When there is gallstone obstruction not amenable to endoscopic removal, infected necrosis, or uncontrolled hemorrhage."
+  }
+ ],
+ "exam": [
+  "A 45‑year‑old man with epigastric pain and a history of heavy alcohol use presents in a district hospital without CT. What is your next diagnostic step and why? — Perform bedside ultrasound to look for pancreatic enlargement or fluid; it guides severity assessment when CT is unavailable.",
+  "How would you differentiate head‑zone pancreatitis from acute cholecystitis on examination? — Look for Murphy’s sign (positive in cholecystitis) versus central epigastric tenderness radiating to the back in pancreatitis.",
+  "A patient with known gallstones develops sudden severe pain and jaundice. Which zone is most likely involved and what immediate management is required? — Head zone; arrange urgent ERCP or surgical decompression to relieve biliary obstruction.",
+  "Why is routine antibiotic use discouraged in mild zonal pancreatitis? — Antibiotics do not improve outcomes and increase resistance; they are reserved for proven infection.",
+  "In a patient with HIV on antiretroviral therapy, serum amylase is normal but pain persists. What is your next step? — Obtain ultrasound or CT if possible; HIV patients may have atypical enzyme patterns.",
+  "What red‑flag laboratory change signals progression to severe disease? — Development of renal failure (creatinine rise) or persistent hypoxia despite oxygen therapy.",
+  "Explain why herbal remedies can cause pancreatic toxicity and how you would counsel a patient. — Certain herbs contain unsaturated fatty acids that precipitate enzyme activation; advise cessation and provide safer alternatives.",
+  "When is surgical debridement indicated for necrotic pancreatic zones? — When necrosis becomes infected (fever, leukocytosis) or causes persistent organ failure despite medical therapy."
+ ],
+ "related": [
+  "Acute pancreatitis",
+  "Gallstone disease",
+  "Alcoholic liver disease",
+  "Pancreatic pseudocyst",
+  "Infected pancreatic necrosis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

@@ -304,6 +304,131 @@
    "issues": [],
    "model": "gemini-2.5-flash-lite",
    "at": "2026-10-19"
+  },
+  "papers-obstetrics-rh1-cat-2021-case-questions": {
+   "hash": "be5d9d939638",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Question 6. Define",
+     "problem": "The definition of 'Near miss' is incomplete. It should specify that the woman survived a severe complication, not just 'a complication'.",
+     "fix": "Near miss: a woman who nearly died but survived a *severe* complication of pregnancy, childbirth or termination within 42 days."
+    }
+   ],
+   "model": "gemini-2.5-flash",
+   "at": "2026-10-22"
+  },
+  "papers-obstetrics-rh2-cat-mbog-4223": {
+   "hash": "f04e7a00da00",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "4. Contractions: shade 3 squares (3 in 10 minutes) with the 20 to 40 second band at 14:00",
+     "problem": "The given clinical vignette states contractions were '2 in 10 minutes, each 20 seconds' at 14:00, not 3 in 10 minutes.",
+     "fix": "At 14:00 shade 2 squares (2 in 10 minutes) with dots (<20 seconds or diagonal stripes for 20-40 seconds), and shade 3 squares with solid shading (>40 seconds) at 18:00."
+    }
+   ],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-22"
+  },
+  "papers-gynaecology-cat-30-november-2018": {
+   "hash": "8d06c9e6ccb7",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "normal: cycle 24 to 38 days... Polymenorrhoea: cycles shorter than 21 days. (Oligomenorrhoea, over 35 days",
+     "problem": "The text gives internally contradictory diagnostic thresholds for normal cycle length (24 to 38 days per FIGO 2018) versus traditional definitions (polymenorrhoea < 21 days and oligomenorrhoea > 35 days) without clarifying the transition in terminology.",
+     "fix": "Align definitions with current FIGO nomenclature where frequent menstrual bleeding is defined as a cycle length under 24 days and infrequent menstrual bleeding is over 38 days (or note traditional definitions of <21 and >35 days consistently)."
+    }
+   ],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-22"
+  },
+  "papers-gynaecology-cat-13-december-2019": {
+   "hash": "4805905ac202",
+   "validated": true,
+   "high": 0,
+   "medium": 1,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Question 2: (a) cycle shorter than 24 or longer than 38 days ... (b) Oligomenorrhoea: ... longer than 35 days",
+     "problem": "The text gives conflicting upper thresholds for normal cycle length/oligomenorrhoea (38 days under FIGO definition vs 35 days under traditional definition) within the same question.",
+     "fix": "Harmonize the thresholds by using > 38 days according to current FIGO definitions (or noting > 35 to 38 days depending on classification system)."
+    }
+   ],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-22"
+  },
+  "papers-gynaecology-cat-1-2-july-2021": {
+   "hash": "c9fa6d591cfd",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-3.8-flash",
+   "at": "2026-10-22"
+  },
+  "papers-gynaecology-cat-2-8-october-2021": {
+   "hash": "de5fe18da01a",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-22"
+  },
+  "papers-obstetrics-gynaecology-end-of-year-4-july-2019": {
+   "hash": "da887315ed7f",
+   "validated": true,
+   "high": 0,
+   "medium": 4,
+   "issues": [
+    {
+     "severity": "medium",
+     "where": "Question 27",
+     "problem": "The statement that surgical repair is the only mode of treatment for vesicovaginal fistula is incorrect, as small fresh fistulas can be treated with continuous catheter drainage.",
+     "fix": "While surgical repair is common, small fresh vesicovaginal fistulas can be treated with continuous catheter drainage."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 35",
+     "problem": "The statement that oestrogens are responsible for general ureteric relaxation in pregnancy is incorrect; progesterone is the primary hormone responsible.",
+     "fix": "Progesterone is primarily responsible for ureteric relaxation in pregnancy."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 37",
+     "problem": "The administration time for oxytocin in active management of the third stage of labour is stated as within 10 minutes, but the standard is within 1 minute of delivery.",
+     "fix": "Administration of 10 IU oxytocin IM within one minute of delivery of the baby is a key step in active management of the third stage of labour."
+    },
+    {
+     "severity": "medium",
+     "where": "Question 38",
+     "problem": "The management for severe pre-eclampsia with symptoms is described, but it does not explicitly state that delivery should occur within 24-48 hours after initial stabilization.",
+     "fix": "Management for severe pre-eclampsia with symptoms includes BP control, magnesium sulphate, antenatal steroids, and delivery within 24 to 48 hours."
+    }
+   ],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-22"
+  },
+  "papers-surgery-cat-2-4-october-2021": {
+   "hash": "c2f9eb057afd",
+   "validated": true,
+   "high": 0,
+   "medium": 0,
+   "issues": [],
+   "model": "gemini-2.5-flash-lite",
+   "at": "2026-10-22"
   }
  },
  "topics": {}

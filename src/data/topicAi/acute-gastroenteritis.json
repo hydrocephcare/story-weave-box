@@ -1,0 +1,152 @@
+{
+ "medical": true,
+ "title": "Acute Gastroenteritis in Children",
+ "subject": "Paediatrics",
+ "summary": "A common, usually viral, diarrhoeal illness in children that can lead to dehydration. Rapid assessment, rehydration and identification of bacterial or parasitic causes guide management, especially in low‑resource settings.",
+ "aka": [
+  "Diarrhoea",
+  "Stomach flu"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Acute gastroenteritis (AGE) is diarrhoea lasting less than 14 days, often with vomiting, caused by viruses, bacteria or parasites. Diagnosis is clinical; stool culture is reserved for persistent or bloody diarrhoea.",
+   "b": [
+    "Diarrhoea ≥3 loose stools in 24 h",
+    "Vomiting ≥2 episodes",
+    "Onset <14 days"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "The WHO dehydration scale guides treatment: no dehydration, some dehydration, severe dehydration. Clinical signs include dry mucous membranes, sunken fontanelle, lethargy, and capillary refill >2 s.",
+   "b": [
+    "No dehydration – oral rehydration only",
+    "Some dehydration – oral rehydration + zinc",
+    "Severe dehydration – IV fluids"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East Africa the top causes are rotavirus, norovirus, bacterial pathogens (Shigella, Campylobacter, E. coli O157:H7) and parasites (Giardia, Entamoeba).",
+   "b": [
+    "Rotavirus – most common in <5 years",
+    "Norovirus – outbreaks in schools",
+    "Shigella – bloody stools",
+    "Giardia – foul, greasy stools"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Children present with crampy abdominal pain, frequent loose stools, vomiting, fever (often <38.5°C), and signs of dehydration. Stool may be watery, mucoid or bloody.",
+   "b": [
+    "Crampy abdominal pain",
+    "Watery or mucoid stools",
+    "Vomiting",
+    "Low‑grade fever"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations are limited in low‑resource settings. Use them only when the diagnosis is unclear or complications are suspected.",
+   "t": [
+    {
+     "a": "Stool microscopy",
+     "b": "Detects parasites and blood – a positive result suggests amoebiasis or dysentery"
+    },
+    {
+     "a": "Rapid rotavirus test",
+     "b": "Confirms viral cause – useful if oral rehydration is sufficient"
+    },
+    {
+     "a": "CBC",
+     "b": "Assesses anemia and leukocytosis – leukocytosis may indicate bacterial infection"
+    },
+    {
+     "a": "Serum electrolytes",
+     "b": "Identifies hyponatraemia or hyperkalaemia – guides fluid choice"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent care is needed if the child is lethargic, has a fever >39°C, bloody stools, persistent vomiting, or signs of shock.",
+   "b": [
+    "Lethargy or irritability",
+    "Fever >39°C",
+    "Bloody stools",
+    "Persistent vomiting >24 h",
+    "Signs of shock (tachycardia, weak pulse)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause if identified; otherwise provide supportive care. Oral rehydration solution (ORS) is first line. Zinc supplementation reduces duration. Antibiotics are reserved for bacterial causes.",
+   "b": [
+    "ORS – 10–20 ml/kg over 1–2 h (severe) or 5–10 ml/kg every 15 min (moderate)",
+    "Zinc 10 mg/day for 10–14 days",
+    "IV isotonic saline 20 ml/kg over 1 h (severe dehydration)"
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Re‑evaluate after 24 h; ensure adequate fluid intake and nutrition. Preventive measures include hand hygiene, safe water, and rotavirus vaccination.",
+   "b": [
+    "Re‑assessment of hydration status",
+    "Encourage breast‑milk or age‑appropriate feeds",
+    "Vaccinate against rotavirus",
+    "Promote handwashing with soap"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Severe malaria, typhoid fever, and acute appendicitis can mimic AGE but have distinct features such as fever spikes, rigors, or localized abdominal pain.",
+   "b": [
+    "Malaria – fever spikes, splenomegaly",
+    "Typhoid – high fever, rose spots",
+    "Appendicitis – right lower quadrant pain, rebound tenderness"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Stool microscopy may miss Giardia cysts; a negative test does not exclude bacterial infection. Serum electrolytes can be normal early in dehydration.",
+   "b": [
+    "Microscopy false negative for parasites"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Lethargy or decreased consciousness",
+  "Persistent vomiting >24 h",
+  "Bloody stools",
+  "Signs of shock (tachycardia, weak pulse, cold extremities)"
+ ],
+ "faq": [
+  {
+   "q": "Why is zinc recommended for all children with AGE?",
+   "a": "Zinc shortens diarrhoea duration, reduces severity, and improves growth in children."
+  },
+  {
+   "q": "When should IV fluids be started?",
+   "a": "In children with severe dehydration: sunken fontanelle, lethargy, delayed capillary refill >2 s."
+  },
+  {
+   "q": "Can we give antibiotics for all cases of AGE?",
+   "a": "No; antibiotics are reserved for confirmed bacterial infections or severe cases with systemic signs."
+  }
+ ],
+ "exam": [
+  "A 2‑year‑old presents with 3 days of watery diarrhoea and vomiting. He is lethargic and has a sunken fontanelle. What is the next step? — Assess dehydration severity, start IV isotonic saline, give ORS when stable.",
+  "A child with AGE has a fever of 39.5°C and bloody stools. Which pathogen is most likely? — Shigella; consider ciprofloxacin or azithromycin if confirmed.",
+  "Why is zinc not given to a child with severe dehydration? — Zinc is given orally; in severe dehydration the child needs IV fluids first.",
+  "A child with AGE has a normal stool microscopy but persistent diarrhoea >5 days. What is the next investigation? — Stool culture or PCR for bacterial pathogens.",
+  "Why is rotavirus vaccination important in East Africa? — It prevents the most common viral cause of AGE and reduces hospital admissions.",
+  "A child with AGE has hyponatraemia on serum electrolytes. What fluid should be used? — Isotonic saline; avoid hypotonic solutions to prevent cerebral oedema.",
+  "What is the WHO score for ‘some dehydration’ in a child? — 2–3 signs: sunken eyes, dry mucous membranes, delayed capillary refill 2–3 s."
+ ],
+ "related": [],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

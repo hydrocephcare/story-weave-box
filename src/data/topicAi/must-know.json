@@ -1,0 +1,164 @@
+{
+ "medical": true,
+ "title": "Hypersensitivity Pneumonitis",
+ "subject": "Pathology",
+ "summary": "Immunologically mediated inflammatory lung disease affecting the alveoli, often occupational. Presents with restrictive physiology and can progress to fibrosis if exposure continues.",
+ "aka": [
+  "Extrinsic allergic alveolitis",
+  "Farmer's lung"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hypersensitivity pneumonitis (HP) is an immune‑mediated inflammatory reaction of the alveoli and interstitium to inhaled organic antigens.",
+   "b": [
+    "Diagnosis requires compatible exposure, clinical picture, and supportive investigations.",
+    "Acute HP: fever, cough, dyspnoea 4–8 h after exposure.",
+    "Sub‑acute/chronic HP: insidious dyspnoea, dry cough, weight loss."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "HP is staged by duration and radiologic pattern rather than a formal numeric score.",
+   "b": [
+    "Acute: symptom onset within hours, normal or mildly abnormal chest X‑ray.",
+    "Sub‑acute: weeks to months, ground‑glass opacities on CT.",
+    "Chronic: >6 months, fibrosis, honey‑comb on CT, reduced DLCO."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Common antigens in low‑resource African settings are listed by exposure type.",
+   "b": [
+    "Moldy hay or stored grain (thermophilic actinomycetes) – farmer’s lung.",
+    "Bird droppings or feathers – pigeon‑breeder’s lung.",
+    "Moldy home‑grown maize or millet – “moldy corn” lung.",
+    "Dust from wood, saw‑dust, or herbal preparations."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "History of recent exposure is key; physical exam often shows inspiratory crackles and, in chronic disease, clubbing.",
+   "b": [
+    "Fever, chills, malaise in acute phase.",
+    "Dry, non‑productive cough.",
+    "Progressive exertional dyspnoea.",
+    "Fine end‑inspiratory crackles; late clubbing."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows early diffuse haziness or later reticular pattern; if unavailable, proceed to clinical staging."
+    },
+    {
+     "a": "High‑resolution CT (HRCT)",
+     "b": "Detects ground‑glass opacities, centrilobular nodules, and fibrosis; if CT not available, use chest X‑ray plus spirometry."
+    },
+    {
+     "a": "Spirometry",
+     "b": "Demonstrates restrictive defect (reduced FVC) and reduced diffusion capacity (DLCO); normal values do not exclude early disease."
+    },
+    {
+     "a": "Serum precipitating antibodies",
+     "b": "Identify specific antigen sensitisation; negative test does not rule out HP."
+    },
+    {
+     "a": "Bronchoalveolar lavage (BAL)",
+     "b": "Lymphocytosis (>20 %) supports diagnosis; unavailable in many settings – rely on clinical picture."
+    },
+    {
+     "a": "Lung biopsy (when feasible)",
+     "b": "Shows interstitial lymphocytic infiltrate and poorly formed granulomas; not required if other criteria met."
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Failure to remove antigen can lead to irreversible fibrosis and respiratory failure.",
+   "b": [
+    "Rapid progression of dyspnoea despite avoidance.",
+    "Development of pulmonary hypertension.",
+    "Acute respiratory distress syndrome (ARDS) after massive exposure."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Mainstay is antigen avoidance; steroids are used for symptomatic control in acute or sub‑acute disease.",
+   "b": [
+    "Complete removal from the offending environment; provide protective masks if exposure cannot stop.",
+    "Bronchodilators only for co‑existent airway obstruction; avoid long‑term high‑dose steroids in chronic fibrosis.",
+    "Vaccinate against influenza and pneumococcus to prevent super‑infection."
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Regular monitoring of symptoms, lung function, and imaging is essential.",
+   "b": [
+    "Spirometry and DLCO every 3–6 months in chronic disease.",
+    "Repeat HRCT if clinical deterioration occurs.",
+    "Education on safe handling of agricultural products and use of well‑ventilated storage."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Conditions that share cough, dyspnoea, and infiltrates.",
+   "b": [
+    "Sarcoidosis – non‑caseating granulomas, often hilar lymphadenopathy, systemic involvement.",
+    "Idiopathic pulmonary fibrosis – usual interstitial pneumonia pattern, no clear exposure.",
+    "Asthma – bronchial obstruction, reversible airflow limitation."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain investigations may be normal early or give false reassurance.",
+   "b": [
+    "Normal chest X‑ray in early acute HP – rely on exposure history.",
+    "Negative precipitating antibodies – up to 30 % false‑negative; do not exclude disease.",
+    "BAL lymphocytosis may be modest in chronic HP – interpret with clinical context."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of breathlessness or hypoxia.",
+  "Development of chest pain with tachycardia.",
+  "Signs of respiratory failure (cyanosis, altered mental status)."
+ ],
+ "faq": [
+  {
+   "q": "Why is antigen avoidance more important than steroids?",
+   "a": "Continued exposure drives ongoing inflammation and fibrosis; steroids only suppress symptoms temporarily."
+  },
+  {
+   "q": "Can HP occur without a known occupational exposure?",
+   "a": "Yes, domestic exposures (e.g., moldy home‑grown foods) are common in low‑resource settings."
+  },
+  {
+   "q": "Is a normal spirometry enough to rule out HP?",
+   "a": "No; early disease may have normal lung volumes, so combine with history and imaging."
+  }
+ ],
+ "exam": [
+  "A farmer presents with fever, cough, and dyspnoea 6 h after cleaning a hay barn. What is the most likely diagnosis and the immediate next step? — Recognise acute hypersensitivity pneumonitis; advise removal from exposure and start short‑course steroids if severe.",
+  "How would you differentiate chronic HP from idiopathic pulmonary fibrosis on HRCT? — HP shows centrilobular nodules and mosaic attenuation; IPF shows basal honey‑comb without nodules.",
+  "A patient with known HP continues to deteriorate despite avoidance. What complication should you screen for? — Pulmonary hypertension; obtain echocardiogram and consider right‑heart catheterisation.",
+  "Why are serum precipitating antibodies not definitive for HP? — They may be absent in up to 30 % of cases and can be present in asymptomatic sensitisation.",
+  "In a low‑resource clinic without CT, which two investigations are most useful to support HP? — Chest X‑ray for infiltrates and spirometry showing restrictive defect with reduced DLCO.",
+  "What are the key elements of patient education to prevent recurrence of HP? — Safe storage of grains, use of protective masks, adequate ventilation, and avoidance of moldy materials.",
+  "A patient with sub‑acute HP is started on steroids. What monitoring is required? — Watch for hyperglycaemia, infection, and assess improvement in symptoms and lung function; taper slowly.",
+  "Which red‑flag symptom mandates urgent referral to a tertiary centre? — Rapid onset of severe dyspnoea with hypoxia or signs of ARDS."
+ ],
+ "related": [
+  "Sarcoidosis",
+  "Idiopathic pulmonary fibrosis",
+  "Occupational lung diseases",
+  "Bronchial asthma",
+  "Pulmonary hypertension"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

@@ -1,0 +1,174 @@
+{
+ "medical": true,
+ "title": "Hepatic Amoebiasis",
+ "subject": "Medicine",
+ "summary": "Hepatic amoebiasis, or amoebic liver abscess, is the most common extraintestinal manifestation of amoebiasis. It results from Entamoeba histolytica infection, typically presenting with fever and right upper quadrant pain. Early diagnosis and treatment are crucial to prevent severe complications.",
+ "aka": [
+  "Amoebic Liver Abscess"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Hepatic amoebiasis is a parasitic infection of the liver caused by the protozoan Entamoeba histolytica, leading to the formation of one or more abscesses. Diagnosis is primarily clinical, supported by imaging and serological tests, especially in endemic areas.",
+   "b": [
+    "Typically presents as a solitary abscess in the right lobe of the liver.",
+    "Diagnosis is often presumptive based on clinical picture and imaging in endemic regions.",
+    "Definitive diagnosis requires identification of E. histolytica trophozoites from abscess aspirate, which is not always necessary or feasible."
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is assessed based on the patient's clinical condition, size and number of abscesses, and presence of complications. There is no universally adopted formal staging system, but clinical parameters guide management decisions.",
+   "b": [
+    "Uncomplicated: Single or multiple abscesses, patient stable, no signs of rupture.",
+    "Complicated: Abscess rupture (e.g., into pleura, peritoneum), secondary bacterial infection, large abscesses (typically >5 cm), or multiple abscesses causing significant liver dysfunction.",
+    "Clinical assessment includes vital signs, pain severity, signs of peritonitis or pleurisy, and overall systemic toxicity."
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "Hepatic amoebiasis is caused by infection with Entamoeba histolytica. The parasite is acquired through ingestion of cysts from contaminated food or water, or direct fecal-oral transmission. Trophozoites invade the colonic mucosa, enter the portal circulation, and travel to the liver.",
+   "b": [
+    "Entamoeba histolytica: The sole causative agent.",
+    "Risk factors include poor sanitation, contaminated water sources, travel to endemic areas, male gender (for unclear reasons), and immunosuppression (though less strongly associated than bacterial abscesses)."
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients typically present with a subacute onset of symptoms over days to weeks. The classic triad includes fever, right upper quadrant pain, and hepatomegaly. However, presentations can vary.",
+   "b": [
+    "Fever: Often low-grade, but can be high and spiking.",
+    "Right upper quadrant pain: Dull ache, can radiate to the right shoulder due to diaphragmatic irritation.",
+    "Hepatomegaly: Tender on palpation.",
+    "Other symptoms: Anorexia, weight loss, nausea, vomiting, cough (if diaphragmatic irritation), jaundice (rare, usually with large or multiple abscesses obstructing bile ducts)."
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations aim to confirm the diagnosis, assess severity, and rule out other conditions. In low-resource settings, imaging and serology are often the most accessible and useful tools.",
+   "t": [
+    {
+     "a": "Full Blood Count (FBC)",
+     "b": "Answers: Is there inflammation or infection? What is the baseline? Result: Leukocytosis (elevated white blood cell count) with neutrophilia is common. Anemia may be present with chronic illness."
+    },
+    {
+     "a": "Liver Function Tests (LFTs)",
+     "b": "Answers: Is there liver damage or cholestasis? Result: Mildly elevated alkaline phosphatase is common. Transaminases (ALT, AST) may be mildly elevated. Bilirubin is usually normal unless there is biliary obstruction."
+    },
+    {
+     "a": "Erythrocyte Sedimentation Rate (ESR) / C-Reactive Protein (CRP)",
+     "b": "Answers: Is there systemic inflammation? Result: Both are typically elevated, indicating an inflammatory process."
+    },
+    {
+     "a": "Abdominal Ultrasound",
+     "b": "Answers: Is there a liver abscess? What are its characteristics? Result: Typically shows a hypoechoic, round or oval lesion with irregular walls, often in the right lobe. It helps differentiate from other liver lesions. If unavailable, clinical suspicion and empirical treatment may be necessary."
+    },
+    {
+     "a": "CT Scan of Abdomen",
+     "b": "Answers: Provides more detailed imaging of the abscess, its size, number, and relationship to surrounding structures, and helps detect complications like rupture. Result: Well-defined, low-attenuation lesion. More sensitive than ultrasound for smaller or multiple lesions. Often unavailable in low-resource settings."
+    },
+    {
+     "a": "Amoebic Serology (Indirect Hemagglutination Assay, ELISA)",
+     "b": "Answers: Is there evidence of past or current E. histolytica infection? Result: Positive in over 90% of patients with ALA. A negative test makes ALA unlikely in non-endemic areas, but a positive test can persist for years after infection, so it doesn't distinguish acute from past infection. It is highly useful in endem"
+    },
+    {
+     "a": "Abscess Aspiration (if indicated)",
+     "b": "Answers: Is it an amoebic or bacterial abscess? What is the causative organism? Result: 'Anchovy paste' or reddish-brown pus is characteristic of amoebic abscess. Microscopy may show trophozoites (though often absent). Culture is usually sterile for amoebic abscess. Aspiration is typically reserved for large abscesses,"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Prompt recognition of red flags and complications is vital for preventing morbidity and mortality. These often indicate a need for more aggressive management, including drainage.",
+   "b": [
+    "Abscess rupture: Into the peritoneal cavity (peritonitis), pleural cavity (empyema, pleurisy), pericardium (pericarditis), or rarely into the bronchus.",
+    "Secondary bacterial infection of the abscess: Suspect if clinical deterioration despite anti-amoebic treatment.",
+    "Large abscesses (>5 cm): Higher risk of rupture and slower response to medical therapy.",
+    "Left lobe abscesses: Higher risk of pericardial involvement.",
+    "Septic shock: Due to severe infection or rupture."
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management involves anti-amoebic chemotherapy and, in some cases, percutaneous drainage. The primary goal is to eradicate the parasite and resolve the abscess while preventing complications.",
+   "b": [
+    "Anti-amoebic drugs: Metronidazole is the drug of choice. It is highly effective against trophozoites in the liver. Tinidazole is an alternative with a longer half-life.",
+    "Luminal amoebicides: After treatment with metronidazole, a luminal agent (e.g., diloxanide furoate, paromomycin) is given to eradicate intestinal cysts and prevent recurrence and transmission. This is crucial even if no active dysentery is present.",
+    "Percutaneous drainage: Indicated for large abscesses (>5 cm), abscesses not responding to medical therapy after 3-5 days, impending rupture, or left lobe abscesses (due to higher risk of pericardial involvement).",
+    "Supportive care: Pain management, fluid and electrolyte balance, nutritional support."
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Follow-up is important to ensure complete resolution and prevent recurrence. Prevention focuses on improving sanitation and hygiene.",
+   "b": [
+    "Clinical monitoring: Assess for resolution of fever and pain. Imaging (ultrasound) can be repeated after several weeks to confirm abscess resolution, though clinical improvement often precedes complete radiological resolution.",
+    "Prevention: Improve sanitation, safe drinking water, proper food hygiene, and handwashing.",
+    "Education: Inform patients about the importance of completing the full course of medication, including luminal amoebicides."
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differentiating hepatic amoebiasis from other causes of liver lesions and right upper quadrant pain is crucial for appropriate management.",
+   "b": [
+    "Pyogenic liver abscess: More acute onset, often associated with underlying biliary disease or sepsis. Abscess aspirate will grow bacteria. Treatment involves antibiotics and drainage.",
+    "Hepatocellular carcinoma (HCC): Usually in patients with chronic liver disease (e.g., hepatitis B/C, cirrhosis). Imaging features can sometimes overlap, but serology and biopsy differentiate.",
+    "Hydatid cyst: Caused by Echinococcus granulosus. Imaging shows characteristic daughter cysts. Serology (Echinococcus antibodies) is usually positive. Aspiration is generally contraindicated due to risk of anaphylaxis.",
+    "Acute cholecystitis: Right upper quadrant pain, fever, but typically associated with gallstones and characteristic ultrasound findings of gallbladder inflammation."
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain test results or clinical findings can be misleading, requiring careful interpretation in the context of the patient's overall presentation and local epidemiology.",
+   "b": [
+    "Negative amoebic serology: Can occur in very early stages of infection (first 7-10 days) or in immunocompromised patients, but is rare in established ALA.",
+    "Positive amoebic serology: Can persist for years after successful treatment or asymptomatic infection, so it doesn't always indicate active disease.",
+    "Absence of intestinal symptoms: Many patients with ALA do not report a history of dysentery, as the intestinal infection may have been asymptomatic or resolved.",
+    "Sterile pus on culture: If an abscess is aspirated and no bacteria grow, it strongly suggests an amoebic abscess, but a bacterial superinfection can occur."
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Sudden worsening of abdominal pain, especially if accompanied by signs of peritonitis (e.g., rigid abdomen, rebound tenderness)",
+  "New onset of shortness of breath or chest pain, suggesting diaphragmatic irritation or pleural/pericardial involvement",
+  "Persistent high fever or clinical deterioration despite appropriate anti-amoebic treatment for several days",
+  "Jaundice or significant yellowing of the skin/eyes",
+  "Signs of shock (e.g., confusion, rapid heart rate, low blood pressure)"
+ ],
+ "faq": [
+  {
+   "q": "Can hepatic amoebiasis occur without prior dysentery?",
+   "a": "Yes, many patients with hepatic amoebiasis do not recall or have never experienced amoebic dysentery. The intestinal infection can be asymptomatic or mild."
+  },
+  {
+   "q": "Is surgery always needed for amoebic liver abscess?",
+   "a": "No, most amoebic liver abscesses respond well to medical treatment with metronidazole alone. Drainage is reserved for specific indications like large abscesses, non-response to therapy, or impending rupture."
+  },
+  {
+   "q": "Why is a second drug given after metronidazole for hepatic amoebiasis?",
+   "a": "Metronidazole treats the active infection in the liver. A luminal amoebicide is then given to eradicate any remaining Entamoeba histolytica cysts in the intestines, preventing recurrence and stopping further transmission."
+  }
+ ],
+ "exam": [
+  "A 35-year-old male presents with 2 weeks of fever, right upper quadrant pain radiating to his shoulder, and anorexia. He recently travelled to a rural area with poor sanitation. On examination, he has tender hepatomegaly. What is your most likely diagnosis and what initial investigation would you prioritize in a low-resource setting? — Most likely diagnosis is Hepatic Amoebiasis (Amoebic Liver Abscess). Prioritize an abdominal ultrasound to visualize the liver and identify an",
+  "You diagnose an amoebic liver abscess in a patient. After starting metronidazole, the patient's fever persists and pain worsens after 5 days. What are your next steps in management? — Re-evaluate for complications like abscess rupture or secondary bacterial infection. Consider repeating imaging (ultrasound or CT if available) to assess abscess size and look for rupture. If the abscess is large or not responding, consider percutaneous drainage. If bacterial superinfection is s",
+  "A patient with a confirmed amoebic liver abscess is responding well to metronidazole. Why is it crucial to add a luminal amoebicide like diloxanide furoate or paromomycin after the course of metronidazole, even if the patient has no current diarrheal symptoms? — Metronidazole primarily acts on trophozoites in the liver. Luminal amoebicides eradicate cysts and trophozoites in the intestines, preventing recurrence of amoebiasis and stopping the patient from being a carrier who ",
+  "How would you differentiate an amoebic liver abscess from a pyogenic liver abscess based on clinical presentation and initial investigations, especially when imaging findings might be similar? — Amoebic abscesses often have a more subacute onset, may lack a clear source of infection, and serology for E. histolytica is usually positive. Pyogenic abscesses tend to have a more acute onset, often with a clear source (e.g., biliary tract infection, diverticulitis), and abscess asp",
+  "A patient presents with signs suggestive of amoebic liver abscess, but their amoebic serology comes back negative. How do you interpret this result, and what implications does it have for your diagnosis and management? — A negative serology can occur in very early stages of infection or in immunocompromised patients, but it makes ALA less likely in established cases. Consider alternative diagnoses like pyogenic liver abscess or other liver lesions. If clinical suspicion remai",
+  "What are the key red flags indicating a potentially life-threatening complication of hepatic amoebiasis, and what immediate actions would you take? — Red flags include sudden severe abdominal pain with signs of peritonitis (abscess rupture), new onset shortness of breath or chest pain (pleural/pericardial involvement), or signs of septic shock. Immediate actions include stabilizing the patient (ABCDE), urgent imaging to confirm rupture, and preparing for emergency drainage or",
+  "You are managing a patient with a large (8 cm) amoebic liver abscess in the right lobe. What is your approach to drainage, and when would you consider it? — For a large abscess (typically >5 cm), percutaneous drainage is often indicated, even if the patient is responding to medical therapy, due to the higher risk of rupture and slower resolution. It's also considered if there's no clinical improvement after 3-5 days of medical therapy, or if there's impending rupture. Surgica"
+ ],
+ "related": [
+  "Amoebic Dysentery",
+  "Pyogenic Liver Abscess",
+  "Hydatid Cyst",
+  "Entamoeba Histolytica Infection",
+  "Peritonitis",
+  "Liver Imaging",
+  "Tropical Diseases"
+ ],
+ "kind": "disease",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

@@ -1,0 +1,160 @@
+{
+ "medical": true,
+ "title": "Aspiration Syndromes in Paediatrics",
+ "subject": "Paediatrics",
+ "summary": "Aspiration syndromes encompass a spectrum from benign post‑prandial cough to life‑threatening aspiration pneumonia and meconium aspiration. Clinical reasoning hinges on history, bedside signs, and pragmatic investigations, especially where resources are limited.",
+ "aka": [
+  "Aspiration Pneumonia",
+  "Meconium Aspiration Syndrome",
+  "Foreign‑Body Aspiration"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Aspiration syndromes are disorders caused by inhalation of material into the lower airways. In children they range from benign cough to severe pneumonia, bronchospasm, or pulmonary hypertension.",
+   "b": [
+    "Key features: sudden onset cough, wheeze, stridor, hypoxia, chest X‑ray changes"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows infiltrates, hyperinflation or atelectasis – helps differentiate pneumonia from foreign‑body obstruction"
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Detects hypoxia; SpO2 <90% in a child is an urgent red flag"
+    },
+    {
+     "a": "Arterial blood gas (if available)",
+     "b": "Assesses PaO2, PaCO2, pH – guides ventilation strategy"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by respiratory compromise and need for support.",
+   "b": [
+    "Mild: cough, mild wheeze, SpO2 >92% on room air",
+    "Moderate: marked wheeze, SpO2 88‑92%, requires supplemental O2",
+    "Severe: cyanosis, apnea, SpO2 <88%, needs intubation or CPAP"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource settings, the most common precipitants are:",
+   "b": [
+    "Meconium aspiration in term infants",
+    "Foreign‑body aspiration (plastic, food) in toddlers",
+    "Inhalation of gastric contents in infants with gastro‑oesophageal reflux",
+    "Aspiration of blood in post‑traumatic or post‑surgical children",
+    "Inhalation of inhaled toxins (e.g., smoke)"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Presentation varies with age and material aspirated.",
+   "b": [
+    "Older children: productive cough, fever, chest pain if pneumonia; chronic cough if chronic aspiration"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigations should be tailored to what is available.",
+   "b": [
+    "Ultrasound of chest (if X‑ray unavailable) – can detect pleural effusion"
+   ],
+   "t": [
+    {
+     "a": "Bronchoscopy",
+     "b": "Answers whether a foreign body is present; removal is definitive treatment"
+    },
+    {
+     "a": "Sputum Gram stain",
+     "b": "Identifies bacterial cause of aspiration pneumonia; guides antibiotic choice"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Certain signs predict rapid deterioration.",
+   "b": [
+    "Severe hypoxia (SpO2 <88%)",
+    "Apnea or bradycardia",
+    "Persistent pulmonary hypertension signs (tachycardia, cyanosis)",
+    "Unilateral wheeze with chest X‑ray consolidation (possible obstruction)"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care, and monitor closely.",
+   "b": [
+    "Avoid steroids unless severe bronchospasm or PPHN"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Prevent recurrence and monitor for sequelae.",
+   "b": [
+    "Vaccinate against pneumococcus and influenza to reduce pneumonia risk"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Several conditions mimic aspiration syndromes.",
+   "b": [
+    "Severe gastro‑oesophageal reflux – chronic cough but no acute choking episode"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Certain investigations may give false negatives or positives.",
+   "b": [
+    "Sputum culture may be negative if antibiotics started early; consider empirical therapy"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe hypoxia (SpO2 <88%)",
+  "Apnea or bradycardia",
+  "Unilateral wheeze with chest X‑ray consolidation",
+  "Signs of persistent pulmonary hypertension (cyanosis, tachycardia)"
+ ],
+ "faq": [
+  {
+   "q": "What is the most common cause of aspiration in toddlers?",
+   "a": "Foreign‑body aspiration, often plastic or food items."
+  },
+  {
+   "q": "How do you differentiate meconium aspiration from pneumonia on X‑ray?",
+   "a": "Meconium shows patchy infiltrates with possible hyperinflation; pneumonia shows more uniform consolidation."
+  },
+  {
+   "q": "When is bronchoscopy indicated?",
+   "a": "When a choking episode is witnessed or unilateral wheeze with X‑ray consolidation suggests obstruction."
+  }
+ ],
+ "exam": [
+  "A term infant develops sudden cyanosis and tachypnoea immediately after birth. What is the most likely diagnosis and first step in management? — Meconium aspiration syndrome; suction airway and give CPAP if hypoxic.",
+  "A 3‑year‑old presents with a sudden choking episode, now has unilateral wheeze and chest X‑ray shows hyperinflation of one lung. What is the next best step? — Urgent bronchoscopy for foreign‑body removal.",
+  "A 6‑month‑old with recurrent cough and fever has a chest X‑ray showing patchy infiltrates. What antibiotic regimen is appropriate? — Empirical amoxicillin‑clavulanate or ampicillin + gentamicin if severe.",
+  "A child with suspected aspiration pneumonia is on oxygen. Pulse oximetry reads 94% on 2 L/min. What red flag should prompt escalation? — SpO2 <90% on room air or persistent hypoxia despite O2.",
+  "What is the key difference between aspiration pneumonia and bronchiolitis in a 1‑year‑old? — History of choking vs viral prodrome; bronchiolitis usually has diffuse wheeze, no unilateral findings.",
+  "A toddler with suspected foreign‑body aspiration has a normal chest X‑ray. What should you do? — Consider bronchoscopy; X‑ray can miss small objects.",
+  "Why is inhaled nitric oxide avoided in low‑resource settings for meconium aspiration? — It is expensive, requires specialised delivery, and may not be available.",
+  "What preventive measure reduces the risk of aspiration in infants? — Safe feeding practices and avoiding supine feeding."
+ ],
+ "related": [
+  "Meconium Aspiration Syndrome",
+  "Foreign‑Body Aspiration",
+  "Aspiration Pneumonia",
+  "Persistent Pulmonary Hypertension of the Newborn",
+  "Bronchiolitis",
+  "Asthma",
+  "Gastro‑oesophageal Reflux",
+  "Cleft Palate"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

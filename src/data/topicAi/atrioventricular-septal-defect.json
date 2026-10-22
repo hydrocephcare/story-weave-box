@@ -1,0 +1,212 @@
+{
+ "medical": true,
+ "title": "Atrioventricular Septal Defect",
+ "subject": "Paediatrics",
+ "summary": "A congenital heart lesion where the atrioventricular septum is deficient, causing a common AV valve and left‑to‑right shunting. It presents with failure to thrive, tachypnoea and a systolic ejection murmur. Early diagnosis and surgical repair optimise outcomes.",
+ "aka": [
+  "AVSD",
+  "Common AV valve defect",
+  "Endocardial cushion defect"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "AVSD is a failure of the endocardial cushions to fuse, producing a single AV valve and a defect in the atrial and ventricular septa. Diagnosis is clinical plus imaging.",
+   "b": [
+    "Systolic ejection murmur, often harsh, best heard at left upper sternal border",
+    "Digital clubbing may appear late",
+    "Failure to thrive, tachypnoea, easy cyanosis"
+   ],
+   "t": [
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows cardiomegaly and increased pulmonary vascular markings – indicates volume overload"
+    },
+    {
+     "a": "Echocardiography",
+     "b": "Gold standard; confirms single AV valve, size of shunt, pulmonary pressures and ventricular function"
+    },
+    {
+     "a": "Pulse oximetry",
+     "b": "Detects hypoxaemia; SpO2 <92% on room air suggests significant shunt"
+    }
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the magnitude of left‑to‑right shunt and pulmonary hypertension. The Ross classification (I–IV) is commonly used.",
+   "b": [
+    "Stage I – small shunt, normal pulmonary pressures",
+    "Stage II – moderate shunt, mild pulmonary hypertension",
+    "Stage III – large shunt, moderate pulmonary hypertension",
+    "Stage IV – large shunt, severe pulmonary hypertension and right‑ventricular failure"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "The primary cause is genetic, most often trisomy 21. Other associations include Turner syndrome, 22q11.2 deletion and maternal diabetes.",
+   "b": [
+    "Trisomy 21 – accounts for ~90% of cases",
+    "Turner syndrome – 5–10%",
+    "Maternal diabetes – 2–5%"
+   ],
+   "t": [
+    {
+     "a": "Prenatal ultrasound",
+     "b": "Detects AVSD antenatally; allows early referral"
+    },
+    {
+     "a": "Karyotype",
+     "b": "Confirms chromosomal abnormalities"
+    }
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Infants present with tachypnoea, poor feeding, failure to thrive and a harsh systolic murmur. Older children may have exercise intolerance and cyanosis.",
+   "b": [
+    "Tachypnoea >40 breaths/min in infants",
+    "Poor feeding, weight <5th percentile",
+    "Harsh systolic ejection murmur at left upper sternal border"
+   ],
+   "t": [
+    {
+     "a": "Physical exam",
+     "b": "Assess for clubbing, hepatomegaly, and signs of pulmonary hypertension"
+    }
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Investigation strategy prioritises bedside echocardiography and basic labs, with escalation if resources allow.",
+   "b": [
+    "Echocardiography – mandatory",
+    "Chest X‑ray – supportive"
+   ],
+   "t": [
+    {
+     "a": "ECG",
+     "b": "May show right‑axis deviation and right‑ventricular hypertrophy – indicates volume overload"
+    },
+    {
+     "a": "CBC",
+     "b": "Anemia may worsen symptoms; look for hemoglobin <10 g/dL"
+    },
+    {
+     "a": "CRP/ESR",
+     "b": "Rule out infective endocarditis if fever present"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent red flags include severe cyanosis, pulmonary oedema, and shock. Long‑term complications are pulmonary hypertension and arrhythmias.",
+   "b": [
+    "Severe cyanosis (SpO2 <85%)",
+    "Pulmonary oedema – crackles, tachypnoea",
+    "Shock – hypotension, altered mental status"
+   ],
+   "t": [
+    {
+     "a": "Blood gas",
+     "b": "Detects hypoxaemia and acidosis – indicates respiratory compromise"
+    }
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Management is staged: initial supportive care, then definitive surgical repair. Medical therapy targets volume overload and infection prevention.",
+   "b": [
+    "Diuretics – relieve pulmonary congestion",
+    "Beta‑blockers – reduce heart rate and afterload",
+    "Prophylactic antibiotics – for dental procedures"
+   ],
+   "t": [
+    {
+     "a": "Surgical repair",
+     "b": "Timing depends on severity; early repair (<1 year) improves survival"
+    },
+    {
+     "a": "Post‑operative care",
+     "b": "Monitor for residual shunt, arrhythmias, and pulmonary hypertension"
+    }
+   ]
+  },
+  {
+   "h": "Follow-up and prevention",
+   "p": "Regular follow‑up with echocardiography and growth monitoring is essential. Prevention focuses on maternal health and early detection of Down syndrome.",
+   "b": [
+    "Annual echocardiography until adulthood",
+    "Growth charts – weight and height percentiles"
+   ],
+   "t": [
+    {
+     "a": "Vaccinations",
+     "b": "Ensure pneumococcal and influenza vaccines to prevent respiratory infections"
+    }
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "AVSD can be mistaken for isolated ASD, VSD or tetralogy of Fallot.",
+   "b": [
+    "Isolated ASD – separate AV valves, no common valve",
+    "VSD – separate AV valves, no common valve",
+    "Tetralogy of Fallot – cyanosis, harsh systolic murmur but different anatomy"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Low‑resource settings may misinterpret a normal chest X‑ray as normal if cardiomegaly is subtle.",
+   "b": [
+    "Chest X‑ray – cardiomegaly may be mild early on",
+    "Echocardiography – may be unavailable; rely on clinical signs"
+   ],
+   "t": [
+    {
+     "a": "Pulse oximetry",
+     "b": "May be normal if shunt is small; repeat after feeding or exertion"
+    }
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe cyanosis (SpO2 <85%), pulmonary oedema, shock, sudden worsening of symptoms"
+ ],
+ "faq": [
+  {
+   "q": "Why is Down syndrome so closely linked to AVSD?",
+   "a": "Trisomy 21 disrupts endocardial cushion development, leading to a common AV valve and septal defects."
+  },
+  {
+   "q": "Can AVSD be diagnosed antenatally?",
+   "a": "Yes, detailed fetal echo after 20 weeks can detect a common AV valve and shunt."
+  },
+  {
+   "q": "What is the first step if echocardiography is not available?",
+   "a": "Use bedside auscultation, pulse oximetry and chest X‑ray to suspect AVSD and refer urgently for echo."
+  }
+ ],
+ "exam": [
+  "What clinical sign would prompt you to suspect AVSD in a 3‑month‑old? — Harsh systolic ejection murmur at left upper sternal border, tachypnoea and poor feeding.",
+  "How would you differentiate AVSD from isolated VSD on exam? — AVSD has a single AV valve and a harsh murmur; VSD has a harsh murmur but separate AV valves.",
+  "What is the most appropriate first‑line medical therapy for a child with AVSD and pulmonary oedema? — Diuretics to reduce pulmonary congestion.",
+  "When is surgical repair indicated for AVSD? — When pulmonary pressures are <2/3 systemic or when the child shows failure to thrive or progressive symptoms.",
+  "Why is prophylactic antibiotic therapy recommended for dental procedures in AVSD patients? — To prevent infective endocarditis in a high‑risk heart lesion.",
+  "What red flag would require immediate transfer to a tertiary centre? — Severe cyanosis with SpO2 <85% or signs of shock."
+ ],
+ "related": [
+  "Down syndrome",
+  "Tetralogy of Fallot",
+  "Ventricular septal defect",
+  "Endocardial cushion defect",
+  "Pulmonary hypertension",
+  "Congenital heart disease",
+  "Surgical repair of congenital heart defects",
+  "Antibiotic prophylaxis for endocarditis"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

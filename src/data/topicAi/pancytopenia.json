@@ -1,0 +1,172 @@
+{
+ "medical": true,
+ "title": "Pancytopenia",
+ "subject": "Medicine",
+ "summary": "Pancytopenia is a simultaneous reduction of red cells, white cells and platelets. It signals bone‑marrow failure or peripheral destruction and demands a focused, stepwise work‑up, especially in low‑resource settings.",
+ "aka": [
+  "pan‑cytopenia",
+  "pancytopenia"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Pancytopenia is defined when haemoglobin <10 g/dL, absolute neutrophil count <1.5 ×10⁹/L and platelet count <100 ×10⁹/L on two separate samples taken 24 h apart.",
+   "b": [
+    "Requires a peripheral blood film to look for dysplasia, blasts or parasites",
+    "Bone‑marrow aspiration/biopsy is the definitive test to differentiate production failure from peripheral loss"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by the lowest line count; severe disease is any count below the thresholds above, especially ANC <0.5 ×10⁹/L (high infection risk).",
+   "b": [
+    "Mild: all counts just below normal limits",
+    "Moderate: at least one line <50 % of lower reference",
+    "Severe: ANC <0.5 ×10⁹/L or platelets <20 ×10⁹/L"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In East African hospitals the commonest aetiologies are infections and marrow‑infiltrative disorders.",
+   "b": [
+    "HIV infection – marrow suppression, opportunistic infections",
+    "Visceral leishmaniasis (kala‑azar) – massive splenomegaly, LD bodies in marrow",
+    "Tuberculosis – granulomatous marrow infiltration",
+    "Aplastic anaemia – idiopathic or benzene/radiation exposure",
+    "Malaria (severe) – hemolysis plus marrow suppression",
+    "Drug‑induced (e.g., chloramphenicol, anti‑TB drugs)",
+    "Nutritional deficiencies (vitamin B12, folate) – megaloblastic marrow"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Patients usually present with fatigue, easy bruising or bleeding, recurrent infections and, when splenomegaly is present, abdominal fullness.",
+   "b": [
+    "Pallor and tachycardia from anaemia",
+    "Petechiae, gum bleeding or menorrhagia from thrombocytopenia",
+    "Fever, oral ulcers, or skin pustules from neutropenia",
+    "Massive, non‑tender splenomegaly suggests leishmaniasis or TB"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "t": [
+    {
+     "a": "Full blood count with differential",
+     "b": "Confirms pancytopenia and quantifies severity; guides urgency of antimicrobial prophylaxis"
+    },
+    {
+     "a": "Peripheral blood film",
+     "b": "Looks for parasites (malaria, leishmania), dysplasia, blasts; if unavailable, rely on clinical clues and treat presumptively"
+    },
+    {
+     "a": "HIV rapid test",
+     "b": "Identifies a common reversible cause; positive test prompts CD4 count and opportunistic infection screen"
+    },
+    {
+     "a": "Serology for Leishmania (rK39) or bone‑marrow aspirate if feasible",
+     "b": "Detects LD bodies; if marrow not available, treat empirically in endemic area with splenomegaly"
+    },
+    {
+     "a": "Chest X‑ray and sputum for TB (if cough or weight loss)",
+     "b": "Detects pulmonary TB that may also involve marrow"
+    },
+    {
+     "a": "Bone‑marrow aspiration/biopsy",
+     "b": "Distinguishes aplastic marrow (hypocellular) from infiltrative disease; essential when infection screens are negative"
+    },
+    {
+     "a": "Serum B12 and folate",
+     "b": "Identifies reversible megaloblastic pancytopenia; treat with vitamins if low"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Severe neutropenia and thrombocytopenia can rapidly lead to life‑threatening infection or hemorrhage.",
+   "b": [
+    "Fever >38 °C with ANC <0.5 ×10⁹/L – start broad‑spectrum antibiotics",
+    "Uncontrolled bleeding or platelet count <20 ×10⁹/L – consider platelet transfusion if available",
+    "Signs of high‑output cardiac failure in severe anaemia"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause first; provide supportive care while awaiting definitive diagnosis.",
+   "b": [
+    "Empiric antileishmanial therapy (e.g., sodium stibogluconate) in endemic area with splenomegaly when marrow unavailable",
+    "Start antiretroviral therapy after HIV diagnosis; screen for opportunistic infections",
+    "If aplastic anaemia suspected and no transplant option, give oral cyclosporine (avoid ATG if unavailable) and transfuse as needed",
+    "Broad‑spectrum antibiotics (e.g., ceftriaxone) for febrile neutropenia; avoid aminoglycosides if renal function unknown",
+    "Transfuse packed red cells for Hb <7 g/dL or symptomatic anaemia; platelet transfusion only for active bleeding or <20 ×10⁹/L"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Monitor counts weekly until stable; address preventable causes.",
+   "b": [
+    "Repeat CBC after 2 weeks of therapy to assess response",
+    "Vaccinate against encapsulated bacteria (pneumococcus, Hib) once neutrophil recovery begins",
+    "Educate on avoiding marrow toxins (benzene, unregulated herbal remedies)",
+    "Provide insect‑net use and prompt malaria treatment to reduce secondary marrow suppression"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "b": [
+    "Aplastic anaemia – similar labs but marrow is empty; no splenomegaly",
+    "Myelodysplastic syndrome – dysplastic cells and often older patients; blasts may be present",
+    "Severe malaria – may cause anaemia and thrombocytopenia but usually not neutropenia"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "b": [
+    "Peripheral smear may appear normal in early leishmaniasis; rely on clinical picture",
+    "HIV rapid test can be false‑negative in early infection; repeat if suspicion high",
+    "Bone‑marrow cellularity can be patchy; a single aspirate may miss focal infiltrates"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Fever with ANC <0.5 ×10⁹/L",
+  "Active bleeding or platelet count <20 ×10⁹/L",
+  "Sudden drop in haemoglobin causing chest pain or syncope"
+ ],
+ "faq": [
+  {
+   "q": "Why is a bone‑marrow biopsy essential?",
+   "a": "It tells whether the problem is production failure (hypocellular marrow) or peripheral destruction/infiltration, directing therapy."
+  },
+  {
+   "q": "Can malaria cause true pancytopenia?",
+   "a": "Severe malaria can depress all lines, but neutropenia is less common; persistent pancytopenia after parasite clearance suggests another cause."
+  },
+  {
+   "q": "What is the first step in a febrile patient with pancytopenia?",
+   "a": "Start broad‑spectrum antibiotics promptly while arranging cultures and assessing ANC."
+  }
+ ],
+ "exam": [
+  "A 35‑year‑old farmer from rural Kenya presents with fever, massive splenomegaly and pancytopenia. What is your most likely diagnosis and why? — Look for visceral leishmaniasis; splenomegaly, endemic area, LD bodies on marrow.",
+  "You receive a CBC showing Hb 8 g/dL, ANC 0.4 ×10⁹/L, platelets 15 ×10⁹/L. What immediate management steps do you take? — Start empiric antibiotics, arrange blood/platelet transfusion, and begin work‑up for HIV/TB/leishmania.",
+  "How does aplastic anaemia differ from peripheral destruction on marrow examination? — Aplastic shows a hypocellular, fatty marrow; peripheral destruction shows a normocellular or hypercellular marrow with infiltrates.",
+  "Why is a peripheral smear insufficient to rule out leishmaniasis in a patient with pancytopenia? — Parasites may be absent from blood; marrow or splenic aspirate is needed for definitive diagnosis.",
+  "A patient on long‑term chloramphenicol develops pancytopenia. What is the mechanism and what should you do? — Drug‑induced marrow suppression; stop chloramphenicol and provide supportive transfusions.",
+  "What vaccinations are indicated once neutrophil recovery begins in a pancytopenic patient? — Pneumococcal, Haemophilus influenzae type b, and influenza vaccines to prevent encapsulated bacterial infections.",
+  "Explain why platelet transfusion is not given routinely to all pancytopenic patients. — Risks of alloimmunisation and limited resources; reserved for active bleeding or very low counts.",
+  "In a resource‑limited setting without bone‑marrow facilities, how would you prioritize investigations for pancytopenia? — CBC, peripheral smear, HIV test, malaria smear, rK39 rapid test, and chest X‑ray; treat presumptively based on most likely endemic cause."
+ ],
+ "related": [
+  "Aplastic anaemia",
+  "Visceral leishmaniasis",
+  "HIV‑associated cytopenias",
+  "Tuberculosis and marrow infiltration",
+  "Severe malaria",
+  "Myelodysplastic syndrome"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-120b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

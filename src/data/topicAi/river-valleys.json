@@ -1,0 +1,135 @@
+{
+ "medical": true,
+ "title": "Histoplasmosis",
+ "subject": "Microbiology & immunology",
+ "summary": "Histoplasmosis is a fungal infection caused by Histoplasma capsulatum, a dimorphic fungus. It is acquired by inhaling spores from contaminated soil, especially in areas with bird or bat droppings. The disease primarily affects the lungs but can disseminate, particularly in immunocompromised individuals.",
+ "aka": [
+  "Ohio Valley disease",
+  "Cave disease",
+  "Darling's disease"
+ ],
+ "sections": [
+  {
+   "h": "Overview",
+   "p": "Histoplasmosis is a systemic fungal infection caused by *Histoplasma capsulatum*. It is endemic in specific geographic regions, notably the Mississippi and Ohio River valleys in the USA, and parts of East Africa and Latin America. Infection occurs when airborne spores are inhaled, leading to a primary pulmonary infection that can range from asymptomatic to severe disseminated disease, especially in individuals with weakened immune systems.",
+   "b": [
+    "Caused by *Histoplasma capsulatum*, a dimorphic fungus.",
+    "Transmitted via inhalation of spores from soil contaminated with bird or bat droppings.",
+    "Endemic in specific river valleys and tropical regions globally.",
+    "Clinical presentation varies from asymptomatic to severe disseminated disease."
+   ]
+  },
+  {
+   "h": "Features of the organism",
+   "p": "*Histoplasma capsulatum* is a dimorphic fungus, meaning it exists in two forms depending on temperature. In the environment (soil), it grows as a mold with hyphae and conidia (spores). At body temperature (37°C) within a host, it transforms into a small, oval yeast form. This yeast form is typically found intracellularly within macrophages, which is a key diagnostic feature.",
+   "b": [
+    "Dimorphic fungus: mold in environment, yeast in host.",
+    "Yeast form is small, oval, and replicates within macrophages.",
+    "Spores (conidia) are the infectious particles.",
+    "Can survive and replicate within phagocytic cells, evading immune clearance."
+   ]
+  },
+  {
+   "h": "Transmission and life cycle",
+   "p": "Humans acquire histoplasmosis by inhaling microconidia (spores) from soil contaminated with bird or bat droppings. Activities that disturb contaminated soil, such as farming, construction, or exploring caves, increase exposure risk. Once inhaled, the spores reach the alveoli, transform into yeast cells, and are phagocytosed by macrophages. The yeast cells then replicate within these macrophages and can disseminate via the lymphatic system and bloodstream.",
+   "b": [
+    "Inhalation of airborne spores from contaminated soil is the primary route.",
+    "Risk factors include exposure to bird or bat droppings in endemic areas.",
+    "Spores transform into yeast cells within the lungs.",
+    "Yeast cells replicate intracellularly within macrophages and can spread."
+   ]
+  },
+  {
+   "h": "Disease it causes",
+   "p": "The clinical manifestations of histoplasmosis depend on the inoculum size and the host's immune status. Most infections are asymptomatic or mild. Symptomatic disease can present as acute pulmonary histoplasmosis (flu-like illness), chronic pulmonary histoplasmosis (mimicking tuberculosis), or disseminated histoplasmosis (affecting multiple organs). Disseminated disease is severe and often fatal if untreated, especially in immunocompromised individuals like those with HIV/AIDS, organ transplant recipients, or those on immunosuppressive therapy.",
+   "b": [
+    "Asymptomatic or mild respiratory illness in immunocompetent hosts.",
+    "Acute pulmonary histoplasmosis: fever, cough, chest pain, malaise.",
+    "Chronic pulmonary histoplasmosis: cavitary lesions, weight loss, hemoptysis, mimicking TB.",
+    "Disseminated histoplasmosis: hepatosplenomegaly, lymphadenopathy, oral ulcers, adrenal insufficiency, pancytopenia; common in HIV/AIDS.",
+    "Severity is staged based on immune status and extent of organ involvement."
+   ]
+  },
+  {
+   "h": "Diagnosis",
+   "p": "Diagnosis of histoplasmosis can be challenging, especially in low-resource settings where advanced tests may not be available. A high index of suspicion is crucial, particularly in patients from endemic areas with compatible symptoms. Initial evaluation often involves chest radiography, followed by specific mycological or immunological tests. In resource-limited settings, direct microscopy and culture are often the most accessible methods.",
+   "t": [
+    {
+     "a": "Chest X-ray",
+     "b": "Evaluates pulmonary involvement. — May show hilar lymphadenopathy, patchy infiltrates, nodules, or cavitation. Normal X-ray does not rule out disease."
+    },
+    {
+     "a": "Sputum or tissue microscopy (e.g., bone marrow, lymph node biopsy)",
+     "b": "Identifies yeast forms. — Visualization of small, oval, intracellular yeast cells (often within macrophages) is highly suggestive. Requires skilled microscopy."
+    },
+    {
+     "a": "Fungal culture (sputum, blood, bone marrow, tissue)",
+     "b": "Confirms the presence of *Histoplasma capsulatum*. — Gold standard for diagnosis, but can take 2-4 weeks to grow. Blood cultures are more sensitive in disseminated disease."
+    },
+    {
+     "a": "Histoplasma antigen detection (urine, serum, CSF)",
+     "b": "Detects fungal antigens. — Highly sensitive for disseminated disease, especially in immunocompromised patients. Less sensitive for localized pulmonary disease. May not be widely available in low-resource settings."
+    },
+    {
+     "a": "Antibody detection (serology)",
+     "b": "Detects host immune response. — Useful for chronic pulmonary histoplasmosis. Less useful in acute or disseminated disease, especially in immunocompromised patients who may not mount an antibody response. Cross-reactivity with other fungi can occur."
+    },
+    {
+     "a": "HIV testing",
+     "b": "Assesses immune status. — Essential in endemic areas, as HIV is a major risk factor for disseminated histoplasmosis. A positive result guides management."
+    },
+    {
+     "a": "When specific tests are unavailable",
+     "b": "Consider empirical treatment based on clinical suspicion, epidemiological risk factors, and response to therapy. Direct microscopy of readily available samples (e.g., sputum, oral ulcer scrapings, bone marrow aspirate) can be invaluable."
+    }
+   ]
+  },
+  {
+   "h": "Treatment and control",
+   "p": "Treatment for histoplasmosis depends on the severity and form of the disease. Asymptomatic or mild acute pulmonary histoplasmosis in immunocompetent individuals often does not require antifungal therapy. Moderate to severe disease, chronic pulmonary histoplasmosis, and all forms of disseminated histoplasmosis require antifungal agents. Amphotericin B is typically used for severe or disseminated disease, followed by oral azoles like itraconazole for consolidation and maintenance. Monitoring for drug toxicity and treatment response is crucial.",
+   "b": [
+    "Mild acute pulmonary histoplasmosis in immunocompetent hosts often resolves spontaneously.",
+    "Severe or disseminated disease requires intravenous Amphotericin B (liposomal formulation preferred if available due to less toxicity).",
+    "After initial stabilization, switch to oral Itraconazole for several months to a year.",
+    "Fluconazole is less effective than itraconazole for histoplasmosis.",
+    "Monitor for Amphotericin B nephrotoxicity and electrolyte imbalances.",
+    "Monitor Itraconazole levels and liver function due to potential for drug interactions and hepatotoxicity.",
+    "In HIV-positive patients, lifelong secondary prophylaxis with itraconazole may be needed to prevent relapse."
+   ]
+  },
+  {
+   "h": "Exam pearls",
+   "p": "Understanding the epidemiology and clinical spectrum of histoplasmosis is key for exams. Focus on differentiating it from other endemic infections, especially tuberculosis, and recognizing the specific challenges in immunocompromised patients and low-resource settings."
+  }
+ ],
+ "whenToSeekHelp": [],
+ "faq": [
+  {
+   "q": "Is histoplasmosis contagious?",
+   "a": "No, histoplasmosis is not contagious. It is acquired by inhaling spores from the environment, not through person-to-person contact."
+  },
+  {
+   "q": "Can histoplasmosis be prevented?",
+   "a": "Prevention involves avoiding exposure to areas with high concentrations of bird or bat droppings, especially when disturbing soil. Wearing masks and wetting contaminated soil can reduce spore inhalation."
+  },
+  {
+   "q": "What is the prognosis for histoplasmosis?",
+   "a": "The prognosis is generally good for mild cases in immunocompetent individuals. However, disseminated histoplasmosis, especially in immunocompromised patients, has a high mortality rate if untreated, but improves significantly with appropriate antifungal therapy."
+  }
+ ],
+ "exam": [],
+ "related": [
+  "Coccidioidomycosis",
+  "Blastomycosis",
+  "Cryptococcosis",
+  "Pulmonary tuberculosis",
+  "Pneumocystis pneumonia",
+  "HIV/AIDS opportunistic infections",
+  "Fungal culture techniques",
+  "Antifungal drug pharmacology"
+ ],
+ "kind": "microbe",
+ "model": "gemini-2.5-flash",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

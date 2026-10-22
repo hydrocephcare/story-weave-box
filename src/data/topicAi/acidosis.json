@@ -169,5 +169,468 @@
  "kind": "disease",
  "model": "gemini-2.5-flash",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A systematic bedside assessment distinguishes metabolic from respiratory acidosis and identifies precipitating factors, especially in low‑resource settings where laboratory access may be limited.",
+    "b": [
+     "Ask about recent infections, sepsis, shock, or hypoperfusion",
+     "Inquire about alcohol use, drug overdose, or opioid use",
+     "Explore history of diabetes, renal failure, or chronic lung disease",
+     "Check for recent diarrhoea, vomiting, or high‑fat diet",
+     "Ask about medications: ACE inhibitors, ARBs, diuretics, metformin",
+     "Review recent surgeries or trauma",
+     "Probe for pregnancy or lactation",
+     "Note any recent weight loss or malnutrition"
+    ],
+    "t": [
+     {
+      "a": "Respiratory rate",
+      "b": "Rapid, deep breathing (Kussmaul) suggests metabolic acidosis; shallow, slow breathing suggests respiratory acidosis"
+     },
+     {
+      "a": "Breathlessness",
+      "b": "Worsening dyspnoea indicates respiratory failure or hypoventilation"
+     },
+     {
+      "a": "Mental status",
+      "b": "Confusion, lethargy, or coma points to severe acidosis or hypoxia"
+     },
+     {
+      "a": "Skin colour",
+      "b": "Blue‑tinted skin may indicate hypoxia; pallor can suggest anaemia or sepsis"
+     },
+     {
+      "a": "Peripheral pulses",
+      "b": "Weak or absent pulses raise suspicion of shock or severe lactic acidosis"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Key investigations confirm the type of acidosis, quantify severity, and uncover underlying causes. In resource‑limited settings, prioritize bedside capillary blood gas and point‑of‑care lactate testing.",
+    "t": [
+     {
+      "a": "Arterial blood gas (ABG)",
+      "b": "Shows pH, PaCO₂, HCO₃⁻. Metabolic acidosis: pH<7.35, HCO₃⁻<22, PaCO₂<45 with appropriate compensation. Respiratory acidosis: pH<7.35, PaCO₂>45, HCO₃⁻>22"
+     },
+     {
+      "a": "Serum lactate",
+      "b": "Lactate>2 mmol/L indicates lactic acidosis; >5 mmol/L with pH<7.35 signals severe lactic acidosis requiring urgent intervention"
+     },
+     {
+      "a": "Serum bicarbonate",
+      "b": "Low HCO₃⁻ (<22) confirms metabolic acidosis; normal or high HCO₃⁻ suggests respiratory acidosis"
+     },
+     {
+      "a": "Urine pH",
+      "b": "Urine pH>5.5 with normal AG metabolic acidosis suggests renal tubular acidosis type 1 or 2; urine pH<5.5 indicates type 4 RTA or non‑renal causes"
+     },
+     {
+      "a": "Serum potassium",
+      "b": "Hyperkalaemia in metabolic acidosis may indicate type 4 RTA or renal failure; hypokalaemia suggests type 1 RTA or diuretic use"
+     },
+     {
+      "a": "Serum creatinine",
+      "b": "Elevated creatinine confirms renal failure as a source of metabolic acidosis"
+     },
+     {
+      "a": "Capillary lactate point‑of‑care",
+      "b": "Provides rapid assessment when venous access is difficult; values >2 mmol/L warrant further investigation"
+     },
+     {
+      "a": "Chest X‑ray",
+      "b": "Detects pulmonary oedema, consolidation, or COPD exacerbation contributing to respiratory acidosis"
+     },
+     {
+      "a": "Portable ultrasound",
+      "b": "Assesses volume status, cardiac function, and detects abdominal fluid that may influence acid‑base status"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification relies on ABG, anion gap, and clinical context. Severity grading guides urgency of treatment.",
+    "b": [
+     "Metabolic acidosis: pH<7.35, HCO₃⁻<22, AG>12 (high) or 8‑12 (normal)",
+     "Respiratory acidosis: pH<7.35, PaCO₂>45, HCO₃⁻>22",
+     "Mild: pH 7.30‑7.34, compensated",
+     "Moderate: pH 7.20‑7.29, symptomatic",
+     "Severe: pH<7.20, altered mental status, haemodynamic instability"
+    ],
+    "t": []
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Certain disorders mimic acidosis but require different management. Distinguishing features are highlighted.",
+    "t": [
+     {
+      "a": "Metabolic alkalosis",
+      "b": "pH>7.45, HCO₃⁻>28, PaCO₂<35; look for vomiting, diuretic use, or hypochloraemia"
+     },
+     {
+      "a": "Hyperchloremic metabolic acidosis",
+      "b": "Normal AG, low HCO₃⁻, high chloride; often due to diarrhoea or saline infusion"
+     },
+     {
+      "a": "Respiratory alkalosis",
+      "b": "pH>7.45, PaCO₂<35, HCO₃⁻<22; caused by hyperventilation, anxiety, or fever"
+     },
+     {
+      "a": "Severe hypoxia",
+      "b": "Low oxygen saturation with normal ABG; may coexist with acidosis but is a separate issue"
+     }
+    ],
+    "b": []
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside assessment, interpretation, management, and complications.",
+    "b": [
+     "What history points to lactic acidosis?",
+     "How would you interpret an ABG of pH 7.18, PaCO₂ 40, HCO₃⁻ 12?",
+     "Which bedside sign indicates severe metabolic acidosis?",
+     "When is sodium bicarbonate indicated and what risks must be monitored?",
+     "How do you differentiate type 1 from type 4 RTA using urine pH?",
+     "What is the management of metabolic acidosis in a patient with chronic kidney disease?",
+     "Explain Winter’s formula and its clinical use."
+    ],
+    "t": []
+   },
+   {
+    "h": "Management step by step",
+    "p": "Treat acidosis in a structured ladder: stabilize, correct cause, replace lost bicarbonate, monitor, and refer if refractory.",
+    "b": [
+     "1. Immediate airway, breathing, circulation support; ensure adequate oxygenation and ventilation.",
+     "2. Identify and treat underlying cause (e.g., sepsis, renal failure, hypoventilation).",
+     "3. If pH <7.20 or lactate >5 mmol/L, give intravenous sodium bicarbonate to raise pH toward 7.30; avoid over‑correction.",
+     "4. Correct associated electrolyte disturbances: replace potassium if hypokalaemic, avoid potassium if hyperkalaemic.",
+     "5. Monitor arterial blood gases, electrolytes, urine output, and clinical status every 2–4 hours.",
+     "6. Escalate to intensive care if persistent acidosis, haemodynamic instability, or need for mechanical ventilation.",
+     "7. Refer to nephrology or pulmonology for chronic management or if renal failure or COPD exacerbation persists."
+    ],
+    "t": []
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Key pharmacologic interventions and their safety profile.",
+    "b": [
+     "Sodium bicarbonate: can cause volume overload, hyperkalaemia, paradoxical acidosis; monitor electrolytes and urine output.",
+     "Insulin (in DKA): may precipitate hypoglycaemia; give dextrose if glucose <10 mmol/L.",
+     "Glucagon (hypoglycaemic coma): may raise lactate; monitor lactate and glucose.",
+     "Loop diuretics (for fluid overload): risk of hypokalaemia; replace potassium.",
+     "ACE inhibitors/ARBs (type 4 RTA): may worsen hyperkalaemia; hold if serum K >5.5 mmol/L.",
+     "Metformin (in renal failure): risk of lactic acidosis; discontinue if eGFR <30 mL/min."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complications and when to escal",
+    "p": "Recognise red flags that mandate urgent escalation.",
+    "b": [
+     "Severe hyperkalaemia (K >6.5 mmol/L) – risk of ventricular arrhythmias; treat immediately.",
+     "Hypotension with lactate >5 mmol/L – indicates shock; start vasopressors.",
+     "Respiratory failure (PaO2 <60 mmHg) – intubate and ventilate.",
+     "Severe metabolic acidosis (pH <7.15) – consider haemodialysis if refractory.",
+     "Persistent acidosis despite correction – refer to specialist care."
+    ],
+    "t": []
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Factors that alter presentation, investigation or therapy.",
+    "b": [
+     "HIV/TB – may cause chronic renal tubular acidosis or sepsis; check viral load and TB treatment status.",
+     "Malnutrition – low bicarbonate stores, impaired drug metabolism; adjust fluid and electrolyte replacement.",
+     "Pregnancy – increased bicarbonate demand, altered drug pharmacokinetics; avoid nephrotoxic drugs.",
+     "Diabetes – risk of DKA or type 4 RTA; monitor glucose and potassium closely.",
+     "Herbal remedies (e.g., licorice) – can cause pseudo‑aldosteronism and hyperkalaemia; inquire about use.",
+     "Alcohol – chronic use leads to alcoholic ketoacidosis; treat with thiamine and glucose.",
+     "Kidney failure – reduced bicarbonate generation; consider dialysis sooner.",
+     "Liver failure – impaired gluconeogenesis, altered acid–base; monitor lactate and ammonia.",
+     "Age extremes – children have higher metabolic rates; elderly may have blunted respiratory drive."
+    ],
+    "t": []
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailored approaches for vulnerable populations.",
+    "b": [
+     "Children – use age‑appropriate fluid volumes; monitor for dehydration and hypoglycaemia; avoid high‑dose bicarbonate.",
+     "Pregnancy – avoid nephrotoxic drugs; use low‑dose insulin for DKA; monitor fetal status.",
+     "Elderly – higher risk of volume overload; titrate bicarbonate slowly; monitor for arrhythmias.",
+     "People with HIV – consider drug interactions with antiretrovirals; monitor renal function closely.",
+     "Low‑resource settings – use bedside capillary blood gas if arterial sampling unavailable; rely on clinical signs and simple urine dipstick; prioritize broad‑spectrum antibiotics and oxygen."
+    ],
+    "t": []
+   },
+   {
+    "h": "Exam questions",
+    "p": "Sample questions covering bedside, labs, management and complications.",
+    "t": [
+     {
+      "a": "What bedside sign indicates severe metabolic acidosis in a patient with Kussmaul respirations?",
+      "b": "Rapid, deep breathing (Kussmaul respirations) suggests severe metabolic acidosis."
+     },
+     {
+      "a": "Which laboratory value confirms a high‑anion‑gap metabolic acidosis?",
+      "b": "An anion gap >12 mmol/L (normal 8–12) indicates a high‑anion‑gap metabolic acidosis."
+     },
+     {
+      "a": "When is intravenous sodium bicarbonate indicated in metabolic acidosis?",
+      "b": "When pH <7.20 or lactate >5 mmol/L, or if severe hyperkalaemia is present."
+     },
+     {
+      "a": "What is the first step in managing a patient with suspected septic shock and metabolic acidosis?",
+      "b": "Early goal‑directed therapy: airway, breathing, circulation, broad‑spectrum antibiotics, and fluid resuscitation."
+     },
+     {
+      "a": "Why should potassium be replaced in a patient with metabolic acidosis and hypokalaemia?",
+      "b": "Hypokalaemia worsens cardiac conduction and can precipitate arrhythmias; replacement restores normal function."
+     },
+     {
+      "a": "Which drug should be avoided in a patient with type 4 RTA and hyperkalaemia?",
+      "b": "ACE inhibitors or ARBs should be withheld to prevent further potassium rise."
+     },
+     {
+      "a": "What complication is most likely if a patient with severe metabolic acidosis is not promptly treated?",
+      "b": "Cardiac arrhythmias, hypotension, and multi‑organ failure."
+     },
+     {
+      "a": "How does chronic kidney disease alter the management of metabolic acidosis?",
+      "b": "Reduced bicarbonate generation requires earlier initiation of bicarbonate therapy and consideration of dialysis."
+     },
+     {
+      "a": "What is the significance of a urine pH >5.5 in a patient with normal anion gap acidosis?",
+      "b": "Suggests distal renal tubular acidosis (type 1 RTA)."
+     },
+     {
+      "a": "In a low‑resource setting, which bedside test can help differentiate respiratory from metabolic acidosis?",
+      "b": "Capillary pulse oximetry and observation of respiratory rate; metabolic acidosis shows Kussmaul respirations, respiratory acidosis shows hypoventilation."
+     }
+    ],
+    "b": []
+   }
+  ],
+  "facts": [
+   "Metabolic acidosis: pH <7.35, HCO3‑ <22 mmol/L, PaCO2 follows Winter's formula.",
+   "Respiratory acidosis: pH <7.35, PaCO2 >45 mmHg, HCO3‑ rises by ~1 mmol/L for each 10 mmHg rise in PaCO2 (acute) or ~4 mmol/L (chronic).",
+   "High‑anion‑gap metabolic acidosis: AG = Na‑(Cl+HCO3) >12 mmol/L.",
+   "Normal‑anion‑gap (hyperchloremic) metabolic acidosis: AG ≤12 mmol/L, Cl‑ >110 mmol/L.",
+   "Winter's formula: Expected PaCO2 = (1.5 × HCO3‑) + 8 ± 2 mmHg.",
+   "Lactic acidosis: lactate >2 mmol/L; severe if >5 mmol/L with pH <7.35.",
+   "Distal (type 1) RTA: urine pH >5.5, hypokalaemia, stones; Type 4 RTA: urine pH <5.5, hyperkalaemia, often due to hypoaldosteronism.",
+   "Sodium bicarbonate indicated when pH <7.20, HCO3‑ <15 mmol/L, or severe haemodynamic compromise."
+  ],
+  "mnemonics": [
+   {
+    "n": "MUDPILES",
+    "t": "Methanol, Uremia, DKA, Propylene glycol, INH/Iron, Lactic acidosis, Ethylene glycol, Salicylates – high anion gap causes."
+   },
+   {
+    "n": "GOLD MARK",
+    "t": "Gastric loss, Oxyacetone (alcohol), Lactic acidosis, Diarrhoea, Methanol, Aspirin, Renal failure, Ketoacidosis – high anion gap."
+   }
+  ],
+  "vivas": [
+   {
+    "q": "Define uncompensated (acute) respiratory acidosis.",
+    "a": "pH <7.35 with PaCO2 >45 mmHg and no renal HCO3‑ rise; renal compensation needs >24 h.",
+    "hot": true
+   },
+   {
+    "q": "What bedside history questions help differentiate metabolic from respiratory acidosis?",
+    "a": "Ask about recent vomiting, diarrhoea, drug ingestion, sepsis (metabolic) and dyspnoea, COPD exacerbation, opioid use (respiratory).",
+    "hot": true
+   },
+   {
+    "q": "How does the respiratory system compensate for primary metabolic acidosis?",
+    "a": "Increases minute ventilation (Kussmaul breathing) to lower PaCO2 toward the value predicted by Winter's formula.",
+    "hot": true
+   },
+   {
+    "q": "Interpret an ABG: pH 7.18, HCO3‑ 14 mmol/L, PaCO2 30 mmHg.",
+    "a": "Primary metabolic acidosis with appropriate respiratory compensation (expected PaCO2 ≈30 mmHg).",
+    "hot": true
+   },
+   {
+    "q": "Why is sodium bicarbonate avoided in mild metabolic acidosis?",
+    "a": "It can cause volume overload, paradoxical intracellular acidosis, and worsen hypernatremia; benefits outweigh risks only when pH <7.20 or haemodynamic instability.",
+    "hot": true
+   },
+   {
+    "q": "A patient with chronic metabolic acidosis has normal AG, alkaline urine pH, K+ 5.8 mmol/L. What diagnosis fits?",
+    "a": "Type 4 renal tubular acidosis (hypoaldosteronism) causing hyperkalaemia and normal‑anion‑gap acidosis.",
+    "past": true
+   },
+   {
+    "q": "How do you distinguish distal (type 1) from proximal (type 2) RTA on labs?",
+    "a": "Distal RTA: urine pH >5.5 despite systemic acidosis, hypokalaemia; proximal RTA: urine pH variable, often <5.5 after acid load, with bicarbonate wasting and possible glucosuria."
+   },
+   {
+    "q": "What is the primary treatment for distal RTA in a Sjögren patient?",
+    "a": "Alkali therapy with oral sodium bicarbonate or potassium citrate to raise serum HCO3‑ and prevent stones.",
+    "past": true
+   },
+   {
+    "q": "Which condition is most common cause of type 4 RTA?",
+    "a": "Diabetic nephropathy causing hypoaldosteronism and hyperkalaemia.",
+    "past": true
+   },
+   {
+    "q": "Describe the compensation expected in chronic respiratory acidosis.",
+    "a": "Renal retention of bicarbonate raises HCO3‑ by ~4 mmol/L for each 10 mmHg rise in PaCO2 above 45."
+   },
+   {
+    "q": "Why can hyperkalaemia worsen metabolic acidosis?",
+    "a": "Cellular exchange of K+ for H+ shifts H+ out of cells, lowering extracellular pH."
+   },
+   {
+    "q": "When is renal replacement therapy indicated for acidosis?",
+    "a": "Severe refractory metabolic acidosis (pH <7.10) despite optimal medical therapy, or uremic acidosis with renal failure."
+   },
+   {
+    "q": "What bedside sign suggests severe metabolic acidosis?",
+    "a": "Kussmaul respirations – deep, rapid breathing visible on observation."
+   },
+   {
+    "q": "How does pregnancy alter acid‑base interpretation?",
+    "a": "Physiologic respiratory alkalosis (PaCO2 30‑32 mmHg) is normal; a lower pH may still be compensated."
+   },
+   {
+    "q": "What is the first step in managing DKA‑related acidosis?",
+    "a": "Fluid resuscitation with isotonic saline, then insulin infusion; correct electrolytes before bicarbonate."
+   },
+   {
+    "q": "Why is urine anion gap useful in hyperchloraemic acidosis?",
+    "a": "A positive urine AG indicates low NH4+ excretion (renal cause); a negative AG suggests GI loss."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 58‑year‑old COPD patient presents with pH 7.32, PaCO2 55 mmHg, HCO3‑ 28 mmol/L. Which statement is correct?",
+    "o": [
+     "Acute respiratory acidosis with inadequate renal compensation",
+     "Chronic respiratory acidosis with appropriate renal compensation",
+     "Metabolic acidosis with respiratory compensation",
+     "Mixed metabolic and respiratory acidosis"
+    ],
+    "a": 1,
+    "e": "HCO3‑ elevation matches chronic compensation for PaCO2 >45 mmHg."
+   },
+   {
+    "q": "A patient with sepsis has lactate 6 mmol/L, pH 7.24, HCO3‑ 16 mmol/L. Which intervention is most appropriate?",
+    "o": [
+     "Immediate sodium bicarbonate infusion",
+     "Aggressive fluid resuscitation and source control",
+     "Insulin infusion",
+     "Dialysis"
+    ],
+    "a": 1,
+    "e": "Lactic acidosis from sepsis is treated by restoring perfusion; bicarbonate is reserved for pH <7.20."
+   },
+   {
+    "q": "Which of the following drugs can cause a normal‑anion‑gap metabolic acidosis?",
+    "o": [
+     "Acetazolamide",
+     "Metformin",
+     "Aspirin",
+     "Methanol"
+    ],
+    "a": 0,
+    "e": "Acetazolamide induces bicarbonate loss leading to hyperchloraemic acidosis."
+   },
+   {
+    "q": "A child with distal RTA is most likely to develop which complication?",
+    "o": [
+     "Nephrolithiasis",
+     "Hyperkalaemia",
+     "Hypophosphataemia",
+     "Metabolic alkalosis"
+    ],
+    "a": 0,
+    "e": "Inability to acidify urine leads to calcium phosphate stone formation."
+   },
+   {
+    "q": "Winter's formula predicts PaCO2 of 32 mmHg. Which HCO3‑ value would give this result?",
+    "o": [
+     "14 mmol/L",
+     "18 mmol/L",
+     "22 mmol/L",
+     "26 mmol/L"
+    ],
+    "a": 0,
+    "e": "(1.5 × 14)+8 = 29 ± 2 ≈ 32 mmHg."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 45‑year‑old man with known type 2 diabetes presents with polyuria, vomiting, and Kussmaul breathing. ABG: pH 7.15, HCO3‑ 12 mmol/L, PaCO2 28 mmHg. Serum glucose 28 mmol/L, ketones +++.",
+    "qs": [
+     {
+      "q": "What is the primary acid‑base diagnosis?",
+      "a": "Severe diabetic ketoacidosis (high‑anion‑gap metabolic acidosis) with appropriate respiratory compensation."
+     },
+     {
+      "q": "What immediate management steps should be taken?",
+      "a": "Start isotonic saline, begin insulin infusion, monitor potassium, and correct electrolytes; bicarbonate only if pH <7.10."
+     },
+     {
+      "q": "How would you differentiate DKA from lactic acidosis in this patient?",
+      "a": "Presence of marked hyperglycaemia and positive serum/urine ketones points to DKA; lactate measurement would be normal or mildly elevated."
+     }
+    ]
+   },
+   {
+    "v": "A 30‑year‑old woman with Sjögren’s syndrome complains of muscle weakness and recurrent kidney stones. Labs: pH 7.28, HCO3‑ 18 mmol/L, PaCO2 30 mmHg, urine pH 6.2, serum K+ 3.2 mmol/L.",
+    "qs": [
+     {
+      "q": "What type of renal tubular acidosis does she have?",
+      "a": "Distal (type 1) RTA – alkaline urine despite systemic acidosis and hypokalaemia."
+     },
+     {
+      "q": "Why are kidney stones common in this condition?",
+      "a": "Inability to acidify urine leads to calcium phosphate precipitation."
+     },
+     {
+      "q": "What long‑term therapy is indicated?",
+      "a": "Alkali replacement with oral potassium citrate to correct acidosis and prevent stones."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Using PaCO2 ≤45 mmHg as a diagnostic cut‑off for metabolic acidosis.",
+   "Stating type 4 RTA has urine pH >5.5; it is usually <5.5.",
+   "Applying Winter's formula as a ΔPaCO2 per ΔHCO3‑ change rather than the full equation.",
+   "Confusing SPINT2‑related disease with congenital chloride diarrhoea.",
+   "Giving bicarbonate for any metabolic acidosis without considering pH threshold or volume status.",
+   "Failing to calculate the anion gap when evaluating high‑anion‑gap acidosis.",
+   "Assuming all hyperkalaemia in acidosis is due to renal failure; consider hypoaldosteronism.",
+   "Neglecting to assess urine anion gap when distinguishing renal from gastrointestinal causes of normal‑anion‑gap acidosis."
+  ],
+  "exam": [
+   "Define uncompensated (acute) respiratory acidosis. — pH <7.35 with PaCO2 >45 mmHg and no renal HCO3‑ rise; renal compensation needs >24 h.",
+   "What bedside history questions help differentiate metabolic from respiratory acidosis? — Ask about recent vomiting, diarrhoea, drug ingestion, sepsis (metabolic) and dyspnoea, COPD exacerbation, opioid use (respiratory).",
+   "How does the respiratory system compensate for primary metabolic acidosis? — Increases minute ventilation (Kussmaul breathing) to lower PaCO2 toward the value predicted by Winter's formula.",
+   "Interpret an ABG: pH 7.18, HCO3‑ 14 mmol/L, PaCO2 30 mmHg. — Primary metabolic acidosis with appropriate respiratory compensation (expected PaCO2 ≈30 mmHg).",
+   "Why is sodium bicarbonate avoided in mild metabolic acidosis? — It can cause volume overload, paradoxical intracellular acidosis, and worsen hypernatremia; benefits outweigh risks only when pH <7.20 or haemodynamic instability.",
+   "A patient with chronic metabolic acidosis has normal AG, alkaline urine pH, K+ 5.8 mmol/L. What diagnosis fits? — Type 4 renal tubular acidosis (hypoaldosteronism) causing hyperkalaemia and normal‑anion‑gap acidosis.",
+   "How do you distinguish distal (type 1) from proximal (type 2) RTA on labs? — Distal RTA: urine pH >5.5 despite systemic acidosis, hypokalaemia; proximal RTA: urine pH variable, often <5.5 after acid load, with bicarbonate wasting and possible glucosuria.",
+   "What is the primary treatment for distal RTA in a Sjögren patient? — Alkali therapy with oral sodium bicarbonate or potassium citrate to raise serum HCO3‑ and prevent stones.",
+   "Which condition is most common cause of type 4 RTA? — Diabetic nephropathy causing hypoaldosteronism and hyperkalaemia.",
+   "Describe the compensation expected in chronic respiratory acidosis. — Renal retention of bicarbonate raises HCO3‑ by ~4 mmol/L for each 10 mmHg rise in PaCO2 above 45.",
+   "Why can hyperkalaemia worsen metabolic acidosis? — Cellular exchange of K+ for H+ shifts H+ out of cells, lowering extracellular pH.",
+   "When is renal replacement therapy indicated for acidosis? — Severe refractory metabolic acidosis (pH <7.10) despite optimal medical therapy, or uremic acidosis with renal failure.",
+   "What bedside sign suggests severe metabolic acidosis? — Kussmaul respirations – deep, rapid breathing visible on observation.",
+   "How does pregnancy alter acid‑base interpretation? — Physiologic respiratory alkalosis (PaCO2 30‑32 mmHg) is normal; a lower pH may still be compensated."
+  ],
+  "model": "openai/gpt-oss-20b",
+  "generatedAt": "2026-10-22",
+  "checked": "2026-10-22",
+  "trimmed": 6
+ }
 }

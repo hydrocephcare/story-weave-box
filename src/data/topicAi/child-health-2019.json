@@ -1,0 +1,170 @@
+{
+ "medical": true,
+ "title": "Paediatric Child Health 2019",
+ "subject": "Paediatrics",
+ "summary": "A concise guide for Year‑4 students on common paediatric conditions in East African low‑resource settings, focusing on clinical reasoning, diagnosis, and pragmatic management.",
+ "aka": [
+  "Child Health 2019",
+  "Paediatrics 2019"
+ ],
+ "sections": [
+  {
+   "h": "Definition and diagnosis",
+   "p": "Child health refers to the medical care of infants, children and adolescents, with emphasis on prevention, early detection and treatment of common illnesses.",
+   "b": [
+    "Infants <1 year",
+    "Children 1–12 years",
+    "Adolescents 13–18 years"
+   ]
+  },
+  {
+   "h": "Severity and staging",
+   "p": "Severity is graded by clinical presentation, vital signs and laboratory markers, guiding urgency of intervention.",
+   "b": [
+    "Mild – stable vitals, no organ dysfunction",
+    "Moderate – signs of dehydration or mild shock",
+    "Severe – organ failure or life‑threatening complications"
+   ]
+  },
+  {
+   "h": "Causes, most likely first",
+   "p": "In low‑resource East Africa, infections dominate, followed by nutritional deficiencies and endemic diseases.",
+   "b": [
+    "Infectious: malaria, bacterial sepsis, diarrhoea, pneumonia, HIV",
+    "Endemic: schistosomiasis, helminths, sickle cell",
+    "Nutritional: kwashiorkor, marasmus, vitamin A deficiency"
+   ]
+  },
+  {
+   "h": "How it presents",
+   "p": "Symptoms vary by age but common features include fever, lethargy, poor feeding, vomiting, and respiratory distress.",
+   "b": [
+    "Infants: poor feeding, irritability, fever",
+    "Children: cough, diarrhoea, rash, weight loss",
+    "Adolescents: fatigue, menstrual irregularities, growth delay"
+   ]
+  },
+  {
+   "h": "Investigations",
+   "p": "Prioritise bedside tests; use laboratory tests when available, recognising limitations.",
+   "t": [
+    {
+     "a": "Rapid malaria test",
+     "b": "Detects Plasmodium antigens – positive confirms malaria, negative rules out in low prevalence"
+    },
+    {
+     "a": "Full blood count",
+     "b": "Assesses anaemia, infection (leukocytosis), and thrombocytopenia – abnormal values guide treatment"
+    },
+    {
+     "a": "C-reactive protein",
+     "b": "Elevated in bacterial infection – helps differentiate from viral causes"
+    },
+    {
+     "a": "Urine dipstick",
+     "b": "Detects proteinuria or haematuria – suggests renal involvement or urinary tract infection"
+    },
+    {
+     "a": "Chest X‑ray",
+     "b": "Shows infiltrates or effusion – confirms pneumonia or pleural effusion; use if available"
+    }
+   ]
+  },
+  {
+   "h": "Red flags and complications",
+   "p": "Urgent signs requiring immediate referral or intervention.",
+   "b": [
+    "Severe dehydration (sunken eyes, delayed capillary refill)",
+    "Respiratory distress (nasal flaring, grunting)",
+    "Severe pallor or cyanosis",
+    "Unexplained convulsions",
+    "Persistent vomiting >24h"
+   ]
+  },
+  {
+   "h": "Management",
+   "p": "Treat the underlying cause, provide supportive care and monitor closely.",
+   "b": [
+    "Antimalarial (artemisinin‑based) for confirmed malaria",
+    "IV fluids for dehydration",
+    "Antibiotics (amoxicillin or ceftriaxone) for bacterial infection",
+    "Vitamin A for measles",
+    "Iron for anaemia",
+    "Referral to higher centre for severe cases"
+   ]
+  },
+  {
+   "h": "Follow‑up and prevention",
+   "p": "Ensure continuity of care, immunisation and nutrition.",
+   "b": [
+    "Schedule review within 48–72h",
+    "Administer vaccines per schedule",
+    "Counsel on exclusive breastfeeding",
+    "Provide nutritional supplements"
+   ]
+  },
+  {
+   "h": "Often confused with",
+   "p": "Differential diagnoses that mimic common presentations.",
+   "b": [
+    "Severe viral gastroenteritis vs bacterial sepsis",
+    "Pneumonia vs bronchiolitis",
+    "Kwashiorkor vs marasmus"
+   ]
+  },
+  {
+   "h": "Where results can mislead",
+   "p": "Lab or clinical findings that may be falsely normal or abnormal in this setting.",
+   "b": [
+    "Low haemoglobin may be normal in chronic disease",
+    "CRP can be normal in early bacterial infection",
+    "Malaria rapid test false negative in low parasitaemia"
+   ]
+  }
+ ],
+ "whenToSeekHelp": [
+  "Severe dehydration",
+  "Respiratory distress",
+  "Unexplained convulsions",
+  "Persistent vomiting >24h",
+  "Severe pallor or cyanosis"
+ ],
+ "faq": [
+  {
+   "q": "What is the first step in managing a child with suspected malaria?",
+   "a": "Confirm with a rapid diagnostic test; if positive, start antimalarial therapy immediately."
+  },
+  {
+   "q": "How do you differentiate bacterial from viral pneumonia on exam?",
+   "a": "Look for high fever, productive cough, tachypnoea, and chest indrawing; bacterial pneumonia often has more pronounced signs."
+  },
+  {
+   "q": "Why is vitamin A given to children with measles?",
+   "a": "It reduces mortality by improving immune function and mucosal integrity."
+  }
+ ],
+ "exam": [
+  "A 6‑month‑old presents with fever and poor feeding. What is the next best investigation? — Rapid malaria test; if negative, consider bacterial sepsis and obtain full blood count.",
+  "A 4‑year‑old has cough and chest indrawing. What antibiotic is first line? — Amoxicillin or ampicillin for uncomplicated pneumonia; consider ceftriaxone if severe.",
+  "A 12‑year‑old with weight loss and night sweats is suspected of TB. What is the initial diagnostic step? — Sputum microscopy or GeneXpert; if unavailable, chest X‑ray and clinical assessment.",
+  "A child with diarrhoea has sunken eyes and delayed capillary refill. What is the immediate management? — Start IV fluids with isotonic saline and monitor urine output.",
+  "A 2‑year‑old has jaundice and hepatomegaly. What is the most likely cause in this setting? — Hepatitis B infection; confirm with serology if possible.",
+  "A 10‑year‑old presents with pallor and easy bruising. What is the first laboratory test? — Full blood count to assess haemoglobin and platelet levels.",
+  "A child with fever and rash has a positive rapid malaria test but no other signs of infection. What is the next step? — Treat malaria and observe; if rash persists, consider dengue or viral exanthem.",
+  "A 3‑year‑old has persistent vomiting and lethargy. What red flag indicates urgent referral? — Persistent vomiting >24h or signs of dehydration (sunken eyes, delayed capillary refill)."
+ ],
+ "related": [
+  "Malaria in Children",
+  "Bacterial Sepsis",
+  "Pneumonia",
+  "Diarrhoeal Disease",
+  "Vitamin A Deficiency",
+  "Sickle Cell Disease",
+  "HIV in Children",
+  "Immunisation Schedule"
+ ],
+ "kind": "disease",
+ "model": "openai/gpt-oss-20b",
+ "generatedAt": "2026-10-22",
+ "reviewed": false
+}

@@ -123,5 +123,476 @@
  "kind": "disease",
  "model": "gemini",
  "generatedAt": "2026-10-13",
- "reviewed": false
+ "reviewed": false,
+ "deep": {
+  "sections": [
+   {
+    "h": "Bedside: history and how to examine",
+    "p": "A focused history and systematic neurologic exam allow rapid differentiation of stroke type, localisation and severity while recognising red‑flags that demand immediate action.",
+    "b": [
+     "Time of symptom onset and exact time last known well; essential for reperfusion eligibility",
+     "Mode of onset – sudden maximal deficit versus progressive – suggests embolic versus thrombotic",
+     "Associated symptoms: headache, vomiting, seizure, loss of consciousness – point to haemorrhage or posterior circulation",
+     "Vascular risk profile: hypertension, diabetes, atrial fibrillation, smoking, HIV, pregnancy, recent surgery (within 3 months)",
+     "Medication history: antiplatelets, warfarin, DOACs, herbal anticoagulants, steroids",
+     "Prior stroke/TIA, carotid disease, cardiac murmur, PFO – guide secondary prevention",
+     "Family history of early stroke, sickle cell disease – raise suspicion for rare causes"
+    ],
+    "t": [
+     {
+      "a": "Level of consciousness (GCS)",
+      "b": "Establish airway safety; a GCS <8 mandates airway protection; does not differentiate ischaemic from haemorrhagic"
+     },
+     {
+      "a": "Cranial nerve exam – facial symmetry, eye movements, pupillary response",
+      "b": "Identify cortical versus brain‑stem involvement; central facial palsy spares upper face, peripheral involves whole side; cannot determine lesion size"
+     },
+     {
+      "a": "Motor exam – arm and leg strength (Medical Research Council 0‑5)",
+      "b": "Quantifies hemiparesis; asymmetry >1 grade suggests cortical stroke; cannot differentiate stroke aetiology"
+     },
+     {
+      "a": "Sensory exam – pinprick, temperature, proprioception",
+      "b": "Detects contralateral loss; cortical lesions give cortical sensory loss (extinction); bedside testing cannot locate exact vascular territory"
+     },
+     {
+      "a": "Language assessment – naming, repetition, comprehension (FAST)",
+      "b": "Aphasia indicates dominant hemisphere involvement; dysarthria may be brain‑stem; bedside cannot grade severity beyond mild/moderate"
+     },
+     {
+      "a": "Coordination – finger‑nose, heel‑shin, Romberg",
+      "b": "Cerebellar signs point to posterior circulation; absence does not exclude small cerebellar infarct"
+     },
+     {
+      "a": "Gait and balance (if patient can sit/stand)",
+      "b": "Ataxia suggests posterior circulation; bedside cannot assess subtle gait changes in bedridden patients"
+     }
+    ]
+   },
+   {
+    "h": "Investigations and how to read them",
+    "p": "Select investigations that answer the key clinical questions: is the stroke haemorrhagic, what is the vascular territory, and what secondary causes are present.",
+    "b": [
+     "Non‑contrast CT head – rule out intracranial bleed; hyperdense area = haemorrhage, early ischaemic changes may be subtle",
+     "CT angiography (CTA) – identifies large‑vessel occlusion; clot sign or absent opacification indicates target for thrombectomy",
+     "MRI brain with DWI – most sensitive for acute infarct; bright DWI with low ADC confirms cytotoxic edema",
+     "Carotid duplex ultrasound – assesses extracranial stenosis; >70 % stenosis warrants endarterectomy",
+     "Echocardiography (transthoracic then trans‑oesophageal if needed) – screens for cardiac source of emboli, PFO, mural thrombus",
+     "ECG and cardiac monitoring – detect atrial fibrillation; new‑onset AF changes management",
+     "Basic labs – CBC, electrolytes, renal function, glucose, coagulation (INR, aPTT), lipid profile; INR >1.7 contraindicates alteplase",
+     "If CT unavailable, perform bedside transcranial Doppler to detect large‑vessel occlusion; refer for transfer"
+    ],
+    "t": [
+     {
+      "a": "CT head (non‑contrast)",
+      "b": "Answers: haemorrhage vs ischaemia; hyperdense bleed = haemorrhagic, loss of grey‑white differentiation = early ischaemia; if unavailable, give aspirin after ruling out bleed clinically"
+     },
+     {
+      "a": "CTA neck & head",
+      "b": "Answers: location of arterial occlusion; absent contrast in MCA = M1 occlusion; if CTA not possible, consider transfer for possible thrombectomy"
+     },
+     {
+      "a": "MRI DWI/ADC",
+      "b": "Answers: confirm acute infarct within minutes; bright DWI, low ADC = cytotoxic edema; if MRI not available, CT remains primary"
+     },
+     {
+      "a": "Carotid duplex",
+      "b": "Answers: presence of high‑grade stenosis; peak systolic velocity >230 cm/s = >70 % stenosis; if unavailable, arrange referral for CTA/MRA"
+     },
+     {
+      "a": "Echocardiography",
+      "b": "Answers: cardiac embolic source; mobile thrombus or PFO with right‑to‑left shunt; if unavailable, consider trans‑esophageal echo at tertiary centre"
+     },
+     {
+      "a": "ECG/telemetry",
+      "b": "Answers: atrial fibrillation; irregularly irregular rhythm; if unavailable, obtain 24‑h Holter when patient stabilised"
+     }
+    ]
+   },
+   {
+    "h": "Diagnosis, staging and severity",
+    "p": "Classification systems integrate clinical findings and imaging to guide acute therapy and prognostication.",
+    "b": [
+     "NIH Stroke Scale (NIHSS) – quantifies neurological deficit; 0 = no stroke, 1‑4 = minor, 5‑15 = moderate, 16‑20 = moderately severe, >20 = severe"
+    ],
+    "t": [
+     {
+      "a": "Stroke subtype (TOAST)",
+      "b": "Answers: aetiology – large‑artery atherosclerosis, cardio‑embolism, small‑vessel lacune, other determined, undetermined; guides secondary prevention"
+     },
+     {
+      "a": "Oxford Community Stroke Project (OCSP) classification",
+      "b": "Answers: vascular territory – TACI, PACI, LACI, POCI; predicts outcome and imaging needs"
+     },
+     {
+      "a": "Imaging‑based ASPECTS (CT)",
+      "b": "Answers: early ischaemic changes in MCA territory; score 0‑10, >6 predicts benefit from thrombolysis"
+     },
+     {
+      "a": "Modified Rankin Scale (mRS) at discharge",
+      "b": "Answers: functional outcome; 0 = no symptoms, 6 = death; used for research and rehab planning"
+     }
+    ]
+   },
+   {
+    "h": "Look‑alike conditions",
+    "p": "Several non‑vascular emergencies mimic stroke; careful history and targeted bedside tests separate them.",
+    "b": [
+     "Seizure with post‑ictal paralysis (Todd’s paresis) – resolves within 24 h, EEG shows epileptiform activity",
+     "Hypoglycaemia – finger‑stick <2.8 mmol/L, improves with glucose, may cause focal deficits",
+     "Migraine aura – gradual onset, positive visual phenomena, normal imaging",
+     "Brain tumour – progressive deficit over weeks, often with headache, MRI shows mass",
+     "Infective meningitis/encephalitis – fever, neck stiffness, CSF pleocytosis, MRI shows meningeal enhancement"
+    ],
+    "t": [
+     {
+      "a": "Todd’s paresis",
+      "b": "Points: recent seizure, fluctuating deficit; separate by EEG and rapid clinical improvement; no acute CT changes"
+     },
+     {
+      "a": "Hypoglycaemia",
+      "b": "Points: altered mental status, known diabetes; bedside glucometer <2.8 mmol/L; glucose administration resolves deficit; CT normal"
+     },
+     {
+      "a": "Migraine aura",
+      "b": "Points: gradual crescendo, positive visual symptoms, normal neuro exam between attacks; CT/MRI normal; treat with analgesia"
+     },
+     {
+      "a": "Brain tumour",
+      "b": "Points: subacute progression, constitutional symptoms; MRI with contrast shows enhancing lesion; CT may show mass effect"
+     },
+     {
+      "a": "Meningitis/encephalitis",
+      "b": "Points: fever, neck rigidity, CSF pleocytosis; MRI shows cortical/subcortical hyperintensity; treat with antibiotics/antivirals"
+     }
+    ]
+   },
+   {
+    "h": "Management step by step",
+    "p": "A systematic approach saves time and reduces errors. Follow the ladder from immediate stabilization to definitive reperfusion or hemorrhage control, then to secondary prevention and monitoring.",
+    "b": [
+     "1. Airway, Breathing, Circulation – secure airway if GCS <8, give high‑flow oxygen, obtain two large‑bore IV lines.",
+     "2. Rapid glucose check – treat hypoglycaemia (<3.0 mmol/L) with dextrose before any other decision.",
+     "3. Immediate non‑contrast CT head within 20 min of arrival to differentiate ischaemic from haemorrhagic stroke.",
+     "4. If CT shows no haemorrhage and symptom onset <4.5 h, consider IV alteplase; contraindications include recent intracranial surgery (<3 months), INR > 1.7, uncontrolled hypertension (>185/110 mmHg).",
+     "5. For large‑vessel occlusion within 6 h (or selected 6‑24 h) consider mechanical thrombectomy; requires CTA or MRA to identify target vessel.",
+     "6. Initiate antiplatelet (aspirin) after haemorrhage excluded; avoid antiplatelet loading before CT.",
+     "7. Begin secondary‑prevention measures: statin, blood‑pressure control, anticoagulation for atrial fibrillation (warfarin or DOAC) after 24 h if no haemorrhage.",
+     "8. Admit to stroke unit; monitor neurological status (NIHSS) every 1 h for first 24 h, then q4‑6 h; watch for worsening edema, seizures, or cardiac arrhythmias."
+    ]
+   },
+   {
+    "h": "Drug effects and what to do",
+    "p": "Understanding adverse effects and interactions prevents iatrogenic harm, especially in low‑resource settings where monitoring may be limited.",
+    "b": [
+     "Alteplase – risk of intracranial haemorrhage; stop infusion if severe headache, vomiting, or neurological decline; avoid in uncontrolled hypertension.",
+     "Aspirin – gastrointestinal irritation and bleeding; give proton‑pump inhibitor if ulcer risk; avoid concurrent NSAIDs.",
+     "Clopidogrel – rare neutropenia; monitor full blood count if prolonged therapy; avoid strong CYP2C19 inhibitors (e.g., omeprazole).",
+     "Warfarin – over‑anticoagulation (INR > 3) increases bleed risk; reverse with vitamin K if urgent surgery needed; DOACs do not require routine monitoring but avoid in severe renal impairment.",
+     "Statins – myopathy, especially with fibrates; check CK if muscle pain; avoid in active liver disease (ALT > 3 × ULN).",
+     "Antihypertensives (IV labetalol, nicardipine) – excessive drop can worsen cerebral perfusion; titrate to keep MAP ≥ 70 mmHg."
+    ]
+   },
+   {
+    "h": "Complications and when to escalate",
+    "p": "Early recognition of complications guides timely escalation to intensive care or neurosurgery.",
+    "b": [
+     "Neurological deterioration (increase NIHSS ≥ 4 points) – repeat CT urgently; consider malignant cerebral oedema, haemorrhagic transformation, or new infarct.",
+     "Signs of raised intracranial pressure (projectile vomiting, bradycardia, hypertension) – raise head of bed, start osmotherapy (mannitol) and call neurosurgery.",
+     "Seizure within 7 days – give loading dose of levetiracetam; monitor for status epilepticus.",
+     "Aspiration pneumonia – assess swallowing (water swallow test); start broad‑spectrum antibiotics if fever or infiltrates appear.",
+     "Deep‑vein thrombosis – start prophylactic low‑molecular‑weight heparin after 24 h if no bleed risk.",
+     "Cardiac arrhythmia (new atrial fibrillation) – obtain ECG, consider anticoagulation after haemorrhage ruled out."
+    ]
+   },
+   {
+    "h": "Complicating and confounding factors",
+    "p": "Co‑morbidities common in low‑resource settings modify presentation, investigations and treatment choices.",
+    "b": [
+     "HIV – higher risk of opportunistic CNS infections; obtain CD4 count; avoid steroids unless cryptococcal meningitis excluded.",
+     "Tuberculosis meningitis – can mimic stroke; CSF analysis required if fever or meningeal signs present; defer thrombolysis.",
+     "Malnutrition – low albumin may exaggerate oedema; adjust fluid management; monitor for electrolyte disturbances.",
+     "Pregnancy – avoid radiation; use MRI without gadolinium if CT unavailable; alteplase is contraindicated; consider mechanical thrombectomy if indicated.",
+     "Diabetes – tighter glucose control (4‑10 mmol/L); avoid hypoglycaemia which mimics stroke.",
+     "Herbal remedies (e.g., garlic, ginkgo) – may increase bleeding risk; ask specifically and hold before thrombolysis.",
+     "Alcohol dependence – risk of withdrawal seizures; give benzodiazepine prophylaxis if withdrawal suspected.",
+     "Renal failure – avoid contrast‑enhanced CTA if eGFR < 30 mL/min; use non‑contrast MRA or Doppler ultrasound.",
+     "Liver failure – avoid warfarin dose escalation; prefer DOACs with hepatic safety data."
+    ]
+   },
+   {
+    "h": "Special groups",
+    "p": "Tailor stroke care to vulnerable populations while respecting resource limitations.",
+    "b": [
+     "Children – stroke is rare; use MRI with diffusion‑weighted imaging for diagnosis; thrombolysis only in specialized centres; focus on underlying arteriopathy.",
+     "Pregnant women – prioritize maternal safety; MRI preferred; if mechanical thrombectomy needed, use radiation‑shielded techniques; avoid alteplase.",
+     "Elderly (>80 y) – higher bleed risk; use stricter blood‑pressure targets; consider frailty when deciding on thrombectomy.",
+     "People with HIV – screen for opportunistic infections; adjust antiretroviral therapy if interacting with DOACs.",
+     "Low‑resource settings – if CT unavailable, use bedside NIHSS and clinical decision rules; start aspirin promptly; arrange transfer for thrombectomy if possible."
+    ]
+   },
+   {
+    "h": "Exam‑style questions",
+    "p": "Use these prompts to test knowledge of the above material.",
+    "b": [
+     "1. A 68‑year‑old presents 2 h after sudden right hemiparesis. CT shows no bleed. List absolute contraindications to IV alteplase.",
+     "2. Describe the step‑by‑step bedside examination to differentiate central from peripheral facial palsy.",
+     "3. A patient on warfarin with INR = 2.0 has an acute ischemic stroke. What is the correct management regarding thrombolysis?",
+     "4. Explain how you would modify blood‑pressure management in a patient with malignant cerebral oedema.",
+     "5. A pregnant woman at 30 weeks develops a left MCA infarct. What imaging modality and reperfusion strategy are appropriate?",
+     "6. Identify three herbal or over‑the‑counter agents that increase intracerebral‑bleed risk and how you would manage a patient taking them.",
+     "7. In a low‑resource hospital without CT, what clinical criteria would justify immediate aspirin administration?",
+     "8. List the monitoring parameters and frequency for the first 24 h after successful thrombolysis.",
+     "9. A HIV‑positive patient with CD4 = 80 cells/µL presents with stroke‑like symptoms and fever. What additional investigations are required?",
+     "10. Define malignant cerebral oedema and the threshold for neurosurgical decompression.",
+     "11. How does severe renal impairment affect the choice of antithrombotic after an ischemic stroke?",
+     "12. Compare the indications for mechanical thrombectomy versus IV thrombolysis in terms of time window and vessel size."
+    ]
+   }
+  ],
+  "facts": [
+   "Ischemic stroke accounts for ~85% of all strokes; hemorrhagic for ~15%.",
+   "Time window for IV alteplase is ≤4.5 hours from symptom onset.",
+   "Absolute contraindication: recent intracranial or intraspinal surgery within 3 months.",
+   "Blood pressure target before thrombolysis: ≤185/110 mmHg.",
+   "NIH Stroke Scale ≥6 indicates moderate severity; ≥20 severe.",
+   "CT head must be performed within 20 minutes of arrival to rule out hemorrhage.",
+   "Atrial fibrillation increases stroke risk five‑fold; anticoagulate if CHA₂DS₂‑VASc ≥2.",
+   "Secondary prevention: antiplatelet (aspirin) for ischemic, BP control, statin, smoking cessation."
+  ],
+  "mnemonics": [],
+  "vivas": [
+   {
+    "q": "Define the ischemic penumbra and its clinical relevance.",
+    "a": "The penumbra is hypoperfused tissue surrounding the infarct core that is still viable; rapid reperfusion can salvage it, justifying urgent thrombolysis.",
+    "hot": true
+   },
+   {
+    "q": "What is the first bedside step in a suspected acute stroke?",
+    "a": "Assess airway, breathing, circulation, then obtain a focused neurological exam using the NIHSS.",
+    "hot": true
+   },
+   {
+    "q": "List the key history questions to ask in the emergency department for stroke.",
+    "a": "Time of onset, symptom progression, last known well, anticoagulant use, recent surgery, hypertension, diabetes, atrial fibrillation, pregnancy."
+   },
+   {
+    "q": "How do you differentiate a central from a peripheral facial palsy?",
+    "a": "Central lesions spare the forehead (upper face) due to bilateral cortical input; peripheral lesions involve the whole face including the forehead."
+   },
+   {
+    "q": "What imaging modality is the gold standard to differentiate ischemic from hemorrhagic stroke?",
+    "a": "Non‑contrast CT head performed immediately; hyperdense bleed indicates hemorrhage, early ischemic changes may be subtle.",
+    "hot": true
+   },
+   {
+    "q": "What are the absolute contraindications to IV alteplase?",
+    "a": "Intracranial hemorrhage, recent intracranial/intraspinal surgery ≤3 months, INR >1.7, platelets <100 ×10⁹/L, uncontrolled hypertension >185/110, active internal bleeding.",
+    "hot": true
+   },
+   {
+    "q": "A patient on warfarin with INR 2.5 presents with an ischemic stroke. Can you give alteplase?",
+    "a": "No; INR >1.7 is an absolute contraindication and reversal does not make thrombolysis permissible."
+   },
+   {
+    "q": "Which necrosis type is seen on autopsy of an ischemic stroke?",
+    "a": "Liquefactive necrosis.",
+    "past": true
+   },
+   {
+    "q": "What physiological parameter is calculated as heart rate multiplied by stroke volume?",
+    "a": "Cardiac output.",
+    "past": true
+   },
+   {
+    "q": "Which CK isoenzyme indicates brain injury?",
+    "a": "CK‑BB (brain‑type creatine kinase).",
+    "past": true
+   },
+   {
+    "q": "Histology 8 hours after an acute ischemic stroke typically shows which change?",
+    "a": "Red (eosinophilic) neurons with nuclear pyknosis.",
+    "past": true
+   },
+   {
+    "q": "Which imaging test screens children with sickle cell disease for stroke risk?",
+    "a": "Transcranial Doppler ultrasound; velocities >200 cm/s indicate high risk.",
+    "past": true
+   },
+   {
+    "q": "The most common arterial territory for cerebral ischemia is?",
+    "a": "Middle cerebral artery (MCA) territory.",
+    "past": true
+   },
+   {
+    "q": "Wernicke’s aphasia results from infarction of which arterial territory?",
+    "a": "Inferior division of the MCA supplying the posterior superior temporal gyrus.",
+    "past": true
+   },
+   {
+    "q": "In a right‑handed patient with dominant‑hemisphere stroke, which higher function is most likely impaired?",
+    "a": "Language (expressive or receptive) and related praxis.",
+    "past": true
+   },
+   {
+    "q": "Why is aggressive blood pressure lowering avoided after an ischemic stroke unless thrombolysis is planned?",
+    "a": "Excessive reduction may worsen cerebral perfusion in the penumbra; maintain MAP to support collateral flow."
+   },
+   {
+    "q": "What bedside test helps differentiate a posterior circulation stroke?",
+    "a": "Assess gait, coordination, nystagmus, and cranial nerve VI palsy; vertigo and ataxia suggest posterior circulation."
+   }
+  ],
+  "mcqs": [
+   {
+    "q": "A 68‑year‑old man arrives 2 hours after sudden right‑sided weakness. His BP is 190/115 mmHg. Which is the next best step?",
+    "o": [
+     "Start IV alteplase immediately.",
+     "Lower BP to ≤185/110 then give alteplase.",
+     "Give aspirin and admit to stroke unit.",
+     "Obtain MRI before any therapy."
+    ],
+    "a": 1,
+    "e": "BP must be reduced below 185/110 before thrombolysis."
+   },
+   {
+    "q": "Which of the following is NOT an absolute contraindication to IV thrombolysis?",
+    "o": [
+     "Recent minor stroke within 3 months.",
+     "Platelet count 80 ×10⁹/L.",
+     "Active internal bleeding.",
+     "INR 1.5 on warfarin."
+    ],
+    "a": 0,
+    "e": "Minor stroke within 3 months is a relative, not absolute, contraindication."
+   },
+   {
+    "q": "A 12‑year‑old with sickle cell disease has a TCD velocity of 210 cm/s. What is the recommended intervention?",
+    "o": [
+     "Start chronic transfusion program.",
+     "Begin aspirin therapy.",
+     "Refer for bone marrow transplant.",
+     "Observe and repeat TCD in 6 months."
+    ],
+    "a": 0,
+    "e": "Velocities >200 cm/s warrant regular transfusions to reduce stroke risk."
+   },
+   {
+    "q": "Which CT finding is most specific for early ischemic change?",
+    "o": [
+     "Hyperdense artery sign.",
+     "Loss of gray‑white differentiation.",
+     "Effacement of sulci.",
+     "All of the above."
+    ],
+    "a": 3,
+    "e": "All listed signs indicate early ischemia on non‑contrast CT."
+   },
+   {
+    "q": "A patient on warfarin with INR 2.0 presents with an acute ischemic stroke. Which statement is correct?",
+    "o": [
+     "Give IV alteplase after PCC reversal.",
+     "Alteplase is contraindicated; manage with antiplatelet.",
+     "Switch to low‑molecular‑weight heparin.",
+     "Proceed with mechanical thrombectomy if indicated."
+    ],
+    "a": 3,
+    "e": "Thrombolysis is contraindicated; mechanical thrombectomy may still be an option."
+   },
+   {
+    "q": "Which clinical sign distinguishes a total anterior circulation infarct (TACI) from a partial anterior circulation infarct (PACI)?",
+    "o": [
+     "Presence of homonymous hemianopia.",
+     "Contralateral hemiplegia with higher cortical dysfunction.",
+     "Isolated dysarthria.",
+     "Vertigo and ataxia."
+    ],
+    "a": 1,
+    "e": "TACI includes hemiplegia plus higher cortical dysfunction (aphasia or neglect)."
+   },
+   {
+    "q": "Which CK isoenzyme rises first after an acute intracerebral hemorrhage?",
+    "o": [
+     "CK‑MM.",
+     "CK‑MB.",
+     "CK‑BB.",
+     "CK‑total."
+    ],
+    "a": 2,
+    "e": "CK‑BB is brain‑specific and rises early in neurological injury."
+   },
+   {
+    "q": "A 55‑year‑old woman with atrial fibrillation presents with left‑sided weakness 5 hours after onset. Which therapy is indicated?",
+    "o": [
+     "IV alteplase.",
+     "Endovascular thrombectomy if large‑vessel occlusion is confirmed.",
+     "Begin aspirin only.",
+     "No reperfusion therapy due to time window."
+    ],
+    "a": 1,
+    "e": "Thrombectomy is effective up to 24 hours for selected large‑vessel occlusions."
+   }
+  ],
+  "cases": [
+   {
+    "v": "A 70‑year‑old man is brought 90 minutes after sudden onset of left‑sided weakness, facial droop, and slurred speech. BP 180/100 mmHg, NIHSS 12. CT head shows no bleed.",
+    "qs": [
+     {
+      "q": "Which bedside sign would you look for to confirm a cortical stroke?",
+      "a": "Presence of aphasia or neglect with contralateral motor deficit suggests cortical involvement."
+     },
+     {
+      "q": "What secondary prevention measures should be instituted after acute care?",
+      "a": "Antiplatelet (aspirin), statin, strict BP control, diabetes management, smoking cessation, and cardiac monitoring for atrial fibrillation."
+     }
+    ]
+   },
+   {
+    "v": "A 30‑year‑old woman with known PFO presents with sudden right‑sided weakness and facial numbness. MRI shows a left MCA infarct. She is not on anticoagulation.",
+    "qs": [
+     {
+      "q": "What is the most likely mechanism of her stroke?",
+      "a": "Paradoxical embolism through the PFO from a venous thrombus."
+     },
+     {
+      "q": "What investigation should be performed after stabilization?",
+      "a": "Transesophageal echocardiography with bubble study to confirm right‑to‑left shunt."
+     },
+     {
+      "q": "What long‑term management is recommended?",
+      "a": "Consider percutaneous PFO closure and antiplatelet therapy; address any hypercoagulable states."
+     }
+    ]
+   }
+  ],
+  "mistakes": [
+   "Confusing central facial palsy with lower‑face nucleus lesion; remember forehead sparing.",
+   "Assuming INR reversal makes alteplase safe; INR >1.7 remains an absolute contraindication.",
+   "Using a 3‑week cut‑off for recent surgery; the correct window is 3 months.",
+   "Lowering blood pressure aggressively before imaging; BP must be controlled only after ruling out hemorrhage.",
+   "Failing to assess for large‑vessel occlusion beyond the 4.5‑hour window, missing thrombectomy opportunity.",
+   "Neglecting to screen for atrial fibrillation in cryptogenic strokes, losing a key secondary prevention target.",
+   "Prescribing antiplatelet therapy before confirming absence of hemorrhage on CT.",
+   "Over‑relying on MRI when CT is unavailable; CT can still guide acute management."
+  ],
+  "exam": [
+   "Define the ischemic penumbra and its clinical relevance. — The penumbra is hypoperfused tissue surrounding the infarct core that is still viable; rapid reperfusion can salvage it, justifying urgent thrombolysis.",
+   "What is the first bedside step in a suspected acute stroke? — Assess airway, breathing, circulation, then obtain a focused neurological exam using the NIHSS.",
+   "List the key history questions to ask in the emergency department for stroke. — Time of onset, symptom progression, last known well, anticoagulant use, recent surgery, hypertension, diabetes, atrial fibrillation, pregnancy.",
+   "How do you differentiate a central from a peripheral facial palsy? — Central lesions spare the forehead (upper face) due to bilateral cortical input; peripheral lesions involve the whole face including the forehead.",
+   "What imaging modality is the gold standard to differentiate ischemic from hemorrhagic stroke? — Non‑contrast CT head performed immediately; hyperdense bleed indicates hemorrhage, early ischemic changes may be subtle.",
+   "What are the absolute contraindications to IV alteplase? — Intracranial hemorrhage, recent intracranial/intraspinal surgery ≤3 months, INR >1.7, platelets <100 ×10⁹/L, uncontrolled hypertension >185/110, active internal bleeding.",
+   "A patient on warfarin with INR 2.5 presents with an ischemic stroke. Can you give alteplase? — No; INR >1.7 is an absolute contraindication and reversal does not make thrombolysis permissible.",
+   "Which necrosis type is seen on autopsy of an ischemic stroke? — Liquefactive necrosis.",
+   "What physiological parameter is calculated as heart rate multiplied by stroke volume? — Cardiac output.",
+   "Which CK isoenzyme indicates brain injury? — CK‑BB (brain‑type creatine kinase).",
+   "Histology 8 hours after an acute ischemic stroke typically shows which change? — Red (eosinophilic) neurons with nuclear pyknosis.",
+   "Which imaging test screens children with sickle cell disease for stroke risk? — Transcranial Doppler ultrasound; velocities >200 cm/s indicate high risk.",
+   "The most common arterial territory for cerebral ischemia is? — Middle cerebral artery (MCA) territory.",
+   "Wernicke’s aphasia results from infarction of which arterial territory? — Inferior division of the MCA supplying the posterior superior temporal gyrus."
+  ],
+  "model": "openai/gpt-oss-120b",
+  "generatedAt": "2026-10-22",
+  "checked": "2026-10-22"
+ }
 }
