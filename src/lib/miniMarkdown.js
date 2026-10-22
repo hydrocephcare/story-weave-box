@@ -191,11 +191,11 @@ function recallBlock(lines, i) {
   let j = i + 1;
   while (j < lines.length && !lines[j].trim()) j++;
   const body = [];
-  while (j < lines.length && !questionStart(lines[j]) && !isBlock(lines[j]) && !/^\\*\\*\\s*(?:Question\\s*|Q)?\\d/.test(lines[j].trim())) {
+  while (j < lines.length && !questionStart(lines[j]) && !isBlock(lines[j]) && !/^\*\*\s*(?:Question\s*|Q)?\d/.test(lines[j].trim())) {
     if (!lines[j].trim()) {
       const next = nextNonBlank(lines, j + 1);
-      if (next >= lines.length || questionStart(lines[next]) || isBlock(lines[next]) || /^\\*\\*\\s*(?:Question\\s*|Q)?\\d/.test(lines[next].trim())) break;
-      body.push(\"\");
+      if (next >= lines.length || questionStart(lines[next]) || isBlock(lines[next]) || /^\*\*\s*(?:Question\s*|Q)?\d/.test(lines[next].trim())) break;
+      body.push("");
       j++;
       continue;
     }
@@ -204,9 +204,9 @@ function recallBlock(lines, i) {
   if (!body.some((line) => line.trim())) return null;
   const first = body.findIndex((line) => line.trim());
   const model = body[first].trim().match(MODEL);
-  if (model) body[first] = model[1] || \"\";
-  const inner = mdToHtml(body.join(\"\\n\")).html;
-  return [\"<details class=\\\"qa qa-recall\\\"><summary><span class=\\\"qa-n\\\">\" + esc(m[1]) + \"</span><span class=\\\"qa-q\\\">\" + inline(m[2].replace(/\\\\*\\\\*/g, \"\")) + \"</span><span class=\\\"qa-show\\\">Click to view answer</span></summary><div class=\\\"qa-a\\\">\" + inner + \"</div></details>\", j];
+  if (model) body[first] = model[1] || "";
+  const inner = mdToHtml(body.join("\n")).html;
+  return ['<details class="qa qa-recall"><summary><span class="qa-n">' + esc(m[1]) + '</span><span class="qa-q">' + inline(m[2].replace(/\*\*/g, "")) + '</span><span class="qa-show">Click to view answer</span></summary><div class="qa-a">' + inner + '</div></details>', j];
 }
 const CALLOUT = /^\*\*(core rule|remember|key point|key points|exam tip|high yield|high-yield|red flag|red flags|safety|important|mnemonic|clinical pearl|pearl|tip|warning|note)\b[^*]*\*\*/i;
 const CARD_HEADING = /^(key points?|learning objectives?|objectives?|at a glance|high[- ]yield( points)?|summary)$/i;
