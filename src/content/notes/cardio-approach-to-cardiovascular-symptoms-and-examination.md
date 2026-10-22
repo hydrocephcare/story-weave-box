@@ -207,7 +207,17 @@ Use this as active recall: read the question, answer aloud, then select **Click 
 
 **1. What are the main symptoms of cardiovascular disease?**
 
-Chest pain, dyspnoea, orthopnoea, paroxysmal nocturnal dyspnoea (PND), palpitations, syncope or presyncope, fatigue, and peripheral oedema. Ask about onset, duration, progression, triggers, associated symptoms and relevant risk factors.
+| Symptom | What to clarify / possible significance |
+|---|---|
+| Chest pain | Site, character, radiation, exertional trigger; consider ischaemia or other urgent causes |
+| Dyspnoea | On exertion or at rest; consider heart failure, lung disease or anaemia |
+| Orthopnoea / PND | Breathlessness lying flat / waking from sleep; may indicate heart failure |
+| Palpitations | Fast, slow or irregular heartbeat; consider arrhythmia |
+| Syncope / presyncope | Transient loss or near-loss of consciousness; assess for arrhythmia or structural disease |
+| Fatigue / reduced exercise tolerance | May reflect low cardiac output, anaemia or systemic illness |
+| Peripheral oedema | Distribution, pitting, onset; consider heart failure, venous disease, renal or hepatic causes |
+
+**Bedside tip:** Ask about onset, duration, progression, triggers, associated symptoms and cardiovascular risk factors. Chest pain with ongoing severe breathlessness, collapse or haemodynamic instability requires urgent assessment.
 
 
 **2. How do you assess chest pain?**
@@ -222,7 +232,14 @@ Orthopnoea is breathlessness soon after lying flat, relieved by sitting or stand
 
 **4. What is the NYHA classification?**
 
-Class I: no limitation of ordinary physical activity. Class II: slight limitation; ordinary activity causes symptoms. Class III: marked limitation; less-than-ordinary activity causes symptoms. Class IV: symptoms at rest or inability to perform physical activity without discomfort.
+| Class | Functional limitation |
+|---|---|
+| I | No limitation with ordinary activity |
+| II | Slight limitation; ordinary activity causes symptoms |
+| III | Marked limitation; less-than-ordinary activity causes symptoms |
+| IV | Symptoms at rest or any activity causes discomfort |
+
+**Exam tip:** NYHA class describes functional limitation from heart failure symptoms; it does not by itself measure ejection fraction or identify the cause.
 
 
 **5. Which cardiovascular risk factors should you ask about?**
@@ -239,7 +256,17 @@ Assess general appearance, respiratory distress, position, consciousness, nutrit
 
 **7. What are the characteristics of the pulse?**
 
-Rate, rhythm, volume, character, equality between sides, and vessel-wall condition. Also assess radio-radial and radio-femoral delays when indicated.
+| Characteristic | What you assess |
+|---|---|
+| Rate | Beats per minute |
+| Rhythm | Regular, regularly irregular or irregularly irregular |
+| Volume | Strength of the pulse; low or bounding |
+| Character | For example, collapsing or slow-rising |
+| Equality / symmetry | Compare sides when indicated |
+| Delay | Radio-radial or radio-femoral delay |
+| Vessel wall | Thickening or increased stiffness where appreciable |
+
+**Always interpret the pulse alongside blood pressure, perfusion, symptoms and the ECG when indicated.**
 
 
 **8. What is a normal adult resting pulse rate?**
@@ -296,7 +323,15 @@ Position the patient at about 30–45 degrees and adjust the angle until the ven
 
 **18. How do you distinguish the JVP from the carotid pulse?**
 
-The JVP is usually not palpable, has a biphasic waveform, varies with posture and respiration, and can be altered by gentle abdominal pressure. The carotid pulse is palpable, has a single brisk outward impulse and is less affected by posture. Never press on both carotid arteries.
+| Feature | JVP | Carotid pulse |
+|---|---|---|
+| Palpable | No | Yes |
+| Waveform | Usually two visible peaks per cycle | One brisk outward impulse |
+| Respiration | Usually falls on inspiration | Little variation |
+| Posture | Height changes with position | Relatively unchanged |
+| Gentle abdominal pressure | May rise if right heart cannot accommodate venous return | No comparable response |
+
+**Safety:** Never palpate both carotid arteries simultaneously.
 
 
 **19. What causes a raised JVP?**
@@ -358,34 +393,85 @@ S3 occurs early in diastole during rapid ventricular filling; in adults it may i
 
 **30. How do you describe a murmur?**
 
-State timing (systolic, diastolic or continuous), site of maximum intensity, radiation, intensity/grade, pitch, quality, shape, and response to posture or manoeuvres. Also describe associated heart sounds and peripheral signs.
+Describe the murmur systematically using this checklist:
+
+| Feature | What to report |
+|---|---|
+| Timing | Systolic, diastolic or continuous |
+| Site | Point of maximum intensity |
+| Radiation | Where the sound travels |
+| Grade | Levine grade I–VI for systolic murmurs, where applicable |
+| Pitch and quality | High/low pitched; harsh, blowing, rumbling or musical |
+| Shape | Crescendo, decrescendo, crescendo–decrescendo or plateau |
+| Manoeuvres | Changes with respiration, posture or relevant manoeuvres |
+| Associated findings | S1/S2, added sounds, pulse character and signs of heart failure |
+
+**Viva tip:** Do not simply say “there is a murmur.” Describe it, then state the most likely lesion and the evidence supporting it.
 
 
 **31. What are the four main cardiac auscultation areas?**
 
-Aortic: 2nd right intercostal space at the sternal edge. Pulmonary: 2nd left intercostal space. Tricuspid: lower left sternal edge. Mitral: apex, usually near the 5th left intercostal space at the midclavicular line. These are listening areas, not exact surface projections of every valve.
+| Area | Listening point |
+|---|---|
+| Aortic | 2nd right intercostal space, sternal edge |
+| Pulmonary | 2nd left intercostal space, sternal edge |
+| Tricuspid | Lower left sternal edge, around 4th–5th intercostal space |
+| Mitral | Apex, usually 5th left intercostal space near the midclavicular line |
+
+These are **auscultation areas**, not the exact anatomical locations of the valves.
 
 
 ### E. Common valvular lesions
 
 **32. Describe the murmur of aortic stenosis.**
 
-A harsh crescendo–decrescendo ejection systolic murmur, loudest at the right 2nd intercostal space and often radiating to the carotids. A slow-rising carotid pulse and reduced A2 may accompany severe disease.
+| Feature | Typical finding |
+|---|---|
+| Timing / shape | Ejection systolic, crescendo–decrescendo |
+| Best heard | Right 2nd intercostal space (aortic area) |
+| Radiation | Carotid arteries |
+| Pulse | Slow-rising, low-volume carotid pulse may occur |
+| Other clues | Soft or absent A2 in severe disease; exertional dyspnoea, angina or syncope |
+
+**Clinical significance:** Symptomatic severe aortic stenosis needs urgent senior/cardiology assessment and echocardiography.
 
 
 **33. Describe the murmur of mitral regurgitation.**
 
-A high-pitched pansystolic murmur loudest at the apex and typically radiating to the axilla. The apex may be displaced and hyperdynamic if there is left ventricular volume overload.
+| Feature | Typical finding |
+|---|---|
+| Timing | Pansystolic (holosystolic) |
+| Best heard | Apex, with the diaphragm |
+| Radiation | Left axilla |
+| Mechanism | Regurgitant flow from LV to LA during systole |
+| Supporting signs | Displaced/hyperdynamic apex or pulmonary congestion if significant |
+
+Confirm severity and mechanism with echocardiography.
 
 
 **34. Describe the murmur of mitral stenosis.**
 
-A low-pitched mid-diastolic rumble best heard at the apex with the bell, with the patient in the left lateral position. An opening snap may be present when the valve remains mobile. Rheumatic heart disease is an important cause in Kenya.
+| Feature | Typical finding |
+|---|---|
+| Timing | Mid-diastolic rumble; presystolic accentuation may occur in sinus rhythm |
+| Best heard | Apex, using the bell with patient in left lateral position |
+| Additional sound | Opening snap if the valve remains mobile |
+| Common cause | Rheumatic heart disease is an important cause in Kenya |
+| Complications to consider | Left atrial enlargement, atrial fibrillation and pulmonary hypertension |
+
+Atrial fibrillation removes atrial contraction, so presystolic accentuation is absent.
 
 
 **35. Describe the murmur of aortic regurgitation.**
 
-An early diastolic, high-pitched, decrescendo murmur, often best heard along the left sternal edge with the patient sitting forward at end-expiration. A wide pulse pressure or collapsing pulse may coexist.
+| Feature | Typical finding |
+|---|---|
+| Timing / shape | Early diastolic, high-pitched decrescendo |
+| Best heard | Left sternal edge with patient sitting forward at end-expiration |
+| Peripheral clues | Wide pulse pressure or collapsing pulse may occur |
+| Mechanism | Aortic blood regurgitates into the LV during diastole |
+
+Severe acute aortic regurgitation can cause rapid haemodynamic deterioration and requires urgent assessment.
 
 
 **36. What is a pericardial friction rub?**
