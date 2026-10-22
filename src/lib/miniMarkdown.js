@@ -197,7 +197,7 @@ function recallBlock(lines, i) {
   const first = body[0].trim().match(MODEL);
   if (first) body[0] = first[1] || "";
   const inner = mdToHtml(body.filter((l, idx) => idx > 0 || l.trim()).join("\n")).html;
-  return [`<details class="qa qa-recall"><summary><span class="qa-n">${esc(m[1])}</span><span class="qa-q">${inline(m[2].replace(/\*\*/g, ""))}</span><span class="qa-show">Show answer</span></summary><div class="qa-a">${inner}</div></details>`, j];
+  return [`<details class="qa qa-recall"><summary><span class="qa-n">${esc(m[1])}</span><span class="qa-q">${inline(m[2].replace(/\*\*/g, ""))}</span><span class="qa-show">Click to view answer</span></summary><div class="qa-a">${inner}</div></details>`, j];
 }
 
 const CALLOUT = /^\*\*(core rule|remember|key point|key points|exam tip|high yield|high-yield|red flag|red flags|safety|important|mnemonic|clinical pearl|pearl|tip|warning|note)\b[^*]*\*\*/i;
