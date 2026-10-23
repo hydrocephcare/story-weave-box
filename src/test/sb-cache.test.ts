@@ -11,7 +11,7 @@ describe("public read cache", () => {
     const u = `${BASE}/rest/v1/articles?select=id,title&published=eq.true`;
     await Promise.all([f(u, { headers: { apikey: KEY, authorization: `Bearer ${KEY}` } }), f(u, { headers: { apikey: KEY } })]);
     expect(real).toHaveBeenCalledTimes(1);
-    expect(String(real.mock.calls[0][0])).toContain("/api/ai?task=sb&u=");
+    expect(String(real.mock.calls[0][0])).toContain("workers.dev/?u=");
   });
   it("sends signed-in users, writes, counts and other tables straight to Supabase", async () => {
     const real = vi.fn(async (_input?: RequestInfo | URL, _init?: RequestInit) => ok());
@@ -25,7 +25,7 @@ describe("public read cache", () => {
     expect(real).toHaveBeenCalledTimes(5);
   });
   it("falls back to Supabase when the cache is down", async () => {
-    const real = vi.fn(async (input: RequestInfo | URL, _init?: RequestInit) => (String(input).startsWith("/api/ai") ? new Response("x", { status: 502 }) : ok()));
+    const real = vi.fn(async (input: RequestInfo | URL, _init?: RequestInit) => (String(input).includes("workers.dev") ? new Response("x", { status: 502 }) : ok()));
     const f = makeCachedFetch(BASE, KEY, real as unknown as typeof fetch);
     const r = await f(`${BASE}/rest/v1/mcq_sets?select=id`, { headers: {} });
     expect(r.status).toBe(200);

@@ -1,0 +1,15 @@
+# Keeps public Supabase reads in R2 so the free Supabase data limit is not used up by visitors and crawlers.
+name = "ompath-sb-cache"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[[r2_buckets]]
+binding = "CACHE"
+bucket_name = "ompath-cache"
+
+[vars]
+SUPABASE_URL = "https://strfwaqvxvkhjbqrwmla.supabase.co"
+ALLOWED_ORIGINS = "https://www.ompathstudy.com,https://ompathstudy.com"
+# Public anon key (already shipped in the website), used for public reads only
+SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE"

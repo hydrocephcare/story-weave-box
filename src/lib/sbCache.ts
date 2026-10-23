@@ -1,10 +1,10 @@
 /**
  * Cuts the data the site pulls from Supabase (the free plan limits it, and the site was blocked once for going over).
- * Public, read-only list and page queries from visitors who are not signed in go through /api/ai?task=sb, whose answers Vercel's edge keeps for a few
- * minutes, so thousands of visits cost one database read. Identical requests made at the same moment are also merged into one.
+ * Public, read-only list and page queries from visitors who are not signed in go through a Cloudflare Worker that keeps the answers in R2 (15 minutes for lists, 3 hours for one article, a minute for settings; if Supabase is down the saved copy is served), so thousands of visits cost one database read. Identical requests made at the same moment are also merged into one.
  * Signed-in users, writes, counts and anything not on the list below go straight to Supabase, exactly as before. If the cache is unreachable the
  * request falls back to Supabase, so a cache problem can never take the site down.
  */
+const CACHE_WORKER = "https://ompath-sb-cache.hydrocephcare.workers.dev"; // keeps the answers in Cloudflare R2 (no download fees), see cloudflare/workers/sb-cache
 const PUBLIC_TABLES = "articles|mcq_sets|flashcard_sets|stories|article_categories|app_settings|topic_pages|resource_topics|study_resources|academic_years|medical_concepts|medical_concept_aliases|concept_relationships|contests|contest_universities|contest_rounds|rpc/exam_catalog";
 export const PUBLIC_READ = new RegExp(`^/rest/v1/(${PUBLIC_TABLES})(\\?|$)`);
 
@@ -26,7 +26,7 @@ export function makeCachedFetch(baseUrl: string, anonKey: string, real: typeof f
       const key = `${path}|${accept}`;
       let p = inflight.get(key);
       if (!p) {
-        const proxy = `/api/ai?task=sb&u=${encodeURIComponent(path)}${accept && accept !== "*/*" ? `&acc=${encodeURIComponent(accept)}` : ""}`;
+        const proxy = `${CACHE_WORKER}/?u=${encodeURIComponent(path)}${accept && accept !== "*/*" ? `&acc=${encodeURIComponent(accept)}` : ""}`;
         p = real(proxy, { method: "GET", signal: init?.signal ?? undefined }).then((r) => (r.ok || r.status === 404 || r.status === 406 ? r : direct()), () => direct());
         inflight.set(key, p);
         void p.finally(() => setTimeout(() => inflight.delete(key), 1500));
