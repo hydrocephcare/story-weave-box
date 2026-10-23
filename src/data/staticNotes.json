@@ -2853,5 +2853,6 @@
     "description": "Start-from-zero guide to anaemia, haemoglobin, MCV, MCH, iron deficiency, anaemia of chronic inflammation, microcytic/normocytic/macrocytic causes, reticulocytes, pancytopenia, and a worked gastrointestinal blood-loss case.",
     "updated": "2026-10-21",
     "file": "src/content/notes/clinical-clarifications-anaemia-mcv-mch-pancytopenia.md"
-  }
+  },
+  {"slug":"imed-cns-examination-complete-notes","year":4,"unit":"Internal Medicine","group":"Bedside Clinical Skills","title":"CNS Examination: Complete IMED Year 4 Notes","description":"Full neurological examination for Year 4 MBChB: GCS, higher mental functions (serial 7s, apraxia, agnosia, neglect), speech, cranial nerves I-XII, motor, reflexes, sensory, cerebellar, gait, meningism, localisation, myotomes and dermatomes, brainstem syndromes, lumbar puncture and viva questions.","updated":"2026-10-23","file":"src/content/notes/imed-cns-examination-complete-notes.md"}
 ]

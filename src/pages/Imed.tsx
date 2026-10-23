@@ -38,6 +38,16 @@ export default function Imed() {
 
       <Link to="/notes/year-4-imed-revision-roadmap" className="mt-5 inline-block font-bold text-primary hover:underline">Exam revision roadmap for Year 4 internal medicine →</Link>
 
+      <section className="mt-8" aria-label="Clinical practice">
+        <h2 className="font-serif text-2xl font-bold">Clinical practice</h2>
+        <p className="mt-1 text-sm text-muted-foreground">Past OSCE stations with pictures and model answers, and the bedside examination notes.</p>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          {[["/clinical/osce-2019", "Internal Medicine OSCEs 2019", "36 stations with photographs, X-rays, ECGs and model answers."], ["/clinical/osce-stations", "Picture stations", "Seven clinical-sign and imaging stations with model answers."], ["/notes/imed-cns-examination-complete-notes", "CNS examination: complete notes", "Higher mental functions to gait, with how to present and common viva questions."], ["/notes/imed-bedside-cardiovascular-examination-and-murmurs", "Bedside examination notes", "Cardiovascular, respiratory and abdominal examination."]].map(([to, t, d]) => (
+            <Link key={to} to={to} className="rounded-2xl border border-border bg-card p-4 transition-colors hover:border-primary/50"><span className="font-serif text-lg font-bold">{t}</span><span className="mt-1 block text-sm text-muted-foreground">{d}</span></Link>
+          ))}
+        </div>
+      </section>
+
       <DailyQuestion className="mt-6" />
 
       <section className="mt-6 space-y-3" aria-label="Your study plan">
