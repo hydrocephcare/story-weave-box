@@ -10,11 +10,12 @@ const DIR = process.argv[2];
 if (!TOKEN || !DIR) { console.error("Usage: SUPABASE_ACCESS_TOKEN=... node scripts/import-old-data.mjs <export-folder>"); process.exit(1); }
 
 const run = async (query) => {
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 8; i++) {
+    await new Promise((s) => setTimeout(s, 300));
     try {
       const r = await fetch(`https://api.supabase.com/v1/projects/${REF}/database/query`, { method: "POST", headers: { Authorization: `Bearer ${TOKEN}`, "Content-Type": "application/json" }, body: JSON.stringify({ query }) });
       const body = await r.json().catch(() => null);
-      if (r.status >= 500 || r.status === 429) throw new Error(`HTTP ${r.status}`);
+      if (r.status >= 500 || r.status === 429 || body?.message === "ThrottlerException: Too Many Requests") throw new Error(`HTTP ${r.status}`);
       if (!r.ok) return { error: body?.message || `HTTP ${r.status}` };
       return { rows: body };
     } catch (e) { await new Promise((s) => setTimeout(s, 2000 * 2 ** i)); }
@@ -40,6 +41,27 @@ const order = []; const seen = new Set();
 const visit = (t) => { if (seen.has(t)) return; seen.add(t); for (const d of dep.get(t)) visit(d); order.push(t); };
 tables.forEach(visit);
 
+// 2b. The new project already holds seed rows (years, semesters, units, categories) and two accounts with the same natural key but another id.
+// Map old id -> existing id, skip those rows and point every foreign key at the existing row.
+const idMap = new Map();
+const dest = async (q) => (await run(q)).rows || [];
+const oldFile = (n) => JSON.parse(fs.readFileSync(`${DIR}/${n}.json`, "utf8"));
+const matchBy = async (t, keyOf) => { const byKey = new Map((await dest(`select * from public."${t}"`)).map((r) => [keyOf(r), r.id])); for (const r of oldFile(t)) { const id = byKey.get(keyOf(r)); if (id && id !== r.id) idMap.set(r.id, id); } };
+const byEmail = new Map((await dest("select id, lower(email) e from auth.users")).map((u) => [u.e, u.id]));
+if (fs.existsSync(`${DIR}/_auth_users.json`)) for (const u of JSON.parse(fs.readFileSync(`${DIR}/_auth_users.json`, "utf8"))) { const id = byEmail.get((u.email || "").toLowerCase()); if (id && id !== u.id) idMap.set(u.id, id); }
+await matchBy("academic_years", (r) => r.title);
+await matchBy("article_categories", (r) => r.name);
+await matchBy("semesters", (r) => `${r.title}|${r.semester_number}|${idMap.get(r.academic_year_id) ?? r.academic_year_id}`);
+await matchBy("units", (r) => r.slug);
+await matchBy("contests", (r) => r.slug);
+await matchBy("contest_universities", (r) => r.slug);
+await matchBy("contest_rounds", (r) => `${r.title}|${idMap.get(r.contest_id) ?? r.contest_id}`);
+const remapCols = new Map();
+for (const { t, col } of await dest("select c.conrelid::regclass::text t, a.attname col from pg_constraint c join pg_attribute a on a.attrelid=c.conrelid and a.attnum=c.conkey[1] where c.contype='f' and array_length(c.conkey,1)=1 and c.confrelid in ('auth.users'::regclass,'public.academic_years'::regclass,'public.semesters'::regclass,'public.units'::regclass,'public.article_categories'::regclass,'public.contests'::regclass,'public.contest_universities'::regclass,'public.contest_rounds'::regclass)")) { const k = t.replace(/^public./, ""); remapCols.set(k, [...(remapCols.get(k) || []), col]); }
+const SEEDED = new Set(["academic_years", "semesters", "units", "article_categories", "contests", "contest_universities", "contest_rounds"]);
+const fix = (t, rows) => rows.filter((r) => !(SEEDED.has(t) && idMap.has(r.id))).map((r) => { const o = { ...r }; for (const c of remapCols.get(t) || []) if (idMap.has(o[c])) o[c] = idMap.get(o[c]); return o; });
+console.log(`mapped ${idMap.size} ids that already exist in the new project`);
+
 // 3. Insert in batches of about 600 KB
 const destCols = async (schema, table) => ((await run(`select column_name c from information_schema.columns where table_schema='${schema}' and table_name='${table}' and is_generated='NEVER' and (generation_expression is null)`)).rows || []).map((x) => x.c);
 const load = async (schema, table, rows) => {
@@ -50,28 +72,28 @@ const load = async (schema, table, rows) => {
   const flush = async () => {
     if (!batch.length) return;
     const json = JSON.stringify(batch).replace(/\$j\$/g, "");
-    const tail = table === "profiles" ? `on conflict (id) do update set ${cols.filter((c) => c !== "id").map((c) => `"${c}" = excluded."${c}"`).join(",")}` : "on conflict do nothing";
-    const r = await run(`insert into ${schema}."${table}" (${list}) select ${list} from jsonb_populate_recordset(null::${schema}."${table}", $j$${json}$j$::jsonb) ${tail}`);
+    const tail = table === "profiles" ? `on conflict (user_id) do update set ${cols.filter((c) => c !== "id" && c !== "user_id").map((c) => `"${c}" = excluded."${c}"`).join(",")}` : "on conflict do nothing";
+    const r = await run(`insert into ${schema}."${table}" (${list}) overriding system value select ${list} from jsonb_populate_recordset(null::${schema}."${table}", $j$${json}$j$::jsonb) ${tail}`);
     if (r.error) { errors++; console.log(`  ${schema}.${table}: batch failed (${r.error.slice(0, 120)})`); } else sent += batch.length;
     batch = []; size = 0;
   };
-  for (const r of cleaned) { const s = JSON.stringify(r).length; if (size + s > 600000) await flush(); batch.push(r); size += s; }
+  for (const r of cleaned) { const s = JSON.stringify(r).length; if (size + s > 250000) await flush(); batch.push(r); size += s; }
   await flush();
   return { sent, errors };
 };
 
 const accounts = ["users", "identities"].filter((t) => fs.existsSync(`${DIR}/_auth_${t}.json`));
-for (const t of accounts) { const rows = JSON.parse(fs.readFileSync(`${DIR}/_auth_${t}.json`, "utf8")); const r = await load("auth", t, rows); console.log(`auth.${t}: ${rows.length} exported, ${r.sent} sent, ${r.errors} failed batches`); }
+for (const t of accounts) { let rows = JSON.parse(fs.readFileSync(`${DIR}/_auth_${t}.json`, "utf8")); if (t === "identities") rows = rows.filter((x) => !idMap.has(x.user_id)); const r = await load("auth", t, rows); console.log(`auth.${t}: ${rows.length} exported, ${r.sent} sent, ${r.errors} failed batches`); }
 
 const failed = [];
 for (const pass of [1, 2, 3]) {
   const todo = pass === 1 ? order : failed.splice(0);
   for (const t of todo) {
-    const rows = JSON.parse(fs.readFileSync(`${DIR}/${t}.json`, "utf8"));
+    const rows = fix(t, JSON.parse(fs.readFileSync(`${DIR}/${t}.json`, "utf8")));
     if (!rows.length) continue;
     const r = await load("public", t, rows);
     const n = (await run(`select count(*) n from public."${t}"`)).rows?.[0]?.n;
-    console.log(`pass ${pass} ${t}: exported ${rows.length}, now in new project ${n}${r.errors ? " (some batches failed, will retry)" : ""}`);
+    console.log(`pass ${pass} ${t}: to load ${rows.length}, now in new project ${n}${r.errors ? " (some batches failed, will retry)" : ""}`);
     if (r.errors) failed.push(t);
   }
   if (!failed.length) break;
