@@ -14,7 +14,7 @@ import { loadCorpus, loadPublishedTopicPages } from "./corpus.mjs";
 import { SEED_LIST, SEED_TOPICS, GENERIC_TOKENS, DOMAINS, SEED_DOMAIN_OF } from "./seeds.mjs";
 
 const OUT = "public/topics";
-const MAX_TOPICS = Number(process.env.MAX_TOPICS || 1800);
+const MAX_TOPICS = Number(process.env.MAX_TOPICS || 3500);
 
 // ------------------------------------------------------------------ helpers
 const slugify = (s) => s.toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -290,6 +290,8 @@ function related(i) {
 }
 
 // ------------------------------------------------------------------ write
+// A topic page that already exists (and may already be in Google) is never dropped because the library read came back smaller: its old page and index entry are carried over below.
+const previous = (() => { try { return { index: JSON.parse(fs.readFileSync(path.join(OUT, "index.json"), "utf8")), files: new Map(fs.readdirSync(OUT).filter((f) => f.endsWith(".json") && f !== "index.json" && f !== "aliases.json").map((f) => [f, fs.readFileSync(path.join(OUT, f), "utf8")])) }; } catch { return { index: [], files: new Map() }; } })();
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 const aiDir = "src/data/topicAi";
@@ -340,6 +342,14 @@ for (const [slug, r] of publishedPages) {
   aliasMap[slugify(r.name)] = slug;
   for (const a of aka) aliasMap[String(a).toLowerCase()] = slug;
 }
+const now = new Set(index.map((t) => t.s));
+let carried = 0;
+for (const old of previous.index) {
+  if (now.has(old.s) || !previous.files.has(`${old.s}.json`)) continue;
+  fs.writeFileSync(path.join(OUT, `${old.s}.json`), previous.files.get(`${old.s}.json`));
+  index.push(old); aliasMap[slugify(old.n)] ??= old.s; for (const a of old.a || []) aliasMap[String(a).toLowerCase()] ??= old.s; carried++;
+}
+if (carried) console.log(`carried over ${carried} existing topic pages the library no longer backs, so no address disappears`);
 index.sort((a, b) => b.d - a.d);
 fs.writeFileSync(path.join(OUT, "index.json"), JSON.stringify(index));
 fs.writeFileSync(path.join(OUT, "aliases.json"), JSON.stringify(aliasMap));
