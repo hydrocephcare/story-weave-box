@@ -784,6 +784,7 @@ export default async function handler(req: Request): Promise<Response> {
       if (page.image) ogImage = page.image;
       keywords = `OmpathStudy, medical notes Kenya, MCQs, flashcards, exams, MBChB revision`;
       type = "website";
+      schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "CollectionPage", name: title, description, url: absoluteUrl, isPartOf: { "@type": "WebSite", name: "OmpathStudy", url: origin }, publisher: { "@type": "Organization", name: "OmpathStudy", url: origin } });
       bodyExtra = `<section><h2>Study resources</h2><p>OmpathStudy provides structured medical learning resources for MBChB and health students worldwide. The public study library includes concise clinical notes, pathology guides, pharmacology revision, anatomy summaries, physiology explanations, microbiology material, active-recall flashcards, practice MCQs and timed exam-style revision. Content is organised by academic year and unit so students can move directly from a year hub to the relevant articles, question banks, flashcards and exam practice.</p><p>Use these links to navigate to live indexable pages without redirects.</p><nav aria-label="Core pages">${page.links.map((path) => `<a href="${path}">${path === "/" ? "Home" : path.replace(/^\//, "")}</a>`).join(" ")}</nav></section>`;
     } else if (!param && ["blog", "mcqs", "flashcards", "stories", "exams"].includes(section)) {
       const pages: Record<string, { title: string; description: string; keywords: string }> = {
