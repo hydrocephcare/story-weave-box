@@ -64,7 +64,7 @@ if ("serviceWorker" in navigator) {
       // Delay so it doesn't compete with the initial render. Once every 12 hours per device is plenty (it used to run on every page load).
       const warmCache = () => {
         try { if (Date.now() - Number(localStorage.getItem("ompath_warm_at") || 0) < 12 * 3600_000) return; localStorage.setItem("ompath_warm_at", String(Date.now())); } catch { /* storage blocked: warm anyway */ }
-        endpoints.forEach((url) => fetch(url, { headers }).catch(() => {}));
+        void endpoints; void headers; // no longer pre-loads four lists straight from Supabase on every device (the public cache serves them)
       };
       if ("requestIdleCallback" in window) window.requestIdleCallback(warmCache, { timeout: 10000 });
       else setTimeout(warmCache, 8000);

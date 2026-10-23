@@ -6,6 +6,7 @@
  */
 const CACHE_WORKER = "https://ompath-sb-cache.hydrocephcare.workers.dev"; // keeps the answers in Cloudflare R2 (no download fees), see cloudflare/workers/sb-cache
 const PUBLIC_TABLES = "articles|mcq_sets|flashcard_sets|stories|essays|article_categories|app_settings|topic_pages|resource_topics|study_resources|academic_years|semesters|units|syllabus_topics|site_flags|article_comments|note_comments|slide_corrections|paper_answers|paper_seo|paper_similar|category_counts|search_aliases|pending_institutions|contest_university_results|medical_concepts|medical_concept_aliases|concept_relationships|contests|contest_universities|contest_rounds|rpc/exam_catalog";
+const PUBLIC_RPC = /^\/rest\/v1\/rpc\/(home_recent|category_counts|flashcard_catalog|exam_catalog)$/; // read-only database functions the home, blog and flashcards pages call
 export const PUBLIC_READ = new RegExp(`^/rest/v1/(${PUBLIC_TABLES})(\\?|$)`);
 
 export function makeCachedFetch(baseUrl: string, anonKey: string, real: typeof fetch = (input, init) => fetch(input, init)): typeof fetch {
@@ -15,8 +16,23 @@ export function makeCachedFetch(baseUrl: string, anonKey: string, real: typeof f
     try {
       const url = typeof input === "string" ? input : input instanceof URL ? input.href : input.url;
       const method = (init?.method || (typeof input === "object" && "method" in input ? input.method : "GET") || "GET").toUpperCase();
-      if (method !== "GET" || !url.startsWith(baseUrl)) return direct();
+      if (!url.startsWith(baseUrl)) return direct();
       const path = url.slice(baseUrl.length);
+      if (method === "POST" && PUBLIC_RPC.test(path)) {
+        const hp = new Headers(init?.headers || (typeof input === "object" && "headers" in input ? input.headers : undefined));
+        const ap = hp.get("authorization") || "";
+        const body = typeof init?.body === "string" ? init.body : "";
+        if ((ap && ap !== `Bearer ${anonKey}`) || body.length > 2000) return direct();
+        const kp = `POST|${path}|${body}`;
+        let q = inflight.get(kp);
+        if (!q) {
+          q = real(`${CACHE_WORKER}/?u=${encodeURIComponent(path)}`, { method: "POST", body, headers: { "Content-Type": "application/json" }, signal: init?.signal ?? undefined }).then((r) => (r.ok ? r : direct()), () => direct());
+          inflight.set(kp, q);
+          void q.finally(() => setTimeout(() => inflight.delete(kp), 1500));
+        }
+        return (await q).clone();
+      }
+      if (method !== "GET") return direct();
       if (!PUBLIC_READ.test(path)) return direct();
       const h = new Headers(init?.headers || (typeof input === "object" && "headers" in input ? input.headers : undefined));
       const auth = h.get("authorization") || "";
