@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import { SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "@/lib/supabase-config";
 
 /** Canonical public origin used for OAuth redirects (production must be the .com domain). */
 export function canonicalOrigin(): string {
