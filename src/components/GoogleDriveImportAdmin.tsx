@@ -51,7 +51,7 @@ export default function GoogleDriveImportAdmin() {
     loadConnection();
     loadJob();
     const onMessage = (event: MessageEvent) => {
-      if (event.origin !== "https://dekyjrfwvavtoivqivno.supabase.co") return;
+      if (event.origin !== "https://strfwaqvxvkhjbqrwmla.supabase.co") return;
       if (event.data?.source === "ompathstudy-google-drive") loadConnection();
     };
     window.addEventListener("message", onMessage);

@@ -1,7 +1,7 @@
 // GET /api/ai?task=sb&u=/rest/v1/articles?select=...  Public read-only Supabase queries for visitors who are not signed in, answered with an edge-cache header,
 // so the same list or article is read from the database once every few minutes instead of once per visit. See src/lib/sbCache.ts.
-const SB = process.env.SUPABASE_URL || "https://dekyjrfwvavtoivqivno.supabase.co";
-const KEY = process.env.SUPABASE_PUBLISHABLE_KEY || "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL";
+const SB = process.env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
+const KEY = process.env.SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 const ALLOWED = /^\/rest\/v1\/(articles|mcq_sets|flashcard_sets|stories|article_categories|app_settings|topic_pages|resource_topics|study_resources|academic_years|medical_concepts|medical_concept_aliases|concept_relationships|contests|contest_universities|contest_rounds|rpc\/exam_catalog)(\?|$)/;
 // things that must stay fresh are kept for a minute only
 const SHORT = /^\/rest\/v1\/(contests|contest_universities|contest_rounds|app_settings)\?/;

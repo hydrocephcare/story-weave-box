@@ -7,8 +7,8 @@ import { makeCachedFetch } from '@/lib/sbCache';
 // Public browser credentials. Environment values take precedence, while the
 // fallback keeps direct Vercel/Cloudflare builds connected without uploading
 // local .env files (which may also contain private development credentials).
-const SUPABASE_URL = "https://dekyjrfwvavtoivqivno.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL";
+const SUPABASE_URL = "https://strfwaqvxvkhjbqrwmla.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";

@@ -1,7 +1,7 @@
 import { jsPDF } from "jspdf";
 
-const SUPABASE_URL = process.env.VITE_SUPABASE_URL || "https://dekyjrfwvavtoivqivno.supabase.co";
-const SUPABASE_KEY = process.env.VITE_SUPABASE_PUBLISHABLE_KEY || "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL";
+const SUPABASE_URL = process.env.VITE_SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
+const SUPABASE_KEY = process.env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 
 const scanUrls = (article) => [...new Set(`${article.original_notes || ""}\n${article.content || ""}`.replace(/\\\//g, "/").match(/https?:\/\/[^\s)"'<>]+/gi) || [])]
   .map(url => url.replace(/[\],.;:!?]+$/, "").replace(/^https:\/\/(?:www\.)?ompathstudy\.com\/uploads\//i, "https://cdn.ompathstudy.com/uploads/"))

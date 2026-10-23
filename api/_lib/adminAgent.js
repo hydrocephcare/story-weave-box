@@ -1,8 +1,8 @@
 // POST /api/ai?task=agent { message, history, context }: the admin assistant. It only PLANS: it returns { reply, actions } and the browser, with the admin's own
 // login, runs the actions after the admin presses Yes. Requires a signed-in administrator (checked against Supabase with the caller's own token).
 import { askJson } from "./llm.js";
-const SUPABASE = "https://dekyjrfwvavtoivqivno.supabase.co";
-const ANON = "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL";
+const SUPABASE = "https://strfwaqvxvkhjbqrwmla.supabase.co";
+const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 const list = (v) => [...new Set(String(v ?? "").split(/[\s,]+/).map((k) => k.trim()).filter(Boolean))];
 
 export async function isAdmin(token) {

@@ -1,7 +1,7 @@
 // POST /api/ai?task=draft { query, answer, year }: keeps a good Ompath AI answer, for a search the site had no notes for, as a DRAFT for the admin to approve.
 // Nothing is published here. GET /api/ai?task=health (with the polish key in x-polish-key) reports which AI keys work, for the admin Activity page.
-const SB = process.env.SUPABASE_URL || "https://dekyjrfwvavtoivqivno.supabase.co";
-const ANON = process.env.SUPABASE_ANON_KEY || "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL";
+const SB = process.env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
+const ANON = process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 const WRITE_KEY = () => process.env.POLISH_WRITE_KEY || "";
 const MAX_PENDING = 200;
 const hits = new Map();
