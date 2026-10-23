@@ -5,7 +5,7 @@ const ALLOWED = /^\/rest\/v1\/(articles|mcq_sets|flashcard_sets|stories|essays|a
 const RPC = /^\/rest\/v1\/rpc\/(home_recent|category_counts|flashcard_catalog|exam_catalog)$/; // read-only functions, called with POST
 const SHORT = /^\/rest\/v1\/(contests|contest_universities|contest_rounds|app_settings|site_flags|article_comments|note_comments)(\?|$)/; // things that change: 1 minute
 const ONE = /[?&](id|slug)=eq\./;                                                                  // one article or set: 3 hours
-const ttl = (p) => (RPC.test(p) ? 10 * 60 : SHORT.test(p) ? 60 : ONE.test(p) ? 3 * 3600 : 15 * 60) * 1000;               // lists: 15 minutes
+const ttl = (p, build) => build && !SHORT.test(p) ? 6 * 3600 * 1000 : (RPC.test(p) ? 10 * 60 : SHORT.test(p) ? 60 : ONE.test(p) ? 3 * 3600 : 15 * 60) * 1000; // lists: 15 minutes; the website build (bt=1) accepts a 6 hour old copy
 
 const maxAge = (p) => (RPC.test(p) ? 120 : SHORT.test(p) ? 30 : ONE.test(p) ? 900 : 300); // seconds the browser keeps it
 const cors = (req, env) => {
@@ -37,7 +37,7 @@ export default {
     const age = hit ? Date.now() - Number(hit.customMetadata?.t || 0) : Infinity;
     const out = (body, type, state, cr, status = 200) => { const resp = new Response(body, { status, headers: { ...c, ...(cr ? { "Content-Range": cr } : {}), "Content-Type": type, "Cache-Control": `public, max-age=${maxAge(path)}, stale-while-revalidate=86400`, "X-Ompath-Cache": state } });
       if (state !== "stale") if (status === 200) ctx.waitUntil(edge.put(edgeKey, resp.clone()).catch(() => {})); return resp; };
-    if (hit && age < ttl(path)) return out(hit.body, hit.customMetadata.ct, "hit", hit.customMetadata.cr, Number(hit.customMetadata.st || 200));
+    if (hit && age < ttl(path, url.searchParams.get("bt") === "1")) return out(hit.body, hit.customMetadata.ct, "hit", hit.customMetadata.cr, Number(hit.customMetadata.st || 200));
 
     let r;
     try { r = await fetch(env.SUPABASE_URL + path, { method: isRpc ? "POST" : "GET", ...(isRpc ? { body: rpcBody } : {}), headers: { ...(isRpc ? { "Content-Type": "application/json" } : {}), apikey: env.SUPABASE_ANON_KEY, accept: acc, ...(rg ? { Range: rg, "Range-Unit": "items" } : {}), ...(pf ? { Prefer: pf } : {}) } }); } catch { r = null; }

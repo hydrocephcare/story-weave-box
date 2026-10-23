@@ -9,7 +9,26 @@ const envFile = fs.existsSync(".env") ? fs.readFileSync(".env", "utf8") : "";
 // the committed .env names the real project, so it wins over any variable the host may have set for something else
 const env = { ...process.env, ...Object.fromEntries(envFile.split(/\r?\n/).filter((l) => l.includes("=")).map((l) => [l.split("=")[0], l.slice(l.indexOf("=") + 1).replace(/^"|"$/g, "")])) };
 // the host's build may not have .env or the variables, so fall back to the public address and key the website itself ships with
-const sb = createClient(env.VITE_SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co", env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE", { auth: { persistSession: false } });
+// Every deploy reads the whole library to find topics (about 30 MB). Those reads go through the Cloudflare cache (R2) so deploys do not use up the free Supabase data
+// limit; for a build the cache may serve a copy up to 6 hours old. If the cache is unreachable the read goes to Supabase as before.
+const CACHE_WORKER = "https://ompath-sb-cache.hydrocephcare.workers.dev";
+const SB_BASE = env.VITE_SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
+const buildFetch = async (input, init) => {
+  try {
+    const url = typeof input === "string" ? input : input.url;
+    const path = url.startsWith(SB_BASE) ? url.slice(SB_BASE.length) : "";
+    if ((init?.method || "GET").toUpperCase() === "GET" && /^\/rest\/v1\/(articles|mcq_sets|essays|topic_pages)\?/.test(path)) {
+      const h = new Headers(init?.headers);
+      const range = h.get("range") || "", prefer = h.get("prefer") || "";
+      if (/^(\d+-\d*)?$/.test(range) && /^(count=(exact|planned|estimated))?$/.test(prefer)) {
+        const r = await fetch(`${CACHE_WORKER}/?bt=1&u=${encodeURIComponent(path)}${range ? `&rg=${range}` : ""}${prefer ? `&pf=${prefer}` : ""}`, { signal: init?.signal });
+        if (r.ok) return r;
+      }
+    }
+  } catch { /* fall through to Supabase */ }
+  return fetch(input, init);
+};
+const sb = createClient(SB_BASE,env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE", { auth: { persistSession: false }, global: { fetch: buildFetch } });
 
 async function all(table, cols, filter) {
   const out = [];
