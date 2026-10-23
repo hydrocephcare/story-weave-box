@@ -817,6 +817,7 @@ export default async function handler(req: Request): Promise<Response> {
       description = pages[section].description;
       keywords = pages[section].keywords;
       bodyExtra = await buildLiveIndexLinks(section);
+      schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "CollectionPage", name: title, description, url: absoluteUrl, isPartOf: { "@type": "WebSite", name: "OmpathStudy", url: origin }, publisher: { "@type": "Organization", name: "OmpathStudy", url: origin } });
     } else if (section === "contests" && param && ["briefing", "leaderboard", "register"].includes(parts[2])) {
       const rows = await sbFetch("contests", `select=slug,title,subtitle,share_image_url,starts_at,ends_at,subjects,eligible_years,competition_format&slug=eq.${encodeURIComponent(param)}&published=eq.true&limit=1`).catch(() => []);
       const contest = rows?.[0] ?? FALLBACK_CONTEST(param);
@@ -991,6 +992,9 @@ ${explanationLine}
 
       if (cardItems.length > 0) {
         bodyExtra = `<h2>Flashcards</h2>\n<ol>\n${cardItems.join("\n")}\n</ol>`;
+        // Google's "Education Q&A" markup: a quiz whose questions are the card fronts and whose answers are the card backs
+        const qa = cards.slice(0, 30).map((c) => ({ front: getCardFront(c), back: getCardBack(c) })).filter((x) => x.front && x.back);
+        if (qa.length) schemaJson = JSON.stringify({ "@context": "https://schema.org", "@type": "Quiz", name: title, description, url: absoluteUrl, about: { "@type": "Thing", name: title.replace(/\s*[|–-].*$/, "") }, educationalLevel: "University", provider: { "@type": "Organization", name: "OmpathStudy" }, hasPart: qa.map((x) => ({ "@type": "Question", eduQuestionType: "Flashcard", name: x.front, acceptedAnswer: { "@type": "Answer", text: x.back } })) });
       }
 
     } else if (section === "exams" && param) {
