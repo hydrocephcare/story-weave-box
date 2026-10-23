@@ -21,8 +21,8 @@ jobs:
       - name: Query the public database API
         env:
           # These are public browser credentials, not privileged server secrets.
-          SUPABASE_URL: https://dekyjrfwvavtoivqivno.supabase.co
-          SUPABASE_KEY: sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL
+          SUPABASE_URL: https://strfwaqvxvkhjbqrwmla.supabase.co
+          SUPABASE_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE
         run: |
           test -n "$SUPABASE_URL"
           test -n "$SUPABASE_KEY"

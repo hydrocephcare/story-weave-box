@@ -10,8 +10,8 @@ const PAR = Number((process.argv.find((a) => a.startsWith("--parallel=")) || "--
 const read = (f) => (fs.existsSync(f) ? fs.readFileSync(f, "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "");
 const env = { GROQ_API_KEYS: [process.env.GROQ_API_KEYS, read(".groq-keys.local")].filter(Boolean).join(","), GEMINI_API_KEYS: [process.env.GEMINI_API_KEYS, read(".gemini-keys.local")].filter(Boolean).join(",") };
 if (!env.GROQ_API_KEYS && !env.GEMINI_API_KEYS) { console.log("No AI keys: nothing to do."); process.exit(0); }
-const SB = "https://dekyjrfwvavtoivqivno.supabase.co";
-const ANON = "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL";
+const SB = "https://strfwaqvxvkhjbqrwmla.supabase.co";
+const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 
 const have = fs.existsSync(FILE) ? JSON.parse(fs.readFileSync(FILE, "utf8")) : {};
 const plain = (t) => String(t ?? "").replace(/<[^>]+>/g, " ").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/[*_#>`|]/g, " ").replace(/\s+/g, " ").trim();

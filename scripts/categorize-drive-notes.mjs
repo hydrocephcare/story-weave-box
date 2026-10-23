@@ -20,7 +20,7 @@ function env(name) {
   if (process.env[name]) return process.env[name];
   try { const m = fs.readFileSync(path.join(ROOT, ".env"), "utf8").match(new RegExp(`^${name}\\s*=\\s*"?([^"\\r\\n]+)"?`, "m")); return m?.[1] ?? ""; } catch { return ""; }
 }
-const SUPABASE_URL = env("VITE_SUPABASE_URL") || "https://dekyjrfwvavtoivqivno.supabase.co";
+const SUPABASE_URL = env("VITE_SUPABASE_URL") || "https://strfwaqvxvkhjbqrwmla.supabase.co";
 const KEY = env("VITE_SUPABASE_PUBLISHABLE_KEY") || env("VITE_SUPABASE_ANON_KEY");
 if (!KEY) { console.error("No Supabase key found (VITE_SUPABASE_PUBLISHABLE_KEY)."); process.exit(1); }
 

@@ -381,7 +381,7 @@ function cleanContent(content: string): string {
   return cleaned.trim();
 }
 
-const COVER_BASE = "https://dekyjrfwvavtoivqivno.supabase.co/storage/v1/object/public/story-covers/articles";
+const COVER_BASE = "https://cdn.ompathstudy.com/story-covers/articles";
 function topicCover(title = "", category = ""): string {
   const s = `${title} ${category}`.toLowerCase();
   if (/genetic|cytogen/.test(s)) return `${COVER_BASE}/genetics.jpg`;

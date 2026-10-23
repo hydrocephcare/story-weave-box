@@ -148,7 +148,7 @@ function cleanStudyMarkdown(value: string): string {
 }
 
 function topicImage(title = "", category = ""): string {
-  const base = "https://dekyjrfwvavtoivqivno.supabase.co/storage/v1/object/public/story-covers/articles";
+  const base = "https://cdn.ompathstudy.com/story-covers/articles";
   const s = `${title} ${category}`.toLowerCase();
   if (/communication|skills|patient|interview/.test(s)) return `${base}/communication.jpg`;
   if (/genetic|cytogen|mutation/.test(s)) return `${base}/genetics.jpg`;

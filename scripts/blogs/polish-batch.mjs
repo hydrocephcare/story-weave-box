@@ -6,10 +6,10 @@ import { askModel } from "../../supabase/functions/_shared/topicAi.js";
 import { yearOf } from "../../api/_lib/blogPolishCore.js";
 import { polishArticle } from "../../api/_lib/blogPolishRun.js";
 
-const SB = process.env.SUPABASE_URL || "https://dekyjrfwvavtoivqivno.supabase.co";
+const SB = process.env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
 const SERVICE = process.env.SUPABASE_SERVICE_ROLE_KEY; // optional: the write key does the job without it
 const WRITE = process.env.POLISH_WRITE_KEY || "";
-const KEY = SERVICE || process.env.SUPABASE_ANON_KEY || "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL";
+const KEY = SERVICE || process.env.SUPABASE_ANON_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 // on your own computer the keys can sit in the git-ignored files .groq-keys.local and .gemini-keys.local (one key per line); in GitHub they come from secrets
 const fromFile = (f) => (fs.existsSync(f) ? fs.readFileSync(f, "utf8").split(/\r?\n/).map((s) => s.trim()).filter(Boolean).join(",") : "");
 const groq = [process.env.GROQ_API_KEYS, fromFile(".groq-keys.local")].filter(Boolean).join(",");

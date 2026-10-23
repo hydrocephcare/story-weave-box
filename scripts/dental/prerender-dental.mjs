@@ -4,8 +4,8 @@
 // A failed answers lookup never fails the build: the pages are written without answers.
 import { answerUnits } from "../../src/lib/dentalKeys.js";
 
-const SB = "https://dekyjrfwvavtoivqivno.supabase.co";
-const KEY = "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL"; // the public (publishable) key, the same one the site ships to browsers
+const SB = "https://strfwaqvxvkhjbqrwmla.supabase.co";
+const KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE"; // the public (publishable) key, the same one the site ships to browsers
 const SITE = "https://www.ompathstudy.com";
 
 async function rest(table, query) {

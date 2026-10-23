@@ -9,7 +9,7 @@ const envFile = fs.existsSync(".env") ? fs.readFileSync(".env", "utf8") : "";
 // the committed .env names the real project, so it wins over any variable the host may have set for something else
 const env = { ...process.env, ...Object.fromEntries(envFile.split(/\r?\n/).filter((l) => l.includes("=")).map((l) => [l.split("=")[0], l.slice(l.indexOf("=") + 1).replace(/^"|"$/g, "")])) };
 // the host's build may not have .env or the variables, so fall back to the public address and key the website itself ships with
-const sb = createClient(env.VITE_SUPABASE_URL || "https://dekyjrfwvavtoivqivno.supabase.co", env.VITE_SUPABASE_PUBLISHABLE_KEY || "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL", { auth: { persistSession: false } });
+const sb = createClient(env.VITE_SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co", env.VITE_SUPABASE_PUBLISHABLE_KEY || "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE", { auth: { persistSession: false } });
 
 async function all(table, cols, filter) {
   const out = [];

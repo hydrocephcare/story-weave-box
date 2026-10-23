@@ -5,8 +5,8 @@
 // nothing is ever deleted, and every changed post's previous text is saved to restore-backup-<time>.json first, so the run can be reversed.
 import fs from "node:fs";
 
-const URL_ = process.env.SUPABASE_URL || "https://dekyjrfwvavtoivqivno.supabase.co";
-const PUB = "sb_publishable_jOXeiFMWJj1z_M-zShimXA_cG9f2QxL";
+const URL_ = process.env.SUPABASE_URL || "https://strfwaqvxvkhjbqrwmla.supabase.co";
+const PUB = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0cmZ3YXF2eHZraGpicXJ3bWxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI3MTIwNzEsImV4cCI6MjEwODI4ODA3MX0.F_bGNSKsC6Wbriit19-OIwNdScqAUU0yhJ3TtQuiTkE";
 const SERVICE = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
 const apply = process.argv.includes("--apply");
 const [livePath, freshPath] = process.argv.slice(2).filter((a) => !a.startsWith("--"));
