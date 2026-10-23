@@ -1,0 +1,11 @@
+# Replacement for the Supabase edge function generate-content (AI note, flashcard, MCQ and essay generation).
+# Secrets (set with `wrangler secret put`, never in this file): GEMINI_API_KEY, OMNIROUTE_API_KEY, OMNIROUTE_BASE_URL, OMNIROUTE_MODEL, GROQ_API_KEYS
+name = "ompath-generate-content"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+[vars]
+AUTH_URL = "https://strfwaqvxvkhjbqrwmla.supabase.co"
+ALLOWED_ORIGINS = "https://www.ompathstudy.com,https://ompathstudy.com"

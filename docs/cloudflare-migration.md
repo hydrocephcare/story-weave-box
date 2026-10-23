@@ -53,3 +53,40 @@ No data import should start until the old data is recoverable and the schema is 
 ## Security note
 
 The Supabase function `r2-upload` currently accepts uploads from anyone with the public key. The Worker above fixes this.
+
+---
+
+## Update 2026-10-23 (phase 2)
+
+### Supabase projects audited
+
+| Project | Access with the credentials in use | Findings |
+| --- | --- | --- |
+| `strfwaqvxvkhjbqrwmla` (new, "Haboz's Project") | Full, via the management token for that account | 84 public tables, schema applied from the 148 migrations; 3 auth users (test accounts plus the owner); no articles or MCQs; no backups yet (free plan, PITR off) |
+| `dekyjrfwvavtoivqivno` (old production, "ompathstudy") | Database readable through the management API of the other Supabase account; the public REST/auth/storage APIs are blocked by the egress restriction | 220 MB database: 1,146 articles, 1,248 MCQ sets, 904 essays, 556 flashcard sets, 158 topic pages, 2,963 paper answers, 34 accounts, 214 files (148 MB, all in bucket `study-resources`). Several backup tables (`articles_content_backup_20261020`, `mcq_sets_backup_oct16`, `seo_backup_oct16`) |
+| `lkgfzjwhmfjvntzphbsh` (oldest) | None. It is in neither account's project list | Unknown. It appears only as a redirect address on the Google OAuth client. The owner must say which Supabase account holds it |
+
+### Recovery
+
+The old database is recoverable now: rows can be exported through the management API without touching the restricted public APIs. Storage files (148 MB) are not yet recoverable because the file downloads go through the restricted storage API; they become downloadable once the quota resets or the plan is upgraded.
+
+### Free-tier limits to respect (to be confirmed in the dashboard before creating resources)
+
+- D1: 5 GB total, about 500 MB per database, limited reads and writes per day; the 220 MB database fits, but the daily read limit needs checking against traffic.
+- Workers: 100,000 requests per day; Pages: unlimited static requests.
+- R2: 10 GB storage free; the 148 MB of files fit.
+
+### Proposed replacement design (not started)
+
+- Database: D1 (SQLite). Postgres-only features need rewriting: row-level security becomes checks in Worker code; `jsonb` becomes JSON text; triggers and cron jobs become Worker code and Cron Triggers.
+- Sign-in: Google OAuth handled by a Worker, sessions stored in D1 or KV, httpOnly cookie; existing accounts matched by verified email so students keep their progress.
+- Order of work: (1) restore data into the new Supabase project (fastest way to bring the site back), (2) keep Supabase as the runtime while Workers take over the stateless functions, (3) only then move data to D1 and cut over, with Supabase kept until verified.
+
+### Workers
+
+| Worker | Address | Verified | Not verified |
+| --- | --- | --- | --- |
+| `ompath-r2-upload` | https://ompath-r2-upload.hydrocephcare.workers.dev | Refuses calls with no sign-in (401) and signed-in non-admins (403) | Upload by an admin (needs an admin session) |
+| `ompath-generate-content` | https://ompath-generate-content.hydrocephcare.workers.dev | Deployed; bundles the unchanged original function; refuses calls with no sign-in (401) | Admin call to the AI model (needs an admin session) |
+
+`topic-ai` was not ported: it saves pages to the `topic_pages` table, so it needs the database decision first.

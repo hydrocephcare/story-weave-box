@@ -1,6 +1,6 @@
 // Same request and response as the Supabase function: POST { dataUrl, filename } -> { url, key }.
-// Difference: the caller must be a signed-in user (checked against the auth service), and browsers on other sites are refused.
-const ALLOWED = ["image/png", "image/jpeg", "image/webp", "image/gif", "image/avif", "image/svg+xml", "application/pdf"];
+// Differences from the old function: the caller must be a signed-in site admin, SVG is refused, and browsers on other sites are refused.
+const ALLOWED = ["image/png", "image/jpeg", "image/webp", "image/gif", "image/avif", "application/pdf"];
 const MAX_BYTES = 15 * 1024 * 1024;
 
 const cors = (env, req) => {
@@ -19,6 +19,10 @@ export default {
       const apikey = req.headers.get("apikey") || "";
       const who = await fetch(`${env.AUTH_URL}/auth/v1/user`, { headers: { Authorization: auth, apikey } });
       if (!auth.startsWith("Bearer ") || !who.ok) return json(env, req, { error: "Sign in to upload." }, 401);
+      // only site admins publish images: the old function let anyone upload to the public CDN
+      const user = await who.json();
+      const adm = await fetch(`${env.AUTH_URL}/rest/v1/rpc/has_role`, { method: "POST", headers: { Authorization: auth, apikey, "Content-Type": "application/json" }, body: JSON.stringify({ _user_id: user.id, _role: "admin" }) });
+      if (!adm.ok || (await adm.json()) !== true) return json(env, req, { error: "Admin access required." }, 403);
 
       const { dataUrl, filename } = await req.json();
       if (typeof dataUrl !== "string") throw new Error("dataUrl required");
