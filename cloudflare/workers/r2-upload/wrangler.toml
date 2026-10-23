@@ -1,0 +1,14 @@
+# Replacement for the Supabase edge function r2-upload. Uses an R2 binding, so no S3 keys are stored anywhere.
+name = "ompath-r2-upload"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "ompathstudy"
+
+[vars]
+PUBLIC_BASE = "https://cdn.ompathstudy.com"
+AUTH_URL = "https://strfwaqvxvkhjbqrwmla.supabase.co"
+ALLOWED_ORIGINS = "https://www.ompathstudy.com,https://ompathstudy.com"
