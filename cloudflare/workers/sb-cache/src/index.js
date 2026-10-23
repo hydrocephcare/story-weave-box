@@ -7,6 +7,7 @@ const SHORT = /^\/rest\/v1\/(contests|contest_universities|contest_rounds|app_se
 const ONE = /[?&](id|slug)=eq\./;                                                                  // one article or set: 3 hours
 const ttl = (p) => (RPC.test(p) ? 10 * 60 : SHORT.test(p) ? 60 : ONE.test(p) ? 3 * 3600 : 15 * 60) * 1000;               // lists: 15 minutes
 
+const maxAge = (p) => (RPC.test(p) ? 120 : SHORT.test(p) ? 30 : ONE.test(p) ? 900 : 300); // seconds the browser keeps it
 const cors = (req, env) => {
   const o = req.headers.get("Origin") || "";
   const ok = env.ALLOWED_ORIGINS.split(",").includes(o) || /^http:\/\/localhost(:\d+)?$/.test(o);
@@ -15,7 +16,7 @@ const cors = (req, env) => {
 const sha = async (s) => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)))].map((b) => b.toString(16).padStart(2, "0")).join("");
 
 export default {
-  async fetch(req, env) {
+  async fetch(req, env, ctx) {
     const c = cors(req, env);
     if (req.method === "OPTIONS") return new Response(null, { status: 204, headers: { ...c, "Access-Control-Allow-Methods": "GET, POST", "Access-Control-Allow-Headers": "*", "Access-Control-Max-Age": "86400" } });
     const url = new URL(req.url);
@@ -28,10 +29,14 @@ export default {
     if (isRpc && rpcBody.length > 2000) return new Response(JSON.stringify({ error: "too large" }), { status: 400, headers: { ...c, "Content-Type": "application/json" } });
     if (!isRpc && (req.method !== "GET" || !ALLOWED.test(path)) || path.length > 3000 || /apikey|authorization/i.test(path)) return new Response(JSON.stringify({ error: "not cacheable" }), { status: 400, headers: { ...c, "Content-Type": "application/json" } });
 
+    const edge = caches.default, edgeKey = new Request(`${url.origin}/edge?o=${encodeURIComponent(req.headers.get("Origin") || "")}&u=${encodeURIComponent(path)}&a=${encodeURIComponent(acc)}&r=${rg}&p=${pf}&b=${encodeURIComponent(rpcBody)}`);
+    const warm = await edge.match(edgeKey);
+    if (warm) return warm;
     const key = `v1/${await sha(`${path}|${acc}|${rg}|${pf}|${rpcBody}`)}`;
     const hit = await env.CACHE.get(key);
     const age = hit ? Date.now() - Number(hit.customMetadata?.t || 0) : Infinity;
-    const out = (body, type, state, cr, status = 200) => new Response(body, { status, headers: { ...c, ...(cr ? { "Content-Range": cr } : {}), "Content-Type": type, "Cache-Control": "public, max-age=60", "X-Ompath-Cache": state } });
+    const out = (body, type, state, cr, status = 200) => { const resp = new Response(body, { status, headers: { ...c, ...(cr ? { "Content-Range": cr } : {}), "Content-Type": type, "Cache-Control": `public, max-age=${maxAge(path)}, stale-while-revalidate=86400`, "X-Ompath-Cache": state } });
+      if (state !== "stale") if (status === 200) ctx.waitUntil(edge.put(edgeKey, resp.clone()).catch(() => {})); return resp; };
     if (hit && age < ttl(path)) return out(hit.body, hit.customMetadata.ct, "hit", hit.customMetadata.cr, Number(hit.customMetadata.st || 200));
 
     let r;
