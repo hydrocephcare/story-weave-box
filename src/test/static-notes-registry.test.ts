@@ -24,4 +24,11 @@ describe("static notes registry", () => {
     const slugs = STATIC_NOTES.map((n) => n.slug);
     expect(new Set(slugs).size).toBe(slugs.length);
   });
+
+  it("an unlisted (SEO-only) note opens by its address but is not in the lists the site shows", async () => {
+    const { STATIC_NOTES, findStaticNote } = await import("@/data/staticNotes");
+    const all = (await import("@/data/staticNotes.json")).default as { slug: string; unlisted?: boolean }[];
+    for (const n of all.filter((x) => x.unlisted)) { expect(STATIC_NOTES.some((x) => x.slug === n.slug)).toBe(false); expect(findStaticNote(n.slug)?.slug).toBe(n.slug); }
+    expect(STATIC_NOTES.length + all.filter((x) => x.unlisted).length).toBe(all.length);
+  });
 });

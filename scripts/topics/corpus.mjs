@@ -87,7 +87,7 @@ export async function loadCorpus() {
     console.log("[corpus] full read");
     [articles, mcqs, essays] = await Promise.all([all("articles", COLS.articles, live), all("mcq_sets", COLS.mcq_sets, live), all("essays", COLS.essays, live)]);
   }
-  const notes = JSON.parse(fs.readFileSync("src/data/staticNotes.json", "utf8")).map((n) => ({ ...n, text: fs.existsSync(n.file) ? fs.readFileSync(n.file, "utf8") : "" }));
+  const notes = JSON.parse(fs.readFileSync("src/data/staticNotes.json", "utf8")).filter((n) => !n.unlisted).map((n) => ({ ...n, text: fs.existsSync(n.file) ? fs.readFileSync(n.file, "utf8") : "" }));
   return { articles, mcqs, essays, notes, fetchedAt: new Date().toISOString() };
 }
 

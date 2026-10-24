@@ -151,7 +151,7 @@ try {
       const noteHtml = linkDrugs(rawHtml, drugs).html;
       const pharmHtml = n.condition ? `<p><a href="/pharmacology?tab=conditions&amp;c=${esc(n.condition)}">Drug guide for this condition in Pharmacology</a></p>` : "";
       const notePath = `/notes/${n.slug}`;
-      const sibs = notes.filter((o) => o.unit === n.unit && o.group === n.group && o.slug !== n.slug);
+      const sibs = notes.filter((o) => !o.unlisted && o.unit === n.unit && o.group === n.group && o.slug !== n.slug);
       const sibHtml = sibs.length ? `<h2>More in ${esc(n.group ?? n.unit)}</h2><ul>${sibs.map((o) => `<li><a href="/notes/${o.slug}">${esc(o.title)}</a></li>`).join("")}</ul><p><a href="/notes">All study notes</a></p>` : "";
       const title = `${n.title} — Year ${n.year} ${n.unit} Notes | ${registry.brand}`;
       write(notePath, render({
@@ -164,7 +164,7 @@ try {
       }), n.updated);
     }
 
-    const indexed = notes.filter((n) => !n.paper);
+    const indexed = notes.filter((n) => !n.paper && !n.unlisted); // SEO-only notes get their own page and a sitemap entry, but no link from the lists
     const byYear = [...new Set(indexed.map((n) => n.year))].sort();
     const idxBody = byYear.map((y) => {
       const units = [...new Set(indexed.filter((n) => n.year === y).map((n) => n.unit))];

@@ -34,9 +34,11 @@ export interface PaperMeta {
   driveId: string | null;
 }
 
-export interface StaticNote { slug: string; year: number; unit: string; group?: string; /** Series label shown above the note title. */ series?: string; /** Week within a teaching series. */ week?: string; /** id of the matching condition in the pharmacology guide */ condition?: string; title: string; description: string; updated: string; file: string; paper?: PaperMeta }
+/** unlisted: true makes a note SEO-only: it opens at its own address and is in the sitemap and the page Google reads, but is left out of search, lists, related links and topic pages on the site. */
+export interface StaticNote { unlisted?: boolean; slug: string; year: number; unit: string; group?: string; /** Series label shown above the note title. */ series?: string; /** Week within a teaching series. */ week?: string; /** id of the matching condition in the pharmacology guide */ condition?: string; title: string; description: string; updated: string; file: string; paper?: PaperMeta }
 
-export const STATIC_NOTES = meta as StaticNote[];
+const ALL_NOTES = meta as StaticNote[];
+export const STATIC_NOTES = ALL_NOTES.filter((n) => !n.unlisted);
 
 export type PaperNote = StaticNote & { paper: PaperMeta };
 export const PAPER_NOTES = STATIC_NOTES.filter((n): n is PaperNote => Boolean(n.paper));
@@ -50,7 +52,7 @@ const files = import.meta.glob("../content/notes/*.md", { query: "?raw", import:
 
 /** Study notes for a year. Past papers are not notes: they have their own page, /papers. */
 export const notesForYear = (year: number) => STATIC_NOTES.filter((n) => n.year === year && !n.paper);
-export const findStaticNote = (slug: string) => STATIC_NOTES.find((n) => n.slug === slug) ?? null;
+export const findStaticNote = (slug: string) => ALL_NOTES.find((n) => n.slug === slug) ?? null;
 
 export function loadStaticNoteText(slug: string): Promise<string> {
   const note = findStaticNote(slug);
