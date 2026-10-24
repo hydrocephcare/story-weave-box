@@ -1,4 +1,8 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
+
+// The free allowances only exist while subscriptions are switched on in Admin; with them off every answer is free and the loop below would never end.
+vi.mock("@/lib/subscriptionMode", async (orig) => ({ ...(await orig<typeof import("@/lib/subscriptionMode")>()), subscriptionsOn: () => true, onSubscriptionMode: () => () => undefined }));
+
 import { suggestionsFor } from "@/lib/ompathAiSuggest";
 import { FREE_REVEALS_PER_SUBJECT, freeRevealsLeft, spendFreeReveal } from "@/lib/ompathAi";
 import { OFFICIAL_2026_SCHEDULES } from "@/lib/timetable2026";

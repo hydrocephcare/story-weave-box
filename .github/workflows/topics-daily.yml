@@ -35,7 +35,7 @@ concurrency:
 jobs:
   topics:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 80
     steps:
       - uses: actions/checkout@v4
         with:
@@ -59,38 +59,61 @@ jobs:
       - name: Rebuild the topic pages
         run: node scripts/topics/build-topics.mjs --fresh
 
+      - name: Rebuild the picture sitemap (every picture on the site, under its page)
+        continue-on-error: true
+        run: node scripts/seo/image-sitemap.mjs
+
       - name: Write today's topic pages
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/topics/bulk-fill.mjs ${{ inputs.count || '25' }} --parallel=3
 
+      # Saved straight away: the slower steps below once ran past the time limit and the day's finished pages were thrown away
+      - name: Save the new topic pages now
+        run: |
+          if [ -n "$(git status --porcelain public/topics src/data/topicAi public/image-sitemap.xml)" ]; then
+            git config user.name "ompath-bot"
+            git config user.email "ompath-bot@users.noreply.github.com"
+            git add -f public/topics src/data/topicAi public/image-sitemap.xml
+            git commit -m "Daily AI topic overviews"
+            git pull --rebase origin main
+            git push origin main
+          fi
+
       - name: Write today's deep exam notes (stops by itself when the AI keys run out)
+        continue-on-error: true
+        timeout-minutes: 25
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/topics/deep-fill.mjs ${{ inputs.deep || '12' }}
 
       - name: Cross-check notes with a second AI (marks the clean ones, lists the rest in Admin > Content checks)
+        continue-on-error: true
+        timeout-minutes: 15
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/imed/validate-notes.mjs ${{ inputs.check || '8' }}
 
       - name: Write today's page summaries
+        continue-on-error: true
+        timeout-minutes: 15
         env:
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GROQ_API_KEYS: ${{ secrets.GROQ_API_KEYS }}
         run: node scripts/summaries/fill.mjs 25 --parallel=2
 
       - name: Save the new overviews
+        if: always()
         run: |
           if [ -z "$(git status --porcelain public/topics src/data/topicAi src/data/pageSummaries.json src/data/contentChecks.json src/data/contentMarks.json)" ]; then
             echo "No new overviews today."
           else
             git config user.name "ompath-bot"
             git config user.email "ompath-bot@users.noreply.github.com"
-            git add -f public/topics src/data/topicAi src/data/pageSummaries.json src/data/contentChecks.json src/data/contentMarks.json
+            git add -f public/topics src/data/topicAi public/image-sitemap.xml src/data/pageSummaries.json src/data/contentChecks.json src/data/contentMarks.json
             git commit -m "Daily AI topic overviews"
             git pull --rebase origin main
             git push origin main

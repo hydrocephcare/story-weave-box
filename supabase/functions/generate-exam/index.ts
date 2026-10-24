@@ -44,13 +44,39 @@ function parseMcqs(raw: string) {
       .filter((q: any) => q?.question && Array.isArray(q?.options) && q.options.length >= 4)
       .map((q: any) => ({
         question: String(q.question).trim(),
-        options: q.options.slice(0, 4).map((o: any) => String(o).trim()),
-        correct_answer: Number.isInteger(q.correct_answer) ? Math.min(Math.max(q.correct_answer, 0), 3) : 0,
+        options: q.options.slice(0, 5).map((o: any) => String(o).trim()),
+        correct_answer: Number.isInteger(q.correct_answer) ? Math.min(Math.max(q.correct_answer, 0), Math.min(q.options.length, 5) - 1) : 0,
         explanation: q.explanation ? String(q.explanation).trim() : "",
       }));
   } catch {
     return [];
   }
+}
+
+/** Moves each right answer to a planned position so no letter is used much more than the others, a letter never repeats back to back,
+ *  and the positions do not step up or down by one (A then B then C), whatever order the writer used. The wrong options keep their order. */
+function spreadAnswerPositions<T extends { options: string[]; correct_answer: number }>(qs: T[]): T[] {
+  const n = qs.length, k = Math.min(...qs.map((q) => q.options.length));
+  if (n < 2 || k < 3) return qs;
+  const pool: number[] = []; for (let i = 0; i < n; i++) pool.push(i % k);
+  const ok = (seq: number[], p: number) => { const last = seq[seq.length - 1]; return last === undefined || (p !== last && Math.abs(p - last) !== 1); };
+  let plan: number[] | null = null;
+  for (let tries = 0; tries < 200 && !plan; tries++) {
+    const left = [...pool].sort(() => Math.random() - 0.5), seq: number[] = [];
+    while (left.length) {
+      const i = left.findIndex((p) => ok(seq, p));
+      if (i < 0) break;
+      seq.push(left.splice(i, 1)[0]);
+    }
+    if (!left.length) plan = seq;
+  }
+  if (!plan) { plan = []; for (const p of [...pool].sort(() => Math.random() - 0.5)) { const l = plan[plan.length - 1]; plan.push(p === l ? (p + 2) % k : p); } }
+  return qs.map((q, i) => {
+    const to = plan![i], from = q.correct_answer;
+    if (to === from || to >= q.options.length) return q;
+    const options = [...q.options]; [options[from], options[to]] = [options[to], options[from]];
+    return { ...q, options, correct_answer: to };
+  });
 }
 
 function parseEssays(raw: string) {
@@ -193,7 +219,7 @@ serve(async (req) => {
       const words = u.toLowerCase().replace(/year\s*\d\s*:/, "").split(/[^a-z]+/).filter((w) => w.length > 4);
       const weak = words.length ? wrongText.filter((t) => words.some((w) => t.includes(w))).length : 0;
       const waitedDays = Math.min(400, (Date.now() - (lastExam.get(u) ?? 0)) / 86_400_000);
-      return waitedDays + Math.min(material, 60) / 6 + Math.min(weak, 30) * 0.7 + Math.min(freshByUnit.get(u) || 0, 10) * 4 + Math.min(readByUnit.get(u) || 0, 40) * 1.5;
+      return (yearOf(u) === 4 ? 40 : 0) /* the owner's year: its rotation exams come first */ + waitedDays + Math.min(material, 60) / 6 + Math.min(weak, 30) * 0.7 + Math.min(freshByUnit.get(u) || 0, 10) * 4 + Math.min(readByUnit.get(u) || 0, 40) * 1.5;
     };
     const ranked = [...new Set([...setIds.keys(), ...artIds.keys()])]
       .filter((u) => (setIds.get(u)?.length || 0) + (artIds.get(u)?.length || 0) >= 3 && (force || (lastExam.get(u) ?? 0) < weekAgo)
@@ -230,9 +256,9 @@ serve(async (req) => {
       const weakForUnit = weakTopics.filter((q) => q.toLowerCase().includes(unit.toLowerCase())).slice(0, 20);
       const weakBlock = weakForUnit.length ? `\nPrioritize weak topics:\n${weakForUnit.join("\n")}` : "";
 
-      const mcqPrompt = `Create exactly 35 high-quality MCQs for a ${unit} weekly medical exam.\n\nContent context:\n${context}${weakBlock}\n\nReturn ONLY valid JSON array with schema: {"question":"...","options":["A","B","C","D"],"correct_answer":0,"explanation":"..."}`;
+      const mcqPrompt = `Create exactly 35 hard MCQs for a ${unit} weekly medical exam for students who must UNDERSTAND the subject, not cram.\n\nQuestion style (follow strictly):\n- At least 24 of the questions are short clinical or applied scenarios (a patient, a lab result, an experiment, a drug given) that need two-step reasoning: first work out what is going on, then answer a question about mechanism, next step, consequence or the best explanation. The rest test an uncommon but important detail or a "why" that can only be answered by understanding.\n- Do NOT write plain recall questions such as "Which of the following is a feature of X?" or "X is caused by?".\n- Exactly FIVE options per question. Every wrong option must be a real, closely related entity or statement that a half-prepared student would be tempted by. No joke options, no "all of the above" or "none of the above".\n- All five options must have the same grammatical form and nearly the same length (within 20 percent). The correct option must NOT be the longest, the shortest, the most detailed or the most hedged one, and it must not be the only one containing a qualifier. Do not reuse a key word from the question stem only in the correct option.\n- Put the correct answer at any position. Vary it freely: never put it in the same position twice in a row.\n- Cover many different topics from the context; no two questions may test the same fact.\n\nContent context:\n${context}${weakBlock}\n\nReturn ONLY valid JSON array with schema: {"question":"...","options":["...","...","...","...","..."],"correct_answer":0,"explanation":"..."}`;
       // 30 questions with one-sentence explanations fit the writer's output limit; an answer that comes back short is tried once more, and a unit that still has fewer than 15 is skipped
-      const compact = `${mcqPrompt.replace("exactly 35", "exactly 30")}\n\nKeep every explanation to ONE sentence of at most 25 words. All four options must be about the same length and style, and the correct answer must NOT be the longest or the most detailed one. Make the wrong options plausible, and vary which letter is correct.`;
+      const compact = `${mcqPrompt.replace("exactly 35", "exactly 30")}\n\nKeep every explanation to ONE sentence of at most 25 words. All five options must be about the same length and style, and the correct answer must NOT be the longest or the most detailed one. Make the wrong options plausible, and vary which letter is correct.`;
       let examMcqs: ReturnType<typeof parseMcqs> = [], lastErr = "";
       for (let attempt = 0; attempt < 2 && examMcqs.length < 25; attempt++) {
         try { const got = parseMcqs(await generateWithFallback(compact)); if (got.length > examMcqs.length) examMcqs = got; } catch (e) { lastErr = e instanceof Error ? e.message : String(e); }
@@ -240,8 +266,9 @@ serve(async (req) => {
       let reviewNote = "";
       if (examMcqs.length >= 15) { const r = await reviewQuestions(examMcqs, true); if (r.kept.length >= 15) { examMcqs = r.kept; reviewNote = `${r.dropped} dropped by the reviewer`; } }
       if (examMcqs.length < 15) { skipped.push(`${unit}: ${lastErr || `the writer produced only ${examMcqs.length} usable questions`}`); continue; }
+      examMcqs = spreadAnswerPositions(examMcqs);
 
-      const essayPrompt = `Create written exam section for ${unit}. Return ONLY valid JSON:\n{"saqs":[{"question":"...","model_answer":"...","marks":5}],"laqs":[{"question":"...","model_answer":"...","marks":20}]}\n\nRules:\n- exactly 4 SAQs with 5 marks each\n- exactly 1 LAQ with 20 marks`;
+      const essayPrompt = `Create written exam section for ${unit}. Return ONLY valid JSON:\n{"saqs":[{"question":"...","model_answer":"...","marks":5}],"laqs":[{"question":"...","model_answer":"...","marks":20}]}\n\nRules:\n- exactly 4 SAQs with 5 marks each (Section B) and exactly 1 LAQ with 20 marks (Section C)\n- every question needs reasoning, not recall: a short case or a "explain why" that needs application of the mechanism, a comparison, or a justified plan\n- every model answer is structured, with the number of points matched to the marks (about one point per mark)\n- the LAQ must cover a broad, high-yield area of the unit and ask for causes, pathophysiology/mechanism, features and management or consequences`;
       const essayText = await generateWithFallback(essayPrompt).catch(() => "");
       const { saqs, laqs } = parseEssays(essayText);
 

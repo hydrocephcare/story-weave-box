@@ -17,7 +17,7 @@ concurrency:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - name: Checkout canonical main
         uses: actions/checkout@v4
@@ -33,6 +33,8 @@ jobs:
 
       - name: Test combined Lovable and repository code
         run: npm test
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
 
       - name: Build production site
         run: npm run build

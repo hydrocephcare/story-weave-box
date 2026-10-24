@@ -8,7 +8,8 @@ import registry from "../data/staticNotes.json";
 const DIR = "src/content/notes";
 const files = fs.readdirSync(DIR).filter((f) => f.endsWith(".md"));
 const list = (Array.isArray(registry) ? registry : (registry as { notes?: unknown[] }).notes ?? Object.values(registry)) as { slug: string; title: string; file?: string }[];
-const TABLE_OK = /differential|investigation|compar|versus|\bvs\b|classification|staging|grading|criteria|score/i;
+const BEDSIDE = /examination|bedside|approach-to|cns-foundations/i;
+const TABLE_OK =/differential|investigation|compar|versus|\bvs\b|classification|staging|grading|criteria|score/i;
 
 describe("notes keep the quality rules", () => {
   it("every note title line matches its title in the registry", () => {
@@ -24,6 +25,7 @@ describe("notes keep the quality rules", () => {
   it("tables appear only for differentials, investigations and comparisons, and none is longer than 12 rows", () => {
     const bad: string[] = [];
     for (const f of files) {
+      if (BEDSIDE.test(f)) continue; // bedside examination and viva notes lay out findings, signs and lesions in tables on purpose, so they are left out of this rule
       const lines = fs.readFileSync(path.join(DIR, f), "utf8").split(/\r?\n/);
       let heading = "";
       for (let i = 0; i < lines.length; i++) {
