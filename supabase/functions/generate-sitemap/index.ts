@@ -101,8 +101,10 @@ const EXCLUDED_PATHS = new Set<string>([
 
 function sitemapFilterFromFile(file: string | null) {
   const f = String(file || "all.xml").toLowerCase();
-  const year = f.match(/year-([1-6])/)?.[1] || null;
-  const section = f.includes("blog") ? "blog"
+  // "other" collects what has no "Year N:" in its category (it used to be in no sitemap at all)
+  const year = f.match(/year-([1-6])/)?.[1] || (f.includes("other") ? "other" : null);
+  const section = f.includes("exams") ? "exams"
+    : f.includes("blog") ? "blog"
     : f.includes("mcqs") ? "mcqs"
     : f.includes("flashcards") ? "flashcards"
     : f.includes("stories") ? "stories"
@@ -115,6 +117,7 @@ function sitemapFilterFromFile(file: string | null) {
 
 function matchesYear(category: string | null | undefined, year: string | null) {
   if (!year) return true;
+  if (year === "other") return !/^Year\s+[1-6]\s*:/i.test(String(category || ""));
   return new RegExp(`^Year\\s+${year}\\s*:`, "i").test(String(category || ""));
 }
 
@@ -171,6 +174,7 @@ serve(async (req) => {
     const includeMcqs = filter.section === "all" || filter.section === "mcqs";
     const includeFlashcards = filter.section === "all" || filter.section === "flashcards";
     const includeEssays = filter.section === "all" || filter.section === "essays";
+    const includeExams = filter.section === "all" || filter.section === "exams";
     const includeContests = filter.section === "all" || filter.section === "contests";
     const emittedPaths = new Set<string>();
     let xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -250,7 +254,24 @@ serve(async (req) => {
     // MCQs
     for (const m of (mcqs || []) as any[]) {
       // timed exams (weekly, unit exams, past papers) are taken on the exam page and are not listed as practice banks
-      if (/exam/i.test(m.title || "") || /^weekly exam/i.test(m.category || "") || m.source_type === "past_paper" || m.exam_year) continue;
+      if (/exam/i.test(m.title || "") || /^weekly exam/i.test(m.category || "") || m.source_type === "past_paper" || m.exam_year) {
+        // timed exams have their own pages under /exams (listed in exams.xml, not as practice banks)
+        if (includeExams && m.slug) {
+          const examPath = `/exams/${m.slug}`;
+          if (!emittedPaths.has(examPath) && !EXCLUDED_PATHS.has(examPath)) {
+            emittedPaths.add(examPath);
+            const lm = (m.updated_at || m.created_at) ? new Date(m.updated_at || m.created_at).toISOString().split("T")[0] : "";
+            xml += `  <url>
+    <loc>${baseUrl}${examPath}</loc>
+${lm ? `    <lastmod>${lm}</lastmod>
+` : ""}    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+`;
+          }
+        }
+        continue;
+      }
       if (!includeMcqs || !matchesYear(m.category, filter.year)) continue;
       const mcqSlug = cleanPublicSlug(m.slug, m.title, "quiz");
       const path = `/mcqs/${mcqSlug}`;
