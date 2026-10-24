@@ -913,7 +913,10 @@ export default async function handler(req: Request): Promise<Response> {
         mcq.meta_description || `Practice ${qCount > 0 ? qCount + " " : ""}MCQs on ${mcq.title}. Review answers, explanations and exam-focused clinical concepts.`,
         `Practice ${qCount > 0 ? qCount + " " : ""}MCQs on ${mcq.title}. Review answers, explanations and exam-focused clinical concepts.`
       );
-      ogImage = mcq.og_image_url || cardUrl(mcq.title, mcq.category, "MCQs");
+      // an exam is shared with its own card ("Weekly Year 4: Internal Medicine Exam · 30 MCQs · timed"), so the picture itself invites people to try it
+      ogImage = /^Weekly Exam/i.test(String(mcq.category || ""))
+        ? cardUrl(`${String(mcq.title || "").replace(/\s*\(Section A:[^)]*\)\s*/i, "").replace(/^Weekly\s+/i, "")} · ${qCount || 30} MCQs`, String(mcq.category).replace(/^Weekly Exam:\s*/i, ""), "Exam")
+        : mcq.og_image_url || cardUrl(mcq.title, mcq.category, "MCQs");
       keywords = `OmpathStudy, MCQs Kenya, ${mcq.title || ""}, ${mcq.category || ""}, oncology MCQs, pathology MCQs, medical quizzes, exam practice, ${GEO_KEYWORDS}`;
       type = "article";
 
