@@ -17,11 +17,11 @@ function normalizeUnitName(category: string): string {
   return raw;
 }
 
-async function generateWithFallback(prompt: string): Promise<string> {
+async function generateWithFallback(prompt: string, timeoutMs = 45000): Promise<string> {
   return await chatText(Deno.env.toObject(), [
     { role: "system", content: "You are a senior medical exam writer. Return ONLY valid JSON, no markdown or code blocks." },
     { role: "user", content: prompt },
-  ], { temperature: 0.4, maxTokens: 4500, timeoutMs: 45000 });
+  ], { temperature: 0.4, maxTokens: 4500, timeoutMs });
 }
 
 function parseMcqs(raw: string) {
@@ -117,7 +117,14 @@ async function reviewQuestions(qs: Mcq[], strict = true): Promise<{ kept: Mcq[];
       const raw = await chatText(Deno.env.toObject(), [{ role: "system", content: "Return ONLY valid JSON, no markdown." }, { role: "user", content: prompt }], { temperature: 0.1, maxTokens: 4000, timeoutMs: 40000 });
       const m = raw.match(/\[[\s\S]*\]/); reviewed = m ? JSON.parse(m[0]) : null;
     } catch { reviewed = null; }
-    if (!Array.isArray(reviewed)) { kept.push(...chunk); continue; }   // the reviewer was unavailable: keep these as written rather than lose them
+    if (!Array.isArray(reviewed) && strict) {                          // a new exam is never published unchecked: ask once more, and if the reviewer is still down drop the chunk
+      try {
+        const raw2 = await chatText(Deno.env.toObject(), [{ role: "system", content: "Return ONLY valid JSON, no markdown." }, { role: "user", content: prompt }], { temperature: 0.1, maxTokens: 4000, timeoutMs: 40000 });
+        const m2 = raw2.match(/\[[\s\S]*\]/); reviewed = m2 ? JSON.parse(m2[0]) : null;
+      } catch { reviewed = null; }
+      if (!Array.isArray(reviewed)) { dropped += chunk.length; continue; }
+    }
+    if (!Array.isArray(reviewed)) { kept.push(...chunk); continue; }   // the reviewer was unavailable: keep stored questions as written rather than lose them
     chunk.forEach((q, k) => {
       const r = reviewed!.find((x: any) => Number(x?.i) === k);
       if (!r) { kept.push(q); return; }
@@ -259,18 +266,30 @@ serve(async (req) => {
       const mcqPrompt = `Create exactly 35 hard MCQs for a ${unit} weekly medical exam for students who must UNDERSTAND the subject, not cram.\n\nQuestion style (follow strictly):\n- At least 24 of the questions are short clinical or applied scenarios (a patient, a lab result, an experiment, a drug given) that need two-step reasoning: first work out what is going on, then answer a question about mechanism, next step, consequence or the best explanation. The rest test an uncommon but important detail or a "why" that can only be answered by understanding.\n- Do NOT write plain recall questions such as "Which of the following is a feature of X?" or "X is caused by?".\n- Exactly FIVE options per question. Every wrong option must be a real, closely related entity or statement that a half-prepared student would be tempted by. No joke options, no "all of the above" or "none of the above".\n- All five options must have the same grammatical form and nearly the same length (within 20 percent). The correct option must NOT be the longest, the shortest, the most detailed or the most hedged one, and it must not be the only one containing a qualifier. Do not reuse a key word from the question stem only in the correct option.\n- Put the correct answer at any position. Vary it freely: never put it in the same position twice in a row.\n- Cover many different topics from the context; no two questions may test the same fact.\n\nContent context:\n${context}${weakBlock}\n\nReturn ONLY valid JSON array with schema: {"question":"...","options":["...","...","...","...","..."],"correct_answer":0,"explanation":"..."}`;
       // 30 questions with one-sentence explanations fit the writer's output limit; an answer that comes back short is tried once more, and a unit that still has fewer than 15 is skipped
       const compact = `${mcqPrompt.replace("exactly 35", "exactly 30")}\n\nKeep every explanation to ONE sentence of at most 25 words. All five options must be about the same length and style, and the correct answer must NOT be the longest or the most detailed one. Make the wrong options plausible, and vary which letter is correct.`;
-      let examMcqs: ReturnType<typeof parseMcqs> = [], lastErr = "";
-      for (let attempt = 0; attempt < 2 && examMcqs.length < 25; attempt++) {
-        try { const got = parseMcqs(await generateWithFallback(compact)); if (got.length > examMcqs.length) examMcqs = got; } catch (e) { lastErr = e instanceof Error ? e.message : String(e); }
+      // Only questions that an independent reviewer answered the same way make it into the exam. Up to three batches are written until there are enough.
+      let examMcqs: ReturnType<typeof parseMcqs> = [], lastErr = "", reviewedDropped = 0;
+      const seenQ = new Set<string>(), started = Date.now();
+      for (let attempt = 0; attempt < 3 && examMcqs.length < 34 && Date.now() - started < 240_000; attempt++) {
+        try {
+          const batch = parseMcqs(await generateWithFallback(compact));
+          if (batch.length < 8) { lastErr = `batch ${attempt + 1} had only ${batch.length} usable questions`; continue; }
+          const r = await reviewQuestions(batch, true);
+          reviewedDropped += r.dropped;
+          for (const q of r.kept) { const key = q.question.toLowerCase().replace(/\W+/g, " ").slice(0, 70); if (!seenQ.has(key) && examMcqs.length < 36) { seenQ.add(key); examMcqs.push(q); } }
+        } catch (e) { lastErr = e instanceof Error ? e.message : String(e); }
       }
-      let reviewNote = "";
-      if (examMcqs.length >= 15) { const r = await reviewQuestions(examMcqs, true); if (r.kept.length >= 15) { examMcqs = r.kept; reviewNote = `${r.dropped} dropped by the reviewer`; } }
-      if (examMcqs.length < 15) { skipped.push(`${unit}: ${lastErr || `the writer produced only ${examMcqs.length} usable questions`}`); continue; }
+      // a right answer that is clearly longer or shorter than the wrong ones gives itself away: leave those out while at least 26 remain
+      const cue = (q: { options: string[]; correct_answer: number }) => { const L = q.options.map((o) => o.length); const w = L.filter((_, i) => i !== q.correct_answer); return L[q.correct_answer] / Math.max(1, w.reduce((a, b) => a + b, 0) / w.length); };
+      const fair = examMcqs.filter((q) => { const c = cue(q); return c <= 1.25 && c >= 0.75; });
+      const cueDropped = examMcqs.length - fair.length;
+      examMcqs = (fair.length >= 26 ? fair : examMcqs).slice(0, 30);
+      const reviewNote = `${reviewedDropped} dropped by the reviewer, ${cueDropped} left out for length cues, ${examMcqs.length} kept`;
+      if (examMcqs.length < 20) { skipped.push(`${unit}: ${lastErr || `only ${examMcqs.length} questions passed the reviewer`}`); continue; }
       examMcqs = spreadAnswerPositions(examMcqs);
 
-      const essayPrompt = `Create written exam section for ${unit}. Return ONLY valid JSON:\n{"saqs":[{"question":"...","model_answer":"...","marks":5}],"laqs":[{"question":"...","model_answer":"...","marks":20}]}\n\nRules:\n- exactly 4 SAQs with 5 marks each (Section B) and exactly 1 LAQ with 20 marks (Section C)\n- every question needs reasoning, not recall: a short case or a "explain why" that needs application of the mechanism, a comparison, or a justified plan\n- every model answer is structured, with the number of points matched to the marks (about one point per mark)\n- the LAQ must cover a broad, high-yield area of the unit and ask for causes, pathophysiology/mechanism, features and management or consequences`;
-      const essayText = await generateWithFallback(essayPrompt).catch(() => "");
-      const { saqs, laqs } = parseEssays(essayText);
+      const essayPrompt = `Create written exam section for ${unit}. Return ONLY valid JSON:\n{"saqs":[{"question":"...","model_answer":"...","marks":5}],"laqs":[{"question":"...","model_answer":"...","marks":20}]}\n\nRules:\n- exactly 4 SAQs with 5 marks each (Section B) and exactly 1 LAQ with 20 marks (Section C)\n- every question needs reasoning, not recall: a short case or a "explain why" that needs application of the mechanism, a comparison, or a justified plan\n- every model answer is structured, with the number of points matched to the marks (about one point per mark); keep each SAQ answer under 90 words and the LAQ answer under 260 words so the JSON is never cut off\n- the LAQ must cover a broad, high-yield area of the unit and ask for causes, pathophysiology/mechanism, features and management or consequences`;
+      let { saqs, laqs } = parseEssays(await generateWithFallback(essayPrompt, 80000).catch(() => ""));
+      if (!saqs.length || !laqs.length) { const again = parseEssays(await generateWithFallback(essayPrompt, 80000).catch(() => "")); if (again.saqs.length + again.laqs.length > saqs.length + laqs.length) ({ saqs, laqs } = again); }
 
       const examTitle = `Weekly ${unit} Exam - ${dateText}`;
 
