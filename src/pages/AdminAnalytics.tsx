@@ -57,6 +57,38 @@ function ShareCard({ period }: { period: (typeof PERIODS)[number] }) {
   );
 }
 
+type Visit = { at: string; path: string; device: string | null; member: boolean; ref: string | null };
+const ago = (iso: string) => { const m = Math.max(0, Math.round((Date.now() - Date.parse(iso)) / 60000)); return m < 1 ? "just now" : m < 60 ? `${m} min ago` : m < 1440 ? `${Math.round(m / 60)} h ago` : `${Math.round(m / 1440)} d ago`; };
+/** The latest page views as they happen, so a test visit from a phone shows up at once (and the page can be checked without waiting for the totals). */
+function LiveVisits() {
+  const [rows, setRows] = useState<Visit[] | null>(null);
+  const [missing, setMissing] = useState(false);
+  const load = useCallback(async () => {
+    const { data, error } = await (supabase as unknown as { rpc: (f: string, a: Record<string, unknown>) => Promise<{ data: Visit[] | null; error: { code?: string; message: string } | null }> }).rpc("admin_recent_visits", { p_limit: 30 });
+    if (error) { setMissing(error.code === "PGRST202" || /could not find the function/i.test(error.message)); return; }
+    setMissing(false); setRows(data ?? []);
+  }, []);
+  useEffect(() => { void load(); const t = window.setInterval(() => void load(), 20_000); return () => window.clearInterval(t); }, [load]);
+  if (missing) return <p className="mt-8 max-w-2xl text-sm text-muted-foreground">The live feed needs one more database step: run <strong>supabase/migrations/20261024100000_admin_recent_visits.sql</strong> once in the Supabase SQL editor.</p>;
+  if (!rows) return null;
+  return (
+    <section className="mt-8" aria-label="Latest visits">
+      <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">Latest visits</p>
+      {rows.length === 0 ? <p className="mt-2 text-sm text-muted-foreground">No visits recorded yet.</p> : (
+        <ul className="mt-3 divide-y divide-border rounded-xl border border-border text-sm">
+          {rows.map((v, i) => (
+            <li key={i} className="flex flex-wrap items-center gap-x-3 gap-y-1 px-3 py-2">
+              <span className="w-20 shrink-0 text-xs text-muted-foreground">{ago(v.at)}</span>
+              <span className="min-w-0 flex-1 truncate font-medium">{v.path}</span>
+              <span className="text-xs text-muted-foreground">{v.device || "?"}{v.member ? " · signed in" : " · guest"}{v.ref ? ` · from ${v.ref}` : ""}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </section>
+  );
+}
+
 /** Admin: who is on the site now, how many used it each day, and a picture of the numbers to share. */
 export default function AdminAnalytics() {
   const [period, setPeriod] = useState<(typeof PERIODS)[number]>(PERIODS[0]);
@@ -117,6 +149,8 @@ export default function AdminAnalytics() {
             <p className="mt-2 text-[16px] text-muted-foreground">{n(stats.online.members)} signed in · {n(stats.online.total - stats.online.members)} guests · seen in the last 5 minutes</p>
             {stats.online.paths.length > 0 && <p className="mt-2 text-sm text-muted-foreground">Reading: {stats.online.paths.map((p) => `${p.path} (${p.n})`).join(", ")}</p>}
           </section>
+
+          <LiveVisits />
 
           <div className="mt-10 flex flex-wrap items-center gap-2" role="group" aria-label="Period">
             {PERIODS.map((p) => <button key={p.k} type="button" onClick={() => setPeriod(p)} className={cn("h-10 rounded-full border px-5 text-sm font-bold", p.k === period.k ? "border-primary bg-primary text-primary-foreground" : "border-border hover:border-primary/60")}>{p.label}</button>)}
